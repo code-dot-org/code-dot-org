@@ -96,13 +96,6 @@ module Pd::Application
         'Private school',
         'Charter school',
         'Other'
-      ],
-
-      how_heard: [
-        'Code.org Website',
-        'Code.org Email',
-        'Regional Partner website',
-        'Regional Partner Email',
       ]
     }
 

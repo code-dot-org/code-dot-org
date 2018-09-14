@@ -110,6 +110,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
                     course name as determined by your district.`
           })
         }
+        {this.renderImplementationSection()}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
           [TextFields.dontKnowExplain] : "other"
         })}
@@ -179,6 +180,28 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     }
   }
 
+  renderImplementationSection() {
+    const question_label = `To participate in Code.org’s ${this.props.teacherApplication.course} Professional
+                  Learning Program, we require that this course be offered in one of the following
+                  ways. Please select which option will be implemented at your school. Be sure to
+                  review the guidance on required number of hours here prior to answering.`;
+    const other_label = "We will use a different implementation schedule. (Please Explain):";
+
+    if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
+      return this.radioButtonsWithAdditionalTextFieldsFor('csdImplementation', {
+          [other_label] : 'other'
+        },
+        {label: question_label}
+      );
+    } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
+      return this.radioButtonsWithAdditionalTextFieldsFor('cspImplementation', {
+          [other_label] : 'other'
+        },
+        {label: question_label}
+      );
+    }
+  }
+
   render() {
     return (
       <FormGroup>
@@ -232,6 +255,12 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
 
     if (data.doYouApprove !== 'No') {
       requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
+
+      if (data.course === 'Computer Science Discoveries') {
+        requiredFields.push('csdImplementation');
+      } else if (data.course === 'Computer Science Principles') {
+        requiredFields.push('cspImplementation');
+      }
     }
 
     if (data.replaceCourse === 'Yes') {

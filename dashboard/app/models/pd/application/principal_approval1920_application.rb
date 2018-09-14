@@ -71,6 +71,19 @@ module Pd::Application
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
         going_to_teach: [YES, NO, TEXT_FIELDS[:other_with_text]],
+        csd_implementation: [
+          '50+ instructional hours per section of students for a semester-long course (Units 1 - 3)',
+          '100+ instructional hours for a year-long course (Units 1-  6)',
+          'I don’t know yet which implementation schedule we will use.',
+          'We will use a different implementation schedule. (Please Explain):'
+
+        ],
+        csp_implementation: [
+          '100+ instructional hours for a year-long course',
+          '100+ instructional hours for a one semester (block schedule) course',
+          'I don’t know yet which implementation schedule we will use.',
+          'We will use a different implementation schedule. (Please Explain):'
+        ],
         committed_to_master_schedule: [YES, NO, TEXT_FIELDS[:other_with_text]],
         replace_course: [
           YES,
@@ -113,13 +126,15 @@ module Pd::Application
           'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a full or partial scholarship.',
           'Not applicable: there is no fee for the progam for teachers in my region.'
         ],
-        how_heard: COMMON_OPTIONS[:how_heard].concat(
-          [
-            'Regional Partner Event/Workshop',
-            'From a teacher who is applying',
-            TEXT_FIELDS[:other_with_text]
-          ]
-        )
+        how_heard: [
+          'Code.org Website',
+          'Code.org Email',
+          'Regional Partner website',
+          'Regional Partner Email',
+          'Regional Partner Event/Workshop',
+          'From a teacher who is applying',
+          TEXT_FIELDS[:other_with_text]
+        ]
       }
     end
 
@@ -156,6 +171,12 @@ module Pd::Application
               :how_heard
             ]
 
+            if course == 'csd'
+              required << :csd_implementation
+            elsif course == 'csp'
+              required << :csp_implementation
+            end
+
             if hash[:replace_course] == YES
               if course == 'csd'
                 required << :replace_which_course_csd
@@ -171,6 +192,8 @@ module Pd::Application
     def additional_text_fields
       [
         [:committed_to_master_schedule],
+        [:csd_implementation],
+        [:csp_implementation],
         [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
         [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
         [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],

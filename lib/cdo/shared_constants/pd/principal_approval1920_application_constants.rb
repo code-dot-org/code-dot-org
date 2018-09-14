@@ -18,6 +18,8 @@ module Pd
       other: 'Other',
       do_you_approve: "Do you approve of this teacher's application to participate in Code.org’s 2019-20 Professional Learning Program?",
       going_to_teach: "Is this teacher going to teach this course in the 2019-2020 school year?",
+      csd_implementation: 'To participate in Code.org’s CS Discoveries Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.',
+      csp_implementation: 'To participate in Code.org’s CS Principles Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.',
       committed_to_master_schedule: 'Are you committed to including this program on the master schedule in 2019-20 if this teacher is accepted into the program. Note: the program may be listed under a different course name as determined by your district.',
       replace_course: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
       replace_which_course_csp: 'Which existing course or curriculum will CS Principles replace? Mark all that apply.',
