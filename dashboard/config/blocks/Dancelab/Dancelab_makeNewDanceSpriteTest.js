@@ -11,6 +11,7 @@ function makeNewDanceSpriteTest(costume, name, location) {
     sprites_by_type[costume] = createGroup();
   }
  
+  sprite.mirroring = 1;
   sprite.looping_move = 0;
   sprite.looping_frame = 0;
   sprite.current_move = 0;
@@ -42,12 +43,20 @@ function makeNewDanceSpriteTest(costume, name, location) {
       } else {
         sprite.animation.nextFrame();
       }
+      
+      if (sprite.looping_frame % 48 === 0) {
+        sprite.mirroring *= -1;
+        if (sprite.animation.looping) {
+          sprite.mirrorX(sprite.mirroring);
+        }
+      }
+      
       var currentFrame = sprite.animation.getFrame();
-      if (currentFrame === 0) {
-        sprite.mirrorX(-sprite.mirrorX());
-      } else if (currentFrame === sprite.animation.getLastFrame() && !sprite.animation.looping) {
-        changeMove(sprite, sprite.current_move);
-        sprite.dance_speed = sprite.previous_speed;
+      if (currentFrame === sprite.animation.getLastFrame() && !sprite.animation.looping) {
+        //changeMoveLR(sprite, sprite.current_move, sprite.mirroring);
+        sprite.changeAnimation("anim" + sprite.current_move);
+        sprite.animation.changeFrame(sprite.looping_frame % sprite.animation.images.length);
+        sprite.mirrorX(sprite.mirroring);
         sprite.animation.looping = true;
       }
     }

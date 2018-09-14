@@ -1,9 +1,9 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "makeNewDanceSprite",
+    "func": "makeNewDanceSpriteRight",
     "inline": false,
-    "blockText": "make a new {COSTUME}\n called {NAME} at {LOCATION}",
+    "blockText": "[RIGHT] make a new {COSTUME} sprite \n called {NAME} at {LOCATION}",
     "color": [
       355,
       ".7",

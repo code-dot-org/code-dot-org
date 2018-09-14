@@ -13,15 +13,21 @@ video_player: true
 
 # Professional Learning#
 
-<div style="width: 80%;">
+<div class="col-50" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "professional_learning", video_code: "9VvuRiFQv10", play_button: 'center', letterbox: 'false' %>
 
 </div>
 
+[col-50]
+
 ## New to computer science? No worries.
 
 Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through the workshops and thousands more attend every month. Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our professional learning program is a great way to get started.
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 ## Professional Learning Program Offerings
 Select the grade level below to learn more about our programs. Have questions about which program is for you? Learn more about implementation options or contact us at [teacher@code.org](mailto: teacher@code.org).
@@ -60,25 +66,25 @@ Select the grade level below to learn more about our programs. Have questions ab
 * For younger students, our [Computer Science Discoveries curriculum](/educate/csd) is designed for educators in 6th - 10th grade classrooms. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming, and learning about data.
 * Our [Computer Science Principles curriculum](/educate/csp) is also an introductory course that requires no computer science background (from students or teachers). It can be taught as an AP or non-AP course, and is designed for educators in 9th - 12th grade classrooms. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
-
-
 [<button>Professional Learning for Middle and High School</button>](/educate/professional-learning/details-2019)
-
+<br/>
+<br/>
 </p>
+
 </details>
 
 <details>
   <summary style="font-size: 20px; color: #7665a0;">**International Professional Learning**</summary>
   <p>
+  <br>
 Teachers anywhere in the world can use our free, self-paced [online workshop](https://studio.code.org/s/K5-onlinePD) to get started. The intended audience for this online workshop is primary school teachers.
 
 At this point, our in-person  workshops are only available in the United States, but the [curriculum, lesson plans, tools, and support](https://studio.code.org/courses) are available at no cost worldwide. And, [join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices. Our forums are for teachers of all grade levels.
 
 You can also contact our [international partners](https://hourofcode.com/international-partners) for more information on local professional learning opportunities.
-</P>
+</p>
 </details>
 
-<br/>
 ## Attendees love our professional learning!
 80,000 teachers have participated.
 98% of attendees would recommend our program to another teacher.
