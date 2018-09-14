@@ -35,6 +35,8 @@ class ApiController < ApplicationController
   end
 
   def import_clever_classroom
+    return head :forbidden unless current_user
+
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 

@@ -1087,6 +1087,12 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'import_clever_classroom is Forbidden when not signed in' do
+    sign_out :user
+    get :import_clever_classroom
+    assert_response :forbidden
+  end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
