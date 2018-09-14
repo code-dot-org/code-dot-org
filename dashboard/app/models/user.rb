@@ -75,6 +75,7 @@ require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
+require 'sign_up_tracking'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -707,10 +708,14 @@ class User < ActiveRecord::Base
   end
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-  def self.from_omniauth(auth, params)
+  def self.from_omniauth(auth, params, session = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
-    omniauth_user ||= create do |user|
-      initialize_new_oauth_user(user, auth, params)
+
+    unless omniauth_user
+      omniauth_user = create do |user|
+        initialize_new_oauth_user(user, auth, params)
+      end
+      SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
 
     if auth.credentials

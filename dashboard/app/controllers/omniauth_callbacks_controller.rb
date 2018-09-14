@@ -68,7 +68,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
     end
 
-    @user = User.from_omniauth(auth_hash, auth_params)
+    @user = User.from_omniauth(auth_hash, auth_params, session)
 
     # Set user-account locale only if no cookie is already set.
     if @user.locale &&
@@ -256,18 +256,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def sign_in_user
     flash.notice = I18n.t('auth.signed_in')
 
-    sign_up_type = session[:sign_up_type]
-    sign_up_type ||= resource.email ? 'email' : 'other'
-    provider = request.env['omniauth.auth'].provider.to_s
-    if session[:sign_up_tracking_expiration]&.future? || User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider)
-      result = resource.persisted? ? 'success' : 'error'
-      tracking_data = {
-        study: 'account-sign-up',
-        event: "#{sign_up_type}-sign-in-#{result}",
-        data_string: session[:sign_up_uid]
-      }
-      FirehoseClient.instance.put_record(tracking_data)
-    end
+    # Will only log if the sign_up page session cookie is set, so this is safe to call in all cases
+    SignUpTracking.log_sign_in(resource, session, request)
 
     sign_in_and_redirect @user
   end
