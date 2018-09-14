@@ -1,7 +1,7 @@
 {
   "category": "",
   "config": {
-    "func": "torch",
+    "func": "placeTorch",
     "blockText": "place torch"
   }
 }
