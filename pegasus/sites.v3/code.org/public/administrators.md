@@ -160,7 +160,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 <%= view :three_circles, circles: [
 {img: '/images/fit-150/pair_students.jpg', text: 'Over 50k students in 3 years', subtext: 'Read Broward County\'s case study on how it increased computer science participation across the district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.rf0l0zfkbqe4', link_text: 'Learn more'},
-{img: '/images/fit-150/sotm34.jpg', text: '51% females in intro course', subtext: 'See how graduation requirements affected diversity in Charles County\'s introductory computer science course.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.8xs8zt2iloy0', link_text: 'Learn more'},
+{img: '/images/fit-150/sotm34.jpg', text: '51% female students in intro course', subtext: 'See how graduation requirements affected diversity in Charles County\'s introductory computer science course.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.8xs8zt2iloy0', link_text: 'Learn more'},
 {img: '/images/fit-150/pd1.jpg', text: 'Professional learning for all', subtext: 'Read how Eufala City Schools, AL increased access to computer science to all students in their rural district.', link: 'https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit#heading=h.9ub4frvyuqiy', link_text: 'Learn more'}] %>
 
 <hr>
