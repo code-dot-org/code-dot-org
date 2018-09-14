@@ -60,7 +60,7 @@ export default class AssetRow extends React.Component {
     if (!this.props.imagePicker) {
       firehoseClient.putRecord(
         {
-          study: 'sound-dialog',
+          study: 'sound-dialog-1',
           study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
           event: 'choose-uploaded-sound',
           data_json: this.props.name

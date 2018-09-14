@@ -216,6 +216,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user.oauth_token = oauth_user.oauth_token
       @user.oauth_token_expiration = oauth_user.oauth_token_expiration
     end
+
+    if @user.present?
+      log_account_takeover_to_firehose(
+        source_user: oauth_user,
+        destination_user: @user,
+        type: 'silent',
+        provider: auth_hash.provider
+      )
+    end
+
     sign_in_user
   end
 

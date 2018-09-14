@@ -528,6 +528,7 @@ describe('entry tests', () => {
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
     'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
+    'pd/application/principal_approval_application/new_1920_preview': './src/sites/studio/pages/pd/application/principal_approval_application/new_1920_preview.js',
     'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
     'pd/fit_weekend1819_registration/new': './src/sites/studio/pages/pd/fit_weekend1819_registration/new.js',
     'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
