@@ -85,7 +85,8 @@ Computer Science Discoveries is appropriate for 6 - 10th grade students and can 
 ### Don't miss these additional resources:
 
 * [**Course Materials List**](#supplies)
-* [**CS Discoveries Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD)
+* <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD", target=_"blank">**CS Discoveries Video Library**</a>
+* [**Code.org Video Library**](/educate/resources/videos)
 
 <hr/>
 
