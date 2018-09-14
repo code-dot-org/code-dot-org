@@ -17,6 +17,8 @@ class ApiController < ApplicationController
   end
 
   def clever_classrooms
+    return head :forbidden unless current_user
+
     query_clever_service("v1.1/teachers/#{current_user.uid}/sections") do |response|
       json = response.map do |section|
         data = section['data']
@@ -33,6 +35,8 @@ class ApiController < ApplicationController
   end
 
   def import_clever_classroom
+    return head :forbidden unless current_user
+
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
