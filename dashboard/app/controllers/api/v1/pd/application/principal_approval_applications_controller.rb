@@ -1,7 +1,9 @@
 module Api::V1::Pd::Application
   class PrincipalApprovalApplicationsController < Api::V1::Pd::FormsController
+    include Pd::Application::ActiveApplicationModels
+
     def new_form
-      @application = Pd::Application::PrincipalApproval1819Application.find_or_create_by(
+      @application = PRINCIPAL_APPROVAL_APPLICATION_CLASS.find_or_create_by(
         application_guid: params.require(:application_guid)
       )
     end
@@ -10,7 +12,7 @@ module Api::V1::Pd::Application
 
     def on_successful_create
       # Approval application created, now score corresponding teacher application
-      teacher_application = Pd::Application::Teacher1819Application.find_by!(application_guid: @application.application_guid)
+      teacher_application = TEACHER_APPLICATION_CLASS.find_by!(application_guid: @application.application_guid)
       principal_response = @application.sanitize_form_data_hash
 
       response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
@@ -32,7 +34,7 @@ module Api::V1::Pd::Application
       teacher_application.save
       teacher_application.auto_score!
 
-      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval_received(
+      TEACHER_APPLICATION_MAILER_CLASS.principal_approval_received(
         @application.teacher_application
       ).deliver_now
     end
