@@ -20,7 +20,7 @@ export default class Congrats extends Component {
     MCShareLink: PropTypes.string,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
     userAge: PropTypes.number,
-    isEnglish: PropTypes.bool.isRequired,
+    language: PropTypes.string.isRequired,
     randomDonorTwitter: PropTypes.string,
   };
 
@@ -31,9 +31,11 @@ export default class Congrats extends Component {
       MCShareLink,
       userType,
       userAge,
-      isEnglish,
+      language,
       randomDonorTwitter
     } = this.props;
+
+    const isEnglish = language === 'en';
 
     const tutorialType = {
       'applab-intro': 'applab',
@@ -49,6 +51,7 @@ export default class Congrats extends Component {
             certificateId={certificateId}
             randomDonorTwitter={randomDonorTwitter}
             userAge={userAge}
+            language={language}
           />
           {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc/>
