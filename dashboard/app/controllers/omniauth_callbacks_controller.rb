@@ -65,6 +65,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
     end
 
+    # Microsoft formats email and name differently, so update it to match expected structure
+    if provider == AuthenticationOption::MICROSOFT
+      auth_hash = extract_microsoft_data(request.env["omniauth.auth"])
+    end
+
     @user = User.from_omniauth(auth_hash, auth_params)
 
     # Set user-account locale only if no cookie is already set.
@@ -128,6 +133,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
         last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
       },
+      )
+    )
+    auth.info = auth_info
+    auth
+  end
+
+  def extract_microsoft_data(auth)
+    auth_info = auth.info.merge(OmniAuth::AuthHash.new(
+      email: auth[:extra][:raw_info][:userPrincipalName],
+      name: auth[:extra][:raw_info][:displayName]
       )
     )
     auth.info = auth_info
