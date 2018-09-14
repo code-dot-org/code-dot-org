@@ -1,0 +1,86 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2018-08-31T20:41:24.000Z",
+  "level_num": "custom",
+  "user_id": 837,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"logOak\",\"logOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"\",\"diamondMiniblock\",\"\",\"logOak\",\"\",\"\",\"logOak\",\"logOak\",\"\",\"\",\"logOak\",\"logOak\",\"logOak\",\"\",\"\",\"\",\"logOak\",\"\",\"logOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"logOak\",\"\",\"\",\"logOak\",\"logOak\",\"\",\"\",\"\",\"logOak\",\"logOak\",\"\",\"\",\"\",\"\",\"logOak\",\"logOak\",\"logOak\",\"logOak\",\"logOak\",\"\",\"\",\"\"]",
+    "player_start_position": "[6, 6]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "player_start_direction": "3",
+    "is_daytime": "false",
+    "is_event_level": "false",
+    "use_player": "true",
+    "verification_function": "function (verificationAPI) {\r\n  // List of x, y positions.\r\n  var successPositions = [[6, 4]];\r\n  for (var i = 0; i < successPositions.length; i++) {\r\n    if (verificationAPI.isEntityAt(\"Player\", successPositions[i])) {\r\n      return true;\r\n    }\r\n  }\r\n}\r\n",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
+    "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
+    "level_verification_timeout": "30000",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "agent_start_direction": "0",
+    "use_score": "false",
+    "is_agent_level": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "parent_level_id": 14518,
+    "is_aquatic_level": "true",
+    "instructions": "Explore the shipwreck and look for treasure.",
+    "markdown_instructions": "Every shipwreck just has to have treasure, right? Explore the ship and find valuables left behind.\r\n\r\n![](https://images.code.org/4e6ca2888302c2a6896d119559f7a730-image-1536738531054.png)",
+    "tts_instructions_override": "Explore the shipwreck and look for treasure.",
+    "tts_markdown_instructions_override": "Every shipwreck just has to have treasure, right? Explore the ship and find valuables left behind.",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-31 15:54:15 +0000\",\"changed\":[\"notes\",\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"player_start_direction\",\"is_daytime\",\"is_event_level\",\"use_player\",\"verification_function\",\"timeout_verification_function\",\"failure_check_function\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 15:57:38 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 15:57:58 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 15:58:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:00:47 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:04:51 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:14:10 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:19:26 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:21:24 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:00:05 +0000\",\"changed\":[\"action_plane\",\"player_start_position\",\"is_daytime\",\"is_event_level\",\"verification_function\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:00:29 +0000\",\"changed\":[\"player_start_direction\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:01:12 +0000\",\"changed\":[],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:02:16 +0000\",\"changed\":[\"action_plane\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:05:23 +0000\",\"changed\":[\"ground_decoration_plane\",\"action_plane\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:06:36 +0000\",\"changed\":[\"ground_decoration_plane\",\"action_plane\",\"verification_function\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:08:43 +0000\",\"changed\":[\"is_agent_level\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:10:45 +0000\",\"changed\":[\"action_plane\",\"verification_function\",\"is_agent_level\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:11:23 +0000\",\"changed\":[\"verification_function\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-07 20:12:02 +0000\",\"changed\":[\"action_plane\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-12 04:14:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-12 07:49:32 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-12 19:06:13 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="craft_repeatUntilGoal">
+              <statement name="STATEMENT">
+                <block type="craft_moveForward">
+                  <next>
+                    <block type="craft_turn">
+                      <title name="DIR">right</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_repeatUntilGoal"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>

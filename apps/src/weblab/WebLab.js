@@ -201,7 +201,8 @@ WebLab.prototype.init = function (config) {
     project.autosave(() => {
       dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
         showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
-        useFilesApi: config.useFilesApi
+        useFilesApi: config.useFilesApi,
+        disableAudioRecording: true
       });
     });
   }

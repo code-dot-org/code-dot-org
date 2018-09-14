@@ -1111,6 +1111,8 @@ fil:
         ng mga button sa `\"red\"` at `\"blue\"`.\r\n*\nItakda ang `\"text\"` katangian
         ng label sa kahit anong gusto mo, gaya ng `\"Maligayang pagdating sa aking
         app!\".\r\n\r\n**Hindi makausad? Mag-click dito:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      Artist Autorun Test_markdown_instruction: Ngayon, ilagay ang function sa loob
+        ng isang loop para maiguhit ang tatlong mga parisukat na ito.
       Bergeron Robot Maze1_markdown_instruction: "Maaari mo ba akong matulungang hulihin
         ang malikot na baboy?\r\n\r\nMagsalansan ng iilang `move forward` na mga bloke
         sa baba ng `when run` na bloke at pindutin ang \"Run\".\n"

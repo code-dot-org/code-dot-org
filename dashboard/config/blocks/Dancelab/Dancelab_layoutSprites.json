@@ -2,7 +2,7 @@
   "category": "Groups",
   "config": {
     "func": "layoutSprites",
-    "blockText": "layout {GROUP} sprites as a {FORMAT}",
+    "blockText": "layout {GROUP} as a {FORMAT}",
     "args": [
       {
         "name": "GROUP",
@@ -12,20 +12,24 @@
             "sprites"
           ],
           [
-            "Alien",
-            "\"alien\""
+            "all ducks",
+            "\"duck\""
           ],
           [
-            "MrWiggles",
+            "all moose",
+            "\"moose\""
+          ],
+          [
+            "all unicorns",
+            "\"unicorn\""
+          ],
+          [
+            "all Mr. Wiggles",
             "\"mrwiggles\""
           ],
           [
-            "Pizza",
-            "\"pizza\""
-          ],
-          [
-            "Unicorn",
-            "\"unicorn\""
+            "all cats",
+            "\"cat\""
           ]
         ]
       },

@@ -38,15 +38,41 @@ class RegionalPartner < ActiveRecord::Base
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :regional_partner_program_managers
   has_many :mappings, -> {order :state, :zip_code}, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
 
+  has_many :pd_workshops, class_name: 'Pd::Workshop', foreign_key: 'regional_partner_id'
+
   include SerializedProperties
 
   serialized_attrs %w(
     cohort_capacity_csd
     cohort_capacity_csp
-    apps_open_date
-    apps_close_date
-    principal_approval
+    apps_open_date_csd_teacher
+    apps_open_date_csd_facilitator
+    apps_open_date_csp_teacher
+    apps_open_date_csp_facilitator
+    apps_close_date_csd_teacher
+    apps_close_date_csd_facilitator
+    apps_close_date_csp_teacher
+    apps_close_date_csp_facilitator
+    applications_principal_approval
+    applications_decision_emails
+    link_to_application
+    csd_cost
+    csp_cost
+    csd_cost_description
+    csp_cost_description
+    contact_name
+    contact_email
   )
+
+  PRINCIPAL_APPROVAL_TYPES = [
+    ALL_REQUIRE_APPROVAL = 'all_teachers_required'.freeze,
+    SELECTIVE_APPROVAL = 'required_per_teacher'.freeze
+  ].freeze
+
+  APPLICATION_DECISION_EMAILS = [
+    SENT_BY_PARTNER = 'sent_by_partner'.freeze,
+    SENT_BY_SYSTEM = 'sent_by_system'.freeze
+  ].freeze
 
   # Upcoming and not ended
   def future_pd_workshops_organized
@@ -62,6 +88,10 @@ class RegionalPartner < ActiveRecord::Base
   validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
   validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
   validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
+  validates_inclusion_of :applications_principal_approval, in: PRINCIPAL_APPROVAL_TYPES, if: -> {applications_principal_approval.present?}
+  validates_inclusion_of :applications_decision_emails, in: APPLICATION_DECISION_EMAILS, if: -> {applications_decision_emails.present?}
+  validates :csd_cost, numericality: {greater_than: 0}, if: -> {csd_cost.present?}
+  validates :csp_cost, numericality: {greater_than: 0}, if: -> {csp_cost.present?}
 
   # assign a program manager to a regional partner
   def program_manager=(program_manager_id)
@@ -112,38 +142,5 @@ class RegionalPartner < ActiveRecord::Base
       }
       RegionalPartner.where(params).first_or_create!
     end
-  end
-
-  def get_apps_date(key:, course: nil, role: nil)
-    if key
-      date_string =
-        if key.is_a? Hash
-          if key[course]
-            key[course].is_a?(Hash) ? key[course][role] : key[course]
-          elsif key[role]
-            key[role]
-          else
-            raise "No date found for either course #{course || 'nil'} or role #{role || 'nil'} for regional partner id #{id}"
-          end
-        else
-          key
-        end
-
-      if date_string
-        Date.parse date_string
-      else
-        raise "No date found for either course #{course || 'nil'} or role #{role || 'nil'} for regional partner id #{id}"
-      end
-    else
-      raise "No date set for #{key} for regional partner id #{id}"
-    end
-  end
-
-  def get_apps_open_date(course: nil, role: nil)
-    get_apps_date(key: apps_open_date, course: course, role: role)
-  end
-
-  def get_apps_close_date(course: nil, role: nil)
-    get_apps_date(key: apps_close_date, course: course, role: role)
   end
 end

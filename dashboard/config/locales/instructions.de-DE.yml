@@ -899,6 +899,8 @@ de:
       Artist - Nested Loops 9_instruction: Zeichne die Zähne im Mund des Alligators!
       Artist - Nested Loops Assessment 1_instruction: Verwende eine verschachtelte
         Schleife um das Design fertigzustellen.
+      Artist Autorun Test_instruction: Verwende den „Wiederholen"-Block, um diese
+        3 Quadrate zu zeichnen.
       Artist Inspiration_instruction: |-
         Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.
 
@@ -2834,6 +2836,12 @@ de:
       courseD_artist_binary7_instruction: Was ist die kürzeste binäre Zeichenfolge,
         die du wiederholen kannst, um dieses Bild zu zeichnen?
       courseD_artist_binary7_2018_instruction: Was ist die kürzeste binäre Zeichenfolge,
+        die du wiederholen kannst, um dieses Bild zu zeichnen?
+      courseD_autorun_binary4_2019_instruction: Kannst du dieses Muster zeichnen,
+        indem du eine dreistellige Binärzeichenfolge durchlaufen lässt?
+      courseD_autorun_binary6_2019_instruction: Welche sechsstellige Binärzeichenfolge
+        wird dieses Bild zeichnen, wenn sie 11 Mal wiederholt wird?
+      courseD_autorun_binary7_2019_instruction: Was ist die kürzeste binäre Zeichenfolge,
         die du wiederholen kannst, um dieses Bild zu zeichnen?
       courseD_bee_debugging3_instruction: Diese Bausteine nerven mich wirklich. Korrigiere
         den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.

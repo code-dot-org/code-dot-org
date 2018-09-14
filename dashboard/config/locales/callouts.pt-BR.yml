@@ -577,6 +577,12 @@ pt-BR:
       frozen cross rotate_callout:
         replace_questions_degree: Use o menu suspenso para substituir "???" por um
           número
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Use o menu suspenso para substituir "???" por um
+          número
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Use o menu suspenso para substituir "???" por um
+          número
       frozen cross_callout:
         repeat_blocks_1: "(1) Use este bloco e coloque-o em torno dos blocos cinza
           na área de trabalho"
@@ -589,7 +595,21 @@ pt-BR:
       frozen freeplay_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
+          neve!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
+          neve!
       frozen line_callout:
+        run: Clique em "Executar" para testar seu programa!
+        move_elsa_forward: Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando
+          o jogo começa" para que Elsa avance
+      frozen line_b_callout:
+        run: Clique em "Executar" para testar seu programa!
+        move_elsa_forward: Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando
+          o jogo começa" para que Elsa avance
+      frozen line_test_callout:
         run: Clique em "Executar" para testar seu programa!
         move_elsa_forward: Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando
           o jogo começa" para que Elsa avance
@@ -598,13 +618,31 @@ pt-BR:
           determina o quanto Elsa vai virar
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Use o bloco "crie uma parte do floco de neve"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Use o bloco "crie uma parte do floco de neve"
       frozen square iterative_callout:
+        frozen_create_square: Conecte mais blocos aqui para criar um quadrado
+      frozen square iterative_b_callout:
+        frozen_create_square: Conecte mais blocos aqui para criar um quadrado
+      frozen square iterative_test_callout:
         frozen_create_square: Conecte mais blocos aqui para criar um quadrado
       frozen square loop 3x_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop 3x_b_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop 3x_test_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
       frozen square loop_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop_b_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop_test_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
       frozen square snowflake_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square snowflake_b_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square snowflake_test_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Esses blocos cinza são feitos de pedras! Isso significa

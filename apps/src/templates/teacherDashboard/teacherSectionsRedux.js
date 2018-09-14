@@ -538,9 +538,9 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === SELECT_SECTION) {
-    const sectionId = action.sectionId;
+    let sectionId = action.sectionId;
     if (sectionId !== NO_SECTION && !state.sectionIds.includes(parseInt(sectionId, 10))) {
-      throw new Error(`Unknown sectionId ${sectionId}`);
+      sectionId = NO_SECTION;
     }
     return {
       ...state,
@@ -802,6 +802,16 @@ export function isSectionProviderManaged(state, sectionId) {
 
 export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
+}
+
+export function assignedScriptName(state) {
+  const { sectionBeingEdited, validAssignments } = getRoot(state);
+  if (!sectionBeingEdited) {
+    return '';
+  }
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  const assignment = validAssignments[assignId];
+  return assignment ? assignment.name : '';
 }
 
 /**

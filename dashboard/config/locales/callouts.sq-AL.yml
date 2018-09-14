@@ -138,6 +138,12 @@ sq:
       frozen cross rotate_callout:
         replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
           me një numër
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
+          me një numër
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Përdor listën drop-down për të zëvendësuar "???"
+          me një numër
       frozen cross_callout:
         repeat_blocks_1: "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në
           vendin tënd të punës"
@@ -148,7 +154,17 @@ sq:
         frozen_diamond_repeat: Përdor bllokun përsërit për të krijuar këtë formë.
       frozen freeplay_callout:
         snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
       frozen line_callout:
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+      frozen line_b_callout:
+        move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
+          "When Run" për ta bërë Elsën të ecë përpara
+      frozen line_test_callout:
         move_elsa_forward: Lëviz një bllok "Move Forward" dhe vendose poshtë bllokut
           "When Run" për ta bërë Elsën të ecë përpara
       frozen perpendicular_callout:
@@ -156,15 +172,39 @@ sq:
           drop down përcakton sa herë kthehet Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Përdor bllokun "create a snowflake"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Përdor bllokun "create a snowflake"
       frozen square iterative_callout:
         frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+      frozen square iterative_b_callout:
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
+      frozen square iterative_test_callout:
+        frozen_create_square: Bashko më shumë blloqe këtu për të krijuar një katror
       frozen square loop 3x_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop 3x_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop 3x_test_callout:
         replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
           numër
       frozen square loop_callout:
         replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
           numër
+      frozen square loop_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square loop_test_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
       frozen square snowflake_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square snowflake_b_callout:
+        replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
+          numër
+      frozen square snowflake_test_callout:
         replace_questions: Përdor listën drop-down për të zëvendësuar "???" me një
           numër
       grade4_artist_parameters_squares1_callout:

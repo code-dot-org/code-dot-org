@@ -1100,7 +1100,8 @@ class Script < ActiveRecord::Base
       show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
-      supported_locales: supported_locales
+      supported_locales: supported_locales,
+      section_hidden_unit_info: section_hidden_unit_info(user),
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1109,6 +1110,18 @@ class Script < ActiveRecord::Base
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
     summary
+  end
+
+  # @return {Hash<string,number[]>}
+  #   For teachers, this will be a hash mapping from section id to a list of hidden
+  #   script ids for that section, filtered so that the only script id which appears
+  #   is the current script id. This mirrors the output format of
+  #   User#get_hidden_script_ids, and satisfies the input format of
+  #   initializeHiddenScripts in hiddenStageRedux.js.
+  def section_hidden_unit_info(user)
+    return {} unless user&.teacher?
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted

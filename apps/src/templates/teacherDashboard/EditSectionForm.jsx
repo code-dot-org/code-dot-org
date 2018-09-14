@@ -8,11 +8,14 @@ import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
+  assignedScriptName,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
   stageExtrasAvailable,
 } from './teacherSectionsRedux';
+import { isScriptHiddenForSection, updateHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
+import ConfirmAssignment from '../courseOverview/ConfirmAssignment';
 
 const style = {
   root: {
@@ -58,9 +61,40 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
+    assignedScriptName: PropTypes.string.isRequired,
+    updateHiddenScript: PropTypes.func.isRequired,
+  };
+
+  state = {
+    showHiddenUnitWarning: false,
   };
 
   onSaveClick = () => {
+    const {section, hiddenStageState} = this.props;
+    const sectionId = section.id;
+    const scriptId = section.scriptId;
+    const isScriptHidden = sectionId && scriptId &&
+      isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
+
+    if (isScriptHidden) {
+      this.setState({showHiddenUnitWarning: true});
+    } else {
+      this.handleSave();
+    }
+  };
+
+  handleConfirmAssign = () => {
+    const { section, updateHiddenScript } = this.props;
+
+    // Avoid incorrectly showing the hidden unit warning twice.
+    updateHiddenScript(section.id.toString(), section.scriptId, false);
+
+    this.setState({showHiddenUnitWarning: false});
+    this.handleSave();
+  };
+
+  handleSave = () => {
     this.props.handleSave().catch(status => {
       alert(i18n.unexpectedError());
       console.error(status);
@@ -78,6 +112,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
+      assignedScriptName,
     } = this.props;
     if (!section) {
       return null;
@@ -136,6 +171,15 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
           />
         </DialogFooter>
+        {this.state.showHiddenUnitWarning &&
+          <ConfirmAssignment
+            sectionName={section.name}
+            assignmentName={assignedScriptName}
+            onClose={handleClose}
+            onConfirm={this.handleConfirmAssign}
+            isHiddenFromSection={true}
+          />
+        }
       </div>
     );
   }
@@ -151,8 +195,11 @@ export default connect(state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  hiddenStageState: state.hiddenStage,
+  assignedScriptName: assignedScriptName(state),
 }), {
   editSectionProperties,
+  updateHiddenScript,
   handleSave: finishEditingSection,
   handleClose: cancelEditingSection,
 })(EditSectionForm);

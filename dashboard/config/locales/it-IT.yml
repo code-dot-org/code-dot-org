@@ -101,6 +101,8 @@ it:
     clever: Account Clever
     powerschool: Account Powerschool
     forgot_password: Hai dimenticato la tua password?
+    migration_success: Ottimo! Sul tuo account è attiva la nuova impostazione.
+    demigration_success: Sul tuo account è stata disabilitata la nuova impostazione.
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
     not_linked: Purtroppo il tuo account Code.org non è collegato al tuo %{provider}.
@@ -440,6 +442,8 @@ it:
     create_personal_login_info: Se vuoi continuare ad usare il tuo account Code.org
       anche dopo la fine dell'anno scolastico, puoi creare le tue credenziali di accesso
       personali, in basso.
+    create_personal_login_link_account: Puoi anche scegliere di collegarti a un account
+      personale nella sezione "Gestisci account collegati".
     create_personal_login_terms: Creando le mie informazioni d'accesso personali,
       accetto di essere vincolato dalle <a href='%{terms_of_service_url}', target='_blank'>condizioni
       d'uso</a>di Code.org. Se ho meno 13 anni, confermo di avere il permesso del
@@ -867,6 +871,9 @@ it:
         usando un mazzo di carte.
     widgets:
       title: Componenti
+      body: Gli studenti possono esplorare concetti dal nostro corso Cs Principles
+        usando questi strumenti digitali sul campo. Possono utilizzare i componenti
+        per conto proprio o creare una lezione su un singolo concetto per la classe.
       audience: Dai 14 anni in su
       cta: Scopri come
   gallery:
@@ -1103,6 +1110,10 @@ it:
     click_to_remix: Clicca su 'Rimescola' per ottenere una tua copia da cambiare a
       piacere!
     edit_project: Modifica progetto
+    sharing_disabled: Siamo spiacenti, questo progetto non è disponibile per la condivisione.
+      Se questo è il tuo progetto o il progetto di uno dei tuoi studenti, ti preghiamo
+      di <a href='https://studio.code.org/users/sign_in'> accedere </a> al tuo account
+      per visualizzare il progetto.
     abuse:
       tos: Questo progetto è stato segnalato per una violazione dei <a href='http://code.org/tos'>
         Termini di servizio</a> di Code.org e non può essere condiviso con altri.
@@ -1156,6 +1167,7 @@ it:
     content: Contenuto
     practice: Pratiche d'insegnante
     peer_review: Valutazioni dei parigrado
+    ramp_up: Introduzione
     end_of_course_project: Progetto di Fine Corso
     main_course: Corso principale
     extra_course_content: Contenuti supplementari
@@ -1177,6 +1189,7 @@ it:
     csd5_2: 'Capitolo 2: Risoluzione dei problemi di dati'
     csd6_1: 'Capitolo 1: Output Hardware'
     csd6_2: 'Capitolo 2: Input Hardware'
+    csd_survey: Sondaggio Post-corso
     csp1_1: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
     csp1_2: 'Capitolo 2: Inventare Internet'
     csp2_1: 'Capitolo 1: Codifica e compressione delle informazioni complesse'
@@ -1191,7 +1204,9 @@ it:
     csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
     csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
     csp_postap_1: 'Capitolo 1: Manipolare e visualizzare dati'
+    csp_postap_2: 'Capitolo 2: Apps e Database'
     csp2_1_2018: 'Unità 2: Informazioni digitali'
+    csp3_1_2018: 'Unit 3: Introduzione alla Programmazione'
     dlp: Punti di riflessione
   external_links:
     disclaimer: Limiti di responsabilità
@@ -1344,6 +1359,7 @@ it:
         art: Arte
         other: 'Altro:'
       resources:
+        bootstrap: Bootstrap
         codecademy: CodeCademy - l'Accademia del Codice
         csfirst: Google CS First
         khan: Khan Academy
@@ -1378,6 +1394,20 @@ it:
         di Code.org e 2) accetti di condividere i tuoi dati con il nostro partner
         internazionale nel tuo paese (in Italia: Programma il Futuro) in modo che
         possa aiutarti a sostenere il tuo viaggio come insegnante di informatica.'
+    logged_out:
+      heading: Grazie per il tuo interesse nel Programma di apprendimento professionale!
+      body: Per iniziare, devi prima accedere al tuo account Code.org. Se desideri
+        ulteriori informazioni sul programma prima di avviare la tua candidatura,
+        consulta la <a href="%{url}"> panoramica del programma di apprendimento professionale
+        </a>.
+    not_teacher:
+      body: Grazie per l'interesse dimostrato nel programma di apprendimento professionale
+        di Code.org! Al momento sei collegato a un account studente. Crea un account
+        insegnante o <a href="%{user_settings}"> vai alle impostazioni utente </a>
+        per aggiornare il tuo account da studente a insegnante.
+      more: Se desideri ulteriori informazioni sul programma prima di avviare la tua
+        candidatura, consulta la <a href="%{pl_overview}"> panoramica del programma
+        di apprendimento professionale </a>.
     no_teacher_email:
       body: Al tuo account non è associato alcun indirizzo email. Per favore, prima
         di completare questo modulo, <a href="%{user_registration}">vai alle impostazioni

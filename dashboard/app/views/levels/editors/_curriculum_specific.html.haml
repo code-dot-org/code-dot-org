@@ -1,4 +1,7 @@
 .field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :never_autoplay_video, description: "Never autoplay video"}
+
+.field
   = f.label :thumbnail_url, 'Optional thumbnail URL (overrides default thumbnail)'
   = f.text_field :thumbnail_url
 

@@ -1081,6 +1081,9 @@ pt-BR:
       Artist - Nested Loops Assessment 1_instruction: |-
         Use um laço aninhado para completar
         o design.
+      Artist Autorun Test_instruction: |-
+        Agora coloque a função dentro de um laço
+        para desenhar esses três quadrados.
       Artist Inspiration_instruction: "Atividade livre - Inspiração: agora você\naprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
         você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
@@ -2513,6 +2516,8 @@ pt-BR:
         e então\npor outro para me levar até o porco"
       Course1MazeAssessment2_instruction: "Isso é um teste!\r\nMova-me por um caminho
         e então\npor outro para me levar até o porco."
+      CourseF_PlayLab_vars1_instruction: 'Para jogar este jogo, você não precisa escrever
+        nenhum código, apenas clicar "Executar"! '
       CourseF_PlayLab_vars10_instruction: "Hora da atividade livre! Temos aqui todas
         as\nvariáveis que usamos até agora essa etapa, bem como algumas a mais caso\nvocê
         queira usá-las. \r\n\r\nObserve que agora há muitos blocos em nossa\ncaixa
@@ -2834,6 +2839,10 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      Fish Tank 6-validated_instruction: Adicione um comportamento o novo amigo do
+        peixe.
+      Fish Tank 6-validated_simple_instruction: Adicione um comportamento o novo amigo
+        do peixe.
       Food Fight!_instruction: "Adicionamos uma última função para\nvocê.\r\n\r\nUse
         uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente
         quando \"pontos_jogador\" for maior que um determinado número.\r\n\r\nPor\nexemplo:
@@ -5017,6 +5026,29 @@ pt-BR:
       courseC_PlayLab_events3_2018_instruction: |-
         Você consegue escrever um programa para fazer Jorge
         (personagem 1) se mover em direção à gata Olívia?
+      courseC_PlayLab_events4_instruction: "Você consegue escrever um programa que
+        faça \nJorge (personagem 1) se mover até Olívia, a gata, e fazer Olívia dizer
+        \"Olá\" quando Jorge\na alcançar?"
+      courseC_PlayLab_events4_2018_instruction: "Você consegue escrever um programa
+        que faça \nJorge (personagem 1) se mover até Olívia, a gata, e fazer Olívia
+        dizer \"Olá\" quando Jorge\na alcançar?"
+      courseC_PlayLab_events5_instruction: Você pode escrever um programa para fazer
+        Octavia o polvo, dizer "olá" quando clicarem nela?
+      courseC_PlayLab_events5_2018_instruction: Você pode escrever um programa para
+        fazer Octavia o polvo, dizer "olá" quando clicarem nela?
+      courseC_PlayLab_events6_instruction: Agora escreva um programa que faça Valfredo
+        o Penguin se mover usando as teclas com as setas para cima / para baixo /
+        à esquerda / à direita, para atingir todos os alvos!
+      courseC_PlayLab_events6_2018_instruction: Agora escreva um programa que faça
+        Valfredo o Penguin se mover usando as teclas com as setas para cima / para
+        baixo / à esquerda / à direita, para atingir todos os alvos!
+      courseC_PlayLab_events7_instruction: O bloco `repetir para sempre` permite você
+        executar um código várias vezes para sempre. Use este bloco para mover Chomp
+        o dinossauro (personagem  2) 400 pixels para cima e para baixo, para sempre.
+      courseC_PlayLab_events7_2018_instruction: O bloco `repetir para sempre` permite
+        você executar um código várias vezes para sempre. Use este bloco para mover
+        Chomp o dinossauro (personagem  2) 400 pixels para cima e para baixo, para
+        sempre.
       courseC_artist_loops5a_instruction: Experimente novos adesivos!
       courseC_artist_loops5a_2018_instruction: Experimente novos adesivos!
       courseC_artist_loops5b_instruction: Tente adicionar linhas!
@@ -5031,21 +5063,62 @@ pt-BR:
         do tesouro!
       courseC_collector_loops_challenge2_2018_instruction: Pegue pelo menos **5**
         peças do tesouro!
+      courseC_collector_prog2_instruction: Mova Laurel até o tesouro, então use `coletar`
+        para pegar.
+      courseC_collector_prog2_2018_instruction: Mova Laurel até o tesouro, então use
+        `coletar` para pegar.
+      courseC_collector_prog3_instruction: Ordene estes blocos para coletar o tesouro
+        e resolver o desafio.
+      courseC_collector_prog3_2018_instruction: Ordene estes blocos para coletar o
+        tesouro e resolver o desafio.
+      courseC_collector_prog4_instruction: Ponha estes blocos em ordem para coletar
+        todo o tesouro e resolver o desafio.
+      courseC_collector_prog4_2018_instruction: Ponha estes blocos em ordem para coletar
+        todo o tesouro e resolver o desafio.
+      courseC_collector_prog5_instruction: Estes blocos estão na ordem errada. Você
+        pode consertá-los?
+      courseC_collector_prog5_2018_instruction: Estes blocos estão na ordem errada.
+        Você pode consertá-los?
+      courseC_collector_prog6_instruction: Reordene os blocos para coletar todo o
+        tesouro.
+      courseC_collector_prog6_2018_instruction: Reordene os blocos para coletar todo
+        o tesouro.
+      courseC_collector_prog7_instruction: Use blocos da caixa de ferramenta para
+        coletar todo o tesouro.
+      courseC_collector_prog7_2018_instruction: Use blocos da caixa de ferramenta
+        para coletar todo o tesouro.
       courseC_collector_prog9_instruction: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_prog9_2018_instruction: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_progA_instruction: Ajude Laurel a coletar todo o tesouro.
       courseC_collector_progB_instruction: Colete quantas moedas você conseguir para
         terminar esta fase!
+      courseC_collector_prog_challenge1_instruction: Preste atenção! Você consegue
+        coletar todas as **10** peças do tesouro?
+      courseC_collector_prog_challenge1_2018_instruction: Preste atenção! Você consegue
+        coletar todas as **10** peças do tesouro?
       courseC_collector_prog_challenge2_instruction: Colete pelo menos **10** peças
         do tesouro para finalizar este desafio!
       courseC_collector_prog_challenge2_2018_instruction: Colete pelo menos **10**
         peças do tesouro para finalizar este desafio!
+      courseC_flappy_embed_events_instruction: Aquie está um exemplo de um jogo que
+        você está prestes a criar! Jogue-o uma ou duas vezes para ter uma ideia do
+        que você está prestes a fazer.
       courseC_harvester_loops3_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_instruction: Colete todas as abóboras.
       courseC_maze_debugging10_instruction: |-
         Depure esse nível reorganizando e trocando
         blocos para me levar até o porco!
+      courseC_maze_loops1_instruction: Você consegue levar o pássaro até o porco?
       courseC_maze_loops10_instruction: Você está indo bem! Continuem assim!
+      courseC_maze_loops11_instruction: Você está quase lá! Desta vez, escolha o caminho
+        que você preferir!
+      courseC_maze_loops2_instruction: |-
+        Você consegue levar o pássaro até o porco criando um laço que usa
+        apenas um bloco "mover para frente" dentro de um bloco "repita"?
+      courseC_maze_loops3_instruction: Resolva esté desafio criando um laço!
+      courseC_maze_loops7_instruction: Use o que você aprendeu em outros desafios!
+      courseC_maze_loops8_instruction: 'Desafio: Combine ideias dos últimos desafios
+        para completar este nível.'
       courseC_maze_loops9_instruction: Você está indo bem! Continuem assim!
       courseC_maze_programming4_instruction: Evite a(s) TNT(s) ou penas irão voar!
       courseC_maze_programming4_2018_instruction: Evite a(s) TNT(s) ou penas irão
@@ -5056,7 +5129,25 @@ pt-BR:
         de bugs. Você precisará remover alguns blocos e acrescentar outros."
       courseC_maze_programming7_2018_instruction: "**Desafio:** Este código tem um
         monte de bugs. Você precisará remover alguns blocos e acrescentar outros."
+      courseC_maze_programming8_instruction: '*" Mantenha a calma e ajude-me a encontrar
+        o porco mal."*'
+      courseC_maze_programming8_2018_instruction: '*" Mantenha a calma e ajude-me
+        a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_instruction: '*" Mantenha a calma e ajude-me
+        a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_2018_instruction: '*" Mantenha a calma e
+        ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming_challenge1_instruction: 'O porco está se escondendo,
+        e o objetivo é encontrá-lo. '
+      courseC_maze_programming_challenge1_2018_instruction: 'O porco está se escondendo,
+        e o objetivo é encontrá-lo. '
       courseC_puppy_loops10_instruction: Você está indo bem! Continuem assim!
+      courseC_puppy_loops11_instruction: Você está quase lá! Desta vez, escolha o
+        caminho que você preferir!
+      courseC_puppy_loops8_instruction: 'Desafio: Combine ideias dos últimos desafios
+        para completar este nível.'
+      courseC_puppy_loops8courseC_maze_loops8_instruction: 'Desafio: Combine ideias
+        dos últimos desafios para completar este nível.'
       courseC_puppy_loops9_instruction: Você está indo bem! Continuem assim!
       courseC_starWars_loops10_instruction: Você está indo bem! Continuem assim!
       courseC_starWars_loops10_2018_instruction: Você está indo bem! Continuem assim!
@@ -5064,6 +5155,18 @@ pt-BR:
         assim!
       courseC_starWars_loops10_predict2_2018_instruction: Você está indo bem! Continuem
         assim!
+      courseC_starWars_loops11_instruction: Você está quase lá! Desta vez, escolha
+        o caminho que você preferir!
+      courseC_starWars_loops11_2018_instruction: Você está quase lá! Desta vez, escolha
+        o caminho que você preferir!
+      courseC_starWars_loops2_instruction: Para pegar todo os pedaços de metal, tente
+        criar um laço que usa apenas um bloco dentro de um bloco `repita`.
+      courseC_starWars_loops2_2018_instruction: Para pegar todo os pedaços de metal,
+        tente criar um laço que usa apenas um bloco dentro de um bloco `repita`.
+      courseC_starWars_loops5_instruction: Faça o BB-8 pegar todos os pedaços de metal
+        o mais rápido possível!
+      courseC_starWars_loops5_2018_instruction: Faça o BB-8 pegar todos os pedaços
+        de metal o mais rápido possível!
       courseD_artist_binary1_instruction: "Binário é uma forma de representar informações\nusando
         apenas duas opções. Aqui, vamos usar as opções \"desligado\" (representada\npelo
         número 0) e \"ligado\" (representada pelo número 1).  \r\n\r\nFoi fornecida\numa
@@ -5100,6 +5203,15 @@ pt-BR:
         esta pintura!
       courseD_artist_nestedLoops_challenge2_2018_instruction: Conserte o código para
         fazer esta pintura!
+      courseD_autorun_binary4_2019_instruction: |-
+        Você consegue desenhar este padrão repetindo
+        apenas três dígitos binários? (0 e 1)?
+      courseD_autorun_binary6_2019_instruction: |-
+        Que string binária de 6 dígitos, repetida
+        11 vezes, vai desenhar essa imagem?
+      courseD_autorun_binary7_2019_instruction: |-
+        Qual é a menor string binária que você
+        pode repetir para desenhar esta imagem?
       courseD_bee_debugging3_instruction: |-
         Corrija o(s) erro(s) para coletar todo o néctar
         e produzir todo o mel.
@@ -5245,6 +5357,12 @@ pt-BR:
         e as abóboras.
       courseE_farmer_functions2b_2018_instruction: Ajude a colheitadeira a pegar os
         milhos e as abóboras.
+      courseE_farmer_ramp11a_instruction: Enquanto houver uma pilha, remova a areia.
+      courseE_farmer_ramp11a_2018_instruction: Enquanto houver uma pilha, remova a
+        areia.
+      courseE_farmer_ramp11b_instruction: Enquanto houver uma pilha, remova a areia.
+      courseE_farmer_ramp11b_2018_instruction: Enquanto houver uma pilha, remova a
+        areia.
       courseE_maze_ramp4_instruction: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp4_2018_instruction: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp5_instruction: Desvie da TNT.
@@ -5514,6 +5632,13 @@ pt-BR:
         o código para desenhar os bigodes, todos com o mesmo tamanho."
       grade2_PuppyLoops_9_instruction: "Parece que o C no código está desenhado ao
         contrário!\r\n\r\nVocê\nconsegue fazê-lo parecer com um C de novo?"
+      grade2_collector_10_instruction: Você está quase acabando! Colete o máximo de
+        peças do tesouro que você conseguir para terminar a fase!
+      grade2_collector_10_2018_instruction: Você está quase acabando! Colete o máximo
+        de peças do tesouro que você conseguir para terminar a fase!
+      grade2_collector_5_instruction: Estes blocos estão na ordem errada. Você pode
+        consertá-los?
+      grade2_collector_6_instruction: Reordene os blocos para coletar todo o tesouro.
       grade2_collector_9_instruction: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_A_instruction: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018_instruction: Ajude Laurel a coletar todo o tesouro.

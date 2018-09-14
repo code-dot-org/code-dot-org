@@ -987,6 +987,12 @@ tr:
       courseE_farmer_functions1a_2018_callout:
         courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
           herhangi bir zaman değişir.
+      courseE_farmer_functions2a_callout:
+        courseE_farmer_functions2a_2: Bu kod tam olarak yazdığın gibi görünmeyebilir
+          ancak yine de iş görür!
+      courseE_farmer_functions2aALT_callout:
+        courseE_farmer_functions2a_2: Bu kod tam olarak yazdığın gibi görünmeyebilir
+          ancak yine de iş görür!
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
           herhangi bir zaman değişir.
@@ -1049,6 +1055,12 @@ tr:
           yaz'
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Blokları buraya ekle
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Fonksiyonun içindeki kodu değiştirmek için "düzenle"
+          düğmesini kullan.
+      courseF_artist_fwp1_2018_callout:
+        courseF_artist_fwp1_1: Fonksiyonun içindeki kodu değiştirmek için "düzenle"
+          düğmesini kullan.
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
         courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı
@@ -1057,6 +1069,30 @@ tr:
         courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
         courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı
           gir.
+      courseF_artist_variables3_callout:
+        courseF_artist_variables3_a: "`uzunluk` değişkenini ayarlamak için bunu kullan"
+      courseF_artist_variables3_2018_callout:
+        courseF_artist_variables3_a: "`uzunluk` değişkenini ayarlamak için bunu kullan"
+      courseF_artist_variables6_callout:
+        courseF_artist_variables6_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
+      courseF_artist_variables6_2018_callout:
+        courseF_artist_variables6_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
+      courseF_artist_variables6a_callout:
+        courseF_artist_variables6a_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
+      courseF_artist_variables6a_2018_callout:
+        courseF_artist_variables6a_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
+      courseF_artist_variables_3_callout:
+        courseF_artist_variables_3_a: "`uzunluk` değişkenini ayarlamak için bunu kullan"
+      courseF_artist_variables_6_callout:
+        courseF_artist_variables_6_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
+      courseF_artist_variables_6a_callout:
+        courseF_artist_variables6a_1: Aynı sayının birden fazla kopyasını değiştirmek
+          zorunda olduğunda değişkenler çok kullanışlı olabilir.
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: Araç  kutusu şimdi Kategori modundadır.  Tüm
           bloklar bu etiketler altındadır!
@@ -1083,6 +1119,8 @@ tr:
         courseF_bee_functions6_1: Daha fazla blok için buraya bakmayı unutma!
       courseF_bee_functions6_2018_callout:
         courseF_bee_functions6_1: Daha fazla blok için buraya bakmayı unutma!
+      courseF_bee_functions_1_2018_callout:
+        courseF_bee_functions_1_2018_1: Değişkenlerini altta bulabilirsin!
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: Bu fonksiyona hangi kodu koymalısınız?
         courseF_bee_functions_challenge1_2: Birden çok kez bal yapmak üzere düzenlerseniz
@@ -1101,6 +1139,8 @@ tr:
       courseF_bee_fwp_challenge2_2018_callout:
         courseF_bee_fwp_challenge2_callout1: Bu işlev mısır ile iyi bir iş çıkaracaktır,
           ancak diğer sebzelerde nasıl acaba?
+      courseF_bee_variables_1_2018_callout:
+        courseF_bee_functions_1_2018_1: Değişkenlerini altta bulabilirsin!
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
@@ -1179,6 +1219,10 @@ tr:
           kullan ve ölçüyü değiştir.'
       frozen cross rotate_callout:
         replace_questions_degree: Açılan menüden "???" yerine bir numara seçin
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Açılan menüden "???" yerine bir numara seçin
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Açılan menüden "???" yerine bir numara seçin
       frozen cross_callout:
         repeat_blocks_1: "(1) Bu bloğu kullan ve çalışma alanındaki gri blokların
           etrafına koy"
@@ -1189,7 +1233,19 @@ tr:
         frozen_diamond_repeat: Bu şekli oluşturmak için yineleme bloğunu kullan.
       frozen freeplay_callout:
         snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
       frozen line_callout:
+        run: Programınızı denemek içi "Çalıştır"a basın
+        move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
+          "Çalıştığında" bloğunun altına ekleyin
+      frozen line_b_callout:
+        run: Programınızı denemek içi "Çalıştır"a basın
+        move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
+          "Çalıştığında" bloğunun altına ekleyin
+      frozen line_test_callout:
         run: Programınızı denemek içi "Çalıştır"a basın
         move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
           "Çalıştığında" bloğunun altına ekleyin
@@ -1198,13 +1254,31 @@ tr:
           ne kadar döneceğini belirleyebilirsiniz'
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"Kar tanesi dalı oluştur" bloğunu kullan'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"Kar tanesi dalı oluştur" bloğunu kullan'
       frozen square iterative_callout:
+        frozen_create_square: Kare oluşturmak için daha fazla blok ekle
+      frozen square iterative_b_callout:
+        frozen_create_square: Kare oluşturmak için daha fazla blok ekle
+      frozen square iterative_test_callout:
         frozen_create_square: Kare oluşturmak için daha fazla blok ekle
       frozen square loop 3x_callout:
         replace_questions: Açılan menüden "???" yerine bir numara seçin
+      frozen square loop 3x_b_callout:
+        replace_questions: Açılan menüden "???" yerine bir numara seçin
+      frozen square loop 3x_test_callout:
+        replace_questions: Açılan menüden "???" yerine bir numara seçin
       frozen square loop_callout:
         replace_questions: Açılan menüden "???" yerine bir numara seçin
+      frozen square loop_b_callout:
+        replace_questions: Açılan menüden "???" yerine bir numara seçin
+      frozen square loop_test_callout:
+        replace_questions: Açılan menüden "???" yerine bir numara seçin
       frozen square snowflake_callout:
+        replace_questions: Açılan menüden "???" yerine bir numara seçin
+      frozen square snowflake_b_callout:
+        replace_questions: Açılan menüden "???" yerine bir numara seçin
+      frozen square snowflake_test_callout:
         replace_questions: Açılan menüden "???" yerine bir numara seçin
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
@@ -1299,6 +1373,12 @@ tr:
         edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
         add_and_drag_parameter: Buraya parametrenizin adını yazın, "ekle"ye tıklayın
           ve ardından fonksiyonunuzun tanımına sürükleyin
+      grade5_artist_parameters_squares1a_callout:
+        grade5_artist_parameters_triangles1_1: Fonksiyonun içindeki kodu değiştirmek
+          için "düzenle" düğmesini kullan.
+      grade5_artist_parameters_triangles1_callout:
+        grade5_artist_parameters_triangles1_1: Fonksiyonun içindeki kodu değiştirmek
+          için "düzenle" düğmesini kullan.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
         add_and_drag_parameter: Buraya parametrenizin adını yazın, "ekle"ye tıklayın

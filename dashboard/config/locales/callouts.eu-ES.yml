@@ -154,6 +154,10 @@ eu:
           eta aldatu tamaina.
       frozen cross rotate_callout:
         replace_questions_degree: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
       frozen cross_callout:
         repeat_blocks_1: "(1) Erabili bloke hau eta inguratu berarekin lan eremuko
           bloke grisak"
@@ -165,7 +169,17 @@ eu:
         frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
       frozen freeplay_callout:
         snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
       frozen line_callout:
+        move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean"
+          blokearen azpian Elsa aurrera mugitzeko
+      frozen line_b_callout:
+        move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean"
+          blokearen azpian Elsa aurrera mugitzeko
+      frozen line_test_callout:
         move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean"
           blokearen azpian Elsa aurrera mugitzeko
       frozen perpendicular_callout:
@@ -173,13 +187,31 @@ eu:
           den zenbakiak adierazten du zenbat biratuko duen Elsak
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Erabili "sortu elur-malutaren adarra" blokea
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Erabili "sortu elur-malutaren adarra" blokea
       frozen square iterative_callout:
+        frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
+      frozen square iterative_b_callout:
+        frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
+      frozen square iterative_test_callout:
         frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
       frozen square loop 3x_callout:
         replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop 3x_b_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop 3x_test_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
       frozen square loop_callout:
         replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop_b_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square loop_test_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
       frozen square snowflake_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square snowflake_b_callout:
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+      frozen square snowflake_test_callout:
         replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Gogoan hartu, begiratu ea hodei bakoitzak lore bat

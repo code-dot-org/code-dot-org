@@ -432,6 +432,7 @@ pt:
       Artist - Nested Loops 6_instruction: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
       Artist - Nested Loops 9_instruction: Desenhe o dente na boca do crocodilo!
       Artist - Nested Loops Assessment 1_instruction: "Use um laço aninhado para completar\no design."
+      Artist Autorun Test_instruction: "Use o bloco \"repita\" para desenhar esses\n3 quadrados."
       Artist Inspiration_instruction: "Atividade livre - Inspiração: agora você\naprendeu tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\r\n \\r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530 para ver a solução."
       Auto Open Function Editor_instruction: "Você pode chamar funções de dentro\nde outras funções! Usando sua função \"forma\" como base, crie 3 formas\nde casa, cada uma 20 pixels maior que a anterior, começando com um comprimento de 50 pixels. Usar\num laço com contador pode ser útil."
       Bergeron Robot Maze1_instruction: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha alguns blocos `mover para a frente` por baixo do bloco `quando executar` e depois clica em \"Executar\". "
@@ -1070,6 +1071,9 @@ pt:
       courseD_artist_binary6_2018_instruction: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
       courseD_artist_binary7_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_artist_binary7_2018_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
+      courseD_autorun_binary4_2019_instruction: "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?"
+      courseD_autorun_binary6_2019_instruction: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
+      courseD_autorun_binary7_2019_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_bee_debugging3_instruction: "Esses blocos estão me incomodando. Conserte o(s)\nerro(s) para coletar todo o néctar e produzir todo o mel."
       courseD_bee_nestedLoops3_instruction: "Colete todo o néctar de cada flor.\nUse um laço aninhado."
       courseD_bee_nestedLoops5_instruction: "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."

@@ -1066,6 +1066,12 @@ nn:
       frozen cross rotate_callout:
         replace_questions_degree: Bruk nedtrekkslista for å erstatte «???» med eit
           tal
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Bruk nedtrekkslista for å erstatte «???» med eit
+          tal
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Bruk nedtrekkslista for å erstatte «???» med eit
+          tal
       frozen cross_callout:
         repeat_blocks_1: "(1) Bruk denne blokka og sett han rundt dei grå blokkene
           i arbeidsområdet"
@@ -1076,7 +1082,19 @@ nn:
         frozen_diamond_repeat: Bruk gjenta-blokka for å lage denne figuren.
       frozen freeplay_callout:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       frozen line_callout:
+        run: Trykk på "Køyr" for å prøve programmet!
+        move_elsa_forward: Dra ei «Flytt framover»-blokk og fest den under «Når køyrt»-blokka
+          for å få Elsa til å flytte framover
+      frozen line_b_callout:
+        run: Trykk på "Køyr" for å prøve programmet!
+        move_elsa_forward: Dra ei «Flytt framover»-blokk og fest den under «Når køyrt»-blokka
+          for å få Elsa til å flytte framover
+      frozen line_test_callout:
         run: Trykk på "Køyr" for å prøve programmet!
         move_elsa_forward: Dra ei «Flytt framover»-blokk og fest den under «Når køyrt»-blokka
           for å få Elsa til å flytte framover
@@ -1085,13 +1103,31 @@ nn:
           avgjer kor mykje Elsa snur seg
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Bruk "Lag ei snøfnugg-grein"-blokka
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Bruk "Lag ei snøfnugg-grein"-blokka
       frozen square iterative_callout:
+        frozen_create_square: Legg til fleire blokker her for å lage eit kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Legg til fleire blokker her for å lage eit kvadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Legg til fleire blokker her for å lage eit kvadrat
       frozen square loop 3x_callout:
         replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
+      frozen square loop 3x_b_callout:
+        replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
+      frozen square loop 3x_test_callout:
+        replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
       frozen square loop_callout:
         replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
+      frozen square loop_b_callout:
+        replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
+      frozen square loop_test_callout:
+        replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
       frozen square snowflake_callout:
+        replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
+      frozen square snowflake_b_callout:
+        replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
+      frozen square snowflake_test_callout:
         replace_questions: Bruk nedtrekkslista for å erstatte «???» med eit tal
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: Det er kun en av disse blokkene i verktøykassa. Hvordan

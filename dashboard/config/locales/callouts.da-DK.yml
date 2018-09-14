@@ -159,6 +159,12 @@ da:
       frozen cross rotate_callout:
         replace_questions_degree: Brug drop-down menuen til at erstatte "???" med
           et tal
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Brug drop-down menuen til at erstatte "???" med
+          et tal
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Brug drop-down menuen til at erstatte "???" med
+          et tal
       frozen cross_callout:
         repeat_blocks_1: "(1) Brug denne blok og sæt den rundt om de grå i arbejdsområdet"
         repeat_blocks_2: "(2) Flyt gentag blokken hertil, og sæt de grå blokke indeni"
@@ -168,7 +174,17 @@ da:
         frozen_diamond_repeat: Benyt Gentag Blok, for at oprette denne form.
       frozen freeplay_callout:
         snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
       frozen line_callout:
+        move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når
+          programmet kører"-blokken for at få Elsa til at bevæge sig fremad
+      frozen line_b_callout:
+        move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når
+          programmet kører"-blokken for at få Elsa til at bevæge sig fremad
+      frozen line_test_callout:
         move_elsa_forward: Træk i en "flyt fremad"-blok og fastgør den under "når
           programmet kører"-blokken for at få Elsa til at bevæge sig fremad
       frozen perpendicular_callout:
@@ -176,13 +192,31 @@ da:
           bestemmer hvor mange grader Elsa drejer
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Benyt "Opret en snefnug-gren"-blokken
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Benyt "Opret en snefnug-gren"-blokken
       frozen square iterative_callout:
+        frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Tilføj flere blokke her for at lave et kvadrat
       frozen square loop 3x_callout:
         replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop 3x_b_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop 3x_test_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
       frozen square loop_callout:
         replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop_b_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square loop_test_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
       frozen square snowflake_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square snowflake_b_callout:
+        replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
+      frozen square snowflake_test_callout:
         replace_questions: Brug drop-down menuen til at erstatte "???" med et tal
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klik Redigér for at tilføje en parameter i din funktion

@@ -409,6 +409,7 @@ pl:
       Artist - Nested Loops 6_instruction: Czy potrafisz narysować sześciokąt powtarzając kod trójkąta?
       Artist - Nested Loops 9_instruction: Narysuj zęby w paszczy aligatora!
       Artist - Nested Loops Assessment 1_instruction: Użyj zagnieżdżonej pętli, aby ukończyć projekt.
+      Artist Autorun Test_instruction: Teraz, umieść funkcję w pętli, aby narysować te 3 kwadraty.
       Artist Inspiration_instruction: "Dowolne inspiracje: Nauczyłeś się wszystkiego, co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie, utwórz coś według własnego pomysłu.\\r\n\\r\nCzy chcesz wiedzieć, jak powstał nasz wzór? "
       Auto Open Function Editor_instruction: 'Możesz wywoływać funkcje z wnętrza innych funkcji! Za pomocą swojej funkcji "draw a shape" (rysuj kształt), utwórz 3 kształty domów, każdy o 20 pikseli większy niż poprzedni, zaczynając od 50 pikseli. Pomocne może być użycie pętli licznikowej. '
       Bee Recommended Blocks test_instruction: Fioletowe kwiaty mogą mieć 1 lub 0 nektaru, ale nie wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli".
@@ -1390,6 +1391,11 @@ pl:
       courseD_artist_project1_2018_instruction: 'Narysuj mały kształt, szeroki na  **20 do 50** pikseli. To może być kształt jakikolwiek chcesz.  '
       courseD_artist_project2_instruction: Teraz weź swój kształt i narysuj go dwa lub trzy z rzędu!
       courseD_artist_project2_2018_instruction: Teraz weź swój kształt i narysuj go dwa lub trzy z rzędu!
+      courseD_autorun_binary4_2019_instruction: Czy potrafisz narysować ten wzorek powtarzając binarny łańcuch złożony z trzech cyfr (0 lub 1)?
+      courseD_autorun_binary6_2019_instruction: Który 6-cyfrowy binarny łańcuch, powtórzony 11 razy, narysuje ten obraz?
+      courseD_autorun_binary7_2019_instruction: Jaki jest najkrótszy łańcuch binarny, który możesz powtórzyć, by narysować ten obraz?
+      courseD_autorun_binary8_2019_instruction: Ukończ kod, aby utworzyć ten rysunek.
+      courseD_autorun_binary8_predict1_2019_instruction: Ukończ kod, aby utworzyć ten rysunek.
       courseD_bee_conditionals1_instruction: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_instruction: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_2018_instruction: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.

@@ -13,6 +13,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  AuthenticationOption::OAUTH_CREDENTIAL_TYPES.each do |provider|
+    alias_method provider.to_sym, :all
+  end
+
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
     return head(:bad_request) unless can_connect_provider?
@@ -96,10 +100,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  User::OAUTH_PROVIDERS.each do |provider|
-    alias_method provider.to_sym, :all
-  end
-
   OAUTH_PARAMS_TO_STRIP = %w{oauth_token oauth_refresh_token}.freeze
 
   def self.get_cache_key(oauth_param, user)
@@ -148,15 +148,18 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # offer to connect the Clever account to an existing one, or insist if needed
       if user.migrated?
         auth_option = user.authentication_options.find_by credential_type: provider
-        session['clever_link_flag'] = provider
-        session['clever_takeover_id'] = auth_option.authentication_id
-        session['clever_takeover_token'] = auth_option.data_hash[:oauth_token]
+        begin_account_takeover \
+          provider: provider,
+          uid: auth_option.authentication_id,
+          oauth_token: auth_option.data_hash[:oauth_token],
+          force_takeover: force_takeover
       else
-        session['clever_link_flag'] = user.provider
-        session['clever_takeover_id'] = user.uid
-        session['clever_takeover_token'] = user.oauth_token
+        begin_account_takeover \
+          provider: user.provider,
+          uid: user.uid,
+          oauth_token: user.oauth_token,
+          force_takeover: force_takeover
       end
-      session['force_clever_takeover'] = force_takeover
       user.seen_oauth_connect_dialog = true
       user.save!
       sign_in_user
@@ -213,6 +216,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user.oauth_token = oauth_user.oauth_token
       @user.oauth_token_expiration = oauth_user.oauth_token_expiration
     end
+
+    if @user.present?
+      log_account_takeover_to_firehose(
+        source_user: oauth_user,
+        destination_user: @user,
+        type: 'silent',
+        provider: auth_hash.provider
+      )
+    end
+
     sign_in_user
   end
 

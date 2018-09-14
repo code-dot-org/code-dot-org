@@ -763,6 +763,7 @@ kk:
       Artist - Nested Loops 9_instruction: Алигатордын аузындағы тісін боя!
       Artist - Nested Loops Assessment 1_instruction: Кодты аяқтау үшін ішкі цикл
         қолдан.
+      Artist Autorun Test_instruction: '"Қайталау" блогын қолданып осы 3 шаршыны сал.'
       Artist Inspiration_instruction: "Тегін Ойнау Шабыты: Енді сіз осы секілді сурет
         жасау үшін білу қажет барлық заты білесіз. Егер де осы сурет сізді шабыттандыратын
         болса, Осы іспеттес бір зат құрып көріңіз. Кері жағдайда өзіңіздің қалаған
@@ -2194,6 +2195,12 @@ kk:
       courseD_artist_binary7_instruction: Бұл суретті салу үшін ең қысқа екілік жол
         қайсы?
       courseD_artist_binary7_2018_instruction: Бұл суретті салу үшін ең қысқа екілік
+        жол қайсы?
+      courseD_autorun_binary4_2019_instruction: Бұл суретті салу үшін 3 цифрлы екілік
+        кодты циклдан өткізе аласын ба?
+      courseD_autorun_binary6_2019_instruction: Қай 6 цифрлы жолды 11 рет қайталағанда
+        осы сурет салынады?
+      courseD_autorun_binary7_2019_instruction: Бұл суретті салу үшін ең қысқа екілік
         жол қайсы?
       courseD_bee_debugging3_instruction: Бұл блоктар маған кедергі жасап жатыр. Қатені
         жөнеп, барлық шәрінді жинап, бал жаса.

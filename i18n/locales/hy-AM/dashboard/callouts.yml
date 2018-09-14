@@ -110,6 +110,10 @@ hy:
         frozen_circle_function_with_parameter_circle: 'Օգտագործեք "Ստեղծել մի շրջան» դաշինքի եւ փոխել չափը:'
       frozen cross rotate_callout:
         replace_questions_degree: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Օգտագործեք իջնող է փոխարինել «???» մի շարք
       frozen cross_callout:
         repeat_blocks_1: "(1) Use this block and put it around the grey blocks in the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks inside
@@ -119,19 +123,45 @@ hy:
         frozen_diamond_repeat: Օգտագործեք կրկնել բլոկ ստեղծել այս ձեւավորել.
       frozen freeplay_callout:
         snowflake_dropdown: Օգտագործեք այս իջնող ստեղծել տարբեր snowflakes!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Օգտագործեք այս իջնող ստեղծել տարբեր snowflakes!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Օգտագործեք այս իջնող ստեղծել տարբեր snowflakes!
       frozen line_callout:
+        move_elsa_forward: Քաշեք է մի «առաջ շարժվելու համար» թաղամաս եւ տալ այն ներքեւում «Երբ Run» բլոկի կատարել Elsa առաջ շարժվել
+      frozen line_b_callout:
+        move_elsa_forward: Քաշեք է մի «առաջ շարժվելու համար» թաղամաս եւ տալ այն ներքեւում «Երբ Run» բլոկի կատարել Elsa առաջ շարժվել
+      frozen line_test_callout:
         move_elsa_forward: Քաշեք է մի «առաջ շարժվելու համար» թաղամաս եւ տալ այն ներքեւում «Երբ Run» բլոկի կատարել Elsa առաջ շարժվել
       frozen perpendicular_callout:
         turn_elsa: 'Օգտագործեք «շրջադարձ» բլոկի որպեսզի Elsa շրջադարձ: Համարը բացվող որոշում, թե որքան Elsa հերթափոխով'
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Օգտագործեք "Ստեղծել snowflake ճյուղ» թաղամաս
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Օգտագործեք "Ստեղծել snowflake ճյուղ» թաղամաս
       frozen square iterative_callout:
+        frozen_create_square: Կցել ավելի շատ բլոկների այստեղ ստեղծել հրապարակ
+      frozen square iterative_b_callout:
+        frozen_create_square: Կցել ավելի շատ բլոկների այստեղ ստեղծել հրապարակ
+      frozen square iterative_test_callout:
         frozen_create_square: Կցել ավելի շատ բլոկների այստեղ ստեղծել հրապարակ
       frozen square loop 3x_callout:
         replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen square loop 3x_b_callout:
+        replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen square loop 3x_test_callout:
+        replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
       frozen square loop_callout:
         replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen square loop_b_callout:
+        replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen square loop_test_callout:
+        replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
       frozen square snowflake_callout:
+        replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen square snowflake_b_callout:
+        replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
+      frozen square snowflake_test_callout:
         replace_questions: Օգտագործեք իջնող է փոխարինել «???» մի շարք
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Սեղմեք խմբագրել է ավելացնել պարամետր ձեր գործառույթը

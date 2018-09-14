@@ -136,6 +136,10 @@ kk:
           және көлемін өзгертіңіз.'
       frozen cross rotate_callout:
         replace_questions_degree: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       frozen cross_callout:
         repeat_blocks_1: "(1) Осы блокты пайдаланып және сұр түсті блоктын айналасына
           қойыңыз"
@@ -147,7 +151,17 @@ kk:
         frozen_diamond_repeat: Осы форманы жасау үшін қайталау блогын пайдаланыңыз.
       frozen freeplay_callout:
         snowflake_dropdown: Әртүрлі ақша қар жасау үшін ашылмалы тізімді пайдаланыңыз!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Әртүрлі ақша қар жасау үшін ашылмалы тізімді пайдаланыңыз!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Әртүрлі ақша қар жасау үшін ашылмалы тізімді пайдаланыңыз!
       frozen line_callout:
+        move_elsa_forward: '"Алдыға жылжыту" блогын алып және Эльзаны алдыға жылжыту
+          үшін оны төмендегі "Жіберу Болғанда" блогына тіркеңіз'
+      frozen line_b_callout:
+        move_elsa_forward: '"Алдыға жылжыту" блогын алып және Эльзаны алдыға жылжыту
+          үшін оны төмендегі "Жіберу Болғанда" блогына тіркеңіз'
+      frozen line_test_callout:
         move_elsa_forward: '"Алдыға жылжыту" блогын алып және Эльзаны алдыға жылжыту
           үшін оны төмендегі "Жіберу Болғанда" блогына тіркеңіз'
       frozen perpendicular_callout:
@@ -155,13 +169,31 @@ kk:
           санды таңдап Эльзаны қанша рет бұру керек анықтаңыз
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"Ақша қар бұтағын құру" блогын пайдаланып көріңіз'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"Ақша қар бұтағын құру" блогын пайдаланып көріңіз'
       frozen square iterative_callout:
+        frozen_create_square: Төртбұрыш салу үшін бірнеше блокты қолданыңыз
+      frozen square iterative_b_callout:
+        frozen_create_square: Төртбұрыш салу үшін бірнеше блокты қолданыңыз
+      frozen square iterative_test_callout:
         frozen_create_square: Төртбұрыш салу үшін бірнеше блокты қолданыңыз
       frozen square loop 3x_callout:
         replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop 3x_b_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop 3x_test_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       frozen square loop_callout:
         replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop_b_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square loop_test_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       frozen square snowflake_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square snowflake_b_callout:
+        replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
+      frozen square snowflake_test_callout:
         replace_questions: Ашылмалы тізбекті пайдаланып "???" санға ауыстырыңыз
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Функцияға параметрлер беру үшін басыңыз

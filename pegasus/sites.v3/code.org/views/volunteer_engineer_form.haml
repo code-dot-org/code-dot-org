@@ -141,7 +141,7 @@
   $(document).ready(function() {
     new google.maps.places.SearchBox(document.getElementById('volunteer-location'));
 
-    $('#volunteer-engineer-submit-form select').selectize();
+    $('#volunteer-engineer-submit-form select').selectize({plugins: ["remove_button"]});
 
     $('#volunteer-languages').change(function() {
       if ($.inArray('other', $(this).val()) > -1) {

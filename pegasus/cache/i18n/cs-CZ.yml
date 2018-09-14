@@ -35,6 +35,7 @@ cs-CZ:
   twentyhours_text: Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice
     a programovacích pojmech v  následujícím kurzu.
   og_title: Každé dítě si zaslouží příležitost
+  og_title_soon: Hodina kódu se blíží
   og_title_here: Akce Hodiná kódování je tady!
   og_description: Každý student v každé škole si zaslouží možnost studovat informatiku.
   og_description_celeb: Vyzkoušej nové kurzy a vyhraj video chat se známou celebritou
@@ -43,6 +44,10 @@ cs-CZ:
   csedweek_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily
     desítky milionů žáků všech věkových kategorií z více než 180 zemí a mluvících
     více než 45 jazyky.
+  csedweek_og_description_soon: Hodina kódu bude probíhat od 3. do 9. prosince 2018.
+    Pro každého studenta je zásadní učit se informatiku.
+  csedweek_og_description_here: Hodina kódu je zde. Pro každého studenta je zásadní
+    učit se informatiku.
   hoc2014_heading: Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/>
     8. až 14. prosince 2014 <br/>
   hoc2014_students: Studenti
@@ -88,6 +93,7 @@ cs-CZ:
   congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu
   congratulations_volunteer: 'Gratulujeme: teď, že jsi si zkusil Hodinu kódu, <a href="https://code.org/volunteer">
     Přihlás se u dobrovolníka v učebně</a> a pomoz studentům učit se Hodinu kódu!'
+  congratulations_on_completing_course: Gratulujeme k dokončení %{course}
   congrats_next_tutorials_title: Dále vyzkoušejte tyto výukové programy
   congrats_next_tutorials_desc: Vyzkoušejte tyto kratší, jednohodinovou výuku nebo
     zkuste <a href="%{current_path}/next"> partnerská výuka</a>.
@@ -265,7 +271,17 @@ cs-CZ:
   just_did_course2: Právě jsem dokončil kurz 2 - zkus si ho! @codeorg
   just_did_course3: Právě jsem dokončil kurz 3 - zkus si ho! @codeorg
   just_did_course4: Právě jsem dokončil kurz 4 - zkus si ho! @codeorg
+  just_did_coursea: Právě jsem dokončil Kurz A - zkus si ho! @codeorg
+  just_did_courseb: Právě jsem dokončil Kurz B - zkus si ho! @codeorg
+  just_did_coursec: Právě jsem dokončil Kurz C - zkus si ho! @codeorg
+  just_did_coursed: Právě jsem dokončil Kurz D - zkus si ho! @codeorg
+  just_did_coursee: Právě jsem dokončil Kurz E - zkus si ho! @codeorg
+  just_did_coursef: Právě jsem dokončil Kurz F - zkus si ho! @codeorg
   just_did_accelerated: Právě jsem dokončil zrychlený kurz - zkus si ho! @codeorg
+  just_did_hoc_donor: 'Právě jsem dokončil #. Hodinu kódu - zkus si ji! (Děkujeme
+    %{donor_twitter}, že podporujete @codeorg)'
+  just_did_course_donor: Právě jsem dokončil %{course} - zkus si to! (Děkujeme %{donor_twitter},
+    že podporujete @codeorg)
   twitter_teach_cs: 9 z 10 lidí souhlasí s tím, že školy by měly učit informatiku.
     http://youtu.be/nKIu9yen5nc. Navštivte https://code.org/.
   twitter_cs_foundational: Studium informatiky je pro každého studenta základní. https://youtu.be/QvyTEx1wyOY.
@@ -279,6 +295,8 @@ cs-CZ:
   lines_of_code: DOSUD NAPSÁNO PŘES <b># ŘÁDKŮ KÓDU</b>.
   lines_of_code_alt: "<b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY"
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Kdo udělal #. Hodinu kódu? (Děkujeme %{donor_twitter},
+    že podporujete @codeorg)'
   hoc_leaderboards: Žebříčky Hodiny Kódu
   students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
     řádků kódu."
@@ -306,6 +324,12 @@ cs-CZ:
   studiobar_donate_body: Jedno dítě se učí za každý dollar, který darujete
   studiobar_shop_title: Obchod
   studiobar_shop_body: Opusťte stereotypy. Noste hrdě naše logo.
+  homepage_stats_students: z amerických studentů mají účty na Code.org
+  homepage_stats_female: z našich studentů jsou ženy
+  homepage_stats_teachers: učitelé používají Code.org
+  homepage_stats_hourofcodde: studentů z celého světa si zkusilo Hodinu kódu
+  homepage_stats_policy: státy změnily politiku tak, aby podporovaly informatiku
+  homepage_stats_title: My děláme rozdíl
   homepage_hero_text_malala: "&ldquo;Vyzývám divky v každé zemi, aby se učily jednu
     Hodinu kódu&rdquo; \nMalala, nosiltelka Nobelovy ceny za mír"
   homepage_hero_text_susan: |-
@@ -323,6 +347,10 @@ cs-CZ:
   homepage_hero_text_satya: |-
     &ldquo;Informatika umí otevřít ty nejlepší příležitosti ve světě.&rdquo;
     Satya, CEO Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Informatiky umožňuje studentům
+    vytvořit svět zítřka.&rdquo;
+    Satya, generální ředitel společnosti Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Když programuješ, můžeš si vybrat a zvolit směr svého života.&rdquo;
     Chris Bosh
@@ -347,6 +375,8 @@ cs-CZ:
   homepage_hero_text_stat_loc: 2.5 milionů dívek se zapsalo na výuku v Code Studiu
   homepage_hero_text_stat_students: "#student_count studentských účtů v Code Studiu"
   homepage_hero_text_stat_served: 'Hodinu kódu: #served si vyzkoušelo'
+  homepage_hero_hoc_is_coming: Hodina kódu se blíží
+  homepage_hero_hoc_is_here: Hodina kódu je tady
   homepage_slot_text_hoc: Hodina kódu
   homepage_slot_text_frozen: Kluziště s Annou a Elzou
   homepage_slot_text_teacher: Katedra učitele
@@ -366,6 +396,7 @@ cs-CZ:
   homepage_action_text_girlvideo: Inspirovat divku
   homepage_action_text_learn: Zahájení výuky
   homepage_action_text_signpetition: Podepište petici
+  homepage_action_text_wincelebritychat: Vyhrajte chat se známou osobností
   homepage_signpetition_dropdown: Souhlasím &#x25BE;
   homepage_diversity_pledge: Zajistěte rozmanitost
   homepage_banner_text_prizes: 'Hodina kódu přichází znova, 7. -13. prosince. '
@@ -387,6 +418,7 @@ cs-CZ:
   homepage_slot_text_title_hoc: Hodina kódu
   homepage_slot_text_blurb_hoc: Každý se to může naučit. Začni dnes
   homepage_slot_text_link_hoc: Vyzkoušej Hodinu Programování
+  homepage_slot_text_link_about_hoc: O Hodině kódu
   homepage_slot_text_link_host: Uspořádejte Hodinu kódu
   homepage_slot_text_link_hocserved: "# si vyzkoušelo"
   homepage_solot_text_link_volunteer: Dobrovolník v Hodině kódu
@@ -410,10 +442,13 @@ cs-CZ:
   homepage_slot_text_link_buy: Zapojte se
   homepage_slot_text_link_donate: Přispějte
   homepage_slot_text_link_shop: Trička, čepice a další
+  homepage_slot_text_link_administrators: Přineste informatiku do své školy
   homepage_header_codestudio: Studentská tvorba v Code studiu
   homepage_header_donors: Code.org děkuje svým příznivcům
   homepage_donors_seall: Podívejte se na všechny
   homepage_donors_donate: Přispějte
+  homepage_below_hero_announcement_text: Vaše soukromí je pro nás důležité, a proto
+    jsme provedli změny zásad ochrany osobních údajů, které jsou účinné od 25. května.
   homepage_below_hero_announcement_link_text: Zjisti více
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
@@ -480,6 +515,7 @@ cs-CZ:
   mc_gradelevel: Věk 6 +
   mc_platformtext: Moderní prohlížeče, smartphony, tablety
   mc_specs: Mnoho jazyků | Moderní prohlížeče a tablety | Věk 6-106 let
+  minecraft_agent: 'Minecraft: Cesta hrdiny'
   minecraft_designer: Minecraft Designer
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Návody Hodiny kódu s Minecraftem
@@ -494,6 +530,26 @@ cs-CZ:
   minecraft_no_internet: Nemáš internet?
   minecraft_download_adventurer: Stáhni si offline verzi Minecraft Adventurer.
   minecraft_subtitle: Hodina kódu Minecraftu
+  minecraft_store_camps: Kurz Hodiny kódu Minecraft zdarma v obchodu Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Přihláš
+    se</a> zdarma na seminář Hodiny kódu Minecraft v Microsoft Store v Austrálii,
+    Kanadě, Puerto Ricu nebo USA. Nauč se, že programování je pro všechny a kombinuje
+    kreativitu, řešení problémů a spoustu zábavy."
+  minecraft_host_event: Zorganizuj Hodinu kódu s Minecraftem
+  minecraft_teach_resources: Zdroje a plán výuky učitele.
+  minecraft_leader_guide: Stáhni si zdroje a nauč se plánovat a vést události.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Stáhni</a>
+    si rychlého průvodce pro organizátora a PowerPoint prezentace pro mladší i starší
+    studenty."
+  minecraft_join_online_training: Jste připraveni zorganizovat Vaši vlastní Hodinu
+    kódu s Minecraftem, ale nevíte, kde začít? Podívejte se na naše <a href='%{minecraft_webinar_url}',
+    target='_blank'>webináře na vyžádání</a>. Naučíte se osvědčené postupy, budete
+    mít přístup k hotovým materiálům pro organizátory a projdete novým průvodcem Cesty
+    hrdiny od z týmu Minecraft. Získejte náskok v promýšlení, co je třeba přinést
+    Hodinou kódu mladým lidem, během Týdne informatiky (4.-10. prosince) a později.
+  minecraft_continue_learning: 'Informatika pro každého: pokračování po Hodině kódu
+    v Microsoft Storu'
+  minecraft_future: Pomozte mladé generaci připravit se na budoucnost
   sports_page_title: Hour of Code - sporty
   sports_og_title: Opřete se do toho. Kdokoliv se může učit.
   sports_og_description: Vyberte si mezi vytvořením basketbalové hry nebo smíchejte
@@ -610,6 +666,8 @@ cs-CZ:
   volunteer_engineer_submission_field_email_desc: Vaše e-mailová adresa nebude nikdy
     sdílená, ale zašleme vám požadavky učitelů.
   volunteer_engineer_submission_field_email_placeholder: E-mailová adresa
+  volunteer_engineer_submission_field_email_preference_privacy: "(Viz Zásady ochrany
+    osobních údajů)"
   volunteer_engineer_submission_field_email_preference_yes: Ano
   volunteer_engineer_submission_field_email_preference_no: Ne
   volunteer_engineer_submission_final_paragraph: Budete zalistovaní na mapě pro místní

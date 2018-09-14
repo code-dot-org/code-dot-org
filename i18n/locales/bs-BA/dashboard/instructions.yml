@@ -403,6 +403,7 @@ bs:
       Artist - Nested Loops 8_instruction: 'Ponavljaj ovaj dizajn 6 puta. Za koliko se moraš okrenuti pri svakom prolasku kroz petlju? (Savjet: Koliko je 360 podijeljeno sa 6?)'
       Artist - Nested Loops 9_instruction: Nacrtaj zube u ustima aligatora!
       Artist - Nested Loops Assessment 1_instruction: Upotrijebi ugniježdenu petlju za kompletiranje dizajna.
+      Artist Autorun Test_instruction: Iskoristi blok "ponavljaj" da bi se dobila ova 3 kvadrata.
       Auto Open Function Editor_instruction: 'Možeš zvati funkcije unutar drugih funkcija! Koristeći tvoju "oblik" funkciju kao osnovu, kreiraj 3 kuće, svaka za 20 piksela veća nego prethodna, počevši od veličine od 50 piksela.  Korištenje brojač petlje može biti od pomoći. '
       Bergeron Robot Maze1_instruction: 'Možeš li mi pomoći da uhvatim nevaljalu svinju? Naniži nekoliko "pokreni se naprijed" blokova i klikni na "Pokreni". '
       Big Game Animation 3_instruction: Funkcija "ažuriraj-opasnost" bi trebala raditi kao funkcija "ažuriraj-metu" sa razlikom da se opasnost kreće s desne na lijevu stranu. Dovrši "ažuriraj-opasnost" funkciju da bi omogućio/la opasnosti da leti preko ekrana.
@@ -990,6 +991,9 @@ bs:
       courseD_artist_binary6_2018_instruction: Koji će šestocifreni binarni niz. ponovljen 11 puta, nacrtati ovu sliku?
       courseD_artist_binary7_instruction: Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?
       courseD_artist_binary7_2018_instruction: Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?
+      courseD_autorun_binary4_2019_instruction: Možeš li nacrtati ovaj uzorak tako što ćeš prolaziti pomoću petlje kroz ovaj trocifreni binarni niz?
+      courseD_autorun_binary6_2019_instruction: Koji će šestocifreni binarni niz. ponovljen 11 puta, nacrtati ovu sliku?
+      courseD_autorun_binary7_2019_instruction: Koji je to najkraći binarni niz kojeg možeš ponavljati da bi nacrtao/la ovu sliku?
       courseD_bee_debugging3_instruction: Ovi blokovi me stvarno muče. Popravi grešku/greške da bi se pokupio sav nektar i napravio sav med.
       courseD_bee_nestedLoops3_instruction: Sakupi sav nektar iz svakog cvijeta. Upotrijebi ugniježdenu petlju. 
       courseD_bee_nestedLoops5_instruction: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '

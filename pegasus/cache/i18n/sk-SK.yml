@@ -12,7 +12,7 @@ sk-SK:
   upgrade_ie_link: Dozvedieť sa viac
   en: Počítačová veda
   computer_science_edweek: Vzdelávací týždeň počítačovej vedy
-  csedweek_dates: 8. až 14. Decembra 2014
+  csedweek_dates: 3.-9. decembra 2018
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hodina kódu</a> sa blíži. Vyzývame všetkých učiteľov a organizátorov,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -23,20 +23,21 @@ sk-SK:
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
   petition_message: Každý študent v každej škole by mal mať možnosť naučiť sa informatiku
-  petition_sign_message: 'Ak súhlasíš, zapíš svoje meno.  Pridaj sa k # iným.'
-  petition_sign_message_support: 'Pokiaľ nás podporuješ, zapíš sa. Pridaj sa k  #
-    iným.'
+  petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu
+    spolu s # ďalšími.'
+  petition_sign_message_support: 'Ak nás podporuješ, zapíš sa a pridaj sa k nášmu
+    mailing listu spolu s # ďalšími.'
   petition_join_others: 'Pridaj sa k # iným'
   name: Meno
   email: E-mail
   zipcode: ZIP (ak si v Spojených štátoch Amerických) alebo krajina
   submit: Odoslať
   twentyhours_heading: Skúste náš úvod do kurzu Počítačovej vedy
-  twentyhours_text: Hotový s prvou Hodinou programovania? Nauč sa viac o základoch
-    počítačovej vedy a programovacích konceptoch  v nasledujúcom kurze.
+  twentyhours_text: Hotový s prvou Hodinou Kódu? Nauč sa viac o informatike a základné
+    koncepty programovania v nasledujúcom kurze.
   og_title: 'Code.org: Ktokoľvek sa môže naučiť'
-  og_title_soon: Hodina kódu sa blíži
-  og_title_here: Hour of Code je tu!
+  og_title_soon: Hodina Kódu sa blíži
+  og_title_here: Hodina Kódu je tu!
   og_description: Každý študent v každej škole si zaslúži možnosť študovať informatiku.
   csedweek_og_title: Vzdelávací týždeň počítačovej vedy
   hoc2014_heading: Pridajte sa k <a href="http://hourofcode.com">Hodine kódu</a> <br/>
@@ -69,7 +70,7 @@ sk-SK:
   flappy_text: Code.org sa práve dožil 1 roku. <br/> <br/> Osláv to s nami vytvorením
     vlastnej <b>Flappy</b> hry. Naprogramuj vlastné pravidlá a zdieľaj s priateľmi!
   view_english_site: Zobraziť anglickú verziu
-  non_english_tutorials: 'Návody preložené do viacerých jazykov:'
+  non_english_tutorials: 'Kurzy preložené do viacerých jazykov:'
   write_your_first_program: Napíš svoj prvý počítačový program
   learn_cs_concepts: Nauč sa základy z oblasti informatiky s "drag and drop" programovaním.
     Toto je video lekcia, ktorou ťa bude sprevádzať Bill Gates, Mark Zuckerberg, Angry
@@ -85,8 +86,8 @@ sk-SK:
   congratulations_volunteer: 'Gratulujeme: Teraz keď si skúsil Hodinu kódu, <a href="https://code.org/volunteer">prihlás
     sa dobrovoľníkovi v triede</a> a pomôž študentom učiť sa Hodinu kódu!'
   congrats_next_tutorials_title: Pokračovať na ďalšiu úroveň
-  congrats_next_tutorials_desc: Vyskúšajte tieto kratšie, jednohodinové výuky alebo
-    zkúste <a href="%{current_path}/next"> partnerská výuka</a>.
+  congrats_next_tutorials_desc: Vyskúšajte tieto kratšie, jednohodinové kurzy alebo
+    skúste <a href="%{current_path}/next">kurzy od našich partnerov</a>.
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
   view_course: Zobraziť kurz
   view_unit: Zobraziť lekciu
@@ -111,11 +112,11 @@ sk-SK:
     za mesiac'
   third_party_price_school: 'Cena pre školy: plány zadarmo a Pro od 2500 dolárov vyšie'
   third_party_tynker_btn_site: Navštív Tynker
-  third_party_scratchjr_btn_curriculum: Stiahnuť Scratch Jr Curriculum
+  third_party_scratchjr_btn_curriculum: Stiahnuť Scratch Jr kurikulum
   third_party_scratchjr_btn_site: Navštív Scratch Jr.
-  third_party_scratch_btn_curriculum: Stiahnuť Scratch Curriculum
+  third_party_scratch_btn_curriculum: Stiahnuť Scratch kurikulum
   third_party_scratch_btn_site: Navštív Scratch
-  third_party_lightbot_btn_curriculum: Stiahnuť Lightbot Curriculum
+  third_party_lightbot_btn_curriculum: Stiahnuť Lightbot kurikulum
   third_party_lightbot_btn_site: Navštív Lightbot
   third_party_khan_btn_forum: Khan Academy CS Fórum
   third_party_appinv_btn_forum: App Inventor 2 Fórum
@@ -183,8 +184,8 @@ sk-SK:
   continue_learning_header: Pokračuj v učení nad rámec jednej hodiny
   continue_learning_body: Existuje veľa možností.  Môžeš sa učiť on-line alebo v miestnej
     škole alebo na letnom tábore.
-  learn_code_studio: Vyskúšajte Code.org's kurzy
-  learn_next_level: Pokračovať na ďalšiu úroveň
+  learn_code_studio: Vyskúšajte kurzy code.org
+  learn_next_level: Vyskúšaj ďalší Code.org kurz
   learn_online: Skúste iné online kurzy
   learn_classes: Nájsť miestne triedy
   learn_back_to_minecraft: Neprestávajte sa učiť vďaka Minecraftu
@@ -240,24 +241,23 @@ sk-SK:
   homepage_stats_teachers: učiteľov používa Code.org
   homepage_stats_hourofcodde: študentov z celého sveta vyskúšalo Hodinu Kódu
   homepage_stats_policy: štátov zmenilo školské osnovy na podporu výučby informatiky
-  homepage_stats_title: Meníme svet k lepšiemu
-  homepage_hero_text_malala: "&ldquo;Vyzývam dievčatá v každej krajiny, sa aby naučili
-    jednu Hodinu Kódu&rdquo;  Malala, nositeľ Nobelovej ceny mieru"
-  homepage_hero_text_susan: |-
-    &ldquo;Ak môžeš zmeniť techológiu, môžeš zmeniť svet.&rdquo;
-    Susan, CEO spoločnosti YouTube
-  homepage_hero_text_fistbump: |
+  homepage_stats_title: Naša práca má dopad
+  homepage_hero_text_malala: "&ldquo;Vyzývam dievčatá vo všetkých krajinách, \naby
+    spravili jednu Hodinu Kódu&rdquo; \nMalala, nositeľka Nobelovej ceny za mier"
+  homepage_hero_text_susan: "&ldquo;Ak vieš meniť techológiu, \nvieš meniť svet.&rdquo;\nSusan,
+    CEO YouTube"
+  homepage_hero_text_fistbump: |-
     &ldquo;Nepoužívaj svoj telefón len na hranie,
-     programujte ho.&rdquo;
+    naprogramuj ho.&rdquo;
     Prezident Barack Obama
   homepage_hero_text_sheryl: |-
-    &ldquo;Naše deti &mdash; vrátane dievčat &mdash;
-    potrebujú príležitosť učiť sa počítačovú vedu.&rdquo;
+    &ldquo;Naše deti &mdash; vrátane našich dievčat &mdash;
+    potrebujú príležitosť naučiť sa programovať.&rdquo;
     Sheryl, COO Facebook
   homepage_hero_text_satya: "&ldquo;Počítačová veda odomyká \ntie najlepšie príležitosti
     sveta.&rdquo;\nSatya, CEO Microsoft"
   homepage_hero_text_satya_new: "&ldquo;Informatika dáva študentom \nschopnosť vytvárať
-    svet budúcnosti.&rdquo;\nSatya, generálny riaditeľ spoločnosti Microsoft"
+    svet zajtrajška.&rdquo;\nSatya, CEO Microsoft"
   homepage_hero_text_bosh: |-
     &ldquo;Ak programuješ, môžeš si zvoliť
     smer svojho života.&rdquo;
@@ -288,34 +288,37 @@ sk-SK:
   homepage_hero_text_stat_loc: 8,5 milióna dievčat má účet na Code.org
   homepage_hero_text_stat_students: "#student_count študentských účtov na code.org"
   homepage_hero_text_stat_served: 'Hodina kódu: #served účastníkov'
-  homepage_hero_hoc_is_coming: Hodina kódu sa blíži
+  homepage_hero_hoc_is_coming: Hodina Kódu sa blíži
   homepage_hero_hoc_is_here: Hodina Kódu je tu
   homepage_slot_text_hoc: Hodina Kódu
   homepage_slot_text_frozen: Frozen s Annou a Elsou
-  homepage_slot_text_studio: Všetky naše tutoriály
+  homepage_slot_text_teacher: Nástenka učiteľa
+  homepage_slot_text_studio: Všetky naše kurzy
   homepage_slot_text_course4: Kurz 4
   homepage_slot_text_shop: Obchod
   homepage_slot_text_flappy: Flappy kód
-  homepage_action_text_hoc: Hodina kódu pre každého študenta.
+  homepage_action_text_hoc: Hodina Kódu pre každého študenta.
   homepage_action_text_num_served: "# účastníkov"
   homepage_action_text_join_us: Pridaj sa k nám
   homepage_action_text_sign_up: Zaregistrovať sa
   homepage_action_text_try_it: Skús to
-  homepage_action_text_volunteers: Technický dobrovoľníci vítaní
-  homepage_action_text_codevideo: Sledovať video
-  homepage_action_text_teachervideo: Sledovať video
-  homepage_action_text_watchvideo: Sledovať video
-  homepage_action_text_girlvideo: Inšpirujte dievčatá
-  homepage_action_text_learn: Spustiť
-  homepage_action_text_signpetition: Podpísať petíciu
+  homepage_action_text_volunteers: Hľadáme technicky zdatných dobrovoľníkov
+  homepage_action_text_codevideo: Pozri si video
+  homepage_action_text_teachervideo: Pozri si video
+  homepage_action_text_watchvideo: Pozri si video
+  homepage_action_text_girlvideo: Inšpiruj dievčatá
+  homepage_action_text_learn: Začni sa učiť
+  homepage_action_text_signpetition: Podpíš petíciu
   homepage_action_text_wincelebritychat: Vyhraj rozhovor s celebritou
   homepage_signpetition_dropdown: Súhlasím &#x25BE;
-  homepage_diversity_pledge: Zajistite rozmanitosť
-  homepage_banner_text_prizes: 'Hour of Code príde znova, 7 - 13 decembra. '
+  homepage_diversity_pledge: Podpor diverzitu
+  homepage_banner_text_prizes: 'Hodina Kódu prichádza znovu 7 - 13 decembra. '
   homepage_banner_link_prizes: 'Pripojte sa k najväčšej vzdelávacej aktivite v histórii. '
   homepage_banner_text_main: Code.org a College Board vytvorili alianciu s cieľom
-    zlepšiť rozmanitosť v programovaní.
+    zlepšiť diverziu v IT.
   homepage_banner_text_link: Dozvedieť sa viac
+  homepage_banner_privacy_main: '3. august: Rozšírili sme naše Zásady ochrany osobných
+    údajov tak, aby obsahovali nástroje využívané v našom novom kurze Princípy Informatiky.'
   homepage_banner_privacy_link: Dozvedieť sa viac
   homepage_banner_20k_teachers_link: Dozvedieť sa viac
   homepage_banner_congress_link: Pridaj svoju podporu
@@ -326,31 +329,32 @@ sk-SK:
   homepage_slot_text_title_hoc: Hodina kódovania
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni dnes
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
-  homepage_slot_text_link_about_hoc: O Hodine kódu
-  homepage_slot_text_link_host: Usporiadajte u vás Hodinu kódu
+  homepage_slot_text_link_about_hoc: O Hodine Kódu
+  homepage_slot_text_link_host: Usporiadaj u vás Hodinu kódu
   homepage_slot_text_link_hocserved: "# účastníkov"
   homepage_solot_text_link_volunteer: Dobrovoľník pre Hodinu kódu
   homepage_slot_text_title_students: Študenti
-  homepage_slot_text_blurb_students: Preskúmaj všetky naše tutoriály
+  homepage_slot_text_blurb_students: Preskúmaj všetky naše kurzy
   homepage_slot_text_blurb_students_courses: Preskúmaj naše kurzy
   homepage_slot_text_link_codestudio: Vyskúšaj Code Studio
   homepage_slot_text_link_local: Nájdi triedu v tvojej lokalite
-  homepage_slot_text_link_othercourses: Iné kurzy online
+  homepage_slot_text_link_othercourses: Iné online kurzy
   homepage_slot_text_title_educators: Učitelia
   homepage_slot_text_blurb_educators: Naučte vašich študentov
   homepage_slot_text_link_elementary: Základná škola
   homepage_slot_text_link_middle: 2. stupeň ZŠ
   homepage_slot_text_link_high: Stredná škola
-  homepage_slot_text_link_k5: Kurzy pre piatakov
+  homepage_slot_text_link_k5: Kurzy pre prvý stupeň
   homepage_slot_text_link_fullcurriculum: Prezrieť celé kurikulum
-  homepage_slot_text_link_pd: Profesionálny rast
-  homepage_slot_text_title_advocates: Obhajcovia
-  homepage_slot_text_blurb_advocates: Podpor našu prácu
-  homepage_slot_text_link_stats: Pozrite sa na štatistiky
-  homepage_slot_text_link_buy: Zapojte sa
+  homepage_slot_text_link_pd: Profesionálny rozvoj
+  homepage_slot_text_title_advocates: Podporovatelia
+  homepage_slot_text_blurb_advocates: Podpor diverziu v IT
+  homepage_slot_text_link_stats: Pozri si štatistiky
+  homepage_slot_text_link_buy: Zapoj sa
   homepage_slot_text_link_donate: Venuj dar
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
-  homepage_header_codestudio: Výtvory študentov Code Studia
+  homepage_slot_text_link_administrators: Prines Informatiku na tvoju školu
+  homepage_header_codestudio: Výtvory študentov code.org
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
   homepage_donors_donate: Darovať
@@ -419,9 +423,9 @@ sk-SK:
   mc_platformtext: Moderné prehliadače, smartfóny, tablety
   mc_specs: Mnoho jazykov| Moderní prehliadače a tablety | Vek 6-106 rokov
   minecraft_agent: 'Minecraft: Cesta Hrdinu'
-  minecraft_designer: Minecraft dizajnér
-  minecraft_adventurer: Minecraft objavovateľ
-  minecraft_tutorials: Minecraft Hodina kódu Lekcie
+  minecraft_designer: Minecraft Dizajnér
+  minecraft_adventurer: Minecraft Objavovateľ
+  minecraft_tutorials: Kurz Minecraft Hodina Kódu
   minecraft_specs: Veľa jazykov | Moderné prehliadače a tablety | Ročník 2+
   minecraft_agent_description: Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou!
     Prejdite sa po Minecrafte s kódom.
@@ -430,7 +434,7 @@ sk-SK:
     vlastnú verziu hry Minecraft.
   minecraft_designer_button: Spustiť
   minecraft_adventurer_description: Použi kód, aby si zobral Alexa alebo Steva na
-    dobrodružstvo.
+    cestu za dobrodružstvom.
   minecraft_adventurer_button: Spustiť
   minecraft_no_internet: Nemáš internet?
   minecraft_download_adventurer: Stiahnite si offline verziu Minecraft objavovateľa.
@@ -442,16 +446,17 @@ sk-SK:
     kódovanie pre každého a ako kombinuje kreativitu, schopnosti riešiť problémy a
     zároveň prináša veľa zábavy."
   minecraft_host_event: Zorganizujte akciu Hodiny Kódu s témou Minecrat
-  minecraft_teach_resources: Zdroje pre učiteľov a učebné osnovy.
-  minecraft_leader_guide: Stiahnite si zdroje pre pomoc s plánovaním a vedením eventu.
+  minecraft_teach_resources: Materiály pre učiteľov a plány hodín.
+  minecraft_leader_guide: Stiahnite si materiály, ktoré vám pomôžu naplánovať a viesť
+    vášu akciu.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Stiahnite
     si</a> stručnú príručku pre organizátora a prezentáciu v Powerpointe pre mladších
     a starších študentov."
   minecraft_join_online_training: Ste pripravení zorganizovať vlastnú Hodinu Kódu
     s Minecraftom, ale neviete, kde začať? Pozrite si náš <a href='%{minecraft_webinar_url}',
-    target='_blank'>webinár na požiadanie</a>. Naučite sa overené postupy, získate
+    target='_blank'>webinár na požiadanie</a>. Naučíte sa overené postupy, získate
     prístup k hotovým materiálom pre organizátorov a prejdite si novou vzorovou lekciou
-    Cesta Hrdinu od Microsoft teamu. Získajte už dopredu čas na rozmyslenie a prípravu
+    Cesta Hrdinu od Minecraft tímu. Získajte už dopredu čas na rozmyslenie a prípravu
     pre zorganizovanie Hodiny Kódu pre mládežníkov počas Týždňa výuky informatiky
     (4.-10. december) alebo inokedy.
   minecraft_continue_learning: 'Informatika pre každého: Nad rámec Hodiny Kódu v Microsoft
@@ -471,12 +476,12 @@ sk-SK:
     target='_blank'>získajte prístup k zdrojom</a>, ktoré ostatní považujú za najhodnotnejšie.
   minecraft_og_designer: Minecraft je späť s novou aktivitou pre Hodinu Kódu. Programujte
     zvieratá a ostatné postavičky z Minecraftu vo Vašej vlastnej verzií Minecraftu.
-  minecraft_og_agent: Minecraft je späť v Hodine Kódu a vy sa stávate hrdinom! Napíšte
+  minecraft_og_agent: Minecraft je späť v Hodine Kódu a ty sa stávaš hrdinom! Napíš
     kód pre cestu Minecraft svetom.
-  sports_watch_video: Sledovať video
+  sports_watch_video: Pozri si video
   watch_inspirational_videos: Skôr ako začneš, pozri si jedno z týchto inšpiračných
     videí
-  video_title_inspire_girl: Inšpirujte dievčatá
+  video_title_inspire_girl: Inšpiruj dievčatá
   video_1min: 1 min
   video_2min: 2 min
   video_5min: 5 min
@@ -502,9 +507,11 @@ sk-SK:
     kto im môže pomôcť v učebni, alebo niekoho kto môže <span style="font-family:
     ''Gotham 7r'', sans-serif;">inšpirovať</span> ich študentov prednáškou o šírke
     možností v informatike (to je možné vykonať pomocou videokonferencie).'
-  volunteer_engineer_submission_intro_signup: Zadajte prosím následujúce informácie,
-    ak ste študent počítačovej vedy alebo software profesionál. Pole označená <span
-    class="form-required-field"> *</span> sú požadované.
+  volunteer_engineer_submission_intro_signup: Ak ste študent informatiky alebo IT
+    profesionál, zadajte, prosím, nasledovné informácie. Pre prihlásenie za dobrovoľníka
+    musíte mať aspoň 18 rokov. Všetky údaje, ktoré vyplníte v tejto sekcii budú verejne
+    prístupné komukoľvek, kto sa pozrie na <a href="/volunteer/local">mapu dobrovoľníkov</a>.
+    Polia označené <span class="form-required-field">*</span> sú povinné.
   volunteer_engineer_submission_intro_links: Nehľadáte dobrovoľníka? <a href="%{learn_more}">Dozveď
     sa viac</a> o organizovaní tvojej vlastnej Hodiny kódu a hľadaní dobrovoľníka
     v mieste na našej <a href="%{volunteer_local}">mape dobrovoľníkov</a>.
@@ -596,7 +603,7 @@ sk-SK:
   petition_age: Vek
   dashboard_announce_learn_more_button: Dozvedieť sa viac
   dashboard_landing_title: Domovská stránka učiteľa
-  dashboard_landing_welcome: Vítame vás na novom a vylepšenom paneli učiteľa.
+  dashboard_landing_welcome: Vítame vás na novej a vylepšenej nástenke učiteľa.
   dashboard_landing_video: Pozri si toto video
   dashboard_landing_watch_video: pre prehliadku nových funkcií!
   dashboard_landing_view_as_student: Pozri si tieto stránky ako študent
@@ -611,11 +618,11 @@ sk-SK:
   dashboard_landing_classroom_resources: Zdroje pre tvoju triedu
   dashboard_landing_office_hours: Spýtaj sa osobne! Zúčastni sa našich pravidelných
     mesačných video rozhovorov v úradných hodinách.
-  dashboard_landing_print_certificates: Tlač certifikátov pre študentov, ktorí dokončiť
+  dashboard_landing_print_certificates: Tlač certifikátov pre študentov, ktorí dokončia
     tento kurz
   dashboard_landing_educator_blog: Prečítajte si o novinkách a aktualizáciách materiálov
     na našom Educator blogu
-  dashboard_landing_video_player: Otestujte naše nové video prehrávače na vašej škole
+  dashboard_landing_video_player: Otestujte náš nový video prehrávač na vašej škole
   dashboard_landing_progress_title: Pokrok vašich študentov
   dashboard_landing_progress_biggest: Pokrok pre vašu najväčšiu sekciu.
   dashboard_landing_view_progress: Zobraziť pokrok pre %{biggest_section}
@@ -623,9 +630,9 @@ sk-SK:
   dashboard_landing_available_title: Dostupné kurzy
   dashboard_landing_available_courses: Tu sú aktuálne dostupné kurzy pre vás a vašich
     študentov.
-  dashboard_landing_more_tutorials: Chcete vidieť ešte viac návodov?
+  dashboard_landing_more_tutorials: Chcete vidieť dalšie kurzy?
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">Naši partneri vám
-    ponúkajú</a> ďalšie návody. Naučte sa programovať s robotmi, vyrábajte webstránky,
+    ponúkajú</a> ďalšie kurzy. Naučte sa programovať s robotmi, vyrábajte webstránky,
     urobte si vlastnú appku či objavujte ďalšie jazyky – C++, Ruby alebo Python!
   dashboard_landing_inspire: Inšpiruj svojich študentov z plagátmi, videami a pod.
   dashboard_landing_report_bug: Žiadosť o pridanie funkcie, alebo ohlásenie chyby.
@@ -636,9 +643,24 @@ sk-SK:
     so študentmi. <a href="https://hourofcode.com"> pripojte sa k hnutiu Hodina Kódu</a>
     a počas týždňa vyučovania informatiky.
   dashboard_k5_courses: 20-hodinové kurzy pre K-5
-  dashboard_middle_courses: 20 hodin kurzov pre stredné školy
+  dashboard_k5_courses_desc: Tieto kurzy kombinujú samostatné online aktivity s aktivitami
+    bez počítača. Každý kurz sa skladá z približne 20 lekcií, ktoré môžy byť využité
+    samostatne, alebo ako celoročný kurz. Vhodné už pre deti v materských školách.
+    Aby sme Vám pomohli v začiatkoch, ponúkame v USA bezplatné kurzy pre učiteľov.
+    <a href="/professional-development-workshops">Nájdi jeden v tvojom okolí!</a>
+  dashboard_middle_courses: 20 hodinové kurzy pre druhý stupeň ZŠ
+  dashboard_middle_courses_desc: Naše kurikulum pre druhý stupeň ZŠ využíva informatiku
+    a programovanie v kontexte druhostupňovej matematicky a vedných predmetov - ako
+    nástroj na výučbu matematických a vedeckých konceptov. Pre registráciu na školenie
+    pre učiteľov sa prihláste <a href="/educate/districts">o partnerstvo</a> s code.org.
+  dashboard_high_courses: Celoročné kurzy pre stredné školy
+  dashboard_high_courses_desc: Náš program pre stredné školy umožňuje školským obvodom
+    ponúknuť celoročný kurz informatiky prostredníctvom školení učiteľov. Pre registráciu
+    na školenie pre učiteľov sa prihláste <a href="/educate/districts">o partnerstvo</a>
+    s code.org.
   dashboard_course_csins: Počítačová veda vo vede
   dashboard_course_ecs: Preskúmať informatiku
+  dashboard_course_csp: AP® Princípy Informatiky
   dashboard_landing_loading: Načítavanie...
   dashboard_action_cancel: Zrušiť
   dashboard_action_delete: Odstrániť
@@ -647,13 +669,19 @@ sk-SK:
   dashboard_action_confirm: Odstrániť?
   dashboard_action_done: Hotovo
   dashboard_action_print_certificates: Vytlačiť certifikát
+  dashboard_assessments_none_part2: 'Ak vyučujete kurz pre 2.stupeň ZŠ, alebo pre
+    stredné školy, máme pre vás na code.org k dispozícii testovacie otázky, ktoré
+    študentom pomôžu pripraviť sa na AP testy (pozn: testy v USA ako príprava na vstup
+    na univerzitu). Ak chcete tieto testy využiť, najprv priraďte vašej tride daný
+    kurz a potom tento kurz vyberte z možností vyššie. Tu uvidíte odpovede vašich
+    študentov.'
   dashboard_filter_all: Všetko
   dashboard_download_csv: Stiahnuť CSV
   dashboard_navigation_home_page: Domovská stránka učiteľa
   dashboard_navigation_section_student_progress: Študentské účty a pokrok
   dashboard_navigation_section_teacher_progress: Pokrok tvojho kurzu
   dashboard_navigation_section_lesson_plans: Plány hodín a Materiály
-  dashboard_navigation_section_community: Pomoc a Komunita
+  dashboard_navigation_section_community: Podpora
   dashboard_navigation_section_pd: Profesionálny rast
   dashboard_navigation_section_speakers: Informatici ako <br/> hostia-rečníci
   dashboard_navigation_all_sections: Študentské účty a pokrok
@@ -662,7 +690,7 @@ sk-SK:
   dashboard_navigation_manage_students: Správa Študentov
   dashboard_navigation_lesson_plans_resources: Plány hodín
   dashboard_navigation_view_stats: Štatistiky
-  dashboard_navigation_section: 'Sekcia: %{section_name}'
+  dashboard_navigation_section: 'Trieda: %{section_name}'
   dashboard_navigation_student: 'Študent: %{student_name}'
   dashboard_progress_not_started: nezačal
   dashboard_progress_in_progress: v procese
@@ -671,20 +699,26 @@ sk-SK:
   dashboard_progress_completed_perfect: dokončené, super
   dashboard_progress_furthest_level_attempted: najvyššia dosiahnutá úroveň
   dashboard_progress_submitted: predložené
-  dashboard_sections_new_section: Nová sekcia
-  dashboard_sections_jumbotron_instruction: Vytvorte nové oddiely a pridajte do nich
-    študentov. Sekcie pomáhajú organizovať študentov do menších skupín, môžete sledovať
-    ich postup a spravovať ich účty.
-  dashboard_sections_table_section: Sekcia
+  dashboard_responses_none: Väčšina našich kurzov je prispôsobená pre nižší vek a
+    nevyžaduje, aby študenti vypisovali textové odpovede, takže tu žiadne odpovede
+    neuvidíte. U starších študentov (kurzy pre 2. stupeň ZŠ a pre stredné školy) uvidíte
+    odpovede na otvorené otázky po vybratí priradeného kurzu z možností vyššie.
+  dashboard_sections_new_section: Nová trieda
+  dashboard_sections_new_google_section: Importovať triedu z Google Classroom
+  dashboard_sections_jumbotron_instruction: Vytvorte nové triedy a pridajte do nich
+    študentov. Triedy pomáhajú organizovať študentov do menších skupín, sledovať ich
+    postup a spravovať ich účty.
+  dashboard_sections_table_section: Trieda
   dashboard_sections_table_secret: Spôsob prihlásenia
-  dashboard_sections_table_grade: Stupeň
+  dashboard_sections_table_grade: Ročník
   dashboard_sections_table_course: Kurz
   dashboard_sections_table_pairing_allowed: Programovanie v páre
+  dashboard_sections_table_stage_extras: Extra úlohy
   dashboard_sections_table_students: Študenti
-  dashboard_sections_table_code: Kód sekcie
-  dashboard_sections_name: Meno sekcie
-  dashboard_sections_choose_secret: Pokiaľ by ste chceli vytvoriť účty pre svojich
-    študentov, vyberte tajné <b>slovo</b> nebo <b>obrázok</b> pre túto sekciu.
+  dashboard_sections_table_code: Kód Triedy
+  dashboard_sections_name: Názov Triedy
+  dashboard_sections_choose_secret: Ak chcete pre svojich študentov vytvoriť účty,
+    vyberte, či pre túto triedu budete používať tajné <b>slovo</b> alebo <b>obrázok</b>.
   dashboard_sections_secret_word: "<b>Slovo</b> vám umožňuje nastaviť pre každého
     študenta tajné slovo."
   dashboard_sections_secret_picture: "<b>Obrázok</b> vám umožňuje pre každého študenta
@@ -694,43 +728,71 @@ sk-SK:
     svoje účty, vrátane vlastného hesla, zvoľte typ tajomstva <b>žiadne</b>.
   dashboard_sections_print_secrets: Potom si môžete vytlačiť stránku s kartičkami,
     obsahujúcimi informácie o individuálnych účtoch a rozdať ich vašim študentom.
-  dashboard_sections_switch_section: 'Prepnúť sekciu:'
+  dashboard_sections_switch_section: 'Prepnúť triedu:'
   dashboard_sections_close: Zatvoriť
+  dashboard_sections_move_students_desc: Vyberte študentov, ktorých chcete presunúť
+    do novej triedy. Presun študentov nevymaže ich pokrok v jednotlivých kurzoch.
+  dashboard_sections_one_per_teacher: Študenti môžu byť u každého učiteľa len v jednej
+    triede. Vaši študenti budú pridaní do novej triedy a vymazaní zo starej triedy.
+  dashboard_sections_move_to_section: 'Presunúť do triedy:'
+  dashboard_sections_enter_code: 'Zadajte kód triedy:'
+  dashboard_sections_code_placeholder: 6-miestny kód (ABCDEF)
+  dashboard_sections_other_section: Iný Učiteľ
+  dashboard_sections_both_sections: Chceli by ste, aby bol(i) študent(i) v oboch triedach?
+  dashboard_sections_yes_both: Áno, chcem skopírovať študenta/študentov tak, aby bol(i)
+    aj v pôvodnej AJ v novej triede.
+  dashboard_sections_no_move: Nie, chcem študenta/študentov presunúť do novej triedy.
+  dashboard_sections_move_students: Presunúť študentov
+  dashboard_sections_assign_activity: Priradiť kurz
+  dashboard_error_none_selected: Nevybrali ste žiadnych študentov. Prosím, vyberte
+    aspoň jedného študenta.
+  dashboard_error_other_section: Ak presúvate študentov medzi triedami, vyberte vašu
+    triedu zo zoznamu. Vyberte možnosť "Iná trieda" len v prípade, ak chcete študenta
+    presunúť k inému učiteľovi.
   dashboard_students_add_multiple: 'Zadajte nebo vložte mená vašich študentov, jedno
     na každý riadok:'
-  dashboard_students_new_section: Vytvorili ste novú sekciu! Teraz pridajte svojich
-    študentov pomocou tlačítka <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b>
-    vyššie.
+  dashboard_students_new_section: Vytvorili ste novú triedu! Teraz pridajte vašich
+    študentov pomocou tlačidla <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b>.
   dashboard_students_name: Meno
   dashboard_students_progress: Pokrok
   dashboard_students_male: Muž
   dashboard_students_female: Žena
   dashboard_students_completed_levels: Dokončené úrovne
   dashboard_students_total_lines: Riadky kódu
-  dashboard_students_share_section: 'Zdieľajte prihlasovaciu stránku tejto sekcie
-    so svojimi žiakmi:'
+  dashboard_students_share_section: Na stránke <a href=%{join_url}>%{join_url}</a>
+    študenti zadajú kód triedy (%{section_code})
+  dashboard_students_share_section_secondary: 'So študentami môžete tiež zdieľať túto
+    prihlasovaciu stránku:'
   dashboard_students_print_info: Vytlačiť kartičky s prihlasovacími údajmi študentov.
   dashboard_students_secret_picture_title: Tajný obrázok
-  dashboard_students_secret_picture: Tajný obrázok
+  dashboard_students_secret_picture: Táto trieda ako tajné heslo používa <b>obrázok</b>.
+    To znamená, že každý z vašich študentov má pre prihlásenie namiesto hesla tajný
+    obrázok. Študenti by pre prihlásenie mali použiť webovú adresu uvedenú vyššie.
   dashboard_students_reset_picture: Tajný obrázok študenta môžete kedykoľvek obnoviť
     výberom <b>Zobraziť tajomstvo</b> a potom <b>Obnoviť tajomstvo</b>. Nový tajný
     obrázok bude pre tohoto študenta vygenerovaný pri ďalšom prihlásení.
   dashboard_students_secret_word_title: Tajné slovo
-  dashboard_students_secret_word: Tajné slovo
+  dashboard_students_secret_word: Táto trieda ako tajné heslo používa <b>slovo</b>.
+    To znamená, že každý z vašich študentov má pre prihlásenie namiesto hesla dvojicu
+    tajných slov. Študenti by pre prihlásenie mali použiť webovú adresu uvedenú vyššie.
   dashboard_students_reset_word: 'Tajné slová študentov môžete kedykoľvek obnoviť
     výberom <b>Zobraziť tajomstvo</b> a potom <b>Obnoviť tajomstvo</b>. Nový pár tajných
     slov bude pre tohoto študenta vygenerovaný pri ďalšom prihlásení. '
   dashboard_students_join_link: Povedzte svojim študentom, aby si vytvorili svoje
     vlastné účty a pripojili sa k vašej skupine na
   dashboard_students_no_email: Ak vaši študenti nemajú e-mailové adresy alebo pre
-    nich chcete vytvoriť účty sami, zmeňte typ tajomstva v tejto sekcii na <b>slovo</b>
+    nich chcete vytvoriť účty sami, zmeňte typ tajného hesla v tejto triede na <b>slovo</b>
     alebo <b>obrázok</b>.
   dashboard_students_print_page: Vytlačiť stránku
-  dashboard_students_url: URL
+  dashboard_students_signin_card: Prejdite na %{join_url} a vložte %{section_code}
+  dashboard_students_url: Priama URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliknite
     sem</a> pre dokument o ochrane súkromných údajov, ktorý môžete zdieľať alebo vytlačiť
     pre svojich študentov.
   dashboard_curriculum_k5_title: Podklady pre učiteľov prvého stupňa
+  dashboard_curriculum_middle_title: Materiály pre učiteľov 2. stupňa ZŠ
+  dashboard_curriculum_high_title: Materiály pre vyučujúcich na stredných školách
+  dashboard_lesson_plans: Plány hodín
   dashboard_view_all_lesson_plans: Zobraziť všetky učebné plány
   dashboard_course1: 'Kurz 1:'
   dashboard_course2: 'Kurz 2:'
@@ -742,8 +804,12 @@ sk-SK:
   dashboard_coursed: 'Kurz D: '
   dashboard_coursee: 'Kurz E: '
   dashboard_coursef: 'Kurz F: '
+  dashboard_pre-express: 'Zrýchlený kurz pre predškolákov: '
+  dashboard_express: 'Zrýchlený kurz: '
+  dashboard_unplugged: Ak nemáte počítače, vyskúšajte vo vašej triede <a href='%{unplugged_url}'>tieto
+    "unplugged" lekcie</a>.
   dashboard_curriculum: Osnovy
-  dashboard_curriculum_overview: Prehľad učiva 1. stupňa ZŠ
+  dashboard_curriculum_overview: Prehľad kurzov pre 1. stupeň ZŠ
   dashboard_overview: Prehľad
   dashboard_sequence: Postupnosť
   dashboard_framework: Rámec
@@ -751,12 +817,15 @@ sk-SK:
   dashboard_implementation_guide: Implementačná Príručka
   dashboard_glossary: Slovník pojmov
   dashboard_classroom_strategies: Stratégie výučby pre učiteľov
-  dashboard_debugging: 'Ladenie:'
-  dashboard_puzzle_solving: 'Riešenie hádaniek:'
+  dashboard_debugging: 'Hľadanie a odstraňovanie chýb:'
+  dashboard_puzzle_solving: 'Riešenie úloh:'
   dashboard_student_worksheet: pracovný zošit študenta
   dashboard_teacher_worksheet: pracovný zošit učiteľa
   dashboard_curriculum_csina: 'Počítačová veda a algebra:'
   dashboard_curriculum_csins: 'Počítačová veda a veda:'
+  dashboard_curriculum_csp: 'Princípy Informatiky:'
+  dashboard_curriculum_csd: 'Objavujeme Informatiku: '
+  dashboard_curriculum_apcsa: 'AP Computer Science v Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Ostatné
   dashboard_login_word: Slovo
@@ -767,16 +836,16 @@ sk-SK:
   dashboard_question: Otázka
   dashboard_response: Odpoveď
   dashboard_correctness: Správnosť
-  dashboard_correctness_free_response: Volná odpoveď
+  dashboard_correctness_free_response: Voľná odpoveď
   dashboard_correctness_unsubmitted: Neodoslané
   dashboard_correctness_correct: Správne
   dashboard_correctness_incorrect: Nesprávne
   dashboard_submission_submitted: Odoslané
   dashboard_submission_in_progress: Rozpracované
   dashboard_status: Stav
-  dashboard_multi_correct: "# výberov odpovedí správne"
-  dashboard_multi_count: "# výber odpovede"
-  dashboard_multi_correct_percent: "% výberov odpovedí správne"
+  dashboard_multi_correct: "# správych odpovedí"
+  dashboard_multi_count: "# úloh s výberom odpovede"
+  dashboard_multi_correct_percent: "% správnych odpovedí"
   dashboard_submission_timestamp: Časová pečiatka odoslania
   stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom
     jediného týždňa:'
@@ -787,7 +856,7 @@ sk-SK:
   dashboard_sections_account_creation_question: Kto vytvára študentský účet?
   dashboard_sections_password_question: Čo študenti používajú ako "heslo"?
   dashboard_sections_picture_account_creation: Obrázok pridelený Code.org
-  dashboard_sections_word_account_creation: Jednoduché slovo pridelené Code.org
+  dashboard_sections_word_account_creation: Dvojica jednoduchých slov pridelená Code.org
   dashboard_sections_sign_in_question: Kde sa môžu študenti prihlásiť?
   dashboard_sections_sign_in_unique: Unikátna webová stránka, uvedená na karte "Správa
     Študentov"
@@ -806,27 +875,27 @@ sk-SK:
   learn_sign_up_button: Zaregistrovať sa
   learn_are_you_educator: Vyučuješ? Dozveď sa <a href="http://hourofcode.com/resources/how-to">ako
     vyučovať Hodinu Kódu</a>
-  hoc2014_try_new_tutorials: Vyskúšajte naše nové návody pre Hodinu Kódu
+  hoc2014_try_new_tutorials: Vyskúšajte naše nové kurzy pre Hodinu Kódu
   hoc2014_try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Postavy s Annou a Elsou z Frozen
-  carousel_heading_codeorg: Tutoriály Code.org
-  carousel_heading_codeorg_any_device: Tutoriály Code.org (pre všetky zariadenia)
+  carousel_heading_codeorg: Kurzy Code.org
+  carousel_heading_codeorg_any_device: Kurzy Code.org (pre všetky zariadenia)
   carousel_heading_international: Kurzy vo vašom jazyku
   carousel_heading_domestic: Kurzy dostupné v angličtine
   carousel_heading_beginners: Kurzy pre začiatočníkov
   carousel_heading_javascript: Cvičenia na výuku JavaScriptu
   carousel_heading_beyond_javascript: Uč sa JavaScript
-  carousel_heading_unplugged: Žiadne zariadenie alebo internet? Skúste informatiku
-    "unplugged"
+  carousel_heading_unplugged: Žiadne počítače alebo internet? Skúste informatiku "unplugged"
   carousel_heading_devices: Aplikácie s kurzami pre telefóny a tablety
-  carousel_heading_beyond_devices: Aplikácie pre telefóny a tablety
+  carousel_heading_beyond_devices: Appky pre telefóny a tablety
   carousel_heading_languages: Kurzy iných programovacích jazykov
   carousel_heading_apps_games: Vytvorte si vlastné aplikácie alebo hry
   carousel_heading_university: Univerzitné kurzy online
   carousel_heading_webpages: Naučte sa robiť webové stránky
-  carousel_heading_robots: Naučte sa programovať s robotmi
+  carousel_heading_robots: Nauč sa programovať s robotmi
   carousel_heading_ide: Platformy, ktoré sú populárne medzi učiteľmi
+  carousel_heading_prereader: Pre predškolákov
   educator_notes: Poznámky pedagógov
   how_to_teach_hoc: Ako učiť "Hodinu kódu"
   more_resources_educators: Ďalšie zdroje pre učiteľov
@@ -894,16 +963,42 @@ sk-SK:
   coursee_name: Kurz E
   coursef-draft_name: Kurz F
   coursef_name: Kurz F
+  coursea-2017_name: Kurz A (2017)
+  courseb-2017_name: Kurz B (2017)
+  coursec-2017_name: Kurz C (2017)
+  coursed-2017_name: Kurz D (2017)
+  coursee-2017_name: Kurz E (2017)
+  coursef-2017_name: Kurz F (2017)
   accelerated_name: Zrýchlený kurz
+  express_name: Zrýchlený kurz
+  pre-express_name: Zrýchlený kurz pre predškolákov
+  express-2017_name: Zrýchlený kurz (2017)
+  pre-express-2017_name: Zrýchlený kurz pre predškolákov (2017)
+  pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
+  cspunit3_gradelevel: Ročníky 9-12
   20-hour_name: Zrýchlený kurz
   classicmaze_name: Klasické bludisko
   iceage_name: Doba ľadová
   minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Bloky)
   math_category_name: Matematické
   hoc_category_name: Hodina kódovania
-  applab_name: Laboratórium aplikácií
+  csf_category_name: Základy Informatiky
+  csf_2017_category_name: Základy Informatiky (2017)
+  csf_2018_category_name: Základy Informatiky (2018)
+  csf_international_category_name: Základy Informatiky (medzinárodná verzia)
+  csd_category_name: Objavujeme Informatiku ('17-'18)
+  csd_2018_category_name: Objavujeme Informatiku ('18-'19)
+  csp_category_name: Princípy Informatiky ('15-'16)
+  csp17_category_name: Princípy Informatiky ('17-'18)
+  csp_2018_category_name: Princípy Informatiky ('18-'19)
+  cspexams_category_name: Princípy Informatiky - Cvičný test
+  applab_name: App Lab
   gamelab_name: Herné laboratórium
   applab_gradelevel: Vek 13+
+  applab_shortdescription_congrats: App Lab je programovacie prostredie, v ktorom
+    si môžeš vytvoriť jednoduché aplikácie. Navrhni aplikáciu, naprogramuj ju pomocou
+    blokov alebo JavaScriptu tak aby fungovala a potom ju za pár sekúnd nazdieľaj
   codeorg_gradelevel: Vek 4-104
   codeintl_gradelevel: Vek 4-104
   khan_gradelevel: Druhý stupeň a starší
@@ -976,7 +1071,7 @@ sk-SK:
   coursef-2018_gradelevel: Vek 9-13
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
-  thinkersmithspanish_platformtext: Unplugged
+  thinkersmithspanish_platformtext: Bez počítača
   khan_platformtext: Moderné prehliadače
   khanes_platformtext: Moderné prehliadače
   khanpt_platformtext: Moderné prehliadače
@@ -986,7 +1081,7 @@ sk-SK:
   tynker_platformtext: Moderné prehliadače
   scratch_platformtext: Prehliadače na počítači (nie tablety)
   lightbot_platformtext: VŠETKY prehliadače, iOS, Android alebo herné konzoly
-  thinkersmith_platformtext: Unplugged
+  thinkersmith_platformtext: Bez počítača
   condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (alebo prehliadač)
   codehs_platformtext: Moderné prehliadače. (Nasledujúci kurz vyžaduje $$)
@@ -1007,9 +1102,9 @@ sk-SK:
   touchdevelop_platformtext: Moderné prehliadače, smartfóny, všetky zariadenia
   appinventor_platformtext: Moderné prehliadače + Android
   blockly_platformtext: Iba moderné prehliadače
-  thinkersmith2_platformtext: Unplugged
-  kodableunplugged_platformtext: Unplugged
-  projguts_platformtext: Unplugged
+  thinkersmith2_platformtext: Bez počítača
+  kodableunplugged_platformtext: Bez počítača
+  projguts_platformtext: Bez počítača
   hourofcode_platformtext: Moderné prehliadače, smartfóny, tablety
   frozen_platformtext: Moderné prehliadače + tablety
   starwars_platformtext: Moderné prehliadače + tablety
@@ -1033,7 +1128,7 @@ sk-SK:
   scratch_shortdescription: Vytvor interaktivné hry, príbehy a animácie.
   lightbot_shortdescription: Naprogramujte Lightbot-a, aby riešil hádanky pomocou
     procedúr a cyklov!
-  thinkersmith_shortdescription: Unplugged kurz pre skupinu bez zariadení
+  thinkersmith_shortdescription: Kurz pre skupinu bez počítačov (unplugged)
   condcards_shortdescription: Nauč sa algoritmy s balíčkom kariet
   lightbotintl_shortdescription: Hra pre výuku základných konceptov programovania
   codehs_shortdescription: Začnite kódovať so psom Karlom - zábavný a vizuálny úvod
@@ -1073,13 +1168,22 @@ sk-SK:
     pre deti.
   codesters_shortdescription: Vytvor si vlastné hry, animácie a umelecké diela s pomocou
     Python-u.
-  codeorg_longdescription: Nauč sa základné pojmy informatiky pomocou vizuálneho "drag
-    & drop" programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám.
-    Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds
-    a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy.
-    Dostupné v 34 jazykoch.
-  codeintl_longdescription: Nauč sa základné pojmy informatiky pomocou vizuálneho
-    "drag & drop" programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ
+  coursea_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
+  courseb_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný
+    ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
+  coursea-2017_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
+  courseb-2017_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný
+    ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
+  coursea-2018_shortdescription_congrats: Predstavenie informatiky pre predškolákov.
+  courseb-2018_shortdescription_congrats: Predstavenie informatiky pre prvákov. (podobný
+    ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
+  codeorg_longdescription: Nauč sa základné koncepty informatiky pomocou vizuálneho
+    blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ
+    sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry
+    Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné
+    algoritmy. Dostupné v 34 jazykoch.
+  codeintl_longdescription: Nauč sa základné koncepty informatiky pomocou vizuálneho
+    blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ
     sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry
     Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné
     algoritmy. Dostupné v 34 jazykoch.
@@ -1119,15 +1223,15 @@ sk-SK:
     Lightbot je logická hra, ktorá naučí hráčov porozumieť základom programovania.
     Naučte se vytvárať postupnosti príkazov, písať procedúry a využívať opakovanie
     k vyriešeniu jednotlivých úrovní. Ideálne pre všetky vekové kategórie.
-  thinkersmith_longdescription: Žiaci s použitím preddefinovaného "robotického slovníka"
-    prídu na to ako si navzájom pomáhať pri plnení špecifických úloh bez toho, aby
+  thinkersmith_longdescription: Žiaci, s použitím preddefinovaného "robotického slovníka",
+    prídu na to ako sa navzájom navigovať pri plnení špecifických úloh bez toho, aby
     o nich najskôr diskutovali. Táto lekcia naučí deti prepojenie medzi symbolom a
     akciou, rovnako ako neoceniteľnú schopnosť odhaľovania chýb (debugging). Aktivita
-    "Moji robotickí priatelia" sa najlepšie vypracuje v skupine a zahŕňa učiteľský
-    pracovný zošit pre použitie v triede.
+    "Moji robotickí priatelia" sa najlepšie využije v skupine a obsahuje pracovný
+    zošit pre učiteľa.
   condcards_longdescription: Použi balíček kariet a nauč sa o algoritmoch a podmienkových
-    príkazoch v tejto "unplugged" aktivite bez počítača. Žiaci pracujú v tímoch a
-    potrebujú jeden balíček kariet na každý tím.
+    príkazoch v tejto aktivite bez počítača (unplugged). Žiaci pracujú v tímoch a
+    potrebujú jeden balíček kariet per tím.
   lightbotintl_longdescription: Nauč sa základom logiky v programovaní, začínajúc
     od úplných základov programovania, pre vek od 4 rokov, na iOS a Androide (alebo
     v prehliadači). Nauč sa ako skladať príkazy, odhaľovať vzorce, používať procedúry
@@ -1187,22 +1291,22 @@ sk-SK:
   touchdevelop_longdescription: 'Grafický editor na dotykové ovládanie Ťa prevedie
     vytváraním umeia v pixeloch, riešením medvedích hádaniek a tvorbou vašej vlastnej
     hry so skákajúcim vtáčikom. '
-  appinventor_longdescription: Zábavné, rýchle video tutoriály ťa prevedú cez vybudovanie
-    troch jednoduchých aplikácií pre tvoj telefón či tablet s Androidom. Určený pre
-    začiatočníkov i expertov, táto hodina kódu ťa pripraví na budovanie tvojich vlastných
-    aplikácií, tak ako ich poznáš. Predstav si ako zdieľaš s priateľmi svoje vlastnoručne
-    vytvorené aplikácie! Tieto aktivity sú vhodné pre jednotlivcov a pre učiteľov
-    vedúcich triedy.
+  appinventor_longdescription: Pomocou zábavných a rýchlych video návodov vytvoríš
+    tri jednoduché aplikácie pre tvoj telefón či tablet s Androidom. Určená pre začiatočníkov
+    i expertov, táto hodina kódu ťa pripraví na budovanie tvojich vlastných aplikácií
+    rýchlejšie, ako si stihneš uvedomiť. Predstav si ako zdieľaš s priateľmi svoje
+    vlastnoručne vytvorené appky! Tieto aktivity sú vhodné pre jednotlivcov aj pre
+    učiteľov vedúcich triedy.
   blockly_longdescription: Máš PC s pomalým (alebo žiadnym) internetom? Stiahni si
-    Blocky tutoriály ktoré boli predchodcom Code.org tutorálov - jednoduchý 3MB ZIP
-    si môžeš nahrať na ľubovoľný počítač alebo usb kľúč
+    Blocky - predchodcu kurzov Code.org - jednoduchý 3MB ZIP si môžeš nahrať na ľubovoľný
+    počítač alebo použiť priamo z usb kľúča
   thinkersmith2_longdescription: Študenti sa učia o reprezentovaní a ukladaní znakov
     v binárnej sústave, pomocou funkcií zapnúť a vypnuť. Na konci hodiny dostanú úlohu
     zakódovať svoje vlastné iniciály, ktoré si odnesú domov.
   hourofcode_longdescription: Obsadené miesto pre nový code.org/hoc
-  frozen_longdescription: Použime kódovanie pre pridanie sa sa k Anne a Else k ich
-    skúmaniu krás a čarov ľadu. Vytvoríte snehové vločky a vzory počas korčuľovania
-    a spravte zimnú krajinu zázrakov, ktorú môžete následne zdieľať s Vašimi kamarítmi!
+  frozen_longdescription: Pridajme sa pomocou kódovania k Anne a Else a preskúmajme
+    spolu krásu a čaro ľadu. Korčuľovaním v ľade vykreslíš snehové vločky a krásne
+    vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať s priateľmi!
   codeorg_beyond_name: Úvod do informatiky (2.stupeň ZŠ)
   khan_beyond_name: Nauč sa počítačové programovanie
   tynker_beyond_name: Nauč sa programovanie doma
@@ -1337,6 +1441,12 @@ sk-SK:
   alice_beyond_shortdescription: Učte programovanie v 3D prostredí
   sphero_beyond_shortdescription: SPRK lekcie dajú deťom zábavný rýchlokurz programovania
     robotov, zatiaľ čo si budú vylepšovať schopnosti v matematike a fyzike.
+  codeorg_beyond_longdescription: Nauč sa základné pojmy informatiky pomocou blokového
+    programovania. 3 kurzy, z ktorých každý obsahuje 15-20 lekcií kombinujú aktivity
+    bez počítača s online aktivitami pripomínajúcimi hru, ktorej tempo si určuješ
+    ty sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry
+    Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné
+    algoritmy.
   khan_beyond_longdescription: Nauč sa základom programovania v jazyku JavaScript
     pri vytváraní zábavných kresieb s tvojim vlastným programom. Spolupracujte v triede
     alebo to urob sám!
@@ -1355,12 +1465,12 @@ sk-SK:
   kodable_beyond_longdescription: Kodable je hra pre iPad, ktorá deťom od 5 rokov
     predstaví základy programovania. Prítomnosť učiteľa je vhodná, ale nie je pre
     túto hru nutná.
-  appinventor_beyond_longdescription: Zábavné, rýchle video tutoriály ťa prevedú cez
-    vybudovanie troch jednoduchých aplikácií pre tvoj telefón či tablet s Androidom.
-    Určený pre začiatočníkov i expertov, táto hodina kódu ťa pripraví na budovanie
-    tvojich vlastných aplikácií, tak ako ich poznáš. Predstav si ako zdieľaš s priateľmi
-    svoje vlastnoručne vytvorené aplikácie! Tieto aktivity sú vhodné pre jednotlivcov
-    a pre učiteľov vedúcich triedy.
+  appinventor_beyond_longdescription: Pomocou zábavných a rýchlych video návodov vytvoríš
+    tri jednoduché aplikácie pre tvoj telefón či tablet s Androidom. Určený pre začiatočníkov
+    i expertov, táto hodina kódu ťa pripraví na budovanie tvojich vlastných aplikácií
+    rýchlejšie, ako si stihneš uvedomiť. Predstav si ako zdieľaš s priateľmi svoje
+    vlastnoručne vytvorené aplikácie! Tieto aktivity sú vhodné pre jednotlivcov aj
+    pre učiteľov vedúcich triedy.
   w3schools_beyond_longdescription: Naučte sa na svojom počítači vytvárať webstránky.
     Naučte sa základy serverov za menej ako jeden deň. Naučte sa pridať databázu do
     svojej  webstránky
@@ -1394,11 +1504,11 @@ sk-SK:
   header_courses: Kurzy
   header_course_catalog: Katalóg kurzov
   header_project_gallery: Projekty
-  header_sections: Sekcie
+  header_sections: Triedy
   header_professional_learning: Vzdelávanie pre profesionálov
   header_educate_overview: Prehľad školiteľov
   header_educate_elementary: Základná škola
-  header_educate_middle: 2. stupeň základnej školy
+  header_educate_middle: 2. stupeň ZŠ
   header_educate_high: Stredná škola
   header_educate_hoc: Hodina kódovania
   header_educate_partner: Staňte sa naším partnerom
@@ -1425,9 +1535,36 @@ sk-SK:
   header_report_bug: Nahláste chybu
   header_tutorials: Návody
   header_documentation: Dokumentácia
+  csp_name: Princípy Informatiky
+  csd_name: Objavujeme Informatiku
+  csd_2018_name: Objavujeme Informatiku
   user_header_label: Ahoj %{username}
   user_header_settings: Môj účet
   user_header_logout: Odhlásiť sa
   user_header_signin: Prihlásiť sa
-  view_all_sections: Zobraziť všetky sekcie
+  view_all_sections: Zobraziť všetky triedy
+  view_section: Zobraziť Triedu
+  view_named_section: Zobraziť %{section_name}
+  sign_in_instruct_code: 'Vložte kód triedy: %{section_code}.'
+  reset_student_password_instructions: Pre ktoréhokoľvek z vašich študentov môžete
+    obnoviť jeho tajné <word/picture> tak, že na záložke "Správa študentov" danej
+    triedy kliknete na tlačidlo “Ukáž heslo” v stĺpci "Heslo" a následne na tlačidlo
+    “Obnoviť heslo”.
+  joining_section: Pridať sa ku tvojej triede (jeden krát)
+  joining_section_overview: Ak sa študenti ešte nepridali ku vašej triede, požiadajte
+    ich o vykonanie nasledujúcich krokov. Potrebujú ich vykonať len raz. Po pripojení
+    sa ku triede študenti uvidia priradené kurzy a vy budete môcť sledovať ich pokrok
+    pokiaľ sú prihlásení.
+  joining_section_instruct_code: 'Prejdite na %{code_org_url} a uveďte kód triedy:
+    %{section_code}.'
+  joining_section_instruct_button: Po stlačení tlačidla "Go" by mali byť pridaní do
+    vašej triedy.
+  reset_student_password_email: Ak si vaši študenti vytvorili Code.org účet prostredníctvom
+    e-mailu a hesla (namiesto prihlásenia pomocou Google, Facebook, Microsoft, alebo
+    Clever účtu), viete obnoviť ich heslo tak, že na záložke "Správa študentov" danej
+    triedy kliknete na tlačidlo “Obnoviť heslo” v stĺpci "Heslo".
+  syncing_students_instructions: 'Ak zoznam študentov vo vašej Code.org triede nie
+    je aktuálny oproti vašej Google Classrrom, kliknite na tlačidlo "Sunchronizovať
+    študentov z Google Classroom" na záložke "Správa študentov":'
   hero_name: 'Minecraft: Cesta Hrdinu'
+  applab-intro_name: Úvod do App Lab

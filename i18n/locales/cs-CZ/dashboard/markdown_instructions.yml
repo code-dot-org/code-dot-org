@@ -26,7 +26,9 @@ cs:
       2-3 Artist Functions 12 a_markdown_instruction: "Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci \"nakreslit květinu\" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  "
       2-3 Artist Functions 12_markdown_instruction: "Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci \"nakreslit květinu\" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  "
       2-3 Artist Functions 2_markdown_instruction: "Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané \"nakreslit čtverec\". Můžeš použít funkci \"nakreslit čtverec\" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů."
+      2-3 Artist Functions 3 a_markdown_instruction: "Upravte funkci \"nakreslit čtverec\" tak, aby nakreslila brýle s rámy, které jsou velké 115px po obou stranách. \n\nČtverce jsou nyní od sebe vzdálené 45 pixelů."
       2-3 Artist Functions 3_markdown_instruction: "Uprav funkci nakreslit čtverec s délkou strany 115 a nakresli větší brýle. Čtverce jsou teď od sebe 45 pixelů."
+      2-3 Artist Functions 4 a_markdown_instruction: Nyní vložte funkci dovnitř smyčky a přidejte tah navíc pro vykreslení těchto tří čtverců.
       2-3 Artist Functions 4_markdown_instruction: Použij blok "opakování" k nakreslení těchto 3 čtverců.
       2-3 Artist Loops 1_markdown_instruction: Můžeš udělat šestiúhelník se stranami 100 pixelů dlouhé dokončené v buňce? Pamatuj si, že to znamená, že budeš potřebovat jen otočit o 60 stupňů!
       2-3 Artist Loops 2_markdown_instruction: Nyní použij blok opakování v buňce shell.
@@ -119,6 +121,7 @@ cs:
       4-5 While Loops 2_markdown_instruction: Přesuň mě na hromadu kompostu a odstraň ji 5 lopatami na kopečky pomocí bloku 'odstranit'.
       4-5 While Loops 3_markdown_instruction: "Přesuň mě na hromadu a odstraň všechno přesunutím do díry a vyplň ji zcela.  Rada: Použij pokud možno  pár bloků."
       4-5 While Loops 4_markdown_instruction: "Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus."
+      Artist Autorun Test_markdown_instruction: Použij blok "opakování" k nakreslení těchto 3 čtverců.
       Calc Circles of Eval 2_markdown_instruction: K provedení tohoto kódu použijte blok násobení.
       Calc Circles of Eval 3_markdown_instruction: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 4_markdown_instruction: V tomto kódu chybí několik "výpočetních bloků" - ujistěte se, že vše umístíte ve správném pořadí.
@@ -307,7 +310,7 @@ cs:
         Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       grade3_Loops_3_markdown_instruction: Umíš použít cyklus sesbírat všechen tento nektar?
       grade3_Loops_4_markdown_instruction: Nyní pomocí nového bloku opakování shromáždit všechen nektar a všechen med.
-      grade3_Loops_6_markdown_instruction: "Co se stane, když zacykluješ 3 krát posloupnost? Nezapomeň si na konci udělat med!"
+      grade3_Loops_6_markdown_instruction: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
       grade3_Loops_7_markdown_instruction: |-
         Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 
       grade3_Loops_TeacherIDo_markdown_instruction: |-
@@ -364,6 +367,6 @@ cs:
       grade5_playlab_variables9_markdown_instruction: "Zde je funkce nazvaná \"hlídka.\" Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů."
       level 'grade3_Loops_3_markdown_instruction: Umíš použít cyklus sesbírat všechen tento nektar?
       level 'grade3_Loops_4_markdown_instruction: Nyní pomocí nového bloku opakování shromáždit všechen nektar a všechen med.
-      level 'grade3_Loops_6_markdown_instruction: "Co se stane, když zacykluješ 3 krát posloupnost? Nezapomeň si na konci udělat med!"
+      level 'grade3_Loops_6_markdown_instruction: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
       level 'grade3_Loops_7_markdown_instruction: |-
         Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 

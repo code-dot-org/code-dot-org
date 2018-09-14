@@ -149,7 +149,15 @@ he:
       frozen line_callout:
         move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
           שאלזה תזוז קדימה
+      frozen line_b_callout:
+        move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
+          שאלזה תזוז קדימה
+      frozen line_test_callout:
+        move_elsa_forward: גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל
+          שאלזה תזוז קדימה
       frozen snowflake branch_callout:
+        frozen_snowflake_branch: השתמש בבלוק מסוג "צור ענף של פתיתי שלג"
+      frozen snowflake branch_test_callout:
         frozen_snowflake_branch: השתמש בבלוק מסוג "צור ענף של פתיתי שלג"
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים

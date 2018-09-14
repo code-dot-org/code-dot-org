@@ -1059,6 +1059,9 @@ pt:
       Artist - Nested Loops Assessment 1_instruction: |-
         Use um laço aninhado para completar
         o design.
+      Artist Autorun Test_instruction: |-
+        Use o bloco "repita" para desenhar esses
+        3 quadrados.
       Artist Inspiration_instruction: "Atividade livre - Inspiração: agora você\naprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
         você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
@@ -2682,6 +2685,15 @@ pt:
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
       courseD_artist_binary7_2018_instruction: |-
+        Qual é a menor string binária que você
+        pode repetir para desenhar esta imagem?
+      courseD_autorun_binary4_2019_instruction: |-
+        Você consegue desenhar este padrão usando
+        a repetição de uma string binária de 3 dígitos?
+      courseD_autorun_binary6_2019_instruction: |-
+        Que string binária de 6 dígitos, repetida
+        11 vezes, vai desenhar essa imagem?
+      courseD_autorun_binary7_2019_instruction: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
       courseD_bee_debugging3_instruction: |-

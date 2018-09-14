@@ -309,6 +309,8 @@ zh-CN:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: 每个条目都需要它自己的“当”循环。
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: 艺术家需要在每个方块之间旋转 120 度来完成这个设计。
       Artist Inspiration_authored_hint:
         brush_width: 我们在开始前，将画笔的宽度设为1，并将颜色设置为蓝色。
         double_loop: 试着将一个“计数循环”放到一个“重复”循环里。
@@ -429,6 +431,8 @@ zh-CN:
         Course_4_Artist_Functions_Inspiration_b: 尝试将转角度数大于90度，跳出重复循环，但仍在计数循环之内。
         Course_4_Artist_Functions_Inspiration_c: |-
           **解决方案：**
+          
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -498,7 +502,7 @@ zh-CN:
         Course_4_Artist_Functions_challenge_c: 每次迭代，应该绘制一个方形，然后向前跳转。
         Course_4_Artist_Functions_challenge_d: 你需要在重复循环外，但仍要在计数循环内左转90度。
       Course 4 Artist Inspire_authored_hint:
-        Course_4_Artist_Inspire_a: 当绘制完成一个方形后，在转向和绘制另一个方形之前，尝试先向前跳转半个边长的长度。
+        Course_4_Artist_Inspire_a: 当绘制完成一个正方形后，在转向和绘制另一个正方形之前，尝试先向前跳半个边长的距离。
         Course_4_Artist_Inspire_b: 绘制方形后跳转，以上动作重复循环四次(每次循环中间需左转)，可以得到一个完整的类似风车图案。
         Course_4_Artist_Inspire_c: 每个风车也重复四次，每次右转度数为:**360度/边数**。
         Course_4_Artist_Inspire_d: |-
@@ -3602,7 +3606,8 @@ zh-CN:
         Valentine_artist2_01_a: 草的每一边长是30像素。请尝试使用梯阶状步骤模式。
         Valentine_artist2_01_b: '看到任何重复模式吗？你可以在循环内使用两个`向前移动`模块和两个不同的`转向`模块。 '
         Valentine_artist2_01_c: |-
-          请尝试此循环
+          试试这个循环
+          
           <xml><block type="controls_repeat">
           <title name="TIMES">8</title>
           <statement name="DO">
@@ -3739,20 +3744,23 @@ zh-CN:
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       course1_collector_loops_challenge3_authored_hint:
         courseB_collector_loops_challenge1_b: |
-          开始循环命令 ' 往南移动 ' 和 ' 得到宝藏 '。
+          开始循环命令`往南移动`和`收集宝藏`。
+          
           <xml>
           <block type="maze_moveSouth"/><next>
           <block type="collector_collect"/></next>
           </xml>
         courseB_collector_loops_challenge1_a: |
           北边的图案与南边的图案略有不同。
+          
           <xml>
           <block type="collector_collect"/><next>
           <block type="maze_moveNorth"/></next>next>
           </xml>
-        courseB_collector_loops_challenge1_c: "在每条路径之间两次向东移动。\n<xml>\n<block type=\"maze_moveEast\"/><next>\n<block type=\"maze_moveEast\"/></next>next>\n</xml>\n你能只用14块模块做到这个。单击以查看解决方案的更多提示。 \n"
+        courseB_collector_loops_challenge1_c: "在每条路径之间两次向东移动。\n\n<xml>\n<block type=\"maze_moveEast\"/><next>\n<block type=\"maze_moveEast\"/></next>next>\n</xml>\n\n你能只用14个模块来实现。单击以查看解决方案的更多提示。 \n"
         courseB_collector_loops_challenge1_d: |-
           试试这个！
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -3834,6 +3842,7 @@ zh-CN:
         courseB_collector_loops_challenge2_c: 尝试使用 "重复" 块收集最后一堆的宝藏!
         courseB_collector_loops_challenge2_d: |-
           尝试此解决方案：
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -3881,14 +3890,14 @@ zh-CN:
         courseB_maze_seq_challenge1_a: 这一次最短路径可能无法解决问题。
         courseB_maze_seq_challenge1_b: 尝试向西移动开始。
       course1_playlab_events_challenge1_authored_hint:
-        courseA_playlab_events_challenge1_a: "当你点罗宾 的时候，让企鹅出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_b: "当你点企鹅的时候让布出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_c: "当你点布时让毛绒绒的怪物杰登出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_d: "当你点怪物的时候让机器人史毕福出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_e: "最后，当你点史毕福的时候让巫师温德尔出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_c: "当点击布时，让毛绒绒的怪物杰登出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_d: "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_e: "最后，当你点史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
       course1_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "你可以让小鸟唱歌。\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge2_b: "你可以让机器人发出咕噜声。\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">winpoint</title>\n</block>\n</next>\n\n</block></xml>"
+        courseA_playlab_events_challenge2_a: "可以让小鸟唱歌。\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge2_b: "可以让机器人发出咕噜声。\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">咕噜</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge2_c: |-
           你可以让生气的怪物咆哮。
           
@@ -3929,7 +3938,7 @@ zh-CN:
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: '矩形是200像素宽, 100 像素高。 '
       course2_artist_prog_challenge2_authored_hint:
-        courseC_artist_prog_challenge2_a: "您可以将命令放在`重复`模块中, 将它们反复循环。试试看！\n<xml>\n\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">6</title>\n<statement name=\"DO\">\n<block type=\"draw_move_by_constant_dropdown\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n<next>\n<block type=\"jump_by_constant_dropdown\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n</block>\n</next>\n</block>\n</statement></block></xml>"
+        courseC_artist_prog_challenge2_a: "可以将命令放在`重复`模块中, 将它们反复循环。试试看！\n\n<xml>\n\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">6</title>\n<statement name=\"DO\">\n<block type=\"draw_move_by_constant_dropdown\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n<next>\n<block type=\"jump_by_constant_dropdown\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n</block>\n</next>\n</block>\n</statement></block></xml>"
       course2_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
           你能找到一条通向每一朵花和蜂窝的小路而不撞到任何树木吗？最好的路径是螺旋式。 
@@ -4016,7 +4025,7 @@ zh-CN:
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: 如果再次调用该函数, 则可以在最后一个角创建相同的设计。你也可以随你所想`跳到`其他位置，或者将整个改成自己想要的样子！
       course3_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块允许您随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是将他向右下角移动一定的像素。这总是从左上角开始计算，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块能随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是向右下角移动一定的像素。这总是从左上角开始计算的，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course3_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: 为什么这个程序的前半部分工作？考虑一下为什么蜜蜂需要向后移动。蜜蜂每次在花上移动时采集多少花蜜？
         courseD_bee_debugging_challenge1_b: 在回来的路上, 让蜜蜂遵循同样的模式。蜜蜂每次在蜂窝上移动需要制作多少蜂蜜？
@@ -4153,9 +4162,9 @@ zh-CN:
           </block>
           </xml>
       course3_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "专注从每前两堆收集两个宝石开始。\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\n用这些模块。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">moveForward</title>\n\n</block>\n\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "专注于从每前两堆收集两个宝石开始。\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\n\n用这些模块。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">moveForward</title>\n</block>\n\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "接下来, 在此行中收集剩余的宝石。 \n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n<title name=\"DIR\">moveBackward</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n</xml>"
-        courseD_collector_debugging_challenge2_c: "最后, 收集剩余的宝藏。将这些块添加到程序中。\n\n<xml>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_c: "最后, 收集剩余的宝藏。将这些块添加到程序中。\n\n<xml>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           这里是这个关卡的完整解决方案。
           
@@ -4256,8 +4265,8 @@ zh-CN:
           </block>
           </value>
           </block></xml>
-        courseE_playlab_challenge2_b: "如果您在条件列表下再次调用`问一个问题`函数, 你就会感觉游戏重新开始了。\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n\n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n</block></block></xml>"
-        courseE_playlab_challenge2_c: "您将需要添加更多的条件声明, 以便让演员有更多的话要说。\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TEXT\">\n<block type=\"text\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n<value name=\"TIME\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不用于忘了在永远重复循环中改变演员要显示的情绪。你也可以随意设定心情！"
+        courseE_playlab_challenge2_b: "如果在条件列表下再次调用`问一个问题`函数，就会感觉游戏重新开始了。\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n\n<block type=\"procedures_callnoreturn\">\n<mutation name=\"问一个问题\"></mutation>\n</block></block></xml>"
+        courseE_playlab_challenge2_c: "需要添加更多的条件声明，以便让演员有更多的话要说。\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TEXT\">\n<block type=\"text\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n<value name=\"TIME\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不用于忘了在永远重复循环中改变演员要显示的情绪。也可以随意设定心情！"
         courseE_playlab_challenge2_d: |-
           一旦您了解了与演员1相关的所有代码, 就可以尝试重写相同的代码，但这次是针对演员2的。
           
@@ -4272,12 +4281,13 @@ zh-CN:
       course4_artist_concept_challenge2_authored_hint:
         courseE_artist_concept_challenge2_a: 一旦你定义了一个函数, 你可以一次又一次地调用它 - 任何想用的地方或时机！
         courseE_artist_concept_challenge2_b: |-
-          您可以使用以下命令跳转到画布上的不同位置：
+          可以使用以下命令跳转到画布上的不同位置：
+          
           <xml> <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
       course4_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块允许您随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是将他向右下角移动一定的像素。这总是从左上角开始计算，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块能随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是向右下角移动一定的像素。这总是从左上角开始计算的，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: 每条竖线的长度都是 "10"。每条水平线的长度应为 "长度"。
         courseF_artist_variables_challenge1_b: 您将希望把 "长度" 的值在循环中增加10 **两次**。
@@ -4446,6 +4456,7 @@ zh-CN:
       course4_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           主程序应该类似于以下内容:
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -4460,10 +4471,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -4476,10 +4487,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -4492,10 +4503,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -4779,6 +4790,7 @@ zh-CN:
         courseD_bee_nested_loops_challenge2_c: 到达所有宝藏的最短程序只使用一个`收集`块和两个转弯。
         courseD_bee_nested_loops_challenge2_d: |-
           ** 解决方案: *
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -4836,7 +4848,8 @@ zh-CN:
         courseD_harvester_nested_loops_challenge1_a: 您可能已经使用了一个循环来创建一个之字形图案。如果你记得那个算法, 可以加到这里。
       course4_playlab_variables_challenge1_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
-          您将需要工具箱里别的模块让演员说话。
+          要用到工具箱里别的模块，来让演员说话。
+          
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -4868,7 +4881,8 @@ zh-CN:
           </value>
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
-          如果你在演员说了财宝后，再次调用`ask a question`（问一个问题）函数，感觉就像整个游戏重头再来了。
+          如果在演员说了财宝后，再次调用`ask a question`（问一个问题）函数，感觉就像整个游戏重头再来了。
+          
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -4889,7 +4903,7 @@ zh-CN:
           <block type="procedures_callnoreturn">
           <mutation name="问一个问题"/>
           </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "您将需要添加更多的条件声明, 以便让演员有更多的话要说。 \n\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">运气</title>\n<value name=\"VALUE\">\n<block type=\"text\" movable=\"false\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不要忘记更改演员将在`一直重复`循环中显示的情绪。你也可以随意设定心情!"
+        courseF_playlab_variables_challenge3_c: "添加更多的条件声明，来让演员能说更多的事情。 \n\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">运气</title>\n<value name=\"VALUE\">\n<block type=\"text\" movable=\"false\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不要忘记更改演员将在`一直重复`循环中显示的情绪。也可以设置随机心情！"
         courseF_playlab_variables_challenge3_d: |-
           一旦您了解了与演员1相关的所有代码, 就可以尝试重写相同的代码，但这次是针对演员2的。
           
@@ -4919,7 +4933,7 @@ zh-CN:
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
         courseA_artist_loops4_b: |-
-          由于只能使用一个<xml><block type="simple_move_right"/></xml>模块, 请尝试将其放入<block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>循环中。
+          由于只能使用一个<xml><block type="simple_move_right"/></xml>模块, 请尝试将其放入<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> 循环中。
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
         courseA_artist_loops4_b: |-
@@ -4927,11 +4941,11 @@ zh-CN:
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: 请试着使用你已经学到的<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块知识来完成此关卡。
         courseA_artist_loops5_b: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
-        courseA_artist_loops5_c: "由于您只能使用一个 <xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环中。"
+        courseA_artist_loops5_c: "由于只能使用一个<xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放入\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环中。"
       courseA_artist_loops5_2018_authored_hint:
         courseA_artist_loops5_a: 请试着使用你已经学到的<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>模块知识来完成此关卡。
         courseA_artist_loops5_b: 如果希望循环重复4次以上, 你可以更改该模块顶部的数字。
-        courseA_artist_loops5_c: "由于您只能使用一个 <xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环中。"
+        courseA_artist_loops5_c: "由于只能使用一个<xml><block type=\"simple_move_right\"/></xml>模块, 请尝试将其放入\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环中。"
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: 无法想出如何制作山峰吗？请试着运行这些模块看它们每个是画什么的？
         courseA_artist_loops6_b: 您需要两个方向的两个模块来解决这个难题。
@@ -5003,25 +5017,29 @@ zh-CN:
           </xml>
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
-          在你到了一个有宝藏的广场后, 用这个方块来把它捡起来。<xml> <block type="collector_collect"/></xml>
+          在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
+          <xml> <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: 一个简单的解决方案是向东移动两次, 然后得到宝藏。
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
-          在你到了一个有宝藏的广场后, 用这个方块来把它捡起来。<xml> <block type="collector_collect"/></xml>
+          在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
+          <xml> <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: 一个简单的解决方案是向东移动两次, 然后得到宝藏。
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: 在你收集财宝之前, 你必须先向前移动。
         courseA_collector_loops2_b: |-
-          在你到了一个有宝藏的广场后, 用这个方块来把它捡起来。<xml> <block type="collector_collect"/></xml>
+          在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
+          <xml> <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: 在你收集财宝之前, 你必须先向前移动。
         courseA_collector_loops2_b: |-
-          在你到了一个有宝藏的广场后, 用这个方块来把它捡起来。<xml> <block type="collector_collect"/></xml>
+          在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
+          <xml> <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "尝试使用 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环!"
+        courseA_collector_loops3_a: "试试用\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环!"
         courseA_collector_loops3_b: 请记住, 您可以在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> 循环中放置超过1个模块。
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "尝试使用 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环!"
+        courseA_collector_loops3_a: "试试用\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>循环!"
         courseA_collector_loops3_b: 请记住, 您可以在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> 循环中放置超过1个模块。
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: 要改变劳雷尔所走的距离, 请更改循环运行的次数。
@@ -5066,7 +5084,8 @@ zh-CN:
         courseA_collector_loops_challenge1_b: 如果有什么事情只做一次，就不需要使用循环, 。
         courseA_collector_loops_challenge1_c: 当你开始的时候, 有6个宝石在洞穴的右侧, 但你只需要向南移动5次获得宝藏。你知道这是为什么吗？
         courseA_collector_loops_challenge1_d: |-
-          开始程序不收集最后2宝石。尝试在末尾添加此代码: 
+          开始的程序没有收集最后两个宝石。尝试在末尾添加此代码: 
+          
           <xml><block type="maze_moveEast">
           <next>
           <block type="collector_collect_simplified">
@@ -5085,7 +5104,8 @@ zh-CN:
         courseA_collector_loops_challenge1_b: 如果有什么事情只做一次，就不需要使用循环, 。
         courseA_collector_loops_challenge1_c: 当你开始的时候, 有6个宝石在洞穴的右侧, 但你只需要向南移动5次获得宝藏。你知道这是为什么吗？
         courseA_collector_loops_challenge1_d: |-
-          开始程序不收集最后2宝石。尝试在末尾添加此代码: 
+          开始的程序没有收集最后两个宝石。尝试在末尾添加此代码: 
+          
           <xml><block type="maze_moveEast">
           <next>
           <block type="collector_collect_simplified">
@@ -5116,22 +5136,26 @@ zh-CN:
         courseA_collector_preLoops6_a: 您将需要使用两个![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) 模块来解决这个关卡。
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
-          在你到了一个有宝藏的广场后, 用这个方块来把它捡起来。<xml> <block type="collector_collect"/></xml>
+          在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
+          <xml> <block type="collector_collect"/></xml>
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
-          用一个像这样的`重复`模块来帮助你！
+          用一个这样的`重复`模块来帮忙！
+          
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">3</title>
           </block></xml>
       courseA_harvester_loops1_authored_hint:
         courseA_harvester_loops1_a: |-
-          一旦你移动到了某个玉米上，用这个模块来采摘它！
+          一旦移动到了某个玉米上，用这个模块采摘它！
+          
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`<xml><block type=\"maze_moveWest\"/></xml>模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 "
+        courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
-          用像这样的`重复`模块来帮助你！
+          用一个这样的`重复`模块来帮忙！
+          
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
@@ -5173,6 +5197,7 @@ zh-CN:
           </xml>
         courseA_harvester_seq1_b: |-
           收割者需要向东移动三次来采摘玉米，用这个模块：
+          
           <xml>
           <block type="maze_moveEast"/>
           </xml>
@@ -5193,6 +5218,7 @@ zh-CN:
       courseA_harvester_seq3_authored_hint:
         courseA_harvester_seq3_a: |-
           还记得用这个模块吗？
+          
           <xml><block type="harvester_corn"/></xml>
         courseA_harvester_seq3_b: 大声的说出这些步骤，来看看是否能帮你找到答案。
       courseA_harvester_seq4_authored_hint:
@@ -5321,7 +5347,7 @@ zh-CN:
           <block type="when_run"/>
           </xml> 下面
         courseA_maze_seq1_b: |-
-          这只鸟需要向西移动3次才能到达猪。请使用此模块: <xml> <block type="maze_moveWest"/> </xml>
+          这只鸟需要向西移动3次才能到达猪。用这个模块: <xml> <block type="maze_moveWest"/> </xml>
       courseA_maze_seq10_authored_hint:
         courseA_maze_seq10_a: 如果你有困难, 试着先写下一张纸上的步骤。
         courseA_maze_seq10_b: 您将需要移动3 个方向来通过此关卡。
@@ -5333,20 +5359,20 @@ zh-CN:
         courseA_maze_seq13_b: 不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。
         courseA_maze_seq13_c: |-
           这些 <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml>块将帮助您离猪更近一步。
+          <xml><block type="maze_moveEast"/></xml>块会帮你靠近猪。
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: 如果对路径不明白，请使用手指来追踪鸟到猪的线路。
         courseA_maze_seq13_b: 不要害怕犯错误！尝试添加块并运行代码, 看看会发生什么。
         courseA_maze_seq13_c: |-
           这些 <xml><block type="maze_moveNorth"/></xml>
-          <xml><block type="maze_moveEast"/></xml>块将帮助您离猪更近一步。
+          <xml><block type="maze_moveEast"/></xml>块会帮你靠近猪。
       courseA_maze_seq1_2018_authored_hint:
         courseA_maze_seq1_a: |-
           如果在让鸟移动时遇到问题, 请确保模块是被放置在<xml>
           <block type="when_run"/>
           </xml> 下面
         courseA_maze_seq1_b: |-
-          这只鸟需要向西移动3次才能到达猪。请使用此模块: <xml> <block type="maze_moveWest"/> </xml>
+          这只鸟需要向西移动3次才能到达猪。用这个模块: <xml> <block type="maze_moveWest"/> </xml>
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: 该程序缺少1个模块，您是否可以找出是哪个？
         courseA_maze_seq2_b: 试着先运行代码, 看看鸟在哪里。你需要从那里去哪里？
@@ -5497,13 +5523,13 @@ zh-CN:
           <title name="DIR">2</title>
           </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
-        courseA_playLab_events5_a: "这是您将要使用让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>"
+        courseA_playLab_events5_a: "这是要用来让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           您是否知道可以通过单击块中的图片并选择新的键来更改事件的方向键？ 
           
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events5_2018_authored_hint:
-        courseA_playLab_events5_a: "这是您将要使用让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>"
+        courseA_playLab_events5_a: "这是要用来让乔治上下移动的事件模块：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">上</title>\n  </block></xml>\n和\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">下</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           您是否知道可以通过单击块中的图片并选择新的键来更改事件的方向键？ 
           
@@ -5563,20 +5589,20 @@ zh-CN:
           <title name="SPRITE2">0</title>
           </block></xml>
       courseA_playlab_events_challenge1_authored_hint:
-        courseA_playlab_events_challenge1_a: "当你点罗宾 的时候，让企鹅出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_b: "当你点企鹅的时候让布出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_c: "当你点布时让毛绒绒的怪物杰登出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_d: "当你点怪物的时候让机器人史毕福出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_e: "最后，当你点史毕福的时候让巫师温德尔出现！\nxml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_c: "当点击布时，让毛绒绒的怪物杰登出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_d: "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_e: "最后，当点击史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
       courseA_playlab_events_challenge1_2018_authored_hint:
-        courseA_playlab_events_challenge1_a: "当你点罗宾 的时候，让企鹅出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_b: "当你点企鹅的时候让布出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_c: "当你点布时让毛绒绒的怪物杰登出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_d: "当你点怪物的时候让机器人史毕福出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_e: "最后，当你点史毕福的时候让巫师温德尔出现！\nxml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_c: "当点击布时，让毛绒绒的怪物杰登出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_d: "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_e: "最后，当点击史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
       courseA_playlab_events_challenge1a_authored_hint:
-        courseA_playlab_events_challenge1_a: "你可以让小鸟唱歌。\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_b: "你可以让机器人发出咕噜声。\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">winpoint</title>\n</block>\n</next>\n\n</block></xml>"
+        courseA_playlab_events_challenge1_a: "可以让小鸟唱歌。\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_b: "可以让机器人发出咕噜声。\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">咕噜</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge1_c: |-
           你可以让生气的怪物咆哮。
           
@@ -5602,8 +5628,8 @@ zh-CN:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "你可以让小鸟唱歌。\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge2_b: "你可以让机器人发出咕噜声。\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">winpoint</title>\n</block>\n</next>\n\n</block></xml>"
+        courseA_playlab_events_challenge2_a: "可以让小鸟唱歌。\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge2_b: "可以让机器人发出咕噜声。\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">咕噜</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge2_c: |-
           你可以让生气的怪物咆哮。
           
@@ -5629,8 +5655,8 @@ zh-CN:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_2018_authored_hint:
-        courseA_playlab_events_challenge2_a: "你可以让小鸟唱歌。\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge2_b: "你可以让机器人发出咕噜声。\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">winpoint</title>\n</block>\n</next>\n\n</block></xml>"
+        courseA_playlab_events_challenge2_a: "可以让小鸟唱歌。\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">2</title>\n<title name=\"TEXT\">吱喳</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge2_b: "可以让机器人发出咕噜声。\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">咕噜</title>\n</block>\n</next>\n</block></xml>"
         courseA_playlab_events_challenge2_c: |-
           你可以让生气的怪物咆哮。
           
@@ -5656,11 +5682,11 @@ zh-CN:
           </next>
           </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
-        courseA_playlab_events_challenge1_a: "当你点罗宾 的时候，让企鹅出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_b: "当你点企鹅的时候让布出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_c: "当你点布时让毛绒绒的怪物杰登出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_d: "当你点怪物的时候让机器人史毕福出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
-        courseA_playlab_events_challenge1_e: "最后，当你点史毕福的时候让巫师温德尔出现！\n<xml> \n\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_a: "当点击罗宾时，让企鹅出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">3</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_b: "当点击企鹅时，让布出现！\n\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">3</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">4</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_c: "当点击布时，让毛绒绒的怪物杰登出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">4</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">5</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_d: "当点击怪物的时候让机器人史毕福出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">6</title>\n</block>\n</next>\n</block></xml>"
+        courseA_playlab_events_challenge1_e: "最后，当你点史毕福的时候让巫师温德尔出现！\n\n<xml> \n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">6</title>\n<next>\n<block type=\"studio_setSprite\">\n<title name=\"VALUE\">\"visible\"</title>\n<title name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': 如果斯奎特做的和你想的不一样，确保两个模块都完全链接到了一起，然后再点击"运行"。
         '2': 别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！
@@ -5898,9 +5924,10 @@ zh-CN:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "在每条路径之间向东移动两次。\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n你只能使用14个模块来实现。单击查看更多解决方案来得到更多提示。\n"
+        courseB_collector_loops_challenge1_c: "在每条路径之间向东移动两次。\n\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n\n只能使用14个模块来实现。单击查看更多解决方案来得到更多提示。\n"
         courseB_collector_loops_challenge1_d: |-
           试试这个！
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -5968,9 +5995,10 @@ zh-CN:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "在每条路径之间向东移动两次。\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n你只能使用14个模块来实现。单击查看更多解决方案来得到更多提示。\n"
+        courseB_collector_loops_challenge1_c: "在每条路径之间向东移动两次。\n\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n\n只能使用14个模块来实现。单击查看更多解决方案来得到更多提示。\n"
         courseB_collector_loops_challenge1_d: |-
           试试这个！
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -6052,6 +6080,7 @@ zh-CN:
         courseB_collector_loops_challenge2_c: 尝试使用 "重复" 块收集最后一堆的宝藏!
         courseB_collector_loops_challenge2_d: |-
           尝试此解决方案：
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -6113,6 +6142,7 @@ zh-CN:
         courseB_collector_loops_challenge2_c: 尝试使用 "重复" 块收集最后一堆的宝藏!
         courseB_collector_loops_challenge2_d: |-
           尝试此解决方案：
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -6168,7 +6198,7 @@ zh-CN:
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: 小心破冰！斯奎特会掉下去的！
         courseB_iceage_loops1_b: |-
-          你需要用这个模块：
+          需要用这个模块：
           
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10_authored_hint:
@@ -6497,16 +6527,18 @@ zh-CN:
           
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseB_playlab_events_challenge1_authored_hint:
-        courseB_playlab_events_challenge1_a: "当你按下`▼`时, 让其他动物向下移动。\n<xml>\n<block type=\"studio_whenArrow\" movable=\"false\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>"
+        courseB_playlab_events_challenge1_a: "当按下`▼`时, 让其他动物向下移动。\n\n<xml>\n<block type=\"studio_whenArrow\" movable=\"false\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>"
         courseB_playlab_events_challenge1_b: |
-          使用此块更改动物的速度：
+          用这个模块改变动物的速度：
+          
           <xml>
           <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
           </block></xml>
         courseB_playlab_events_challenge1_c: |-
-          比赛结束后, 大家会怎么说？让他们交谈这次的活动: 
+          比赛结束后, 大家会怎么说？让他们交谈这次的活动：
+          
           <xml>
           <block type="studio_whenSpriteClicked">
           <title name="SPRITE">2</title>
@@ -6519,16 +6551,18 @@ zh-CN:
           </block>
           </xml>
       courseB_playlab_events_challenge1_2018_authored_hint:
-        courseB_playlab_events_challenge1_a: "当你按下`▼`时, 让其他动物向下移动。\n<xml>\n<block type=\"studio_whenArrow\" movable=\"false\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>"
+        courseB_playlab_events_challenge1_a: "当按下`▼`时, 让其他动物向下移动。\n\n<xml>\n<block type=\"studio_whenArrow\" movable=\"false\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>"
         courseB_playlab_events_challenge1_b: |
-          使用此块更改动物的速度：
+          用这个模块改变动物的速度：
+          
           <xml>
           <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
           </block></xml>
         courseB_playlab_events_challenge1_c: |-
-          比赛结束后, 大家会怎么说？让他们交谈这次的活动: 
+          比赛结束后, 大家会怎么说？让他们交谈这次的活动：
+          
           <xml>
           <block type="studio_whenSpriteClicked">
           <title name="SPRITE">2</title>
@@ -6551,10 +6585,11 @@ zh-CN:
           </block>
           </xml>
         courseB_playlab_events_challenge2_c: |-
-          当你点击动物时, 使用额外的命令来播放声音或得分。
+          当点击动物时，使用额外的命令来播放声音或得分！
+          
           <xml>
           <block type="studio_playSound">
-          <title name="SOUND">slap</title>
+          <title name="SOUND">鼓掌</title>
           </block>
           <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
@@ -6572,10 +6607,11 @@ zh-CN:
           </block>
           </xml>
         courseB_playlab_events_challenge2_c: |-
-          当你点击动物时, 使用额外的命令来播放声音或得分。
+          当点击动物时，使用额外的命令来播放声音或得分！
+          
           <xml>
           <block type="studio_playSound">
-          <title name="SOUND">slap</title>
+          <title name="SOUND">鼓掌</title>
           </block>
           <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
@@ -6593,10 +6629,11 @@ zh-CN:
           </block>
           </xml>
         courseB_playlab_events_challenge2_c: |-
-          当你点击动物时, 使用额外的命令来播放声音或得分。
+          当点击动物时，使用额外的命令来播放声音或得分！
+          
           <xml>
           <block type="studio_playSound">
-          <title name="SOUND">slap</title>
+          <title name="SOUND">鼓掌</title>
           </block>
           <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
@@ -6614,10 +6651,11 @@ zh-CN:
           </block>
           </xml>
         courseB_playlab_events_challenge2_c: |-
-          当你点击动物时, 使用额外的命令来播放声音或得分。
+          当点击动物时，使用额外的命令来播放声音或得分！
+          
           <xml>
           <block type="studio_playSound">
-          <title name="SOUND">slap</title>
+          <title name="SOUND">鼓掌</title>
           </block>
           <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
@@ -6635,10 +6673,11 @@ zh-CN:
           </block>
           </xml>
         courseB_playlab_events_challenge2_c: |-
-          当你点击动物时, 使用额外的命令来播放声音或得分。
+          当点击动物时，使用额外的命令来播放声音或得分！
+          
           <xml>
           <block type="studio_playSound">
-          <title name="SOUND">slap</title>
+          <title name="SOUND">鼓掌</title>
           </block>
           <block type="studio_changeScore"/></xml>
         courseB_playlab_events_challenge2_d: |-
@@ -6648,11 +6687,15 @@ zh-CN:
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: 尝试一次添加一个块, 然后单击 "运行" 以查看发生了什么。
         courseB_starWars_prog1_b: |
-          你会想向东移动解决这个关卡。你要走多远？<xml><block type="studio_moveEast"/></xml>
+          向东移动来通过本关。要移动多远？
+          
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog1_2018_authored_hint:
         courseB_starWars_prog1_a: 尝试一次添加一个块, 然后单击 "运行" 以查看发生了什么。
         courseB_starWars_prog1_b: |
-          你会想向东移动解决这个关卡。你要走多远？<xml><block type="studio_moveEast"/></xml>
+          向东移动来通过本关。要移动多远？
+          
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: 把这个问题分成两部分。得到一堆废铁, 然后弄清楚如何得到另一堆。
       courseB_starWars_prog2_2018_authored_hint:
@@ -6666,7 +6709,8 @@ zh-CN:
       courseB_starWars_prog4_authored_hint:
         courseB_starWars_prog4_a: 一次生成一段代码。运行它, 找出下步去哪里。
         courseB_starWars_prog4_b: |-
-          尝试使用`重复`模块来缩短代码。
+          试试使用`重复`模块来缩短代码。
+          
           <xml> <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -6674,7 +6718,8 @@ zh-CN:
       courseB_starWars_prog4_2018_authored_hint:
         courseB_starWars_prog4_a: 一次生成一段代码。运行它, 找出下步去哪里。
         courseB_starWars_prog4_b: |-
-          尝试使用`重复`模块来缩短代码。
+          试试使用`重复`模块来缩短代码。
+          
           <xml> <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -6698,7 +6743,8 @@ zh-CN:
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: 这个图案只是一个台阶, 每方向移动两步!
         courseB_starWars_prog6_b: |-
-          尝试使用`重复`模块来缩短代码。
+          试试使用`重复`模块来缩短代码。
+          
           <xml> <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -6706,7 +6752,8 @@ zh-CN:
       courseB_starWars_prog6_2018_authored_hint:
         courseB_starWars_prog6_a: 这个图案只是一个台阶, 每方向移动两步!
         courseB_starWars_prog6_b: |-
-          尝试使用`重复`模块来缩短代码。
+          试试使用`重复`模块来缩短代码。
+          
           <xml> <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -6898,28 +6945,32 @@ zh-CN:
           **弹球游戏**- 使用箭头键让一个人物移动（使用`当上方向键按下时`，`当下方向键按下时`模块），然后当与屏幕上的其他人物相撞的时候播放随机声音。
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: |
-          您可以使用此模块将演员移动到游戏空间中的不同位置。
+          可以使用此模块将演员移动到游戏空间中的不同位置。
+          
           <xml> <block type="studio_setSpritePosition">
           <title name="SPRITE">0</title>
           <title name="VALUE">12</title>
           </block></xml>
         courseC_PlayLab_events_challenge_b: 当触及其他演员时，尝试使用`将演员1设置为左中间位置`。这将重置游戏, 让玩家可以继续尝试!
         courseC_PlayLab_events_challenge_c: |-
-          您可能还想尝试改变不同的演员的速度, 使游戏更容易或更具挑战性!
+          还可以尝试改变不同的演员的速度，使游戏更容易或更具挑战性!
+          
           <xml> <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
           </block></xml>
       courseC_PlayLab_events_challenge1_2018_authored_hint:
         courseC_PlayLab_events_challenge_a: |
-          您可以使用此模块将演员移动到游戏空间中的不同位置。
+          可以使用此模块将演员移动到游戏空间中的不同位置。
+          
           <xml> <block type="studio_setSpritePosition">
           <title name="SPRITE">0</title>
           <title name="VALUE">12</title>
           </block></xml>
         courseC_PlayLab_events_challenge_b: 当触及其他演员时，尝试使用`将演员1设置为左中间位置`。这将重置游戏, 让玩家可以继续尝试!
         courseC_PlayLab_events_challenge_c: |-
-          您可能还想尝试改变不同的演员的速度, 使游戏更容易或更具挑战性!
+          还可以尝试改变不同的演员的速度，使游戏更容易或更具挑战性!
+          
           <xml> <block type="studio_setSpriteSpeed">
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.FAST</title>
@@ -6927,7 +6978,8 @@ zh-CN:
       courseC_PlayLab_events_challenge1_xy_blocks_authored_hint:
         courseC_PlayLab_events_challenge_a: 此块上的两个值允许您将一个演员移动到游戏区域中的任何像素。您可以从0-400 中选择任意数字。
         courseC_PlayLab_events_challenge_b: |-
-          你可以决定使用哪种数字, 通过思考你想移动的左上角有多远。第一个数字是从左边数的像素数。第二个数字是从顶部数的像素数。
+          通过思考想移动的到离左上角多远，来决定要用什么数字。第一个数字是从左边数的像素数。第二个数字是从顶部数的像素数。
+          
           <xml><block type="studio_setSpriteXY" inline="true">
           <value name="SPRITE">
           <block type="math_number" movable="false">
@@ -6945,6 +6997,7 @@ zh-CN:
           </block>
           </value>
           </block></xml>
+          
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_loop1_authored_hint:
         courseC_artist_loop1_a: 您不需要对循环进行任何更改, 只需在上面放置一个模块。
@@ -7109,9 +7162,12 @@ zh-CN:
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
-          你需要的第一个模块是：
+          需要的第一个模块是：
           
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml> <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           要向前移动50像素, 请使用以下模块：
           
@@ -7221,7 +7277,7 @@ zh-CN:
       courseC_artist_prog_challenge1_2018_authored_hint:
         courseC_artist_prog_challenge1_a: 你可以把它画成一个长方形, 其中一边在中间或在两个不同的正方形上!
       courseC_artist_prog_challenge2_authored_hint:
-        courseC_artist_prog_challenge2_a: "您可以将命令放在`重复`模块中, 将它们反复循环。试试看！\n<xml>\n\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">6</title>\n<statement name=\"DO\">\n<block type=\"draw_move_by_constant_dropdown\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n<next>\n<block type=\"jump_by_constant_dropdown\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n</block>\n</next>\n</block>\n</statement></block></xml>"
+        courseC_artist_prog_challenge2_a: "可以将命令放在`重复`模块中, 将它们反复循环。试试看！\n\n<xml>\n\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">6</title>\n<statement name=\"DO\">\n<block type=\"draw_move_by_constant_dropdown\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n<next>\n<block type=\"jump_by_constant_dropdown\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n</block>\n</next>\n</block>\n</statement></block></xml>"
       courseC_artist_prog_challenge2a_authored_hint:
         courseC_artist_prog_challenge2_a: 绘制第一行后，在绘制第二行前向左转。
         courseC_artist_prog_challenge2_b: 绘制第二行后, 在绘制第三行之前向右转。
@@ -7743,11 +7799,13 @@ zh-CN:
         courseC_maze_programming_challenge2_a: '"如果你让我后退，要格外小心我朝向了正确的路！*'
         courseC_maze_programming_challenge2_b: |-
           最短的解决方案仅使用5个模块, 但它使用了这个模块：
+          
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
         courseC_maze_programming_challenge2_a: '"如果你让我后退，要格外小心我朝向了正确的路！*'
         courseC_maze_programming_challenge2_b: |-
           最短的解决方案仅使用5个模块, 但它使用了这个模块：
+          
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_puppy_loops10_authored_hint:
         courseC_puppy_loops9_1: 我需要在每次转向之间移动两到三次。
@@ -8276,6 +8334,28 @@ zh-CN:
         courseD_artist_ramp12_a: 你可以先画方块, 然后三角形, 或者反过来!
         courseD_artist_ramp12_b: 尝试将问题分解为两个部分, 并使用两个循环。
         courseD_artist_ramp12_c: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
+      courseD_autorun_binary2_2019_authored_hint:
+        courseD_artist_binary2_a: 点击`运行`来看程序如何运行
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: 工具箱中的四个二进制模式之一将解决这个关卡!
+        courseD_artist_binary3_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_a: 看看最上面一行的前三个正方形。你能重复这三个来画出整个图案吗？
+        courseD_artist_binary4_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: 请先尝试运行代码, 看看您需要处理的内容。
+        courseD_artist_binary5_b: 您只需交换两行, 就可以制作一个微笑。
+        courseD_artist_binary5_c: 如果您在解决此关卡时遇到困难, 请尝试在一张纸上写下二进制线并查找相同模式。
+      courseD_autorun_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
+        courseD_artist_binary6_b: 您可以一次生成二进制字符串, 并继续测试!
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_a: 从左上方开始。在模式开始重复之前, 您必须阅读多少？
+        courseD_artist_binary7_b: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: 螺旋有时会令人困惑。在创建此设计时, 请将您心目中的每条水平线分开。
+        courseD_artist_binary8_b: 请先尝试运行代码, 看看您需要处理的内容。
+        courseD_artist_binary8_c: 不要害怕犯错误! 即使你还没有解开这个关卡，尝试编写二进制文件并运行代码, 看看会发生什么。
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: 在您试着得到花蜜前，您将需要使用一个`如果`模块来查看是否有花在云下面。
       courseD_bee_conditionals1_predict1_authored_hint:
@@ -8602,11 +8682,13 @@ zh-CN:
         courseD_bee_nested_loops_challenge2_d: 到达所有宝藏的最短程序只使用一个`收集`块和两个转弯。
       courseD_bounce_events10s_authored_hint:
         courseD_bounce_events10s_a: |-
-          您应该在代码中同时拥有这些事件：
+          应该在代码中同时使用这些事件：
+          
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events10s_2018_authored_hint:
         courseD_bounce_events10s_a: |-
-          您应该在代码中同时拥有这些事件：
+          应该在代码中同时使用这些事件：
+          
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
         courseD_bounce_events11s_a: 当游戏开始时, 当你击中篮筐时, 当手错过球时, 你将要掷球。
@@ -8660,20 +8742,24 @@ zh-CN:
         courseD_bounce_events5s_a: 你不需要移动手来解决这个关卡。
         courseD_bounce_events5s_b: |-
           确保已将此代码添加到工作区：
+          
           <xml> <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2018_authored_hint:
         courseD_bounce_events5s_a: 你不需要移动手来解决这个关卡。
         courseD_bounce_events5s_b: |-
           确保已将此代码添加到工作区：
+          
           <xml> <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_authored_hint:
         courseD_bounce_events6s_a: |-
-          你有类似这样的事件吗？
+          用过类似这样的事件吗？
+          
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: 如果你写的代码正确, 你不必移动手来获胜。
       courseD_bounce_events6s_2018_authored_hint:
         courseD_bounce_events6s_a: |-
-          你有类似这样的事件吗？
+          用过类似这样的事件吗？
+          
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: 如果你写的代码正确, 你不必移动手来获胜。
       courseD_bounce_events7s_authored_hint:
@@ -8862,9 +8948,9 @@ zh-CN:
         courseD_collector_debugging9_a: 有几种方法可以解决这个问题...但它们都需要转弯！
         courseD_collector_debugging9_b: 弄清楚将如何通过这个关卡, 然后逐步移动, 尝试使代码与你头脑所想相匹配。
       courseD_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "从只从前**两堆**里收集头**两个**宝石开始。\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\n用这些模块。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">moveForward</title>\n\n</block>\n\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "只从前**两堆**里收集头**两个**宝石开始。\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\n用这些模块。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">moveForward</title>\n</block>\n\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "接下来, 在此行中收集剩余的宝石。 \n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n<title name=\"DIR\">moveBackward</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n</xml>"
-        courseD_collector_debugging_challenge2_c: "最后, 收集剩余的宝藏。将这些块添加到程序中。\n\n<xml>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_c: "最后, 收集剩余的宝藏。将这些块添加到程序中。\n\n<xml>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           这里是这个关卡的完整解决方案。
           
@@ -8911,9 +8997,9 @@ zh-CN:
           </block>
           </xml>
       courseD_collector_debugging_challenge2_2018_authored_hint:
-        courseD_collector_debugging_challenge2_a: "从只从前**两堆**里收集头**两个**宝石开始。\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\n用这些模块。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">moveForward</title>\n\n</block>\n\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "只从前**两堆**里收集头**两个**宝石开始。\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\n用这些模块。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n<title name=\"TIMES\">2</title>\n</block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n<title name=\"DIR\">moveForward</title>\n</block>\n\n\n<block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n<title name=\"TIMES\">2</title>\n</block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "接下来, 在此行中收集剩余的宝石。 \n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n<title name=\"DIR\">moveBackward</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n</xml>"
-        courseD_collector_debugging_challenge2_c: "最后, 收集剩余的宝藏。将这些块添加到程序中。\n\n<xml>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_c: "最后, 收集剩余的宝藏。将这些块添加到程序中。\n\n<xml>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n\n</statement>\n</block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           这里是这个关卡的完整解决方案。
           
@@ -8965,6 +9051,7 @@ zh-CN:
         courseD_bee_nested_loops_challenge2_c: 到达所有宝藏的最短程序只使用一个`收集`块和两个转弯。
         courseD_bee_nested_loops_challenge2_d: |-
           ** 解决方案: *
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -9024,6 +9111,7 @@ zh-CN:
         courseD_bee_nested_loops_challenge2_c: 到达所有宝藏的最短程序只使用一个`收集`块和两个转弯。
         courseD_bee_nested_loops_challenge2_d: |-
           ** 解决方案: *
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -9082,7 +9170,9 @@ zh-CN:
         courseD_collector_nested_loops_challenge2a_b: 你能想出如何使用不多于得到两个宝石所需要的模块，来得到所有的四个宝石吗？
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
-          不要在每边使用四个`向前移动`向前移动块, 尝试把一个`向前移动`模块放到` 重复`循环里面, 就像这样：<xml><block type="controls_repeat">
+          不要在每条边使用四个`向前移动`向前移动块，试试把一个`向前移动`模块放到` 重复`循环里，就像这样：
+          
+          <xml><block type="controls_repeat">
           <title name="TIMES">4</title>
           <statement name="DO">
           <block type="maze_moveForward"/>
@@ -9149,11 +9239,11 @@ zh-CN:
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: '最好的方法是将`如果`语句嵌套在另一个里面。  '
         courseD_farmer_condLoops2_b: 这一关卡里，应该有一个`如果/否则`语句和一个普通的`如果`语句。
-        courseD_farmer_condLoops2_c: "你的`如果`语句可能看起来很像这样:\n\n- 如果在玉米上\n- 采摘玉米\n- 如果在生菜上\n\\t-采摘莴苣。\n\n如果那里没有什么, 你不要选择!"
+        courseD_farmer_condLoops2_c: "`如果`语句可能看起来很像这样:\n\n- 如果在玉米上\n- 采摘玉米\n- 如果在生菜上\n\\t- 采摘莴苣。\n\n如果那里什么都没有，那就不会捡起来任何东西！"
       courseD_farmer_condLoops2_2018_authored_hint:
         courseD_farmer_condLoops2_a: '最好的方法是将`如果`语句嵌套在另一个里面。  '
         courseD_farmer_condLoops2_b: 这一关卡里，应该有一个`如果/否则`语句和一个普通的`如果`语句。
-        courseD_farmer_condLoops2_c: "你的`如果`语句可能看起来很像这样:\n\n- 如果在玉米上\n- 采摘玉米\n- 如果在生菜上\n\\t-采摘莴苣。\n\n如果那里没有什么, 你不要选择!"
+        courseD_farmer_condLoops2_c: "`如果`语句可能看起来很像这样:\n\n- 如果在玉米上\n- 采摘玉米\n- 如果在生菜上\n\\t- 采摘莴苣。\n\n如果那里什么都没有，那就不会捡起来任何东西！"
       courseD_farmer_condLoops3_authored_hint:
         courseD_farmer_condLoops3_a: |-
           若要获取所有项目，试试将`如果`嵌套三层。
@@ -9341,7 +9431,7 @@ zh-CN:
       courseD_iceage_loops1_authored_hint:
         courseD_iceage_loops1_a: 小心破冰！斯奎特会掉下去的！
         courseD_iceage_loops1_b: |-
-          你需要用这个模块：
+          需要用这个模块：
           
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops10_authored_hint:
@@ -9685,14 +9775,16 @@ zh-CN:
       courseE_artist_concept_challenge2_authored_hint:
         courseE_artist_concept_challenge2_a: 一旦你定义了一个函数, 你可以一次又一次地调用它 - 任何想用的地方或时机！
         courseE_artist_concept_challenge2_b: |-
-          您可以使用以下命令跳转到画布上的不同位置：
+          可以使用以下命令跳转到画布上的不同位置：
+          
           <xml> <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
       courseE_artist_concept_challenge2_2018_authored_hint:
         courseE_artist_concept_challenge2_a: 一旦你定义了一个函数, 你可以一次又一次地调用它 - 任何想用的地方或时机！
         courseE_artist_concept_challenge2_b: |-
-          您可以使用以下命令跳转到画布上的不同位置：
+          可以使用以下命令跳转到画布上的不同位置：
+          
           <xml> <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
@@ -9721,7 +9813,8 @@ zh-CN:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_b: 您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。
         courseD_artist_functions2_c: |-
-          使用绿色``draw a square 20`（画一个边长20像素的正方形）`模块，在`当运行时`模块下"调用"您的函数。否则, 函数中的代码将不会运行。
+          使用绿色`draw a square`（画一个正方形）模块，在`当运行时`模块下"调用"函数。否则，函数中的代码将不会运行。
+          
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           你的程序应该：
@@ -9731,7 +9824,8 @@ zh-CN:
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_b: 您编写的函数不应包含整个程序, 只需绘制一个具有100像素边的正方形的部分。
         courseD_artist_functions2_c: |-
-          使用绿色``draw a square 20`（画一个边长20像素的正方形）`模块，在`当运行时`模块下"调用"您的函数。否则, 函数中的代码将不会运行。
+          确保使用了绿色`draw a square`（画一个正方形）模块"调用"了函数。否则，函数中的代码将不会运行。
+          
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           你的程序应该：
@@ -9877,9 +9971,9 @@ zh-CN:
         courseE_artist_functions_challenge1_a: 如果再次调用该函数, 则可以在最后一个角创建相同的设计。
         courseE_artist_functions_challenge1_b: 你也可以随自己所想`跳到`其他位置或改变整个设计!
       courseE_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块允许您随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是将他向右下角移动一定的像素。这总是从左上角开始计算，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块能随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是向右下角移动一定的像素。这总是从左上角开始计算的，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2018_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块允许您随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是将他向右下角移动一定的像素。这总是从左上角开始计算，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">350</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>\n\n此`跳到`块能随时将僵尸艺术家移动到网格上的任何像素。它的工作原理是向右下角移动一定的像素。这总是从左上角开始计算的，这意味着在命令运行*之前*，僵尸艺术家的位置无关紧要。\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: 别忘了在每个三角形后转向60度。 您需要将该指令放在哪个循环中？
         courseD_artist_ramp10_b: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
@@ -10089,7 +10183,9 @@ zh-CN:
         courseE_bee_ramp17_c: 你得要以阶梯式的模式移动。先尝试编码, 然后添加`如果/否则`语句和`当`循环来查找花和蜂窝。
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
-          不要在每边使用四个`向前移动`向前移动块, 尝试把一个`向前移动`模块放到` 重复`循环里面, 就像这样：<xml><block type="controls_repeat">
+          不要在每条边使用四个`向前移动`向前移动块，试试把一个`向前移动`模块放到` 重复`循环里，就像这样：
+          
+          <xml><block type="controls_repeat">
           <title name="TIMES">4</title>
           <statement name="DO">
           <block type="maze_moveForward"/>
@@ -10430,8 +10526,8 @@ zh-CN:
           </block>
           </value>
           </block></xml>
-        courseE_playlab_challenge2_b: "如果您在条件列表下再次调用`问一个问题`函数, 你就会感觉游戏重新开始了。\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n\n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n</block></block></xml>"
-        courseE_playlab_challenge2_c: "您将需要添加更多的条件声明, 以便让演员有更多的话要说。\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TEXT\">\n<block type=\"text\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n<value name=\"TIME\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不用于忘了在永远重复循环中改变演员要显示的情绪。你也可以随意设定心情！"
+        courseE_playlab_challenge2_b: "如果在条件列表下再次调用`问一个问题`函数，就会感觉游戏重新开始了。\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n\n<block type=\"procedures_callnoreturn\">\n<mutation name=\"问一个问题\"></mutation>\n</block></block></xml>"
+        courseE_playlab_challenge2_c: "需要添加更多的条件声明，以便让演员有更多的话要说。\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TEXT\">\n<block type=\"text\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n<value name=\"TIME\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不用于忘了在永远重复循环中改变演员要显示的情绪。也可以随意设定心情！"
         courseE_playlab_challenge2_d: |-
           一旦您了解了与演员1相关的所有代码, 就可以尝试重写相同的代码，但这次是针对演员2的。
           
@@ -10454,7 +10550,8 @@ zh-CN:
           </value>
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
-          如果你在演员说了财宝后，再次调用`ask a question`（问一个问题）函数，感觉就像整个游戏重头再来了。
+          如果在演员说了财宝后，再次调用`ask a question`（问一个问题）函数，感觉就像整个游戏重头再来了。
+          
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -10475,7 +10572,7 @@ zh-CN:
           <block type="procedures_callnoreturn">
           <mutation name="问一个问题"/>
           </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "您将需要添加更多的条件声明, 以便让演员有更多的话要说。 \n\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">运气</title>\n<value name=\"VALUE\">\n<block type=\"text\" movable=\"false\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不要忘记更改演员将在`一直重复`循环中显示的情绪。你也可以随意设定心情!"
+        courseF_playlab_variables_challenge3_c: "添加更多的条件声明，来让演员能说更多的事情。 \n\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">运气</title>\n<value name=\"VALUE\">\n<block type=\"text\" movable=\"false\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不要忘记更改演员将在`一直重复`循环中显示的情绪。也可以设置随机心情！"
         courseF_playlab_variables_challenge3_d: |-
           一旦您了解了与演员1相关的所有代码, 就可以尝试重写相同的代码，但这次是针对演员2的。
           
@@ -12434,7 +12531,7 @@ zh-CN:
         courseF_bee_functions5a_b: 因为路的长度不同，使用 "当" 循环来遍历所有主路径,。
         courseF_bee_functions5a_c: 在 "当循环" 中, 确保向前移动, 然后使用函数检查路径。
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建你的函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快，你就能成功了！\n\n ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "如果这个关卡看上去很有挑战性，尝试一点一点创建函数。 \n\n添加一些模块试试看。继续添加，然后再尝试。很快就能成功了！\n\n<xml>\n<block type=\"procedures_defnoreturn\" editable=\"false\">\n<mutation/>\n<title name=\"NAME\">采花蜜酿蜂蜜</title>\n<statement name=\"STACK\">\n</statement>\n</block>\n</xml>"
         courseF_bee_functions6_b: 你的函数应该检查是否有花或蜂窝, 得到花蜜或蜂蜜, 然后转向。
         courseF_bee_functions6_c: 因为你在你的函数里转弯, 你只需要一个 ' 当' 循环来通过这个迷宫。
       courseF_bee_functions6_2018_authored_hint:
@@ -12759,6 +12856,7 @@ zh-CN:
       courseF_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           主程序应该类似于以下内容:
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -12773,10 +12871,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -12789,10 +12887,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -12805,10 +12903,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -12946,6 +13044,7 @@ zh-CN:
       courseF_bee_fwp_challenge1_2018_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           主程序应该类似于以下内容:
+          
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -12960,10 +13059,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -12976,10 +13075,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -12992,10 +13091,10 @@ zh-CN:
           </value>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="maze_move">
-          <title name="DIR">向前移动</title>
+          <title name="DIR">moveForward</title>
           <next>
           <block type="procedures_callnoreturn" inline="false">
           <mutation name="pick row">
@@ -13525,7 +13624,8 @@ zh-CN:
         courseF_playlab_variables8c_a: 将"加入"模块加到一个 ' 演员说 '模块中，能让你在一个大的句子里使用变量。
       courseF_playlab_variables_challenge1_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
-          您将需要工具箱里别的模块让演员说话。
+          要用到工具箱里别的模块，来让演员说话。
+          
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -13545,7 +13645,8 @@ zh-CN:
           </block></xml>
       courseF_playlab_variables_challenge1_2018_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
-          您将需要工具箱里别的模块让演员说话。
+          要用到工具箱里别的模块，来让演员说话。
+          
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -13833,7 +13934,8 @@ zh-CN:
           </value>
           </block></xml>
         courseF_playlab_variables_challenge3_b: |-
-          如果你在演员说了财宝后，再次调用`ask a question`（问一个问题）函数，感觉就像整个游戏重头再来了。
+          如果在演员说了财宝后，再次调用`ask a question`（问一个问题）函数，感觉就像整个游戏重头再来了。
+          
           <xml><block type="studio_saySpriteParamsTime" inline="true">
           <value name="SPRITE">
           <block type="math_number">
@@ -13854,7 +13956,7 @@ zh-CN:
           <block type="procedures_callnoreturn">
           <mutation name="问一个问题"/>
           </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "您将需要添加更多的条件声明, 以便让演员有更多的话要说。 \n\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">运气</title>\n<value name=\"VALUE\">\n<block type=\"text\" movable=\"false\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不要忘记更改演员将在`一直重复`循环中显示的情绪。你也可以随意设定心情!"
+        courseF_playlab_variables_challenge3_c: "添加更多的条件声明，来让演员能说更多的事情。 \n\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n<title name=\"EMOTION\">2</title>\n<value name=\"SPRITE\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"variables_set\" inline=\"false\">\n<title name=\"VAR\">运气</title>\n<value name=\"VALUE\">\n<block type=\"text\" movable=\"false\">\n<title name=\"TEXT\">???</title>\n</block>\n</value>\n</block>\n</statement></block></xml>\n\n不要忘记更改演员将在`一直重复`循环中显示的情绪。也可以设置随机心情！"
         courseF_playlab_variables_challenge3_d: |-
           一旦您了解了与演员1相关的所有代码, 就可以尝试重写相同的代码，但这次是针对演员2的。
           
@@ -13876,6 +13978,8 @@ zh-CN:
         triangle_geometry_hint: '记住: 等边三角形有三边, 每个之间都有60度的转向！'
         repeat_pointer: 你必须画一条边, 然后转3次... 你可以用什么模块来多次运行相同的指令？
         repeat_bottom_out: 使用 "重复3次" 模块!
+      farmer-test-lb_authored_hint:
+        hint_2: 指向 123
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: 您将需要多个 ' 重复 ' 循环来解决这个关卡。
       grade1_adventurer_loops2_authored_hint:
@@ -14363,7 +14467,7 @@ zh-CN:
       grade5_artist_variables_freeplay10_authored_hint:
         Course_4_Artist_Vars_8_a: 如果你将起始长度除以边数，边长会随着边数的增加而缩短。
       grade5_artist_variables_freeplay15_authored_hint:
-        Course_4_Artist_Inspire_a: 当绘制完成一个方形后，在转向和绘制另一个方形之前，尝试先向前跳转半个边长的长度。
+        Course_4_Artist_Inspire_a: 当绘制完成一个正方形后，在转向和绘制另一个正方形之前，尝试先向前跳半个边长的距离。
         Course_4_Artist_Inspire_b: 绘制方形后跳转，以上动作重复循环四次(每次循环中间需左转)，可以得到一个完整的类似风车图案。
         Course_4_Artist_Inspire_c: 每个风车也重复四次，每次右转度数为:**360度/边数**。
       grade5_artist_variables_octagons13_authored_hint:

@@ -319,6 +319,8 @@ en:
       AppLab Intro 5 - Change Screen Color_authored_hint: {}
       AppLab Intro 6 - Change Screen Color_authored_hint: {}
       AppLab Intro 7 - Change Screen Color_authored_hint: {}
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
       Artist Inspiration_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
         double_loop: Try putting a `for loop` inside of a `repeat` loop.
@@ -8873,6 +8875,28 @@ en:
         courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
         courseD_artist_ramp12_b: Try splitting the problem into 2 parts, and using 2 loops.
         courseD_artist_ramp12_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
+      courseD_autorun_binary2_2019_authored_hint:
+        courseD_artist_binary2_a: Just click `Run` to see this program in action!
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: One of the four binary patterns in the toolbox will solve this puzzle!
+        courseD_artist_binary3_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_a: Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?
+        courseD_artist_binary4_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: Try running the code first to see what you have to work with.
+        courseD_artist_binary5_b: You only need to switch two rows to make a smile.
+        courseD_artist_binary5_c: If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern.
+      courseD_autorun_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: Start at the top left. How far do you have to read before the pattern starts to repeat?
+        courseD_artist_binary6_b: You can build your binary string a bit at a time, and keep testing!
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_a: Start at the top left. How far do you have to read before the pattern starts to repeat?
+        courseD_artist_binary7_b: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: The spiral can be confusing sometimes. Isolate each horizontal line in your mind as you create this design.
+        courseD_artist_binary8_b: Try running the code first to see what you have to work with.
+        courseD_artist_binary8_c: Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet.
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals10_authored_hint: {}
@@ -10284,6 +10308,7 @@ en:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
+      courseD_playLab_condFP_2018_authored_hint: {}
       courseD_playLab_embed_cond6a_authored_hint: {}
       courseD_playLab_embedded_authored_hint: {}
       courseD_scrat_predict1_authored_hint: {}

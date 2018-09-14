@@ -155,7 +155,7 @@ it:
         turtle_5_5: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
         turtle_5_6: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
         maze_3_1: Ho bisogno di arrivare a quel maiale! Digita un paio di volte l'istruzione "avanza()" in modo da riprendere le mie uova.
-        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maiale.
+        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maialino.
         maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della dinamite (TNT) ed arrivare al maiale.
         Custom_builder: Sposta i blocchi dalla cassetta degli attrezzi all'area di lavoro per disegnare il livello che vuoi creare. Premi "Esegui" quando hai fatto.
@@ -385,6 +385,8 @@ it:
         csd_concept_memory_cpu_input_output: 'Come Funzionano i Computer: Memoria, CPU, Ingressi e Uscite'
         csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
         csd_concept_search: Come Funziona la Ricerca
+        csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti sui film?
+        csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
         csd_gamelab_animation_tab: La scheda dell'animazione
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
@@ -456,6 +458,7 @@ it:
         mc_2017_puzzle_1: L'Ora del Codice con Minecraft - L'Agente
         mc_2017_puzzle_3: L'Ora del Codice con Minecraft - Cicli
         mc_2017_puzzle_8: L'Ora del Codice con Minecraft - Funzioni
+        mc_2017_puzzle_12: L'Ora del Codice con Minecraft - Tempo di giocare
         hint_videos_d_11_3_first: 'Video suggerimenti: D.11.3 Prima di tutto'
         hint_videos_d_11_3_last: 'Video suggerimenti: D.11.3 Infine'
         hint_videos_d_11_4_first: 'Video suggerimenti: D.11.4 Prima di tutto'
@@ -490,7 +493,8 @@ it:
         CSF_loops_AB: Ripetizioni
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratori dei Personaggi
+        csd_gamelab_if_else: Dichiarazioni Se/altrimenti
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei Personaggi
         CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio dei Personaggi
         CDEF_Video_SpritesInAction: Personaggi in Azione
         CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione

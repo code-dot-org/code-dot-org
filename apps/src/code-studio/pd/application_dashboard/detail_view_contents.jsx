@@ -20,7 +20,7 @@ import {
 } from '../components/regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
@@ -97,7 +97,8 @@ export class DetailViewContents extends React.Component {
       application_guid: PropTypes.string,
       registered_teachercon: PropTypes.bool,
       registered_fit_weekend: PropTypes.bool,
-      attending_teachercon: PropTypes.bool
+      attending_teachercon: PropTypes.bool,
+      principal_approval_state: PropTypes.oneOf(['not_sent', 'sent', 'received'])
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
@@ -636,12 +637,14 @@ export class DetailViewContents extends React.Component {
   renderQuestions = () => {
     return (
       <DetailViewApplicationSpecificQuestions
+        id={this.props.applicationId}
         formResponses={this.props.applicationData.form_data}
         applicationType={this.props.applicationData.application_type}
         editing={this.state.editing}
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
         applicationGuid={this.props.applicationData.application_guid}
+        principalApprovalState={this.props.applicationData.principal_approval_state}
       />
     );
   };

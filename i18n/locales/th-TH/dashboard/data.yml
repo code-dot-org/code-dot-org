@@ -201,6 +201,7 @@ th:
         C4_for_loops: การวนรอบ
         C4_for_loops_bee: การวนรอบ
         C4_for_loops_no_bee: การวนรอบ
+        C4_math_artist: การเขียนโปรแกรมให้กับศิลปินด้วยคณิตฯ
         C4_function_parameters: ฟังก์ชันกับพารามิเตอร์
         C4_conditionals: เงื่อนไข 
         C4_unplugged_algorithms: อัลกอริทึมกับแทนแกรม
@@ -252,6 +253,8 @@ th:
         mc_2017_congratulations: ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย
         mc_2017_puzzle_1: ชั่วโมงแห่งการเขียนโค้ด ไมน์คราฟท์ - พบกับเอเจนท์
         mc_2017_puzzle_8: ไมน์คราฟท์ ชั่วโมงของการเขียนโค้ด - ฟังก์ชั่น
+        CSF_bb8_skinOverview_C-F: บีบี-8
+        CSF_bb8_skinOverview_K-1: บีบี-8
         CSF_scrat_loops_K1: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_scrat_loops_CF: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_loops_AB: ลูป

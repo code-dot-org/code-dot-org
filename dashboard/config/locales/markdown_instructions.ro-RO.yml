@@ -290,6 +290,8 @@ ro:
         Nu ştiu de câte lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un
         program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să
         foloseşti bucla "în timp ce" de data asta.'
+      Artist Autorun Test_markdown_instruction: Utilizaţi blocul "repetă" pentru a
+        desena aceste trei pătrate.
       Course 4 Artist 13_markdown_instruction: Joci? Aici este o pânză albă unde poţi
         schiţa orice doreşti!
       Course 4 Artist 6_markdown_instruction: |-

@@ -311,6 +311,8 @@ fil:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Bawat aytem ay nangangailangan ng sarili nitong `while` na loop.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Ang artista ay kailangang liliko nang 120 degrees sa pagitan ng bawat parisukat para makumpleto ang disenyong ito.
       Artist Inspiration_authored_hint:
         brush_width: Ating itinakda ang lapad ng brush sa 1, pagkatapos ang kulay sa asul bago natin idagdag ang kahit na ano.
         double_loop: Subukang maglagay ng `for loop` sa loob ng isang `repeat` na loop.

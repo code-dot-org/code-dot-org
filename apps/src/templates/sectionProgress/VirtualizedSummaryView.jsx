@@ -56,6 +56,8 @@ class VirtualizedSummaryView extends Component {
       return this.studentCellRenderer(studentStartIndex, stageIdIndex, key, cellStyle);
     }
 
+    const stageData = columnIndex > 0 && scriptData.stages[columnIndex - 1];
+
     // Header rows
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
@@ -66,7 +68,9 @@ class VirtualizedSummaryView extends Component {
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
           <SectionProgressLessonNumberCell
-            lessonNumber={scriptData.stages[columnIndex - 1].position}
+            position={stageData.position}
+            relativePosition={stageData.relative_position}
+            lockable={stageData.lockable}
             tooltipId={tooltipIdForLessonNumber(columnIndex)}
           />
         }

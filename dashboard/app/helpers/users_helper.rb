@@ -1,20 +1,37 @@
 require 'cdo/activity_constants'
 require 'cdo/shared_constants'
+require 'cdo/firehose'
 require 'honeybadger'
 
 module UsersHelper
   include ApplicationHelper
   include SharedConstants
 
+  ACCT_TAKEOVER_EXPIRATION = 'account_takeover_expiration'
+  ACCT_TAKEOVER_PROVIDER = 'clever_link_flag'
+  ACCT_TAKEOVER_UID = 'clever_takeover_id'
+  ACCT_TAKEOVER_OAUTH_TOKEN = 'clever_takeover_token'
+  ACCT_TAKEOVER_FORCE_TAKEOVER = 'force_clever_takeover'
+
   # If Clever takeover flags are present, the current account (user) is the one that the person just
   # logged into (to prove ownership), and all the Clever details are migrated over, including sections.
   def check_and_apply_oauth_takeover(user)
-    if session['clever_link_flag'].present? && session['clever_takeover_id'].present?
-      uid = session['clever_takeover_id']
-      provider = session['clever_link_flag']
+    if account_takeover_in_progress?
+      provider = session[ACCT_TAKEOVER_PROVIDER]
+      uid = session[ACCT_TAKEOVER_UID]
+      oauth_token = session[ACCT_TAKEOVER_OAUTH_TOKEN]
+      clear_takeover_session_variables
 
-      # TODO: validate that we're not destroying an active account?
       existing_account = User.find_by_credential(type: provider, id: uid)
+      if existing_account.has_activity?
+        # We don't want to destroy an account with progress.
+        # In theory this should not happen, so we log a Honeybadger error and return.
+        Honeybadger.notify(
+          error_class: 'Oauth takeover called for user with progress',
+          error_message: "Attempted to take over account with id #{existing_account.id}, which has activity"
+        )
+        return
+      end
 
       # Move over sections that students follow
       if user.student? && existing_account
@@ -23,7 +40,16 @@ module UsersHelper
         end
       end
 
-      existing_account.destroy! if existing_account
+      if existing_account
+        existing_account.destroy!
+        log_account_takeover_to_firehose(
+          source_user: existing_account,
+          destination_user: user,
+          type: 'oauth',
+          provider: user.provider
+        )
+      end
+
       if user.migrated?
         success = user.add_credential(
           type: provider,
@@ -31,7 +57,7 @@ module UsersHelper
           email: user.email,
           hashed_email: user.hashed_email,
           data: {
-            oauth_token: session['clever_takeover_token']
+            oauth_token: oauth_token
           }.to_json
         )
         unless success
@@ -44,18 +70,71 @@ module UsersHelper
       else
         user.provider = provider
         user.uid = uid
-        user.oauth_token = session['clever_takeover_token']
+        user.oauth_token = oauth_token
         user.save
       end
-      clear_takeover_session_variables
     end
+  end
+
+  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:)
+    FirehoseClient.instance.put_record(
+      study: 'user-soft-delete-audit',
+      event: "#{type}-account-takeover", # Silent or OAuth takeover
+      user_id: source_user.id, # User account being "taken over" (deleted)
+      data_int: destination_user.id, # User account after takeover
+      data_string: provider, # OAuth provider
+      data_json: {
+        user_type: destination_user.user_type,
+      }.to_json
+    )
+  end
+
+  def begin_account_takeover(provider:, uid:, oauth_token:, force_takeover:)
+    session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
+    session[ACCT_TAKEOVER_PROVIDER] = provider
+    session[ACCT_TAKEOVER_UID] = uid
+    session[ACCT_TAKEOVER_OAUTH_TOKEN] = oauth_token
+    session[ACCT_TAKEOVER_FORCE_TAKEOVER] = force_takeover
   end
 
   def clear_takeover_session_variables
     return if session.empty?
-    session.delete('clever_link_flag')
-    session.delete('clever_takeover_id')
-    session.delete('clever_takeover_token')
+    session.delete ACCT_TAKEOVER_EXPIRATION
+    session.delete ACCT_TAKEOVER_PROVIDER
+    session.delete ACCT_TAKEOVER_UID
+    session.delete ACCT_TAKEOVER_OAUTH_TOKEN
+    session.delete ACCT_TAKEOVER_FORCE_TAKEOVER
+  end
+
+  def account_takeover_in_progress?
+    session[ACCT_TAKEOVER_EXPIRATION]&.future?
+  end
+
+  def takeover_manager_options_json
+    return {}.to_json unless account_takeover_in_progress?
+
+    {
+      cleverLinkFlag: session[ACCT_TAKEOVER_PROVIDER],
+      userIDToMerge: session[ACCT_TAKEOVER_UID],
+      mergeAuthToken: session[ACCT_TAKEOVER_OAUTH_TOKEN],
+      forceConnect: session[ACCT_TAKEOVER_FORCE_TAKEOVER],
+    }.to_json
+  end
+
+  def sign_out_but_preserve_takeover_state
+    expiration = session[ACCT_TAKEOVER_EXPIRATION]
+    provider = session[ACCT_TAKEOVER_PROVIDER]
+    uid = session[ACCT_TAKEOVER_UID]
+    oauth_token = session[ACCT_TAKEOVER_OAUTH_TOKEN]
+    force_takeover = session[ACCT_TAKEOVER_FORCE_TAKEOVER]
+
+    sign_out(current_user)
+
+    session[ACCT_TAKEOVER_EXPIRATION] = expiration
+    session[ACCT_TAKEOVER_PROVIDER] = provider
+    session[ACCT_TAKEOVER_UID] = uid
+    session[ACCT_TAKEOVER_OAUTH_TOKEN] = oauth_token
+    session[ACCT_TAKEOVER_FORCE_TAKEOVER] = force_takeover
   end
 
   # Summarize a user and their progress within a certain script.

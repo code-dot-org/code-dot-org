@@ -3,20 +3,26 @@ import {connect} from 'react-redux';
 import Radium from 'radium';
 import {progressStyles} from "./multiGridConstants";
 import {jumpToLessonDetails} from './sectionProgressRedux';
+import FontAwesome from '../FontAwesome';
 
 class SectionProgressLessonNumberCell extends Component {
   static propTypes = {
-    lessonNumber: PropTypes.number.isRequired,
+    // Sequence number counting all stage types in order
+    position: PropTypes.number.isRequired,
+    // Sequence number which counts lockable and non-lockable stages separately,
+    // explained further in Stage#summarize
+    relativePosition: PropTypes.number.isRequired,
+    lockable: PropTypes.bool.isRequired,
     jumpToLessonDetails: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     tooltipId: PropTypes.string.isRequired,
   };
 
   render() {
-    const {lessonNumber, jumpToLessonDetails, lessonOfInterest, tooltipId} = this.props;
+    const {position, relativePosition, lockable, jumpToLessonDetails, lessonOfInterest, tooltipId} = this.props;
 
     let cellStyle = progressStyles.lessonNumberHeading;
-    if (lessonNumber === lessonOfInterest) {
+    if (position === lessonOfInterest) {
       cellStyle = {
         ...cellStyle,
         ...progressStyles.lessonOfInterest
@@ -26,11 +32,11 @@ class SectionProgressLessonNumberCell extends Component {
     return (
       <div
         style={cellStyle}
-        onClick={() => jumpToLessonDetails(lessonNumber)}
+        onClick={() => jumpToLessonDetails(position)}
         data-tip
         data-for={tooltipId}
       >
-        {lessonNumber}
+        {lockable ? <FontAwesome icon="lock"/> : relativePosition}
       </div>
     );
   }

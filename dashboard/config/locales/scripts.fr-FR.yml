@@ -2682,3 +2682,15 @@ fr:
               name: Ton empreinte numérique
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie et le grand projet
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artiste
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artiste
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artiste

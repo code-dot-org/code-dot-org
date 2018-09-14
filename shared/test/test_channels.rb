@@ -430,6 +430,17 @@ class ChannelsTest < Minitest::Test
     assert_equal parent_channel_id, PEGASUS_DB[:storage_apps].where(id: channel_id).first[:remix_parent_id]
   end
 
+  def test_update_project_type
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    encrypted_channel_id = last_response.location.split('/').last
+    _, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    assert_nil PEGASUS_DB[:storage_apps].where(id: channel_id).first[:project_type]
+
+    post "/v3/channels/#{encrypted_channel_id}", {projectType: 'gamelab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+    assert_equal 'gamelab', PEGASUS_DB[:storage_apps].where(id: channel_id).first[:project_type]
+  end
+
   private
 
   def timestamp(time)
