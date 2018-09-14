@@ -3,11 +3,11 @@ import {FormGroup, Row, Col, ControlLabel} from "react-bootstrap";
 import {
   PageLabels,
   TextFields
-} from '@cdo/apps/generated/pd/principalApproval1819ApplicationConstants';
+} from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
-import {styles} from '../teacher1819/TeacherApplicationConstants';
+import {styles} from '../teacher1920/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
   'schoolState', 'schoolZipCode', 'schoolType'];
@@ -18,7 +18,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = ['school', 'totalStudentEnrollment',
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 
-export default class PrincipalApprovalComponent extends LabeledFormComponent {
+export default class PrincipalApproval1920Component extends LabeledFormComponent {
   static labels = PageLabels;
 
   static associatedFields = Object.keys(PageLabels);

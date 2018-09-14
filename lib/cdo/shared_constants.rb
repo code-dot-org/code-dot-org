@@ -103,8 +103,21 @@ module SharedConstants
     gamelab
   ).freeze
 
+  UNPUBLISHABLE_PROJECT_TYPES = %w(
+    algebra_game
+    calc
+    eval
+    minecraft_codebuilder
+    scratch
+    spritelab
+    weblab
+  )
+
   ALL_PUBLISHABLE_PROJECT_TYPES =
     ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+
+  ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
+
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.

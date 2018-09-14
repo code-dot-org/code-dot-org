@@ -3,7 +3,7 @@
 # only run in one browser, because multiple simultaneously-running instances of
 # this feature can interfere with each other.
 @only_one_browser
-Feature: Public Project Gallery
+Feature: Public Project Gallery - Project Validator
 
 Background:
   Given I create a teacher named "Project_Czar"
@@ -66,3 +66,5 @@ Scenario: Can Toggle to the Personal Project Gallery
   Then check that I am on "http://studio.code.org/projects"
   And I wait until element "#react-personal-projects" is visible
   And element "#public-gallery" is not visible
+
+# TODO (Erin B.) Add a test to ensure that project validators can always see the view more links for App Lab and Game Lab.

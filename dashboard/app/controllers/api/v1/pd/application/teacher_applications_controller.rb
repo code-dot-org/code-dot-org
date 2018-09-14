@@ -12,8 +12,8 @@ module Api::V1::Pd::Application
     end
 
     def resend_principal_approval
-      ::Pd::Application::PrincipalApproval1819Application.create_placeholder_and_send_mail(
-        Pd::Application::Teacher1819Application.find(params[:id])
+      PRINCIPAL_APPROVAL_APPLICATION_CLASS.create_placeholder_and_send_mail(
+        TEACHER_APPLICATION_CLASS.find(params[:id])
       )
     end
 

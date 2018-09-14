@@ -1,5 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/shared_constants'
+require 'cdo/firehose'
 require 'honeybadger'
 
 module UsersHelper
@@ -39,7 +40,16 @@ module UsersHelper
         end
       end
 
-      existing_account.destroy! if existing_account
+      if existing_account
+        existing_account.destroy!
+        log_account_takeover_to_firehose(
+          source_user: existing_account,
+          destination_user: user,
+          type: 'oauth',
+          provider: user.provider
+        )
+      end
+
       if user.migrated?
         success = user.add_credential(
           type: provider,
@@ -64,6 +74,19 @@ module UsersHelper
         user.save
       end
     end
+  end
+
+  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:)
+    FirehoseClient.instance.put_record(
+      study: 'user-soft-delete-audit',
+      event: "#{type}-account-takeover", # Silent or OAuth takeover
+      user_id: source_user.id, # User account being "taken over" (deleted)
+      data_int: destination_user.id, # User account after takeover
+      data_string: provider, # OAuth provider
+      data_json: {
+        user_type: destination_user.user_type,
+      }.to_json
+    )
   end
 
   def begin_account_takeover(provider:, uid:, oauth_token:, force_takeover:)

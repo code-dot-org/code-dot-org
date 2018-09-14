@@ -95,7 +95,7 @@ Scenario: Basic teacher application submission
   Then I wait until element "h3" contains text "Section 5: Submission"
    And I press the first "input#agree" element
   Then I see no difference for "Section 5: Submission"
-   And I submit
+   And I press the first "button[type='submit']" element
 
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"

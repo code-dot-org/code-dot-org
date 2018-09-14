@@ -8,7 +8,6 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     :email,
     :assigned_workshop,
     :registered_workshop,
-    :accepted_teachercon,
     :status
   )
 
@@ -30,12 +29,6 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
   def registered_workshop
     if object.workshop.try(:local_summer?)
       object.registered_workshop? ? 'Yes' : 'No'
-    end
-  end
-
-  def accepted_teachercon
-    if object.workshop.try(:teachercon?)
-      object.pd_teachercon1819_registration ? 'Yes' : 'No'
     end
   end
 end
