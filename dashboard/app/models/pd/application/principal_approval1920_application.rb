@@ -127,12 +127,12 @@ module Pd::Application
           'Not applicable: there is no fee for the progam for teachers in my region.'
         ],
         how_heard: [
+          'From a teacher',
           'Code.org Website',
           'Code.org Email',
           'Regional Partner website',
           'Regional Partner Email',
           'Regional Partner Event/Workshop',
-          'From a teacher who is applying',
           TEXT_FIELDS[:other_with_text]
         ]
       }
