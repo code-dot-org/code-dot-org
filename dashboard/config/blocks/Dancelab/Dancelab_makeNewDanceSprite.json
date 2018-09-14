@@ -3,7 +3,7 @@
   "config": {
     "func": "makeNewDanceSprite",
     "inline": false,
-    "blockText": "make a new {COSTUME} sprite \n called {NAME} at {LOCATION}",
+    "blockText": "make a new {COSTUME}\n called {NAME} at {LOCATION}",
     "color": [
       355,
       ".7",
@@ -14,20 +14,24 @@
         "name": "COSTUME",
         "options": [
           [
-            "Alien",
-            "\"alien\""
+            "Duck",
+            "\"duck\""
+          ],
+          [
+            "Moose",
+            "\"moose\""
+          ],
+          [
+            "Unicorn",
+            "\"unicorn\""
           ],
           [
             "MrWiggles",
             "\"mrwiggles\""
           ],
           [
-            "Pizza",
-            "\"pizza\""
-          ],
-          [
-            "Unicorn",
-            "\"unicorn\""
+            "Cat",
+            "\"cat\""
           ]
         ]
       },

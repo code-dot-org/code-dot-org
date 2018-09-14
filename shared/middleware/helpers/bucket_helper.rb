@@ -392,24 +392,28 @@ class BucketHelper
           }
         )
         version_restored = true
-        Honeybadger.notify(
-          error_class: "#{self.class.name}Warning",
-          error_message: "Restore at Specified Version Failed. Restored most recent.",
-          context: {
+        FirehoseClient.instance.put_record(
+          study: 'bucket-warning',
+          study_group: self.class.name,
+          event: 'restore-specific-version',
+          data_string: 'Restore at Specified Version Failed. Restored most recent.',
+          data_json: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
-          }
+          }.to_json
         )
       else
         # Couldn't restore specific version and didn't find a latest version either.
         # It is probably deleted.
         # In this case, we want to do nothing.
         response = {status: 'NOT_MODIFIED'}
-        Honeybadger.notify(
-          error_class: "#{self.class.name}Warning",
-          error_message: "Restore at Specified Version Failed on deleted object. No action taken.",
-          context: {
+        FirehoseClient.instance.put_record(
+          study: 'bucket-warning',
+          study_group: self.class.name,
+          event: 'restore-deleted-object',
+          data_string: 'Restore at Specified Version Failed on deleted object. No action taken.',
+          data_json: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
-          }
+          }.to_json
         )
       end
     end

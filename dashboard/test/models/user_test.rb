@@ -1753,6 +1753,38 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
+  test 'update_email_for updates unmigrated user email' do
+    user = create :user
+    user.update_email_for(email: 'new@email.com')
+    user.reload
+    assert_equal User.hash_email('new@email.com'), user.hashed_email
+  end
+
+  test 'update_email_for does not update migrated user AuthenticationOption if provider and uid are not present' do
+    user = create :user, :multi_auth_migrated
+    user.update_email_for(provider: nil, uid: nil, email: 'new@email.com')
+    user.reload
+    refute_equal User.hash_email('new@email.com'), user.hashed_email
+  end
+
+  test 'update_email_for does not update migrated user AuthenticationOption if no matching AuthenticationOption' do
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: '123456'
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: 'not-my-uid', email: 'new@email.com')
+    google_auth_option.reload
+    refute_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
+  end
+
+  test 'update_email_for updates migrated user AuthenticationOption if matching AuthenticationOption' do
+    uid = '123456'
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: uid
+    user.reload
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: uid, email: 'new@email.com')
+    google_auth_option.reload
+    assert_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
+  end
+
   test 'update_primary_contact_info is false if email and hashed_email are nil' do
     user = create :user
     successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})
@@ -3138,7 +3170,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'omniauth login stores auth token' do
+  test 'from_omniauth: creates new non-migrated user if user with matching credentials does not exist' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
       uid: '123456',
@@ -3147,14 +3179,69 @@ class UserTest < ActiveSupport::TestCase
         expires_at: Time.now.to_i + 3600,
         refresh_token: 'fake refresh token',
       },
-      info: {},
+      info: {
+        name: {first: 'Some', last: 'User'},
+        user_type: 'student'
+      },
     )
-
     params = {}
 
-    user = User.from_omniauth(auth, params)
-    assert_equal('fake oauth token', user.oauth_token)
-    assert_equal('fake refresh token', user.oauth_refresh_token)
+    assert_creates(User) do
+      user = User.from_omniauth(auth, params)
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+      assert_equal 'Some User', user.name
+      assert_equal User::TYPE_STUDENT, user.user_type
+    end
+  end
+
+  test 'from_omniauth: updates non-migrated user oauth tokens if user with matching credentials exists' do
+    uid = '123456'
+    provider = 'google_oauth2'
+    create :user, uid: uid, provider: provider
+    auth = OmniAuth::AuthHash.new(
+      provider: provider,
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      user = User.from_omniauth(auth, params)
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+    end
+  end
+
+  test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
+    uid = '654321'
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE, authentication_id: uid, user: user
+    auth = OmniAuth::AuthHash.new(
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      User.from_omniauth(auth, params)
+    end
+    google_auth_option.reload
+    assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
+    assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
   test 'summarize' do
@@ -3305,7 +3392,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     def put_student_in_section(student, teacher, script, course=nil)
-      section = create :section, user_id: teacher.id, script_id: script.id, course_id: course.try(:id)
+      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
       section
     end
@@ -3363,6 +3450,38 @@ class UserTest < ActiveSupport::TestCase
 
       # when attached to course, we should hide only if hidden in every section
       assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
+    end
+
+    test "user in two sections, both attached to course but no script" do
+      student = create :student
+
+      section1 = put_student_in_section(student, @teacher, nil, @course)
+      section2 = put_student_in_section(student, @teacher, nil, @course)
+
+      hide_scripts_in_sections(section1, section2)
+
+      # when attached to course, we should hide only if hidden in every section
+      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
     end
 
     test "user in two sections, neither attached to script" do

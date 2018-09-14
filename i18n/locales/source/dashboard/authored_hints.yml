@@ -10308,6 +10308,7 @@ en:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
+      courseD_playLab_condFP_2018_authored_hint: {}
       courseD_playLab_embed_cond6a_authored_hint: {}
       courseD_playLab_embedded_authored_hint: {}
       courseD_scrat_predict1_authored_hint: {}

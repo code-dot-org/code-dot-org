@@ -120,4 +120,39 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     option = create :authentication_option, credential_type: AuthenticationOption::WINDOWS_LIVE
     assert option.oauth?
   end
+
+  test 'update_oauth_credential_tokens raises an error if auth option is not oauth' do
+    not_oauth = build :authentication_option, credential_type: AuthenticationOption::EMAIL
+    assert_raises(RuntimeError) do
+      not_oauth.update_oauth_credential_tokens({})
+    end
+  end
+
+  test 'update_oauth_credential_tokens updates data on auth option with new tokens' do
+    old_data = {
+      oauth_token: 'abcdef',
+      oauth_refresh_token: '123456',
+      oauth_token_expiration: Time.now.to_i,
+      some_other_data: 'hello-world'
+    }
+    auth_option = create :google_authentication_option, data: old_data.to_json
+    new_token = 'fedcba'
+    new_refresh_token = '654321'
+    new_expiration = Time.now.to_i + 100
+    credentials = {
+      token: new_token,
+      refresh_token: new_refresh_token,
+      expires_at: new_expiration
+    }
+
+    auth_option.update_oauth_credential_tokens(credentials)
+    auth_option.reload
+    new_data = {
+      oauth_token: new_token,
+      oauth_refresh_token: new_refresh_token,
+      oauth_token_expiration: new_expiration,
+      some_other_data: 'hello-world'
+    }
+    assert_equal new_data, auth_option.data_hash
+  end
 end

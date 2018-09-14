@@ -27,8 +27,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     ...Object.keys(PageLabels.section4SummerWorkshop),
     "regionalPartnerId",
     "regionalPartnerGroup",
-    "regionalPartnerWorkshopIds",
-    "teachercon"
+    "regionalPartnerWorkshopIds"
   ];
 
   state = {
@@ -78,8 +77,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       this.handleChange({
         regionalPartnerId: data.id,
         regionalPartnerGroup: data.group,
-        regionalPartnerWorkshopIds: (data.workshops || []).map(workshop => workshop.id),
-        teachercon: data.teachercon
+        regionalPartnerWorkshopIds: (data.workshops || []).map(workshop => workshop.id)
       });
 
       // Update state with all the partner workshop data to display
@@ -174,25 +172,11 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
         <div>
           <p>
             <strong>There currently is no Regional Partner in your area. </strong>
-            If a seat opens in the program, we will invite you to a TeacherCon and provide you with more details.
+            {this.renderAlternateWorkshopList()}
           </p>
         </div>
       );
-    } else if (this.props.data.teachercon) {
-      const teacherconSummary =
-        `TeacherCon ${this.props.data.teachercon.city}, ${this.props.data.teachercon.dates}`;
-
-      return (
-        <div>
-          <h5>
-            You have been assigned to {teacherconSummary}.
-            More details will be provided if you are accepted into the program.
-          </h5>
-
-          {this.renderAbleToAttendSingle()}
-        </div>
-      );
-    } else /* partner groups 1-2, and group 3 partners with workshops */ {
+    } else {
       if (this.state.partnerWorkshops.length === 0) {
         return (
           <h5>
@@ -263,10 +247,9 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
 
         <p>
           All participants in Code.org’s Professional Learning Program are required to attend a five-day
-          in-person summer workshop. These workshops are either hosted locally by Code.org’s Regional Partners,
-          or by Code.org at Code.org’s TeacherCons. Participants are assigned to workshops based on their
-          Regional Partner. Flights, lodging, and meals will be provided for TeacherCon attendees; meals
-          (and in some cases travel costs) will be provided for summer workshops hosted by Regional Partners.
+          in-person summer workshop. These workshops are either hosted locally by Code.org’s Regional Partners.
+          Participants are assigned to workshops based on their Regional Partner.
+          Meals (and in some cases travel costs) will be provided for summer workshops.
         </p>
 
         {this.renderContents()}
@@ -299,7 +282,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
           {this.renderAssignedWorkshopList()}
         </div>
 
-        {this.isUnableToAttendAssignedWorkshop() && !this.props.data.teachercon &&
+        {this.isUnableToAttendAssignedWorkshop() &&
           <div style={styles.indented}>
             <p style={styles.formText}>
               <strong>
@@ -333,7 +316,6 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
             }
           </div>
         }
-
         <br />
         <div style={styles.formText}>
           <strong>
@@ -364,9 +346,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
 
-    if (data.teachercon) {
-      requiredFields.push("ableToAttendSingle");
-    } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length === 1) {
+    if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length === 1) {
       requiredFields.push("ableToAttendSingle");
     } else if (data.regionalPartnerWorkshopIds && data.regionalPartnerWorkshopIds.length > 1) {
       requiredFields.push("ableToAttendMultiple");
@@ -390,8 +370,6 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
 
     if (!data.regionalPartnerId) {
       changes.ableToAttendSingle = undefined;
-      changes.ableToAttendMultiple = undefined;
-    } else if (data.teachercon) {
       changes.ableToAttendMultiple = undefined;
     } else if (data.regionalPartnerWorkshopIds.length === 1) {
       changes.ableToAttendMultiple = undefined;

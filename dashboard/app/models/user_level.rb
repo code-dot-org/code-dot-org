@@ -129,13 +129,16 @@ class UserLevel < ActiveRecord::Base
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
-    user_level.update!(
+    user_level.assign_attributes(
       submitted: locked || readonly_answers,
       readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
       best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
     )
+
+    # preserve updated_at, which represents the user's submission timestamp.
+    user_level.save!(touch: false)
   end
 
   # Get number of passed levels per user for the given set of user IDs
