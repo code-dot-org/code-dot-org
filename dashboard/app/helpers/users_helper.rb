@@ -28,7 +28,9 @@ module UsersHelper
 
     if source_user.has_activity?
       # We don't want to destroy an account with progress. Log to Redshift and return false.
-      log_account_takeover_to_firehose(firehose_params.merge(error: "Attempted takeover for account with progress."))
+      firehose_params[:type] = "cancelled-#{takeover_type}"
+      firehose_params[:error] = "Attempted takeover for account with progress."
+      log_account_takeover_to_firehose(firehose_params)
       return false
     end
 
