@@ -92,6 +92,7 @@ FROM sections_geos
          CASE WHEN subject in ('Intro Workshop', 'Intro') then 'Intro Workshop' ELSE pdw.subject END as subject,
          min(pds.start) as workshop_date,
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
+         CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          sy.school_year,
          min(CASE WHEN pds.start < DATEADD(day,-3,GETDATE()) and pda.id is null then 1 else 0 END) as not_attended
@@ -107,9 +108,11 @@ FROM sections_geos
       ON wsz.id = pdw.id
    LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = wsz.state OR rpm.zip_code = wsz.zip
+   LEFT JOIN dashboard_production_pii.regional_partners rp  
+      ON rpm.regional_partner_id = rp.id  
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
-  group by 1, 2, 3, 4,  6, 7, 8
+  group by 1, 2, 3, 4,  6, 7, 8, 9
   
 UNION ALL 
 
@@ -119,6 +122,7 @@ UNION ALL
          'Intro Workshop' as subject,
          se.created_at as workshop_date,
          0 AS trained_by_regional_partner,
+         CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          rpm.regional_partner_id AS regional_partner_id,
          sy.school_year, 
          0 as not_attended
@@ -130,6 +134,8 @@ UNION ALL
       ON ssz.id = se.id
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = ssz.state OR rpm.zip_code = ssz.zip 
+    LEFT JOIN dashboard_production_pii.regional_partners rp  
+      ON rpm.regional_partner_id = rp.id 
 
 ;
 
@@ -140,5 +146,4 @@ GRANT ALL PRIVILEGES
 GRANT SELECT
   ON analysis.csf_workshop_attendance
   TO GROUP reader, GROUP reader_pii;
-
 
