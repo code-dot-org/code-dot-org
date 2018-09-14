@@ -275,8 +275,10 @@ class ApplicationController < ActionController::Base
   end
 
   def clear_sign_up_session_vars
-    session.delete(:sign_up_uid)
-    session.delete(:sign_up_type)
-    session.delete(:sign_up_tracking_expiration)
+    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+      session.delete(:sign_up_uid)
+      session.delete(:sign_up_type)
+      session.delete(:sign_up_tracking_expiration)
+    end
   end
 end
