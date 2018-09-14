@@ -150,6 +150,17 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           [TextFields.otherWithText] : "other"
         })}
         <p>
+          If you are planning to offer CS Principles as an AP course, please review the AP Score Sharing Agreement.
+        </p>
+        {this.singleCheckboxFor('shareApScores', {
+          required: false,
+          label: `I am authorized to release student data and give permission for the College
+          Board to send de-identified AP scores for Code.org classes directly to Code.org for
+          the 2019 to 2021 school years. I understand that the de-identified data cannot be
+          tied to individual students, will not be used to evaluate teachers, and will greatly
+          help Code.org evaluate its program effectiveness.`
+        })}
+        <p>
           Code.org works closely with local Regional Partners to organize and deliver the
           Professional Learning Program.  By submitting this form, teachers are
           agreeing to allow Code.org to share information on how they use Code.org and the
