@@ -13,6 +13,44 @@ module UsersHelper
   ACCT_TAKEOVER_OAUTH_TOKEN = 'clever_takeover_token'
   ACCT_TAKEOVER_FORCE_TAKEOVER = 'force_clever_takeover'
 
+  # Move followed sections from source_user to destination_user and destroy source_user.
+  # Returns a boolean - true if all steps were successful, false otherwise.
+  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:)
+    # No-op if source_user is nil
+    return true unless source_user.present?
+
+    if source_user.has_activity?
+      # We don't want to destroy an account with progress.
+      # In theory this should not happen, so we log a Honeybadger error and return.
+      Honeybadger.notify(
+        error_class: 'Oauth takeover called for user with progress',
+        errors_message: "Attempted takeover for account with progress. Cancelling takeover of account with id #{source_user.id} by id #{destination_user.id}"
+      )
+      return false
+    end
+
+    ActiveRecord::Base.transaction do
+      # Move over sections that source_user follows
+      if destination_user.student?
+        Follower.where(student_user_id: source_user.id).each do |followed|
+          followed.update!(student_user_id: destination_user.id)
+        end
+      end
+
+      source_user.destroy!
+    end
+
+    log_account_takeover_to_firehose(
+      source_user: source_user,
+      destination_user: destination_user,
+      type: takeover_type,
+      provider: destination_user.provider
+    )
+    true
+  rescue
+    false
+  end
+
   # If Clever takeover flags are present, the current account (user) is the one that the person just
   # logged into (to prove ownership), and all the Clever details are migrated over, including sections.
   def check_and_apply_oauth_takeover(user)
@@ -23,32 +61,12 @@ module UsersHelper
       clear_takeover_session_variables
 
       existing_account = User.find_by_credential(type: provider, id: uid)
-      if existing_account.has_activity?
-        # We don't want to destroy an account with progress.
-        # In theory this should not happen, so we log a Honeybadger error and return.
-        Honeybadger.notify(
-          error_class: 'Oauth takeover called for user with progress',
-          error_message: "Attempted to take over account with id #{existing_account.id}, which has activity"
-        )
-        return
-      end
-
-      # Move over sections that students follow
-      if user.student? && existing_account
-        Follower.where(student_user_id: existing_account.id).each do |follower|
-          follower.update(student_user_id: user.id)
-        end
-      end
-
-      if existing_account
-        existing_account.destroy!
-        log_account_takeover_to_firehose(
-          source_user: existing_account,
-          destination_user: user,
-          type: 'oauth',
-          provider: user.provider
-        )
-      end
+      # No-op if move_sections_and_destroy_source_user fails
+      return unless move_sections_and_destroy_source_user(
+        source_user: existing_account,
+        destination_user: user,
+        takeover_type: 'oauth'
+      )
 
       if user.migrated?
         success = user.add_credential(
