@@ -90,6 +90,29 @@ module Pd::Application
     end
 
     # @override
+    def self.cohort_csv_header(optional_columns)
+      columns = [
+        'Date Accepted',
+        'Applicant Name',
+        'District Name',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop'
+      ]
+      if optional_columns[:registered_workshop]
+        columns.push 'Registered Workshop'
+      end
+      if optional_columns[:accepted_teachercon]
+        columns.push 'Accepted Teachercon'
+      end
+
+      CSV.generate do |csv|
+        csv << columns
+      end
+    end
+
+    # @override
     def to_cohort_csv_row(optional_columns)
       columns = [
         date_accepted,
