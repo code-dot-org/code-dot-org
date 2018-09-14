@@ -91,10 +91,11 @@ export default class DeleteAccountDialog extends React.Component {
 
     const renderedMarkdown = (isTeacher) => {
       let markdownStr = i18n.deleteAccountDialog_body1();
+
       if (isTeacher) {
-        markdownStr = markdownStr + i18n.deleteAccountDialog_body2_teacher();
+        markdownStr = `${markdownStr} ${i18n.deleteAccountDialog_body2_teacher()}`;
       } else {
-        markdownStr = markdownStr + i18n.deleteAccountDialog_body2_student();
+        markdownStr = `${markdownStr} ${i18n.deleteAccountDialog_body2_student()}`;
       }
       return markdownStr;
     };
