@@ -7,6 +7,7 @@ function changeMove(sprite, move) {
     move = randomNumber(1, dancers[sprite.style].length - 1);
   }
   sprite.changeAnimation("anim" + move);
+  if (animation.looping) sprite.looping_frame = 0;
   sprite.animation.looping = true;
   sprite.previous_move = sprite.current_move;
   sprite.current_move = move;

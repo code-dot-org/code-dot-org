@@ -419,6 +419,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
         post :teacher, to: 'teacher_applications#create'
+        post 'resend_principal_approval/:id', to: 'teacher_applications#resend_principal_approval'
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
@@ -466,7 +467,6 @@ Dashboard::Application.routes.draw do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
-      get 'teacher_1920_preview', to: 'teacher_application#new_1920_preview'
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year

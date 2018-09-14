@@ -1,6 +1,6 @@
 require 'test_helper'
+require 'testing/includes_metrics'
 require 'timecop'
-require_relative '../../../shared/test/spy_newrelic_agent'
 
 class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
@@ -2850,33 +2850,23 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.deleted?
   end
 
-  test 'soft-deleting a user records a NewRelic metric' do
-    original_newrelic_logging = CDO.newrelic_logging
-    CDO.newrelic_logging = true
-
+  test 'soft-deleting a user records a metric' do
     student = create :student
 
-    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1)
+    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1))
     result = student.destroy
 
     assert_equal student, result
-  ensure
-    CDO.newrelic_logging = original_newrelic_logging
   end
 
-  test 'soft-deleting a group of users records NewRelic metrics' do
-    original_newrelic_logging = CDO.newrelic_logging
-    CDO.newrelic_logging = true
-
+  test 'soft-deleting a group of users records metrics' do
     student_a = create :student
     student_b = create :student
 
-    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1).twice
+    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1)).twice
     result = User.destroy [student_a.id, student_b.id]
 
     assert_equal [student_a, student_b], result
-  ensure
-    CDO.newrelic_logging = original_newrelic_logging
   end
 
   test 'undestroy restores recent dependents only' do
@@ -3148,7 +3138,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'omniauth login stores auth token' do
+  test 'from_omniauth: creates new non-migrated user if user with matching credentials does not exist' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
       uid: '123456',
@@ -3157,14 +3147,69 @@ class UserTest < ActiveSupport::TestCase
         expires_at: Time.now.to_i + 3600,
         refresh_token: 'fake refresh token',
       },
-      info: {},
+      info: {
+        name: {first: 'Some', last: 'User'},
+        user_type: 'student'
+      },
     )
-
     params = {}
 
-    user = User.from_omniauth(auth, params)
-    assert_equal('fake oauth token', user.oauth_token)
-    assert_equal('fake refresh token', user.oauth_refresh_token)
+    assert_creates(User) do
+      user = User.from_omniauth(auth, params)
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+      assert_equal 'Some User', user.name
+      assert_equal User::TYPE_STUDENT, user.user_type
+    end
+  end
+
+  test 'from_omniauth: updates non-migrated user oauth tokens if user with matching credentials exists' do
+    uid = '123456'
+    provider = 'google_oauth2'
+    create :user, uid: uid, provider: provider
+    auth = OmniAuth::AuthHash.new(
+      provider: provider,
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      user = User.from_omniauth(auth, params)
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+    end
+  end
+
+  test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
+    uid = '654321'
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE, authentication_id: uid, user: user
+    auth = OmniAuth::AuthHash.new(
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      User.from_omniauth(auth, params)
+    end
+    google_auth_option.reload
+    assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
+    assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
   test 'summarize' do
@@ -3315,7 +3360,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     def put_student_in_section(student, teacher, script, course=nil)
-      section = create :section, user_id: teacher.id, script_id: script.id, course_id: course.try(:id)
+      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
       section
     end
@@ -3373,6 +3418,38 @@ class UserTest < ActiveSupport::TestCase
 
       # when attached to course, we should hide only if hidden in every section
       assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
+    end
+
+    test "user in two sections, both attached to course but no script" do
+      student = create :student
+
+      section1 = put_student_in_section(student, @teacher, nil, @course)
+      section2 = put_student_in_section(student, @teacher, nil, @course)
+
+      hide_scripts_in_sections(section1, section2)
+
+      # when attached to course, we should hide only if hidden in every section
+      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
     end
 
     test "user in two sections, neither attached to script" do
@@ -3864,5 +3941,29 @@ class UserTest < ActiveSupport::TestCase
     section.students << student
 
     assert_equal [student.summarize], section.teacher.dependent_students
+  end
+
+  test 'last section id' do
+    teacher = create :teacher
+    section1 = create :section, teacher: teacher
+    assert_equal section1.id, teacher.last_section_id
+
+    create :follower, section: section1
+    assert_nil section1.students.first.last_section_id
+
+    # selects the most recently created section
+    section2 = create :section, teacher: teacher
+    assert_equal section2.id, teacher.last_section_id
+
+    # ignores hidden sections
+    section2.hidden = true
+    section2.save!
+    assert_equal section1.id, teacher.last_section_id
+
+    # ignores deleted sections
+    section3 = create :section, teacher: teacher
+    assert_equal section3.id, teacher.last_section_id
+    section3.delete
+    assert_equal section1.id, teacher.last_section_id
   end
 end

@@ -46,11 +46,43 @@ end
 Then /^I publish the project from the share dialog$/ do
   steps <<-STEPS
     And I click selector "#share-dialog-publish-button"
+    Then I publish the project from the publish to gallery dialog
+  STEPS
+end
+
+Then /^I publish the project from the personal projects table publish button$/ do
+  steps <<-STEPS
+    And I wait until element ".ui-personal-projects-publish-button" is visible
+    Then I click selector ".ui-personal-projects-publish-button"
+    Then I publish the project from the publish to gallery dialog
+    And I wait until element ".ui-personal-projects-unpublish-button" is visible
+  STEPS
+end
+
+Then /^I publish the project from the publish to gallery dialog$/ do
+  steps <<-STEPS
     And I wait to see a publish dialog with title containing "Publish to Public Gallery"
-    And element "#x-close" is visible
     And element "#publish-dialog-publish-button" is visible
     And I click selector "#publish-dialog-publish-button"
     And I wait for the dialog to close
+  STEPS
+end
+
+Then /^I navigate to the public gallery via the gallery switcher$/ do
+  steps <<-STEPS
+    Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
+    Then check that I am on "http://studio.code.org/projects/public"
+    And I wait until element "#public-gallery" is visible
+    And element "#react-personal-projects" is not visible
+  STEPS
+end
+
+Then /^I navigate to the personal gallery via the gallery switcher$/ do
+  steps <<-STEPS
+    Then I click selector "#uitest-gallery-switcher div:contains(My Projects)"
+    Then check that I am on "http://studio.code.org/projects"
+    And I wait until element "#public-gallery" is not visible
+    And element "#react-personal-projects" is visible
   STEPS
 end
 
@@ -106,4 +138,14 @@ Then /^the first project in the table is named "([^"]*)"$/ do |expected_name|
     And I wait until element ".ui-projects-table-project-name" is visible
     And I wait until the first ".ui-projects-table-project-name" contains text "#{expected_name}"
   }
+end
+
+Then /^the project gallery contains ([\d]+) project (?:type|types)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.ui-project-app-type-area').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
+
+Then /^the project gallery contains ([\d]+) view more (?:link|links)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.viewMoreLink').length;")
+  expect(actual_num).to eq(expected_num.to_i)
 end

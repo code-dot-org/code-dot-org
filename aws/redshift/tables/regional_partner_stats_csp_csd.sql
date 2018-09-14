@@ -10,8 +10,8 @@ with completed as
          when cc.course_name in ('csd','csd_half') then 'CS Discoveries'
     end as course,
     school_year
-  from csp_csd_completed_teachers cc
-  join users u on u.id = cc.user_id
+  from analysis.csp_csd_completed_teachers cc
+  join dashboard_production_pii.users u on u.id = cc.user_id
 ), 
 started as
 (
@@ -21,8 +21,8 @@ started as
          when cc.course_name in ('csd','csd_half') then 'CS Discoveries'
     end as course,
     school_year
-  from csp_csd_started_teachers cc
-  join users u on u.id = cc.user_id
+  from analysis.csp_csd_started_teachers cc
+  join dashboard_production_pii.users u on u.id = cc.user_id
 ),
 pd_enrollments_with_year as
   ( select pd_workshop_id, u.studio_person_id, school_year,

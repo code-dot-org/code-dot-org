@@ -576,6 +576,7 @@ class FilesApi < Sinatra::Base
     unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
+    bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
@@ -856,15 +857,14 @@ class FilesApi < Sinatra::Base
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
       if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
         file_mime_type = mime_type(File.extname(filename.downcase))
-        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-        if %i(adult racy).include? rating
-          # Incrementing abuse score by 15 to differentiate from manually reported projects
-          new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
-          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
-          response.headers['x-cdo-content-rating'] = rating.to_s
-          cache_for 1.hour
-          not_found
-        end
+        ImageModeration.rate_image(file, file_mime_type, request.fullpath)
+        # We are going to re-enable content moderation, but will be adjusting
+        # the thresholds in a series of trials to optimize for identifying
+        # inappropriate images without incorrectly flagging appropriate images.
+        # In the meantime, we don't want to increment abuse score until we
+        # identify the optimal threshold.
+        # TODO (ErinB) re-enable abuse score incrementation when
+        # the correct thresholds are set.
       end
     end
 

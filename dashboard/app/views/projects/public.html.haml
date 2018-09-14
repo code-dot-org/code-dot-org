@@ -1,4 +1,8 @@
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+- limited_gallery = local_assigns[:limited_gallery]
+- projects_data = {}
+- projects_data[:limitedGallery] = limited_gallery
+
+%script{src: asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
 %script{src: minifiable_asset_path('js/projects/public.js')}
 
 .projects-page

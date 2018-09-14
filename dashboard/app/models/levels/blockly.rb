@@ -292,7 +292,7 @@ class Blockly < Level
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
-        level_prop['sharedFunctions'] = shared_functions if include_shared_functions
+        level_prop['sharedFunctions'] = shared_functions if JSONValue.value(include_shared_functions)
       end
 
       if is_a? Applab
@@ -411,19 +411,21 @@ class Blockly < Level
     end
   end
 
-  def localized_toolbox_blocks
-    if should_localize? && toolbox_blocks
-      block_xml = Nokogiri::XML(localize_function_blocks(toolbox_blocks), &:noblanks)
-      block_xml.xpath('//../category').each do |category|
-        name = category.attr('name')
-        localized_name = I18n.t("data.block_categories.#{name}", default: nil)
-        category.set_attribute('name', localized_name) if localized_name
-      end
-      return block_xml.serialize(save_with: XML_OPTIONS).strip
+  def self.localize_toolbox_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(localize_function_blocks(blocks), &:noblanks)
+    block_xml.xpath('//../category').each do |category|
+      name = category.attr('name')
+      localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+      category.set_attribute('name', localized_name) if localized_name
     end
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  def localize_function_blocks(blocks)
+  def self.localize_function_blocks(blocks)
+    return nil if blocks.nil?
+
     block_xml = Nokogiri::XML(blocks, &:noblanks)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
       name = function.at_xpath('./title[@name="NAME"]')

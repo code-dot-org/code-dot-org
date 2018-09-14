@@ -28,6 +28,13 @@ GIT
       redis
 
 GIT
+  remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
+  revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
+  specs:
+    omniauth-microsoft_v2_auth (0.1.0)
+      omniauth-oauth2
+
+GIT
   remote: https://github.com/grosser/sort_alphabetical.git
   revision: f8eea712e236df6ba60839ead116f40094266c08
   specs:
@@ -156,6 +163,13 @@ GIT
     omniauth-windowslive (0.0.11)
       multi_json (>= 1.0.3)
       omniauth-oauth2 (~> 1.4)
+
+GIT
+  remote: https://github.com/wjordan/puma.git
+  revision: 2ab96d67341a0ae1a4baf6bf80790389abc159ac
+  ref: out_of_band
+  specs:
+    puma (3.12.0)
 
 GIT
   remote: https://github.com/wjordan/sass-rails.git
@@ -371,7 +385,7 @@ GEM
     dalli-elasticache (0.2.0)
       dalli (>= 1.0.0)
     debug_inspector (0.0.3)
-    declarative (0.0.9)
+    declarative (0.0.10)
     declarative-option (0.1.0)
     devise (4.4.1)
       bcrypt (~> 3.0)
@@ -424,17 +438,16 @@ GEM
     gherkin (5.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    google-api-client (0.10.3)
-      addressable (~> 2.3)
-      googleauth (~> 0.5)
-      httpclient (~> 2.7)
-      hurley (~> 0.1)
-      memoist (~> 0.11)
-      mime-types (>= 1.6)
+    google-api-client (0.23.8)
+      addressable (~> 2.5, >= 2.5.1)
+      googleauth (>= 0.5, < 0.7.0)
+      httpclient (>= 2.8.1, < 3.0)
+      mime-types (~> 3.0)
       representable (~> 3.0)
       retriable (>= 2.0, < 4.0)
-    google_drive (2.1.2)
-      google-api-client (>= 0.9.0, < 1.0.0)
+      signet (~> 0.9)
+    google_drive (2.1.3)
+      google-api-client (>= 0.11.0, < 1.0.0)
       googleauth (>= 0.5.0, < 1.0.0)
       nokogiri (>= 1.5.3, < 2.0.0)
     googleauth (0.5.1)
@@ -474,8 +487,7 @@ GEM
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    httpclient (2.8.2.2)
-    hurley (0.2)
+    httpclient (2.8.3)
     image_size (1.5.0)
     in_threads (1.4.0)
     io-like (0.3.0)
@@ -499,7 +511,7 @@ GEM
     jsonapi-serializers (1.0.0)
       activesupport
     jumphash (0.1.0)
-    jwt (1.5.4)
+    jwt (1.5.6)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -522,13 +534,13 @@ GEM
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     marked-rails (0.3.2.0)
-    memoist (0.15.0)
+    memoist (0.16.0)
     memory_profiler (0.9.10)
     metaclass (0.0.4)
     method_source (0.9.0)
-    mime-types (3.1)
+    mime-types (3.2.2)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0521)
+    mime-types-data (3.2018.0812)
     mini_magick (4.5.1)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
@@ -548,6 +560,7 @@ GEM
     multipart-post (2.0.0)
     mustermann (1.0.1)
     mysql2 (0.3.21)
+    nakayoshi_fork (0.0.4)
     naturally (2.1.0)
     net-http-persistent (2.9.4)
     net-scp (1.2.1)
@@ -617,8 +630,7 @@ GEM
     phantomjs (1.9.7.1)
     powerpack (0.1.1)
     progress (3.3.1)
-    public_suffix (3.0.2)
-    puma (3.12.0)
+    public_suffix (3.0.3)
     pusher (1.3.1)
       httpclient (~> 2.7)
       multi_json (~> 1.0)
@@ -704,7 +716,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    retriable (3.0.2)
+    retriable (3.1.2)
     retryable (2.0.4)
     rinku (2.0.4)
     rmagick (2.16.0)
@@ -755,10 +767,10 @@ GEM
     sexp_processor (4.10.1)
     shotgun (0.9.1)
       rack (>= 1.0)
-    signet (0.7.3)
+    signet (0.9.1)
       addressable (~> 2.3)
       faraday (~> 0.9)
-      jwt (~> 1.5)
+      jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
     simplecov (0.15.1)
       docile (~> 1.1.0)
@@ -915,7 +927,7 @@ DEPENDENCIES
   gemoji
   geocoder!
   gnista!
-  google-api-client
+  google-api-client (~> 0.23)
   google_drive
   haml!
   haml-rails
@@ -948,6 +960,7 @@ DEPENDENCIES
   minitest-reporters (~> 1.2.0.beta3)
   mocha
   mysql2 (~> 0.3.13)
+  nakayoshi_fork
   naturally
   net-http-persistent
   net-scp
@@ -959,6 +972,7 @@ DEPENDENCIES
   omniauth-clever (~> 1.2.1)!
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.3.1)
+  omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-openid-connect!
   omniauth-windowslive (~> 0.0.11)!
@@ -971,7 +985,7 @@ DEPENDENCIES
   petit!
   pg
   phantomjs (~> 1.9.7.1)
-  puma
+  puma!
   pusher (~> 1.3.1)
   rack-cache
   rack-mini-profiler
@@ -1031,4 +1045,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
