@@ -1,13 +1,42 @@
 {
-  "category": "Moves",
+  "category": "Groups",
   "config": {
-    "func": "doMoveTaco",
-    "blockText": "{SPRITE} do move {MOVE} {DIR}",
+    "func": "doMoveEachLR",
+    "blockText": "{GROUP} do {MOVE} {DIR} once",
+    "color": [
+      270,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
-        "name": "SPRITE",
-        "type": "Sprite",
-        "customInput": "spritePicker"
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "all ducks",
+            "\"duck\""
+          ],
+          [
+            "all moose",
+            "\"moose\""
+          ],
+          [
+            "all unicorns",
+            "\"unicorn\""
+          ],
+          [
+            "all Mr Wiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "all cat",
+            "\"cat\""
+          ]
+        ]
       },
       {
         "name": "MOVE",
@@ -78,11 +107,11 @@
         "name": "DIR",
         "options": [
           [
-            "🌮",
+            "←",
             "-1"
           ],
           [
-            "➡️",
+            "→",
             "1"
           ]
         ]

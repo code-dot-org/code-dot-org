@@ -2,7 +2,12 @@
   "category": "Moves",
   "config": {
     "func": "doMoveLR",
-    "blockText": "{SPRITE} do move {MOVE} {DIR}",
+    "blockText": "{SPRITE} do {MOVE} {DIR} once",
+    "color": [
+      270,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "SPRITE",
@@ -78,11 +83,11 @@
         "name": "DIR",
         "options": [
           [
-            "⬅️",
+            "←",
             "-1"
           ],
           [
-            "➡️",
+            "→",
             "1"
           ]
         ]
