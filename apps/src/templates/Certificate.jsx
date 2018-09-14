@@ -38,13 +38,6 @@ const styles = {
     background: color.orange,
     color: color.white,
   },
-  extraLinkContainer: {
-    clear: 'both',
-    paddingTop: 20,
-  },
-  extraLink: {
-    color: color.teal,
-  }
 };
 
 const blankCertificates = {
@@ -68,7 +61,8 @@ class Certificate extends Component {
     randomDonorTwitter: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     userAge: PropTypes.number,
-    language: PropTypes.string
+    isMinecraft: PropTypes.bool.isRequired,
+    children: PropTypes.node,
   };
 
   personalizeCertificate(session) {
@@ -88,7 +82,7 @@ class Certificate extends Component {
   }
 
   render() {
-    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, userAge, language} = this.props;
+    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, userAge, isMinecraft, children} = this.props;
     const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
@@ -110,18 +104,11 @@ class Certificate extends Component {
         i18n.justDidHourOfCode(),
     });
 
-    const isMinecraft = /mc|minecraft|hero/.test(tutorial);
-
     let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
     if (isMinecraft && !this.state.personalized) {
       // Correct the minecraft print url for non-personalized certificates.
       print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
     }
-
-    // Show a special link to a customizable certificate for users who complete
-    // a Minecraft tutorial and are viewing the site in Korean.  The link
-    // text we show is in Korean, below.
-    const showKoreanMinecraftLink = isMinecraft && language === "ko";
 
     return (
       <div style={styles.container}>
@@ -172,17 +159,7 @@ class Certificate extends Component {
             userAge={userAge}
           />
         </div>
-        {showKoreanMinecraftLink && (
-          <div style={styles.extraLinkContainer}>
-            <a
-              href="http://www.mscodingparty.com/certificate.html"
-              target="_blank"
-              style={styles.extraLink}
-            >
-              온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)
-            </a>
-          </div>
-        )}
+        {children}
       </div>
     );
   }
