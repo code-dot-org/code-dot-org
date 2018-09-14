@@ -364,7 +364,7 @@
   "deleteAccount_teacherWarning5": "sending home instructions for creating personal logins. ",
   "deleteAccount_teacherWarning6": "Give them at least a few days to follow these instructions BEFORE you delete your account.",
   "deleteAccountDialog_header": "Are you sure you want to delete your account?",
-  "deleteAccountDialog_body1": "WARNING: Deleting your account will permanently erase ",
+  "deleteAccountDialog_body1": "**WARNING**: Deleting your account will permanently erase ",
   "deleteAccountDialog_body2_student": "all your personal information, coursework, and projects linked to this account after 28 days. ",
   "deleteAccountDialog_body2_teacher": "all your personal information, coursework, projects, and professional learning information linked to this account after 28 days. ",
   "deleteAccountDialog_body3": "It will also permanently delete your students’ accounts unless they created a personal login.",

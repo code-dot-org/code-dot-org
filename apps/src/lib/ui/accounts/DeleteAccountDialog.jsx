@@ -5,6 +5,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const GUTTER = 20;
 const styles = {
@@ -88,6 +89,16 @@ export default class DeleteAccountDialog extends React.Component {
     } = this.props;
     const checkboxesLength = Object.keys(checkboxes).length;
 
+    const renderedMarkdown = (isTeacher) => {
+      let markdownStr = i18n.deleteAccountDialog_body1();
+      if (isTeacher) {
+        markdownStr = markdownStr + i18n.deleteAccountDialog_body2_teacher();
+      } else {
+        markdownStr = markdownStr + i18n.deleteAccountDialog_body2_student();
+      }
+      return markdownStr;
+    };
+
     return (
       <BaseDialog
         useUpdatedStyles
@@ -103,18 +114,10 @@ export default class DeleteAccountDialog extends React.Component {
               style={styles.icon}
             />
             <div style={styles.text}>
-              <strong>{i18n.deleteAccountDialog_body1()}</strong>
-              {i18n.deleteAccountDialog_body2()}
-              <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body3()}</strong>
-              {isTeacher
-                ? i18n.deleteAccountDialog_body4_teacher()
-                : i18n.deleteAccountDialog_body4_student()
-              }
+              <UnsafeRenderedMarkdown markdown={renderedMarkdown(isTeacher)} />
               {warnAboutDeletingStudents &&
                 <span>
-                  {i18n.deleteAccountDialog_body5()}
-                  <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body6()}</strong>
-                  {i18n.deleteAccountDialog_body7()}
+                  {i18n.deleteAccountDialog_body3()}
                 </span>
               }
             </div>
