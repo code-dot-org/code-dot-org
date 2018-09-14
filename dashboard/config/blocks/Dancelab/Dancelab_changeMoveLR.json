@@ -2,7 +2,7 @@
   "category": "Moves",
   "config": {
     "func": "changeMoveLR",
-    "blockText": "{SPRITE} does {MOVE} {DIR} forever",
+    "blockText": "{SPRITE} do {MOVE} {DIR} forever",
     "color": [
       270,
       ".7",

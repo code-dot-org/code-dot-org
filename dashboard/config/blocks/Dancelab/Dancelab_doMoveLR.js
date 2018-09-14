@@ -10,5 +10,4 @@ function doMoveLR(sprite, move, dir) {
   sprite.changeAnimation("anim" + move);
   sprite.animation.looping = false;
   sprite.animation.changeFrame(24);
-  sprite.animation.play();
 }
