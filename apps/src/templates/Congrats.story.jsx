@@ -13,7 +13,7 @@ export default storybook => {
             <Congrats
               tutorial="applab-intro"
               userType="signedOut"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -24,7 +24,7 @@ export default storybook => {
             <Congrats
               tutorial="applab-intro"
               userType="student"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -35,7 +35,7 @@ export default storybook => {
             <Congrats
               tutorial="minecraft"
               userType="signedOut"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -46,7 +46,7 @@ export default storybook => {
             <Congrats
               tutorial="minecraft"
               userType="student"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -57,7 +57,7 @@ export default storybook => {
             <Congrats
               tutorial="hero"
               userType="signedOut"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -68,7 +68,7 @@ export default storybook => {
             <Congrats
               tutorial="hero"
               userType="student"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -79,7 +79,7 @@ export default storybook => {
             <Congrats
               tutorial="hero"
               userType="student"
-              language={"ko"}
+              language="ko"
             />
         )
       },
@@ -90,7 +90,7 @@ export default storybook => {
             <Congrats
               tutorial="other"
               userType="signedOut"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -101,7 +101,7 @@ export default storybook => {
             <Congrats
               tutorial="other"
               userType="student"
-              language={"en"}
+              language="en"
             />
         )
       },
@@ -112,7 +112,7 @@ export default storybook => {
             <Congrats
               tutorial="other"
               userType="teacher"
-              language={"en"}
+              language="en"
             />
         )
       },
