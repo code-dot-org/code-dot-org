@@ -377,7 +377,7 @@
   "deleteAccountDialog_checkboxPreface": "I understand that by deleting my account, ",
   "deleteAccountDialog_checkboxTitle": "Please verify the following {numCheckboxes, plural, one {statement} other {statements}} before you can delete your account:",
   "deleteAccountDialog_checkbox1_1": "I have the authority to delete the education records ",
-  "deleteAccountDialog_checkbox1_2": "of the students in my sections (or release it to them, if they have a personal login).",
+  "deleteAccountDialog_checkbox1_2": "of the students in my sections (or release it to them, if they have a personal login). ",
   "deleteAccountDialog_checkbox2_1": "I am aware of the ",
   "deleteAccountDialog_checkbox2_2": "message to send to parents ",
   "deleteAccountDialog_checkbox2_3": "to warn them that their children’s coding projects will be deleted unless they act to preserve it by creating a personal login for their children.",
