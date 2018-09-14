@@ -19,6 +19,7 @@ import DialogFooter from "./DialogFooter";
 import QuickActionsCell from "@cdo/apps/templates/tables/QuickActionsCell";
 import {getStore} from "@cdo/apps/redux";
 import {setRosterProvider} from "@cdo/apps/templates/teacherDashboard/teacherSectionsRedux";
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   xIcon: {
@@ -55,7 +56,7 @@ class SectionActionDropdown extends Component {
   };
 
   componentDidMount() {
-    if (this.props.sectionData.loginType === "google_classroom" || this.props.sectionData.loginType === "clever") {
+    if (this.props.sectionData.loginType === OAuthSectionTypes.google_classroom || this.props.sectionData.loginType === OAuthSectionTypes.clever) {
       getStore().dispatch(this.props.setRosterProvider(this.props.sectionData.loginType));
     }
   }
@@ -119,7 +120,7 @@ class SectionActionDropdown extends Component {
             <PopUpMenu.Item
               href={pegasus(`/teacher-dashboard#/sections/${sectionData.id}/print_signin_cards`)}
             >
-              {i18n.printLoginCards()}
+              {sectionData.loginType === SectionLoginType.email ? i18n.joinInstructions() : i18n.printLoginCards()}
             </PopUpMenu.Item>
           }
           <MenuBreak/>
