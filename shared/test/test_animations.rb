@@ -97,6 +97,7 @@ class AnimationsTest < FilesApiTestBase
     soft_delete(filename) # Not a no-op - creates a delete marker
 
     Honeybadger.expects(:notify).never
+    FirehoseClient.any_instance.expects(:put_record).never
     @api.get_object(filename)
     assert not_found?
   end
@@ -119,7 +120,8 @@ class AnimationsTest < FilesApiTestBase
     upload(filename, v2_file_data)
 
     # Ask for the missing version
-    Honeybadger.expects(:notify).once
+    Honeybadger.expects(:notify).never
+    FirehoseClient.any_instance.expects(:put_record).once
     @api.get_object_version(filename, v1_version_id)
     assert successful?
 
@@ -149,7 +151,8 @@ class AnimationsTest < FilesApiTestBase
     soft_delete(filename)
 
     # Ask for the missing version
-    Honeybadger.expects(:notify).once
+    Honeybadger.expects(:notify).never
+    FirehoseClient.any_instance.expects(:put_record).once
     @api.get_object_version(filename, v1_version_id)
     assert successful?
 
@@ -170,8 +173,9 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
 
     # Ask for an invalid version
-    # No Honeybadger notification on this case - it's an expected 404.
     Honeybadger.expects(:notify).never
+    # No Firehose notification on this case - it's an expected 404.
+    FirehoseClient.any_instance.expects(:put_record).never
     @api.get_object_version(filename, v1_version_id)
     assert not_found?
   end
