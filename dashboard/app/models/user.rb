@@ -713,17 +713,7 @@ class User < ActiveRecord::Base
       initialize_new_oauth_user(user, auth, params)
     end
 
-    if auth.credentials
-      if auth.credentials.refresh_token
-        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
-      end
-
-      omniauth_user.oauth_token = auth.credentials.token
-      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
-
-      omniauth_user.save if omniauth_user.changed?
-    end
-
+    omniauth_user.update_oauth_credential_tokens(auth)
     omniauth_user
   end
 
@@ -838,6 +828,17 @@ class User < ActiveRecord::Base
       update_attributes(params, *options)
     else
       super
+    end
+  end
+
+  def update_email_for(provider: nil, uid: nil, email:)
+    if migrated?
+      # Provider and uid are required to update email on AuthenticationOption for migrated user.
+      return unless provider.present? && uid.present?
+      auth_option = authentication_options.find_by(credential_type: provider, authentication_id: uid)
+      auth_option&.update(email: email)
+    else
+      update(email: email)
     end
   end
 
@@ -2242,8 +2243,9 @@ class User < ActiveRecord::Base
     sections = sections_as_student
     return [] if sections.empty?
 
+    sections = sections.reject(&:hidden)
     assigned_sections = sections.select do |section|
-      hidden_stages && section.script_id == assign_id || !hidden_stages && section.course_id == assign_id
+      hidden_stages ? section.script_id == assign_id : section.course_id == assign_id
     end
 
     if assigned_sections.empty?

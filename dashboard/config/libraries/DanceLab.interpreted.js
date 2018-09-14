@@ -16,6 +16,13 @@ var songs = {
     verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
     chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
   },
+  macklemore90: {
+    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/hold.mp3',
+    bpm: 146,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
+    chorus: [65.75] // Array of timestamps in seconds where choruses occur
+  },
   hammer: {
     url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/touch.mp3',
     bpm: 133,
@@ -70,12 +77,6 @@ var dancers = {
   	loadS3Animation("/48frames/Alien_Floss/Alien_Floss_", 48),
   	loadS3Animation("/48frames/Alien_Fresh/Alien_Fresh_", 48)
     ],
-  mrwiggles: [
-  	loadS3Animation("/48frames/MrWiggles_Rest/MrWiggles_Rest_", 48),
-  	loadS3Animation("/48frames/MrWiggles_Breakdown/MrWiggles_Breakdown", 48),
-  	loadS3Animation("/48frames/MrWiggles_Floss/MrWiggles_Floss_", 48),
-  	loadS3Animation("/48frames/MrWiggles_Fresh/MrWiggles_Fresh_", 48)
-    ],
   pizza: [
   	loadS3Animation("/48frames/Pizza_Rest/Pizza_Rest_", 48),
   	loadS3Animation("/48frames/Pizza_Breakdown/Pizza_Breakdown_", 48),
@@ -83,10 +84,74 @@ var dancers = {
   	loadS3Animation("/48frames/Pizza_Fresh/Pizza_Fresh_", 48)
     ],
   unicorn: [
-  	loadS3Animation("/48frames/Unicorn_Rest/Unicorn_Rest_", 48),
-  	loadS3Animation("/48frames/Unicorn_Breakdown/Unicorn_Breakdown_", 48),
-  	loadS3Animation("/48frames/Unicorn_Floss/Unicorn_Floss_", 48),
-  	loadS3Animation("/48frames/Unicorn_Fresh/Unicorn_Fresh_", 48)
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Rest/UNICORN - Rest_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_ClapHigh/UNICORN - Clap High_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Clown/UNICORN - Clown_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Dab/UNICORN - Dab_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_DoubleJam/UNICORN - DoubleJam_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Drop/UNICORN - Drop_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Floss/UNICORN - Floss_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Fresh/UNICORN - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Roll/UNICORN - Roll_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_ThisOrThat/UNICORN - Thisorthat_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Kick/UNICORN - Kick_", 48),
+  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Thriller/UNICORN - Thriller_", 48)
+    ],
+  moose: [
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Rest/MOOSE - Rest_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_ClapHigh/MOOSE - ClapHigh_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Clown/MOOSE - Clown_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Dab/MOOSE - Dab_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_DoubleJam/MOOSE - Double Jam_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Drop/MOOSE - Drop_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Floss/MOOSE - Floss_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Fresh/MOOSE - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Roll/MOOSE - Roll_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_ThisOrThat/MOOSE - Thisorthat_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Kick/MOOSE - Kick_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Thriller/MOOSE - Thriller_", 48)
+    ],
+  mrwiggles: [
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Rest/MODEL - Rest_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_ClapHigh/MODEL - Top Clap_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Clown/MODEL - Clown_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Dab/MODEL - Dab_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_DoubleJam/MODEL - Double Jam_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Drop/MODEL - Drop_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Floss/MODEL - Floss_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Fresh/MODEL - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Roll/MODEL - Roll_", 48),
+  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Thisorthat/MODEL - Thisorthat_", 48),
+  	// loadS3Animation("/CHARACTERS_SM/MODEL/Model_Kick/MODEL - Kick_", 48),
+  	// loadS3Animation("/CHARACTERS_SM/MODEL/Model_Thriller/MODEL - Thriller_", 48)
+    ],
+  duck: [
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Rest/DUCK - Rest_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_ClapHigh/DUCK - Clap High_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Clown/DUCK - Clown_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Dab/DUCK - Dab_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_DoubleJam/DUCK - DoubleJam_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/Duck_Drop/DUCK - Drop_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Floss/DUCK - Floss_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Fresh/DUCK - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Roll/DUCK - Roll_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_ThisOrThat/DUCK - Thisorthat_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Kick/DUCK - Kick_", 48),
+  	loadS3Animation("/CHARACTERS_SM/DUCK/Duck_Thriller/DUCK - Thriller_", 48)
+    ],
+  cat: [
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Rest/CAT_Rest_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_ClapHigh/CAT_ClapHigh_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Clown/CAT_Clown_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Dab/CAT_Dab_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_DoubleJam/CAT_DoubleJam_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Drop/CAT_Drop_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Floss/CAT_Floss_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Fresh/CAT_Fresh_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Roll/CAT_Roll_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Thisorthat/CAT_Thisorthat_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Kick/CAT_Kick_", 48),
+  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Thriller/CAT_Thriller_", 48)
     ]
 };
 
@@ -179,9 +244,76 @@ function Effects(alpha, blend) {
       background(bgcolor);
     }
   };
+  this.rain={
+    drops: [],
+    init: function() {
+      for (var i=0; i < 20; i++) {
+        this.drops.push({
+          x: randomNumber(0, 380),
+          y: randomNumber(0, 380),
+          length: randomNumber(10, 20)
+        });
+      }
+    },
+    color: rgb(127, 127, 255, 0.5),
+    update: function() {
+      this.color = rgb(127, 127, randomNumber(127, 255), 0.5);
+  	},
+    draw: function() {
+      if (this.drops.length < 1) this.init();
+      strokeWeight(3);
+      stroke(this.color);
+      push();
+      for (var i=0; i<this.drops.length; i++) {
+        push();
+        translate(this.drops[i].x - 20, this.drops[i].y - 20);
+        line(0, 0, this.drops[i].length, this.drops[i].length * 2);
+        pop();
+        this.drops[i].y = (this.drops[i].y + this.drops[i].length) % 420;
+        this.drops[i].x = (this.drops[i].x + (this.drops[i].length / 2)) % 420;
+      }
+      pop();
+    }
+  };
+  this.raining_tacos={
+    tacos: [],
+    size: 50,
+    init: function() {
+      for (var i=0; i < 20; i++) {
+        this.tacos.push({
+          x: randomNumber(20, 380),
+          y: randomNumber(20, 380),
+          rot: randomNumber(0, 359),
+    	  speed: randomNumber(2,5)
+        });
+      }
+    },
+    update: function() {
+      this.size += randomNumber(-5, 5);
+    },
+    draw: function() {
+      if (this.tacos.length < 1) this.init();
+      for(var i=0; i<this.tacos.length; i++){
+        push();
+        var taco = this.tacos[i];
+        translate(taco.x, taco.y);
+        rotate(taco.rot);
+        textAlign(CENTER, CENTER);
+        textSize(this.size);
+        text('taco', 0, 0);
+        taco.y += taco.speed;
+        taco.rot++;
+        if (taco.y > 450) {
+          taco.x = randomNumber(20, 380);
+          taco.y = -50;
+        }
+        pop();
+      }
+    }
+  };
 }
 var bg_effects = new Effects(1);
-var fg_effects = new Effects(0.2);
+var fg_effects = new Effects(0.8);
 
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;

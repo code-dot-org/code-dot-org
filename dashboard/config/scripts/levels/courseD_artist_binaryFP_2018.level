@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "x": "6",
-    "y": "6",
+    "x": "2",
+    "y": "2",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -39,13 +39,271 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 7923,
     "name_suffix": "_2018",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 19:34:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-12-16 00:26:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-01 03:32:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 19:34:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-12-16 00:26:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-01 03:32:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-09-07 19:57:05 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-07 19:57:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-07 19:57:40 +0000\",\"changed\":[\"toolbox_blocks\",\"predraw_blocks\",\"x\",\"y\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-07 20:01:31 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="binary"/>
+          </mutation>
+          <title name="NAME">draw</title>
+          <statement name="STACK">
+            <block type="controls_if" uservisible="false">
+              <value name="IF0">
+                <block type="logic_negate" uservisible="false">
+                  <value name="BOOL">
+                    <block type="variables_get" uservisible="false">
+                      <title name="VAR">bit</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="variables_set" uservisible="false">
+                  <title name="VAR">bit</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_for" uservisible="false">
+                  <title name="VAR">i</title>
+                  <value name="FROM">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="text_length" uservisible="false">
+                      <value name="VALUE">
+                        <block type="variables_get" uservisible="false">
+                          <title name="VAR">binary</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_if" uservisible="false">
+                      <value name="IF0">
+                        <block type="logic_compare" uservisible="false">
+                          <title name="OP">EQ</title>
+                          <value name="A">
+                            <block type="text_charAt" uservisible="false">
+                              <mutation at="true"/>
+                              <title name="WHERE">FROM_START</title>
+                              <value name="VALUE">
+                                <block type="variables_get" uservisible="false">
+                                  <title name="VAR">binary</title>
+                                </block>
+                              </value>
+                              <value name="AT">
+                                <block type="variables_get" uservisible="false">
+                                  <title name="VAR">i</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">1</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="procedures_callnoreturn" uservisible="false">
+                          <mutation name="draw bit"/>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="jump_by_constant" uservisible="false">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">25</title>
+                          <next>
+                            <block type="variables_set" uservisible="false">
+                              <title name="VAR">bit</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" uservisible="false">
+                                  <title name="OP">ADD</title>
+                                  <value name="A">
+                                    <block type="variables_get" uservisible="false">
+                                      <title name="VAR">bit</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="controls_if" uservisible="false">
+                                  <value name="IF0">
+                                    <block type="logic_compare" uservisible="false">
+                                      <title name="OP">GT</title>
+                                      <value name="A">
+                                        <block type="variables_get" uservisible="false">
+                                          <title name="VAR">bit</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="math_number" uservisible="false">
+                                          <title name="NUM">15</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO0">
+                                    <block type="jump_by_constant" uservisible="false">
+                                      <title name="DIR">jumpBackward</title>
+                                      <title name="VALUE">400</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant" uservisible="false">
+                                          <title name="DIR">turnRight</title>
+                                          <title name="VALUE">90</title>
+                                          <next>
+                                            <block type="jump_by_constant" uservisible="false">
+                                              <title name="DIR">jumpForward</title>
+                                              <title name="VALUE">25</title>
+                                              <next>
+                                                <block type="draw_turn_by_constant" uservisible="false">
+                                                  <title name="DIR">turnLeft</title>
+                                                  <title name="VALUE">90</title>
+                                                  <next>
+                                                    <block type="variables_set" uservisible="false">
+                                                      <title name="VAR">bit</title>
+                                                      <value name="VALUE">
+                                                        <block type="math_number" uservisible="false">
+                                                          <title name="NUM">0</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw bit</title>
+          <statement name="STACK">
+            <block type="draw_colour" uservisible="false" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker" uservisible="false">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="jump_by_constant" uservisible="false">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">10.5</title>
+                  <next>
+                    <block type="draw_turn_by_constant" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="jump_by_constant" uservisible="false">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">10.5</title>
+                          <next>
+                            <block type="draw_width_inline" uservisible="false">
+                              <title name="WIDTH">25</title>
+                              <next>
+                                <block type="draw_move_by_constant" uservisible="false">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">0</title>
+                                  <next>
+                                    <block type="jump_by_constant" uservisible="false">
+                                      <title name="DIR">jumpBackward</title>
+                                      <title name="VALUE">10.5</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant" uservisible="false">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
+                                          <next>
+                                            <block type="jump_by_constant" uservisible="false">
+                                              <title name="DIR">jumpBackward</title>
+                                              <title name="VALUE">10.5</title>
+                                              <next>
+                                                <block type="draw_width_inline" uservisible="false">
+                                                  <title name="WIDTH">4</title>
+                                                  <next>
+                                                    <block type="controls_repeat" uservisible="false">
+                                                      <title name="TIMES">4</title>
+                                                      <statement name="DO">
+                                                        <block type="draw_move_by_constant" uservisible="false">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">21</title>
+                                                          <next>
+                                                            <block type="draw_turn_by_constant" uservisible="false">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">90</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </statement>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="controls_repeat_ext" inline="true">
@@ -84,9 +342,9 @@
           <next>
             <block type="jump_by_constant">
               <title name="DIR">jumpBackward</title>
-              <title name="VALUE">6</title>
+              <title name="VALUE">2</title>
               <next>
-                <block type="draw_turn" inline="true">
+                <block type="draw_turn">
                   <title name="DIR">turnRight</title>
                   <value name="VALUE">
                     <block type="math_number">
@@ -96,9 +354,9 @@
                   <next>
                     <block type="jump_by_constant">
                       <title name="DIR">jumpBackward</title>
-                      <title name="VALUE">6</title>
+                      <title name="VALUE">2</title>
                       <next>
-                        <block type="draw_turn" inline="true">
+                        <block type="draw_turn">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
                             <block type="math_number">
@@ -106,7 +364,7 @@
                             </block>
                           </value>
                           <next>
-                            <block type="draw_colour" inline="true">
+                            <block type="draw_colour">
                               <value name="COLOUR">
                                 <block type="colour_picker">
                                   <title name="COLOUR">#ffffff</title>
@@ -123,7 +381,7 @@
                                           <title name="DIR">jumpForward</title>
                                           <title name="VALUE">25</title>
                                           <next>
-                                            <block type="draw_turn" inline="true">
+                                            <block type="draw_turn">
                                               <title name="DIR">turnRight</title>
                                               <value name="VALUE">
                                                 <block type="math_number">
@@ -139,7 +397,7 @@
                                                       <title name="DIR">moveBackward</title>
                                                       <title name="VALUE">400</title>
                                                       <next>
-                                                        <block type="draw_turn" inline="true">
+                                                        <block type="draw_turn">
                                                           <title name="DIR">turnLeft</title>
                                                           <value name="VALUE">
                                                             <block type="math_number">
@@ -161,7 +419,7 @@
                                           <title name="DIR">jumpForward</title>
                                           <title name="VALUE">25</title>
                                           <next>
-                                            <block type="draw_turn" inline="true">
+                                            <block type="draw_turn">
                                               <title name="DIR">turnRight</title>
                                               <value name="VALUE">
                                                 <block type="math_number">
@@ -176,7 +434,7 @@
                                                       <title name="DIR">jumpForward</title>
                                                       <title name="VALUE">25</title>
                                                       <next>
-                                                        <block type="draw_turn" inline="true">
+                                                        <block type="draw_turn">
                                                           <title name="DIR">turnRight</title>
                                                           <value name="VALUE">
                                                             <block type="math_number">
@@ -192,7 +450,7 @@
                                                             <title name="DIR">moveBackward</title>
                                                             <title name="VALUE">400</title>
                                                             <next>
-                                                            <block type="draw_turn" inline="true">
+                                                            <block type="draw_turn">
                                                             <title name="DIR">turnLeft</title>
                                                             <value name="VALUE">
                                                             <block type="math_number">

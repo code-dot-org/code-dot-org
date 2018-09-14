@@ -1995,8 +1995,8 @@ it:
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
         Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
-      Function intro Ryan_instruction: Usa due volte la funzione `build bridge` (*costruisci
-        ponte*) per creare un sentiero fino alla torcia di pietrarossa.
+      Function intro Ryan_instruction: Usa due volte la funzione `costruisci ponte`
+        per creare un sentiero fino alla torcia di pietrarossa.
       Geometric Pattern_instruction: 'Idea per un progetto: crea un modello utilizzando
         idee geometriche come forme. Realizzarlo richiede pianificazione e persistenza!'
       Geometric Sun_instruction: 'Idea per un progetto: crea un modello utilizzando
@@ -4517,21 +4517,23 @@ it:
         la palla va in rete` e quello `aggiungi un punto all'avversario` al blocco
         verde `quando la palla manca la racchetta`. Vedi quanti punti riesci a raggiungere
         prima che il tuo avversario ne faccia due.
-      courseD_bounce_events10s_instruction: 'Attacca il blocco `aggiungi punto` all''evento
-        `quando la palla va in rete` e il blocco `aggiungi un punto all''avversario`
-        all''evento `quando la palla manca la mano` per creare un gioco. '
-      courseD_bounce_events10s_2018_instruction: 'Attacca il blocco `aggiungi punto`
-        all''evento `quando la palla va in rete` e il blocco `aggiungi un punto all''avversario`
-        all''evento `quando la palla manca la mano` per creare un gioco. '
+      courseD_bounce_events10s_instruction: 'Per creare un gioco, attacca il blocco
+        `aggiungi un punto` all''evento `quando la palla va in rete` e il blocco `aggiungi
+        un punto all''avversario` all''evento `quando la palla manca la mano`. '
+      courseD_bounce_events10s_2018_instruction: 'Per creare un gioco, attacca il
+        blocco `aggiungi un punto` all''evento `quando la palla va in rete` e il blocco
+        `aggiungi un punto all''avversario` all''evento `quando la palla manca la
+        mano`. '
       courseD_bounce_events11_instruction: Adesso puoi predisporre il gioco come vuoi
         attaccando dei blocchi `imposta ...` al blocco `quando si clicca su "Esegui"
         `. Devi poi attaccare a quest'ultimo il blocco `lancia una nuova palla`, che
         devi attaccare anche ad altri blocchi verdi `quando ...`. Quanti punti riesci
         a raggiungere prima che il tuo avversario ne faccia due?
       courseD_bounce_events11s_instruction: 'Attacca il blocco `lancia una nuova palla`
-        tin tutti iposti dove il gioco ha bisogno di una nuova palla. '
+        in tutti i punti del programma in cui serve per far funzionare bene il gioco. '
       courseD_bounce_events11s_2018_instruction: 'Attacca il blocco `lancia una nuova
-        palla` tin tutti iposti dove il gioco ha bisogno di una nuova palla. '
+        palla` in tutti i punti del programma in cui serve per far funzionare bene
+        il gioco. '
       courseD_bounce_events12_instruction: Crea la tua versione del Ping-Pong. È possibile
         modificare tutte le immagini e tutte le regole. Quando hai finito, clicca
         su Condividi per far provare agli amici il gioco sui loro smartphone.
@@ -4586,13 +4588,13 @@ it:
       courseD_bounce_events7_instruction: Attacca dei blocchi a ciascuno dei blocchi
         verdi `quando ...`. Poi fai rimbalzare la palla fino a quando colpisce la
         bandierina.
-      courseD_bounce_events7s_instruction: Attacca i blocchi riproduci suono per riprodurre
-        il fruscio della rete quando colpisci il canestro e il suono di un fischio
-        quando la palla manca la mano. Fai rimbalzare la palla finché non colpisce
-        il bersaglio finale.
-      courseD_bounce_events7s_2018_instruction: Attacca i blocchi riproduci suono
-        per riprodurre il fruscio della rete quando colpisci il canestro e il suono
-        di un fischio quando la palla manca la mano. Fai rimbalzare la palla finché
+      courseD_bounce_events7s_instruction: Attacca dei blocchi `riproduci il ...`
+        per riprodurre il fruscio della rete quando la palla colpisce il canestro
+        e il suono di un fischio quando manca la mano. Fai rimbalzare la palla finché
+        non colpisce il bersaglio finale.
+      courseD_bounce_events7s_2018_instruction: Attacca dei blocchi `riproduci il
+        ...` per riprodurre il fruscio della rete quando la palla colpisce il canestro
+        e il suono di un fischio quando manca la mano. Fai rimbalzare la palla finché
         non colpisce il bersaglio finale.
       courseD_collector_debugging1_instruction: Correggi gli errori per raccogliere
         tutti i diamanti.
@@ -5185,7 +5187,7 @@ it:
       courseE_farmer_functions1a_instruction: Ora aiuta la contadina a raccogliere
         tutte le pannocchie lungo il percorso **e** la zucca finale.
       courseE_farmer_functions1a_2018_instruction: Aiuta la contadina a raccogliere
-        tutte le pannocchie, poi la zucca.
+        tutte le pannocchie e infine la zucca.
       courseE_farmer_functions2b_instruction: Aiuta la contadina a raccogliere pannocchie
         e zucche.
       courseE_farmer_functions2b_2018_instruction: Aiuta la contadina a raccogliere
