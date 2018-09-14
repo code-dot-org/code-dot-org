@@ -118,7 +118,7 @@ export default class DeleteAccountDialog extends React.Component {
               <UnsafeRenderedMarkdown markdown={renderedMarkdown(isTeacher)} />
               {warnAboutDeletingStudents &&
                 <span>
-                  {i18n.deleteAccountDialog_body3()}
+                  <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_body3()} />
                 </span>
               }
             </div>
