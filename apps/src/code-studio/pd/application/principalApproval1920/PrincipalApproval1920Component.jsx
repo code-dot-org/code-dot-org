@@ -149,31 +149,35 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
           [TextFields.otherWithText] : "other"
         })}
+        {this.props.teacherApplication.course === 'Computer Science Principles' &&
+          <div>
+            <p>
+              If you are planning to offer CS Principles as an AP course, please review the AP Score Sharing Agreement.
+            </p>
+            {this.singleCheckboxFor('shareApScores', {
+              required: false,
+              label: `I am authorized to release student data and give permission for the College
+              Board to send de-identified AP scores for Code.org classes directly to Code.org for
+              the 2019 to 2021 school years. I understand that the de-identified data cannot be
+              tied to individual students, will not be used to evaluate teachers, and will greatly
+              help Code.org evaluate its program effectiveness.`
+            })}
+          </div>
+        }
         <p>
-          If you are planning to offer CS Principles as an AP course, please review the AP Score Sharing Agreement.
-        </p>
-        {this.singleCheckboxFor('shareApScores', {
-          required: false,
-          label: `I am authorized to release student data and give permission for the College
-          Board to send de-identified AP scores for Code.org classes directly to Code.org for
-          the 2019 to 2021 school years. I understand that the de-identified data cannot be
-          tied to individual students, will not be used to evaluate teachers, and will greatly
-          help Code.org evaluate its program effectiveness.`
-        })}
-        <p>
-          Code.org works closely with local Regional Partners to organize and deliver the
-          Professional Learning Program.  By submitting this form, teachers are
-          agreeing to allow Code.org to share information on how they use Code.org and the
-          Professional Learning resources with their Regional Partner and school district.
-          In order to organize the workshops and support teachers, our partners need to
-          know who is attending and what content is relevant for them. So, we will share
-          teachers’ contact information, which courses/units they are using in their
-          classrooms and aggregate data about their classes. This includes the number of
-          students in their classes, the demographic breakdown of their classroom, and the
-          name of their school and district. We will not share any information about
-          individual students with our Regional Partners - all information will be
-          de-identified and aggregated. Our Regional Partners are contractually obliged to
-          treat this information with the same level of confidentiality as Code.org.
+          Code.org works closely with local Regional Partners to organize and deliver the Professional
+          Learning Program. By submitting their application to the professional learning program,
+          teachers have agreed to allow Code.org to share information on how they use Code.org and the
+          Professional Learning resources with their Regional Partner and school district. In order to
+          organize the workshops and support teachers, our partners need to know who is attending and
+          what content is relevant for them. So, we will share teachers’ contact information, which
+          courses/units they are using in their classrooms and aggregate data about their classes. This
+          includes the number of students in their classes, the demographic breakdown of their classroom,
+          and the name of their school and district. We will not share any information about individual
+          students with our Regional Partners - all information will be de-identified and aggregated. Our
+          Regional Partners are contractually obliged to treat this information with the same level of
+          confidentiality as Code.org. To see Code.org’s complete Privacy Policy, visit <a href="http://code.org/privacy">
+          http://code.org/privacy</a>.
         </p>
       </div>
     );
@@ -218,20 +222,20 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
       <FormGroup>
         <p>
           Thank you for your support of computer science education! A teacher at your
-          school, {this.props.teacherApplication.name} has applied to be a part of
+          school, {this.props.teacherApplication.name}, has applied to be a part of
           Code.org’s Professional Learning Program to teach the {' '}
           {this.props.teacherApplication.course} curriculum during the {YEAR} school
           year. Your approval is required for the teacher’s application
           to be considered.
         </p>
-        {this.inputFor('firstName')}
-        {this.inputFor('lastName')}
         {
           this.selectFor('title', {
             required: false,
             placeholder: 'Select a title',
           })
         }
+        {this.inputFor('firstName')}
+        {this.inputFor('lastName')}
         {this.inputFor('email')}
         {
           this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
