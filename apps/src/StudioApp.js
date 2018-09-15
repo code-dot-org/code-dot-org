@@ -3004,29 +3004,23 @@ StudioApp.prototype.showRateLimitAlert = function () {
   });
 };
 
-let libraryPreload;
 StudioApp.prototype.loadLibraries_ = function (helperLibraryNames = []) {
-  if (!libraryPreload) {
-    libraryPreload = Promise.all(helperLibraryNames.map(this.loadLibrary_.bind(this)));
+  if (!this.libraryPreload_) {
+    this.libraryPreload_ = Promise.all(helperLibraryNames.map(this.loadLibrary_.bind(this)));
   }
-  return libraryPreload;
+  return this.libraryPreload_;
 };
 
+/** @return Promise */
 StudioApp.prototype.loadLibrary_ = function (name) {
   if (this.libraries[name]) {
     return Promise.resolve();
   }
 
-  return new Promise((resolve, error) => {
-    $.ajax({
-      url: '/libraries/' + name,
-      success: response => {
-        this.libraries[name] = response;
-        resolve();
-      },
-      error,
-    });
-  });
+  return (async () => {
+    const response = await fetch('/libraries/' + name);
+    this.libraries[name] = await response.text();
+  })();
 };
 
 let instance;
