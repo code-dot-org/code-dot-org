@@ -3004,7 +3004,8 @@ StudioApp.prototype.showRateLimitAlert = function () {
   });
 };
 
-StudioApp.prototype.loadLibraries_ = function (helperLibraryNames = []) {
+/** @return Promise */
+StudioApp.prototype.loadLibraries = function (helperLibraryNames = []) {
   if (!this.libraryPreload_) {
     this.libraryPreload_ = Promise.all(helperLibraryNames.map(this.loadLibrary_.bind(this)));
   }
