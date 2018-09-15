@@ -3013,15 +3013,13 @@ StudioApp.prototype.loadLibraries = function (helperLibraryNames = []) {
 };
 
 /** @return Promise */
-StudioApp.prototype.loadLibrary_ = function (name) {
+StudioApp.prototype.loadLibrary_ = async function (name) {
   if (this.libraries[name]) {
-    return Promise.resolve();
+    return;
   }
 
-  return (async () => {
-    const response = await fetch('/libraries/' + name);
-    this.libraries[name] = await response.text();
-  })();
+  const response = await fetch('/libraries/' + name);
+  this.libraries[name] = await response.text();
 };
 
 let instance;
