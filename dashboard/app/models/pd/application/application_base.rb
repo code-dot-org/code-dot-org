@@ -34,6 +34,8 @@
 #  index_pd_applications_on_user_id              (user_id)
 #
 
+require 'state_abbr'
+
 # Base class for the Pd application forms.
 # Make sure to use a derived class for a specific application type and year.
 # This on its own will fail validation.

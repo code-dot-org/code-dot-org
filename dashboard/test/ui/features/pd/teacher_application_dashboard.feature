@@ -16,6 +16,7 @@ Feature: Teacher Application Dashboard view
 
     # Access the Detail View by navigating to the first row's "view application" button href
     # rather than clicking so it does not open in a new tab.
+    Then I wait until element "table#quick-view a.btn:contains(View Application)" is visible
     Then execute JavaScript expression "window.location = $('table#quick-view a.btn:contains(View Application):first()').prop('href')"
     Then I wait until element "#detail-view" is visible
     And I see no difference for "Teacher Detail View" except in circle

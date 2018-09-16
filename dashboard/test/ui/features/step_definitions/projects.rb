@@ -139,3 +139,13 @@ Then /^the first project in the table is named "([^"]*)"$/ do |expected_name|
     And I wait until the first ".ui-projects-table-project-name" contains text "#{expected_name}"
   }
 end
+
+Then /^the project gallery contains ([\d]+) project (?:type|types)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.ui-project-app-type-area').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
+
+Then /^the project gallery contains ([\d]+) view more (?:link|links)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.viewMoreLink').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
