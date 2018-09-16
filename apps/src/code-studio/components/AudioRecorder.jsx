@@ -112,7 +112,7 @@ export default class AudioRecorder extends React.Component {
     this.recorder.start();
     firehoseClient.putRecord(
       {
-        study: 'sound-dialog',
+        study: 'sound-dialog-1',
         study_group: studyGroup,
         event: 'record-sound',
         data_json: this.state.audioName,

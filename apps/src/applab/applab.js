@@ -624,7 +624,7 @@ Applab.init = function (config) {
 
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
 
-  const loader = studioApp().loadLibraries_(level.helperLibraries).then(() => {
+  const loader = studioApp().loadLibraries(level.helperLibraries).then(() => {
     Applab.render();
 
     //Scale old-sized apps to fit the new sized display. Old height - 480.

@@ -6,12 +6,6 @@
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
   - projects_data[:canShare] = !current_user.sharing_disabled?
-  // We're going to run an A/B experiment to compare (un)publishing from the
-  // quick actions dropdown and from a button in the published column.
-  // As part of the experiment, we want to log user's id.
-  // TODO (Erin B.) delete this data when we
-  // determine the experiment outcome.
-  - projects_data[:userId] = current_user.id
 
 = render partial: 'shared/angular'
 

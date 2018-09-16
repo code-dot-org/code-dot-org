@@ -63,13 +63,14 @@ class PublicGallery extends Component {
   }
 
   render() {
-    const {projectLists} = this.props;
+    const {projectLists, limitedGallery} = this.props;
+
     return (
       <div>
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
-          limitedGallery={this.props.limitedGallery}
+          limitedGallery={limitedGallery}
         />
         <div style={styles.clear}/>
         <div style={styles.linkBox}>

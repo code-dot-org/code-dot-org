@@ -576,6 +576,7 @@ class FilesApi < Sinatra::Base
     unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
+    bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)

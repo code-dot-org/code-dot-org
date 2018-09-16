@@ -32,15 +32,16 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "hide_custom_blocks": "false",
+    "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "markdown_instructions": "Now we're grooving! Now use the `at 6 measures` to make Alien start a new move after 6 measures.",
+    "markdown_instructions": "Now we're grooving! Now use the `at 6 measures` to make Duck start a new move after 6 measures.",
     "parent_level_id": 14481,
+    "validation_code": "if (World.frameCount == 1) validationProps.status = 0;\r\n\r\nif (getTime(\"measures\") > 12) {\r\n  if (dancer1.current_move == 6) {\r\n    validationProps.status = 3;\r\n  }\r\n  levelSuccess(validationProps.status);\r\n}",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-13 20:54:56 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-13 21:37:33 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-13 21:42:39 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-13 21:47:35 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 04:58:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:03:00 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:03:29 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"markdown_instructions\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:09:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:13:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:14:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -50,7 +51,7 @@
         <block type="when_run" movable="false">
           <next>
             <block type="Dancelab_makeNewDanceSprite">
-              <title name="COSTUME">"alien"</title>
+              <title name="COSTUME">"duck"</title>
               <title name="NAME">dancer1</title>
               <value name="LOCATION">
                 <block type="Dancelab_location_picker">
@@ -61,16 +62,13 @@
           </next>
         </block>
         <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">4</title>
           <title name="UNIT">"measures"</title>
-          <value name="TIMESTAMP">
-            <block type="math_number">
-              <title name="NUM">4</title>
-            </block>
-          </value>
           <next>
-            <block type="Dancelab_changeMove">
+            <block type="Dancelab_changeMoveLR">
               <title name="SPRITE">dancer1</title>
               <title name="MOVE">2</title>
+              <title name="DIR">-1</title>
             </block>
           </next>
         </block>
@@ -230,5 +228,27 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="Dancelab_makeNewDanceSprite">
+          <title name="COSTUME">"duck"</title>
+          <title name="NAME">dancer1</title>
+          <value name="LOCATION">
+            <block type="Dancelab_location_picker">
+              <title name="LOCATION">{"x":200,"y":200}</title>
+            </block>
+          </value>
+        </block>
+        <block type="Dancelab_changeMoveLR">
+          <title name="SPRITE">dancer1</title>
+          <title name="MOVE">1</title>
+          <title name="DIR">-1</title>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">6</title>
+          <title name="UNIT">"measures"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
   </blocks>
 </Dancelab>

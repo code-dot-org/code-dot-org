@@ -17,16 +17,20 @@
             "\"none\""
           ],
           [
-            "Disco",
-            "\"disco\""
+            "Strobe",
+            "\"strobe\""
           ],
           [
-            "Rainbow",
-            "\"rainbow\""
+            "Rain",
+            "\"rain\""
           ],
           [
-            "Diamonds",
-            "\"diamonds\""
+            "Tacos",
+            "\"raining_tacos\""
+          ],
+          [
+            "Random",
+            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]"
           ]
         ]
       }

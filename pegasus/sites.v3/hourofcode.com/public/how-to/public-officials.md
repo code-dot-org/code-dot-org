@@ -15,9 +15,9 @@ nav: how_to_nav
 ## Are you hosting an elected official at your Hour of Code?
 [View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
 
-<img src="/images/fit-800/hoc-govs.png"/>
+<img src="/images/fit-800/hoc_govs.png"/>
 
-From left to right: *Governors from Arkansas, Iowa, and Virginia participating in an Hour of Code.*
+From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
 ## Get every school participating, every student learning!
 
 ### 1. Read our one-pager 

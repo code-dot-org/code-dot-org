@@ -68,6 +68,28 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_rename_object_filename_too_long
+    file_data = 'fake-file-data'
+    old_filename = @api.randomize_filename 'old_file.html'
+    new_filename = "long_filename#{'_' * 512}.html"
+    delete_all_file_versions old_filename, URI.escape(old_filename)
+    delete_all_manifest_versions
+    post_file_data @api, old_filename, file_data, 'test/html'
+
+    @api.rename_object old_filename, new_filename
+    assert bad_request?
+    @api.get_object(new_filename)
+    assert not_found?
+    @api.get_object(old_filename)
+    assert successful?
+    assert_equal file_data, last_response.body
+
+    @api.delete_object(old_filename)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_upload_files
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'

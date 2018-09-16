@@ -404,7 +404,7 @@ GameLab.prototype.init = function (config) {
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   this.loadValidationCodeIfNeeded_();
-  const loader = this.studioApp_.loadLibraries_(this.level.helperLibraries).then(() => ReactDOM.render((
+  const loader = this.studioApp_.loadLibraries(this.level.helperLibraries).then(() => ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
