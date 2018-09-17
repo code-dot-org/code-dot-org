@@ -10,6 +10,11 @@
   - script_data = { editorall: { video_infos: video_infos }.to_json }
   %script{src: minifiable_asset_path('js/levels/editors/_all.js'), data: script_data}
 
+.field
+  = f.label 'Documentation'
+  Find documentation for levelbuilder and its processes
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
 - unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
   .field
     = f.label :display_name
