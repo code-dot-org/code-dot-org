@@ -3,8 +3,10 @@ require_relative './db'
 module Metrics
   # Connect to db. Third param sets frequency to check connection. Currently set
   # to check before each request to db.
-  DEVINTERNAL_DB = CDO.devinternal_db_writer ?
-    sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer, validation_frequency: -1) : nil
+  unless rack_env == :production
+    DEVINTERNAL_DB = CDO.devinternal_db_writer ?
+                       sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer, validation_frequency: -1) : nil
+  end
 
   # Values for DTT metrics.
   AUTOMATIC = 0
