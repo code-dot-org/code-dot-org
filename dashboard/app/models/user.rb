@@ -831,6 +831,17 @@ class User < ActiveRecord::Base
     end
   end
 
+  def update_email_for(provider: nil, uid: nil, email:)
+    if migrated?
+      # Provider and uid are required to update email on AuthenticationOption for migrated user.
+      return unless provider.present? && uid.present?
+      auth_option = authentication_options.find_by(credential_type: provider, authentication_id: uid)
+      auth_option&.update(email: email)
+    else
+      update(email: email)
+    end
+  end
+
   def update_primary_contact_info(user: {email: nil, hashed_email: nil})
     new_email = user[:email]
     new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
