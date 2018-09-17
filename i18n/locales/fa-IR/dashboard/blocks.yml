@@ -10,31 +10,201 @@ fa:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': بعدي
             '"prev"': قبلی
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': بعدي
             '"prev"': قبلی
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': بعدي
             '"prev"': قبلی
       Dancelab_everySeconds:
@@ -89,100 +259,6 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': بالا
-            '"down"': پایین
-            '"left"': سمت چپ
-            '"right"': سمت راست
-            '"space"': فضا
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': ثانیه
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': بعدي
-            '"prev"': قبلی
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': بعدي
-            '"prev"': قبلی
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': بعدي
-            '"prev"': قبلی
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': ثانیه
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': سمت راست
-            '"left"': سمت چپ
-      DancelabAlpha_randomColor:
-        text: رنگ تصادفی
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': اندازه
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': بالا
-            '"down"': پایین
-            '"left"': سمت چپ
-            '"right"': سمت راست
-            '"space"': فضا
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': بالا
@@ -279,5 +355,16 @@ fa:
             '"scale"': اندازه
       Vanilla_randomColor:
         text: رنگ تصادفی
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": جلو
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": شن
+            "'planksOak'": چوب بلوط
       craft_moveForward:
         text: برو جلو
+      craft_placeTorch:
+        text: مشعل را قرار بده
