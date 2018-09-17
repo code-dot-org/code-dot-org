@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL, RELEASE_OR_DELETE_RECORDS_EXPLANATION} from '@cdo/apps/lib/util/urlHelpers';
 
 export const TeacherWarning = () => {
   return (
@@ -54,6 +54,9 @@ const CHECKBOX_MAP = {
       <span>
         <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
         {i18n.deleteAccountDialog_checkbox1_2()}
+        <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+          {i18n.learnMore()}
+        </a>
       </span>
     )
   },

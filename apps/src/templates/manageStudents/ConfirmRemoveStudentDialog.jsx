@@ -5,7 +5,7 @@ import {Header, ConfirmCancelFooter} from '../../lib/ui/SystemDialog/SystemDialo
 import BaseDialog from '../BaseDialog';
 import Button from "../Button";
 import color from "../../util/color";
-import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL, RELEASE_OR_DELETE_RECORDS_EXPLANATION} from "@cdo/apps/lib/util/urlHelpers";
 
 // A stub set of otherwise-required props for use in stories and unit tests.
 export const MINIMUM_TEST_PROPS = {
@@ -57,6 +57,10 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
                 <strong>{i18n.removeStudentBody1()}</strong>
                 {' '}
                 {i18n.removeStudentBody2()}
+                {' '}
+                <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+                  {i18n.learnMore()}
+                </a>
               </p>
               {dependsOnThisSectionForLogin &&
                 <div>
