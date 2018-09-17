@@ -87,7 +87,9 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           max: 100,
           step: 1
         })}
-        Percentage of student enrollment by race
+        <p style={styles.questionText}>
+          Percentage of student enrollment by race
+        </p>
         {
           RACE_LIST.map(race => {
             return this.numberInputFor(race, {
@@ -128,10 +130,10 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
                     of your school?`
           })
         }
-        <p>
-          There may be a fee associated with your teacher’s summer workshop. Please
-          carefully <a href="https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo" target="_blank">
-          look here</a> to find more information about the workshop.
+        <p style={styles.questionText}>
+          There may be a fee associated with your teacher’s professional learning program. Please <a href="https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo" target="_blank">
+          check here</a> to see if there are fees for your teacher’s professional learning program and/or if there are scholarships available in your region.
+
         </p>
         <div>
           {this.singleCheckboxFor('understandFee')}
@@ -148,6 +150,11 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         </div>
         {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
           [TextFields.otherWithText] : "other"
+        }, {
+          label:
+            <span style={styles.questionText}>How did you hear about Code.org’s Professional Learning program? (To see a list of local Regional
+              Partners, <a href="https://code.org/educate/regional-partner/partners">visit this page</a>.)
+            </span>
         })}
         {this.props.teacherApplication.course === 'Computer Science Principles' &&
           <div>
@@ -196,10 +203,11 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderImplementationSection() {
-    const question_label = `To participate in Code.org’s ${this.props.teacherApplication.course} Professional
+    const question_label = (<span>To participate in Code.org’s {this.props.teacherApplication.course} Professional
                   Learning Program, we require that this course be offered in one of the following
-                  ways. Please select which option will be implemented at your school. Be sure to
-                  review the guidance on required number of hours here prior to answering.`;
+                  ways. Please select which option will be implemented at your school. Be sure
+                  to <a href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18">
+                  review the guidance on required number of hours here</a> prior to answering.</span>);
     const other_label = "We will use a different implementation schedule. (Please Explain):";
 
     if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
@@ -237,6 +245,11 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         {this.inputFor('firstName')}
         {this.inputFor('lastName')}
         {this.inputFor('email')}
+        <p>Teachers in this program are required to participate in both:</p>
+        <ul>
+          <li>One five-day, in-person summer workshop in 2019</li>
+          <li>Up to four one-day, in-person local workshops during the 2019-20 school year (typically held on Saturdays)</li>
+        </ul>
         {
           this.radioButtonsWithAdditionalTextFieldsFor('doYouApprove', {
             [TextFields.otherWithText]: "other"
