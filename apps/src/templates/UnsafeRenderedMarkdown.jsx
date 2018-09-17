@@ -1,12 +1,29 @@
 import React, { PropTypes } from 'react';
+
+import experiments from '@cdo/apps/util/experiments';
+
 import processMarkdown from 'marked';
 import renderer from "../util/StylelessRenderer";
 
+import Parser from '@code-dot-org/redactable-markdown';
+
+import expandableImages from './plugins/expandableImages';
+import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
+import stripStyles from './plugins/stripStyles';
+import fixTightLists from './plugins/fixTightLists';
+
+const remarkParser = Parser.create();
+
+remarkParser.parser.use([
+  xmlAsTopLevelBlock,
+  expandableImages,
+  fixTightLists
+]);
+
+remarkParser.compilerPlugins.push(stripStyles);
+
 /**
  * Basic component for rendering a markdown string as HTML.
- *
- * Right now, it still uses marked; this will eventually be updated to use the
- * new remark system, and possibly even support redaction.
  *
  * Note that this component will render anything contained in the markdown into
  * the browser, including arbitrary html and script tags. It should be
@@ -15,11 +32,17 @@ import renderer from "../util/StylelessRenderer";
  */
 export default class UnsafeRenderedMarkdown extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired
+    markdown: PropTypes.string.isRequired,
   };
 
   render() {
-    const processedMarkdown = processMarkdown(this.props.markdown, { renderer });
+    let processedMarkdown;
+    if (experiments.isEnabled('remark')) {
+      processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
+    } else {
+      processedMarkdown = processMarkdown(this.props.markdown, { renderer });
+    }
+
     /* eslint-disable react/no-danger */
     return (
       <div

@@ -8,6 +8,10 @@ class HomeController < ApplicationController
   # clicking on a link.
   skip_before_action :verify_authenticity_token, only: 'set_locale'
 
+  # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
+  # clearing the sign up tracking variables
+  skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
+
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
     if params[:i18npath]
