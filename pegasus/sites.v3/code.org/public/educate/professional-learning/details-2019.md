@@ -34,7 +34,7 @@ theme: responsive
 
 Want to get notified when applications open? Provide your contact information to a Code.org Regional Partner.
 
-<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button></a>
 
 ## New to computer science? No worries!
 
@@ -78,20 +78,13 @@ The Code.org Professional Learning Program has both in-person and online support
 * Participants explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
 * With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.
 
-## <a name="features"></a>Program features
-
-<details>
-  <summary>**One cohesive set of resources**</summary>
-  <p>
-<br>
-​Our professional learning and curriculum flow seamlessly together, empowering teachers to deliver the course with confidence. In-person workshops combine with online tools to provide participants with a broad selection of resources to help them plan ahead for implementing the course in their classrooms, while also collaborating with other educators.
-</p>
-</details>
+<a name="features"></a>
+## Program features
 
 <details>
   <summary>**Teaching and learning in context**</summary>
   <p>
- <br>
+  <br>
 Participants will engage with the curriculum both as instructors and as learners. By experiencing the course content as an active learner, participants will gain important, concrete insight into the perspective their students will have during the academic year. By interacting with curriculum content as instructors, participants will learn how to plan and deliver lessons.
 </p>
 </details>
@@ -99,25 +92,32 @@ Participants will engage with the curriculum both as instructors and as learners
 <details>
   <summary>**A collaborative, participant-centric approach**</summary>
   <p>
-<br>
+  <br/>
 ​Teachers and facilitators will have the opportunity to share their expertise from the field and collaborate on strategies to bring to the CS Principles and CS Discoveries classrooms, giving participants a chance to learn from everyone in the room. Facilitators model pedagogical strategies and participants share their own approaches by planning and delivering lessons.
 ​</p>
 ​</details>
-​
-​<details>
-​ <summary>**Join the community of educators**</summary>
-​ <p>
-​<br>
-​All teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. 
-​</p>
-​ <p>
+
+<details>
+  <summary>**One cohesive set of resources**</summary>
+  <p>
+  <br>
+​Our professional learning and curriculum flow seamlessly together, empowering teachers to deliver the course with confidence. In-person workshops combine with online tools to provide participants with a broad selection of resources to help them plan ahead for implementing the course in their classrooms, while also collaborating with other educators.
+</p>
+</details>
+
+<details>
+  <summary>**Join the community of educators**</summary>
+  <p>
+  <br>
+All teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum.
+
 To help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time.
-​</p>
-​ <p>
-<img style="margin-top:-8px;margin-bottom:-20px;margin-left:-25px;float:left" src="/images/avatars/fit-200/iste.png"/>
 
-Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, <a href="https://www.iste.org/membership/code-org", target=_"blank">we can offer an ISTE membership</a> exclusively to Code.org teachers at the special price of $99 (regularly $125).
+<img style="margin-top:-8px; margin-bottom:-20px; margin-left:-25px; float:left;" src="/images/avatars/fit-200/iste.png"/>
 
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, <a href="https://www.iste.org/membership/code-org", target="_blank">we can offer an ISTE membership</a> exclusively to Code.org teachers at the special price of $99 (regularly $125).
+
+<br>
 Check out these 3 key benefits of ISTE membership:
 
 - Professional Learning Networks made up of peer experts, including computer science educators

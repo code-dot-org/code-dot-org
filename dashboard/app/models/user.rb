@@ -75,6 +75,7 @@ require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
+require 'sign_up_tracking'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -707,10 +708,14 @@ class User < ActiveRecord::Base
   end
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-  def self.from_omniauth(auth, params)
+  def self.from_omniauth(auth, params, session = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
-    omniauth_user ||= create do |user|
-      initialize_new_oauth_user(user, auth, params)
+
+    unless omniauth_user
+      omniauth_user = create do |user|
+        initialize_new_oauth_user(user, auth, params)
+      end
+      SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
 
     omniauth_user.update_oauth_credential_tokens(auth)
@@ -828,6 +833,17 @@ class User < ActiveRecord::Base
       update_attributes(params, *options)
     else
       super
+    end
+  end
+
+  def update_email_for(provider: nil, uid: nil, email:)
+    if migrated?
+      # Provider and uid are required to update email on AuthenticationOption for migrated user.
+      return unless provider.present? && uid.present?
+      auth_option = authentication_options.find_by(credential_type: provider, authentication_id: uid)
+      auth_option&.update(email: email)
+    else
+      update(email: email)
     end
   end
 

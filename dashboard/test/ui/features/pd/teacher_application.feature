@@ -6,7 +6,7 @@ Feature: Teacher Application
 Scenario: Basic teacher application submission
   Given I create a teacher named "Severus"
     And I am on "http://studio.code.org/pd/application/teacher"
-    And I wait until element "h1" contains text "2018-19 Professional Learning Program Teacher Application"
+    And I wait until element "h1" contains text "2019-20 Professional Learning Program Teacher Application"
     And I open my eyes to test "Teacher Application"
 
   # Section 1
@@ -95,7 +95,7 @@ Scenario: Basic teacher application submission
   Then I wait until element "h3" contains text "Section 5: Submission"
    And I press the first "input#agree" element
   Then I see no difference for "Section 5: Submission"
-   And I submit
+   And I press the first "button[type='submit']" element
 
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
@@ -104,7 +104,7 @@ Scenario: Basic teacher application submission
   # Principal approval
   Then I sign out
   Then I navigate to the principal approval page for "Severus"
-  Then I wait until element "h1" contains text "2018-2019 Code.org Principal Approval Form"
+  Then I wait until element "h1" contains text "2019-2020 Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
   And I press keys "nonexistent" for element "#school input"
