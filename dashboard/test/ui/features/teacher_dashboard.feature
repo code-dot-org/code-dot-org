@@ -40,6 +40,7 @@ Feature: Using the teacher dashboard
     # Text responses tab
     When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
+    And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
     # Assessments and surveys tab
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it

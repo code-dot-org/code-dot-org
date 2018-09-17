@@ -11,7 +11,8 @@
     "args": [
       {
         "name": "TIMESTAMP",
-        "type": "Number"
+        "type": "Number",
+        "field": true
       },
       {
         "name": "UNIT",
