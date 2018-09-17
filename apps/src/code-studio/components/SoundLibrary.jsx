@@ -95,7 +95,7 @@ export default class SoundLibrary extends React.Component {
   onClickChoose = () => {
     firehoseClient.putRecord(
       {
-        study: 'sound-dialog',
+        study: 'sound-dialog-1',
         study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
         event: 'choose-library-sound',
         data_json: this.state.selectedSound.sourceUrl

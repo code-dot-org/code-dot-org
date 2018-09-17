@@ -103,15 +103,6 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
-      source_module: Pd::Teacher1819ApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher1819ApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
       source_module: Pd::Teacher1920ApplicationConstants,
       transform_keys: true
     ),
@@ -121,10 +112,10 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval1819ApplicationConstants,
+      source_module: Pd::PrincipalApproval1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1819ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(

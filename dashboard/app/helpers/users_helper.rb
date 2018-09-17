@@ -1,5 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/shared_constants'
+require 'cdo/firehose'
 require 'honeybadger'
 
 module UsersHelper
@@ -14,7 +15,7 @@ module UsersHelper
 
   # Move followed sections from source_user to destination_user and destroy source_user.
   # Returns a boolean - true if all steps were successful, false otherwise.
-  def move_sections_and_destroy_source_user(source_user, destination_user)
+  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:)
     # No-op if source_user is nil
     return true unless source_user.present?
 
@@ -37,8 +38,15 @@ module UsersHelper
       end
 
       source_user.destroy!
-      true
     end
+
+    log_account_takeover_to_firehose(
+      source_user: source_user,
+      destination_user: destination_user,
+      type: takeover_type,
+      provider: destination_user.provider
+    )
+    true
   rescue
     false
   end
@@ -54,7 +62,11 @@ module UsersHelper
 
       existing_account = User.find_by_credential(type: provider, id: uid)
       # No-op if move_sections_and_destroy_source_user fails
-      return unless move_sections_and_destroy_source_user(existing_account, user)
+      return unless move_sections_and_destroy_source_user(
+        source_user: existing_account,
+        destination_user: user,
+        takeover_type: 'oauth'
+      )
 
       if user.migrated?
         success = user.add_credential(
@@ -80,6 +92,19 @@ module UsersHelper
         user.save
       end
     end
+  end
+
+  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:)
+    FirehoseClient.instance.put_record(
+      study: 'user-soft-delete-audit',
+      event: "#{type}-account-takeover", # Silent or OAuth takeover
+      user_id: source_user.id, # User account being "taken over" (deleted)
+      data_int: destination_user.id, # User account after takeover
+      data_string: provider, # OAuth provider
+      data_json: {
+        user_type: destination_user.user_type,
+      }.to_json
+    )
   end
 
   def begin_account_takeover(provider:, uid:, oauth_token:, force_takeover:)

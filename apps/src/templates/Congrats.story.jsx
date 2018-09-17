@@ -11,9 +11,9 @@ export default storybook => {
         description: `Congrats component if Applab tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="applab"
+              tutorial="applab-intro"
               userType="signedOut"
-              isEnglish={true}
+              language="en"
             />
         )
       },
@@ -22,9 +22,9 @@ export default storybook => {
         description: `Congrats component if Applab tutorial completed, student`,
         story: () => (
             <Congrats
-              completedTutorialType="applab"
+              tutorial="applab-intro"
               userType="student"
-              isEnglish={true}
+              language="en"
             />
         )
       },
@@ -33,9 +33,9 @@ export default storybook => {
         description: `Congrats component if either pre-2017 Minecraft tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="pre2017Minecraft"
+              tutorial="minecraft"
               userType="signedOut"
-              isEnglish={true}
+              language="en"
             />
         )
       },
@@ -44,9 +44,9 @@ export default storybook => {
         description: `Congrats component if either pre-2017 Minecraft tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="pre2017Minecraft"
+              tutorial="minecraft"
               userType="student"
-              isEnglish={true}
+              language="en"
             />
         )
       },
@@ -55,9 +55,9 @@ export default storybook => {
         description: `Congrats component if 2017 Minecraft tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="2017Minecraft"
+              tutorial="hero"
               userType="signedOut"
-              isEnglish={true}
+              language="en"
             />
         )
       },
@@ -66,9 +66,20 @@ export default storybook => {
         description: `Congrats component if 2017 Minecraft tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="2017Minecraft"
+              tutorial="hero"
               userType="student"
-              isEnglish={true}
+              language="en"
+            />
+        )
+      },
+      {
+        name: 'Congrats - 2017 Minecraft, student, Korean',
+        description: `Congrats component if 2017 Minecraft tutorial completed, in Korean`,
+        story: () => (
+            <Congrats
+              tutorial="hero"
+              userType="student"
+              language="ko"
             />
         )
       },
@@ -77,9 +88,9 @@ export default storybook => {
         description: `Congrats component if any other Code.org tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="other"
+              tutorial="other"
               userType="signedOut"
-              isEnglish={true}
+              language="en"
             />
         )
       },
@@ -88,9 +99,9 @@ export default storybook => {
         description: `Congrats component if any other Code.org tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="other"
+              tutorial="other"
               userType="student"
-              isEnglish={true}
+              language="en"
             />
         )
       },
@@ -99,9 +110,9 @@ export default storybook => {
         description: `Congrats component if any other Code.org tutorial completed`,
         story: () => (
             <Congrats
-              completedTutorialType="other"
+              tutorial="other"
               userType="teacher"
-              isEnglish={true}
+              language="en"
             />
         )
       },

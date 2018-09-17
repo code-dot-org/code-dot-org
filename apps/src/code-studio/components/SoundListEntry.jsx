@@ -69,7 +69,7 @@ class SoundListEntry extends React.Component {
       this.setState({isPlaying: true});
       firehoseClient.putRecord(
         {
-          study: 'sound-dialog',
+          study: 'sound-dialog-1',
           study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
           event: 'play-library-sound',
           data_json: this.props.soundMetadata.sourceUrl
