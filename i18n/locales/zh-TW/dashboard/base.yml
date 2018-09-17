@@ -10,6 +10,7 @@ zh-TW:
       messages:
         blank: "必填"
         blank_plural: "必填"
+        invalid: "不正確"
         invalid_plural: "無效"
     attributes:
       user:
@@ -45,7 +46,7 @@ zh-TW:
       label: '新增一個教師：'
       placeholder: "學習小組代碼 (ABCDEF)"
       instructions: "請輸入老師給你的代碼。它是由 6 個字母所組成的代碼，像「ABCDEF」。"
-      instructions_short: "輸入您的 6 個字學習小組代碼"
+      instructions_short: "輸入您的學習小組代碼（6字元）"
     submit: '新增教師'
   add_hint_form:
     placeholder: '請在此處輸入您的提示'
@@ -58,7 +59,7 @@ zh-TW:
   courses: '課程'
   courses_page:
     title_student: "在 Code Studio 上學習"
-    title_teacher: "使用 Code Studio 教學"
+    title_teacher: "教授計算機科學"
   unplugged_activity: '不插電的活動'
   of: "／"
   more: "更多"
@@ -84,11 +85,15 @@ zh-TW:
     facebook: 'Facebook'
     windowslive: '微軟帳戶'
     clever: 'Clever 帳號'
+    powerschool: 'Powerschool 帳戶'
     forgot_password: '忘記了您的密碼嗎？'
+    migration_success: '成功！你已更新為我們的新用戶體驗。'
+    demigration_success: '你的帳戶目前停用新的用戶體驗功能。'
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
     not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
-    use_clever: "對不起，您的 Code.org 帳號無法連結到您的 %{provider}。請登入您的 Clever Portal 來代替。"
+    use_clever: "對不起，您的 Code.org 帳號無法連結到您的 %{provider}。請改從 Clever 平台登入。"
+    unable_to_connect_provider: "無法將你的 Code.org 帳戶連接到 %{provider} ，麻煩再試一次。"
   signup_form:
     student_count: '%{count} 名學生已經註冊。'
     teacher_count: '%{count} 名教師已經註冊。'
@@ -113,12 +118,14 @@ zh-TW:
     valid_password: "密碼有效！"
     invalid_password: "密碼必須要 6 個字元以上"
     mismatch_password: "你輸入的兩次密碼不一致"
+    agree_tos_privacy: "我同意<a href='http://code.org/tos'>服務條款</a>以及<a href='http://code.org/privacy'>隱私政策</a>。"
     under_13_consent: "如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。"
     agree_us_website: "我同意使用位於美國境內的網站。"
     my_data_to_us: "我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。"
     student_terms: "我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a href='http://code.org/privacy'>隱私權政策</a>。"
     teacher_terms: "我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'> 隱私政策</a>。"
     additional_information: "我們還需要一些其他資訊來完成你的註冊。"
+    user_type_button: "更新帳戶類型"
     user_type_label: "帳戶類型"
     user_type_teacher: "教師"
     user_type_student: "學生"
@@ -126,9 +133,10 @@ zh-TW:
     accept_terms: "你必須同意以建立一個帳戶"
     error: "發生錯誤。"
     email_preference_question: "我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？"
-    email_preference_privacy: "(請參閱我們的隱私政策)"
+    email_preference_privacy: "（請參閱我們的隱私政策）"
     email_preference_yes: "是"
     email_preference_no: "否"
+    email_preference_required: "你必須指定一個信箱地址。"
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -177,6 +185,7 @@ zh-TW:
       email: '電子信箱'
       submit: '提交'
     reset_errors:
+      captcha_required: '重置密碼前請輸入驗證碼。'
       invalid_email: '你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。'
     change_form:
       title: '更改您的密碼'
@@ -197,6 +206,7 @@ zh-TW:
     student_associated_subject: 'Code.org 的登入資訊'
   teacher_mailer:
     new_teacher_subject: '歡迎來到 Code.org ！'
+    delete_teacher_subject: 'Code.org 通知：你的帳戶已被刪除'
   section:
     your_section:
       one: '你的學習小組：'
@@ -206,7 +216,7 @@ zh-TW:
       remove: '你確定要退出這個學習小組？'
     remove: '（移除學習小組）'
     type:
-      picture: '圖片密碼'
+      picture: '通關圖片'
       word: '通關密語'
       email: '電子信箱'
       google_classroom: 'Google Classroom'
@@ -261,7 +271,7 @@ zh-TW:
         gamelab: '製作遊戲實驗室專案'
         weblab: '製作網路實驗室 (測試版) 專案'
       home: "主頁"
-      my_dashboard: "我的儀表板"
+      my_dashboard: "我的控制台"
       courses: "課程"
       course_catalog: "課程目錄"
       project_gallery: "所有專案"
@@ -353,10 +363,12 @@ zh-TW:
     email_confirm_needed_required: '您的信箱 %{email} 尚未驗證：'
     email_confirm_wrong_email: '（錯誤的電子信箱？）'
     email_resend_confirm: '重新發送確認說明'
+    new_email_hint: '（請確保這個信箱可以接收電子郵件）'
     new_password_hint: "（如果你不想變更它就保留空白）"
     current_password_hint: '（我們需要你現在的密碼以確認變更）'
     delete: '刪除您的帳號'
     delete_text: "點擊下方按鈕將刪除你的帳號。"
+    delete_text_teacher_managed_note: "這個帳戶是由您的老師管理，所以你無法刪除。若要刪除，必須先請你的老師解除這個帳戶的管理權。"
     delete_text_teacher_note: "請注意：刪除你的帳號並不會也刪除你的學生帳號。"
     delete_confirm: '確定要刪除你的帳戶？'
     deleted_user: '已刪除的用戶'
@@ -367,11 +379,16 @@ zh-TW:
     create_personal_login_under_13_username: "使用者名稱 (不要使用你的真實姓名！)"
     create_personal_login_under_13_parent_email: '家長/監護人的電子郵件'
     create_personal_login_info: '如果你想要在學年結束後繼續使用你的 Code.org 帳號，可以建立自己的登入帳號。'
-    create_personal_login_terms: "建立個人登入帳號代表我同意遵守 Code.org 的<a href='%{terms_of_service_url}', target='_blank'>服務條款</a>。如果我的年齡小於13歲，我已經取得父母或法定監護人的允許在沒有老師的指導下使用 Code.org 的服務。"
+    create_personal_login_link_account: '你也可以在「管理連接的帳戶」處連接到個人帳戶。'
+    create_personal_login_terms: "通過創建個人帳戶，我同意接受 Code.org 的<a href='%{terms_of_service_url}', target='_blank'>服務條款</a>。我確認我的父母或監護人已經允許我在沒有老師指導情況下使用 Code.org 的服務。"
     create_personal_login_email_note: "注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自 Code.org 的電子郵件，除了密碼恢復。請參閱我們的 <a href='%{privacy_policy_url}', target='_blank'> 隱私政策</a> 的詳細資訊。"
     enter_new_login_info: '輸入你新的登入資訊'
     confirm_secret_words: '為了確認是你本人請輸入目前的通關密語'
+    parent_email_label: "監護人信箱（非必填）"
+    parent_email_hint: "（可用於恢復密碼）"
     enter_parent_email: "輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)"
+    update: "更新帳戶"
+    account_successfully_updated: "帳戶更新成功。"
   user_level:
     completed: '已完成'
     tried: '已體驗'
@@ -589,6 +606,7 @@ zh-TW:
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
     hero:
       title: "Minecraft"
+      body: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
     unplugged:
       title: "不插電的教學活動"
       audience: "年齡 4+"
@@ -739,9 +757,9 @@ zh-TW:
     save: "儲存"
     delete: "删除"
     import: "匯入"
-    share_link_import_bad_link_header: "無法辨識分享連結"
+    share_link_import_bad_link_header: "分享的連結無法識別"
     share_link_import_bad_link_body: "我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。"
-    share_link_import_error_header: "發生錯誤。"
+    share_link_import_error_header: "有地方出錯了。"
     share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
     exit: "返回課程"
     my_projects: "我的專案"
@@ -776,7 +794,7 @@ zh-TW:
     remix: '改編'
     click_to_remix: "點擊「改編」，創造自己的版本！"
     edit_project: '編輯專案'
-    sharing_disabled: "對不起，這個專案不是設定為可共享的。如果這是你的專案或你的學生之一的專案，請 <a href='https://studio.code.org/users/sign_in'>登入</a>到你的帳號，以查看該專案。"
+    sharing_disabled: "抱歉，這個專案無法分享。如果這是你或者你的學生的專案，請<a href='https://studio.code.org/users/sign_in'>登入</a>到你的帳戶以查看該專案。"
     abuse:
       tos: "這個專案被檢舉違反了 Code.org 的<a href='http://code.org/tos'>服務條款</a>，因此不能跟其它人進行分享。"
       policy_violation: "這個專案包含了無法分享給其他人的資訊。請聯絡 app 的擁有者以修正它們的 app 內容。"
@@ -818,9 +836,9 @@ zh-TW:
     peer_review: '同儕審查'
     main_course: '主要課程'
     extra_course_content: '額外的課程內容'
-    csf_e_1: '升至課程 E (可選擇的)'
+    csf_e_1: '提升至課程 E（可選）'
     csf_e_2: '課程 E 內容'
-    csf_f_1: '升至課程 F (可選擇的)'
+    csf_f_1: '提升至課程 F（可選）'
     csf_f_2: '課程 F 內容'
     csd1_1: '第 1 章：解決問題的流程'
     csd1_2: '第 2 章：計算機與問題解決能力'
@@ -837,7 +855,7 @@ zh-TW:
     cspSurvey: '問卷'
     cspAssessment: '章節測驗'
     csp2_1_2018: '單元 2：數位資訊'
-    dlp: '反射提示'
+    dlp: '反思提問'
   external_links:
     disclaimer: 免責聲明
     leaving_domain: 你正要離開這個網域，訪問一個不是由 Code.org 創建的網站。
@@ -900,34 +918,94 @@ zh-TW:
   hidden_stage: "你的老師沒想到你會在這，問問你的老師你該上哪堂課。"
   return_unit_overview: '移至單元概覽'
   return_course_overview: '移至課程概覽'
-  view_all_units: '查看所有單元'
+  view_all_units: '檢視所有單元'
   pd:
     form_labels:
+      first_name: '名字'
       email: '電子信箱'
       school_name: '學校名稱'
       school_city: '學校所在城市'
       school_country: '學校所屬國家'
+      robotics: '你使用的機器人設備是？'
+      workshop_organizer: '工作室發起人'
+      workshop_facilitator: '工作室主持人'
+      workshop_course: '工作室課程'
+      email_opt_in: '我們可以將 Code.org 的國際項目、課程更新、其它計算機科學新聞的訊息發送給你嗎？'
+      legal_opt_in: '提交此表單即表示你同意 Code.org 與所屬地區合作夥伴能共享你在 Code.org 上的資料。我們將分享你的聯絡方式，你正在使用的程式，以及如何與這些合作夥伴聚合有關你的數據，包括你的班級的學生數、學生年齡分佈、學校與地區名稱。我們不會與合作夥伴分享學生個別資料，我們的合作夥伴與調解人在契約上明訂需對這一類的訊息保密。'
     form_entries:
       gender:
         male: '男性'
         female: '女性'
         none: '不想回答'
+      school_country:
+        canada: 'Canada'
+        chile: 'Chile'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Mexico'
+        thailand: 'Thailand'
+      ages:
+        ages_under_6: '6 歲以下'
+        ages_7_8: '7 - 8 歲'
+        ages_9_10: '9 - 10 歲'
+        ages_11_12: '11 - 12 歲'
+        ages_13_14: '13 - 14 歲'
+        ages_15_16: '15 - 16 歲'
+        ages_17_18: '17 - 18 歲'
+        ages_19_over: '19 歲以上'
       subjects:
         cs: '計算機科學'
+        ict: 'ICT'
         math: '運算'
         science: '科學'
+        history: '歷史或社會研究'
         la: '語言藝術'
+        efl: '英語作為外語'
+        music: '音樂'
+        art: '藝術'
+        other: "其它："
       resources:
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "其它："
       robotics:
+        grok: 'Grok Learning'
         kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        wonder: 'Wonder Workshop'
+        other: "其它："
       workshop_course:
+        csf_af: '計算機科學基本原理（課程 A-F）'
+        csd: '計算機科學探索'
         csp: 'CS 原理'
       email_opt_in:
         opt_in_yes: '是'
         opt_in_no: '否'
+    international_opt_in:
+      title: '工作坊參與人'
+      intro: "感謝你參與 Code.org 的訓練課程，有了你，我們就能更容易把計算機科學教育普及給世界上的所有孩子。"
+      thanks: "感謝你的提交！我們期待能幫助你熟悉 Code.org 上的課程與教學用工具，有任何問題，都歡迎你反應給我們。你可以透過 <a href='%{support_email_url}'> support@code.org</a>或是<a href='%{teacher_forum_url}' target='_blank'>教師論壇</a>來聯絡我們！"
+    logged_out:
+      heading: '感謝你對專業學習計劃感興趣！'
+      body: '在開始前，請先登入你在 Code.org 的帳戶，如果你希望在啟動前瞭解該應用程式的更多訊息，請檢視<a href="%{url}">專業學習計畫概述</a>。'
+  courses_category: '完整課程'
   cookie_banner:
+    message: '透過繼續瀏覽這個網站或點擊「我同意」按鈕，表示您同意在您的裝置上儲存 cookie。'
+    more_information: "檢視 Code.org 的隱私政策。"
     accept: '我同意'
   gdpr_dialog:
+    heading: '您是否同意使用位於美國境內的網站？'
     message: '您在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。'
+    link_intro: '若要進一步瞭解，請參閱'
+    privacy_policy: '隱私權政策'
+    logout: '登出'
     yes: '是'
