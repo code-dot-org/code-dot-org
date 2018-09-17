@@ -93,6 +93,10 @@ describe('ConfirmRemoveStudentDialog', () => {
             <strong>{i18n.removeStudentBody1()}</strong>
             {' '}
             {i18n.removeStudentBody2()}
+            {' '}
+            <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+              {i18n.learnMore()}
+            </a>
           </p>
           <div>
             <p>
