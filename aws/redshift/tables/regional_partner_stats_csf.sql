@@ -21,7 +21,7 @@ csf_teachers_trained_temp as
 (
   select distinct
   user_id, -- multiple entries per person (if they attended multiple workshops)
-  u.studio_person_id,
+  u.studio_p erson_id,
   'CS Fundamentals'::varchar as course,
   school_year as school_year,
   regional_partner as regional_partner,
@@ -102,7 +102,7 @@ pd_facilitators as
          d.school_year as school_year_trained,
          s.school_year as school_year_taught,
          s.script_name,
-         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
+         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,        
          rp.id as regional_partner_id,
          ss_user.school_name school_name,
          ss_user.school_id school_id,
@@ -112,9 +112,10 @@ pd_facilitators as
          ss_user.school_district_id school_district_id,
          ss_user.high_needs high_needs_school,
          ss_user.rural rural_school, 
+         -- the next three things need to be fixed in the csfa based on the new csf_teachers_trained table:
          csfa.workshop_id,
-         csfa.subject,
-         csfa.trained_by_regional_partner,
+         CASE WHEN csfa.subject is null THEN 'Intro Workshop' else csfa.subject END as subject,
+         CASE WHEN csfa.trained_by_regional_partner is null then 0 else csfa.trained_by_regional_partner END as trained_by_regional_partner,
          d.trained_at as trained_at,
          coalesce(d.workshop_date, csfa.workshop_date, d.trained_at)  as workshop_date, 
          extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) || csfa.workshop_id::varchar(16)  as workshop_id_year,
@@ -147,7 +148,7 @@ pd_facilitators as
         ON csfa.user_id = d.user_id
         AND csfa.course = d.course
         AND csfa.school_year = d.school_year
-        AND csfa.workshop_date = d.workshop_date
+        -- AND trunc(csfa.workshop_date) = d.trained_at -- this must be the PROBLEM!! investigat it 
         AND csfa.not_attended = 0 
 --pii tables (regional partner names, person names, emails, locations)
   LEFT JOIN pd_facilitators pwf
