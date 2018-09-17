@@ -162,8 +162,6 @@ module Pd::Application
               :other,
               :going_to_teach,
               :committed_to_master_schedule,
-              :hours_per_year,
-              :terms_per_year,
               :replace_course,
               :committed_to_diversity,
               :understand_fee,
