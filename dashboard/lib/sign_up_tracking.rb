@@ -1,6 +1,13 @@
 require 'cdo/firehose'
 
 module SignUpTracking
+  def self.begin_sign_up_tracking(session)
+    unless session[:sign_up_tracking_expiration]&.future?
+      session[:sign_up_uid] = SecureRandom.uuid.to_s
+      session[:sign_up_tracking_expiration] = 5.minutes.from_now
+    end
+  end
+
   def self.log_sign_in(user, session, request)
     return unless user && session && request
     provider = request.env['omniauth.auth'].provider.to_s

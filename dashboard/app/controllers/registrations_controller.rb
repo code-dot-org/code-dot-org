@@ -11,15 +11,12 @@ class RegistrationsController < Devise::RegistrationsController
     session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
 
-    unless session[:sign_up_tracking_expiration]&.future?
-      session[:sign_up_uid] = SecureRandom.uuid.to_s
-      session[:sign_up_tracking_expiration] = 5.minutes.from_now
-      FirehoseClient.instance.put_record(
-        study: 'account-sign-up',
-        event: 'load-sign-up-page',
-        data_string: session[:sign_up_uid]
-      )
-    end
+    SignUpTracking.begin_sign_up_tracking(session)
+    FirehoseClient.instance.put_record(
+      study: 'account-sign-up',
+      event: 'load-sign-up-page',
+      data_string: session[:sign_up_uid]
+    )
 
     super
   end
@@ -72,7 +69,7 @@ class RegistrationsController < Devise::RegistrationsController
         data_string: session[:sign_up_uid],
         data_json: {
           detail: resource.to_json,
-          errors: resource.errors&.messages
+          errors: resource.errors&.full_messages
         }.to_json
       }
       FirehoseClient.instance.put_record(tracking_data)
