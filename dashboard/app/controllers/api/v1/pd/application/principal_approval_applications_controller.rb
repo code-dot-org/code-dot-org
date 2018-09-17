@@ -33,8 +33,8 @@ module Api::V1::Pd::Application
           free_lunch_percent: principal_response[:free_lunch_percent],
           underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
           wont_replace_existing_course: replace_course_string,
-          how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
-          send_ap_scores: principal_response[:free_lunch_percent],
+          principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
+          send_ap_scores: principal_response[:send_ap_scores],
           can_pay_fee: principal_response[:pay_fee]
         }
       )
