@@ -67,4 +67,10 @@ Scenario: Can Toggle to the Personal Project Gallery
   And I wait until element "#react-personal-projects" is visible
   And element "#public-gallery" is not visible
 
-# TODO (Erin B.) Add a test to ensure that project validators can always see the view more links for App Lab and Game Lab.
+Scenario: Can See App Lab/Game Lab View More Links
+  Given I am on "http://studio.code.org/projects/public"
+  Then I wait until element "#public-gallery" is visible
+  Then I wait until element ".ui-project-app-type-area" is in the DOM
+  And the project gallery contains 7 project types
+  And element ".ui-project-app-type-area:eq(4)" contains text "View more App Lab projects"
+  And element ".ui-project-app-type-area:eq(5)" contains text "View more Game Lab projects"
