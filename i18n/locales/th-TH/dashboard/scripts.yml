@@ -93,7 +93,7 @@ th:
             'Artist: Nested Loops':
               name: 'ศิลปิน: ลูปซ้อนลูป'
             'Artist: Patterns':
-              name: 'ศิลปิน: Patterns'
+              name: 'ศิลปิน: รูปแบบ'
             'Bee: Conditionals':
               name: 'ผึ้ง: เงื่อนไข'
             'Bee: Debugging':
