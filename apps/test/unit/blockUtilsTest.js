@@ -11,6 +11,7 @@ import {
 import { parseElement, serialize } from '@cdo/apps/xml.js';
 import { expect } from '../util/configuredChai';
 import sinon from 'sinon';
+import { allowConsoleWarnings } from '../util/testUtils';
 
 describe('block utils', () => {
   describe('cleanBlocks', () => {
@@ -955,6 +956,7 @@ describe('block utils', () => {
       });
     });
     describe('custom inputs', () => {
+      allowConsoleWarnings();
       it('generates code for a statement input', () => {
         createBlock({
           func: 'runThisCallback',
