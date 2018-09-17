@@ -1,7 +1,7 @@
 module Pd::Application
   class PrincipalApprovalApplicationController < ApplicationController
-    PRINCIPAL_APPROVAL_APPLICATION_CLASS = PrincipalApproval1819Application
-    TEACHER_APPLICATION_CLASS = Teacher1819Application
+    include ApplicationConstants
+    include ActiveApplicationModels
 
     def new
       # Temporary security settings
@@ -50,14 +50,14 @@ module Pd::Application
     def new_1920_preview
       return render_404 unless current_user&.workshop_admin?
 
-      teacher_application = Pd::Application::Teacher1819Application.find_by(application_guid: params[:application_guid])
+      teacher_application = TEACHER_APPLICATION_CLASS.find_by(application_guid: params[:application_guid])
 
       return render :not_found unless teacher_application
 
       application_hash = teacher_application.sanitize_form_data_hash
 
       @teacher_application = {
-        course: Pd::Application::ApplicationConstants::COURSE_NAMES[teacher_application.course],
+        course: COURSE_NAMES[teacher_application.course],
         name: teacher_application.applicant_name,
         application_guid: teacher_application.application_guid,
         principal_first_name: application_hash[:principal_first_name],
@@ -70,15 +70,15 @@ module Pd::Application
       # Rather annoyingly, we can't say "unless existing_approval&.placeholder?" because
       # if there is no approval, (handling legacy case and proper fallback behavior
       # in case we fail to create placeholders) we'd be rendering submitted
-      existing_approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: params[:application_guid])
+      existing_approval = PRINCIPAL_APPROVAL_APPLICATION_CLASS.find_by(application_guid: params[:application_guid])
       if existing_approval && !existing_approval.placeholder?
         return render :submitted
       end
 
       @script_data = {
         props: {
-          options: PrincipalApproval1819Application.options.camelize_keys,
-          requiredFields: PrincipalApproval1819Application.camelize_required_fields,
+          options: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options.camelize_keys,
+          requiredFields: PRINCIPAL_APPROVAL_APPLICATION_CLASS.camelize_required_fields,
           apiEndpoint: '/api/v1/pd/application/principal_approval',
           teacherApplication: @teacher_application
         }.to_json

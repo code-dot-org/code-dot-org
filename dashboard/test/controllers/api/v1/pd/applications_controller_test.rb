@@ -2,7 +2,9 @@ require 'test_helper'
 
 module Api::V1::Pd
   class ApplicationsControllerTest < ::ActionController::TestCase
-    include Pd::Teacher1819ApplicationConstants
+    include Pd::Application::ActiveApplicationModels
+
+    # include Pd::Teacher1819ApplicationConstants
     include Pd::Facilitator1819ApplicationConstants
 
     setup_all do
@@ -35,9 +37,9 @@ module Api::V1::Pd
         role: 'csf_facilitators'
       }
 
-      @csd_teacher_application = create :pd_teacher1819_application, course: 'csd'
-      @csd_teacher_application_with_partner = create :pd_teacher1819_application, course: 'csd', regional_partner: @regional_partner
-      @csp_teacher_application = create :pd_teacher1819_application, course: 'csp'
+      @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
+      @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner
+      @csp_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
       @csp_facilitator_application = create :pd_facilitator1819_application, course: 'csp'
 
       @serializing_teacher = create(:teacher,
@@ -121,7 +123,7 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_teacher1819_application, 3, :locked, regional_partner: regional_partner
+      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
       get :index
       assert_response :success
       data = JSON.parse(response.body)
@@ -133,7 +135,7 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_teacher1819_application, 3, :locked, regional_partner: regional_partner
+      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
       get :index
       assert_response :success
       data = JSON.parse(response.body)
@@ -146,8 +148,8 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_teacher1819_application, 3, :locked, regional_partner: regional_partner
-      create_list :pd_teacher1819_application, 2, regional_partner: regional_partner
+      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
+      create_list TEACHER_APPLICATION_FACTORY, 2, regional_partner: regional_partner
 
       get :index
       assert_response :success
@@ -161,8 +163,8 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list :pd_teacher1819_application, 3, :locked, regional_partner: regional_partner
-      create_list :pd_teacher1819_application, 2, regional_partner: regional_partner
+      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
+      create_list TEACHER_APPLICATION_FACTORY, 2, regional_partner: regional_partner
 
       get :index
       assert_response :success
@@ -285,7 +287,7 @@ module Api::V1::Pd
 
     test 'editing scores converts fields to underscore case' do
       sign_in @workshop_admin
-      application = create :pd_teacher1819_application
+      application = create TEACHER_APPLICATION_FACTORY
       put :update, params: {id: application.id, application: {response_scores: {regionalPartnerName: 'Yes'}.to_json}}
 
       assert_response :success
@@ -363,7 +365,7 @@ module Api::V1::Pd
       get :quick_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success
       response_csv = CSV.parse @response.body
-      assert Pd::Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+      assert TEACHER_APPLICATION_CLASS::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year, :csd_terms_per_year
       ).values.map {|question| @markdown.render(question).strip}.all? {|x| response_csv.first.include?(x)}
     end
@@ -375,11 +377,11 @@ module Api::V1::Pd
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      assert Pd::Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+      assert TEACHER_APPLICATION_CLASS::ALL_LABELS_WITH_OVERRIDES.slice(
         :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_terms_per_year, :csp_how_offer, :csp_ap_exam
       ).values.map {|question| @markdown.render(question).strip}.all? {|x| response_csv.first.include?(x)}
 
-      assert Pd::Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
+      assert TEACHER_APPLICATION_CLASS::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year
       ).values.map {|question| @markdown.render(question).strip}.any? {|x| response_csv.first.exclude?(x)}
     end
@@ -419,7 +421,7 @@ module Api::V1::Pd
     test 'cohort view returns applications that are accepted and withdrawn' do
       expected_applications = []
       (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
-        application = create :pd_teacher1819_application, course: 'csp'
+        application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
         if ['accepted', 'withdrawn'].include? status
           expected_applications << application
@@ -445,7 +447,7 @@ module Api::V1::Pd
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
-          :pd_teacher1819_application,
+          TEACHER_APPLICATION_FACTORY,
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
@@ -471,7 +473,6 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            accepted_teachercon: nil,
             status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -484,7 +485,7 @@ module Api::V1::Pd
 
       Timecop.freeze(time) do
         application = create(
-          :pd_teacher1819_application,
+          TEACHER_APPLICATION_FACTORY,
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
@@ -509,7 +510,6 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            accepted_teachercon: nil,
             status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -547,7 +547,6 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            accepted_teachercon: nil,
             status: 'accepted',
             assigned_fit: nil,
             registered_fit: 'No',
@@ -565,7 +564,7 @@ module Api::V1::Pd
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
-          :pd_teacher1819_application,
+          TEACHER_APPLICATION_FACTORY,
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
@@ -591,50 +590,6 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            accepted_teachercon: nil,
-            status: 'accepted'
-          }.stringify_keys, JSON.parse(@response.body).first
-        )
-      end
-    end
-
-    test 'cohort view returns expected columns for a teacher with teachercon' do
-      Pd::Application::Teacher1819Application.any_instance.stubs(:enroll_user)
-      time = Date.new(2017, 3, 15)
-
-      Timecop.freeze(time) do
-        Pd::Workshop.any_instance.stubs(:process_location)
-        workshop = create :pd_workshop, :teachercon, num_sessions: 5, sessions_from: Time.new(2017, 1, 1)
-        create :pd_enrollment, workshop: workshop, user: @serializing_teacher
-
-        application = create(
-          :pd_teacher1819_application,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
-          pd_workshop_id: workshop.id
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @program_manager
-        get :cohort_view, params: {role: 'csp_teachers'}
-        assert_response :success
-
-        assert_equal(
-          {
-            id: application.id,
-            date_accepted: '2017-03-15',
-            applicant_name: 'Minerva McGonagall',
-            district_name: 'A School District',
-            school_name: 'A Seattle Public School',
-            email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-5, 2017, Location TBA TeacherCon',
-            registered_workshop: nil,
-            accepted_teachercon: 'No',
             status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -646,7 +601,7 @@ module Api::V1::Pd
 
       Timecop.freeze(time) do
         application = create(
-          :pd_teacher1819_application,
+          TEACHER_APPLICATION_FACTORY,
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
@@ -671,7 +626,6 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            accepted_teachercon: nil,
             status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -708,7 +662,6 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            accepted_teachercon: nil,
             assigned_fit: nil,
             registered_fit: 'No',
             status: 'accepted',
@@ -719,7 +672,7 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for teachers' do
-      create :pd_teacher1819_application, :locked, course: 'csd'
+      create TEACHER_APPLICATION_FACTORY, :locked, course: 'csd'
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success
@@ -733,8 +686,7 @@ module Api::V1::Pd
         'Email',
         'Status',
         'Assigned Workshop',
-        'Registered Workshop',
-        'Accepted Teachercon'
+        'Registered Workshop'
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length
@@ -821,20 +773,20 @@ module Api::V1::Pd
 
     test 'destroy deletes application' do
       sign_in @workshop_admin
-      application = create :pd_teacher1819_application
-      assert_destroys(Pd::Application::Teacher1819Application) do
+      application = create TEACHER_APPLICATION_FACTORY
+      assert_destroys(TEACHER_APPLICATION_CLASS) do
         delete :destroy, params: {id: application.id}
       end
     end
 
     test 'group 3 partner cannot call delete api' do
-      application = create :pd_teacher1819_application
+      application = create TEACHER_APPLICATION_FACTORY
       group_3_partner = create :regional_partner, group: 3
       group_3_program_manager = create :teacher
       create :regional_partner_program_manager, regional_partner: group_3_partner, program_manager: group_3_program_manager
 
       sign_in group_3_program_manager
-      assert_does_not_destroy(Pd::Application::Teacher1819Application) do
+      assert_does_not_destroy(TEACHER_APPLICATION_CLASS) do
         delete :destroy, params: {id: application.id}
       end
     end

@@ -1,11 +1,9 @@
 class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
-  include Pd::Application::RegionalPartnerTeacherconMapping
-
-  attributes :id, :name, :group, :workshops, :teachercon
+  attributes :id, :name, :group, :workshops
 
   def workshops
     object.try do |partner|
-      workshops = partner.future_pd_workshops_organized
+      workshops = partner.pd_workshops.future
       workshops = workshops.where(course: @scope[:course]) if @scope.try(:[], :course)
       workshops = workshops.where(subject: @scope[:subject]) if @scope.try(:[], :course)
       workshops.map do |workshop|
@@ -16,9 +14,5 @@ class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
         }
       end
     end
-  end
-
-  def teachercon
-    get_matching_teachercon object
   end
 end

@@ -101,7 +101,8 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 ### Don't miss these additional resources:
 
 - [**Course Materials List**](#materials)
-- [**CS Principles Video Library**](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
+- <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**,/a
+- [**Code.org Video Library**](/educate/resources/videos)
 
 
 ## <a name="lessons"></a>Unit Overview
