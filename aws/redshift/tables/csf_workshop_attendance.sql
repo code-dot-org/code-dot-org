@@ -73,9 +73,9 @@ SELECT se.id, ss_user.state as state, ss_user.zip as zip
 sections_geos AS (
 SELECT se.id, 
 CASE WHEN se.user_id = 1423830 then 'OH' ELSE ug.state END as state, -- 1423830 is only facilitator in this list not with user_geos in the US 
-CASE WHEN se.user_id = 1423830 then 44113 ELSE ug.postal_code END as zip 
+CASE WHEN se.user_id = 1423830 then '44113' ELSE ug.postal_code END as zip 
 FROM dashboard_production.sections se 
-JOIN user_geos ug
+JOIN dashboard_production_pii.user_geos ug
  ON se.user_id = ug.user_id
 where ((se.section_type = 'csf_workshop') or (se.id in (select distinct se.id from pegasus_pii.forms
   join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
