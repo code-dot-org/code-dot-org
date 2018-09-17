@@ -2,6 +2,39 @@
 en-GB:
   data:
     blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
       Dancelab_randomColor:
         text: random colour
       Dancelab_setDanceSpeed:
@@ -17,24 +50,6 @@ en-GB:
           KEY:
             '"space"': space
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': space
-      DancelabAlpha_randomColor:
-        text: random colour
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"space"': space
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"space"': space
@@ -69,5 +84,16 @@ en-GB:
             '"space"': space
       Vanilla_randomColor:
         text: random colour
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ahead
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": sand
+            "'planksOak'": oak planks
       craft_moveForward:
         text: move forward
+      craft_placeTorch:
+        text: place torch
