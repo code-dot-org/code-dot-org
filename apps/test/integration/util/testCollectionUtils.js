@@ -59,7 +59,7 @@ module.exports = {
       level = _.cloneDeep(levels[testCollection.levelId]);
       level = {
         ...level,
-        ...testData.levelDefinitionOverrides,
+        ...(testData.levelDefinitionOverrides || {}),
       };
     } else {
       if (!testCollection.levelDefinition && !testData.delayLoadLevelDefinition) {

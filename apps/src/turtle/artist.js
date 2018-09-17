@@ -304,7 +304,7 @@ Artist.prototype.init = function (config) {
     this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
 
-  this.executionInfo = DEFAULT_EXECUTION_INFO;
+  this.executionInfo = { ...DEFAULT_EXECUTION_INFO };
   if (this.level.maxTickCount !== undefined) {
     this.executionInfo.ticks = this.level.maxTickCount;
   }
