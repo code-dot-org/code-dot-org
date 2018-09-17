@@ -160,7 +160,7 @@ function Effects(alpha, blend) {
   this.alpha = alpha || 1;
   this.blend = blend || BLEND;
   this.none = {
-    draw: function() {
+    draw: function () {
       background(World.background_color || "white");
     }
   };
@@ -182,11 +182,11 @@ function Effects(alpha, blend) {
     update: function () {
       if (this.colors.length < 16) {
         this.colors = [];
-        for (var i=0; i<16; i++) {
+        for (var i = 0; i < 16; i++) {
           this.colors.push(color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")"));
         }
       } else {
-        for (var j=randomNumber(5, 10); j>0; j--) {
+        for (var j = randomNumber(5, 10); j > 0; j--) {
           this.colors[randomNumber(0, this.colors.length - 1)] = color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")");
         }
       }
@@ -195,7 +195,7 @@ function Effects(alpha, blend) {
       if (Dance.fft.isPeak() || World.frameCount == 1) this.update();
       push();
       noStroke();
-      for (var i=0; i<this.colors.length; i++) {
+      for (var i = 0; i < this.colors.length; i++) {
         fill(this.colors[i]);
         rect((i % 4) * 100, Math.floor(i / 4) * 100, 100, 100);
       }
@@ -204,10 +204,10 @@ function Effects(alpha, blend) {
   };
   this.diamonds = {
     hue: 0,
-    update: function() {
+    update: function () {
       this.hue += 25;
     },
-    draw: function() {
+    draw: function () {
       if (Dance.fft.isPeak()) this.update();
       push();
       colorMode(HSB);
@@ -216,38 +216,38 @@ function Effects(alpha, blend) {
       rotate(45);
       noFill();
       strokeWeight(map(Dance.fft.getCentroid(), 0, 4000, 0, 50));
-      for (var i=5; i>-1; i--) {
+      for (var i = 5; i > -1; i--) {
         stroke((this.hue + i * 10) % 360, 100, 75, self.alpha);
         rect(0, 0, i * 100 + 50, i * 100 + 50);
       }
       pop();
     }
   };
-  this.strobe={
+  this.strobe = {
     waitTime: 0,
     flashing: false,
     update: function () {
-      this.flashing=true;
-      this.waitTime=6;
+      this.flashing = true;
+      this.waitTime = 6;
     },
     draw: function () {
-      var bgcolor = rgb(1,1,1);
+      var bgcolor = rgb(1, 1, 1);
       if (Dance.fft.isPeak()) this.update();
       if (this.flashing) {
-	      bgcolor=rgb(255,255,255);
-	      this.waitTime--;
+        bgcolor = rgb(255, 255, 255);
+        this.waitTime--;
       }
-      if (this.waitTime<=0) {
-       bgcolor=rgb(1,1,1);
-       this.flashing=false;
-     }
+      if (this.waitTime <= 0) {
+        bgcolor = rgb(1, 1, 1);
+        this.flashing = false;
+      }
       background(bgcolor);
     }
   };
-  this.rain={
+  this.rain = {
     drops: [],
-    init: function() {
-      for (var i=0; i < 20; i++) {
+    init: function () {
+      for (var i = 0; i < 20; i++) {
         this.drops.push({
           x: randomNumber(0, 380),
           y: randomNumber(0, 380),
@@ -256,15 +256,15 @@ function Effects(alpha, blend) {
       }
     },
     color: rgb(127, 127, 255, 0.5),
-    update: function() {
+    update: function () {
       this.color = rgb(127, 127, randomNumber(127, 255), 0.5);
-  	},
-    draw: function() {
+    },
+    draw: function () {
       if (this.drops.length < 1) this.init();
       strokeWeight(3);
       stroke(this.color);
       push();
-      for (var i=0; i<this.drops.length; i++) {
+      for (var i = 0; i < this.drops.length; i++) {
         push();
         translate(this.drops[i].x - 20, this.drops[i].y - 20);
         line(0, 0, this.drops[i].length, this.drops[i].length * 2);
@@ -275,25 +275,25 @@ function Effects(alpha, blend) {
       pop();
     }
   };
-  this.raining_tacos={
+  this.raining_tacos = {
     tacos: [],
     size: 50,
-    init: function() {
-      for (var i=0; i < 20; i++) {
+    init: function () {
+      for (var i = 0; i < 20; i++) {
         this.tacos.push({
           x: randomNumber(20, 380),
           y: randomNumber(20, 380),
           rot: randomNumber(0, 359),
-    	  speed: randomNumber(2,5)
+          speed: randomNumber(2, 5)
         });
       }
     },
-    update: function() {
+    update: function () {
       this.size += randomNumber(-5, 5);
     },
-    draw: function() {
+    draw: function () {
       if (this.tacos.length < 1) this.init();
-      for(var i=0; i<this.tacos.length; i++){
+      for (var i = 0; i < this.tacos.length; i++) {
         push();
         var taco = this.tacos[i];
         translate(taco.x, taco.y);
@@ -321,7 +321,7 @@ World.fg_effect = fg_effects.none;
 function loadS3Animation(url, count, every) {
   every = every || 1;
   var args = [];
-  for (var i=0; i< count; i+=every) {
+  for (var i = 0; i < count; i += every) {
     if (i < 10) {
       args.push(img_base + url + "0" + i + ".png");
     } else {
@@ -350,7 +350,7 @@ function Behavior(func, extraArgs) {
 }
 
 function normalizeBehavior(behavior) {
-  if (typeof behavior === 'function')  {
+  if (typeof behavior === 'function') {
     return new Behavior(behavior);
   }
   return behavior;
@@ -390,17 +390,29 @@ function behaviorsEqual(behavior1, behavior2) {
 //Events
 
 function spriteDestroyed(sprite, event) {
-  inputEvents.push({type: isDestroyed, event: event, param: sprite});
+  inputEvents.push({
+    type: isDestroyed,
+    event: event,
+    param: sprite
+  });
 }
 
 // Loops
 
 function repeatWhile(condition, loop) {
-  loops.push({'condition': condition, 'loop': loop});
+  loops.push({
+    'condition': condition,
+    'loop': loop
+  });
 }
 
 function forever(loop) {
-  loops.push({'condition': function () {return true;}, 'loop': loop});
+  loops.push({
+    'condition': function () {
+      return true;
+    },
+    'loop': loop
+  });
 }
 
 // Draw loop callbacks
@@ -422,7 +434,7 @@ function makeNewSpriteLocation(animation, loc) {
 function makeNewGroup() {
   var group = createGroup();
   group.addBehaviorEach = function (behavior) {
-    for (var i=0; i < group.length; i++) {
+    for (var i = 0; i < group.length; i++) {
       addBehavior(group[i], behavior);
     }
   };
@@ -479,6 +491,10 @@ function draw() {
     var eventType;
     var event;
     var param;
+    var validType;
+    var validParam;
+    var validPre;
+    var validPost;
 
     // Run key events
     for (i = 0; i < inputEvents.length; i++) {
@@ -487,6 +503,24 @@ function draw() {
       param = inputEvents[i].param;
       if (eventType(param)) {
         event();
+        var event_run = false;
+        // has validator, run it
+        if (validationProps.events.length != 0) {
+          for (var j = 0; j < validationProps.events.length; j++) {
+            // TODO check for existence before trying to run these events
+            validType = validationProps.events[j].type;
+            validParam = validationProps.events[j].param;
+            validPre = validationProps.events[j].pre;
+            validPost = validationProps.events[j].post;
+            if (eventType == validType && param == validParam) {
+              validPre();
+              event();
+              event_run = true;
+              validPost();
+            }
+          }
+        }
+        if (!event_run) event();
       }
     }
 
@@ -510,7 +544,7 @@ function draw() {
       };
     };
     // Run collision events
-    for (i = 0; i<collisionEvents.length; i++) {
+    for (i = 0; i < collisionEvents.length; i++) {
       var collisionEvent = collisionEvents[i];
       var a = collisionEvent.a && collisionEvent.a();
       var b = collisionEvent.b && collisionEvent.b();
@@ -528,7 +562,7 @@ function draw() {
     }
 
     // Run loops
-    for (i = 0; i<loops.length; i++) {
+    for (i = 0; i < loops.length; i++) {
       var loop = loops[i];
       if (!loop.condition()) {
         loops.splice(i, 1);
