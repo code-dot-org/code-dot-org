@@ -449,7 +449,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       assert oauth_student.has_activity?
 
-      Honeybadger.expects(:notify).at_least_once
+      FirehoseClient.any_instance.expects(:put_record).at_least_once
 
       set_oauth_takeover_session_variables(provider, oauth_student)
       check_and_apply_oauth_takeover(student)

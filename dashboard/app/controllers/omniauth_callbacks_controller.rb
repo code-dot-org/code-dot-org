@@ -4,6 +4,8 @@ require 'honeybadger'
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
 
+  skip_before_action :clear_sign_up_session_vars
+
   # GET /users/auth/:provider/callback
   def all
     if should_connect_provider?
@@ -59,6 +61,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
     provider = auth_hash.provider.to_s
+    session[:sign_up_type] = provider
 
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'
@@ -70,7 +73,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = extract_microsoft_data(request.env["omniauth.auth"])
     end
 
-    @user = User.from_omniauth(auth_hash, auth_params)
+    @user = User.from_omniauth(auth_hash, auth_params, session)
 
     # Set user-account locale only if no cookie is already set.
     if @user.locale &&
@@ -117,6 +120,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def register_new_user(user)
     move_oauth_params_to_cache(user)
     session["devise.user_attributes"] = user.attributes
+
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session)
+
     redirect_to new_user_registration_url
   end
 
@@ -281,6 +289,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_in_user
     flash.notice = I18n.t('auth.signed_in')
+
+    # Will only log if the sign_up page session cookie is set, so this is safe to call in all cases
+    SignUpTracking.log_sign_in(resource, session, request)
+
     sign_in_and_redirect @user
   end
 
