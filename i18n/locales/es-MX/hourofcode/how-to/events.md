@@ -46,7 +46,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Evento:**Reunión global escolar de Inicio de la Semana de las Ciencias de la Computación
 
-**Fecha:** <% = campaign_date ('start-short')%> (inicio de la Semana de Educación en Informática)
+**Fecha:** <%= campaign_date('start-short') %> (inicio de la Semana de Educación en Informática)
 
 **Horario:**Durante la jornada escolar. Preferentemente a media mañana. Aproximadamente 1 hora.
 
