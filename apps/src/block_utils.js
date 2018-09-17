@@ -613,7 +613,12 @@ const STANDARD_INPUT_TYPES = {
           .appendTitle(dropdown, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      return block.getTitleValue(inputConfig.name);
+      let code = block.getTitleValue(inputConfig.name);
+      if (inputConfig.type === Blockly.BlockValueType.STRING && !code.startsWith('"') && !code.startsWith("'")) {
+        // Wraps the value in quotes, and escapes quotes/newlines
+        code = JSON.stringify(code);
+      }
+      return code;
     },
   },
   [FIELD_INPUT]: {

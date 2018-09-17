@@ -24,6 +24,8 @@ class ApplicationController < ActionController::Base
 
   before_action :fix_crawlers_with_bad_accept_headers
 
+  before_action :clear_sign_up_session_vars
+
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&
@@ -270,5 +272,13 @@ class ApplicationController < ActionController::Base
   def pairing_user_ids
     # TODO(asher): Determine whether we need to guard against it being nil.
     session[:pairings].nil? ? [] : session[:pairings]
+  end
+
+  def clear_sign_up_session_vars
+    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+      session.delete(:sign_up_uid)
+      session.delete(:sign_up_type)
+      session.delete(:sign_up_tracking_expiration)
+    end
   end
 end
