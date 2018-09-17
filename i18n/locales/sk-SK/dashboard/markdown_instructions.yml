@@ -78,6 +78,7 @@ sk:
       2-3 Bee Loops 3B_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       2-3 Bee Loops 4A_markdown_instruction: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo najmenším počtom blokov."
       2-3 Bee Loops 8_markdown_instruction: "Tieto fialové kvetinky majú pri každom spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\"."
+      2-3 Maze 15_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať" pomôže dostať prasa s čo najmenším počtom blokov!
       2-3 Maze Loops 18_markdown_instruction: "Dostaňte ma k slnečnici použitím čo najmenšieho možného počtu blokov!  \n\nSkúste použiť jednu slučku \"opakovať\" vo vnútri druhej pre zníženie množstva kódu, ktoré potrebujete."
       4-5 Artist 10_markdown_instruction: Vyskúšaj kód stlačením "Spustiť". Potom to opakuj viackrát pre dokončenie kreslenia. Farby sa budú vždy odlišovať.
       4-5 Artist 5_markdown_instruction: Čím môžeme nahradiť "???" tak, aby bolo isté, že zomík dokončí túto kresbu použitím poskytnutej slučky?
@@ -225,6 +226,8 @@ sk:
       frozen circle_markdown_instruction: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
       frozen cross rotate dense_markdown_instruction: 'Zopakujme to 90-krát! Koľkokrát sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
       frozen cross rotate_markdown_instruction: Teraz to skús zopakovať 10-krát. O koľko stupňov sa musíš otočiť medzi jednotlivými čiarami?
+      frozen cross rotate_b_markdown_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
+      frozen cross rotate_test_markdown_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
       frozen cross_markdown_instruction: Vytvor znamienko plus pomocou bloku "Opakuj". Všimol si si, že Elsa sa môže pohybovať dopredu i dozadu?
       frozen diamond mini snowflake_markdown_instruction: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
       frozen diamond snowflake_markdown_instruction: Teraz vytvorme novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakujeme 10-krát a po každom z nich sa otočíme vpravo o 36 stupňov.
@@ -233,6 +236,8 @@ sk:
       frozen perpendicular_markdown_instruction: Teraz skúsme vytvoriť dve čiary, ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč" spolu s blokom "Posuň".
       frozen snowflake branch_markdown_instruction: Skús použiť blok "Vytvor rameno vločky", aby si vytvoril tri ramená, ktoré začnú vyzerať ako snehová vločka.
       frozen snowflake full_markdown_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
+      frozen snowflake full_b_markdown_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
+      frozen snowflake full_test_markdown_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
       frozen snowflower_markdown_instruction: Zložité snehové vzory je možné vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
       frozen square iterative_markdown_instruction: Zdá sa, že sme na polceste k vytvoreniu štvorca. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
       frozen square loop 3x_markdown_instruction: Vytvorme tri štvorce tak, že sa po každom štvorci otočíme. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
@@ -243,11 +248,13 @@ sk:
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
         
         Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
+      grade2_PuppyLoops_4_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať" pomôže dostať prasa s čo najmenším počtom blokov!
       grade2_PuppyLoops_8_markdown_instruction: "Tento kód pre mačacie fúzy je zlý.\n\nOpravte tento kód, aby sa všetky fúzy nakreslili v rovnakej dĺžke."
       grade2_PuppyLoops_9_markdown_instruction: |-
         Vyzerá, že C v kóde je nakreslené naopak!
         
         Viete to opraviť, aby to znova vyzeralo ako C?
+      grade2_puppy_loops4_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať" pomôže dostať prasa s čo najmenším počtom blokov!
       grade3_ConditionalsElse_2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
       grade3_ConditionalsElse_5_markdown_instruction: |-
         Pod každým z týchto oblakov bude buď kvetinka, alebo úľ!
@@ -283,6 +290,7 @@ sk:
         
         Pozbierajte nektár z každej kvetinky použitím čo možno najmenej blokov.
       grade3_bee_conditionals_quantum2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
+      grade3_maze_nestedLoops4_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať" pomôže dostať prasa s čo najmenším počtom blokov!
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Zopakujte tento dizajn 10 krát. \n\nO koľko sa musíte otočiť pri každej slučke?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Zopakujte tento tvar 6 krát. \n\nO koľko sa musíte otočiť pri každej slučke? "
       grade4_artist_functions2_markdown_instruction: "Funkcie Vám umožnia definovať nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."

@@ -17,6 +17,11 @@ sk:
       name:
         course1:
           title: Kurz 1
+          description: Na úvod začni s kurzom 1. Študent tu vytvára počítačové programy,
+            ktoré pomáhajú učiť sa spolupracovať s ostatnými, rozvíjať schopnosť riešiť
+            problémy a vytrvať pri ťažkých úlohách. Na konci tohoto kurzu je študent
+            schopný tvoriť vlastné hry alebo príbehy, ktoré môže zdielať. Odporúčné
+            pre triedy k-1.
           description_short: Začnite Kurzom 1 pre čitateľa začiatočníka.
           description_audience: Vek 4-6
           stages:
@@ -58,6 +63,11 @@ sk:
               name: Veľká udalosť
         course2:
           title: Kurz 2
+          description: Začni kurz 2, je pre študentov, ktorí nemajú predchádzajúce
+            skúseností s programovaním. V tomto kurze študent vytvorí program na riešenie
+            problémov, a vývinie interaktívne hry alebo príbehy, ktoré vie zdieľať.
+            Doporučené pre triedy 2 až 5. ročníka.
+          description_short: Úvod do vedy o počítačoch pre študentov.
           description_audience: Vek 6 + (vyžaduje čítanie)
           stages:
             'Artist: Debugging':
@@ -100,6 +110,12 @@ sk:
               name: Tvoj digitálny otlačok
         course3:
           title: Kurz 3
+          description: Kurz 3 je určený pre študentov, ktorí pred tým absolvovali
+            kurz 2. Študenti hlbšie preniknú do témy programovania predstavenej v
+            predchádzajúcich kurzoch, s cieľom vytvoriť flexibilné riešenie komplexnejších
+            problémov. Absolvovaním tohoto kurzu je študent schopný vytvoriť interaktívne
+            príbehy a hry, ktoré môže zdieľať s kýmkoľvek. Kurz je odporúčaný pre
+            žiakov 4. a 5. ročníka.
           description_short: Kurz 3 nadväzuje na kurz 2.
           description_audience: Vek 8-18
           stages:
@@ -141,15 +157,29 @@ sk:
               name: 'Bludisko: podmienky'
             Songwriting:
               name: Písanie pesničiek s parametrami
+            'Studio: Create a Game':
+              name: Herné laboratórium - Vytvor hru
             'Studio: Create a Story':
               name: 'Hravé laboratórium: Vytvor príbeh'
+        playlab:
+          title: Herné laboratórium
+          description: Vytvor príbeh alebo hru s Herným Laboratóriom!
+          description_short: Vytvor príbeh alebo hru s Herným Laboratóriom!
+          stages:
+            Play Lab:
+              name: Herné laboratórium
         artist:
           title: Umelec
+          description: Nakresli skvelé obrázky a vzory v časti nazvanej "Umelec"!
+          description_short: Nakresli skvelé obrázky a vzory v časti nazvanej "Umelec"!
           stages:
             Artist:
               name: Umelec
         hourofcode:
           title: Klasické bludisko
+          description: Vyskúšaj si základy informatiky s postavičkami ako sú Angry
+            Birds, Plants vs Zombies a Scrat z doby ľadovej!
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Maze:
               name: Bludisko
@@ -165,14 +195,27 @@ sk:
               name: Umelec
         course4:
           title: Kurz 4
+          description: Kurz 4 je určený pre študentov, ktorí majú za sebou kurz 2
+            a 3. Prechádzaním jednotlivých úrovní, sa študent  učí riešiť úlohy so
+            zvýšenou zložitosťou. Dokončením tohoto kurzu vie študent vytvárať programy,
+            ktoré mu umožnia demonštrovať viac zručnosti, vrátane slučky a funkcie
+            s parametrami. Doporučené pre ročník 4 až 8. -8.
+          description_short: Pokračovaním kurzu 3 je budovanie zložitejších programov
+            s pojmami ako slučky a funkcie s parametrami.
           description_audience: 9-18 rokov
           stages:
             Artist:
               name: Umelec
+            'Artist: For Loops':
+              name: 'časť Umelec: slučky'
             'Artist: Functions':
               name: 'Umelec: funkcie'
+            'Artist: Functions with Parameters':
+              name: 'časť Umelec: Funkcie s parametrami'
             'Artist: Variables':
               name: 'Umelec: premenné'
+            'Bee: For Loops':
+              name: 'časť Včela: slučky'
             Maze and Bee:
               name: Bludisko a včela
         Course4pre:
@@ -271,6 +314,8 @@ sk:
           description: Upraviť kód
           description_short: Upraviť kód
           stages:
+            Play Lab:
+              name: Herné laboratórium
             The Artist:
               name: Postava
             The Maze:
@@ -301,6 +346,7 @@ sk:
               name: Krok
         Hour of Code:
           title: Hodina Kódu 2013
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
@@ -543,8 +589,14 @@ sk:
               name: Nenájdené chyby
         grade5:
           stages:
+            'Artist: For Loops':
+              name: 'časť Umelec: slučky'
+            'Artist: Functions with Parameters':
+              name: 'časť Umelec: Funkcie s parametrami'
             'Artist: Variables':
               name: 'Umelec: premenné'
+            'Bee: For Loops':
+              name: 'časť Včela: slučky'
             Digital Citizenship:
               name: Digitálne Občianstvo
         ecs-unit1:
@@ -705,10 +757,12 @@ sk:
             Introduction:
               name: Úvod
         classic-hoc-impact-study:
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
         hoc-impact-study:
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
