@@ -2,11 +2,12 @@
   "category": "Events",
   "config": {
     "func": "everySecondsRange",
-    "blockText": "every {N} {UNIT} from {START} to {STOP}",
+    "blockText": "every {N} {UNIT} from {START} to {STOP} ",
     "args": [
       {
         "name": "N",
-        "type": "Number"
+        "type": "Number",
+        "field": true
       },
       {
         "name": "UNIT",
@@ -23,11 +24,13 @@
       },
       {
         "name": "START",
-        "type": "Number"
+        "type": "Number",
+        "field": true
       },
       {
         "name": "STOP",
-        "type": "Number"
+        "type": "Number",
+        "field": true
       }
     ],
     "eventLoopBlock": true,

@@ -464,6 +464,7 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: window.p5 },
     { instance: this.p5.Camera },
     { instance: this.p5.Animation },
+    { instance: this.p5.SpriteSheet },
     { instance: window.p5.Vector },
     { instance: window.p5.Color },
     { instance: window.p5.Image },

@@ -61,6 +61,8 @@ class Certificate extends Component {
     randomDonorTwitter: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     userAge: PropTypes.number,
+    isMinecraft: PropTypes.bool.isRequired,
+    children: PropTypes.node,
   };
 
   personalizeCertificate(session) {
@@ -80,7 +82,7 @@ class Certificate extends Component {
   }
 
   render() {
-    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, userAge} = this.props;
+    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, userAge, isMinecraft, children} = this.props;
     const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
@@ -101,8 +103,6 @@ class Certificate extends Component {
         i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter}) :
         i18n.justDidHourOfCode(),
     });
-
-    const isMinecraft = /mc|minecraft|hero/.test(tutorial);
 
     let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
     if (isMinecraft && !this.state.personalized) {
@@ -159,6 +159,7 @@ class Certificate extends Component {
             userAge={userAge}
           />
         </div>
+        {children}
       </div>
     );
   }
