@@ -19,13 +19,18 @@ module UsersHelper
     # No-op if source_user is nil
     return true unless source_user.present?
 
+    firehose_params = {
+      source_user: source_user,
+      destination_user: destination_user,
+      type: takeover_type,
+      provider: destination_user.provider,
+    }
+
     if source_user.has_activity?
-      # We don't want to destroy an account with progress.
-      # In theory this should not happen, so we log a Honeybadger error and return.
-      Honeybadger.notify(
-        error_class: 'Oauth takeover called for user with progress',
-        errors_message: "Attempted takeover for account with progress. Cancelling takeover of account with id #{source_user.id} by id #{destination_user.id}"
-      )
+      # We don't want to destroy an account with progress. Log to Redshift and return false.
+      firehose_params[:type] = "cancelled-#{takeover_type}"
+      firehose_params[:error] = "Attempted takeover for account with progress."
+      log_account_takeover_to_firehose(firehose_params)
       return false
     end
 
@@ -40,12 +45,7 @@ module UsersHelper
       source_user.destroy!
     end
 
-    log_account_takeover_to_firehose(
-      source_user: source_user,
-      destination_user: destination_user,
-      type: takeover_type,
-      provider: destination_user.provider
-    )
+    log_account_takeover_to_firehose(firehose_params)
     true
   rescue
     false
@@ -94,7 +94,7 @@ module UsersHelper
     end
   end
 
-  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:)
+  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
     FirehoseClient.instance.put_record(
       study: 'user-soft-delete-audit',
       event: "#{type}-account-takeover", # Silent or OAuth takeover
@@ -103,6 +103,7 @@ module UsersHelper
       data_string: provider, # OAuth provider
       data_json: {
         user_type: destination_user.user_type,
+        error: error,
       }.to_json
     )
   end
