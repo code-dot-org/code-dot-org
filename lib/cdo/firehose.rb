@@ -74,8 +74,7 @@ class FirehoseClient
       environment: rack_env,
       device: 'server-side'.to_json
     )
-    data_with_common_values[user_id] = current_user.id if current_user
-
+    data_with_common_values[user_id] ||= current_user.id if current_user
     data_with_common_values
   end
 end
