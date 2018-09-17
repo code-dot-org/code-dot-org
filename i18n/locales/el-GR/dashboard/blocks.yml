@@ -10,9 +10,17 @@ el:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Επόμενο
             '"prev"': Προηγούμενο
       Dancelab_changeMoveEach:
@@ -21,9 +29,76 @@ el:
             sprites: όλα
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: όλα
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Επόμενο
             '"prev"': Προηγούμενο
       Dancelab_changePropBy:
@@ -32,13 +107,112 @@ el:
             '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: όλα
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Επόμενο
             '"prev"': Προηγούμενο
       Dancelab_everySeconds:
@@ -113,124 +287,6 @@ el:
             '"right"': δεξιά
             '"space"': διάστημα
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': επάνω
-            '"down"': κάτω
-            '"left"': αριστερά
-            '"right"': δεξιά
-            '"space"': διάστημα
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': δευτερόλεπτα
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Επόμενο
-            '"prev"': Προηγούμενο
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: όλα
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Επόμενο
-            '"prev"': Προηγούμενο
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Επόμενο
-            '"prev"': Προηγούμενο
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': δευτερόλεπτα
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: όλα
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': δεξιά
-            '"left"': αριστερά
-      DancelabAlpha_randomColor:
-        text: τυχαίο χρώμα
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': κανονικό
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: όλα
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': επάνω
-            '"down"': κάτω
-            '"left"': αριστερά
-            '"right"': δεξιά
-            '"space"': διάστημα
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': επάνω
@@ -343,5 +399,16 @@ el:
             '"y"': θέση y
       Vanilla_randomColor:
         text: τυχαίο χρώμα
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": μπροστά
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": άμμος
+            "'planksOak'": σανίδες από βελανιδιά
       craft_moveForward:
         text: προχώρησε μπροστά
+      craft_placeTorch:
+        text: τοποθέτησε πυρσό
