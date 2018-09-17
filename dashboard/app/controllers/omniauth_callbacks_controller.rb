@@ -118,10 +118,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
     # our tracking data is usually populated, so do it here
-    unless session[:sign_up_tracking_expiration]&.future?
-      session[:sign_up_uid] = SecureRandom.uuid.to_s
-      session[:sign_up_tracking_expiration] = 5.minutes.from_now
-    end
+    SignUpTracking.begin_sign_up_tracking(session)
 
     redirect_to new_user_registration_url
   end
