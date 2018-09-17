@@ -50,6 +50,8 @@ SELECT *
 FROM other_processed
 ),
 
+
+
 sections_schools AS(
 SELECT se.id, ss_user.state as state, ss_user.zip as zip
 
@@ -60,18 +62,28 @@ SELECT se.id, ss_user.state as state, ss_user.zip as zip
          ON si_user.id = u.school_info_id
   JOIN analysis.school_stats ss_user
          ON ss_user.school_id = si_user.school_id
-  where se.section_type = 'csf_workshop'
+  where (se.section_type = 'csf_workshop') or (se.id in (select distinct se.id from pegasus_pii.forms
+  join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
+  join dashboard_production.followers f on f.section_id = se.id
+  where kind = 'ProfessionalDevelopmentWorkshop'
+  and nullif(json_extract_path_text(data_text, 'section_id_s'),'') is not null))
 
 ),
 
 sections_geos AS (
-SELECT se.id, ug.state as state, ug.postal_code as zip 
+SELECT se.id, 
+CASE WHEN se.user_id = 1423830 then 'OH' ELSE ug.state END as state, -- 1423830 is only facilitator in this list not with user_geos in the US 
+CASE WHEN se.user_id = 1423830 then '44113' ELSE ug.postal_code END as zip 
 FROM dashboard_production.sections se 
 JOIN dashboard_production_pii.user_geos ug
  ON se.user_id = ug.user_id
-where se.section_type = 'csf_workshop'
+where ((se.section_type = 'csf_workshop') or (se.id in (select distinct se.id from pegasus_pii.forms
+  join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
+  join dashboard_production.followers f on f.section_id = se.id
+  where kind = 'ProfessionalDevelopmentWorkshop'
+  and nullif(json_extract_path_text(data_text, 'section_id_s'),'') is not null)))
 and se.id not in (SELECT id from sections_schools)
-and ug.country = 'United States'
+--and ug.country = 'United States'
 ),
 
 section_state_zip AS (
@@ -146,4 +158,3 @@ GRANT ALL PRIVILEGES
 GRANT SELECT
   ON analysis.csf_workshop_attendance
   TO GROUP reader, GROUP reader_pii;
-

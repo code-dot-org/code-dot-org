@@ -12,8 +12,9 @@
 .field
   = f.label :skin
   = f.select :skin, options_for_select(@level.class.skins, @level.skin)
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is K1 level"}
+- unless @level.is_a? GamelabJr
+  .field
+    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is K1 level"}
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
 .field
@@ -45,8 +46,6 @@
   %p
     This adds a call block to the end of the toolbox for each function defined
     in the workspace (including hidden start blocks).
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
@@ -79,10 +78,12 @@
 .field
   = f.label :min_workspace_height, 'Min workspace height'
   = f.number_field :min_workspace_height
-.field
-  = f.label :step_speed, 'Step speed'
-  %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
-  = f.number_field :step_speed
+
+- unless @level.is_a? GamelabJr
+  .field
+    = f.label :step_speed, 'Step speed'
+    %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
+    = f.number_field :step_speed
 
 :ruby
   script_data = {
