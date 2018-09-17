@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
@@ -99,7 +101,7 @@ class RegistrationsController < Devise::RegistrationsController
       return
     end
     dependent_students = current_user.dependent_students
-    destroy_users(dependent_students << current_user)
+    destroy_users(current_user, dependent_students)
     TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     return head :no_content
@@ -389,8 +391,38 @@ class RegistrationsController < Devise::RegistrationsController
       )
   end
 
-  def destroy_users(users)
+  def log_account_deletion_to_firehose(current_user, dependent_users)
+    # Log event for user initiating account deletion.
+    FirehoseClient.instance.put_record(
+      study: 'user-soft-delete-audit',
+      event: 'initiated-account-deletion',
+      user_id: current_user.id,
+      data_json: {
+        user_type: current_user.user_type,
+        dependent_user_ids: dependent_users.pluck(:id),
+      }.to_json
+    )
+
+    # Log separate events for dependent users destroyed in user-initiated account deletion.
+    # This should only happen for teachers.
+    dependent_users.each do |user|
+      FirehoseClient.instance.put_record(
+        study: 'user-soft-delete-audit',
+        event: 'dependent-account-deletion',
+        user_id: user[:id],
+        data_json: {
+          user_type: user[:user_type],
+          deleted_by_id: current_user.id,
+        }.to_json
+      )
+    end
+  end
+
+  def destroy_users(current_user, dependent_users)
+    users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
     User.destroy(user_ids_to_destroy)
+
+    log_account_deletion_to_firehose(current_user, dependent_users)
   end
 end

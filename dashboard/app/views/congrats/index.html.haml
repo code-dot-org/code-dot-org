@@ -1,7 +1,7 @@
 :ruby
   require 'cdo/user_helpers'
   congrats_data = {}
-  congrats_data[:english] = @is_english
+  congrats_data[:language] = request.language
   congrats_data[:random_donor_twitter] = @random_donor_twitter
   if current_user
     congrats_data[:current_user] = current_user
