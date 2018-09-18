@@ -21,20 +21,14 @@ module Pd
         country: 'Country',
         title: 'Title',
         first_name: 'First name',
-        preferred_first_name: 'Preferred first name',
         last_name: 'Last name',
         account_email: 'Account email',
         alternate_email: 'If you use another email, enter it here:',
-        phone: 'Phone',
+        phone: 'Home or Cell Phone',
         address: 'Home address',
         city: 'City',
         state: 'State',
         zip_code: 'Zip code',
-        gender_identity: 'Gender identity',
-        race: 'Race',
-      },
-
-      section_2_your_school: {
         school: 'School',
         school_name: 'School name',
         school_district_name: 'School district name',
@@ -46,11 +40,13 @@ module Pd
 
         principal_first_name: "Principal's first name",
         principal_last_name: "Principal's last name",
-        principal_title: "Principal's title",
         principal_email: "Principal's email address",
         principal_confirm_email: "Confirm principal's email address",
         principal_phone_number: "Principal's phone number",
         current_role: 'What is your current role at your school?',
+      },
+
+      section_2_your_school: {
         grades_at_school: 'What grades are served at your school? (select all that apply)',
         grades_teaching: 'What grades are you teaching this year (2017-18)? (select all that apply)',
         grades_expect_to_teach: clean_multiline(
@@ -156,6 +152,8 @@ module Pd
       },
 
       section_5_submission: {
+        gender_identity: 'Gender identity',
+        race: 'Race',
         agree: clean_multiline(
           'By submitting this application, I agree to share my contact information
            and application with Code.org’s Regional Partners.'
