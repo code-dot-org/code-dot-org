@@ -21,7 +21,7 @@ csf_teachers_trained_temp as
 (
   select distinct
   user_id, -- multiple entries per person (if they attended multiple workshops)
-  u.studio_p erson_id,
+  u.studio_person_id,
   'CS Fundamentals'::varchar as course,
   school_year as school_year,
   regional_partner as regional_partner,
@@ -90,7 +90,6 @@ pd_facilitators as
   JOIN dashboard_production_pii.users u2
         ON  pwf.user_id = u2.id
   group by 1
-
 )
   SELECT distinct 
          d.user_id,
