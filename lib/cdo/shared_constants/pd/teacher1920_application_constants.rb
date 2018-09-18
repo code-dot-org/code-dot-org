@@ -60,7 +60,7 @@ module Pd
           Placement CS A (in Java), visit this
           [AP CS A overview](https://code.org/educate/curriculum/apcsa). Review this
           [guidance document](https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18)
-          to make sure your course implementation plans meets program requirements.'
+          to make sure your course implementation plans meet program requirements.'
         ),
         csd_which_grades: clean_multiline(
           'To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?
@@ -74,7 +74,7 @@ module Pd
         ),
         csp_how_offer: BASE_PAGE_LABELS[:section_3_choose_your_program][:csp_how_offer],
         cs_how_many_minutes: clean_multiline(
-          'How many minutes will each of your CS <Program> classes last? (Include the
+          'How many minutes will your CS <Program> classes last? (Include the
           number of minutes from start to finish that you see your students per class
           period. If it varies from day to day, estimate the average number of minutes
           you meet per class period.)'
@@ -103,7 +103,8 @@ module Pd
           :willing_to_travel,
         ).merge(
           {
-            scholarship_reasons: 'Please provide any additional information you’d like to share about why your application should be considered for a scholarship.'
+            scholarship_reasons: 'Please provide any additional information you’d like to share about why your application should be considered for a scholarship.',
+            interested_in_online_program: 'Are you interested in this online program for school year workshops?'
           }
         ),
       section_5_additional_demographic_information:

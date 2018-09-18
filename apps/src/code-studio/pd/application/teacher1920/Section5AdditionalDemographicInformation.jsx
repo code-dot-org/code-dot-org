@@ -24,6 +24,8 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
         {this.checkBoxesFor('race')}
         {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
           [TextFields.otherWithText]: "other"
+        }, {
+          required: false
         })}
       </FormGroup>
     );

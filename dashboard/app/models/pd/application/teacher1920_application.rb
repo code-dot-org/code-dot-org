@@ -48,14 +48,34 @@ module Pd::Application
             "No, this course will be added to the existing schedule, but it won't replace an existing computer science course",
             TEXT_FIELDS[:i_dont_know_explain]
           ],
+          cs_terms: COMMON_OPTIONS[:terms_per_year],
           how_heard: [
             'Code.org Website',
             'Code.org Email',
             'Regional Partner Website',
             'Regional Partner Email',
             'From a teacher that has participated in a Code.org program',
+            'From an administrator',
             TEXT_FIELDS[:other_with_text]
-          ]
+          ],
+          csd_which_grades: (6..12).map(&:to_s) <<
+            'Not sure yet if my school plans to offer CS Discoveries in the 2019-20 school year',
+          csp_which_grades: (9..12).map(&:to_s) <<
+            'Not sure yet if my school plans to offer CS Principles in the 2019-20 school year',
+          plan_to_teach: [
+            'Yes, I plan to teach this course this year (2019-20)',
+            'I hope to be able teach this course this year (2019-20)',
+            'No, I don’t plan to teach this course this year (2019-20), but I hope to teach this course the following year (2020-21)',
+            'No, someone else from my school will teach this course this year (2019-20)',
+            TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+          ],
+          pay_fee: [
+            'Yes, my school or I will be able to pay the full program fee.',
+            TEXT_FIELDS[:no_pay_fee_1920],
+            'Not applicable: there is no program fee for teachers in my region.'
+          ],
+          willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
+          interested_in_online_program: [YES, NO]
         }
       )
     end
@@ -92,9 +112,9 @@ module Pd::Application
         committed
         pay_fee
         willing_to_travel
+
         gender_identity
         race
-        how_heard
         agree
       )
     end
@@ -107,6 +127,10 @@ module Pd::Application
 
         if hash[:does_school_require_cs_license] == YES
           required.concat [:what_license_required]
+        end
+
+        if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
+          required.contact [:scholarship_reasons]
         end
 
         if hash[:program] == PROGRAMS[:csd]
