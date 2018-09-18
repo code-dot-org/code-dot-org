@@ -17,42 +17,6 @@ drop table if exists analysis_pii.regional_partner_stats_csf;
 create table analysis_pii.regional_partner_stats_csf AS
 
 with 
-csf_teachers_trained_temp as 
-(
-  select distinct
-  user_id, -- multiple entries per person (if they attended multiple workshops)
-  u.studio_person_id,
-  'CS Fundamentals'::varchar as course,
-  school_year as school_year,
-  regional_partner as regional_partner,
-  regional_partner_id as regional_partner_id, 
-  trained_at as trained_at, -- this is the 'min' date from the teachers trained at table (the first time they were trained)
-  workshop_date as workshop_date -- this is the date of the workshop (and the source of multiple entries per person) 
-  from
-  (
-    SELECT  
-        ctt.user_id, 
-        ctt.trained_at,
-        pds.start as workshop_date,
-        regional_partner_id::int, 
-        rp.name::varchar as regional_partner
-        FROM 
-        analysis.csf_teachers_trained ctt
-        LEFT JOIN dashboard_production_pii.pd_enrollments pde
-          ON pde.user_id = ctt.user_id
-         LEFT JOIN dashboard_production_pii.pd_attendances pda 
-           ON pda.pd_enrollment_id = pde.id
-         LEFT JOIN dashboard_production_pii.pd_workshops pdw 
-           ON pdw.id = pde.pd_workshop_id
-           AND course = 'CS Fundamentals'
-         LEFT JOIN dashboard_production_pii.pd_sessions pds 
-           ON pds.pd_workshop_id = pdw.id
-        LEFT JOIN dashboard_production_pii.regional_partners rp  
-           ON pdw.regional_partner_id = rp.id     
-  ) csf_train
-  JOIN analysis.training_school_years sy on csf_train.trained_at between sy.started_at and sy.ended_at
-  JOIN dashboard_production.users u on u.id = csf_train.user_id
-),
 completed as
 (
   select 
@@ -93,12 +57,12 @@ pd_facilitators as
 )
   SELECT distinct 
          d.user_id,
-         d.studio_person_id,
+         u.studio_person_id,
          FIRST_VALUE(pde.first_name) OVER (PARTITION BY d.user_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
          FIRST_VALUE(pde.last_name) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.last_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as last_name,
          FIRST_VALUE(pde.email) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email,
-         d.course,
-         d.school_year as school_year_trained,
+         'CS Fundamentals'::varchar as course,
+         sy.school_year as school_year_trained,
          s.school_year as school_year_taught,
          s.script_name,
          CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,        
@@ -116,7 +80,7 @@ pd_facilitators as
          CASE WHEN csfa.subject is null THEN 'Intro Workshop' else csfa.subject END as subject,
          CASE WHEN csfa.trained_by_regional_partner is null then 0 else csfa.trained_by_regional_partner END as trained_by_regional_partner,
          d.trained_at as trained_at,
-         coalesce(d.workshop_date, csfa.workshop_date, d.trained_at)  as workshop_date, 
+         coalesce(csfa.workshop_date, d.trained_at)  as workshop_date, 
          extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) || csfa.workshop_id::varchar(16)  as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
@@ -133,7 +97,8 @@ pd_facilitators as
           -- student gender
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
-  FROM csf_teachers_trained_temp d 
+  FROM csf_teachers_trained d 
+  JOIN training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
          ON d.user_id = u.id
@@ -145,9 +110,7 @@ pd_facilitators as
  -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
   LEFT JOIN analysis.csf_workshop_attendance csfa   
         ON csfa.user_id = d.user_id
-        AND csfa.course = d.course
-        AND csfa.school_year = d.school_year
-        -- AND trunc(csfa.workshop_date) = d.trained_at -- this must be the PROBLEM!! investigat it 
+        AND csfa.school_year = sy.school_year
         AND csfa.not_attended = 0 
 --pii tables (regional partner names, person names, emails, locations)
   LEFT JOIN pd_facilitators pwf
@@ -156,11 +119,11 @@ pd_facilitators as
        ON csfa.regional_partner_id = rp.id 
   LEFT JOIN pd_enrollments_with_year pde   -- only join pde if they are are trained by regional partner 
         ON pde.user_id = d.user_id
-        AND pde.school_year = d.school_year 
+        AND pde.school_year = sy.school_year 
 -- analysis tables 
   LEFT JOIN started s
        ON s.user_id = d.user_id
-      AND s.school_year >= d.school_year 
+      AND s.school_year >= sy.school_year 
   LEFT JOIN completed c
          ON c.user_id = d.user_id
          AND c.script_name = s.script_name
