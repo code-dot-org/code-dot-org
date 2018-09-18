@@ -1704,6 +1704,32 @@ en:
       Guess The Number 2_instruction: Build whatever you want. This is an example of a number-guessing game!
       Guess The Number_instruction: Build whatever you want. This is an example of a number-guessing game!
       Guess The Number_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
+      HOC 2018 Level_1_instruction: 'Walk to the chest to get supplies for your journey.
+
+'
+      HOC 2018 Level_10_instruction: Get to the entrance of this Ocean Monument.
+      HOC 2018 Level_11_instruction: 'Build a conduit with Prismarine inside the Ocean Monument.
+
+'
+      HOC 2018 Level_12_instruction: 'Design your own underwater environment, it’s up to you!
+
+'
+      HOC 2018 Level_2_instruction: 'Board the boat at the end of the dock.
+
+'
+      HOC 2018 Level_3_instruction: 'Head across the open seas.
+
+'
+      HOC 2018 Level_4_instruction: Keep rowing, but this time use a loop.
+      HOC 2018 Level_5_instruction: Explore the shipwreck and look for treasure.
+      HOC 2018 Level_6_instruction: Navigate across the ice to reach the temple.
+      HOC 2018 Level_7a_instruction: Get through this temple to find sunken treasure.
+      HOC 2018 Level_8_instruction: 'Can you make it past the volcano to the coral reef?
+
+'
+      HOC 2018 Level_9b_instruction: 'Use the coral as waypoints to reach the treasure.
+
+'
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
       HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!

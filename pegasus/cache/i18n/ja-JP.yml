@@ -10,7 +10,7 @@ ja-JP:
   upgrade_ie_link: もっと詳しく知る
   en: コンピュータサイエンス
   computer_science_edweek: Hour of Code がやってくる
-  csedweek_dates: 2014年12月8～14日
+  csedweek_dates: 2018年10月3～9日
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a>が始まります。先生方と主催者のみなさん、<a href="http://hourofcode.com"
     style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>の計画をしましょう'
@@ -20,8 +20,8 @@ ja-JP:
   anybody_can_learn: 誰でも学べます
   learn_now: 今すぐ学ぶ
   petition_message: すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです
-  petition_sign_message: 同意して、署名をする。参加する
-  petition_sign_message_support: 私たちを支援して頂けるなら、あなたのお名前の署名をお願いします。＃ 他に参加をします。
+  petition_sign_message: 'ご賛同いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加ください。'
+  petition_sign_message_support: 'ご支援いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加下さい。'
   petition_join_others: '参加する # ほか'
   name: 名前
   email: Eメール
@@ -30,9 +30,14 @@ ja-JP:
   twentyhours_heading: コンピュータサイエンスコースを紹介する
   twentyhours_text: 初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。
   og_title: 全ての子供に機会を得る権利があります
+  og_title_soon: Hour of Code がやってきます。
+  og_title_here: Hour of Codeがやってきた！
   og_description: すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。
+  og_description_celeb: 新しいチュートリアルに挑戦し、1人もしくはクラスで著名人とのビデオチャットを勝ちとりましょう！
   csedweek_og_title: Hour of Code がやってくる
   csedweek_og_description: Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。
+  csedweek_og_description_soon: Hour of Codeが2018年10月3~9日にやってきます。コンピューター科学は、すべての生徒たちが学ぶべき基礎です。
+  csedweek_og_description_here: Hour of Codeがやってきました。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14
     日まで<br/>
   hoc2014_students: 生徒の皆さん
@@ -75,6 +80,7 @@ ja-JP:
   congratulations_on_completing_hoc: おめでとうございます。Hour of Codeのセッションをひとつ修了しました。
   congratulations_volunteer: 'おめでとうございます: あなたは Hour of Code を体験しました、 <a href="https://code.org/volunteer">クラスルームのボランティアに参加</a>
     して、生徒が Hour of Code を学習するのを手助けしましょう！'
+  congratulations_on_completing_course: おめでとうございます。%{course} を終了しました
   congrats_next_tutorials_title: 次のレベルへ進む
   congrats_next_tutorials_desc: 短めの1時間チュートリアル、または <a href="%{current_path}/next">パートナーのチュートリアル</a>
     を試してください。
@@ -218,6 +224,8 @@ ja-JP:
   just_did_coursee: コースE完了 - やったー！@codeorg
   just_did_coursef: コースF完了 - やったー！@codeorg
   just_did_accelerated: 上級コース完了 - やったー！@codeorg
+  just_did_hoc_donor: "#HourOfCode をやってみました！良ければ見てみて！ (%{donor_twitter} さん、@codeorgのご支援ありがとう！)"
+  just_did_course_donor: "%{course} をやりきりました！良ければ見てみて！%{donor_twitter} さん、@codeorgのご支援ありがとう！"
   twitter_teach_cs: 10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc
     。Https://code.org/ をご覧ください。
   twitter_cs_foundational: コンピューターサイエンスは、学生が学ぶすべての基本です。https://youtu.be/QvyTEx1wyOY。
@@ -231,6 +239,7 @@ ja-JP:
   lines_of_code: "<b># 行</b> 上の日付に書き込まれます。"
   lines_of_code_alt: "<b>#</b>学生によって書かれたコードの行"
   who_has_done_hoc: "#HourOfCode に挑戦したのは誰？ @codeorg"
+  who_has_done_hoc_donor: "#HourOfCode をやったことがある人はいますか？ ( %{donor_twitter} さん、@codeorgのご支援ありがとう！)"
   hoc_leaderboards: Hour of Codeが行われている場所
   students_and_lines: 学生%{students} がHour of Code を行い、%{lines}行のコードを書きました
   start_hoc: Hour of Codeに今すぐ挑戦する
@@ -254,6 +263,12 @@ ja-JP:
   studiobar_donate_body: 1ドルの寄付ごとに、一人の子供が学びます
   studiobar_shop_title: ショップ
   studiobar_shop_body: いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。
+  homepage_stats_students: もの米国の生徒がCode.orgのアカウントを持っています
+  homepage_stats_female: の生徒が女性です
+  homepage_stats_teachers: もの先生がCode.orgを使っています
+  homepage_stats_hourofcodde: もの世界中の学生がこれまでにHour of Codeに挑戦しました
+  homepage_stats_policy: の米国の州がコンピューターサイエンスを後押しするように政策を変更しました
+  homepage_stats_title: わたしたちは変化を起こしています
   homepage_hero_text_malala: "&ldquo;私はすべての国の女の子に、Hour of Code を 1 つ学ぶことを提案します。&rdquo;
     \nマララ, ノーベル平和賞受賞者"
   homepage_hero_text_susan: |-
@@ -284,6 +299,8 @@ ja-JP:
   homepage_hero_text_stat_loc: 850万人の女の子がCode.orgに参加して学んでいます。
   homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
   homepage_hero_text_stat_served: 'Hour of Code: #served 提供'
+  homepage_hero_hoc_is_coming: Hour of Code がやってきます。
+  homepage_hero_hoc_is_here: Hour of Codeがやってきました
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: "「アナと雪の女王」のアナとエルサ"
   homepage_slot_text_teacher: 先生用のダッシュボード
@@ -303,6 +320,7 @@ ja-JP:
   homepage_action_text_girlvideo: 女子生徒を応援する
   homepage_action_text_learn: 学習開始
   homepage_action_text_signpetition: 請願書に署名します。
+  homepage_action_text_wincelebritychat: 著名人とのチャットを勝ち取りましょう
   homepage_signpetition_dropdown: 請願書に署名します &#x25BE;
   homepage_diversity_pledge: ダイバーシティーを認める誓約をしてください。
   homepage_banner_text_prizes: 'Hour of Code が12月７~13日にまたやって来ます。 '
@@ -344,6 +362,7 @@ ja-JP:
   homepage_slot_text_link_buy: 参加しよう
   homepage_slot_text_link_donate: 寄付します
   homepage_slot_text_link_shop: T シャツ、帽子、その他
+  homepage_slot_text_link_administrators: あなたの学校にコンピューターサイエンスを取り入れましょう
   homepage_header_codestudio: Code Studio の生徒作品
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
@@ -408,6 +427,7 @@ ja-JP:
   mc_gradelevel: 6歳以上
   mc_platformtext: 最新ブラウザ、スマート フォン、タブレット
   mc_specs: 多言語対応 | 最新ブラウザ、タブレット | 6才以上
+  minecraft_agent: 'Minecraft: 主人公の旅'
   minecraft_designer: Minecraftデザイナー
   minecraft_adventurer: Minecraftアドベンチャー
   minecraft_tutorials: MinecraftのHour of Codeチュートリアル
@@ -420,6 +440,26 @@ ja-JP:
   minecraft_no_internet: インターネットが無い？
   minecraft_download_adventurer: Minecraftアドベンチャーのオフライン版をダウンロード。
   minecraft_subtitle: Minecraft Hour of Code プログラミング入門
+  minecraft_store_camps: 無料のMinecraftのHour of CodeがMicrosoft Storeにあります
+  minecraft_signup_store_camps: 米国、オーストラリア、カナダ、プエルトリコのMicrosoft Storeに<a href='%{signup_store_camp}',
+    target='_blank'>登録</a>し、無料のMinecraftのHour of Codeワークショップに参加しましょう。コーディングが平等で、創造性を橋渡しし、課題を解決し、そしてとても楽しいことを体感してください。
+  minecraft_host_event: MinecraftのHour of Codeイベントを開催する
+  minecraft_teach_resources: 教材および授業プラン
+  minecraft_leader_guide: イベント開催に役立つ資料をダウンロード
+  minecraft_facilitating_event: ファシリテーター向けクイックスタートガイドや各学年の生徒向けのパワーポイントプレゼンテーションを<a
+    href='%{minecraft_facilitator_download}', target='_blank'>ダウンロード</a>
+  minecraft_join_online_training: MinecraftのHour of Codeを開催したいけれど、どこから始めればよいかわからない？わたしたちの<a
+    href='%{minecraft_webinar_url}', target='_blank'>オンラインセミナー</a>をご覧ください。開催の方法、すぐに使えるファシリテーター用資料、Minecraftチームによる新しいチュートリアル｢主人公の旅｣の紹介を見ることができます。コンピューター科学教育週間
+    (10月4~10日) 以降に子どもたちにHour of Codeを与えるには何が必要かを考える際の参考なさってください。
+  minecraft_continue_learning_description: コンピューターサイエンスの経験はいりません！すべての子どもたちがコンピューターサイエンス教育を通して役立つスキルを学ぶ手助けをしませんか？Microsoft
+    Storeでは、1時間のワークショップ3つに登録し、楽しくラクなコーディングを体験し、コンピュータ科学のキーコンセプトを知り、あなたの教室やコミュニティでHour
+    of Codeを開催する準備をすることができます。あなたならできます！<a href='%{minecraft_continue_learning_url}',
+    target='_blank'>登録はこちら</a>。
+  minecraft_future: 子どもたちが将来の準備をする手助けをしましょう
+  minecraft_future_description: デジタルリテラシーからコンピューターサイエンスに至るまでのデジタルスキルを、学校や非営利団体がどのように自らに取り入れたかをご覧ください。異なるモデルを考え、工夫を知り、高く評価された<a
+    href='%{minecraft_future_url}', target='_blank'>資料にアクセス</a>してください。
+  minecraft_og_designer: Minecraftが、新しいアクティビティとともにHour of Codeに帰ってきました。あなた自身のMinecraftのなかで動物やその他のクリーチャーたちをプログラムしてみましょう。
+  minecraft_og_agent: MinecraftがHour of Codeに戻ってきました。今度はあなたが主人公です！コードを書いてMinecraftの世界を冒険しましょう！
   sports_page_title: Hour of Code スポーツ
   sports_og_title: がんばって。誰でも学ぶことができます。
   sports_og_description: チャンピオンや金メダリストがHour of Codeを行うことを応援します。自分のスポーツ ゲームをプログラミングしよう。
@@ -453,13 +493,16 @@ ja-JP:
   video_title_obama: オバマ大統領もコンピューターサイエンスを
   video_title_hoc_is_here: Hour of Code - 誰でも学べるプログラミング
   video_title_anybody_can_learn: 誰もが学ぶことができます
+  video_title_steph_curry: Steph CurryとHour of Code
   video_title_draymond_green: ドレイモンド・グリーンとHour of Code
   video_title_russell_okung: ラッセル・オコングとHour of Code
   video_title_real_madrid: レアル マドリードとHour of Code
   video_title_marco_belinelli: マルコ ・ ベリネッリとHour of Code
   video_title_chris_bosh: クリス ・ ボッシュのコンピュータ ・ サイエンス
+  video_title_my_name_is_aracely: 私はAracelyといいます
   video_1min: 1 分
   video_2min: 2 分
+  video_3min: 3 分
   video_5min: 5 分
   speak_another_language: 別の言語を話しますか？
   help_translate: 翻訳をお手伝いください。
@@ -480,8 +523,9 @@ ja-JP:
     (これはビデオ チャットで行うことができます)'
   volunteer_engineer_submission_intro_guide: 私たちの <a href="%{volunteer_guide}"> ボランティア
     プログラム</a> について詳しく見る。
-  volunteer_engineer_submission_intro_signup: コンピュータ サイエンスの学生やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。
-    <span class="form-required-field">*</span> とマークされているフィールドは必須です。
+  volunteer_engineer_submission_intro_signup: コンピューターサイエンスの学生やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。ボランティア登録をするためには18歳以上である必要があります。入力された情報はすべて<a
+    href="/volunteer/local">volunteer map</a>にて公開されますのでご注意ください。 <span class="form-required-field">*</span>
+    がついている欄は入力が必須です。
   volunteer_engineer_submission_intro_links: あなたはボランティアをお探しの先生ですか？<a href="%{volunteer_local}">ボランティア
     マップ</a> で地域のボランティアを探してください。
   volunteer_engineer_submission_update_information: あなたの情報を更新する
@@ -740,7 +784,7 @@ ja-JP:
   dashboard_teacher_worksheet: 教員用ワークシート
   dashboard_curriculum_csina: '算数とコンピュータサイエンス:'
   dashboard_curriculum_csins: '理科とコンピュータサイエンス:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: コンピューターサイエンス 入門
   dashboard_curriculum_ecs: 'コンピュータサイエンスの世界を探検する:'
   dashboard_grade_k: K
   dashboard_grade_other: その他
@@ -917,7 +961,16 @@ ja-JP:
   coursee_name: コース E
   coursef-draft_name: コース F
   coursef_name: コース F
+  coursea-2017_name: コース A (2017)
+  courseb-2017_name: コース B (2017)
+  coursec-2017_name: コース C (2017)
+  coursed-2017_name: コース D (2017)
+  coursee-2017_name: コース E (2017)
+  coursef-2017_name: コース F (2017)
   accelerated_name: 上級コース
+  express-2017_name: エクスプレスコース (2017)
+  pre-express-2017_name: 読み書き前 エクスプレスコース (2017)
+  pre-express-2018_name: 読み書き前 エクスプレスコース (2018)
   cspunit1_name: "(old) Unit 1: デジタル情報"
   cspunit2_name: "(old) Unit 2: インターネット"
   cspunit3_name: "(old) Unit 3: プログラミング"
@@ -932,20 +985,27 @@ ja-JP:
   csd6-2018_name: 'ユニット 6: フィジカル ・ コンピューティング'
   csp1-2017_name: '第 1 章: インターネット'
   csp2-2017_name: '第 2 章: デジタル情報'
+  csp-explore-2017_name: 'AP: Explore PTの準備'
+  csp-create-2017_name: 'APテスト: Create PTの準備'
   csppostap-2017_name: 'ポストAP: アプリ内でのデータベース'
   csp1-2018_name: '第 1 章: インターネット'
   csp2-2018_name: '第 2 章: デジタル情報'
+  csp-explore-2018_name: 'AP: Explore PTの準備'
+  csp-create-2018_name: 'APテスト: Create PTの準備'
   csppostap-2018_name: 'ポストAP: アプリ内でのデータベース'
   csp1_name: '第 1 章: インターネット'
   csp2_name: '第 2 章: デジタル情報'
   csp-ap_name: AP パフォーマンス タスク
   csppostap_name: 'ポストAP: アプリ内でのデータベース'
+  csp-post-survey_name: コース後の生徒たちの調査
   cspassessment_name: 完全なテスト - 50 の質問
+  csp-explore_name: 'AP: Explore PTの準備'
+  csp-create_name: 'APテスト: Create PTの準備'
   cspexam1-mWU7ilDYM9_name: テストその1 - 25 の質問
   cspexam2-AKwgAh1ac5_name: テストその2 - 25 の質問
   cspunit3_gradelevel: 中学3年～高校3年生向け
   20-hour_name: 上級コース
-  algebra_name: コンピューター・サイエンスと代数
+  algebra_name: コンピューターサイエンスと代数 フルコース
   AlgebraA_name: コンピューター・サイエンス代数 A コース
   AlgebraB_name: コンピューター・サイエンス代数 B コース
   gumball_name: ガムボール
@@ -957,9 +1017,13 @@ ja-JP:
   math_category_name: 計算(けいさん)
   hoc_category_name: Hour of Code（アワー オブ コード）
   csf_category_name: コンピューター・サイエンスの基礎
+  csf_2017_category_name: コンピューターサイエンス 初歩 (2017)
+  csf_2018_category_name: コンピューターサイエンス 初歩 (2018)
   csf2_draft_category_name: '開発中: コース A - F'
+  csd_2018_category_name: コンピューターサイエンス 発展 ('18~'19)
   csp_category_name: "'15-'16 コンピューター・サイエンス原理"
-  csp17_category_name: コンピューター・サイエンス入門
+  csp17_category_name: コンピューターサイエンス 入門 ('17~18)
+  csp_2018_category_name: コンピューターサイエンス 入門 ('18~'19)
   cspexams_category_name: コンピューター・サイエンス原理実習テスト
   applab_name: アプリ ラボ
   gamelab_name: ゲーム ラボ
@@ -1444,10 +1508,11 @@ ja-JP:
   header_report_bug: バグを報告
   header_tutorials: チュートリアル
   header_documentation: ドキュメント
-  csp_name: コンピューター・サイエンス入門
+  csp_name: コンピューターサイエンス 入門
   full_course_category_name: すべてのコース
   user_header_label: やあ %{username}
   user_header_settings: アカウント
   user_header_logout: サインアウト
   user_header_signin: サインイン
   view_all_sections: すべてのセクションを表示
+  applab-intro_name: App Labの紹介
