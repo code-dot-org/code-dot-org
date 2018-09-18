@@ -834,10 +834,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute other_user.has_activity?
 
     # When I attempt to add credential X
-    auth = generate_auth_user_hash(provider: credential.credential_type, uid: credential.authentication_id, refresh_token: '54321')
-    @request.env['omniauth.auth'] = auth
-    setup_should_connect_provider(user, 2.days.from_now)
-    get :google_oauth2
+    auth = link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
 
     # Then I should successfully add credential X
     user.reload
@@ -864,12 +863,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     section.students << other_user
 
     # When I attempt to add credential X
-    auth = generate_auth_user_hash(provider: credential.credential_type, uid: credential.authentication_id)
-    @request.env['omniauth.auth'] = auth
-    setup_should_connect_provider(user, 2.days.from_now)
-    get :google_oauth2
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
 
-    # Then I should be enrolled in section Y instead of other_user
+    # Then I should be enrolled in section Y instead of "other_user"
     section.reload
     assert_includes section.students, user
     refute_includes section.students, other_user
@@ -895,6 +893,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.session[ACCT_TAKEOVER_PROVIDER] = provider
     @request.session[ACCT_TAKEOVER_UID] = user.uid
     @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+  end
+
+  # Try to link a credential to the provided user
+  # @return [OmniAuth::AuthHash] the auth hash, useful for validating
+  #   linked credentials with assert_auth_option
+  def link_credential(user, type:, id:)
+    auth = generate_auth_user_hash(provider: type, uid: id)
+    @request.env['omniauth.auth'] = auth
+    setup_should_connect_provider(user, 2.days.from_now)
+    get :google_oauth2
+    auth
   end
 
   def generate_auth_user_hash(args)
