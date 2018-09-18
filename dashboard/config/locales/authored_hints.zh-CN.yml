@@ -7880,6 +7880,7 @@ zh-CN:
         courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。"
+        courseC_maze_debugging5_c: 您可以在转向模块的下拉菜单中更改其方向。
         courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -10781,6 +10782,8 @@ zh-CN:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: 这个程序经常重复什么顺序？可以将这些模块拖到函数中吗？
         courseE_farmer_functions3c_b: 不要忘记在你删除模块的时候，在主程序中调用您的函数。
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_b: 添加哪些代码才能绕过拐角？
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: 把所有的代码拽出`重复`循环并放入`去采南瓜`函数中。
         courseE_farmer_functions4_b: 在运行代码之前, 请不要忘记将调用`去采南瓜`函数的模块放在循环中。
@@ -10808,6 +10811,8 @@ zh-CN:
         courseE_farmer_functions6c_a: 编辑你的函数，也能查找生菜。
         courseE_farmer_functions6c_b: "`如果/否则`模块能否帮助查找格子里是否有莴苣？"
         courseE_farmer_functions6c_c: 别忘了继续查找玉米!
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: 在工具箱的 "函数" 部分下创建函数。
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: 你不需要一个函数，但如果有帮助，你可以做一个！
         courseE_farmer_functions7b_b: 使用`如果/否则`语句来查找农作物, 然后根据所找到的作物转向。

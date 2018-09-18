@@ -10,9 +10,17 @@ fi:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Seuraava
             '"prev"': Edellinen
       Dancelab_changeMoveEach:
@@ -21,9 +29,76 @@ fi:
             sprites: kaikki
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: kaikki
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Seuraava
             '"prev"': Edellinen
       Dancelab_changePropBy:
@@ -32,13 +107,112 @@ fi:
             '"scale"': koko
             '"x"': x:än paikka
             '"y"': y:n paikka
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: kaikki
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Seuraava
             '"prev"': Edellinen
       Dancelab_everySeconds:
@@ -121,132 +295,6 @@ fi:
             '"right"': oikealle
             '"space"': avaruus
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ylös
-            '"down"': alas
-            '"left"': vasemmalle
-            '"right"': oikealle
-            '"space"': avaruus
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekuntia
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Seuraava
-            '"prev"': Edellinen
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: kaikki
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Seuraava
-            '"prev"': Edellinen
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Seuraava
-            '"prev"': Edellinen
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekuntia
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: kaikki
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': oikealle
-            '"left"': vasemmalle
-      DancelabAlpha_randomColor:
-        text: satunnainen väri
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': Ei mitään
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normaali
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Ei mitään
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: kaikki
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': ylös
-            '"down"': alas
-            '"left"': vasemmalle
-            '"right"': oikealle
-            '"space"': avaruus
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': ylös
@@ -359,5 +407,16 @@ fi:
             '"y"': y:n paikka
       Vanilla_randomColor:
         text: satunnainen väri
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": eteen
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": hiekka
+            "'planksOak'": tammilankut
       craft_moveForward:
         text: siirry eteenpäin
+      craft_placeTorch:
+        text: aseta soihtu

@@ -10,31 +10,201 @@ ne:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': अर्को
             '"prev"': Previous
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': अर्को
             '"prev"': Previous
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': size
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': अर्को
+            '"prev"': Previous
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': अर्को
             '"prev"': Previous
       Dancelab_everySeconds:
@@ -89,100 +259,6 @@ ne:
             '"right"': दाँया
             '"space"': space
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': seconds
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': अर्को
-            '"prev"': Previous
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': अर्को
-            '"prev"': Previous
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': size
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': अर्को
-            '"prev"': Previous
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': seconds
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': size
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': size
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': दाँया
-            '"left"': बाँया
-      DancelabAlpha_randomColor:
-        text: कुनै एक  रङ
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': size
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': size
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': size
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': size
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': माथि
@@ -271,5 +347,16 @@ ne:
             '"scale"': size
       Vanilla_randomColor:
         text: कुनै एक  रङ
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ahead
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": sand
+            "'planksOak'": oak planks
       craft_moveForward:
         text: move forward
+      craft_placeTorch:
+        text: place torch

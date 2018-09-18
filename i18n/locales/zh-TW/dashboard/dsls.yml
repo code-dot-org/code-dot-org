@@ -1643,6 +1643,8 @@ zh-TW:
         Question: 問題
       CSDU2 Match RGB Colors:
         Question: 問題
+      CSPU5_U3L14 - Matching Events to Description:
+        click: click
       K-1 Artist 2 Match 1:
         Matching: 配對
       K-1 Artist 2 Match 2:
@@ -1683,7 +1685,9 @@ zh-TW:
         B: B
         C: C
         D: D
-        E: 東
+        E: E
+      U3L14 - Matching Events to Description:
+        click: click
       U3L19 - MATCH what are values of abc:
         '10': '10'
         '12': '12'
@@ -2068,7 +2072,7 @@ zh-TW:
         B: B
         C: C
         D: D
-        E: 東
+        E: E
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -2101,7 +2105,7 @@ zh-TW:
         B: B
         C: C
         D: D
-        E: 東
+        E: E
       U2L08 Assessment 1:
         '11': '11'
         '5': '5'

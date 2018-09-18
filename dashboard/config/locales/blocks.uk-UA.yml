@@ -10,9 +10,17 @@ uk:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Далі
             '"prev"': Назад
       Dancelab_changeMoveEach:
@@ -21,9 +29,76 @@ uk:
             sprites: усі
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: усі
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Далі
             '"prev"': Назад
       Dancelab_changePropBy:
@@ -32,13 +107,112 @@ uk:
             '"scale"': розмір
             '"x"': позиція по осі x
             '"y"': позиція по осі y
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: усі
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Далі
+            '"prev"': Назад
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Далі
             '"prev"': Назад
       Dancelab_everySeconds:
@@ -113,124 +287,6 @@ uk:
             '"right"': праворуч
             '"space"': космос
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': вгору
-            '"down"': вниз
-            '"left"': ліворуч
-            '"right"': праворуч
-            '"space"': космос
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': секунди
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Далі
-            '"prev"': Назад
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: усі
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Далі
-            '"prev"': Назад
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Далі
-            '"prev"': Назад
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': секунди
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: усі
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': праворуч
-            '"left"': ліворуч
-      DancelabAlpha_randomColor:
-        text: випадковий колір
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': нормальний
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: усі
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': вгору
-            '"down"': вниз
-            '"left"': ліворуч
-            '"right"': праворуч
-            '"space"': космос
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': вгору
@@ -343,5 +399,16 @@ uk:
             '"y"': позиція по осі y
       Vanilla_randomColor:
         text: випадковий колір
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": попереду
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": пісок
+            "'planksOak'": дубові дошки
       craft_moveForward:
         text: рухатись вперед
+      craft_placeTorch:
+        text: поставити факел

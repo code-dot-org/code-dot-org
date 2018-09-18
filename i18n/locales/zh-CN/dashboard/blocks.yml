@@ -25,6 +25,14 @@ zh-CN:
             '1': 分解
             '2': 丝线
             '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': 下一项
             '"prev"': 前一项
             '"rand"': 随机
@@ -33,15 +41,84 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"alien"': 外星人
+            '"unicorn"': 独角兽
             '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: 所有
             '"unicorn"': 独角兽
           MOVE:
             '0': 休息
             '1': 分解
             '2': 丝线
             '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': 下一项
             '"prev"': 前一项
             '"rand"': 随机
@@ -57,8 +134,89 @@ zh-CN:
             '"tint"': 色调
       Dancelab_clickedOn:
         text: 当 {SPRITE} 被点击时
+      Dancelab_comment:
+        text: '注释: {COMMENT}'
       Dancelab_distance:
         text: "{LOCATION1} 和 {LOCATION2} 的距离"
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: 所有
+            '"unicorn"': 独角兽
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': 休息
+            '2': 丝线
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
       Dancelab_doMoveOnce:
         text: "{SPRITE} 移动 {MOVE} 一次"
         options:
@@ -67,6 +225,32 @@ zh-CN:
             '1': 分解
             '2': 丝线
             '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': 下一项
             '"prev"': 前一项
             '"rand"': 随机
@@ -126,10 +310,8 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
             '"unicorn"': 独角兽
+            '"mrwiggles"': MrWiggles
           FORMAT:
             '"grid"': 网格
             '"row"': 行
@@ -146,10 +328,13 @@ zh-CN:
         text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
         options:
           COSTUME:
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
             '"unicorn"': 独角兽
+            '"mrwiggles"': MrWiggles
+      Dancelab_makeNewDanceSpriteRight:
+        options:
+          COSTUME:
+            '"unicorn"': 独角兽
+            '"mrwiggles"': MrWiggles
       Dancelab_makeNewDanceSpriteSync:
         text: |-
           测试同步
@@ -160,6 +345,11 @@ zh-CN:
             '"mrwiggles"': MrWiggles
             '"pizza"': 比萨
             '"unicorn"': 独角兽
+      Dancelab_makeNewDanceSpriteTest:
+        options:
+          COSTUME:
+            '"unicorn"': 独角兽
+            '"mrwiggles"': MrWiggles
       Dancelab_makeNewGroupSprite:
         text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} {GROUP} 跳舞者
         options:
@@ -243,6 +433,7 @@ zh-CN:
             '"disco"': 迪斯科
             '"rainbow"': 彩虹
             '"diamonds"': 菱形
+            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": 随机
       Dancelab_setDanceSpeed:
         text: 将 {SPRITE} 跳舞速度改为 {SPEED}
         options:
@@ -257,9 +448,7 @@ zh-CN:
         options:
           EFFECT:
             '"none"': 没有
-            '"disco"': 迪斯科
-            '"rainbow"': 彩虹
-            '"diamonds"': 菱形
+            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": 随机
       Dancelab_setFreq:
         text: 设置频率为 {FREQ}
       Dancelab_setProp:
@@ -360,6 +549,10 @@ zh-CN:
             '2': 高音
       Dancelab_whenSetup:
         text: 设置
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"peas"': 黑眼豆豆合唱团 - I Got a Feeling
       Dancelab_whenTouching:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       Dancelab_whileKey:
@@ -376,381 +569,6 @@ zh-CN:
             '"s"': s
             '"d"': d
       Dancelab_whileTouching:
-        text: 当 {SPRITE1} 碰到 {SPRITE2}
-      DancelabAlpha_addBehavior:
-        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
-      DancelabAlpha_atTimestamp:
-        text: 在 {TIMESTAMP} {UNIT}
-        options:
-          UNIT:
-            '"measures"': 衡量
-            '"seconds"': " 秒"
-      DancelabAlpha_changeColorBy:
-        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': 色调
-            '"saturation"': 饱和度
-            '"brightness"': 亮度
-      DancelabAlpha_changeMove:
-        text: 将 {SPRITE} 舞蹈改到 {MOVE}
-        options:
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
-      DancelabAlpha_changeMoveEach:
-        text: 将 {GROUP} 舞蹈改为 {MOVE}
-        options:
-          GROUP:
-            sprites: 所有
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
-            '"unicorn"': 独角兽
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
-      DancelabAlpha_changePropBy:
-        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-      DancelabAlpha_clickedOn:
-        text: 当 {SPRITE} 被点击时
-      DancelabAlpha_distance:
-        text: "{LOCATION1} 和 {LOCATION2} 的距离"
-      DancelabAlpha_doMoveOnce:
-        text: "{SPRITE} 移动 {MOVE} 一次"
-        options:
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
-      DancelabAlpha_eval:
-        text: 执行一些随意的代码 {CODE}
-      DancelabAlpha_everySeconds:
-        text: '每次 {N} {UNIT} '
-        options:
-          UNIT:
-            '"measures"': 衡量
-            '"seconds"': " 秒"
-      DancelabAlpha_everySecondsRange:
-        text: 每个 {N} {UNIT} 要从 {START} 到 {STOP}
-        options:
-          UNIT:
-            measures: 衡量
-            seconds: 秒
-      DancelabAlpha_everyVerseChorus:
-        text: '每个 {UNIT} '
-        options:
-          UNIT:
-            '"verse"': 诗歌
-            '"chorus"': 合唱
-      DancelabAlpha_frameRate:
-        text: 设置帧率为 {RATE}
-      DancelabAlpha_getEnergy:
-        text: 获得 {RANGE} 的能量
-        options:
-          RANGE:
-            '"low"': 低
-            '"mid"': 中
-            '"high"': 高
-      DancelabAlpha_getProp:
-        text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-      DancelabAlpha_getTime:
-        text: "{UNIT} 消失"
-        options:
-          UNIT:
-            '"measures"': 衡量
-            '"seconds"': 秒
-      DancelabAlpha_helloWorld:
-        text: 你好，世界
-      DancelabAlpha_isTouching:
-        text: "{THIS} 正在触碰 {TARGET}"
-      DancelabAlpha_jumpTo:
-        text: "{SPRITE} 跳到 {LOCATION}"
-      DancelabAlpha_layoutSprites:
-        text: 输出 {GROUP} 精灵为 {FORMAT}
-        options:
-          GROUP:
-            sprites: 所有
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
-            '"unicorn"': 独角兽
-          FORMAT:
-            '"grid"': 网格
-            '"row"': 行
-            '"column"': 列
-      DancelabAlpha_locationCenter:
-        text: 中央
-      DancelabAlpha_locationPointer:
-        text: 点的位置
-      DancelabAlpha_location_picker:
-        text: "{LOCATION}"
-      DancelabAlpha_log:
-        text: 日志消息 {MESSAGE}
-      DancelabAlpha_makeNewDanceSprite:
-        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
-        options:
-          COSTUME:
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
-            '"unicorn"': 独角兽
-      DancelabAlpha_makeNewDanceSpriteSync:
-        text: |-
-          测试同步
-          在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
-        options:
-          COSTUME:
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
-            '"unicorn"': 独角兽
-      DancelabAlpha_makeNewGroupSprite:
-        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} {GROUP} 跳舞者
-        options:
-          COSTUME:
-            '"circle"': 圆形
-            '"wiggles"': 扭动
-          GROUP:
-            lead_dancers: 领导
-            backup_dancers: 备份
-      DancelabAlpha_mapper:
-        text: 从 {RANGE} 到 {DOMAIN} 映射 map {VALUE}
-      DancelabAlpha_mappingProp:
-        text: "{PROPERTY} 位于 {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-          RANGE:
-            '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
-      DancelabAlpha_mirrorSprite:
-        text: "{SPRITE} 面向 {DIRECTION}"
-        options:
-          DIRECTION:
-            '"right"': 向右
-            '"left"': 向左
-      DancelabAlpha_mixColors:
-        text: 混合 {COLOR1} 和 {COLOR2}
-      DancelabAlpha_moveDown:
-        text: "{THIS} 向下移动"
-      DancelabAlpha_moveForward:
-        text: 向前移动 {SPRITE} {DISTANCE} 像素
-      DancelabAlpha_moveLeft:
-        text: "{THIS} 向左移动"
-      DancelabAlpha_moveRight:
-        text: "{THIS} 向右移动"
-      DancelabAlpha_moveUp:
-        text: "{THIS} 向上移动"
-      DancelabAlpha_nMeasures:
-        text: "{N} 测量"
-      DancelabAlpha_onPointerDown:
-        text: 当指针按下时
-      DancelabAlpha_onPointerDrag:
-        text: 当指针拖动时
-      DancelabAlpha_onPointerUp:
-        text: 当指针向上时
-      DancelabAlpha_pointInDirection:
-        text: 指向 {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 东
-            '"South"': 南
-            '"West"': 西
-      DancelabAlpha_pointToward:
-        text: 将 {SPRITE} 朝向 {LOCATION}
-      DancelabAlpha_randomColor:
-        text: 随机颜色
-      DancelabAlpha_randomLocation:
-        text: 随机位置
-      DancelabAlpha_range:
-        text: "{RANGE} ... {DOMAIN}"
-      DancelabAlpha_removeAllBehaviors:
-        text: "{SPRITE} 停止所有事情"
-      DancelabAlpha_removeBehavior:
-        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
-      DancelabAlpha_secondsInMeasure:
-        text: 一次测量中的秒数
-      DancelabAlpha_setBackground:
-        text: 设置背景颜色为 {COLOR}
-      DancelabAlpha_setBackgroundEffect:
-        text: 设置背景效果为 {EFFECT}
-        options:
-          EFFECT:
-            '"none"': 没有
-            '"disco"': 迪斯科
-            '"rainbow"': 彩虹
-            '"diamonds"': 菱形
-      DancelabAlpha_setDanceSpeed:
-        text: 将 {SPRITE} 跳舞速度改为 {SPEED}
-        options:
-          SPEED:
-            '1': 正常
-            '2': 快
-            '4': 非常快
-            '0.5': 慢
-            '0.25': 非常慢
-      DancelabAlpha_setForegroundEffect:
-        text: 设置前景效果为 {EFFECT}
-        options:
-          EFFECT:
-            '"none"': 没有
-            '"disco"': 迪斯科
-            '"rainbow"': 彩虹
-            '"diamonds"': 菱形
-      DancelabAlpha_setFreq:
-        text: 设置频率为 {FREQ}
-      DancelabAlpha_setProp:
-        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"tint"': 色调
-            '"dance_speed"': 跳舞速度
-      DancelabAlpha_setVisibleEach:
-        text: 设置 {THIS} 为 {VISIBILITY}
-        options:
-          THIS:
-            sprites: 所有
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
-            '"unicorn"': 独角兽
-          VISIBILITY:
-            'true': 可见
-            'false': 隐藏
-      DancelabAlpha_setup:
-        text: 设置
-      DancelabAlpha_spritesWhere:
-        text: 精灵的 {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"x"': x位置
-            '"y"': y位置
-            '"costume"': 服装
-            '"direction"': 移动方向
-            '"rotation"': 旋转或方向
-            '"tint"': 色调
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      DancelabAlpha_startMapping:
-        text: "{SPRITE} 开始 {PROPERTY} 为 {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-          RANGE:
-            '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
-      DancelabAlpha_startOscillator:
-        text: 开始振动器
-      DancelabAlpha_startSong:
-        text: 开始歌曲
-      DancelabAlpha_startVisualizer:
-        text: 开始可见
-      DancelabAlpha_stopMapping:
-        text: "{SPRITE} 停止 {PROPERTY} 为 {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-            '"dance_speed"': 跳舞速度
-          RANGE:
-            '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
-      DancelabAlpha_stopOscillator:
-        text: 停止振动器
-      DancelabAlpha_whenKey:
-        text: 当 {KEY} 按下时
-        options:
-          KEY:
-            '"up"': 向上
-            '"down"': 向下
-            '"left"': 向左
-            '"right"': 向右
-            '"space"': 空间
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      DancelabAlpha_whenPeak:
-        text: 当 {RANGE} 达到最高
-        options:
-          RANGE:
-            '0': 低音
-            '1': 中
-            '2': 高音
-      DancelabAlpha_whenSetup:
-        text: 设置
-      DancelabAlpha_whenTouching:
-        text: 当 {SPRITE1} 碰到 {SPRITE2}
-      DancelabAlpha_whileKey:
-        text: 当 {KEY} 按下时
-        options:
-          KEY:
-            '"up"': 向上
-            '"down"': 向下
-            '"left"': 向左
-            '"right"': 向右
-            '"space"': 空间
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      DancelabAlpha_whileTouching:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_add:
         text: 将 {SPRITE} 加入组 {THIS}
@@ -1035,6 +853,8 @@ zh-CN:
         text: 最后一个 {VALUE}
       gamelab_spritesWhereRandom:
         text: 在组 {VALUE} 中随机
+      gamelab_thisBeginsBehaviorSimple:
+        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
       gamelab_turn:
         text: "{SPRITE} 转 {DIRECTION} {N} 度"
         options:
@@ -1162,8 +982,14 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
             '"tint"': 色调
+      Mikelab_whenTouchesAny:
+        text: 当{TARGET} 触及任何精灵时
       Mikelab_whenTouchingAny:
         text: 当 {SPRITE} 碰到任何 {GROUP}
+      Mikelab_whileTouchingAny:
+        text: |-
+          当{TARGET} 碰到任何精灵
+          {STATEMENT}
       Vanilla_randomColor:
         text: 随机颜色
       Vector_createSpriteWith:
@@ -1191,7 +1017,18 @@ zh-CN:
         options:
           PROPERTY:
             "'shapeColor'": 颜色
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": 前面
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": 沙子
+            "'planksOak'": 橡木板
       craft_log:
         text: 日志消息 {MESSAGE}
       craft_moveForward:
         text: 向前移动
+      craft_placeTorch:
+        text: 放下火把
