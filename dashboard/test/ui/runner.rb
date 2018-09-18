@@ -677,6 +677,12 @@ def run_feature(browser, feature, options)
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
+  # The "view more" links in the public project gallery for App Lab and Game Lab
+  # are controlled by DCDO so we can quickly hide them if there are
+  # inappropriate projects. This enviroment lets us test "view more" link
+  # visibility without updating the tests every time we toggle the flag.
+  run_environment['HIDE_VIEW_MORE_LINKS'] = DCDO.get('image_moderation', {})['limited_project_gallery'].to_s
+
   max_reruns = how_many_reruns?(test_run_string)
 
   html_log = html_output_filename(test_run_string, options)
