@@ -40,15 +40,28 @@ export default class Section4ProfessionalLearningProgramRequirements extends Lab
           Partners based on your geographic location. There may be a fee associated with
           the program in your region. There also may be scholarships available to help
           cover the cost of the program. You can{' '}
-          <a href="https://code.org/educate/regional-partner/summer-workshop-fee" target="_blank">
+          <a href="https://code.org/educate/professional-learning/program-information" target="_blank">
             check this page
           </a>
           {' '}to see if there are fees and/or scholarships available in your region.
         </p>
         {this.radioButtonsFor('payFee')}
-        {this.largeInputFor('scholarshipReasons')}
+        {this.props.data.payFee === TextFields.noPayFee1920 && this.largeInputFor('scholarshipReasons')}
         {this.radioButtonsFor('willingToTravel')}
-        {/* TODO (mehal): online question goes here*/}
+        We may offer online academic year workshops for those unable to travel to their local academic year workshops. Important notes.
+        <ol>
+          <li>
+            The online option for academic year workshops is not guaranteed - we are
+            piloting this option now, and considering the effectiveness of this method
+            before rolling it out large-scale.
+          </li>
+          <li>
+            An online option for the five-day summer workshop does not currently exist -
+            all participants accepted to the Professional Learning Program will need to
+            commit to attending the five-day summer workshop in-person.
+          </li>
+        </ol>
+        {this.radioButtonsFor('interestedInOnlineProgram')}
       </FormGroup>
     );
   }

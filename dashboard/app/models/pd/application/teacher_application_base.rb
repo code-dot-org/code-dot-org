@@ -113,7 +113,7 @@ module Pd::Application
       {
         country: [
           'United States',
-          'International'
+          'Other country'
         ],
 
         title: COMMON_OPTIONS[:title],
@@ -128,7 +128,7 @@ module Pd::Application
 
         current_role: [
           'Teacher',
-          'Instructional Coach',
+          'Instructional coach',
           'Librarian',
           'School administrator',
           'District administrator',

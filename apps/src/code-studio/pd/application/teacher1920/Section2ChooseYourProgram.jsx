@@ -62,9 +62,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
             Click here
           </a> for guidance on required number of hours.
         </p>
-        {this.inputFor('csHowManyMinutes')}
-        {this.inputFor('csHowManyDaysPerWeek')}
-        {this.inputFor('csHowManyWeeksPerYear')}
+        {this.inputFor('csHowManyMinutes', {style: {width: '100px'}})}
+        {this.inputFor('csHowManyDaysPerWeek', {style: {width: '100px'}})}
+        {this.inputFor('csHowManyWeeksPerYear', {style: {width: '100px'}})}
+        {this.radioButtonsFor('csTerms')}
         {this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
           [TextFields.dontKnowIfIWillTeachExplain]: "other"
         })}
