@@ -27,26 +27,29 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     provider = auth_hash.provider.to_s
     return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
 
-    # Check if credential is already in use
     existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
+
+    # Credential is already held by the current user
+    # Notify of no-op.
+    if existing_credential_holder&.==(current_user)
+      flash.notice = I18n.t('auth.already_linked', provider: I18n.t("auth.#{provider}"))
+      return redirect_to edit_user_registration_path
+    end
+
+    # Credential is already held by another user with activity
+    # Display an error explaining that the credential is already in use.
+    if existing_credential_holder&.has_activity?
+      flash.alert = I18n.t('auth.already_in_use', provider: I18n.t("auth.#{provider}"))
+      return redirect_to edit_user_registration_path
+    end
+
+    # Credential is already held by an unused account.
+    # Take over the unused account.
     if existing_credential_holder
-      if existing_credential_holder == current_user
-        flash.notice = I18n.t('auth.already_linked', provider: I18n.t("auth.#{provider}"))
-        return redirect_to edit_user_registration_path
-      elsif existing_credential_holder.has_activity?
-        # Linking is not possible and takeover is not possible
-        # Display a custom error message explaining the credential is already
-        # tied to an account, and what we can do about it.
-        flash.alert = I18n.t('auth.already_in_use', provider: I18n.t("auth.#{provider}"))
-        return redirect_to edit_user_registration_path
-      else
-        # The credential is tied to an unused account.
-        # Destroy the unused account and proceed to link this one.
-        move_sections_and_destroy_source_user \
-          source_user: existing_credential_holder,
-          destination_user: current_user,
-          takeover_type: 'connect_provider'
-      end
+      move_sections_and_destroy_source_user \
+        source_user: existing_credential_holder,
+        destination_user: current_user,
+        takeover_type: 'connect_provider'
     end
 
     # TODO: some of this won't work right for non-Google providers, because info comes in differently
