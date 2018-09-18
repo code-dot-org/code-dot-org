@@ -1228,6 +1228,20 @@ de:
         text: "Glückwunsch! Du hast gelernt, wie man mit Programmierbefehlen die Minecraft-Welt zum Leben erweckt. Du bist jetzt der Entwickler. Du hast alle Befehle und alle Kreaturen freigeschaltet. Du entscheidest, was passiert."
       2:
         text: "Wenn dein Spiel fertig ist, wähle teilen, um einen Link zu erhalten, den du mit deinen Freunden teilen kannst, oder spiele es auf deinem Handy. Viel Spaß! Ich freue mich darauf, deine Version von Minecraft zu spielen."
+    applab_intro_welcome:
+      1:
+        text: "Mein Name ist Mei'lani. Ich bin Praktikantin bei code.org und bin auch ein Informatik-Studentin. Ich mag Informatik, weil es wirklich kreativ ist. Ich werde zum Problemlöser. Ich gestalte es so, dass alles funktioniert wie ich es will. Aber ich möchte auch Designerin werden. Ich möchte die Künstlerin und alles von der kreativen Seite her angehen."
+      2:
+      3:
+        text: "Dies ist ein App-Labor. Auf der linken Seite ist Deine App. Auf der rechten Seite ist der Code der ausgeführt wird. Du baust Dein Programm indem Du Blöcke aus der Toolbox ziehst. Du startest mit einenm Block der \"SetProperty\" genannt wird."
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
     mc_2017_agent_intro:
       1:
       2:

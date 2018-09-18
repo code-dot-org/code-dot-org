@@ -6,6 +6,43 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -32,36 +69,6 @@ my:
         options:
           THIS:
             sprites: အားလုံး
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: အားလုံး
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: အားလုံး
-      DancelabAlpha_randomColor:
-        text: ကျဘန်းအရောင်
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': ဘာမှမရှိ
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': ပုံမှန်
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': ဘာမှမရှိ
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: အားလုံး
       gamelab_debugSprite:
         options:
           VAL:
@@ -73,3 +80,14 @@ my:
         text: ကျဘန်းအရောင်
       Vanilla_randomColor:
         text: ကျဘန်းအရောင်
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ရှေ့သို့
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": သဲ
+            "'planksOak'": ၀က်သစ်ချပင်ကြမ်းခင်းပျဉ်ချပ်များ
+      craft_placeTorch:
+        text: မီးတိုင်ကိုထားပါ

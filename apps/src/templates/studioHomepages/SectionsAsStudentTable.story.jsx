@@ -53,6 +53,8 @@ const sections = [
     linkToProgress: "to Progress tab",
     assignedTitle: "Course 5",
     linkToAssigned: "to Course",
+    currentUnitTitle: "Unit 3",
+    linkToCurrentUnit: "to Unit",
     numberOfStudents: 24,
     linkToStudents: "to Manage Students tab",
     login_type: "google_classroom",

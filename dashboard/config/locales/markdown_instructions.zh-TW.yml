@@ -710,13 +710,14 @@ zh-TW:
         (使用**空白鍵**)，這樣您就可前往門內的橙色方塊。"
       MC_HOC_2017_01_Cole_markdown_instruction: 您必須在途中收集所有工具。使用**箭頭按鍵**四處移動，在路徑上抵達箱子的位置便可贏得遊戲
       MC_HOC_2017_01_Kiki_markdown_instruction: 若要玩此關卡，按一下遊戲空間下方的橙色「執行」按鈕，然後使用**箭頭按鍵**讓玩家四處移動。
-      MC_HOC_2017_01_RETRY_markdown_instruction: "{currentPlayerName} 已被困在屋內，但 Agent
-        可以幫忙！\r\n \r\n   \r\n將「往前移動」方塊移至工作空間中的「當按下執行時」方塊上，就可讓 Agent 前往壓板 [PressurePlate_Up]，然後按「執行」並使用箭頭按鍵移動，讓
-        {currentPlayerName} 離開房屋以收集**箱子** [chest]。\n"
+      MC_HOC_2017_01_RETRY_markdown_instruction: |-
+        房門反鎖住了，代理 Agent 快來幫忙！
+
+        將「移動-向前」積木黏貼到工作區域的「當運行時」積木下，讓代理 Agent 走到壓力板 [PressurePlate_Up] 以打開房門。接著再用方向箭走出房子，然後收集 **箱子** [chest]。
       MC_HOC_2017_02_markdown_instruction: 玩家必須進入秘密樹叢。撰寫代碼，幫助 Agent 打開大門，讓他可以前往壓板。
-      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} 已經出發踏上冒險旅程！如果需要幫忙，請打開右邊上所的門，然後取得門後的**地圖**
-        [map_empty]。\r\n \r\n在工作空間中加入代碼，即可移動 Agent 至壓板 [PressurePlate_Up]，讓 {currentPlayerName}
-        可以通過。"
+      MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} 即將踏上冒險旅程！請先打開右邊上鎖的門，取得裡頭的**地圖**
+        [map_empty]。\r\n \r\n在工作區域中加入程式讓代理 Agent 移至壓力板 [PressurePlate_Up]，這樣 {currentPlayerName}
+        才可以順利進入。"
       MC_HOC_2017_02_Kiki_markdown_instruction: "玩家已出發踏上冒險旅程，但首先他們必須先在上鎖的門後找到藏起來的火把。
         \n\n\n設定 Agent 的程式以往前移動兩次，即可沿著白色路徑前進並抵達壓板，這樣他就可以為玩家開門。"
       MC_HOC_2017_02_Will_markdown_instruction: "若要完成此關卡，玩家必須進入秘密樹林，然後在上鎖的門後找到橙色方塊。

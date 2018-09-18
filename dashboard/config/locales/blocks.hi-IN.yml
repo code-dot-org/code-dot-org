@@ -2,6 +2,39 @@
 hi:
   data:
     blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
       Dancelab_randomColor:
         text: यादृच्छिक रंग
       Dancelab_setDanceSpeed:
@@ -17,24 +50,6 @@ hi:
           KEY:
             '"space"': अंतरिक्ष
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': अंतरिक्ष
-      DancelabAlpha_randomColor:
-        text: यादृच्छिक रंग
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"space"': अंतरिक्ष
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"space"': अंतरिक्ष
@@ -69,5 +84,16 @@ hi:
             '"space"': अंतरिक्ष
       Vanilla_randomColor:
         text: यादृच्छिक रंग
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": आगे
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": रेत
+            "'planksOak'": शाहबलूत के तख्ते
       craft_moveForward:
         text: आगे जाएं
+      craft_placeTorch:
+        text: टॉर्च रखें
