@@ -29,8 +29,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Check if credential is already in use
     existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
-    if existing_credential_holder && existing_credential_holder != current_user
-      if existing_credential_holder.has_activity?
+    if existing_credential_holder
+      if existing_credential_holder == current_user
+        flash.notice = I18n.t('auth.already_linked', provider: I18n.t("auth.#{provider}"))
+        return redirect_to edit_user_registration_path
+      elsif existing_credential_holder.has_activity?
         # Linking is not possible and takeover is not possible
         # Display a custom error message explaining the credential is already
         # tied to an account, and what we can do about it.
