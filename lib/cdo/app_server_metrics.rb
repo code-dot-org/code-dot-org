@@ -4,10 +4,10 @@ require 'honeybadger'
 require 'concurrent/timer_task'
 
 module Cdo
-  # UnicornListener extends the Raindrops::Middleware class,
+  # AppServerMetrics extends the Raindrops::Middleware class,
   # which instruments a Rack application to collect the number of
   # currently-executing requests using an atomic counter shared across
-  # all Unicorn worker-processes.
+  # all forked worker-processes.
   #
   # Every :interval seconds (default 1), metrics are collected.
   # Once :report_count metrics (default 60) have been collected, they are asynchronously reported to CloudWatch.
@@ -21,7 +21,7 @@ module Cdo
   # By default, all listeners used by the Unicorn master process are monitored.
   #
   # Any errors are forwarded to Honeybadger for logging and notifying.
-  class UnicornListener < Raindrops::Middleware
+  class AppServerMetrics < Raindrops::Middleware
     def initialize(app, opts = {})
       # Track max_calling using a modified Stats implementation.
       opts[:stats] ||= StatsWithMax.new
@@ -30,6 +30,8 @@ module Cdo
       super(app, opts)
       @metrics = %i(active queued calling).map {|name| [name, []]}.to_h
 
+      @namespace = opts[:namespace] || 'App Server'
+      @dimensions = opts[:dimensions] || {}
       @report_count = opts[:report_count] || 60
       interval = opts[:interval] || 1
       spawn_reporting_task(interval) unless interval.zero?
@@ -70,10 +72,7 @@ module Cdo
         stat.reject {|datum| datum[:value].nil?}.map do |datum|
           {
             metric_name: name,
-            dimensions: [
-              {name: "Environment", value: CDO.rack_env},
-              {name: "Host", value: CDO.pegasus_hostname}
-            ],
+            dimensions: @dimensions.map {|k, v| {name: k, value: v}},
             timestamp: datum[:timestamp],
             value: datum[:value],
             unit: 'Count',
@@ -82,7 +81,7 @@ module Cdo
         end
       end.flatten
       metrics.values.map(&:clear)
-      Cdo::Metrics.push('Unicorn', metric_data)
+      Cdo::Metrics.push(@namespace, metric_data)
     end
   end
 
