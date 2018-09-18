@@ -67,12 +67,30 @@ class Level < ActiveRecord::Base
 
   # Temporary aliases while we transition between naming schemes.
   # TODO: elijah: migrate the data to these new field names and remove these
-  define_method('short_instructions') {read_attribute('properties')['instructions']}
-  define_method('short_instructions=') {|value| read_attribute('properties')['instructions'] = value}
-  define_method('short_instructions?') {!!JSONValue.value(read_attribute('properties')['instructions'])}
-  define_method('long_instructions') {read_attribute('properties')['markdown_instructions']}
-  define_method('long_instructions=') {|value| read_attribute('properties')['markdown_instructions'] = value}
-  define_method('long_instructions?') {!!JSONValue.value(read_attribute('properties')['markdown_instructions'])}
+  def short_instructions
+    read_attribute('properties')['instructions']
+  end
+
+  def short_instructions=(value)
+    read_attribute('properties')['instructions'] = value
+  end
+
+  def short_instructions?
+    !!JSONValue.value(read_attribute('properties')['instructions'])
+  end
+
+  def long_instructions
+    read_attribute('properties')['markdown_instructions']
+  end
+
+  def long_instructions=(value)
+    read_attribute('properties')['markdown_instructions'] = value
+  end
+
+  def long_instructions?
+    !!JSONValue.value(read_attribute('properties')['markdown_instructions'])
+  end
+
   def self.permitted_params
     super.concat(['short_instructions', 'long_instructions'])
   end
