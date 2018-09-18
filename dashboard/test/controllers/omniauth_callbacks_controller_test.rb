@@ -823,10 +823,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Performs takeover of an account with matching credential that has no activity" do
-    # Given I am a multi-auth user
     user = create :user, :multi_auth_migrated
 
-    # And there exists another user
+    # Given there exists another user
     #   having credential X
     #   and having no activity
     other_user = create :user, :multi_auth_migrated
@@ -843,46 +842,44 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test.host/users/edit'
     assert_auth_option(user, auth)
 
-    # And "other_user" should be destroyed
+    # And the other user should be destroyed
     other_user.reload
     assert other_user.deleted?
   end
 
   test "connect_provider: Successful takeover also enrolls in replaced user's sections" do
-    # Given I am a multi-auth user
     user = create :user, :multi_auth_migrated
 
-    # And there exists another user "other_user"
-    # And "other_user" has credential X
-    # And "other_user" has no activity
-    # And "other_user" is in section Y
+    # Given there exists another user
+    #   having credential X
+    #   and having no activity
+    #   and enrolled in section Y
     other_user = create :user, :multi_auth_migrated
     credential = create :google_authentication_option, user: other_user
     refute other_user.has_activity?
     section = create :section
     section.students << other_user
 
-    # When I attempt to add credential X
+    # When I add credential X
     link_credential user,
       type: credential.credential_type,
       id: credential.authentication_id
 
-    # Then I should be enrolled in section Y instead of "other_user"
+    # Then I should be enrolled in section Y instead of the other user
     section.reload
     assert_includes section.students, user
     refute_includes section.students, other_user
   end
 
   test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do
-    # Given I am a multi-auth user
-    # And there exists another user "other_user"
-    # And "other_user" has credential X
-    # And "other_user" has activity
+    # Given there exists another user
+    #   having credential X
+    #   and having activity
 
     # When I attempt to add credential X
 
     # Then I should fail to add credential X
-    # And "other_user" should not be destroyed
+    # And the other user should not be destroyed
     # And I should receive a helpful error message about the credential already being in use.
   end
 
