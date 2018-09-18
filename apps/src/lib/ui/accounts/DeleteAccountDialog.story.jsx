@@ -68,9 +68,7 @@ export default storybook => {
             {...DEFAULT_PROPS}
             isTeacher={true}
             warnAboutDeletingStudents={true}
-            checkboxes = {
-                getCheckboxes(false,true)
-            }
+            checkboxes={getCheckboxes(false,true)}
           />
         )
       },
@@ -86,9 +84,7 @@ export default storybook => {
             {...DEFAULT_PROPS}
             isTeacher={true}
             warnAboutDeletingStudents={true}
-            checkboxes = {
-                getCheckboxes(true)
-            }
+            checkboxes={getCheckboxes(true)}
           />
         )
       },
