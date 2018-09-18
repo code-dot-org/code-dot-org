@@ -1,5 +1,5 @@
 
-function makeNewDanceSprite(costume, name, location) {
+function makeNewDanceSpriteLoc(costume, name, location) {
   if (!location) {
     location = {x: 200, y: 200};
   }
