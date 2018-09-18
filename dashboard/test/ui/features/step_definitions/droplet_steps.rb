@@ -88,6 +88,21 @@ When /^I ensure droplet is in block mode$/ do
   end
 end
 
+When /^I switch to text mode$/ do
+  steps <<-STEPS
+    When I press "show-code-header"
+    And I wait to see Droplet text mode
+  STEPS
+end
+
+When /^I switch to block mode$/ do
+  steps <<-STEPS
+    When I press "show-code-header"
+    And I wait to see Droplet block mode
+  STEPS
+end
+
+
 When /^I add code "([^"]+)" to ace editor$/ do |code|
   steps 'I ensure droplet is in text mode'
   add_code_to_editor(code)

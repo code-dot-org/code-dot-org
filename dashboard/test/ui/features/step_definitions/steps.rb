@@ -1444,13 +1444,6 @@ Then /^I wait for initial project save to complete$/ do
   end
 end
 
-When /^I switch to text mode$/ do
-  steps <<-STEPS
-    When I press "show-code-header"
-    And I wait to see Droplet text mode
-  STEPS
-end
-
 When /^I see the section set up box$/ do
   steps 'When I wait to see ".uitest-set-up-sections"'
 end

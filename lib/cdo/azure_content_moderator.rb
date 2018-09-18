@@ -116,6 +116,14 @@ class AzureContentModerator
 
   # Report the response we got from Azure to Firehose
   def report_response(image_url, rating, data, request_duration)
+    puts
+    puts
+    puts "image_url: #{image_url}"
+    puts "rating: #{rating}"
+    print "data: #{data}"
+    puts "adult_score: #{data[ADULT_SCORE]}"
+    puts "racy_score: #{data[RACY_SCORE]}"
+
     FirehoseClient.instance.put_record(
       study: 'azure-content-moderation',
       study_group: 'v1',
