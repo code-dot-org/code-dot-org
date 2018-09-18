@@ -1,13 +1,69 @@
-createEdgeSprites();
+// Event handlers, loops, and callbacks
 var inputEvents = [];
 var touchEvents = [];
 var collisionEvents = [];
 var callbacks = [];
 var setupCallbacks = [];
 var loops = [];
+
+// Sprites
 var sprites = createGroup();
 var sprites_by_type = {};
-var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites";
+var SPRITE_NAMES = ["CAT", "DOG", "DUCK", "MOOSE", "POO", "ROBOT", "SHARK"];
+var MOVE_NAMES = [
+  {
+    name: "ClapHigh",
+    mirror: true
+  },
+  {
+    name: "Clown",
+    mirror: false
+  },
+  {
+    name: "Dab",
+    mirror: true
+  },
+  {
+    name: "DoubleJam",
+    mirror: false
+  },
+  {
+    name: "Drop",
+    mirror: true
+  },
+  {
+    name: "Floss",
+    mirror: true
+  },
+  {
+    name: "Fresh",
+    mirror: true
+  },
+  {
+    name: "Kick",
+    mirror: true
+  },
+  {
+    name: "Rest",
+    mirror: true
+  },
+  {
+    name: "Roll",
+    mirror: true
+  },
+  {
+    name: "ThisOrThat",
+    mirror: false
+  },
+  {
+    name: "Thriller",
+    mirror: true
+  }
+];
+var ANIMATIONS = {};
+var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet/";
+
+// Songs
 var songs = {
   macklemore: {
     url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3',
@@ -39,25 +95,38 @@ var songs = {
   }
 };
 var song_meta = songs.macklemore;
-var score = 0;
-var game_over = false;
-var show_score = false;
-var title = '';
-var subTitle = '';
 var processed_peaks;
 var lead_dancers = createGroup();
 var backup_dancers = createGroup();
-var bg_sprite = createSprite(200, 200, 400, 400);
-bg_sprite.shapeColor = "white";
-bg_sprite.tint = "white";
-bg_sprite.visible = false;
 
 function preload() {
+  // Load song
   Dance.song.load(song_meta.url);
-  //Dance.song.load('/api/v1/sound-library/category_background/jazzy_beats.mp3');
+
+  // Load spritesheets
+  for (var i = 0; i < SPRITE_NAMES.length; i++) {
+    var this_sprite = SPRITE_NAMES[i];
+    ANIMATIONS[this_sprite] = [];
+    for (var j = 0; j < MOVE_NAMES.length; j++) {
+      var url = img_base + this_sprite + "_" + MOVE_NAMES[j].name + ".png";
+      var dance = {
+        spritesheet: loadSpriteSheet(url, 400, 400, 48),
+        mirror: MOVE_NAMES[j].mirror
+      };
+      ANIMATIONS[this_sprite].push(dance);
+    }
+  }
 }
 
 function setup() {
+  // Create animations from spritesheets
+  for (var i = 0; i < SPRITE_NAMES.length; i++) {
+    var this_sprite = SPRITE_NAMES[i];
+    for (var j = 0; j < ANIMATIONS[this_sprite].length; j++) {
+      ANIMATIONS[this_sprite][j].animation = loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
+    }
+  }
+
   setupCallbacks.forEach(function (callback) {
     callback();
   });
@@ -69,91 +138,6 @@ function setup() {
   */
   Dance.song.start();
 }
-
-var dancers = {
-  alien: [
-  	loadS3Animation("/48frames/Alien_Rest/Alien_Rest_", 48),
-  	loadS3Animation("/48frames/Alien_Breakdown/Alien_Breakdown_", 48),
-  	loadS3Animation("/48frames/Alien_Floss/Alien_Floss_", 48),
-  	loadS3Animation("/48frames/Alien_Fresh/Alien_Fresh_", 48)
-    ],
-  pizza: [
-  	loadS3Animation("/48frames/Pizza_Rest/Pizza_Rest_", 48),
-  	loadS3Animation("/48frames/Pizza_Breakdown/Pizza_Breakdown_", 48),
-  	loadS3Animation("/48frames/Pizza_Floss/Pizza_Floss_", 48),
-  	loadS3Animation("/48frames/Pizza_Fresh/Pizza_Fresh_", 48)
-    ],
-  unicorn: [
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Rest/UNICORN - Rest_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_ClapHigh/UNICORN - Clap High_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Clown/UNICORN - Clown_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Dab/UNICORN - Dab_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_DoubleJam/UNICORN - DoubleJam_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Drop/UNICORN - Drop_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Floss/UNICORN - Floss_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Fresh/UNICORN - Fresh_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Roll/UNICORN - Roll_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_ThisOrThat/UNICORN - Thisorthat_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Kick/UNICORN - Kick_", 48),
-  	loadS3Animation("/CHARACTERS_SM/UNICORN/UNICORN_Thriller/UNICORN - Thriller_", 48)
-    ],
-  moose: [
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Rest/MOOSE - Rest_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_ClapHigh/MOOSE - ClapHigh_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Clown/MOOSE - Clown_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Dab/MOOSE - Dab_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_DoubleJam/MOOSE - Double Jam_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Drop/MOOSE - Drop_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Floss/MOOSE - Floss_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Fresh/MOOSE - Fresh_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Roll/MOOSE - Roll_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_ThisOrThat/MOOSE - Thisorthat_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Kick/MOOSE - Kick_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MOOSE/MOOSE_Thriller/MOOSE - Thriller_", 48)
-    ],
-  mrwiggles: [
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Rest/MODEL - Rest_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_ClapHigh/MODEL - Top Clap_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Clown/MODEL - Clown_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Dab/MODEL - Dab_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_DoubleJam/MODEL - Double Jam_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Drop/MODEL - Drop_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Floss/MODEL - Floss_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Fresh/MODEL - Fresh_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Roll/MODEL - Roll_", 48),
-  	loadS3Animation("/CHARACTERS_SM/MODEL/Model_Thisorthat/MODEL - Thisorthat_", 48),
-  	// loadS3Animation("/CHARACTERS_SM/MODEL/Model_Kick/MODEL - Kick_", 48),
-  	// loadS3Animation("/CHARACTERS_SM/MODEL/Model_Thriller/MODEL - Thriller_", 48)
-    ],
-  duck: [
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Rest/DUCK - Rest_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_ClapHigh/DUCK - Clap High_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Clown/DUCK - Clown_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Dab/DUCK - Dab_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_DoubleJam/DUCK - DoubleJam_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/Duck_Drop/DUCK - Drop_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Floss/DUCK - Floss_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Fresh/DUCK - Fresh_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Roll/DUCK - Roll_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_ThisOrThat/DUCK - Thisorthat_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/DUCK_Kick/DUCK - Kick_", 48),
-  	loadS3Animation("/CHARACTERS_SM/DUCK/Duck_Thriller/DUCK - Thriller_", 48)
-    ],
-  cat: [
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Rest/CAT_Rest_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_ClapHigh/CAT_ClapHigh_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Clown/CAT_Clown_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Dab/CAT_Dab_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_DoubleJam/CAT_DoubleJam_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Drop/CAT_Drop_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Floss/CAT_Floss_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Fresh/CAT_Fresh_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Roll/CAT_Roll_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Thisorthat/CAT_Thisorthat_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Kick/CAT_Kick_", 48),
-  	loadS3Animation("/CHARACTERS_SM/CAT/CAT_Thriller/CAT_Thriller_", 48)
-    ]
-};
 
 function Effects(alpha, blend) {
   var self = this;
@@ -317,19 +301,6 @@ var fg_effects = new Effects(0.8);
 
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;
-
-function loadS3Animation(url, count, every) {
-  every = every || 1;
-  var args = [];
-  for (var i = 0; i < count; i += every) {
-    if (i < 10) {
-      args.push(img_base + url + "0" + i + ".png");
-    } else {
-      args.push(img_base + url + i + ".png");
-    }
-  }
-  return loadAnimation.apply(null, args);
-}
 
 Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / song_meta.bpm) * World.frameRate));
 Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / song_meta.bpm) * World.frameRate));
@@ -504,84 +475,86 @@ function draw() {
       if (eventType(param)) {
         event();
         var event_run = false;
-        // has validator, run it
-        if (validationProps.events.length != 0) {
-          for (var j = 0; j < validationProps.events.length; j++) {
-            // TODO check for existence before trying to run these events
-            validType = validationProps.events[j].type;
-            validParam = validationProps.events[j].param;
-            validPre = validationProps.events[j].pre;
-            validPost = validationProps.events[j].post;
-            if (eventType == validType && param == validParam) {
-              validPre();
-              event();
-              event_run = true;
-              validPost();
+        // if has validator, run it
+        if (typeof(validationProps) == "object") {
+          if (validationProps.hasOwnProperty("events")) {
+              for (var j = 0; j < validationProps.events.length; j++) {
+                // TODO check for existence before trying to run these events
+                validType = validationProps.events[j].type;
+                validParam = validationProps.events[j].param;
+                validPre = validationProps.events[j].pre;
+                validPost = validationProps.events[j].post;
+                if (eventType == validType && param == validParam) {
+                  validPre();
+                  event();
+                  event_run = true;
+                  validPost();
+                }
+              }
             }
           }
+          if (!event_run) event();
         }
-        if (!event_run) event();
       }
-    }
 
-    // Run touch events
-    for (i = 0; i < touchEvents.length; i++) {
-      eventType = touchEvents[i].type;
-      event = touchEvents[i].event;
-      param = touchEvents[i].sprite ?
-        touchEvents[i].sprite() :
-        touchEvents[i].param;
-      if (param && eventType(param)) {
-        event();
-      }
-    }
-
-    var createCollisionHandler = function (collisionEvent) {
-      return function (sprite1, sprite2) {
-        if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
+      // Run touch events
+      for (i = 0; i < touchEvents.length; i++) {
+        eventType = touchEvents[i].type;
+        event = touchEvents[i].event;
+        param = touchEvents[i].sprite ?
+          touchEvents[i].sprite() :
+          touchEvents[i].param;
+        if (param && eventType(param)) {
+          event();
         }
+      }
+
+      var createCollisionHandler = function (collisionEvent) {
+        return function (sprite1, sprite2) {
+          if (!collisionEvent.touching || collisionEvent.keepFiring) {
+            collisionEvent.event(sprite1, sprite2);
+          }
+        };
       };
-    };
-    // Run collision events
-    for (i = 0; i < collisionEvents.length; i++) {
-      var collisionEvent = collisionEvents[i];
-      var a = collisionEvent.a && collisionEvent.a();
-      var b = collisionEvent.b && collisionEvent.b();
-      if (!a || !b) {
-        continue;
-      }
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
-        collisionEvent.touching = true;
-      } else {
-        if (collisionEvent.touching && collisionEvent.eventEnd) {
-          collisionEvent.eventEnd(a, b);
+      // Run collision events
+      for (i = 0; i < collisionEvents.length; i++) {
+        var collisionEvent = collisionEvents[i];
+        var a = collisionEvent.a && collisionEvent.a();
+        var b = collisionEvent.b && collisionEvent.b();
+        if (!a || !b) {
+          continue;
         }
-        collisionEvent.touching = false;
+        if (a.overlap(b, createCollisionHandler(collisionEvent))) {
+          collisionEvent.touching = true;
+        } else {
+          if (collisionEvent.touching && collisionEvent.eventEnd) {
+            collisionEvent.eventEnd(a, b);
+          }
+          collisionEvent.touching = false;
+        }
+      }
+
+      // Run loops
+      for (i = 0; i < loops.length; i++) {
+        var loop = loops[i];
+        if (!loop.condition()) {
+          loops.splice(i, 1);
+        } else {
+          loop.loop();
+        }
       }
     }
 
-    // Run loops
-    for (i = 0; i < loops.length; i++) {
-      var loop = loops[i];
-      if (!loop.condition()) {
-        loops.splice(i, 1);
-      } else {
-        loop.loop();
-      }
+    drawSprites();
+
+    if (World.fg_effect != fg_effects.none) {
+      push();
+      blendMode(fg_effects.blend);
+      World.fg_effect.draw();
+      pop();
     }
+
+    fill("black");
+    //textStyle(BOLD);
+    /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
-
-  drawSprites();
-
-  if (World.fg_effect != fg_effects.none) {
-    push();
-    blendMode(fg_effects.blend);
-    World.fg_effect.draw();
-    pop();
-  }
-
-  fill("black");
-  //textStyle(BOLD);
-  /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
-}
