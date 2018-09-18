@@ -4,10 +4,6 @@ import i18n from '@cdo/locale';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
-const renderedMarkdown = (str) => {
-  return <UnsafeRenderedMarkdown markdown={str} />;
-};
-
 export const TeacherWarning = () => {
   return (
     <div>
@@ -57,7 +53,7 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {renderedMarkdown(i18n.deleteAccountDialog_checkbox1())}
+        <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox1()} />
       </span>
     )
   },
@@ -65,7 +61,9 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {renderedMarkdown(i18n.deleteAccountDialog_checkbox2())}
+         <UnsafeRenderedMarkdown
+           markdown={i18n.deleteAccountDialog_checkbox2({explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL})}
+         />
       </span>
     )
   },
@@ -73,7 +71,7 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {renderedMarkdown(i18n.deleteAccountDialog_checkbox3())}
+         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox3()} />
       </span>
     )
   },
@@ -81,7 +79,7 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {renderedMarkdown(i18n.deleteAccountDialog_checkbox4())}
+         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox4()} />
       </span>
     )
   },
@@ -89,7 +87,7 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {renderedMarkdown(i18n.deleteAccountDialog_checkbox5())}
+         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox5()} />
       </span>
     )
   }
