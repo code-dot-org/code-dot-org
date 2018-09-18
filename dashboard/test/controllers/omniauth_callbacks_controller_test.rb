@@ -901,6 +901,27 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal expected_error, flash.alert
   end
 
+  test "connect_provider: Presents no-op message if the provided credentials are already linked to user's account" do
+    # Given the current user already has credential X
+    user = create :user, :multi_auth_migrated
+    credential = create :google_authentication_option, user: user
+    assert_equal 1, user.authentication_options.count
+
+    # When I attempt to add credential X
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
+
+    # Then I should have the same authentication options
+    user.reload
+    assert_equal 1, user.authentication_options.count
+
+    # And receive a friendly notice about already having the credential
+    assert_redirected_to 'http://test.host/users/edit'
+    expected_notice = I18n.t('auth.already_linked', provider: I18n.t("auth.google_oauth2"))
+    assert_equal expected_notice, flash.notice
+  end
+
   private
 
   def set_oauth_takeover_session_variables(provider, user)
