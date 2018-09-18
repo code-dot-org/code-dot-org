@@ -20,7 +20,6 @@ const DEFAULT_PROPS = {
   deleteUser: action('Delete my Account')
 };
 
-
 export default storybook => {
   storybook
     .storiesOf('Dialogs/DeleteAccountDialog', module)
