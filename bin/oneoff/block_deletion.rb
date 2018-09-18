@@ -2,6 +2,17 @@
 
 # This script is used to find and delete level-specific custom blocks that also
 # exist in the block pool.
+#
+# Usage: ./block_deletion.rb
+# Typically you would want to run this script directly on levelbuilder. Be sure
+# to commit content first in case something goes wrong.
+#
+# It will run through all the blocks in the block pool, and compare them against
+# all level-specific blocks. The level-specific block will be removed if it's
+# exactly the same as the block pool block, or if the level it's in is not used
+# in any script, nor is it the 'New Sprite Lab Project' level. Otherwise, the
+# script will display a diff and prompt you to keep or delete the level-specific
+# block.
 
 require_relative '../../dashboard/config/environment'
 
