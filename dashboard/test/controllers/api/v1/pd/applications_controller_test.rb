@@ -685,8 +685,7 @@ module Api::V1::Pd
         'School Name',
         'Email',
         'Status',
-        'Assigned Workshop',
-        'Registered Workshop'
+        'Assigned Workshop'
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length
@@ -706,9 +705,7 @@ module Api::V1::Pd
         'School Name',
         'Email',
         'Status',
-        'Assigned Workshop',
-        'Registered Workshop',
-        'Accepted Teachercon'
+        'Assigned Workshop'
       ]
       assert_equal expected_headers, response_csv.first
       assert_equal expected_headers.length, response_csv.second.length
