@@ -1,3 +1,4 @@
+require_relative '../src/env'
 require_relative '../helpers/form_helpers'
 require_relative '../src/database'
 require_relative 'sequel_test_case'
@@ -123,7 +124,7 @@ class FormHelpersTest < SequelTestCase
         DEFAULT_DATA.merge(email_s: "#{SecureRandom.hex(8)}@example.com")
       )
 
-      form = update_form row[:kind], row[:secret], {name_s: 'non_default_name'}
+      form = update_form row[:kind], row[:secret], {"name_s" => 'non_default_name'}
       refute_nil form
       updated_row = DB[:forms].where(kind: row[:kind], secret: row[:secret]).first
       assert_equal 'non_default_name', updated_row[:name]
