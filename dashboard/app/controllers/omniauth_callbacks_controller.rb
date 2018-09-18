@@ -34,6 +34,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # Linking is not possible and takeover is not possible
         # Display a custom error message explaining the credential is already
         # tied to an account, and what we can do about it.
+        flash.alert = I18n.t('auth.already_in_use', provider: I18n.t("auth.#{provider}"))
+        return redirect_to edit_user_registration_path
       else
         # The credential is tied to an unused account.
         # Destroy the unused account and proceed to link this one.

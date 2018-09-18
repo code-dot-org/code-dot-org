@@ -872,15 +872,33 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do
+    user = create :user, :multi_auth_migrated
+
     # Given there exists another user
     #   having credential X
     #   and having activity
+    other_user = create :user, :multi_auth_migrated
+    credential = create :google_authentication_option, user: other_user
+    create :user_level, user: other_user, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    assert other_user.has_activity?
 
     # When I attempt to add credential X
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
 
-    # Then I should fail to add credential X
-    # And the other user should not be destroyed
-    # And I should receive a helpful error message about the credential already being in use.
+    # Then the other user should not be destroyed
+    other_user.reload
+    refute other_user.deleted?
+
+    # And I should fail to add credential X
+    user.reload
+    assert_empty user.authentication_options
+
+    # And receive a helpful error message about the credential already being in use.
+    assert_redirected_to 'http://test.host/users/edit'
+    expected_error = I18n.t('auth.already_in_use', provider: I18n.t("auth.google_oauth2"))
+    assert_equal expected_error, flash.alert
   end
 
   private
