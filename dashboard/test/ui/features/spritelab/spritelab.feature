@@ -1,4 +1,3 @@
-@no_ie
 Feature: Sprite Lab
 
 Background:
