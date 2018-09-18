@@ -61,6 +61,10 @@ class FirehoseClient
     # backing off and retrying.
     # See http://docs.aws.amazon.com/sdkforruby/api/Aws/Firehose/Client.html#put_record-instance_method.
     Honeybadger.notify(e)
+  rescue StandardError => error
+    # Swallow and log all other types of errors because an issue sending analytics to Redshift should not prevent the
+    # caller from continuing execution.
+    Honeybadger.notify(error)
   end
 
   private
