@@ -40,7 +40,6 @@ Scenario: Teacher in English should see 5 header links
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
 
-@skip
 Scenario: Signed out user in Spanish should see 2 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
@@ -52,7 +51,6 @@ Scenario: Signed out user in Spanish should see 2 header links
   And I see "#header-non-en-projects"
   And element "#header-non-en-projects" has "es" text from key "nav.header.project_gallery"
 
-@skip
 Scenario: Student in Spanish should see 2 header links
   Given I create a student named "Estrella Estudiante"
   Then check that I am on "http://studio.code.org/courses"
@@ -64,7 +62,6 @@ Scenario: Student in Spanish should see 2 header links
   And I see "#header-student-projects"
   And element "#header-student-projects" has "es" text from key "nav.header.project_gallery"
 
-@skip
 Scenario: Teacher in Spanish should see 5 header links
   Given I create a teacher named "Pabla Profesora"
   Then check that I am on "http://studio.code.org/home"
