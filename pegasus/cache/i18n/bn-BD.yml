@@ -327,7 +327,7 @@ bn-BD:
   homepage_hero_text_stat_loc: "#লক লাইনের কোড ছাত্রছাত্রীদের দিয়ে লেখা"
   homepage_hero_text_stat_students: "#student_count  কোড স্টুডিওতে ছাত্রছাত্রীদের
     হিসাব"
-  homepage_hero_text_stat_served: 'ঘন্টার কোড: #সেবা সেবা'
+  homepage_hero_text_stat_served: 'ঘন্টার কোড: #served সেবা'
   homepage_slot_text_hoc: কোডিং এর এক ঘণ্টা
   homepage_slot_text_frozen: আন্না এবং এলসার সাথে ফ্রোজেন
   homepage_slot_text_teacher: শিক্ষক ড্যাশবোর্ড

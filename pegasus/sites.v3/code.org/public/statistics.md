@@ -18,6 +18,16 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <div class="col-33" style="padding-right: 20px;">
 
+<a href="https://twitter.com/codeorg/status/1040633791017099264" target="_blank"><img src="/images/statistics/fit-250/third-us-students.png"></a>
+
+<br>
+
+Nearly one-third of all U.S. students are learning the curriculum of the future. 
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
 <a href="https://twitter.com/codeorg/status/1031304818630041603" target="_blank"><img src="/images/statistics/fit-250/world.png"></a>
 
 <br>
@@ -36,19 +46,19 @@ According to Code.org's "fun-o-meter," turns out our students get a case of the 
 
 </div>
 
+<div style="clear: both;"></div>
+
+<br>
+
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/1029080205262868482" target="_blank"><img src="/images/statistics/fit-250/increase-diversity.png"></a>
 
 <br>
 
-When teachers from underrepresented minority groups lead AP Computer Science Principles, <a href="https://medium.com/@codeorg/one-way-to-increase-diversity-in-your-schools-computer-science-classes-2aa36ecaa5f7" target="_blank">their classrooms become more diverse</a>. 
+When teachers from underrepresented minority groups lead AP CSP classes, <a href="https://medium.com/@codeorg/one-way-to-increase-diversity-in-your-schools-computer-science-classes-2aa36ecaa5f7" target="_blank">their classrooms become more diverse</a>. 
 
 </div>
-
-<div style="clear: both;"></div>
-
-<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -70,6 +80,10 @@ And this double enrollment means more girls and underrepresented minorities are 
 
 </div>
 
+<div style="clear: both;"></div>
+
+<br>
+
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/983763631711154177" target="_blank"><img src="/images/statistics/fit-250/balance.png"></a>
@@ -79,8 +93,6 @@ And this double enrollment means more girls and underrepresented minorities are 
 We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de" target="_blank">change this way before then</a>.
 
 </div>
-
-<div style="clear: both;"></div>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -105,14 +117,14 @@ Code.org partners with researchers on a variety of studies. Want more? <a href="
 
 ### Teachers are taking on computer science
 Over 800,000 teachers have taken steps to bring computer science to their schools. 
-<%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B58&headers=1", width: 1000, height: 500 %>
+<%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B59&headers=1", width: 1000, height: 500 %>
 Does your local school teach computer science? [Encourage them to start today](/yourschool)!  
 
 <br>
 
 ### The Hour of Code goes global
 With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students around the world.
-<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E58&headers=1", width: 1000, height: 500 %>
+<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E59&headers=1", width: 1000, height: 500 %>
 
 ## What we're doing
 Tracking the work of thousands of teachers and millions of students.

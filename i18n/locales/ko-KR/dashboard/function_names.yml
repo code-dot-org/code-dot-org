@@ -24,5 +24,5 @@ ko:
       move left: 왼쪽으로 이동하기
       collect: 모으세요.
       turn left: 왼쪽으로 회전
-      move forward: move forward
+      move forward: 앞으로 이동
       turn right: 오른쪽으로 회전

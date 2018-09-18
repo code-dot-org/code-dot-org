@@ -704,19 +704,18 @@ zh-CN:
         **难住了？点击这里: **
         ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
       AppLab Intro 6 - thisOrThatPersonalize_markdown_instruction: |-
-        <img src="https://images.code.org/762507aef26d512f820c42fb2e7fc6f1-image-1508386296370.11.19
-        PM.png" style="float:right;height:200px">\r
-        \r
-        **目标：**开始构建自己的《惊险岔路口》应用程序. 别忘了和别人"分享"！\r
-        \r
-        **如何做到：**选择你想讲的基本故事, 比如你的角色是谁和一些设置。然后更改您的应用程序的文本和图像来匹配所要说的故事。您可以不断冒险中在添加更多的屏幕。\r
-        \r 
-        <details><summary><b>难住了? 点这里获得一些主意</b></summary>\r
-        \r
-        <li> 对您最喜欢的虚构角色进行冒险 </li> \r
-        <li> 做一个关于你偶像的著名 (或不出名的人) 的冒险 </li>\r
-        <li> 做一个冒险, 有很多意想不到的曲折或有一个困难的道德选择 </li> \r
-        \r
+        <img src="https://images.code.org/762507aef26d512f820c42fb2e7fc6f1-image-1508386296370.11.19 PM.png" style="float:right;height:200px">
+        
+        **目标：**开始构建自己的《惊险岔路口》应用程序. 别忘了和别人"分享"！
+        
+        **如何做到：**选择你想讲的基本故事, 比如你的角色是谁和一些设置。然后更改您的应用程序的文本和图像来匹配所要说的故事。您可以不断冒险中在添加更多的屏幕。
+        
+        <details><summary><b>难住了? 点这里获得一些主意</b></summary>
+        
+        <li>为最喜欢的虚构角色做个冒险</li>
+        <li>做一个关于你偶像的著名 (或不出名的人) 的冒险</li>
+        <li>做个有很多意想不到的曲折或有一个困难的道德选择的冒险</li> 
+        
         </details>
       AppLab Intro 6 - thisOrThatSetScreen_markdown_instruction: |-
         <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop
@@ -781,7 +780,7 @@ zh-CN:
         在设计模式中添加新屏幕。将其`"id"`标识更改为`"rightScreen"`（右屏幕）。然后将标签拖到屏幕上, 将文本改为“你对了！”。\r
         \r
         **难住了？点击这里: ** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
-      AppLab Intro 7 - thisOrThatPersonalize_markdown_instruction: "<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"\ntarget=\"_blank\"><img src=\"https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18\nPM.png\" style=\"float:right;height:200px\"></a>\\r\n<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"\ntarget=\"_blank\"><img src=\"https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05\nPM.png\" style=\"float:right;height:200px\"></a>\\r\n<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"\ntarget=\"_blank\"><img src=\"https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40\nPM.png\" style=\"float:right;height:200px\"></a>\\r\n\\r\n**目标：**通过扩展这个项目来创建你自己的应用程序。然后“分享”给其他人！\\r\n\\r\n**如何做到：**\n首选确定你对创建哪种应用程序感兴趣。然后通过添加更多的屏幕，按钮，文本，声音和用户交互来创建它。工具箱有更多的模块，你可以试一试。一旦完成后，你可以点击“分享”来发给自己或朋友！\n\\r\n\\r\n<details><summary><b>《惊险岔路口》创意</b></summary>\\r\n\\r\n试试这个<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"\ntarget=\"_blank\">《惊险岔路口》应用示例</a>让你看看是怎样工作的。这里有些创意来帮助你做自己的故事。\\r\n\\r\n<li>创建一个你最喜欢的角色的冒险，真实的、虚构的都可以。</li>\\r\n<li>创建一个讲述你最喜欢的电影、书籍或自己创造的故事。</li>\\r\n<li>创建一个有很多曲折的或是很难的抉择的冒险故事。</li>\\r\n<br>\\r\n</details>\\r\n\\r\n<details><summary><b>贺卡创意</b></summary>\\r\n\\r\n试试这个<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"\ntarget=\"_blank\">贺卡应用创意示例</a>让你看看是如何工作的。这里有些主意来帮助你做自己的卡片。\\r\n\\r\n<li>想象一个生日、节日或其它特殊的日志要来临了，做一张卡片来庆贺！</li>\\r\n<li>创建一张感谢卡片，给你想感谢的人。</li>\\r\n<li>创建一个即将来临的活动的邀请卡。</li>\\r\n<br>\\r\n</details>\\r\n\\r\n<details><summary><b>个人的测验创意</b></summary>\\r\n\\r\n试试这个<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"\ntarget=\"_blank\">个人创意应用示例</a>让你看看是如何工作的。这里有些主意来帮助你制作自己的测验题。\\r\n\\r\n<li>创造一个关于大家喜欢的东西，例如事物、团队、书或地点的测验。</li>\\r\n<li>创造一个通过答案来预测未来的的测验。</li>\\r\n<li>创造一个帮助人们做出艰难抉择的测验。</li>\\r\n\\r\n</details>"
+      AppLab Intro 7 - thisOrThatPersonalize_markdown_instruction: "<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\" target=\"_blank\"><img src=\"https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18 PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\" target=\"_blank\"><img src=\"https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05 PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\" target=\"_blank\"><img src=\"https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40 PM.png\" style=\"float:right;height:200px\"></a>\n\n**目标：**通过扩展这个项目来创建你自己的应用程序。然后“分享”给其他人！\n\n**如何做到：**\n首选确定你对创建哪种应用程序感兴趣。然后通过添加更多的屏幕，按钮，文本，声音和用户交互来创建它。工具箱有更多的模块，你可以试一试。一旦完成后，你可以点击“分享”来发给自己或朋友！\n\n\n<details>\n\n<summary>\n\n<b>《惊险岔路口》创意</b>\n\n</summary>\n\n试试这个<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\" target=\"_blank\">《惊险岔路口》应用示例</a>让你看看是怎样工作的。这里有些创意来帮助你做自己的故事。\n\n<li>创建一个你最喜欢的角色的冒险，真实的、虚构的都可以。</li>\n<li>创建一个讲述你最喜欢的电影、书籍或自己创造的故事。</li>\n<li>创建一个有很多曲折的或是很难的抉择的冒险故事。</li>\n<br>\n</details>\n\n<details><summary>\n\n<b>贺卡创意</b>\n\n</summary>\n\n试试这个<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"\ntarget=\"_blank\">贺卡应用创意示例</a>让你看看是如何工作的。这里有些主意来帮助你做自己的卡片。\n\n<li>想象一个生日、节日或其它特殊的日志要来临了，做一张卡片来庆贺！</li>\n<li>创建一张感谢卡片，给你想感谢的人。</li>\n<li>创建一个即将来临的活动的邀请卡。</li>\n<br>\n</details>\n\n<details><summary><b>个人的测验创意</b></summary>\n\n试试这个<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"\ntarget=\"_blank\">个人创意应用示例</a>让你看看是如何工作的。这里有些主意来帮助你制作自己的测验题。\n\n<li>创造一个关于大家喜欢的东西，例如事物、团队、书或地点的测验。</li>\n<li>创造一个通过答案来预测未来的的测验。</li>\n<li>创造一个帮助人们做出艰难抉择的测验。</li>\n\n</details>"
       AppLab Intro 7 - thisOrThatSetScreen_markdown_instruction: |-
         <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop
         (1).gif" style="float:right;height:200px">\r
@@ -826,20 +825,25 @@ zh-CN:
       CSD U2 CSS explore CSS_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>** 如何在文件之间切换？ ** </summary> \r
-        单击要查看的文件的名称。菜单在屏幕左侧. \r
-        </details> \r
-        </div> \r
-        \r
-        # 添加样式\r
-        \r
-        此 Web 实验室项目正在使用一种新语言向页面添加样式。与伙伴一起探索 `index.html`和 `style.css`文件。准备好讨论以下问题。\r
-        \r
-        * 这个新的语言对页面有什么变化？\r
-        *
-        这个语言与 html 的区别是什么？\r
+        markdown="1">
+        <details>
+        
+        <summary>
+        
+        ** 如何在文件之间切换？ ** 
+        
+        </summary> 
+        单击要查看的文件的名称。菜单在屏幕左侧. 
+        
+        </details> 
+        </div> 
+        
+        # 添加样式
+        
+        此 Web 实验室项目正在使用一种新语言向页面添加样式。与伙伴一起探索 `index.html`和 `style.css`文件。准备好讨论以下问题。
+        
+        * 这个新的语言对页面有什么变化？
+        * 这个语言与 html 的区别是什么？
         * `index.html`和`style.css`文件是怎样联系起来的？
       CSD U2 CSS explore CSS_2018_markdown_instruction: |-
         <div style="float: right;
@@ -859,100 +863,98 @@ zh-CN:
         *
         这个语言与 html 的区别是什么？\r
         * `index.html`和`style.css`文件是怎样联系起来的？
-      CSD U2 Debugging 1_markdown_instruction: "# 调试\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary> ** 什么是bug（缺陷）？ ** </summary>\\r\n缺陷是代码中的错误，导致代码不按照计划起作用。\\r\n</details>\\r\n<details>\\r\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\\r\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\\r\n</details>\\r\n<details>\\r\n<summary>**有没有缺陷的例子？**</summary>\\r\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\\r\n</details>\\r\n</div>\\r\n\\r\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\\r\n\\r\n# 这样做\\r\n\\r\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\\r\n\\r\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\\r\n\\t * 标题不够大。\\r\n\\t * 列表中的第二项没有编号。\\r\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\\r\n"
-      CSD U2 Debugging 1_2018_markdown_instruction: "# 调试\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary> ** 什么是bug（缺陷）？ ** </summary>\\r\n缺陷是代码中的错误，导致代码不按照计划起作用。\\r\n</details>\\r\n<details>\\r\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\\r\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\\r\n</details>\\r\n<details>\\r\n<summary>**有没有缺陷的例子？**</summary>\\r\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\\r\n</details>\\r\n</div>\\r\n\\r\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\\r\n\\r\n# 这样做\\r\n\\r\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\\r\n\\r\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\\r\n\\t * 标题不够大。\\r\n\\t * 列表中的第二项没有编号。\\r\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\\r\n"
-      CSD U2 Debugging 2_markdown_instruction: "# 调试\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary> ** 什么是bug（缺陷）？ ** </summary>\\r\n缺陷是代码中的错误，导致代码不按照计划起作用。\\r\n</details>\\r\n<details>\\r\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\\r\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\\r\n</details>\\r\n<details>\\r\n<summary>**有没有缺陷的例子？**</summary>\\r\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\\r\n</details>\\r\n</div>\\r\n\\r\n继续联系调试技能！这个页面比上一个有更多的调试挑战。\\r\n\\r\n# 这样做\\r\n\\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\\r\n\\r\n*\n与你的伙伴讨论这个页面有些什么缺陷。\\r\n* 找到并修复这些缺陷，使得这个页面和右边的一样。"
-      CSD U2 Debugging 2_2018_markdown_instruction: "# 调试\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary> ** 什么是bug（缺陷）？ ** </summary>\\r\n缺陷是代码中的错误，导致代码不按照计划起作用。\\r\n</details>\\r\n<details>\\r\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\\r\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\\r\n</details>\\r\n<details>\\r\n<summary>**有没有缺陷的例子？**</summary>\\r\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\\r\n</details>\\r\n</div>\\r\n\\r\n继续联系调试技能！这个页面比上一个有更多的调试挑战。\\r\n\\r\n# 这样做\\r\n\\r\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\\r\n\\r\n*\n与你的伙伴讨论这个页面有些什么缺陷。\\r\n* 找到并修复这些缺陷，使得这个页面和右边的一样。"
-      CSD U2 Debugging 3_markdown_instruction: "# 调试\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary> ** 什么是bug（缺陷）？ ** </summary>\\r\n缺陷是代码中的错误，导致代码不按照计划起作用。\\r\n</details>\\r\n<details>\\r\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\\r\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\\r\n</details>\\r\n<details>\\r\n<summary>**有没有缺陷的例子？**</summary>\\r\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么有时检查器停止工作了？**</summary>\\r\n有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。\\r\n</details>\\r\n</div>\\r\n\\r\n这个页面有些图片。图片上有些难对付的缺陷。你能调试这个页面吗？\\r\n\\r\n# 这样做\\r\n\\r\n* 和你的伙伴讨论一下，是什么造成了这个页面的一些缺陷。\\r\n* 修复这些缺陷，使得这个页面和下面的目标页面一致。\\r\n\\r\n![](https://images.code.org/4a9ac71bcf6c04775df791516562cd47-image-1508779270522.56.24\nAM.png)"
-      CSD U2 Debugging 3_2018_markdown_instruction: "# 调试\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary> ** 什么是bug（缺陷）？ ** </summary>\\r\n缺陷是代码中的错误，导致代码不按照计划起作用。\\r\n</details>\\r\n<details>\\r\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\\r\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\\r\n</details>\\r\n<details>\\r\n<summary>**有没有缺陷的例子？**</summary>\\r\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么有时检查器停止工作了？**</summary>\\r\n有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。\\r\n</details>\\r\n</div>\\r\n\\r\n这个页面有些图片。图片上有些难对付的缺陷。你能调试这个页面吗？\\r\n\\r\n# 这样做\\r\n\\r\n* 和你的伙伴讨论一下，是什么造成了这个页面的一些缺陷。\\r\n* 修复这些缺陷，使得这个页面和下面的目标页面一致。\\r\n\\r\n![](https://images.code.org/4a9ac71bcf6c04775df791516562cd47-image-1508779270522.56.24\nAM.png)"
+      CSD U2 Debugging 1_markdown_instruction: "# 调试\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\n\n# 这样做\n\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\n\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\n\\t * 标题不够大。\n\\t * 列表中的第二项没有编号。\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\n"
+      CSD U2 Debugging 1_2018_markdown_instruction: "# 调试\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\n\n# 这样做\n\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\n\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\n\\t * 标题不够大。\n\\t * 列表中的第二项没有编号。\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\n"
+      CSD U2 Debugging 2_markdown_instruction: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary> ** 什么是bug（缺陷）？ ** </summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n继续练习调试技能！这个页面比上一个有更多的调试挑战。\n\n# 这样做\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* 与你的伙伴讨论这个页面有些什么缺陷。\n* 找到并修复这些缺陷，使得这个页面和右边的一样。"
+      CSD U2 Debugging 2_2018_markdown_instruction: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary> ** 什么是bug（缺陷）？ ** </summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary> ** 什么是debugging（调试缺陷）？ ** </summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n继续练习调试技能！这个页面比上一个有更多的调试挑战。\n\n# 这样做\n\n<img src=\"https://images.code.org/61190513dba270c731251df168b98f80-image-1474383960371.02.38\nAM.png\" style=\"float:right;border:5px black solid;width:250px\">\n\n* 与你的伙伴讨论这个页面有些什么缺陷。\n* 找到并修复这些缺陷，使得这个页面和右边的一样。"
+      CSD U2 Debugging 3_markdown_instruction: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>\n\n**有没有缺陷的例子？**\n\n</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n<details>\n<summary>\n\n**为什么有时检查器停止工作了？**\n\n</summary>\n有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。\n</details>\n</div>\n\n这个页面有些图片。图片上有些难对付的缺陷。你能调试这个页面吗？\n\n# 这样做\n\n* 和你的伙伴讨论一下，是什么造成了这个页面的一些缺陷。\n* 修复这些缺陷，使得这个页面和下面的目标页面一致。\n\n![](https://images.code.org/4a9ac71bcf6c04775df791516562cd47-image-1508779270522.56.24 AM.png)"
+      CSD U2 Debugging 3_2018_markdown_instruction: "# 调试\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>\n\n**有没有缺陷的例子？**\n\n</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n<details>\n<summary>\n\n**为什么有时检查器停止工作了？**\n\n</summary>\n有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。\n</details>\n</div>\n\n这个页面有些图片。图片上有些难对付的缺陷。你能调试这个页面吗？\n\n# 这样做\n\n* 和你的伙伴讨论一下，是什么造成了这个页面的一些缺陷。\n* 修复这些缺陷，使得这个页面和下面的目标页面一致。\n\n![](https://images.code.org/4a9ac71bcf6c04775df791516562cd47-image-1508779270522.56.24 AM.png)"
       CSD U2 Debugging 4_markdown_instruction: |-
-        # 格式\r
+        # 格式
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是空白符?**</summary>\r
-        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是缩进？**</summary>\r
-        缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：\r
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details>\r
-        <summary>**什么是格式化?**</summary>\r
-        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：\r
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        </details>\r
-        <details>\r
-        <summary>**为什么有时检查器停止工作了？**</summary>\r
-        有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。\r
-        </details>\r
-        </div>\r
-        \r
-        你写代码的方式会影响调试代码的难易程度。如果你使用**空白符**和**缩进**，这将让你的代码更容易阅读，易于调试。\r
-        \r
-        # 这样做\r
-        \r
-        * 和你的伙伴看看这个代码，并讨论应该如何格式化这个代码使其更易阅读。\r
-        *
-        通过添加新行和缩进来让代码更易阅读。\r
-        * 修复所有的缺陷，让这个页面和下面的目标页面一致。\r
-        \r
+        markdown="1">
+        <details>
+        <summary>**什么是空白符?**</summary>
+        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。
+        </details>
+        <details>
+        <summary>**什么是缩进？**</summary>
+        缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        
+        </details>
+        <details>
+        <summary>**什么是格式化?**</summary>
+        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </details>
+        <details>
+        <summary>**为什么有时检查器停止工作了？**</summary>
+        有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。
+        </details>
+        </div>
+        
+        你写代码的方式会影响调试代码的难易程度。如果你使用**空白符**和**缩进**，这将让你的代码更容易阅读，易于调试。
+        
+        # 这样做
+        
+        * 和你的伙伴看看这个代码，并讨论应该如何格式化这个代码使其更易阅读。
+        * 通过添加新行和缩进来让代码更易阅读。
+        * 修复所有的缺陷，让这个页面和下面的目标页面一致。
+        
         ![](https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
         AM.png)
       CSD U2 Debugging 4_2018_markdown_instruction: |-
-        # 格式\r
+        # 格式
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是空白符?**</summary>\r
-        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是缩进？**</summary>\r
-        缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：\r
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details>\r
-        <summary>**什么是格式化?**</summary>\r
-        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：\r
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        </details>\r
-        <details>\r
-        <summary>**为什么有时检查器停止工作了？**</summary>\r
-        有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。\r
-        </details>\r
-        </div>\r
-        \r
-        你写代码的方式会影响调试代码的难易程度。如果你使用**空白符**和**缩进**，这将让你的代码更容易阅读，易于调试。\r
-        \r
-        # 这样做\r
-        \r
-        * 和你的伙伴看看这个代码，并讨论应该如何格式化这个代码使其更易阅读。\r
-        *
-        通过添加新行和缩进来让代码更易阅读。\r
-        * 修复所有的缺陷，让这个页面和下面的目标页面一致。\r
-        \r
+        markdown="1">
+        <details>
+        <summary>**什么是空白符?**</summary>
+        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。
+        </details>
+        <details>
+        <summary>**什么是缩进？**</summary>
+        缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        
+        </details>
+        <details>
+        <summary>**什么是格式化?**</summary>
+        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </details>
+        <details>
+        <summary>**为什么有时检查器停止工作了？**</summary>
+        有时候，即使HTML中有部分代码是正确的，但也有太多的缺陷了，以至于检查器不能正确的读取代码，而完全无法工作。一旦这些缺陷被修复了，检查器就能继续工作了。
+        </details>
+        </div>
+        
+        你写代码的方式会影响调试代码的难易程度。如果你使用**空白符**和**缩进**，这将让你的代码更容易阅读，易于调试。
+        
+        # 这样做
+        
+        * 和你的伙伴看看这个代码，并讨论应该如何格式化这个代码使其更易阅读。
+        * 通过添加新行和缩进来让代码更易阅读。
+        * 修复所有的缺陷，让这个页面和下面的目标页面一致。
+        
         ![](https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
         AM.png)
       CSD U2 Debugging comments_markdown_instruction: |-
@@ -1018,62 +1020,60 @@ zh-CN:
       CSD U2 HTML Adding Paragraphs pt 2_markdown_instruction: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是段落元素？**</summary>\r
-        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。\r
-        </details>\r
-        <details>\r
-        <summary>**我该如何创建多个段落呢？**</summary>\r
-        这是一行里有多个段落标签的例子。这个代码会放在你的网页的body部分里。\r
-        \r
-        <pre>\r
-        `<p>这是一个有两句话的段落</p>`\r
-        `<p>这是另一个段落。</p>`\r
-        </pre>\r
-        \r
-        </details>\r
-        \r
-        </div>\r
-        \r
+        markdown="1">
+        <details>
+        <summary>**什么是段落元素？**</summary>
+        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        </details>
+        <details>
+        <summary>**我该如何创建多个段落呢？**</summary>
+        这是一行里有多个段落标签的例子。这个代码会放在你的网页的body部分里。
+        
+        <pre>
+        `<p>这是一个有两句话的段落</p>`
+        `<p>这是另一个段落。</p>`
+        </pre>
+        
+        </details>
+        
+        </div>
+        
         #
-        使用段落标签\r
-        \r
-        `<p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。\r
-        \r
-        # 这样做\r
-        \r
-        * 通过添加`<p>`和`</p>`将你刚才写的代码里分成至少两个段落。\r
+        使用段落标签
+        
+        `<p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。
+        
+        # 这样做
+        
+        * 通过添加`<p>`和`</p>`将你刚才写的代码里分成至少两个段落。
         * 与旁边的相比较。与你的文本显示方法相比，有什么变化了？
       CSD U2 HTML Adding Paragraphs pt 2_2018_markdown_instruction: |-
-        <div style="float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是段落元素？**</summary>\r
-        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。\r
-        </details>\r
-        <details>\r
-        <summary>**我该如何创建多个段落呢？**</summary>\r
-        这是一行里有多个段落标签的例子。这个代码会放在你的网页的body部分里。\r
-        \r
-        <pre>\r
-        `<p>这是一个有两句话的段落</p>`\r
-        `<p>这是另一个段落。</p>`\r
-        </pre>\r
-        \r
-        </details>\r
-        \r
-        </div>\r
-        \r
-        #
-        使用段落标签\r
-        \r
-        `<p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。\r
-        \r
-        # 这样做\r
-        \r
-        * 通过添加`<p>`和`</p>`将你刚才写的代码里分成至少两个段落。\r
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        
+        <summary>**什么是段落元素？**</summary>
+        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        </details>
+        <details>
+        <summary>**我该如何创建多个段落呢？**</summary>
+        这是一行里有多个段落标签的例子。这个代码会放在你的网页的body部分里。
+        
+        <pre>
+        `<p>这是一个有两句话的段落</p>`
+        `<p>这是另一个段落。</p>`
+        </pre>
+        
+        
+        </details>
+        </div>
+        
+        # 使用段落标签
+        
+        `<p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。
+        
+        # 这样做
+        
+        * 通过添加`<p>`和`</p>`将你刚才写的代码里分成至少两个段落。
         * 与旁边的相比较。与你的文本显示方法相比，有什么变化了？
       CSD U2 HTML Adding Paragraphs_markdown_instruction: |
         # 添加文本到正文中\r
@@ -1106,32 +1106,29 @@ zh-CN:
       CSD U2 HTML Debug Paragraphs_markdown_instruction: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary><strong>什么是段落元素？</strong></summary>\r
-        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。\r
-        </details>\r
-        <details>\r
-        <summary><strong>为什么有时HTML不正确，页面也能显示出来？</strong></summary>\r
-        HTML被你的网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。\r
-        </details>\r
-        <details>\r
-        <summary><strong>为什么代码有时候会变成粉红色？</strong></summary>\r
-        网络实验室被开发成能够自动检测一些HTML中的错误。当它注意到一个错误时，就会将代码显示为粉色。这表示粉色的地方或者粉色的代码之前有错误。你需要仔细的调试，来找到错误。\r
-        </details>\r
-        </div>\r
-        \r
-        #
-        调试：修复缺失的标签\\r
-        \r
-        这个简单的网页有些问题，这会造成内容显示不正确。找到并修复问题。这个过程叫做“调试”你的代码。\r
-        \r
-        #
-        这样做\r
-        \r
-        * 修复缺失的代码，让网页能够正确的显示\r
-        *
-        将你修复的问题与旁边的同学进行比较
+        markdown="1">
+        <details>
+        <summary><strong>什么是段落元素？</strong></summary>
+        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        </details>
+        <details>
+        <summary><strong>为什么有时HTML不正确，页面也能显示出来？</strong></summary>
+        HTML被你的网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。
+        </details>
+        <details>
+        <summary><strong>为什么代码有时候会变成粉红色？</strong></summary>
+        网络实验室被开发成能够自动检测一些HTML中的错误。当它注意到一个错误时，就会将代码显示为粉色。这表示粉色的地方或者粉色的代码之前有错误。你需要仔细的调试，来找到错误。
+        </details>
+        </div>
+        
+        # 调试：修复缺失的标签
+        
+        这个简单的网页有些问题，这会造成内容显示不正确。找到并修复问题。这个过程叫做“调试”你的代码。
+        
+        # 这样做
+        
+        * 修复缺失的代码，让网页能够正确的显示
+        * 将你修复的问题与旁边的同学进行比较
       CSD U2 HTML Debug Paragraphs_2018_markdown_instruction: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -1161,22 +1158,22 @@ zh-CN:
         * 修复缺失的代码，让网页能够正确的显示\r
         *
         将你修复的问题与旁边的同学进行比较
-      CSD U2 Header Demo_markdown_instruction: "# 标头\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**什么是Header（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n</div>\\r\n\\r\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样\\r\n\\r\n这样做：\\r\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\\r\n* 确保你和你的伙伴对标签能做什么达成共识。\\r\n*\n修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
-      CSD U2 Header Sizes_markdown_instruction: "# 标头尺寸\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**什么是Header（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\\r\n\\r\n\\r\n\\r\n这样做：\\r\n*\n用检查器来找到什么让这些标头有不一样的尺寸\\r\n*\n确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\\r\n*\n改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\\r\n\\r\n<img\nsrc=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\\r\n"
-      CSD U2 Header Test_markdown_instruction: "# 标头和段落\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**什么是段落元素？**</summary>\\r\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\\r\n</details>\\r\n<details>\\r\n<summary>**我该如何创建多个段落呢？**</summary>\\r\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\\r\n<pre>\\r\n\\t&lt;p&gt;\\r\n\\t这是一个段落。\\r\n&lt;/p&gt;\\r\n\\t&lt;p&gt;\\r\n\\t这是另一个段落。\\r\n&lt;/p&gt;\\r\n</pre>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是Header（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\\r\n\\r\n这样做：\\r\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\\r\n* 用你的标头和段落标签来给这个页面的内容加上结构。\\r\n"
-      CSD U2 Heading Demo_markdown_instruction: "# 标头\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**什么是Header（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。.\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n</div>\\r\n\\r\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样\\r\n\\r\n这样做：\\r\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\\r\n* 确保你和你的伙伴对标签能做什么达成共识。\\r\n*\n修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
-      CSD U2 Heading Demo_2018_markdown_instruction: "# 标头\\r\n\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**什么是Header（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。.\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n</div>\\r\n\\r\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样\\r\n\\r\n这样做：\\r\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\\r\n* 确保你和你的伙伴对标签能做什么达成共识。\\r\n*\n修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
-      CSD U2 Heading Sizes_markdown_instruction: "# Heading Sizes\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**什么是Heading（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\\r\n\\r\n\\r\n\\r\n这样做：\\r\n* 用检查器来找到什么让这些标头有不一样的尺寸\\r\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\\r\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\\r\n\\r\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\\r\n"
+      CSD U2 Header Demo_markdown_instruction: "# 标头\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n</div>\n\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样。\n\n这样做：\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\n* 确保你和你的伙伴对标签能做什么达成共识。\n* 修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
+      CSD U2 Header Sizes_markdown_instruction: "# 标头尺寸\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\n\n\n\n这样做：\n* 用检查器来找到什么让这些标头有不一样的尺寸\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\n\n<img\nsrc=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\n"
+      CSD U2 Header Test_markdown_instruction: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
+      CSD U2 Heading Demo_markdown_instruction: "# 标头\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。.\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n</div>\n\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样。\n\n这样做：\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\n* 确保你和你的伙伴对标签能做什么达成共识。\n* 修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
+      CSD U2 Heading Demo_2018_markdown_instruction: "# 标头\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。.\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n</div>\n\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样。\n\n这样做：\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\n* 确保你和你的伙伴对标签能做什么达成共识。\n* 修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
+      CSD U2 Heading Sizes_markdown_instruction: "# Heading Sizes\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是Heading（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\n\n\n\n这样做：\n* 用检查器来找到什么让这些标头有不一样的尺寸\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\n"
       CSD U2 Heading Sizes_2018_markdown_instruction: "# Heading Sizes\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**什么是Heading（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\\r\n\\r\n\\r\n\\r\n这样做：\\r\n* 用检查器来找到什么让这些标头有不一样的尺寸\\r\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\\r\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\\r\n\\r\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\\r\n"
-      CSD U2 Heading Test_markdown_instruction: "# 标头和段落\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**什么是段落元素？**</summary>\\r\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\\r\n</details>\\r\n<details>\\r\n<summary>**我该如何创建多个段落呢？**</summary>\\r\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\\r\n<pre>\\r\n\\t&lt;p&gt;\\r\n\\t这是一个段落。\\r\n&lt;/p&gt;\\r\n\\t&lt;p&gt;\\r\n\\t这是另一个段落。\\r\n&lt;/p&gt;\\r\n</pre>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是headings（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\\r\n\\r\n这样做：\\r\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\\r\n* 用你的标头和段落标签来给这个页面的内容加上结构。\\r\n"
-      CSD U2 Heading Test_2018_markdown_instruction: "# 标头和段落\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**什么是段落元素？**</summary>\\r\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\\r\n</details>\\r\n<details>\\r\n<summary>**我该如何创建多个段落呢？**</summary>\\r\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\\r\n<pre>\\r\n\\t&lt;p&gt;\\r\n\\t这是一个段落。\\r\n&lt;/p&gt;\\r\n\\t&lt;p&gt;\\r\n\\t这是另一个段落。\\r\n&lt;/p&gt;\\r\n</pre>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是headings（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</h1>\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\\r\n\\r\n这样做：\\r\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\\r\n* 用你的标头和段落标签来给这个页面的内容加上结构。\\r\n"
-      CSD U2 Image Tag 1_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 图片\\r\n\\r\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
-      CSD U2 Image Tag 1_2018_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 图片\\r\n\\r\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
-      CSD U2 Image Tag 2_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 上传图片\\r\n\\r\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\\r\n\\r\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\\r\n\\r\n# 这样做\\r\n\\r\n* 上传至少一张图片到这个网页中。\\r\n* 用`<img>`标签在你的网页中显示图片。\\r\n* 确保图片有`alt`属性。"
-      CSD U2 Image Tag 2_2018_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 上传图片\\r\n\\r\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\\r\n\\r\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\\r\n\\r\n# 这样做\\r\n\\r\n* 上传至少一张图片到这个网页中。\\r\n* 用`<img>`标签在你的网页中显示图片。\\r\n* 确保图片有`alt`属性。"
-      CSD U2 Image Tag Attribution_markdown_instruction: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 给予功劳\\r\n\\r\n当你使用一张知识共享许可的图片时，你需要给原始作者以功劳，（这也被叫做 _署名_ ）。这里有很多方法来提供书名，但最简单的方法是在图片下标识出作者和来源网站。\\r\n\\r\n# 这样做\\r\n\\r\n在这个页面中，我们已经添加并署名了一张青蛙的图片。用知识共享引擎找到另一张凉席动物的图片。将找到的图片加入到页面中，并且进行正确的署名，包括：\\r\n\\r\n* 创作者的名字（如果有的话）\\r\n* 来源网站(例如：commons.wikimedia.org)\\r\n*\n它发布时的许可协议 (如： CC-BY)"
+      CSD U2 Heading Test_markdown_instruction: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是headings（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
+      CSD U2 Heading Test_2018_markdown_instruction: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是headings（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
+      CSD U2 Image Tag 1_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 图片\n\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
+      CSD U2 Image Tag 1_2018_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 图片\n\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
+      CSD U2 Image Tag 2_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 上传图片\n\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\n\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\n\n# 这样做\n\n* 上传至少一张图片到这个网页中。\n* 用`<img>`标签在你的网页中显示图片。\n* 确保图片有`alt`属性。"
+      CSD U2 Image Tag 2_2018_markdown_instruction: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 上传图片\n\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\n\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\n\n# 这样做\n\n* 上传至少一张图片到这个网页中。\n* 用`<img>`标签在你的网页中显示图片。\n* 确保图片有`alt`属性。"
+      CSD U2 Image Tag Attribution_markdown_instruction: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 给予功劳\n\n当你使用一张知识共享许可的图片时，你需要给原始作者以功劳，（这也被叫做 _署名_ ）。这里有很多方法来提供书名，但最简单的方法是在图片下标识出作者和来源网站。\n\n# 这样做\n\n在这个页面中，我们已经添加并署名了一张青蛙的图片。用知识共享引擎找到另一张凉席动物的图片。将找到的图片加入到页面中，并且进行正确的署名，包括：\n\n* 创作者的名字（如果有的话）\n* 来源网站(例如：commons.wikimedia.org)\n* 它发布时的许可协议 (如： CC-BY)"
       CSD U2 Image Tag Attribution_2018_markdown_instruction: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 给予功劳\\r\n\\r\n当你使用一张知识共享许可的图片时，你需要给原始作者以功劳，（这也被叫做 _署名_ ）。这里有很多方法来提供书名，但最简单的方法是在图片下标识出作者和来源网站。\\r\n\\r\n# 这样做\\r\n\\r\n在这个页面中，我们已经添加并署名了一张青蛙的图片。用知识共享引擎找到另一张凉席动物的图片。将找到的图片加入到页面中，并且进行正确的署名，包括：\\r\n\\r\n* 创作者的名字（如果有的话）\\r\n* 来源网站(例如：commons.wikimedia.org)\\r\n*\n它发布时的许可协议 (如： CC-BY)"
-      CSD U2 Image Tag Debug_markdown_instruction: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 细节问题\\r\n\\r\n`src`属性需要填上要使用图片的 _完全匹配的_ 文件名。 这意味着你要注意图片的拼写，大消息，以及扩展名。这个页面上的三个图片都被破坏了，因为它们的`src`属性都不正确。参考文件菜单来修复这些图片标签。\\r\n\\r\n_注意：虽然图片没能正确加载，但我们的网站仍然能在图片位置显示出描述文本。这是因为我们用了`alt`属性。太棒了！_"
+      CSD U2 Image Tag Debug_markdown_instruction: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 细节问题\n\n`src`属性需要填上要使用图片的 _完全匹配的_ 文件名。 这意味着你要注意图片的拼写，大消息，以及扩展名。这个页面上的三个图片都被破坏了，因为它们的`src`属性都不正确。参考文件菜单来修复这些图片标签。\n\n_注意：虽然图片没能正确加载，但我们的网站仍然能在图片位置显示出描述文本。这是因为我们用了`alt`属性。太棒了！_"
       CSD U2 Image Tag Debug_2018_markdown_instruction: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 细节问题\\r\n\\r\n`src`属性需要填上要使用图片的 _完全匹配的_ 文件名。 这意味着你要注意图片的拼写，大消息，以及扩展名。这个页面上的三个图片都被破坏了，因为它们的`src`属性都不正确。参考文件菜单来修复这些图片标签。\\r\n\\r\n_注意：虽然图片没能正确加载，但我们的网站仍然能在图片位置显示出描述文本。这是因为我们用了`alt`属性。太棒了！_"
       CSD U2 Info Page Content_markdown_instruction: |
         # 添加您的内容\r
@@ -1263,46 +1260,46 @@ zh-CN:
       CSD U2 Info Page Images_markdown_instruction: "# 添加图片\\r\n\\r\n你有了图片及其署名信息，现在是时候开始装扮你的新网页了。 \\r\n\\r\n# 这样做\\r\n\\r\n把你的图片上传到网站实验室中， 并使用`<img>`标签,把它们添加到需要的地方。 对于每张图片:\\r\n\\r\n* 添加一个描述性的`alt`属性\\r\n* 在图片下添加归属来源，包含\\r\n\\t*\n原创者的名字 (如果有的话)\\r\n    * 图片的标题 (如果有的话)\\r\n    *\n原网站的地址\\r\n    * 原图片发布的版权,可以用文字(如 CC-BY) 或者使用 [Creative Commons website](https://creativecommons.org/about/downloads/) 的标志\\r\n\\r\n例如\\r\n\\r\n![Sad Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\\r\n\\r\nFlickr 用户 Soggydan 的长毛达克斯猎狗画像(ht<span>tps://</span>commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg)\n- CC-BY"
       CSD U2 Inspector Warm Up_markdown_instruction: |-
         <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
-        <details>\r
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
         <summary>**<span>
-        如何使用检查器工具？ </span>**</summary>\r
+        如何使用检查器工具？ </span>**</summary>
         检查器是在网络实验室里学习你不太熟悉的编码的一种有效途径。 要打开检验工具， 请点击<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
-        PM.png" style="width:100px">。你会知道检验工具是否是开着的，因为按钮将变白色并注明"检查器：打开"。 一旦你打开检查器，你可以把鼠标放在任何事物的上面查看预览。网络实验室将突出显示页面上指到部分的代码。 \r
-        </details>\r
-        \r
-        </div>\r
-        \r
+        PM.png" style="width:100px">。你会知道检验工具是否是开着的，因为按钮将变白色并注明"检查器：打开"。 一旦你打开检查器，你可以把鼠标放在任何事物的上面查看预览。网络实验室将突出显示页面上指到部分的代码。 
+        </details>
+        
+        </div>
+        
         #
-        探索 HTML\r
-        \r
-        这是个HTML格式书写的网页，你将学习如何用它，但让我们先探索一下如何使用检查器。 \r
-        \r
-        # 这样做\r
-        \r
-        * 点击右边的"如何使用检查器？"的提示来了解如何使用它。 \r
+        探索 HTML
+        
+        这是个HTML格式书写的网页，你将学习如何用它，但让我们先探索一下如何使用检查器。 
+        
+        # 这样做
+        
+        * 点击右边的"如何使用检查器？"的提示来了解如何使用它。 
         *
         参照网页上的指示来探索网页并和合作伙伴讨论如何使用它。
       CSD U2 Inspector Warm Up_2018_markdown_instruction: |-
         <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
-        <details>\r
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
         <summary>**<span>
-        如何使用检查器工具？ </span>**</summary>\r
+        如何使用检查器工具？ </span>**</summary>
         检查器是在网络实验室里学习你不太熟悉的编码的一种有效途径。 要打开检验工具， 请点击<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
-        PM.png" style="width:100px">。你会知道检验工具是否是开着的，因为按钮将变白色并注明"检查器：打开"。 一旦你打开检查器，你可以把鼠标放在任何事物的上面查看预览。网络实验室将突出显示页面上指到部分的代码。 \r
-        </details>\r
-        \r
-        </div>\r
-        \r
+        PM.png" style="width:100px">。你会知道检验工具是否是开着的，因为按钮将变白色并注明"检查器：打开"。 一旦你打开检查器，你可以把鼠标放在任何事物的上面查看预览。网络实验室将突出显示页面上指到部分的代码。 
+        </details>
+        
+        </div>
+        
         #
-        探索 HTML\r
-        \r
-        这是个HTML格式书写的网页，你将学习如何用它，但让我们先探索一下如何使用检查器。 \r
-        \r
-        # 这样做\r
-        \r
-        * 点击右边的"如何使用检查器？"的提示来了解如何使用它。 \r
+        探索 HTML
+        
+        这是个HTML格式书写的网页，你将学习如何用它，但让我们先探索一下如何使用检查器。 
+        
+        # 这样做
+        
+        * 点击右边的"如何使用检查器？"的提示来了解如何使用它。 
         *
         参照网页上的指示来探索网页并和合作伙伴讨论如何使用它。
       CSD U2 Project Start_markdown_instruction: |2
@@ -1332,7 +1329,7 @@ zh-CN:
         
         所有的颜色，不管它们有没有名字，都可以用不同水平的红、绿、蓝色的光混合起来显示。这叫做RGB值（这是Red-Green-Blue，也就是红-绿-蓝的简称）。你可以用左边的小部件来试试不同的RGB值，看看能做出什么样的颜色。
         
-        * **点击"运行"来开始左边的小部件**，并用滑动条来改变红、绿、蓝光的水平。\r
+        * **点击"运行"来开始左边的小部件**，并用滑动条来改变红、绿、蓝光的水平。
         * 对于下面每个颜色，用RGB值来匹配它。
         
         A) 红: 216, 绿: 191, 蓝: 216 - rgb(216,191,216)
@@ -1377,7 +1374,10 @@ zh-CN:
         <summary>**为什么红色和绿色能组合出黄色？**</summary>
         <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
         <details>
-        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <summary>
+        
+        **我能用RGB组合出多少种颜色？**</summary>
+        
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 RGB summer_2018_markdown_instruction: |-
@@ -1393,10 +1393,19 @@ zh-CN:
         <div style="font-size: 16px">
         <br />
         <details>
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        
+        <summary>
+        
+        **为什么红色和绿色能组合出黄色？**
+        
+        </summary>
         <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
         <details>
-        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <summary>
+        
+        **我能用RGB组合出多少种颜色？**
+        
+        </summary>
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 RGB winter_2018_markdown_instruction: |-
@@ -1442,55 +1451,52 @@ zh-CN:
       CSD U2 add file - OLD_markdown_instruction: |2
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是样式表?**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS?**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
+        markdown="1">
+        <details>
+        <summary>**什么是样式表?**</summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary>**什么是CSS?**</summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
         <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        <details>\r
-        <summary>**如何创建新的样式表?**</summary>\r
-        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。\r
-        </details>\r
-        <details>\r
-        <summary>**如何命名我的样式表?**</summary>\r
+        {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        <details>
+        <summary>**如何创建新的样式表?**</summary>
+        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。
+        </details>
+        <details>
+        <summary>**如何命名我的样式表?**</summary>
         你可以随意命名，但最好选一个相关的名字例如 "style.css"（样式表）
-        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。.\r
-        </details>\r
-        <details>\r
-        <summary>**如何重新命名文件?**</summary>\r
-        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。\r
-        </details>\r
-        <details>\r
-        <summary>**如何在网页里添加样式表?**</summary>\r
-        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。\r
-        </details>\r
-        </div>\r
-        #
-        添加样式表\r
-        \r
-        这是你之前的”关于我“的网页。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。\r
-        \r
-        1.
-        为你的项目创建新的格式表。.\r
-        2. 重新命名格式表文档.\r
-        3.
-        把你的格式表添加到你的HTML网页。\r
-        \r
+        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。.
+        </details>
+        <details>
+        <summary>**如何重新命名文件?**</summary>
+        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。
+        </details>
+        <details>
+        <summary>**如何在网页里添加样式表?**</summary>
+        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。
+        </details>
+        </div>
+        # 添加样式表
+        
+        这是你之前的”关于我“的网页。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。
+        
+        1. 为你的项目创建新的格式表。.
+        2. 重新命名格式表文档.
+        3. 把你的格式表添加到你的HTML网页。
+        
         <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png"
         style=" max-width:500px">
       CSD U2 add file_markdown_instruction: |2
@@ -1904,91 +1910,91 @@ zh-CN:
         *
         将夏天类添加到HTML的夏天元素里。\r
         * 为autumn（秋天）类应用同样的步骤。
-      CSD U2 commenting_markdown_instruction: |2
-        # 注释\r
+      CSD U2 commenting_markdown_instruction: |-
+        # 注释
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
+        markdown="1">
+        <details>
         <summary>**什么是空白符?**
-        </summary>\r
-        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是缩进？**</summary>\r
+        </summary>
+        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。
+        </details>
+        <details>
+        <summary>**什么是缩进？**</summary>
         缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details> \r 
-        <summary> ** 什么是格式化？ ** </summary> \r 
-        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：\r
-        <pre> \r
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        </details>\r
-        </div>\r
-        \r
-        你可以向代码中添加 **comments**（注释）, 以解释代码的不同部分及其应该要创建些什么。注释可以帮助您进行调试，并且还将帮助试图理解代码的其他人。\r
-        \r
-        <pre>\r
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        
+        </details>
+        <details>  
+        <summary> ** 什么是格式化？ ** </summary>  
+        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：
+        <pre> 
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </details>
+        </div>
+        
+        你可以向代码中添加 **comments**（注释）, 以解释代码的不同部分及其应该要创建些什么。注释可以帮助您进行调试，并且还将帮助试图理解代码的其他人。
+        
+        <pre>
         &lt;!--
-        这是一条注释 --&gt;\r
-        </pre>\r
-        \r
-        # 这样做\r
-        \r
-         * 和你的伙伴一起查看代码并找到注释。\r
+        这是一条注释 --&gt;
+        </pre>
+        
+        # 这样做
+        
+        * 和你的伙伴一起查看代码并找到注释。
         * 使用注释来帮助修复 HTML 中的缺陷。
-      CSD U2 commenting_2018_markdown_instruction: |2
-        # 注释\r
+      CSD U2 commenting_2018_markdown_instruction: |-
+        # 注释
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
+        markdown="1">
+        <details>
         <summary>**什么是空白符?**
-        </summary>\r
-        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是缩进？**</summary>\r
+        </summary>
+        空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。
+        </details>
+        <details>
+        <summary>**什么是缩进？**</summary>
         缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details> \r 
-        <summary> ** 什么是格式化？ ** </summary> \r 
-        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：\r
-        <pre> \r
-        <pre>\r
-        &lt;body&gt;\r
-        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;\r
-        &lt;/body&gt;\r
-        </pre>\r
-        </details>\r
-        </div>\r
-        \r
-        你可以向代码中添加 **comments**（注释）, 以解释代码的不同部分及其应该要创建些什么。注释可以帮助您进行调试，并且还将帮助试图理解代码的其他人。\r
-        \r
-        <pre>\r
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        
+        </details>
+        <details>  
+        <summary> ** 什么是格式化？ ** </summary>  
+        格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：
+        <pre> 
+        <pre>
+        &lt;body&gt;
+        &lt;p&gt;这个段落在"body"元素中。&lt;/p&gt;
+        &lt;/body&gt;
+        </pre>
+        </details>
+        </div>
+        
+        你可以向代码中添加 **comments**（注释）, 以解释代码的不同部分及其应该要创建些什么。注释可以帮助您进行调试，并且还将帮助试图理解代码的其他人。
+        
+        <pre>
         &lt;!--
-        这是一条注释 --&gt;\r
-        </pre>\r
-        \r
-        # 这样做\r
-        \r
-         * 和你的伙伴一起查看代码并找到注释。\r
+        这是一条注释 --&gt;
+        </pre>
+        
+        # 这样做
+        
+        * 和你的伙伴一起查看代码并找到注释。
         * 使用注释来帮助修复 HTML 中的缺陷。
       CSD U2 create page_markdown_instruction: |+
         # 创建并命名你的新页面\r
@@ -2049,7 +2055,7 @@ zh-CN:
         target="_new">课程9关卡4</a>.\r
         * 确保每个页面的底部都有一个页脚，解释了你页面的版权信息。
         (浏览<a href="https://creativecommons.org/choose/" target="_new">知识共享</a> 获得创建这个HTMl的帮助。)
-      CSD U2 images intro_markdown_instruction: "# 图片\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本）属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**什么是空元素？**</summary>\\r\n`<img>` 标签是一个**空元素**的例子，因为它的开始、关闭都在同一个标签里。为了标记它，我们将通常放在结束标签里的`/`放到了图片标签的结尾处。空元素不需要关闭标签，因为它不需要再标签之间插入文本内容。影响内容显示的都在属性中进行了设置。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有结束元素？**</summary>\\r\n图片标签是一个空标签，而空标签不需要结束标签。因为它里面不需要有文本内容。影响显示的数据都设置到了标签的属性里。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n如果这个配方页面有一张图片，那会看起来更好。图片能让这个页面看起来更好。\\r\n\\r\n# 这样做\\r\n* 看看你左边的工作区，并找出名为\"scotcheroos.jpeg\"的文件\\r\n* 用检查器工具来找到让这张图片显示出来的代码。\\r\n* 确保你的你的伙伴对图片的标签是如何起作用的达成共识。\\r\n* 试着将图片挪到页面的顶上。"
+      CSD U2 images intro_markdown_instruction: "# 图片\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本）属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**什么是空元素？**</summary>\n`<img>` 标签是一个**空元素**的例子，因为它的开始、关闭都在同一个标签里。为了标记它，我们将通常放在结束标签里的`/`放到了图片标签的结尾处。空元素不需要关闭标签，因为它不需要再标签之间插入文本内容。影响内容显示的都在属性中进行了设置。\n</details>\n<details>\n<summary>**为什么图片标签没有结束元素？**</summary>\n图片标签是一个空标签，而空标签不需要结束标签。因为它里面不需要有文本内容。影响显示的数据都设置到了标签的属性里。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n如果这个配方页面有一张图片，那会看起来更好。图片能让这个页面看起来更好。\n\n# 这样做\n* 看看你左边的工作区，并找出名为\"scotcheroos.jpeg\"的文件\n* 用检查器工具来找到让这张图片显示出来的代码。\n* 确保你的你的伙伴对图片的标签是如何起作用的达成共识。\n* 试着将图片挪到页面的顶上。"
       CSD U2 layout style bgcolor_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -2130,8 +2136,7 @@ zh-CN:
           border-radius: 10px;
         }</pre>
         
-        *
-        `img`是一个_选择器_。它指定了哪些元素上会应用花括号里的规则，在这里，指定的是图片。
+        * `img`是一个_选择器_。它指定了哪些元素上会应用花括号里的规则，在这里，指定的是图片。
         * `border-color:
         saddlebrown;`,`border-width: 4px;`,`border-style: solid;`，和`border-radius: 10px;`是制作边框的规则。
         </details>
@@ -2216,76 +2221,76 @@ zh-CN:
         
         在下一关中，你会更改并添加这个页面中的新样式。
       CSD U2 link demo_markdown_instruction: |-
-        # 制作多个网页的网站\r
-        \r
+        # 制作多个网页的网站
+        
         <div
         style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
-        20px; font-size:14px" markdown="1">\r
-        <details>\r
-        <summary>**什么是超链接？**</summary>\r
-        超链接能连接到本站点或其它站点的网页上。你需要通过增加连接到各个网页的超链接来制作网站的导航。你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。<br> <br>\r
-        \r
-        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>\r
-        \r
-        <pre>\r
-        &lt;a href=”houses.html”&gt; 独一无二的别墅 &lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details>\r
-        <summary>**怎样增加一个超链接？**</summary>\r
-        你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。 <br> <br>\r
-        \r
-        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>\r
-        \r
-        <pre>\r
-        &lt;a href=”houses.html”&gt; 独一无二的别墅&lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        </div>\r
-        \r
-        一个网站会包括一个以上的页面，它们应该相互之间连接起来。这是一个项目的例子，它有多个页面，并用超链接连起来了。（当你点击有蓝色下划线的单词会到达另一个页面）。\r
-        \r
-        # 这样做\r
-        * 用检查器来看看在index.html创建超链接的代码。\r
-        * 和你的伙伴讨论一下，这个代码是如何工作的。\r
+        20px; font-size:14px" markdown="1">
+        <details>
+        <summary>**什么是超链接？**</summary>
+        超链接能连接到本站点或其它站点的网页上。你需要通过增加连接到各个网页的超链接来制作网站的导航。你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。<br> <br>
+        
+        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>
+        
+        <pre>
+        &lt;a href=”houses.html”&gt; 独一无二的别墅 &lt;/a&gt;
+        </pre>
+        
+        </details>
+        <details>
+        <summary>**怎样增加一个超链接？**</summary>
+        你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。 <br> <br>
+        
+        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>
+        
+        <pre>
+        &lt;a href=”houses.html”&gt; 独一无二的别墅&lt;/a&gt;
+        </pre>
+        
+        </details>
+        </div>
+        
+        一个网站会包括一个以上的页面，它们应该相互之间连接起来。这是一个项目的例子，它有多个页面，并用超链接连起来了。（当你点击有蓝色下划线的单词会到达另一个页面）。
+        
+        # 这样做
+        * 用检查器来看看在index.html创建超链接的代码。
+        * 和你的伙伴讨论一下，这个代码是如何工作的。
         * 点击左边文件列表的recipe.html页面。在这个页面顶端加一个超链接回到index.html页面。
       CSD U2 link demo_2018_markdown_instruction: |-
-        # 制作多个网页的网站\r
-        \r
+        # 制作多个网页的网站
+        
         <div
         style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
-        20px; font-size:14px" markdown="1">\r
-        <details>\r
-        <summary>**什么是超链接？**</summary>\r
-        超链接能连接到本站点或其它站点的网页上。你需要通过增加连接到各个网页的超链接来制作网站的导航。你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。<br> <br>\r
-        \r
-        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>\r
-        \r
-        <pre>\r
-        &lt;a href=”houses.html”&gt; 独一无二的别墅 &lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details>\r
-        <summary>**怎样增加一个超链接？**</summary>\r
-        你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。 <br> <br>\r
-        \r
-        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>\r
-        \r
-        <pre>\r
-        &lt;a href=”houses.html”&gt; 独一无二的别墅&lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        </div>\r
-        \r
-        一个网站会包括一个以上的页面，它们应该相互之间连接起来。这是一个项目的例子，它有多个页面，并用超链接连起来了。（当你点击有蓝色下划线的单词会到达另一个页面）。\r
-        \r
-        # 这样做\r
-        * 用检查器来看看在index.html创建超链接的代码。\r
-        * 和你的伙伴讨论一下，这个代码是如何工作的。\r
+        20px; font-size:14px" markdown="1">
+        <details>
+        <summary>**什么是超链接？**</summary>
+        超链接能连接到本站点或其它站点的网页上。你需要通过增加连接到各个网页的超链接来制作网站的导航。你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。<br> <br>
+        
+        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>
+        
+        <pre>
+        &lt;a href=”houses.html”&gt; 独一无二的别墅 &lt;/a&gt;
+        </pre>
+        
+        </details>
+        <details>
+        <summary>**怎样增加一个超链接？**</summary>
+        你可以**用`<a>`元素来给网页增加超链接**。需要在超链接中现实的文本在开/闭的标签中。`<a>`标签有一个`href`属性，这是放置链接到哪个页面的地方。本网站页面的地址就是这个页面的文件路径。 <br> <br>
+        
+        例如，连接到独一无二的别墅页面上，你需要在`<body>` 元素里增加如下的代码。 <br><br>
+        
+        <pre>
+        &lt;a href=”houses.html”&gt; 独一无二的别墅&lt;/a&gt;
+        </pre>
+        
+        </details>
+        </div>
+        
+        一个网站会包括一个以上的页面，它们应该相互之间连接起来。这是一个项目的例子，它有多个页面，并用超链接连起来了。（当你点击有蓝色下划线的单词会到达另一个页面）。
+        
+        # 这样做
+        * 用检查器来看看在index.html创建超链接的代码。
+        * 和你的伙伴讨论一下，这个代码是如何工作的。
         * 点击左边文件列表的recipe.html页面。在这个页面顶端加一个超链接回到index.html页面。
       CSD U2 link pages_markdown_instruction: |+
         # 为你的网站创建一个新页面。\r

@@ -690,8 +690,8 @@ ko:
         구조를 사용하면 꽤 도움이 될 것입니다. "
       Bee Recommended Blocks test_instruction: 자주색 꽃들은 1 또는 0 의 꽃꿀이 있지만, 정확히 알 수 없습니다.
         꽃꿀이 없는 자주색 꽃에서 꿀을 모으지 마세요. if 블록을 사용해서 꽃꿀이 1 만큼 있는지 확인해 주세요.
-      Bergeron Robot Maze1_instruction: '나쁜 돼지를 잡을 수 있게 도와주세요! "실행하면" 블록 아래에 "앞으로
-        이동" 블록들을 여러 개 쌓아 붙인 후, "실행"을 눌러보세요. '
+      Bergeron Robot Maze1_instruction: '나쁜 돼지를 잡을 수 있게 도와주세요! "실행하면" 블록 아래에 `앞으로
+        이동` 블록들을 여러 개 쌓아 붙인 후, `실행`을 눌러보세요. '
       Brad Spooky House Copy_instruction: |-
         자유 플레이: 여기 여러분들이 작성한 함수들과 가지고 놀 수 있는 몇 개의 함수가 더 있습니다.
         멋진 것들을 그려보세요! 선 그리기로 얼마나 많은 것들을 그릴 수 있는지 해보세요.
@@ -1715,7 +1715,7 @@ ko:
         여러분이 원하는 재료를 이용해서, 집의 나머지 부분을 완성해보세요.
         "repeat" 명령은 편리하게 사용할 수 있습니다.
       Overworld Move to Sheep_instruction: 두 번째 "앞으로 이동" 명령을 더해서 양에게 도달하세요.
-      Overworld Move to Sheep_2018_instruction: 두 번째 "앞으로 이동" 명령을 더해서 양에게 도달하세요.
+      Overworld Move to Sheep_2018_instruction: 두 번째 `앞으로 이동` 명령을 더해서 양에게 도달하세요.
       Overworld Place Wall_instruction: 모든 집은 벽을 짓는 것부터 시작합니다. "놓기"와 "앞으로 이동" 명령을
         반복문 안에 놓아서 집의 첫 번째 부분을 지어보세요.
       Overworld Place Wall_2018_instruction: 모든 집은 벽을 짓는 것부터 시작합니다. "놓기"와 "앞으로 이동"

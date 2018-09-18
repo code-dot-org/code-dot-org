@@ -5,7 +5,6 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-18/csp-create/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Survey: What assessment tool would you be the most excited about?", "details"=>"Click \"Learn more\" to take the survey.", "link"=>"https://bit.ly/green-bubbles-survey", "type"=>"bullhorn"}]
 family_name 'csp-create'
 version_year '2018'
 is_stable true

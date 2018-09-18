@@ -16,9 +16,17 @@ ka:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': შემდეგი
             '"prev"': წინა
             '"rand"': შემთხვევითი
@@ -26,12 +34,81 @@ ka:
         options:
           GROUP:
             sprites: ყველა
-            '"alien"': უცხო
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: ყველა
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': შემდეგი
             '"prev"': წინა
             '"rand"': შემთხვევითი
@@ -44,13 +121,117 @@ ka:
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
             '"tint"': შეფერადება
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: ყველა
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': შემდეგი
+            '"prev"': წინა
+            '"rand"': შემთხვევითი
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': შემდეგი
             '"prev"': წინა
             '"rand"': შემთხვევითი
@@ -79,7 +260,6 @@ ka:
         options:
           GROUP:
             sprites: ყველა
-            '"alien"': უცხო
           FORMAT:
             '"grid"': ბადე
             '"row"': მწკრივი
@@ -88,10 +268,6 @@ ka:
         text: ცენტრი
       Dancelab_locationPointer:
         text: კურსორის პოზიცია
-      Dancelab_makeNewDanceSprite:
-        options:
-          COSTUME:
-            '"alien"': უცხო
       Dancelab_makeNewDanceSpriteSync:
         options:
           COSTUME:
@@ -138,6 +314,7 @@ ka:
             '"disco"': დისკო
             '"rainbow"': ცისარტყელა
             '"diamonds"': ბრილიანტები
+            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": შემთხვევითი
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -150,9 +327,7 @@ ka:
         options:
           EFFECT:
             '"none"': არცერთი
-            '"disco"': დისკო
-            '"rainbow"': ცისარტყელა
-            '"diamonds"': ბრილიანტები
+            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": შემთხვევითი
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -237,252 +412,6 @@ ka:
       Dancelab_whenSetup:
         text: დაყენება
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ზემოთ
-            '"down"': ქვემოთ
-            '"left"': მარცხნივ
-            '"right"': მარჯვნივ
-            '"space"': კოსმოსი
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': წამები
-      DancelabAlpha_changeColorBy:
-        options:
-          METHOD:
-            '"hue"': ელფერი
-            '"saturation"': გაჯერება
-            '"brightness"': სიმკვეთრე
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': შემდეგი
-            '"prev"': წინა
-            '"rand"': შემთხვევითი
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: ყველა
-            '"alien"': უცხო
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': შემდეგი
-            '"prev"': წინა
-            '"rand"': შემთხვევითი
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': შემდეგი
-            '"prev"': წინა
-            '"rand"': შემთხვევითი
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': წამები
-      DancelabAlpha_getEnergy:
-        options:
-          RANGE:
-            '"low"': დაბალი
-            '"mid"': საშუალო
-            '"high"': მაღალი
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
-      DancelabAlpha_helloWorld:
-        text: ჰეი, სამყარო
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: ყველა
-            '"alien"': უცხო
-          FORMAT:
-            '"grid"': ბადე
-            '"row"': მწკრივი
-            '"column"': სვეტი
-      DancelabAlpha_locationCenter:
-        text: ცენტრი
-      DancelabAlpha_locationPointer:
-        text: კურსორის პოზიცია
-      DancelabAlpha_makeNewDanceSprite:
-        options:
-          COSTUME:
-            '"alien"': უცხო
-      DancelabAlpha_makeNewDanceSpriteSync:
-        options:
-          COSTUME:
-            '"alien"': უცხო
-      DancelabAlpha_makeNewGroupSprite:
-        options:
-          COSTUME:
-            '"circle"': წრე
-          GROUP:
-            backup_dancers: მარქაფი
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
-          RANGE:
-            '"bass"': ბანი
-            '"mid"': საშუალო
-            '"treble"': მაღალი
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': მარჯვნივ
-            '"left"': მარცხნივ
-      DancelabAlpha_pointInDirection:
-        options:
-          DIRECTION:
-            '"North"': ჩრდილოეთი
-            '"East"': აღმოსავლეთი
-            '"South"': სამრხეთი
-            '"West"': აღმოსავლეთი
-      DancelabAlpha_randomColor:
-        text: შემთხვევითი ფერი
-      DancelabAlpha_randomLocation:
-        text: შემთხვევითი მდებარეობა
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': არცერთი
-            '"disco"': დისკო
-            '"rainbow"': ცისარტყელა
-            '"diamonds"': ბრილიანტები
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': ჩვეულებრივი
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': არცერთი
-            '"disco"': დისკო
-            '"rainbow"': ცისარტყელა
-            '"diamonds"': ბრილიანტები
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"tint"': შეფერადება
-            '"dance_speed"': ცეკვის სიჩქარე
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: ყველა
-      DancelabAlpha_setup:
-        text: დაყენება
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"costume"': კოსტუმი
-            '"direction"': მოძრაობის მიმართულება
-            '"rotation"': მოტრიალება ან მიმართულება
-            '"tint"': შეფერადება
-          OP:
-            '"="': "="
-            '">"': ">"
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
-          RANGE:
-            '"bass"': ბანი
-            '"mid"': საშუალო
-            '"treble"': მაღალი
-      DancelabAlpha_startOscillator:
-        text: ოსცილატორის გაშვება
-      DancelabAlpha_startSong:
-        text: სიმღერის დაწყება
-      DancelabAlpha_startVisualizer:
-        text: ვიზუალიზაციის ჩვენება
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"rotation"': შებრუნება
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
-            '"dance_speed"': ცეკვის სიჩქარე
-          RANGE:
-            '"bass"': ბანი
-            '"mid"': საშუალო
-            '"treble"': მაღალი
-      DancelabAlpha_stopOscillator:
-        text: ოსცილატორის გაჩერება
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': ზემოთ
-            '"down"': ქვემოთ
-            '"left"': მარცხნივ
-            '"right"': მარჯვნივ
-            '"space"': კოსმოსი
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      DancelabAlpha_whenPeak:
-        options:
-          RANGE:
-            '0': ბანი
-            '1': საშუალო
-            '2': მაღალი
-      DancelabAlpha_whenSetup:
-        text: დაყენება
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': ზემოთ
@@ -748,5 +677,16 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": წინ
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": ქვიშა
+            "'planksOak'": მუხის ფიცრები
       craft_moveForward:
         text: წინ გადაადგილება
+      craft_placeTorch:
+        text: ჩირაღდნის დაყენება
