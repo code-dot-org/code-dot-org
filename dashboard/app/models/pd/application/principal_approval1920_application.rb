@@ -138,49 +138,49 @@ module Pd::Application
       }
     end
 
+    def self.required_fields
+      %i(
+        first_name
+        last_name
+        email
+        do_you_approve
+        confirm_principal
+      )
+    end
+
     def dynamic_required_fields(hash)
       [].tap do |required|
-        unless hash.empty?
+        unless hash[:do_you_approve] == NO
           required.concat [
-            :first_name,
-            :last_name,
-            :email,
-            :do_you_approve,
-            :confirm_principal
+            :total_student_enrollment,
+            :free_lunch_percent,
+            :white,
+            :black,
+            :hispanic,
+            :asian,
+            :pacific_islander,
+            :american_indian,
+            :other,
+            :going_to_teach,
+            :committed_to_master_schedule,
+            :replace_course,
+            :committed_to_diversity,
+            :understand_fee,
+            :pay_fee,
+            :how_heard
           ]
 
-          unless hash[:do_you_approve] == NO
-            required.concat [
-              :total_student_enrollment,
-              :free_lunch_percent,
-              :white,
-              :black,
-              :hispanic,
-              :asian,
-              :pacific_islander,
-              :american_indian,
-              :other,
-              :going_to_teach,
-              :committed_to_master_schedule,
-              :replace_course,
-              :committed_to_diversity,
-              :understand_fee,
-              :pay_fee,
-              :how_heard
-            ]
+          if course == 'csd'
+            required << :csd_implementation
+          elsif course == 'csp'
+            required << :csp_implementation
+          end
 
+          if hash[:replace_course] == YES
             if course == 'csd'
-              required << :csd_implementation
+              required << :replace_which_course_csd
             elsif course == 'csp'
-              required << :csp_implementation
-            end
-
-            if hash[:replace_course] == YES
-              if course == 'csd'
-                required << :replace_which_course_csd
-              elsif course == 'csp'
-                required << :replace_which_course_csp
-              end
+              required << :replace_which_course_csp
             end
           end
         end

@@ -17,12 +17,22 @@ const REQUIRED_SCHOOL_INFO_FIELDS = ['goingToTeach', 'school', 'totalStudentEnro
   'understandFee', 'payFee', 'howHeard'
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
+const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
 const YEAR = "2019-20";
 
 export default class PrincipalApproval1920Component extends LabeledFormComponent {
   static labels = PageLabels;
 
-  static associatedFields = Object.keys(PageLabels);
+  static associatedFields = [
+    ...Object.keys(PageLabels),
+    ...REPLACE_COURSE_FIELDS,
+    ...IMPLEMENTATION_FIELDS,
+    'doYouApprove',
+    'goingToTeach',
+    'committedToMasterSchedule',
+    'committedToDiversity',
+    'howHeard'
+  ];
 
   handleSchoolChange = selectedSchool => {
     this.handleChange({school: selectedSchool && selectedSchool.value});
@@ -332,7 +342,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
 
     // Clear out all the form data if the principal rejects the application
     if (data.doYouApprove === 'No') {
-      fieldsToClear.add([...REQUIRED_SCHOOL_INFO_FIELDS, REPLACE_COURSE_FIELDS]);
+      fieldsToClear.add([...REQUIRED_SCHOOL_INFO_FIELDS, REPLACE_COURSE_FIELDS, IMPLEMENTATION_FIELDS]);
     }
 
     // Clear out school form data if we have a school
