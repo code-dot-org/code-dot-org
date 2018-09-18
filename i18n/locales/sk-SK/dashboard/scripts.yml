@@ -2,11 +2,21 @@ sk:
   data:
     script:
       category:
+        csd_category_name: Objavujeme Informatiku ('17-'18)
+        csd_2018_category_name: Objavujeme Informatiku ('18-'19)
+        csf_category_name: Základy Informatiky
+        csf_2018_category_name: Základy Informatiky (2018)
+        csf_international_category_name: Základy Informatiky (medzinárodná verzia)
+        csp_category_name: "Princípy Informatiky ('15-'16)"
+        csp_2018_category_name: Princípy Informatiky ('18-'19)
+        cspexams_category_name: Princípy Informatiky - Cvičný test
+        csp17_category_name: Princípy Informatiky ('17-'18)
         hoc_category_name: Hodina kódovania
         math_category_name: Matematické
       name:
         course1:
           title: Kurz 1
+          description: Na úvod začni s kurzom 1. Študent tu vytvára počítačové programy, ktoré pomáhajú učiť sa spolupracovať s ostatnými, rozvíjať schopnosť riešiť problémy a vytrvať pri ťažkých úlohách. Na konci tohoto kurzu je študent schopný tvoriť vlastné hry alebo príbehy, ktoré môže zdielať. Odporúčné pre triedy k-1.
           description_short: Začnite Kurzom 1 pre čitateľa začiatočníka.
           description_audience: Vek 4-6
           stages:
@@ -48,6 +58,8 @@ sk:
               name: Veľká udalosť
         course2:
           title: Kurz 2
+          description: Začni kurz 2, je pre študentov, ktorí nemajú predchádzajúce skúseností s programovaním. V tomto kurze študent vytvorí program na riešenie problémov, a vývinie interaktívne hry alebo príbehy, ktoré vie zdieľať. Doporučené pre triedy 2 až 5. ročníka.
+          description_short: Úvod do vedy o počítačoch pre študentov.
           description_audience: Vek 6 + (vyžaduje čítanie)
           stages:
             'Artist: Debugging':
@@ -90,6 +102,7 @@ sk:
               name: Tvoj digitálny otlačok
         course3:
           title: Kurz 3
+          description: Kurz 3 je určený pre študentov, ktorí pred tým absolvovali kurz 2. Študenti hlbšie preniknú do témy programovania predstavenej v predchádzajúcich kurzoch, s cieľom vytvoriť flexibilné riešenie komplexnejších problémov. Absolvovaním tohoto kurzu je študent schopný vytvoriť interaktívne príbehy a hry, ktoré môže zdieľať s kýmkoľvek. Kurz je odporúčaný pre žiakov 4. a 5. ročníka. 
           description_short: Kurz 3 nadväzuje na kurz 2.
           description_audience: Vek 8-18
           stages:
@@ -131,35 +144,56 @@ sk:
               name: 'Bludisko: podmienky'
             Songwriting:
               name: Písanie pesničiek s parametrami
+            'Studio: Create a Game':
+              name: 'Herné laboratórium - Vytvor hru'
             'Studio: Create a Story':
               name: 'Hravé laboratórium: Vytvor príbeh'
+        playlab:
+          title: Herné laboratórium
+          description: Vytvor príbeh alebo hru s Herným Laboratóriom!
+          description_short: Vytvor príbeh alebo hru s Herným Laboratóriom!
+          stages:
+            Play Lab:
+              name: Herné laboratórium
         artist:
           title: Umelec
+          description: Nakresli skvelé obrázky a vzory v časti nazvanej "Umelec"!
+          description_short: Nakresli skvelé obrázky a vzory v časti nazvanej "Umelec"!
           stages:
             Artist:
               name: Umelec
         hourofcode:
           title: Klasické bludisko
+          description: Vyskúšaj si základy informatiky s postavičkami ako sú Angry Birds, Plants vs Zombies a Scrat z doby ľadovej!
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Maze:
               name: Bludisko
         frozen:
           title: Programuj s Annou a Elsou
-          description: Použime kódovanie pre pridanie sa sa k Anne a Else k ich skúmaniu krás a čarov ľadu. Vytvoríte snehové vločky a vzory počas korčuľovania a spravte zimnú krajinu zázrakov, ktorú môžete následne zdieľať s Vašimi kamarítmi!
+          description: Pridajme sa pomocou kódovania k Anne a Else a preskúmajme spolu krásu a čaro ľadu. Korčuľovaním v ľade vykreslíš snehové vločky a krásne vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať s priateľmi!
           description_short: S pomocou kódu sa pridajme k Anne a Elze, ktoré skúmajú kúzlo a krásu ľadu.
           stages:
             Artist:
               name: Umelec
         course4:
           title: Kurz 4
+          description: Kurz 4 je určený pre študentov, ktorí majú za sebou kurz 2 a 3. Prechádzaním jednotlivých úrovní, sa študent  učí riešiť úlohy so zvýšenou zložitosťou. Dokončením tohoto kurzu vie študent vytvárať programy, ktoré mu umožnia demonštrovať viac zručnosti, vrátane slučky a funkcie s parametrami. Doporučené pre ročník 4 až 8. -8.
+          description_short: Pokračovaním kurzu 3 je budovanie zložitejších programov s pojmami ako slučky a funkcie s parametrami. 
           description_audience: 9-18 rokov
           stages:
             Artist:
               name: Umelec
+            'Artist: For Loops':
+              name: 'časť Umelec: slučky'
             'Artist: Functions':
               name: 'Umelec: funkcie'
+            'Artist: Functions with Parameters':
+              name: 'časť Umelec: Funkcie s parametrami'
             'Artist: Variables':
               name: 'Umelec: premenné'
+            'Bee: For Loops':
+              name: 'časť Včela: slučky'
             Maze and Bee:
               name: Bludisko a včela
         Course4pre:
@@ -202,6 +236,10 @@ sk:
           stages:
             The Design Recipe:
               name: Vytvor recept
+        K5PD:
+          stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
         netsim:
           title: Simulátor Internetu
         20-hour:
@@ -252,6 +290,8 @@ sk:
           description: Upraviť kód
           description_short: Upraviť kód
           stages:
+            Play Lab:
+              name: Herné laboratórium
             The Artist:
               name: Postava
             The Maze:
@@ -281,9 +321,14 @@ sk:
               name: Krok
         Hour of Code:
           title: Hodina Kódu 2013
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
+        algebraPD:
+          stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
         cspunit3:
           stages:
             Creating Functions:
@@ -292,8 +337,18 @@ sk:
               name: Podmieňovacie slučky While
         algebraPD3:
           stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
             The Design Recipe:
               name: Vytvor recept
+        algebraPD-NexTech:
+          stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
+        algebraPD-iZone:
+          stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
         sciencePD2:
           stages:
             Wrap-Up:
@@ -322,6 +377,10 @@ sk:
               name: Minecraft
             Web Lab:
               name: Webové laboratórium
+        algebraPD2b:
+          stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
         cspfacilitator:
           stages:
             App Lab:
@@ -340,6 +399,8 @@ sk:
               name: Zhrnutie
         algebraPD2:
           stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
             The Design Recipe:
               name: Vytvor recept
         sciencePD2b:
@@ -402,6 +463,10 @@ sk:
           stages:
             While Loops:
               name: Podmieňovacie slučky While
+        starwars:
+          title: 'Star Wars: Budovanie galaxie pomocou Kódu'
+        starwarsblocks:
+          title: 'Star Wars: Budovanie galaxie pomocou Kódu'
         mc:
           title: Minecraft Hodina kódu
           description: Použi bloky kódov aby si vzal Steva alebo Alex na dobrodúžstvo skrz tento Minecraft svet
@@ -410,6 +475,10 @@ sk:
           stages:
             Wrap-Up:
               name: Zhrnutie
+        algebraPD1:
+          stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
         csp1-2017:
           stages:
             The Internet:
@@ -444,6 +513,10 @@ sk:
               name: Rýchlosť
         CSF_Secret_Sample:
           description_audience: Vek 8-18
+        algebraFacilitator:
+          stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
         allthehiddenthings:
           stages:
             Game Lab:
@@ -490,8 +563,14 @@ sk:
               name: Nenájdené chyby
         grade5:
           stages:
+            'Artist: For Loops':
+              name: 'časť Umelec: slučky'
+            'Artist: Functions with Parameters':
+              name: 'časť Umelec: Funkcie s parametrami'
             'Artist: Variables':
               name: 'Umelec: premenné'
+            'Bee: For Loops':
+              name: 'časť Včela: slučky'
             Digital Citizenship:
               name: Digitálne Občianstvo
         ecs-unit1:
@@ -558,9 +637,14 @@ sk:
               name: Podmieňovacie slučky While
         algebrapdnext:
           stages:
+            Teacher Dashboard:
+              name: Nástenka učiteľa
             The Design Recipe:
               name: Vytvor recept
         basketball:
+          title: Vyber si tím a priprav basketbalový zápas
+          description_short: Vyber si tím a priprav basketbalový zápas
+          description: Vyber si tím a priprav basketbalový zápas
           stages:
             Bounce:
               name: Odraziť
@@ -645,10 +729,12 @@ sk:
             Introduction:
               name: Úvod
         classic-hoc-impact-study:
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
         hoc-impact-study:
+          description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           stages:
             Hour of Code 2013:
               name: Hodina Kódu 2013
@@ -766,12 +852,14 @@ sk:
               name: 'Algoritmus z reálneho života: Zasaď semienko'
           title: Kurz A
           assignment_family_title: Kurz A
+          description_short: Predstavenie informatiky pre predškolákov.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmus z reálneho života: Zasaď semienko'
           title: Kurz B
           assignment_family_title: Kurz B
+          description_short: Predstavenie informatiky pre prvákov. (podobný ako Kurz A, ale s rôznorodejšími úlohami pre staršich študentov.)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -832,6 +920,8 @@ sk:
               name: Stavanie základov
             Nested Loops:
               name: Vnorené slučky
+          title: Zrýchlený kurz
+          assignment_family_title: Zrýchlený kurz
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -991,6 +1081,7 @@ sk:
               name: Zoznamy
         coursea-2018:
           assignment_family_title: Kurz A
+          description_short: Predstavenie informatiky pre predškolákov.
           stages:
             'Debugging: Unspotted Bugs':
               name: Nenájdené chyby
@@ -1003,6 +1094,7 @@ sk:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Števko a Veľký projekt
         express-2018:
+          assignment_family_title: Zrýchlený kurz
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programovanie na milimetrovom papieri
@@ -1019,7 +1111,7 @@ sk:
             'Loops: Getting Loopy':
               name: Neustále opakovanie
             Nested Loops in Frozen:
-              name: Vnorené slučky vo Frozen
+              name: Vnorené slučky s Annou a Elsou
             Conditionals with Cards:
               name: Podmienky s kartami
             'Functions: Songwriting':
@@ -1159,3 +1251,18 @@ sk:
               name: Je super tvoriť a hrať férovo
             'Persistence & Frustration: Stevie and the Big Project':
               name: Števko a Veľký projekt
+        frozen-2018:
+          stages:
+            Artist:
+              name: Umelec
+          title: Nový Frozen Skript
+        frozen-2018-test:
+          title: Nový Frozen Skript
+          stages:
+            Artist:
+              name: Umelec
+        frozen-2018-test-b:
+          title: Nový Frozen Skript
+          stages:
+            Artist:
+              name: Umelec

@@ -1,27 +1,919 @@
 ---
 gl:
   data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Non
+        'Yes': Si
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: Bucles mentres
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: Título
+      Algo Shortest Path Student Lesson Introduction:
+        title: Título
+      Basic mechanics of variables:
+        title: Título
+      Basic mechanics of variables_2018:
+        title: Título
+      Begin planning your project:
+        title: Título
+      'Big Picture: If-statements':
+        title: Título
+      'Big Picture: If-statements_2018':
+        title: Título
+      Boolean Expressions and Comparison Operators:
+        title: Título
+      Boolean Expressions and Comparison Operators_2018:
+        title: Título
+      CSD U1 Input Output C2:
+        title: Título
+      CSD U1 Input Output C3:
+        title: Título
+      CSD U1 Input Output C4:
+        title: Título
+      CSD U1 Input Output Intro:
+        title: Título
+      CSD U2 Design Project:
+        title: Título
+      CSD U2 Design Project_2018:
+        title: Título
+      CSD U2 L1 Overview:
+        title: Título
+      CSD U2 L1 Overview_2018:
+        title: Título
+      CSD U2 L2 Overview:
+        title: Título
+      CSD U2 L2 Overview_2018:
+        title: Título
+      CSD U2 L3 Overview:
+        title: Título
+      CSD U2 L3 Overview_2018:
+        title: Título
+      CSD U2 L4 Overview:
+        title: Título
+      CSD U2 L4 Overview_2018:
+        title: Título
+      CSD U2 L5 Overview:
+        title: Título
+      CSD U2 L5 Overview_2018:
+        title: Título
+      CSD U2 L6 Overview:
+        title: Título
+      CSD U2 L6 Overview_2018:
+        title: Título
+      CSD U2 Social Sleuth:
+        title: Título
+      CSD U2 expand project:
+        title: Título
+      CSD U2 expand project_2018:
+        title: Título
+      CSD U2 layout style review:
+        title: Título
+      CSD U2 more CSS:
+        title: Título
+      CSD U3 L2 Challenges:
+        title: Título
+      CSD U3 SFLP Sprites and Images:
+        title: Título
+      CSD U3 abstraction intro:
+        title: Título
+      CSD U3 combining rep:
+        title: Título
+      CSD U3 combining rep_2018:
+        title: Título
+      CSD U5 Encryption 1:
+        title: Título
+      CSD U5 Encryption 1_2018:
+        title: Título
+      CSD U5 L13 SFLP Interpreting Data:
+        title: Título
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: Título
+      CSD U5 Representing Information:
+        title: Título
+      CSD U5 collection UPS2:
+        title: Título
+      CSD U5 collection ads2:
+        title: Título
+      CSD U5 data visualization:
+        title: Título
+      CSD U5 data visualization sheet:
+        title: Título
+      CSD U5 data visualization_2018:
+        title: Título
+      CSD U5 student record:
+        title: Título
+      CSD U5 student record_2018:
+        title: Título
+      CSD U5 video2:
+        title: Título
+      CSD-U3-SFLP Drawing:
+        title: Título
+      CSDU2L01 SFLP:
+        title: Título
+      CSP Journal Entry Placeholder2:
+        title: Título
+      CSPPD3-u2 Welcome:
+        Welcome!: Benvido!
+      CSPStudentLessonPlanTemplate:
+        title: Título
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: Título
+      CSPU5_ChoosingGoodIds:
+        title: Título
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: Título
+      CSPU5_FirstTimeDesignMode:
+        title: Título
+      CSPU5_FirstTimeDesignMode_2018:
+        title: Título
+      CSPU5_HowImagesWork:
+        title: Título
+      CSPU5_HowOnEventWorks_v2:
+        title: Título
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: Título
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: Título
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: Título
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: Título
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: Título
+      CSPU5_goodbyeTurtle_setPosition:
+        title: Título
+      CSPU5_introToDebugging:
+        title: Título
+      CSPU5_makingPredictions_ref:
+        title: Título
+      CSPU5_onEventBreakdown:
+        title: Título
+      CSP_Final_instructions:
+        title: Título
+      CSP_U4_rawMovieData:
+        title: Título
+      Color Sleuth - Epilogue:
+        title: Título
+      Color Sleuth - Epilogue_2018:
+        title: Título
+      Color Sleuth - How does it end?:
+        title: Título
+      Color Sleuth - How does it end?_2018:
+        title: Título
+      Color Sleuth - How to switch player turns:
+        title: Título
+      Color Sleuth - How to switch player turns_2018:
+        title: Título
+      Color Sleuth - Keeping score:
+        title: Título
+      Color Sleuth - Keeping score_2018:
+        title: Título
+      Color Sleuth - Planning the App:
+        title: Título
+      Color Sleuth - Planning the App_2018:
+        title: Título
+      Controlling Memory - Other ways to assign values:
+        title: Título
+      Controlling Memory - Other ways to assign values_2018:
+        title: Título
+      Cups and Beans Activity:
+        title: Título
+      Cups and Beans Activity_2018:
+        title: Título
+      Debugging with Console.log:
+        title: Título
+      Debugging with Console.log_2018:
+        title: Título
+      Digital Footprint Chirpr lillizard:
+        title: Título
+      Digital Footprint FaceSpace Haley:
+        title: Título
+      Digital Footprint FaceSpace Lizzie:
+        title: Título
+      Digital Footprint instantframe wiz_kid_liz:
+        title: Título
+      DigitalCitizenship2:
+        Digital Citizenship: Cidadanía dixital
+      ECSPD Challenge Rubric:
+        title: Título
+      ECSPD Online U1D11-14:
+        title: Título
+      ECSPD Online U1D15-16 Forum:
+        title: Título
+      ECSPD Online intro:
+        Introduction: Introdución
+      ECSPD U2 Challenge Plan:
+        title: Título
+      ECSPD Unit 2 Stage11:
+        title: Título
+      ECSPD Unit 2 Stage13:
+        title: Título
+      ECSPD Unit 2 Stage6:
+        title: Título
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: Título
+      Event Driven Programming Recap:
+        title: Título
+      Event Driven Programming Recap_2018:
+        title: Título
+      Event-Driven Programming Patterns:
+        title: Título
+      Event-Driven Programming Patterns_2018:
+        title: Título
+      External MD column Test:
+        title: Título
+      External MD column Test bootstrap:
+        title: Título
+      GoodBadVisualizations_v1:
+        title: Título
+      GoodBadVisualizations_v2:
+        title: Título
+      How "if-else-if" Works:
+        title: Título
+      How "if-else-if" Works_2018:
+        title: Título
+      How Compound Boolean Expressions Work:
+        title: Título
+      How Compound Boolean Expressions Work_2018:
+        title: Título
+      How Dropdown Menus Work:
+        title: Título
+      How Dropdown Menus Work_2018:
+        title: Título
+      How If Statements Work pt 1:
+        title: Título
+      How If Statements Work pt 1_2018:
+        title: Título
+      How If-Else Statements Work:
+        title: Título
+      How If-Else Statements Work_2018:
+        title: Título
+      How Images Work:
+        title: Título
+      How Images Work_2018:
+        title: Título
+      How Secure Is Your Password?:
+        title: Título
+      How Secure Is Your Password?_2018:
+        title: Título
+      How Set Property Works:
+        title: Título
+      How Set Property Works_2018:
+        title: Título
+      How onEvent Works:
+        title: Título
+      How onEvent Works_2018:
+        title: Título
+      How setPosition and screen dimensions work:
+        title: Título
+      How setPosition and screen dimensions work_2018:
+        title: Título
+      How the Boolean &&, || and ! Operators Work:
+        title: Título
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: Título
+      How to make a random color:
+        title: Título
+      How to make a random color_2018:
+        title: Título
+      How to pick a random button:
+        title: Título
+      How to pick a random button_2018:
+        title: Título
+      Internet Simulator Setup 2:
+        title: Título
+      Intro to Debugging and Common Problems:
+        title: Título
+      Intro to Debugging and Common Problems_2018:
+        title: Título
+      Making Multiple Screens:
+        title: Título
+      Making Multiple Screens_2018:
+        title: Título
+      Making a Multi Screen Chaser Game v.2:
+        title: Título
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: Título
+      Multi-Screen Apps:
+        title: Título
+      New Challenge Introduction:
+        title: Título
+      New Challenge Introduction_2018:
+        title: Título
+      OPD-K5 Stage3aGo:
+        title: Título
+      PDAlg Facilitator Test:
+        title: Título
+      PDK5 CS Video:
+        Computer Science: Informática
+      PDK5 Glossary C:
+        Vocabulary: Vocabulario
+      PDK5 Pair Programming 1:
+        Pair Programming: Programación por parellas
+      PS - Responding to User Input:
+        title: Título
+      PS - draft - Longitudinal study description:
+        title: Título
+      Prepare for your presentation:
+        title: Título
+      Public Key Crypto Widget Instructions:
+        title: Título
+      Public Key Crypto Widget Instructions_2018:
+        title: Título
+      Rules About Choosing Good IDs:
+        title: Título
+      Rules About Choosing Good IDs_2018:
+        title: Título
+      SG U3 whats a comment:
+        title: Título
+      SG v2 U3L01 Student Lesson Introduction:
+        title: Título
+      SG v2 U3L02 Student Lesson Introduction:
+        title: Título
+      SG v2 U3L03 Student Lesson Introduction:
+        title: Título
+      SG v2 U3L05 Student Lesson Introduction:
+        title: Título
+      SG v2 U3L07 Student Lesson Introduction:
+        title: Título
+      SG v2 U3L08 Student Lesson Introduction:
+        title: Título
+      Sending Bits Real World Student Lesson Introduction:
+        title: Título
+      Simple Decisions with if-statements:
+        title: Título
+      Simple Decisions with if-statements_2018:
+        title: Título
+      Tips For Working on Your Own:
+        title: Título
+      Tips For Working on Your Own_2018:
+        title: Título
+      U1L10 Student Lesson Introduction:
+        title: Título
+      U1L11 Student Lesson Introduction:
+        title: Título
+      U1L12 Student Lesson Introduction:
+        title: Título
+      U1L13 Student Lesson Summary:
+        title: Título
+      U1L14 Student Lesson Summary:
+        title: Título
+      U1L15 Student Lesson Summary:
+        title: Título
+      U1L17 Student Lesson Introduction:
+        title: Título
+      U1L2 Student Lesson Introduction:
+        title: Título
+      U1L3 Student Lesson Introduction:
+        title: Título
+      U1L4 Student Lesson Introduction:
+        title: Título
+      U1L5 Student Lesson Introduction:
+        title: Título
+      U1L6 Student Lesson Introduction:
+        title: Título
+      U1L7 Student Lesson Introduction:
+        title: Título
+      U1L8 Student Lesson Introduction:
+        title: Título
+      U1L9 Student Lesson Introduction:
+        title: Título
+      U2L1 Student Lesson Introduction:
+        title: Título
+      U2L12 Student Lesson Introduction:
+        title: Título
+      U2L7 Student Lesson Introduction:
+        title: Título
+      U2L8 Student Lesson Introduction:
+        title: Título
+      U3 whats a comment:
+        title: Título
+      U3 whats a comment_2018:
+        title: Título
+      U3L12 - Mission Unsortable:
+        title: Título
+      U3L13 - Explanation of Ids:
+        title: Título
+      U3L13 - Make a Prediction Explanation:
+        title: Título
+      U3L13 Add Button Instrucitons:
+        title: Título
+      U3L13 Add Button Instructions:
+        title: Título
+      U3L14 - Message - Other ways to assign values:
+        title: Título
+      U3L14 - Message - basic mechanics of variables:
+        title: Título
+      U3L14 - Student Intro Page:
+        title: Título
+      U3L15 - explanation of IF and =v==:
+        title: Título
+      U3L15 Student Lesson Intro - new:
+        title: Título
+      U3L19 - done with variables finally:
+        title: Título
+      U3L20 - combining And and Or explanation:
+        title: Título
+      U4 - Cleaning Data - Activity Guide:
+        title: Título
+      U4 - Making Data Visualizations - Bar Chart:
+        title: Título
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: Título
+      U4 - Making Data Visualizations - Free Play:
+        title: Título
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: Título
+      U4 - Making Data Visualizations - Getting Started:
+        title: Título
+      U4 - Making Data Visualizations - Line Chart:
+        title: Título
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: Título
+      U4 - Making Data Visualizations - Student Introduction:
+        title: Título
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: Título
+      U4 - Unique Ids Explanation:
+        title: Título
+      U4 - Unique Ids Explanation_2018:
+        title: Título
+      U4 Cleaning Data Activity Guide Pt2:
+        title: Título
+      U4 Cleaning Data Activity Guide Pt3:
+        title: Título
+      U4L01 Student Lesson Introduction:
+        title: Título
+      U4L02 Student Lesson Introduction:
+        title: Título
+      U4L02 Student Lesson Introduction_2018:
+        title: Título
+      U4L02v2 - Finding Trends:
+        title: Título
+      U4L03 Student Lesson Introduction:
+        title: Título
+      U4L03 Student Lesson Introduction_2018:
+        title: Título
+      U4L03v2 - Student Introduction:
+        title: Título
+      U4L04 Student Lesson Introduction:
+        title: Título
+      U4L04 Student Lesson Introduction_2018:
+        title: Título
+      U4L04v2 - Student Introduction:
+        title: Título
+      U4L05 Student Lesson Introduction:
+        title: Título
+      U4L06 Student Lesson Introduction:
+        title: Título
+      U4L06v2 Student Lesson Introduction:
+        title: Título
+      U4L07 Student Introduction public key crypto:
+        title: Título
+      U4L07 Student Lesson Introduction:
+        title: Título
+      U4L08 - mod clock instructions:
+        title: Título
+      U4L08 Student Lesson Introduction:
+        title: Título
+      U4L08v2 Making Pivot Tables:
+        title: Título
+      U4L08v2 Making Pivot Tables Part 2:
+        title: Título
+      U4L08v2 Making Pivot Tables Part 3:
+        title: Título
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: Título
+      U4L08v2 Student Intro:
+        title: Título
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: Título
+      U4L09 Student Lesson Introduction:
+        title: Título
+      U4L10 Student Lesson Introduction:
+        title: Título
+      U4L11 Student Lesson Introduction:
+        title: Título
+      U4L12 - Student Introduction:
+        title: Título
+      U4L12 Student Lesson Introduction:
+        title: Título
+      U4L13 Student Lesson Introduction:
+        title: Título
+      U4L14 Student Lesson Introduction:
+        title: Título
+      U4L15 Student Lesson Introduction:
+        title: Título
+      U4L16 Student Lesson Introduction:
+        title: Título
+      U4L17 Student Lesson Introduction:
+        title: Título
+      U4L18 Student Lesson Introduction:
+        title: Título
+      U4L19 Student Lesson Introduction:
+        title: Título
+      U4L20 Student Lesson Introduction:
+        title: Título
+      U4L21 Student Lesson Introduction:
+        title: Título
+      U4L22 Student Lesson Introduction:
+        title: Título
+      U4L23 Student Lesson Introduction:
+        title: Título
+      U4L24 Student Lesson Introduction:
+        title: Título
+      U4L5 random subst challenge page:
+        title: Título
+      U5 - Create PT - Student Introduction:
+        title: Título
+      U5 - Create PT Prep - Student Introduction:
+        title: Título
+      U5 - Create PT review - Student Introduction:
+        title: Título
+      U5 - Explore PT - Student Introduction:
+        title: Título
+      U5 - Explore PT Prep - Student Introduction:
+        title: Título
+      U5 - Explore PT Review - Student Introduction:
+        title: Título
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: Título
+      U5 color sleuth check correct:
+        title: Título
+      U5 color sleuth check correct_2018:
+        title: Título
+      U5L08 - Student Intro If statements:
+        title: Título
+      U6 - Charts - Student Introduction:
+        title: Título
+      U6 - Charts - Student Introduction_2018:
+        title: Título
+      U6 - Final Project - Student Introduction:
+        title: Título
+      U6 - Final Project - Student Introduction_2018:
+        title: Título
+      U6 - ImportExport - Student Introduction:
+        title: Título
+      U6 - ImportExport - Student Introduction_2018:
+        title: Título
+      U6 - Sample Apps - Student Introduction:
+        title: Título
+      U6 - Sample Apps - Student Introduction_2018:
+        title: Título
+      U6 - deleteRecord - Student Introduction:
+        title: Título
+      U6 - deleteRecord - Student Introduction_2018:
+        title: Título
+      U6 - updateRecord - Student Introduction:
+        title: Título
+      U6 - updateRecord - Student Introduction_2018:
+        title: Título
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: Título
+      U6 Create PT - Complete the Task - Student Links:
+        title: Título
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: Título
+      U6 Create PT Review - Student Links:
+        title: Título
+      U6 Create PT Review - Student Links_2018:
+        title: Título
+      U6 Explore PT - Complete the Task - Student Links:
+        title: Título
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: Título
+      U6 Explore PT - Make a Plan - Student Links:
+        title: Título
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: Título
+      U6 Explore PT Review - Student Links:
+        title: Título
+      U6 Explore PT Review - Student Links_2018:
+        title: Título
+      Unit 2 Lesson 1 Overview Clone:
+        title: Título
+      Unit 4 Lesson 1 Introduction:
+        title: Título
+      Unit 4 Lesson 1 Introduction_2018:
+        title: Título
+      Unit 4 Lesson 2 Introduction:
+        title: Título
+      Unit 4 Lesson 2 Introduction_2018:
+        title: Título
+      Unit 4 Lesson 5 Introduction:
+        title: Título
+      Unit 4 Lesson 5 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 1:
+        title: Título
+      Unit 5 Lesson 1 Introduction:
+        title: Título
+      Unit 5 Lesson 1 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 10 Introduction:
+        title: Título
+      Unit 5 Lesson 10 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 2 Introduction:
+        title: Título
+      Unit 5 Lesson 2 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 3 Introduction:
+        title: Título
+      Unit 5 Lesson 3 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 4 Introduction:
+        title: Título
+      Unit 5 Lesson 4 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 5:
+        title: Título
+      Unit 5 Lesson 5 Introduction:
+        title: Título
+      Unit 5 Lesson 5 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 6:
+        title: Título
+      Unit 5 Lesson 6 Introduction:
+        title: Título
+      Unit 5 Lesson 6 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 7 Introduction:
+        title: Título
+      Unit 5 Lesson 7 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 8 Introduction:
+        title: Título
+      Unit 5 Lesson 8 Introduction_2018:
+        title: Título
+      Unit 5 Lesson 9 Introduction:
+        title: Título
+      Unit 5 Lesson 9 Introduction_2018:
+        title: Título
+      'Worked Example: If-statements and Robot':
+        title: Título
+      'Worked Example: If-statements and Robot_2018':
+        title: Título
+      courseB_external_MRF:
+        title: Título
+      courseB_external_loopMRF:
+        title: Título
+      courseB_story_unspottedBugs10:
+        title: Título
+      courseB_story_unspottedBugs11:
+        title: Título
+      courseB_story_unspottedBugs12:
+        title: Título
+      courseB_story_unspottedBugs13:
+        title: Título
+      courseB_story_unspottedBugs14:
+        title: Título
+      courseB_story_unspottedBugs15:
+        title: Título
+      courseB_story_unspottedBugs16:
+        title: Título
+      courseB_story_unspottedBugs17:
+        title: Título
+      courseB_story_unspottedBugs18:
+        title: Título
+      courseB_story_unspottedBugs2:
+        title: Título
+      courseB_story_unspottedBugs3:
+        title: Título
+      courseB_story_unspottedBugs4:
+        title: Título
+      courseB_story_unspottedBugs5:
+        title: Título
+      courseB_story_unspottedBugs6:
+        title: Título
+      courseB_story_unspottedBugs7:
+        title: Título
+      courseB_story_unspottedBugs8:
+        title: Título
+      courseB_story_unspottedBugs9:
+        title: Título
+      courseB_unplugged_mrfProgramming:
+        title: Título
+      courseC_screenoutthemean:
+        title: Título
+      courseF_firstFunctions_map:
+        title: Título
+      coursef_functionsSummary_map:
+        title: Título
+      coursef_powerofwords:
+        title: Título
+      csd-post-survey-unit1-preamble:
+        title: Título
+      csd-post-survey-unit2-preamble:
+        title: Título
+      csd-post-survey-unit3-preamble:
+        title: Título
+      csd-post-survey-unit4-preamble:
+        title: Título
+      csd-post-survey-unit5-preamble:
+        title: Título
+      csd-post-survey-unit6-preamble:
+        title: Título
+      csp-post-survey-2018-AP-preamble:
+        title: Título
+      csp-post-survey-2018-topics-preamble:
+        title: Título
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: Título
+      csp-post-survey-createPT-preamble:
+        title: Título
+      csp-post-survey-explorePT-preamble:
+        title: Título
+      csp-post-survey-unit1-preamble:
+        title: Título
+      csp-post-survey-unit2-preamble:
+        title: Título
+      csp-post-survey-unit3-preamble:
+        title: Título
+      csp-post-survey-unit4-preamble:
+        title: Título
+      csp-post-survey-unit5-preamble:
+        title: Título
+      csp_unit5_finalassessment_overview:
+        title: Título
+      csp_unit5_finalassessment_overview_2018:
+        title: Título
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: Título
+      csp_unit_assessment_overview:
+        title: Título
+      csp_unit_assessment_overview_2018:
+        title: Título
+      csp_unit_assessment_overview_exam_prep:
+        title: Título
+      dsl link test:
+        title: Título
+      grade2_maze_intro1:
+        title: Título
+      grade2_unplugged_neighborhood:
+        title: Título
+      grade4_project_design:
+        title: Título
+      grade4_project_design_image:
+        title: Título
+      grade4_project_presentation:
+        title: Título
+      grade5_project_design:
+        title: Título
+      grade5_project_presentation:
+        title: Título
+      more encryption algorithms:
+        title: Título
+      newCSFsample:
+        Intro: Introdución
+      post-assessment survey heading4:
+        title: Título
+      pwc_appdev:
+        title: Título
+      pwc_appdevunplugged:
+        title: Título
+      pwc_cybersecurity:
+        title: Título
+      pwc_internetofthings:
+        title: Título
+      pwc_programming:
+        title: Título
+      pwc_webdevelopment:
+        title: Título
+      sciPD framework video:
+        Framework: Cadro
+      sciPD2Part4_S1_L3:
+        title: Título
+      sciPD2Part4_S2_L1:
+        title: Título
+      sciPD2Part4_S2_L2:
+        title: Título
+      sciPD2Part4_S3_L1:
+        title: Título
+      sciPD2Part4_S3_L2:
+        title: Título
+      sciPD2Part4_S3_L3:
+        title: Título
+      sciPD3 mods2:
+        title: Título
+      sciPD33 earth1:
+        title: Título
+      sciPD33 earth2:
+        title: Título
+      sciPDpart4_S1_L1:
+        title: Título
+      test discourse level type:
+        title: Título
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: Título
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: Título
+      v2 U1L14 Student Lesson Introduction:
+        title: Título
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: Título
+      v2 U1L2 Student Lesson Introduction:
+        title: Título
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: Título
+      v2 U1L3 Student Lesson Introduction:
+        title: Título
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: Título
+      v2 U1L4 Student Lesson Introduction:
+        title: Título
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: Título
+      v2 U1L5 Student Lesson Introduction:
+        title: Título
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: Título
+      v2 U1L8 Student Lesson Introduction:
+        title: Título
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L1 Student Lesson Introduction:
+        title: Título
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L10 Student Lesson Introduction:
+        title: Título
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L11 Student Lesson Introduction:
+        title: Título
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L12 Student Lesson Introduction:
+        title: Título
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L13 Student Lesson Introduction:
+        title: Título
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L14 Student Lesson Introduction:
+        title: Título
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L15 Student Lesson Introduction:
+        title: Título
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L2 Student Lesson Summary:
+        title: Título
+      v2 U2L2 Student Lesson Summary_2018:
+        title: Título
+      v2 U2L3 Student Lesson Summary:
+        title: Título
+      v2 U2L3 Student Lesson Summary_2018:
+        title: Título
+      v2 U2L4 Student Lesson Summary:
+        title: Título
+      v2 U2L4 Student Lesson Summary_2018:
+        title: Título
+      v2 U2L6 Student Lesson Introduction:
+        title: Título
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L7 Student Lesson Introduction:
+        title: Título
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L8 Student Lesson Introduction:
+        title: Título
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: Título
+      v2 U2L9 Student Lesson Introduction:
+        title: Título
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: Título
+      v2 U3L04 Student Lesson Introduction:
+        title: Título
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: Título
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Creando funcións
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Creando funcións
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: Título
     match:
       2-3 Big Event Match 1:
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         Match the button combination to the dance moves.: Fai a correspondencia da
           combinación de botóns para os movementos de danza.
         Matching: Asociación
       2-3 Binary Match 1:
-        "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a3.png": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
-        "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
-          250"
         "<strong>N</strong>": "<strong>N</strong>"
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>P</strong>"
@@ -30,89 +922,25 @@ gl:
         Use the key to match each code to its letter: Usa a chave para relacionar
           cada código a súa letra
       2-3 Graph Paper Match 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         Match the grid to the program.: Asocia a reixa ao programa.
         Matching: Asociación
       2-3 Maze Match 2:
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Arrastra os bloques para combinar.
         Instructions: Instrucións
         Match the puzzles to the blocks: Asocia os desafíos aos bloques
         Maze Match: Xogo de labirinto
       2-3 Relay Programming Match 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: Asocia a reixa ao programa
         Matching: Asociación
       2-3 artist loops match 1:
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: bucles do Artista - Asociación 1
         Match the loop to the shape: Asocia o bucle á figura
       2-3 artist match 1:
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         Artist Matching: O Artista - Asociación
         Match the shape with the blocks that complete it.: Asocia a figura cos bloques
           que a completan.
       2-3 bounce match 1:
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: 'Pin-pong: Asociación'
-        Match the events with the actions: Asocia os eventos
         Matching: Asociación
       2-3 flappy match 1:
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
-        Flappy Matching One: Flappy bird - Asociación 1
-        Match the events with the actions: Asocia os eventos
         Matching: Asociación
       2-3 maze match 1:
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         Match the puzzles to the blocks: Asocia os desafíos aos bloques
         Maze Match One: Labirinto Un
       4-5 Algorithms Match 1:
@@ -131,10 +959,6 @@ gl:
           os pasos do Xogo de Dados á orde en que deben aparecer no algoritmo.
         Matching: Asociación
       4-5 Computational Thinking Match 1:
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Rodas/lado: 2 <br/>xanelas/lado:
           0</h3>"
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Rodas/lado: 2 <br/>xanelas/lado:
@@ -148,166 +972,85 @@ gl:
           coa súa lista de partes correcta.
         Matching: Asociación
       4-5 Suncatchers Match 1:
-        "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: Asocia
           cada programa á palabra que produce, usando o grupo de habilidades fornecidas.
         Matching: Asociación
       4-5 maze match 1:
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Arrastra os bloques para combinar.
         Instructions: Instrucións
         Match the puzzles to the blocks: Asocia os desafíos aos bloques
         Maze Match: Xogo de labirinto
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Pregunta
+      CSDU2 Match RGB Colors:
+        Question: Pregunta
       K-1 Artist 2 Match 1:
-        "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
-        "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
-        "/script_assets/k_1_images/artist_images/square_next_ball.png": "/script_assets/k_1_images/artist_images/square_next_ball.png"
-        "<br/><br/>above": "<br/><br/>enriba"
-        "<br/><br/>below": "<br/><br/>abaixo"
-        "<br/><br/>next to": "<br/><br/>ao lado"
-        Is the square next to, above, or below the ball?: O cadrado está ao lado,
-          enriba ou abaixo da bóla?
         Matching: Asociación
       K-1 Artist 2 Match 2:
-        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
-        "/script_assets/k_1_images/artist_images/large_triangle.png": "/script_assets/k_1_images/artist_images/large_triangle.png"
-        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/medium_rectangle.png": "/script_assets/k_1_images/artist_images/medium_rectangle.png"
-        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
-        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
         Match the shapes based on type.: Asocia as figuras baseadas no tipo.
         Matching: Asociación
       K-1 Artist 2 Match 3:
-        "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
-        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
-        "/script_assets/k_1_images/artist_images/large_triangle2.png": "/script_assets/k_1_images/artist_images/large_triangle2.png"
-        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
-        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
-        "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
-        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         Match the shapes based on type.: Asocia as figuras baseadas no tipo.
         Matching: Asociación
       K-1 Artist Loops Match 1:
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
-        Match the code to the stairs it draws.: Asocia o código á escaleira que el
-          debuxa.
         Matching: Asociación
       K-1 Bee Loops Match 1:
-        "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
-        "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
-        "/script_assets/k_1_images/bee_images/r4_gnectar.png": "/script_assets/k_1_images/bee_images/r4_gnectar.png"
-        "/script_assets/k_1_images/bee_images/r5_ghoney.png": "/script_assets/k_1_images/bee_images/r5_ghoney.png"
-        "/script_assets/k_1_images/move_blocks/EEEEE.png": "/script_assets/k_1_images/move_blocks/EEEEE.png"
-        "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
-        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
-        "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
         Match the blocks: Asocia os bloques
         Matching: Asociación
       K-1 Big Event Match 1:
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         Match the button combination to the dance moves.: Fai a correspondencia da
           combinación de botóns para os movementos de danza.
         Matching: Asociación
       K-1 Flappy Match 1:
-        "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
-        "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
-        "/script_assets/k_1_images/flappy_images/flap.png": "/script_assets/k_1_images/flappy_images/flap.png"
-        "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
-        "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
-        "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
         Match the blocks: Asocia os bloques
         Matching: Asociación
       K-1 Happy Maps Match 1:
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png"
-        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
-        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
-        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Match the Map to the arrow that gets the Flurb to the treasure: Asocia o mapa
-          á frecha que leva Flurb ao tesouro
         Matching: Asociación
       K-1 Maze Match 1:
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
-        "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
-        "/script_assets/k_1_images/maze_images/maze_WSS.png": "/script_assets/k_1_images/maze_images/maze_WSS.png"
-        "/script_assets/k_1_images/maze_images/maze_WW.png": "/script_assets/k_1_images/maze_images/maze_WW.png"
-        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
-        "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
-        "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
-        "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: Arrastra os bloques para combinar.
         Instructions: Instrucións
         Match the puzzles and blocks: Asocia os desafíos aos bloques
         Matching: Asociación
       K-1 Move It Match 1:
-        "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
-        "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
-        "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Asocia
-          o mapa ao algoritmo que leva a Flurb até as flores.
         Matching: Asociación
+      PDAlg Design Recipe Video:
+        Definition: Definición
+      PDK5 What is unplugged:
+        Question: Pregunta
+      'U2L06 - Matching: Label the Diagram':
+        E: L
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: Título
+      U3L19 - MC what are values of abc:
+        title: Título
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
       test matching image:
-        "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
-        "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
-        "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
-        "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
-        "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
-        "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
-        "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
-        "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
-        "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
-        Drag the images from right to center.: Drag the images from right to center.
         Instructions: Instrucións
-        Match up all the flowers by colour!: Match up all the flowers by colour!
-        Matching Images Two: Matching Images Two
       test matching text:
         Matching: Asociación
-        Some really easy stuff to match.  Drag it around until you get it.: Some really
-          easy stuff to match.  Drag it around until you get it.
-        Sydney: Sydney
-        Van Minnen: Van Minnen
-        What color is the sky?: What color is the sky?
-        What's Brent's last name?: What's Brent's last name?
-        What's in the ocean?: What's in the ocean?
-        Where is Brendan from?: Where is Brendan from?
         blue: azul
-        salt: salt
+      unique level name here:
+        Question: Pregunta
+        title: Título
     multi:
       2-3 Algorithms Multi 1:
-        "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         Choose an algorithm for the image provided.: Escolle un algoritmo para a imaxe
           fornecida.
         Multiple Choice: Múltiple Escolla
@@ -320,16 +1063,11 @@ gl:
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Comeza
           cun cadrado<br/>Coloca un triángulo abaixo do cadrado<br/>Coloca un paralelogramo
           á dereita do triángulo
-        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
-        : Comeza cun cadrado<br/>Coloca un triángulo á dereita do cadrado<br/>Coloca
-          un paralelogramo abaixo do cadrado<br/>Coloca un triángulo á dereita do
-          paralelogramo
+        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
       2-3 Algorithms Multi 2:
-        "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         Multiple Choice: Múltiple Escolla
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Comeza
           cun triángulo<br/>Coloca un cadrado abaixo do triángulo<br/>Coloca outro
@@ -337,143 +1075,48 @@ gl:
         Which image does <em>not</em> follow this algorithm?: Que imaxe <em>non</em>
           segue este algoritmo?
       2-3 Binary Multi 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Múltiple Escolla
         Which program makes this image?: Cal programa crea esta imaxe?
       2-3 Conditionals Multi 1:
-        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         According to the rules of the game, which set of cards is scored correctly?: De
           acordo coas regras do xogo, que conxunto de cartas foi marcado correctamente?
         Multiple Choice: Múltiple Escolla
       2-3 Getting Loopy Multi 1:
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Como simplificarías esta
           secuencia con bucles?
         Multiple Choice: Múltiple Escolla
       2-3 Graph Paper Multi 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Múltiple Escolla
         Which program makes this image?: Cal programa crea esta imaxe?
       2-3 Maze Multi 2:
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
-          500"
         Maze Multiple Choice: Labirinto - Múltiple escolla
-        Which blocks work?: Que bloques funcionan?
       2-3 Relay Programming Multi 1:
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         Multiple Choice: Múltiple Escolla
-        Which program does not create this image?: Cal programa non crea esta imaxe?
       2-3 Relay Programming Multi 2:
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
         Multiple Choice: Múltiple Escolla
         Which image-program combo does not contain mistakes?: Que combinación entre
           imaxe e programa non contén erros?
-      2-3 artist debug multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
-          700"
-        Artist Debugging Multiple Choice One: Depuración do Artista - Múltipla escolha
-          1
-        Why won't this circle go all the way around?: Por que este círculo non da
-          a volta toda?
       2-3 artist functions multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
-          500"
         Artist Functions Multiple Choice One: Funcións do Artista - Múltiple escolla
           1
         Pick the correct blocks to draw this image using the given functions: Escolle
           os bloques correctos para debuxar a imaxe usando as funcións dadas
       2-3 artist loops multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
-          500"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         Artist Loops Multiple Choice: bucles do Artista - Múltiple escolla
         Which shape is made by this loop?: Cal figura é creada por este bucle?
       2-3 artist loops multi 2:
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
-          500"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         Artist Loops Multiple Choice: bucles do Artista - Múltiple escolla
         Which shape is made by this program?: Que figura é creada por este programa?
       2-3 bee conditionals multi 1:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: Condicionais da abella - Múltiple escolla
-          1
         Which comparison below is true?: Que comparación de abaixo é certa?
       2-3 bee conditionals multi 2:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
-          500"
-        Bee Conditionals Multiple Choice Two: Condicionais da abella - Múltiple escolla
-          2
         Choose the best blocks.: Escolle os mellores bloques.
       2-3 bee conditionals multi 3:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
-          500"
-        Bee Conditionals Multiple Choice Two: Condicionais da abella - Múltiple escolla
-          2
         Choose the best blocks.: Escolle os mellores bloques.
       2-3 bee loops multi 1:
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
-          500"
         Bee Loops Multiple Choice One: Os bucles da Abella - Múltiple escolla 1
         Which blocks collect all of the nectar?: Que bloques recollen todo o néctar?
       2-3 maze multi 1:
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
-          500"
         Maze Multiple Choice One: Labirinto de Múltiple Escolla Un
         Which set of blocks is the correct answer?: Que conxunto de bloques é a resposta
           correcta?
@@ -499,8 +1142,6 @@ gl:
         _____ is _____ a _____.: _____ é unha _____ _____.
         _____ is a _____ city.: _____ é unha cidade _____.
       4-5 Crowdsourcing Multi 1:
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
         Multiple Choice: Múltiple Escolla
         Which of these pictures best represents crowdsourcing?: Cal desas figuras
           representa mellor o crowdsourcing?
@@ -521,106 +1162,49 @@ gl:
         Your favorite food: A túa comida favorita
         Your parent's credit card number: O número do cartón de crédito dos teus pais
       4-5 Internet Multi 1:
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
-        23.23.224.106: 23.23.224.106
-        54.209.61.132: 54.209.61.132
-        54.243.71.82: 54.243.71.82
-        64.14.68.10: 64.14.68.10
         Multiple Choice: Múltiple Escolla
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Cando
           tentas te conectar á code.org, a que enderezo IP o DNS probabelmente che
           vai direcionar?
       4-5 Internet Multi 2:
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Se
           o DNS mandouno para a páxina con enderezo IP 100.42.50.110, en que sitio
           web estás?
         Multiple Choice: Múltiple Escolla
-        code.org: code.org
-        csisfun.com: csisfun.com
-        khanacademy.org: khanacademy.org
-        thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
-        "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
-        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
-          to my Lou, <br/>Skip to my Lou, my darlin.
-        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          <br/>Skip to my Lou, my darlin."
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
+          buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Múltiple Escolla
-        ? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        : Cal é o maior pedazo desta canción que consegues definir como o retrouso
-          de forma que se repita cada vez que a música se chame?
+        4: "? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+        5: ": What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
       4-5 Suncatchers Multi 1:
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         Multiple Choice: Múltiple Escolla
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Cal
           dos programas de abaixo <em>non</em> realiza a mesma sequencia exacta do
           Programa 1?
-      4-5 artist functions multi 1:
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
-          500"
-        Artist Functions Multiple Choice: Funcións do Artista - Múltiple escolla
-        Which function creates a rectangle that can change its size?: Que función
-          crea un retángulo que pode alterar o seu tamaño?
       4-5 artist loops multi 1:
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
-          500"
         Artist Loops Multiple Choice: bucles do Artista - Múltiple escolla
         Which blocks will create the design?: Que bloques creará o deseño?
-      4-5 artist loops multi 2:
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
-        Artist Functions Multiple Choice: Funcións do Artista - Múltiple escolla
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Escolle
-          o bucle que representa o seguinte padrón: 5, 10, 15, 20, 25, 30, 35, 40,
-          45, 50'
       4-5 artist multi 1:
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         Artist Multiple Choice: O Artista - Múltiple escolla
         Which blocks draw a rectangle with a perimeter of 100?: Que bloques debuxan
           un retángulo cun perímetro de 100?
       4-5 artist multi 2:
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         Artist Multiple Choice: O Artista - Múltiple escolla
         Which drawing is symmetric?: Que debuxo é simétrico?
       4-5 bee conditionals multi 1:
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?"
@@ -629,281 +1213,903 @@ gl:
         Bee Conditionals Multiple Choice: Condicionais da abella - Múltiple escolla
         Choose the best blocks.: Escolle os mellores bloques.
       4-5 bee debug multi 1:
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         Bee Debug Multiple Choice: Depuración da abella - Múltiple escolla
         Which version of the function will work?: Que versión da función vai funcionar?
       4-5 bee loops multi 1:
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         Bee Loops Multiple Choice: Os bucles da Abella - Múltiple escolla
         Which blocks will solve the puzzle?: Que bloques van resolver o desafío?
       4-5 farmer loops multi 1:
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
-          500"
-        Famer Loops Multiple Choice: Bucles do Artista - Múltiple escolla
         Which blocks solve the puzzle?: Cales bloques resolven o desafío?
       4-5 maze conditionals multi 1:
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
-          500"
         Maze Conditionals Multiple Choice: Condicionais do labirinto - Múltiple escolla
         Which blocks solve the puzzle?: Cales bloques resolven o desafío?
       4-5 maze multi 1:
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
-          500"
         Maze Multiple Choice: Labirinto - Múltiple escolla
         Which blocks solve the puzzle?: Cales bloques resolven o desafío?
-      Baker test of multi can delete:
-        2+3: 2+3
-        3 - 7: 3 - 7
-        3+1: 3+1
-        3+4: 3+4
-        5-1: 5-1
-        Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: There
-          are two answers here that are correct.  Looks like you can choose either
-          one and be right.
-        What is 2 + 2?: What is 2 + 2?
-      Choose 2 Test:
-        Line 2: Line 2
-        Line 3: Line 3
-        Line 4: Line 4
-        Line 5: Line 5
-        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
-          lines of code should be removed so the program will work as intended? Select
-          <u>two</u> answers
+      CB_Question_3:
+        Y: true
+      CSD Prediction Header Size:
+        Question: Pregunta
+      CSD U3 Boolean MC:
+        title: Título
+      CSD U3 Boolean MC_2018:
+        title: Título
+      CSDU4 Screens Predict Multi:
+        About: Sobre
+        Contact Us: Póñase en contacto
+      'CSP U4L04 Assessment 1 ':
+        Question: Pregunta
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Non
+        'Yes': Si
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: Título
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Pregunta
+        title: Título
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      ECSPD2 question:
+        Question: Pregunta
+        title: Título
       K-1 Artist 1 Multi 1:
-        "/script_assets/k_1_images/artist_images/E-S-S.png": "/script_assets/k_1_images/artist_images/E-S-S.png"
-        "/script_assets/k_1_images/artist_images/E-S.png": "/script_assets/k_1_images/artist_images/E-S.png"
-        "/script_assets/k_1_images/artist_images/S-E-E.png": "/script_assets/k_1_images/artist_images/S-E-E.png"
-        "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
-        "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
-          500"
         Multiple Choice: Múltiple Escolla
         Which blocks solve this puzzle?: Que bloques resolven o desafío?
       K-1 Artist 1 Multi 2:
-        "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
-        "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
-        "/script_assets/k_1_images/artist_images/N-S-E-W.png": "/script_assets/k_1_images/artist_images/N-S-E-W.png"
-        "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
-        "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
-          500"
         Multiple Choice: Múltiple Escolla
         Which blocks draw the square?: Cales bloques forman o cadrado?
       K-1 Artist 2 Multi 1:
-        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
-        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
-        "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
-        "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
-          500"
         Multiple Choice: Múltiple Escolla
-        Which shape do these squares combine to make?: Que figura é feita a partir
-          da combinación destes cadrados?
       K-1 Artist Loops Multi 1:
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
-          300"
         Multiple Choice: Múltiple Escolla
-        Which blocks create this picture?: Que bloques forman esta imaxe?
       K-1 Bee 1 Multi 1:
-        "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Canto néctar representa isto?
         Multiple Choice: Múltiple Escolla
       K-1 Bee 1 Multi 2:
-        "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Canto néctar representa isto?
         Multiple Choice: Múltiple Escolla
       K-1 Digital Footprint Multi 1:
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         Multiple Choice: Múltiple Escolla
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Que
           animal ten a pegada que o coloca <strong>máis en risco</strong>?
       K-1 Getting Loopy Multi 1:
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Como simplificarías esta
           secuencia con bucles?
         Multiple Choice: Múltiple Escolla
       K-1 Happy Maps Multi 1:
-        "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
-        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
-        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
-        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
         Multiple Choice: Múltiple Escolla
         Which arrow gets the Flurb to the treasure?: Cal frecha leva o Flurb ao tesouro?
       K-1 Keep it Private Multi 1:
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         Multiple Choice: Múltiple Escolla
         Which information should you <strong>not</strong> share online?: Que informacións
           <strong>non</strong> debes compartir online?
       K-1 Maze Debugging Multi 1:
-        "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
-          700"
-        "/script_assets/k_1_images/move_blocks/E.png": "/script_assets/k_1_images/move_blocks/E.png"
-        "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
-        "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
-        "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
         Multiple Choice: Múltiple Escolla
         Which choice should be the final block?: Que opción debe ser o bloque final?
       K-1 Maze Loops Multi 1:
-        "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
-          300"
-        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
-        "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
-        "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
         Multiple Choice: Múltiple Escolla
         Which repeat block is the same?: Que bloque de repetición é o mesmo?
       K-1 Maze Loops Multi 2:
-        "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
-          240"
-        "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
-        "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
-        "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
         Multiple Choice: Múltiple Escolla
         Pick the correct repeat block.: Escolle o bloque de repetición correcto.
       K-1 Maze Multiple Choice 2:
-        "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
-          500"
-        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
-        "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
-        "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
-        "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
         Maze: Labirinto
         Which answer solves this level?: Que resposta é a solución para este nivel?
       K-1 Move It Multi 1:
-        "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
-        "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
-        "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
-        "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
         Multiple Choice: Múltiple Escolla
         Which algorithm gets the Flurb to the flowers?: Cal algoritmo leva o Flurb
           até as flores?
       K-1 Plant a Seed Multi 1:
-        "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
-        "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
-        "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         Multiple Choice: Múltiple Escolla
         Which step should go at the beginning of this algorithm?: Que paso debe ficar
           no comezo deste algoritmo?
       K-1 Plant a Seed Multi 2:
-        "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
-        "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
-        "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
         Multiple Choice: Múltiple Escolla
         Which step should fill in the blank for this algorithm?: Que paso debe cubrir
           o espazo en branco para este algoritmo?
       K-1 Word Search Multi 1:
-        "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
-        "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
-        "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
-        "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
-          450"
         Multiple Choice: Múltiple Escolla
         Which blocks spell "MOVE"?: Que bloques forman a palabra "MOVE"?
       K-1 Word Search Multi 2:
-        "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
-        "/script_assets/k_1_images/move_blocks/NENE.png": "/script_assets/k_1_images/move_blocks/NENE.png"
-        "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
-        "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
-          450"
         Multiple Choice: Múltiple Escolla
-        Which blocks spell "JUMP"?: Que bloques forman a palabra "JUMP"?
       K-1 Word Search Multi 3:
-        "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
-          700"
         Multiple Choice: Múltiple Escolla
-        SET: SET
-        SOUTH: SOUTH
-        SQUARE: SQUARE
         Which word is spelled?: Cal é palabra formada?
-      K-1 multi 4:
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: Piloto e Copiloto
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Un
-          destes meniños é o mellor <b>piloto</b>. E un é o mellor <b>copiloto</b>.
-        Which boy is the <large>helper</large>?: Que meniño é o <large>copiloto</large>?
-      K-1 multi 5:
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: Piloto e Copiloto
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Un
-          destes meniños é o mellor <b>piloto</b>. E un é o mellor <b>copiloto</b>.
-        This time, which boy is the <large>driver</large>?: Desta vez, que meniño
-          é o <large>piloto</large>?
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
-          1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
-          1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
-          1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
-          1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Which of these Evaluation Blocks will draw the image on the left?: Which of
-          these Evaluation Blocks will draw the image on the left?
-        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
-      Warmup questions:
-        Coding in Racket: Coding in Racket
-        Select the best answer to the question.: Select the best answer to the question.
-        When converting a circle to code, the correct order is: When converting a
-          circle to code, the correct order is
-        left top right: left top right
-        left, right, top: left, right, top
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Caixa de Ferramentas
+      PDAlg DR Multi 1:
+        Domain: Dominio
+        Name: Nome
+        Range: Rango
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Non
+        'Yes': Si
+      PDAlg PreQ 2:
+        'No': Non
+        'Yes': Si
+      PDAlg functional:
+        'No': Non
+      PDK5 Blockly Intro:
+        'Yes': Si
+      PDK5 Classroom Culture:
+        'Yes': Si
+      PDK5 Course Maps:
+        'Yes': Si
+      PDK5 Course Overview:
+        'Yes': Si
+      PDK5 Glossary:
+        Glossary: Glosario
+        'Yes': Si
+      PDK5 Intro:
+        'No': Non
+        Welcome!: Benvido!
+        'Yes': Si
+      PDK5 Teacher Dashboard:
+        'Yes': Si
+      PDK5 Test1:
+        Question: Pregunta
+        title: Título
+      PDK5 UVideo Overview:
+        'Yes': Si
+      PDK5 Unplugged Intro:
+        'Yes': Si
+      PS U3-bakertest:
+        title: Título
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: azul
+        green: verde
+        red: vermello
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        E: L
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        E: L
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': falso
+        'true': verdadeiro
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: dereita
+      U4L02 Multiple Choice:
+        right: dereita
+      U4L03 Multiple Choice:
+        right: dereita
+      U4L04 Multiple Choice:
+        right: dereita
+      U4L05 Multiple Choice:
+        right: dereita
+      U4L06 Multiple Choice:
+        right: dereita
+      U4L06 Reflection Q 1:
+        Question: Pregunta
         random: aleatorio
-        top, left, right: top, left, right
-      test multi text:
-        Fred Flintstone: Fred Flintstone
-        George Jetson: George Jetson
-        George Washington: George Washington
-        Martha Washington: Martha Washington
-        Presidents: Presidents
-        This multiple choice is all about the presidents of the United States.: This
-          multiple choice is all about the presidents of the United States.
-        Who was the first president of the USA?: Who was the first president of the
-          USA?
+      U4L07 Multiple Choice:
+        right: dereita
+      U4L08 Multiple Choice:
+        right: dereita
+      U4L09 Multiple Choice:
+        right: dereita
+      U4L10 Multiple Choice:
+        right: dereita
+      U4L11 Multiple Choice:
+        right: dereita
+      U4L12 Multiple Choice:
+        right: dereita
+      U4L13 Multiple Choice:
+        right: dereita
+      U4L14 Multiple Choice:
+        right: dereita
+      U4L15 Multiple Choice:
+        right: dereita
+      U4L16 Multiple Choice:
+        right: dereita
+      U4L17 Multiple Choice:
+        right: dereita
+      U4L18 Multiple Choice:
+        right: dereita
+      U4L19 Multiple Choice:
+        right: dereita
+      U4L20 Multiple Choice:
+        right: dereita
+      U4L21 Multiple Choice:
+        right: dereita
+      U4L22 Multiple Choice:
+        right: dereita
+      U4L23 Multiple Choice:
+        right: dereita
+      U4L24 Multiple Choice:
+        right: dereita
+      U4LXX Multiple Choice:
+        right: dereita
+      U5 assess_weight_v2:
+        Question: Pregunta
+        title: Título
+      Warmup questions:
+        random: aleatorio
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      csd-post-survey-2018-topic-ai:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Seguridade cibernética
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-databases:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-datascience:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-gamedev:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-hardware:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-internet:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-mobile:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-parallel:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-programming:
+        'No': Non
+        'Yes': Si
+      csd-post-survey-2018-topic-robotics:
+        'No': Non
+        Robotics: Robótica
+        'Yes': Si
+      csd-post-survey-2018-topic-web:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2017-q65:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2017-q65_2018:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-ai:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Seguridade cibernética
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-databases:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-datascience:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-gamedev:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-hardware:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-internet:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-mobile:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-parallel:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-programming:
+        'No': Non
+        'Yes': Si
+      csp-post-survey-2018-topic-robotics:
+        'No': Non
+        Robotics: Robótica
+        'Yes': Si
+      csp-post-survey-2018-topic-web:
+        'No': Non
+        'Yes': Si
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Outros
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Outros
+      csp_ap_exam_signup:
+        'No': Non
+        'Yes': Si
+      csp_ap_previous_years:
+        'No': Non
+        'Yes': Si
+      csp_ap_taking_ap_class:
+        'No': Non
+        'Yes': Si
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: resultado
+      cspu5_assess2_addstrings_2018:
+        result: resultado
+      cspu5_assess2_addstrings_exam_prep:
+        result: resultado
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: resultado
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: resultado
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: resultado
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': falso
+        'true': verdadeiro
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': falso
+        'true': verdadeiro
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': falso
+        'true': verdadeiro
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+      msm variables multi 10:
+        '17': '17'
+      msm variables multi 11:
+        '17': '17'
+      msm variables multi 12:
+        '17': '17'
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: ola
+      msm variables multi 7:
+        '3': '3'
+      msm variables multi 8:
+        '3': '3'
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+      post-assessment survey q34:
+        Easy: Fácil
+        Hard: Difícil
+      pre-assessment survey q24:
+        'No': Non
+        'Yes': Si
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Non
+        'Yes': Si
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Outros
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Outros
+      pre-assessment survey q29:
+        Female: Feminino
+        Male: Masculino
+        Other: Outros
+        Prefer not to answer: Prefiro non responder
+      pre-assessment survey q30:
+        Other: Outros
+        Prefer not to answer: Prefiro non responder
+      sarah_test_maggie:
+        Question: Pregunta
+        test: test
+      sciPD PreQ 1:
+        'No': Non
+        'Yes': Si
+      sciPD PreQ 2:
+        'No': Non
+        'Yes': Si
+      test anonymous student survey educational:
+        'No': Non
+        'Yes': Si
+      test me:
+        Question: Pregunta
+        title: Título
+      unique level name here:
+        Question: Pregunta
+        title: Título
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

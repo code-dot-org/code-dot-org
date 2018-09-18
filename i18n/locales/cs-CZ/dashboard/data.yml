@@ -55,7 +55,7 @@ cs:
         parameters: Funkce s Parametry
     level:
       instructions:
-        maze_2_2: 'Pomůžeš mi chytit zlobivé prase? Poskládej dohromady několik bloků "vpřed" a stiskni tlačítko "Run", abys mě dostal tam. '
+        maze_2_2: 'Pomůžeš mi chytit zlobivé prase? Poskládej dohromady několik bloků "vpřed" a stiskni tlačítko "Spustit", abys mě dostal tam. '
         maze_2_1: To prase mi pije krev. Pomoz mi ho najít!
         maze_2_2_5: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT, nebo bude peří létat!
         maze_2_3: Naveď mě k zelenému zlu! (Pozor na TNT)

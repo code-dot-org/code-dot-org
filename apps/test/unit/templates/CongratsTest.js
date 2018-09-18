@@ -12,7 +12,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         userType="signedOut"
-        isEnglish={true}
+        language="en"
       />
     );
     expect(wrapper.find(Certificate).exists()).to.be.true;
@@ -23,7 +23,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         userType="signedOut"
-        isEnglish={true}
+        language="en"
       />
     );
     expect(wrapper.find(StudentsBeyondHoc).exists()).to.be.true;
@@ -34,7 +34,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         userType="teacher"
-        isEnglish={true}
+        language="en"
       />
     );
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
@@ -45,7 +45,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         userType="signedOut"
-        isEnglish={true}
+        language="en"
       />
     );
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.true;
@@ -56,7 +56,7 @@ describe('Congrats', () => {
       <Congrats
         completedTutorialType="other"
         userType="student"
-        isEnglish={true}
+        language="en"
       />
     );
     expect(wrapper.find(TeachersBeyondHoc).exists()).to.be.false;

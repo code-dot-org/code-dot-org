@@ -3736,7 +3736,7 @@ en:
               name: Simple Encryption
         fesbinary:
           title: Binary
-          description_audience: Falmouth Middle School
+          description_audience: Mike
           description_short: ''
           description: ''
           stages:
@@ -3750,6 +3750,8 @@ en:
               name: RGB Color
             Processing with Bits:
               name: Processing with Bits
+            Auto-Run Binary Artist Puzzles:
+              name: Auto-Run Binary Artist Puzzles
         csd2-2017:
           title: CSD Unit 2 - Web Development
           description_audience: ''
@@ -7491,7 +7493,7 @@ en:
             Intellectual Property and Images:
               name: Intellectual Property and Images
               description_student: This lesson covers how to use media such as images, video, or music created by others a website while respecting the rights of the creator of that media. After first studying Creative Commons licensing, the class learns how to add images to web pages, and how to give proper attribution when doing so.
-              description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r\n\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
+              description_teacher: "Starting with a discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \n\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Clean Code and Debugging:
               name: Clean Code and Debugging
               description_student: In this lesson covers common issues that arise when designing web pages in HTML. The class will correct errors in a sequence of increasingly complex web pages found on Code Studio and learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read.
@@ -9201,7 +9203,7 @@ en:
           title: CS Discoveries Unit 2 Deeper Learning 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
-          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 2 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9594,6 +9596,52 @@ en:
             craft18 levels:
               name: craft18 levels
           title: craft18 test script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artist
+          title: New Frozen Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+        frozen-2018-test:
+          title: New Frozen Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            Artist:
+              name: Artist
+              description_student: ''
+              description_teacher: ''
+        dance:
+          stages:
+            new stage:
+              name: new stage
+            Dance Party:
+              name: Dance Party
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        frozen-2018-test-b:
+          title: New Frozen Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            Artist:
+              name: Artist
+              description_student: ''
+              description_teacher: ''
+        aquatic:
+          stages:
+            Aquatic:
+              name: Aquatic
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

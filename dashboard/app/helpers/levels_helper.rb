@@ -326,8 +326,8 @@ module LevelsHelper
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_instructions_text.empty? ? "" : @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_markdown_instructions_text.empty? ? "" : @level.tts_url(@level.tts_markdown_instructions_text)
+      level_options['ttsShortInstructionsUrl'] = @level.tts_short_instructions_text.empty? ? "" : @level.tts_url(@level.tts_short_instructions_text)
+      level_options['ttsLongInstructionsUrl'] = @level.tts_long_instructions_text.empty? ? "" : @level.tts_url(@level.tts_long_instructions_text)
     end
 
     app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
@@ -479,10 +479,10 @@ module LevelsHelper
       set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
 
       # Unintuitively, it is completely possible for a Blockly level to use
-      # Droplet, so we need to confirm the editory style before assuming that
+      # Droplet, so we need to confirm the editor style before assuming that
       # these fields contain Blockly xml.
       unless l.uses_droplet?
-        set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+        set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
 
         %w(
           initializationBlocks
@@ -493,7 +493,7 @@ module LevelsHelper
           solutionBlocks
         ).each do |xml_block_prop|
           next unless level_options.key? xml_block_prop
-          set_unless_nil(level_options, xml_block_prop, l.localize_function_blocks(level_options[xml_block_prop]))
+          set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
         end
       end
     end
@@ -574,6 +574,7 @@ module LevelsHelper
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+      level_options[:sharedFunctions] = nil # TODO: handle non-standard pools
     end
 
     unless params[:no_last_attempt]

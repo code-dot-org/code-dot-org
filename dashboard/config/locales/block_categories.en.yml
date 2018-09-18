@@ -36,11 +36,13 @@ en:
       Start: Start
       Locations: Locations
       Music: Music
+      Dancing: Dancing
       Sprite: Sprite
       Brush: Brush
+      Dancers: Dancers
+      Groups: Groups
       Make Sprite: Make Sprite
       Movement: Movement
-      Groups: Groups
       Booleans: Booleans
       Functional: Functional
       Predefined: Predefined

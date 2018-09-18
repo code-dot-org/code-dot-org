@@ -754,6 +754,10 @@ da:
           stages:
             Creating Functions:
               name: Oprettelse af funktioner
+        csp4-2017:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         csp5-2017:
           stages:
             While Loops:
@@ -904,6 +908,10 @@ da:
           stages:
             Bounce:
               name: Hoppe
+        hoc-encryption:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         fesbinary:
           title: Binære
           stages:
@@ -1230,6 +1238,10 @@ da:
           stages:
             Creating Functions:
               name: Oprettelse af funktioner
+        pwc:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         hero:
           stages:
             Minecraft Hour of Code:
@@ -1417,6 +1429,10 @@ da:
           stages:
             Creating Functions:
               name: Oprettelse af funktioner
+        csp4-2018:
+          stages:
+            Simple Encryption:
+              name: Enkel kryptering
         csp5-2018:
           stages:
             While Loops:
@@ -1431,3 +1447,15 @@ da:
               name: Flyt det, flyt det
             Your Digital Footprint:
               name: Dit digitale fodspor
+        frozen-2018:
+          stages:
+            Artist:
+              name: Kunstner
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Kunstner
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Kunstner

@@ -1015,3 +1015,15 @@ sl:
               name: Čebelica črkuje besede
             Move It, Move It:
               name: Premakni se, premakni
+        frozen-2018:
+          stages:
+            Artist:
+              name: Umetnik
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Umetnik
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Umetnik

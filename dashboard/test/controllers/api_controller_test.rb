@@ -420,74 +420,89 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should update lockable state for existing levels" do
-    script, level, _ = create_script_with_lockable_stage
+    Timecop.freeze do
+      script, level, _ = create_script_with_lockable_stage
 
-    user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
-    user_level = create :user_level, user_level_data
+      user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
+      user_level = create :user_level, user_level_data
 
-    # update from editable to locked
-    user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: true,
-        readonly_answers: false
-      }
-    ]
+      # update from editable to locked
+      user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: true,
+          readonly_answers: false
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
-    assert_equal false, user_level.readonly_answers?
-    assert_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.readonly_answers?
+      assert_nil user_level.unlocked_at
+      # update_lockable_state does not modify updated_at
+      assert_equal expected_updated_at, user_level.updated_at
 
-    # update from editable to readonly_answers
-    user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: false,
-        readonly_answers: true
-      }
-    ]
+      # update from editable to readonly_answers
+      user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: false,
+          readonly_answers: true
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
-    assert_equal true, user_level.readonly_answers?
-    assert_not_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal true, user_level.submitted?
+      assert_equal true, user_level.readonly_answers?
+      assert_not_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
 
-    # update from readonly_answers to locked
-    user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: true,
-        readonly_answers: false
-      }
-    ]
+      # update from readonly_answers to locked
+      user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: true,
+          readonly_answers: false
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
-    assert_equal false, user_level.readonly_answers?
-    assert_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.readonly_answers?
+      assert_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
 
-    # update from readonly_answers to editable
-    user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
-    updates = [
-      {
-        user_level_data: user_level_data,
-        locked: false,
-        readonly_answers: false
-      }
-    ]
+      # update from readonly_answers to editable
+      user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
+      updates = [
+        {
+          user_level_data: user_level_data,
+          locked: false,
+          readonly_answers: false
+        }
+      ]
 
-    post :update_lockable_state, params: {updates: updates}
-    user_level = UserLevel.find_by(user_level_data)
-    assert_equal false, user_level.submitted?
-    assert_equal false, user_level.readonly_answers?
-    assert_not_nil user_level.unlocked_at
+      post :update_lockable_state, params: {updates: updates}
+      user_level = UserLevel.find_by(user_level_data)
+      assert_equal false, user_level.submitted?
+      assert_equal false, user_level.readonly_answers?
+      assert_not_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
+    end
   end
 
   test "should fail to update lockable state if given bad data" do
@@ -1079,6 +1094,18 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
       {method: "get", path: "/api/student_progress/2/15"}
     )
+  end
+
+  test 'clever_classrooms is Forbidden when not signed in' do
+    sign_out :user
+    get :clever_classrooms
+    assert_response :forbidden
+  end
+
+  test 'import_clever_classroom is Forbidden when not signed in' do
+    sign_out :user
+    get :import_clever_classroom
+    assert_response :forbidden
   end
 
   #

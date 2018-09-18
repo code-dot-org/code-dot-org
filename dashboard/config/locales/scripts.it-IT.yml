@@ -10,7 +10,7 @@ it:
         csp_category_name: Princìpi dell'Informatica (versione 2015-16)
         csp_2018_category_name: Principi di informatica ('18-'19)
         cspexams_category_name: Prova pratica di principi d'informatica
-        csp17_category_name: "'16-'17 principi d'informatica"
+        csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
@@ -997,19 +997,27 @@ it:
               name: Innovazione personale
             The Internet:
               name: Internet
+            Post-Course Survey:
+              name: Sondaggio Post-corso
         csp2-2017:
           stages:
             Text Compression:
               name: Compressione del Testo
+            Post-Course Survey:
+              name: Sondaggio Post-corso
         csp3-2017:
           description_short: Programmazione
           stages:
             Creating Functions:
               name: Creazione di funzioni
+            Post-Course Survey:
+              name: Sondaggio Post-corso
         csp4-2017:
           stages:
             Simple Encryption:
               name: Crittografia semplice
+            Post-Course Survey:
+              name: Sondaggio Post-corso
         csp5-2017:
           stages:
             Introduction to Arrays:
@@ -1018,6 +1026,8 @@ it:
               name: Introduzione alla logica condizionale
             While Loops:
               name: Cicli "Mentre"
+            Post-Course Survey:
+              name: Sondaggio Post-corso
         CSDU3-Draft:
           description_short: Programmazione
           stages:
@@ -1184,6 +1194,8 @@ it:
               name: Funzioni
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
         grade2:
@@ -1523,6 +1535,10 @@ it:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+        csppostap-2017:
+          stages:
+            Post-Course Survey:
+              name: Sondaggio Post-corso
         csd6-draft:
           stages:
             Lists:
@@ -1537,6 +1553,8 @@ it:
           stages:
             Introduction:
               name: Introduzione
+            Sprites:
+              name: Personaggi
         applab-1hour:
           stages:
             Extra:
@@ -1573,6 +1591,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -1597,6 +1617,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -1621,6 +1643,8 @@ it:
               name: Valutazioni dei parigrado
         artist-and-bb8:
           stages:
+            Loops with BB-8:
+              name: Cicli con BB-8
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Bounce:
@@ -2711,6 +2735,14 @@ it:
               name: Introduzione a Sviluppo App - Per cominciare
             Intro to App Lab:
               name: Introduzione a Sviluppo App
+        csp-explore-2017:
+          stages:
+            Post-Course Survey:
+              name: Sondaggio Post-corso
+        csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: Sondaggio Post-corso
         course-e-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -2825,6 +2857,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -2841,6 +2875,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -3379,6 +3415,8 @@ it:
               name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
+            Copyright and Creativity:
+              name: Condivisione Digitale
         coursef-2018:
           title: Corso F (2018)
           assignment_family_title: Corso F
@@ -3618,3 +3656,15 @@ it:
           stages:
             Labyrinth:
               name: Labirinto
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

@@ -13,20 +13,48 @@
         "name": "MOVE",
         "options": [
           [
-            "Rest",
+            "Clap High",
             "0"
           ],
           [
-            "Breakdown",
+            "Clown",
             "1"
           ],
           [
-            "Floss",
+            "Dab",
             "2"
           ],
           [
-            "Fresh",
+            "Double Jam",
             "3"
+          ],
+          [
+            "Drop",
+            "4"
+          ],
+          [
+            "Floss",
+            "6"
+          ],
+          [
+            "Fresh",
+            "7"
+          ],
+          [
+            "Kick",
+            "8"
+          ],
+          [
+            "Roll",
+            "9"
+          ],
+          [
+            "This or That",
+            "10"
+          ],
+          [
+            "Thiller",
+            "11"
           ],
           [
             "Next",
@@ -39,6 +67,10 @@
           [
             "Random",
             "\"rand\""
+          ],
+          [
+            "None",
+            "8"
           ]
         ]
       }

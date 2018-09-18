@@ -208,7 +208,7 @@ th:
     destroyed: "%{model} ถูกลบออกแล้ว"
   nav:
     header:
-      finished_hoc: ฉันผ่านชั่วโมงโค้ดของฉันแล้ว
+      finished_hoc: ฉันผ่านชั่วโมงแห่งการเขียนโค้ดของฉันแล้ว
       sign_in_to_save: เข้าสู่ระบบเพื่อบันทึกความก้าวหน้า
       free_play:
         playlab: สร้างแอพห้องทดลองหรรษา
@@ -220,6 +220,7 @@ th:
       courses: คอร์ส
       project_gallery: โปรเจกต์
       help_support: การช่วยเหลือและสนับสนุน
+      professional_learning: การเรียนรู้อย่างมืออาชีพ
       educate_hoc: ช่วงเวลาของ Code
       stats: สถิติ
       help_us: ช่วยเรา
@@ -256,7 +257,7 @@ th:
       dashboard: ไปที่แดชบอร์ดครู
     student_teacher_disassociated: คุณได้ลบ %{teacher_name} ออกจากการเป็นครูผู้สอนของคุณ
     panel:
-      answer_viewer: แผงครู
+      answer_viewer: แผงผังสำหรับครูผู้สอน
       student: นักเรียน
       try_it_yourself: ลองด้วยตัวเอง
       example: ตัวอย่างวิธีการแก้ปัญหา
@@ -269,10 +270,10 @@ th:
     email_resend_confirm: ส่งคำแนะนำการยืนยันตัวอีกครั้ง
     new_password_hint: "(ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)"
   user_level:
-    completed: สมบูรณ์
+    completed: เสร็จแล้ว
   home:
     title: โค้ดสูดิโอ
-    all_courses: ภาพรวมของคอร์ส 1, 2 และ 3
+    all_courses: ภาพรวมของหลักสูตรที่ 1, 2 และ 3
     lesson_plans: แผนการเรียนการสอน
     signin_message: ลงทะเบียนแล้วหรือยัง? %{link}
     student_reg_link: ลงทะเบียนนักเรียน

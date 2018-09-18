@@ -898,7 +898,7 @@ ky:
             Programming in Artist:
               name: Код менен Сүрөт жаратуу
             Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
+              name: Анна жана Лиза салынган циклдар менен
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
             Variables as Constant in Artist:
@@ -914,7 +914,7 @@ ky:
         courseb-2018:
           stages:
             Loops in Artist:
-              name: Циклдар менен чеп тартуу
+              name: Циклдар менен бакчаларды тартуу
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1071,6 +1071,18 @@ ky:
         pre-express-2018:
           stages:
             Loops in Artist:
-              name: Циклдар менен чеп тартуу
+              name: Циклдар менен бакчаларды тартуу
             Spelling Bee:
               name: Spelling Bee
+        frozen-2018:
+          stages:
+            Artist:
+              name: Сүрөтчү
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Сүрөтчү
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Сүрөтчү

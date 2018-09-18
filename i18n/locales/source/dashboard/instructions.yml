@@ -483,6 +483,7 @@ en:
       Artist - Nested Loops 8_instruction: 'Loop this design 6 times. How much do you have to turn each time you loop? (Hint: What is 360 divided by 6?)'
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
       Artist - Nested Loops Assessment 1_instruction: Use a nested loop to complete the design.
+      Artist Autorun Test_instruction: Now, put the function inside of a loop to draw these three squares.
       Artist Inspiration_instruction: "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\n \nWant to know how our inspiration pattern was made? "
       Auto Open Function Editor_instruction: 'You can call functions from inside other functions! Using your "shape" function as a base, create 3 house shapes each 20 pixels larger than the last starting at 50 pixels in length. Using a counter loop might be helpful. '
       Bee Recommended Blocks test_instruction: Purple flowers may have either 1 or 0 nectar, but you don't know which one! Be careful not to collect nectar from a purple flower if it doesn't have any. Check if the nectar is equal to 1 by using the if block.
@@ -1703,6 +1704,32 @@ en:
       Guess The Number 2_instruction: Build whatever you want. This is an example of a number-guessing game!
       Guess The Number_instruction: Build whatever you want. This is an example of a number-guessing game!
       Guess The Number_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
+      HOC 2018 Level_1_instruction: 'Walk to the chest to get supplies for your journey.
+
+'
+      HOC 2018 Level_10_instruction: Get to the entrance of this Ocean Monument.
+      HOC 2018 Level_11_instruction: 'Build a conduit with Prismarine inside the Ocean Monument.
+
+'
+      HOC 2018 Level_12_instruction: 'Design your own underwater environment, it’s up to you!
+
+'
+      HOC 2018 Level_2_instruction: 'Board the boat at the end of the dock.
+
+'
+      HOC 2018 Level_3_instruction: 'Head across the open seas.
+
+'
+      HOC 2018 Level_4_instruction: Keep rowing, but this time use a loop.
+      HOC 2018 Level_5_instruction: Explore the shipwreck and look for treasure.
+      HOC 2018 Level_6_instruction: Navigate across the ice to reach the temple.
+      HOC 2018 Level_7a_instruction: Get through this temple to find sunken treasure.
+      HOC 2018 Level_8_instruction: 'Can you make it past the volcano to the coral reef?
+
+'
+      HOC 2018 Level_9b_instruction: 'Use the coral as waypoints to reach the treasure.
+
+'
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
       HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
@@ -4044,6 +4071,14 @@ en:
       courseD_artist_project_embedded_instruction: Here's what you will soon be making!
       courseD_artist_ramp11_instruction: Now make a square using Artist!
       courseD_artist_ramp12_instruction: Use what you've learned to draw this triangle inside of a square.
+      courseD_autorun_binary2_2019_instruction: Run this code to see how the artist uses binary to draw this pattern.
+      courseD_autorun_binary3_2019_instruction: Which of the binary strings below could you loop 8 times to draw this image?
+      courseD_autorun_binary4_2019_instruction: Can you draw this pattern by looping just three binary digits (0s and 1s)?
+      courseD_autorun_binary5_2019_instruction: "Each binary string below represents one row of this picture. \n\nCan you rearrange them so it draws a smiley face instead of a frown?"
+      courseD_autorun_binary6_2019_instruction: Which 6 digit binary string, repeated 11 times, will draw this image?
+      courseD_autorun_binary7_2019_instruction: What is the shortest binary string that you can repeat to draw this image?
+      courseD_autorun_binary8_2019_instruction: Finish the code to create this drawing.
+      courseD_autorun_binary8_predict1_2019_instruction: Finish the code to create this drawing.
       courseD_bee_conditionals1_instruction: Check to see if there's a flower under the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals10_instruction: Collect all of the nectar and make all of the honey.
       courseD_bee_conditionals10_2018_instruction: Collect all of the nectar and make all of the honey.
@@ -4874,25 +4909,67 @@ en:
       flappy_9_instruction: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
       flappy_9_2018_instruction: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
       frozen circle function in circle_instruction: Now let's create 20 overlapping circles, turning 18 degrees between each circle.
+      frozen circle function in circle_b_instruction: Now let's create **20** overlapping circles, turning **18 degrees** between each circle.
+      frozen circle function in circle_test_instruction: Now let's create **20** overlapping circles, turning **18 degrees** between each circle.
       frozen circle function with parameter_instruction: Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
+      frozen circle function with parameter_b_instruction: Use the new function to create a small circle of size **5** and a larger circle of size **10**.
+      frozen circle function with parameter_test_instruction: Use the new function to create a small circle of size **5** and a larger circle of size **10**.
       frozen circle function_instruction: Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles.
+      frozen circle function_b_instruction: Use the new `create a circle` function to create 10 overlapping circles. Don't forget to jump forward by 25 pixels between circles!
+      frozen circle function_test_instruction: Use the new `create a circle` function to create 10 overlapping circles. Don't forget to jump forward by 25 pixels between circles!
       frozen circle_instruction: A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?
+      frozen circle_b_instruction: Can you figure out what **"???"** should become to draw a circle?
+      frozen circle_test_instruction: Can you figure out what **"???"** should become to draw a circle?
       frozen cross rotate dense_instruction: 'Let''s repeat it 90 times! How many times does 90 go into 360? Hint: It''s a really small number.'
+      frozen cross rotate dense_b_instruction: Let's repeat the line **90** times!
+      frozen cross rotate dense_test_instruction: Let's repeat the line **90** times!
       frozen cross rotate_instruction: Now try repeating it 10 times. How many degrees do you need to turn between each line?
+      frozen cross rotate_b_instruction: Now try repeating it **10** times. **How many degrees** do you need to turn between each line?
+      frozen cross rotate_test_instruction: Now try repeating it **10** times. **How many degrees** do you need to turn between each line?
       frozen cross_instruction: Wrap a “Repeat” block around these commands to create a plus sign. Did you notice Elsa can move forward and backward?
+      frozen cross_b_instruction: Draw a line that is **100** pixels long, then move back to the center before turning **90 degrees**. Repeat **4** times.
+      frozen cross_test_instruction: Draw a line that is **100** pixels long, then move back to the center before turning **90 degrees**. Repeat **4** times.
       frozen diamond mini snowflake_instruction: Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.
+      frozen diamond mini snowflake_b_instruction: Make a new snowflake by repeating this diamond 4 times.
+      frozen diamond mini snowflake_test_instruction: Make a new snowflake by repeating this diamond 4 times.
       frozen diamond snowflake_instruction: Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one.
+      frozen diamond snowflake_b_instruction: Make your snowflake amazing by repeating the diamond **10** times.
+      frozen diamond snowflake_test_instruction: Make your snowflake amazing by repeating the diamond **10** times.
       frozen diamond_instruction: Use a repeat around these blocks to create a parallelogram. It's just like a rectangle but has different angles. This one has 60 degree and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_b_instruction: 'Add one block to this code to create a parallelogram. '
+      frozen diamond_test_instruction: 'Add one block to this code to create a parallelogram. '
       frozen freeplay_instruction: You've officially become a master artist! Create a winter wonderland.
+      frozen freeplay_b_instruction: Here's everything you need to create your own winter wonderland!
+      frozen freeplay_test_instruction: Here's everything you need to create your own winter wonderland!
       frozen line_instruction: Hi! I'm Elsa of Arendelle. Help me create a single line.
+      frozen line_b_instruction: Help Elsa draw a line that is 100 pixels long.
+      frozen line_test_instruction: Help Elsa draw a line that is 100 pixels long.
       frozen perpendicular_instruction: Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the "Turn" block as well as the "Move" block.
+      frozen perpendicular_b_instruction: Now, create two lines with a 90 degree turn between them.
+      frozen perpendicular_test_instruction: Now, create two lines with a 90 degree turn between them.
       frozen snowflake branch_instruction: Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.
+      frozen snowflake branch_b_instruction: Try using the new `create a snowflake branch` function to create three legs of a snowflake.
+      frozen snowflake branch_template_instruction: Try using the new `create a snowflake branch` function to create three legs of a snowflake.
+      frozen snowflake branch_test_instruction: Try using the `create a snowflake branch` block to create three legs of a snowflake.
       frozen snowflake full_instruction: Now let's repeat it 8 times to make a beautiful snowflake!
+      frozen snowflake full_b_instruction: Now let's repeat it **8** times to make a beautiful snowflake!
+      frozen snowflake full_test_instruction: Now let's repeat it **8** times to make a beautiful snowflake!
+      frozen snowflake fuller_b_instruction: What happens if you jump back before you draw each branch?
       frozen snowflower_instruction: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
+      frozen snowflower_b_instruction: Can you make a new snowflake by repeating this code **5** times and turning **72** degrees between each set?
+      frozen snowflower_test_instruction: Can you make a new snowflake by repeating this code **5** times and turning **72** degrees between each set?
       frozen square iterative_instruction: It seems like we're halfway to making a square. Let's put 4 lines together to create a square.
+      frozen square iterative_b_instruction: Add four more blocks of code to finish the square.
+      frozen square iterative_test_instruction: Add four more blocks of code to finish the square.
       frozen square loop 3x_instruction: Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.
+      frozen square loop 3x_b_instruction: 'Help Anna draw three squares, turning **120 degrees** after each one. '
+      frozen square loop 3x_test_instruction: 'Help Anna draw three squares, turning **120 degrees** after each one. '
       frozen square loop_instruction: Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?
+      frozen square loop_b_instruction: How many times (???) should the `repeat` block run the code inside to make a square?
+      frozen square loop_test_instruction: How many times (???) should the `repeat` block run the code inside to make a square?
       frozen square snowflake_instruction: Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?
+      frozen square snowflake_b_instruction: Change the code from the last puzzle to make this snowflake with **10** squares and **36 degree** turns.
+      frozen square snowflake_test_instruction: Change the code from the last puzzle to make this snowflake with **10** squares and **36 degree** turns.
       grade1_adventurer_loops1_instruction: Four piles of gold!  Collect all four.
       grade1_adventurer_loops10_instruction: Help me get all of the gold from this cave.
       grade1_adventurer_loops2_instruction: How can Laurel collect all five piles of gold using only one `E -->` block?

@@ -195,6 +195,12 @@ fr:
       frozen cross rotate_callout:
         replace_questions_degree: Utilise le menu déroulant pour remplacer «???» par
           un nombre.
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Utilise le menu déroulant pour remplacer «???» par
+          un nombre.
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Utilise le menu déroulant pour remplacer «???» par
+          un nombre.
       frozen cross_callout:
         repeat_blocks_1: "(1) Utilise ce bloc et place-le autour des blocs gris dans
           l'espace de travail"
@@ -207,7 +213,19 @@ fr:
       frozen freeplay_callout:
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
           de neige !
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
       frozen line_callout:
+        move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
+          « Lors du lancement » pour faire avancer Elsa.
+      frozen line_b_callout:
+        move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
+          « Lors du lancement » pour faire avancer Elsa.
+      frozen line_test_callout:
         move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
           « Lors du lancement » pour faire avancer Elsa.
       frozen perpendicular_callout:
@@ -215,13 +233,31 @@ fr:
           dans le menu déroulant détermine de combien de degrés Elsa tournera.
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Utilise le bloc « Créer un flocon de neige ».
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utilise le bloc « Créer un flocon de neige ».
       frozen square iterative_callout:
+        frozen_create_square: Attache plus de blocs ici pour créer un carré
+      frozen square iterative_b_callout:
+        frozen_create_square: Attache plus de blocs ici pour créer un carré
+      frozen square iterative_test_callout:
         frozen_create_square: Attache plus de blocs ici pour créer un carré
       frozen square loop 3x_callout:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop 3x_b_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop 3x_test_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
       frozen square loop_callout:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop_b_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square loop_test_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
       frozen square snowflake_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square snowflake_b_callout:
+        replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      frozen square snowflake_test_callout:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta

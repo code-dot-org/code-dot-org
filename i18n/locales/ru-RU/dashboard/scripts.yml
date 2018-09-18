@@ -2040,3 +2040,15 @@ ru:
               name: Твой цифровой след
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стиви и Большой Проект
+        frozen-2018:
+          stages:
+            Artist:
+              name: Художник
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Художник
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Художник

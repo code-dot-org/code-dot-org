@@ -3,11 +3,16 @@ zh-TW:
   data:
     script:
       category:
+        csd_2018_category_name: 計算機科學探索（'18-'19）
         csf_category_name: CS 基本原理
+        csf_2018_category_name: 計算機科學基礎（2018）
+        csf_international_category_name: 計算機科學基礎國際版
         csf2_draft_category_name: 開發中：課程 A - F
         csp_category_name: "'15-' 16 計算機科學原理"
+        csp_2018_category_name: 計算機科學原理（'18-'19）
         cspexams_category_name: 計算機科學原理應用測驗
         csp17_category_name: CS 原理
+        full_course_category_name: 完整課程
         hoc_category_name: 一小時玩程式
         math_category_name: 運算
       name:
@@ -1420,6 +1425,8 @@ zh-TW:
               name: 簡單加密
             What is Big Data?:
               name: 大數據是什麼？
+            Student Post-Course Survey:
+              name: 課後問卷調查
         csp5-2017:
           description_short: 透過使用 JavaScript 製作豐富、互動的應用程式，繼續學習更多計算機編程的基礎概念 。
           stages:
@@ -1702,6 +1709,8 @@ zh-TW:
               name: 迴圈介紹
             Programming:
               name: 程式設計
+            Unspotted Bugs:
+              name: 沒被發現的蟲蟲
         grade5:
           description_audience: 年齡 10-110
           stages:
@@ -2696,6 +2705,7 @@ zh-TW:
               name: 迴圈：快樂迴圈
           title: 課程 A
           assignment_family_title: 課程 A
+          description_short: 給學齡前兒童的電腦科學指南
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2704,6 +2714,7 @@ zh-TW:
               name: 迷宮中的程式設計
           title: 課程 B
           assignment_family_title: 課程 B
+          description_short: 為學前兒童準備的計算機科學介紹（類似課程 A，但對年紀大些的學童提供了更多變化）
         coursec-2017:
           stages:
             Programming in Maze:
@@ -2724,6 +2735,7 @@ zh-TW:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
           title: 課程 D
           assignment_family_title: 課程 D
+          description_short: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -2750,6 +2762,7 @@ zh-TW:
               name: 巢狀迴圈
           title: 課程 E
           assignment_family_title: 課程 E
+          description_short: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
         coursef-2017:
           stages:
             Variables in Artist:
@@ -2766,6 +2779,7 @@ zh-TW:
               name: 打好基礎
           title: 課程 F
           assignment_family_title: 課程 F
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
         csdnovice:
           stages:
             Wrap Up:
@@ -2806,6 +2820,8 @@ zh-TW:
               name: 打好基礎
             Nested Loops:
               name: 巢狀迴圈
+          title: 速學課程
+          assignment_family_title: 速學課程
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2898,6 +2914,8 @@ zh-TW:
               name: 打好基礎
             Nested Loops in Bee:
               name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
         csp3-a:
           stages:
             new stage:
@@ -3039,6 +3057,7 @@ zh-TW:
           stages:
             Minecraft Hour of Code:
               name: 一小時玩 Minecraft
+          description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
         csp-explore-2017:
           stages:
             new stage:
@@ -3195,7 +3214,10 @@ zh-TW:
               name: 來源和搜尋引擎
         coursea-2018:
           assignment_family_title: 課程 A
+          description_short: 給學齡前兒童的電腦科學指南
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 沒被發現的蟲蟲
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie 和 Big Project
             Learn to Drag and Drop:
@@ -3211,6 +3233,7 @@ zh-TW:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
         express-2018:
+          assignment_family_title: 速學課程
           stages:
             'Algorithms: Graph Paper Programming':
               name: 圖畫紙程式設計
@@ -3292,6 +3315,8 @@ zh-TW:
               name: 二進制圖像
             Artist Binary:
               name: 小藝術家 - 二進制（Binary）
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
             Graph Paper Programming:
               name: 圖畫紙程式設計
             Relay Programming:
@@ -3353,6 +3378,7 @@ zh-TW:
               name: 一小時玩 Minecraft
         coursef-2018:
           assignment_family_title: 課程 F
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
           stages:
             'Programming: My Robotic Friends':
               name: 我的機器人朋友
@@ -3548,6 +3574,8 @@ zh-TW:
               name: 總結
         pre-express-2018:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: 沒被發現的蟲蟲
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie 和 Big Project
             'Real-life Algorithms: Plant a Seed':
@@ -3564,3 +3592,19 @@ zh-TW:
               name: 你的數位足跡
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
+        frozen-2018:
+          stages:
+            Artist:
+              name: 藝術家
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: 藝術家
+        dance:
+          stages:
+            new stage:
+              name: 新的階段
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: 藝術家

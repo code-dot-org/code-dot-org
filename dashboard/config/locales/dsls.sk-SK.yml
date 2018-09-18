@@ -1,27 +1,925 @@
 ---
 sk:
   data:
+    evaluation_multi:
+      U5 evaluation q1:
+        'No': Nie
+        'Yes': Áno
+      U5 evaluation q2:
+        0: "? Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        1: ": Modules in this unit are organized based on lessons that build towards
+          a common project. Once a programming concept is introduced, we will use
+          that again concept in later lessons. Which concept are you least familiar
+          with?"
+        While Loops: Podmieňovacie slučky While
+    external:
+      Algo How Routers Learn Student Lesson Introduction:
+        title: nadpis
+      Algo Shortest Path Student Lesson Introduction:
+        title: nadpis
+      Basic mechanics of variables:
+        title: nadpis
+      Basic mechanics of variables_2018:
+        title: nadpis
+      Begin planning your project:
+        title: nadpis
+      'Big Picture: If-statements':
+        title: nadpis
+      'Big Picture: If-statements_2018':
+        title: nadpis
+      Boolean Expressions and Comparison Operators:
+        title: nadpis
+      Boolean Expressions and Comparison Operators_2018:
+        title: nadpis
+      CSD U1 Input Output C2:
+        title: nadpis
+      CSD U1 Input Output C3:
+        title: nadpis
+      CSD U1 Input Output C4:
+        title: nadpis
+      CSD U1 Input Output Intro:
+        title: nadpis
+      CSD U2 Design Project:
+        title: nadpis
+      CSD U2 Design Project_2018:
+        title: nadpis
+      CSD U2 L1 Overview:
+        title: nadpis
+      CSD U2 L1 Overview_2018:
+        title: nadpis
+      CSD U2 L2 Overview:
+        title: nadpis
+      CSD U2 L2 Overview_2018:
+        title: nadpis
+      CSD U2 L3 Overview:
+        title: nadpis
+      CSD U2 L3 Overview_2018:
+        title: nadpis
+      CSD U2 L4 Overview:
+        title: nadpis
+      CSD U2 L4 Overview_2018:
+        title: nadpis
+      CSD U2 L5 Overview:
+        title: nadpis
+      CSD U2 L5 Overview_2018:
+        title: nadpis
+      CSD U2 L6 Overview:
+        title: nadpis
+      CSD U2 L6 Overview_2018:
+        title: nadpis
+      CSD U2 Social Sleuth:
+        title: nadpis
+      CSD U2 expand project:
+        title: nadpis
+      CSD U2 expand project_2018:
+        title: nadpis
+      CSD U2 layout style review:
+        title: nadpis
+      CSD U2 more CSS:
+        title: nadpis
+      CSD U3 L2 Challenges:
+        title: nadpis
+      CSD U3 SFLP Sprites and Images:
+        title: nadpis
+      CSD U3 abstraction intro:
+        title: nadpis
+      CSD U3 combining rep:
+        title: nadpis
+      CSD U3 combining rep_2018:
+        title: nadpis
+      CSD U5 Encryption 1:
+        title: nadpis
+      CSD U5 Encryption 1_2018:
+        title: nadpis
+      CSD U5 L13 SFLP Interpreting Data:
+        title: nadpis
+      CSD U5 L13 SFLP Interpreting Data_2018:
+        title: nadpis
+      CSD U5 Representing Information:
+        title: nadpis
+      CSD U5 collection UPS2:
+        title: nadpis
+      CSD U5 collection ads2:
+        title: nadpis
+      CSD U5 data visualization:
+        title: nadpis
+      CSD U5 data visualization sheet:
+        title: nadpis
+      CSD U5 data visualization_2018:
+        title: nadpis
+      CSD U5 student record:
+        title: nadpis
+      CSD U5 student record_2018:
+        title: nadpis
+      CSD U5 video2:
+        title: nadpis
+      CSD-U3-SFLP Drawing:
+        title: nadpis
+      CSDU2L01 SFLP:
+        title: nadpis
+      CSP Journal Entry Placeholder2:
+        title: nadpis
+      CSPStudentLessonPlanTemplate:
+        title: nadpis
+      CSPU5 Making a Multi Screen Chaser Game:
+        title: nadpis
+      CSPU5_ChoosingGoodIds:
+        title: nadpis
+      CSPU5_EventDrivenProgrammingPatterns:
+        title: nadpis
+      CSPU5_FirstTimeDesignMode:
+        title: nadpis
+      CSPU5_FirstTimeDesignMode_2018:
+        title: nadpis
+      CSPU5_HowImagesWork:
+        title: nadpis
+      CSPU5_HowOnEventWorks_v2:
+        title: nadpis
+      CSPU5_U3L14 - Message - Other ways to assign values:
+        title: nadpis
+      CSPU5_U3L14 - Message - basic mechanics of variables:
+        title: nadpis
+      CSPU5_U3L15 - explanation of IF and =v==:
+        title: nadpis
+      CSPU5_U3L15 Student Lesson Intro - new:
+        title: nadpis
+      CSPU5_U3L20 - combining And and Or explanation:
+        title: nadpis
+      CSPU5_goodbyeTurtle_setPosition:
+        title: nadpis
+      CSPU5_introToDebugging:
+        title: nadpis
+      CSPU5_makingPredictions_ref:
+        title: nadpis
+      CSPU5_onEventBreakdown:
+        title: nadpis
+      CSP_Final_instructions:
+        title: nadpis
+      CSP_U4_rawMovieData:
+        title: nadpis
+      Color Sleuth - Epilogue:
+        title: nadpis
+      Color Sleuth - Epilogue_2018:
+        title: nadpis
+      Color Sleuth - How does it end?:
+        title: nadpis
+      Color Sleuth - How does it end?_2018:
+        title: nadpis
+      Color Sleuth - How to switch player turns:
+        title: nadpis
+      Color Sleuth - How to switch player turns_2018:
+        title: nadpis
+      Color Sleuth - Keeping score:
+        title: nadpis
+      Color Sleuth - Keeping score_2018:
+        title: nadpis
+      Color Sleuth - Planning the App:
+        title: nadpis
+      Color Sleuth - Planning the App_2018:
+        title: nadpis
+      Controlling Memory - Other ways to assign values:
+        title: nadpis
+      Controlling Memory - Other ways to assign values_2018:
+        title: nadpis
+      Cups and Beans Activity:
+        title: nadpis
+      Cups and Beans Activity_2018:
+        title: nadpis
+      Debugging with Console.log:
+        title: nadpis
+      Debugging with Console.log_2018:
+        title: nadpis
+      Digital Footprint Chirpr lillizard:
+        title: nadpis
+      Digital Footprint FaceSpace Haley:
+        title: nadpis
+      Digital Footprint FaceSpace Lizzie:
+        title: nadpis
+      Digital Footprint instantframe wiz_kid_liz:
+        title: nadpis
+      DigitalCitizenship2:
+        Digital Citizenship: Digitálne Občianstvo
+      ECSPD Challenge Rubric:
+        title: nadpis
+      ECSPD Online U1D11-14:
+        title: nadpis
+      ECSPD Online U1D15-16 Forum:
+        title: nadpis
+      ECSPD Online intro:
+        Introduction: Úvod
+      ECSPD U2 Challenge Plan:
+        title: nadpis
+      ECSPD Unit 2 Stage11:
+        title: nadpis
+      ECSPD Unit 2 Stage13:
+        title: nadpis
+      ECSPD Unit 2 Stage6:
+        title: nadpis
+      Encoding Numbers Real World Student Lesson Introduction:
+        title: nadpis
+      Event Driven Programming Recap:
+        title: nadpis
+      Event Driven Programming Recap_2018:
+        title: nadpis
+      Event-Driven Programming Patterns:
+        title: nadpis
+      Event-Driven Programming Patterns_2018:
+        title: nadpis
+      External MD column Test:
+        title: nadpis
+      External MD column Test bootstrap:
+        title: nadpis
+      GoodBadVisualizations_v1:
+        title: nadpis
+      GoodBadVisualizations_v2:
+        title: nadpis
+      How "if-else-if" Works:
+        title: nadpis
+      How "if-else-if" Works_2018:
+        title: nadpis
+      How Compound Boolean Expressions Work:
+        title: nadpis
+      How Compound Boolean Expressions Work_2018:
+        title: nadpis
+      How Dropdown Menus Work:
+        title: nadpis
+      How Dropdown Menus Work_2018:
+        title: nadpis
+      How If Statements Work pt 1:
+        title: nadpis
+      How If Statements Work pt 1_2018:
+        title: nadpis
+      How If-Else Statements Work:
+        title: nadpis
+      How If-Else Statements Work_2018:
+        title: nadpis
+      How Images Work:
+        title: nadpis
+      How Images Work_2018:
+        title: nadpis
+      How Secure Is Your Password?:
+        title: nadpis
+      How Secure Is Your Password?_2018:
+        title: nadpis
+      How Set Property Works:
+        title: nadpis
+      How Set Property Works_2018:
+        title: nadpis
+      How onEvent Works:
+        title: nadpis
+      How onEvent Works_2018:
+        title: nadpis
+      How setPosition and screen dimensions work:
+        title: nadpis
+      How setPosition and screen dimensions work_2018:
+        title: nadpis
+      How the Boolean &&, || and ! Operators Work:
+        title: nadpis
+      How the Boolean &&, || and ! Operators Work_2018:
+        title: nadpis
+      How to make a random color:
+        title: nadpis
+      How to make a random color_2018:
+        title: nadpis
+      How to pick a random button:
+        title: nadpis
+      How to pick a random button_2018:
+        title: nadpis
+      Internet Simulator Setup 2:
+        title: nadpis
+      Intro to Debugging and Common Problems:
+        title: nadpis
+      Intro to Debugging and Common Problems_2018:
+        title: nadpis
+      Making Multiple Screens:
+        title: nadpis
+      Making Multiple Screens_2018:
+        title: nadpis
+      Making a Multi Screen Chaser Game v.2:
+        title: nadpis
+      Making a Multi Screen Chaser Game v.2_2018:
+        title: nadpis
+      Multi-Screen Apps:
+        title: nadpis
+      New Challenge Introduction:
+        title: nadpis
+      New Challenge Introduction_2018:
+        title: nadpis
+      OPD-K5 Stage3aGo:
+        title: nadpis
+      PDAlg Facilitator Test:
+        title: nadpis
+      PDK5 CS Video:
+        Computer Science: Počítačová veda
+      PDK5 Glossary C:
+        Vocabulary: Slovník
+      PDK5 Pair Programming 1:
+        Pair Programming: Programovanie v páre
+      PDK5 Teacher Dashboard C:
+        Teacher Dashboard: Nástenka učiteľa
+      PS - Responding to User Input:
+        title: nadpis
+      PS - draft - Longitudinal study description:
+        title: nadpis
+      Prepare for your presentation:
+        title: nadpis
+      Public Key Crypto Widget Instructions:
+        title: nadpis
+      Public Key Crypto Widget Instructions_2018:
+        title: nadpis
+      Recruitment-Scenarios-Passthrough:
+        Recruitment Scenarios Session: Lekcia pracovných pohovorov
+      Rules About Choosing Good IDs:
+        title: nadpis
+      Rules About Choosing Good IDs_2018:
+        title: nadpis
+      SG U3 whats a comment:
+        title: nadpis
+      SG v2 U3L01 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L02 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L03 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L05 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L07 Student Lesson Introduction:
+        title: nadpis
+      SG v2 U3L08 Student Lesson Introduction:
+        title: nadpis
+      Sending Bits Real World Student Lesson Introduction:
+        title: nadpis
+      Simple Decisions with if-statements:
+        title: nadpis
+      Simple Decisions with if-statements_2018:
+        title: nadpis
+      Tips For Working on Your Own:
+        title: nadpis
+      Tips For Working on Your Own_2018:
+        title: nadpis
+      U1L10 Student Lesson Introduction:
+        title: nadpis
+      U1L11 Student Lesson Introduction:
+        title: nadpis
+      U1L12 Student Lesson Introduction:
+        title: nadpis
+      U1L13 Student Lesson Summary:
+        title: nadpis
+      U1L14 Student Lesson Summary:
+        title: nadpis
+      U1L15 Student Lesson Summary:
+        title: nadpis
+      U1L17 Student Lesson Introduction:
+        title: nadpis
+      U1L2 Student Lesson Introduction:
+        title: nadpis
+      U1L3 Student Lesson Introduction:
+        title: nadpis
+      U1L4 Student Lesson Introduction:
+        title: nadpis
+      U1L5 Student Lesson Introduction:
+        title: nadpis
+      U1L6 Student Lesson Introduction:
+        title: nadpis
+      U1L7 Student Lesson Introduction:
+        title: nadpis
+      U1L8 Student Lesson Introduction:
+        title: nadpis
+      U1L9 Student Lesson Introduction:
+        title: nadpis
+      U2L1 Student Lesson Introduction:
+        title: nadpis
+      U2L12 Student Lesson Introduction:
+        title: nadpis
+      U2L7 Student Lesson Introduction:
+        title: nadpis
+      U2L8 Student Lesson Introduction:
+        title: nadpis
+      U3 whats a comment:
+        title: nadpis
+      U3 whats a comment_2018:
+        title: nadpis
+      U3L12 - Mission Unsortable:
+        title: nadpis
+      U3L13 - Explanation of Ids:
+        title: nadpis
+      U3L13 - Make a Prediction Explanation:
+        title: nadpis
+      U3L13 Add Button Instrucitons:
+        title: nadpis
+      U3L13 Add Button Instructions:
+        title: nadpis
+      U3L14 - Message - Other ways to assign values:
+        title: nadpis
+      U3L14 - Message - basic mechanics of variables:
+        title: nadpis
+      U3L14 - Student Intro Page:
+        title: nadpis
+      U3L15 - explanation of IF and =v==:
+        title: nadpis
+      U3L15 Student Lesson Intro - new:
+        title: nadpis
+      U3L19 - done with variables finally:
+        title: nadpis
+      U3L20 - combining And and Or explanation:
+        title: nadpis
+      U4 - Cleaning Data - Activity Guide:
+        title: nadpis
+      U4 - Making Data Visualizations - Bar Chart:
+        title: nadpis
+      U4 - Making Data Visualizations - Edit Chart Appearance:
+        title: nadpis
+      U4 - Making Data Visualizations - Free Play:
+        title: nadpis
+      U4 - Making Data Visualizations - Free Play_2018:
+        title: nadpis
+      U4 - Making Data Visualizations - Getting Started:
+        title: nadpis
+      U4 - Making Data Visualizations - Line Chart:
+        title: nadpis
+      U4 - Making Data Visualizations - Scatter Plot:
+        title: nadpis
+      U4 - Making Data Visualizations - Student Introduction:
+        title: nadpis
+      U4 - Privacy Abandoned - Hot On Your Trail Video:
+        title: nadpis
+      U4 - Unique Ids Explanation:
+        title: nadpis
+      U4 - Unique Ids Explanation_2018:
+        title: nadpis
+      U4 Cleaning Data Activity Guide Pt2:
+        title: nadpis
+      U4 Cleaning Data Activity Guide Pt3:
+        title: nadpis
+      U4L01 Student Lesson Introduction:
+        title: nadpis
+      U4L02 Student Lesson Introduction:
+        title: nadpis
+      U4L02 Student Lesson Introduction_2018:
+        title: nadpis
+      U4L02v2 - Finding Trends:
+        title: nadpis
+      U4L03 Student Lesson Introduction:
+        title: nadpis
+      U4L03 Student Lesson Introduction_2018:
+        title: nadpis
+      U4L03v2 - Student Introduction:
+        title: nadpis
+      U4L04 Student Lesson Introduction:
+        title: nadpis
+      U4L04 Student Lesson Introduction_2018:
+        title: nadpis
+      U4L04v2 - Student Introduction:
+        title: nadpis
+      U4L05 Student Lesson Introduction:
+        title: nadpis
+      U4L06 Student Lesson Introduction:
+        title: nadpis
+      U4L06v2 Student Lesson Introduction:
+        title: nadpis
+      U4L07 Student Introduction public key crypto:
+        title: nadpis
+      U4L07 Student Lesson Introduction:
+        title: nadpis
+      U4L08 - mod clock instructions:
+        title: nadpis
+      U4L08 Student Lesson Introduction:
+        title: nadpis
+      U4L08v2 Making Pivot Tables:
+        title: nadpis
+      U4L08v2 Making Pivot Tables Part 2:
+        title: nadpis
+      U4L08v2 Making Pivot Tables Part 3:
+        title: nadpis
+      U4L08v2 Making Pivot Tables Part 3_2018:
+        title: nadpis
+      U4L08v2 Student Intro:
+        title: nadpis
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        title: nadpis
+      U4L09 Student Lesson Introduction:
+        title: nadpis
+      U4L10 Student Lesson Introduction:
+        title: nadpis
+      U4L11 Student Lesson Introduction:
+        title: nadpis
+      U4L12 - Student Introduction:
+        title: nadpis
+      U4L12 Student Lesson Introduction:
+        title: nadpis
+      U4L13 Student Lesson Introduction:
+        title: nadpis
+      U4L14 Student Lesson Introduction:
+        title: nadpis
+      U4L15 Student Lesson Introduction:
+        title: nadpis
+      U4L16 Student Lesson Introduction:
+        title: nadpis
+      U4L17 Student Lesson Introduction:
+        title: nadpis
+      U4L18 Student Lesson Introduction:
+        title: nadpis
+      U4L19 Student Lesson Introduction:
+        title: nadpis
+      U4L20 Student Lesson Introduction:
+        title: nadpis
+      U4L21 Student Lesson Introduction:
+        title: nadpis
+      U4L22 Student Lesson Introduction:
+        title: nadpis
+      U4L23 Student Lesson Introduction:
+        title: nadpis
+      U4L24 Student Lesson Introduction:
+        title: nadpis
+      U4L5 random subst challenge page:
+        title: nadpis
+      U5 - Create PT - Student Introduction:
+        title: nadpis
+      U5 - Create PT Prep - Student Introduction:
+        title: nadpis
+      U5 - Create PT review - Student Introduction:
+        title: nadpis
+      U5 - Explore PT - Student Introduction:
+        title: nadpis
+      U5 - Explore PT Prep - Student Introduction:
+        title: nadpis
+      U5 - Explore PT Review - Student Introduction:
+        title: nadpis
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        title: nadpis
+      U5 color sleuth check correct:
+        title: nadpis
+      U5 color sleuth check correct_2018:
+        title: nadpis
+      U5L08 - Student Intro If statements:
+        title: nadpis
+      U6 - Charts - Student Introduction:
+        title: nadpis
+      U6 - Charts - Student Introduction_2018:
+        title: nadpis
+      U6 - Final Project - Student Introduction:
+        title: nadpis
+      U6 - Final Project - Student Introduction_2018:
+        title: nadpis
+      U6 - ImportExport - Student Introduction:
+        title: nadpis
+      U6 - ImportExport - Student Introduction_2018:
+        title: nadpis
+      U6 - Sample Apps - Student Introduction:
+        title: nadpis
+      U6 - Sample Apps - Student Introduction_2018:
+        title: nadpis
+      U6 - deleteRecord - Student Introduction:
+        title: nadpis
+      U6 - deleteRecord - Student Introduction_2018:
+        title: nadpis
+      U6 - updateRecord - Student Introduction:
+        title: nadpis
+      U6 - updateRecord - Student Introduction_2018:
+        title: nadpis
+      U6 AP Performance Task Tech Setup - Student Links:
+        title: nadpis
+      U6 Create PT - Complete the Task - Student Links:
+        title: nadpis
+      U6 Create PT - Complete the Task - Student Links_2018:
+        title: nadpis
+      U6 Create PT Review - Student Links:
+        title: nadpis
+      U6 Create PT Review - Student Links_2018:
+        title: nadpis
+      U6 Explore PT - Complete the Task - Student Links:
+        title: nadpis
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        title: nadpis
+      U6 Explore PT - Make a Plan - Student Links:
+        title: nadpis
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        title: nadpis
+      U6 Explore PT Review - Student Links:
+        title: nadpis
+      U6 Explore PT Review - Student Links_2018:
+        title: nadpis
+      Unit 2 Lesson 1 Overview Clone:
+        title: nadpis
+      Unit 4 Lesson 1 Introduction:
+        title: nadpis
+      Unit 4 Lesson 1 Introduction_2018:
+        title: nadpis
+      Unit 4 Lesson 2 Introduction:
+        title: nadpis
+      Unit 4 Lesson 2 Introduction_2018:
+        title: nadpis
+      Unit 4 Lesson 5 Introduction:
+        title: nadpis
+      Unit 4 Lesson 5 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 1:
+        title: nadpis
+      Unit 5 Lesson 1 Introduction:
+        title: nadpis
+      Unit 5 Lesson 1 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 10 Introduction:
+        title: nadpis
+      Unit 5 Lesson 10 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 2 Introduction:
+        title: nadpis
+      Unit 5 Lesson 2 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 3 Introduction:
+        title: nadpis
+      Unit 5 Lesson 3 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 4 Introduction:
+        title: nadpis
+      Unit 5 Lesson 4 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 5:
+        title: nadpis
+      Unit 5 Lesson 5 Introduction:
+        title: nadpis
+      Unit 5 Lesson 5 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 6:
+        title: nadpis
+      Unit 5 Lesson 6 Introduction:
+        title: nadpis
+      Unit 5 Lesson 6 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 7 Introduction:
+        title: nadpis
+      Unit 5 Lesson 7 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 8 Introduction:
+        title: nadpis
+      Unit 5 Lesson 8 Introduction_2018:
+        title: nadpis
+      Unit 5 Lesson 9 Introduction:
+        title: nadpis
+      Unit 5 Lesson 9 Introduction_2018:
+        title: nadpis
+      'Worked Example: If-statements and Robot':
+        title: nadpis
+      'Worked Example: If-statements and Robot_2018':
+        title: nadpis
+      brad-repro-bug-000:
+        Brad Repro Bug 000: Brand Repro Chyba 000
+      courseB_external_MRF:
+        title: nadpis
+      courseB_external_loopMRF:
+        title: nadpis
+      courseB_story_unspottedBugs10:
+        title: nadpis
+      courseB_story_unspottedBugs11:
+        title: nadpis
+      courseB_story_unspottedBugs12:
+        title: nadpis
+      courseB_story_unspottedBugs13:
+        title: nadpis
+      courseB_story_unspottedBugs14:
+        title: nadpis
+      courseB_story_unspottedBugs15:
+        title: nadpis
+      courseB_story_unspottedBugs16:
+        title: nadpis
+      courseB_story_unspottedBugs17:
+        title: nadpis
+      courseB_story_unspottedBugs18:
+        title: nadpis
+      courseB_story_unspottedBugs2:
+        title: nadpis
+      courseB_story_unspottedBugs3:
+        title: nadpis
+      courseB_story_unspottedBugs4:
+        title: nadpis
+      courseB_story_unspottedBugs5:
+        title: nadpis
+      courseB_story_unspottedBugs6:
+        title: nadpis
+      courseB_story_unspottedBugs7:
+        title: nadpis
+      courseB_story_unspottedBugs8:
+        title: nadpis
+      courseB_story_unspottedBugs9:
+        title: nadpis
+      courseB_unplugged_mrfProgramming:
+        title: nadpis
+      courseC_screenoutthemean:
+        title: nadpis
+      courseF_firstFunctions_map:
+        title: nadpis
+      coursef_functionsSummary_map:
+        title: nadpis
+      coursef_powerofwords:
+        title: nadpis
+      csd-post-survey-unit1-preamble:
+        title: nadpis
+      csd-post-survey-unit2-preamble:
+        title: nadpis
+      csd-post-survey-unit3-preamble:
+        title: nadpis
+      csd-post-survey-unit4-preamble:
+        title: nadpis
+      csd-post-survey-unit5-preamble:
+        title: nadpis
+      csd-post-survey-unit6-preamble:
+        title: nadpis
+      csp-post-survey-2018-AP-preamble:
+        title: nadpis
+      csp-post-survey-2018-topics-preamble:
+        title: nadpis
+      csp-post-survey-2018-unit-feedback-preamble:
+        title: nadpis
+      csp-post-survey-createPT-preamble:
+        title: nadpis
+      csp-post-survey-explorePT-preamble:
+        title: nadpis
+      csp-post-survey-unit1-preamble:
+        title: nadpis
+      csp-post-survey-unit2-preamble:
+        title: nadpis
+      csp-post-survey-unit3-preamble:
+        title: nadpis
+      csp-post-survey-unit4-preamble:
+        title: nadpis
+      csp-post-survey-unit5-preamble:
+        title: nadpis
+      csp_unit5_finalassessment_overview:
+        title: nadpis
+      csp_unit5_finalassessment_overview_2018:
+        title: nadpis
+      csp_unit5_finalassessment_overview_exam_prep:
+        title: nadpis
+      csp_unit_assessment_overview:
+        title: nadpis
+      csp_unit_assessment_overview_2018:
+        title: nadpis
+      csp_unit_assessment_overview_exam_prep:
+        title: nadpis
+      dsl link test:
+        title: nadpis
+      grade2_maze_intro1:
+        title: nadpis
+      grade2_unplugged_neighborhood:
+        title: nadpis
+      grade4_project_design:
+        title: nadpis
+      grade4_project_design_image:
+        title: nadpis
+      grade4_project_presentation:
+        title: nadpis
+      grade5_project_design:
+        title: nadpis
+      grade5_project_presentation:
+        title: nadpis
+      more encryption algorithms:
+        title: nadpis
+      post-assessment survey heading4:
+        title: nadpis
+      pwc_appdev:
+        title: nadpis
+      pwc_appdevunplugged:
+        title: nadpis
+      pwc_cybersecurity:
+        title: nadpis
+      pwc_internetofthings:
+        title: nadpis
+      pwc_programming:
+        title: nadpis
+      pwc_webdevelopment:
+        title: nadpis
+      sciPD framework video:
+        Framework: Rámec
+      sciPD2Part4_S1_L3:
+        title: nadpis
+      sciPD2Part4_S2_L1:
+        title: nadpis
+      sciPD2Part4_S2_L2:
+        title: nadpis
+      sciPD2Part4_S3_L1:
+        title: nadpis
+      sciPD2Part4_S3_L2:
+        title: nadpis
+      sciPD2Part4_S3_L3:
+        title: nadpis
+      sciPD3 mods2:
+        title: nadpis
+      sciPD33 earth1:
+        title: nadpis
+      sciPD33 earth2:
+        title: nadpis
+      sciPDpart4_S1_L1:
+        title: nadpis
+      swipeRightPassThrough:
+        Recruitment Scenarios Session: Lekcia pracovných pohovorov
+      swipeRightPassThrough-test123:
+        Recruitment Scenarios Session: Lekcia pracovných pohovorov
+      test discourse level type:
+        title: nadpis
+      v2 U1 Internet is for Everyone Student Lesson Introduction:
+        title: nadpis
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L14 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L14 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L2 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L2 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L3 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L3 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L4 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L4 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L5 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L5 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U1L8 Student Lesson Introduction:
+        title: nadpis
+      v2 U1L8 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L1 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L1 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L10 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L10 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L11 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L11 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L12 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L12 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L13 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L13 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L14 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L14 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L15 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L15 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L2 Student Lesson Summary:
+        title: nadpis
+      v2 U2L2 Student Lesson Summary_2018:
+        title: nadpis
+      v2 U2L3 Student Lesson Summary:
+        title: nadpis
+      v2 U2L3 Student Lesson Summary_2018:
+        title: nadpis
+      v2 U2L4 Student Lesson Summary:
+        title: nadpis
+      v2 U2L4 Student Lesson Summary_2018:
+        title: nadpis
+      v2 U2L6 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L6 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L7 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L7 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L8 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L8 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U2L9 Student Lesson Introduction:
+        title: nadpis
+      v2 U2L9 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U3L04 Student Lesson Introduction:
+        title: nadpis
+      v2 U3L04 Student Lesson Introduction_2018:
+        title: nadpis
+      v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Tvorba funkcií
+      v2 U3L05 Student Lesson Introduction_2018:
+        Creating Functions: Tvorba funkcií
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        title: nadpis
     match:
       2-3 Big Event Match 1:
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         Match the button combination to the dance moves.: Spoj kombináciu tlačidiel
           k tanečným pohybom.
         Matching: Zodpovedajúce
       2-3 Binary Match 1:
-        "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a3.png": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
-        "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
-        "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
-          250"
         "<strong>N</strong>": "<strong>N</strong>"
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>P</strong>"
@@ -30,89 +928,25 @@ sk:
         Use the key to match each code to its letter: Použi kľúč na spojenie každého
           kódu s jeho písmenom
       2-3 Graph Paper Match 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         Match the grid to the program.: Spoj mirežku s programom.
         Matching: Zodpovedajúce
       2-3 Maze Match 2:
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Potiahni bloky tak, aby sa zhodovali.
         Instructions: Inštrukcie
         Match the puzzles to the blocks: Spoj úlohu s blokmi
         Maze Match: Spájanie s bludiskom
       2-3 Relay Programming Match 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: Spoj mirežku s programom
         Matching: Zodpovedajúce
       2-3 artist loops match 1:
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: Spájanie umelcových cyklov 1
         Match the loop to the shape: Spoj cyklus s tvarom
       2-3 artist match 1:
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         Artist Matching: Umelcovo párovanie
         Match the shape with the blocks that complete it.: Spoj tvary s blokmi, ktoré
           ich dokončia.
       2-3 bounce match 1:
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
-        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: Porovnávanie odrazu
-        Match the events with the actions: Porovnaj udalosti s akciami
         Matching: Zodpovedajúce
       2-3 flappy match 1:
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
-        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
-        Flappy Matching One: Flappy párovanie 1
-        Match the events with the actions: Porovnaj udalosti s akciami
         Matching: Zodpovedajúce
       2-3 maze match 1:
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         Match the puzzles to the blocks: Spoj úlohu s blokmi
         Maze Match One: Spájanie s bludiskom 1
       4-5 Algorithms Match 1:
@@ -130,10 +964,6 @@ sk:
           kroky v hre Závod kociek s poradím, v akom by sa mali objaviť v algoritme.
         Matching: Zodpovedajúce
       4-5 Computational Thinking Match 1:
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
-        "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Kolesá/strana: 2<br/>Okná/strana:
           0</h3>"
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Kolesá/strana: 2<br/>Okná/strana:
@@ -147,365 +977,200 @@ sk:
           zoznamom jeho súčiastok.
         Matching: Zodpovedajúce
       4-5 Suncatchers Match 1:
-        "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
-        Match each program to the word it makes, using the provided group of skills.: Match
-          each program to the word it makes, using the provided group of skills.
+        Match each program to the word it makes, using the provided group of skills.: Spárujte
+          každý z programov so slovom ktoré ho daný program vytvorí použitím danej
+          skupiny vlastností a schopností.
         Matching: Zodpovedajúce
       4-5 maze match 1:
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: Potiahni bloky tak, aby sa zhodovali.
         Instructions: Inštrukcie
         Match the puzzles to the blocks: Spoj úlohu s blokmi
         Maze Match: Spájanie s bludiskom
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+      CSD U3 keyinput match:
+        Question: Otázka
+      CSDU2 Match RGB Colors:
+        Question: Otázka
+      CSPU5_U3L14 - Matching Events to Description:
+        click: klikni
       K-1 Artist 2 Match 1:
-        "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
-        "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
-        "/script_assets/k_1_images/artist_images/square_next_ball.png": "/script_assets/k_1_images/artist_images/square_next_ball.png"
-        "<br/><br/>above": "<br/> <br/> nad"
-        "<br/><br/>below": "<br/> <br/> pod"
-        "<br/><br/>next to": "<br/><br/>vedľa"
-        Is the square next to, above, or below the ball?: Is the square next to, above,
-          or below the ball?
         Matching: Zodpovedajúce
       K-1 Artist 2 Match 2:
-        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
-        "/script_assets/k_1_images/artist_images/large_triangle.png": "/script_assets/k_1_images/artist_images/large_triangle.png"
-        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/medium_rectangle.png": "/script_assets/k_1_images/artist_images/medium_rectangle.png"
-        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
-        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Spárujte tvary podľa ich typu.
         Matching: Zodpovedajúce
       K-1 Artist 2 Match 3:
-        "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
-        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
-        "/script_assets/k_1_images/artist_images/large_triangle2.png": "/script_assets/k_1_images/artist_images/large_triangle2.png"
-        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
-        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
-        "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
-        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Spárujte tvary podľa ich typu.
         Matching: Zodpovedajúce
       K-1 Artist Loops Match 1:
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
         Matching: Zodpovedajúce
       K-1 Bee Loops Match 1:
-        "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
-        "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
-        "/script_assets/k_1_images/bee_images/r4_gnectar.png": "/script_assets/k_1_images/bee_images/r4_gnectar.png"
-        "/script_assets/k_1_images/bee_images/r5_ghoney.png": "/script_assets/k_1_images/bee_images/r5_ghoney.png"
-        "/script_assets/k_1_images/move_blocks/EEEEE.png": "/script_assets/k_1_images/move_blocks/EEEEE.png"
-        "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
-        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
-        "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
-        Match the blocks: Match the blocks
+        Match the blocks: Spárujt bloky
         Matching: Zodpovedajúce
       K-1 Big Event Match 1:
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         Match the button combination to the dance moves.: Spoj kombináciu tlačidiel
           k tanečným pohybom.
         Matching: Zodpovedajúce
       K-1 Flappy Match 1:
-        "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
-        "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
-        "/script_assets/k_1_images/flappy_images/flap.png": "/script_assets/k_1_images/flappy_images/flap.png"
-        "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
-        "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
-        "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
-        Match the blocks: Match the blocks
+        Match the blocks: Spárujt bloky
         Matching: Zodpovedajúce
       K-1 Happy Maps Match 1:
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png"
-        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
-        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
-        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the
-          Map to the arrow that gets the Flurb to the treasure
         Matching: Zodpovedajúce
       K-1 Maze Match 1:
-        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
-        "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
-        "/script_assets/k_1_images/maze_images/maze_WSS.png": "/script_assets/k_1_images/maze_images/maze_WSS.png"
-        "/script_assets/k_1_images/maze_images/maze_WW.png": "/script_assets/k_1_images/maze_images/maze_WW.png"
-        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
-        "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
-        "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
-        "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: Potiahni bloky tak, aby sa zhodovali.
         Instructions: Inštrukcie
-        Match the puzzles and blocks: Match the puzzles and blocks
+        Match the puzzles and blocks: Spárujte hádanky a bloky
         Matching: Zodpovedajúce
       K-1 Move It Match 1:
-        "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
-        "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
-        "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match
-          the Map to the algorithm that gets the Flurb to the flowers.
         Matching: Zodpovedajúce
+      PDAlg Design Recipe Video:
+        Definition: Definícia
+      PDAlg Types Video:
+        Image: Obrázok
+        Number: Číslo
+        String: Reťazec
+      PDK5 What is unplugged:
+        Question: Otázka
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: V
+      U3L14 - Matching Events to Description:
+        click: klikni
+      U3L19 - MATCH what are values of abc:
+        '10': '10'
+        '12': '12'
+        '13': '13'
+        '15': '15'
+        '16': '16'
+        '21': '21'
+        '3': '3'
+        '5': '5'
+        '7': '7'
+        '8': '8'
+        title: nadpis
+      U3L19 - MC what are values of abc:
+        title: nadpis
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
       test matching image:
-        "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
-        "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
-        "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
-        "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
-        "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
-        "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
-        "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
-        "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
-        "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
-        Drag the images from right to center.: Drag the images from right to center.
         Instructions: Inštrukcie
-        Match up all the flowers by colour!: Match up all the flowers by colour!
-        Matching Images Two: Matching Images Two
       test matching text:
         Matching: Zodpovedajúce
-        Some really easy stuff to match.  Drag it around until you get it.: Some really
-          easy stuff to match.  Drag it around until you get it.
-        Sydney: Sydney
-        Van Minnen: Van Minnen
-        What color is the sky?: What color is the sky?
-        What's Brent's last name?: What's Brent's last name?
-        What's in the ocean?: What's in the ocean?
-        Where is Brendan from?: Where is Brendan from?
         blue: modrá
-        salt: salt
+      unique level name here:
+        Question: Otázka
+        title: nadpis
     multi:
       2-3 Algorithms Multi 1:
-        "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided.: Choose an algorithm for the image
-          provided.
+        Choose an algorithm for the image provided.: Vyberte algoritmus pre daný obrázok.
         Multiple Choice: Viacnásobný výber
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
-          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
-          right of the parallelogram
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start
-          with a square<br/>Put a triangle above the square<br/>Put a triangle below
-          the square
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a parallelogram
-          right of the triangle
-        ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Začite
+          štvorcom<br/>Vložte rovnobežník nad štvorec<br/>Vložte trojuholník napravo
+          od rovnobežníka
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Začite
+          štvorcom<br/>Vložte trojuholník nad štvorec<br/>Vložte trojuholník pod štvorec
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Začite
+          štvorcom<br/>Vložte trojuholník pod štvorec<br/>Vložte rovnobežník napravo
+          od trojuholníka
+        0: "? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
+        1: ": Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
+          below square<br/>Put triangle right of parallelogram"
       2-3 Algorithms Multi 2:
-        "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
-        "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         Multiple Choice: Viacnásobný výber
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
-          with a triangle<br/>Put a square below the triangle<br/>Put another triangle
-          below the square
-        Which image does <em>not</em> follow this algorithm?: Which image does <em>not</em>
-          follow this algorithm?
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Začite
+          trojuholníkom<br/>Vložte štvorec pod trojuholník<br />Vložte ďaľší trojuholník
+          pod štvorec
+        Which image does <em>not</em> follow this algorithm?: Ktorý obrázok <em>nie
+          je</em> podľa tohto algoritmu?
       2-3 Binary Multi 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Viacnásobný výber
         Which program makes this image?: Ktorý program vytvorí tento obrázok?
       2-3 Conditionals Multi 1:
-        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
-        "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: According
-          to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Ktorá
+          sada kariet je správne ohodnotená podľa pravidiel hry?
         Multiple Choice: Viacnásobný výber
       2-3 Getting Loopy Multi 1:
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
-        "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: Ako by ste zjednodušili
+          toto poradie slučiek?
         Multiple Choice: Viacnásobný výber
       2-3 Graph Paper Multi 1:
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Viacnásobný výber
         Which program makes this image?: Ktorý program vytvorí tento obrázok?
       2-3 Maze Multi 2:
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
-          500"
-        Maze Multiple Choice: Maze Multiple Choice
-        Which blocks work?: Ktorý z blokov funguje?
+        Maze Multiple Choice: Bludisko s viacerými možnými odpoveďami
       2-3 Relay Programming Multi 1:
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         Multiple Choice: Viacnásobný výber
-        Which program does not create this image?: Ktorý program nevytvorí tento obrázok?
       2-3 Relay Programming Multi 2:
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
-        "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
         Multiple Choice: Viacnásobný výber
-        Which image-program combo does not contain mistakes?: Which image-program
-          combo does not contain mistakes?
-      2-3 artist debug multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
-          700"
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
-        Why won't this circle go all the way around?: Why won't this circle go all
-          the way around?
+        Which image-program combo does not contain mistakes?: Ktorý pár obrázok-program
+          je bez chýb?
       2-3 artist functions multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
-        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
-          500"
-        Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
-        Pick the correct blocks to draw this image using the given functions: Pick
-          the correct blocks to draw this image using the given functions
+        Artist Functions Multiple Choice One: Funkcie Umelca - viaceré možné odpovede
+          Jeden
+        Pick the correct blocks to draw this image using the given functions: Vyberte
+          správne bloky pre nakreslenie tohto obrázku použitím daných funkcií
       2-3 artist loops multi 1:
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
-          500"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Slučky Umelca - viaceré možné odpovede
         Which shape is made by this loop?: Ktorý geometrický tvar je vytvorený touto
           slučkou?
       2-3 artist loops multi 2:
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
-          500"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
+        Artist Loops Multiple Choice: Slučky Umelca - viaceré možné odpovede
         Which shape is made by this program?: Ktorý geometrický tvar je vytvorený
           týmto programom?
       2-3 bee conditionals multi 1:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
         Which comparison below is true?: Ktoré porovnanie je pravdivé?
       2-3 bee conditionals multi 2:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
-          500"
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         Choose the best blocks.: Vyber najlepší z blokov.
       2-3 bee conditionals multi 3:
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
-          500"
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
         Choose the best blocks.: Vyber najlepší z blokov.
       2-3 bee loops multi 1:
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
-        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
-          500"
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
+        Bee Loops Multiple Choice One: Slučky Včely - viaceré možné odpovede Jeden
         Which blocks collect all of the nectar?: Ktorý z blokov pomôže zozbierať všetok
           nektár?
       2-3 maze multi 1:
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
-        "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
-          500"
-        Maze Multiple Choice One: Maze Multiple Choice One
-        Which set of blocks is the correct answer?: Which set of blocks is the correct
-          answer?
+        Maze Multiple Choice One: Bludisko s viacerými možnými odpoveďami Jeden
+        Which set of blocks is the correct answer?: Ktorá sada blokov je správnou
+          odpoveďou?
       4-5 Algorithms Multi 1:
         Baking cookies: Pečenie koláčov
         Banana: Banán
-        Brushing your teeth: Brushing your teeth
+        Brushing your teeth: Čistenie si Vašich zubov
         Multiple Choice: Viacnásobný výber
         Shopping from a grocery list: Nakupovanie podľa nákupného zoznamu
-        Which one of these items is hardest to describe an algorithm for?: Which one
-          of these items is hardest to describe an algorithm for?
+        Which one of these items is hardest to describe an algorithm for?: Pre ktorý
+          z týchto predmetov je najťažšie definovať algoritmus?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene je _____ mesto.
         0: "? Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?"
-        1: ": Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?"
+        1: ": Tu sú tri vety. Ktorá z týchto šablon uvedených nižšie správne abstrahuje
+          tak, že všetky tri pasuj do rovnakého vzorca ako šablóna?"
         Multiple Choice: Viacnásobný výber
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        Seattle _____ a _____ _____.: Seatlle _____ _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
           je veľké mesto.<br/>Eugene je stredne veľké mesto<br/>Hillview je malé mesto.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ je _____ _____.
+        _____ is a _____ city.: _____ je _____ mesto.
       4-5 Crowdsourcing Multi 1:
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
-        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
         Multiple Choice: Viacnásobný výber
-        Which of these pictures best represents crowdsourcing?: Which of these pictures
-          best represents crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: Ktorý z týchto obrázkov
+          najviac vystihuje crowdsourcing?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
+        Brushing your hair: Česanie Vašich vlasov
+        Cleaning your room: Upratovanie Vašej izby
+        Eating your dessert: Jedenie Vášho dezertu
         Multiple Choice: Viacnásobný výber
-        Washing your face: Washing your face
-        Which one of these activities would be best for practicing crowdsourcing?: Which
-          one of these activities would be best for practicing crowdsourcing?
+        Washing your face: Umývanie si Vašej tváre
+        Which one of these activities would be best for practicing crowdsourcing?: Ktorá
+          z týchto aktivít by bola najvhodnejšia pre crowdsourcing?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Viacnásobný výber
         Which piece of information listed below is okay to share on the internet?: Ktoré
@@ -515,394 +1180,1030 @@ sk:
         Your favorite food: Tvoje obľúbené jedlo
         Your parent's credit card number: Číslo kreditnej karty tvojich rodičov
       4-5 Internet Multi 1:
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
-        23.23.224.106: 23.23.224.106
-        54.209.61.132: 54.209.61.132
-        54.243.71.82: 54.243.71.82
-        64.14.68.10: 64.14.68.10
         Multiple Choice: Viacnásobný výber
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When
-          you try to log on to code.org, which IP address is the DNS most likely to
-          take you to?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Ked
+          sa snažíte pripojiť na code.org, na ktorú IP adresu Vám s najväčšou pravdepodobnosťou
+          nasmeruje DNS?
       4-5 Internet Multi 2:
-        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If
-          the DNS has sent you to the page at the IP address 100.42.50.110, which
-          website are you on?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Ak
+          Vás DNS nasmerovalo na stránku na IP adrese 100.43.50.110, na ktorej webstránke
+          sa nachádzate?
         Multiple Choice: Viacnásobný výber
-        code.org: code.org
-        csisfun.com: csisfun.com
-        khanacademy.org: khanacademy.org
-        thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
-        "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
-        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Skip to my Lou, my darlin."
+        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
-          to my Lou, <br/>Skip to my Lou, my darlin.
-        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          <br/>Skip to my Lou, my darlin."
+        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          buttermilk, <br/>Shoo, fly, shoo,"
+        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
+          buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Viacnásobný výber
-        ? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
+        4: "? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
+        5: ": What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?"
       4-5 Suncatchers Multi 1:
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-        "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         Multiple Choice: Viacnásobný výber
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1?
-      4-5 artist functions multi 1:
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
-          500"
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        Which function creates a rectangle that can change its size?: Which function
-          creates a rectangle that can change its size?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Ktoré
+          z programov nižšie <em>nevytvoria</em> totožnú sekvenciu ako Program 1?
       4-5 artist loops multi 1:
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
-          500"
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which blocks will create the design?: Which blocks will create the design?
-      4-5 artist loops multi 2:
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pick
-          the for loop that represents the following pattern:  5, 10, 15, 20, 25,
-          30, 35, 40, 45, 50'
+        Artist Loops Multiple Choice: Slučky Umelca - viaceré možné odpovede
+        Which blocks will create the design?: Ktoré bloky vytvoria dizajn?
       4-5 artist multi 1:
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
-        Artist Multiple Choice: Artist Multiple Choice
-        Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw
-          a rectangle with a perimeter of 100?
+        Artist Multiple Choice: Umelec - viaceré možné odpovede
+        Which blocks draw a rectangle with a perimeter of 100?: Ktorý blok nakreslí
+          obdĺžnik s obvodom 100?
       4-5 artist multi 2:
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
-        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
-        Artist Multiple Choice: Artist Multiple Choice
+        Artist Multiple Choice: Umelec - viaceré možné odpovede
         Which drawing is symmetric?: Ktorá kresba je symetrická?
       4-5 bee conditionals multi 1:
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?"
-        1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know
-          how many. Which blocks correctly check and collect all of the nectar from
-          a purple flower?"
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
+        1: ": Fialová kvetina môže mať 3, 2 alebo 1 nektár, ale neviete koľko presne.
+          Ktoré bloky správne skontrolujú a pozbierajú všetok nektár z fialovej kvetiny?"
+        Bee Conditionals Multiple Choice: Včela s podmienkami - viaceré možné odpovede
         Choose the best blocks.: Vyber najlepší z blokov.
       4-5 bee debug multi 1:
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
-        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
+        Bee Debug Multiple Choice: Ladenie včely - viaceré možné odpovede
         Which version of the function will work?: Ktorá verzia funkcie bude fungovať
           správne?
       4-5 bee loops multi 1:
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
-        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
-        Bee Loops Multiple Choice: Bee Loops Multiple Choice
-        Which blocks will solve the puzzle?: Which blocks will solve the puzzle?
+        Bee Loops Multiple Choice: Slučky včely - viaceré možné odpovede
+        Which blocks will solve the puzzle?: Ktoré bloky sú riešením úlohy?
       4-5 farmer loops multi 1:
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
-        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
-          500"
-        Famer Loops Multiple Choice: Famer Loops Multiple Choice
         Which blocks solve the puzzle?: Ktorý z blokov vyrieši rébus?
       4-5 maze conditionals multi 1:
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
-          500"
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
+        Maze Conditionals Multiple Choice: Bludisko s podmienkami - viaceré možné
+          odpovede
         Which blocks solve the puzzle?: Ktorý z blokov vyrieši rébus?
       4-5 maze multi 1:
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
-        "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
-          500"
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Bludisko s viacerými možnými odpoveďami
         Which blocks solve the puzzle?: Ktorý z blokov vyrieši rébus?
-      Baker test of multi can delete:
-        2+3: 2+3
-        3 - 7: 3 - 7
-        3+1: 3+1
-        3+4: 3+4
-        5-1: 5-1
-        Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: There
-          are two answers here that are correct.  Looks like you can choose either
-          one and be right.
-        What is 2 + 2?: What is 2 + 2?
-      Choose 2 Test:
-        Line 2: Line 2
-        Line 3: Line 3
-        Line 4: Line 4
-        Line 5: Line 5
-        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
-          lines of code should be removed so the program will work as intended? Select
-          <u>two</u> answers
+      CB_Question_3:
+        A: A
+        Y: true
+      CSD Prediction Header Size:
+        Question: Otázka
+      CSD U3 Boolean MC:
+        title: nadpis
+      CSD U3 Boolean MC_2018:
+        title: nadpis
+      CSDU4 Screens Predict Multi:
+        About: O nás
+        Contact Us: Kontaktujte nás
+      'CSP U4L04 Assessment 1 ':
+        Question: Otázka
+      CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+      CSP verify 18:
+        'No': Nie
+        'Yes': Áno
+      CSPU5_predict_mc_whichOfTwoEvents:
+        title: nadpis
+      CSPU5_predict_onEvent_withWrongID:
+        Question: Otázka
+        title: nadpis
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block B:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_2018:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_2018:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
+          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
+          and over until the code is stopped manually'''
+        12: ': ''How many times will the word <span style="font-family: monospace;
+          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
+          be displayed when this code is run?'''
+      ECSPD2 question:
+        Question: Otázka
+        title: nadpis
       K-1 Artist 1 Multi 1:
-        "/script_assets/k_1_images/artist_images/E-S-S.png": "/script_assets/k_1_images/artist_images/E-S-S.png"
-        "/script_assets/k_1_images/artist_images/E-S.png": "/script_assets/k_1_images/artist_images/E-S.png"
-        "/script_assets/k_1_images/artist_images/S-E-E.png": "/script_assets/k_1_images/artist_images/S-E-E.png"
-        "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
-        "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
-          500"
         Multiple Choice: Viacnásobný výber
-        Which blocks solve this puzzle?: Which blocks solve this puzzle?
+        Which blocks solve this puzzle?: Ktoré bloky sú riešením tejto úlohy?
       K-1 Artist 1 Multi 2:
-        "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
-        "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
-        "/script_assets/k_1_images/artist_images/N-S-E-W.png": "/script_assets/k_1_images/artist_images/N-S-E-W.png"
-        "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
-        "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
-          500"
         Multiple Choice: Viacnásobný výber
-        Which blocks draw the square?: Which blocks draw the square?
+        Which blocks draw the square?: Ktoré bloky nakreslia štvorec?
       K-1 Artist 2 Multi 1:
-        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
-        "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
-        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
-        "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
-        "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
-          500"
         Multiple Choice: Viacnásobný výber
-        Which shape do these squares combine to make?: Which shape do these squares
-          combine to make?
       K-1 Artist Loops Multi 1:
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
-        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
-          300"
         Multiple Choice: Viacnásobný výber
-        Which blocks create this picture?: Which blocks create this picture?
       K-1 Bee 1 Multi 1:
-        "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: Koľko je toto nektárov?
         Multiple Choice: Viacnásobný výber
       K-1 Bee 1 Multi 2:
-        "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
-        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
-        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
-        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
-        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: How many nectars is this?
+        How many nectars is this?: Koľko je toto nektárov?
         Multiple Choice: Viacnásobný výber
       K-1 Digital Footprint Multi 1:
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         Multiple Choice: Viacnásobný výber
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
-          animal has the digital footprint that leaves him or her the <strong>most
-          unsafe</strong>?
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Ktoré
+          zviera má digitálnu stopu, ktorá ho zanechá v <strong>najväčšom nebezpečí</strong>?
       K-1 Getting Loopy Multi 1:
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
-        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: How would you simplify this
-          sequence with loops?
+        How would you simplify this sequence with loops?: Ako by ste zjednodušili
+          toto poradie slučiek?
         Multiple Choice: Viacnásobný výber
       K-1 Happy Maps Multi 1:
-        "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
-        "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
-        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
-        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
-        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
         Multiple Choice: Viacnásobný výber
-        Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to
-          the treasure?
+        Which arrow gets the Flurb to the treasure?: Ktorá šípka dostane Flurba k
+          pokladu?
       K-1 Keep it Private Multi 1:
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
-        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         Multiple Choice: Viacnásobný výber
-        Which information should you <strong>not</strong> share online?: Which information
-          should you <strong>not</strong> share online?
+        Which information should you <strong>not</strong> share online?: Ktoré informácie
+          by ste <strong>nemali</strong> zdieľať online?
       K-1 Maze Debugging Multi 1:
-        "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
-          700"
-        "/script_assets/k_1_images/move_blocks/E.png": "/script_assets/k_1_images/move_blocks/E.png"
-        "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
-        "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
-        "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
         Multiple Choice: Viacnásobný výber
-        Which choice should be the final block?: Which choice should be the final
-          block?
+        Which choice should be the final block?: Ktorá z možností by mala byť posledným
+          blokom?
       K-1 Maze Loops Multi 1:
-        "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
-          300"
-        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
-        "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
-        "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
         Multiple Choice: Viacnásobný výber
-        Which repeat block is the same?: Which repeat block is the same?
+        Which repeat block is the same?: Ktorý opakujúci sa blok je ten istý?
       K-1 Maze Loops Multi 2:
-        "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
-          240"
-        "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
-        "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
-        "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
         Multiple Choice: Viacnásobný výber
-        Pick the correct repeat block.: Pick the correct repeat block.
+        Pick the correct repeat block.: Vyberte správny opakujúci sa blok.
       K-1 Maze Multiple Choice 2:
-        "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
-          500"
-        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
-        "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
-        "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
-        "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
         Maze: Bludisko
         Which answer solves this level?: Ktorá odpoveď rieši túto úroveň?
       K-1 Move It Multi 1:
-        "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
-        "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
-        "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
-        "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
-        "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
         Multiple Choice: Viacnásobný výber
         Which algorithm gets the Flurb to the flowers?: Akým algoritmom sa Flurb dostane
           ku kvetinám?
       K-1 Plant a Seed Multi 1:
-        "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
-        "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
-        "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         Multiple Choice: Viacnásobný výber
         Which step should go at the beginning of this algorithm?: Ktorý krok by mal
           ísť na začiatok tohoto algoritmu?
       K-1 Plant a Seed Multi 2:
-        "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
-        "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
-        "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
-        "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
         Multiple Choice: Viacnásobný výber
         Which step should fill in the blank for this algorithm?: Ktorý krok má vyplniť
           prázdne miesto tohto algoritmu?
       K-1 Word Search Multi 1:
-        "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
-        "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
-        "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
-        "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
-          450"
         Multiple Choice: Viacnásobný výber
-        Which blocks spell "MOVE"?: Which blocks spell "MOVE"?
+        Which blocks spell "MOVE"?: Ktoré bloky vyhláskujú "MOVE"?
       K-1 Word Search Multi 2:
-        "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
-        "/script_assets/k_1_images/move_blocks/NENE.png": "/script_assets/k_1_images/move_blocks/NENE.png"
-        "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
-        "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
-          450"
         Multiple Choice: Viacnásobný výber
-        Which blocks spell "JUMP"?: Which blocks spell "JUMP"?
       K-1 Word Search Multi 3:
-        "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
-          700"
         Multiple Choice: Viacnásobný výber
-        SET: SET
-        SOUTH: SOUTH
-        SQUARE: SQUARE
         Which word is spelled?: Ktoré slovo je vyhláskované?
-      K-1 multi 4:
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: Vodič a pomocník
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Jeden
-          z týchto chlapcov je <b>vodič</b>.  A jeden je <b>pomocník</b>.
-        Which boy is the <large>helper</large>?: Ktorý chlapec je <large>pomocník</large>?
-      K-1 multi 5:
-        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
-        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
-        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: Vodič a pomocník
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Jeden
-          z týchto chlapcov je <b>vodič</b>.  A jeden je <b>pomocník</b>.
-        This time, which boy is the <large>driver</large>?: Ktorý chlapec je tentokrát
-          <large>vodič</large>?
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
-          1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
-          1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
-          1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
-          1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Which of these Evaluation Blocks will draw the image on the left?: Which of
-          these Evaluation Blocks will draw the image on the left?
-        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
-      Warmup questions:
-        Coding in Racket: Coding in Racket
-        Select the best answer to the question.: Select the best answer to the question.
-        When converting a circle to code, the correct order is: When converting a
-          circle to code, the correct order is
-        left top right: left top right
-        left, right, top: left, right, top
+      Multi Define Funcs 1:
+        '3': '3'
+        y: true
+      Multi Define Funcs 2:
+        '3': '3'
+        y: true
+      Multi Define Funcs 3:
+        '5': '5'
+        '6': '6'
+        y: true
+      PDAlg Blocks Video:
+        Toolbox: Nástroje
+      PDAlg DR Multi 1:
+        Domain: Doména
+        Name: Meno
+        Range: Rozsah
+        0: "? The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+        1: ": The first step in the Design Recipe is to create a contract based on
+          the word problem. Which part of this contract has the student gotten wrong?"
+      PDAlg PreQ 1:
+        'No': Nie
+        'Yes': Áno
+      PDAlg PreQ 2:
+        'No': Nie
+        'Yes': Áno
+      PDAlg functional:
+        'No': Nie
+      PDK5 Blockly Intro:
+        'Yes': Áno
+      PDK5 Classroom Culture:
+        'Yes': Áno
+      PDK5 Course Maps:
+        'Yes': Áno
+      PDK5 Course Overview:
+        'Yes': Áno
+      PDK5 Glossary:
+        Glossary: Slovník pojmov
+        'Yes': Áno
+      PDK5 Intro:
+        'No': Nie
+        'Yes': Áno
+      PDK5 Teacher Dashboard:
+        Teacher Dashboard: Nástenka učiteľa
+        'Yes': Áno
+      PDK5 Test1:
+        Question: Otázka
+        title: nadpis
+      PDK5 UVideo Overview:
+        'Yes': Áno
+      PDK5 Unplugged Intro:
+        'Yes': Áno
+      PS U3-bakertest:
+        title: nadpis
+      SG U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      Submittable Multi:
+        blue: modrá
+        green: zelená
+        red: červená
+      Test Contained Multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '4': '4'
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: V
+      U1L6 Assessment multiple choice:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+      U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      U1L8 Multiple Choice_2018:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
+          the x and y coordinate as separate numbers, what is the minimum number of
+          \ bits that you will need to encode a coordinate in that space?"
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different
+          paths between the points highlighted.</p>\n<p>Please choose the image that
+          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
+          “distance” between points is depicted by the number of line segments connecting
+          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: A
+        B: B
+        C: C
+        D: D
+        E: V
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
+      U2L13 Assessment4_2018:
+        '26': '26'
+      U2L14 Assessment3:
+        'false': nepravda
+        'true': pravda
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      U2L19 multichoice 13 MOD 17_2018:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U2L19 mutlichoice 20 mod 15_2018:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L07 - MC remove line of code loops_2018:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+      U3L30 Assessment1:
+        '6': '6'
+        '7': '7'
+        '8': '8'
+      U3L30 Assessment2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      U3L30 Assessment3:
+        '19': '19'
+        '20': '20'
+        '21': '21'
+      U4L01 Multiple Choice:
+        right: vpravo
+      U4L02 Multiple Choice:
+        right: vpravo
+      U4L03 Multiple Choice:
+        right: vpravo
+      U4L04 Multiple Choice:
+        right: vpravo
+      U4L05 Multiple Choice:
+        right: vpravo
+      U4L06 Multiple Choice:
+        right: vpravo
+      U4L06 Reflection Q 1:
+        Question: Otázka
         random: náhodný
-        top, left, right: top, left, right
-      test multi text:
-        Fred Flintstone: Fred Flintstone
-        George Jetson: George Jetson
-        George Washington: George Washington
-        Martha Washington: Martha Washington
-        Presidents: Presidents
-        This multiple choice is all about the presidents of the United States.: This
-          multiple choice is all about the presidents of the United States.
-        Who was the first president of the USA?: Who was the first president of the
-          USA?
+      U4L07 Multiple Choice:
+        right: vpravo
+      U4L08 Multiple Choice:
+        right: vpravo
+      U4L09 Multiple Choice:
+        right: vpravo
+      U4L10 Multiple Choice:
+        right: vpravo
+      U4L11 Multiple Choice:
+        right: vpravo
+      U4L12 Multiple Choice:
+        right: vpravo
+      U4L13 Multiple Choice:
+        right: vpravo
+      U4L14 Multiple Choice:
+        right: vpravo
+      U4L15 Multiple Choice:
+        right: vpravo
+      U4L16 Multiple Choice:
+        right: vpravo
+      U4L17 Multiple Choice:
+        right: vpravo
+      U4L18 Multiple Choice:
+        right: vpravo
+      U4L19 Multiple Choice:
+        right: vpravo
+      U4L20 Multiple Choice:
+        right: vpravo
+      U4L21 Multiple Choice:
+        right: vpravo
+      U4L22 Multiple Choice:
+        right: vpravo
+      U4L23 Multiple Choice:
+        right: vpravo
+      U4L24 Multiple Choice:
+        right: vpravo
+      U4LXX Multiple Choice:
+        right: vpravo
+      U5 assess_weight_v2:
+        Question: Otázka
+        title: nadpis
+      Warmup questions:
+        random: náhodný
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Neviem
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Neviem
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
+          2 nectar in a loop down.  This is all inside of another loop that happens
+          twice. 4 times 2 is 8!"
+        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
+          a loop down.  This is all inside of another loop that happens twice. 4 times
+          2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: Neviem
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: Neviem
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      csd-post-survey-2018-topic-ai:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-cryptocurrency:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Kybernetická bezpečnosť
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-databases:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-datascience:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-gamedev:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-hardware:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-internet:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-mobile:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-parallel:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-programming:
+        'No': Nie
+        'Yes': Áno
+      csd-post-survey-2018-topic-robotics:
+        'No': Nie
+        Robotics: Robotika
+        'Yes': Áno
+      csd-post-survey-2018-topic-web:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2017-q64:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2017-q64_2018:
+        0: "? 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        1: ": 'Do you know anyone outside of school who works in computer science?
+          (For example, working as a Computer Programmer, Software Developer, Web
+          Developer, Network Administrator, etc.) '"
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2017-q65:
+        I don't know: Neviem
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2017-q65_2018:
+        I don't know: Neviem
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-ai:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-cryptocurrency:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Kybernetická bezpečnosť
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-databases:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-datascience:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-gamedev:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-hardware:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-internet:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-mobile:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-parallel:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-programming:
+        'No': Nie
+        'Yes': Áno
+      csp-post-survey-2018-topic-robotics:
+        'No': Nie
+        Robotics: Robotika
+        'Yes': Áno
+      csp-post-survey-2018-topic-web:
+        'No': Nie
+        'Yes': Áno
+      csp-pre-survey-2017-q40:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Ostatné
+      csp-pre-survey-2017-q40_2018:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Ostatné
+      csp_ap_exam_signup:
+        'No': Nie
+        'Yes': Áno
+      csp_ap_previous_years:
+        'No': Nie
+        'Yes': Áno
+      csp_ap_taking_ap_class:
+        'No': Nie
+        'Yes': Áno
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_2018:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_fivemore_exam_prep:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_2018:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_2018:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess1_increase_exam_prep:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+      cspu5_assess2_addstrings:
+        result: výsledok
+      cspu5_assess2_addstrings_2018:
+        result: výsledok
+      cspu5_assess2_addstrings_exam_prep:
+        result: výsledok
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
+        result: výsledok
+      cspu5_assess2_combineString_2018:
+        '10': '10'
+        '55': '55'
+        result: výsledok
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        result: výsledok
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': nepravda
+        'true': pravda
+      cspu5_assess2_oldEnough_2018:
+        '35': '35'
+        'false': nepravda
+        'true': pravda
+      cspu5_assess2_oldEnough_exam_prep:
+        '35': '35'
+        'false': nepravda
+        'true': pravda
+      cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_2018:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_2018:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array1_exam_prep:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_2018:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_2018:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_listAppend_exam_prep:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_2018:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_2018:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_2018:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_2018:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      cspu5_assess4_listOutput_exam_prep:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+      msm variables multi 1:
+        '15': '15'
+        x: x
+      msm variables multi 10:
+        '17': '17'
+        x: x
+      msm variables multi 11:
+        '17': '17'
+        x: x
+      msm variables multi 12:
+        '17': '17'
+        x: x
+      msm variables multi 13:
+        '117': '117'
+        '17': '17'
+        x: x
+      msm variables multi 2:
+        '8': '8'
+      msm variables multi 3:
+        '5': '5'
+        x: x
+      msm variables multi 4:
+        '15': '15'
+        '3': '3'
+        '8': '8'
+      msm variables multi 5:
+        '3': '3'
+        '5': '5'
+      msm variables multi 6:
+        '1': '1'
+        '5': '5'
+        hello: ahoj
+      msm variables multi 7:
+        '3': '3'
+        x: x
+      msm variables multi 8:
+        '3': '3'
+        x: x
+      msm variables multi 9:
+        '5': '5'
+        '6': '6'
+        x: x
+      post-assessment survey q34:
+        Easy: Jednoduché
+        Hard: Ťažké
+      pre-assessment survey q24:
+        'No': Nie
+        'Yes': Áno
+      pre-assessment survey q26:
+        0: "? Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        1: ": Have you ever participated in computer science activities or programs
+          somewhere outside of school hours (such as at an after school program, online,
+          or at a camp or summer program)?"
+        'No': Nie
+        'Yes': Áno
+      pre-assessment survey q27:
+        0: "? If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        1: ": If yes, where did you previously take a computer science class or program
+          outside of school hours? If you have participated in more than one program,
+          please select the program where you have spent most of your time."
+        Other: Ostatné
+      pre-assessment survey q28:
+        '10': '10'
+        '11': '11'
+        '12': '12'
+        '8': '8'
+        '9': '9'
+        Other: Ostatné
+      pre-assessment survey q29:
+        Female: Žena
+        Male: Muž
+        Other: Ostatné
+        Prefer not to answer: Preferujem neodpovedať
+      pre-assessment survey q30:
+        Asian: Ázijská
+        Black or African American: Africká alebo Afroamerická
+        Other: Ostatné
+        Prefer not to answer: Preferujem neodpovedať
+        White: Biela
+      sarah_test_maggie:
+        Question: Otázka
+        test: test
+      sciPD PreQ 1:
+        'No': Nie
+        'Yes': Áno
+      sciPD PreQ 2:
+        'No': Nie
+        'Yes': Áno
+      test anonymous student survey educational:
+        'No': Nie
+        'Yes': Áno
+      test me:
+        Question: Otázka
+        title: nadpis
+      unique level name here:
+        Question: Otázka
+        title: nadpis
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'

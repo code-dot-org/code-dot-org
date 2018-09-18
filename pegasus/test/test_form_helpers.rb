@@ -1,3 +1,4 @@
+require_relative '../src/env'
 require_relative '../helpers/form_helpers'
 require_relative '../src/database'
 require_relative 'sequel_test_case'
@@ -21,7 +22,6 @@ class FormHelpersTest < SequelTestCase
     DEFAULT_SECRET = 'default_secret'.freeze
 
     it 'deletes existing form' do
-      # TODO(asher): This does not test SOLR. Fix this.
       DB[:forms].insert(
         {
           kind: DEFAULT_KIND,
@@ -42,7 +42,6 @@ class FormHelpersTest < SequelTestCase
     end
 
     it 'returns false on bad secret' do
-      # TODO(asher): This does not test SOLR. Fix this.
       return_value = delete_form DEFAULT_KIND, 'not_a_secret'
 
       refute return_value
@@ -125,7 +124,7 @@ class FormHelpersTest < SequelTestCase
         DEFAULT_DATA.merge(email_s: "#{SecureRandom.hex(8)}@example.com")
       )
 
-      form = update_form row[:kind], row[:secret], {name_s: 'non_default_name'}
+      form = update_form row[:kind], row[:secret], {"name_s" => 'non_default_name'}
       refute_nil form
       updated_row = DB[:forms].where(kind: row[:kind], secret: row[:secret]).first
       assert_equal 'non_default_name', updated_row[:name]

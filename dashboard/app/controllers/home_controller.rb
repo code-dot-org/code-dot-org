@@ -8,6 +8,10 @@ class HomeController < ApplicationController
   # clicking on a link.
   skip_before_action :verify_authenticity_token, only: 'set_locale'
 
+  # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
+  # clearing the sign up tracking variables
+  skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
+
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
     if params[:i18npath]
@@ -42,7 +46,7 @@ class HomeController < ApplicationController
   # Signed out: redirect to /courses
   def index
     if current_user
-      if current_user.student? && current_user.assigned_course_or_script? && !session['clever_link_flag'] && current_user.primary_script
+      if current_user.student? && current_user.assigned_course_or_script? && !account_takeover_in_progress? && current_user.primary_script
 
         # Send students in course experiments (such as the subgoals experiment)
         # to the right place when they end up on the wrong version of their script.

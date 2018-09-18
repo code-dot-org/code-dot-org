@@ -20,6 +20,48 @@
   .field
     = f.label :cohort_capacity_csp
     = f.text_field :cohort_capacity_csp
+  - %w(csd csp).each do |course|
+    - %w(teacher facilitator).each do |role|
+      .field
+        = f.label nil, "Apps Open Date for #{course.upcase} #{role} (YYYY-MM-DD)"
+        = f.text_field "apps_open_date_#{course}_#{role}".to_sym
+      .field
+        = f.label nil, "Apps Close Date for #{course.upcase} #{role} (YYYY-MM-DD)"
+        = f.text_field "apps_close_date_#{course}_#{role}".to_sym
+  .field
+    = f.label nil, "Applications Principal Approval"
+    .applications_principal_approval
+      %label
+        = f.radio_button :applications_principal_approval, RegionalPartner::ALL_REQUIRE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::ALL_REQUIRE_APPROVAL
+        != 'All apps require principal approval'
+      %label
+        = f.radio_button :applications_principal_approval, RegionalPartner::SELECTIVE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+        != 'Selectively require some apps to have principal approval'
+  .field
+    = f.label nil, "Applications Decision Emails"
+    .applications_decision_emails
+      %label
+        = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_PARTNER, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+        != 'Partner sends decision emails'
+      %label
+        = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_SYSTEM, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM
+        != 'System sends decision emails'
+  .field
+    = f.label :link_to_application
+    = f.text_field :link_to_application
+  -%w(csd csp).each do |course|
+    .field
+      = f.label nil, "#{course.upcase} Cost"
+      = f.text_field "#{course}_cost".to_sym
+    .field
+      = f.label nil, "#{course.upcase} Cost Description"
+      = f.text_field "#{course}_cost_description".to_sym
+  .field
+    = f.label :contact_name
+    = f.text_field :contact_name
+  .field
+    = f.label :contact_email
+    = f.text_field :contact_email
   .field
     = f.label :attention
     = f.text_field :attention

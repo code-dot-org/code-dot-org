@@ -4,6 +4,8 @@ import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {assetButtonStyles} from "./AddAssetButtonRow";
 import {AudioErrorType} from "./AssetManager";
+import firehoseClient from "@cdo/apps/lib/util/firehose";
+import experiments from "@cdo/apps/util/experiments";
 
 const styles = {
   buttonRow: {
@@ -23,7 +25,10 @@ const RECORD_MAX_TIME = 30000;
 export default class AudioRecorder extends React.Component {
   static propTypes = {
     onUploadDone: PropTypes.func,
-    afterAudioSaved: PropTypes.func
+    afterAudioSaved: PropTypes.func,
+
+    //Temporary prop for logging - indicates user chose 'Manage Assets'
+    imagePicker: PropTypes.bool
   };
 
   constructor(props) {
@@ -33,8 +38,7 @@ export default class AudioRecorder extends React.Component {
     this.slices = [];
     this.state = {
       audioName: "",
-      recording: false,
-      cancelling: false
+      recording: false
     };
   }
 
@@ -60,26 +64,23 @@ export default class AudioRecorder extends React.Component {
       this.slices.push(e.data);
     };
 
-    // Set method to create data blob after recording has stopped
-    this.recorder.onstop = (e) => {
-      const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
+    this.recorder.onstart = () => {
       this.slices = [];
-      this.saveAudio(blob);
     };
   };
 
   saveAudio = (blob) => {
-    if (!this.state.cancelling) {
-      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-      (xhr) => {
-        this.setState({audioName: ""});
-        this.props.onUploadDone(JSON.parse(xhr.response));
-        this.props.afterAudioSaved(AudioErrorType.NONE);
-      }, error => {
-        console.error(`Audio Failed to Save: ${error}`);
-        this.props.afterAudioSaved(AudioErrorType.SAVE);
-      });
-    }
+    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+    (xhr) => {
+      this.setState({audioName: ""});
+      let result = JSON.parse(xhr.response);
+      result.filename = decodeURI(result.filename);
+      this.props.onUploadDone(result);
+      this.props.afterAudioSaved(AudioErrorType.NONE);
+    }, error => {
+      console.error(`Audio Failed to Save: ${error}`);
+      this.props.afterAudioSaved(AudioErrorType.SAVE);
+    });
   };
 
   onNameChange = (event) => {
@@ -87,38 +88,60 @@ export default class AudioRecorder extends React.Component {
   };
 
   onCancel = () => {
-    this.setState({audioName: "", recording: false, cancelling: true}, () => {
+    this.setState({audioName: "", recording: false}, () => {
       this.props.afterAudioSaved(AudioErrorType.NONE);
       // Only stop recording if it's been started
       if (this.recorder.state !== "inactive") {
+        clearTimeout(this.recordTimeout);
         this.recorder.stop();
       }
-      this.setState({cancelling: false});
     });
   };
 
   toggleRecord = () => {
     if (this.state.recording) {
-      this.stopRecording();
+      this.stopRecordingAndSave();
     } else {
       this.startRecording();
     }
   };
 
   startRecording = () => {
+    const studyGroup = this.props.imagePicker ? 'manage-assets' :
+      (experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab');
     this.recorder.start();
+    firehoseClient.putRecord(
+      {
+        study: 'sound-dialog-1',
+        study_group: studyGroup,
+        event: 'record-sound',
+        data_json: this.state.audioName,
+      },
+      {includeUserId: true}
+    );
     this.setState({recording: !this.state.recording});
 
     //Stop recording after set amount of time
-    this.recordTimeout = setTimeout(this.stopRecording, RECORD_MAX_TIME);
+    this.recordTimeout = setTimeout(this.stopRecordingAndSave, RECORD_MAX_TIME);
   };
 
-  stopRecording = () => {
+  //Stop recording and save the final audio
+  stopRecordingAndSave = () => {
     if (this.state.recording) {
       clearTimeout(this.recordTimeout);
+      this.setStopAndSaveBehavior();
       this.recorder.stop();
       this.setState({recording: !this.state.recording});
     }
+  };
+
+  //Set the recorder onstop behavior to save the final audio blob
+  setStopAndSaveBehavior = () => {
+    this.recorder.onstop = () => {
+      const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
+      this.saveAudio(blob);
+      this.recorder.onstop = () => {};
+    };
   };
 
   render() {

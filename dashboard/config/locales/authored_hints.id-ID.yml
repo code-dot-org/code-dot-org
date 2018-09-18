@@ -429,6 +429,9 @@ id:
           derajat. ** 360/6 =? **
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Setiap item akan perlu loop sendiri 'sementara'.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Seniman membutuhkan 120 derajat antara setiap persegi
+          untuk menyelesaikan desain ini.
       Artist Inspiration_authored_hint:
         brush_width: Setiap item akan perlu loop sendiri 'sementara'. Kami menetapkan
           sikat lebar 1, kemudian warna biru sebelum kita melakukan apa pun.
@@ -4029,6 +4032,46 @@ id:
           2 loop.
         courseD_artist_ramp12_c: Anda bisa menggunakan menu drop dwon pada blok `ubah`
           untuk melihat sudut mana yang Anda butuhkan!
+      courseD_autorun_binary2_2019_authored_hint:
+        courseD_artist_binary2_a: Cukup klik `Run` untuk melihat program ini berjalan!
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: Salah satu dari empat pola biner di kotak peralatan
+          akan memecahkan teka-teki ini!
+        courseD_artist_binary3_b: Jangan takut membuat kesalahan! Cobalah menulis
+          biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
+          anda belum memecahkan teka-teki itu.
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_a: Lihatlah tiga kotak pertama di baris paling atas.
+          Bisakah Anda mengulangi ketiganya untuk mendapatkan keseluruhan pola?
+        courseD_artist_binary4_b: Jangan takut membuat kesalahan! Cobalah menulis
+          biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
+          anda tidak berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: Cobalah menjalankan kode terlebih dahulu untuk melihat
+          apa yang harus Anda kerjakan.
+        courseD_artist_binary5_b: Anda hanya perlu mengganti dua baris untuk membuat
+          senyuman.
+        courseD_artist_binary5_c: Jika anda mengalami kesulitan memecahkan teka-teki
+          ini, coba tuliskan baris biner di selembar kertas dan cari sebuah pola.
+      courseD_autorun_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: Mulai dari kiri atas. Seberapa jauh anda harus membaca
+          sebelum pola mulai terulang?
+        courseD_artist_binary6_b: Anda dapat membangun string biner anda sedikit demi
+          sedikit, dan terus menguji!
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_a: Mulai dari kiri atas. Seberapa jauh anda harus membaca
+          sebelum pola mulai terulang?
+        courseD_artist_binary7_b: Jangan takut membuat kesalahan! Cobalah menulis
+          biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
+          anda tidak berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: Spiral terkadang membingungkan. Isolasikan setiap
+          garis horizontal di pikiran anda saat anda membuat desain ini.
+        courseD_artist_binary8_b: Cobalah menjalankan kode terlebih dahulu untuk melihat
+          apa yang harus Anda kerjakan.
+        courseD_artist_binary8_c: Jangan takut membuat kesalahan! Cobalah menulis
+          biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
+          anda belum memecahkan teka-teki itu.
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: Anda perlu menggunakan blok `if` untuk memeriksa
           apakah ada bunga dibawah awan sebelum anda mencoba untuk mendapatkan nektar.

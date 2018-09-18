@@ -418,25 +418,22 @@ describe('teacherSectionsRedux', () => {
       assert.equal(nextState.selectedSectionId, firstSectionId);
     });
 
-    it('fails if we have no sections', () => {
+    it('selects no section if we have no sections', () => {
       const initialState = reducer(undefined, {});
       assert.equal(Object.keys(initialState.sectionIds).length, 0);
 
       const action = selectSection(firstSectionId);
-      assert.throws(() => {
-        reducer(initialState, action);
-      });
+      const sectionState = reducer(initialState, action);
+      assert.equal(sectionState.selectedSectionId, NO_SECTION);
     });
 
-    it('fails if we try selecting a non-existent section', () => {
-      const sectionState = reducer(undefined, setSections(sections));
-
+    it('selects no section if we try selecting a non-existent section', () => {
+      let sectionState = reducer(undefined, setSections(sections));
       assert.equal(sectionState.selectedSectionId, NO_SECTION);
 
       const action = selectSection('99999');
-      assert.throws(() => {
-        reducer(sectionState, action);
-      });
+      sectionState = reducer(initialState, action);
+      assert.equal(sectionState.selectedSectionId, NO_SECTION);
     });
   });
 

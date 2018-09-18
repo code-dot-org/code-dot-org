@@ -38,9 +38,8 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
     }),
-    // Project Validators need access to view more links for App Lab and Game Lab, hidden for everyone else.
-    // TODO: Erin B - remove when we have profanity filter and/or enough featured projects.
-    projectValidator: PropTypes.bool
+    // Controls hiding/showing view more links for App Lab and Game Lab.
+    limitedGallery: PropTypes.bool
   };
 
   /**
@@ -64,13 +63,14 @@ class PublicGallery extends Component {
   }
 
   render() {
-    const {projectLists} = this.props;
+    const {projectLists, limitedGallery} = this.props;
+
     return (
       <div>
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
-          projectValidator={this.props.projectValidator}
+          limitedGallery={limitedGallery}
         />
         <div style={styles.clear}/>
         <div style={styles.linkBox}>

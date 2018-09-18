@@ -812,6 +812,27 @@ FactoryGirl.define do
 
   factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
 
+  factory :pd_principal_approval1920_application_hash_common, parent: :pd_principal_approval1819_application_hash_common
+  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1819_application_hash
+
+  factory :pd_principal_approval1920_application, class: 'Pd::Application::PrincipalApproval1920Application' do
+    association :teacher_application, factory: :pd_teacher1920_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval1920Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval1920_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
   # default to do_you_approve: other
   factory :pd_principal_approval1819_application_hash, parent: :pd_principal_approval1819_application_hash_common do
     approved_other

@@ -151,6 +151,8 @@ sk:
         spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je
         nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak
         dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\"."
+      2-3 Maze 15_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať"
+        pomôže dostať prasa s čo najmenším počtom blokov!
       2-3 Maze Loops 18_markdown_instruction: "Dostaňte ma k slnečnici použitím čo
         najmenšieho možného počtu blokov!  \n\nSkúste použiť jednu slučku \"opakovať\"
         vo vnútri druhej pre zníženie množstva kódu, ktoré potrebujete."
@@ -265,6 +267,8 @@ sk:
       4-5 While Loops 4_markdown_instruction: "Fíha, pozrite sa na toto!\n\nNeviem,
         koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program,
         ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
+      Artist Autorun Test_markdown_instruction: Teraz vlož funkciu do cyklu, aby si
+        nakreslil tri štvorce.
       Function intro Ryan_markdown_instruction: "V pracovnom priestore je **funkcia**
         s názvom „vybudovať most“. Je v nej zabudovaný celý kód, ktorý potrebujete
         na prekročenie rieky. \r\n \r\nDvakrát prichyťte malý, zelený blok do pracovného
@@ -453,53 +457,63 @@ sk:
       frozen circle function_markdown_instruction: Použite nový blok "Vytvoriť kruh"
         pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť
         sa dopredu.
-      frozen circle_markdown_instruction: Kruh je zvláštny tvar. Dokážete zistiť,
-        akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
-      frozen cross rotate dense_markdown_instruction: 'Poďme to zopakovať 90-krát!
-        Koľkokrát sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
-      frozen cross rotate_markdown_instruction: Teraz to skúste zopakovať 10-krát.
-        O koľko stupňov sa musíte otočiť medzi jednotlivými čiarami?
-      frozen cross_markdown_instruction: Vytvoter znamienko plus pomocou bloku "opakuj".
-        Všimli ste si, že Elza sa môže pohybovať dopredu i dozadu?
+      frozen circle_markdown_instruction: Kruh je zvláštny tvar. Dokážeš zistiť, akým
+        číslom treba nahradiť otázniky, aby sa nakreslil kruh?
+      frozen cross rotate dense_markdown_instruction: 'Zopakujme to 90-krát! Koľkokrát
+        sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
+      frozen cross rotate_markdown_instruction: Teraz to skús zopakovať 10-krát. O
+        koľko stupňov sa musíš otočiť medzi jednotlivými čiarami?
+      frozen cross rotate_b_markdown_instruction: Teraz to skús zopakovať **10-krát**.
+        **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
+      frozen cross rotate_test_markdown_instruction: Teraz to skús zopakovať **10-krát**.
+        **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
+      frozen cross_markdown_instruction: Vytvor znamienko plus pomocou bloku "Opakuj".
+        Všimol si si, že Elsa sa môže pohybovať dopredu i dozadu?
       frozen diamond mini snowflake_markdown_instruction: Vedel si, že každá snehová
-        vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakovať"
-        tak, že zopakujeme rovnobežník 4-krát. Po každom rovnobežníku sa otočíme o
+        vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj",
+        ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o
         90 stupňov.
-      frozen diamond snowflake_markdown_instruction: Teraz poďme vytvoriť novú vločku
-        pomocou bloku Opakovať tak, že budeme opakovať rovnobežník 10-krát a otočíme
-        se vpravo o 36 stupňov po každom z nich.
+      frozen diamond snowflake_markdown_instruction: Teraz vytvorme novú vločku pomocou
+        bloku "Opakuj" tak, že rovnobežník zopakujeme 10-krát a po každom z nich sa
+        otočíme vpravo o 36 stupňov.
       frozen diamond_markdown_instruction: Použite opakovanie okolo týchto blokov
         pre vytvorenie lichobežníka. Vyzerá ako obdĺžnik, ale má iné uhly. Tento má
         uhly 60 a 120 stupňov namiesto 90 stupňov v každom rohu.
       frozen freeplay_markdown_instruction: Oficiálne se z teba stal majster umelec!
         Vytvor zimnú krajinu zázrakov.
-      frozen perpendicular_markdown_instruction: Teraz skúsme, či dokážeme vytvoriť
-        dve čiary, ktoré sú na seba kolmé. Budete musieť použiť blok "Otočiť" spolu
-        s blokom "Posunúť".
-      frozen snowflake branch_markdown_instruction: Skúste použiť blok "Vytvoriť rameno
-        vločky" k vytvoreniu troch ramien, ktoré začnú vyzerať ako snehová vločka.
-      frozen snowflake full_markdown_instruction: A teraz to zopakujme 8 krát pre
-        nakreslenie krásnej vločky!
+      frozen perpendicular_markdown_instruction: Teraz skúsme vytvoriť dve čiary,
+        ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč" spolu s blokom "Posuň".
+      frozen snowflake branch_markdown_instruction: Skús použiť blok "Vytvor rameno
+        vločky", aby si vytvoril tri ramená, ktoré začnú vyzerať ako snehová vločka.
+      frozen snowflake full_markdown_instruction: A teraz to zopakujme 8 krát, aby
+        sme nakreslili prekrásnu vločku!
+      frozen snowflake full_b_markdown_instruction: A teraz to zopakujme 8 krát, aby
+        sme nakreslili prekrásnu vločku!
+      frozen snowflake full_test_markdown_instruction: A teraz to zopakujme 8 krát,
+        aby sme nakreslili prekrásnu vločku!
       frozen snowflower_markdown_instruction: Zložité snehové vzory je možné vytvoriť
-        s pomocou veľmi jednoduchých tvarov. Dokážete vytvoriť vzor opakovaním 5 kružníc
+        pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc
         s veľkosťou 5 a 5 kružníc s veľkosťou 10?
-      frozen square iterative_markdown_instruction: Vyzerá to, že sme na polceste
-        k tomu vytvoriť štvorec. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
-      frozen square loop 3x_markdown_instruction: Poďme vytvoriť tri štvorce tak,
-        že sa po každom štvorci otočíme. Uistite sa, že sa otočíte o 120 stupňov pred
-        každým novým štvorcom.
-      frozen square loop_markdown_instruction: Ahoj, ja sa volám Anna z Arendelle!
-        Vytvorme štvorec pomocou bloku "opakuj". Takéto riešenie používa menej blokov.
-        Koľkokrát (???) musí blok "opakuj" vykonať vnútorné bloky, aby vznikol štvorec?
-      frozen square snowflake_markdown_instruction: Dokážete vytvoriť vločku pomocou
-        bloku "Opakovať" tak, že nakreslíte 10-krát štvorec a použijete blok "Otočiť"
-        na otočenie o 36 stupňov pred každým štvorcom?
+      frozen square iterative_markdown_instruction: Zdá sa, že sme na polceste k vytvoreniu
+        štvorca. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
+      frozen square loop 3x_markdown_instruction: Vytvorme tri štvorce tak, že sa
+        po každom štvorci otočíme. Uisti sa, že sa pred každým novým štvorcom otočíš
+        o 120 stupňov.
+      frozen square loop_markdown_instruction: Ahoj, som Anna z Arendelle! Vytvorme
+        štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov.
+        Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre
+        to, aby vznikol štvorec?
+      frozen square snowflake_markdown_instruction: Dokážeš vytvoriť snehovú vločku
+        pomocou blokov "Opakuj" a "Otoč" tak, že nakreslíš 10-krát štvorec a medzi
+        štvorcami sa vždy o 36 stupňov otočíš?
       grade2_MakeDogTag_8_markdown_instruction: A teraz pripojme niekoľko Véčiek spolu
         do slučky.
       grade2_PuppyLoops_10_markdown_instruction: |-
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
 
         Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
+      grade2_PuppyLoops_4_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať"
+        pomôže dostať prasa s čo najmenším počtom blokov!
       grade2_PuppyLoops_8_markdown_instruction: |-
         Tento kód pre mačacie fúzy je zlý.
 
@@ -508,6 +522,8 @@ sk:
         Vyzerá, že C v kóde je nakreslené naopak!
 
         Viete to opraviť, aby to znova vyzeralo ako C?
+      grade2_puppy_loops4_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať"
+        pomôže dostať prasa s čo najmenším počtom blokov!
       grade3_ConditionalsElse_2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
         pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
         nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
@@ -563,6 +579,8 @@ sk:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
         pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
         nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
+      grade3_maze_nestedLoops4_markdown_instruction: V tejto úlohe ti dva krát príkaz
+        "opakovať" pomôže dostať prasa s čo najmenším počtom blokov!
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Zopakujte tento dizajn
         10 krát. \n\nO koľko sa musíte otočiť pri každej slučke?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Zopakujte tento tvar
@@ -586,7 +604,7 @@ sk:
         používaš slučku aby si mal ideálny počet blokov.
       grade4_frozen_freeplay_markdown_instruction: Oficiálne se z teba stal majster
         umelec! Vytvor zimnú krajinu zázrakov.
-      grade4_frozen_functions0_markdown_instruction: Kruh je zvláštny tvar. Dokážete
+      grade4_frozen_functions0_markdown_instruction: Kruh je zvláštny tvar. Dokážeš
         zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
       grade4_frozen_functions1a_markdown_instruction: Použite nový blok "Vytvoriť
         kruh" pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi
@@ -597,27 +615,29 @@ sk:
         dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého
         kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       grade4_frozen_functions4_markdown_instruction: Zložité snehové vzory je možné
-        vytvoriť s pomocou veľmi jednoduchých tvarov. Dokážete vytvoriť vzor opakovaním
+        vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním
         5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
       grade4_frozen_nested_loop_diamonds2_markdown_instruction: Vedel si, že každá
-        snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakovať"
-        tak, že zopakujeme rovnobežník 4-krát. Po každom rovnobežníku sa otočíme o
+        snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj",
+        ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o
         90 stupňov.
-      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Teraz poďme vytvoriť
-        novú vločku pomocou bloku Opakovať tak, že budeme opakovať rovnobežník 10-krát
-        a otočíme se vpravo o 36 stupňov po každom z nich.
-      grade4_frozen_square_markdown_instruction: Ahoj, ja sa volám Anna z Arendelle!
-        Vytvorme štvorec pomocou bloku "opakuj". Takéto riešenie používa menej blokov.
-        Koľkokrát (???) musí blok "opakuj" vykonať vnútorné bloky, aby vznikol štvorec?
-      grade4_frozen_square_loop1_markdown_instruction: Ahoj, ja sa volám Anna z Arendelle!
-        Vytvorme štvorec pomocou bloku "opakuj". Takéto riešenie používa menej blokov.
-        Koľkokrát (???) musí blok "opakuj" vykonať vnútorné bloky, aby vznikol štvorec?
-      grade4_frozen_square_loop2_markdown_instruction: Poďme vytvoriť tri štvorce
-        tak, že sa po každom štvorci otočíme. Uistite sa, že sa otočíte o 120 stupňov
-        pred každým novým štvorcom.
-      grade4_frozen_square_loop3_markdown_instruction: Dokážete vytvoriť vločku pomocou
-        bloku "Opakovať" tak, že nakreslíte 10-krát štvorec a použijete blok "Otočiť"
-        na otočenie o 36 stupňov pred každým štvorcom?
+      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Teraz vytvorme novú
+        vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakujeme 10-krát a po
+        každom z nich sa otočíme vpravo o 36 stupňov.
+      grade4_frozen_square_markdown_instruction: Ahoj, som Anna z Arendelle! Vytvorme
+        štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov.
+        Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre
+        to, aby vznikol štvorec?
+      grade4_frozen_square_loop1_markdown_instruction: Ahoj, som Anna z Arendelle!
+        Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej
+        blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch
+        pre to, aby vznikol štvorec?
+      grade4_frozen_square_loop2_markdown_instruction: Vytvorme tri štvorce tak, že
+        sa po každom štvorci otočíme. Uisti sa, že sa pred každým novým štvorcom otočíš
+        o 120 stupňov.
+      grade4_frozen_square_loop3_markdown_instruction: Dokážeš vytvoriť snehovú vločku
+        pomocou blokov "Opakuj" a "Otoč" tak, že nakreslíš 10-krát štvorec a medzi
+        štvorcami sa vždy o 36 stupňov otočíš?
       grade4_review_artist3_markdown_instruction: Blok so skokom posunie umelca bez
         toho, aby bolo treba nieco nakreslit. Nakreslite prerušovanú čiaru použitím
         blokov "poskočiť dopredu" a "posunúť dopredu". Každá čiara má mať dĺžku 50

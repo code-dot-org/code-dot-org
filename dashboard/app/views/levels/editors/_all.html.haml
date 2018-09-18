@@ -10,6 +10,11 @@
   - script_data = { editorall: { video_infos: video_infos }.to_json }
   %script{src: minifiable_asset_path('js/levels/editors/_all.js'), data: script_data}
 
+.field
+  = f.label 'Documentation'
+  Find documentation for levelbuilder and its processes
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
 - unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
   .field
     = f.label :display_name
@@ -20,6 +25,13 @@
     %p
       Notes for yourself or other Levelbuilders. Viewable here and here alone.
     = f.text_area :notes, rows: 6, class: "input-block-level"
+
+.field
+  %legend.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
+    Audit Log
+  %p A log of the people who most recently edited this level (up to the last 10 people)
+  #audit_log_info.collapse
+    = render partial: 'levels/editors/audit_log', locals: {f: f}
 
 .field
   = f.label 'concepts'

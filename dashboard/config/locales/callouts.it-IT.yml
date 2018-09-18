@@ -440,7 +440,7 @@ it:
           in questo esercizio.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
-          il nettare (o miele) da un fiore (o nido d'ape).
+          il nettare da un fiore o fare tutto il miele in un favo.
       course3_artist_functions_challenge1_callout:
         courseE_artist_functions_challenge1_callout1: Prosegui questo programma aggiungendo
           altri blocchi qui sotto.
@@ -665,9 +665,12 @@ it:
         courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
           essere gettati via.
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
+      courseD_artist_functions8_callout:
+        courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
+          in questa categoria della cassetta degli attrezzi.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
           correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
@@ -687,16 +690,15 @@ it:
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
-        4_5_Bee_Conditionals_2_2: Hai bisogno di aiuto? Clicca qui per un VIDEO-suggerimento!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
-          il nettare (o miele) da un fiore (o nido d'ape).
+          il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_conditionals_challenge2_2018_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
-          il nettare (o miele) da un fiore (o nido d'ape).
+          il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Prova a ripetere il blocco "vai avanti"
           usando questo ciclo.
@@ -714,6 +716,9 @@ it:
           l'ape indietro.
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: Usa questo blocco per raccogliere un diamante.
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: Devi usare il blocco `mentre c'è strada
+          in avanti` per risolvere questo esercizio.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
@@ -775,13 +780,19 @@ it:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
       courseE_artist_functions2_callout:
-        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
+      courseE_artist_functions8_callout:
+        courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
+          in questa categoria della cassetta degli attrezzi.
+      courseE_artist_functions8a_2018_callout:
+        courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
+          in questa categoria della cassetta degli attrezzi.
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout1: Prosegui questo programma aggiungendo
           altri blocchi qui sotto.
@@ -871,6 +882,12 @@ it:
         playlab_drag_say_a: Trascina qui il blocco `attore 1 dice` and digita "Hello!"
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Aggiungi blocchi qui
+      courseF_artist_for1_callout:
+        courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
+          in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
+      courseF_artist_for1_2018_callout:
+        courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
+          in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Puoi cambiare questo numero.
         courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
@@ -893,6 +910,10 @@ it:
       courseF_bee_conditionals5_2018_callout:
         courseF_bee_conditionals5_1: Usa questo blocco quando la lunghezza del percorso
           cambia (come nei lati del rettangolo!)
+      courseF_bee_for4_callout:
+        courseF_bee_for4_1: I cicli li trovi qui dentro!
+      courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: I cicli li trovi qui dentro!
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo
           bottono "modifica" per vedere cosa c'è all'interno!
@@ -986,6 +1007,12 @@ it:
       frozen cross rotate_callout:
         replace_questions_degree: Clicca sull'elenco a discesa per sostituire "???"
           con un numero
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Clicca sull'elenco a discesa per sostituire "???"
+          con un numero
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Clicca sull'elenco a discesa per sostituire "???"
+          con un numero
       frozen cross_callout:
         repeat_blocks_1: "(1) Usa questo blocco e mettilo intorno ai blocchi grigi
           nell'area di lavoro"
@@ -998,7 +1025,21 @@ it:
       frozen freeplay_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
+          di varie forme!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
+          di varie forme!
       frozen line_callout:
+        run: Clicca su "Esegui" per provare il tuo programma
+        move_elsa_forward: Per far muovere Elsa in avanti prendi il blocco "vai avanti"
+          ed attaccalo sotto il blocco "quando si clicca su 'Esegui' "
+      frozen line_b_callout:
+        run: Clicca su "Esegui" per provare il tuo programma
+        move_elsa_forward: Per far muovere Elsa in avanti prendi il blocco "vai avanti"
+          ed attaccalo sotto il blocco "quando si clicca su 'Esegui' "
+      frozen line_test_callout:
         run: Clicca su "Esegui" per provare il tuo programma
         move_elsa_forward: Per far muovere Elsa in avanti prendi il blocco "vai avanti"
           ed attaccalo sotto il blocco "quando si clicca su 'Esegui' "
@@ -1007,15 +1048,39 @@ it:
           a discesa determina di quanto Elsa deve girare
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Usa il blocco "disegna un ramo di un fiocco di neve"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Usa il blocco "disegna un ramo di un fiocco di neve"
       frozen square iterative_callout:
         frozen_create_square: Attacca più blocchi qui per creare un quadrato
+      frozen square iterative_b_callout:
+        frozen_create_square: Attacca più blocchi qui per creare un quadrato
+      frozen square iterative_test_callout:
+        frozen_create_square: Attacca più blocchi qui per creare un quadrato
       frozen square loop 3x_callout:
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
+      frozen square loop 3x_b_callout:
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
+      frozen square loop 3x_test_callout:
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
       frozen square loop_callout:
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
+      frozen square loop_b_callout:
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
+      frozen square loop_test_callout:
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
       frozen square snowflake_callout:
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
+      frozen square snowflake_b_callout:
+        replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
+          numero
+      frozen square snowflake_test_callout:
         replace_questions: Clicca sull'elenco a discesa per sostituire "???" con un
           numero
       grade1_artist_loops2_callout:
@@ -1050,8 +1115,8 @@ it:
         grade4_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        grade4_artist_funcions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
       grade4_artist_functions_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora

@@ -31,12 +31,12 @@ el:
       World: Κόσμος
       Behaviors: Συμπεριφορές
       Advanced: Για προχωρημένους
+      Start: Έναρξη
       Sprite: Sprite
       Brush: Πινέλο
+      Groups: Ομάδες
       Make Sprite: Δημιούργησε ένα Sprite
       Movement: Κίνηση
-      Start: Έναρξη
-      Groups: Ομάδες
       Booleans: Δυαδικοί
       Functional: Λειτουργικός
       Predefined: Προορισμένα

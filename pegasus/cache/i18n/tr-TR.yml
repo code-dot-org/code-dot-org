@@ -96,6 +96,7 @@ tr-TR:
   congratulations_volunteer: 'Tebrikler: Kodlama Saati''ni denediniz, <a href="https://code.org/volunteer">bir
     sınıfta gönüllü olmak</a> ve öğrencilerin Kod Saatini öğrenmesine yardımcı olmak
     için kaydolun!'
+  congratulations_on_completing_course: "%{course} kursunu tamamladığınız için tebrikler"
   congrats_next_tutorials_title: Bir üst seviyeye geç
   congrats_next_tutorials_desc: 1 saatlik kısa eğitim setlerini veya bir <a href="%{current_path}/next">ortaklık
     eğitimini</a> dene.
@@ -283,6 +284,8 @@ tr-TR:
   just_did_accelerated: Hızlandırılmış Kursu yeni bitirdim-işte! @codeorg
   just_did_hoc_donor: "#KodSaati'ni henüz tamamladım - Hadi bir göz at! Destek için
     teşekkürler %{donor_twitter} @codeorg"
+  just_did_course_donor: "%{course} 'yi henüz tamamladım - Hadi bir göz at! Destek
+    için teşekkürler %{donor_twitter} @codeorg"
   twitter_teach_cs: |-
     10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
     http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
@@ -328,7 +331,10 @@ tr-TR:
   studiobar_shop_title: Mağaza
   studiobar_shop_body: Kalıplarını kır. Logomuzu gururla taşı.
   homepage_stats_students: aBD'li öğrencilerin çoğunun Code.org'da hesapları var
+  homepage_stats_female: öğrencilerimizin,………… si/sı kadın
   homepage_stats_teachers: öğretmenler Code.org'u kullanır
+  homepage_stats_hourofcodde: Dünyadaki öğrencilerin,...……………. si/sı, "Kod Saati"
+    ni denedi
   homepage_stats_policy: devletler, bilgisayar bilimini desteklemek için politikayı
     değiştirdi
   homepage_stats_title: Fark yaratıyoruz
@@ -373,7 +379,7 @@ tr-TR:
     Adam, öğretmen
   homepage_hero_text_stat_loc: 'öğrenciler tarafından #loc satır kod yazılmıştır'
   homepage_hero_text_stat_students: 'Code Stüdyoda #student_count tane öğrenci hesabı'
-  homepage_hero_text_stat_served: 'Code Stüdyo''da #student_count tane öğrenci hesabı'
+  homepage_hero_text_stat_served: 'Code Stüdyo''da #served tane öğrenci hesabı'
   homepage_hero_hoc_is_coming: Kodlama Saati geliyor
   homepage_hero_hoc_is_here: Kod Saati burada
   homepage_slot_text_hoc: Kod Saati
@@ -670,6 +676,7 @@ tr-TR:
   volunteer_engineer_submission_field_email_preference: Size kurslarımızdaki yenilikler,
     yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir
     miyiz?
+  volunteer_engineer_submission_field_email_preference_privacy: "(Bkz: Gizlilik İlkelerimiz)"
   volunteer_engineer_submission_field_email_preference_yes: Evet
   volunteer_engineer_submission_field_email_preference_no: Hayır
   volunteer_engineer_submission_final_paragraph: Kod Saati ve diğer gönüllü fırsatlarında

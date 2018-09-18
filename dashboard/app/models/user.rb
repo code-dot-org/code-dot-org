@@ -70,10 +70,12 @@
 #
 
 require 'digest/md5'
+require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
+require 'sign_up_tracking'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -166,6 +168,7 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    microsoft_v2_auth
     powerschool
   ).freeze
 
@@ -705,23 +708,17 @@ class User < ActiveRecord::Base
   end
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
-  def self.from_omniauth(auth, params)
+  def self.from_omniauth(auth, params, session = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
-    omniauth_user ||= create do |user|
-      initialize_new_oauth_user(user, auth, params)
-    end
 
-    if auth.credentials
-      if auth.credentials.refresh_token
-        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+    unless omniauth_user
+      omniauth_user = create do |user|
+        initialize_new_oauth_user(user, auth, params)
       end
-
-      omniauth_user.oauth_token = auth.credentials.token
-      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
-
-      omniauth_user.save if omniauth_user.changed?
+      SignUpTracking.log_sign_up_result(omniauth_user, session)
     end
 
+    omniauth_user.update_oauth_credential_tokens(auth)
     omniauth_user
   end
 
@@ -836,6 +833,17 @@ class User < ActiveRecord::Base
       update_attributes(params, *options)
     else
       super
+    end
+  end
+
+  def update_email_for(provider: nil, uid: nil, email:)
+    if migrated?
+      # Provider and uid are required to update email on AuthenticationOption for migrated user.
+      return unless provider.present? && uid.present?
+      auth_option = authentication_options.find_by(credential_type: provider, authentication_id: uid)
+      auth_option&.update(email: email)
+    else
+      update(email: email)
     end
   end
 
@@ -1064,6 +1072,10 @@ class User < ActiveRecord::Base
     )
   end
 
+  def has_activity?
+    user_levels.attempted.exists?
+  end
+
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
@@ -1187,8 +1199,8 @@ class User < ActiveRecord::Base
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(course)
-    return [] if course.nil?
+  def get_hidden_script_ids(course = nil)
+    return [] if !teacher? && course.nil?
 
     teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
   end
@@ -1527,6 +1539,11 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # return the id of the section the user most recently created.
+  def last_section_id
+    teacher? ? sections.where(hidden: false).last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
@@ -2110,10 +2127,21 @@ class User < ActiveRecord::Base
     end
   end
 
-  def destroy
-    super.tap do
-      NewRelic::Agent.record_metric("Custom/User/SoftDelete", 1) if CDO.newrelic_logging
-    end
+  after_destroy :record_soft_delete
+  def record_soft_delete
+    Cdo::Metrics.push(
+      'User',
+      [
+        {
+          metric_name: :SoftDelete,
+          dimensions: [
+            {name: "Environment", value: CDO.rack_env},
+            {name: "UserType", value: user_type},
+          ],
+          value: 1
+        }
+      ]
+    )
   end
 
   # Called before_destroy.
@@ -2220,8 +2248,9 @@ class User < ActiveRecord::Base
     sections = sections_as_student
     return [] if sections.empty?
 
+    sections = sections.reject(&:hidden)
     assigned_sections = sections.select do |section|
-      hidden_stages && section.script_id == assign_id || !hidden_stages && section.course_id == assign_id
+      hidden_stages ? section.script_id == assign_id : section.course_id == assign_id
     end
 
     if assigned_sections.empty?

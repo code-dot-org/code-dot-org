@@ -53,6 +53,23 @@ module Api::V1::Pd::Application
       )
     end
 
+    test 'do not send principal approval email on successful create if RP has selective principal approval' do
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+
+      Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
+
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+
+      Pd::Application::Teacher1819Application.any_instance.stubs(:regional_partner).returns(regional_partner)
+
+      sign_in @applicant
+
+      put :create, params: @test_params
+      assert_response :success
+    end
+
     test 'does not send confirmation mail on unsuccessful create' do
       TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).never
       TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).never

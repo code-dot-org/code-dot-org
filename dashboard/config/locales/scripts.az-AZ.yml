@@ -775,3 +775,15 @@ az:
           stages:
             Wrap Up:
               name: Yekun
+        frozen-2018:
+          stages:
+            Artist:
+              name: Rəssam
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Rəssam
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Rəssam

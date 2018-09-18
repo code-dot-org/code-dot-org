@@ -500,7 +500,17 @@ module Pd::Application
     end
 
     def principal_approval
-      sanitize_form_data_hash[:principal_approval] || ''
+      principal_approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
+
+      if principal_approval
+        if principal_approval.placeholder?
+          'Sent'
+        else
+          sanitize_form_data_hash[:principal_approval]
+        end
+      else
+        'No approval sent'
+      end
     end
 
     # @override
@@ -526,29 +536,6 @@ module Pd::Application
           'Status'
         )
         columns.push('Locked') if can_see_locked_status?(user)
-        csv << columns
-      end
-    end
-
-    # @override
-    def self.cohort_csv_header(optional_columns)
-      columns = [
-        'Date Accepted',
-        'Applicant Name',
-        'District Name',
-        'School Name',
-        'Email',
-        'Status',
-        'Assigned Workshop'
-      ]
-      if optional_columns[:registered_workshop]
-        columns.push 'Registered Workshop'
-      end
-      if optional_columns[:accepted_teachercon]
-        columns.push 'Accepted Teachercon'
-      end
-
-      CSV.generate do |csv|
         csv << columns
       end
     end

@@ -739,7 +739,6 @@ sk:
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať včelie plásty.
-        4_5_Bee_Conditionals_2_2: Potrebujete pomoc?  Kliknite sem pre videonápovedu!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
           Nemusíš vôbec vyhľadávať včelie plásty.
@@ -1208,6 +1207,10 @@ sk:
           a zmeňte veľkost.
       frozen cross rotate_callout:
         replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen cross_callout:
         repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov
           na pracovnej ploche"
@@ -1220,7 +1223,21 @@ sk:
       frozen freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
           snehových vločiek!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
+          snehových vločiek!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
+          snehových vločiek!
       frozen line_callout:
+        run: Kliknite na "Spustiť" pre spustenie Vášho programu!
+        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok
+          "Po spustení", aby sa Elsa pohla dopredu
+      frozen line_b_callout:
+        run: Kliknite na "Spustiť" pre spustenie Vášho programu!
+        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok
+          "Po spustení", aby sa Elsa pohla dopredu
+      frozen line_test_callout:
         run: Kliknite na "Spustiť" pre spustenie Vášho programu!
         move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok
           "Po spustení", aby sa Elsa pohla dopredu
@@ -1229,13 +1246,31 @@ sk:
           určí, koľkokrát sa Elsa otočí
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
       frozen square iterative_callout:
+        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+      frozen square iterative_b_callout:
+        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+      frozen square iterative_test_callout:
         frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
       frozen square loop 3x_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop 3x_b_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop 3x_test_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen square loop_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop_b_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop_test_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen square snowflake_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square snowflake_b_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square snowflake_test_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: Iba jeden z týchto blokov je v paneli s nástrojmi.

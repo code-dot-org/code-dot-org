@@ -189,6 +189,10 @@ class StudioApp extends EventEmitter {
 
     this.MIN_WORKSPACE_HEIGHT = undefined;
 
+    /**
+     * Levelbuilder-defined helper libraries.
+     */
+    this.libraries = {};
   }
 }
 
@@ -2935,8 +2939,8 @@ StudioApp.prototype.isResponsiveFromConfig = function (config) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    ttsInstructionsUrl: level.ttsInstructionsUrl,
-    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
+    ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
+    ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     locale: config.locale,
@@ -3000,6 +3004,24 @@ StudioApp.prototype.showRateLimitAlert = function () {
   });
 };
 
+/** @return Promise */
+StudioApp.prototype.loadLibraries = function (helperLibraryNames = []) {
+  if (!this.libraryPreload_) {
+    this.libraryPreload_ = Promise.all(helperLibraryNames.map(this.loadLibrary_.bind(this)));
+  }
+  return this.libraryPreload_;
+};
+
+/** @return Promise */
+StudioApp.prototype.loadLibrary_ = async function (name) {
+  if (this.libraries[name]) {
+    return;
+  }
+
+  const response = await fetch('/libraries/' + name);
+  this.libraries[name] = await response.text();
+};
+
 let instance;
 
 /** @return StudioApp */
@@ -3023,6 +3045,7 @@ if (IN_UNIT_TEST) {
 
   module.exports.restoreStudioApp = function () {
     instance.removeAllListeners();
+    instance.libraries = {};
     if (instance.changeListener) {
       Blockly.removeChangeListener(instance.changeListener);
     }

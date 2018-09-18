@@ -373,6 +373,12 @@ bg:
       frozen cross rotate_callout:
         replace_questions_degree: Използвайте падащото меню, за да замените "???"
           с номер
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Използвайте падащото меню, за да замените "???"
+          с номер
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Използвайте падащото меню, за да замените "???"
+          с номер
       frozen cross_callout:
         repeat_blocks_1: "(1) използвайте този блок и го сложете около сивите блокове
           в работната област"
@@ -387,7 +393,19 @@ bg:
       frozen freeplay_callout:
         snowflake_dropdown: Използвайте това падащо меню, за да създадете различни
           снежинки!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Използвайте това падащо меню, за да създадете различни
+          снежинки!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Използвайте това падащо меню, за да създадете различни
+          снежинки!
       frozen line_callout:
+        move_elsa_forward: Плъзнете  блок за преместване и го поставете под блока
+          "При стартиране", за  да накарате Елза да се движи напред
+      frozen line_b_callout:
+        move_elsa_forward: Плъзнете  блок за преместване и го поставете под блока
+          "При стартиране", за  да накарате Елза да се движи напред
+      frozen line_test_callout:
         move_elsa_forward: Плъзнете  блок за преместване и го поставете под блока
           "При стартиране", за  да накарате Елза да се движи напред
       frozen perpendicular_callout:
@@ -395,13 +413,31 @@ bg:
           меню определя колко Елза ще се завърти
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Използвайте блок "създаване клонче на снежинка"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Използвайте блок "създаване клонче на снежинка"
       frozen square iterative_callout:
+        frozen_create_square: Закачете повече блокове тук, за да създадете квадрат
+      frozen square iterative_b_callout:
+        frozen_create_square: Закачете повече блокове тук, за да създадете квадрат
+      frozen square iterative_test_callout:
         frozen_create_square: Закачете повече блокове тук, за да създадете квадрат
       frozen square loop 3x_callout:
         replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop 3x_b_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop 3x_test_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
       frozen square loop_callout:
         replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop_b_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square loop_test_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
       frozen square snowflake_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square snowflake_b_callout:
+        replace_questions: Използвайте падащото меню, за да замените "???" с номер
+      frozen square snowflake_test_callout:
         replace_questions: Използвайте падащото меню, за да замените "???" с номер
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Не забравяйте, проверете дали зад всеки облак има

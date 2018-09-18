@@ -414,6 +414,7 @@ et:
       Artist - Nested Loops 6_instruction: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
       Artist - Nested Loops 9_instruction: Joonista alligaatori suhu hambad!
       Artist - Nested Loops Assessment 1_instruction: Kasuta projekti lõpetamiseks pesastatud tsüklit.
+      Artist Autorun Test_instruction: Nüüd pane funktsioon tsükli sisse, et joonistada 3 ruutu.
       Artist Inspiration_instruction: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? "
       Auto Open Function Editor_instruction: 'Saad kutsuda funktsioone teiste funktsioonide seest! Võta aluseks oma funktsioon „kujund“ ja loo 3 majakujundit, millest esimene on 50 piksli suurune ja igaüks on eelmisest 20 pikslit suurem. Abiks võib olla loenduri tsükli kasutamine. '
       Bee Recommended Blocks test_instruction: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda nektarit lillalt õielt, kui seal seda ei ole. Kontrolli, kas nektari arv võrdub 1, kasutades plokki „kui“.
@@ -1122,6 +1123,9 @@ et:
       courseD_artist_binary6_2018_instruction: Milline kuuekohaline kahendstring joonistab 11 korda korratuna selle pildi?
       courseD_artist_binary7_instruction: Milline on lühim kahendstring, mida sa saad selle pildi joonistamiseks korrata?
       courseD_artist_binary7_2018_instruction: Milline on lühim kahendstring, mida sa saad selle pildi joonistamiseks korrata?
+      courseD_autorun_binary4_2019_instruction: Kas oskad selle mustri joonistada, korrates kolme kahekohalist arvu?
+      courseD_autorun_binary6_2019_instruction: Milline kuuekohaline kahendstring joonistab 11 korda korratuna selle pildi?
+      courseD_autorun_binary7_2019_instruction: Milline on lühim kahendstring, mida sa saad selle pildi joonistamiseks korrata?
       courseD_bee_debugging3_instruction: Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.
       courseD_bee_nestedLoops3_instruction: Kogu nektarit igalt lillelt. Kasuta korduse pesa. 
       courseD_bee_nestedLoops5_instruction: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
