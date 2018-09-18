@@ -96,6 +96,7 @@ def update_form(kind, secret, updates)
 
   existing_data = JSON.parse update_form.data, symbolize_names: true
   form_data = JSON.parse updates[:data], symbolize_names: true if updates[:data]
+  updates = updates.transform_keys(&:to_sym)
   merged_info = existing_data.merge updates.merge(form_data || {})
   merged_info = validate_form kind, merged_info, Pegasus.logger
 

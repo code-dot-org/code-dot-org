@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add a new record to your table in the Data Viewer. (Click to see full instructions)",
-    "markdown_instructions": "# Add a Record by Hand\r\n\r\nYou can also add new records in the data table itself by clicking the \"Add row\" button.\r\n\r\n# Do This:\r\n  * Go to the \"mySongs\" data table.\r\n  * Click the \"Add row\" button. <img src=\"https://images.code.org/403521f908a9055f4597f649deb3cfab-image-1449260729474.png\" style=\"width: 70px\">\r\n  * Enter the information for a song of your choosing.\r\n \t* If you can't think of a song use: **Don't Stop Believin'** by *Journey*.  It's 250 seconds long.\r\n  * Once you've added a record in the data table come back here and continue to the next level.\r\n\r\n",
+    "markdown_instructions": "# Add a Record by Hand\r\n\r\nYou can also add new records in the data table itself by clicking the \"Add row\" button.\r\n\r\n# Do This:\r\n* Go to the \"mySongs\" data table.\r\n* Click the \"Add row\" button. <img src=\"https://images.code.org/403521f908a9055f4597f649deb3cfab-image-1449260729474.png\" style=\"width: 70px\">\r\n* Enter the information for a song of your choosing.\r\n\t* If you can't think of a song use: **Don't Stop Believin'** by *Journey*.  It's 250 seconds long.\r\n* Once you've added a record in the data table come back here and continue to the next level.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,9 +41,22 @@
     "project_template_level_name": "U4 - Exploring Data Tools - Template_2018",
     "parent_level_id": 4073,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:53:47 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":225,\"changed_by_email\":\"poorva@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

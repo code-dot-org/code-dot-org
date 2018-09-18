@@ -100,6 +100,7 @@ describe('SectionsAsStudentTable', () => {
       />, {context: {store}},
     ).dive();
     expect(wrapper.find('.test-row')).to.have.length(4);
+    expect(wrapper).to.containMatchingElement(<div>Current unit:</div>);
     joinedSections.forEach((section) => {
       expect(wrapper).to.containMatchingElement(
         <td>
@@ -108,13 +109,29 @@ describe('SectionsAsStudentTable', () => {
           </div>
         </td>
       );
-      expect(wrapper).to.containMatchingElement(
-        <td>
-          <a>
-            {section.assignedTitle}
-          </a>
-        </td>
-      );
+      if (section.currentUnitTitle) {
+        expect(wrapper).to.containMatchingElement(
+            <td>
+              <a href={section.linkToAssigned}>
+                {section.assignedTitle}
+              </a>
+              <div>
+                <div>Current unit:</div>
+                <a href={section.linkToCurrentUnit}>
+                  {section.currentUnitTitle}
+                </a>
+              </div>
+            </td>
+        );
+      } else {
+        expect(wrapper).to.containMatchingElement(
+          <td>
+            <a href={section.linkToAssigned}>
+              {section.assignedTitle}
+            </a>
+          </td>
+        );
+      }
       expect(wrapper).to.containMatchingElement(
         <td>
           {section.teacherName}

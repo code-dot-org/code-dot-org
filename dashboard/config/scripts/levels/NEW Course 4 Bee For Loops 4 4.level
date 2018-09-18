@@ -37,6 +37,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-17 15:38:54 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,
@@ -108,7 +109,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true">
+            <block type="controls_for">
               <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number">
@@ -126,7 +127,7 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="controls_repeat_ext" inline="true">
+                <block type="controls_repeat_ext">
                   <value name="TIMES">
                     <block type="variables_get">
                       <title name="VAR">counter</title>
@@ -138,16 +139,14 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="controls_repeat_ext" inline="true">
+                    <block type="controls_repeat_ext">
                       <value name="TIMES">
                         <block type="variables_get">
                           <title name="VAR">counter</title>
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                        </block>
+                        <block type="maze_nectar"/>
                       </statement>
                     </block>
                   </next>

@@ -6,6 +6,7 @@
     "args": [
       {
         "name": "DIR",
+        "type": "String",
         "options": [
           [
             "right ↻",
