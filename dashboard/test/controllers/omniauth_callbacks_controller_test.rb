@@ -825,18 +825,16 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test "connect_provider: Performs takeover of an account with matching credential that has no activity" do
     # Given I am a multi-auth user
     user = create :user, :multi_auth_migrated
-    assert user.migrated?
 
     # And there exists another user
     #   having credential X
     #   and having no activity
     other_user = create :user, :multi_auth_migrated
-    other_credential = create :google_authentication_option, user: other_user
-    refute_nil User.find_by_credential(type: other_credential.credential_type, id: other_credential.authentication_id)
+    credential = create :google_authentication_option, user: other_user
     refute other_user.has_activity?
 
     # When I attempt to add credential X
-    auth = generate_auth_user_hash(provider: other_credential.credential_type, uid: other_credential.authentication_id, refresh_token: '54321')
+    auth = generate_auth_user_hash(provider: credential.credential_type, uid: credential.authentication_id, refresh_token: '54321')
     @request.env['omniauth.auth'] = auth
     setup_should_connect_provider(user, 2.days.from_now)
     get :google_oauth2
@@ -853,16 +851,28 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "connect_provider: Successful takeover also enrolls in replaced user's sections" do
     # Given I am a multi-auth user
+    user = create :user, :multi_auth_migrated
+
     # And there exists another user "other_user"
     # And "other_user" has credential X
     # And "other_user" has no activity
     # And "other_user" is in section Y
+    other_user = create :user, :multi_auth_migrated
+    credential = create :google_authentication_option, user: other_user
+    refute other_user.has_activity?
+    section = create :section
+    section.students << other_user
 
     # When I attempt to add credential X
+    auth = generate_auth_user_hash(provider: credential.credential_type, uid: credential.authentication_id)
+    @request.env['omniauth.auth'] = auth
+    setup_should_connect_provider(user, 2.days.from_now)
+    get :google_oauth2
 
-    # Then I should successfully add credential X
-    # And "other_user" should be destroyed
-    # And I should be enrolled in section Y
+    # Then I should be enrolled in section Y instead of other_user
+    section.reload
+    assert_includes section.students, user
+    refute_includes section.students, other_user
   end
 
   test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do

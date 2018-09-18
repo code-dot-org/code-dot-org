@@ -37,7 +37,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else
         # The credential is tied to an unused account.
         # Destroy the unused account and proceed to link this one.
-        existing_credential_holder.destroy!
+        move_sections_and_destroy_source_user \
+          source_user: existing_credential_holder,
+          destination_user: current_user,
+          takeover_type: 'connect_provider'
       end
     end
 
