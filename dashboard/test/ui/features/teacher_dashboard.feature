@@ -152,6 +152,23 @@ Feature: Using the teacher dashboard
     And I go to the newly opened tab
     And I wait until element ".project_name.header_text:contains('thumb wars')" is visible
 
+  Scenario: Toggling student progress
+    Given I create an authorized teacher-associated student named "Sally"
+    And I give user "Teacher_Sally" hidden script access
+    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
+    And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+    And I sign out
+
+    # Progress tab
+    When I sign in as "Teacher_Sally"
+    And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
+    And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
+    And I click selector "a:contains('New Section')" once I see it
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I press the first ".uitest-summary-cell" element
+    And I see ".uitest-detail-cell"
+
   @eyes
   Scenario: Eyes tests for section projects with thumbnails
     When I open my eyes to test "section projects with thumbnails"
