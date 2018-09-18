@@ -10,31 +10,201 @@ bn:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': আকার
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
       Dancelab_everySeconds:
@@ -89,100 +259,6 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': সেকেন্ড
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': সেকেন্ড
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ডানে
-            '"left"': বামে
-      DancelabAlpha_randomColor:
-        text: যেকোনো রঙ
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': উপরে
@@ -279,5 +355,16 @@ bn:
             '"scale"': আকার
       Vanilla_randomColor:
         text: যেকোনো রঙ
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": সামনে
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": বালি
+            "'planksOak'": ওকের তক্তা
       craft_moveForward:
         text: সামনে এগিয়ে যান
+      craft_placeTorch:
+        text: মশাল বসান

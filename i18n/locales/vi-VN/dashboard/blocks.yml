@@ -10,9 +10,17 @@ vi:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Tiếp
             '"prev"': Trước
       Dancelab_changeMoveEach:
@@ -21,9 +29,76 @@ vi:
             sprites: tất cả
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: tất cả
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Tiếp
             '"prev"': Trước
       Dancelab_changePropBy:
@@ -32,13 +107,112 @@ vi:
             '"scale"': kích thước
             '"x"': hoành độ
             '"y"': tung độ
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: tất cả
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Tiếp
             '"prev"': Trước
       Dancelab_everySeconds:
@@ -121,132 +295,6 @@ vi:
             '"right"': phải
             '"space"': vũ trụ
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': trên
-            '"down"': xuống
-            '"left"': trái
-            '"right"': phải
-            '"space"': vũ trụ
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': vài giây
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Tiếp
-            '"prev"': Trước
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: tất cả
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Tiếp
-            '"prev"': Trước
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': kích thước
-            '"x"': hoành độ
-            '"y"': tung độ
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Tiếp
-            '"prev"': Trước
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': vài giây
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': kích thước
-            '"x"': hoành độ
-            '"y"': tung độ
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: tất cả
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': kích thước
-            '"x"': hoành độ
-            '"y"': tung độ
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': phải
-            '"left"': trái
-      DancelabAlpha_randomColor:
-        text: màu ngẫu nhiên
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': Rỗng
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': bình thường
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Rỗng
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': kích thước
-            '"x"': hoành độ
-            '"y"': tung độ
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: tất cả
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': kích thước
-            '"x"': hoành độ
-            '"y"': tung độ
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': kích thước
-            '"x"': hoành độ
-            '"y"': tung độ
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': kích thước
-            '"x"': hoành độ
-            '"y"': tung độ
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': trên
-            '"down"': xuống
-            '"left"': trái
-            '"right"': phải
-            '"space"': vũ trụ
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': trên
@@ -359,5 +407,16 @@ vi:
             '"y"': tung độ
       Vanilla_randomColor:
         text: màu ngẫu nhiên
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": phía trước
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": cát
+            "'planksOak'": ván cây sồi
       craft_moveForward:
         text: đi thẳng
+      craft_placeTorch:
+        text: đặt đuốc

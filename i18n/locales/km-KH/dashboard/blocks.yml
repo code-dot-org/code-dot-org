@@ -10,12 +10,49 @@ km:
         options:
           GROUP:
             sprites: ទាំងអស់
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -96,107 +133,6 @@ km:
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': វិ​នាទី
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: ទាំងអស់
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': វិ​នាទី
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: ទាំងអស់
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ស្តាំ
-            '"left"': ឆ្វេង
-      DancelabAlpha_randomColor:
-        text: ពណ៌​ព្រាវ
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': គ្មាន
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': ធម្មតា
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': គ្មាន
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: ទាំងអស់
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': ឡើង
@@ -309,5 +245,16 @@ km:
             '"y"': គូល​y
       Vanilla_randomColor:
         text: ពណ៌​ព្រាវ
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": នៅខាងមុខ
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": ខ្សាច់
+            "'planksOak'": ក្តារឈើសែន
       craft_moveForward:
         text: រំកិល​ទៅមុខ
+      craft_placeTorch:
+        text: ដាក់ភ្លើងគប់
