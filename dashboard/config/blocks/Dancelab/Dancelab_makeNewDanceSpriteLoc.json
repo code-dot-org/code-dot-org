@@ -1,0 +1,57 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "makeNewDanceSpriteLoc",
+    "inline": false,
+    "blockText": "make a new {COSTUME}\n called {NAME} at {LOCATION}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "COSTUME",
+        "options": [
+          [
+            "Cat",
+            "\"CAT\""
+          ],
+          [
+            "Dog",
+            "\"DOG\""
+          ],
+          [
+            "Duck",
+            "\"DUCK\""
+          ],
+          [
+            "Moose",
+            "\"MOOSE\""
+          ],
+          [
+            "Poo",
+            "\"POO\""
+          ],
+          [
+            "Robot",
+            "\"ROBOT\""
+          ],
+          [
+            "Shark",
+            "\"SHARK\""
+          ]
+        ]
+      },
+      {
+        "name": "NAME",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

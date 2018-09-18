@@ -61,7 +61,9 @@ var MOVE_NAMES = [
   }
 ];
 var ANIMATIONS = {};
-var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet/";
+var FRAMES = 24;
+var SIZE = 300;
+var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet_sm/";
 
 // Songs
 var songs = {
@@ -102,7 +104,6 @@ var backup_dancers = createGroup();
 function preload() {
   // Load song
   Dance.song.load(song_meta.url);
-
   // Load spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
     var this_sprite = SPRITE_NAMES[i];
@@ -110,7 +111,7 @@ function preload() {
     for (var j = 0; j < MOVE_NAMES.length; j++) {
       var url = img_base + this_sprite + "_" + MOVE_NAMES[j].name + ".png";
       var dance = {
-        spritesheet: loadSpriteSheet(url, 400, 400, 48),
+        spritesheet: loadSpriteSheet(url, SIZE, SIZE, FRAMES),
         mirror: MOVE_NAMES[j].mirror
       };
       ANIMATIONS[this_sprite].push(dance);
