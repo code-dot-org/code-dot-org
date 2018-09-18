@@ -822,6 +822,62 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
+  test "connect_provider: Performs takeover of an account with matching credential that has no activity" do
+    # Given I am a multi-auth user
+    user = create :user, :multi_auth_migrated
+    assert user.migrated?
+
+    # And there exists another user
+    #   having credential X
+    #   and having no activity
+    other_user = create :user, :multi_auth_migrated
+    other_credential = create :google_authentication_option, user: other_user
+    refute_nil User.find_by_credential(type: other_credential.credential_type, id: other_credential.authentication_id)
+    refute other_user.has_activity?
+
+    # When I attempt to add credential X
+    auth = generate_auth_user_hash(provider: other_credential.credential_type, uid: other_credential.authentication_id, refresh_token: '54321')
+    @request.env['omniauth.auth'] = auth
+    setup_should_connect_provider(user, 2.days.from_now)
+    get :google_oauth2
+
+    # Then I should successfully add credential X
+    user.reload
+    assert_redirected_to 'http://test.host/users/edit'
+    assert_auth_option(user, auth)
+
+    # And "other_user" should be destroyed
+    other_user.reload
+    assert other_user.deleted?
+  end
+
+  test "connect_provider: Successful takeover also enrolls in replaced user's sections" do
+    # Given I am a multi-auth user
+    # And there exists another user "other_user"
+    # And "other_user" has credential X
+    # And "other_user" has no activity
+    # And "other_user" is in section Y
+
+    # When I attempt to add credential X
+
+    # Then I should successfully add credential X
+    # And "other_user" should be destroyed
+    # And I should be enrolled in section Y
+  end
+
+  test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do
+    # Given I am a multi-auth user
+    # And there exists another user "other_user"
+    # And "other_user" has credential X
+    # And "other_user" has activity
+
+    # When I attempt to add credential X
+
+    # Then I should fail to add credential X
+    # And "other_user" should not be destroyed
+    # And I should receive a helpful error message about the credential already being in use.
+  end
+
   private
 
   def set_oauth_takeover_session_variables(provider, user)
@@ -863,7 +919,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       user: user,
       hashed_email: User.hash_email(oauth_hash.info.email),
       credential_type: oauth_hash.provider,
-      authentication_id: user.uid,
+      authentication_id: oauth_hash.uid,
       data: {
         oauth_token: oauth_hash.credentials.token,
         oauth_token_expiration: oauth_hash.credentials.expires_at,

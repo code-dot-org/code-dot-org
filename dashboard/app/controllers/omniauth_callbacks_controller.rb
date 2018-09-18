@@ -27,6 +27,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     provider = auth_hash.provider.to_s
     return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
 
+    # Check if credential is already in use
+    existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
+    if existing_credential_holder && existing_credential_holder != current_user
+      if existing_credential_holder.has_activity?
+        # Linking is not possible and takeover is not possible
+        # Display a custom error message explaining the credential is already
+        # tied to an account, and what we can do about it.
+      else
+        # The credential is tied to an unused account.
+        # Destroy the unused account and proceed to link this one.
+        existing_credential_holder.destroy!
+      end
+    end
+
     # TODO: some of this won't work right for non-Google providers, because info comes in differently
     new_data = nil
     if auth_hash.credentials && (auth_hash.credentials.token || auth_hash.credentials.expires_at || auth_hash.credentials.refresh_token)
