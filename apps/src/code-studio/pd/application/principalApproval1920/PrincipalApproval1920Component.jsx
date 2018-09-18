@@ -131,7 +131,8 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           })
         }
         <p style={styles.questionText}>
-          There may be a fee associated with your teacher’s professional learning program. Please <a href="https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo" target="_blank">
+          There may be a fee associated with your teacher’s professional learning program.
+          Please <a href="https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo" target="_blank">
           check here</a> to see if there are fees for your teacher’s professional learning program and/or if there are scholarships available in your region.
 
         </p>
@@ -153,13 +154,14 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         }, {
           label:
             <span style={styles.questionText}>How did you hear about Code.org’s Professional Learning program? (To see a list of local Regional
-              Partners, <a href="https://code.org/educate/regional-partner/partners">visit this page</a>.)
+              Partners, <a href="https://code.org/educate/regional-partner/partners" target="_blank">visit this page</a>.)
             </span>
         })}
         {this.props.teacherApplication.course === 'Computer Science Principles' &&
           <div>
-            <p>
-              If you are planning to offer CS Principles as an AP course, please review the AP Score Sharing Agreement.
+            <p style={styles.questionText}>
+              If you are planning to offer CS Principles as an AP course, please review
+              the <a href="https://code.org/csp/ap-score-sharing-agreement" target="_blank">AP Score Sharing Agreement</a>.
             </p>
             {this.singleCheckboxFor('shareApScores', {
               required: false,
@@ -183,8 +185,8 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           and the name of their school and district. We will not share any information about individual
           students with our Regional Partners - all information will be de-identified and aggregated. Our
           Regional Partners are contractually obliged to treat this information with the same level of
-          confidentiality as Code.org. To see Code.org’s complete Privacy Policy, visit <a href="http://code.org/privacy">
-          http://code.org/privacy</a>.
+          confidentiality as Code.org. To see Code.org’s complete Privacy Policy,
+          visit <a href="http://code.org/privacy" target="_blank">http://code.org/privacy</a>.
         </p>
       </div>
     );
@@ -206,7 +208,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     const question_label = (<span>To participate in Code.org’s {this.props.teacherApplication.course} Professional
                   Learning Program, we require that this course be offered in one of the following
                   ways. Please select which option will be implemented at your school. Be sure
-                  to <a href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18">
+                  to <a href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18" target="_blank">
                   review the guidance on required number of hours here</a> prior to answering.</span>);
     const other_label = "We will use a different implementation schedule. (Please Explain):";
 
