@@ -10,18 +10,91 @@ lt:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Kitas
             '"prev"': Ankstesnis
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Kitas
             '"prev"': Ankstesnis
       Dancelab_changePropBy:
@@ -30,13 +103,110 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Kitas
             '"prev"': Ankstesnis
       Dancelab_everySeconds:
@@ -103,114 +273,6 @@ lt:
             '"right"': dešinėje
             '"space"': kosmosas
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': viršuje
-            '"down"': apačioje
-            '"left"': kairėje
-            '"right"': dešinėje
-            '"space"': kosmosas
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Kitas
-            '"prev"': Ankstesnis
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Kitas
-            '"prev"': Ankstesnis
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Kitas
-            '"prev"': Ankstesnis
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': dešinėje
-            '"left"': kairėje
-      DancelabAlpha_randomColor:
-        text: Atsitiktinė spalva
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': viršuje
-            '"down"': apačioje
-            '"left"': kairėje
-            '"right"': dešinėje
-            '"space"': kosmosas
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': viršuje
@@ -323,5 +385,16 @@ lt:
             '"y"': y pozicija
       Vanilla_randomColor:
         text: Atsitiktinė spalva
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": priekyje
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": smėlį
+            "'planksOak'": ąžuolo lentas
       craft_moveForward:
         text: judėk į priekį
+      craft_placeTorch:
+        text: padėk deglą

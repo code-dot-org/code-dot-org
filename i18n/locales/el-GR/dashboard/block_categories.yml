@@ -33,9 +33,9 @@ el:
       Start: Έναρξη
       Sprite: Sprite
       Brush: Πινέλο
+      Groups: Ομάδες
       Make Sprite: Δημιούργησε ένα Sprite
       Movement: Κίνηση
-      Groups: Ομάδες
       Booleans: Δυαδικοί
       Functional: Λειτουργικός
       Predefined: Προορισμένα
