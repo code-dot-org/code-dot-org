@@ -2,6 +2,7 @@
 /* global dashboard */
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import Radium from 'radium';
 import React, {PropTypes} from 'react';
 import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
@@ -16,8 +17,30 @@ import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
+import gamelabMsg from '@cdo/gamelab/locale';
 
+const SongSelector = Radium(class extends React.Component {
+  static propTypes = {
+    options: PropTypes.array.isRequired,
+  };
 
+  render() {
+    const selectStyle = {
+      width: GAME_WIDTH
+    };
+
+    return (
+      <div>
+        <label><b>{gamelabMsg.selectSong()}</b></label>
+        <select style={selectStyle}>
+          {this.props.options.map((option, i) => (
+            <option key={i}>{option}</option>
+          ))}
+        </select>
+      </div>
+    );
+  }
+});
 /**
  * Top-level React wrapper for GameLab
  */
@@ -76,6 +99,13 @@ class GameLabView extends React.Component {
           style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
+          {this.props.spriteLab &&
+            <div id="song_selector">
+              <SongSelector
+                options={['option 1', 'option 2', 'option 3']}
+              />
+            </div>
+          }
           <GameLabVisualizationColumn finishButton={showFinishButton}/>
         </div>
         {this.props.isIframeEmbed &&
