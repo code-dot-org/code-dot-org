@@ -316,13 +316,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def get_connect_provider_errors(auth_option)
     errors = auth_option.errors.full_messages
-    Honeybadger.notify(
-      error_message: "Error connecting to provider",
-      context: {
-        authentication_option: auth_option,
-        errors: errors
-      }
-    )
 
     return errors.first unless errors.empty?
     I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))
