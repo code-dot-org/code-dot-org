@@ -151,6 +151,8 @@ sk:
         spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je
         nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak
         dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\"."
+      2-3 Maze 15_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať"
+        pomôže dostať prasa s čo najmenším počtom blokov!
       2-3 Maze Loops 18_markdown_instruction: "Dostaňte ma k slnečnici použitím čo
         najmenšieho možného počtu blokov!  \n\nSkúste použiť jednu slučku \"opakovať\"
         vo vnútri druhej pre zníženie množstva kódu, ktoré potrebujete."
@@ -461,6 +463,10 @@ sk:
         sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
       frozen cross rotate_markdown_instruction: Teraz to skús zopakovať 10-krát. O
         koľko stupňov sa musíš otočiť medzi jednotlivými čiarami?
+      frozen cross rotate_b_markdown_instruction: Teraz to skús zopakovať **10-krát**.
+        **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
+      frozen cross rotate_test_markdown_instruction: Teraz to skús zopakovať **10-krát**.
+        **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
       frozen cross_markdown_instruction: Vytvor znamienko plus pomocou bloku "Opakuj".
         Všimol si si, že Elsa sa môže pohybovať dopredu i dozadu?
       frozen diamond mini snowflake_markdown_instruction: Vedel si, že každá snehová
@@ -481,6 +487,10 @@ sk:
         vločky", aby si vytvoril tri ramená, ktoré začnú vyzerať ako snehová vločka.
       frozen snowflake full_markdown_instruction: A teraz to zopakujme 8 krát, aby
         sme nakreslili prekrásnu vločku!
+      frozen snowflake full_b_markdown_instruction: A teraz to zopakujme 8 krát, aby
+        sme nakreslili prekrásnu vločku!
+      frozen snowflake full_test_markdown_instruction: A teraz to zopakujme 8 krát,
+        aby sme nakreslili prekrásnu vločku!
       frozen snowflower_markdown_instruction: Zložité snehové vzory je možné vytvoriť
         pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc
         s veľkosťou 5 a 5 kružníc s veľkosťou 10?
@@ -502,6 +512,8 @@ sk:
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
 
         Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
+      grade2_PuppyLoops_4_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať"
+        pomôže dostať prasa s čo najmenším počtom blokov!
       grade2_PuppyLoops_8_markdown_instruction: |-
         Tento kód pre mačacie fúzy je zlý.
 
@@ -510,6 +522,8 @@ sk:
         Vyzerá, že C v kóde je nakreslené naopak!
 
         Viete to opraviť, aby to znova vyzeralo ako C?
+      grade2_puppy_loops4_markdown_instruction: V tejto úlohe ti dva krát príkaz "opakovať"
+        pomôže dostať prasa s čo najmenším počtom blokov!
       grade3_ConditionalsElse_2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
         pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
         nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
@@ -565,6 +579,8 @@ sk:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
         pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
         nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
+      grade3_maze_nestedLoops4_markdown_instruction: V tejto úlohe ti dva krát príkaz
+        "opakovať" pomôže dostať prasa s čo najmenším počtom blokov!
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Zopakujte tento dizajn
         10 krát. \n\nO koľko sa musíte otočiť pri každej slučke?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Zopakujte tento tvar

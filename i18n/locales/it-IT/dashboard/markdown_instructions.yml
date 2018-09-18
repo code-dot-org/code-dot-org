@@ -705,7 +705,8 @@ it:
       course2_collector_prog_challenge2_markdown_instruction: In questa grotta ci sono **20** diamanti. Raccogline almeno la metà per completare la sfida!
       course2_harvester_loops_challenge1_markdown_instruction: Raccogli tutte le pannocchie.
       course2_harvester_loops_challenge2_markdown_instruction: Raccogli tutte le lattughe evitando gli alberi e i campi!
-      course2_maze_programming_challenge2_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
+      course2_maze_programming_challenge1_markdown_instruction: '*"Il maialino si sta nascondendo! Puoi aiutarmi a trovare un modo per raggiungerlo?"*'
+      course2_maze_programming_challenge2_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce andare all'indietro, piuttosto che muoversi in avanti!
       course3_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/><br>\n<br>\nE ora una piccola sfida!<br>\n<br>\nPer ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br>\n<br>\n<b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href=\"https://studio.code.org/s/course4/stage/3/puzzle/11\" target=\"_blank\">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa."
       course3_artist_functions_challenge1_markdown_instruction: Dopo aver definito una funzione, la puoi richiamare più e più volte - quando e dove vuoi! Prova questo codice per scoprire come funziona, dopo di che modificalo per creare un disegno tutto tuo!
       course3_artist_functions_challenge2_markdown_instruction: |-
@@ -1498,8 +1499,8 @@ it:
       courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
       courseC_maze_programming9_markdown_instruction: '*"Ora aiutami a sorprendere il maialino nel modo che preferisci!"*'
       courseC_maze_programming9_2018_markdown_instruction: '*"Ora aiutami a sorprendere il maialino nel modo che preferisci!"*'
-      courseC_maze_programming_challenge2_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
-      courseC_maze_programming_challenge2_2018_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
+      courseC_maze_programming_challenge2_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce andare all'indietro, piuttosto che muoversi in avanti!
+      courseC_maze_programming_challenge2_2018_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce andare all'indietro, piuttosto che muoversi in avanti!
       courseC_puppy_loops8_markdown_instruction: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello."
       courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello."
       courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Vai a recuperare i rottami metallici, BB-8!\"_ \n\nUsa cinque blocchi uguali per recuperare i rottami metallici che brillano come questo: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
@@ -2327,16 +2328,16 @@ it:
         - Per disegnare il rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
       courseE_artist_functions1_2018_markdown_instruction: "*\"Io zombie artista. Io amare disegnare!\"*\n\nAiuta lo zombie a disegnare questi occhiali usando dei quadrati con i lati di 100 pixel.\nL'asta tra le lenti è lunga 75 pixel."
       courseE_artist_functions2_markdown_instruction: "Le funzioni ti permettono di definire nuovi blocchi!\n\nAbbiamo spostato i blocchi per disegnare un quadrato all'interno di una funzione chiamata `draw a square` (*disegna un quadrato*). Puoi usare la funzione `draw a square` per creare gli occhiali?\n___\n\nI quadrati sono distanti 75 pixel."
-      courseE_artist_functions2_2018_markdown_instruction: "Ecco una funzione `draw a square` (*disegna un quadrato*). Usala per completare questo disegno. \n\n___\n\nI quadrati sono 75 pixel di distanza."
+      courseE_artist_functions2_2018_markdown_instruction: "Qui c'è una funzione chiamata `disegna un quadrato`. Usala per completare questo disegno. \n\n___\n\nI quadrati si trovano a 75 pixel di distanza uno dall'altro."
       courseE_artist_functions3_markdown_instruction: "Torneremo alle funzioni tra poco. Ora facciamo una breve pausa esercitandoci a disegnare questa stella.\n\nPuoi realizzare questo disegno aggiungendo un blocco `ripeti ... volte`."
       courseE_artist_functions3_2018_markdown_instruction: |-
-        Costruisci una funzione che creerà questa stella.
+        Costruisci una funzione per disegnare questa stella.
         
         ---
         
         - Ogni braccio della stella ha una lunghezza di 25 pixel
         - È necessario ruotare di 45 gradi per ottenere 8 braccia
-        - Va bene andare avanti e indietro sullo stesso braccio
+        - Il modo migliore di procedere, è di andare avanti e indietro lungo ogni braccio
       courseE_artist_functions4_markdown_instruction: |-
         Ora che sai disegnare una stella, prova a disegnarne quattro!
         
@@ -2370,21 +2371,21 @@ it:
         
         Crea tutte le funzioni che ritieni necessarie per realizzare questo disegno fatto da quadrati di 50 pixel.
       courseE_artist_functions8a_2018_markdown_instruction: |-
-        * "Funzioni facili!" *
+        *"Funzioni facili!"*
         
-        Stiamo per costruire qualcosa di stravagante! Inizia creando una funzione per questo quadrato.
+        Stiamo per costruire qualcosa di stravagante! Inizia creando una funzione per disegnare questo quadrato.
       courseE_artist_functions8b_2018_markdown_instruction: |-
-        *"Zombie diventa vertiginoso."*
+        *"Zombie essere confuso."*
         
-        Chiama la funzione `draw a square` (*disegna un quadrato*) dalla tua funzione`draw a line of squares` (*disegna una fila di quadrati*) per renderla ancora più semplice!
+        Richiama la funzione `disegna un quadrato` dall'interno della funzione `disegna una fila di quadrati` per semplificarne ulteriormente la realizzazione!
         
         ---
         
-        - I quadrati sono distanti *50* pixel.
-      courseE_artist_functions8c_2018_markdown_instruction: Aggiungi un'altra funzione che crea questa pila di quadrati sfalsati usando la funzione `draw a line of squares` (*disegna una fila di quadrati*).
+        - I quadrati distano *50* pixel uno dall'altro.
+      courseE_artist_functions8c_2018_markdown_instruction: Usa ancora la funzione `disegna una fila di quadrati` per creare una seconda fila traslata a destra.
       courseE_artist_functions9_markdown_instruction: "Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.\n\n- Ogni triangolo ha i lati lunghi **50 pixel**.\n- Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi."
       courseE_artist_functions9_2018_markdown_instruction: "**Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.\n\n- Ogni triangolo ha i lati lunghi **50 pixel**.\n- Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi."
-      courseE_artist_functionsProj_2018_markdown_instruction: "**Ispirazione:** Usa quello che hai imparato per fare quello che vuoi!\n\nPuoi creare qualcosa come questa girandola?"
+      courseE_artist_functionsProj_2018_markdown_instruction: "**Ispirazione:** Usa ciò che hai imparato per creare quello che vuoi!\n\nPotresti realizzare qualcosa simile a questa girandola."
       courseE_artist_functions_challenge_markdown_instruction: Dopo aver definito una funzione, la puoi richiamare più e più volte - quando e dove vuoi! Prova questo codice per scoprire come funziona, dopo di che modificalo per creare un disegno tutto tuo!
       courseE_artist_functions_challenge1_markdown_instruction: Dopo aver definito una funzione, la puoi richiamare più e più volte - quando e dove vuoi! Prova questo codice per scoprire come funziona, dopo di che modificalo per creare un disegno tutto tuo!
       courseE_artist_functions_challenge1_2018_markdown_instruction: Dopo aver definito una funzione, la puoi richiamare più e più volte - quando e dove vuoi! Prova questo codice per scoprire come funziona, dopo di che modificalo per creare un disegno tutto tuo!
@@ -2440,8 +2441,8 @@ it:
       courseE_bee_concept1_2018_markdown_instruction: "*\"Puoi passare su tutti questi fiori?\"*\n\nRaccogli tutto il nettare da questi fiori."
       courseE_bee_concept2_markdown_instruction: "Aiuta l'ape a produrre tutto il miele.\n\nVisto che puoi fare il miele solo sui favi, devi prima controllare in ogni casella se c'è un favo."
       courseE_bee_concept2_2018_markdown_instruction: "Aiuta l'ape a produrre tutto il miele.\n\nVisto che puoi fare il miele solo sui favi, devi prima controllare in ogni casella se c'è un favo."
-      courseE_bee_concept5_markdown_instruction: "Aiuta l'ape a raccogliere tutto il nettare.\n\nVisto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore."
-      courseE_bee_concept5_2018_markdown_instruction: "Aiuta l'ape a raccogliere tutto il nettare.\n\nVisto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore."
+      courseE_bee_concept5_markdown_instruction: "Puoi aiutare l'ape a raccogliere il nettare dai fiori?\n\nVisto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore."
+      courseE_bee_concept5_2018_markdown_instruction: "Puoi aiutare l'ape a raccogliere il nettare dai fiori?\n\nVisto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore."
       courseE_bee_functions10_markdown_instruction: "*\"Vai con il MIELE!\"*\n\nRisolvi l'esercizio creando una funzione che induca l'ape a:\n- girare verso il percorso laterale,\n- andare avanti,\n- produrre tutto il miele,\n- ritornare al percorso principale,\n- orientarsi nella direzione iniziale."
       courseE_bee_functions10_2018_markdown_instruction: "*\"Vai con il MIELE!\"*\n\nRisolvi l'esercizio creando una funzione che induca l'ape a:\n- girare verso il percorso laterale,\n- andare avanti,\n- produrre tutto il miele,\n- ritornare al percorso principale,\n- orientarsi nella direzione iniziale."
       courseE_bee_functions2_markdown_instruction: "Una funzione è una sequenza di blocchi di codice che esegue un compito. Usa la funzione `get 2 nectar` (<i>prendi 2 dosi di nettare</i>) per raccogliere il nettare da ogni fiore.\n<br><a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-6#VIDEO\" target=\"_blank\">Video doppiato in italiano</a> (solo la seconda parte)"
@@ -2459,10 +2460,10 @@ it:
         *"Ci siamo già incontrati? Sono la contadina!"*
         
         Aiuta la contadina a raggiungere la zucca e raccoglierla.
-      courseE_farmer_functions10a1_2018_markdown_instruction: "**Sfida:** Usa tutto quello che hai imparato fino ad ora per risolvere questo esercizio con 19 blocchi o meno!"
+      courseE_farmer_functions10a1_2018_markdown_instruction: "**Sfida:** Usa tutto quello che hai imparato finora per risolvere questo esercizio con 19 blocchi o meno!"
       courseE_farmer_functions10b_markdown_instruction: Se metti il codice dell'esercizio precedente in una funzione, poi potrai usarla due volte per risolvere questo esercizio.
       courseE_farmer_functions10b_2018_markdown_instruction: Se metti il codice dell'esercizio precedente in una funzione, poi potrai usarla due volte per risolvere questo esercizio.
-      courseE_farmer_functions13_2018_markdown_instruction: "Risolvi questo puzzle in 23 blocchi o meno.\n___\n\n##### Ogni germoglio farà crescere *una* pannocchia o niente. Per trovare la soluzione migliore, è necessario modificare direttamente le funzioni."
+      courseE_farmer_functions13_2018_markdown_instruction: "Risolvi questo puzzle in 23 blocchi o meno.\n___\n\n##### Ogni germoglio farà crescere *una* pannocchia o niente. Per programmare la soluzione migliore, è necessario modificare le funzioni."
       courseE_farmer_functions1_2018_markdown_instruction: |-
         *"Ci siamo già incontrati? Sono la contadina!"*
         
@@ -2491,9 +2492,9 @@ it:
         ##### Ogni germoglio farà crescere *una* pannocchia o niente.
       courseE_farmer_functions3c_markdown_instruction: "Ora, inserisci tu il codice all'interno della funzione, trascinando i blocchi dal programma principale e rilasciandoli nel blocco verde che **definisce la funzione**.\n\nDopo di che, non dimenticarti di aggiungere il piccolo blocco verde che **richiama la funzione** per usarla dove ti serve."
       courseE_farmer_functions3c1_2018_markdown_instruction: |-
-        Hai notato che c'era un sacco di codice ripetuto in quest'ultimo esercizio? Possiamo risparmiare spazio chiamando quel codice con `raccogli lungo il percorso` e usando una nuova funzione per chiamare le altre funzioni!
+        Hai notato che c'era un sacco di codice ripetuto in quest'ultimo esercizio? Possiamo risparmiare spazio chiamando quel codice `raccogli lungo il percorso` e usando una nuova funzione per richiamare le altre funzioni!
         
-        Usa `raccogli lungo il percorso`per risolvere di nuovo questo esercizio usando meno blocchi.
+        Usa la funzione `raccogli lungo il percorso` per risolvere di nuovo questo esercizio usando meno blocchi.
       courseE_farmer_functions3c_2018_markdown_instruction: Grandioso!  Prova le tue funzioni su un percorso più lungo.
       courseE_farmer_functions4b_markdown_instruction: Usa la tua nuova funzione per risolvere questo esercizio.
       courseE_farmer_functions4b_2018_markdown_instruction: Usa la tua nuova funzione per risolvere questo esercizio.
@@ -2514,12 +2515,12 @@ it:
         ___
         ##### Nota: Ogni germoglio può racchiudere **una** pannocchia o **una** lattuga.
       courseE_farmer_functions7a1_2018_markdown_instruction: |-
-        * "Funzioni __lattuga__ fai di più con meno lavoro!" *
+        *"Funzioni __lettuce__ (**lattuga**) fai di più con meno lavoro!"*
         
-        Crea una funzione che invia la contadina lungo un percorso quadrato per prelevare una singola testa di lattuga dal centro di ogni riga.
+        Crea una funzione che faccia percorrere alla contadina un percorso quadrato, raccogliendo un solo cespo di lattuga dal centro di ogni lato.
       courseE_farmer_functions7b_markdown_instruction: "*\"Questo raccolto è un labirinto!\"*\n\nAiuta la contadina a trovare un percorso in questa confusione: bisogna arrivare alla zucca svoltando a **sinistra** in corrispondenza delle pannocchie e a **destra** quando c'è una lattuga.\n\n*(Non dimenticare di raccogliere tutti gli ortaggi che trovi lungo il percorso!)*"
       courseE_farmer_functions7b_2018_markdown_instruction: "*\"Questo raccolto è un labirinto!\"*\n\nAiuta la contadina a trovare un percorso in questa confusione: bisogna arrivare alla zucca svoltando a **sinistra** in corrispondenza delle pannocchie e a **destra** quando c'è una lattuga.\n\n*(Non dimenticare di raccogliere tutti gli ortaggi che trovi lungo il percorso!)*"
-      courseE_farmer_functions8a1_2018_markdown_instruction: Provare a riscrivere la funzione. È ancora utile?  Come si puoi farla funzionare per questo esercizio?
+      courseE_farmer_functions8a1_2018_markdown_instruction: Prova a riscrivere la funzione. È ancora utile? Come devi modificarla per farla funzionare anche per questo esercizio?
       courseE_farmer_functions8b_markdown_instruction: "**Sfida:** Le curve dopo le zucche non sono nella stessa direzione, quindi dovrai usare più di una volta il codice dell'esercizio precedente.\n\nRiesci a scoprire cosa fare?"
       courseE_farmer_functions8b_2018_markdown_instruction: "**Sfida:** Le curve dopo le zucche non sono nella stessa direzione, quindi dovrai usare più di una volta il codice dell'esercizio precedente.\n\nRiesci a scoprire cosa fare?"
       courseE_farmer_functions9a1_2018_markdown_instruction: |-
@@ -3092,7 +3093,7 @@ it:
       grade4_playlab_test_markdown_instruction: "Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>\n<br>\nCome vengono assegnati i punti? <br>\nBisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>\n<br>\nPer ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>\n<br>\nFai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio."
       grade4_playlab_test2_markdown_instruction: "In questo esercizio c'è una funzione chiamata `jump` (<i>salta</i>) che consente al cane di saltare in alto di 100 pixel.<br>\n<br>\nClicca su \"Esegui\" ed utilizza questa nuova funzione per raccogliere tutte le bandierine muovendo il cane con i tasti freccia."
       grade4_review_artist2_markdown_instruction: "Questa casa ha bisogno di un tetto! Disegna un triangolo.<br>\n<b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.<br>\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
-      grade4_review_artist3_markdown_instruction: Il blocco "salta" consente di muovere l'artista senza disegnare. Disegna la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare. Ogni linea è lunga 50 pixel.
+      grade4_review_artist3_markdown_instruction: Il blocco `salta` consente di muovere l'artista senza disegnare. Disegna la linea tratteggiata usando sia i blocchi `salta` che quelli `vai avanti`. Ogni linea è lunga 50 pixel.
       grade4_review_bee1_markdown_instruction: Adesso usa il blocco `ripeti ... volte` sia per raccogliere tutto il nettare che per produrre tutto il miele.
       grade4_review_bee3_markdown_instruction: |-
         Quest'ape ha molto da fare!<br>

@@ -665,12 +665,12 @@ it:
         courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
           essere gettati via.
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
-          sotto questa etichetta nella cassetta degli attrezzi.
+          in questa categoria della cassetta degli attrezzi.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: 'Non devi impostare i singoli colori per svolgere
           correttamente questo esercizio: se vuoi, il blocco `imposta il colore scelto
@@ -780,19 +780,19 @@ it:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
       courseE_artist_functions2_callout:
-        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
-          sotto questa etichetta nella cassetta degli attrezzi.
+          in questa categoria della cassetta degli attrezzi.
       courseE_artist_functions8a_2018_callout:
         courseD_artist_functions8_1: I blocchi per creare le funzioni sono stati spostati
-          sotto questa etichetta nella cassetta degli attrezzi.
+          in questa categoria della cassetta degli attrezzi.
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout1: Prosegui questo programma aggiungendo
           altri blocchi qui sotto.
@@ -1115,8 +1115,8 @@ it:
         grade4_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: Quando verrà eseguito questo blocco verde, tutto
-          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+        grade4_artist_funcions2_1: Quando verrà eseguito questo blocco verde, sarà
+          eseguito tutto il codice contenuto nella funzione. Cosa dovrà fare l'artista
           dopo aver disegnato il primo quadrato?
       grade4_artist_functions_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora

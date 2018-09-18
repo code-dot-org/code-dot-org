@@ -10,9 +10,17 @@ ja:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': 次へ
             '"prev"': 戻る
       Dancelab_changeMoveEach:
@@ -21,9 +29,76 @@ ja:
             sprites: すべて
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: すべて
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': 次へ
             '"prev"': 戻る
       Dancelab_changePropBy:
@@ -32,13 +107,112 @@ ja:
             '"scale"': おおきさ
             '"x"': x 位置
             '"y"': y 位置
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: すべて
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': 次へ
+            '"prev"': 戻る
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': 次へ
             '"prev"': 戻る
       Dancelab_everySeconds:
@@ -113,124 +287,6 @@ ja:
             '"right"': 右 に
             '"space"': うちゅう
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': 秒
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: すべて
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': 秒
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: すべて
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': 右 に
-            '"left"': 左 に
-      DancelabAlpha_randomColor:
-        text: てきとうな色
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': ノーマル
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: すべて
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': 上 に
@@ -343,5 +399,16 @@ ja:
             '"y"': y 位置
       Vanilla_randomColor:
         text: てきとうな色
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": その前に
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": 砂
+            "'planksOak'": 樫の木の板
       craft_moveForward:
         text: 前方に移動します。
+      craft_placeTorch:
+        text: 松明を置く

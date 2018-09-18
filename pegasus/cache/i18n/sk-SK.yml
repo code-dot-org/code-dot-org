@@ -943,6 +943,7 @@ sk-SK:
   blockly_name: Blockly
   projguts_name: Kameň, papier, nožnice
   hourofcode_name: Klasické bludisko
+  playlab_name: Herné laboratórium
   infinity_name: Neobmedzená Play Lab
   artist_name: Umelec
   allcancode_name: Bež Marko!
@@ -1164,6 +1165,8 @@ sk-SK:
   hourofcode_shortdescription: Nauč sa programovať s Markom Zuckerbergom a Angry Birds!
   frozen_shortdescription: S pomocou kódu sa pridajme k Anne a Elze, ktoré skúmajú
     kúzlo a krásu ľadu.
+  playlab_shortdescription: Vytvor príbeh alebo hru s Herným Laboratóriom!
+  artist_shortdescription: Nakresli skvelé obrázky a vzory v časti nazvanej "Umelec"!
   monsterocding_shortdescription: Pestrofarebné, samostatné programovacie dobrodružstvo
     pre deti.
   codesters_shortdescription: Vytvor si vlastné hry, animácie a umelecké diela s pomocou

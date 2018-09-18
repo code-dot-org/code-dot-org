@@ -8,7 +8,7 @@ it:
         Se ad ogni movimento giri a destra di un grado, quante volte devi ripetere il movimento, usando il blocco `ripeti ... volte`, per completare esattamente il cerchio? 180? 360? 500?
       2-3 Artist 2 new_instruction: 'Questa casa ha una parete lasciata a metà. Ogni parete è lunga 100 pixel, ma della parete a destra ne è stata disegnata solo una metà. Completala. '
       2-3 Artist 2_instruction: 'Questa casa ha una parete lasciata a metà. Ogni parete è lunga 100 pixel, ma della parete a destra ne è stata disegnata solo una metà. Completala. '
-      2-3 Artist 3.4_instruction: Il blocco "salta" consente di muovere l'artista senza disegnare. Disegna la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare. Ogni linea è lunga 50 pixel.
+      2-3 Artist 3.4_instruction: Il blocco `salta` consente di muovere l'artista senza disegnare. Disegna la linea tratteggiata usando sia i blocchi `salta` che quelli `vai avanti`. Ogni linea è lunga 50 pixel.
       2-3 Artist 3_instruction: Questo cappello è alto 100 pixel. Disegna un cappello che sia più piccolo di 70 pixel.
       2-3 Artist 3new_instruction: "Il cappello rosso ha un'altezza pari a 100 pixel. Completa il disegno con un cappello nero che sia più basso di quello rosso di 70 pixel. Ogni cappello è largo 50 pixel."
       2-3 Artist 4_instruction: Aiutami a completare la casa per questo gatto.
@@ -1233,7 +1233,8 @@ it:
       course2_harvester_loops_challenge1_instruction: Raccogli tutte le pannocchie.
       course2_harvester_loops_challenge2_instruction: Raccogli tutte le lattughe evitando gli alberi e i campi!
       course2_maze_loops_challenge1_instruction: 'Ora Scrat vuole provare a usare i cicli per cercare la sua ghianda! '
-      course2_maze_programming_challenge2_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
+      course2_maze_programming_challenge1_instruction: '*"Il maialino si sta nascondendo! Puoi aiutarmi a trovare un modo per raggiungerlo?"*'
+      course2_maze_programming_challenge2_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce andare all'indietro, piuttosto che muoversi in avanti!
       course2_maze_seq_challenge1_instruction: Fammi fare il percorso per arrivare a quello sciocco maialino. Evita la dinamite (TNT) o le mie piume salteranno in aria!
       course2_playlab_stage17_1_instruction: Puoi far dire "Ciao" al cane (personaggio 1)?
       course2_playlab_stage17_10_instruction: |-
@@ -1788,8 +1789,8 @@ it:
       courseC_maze_programming9_2018_instruction: '*"Ora aiutami a sorprendere il maialino nel modo che preferisci!"*'
       courseC_maze_programming_challenge1_instruction: 'Il maialino si sta nascondendo e l''obiettivo è trovarlo.'
       courseC_maze_programming_challenge1_2018_instruction: 'Il maialino si sta nascondendo e l''obiettivo è trovarlo.'
-      courseC_maze_programming_challenge2_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
-      courseC_maze_programming_challenge2_2018_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
+      courseC_maze_programming_challenge2_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce andare all'indietro, piuttosto che muoversi in avanti!
+      courseC_maze_programming_challenge2_2018_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce andare all'indietro, piuttosto che muoversi in avanti!
       courseC_puppy_loops10_instruction: Stai andando alla grande! Continua così!
       courseC_puppy_loops11_instruction: Ci sei quasi! Questa volta scegli il percorso che preferisci!
       courseC_puppy_loops8_instruction: 'Sfida: Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello.'
@@ -2235,9 +2236,9 @@ it:
       courseE_artist_functions10_2018_instruction: Questa volta, usa file di 8 esagoni con lati da 25 pixel.
       courseE_artist_functions1_2018_instruction: "Aiuta lo zombie a disegnare questi occhiali usando dei quadrati con i lati di 100 pixel.\nL'asta tra le lenti è lunga 75 pixel."
       courseE_artist_functions2_instruction: 'Questa volta, usa la funzione `draw a square` (*disegna un quadrato*) per creare gli occhiali. '
-      courseE_artist_functions2_2018_instruction: 'Usa la funzione `draw a square` (*disegna un quadrato*) per creare gli occhiali. '
+      courseE_artist_functions2_2018_instruction: 'Usa la funzione `disegna un quadrato` per creare gli occhiali. '
       courseE_artist_functions3_instruction: Puoi realizzare questo disegno aggiungendo un blocco `ripeti ... volte`.
-      courseE_artist_functions3_2018_instruction: Costruisci una funzione che creerà questa stella.
+      courseE_artist_functions3_2018_instruction: Costruisci una funzione per disegnare questa stella.
       courseE_artist_functions4_instruction: Ora che sai disegnare una stella, prova a disegnarne quattro!
       courseE_artist_functions4_2018_instruction: Ora che sai disegnare una stella, prova a disegnarne quattro!
       courseE_artist_functions5_instruction: Devi disegnare solo queste tre stelle per completare questo esercizio.
@@ -2249,8 +2250,8 @@ it:
       courseE_artist_functions8_instruction: 'Sfida: Crea tutte le funzioni che ritieni necessarie per realizzare questo disegno fatto da quadrati di 50 pixel.'
       courseE_artist_functions8_2018_instruction: Usa tutto quello che hai imparato finora per ricreare questo disegno.
       courseE_artist_functions8a_2018_instruction: Crea una funzione per disegnare un singolo quadrato.
-      courseE_artist_functions8b_2018_instruction: Chiama la funzione `draw a square` (*disegna un quadrato*) dalla funzione `draw a line of squares` (*disegna una fila di quadrati*) per rendere questo evento ancora più facile!
-      courseE_artist_functions8c_2018_instruction: Aggiungi un'altra funzione che crei questa pila di quadrati sfalsati.
+      courseE_artist_functions8b_2018_instruction: Richiama la funzione `disegna un quadrato` dall'interno della funzione `disegna una fila di quadrati` per semplificarne ulteriormente la realizzazione!
+      courseE_artist_functions8c_2018_instruction: Usa ancora la funzione `disegna una fila di quadrati` per creare una seconda fila traslata a destra.
       courseE_artist_functions9_instruction: Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
       courseE_artist_functions9_2018_instruction: "**Sfida:** Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi."
       courseE_artist_functionsProj_2018_instruction: "**Ispirazione:** Usa ciò che hai imparato per creare quello che vuoi!"
@@ -2316,7 +2317,7 @@ it:
       courseE_farmer_concept4_instruction: Andiamo ancora più a fondo! Abbiamo annidato il ciclo che disegna una cella della griglia all'interno di un altro ciclo, per disegnare così tutta la riga di celle. Per completare la griglia, devi far tornare l'artista indietro in modo tale da disegnare le righe successive. Quale sequenza di blocchi devi posizionare alla fine del ciclo più esterno per raggiungere questo obiettivo?
       courseE_farmer_elseif_test_instruction: Riempi la buca al termine di ogni tratto di questo percorso.
       courseE_farmer_functions1_instruction: Aiuta la contadina a raggiungere la zucca e raccoglierla.
-      courseE_farmer_functions10a1_2018_instruction: Usa tutto quello che hai imparato fino adesso per risolvere questo esercizio!
+      courseE_farmer_functions10a1_2018_instruction: Usa tutto quello che hai imparato finora per risolvere questo esercizio!
       courseE_farmer_functions10b_instruction: Se metti il codice dell'esercizio precedente in una funzione, poi potrai usarla due volte per risolvere questo esercizio.
       courseE_farmer_functions10b_2018_instruction: Se metti il codice dell'esercizio precedente in una funzione, poi potrai usarla due volte per risolvere questo esercizio.
       courseE_farmer_functions13_2018_instruction: Risolvi questo esercizio con 23 blocchi o meno.
@@ -2336,13 +2337,13 @@ it:
       courseE_farmer_functions5c_2018_instruction: La tua funzione sarà proprio utile qui.
       courseE_farmer_functions6c_instruction: Cos'è necessario aggiungere a questo programma per verificare se un germoglio racchiude una pannocchia o una lattuga?
       courseE_farmer_functions6c_2018_instruction: Cos'è necessario aggiungere a questo programma per verificare se un germoglio racchiude una pannocchia o una lattuga?
-      courseE_farmer_functions7a1_2018_instruction: Crea una funzione che invia la contadina giù lungo il peercorso per raccogliere un solo cespo di lattuga dal centro di ogni riga.
+      courseE_farmer_functions7a1_2018_instruction: Crea una funzione che faccia percorrere alla contadina un percorso quadrato, raccogliendo un solo cespo di lattuga dal centro di ogni lato.
       courseE_farmer_functions7b_instruction: 'Aiuta la contadina a trovare un percorso in questa confusione: bisogna arrivare alla zucca svoltando a sinistra in corrispondenza delle pannocchie e a destra quando c''è una lattuga.'
       courseE_farmer_functions7b_2018_instruction: 'Aiuta la contadina a trovare un percorso in questa confusione: bisogna arrivare alla zucca svoltando a sinistra in corrispondenza delle pannocchie e a destra quando c''è una lattuga.'
-      courseE_farmer_functions8a1_2018_instruction: La funzione è ancora utile?
+      courseE_farmer_functions8a1_2018_instruction: La funzione che hai creato, è ancora utile?
       courseE_farmer_functions8b_instruction: "**Sfida:** Raccogli tutte le zucche usando il metodo dell'esercizio  precedente."
       courseE_farmer_functions8b_2018_instruction: "**Sfida:** Raccogli tutte le zucche usando il metodo dell'esercizio  precedente."
-      courseE_farmer_functions9a1_2018_instruction: La funzione è ancora utile?
+      courseE_farmer_functions9a1_2018_instruction: La funzione che hai creato, è ancora utile?
       courseE_farmer_functions9b_instruction: Riesci a scoprire lo schema necessario per risolvere questo esercizio?
       courseE_farmer_functions9b_2018_instruction: Riesci a scoprire lo schema necessario per risolvere questo esercizio?
       courseE_farmer_functions9b_clone_instruction: Riesci a scoprire lo schema necessario per risolvere questo esercizio?

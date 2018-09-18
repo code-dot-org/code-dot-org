@@ -2450,6 +2450,18 @@ es-MX:
         '10': '10'
         '5': '5'
         '50': '50'
+      courseC_multi_artist_prog6_predict1:
+        Incorrect.  The artist draws a square.: Incorrecto.  El artista dibuja un
+          cuadrado.
+        Look carefully at the code below.  What will happen when you click "Run"?: Mire
+          cuidadosamente el siguiente código.  ¿Qué pasa cuando se presiona  "Ejecutar"?
+        The artist draws a square.: El artista dibuja un cuadrado.
+      courseC_multi_artist_prog6_predict1_2018:
+        Incorrect.  The artist draws a square.: Incorrecto.  El artista dibuja un
+          cuadrado.
+        Look carefully at the code below.  What will happen when you click "Run"?: Mire
+          cuidadosamente el siguiente código.  ¿Qué pasa cuando se presiona  "Ejecutar"?
+        The artist draws a square.: El artista dibuja un cuadrado.
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
