@@ -82,7 +82,7 @@ module UsersHelper
           # We want to know when this fails
           Honeybadger.notify(
             error_class: 'Failed to create AuthenticationOption during signup oauth takeover',
-            error_message: "Could not create AuthenticationOption during signup oauth takeover for user with email #{user.email}"
+            error_message: "Failed for user with id #{user.id}"
           )
         end
       else

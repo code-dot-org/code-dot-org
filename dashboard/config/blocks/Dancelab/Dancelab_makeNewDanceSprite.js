@@ -17,10 +17,10 @@ function makeNewDanceSprite(costume, name, location) {
   sprite.current_move = 0;
   sprite.previous_move = 0;
   
-  for (var i=0; i < dancers[costume].length; i++) {
-    sprite.addAnimation("anim" + i, dancers[costume][i]);
+  for (var i=0; i < ANIMATIONS[costume].length; i++) {
+    sprite.addAnimation("anim" + i, ANIMATIONS[costume][i].animation);
   }
-  
+  sprite.changeAnimation("anim8");
   sprite.animation.stop();
   sprites.add(sprite);
   sprite.speed = 10;
@@ -45,7 +45,7 @@ function makeNewDanceSprite(costume, name, location) {
       }
       
       if (sprite.looping_frame % 48 === 0) {
-        sprite.mirroring *= -1;
+        if (ANIMATIONS[sprite.style][sprite.current_move].mirror) sprite.mirroring *= -1;
         if (sprite.animation.looping) {
           sprite.mirrorX(sprite.mirroring);
         }
