@@ -10,9 +10,17 @@ ar:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': التالي
             '"prev"': السابق
       Dancelab_changeMoveEach:
@@ -21,9 +29,76 @@ ar:
             sprites: الكل
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: الكل
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': التالي
             '"prev"': السابق
       Dancelab_changePropBy:
@@ -32,13 +107,112 @@ ar:
             '"scale"': الحجم
             '"x"': موضع س
             '"y"': موضع ص
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: الكل
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': التالي
+            '"prev"': السابق
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': التالي
             '"prev"': السابق
       Dancelab_everySeconds:
@@ -113,124 +287,6 @@ ar:
             '"right"': اليمين
             '"space"': الفضاء
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': الأعلى
-            '"down"': الأسفل
-            '"left"': اليسار
-            '"right"': اليمين
-            '"space"': الفضاء
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': ثوان
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': التالي
-            '"prev"': السابق
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: الكل
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': التالي
-            '"prev"': السابق
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': التالي
-            '"prev"': السابق
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': ثوان
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: الكل
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': اليمين
-            '"left"': اليسار
-      DancelabAlpha_randomColor:
-        text: لون عشوائي
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': عادي
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: الكل
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': موضع س
-            '"y"': موضع ص
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': الأعلى
-            '"down"': الأسفل
-            '"left"': اليسار
-            '"right"': اليمين
-            '"space"': الفضاء
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': الأعلى
@@ -343,5 +399,16 @@ ar:
             '"y"': موضع ص
       Vanilla_randomColor:
         text: لون عشوائي
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": في الأمام
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": رمل
+            "'planksOak'": ألواح خشب البلوط
       craft_moveForward:
         text: تحريك إلى الأمام
+      craft_placeTorch:
+        text: ضع المصباح

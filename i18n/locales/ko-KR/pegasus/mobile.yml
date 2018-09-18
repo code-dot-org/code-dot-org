@@ -255,7 +255,7 @@
     &ldquo;이 프로그램은 내 학생들이 100% 사로잡혀, 몰두하고, 참가하도록 만들었다.&rdquo; 아담, 교사
   homepage_hero_text_stat_loc: "#loc 학생들에 의해서 작성된 코드의 줄"
   homepage_hero_text_stat_students: "#student_count Code Studio에 등록된 학생 계정"
-  homepage_hero_text_stat_served: 'Hour of Code: # 제공'
+  homepage_hero_text_stat_served: 'Hour of Code: #served 제공'
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "안나와 엘사가 함께 하는 겨울왕국"
   homepage_slot_text_teacher: "선생님용 대시보드"

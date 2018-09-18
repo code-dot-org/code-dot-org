@@ -154,7 +154,7 @@
   "eventTypeWhenUsed": "當使用時",
   "forever": "重複無限次",
   "from": "從",
-  "generatedCodeDescription": "這闖關過程中，你拖曳和放置方塊的時候，其實背後都是透過 Javascript 這個程式語言和電腦溝通，是程式告訴了電腦要在屏幕上顯示什麼。你在 Minecraft 中所見與所做的一切，都是從像這樣的計算機代碼（computer code）開始。",
+  "generatedCodeDescription": "在闖關時拖曳和放置積木的過程中，背後都是透過 Javascript 這個程式語言和電腦溝通，是程式告訴了電腦要在屏幕上顯示什麼。你在 Minecraft 中所見與所做的一切，都是從像這樣的計算機代碼（computer code）開始。",
   "getdataof": "取得數據",
   "getnameof": "取得姓名",
   "houseSelectChooseFloorPlan": "選擇你的房子平面圖。",

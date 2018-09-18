@@ -10,9 +10,17 @@ pl:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Następny
             '"prev"': Poprzedni
       Dancelab_changeMoveEach:
@@ -21,9 +29,76 @@ pl:
             sprites: wszystkie
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            sprites: wszystkie
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Następny
             '"prev"': Poprzedni
       Dancelab_changePropBy:
@@ -32,13 +107,112 @@ pl:
             '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: wszystkie
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Następny
+            '"prev"': Poprzedni
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Następny
             '"prev"': Poprzedni
       Dancelab_everySeconds:
@@ -121,132 +295,6 @@ pl:
             '"right"': w prawo
             '"space"': przestrzeń
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': do góry
-            '"down"': do dołu
-            '"left"': w lewo
-            '"right"': w prawo
-            '"space"': przestrzeń
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekundy
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Następny
-            '"prev"': Poprzedni
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: wszystkie
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Następny
-            '"prev"': Poprzedni
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Następny
-            '"prev"': Poprzedni
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekundy
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: wszystkie
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': w prawo
-            '"left"': w lewo
-      DancelabAlpha_randomColor:
-        text: losowy kolor
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': Żaden
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normalny
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Żaden
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: wszystkie
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': rozmiar
-            '"x"': współrzędna x
-            '"y"': współrzędna y
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': do góry
-            '"down"': do dołu
-            '"left"': w lewo
-            '"right"': w prawo
-            '"space"': przestrzeń
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': do góry
@@ -359,5 +407,16 @@ pl:
             '"y"': współrzędna y
       Vanilla_randomColor:
         text: losowy kolor
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": z przodu jest
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": piasek
+            "'planksOak'": deski dębowe
       craft_moveForward:
         text: idź do przodu
+      craft_placeTorch:
+        text: umieść pochodnię

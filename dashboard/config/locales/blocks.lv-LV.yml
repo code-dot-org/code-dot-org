@@ -10,31 +10,201 @@ lv:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Nākamā
             '"prev"': Iepriekšējā
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Nākamā
             '"prev"': Iepriekšējā
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': izmērs
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Nākamā
             '"prev"': Iepriekšējā
       Dancelab_everySeconds:
@@ -89,100 +259,6 @@ lv:
             '"right"': pa labi
             '"space"': telpa
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': pa labi
-            '"left"': pa kreisi
-      DancelabAlpha_randomColor:
-        text: nejauša krāsa
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': uz augšu
@@ -279,5 +355,16 @@ lv:
             '"scale"': izmērs
       Vanilla_randomColor:
         text: nejauša krāsa
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": priekšā
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": smiltis
+            "'planksOak'": ozola dēļi
       craft_moveForward:
         text: pārvietot uz priekšu
+      craft_placeTorch:
+        text: nolikt lāpu
