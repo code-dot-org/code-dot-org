@@ -18,7 +18,7 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
     return (
       <FormGroup>
         <h3>
-          Section 5: {SectionHeaders.Section5AdditionalDemographicInformation}
+          Section 5: {SectionHeaders.section5AdditionalDemographicInformation}
         </h3>
         {this.radioButtonsFor('genderIdentity')}
         {this.checkBoxesFor('race')}
