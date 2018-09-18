@@ -1,5 +1,12 @@
+require 'dynamic_config/dcdo'
+
+# The "view more" links in the public project gallery for App Lab and Game Lab
+# are controlled by DCDO so we can quickly hide them if there are
+# inappropriate projects. This enviroment lets us test "view more" link
+# visibility without updating the tests every time we toggle the flag.
 And(/^I confirm correct visibility of view more links$/) do
-  if ENV['HIDE_VIEW_MORE_LINKS'] == 'true'
+  hidden_view_more_links = DCDO.get('image_moderation', {})['limited_project_gallery']
+  if hidden_view_more_links
     steps %Q{
       And the project gallery contains 5 view more links
       And element ".ui-project-app-type-area:eq(4)" contains text "App Lab"
