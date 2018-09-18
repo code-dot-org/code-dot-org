@@ -264,7 +264,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # This should never happen if other logic is working correctly, so notify
         Honeybadger.notify(
           error_class: 'Failed to create AuthenticationOption during silent takeover',
-          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{lookup_email}"
+          error_message: "Failed for user with id #{@user.id}"
         )
         return
       end
@@ -280,7 +280,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # This should never happen if other logic is working correctly, so notify
         Honeybadger.notify(
           error_class: 'Failed to update User during silent takeover',
-          error_message: "Could not update user during silent takeover for user with email #{lookup_email}"
+          error_message: "Failed for user with id #{@user.id}"
         )
         return
       end
