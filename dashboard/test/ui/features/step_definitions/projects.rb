@@ -5,7 +5,8 @@ require 'dynamic_config/dcdo'
 # inappropriate projects. This enviroment lets us test "view more" link
 # visibility without updating the tests every time we toggle the flag.
 And(/^I confirm correct visibility of view more links$/) do
-  hidden_view_more_links = DCDO.get('image_moderation', {})['limited_project_gallery']
+  dcdo_flag = DCDO.get('image_moderation', {})['limited_project_gallery']
+  hidden_view_more_links = dcdo_flag.nil? ? true : dcdo_flag
   if hidden_view_more_links
     steps %Q{
       And the project gallery contains 5 view more links
