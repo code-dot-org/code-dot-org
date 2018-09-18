@@ -492,32 +492,16 @@ FactoryGirl.define do
 
   factory :authentication_option do
     association :user
-    email {''}
-    hashed_email {''}
-    credential_type {AuthenticationOption::EMAIL}
-    authentication_id {''}
-
-    factory :email_authentication_option do
-      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
-      after(:create) do |auth|
-        auth.authentication_id = auth.hashed_email
-      end
-    end
+    sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+    credential_type AuthenticationOption::EMAIL
+    authentication_id {User.hash_email email}
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
-      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
-      after(:create) do |auth|
-        auth.authentication_id = auth.hashed_email
-      end
     end
 
     factory :facebook_authentication_option do
       credential_type AuthenticationOption::FACEBOOK
-      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
-      after(:create) do |auth|
-        auth.authentication_id = auth.hashed_email
-      end
     end
   end
 
