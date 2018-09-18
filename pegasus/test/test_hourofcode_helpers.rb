@@ -8,21 +8,47 @@ class HourOfCodeHelpersTest < Minitest::Test
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
 
-  # Covers #hoc_canonicalized_i18n_path / #hoc_detect_country in helpers/hourofcode_helpers.rb
+  # Covers #hoc_canonicalized_i18n_path / #hoc_detect_country / #hoc_detect_language in helpers/hourofcode_helpers.rb
   def test_hourofcode_redirect
-    user_ip = '89.151.64.0' # Great Britain IP address range
+    gb_ip = '89.151.64.0' # Great Britain IP address range
+    fr_ip = '176.31.96.198' # France IP address range
     cloudfront_ip = '54.240.158.170' # Whitelisted CloudFront-ip proxy range
     local_load_balancer = '10.31.164.34' # Private-network address range
 
     # The geocoder gem resolves the IP using freegeoip, this mocks the underlying HTTP request.
-    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{user_ip}").to_return(
-      body: {ip: user_ip, country_code: 'GB'}.to_json
+    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{gb_ip}").to_return(
+      body: {ip: gb_ip, country_code: 'GB'}.to_json
+    )
+    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{fr_ip}").to_return(
+      body: {ip: fr_ip, country_code: 'FR'}.to_json
     )
 
     header 'host', 'hourofcode.com'
-    header 'X_FORWARDED_FOR', [user_ip, cloudfront_ip, local_load_balancer].join(', ')
+    header 'X_FORWARDED_FOR', [gb_ip, cloudfront_ip, local_load_balancer].join(', ')
+
+    # GB geo, no browser language
     response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
     assert_equal 'http://hourofcode.com/uk/xyz', response.headers['Location']
+
+    header 'ACCEPT_LANGUAGE', 'fr'
+    # GB geo, French browser language
+    response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
+    assert_equal 'http://hourofcode.com/uk/xyz', response.headers['Location']
+
+    header 'X_FORWARDED_FOR', [fr_ip, cloudfront_ip, local_load_balancer].join(', ')
+    # French geo, French browser language
+    response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
+    assert_equal 'http://hourofcode.com/fr/xyz', response.headers['Location']
+
+    header 'ACCEPT_LANGUAGE', 'en'
+    # French geo, English browser language
+    response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
+    assert_equal 'http://hourofcode.com/fr/xyz', response.headers['Location']
+
+    header 'ACCEPT_LANGUAGE', 'it'
+    # French geo, Italian browser language
+    response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
+    assert_equal 'http://hourofcode.com/fr/xyz', response.headers['Location']
   end
 
   # Ensure redirect goes to original (spoofable) IP-address location,
