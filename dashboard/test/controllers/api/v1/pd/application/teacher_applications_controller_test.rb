@@ -32,26 +32,10 @@ module Api::V1::Pd::Application
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-
       sign_in @applicant
 
       put :create, params: @test_params
       assert_response :success
-      assert_equal(
-        {
-          regional_partner_name: NO,
-          committed: YES,
-          able_to_attend_single: YES,
-          csp_which_grades: YES,
-          csp_course_hours_per_year: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          taught_in_past: 2
-        }, TEACHER_APPLICATION_CLASS.last.response_scores_hash
-      )
     end
 
     test 'do not send principal approval email on successful create if RP has selective principal approval' do
@@ -90,20 +74,6 @@ module Api::V1::Pd::Application
         put :create, params: {form_data: @test_params}
       end
       assert_response :success
-    end
-
-    test 'auto-scores on successful create' do
-      TEACHER_APPLICATION_CLASS.any_instance.expects(:auto_score!)
-
-      sign_in @applicant
-      put :create, params: @test_params
-    end
-
-    test 'assigns default workshop on successful create' do
-      TEACHER_APPLICATION_CLASS.any_instance.expects(:assign_default_workshop!)
-
-      sign_in @applicant
-      put :create, params: @test_params
     end
 
     test 'updates user school info on successful create' do
