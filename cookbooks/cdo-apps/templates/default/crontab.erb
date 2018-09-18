@@ -99,10 +99,6 @@
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
 
-      # 4AM UTC is 8 or 9PM PT, a low traffic time when engineers are still awake to monitor any issues that occur
-      # during the automated restarts.
-      cronjob at:'00 4 * * *', do:deploy_dir('bin', 'cron', 'restart_high_memory_frontend_services')
-
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
     end
