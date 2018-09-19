@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-const TEACHER_ONLY_FIELDS = ["#teacher-name-field", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
-const STUDENT_ONLY_FIELDS = ["#student-name-field", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#gender-dropdown", "#terms-of-service"];
+const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
+const STUDENT_ONLY_FIELDS = ["#student-name-label", "#age-dropdown", "#student-consent"];
+const SHARED_FIELDS = ["#name-field", "#gender-dropdown", "#terms-of-service"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 // Values loaded from scriptData are always initial values, not the latest
