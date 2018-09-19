@@ -6,6 +6,10 @@ const SHARED_FIELDS = ["#gender-dropdown", "#terms-of-service"];
 const ALL_FIELDS = [TEACHER_ONLY_FIELDS, STUDENT_ONLY_FIELDS, SHARED_FIELDS];
 
 $(document).ready(() => {
+  $("#print-terms").click(function () {
+    $("#print-frame")[0].contentWindow.print();
+  });
+
   $("#user_user_type").change(function () {
     var value = $(this).val();
     switch (value) {

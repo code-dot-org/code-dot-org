@@ -3,44 +3,60 @@
 %h2= @page_title
 %p= t('activerecord.attributes.user.finish_sign_up_subheader')
 
-= form_for(@user, url: registration_path(@user)) do |f|
+#signup
+  = form_for(@user, url: registration_path(@user)) do |f|
 
-  = f.label :user_type, t('signup_form.create_user_type')
-  = f.select :user_type, user_type_options, include_blank: true
+    = f.label :user_type, t('signup_form.create_user_type')
+    = f.select :user_type, user_type_options, include_blank: true
 
-  #teacher-name-field{style: "display: none;"}
-    = f.label :name, t('activerecord.attributes.user.other_name_example').html_safe
-    = f.text_field :name, maxlength: 255
+    #teacher-name-field{style: "display: none;"}
+      = f.label :name, t('activerecord.attributes.user.other_name_example').html_safe
+      = f.text_field :name, maxlength: 255
 
-  #student-name-field{style: "display: none;"}
-    = f.label :name, t('activerecord.attributes.user.name_example').html_safe
-    = f.text_field :name, maxlength: 255
+    #student-name-field{style: "display: none;"}
+      = f.label :name, t('activerecord.attributes.user.name_example').html_safe
+      = f.text_field :name, maxlength: 255
 
-  #age-dropdown{style: "display: none;"}
-    = f.label :age
-    = f.select :age, age_options, include_blank: true
+    #age-dropdown{style: "display: none;"}
+      = f.label :age
+      = f.select :age, age_options, include_blank: true
 
-  #gender-dropdown{style: "display: none;"}
-    = f.label :gender, t('signup_form.gender')
-    = f.select :gender, gender_options
+    #gender-dropdown{style: "display: none;"}
+      = f.label :gender, t('signup_form.gender')
+      = f.select :gender, gender_options
 
-  #school-dropdown{style: "display: none;"}
+    #school-dropdown{style: "display: none;"}
 
-  #email-preference-dropdown{style: "display: none;"}
-    = f.label :email_preference_opt_in do
-      = t('signup_form.email_preference_question')
-      = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
-    = f.select :email_preference_opt_in, email_preference_options, include_blank: true
+    #email-preference-dropdown{style: "display: none;"}
+      = f.label :email_preference_opt_in do
+        = t('signup_form.email_preference_question')
+        = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+      = f.select :email_preference_opt_in, email_preference_options, include_blank: true
 
-  #printable-terms-of-service{style: "display: none;"}
+    #printable-terms-of-service{style: "display: none;"}
+      .right
+        %iframe#print-frame{src: '/terms-and-privacy', style: 'display: none'}
+        %a#print-terms{href: "#"}
+          %i.fa.fa-print.right-margin-5
+          = t('terms_interstitial.print')
+      .clear
+      .scroll-box
+        %h1.custom-h1= t('terms_interstitial.tos')
+        = render partial: 'home/tos'
+        %hr
+        %h1.custom-h1= t('terms_interstitial.privacy')
+        = render partial: 'home/privacy'
+        %hr
+        %h1.custom-h1= t('terms_interstitial.privacy_notice')
+        = render partial: 'home/privacy_notice'
 
-  #terms-of-service{style: "display: none;"}
-    = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
-    = f.label :terms_of_service_version do
-      = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
-      %span#student-consent{style: "display: none;"}
-        = t('signup_form.student_consent')
+    #terms-of-service{style: "display: none;"}
+      = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
+      = f.label :terms_of_service_version do
+        = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+        %span#student-consent{style: "display: none;"}
+          = t('signup_form.student_consent')
 
-  %button= t('signup_form.submit')
+    %button= t('signup_form.submit')
 
 %script{src: minifiable_asset_path('js/devise/registrations/finish_sign_up.js')}
