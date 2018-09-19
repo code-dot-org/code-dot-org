@@ -1,5 +1,5 @@
 class Api::V1::RegionalPartnersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :find
 
   # GET /api/v1/regional_partners
   def index
@@ -16,7 +16,40 @@ class Api::V1::RegionalPartnersController < ApplicationController
     render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
   end
 
+  # GET /api/v1/pd/regional_partners/find
+  def find
+    if params[:school]
+      school = School.find(params[:school])
+      state = school.state
+      zip_code = school.zip
+    else
+      zip_code = params[:zip_code]
+      state = params[:state]
+
+      # lookup state abbreviation, since the supplied state can be the full name
+      state = get_us_state_abbr_from_name(state, true) if state && state.length > 2
+    end
+
+    # Find the matching partner
+    partner = RegionalPartner.find_by_region(zip_code, state)
+
+    if partner
+      render json: serialize_partner(partner)
+    else
+      render_404
+    end
+  end
+
   private
+
+  def serialize_partner(partner)
+    # The scope is not being passed to the serializer with `render json: serializer:` syntax,
+    # so initialize this explicitly.
+    # TODO (Andrew): Look into updating our very outdated version of ActiveModelSerializers
+    Api::V1::Pd::RegionalPartnerSerializer.new(
+      partner
+    ).attributes
+  end
 
   # Get the regional partner's cohort capacity for a specific role
   # @param role (ex: 'csd_teachers' or 'csf_facilitators')

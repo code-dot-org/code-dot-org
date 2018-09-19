@@ -79,6 +79,17 @@ class RegionalPartner < ActiveRecord::Base
     pd_workshops_organized.future
   end
 
+  def earliest_summer_workshop_apps_open_date
+    Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].max).strftime('%B %e, %Y')
+  end
+
+  def upcoming_summer_workshops
+    pd_workshops.
+      future.
+      select {|w| w.local_summer? && w.effective_num_days >= 5}.
+      map {|w| w.slice(:location_name, :location_address, :workshop_date_range_string, :course)}
+  end
+
   # Make sure the phone number contains at least 10 digits.
   # Allow any format and additional text, such as extensions.
   PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/

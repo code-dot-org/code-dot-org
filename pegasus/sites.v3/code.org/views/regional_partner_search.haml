@@ -1,0 +1,5 @@
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/regionalPartnerSearch.js')}
+
+#regional-partner-search{data: {states: get_all_states_with_dc.to_json}}
