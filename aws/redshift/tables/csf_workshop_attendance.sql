@@ -140,7 +140,7 @@ UNION ALL
          0 as not_attended
     FROM dashboard_production.followers f
     JOIN dashboard_production.sections se 
-       ON se.id = f.section_id AND se.section_type = 'csf_workshop' 
+       ON se.id = f.section_id 
     JOIN analysis.training_school_years sy ON se.created_at BETWEEN sy.started_at AND sy.ended_at
     JOIN section_state_zip ssz 
       ON ssz.id = se.id

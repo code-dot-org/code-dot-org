@@ -1,3 +1,7 @@
+// Low bandwidth pressure valve
+var LOW_BAND = false;
+if (LOW_BAND) console.log("Running in low bandwidth mode. A limited set of sprites are available (including cat, dog, duck, and moose)");
+
 // Event handlers, loops, and callbacks
 var inputEvents = [];
 var touchEvents = [];
@@ -9,7 +13,17 @@ var loops = [];
 // Sprites
 var sprites = createGroup();
 var sprites_by_type = {};
-var SPRITE_NAMES = ["CAT", "DOG", "DUCK", "MOOSE", "POO", "ROBOT", "SHARK"];
+
+if (LOW_BAND) {
+  var SPRITE_NAMES = ["CAT", "DOG", "DUCK", "MOOSE"];
+  var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet_exsm/";
+  var SIZE = 200;
+} else {
+  var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "POO", "ROBOT", "SHARK", "UNICORN"];
+  var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet_sm/";
+  var SIZE = 300;
+}
+
 var MOVE_NAMES = [
   {
     name: "ClapHigh",
@@ -61,7 +75,7 @@ var MOVE_NAMES = [
   }
 ];
 var ANIMATIONS = {};
-var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet/";
+var FRAMES = 24;
 
 // Songs
 var songs = {
@@ -102,7 +116,6 @@ var backup_dancers = createGroup();
 function preload() {
   // Load song
   Dance.song.load(song_meta.url);
-
   // Load spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
     var this_sprite = SPRITE_NAMES[i];
@@ -110,7 +123,7 @@ function preload() {
     for (var j = 0; j < MOVE_NAMES.length; j++) {
       var url = img_base + this_sprite + "_" + MOVE_NAMES[j].name + ".png";
       var dance = {
-        spritesheet: loadSpriteSheet(url, 400, 400, 48),
+        spritesheet: loadSpriteSheet(url, SIZE, SIZE, FRAMES),
         mirror: MOVE_NAMES[j].mirror
       };
       ANIMATIONS[this_sprite].push(dance);
@@ -130,12 +143,17 @@ function setup() {
   setupCallbacks.forEach(function (callback) {
     callback();
   });
+
+  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / song_meta.bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / song_meta.bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / song_meta.bpm) * World.frameRate));
   /*
   Dance.song.processPeaks(0, function(peaks) {
     console.log(peaks);
     processed_peaks = peaks;
   });
   */
+
   Dance.song.start();
 }
 
@@ -302,9 +320,6 @@ var fg_effects = new Effects(0.8);
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;
 
-Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / song_meta.bpm) * World.frameRate));
-Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / song_meta.bpm) * World.frameRate));
-Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / song_meta.bpm) * World.frameRate));
 
 function initialize(setupHandler) {
   setupHandler();
@@ -555,6 +570,9 @@ function draw() {
     }
 
     fill("black");
-    //textStyle(BOLD);
+    textStyle(BOLD);
+    textAlign(TOP, LEFT);
+    textSize(20);
+    text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
     /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
