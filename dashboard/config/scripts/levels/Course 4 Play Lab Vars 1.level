@@ -33,7 +33,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"arrows_move_actor\",\"callout_text\":\"Use the arrows to move the actor\",\"element_id\":\"#soft-buttons\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom right\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "This time you don't have to write any code, just hit `Run` to play the game! \r\n\r\n<br/>\r\nIn this game, you're the dog who is trying to collect more flags than the cat. Use the down arrow to control the dog. Press `Finish` when you're done playing.",
+    "markdown_instructions": "This time you don't have to write any code, just hit `Run` to play the game!\r\n\r\nIn this game, you're the dog who is trying to collect more flags than the cat. Use the down arrow to control the dog. Press `Finish` when you're done playing.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -47,10 +47,18 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "hint_prompt_attempts_threshold": 2,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "default_num_example_blocks": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 00:19:01 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1

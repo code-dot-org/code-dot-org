@@ -12,24 +12,32 @@
             "sprites"
           ],
           [
+            "all cats",
+            "\"CAT\""
+          ],
+          [
+            "all dogs",
+            "\"DOG\""
+          ],
+          [
             "all ducks",
-            "\"duck\""
+            "\"DUCK\""
           ],
           [
             "all moose",
-            "\"moose\""
+            "\"MOOSE\""
           ],
           [
-            "all unicorns",
-            "\"unicorn\""
+            "all poos",
+            "\"POO\""
           ],
           [
-            "all Mr. Wiggles",
-            "\"mrwiggles\""
+            "all robots",
+            "\"ROBOT\""
           ],
           [
-            "all cats",
-            "\"cat\""
+            "all sharks",
+            "\"SHARK\""
           ]
         ]
       },
