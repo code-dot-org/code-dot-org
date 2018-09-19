@@ -1,3 +1,7 @@
+-- PLAN for adding CSF data
+-- add data on the facilitator, district sponsorship, workshop size, day of week, time of year
+-- create separate csf_facilitator csf_workshops table to connect to this one?
+
 --CHANGES
 -- addition of school years beyond 2017 --  includes teaching data from the same year they were trained and any subsequent years 
 -- removed 'location'
@@ -35,6 +39,24 @@ select
     script_name
   from analysis.csf_started_teachers 
 ),
+implementation_365 as
+(select 
+tt.user_id,
+date_part(month, trained_at) month_trained,
+date_part(dayofweek, trained_at) day_of_week, 
+min(datediff(day, tt.trained_at, st.started_at)) as days_to_start,
+min(datediff(day, tt.trained_at, ct.completed_at)) as days_to_complete,
+CASE WHEN days_to_start < 0 then 1 else 0 end as started_before_training,
+CASE WHEN days_to_complete < 0 then 1 else 0 end as completed_before_training,
+CASE WHEN days_to_start <= 365  and started_before_training = 0 then 1 else 0 end as started_365,
+CASE WHEN days_to_complete <= 365 and completed_before_training = 0 then 1 else 0 end as completed_365,
+CASE WHEN days_to_start <= 365  then 1 else 0 end as started_365_or_before,
+CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
+from csf_teachers_trained tt
+left join csf_started_teachers st on st.user_id = tt.user_id  
+left join csf_completed_teachers ct on ct.user_id = tt.user_id  
+group by 1, 2, 3
+),
 pd_enrollments_with_year as
 ( 
   select pd_workshop_id, first_name, last_name, email, user_id, school_year
@@ -63,6 +85,16 @@ pd_facilitators as
          FIRST_VALUE(pde.email) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email,
          'CS Fundamentals'::varchar as course,
          sy.school_year as school_year_trained,
+         month_trained,
+         day_of_week, 
+         days_to_start,
+         days_to_complete,
+         started_before_training,
+         completed_before_training,
+         started_365,
+         completed_365,
+         started_365_or_before,
+         completed_365_or_before,
          s.school_year as school_year_taught,
          s.script_name,
          CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,        
@@ -128,6 +160,8 @@ pd_facilitators as
          ON c.user_id = d.user_id
          AND c.script_name = s.script_name
          AND c.school_year = s.school_year
+  LEFT JOIN implementation_365 i
+        ON i.user_id = d.user_id
   LEFT JOIN analysis.teacher_most_progress_csf tmp
          ON tmp.user_id = d.user_id
          and tmp.script_name = s.script_name
