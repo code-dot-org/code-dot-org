@@ -33,9 +33,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     user = find_user_by_credential
     if user
-      sign_in_google_oauth2_user user
+      sign_in_google_oauth2 user
     else
-      login_google_oauth2
+      sign_up_google_oauth2
     end
   end
 
@@ -137,33 +137,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def login_google_oauth2
-    session[:sign_up_type] = AuthenticationOption::GOOGLE
-
-    @user = User.from_omniauth(auth_hash, auth_params, session)
-
-    prepare_locale_cookie @user
-
-    if allows_silent_takeover(@user, auth_hash)
-      silent_takeover(@user, auth_hash)
-      sign_in_user
-    elsif @user.persisted?
-      # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_oauth_takeover(@user)
-      sign_in_user
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
-      # Note that @user.email is populated by User.from_omniauth even for students
-      if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&useClever=true"
-      else
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&email=#{@user.email}"
-      end
-    else
-      # This is a new registration
-      register_new_user(@user)
-    end
-  end
-
   def login
     auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
@@ -213,7 +186,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
-  def sign_in_google_oauth2_user(user)
+  def sign_in_google_oauth2(user)
     prepare_locale_cookie user
 
     @user = user
@@ -221,6 +194,29 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       silent_takeover @user, auth_hash
     end
     sign_in_user
+  end
+
+  def sign_up_google_oauth2
+    session[:sign_up_type] = AuthenticationOption::GOOGLE
+
+    user = User.from_omniauth auth_hash, auth_params, session
+    prepare_locale_cookie user
+
+    if allows_silent_takeover user, auth_hash
+      @user = user
+      silent_takeover @user, auth_hash
+      sign_in_user
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
+      # Note that @user.email is populated by User.from_omniauth even for students
+      if looked_up_user.provider == 'clever'
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&useClever=true"
+      else
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&email=#{user.email}"
+      end
+    else
+      # This is a new registration
+      register_new_user user
+    end
   end
 
   def find_user_by_credential
