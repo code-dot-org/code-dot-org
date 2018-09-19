@@ -855,8 +855,7 @@ class FilesApi < Sinatra::Base
     if THUMBNAIL_FILENAME == filename
       storage_apps = StorageApps.new(storage_id('user'))
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
-      content_moderation_enabled = !storage_apps.content_moderation_disabled?(encrypted_channel_id)
-      if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type) && content_moderation_enabled
+      if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
         if %i(adult racy).include? rating
@@ -901,5 +900,14 @@ class FilesApi < Sinatra::Base
   #
   def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
+  end
+
+  def moderate_type?(project_type)
+    MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
+  end
+
+  def moderate_channel?(encrypted_channel_id)
+    storage_apps = StorageApps.new(storage_id('user'))
+    !storage_apps.content_moderation_disabled?(encrypted_channel_id)
   end
 end
