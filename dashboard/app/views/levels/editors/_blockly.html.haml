@@ -47,30 +47,7 @@
     This adds a call block to the end of the toolbox for each function defined
     in the workspace (including hidden start blocks).
 
-.field
-  = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'toolbox'}
-
-.field
-  = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'start'}
-
-.field
-  = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
-  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
-
-.field
-  = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
-  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
-
-.field
-  = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
-  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
-
--if @level.respond_to? :solution_blocks
-  .field
-    = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'solution'}
+= render partial: 'levels/editors/blockly_xml_editors', locals:{f: f}
 
 .field
   = f.label :ideal, 'Ideal block number'

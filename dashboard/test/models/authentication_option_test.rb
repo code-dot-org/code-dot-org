@@ -17,7 +17,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     original_teacher_email = 'testteacher@xyz.foo'
     new_teacher_email = 'awesometeacher@xyz.foo'
     teacher = create(:teacher, email: original_teacher_email)
-    email_auth = create(:email_authentication_option, user: teacher, email: new_teacher_email)
+    email_auth = create(:authentication_option, user: teacher, email: new_teacher_email)
     teacher.update(primary_contact_info: email_auth, provider: 'migrated')
     assert_equal teacher.primary_contact_info_id, email_auth.id
     assert_equal new_teacher_email, teacher.email
@@ -28,7 +28,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     teacher_email = 'TESTcaseSANITIZATION@test.com'
     sanitized = 'testcasesanitization@test.com'
     teacher = create(:teacher, email: teacher_email)
-    email_auth = create(:email_authentication_option, user: teacher, email: teacher_email)
+    email_auth = create(:authentication_option, user: teacher, email: teacher_email)
     assert_equal sanitized, email_auth.email
     assert_equal email_auth.hashed_email, AuthenticationOption.hash_email(sanitized)
   end
@@ -36,7 +36,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'student email is not stored but hashed_email is' do
     student_email = 'teststudent@test.com'
     student = create(:student, email: student_email)
-    email_auth = create(:email_authentication_option, user: student, email: student_email)
+    email_auth = create(:authentication_option, user: student, email: student_email)
     assert email_auth.user.student?
     assert_equal '', email_auth.email
     assert_equal student.hashed_email, email_auth.hashed_email
@@ -154,5 +154,60 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
       some_other_data: 'hello-world'
     }
     assert_equal new_data, auth_option.data_hash
+  end
+
+  test "factory: :authentication_option" do
+    option = create :authentication_option
+    assert option.valid?
+    assert option.persisted?
+    assert_equal AuthenticationOption::EMAIL, option.credential_type
+
+    # Default user is a student so email is empty
+    assert option.user.student?
+    assert_empty option.email
+
+    refute_empty option.hashed_email
+    assert_equal option.hashed_email, option.authentication_id
+  end
+
+  test "factory: :authentication_option for teacher" do
+    option = create :authentication_option, user: create(:teacher)
+    assert option.valid?
+    assert option.persisted?
+    assert_equal AuthenticationOption::EMAIL, option.credential_type
+
+    assert option.user.teacher?
+    refute_empty option.email
+
+    refute_empty option.hashed_email
+    assert_equal option.hashed_email, option.authentication_id
+  end
+
+  test "factory: :google_authentication_option" do
+    option = create :google_authentication_option
+    assert option.valid?
+    assert option.persisted?
+    assert_equal AuthenticationOption::GOOGLE, option.credential_type
+
+    # Default user is a student so email is empty
+    assert option.user.student?
+    assert_empty option.email
+
+    refute_empty option.hashed_email
+    refute_empty option.authentication_id
+  end
+
+  test "factory: :facebook_authentication_option" do
+    option = create :facebook_authentication_option
+    assert option.valid?
+    assert option.persisted?
+    assert_equal AuthenticationOption::FACEBOOK, option.credential_type
+
+    # Default user is a student so email is empty
+    assert option.user.student?
+    assert_empty option.email
+
+    refute_empty option.hashed_email
+    refute_empty option.authentication_id
   end
 end
