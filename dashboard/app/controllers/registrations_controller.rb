@@ -53,6 +53,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/finish_sign_up
   #
   def finish_sign_up
+    @user = User.new
   end
 
   def create
