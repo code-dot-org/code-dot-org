@@ -24,7 +24,8 @@
       = f.label :gender, t('signup_form.gender')
       = f.select :gender, gender_options
 
-    #school-dropdown{style: "display: none;"}
+    -# Mount point for React SchoolInfoInputs component.
+    #school-info-inputs{style: "display: none;"}
 
     #email-preference-dropdown{style: "display: none;"}
       = f.label :email_preference_opt_in do
