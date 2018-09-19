@@ -10,8 +10,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
 
-  # GET /users/auth/google_oauth2/callback
-  def google_oauth2
+  # GET /users/auth/clever/callback
+  def clever
     if should_connect_provider?
       connect_provider
     else
@@ -19,8 +19,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  # GET /users/auth/clever/callback
-  def clever
+  # GET /users/auth/google_oauth2/callback
+  def google_oauth2
     if should_connect_provider?
       connect_provider
     else
