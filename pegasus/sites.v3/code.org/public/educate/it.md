@@ -31,7 +31,7 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 | **To use YouTube hosted videos** <br/>(Deprecated late July 2018)| `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                |
 | **To use Code.org hosted videos**                                                  | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |
 | **To use Internet Simulator**   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
-| **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
+| **To use Web Lab** | `https://codeprojects.org`                                                                              |
 
 ### Special settings for Google Apps/G-Suite users
 
