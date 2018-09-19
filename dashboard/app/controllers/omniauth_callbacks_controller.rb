@@ -132,18 +132,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def login_google_oauth2
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
-    provider = auth_hash.provider.to_s
-    session[:sign_up_type] = provider
-
-    # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
-    if provider == 'powerschool'
-      auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
-    end
-
-    # Microsoft formats email and name differently, so update it to match expected structure
-    if provider == AuthenticationOption::MICROSOFT
-      auth_hash = extract_microsoft_data(request.env["omniauth.auth"])
-    end
+    session[:sign_up_type] = AuthenticationOption::GOOGLE
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
@@ -153,8 +142,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
-      handle_untrusted_email_signin(@user, provider)
     elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
       silent_takeover(@user, auth_hash)
       sign_in_user
@@ -165,9 +152,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
       # Note that @user.email is populated by User.from_omniauth even for students
       if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&useClever=true"
       else
-        redirect_to "/users/sign_in?providerNotLinked=#{provider}&email=#{@user.email}"
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&email=#{@user.email}"
       end
     else
       # This is a new registration
