@@ -31,7 +31,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return connect_provider
     end
 
-    login_google_oauth2
+    user = find_user_by_credential
+    if user
+      sign_in_google_oauth2_user user
+    else
+      login_google_oauth2
+    end
   end
 
   # All remaining providers
@@ -52,7 +57,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def connect_provider
     return head(:bad_request) unless can_connect_provider?
 
-    auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
     return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
 
@@ -112,8 +116,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def login_clever
-    auth_hash = request.env['omniauth.auth']
-    auth_params = request.env['omniauth.params']
     session[:sign_up_type] = AuthenticationOption::CLEVER
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
@@ -136,15 +138,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def login_google_oauth2
-    auth_hash = request.env['omniauth.auth']
-    auth_params = request.env['omniauth.params']
     session[:sign_up_type] = AuthenticationOption::GOOGLE
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
     prepare_locale_cookie @user
 
-    if allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+    if allows_silent_takeover(@user, auth_hash)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
@@ -166,18 +166,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def login
     auth_hash = request.env['omniauth.auth']
-    auth_params = request.env['omniauth.params']
     provider = auth_hash.provider.to_s
     session[:sign_up_type] = provider
 
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'
-      auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
+      auth_hash = extract_powerschool_data(auth_hash)
     end
 
     # Microsoft formats email and name differently, so update it to match expected structure
     if provider == AuthenticationOption::MICROSOFT
-      auth_hash = extract_microsoft_data(request.env["omniauth.auth"])
+      auth_hash = extract_microsoft_data(auth_hash)
     end
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
@@ -213,6 +212,30 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def sign_in_google_oauth2_user(user)
+    prepare_locale_cookie user
+
+    @user = user
+    if allows_google_classroom_takeover user
+      silent_takeover @user, auth_hash
+    end
+    sign_in_user
+  end
+
+  def find_user_by_credential
+    User.find_by_credential \
+      type: auth_hash.provider,
+      id: auth_hash.uid
+  end
+
+  def auth_hash
+    request.env['omniauth.auth']
+  end
+
+  def auth_params
+    request.env['omniauth.params']
+  end
 
   def prepare_locale_cookie(user)
     # Set user-account locale only if no cookie is already set.
@@ -317,8 +340,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def has_google_oauth2_scope?(scope_name)
-    params = request.env['omniauth.params']
-    scopes = (params&.[]('scope') || '').split(',')
+    scopes = (auth_params&.[]('scope') || '').split(',')
     scopes.include?('classroom.rosters.readonly')
   end
 
