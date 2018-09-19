@@ -1,5 +1,9 @@
 function layoutSprites(group, format) {
     if (typeof(group) == "string") {
+      if (!sprites_by_type.hasOwnProperty(group)) {
+        console.log("There is no group of " + group);
+        return;
+      }
       group = sprites_by_type[group];
       if (!group) return;
     }
