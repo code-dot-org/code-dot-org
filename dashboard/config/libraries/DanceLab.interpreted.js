@@ -16,11 +16,11 @@ var sprites_by_type = {};
 
 if (LOW_BAND) {
   var SPRITE_NAMES = ["CAT", "DOG", "DUCK", "MOOSE"];
-  var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet_exsm/";
+  var img_base = "https://curriculum.code.org/images/sprites/spritesheet_exsm/";
   var SIZE = 200;
 } else {
   var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "POO", "ROBOT", "SHARK", "UNICORN"];
-  var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet_sm/";
+  var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
   var SIZE = 300;
 }
 
@@ -80,28 +80,28 @@ var FRAMES = 24;
 // Songs
 var songs = {
   macklemore: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3',
+    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
     bpm: 146,
     delay: 0.2, // Seconds to delay before calculating measures
     verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
     chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
   },
   macklemore90: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/hold.mp3',
+    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
     bpm: 146,
     delay: 0.0, // Seconds to delay before calculating measures
     verse: [0, 26.3], // Array of timestamps in seconds where verses occur
     chorus: [65.75] // Array of timestamps in seconds where choruses occur
   },
   hammer: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/touch.mp3',
+    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
     bpm: 133,
     delay: 2.32, // Seconds to delay before calculating measures
     verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
     chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
   },
   peas: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/feeling.mp3',
+    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
     bpm: 128,
     delay: 0.0, // Seconds to delay before calculating measures
     verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
