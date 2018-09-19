@@ -31,6 +31,13 @@
 
     -# Mount point for React SchoolInfoInputs component.
     #school-info-inputs{style: "display: none;"}
+      = f.fields_for :school_info_attributes do |ff|
+        = ff.hidden_field :school_id
+        = ff.hidden_field :school_name
+        = ff.hidden_field :school_state
+        = ff.hidden_field :school_zip
+        = ff.hidden_field :country
+        = ff.hidden_field :full_address
 
     #email-preference-dropdown{style: "display: none;"}
       = f.label :email_preference_opt_in do
