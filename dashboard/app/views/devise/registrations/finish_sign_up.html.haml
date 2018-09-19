@@ -9,12 +9,11 @@
     = f.label :user_type, t('signup_form.create_user_type')
     = f.select :user_type, user_type_options, include_blank: true
 
-    #teacher-name-field{style: "display: none;"}
-      = f.label :name, t('activerecord.attributes.user.other_name_example').html_safe
-      = f.text_field :name, maxlength: 255
-
-    #student-name-field{style: "display: none;"}
-      = f.label :name, t('activerecord.attributes.user.name_example').html_safe
+    #name-field{style: "display: none;"}
+      #teacher-name-label{style: "display: none;"}
+        = f.label :name, t('activerecord.attributes.user.other_name_example').html_safe
+      #student-name-label{style: "display: none;"}
+        = f.label :name, t('activerecord.attributes.user.name_example').html_safe
       = f.text_field :name, maxlength: 255
 
     #age-dropdown{style: "display: none;"}
