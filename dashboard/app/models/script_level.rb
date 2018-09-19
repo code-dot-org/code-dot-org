@@ -63,6 +63,7 @@ class ScriptLevel < ActiveRecord::Base
   # Consider using oldest_active_level instead, or see
   # ScriptLevelsController#select_level for how we select the right level to
   # show on puzzle pages.
+  # TODO(elijah): stop using and delete these methods
   def level
     levels[0]
   end
