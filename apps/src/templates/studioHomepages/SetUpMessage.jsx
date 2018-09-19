@@ -15,9 +15,9 @@ const styles = {
     boxSizing: "border-box"
   },
   wordBox: {
-    width: styleConstants['content-width']-275,
+    width: styleConstants['content-width']-280,
     paddingLeft: 25,
-    paddingRight: 25
+    paddingRight: 25,
   },
   heading: {
     fontSize: 20,
@@ -29,7 +29,7 @@ const styles = {
   description: {
     fontSize: 14,
     color: color.charcoal,
-    width: styleConstants['content-width']-275,
+    width: styleConstants['content-width']-280,
     paddingTop: 5,
     paddingBottom: 25,
   },

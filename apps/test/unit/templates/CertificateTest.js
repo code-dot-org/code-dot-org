@@ -12,6 +12,7 @@ describe('Certificate', () => {
     const wrapper = shallow(
       <Certificate
         tutorial="minecraft"
+        isMinecraft={true}
       />, {context: {store}},
     ).dive();
     expect(wrapper.find('img').html().includes('MC_Hour_Of_Code_Certificate'));
@@ -21,6 +22,7 @@ describe('Certificate', () => {
     const wrapper = shallow(
       <Certificate
         type="minecraft"
+        isMinecraft={true}
       />, {context: {store}},
     ).dive();
     expect(wrapper.find('img').html().includes('MC_Hour_Of_Code_Certificate'));
@@ -30,6 +32,7 @@ describe('Certificate', () => {
     const wrapper = shallow(
       <Certificate
         tutorial="frozen"
+        isMinecraft={false}
       />, {context: {store}},
     ).dive();
     expect(wrapper.find('img').html().includes('hour_of_code_certificate'));

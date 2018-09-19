@@ -7,6 +7,7 @@ import shapes from './shapes';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {tableLayoutStyles} from '../tables/tableConstants';
 
 // When this table gets converted to reacttabular, it should also
 // use styles from /tables/tableConstants.js
@@ -96,7 +97,10 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     textDecoration: 'none'
-  }
+  },
+  currentUnit: {
+    marginTop: 10
+  },
 };
 
 class SectionsAsStudentTable extends React.Component {
@@ -197,6 +201,14 @@ class SectionsAsStudentTable extends React.Component {
                 <a href={section.linkToAssigned} style={styles.link}>
                   {section.assignedTitle}
                 </a>
+                {section.currentUnitTitle && (
+                  <div style={styles.currentUnit}>
+                    <div>{i18n.currentUnit()}</div>
+                    <a href={section.linkToCurrentUnit} style={tableLayoutStyles.link}>
+                      {section.currentUnitTitle}
+                    </a>
+                  </div>
+                )}
               </td>
               {isTeacher && (
                 <td style={{...styles.col, ...styles.col3}}>

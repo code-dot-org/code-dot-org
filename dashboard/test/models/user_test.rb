@@ -1753,6 +1753,38 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
+  test 'update_email_for updates unmigrated user email' do
+    user = create :user
+    user.update_email_for(email: 'new@email.com')
+    user.reload
+    assert_equal User.hash_email('new@email.com'), user.hashed_email
+  end
+
+  test 'update_email_for does not update migrated user AuthenticationOption if provider and uid are not present' do
+    user = create :user, :multi_auth_migrated
+    user.update_email_for(provider: nil, uid: nil, email: 'new@email.com')
+    user.reload
+    refute_equal User.hash_email('new@email.com'), user.hashed_email
+  end
+
+  test 'update_email_for does not update migrated user AuthenticationOption if no matching AuthenticationOption' do
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: '123456'
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: 'not-my-uid', email: 'new@email.com')
+    google_auth_option.reload
+    refute_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
+  end
+
+  test 'update_email_for updates migrated user AuthenticationOption if matching AuthenticationOption' do
+    uid = '123456'
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :google_authentication_option, user: user, authentication_id: uid
+    user.reload
+    user.update_email_for(provider: AuthenticationOption::GOOGLE, uid: uid, email: 'new@email.com')
+    google_auth_option.reload
+    assert_equal User.hash_email('new@email.com'), google_auth_option.hashed_email
+  end
+
   test 'update_primary_contact_info is false if email and hashed_email are nil' do
     user = create :user
     successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})
@@ -3783,7 +3815,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_by_email locates a multi-auth teacher by non-primary email' do
     teacher = create :teacher, :with_migrated_email_authentication_option
-    second_option = create :email_authentication_option, user: teacher
+    second_option = create :authentication_option, user: teacher
     assert_equal teacher, User.find_by_email(second_option.email)
   end
 

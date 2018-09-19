@@ -47,5 +47,49 @@ module Pd::Application
     def check_idempotency
       Teacher1920Application.find_by(user: user)
     end
+
+    # @override
+    def self.cohort_csv_header(optional_columns)
+      columns = [
+        'Date Accepted',
+        'Applicant Name',
+        'District Name',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop'
+      ]
+      if optional_columns[:registered_workshop]
+        columns.push 'Registered Workshop'
+      end
+
+      CSV.generate do |csv|
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_cohort_csv_row(optional_columns)
+      columns = [
+        date_accepted,
+        applicant_name,
+        district_name,
+        school_name,
+        user.email,
+        status,
+        workshop_date_and_location
+      ]
+      if optional_columns[:registered_workshop]
+        if workshop.try(:local_summer?)
+          columns.push(registered_workshop? ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+
+      CSV.generate do |csv|
+        csv << columns
+      end
+    end
   end
 end
