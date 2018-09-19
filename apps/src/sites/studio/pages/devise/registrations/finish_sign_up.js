@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const TEACHER_ONLY_FIELDS = ["#teacher-name-field", "#email-preference-dropdown"];
+const TEACHER_ONLY_FIELDS = ["#teacher-name-field", "#school-dropdown", "#email-preference-dropdown", "#printable-terms-of-service"];
 const STUDENT_ONLY_FIELDS = ["#student-name-field", "#age-dropdown", "#student-consent"];
 const SHARED_FIELDS = ["#gender-dropdown", "#terms-of-service"];
 const ALL_FIELDS = [TEACHER_ONLY_FIELDS, STUDENT_ONLY_FIELDS, SHARED_FIELDS];
@@ -16,25 +16,20 @@ $(document).ready(() => {
         switchToStudent();
         break;
       default:
-        hideFields(ALL_FIELDS); // Hide everything
+        hideFields(ALL_FIELDS);
     }
   });
 
   function switchToTeacher() {
-    // Show teacher and shared fields
     fadeInFields(TEACHER_ONLY_FIELDS);
     fadeInFields(SHARED_FIELDS);
-
-    // Hide student fields
     hideFields(STUDENT_ONLY_FIELDS);
   }
 
   function switchToStudent() {
-    // Show student and shared fields
     fadeInFields(STUDENT_ONLY_FIELDS);
     fadeInFields(SHARED_FIELDS);
-
-    hideFields(TEACHER_ONLY_FIELDS); // Hide teacher fields
+    hideFields(TEACHER_ONLY_FIELDS);
   }
 
   function fadeInFields(fields) {

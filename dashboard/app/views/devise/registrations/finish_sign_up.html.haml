@@ -32,6 +32,8 @@
       = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
     = f.select :email_preference_opt_in, email_preference_options, include_blank: true
 
+  #printable-terms-of-service{style: "display: none;"}
+
   #terms-of-service{style: "display: none;"}
     = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
     = f.label :terms_of_service_version do
