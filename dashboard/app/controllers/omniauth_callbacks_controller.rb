@@ -123,13 +123,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
-    # Set user-account locale only if no cookie is already set.
-    if @user.locale &&
-      @user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
-
-      set_locale_cookie(@user.locale)
-    end
+    prepare_locale_cookie @user
 
     if just_authorized_google_classroom(@user, request.env['omniauth.params'])
       # Redirect to open roster dialog on home page if user just authorized access
@@ -175,13 +169,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
-    # Set user-account locale only if no cookie is already set.
-    if @user.locale &&
-      @user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
-
-      set_locale_cookie(@user.locale)
-    end
+    prepare_locale_cookie @user
 
     if just_authorized_google_classroom(@user, request.env['omniauth.params'])
       # Redirect to open roster dialog on home page if user just authorized access
@@ -227,13 +215,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
-    # Set user-account locale only if no cookie is already set.
-    if @user.locale &&
-      @user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
-
-      set_locale_cookie(@user.locale)
-    end
+    prepare_locale_cookie @user
 
     if just_authorized_google_classroom(@user, request.env['omniauth.params'])
       # Redirect to open roster dialog on home page if user just authorized access
@@ -268,6 +250,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def prepare_locale_cookie(user)
+    # Set user-account locale only if no cookie is already set.
+    if user.locale &&
+      user.locale != request.env['cdo.locale'] &&
+      cookies[:language_].nil?
+
+      set_locale_cookie(user.locale)
+    end
+  end
 
   def register_new_user(user)
     move_oauth_params_to_cache(user)
