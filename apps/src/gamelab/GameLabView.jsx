@@ -49,6 +49,7 @@ class GameLabView extends React.Component {
     // Provided manually
     showFinishButton: PropTypes.bool.isRequired,
     onMount: PropTypes.func.isRequired,
+    danceLab: PropTypes.bool.isRequired,
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
@@ -99,7 +100,7 @@ class GameLabView extends React.Component {
           style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
-          {this.props.spriteLab &&
+          {this.props.spriteLab && this.props.danceLab &&
             <div id="song_selector">
               <SongSelector
                 options={['option 1', 'option 2', 'option 3']}
