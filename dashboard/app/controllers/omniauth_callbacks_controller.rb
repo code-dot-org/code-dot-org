@@ -160,16 +160,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
   def handle_untrusted_email_signin(user, provider)
     force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
-
-    # We used to check this based on sign_in_count, but we're explicitly logging it now
-    seen_oauth_takeover_dialog = (!!user.seen_oauth_connect_dialog) || user.sign_in_count > 1
-
-    # If account exists (as looked up by Clever ID) and it's not the first login, just sign in
-    if user.persisted? && seen_oauth_takeover_dialog && !force_takeover
-      sign_in_user
-    else
-      # Otherwise, it's either the first login, or a user who must connect -
-      # offer to connect the Clever account to an existing one, or insist if needed
+    if force_takeover
+      # It's a user who must link accounts - a Clever/Powerschool Code.org teacher account with an
+      # email that conflicts with an existing Code.org account.
+      #
+      # We don't want them using the teacher account as-is because it doesn't have a valid email.
+      # We can't do a silent takeover because we don't trust email addresses from Clever/Powerschool
+      #
+      # Long-term I'd like sign-up when there's a conflict like this to just fail, with a helpful
+      # message directing the teacher to sign in to their existing account and then link Clever
+      # to it from the accounts page.
       if user.migrated?
         auth_option = user.authentication_options.find_by credential_type: provider
         begin_account_takeover \
@@ -186,8 +186,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
       user.seen_oauth_connect_dialog = true
       user.save!
-      sign_in_user
     end
+    sign_in_user
   end
 
   def move_oauth_params_to_cache(user)
