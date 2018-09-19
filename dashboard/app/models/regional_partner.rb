@@ -55,7 +55,7 @@ class RegionalPartner < ActiveRecord::Base
     apps_close_date_csp_facilitator
     applications_principal_approval
     applications_decision_emails
-    link_to_application
+    link_to_partner_application
     csd_cost
     csp_cost
     cost_scholarship_information
