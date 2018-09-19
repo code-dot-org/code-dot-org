@@ -1,7 +1,7 @@
 require_relative '../test_helper'
-require 'cdo/unicorn_listener'
+require 'cdo/app_server_metrics'
 
-class UnicornListenerTest < Minitest::Test
+class AppServerMetricsTest < Minitest::Test
   include Rack::Test::Methods
   TCP_LISTENER = '0.0.0.0:0000'.freeze
   SOCKET_LISTENER = '/tmp/sock'.freeze
@@ -13,7 +13,7 @@ class UnicornListenerTest < Minitest::Test
     end
 
     @app = Rack::Builder.app do
-      use Cdo::UnicornListener,
+      use Cdo::AppServerMetrics,
         interval: 0,
         report_count: 2,
         listeners: [TCP_LISTENER, SOCKET_LISTENER]
@@ -21,7 +21,7 @@ class UnicornListenerTest < Minitest::Test
     end
   end
 
-  def test_unicorn_metrics
+  def test_app_server_metrics
     Raindrops::Linux.expects(:tcp_listener_stats).
       with([TCP_LISTENER]).times(2).
       returns(
@@ -33,7 +33,7 @@ class UnicornListenerTest < Minitest::Test
       returns({SOCKET_LISTENER => Raindrops::ListenStats.new(0, 0)})
 
     Cdo::Metrics.expects(:push).with do |namespace, data|
-      namespace == 'Unicorn' &&
+      namespace == 'App Server' &&
         data.group_by {|d| d[:metric_name]}.
           map {|k, v| {k => v.map {|x| x[:value]}}} ==
           [
@@ -48,7 +48,7 @@ class UnicornListenerTest < Minitest::Test
   end
 
   def test_reporting_task
-    listener = Cdo::UnicornListener.new(nil,
+    listener = Cdo::AppServerMetrics.new(nil,
       interval: 0.1,
       report_count: 2,
       listeners: [TCP_LISTENER, SOCKET_LISTENER]

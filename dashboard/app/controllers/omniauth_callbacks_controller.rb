@@ -6,6 +6,29 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_action :clear_sign_up_session_vars
 
+  # Note: We can probably remove these once we've broken out all providers
+  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
+  TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
+
+  # GET /users/auth/google_oauth2/callback
+  def google_oauth2
+    if should_connect_provider?
+      connect_provider
+    else
+      login
+    end
+  end
+
+  # GET /users/auth/clever/callback
+  def clever
+    if should_connect_provider?
+      connect_provider
+    else
+      login
+    end
+  end
+
+  # All remaining providers
   # GET /users/auth/:provider/callback
   def all
     if should_connect_provider?
@@ -15,7 +38,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  AuthenticationOption::OAUTH_CREDENTIAL_TYPES.each do |provider|
+  TYPES_ROUTED_TO_ALL.each do |provider|
     alias_method provider.to_sym, :all
   end
 
@@ -26,6 +49,31 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
     return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+
+    existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
+
+    # Credential is already held by the current user
+    # Notify of no-op.
+    if existing_credential_holder&.==(current_user)
+      flash.notice = I18n.t('auth.already_linked', provider: I18n.t("auth.#{provider}"))
+      return redirect_to edit_user_registration_path
+    end
+
+    # Credential is already held by another user with activity
+    # Display an error explaining that the credential is already in use.
+    if existing_credential_holder&.has_activity?
+      flash.alert = I18n.t('auth.already_in_use', provider: I18n.t("auth.#{provider}"))
+      return redirect_to edit_user_registration_path
+    end
+
+    # Credential is already held by an unused account.
+    # Take over the unused account.
+    if existing_credential_holder
+      move_sections_and_destroy_source_user \
+        source_user: existing_credential_holder,
+        destination_user: current_user,
+        takeover_type: 'connect_provider'
+    end
 
     # TODO: some of this won't work right for non-Google providers, because info comes in differently
     new_data = nil
@@ -160,16 +208,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
   def handle_untrusted_email_signin(user, provider)
     force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
-
-    # We used to check this based on sign_in_count, but we're explicitly logging it now
-    seen_oauth_takeover_dialog = (!!user.seen_oauth_connect_dialog) || user.sign_in_count > 1
-
-    # If account exists (as looked up by Clever ID) and it's not the first login, just sign in
-    if user.persisted? && seen_oauth_takeover_dialog && !force_takeover
-      sign_in_user
-    else
-      # Otherwise, it's either the first login, or a user who must connect -
-      # offer to connect the Clever account to an existing one, or insist if needed
+    if force_takeover
+      # It's a user who must link accounts - a Clever/Powerschool Code.org teacher account with an
+      # email that conflicts with an existing Code.org account.
+      #
+      # We don't want them using the teacher account as-is because it doesn't have a valid email.
+      # We can't do a silent takeover because we don't trust email addresses from Clever/Powerschool
+      #
+      # Long-term I'd like sign-up when there's a conflict like this to just fail, with a helpful
+      # message directing the teacher to sign in to their existing account and then link Clever
+      # to it from the accounts page.
       if user.migrated?
         auth_option = user.authentication_options.find_by credential_type: provider
         begin_account_takeover \
@@ -186,8 +234,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
       user.seen_oauth_connect_dialog = true
       user.save!
-      sign_in_user
     end
+    sign_in_user
   end
 
   def move_oauth_params_to_cache(user)
