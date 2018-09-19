@@ -6,6 +6,29 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_action :clear_sign_up_session_vars
 
+  # Note: We can probably remove these once we've broken out all providers
+  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
+  TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
+
+  # GET /users/auth/google_oauth2/callback
+  def google_oauth2
+    if should_connect_provider?
+      connect_provider
+    else
+      login
+    end
+  end
+
+  # GET /users/auth/clever/callback
+  def clever
+    if should_connect_provider?
+      connect_provider
+    else
+      login
+    end
+  end
+
+  # All remaining providers
   # GET /users/auth/:provider/callback
   def all
     if should_connect_provider?
@@ -15,7 +38,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  AuthenticationOption::OAUTH_CREDENTIAL_TYPES.each do |provider|
+  TYPES_ROUTED_TO_ALL.each do |provider|
     alias_method provider.to_sym, :all
   end
 
