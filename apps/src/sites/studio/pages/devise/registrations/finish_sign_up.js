@@ -2,12 +2,20 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = ["#teacher-name-field", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
 const STUDENT_ONLY_FIELDS = ["#student-name-field", "#age-dropdown", "#student-consent"];
 const SHARED_FIELDS = ["#gender-dropdown", "#terms-of-service"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
-let schoolData = {};
+
+// Values loaded from scriptData are always initial values, not the latest
+// (possibly unsaved) user-edited values on the form.
+const scriptData = getScriptData('signup');
+const {usIp} = scriptData;
+
+// Auto-fill country in SchoolInfoInputs if we detect a US IP address.
+let schoolData = {country: usIp ? 'United States' : ''};
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById("school-info-inputs");
