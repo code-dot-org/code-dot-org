@@ -43,7 +43,7 @@ implementation_365 as
 (select 
 tt.user_id,
 date_part(month, trained_at) month_trained,
-date_part(dayofweek, trained_at) day_of_week, 
+date_part(dayofweek, trained_at) day_of_week_trained, 
 min(datediff(day, tt.trained_at, st.started_at)) as days_to_start,
 min(datediff(day, tt.trained_at, ct.completed_at)) as days_to_complete,
 CASE WHEN days_to_start < 0 then 1 else 0 end as started_before_training,
@@ -52,9 +52,9 @@ CASE WHEN days_to_start <= 365  and started_before_training = 0 then 1 else 0 en
 CASE WHEN days_to_complete <= 365 and completed_before_training = 0 then 1 else 0 end as completed_365,
 CASE WHEN days_to_start <= 365  then 1 else 0 end as started_365_or_before,
 CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
-from csf_teachers_trained tt
-left join csf_started_teachers st on st.user_id = tt.user_id  
-left join csf_completed_teachers ct on ct.user_id = tt.user_id  
+from analysis.csf_teachers_trained tt
+left join analysis.csf_started_teachers st on st.user_id = tt.user_id  
+left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id  
 group by 1, 2, 3
 ),
 pd_enrollments_with_year as
@@ -86,7 +86,7 @@ pd_facilitators as
          'CS Fundamentals'::varchar as course,
          sy.school_year as school_year_trained,
          month_trained,
-         day_of_week, 
+         day_of_week_trained, 
          days_to_start,
          days_to_complete,
          started_before_training,
@@ -130,7 +130,7 @@ pd_facilitators as
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
   FROM csf_teachers_trained d 
-  JOIN training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
+  JOIN analysis.training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
          ON d.user_id = u.id
