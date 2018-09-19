@@ -17,9 +17,9 @@ nav: how_to_nav
 
 [View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
 
-![](/images/fit-800/hoc-govs.png)
+![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, Iowa, and Virginia participating in an Hour of Code.*
+From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
 
 ## ¡Consigue la participación de cada escuela y que cada estudiante aprenda!
 

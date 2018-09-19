@@ -6,31 +6,201 @@ ms:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Seterusnya
             '"prev"': Sebelumnya
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Seterusnya
             '"prev"': Sebelumnya
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': saiz
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Seterusnya
             '"prev"': Sebelumnya
       Dancelab_getProp:
@@ -81,92 +251,6 @@ ms:
             '"right"': kanan
             '"space"': angkasa
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': atas
-            '"down"': bawah
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': angkasa
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': kanan
-            '"left"': kiri
-      DancelabAlpha_randomColor:
-        text: warna rawak
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': atas
-            '"down"': bawah
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': angkasa
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': atas
@@ -263,5 +347,16 @@ ms:
             '"scale"': saiz
       Vanilla_randomColor:
         text: warna rawak
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": di hadapan
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": pasir
+            "'planksOak'": papan oak
       craft_moveForward:
         text: bergerak ke hadapan
+      craft_placeTorch:
+        text: letakkan obor

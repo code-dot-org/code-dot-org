@@ -1140,6 +1140,7 @@ pt-BR:
       Farmer for TTS testing_instruction: "Uau, eu encontrei um buraco realmente fundo! Eu não\nsei quantas pás de terra são necessárias. Você pode escrever um programa que preencha-o\naté que o solo fique nivelado. Dica: dessa vez, tente usar o laço enquanto."
       Finalize Your Chaser Game v.1_instruction: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
       Finalize Your Chaser Game v.1_2018_instruction: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
+      Fish Tank 5-validated_simple_instruction: O peixe quer um amigo.   Adicione um novo sprite.
       Fish Tank 6-validated_instruction: Adicione um comportamento o novo amigo do peixe.
       Fish Tank 6-validated_simple_instruction: Adicione um comportamento o novo amigo do peixe.
       Food Fight!_instruction: "Adicionamos uma última função para\nvocê.\\r\n\\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número.\\r\n\\r\nPor\nexemplo: \"pontos_jogador\" > 6\\r\n\\r\nJogue e chegue até o nível 3\npara ir para o próximo desafio. "
@@ -1499,6 +1500,7 @@ pt-BR:
       Play Lab Rocket Free Play_instruction: "Atividade livre: faça uma experiência com sua função altura-foguete\npara fazer o foguete voar de formas diferentes. Clique em \"Concluir\" quando você\nterminar."
       Poorva copy U3L2 Using Simple Commands_instruction: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
       Quantum Bee_instruction: Flores roxas podem ter 1 ou 0 néctar, mas você não saberá qual delas! Tenha cuidado para não recolher o néctar de uma flor roxa que não tem nenhum. Verifique se o néctar é igual a 1, usando o bloco "if".
+      Ram Spritelab Validation Test_instruction: Pressione a seta para cima
       Ryan - 4-5 Bee Conditionals 2_instruction: "Agora, a abelha só quer néctar.\nNem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se\nela está escondendo uma flor. Se estiver, então você pode coletar o néctar."
       Ryan - Bee Conditionals_instruction: "Agora, a abelha só quer néctar.\nNem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se\nela está escondendo uma flor. Se estiver, então você pode coletar o néctar."
       Ryan Doily Step 2_instruction: Agora, você precisa ativar e repeti-lo 20 vezes! Quantos graus se obter 360 depois de 20 iterações?
@@ -1693,6 +1695,8 @@ pt-BR:
       course1_collector_loops_challenge3_instruction: 'Desta vez você só pode usar um bloco de cada seta. Pegue todo o tesouro! '
       course1_collector_loops_challenge4_instruction: Vamos pegar o tesouro! Ajuda-me em cada linha, em seguida, voltar para iniciar a próxima linha. Você consegue achar um padrão?
       course1_maze_debugging_challenge2_instruction: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
+      course2_collector_loops_challenge2_instruction: Pegar todos os tesouros!
+      course2_collector_prog_challenge1_instruction: Preste atenção! Você consegue coletar todas as *10* peças do tesouro?
       course2_collector_prog_challenge2_instruction: Há 20 peças de tesouro para serem encontradas. Colete pelo menos metade para finalizar este desafio!
       course2_maze_seq_challenge1_instruction: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!
       course2_playlab_stage17_1_instruction: "Você pode fazer Jorge, o cachorro (personagem 1),\ndizer \"Olá\"?"
@@ -2018,6 +2022,8 @@ pt-BR:
       courseC_artist_loops5b_2018_instruction: Tente adicionar linhas!
       courseC_artist_loops8a_instruction: Agora tente algo você mesmo!
       courseC_artist_loops8a_2018_instruction: Agora tente algo você mesmo!
+      courseC_artist_prog1_instruction: Brinque com os blocos da caixa de ferramentas para saber o que eles fazem!
+      courseC_artist_prog1_2018_instruction: Brinque com os blocos da caixa de ferramentas para saber o que eles fazem!
       courseC_artist_prog5_instruction: |-
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
       courseC_artist_prog5_2018_instruction: |-
@@ -2094,6 +2100,7 @@ pt-BR:
       courseD_artist_binaryFP8_instruction: "**Atividade livre**: desenhe o que você quiser com números binários! "
       courseD_artist_nestedLoops_challenge2_instruction: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2018_instruction: Conserte o código para fazer esta pintura!
+      courseD_artist_ramp12_instruction: Use o que você aprendeu para desenhar este triângulo dentro de um quadrado.
       courseD_autorun_binary4_2019_instruction: "Você consegue desenhar este padrão repetindo\napenas três dígitos binários? (0 e 1)?"
       courseD_autorun_binary6_2019_instruction: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
       courseD_autorun_binary7_2019_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
@@ -2155,6 +2162,7 @@ pt-BR:
       courseE_artist_functions1_instruction: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"  \\r\n\\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100 pixels de comprimento.  \\r\n\\r\nA\nhaste entre as lentes tem 75 pixels de comprimento."
       courseE_artist_functions1_2018_instruction: "\"Olá! Eu sou um artista zumbi. Eu amo desenhar!\"  \\r\n\\r\nAjude\no zumbi a desenhar óculos usando quadrados com lados de 100 pixels de comprimento.  \\r\n\\r\nA\nhaste entre as lentes tem 75 pixels de comprimento."
       courseE_artist_functions8a_2018_instruction: Crie uma função para um único quadrado.
+      courseE_artist_ramp12_instruction: Use o que você aprendeu para desenhar este triângulo dentro de um quadrado.
       courseE_bee_concept1_instruction: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseE_bee_concept1_2018_instruction: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseE_bee_functions1_instruction: Colete todo o néctar de cada flor.

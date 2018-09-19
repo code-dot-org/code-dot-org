@@ -249,6 +249,7 @@ pt-BR:
       Eval Strings Images 2_markdown_instruction: "Atividade livre: todos os blocos de cálculo estão identificados por cores\npara que você saiba que tipo de dados eles retornam e que tipo de dados eles precisam para seus\nparâmetros. O último parâmetro da função triângulo recebe uma string que\ncontrola sua cor - experimente algumas cores diferentes para ver o que acontece."
       Eval Strings Images 6_markdown_instruction: "Use a função sobreposição para colocar uma estrela\namarela com raio de 75 pixels em cima de um quadrado azul com 150 pixels de comprimento."
       Eval Strings Images Free Play_markdown_instruction: "Atividade livre: explore os blocos disponíveis\npara criar algo interessante. Lembre-se de compartilhar suas criações favoritas."
+      Fish Tank 5-validated_simple_markdown_instruction: O peixe quer um amigo.   Adicione um novo sprite.
       Function intro Ryan_markdown_instruction: "A **função** chamada 'construir ponte' está em sua área de trabalho. Todos os códigos de que você precisa para atravessar o rio estão corretos! \\r\n \\r\nFixe o bloco verde pequeno duas vezes em sua área de trabalho para corrigir o caminho e levar o jogador {currentPlayerName} até a Tocha de Redstone [redstone_torch]."
       K-1 Bee Loops 2_markdown_instruction: "Use um laço \"repita\" para mover e então coletar o néctar e\nproduzir mel!"
       K-1 Bee Loops 3_markdown_instruction: "Use três laços \"repita\" para coletar o néctar\ne\nfabricar o mel!"

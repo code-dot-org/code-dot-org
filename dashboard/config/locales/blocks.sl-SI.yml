@@ -10,18 +10,91 @@ sl:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Naslednja
             '"prev"': Prejšnje
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Naslednja
             '"prev"': Prejšnje
       Dancelab_changePropBy:
@@ -30,13 +103,110 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': Naslednja
             '"prev"': Prejšnje
       Dancelab_everySeconds:
@@ -103,114 +273,6 @@ sl:
             '"right"': desno
             '"space"': vesolje
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': gor
-            '"down"': dol
-            '"left"': levo
-            '"right"': desno
-            '"space"': vesolje
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekund(e)
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Naslednja
-            '"prev"': Prejšnje
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Naslednja
-            '"prev"': Prejšnje
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Naslednja
-            '"prev"': Prejšnje
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekund(e)
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': desno
-            '"left"': levo
-      DancelabAlpha_randomColor:
-        text: naključna barva
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': gor
-            '"down"': dol
-            '"left"': levo
-            '"right"': desno
-            '"space"': vesolje
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': gor
@@ -323,5 +385,16 @@ sl:
             '"y"': y položaj
       Vanilla_randomColor:
         text: naključna barva
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": spredaj
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": pesek
+            "'planksOak'": hrastove deske
       craft_moveForward:
         text: premakni se naprej
+      craft_placeTorch:
+        text: postavi baklo

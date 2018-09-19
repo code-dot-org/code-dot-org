@@ -37,3 +37,4 @@ export const metaTagDescription = _.memoize((relativeUrl) => {
 });
 
 export const ADD_A_PERSONAL_LOGIN_HELP_URL = 'https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account';
+export const RELEASE_OR_DELETE_RECORDS_EXPLANATION = 'https://support.code.org/hc/en-us/articles/360015983631';

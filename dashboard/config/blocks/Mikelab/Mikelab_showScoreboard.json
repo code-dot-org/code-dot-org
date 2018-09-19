@@ -1,0 +1,43 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "showScoreboard",
+    "blockText": "scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}",
+    "args": [
+      {
+        "name": "LABEL"
+      },
+      {
+        "name": "TEXTCOLOR",
+        "type": "Colour"
+      },
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      },
+      {
+        "name": "VALUE",
+        "type": "Number"
+      },
+      {
+        "name": "CORNER",
+        "options": [
+          [
+            "right",
+            "\"right\""
+          ],
+          [
+            "left",
+            "\"left\""
+          ]
+        ]
+      }
+    ],
+    "inline": false
+  }
+}

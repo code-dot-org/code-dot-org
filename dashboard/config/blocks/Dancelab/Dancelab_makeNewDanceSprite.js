@@ -6,17 +6,21 @@ function makeNewDanceSprite(costume, name, location) {
 
   var sprite = createSprite(location.x, location.y);
 
-  sprite.maxSpeed = 0;
   sprite.style = costume;
   if (!sprites_by_type.hasOwnProperty(costume)) {
     sprites_by_type[costume] = createGroup();
   }
-  sprites_by_type[costume].add(sprite);
+ 
+  sprite.mirroring = 1;
+  sprite.looping_move = 0;
+  sprite.looping_frame = 0;
   sprite.current_move = 0;
   sprite.previous_move = 0;
-  for (var i=0; i < dancers[costume].length; i++) {
-    sprite.addAnimation("anim" + i, dancers[costume][i]);
+  
+  for (var i=0; i < ANIMATIONS[costume].length; i++) {
+    sprite.addAnimation("anim" + i, ANIMATIONS[costume][i].animation);
   }
+  sprite.changeAnimation("anim8");
   sprite.animation.stop();
   sprites.add(sprite);
   sprite.speed = 10;
@@ -33,37 +37,31 @@ function makeNewDanceSprite(costume, name, location) {
     var msPerFrame = msPerBeat / 48;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
-      sprite.animation.nextFrame();
+      sprite.looping_frame++;
+      if (sprite.animation.looping) {
+        sprite.animation.changeFrame(sprite.looping_frame % sprite.animation.images.length);
+      } else {
+        sprite.animation.nextFrame();
+      }
+      
+      if (sprite.looping_frame % 48 === 0) {
+        if (ANIMATIONS[sprite.style][sprite.current_move].mirror) sprite.mirroring *= -1;
+        if (sprite.animation.looping) {
+          sprite.mirrorX(sprite.mirroring);
+        }
+      }
+      
       var currentFrame = sprite.animation.getFrame();
-      if (currentFrame === 0) {
-        sprite.mirrorX(-sprite.mirrorX());
-      } else if (currentFrame === sprite.animation.getLastFrame() && !sprite.animation.looping) {
-        changeMove(sprite, sprite.current_move);
-        sprite.dance_speed = sprite.previous_speed;
+      if (currentFrame === sprite.animation.getLastFrame() && !sprite.animation.looping) {
+        //changeMoveLR(sprite, sprite.current_move, sprite.mirroring);
+        sprite.changeAnimation("anim" + sprite.current_move);
+        sprite.animation.changeFrame(sprite.looping_frame % sprite.animation.images.length);
+        sprite.mirrorX(sprite.mirroring);
         sprite.animation.looping = true;
       }
     }
   });
 
-  sprite.setSpeed = function (speed) {
-    sprite.speed = speed;
-  };
-
-  sprite.moveUp = function () {
-    sprite.y = sprite.y - sprite.speed;
-  };
-  sprite.moveDown = function () {
-    sprite.y = sprite.y + sprite.speed;
-  };
-  sprite.moveLeft = function () {
-    sprite.x = sprite.x - sprite.speed;
-  };
-  sprite.moveRight = function () {
-    sprite.x = sprite.x + sprite.speed;
-  };
-  sprite.jump = function () {
-    sprite.velocityY = -7;
-  };
   sprite.setTint = function (color) {
     sprite.tint = color;
   };

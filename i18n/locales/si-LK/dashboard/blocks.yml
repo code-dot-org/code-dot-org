@@ -10,31 +10,201 @@ si:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': ඊළඟ
             '"prev"': පෙරට
       Dancelab_changeMoveEach:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      Dancelab_changeMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveRight:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': ඊළඟ
             '"prev"': පෙරට
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      Dancelab_doMoveEachLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveFast:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLongDrop:
+        options:
+          MOVE:
+            '0': Rest
+            '2': Clown
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
       Dancelab_doMoveOnce:
         options:
           MOVE:
             '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      Dancelab_doMoveSnap:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Clap High
+            '2': Clown
+            '3': Dab
+            '4': Double Jam
+            '5': Drop
+            '6': Floss
+            '7': Fresh
+            '8': Roll
+            '9': This or That
+            '10': Kick
+            '11': Thiller
             '"next"': ඊළඟ
             '"prev"': පෙරට
       Dancelab_everySeconds:
@@ -89,100 +259,6 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
       Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': උඩ
-            '"down"': යට
-            '"left"': වම
-            '"right"': දකුණ
-            '"space"': අභ්‍යාවකාශය
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': තත්පර
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': තත්පර
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': දකුණ
-            '"left"': වම
-      DancelabAlpha_randomColor:
-        text: අහඹු වර්ණයක්
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': උඩ
-            '"down"': යට
-            '"left"': වම
-            '"right"': දකුණ
-            '"space"': අභ්‍යාවකාශය
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': උඩ
@@ -279,5 +355,16 @@ si:
             '"scale"': විශාලත්වය
       Vanilla_randomColor:
         text: අහඹු වර්ණයක්
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ඉදිරියෙහි
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": වැලි
+            "'planksOak'": ඕක් ලෑලි
       craft_moveForward:
         text: ඉදිරියට යන්න
+      craft_placeTorch:
+        text: විදුලි පන්දමක් පිහිටුවන්න

@@ -50,6 +50,8 @@ SELECT *
 FROM other_processed
 ),
 
+
+
 sections_schools AS(
 SELECT se.id, ss_user.state as state, ss_user.zip as zip
 
@@ -60,18 +62,28 @@ SELECT se.id, ss_user.state as state, ss_user.zip as zip
          ON si_user.id = u.school_info_id
   JOIN analysis.school_stats ss_user
          ON ss_user.school_id = si_user.school_id
-  where se.section_type = 'csf_workshop'
+  where (se.section_type = 'csf_workshop') or (se.id in (select distinct se.id from pegasus_pii.forms
+  join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
+  join dashboard_production.followers f on f.section_id = se.id
+  where kind = 'ProfessionalDevelopmentWorkshop'
+  and nullif(json_extract_path_text(data_text, 'section_id_s'),'') is not null))
 
 ),
 
 sections_geos AS (
-SELECT se.id, ug.state as state, ug.postal_code as zip 
+SELECT se.id, 
+CASE WHEN se.user_id = 1423830 then 'OH' ELSE ug.state END as state, -- 1423830 is only facilitator in this list not with user_geos in the US 
+CASE WHEN se.user_id = 1423830 then '44113' ELSE ug.postal_code END as zip 
 FROM dashboard_production.sections se 
 JOIN dashboard_production_pii.user_geos ug
  ON se.user_id = ug.user_id
-where se.section_type = 'csf_workshop'
+where ((se.section_type = 'csf_workshop') or (se.id in (select distinct se.id from pegasus_pii.forms
+  join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
+  join dashboard_production.followers f on f.section_id = se.id
+  where kind = 'ProfessionalDevelopmentWorkshop'
+  and nullif(json_extract_path_text(data_text, 'section_id_s'),'') is not null)))
 and se.id not in (SELECT id from sections_schools)
-and ug.country = 'United States'
+--and ug.country = 'United States'
 ),
 
 section_state_zip AS (
@@ -92,6 +104,7 @@ FROM sections_geos
          CASE WHEN subject in ('Intro Workshop', 'Intro') then 'Intro Workshop' ELSE pdw.subject END as subject,
          min(pds.start) as workshop_date,
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
+         CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          sy.school_year,
          min(CASE WHEN pds.start < DATEADD(day,-3,GETDATE()) and pda.id is null then 1 else 0 END) as not_attended
@@ -107,9 +120,11 @@ FROM sections_geos
       ON wsz.id = pdw.id
    LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = wsz.state OR rpm.zip_code = wsz.zip
+   LEFT JOIN dashboard_production_pii.regional_partners rp  
+      ON rpm.regional_partner_id = rp.id  
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
-  group by 1, 2, 3, 4,  6, 7, 8
+  group by 1, 2, 3, 4,  6, 7, 8, 9
   
 UNION ALL 
 
@@ -117,19 +132,22 @@ UNION ALL
          'CS Fundamentals' as course,
          se.id as workshop_id, -- is workshop id in the other table (above)
          'Intro Workshop' as subject,
-         se.created_at as started_at,
+         se.created_at as workshop_date,
          0 AS trained_by_regional_partner,
+         CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          rpm.regional_partner_id AS regional_partner_id,
          sy.school_year, 
          0 as not_attended
     FROM dashboard_production.followers f
     JOIN dashboard_production.sections se 
-       ON se.id = f.section_id AND se.section_type = 'csf_workshop' 
+       ON se.id = f.section_id 
     JOIN analysis.training_school_years sy ON se.created_at BETWEEN sy.started_at AND sy.ended_at
     JOIN section_state_zip ssz 
       ON ssz.id = se.id
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = ssz.state OR rpm.zip_code = ssz.zip 
+    LEFT JOIN dashboard_production_pii.regional_partners rp  
+      ON rpm.regional_partner_id = rp.id 
 
 ;
 
@@ -140,5 +158,3 @@ GRANT ALL PRIVILEGES
 GRANT SELECT
   ON analysis.csf_workshop_attendance
   TO GROUP reader, GROUP reader_pii;
-
-

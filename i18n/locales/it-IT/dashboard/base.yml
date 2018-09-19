@@ -737,17 +737,17 @@ it:
     message_with_suggestion: "Per favore verifica che le seguenti informazioni siano corrette e aggiornale se necessario."
     save: "Salva"
   race_interstitial:
-    title: "Optionale: Aiutaci a tracciare i vostri progressi per superare le diversità in informatica"
-    message: "Si prega di riferirci la gara (controllare che tutti partecipino)"
+    title: "Facoltativo: aiutaci a controllare i nostri progressi nel superamento delle discriminazioni in informatica"
+    message: "Quali sono le tue origini (spunta tutte le voci corrette)?"
     races:
       white: "Bianco"
       black: "Neri o afroamericani"
-      hispanic: "Ispano o Latino"
+      hispanic: "Ispanico o Latino"
       asian: "Asiatico"
-      hawaiian: "Nativi hawaiani o altre isole del Pacifico"
-      american_indian: "Nativo Americano Indiano/Alaska"
+      hawaiian: "Nativo Hawaiano o altre Isole del Pacifico"
+      american_indian: "Nativo Indiano d'America o d'Alaska"
       other: "Altro"
-      opt_out: "Preferisco non dirlo"
+      opt_out: "Preferisco non rispondere"
     submit: "Invia"
     decline: "Chiudi"
   zendesk_too_young_message: 'Siamo spiacenti, gli utenti più giovani non possono accedere al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai tuoi genitori o insegnanti di contattarci al posto tuo.'
