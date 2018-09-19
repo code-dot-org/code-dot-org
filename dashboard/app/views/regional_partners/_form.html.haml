@@ -48,14 +48,17 @@
         != 'System sends decision emails'
   .field
     = f.label :link_to_application
-    = f.text_field :link_to_application
+    = f.text_field :link_to_application, {style: 'width: 500px'}
   -%w(csd csp).each do |course|
     .field
       = f.label nil, "#{course.upcase} Cost"
       = f.text_field "#{course}_cost".to_sym
-    .field
-      = f.label nil, "#{course.upcase} Cost Description"
-      = f.text_field "#{course}_cost_description".to_sym
+  .field
+    = f.label nil, "Cost/Scholarship Information"
+    = f.text_area :cost_scholarship_information, {style: 'width: 500px'}
+  .field
+    = f.label :additional_program_information
+    = f.text_area :additional_program_information, {style: 'width: 500px'}
   .field
     = f.label :contact_name
     = f.text_field :contact_name
