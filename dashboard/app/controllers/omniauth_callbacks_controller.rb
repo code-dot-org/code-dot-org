@@ -182,13 +182,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie @user
 
-    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
-      # Redirect to open roster dialog on home page if user just authorized access
-      # to Google Classroom courses and rosters
-      redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
+    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
       handle_untrusted_email_signin(@user, provider)
-    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+    elsif allows_silent_takeover(@user, auth_hash)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
