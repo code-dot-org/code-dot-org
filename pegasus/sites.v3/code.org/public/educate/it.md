@@ -7,9 +7,21 @@ theme: responsive
 
 ## What you need
 
+### Hardware
+
+- We recommend at least a 15 MBit/sec Internet connection for your school.
+- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses, CS Discoveries and CS Principles.
+    - iPads (including with a keyboard attachment) or other tablets are not supported for CS Discoveries or CS Principles.
+    - All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks, in addition to all other modern laptop or desktop computers.
+
 We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
 
-### Ask your school or district IT department to whitelist these sites:
+### Software
+
+- Tutorials work on [any modern browser](https://support.code.org/hc/en-us/articles/202591743) and operating system.
+- If YouTube is blocked at your school and you're using Firefox or Safari, Code.org hosted videos require [Flash player](https://get.adobe.com/flashplayer/). Chrome, iOS and Android do not require extra software to play videos.
+
+### Ask your school or district IT department to unblock these sites:
 
 | Priority | URL                                                                                                                                                    |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -20,16 +32,6 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 | **To use Code.org hosted videos**                                                  | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |
 | **To use Internet Simulator**   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
 | **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
-
-### Hardware
-
-- We recommend at least a 15 MBit/sec Internet connection for your school.
-- You will need a desktop or laptop computer with a mouse and keyboard for our CS Principles and CS Discoveries courses.
-
-### Software
-
-- Tutorials work on [any modern browser](https://support.code.org/hc/en-us/articles/202591743) and operating system.
-- If YouTube is blocked at your school and you're using Firefox or Safari, Code.org hosted videos require [Flash player](https://get.adobe.com/flashplayer/). Chrome, iOS and Android do not require extra software to play videos.
 
 ### Special settings for Google Apps/G-Suite users
 
@@ -63,4 +65,4 @@ If you can't get embedded videos to play, you can still use our tutorials withou
 
 ## Still having trouble?
 
-We'll help you out. Ask questions on our [forum](https://forums.code.org/?forum=322774).
+We'll help you out - just email us at support@code.org! 
