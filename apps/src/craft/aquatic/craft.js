@@ -365,6 +365,7 @@ Craft.initializeAppLevel = function (levelConfig) {
 
   Craft.gameController.loadLevel({
     isAquaticLevel: levelConfig.isAquaticLevel,
+    ocean: levelConfig.ocean,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
     groundDecorationPlane: levelConfig.groundDecorationPlane,
