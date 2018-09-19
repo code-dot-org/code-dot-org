@@ -3,7 +3,7 @@ import $ from 'jquery';
 const TEACHER_ONLY_FIELDS = ["#teacher-name-field", "#school-dropdown", "#email-preference-dropdown", "#printable-terms-of-service"];
 const STUDENT_ONLY_FIELDS = ["#student-name-field", "#age-dropdown", "#student-consent"];
 const SHARED_FIELDS = ["#gender-dropdown", "#terms-of-service"];
-const ALL_FIELDS = [TEACHER_ONLY_FIELDS, STUDENT_ONLY_FIELDS, SHARED_FIELDS];
+const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 $(document).ready(() => {
   $("#user_user_type").change(function () {
