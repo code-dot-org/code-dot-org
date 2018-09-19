@@ -17,7 +17,6 @@ module Api::V1::Pd::Application
       TEACHER_APPLICATION_MAILER_CLASS.stubs(:confirmation).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
-
       TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
@@ -74,7 +73,6 @@ module Api::V1::Pd::Application
     test 'does not send confirmation mail on unsuccessful create' do
       TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).never
       TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).never
-
       sign_in @applicant
 
       put :create, params: {form_data: {firstName: ''}}
