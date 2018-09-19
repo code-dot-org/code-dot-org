@@ -10,6 +10,7 @@
 
 #signup
   = form_for(@user, url: registration_path(@user)) do |f|
+    = f.hidden_field :locale, value: locale
 
     = f.label :user_type, t('signup_form.create_user_type')
     = f.select :user_type, user_type_options, include_blank: true
