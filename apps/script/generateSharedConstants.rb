@@ -65,8 +65,6 @@ def parse_raw(raw)
 end
 
 def main
-  puts "GENERATING"
-  puts REPO_DIR
   shared_content = generate_multiple_constants %w(
     ARTIST_AUTORUN_OPTIONS
     GAMELAB_AUTORUN_OPTIONS
