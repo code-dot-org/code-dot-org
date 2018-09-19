@@ -21,11 +21,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
-    if should_connect_provider?
-      connect_provider
-    else
-      login_google_oauth2
+    # Redirect to open roster dialog on home page if user just authorized access
+    # to Google Classroom courses and rosters
+    if just_authorized_google_classroom?
+      return redirect_to '/home?open=rosterDialog'
     end
+
+    if should_connect_provider?
+      return connect_provider
+    end
+
+    login_google_oauth2
   end
 
   # All remaining providers
@@ -138,11 +144,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie @user
 
-    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
-      # Redirect to open roster dialog on home page if user just authorized access
-      # to Google Classroom courses and rosters
-      redirect_to '/home?open=rosterDialog'
-    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+    if allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
@@ -308,11 +310,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def just_authorized_google_classroom(user, params)
-    scopes = (params['scope'] || '').split(',')
-    user.persisted? &&
-      user.provider == 'google_oauth2' &&
-      scopes.include?('classroom.rosters.readonly')
+  def just_authorized_google_classroom?
+    current_user &&
+    current_user.providers.include?(AuthenticationOption::GOOGLE) &&
+      has_google_oauth2_scope?('classroom.rosters.readonly')
+  end
+
+  def has_google_oauth2_scope?(scope_name)
+    params = request.env['omniauth.params']
+    scopes = (params&.[]('scope') || '').split(',')
+    scopes.include?('classroom.rosters.readonly')
   end
 
   def allows_google_classroom_takeover(user)
