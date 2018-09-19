@@ -7,7 +7,7 @@ Scenario: Basic teacher application submission
   Given I create a teacher named "Severus"
     And I am on "http://studio.code.org/pd/application/teacher"
     And I wait until element "h1" contains text "2019-20 Professional Learning Program Teacher Application"
-    #And I open my eyes to test "Teacher Application"
+    And I open my eyes to test "Teacher Application"
 
   # Section 1
   When I wait until element "h3" contains text "Section 1: About You"
@@ -39,7 +39,7 @@ Scenario: Basic teacher application submission
     And I press keys "5555882300" for element "input#principalPhoneNumber"
     And I press the first "input[name='currentRole']" element
     And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
-    #Then I see no difference for "Section 1: About You"
+    Then I see no difference for "Section 1: About You"
     And I press the first "button#next" element
 
   # Section 2
@@ -56,7 +56,7 @@ Scenario: Basic teacher application submission
   Then I wait until element "textarea#replaceWhichCourse" is visible
     And I press keys "Replacing existing CS Course" for element "textarea#replaceWhichCourse"
 
-  #Then I see no difference for "Section 2: Your School"
+  Then I see no difference for "Section 2: Your School"
   And I press the first "button#next" element
 
   # Section 3
@@ -71,7 +71,7 @@ Scenario: Basic teacher application submission
   And I press the first "input[name='previousYearlongCdoPd']" element
   And I press the first "input[name='csOfferedAtSchool']" element
 
-  #Then I see no difference for "Section 3: Teaching Background"
+  Then I see no difference for "Section 3: Teaching Background"
   And I press the first "button#next" element
 
   # Section 4
@@ -80,7 +80,7 @@ Scenario: Basic teacher application submission
   And I press the first "input[name='payFee']" element
   And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
-  #Then I see no difference for "Section 4: Summer Workshop"
+  Then I see no difference for "Section 4: Summer Workshop"
   And I press the first "button#next" element
 
   # Section 5
@@ -88,7 +88,7 @@ Scenario: Basic teacher application submission
   And I press the first "input[name='genderIdentity']" element
   And I press the first "input[name='race']" element
   And I press the first "input[name='howHeard']" element
-  #Then I see no difference for "Section 5: Submission"
+  Then I see no difference for "Section 5: Submission"
   And I press the first "button#next" element
 
   # Section 6
@@ -98,5 +98,50 @@ Scenario: Basic teacher application submission
 
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
-  #Then I see no difference for "Confirmation"
+  Then I see no difference for "Confirmation"
+
+  # Principal approval
+  Then I sign out
+  Then I navigate to the principal approval page for "Severus"
+  Then I wait until element "h1" contains text "2019-2020 Code.org Principal Approval Form"
+  Then I press the first "input[name='doYouApprove'][value='Yes']" element
+
+  And I press keys "nonexistent" for element "#school input"
+  Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
+  And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
+  Then I wait until element "input#schoolName" is visible
+  And I press keys "Code.org" for element "input#schoolName"
+  And I press keys "1501 4th Ave" for element "input#schoolAddress"
+  And I press keys "Seattle" for element "input#schoolCity"
+  And I select the "Washington" option in dropdown "schoolState"
+  And I press keys "98101" for element "input#schoolZipCode"
+  And I press the first "input[name='schoolType'][value='Other']" element
+
+  Then I press keys "1000" for element "#totalStudentEnrollment"
+  Then I press keys "10" for element "#freeLunchPercent"
+  Then I press keys "10" for element "#white"
+  Then I press keys "10" for element "#black"
+  Then I press keys "10" for element "#hispanic"
+  Then I press keys "10" for element "#asian"
+  Then I press keys "10" for element "#pacificIslander"
+  Then I press keys "10" for element "#americanIndian"
+  Then I press keys "10" for element "#other"
+
+  Then I press the first "input[name='committedToMasterSchedule']" element
+  Then I press the first "input[name='hoursPerYear']" element
+  Then I press the first "input[name='termsPerYear']" element
+  Then I press the first "input[name='replaceCourse']" element
+  Then I press the first "input[name='replaceWhichCourseCsd']" element
+
+  Then I press the first "input[name='committedToDiversity']" element
+  Then I press the first "#understandFee" element
+  Then I press the first "input[name='payFee']" element
+  Then I press the first "#confirmPrincipal" element
+
+  Then I see no difference for "Principal approval form"
+
+  And I submit
+  Then I wait until element "h1" contains text "Thank you for submitting this form!"
+  Then I see no difference for "Principal approval confirmation form"
+  Then I close my eyes
 
