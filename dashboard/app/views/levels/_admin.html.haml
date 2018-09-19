@@ -83,6 +83,8 @@
         - if exists
           - project = FeaturedProject.find_by storage_app_id: storage_app_id
           - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
+        - storage_apps = StorageApps.new(storage_id('user'))
+        - content_moderation_disabled = storage_apps.content_moderation_disabled?(params[:channel_id])
         %li
           S3 link:
           = link_to 'sources', sources_link, target: '_blank'
@@ -117,7 +119,7 @@
       .admin-report-abuse{ style: 'display: none;' }
         = link_to 'Report Abuse', '/report_abuse'
 
-      #disable-auto-moderation
+      #disable-auto-moderation{'style' => ('display: none;' unless !content_moderation_disabled)}
         %br
         %button{id: "disable-auto-moderation", class: "btn btn-default btn-sm"}
           Disable automated moderation
@@ -125,7 +127,7 @@
       #moderation-explanation{style: 'margin-top: 20px; width: 250px;'}
         Disabling automated moderation will prevent our content moderation service from flagging this project. Disable automated moderation if the service has inaccurately flagged this project before.
 
-      #enable-auto-moderation{style: 'display: none;'}
+      #enable-auto-moderation{'style' => ('display: none;' unless content_moderation_disabled)}
         %br
         %button{id: "enable-auto-moderation", class: "btn btn-default btn-sm"}
           Enable automated moderation
