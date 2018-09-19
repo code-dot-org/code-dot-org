@@ -17,7 +17,6 @@ import {
 import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
-import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
 
@@ -188,42 +187,3 @@ function getTeacherAnnouncement(override) {
 
   return announcement;
 }
-
-window.CleverTakeoverManager = function (options) {
-  this.options = options;
-  const self = this;
-
-  const linkCleverDiv = $('<div>');
-  function showLinkCleverModal(cancel, submit, providerToLink) {
-    $(document.body).append(linkCleverDiv);
-
-    ReactDOM.render(
-      <LinkCleverAccountModal
-        isOpen={true}
-        handleCancel={cancel}
-        handleSubmit={submit}
-        forceConnect={options.forceConnect === 'true'}
-        providerToLink={providerToLink}
-      />,
-      linkCleverDiv[0]
-    );
-  }
-
-  if (self.options.cleverLinkFlag) {
-    showLinkCleverModal(onCancelModal, onConfirmLink, self.options.cleverLinkFlag);
-  }
-
-  function closeLinkCleverModal() {
-    ReactDOM.unmountComponentAtNode(linkCleverDiv[0]);
-  }
-
-  function onCancelModal() {
-    $("#user_user_type").val("student");
-    $.get("/users/clever_modal_dismissed");
-    closeLinkCleverModal();
-  }
-
-  function onConfirmLink() {
-    window.location.href = "/users/clever_takeover?mergeID=" + self.options.userIDToMerge + "&token=" + self.options.mergeAuthToken;
-  }
-};

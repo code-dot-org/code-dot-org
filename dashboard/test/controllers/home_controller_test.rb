@@ -69,21 +69,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to script_path(script)
   end
 
-  test "student with assigned course or script during account takeover will go to index" do
-    student = create :student
-    script = create :script
-    sign_in student
-    student.assign_script(script)
-    begin_fake_account_takeover
-    get :index
-
-    assert_redirected_to '/home'
-  end
-
-  def begin_fake_account_takeover
-    @request.session[HomeController::ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-  end
-
   test "redirect index when signed out" do
     assert_queries 0 do
       get :index

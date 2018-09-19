@@ -112,14 +112,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
-      handle_untrusted_email_signin(@user, provider)
     elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
-      # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_oauth_takeover(@user)
       sign_in_user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
       # Note that @user.email is populated by User.from_omniauth even for students
@@ -180,39 +176,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
     auth.info = auth_info
     auth
-  end
-
-  # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
-  def handle_untrusted_email_signin(user, provider)
-    force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
-    if force_takeover
-      # It's a user who must link accounts - a Clever/Powerschool Code.org teacher account with an
-      # email that conflicts with an existing Code.org account.
-      #
-      # We don't want them using the teacher account as-is because it doesn't have a valid email.
-      # We can't do a silent takeover because we don't trust email addresses from Clever/Powerschool
-      #
-      # Long-term I'd like sign-up when there's a conflict like this to just fail, with a helpful
-      # message directing the teacher to sign in to their existing account and then link Clever
-      # to it from the accounts page.
-      if user.migrated?
-        auth_option = user.authentication_options.find_by credential_type: provider
-        begin_account_takeover \
-          provider: provider,
-          uid: auth_option.authentication_id,
-          oauth_token: auth_option.data_hash[:oauth_token],
-          force_takeover: force_takeover
-      else
-        begin_account_takeover \
-          provider: user.provider,
-          uid: user.uid,
-          oauth_token: user.oauth_token,
-          force_takeover: force_takeover
-      end
-      user.seen_oauth_connect_dialog = true
-      user.save!
-    end
-    sign_in_user
   end
 
   def move_oauth_params_to_cache(user)

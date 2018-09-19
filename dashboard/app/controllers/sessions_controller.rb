@@ -23,24 +23,6 @@ class SessionsController < Devise::SessionsController
     super
   end
 
-  # GET /resource/clever_takeover
-  def clever_takeover
-    sign_out_but_preserve_takeover_state
-    redirect_to action: :new
-  end
-
-  def clever_modal_dismissed
-    clear_takeover_session_variables
-    render status: 200, nothing: true
-  end
-
-  # POST /resource/sign_in
-  def create
-    super do |user|
-      check_and_apply_oauth_takeover(user)
-    end
-  end
-
   # DELETE /resource/sign_out
   def destroy
     redirect_path = after_sign_out_path_for(:user)
