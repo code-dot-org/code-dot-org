@@ -58,8 +58,8 @@ class RegionalPartner < ActiveRecord::Base
     link_to_application
     csd_cost
     csp_cost
-    csd_cost_description
-    csp_cost_description
+    cost_scholarship_information
+    additional_program_information
     contact_name
     contact_email
   )
