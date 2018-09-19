@@ -56,7 +56,8 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
             <div>
               <p>
                 <UnsafeRenderedMarkdown
-                  markdown={i18n.removeStudentBody1({explanationUrl: RELEASE_OR_DELETE_RECORDS_EXPLANATION})}
+                  markdown={i18n.removeStudentBody1({
+                    explanationUrl: RELEASE_OR_DELETE_RECORDS_EXPLANATION})}
                 />
               </p>
               {dependsOnThisSectionForLogin &&
