@@ -496,7 +496,7 @@ describe('animationListModule', function () {
       });
     });
 
-    it('Uses media proxy for non-code.org absolute URLs', function () {
+    it('Uses media proxy for absolute URLs', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
@@ -510,26 +510,6 @@ describe('animationListModule', function () {
         propsByKey: {
           'foo': {
             sourceUrl: `${document.location.origin}/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`
-          }
-        }
-      });
-    });
-
-    it('Does not use media proxy for code.org absolute URLs', function () {
-      const sourceUrl = 'https://curriculum.code.org/some-absolute-url';
-      const serializedList = {
-        orderedKeys: ['foo'],
-        propsByKey: {
-          'foo': {
-            sourceUrl,
-          }
-        }
-      };
-      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
-        orderedKeys: ['foo'],
-        propsByKey: {
-          'foo': {
-            sourceUrl,
           }
         }
       });
