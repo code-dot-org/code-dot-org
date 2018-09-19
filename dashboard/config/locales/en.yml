@@ -117,6 +117,8 @@ en:
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
+    already_in_use: "Your %{provider} is already connected to another Code.org account."
+    already_linked: "Your %{provider} is already linked to your Code.org account."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
