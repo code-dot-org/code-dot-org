@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL, RELEASE_OR_DELETE_RECORDS_EXPLANATION} from '@cdo/apps/lib/util/urlHelpers';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 export const TeacherWarning = () => {
@@ -53,7 +53,9 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox1()} />
+         <UnsafeRenderedMarkdown
+           markdown={i18n.deleteAccountDialog_checkbox1({explanationUrl: RELEASE_OR_DELETE_RECORDS_EXPLANATION})}
+         />
       </span>
     )
   },
