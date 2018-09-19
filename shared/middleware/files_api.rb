@@ -855,7 +855,8 @@ class FilesApi < Sinatra::Base
     if THUMBNAIL_FILENAME == filename
       storage_apps = StorageApps.new(storage_id('user'))
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
-      if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
+      content_moderation_enabled = !storage_apps.content_moderation_disabled?(encrypted_channel_id)
+      if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type) && content_moderation_enabled
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
         if %i(adult racy).include? rating

@@ -49,6 +49,12 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to_account_update(successfully_updated)
   end
 
+  #
+  # GET /users/finish_sign_up
+  #
+  def finish_sign_up
+  end
+
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
