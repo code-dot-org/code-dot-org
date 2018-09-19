@@ -1,7 +1,7 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "makeNewDanceSprite",
+    "func": "makeNewDanceSpriteLoc",
     "inline": false,
     "blockText": "make a new {COSTUME}\n called {NAME} at {LOCATION}",
     "color": [
@@ -13,14 +13,6 @@
       {
         "name": "COSTUME",
         "options": [
-          [
-            "Alien",
-            "\"ALIEN\""
-          ],
-          [
-            "Bear",
-            "\"BEAR\""
-          ],
           [
             "Cat",
             "\"CAT\""
@@ -34,16 +26,8 @@
             "\"DUCK\""
           ],
           [
-            "Frog",
-            "\"FROG\""
-          ],
-          [
             "Moose",
             "\"MOOSE\""
-          ],
-          [
-            "Pineapple",
-            "\"PINEAPPLE\""
           ],
           [
             "Poo",
@@ -56,10 +40,6 @@
           [
             "Shark",
             "\"SHARK\""
-          ],
-          [
-            "Unicorn",
-            "\"UNICORN\""
           ]
         ]
       },
@@ -70,7 +50,48 @@
       },
       {
         "name": "LOCATION",
-        "type": "Location"
+        "options": [
+          [
+            "Top",
+            "{x: 200, y: 100}"
+          ],
+          [
+            "Bottom",
+            "{x: 200, y: 300}"
+          ],
+          [
+            "Left",
+            "{x: 100, y: 200}"
+          ],
+          [
+            "Right",
+            "{x: 300, y: 200}"
+          ],
+          [
+            "Center",
+            "{x: 200, y: 200}"
+          ],
+          [
+            "Top Left",
+            "{x: 100, y: 100}"
+          ],
+          [
+            "Top Right",
+            "{x: 300, y: 100}"
+          ],
+          [
+            "Bottom Left",
+            "{x: 100, y: 300}"
+          ],
+          [
+            "Bottom Right",
+            "{x: 300, y: 300}"
+          ],
+          [
+            "Random",
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}"
+          ]
+        ]
       }
     ]
   }

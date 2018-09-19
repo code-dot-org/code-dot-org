@@ -1,10 +1,5 @@
 
-function makeNewDanceSprite(costume, name, location) {
-  
-  if (SPRITE_NAMES.indexOf(costume) < 0) {
-    costume = SPRITE_NAMES[0];
-  }
-  
+function makeNewDanceSpriteLoc(costume, name, location) {
   if (!location) {
     location = {x: 200, y: 200};
   }
@@ -15,7 +10,6 @@ function makeNewDanceSprite(costume, name, location) {
   if (!sprites_by_type.hasOwnProperty(costume)) {
     sprites_by_type[costume] = createGroup();
   }
-  sprites_by_type[costume].add(sprite);
  
   sprite.mirroring = 1;
   sprite.looping_move = 0;
@@ -26,11 +20,7 @@ function makeNewDanceSprite(costume, name, location) {
   for (var i=0; i < ANIMATIONS[costume].length; i++) {
     sprite.addAnimation("anim" + i, ANIMATIONS[costume][i].animation);
   }
-
-  // ToDo - fix setting rest at start
   sprite.changeAnimation("anim8");
-  sprite.current_move = 8;
-  
   sprite.animation.stop();
   sprites.add(sprite);
   sprite.speed = 10;
