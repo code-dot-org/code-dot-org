@@ -296,7 +296,7 @@ module LevelsHelper
         use_phaser: use_phaser,
         use_dance: use_dance,
         hide_source: hide_source,
-        preload_asset_list: @level.preload_asset_list,
+        preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
   end
