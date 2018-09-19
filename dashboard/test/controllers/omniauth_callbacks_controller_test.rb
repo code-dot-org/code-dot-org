@@ -461,7 +461,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'login_google_oauth2: signs in user if user is found by credentials' do
+  test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create :student, :unmigrated_google_sso
 
@@ -480,7 +480,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test 'login_google_oauth2: redirects to complete registration if user is not found by credentials' do
+  test 'google_oauth2: redirects to complete registration if user is not found by credentials' do
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
 
