@@ -296,9 +296,7 @@ en:
         applab: 'Make an App Lab app'
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
-      home: "Home"
       my_dashboard: "My Dashboard"
-      courses: "Courses"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
       sections: "Sections"
