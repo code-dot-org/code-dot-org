@@ -3,14 +3,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 
-const TEACHER_ONLY_FIELDS = ["#teacher-name-field", "#school-dropdown", "#email-preference-dropdown", "#printable-terms-of-service"];
+const TEACHER_ONLY_FIELDS = ["#teacher-name-field", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
 const STUDENT_ONLY_FIELDS = ["#student-name-field", "#age-dropdown", "#student-consent"];
 const SHARED_FIELDS = ["#gender-dropdown", "#terms-of-service"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 let schoolData = {};
 
 $(document).ready(() => {
-  const schoolInfoMountPoint = document.getElementById("school-dropdown");
+  const schoolInfoMountPoint = document.getElementById("school-info-inputs");
   renderSchoolInfo();
 
   $("#print-terms").click(function () {
