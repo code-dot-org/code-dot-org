@@ -35,10 +35,16 @@
     %strong
       ="#{course.upcase} Cost"
     = @regional_partner.send("#{course}_cost".to_sym)
-  %p
-    %strong
-      ="#{course.upcase} Cost Description"
-    = @regional_partner.send("#{course}_cost_description".to_sym)
+%p
+  %strong
+    ="Cost/Scholarship Description"
+  = @regional_partner.cost_scholarship_information
+%p
+  %strong Additional Partner information
+  = @regional_partner.additional_program_information
+%p
+  %strong Link to Partner's Application
+  = @regional_partner.link_to_partner_application
 %p
   %strong Contact Email:
   = @regional_partner.contact.try(:email)
