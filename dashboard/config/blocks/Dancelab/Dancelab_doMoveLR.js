@@ -12,5 +12,5 @@ function doMoveLR(sprite, move, dir) {
   sprite.mirrorX(dir);
   sprite.changeAnimation("anim" + move);
   sprite.animation.looping = false;
-  sprite.animation.changeFrame(24);
+  sprite.animation.changeFrame(FRAMES / 2);
 }
