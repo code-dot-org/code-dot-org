@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Kræver minimal forberedelsestid for arrangører
 - Er selvinstruerende og giver elever lov til at arbejde i deres eget tempo og et passende færdighedsniveau
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Planlæg dit hardware behov - computere er ikke et krav
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Test øvelserne på elevernes computere eller tablets.** Sørg for, at de fungerer korrekt (med lyd og video).
-- **Tjek afslutningssiden** for at se hvad eleverne vil se, når de er færdige. 
+- **Tjek afslutningssiden** for at se hvad eleverne vil se, når de er færdige.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Planlæg ud fra den teknologi der er til rådighed
