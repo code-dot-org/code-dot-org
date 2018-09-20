@@ -16,7 +16,7 @@ nav: promote_nav
 
 ## 1. Razširite glas
 
-Tell your friends about the **#HourOfCode**!
+Povejte svojim prijateljem **#HourOfCode #UraZaKodo**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
