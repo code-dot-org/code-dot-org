@@ -63,10 +63,10 @@ SELECT se.id, ss_user.state as state, ss_user.zip as zip
   JOIN analysis.school_stats ss_user
          ON ss_user.school_id = si_user.school_id
   where (se.section_type = 'csf_workshop') or (se.id in (select distinct se.id from pegasus_pii.forms
-  join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
-  join dashboard_production.followers f on f.section_id = se.id
-  where kind = 'ProfessionalDevelopmentWorkshop'
-  and nullif(json_extract_path_text(data_text, 'section_id_s'),'') is not null))
+     join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
+     join dashboard_production.followers f on f.section_id = se.id
+     where kind = 'ProfessionalDevelopmentWorkshop'
+     and nullif(json_extract_path_text(data_text, 'section_id_s'),'') is not null))
 
 ),
 
@@ -103,9 +103,18 @@ FROM sections_geos
          pdw.id AS workshop_id, -- section_id in the other table (below)
          CASE WHEN subject in ('Intro Workshop', 'Intro') then 'Intro Workshop' ELSE pdw.subject END as subject,
          min(pds.start) as workshop_date,
+         date_part(month, workshop_date) month_workshop,
+         date_part(dayofweek, workshop_date) day_of_week_workshop,
+         date_part(hour, workshop_date) hour_workshop, 
+         CASE WHEN pdw.on_map = 1 THEN 'Public' WHEN pdw.on_map = 0 THEN 'Private' ELSE null END as audience,
+         pdw.funded,
+         pdw.funding_type,
+         capacity,
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
          CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
+         u.name as facilitator_name,
+         pdf.user_id as facilitator_id,
          sy.school_year,
          min(CASE WHEN pds.start < DATEADD(day,-3,GETDATE()) and pda.id is null then 1 else 0 END) as not_attended
    FROM  dashboard_production_pii.pd_workshops pdw 
@@ -114,7 +123,11 @@ FROM sections_geos
    LEFT JOIN dashboard_production_pii.pd_enrollments pde
       ON pdw.id = pde.pd_workshop_id
    LEFT JOIN dashboard_production_pii.pd_attendances pda 
-       ON pde.id = pda.pd_enrollment_id 
+       ON pde.id = pda.pd_enrollment_id
+   LEFT JOIN dashboard_production_pii.pd_workshops_facilitators pdf
+       ON pdw.id = pdf.pd_workshop_id
+   LEFT JOIN users u
+       ON u.id = pdf.user_id
    LEFT JOIN analysis.training_school_years sy ON pds.start BETWEEN sy.started_at AND sy.ended_at
    LEFT JOIN workshop_state_zip wsz 
       ON wsz.id = pdw.id
@@ -124,7 +137,7 @@ FROM sections_geos
       ON rpm.regional_partner_id = rp.id  
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
-  group by 1, 2, 3, 4,  6, 7, 8, 9
+  group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18
   
 UNION ALL 
 
@@ -133,17 +146,29 @@ UNION ALL
          se.id as workshop_id, -- is workshop id in the other table (above)
          'Intro Workshop' as subject,
          se.created_at as workshop_date,
+         date_part(month, workshop_date) month_workshop,
+         date_part(dayofweek, workshop_date) day_of_week_workshop,
+         date_part(hour, workshop_date) hour_workshop, 
+         JSON_EXTRACT_PATH_TEXT(forms.data_text,'type_s') as audience,
+         null as funded,
+         null as funding_type,
+         case when trim(JSON_EXTRACT_PATH_TEXT(forms.data_text,'capacity_s')) ~ '^[0-9]+$' then trim(JSON_EXTRACT_PATH_TEXT(forms.data_text,'capacity_s'))  else null  end::int as capacity,
          0 AS trained_by_regional_partner,
          CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          rpm.regional_partner_id AS regional_partner_id,
+         coalesce(u.name, forms.name) as facilitator_name,
+         se.user_id as facilitator_id,
          sy.school_year, 
          0 as not_attended
     FROM dashboard_production.followers f
     JOIN dashboard_production.sections se 
        ON se.id = f.section_id 
+    JOIN users u 
+       ON u.id = se.user_id
     JOIN analysis.training_school_years sy ON se.created_at BETWEEN sy.started_at AND sy.ended_at
     JOIN section_state_zip ssz 
       ON ssz.id = se.id
+    LEFT JOIN pegasus_pii.forms on ssz.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int 
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = ssz.state OR rpm.zip_code = ssz.zip 
     LEFT JOIN dashboard_production_pii.regional_partners rp  
