@@ -62,6 +62,7 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
 
   # Go to the course page and verify the same three dots.
   Then I navigate to the course page for "allthethings"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress for stage 23 level 2 is "perfect"
   And I verify progress for stage 23 level 3 is "not_tried"
   And I verify progress for stage 23 level 4 is "attempted"
@@ -72,6 +73,7 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And I wait to see a dialog titled "Submit your assessment"
   And I press "#ok-button" using jQuery to load a new page
   And I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/1?noautoplay=true"
+  And I wait to see ".react_stage"
 
   # Verify the three dots in the header all appear submitted.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
@@ -86,6 +88,7 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
 
   # Go to the course page and verify the same three dots.
   Then I navigate to the course page for "allthethings"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress for stage 23 level 2 is "perfect_assessment"
   And I verify progress for stage 23 level 3 is "perfect_assessment"
   And I verify progress for stage 23 level 4 is "perfect_assessment"
