@@ -5,19 +5,23 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>ایک گھنٹے کے کوڈ کو تعلیم دینے کا طریقہ</h1>
+# How to teach one Hour of Code with your class
 
-تحریک میں شامل ہوں اوردیے گئے اقدامات کی مدد سے، طلبا کے ایک گروپ کو کمپیوٹر سائنس کے ساتھ پہلا گھنٹہ متعارف کرایئں. کوڈ گھنٹہ چلانا آسان ہے، حتیٰ کہ مبتدی کے لیئے بھی! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### تحریک میں شامل ہوں اوردیے گئے اقدامات کی مدد سے، طلبا کے ایک گروپ کو کمپیوٹر سائنس کے ساتھ پہلا گھنٹہ متعارف کرایئں. کوڈ گھنٹہ چلانا آسان ہے، حتیٰ کہ مبتدی کے لیئے بھی! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. اس ویڈیو پر کس طرح دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. اپنے گھنٹے کے لئے ایک ٹیوٹوریل منتخب کریں
 
-ہم تمام عمر کے گروہوں اور تجربہ کے درجوں کے لئے مختلف تفریح فراہم کرتے ہیں، [ طالب علم ہدایت والے سبق ](٪= solution_url('/learn') ٪). طالب علم اپنی سرگرمیوں کو کرتے ہیں، اگرچہ بہت سے سرگرمیوں میں اساتذہ کے لئے سبق کی منصوبہ بندی شامل ہیں (آپ کو سرگرمی پر کلک کرتے وقت لنک دیکھیں گے) گفتگو کی رہنمائی یا سرگرمی کو بڑھانے کے لئے. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. اپنے قیامت کو فروغ دینا
 
-اپنا گھنٹہ کوڈ [ ان آلات کے ساتھ ](٪= حل_ورل('/ پروموٹ /resources') ٪) کو فروغ دیں اور دوسروں کی حوصلہ افزائی کریں کہ ان کے اپنے واقعات کی میزبانی کریں.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. اپنی ٹیکنالوجی کی ضروریات کی منصوبہ بندی کریں - کمپیوٹر اختیاری ہیں
 
@@ -40,7 +44,7 @@ nav: how_to_nav
 - اصل Code.org لانچ ویڈیو، جس میں بل گیٹس، مارک زکربربر، اور این بی اے اسٹار کرس بوش شامل ہیں. ([ 1 منٹ ](https://www.youtube.com/watch؟v=qYZF6oIZtfc)، <a href = "https://www.youtube.com/watch؟v ہیں = nKIu9yen5nc "> 5 منٹ </a>، اور [ 9 منٹ ](https://www.youtube.com/watch؟v=dU1xS07N-FA) دستیاب ورژن دستیاب ہیں)
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**یہ ٹھیک ہے اگر آپ اور آپ کے طالب علموں کو کمپیوٹر سائنس میں بالکل نئے برانڈ ہے. آپ کے قیامت کا کوڈ سرگرمی متعارف کرانے کیلئے کچھ خیالات یہاں ہیں:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - ایسے طریقوں کی وضاحت کریں جو ٹیکنالوجی ہماری زندگیوں پر اثر انداز کرتی ہے، مثال کے ساتھ لڑکوں اور لڑکیوں دونوں کی پرواہ کرے گی (زندگی کو بچانے، لوگوں کی مدد کرنے، لوگوں سے منسلک کرنے وغیرہ وغیرہ).
 - بطور ایک کلاس، روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔.
@@ -48,17 +52,17 @@ nav: how_to_nav
 
 ## 6. کوڈ!
 
-**سرگرمی کے لئے براہ راست طلباء**
+**Direct students to the activity**
 
 - سفید تخت پر ٹیوٹوریل لنک لکھیں. شراکت داروں کی تعداد کے تحت [ اپنی منتخب کردہ ٹیوٹوریل کیلئے معلومات ](٪= solution_url('/learn')٪) میں درج کردہ لنک تلاش کریں.
 
-**جب آپ کے طلبا مشکلات میں آتے ہیں تو جواب دینا ٹھیک ہے:**
+**When your students come across difficulties it's okay to respond:**
 
 - مجھے معلوم نہیں۔ آئیں مل کر اس کا پتہ لگاتے ہیں"۔"
 - ٹیکنالوجی ہمیشہ اس طرح کام نہیں کرتی جیسا کہ ہم چاہتے ہیں"۔"
 - پروگرامنگ سیکھنا بالکل ایسے ہی ہے جیسا کوئی نئی زبان سیکھنا؛ جس پر آپ فوراً ہی رواں نہیں ہوسکتے"۔"
 
-**کیا ہو گا اگر ایک طالب علم جلد ہی ختم ہو جائے?**
+**What if a student finishes early?**
 
 - طلباء کو تمام سبق اور [ دوسرے گھنٹہ کوڈ سرگرمی کی کوشش کریں ](٪= حل_ورل('/learn')٪) دیکھ سکتے ہیں.
 - یا، جو اسٹوڈینٹس اپنا کام جلد مکمل کرلیں، اُن سے کہیں کہ وہ اپنے کلاس-میٹس (ہم جماعت ساتھیوں) کی مدد کریں جن کو ایکٹیویٹی میں مشکلات پیش آر ہی ہیں۔.
