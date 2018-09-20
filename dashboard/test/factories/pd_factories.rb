@@ -15,6 +15,12 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     end
+    trait :local_summer_workshop_upcoming do
+      num_sessions 5
+      sessions_from Date.today + 3.months
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_FIT
@@ -85,6 +91,67 @@ FactoryGirl.define do
         end
       end
     end
+  end
+
+  factory :regional_partner_alabama, class: 'RegionalPartner' do
+    sequence(:name) {|n| "Partner#{n}"}
+    contact {create :teacher}
+    group 1
+    apps_open_date_csp_teacher {Date.today - 1.day}
+    apps_open_date_csd_teacher {Date.today - 2.days}
+    apps_close_date_csp_teacher {Date.today + 3.days}
+    apps_close_date_csd_teacher {Date.today + 4.days}
+    csd_cost 10
+    csp_cost 12
+    link_to_partner_application "https://code.org/specific-link"
+    cost_scholarship_information "Additional scholarship information will be here."
+    additional_program_information "Additional program information will be here."
+    mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+  end
+
+  factory :regional_partner_illinois, class: 'RegionalPartner' do
+    sequence(:name) {|n| "Partner#{n}"}
+    contact {create :teacher}
+    group 1
+    apps_open_date_csp_teacher {Date.today - 1.day}
+    apps_open_date_csd_teacher {Date.today - 2.days}
+    apps_close_date_csp_teacher {Date.today + 3.days}
+    apps_close_date_csd_teacher {Date.today + 4.days}
+    csd_cost 10
+    csp_cost 12
+    cost_scholarship_information "Additional scholarship information will be here."
+    additional_program_information "Additional program information will be here."
+    mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+  end
+
+  factory :regional_partner_kentucky, class: 'RegionalPartner' do
+    sequence(:name) {|n| "Partner#{n}"}
+    contact {create :teacher}
+    group 1
+    apps_open_date_csp_teacher {Date.today - 5.days}
+    apps_open_date_csd_teacher {Date.today - 6.days}
+    apps_close_date_csp_teacher {Date.today - 2.days}
+    apps_close_date_csd_teacher {Date.today - 3.days}
+    csd_cost 10
+    csp_cost 12
+    cost_scholarship_information "Additional scholarship information will be here."
+    additional_program_information "Additional program information will be here."
+    mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+  end
+
+  factory :regional_partner_newjersey, class: 'RegionalPartner' do
+    sequence(:name) {|n| "Partner#{n}"}
+    contact {create :teacher}
+    group 1
+    apps_open_date_csp_teacher {Date.today - 5.days}
+    apps_open_date_csd_teacher {Date.today - 6.days}
+    apps_close_date_csp_teacher {Date.today - 2.days}
+    apps_close_date_csd_teacher {Date.today - 3.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
