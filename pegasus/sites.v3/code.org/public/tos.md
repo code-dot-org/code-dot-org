@@ -37,7 +37,7 @@ Code.org may permit you to register an account for the Services through certain 
 
 ### Privacy
 
-Your privacy is important to us. Code.org’s [Privacy Policy](/privacy) explains how we treat and protect your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information as well as the administrative, technical and physical safeguards we maintain to protect against unauthorized use, disclosure of or access to personal information. 
+Your privacy is important to us. Code.org’s [Privacy Policy](/privacy) explains how we treat and protect your personal information and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information as well as the administrative, technical and physical safeguards we maintain to protect against unauthorized use, disclosure of or access to personal information. 
 
 In addition, if you are a student or teacher using Code.org in a primary or secondary school then our Data Privacy Addendum may govern the relationship between Code.org and your school with respect to our duties and responsibilities to protect Student Data transmitted to Code.org.
 
