@@ -57,6 +57,7 @@ import {SignInState} from '../code-studio/progressRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
 import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
+import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -181,8 +182,6 @@ var Artist = function () {
 
   // these get set by init based on skin.
   this.speedSlider = null;
-
-  this.immovableBlocks = [];
 };
 
 module.exports = Artist;
@@ -304,6 +303,11 @@ Artist.prototype.init = function (config) {
   this.limitedAutoRun = experiments.isEnabled('limited-auto-artist') ||
     this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
+
+  this.executionInfo = { ...DEFAULT_EXECUTION_INFO };
+  if (this.level.maxTickCount !== undefined) {
+    this.executionInfo.ticks = this.level.maxTickCount;
+  }
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
@@ -726,23 +730,29 @@ Artist.prototype.resetButtonClick = function () {
   }
 };
 
-Artist.prototype.evalCode = function (code) {
+Artist.prototype.evalCode = function (code, executionInfo=this.executionInfo) {
   try {
     CustomMarshalingInterpreter.evalWith(code, {
-      Turtle: this.api
+      Turtle: this.api,
+      // The default executionInfo modifies itself, make a fresh copy each run
+      executionInfo: {
+        ...executionInfo,
+      },
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
     // stop further execution, animate what occurred before the infinite loop,
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
-    if (e !== 'Infinity') {
+    if (e.message !== 'Infinity') {
       // call window.onerror so that we get new relic collection.  prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
         window.onerror("UserCode:" + e.message, document.URL, 0);
       }
-      window.alert(e);
+      if (this.shouldAnimate_) {
+        window.alert(e);
+      }
     }
   }
 };

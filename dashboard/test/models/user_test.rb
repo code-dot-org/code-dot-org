@@ -3815,7 +3815,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_by_email locates a multi-auth teacher by non-primary email' do
     teacher = create :teacher, :with_migrated_email_authentication_option
-    second_option = create :email_authentication_option, user: teacher
+    second_option = create :authentication_option, user: teacher
     assert_equal teacher, User.find_by_email(second_option.email)
   end
 

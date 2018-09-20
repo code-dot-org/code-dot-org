@@ -50,11 +50,12 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Updating IDs and Debugging with Console Log\r\n\r\nIn the last level you tested out the new command: `console.log`.  In this level we have a couple buttons with event handlers and `console.log` statements, but they are switched around!\r\n\r\nWe should have given the buttons better ID names so we could tell the difference based on the ID. **Can you update the ID names and `console.log` messages to match the correct button? **\r\n\r\n# Do This\r\n\r\n* **Change the IDs** of the buttons in Design Mode to more descriptive names.\r\n\r\n* Switch to Code Mode and notice that the **ID pulldowns have been updated to include the new IDs**. (You still need to select the correct ID from the pulldown menu.)\r\n\r\n* **Update the `console.log` messages** to match the buttons.\r\n",
+    "markdown_instructions": "# Updating IDs and Debugging with Console Log\r\n\r\nIn the last level you tested out the new command: `console.log`.  In this level we have a couple buttons with event handlers and `console.log` statements, but they are switched around!\r\n\r\nWe should have given the buttons better ID names so we could tell the difference based on the ID. **Can you update the ID names and `console.log` messages to match the correct button?**\r\n\r\n# Do This\r\n\r\n* **Change the IDs** of the buttons in Design Mode to more descriptive names.\r\n\r\n* Switch to Code Mode and notice that the **ID pulldowns have been updated to include the new IDs**. (You still need to select the correct ID from the pulldown menu.)\r\n\r\n* **Update the `console.log` messages** to match the buttons.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -87,7 +88,19 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": "LZuHj8gSXW6i9yCPvcIaL/a+ZQLqbpnu3pYXw0wf+/4GJxKedZN7kHCTFPkS\nx7+s\n"
+    "encrypted_examples": "LZuHj8gSXW6i9yCPvcIaL/a+ZQLqbpnu3pYXw0wf+/4GJxKedZN7kHCTFPkS\nx7+s\n",
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-18 17:37:26 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

@@ -42,6 +42,18 @@ module ApplicationHelper
     end
   end
 
+  def age_options
+    User::AGE_DROPDOWN_OPTIONS.map do |age|
+      [age, age]
+    end
+  end
+
+  def email_preference_options
+    ['yes', 'no'].map do |opt_in|
+      [t("signup_form.email_preference_#{opt_in}"), opt_in]
+    end
+  end
+
   def check_mark_html
     #raw "&#x2714;"
     image_tag(image_url('white-checkmark.png'))

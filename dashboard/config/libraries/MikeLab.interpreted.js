@@ -35,6 +35,12 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
+var textColor = "black";
+var scoreLabel = '';
+var scoreColor = "red";
+var scoreboard = false;
+var scoreX = 0;
+var scoreY = 0;
 
 function initialize(setupHandler) {
   setupHandler();
@@ -333,9 +339,18 @@ function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
 }
 
-function showTitleScreen(titleArg, subTitleArg) {
+function showTitleScreen(titleArg, subTitleArg, textColorArg) {
   title = titleArg;
   subTitle = subTitleArg;
+  textColor = textColorArg;
+}
+
+function showScoreboard(label, textColor, color, corner) {
+  scoreboard = true;
+  scoreColor = color;
+  scoreTextColor = textColor;
+  scoreLabel = label;
+  if (corner == "right") scoreX=300;
 }
 
 function hideTitleScreen() {
@@ -430,7 +445,12 @@ function draw() {
   }
 
   drawSprites();
-
+if (scoreboard) {
+fill(scoreColor);
+  rect(scoreX,scoreY,100,25);
+  fill(scoreTextColor);
+  text(scoreLabel + ":   " + score, scoreX+5, scoreY+15);
+}
   if (show_score) {
     fill("black");
     textAlign(CENTER);
@@ -443,7 +463,7 @@ function draw() {
     textSize(50);
     text("Game Over", 200, 200);
   } else if (title) {
-    fill("black");
+    fill(textColor);
     textAlign(CENTER);
     textSize(50);
     text(title, 200, 150);

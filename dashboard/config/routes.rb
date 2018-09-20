@@ -134,6 +134,7 @@ Dashboard::Application.routes.draw do
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
+    get '/users/finish_sign_up', to: 'registrations#finish_sign_up'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'

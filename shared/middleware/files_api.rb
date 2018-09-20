@@ -855,16 +855,17 @@ class FilesApi < Sinatra::Base
     if THUMBNAIL_FILENAME == filename
       storage_apps = StorageApps.new(storage_id('user'))
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
-      if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
+      if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
-        ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-        # We are going to re-enable content moderation, but will be adjusting
-        # the thresholds in a series of trials to optimize for identifying
-        # inappropriate images without incorrectly flagging appropriate images.
-        # In the meantime, we don't want to increment abuse score until we
-        # identify the optimal threshold.
-        # TODO (ErinB) re-enable abuse score incrementation when
-        # the correct thresholds are set.
+        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
+        if %i(adult racy).include? rating
+          # Incrementing abuse score by 15 to differentiate from manually reported projects
+          new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
+          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
+          response.headers['x-cdo-content-rating'] = rating.to_s
+          cache_for 1.hour
+          not_found
+        end
       end
     end
 
@@ -899,5 +900,14 @@ class FilesApi < Sinatra::Base
   #
   def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
+  end
+
+  def moderate_type?(project_type)
+    MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
+  end
+
+  def moderate_channel?(encrypted_channel_id)
+    storage_apps = StorageApps.new(storage_id('user'))
+    !storage_apps.content_moderation_disabled?(encrypted_channel_id)
   end
 end
