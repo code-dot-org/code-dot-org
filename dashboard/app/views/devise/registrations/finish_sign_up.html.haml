@@ -41,12 +41,6 @@
         = ff.hidden_field :country
         = ff.hidden_field :full_address
 
-    #email-preference-dropdown.field{style: "display: none;"}
-      = f.label :email_preference_opt_in do
-        = t('signup_form.email_preference_question')
-        = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
-      = f.select :email_preference_opt_in, email_preference_options, include_blank: true
-
     #printable-terms-of-service{style: "display: none;"}
       .right
         %iframe#print-frame{src: '/terms-and-privacy', style: 'display: none'}
@@ -70,6 +64,12 @@
         = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
         %span#student-consent{style: "display: none;"}
           = t('signup_form.student_consent')
+
+    #email-preference-dropdown.field{style: "display: none;"}
+      = f.label :email_preference_opt_in do
+        = t('signup_form.email_preference_question')
+        = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+      = f.select :email_preference_opt_in, email_preference_options, include_blank: true
 
     %button#submit{style: "display: none;"}
       = t('signup_form.submit')
