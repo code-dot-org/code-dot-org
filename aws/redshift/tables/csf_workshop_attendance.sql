@@ -113,6 +113,8 @@ FROM sections_geos
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
          CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
+         wsz.zip as zip,
+         coalesce(sa.state_abbreviation, wsz.state) as state,
          u.name as facilitator_name,
          pdf.user_id as facilitator_id,
          sy.school_year,
@@ -133,11 +135,13 @@ FROM sections_geos
       ON wsz.id = pdw.id
    LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = wsz.state OR rpm.zip_code = wsz.zip
+   LEFT JOIN analysis.state_abbreviations sa
+      ON sa.state_name = wsz.state OR sa.state_abbreviation = wsz.state
    LEFT JOIN dashboard_production_pii.regional_partners rp  
       ON rpm.regional_partner_id = rp.id  
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
-  group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+  group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
   
 UNION ALL 
 
@@ -156,6 +160,8 @@ UNION ALL
          0 AS trained_by_regional_partner,
          CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          rpm.regional_partner_id AS regional_partner_id,
+         ssz.zip as zip,
+         coalesce(sa.state_abbreviation, ssz.state) as state,
          coalesce(u.name, forms.name) as facilitator_name,
          se.user_id as facilitator_id,
          sy.school_year, 
@@ -171,6 +177,8 @@ UNION ALL
     LEFT JOIN pegasus_pii.forms on ssz.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int 
     LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = ssz.state OR rpm.zip_code = ssz.zip 
+    LEFT JOIN analysis.state_abbreviations sa
+      ON sa.state_name = ssz.state OR sa.state_abbreviation = ssz.state
     LEFT JOIN dashboard_production_pii.regional_partners rp  
       ON rpm.regional_partner_id = rp.id 
 
