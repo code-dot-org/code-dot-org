@@ -120,7 +120,7 @@ pd_facilitators as
           -- student gender
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
-  FROM csf_teachers_trained d 
+  FROM analysis.csf_teachers_trained d 
   JOIN analysis.training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
