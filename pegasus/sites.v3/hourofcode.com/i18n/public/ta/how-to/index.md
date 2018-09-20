@@ -5,19 +5,23 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>மணிநேரத்தில் நிரலாக்கத்தை எப்படி கற்பிப்பது</h1>
+# How to teach one Hour of Code with your class
 
-இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. எப்படி செய்வது என்று காட்டும் காணொளியை பார்க்க <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. பயிற்சியை தேர்வு செய்க
 
-எல்லா வயதினருக்கும், அனுபவ மட்டங்களுக்கும், பல்வேறு வகையான வேடிக்கையான, [ மாணவர் வழிகாட்டப்பட்ட பயிற்சிகள் ](<%= resolve_url('/learn') %>) வழங்கும். மாணவர்களே தங்கள் சொந்த நடவடிக்கைகளை மேற்கொள்கிறார்கள், இருப்பினும் பல நடவடிக்கைகள், ஆசிரியர்களுக்கான பாடம் திட்டங்களைக் கொண்டுள்ளன (கலந்துரையாடலை நீங்கள் கிளிக் செய்யும் போது) விவாதத்தை வழிகாட்ட அல்லது செயல்பாடு நீட்டிக்க வேண்டும். [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. உங்கள் கோடை மணிநேரத்தை ஊக்குவிக்கவும்
 
-இந்த கருவியை [ உங்கள் கருவிகளைப் ](<%= resolve_url('/promote/resources') %>) ஊக்குவிக்கவும் மற்றும் அவர்களின் சொந்த நிகழ்வுகளை நடத்த மற்றவர்களை ஊக்குவிக்கவும்.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
 
@@ -40,7 +44,7 @@ nav: how_to_nav
 - அசல் Code.org வெளியீட்டு வீடியோ, பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நட்சத்திர கிறிஸ் போஷ் ஆகியவற்றைக் கொண்டது. [ 1 நிமிடம் ](https://www.youtube.com/watch?v=qYZF6oIZtfc), <a href = "https://www.youtube.com/watch?v = nKIu9yen5nc "> 5 நிமிடம் </a>, மற்றும் [ 9 நிமிட ](https://www.youtube.com/watch?v=dU1xS07N-FA) பதிப்புகளில் கிடைக்கும்)
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**நீங்கள் மற்றும் உங்கள் மாணவர்கள் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் நேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - தொழில்நுட்பங்கள் நம் வாழ்வில் தாக்கத்தை ஏற்படுத்தும் வழிகளை விவரிக்கவும், சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களையும் எடுத்துக் கொள்ளுங்கள் (உயிர்களை காப்பாற்றுவதைப் பற்றி பேசுதல், மக்களுக்கு உதவுதல், மக்கள் இணைப்பது போன்றவை).
 - ஒரு வர்க்கமாக, அன்றாட வாழ்வில் குறியீட்டை பயன்படுத்தும் விஷயங்களை பட்டியலிடுங்கள்.
@@ -48,17 +52,17 @@ nav: how_to_nav
 
 ## 6. கோட்!
 
-**நடவடிக்கைக்கு நேரடி மாணவர்களுக்கு**
+**Direct students to the activity**
 
 - ஒரு whiteboard இல் பயிற்சி இணைப்பை எழுதவும். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் [ தேர்ந்தெடுத்த டுடோரியலுக்கான தகவல் ](<%= resolve_url('/learn')%>) பட்டியலிடப்பட்ட இணைப்பைக் கண்டறியவும்.
 
-**உங்கள் மாணவர்கள் சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை:**
+**When your students come across difficulties it's okay to respond:**
 
 - "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
 - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது."
 - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
 
-**ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?**
+**What if a student finishes early?**
 
 - ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?
 - அல்லது, நடவடிக்கைகளைத் தொந்தரவு செய்யும் வகுப்புத் தோழர்களுக்கு உதவ ஆரம்பிக்கிற மாணவர்களைக் கேட்கவும்.
@@ -80,7 +84,7 @@ nav: how_to_nav
 [/col-33]
 
 - [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
-- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](<%= resolve_url('/promote/resources#stickers') %>)
+- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](<%= fix_url('/promote/resources#stickers') %>)
 - உங்கள் பள்ளிக்காக  தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும்.</li> 
     
     - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</ul> 
