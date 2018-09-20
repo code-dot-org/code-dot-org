@@ -46,8 +46,6 @@ export default class Teacher1920Application extends FormController {
    */
   onSuccessfulSubmit() {
     // Let the server display a confirmation page as appropriate
-
-    console.log('Successful submit!');
     window.location.reload(true);
   }
 }
