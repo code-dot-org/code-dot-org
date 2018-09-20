@@ -394,7 +394,7 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
     default:
-      return ['heroAllAssetsMinusPlayer'];
+      return ['aquaticAllAssetsMinusPlayer'];
   }
 };
 
