@@ -10,21 +10,21 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
 
-  # GET /users/auth/google_oauth2/callback
-  def google_oauth2
-    if should_connect_provider?
-      connect_provider
-    else
-      login
-    end
-  end
-
   # GET /users/auth/clever/callback
   def clever
     if should_connect_provider?
       connect_provider
     else
-      login
+      login_clever
+    end
+  end
+
+  # GET /users/auth/google_oauth2/callback
+  def google_oauth2
+    if should_connect_provider?
+      connect_provider
+    else
+      login_google_oauth2
     end
   end
 
@@ -105,6 +105,63 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to edit_user_registration_path
   end
 
+  def login_clever
+    auth_hash = request.env['omniauth.auth']
+    auth_params = request.env['omniauth.params']
+    session[:sign_up_type] = AuthenticationOption::CLEVER
+
+    @user = User.from_omniauth(auth_hash, auth_params, session)
+
+    prepare_locale_cookie @user
+
+    if @user.persisted?
+      handle_untrusted_email_signin(@user, AuthenticationOption::CLEVER)
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
+      # Note that @user.email is populated by User.from_omniauth even for students
+      if looked_up_user.provider == 'clever'
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&useClever=true"
+      else
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&email=#{@user.email}"
+      end
+    else
+      # This is a new registration
+      register_new_user(@user)
+    end
+  end
+
+  def login_google_oauth2
+    auth_hash = request.env['omniauth.auth']
+    auth_params = request.env['omniauth.params']
+    session[:sign_up_type] = AuthenticationOption::GOOGLE
+
+    @user = User.from_omniauth(auth_hash, auth_params, session)
+
+    prepare_locale_cookie @user
+
+    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
+      # Redirect to open roster dialog on home page if user just authorized access
+      # to Google Classroom courses and rosters
+      redirect_to '/home?open=rosterDialog'
+    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+      silent_takeover(@user, auth_hash)
+      sign_in_user
+    elsif @user.persisted?
+      # If email is already taken, persisted? will be false because of a validation failure
+      check_and_apply_oauth_takeover(@user)
+      sign_in_user
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
+      # Note that @user.email is populated by User.from_omniauth even for students
+      if looked_up_user.provider == 'clever'
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&useClever=true"
+      else
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&email=#{@user.email}"
+      end
+    else
+      # This is a new registration
+      register_new_user(@user)
+    end
+  end
+
   def login
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
@@ -123,21 +180,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
-    # Set user-account locale only if no cookie is already set.
-    if @user.locale &&
-      @user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
+    prepare_locale_cookie @user
 
-      set_locale_cookie(@user.locale)
-    end
-
-    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
-      # Redirect to open roster dialog on home page if user just authorized access
-      # to Google Classroom courses and rosters
-      redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
+    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
       handle_untrusted_email_signin(@user, provider)
-    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+    elsif allows_silent_takeover(@user, auth_hash)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
@@ -164,6 +211,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def prepare_locale_cookie(user)
+    # Set user-account locale only if no cookie is already set.
+    if user.locale &&
+      user.locale != request.env['cdo.locale'] &&
+      cookies[:language_].nil?
+
+      set_locale_cookie(user.locale)
+    end
+  end
 
   def register_new_user(user)
     move_oauth_params_to_cache(user)
