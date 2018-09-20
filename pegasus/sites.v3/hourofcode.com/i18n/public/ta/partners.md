@@ -3,11 +3,11 @@ title: <%= hoc_s(:title_partners) %>
 ---
 The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
 
-The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. இக்குழு குறியீடு மணி பிரச்சார யுக்திகள் வழிகாட்டுகிறது.
 
-The [Review Committee](<%= resolve_url('/review-committee') %>) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[ஆய்வு குழு](<%= resolve_url('/review-committee') %>) மதிப்பீடு மற்றும் செயற்பாடுகள் ஆலோசனைக் குழு ஈடுபடாதவர்கள் பயன்படுத்தி பரிந்துரைக்கிறோம் K-12 நிலை பட்டைகள் குறுக்கே 15 ஆசிரியர்களுக்கு ஆனது. இந்த ஆசிரியர்கள் மாணவர் தலைமையிலான நடவடிக்கைகள் மற்றும் ஆசிரியர் தலைமையிலான பாடம் திட்டங்கள், செயல்பாடுகள் கல்வி மதிப்பு, கற்போர் மற்றும் சாத்தியமான வேண்டுகோள் மாணவர்கள் பல்வேறு இணை திறன் மதிப்பிடும் செயல் கூட்டாளிகள் நூற்றுக்கணக்கான சமர்ப்பிக்கப்பட்ட ஆய்வு.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+இரு குழுக்கள் உழைப்பு மற்றும் குறியீட்டு மணி வெற்றி மற்றும் கணினி அறிவியல் அறிமுகம் வழங்கும் ஒவ்வொரு மாணவனும் அதன் பார்வை பங்களிப்பு செய்துள்ளன.
 
 <% if @country == 'la' %>
 
@@ -119,19 +119,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 ---
 
-# Major Promotional Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
 # International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
