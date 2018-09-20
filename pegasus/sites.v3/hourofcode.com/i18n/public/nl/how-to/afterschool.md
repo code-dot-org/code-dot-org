@@ -7,19 +7,21 @@ nav: how_to_nav
 
 # Zo kunt u een 'Hour of 'Code' onderwijzen op de na-schoolse opvang of in een club
 
-Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
+
+---
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Kies een tutorial
 
-Wij bieden een verscheidenheid van [leuke, urenlange tutorials](<%= resolve_url('/learn') %>) voor deelnemers van alle leeftijden, gemaakt door een scala aan partners. [Probeer ze uit](<%= resolve_url('/learn') %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Probeer ze uit](<%= resolve_url('/learn') %>)
 
-**Alle 'Hour of Code' activiteiten** hebben nauwelijks voorbereidingstijd nodig, en kunnen door de deelnemers zelfstandig worden gevolgd - dit zorgt ervoor dat iedereen op zijn/haar eigen tempo en niveau kan werken.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Een lesplan nodig voor uw naschoolse 'Hour of Code'?** Bekijk dit [model](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promote your Hour of Code
 
@@ -34,8 +36,6 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 Voorzie koptelefoons voor uw klas, of vraag de leerlingen om ze zelf mee te nemen, als de tutorial het beste met geluid werkt.
 
 **Heeft u niet genoeg apparatuur?** Maak dan [tweetallen](https://www.youtube.com/watch?v=vgkahOzFH2Q). Als leerlingen in paren werken helpen ze elkaar en zijn ze minder afhankelijk van de leerkracht. Ze zullen ook inzien dat programmeren sociaal is en samenwerking vereist.
-
-<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Start your Hour of Code off with an inspiring video
 
@@ -58,55 +58,18 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 ## 6. Code!
 
-**Betrek de deelnemers in de activiteit**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**When someone comes across difficulties it's okay to respond:**
-
-- "Ik weet het niet. Laten we het samen oplossen."
-- "Technologie werkt niet altijd op de manier waarop we dat willen."
-- "Leren programma is als het leren van een nieuwe taal; je zal het niet gelijk onder de knie hebben."
-
-**Wat te doen wanneer iemand snel klaar is?**
-
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Celebrate
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Print de "Ik heb meegedaan met CodeUur!"](<%= resolve_url('/promote/resources#stickers') %>) stickers voor uw leerlingen.
-- [Bestel custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw school.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 ## Other Hour of Code resources for educators
 
@@ -117,9 +80,6 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 ## Wat komt er na het CodeUur?
 
-Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen kunt maken. Zet deze reis voort:
-
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>

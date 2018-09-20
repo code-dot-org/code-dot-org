@@ -5,9 +5,13 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Hoe begeleid je een CodeUur</h1>
+# How to teach one Hour of Code with your class
 
-Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
