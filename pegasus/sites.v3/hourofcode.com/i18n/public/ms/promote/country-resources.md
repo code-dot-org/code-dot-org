@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Berasaskan pandu diri - membolehkan pelajar untuk berusaha pada kadar dan tahap kemahiran mereka sendiri
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Rancang perkakasan yang perlu - komputer bukan kemestian
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Menguji tutorial menggunakan komputer atau peranti pelajar.** Pastikan ia berfungsi dengan sepatutnya (termasuk dengan bunyi dan video).
-- **Prebiu di laman tahniah** untuk melihat apakah pelajar akan nampak bila selesai. 
+- **Prebiu di laman tahniah** untuk melihat apakah pelajar akan nampak bila selesai.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Rancang awal berdasarkan teknologi yang tersedia
