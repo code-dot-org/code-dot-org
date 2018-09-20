@@ -6,7 +6,7 @@
       1,
       0.74
     ],
-    "func": "clickedOn",
+    "func": "whenClickedOn",
     "blockText": "when {SPRITE} clicked",
     "args": [
       {
