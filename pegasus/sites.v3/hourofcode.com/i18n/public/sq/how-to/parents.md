@@ -5,41 +5,42 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Si të përfundoni një orë kodimi me fëmijën tuaj
+# How to do an Hour of Code with your child
 
-Mbaroni një orë kodimi në shtëpi, ose sillni një vullnetar në klasën e fëmijës tuaj! Ja se si:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+---
 
 ## 1) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Zgjidh një tutorial:
+## 2) Choose a tutorial
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-**Të gjitha tutorialet janë vetë-udhëzuese - duke i lejuar fëmijës tënd të punojnë konform ritmit të punës dhe nivelit të shkathtësive që kanë**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Planifikoni nevojat tuaja teknologjike
 
-Përvoja më e mirë e Orës së Kodimit përfshin kompjutera të lidhur me internet. Por ju **nuk** keni nevojë për një kompjuter. Ka disa aktivitete që mund të realizohen pa asnjë lloj teknologjie.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Testoni tutorialet në kompjuterin ose pajisjen tuaj. Sigurohu që ato punojnë në shfletues me tingull dhe video.
-- **Dëshironi të mësoni së bashku me fëmijën tuaj?** Provoni[ programimit në çift.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Shkencat kompjuterike janë sociale dhe bashkëpunuese.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) Filloni Orën tuaj të Kodimit me një video frymëzuese
+## 4) Start your Hour of Code with an inspiring video
 
 Planifiko Orën tënde të Kodimit duke inspiruar fëmijën tënd dhe diskutoni se si shkenca kompjuterike ka impakt në çdo pjesë të jetës.
 
 **Trego një video frymëzuese:**
 
-- Video origjinale e lancimit të Code.org, ku paraqiten Bill Gates, Mark Zuckerberg, dhe ylli i NBA Chris Bosh (Ka versione [1 minutëshe](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutëshe](https://www.youtube.com/watch?v=nKIu9yen5nc), dhe [9 minutëshe](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Presidenti i SHBA-së Obama duke i bërë thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike. Këtu janë disa ide se si mund të prezantoni aktivitetin tuaj të Orës së Kodimit:
 
-- Shpjego mënyrat se si teknologjia ndikon në jetët tona, me shembuj në të cilët interesohen vajzat dhe djemtë (Fol rreth aplikacioneve dhe teknologjisë që është përdorur të shpëtuar jetë, ndihmuar njerëz, lidhur njerëz etj).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Listo gjërat që përdorin kodim në jetën e përditëshme.
 - See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
@@ -65,15 +66,13 @@ Pasi të zgjidhni tutorialin që doni të bëni, ruajeni atë si një bookmark.
 
 Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
-**Burime të tjera të Orës së Kodimit:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Shiko [FAQ e Orës së Kodimit](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Çfarë vjen pas Orës së Kodimit?
 
-**Çfarë vjen pas Orës së Kodimit?**
-
-Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar këtë udhëtim:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
-- Ndihmo [ në promovimin](<%= resolve_url('/promote') %>) e edukimit të shkencave kompjuterike në shkollën e fëmjës tënd.
+- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>
