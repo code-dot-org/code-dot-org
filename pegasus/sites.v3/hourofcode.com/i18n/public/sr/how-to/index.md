@@ -1,13 +1,17 @@
 ---
-title: '<%= hoc_s(:title_how_to) %>'
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>How to teach one Hour of Code</h1>
+# How to teach one Hour of Code with your class
 
-Прикључи се покрету и представи групи ученика њихов први час рачунарства са овим корацима. Час кодирања је лако покренути - чак и за почетнике! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Прикључи се покрету и представи групи ученика њихов први час рачунарства са овим корацима. Час кодирања је лако покренути - чак и за почетнике! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
