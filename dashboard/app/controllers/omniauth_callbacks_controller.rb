@@ -340,7 +340,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def has_google_oauth2_scope?(scope_name)
     scopes = (auth_params&.[]('scope') || '').split(',')
-    scopes.include?('classroom.rosters.readonly')
+    scopes.include?(scope_name)
   end
 
   def allows_google_classroom_takeover(user)
