@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Vaje so samoiniciativne in omogočajo učencem, da delajo v svojem ritmu in na svoji stopnji znanja
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Naredite plan, koliko strojne opreme potrebujete - računalniki niso obvezni
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Testirajte vaje na računalnikih ali napravah učencev. ** Prepričajte se, da naprave delujejo (zvok in video).
-- **Preverite stran „Čestitke“**, da boste videli, kaj bodo učenci videli, ko bodo končali z vajami. 
+- **Preverite stran „Čestitke“**, da boste videli, kaj bodo učenci videli, ko bodo končali z vajami.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Načrtujte vnaprej glede na vašo razpoložljivo tehnologijo
