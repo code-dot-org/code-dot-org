@@ -86,7 +86,7 @@ class RegionalPartner < ActiveRecord::Base
   def upcoming_summer_workshops
     pd_workshops.
       future.
-      select {|w| w.local_summer? && w.effective_num_days >= 5}.
+      where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).
       map {|w| w.slice(:location_name, :location_address, :workshop_date_range_string, :course)}
   end
 
