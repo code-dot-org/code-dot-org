@@ -9,157 +9,162 @@ nav: promote_nav
 
 # Kodlama saatini tanıtın
 
-## Bir Kod-Saatine ev sahipliği mi yapacaksınız? [Nasıl yapılır rehberimize bir göz atın](<%= resolve_url('/how-to') %>)
+### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code](<%= resolve_url('/how-to') %>)!
+
+---
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
 <a id="posters"></a>
 
-## Bu posterleri okulunuza asın
+## Hang these posters in your school
 
 <%= view :promote_posters %>
 
 <a id="social"></a>
 
-## Bunları sosyal medyada paylaşın
+## Post these on social media
 
-[![Görüntü](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![Görüntü](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<%= view :social_posters %>
+[![Görüntü](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+
+[![Görüntü](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![Görüntü](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Etkinliği yaymak için Kod-Saati logosunu kullanın
+## Use the Hour of Code logo to spread the word
 
 [![Görüntü](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Yüksek çözünürlüklü versiyonu indirin](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Kod-Saati" nin ticari hakları korunur. Kullanımını önlemek istemiyoruz, ancak birkaç sınır dahilinde olduğundan emin olmak istiyoruz:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. **İyi bir örnek:"Kodlama Saati™" programına ACMECorp.com'da katılın ". Kötü bir örnek: "ACME Corp tarafından gerçekleştirilen Kodlama Saatini deneyin".**
-2. Hem web sitenizde hem de uygulama açıklamalarında "Kodlama Saati"nden bahsettiğiniz en önemli yerlerde" TM" yi bir üst simge kullanın.
-3. Web sitenizin içeriğinde (veya alt kısımdaki bilgi alanında) Bilgisayar Bilimi Eğitimi Haftası ve Code.org web sitelerinin linklerini paylaşın ve onlardan şu şekilde bahsedin:
+1. "Hour of Code"'a yapılan bir referans marka isminden çok, bu isim altında gelişen köklü harekete hitap etmelidir. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
+3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org](<%= resolve_url('https://code.org') %>) websites, that says the following:
     
-    *"'Hour of Code' ülke çapında Bilgisayar Bilimi Eğitimi Haftası [csedweek.org] ve Code.org [code.org] tarafından düzenlenen, milyonlarca öğrenciyi bir saat süresince bilgisayar bilimi ve kodlama ile tanıştırmayı amaçlayan bir girişimdir."*
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
 4. Uygulama isimleri olarak ''Hour of Code'' kullanmayın.
 
 <a id="stickers"></a>
 
-## Bu çıkartmaları öğrencilerinize vermek için yazdırın
+## Print these stickers to give to your students
 
-(Çıkartmalar 1"çap, sayfa başına 63 adettir)  
+(Stickers are 1" diameter, 63 per sheet) <br />
+
 [![Görüntü](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Kodlama Saatini tanıtmak için bu e-postaları gönderin
+## Invite people in your community to your Hour of Code and promote your event through email
+
+### Find [more information and language you can use](<%= resolve_url('/promote/stats') %>) when talking about the Hour of Code.
+
+---
 
 <a id="email"></a>
 
-### Okulunuzdan, patronunuzdan veya arkadaşlarınızdan bize katılmalarını isteyin:
+### Ask your school, employer, or friends to sign up:
 
-**Konu satırı:** Kodlama Saati için bana ve 100 milyondan fazla öğrenciye katılın
+**Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Bilgisayarlar her yerdeler ve gezegendeki her endüstriyi değiştiriyorlar. Bütün okulların yarısından daha azı bilgisayar bilimleri eğitimi veriyor. İyi haber, bunu değiştirmeye çalışıyoruz! Eğer daha önce Kodlama Saatini duyduysanız, tarih yazdığını da biliyor olabilirsiniz. 100.000.000 'den fazla öğrenci kod saatini denedi.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyada her Apple Store Kodlama Saatine ev sahipliği yaptı, hatta Başkan Obama ve Kanada başbakanı Justin Trudeau kampanya kapsamında ilk kod satırlarını yazdı.
+Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Bu yıl daha büyük yapalım. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Bilgisayar Bilimleri Eğitim Haftası süresince <%= campaign_date('full')%>,, "Kodlama Saati" etkinliklerinden birine katılın.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Organizasyondan bahsedin. Bir etkinlik düzenleyin. Yerel okullara kaydolmalarını isteyin. Veya Kodlama Saatini kendiniz deneyin - herkes temelleri öğrenerek kendine fayda sağlayabilir.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Http://hourofcode.com/ adresinden başlamak<%= @country %>
+Get started at http://hourofcode.com/<%= @country %> <br />
+
+---
 
 <a id="help-schools"></a>
 
-### Bir okulda gönüllü:
+### Volunteer at a school:
 
-**Subject line:** Kodlama saatinde ve ev sahipliğinde yardım edebilir miyiz?
+#### [Find more resources and information about volunteering in schools here](<%= resolve_url('/how-to/volunteers') %>).
 
-Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+**Subject line:** Can we help you host an Hour of Code?
 
-[Our organization/My name], [school name] 'da gerçekleştirilecek etkinliğe destek olmaktan memnuniyet duyarız. Öğretmenlerin sınıflarında Kodlama Saati etkinliği gerçekleştirmesine yardım edebiliriz (üstelik bilgisayarlara ihtiyacımız olmadan!) yada okulunuzda oturum gerçekleştirmek isterseniz, size teknolojinin nasıl işlediğini ve yazılım mühendisi olmanın nasıl bir şey olduğunu anlatacak konuşmacılar ayarlayabiliriz.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
 
-Öğrenciler kendi uygulamalarını ve oyunlarını geliştirip ailelerine gösterebilir ve Kodlama Saati katılımcı belgelerini evlerine götürebilirler. Ve, Eğlenceli! Etkileşimli, elleriyle ürettikleri aktivitelerle öğrenciler, ulaşılabilir yollar ile sayısal düşünme yetilerini öğrenecek.
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
-Bilgisayarlar her yerdeler ve gezegendeki her endüstriyi değiştiriyorlar. Bütün okulların yarısından daha azı bilgisayar bilimleri eğitimi veriyor. İyi haber, biz bunu değiştirmek için çalışıyoruz! Eğer daha önce Kodlama Saatini duyduysanız, Kodlama saatini dünya çapında 100 milyondan fazla öğrencinin deneyimlediğini ve tarihe geçtiğini bilebilirsiniz.
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyada her Apple Store Kodlama Saatine ev sahipliği yaptı, hatta Başkan Obama ve Kanada başbakanı Justin Trudeau kampanya kapsamında ilk kod satırlarını yazdı.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Etkinliğe dair daha fazla bilgiyi http://hourofcode.com/ adresinden bulabilirsiniz. Yada [school name] okulunuzun nasıl dahil olabileceğini öğrenmek için bizimle iletişime geçebilirsiniz.
+You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
-Teşekkürler!
+---
 
-[isminiz], [Kurumunuz]
+<a id="parents"></a>
+
+### Tell parents about your school's event:
+
+**Subject line:** Our students are changing the future with an Hour of Code
+
+Dear Parents,
+
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+
+This is a chance to change the future of education in [TOWN/CITY NAME].
+
+See http://hourofcode.com/<%= @country %> for details, and help spread the word. <br />
+
+---
 
 <a id="media-pitch"></a>
 
-### Medya etkinliğne katılmaya davet edin:
+### Invite media to attend your event:
 
-**Subject line:** Yerel okul Bilgisayar bilimlerini öğrencilerine tanıtmayı görev edindi
+#### [Check out our press kit for more information on inviting media to your event.](<%= resolve_url('/promote/press-kit') %>)
+
+**Subject line**: Local school joins mission to introduce students to computer science
 
 Bilgisayarlar heryerde, dünyada her endüstriyi değiştiriyor, ama okulların yarısından azı bilgisayar bilimlerini öğretiyor. Bilgisayar Bilimi Sınıflarında ve teknoloji endüstrisinde kadınlar ve azınlıklar ciddi bir oranla yetersiz temsil ediliyorlar. İyi haber bizler artık bu durumu değiştirmek için yola çıktık.
 
 Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyadaki tüm Apple mağazaları Kodlama Saatine ev sahipliği yaptı. Hatta Başkan Obama kampanya kapsamında ilk kod satırını yazdı.
 
-Gelmiş geçmiş en geniş çaplı öğrenme etkinliği olan Computer Science Education Week, (<%= campaign_date('full') %>) - "Kodlama Saati"ne, [SCHOOL NAME] öğrencilerinden [X number] kişinin katılmasının nedeni işte bu.
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
 
 Size başlangıç komitemize katılmanız için yazıyorum, böylece çocukların [DATE]'ta etkinliğe başlayışını da görebileceksiniz.
 
 Kar amacı gütmeyen Code.org ve 100 diğer ortak tarafından organize edilen Kodlama Saati, bugünün öğrenci neslinin 21. yüzyılın başarıya ulaştıracak becerilerini öğrenmeye hazır olduğunu belirten bir ifadedir. Lütfen bize katılın.
 
-**İletişim:** [Adınız], [TITLE], cep: (212) 555-5555 **zaman:** [Tarih ve saat, olay] **nerede:** [adres ve yön]
+Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 
-Geri dönüşünüzü sabırsızlıkla bekliyorum
+I look forward to being in touch. <br />
 
-[İSMİNİZ]
-
-<a id="parents"></a>
-
-### Ebeveynlerinize okulunuzdaki etkinlikten bahsedin:
-
-**Subject line:** Öğrencilerimiz Kodlama Saatiyle geleceğe yön veriyor
-
-Sevgili ebeveynler,
-
-Teknoloji ile çevrilmiş bir Dünyanın içinde yaşıyoruz. Ve biliyoruz ki öğrencilerimiz yetişkin hayatları için hangi alanı seçerlerse seçsinler, başarıya ulaşma yetenekleri teknolojinin nasıl çalıştığını anlamalarına bağlı.
-
-Fakat biz sadece küçük bir kısmını **nasıl** teknoloji işleri öğrenme. Tüm okulların yarısından daha az sayıda bilgisayar tekniğini öğretmek.
-
-Bu nedenle tüm okulumuz tarihteki en büyük öğrenme etkinliğine katılıyor: Kodlama Saati, Bilgisayar Bilimi Eğitimi Haftası boyunca (8-14 Dünya çapında 100.000.000 öğrencileri zaten kod saatini denedi.
-
-Bizim Kodlama Saatimiz [OKUL ADI]'nın temel 21. yüzyıl becerilerini öğretmeye hazır olduğunu belirten bir ifadedir. Öğrencilere programlama aktivitelerini getirmeye devam etmek için, biz Kodlama Saati etkinliğimizi büyük yapmak istiyoruz. Gönüllü olmaya, yerel medyaya ulaşmaya, sosyal medyada haberleri paylaşmaya ve hatta çevreniz için kendi Kodlama Saati etkinliğinizi düzenlemeye davet ediyorum.
-
-Bu, eğitimin geleceğini değiştirmek için bir şanstır. [ŞEHİR/ŞEHİR ADI].
-
-Detaylar için http://hourofcode.com 'u ziyaret edin, ve organizasyonu yaymamıza yardım edin.
-
-Saygılarımla,
-
-Müdürünüz
+---
 
 <a id="politicians"></a>
 
-### Okulunuzun düzenlemiş olduğu bir etkinliğine, yerel bir politikacı davet edin:
+### Invite a local politician to your school's event:
 
-**Konu:** Öğrencilerimiz Kodlama Saatiyle geleceğe yön veriyor
+#### [Need more info? Take a look at our resources for inviting politicians to attend your event](<%= resolve_url('/how-to/public-officials') %>).
 
-Değerli [Belediye Başkanı/Vali/Temsilci/Senatör SOYADI]:
+**Subject line**: Join our school as we change the future with an Hour of Code
 
-Bilişim bilgilerin Abd'de #1 ücretli kaynak olduğunu biliyor muydunuz.? 500.000'den fazla bilgisayar ülke çapında açık, ama geçen yıl işgücü sadece 42,969 bilgisayar bilimi öğrencileri mezun oldu.
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Bilgisayar bilimi bugün *her* sanayi için temel, henüz birçok okul bunu öğretmiyorlar. [Okul adı] biz bunu değiştirmeye çalışıyoruz.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Bu nedenle tüm okulumuz tarihteki en büyük öğrenme etkinliğine katılıyor: Kodlama Saati, Bilgisayar Bilimi Eğitimi Haftası boyunca (8-14 Dünya çapında 100.000.000 öğrencileri zaten kod saatini denedi.
+Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Size yazma amacım, sizi Kodlama Saati etkinliğimize davet etmek ve başlangıç komitemizde bir konuşma yapmanızdır. Etkinlik [TARİH, SAAT, YER]'de gerçekleştirilecek, ve [Semt veya Şehir adı]'nın öğrencilerine 21. yüzyılın kritik becerilerini öğretmeye hazır olduğunu sağlam bir şekilde ifade edecektir. Öğrencilerimizin teknolojiyi yaratma konusunda ön saflarda yer aldıklarından emin olmak istiyoruz -- sadece teknolojiyi tüketmelerini değil.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Lütfen [TELEFON NUMARASI VEYA E-POSTA ADRESİ]'den bana ulaşın. Cevabınızı dört gözle bekliyorum.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Saygılarımla,
-
-[isminiz], [başlık]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 <%= view :signup_button %>
