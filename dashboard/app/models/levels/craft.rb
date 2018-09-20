@@ -60,6 +60,7 @@ class Craft < Blockly
     :level_verification_timeout,
     :use_player,
     :free_play,
+    :ocean,
     :songs
   )
 
