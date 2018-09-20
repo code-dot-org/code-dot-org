@@ -137,18 +137,6 @@ class RegionalPartnerSearch extends Component {
             <div>In addition to the summer workshop, the professional learning program includes 4 workshops (dates TBD) and online support throughout the the year.</div>
 
             <h3>Cost and scholarship information:</h3>
-            {partnerInfo.csd_cost && (
-              <div>CS Discoveries Program Cost: {partnerInfo.csd_cost}</div>
-            )}
-            {!partnerInfo.csd_cost && (
-              <div>The cost of the program for CS Discoveries teachers is TBD.</div>
-            )}
-            {partnerInfo.csp_cost && (
-              <div>CS Principles Program Cost: {partnerInfo.csp_cost}</div>
-            )}
-            {!partnerInfo.csp_cost && (
-              <div>The cost of the program for CS Principles teachers is TBD.</div>
-            )}
             {partnerInfo.cost_scholarship_information && (
               <div>{partnerInfo.cost_scholarship_information}</div>
             )}
