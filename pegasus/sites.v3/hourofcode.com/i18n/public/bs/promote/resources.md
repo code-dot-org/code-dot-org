@@ -9,157 +9,162 @@ nav: promote_nav
 
 # Promoviraj Čas Kodiranja
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code](<%= resolve_url('/how-to') %>)!
+
+---
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
 <a id="posters"></a>
 
-## Objesite ove postere u Vašoj školi
+## Hang these posters in your school
 
 <%= view :promote_posters %>
 
 <a id="social"></a>
 
-## Objavite ove na društvenim mrežama
+## Post these on social media
 
-[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<%= view :social_posters %>
+[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+
+[![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Koristi logo Časa Kodiranja da proširiš riječ
+## Use the Hour of Code logo to spread the word
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Čas Kodiranja" je zaštićen. Mi ne želimo spriječiti njegovo korištenje, ali želimo biti sigurni da stane u neka ograničenja:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Loš primjer:"Pokušaj Čas Kodiranja sa ACME korporacijom".**
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
+2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
+3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org](<%= resolve_url('https://code.org') %>) websites, that says the following:
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
 4. Bez korištenja "Čas Kodiranja" u imenima aplikacija.
 
 <a id="stickers"></a>
 
-## Isprintaj ove naljepnice i dadnite ih svojim učenicima
+## Print these stickers to give to your students
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Stickers are 1" diameter, 63 per sheet) <br />
+
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Pošaljite ove e-mailove da pomognete u promovisanju Časa Kodiranja
+## Invite people in your community to your Hour of Code and promote your event through email
+
+### Find [more information and language you can use](<%= resolve_url('/promote/stats') %>) when talking about the Hour of Code.
+
+---
 
 <a id="email"></a>
 
-### Pitajte svoju školu, poslodavca, ili prijatelje da se prijave:
+### Ask your school, employer, or friends to sign up:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code
+**Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Računala su svugdje, mjenjajući svaku industriju na planeti. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Sa Časom Kodiranja. računarstvo je bilo na početnim stranicama Google-a, MSN-a, Yahoo-a! i Diznija. Over 100 partners have joined together to support this movement. Svaki Apple Store u svijetu je bio domaćin Časa Koda, i lideri kao Presjednik Obama i Kanadski premijer Justin Trudeau su napisali svoje prve linije koda kao dio kampanje.
+Sa Časom Kodiranja. računarstvo je bilo na početnim stranicama Google-a, MSN-a, Yahoo-a! i Diznija. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Proširite riječ. Budi domaćin događaja. Pitajte lokalnu školu da se prijavi. Ili sam pokušajte Čas Kodiranja-- svi mogu imati koristi od učenja osnova.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Počnite na http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/<%= @country %> <br />
+
+---
 
 <a id="help-schools"></a>
 
-### Volonter u školi:
+### Volunteer at a school:
 
-**Linija predmeta** Možemo li ti pomoći da budeš domaćin Časa Kodiranja?
+#### [Find more resources and information about volunteering in schools here](<%= resolve_url('/how-to/volunteers') %>).
 
-Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+**Subject line:** Can we help you host an Hour of Code?
+
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
-Studenti će kreirati svoje vlastite aplikacije koje mogu pokazati svojim roditeljima, i mi ćemo isprintati certifikate za Čas Kodiranja koje mogu donijeti kući. I zabavno je! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Računala su svugdje, mjenjajući svaku industriju na planeti. But fewer than half of all schools teach computer science. Dobre vijesti su da smo mi na putu da promijenimo ovo! Ako Ste prije čuli za Čas Kodiranja, možda znate da je ušao u historiju - više od 100 miliona učenika u cijelom svijetu je pokušalo Čas Kodiranja.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
-O događaju možete pročitati više na http://hourofcode.com/. Ili javite nam ako želite zakazati neko vrijeme da razgovaramo o tome kako [ime škole] može učestvovati.
+---
 
-Thanks!
+<a id="parents"></a>
 
-[Vaše ime], [Vaša organizacija]
+### Tell parents about your school's event:
+
+**Subject line:** Our students are changing the future with an Hour of Code
+
+Dear Parents,
+
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+
+This is a chance to change the future of education in [TOWN/CITY NAME].
+
+See http://hourofcode.com/<%= @country %> for details, and help spread the word. <br />
+
+---
 
 <a id="media-pitch"></a>
 
-### Pozovi medije da prisustvuju tvom događaju:
+### Invite media to attend your event:
 
-**Subject line:** Local school joins mission to introduce students to computer science
+#### [Check out our press kit for more information on inviting media to your event.](<%= resolve_url('/promote/press-kit') %>)
+
+**Subject line**: Local school joins mission to introduce students to computer science
 
 Kompjuteri su svugdje, mijenjajući svaku industriju na planeti, ali manje od pola škola uči informatiku. Djevojke i manjine se veoma nedovoljno zastupljene na časovima računarskih nauka, i u tehnološkoj industriji. Good news is, we’re on our way to change this.
 
 Sa Časom Kodiranja. računarstvo je bilo na početnim stranicama Google-a, MSN-a, Yahoo-a! i Diznija. Over 100 partners have joined together to support this movement. Svaki Apple Store u svijetu je bio domaćin Časa Kodiranja. Čak i presjednik Obama je napisao svoju prvu liniju koda kao dio kampanje.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
 
 Pišem Vam da Vas pozovem da prisustvujete početku skupa i da vidite dijecu kako počinju aktivnost [DATE].
 
 Čas Kodiranja, organiziran od strane neprofitnog Code.org-a i preko 100 drugi, je globalni pokret koji vjeruje da su današnji učenici spremni da nauče kritične vještine za uspjeh u 21. stoljeću. Molimo pridružite nam se.
 
-**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
+Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 
-Radujem se da ostanemo u kontaktu.
+I look forward to being in touch. <br />
 
-[Your Name]
-
-<a id="parents"></a>
-
-### Recite svojim roditeljima o događaju Vaše škole:
-
-**Subject line:** Our students are changing the future with an Hour of Code
-
-Dragi roditelji,
-
-Mi živimo u svijetu okruženom tehnologijom. I mi znamo da u koju god oblast naši studenti izaberu da idu kao odrasli, njihova sposobnost da uspiju će sve više zavisiti od razumijevanja kako tehnologija radi.
-
-But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
-
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
-
-Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. Podstičem te da volontiraš, da dođeš do lokalni medija, da dijeliš vijesti na kanalima socijalnih medija i da razmisliš da budeš domaćin dodatnim događajima Hour of Code-a u zajednici.
-
-Ovo je prilika da se promijeni budućnost obrazovanja u [okrug/grad ime].
-
-See http://hourofcode.com/<%= @country %> for details, and help spread the word.
-
-Sincerely,
-
-Your principal
+---
 
 <a id="politicians"></a>
 
-### Pozovi lokalnog političara na događaj u tvojoj školi:
+### Invite a local politician to your school's event:
 
-**Subject line:** Join our school as we change the future with an Hour of Code
+#### [Need more info? Take a look at our resources for inviting politicians to attend your event](<%= resolve_url('/how-to/public-officials') %>).
+
+**Subject line**: Join our school as we change the future with an Hour of Code
 
 Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Jeste li znali da je računarstvo #1 izvor plata u Americi? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Računarstvo je osnova za *svaku*industriju danas, ipak većina školi je ne podučava. U [Naziv škole], mi to pokušavamo promijeniti.
+Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Pišem Vam da Vas pozovem da se pridružite našem događaju Časa Kodiranja i da govorite na otvorenju skupa. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. Mi želimo osigurati da naši su naši učenici u prvom planu kreiranja tehnologije budućnosti - ne samo da je konzumiraju.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Molim Vas kontaktirajte me na [broj telefona ili email adresa]. Radujem se Vašem odgovoru.
-
-Sincerely,
-
-[Vaše ime], [Title]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 <%= view :signup_button %>
