@@ -236,7 +236,7 @@ sv-SE:
     Adam, lärare
   homepage_hero_text_stat_loc: "#loc rader kod skriven av studenter"
   homepage_hero_text_stat_students: "#student_count student konton i Kod Studio"
-  homepage_hero_text_stat_served: 'Timmen av kod: #serverad serverad'
+  homepage_hero_text_stat_served: 'Timmen av kod: #served serverad'
   homepage_slot_text_hoc: Timme med Kod
   homepage_slot_text_frozen: Frozen med Anna och Elsa
   homepage_slot_text_teacher: Lärare Dashboard

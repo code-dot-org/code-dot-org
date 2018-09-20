@@ -33,9 +33,11 @@ sk:
         Webapp: Laboratórium aplikácií
         ArtistEC: Postava
         TextMatch: Priraďovačka textu
+        StudioEC: Herné laboratórium
         Applab: Laboratórium aplikácií
         NetSim: Simulátor Internetu
         Custom: Umelec
+        CustomStudio: Herné laboratórium
         Gamelab: Herné laboratórium
     trophy:
       name:

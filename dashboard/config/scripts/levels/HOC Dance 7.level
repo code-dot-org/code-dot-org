@@ -40,20 +40,21 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:02:53 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:03:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:04:09 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:07:29 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:08:46 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:09:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:10:46 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:15:02 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:16:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:17:11 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:03 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:19:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 05:34:03 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:35:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:36:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:02:53 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:03:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:04:09 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:07:29 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:08:46 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:09:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:10:46 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:15:02 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:16:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:17:11 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:03 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:19:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 05:34:03 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:35:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:36:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:28:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:28:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:31:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-19 18:02:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false">
-          <next>
+        <block type="Dancelab_whenSetupSong" movable="false">
+          <title name="SONG">"hammer"</title>
+          <statement name="DO">
             <block type="Dancelab_setBackgroundEffect">
               <title name="EFFECT">"disco"</title>
               <next>
                 <block type="Dancelab_makeNewDanceSprite">
-                  <title name="COSTUME">"duck"</title>
+                  <title name="COSTUME">"DUCK"</title>
                   <title name="NAME">dancer2</title>
                   <value name="LOCATION">
                     <block type="Dancelab_location_picker">
@@ -62,7 +63,7 @@
                   </value>
                   <next>
                     <block type="Dancelab_makeNewDanceSprite">
-                      <title name="COSTUME">"moose"</title>
+                      <title name="COSTUME">"MOOSE"</title>
                       <title name="NAME">dancer3</title>
                       <value name="LOCATION">
                         <block type="Dancelab_location_picker">
@@ -71,7 +72,7 @@
                       </value>
                       <next>
                         <block type="Dancelab_makeNewDanceSprite">
-                          <title name="COSTUME">"cat"</title>
+                          <title name="COSTUME">"CAT"</title>
                           <title name="NAME">dancer1</title>
                           <value name="LOCATION">
                             <block type="Dancelab_location_picker">
@@ -85,7 +86,7 @@
                 </block>
               </next>
             </block>
-          </next>
+          </statement>
         </block>
         <block type="Dancelab_whenKey">
           <title name="KEY">"up"</title>
@@ -273,7 +274,7 @@
         </category>
         <category name="Dancers">
           <block type="Dancelab_makeNewDanceSprite">
-            <title name="COSTUME">"duck"</title>
+            <title name="COSTUME">"DUCK"</title>
             <title name="NAME">dancer1</title>
             <value name="LOCATION">
               <block type="Dancelab_location_picker">
@@ -283,7 +284,7 @@
           </block>
           <block type="Dancelab_changeMoveLR">
             <title name="SPRITE">dancer1</title>
-            <title name="MOVE">2</title>
+            <title name="MOVE">"next"</title>
             <title name="DIR">-1</title>
           </block>
           <block type="Dancelab_doMoveLR">

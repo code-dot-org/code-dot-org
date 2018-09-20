@@ -2839,6 +2839,8 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      Fish Tank 5-validated_simple_instruction: O peixe quer um amigo.   Adicione
+        um novo sprite.
       Fish Tank 6-validated_instruction: Adicione um comportamento o novo amigo do
         peixe.
       Fish Tank 6-validated_simple_instruction: Adicione um comportamento o novo amigo
@@ -3727,6 +3729,7 @@ pt-BR:
       Quantum Bee_instruction: Flores roxas podem ter 1 ou 0 néctar, mas você não
         saberá qual delas! Tenha cuidado para não recolher o néctar de uma flor roxa
         que não tem nenhum. Verifique se o néctar é igual a 1, usando o bloco "if".
+      Ram Spritelab Validation Test_instruction: Pressione a seta para cima
       Ryan - 4-5 Bee Conditionals 2_instruction: |-
         Agora, a abelha só quer néctar.
         Nem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se
@@ -4446,6 +4449,9 @@ pt-BR:
         achar um padrão?
       course1_maze_debugging_challenge2_instruction: Analise este nível. Estes são
         os blocos corretos, mas eles estão colocados na ordem errada!
+      course2_collector_loops_challenge2_instruction: Pegar todos os tesouros!
+      course2_collector_prog_challenge1_instruction: Preste atenção! Você consegue
+        coletar todas as *10* peças do tesouro?
       course2_collector_prog_challenge2_instruction: Há 20 peças de tesouro para serem
         encontradas. Colete pelo menos metade para finalizar este desafio!
       course2_maze_seq_challenge1_instruction: Desenhe o caminho e leve-me até aquele
@@ -5055,6 +5061,10 @@ pt-BR:
       courseC_artist_loops5b_2018_instruction: Tente adicionar linhas!
       courseC_artist_loops8a_instruction: Agora tente algo você mesmo!
       courseC_artist_loops8a_2018_instruction: Agora tente algo você mesmo!
+      courseC_artist_prog1_instruction: Brinque com os blocos da caixa de ferramentas
+        para saber o que eles fazem!
+      courseC_artist_prog1_2018_instruction: Brinque com os blocos da caixa de ferramentas
+        para saber o que eles fazem!
       courseC_artist_prog5_instruction: 'Essa casa precisa de um telhado! Desenhe
         o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
       courseC_artist_prog5_2018_instruction: 'Essa casa precisa de um telhado! Desenhe
@@ -5203,6 +5213,8 @@ pt-BR:
         esta pintura!
       courseD_artist_nestedLoops_challenge2_2018_instruction: Conserte o código para
         fazer esta pintura!
+      courseD_artist_ramp12_instruction: Use o que você aprendeu para desenhar este
+        triângulo dentro de um quadrado.
       courseD_autorun_binary4_2019_instruction: |-
         Você consegue desenhar este padrão repetindo
         apenas três dígitos binários? (0 e 1)?
@@ -5326,6 +5338,8 @@ pt-BR:
         com lados de 100 pixels de comprimento.  \r\n\r\nA\nhaste entre as lentes
         tem 75 pixels de comprimento."
       courseE_artist_functions8a_2018_instruction: Crie uma função para um único quadrado.
+      courseE_artist_ramp12_instruction: Use o que você aprendeu para desenhar este
+        triângulo dentro de um quadrado.
       courseE_bee_concept1_instruction: "Colete todo o néctar de cada flor.\nUse um
         laço aninhado. "
       courseE_bee_concept1_2018_instruction: "Colete todo o néctar de cada flor.\nUse

@@ -4,7 +4,7 @@ const Provider = require('react-redux').Provider;
 
 const timeoutList = require('../lib/util/timeoutList');
 import AppView from '../templates/AppView';
-const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter').default;
 const codegen = require('../lib/tools/jsinterpreter/codegen');
 const dom = require('../dom');
 const utils = require('../utils');

@@ -460,6 +460,47 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
+  test 'login_google_oauth2: signs in user if user is found by credentials' do
+    # Given I have a Google-Code.org account
+    user = create :student, :unmigrated_google_sso
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: user.uid
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I am signed in
+    user.reload
+    assert_equal user.id, signed_in_user_id
+  end
+
+  test 'login_google_oauth2: redirects to complete registration if user is not found by credentials' do
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '' # Google doesn't provider user_type
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_redirected_to 'http://test.host/users/sign_up'
+    attributes = session['devise.user_attributes']
+    assert_equal AuthenticationOption::GOOGLE, attributes['provider']
+    assert_equal uid, attributes['uid']
+  end
+
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -822,6 +863,106 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
+  test "connect_provider: Performs takeover of an account with matching credential that has no activity" do
+    user = create :user, :multi_auth_migrated
+
+    # Given there exists another user
+    #   having credential X
+    #   and having no activity
+    other_user = create :user, :multi_auth_migrated
+    credential = create :google_authentication_option, user: other_user
+    refute other_user.has_activity?
+
+    # When I attempt to add credential X
+    auth = link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
+
+    # Then I should successfully add credential X
+    user.reload
+    assert_redirected_to 'http://test.host/users/edit'
+    assert_auth_option(user, auth)
+
+    # And the other user should be destroyed
+    other_user.reload
+    assert other_user.deleted?
+  end
+
+  test "connect_provider: Successful takeover also enrolls in replaced user's sections" do
+    user = create :user, :multi_auth_migrated
+
+    # Given there exists another user
+    #   having credential X
+    #   and having no activity
+    #   and enrolled in section Y
+    other_user = create :user, :multi_auth_migrated
+    credential = create :google_authentication_option, user: other_user
+    refute other_user.has_activity?
+    section = create :section
+    section.students << other_user
+
+    # When I add credential X
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
+
+    # Then I should be enrolled in section Y instead of the other user
+    section.reload
+    assert_includes section.students, user
+    refute_includes section.students, other_user
+  end
+
+  test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do
+    user = create :user, :multi_auth_migrated
+
+    # Given there exists another user
+    #   having credential X
+    #   and having activity
+    other_user = create :user, :multi_auth_migrated
+    credential = create :google_authentication_option, user: other_user
+    create :user_level, user: other_user, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    assert other_user.has_activity?
+
+    # When I attempt to add credential X
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
+
+    # Then the other user should not be destroyed
+    other_user.reload
+    refute other_user.deleted?
+
+    # And I should fail to add credential X
+    user.reload
+    assert_empty user.authentication_options
+
+    # And receive a helpful error message about the credential already being in use.
+    assert_redirected_to 'http://test.host/users/edit'
+    expected_error = I18n.t('auth.already_in_use', provider: I18n.t("auth.google_oauth2"))
+    assert_equal expected_error, flash.alert
+  end
+
+  test "connect_provider: Presents no-op message if the provided credentials are already linked to user's account" do
+    # Given the current user already has credential X
+    user = create :user, :multi_auth_migrated
+    credential = create :google_authentication_option, user: user
+    assert_equal 1, user.authentication_options.count
+
+    # When I attempt to add credential X
+    link_credential user,
+      type: credential.credential_type,
+      id: credential.authentication_id
+
+    # Then I should have the same authentication options
+    user.reload
+    assert_equal 1, user.authentication_options.count
+
+    # And receive a friendly notice about already having the credential
+    assert_redirected_to 'http://test.host/users/edit'
+    expected_notice = I18n.t('auth.already_linked', provider: I18n.t("auth.google_oauth2"))
+    assert_equal expected_notice, flash.notice
+  end
+
   private
 
   def set_oauth_takeover_session_variables(provider, user)
@@ -829,6 +970,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.session[ACCT_TAKEOVER_PROVIDER] = provider
     @request.session[ACCT_TAKEOVER_UID] = user.uid
     @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+  end
+
+  # Try to link a credential to the provided user
+  # @return [OmniAuth::AuthHash] the auth hash, useful for validating
+  #   linked credentials with assert_auth_option
+  def link_credential(user, type:, id:)
+    auth = generate_auth_user_hash(provider: type, uid: id)
+    @request.env['omniauth.auth'] = auth
+    setup_should_connect_provider(user, 2.days.from_now)
+    get :google_oauth2
+    auth
   end
 
   def generate_auth_user_hash(args)
@@ -863,7 +1015,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       user: user,
       hashed_email: User.hash_email(oauth_hash.info.email),
       credential_type: oauth_hash.provider,
-      authentication_id: user.uid,
+      authentication_id: oauth_hash.uid,
       data: {
         oauth_token: oauth_hash.credentials.token,
         oauth_token_expiration: oauth_hash.credentials.expires_at,

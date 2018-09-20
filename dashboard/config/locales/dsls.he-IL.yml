@@ -1,6 +1,9 @@
 ---
 he:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: משולש גדול
     evaluation_multi:
       U5 evaluation q1:
         'No': לא

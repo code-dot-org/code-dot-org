@@ -6,6 +6,29 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_action :clear_sign_up_session_vars
 
+  # Note: We can probably remove these once we've broken out all providers
+  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
+  TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
+
+  # GET /users/auth/clever/callback
+  def clever
+    if should_connect_provider?
+      connect_provider
+    else
+      login_clever
+    end
+  end
+
+  # GET /users/auth/google_oauth2/callback
+  def google_oauth2
+    if should_connect_provider?
+      connect_provider
+    else
+      login_google_oauth2
+    end
+  end
+
+  # All remaining providers
   # GET /users/auth/:provider/callback
   def all
     if should_connect_provider?
@@ -15,7 +38,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  AuthenticationOption::OAUTH_CREDENTIAL_TYPES.each do |provider|
+  TYPES_ROUTED_TO_ALL.each do |provider|
     alias_method provider.to_sym, :all
   end
 
@@ -26,6 +49,31 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
     return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+
+    existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
+
+    # Credential is already held by the current user
+    # Notify of no-op.
+    if existing_credential_holder&.==(current_user)
+      flash.notice = I18n.t('auth.already_linked', provider: I18n.t("auth.#{provider}"))
+      return redirect_to edit_user_registration_path
+    end
+
+    # Credential is already held by another user with activity
+    # Display an error explaining that the credential is already in use.
+    if existing_credential_holder&.has_activity?
+      flash.alert = I18n.t('auth.already_in_use', provider: I18n.t("auth.#{provider}"))
+      return redirect_to edit_user_registration_path
+    end
+
+    # Credential is already held by an unused account.
+    # Take over the unused account.
+    if existing_credential_holder
+      move_sections_and_destroy_source_user \
+        source_user: existing_credential_holder,
+        destination_user: current_user,
+        takeover_type: 'connect_provider'
+    end
 
     # TODO: some of this won't work right for non-Google providers, because info comes in differently
     new_data = nil
@@ -57,6 +105,63 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to edit_user_registration_path
   end
 
+  def login_clever
+    auth_hash = request.env['omniauth.auth']
+    auth_params = request.env['omniauth.params']
+    session[:sign_up_type] = AuthenticationOption::CLEVER
+
+    @user = User.from_omniauth(auth_hash, auth_params, session)
+
+    prepare_locale_cookie @user
+
+    if @user.persisted?
+      handle_untrusted_email_signin(@user, AuthenticationOption::CLEVER)
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
+      # Note that @user.email is populated by User.from_omniauth even for students
+      if looked_up_user.provider == 'clever'
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&useClever=true"
+      else
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&email=#{@user.email}"
+      end
+    else
+      # This is a new registration
+      register_new_user(@user)
+    end
+  end
+
+  def login_google_oauth2
+    auth_hash = request.env['omniauth.auth']
+    auth_params = request.env['omniauth.params']
+    session[:sign_up_type] = AuthenticationOption::GOOGLE
+
+    @user = User.from_omniauth(auth_hash, auth_params, session)
+
+    prepare_locale_cookie @user
+
+    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
+      # Redirect to open roster dialog on home page if user just authorized access
+      # to Google Classroom courses and rosters
+      redirect_to '/home?open=rosterDialog'
+    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+      silent_takeover(@user, auth_hash)
+      sign_in_user
+    elsif @user.persisted?
+      # If email is already taken, persisted? will be false because of a validation failure
+      check_and_apply_oauth_takeover(@user)
+      sign_in_user
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
+      # Note that @user.email is populated by User.from_omniauth even for students
+      if looked_up_user.provider == 'clever'
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&useClever=true"
+      else
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&email=#{@user.email}"
+      end
+    else
+      # This is a new registration
+      register_new_user(@user)
+    end
+  end
+
   def login
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
@@ -75,21 +180,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
-    # Set user-account locale only if no cookie is already set.
-    if @user.locale &&
-      @user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
+    prepare_locale_cookie @user
 
-      set_locale_cookie(@user.locale)
-    end
-
-    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
-      # Redirect to open roster dialog on home page if user just authorized access
-      # to Google Classroom courses and rosters
-      redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
+    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
       handle_untrusted_email_signin(@user, provider)
-    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+    elsif allows_silent_takeover(@user, auth_hash)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
@@ -116,6 +211,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def prepare_locale_cookie(user)
+    # Set user-account locale only if no cookie is already set.
+    if user.locale &&
+      user.locale != request.env['cdo.locale'] &&
+      cookies[:language_].nil?
+
+      set_locale_cookie(user.locale)
+    end
+  end
 
   def register_new_user(user)
     move_oauth_params_to_cache(user)
@@ -160,16 +265,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
   def handle_untrusted_email_signin(user, provider)
     force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
-
-    # We used to check this based on sign_in_count, but we're explicitly logging it now
-    seen_oauth_takeover_dialog = (!!user.seen_oauth_connect_dialog) || user.sign_in_count > 1
-
-    # If account exists (as looked up by Clever ID) and it's not the first login, just sign in
-    if user.persisted? && seen_oauth_takeover_dialog && !force_takeover
-      sign_in_user
-    else
-      # Otherwise, it's either the first login, or a user who must connect -
-      # offer to connect the Clever account to an existing one, or insist if needed
+    if force_takeover
+      # It's a user who must link accounts - a Clever/Powerschool Code.org teacher account with an
+      # email that conflicts with an existing Code.org account.
+      #
+      # We don't want them using the teacher account as-is because it doesn't have a valid email.
+      # We can't do a silent takeover because we don't trust email addresses from Clever/Powerschool
+      #
+      # Long-term I'd like sign-up when there's a conflict like this to just fail, with a helpful
+      # message directing the teacher to sign in to their existing account and then link Clever
+      # to it from the accounts page.
       if user.migrated?
         auth_option = user.authentication_options.find_by credential_type: provider
         begin_account_takeover \
@@ -186,8 +291,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
       user.seen_oauth_connect_dialog = true
       user.save!
-      sign_in_user
     end
+    sign_in_user
   end
 
   def move_oauth_params_to_cache(user)
@@ -264,7 +369,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # This should never happen if other logic is working correctly, so notify
         Honeybadger.notify(
           error_class: 'Failed to create AuthenticationOption during silent takeover',
-          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{lookup_email}"
+          error_message: "Failed for user with id #{@user.id}"
         )
         return
       end
@@ -280,7 +385,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # This should never happen if other logic is working correctly, so notify
         Honeybadger.notify(
           error_class: 'Failed to update User during silent takeover',
-          error_message: "Could not update user during silent takeover for user with email #{lookup_email}"
+          error_message: "Failed for user with id #{@user.id}"
         )
         return
       end
@@ -316,13 +421,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def get_connect_provider_errors(auth_option)
     errors = auth_option.errors.full_messages
-    Honeybadger.notify(
-      error_message: "Error connecting to provider",
-      context: {
-        authentication_option: auth_option,
-        errors: errors
-      }
-    )
 
     return errors.first unless errors.empty?
     I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))

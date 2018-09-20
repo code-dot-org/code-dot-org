@@ -1,58 +1,7 @@
---CHANGES
--- addition of school years beyond 2017 --  includes teaching data from the same year they were trained and any subsequent years 
--- removed 'location'
-
--- ISSUES
--- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
-      -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
-      -- to Mary, this does not seem ideal 
-
--- NOTES ON HOW TO UPDATE 
--- after updating at the dependencies listed above and noted with 'PUBLIC' in the code....
--- replace all instances of 'public.regional_partner_stats_csf_pivoted' with 'analysis.regional_partner_stats_csf' and re-run table creation
--- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
-
-
 drop table if exists analysis_pii.regional_partner_stats_csf;
 create table analysis_pii.regional_partner_stats_csf AS
 
 with 
-csf_teachers_trained_temp as 
-(
-  select distinct
-  user_id, -- multiple entries per person (if they attended multiple workshops)
-  u.studio_person_id,
-  'CS Fundamentals'::varchar as course,
-  school_year as school_year,
-  regional_partner as regional_partner,
-  regional_partner_id as regional_partner_id, 
-  trained_at as trained_at, -- this is the 'min' date from the teachers trained at table (the first time they were trained)
-  workshop_date as workshop_date -- this is the date of the workshop (and the source of multiple entries per person) 
-  from
-  (
-    SELECT  
-        ctt.user_id, 
-        ctt.trained_at,
-        pds.start as workshop_date,
-        regional_partner_id::int, 
-        rp.name::varchar as regional_partner
-        FROM 
-        analysis.csf_teachers_trained ctt
-        LEFT JOIN dashboard_production_pii.pd_enrollments pde
-          ON pde.user_id = ctt.user_id
-         LEFT JOIN dashboard_production_pii.pd_attendances pda 
-           ON pda.pd_enrollment_id = pde.id
-         LEFT JOIN dashboard_production_pii.pd_workshops pdw 
-           ON pdw.id = pde.pd_workshop_id
-           AND course = 'CS Fundamentals'
-         LEFT JOIN dashboard_production_pii.pd_sessions pds 
-           ON pds.pd_workshop_id = pdw.id
-        LEFT JOIN dashboard_production_pii.regional_partners rp  
-           ON pdw.regional_partner_id = rp.id     
-  ) csf_train
-  JOIN analysis.training_school_years sy on csf_train.trained_at between sy.started_at and sy.ended_at
-  JOIN dashboard_production.users u on u.id = csf_train.user_id
-),
 completed as
 (
   select 
@@ -70,6 +19,25 @@ select
     school_year,
     script_name
   from analysis.csf_started_teachers 
+),
+implementation_365 as
+(select 
+tt.user_id,
+date_part(month, trained_at) month_trained,
+date_part(dayofweek, trained_at) day_of_week_trained,
+date_part(hour, trained_at) hour_trained, 
+min(datediff(day, tt.trained_at, st.started_at)) as days_to_start,
+min(datediff(day, tt.trained_at, ct.completed_at)) as days_to_complete,
+CASE WHEN days_to_start < 0 then 1 else 0 end as started_before_training,
+CASE WHEN days_to_complete < 0 then 1 else 0 end as completed_before_training,
+CASE WHEN days_to_start <= 365  and started_before_training = 0 then 1 else 0 end as started_365,
+CASE WHEN days_to_complete <= 365 and completed_before_training = 0 then 1 else 0 end as completed_365,
+CASE WHEN days_to_start <= 365  then 1 else 0 end as started_365_or_before,
+CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
+from analysis.csf_teachers_trained tt
+left join analysis.csf_started_teachers st on st.user_id = tt.user_id  
+left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id  
+group by 1, 2, 3, 4
 ),
 pd_enrollments_with_year as
 ( 
@@ -90,19 +58,28 @@ pd_facilitators as
   JOIN dashboard_production_pii.users u2
         ON  pwf.user_id = u2.id
   group by 1
-
 )
   SELECT distinct 
          d.user_id,
-         d.studio_person_id,
+         u.studio_person_id,
          FIRST_VALUE(pde.first_name) OVER (PARTITION BY d.user_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
          FIRST_VALUE(pde.last_name) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.last_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as last_name,
          FIRST_VALUE(pde.email) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email,
-         d.course,
-         d.school_year as school_year_trained,
+         'CS Fundamentals'::varchar as course,
+         sy.school_year as school_year_trained,
+         month_trained,
+         day_of_week_trained, 
+         days_to_start,
+         days_to_complete,
+         started_before_training,
+         completed_before_training,
+         started_365,
+         completed_365,
+         started_365_or_before,
+         completed_365_or_before,
          s.school_year as school_year_taught,
          s.script_name,
-         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
+         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,        
          rp.id as regional_partner_id,
          ss_user.school_name school_name,
          ss_user.school_id school_id,
@@ -113,11 +90,21 @@ pd_facilitators as
          ss_user.high_needs high_needs_school,
          ss_user.rural rural_school, 
          csfa.workshop_id,
-         csfa.subject,
-         csfa.trained_by_regional_partner,
+         CASE WHEN csfa.subject is null THEN 'Intro Workshop' else csfa.subject END as subject,
+         CASE WHEN csfa.trained_by_regional_partner is null then 0 else csfa.trained_by_regional_partner END as trained_by_regional_partner,
          d.trained_at as trained_at,
-         coalesce(d.workshop_date, csfa.workshop_date, d.trained_at)  as workshop_date, 
+         coalesce(csfa.workshop_date, d.trained_at)  as workshop_date, 
+         CASE WHEN trunc(workshop_date) > trained_at then 1 else 0 end as repeat_training,
          extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) || csfa.workshop_id::varchar(16)  as workshop_id_year,
+         csfa.month_workshop,
+         csfa.day_of_week_workshop,
+         csfa.hour_workshop, 
+         CASE WHEN csfa.audience = 'District' then 'Private' else csfa.audience end as audience,
+         csfa.funded,
+         csfa.funding_type,
+         csfa.capacity,
+         csfa.facilitator_name,
+         csfa.facilitator_id,        
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
@@ -133,7 +120,8 @@ pd_facilitators as
           -- student gender
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
-  FROM csf_teachers_trained_temp d 
+  FROM csf_teachers_trained d 
+  JOIN analysis.training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
          ON d.user_id = u.id
@@ -145,9 +133,7 @@ pd_facilitators as
  -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
   LEFT JOIN analysis.csf_workshop_attendance csfa   
         ON csfa.user_id = d.user_id
-        AND csfa.course = d.course
-        AND csfa.school_year = d.school_year
-        AND csfa.workshop_date = d.workshop_date
+        AND csfa.school_year = sy.school_year
         AND csfa.not_attended = 0 
 --pii tables (regional partner names, person names, emails, locations)
   LEFT JOIN pd_facilitators pwf
@@ -156,15 +142,17 @@ pd_facilitators as
        ON csfa.regional_partner_id = rp.id 
   LEFT JOIN pd_enrollments_with_year pde   -- only join pde if they are are trained by regional partner 
         ON pde.user_id = d.user_id
-        AND pde.school_year = d.school_year 
+        AND pde.school_year = sy.school_year 
 -- analysis tables 
   LEFT JOIN started s
        ON s.user_id = d.user_id
-      AND s.school_year >= d.school_year 
+      AND s.school_year >= sy.school_year 
   LEFT JOIN completed c
          ON c.user_id = d.user_id
          AND c.script_name = s.script_name
          AND c.school_year = s.school_year
+  LEFT JOIN implementation_365 i
+        ON i.user_id = d.user_id
   LEFT JOIN analysis.teacher_most_progress_csf tmp
          ON tmp.user_id = d.user_id
          and tmp.script_name = s.script_name
@@ -177,3 +165,8 @@ pd_facilitators as
 
 GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csf TO GROUP admin;
 GRANT SELECT ON analysis_pii.regional_partner_stats_csf TO GROUP reader_pii;
+
+-- ISSUES
+-- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
+      -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
+      -- to Mary, this does not seem ideal 

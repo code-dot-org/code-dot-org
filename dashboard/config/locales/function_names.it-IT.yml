@@ -176,6 +176,7 @@ it:
       draw a plane of squares: disegna un piano di quadrati
       draw hexagon: disegna un esagono
       draw line of hexagons: disegna una fila di esagoni
+      staggered squares: quadrati traslati
       draw line of polygons: disegna una fila di poligoni
       draw polygon: disegna un poligono
       honey nectar: miele nettare
@@ -191,6 +192,7 @@ it:
       pumpkin square: zucche quadrato
       check and pick: controlla e prendi
       find pumpkin: cerca zucche
+      get produce: raccogli
       check for corn: controlla pannocchie
       corn rectangle: rettangolo di pannocchie
       lettuce stairs: scale di lattuga

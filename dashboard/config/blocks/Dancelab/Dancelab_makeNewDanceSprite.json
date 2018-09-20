@@ -14,24 +14,52 @@
         "name": "COSTUME",
         "options": [
           [
-            "Duck",
-            "\"duck\""
+            "Alien",
+            "\"ALIEN\""
           ],
           [
-            "Moose",
-            "\"moose\""
-          ],
-          [
-            "Unicorn",
-            "\"unicorn\""
-          ],
-          [
-            "MrWiggles",
-            "\"mrwiggles\""
+            "Bear",
+            "\"BEAR\""
           ],
           [
             "Cat",
-            "\"cat\""
+            "\"CAT\""
+          ],
+          [
+            "Dog",
+            "\"DOG\""
+          ],
+          [
+            "Duck",
+            "\"DUCK\""
+          ],
+          [
+            "Frog",
+            "\"FROG\""
+          ],
+          [
+            "Moose",
+            "\"MOOSE\""
+          ],
+          [
+            "Pineapple",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "Poo",
+            "\"POO\""
+          ],
+          [
+            "Robot",
+            "\"ROBOT\""
+          ],
+          [
+            "Shark",
+            "\"SHARK\""
+          ],
+          [
+            "Unicorn",
+            "\"UNICORN\""
           ]
         ]
       },

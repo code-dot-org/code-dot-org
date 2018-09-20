@@ -17,24 +17,32 @@
             "sprites"
           ],
           [
+            "all cats",
+            "\"CAT\""
+          ],
+          [
+            "all dogs",
+            "\"DOG\""
+          ],
+          [
             "all ducks",
-            "\"duck\""
+            "\"DUCK\""
           ],
           [
             "all moose",
-            "\"moose\""
+            "\"MOOSE\""
           ],
           [
-            "all unicorns",
-            "\"unicorn\""
+            "all poos",
+            "\"POO\""
           ],
           [
-            "all Mr Wiggles",
-            "\"mrwiggles\""
+            "all robots",
+            "\"ROBOT\""
           ],
           [
-            "all cat",
-            "\"cat\""
+            "all sharks",
+            "\"SHARK\""
           ]
         ]
       },
@@ -42,47 +50,43 @@
         "name": "MOVE",
         "options": [
           [
-            "Rest",
+            "Clap High",
             "0"
           ],
           [
-            "Clap High",
+            "Clown",
             "1"
           ],
           [
-            "Clown",
+            "Dab",
             "2"
           ],
           [
-            "Dab",
+            "Double Jam",
             "3"
           ],
           [
-            "Double Jam",
+            "Drop",
             "4"
           ],
           [
-            "Drop",
+            "Floss",
             "5"
           ],
           [
-            "Floss",
+            "Fresh",
             "6"
           ],
           [
-            "Fresh",
+            "Kick",
             "7"
           ],
           [
             "Roll",
-            "8"
-          ],
-          [
-            "This or That",
             "9"
           ],
           [
-            "Kick",
+            "This or That",
             "10"
           ],
           [
@@ -100,6 +104,10 @@
           [
             "Random",
             "\"rand\""
+          ],
+          [
+            "None",
+            "8"
           ]
         ]
       },
