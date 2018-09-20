@@ -5,43 +5,44 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Comment faire une Heure du Code avec votre enfant
+# How to do an Hour of Code with your child
 
-Faites une Heure du Code chez vous, ou portez-vous volontaire pour l'organiser dans la classe de votre enfant! Voici comment procéder :
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+---
 
 ## Regardez cette vidéo qui explique comment faire. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Choisissez un tutoriel :
+## 2) Choose a tutorial
 
-Nous mettons à votre disposition toute une série de tutoriels, sympas et d'une durée ne dépassant pas l'heure, créés par différents partenaires, et à destination d'élèves de tous âges. [Essayez-les !](<%= resolve_url('/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-**Tout les tutoriels de l'Heure du Code sont auto-dirigés - permettant aux enfants de travailler à leur rythme, en fonction de leur niveau**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Déterminez quels sont vos besoins en technologie
 
-La meilleure expérience d'Une Heure de Code implique d'être muni d'ordinateurs connectés à internet. Mais vous **n'avez pas forcément besoin** d'un ordinateur. Il existe plusieurs activités hors-ligne qui peuvent être faites sans la moindre utilisation d'une technologie.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Testez les tutoriels sur différents ordinateurs et appareils. Assurez-vous que le son et la vidéo fonctionnent correctement sur différents navigateurs.
-- **Souhaitez-vous apprendre en même temps que votre enfant?** Essayez [le programmation en binôme.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) L'informatique est une discipline sociale et collaborative.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) Commencez votre Heure de Code avec une vidéo inspirante
+## 4) Start your Hour of Code with an inspiring video
 
 Lancez le coup d'envoi de votre Heure de Code en inspirant votre enfant et en échangeant sur les répercussions de l'informatique dans notre vie de tous les jours.
 
 **Montrez une vidéo qui inspire :**
 
-- La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) disponible )
-- La [vidéo Heure de Code Mondiale](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Le président Obama a lancé un appel, invitant tous les étudiants à apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- La vidéo originale du lancement de Code.org avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh (des versions d'[1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), de [5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et de [9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) sont disponibles).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [Le Président Obama incite tous les élèves à apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Retrouvez ici d'autres [ressources](<%= codeorg_url('/inspire') %>) et des [vidéos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Si vous ou vos élèves débutez en informatique, ce n'est pas bien grave. Voici quelques idées pour présenter votre Heure de Code :
 
-- Expliquez de quelles façons les nouvelles technologies influencent notre vie, avec des exemples qui toucheront à la fois les garçons et les filles (parlez des applications et des technologies qui permettent de sauver des vies, d'aider les gens, de les connecter entre eux, etc...).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Énumérez des exemples concrets, pris dans la vie de tous les jours, où on a besoin d'écrire des programmes.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
+- Voici quelques [conseils](<%= codeorg_url('/girls') %>) pour intéresser les filles à l'informatique.
 
 Besoin de plus d'aide ? Téléchargez notre [exemple de plan de cours](/files/AfterschoolEducatorLessonPlanOutline.docx) et découvrez les bonnes pratiques venant d'éducateurs expérimentés.
 
@@ -61,19 +62,17 @@ N'ayez pas peur de répondre :
 
 ## 6) Célébrez
 
-[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
+[Imprimez des certificats](<%= codeorg_url('/certificates') %>) pour vos enfants (et pour vous même!).
 
 Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !
 
-**Autres ressources de l'Heure de Code :**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Revoir [la Foire aux Question Une Heure du Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Et après l'Heure de Code ?
 
-**Et après l'Heure de Code ?**
-
-L'Heure de Code n'est que la première étape pour en apprendre plus sur le fonctionnement des nouvelles technologies et comment créer des applications. Pour continuer l'aventure :
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
-- Aidez à la [promotion](<%= resolve_url('/promote') %>) de l'apprentissage de l'informatique dans les écoles aux alentours de celle de votre enfant.
+- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>

@@ -5,12 +5,16 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Comment organiser une session l'Heure de Code
+# How to organize an Hour of Code assembly or event
+
+### Get your entire school or community involved in an Hour of Code!
+
+---
 
 ## 1. Préparez pour votre prochaine événement
 
 - Choisissez un lieu, une date et une heure.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Lisez notre [guide pratique](<%=localized_file('/files/elected-official.pdf')%>) quand vous invitez une personne officielle à une Heure de Code pour plus d'information.
 - Invitez les médias, comme par exemple une station de radio ou une télé locale, un journal, des blogueurs spécialisés dans l'éducation ou les nouvelles technologies. Regardez notre [dossier de presse](<%= resolve_url('/promote/press-kit') %>) pour plus de conseils.
 
 ## 2. Pendant votre événement
@@ -19,7 +23,7 @@ nav: how_to_nav
 - Faites une présentation pour montrer quelle est l'importance de l'informatique, en utilisant des [statistiques et des graphiques](<%= resolve_url('/promote/stats') %>).   
       
     
-- Autres idées d'événements : 
+- **Other event ideas**: 
     - Invitez un chef d'industrie locale à discuter de ses travails liés à l'informatique.
     - Invitez un politicien locale et demandez aux élèves de lui apprendre le codage.
     - Demandez un groupe d'élèves de faire une démonstration d'une activité hors ligne.
@@ -28,30 +32,31 @@ nav: how_to_nav
 
 ## 3. Montrez comment ça c'est passé
 
-- Partagez les photos de votre événement sur Facebook et Twitter. 
-- Utilisez le hastag **#HeuredeCode**
+Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+
+---
 
 ## Organisez une Nuit Programmation en Famille avec l'Heure de Code et invitez les parents à participer
 
-Pensez à organiser une soirée K-5 et invitez les parents à se joindre à leur élèves pour une heure d'informatique. Il s’agit d’une excellente façon d’engager l’ensemble de la communauté et de favoriser le soutien des parents pour l’informatique dans votre école. Nos partenaires Nuit Programmation en Famille ont créé un Kit Évènement tout-en-un avec un aide-mémoire de planification, un script pour le présentateur, des e-mails d'invitation, des affiches, des présentations PowerPoint et encore plus de choses pour votre propre évènement. [Cliquez ici pour télécharger le Kit Évènement](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## Exemple de plan d'actions
+---
 
-**Événement :** Rassemblement pour le lancement de la Semaine de l'enseignement de l'informatique.
+## Example plan for a school assembly or event
+
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**Temps :** Au cours de la journée scolaire. Idéalement, en milieu de matinée. Pendant environ 1 heure.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Lieu:** Une salle de réunion de l'école (par exemple, la cantine, la salle de projection, la salle de sport).   
-  
-
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
 ## Déroulement de l'événement
 
 | Temps          | Action                                                                                                                                                                        |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10h00 – 10h05  | Lancement avec une de nos [vidéos qui donne de l'inspiration](<%= resolve_url('/promote/resources#videos') %>).                                                                 |
+| 10h00 – 10h05  | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).                                                                                   |
 | 10h05 – 10h15  | Le proviseur fait une présentation pour expliquer l'importance de l'informatique. Utilisez ces [statistiques et graphiques](<%= resolve_url('/promote/stats') %>).              |
 | 10h15 – 10h30  | Un invité spécial discute de son parcours et du rôle majeur des nouvelles technologies et de l'informatique dans nos vies quotidiennes.                                       |
 | 10h30 – 10h40  | Les élèves font une démo de l'Heure de Code pour l'école. Renversement des rôles amusant : leur demander d'enseigner au proviseur, à un homme politique ou à d'autres élèves! |
