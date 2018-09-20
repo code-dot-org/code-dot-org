@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - स्वतः निर्देशक छन् - विद्यार्थीहरूलाई तिनिहरूको आफ्नो ठाउँ र क्षमताको-स्तरा काम गर्न अनुमति दिन 
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## तपाइँको हार्डवेयरलाई आवकश्यक पर्ने - कम्प्युटरहरू वैकल्पिक हुनेको योजना बनाउनुहोस्
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **विद्यार्थीको कम्प्युर वा साधनहरूमा अभ्यासहरूको जाँच गर्नुहोस्।** तिनिहरूले राम्रोसँग (ध्वनि र भिडियोकोमा) काम गर्छन् भनि पक्का गर्नुहोस्।
-- तिनिहरूले सकाएपछि विद्यार्थीहरूले के देख्नेछन् भनि हेर्न **बधाई पृष्ठलाई पूर्वावलोकन ** गर्नुहोस्। 
+- तिनिहरूले सकाएपछि विद्यार्थीहरूले के देख्नेछन् भनि हेर्न **बधाई पृष्ठलाई पूर्वावलोकन ** गर्नुहोस्।
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## तपाइँको उपलब्ध प्राविधिमा आधारित योजना बनाउनुहोस्
