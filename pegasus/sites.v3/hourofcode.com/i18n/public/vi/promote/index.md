@@ -16,11 +16,11 @@ nav: promote_nav
 
 ## 1. Truyền tải thông điệp
 
-Giới thiệu cho bạn bè của bạn về **#HourOfCode**!
+Giới thiệu cho bạn bè của bạn về **#GiờLậpTrình**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Đề nghị trường của bạn tổ chức một Giờ Lập Trình
+## 2. Đề nghị trường của bạn tổ chức Giờ Lập Trình
 
 [Gửi email này](<%= resolve_url('/promote/resources#sample-emails') %>) cho hiệu trưởng của bạn và thách thức mỗi lớp học tại trường học của bạn để đăng ký.
 

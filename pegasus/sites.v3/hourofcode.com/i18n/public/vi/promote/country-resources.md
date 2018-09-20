@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Tự điều khiển -cho phép sinh viên làm theo tiến độ và mức kỹ năng mỗi người
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Trang thiết bị, phần cứng - máy tính là tùy chọn không bắt buộc
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - ** Test trên máy tính và thiết bị của học sinh** đảm bảo chúng hoạt động tốt (với cả âm thanh và video).
-- **Xem trước trang thông báo kết quả** để xem những gì học sinh sẽ thấy khi hoàn thành. 
+- **Xem trước trang thông báo kết quả** để xem những gì học sinh sẽ thấy khi hoàn thành.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Lên kế hoạch dựa trên trang thiết bị công nghệ mà bạn sẵn có
