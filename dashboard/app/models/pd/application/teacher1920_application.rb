@@ -39,6 +39,114 @@ module Pd::Application
     include Pd::Teacher1920ApplicationConstants
 
     # @override
+    def self.options
+      super.merge(
+        {
+          completing_on_behalf_of_someone_else: [YES, NO],
+          replace_existing: [
+            YES,
+            "No, this course will be added to the existing schedule, but it won't replace an existing computer science course",
+            TEXT_FIELDS[:i_dont_know_explain]
+          ],
+          cs_terms: COMMON_OPTIONS[:terms_per_year],
+          how_heard: [
+            'Code.org Website',
+            'Code.org Email',
+            'Regional Partner Website',
+            'Regional Partner Email',
+            'From a teacher that has participated in a Code.org program',
+            'From an administrator',
+            TEXT_FIELDS[:other_with_text]
+          ],
+          csd_which_grades: (6..12).map(&:to_s) <<
+            'Not sure yet if my school plans to offer CS Discoveries in the 2019-20 school year',
+          csp_which_grades: (9..12).map(&:to_s) <<
+            'Not sure yet if my school plans to offer CS Principles in the 2019-20 school year',
+          plan_to_teach: [
+            'Yes, I plan to teach this course this year (2019-20)',
+            'I hope to be able teach this course this year (2019-20)',
+            'No, I don’t plan to teach this course this year (2019-20), but I hope to teach this course the following year (2020-21)',
+            'No, someone else from my school will teach this course this year (2019-20)',
+            TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+          ],
+          pay_fee: [
+            'Yes, my school or I will be able to pay the full program fee.',
+            TEXT_FIELDS[:no_pay_fee_1920],
+            'Not applicable: there is no program fee for teachers in my region.'
+          ],
+          willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
+          interested_in_online_program: [YES, NO]
+        }
+      )
+    end
+
+    def self.required_fields
+      %i(
+        country
+        school
+        first_name
+        last_name
+        phone
+        address
+        city
+        state
+        zip_code
+        principal_first_name
+        principal_last_name
+        principal_email
+        principal_confirm_email
+        principal_phone_number
+        completing_on_behalf_of_someone_else
+        program
+        cs_how_many_minutes
+        cs_how_many_days_per_week
+        cs_how_many_weeks_per_year
+        plan_to_teach
+        replace_existing
+        subjects_teaching
+        have_cs_license
+        subjects_licensed_to_teach
+        taught_in_past
+        previous_yearlong_cdo_pd
+        cs_offered_at_school
+        committed
+        pay_fee
+        willing_to_travel
+
+        gender_identity
+        race
+        agree
+      )
+    end
+
+    def dynamic_required_fields(hash)
+      [].tap do |required|
+        if hash[:completing_on_behalf_of_someone_else] == YES
+          required.concat [:completing_on_behalf_of_name]
+        end
+
+        if hash[:does_school_require_cs_license] == YES
+          required.concat [:what_license_required]
+        end
+
+        if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
+          required.contact [:scholarship_reasons]
+        end
+
+        if hash[:program] == PROGRAMS[:csd]
+          required.concat [
+            :csd_which_grades,
+          ]
+        elsif hash[:program] == PROGRAMS[:csp]
+          required.concat [
+            :csp_which_grades,
+            :csp_how_offer,
+          ]
+        end
+      end
+    end
+
+    # @override
     def year
       YEAR_19_20
     end
@@ -90,6 +198,43 @@ module Pd::Application
       CSV.generate do |csv|
         csv << columns
       end
+    end
+
+    # memoize in a hash, per course
+    FILTERED_LABELS = Hash.new do |h, key|
+      labels_to_remove = (
+      if key == 'csd'
+        [
+          :csp_which_grades,
+          :csp_course_hours_per_week,
+          :csp_course_hours_per_year,
+          :csp_terms_per_year,
+          :csp_how_offer,
+          :csp_ap_exam
+        ]
+      else
+        [
+          :csd_which_grades,
+          :csd_course_hours_per_week,
+          :csd_course_hours_per_year,
+          :csd_terms_per_year
+        ]
+      end
+      )
+
+      # school contains NCES id
+      # the other fields are empty in the form data unless they selected "Other" school,
+      # so we add it when we construct the csv row.
+      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
+
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
     end
   end
 end

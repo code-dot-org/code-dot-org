@@ -202,19 +202,20 @@ module Api::V1::Pd
     def get_applications_by_role(role, include_associations: true)
       applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
       applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
+
       case role
-        when :csf_facilitators
-          return applications_of_type.csf
-        when :csd_facilitators
-          return applications_of_type.csd
-        when :csp_facilitators
-          return applications_of_type.csp
-        when :csd_teachers
-          return applications_of_type.csd
-        when :csp_teachers
-          return applications_of_type.csp
-        else
-          raise ActiveRecord::RecordNotFound
+      when :csf_facilitators
+        return applications_of_type.csf
+      when :csd_facilitators
+        return applications_of_type.csd
+      when :csp_facilitators
+        return applications_of_type.csp
+      when :csd_teachers
+        return applications_of_type.csd.where(application_year: APPLICATION_CURRENT_YEAR)
+      when :csp_teachers
+        return applications_of_type.csp.where(application_year: APPLICATION_CURRENT_YEAR)
+      else
+        raise ActiveRecord::RecordNotFound
       end
     end
 
@@ -261,17 +262,9 @@ module Api::V1::Pd
       end
     end
 
-    def get_optional_columns(regional_partner_value)
-      show_all_columns = !regional_partner_value || [REGIONAL_PARTNERS_ALL, REGIONAL_PARTNERS_NONE].include?(regional_partner_value)
-      is_teachercon_partner = !show_all_columns && get_matching_teachercon(RegionalPartner.find(regional_partner_value))
-      columns = {accepted_teachercon: false, registered_workshop: false}
-      if show_all_columns || is_teachercon_partner
-        columns[:accepted_teachercon] = true
-      end
-      if show_all_columns || !is_teachercon_partner
-        columns[:registered_workshop] = true
-      end
-      columns
+    # TODO: remove remaining teachercon references
+    def get_optional_columns(_regional_partner_value)
+      {accepted_teachercon: false, registered_workshop: false}
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
