@@ -5,9 +5,13 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Como ensinar uma Hour of Code</h1>
+# How to teach one Hour of Code with your class
 
-Junte-se à iniciativa e use estes passos para iniciar um grupo de estudantes na sua primeira hora de ciência computacional. A Hora de Código é fácil de concretizar - mesmo para principiantes! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Junte-se à iniciativa e use estes passos para iniciar um grupo de estudantes na sua primeira hora de ciência computacional. A Hora de Código é fácil de concretizar - mesmo para principiantes! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Assista a este vídeo prático <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
