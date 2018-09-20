@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL, RELEASE_OR_DELETE_RECORDS_EXPLANATION} from '@cdo/apps/lib/util/urlHelpers';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 export const TeacherWarning = () => {
   return (
@@ -52,11 +53,9 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
-        {i18n.deleteAccountDialog_checkbox1_2()}
-        <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
-          {i18n.learnMore()}
-        </a>
+         <UnsafeRenderedMarkdown
+           markdown={i18n.deleteAccountDialog_checkbox1({explanationUrl: RELEASE_OR_DELETE_RECORDS_EXPLANATION})}
+         />
       </span>
     )
   },
@@ -64,11 +63,9 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {i18n.deleteAccountDialog_checkbox2_1()}
-        <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
-          {i18n.deleteAccountDialog_checkbox2_2()}
-        </a>
-        {i18n.deleteAccountDialog_checkbox2_3()}
+         <UnsafeRenderedMarkdown
+           markdown={i18n.deleteAccountDialog_checkbox2({explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL})}
+         />
       </span>
     )
   },
@@ -76,8 +73,7 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {i18n.deleteAccountDialog_checkboxPreface()}
-        <strong>{i18n.deleteAccountDialog_checkbox3()}</strong>
+         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox3()} />
       </span>
     )
   },
@@ -85,8 +81,7 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {i18n.deleteAccountDialog_checkboxPreface()}
-        <strong>{i18n.deleteAccountDialog_checkbox4()}</strong>
+         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox4()} />
       </span>
     )
   },
@@ -94,8 +89,7 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-        {i18n.deleteAccountDialog_checkboxPreface()}
-        <strong>{i18n.deleteAccountDialog_checkbox5()}</strong>
+         <UnsafeRenderedMarkdown markdown={i18n.deleteAccountDialog_checkbox5()} />
       </span>
     )
   }
