@@ -445,58 +445,14 @@ module LevelsHelper
     fb_options
   end
 
-  # simple helper to set the given key and value on the given hash unless the
-  # value is nil, used to set localized versions of level options without
-  # calling the localization methods twice
-  def set_unless_nil(hash, key, value)
-    hash[key] = value unless value.nil?
-  end
-
   # Options hash for Blockly
   def blockly_options
     l = @level
     raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options
     app_options = l.blockly_app_options(l.game, l.skin).dup
-    level_options = l.blockly_level_options.dup
+    level_options = l.localized_blockly_level_options(@script).dup
     app_options[:level] = level_options
-
-    # Locale-depdendent option
-    # For historical reasons, `localized_instructions` and
-    # `localized_authored_hints` should happen independent of `should_localize?`
-    # TODO: elijah: update these instructions values to new names once we
-    # migrate to the new keys
-    set_unless_nil(level_options, 'instructions', l.localized_short_instructions)
-    set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
-    if l.should_localize?
-      # Don't ever show non-English markdown instructions for Course 1 - 4 or
-      # the 20-hour course. We're prioritizing translation of Course A - F.
-      if @script && (@script.csf_international? || @script.twenty_hour?)
-        level_options.delete('markdownInstructions')
-      else
-        set_unless_nil(level_options, 'markdownInstructions', l.localized_long_instructions)
-      end
-      set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
-
-      # Unintuitively, it is completely possible for a Blockly level to use
-      # Droplet, so we need to confirm the editor style before assuming that
-      # these fields contain Blockly xml.
-      unless l.uses_droplet?
-        set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
-
-        %w(
-          initializationBlocks
-          startBlocks
-          toolbox
-          levelBuilderRequiredBlocks
-          levelBuilderRecommendedBlocks
-          solutionBlocks
-        ).each do |xml_block_prop|
-          next unless level_options.key? xml_block_prop
-          set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
-        end
-      end
-    end
 
     # Script-dependent option
     script = @script
