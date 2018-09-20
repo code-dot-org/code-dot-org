@@ -5,19 +5,23 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Kako podučavati jedan čas Časa Kodiranja</h1>
+# How to teach one Hour of Code with your class
 
-Priključi se pokretu i predstavi grupi učenika njihov prvi čas računarstva sa ovim koracima. Čas Kodiranja je lako pokrenuti - čak i za početnike! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Priključi se pokretu i predstavi grupi učenika njihov prvi čas računarstva sa ovim koracima. Čas Kodiranja je lako pokrenuti - čak i za početnike! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Izaberite tutorijal za svoj čas
 
-We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Učenici rade aktivnosti sami, iako mnoge lekcije uključuju plan lekcije za učitelje (vidjet ćete link kada kliknete aktivnost) da vode raspravu ili produže aktivnost. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promote your Hour of Code
 
-Promoviši svoj Čas Kodiranja [ sa ovim alatkama](<%= resolve_url('/promote/resources') %>) i ohrabri druge da budu domaćini vlastitim događajima.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Plan your technology needs - computers are optional
 
@@ -58,7 +62,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 - "Tehnologija nije uvijek onakva kavu mi želimo."
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**Šta ako učenik završi ranije?**
+**What if a student finishes early?**
 
 - Učenici mogu vidjeti sve tutorijale i [ pokušati novu aktivnost Časa Kodiranja](<%= resolve_url('/learn')%>).
 - Ili pitaj učenike koji završe ranije da pomognu kolegama koji imaju problema s aktivnosti.

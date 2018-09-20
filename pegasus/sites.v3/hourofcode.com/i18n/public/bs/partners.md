@@ -119,19 +119,13 @@ Rad i posvećenost oba komiteta je doprinijela uspjehu Časa Kodiranja i njegova
 
 ---
 
-# Major Promotional Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
 # International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Partneri aktivnosti
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ Rad i posvećenost oba komiteta je doprinijela uspjehu Časa Kodiranja i njegova
 
 ---
 
-# Dodatni partneri
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
