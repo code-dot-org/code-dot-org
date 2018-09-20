@@ -5,19 +5,23 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Come insegnare l'Ora del Codice</h1>
+# How to teach one Hour of Code with your class
 
-Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Scegli un'esercitazione
 
-Ti forniamo un'ampia varietà di divertenti [esercitazioni guidate](<%= resolve_url('/learn') %>) per partecipanti di tutte le età e di diversi livelli di esperienza. Gli studenti svolgono le esercitazioni autonomamente, anche se molte attività includono il piano della lezione per gli insegnanti, per guidare la discussione o estendere l'attività (vedrai il link quando sceglierai l'attività). [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promuovi la tua Ora del Codice
 
-Promuovi la tua Ora del Codice [con questi strumenti](<%= resolve_url('/promote/resources') %>) e incoraggia altri ad ospitare i loro eventi.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Pianifica le tue necessità tecnologiche - i computer non sono indispensabili
 
@@ -40,7 +44,7 @@ Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle 
 - Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh. (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA)) (solo in inglese)
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Non preoccuparti se sia tu che i tuoi studenti siete digiuni di informatica. Qui ci sono alcune idee per farti familiarizzare con le attività della tua Ora del Codice:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Spiega in che modo la tecnologia influisce sulle nostre vite con degli esempi che interessino sia i ragazzi che le ragazze (puoi parlare di come venga utilizzata per salvare delle vite, aiutare la gente, mettere in comunicazione le persone, ecc.).
 - Elenca tutto ciò che utilizza programmi informatici nella vita quotidiana.
@@ -48,17 +52,17 @@ Se l'esercitazione che hai scelto funziona meglio con il sonoro, fornisci delle 
 
 ## 6. Scrivi del codice!
 
-**Guida gli studenti nell'attività**
+**Direct students to the activity**
 
 - Scrivi il link dell'esercitazione sulla lavagna. Puoi recuperare questo link cliccando sull'[esercitazione](<%= resolve_url('/learn') %>) che desideri e copiando l'indirizzo che appare nella tabella accanto all'indicazione "Link breve".
 
-**Quando i partecipanti incontrano delle difficoltà, si può rispondere così:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Non lo so. Cerchiamo di capirlo insieme."
 - "La tecnologia non sempre funziona come vorremmo."
 - "Imparare a programmare è come imparare una nuova lingua; non è possibile parlarla subito fluentemente."
 
-**Cosa fare se uno studente finisce prima?**
+**What if a student finishes early?**
 
 - Gli studenti possono vedere tutte le esercitazioni e [provare un'altra attività dell'Ora del Codice](<%= resolve_url('/learn')%>).
 - Oppure è possibile proporre agli studenti che hanno terminato prima, di aiutare i compagni di classe che hanno delle difficoltà.

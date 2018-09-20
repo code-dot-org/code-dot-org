@@ -11,12 +11,21 @@ it:
   campaign_date_full: "dal 4 al 10 dicembre"
   campaign_date_year: "2017"
   campaign_date_full_year: "dal 4 al 10 dicembre 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Partecipa all''evento didattico più popolare del mondo, %{campaign_date}'
   front_intro_default: 'L''Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni. Chiunque, in ogni parte del mondo, può organizzare un''Ora del Codice. Esercitazioni di un''ora sono disponibili in oltre 45 lingue diverse. Non è necessaria alcuna esperienza. <strong> Da 4 a 104 anni. </strong>'
   front_watch_video: 'Guarda il nuovo video'
   front_watch_regular_video: 'Guarda il video'
   front_volunteers: 'Siamo alla ricerca di volontari tecnici (solo per gli USA)'
   front_start_learning: 'Inizia a imparare'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Risorse'
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'Come'
@@ -222,6 +231,8 @@ it:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: "Organizza un'Ora del Codice %{campaign_date}, e registrati qui.<br>\n<br>\n<b>Se sei in Italia, crea il tuo profilo attraverso il sito italiano <a href=\"https://programmailfuturo.it/chi/chi-puo-partecipare\" target=\"_blank\">Programma il Futuro</a>, sarà tutto più semplice!</b>"
   signup_name_label: 'Il tuo nome'
   signup_name_error: 'Il Nome è richiesto.'
@@ -243,6 +254,11 @@ it:
   signup_your_event: 'Iscriviti'
   signup_host_an_hour: 'Organizza un''Ora del Codice'
   signup_match_volunteer: 'Aiutami a trovare un Ingegnere Informatico per stimolare i miei studenti (solo per gli USA)'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Se stai organizzando più eventi dell'Ora del Codice, per favore indica un differente nome o indirizzo di posta elettronica per ognuno di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo di posta elettronica."
   signup_registration_deadline: "Le iscrizioni per l'Ora del Codice si chiudono l'11 dicembre 2017."
   signup_name_placeholder: 'Il tuo nome'
@@ -265,6 +281,7 @@ it:
   signup_thank_you_message: 'Ti abbiamo inviato un messaggio di conferma per posta elettronica con le informazioni per aiutarti a iniziare.'
   map_title: "La mappa degli eventi dell'Ora del Codice"
   map_header: '# eventi dell''Ora del Codice in tutto il mondo'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Vedi tutti gli eventi'
   map_header_company: '# gli organizzatori'
   map_header_country: '# in %{country}'
@@ -280,6 +297,7 @@ it:
   meta_tag_twitter_title: 'L''Ora di Codice sta arrivando'
   meta_tag_twitter_description: 'L''Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni e in più di 45 lingue.'
   twitter_default_text: "Io partecipo all' #OradelCodice #HourOfCode quest'anno, e tu? @codeorg @programmafuturo"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQ'
   hoc_faq_what_is_hoc_q: 'Cosa è l''Ora del Codice?'
   hoc_faq_what_is_hoc_a: "L'Ora del Codice è iniziata come una lezione di introduzione all'informatica della durata di un'ora, progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi. Da allora è diventata uno sforzo mondiale per diffondere l'informatica, iniziando con attività di programmazione della durata di 1 ora, ed espandendosi grazie ad un incredibile impegno collettivo.<a href='%{tutorials}'> Guarda le esercitazioni disponibili</a>. Lo sforzo viene supportato da più di <a href='%{partners}'>400 partner</a> e 200,000 insegnanti in tutto il mondo."
@@ -333,8 +351,8 @@ it:
   stats_hoc: "L'Ora del Codice: 5 giorni"
   stats_global: "Oltre 100 milioni di studenti hanno provato l'Ora del Codice"
   stats_girls_more: "Si sono avvicinate all'informatica più ragazze che negli ultimi 70 anni"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Ogni giorno ottengo sempre lo stesso risultato&mdash; il 100% di attenzione."- Nina Nichols Peery, Insegnante'
   stats_student: '"Sapevo che questa era un''occasione <b>irripetibile</b>."-Mariana Alzate, Quinta Elementare'
   stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti di imparare." - Michael Clark, Insegnante'
@@ -374,6 +392,7 @@ it:
   videos_obama_cs: Il Presidente Obama a proposito dell'informatica
   videos_anybody_can_learn: Chiunque Può Imparare (1 min)
   title_country_resources: Risorse specifiche per una nazione
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: L'Ora del Codice - Guida per le Province
   title_how_to_events: Come organizzare un evento dell'Ora del Codice
   title_how_to_organizations: Come organizzare un'Ora del Codice - Organizzazioni
@@ -382,6 +401,7 @@ it:
   title_how_to_volunteers: Guida per i volontari dell'Ora del Codice
   title_how_to_parents: Guida per i Genitori
   title_how_to: Guida
+  title_international_partners: Contact International Partners
   title_press_release: L'Ora del Codice Comunicato Stampa per i rappresentanti eletti
   title_op_ed: Un esempio di articolo per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice
   title_press_kit: Kit per la stampa
