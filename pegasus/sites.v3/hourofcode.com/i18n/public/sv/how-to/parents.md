@@ -5,41 +5,42 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Hur man genomför Hour of Code med sitt barn
+# How to do an Hour of Code with your child
 
-Genomför Hour Code hemma, eller låt någon volontär genomföra den i ditt barns klassrum! Så här kan man göra:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+---
 
 ## 1) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Välj ett material:
+## 2) Choose a tutorial
 
-Vi erbjuder en mängd roliga, timslånga tutorials för elever i alla åldrar, skapad av en mängd partners. [Prova dem!](<%= resolve_url('/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-**Alla Hour of Code lektioner är självinstruerande och tillåter ditt barn att arbeta i sin egen takt och kunskapsnivå**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Undersök vilken teknik som behövs
 
-Allra bäst blir upplevelsen av Hour of Code med internetuppkopplade datorer. Men det går även bra om det inte finns en dator tillgänglig. Det finns många aktiviteter som går att genomföra utan några datorer alls.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- **Testa övningarna på elevernas datorer eller surfplattor.** Kontrollera att de fungerar korrekt (med ljud och video).
-- **Vill du lära dig programmera tillsammans med ditt barn?** Prova [Parprogrammering.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Datavetenskap är social och främjar samarbete.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) Starta din Hour of Code med en inspirerande video
+## 4) Start your Hour of Code with an inspiring video
 
 Inled din Hour of Code genom att inspirera deltagarna och diskutera hur datavetenskap påverkar alla delar av våra liv.
 
 **Visa en inspirerande video:**
 
-- Originalvideon från lanseringen av Code.org, där bland annat Bill Gates, Mark Zuckerberg och basketstjärnan Chris Bosh är med (det finns olika versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuter](https://www.youtube.com/watch?v=dU1xS07N-FA) långa)
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama uppmanar alla elever att lära sig datavetenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Det är helt okej om du inte har någon, eller liten erfarenhet av IT. Här är några idéer för hur du startar din Hour of Code aktivitet:
 
-- Förklara hur teknik påverkar våra liv, med exempel som alla elever i klassrummet kommer att bry sig om och inte endast ett fåtal (berätta om appar och teknik som används för att rädda liv, hjälpa människor, spela musik och spela spel, o. s. v.).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Lista saker som använder kod i vardagslivet.
 - See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
@@ -65,15 +66,13 @@ Det är okej att svara:
 
 Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 
-**Andra dokument kring Hour of Code:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Läs igenom [ vanliga frågor och svar](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Vad kan jag göra efter Hour of Code?
 
-**Vad kan jag göra efter Hour of Code?**
-
-Hour of Code är bara första steget på en resa för att lära dig mer om hur teknik fungerar och hur du skapar egna program. För att fortsätta den här resan:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
-- Stötta ditt barns skola i att komma igång med It-utbildning av eleverna.
+- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>
