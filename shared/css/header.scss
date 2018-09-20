@@ -111,7 +111,7 @@
     }
   }
 
-  .user_menu {
+  .user_menu, .create_menu {
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
@@ -119,7 +119,7 @@
     height: 38px;
     user-select: none;
 
-    .user_name {
+    .user_name, .create_button {
       font-family: 'Gotham 4r', sans-serif;
       max-width: 120px;
       display: inline-block;
@@ -129,7 +129,7 @@
       float: left;
     }
 
-    .user_options {
+    .user_options, .create_options {
       position: absolute;
       font-size: 14px;
       top: 55px;
@@ -141,11 +141,13 @@
       font-size: 25px;
     }
 
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_up, {
       margin-top: -3px;
     }
 
-    .user_menu_arrow_down {
+    .user_menu_arrow_down,
+    .create_menu_arrow_down {
       margin-top: -2px;
     }
   }

@@ -1,7 +1,34 @@
+%link{rel:'stylesheet', type:'text/css', href:'/shared/css/create-menu.scss'}
 -# Locals: current_user, loc_prefix, [session_pairings]
 - show_updated_header = request.cookies['pm'] == 'create_header_2018'
 - if current_user
   - if show_updated_header
+    .header_button.create_menu
+      %span.create_button
+        Create
+      &nbsp;
+      %i.create_menu_arrow_down{class: "fa fa-caret-down"}
+      %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+      .create_options{style: 'display: none'}
+        %a.project_link_box
+          %img{src: "/shared/images/hadi_partovi.jpg"}
+          .project_link{href: CDO.studio_url('users/edit')}
+            Play Lab
+        %a.project_link_box
+          %img{src: "/shared/images/hadi_partovi.jpg"}
+          .project_link
+            Artist
+        %a.project_link_box
+          %img{src: "/shared/images/hadi_partovi.jpg"}
+          .project_link
+            App Lab
+        %a.project_link_box
+          %img{src: "/shared/images/hadi_partovi.jpg"}
+          .project_link
+            Game Lab
+        %a.project_link_box{href: CDO.studio_url('projects/public')}
+          .project_link#view_all_projects
+            View all projects...
     .header_button.header_user.user_menu.user_icon
       - if current_user.can_pair? && session_pairings.present?
         %i.fa.fa-users
@@ -119,6 +146,31 @@
         }
       });
     });
+
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+
+          $("#hamburger-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+
 
     if (typeof dashboard !== 'undefined') {
       dashboard.pairing.init('#{CDO.studio_url('pairing')}', hideUserOptions, #{show_pairing_dialog});
