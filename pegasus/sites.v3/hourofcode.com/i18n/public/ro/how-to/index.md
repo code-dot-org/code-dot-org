@@ -5,19 +5,23 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Cum sa sustii o Ora de Programare</h1>
+# How to teach one Hour of Code with your class
 
-Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Vizionați acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Alegeți un tutorial pentru ora dumneavoastră
 
-Noi oferim o varietate de distracţie, [ tutoriale ghidate pe student](<%= resolve_url('/learn') %>) pentru toate grupele de vârstă şi nivelurile de experienţă. Elevii parcurg activităţi pe cont propriu, deşi multe activităţi includ planuri de lecţii pentru profesori (veţi vedea link-ul, atunci când faceţi clic pe activitate) pentru a ghida discuţia sau a extinde activitatea. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promovați Ora dvs. de Cod
 
-Promovați evenimentul dvs. Hour of Code [cu aceste unelte](<%= resolve_url('/promote/resources') %>) și încurajați-i și pe alții să găzduiască propriile lor evenimente.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Planificați-vă necesarul de echipamente - computerele sunt opționale
 
@@ -40,7 +44,7 @@ Oferiti-le casti elevilor din clasa dvs sau spuneti-le sa isi aduca ei propriile
 - Clipul video original de lansare al Code.org, cu Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh. (Sunt disponibile versiuni de [1minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc) și [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Nu este nici o problemă dacă informatica este ceva nou atât pentru dumneavoastră cât și pentru elevii dvs. Iată cateva idei pentru a prezenta activitatea dvs. Hour of Code:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explicați modurile în care tehnologia are impact asupra vieților noastre, cu exemple pe care atât băieții cât și fetele le vor înțelege(vorbiți despre salvarea vieților, ajutarea oamenilor, conectarea acestora etc.).
 - Faceti o lista cu lucrurile la care folositi programarea in fiecare zi.
@@ -48,17 +52,17 @@ Oferiti-le casti elevilor din clasa dvs sau spuneti-le sa isi aduca ei propriile
 
 ## 6. Codați!
 
-**Îndrumați elevii către activitate**
+**Direct students to the activity**
 
 - Scrieți link-ul tutorialului pe tablă. Găsiți link-ul afișat în secțiunea cu [informații pentru tutorialul selectat](<%= resolve_url('/learn')%>) sub numărul de participanți.
 
-**Când elevii dvs. întâmpină dificultăţi este bine să le răspundeți:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Nu ştiu. Dar haideţi să ne dam seama de asta împreună."
 - "Tehnologia nu funcţionează întotdeauna în modul în care vrem noi."
 - "Învăţarea programarii este ca învăţarea unei limbi noi; nu veţi fi fluent imediat."
 
-**Ce se întâmplă atunci când un student termină mai devreme?**
+**What if a student finishes early?**
 
 - Elevii pot vedea toate tutoriale şi [parcurge o altă activitate Hour of Code](<%= resolve_url('/learn')%>).
 - Sau îi puteți îndemna pe elevii ce au terminat prea devreme să îi ajute pe cei ce întâmpină probleme cu activitatea.
