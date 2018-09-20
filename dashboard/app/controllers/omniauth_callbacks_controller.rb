@@ -239,7 +239,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def email_already_taken_redirect(provider:, found_provider:, email:)
-    # Note that @user.email is populated by User.from_omniauth even for students
     if found_provider == 'clever'
       redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
     else
