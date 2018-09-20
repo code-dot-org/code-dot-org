@@ -1,17 +1,17 @@
 ---
 title: <%= hoc_s(:title_partners) %>
 ---
-Hour of Code được phát triển bởi Hour of Code và máy tính khoa học giáo dục tuần tư vấn và xem xét các ủy ban.
+Giờ Lập Trình được phát triển bởi Hour of Code và Tuần Tham vấn Giáo dục Khoa học Máy tính và Ủy ban Phê bình.
 
-[Ủy ban tư vấn](<%= resolve_url('/advisory-committee') %>) bao gồm các đại diện từ K-12, học viện, nonprofits, cho lợi nhuận và tổ chức quốc tế. Ủy ban này sẽ hướng dẫn các chiến lược cho các chiến dịch Hour of Code.
+[Ủy ban Phê bình](<%= resolve_url('/advisory-committee') %>) bao gồm các đại diện từ K-12, học viện, tổ chức phi lợi nhuận, vì lợi nhuận và các tổ chức quốc tế. Ủy ban này sẽ hướng dẫn chiến lược cho các chiến dịch Giờ Lập Trình.
 
-[Ủy ban xem xét](<%= resolve_url('/review-committee') %>) bao gồm 15 nhà giáo dục trên toàn K-12 lớp ban nhạc mà đánh giá và đề nghị các hoạt động sử dụng phiếu tự đánh giá của Ủy ban tư vấn. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Ủy ban Phê bình](<%= resolve_url('/review-committee') %>) bao gồm 15 nhà giáo dục trên toàn khối K-12 để đánh giá và đề nghị các hoạt động sử dụng phiếu tự đánh giá của Ủy ban Phê bình. Các nhà giáo dục đánh giá hoạt động của sinh viên và giáo án bài học của giảng viên đã gửi đến bởi hàng trăm đối tác hoạt động của chúng tôi, đánh giá các hoạt động giáo dục có giá trị, khả năng hứa hẹn của học viên, và tiềm năng phản biện để bộc lộ khả năng đa dạng của sinh viên.
 
-Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự thành công của Hour of Code và tầm nhìn của nó cung cấp một giới thiệu về khoa học máy tính cho mỗi học sinh.
+Hoạt động của Ủy ban và sự cống hiến đã đóng góp vào sự thành công của Giờ Lập Trình và tầm nhìn của nó như cung cấp một lời giới thiệu cho khoa học máy tính đến với tất cả mọi học viên.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Các đối tác Mĩ Latinh
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Các đối tác Châu Phi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Các đối tác Châu Úc
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Các đói tác Trung Hoa
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Các đối tác Pháp
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Các đối tác Indonesia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Các đối tác Icreland
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'in' %>
 
-# India Partners
+# Các đối tác Ấn độ
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Các đối tác Nhật Bản
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Các đối tác Hà Lan
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Các đối tác New Zealand
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Các đối tác Anh Quốc
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,31 +107,25 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Các đối tác Canada
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# Đối tác chính và những nhà tài trợ
+# Các đối tác Chính và Những nhà Tài trợ Tổ chức
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 ---
 
-# Đối tác quảng cáo chính
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
-# Đối tác quốc tế
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ Cả hai Uỷ ban công việc và sự cống hiến đã góp phần vào sự
 
 ---
 
-# Các đối tác khác
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
