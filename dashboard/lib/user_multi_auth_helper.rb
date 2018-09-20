@@ -24,6 +24,17 @@ module UserMultiAuthHelper
     end
   end
 
+  def uid_for_provider(provider)
+    if migrated?
+      AuthenticationOption.find_by(
+        credential_type: provider,
+        user_id: id
+      )&.authentication_id
+    else
+      uid
+    end
+  end
+
   def update_oauth_credential_tokens(auth_hash)
     # No-op if auth_hash does not contain credentials
     return unless auth_hash.key?(:credentials)
