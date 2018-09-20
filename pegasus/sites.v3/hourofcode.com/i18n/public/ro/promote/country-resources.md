@@ -105,14 +105,14 @@ O sa gazduim varietati de distractie, tutoriale lungi, create de o varietate de 
 - Necesita timp de pregatire minim pentru organizatori
 - Sunt auto-ghidate - permit elevilor să lucreze individual, în ritmul şi nivelul de pregatire propriu
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Planificati nevoile dumneavoastră hardware - calculatoarele sunt optionale
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Testeaza tutorialele pe computerele sau dispozitivele disponibile.** Asiguraţi-vă că acestea funcţionează corect (cu sunet şi video).
-- **Previzualizați pagina de felicitări** pentru a vedea ce văd elevii atunci când termină. 
+- **Previzualizați pagina de felicitări** pentru a vedea ce văd elevii atunci când termină.
 - **Ofera casti elevilor** sau spune-le sa isi aduca fiecare de acasa, in cazul in care tutorialul functioneaza mai bine cu sunet.
 
 ## 3) Fa-ți planul in funcție de tehnologia disponibilă
