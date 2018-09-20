@@ -5,29 +5,33 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Bagaimana mengajar satu jam Hour of Code</h1>
+# How to teach one Hour of Code with your class
 
-Bergabung dengan gerakan dan perkenalkan sekelompok pelajar untuk jam pertama ilmu komputer mereka dengan langkah-langkah berikut. Hour of Code mudah dijalankan - bahkan untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Bergabung dengan gerakan ini untuk memperkenalkan pelajar kepada satu jam pertama ilmu komputer dengan langkah-langkah berikut. Hour of Code mudah dijalankan - bahkan untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Pilih tutorial untuk jam Anda
 
-Kami menyediakan beragam kesenangan, [ tutorial berpemandu siswa ](<%= resolve_url('/learn') %>) untuk semua kelompok umur dan tingkat pengalaman. Siswa melakukan aktivitas sendiri, meski banyak kegiatan termasuk rencana pelajaran untuk guru (Anda akan melihat tautan saat Anda mengklik aktivitasnya) untuk memandu diskusi atau memperluas kegiatan. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promosikan Jam Kode Anda
 
-Promosikan Jam Kode Anda [ dengan alat ini ](<%= resolve_url('/promote/resources') %>) dan dorong orang lain untuk menjadi tuan rumah acara mereka sendiri.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
-## 4. Rencanakan kebutuhan teknologi Anda - komputer bersifat opsional
+## 4. Rencanakan kebutuhan teknologi komputer Anda - bersifat opsional
 
-Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan internet. Tetapi Anda **tidak** memerlukan komputer untuk setiap anak, dan Anda bahkan dapat melakukan Hour of Code tanpa komputer sama sekali.
+Pengalaman Jam Pemrograman terbaik memiliki komputer yang terhubung dengan internet. Anda **tidak** memerlukan komputer untuk setiap anak, dan Anda bahkan dapat melakukan Hour of Code tanpa komputer sama sekali.
 
-Pastikan untuk menguji tutorial pada komputer siswa atau perangkat untuk memastikan mereka bekerja dengan baik pada browser dengan suara dan video. **bandwidth rendah?** Berencana untuk menampilkan video di depan kelas, jadi setiap siswa tidak men-download video mereka sendiri. Atau coba tutorial unplugged / offline.
+Pastikan untuk menguji tutorial pada komputer siswa atau perangkat untuk memastikan mereka bekerja dengan baik pada browser dengan suara dan video. **bandwidth rendah?** Tampilkan video di depan kelas, agark setiap siswa tidak perlu mengunduh video mereka sendiri. Atau coba tutorial unplugged / offline.
 
-Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik mereka sendiri, jika tutorial yang Anda pilih, akan lebih baik dijalankan dengan suara.
+Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa headphone mereka sendiri, jika tutorial yang Anda pilih, akan lebih baik dijalankan dengan suara.
 
-** Tidak punya cukup perangkat? </ strong> Gunakan [ pemrograman pasangan ](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu pengetahuan komputer bersifat sosial dan kolaborasi.</p> 
+** Tidak punya cukup perangkat? </ strong> Gunakan [ pemrograman pasangan ](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu komputer bersifat sosial dan kolaboratif.</p> 
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
@@ -40,7 +44,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 - Asli Kode.org peluncuran video, menampilkan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh. (Ada [ 1 menit ](https://www.youtube.com/watch?v=qYZF6oIZtfc), <a href = "https://www.youtube.com/watch?v = nKIu9yen5nc "> 5 menit </a>, dan [ 9 menit ](https://www.youtube.com/watch?v=dU1xS07N-FA) versi yang tersedia)
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Tidak apa-apa jika Anda dan siswa Anda baru mengenal ilmu komputer. Berikut adalah beberapa gagasan untuk memperkenalkan aktivitas Jam Kode Anda:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Jelaskan bagaimana teknologi mempengaruhi kehidupan kita, dengan contoh yang akan diperhatikan anak laki-laki dan anak perempuan (berbicara tentang menyelamatkan nyawa, membantu orang, menghubungkan orang, dll.).
 - Sebagai sebuah kelas, daftarkan hal-hal yang menggunakan kode dalam kehidupan sehari-hari.
@@ -48,17 +52,17 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 ## 6. Kode!
 
-**Arahkan siswa ke aktivitas**
+**Direct students to the activity**
 
 - Tuliskan link tutorial di papan tulis. Temukan tautan yang tercantum di [ informasi untuk tutorial yang dipilih ](<%= resolve_url('/learn')%>) di bawah jumlah peserta.
 
-**Bila siswa Anda mengalami kesulitan, tidak masalah lagi:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Saya kurang tahu. Mari kita mencari solusinya bersama-sama."
 - "Teknologi tidak selalu bekerja dengan cara yang kita inginkan."
 - "Belajar untuk pemrograman seperti mempelajari bahasa baru; Anda tidak akan segera menjadi fasih."
 
-**Bagaimana jika seorang siswa selesai lebih awal?**
+**What if a student finishes early?**
 
 - Siswa dapat melihat semua tutorial dan [ mencoba aktivitas Hour of Code lainnya ](<%= resolve_url('/learn')%>).
 - Atau, tanyakan pada pelajar yang selesai lebih awal untuk membantu teman kelas mereka yang memiliki kesulitan dengan aktivitas.
