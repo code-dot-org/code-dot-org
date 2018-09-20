@@ -5,19 +5,23 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Jak przeprowadzić jedną Godzinę Kodowania</h1>
+# How to teach one Hour of Code with your class
 
-Przyłącz się do inicjatywy i pomóż grupie uczniów zapoznać się z informatyką za pomocą następujących kroków. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, znajdź [lokalnego wolontariusza](<%= codeorg_url('/volunteer/local') %>) do wsparcia Cię w przeprowadzeniu Godziny Kodowania w Twojej klasie.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Wybierz samouczek dla Waszej Godziny Kodowania
 
-Oferujemy wiele zabawy, [ samouczki dla uczniów ](<%= resolve_url('/learn') %>) dla wszystkich grup wiekowych i poziomów zaawansowania. Uczniowie pracują samodzielnie, chociaż wielu aktywnościom towarzyszą plany lekcji dla nauczycieli (zobaczysz link, po kliknięciu na aktywność), do poprowadzenia dyskusji lub poszerzenia aktywności. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Promuj swoją Godzinę Kodowania
 
-Promuj swoją Godzinę Kodowania [przy pomocy tych narzędzi](<%= resolve_url('/promote') %>) i zachęć innych do organizowania ich własnych wydarzeń.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
@@ -38,27 +42,27 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 **Pokaż inspirujący film:**
 
 - W oryginalnym wideo Code.org występują Bill Gates, Mark Zuckerberg i gwiazda NBA Chris Bosh. (Do wyboru są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) oraz [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Znajdź więcej inspirujących [zasobów](<%= codeorg_url('/inspire') %>) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Jeśli Ty i Twoi uczniowie jesteście nowicjuszami w informatyce, to nie problem. Oto kilka pomysłów na rozpoczęcie Godziny Kodowania:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Wyjaśnij, jak technologia wpływa na nasze życie, używając przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (opowiedz o ratowaniu życia, pomaganiu ludziom, łączeniu ludzi itp.).
 - Wymieńcie wspólnie rzeczy, które używają kodu w życiu codziennym.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
+- Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj](<%= codeorg_url('/girls')%>).
 
 ## 6. Programuj!
 
-**Poproś uczniów, by rozpoczęli**
+**Direct students to the activity**
 
 - Napisz link do samouczka na tablicy. Znajdź link wymieniony w [informacji dla Twojego wybranego samouczka](<%= resolve_url('/learn') %>) pod liczbą uczestników.
 
-**Oto co można powiedzieć, kiedy Twoi uczniowie napotkają trudności:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Nie wiem. Sprawdźmy to razem."
 - "Technologia nie zawsze działa w sposób, jaki chcemy."
 - "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
 
-**A co zrobić, jeśli któryś z uczniów skończy zadanie wcześniej?**
+**What if a student finishes early?**
 
 - Uczniowie mogą zobaczyć wszystkie samouczki i [ spróbować innej aktywności w Godzinie Kodowania](<%= resolve_url('/learn')%>).
 - Albo poproś uczniów, którzy skończyli wcześniej, by pomogli innym, którym idzie nieco wolniej.
@@ -79,7 +83,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 [/col-33]
 
-- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
+- [Wydrukuj certyfikaty](<%= codeorg_url('/certificates')%>) dla Twoich uczniów.
 - [Wydrukuj naklejki "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) dla swoich uczniów.
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twojej szkoły.
 - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
@@ -101,7 +105,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Zachęć uczniów do kontynuowania [nauki online](<%= codeorg_url('/learn/beyond')%>).
+- [Uczestnicz](<%= codeorg_url('/professional-development-workshops') %>) osobiście w jednodniowych warsztatach by uzyskać instruktaż od doświadczonych informatyków. (Wyłącznie dla dydaktyków ze Stanów Zjednoczonych.)
 
 <%= view :signup_button %>
