@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
-import { scriptDataPropType, getLevels } from './sectionProgressRedux';
+import {scriptDataPropType, getLevels, jumpToLessonDetails} from './sectionProgressRedux';
 import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
@@ -28,6 +28,7 @@ class VirtualizedSummaryView extends Component {
     lessonOfInterest: PropTypes.number.isRequired,
     getLevels: PropTypes.func,
     onScroll: PropTypes.func,
+    jumpToLessonDetails: PropTypes.func.isRequired,
   };
 
   state = {
@@ -51,12 +52,12 @@ class VirtualizedSummaryView extends Component {
       ...progressStyles.cell,
     };
 
+    const stageData = columnIndex > 0 && scriptData.stages[columnIndex - 1];
+
     // Student rows
     if (studentStartIndex >= 0) {
-      return this.studentCellRenderer(studentStartIndex, stageIdIndex, key, cellStyle);
+      return this.studentCellRenderer(studentStartIndex, stageIdIndex, key, cellStyle, stageData.position);
     }
-
-    const stageData = columnIndex > 0 && scriptData.stages[columnIndex - 1];
 
     // Header rows
     return (
@@ -72,13 +73,14 @@ class VirtualizedSummaryView extends Component {
             relativePosition={stageData.relative_position}
             lockable={stageData.lockable}
             tooltipId={tooltipIdForLessonNumber(columnIndex)}
+            onSelectDetailView={() => this.props.jumpToLessonDetails(stageData.position)}
           />
         }
       </div>
     );
   };
 
-  studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
+  studentCellRenderer = (studentStartIndex, stageIdIndex, key, style, position) => {
     const {section, scriptData, getLevels} = this.props;
 
     // Alternate background colour of each row
@@ -106,6 +108,7 @@ class VirtualizedSummaryView extends Component {
             studentId={student.id}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
             style={progressStyles.summaryCell}
+            onSelectDetailView={() => this.props.jumpToLessonDetails(position)}
           />
         }
       </div>
@@ -160,4 +163,8 @@ export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
 export default connect(state => ({
   lessonOfInterest: state.sectionProgress.lessonOfInterest,
   getLevels: (studentId, stageId) => getLevels(state, studentId, stageId),
+}), dispatch => ({
+  jumpToLessonDetails(lessonOfInterest) {
+    dispatch(jumpToLessonDetails(lessonOfInterest));
+  }
 }))(VirtualizedSummaryView);
