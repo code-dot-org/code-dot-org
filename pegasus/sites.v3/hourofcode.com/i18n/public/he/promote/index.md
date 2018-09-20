@@ -14,7 +14,7 @@ nav: promote_nav
 
 # Get your community involved in the Hour of Code
 
-## 1. Răspândește vestea
+## 1. הפיצו את השמועה
 
 Tell your friends about the **#HourOfCode**!
 
