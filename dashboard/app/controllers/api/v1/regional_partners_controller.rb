@@ -34,22 +34,13 @@ class Api::V1::RegionalPartnersController < ApplicationController
     partner = RegionalPartner.find_by_region(zip_code, state)
 
     if partner
-      render json: serialize_partner(partner)
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
     else
       render_404
     end
   end
 
   private
-
-  def serialize_partner(partner)
-    # The scope is not being passed to the serializer with `render json: serializer:` syntax,
-    # so initialize this explicitly.
-    # TODO (Andrew): Look into updating our very outdated version of ActiveModelSerializers
-    Api::V1::Pd::RegionalPartnerSerializer.new(
-      partner
-    ).attributes
-  end
 
   # Get the regional partner's cohort capacity for a specific role
   # @param role (ex: 'csd_teachers' or 'csf_facilitators')
