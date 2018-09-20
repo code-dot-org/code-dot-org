@@ -48,7 +48,7 @@ start)
         run "$CMD"
         ;;
 stop)
-        if sig TERM
+        if sig INT
         then
           while sig 0
           do
@@ -60,7 +60,7 @@ stop)
         echo >&2 "Not running"
         ;;
 stop-with-status)
-        if sig TERM
+        if sig INT
         then
           # give up with error status if the process doesn't stop within 20 seconds
           for i in `seq 1 10`;
@@ -80,17 +80,12 @@ force-stop)
         ;;
 restart)
         # Stop current process and wait for it to complete.
-        sig TERM
+        sig INT
         while sig 0; do sleep 2; done
         # Start a new process.
         run "$CMD"
         ;;
-reload)
-        sig USR2 && echo reloaded OK && exit 0
-        echo >&2 "Couldn't reload, starting '$CMD' instead"
-        run "$CMD"
-        ;;
-upgrade)
+reload|upgrade)
         # Signal USR2 to current process.
         if sig 0 &&
           old_workers=$(get_workers) &&
