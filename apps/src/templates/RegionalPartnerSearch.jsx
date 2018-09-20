@@ -71,7 +71,7 @@ class RegionalPartnerSearch extends Component {
     const appsOpenNow = partnerInfo && partnerInfo.apps_open_date.open_now;
     const appsOpenDate = !appsOpenNow && partnerInfo && partnerInfo.apps_open_date.earliest_open_date;
 
-    const applicationLink = (partnerInfo && partnerInfo.link_to_application) ||
+    const applicationLink = (partnerInfo && partnerInfo.link_to_partner_application) ||
       "https://studio.code.org/pd/application/teacher";
 
     return (
@@ -134,14 +134,14 @@ class RegionalPartnerSearch extends Component {
             {!partnerInfo.csp_cost && (
               <div>The cost of the program for CS Principles teachers is TBD.</div>
             )}
-            {partnerInfo.cost_description && (
-              <div>{partnerInfo.cost_description}</div>
+            {partnerInfo.cost_scholarship_information && (
+              <div>{partnerInfo.cost_scholarship_information}</div>
             )}
 
-            {partnerInfo.additional_information && (
+            {partnerInfo.additional_program_information && (
               <div>
                 <h3>Additional Program Information:</h3>
-                <div>{partnerInfo.additional_information}</div>
+                <div>{partnerInfo.additional_program_information}</div>
               </div>
             )}
 

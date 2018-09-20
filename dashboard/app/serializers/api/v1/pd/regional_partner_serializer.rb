@@ -1,5 +1,5 @@
 class Api::V1::Pd::RegionalPartnerSerializer < ActiveModel::Serializer
-  attributes :id, :name, :group, :properties, :contact, :summer_workshops, :csd_cost, :csp_cost, :apps_open_date
+  attributes :id, :name, :group, :contact, :summer_workshops, :csd_cost, :csp_cost, :apps_open_date, :link_to_partner_application, :cost_scholarship_information, :additional_program_information
 
   def contact
     object.contact.slice(:email, :name)
