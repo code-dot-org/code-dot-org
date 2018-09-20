@@ -11,12 +11,21 @@ ph:
   campaign_date_full: "Disyembre 4-10"
   campaign_date_year: "2017"
   campaign_date_full_year: "Disyembre 4-10, 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Sumali sa pinakamalaking kaganapan ng pag-aaral sa kasaysayan, %{campaign_date}'
   front_intro_default: 'Ang Hour of Code ay isang pandaigdigang kilusan para maabot ang milyung-milyong mga estudyante sa 180+ na mga bansa. Kahit sino, kahit saan ay maaaring mag-organisa ng kaganapan ng Hour of Code. Isang oras na pagtuturo ay pwede sa mahigit 45 na wika. Hindi kailangan ng karanasan. <strong>Mga 4 hanggang 104 na gulang.</strong>'
   front_watch_video: 'Panoorin ang bagong video'
   front_watch_regular_video: 'Panoorin ang video'
   front_volunteers: 'Nais ng mga teknikal na mga boluntaryo'
   front_start_learning: 'Magsimulang matuto'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Mga pwedeng makatulong'
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'Kung paano'
@@ -222,6 +231,8 @@ ph:
   front_join_us_challenge: "Manalo ng isang video chat para sa iyong classroom kasama ang isang tanyag na tao!"
   front_join_us_learn_more: "Matuto ng higit pa"
   signup_closed: 'Ang pagpaparehistro para sa Hour of Code ay sarado na ngayon. Mangyaring tignan ulit sa Oktubre upang mag-sign up para sa susunod na Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Mag-organisa ng Hour of Code sa panahon ng %{campaign_date}, at irehistro dito.'
   signup_name_label: 'Iyong pangalan'
   signup_name_error: 'Kailangan ang pangalan.'
@@ -243,6 +254,11 @@ ph:
   signup_your_event: 'I sign up ang iyong event'
   signup_host_an_hour: 'Mag host ng Hour'
   signup_match_volunteer: 'Tulungan mo akong makahanap ng isang lokal na software engineer para bigyang-inspirasyon ang aking mga estudyante'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Ilalagay namin ng pangalan ng iyong paaralan at lungsod sa mapa kapag ikaw ay nag-register. Kung mag-ho-host ka ng maraming kaganapan, mangyaring mag-sumite ng magkaibang pangalan o email para sa bawat isa. Binibilang lamang namin ang isang kaganapan sa bawat kombinasyon ng pangalan at email."
   signup_registration_deadline: "Ang pagpaparehistro para sa Hour of Code ay magsasara ng Disyembre 11."
   signup_name_placeholder: 'iyong Pangalan'
@@ -265,6 +281,7 @@ ph:
   signup_thank_you_message: 'Nagpadala na kami ng kumpirmasyon sa iyong email kasama ang importasyon upang makapagsimula.'
   map_title: "Mapa ng Hour of Code"
   map_header: '# Hour of Code events sa buong mundo'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Tignan ang lahat ng mga kaganapan'
   map_header_company: '# ng mga organizer ng kumpanya'
   map_header_country: '# sa %{country}'
@@ -280,6 +297,7 @@ ph:
   meta_tag_twitter_title: 'Parating na ang Hour of Code'
   meta_tag_twitter_description: 'Ang Hour of Code ay isang pandaigdigang kilusan na umaabot sa halos sampung milyong mag-aaral sa 180+ na bansa at sa 30 mga wika. Edad 4-104.'
   twitter_default_text: "Sasali ako sa magaganap na #HourOfCode ngaung taon, Ikaw? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'Ano ba ang Hour of Code?'
   hoc_faq_what_is_hoc_a: "Ang Hour of Code ay nagsimula bilang isang oras na pagpapakilala sa computer science, dinisenyo upang gawing simple ang \"code\", upang ipakita na pwedeng matutunan ng kahit sino ang pangunahing kaalaman, at upang palawakin ang partisipasyon sa larangan ng computer science. Ito ay naging isang pandaigdigang pagsisikap upang ipagdiwang ang computer science, simula sa 1-oras na aktibidad ng coding ngunit pinapalawak ang lahat ng uri ng mga pagsisikap ng komunidad. Suriin ang<a href='%{tutorials}'>mga pagtuturo at mga aktibidad</a>. Itong kampanya ng grassroots ay suportado ng higit<a href='%{partners}'> sa 400 na mga kasosyo</a> at 200,000 na mga tagapagturo sa buong mundo."
@@ -374,6 +392,7 @@ ph:
   videos_obama_cs: Si Presidente Obama sa computer science
   videos_anybody_can_learn: Kahit sino pwede matuto (1 min)
   title_country_resources: Partikular na Pinagkukunan ng Bansa
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Paano-gawin ng Hour of Code para sa mga Distrito
   title_how_to_events: Paano-gawin ang kaganapan ng Hour of Code
   title_how_to_organizations: Paano mag-host ng Hour of Code - Mga Organisasiyon
@@ -382,6 +401,7 @@ ph:
   title_how_to_volunteers: Paano-gawin na gabay para sa mga boluntaryo ng Hour of Code
   title_how_to_parents: Paano-gawin na gabay para sa mga magulang
   title_how_to: Paano-gawin na Gabay
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code na Press Release para sa mga Napiling mga Opisyal
   title_op_ed: Halimbawang Op-ed na sumusuporta sa Computer Science Education Week at Hour of Code
   title_press_kit: Press Kit
