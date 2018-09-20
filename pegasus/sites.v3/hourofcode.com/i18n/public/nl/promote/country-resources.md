@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Er is minimale voorbereiding vereist van de organisatoren
 - Zij zijn zelf-geleid, die leerlingen toe laten om op hun eigen tempo en vaardigheidsniveau kunnen werken
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Plan uw hardware benodigdheden - computers zijn optioneel
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Probeer de opdrachten op de computers of apparaten van leerlingen.** Controleer dat ze goed werken (met geluid en video).
-- **Bekijk de felicitatiepagina alvast** om te zien wat leerlingen zien wanneer ze klaar zijn. 
+- **Bekijk de felicitatiepagina alvast** om te zien wat leerlingen zien wanneer ze klaar zijn.
 - **Zorg voor koptelefoons voor de klas**, of vraag leerlingen ze zelf mee te nemen, als de opdracht die je kiest het beste werkt met geluid.
 
 ## 3) Plan vooruit op basis van de beschikbare techniek
