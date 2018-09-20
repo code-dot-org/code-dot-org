@@ -53,8 +53,6 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
-    instructions
-    markdown_instructions
     authored_hints
     instructions_important
     display_name
@@ -68,28 +66,38 @@ class Level < ActiveRecord::Base
   # Temporary aliases while we transition between naming schemes.
   # TODO: elijah: migrate the data to these new field names and remove these
   def short_instructions
-    read_attribute('properties')['instructions']
+    read_attribute('properties')['short_instructions'] || read_attribute('properties')['instructions']
   end
+  alias_method :instructions, :short_instructions
 
   def short_instructions=(value)
-    read_attribute('properties')['instructions'] = value
+    read_attribute('properties')['short_instructions'] = value
+    read_attribute('properties')['instructions'] = nil
   end
+  alias_method :instructions=, :short_instructions=
 
   def short_instructions?
+    !!JSONValue.value(read_attribute('properties')['short_instructions']) ||
     !!JSONValue.value(read_attribute('properties')['instructions'])
   end
+  alias_method :instructions?, :short_instructions?
 
   def long_instructions
-    read_attribute('properties')['markdown_instructions']
+    read_attribute('properties')['long_instructions'] || read_attribute('properties')['markdown_instructions']
   end
+  alias_method :markdown_instructions, :long_instructions
 
   def long_instructions=(value)
-    read_attribute('properties')['markdown_instructions'] = value
+    read_attribute('properties')['long_instructions'] = value
+    read_attribute('properties')['markdown_instructions'] = nil
   end
+  alias_method :markdown_instructions=, :long_instructions=
 
   def long_instructions?
+    !!JSONValue.value(read_attribute('properties')['long_instructions']) ||
     !!JSONValue.value(read_attribute('properties')['markdown_instructions'])
   end
+  alias_method :markdown_instructions?, :long_instructions?
 
   def self.permitted_params
     super.concat(['short_instructions', 'long_instructions'])
@@ -113,11 +121,11 @@ class Level < ActiveRecord::Base
     attributes = new_attributes.stringify_keys
 
     # TODO: elijah: migrate the data to these new field names and remove these
-    if attributes.key?('short_instructions')
-      attributes['instructions'] = attributes.delete('short_instructions')
+    if attributes.key?('instructions')
+      attributes['short_instructions'] = attributes.delete('instructions')
     end
-    if attributes.key?('long_instructions')
-      attributes['markdown_instructions'] = attributes.delete('long_instructions')
+    if attributes.key?('markdown_instructions')
+      attributes['long_instructions'] = attributes.delete('markdown_instructions')
     end
 
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
