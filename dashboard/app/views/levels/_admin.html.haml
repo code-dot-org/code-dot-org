@@ -119,7 +119,7 @@
       .admin-report-abuse{ style: 'display: none;' }
         = link_to 'Report Abuse', '/report_abuse'
 
-      #disable-auto-moderation{'style' => ('display: none;' unless !content_moderation_disabled)}
+      #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
         %br
         %button{id: "disable-auto-moderation", class: "btn btn-default btn-sm"}
           Disable automated moderation
