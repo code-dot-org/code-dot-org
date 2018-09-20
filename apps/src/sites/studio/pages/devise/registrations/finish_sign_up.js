@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import i18n from "@cdo/locale";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
@@ -6,7 +7,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
 const STUDENT_ONLY_FIELDS = ["#student-name-label", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#name-field", "#gender-dropdown", "#terms-of-service"];
+const SHARED_FIELDS = ["#name-field", "#gender-dropdown", "#terms-of-service", "#submit"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -62,21 +63,25 @@ $(document).ready(() => {
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
-        <SchoolInfoInputs
-          schoolType={schoolData.schoolType}
-          country={schoolData.country}
-          ncesSchoolId={schoolData.ncesSchoolId}
-          schoolName={schoolData.schoolName}
-          schoolCity={schoolData.schoolCity}
-          schoolState={schoolData.schoolState}
-          schoolZip={schoolData.schoolZip}
-          schoolLocation={schoolData.schoolLocation}
-          useGoogleLocationSearch={schoolData.useGoogleLocationSearch}
-          onCountryChange={onCountryChange}
-          onSchoolTypeChange={onSchoolTypeChange}
-          onSchoolChange={onSchoolChange}
-          onSchoolNotFoundChange={onSchoolNotFoundChange}
-        />,
+        <div>
+          <h5>{i18n.schoolInformationHeader()}</h5>
+          <hr/>
+          <SchoolInfoInputs
+            schoolType={schoolData.schoolType}
+            country={schoolData.country}
+            ncesSchoolId={schoolData.ncesSchoolId}
+            schoolName={schoolData.schoolName}
+            schoolCity={schoolData.schoolCity}
+            schoolState={schoolData.schoolState}
+            schoolZip={schoolData.schoolZip}
+            schoolLocation={schoolData.schoolLocation}
+            useGoogleLocationSearch={schoolData.useGoogleLocationSearch}
+            onCountryChange={onCountryChange}
+            onSchoolTypeChange={onSchoolTypeChange}
+            onSchoolChange={onSchoolChange}
+            onSchoolNotFoundChange={onSchoolNotFoundChange}
+          />
+        </div>,
         schoolInfoMountPoint
       );
     }
