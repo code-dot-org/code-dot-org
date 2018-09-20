@@ -42,6 +42,7 @@ describe('VirtualizedSummaryView', () => {
           }
         ]
       },
+      jumpToLessonDetails: () => {}
     };
   });
 
