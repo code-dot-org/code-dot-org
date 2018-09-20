@@ -10,25 +10,29 @@ class RegionalPartnerSearch extends Component {
 
   state = {
     partnerInfo: undefined,
-    zip: "",
-    allowZip: false
+    zipValue: "",
+    allowZip: false,
+    noPartner: false
   };
 
   workshopSuccess = (response) => {
-    console.log("success", response);
     this.setState({partnerInfo: response });
   };
 
   workshopFail = (response) => {
-    console.log("fail", response);
     this.setState({allowZip: true});
+  };
+
+  workshopZipFail = (response) => {
+    this.setState({noPartner: true});
   };
 
   handleStateChange = (e) => {
     this.setState({
-      zip: "",
+      zipValue: "",
       allowZip: false,
-      partnerInfo: undefined
+      partnerInfo: undefined,
+      noPartner: false
     });
 
     $.ajax({
@@ -43,13 +47,13 @@ class RegionalPartnerSearch extends Component {
   }
 
   handleZipSubmit = (event) => {
-    this.setState({partnerInfo: undefined});
+    this.setState({partnerInfo: undefined, noPartner: false});
 
     $.ajax({
       url: "/dashboardapi/v1/pd/regional_partners/find?zip_code=" + this.state.zipValue,
       type: "get",
       dataType: "json"
-    }).done(this.workshopSuccess).fail(this.workshopFail);
+    }).done(this.workshopSuccess).fail(this.workshopZipFail);
 
     event.preventDefault();
   };
@@ -96,9 +100,19 @@ class RegionalPartnerSearch extends Component {
           </form>
         )}
 
+        {this.state.noPartner || partnerInfo && (
+          <h3>Regional Partner hosting the Professional Development Program in this region:</h3>
+        )}
+
+        {this.state.noPartner && (
+          <div>
+            <div>There is no Regional Partner in your region. While we cannot guarantee availability, you can still apply should a space in a nearby region become available.</div>
+            <div>Applications open January 15, 2019</div>
+          </div>
+        )}
+
         {partnerInfo && (
           <div>
-            <h3>Regional Partner hosting the Professional Development Program in this region:</h3>
             <div>{partnerInfo.name}</div>
             <div>{partnerInfo.contact.name}</div>
             <div>{partnerInfo.contact.email}</div>
