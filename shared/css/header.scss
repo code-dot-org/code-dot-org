@@ -131,6 +131,7 @@
 
     .user_options {
       position: absolute;
+      font-size: 14px;
       top: 55px;
       right: 55px;
     }
@@ -149,6 +150,11 @@
     }
   }
 
+  .user_icon { /* copied from dashboard's .user-menu */
+    font-size: 25px;
+    border-width: 0px;
+  }
+
   #hamburger {
     padding-top: 4px;
     padding-left: 20px;
@@ -159,4 +165,3 @@
   }
 
 }
-
