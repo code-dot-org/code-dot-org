@@ -1,0 +1,13 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "func": "removeAllBehaviors",
+    "blockText": "sprite{SPRITE} stops everything",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ]
+  }
+}

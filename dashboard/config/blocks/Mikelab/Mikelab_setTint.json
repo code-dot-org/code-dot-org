@@ -1,0 +1,23 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "setTint",
+    "blockText": "change color of {THIS} to {COLOR}",
+    "args": [
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      },
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      }
+    ],
+    "methodCall": true
+  }
+}
