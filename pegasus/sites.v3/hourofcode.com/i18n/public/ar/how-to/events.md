@@ -5,21 +5,25 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# كيف أقوم بتحرير نشاط وقت التعليمات البرمجية
+# How to organize an Hour of Code assembly or event
+
+### Get your entire school or community involved in an Hour of Code!
+
+---
 
 ## 1. التحضير للحدث الخاص بك
 
 - بدلا من ذلك ، تقرر اليوم والوقت.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. لمزيد من التعليمات اطلع على [أداوات كيف تفعل](<%=localized_file('/files/elected-official.pdf')%>) خاصتنا عندما تستضيف شخصية رسمية خلال ساعة برمجة.
 - دعوة وسائل الإعلام والصحفيين. أي محطة أخبار محلية، صحيفة، مدونين التعليم/التكنولوجيا. انظر الى مجموعة صحافتنا للحصول على مساعدة.
 
 ## 2-وخلال الحدث
 
-- نشاطك[الملهم كليب](<%= resolve_url('/promote/resources#videos') %>)بدء.
+- ابدأ حدثك بأحد [الفيديوهات المشجعة](<%= resolve_url('/promote/resources#videos') %>) الخاصة بنا.
 - هذا[الإحصاءات والرسوم البيانية](<%= resolve_url('/promote/stats') %>)تقديم خطاب استهلالي يشير إلى اهميه علوم الحاسب الألى باستخدام.   
       
     
-- أفكار الحدث الأخرى: 
+- **Other event ideas**: 
     - دعوه صاحب الشركة الذي يعمل مع علم الحاسوب في الميدان.
     - دعوه سياسي محلي ونقول للطالب ان أقول لكم كيفيه ترميز الشخص الذي تدعوه.
     - لإظهار نشاط لا يتطلب اتصال إنترنت ، حدد مجموعه من الطلاب.
@@ -28,34 +32,35 @@ nav: how_to_nav
 
 ## 3. حصة كيف ذهب
 
-- مشاركه الاحداث الخاصة بك علي ألفيس بوك وتويتر. 
-- **#HourOfCode**استخدام التسمية
+Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+
+---
 
 ## المضيف ليله الاسره كودلويور الحدث مع رمز الوقت ، ودعوه الأسر للانضمام
 
-لتنظيم الحدث المسائي K-5 وعائلاتهم. تخيل دعوتهم للانضمام إلى أطفالهم في صف علوم الحاسب الألى للمشاهدة. وهي طريقه رائعه لإدماج المجتمعات الأوسع في الاعمال التجارية ودعم أسرهم لدوره علوم الحاسب الألى في مدرستك. شركائنا قد خلقت مجموعه الحدث ، بما في ذلك جميع العائلات لتشغيل ليله النوم الحدث ، والتخطيط القائمة ، وملف الخادم ، ودعوه رسائل البريد الكتروني ، والملصقات ، وعروض باور بوينت وفعاليتها. [انقر هنا لتحميل مجموعه الاحداث.](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## نموذج خطه النشاط
+---
 
-**نشاط**المدرسة العلوم الكمبيوتر علي نطاق الأسبوع التعليم بدء الاجتماع
+## Example plan for a school assembly or event
+
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**ساعة** انه وقت المدرسة يفضل ان يكون في الصباح حوالي الساعة.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-** المكان: ** غرفه اجتماعات المدرسة (المسرح ، الجمنازيوم ، الكافتيريا)   
-  
-
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
 ## بدء العرض
 
-| Time             | نشاط                                                                                                                                      |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | [من أشرطه الفيديو الملهم لدينا](<%= resolve_url('/promote/resources#videos') %>)مع شخص                                                      |
-| 10:05 - 10:15 am | ويلقي مدير المدرسة خطابا افتتاحيا يشير إلى اهميه علم الحاسوب. هذا[الإحصاءات والرسوم البيانية](<%= resolve_url('/promote/stats') %>)استخدام. |
-| 10:15 - 10:30 am | المتكلم الضيف يجعل الحديث عن نفسه ، قليلا من التكنولوجيا وكيف علم الحاسوب ياخذ دورا هاما في حياتنا اليومية.                               |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                 |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                       |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                         |
+| Time                | نشاط                                                                                                                                      |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 صباحا | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).                                               |
+| 10:05 - 10:15 صباحا | ويلقي مدير المدرسة خطابا افتتاحيا يشير إلى اهميه علم الحاسوب. هذا[الإحصاءات والرسوم البيانية](<%= resolve_url('/promote/stats') %>)استخدام. |
+| 10:15 - 10:30 صباحا | المتكلم الضيف يجعل الحديث عن نفسه ، قليلا من التكنولوجيا وكيف علم الحاسوب ياخذ دورا هاما في حياتنا اليومية.                               |
+| 10:30 - 10:40 صباحا | يقوم الطلاب بساعة برمجة استعراضية للمدرسة. لمسة اضافية: دعهم يشرحوا للمدير، للسياسي، او الطلاب الاخرين!                                   |
+| 10:40 - 11:00 صباحا | يستعرض الطلاب نشاط بدون اتصال وكيف ان علوم الكمبيوتر يمكن ان تدرس بدون استخدام الكمبيوترات.                                               |
+| 11:00 - 11:05 صباحا | يعطي المعلم الذي ساعد في وجود هذا الحدث العام للمدرسة ملاحظاته الختامية.                                                                  |
 
 <%= view :signup_button %>
