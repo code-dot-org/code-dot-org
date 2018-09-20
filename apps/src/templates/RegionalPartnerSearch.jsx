@@ -57,8 +57,16 @@ class RegionalPartnerSearch extends Component {
   render() {
     const partnerInfo = this.state.partnerInfo;
 
-    const csdWorkshops = partnerInfo && partnerInfo.summer_workshops.filter(workshop => workshop.course === 'CS Discoveries');
-    const cspWorkshops = partnerInfo && partnerInfo.summer_workshops.filter(workshop => workshop.course === 'CS Principles');
+    let workshopCollections = [
+      {
+        heading: "CS Discoveries Workshops",
+        workshops: partnerInfo && partnerInfo.summer_workshops.filter(workshop => workshop.course === 'CS Discoveries')
+      },
+      {
+        heading: "CS Principles Workshops",
+        workshops: partnerInfo && partnerInfo.summer_workshops.filter(workshop => workshop.course === 'CS Principles')
+      }
+    ];
 
     const appsOpenNow = partnerInfo && partnerInfo.apps_open_date.open_now;
     const appsOpenDate = !appsOpenNow && partnerInfo && partnerInfo.apps_open_date.earliest_open_date;
@@ -94,14 +102,15 @@ class RegionalPartnerSearch extends Component {
             <div>{partnerInfo.contact.name}</div>
             <div>{partnerInfo.contact.email}</div>
 
-            {csdWorkshops.length === 0 && cspWorkshops.length === 0 && (
+            <h3>Summer workshop(s):</h3>
+            {workshopCollections[0].workshops.length === 0 && workshopCollections[1].workshops.length === 0 && (
               <div>Summer workshop dates and locations are TBD</div>
             )}
-            <h3>Summer workshop(s):</h3>
-            {csdWorkshops.length > 0 && (
-              <div>
-                <h4>CS Discoveries Workshops</h4>
-                {csdWorkshops.map((workshop, index) => (
+
+            {workshopCollections.map((collection, collectionIndex) => collection.workshops.length > 0 && (
+              <div key={collectionIndex}>
+                <h4>{collection.heading}</h4>
+                {collection.workshops.map((workshop, index) => (
                   <div key={index}>
                     <div>{workshop.workshop_date_range_string}</div>
                     <div>{workshop.location_name}</div>
@@ -109,7 +118,7 @@ class RegionalPartnerSearch extends Component {
                   </div>
                 ))}
               </div>
-            )}
+            ))}
             <div>In addition to the summer workshop, the professional learning program includes 4 workshops (dates TBD) and online support throughout the the year.</div>
 
             <h3>Cost and scholarship information:</h3>
