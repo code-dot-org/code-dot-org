@@ -483,7 +483,7 @@ class Blockly < Level
   end
 
   def shared_blocks
-    Block.for(type)
+    Block.for(type == 'Craft' ? 'craft' : type)
   end
 
   def shared_functions
