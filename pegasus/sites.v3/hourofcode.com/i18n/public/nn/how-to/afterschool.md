@@ -7,23 +7,25 @@ nav: how_to_nav
 
 # Korleis undervise Kodetimen på AKS/SFO og fritidsklubbar
 
-Bli med i rørsla og introdusér ei gruppe elevar til deira fyrste time i koding med desse trinna. Kodetimen er enkel å organisere, sjølv for nybyrjarar! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Bli med i rørsla og introdusér ei gruppe elevar til deira fyrste time i koding med desse trinna. Kodetimen er enkel å organisere, sjølv for nybyrjarar! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
+
+---
 
 ## 1. Sjå denne rettleiingsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Vel ei oppgåve
 
-I samarbeid med våre partnere har vi laget fleire [morosamme en-times oppgaver](<%= resolve_url('https://code. org/learn') %>) tilpassa ulike alderstrinn. [Prøv dei!](<%= resolve_url('/learn') %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Prøv dei!](<%= resolve_url('/learn') %>)
 
-**Alle kodetimeaktivitetar** krev minimal førebuingstid, og er sjølvforklarande slik at deltakarane kan arbeide i eige tempo og dugleiksnivå.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-Treng du ein **timeplan** for gjennomføring av Kodetimen på Sfo / Aks? Sjekk ut denne [malen](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Marknadsfør Kodetimen din
 
-Sprei ordet om Kodetimen [med desse verktya](<%= resolve_url('/promote') %>) og oppmuntre andre til å arrangere eigne kodetimar.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
 ## 4. Planlegg kva du har bruk for av utstyr - datamaskiner er valfrie
 
@@ -34,8 +36,6 @@ Husk å teste at alle delene av undervisningsopplegget fungerer med lyd og bilde
 Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgåva du vel fungerer best med lyd.
 
 **Manglar du datamaskiner eller einingar?** Bruk [par-programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevane går saman to og to, vil dei hjelpe kvarandre og kreve mindre av læraren. Dei vil også oppleva at programmering er sosialt og handlar om samarbeid.
-
-<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Start Kodetimen din med ein inspirerande video
 
@@ -48,78 +48,38 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 - [President Obama oppmoder alle elevar til å lære informatikk](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Andre inspirerande videoklipp kan du finne [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det er heilt greitt om du er fersk innan programmering. Her er nokre idear du kan bruke til å presentere Kodetimen:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Forklar korleis teknologi påverkar liva våre med eksempel som både gutar og jenter kan kjenne seg igjen i (snakk om appar og teknologi som vert brukte til å redde liv, hjelpe folk, setje menneske i kontakt med kvarandre, eller anna).
 - Snakk om ting i kvardagen som har kode i seg.
 - Sjå tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls') %>).
 
-**Treng du meir rettleiing?** Last ned denne [læringsmalen](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Start å kode!
 
-**Lei deltakarane til aktiviteten**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-- Skriv adressen til oppgaveteksten på tavlen. Lenken finner du sammen med annen [informasjon om oppgaven du har valgt](<%= resolve_url('/learn') %>), like under deltagerantallet.
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**Når elevene har spørsmål eller synes noe er vanskelig, er det helt greit å svare:**
-
-- "Eg veit ikkje. La oss finne ut av det i lag."
-- «Det er ikkje alltid teknologien gjer seg slik vi vil.»
-- "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
-
-**Kva gjer ein om nokon vert tidleg ferdig?**
-
-- Du kan oppmuntre elevene til å prøve ut en av de andre aktivitetene eller oppgavene som er tilgjengelig på Kodetimens nettsider: [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Eller du kan be de som er raskt ferdig om å hjelpe andre som trenger det.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Gjer stas på deltakarane
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Skriv ut "Eg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>)-klistremerke til elevane dine.
-- [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til skulen din.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 ## Andre ressursar til Kodetimen for lærarar:
 
-- Se [anbefalte fremgangsmåter](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra tidligere arrangører av Kodetimen.
-- Se på opptaket av vårt webinar [Lærerens Guide til Kodetimen](https://youtu.be/EJeMeSW2-Mw).
-- Sjekk ut råd, tips og erfaringer fra andre lærere på [Kodetimens lærerforum](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Sjå på [ofte stilte spørsmål om Kodetimen](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Kva kjem etter Kodetimen?
 
-Kodetimen er berre første steget på ei reise for å lære seg meir om korleis teknologi fungerer og korleis du lagar dine eigne program. For å halde fram på denne reisa:
-
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>
