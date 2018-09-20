@@ -33,8 +33,8 @@ A new, streamlined process for securing a substitute CS Discoveries/CS Principle
 [**Back to the top**](#top)
 ________________
 <a id="page"></a>
-## Example Facilitator One Pager
-The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
+## Example Facilitator One Pager for 6-12 Programs
+The facilitator one pager should be sent to facilitators at least 10 days prior to the academic year workshops. It provides facilitators with the logistical information needed to run their workshop.
 
 Use <a href="https://docs.google.com/document/d/1FobsNOHi91ioe5ZoCeiWNgDslQkTPF4w31j2ii8q4Bk/edit" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
 
