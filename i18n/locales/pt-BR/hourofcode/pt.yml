@@ -11,12 +11,21 @@ pt:
   campaign_date_full: "4-10 de dezembro"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10 de dezembro de 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Junte-se ao maior evento de aprendizagem da história, %{campaign_date}'
   front_intro_default: 'A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes em mais de 180 países. Qualquer um, em qualquer lugar, pode organizar um evento da Hora do Código. Tutoriais de uma hora estão disponíveis em mais de 45 idiomas. Não é necessário experiência. <strong>Ideal para as pessoas de 4 a 104 anos.</strong>'
   front_watch_video: 'Assista ao novo vídeo'
   front_watch_regular_video: 'Assistir ao vídeo'
   front_volunteers: 'Procuramos voluntários técnicos'
   front_start_learning: 'Comece a aprender'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Recursos'
   header_menu_faq: 'Perguntas Frequentes'
   header_menu_how_to: 'Guia prático'
@@ -222,6 +231,8 @@ pt:
   front_join_us_challenge: "Ganhe uma chamada de vídeo para sua sala de aula com uma celebridade!"
   front_join_us_learn_more: "Saiba mais"
   signup_closed: 'Estão encerradas as inscrições para a Hora do Código. Por favor, verifique novamente em outubro para se inscrever para a próxima Hora do Código.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organize uma Hora do Código durante %{campaign_date} e registre-a aqui.'
   signup_name_label: 'Seu nome'
   signup_name_error: 'O nome é obrigatório.'
@@ -243,6 +254,11 @@ pt:
   signup_your_event: 'Registre seu evento'
   signup_host_an_hour: 'Organize um evento'
   signup_match_volunteer: 'Ajude-me a encontrar um engenheiro de software na região para inspirar meus alunos'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Se você está sediando vários eventos, envie um nome único ou um e-mail para cada evento. Contamos apenas um evento por nome e por combinação de e-mail."
   signup_registration_deadline: "As inscrições para a Hora do Código encerram-se no dia 11 de dezembro."
   signup_name_placeholder: 'Seu nome'
@@ -265,6 +281,7 @@ pt:
   signup_thank_you_message: 'Enviamos um e-mail de confirmação com informações para ajudá-lo a começar.'
   map_title: "Mapa da Hora do Código"
   map_header: '# eventos cadastrados para Hora do Código 2017'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Ver todos os eventos'
   map_header_company: '# por empresa'
   map_header_country: '# no(a) %{country}'
@@ -280,6 +297,7 @@ pt:
   meta_tag_twitter_title: 'Hora do Código: Qualquer pessoa pode aprender'
   meta_tag_twitter_description: 'A Hora do Código é um movimento global que atinge dezenas de milhões de estudantes de todas as idades em mais de 180 países e mais de 45 idiomas.'
   twitter_default_text: "Vou participar da #HoraDoCodigo deste ano, e você? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Perguntas frequentes'
   hoc_faq_what_is_hoc_q: 'O que é a Hora do Código?'
   hoc_faq_what_is_hoc_a: "A Hora do Código começou como uma introdução de uma hora à ciência da computação, criada para desmistificar a programação e mostrar que qualquer pessoa pode aprender os fundamentos básicos e ampliar a participação na área desta ciência. Desde então ela tornou-se um esforço global para celebrar a ciência da computação, começando com atividades de programação com 1 hora de duração, mas expandindo-se para todos os tipos de esforços de comunidade. Confira os <a href='%{tutorials}'>tutoriais e atividades</a>. Esta campanha popular é apoiada por mais de <a href='%{partners}'>400 parceiros</a> e 200 mil educadores no mundo todo."
@@ -374,6 +392,7 @@ pt:
   videos_obama_cs: Presidente Obama fala sobre ciência da computação
   videos_anybody_can_learn: Qualquer pessoa pode aprender (1 min)
   title_country_resources: Recursos específicos do país
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Guia da Hora do Código para distritos
   title_how_to_events: Guia para fazer um evento da Hora do Código
   title_how_to_organizations: Como organizar um evento da Hora do Código - Organizações
@@ -382,6 +401,7 @@ pt:
   title_how_to_volunteers: Guia prático para voluntários da Hora do Código
   title_how_to_parents: Guia prático para os pais
   title_how_to: Guia prático
+  title_international_partners: Contact International Partners
   title_press_release: Comunicado de imprensa da Hora do Código para representantes políticos
   title_op_ed: Exemplo de artigo de opinião em apoio à Semana da Educação em Ciência da Computação e à Hora do Código
   title_press_kit: Kit para a imprensa
@@ -749,7 +769,7 @@ pt:
   tutorial_techfpp_name: "Introdução à Programação Funcional com Python"
   tutorial_codesterscr_name: "Cheer Routines"
   tutorial_grokdisease_name: "Epidemia de Doença"
-  tutorial_techec_name: "Explaining Closures in JS"
+  tutorial_techec_name: "Explicando Funções em JS"
   tutorial_rgbegin_name: "RoboGarden - Iniciante"
   tutorial_myradream_name: "Actimator: o Sonho de Myra"
   tutorial_thinkfun_name: "Robot Repair: você consegue consertar o cérebro de um Robô?"
@@ -824,50 +844,50 @@ pt:
   tutorial_lbvariables_name: "Variáveis com Littlebits"
   tutorial_lbfunctions_name: "Diversão com Funções & littleBits"
   tutorial_lblogic_name: "Lições de lógica com littleBits"
-  tutorial_lbworld_name: "littleBits: Change the world arcade challenge"
+  tutorial_lbworld_name: "batidinhas: Mude o desafio de vídeogame do mundo"
   tutorial_lbloops_name: "Leap into loops with littleBits!"
-  tutorial_lbtug_name: "littleBits: Tug of War"
+  tutorial_lbtug_name: "littleBits: Cabo-de-guerra"
   tutorial_lbpotato_name: "littleBits: Batata Quente...da Morte!"
-  tutorial_lbguitar_name: "littlebits: Rockstar Guitar"
+  tutorial_lbguitar_name: "littleBits: Estrela do Rock"
   tutorial_lbio_name: "Entradas & Saídas com littleBits"
-  tutorial_wonpuppy_name: "Dash the Puppy (E3)"
-  tutorial_woncue_name: "Cue's Starter Guide"
-  tutorial_wonzoo_name: "Dot at the Petting Zoo (B2)"
-  tutorial_wontrip_name: "Dash's Road Trip (F2)"
-  tutorial_woncollect_name: "Dash the Collector (B1)"
-  tutorial_wonsecret_name: "Cue's Secret Message"
+  tutorial_wonpuppy_name: "Contorne o Filhote (E3)"
+  tutorial_woncue_name: "Sugestão para guia inicial"
+  tutorial_wonzoo_name: "Ponto no zoológico (B2)"
+  tutorial_wontrip_name: "Contorno da viagem de carro (F2)"
+  tutorial_woncollect_name: "Contorne o coletor (B1)"
+  tutorial_wonsecret_name: "Sugestão para a mensagem secreta"
   tutorial_hsscience_name: "Hopscotch: Make Interactive Science Models on Your iPad/iPhone!"
   tutorial_popculture_name: "Pop Culture Data Science"
   tutorial_legorobust_name: "Robust Structures – LEGO® Education WeDo 2.0"
   tutorial_legoplants_name: "Plants and Pollinators – LEGO® Education WeDo 2.0"
   tutorial_legopark_name: "Autonomous Parking – LEGO® MINDSTORMS® Education EV3"
-  tutorial_legodetect_name: "Object Detection – LEGO® MINDSTORMS® Education EV3"
+  tutorial_legodetect_name: "Detecção de objetos - LEGO® MINDSTORMS® Education EV3"
   tutorial_legolight_name: "Automatic Headlights – LEGO® MINDSTORMS® Education EV3"
   tutorial_alexa_name: "Amazon Alexa Fact Skill Tutorial: My School Facts"
   tutorial_grokpetmicro_name: "Virtual Pet (micro:bit MicroPython)"
-  tutorial_pirateplunder_name: "Pirate Plunder"
+  tutorial_pirateplunder_name: "Saquear o pirata"
   tutorial_cadj_name: "Dispositivo DR DJ"
   tutorial_cacrazy_name: "Programe Criaturas Loucas"
   tutorial_cajump_name: "Jumping Jam"
   tutorial_carest_name: "Robo-restaurant puzzler"
   tutorial_accai_name: "Accenture Intelligent Space Exploration"
-  tutorial_vceclipse_name: "Code the Eclipse"
+  tutorial_vceclipse_name: "Codifique o Eclipse"
   tutorial_pmzero_name: "Pac-Man ZERO"
   tutorial_hsela_name: "Contando estórias: ELA + programação"
-  tutorial_ticklear_name: "What's AR?"
+  tutorial_ticklear_name: "O que é AR?"
   tutorial_bcrobot_name: "Robô BlocksCAD"
-  tutorial_bcsnow_name: "BlocksCAD Snowflake"
+  tutorial_bcsnow_name: "BlockCAD Flocos de neve"
   tutorial_ifly_name: "iFly"
-  tutorial_idowedo_name: "iDo WeDo"
+  tutorial_idowedo_name: "eu faço, nós fazemos"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
   tutorial_rmedr_name: "Program VEX EDR Robots with Blockly"
   tutorial_dksky_name: "DevKit: Build the Sky Fall App"
   tutorial_dkcurrency_name: "DevKit: Build the Currency King App"
   tutorial_dkriver_name: "DevKit: Construa o App Monstros do Rio"
   tutorial_dkball_name: "DevKit: Construa o App Bola Saltitante"
-  tutorial_spheroit_name: "Blocks 2: If/Then Else"
+  tutorial_spheroit_name: "Bloco 2: If/Then Else"
   tutorial_gameofcodes_name: "Guerra dos Códigos"
-  tutorial_blocklygames_name: "Blockly Games"
+  tutorial_blocklygames_name: "Jogos em bloco"
   tutorial_spherohello_name: "Texto 1: Olá Mundo"
   tutorial_spheroarcade_name: "Sphero Arcade Playground"
   tutorial_bcpy1_name: "Mundo do Python"
@@ -1164,23 +1184,23 @@ pt:
   tutorial_kodmaze_shortdescription: "Build your own mazes to solve and share to challenge others!"
   tutorial_codestersa_shortdescription: "Design your own fast-paced space adventure game with player controls!"
   tutorial_cmdodo_shortdescription: "Teach addition, angle and degree measurement, and multiplication with new characters."
-  tutorial_tynkerspace_shortdescription: "Learn to code in space!"
-  tutorial_gfbloons_shortdescription: "Code your own mini-game and learn the maths in Bloons TD5."
-  tutorial_raspipong_shortdescription: "Create a Pong game using a Sense HAT and some Python code."
+  tutorial_tynkerspace_shortdescription: "Aprenda a programar no espaço!"
+  tutorial_gfbloons_shortdescription: "Programe seu próprio mini-game e aprenda matemática no Bloons TD5."
+  tutorial_raspipong_shortdescription: "Crie um jogo do tipo Pong usando Sense HAT e programação em Python."
   tutorial_codehsvr_shortdescription: "Create virtual reality worlds using the A-Frame JavaScript Library!"
-  tutorial_codesterstp_shortdescription: "Learn about transformations as you guide your shapes around the coordinate plane!"
-  tutorial_codestersbb_shortdescription: "Program your own pull-and-shoot basketball game!"
-  tutorial_gfcrossyroad_shortdescription: "Code your own Crossy Road mini-game and learn to think like a computer."
+  tutorial_codesterstp_shortdescription: "Aprenda como transformar a maneira como você guia suas formas através de um plano de coordenadas!"
+  tutorial_codestersbb_shortdescription: "Programe seu próprio lançamento em um jogo de basquete!"
+  tutorial_gfcrossyroad_shortdescription: "Programe seu mine-game de uma estrada sinuosa e aprenda como um computador pensa."
   tutorial_googleww_shortdescription: "Descubra seus superpoderes de programação em uma aventura com a Mulher Maravilha."
   tutorial_codehsjsapp_shortdescription: "Programe seu primeiro app real com JavaScript!"
-  tutorial_gfmihi_shortdescription: "Code your own mini-game and learn how to introduce yourself in Te Reo Maori (the indigenous language of New Zealand)"
+  tutorial_gfmihi_shortdescription: "Programa seu próprio mini-game e aprenda você mesmo o Te Reo Maori (a língua indígena da Nova Zelândia)"
   tutorial_hopdropphone_shortdescription: "Fazer \"Não deixe o Telefone Cair\" no iPad/iPhone"
   tutorial_techfaa_shortdescription: "Simulate a visually impressive life-like behavior of group entities"
-  tutorial_codehsjsgraph_shortdescription: "Make your own graphics and drawing programs!"
+  tutorial_codehsjsgraph_shortdescription: "Crie seu próprio gráfico e desenhe programas!"
   tutorial_thunkable_shortdescription: "1 hora, 10 apps"
   tutorial_hopcrossyroad_shortdescription: "Fazer Crossy Road no iPad/iPhone"
   tutorial_switchglitch_shortdescription: "Programe robôs bonitinhos e ajude-os a salvar a galáxia!"
-  tutorial_codecar_shortdescription: "Use typed code to control the lights and buttons of a simulated Code Car!"
+  tutorial_codecar_shortdescription: "Use o código digitado para controlar as luzes e os botões de um programa de simulação de carro!"
   tutorial_codesterscp_shortdescription: "Learn about the coordinate plane by sending your sprite to pick up all its missing winter clothes!"
   tutorial_grokpetblock_shortdescription: "This activity is designed to introduce you to embedded programming using friendly blocks, and has been specially designed for the Hour of Code. Use the blocks and a micro:bit to make a pet that you can feed and play with. No BBC micro:bit? No problem! This course includes a full micro:bit simulator, so you'll be able to do everything you'd do on a real micro:bit!"
   tutorial_techbim_shortdescription: "Aprenda como manipular imagens sem utilizar bibliotecas externas"
@@ -1233,9 +1253,9 @@ pt:
   tutorial_codehswd_shortdescription: "Construa um website!"
   tutorial_turtlerobot_shortdescription: "Um jogo de programação feito para crianças 2-6. Ajuda a ensinar chamada de função."
   tutorial_ozoevo_shortdescription: "Utilize o campo de força do Evo do Ozobot para brincar, então crie jogos incríveis"
-  tutorial_ozoexped_shortdescription: "Color code your way through space!"
+  tutorial_ozoexped_shortdescription: "Programe as cores do seu caminho através do espaço!"
   tutorial_ozojourney_shortdescription: "Programe seu robô Ozobot para circunavegar o mundo."
-  tutorial_ozocodes_shortdescription: "Pre-readers place Ozocodes logically on a drawing of their name so Ozobot robots can walk from left to right."
+  tutorial_ozocodes_shortdescription: "Pré-leitores colocaram nomes lógicos nos Ozoprogramas deles, agora os robôs conseguem andar da esquerda para a direita."
   tutorial_ozoeclipse_shortdescription: "Modele corpos em órbita, eclipses e as fases da lua com robôs Ozobot."
   tutorial_ozosimulator_shortdescription: "Learn about programming languages using a marker and paper."
   tutorial_ozoalgorithm_shortdescription: "Write an algorithm for Ozobot robots to show and answer multiplication problems."
@@ -1762,7 +1782,7 @@ pt:
   tutorial_frzn_language: "Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês, Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano, Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano e outros 19 idiomas"
   tutorial_cocom_language: "Inglês, Árabe, Búlgaro, Chinês, Tcheco, Dinamarquês, Holandês, Francês, Alemão, Grego, Hebraico, Húngaro, Indonésio, Italiano, Japonês, Coreano, Norueguês, Persa, Polonês, Português, Russo, Espanhol, Sueco, Turco, Ucraniano, Vietnamita e outros 9 idiomas"
   tutorial_play-lab_language: "Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês, Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano, Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano e outros 19 idiomas"
-  tutorial_boxisland_language: "English, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
+  tutorial_boxisland_language: "Inglês, Chinês, Croata, Tcheco, Dinamarquês, Holandês, Finlandês, Francês, Alemão, Grego, Húngaro, Islandês, Indonésio, Italiano, Japonês, Coreano, Norueguês, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano, Vietnamita"
   tutorial_textcomp_language: "Somente inglês"
   tutorial_encryption_language: "Somente inglês"
   tutorial_kanopixel_language: "Somente inglês"
@@ -2025,27 +2045,27 @@ pt:
   tutorial_robomeshiq_language: "Somente inglês"
   tutorial_googlelogo_language: "Somente inglês"
   tutorial_playtune_language: "Somente inglês"
-  tutorial_computeit_language: "English, French, German, Indonesian, Italian, Portuguese, Romanian, Spanish"
-  tutorial_codesterssj_language: "English, Chinese (Traditional), Spanish"
+  tutorial_computeit_language: "Inglês, Francês, Alemão, Indonésio, Italiano, Português, Romeno, Espanhol"
+  tutorial_codesterssj_language: "Inglês, Chinês (Tradicional), Espanhol"
   tutorial_cmchat_language: "Somente inglês"
-  tutorial_tynkerdb_language: "Chinese (Simplified), English, French, German, Japanese, Spanish"
-  tutorial_cmbuild_language: "Chinese (Simplified), English, Hebrew, Japanese"
+  tutorial_tynkerdb_language: "Chinês (Simplificado), Inglês, Francês, Alemão, Japonês, Espanhol"
+  tutorial_cmbuild_language: "Chinês (Simplificado), Inglês, Hebraico, Japonês"
   tutorial_robotrattle_language: "Somente inglês"
-  tutorial_codestersh_language: "Chinese (Traditional), English, Spanish"
+  tutorial_codestersh_language: "Chinês (Tradicional), Inglês, Espanhol"
   tutorial_codehsdigipixel_language: "Somente inglês"
   tutorial_ccbinary_language: "Somente inglês"
   tutorial_codehsturtle_language: "Somente inglês"
   tutorial_grokhd_language: "Somente inglês"
   tutorial_grokem_language: "Somente inglês"
   tutorial_kodmaze_language: "Somente inglês"
-  tutorial_codestersa_language: "Chinese (Traditional), English, Spanish"
-  tutorial_cmdodo_language: "English, Hebrew"
-  tutorial_tynkerspace_language: "Chinese (Simplified), English, French, German, Japanese, Spanish"
+  tutorial_codestersa_language: "Chinês (Tradicional), Inglês, Espanhol"
+  tutorial_cmdodo_language: "Inglês, Hebraico"
+  tutorial_tynkerspace_language: "Chinês (Simplificado), Inglês, Francês, Alemão, Japonês, Espanhol"
   tutorial_gfbloons_language: "Somente inglês"
   tutorial_raspipong_language: "Somente inglês"
   tutorial_codehsvr_language: "Somente inglês"
-  tutorial_codesterstp_language: "Chinese (Simplified), English, Spanish"
-  tutorial_codestersbb_language: "Chinese (Traditional), English, Spanish"
+  tutorial_codesterstp_language: "Chinês (Simplificado), Inglês, Espanhol"
+  tutorial_codestersbb_language: "Chinês (Tradicional), Inglês, Espanhol"
   tutorial_gfcrossyroad_language: "Somente inglês"
   tutorial_googleww_language: "Somente inglês"
   tutorial_codehsjsapp_language: "Somente inglês"
@@ -2057,11 +2077,11 @@ pt:
   tutorial_hopcrossyroad_language: "Somente inglês"
   tutorial_switchglitch_language: "Somente inglês"
   tutorial_codecar_language: "Somente inglês"
-  tutorial_codesterscp_language: "Chinese (Traditional), English, Spanish"
+  tutorial_codesterscp_language: "Chinês (Tradicional), Inglês, Espanhol"
   tutorial_grokpetblock_language: "Somente inglês"
   tutorial_techbim_language: "Somente inglês"
   tutorial_techfpp_language: "Somente inglês"
-  tutorial_codesterscr_language: "Chinese (Traditional), English, Spanish"
+  tutorial_codesterscr_language: "Chinês (Tradicional), Inglês, Espanhol"
   tutorial_grokdisease_language: "Somente inglês"
   tutorial_techec_language: "Somente inglês"
   tutorial_rgbegin_language: "Somente inglês"
@@ -2119,7 +2139,7 @@ pt:
   tutorial_ozohabits_language: "Somente inglês"
   tutorial_ozoprogram_language: "Somente inglês"
   tutorial_ozopair_language: "Somente inglês"
-  tutorial_codesnoopy_language: "English, Chinese, Dutch, French, German, Italian, Korean, Malay, Portuguese, Spanish, Swedish, Thai"
+  tutorial_codesnoopy_language: "Inglês, Chinês, Holandês, Francês, Alemão, Italiano, Coreano, Malaio, Português, Espanhol, Sueco, Tailandês"
   tutorial_applabintro_language: "Somente inglês"
   tutorial_cslartist_language: "Somente inglês"
   tutorial_cslscratchjr_language: "Somente inglês"
@@ -2164,13 +2184,13 @@ pt:
   tutorial_cacrazy_language: "Somente inglês"
   tutorial_cajump_language: "Somente inglês"
   tutorial_carest_language: "Somente inglês"
-  tutorial_accai_language: "English, French, Italian, and Dutch"
+  tutorial_accai_language: "Inglês, Francês, Italiano e Holandês"
   tutorial_vceclipse_language: "Somente inglês"
   tutorial_pmzero_language: "Somente inglês"
   tutorial_hsela_language: "Somente inglês"
   tutorial_ticklear_language: "Somente inglês"
-  tutorial_bcrobot_language: "Chinese, English, French, German, Norwegian, Slovenian, Spanish"
-  tutorial_bcsnow_language: "Chinese, English, French, German, Norwegian, Slovenian, Spanish"
+  tutorial_bcrobot_language: "Chinês, Inglês, Francês, Alemão, Norueguês, Esloveno, Espanhol"
+  tutorial_bcsnow_language: "Chinês, Inglês, Francês, Alemão, Norueguês, Esloveno, Espanhol"
   tutorial_ifly_language: "Somente inglês"
   tutorial_idowedo_language: "Somente inglês"
   tutorial_diggindwarf_language: "Somente inglês"
@@ -2183,7 +2203,7 @@ pt:
   tutorial_gameofcodes_language: "Somente inglês"
   tutorial_blocklygames_language: "Espanhol, Francês, entre outros"
   tutorial_spherohello_language: "Somente inglês"
-  tutorial_spheroarcade_language: "Chinese (Simplified), English, French, German, Japanese, Spanish"
+  tutorial_spheroarcade_language: "Chinês (Simplificado), Inglês, Francês, Alemão, Japonês, Espanhol"
   tutorial_bcpy1_language: "Somente inglês"
   tutorial_bcpy2_language: "Somente inglês"
   tutorial_bcjs1_language: "Somente inglês"
