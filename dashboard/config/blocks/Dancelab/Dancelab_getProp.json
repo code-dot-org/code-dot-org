@@ -27,20 +27,12 @@
             "\"rotation\""
           ],
           [
-            "x position",
-            "\"x\""
-          ],
-          [
-            "y position",
-            "\"y\""
-          ],
-          [
-            "movement direction",
-            "\"direction\""
-          ],
-          [
             "tint",
             "\"tint\""
+          ],
+          [
+            "dance move",
+            "\"current_move\""
           ]
         ]
       }
