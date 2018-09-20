@@ -6,17 +6,13 @@
       0.9,
       0.95
     ],
-    "func": "whileTouchingAny",
-    "blockText": "while{TARGET} is touching any sprite\n{STATEMENT}",
+    "func": "whileClicked",
+    "blockText": "while {SPRITE} clicked",
     "args": [
       {
-        "name": "TARGET",
+        "name": "SPRITE",
         "type": "Sprite",
         "defer": true
-      },
-      {
-        "name": "STATEMENT",
-        "statement": true
       }
     ],
     "eventLoopBlock": true
