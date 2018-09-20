@@ -13,9 +13,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # GET /users/auth/clever/callback
   def clever
     if should_connect_provider?
-      connect_provider
+      return connect_provider
+    end
+
+    user = find_user_by_credential
+    if user
+      sign_in_clever user
     else
-      login_clever
+      sign_up_clever
     end
   end
 
@@ -115,28 +120,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to edit_user_registration_path
   end
 
-  def login_clever
-    session[:sign_up_type] = AuthenticationOption::CLEVER
-
-    @user = User.from_omniauth(auth_hash, auth_params, session)
-
-    prepare_locale_cookie @user
-
-    if @user.persisted?
-      handle_untrusted_email_signin(@user, AuthenticationOption::CLEVER)
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
-      # Note that @user.email is populated by User.from_omniauth even for students
-      if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&useClever=true"
-      else
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&email=#{@user.email}"
-      end
-    else
-      # This is a new registration
-      register_new_user(@user)
-    end
-  end
-
   def login
     auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
@@ -216,6 +199,34 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       # This is a new registration
       register_new_user user
+    end
+  end
+
+  def sign_in_clever(user)
+    prepare_locale_cookie user
+    @user = user
+    handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
+  end
+
+  def sign_up_clever
+    session[:sign_up_type] = AuthenticationOption::CLEVER
+
+    @user = User.from_omniauth(auth_hash, auth_params, session)
+
+    prepare_locale_cookie @user
+
+    if @user.persisted?
+      handle_untrusted_email_signin(@user, AuthenticationOption::CLEVER)
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
+      # Note that @user.email is populated by User.from_omniauth even for students
+      if looked_up_user.provider == 'clever'
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&useClever=true"
+      else
+        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&email=#{@user.email}"
+      end
+    else
+      # This is a new registration
+      register_new_user(@user)
     end
   end
 
