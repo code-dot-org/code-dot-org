@@ -7,23 +7,25 @@ nav: how_to_nav
 
 # Panduan mengajar satu Hour of Code dalam kelas-kelas selepas waktu persekolahan dan kelab-kelab
 
-Sertai gerakan ini dan perkenalkan sekumpulan pelajar kepada jam pertama mereka dalam sains komputer dengan langkah-langkah ini. Hour of Code mudah untuk dilaksanakan - walaupun untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Sertai gerakan ini dan perkenalkan sekumpulan pelajar kepada jam pertama mereka dalam sains komputer dengan langkah-langkah ini. Hour of Code mudah untuk dilaksanakan - walaupun untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
+
+---
 
 ## 1. Menonton video bagaimana untuk melaksanakannya ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Pilih suatu tutorial
 
-Kami menyediakan pelbagai[ tutorial yang seronok dan berjam lamanya ](<%= resolve_url('/learn') %>)untuk peserta daripada semua peringkat umur, dan kesemuanya dicipta oleh pelbagai pihak. [Marilah mencuba!](<%= resolve_url('/learn') %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Marilah mencuba!](<%= resolve_url('/learn') %>)
 
-**Semua tutorial Hour of Code** memerlukan persediaan masa yang minimum bagi para penganjur, dan mereka yang berpandukan diri - membolehkan kanak-kanak untuk melaksanakannya mengikut kadar dan tahap kemahiran mereka sendiri.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Memerlukan sebuah rancangan pengajaran untuk Hour of Code selepas waktu persekolahan?** Cuba tengok [templat](/files/AfterschoolEducatorLessonPlanOutline.docx) ini!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Mempromosikan Hour of Code anda
 
-Mempromosikan Hour of Code anda [dengan alat-alat ini](<%= resolve_url('/promote') %>) dan menggalakan orang lain untuk menjadi tuan rumah kepada acara-acara mereka sendiri.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
 ## 4. Rancangkan keperluan teknologi anda - komputer adalah tidak diwajibkan
 
@@ -34,8 +36,6 @@ Pastikan untuk menguji tutorial pada komputer atau peranti pelajar untuk memasti
 Sediakan fon kepala untuk kelas anda, atau meminta pelajar untuk menyediakan sendiri, sekiranya tutorial yang anda pilih memerlukan fungsi bunyi.
 
 **Tidak mempunyai peranti yang mencukupi?** Gunakan [pengaturcaraan pasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan dapat melihat bahawa sains komputer adalah berkaitan dengan sosial dan kerjasama.
-
-<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Mulakan Hour of Code anda dengan suatu video yang memberi inspirasi
 
@@ -48,78 +48,38 @@ Mulakan Hour of Code anda dengan memberi inspirasi kepada para peserta dan membi
 - [Presiden Obama memanggil kesemua pelajar untuk belajar sains komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Cari lebih banyak video yang memberi inspirasi [di sini](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Tidak mengapa jika anda masih lagi baru kepada sains komputer. Di sini terdapat beberapa idea untuk memperkenalkan aktiviti Hour of Code anda:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Terangkan cara-cara teknologi memberi impak kepada kehidupan kita, dengan contoh-contoh di mana kanak-kanak lelaki dan perempuan akan mengambil berat tentangnya (Bercakap tentang aplikasi dan teknologi yang digunakan untuk menyelamatkan nyawa, membantu orang ramai, menghubungkan orang ramai dan sebagainya).
 - Senaraikan perkara-perkara yang menggunakan kod dalam kehidupan seharian.
 - Lihat tip untuk menarik minat kanak-kanak perempuan dalam bidang sains komputer [di sini](<%= resolve_url('https://code.org/girls') %>).
 
-**Perlukan bimbingan lebih?** Muat turun [templat rancangan pengajaran](/files/AfterschoolEducatorLessonPlanOutline.docx) ini.
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Kod!
 
-**Memberi panduan kepada peserta mengenai aktiviti**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-- Tulis pautan tutorial di sebuah papan putih. Cari pautan yang disenaraikan pada [maklumat untuk tutorial yang terpilih](<%= resolve_url('/learn') %>) di bawah jumlah peserta.
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**Tidak mengapa jika kita menjawab sebegini apabila seseorang menghadapi kesukaran:**
-
-- "Saya tak tahu. Jom kita cuba selesaikan bersama-sama."
-- "Teknologi tidak selalunya akan menjadi apa yang kita mahukan."
-- "Belajar untuk memprogram adalah sama seperti belajar suatu bahasa yang baru; anda tidak akan fasih secara serta merta."
-
-**Apa yang perlu dilakukan sekiranya terdapat seseorang yang selesai awal?**
-
-- Menggalakkan peserta-peserta untuk mencuba satu lagi aktiviti Hour of Code di [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Atau, mintalah mereka yang sudah selesai terlebih dahulu untuk membantu orang lain yang menghadapi masalah.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Raikan
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Cetak pelekat "Saya telah melaksanakan satu Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) bagi pelajar-pelajar anda.
-- [Tempah t-shirt buatan khas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) bagi sekolah anda.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - Kongsi gambar-gambar dan video-viceo acara Hour of Code and di media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 ## Sumber Hour of Code yang lain untuk warga pendidik
 
-- Lihat [cara praktik terbaik](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) daripada penganjur-penganjur Hour of Code yang lepas.
-- Tonton rakaman kami yang mengenai [Panduan Pendidik untuk webinar Hour of Code](https://youtu.be/EJeMeSW2-Mw).
-- Lawati [Forum Hour of Code](http://forum.code.org/c/plc/hour-of-code) untuk mendapatkan nasihat, teguran dan sokongan daripada penganjur yang lain. <% if @country == 'us' %>
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Mengkaji semula [Soalan Lazim Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Apakah pula selepas Hour of Code?
 
-Hour of Code hanya merupakan langkah pertama di dalam perjalanan untuk mengetahui lebih mendalam tentang bagaimana teknologi berfungsi dan bagaimana untuk mencipta aplikasi perisian. Untuk meneruskan perjalanan ini:
-
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>
