@@ -11,12 +11,21 @@
   campaign_date_full: "දෙසැම්බර් 5-11"
   campaign_date_year: "2016"
   campaign_date_full_year: "දෙසැම්බර් 5-11, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'ඉතිහාසයේ දැවැන්තම අධ්‍යාපනික වැඩසටහන සමග සම්බන්ධවන්න, %{campaign_date}'
   front_intro_default: 'Hour of Code යනු රටවල් 180+ ක පමණ සුවහසක් සිසුන් වෙත පරිගණක අධ්‍යාපනය ලඟාකිරීමේ ගෝලීය ව්‍යාපාරයකි. ලොව ඕනෑම කෙනෙකුට, ඕනෑම තැනක, ඕනෑම ආයතනකය Hour of Code වැඩසටහනක් සංවිධානය කල හැකිය. පැය එකේ පාඨමාලා භාෂා 45කින් දැන් සමන්විතයි. කිසිම පලපුරුද්දක් අවශ්‍ය නොමැත. වයස අවුරුදු 4 සිට 104 දක්වා ඔනෑම අයෙක්ට'
   front_watch_video: 'අලුත්ම වීඩියෝව නරඹන්න'
   front_watch_regular_video: 'වීඩියෝව නරඹන්න'
   front_volunteers: 'තාක්ෂණික ස්වෙච්ඡා දායකයින් අවශ්‍යයි'
   front_start_learning: 'ඉගෙනගන්න පටන්ගන්න'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'සම්පත්'
   header_menu_faq: 'නිති අසන පැණ'
   header_menu_how_to: 'කොහොමද'
@@ -222,6 +231,8 @@
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '%{campaign_date} යන දින කීපය තුලදී Hour of Code වැඩසටහණක් සංවිධානය කරන්න, සහ මෙතනින් ලියාපදිංචිවන්න.'
   signup_name_label: 'ඔබේ නම'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@
   signup_your_event: 'ඔබේ වැඩසටහණ ලියාපදිංචි කරන්න'
   signup_host_an_hour: 'පැයක් සංවිධානය කරන්න'
   signup_match_volunteer: 'මාගේ සිසුන් දිරිමත් කරන්න මෙරට සිටින මෘදුකාංග ඉන්ජිනේරුවකු සොයන්න මට උදවු කරන්න.'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "ඔබ විසින් වැඩසටහන් කීපයක් සංවිධානය කරන්නේ නම් සෑම වැඩසටහණක් සඳහාම වෙනස් නාමයක් භාවිත කරන්න. අප විසින් සලකා බලන්නේ සෑම වැඩසටහණකටම අදාල නාමය හා එහි ඊ-මේල් ලිපිනය කන යුගලයයි."
   signup_registration_deadline: "Hour of Code ලියාපදිංචිය දෙසැම්බර් දොලොස් වන දායින් අවසන් වේ."
   signup_name_placeholder: 'ඔබේ නම'
@@ -265,6 +281,7 @@
   signup_thank_you_message: 'ආරම්භකිරීමසඳහා අවශ්‍ය උපකාරක සමඟ තහවුරු කිරිමේ පණිවිඩයක් ඔබට අප විසින් එවන ලදී.'
   map_title: "Hour of Code සිතියම"
   map_header: 'ලොවපුරා Hour of Code වැඩසටහන් # ක්'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'වැඩසටහන් සියල්ල'
   map_header_company: '# by company organizers'
   map_header_country: '%{country} හි # ක්'
@@ -280,6 +297,7 @@
   meta_tag_twitter_title: 'සැම දරුවකුම මේ අවස්ථාවට සුදුසුයි'
   meta_tag_twitter_description: 'Hour of Code යනු රටවල් 180කට වැඩිගණනක් හා භාෂා 45කට අධික සංඛ්‍යාවකින් අන්තර්ජාතිකව සිසුන් දහස් ගණනින් පරිගණක විද්‍යාවට සමීපකිරීමට පවත්වනුලබන වැඩසටහණකි. වයස 4 සිට 104.'
   twitter_default_text: "මම මේ වර්ෂයේ #Hour of Code වැසටහනට සභාගී වෙමි ඔබ? @code. rg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'නිති අසන පැණ'
   hoc_faq_what_is_hoc_q: 'මොකක්ද මේ Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code මුලින්ම ඇරඹෙන්නේ පරිගණක විද්‍යාව පිලිබඳ පැයක හඳුන්වාදීමක් ලෙසිනි. අපගේ අරමුණ වූයේ ඕනෑම අයෙකුට මූලික සිද්ධාන්ත ඉගෙනගත හැකි බව පෙන්වීමයි. දැන් මෙය ලෝක ව්‍යාප්ත කාර්යයක් බවට පත්වී ඇත. පාඩම් සහ ක්‍රියාකාරකම් <a href='%{tutorials}'>මෙතනින්</a> බලන්න. මෙම කාර්යය <a href='%{partners}'>හවුල්කරුවන් 400ක්</a> සහ අධ්‍යාපනඥයින් 200000කින් බල ගැන්වී ඇත."
@@ -333,8 +351,8 @@
   stats_hoc: "Hour of Code වැඩසටහන: දින 5යි"
   stats_global: "මිලියන 100කට අධික සිසුන් සංඛ්‍යාවක් Hour of Code උත්සාහකර ඇත"
   stats_girls_more: "පසුගිය වසර 70 තුල පරිගණක විද්‍යාව ඉගෙනගත් ගැහැණු ළමුන් ගණනට වැඩි ගණනක් මෙයින් ඉගෙනගන්නා ලදි"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"හැමදාම අපි දක්කේ එකම දේ&mdash; ඒ සියලුම දෙනාගේ කැපවීම." - Nina Nichols Peery ගුරුතුමිය'
   stats_student: '"මම දැනගෙන සිටියා මේක <b>ජීවිතේටම එක් වරක් පමණක්</b> ලැබෙන අවස්ථාවක් බවට." - 5 ශ්‍රේණියේ මරියානා සිසුවිය'
   stats_michael: '"මම <b>කවදාවත් දැකලා නෑ</b> මගේ ළමයි ඉගෙනගන්න මෙච්චර උනන්දු වෙනවා" - මයිකල් ක්ලාක් ගුරුතුමා'
@@ -374,6 +392,7 @@
   videos_obama_cs: පරිගණක විද්‍යාව ගැන ජනපති ඔබාමා
   videos_anybody_can_learn: ඕනෑම කෙනෙකුට ඉගෙනගන්න පුළුවම් (මිනිත්තු 1)
   title_country_resources: විවිධ රටවල් සඳහා විශේෂිත උපදෙස්
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: දිස්ත්‍රික්ක සඳහා උපදෙස්
   title_how_to_events: Hour of Code වැඩසටහන් සඳහා උපදෙස්
   title_how_to_organizations: සංවිධාන සඳහා - Hour of Code වැඩසටහනක් සංවිධානය කරන්නේ කෙසේද
@@ -382,6 +401,7 @@
   title_how_to_volunteers: Hour of Code ස්වෙච්ඡා සේවකයින් සඳහා උපදෙස්
   title_how_to_parents: දෙමව්පියන් සඳහා උපදෙස්
   title_how_to: උපදෙස් ගොන්න
+  title_international_partners: Contact International Partners
   title_press_release: තෝරා පත් කරගන්නා ලද නිලධාරින් Hour of Code සඳහා නිල නිවේදන
   title_op_ed: පරිගණක විද්‍යා අධ්‍යාපන සතිය සහ Hour of Code පිලිබඳව සම්මත වූ යෝජනා පිලිබඳ වූ පුවත් පත් වාර්ථා
   title_press_kit: පුවත් එකතුව
