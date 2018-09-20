@@ -5,41 +5,42 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Indlela ongaqeda iHora loKufingqwa nengane yakho
+# How to do an Hour of Code with your child
 
-Qeda iHora loKufingqwa ekhaya, okanye uvolontiye ukuyiletha ekilasini lengane yakho! Nansi indlela:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+* * *
 
 ## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Khetha isifundiso:
+## 2) Choose a tutorial
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**Zonke izifundiso zeHora loKufingqwa uzihola-ngokwakho - kuvumela ingane yakho ukuba isebenze ngezinga lokhono lwayo kanye ngesikhathi sayo**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Hlela izidingo zakho zethekhinoloji
 
-Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhumana ngakhompyutha aneinternet. Kodwa wena **awu** dingi ikhompyutha. Miningi imisebenzi "enqanyiliwe" engenziwe ngaphandle wethekhinoloji.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Vivinya izifundiso kuma khompyutha noma kumadivayisi. Yenza isiqinisekiso sokuba asebenza ngedlela efanele kusiphequluli esinomsindo nevidiyo.
-- **Ingabe ufuna ukufunda kanye nengane yakho?** Zama [izinhlelo zabasebenzisanayo.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) iKhomptutha sayensi iyabambisana futhi iyahlanganisa.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) Qala iHora loKufingqwa lakho ngevidiyo egqugquzelayo
+## 4) Start your Hour of Code with an inspiring video
 
 Qala iHora loKufingqwa lwakho ngoku khuthaza ingane yakho kanye noku xoxa ngendlela ikhompyutha sayensi inemithelela ngayo impilweni zethu mihla nemihla.
 
 **Bonisa ngevidiyo ekhuthazayo:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Kulungile uma wena nezingane zakho nibashasha kukhompyutha sayensi. Lapha kukhona amanye amasu okwazisa umsebenzi wakho weHora loKufingqwa:
 
-- Chaza izindlela ithekhinoloji ezinomthelela ngayo empilweni zethu, ngezibonelo amantombazane nabafana abazokhathala ngayo (Xoxa ngokusindiswa kwezimpilo, ukusizwa kwabantu, ukuxhumanisa abantu, njll.).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Bala izinto ezisebenzisa ukufingqwa kumpilo yemihla ngemihla.
 - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
@@ -65,15 +66,13 @@ Kwamukelekile ukuphendula:
 
 Yabelana ngezithombe kanye namavidiyo omcimbi wakho weHora loKufingqwa kwezokusakaza. Sebenzisa #iHoraloKufingqwa kanye @codeorg ukuze sikwazi ukugqamisa ngempumelelo yakho, nawe!
 
-**Ezinye izinsiza zeHora loKufingqwa:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Buyekeza i[ IMIBUZO EBUZWA NJALO kuHora loKufingqwa](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Kuyini okuza ngemva kweHora loKufingqwa?
 
-**Kuyini okuza ngemva kweHora loKufingqwa?**
-
-IHora loKufingqwa liyisi nyathelo sokuqala kuhambo lokufunda kabanzi ngokuba ithekhinoloji isebenza kanjani kanye nokuba ama aplikheyishini amasofthiwe adalwa kanjani. Ukuqhubekela phambili ngalohambo:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Siza[khangisa](%= resolve_url('/promote') %)Imfundiso yekhompyutha sayensi esifundeni sesikole sengane yakho.
+- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
 
 <%= view :signup_button %>
