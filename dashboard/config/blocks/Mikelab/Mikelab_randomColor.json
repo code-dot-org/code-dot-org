@@ -1,0 +1,8 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "randomColor",
+    "blockText": "random color",
+    "returnType": "Colour"
+  }
+}

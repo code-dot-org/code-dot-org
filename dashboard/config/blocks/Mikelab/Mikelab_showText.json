@@ -1,0 +1,35 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "showText",
+    "blockText": "show text {TEXT} {PREPOSITION} {SPRITE}",
+    "args": [
+      {
+        "name": "TEXT"
+      },
+      {
+        "name": "PREPOSITION",
+        "options": [
+          [
+            "above",
+            "\"above\""
+          ],
+          [
+            "below",
+            "\"below\""
+          ]
+        ]
+      },
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "inline": false
+  }
+}
