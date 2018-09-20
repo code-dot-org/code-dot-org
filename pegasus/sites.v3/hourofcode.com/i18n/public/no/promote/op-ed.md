@@ -5,28 +5,29 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+# Write an op-ed in support of Computer Science Education Week
 
-  
+### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
 
+### Visit [advocacy.code.org](<%= resolve_url('https://advocacy.code.org') %>) to find state specific information about computer science.
 
-Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
+---
 
-**Title: Computing…Where the Jobs Are**
+#### Title: Computing…Where the Jobs Are
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Datamaskiner er overalt. Vi har dem i lommen. Vi har dem på veggen. De er i bilene våre. De utgjør en kritisk del av infrastrukturen vår, og finnes i alt fra kraftlinjer og trafikklys til den innerste kjernen av finansmarkedene. Og alle disse datamaskinene har en ting til felles: De avhenger av programvare som skal fortelle hvordan de skal fungere.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Men hvem skal egentlig skrive denne programvaren?
+But who exactly is going to write this software?
 
-Når vi tenker på hvor raskt verden endres av denne teknologien, skulle man tro at antallet informatikkstudenter i grunnskolen var raskt stigende. Men den gang ei. Det er faktisk færre informatikkstudenter, og færre skoler som har informatikk på timeplanen, enn det var for ti år siden.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-I en tid med stadig økende etterspørsel etter gode programmerere, uteksamineres stadig færre informatikere. Selv med økende arbeidsledighet blir tusener av ledige stillinger stående ubesatt fordi alt for få innehar etterspurte kvalifikasjoner, også her i **Norge**.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
-Hva kan dette skyldes? Og hva kan vi gjøre med det?
+Why is this? And how can we address it?
 
-Problemet starter på ungdomsskolenivå, og opprettholdes gjennom videregående. Ni av ti skoler har ikke programmering på timeplanen. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
 Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
