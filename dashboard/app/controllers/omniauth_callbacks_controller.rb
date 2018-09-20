@@ -12,9 +12,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/clever/callback
   def clever
-    if should_connect_provider?
-      return connect_provider
-    end
+    return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
     if user
@@ -28,13 +26,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
-    if just_authorized_google_classroom?
-      return redirect_to '/home?open=rosterDialog'
-    end
-
-    if should_connect_provider?
-      return connect_provider
-    end
+    return redirect_to '/home?open=rosterDialog' if just_authorized_google_classroom?
+    return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
     if user
@@ -47,11 +40,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # All remaining providers
   # GET /users/auth/:provider/callback
   def all
-    if should_connect_provider?
-      connect_provider
-    else
-      login
-    end
+    return connect_provider if should_connect_provider?
+    login
   end
 
   TYPES_ROUTED_TO_ALL.each do |provider|
