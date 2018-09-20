@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Är självinstruerande så att alla kan jobba i sin takt på sin nivå
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Vad behöver du för hårdvara? -datorer är inte nödvändiga
 
 Den bästa upplevelsen av Hour of Code får du med internetuppkopplade datorer, men det behövs inte en dator per elev och du behöver inte ha datorer för att genomföra en Hour of Code.
 
 - **Testa övningarna på elevdatorer eller enheter.** Kontrollera att de fungerar korrekt (med ljud och video).
-- **Förhandsgranska Diplomsidan** för att se vad eleverna kommer att se när de är klara. 
+- **Förhandsgranska Diplomsidan** för att se vad eleverna kommer att se när de är klara.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Planera baserat på den teknik som är tillgänglig
@@ -140,6 +140,6 @@ p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtub
 
 <% else %>
 
-# Se fler övningar och material för Sverige på edvira.com/hoc!
+# Se fler övningar och material för Sverige på <edvira.com/hoc>!
 
 <% end %>
