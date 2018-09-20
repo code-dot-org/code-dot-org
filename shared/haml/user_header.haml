@@ -5,7 +5,7 @@
   - if show_updated_header
     .header_button.create_menu
       %span.create_button
-        Create
+        = I18n.t("nav.create_button.create")
       &nbsp;
       %i.create_menu_arrow_down{class: "fa fa-caret-down"}
       %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
@@ -13,22 +13,22 @@
         %a.project_link_box{href: CDO.studio_url('projects/playlab/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_playlab.png"}
           .project_link
-            Play Lab
+            = I18n.t("nav.create_button.playlab")
         %a.project_link_box{href: CDO.studio_url('projects/artist/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_artist.png"}
           .project_link
-            Artist
+            = I18n.t("nav.create_button.artist")
         %a.project_link_box{href: CDO.studio_url('projects/applab/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_applab_square.png"}
           .project_link
-            App Lab
+            = I18n.t("nav.create_button.applab")
         %a.project_link_box{href: CDO.studio_url('projects/gamelab/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_gamelab_square.png"}
           .project_link
-            Game Lab
+            = I18n.t("nav.create_button.gamelab")
         %a.project_link_box{href: CDO.studio_url('projects/public')}
           .project_link#view_all_projects
-            View all projects...
+            = I18n.t("nav.create_button.view_all")
     .header_button.header_user.user_menu.user_icon
       - if current_user.can_pair? && session_pairings.present?
         %i.fa.fa-users

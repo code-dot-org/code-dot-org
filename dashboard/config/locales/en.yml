@@ -337,6 +337,14 @@ en:
       teach: "Teach"
       about: "About"
 
+    create_button:
+      create: 'Create'
+      applab: 'App Lab'
+      artist: 'Artist'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      view_all: 'View all projects...'
+
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
