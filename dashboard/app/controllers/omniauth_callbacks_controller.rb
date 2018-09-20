@@ -149,12 +149,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       check_and_apply_oauth_takeover(@user)
       sign_in_user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
-      # Note that @user.email is populated by User.from_omniauth even for students
-      if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
-      else
-        redirect_to "/users/sign_in?providerNotLinked=#{provider}&email=#{@user.email}"
-      end
+      email_already_taken_redirect \
+        provider: provider,
+        found_provider: looked_up_user.provider,
+        email: @user.email
     else
       # This is a new registration
       register_new_user(@user)
@@ -190,12 +188,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       silent_takeover @user, auth_hash
       sign_in_user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
-      # Note that @user.email is populated by User.from_omniauth even for students
-      if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&useClever=true"
-      else
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::GOOGLE}&email=#{user.email}"
-      end
+      email_already_taken_redirect \
+        provider: AuthenticationOption::GOOGLE,
+        found_provider: looked_up_user.provider,
+        email: user.email
     else
       # This is a new registration
       register_new_user user
@@ -218,12 +214,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.persisted?
       handle_untrusted_email_signin(@user, AuthenticationOption::CLEVER)
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
-      # Note that @user.email is populated by User.from_omniauth even for students
-      if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&useClever=true"
-      else
-        redirect_to "/users/sign_in?providerNotLinked=#{AuthenticationOption::CLEVER}&email=#{@user.email}"
-      end
+      email_already_taken_redirect \
+        provider: AuthenticationOption::CLEVER,
+        found_provider: looked_up_user.provider,
+        email: @user.email
     else
       # This is a new registration
       register_new_user(@user)
@@ -251,6 +245,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       cookies[:language_].nil?
 
       set_locale_cookie(user.locale)
+    end
+  end
+
+  def email_already_taken_redirect(provider:, found_provider:, email:)
+    # Note that @user.email is populated by User.from_omniauth even for students
+    if found_provider == 'clever'
+      redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
+    else
+      redirect_to "/users/sign_in?providerNotLinked=#{provider}&email=#{email}"
     end
   end
 
