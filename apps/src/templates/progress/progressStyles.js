@@ -1,5 +1,5 @@
 import color from "@cdo/apps/util/color";
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 export const DOT_SIZE = 30;
 export const DIAMOND_DOT_SIZE = 22;
@@ -66,6 +66,18 @@ export const levelProgressStyle = (level, disabled) => {
       ...style,
       ...!disabled && hoverStyle
     };
+  } else if (
+    level.kind === LevelKind.assessment &&
+    level.status === LevelStatus.free_play_complete
+  ) {
+    style.borderColor = color.level_submitted;
+    style.backgroundColor = color.level_submitted;
+    style.color = color.white;
+  } else if (
+    level.kind === LevelKind.assessment &&
+    level.status === LevelStatus.attempted
+  ) {
+    style.borderColor = color.level_submitted;
   } else {
     if (level.status !== LevelStatus.not_tried) {
       style.borderColor = color.level_perfect;
