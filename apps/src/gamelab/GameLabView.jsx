@@ -18,6 +18,7 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
 import gamelabMsg from '@cdo/gamelab/locale';
+import experiments from "@cdo/apps/util/experiments";
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
@@ -100,7 +101,7 @@ class GameLabView extends React.Component {
           style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
-          {this.props.spriteLab && this.props.danceLab &&
+          {this.props.danceLab && experiments.isEnabled("songSelector") &&
             <div id="song_selector">
               <SongSelector
                 options={['option 1', 'option 2', 'option 3']}
