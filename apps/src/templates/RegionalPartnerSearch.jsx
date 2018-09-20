@@ -68,8 +68,9 @@ class RegionalPartnerSearch extends Component {
       }
     ];
 
-    const appsOpenNow = partnerInfo && partnerInfo.apps_open_date.open_now;
-    const appsOpenDate = !appsOpenNow && partnerInfo && partnerInfo.apps_open_date.earliest_open_date;
+    const appsOpenNow = partnerInfo && partnerInfo.apps_dates.open_now;
+    const appsOpenDate = !appsOpenNow && partnerInfo && partnerInfo.apps_dates.earliest_open_date;
+    const appsClosedNow = partnerInfo && partnerInfo.apps_dates.closed_now;
 
     const applicationLink = (partnerInfo && partnerInfo.link_to_partner_application) ||
       "https://studio.code.org/pd/application/teacher";
@@ -145,17 +146,21 @@ class RegionalPartnerSearch extends Component {
               </div>
             )}
 
-            {appsOpenNow && (
+            {appsClosedNow && (
+              <div>Applications are now closed.</div>
+            )}
+
+            {!appsClosedNow && appsOpenNow && (
               <a href={applicationLink}>
                 <button>Start application</button>
               </a>
             )}
 
-            {!appsOpenNow && appsOpenDate && (
+            {!appsClosedNow && !appsOpenNow && appsOpenDate && (
               <div>Applications open {appsOpenDate}</div>
             )}
 
-            {!appsOpenNow && !appsOpenDate && (
+            {!appsClosedNow && !appsOpenNow && !appsOpenDate && (
               <div>Applications open January 15, 2019</div>
             )}
           </div>

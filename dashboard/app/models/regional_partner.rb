@@ -80,7 +80,11 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   def earliest_summer_workshop_apps_open_date
-    Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].max).strftime('%B %e, %Y')
+    Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].min).strftime('%B %e, %Y')
+  end
+
+  def latest_summer_workshop_apps_close_date
+    Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].max).strftime('%B %e, %Y')
   end
 
   def upcoming_summer_workshops
