@@ -5,43 +5,44 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Нижче наводиться зразок резолюції підтримки тижня інформатики та її цілей, який можуть використати органи державної, місцевої влади, лідери ділових кіл тощо.
+# Write an op-ed in support of Computer Science Education Week
 
-  
+### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
 
+### Visit [advocacy.code.org](<%= resolve_url('https://advocacy.code.org') %>) to find state specific information about computer science.
 
-Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
+---
 
-**Заготовок: Інформаційні технологі... Ось де робочі місця**
+#### Title: Computing…Where the Jobs Are
 
-**Від [ІМ'Я] та [РОЗГЛЯНЬТЕ СПІВАВТОРСТВО З ОСВІТЯНИНОМ, КЕРІВНИКОМ АБО ЛІДЕРОМ ДІЛОВИХ КІЛ]**
+#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Комп'ютери є скрізь. Вони в наших кишенях. Вони на наших стінах. Вони в наших машинах. Вони є критичним елементом нашої інфраструктури, від мереж електропостачання до світлофорів та до внутрішньої роботи наших фінансових ринків. І всі ці комп'ютери мають одну спільну рису. Вони залежать він програмного забезпечення, яке каже їм, що робити.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Але хто саме писатиме це програмне забезпечення?
+But who exactly is going to write this software?
 
-Враховуючи те, наскільки швидко технології змінюють наш світ, можна було би очікувати, що число учнів, які вивчають сьогодні інформатику в освіті K-12, було би рекордно високим. Але це не так. Насправді, учнів, які, вивчають інформатику, і шкіл, які її навчають, менше, ніж десятиріччя тому.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-В той час, як попит на кваліфікованих програмістів є як ніколи високим, ми випускаємо менше фахівців з інформатики. Навіть у цей час високого рівня безробіття, тисячі робочих місць, багато з яких є тут у **[ВСТАВТЕ ШТАТ/МІСТО]**, залишаються не заповненими через брак фахівців з потрібними навичками.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
-Чому так? І як ми можемо цьому зарадити?
+Why is this? And how can we address it?
 
-Ця проблема починається в наших середніх та старших школах. Дев'ять із десяти наших шкіл не пропонують занять з інформатики. Минулого року в **[ШКІЛЬНИЙ ОКРУГ]** іспити рівня коледжу з поглибленого вивчення інформатики складали лише **[ЧИСЛО]** учнів, лише **[%]** від усіх учнів, які складали іспити з поглибленого вивчення в нашому штаті. Ми просто робимо не достатньо для того, щоби підготувати або заохотити наших учнів домагатися цих високооплачуваних, важливих посад.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Майже всі головні нововведення в інформатиці було винайдено тут, у цій країні, але ми ризикуємо втратити це лідерство, якщо не робитимемо щось зараз.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Нам потрібно щось змінити.
+We need to make some changes.
 
-**[ДОДАТКОВО ДЛЯ ШТАТІВ, ЯКИХ ЦЕ СТОСУЄТЬСЯ]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Однією з позитивних змін було би дозволити неухильним курсам з інформатики задовольняти вимоги з математики чи точних наук для випуску в старшій школі. У **[ВСТАВТЕ ШТАТ]** курси з інформатики є факультативними. З огляду на академічні вимоги, учні не можуть собі дозволити брати факультативні курси з інформатики. І внесення змін до цього може мати великий вплив. У штатах, в яких курси з інформатики зараховуються до вимог для випуску, ці курси є на п'ятдесят відсотків більшими з набагато вищим рівнем участі меншин з обмеженим доступом, ніж у штатах, які розглядають інформатику як факультатив.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Ми повинні також працювати й з молодими учнями, щоби запалити в них інтерес до інформатики та кодування. Наші діти повинні знати не лише як використовувати застосунки та грати у відеоігри — вони повинні знати, як створювати їх. Діти можуть вчити основи кодування вже з другого класу.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Нам потрібно наймати більше вчителів з інформатики, та заохочувати професійне зростання в їхній області. Сьогодні є багато інтернет-ресурсів, які можуть допомагати вчителям забезпечувати їхнім учням доступ до найновіших технологій, і залишатися в курсі цих технологій.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-За даними Бюро статистики праці, до 2020 року в галузях науки, технології, інженерії та математики буде 9.2 мільйонів робочих місць. Половина з цих робочих місць — 4.6 мільйонів — буде в комп'ютерних або інформаційних технологіях. А інформатика стає все більш основоположним знанням для 21-го сторіччя. Хто заповнить ці робочі місця, якщо наші діти не отримують можливості набути потрібних навичок?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-Цей тиждень, <%= campaign_date('full') %>, є Тижнем освіти з інформатики. В усіх школах **[ШТАТ]** наші учні братимуть участь у національній Годині коду, проясняючи для себе предмет інформатики та, сподіваємося, розпалюючи свій апетит піти вчитися далі. Я приєднаюся до них, і запрошую вас приєднатися також. Кожен повинен навчитися кодуванню. Щоб дізнатися більше та почати, відвідайте https://hourofcode.com/<%= @country %>. І підтримайте наші зусилля, запровадивши інформатику в більшій кількості шкіл **[STATE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
 <%= view :signup_button %>
