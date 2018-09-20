@@ -5,12 +5,16 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Hour of Code 이벤트를 준비하는 방법
+# How to organize an Hour of Code assembly or event
+
+### Get your entire school or community involved in an Hour of Code!
+
+---
 
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - 지역 신문, 지역 미디어, 지역 교육/공학 블로거들을 초대하세요. [프레스 키트](<%= hoc_uri('/resources/press-kit') %>)를 살펴보시면 됩니다.
 
 ## 2. During your event
@@ -19,7 +23,7 @@ nav: how_to_nav
 - 이 [통계 자료와 인포그래픽들](<%= resolve_url('/promote/stats') %>)을 활용하여 컴퓨터과학의 중요성을 개관적으로 설명하세요.   
       
     
-- 다른 이벤트 아이디어들: 
+- **Other event ideas**: 
     - Invite a local industry leader to discuss his or her work involving computer science.
     - Invite a local politician and have students teach him or her how to code.
     - Have a group of students demonstrate an unplugged activity.
@@ -28,30 +32,31 @@ nav: how_to_nav
 
 ## 3. Share how it went
 
-- 여러분의 이벤트 진행과 관련한 사진들을 페이스북이나 트위터에 공유해 주세요. 
-- Use the hashtag **#HourOfCode**
+Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+
+---
 
 ## Host a Family Code Night with the Hour of Code and invite parents to participate
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## 이벤트 계획 예시
+---
 
-**이벤트:** 학교 전체 컴퓨터 과학 교육 주간 시작 모임
+## Example plan for a school assembly or event
+
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**시간:** 수업일중. 아침-점심사이 대략 1시간.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**장소:** 학교 강당 (예: 극장, 체육관, 식당)   
-  
-
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
 ## 이벤트 일정
 
 | 시간               | 내용                                                                                                                                               |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 오전 10:00 - 10:05 | [영감을 주는 동영상](<%= resolve_url('/promote/resources#videos') %>) 중 하나를 여세요.                                                                           |
+| 오전 10:00 - 10:05 | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).                                                      |
 | 오전 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
 | 오전 10:15 - 10:30 | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.                                                                |
 | 오전 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
