@@ -20,15 +20,9 @@ module Api::V1::Pd::Application
     protected
 
     def on_successful_create
-      @application.auto_score!
-      @application.assign_default_workshop!
       @application.update_user_school_info!
 
       TEACHER_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
-
-      unless @application.regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        TEACHER_APPLICATION_MAILER_CLASS.principal_approval(@application).deliver_now
-      end
     end
   end
 end

@@ -9,6 +9,8 @@ function setProp(sprite,  property, val) {
    	sprite.setAnimation(val);
   } else if (property=="tint" && typeof(val)=="number") {
     sprite.tint = "hsb(" + (Math.round(val) % 360) + ", 100%, 100%)";
+  } else if (property=="y" && typeof(val)=="number") {
+    sprite.y = 400-val;
   } else {
   sprite[property]=val;
   }

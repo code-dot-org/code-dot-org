@@ -1,10 +1,10 @@
 import { unicode } from '@cdo/apps/code-studio/components/icons';
 
 // For proxying non-https assets
-var MEDIA_PROXY = '//' + location.host + '/media?u=';
+const MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
+const ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
 export const ICON_PREFIX = 'icon://';
 export const ICON_PREFIX_REGEX = new RegExp('^icon://');
@@ -34,13 +34,18 @@ export function init(config) {
  *
  * If the filename URL is absolute, route it through the MEDIA_PROXY.
  * @param {string} filename
+ * @param {Object} opts
+ * @param {boolean} opts.bypassMediaProxy
  * @returns {string}
  */
-export function fixPath(filename) {
+export function fixPath(filename, opts = {}) {
   // Rewrite urls to pass through our media proxy. Unless of course we are in an
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
-  if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
+  if (ABSOLUTE_REGEXP.test(filename) &&
+      window.location.protocol !== 'file:' &&
+      !opts.bypassMediaProxy) {
+
     // We want to be able to handle the case where our filename contains a
     // space, i.e. "www.example.com/images/foo bar.png", even though this is a
     // technically invalid URL. encodeURIComponent will replace space with %20
