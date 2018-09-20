@@ -7,23 +7,25 @@ nav: how_to_nav
 
 # როგორ ჩავატაროთ კოდის ერთი საათი კლასგარეშე გარემოში და კლუბებში
 
-შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
+
+---
 
 ## 1. უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. აირჩიეთ ტუტორიალი
 
-ჩვენ მოგაწოდებთ ბევრ სხვადასხვა [სახალისო, ერთსაათიან ტუტორიალს](<%= resolve_url('/learn') %>), რომლებიც განკუთვნილია ნებისმიერი ასაკის მონაწილისთვის და შექმნილია სხვადასხვა პარტნიორის მიერ. [მოსინჯეთ!](<%= resolve_url('/learn') %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [მოსინჯეთ!](<%= resolve_url('/learn') %>)
 
-**კოდის ერთი საათის ყველა ტუტორიალი** საჭიროებს ორგანიზატორების მინიმალურ მოსამზადებელ დროს, ხელს უწყობს დამოუკიდებელ მუშაობას - აძლევს საშუალებას ბავშვებს იმუშავონ მათი ტემპის და უნარების შესაბამისად.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**გჭირდებათ გაკვეთილის გეგმა კლასგარეშე კოდის ერთი საათისთვის?** გადახედეთ ამ [შაბლონს](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
 
-გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას [ამ ხელსაწყოებით](<%= resolve_url('/promote') %>) და წაახალისეთ სხვები, რომ საკუთარ ღონისძიებებს უმასპინძლონ.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
 ## 4. დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
@@ -34,8 +36,6 @@ nav: how_to_nav
 არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
 
 **არ გაქვთ საკმარისი რაოდენობის მოწყობილობა?** სცადეთ[პროგრამირება წყვილებში](https://www.youtube.com/watch?v=vgkahOzFH2Q). წყვილში მუშაობისას მოსწავლეები ეხმარებიან ერთმანეთს და ნაკლებად არიან დამოკიდებული მასწავლებელზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
-
-<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. დაიწყეთ კოდის ერთი საათი შთამაგონებელი ვიდეოთი
 
@@ -48,78 +48,38 @@ nav: how_to_nav
 - [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს, შეისწავლონ კომპიუტერული მეცნიერება](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - მეტი შთამაგონებელი ვიდეო იხილეთ [აქ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**არაუშავს, თუ ყველა ახალბედები ხართ კომპიუტერულ მეცნიერებებში. გაეცანით გარკვეულ იდეებს, როგორ შეიძლება თქვენი კოდის ერთი საათის აქტივობების წარდგენა:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - ისეთი მაგალითებით, როგორიც ბიჭებისთვისაც და გოგოებისთვისაც საინტერესო იქნება, ახსენით თუ რა გზებით ახდენს ტექნოლოგიები გავლენას ჩვენს ცხოვრებაზე (ისაუბრეთ აპლიკაციებსა და ტექნოლოგიაზე, რომელიც გამოიყენება ხალხის გადასარჩენად, დასახმარებლად, გასაერთიანებლად, ა. შ.).
 - ჩამოწერეთ რაღაცები ყოველდღიური ცხოვრებიდან, რომლებშიც კოდი გამოიყენება.
 - გაიგეთ, როგორ დააინტერესოთ გოგონები პროგრამირებითა და ინფორმატიკით [აქ](<%= resolve_url('https://code.org/girls') %>).
 
-**უფრო ზუსტი ინსტრუქციები გჭირდებათ?** ჩამოტვირთეთ ეს [სანიმუშო გაკვეთილის გეგმა](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. დაწერეთ კოდი!
 
-**მიეცით მონაწილეებს მითითებები აქტივობის შესახებ**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-- დაწერეთ გაკვეთილის ბმული დაფაზე. ლინკი შეგიძლიათ მონაწილეების რიცხვს ქვემოთ, [თქვენ მიერ არჩეული გაკვეთილის ინფორმაციაში](<%= resolve_url('/learn') %>) იხილოთ.
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**როცა ვინმე სირთულეებს გადააწყდება, არაუშავს, თუ უპასუხებთ:**
-
-- "არ ვიცი. მოდი, ერთად ვიპოვოთ გამოსავალი"
-- ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა
-- "პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია დაუყოვნებლივ დაიწყოთ გამართულად საუბარი."
-
-**როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
-
-- გაამხნევეთ მონაწილეები, რომ სცადონ სხვა კოდის საათი აქტივობებიც ამ ბმულზე [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- ან სთოხვეთ მათ, ვინც ადრე დაამთავრა, დაეხმარონ მათ ვისაც გარკვეული სირთულეები აქვთ.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. აღნიშნეთ
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [ამობეჭდეთ სტიკერები "მე გავიარე კოდის ერთი საათი!"](<%= resolve_url('/promote/resources#stickers') %>) თქვენი მოსწავლეებისთვის.
-- [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი სკოლისთვის.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 ## კოდის ერთი საათის სხვა რესურსები მასწავლებლებისთვის
 
-- მიიღეთ [საუკეთესო რჩევები](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) შარშანდელი კოდის ერთი საათის ორგანიზატორებისგან.
-- უყურეთ ჩვენი [პედაგოგების კოდის ერთი საათის ვებინარის](https://youtu.be/EJeMeSW2-Mw) ჩანაწერს.
-- სხვა ორგანიზატორების მხარდაჭერისა და რჩევებისთვის ესტუმრეთ [კოდის ერთი საათის ფორუმს](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - გადახედეთ [კოდის ერთი საათის ხშირად დასმულ კითხვებს](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## რა ხდება კოდის ერთი საათის შემდეგ?
 
-კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. ამ მოგზაურობის გასაგრძელებლად:
-
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>
