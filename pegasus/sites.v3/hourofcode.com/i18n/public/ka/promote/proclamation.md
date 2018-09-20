@@ -5,51 +5,55 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### ქვემოთ მოცემულია რეზოლუციის ნიმუში, მხარდამჭერი კომპიუტერულ მეცნიერებათა საგანმანათლებლო კვირეულისა და მისი მიზნები, რომელიც შეიძლება გამოყენებულ იქნას სახელმწიფო და ადგილობრივი კანონმდებლების მიერ.
+# Sample Computer Science Education Week resolution
 
-  
-[სახლის, სენატის, შტატის, ქვეყნის ან ქალაქის რეზოლუცია ან პროკლამაცია ###] - ვინაიდან კომპიუტერული მეცნიერების საგანმანათლებლო კვირა ხაზს უსვამს იმ მნიშვნელოვან როლს, რომელსაც კომპიუტერული მეცნიერება ჩვენი საზოგადოების გარდაქმნაში თამაშობს და იმას, თუ როგორ იძლევა ინოვაციის საშუალებას და ქმნის ეკონომიკურ შესაძლებლობებს კომპიუტერული მეცნიერება;
+### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
 
-[ჰაუსის ან სენატის რეზოლუცია ###]
+---
 
-[DATE]
+#### **RESOLUTION**  
 
-რადგან კომპიუტერული ტექნოლოგიები თანამედროვე კულტურის განუყოფელი ნაწილია და ცვლის იმას, როგორ ურთიერთობს ხალხი ერთმანეთთან და გარემოსთან;
 
-მაშინ, როცა კომპიუტერული მეცნიერება ცვლის ინდუსტრიას, ქმნის ახალ სფეროებს ვაჭრობაში, არის ინოვაციის მამოძრავებელი მეცნეირების ყველა დარგში და ხელს უწყობს პროდუქტიულობის დამყარებას ეკონომიკურ სექტორებში;
+#### Supporting the goals and ideals of "Computer Science Education Week"
 
-მაშინ, როცა კომპიუტერული მეცნიერების სფერო ჩვენი ეკონომიკის ინფორმაციული ტექნოლოგიის სექტორს უდევს საფუძვლად, რომელსაც მნიშვნელოვანი წვლილი შეაქვს ამერიკის შეერთებული შტატების ეკონომიკურ ზრდაში;
+Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-მაშინ, როცა კომპიუტერული მეცნიერების სფერო ციფრული ეპოქის ფუნდამენტური მეცნიერებაა;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-მაშინ, როცა ინფორმაციული ტექნოლოგიების სექტორი კვლევისა და ინოვაციების განვითარების კუთხით ეკონომიკური სტაბილურობის საწინდარია;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-მაშინ, როცა კომპიუტერულ მეცნიერებაში დასაქმება პერსპექტიულია, 500,000-ზე მეტი ვაკანსიით მთელი ქვეყნის მასშტაბით;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-მაშინ, როცა მოსწავლეებისთვის კომპიუტერული მეცნიერების მაღალხარისხიან აქტივობებში ჩართვის შანსის მიცემა მათ მრავალ შესაძლებლობებს წარმოუჩენს, რომელსაც ეს სფერო სთავაზობს და განუუვითარებს კრიტიკული აზროვნების უნარებს, რომელიც მათ მთელი ცხოვრების განმავლობაში გაჰყვებათ;
+Whereas the field of computer science is a foundational science for the digital age;
 
-მაშინ, როცა ყველა მოსწავლე იმსახურებს საფუძვლიან მომზადებას კომპიუტერულ მეცნიერებაში, რაც გულისხმობს წვდომას კვალიფიციურ მასწავლებლებზე, ტექნოლოგიებზე და ასაკთან შესაბამის სასწავლო გეგმაზე, რომელიც მათ კომპიუტერულ მეცნიერებაში ელემენტარული და საშუალო დონის განათლების მიღებაში დაეხმარება;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-მაშინ, როცა კომპიუტერული მეცნიერების სწავლება გარკვეულ გამოწვევებთანაა დაკავშირებული, სკოლის დამთავრების მოთხოვნებში კომპიუტერული მეცნიერების კლასები უნდა შევიტანოთ და კომპიუტერული მეცნიერების მასწავლებლებისთვის პროფესიონალური განათლება უნდა ვუზრუნველყოთ;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-მაშინ, როცა კოდის ერთ საათში მონაწილეობა კომპიუტერული მეცნიერების საგანმანათლებლო კვირის განმავლობაში შესაძლოა ემსახურებოდეს იმის წარმოჩენას თუ რა არის კომპიუტერული მეცნიერება და უბიძგებდეს მოსწავლეებს განაგრძონ განათლება კომპიუტერული მეცნიერების მიმართულებით;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-მაშინ, როცა კომპიუტერული მეცნიერების დარგს თანასწორობის მკაფიო ბარიერებთან აქვს საქმე, მდედრობითი სქესის და ყოველი სახის უმცირესობის წარმომადგენლების მოზიდვის ჩათვლით;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-მაშინ, როცა გრეის მიურეი ჰოპერმა, ერთ-ერთმა პირველმა ქალმა კომპიუტერულ მეცნიერებაში, შექმნა პროგრამირების ახალი ენები და იყო კომპიუტერული სისტემების სტანდარტების პიონერი, რამაც კომპუტერული მეცნიერების მრავალ განვითარებას დაუდო საფუძველი; და
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-მაშინ, როცა <%= campaign_date('start-long') %> კვირა, გრეის ჰოპერის დაბადების დღის პატივსაცემად, სახელდება "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულად": ამიტომ
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-გადაწყვეტილია, რომ [სახლის ან სენატის, ქვეყნის, ქალაქის ან სკოლის საბჭო] --
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-(1) მხარს უჭერს კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის დანიშვნას (<%= campaign_date('full') %>);
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-(2) წაახალისებს სკოლებს, განმანათლებლებს, პარტნიორებსა და პოლიტიკოსებს, მიიღონ მონაწილეობა კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულში თავიანთი მოსწავლეების კოდის ერთ საათში ჩართვით;
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-(3) წაახალისებს სკოლებს, მასწავლებლებს, მკვლევარებს, უნივერსიტეტებს, ბიზნეს ლიდერებსა და პოლიტიკოსებს, შეიმუშავონ მექანიზმები მასწავლებლებისთვის, რათა მათ შეეძლოთ პროფესიული განვითარება თანამედროვე დონეზე, სასწავლო გამოცდილების მიღება კომპიუტერულ მეცნიერებაში ნებისმიერ საგანმანათლებლო დონეზე და მოსწავლეების წახალისება, რომ გაეცნონ კომპიუტერულ მეცნიერებას;
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(4) პოლიტიკოსებს უბიძგებს, გააქრონ ბარიერები, რომლებიც არ იძლევიან საშუალებას, რომ კომპიუტერული მეცნიერება, მათემატიკისა ან ზუსტი მეცნიერებებისგან განსხვავებით, მოსწავლეებს დასამთავრებლად სავალდებულო კრედიტებში ჩაეთვალოთ;
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(5) უკვე არსებული პროგრამების ჩათვლითაც ხელს შეუწყობს გოგონებისა და უმცირესობებისთვის კომპიუტერული მეცნიერების შესწავლის მეტი შესაძლებლობის წარმოშოებას.
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
 <%= view :signup_button %>
