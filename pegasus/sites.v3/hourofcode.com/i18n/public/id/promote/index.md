@@ -6,10 +6,10 @@ nav: promote_nav
 <%= view :signup_button %>
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # Mintalah komunitas Anda terlibat dalam Jam Kode
@@ -34,6 +34,6 @@ Beri tahu teman Anda tentang ** #HourOfCode </ strong>!</p>
 
 ## 5. Minta pejabat terpilih setempat untuk mendukung Hour of Code
 
-[ Kirim email ini ](<%= resolve_url('/promote/resources#sample-emails') %>) ke perwakilan setempat, dewan kota, atau dewan sekolah Anda dan undang mereka untuk mengunjungi sekolah Anda untuk Jam Kode. Ini bisa membantu membangun dukungan untuk ilmu komputer di daerah Anda lebih dari satu jam.
+[ Kirim email ini ](<%= resolve_url('/promote/resources#sample-emails') %>) ke perwakilan setempat, dewan kota, atau dewan sekolah Anda dan undang mereka untuk mengunjungi sekolah Anda untuk Jam Kode. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
 
 <%= view :signup_button %>

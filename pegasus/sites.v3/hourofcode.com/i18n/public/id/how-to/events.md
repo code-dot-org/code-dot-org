@@ -5,12 +5,16 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Bagaimana cara menyelenggarakan acara Hour of Code
+# How to organize an Hour of Code assembly or event
+
+### Get your entire school or community involved in an Hour of Code!
+
+---
 
 ## 1. Siapkan acara Anda
 
 - Tentukan tempat, tanggal, dan waktu.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Undang media/pers, misalnya stasiun berita lokal, koran, blogger edukasi/teknologi. Lihat [paket media](<%= resolve_url('/promote/press-kit') %>) kami untuk bantuan.
 
 ## 2. Selama acara Anda
@@ -19,7 +23,7 @@ nav: how_to_nav
 - Berikan pengantar mengenai betapa pentingnya ilmu komputer menggunakan [statistik dan infografik](<%= resolve_url('/promote/stats') %>) ini.   
       
     
-- Ide lain untuk acara: 
+- **Other event ideas**: 
     - Mintalah pemimpin industri lokal untuk mendiskusikan pekerjaannya yang melibatkan ilmu komputer.
     - Mintalah seorang politisi lokal dan mintalah siswa untuk mengajarkan kepadanya bagaimana cara memberi kode.
     - Mintalah sekelompok siswa menunjukkan aktivitas yang tidak dicabut.
@@ -28,34 +32,35 @@ nav: how_to_nav
 
 ## 3. Bagikan bagaimana kelanjutannya
 
-- Bagikan foto dari acaramu pada Facebook dan Twitter. 
-- Gunakan hashtag ** #HourOfCode </ strong></li> </ul> 
-    
-    ## Ajak Family Code Night dengan Hour of Code dan mintalah orang tua untuk berpartisipasi
-    
-    Pertimbangkan untuk menyelenggarakan acara malam K-5 dan mengundang orang tua untuk bergabung dengan siswa mereka selama satu jam ilmu komputer. Ini adalah cara yang bagus untuk melibatkan komunitas yang lebih besar dan mendorong dukungan orang tua untuk ilmu komputer di sekolah Anda. Mitra kami di Family Code Night telah membuat All-in-One Event Kit dengan daftar periksa perencanaan, skrip presenter, email undangan, poster, powerpoint dan lebih banyak untuk menjalankan acara Anda sendiri. [ Klik di sini untuk mendownload Event Kit ](http://www.familycodenight.org/DownloadCodeDotOrg.html).
-    
-    ## Contoh Perencanaan Acara
-    
-    **Acara:** Pertemuan pembukaan Pekan Pendidikan Ilmu Komputer
-    
-    **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
-    
-    **Waktu:** Saat sekolah. Lebih dianjurkan acara pagi. Perkiraan sekitar satu jam.
-    
-    **Lokasi:** Aula sekolah (misalnya teater, gedung olah raga, kantin)   
-      
-    
-    
-    ## Susuan Acara
-    
-    | Waktu              | Kegiatan                                                                                                                                                    |
-    | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | 10:00-10:05        | Buka dengan salah satu dari [video inspirasional](<%= resolve_url('/promote/resources#videos') %>) kami                                                       |
-    | 10:05-10:15        | Prinsipal memberi gambaran umum tentang pentingnya ilmu komputer. Gunakan [ statistik dan infografis ](<%= resolve_url('/promote/stats') %>) ini.             |
-    | 10:15 - 10:30 pagi | Tamu spesial untuk membicarakan latar belakang mereka dan bagaimana teknologi dan ilmu komputer memainkan peran penting dalam kehidupan sehari-hari mereka. |
-    | 10:30 - 10:40 pagi | Siswa melakukan demo Hour of Code untuk sekolah tersebut. Twist yang menyenangkan: mintalah mereka mengajar kepala sekolah, politisi, atau siswa lainnya!   |
-    | 10:40 - 11:00 pagi | Pelajar mendemostrasikan kegiatan tanpa komputer dan bagaimana ilmu komputer dapat diajarkan tanpa menggunakan komputer.                                    |
-    | 11:00-11:05        | Guru yang membantu mengadakan acara di sekolah memberikan pidato penutupan.                                                                                 |
-    
-    <%= view :signup_button %>
+Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+
+---
+
+## Ajak Family Code Night dengan Hour of Code dan mintalah orang tua untuk berpartisipasi
+
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+
+---
+
+## Example plan for a school assembly or event
+
+**Event:** School-wide Computer Science Education Week kick-off assembly
+
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+
+## Susuan Acara
+
+| Waktu              | Kegiatan                                                                                                                                                    |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05        | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).                                                                 |
+| 10:05-10:15        | Prinsipal memberi gambaran umum tentang pentingnya ilmu komputer. Gunakan [ statistik dan infografis ](<%= resolve_url('/promote/stats') %>) ini.             |
+| 10:15 - 10:30 pagi | Tamu spesial untuk membicarakan latar belakang mereka dan bagaimana teknologi dan ilmu komputer memainkan peran penting dalam kehidupan sehari-hari mereka. |
+| 10:30 - 10:40 pagi | Siswa melakukan demo Hour of Code untuk sekolah tersebut. Twist yang menyenangkan: mintalah mereka mengajar kepala sekolah, politisi, atau siswa lainnya!   |
+| 10:40 - 11:00 pagi | Pelajar mendemostrasikan kegiatan tanpa komputer dan bagaimana ilmu komputer dapat diajarkan tanpa menggunakan komputer.                                    |
+| 11:00-11:05        | Guru yang membantu mengadakan acara di sekolah memberikan pidato penutupan.                                                                                 |
+
+<%= view :signup_button %>
