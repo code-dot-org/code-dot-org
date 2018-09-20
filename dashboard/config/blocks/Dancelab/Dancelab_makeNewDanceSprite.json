@@ -14,6 +14,14 @@
         "name": "COSTUME",
         "options": [
           [
+            "Alien",
+            "\"ALIEN\""
+          ],
+          [
+            "Bear",
+            "\"BEAR\""
+          ],
+          [
             "Cat",
             "\"CAT\""
           ],
@@ -26,8 +34,16 @@
             "\"DUCK\""
           ],
           [
+            "Frog",
+            "\"FROG\""
+          ],
+          [
             "Moose",
             "\"MOOSE\""
+          ],
+          [
+            "Pineapple",
+            "\"PINEAPPLE\""
           ],
           [
             "Poo",
@@ -40,6 +56,10 @@
           [
             "Shark",
             "\"SHARK\""
+          ],
+          [
+            "Unicorn",
+            "\"UNICORN\""
           ]
         ]
       },
