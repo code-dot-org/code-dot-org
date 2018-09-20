@@ -10,19 +10,19 @@
       %i.create_menu_arrow_down{class: "fa fa-caret-down"}
       %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
       .create_options{style: 'display: none'}
-        %a.project_link_box
+        %a.project_link_box{href: CDO.studio_url('projects/playlab/new')}
           %img{src: "/shared/images/hadi_partovi.jpg"}
           .project_link{href: CDO.studio_url('users/edit')}
             Play Lab
-        %a.project_link_box
+        %a.project_link_box{href: CDO.studio_url('projects/artist/new')}
           %img{src: "/shared/images/hadi_partovi.jpg"}
           .project_link
             Artist
-        %a.project_link_box
+        %a.project_link_box{href: CDO.studio_url('projects/applab/new')}
           %img{src: "/shared/images/hadi_partovi.jpg"}
           .project_link
             App Lab
-        %a.project_link_box
+        %a.project_link_box{href: CDO.studio_url('projects/gamelab/new')}
           %img{src: "/shared/images/hadi_partovi.jpg"}
           .project_link
             Game Lab
