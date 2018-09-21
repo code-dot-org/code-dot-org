@@ -26,6 +26,10 @@ if (LOW_BAND) {
 
 var MOVE_NAMES = [
   {
+    name: "Rest",
+    mirror: true
+  },
+  {
     name: "ClapHigh",
     mirror: true
   },
@@ -58,10 +62,6 @@ var MOVE_NAMES = [
     mirror: true
   },
   {
-    name: "Rest",
-    mirror: true
-  },
-  {
     name: "Roll",
     mirror: true
   },
@@ -74,6 +74,22 @@ var MOVE_NAMES = [
     mirror: true
   }
 ];
+
+var MOVES = {
+  Rest: 0,
+  ClapHigh: 1,
+  Clown: 2,
+  Dab: 3,
+  DoubleJam: 4,
+  Drop: 5,
+  Floss: 6,
+  Fresh: 7,
+  Kick: 8,
+  Roll: 9,
+  ThisOrThat: 10,
+  Thriller: 11
+};
+
 var ANIMATIONS = {};
 var FRAMES = 24;
 
@@ -345,7 +361,9 @@ function initialize(setupHandler) {
 
 
 function makeNewDanceSprite(costume, name, location) {
-
+  
+  // Default to first dancer if selected a dancer that doesn't exist
+  // to account for low-bandwidth mode limited character set
   if (SPRITE_NAMES.indexOf(costume) < 0) {
     costume = SPRITE_NAMES[0];
   }
@@ -374,11 +392,6 @@ function makeNewDanceSprite(costume, name, location) {
   for (var i = 0; i < ANIMATIONS[costume].length; i++) {
     sprite.addAnimation("anim" + i, ANIMATIONS[costume][i].animation);
   }
-
-  // ToDo - fix setting rest at start
-  sprite.changeAnimation("anim8");
-  sprite.current_move = 8;
-
   sprite.animation.stop();
   sprites.add(sprite);
   sprite.speed = 10;
@@ -521,12 +534,14 @@ function doMoveEachLR(group, move, dir) {
 // Properties
 
 function setProp(sprite, property, val) {
-  if (!spriteExists(sprite)) return;
-  if (!sprite || val === undefined) {
-    return;
-  }
+  if (!spriteExists(sprite) || val === undefined) return;
+  
   if (property == "scale") {
     sprite.scale = val / 100;
+  } else if (property == "width" || property == "height") {
+    sprite[property] = SIZE * (val / 100);
+  } else if (property=="y"){
+    sprite.y = World.height - val;
   } else if (property == "costume") {
     sprite.setAnimation(val);
   } else if (property == "tint" && typeof (val) == "number") {
@@ -538,17 +553,38 @@ function setProp(sprite, property, val) {
 
 function getProp(sprite, property) {
   if (!spriteExists(sprite)) return;
-  if (!sprite) {
-    return undefined;
-  }
+
   if (property == "scale") {
     return sprite.scale * 100;
+  } else if (property == "width" || property == "height") {
+    return (sprite[property] / SIZE) * 100;
+  } else if (property=="y"){
+    return World.height - sprite.y;
   } else if (property == "costume") {
     return sprite.getAnimationLabel();
   } else if (property == "direction") {
     return getDirection(sprite);
   } else {
     return sprite[property];
+  }
+}
+
+function changePropBy(sprite,  property, val) {
+  if (!spriteExists(sprite) || val === undefined) return;
+  
+  if (property == "scale") {
+    sprite.setScale(sprite.getScale() + val / 100);
+    if (sprite.scale < 0) {
+      sprite.scale = 0;
+    }
+  } else if (property == "width" || property == "height") {
+    sprite[property] = getProp(sprite, property) + (SIZE * (val / 100));
+  } else if (property=="direction") {
+   	sprite.direction = getDirection(sprite) + val;
+  } else if (property=="y"){
+    sprite.y-=val;
+  } else {
+    sprite[property] += val;
   }
 }
 
@@ -625,7 +661,13 @@ function everySecondsRange(n, start, stop, event) {
   });
 }
 
-
+function everyVerseChorus(unit, event) {
+  registerSetup(function() {
+    song_meta[unit].forEach(function(timestamp){
+      Dance.song.addCue(0, timestamp, event);
+    });
+  });
+}
 
 // Behaviors
 
@@ -673,6 +715,51 @@ function behaviorsEqual(behavior1, behavior2) {
     }
   }
   return extraArgsEqual;
+}
+
+function startMapping(sprite, property, range) {
+  var behavior = new Behavior(function(sprite) {
+    var energy = Dance.fft.getEnergy(range);
+    if (property == "x") {
+      energy = Math.round(map(energy, 0, 255, 50, 350));
+    } else if (property == "y") {
+      energy = Math.round(map(energy, 0, 255, 350, 50));
+    } else if (property == "scale") {
+      energy = map(energy, 0, 255, 0, 2);
+    } else if (property == "width" || property == "height") {
+      energy = map(energy, 0, 255, 50, 150);
+    } else if (property == "rotation" || property == "direction") {
+      energy = Math.round(map(energy, 0, 255, -180, 180));
+    } else if (property == "tint") {
+      energy = Math.round(map(energy, 0, 255, 0, 360));
+      energy = "hsb(" + energy + ",100%,100%)";
+    }
+    sprite[property] = energy;
+  }, [property, range]);
+  behavior.func.name = "mapping" + property + range;
+  addBehavior(sprite, behavior);
+}
+
+function stopMapping(sprite, property, range) {
+  var behavior = new Behavior(function(sprite) {
+    var energy = Dance.fft.getEnergy(range);
+    if (property == "x") {
+      energy = Math.round(map(energy, 0, 255, 50, 350));
+    } else if (property == "y") {
+      energy = Math.round(map(energy, 0, 255, 350, 50));
+    } else if (property == "size") {
+      energy = map(energy, 0, 255, 0, 2);
+    } else if (property == "rotation" || property == "direction") {
+      energy = Math.round(map(energy, 0, 255, -180, 180));
+    } else if (property == "tint") {
+      energy = Math.round(map(energy, 0, 255, 0, 360));
+      energy = "hsb(" + energy + ",100%,100%)";
+    }
+    console.log(property + " " + energy);
+    sprite[property] = energy;
+  }, [property, range]);
+  behavior.func.name = "mapping" + property + range;
+  removeBehavior(sprite, behavior);
 }
 
 //Events
@@ -770,6 +857,10 @@ function changeColorBy(input, method, amount) {
   var new_c = color(hsb.hue, hsb.saturation, hsb.brightness);
   pop();
   return new_c;
+}
+
+function mixColors(color1, color2) {
+  return lerpColor(color(color1), color(color2), 0.5);
 }
 
 function randomColor() {

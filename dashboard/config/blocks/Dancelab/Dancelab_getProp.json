@@ -23,16 +23,28 @@
             "\"scale\""
           ],
           [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
             "rotation",
             "\"rotation\""
           ],
           [
-            "tint",
-            "\"tint\""
+            "horizontal position",
+            "\"x\""
           ],
           [
-            "dance move",
-            "\"current_move\""
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
           ]
         ]
       }
