@@ -113,7 +113,13 @@ FactoryGirl.define do
   end
 
   factory :regional_partner_newjersey, parent: :regional_partner_summer_workshops, class: 'RegionalPartner' do
-    # No workshops submitted.
+    # No contact details, and no workshops submitted.
+    contact_name nil
+    contact_email nil
+    apps_open_date_csp_teacher nil
+    apps_open_date_csd_teacher nil
+    apps_close_date_csp_teacher nil
+    apps_close_date_csd_teacher nil
     mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
     pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
   end

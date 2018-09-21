@@ -81,6 +81,7 @@ class RegionalPartnerSearch extends Component {
 
     return (
       <div>
+        <h2>Ready to apply?</h2>
         School State:
         <select onChange={this.handleStateChange} style={{width: '150px'}}>
           {this.props.states.map(item => {
@@ -114,8 +115,19 @@ class RegionalPartnerSearch extends Component {
         {partnerInfo && (
           <div>
             <div>{partnerInfo.name}</div>
-            <div>{partnerInfo.contact.name}</div>
-            <div>{partnerInfo.contact.email}</div>
+            {partnerInfo.contact_name && (
+              <div>{partnerInfo.contact_name}</div>
+            )}
+            {partnerInfo.contact_email && (
+              <div>{partnerInfo.contact_email}</div>
+            )}
+            {!partnerInfo.contact_email && (
+              <div>Direct any questions to your Regional Partner by
+                {' '}
+                <a href="https://studio.code.org/pd/regional_partner_contact/new">completing this form</a>
+                .
+              </div>
+            )}
 
             <h3>Summer workshop(s):</h3>
             {workshopCollections[0].workshops.length === 0 && workshopCollections[1].workshops.length === 0 && (
@@ -163,7 +175,14 @@ class RegionalPartnerSearch extends Component {
             )}
 
             {!appsClosedNow && !appsOpenNow && !appsOpenDate && (
-              <div>Applications open January 15, 2019</div>
+              <div>
+                <div>Applications will be open soon.</div>
+                <a href="https://studio.code.org/pd/regional_partner_contact/new">
+                  <button>
+                    Tell me when applications open
+                  </button>
+                </a>
+              </div>
             )}
           </div>
         )}

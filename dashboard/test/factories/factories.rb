@@ -1148,7 +1148,8 @@ FactoryGirl.define do
 
   factory :regional_partner_summer_workshops do
     sequence(:name) {|n| "Partner#{n}"}
-    contact {create :teacher}
+    contact_name "Contact Name"
+    contact_email "contact@code.org"
     group 1
     apps_open_date_csp_teacher {Date.today - 1.day}
     apps_open_date_csd_teacher {Date.today - 2.days}
