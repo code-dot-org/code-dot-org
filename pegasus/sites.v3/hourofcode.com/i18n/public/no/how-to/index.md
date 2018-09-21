@@ -48,7 +48,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 - Forklar hvordan informasjonsteknologi påvirker livene våre. Bruk gjerne eksempler som både jenter og gutter kan kjenne seg igjen i (snakk om hvordan teknologi kan redde liv, forenkle hverdagen vår, om sosiale medier og kommunikasjon, o. l.).
 - Gå sammen i klassen om å lage en liste over ting vi bruker i hverdagen, som inneholder programkode.
-- Se tips for å få jenter interessert i dataprogrammering [her](http://<%= codeorg_url() %>/girls)
+- Se tips for å få jenter interessert i dataprogrammering [her](http://<%= codeorg_url('/girls')%>)
 
 ## 6. Koding!
 

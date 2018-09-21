@@ -23,7 +23,7 @@ social:
 
     twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%> 感謝ozobot，德克斯特行業，littleBits和奇幻工房的慷慨相助，超過100多間教室將被選定為他們的班級得到機器人或電路！ 為了有資格獲得一套, 請務必完成從 Code.org 發送後的《編程一小時》的調查。 Code.org 將選擇獲獎的教室。 同時檢查一部分機器人和電子設備的活動。 請注意，這只對美國的學校開放。 <% end %>
+%> 感謝ozobot，德克斯特行業，littleBits和奇幻工房的慷慨相助，超過100多間教室將被選定為他們的班級得到機器人或電路！ 為了有資格獲得一套, 請務必完成從 Code.org 發送後的《編程一小時》的調查。 Code.org 將選擇獲獎的教室。 同時檢查一部分機器人和電子設備的活動。 請注意，這只對美國的學校開放。
 </p>
 
 <p>
