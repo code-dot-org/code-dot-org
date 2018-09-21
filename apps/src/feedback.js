@@ -203,7 +203,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   };
 
   const onContinue = () => {
-    options.onContinue();
+    if (options.level.skipRunSave) {
+      $(window).trigger('continueButtonPressed', options.onContinue);
+    } else {
+      options.onContinue();
+    }
   };
 
   var onHidden = onlyContinue ? onContinue : function () {
