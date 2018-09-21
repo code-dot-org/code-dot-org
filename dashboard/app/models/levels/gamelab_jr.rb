@@ -32,6 +32,10 @@ class GamelabJr < Gamelab
     block_pools
   )
 
+  def shared_blocks
+    Block.for(*block_pools.presence || type)
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(

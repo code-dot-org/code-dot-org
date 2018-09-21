@@ -77,14 +77,14 @@
 
 - if @level.is_a?(GamelabJr)
   .field
-    = f.label :block_pool
+    = f.label :block_pools
     %p
       Select
       %a.select_all{href: '#'} all
       \/
       %a.select_none{href: '#'} none
       (shift-click or cmd-click to select multiple).
-    = f.select :block_pool, (Block.all_pool_names + (@level.block_pool || [])).uniq.sort, {}, {multiple: true}
+    = f.select :block_pools, (Block.all_pool_names + (@level.block_pools || [])).uniq.sort, {}, {multiple: true}
 
 .field
   = f.label :helper_libraries

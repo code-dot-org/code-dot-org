@@ -271,6 +271,7 @@ class LevelsController < ApplicationController
       {examples: []},
       {reference_links: []},
       {helper_libraries: []},
+      {block_pools: []},
       {preload_asset_list: []},
       :map_reference,
 
