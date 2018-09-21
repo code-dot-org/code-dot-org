@@ -21,11 +21,11 @@
         %a.project_link_box{href: CDO.studio_url('projects/flappy/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_flappy.png"}
           .project_link
-            Flappy
+            = I18n.t("nav.create_button.flappy")
         %a.project_link_box{href: CDO.studio_url('projects/minecraft_designer/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_minecraft.png"}
           .project_link
-            Minecraft
+            = I18n.t("nav.create_button.minecraft")
       - else
         %a.project_link_box{href: CDO.studio_url('projects/applab/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_applab_square.png"}
