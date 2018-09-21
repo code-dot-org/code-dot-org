@@ -1004,6 +1004,40 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal malformed_account.id, signed_in_user_id
   end
 
+  test 'silent_takeover: Does not add email to student account' do
+    # Set up existing account
+    email = 'student+example@code.org'
+    student = create :student, email: email
+    uid = 'google-takeover-id'
+
+    Honeybadger.expects(:notify).never
+
+    # Hit google callback with matching email to trigger takeover
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '',
+      email: email
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Verify takeover completed
+    student.reload
+    assert_equal AuthenticationOption::GOOGLE, student.provider
+    assert_equal  uid, student.uid
+
+    # Verify the account has an email and is now well-formed
+    assert_empty student.email
+    assert student.valid?
+
+    # Verify that we signed the user into the taken-over account
+    assert_equal student.id, signed_in_user_id
+  end
+
   test 'silent_takeover: Fails and notifies on malformed unmigrated user' do
     # Set up existing account
     malformed_account = create :teacher
