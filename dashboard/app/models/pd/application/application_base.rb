@@ -91,6 +91,7 @@ module Pd::Application
         'A full year',
         OTHER
       ],
+
       school_type: [
         'Public school',
         'Private school',
