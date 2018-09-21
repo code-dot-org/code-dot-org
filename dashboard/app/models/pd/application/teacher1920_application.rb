@@ -45,6 +45,7 @@ module Pd::Application
           completing_on_behalf_of_someone_else: [YES, NO],
           replace_existing: [
             YES,
+            "No, this course will be added to the schedule in addition to an existing computer science course",
             "No, this course will be added to the existing schedule, but it won't replace an existing computer science course",
             TEXT_FIELDS[:i_dont_know_explain]
           ],
@@ -143,6 +144,8 @@ module Pd::Application
             :csp_how_offer,
           ]
         end
+
+        required.concat [hash[:committed] == YES ? :able_to_attend_single : :able_to_attend_multiple]
       end
     end
 

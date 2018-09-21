@@ -88,7 +88,8 @@ module Pd::Application
         '1 trimester',
         '1 semester',
         '2 trimesters',
-        'Full year'
+        'A full year',
+        OTHER
       ],
       school_type: [
         'Public school',
