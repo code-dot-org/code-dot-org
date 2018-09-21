@@ -115,10 +115,10 @@ module RegistrationsControllerTests
       end
     end
 
-    test 'successful oauth sign up in split test reports split' do
+    test 'in experiment, Google goes to finish_sign_up page without creating a user' do
       # Google Oauth doesn't normally give us a user-type by default.
       OmniAuth.config.mock_auth[:google_oauth2] = generate_auth_user_hash(
-        provider: 'google_oauth2',
+        provider: AuthenticationOption::GOOGLE,
         user_type: ''
       )
       SignUpTracking.stubs(:split_test_percentage).returns(100)
@@ -146,7 +146,9 @@ module RegistrationsControllerTests
           data[:event] == 'google_oauth2-sign-up-error' &&
           data[:data_string] == UUID
       end
-      follow_redirect!
+      refute_creates User do
+        follow_redirect!
+      end
       assert_redirected_to '/users/sign_up'
 
       # We end up on the finish_sign_up page
