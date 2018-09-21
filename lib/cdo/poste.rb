@@ -308,6 +308,7 @@ module Poste2
         subject: mail.subject.to_s,
         from: sender
       }
+      mail_params[:cc] = mail[:cc].formatted.first if mail[:cc]
       mail_params[:reply_to] = mail[:reply_to].formatted.first if mail[:reply_to]
       mail_params[:attachments] = attachments if attachments
       recipient = Poste2.ensure_recipient(to_address, name: to_name, ip_address: '127.0.0.1')
