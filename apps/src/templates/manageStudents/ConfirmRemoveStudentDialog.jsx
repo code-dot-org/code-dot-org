@@ -54,10 +54,10 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
           />
           {hasEverSignedIn &&
             <div>
-              <p>
                 <UnsafeRenderedMarkdown
                   markdown={i18n.removeStudentBody1()}
                 />
+              <p>
                 <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
                   {i18n.learnMore()}
                 </a>

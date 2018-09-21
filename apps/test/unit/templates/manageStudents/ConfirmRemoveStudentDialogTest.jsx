@@ -56,9 +56,13 @@ describe('ConfirmRemoveStudentDialog', () => {
         <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
         <div>
             <UnsafeRenderedMarkdown
-              markdown={i18n.removeStudentBody1({
-                explanationUrl: RELEASE_OR_DELETE_RECORDS_EXPLANATION})}
+              markdown={i18n.removeStudentBody1()}
             />
+          <p>
+            <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+              {i18n.learnMore()}
+            </a>
+          </p>
         </div>
         <ConfirmCancelFooter
           confirmText={i18n.removeStudent()}
@@ -86,9 +90,13 @@ describe('ConfirmRemoveStudentDialog', () => {
         <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
         <div>
             <UnsafeRenderedMarkdown
-              markdown={i18n.removeStudentBody1({
-                explanationUrl: RELEASE_OR_DELETE_RECORDS_EXPLANATION})}
+              markdown={i18n.removeStudentBody1()}
             />
+          <p>
+            <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+              {i18n.learnMore()}
+            </a>
+          </p>
           <div>
             <p>
               {i18n.removeStudentBody2()}
