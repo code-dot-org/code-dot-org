@@ -559,6 +559,7 @@ describe('entry tests', () => {
 
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
+    'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
     dance: './src/gamelab/dance.js',
@@ -762,7 +763,7 @@ describe('entry tests', () => {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
-    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer', 'regionalPartnerSearch').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';
