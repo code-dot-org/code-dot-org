@@ -51,47 +51,47 @@
         "options": [
           [
             "Clap High",
-            "0"
+            "MOVES.ClapHigh"
           ],
           [
             "Clown",
-            "1"
+            "MOVES.Clown"
           ],
           [
             "Dab",
-            "2"
+            "MOVES.Dab"
           ],
           [
             "Double Jam",
-            "3"
+            "MOVES.DoubleJam"
           ],
           [
             "Drop",
-            "4"
+            "MOVES.Drop"
           ],
           [
             "Floss",
-            "5"
+            "MOVES.Floss"
           ],
           [
             "Fresh",
-            "6"
+            "MOVES.Fresh"
           ],
           [
             "Kick",
-            "7"
+            "MOVES.Kick"
           ],
           [
             "Roll",
-            "9"
+            "MOVES.Roll"
           ],
           [
             "This or That",
-            "10"
+            "MOVES.ThisOrThat"
           ],
           [
             "Thiller",
-            "11"
+            "MOVES.Thriller"
           ],
           [
             "Next",
@@ -107,7 +107,7 @@
           ],
           [
             "None",
-            "8"
+            "MOVES.Rest"
           ]
         ]
       },
