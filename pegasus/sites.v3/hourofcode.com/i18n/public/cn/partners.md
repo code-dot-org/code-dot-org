@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 编程一小时的网站由《编程一小时》和计算机科学教育周咨询委员会及审查委员会运营。
 

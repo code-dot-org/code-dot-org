@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Hour of Codeは、Hour of Codeおよびコンピューターサイエンス教育週間の諮問委員会および審査委員会により推進されています。
 
