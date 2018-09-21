@@ -23,20 +23,24 @@
             "\"scale\""
           ],
           [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
             "rotation",
             "\"rotation\""
           ],
           [
-            "x position",
+            "horizontal position",
             "\"x\""
           ],
           [
-            "y position",
+            "vertical position",
             "\"y\""
-          ],
-          [
-            "movement direction",
-            "\"direction\""
           ],
           [
             "tint",
