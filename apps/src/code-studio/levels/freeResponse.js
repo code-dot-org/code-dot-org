@@ -4,7 +4,7 @@ import { onAnswerChanged } from './codeStudioLevels';
 import { sourceForLevel } from '../clientState';
 
 export default class FreeResponse {
-  constructor(levelId, optional = false) {
+  constructor(levelId, optional) {
     this.levelId = levelId;
     this.optional = !!optional;
 

@@ -11,7 +11,6 @@ Background:
   And I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
 
-@skip
 Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
 
