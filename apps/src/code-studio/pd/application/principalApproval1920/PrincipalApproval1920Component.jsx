@@ -16,6 +16,8 @@ const REQUIRED_SCHOOL_INFO_FIELDS = ['goingToTeach', 'school', 'totalStudentEnro
   'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'replaceCourse', 'committedToDiversity',
   'understandFee', 'payFee', 'howHeard'
 ];
+// Since the rails model allows empty principal approvals as placeholders, we require these fields here
+const ALWAYS_REQUIRED_FIELDS = ["doYouApprove", "firstName", "lastName", "email", "confirmPrincipal"];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
 const YEAR = "2019-20";
@@ -280,7 +282,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
    * @override
    */
   static getDynamicallyRequiredFields(data) {
-    const requiredFields = [];
+    const requiredFields = ALWAYS_REQUIRED_FIELDS;
 
     if (data.school && data.school === '-1') {
       requiredFields.push(
@@ -359,4 +361,4 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 }
 
-export {MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS, RACE_LIST};
+export {ALWAYS_REQUIRED_FIELDS, MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS, RACE_LIST};

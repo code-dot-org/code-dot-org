@@ -868,7 +868,7 @@ FactoryGirl.define do
       replace_course Pd::Application::PrincipalApproval1920Application::REPLACE_COURSE_NO
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
-      pay_fee 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
+      pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
       how_heard Pd::Application::PrincipalApproval1920Application.options[:how_heard][0]
     end
 
