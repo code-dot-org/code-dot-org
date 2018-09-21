@@ -1117,6 +1117,7 @@ class ApiControllerTest < ActionController::TestCase
     teacher = create :teacher, :with_migrated_clever_authentication_option
     auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
     sign_in teacher
+    assert_nil teacher.uid
 
     expected_uri = "https://api.clever.com/v1.1/teachers/#{auth_option.authentication_id}/sections"
     auth = {authorization: "Bearer #{auth_option.data_hash[:oauth_token]}"}
