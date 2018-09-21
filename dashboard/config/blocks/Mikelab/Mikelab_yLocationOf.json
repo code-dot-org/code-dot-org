@@ -1,0 +1,14 @@
+{
+  "category": "Math",
+  "config": {
+    "func": "yLocationOf",
+    "blockText": "y coordinate of {SPRITE}",
+    "returnType": "Number",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ]
+  }
+}
