@@ -68,21 +68,7 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
     end
 
-    sign_up_type = session[:sign_up_type]
-    sign_up_type ||= resource.email ? 'email' : 'other'
-    if session[:sign_up_tracking_expiration]&.future?
-      result = resource.persisted? ? 'success' : 'error'
-      tracking_data = {
-        study: 'account-sign-up',
-        event: "#{sign_up_type}-sign-up-#{result}",
-        data_string: session[:sign_up_uid],
-        data_json: {
-          detail: resource.to_json,
-          errors: resource.errors&.full_messages
-        }.to_json
-      }
-      FirehoseClient.instance.put_record(tracking_data)
-    end
+    SignUpTracking.log_sign_up_result resource, session
   end
 
   #
