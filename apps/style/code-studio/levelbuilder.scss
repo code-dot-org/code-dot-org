@@ -188,20 +188,25 @@ table.checkboxes {
 }
 .audit_log{
   width: 100%;
-  
+
   tr:nth-child(odd){
     background-color: #f9cb81;
   }
-  
+
   td{
     padding: 2%;
   }
-  
+
   .aud_date{
     width: 25%;
   }
-  
+
   .aud_person{
     width: 43%;
   }
+}
+
+.levelTypeHeader{
+  font-weight: bold;
+  padding: 2% 2% 2% 0%;
 }
