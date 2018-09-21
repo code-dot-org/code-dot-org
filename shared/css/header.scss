@@ -157,6 +157,46 @@
     border-width: 0px;
   }
 
+  .create_options {
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    font-size: 14px;
+    background-color: $white;
+    width: 200px;
+    a {
+      color: $teal;
+      font-weight: 900;
+      height: 70px;
+      width: 198px;
+      float: left;
+      border-left: 1px solid $charcoal;
+      border-right: 1px solid $charcoal;
+      border-top: 1px solid $charcoal;
+    }
+    a:hover {
+      color: $teal;
+      font-weight: 900;
+      background-color: $white;
+      cursor: pointer;
+    }
+    img {
+      height: 70px;
+      width: 70px;
+      float: left;
+    }
+    .project_link {
+      padding-left: 10px;
+      line-height: 62px;
+      float: left;
+    }
+    #view_all_projects {
+      width: 100%;
+      height: 70px;
+      border-bottom: 1px solid $charcoal;
+    }
+  }
+
   #hamburger {
     padding-top: 4px;
     padding-left: 20px;
