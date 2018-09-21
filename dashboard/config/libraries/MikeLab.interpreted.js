@@ -42,6 +42,7 @@ var scoreboard = false;
 var scoreX = 0;
 var scoreY = 0;
 var dialog =[];
+var mikeLabBG = loadImage("https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png");
 
 function initialize(setupHandler) {
   setupHandler();
@@ -386,9 +387,11 @@ function unitVectorTowards(from, to) {
   return p5.Vector.fromAngle(angle);
 }
 
+
+
 function draw() {
   background(World.background_color || "white");
-
+	image(mikeLabBG);
   callbacks.forEach(function (callback) {
     callback();
   });

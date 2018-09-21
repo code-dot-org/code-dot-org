@@ -34,17 +34,17 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "markdown_instructions": "\"I'm just dancing on my own!\" Add a backup dancer to dance with the cat, and make it change dance moves when the bass hits.",
+    "markdown_instructions": "\"I'm just dancing on my own!\" Use the `Make a new \"Duck\"` block to create a backup dancer called `backup_dancer1` to dance with the cat.",
     "parent_level_id": 14505,
-    "validation_code": "if(World.frameCount == 1){\r\n  validationProps.status = 3;\r\n  validationProps.events = [{type:Dance.fft.isPeak, param: 0,\r\n                             pre: function(e){validationProps.beforeDance = dancer2.current_move;},\r\n                             post: function(e){\r\n    if(getTime(\"measures\") > 2 && getTime(\"measures\") <= 6){\r\n      if(dancer2.current_move != validationProps.beforeDance){\r\n        validationProps.status = 0;\r\n      }\r\n  \t}\r\n  }\r\n  }];\r\n}\r\nif(getTime(\"measures\") > 6){\r\n  levelSuccess(validationProps.status);\r\n}",
     "contained_level_names": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "if(getTime(\"measures\") > 6){\r\n  if (sprites.length >1) {\r\n  \tlevelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:02:53 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:03:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:04:09 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:07:29 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:08:46 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:09:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:20:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 05:24:51 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:26:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:26:24 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"markdown_instructions\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 23:21:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 23:28:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 23:33:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 23:55:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 15:12:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 17:46:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 17:51:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:06:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:07:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:24:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:33:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-17 21:09:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-17 21:18:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:14:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:16:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:17:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:32:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-19 17:55:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 17:58:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-19 17:58:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-19 17:59:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:02:53 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:03:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:04:09 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:07:29 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:08:46 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:09:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:20:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 05:24:51 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:26:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:26:24 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"markdown_instructions\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 23:21:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 23:28:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 23:33:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 23:55:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 15:12:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 17:46:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 17:51:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:06:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:07:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:24:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-17 18:33:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-17 21:09:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-17 21:18:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:14:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:16:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:17:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:32:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-19 17:55:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-19 17:58:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-19 17:58:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-19 17:59:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-20 21:29:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 04:15:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 04:18:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 17:55:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 17:56:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 17:58:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 17:59:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 18:01:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -59,12 +59,8 @@
               <next>
                 <block type="Dancelab_makeNewDanceSprite">
                   <title name="COSTUME">"CAT"</title>
-                  <title name="NAME">dancer1</title>
-                  <value name="LOCATION">
-                    <block type="Dancelab_location_picker">
-                      <title name="LOCATION">{"x":150,"y":200}</title>
-                    </block>
-                  </value>
+                  <title name="NAME">lead_dancer</title>
+                  <title name="LOCATION">{x: 200, y: 200}</title>
                 </block>
               </next>
             </block>
@@ -75,166 +71,9 @@
           <title name="UNIT">"measures"</title>
           <statement name="DO">
             <block type="Dancelab_changeMoveLR">
-              <title name="SPRITE">dancer1</title>
+              <title name="SPRITE">lead_dancer</title>
               <title name="MOVE">"next"</title>
               <title name="DIR">-1</title>
-            </block>
-          </statement>
-        </block>
-        <block type="Dancelab_whenPeak">
-          <title name="RANGE">0</title>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>Maps a sprite's x position to a given sound energy range</description>
-          </mutation>
-          <title name="NAME">mapping my x position to</title>
-          <statement name="STACK">
-            <block type="controls_if">
-              <mutation elseif="1" else="1"/>
-              <value name="IF0">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">low</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"x"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"low"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <value name="IF1">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">med</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO1">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"x"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"mid"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"x"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"high"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>Maps a sprite's y position to a given sound energy range</description>
-          </mutation>
-          <title name="NAME">mapping my y position to</title>
-          <statement name="STACK">
-            <block type="controls_if">
-              <mutation elseif="1" else="1"/>
-              <value name="IF0">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">low</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"y"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"low"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <value name="IF1">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">med</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO1">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"y"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"mid"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"y"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"high"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
             </block>
           </statement>
         </block>
@@ -242,40 +81,32 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="World">
-          <block type="Dancelab_setBackgroundEffect">
-            <title name="EFFECT">"none"</title>
-          </block>
-        </category>
-        <category name="Dancers">
-          <block type="Dancelab_makeNewDanceSprite">
-            <title name="COSTUME">"DUCK"</title>
-            <title name="NAME">dancer2</title>
-            <value name="LOCATION">
-              <block type="Dancelab_location_picker">
-                <title name="LOCATION">{"x":300,"y":200}</title>
-              </block>
-            </value>
-          </block>
-          <block type="Dancelab_changeMoveLR">
-            <title name="SPRITE">dancer2</title>
-            <title name="MOVE">"next"</title>
-            <title name="DIR">-1</title>
-          </block>
-        </category>
-        <category name="Events">
-          <block type="Dancelab_whenPeak">
-            <title name="RANGE">0</title>
-          </block>
-          <block type="Dancelab_atTimestamp">
-            <title name="TIMESTAMP">4</title>
-            <title name="UNIT">"measures"</title>
-          </block>
-          <block type="Dancelab_everySeconds">
-            <title name="N">2</title>
-            <title name="UNIT">"measures"</title>
-          </block>
-        </category>
+        <block type="Dancelab_setBackgroundEffect">
+          <title name="EFFECT">"none"</title>
+        </block>
+        <block type="Dancelab_makeNewDanceSprite">
+          <title name="COSTUME">"DUCK"</title>
+          <title name="NAME">backup_dancer1</title>
+          <title name="LOCATION">{x: 300, y: 200}</title>
+        </block>
+        <block type="Dancelab_changeMoveLR">
+          <title name="SPRITE">backup_dancer1</title>
+          <title name="MOVE">"next"</title>
+          <title name="DIR">-1</title>
+        </block>
+        <block type="Dancelab_setProp">
+          <title name="SPRITE">backup_dancer1</title>
+          <title name="PROPERTY">"scale"</title>
+          <title name="VAL">50</title>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">4</title>
+          <title name="UNIT">"measures"</title>
+        </block>
+        <block type="Dancelab_everySeconds">
+          <title name="N">2</title>
+          <title name="UNIT">"measures"</title>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>
