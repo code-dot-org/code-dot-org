@@ -419,6 +419,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
     else
       success = @user.update(
+        email: lookup_email,
         provider: auth_hash.provider.to_s,
         uid: auth_hash.uid,
         oauth_token: auth_hash.credentials&.token,
