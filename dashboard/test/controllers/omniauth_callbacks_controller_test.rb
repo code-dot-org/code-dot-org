@@ -964,10 +964,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal expected_notice, flash.notice
   end
 
-  test 'silent_takeover: Fails and notifies on malformed unmigrated user' do
+  test 'silent_takeover: Adds email to teacher account missing email' do
     # Set up existing account
     malformed_account = create :teacher
     email = malformed_account.email
+    uid = 'google-takeover-id'
 
     # Make account invalid
     malformed_account.email = ''
@@ -975,10 +976,49 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     malformed_account.reload
     refute malformed_account.valid?
 
+    Honeybadger.expects(:notify).never
+
+    # Hit google callback with matching email to trigger takeover
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '',
+      email: email
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Verify takeover completed
+    malformed_account.reload
+    assert_equal AuthenticationOption::GOOGLE, malformed_account.provider
+    assert_equal  uid, malformed_account.uid
+
+    # Verify the account has an email and is now well-formed
+    assert_equal email, malformed_account.email
+    assert malformed_account.valid?
+
+    # Verify that we signed the user into the taken-over account
+    assert_equal malformed_account.id, signed_in_user_id
+  end
+
+  test 'silent_takeover: Fails and notifies on malformed unmigrated user' do
+    # Set up existing account
+    malformed_account = create :teacher
+    email = malformed_account.email
+
+    # Make account invalid
+    malformed_account.name = nil
+    malformed_account.save(validate: false)
+    malformed_account.reload
+    refute malformed_account.valid?
+
     # Expect notification about validation failure
     Honeybadger.expects(:notify).with(
       error_class: 'Failed to update User during silent takeover',
-      error_message: 'Update failed with errors: ["Email is required"]',
+      error_message: 'Update failed with errors: ["Display Name is required"]',
       context: {
         user_id: malformed_account.id,
         tags: 'accounts'
@@ -987,7 +1027,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Hit google callback with matching email to trigger takeover
     auth = generate_auth_user_hash(
-      provider: 'google_oauth2',
+      provider: AuthenticationOption::GOOGLE,
       uid: 'some-unused-uid',
       user_type: '',
       email: email
@@ -1000,7 +1040,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Verify takeover did not happen
     malformed_account.reload
-    refute_equal 'google_oauth2', malformed_account.provider
+    refute_equal AuthenticationOption::GOOGLE, malformed_account.provider
     assert_nil malformed_account.uid
 
     # We sign the user in anyway (weird, but okay because we know
@@ -1030,7 +1070,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Hit google callback with matching email to trigger takeover
     auth = generate_auth_user_hash(
-      provider: 'google_oauth2',
+      provider: AuthenticationOption::GOOGLE,
       uid: 'another-unused-uid',
       user_type: '',
       email: email
