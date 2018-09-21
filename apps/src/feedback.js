@@ -375,11 +375,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           level_id: options.response.level_id
         });
       }
-
-      // onContinue will fire already if there was only a continue button
-      if (!onlyContinue) {
-        options.onContinue();
-      }
     });
   }
 
