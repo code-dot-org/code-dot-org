@@ -17,6 +17,7 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
 
+
 /**
  * Top-level React wrapper for GameLab
  */
