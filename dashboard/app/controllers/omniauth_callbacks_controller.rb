@@ -196,21 +196,27 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # our tracking data is usually populated, so do it here
     SignUpTracking.begin_sign_up_tracking(session, split_test: true)
 
-    user = User.from_omniauth(auth_hash, auth_params, session)
-
-    prepare_locale_cookie user
-
-    if user.persisted?
-      handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
-      email_already_taken_redirect(
-        provider: AuthenticationOption::CLEVER,
-        found_provider: looked_up_user.provider,
-        email: user.email
-      )
-    else
-      # This is a new registration
+    if SignUpTracking.new_sign_up_experience? session
+      user = User.new
+      User.initialize_new_oauth_user user, auth_hash, auth_params
+      prepare_locale_cookie user
       register_new_user user
+    else
+      user = User.from_omniauth(auth_hash, auth_params, session)
+      prepare_locale_cookie user
+
+      if user.persisted?
+        handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
+      elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
+        email_already_taken_redirect(
+          provider: AuthenticationOption::CLEVER,
+          found_provider: looked_up_user.provider,
+          email: user.email
+        )
+      else
+        # This is a new registration
+        register_new_user user
+      end
     end
   end
 
