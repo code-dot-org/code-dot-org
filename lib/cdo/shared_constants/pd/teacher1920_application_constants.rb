@@ -98,6 +98,9 @@ module Pd
         ).merge({subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}),
       section_4_professional_learning_program_requirements:
         BASE_PAGE_LABELS[:section_4_summer_workshop].slice(
+          :able_to_attend_single,
+          :able_to_attend_multiple,
+          :alternate_workshops,
           :committed,
           :pay_fee,
           :willing_to_travel,
@@ -108,12 +111,12 @@ module Pd
           }
         ),
       section_5_additional_demographic_information:
-        BASE_PAGE_LABELS[:section_1_about_you].slice(:gender_identity, :race).merge(
+        BASE_PAGE_LABELS[:section_5_submission].slice(:gender_identity, :race).merge(
           {
             how_heard: 'How did you hear about this program?'
           }
         ),
-      section_6_submission: BASE_PAGE_LABELS[:section_5_submission]
+      section_6_submission: BASE_PAGE_LABELS[:section_5_submission].slice(:agree)
     }.freeze
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
