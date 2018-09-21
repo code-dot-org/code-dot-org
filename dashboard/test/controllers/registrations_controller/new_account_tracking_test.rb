@@ -160,6 +160,36 @@ module RegistrationsControllerTests
       # assert_redirected_to '/home'
     end
 
+    test 'in experiment, Clever goes to finish_sign_up page without creating a user' do
+      # Google Oauth doesn't normally give us a user-type by default.
+      OmniAuth.config.mock_auth[:clever] = generate_auth_user_hash(
+        provider: AuthenticationOption::CLEVER,
+      )
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
+
+      # The user signs in with Clever for the first time.
+      # The oauth endpoint (which is in test mode here)
+      # redirects to the oauth callback
+      # @request.env["devise.mapping"] = Devise.mappings[:user]
+      get '/users/auth/clever'
+      assert_redirected_to '/users/auth/clever/callback'
+
+      # /users/auth/clever/callback sends us to /users/finish_sign_up
+      refute_creates User do
+        follow_redirect!
+      end
+      assert_redirected_to '/users/finish_sign_up'
+
+      # We end up on the finish_sign_up page
+      follow_redirect!
+
+      # TODO: Update test to perform final user creation in this flow
+      # assert_creates User do
+      #   post '/users', params: {user: {user_type: 'teacher'}}
+      # end
+      # assert_redirected_to '/home'
+    end
+
     test 'login to existing account after hitting sign up page sends Firehose sign in event' do
       OmniAuth.config.mock_auth[:google_oauth2] = generate_auth_user_hash(
         provider: 'google_oauth2'
