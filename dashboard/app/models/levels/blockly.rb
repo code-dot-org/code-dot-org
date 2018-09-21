@@ -76,6 +76,7 @@ class Blockly < Level
     show_type_hints
     thumbnail_url
     include_shared_functions
+    preload_asset_list
   )
 
   before_save :update_ideal_level_source
@@ -121,6 +122,15 @@ class Blockly < Level
     contained_level_names.try(:delete_if, &:blank?)
     contained_level_names = nil unless contained_level_names.try(:present?)
     properties["contained_level_names"] = contained_level_names
+  end
+
+  before_save :update_preload_asset_list
+
+  def update_preload_asset_list
+    preload_asset_list = properties["preload_asset_list"]
+    preload_asset_list.try(:delete_if, &:blank?)
+    preload_asset_list = nil unless preload_asset_list.try(:present?)
+    properties["preload_asset_list"] = preload_asset_list
   end
 
   before_validation do
