@@ -42,7 +42,7 @@ const styles = {
 const SongSelector = Radium(class extends React.Component {
   render() {
     return (
-      <div>
+      <div id="song_selector">
         <label><b>{gamelabMsg.selectSong()}</b></label>
         <select style={styles.selectStyle}>
           {Object.keys(songLibrary).map((option, i) => (
