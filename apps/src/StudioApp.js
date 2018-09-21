@@ -1265,9 +1265,6 @@ function resizePinnedBelowVisualizationArea() {
       });
     } else {
       top += $(visualization).outerHeight(true);
-      if (document.getElementById('song_selector')) {
-        top += $(document.getElementById('song_selector')).outerHeight(true);
-      }
     }
   }
 
