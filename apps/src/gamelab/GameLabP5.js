@@ -84,7 +84,7 @@ GameLabP5.prototype.init = function (options) {
     window.p5.prototype.loadImage = function (path) {
       // Make sure to pass all arguments through to loadImage, which can get
       // wrapped and take additional arguments during preload.
-      arguments[0] = assetPrefix.fixPath(path, { bypassMediaProxy: true });
+      arguments[0] = assetPrefix.fixPath(path);
       return GameLabP5.baseP5loadImage.apply(this, arguments);
     };
   }
