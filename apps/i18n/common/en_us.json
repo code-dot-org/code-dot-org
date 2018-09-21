@@ -958,7 +958,7 @@
   "projectSharingColumnHeader": "Sharing",
   "projectSharingDialogButton": "Show project sharing column",
   "projectSharingDialogHeader": "Control sharing for App Lab / Game Lab / Web Lab projects",
-  "projectSharingDialogInstructions1": "App Lab, Game Lab and Web Lab are programming environments that allow students to personalize and customize their creations through writing free-form text, uploading images and sounds, etc. By default, students under the age of 13 are not able to share their projects with others, but students aged 13 and over are.\n\n If you want to be able to manage exactly which students can and can not share these project types, you can show the project sharing column by clicking the orange button below.",
+  "projectSharingDialogInstructions": "App Lab, Game Lab and Web Lab are programming environments that allow students to personalize and customize their creations through writing free-form text, uploading images and sounds, etc. By default, students under the age of 13 are not able to share their projects with others, but students aged 13 and over are.\n\n If you want to be able to manage exactly which students can and can not share these project types, you can show the project sharing column by clicking the orange button below.",
   "projectSharingDisableAll": "Disable all",
   "projectSharingEnableAll": "Enable all",
   "projectStartNew": "Start a new project",
