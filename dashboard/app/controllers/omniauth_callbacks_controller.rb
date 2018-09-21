@@ -423,9 +423,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       )
       unless success
         # This should never happen if other logic is working correctly, so notify
+        # This can happen if the account being taken over is already invalid
         Honeybadger.notify(
           error_class: 'Failed to update User during silent takeover',
-          error_message: "Failed for user with id #{@user.id}"
+          error_message: "Update failed with errors: #{@user.errors.full_messages}",
+          context: {
+            user_id: @user.id,
+            tags: 'accounts'
+          }
         )
         return
       end
