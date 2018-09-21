@@ -5,9 +5,10 @@
     = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
 
+%legend.control-legend.levelTypeHeader
+  Blockly Options
 = render partial: 'levels/editors/authored_hints', locals: {f: f}
-.field
-  = f.label :edit_code,'Blockly level'
+
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
