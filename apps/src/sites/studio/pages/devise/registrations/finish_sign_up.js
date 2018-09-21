@@ -63,7 +63,7 @@ $(document).ready(() => {
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
-        <div>
+        <div style={{padding: 10}}>
           <h5>{i18n.schoolInformationHeader()}</h5>
           <hr/>
           <SchoolInfoInputs
@@ -80,6 +80,7 @@ $(document).ready(() => {
             onSchoolTypeChange={onSchoolTypeChange}
             onSchoolChange={onSchoolChange}
             onSchoolNotFoundChange={onSchoolNotFoundChange}
+            styles={{width: 580}}
           />
         </div>,
         schoolInfoMountPoint
