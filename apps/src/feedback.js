@@ -202,11 +202,15 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   };
 
-  var onHidden = onlyContinue ? options.onContinue : function () {
+  const onContinue = () => {
+    options.onContinue();
+  };
+
+  var onHidden = onlyContinue ? onContinue : function () {
     if (!continueButton || feedbackDialog.hideButDontContinue) {
       this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
     } else {
-      options.onContinue();
+      onContinue();
     }
   }.bind(this);
 
@@ -229,14 +233,14 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
-    let onContinue = options.onContinue;
+    let onChallengeContinue = onContinue;
     if (showPuzzleRatingButtons) {
-      onContinue = () => {
+      onChallengeContinue = () => {
         puzzleRatingUtils.cachePuzzleRating(container, {
           script_id: options.response.script_id,
           level_id: options.response.level_id,
         });
-        options.onContinue();
+        onContinue();
       };
     }
     if (isPerfect) {
@@ -245,7 +249,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           title={msg.challengeLevelPerfectTitle()}
           avatar={icon}
           complete
-          handlePrimary={onContinue}
+          handlePrimary={onChallengeContinue}
           primaryButtonLabel={msg.continue()}
           cancelButtonLabel={msg.tryAgain()}
           showPuzzleRatingButtons={showPuzzleRatingButtons}
@@ -258,7 +262,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         <ChallengeDialog
           title={msg.challengeLevelPassTitle()}
           avatar={icon}
-          handlePrimary={onContinue}
+          handlePrimary={onChallengeContinue}
           primaryButtonLabel={msg.continue()}
           cancelButtonLabel={msg.tryAgain()}
           showPuzzleRatingButtons={showPuzzleRatingButtons}
