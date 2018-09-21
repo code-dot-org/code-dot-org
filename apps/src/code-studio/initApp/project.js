@@ -29,7 +29,8 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange'
+  workspaceChange: 'workspaceChange',
+  continueButtonPressed: 'continueButtonPressed',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -508,7 +509,11 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        $(window).on(events.appModeChanged, function (event, callback) {
+        const eventName = appOptions.level.skipRunSave ?
+          events.continueButtonPressed :
+          events.appModeChanged;
+
+        $(window).on(eventName, function (event, callback) {
           this.saveIfSourcesChanged().then(callback);
         }.bind(this));
 
