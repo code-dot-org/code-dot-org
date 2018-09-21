@@ -75,6 +75,17 @@
   = f.label 'Custom setup code'
   = f.text_field :custom_setup_code
 
+- if @level.is_a?(GamelabJr)
+  .field
+    = f.label :block_pool
+    %p
+      Select
+      %a.select_all{href: '#'} all
+      \/
+      %a.select_none{href: '#'} none
+      (shift-click or cmd-click to select multiple).
+    = f.select :block_pool, (Block.all_pool_names + (@level.block_pool || [])).uniq.sort, {}, {multiple: true}
+
 .field
   = f.label :helper_libraries
   %p
