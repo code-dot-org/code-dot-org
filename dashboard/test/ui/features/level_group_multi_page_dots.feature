@@ -11,6 +11,7 @@ Background:
   And I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
 
+@skip
 Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
 
@@ -92,3 +93,61 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And I verify progress for stage 23 level 2 is "perfect_assessment"
   And I verify progress for stage 23 level 3 is "perfect_assessment"
   And I verify progress for stage 23 level 4 is "perfect_assessment"
+
+Scenario: optional free play level
+  When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
+
+  # Enter answers to all three multis on the first page.
+  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:nth(1) .answerbutton[index=1]" using jQuery
+  # The last question requires 2 boxes to be checked.
+  And I press ".level-group-content:nth(2) .answerbutton[index=0]" using jQuery
+  And I press ".level-group-content:nth(2) .answerbutton[index=1]" using jQuery
+
+  And I press ".nextPageButton" using jQuery to load a new page
+  And I wait to see ".level-group-content"
+  And check that the URL contains "/page/2"
+  And element ".level-group-content:nth(0) .multi-question" contains text "Which step should go"
+
+  # Answer all three multis on page 2, but not the markdown or free response.
+  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:nth(1) .answerbutton[index=1]" using jQuery
+  And I press ".level-group-content:nth(2) .answerbutton[index=0]" using jQuery
+
+  And I press ".nextPageButton" using jQuery to load a new page
+  And I wait to see ".level-group-content"
+  And check that the URL contains "/page/3"
+  And element ".level-group-content:nth(0) .multi-question" contains text "Which repeat block"
+
+  # Answer both multis on page 3.
+  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:nth(1) .answerbutton[index=1]" using jQuery
+
+  # Verify the bubble status and submit dialog message show incomplete
+
+  Then I verify progress in the header of the current page is "attempted" for level 3
+
+  When I press ".submitButton" using jQuery
+  And I wait to see a dialog titled "Submit your assessment"
+  Then element ".modal-body" contains text "You left some questions incomplete"
+
+  When I press "#cancel-button" using jQuery
+  And I press ".previousPageButton" using jQuery to load a new page
+  And I wait to see ".level-group-content"
+  And check that the URL contains "/page/2"
+
+  # Answer all but the optional free response on page 2.
+  When I type "hello world" into ".response:first"
+  And I press ".nextPageButton" using jQuery to load a new page
+  And I wait to see ".level-group-content"
+  And check that the URL contains "/page/3"
+
+  # Verify the bubble status and submit dialog contents are now complete
+
+  Then I verify progress in the header of the current page is "perfect" for level 2
+  Then I verify progress in the header of the current page is "perfect" for level 3
+  Then I verify progress in the header of the current page is "perfect" for level 4
+
+  When I press ".submitButton" using jQuery
+  And I wait to see a dialog titled "Submit your assessment"
+  Then element ".modal-body" does not contain text "You left some questions incomplete"
