@@ -55,9 +55,9 @@ describe('ConfirmRemoveStudentDialog', () => {
       <div>
         <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
         <div>
-            <UnsafeRenderedMarkdown
-              markdown={i18n.removeStudentBody1()}
-            />
+          <UnsafeRenderedMarkdown
+            markdown={i18n.removeStudentBody1()}
+          />
           <p>
             <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
               {i18n.learnMore()}
@@ -89,9 +89,9 @@ describe('ConfirmRemoveStudentDialog', () => {
       <div>
         <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
         <div>
-            <UnsafeRenderedMarkdown
-              markdown={i18n.removeStudentBody1()}
-            />
+          <UnsafeRenderedMarkdown
+            markdown={i18n.removeStudentBody1()}
+          />
           <p>
             <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
               {i18n.learnMore()}
