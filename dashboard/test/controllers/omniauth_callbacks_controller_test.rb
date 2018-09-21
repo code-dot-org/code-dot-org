@@ -1003,9 +1003,51 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     refute_equal 'google_oauth2', malformed_account.provider
     assert_nil malformed_account.uid
 
-    # We sign the user in anyway (werid, but okay because we know
+    # We sign the user in anyway (weird, but okay because we know
     # the email matches?)
     assert_equal malformed_account.id, signed_in_user_id
+  end
+
+  test 'silent_takeover: Fails and notifies on malformed migrated user' do
+    # Set up existing account
+    account = create :teacher, :with_migrated_email_authentication_option
+    email = account.email
+    assert_equal 1, account.authentication_options.count
+
+    # Stub to break creation of new AuthenticationOptions by returning
+    # an un-persisted instance
+    AuthenticationOption.stubs(:create).returns(AuthenticationOption.new)
+
+    # Expect notification about validation failure
+    Honeybadger.expects(:notify).with(
+      error_class: 'Failed to create AuthenticationOption during silent takeover',
+      error_message: 'Create failed with errors: []',
+      context: {
+        user_id: account.id,
+        tags: 'accounts'
+      }
+    )
+
+    # Hit google callback with matching email to trigger takeover
+    auth = generate_auth_user_hash(
+      provider: 'google_oauth2',
+      uid: 'another-unused-uid',
+      user_type: '',
+      email: email
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Verify takeover did not happen
+    account.reload
+    assert_equal 1, account.authentication_options.count
+
+    # We sign the user in anyway (weird, but okay because we know
+    # the email matches?)
+    assert_equal account.id, signed_in_user_id
   end
 
   private
