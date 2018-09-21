@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Giờ Lập Trình được phát triển bởi Hour of Code và Tuần Tham vấn Giáo dục Khoa học Máy tính và Ủy ban Phê bình.
 

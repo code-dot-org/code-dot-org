@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_resources) %>
+title: <%= hoc_s(:title_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
