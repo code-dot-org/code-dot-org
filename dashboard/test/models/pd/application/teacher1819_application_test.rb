@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
   class Teacher1819ApplicationTest < ActiveSupport::TestCase

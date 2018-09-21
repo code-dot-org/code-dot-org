@@ -1,26 +1,15 @@
+- partner_name = @application.regional_partner&.name || 'Code.org'
+
 %p
   Hello
   = @application.first_name + ','
 
 %p
-  Thank you for submitting your application to join Code.org's Professional Learning Program!
-  - if @application.regional_partner
-    We've received your application, and will be reviewing it in the next few weeks with your
-    Regional Partner. As a reminder, your assigned Regional Partner is
-    = @application.regional_partner.name + "."
-
-%p
-  Your principal will receive a form at the email address you provided,
-  asking for approval of your participation in the program.
-  %strong
-    Your application will not be considered complete until your principal has finished this form,
-  so please make sure your principal has received that email and completes the form as soon as possible.
-
-%p
-  The priority deadline for applications has passed, but we will consider your application if space
-  remains in the program. If you have any additional questions, or need to update your application,
-  please contact
-  = link_to('teacher@code.org', 'mailto:teacher@code.org') + '.'
+  Thank you for submitting your application to join
+  = "#{@application.regional_partner&.name || 'Code.org'}'s"
+  Professional Learning Program!
+  = @application.regional_partner&.name || 'We'
+  will review your application soon.
 
 %p
   In the meantime, please visit
@@ -29,11 +18,20 @@
   Or, visit
   = link_to 'https://code.org/educate', 'https://code.org/educate'
   for additional resources and opportunities to connect with other computer science educators.
-  Thank you for supporting computer science for every student!
+  Thank you for supporting computer science for all!
+
+  - if @application.regional_partner
+    %p{style: 'margin-bottom: 0'}
+      Please direct all questions or concerns to:
+      %div{style: 'padding-left: 2em'}
+        = render partial: 'partner_signature'
 
 %p
-  Sarah Fairweather
+  Thanks again for applying!
+
+%p
+  Anthonette Pena
   %br
-  Education Team Program Manager
+  National Program Manager
   %br
   Code.org

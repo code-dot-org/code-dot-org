@@ -240,5 +240,33 @@ module Pd::Application
       application.form_data = nil
       assert_nil application.instance_variable_get(:@full_answers)
     end
+
+    test 'queue_email creates an associated unsent Email record' do
+      application = create :pd_teacher1920_application
+
+      application.expects(:deliver_email).never
+      assert_creates Email do
+        application.queue_email :test_email
+      end
+      email = Email.last
+      assert_equal application, email.application
+      assert_equal 'test_email', email.email_type
+      assert_equal application.status, email.application_status
+      assert_nil email.sent_at
+    end
+
+    test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
+      application = create :pd_teacher1920_application
+
+      application.expects(:deliver_email)
+      assert_creates Email do
+        application.queue_email :test_email, deliver_now: true
+      end
+      email = Email.last
+      assert_equal application, email.application
+      assert_equal 'test_email', email.email_type
+      assert_equal application.status, email.application_status
+      assert_not_nil email.sent_at
+    end
   end
 end

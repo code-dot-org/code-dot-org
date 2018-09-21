@@ -441,6 +441,7 @@ module Pd::Application
       hash = sanitize_form_data_hash
       hash[:preferred_first_name] || hash[:first_name]
     end
+    alias_method :teacher_first_name, :first_name
 
     def last_name
       sanitize_form_data_hash[:last_name]
