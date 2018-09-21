@@ -17,21 +17,34 @@
             "\"scale\""
           ],
           [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
             "rotation",
             "\"rotation\""
           ],
           [
-            "tint",
-            "\"tint\""
+            "horizontal position",
+            "\"x\""
           ],
           [
-            "dance speed",
-            "\"dance_speed\""
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
           ]
         ]
       },
       {
-        "name": "VAL"
+        "name": "VAL",
+        "field": true
       }
     ]
   }
