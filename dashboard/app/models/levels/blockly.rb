@@ -263,46 +263,50 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    level_options = blockly_level_options.dup
+    options = Rails.cache.fetch("#{cache_key}/#{script.cache_key}/#{I18n.locale}/localized_blockly_level_options") do
+      level_options = blockly_level_options.dup
 
-    # For historical reasons, `localized_instructions` and
-    # `localized_authored_hints` should happen independent of `should_localize?`
-    # TODO: elijah: update these instructions values to new names once we
-    # migrate to the new keys
-    set_unless_nil(level_options, 'instructions', localized_short_instructions)
-    set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
+      # For historical reasons, `localized_instructions` and
+      # `localized_authored_hints` should happen independent of `should_localize?`
+      # TODO: elijah: update these instructions values to new names once we
+      # migrate to the new keys
+      set_unless_nil(level_options, 'instructions', localized_short_instructions)
+      set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
-    if should_localize?
-      # Don't ever show non-English markdown instructions for Course 1 - 4 or
-      # the 20-hour course. We're prioritizing translation of Course A - F.
-      if script && (script.csf_international? || script.twenty_hour?)
-        level_options.delete('markdownInstructions')
-      else
-        set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
-      end
-      set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
+      if should_localize?
+        # Don't ever show non-English markdown instructions for Course 1 - 4 or
+        # the 20-hour course. We're prioritizing translation of Course A - F.
+        if script && (script.csf_international? || script.twenty_hour?)
+          level_options.delete('markdownInstructions')
+        else
+          set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
+        end
+        set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
-      # Unintuitively, it is completely possible for a Blockly level to use
-      # Droplet, so we need to confirm the editor style before assuming that
-      # these fields contain Blockly xml.
-      unless uses_droplet?
-        set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
+        # Unintuitively, it is completely possible for a Blockly level to use
+        # Droplet, so we need to confirm the editor style before assuming that
+        # these fields contain Blockly xml.
+        unless uses_droplet?
+          set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
 
-        %w(
-          initializationBlocks
-          startBlocks
-          toolbox
-          levelBuilderRequiredBlocks
-          levelBuilderRecommendedBlocks
-          solutionBlocks
-        ).each do |xml_block_prop|
-          next unless level_options.key? xml_block_prop
-          set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
+          %w(
+            initializationBlocks
+            startBlocks
+            toolbox
+            levelBuilderRequiredBlocks
+            levelBuilderRecommendedBlocks
+            solutionBlocks
+          ).each do |xml_block_prop|
+            next unless level_options.key? xml_block_prop
+            set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
+          end
         end
       end
+
+      level_options
     end
 
-    level_options
+    options.freeze
   end
 
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
