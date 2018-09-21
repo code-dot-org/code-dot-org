@@ -26,9 +26,8 @@ module UserMultiAuthHelper
 
   def uid_for_provider(provider)
     if migrated?
-      AuthenticationOption.find_by(
-        credential_type: provider,
-        user_id: id
+      authentication_options.find_by(
+        credential_type: provider
       )&.authentication_id
     else
       uid
