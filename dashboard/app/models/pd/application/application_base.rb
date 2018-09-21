@@ -113,8 +113,39 @@ module Pd::Application
       self.application_type = nil
     end
 
+    def accepted?
+      status == 'accepted'
+    end
+
     def update_accepted_date
-      self.accepted_at = status == 'accepted' ? Time.now : nil
+      self.accepted_at = accepted? ? Time.now : nil
+    end
+
+    # Queues an email for this application
+    # @param email_type [String] specifies the mailer action
+    # @param deliver_now [Boolean] (default false)
+    #   When true, send the email immediately.
+    #   Otherwise, it will remain unsent in the queue until the next morning's cronjob.
+    # @see Pd::Application::Email
+    def queue_email(email_type, deliver_now: false)
+      email = Email.new(
+        application: self,
+        application_status: status,
+        email_type: email_type,
+        to: user.email
+      )
+
+      email.send! if deliver_now
+      email.save!
+    end
+
+    # Override in any application class that will deliver emails.
+    # This is only called for classes that have associated Email records.
+    # Note - this should only be called from within Pd::Application::Email.send!
+    # @param [Pd::Application::Email] email
+    # @see Pd::Application::Email
+    def deliver_email(email)
+      raise 'Abstract method must be overridden by inheriting class'
     end
 
     self.table_name = 'pd_applications'
@@ -149,26 +180,6 @@ module Pd::Application
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
     validates_presence_of :type
     validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
-
-    # decision notifications should be sent to applications that have been
-    # locked but have not yet received a decision_notification email
-    scope :should_send_decision_notification_emails, -> {where("locked_at IS NOT NULL AND decision_notification_email_sent_at IS NULL")}
-
-    # Override in derived class
-    def send_decision_notification_email
-      # intentional noop
-    end
-
-    def self.send_all_decision_notification_emails
-      # Collect errors, but do not stop batch. Rethrow all errors below.
-      errors = []
-      should_send_decision_notification_emails.each do |application|
-        application.send_decision_notification_email
-      rescue => e
-        errors << "failed to send notification for application #{application.id} - #{e.message}"
-      end
-      raise "Failed to send decision notifications: #{errors.join(', ')}" unless errors.empty?
-    end
 
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"

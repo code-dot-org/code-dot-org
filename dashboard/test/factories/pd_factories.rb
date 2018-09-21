@@ -1094,4 +1094,11 @@ FactoryGirl.define do
     association :facilitator
     day 5
   end
+
+  factory :pd_application_email, class: 'Pd::Application::Email' do
+    association :application, factory: :pd_teacher1920_application
+    email_type 'confirmation'
+    application_status 'confirmation'
+    to {application.user.email}
+  end
 end
