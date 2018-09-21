@@ -43,7 +43,7 @@ class ControlProjectSharingDialog extends Component {
         >
           <h2>{i18n.projectSharingDialogHeader()}</h2>
           <div>
-            <UnsafeRenderedMarkdown markdown={i18n.projectSharingDialogInstructions1()} />
+            <UnsafeRenderedMarkdown markdown={i18n.projectSharingDialogInstructions()} />
           </div>
           <DialogFooter>
             <Button
