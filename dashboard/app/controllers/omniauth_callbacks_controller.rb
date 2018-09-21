@@ -394,7 +394,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     if @user.migrated?
-      success = AuthenticationOption.create(
+      option = AuthenticationOption.create(
         user: @user,
         email: lookup_email,
         credential_type: auth_hash.provider.to_s,
@@ -405,11 +405,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           oauth_refresh_token: auth_hash.credentials&.refresh_token
         }.to_json
       )
-      unless success
+      unless option.persisted?
         # This should never happen if other logic is working correctly, so notify
         Honeybadger.notify(
           error_class: 'Failed to create AuthenticationOption during silent takeover',
-          error_message: "Failed for user with id #{@user.id}"
+          error_message: "Create failed with errors: #{option.errors.full_messages}",
+          context: {
+            user_id: @user.id,
+            tags: 'accounts'
+          }
         )
         return
       end
