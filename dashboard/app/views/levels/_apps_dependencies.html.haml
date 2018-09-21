@@ -62,3 +62,14 @@
 -# Applab external script dependencies
 - if use_applab
   %script{src: 'https://www.google.com/jsapi'}
+
+-# Preload asset list
+- if preload_asset_list
+  - preload_asset_list.each do |asset|
+    - case Addressable::URI.parse(asset).extname.downcase
+      - when ".mp3", ".ogg"
+        %link{rel: 'preload', as: "audio", href: asset}
+      - when ".png", ".gif", ".jpg", ".jpeg"
+        %link{rel: 'preload', as: "image", href: asset}
+      - when ".mov", ".mp4"
+        %link{rel: 'preload', as: "video", href: asset}
