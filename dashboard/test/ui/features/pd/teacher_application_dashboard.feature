@@ -13,7 +13,7 @@ Feature: Teacher Application Dashboard view
     Then I wait until element "table#quick-view" is visible
 
     # TODO (mehal): Re-enable these when the test is fixed for this
-    #And I open my eyes to test "Teacher Application Dashboard" except in circle
+    And I open my eyes to test "Teacher Application Dashboard" except in circle
     #And I see no difference for "Teacher List View" except in circle
 
     # Access the Detail View by navigating to the first row's "view application" button href
