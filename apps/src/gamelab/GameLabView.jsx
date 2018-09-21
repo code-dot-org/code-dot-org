@@ -19,12 +19,9 @@ import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
 import gamelabMsg from '@cdo/gamelab/locale';
 import experiments from "@cdo/apps/util/experiments";
+import songLibrary from "../code-studio/songLibrary.json";
 
 const SongSelector = Radium(class extends React.Component {
-  static propTypes = {
-    options: PropTypes.array.isRequired,
-  };
-
   render() {
     const selectStyle = {
       width: GAME_WIDTH
@@ -34,8 +31,8 @@ const SongSelector = Radium(class extends React.Component {
       <div>
         <label><b>{gamelabMsg.selectSong()}</b></label>
         <select style={selectStyle}>
-          {this.props.options.map((option, i) => (
-            <option key={i}>{option}</option>
+          {Object.keys(songLibrary).map((option, i) => (
+            <option key={i}>{songLibrary[option].title}</option>
           ))}
         </select>
       </div>
@@ -103,9 +100,7 @@ class GameLabView extends React.Component {
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
           {this.props.danceLab && experiments.isEnabled("songSelector") &&
             <div id="song_selector">
-              <SongSelector
-                options={['option 1', 'option 2', 'option 3']}
-              />
+              <SongSelector/>
             </div>
           }
           <GameLabVisualizationColumn finishButton={showFinishButton}/>
