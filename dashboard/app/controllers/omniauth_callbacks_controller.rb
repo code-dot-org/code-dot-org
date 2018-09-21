@@ -115,6 +115,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     provider = auth_hash.provider.to_s
     session[:sign_up_type] = provider
 
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session)
+
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'
       auth_hash = extract_powerschool_data(auth_hash)
@@ -170,6 +174,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def sign_up_google_oauth2
     session[:sign_up_type] = AuthenticationOption::GOOGLE
 
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+
     user = User.from_omniauth auth_hash, auth_params, session
     prepare_locale_cookie user
 
@@ -196,6 +204,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_up_clever
     session[:sign_up_type] = AuthenticationOption::CLEVER
+
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
@@ -250,11 +262,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     move_oauth_params_to_cache(user)
     session["devise.user_attributes"] = user.attributes
 
-    # For some providers, signups can happen without ever having hit the sign_up page, where
-    # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session)
-
-    redirect_to new_user_registration_url
+    if SignUpTracking.new_sign_up_experience?(session)
+      redirect_to users_finish_sign_up_url
+    else
+      redirect_to new_user_registration_url
+    end
   end
 
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
