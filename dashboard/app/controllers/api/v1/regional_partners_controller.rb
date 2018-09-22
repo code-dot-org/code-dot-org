@@ -16,7 +16,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
     render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
   end
 
-  # GET /api/v1/pd/regional_partners/find
+  # GET /api/v1/regional_partners/find
   def find
     if params[:school]
       school = School.find(params[:school])
