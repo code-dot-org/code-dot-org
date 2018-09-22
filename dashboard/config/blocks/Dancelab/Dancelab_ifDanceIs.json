@@ -1,8 +1,9 @@
 {
-  "category": "Moves",
+  "category": "",
   "config": {
-    "func": "changeMoveRight",
-    "blockText": "{SPRITE} repeating move {MOVE} [RIGHT]",
+    "func": "ifDanceIs",
+    "blockText": "if {SPRITE} is doing {DANCE}\n {DO1} {DO2}",
+    "inline": true,
     "args": [
       {
         "name": "SPRITE",
@@ -10,50 +11,46 @@
         "customInput": "spritePicker"
       },
       {
-        "name": "MOVE",
+        "name": "DANCE",
         "options": [
           [
-            "Rest",
+            "Clap High",
             "0"
           ],
           [
-            "Clap High",
+            "Clown",
             "1"
           ],
           [
-            "Clown",
+            "Dab",
             "2"
           ],
           [
-            "Dab",
+            "Double Jam",
             "3"
           ],
           [
-            "Double Jam",
+            "Drop",
             "4"
           ],
           [
-            "Drop",
+            "Floss",
             "5"
           ],
           [
-            "Floss",
+            "Fresh",
             "6"
           ],
           [
-            "Fresh",
+            "Kick",
             "7"
           ],
           [
             "Roll",
-            "8"
-          ],
-          [
-            "This or That",
             "9"
           ],
           [
-            "Kick",
+            "This or That",
             "10"
           ],
           [
@@ -61,18 +58,19 @@
             "11"
           ],
           [
-            "Next",
-            "\"next\""
-          ],
-          [
-            "Previous",
-            "\"prev\""
-          ],
-          [
-            "Random",
-            "\"rand\""
+            "None",
+            "8"
           ]
-        ]
+        ],
+        "type": "String"
+      },
+      {
+        "name": "DO1",
+        "statement": true
+      },
+      {
+        "name": "DO2",
+        "statement": true
       }
     ]
   }

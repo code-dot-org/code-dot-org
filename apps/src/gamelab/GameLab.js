@@ -409,6 +409,7 @@ GameLab.prototype.init = function (config) {
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
+        danceLab={this.isDanceLab}
       />
     </Provider>
   ), document.getElementById(config.containerId)));
