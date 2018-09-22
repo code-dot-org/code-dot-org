@@ -47,6 +47,7 @@
     "parent_level_id": 14369,
     "custom_helper_library": "function spriteCostume(costume) {\r\n  \r\n  return costume;\r\n}",
     "custom_blocks": "[]\n",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

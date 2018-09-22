@@ -37,10 +37,8 @@
     "markdown_instructions": "Now we've got two backup dancers, but only one of them is small enough to look like it's in the background. Every dancer has a set of _properties_ that control what it looks like. Can you use the `set size` block to make `backup_dancer2` smaller?",
     "parent_level_id": 14506,
     "validation_code": "if(World.frameCount == 1){\r\n  validationProps.changedCount = 0;\r\n}\r\nif(getTime(\"measures\") > 6){\r\n  sprites.forEach(function(sprite) {\r\n    if (sprite.scale != 1) validationProps.changedCount++;\r\n  });\r\n  if (validationProps.changedCount > 1) {\r\n  \tlevelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "Dancelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

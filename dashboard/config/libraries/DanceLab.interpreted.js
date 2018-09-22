@@ -19,7 +19,7 @@ if (LOW_BAND) {
   var img_base = "https://curriculum.code.org/images/sprites/spritesheet_exsm/";
   var SIZE = 200;
 } else {
-  var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "POO", "ROBOT", "SHARK", "UNICORN"];
+  var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
   var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
   var SIZE = 300;
 }
@@ -679,6 +679,29 @@ function Behavior(func, extraArgs) {
   this.extraArgs = extraArgs;
 }
 
+function addBehavior(sprite, behavior) {
+  if (!spriteExists(sprite) || behavior === undefined) return;
+  
+  behavior = normalizeBehavior(behavior);
+
+  if (findBehavior(sprite, behavior) !== -1) {
+    return;
+  }
+  sprite.behaviors.push(behavior);
+}
+
+function removeBehavior(sprite, behavior) {
+  if (!spriteExists(sprite) || behavior === undefined) return;
+  
+  behavior = normalizeBehavior(behavior);
+
+  var index = findBehavior(sprite, behavior);
+  if (index === -1) {
+    return;
+  }
+  sprite.behaviors.splice(index, 1);
+}
+
 function normalizeBehavior(behavior) {
   if (typeof behavior === 'function') {
     return new Behavior(behavior);
@@ -725,7 +748,7 @@ function startMapping(sprite, property, range) {
     } else if (property == "y") {
       energy = Math.round(map(energy, 0, 255, 350, 50));
     } else if (property == "scale") {
-      energy = map(energy, 0, 255, 0, 2);
+      energy = map(energy, 0, 255, 0.5, 1.5);
     } else if (property == "width" || property == "height") {
       energy = map(energy, 0, 255, 50, 150);
     } else if (property == "rotation" || property == "direction") {
@@ -747,15 +770,16 @@ function stopMapping(sprite, property, range) {
       energy = Math.round(map(energy, 0, 255, 50, 350));
     } else if (property == "y") {
       energy = Math.round(map(energy, 0, 255, 350, 50));
-    } else if (property == "size") {
-      energy = map(energy, 0, 255, 0, 2);
+    } else if (property == "scale") {
+      energy = map(energy, 0, 255, 0.5, 1.5);
+    } else if (property == "width" || property == "height") {
+      energy = map(energy, 0, 255, 50, 159);
     } else if (property == "rotation" || property == "direction") {
       energy = Math.round(map(energy, 0, 255, -180, 180));
     } else if (property == "tint") {
       energy = Math.round(map(energy, 0, 255, 0, 360));
       energy = "hsb(" + energy + ",100%,100%)";
     }
-    console.log(property + " " + energy);
     sprite[property] = energy;
   }, [property, range]);
   behavior.func.name = "mapping" + property + range;
