@@ -26,7 +26,9 @@
 require "csv"
 
 class Craft < Blockly
-  # before_save :update_maps
+  def shared_blocks
+    Block.for('craft') if is_aquatic_level
+  end
 
   serialized_attrs(
     :ground_plane,
