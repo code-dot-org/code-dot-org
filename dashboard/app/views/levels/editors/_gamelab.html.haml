@@ -100,10 +100,10 @@
 
 #animations.collapse
 
-  - if (@level.is_a? GamelabJr)
+  - if @level.is_a?(GamelabJr)
     .field
       = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_default_sprites, description: "Use default sprites as starting animation JSON"}
-      
+
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_animation_mode, description: "Hide the Animation Tab (you can still seed a level with animations)"}
 
