@@ -79,6 +79,20 @@ class BlockTest < ActiveSupport::TestCase
     refute File.exist? old_js_path
   end
 
+  test 'Removing helper code deletes the helper code file' do
+    block = create :block, helper_code: '// Comment comment comment'
+    old_file_path = block.file_path
+    old_js_path = block.js_path
+    assert File.exist? old_file_path
+    assert File.exist? old_js_path
+
+    block.helper_code = ''
+    block.save
+
+    assert File.exist? old_file_path
+    refute File.exist? old_js_path
+  end
+
   test 'always includes blocks from the default pool' do
     assert Block.for.any? {|b| b[:pool] == Block::DEFAULT_POOL}
   end
