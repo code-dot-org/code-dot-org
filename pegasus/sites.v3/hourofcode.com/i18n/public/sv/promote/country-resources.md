@@ -134,12 +134,10 @@ Visa elever en inspirerande video till starta Hour of Code. Exempel:
 
 # La Hora del Código Perú <iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-<
-
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
+[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
 
 <% else %>
 
-# Se fler övningar och material för Sverige på <edvira.com/hoc>!
+# Se fler övningar och material för Sverige på [edvira.com/hoc](edvira.com/hoc)!
 
 <% end %>
