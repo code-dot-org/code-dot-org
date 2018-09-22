@@ -1,4 +1,4 @@
-sdrop table if exists analysis_pii.regional_partner_stats_csp_csd;
+drop table if exists analysis_pii.regional_partner_stats_csp_csd;
 
 create table analysis_pii.regional_partner_stats_csp_csd 
 AS
