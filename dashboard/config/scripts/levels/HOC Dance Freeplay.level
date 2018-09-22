@@ -36,6 +36,7 @@
     "use_default_sprites": "false",
     "markdown_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "parent_level_id": 14509,
+    "block_pool": "Dancelab",
     "contained_level_names": null
   },
   "published": true,
