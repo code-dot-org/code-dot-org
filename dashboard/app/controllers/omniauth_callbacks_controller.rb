@@ -172,7 +172,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # our tracking data is usually populated, so do it here
     SignUpTracking.begin_sign_up_tracking(session, split_test: true)
 
-    user = User.from_omniauth auth_hash, auth_params, session
+    user =
+      if SignUpTracking.new_sign_up_experience?(session)
+        User.new.tap do |u|
+          User.initialize_new_oauth_user(u, auth_hash, auth_params)
+        end
+      else
+        User.from_omniauth auth_hash, auth_params, session
+      end
     prepare_locale_cookie user
 
     if allows_silent_takeover user, auth_hash

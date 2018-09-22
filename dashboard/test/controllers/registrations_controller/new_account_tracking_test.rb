@@ -137,15 +137,6 @@ module RegistrationsControllerTests
       get '/users/auth/google_oauth2'
       assert_redirected_to '/users/auth/google_oauth2/callback'
 
-      # /users/auth/google_oauth2/callback reports a sign-up error
-      # because the user couldn't be immediately created (we might want
-      # to adjust this) and sends us to /users/sign_up
-      FirehoseClient.instance.expects(:put_record).with do |data|
-        data[:study] == STUDY &&
-          data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
-          data[:event] == 'google_oauth2-sign-up-error' &&
-          data[:data_string] == UUID
-      end
       refute_creates User do
         follow_redirect!
       end
