@@ -54,9 +54,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.8.tgz#6a3e9d5370f8798d4cc94c94ba78f56188fa0225"
+"@code-dot-org/craft@0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.9.tgz#5a3410b8827cf5401574fdf0a79200ba17dc22ec"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
