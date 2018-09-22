@@ -36,7 +36,7 @@ class RegionalPartnerSearch extends Component {
     });
 
     $.ajax({
-      url: "/dashboardapi/v1/pd/regional_partners/find?state=" + e.target.value,
+      url: "/dashboardapi/v1/regional_partners/find?state=" + e.target.value,
       type: "get",
       dataType: "json"
     }).done(this.workshopSuccess).fail(this.workshopFail);
@@ -50,7 +50,7 @@ class RegionalPartnerSearch extends Component {
     this.setState({partnerInfo: undefined, noPartner: false});
 
     $.ajax({
-      url: "/dashboardapi/v1/pd/regional_partners/find?zip_code=" + this.state.zipValue,
+      url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
       type: "get",
       dataType: "json"
     }).done(this.workshopSuccess).fail(this.workshopZipFail);
