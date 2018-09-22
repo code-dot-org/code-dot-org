@@ -21,6 +21,10 @@ import {
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
+import experiments from "@cdo/apps/util/experiments";
+import Radium from "radium";
+import songLibrary from "../code-studio/songLibrary.json";
+import gamelabMsg from '@cdo/gamelab/locale';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -29,8 +33,27 @@ const MODAL_Z_INDEX = 1050;
 const styles = {
   containedInstructions: {
     marginTop: 10
+  },
+  selectStyle: {
+    width: GAME_WIDTH
   }
 };
+
+const SongSelector = Radium(class extends React.Component {
+  render() {
+    return (
+      <div id="song_selector">
+        <label><b>{gamelabMsg.selectSong()}</b></label>
+        <select style={styles.selectStyle}>
+          {Object.keys(songLibrary).map((option, i) => (
+            <option key={i}>{songLibrary[option].title}</option>
+          ))}
+        </select>
+      </div>
+    );
+  }
+});
+
 
 class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
@@ -46,6 +69,7 @@ class GameLabVisualizationColumn extends React.Component {
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
     mobileControlsConfig: PropTypes.object.isRequired,
+    danceLab: PropTypes.bool
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -148,6 +172,9 @@ class GameLabVisualizationColumn extends React.Component {
     const spriteLab = this.props.spriteLab;
     return (
       <span>
+        {this.props.danceLab && experiments.isEnabled("songSelector") &&
+          <SongSelector/>
+        }
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
