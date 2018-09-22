@@ -263,7 +263,7 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    options = Rails.cache.fetch("#{cache_key}/#{script.cache_key}/#{I18n.locale}/localized_blockly_level_options") do
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options") do
       level_options = blockly_level_options.dup
 
       # For historical reasons, `localized_instructions` and
