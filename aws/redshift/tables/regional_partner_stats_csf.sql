@@ -107,7 +107,8 @@ pd_facilitators as
          csfa.zip as zip_workshop,
          csfa.state as state_workshop,
          csfa.facilitator_name,
-         csfa.facilitator_id,        
+         csfa.facilitator_id,  
+         csfa.studio_person_id_facilitator,     
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
