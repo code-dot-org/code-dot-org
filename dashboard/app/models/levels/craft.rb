@@ -409,7 +409,7 @@ class Craft < Blockly
   }.freeze
 
   def self.start_directions
-    [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
+    [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end
 
   def self.song_options
