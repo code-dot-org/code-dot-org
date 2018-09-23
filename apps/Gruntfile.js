@@ -61,6 +61,7 @@ describe('entry tests', () => {
     'bounce',
     'calc',
     'craft',
+    'dance',
     'eval',
     'flappy',
     'gamelab',
@@ -561,7 +562,6 @@ describe('entry tests', () => {
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
-    dance: './src/gamelab/dance.js',
   };
 
   // Create a config for each of our bundles

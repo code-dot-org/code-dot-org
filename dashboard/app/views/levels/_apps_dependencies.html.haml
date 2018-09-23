@@ -21,15 +21,12 @@
   %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# Gamelab script dependencies
-- if use_gamelab
+- if use_gamelab || use_dance
   %script{src: minifiable_asset_path('js/p5play/p5.js')}
   %script{src: minifiable_asset_path('js/p5play/p5.play.js')}
 
 - if use_dance
-  - worker_path = "#{static_asset_base_path}js/dance/gif.worker.js"
   %script{src: asset_path('js/p5play/p5.sound.min.js')}
-  %script{src: minifiable_asset_path('js/dance.js'), data: {worker: {href: worker_path}.to_json}}
-  %link{rel: 'preload', as: 'script', href: worker_path}
 
 -# Droplet script dependencies (only when editor present)
 - if use_droplet && !hide_source

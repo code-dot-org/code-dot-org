@@ -9,6 +9,7 @@ import * as commonReducers from './redux/commonReducers';
 import codegen from './lib/tools/jsinterpreter/codegen';
 import {installCustomBlocks, appendBlocksByCategory} from '@cdo/apps/block_utils';
 import logToCloud from './logToCloud';
+import defaultSkinModule from './skins.js';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
@@ -63,7 +64,8 @@ export default function (app, levels, options) {
 
   studioApp().configure(options);
 
-  options.skin = options.skinsModule.load(studioApp().assetUrl, options.skinId);
+  const skinsModule = options.skinsModule || defaultSkinModule;
+  options.skin = skinsModule.load(studioApp().assetUrl, options.skinId);
 
   if (studioApp().isUsingBlockly()) {
     var blockInstallOptions = {
