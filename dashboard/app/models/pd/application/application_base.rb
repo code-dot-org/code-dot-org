@@ -116,6 +116,14 @@ module Pd::Application
       status == 'accepted'
     end
 
+    def unreviewed?
+      status == 'unreviewed'
+    end
+
+    def pending?
+      status == 'pending'
+    end
+
     def update_accepted_date
       self.accepted_at = accepted? ? Time.now : nil
     end
@@ -149,15 +157,30 @@ module Pd::Application
 
     self.table_name = 'pd_applications'
 
-    enum status: %w(
-      unreviewed
-      pending
-      accepted
-      declined
-      waitlisted
-      withdrawn
-      interview
-    ).index_by(&:to_sym).freeze
+    # Override in derived class
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        accepted
+        declined
+        waitlisted
+        withdrawn
+      )
+    end
+
+    # We need to validate this inclusion explicitly in a function in order to support derived
+    # models overriding the valid status list. This way that list comes from the instance type
+    # when called, rather than a constant list here in the base class.
+    # This is equivalent to
+    #   validates_inclusion_of :status, in: statuses
+    # but it will work with derived classes that override statuses
+    validate :status_is_valid_for_application_type
+    def status_is_valid_for_application_type
+      unless status.nil? || self.class.statuses.include?(status)
+        errors.add(:status, 'is not included in the list.')
+      end
+    end
 
     enum course: %w(
       csf

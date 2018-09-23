@@ -817,7 +817,7 @@ FactoryGirl.define do
 
     trait :locked do
       after(:create) do |application|
-        application.update!(status: 'accepted')
+        application.update!(status: 'accepted_not_notified')
         application.lock!
       end
     end
