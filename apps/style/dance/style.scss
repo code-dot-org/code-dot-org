@@ -1,0 +1,10 @@
+@import '../VisualizationOverlay.scss';
+
+#divGameLab {
+  overflow: hidden;
+  outline: none;
+  -webkit-touch-callout: none;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
