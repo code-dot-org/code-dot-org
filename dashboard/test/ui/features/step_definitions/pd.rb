@@ -196,7 +196,7 @@ And(/^I create some fake applications of each type and status$/) do
   # There's no need to create more applications if a lot already exist in the system
   if Pd::Application::Facilitator1819Application.count < 100
     %w(csf csd csp).each do |course|
-      Pd::Application::ApplicationBase.statuses.values.each do |status|
+      Pd::Application::ApplicationBase.statuses.each do |status|
         10.times do
           teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
           application = FactoryGirl.create(:pd_facilitator1819_application, course: course, user: teacher)
@@ -208,7 +208,7 @@ And(/^I create some fake applications of each type and status$/) do
 
   if Pd::Application::Teacher1920Application.count < 100
     %w(csd csp).each do |course|
-      (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
+      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
         10.times do
           teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
           application_hash = FactoryGirl.build(:pd_teacher1920_application_hash, course.to_sym, school: School.first)
