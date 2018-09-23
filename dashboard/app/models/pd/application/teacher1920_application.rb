@@ -40,18 +40,21 @@ module Pd::Application
 
     serialized_attrs %w(status_log)
 
-    enum status: %w(
-      unreviewed
-      pending
-      waitlisted
-      declined
-      accepted_not_notified
-      accepted_notified_by_partner
-      accepted_no_cost_registration
-      registration_sent
-      invoiced
-      withdrawn
-    ).index_by(&:to_sym).freeze
+    # @override
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        waitlisted
+        declined
+        accepted_not_notified
+        accepted_notified_by_partner
+        accepted_no_cost_registration
+        registration_sent
+        invoiced
+        withdrawn
+      )
+    end
 
     # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
     # In these decision emails, status and email_type are the same.

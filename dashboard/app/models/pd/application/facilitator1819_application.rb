@@ -54,6 +54,11 @@ module Pd::Application
       self.application_type = FACILITATOR_APPLICATION
     end
 
+    # override
+    def self.statuses
+      super + %w(interview)
+    end
+
     PROGRAMS = {
       csf: 'CS Fundamentals (Pre-K - 5th grade)',
       csd: 'CS Discoveries (6 - 10th grade)',

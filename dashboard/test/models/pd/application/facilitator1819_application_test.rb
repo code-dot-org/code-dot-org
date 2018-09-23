@@ -155,25 +155,6 @@ module Pd::Application
         "Expected header and row to have the same number of columns"
     end
 
-    test 'send_decision_notification_email only sends to waitlisted and declined' do
-      mock_mail = mock
-      mock_mail.stubs(:deliver_now).returns(nil)
-
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:accepted).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:interview).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:pending).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:unreviewed).times(0)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:withdrawn).times(0)
-
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
-      Pd::Application::Facilitator1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
-
-      Pd::Application::Facilitator1819Application.statuses.values.each do |status|
-        @application.update(status: status)
-        @application.send_decision_notification_email
-      end
-    end
-
     test 'locking an application with fit_workshop_id automatically enrolls user' do
       @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
