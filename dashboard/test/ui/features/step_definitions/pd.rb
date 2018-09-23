@@ -127,6 +127,9 @@ Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   user = User.find_by_email @users[name][:email]
   application = Pd::Application::Teacher1920Application.find_by(user: user)
 
+  # TODO(Andrew) ensure regional partner in the original application, and remove this:
+  application.update!(regional_partner: RegionalPartner.first)
+
   steps %Q{
     And I am on "http://studio.code.org/pd/application/principal_approval/#{application.application_guid}"
   }
