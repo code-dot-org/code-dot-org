@@ -52,6 +52,7 @@ class Game < ActiveRecord::Base
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
   SCRATCH = 'scratch'.freeze
+  DANCE = 'dance'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -153,6 +154,10 @@ class Game < ActiveRecord::Base
     @@game_scratch ||= find_by_name('Scratch')
   end
 
+  def self.dance
+    @@game_dance ||= find_by_name('Dance')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -196,7 +201,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH, DANCE].include? app
   end
 
   # True if the app takes responsibility for showing footer info
@@ -213,7 +218,7 @@ class Game < ActiveRecord::Base
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION].include? app
+    [APPLAB, GAMELAB, WEBLAB, SCRATCH, DANCE, PIXELATION].include? app
   end
 
   # Format: name:app:intro_video
@@ -281,6 +286,7 @@ class Game < ActiveRecord::Base
     Map:map
     CustomFlappy:flappy
     Scratch:scratch
+    Dance:dance
   )
 
   def self.setup
