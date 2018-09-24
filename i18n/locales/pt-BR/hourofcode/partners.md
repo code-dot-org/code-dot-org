@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 A Hora do Código é gerenciada pelos Comitês de Assessoria e Revisão da Semana da Educação em Ciência da Computação e da Hora do Código.
 
