@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -27,18 +27,13 @@ social:
 
 # Код саатын кабыл алуу үчүн катталганыңызга ырахмат!
 
-Окуучуларга информатиканы үйрөнү баштоого жардам бергениңиз үчүн, класстык бөлмөңөргө мыкты сапатта түрдүү роль аткарып ойнолуучу каармандар менен бастырылган плакаттарды бекер тартуулайбыз. Текшермеде **FREEPOSTERS** кодун колдонгула. (Эскертүү: бар болсо гана берилет жана жеткирүү чыгымын сиз төлөшүңүз керек болот. Бул постерлердин АКШдан жиберилгенинен, Канадага же башка чет мамлекеттерге заказ кылынганда жеткирип берүүнүн баасы жогору болушу мүмкүн. Постерлерди сатып алууга мүмкүнчүлүгүңүз жок болгондугун түшүнүп, класстарыңарга бул [PDF файлдарын ](https://code.org/inspire) чыгарып алууну сунуштайбыз)  
-<br /> Постерлерди жүктөп алыш үчүн</button> FREEPOSTERS кодун колдонгула</p> 
-
-<% if @country == 'us' %> Ozobot, Dexter Industries, littleBits жана Wonder Workshop кең пейилдиги менен 100дөн ашык класс роботторду жана схемалар берүү үчүн тандалат! Топтомдорду алыш үчүн Код саатынан кийин Code.org жөнөткөн сурамжылоону толук толтурган болушуңар керек. Жеңүүчү классты Code.org тандап алат. Азырынча айрым роботтор жана схемалар менен таанышып чыгыңыз. Бул АКШ мектептери үчүн гана экенин эске алыңыз. <% end %>
-
-<br /> **Код сааты <%= campaign_date('full') %> өтөт. Жаңы жетектемелер жана кызыктуу жаңыртуулар чыкканда сизге кабарлап турабыз. Азырынча силер эмне кыла аласыңар?**
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Коомчулукта же мектебиңерде сөз тараткыла
 
-Код сааты кыймылына кошулдуңар. **#Код сааты** тууралуу досторуңузга билдиргиле!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Үлгү эмейлдерибиз аркылуу [башкаларды дагы катышууга чакыргыла.](<%= resolve_url('/promote/resources#sample-emails') %>) Жетекчиңер менен байланышып, мектебиңердеги ар бир классты катталууга чакыргыла. Жергиликтүү топ түзгүлө - балдар/кыздар скаут клубу, чиркөө, университет, ардагерлер тобу, профсоюз же достор болот. Жаңы жөндөмдөрдү үйрөнүү үчүн мектепте болуу шарт эмес. Жергиликтүү саясатчыны мектебиңердеги Код саатына катышууга чакыргыла. Бул сааттан кийин дагы аймагыңарда компүтердик илимди өнүктүрүүгө жардам берет.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Жаңы жөндөмдөрдү үйрөнүү үчүн мектепте болуу шарт эмес. Invite a local politician or policy maker to visit your school for the Hour of Code. Бул сааттан кийин дагы аймагыңарда компүтердик илимди өнүктүрүүгө жардам берет.
 
 Бул [постерлерди, баннерлерди, чаптамаларды, видеолорду](<%= resolve_url('/promote/resources') %>) иш-чараңарга колдонгула.
 
@@ -48,16 +43,16 @@ social:
 
 ## 3. Өздүк Код саатыңарды пландаштыргыла
 
-Классыңарга [Код сааты тапшырмасын тандап,](https://hourofcode.com/learn) бул [кантип кылуу жетектемесин карап чыккыла](<%= resolve_url('/how-to') %>).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
 # Код саатынан ашып түшкүлө
 
-<% if @country == 'us' %> Код сааты - бул башталыш эле. Администратор, окутуучу же адвокат болсоңор деле, [мектебиңерге информатика курстарын киргизүү же сунуштарыңарды кеңейтүүгө жардам бере алуучу адистик өнүктүрүү, окуу пландарыбыз жана ресурсттарыбыз бар.](https://code.org/yourschool) Учурда информатиканы үйрөтүп жатсаңыз, бул ресурсттарды "Информатика аптасында" администрациядан, ата-энелерден же коомчулуктан колдо табуу үчүн колдонгула.
+<% if @country == 'us' %> Код сааты - бул башталыш эле. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-Мектебиңерге ылайыгын тандап алсаңар болот. Код сааты жетектемелерин сунуштаган уюмдардын көбүндө окутуу пландары жана адистик өнүктүрүү материалдары дагы бар. Өзүңөргө жаккан сабак тапсаңар, аны улантуу жолун сурагыла. Баштаганга көмөк катары, силерге же окуучуларыңарга улантууга жардам болуучу айрым [окуу программасын камсыздоочуларын белгилеп койдук.](https://hourofcode.com/beyond)
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-<% else %> Код сааты - бул башталыш эле. Код сааты сабактарын сунуштаган уюмдардын көбүндө үйрөнүүнү улантууга керектүү окуу пландары дагы бар. Баштаганга көмөк катары, силерге же окуучуларыңарга улантууга жардам болуучу айрым [окуу программасын камсыздоочуларын белгилеп койдук.](https://hourofcode.com/beyond)
+<% else %> Код сааты - бул башталыш эле. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-Ошондой эле Code.org 25 тилге которулган жана мектебиңер үчүн бекер, толук кандуу [баштапкы компүтердик курсун](https://code.org/educate/curriculum/cs-fundamentals-international) сунуштайт. <% end %>
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>
