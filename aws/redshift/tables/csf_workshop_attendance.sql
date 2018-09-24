@@ -111,7 +111,10 @@ FROM sections_geos
          pdw.funding_type,
          capacity,
          CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
-         CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
+         CASE WHEN rp1.name IS NOT NULL THEN rp1.name
+              WHEN rp2.name IS NOT NULL THEN rp2.name 
+              ELSE 'No Partner' END 
+              as regional_partner_name,
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          wsz.zip as zip,
          coalesce(sa.state_abbreviation, wsz.state) as state,
@@ -136,10 +139,12 @@ FROM sections_geos
       ON wsz.id = pdw.id
    LEFT JOIN analysis.state_abbreviations sa
       ON sa.state_name = wsz.state OR sa.state_abbreviation = wsz.state
+   LEFT JOIN dashboard_production_pii.regional_partners rp1
+      ON pdw.regional_partner_id = rp1.id   
    LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
       ON rpm.state = sa.state_abbreviation OR rpm.zip_code = wsz.zip
-   LEFT JOIN dashboard_production_pii.regional_partners rp  
-      ON rpm.regional_partner_id = rp.id  
+   LEFT JOIN dashboard_production_pii.regional_partners rp2 
+      ON  rpm.regional_partner_id = rp2.id  
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
   group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
