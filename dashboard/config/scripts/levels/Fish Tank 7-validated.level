@@ -49,11 +49,9 @@
     "show_type_hints": "true",
     "project_template_level_name": "Fish Tank Template",
     "instructions": "Use some new blocks from the toolbox to make your fish tank special!",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

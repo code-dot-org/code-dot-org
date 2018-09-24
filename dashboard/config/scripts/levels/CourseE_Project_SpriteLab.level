@@ -45,6 +45,7 @@
     "hide_custom_blocks": "true",
     "display_name": "Course E Sprite Lab Project",
     "include_shared_functions": "true",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

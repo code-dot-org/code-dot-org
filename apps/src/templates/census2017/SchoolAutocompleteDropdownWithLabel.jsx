@@ -20,6 +20,9 @@ const singleLineContainerStyles = {
   display: "table",
   width: "100%",
 };
+const checkboxStyle = {
+  display: "flex",
+};
 
 export default class SchoolAutocompleteDropdownWithLabel extends Component {
   static propTypes = {
@@ -88,7 +91,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
             schoolDropdownOption={this.props.schoolDropdownOption}
             schoolFilter={this.props.schoolFilter}
           />
-          <label>
+        <label style={checkboxStyle}>
             <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={schoolNotFound}/>
             <span style={styles.checkboxOption}>
               {i18n.schoolNotFoundCheckboxLabel()}

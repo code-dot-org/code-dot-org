@@ -7,55 +7,41 @@ nav: promote_nav
 
 # Yetkililer için örnek basın açıklaması
 
-Basın Bülteni   
-[**TARİH**]   
-iletişim: [**İLETİŞİM BİLGİLERİ**]  
-  
+### Use this sample press release language to help craft your message about participating in the Hour of Code.
+
+* * *
+
+#### For Immediate Release  
 
 
-<strong> 
+#### [TARİH]  
 
-<center>
-  VALİ/SENATÖR/KURUL ÜYESİ/TEMSİLCİSİ/BELEDİYE BAŞKANI /MECLİS ÜYESİ[İSİM EKLE][ YEREL ÖĞRENCİLER İLE KOD-SAATİNE KATILAN]</strong> <br /> Topluluk, Bilgisayar Bilimleri Eğitim Haftası'na katılarak bilgisayar bilimleri eğitiminin önemi konusunda farkındalık yaratmak için bir araya gelir
-</center>
 
-<br /> <br /></p> 
+#### Contact: [CONTACT INFORMATION]
 
-<p>
-  [<strong> TARİH </ strong> - [<strong> ADINI EKLE </ strong>]], bugün [<strong> okulun adını gir </ strong>], iş dünyası liderleri ve yerel aileler [< strong> NEDENİN ADI </ strong>] Bilgisayar Bilimleri Eğitim Haftası'nın bir parçası olarak Kod-Saatinde buluştu. [ADINI EKLE] dünya çapında topluluk üyeleri bu öğrenme tarihinin önemli olayına katıldı. </p> 
-  
-  <p>
-    [<strong>Olayın ayrıntılarını ekle, AÇIKLAYICI ve ölçülebilir dil kullanın. Örneğin:</strong>] < br / > "Örnek İlköğretim Okulu öğrencilerine bilgisayar bilimi ortaya çıkarmak için okul çapında Kod-Saati etkinliği düzenleyin. Tüm kalitelerde 700'den fazla öğrenci en az bir Kod-Saati tamamladı. Ve veliler ve toplum gönüllüleri yardımıcı oldu. çocuklar neden bu öğrencilerin hayatlarında bilgisayar bilimleri önemlidir vitrine bir derleme için birleştirdi."
-  </p>
-  
-  <p>
-    [<strong>ÖRNEK STOK METNİ BAĞLAM İÇİN: </strong>] <br /> Bilgisayarlar her yerde, ama daha az okullar bilgisayar bilim öğretmek 10 yıl önce. Kızlar ve renk öğrencileri ciddi olarak temsil edilir. İyi haber, bunu daha iyi için değiştiriyoruz. Kodun saati, yüksek kaliteli bilgisayar bilimleri eğitimine erişim sağlayan tüm öğrencileri sağlamaya yönelik ağ geçididir.
-  </p>
-  
-  <p>
-    Dünya çapında 100.000.000 öğrencileri zaten kod saatini denedi. Kod saat sayesinde, bilgisayar bilimi Google, msn, Yahoo! ' nın ana sayfalarında yer almaktadır! anasayfalarındaydı. Başkan Obama, Shakira ve Ashton Kutcher tüm videoları ile kod saati ile başlattı videolaarını. 100 ortaklarla bu hareketi desteklemek için bir araya geldi.
-  </p>
-  
-  <p>
-    [<strong> INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “Öğrencilerimin bilgisayar bilimlerine ilgisini cesaretlendirmeli ve benimsemeliyiz,” dedi [<strong>INSERT NAME</strong>]. "her öğrenci, 21. yüzyılın en iyi kariyerine erişmek için bilgisayar bilimini öğrenme şansını hak etmekte."
-  </p>
-  
-  <p>
-    [<strong> KURULUŞUNUZ HAKKINDA DAHA FAZLA BİLGİ EKLEME</strong>]
-  </p>
-  
-  <p>
-    [<strong>BAŞKA BİR KURULUŞTAN VEYA ETKİNLİĞE KATILAN BİRİNDEN TEKLİF EKLEME</strong>]
-  </p>
-  
-  <p>
-    [<strong>EVENT/PROGRAM/ETC</strong>] hakkında daha fazla bilgi için, [<strong>INSERT WEBSITE</strong>] ziyaret edin yada [<strong>INSERT CONTACT INFORMATION </strong>] ile iletişime geçin
-  </p>
-  
-  <p>
-    <br /> <br />
-  </p>
-  
-  <p>
-    <%= view :signup_button %>
-  </p>
+<br />
+
+**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+
+Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
+
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
+
+[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
+
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
+
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
+
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+<%= view :signup_button %>

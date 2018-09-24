@@ -11,12 +11,21 @@ mi:
   campaign_date_full: "5- 11 o Hakihea"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 Hakihea, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Tēnā whakapiri mai ki te takunetanga ako nui whakaharahara o te wā, %{campaign_date}'
   front_intro_default: 'He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona, kua horapa hoki ki ngā whenua 180 neke atu. Ahakoa ko wai, ahakoa nō hea, e wātea ana kia kawea e wai rānei i tētahi takunetanga Hour of Code. He whakaakoranga kotahi haora te roa kua whakamāoritia ki ngā reo e 45 neke atu. Ehara i te mea me tae mōhio atu. <strong>Pakeke 4 ki te 104.</strong>'
   front_watch_video: 'Mātakina te ataata hou'
   front_watch_regular_video: 'Mātakina te ataata'
   front_volunteers: 'He tūao hangarau kei te hiahiatia'
   front_start_learning: 'Me tīmata ki te ako'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Ngā Rauemi'
   header_menu_faq: 'Ngā Pātai Auau (FAQ)'
   header_menu_how_to: 'Ka-Pēhea'
@@ -222,6 +231,8 @@ mi:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Whakaritea tētahi Hour of Code a te %{campaign_date}, ka rēhita ai ki konei.'
   signup_name_label: 'Tō ingoa'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ mi:
   signup_your_event: 'Waitohungia tō takunetanga'
   signup_host_an_hour: 'Taurimatia tētahi haora'
   signup_match_volunteer: 'Tēnā āwhinatia ahai ki te rapu i tētahi kaipūkaha pūmanawa o te takiwā ki te whakakipakipa i aku ākonga'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Mēnā e taurima ana koe i ngā takunetanga huhua me tāpae koe i tētahi ingoa motuhake, i tētahi īmēra motuhale rānei mō ia takunetanga. Ka tatauhia noa iho tētahi takunetanga ki tētahi pahekotanga ingoa me te īmēra."
   signup_registration_deadline: "Kati ai te Rēhita mō te Hour of Code ā te 12 o Hakihea."
   signup_name_placeholder: 'Tō Ingoa'
@@ -265,6 +281,7 @@ mi:
   signup_thank_you_message: 'Kua tukuna e mātou tētahi īmēra whakaū me ngā mōhiohio e tika ana kia tīmata pai ai koe.'
   map_title: "Mahere Hour of Code"
   map_header: '# ngā takunetanga Hour of Code puta noa i te ao'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Tirohia ngā takunetanga katoa'
   map_header_company: '# by company organizers'
   map_header_country: '# i %{country}'
@@ -280,6 +297,7 @@ mi:
   meta_tag_twitter_title: 'E tata mai ana te Hour of Code'
   meta_tag_twitter_description: 'He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona pakeke katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki ngā reo e 45 neke atu.'
   twitter_default_text: "E whai wāhi ahau ki te #HourOfCode o tēnei tau, ka pēnā hoki koe? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Ngā Pātai Auau (FAQ)'
   hoc_faq_what_is_hoc_q: 'He aha te Hour of Code?'
   hoc_faq_what_is_hoc_a: "I tīmata te Hour of Code hei whakamāramatanga o te pūtaiao rorohiko kotahi haora te roa. Ko tāna he hiki i te kohu o te \"waehere\" ki te whakaatu atu e taea ana e te katoa ngā waiwaitanga te ako ka tahi, ka rua ki te whakawhānui hoki i te urunga mai o te tangata ki te ngā mahi o te pūtaiao rorohiko. Nō taua wā kua tipu ia hei kawenga mā te ao ki te whakanui i te pūtaiao rorohiko mā te tīmata ki ētahi ngohe whakawaehere 1-haora te roa, heo anō, kua tipu hoki ngā āhuatanga tautoko a ngā hapori. Tirohia ngā <a href='%{tutorials}'>whakaakoranga me ngā ngohe</a>. Kei te tautokotia tēnei whakamataaratanga e te <a href='%{partners}'> 400 hoa</a>, e te 200,000 kaiwhakaako puta noa i te ao."
@@ -333,8 +351,8 @@ mi:
   stats_hoc: "Te Hour of Code: 5 ngā rā"
   stats_global: "Neke atu i te 100M ākonga kua whakamātau i tētahi Hour of Code"
   stats_girls_more: "I nui ake te whakamātau a ngā kōtiro i te pūtaiao rorohiko i ngā tau 70 kua hori"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"He rite tonu te huanga i ia rā&mdash; 100 ōrau i rata mai." - Nina Nichols Peery, Pouako'
   stats_student: '"I mōhio pai ahau he <b>tūponotanga nui</b>tēnei whai wāhitanga." - Mariana Alzate, tau 5 (tau kura Amerika)'
   stats_michael: '<b>"Kāore anō au kia kite</b>i te hīkaka ki te ako, pēnei te nui, i aku ākonga." - Michael Clark, Pouako'
@@ -374,6 +392,7 @@ mi:
   videos_obama_cs: Ō President Obama whakaaro e pā ana ki te pūtaiao rorohiko
   videos_anybody_can_learn: Ka Taea e te Katoa (1 miniti)
   title_country_resources: Ngā Rauemi Hāngai ā-Whenua
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Puka Aratohu Hour of Code mō ngā Rohe
   title_how_to_events: Puka-Aratohu Takunetanga Hour of Code
   title_how_to_organizations: Te taurima i tētahi Hour of Code - Umanga
@@ -382,6 +401,7 @@ mi:
   title_how_to_volunteers: Te puka-aratohu mā ngā tūao Hour of Code
   title_how_to_parents: Puka-aratohu mā ngā mātua
   title_how_to: Te Puka-Aratohu
+  title_international_partners: Contact International Partners
   title_press_release: Te Pūrongo Pāpāho Hour of Code mā ngā Āpiha ā-Pōti
   title_op_ed: Tuhinga Tautoko i Te Wiki o te Mātauranga Pūtaiao Rorohiko me te Hour of Code hei tauira
   title_press_kit: Kete Pāpāho

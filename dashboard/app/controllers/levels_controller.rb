@@ -271,6 +271,7 @@ class LevelsController < ApplicationController
       {examples: []},
       {reference_links: []},
       {helper_libraries: []},
+      {block_pools: []},
       {preload_asset_list: []},
       :map_reference,
 
@@ -291,6 +292,7 @@ class LevelsController < ApplicationController
       :place_block_options,
       :play_sound_options,
       :helper_libraries,
+      :block_pools,
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array

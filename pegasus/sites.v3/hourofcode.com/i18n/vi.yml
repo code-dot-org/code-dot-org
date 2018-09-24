@@ -11,12 +11,21 @@ vi:
   campaign_date_full: "Tháng 12 5-11"
   campaign_date_year: "2016"
   campaign_date_full_year: "Tháng 12 5-11, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}'
   front_intro_default: 'Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh, sinh viên trên 180+ quốc gia. Bất cứ ai, bất cứ đâu đều có thể tổ chức sự kiện Giờ Mã. Một giờ hướng dẫn có sẵn trong hơn 30 ngôn ngữ. Không cần kinh nghiệm. <strong>Độ tuổi từ 4 đến 104.</strong>'
   front_watch_video: 'Xem video mới'
   front_watch_regular_video: 'Xem video'
   front_volunteers: 'Tuyển tình nguyện viên kỹ thuật'
   front_start_learning: 'Bắt đầu học'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Nguồn tài liệu'
   header_menu_faq: 'Hỏi đáp'
   header_menu_how_to: 'Hướng dẫn'
@@ -222,6 +231,8 @@ vi:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Tổ chức một sự kiện Hour of Code vào %{campaign_date}, và đăng ký nó ở đây.'
   signup_name_label: 'Tên của bạn'
   signup_name_error: 'Tên là bắt buộc.'
@@ -243,6 +254,11 @@ vi:
   signup_your_event: 'Đăng ký sự kiện của bạn'
   signup_host_an_hour: 'Tổ chức một giờ'
   signup_match_volunteer: 'Hãy giúp tôi tìm một kỹ sư phần mềm tại địa phương để truyền cảm hứng cho học sinh của tôi'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Nếu bạn đang tổ chức nhiều sự kiện, xin vui lòng gửi một tên sự kiện riêng biệt cho mỗi sự kiện hoặc gửi email riêng biệt cho mỗi sự kiện. Chúng tôi chỉ tính một sự kiện dựa vào sự kết hợp của tên sự kiện và email."
   signup_registration_deadline: "Hạn đăng ký cho sự kiện Hour of Code là ngày 11 tháng 12."
   signup_name_placeholder: 'Tên của bạn'
@@ -265,6 +281,7 @@ vi:
   signup_thank_you_message: 'Chúng tôi đã gửi cho bạn một thư xác nhận vào địa chỉ email của bạn đã cung cấp. Hãy đảm bảo rằng bạn đã đọc nó trong hộp thư.'
   map_title: "Bản đồ của Giờ lập trình"
   map_header: 'Sự kiện Hour of Code trên toàn thế giới'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Xem tất cả sự kiện'
   map_header_company: '# bởi những người tổ chức công ty'
   map_header_country: '# tại %{country}'
@@ -280,6 +297,7 @@ vi:
   meta_tag_twitter_title: 'Sự kiện Giờ Mã đang đến gần'
   meta_tag_twitter_description: 'Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi từ 4 đến 104.'
   twitter_default_text: "Tôi đang đang tham gia #HourofCode vào năm nay? còn bạn"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Câu hỏi thường gặp'
   hoc_faq_what_is_hoc_q: 'Hour of Code là gì?'
   hoc_faq_what_is_hoc_a: "Hour of Cpde là một giờ giới thiệu về khoa học máy tính, được thiết kế để mã rõ ràng và hiển thị mà bất cứ ai có thể học những điều cơ bản. <a href='http://code.org/learn'> kiểm tra các hướng dẫn."
@@ -317,7 +335,7 @@ vi:
   hoc_faq_more_questions_q: "Còn thêm bất cứ câu hỏi nào ko?"
   hoc_faq_more_questions_a: "Hãy cố gắng tìm một câu trả lời trong chúng tôi <a href='http://support.code.org'>  diễn đàn hỗ trợ</a>."
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
@@ -333,8 +351,8 @@ vi:
   stats_hoc: "Giờ Mã: 5 ngày"
   stats_global: "Over 100M students have tried an Hour of Code"
   stats_girls_more: "More girls tried computer science than in the last 70 years"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Mỗi một ngày mang lại kết quả tương tự &mdash; 100% tham gia."-Nina Nichols Peery, giáo viên'
   stats_student: '"Tôi biết đây là một <b>cơ hội tốt trong đời</b> dành cho bạn "-Mariana Alzate, học sinh lớp 5'
   stats_michael: 'Tôi  <b>chưa bao giờ</b> thấy học sinh của mình học tập hăng say như vậy. "-Michael Clark, giáo viên'
@@ -374,6 +392,7 @@ vi:
   videos_obama_cs: Tổng thống Obama với khoa học máy tính
   videos_anybody_can_learn: Bất cứ ai cũng có thể tìm hiểu (1 phút)
   title_country_resources: Tài nguyên cụ thể từng nước
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
@@ -382,6 +401,7 @@ vi:
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to_parents: How-to guide for parents
   title_how_to: Hướng dẫn Sử dụng
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Bấm Kit

@@ -11,12 +11,21 @@ ko:
   campaign_date_full: "12월 7일-13일"
   campaign_date_year: "2016년"
   campaign_date_full_year: "2016년 12월 5일부터 11일"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: '2015년 12월 7일- 12월 13일, 역사상 가장 큰 학습 이벤트에 참여하세요.'
   front_intro_default: 'Hour of Code는 전세계 180개 이상의 국가에서 이루어지는 국제적 운동입니다. 어느 누구나 어디에서든지 Hour of Code 행사를 운영할 수 있습니다. 한 시간 분량의 튜토리얼은 40여개 이상의 언어로 준비되어 있습니다. <strong>4살에서 104세</strong>까지 누구든 참여할 수 있습니다.'
   front_watch_video: '새로운 동영상 보기'
   front_watch_regular_video: '동영상 보기'
   front_volunteers: '전공 자원봉사자 모집합니다.'
   front_start_learning: '학습 시작'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: '각종 자료'
   header_menu_faq: '자주 묻는 질문 (FAQ)'
   header_menu_how_to: '방법'
@@ -222,6 +231,8 @@ ko:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '%{campaign_date} 동안 Hour of code를 운영하시고, 이곳에서 등록하세요.'
   signup_name_label: '이름'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ ko:
   signup_your_event: '내 이벤트 행사 등록하기'
   signup_host_an_hour: '한 시간을 진행해보세요'
   signup_match_volunteer: '저희 학교 학생들에게 영감을 줄 수 있는 소프트웨어 엔지니어를 찾을 수 있도록 도와주세요.'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "여러 개의 이벤트를 운영하시면, 하나의 이름과 이메일로 등록해 주세요. 이름과 이메일 조합을 하나로 카운팅합니다."
   signup_registration_deadline: "Hour of Code 등록은 12월 12일에 종료됩니다."
   signup_name_placeholder: '이름'
@@ -265,6 +281,7 @@ ko:
   signup_thank_you_message: '이벤트를 시작하는데 도움이되는 정보와 확인 메일을 발송하였습니다.'
   map_title: "Hour of Code 참여지역"
   map_header: '# 전세계적으로 운영되는 Hour of Code 이벤트들'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: '모든 이벤트 살펴보기'
   map_header_company: '# 개의 회사들이 행사를 조직/운영하고 있습니다.'
   map_header_country: '# %{country}에서'
@@ -280,6 +297,7 @@ ko:
   meta_tag_twitter_title: 'Hour of Code 가 여기 있습니다.'
   meta_tag_twitter_description: 'Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지 수천만 명의 학생들과 함께하려는 전세계적 운동입니다.'
   twitter_default_text: "저는 이번 #HourOfCode 행사에 참여합니다. 여러분은요? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'Hour of Code 란?'
   hoc_faq_what_is_hoc_a: "Hour of Code 는 1시간짜리 컴퓨터과학(정보과학) 소개 과정으로, 어려울 것 같은 코드에 대해 쉽게 이해하고, 설명하고, 누구나 기초/개념/원리들을 배울 수 있다는 것을 보여주도록 설계되었습니다. <a href='%{codeorg_url}'>튜토리얼들을 확인해 보세요.</a>."
@@ -333,8 +351,8 @@ ko:
   stats_hoc: "The Hour of Code: 5일"
   stats_global: "1억명 이상의 학생들이 Hour of Code를 경험해 보았습니다."
   stats_girls_more: "지난 70여년 동안 보다도 더 많은 여학생들이 컴퓨터과학(정보과학) 을 경험해 보았습니다."
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"매일 매일 똑같이 놀라운 결과들을 경험하였습니다. &mdash; 100% 학생들이 열광했고요" - Nina Nichols Peery 선생님'
   stats_student: '"이건 <b>평생 처음</b> 경험하는 기회였습니다." -  Mariana Alzate 초등5학년'
   stats_michael: '"저는 이전에 제 학생들이 이렇게 까지 열정적으로 배우고 싶어하는 것을 경험해 보지 못했습니다." - 교사 마이클 클락(Michael Clark,)'
@@ -374,6 +392,7 @@ ko:
   videos_obama_cs: 컴퓨터과학(정보과학) 교육을 지지하는 오바마 연설
   videos_anybody_can_learn: 누구든지 배울 수 있는 (1 분)
   title_country_resources: 국가별 특별 리소스들
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: 지역을 위한 Hour of Code 방법
   title_how_to_events: Hour of Code 이벤트 행상 방법
   title_how_to_organizations: Hour of Code 행사 운영 방법 - 조직
@@ -382,6 +401,7 @@ ko:
   title_how_to_volunteers: Hour of Code 자원봉사자를 위한 How-to 가이드
   title_how_to_parents: 학부모들을 위한 활용 가이드
   title_how_to: How-to 가이드
+  title_international_partners: Contact International Partners
   title_press_release: 선출직 공무원을 위한 Hour of Code 보도 자료
   title_op_ed: 컴퓨터과학 교육주간(Computer Science Education Week) 과 Hour of Code 를 지원하기 위한 샘플 잡지 사설
   title_press_kit: 언론매체 관련 키트

@@ -11,12 +11,21 @@ ms:
   campaign_date_full: "Disember 4-10"
   campaign_date_year: "2017"
   campaign_date_full_year: "Disember 4-10, 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Sertai acara pembelajaran yang terbesar dalam sejarah, 07-13 Disember 2016'
   front_intro_default: 'Hour of Code adalah pergerakan global menjangkau puluhan juta pelajar dari lebih 180+ negara. Sesiapapun, di mana-mana boleh menganjur acara Hour of Code. Tutorial selama satu jam disediakan dalam 40 bahasa. Tiada pengalaman diperlukan.<strong> Usia dari 4 ke 104.</strong>'
   front_watch_video: 'Tonton video baru'
   front_watch_regular_video: 'Tontoni video'
   front_volunteers: 'Sukarelawan teknikal diperlukan'
   front_start_learning: 'Memulakan pembelajaran'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Sumber'
   header_menu_faq: 'Soalan lazim'
   header_menu_how_to: 'Cara untuk'
@@ -222,6 +231,8 @@ ms:
   front_join_us_challenge: "Menang suatu sembangan video dengan seorang selebriti untuk kelas anda!"
   front_join_us_learn_more: "Ketahui lebih lanjut"
   signup_closed: 'Pendaftaran untuk Hour of Code kini telah ditutup. Sila semak semula pada bulan Oktober untuk mendaftarkan diri dalam Hour of Code yang akan datang.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Anjurkan Acara Hour of Code sepanjang %{campaign_date}, dan daftar di sini.'
   signup_name_label: 'Nama anda'
   signup_name_error: 'Nama adalah diperlukan.'
@@ -243,6 +254,11 @@ ms:
   signup_your_event: 'Daftar acara anda'
   signup_host_an_hour: 'Menganjurkan selama sejam'
   signup_match_volunteer: 'Bantu saya untuk mecarikan seorang jurutera perisian tempatan untuk memberi inspirasi bagi pelajar-pelajar saya'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Kami akan meletakkan nama sekolah dan bandar anda di dalam peta apabila anda telah berdaftar. Jikalau anda akan menganjurkan beberapa acara, sila kemukakan suatu nama unik atau e-mel untuk setiap satu acara. Kami hanya akan mengambil kira satu acara dengan satu kombinasi nama dengan e-mel."
   signup_registration_deadline: "Pendaftaran untuk Hour of Code akan tutup pada 11 Disember."
   signup_name_placeholder: 'Nama anda'
@@ -265,6 +281,7 @@ ms:
   signup_thank_you_message: 'Kami telah menghantar e-mel pengesahan dengan maklumat untuk membantu anda bermula.'
   map_title: "Peta Hour of Code"
   map_header: 'Acara # Hour of Code di seluruh dunia'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Lihat kesemua senarai acara'
   map_header_company: '# oleh syarikat penganjur'
   map_header_country: '# dalam %{country}'
@@ -280,6 +297,7 @@ ms:
   meta_tag_twitter_title: 'Hour of Code akan datang'
   meta_tag_twitter_description: 'Hour of Code adalah adalah gerakan global mencapai puluhan juta pelajar di 180 + negara dan lebih daripada 30 bahasa. Usia 4 hingga 104.'
   twitter_default_text: "Saya menyertai #HourOfCode tahun ini, bagaimana dengan anda? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQ'
   hoc_faq_what_is_hoc_q: 'Apakah Hour of Code?'
   hoc_faq_what_is_hoc_a: "Acara Hour of Code bermula sebagai pengenalan kepada Sains Komputer yang disampaikan dalam masa satu jam, ia bertujuan untuk menjadikan \"kod\" lebih mudah difahami, sesiapa sahaja dapat belajar asasnya dan juga untuk menggalakkan penyertaan dalam bidang Sains Komputer. Sejak Hour of Code dilaksanakan, ia telah menjadi satu usaha seluruh dunia untuk meraikan Sains Komputer, bermula dengan 1 jam aktiviti koding telah memperluas menjadi berbagai-bagai usaha masyarakat. Cubalah tutorial-tutorial <a href='%{tutorials}'> dan aktiviti-aktiviti</a>. Kempen yang bermula dari akar umbi ini disokong oleh <a href='%{partners}'> lebih daripada 400 rakan kongsi dan 200,000 pendidik</a> di seluruh dunia."
@@ -374,6 +392,7 @@ ms:
   videos_obama_cs: Pendapat Presiden Obama tentang sains komputer
   videos_anybody_can_learn: Sesiapa sahaja boleh belajat (1 minit)
   title_country_resources: Sumber-sumber spesifik negara
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Panduan Bagaimana Hour of Code untuk Pihak Berkuasa
   title_how_to_events: Panduan Bagaimana bagi Acara Hour of Code
   title_how_to_organizations: Bagaimanakah untuk menjadi tuan rumah kepada Hour of Code - Organisasi-organisasi
@@ -382,6 +401,7 @@ ms:
   title_how_to_volunteers: Panduan Bagaimana bagi sukarelawan Hour of Code
   title_how_to_parents: Panduan Bagaimana untuk ibu bapa
   title_how_to: Panduan Bagaimana
+  title_international_partners: Contact International Partners
   title_press_release: Siaran Akhbar Mengenai Hour of Code untuk Pegawai-pegawai yang Terlantik
   title_op_ed: Sampel Rencana Pengarang yang Menyokong Minggu Pendidikan Sains Komputer dan Acara Hour of Code
   title_press_kit: Kenyataan akhbar

@@ -54,6 +54,7 @@
     "show_type_hints": "true",
     "project_template_level_name": "Virtual Pet 2",
     "instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

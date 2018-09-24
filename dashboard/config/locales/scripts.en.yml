@@ -1143,6 +1143,8 @@ en:
               name: Curriculum Reference
             Sprite Lab:
               name: Sprite Lab
+            Dance Lab:
+              name: Dance Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'

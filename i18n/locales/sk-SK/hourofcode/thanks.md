@@ -18,7 +18,7 @@ social:
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Ďakujeme Vám, že organizujete udalosť Hodina Kódu!
 
@@ -39,7 +39,7 @@ Na Vašej udalosti využite [plagáty, bannery, nálepky, či videá](%= resolve
 
 ## 2. Nájdite si dobrovoľníka vo Vašom okolí, ktorý Vám pomôže s organizáciou udalosti
 
-[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Pozrite si našu mapu s dobrovoľníkmi](%= codeorg_url('/volunteer/local') %) a nájdite si dobrovoľníka, ktorý vie navštíviť Vašu triedu alebo sa pripojiť prostredníctvom videa a tak inšpirovať Vašich študentov.
 
 ## 3. Naplánujte si Vašu Hodinu Kódu
 

@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Tās atļauj skolēniem strādāt pašiem savā tempā un prasmju līmenī
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Plānojat jūsu aparatūras vajadzības - datori ir optimāli
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Pārbaudiet apmācības uz skolēnu datoriem vai ierīcēm** Pārliecinaties, ka viss darbojas pareizi (ar skaņu un video).
-- **Priekšskatiet apsveikumu lapu** lai redzētu, ko skolēni redz, kad tie pabeidz. 
+- **Priekšskatiet apsveikumu lapu** lai redzētu, ko skolēni redz, kad tie pabeidz.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Plānojat uz priekšu, balstoties uz tehnoloģijām, kas jums ir pieejamas

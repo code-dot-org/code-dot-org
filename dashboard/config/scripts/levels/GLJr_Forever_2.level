@@ -46,6 +46,7 @@
     "instructions": "Now you have some new blocks! Try them out and see how they work. On your worksheet, write down which ones you tried, and what they do.",
     "parent_level_id": 11923,
     "custom_helper_library": "function rotateRight(sprite) {\r\n  sprite.rotation+=6;\r\n}\r\nfunction growSprite(sprite) {\r\n  sprite.scale+=.01\r\n}",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,
