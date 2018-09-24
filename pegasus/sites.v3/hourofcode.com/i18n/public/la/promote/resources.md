@@ -1,5 +1,5 @@
 ---
-title: '& lt;% = hoc_s (: title_press_release)% & gt;'
+title: <%= hoc_s(:title_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -7,9 +7,9 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Ayuda a promover "La Hora del Código"
+# Promueve la "Hora del Código"
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code](<%= resolve_url('/how-to') %>)!
+### Encuentra todos los recursos que necesitas para llamar la atención hacia tu "Hora del Código". ¿No sabes donde empezar? Inicia con nuestra <a href="<%= resolve_url('/how-to') %>guía para ser anfitrión de la "Hora del Código"</a>!
 
 ---
 
@@ -41,9 +41,9 @@ nav: promote_nav
 
 **La "Hora del Código" es una marca registrada. No queremos evitar este uso, pero queremos que quede dentro de unos límites:**
 
-1. Cualquier referencia a "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu propia marca, sino que haga referencia a la "Hora del Código" como un movimiento de base. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
+1. Cualquier referencia a "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu propia marca, sino que haga referencia a la "Hora del Código" como un movimiento de base. **Buen ejemplo**: "Participa en la Hora del Código™ en ACMECorp.com." **Mal ejemplo**: "Intenta participar en la Hora el Código de ACME Corp."
 2. Usa un "TM" en forma de superíndice en los lugares más importantes donde menciones la "Hora del Código," así como en tu sitio web o en las descripciones de apps.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org](<%= resolve_url('https://code.org') %>) websites, that says the following:
+3. Incluye mensajes en tu página (o en el pie de página), incluyendo vínculos hacia la Semana por la Educación de la Informática y al sitio web de [Code.org](<%= resolve_url('https://code.org') %>), que digan lo siguiente:
     
     *"La 'Hora del Código ™' es una iniciativa nacional por la Semana de Educación en Ciencias de Computación [csedweek.org] y Code.org [code.org] para introducir las Ciencias de la Computación y la programación a millones de estudiantes."*
 
@@ -59,9 +59,9 @@ nav: promote_nav
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## Invita a personas de tu comunidad a tu Hora del Código y promueve tu evento vía correo electrónico
 
-### Find [more information and language you can use](<%= resolve_url('/promote/stats') %>) when talking about the Hour of Code.
+### Encuentra <a href="<%= resolve_url('/promote/stats') %>más información y mensajes que puedes utilizar</a> cuando hables sobre la Hora del Código.
 
 ---
 
@@ -87,7 +87,7 @@ Comienza en http://hourofcode.com/<%= @country %> <br />
 
 ### Voluntario en una escuela:
 
-#### [Find more resources and information about volunteering in schools here](<%= resolve_url('/how-to/volunteers') %>).
+#### <a href="<%= resolve_url('/how-to/volunteers') %>Encuentra más recursos e información sobre el voluntareado en escuelas en este vínculo</a>.
 
 **Asunto:** ¿Podemos ayudarte a organizar la Hora del código?
 
@@ -97,7 +97,7 @@ Entre <%= campaign_date('short') %>, el diez por ciento de los estudiantes de to
 
 Los estudiantes crearán sus propias aplicaciones o juegos que pueden mostrar a sus padres, y también imprimiremos certificados de Hora del Código que pueden llevar a casa. ¡Y es divertido! Con actividades interactivas y prácticas, los estudiantes aprenderán habilidades de pensamiento computacional de una manera accesible.
 
-Las computadoras están por todas partes, cambiando todas las industrias en el planeta. Pero menos de la mitad de todas las escuelas enseñan Informática. ¡La buena noticia es que estamos trabajando para cambiar esto! Si ya has oido sobre la Hora del Código, es posible que sepas que hizo historia: más de 100 millones de estudiantes en todo el mundo han probado una Hora de Código. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Las computadoras están por todas partes, cambiando todas las industrias en el planeta. Pero menos de la mitad de todas las escuelas enseñan Informática. ¡La buena noticia es que estamos trabajando para cambiar esto! Si ya has oido sobre la Hora del Código, es posible que sepas que hizo historia: más de 100 millones de estudiantes en todo el mundo han probado una Hora de Código. Incluso, líderes como el Presidente Obana y el Primer Ministro Canadiense Justin Trudeau escribieron sus primeras líneas de código como parte de la campaña.
 
 Puedes leer más sobre el evento en http://hourofcode.com. O infórmenos si desea hacer tiempo para hablar sobre cómo [nombre de la escuela] puede participar.<br />
 
@@ -127,7 +127,7 @@ Visita http://hourofcode.com/<%= @country %> para consultar detalles, y ayudar a
 
 ### Invita a los medios de comunicación a asistir a tu evento:
 
-#### [Check out our press kit for more information on inviting media to your event.](<%= resolve_url('/promote/press-kit') %>)
+#### [Revisa nuestro kit de prensa para más información sobre la invitación de los medios a tu evento.](<%= resolve_url('/promote/press-kit') %>)
 
 **Asunto**: La escuela local se une a la misión de introducir a los estudiantes en las Ciencias de la computación
 
@@ -141,7 +141,7 @@ Le escribo para invitarle a asistir a nuestra Asamblea de comienzo y a ver cómo
 
 La Hora del Código, organizada por la entidad sin ánimo de lucro Code.org y más de otros 100, es un movimiento que cree los estudiantes de hoy están listos para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únete a nosotros.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Contacto: [TU NOMBRE], [TITLE]. Teléfono: (212) 555-5555. Cuándo: [FECHA y HORA del tu evento]. Dónde: [DIRECCIÓN e INDICACIONES PARA LLEGAR]
 
 Estoy deseando estar en contacto.<br />
 
@@ -151,7 +151,7 @@ Estoy deseando estar en contacto.<br />
 
 ### Invitar a un político local al evento de tu escuela:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event](<%= resolve_url('/how-to/public-officials') %>).
+#### <a href="<%= resolve_url('/how-to/public-officials') %>¿Necesitas más información? Hecha un vistazo a nuestros recursos para invitar a politicos a asistir a tu evento</a>.
 
 **Asunto**: Únete a nuestra escuela mientras cambiamos el futuro con una Hora de Código
 

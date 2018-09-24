@@ -5,18 +5,18 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Sample Computer Science Education Week resolution
+# Ejemplo de resolución de la semana para la educación de las ciencias de la computación
 
 ### A continuación hay una muestra de resolución de apoyo a la Semana de Educación en Ciencias de la Computación y sus metas que puedan ser utilizados por los legisladores locales y estatales.
 
 ---
 
-#### **RESOLUTION**  
+#### **RESOLUCIÓN**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Apoya las metas y los ideales de "La Semana por la Educación de las Ciencias de la Computación"
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Mientras que la Semana por la Educación de la Informática resalta el rol crucial que la Informática juega transformando nuestra sociedad y cómo habilita la inovación y las oportunidades de reactivar la economía;
 
 Visto que la tecnología de computación es una parte integral de la cultura y está transformando cómo la gente interactúa unos con otros y con el mundo alrededor de ellos;
 
