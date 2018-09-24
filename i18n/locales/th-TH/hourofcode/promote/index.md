@@ -7,7 +7,7 @@ nav: promote_nav
 
 <% facebook = {:u=>"http://#{request.host}/th"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # ชวนชุมชน​ของคุณเข้ามามีส่วนร่วม​ใน​ Hour of Code
 
@@ -17,9 +17,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. บอกทั้งโรงเรียนให้เข้าร่วม Hour of Code
 
-[ส่งเมล​](%= resolve_url('/promote/resources#sample-emails') %) หาผอ. โรงเรียนและท้าทายทุกห้องเรียน​ให้ลงทะเบียน​
+[ส่งเมล​](%= resolve_url('/promote/resources#sample-emails') %) หาผู้อำนวยการโรงเรียนและท้าทายทุกห้องเรียน​ให้ลงทะเบียน​
 
 ## 3. ชักชวนนายจ้างของคุณเข้ามามีส่วนร่วม
 
@@ -27,7 +27,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 4. โปรโมท Hour of Code ในชุมชนของคุณ
 
-[โน้มน้าวกลุ่มต่างๆ](%= resolve_url('/promote/resources#sample-emails') %)— ลูกเสือ​ เนตร​นารี​ วัด​ มหาวิทยาลัย​ องค์กร​ทหาร​ผ่าน​ศึก​ สหภาพแรงงาน​ หรือแม้กระทั่ง​เพื่อนๆ คุณ​ไท่จำเป็นต้อง​อยู่ในโรงเรียน​เพื่อเรียน​ทักษะ​ใหม่​ ใช้ [โพสเตอร์​ ป้าย​ สติ๊กเกอร์​ วีดีโอ​ ฯลฯ​](%= resolve_url('/promote/resources') %) สำหรับ​กิจกรรม​ของ​คุณ​
+[โน้มน้าวกลุ่มต่างๆ](%= resolve_url('/promote/resources#sample-emails') %)— ลูกเสือ​ เนตร​นารี​ วัด​ มหาวิทยาลัย​ องค์กร​ทหาร​ผ่าน​ศึก​ สหภาพแรงงาน​ หรือแม้กระทั่ง​เพื่อนๆ คุณ​ไม่จำเป็นต้อง​อยู่ในโรงเรียน​เพื่อเรียน​ทักษะ​ใหม่​ ใช้ [โพสเตอร์​ ป้าย​ สติ๊กเกอร์​ วีดีโอ​ ฯลฯ​](%= resolve_url('/promote/resources') %) สำหรับ​กิจกรรม​ของ​คุณ​
 
 ## 5. ขอให้ผู้แทน​ท้องถิ่นสนับสนุน​ Hour​ of Code
 

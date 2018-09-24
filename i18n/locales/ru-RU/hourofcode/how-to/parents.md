@@ -5,43 +5,44 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Как пройти Час Кода с вашим ребенком
+# How to do an Hour of Code with your child
 
-Пройдите Час Кода дома или станьте добровольцем, который привнесет его в класс вашего ребенка! Как это сделать:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+* * *
 
 ## 1) Посмотрите эту видео инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Выберите учебное пособие:
+## 2) Choose a tutorial
 
-Мы предоставляем разнообразные веселые, продолжительные уроки для учеников всех возрастов, созданные нашими партнерами. [Попробуйте их!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**Все уроки Часа Кода предназначены для самостоятельной работы - позволяя вашему ребенку работать в своем собственном темпе и на своем уровне навыков**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Определите вашу потребность в оборудовании
 
-Час Кода лучше всего проводить с компьютерами имеющими интернет подключение. Но вам **не** нужен компьютер. Есть множество заданий не требующих компьютера и могут быть пройдены без каких-либо технологических устройств.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Протестируйте уроки на вашем компьютере или устройстве. Убедитесь что они корректно работают в браузере со звуком и видео.
-- **Хотите учиться бок о бок со своим ребенком?** Попробуйте [парное программирование.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Компьютерная наука социальна и кооперативна.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 5) Начните свой Час Кода с просмотра вдохновляющего видео
+## 4) Start your Hour of Code with an inspiring video
 
 Стартуйте свой Час Кода вдохновляя вашего ребенка и рассказывая как компьютерные науки влияют на все стороны нашей жизни.
 
 **Покажите вдохновляющее видео:**
 
-- Оригинальное видео запуска Code.org, с участием Билла Гейтса, Марка Цукерберга, и звезды НБА Криса Боша ([1 минутная](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 минутная](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутная](https://www.youtube.com/watch?v=dU1xS07N-FA) версии)
-- [Всемирный Час Кода](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Президент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Оригинальное видео запуска Code.org, с участием Билла Гейтса, Марка Цукерберга, и звезды НБА Криса Боша ([1 минутная](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 минутная](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутная](https://www.youtube.com/watch?v=dU1xS07N-FA) версии).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [Президент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Найдите больше вдохновляющих [ресурсов](%= resolve_url('https://code.org/inspire') %) и [видео](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Это нормально, если вы и ваш ребенок являются новичками в компьютерной науке. Вот некоторые идеи, как начать ваш Час Кода:
 
-- Объясните как технологии влияют на наши жизни, с примерами которые тронут и мальчиков и девочек (Расскажите о спасении жизней, помощи людям, объединение людей и т.д.).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Составьте список вещей, немыслимых в повседневной жизни без программирования.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- Вы можете найти советы, как заинтересовать девочек информатикой, [здесь](http://code. org/girls).
 
 Хотите больше идей? Просмотрите наш [шаблон плана урока](/files/AfterschoolEducatorLessonPlanOutline.docx) с советами от опытных педагогов.
 
@@ -61,19 +62,17 @@ nav: how_to_nav
 
 ## 7) Отпразднуйте
 
-[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
+[Распечатайте сертификаты](%= resolve_url('https://code.org/certificates') %) для ваших учеников.
 
 Поделитесь фотографиями и видео о вашем Часе Кода в социальных медиа. Используйте хештеги #HourOfCode и @codeorg, чтобы мы тоже смогли отметить ваш успех!
 
-**Другие ресурсы Часа Кода:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Просмотрите [Часто задаваемые вопросы по Часу Кода](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Час Кода: а что дальше?
 
-**Час Кода: а что дальше?**
-
-Час кода-это только первый шаг на пути изучения того, как технологии работают и как создавать программные приложения. Чтобы продолжить это путешествие:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Помогите [продвигать](%= resolve_url('/promote') %) обучение компьютерным наукам в школьном округе вашего ребенка.
+- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
 
 <%= view :signup_button %>

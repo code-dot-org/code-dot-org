@@ -119,19 +119,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Əsas Reklam Tərəfdaşları
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
-* * *
-
-# Beynəlxalq Tərəfdaşlar
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Fəaliyyət tərəfdaşları
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Digər Tərəfdaşlar
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

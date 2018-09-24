@@ -11,12 +11,21 @@ ru:
   campaign_date_full: "7-13 декабря"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 декабря 2016 года"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Присоединяетесь к самому масштабному образовательному событию 7-13 декабря 2015'
   front_intro_default: 'Час Программирования - это глобальное движение, которое охватывает десятки миллионов студентов и учеников в более 180 стран. Каждый, в любой стране, может стать организатором Часа Кода. Одночасовые уроки доступны более чем на 30 языках. Не требуется никаких предварительных знаний.<strong>Возраст от 4 от 104 лет.</strong>'
   front_watch_video: 'Смотрите новое видео'
   front_watch_regular_video: 'Посмотреть видео'
   front_volunteers: 'Ищем технических волонтеров'
   front_start_learning: 'Начать обучение'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Ресурсы'
   header_menu_faq: 'Часто задаваемые вопросы'
   header_menu_how_to: 'Инструкции'
@@ -222,6 +231,8 @@ ru:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Организуйте Час Кода в течение%{campaign_date} и зарегистрируйте его здесь.'
   signup_name_label: 'Ваше имя'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ ru:
   signup_your_event: 'Зарегистрируйте ваше мероприятие'
   signup_host_an_hour: 'Хозяин часа'
   signup_match_volunteer: 'Мне нужна помощь в поиске разработчика программного обечпечения, который вдохновит моих учеников'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Если вы организуете сразу несколько мероприятий, просьба присвоить свое уникальное название и email каждому из них. Мы принимаем к регистрации только одно название для мероприятия с присвоенным ему email."
   signup_registration_deadline: "Регистрация на Час кода закроется 12 декабря"
   signup_name_placeholder: 'Ваше имя'
@@ -265,6 +281,7 @@ ru:
   signup_thank_you_message: 'Мы выслали Вам электронное письмо с информацией, которая поможет Вам начать готовиться к проведению мероприяния.'
   map_title: "Карта Часа кода"
   map_header: '# Час Программирования по всему миру'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Посмотреть все события'
   map_header_company: '# с помощью организаторов компании'
   map_header_country: '# в %{country}'
@@ -280,6 +297,7 @@ ru:
   meta_tag_twitter_title: 'Скоро наступит Час Программирования'
   meta_tag_twitter_description: 'Час Кода - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до 104.'
   twitter_default_text: "Я участвую в этом году в #HourOfCode, а ты? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Часто задаваемые вопросы'
   hoc_faq_what_is_hoc_q: 'Что такое Час Кода? '
   hoc_faq_what_is_hoc_a: "Час программирования - это часовое введение в информатику, призванное развеять мифы о сложности программирования и показать, что  каждый может научиться его основам. <a href='http://code.org/learn'>Перейти к обучению</a>."
@@ -333,8 +351,8 @@ ru:
   stats_hoc: "Час Кода: 5 дней"
   stats_global: "Час Кода посетили более 100 миллиона учащихся"
   stats_girls_more: "Сегодня информатику учат больше девушек, чем 70 лет назад"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Каждый день приносил один и тот же результат - &mdash; 100% участие." - Nina Nichols Peery, Учитель'
   stats_student: '"Я знала, что этот шанс - <b>единственный в жизни</b>." - Mariana Alzate, пятиклассница'
   stats_michael: '"Я еще никогда<b> не видел</b>своих учеников такими заинтересованными в обучении." - Майкл Кларк, учитель'
@@ -374,6 +392,7 @@ ru:
   videos_obama_cs: Президент Обама об информатике
   videos_anybody_can_learn: Научиться может любой (1 мин)
   title_country_resources: Материалы по странам
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Руководство по Часу Кода для районов
   title_how_to_events: Инструкции по организации мероприятия Часа Кода
   title_how_to_organizations: Инструкции по проведению Часа Кода для организаций
@@ -382,6 +401,7 @@ ru:
   title_how_to_volunteers: Инструкции для волонтеров Часа Кода
   title_how_to_parents: Инструкция для родителей
   title_how_to: Инструкции
+  title_international_partners: Contact International Partners
   title_press_release: Пресс-релизы Часа Кода для избранных чиновников
   title_op_ed: Образец заявления в поддержку Образовательной Недели информатики
   title_press_kit: Материалы для прессы
@@ -1124,7 +1144,7 @@ ru:
   tutorial_itchstop_shortdescription: "Learn to create your own Stop Frame Animations in Scratch"
   tutorial_tynkerpn_shortdescription: "Go for a nature walk with Peep!"
   tutorial_tynkerpd_shortdescription: "Make Peep and his friends dance!"
-  tutorial_persistence_shortdescription: "Главная мысль этого урока: ошибка\\_— это не конец путешествия, а подспорье на пути к успеху."
+  tutorial_persistence_shortdescription: "Главная мысль этого урока: ошибка\_— это не конец путешествия, а подспорье на пути к успеху."
   tutorial_getloopy_shortdescription: "На этом занятии студенты будут строить простые циклы из заданного набора действий."
   tutorial_createface_shortdescription: "This is an exploration of affective computing, which relates to moods and emotions. The class makes an affective (relating to moods and emotions) robot face out of card, tubes and themselves."
   tutorial_happymaps_shortdescription: "Ученики создают простые алгоритмы (наборы инструкций) для перемещения персонажа через лабиринт с помощью одной команды."
@@ -1562,12 +1582,12 @@ ru:
   tutorial_itchstop_longdescription: "We'll be using Itch to build our own stop frame animation projects. Note that headphones are recommended for this course. We will use some existing sprites that support animations and show the code we need to add to animate our characters. We'll also go over how to create our very own animation effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly for animation effects (similar to a flip-book animation) and the code behind it. All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project."
   tutorial_tynkerpn_longdescription: "Follow Peep as he explores the big wide world! In this project, you'll create an interactive scene in which Peep goes on a nature walk and sees lots of interesting items. You'll make different items show up or disappear depending on where Peep is walking. You can even make the items talk and add music to your scene!"
   tutorial_tynkerpd_longdescription: "Are you ready to make Peep and his friends dance? Learn how to use code to animate the birds. In this project, you will use costumes and delays to animate the birds, one frame at a time. You can add your own background and music and even make Peep and his friends talk!"
-  tutorial_persistence_longdescription: "Новые и еще не решенные проблемы зачастую довольно трудны. Если мы стремимся создать что-то новое, яркое и полезное, то нам нужно привыкнуть «брать штурмом» сложные задачи, даже если в процессе мы будем терпеть неудачи. Главная мысль этого урока: ошибка\\_— это не конец путешествия, а подспорье на пути к успеху."
-  tutorial_getloopy_longdescription: "Циклы\\_— это удобный способ описать действия, которые должны повторяться определенное количество раз. На этом занятии студенты будут строить простые циклы из заданного набора действий."
+  tutorial_persistence_longdescription: "Новые и еще не решенные проблемы зачастую довольно трудны. Если мы стремимся создать что-то новое, яркое и полезное, то нам нужно привыкнуть «брать штурмом» сложные задачи, даже если в процессе мы будем терпеть неудачи. Главная мысль этого урока: ошибка\_— это не конец путешествия, а подспорье на пути к успеху."
+  tutorial_getloopy_longdescription: "Циклы\_— это удобный способ описать действия, которые должны повторяться определенное количество раз. На этом занятии студенты будут строить простые циклы из заданного набора действий."
   tutorial_createface_longdescription: "The aim of this activity is to demonstrate how apparently complicated behaviour can be programmed using some simple rules. It also shows how programs are just rules followed by computers and specifically introduces object-based programming. The activity shows how breaking a program into objects can be much easier to write than trying to write it in one go. The class get to write some simple programs to control the face they created."
   tutorial_happymaps_longdescription: "В основе всей информатики лежат алгоритмы. Слово «алгоритм» может звучать как что-то сложное, но на самом деле это просто список команд, которым кто-то может следовать, чтобы достичь некоторого результата. Чтобы создать прочную основу для дальнейшего обучения информатике, нам очень важно «подружиться» с алгоритмами."
   tutorial_moveit_longdescription: "Этот урок поможет им понять, что для того, чтобы давать четкие инструкции, им нужен общий язык. Ученики будут учиться управлять друг другом, используя простые комбинации жестов. Как только они освоят этот язык, они начнут «программировать» друг друга, заранее давая несколько инструкций."
-  tutorial_bigevent_longdescription: "События\\_— это отличная возможность добавить вариативность в готовый алгоритм. Иногда нам нужно, чтобы программа могла ответить пользователю тогда, когда ему это нужно. Тут-то нам и пригодятся события."
+  tutorial_bigevent_longdescription: "События\_— это отличная возможность добавить вариативность в готовый алгоритм. Иногда нам нужно, чтобы программа могла ответить пользователю тогда, когда ему это нужно. Тут-то нам и пригодятся события."
   tutorial_gpp_longdescription: "«Программируя» друг друга и рисуя картинку, ученики начнут понимать суть программирования. В начале упражнения ученики дают друг другу инструкцию закрашивать клеточки на бумаге, чтобы воспроизвести существующую картинку."
   tutorial_foosgame_longdescription: "Code your own video game with codeSpark Academy with The Foos' new Game Kits. This activity guides students brand new to game design using a \"paint-by-numbers\" approach. Students will follow the on screen prompts to design and program a fun video game that they can share with their family and friends."
   tutorial_solopython_longdescription: "Learn Python basics using the first two modules on SoloLearn's Python app, consult discussions and comments to help you understand better, run code examples in the compiler to help with material retention. Write and compile a simple program that takes your name as input, counts the number of letters, and outputs the result. Share and get community upvotes."

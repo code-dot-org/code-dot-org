@@ -11,12 +11,21 @@ az:
   campaign_date_full: "4-10 dekabr"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10 dekabr 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Tarixin ən böyük təhsil hadisəsinə qoşulun, %{campaign_date}'
   front_intro_default: 'Kod Saatı 180-dən çox ölkədə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. Hər kəs, istədiyi hər yerdə bir Kod Saatı tədbiri təşkil edə bilər. Bir saatlıq dərsliklər 45-dən çox dildə mövcuddur. Heç bir ilkin təcrübə tələb olunmur. <strong>4 yaşdan tutmuş 104 yaşa qədər.</strong>'
   front_watch_video: 'Yeni videoya baxın'
   front_watch_regular_video: 'Videoya baxın'
   front_volunteers: 'Texniki biliyi olan könüllülər axtarılır'
   front_start_learning: 'Öyrənməyə başlayın'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Resurslar'
   header_menu_faq: 'Tez-tez verilən suallar'
   header_menu_how_to: 'Təlimatlar'
@@ -28,7 +37,7 @@ az:
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
-  company_bgca: Boys and Girls Club of America
+  company_bgca: Amerikanın oğlanlar və qızlar klubu
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
   company_gsusa: Girl Scouts of America
@@ -222,6 +231,8 @@ az:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '%{campaign_date} tarixləri bir Kod Saatı təşkil edin və burada qeydiyyatdan keçirin.'
   signup_name_label: 'Adınız'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ az:
   signup_your_event: 'Tədbirinizi qeydiyyatdan keçirin'
   signup_host_an_hour: 'Bir saat təşkil edin'
   signup_match_volunteer: 'Şagirdlərimi həvəsləndirmək üçün yerli bir proqramçı tapmağıma kömək edin'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "We will put your school name and city on the map when you register. If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_registration_deadline: "Registration for the Hour of Code closes December 11."
   signup_name_placeholder: 'Adınız'
@@ -265,6 +281,7 @@ az:
   signup_thank_you_message: 'İşə başlamağa kömək etmək üçün sizə təsdiq məktubu göndərildi.'
   map_title: "Kod Saatı xəritəsi"
   map_header: 'Bütün dünyada # Kod Saatı tədbiri'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Bütün tədbirləri nəzərdən keçirin'
   map_header_company: '# şirkətlər tərəfindən'
   map_header_country: 'ölkənizdə (%{country}) # tədbir'
@@ -280,12 +297,13 @@ az:
   meta_tag_twitter_title: 'Kod Saatı gəlir'
   meta_tag_twitter_description: 'Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.'
   twitter_default_text: "Mən builki #HourOfCode Kod Saatında iştirak edirəm, bəs siz? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Tez-tez verilən suallar'
   hoc_faq_what_is_hoc_q: 'Kod Saatı nədir? '
   hoc_faq_what_is_hoc_a: "Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. <a href='http://code.org/learn'>Dərslikləri nəzərdən keçirin</a>."
   hoc_faq_last_year: "Dərslikləri sınaqdan keçirin"
   hoc_faq_when_is_hoc_q: 'Kod Saatı nə vaxtdır?'
-  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: 'Nəyə görə informatika?'
   hoc_faq_why_cs_a: "<i>21-ci əsrdə hər bir tələbənin </i> informatikaya yiyələnmək üçün imkanı olmalıdır. İnformatikanın əsaslarını bilmək kreativliyi və problem həll etmək bacarığını inkişaf etdirir.  21-ci əsrdə hər hansı sahədə karyera uğuruna nail olmaq üçün, erkən yaşdan  başlamaq lazımdır. Daha ətraflı: <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: 'Kod Saatında necə iştirak edə bilərəm?'
@@ -317,7 +335,7 @@ az:
   hoc_faq_more_questions_q: "Hələ də suallarınız var?"
   hoc_faq_more_questions_a: "<a href='http://support.code.org'>dəstək forumunda</a>suallarınıza cavab axtarın."
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
@@ -333,8 +351,8 @@ az:
   stats_hoc: "Kod Saatı: 5 gün"
   stats_global: "Kod Saatını 100 milyondan çox şagir sınaqdan keçirdi"
   stats_girls_more: "Son 70 ildəkindən daha çox qız informatika ilə tanış oldu"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Hər gün eyni nəticə alındı&mdash; 100%-lik maraq" - Nina Nikols Peri, müəllimə'
   stats_student: '"Məncə, <b>bu həyatda bir dəfə olan</b> şansdır." - Mariana Alzate, 5-ci sinif şagirdi'
   stats_michael: '"Mən öz şagirdlərimi <b>heç vaxt </b> öyrənməyə bu qədər həvəsli görməmişdim" - Maykl Klark, müəllim'
@@ -374,6 +392,7 @@ az:
   videos_obama_cs: Prezident Obama informatika barədə
   videos_anybody_can_learn: Hər kəs öyrənə bilər (1 dəqiqə)
   title_country_resources: Ölkənin özünəməxsus resursları
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: Kod Saatını necə təşkil edə bilərsiniz - Təşkilatlar
@@ -382,6 +401,7 @@ az:
   title_how_to_volunteers: Kod Saatı könüllüləri üçün təlimat
   title_how_to_parents: How-to guide for parents
   title_how_to: Təlimat
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Mətbuat üçün materiallar

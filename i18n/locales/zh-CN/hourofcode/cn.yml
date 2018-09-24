@@ -11,12 +11,21 @@ cn:
   campaign_date_full: "12 月 4-10日"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017年12月4日至12月10日"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: '%{campaign_date}，加入有史以来最大的学习活动'
   front_intro_default: '编程一小时活动是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动。编程一小时活动的课程已经支持超过40种语言。不需要经验。<strong>4岁以上即可参与。</strong>'
   front_watch_video: '观看新的视频'
   front_watch_regular_video: '观看视频'
   front_volunteers: '需要技术志愿者'
   front_start_learning: '开始学习'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: '资源'
   header_menu_faq: '常见问题'
   header_menu_how_to: '操作方法'
@@ -222,6 +231,8 @@ cn:
   front_join_us_challenge: "为你的班级赢得一次与名人的视频聊天！"
   front_join_us_learn_more: "了解更多"
   signup_closed: '编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '在%{campaign_date} 期间主持编程一小时，并在这里登记。'
   signup_name_label: '您的姓名'
   signup_name_error: '名称是必填的。'
@@ -243,6 +254,11 @@ cn:
   signup_your_event: '登记您的活动'
   signup_host_an_hour: '主办一小时'
   signup_match_volunteer: '帮我找一个本地的软件工程师来激励我的学生'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。"
   signup_registration_deadline: "Hour of Code 的注册会在12月11日关闭"
   signup_name_placeholder: '您的姓名'
@@ -265,6 +281,7 @@ cn:
   signup_thank_you_message: '我们发送了一封确认邮件，其中有帮助您开始的信息。'
   map_title: "编程一小时地图"
   map_header: '世界各地的《编程一小时》活动'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: '查看所有事件'
   map_header_company: '#公司组织'
   map_header_country: '#次在%{country}'
@@ -280,6 +297,7 @@ cn:
   meta_tag_twitter_title: '编程一小时活动即将开始'
   meta_tag_twitter_description: '编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。'
   twitter_default_text: "我正在参加今年的 #HourOfCode，你呢？@codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: '常见问题'
   hoc_faq_what_is_hoc_q: '编程一小时是什么？'
   hoc_faq_what_is_hoc_a: "编程一小时是一个介绍计算机科学一小时的活动，旨在揭秘编程并说明它是任何人都可以学习的基础知识。<a href='http://code.org/learn'>查看教程</a>。"
@@ -374,6 +392,7 @@ cn:
   videos_obama_cs: 奥巴马总统在计算机科学
   videos_anybody_can_learn: 任何人都可以学习 (1分钟)
   title_country_resources: 不同国家的特殊资源
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: 地区如何主办编程一小时
   title_how_to_events: 编程一小时操作指南
   title_how_to_organizations: 如何主办编程一小时 —— 组织
@@ -382,6 +401,7 @@ cn:
   title_how_to_volunteers: 如何主办编程一小时 —— 志愿者
   title_how_to_parents: 家长操作指南
   title_how_to: 操作方法指南
+  title_international_partners: Contact International Partners
   title_press_release: 当地官员使用的编程一小时新闻稿
   title_op_ed: 支持计算机科学教育周和编程一小时的专栏样例
   title_press_kit: 新闻资料袋
@@ -1549,8 +1569,8 @@ cn:
   tutorial_pixie_longdescription: "小精灵小精灵教程"
   tutorial_play_longdescription: "使用游戏实验室创作一个故事或制作一款游戏！制作动物、海盗、僵尸、忍者等各种各样的人物，制作声音、得分，甚至投掷火球！"
   tutorial_robomind-nl_longdescription: "学生们通过控制自己的虚拟机器人来学习编程的基本知识。在线课程是完全独立的，包含了简短的演示、电影、测验以及自动指导和提示，以帮助进行编程练习。 "
-  tutorial_spheroi_longdescription: "每个人都在某处开始。欢迎来到您的第一个闪电实验室活动！\n\n请按照以下步骤快速了解应用程序视频，了解如何使用基于块的界面创建程序，并了解循环。之后，通过与机器人和应用程序玩游戏来测试你的技能和好奇心。\n"
-  tutorial_spherol_longdescription: "在这个活动中潜入灯光的力量。你会发现不同的方法来控制Sphero的灯，然后建立程序来使灯工作。您将创建一个能够驱动机器人杰克 - 奥朗灯的程序，将Sphero变成一个基于传感器的陀螺，并且还可以获得长时间曝光灯光艺术的创意。"
+  tutorial_spheroi_longdescription: "欢迎开始你的第一个模块活动！对于大多数人来说，这是个开始的好地方，并可用于《编程一小时》。按照步骤来了解这个应用的概览，学习如何用模块代码来编程，并理解循环和操作符。"
+  tutorial_spherol_longdescription: "你会学习到机器人上灯的新用法。在这个活动中，你会构建一个用陀螺仪速度来控制主LED灯的程序，需要用到规范化和绝对值的概念。这是在完成模块2后的一个重要的活动，也能被用于《编程一小时》。"
   tutorial_spherov_longdescription: "现在是Sphero推出的另一款经典游戏的时候了。学习如何使用变量，循环直到和边界内的随机性，使Hot Potato成为现实。当你完成了，抓住一些朋友，并开始折腾。当时间用完时不要被Sphero抓住！"
   tutorial_swb_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
   tutorial_build-a-galaxy_longdescription: "学习写程序控制机器人，并在很遥远，很遥远的银河中创造自己的星际大战游戏。"
@@ -1731,7 +1751,7 @@ cn:
   tutorial_pmzero_longdescription: "在一个小时内，你创建了一个简单的Pac-Man游戏版本。 你用2D绘制人物，并把它们变成3D。 你创造你自己的迷宫。 然后你使用 AgentCubes 编写游戏。 只有11个IF/THEN规则可以创建复杂的AI。 即使只有两个聪明的鬼魂，你将双手充满赢得比赛。"
   tutorial_hsela_longdescription: "学生将练习识别叙述元素，同时将自己喜欢的故事，诗歌或历史事件带入生活。学习代码为学生们提供了表达他们创造力和与他人交流的另一种形式和媒体。告诉他们如何编制他们 自己的互动故事，并等待微笑。1小时的课程计划，无需事先编码经验。"
   tutorial_ticklear_longdescription: "您将学习 AR（增强现实）的基本概念，它的当前应用及其未来的可能性，以及使用运动块和事件块编程的基本概念。"
-  tutorial_bcrobot_longdescription: "使用BlocksCAD，一个旨在教授学生编码和计算机辅助设计的免费在线软件，学生将设计一个3D雪花。 使用形状和翻译块，学生将暴露于计算思维，以构建他们可以3D打印的东西！"
+  tutorial_bcrobot_longdescription: "使用BlocksCAD，一个旨在教授学生编码和计算机辅助设计的免费在线软件，学生将设计一个3D机器人。 使用形状、转换，并旋转模块，学生用计算思维，以构建他们可以3D打印的东西！"
   tutorial_bcsnow_longdescription: "使用BlocksCAD，一个旨在教授学生编码和计算机辅助设计的免费在线软件，学生将设计一个3D雪花。 使用形状，平移，旋转和循环块，学生将暴露于计算思维，以构建他们可以3D打印的东西！"
   tutorial_ifly_longdescription: "这个老师主导的课程活动，适用于“小时代码”，为通过机器人技术探索物理系统提供了机会。 学生使用可视化的拖放式编程环境和无人机，学习物理系统可以通过算法和代码进行编程和控制。 包括一步一步的活动计划，相关的师生资源和延伸和丰富的想法进一步学习。"
   tutorial_idowedo_longdescription: "这个老师主导的课程活动，适用于“小时代码”，提供了探索物理编程（机器人）的机会。 孩子们使用建筑砖设计和建造模型，并用代码将它们带入生活！ 使用可视化的拖放式编程环境和LEGO™ WeDo部件（电机和集线器以及可选的传感器），学生将学习使用算法和代码可以对物理系统进行编程和控制。 包括一步一步的活动计划，相关的师生资源和延伸和丰富的想法进一步学习。"

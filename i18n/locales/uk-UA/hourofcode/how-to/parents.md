@@ -5,41 +5,42 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Як виконати Годину коду зі своєю дитиною
+# How to do an Hour of Code with your child
 
-Виконайте Годину коду вдома, або станьте волонтером, принісши її до класу своєї дитини! Ось яким чином:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+* * *
 
 ## 1) Перегляньте цю відеоінструкцію <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Оберіть підручник:
+## 2) Choose a tutorial
 
-Ми пропонуємо спектр веселих одногодинних підручників, створених низкою партнерів, для учнів усіх вікових категорій. [Спробуйте їх!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**Всі підручники Години коду призначені для самостійного навчання — що дозволяє вашій дитині працювати у власному темпi відповідно до рівня її навичок**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Сплануйте свої технологічні потреби
 
-Найкраще Година коду проходить на підключених до Інтернету комп'ютерах. Але комп'ютер **не є** необхідним. Є багато занять, які є «відключеними», і можуть виконуватися взагалі без жодної технології.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Перевірте підручники на вашому комп'ютері або пристрої. Переконайтеся, що вони працюють як слід у браузерах зі звуком та відео.
-- **Хочете вчитися разом зі своєю дитиною?** Спробуйте [парне програмування.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Інформатика є соціальною та груповою діяльністю.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) Розпочніть свою Годину коду надихальним відео
+## 4) Start your Hour of Code with an inspiring video
 
 Запустіть свою Годину коду, надихнувши свою дитину та обговоривши, як інформатика впливає на всі сторони нашого життя.
 
 **Покажіть надихальні відео:**
 
-- Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукерберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Не біда, якщо як ви, так і ваша дитина є повними новачками в інформатиці. Ось деякі ідеї, як представити ваш захід Години коду:
 
-- Поясніть шляхи, якими технології впливають на наше життя, з прикладами, які хвилюватимуть як хлопчиків, так і дівчаток (розкажіть про рятування життя, допомогу людям, забезпечення зв'язку між людьми тощо).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Перелічіть повсякденні речі, які використовують код.
 - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
@@ -65,15 +66,13 @@ nav: how_to_nav
 
 Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
 
-**Інші ресурси Години коду:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Відвідайте [ЧаПи Години коду](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Що після Години коду?
 
-**Що після Години коду?**
-
-Година коду є лише першим кроком на шляху вивчення того, як працюють технології, і як створювати власні програмні застосунки. Для продовження цього шляху:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Допоможіть [просувати](%= resolve_url('/promote') %) освіту з інформатики в школах вашого району.
+- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
 
 <%= view :signup_button %>

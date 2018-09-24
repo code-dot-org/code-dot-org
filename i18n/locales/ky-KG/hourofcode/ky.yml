@@ -11,12 +11,21 @@ ky:
   campaign_date_full: "4-10-декабрда"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017, 4-10-декабрда"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: '%{campaign_date} тарыхтагы эң чоң үйрөтүү иш-чарасына катыш'
   front_intro_default: 'Код сааты - 180+ өлкөдөн ондогон миллион окуучулар катышкан глобалдык кыймыл. Каалаган киши, каалаган жерде Код сааты иш-чарасын уюштура алат. Бир сааттык үйрөтмөлөр 45тен ашык тилде жеткиликтүү. Тажрыйбанын кереги жок. <strong>4төн 104 жашка чейин.</strong>'
   front_watch_video: 'Жаңы видео көргүлө'
   front_watch_regular_video: 'Видео көргүлө'
   front_volunteers: 'Техникалык ыктыярчылар керек'
   front_start_learning: 'Үйрөнүп баштоо'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Булактар'
   header_menu_faq: 'КБС'
   header_menu_how_to: 'Кантип'
@@ -222,6 +231,8 @@ ky:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Көптү үйрөн"
   signup_closed: 'Код саатына катталуу токтотулду. Кийинки Код саатына катталуу үчүн октябрда дагы аракет кылып көрүңүз.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Бүл күндөрү %{campaign_date} Код саатын уюштургула жана бул жерде каттагыла.'
   signup_name_label: 'Ысымыңыз'
   signup_name_error: 'Атыңыз талап кылынат.'
@@ -243,6 +254,11 @@ ky:
   signup_your_event: '1. Иш-чараны каттагыла'
   signup_host_an_hour: 'Сааттын ээси'
   signup_match_volunteer: 'Окуучуларымды шыктандыруу үчүн жергиликтүү програмчы инженерди тапканга жардам бергиле'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Сиз каттоодон өткөн соң, биз силердин мектебиңерди жаана шаарыңарды картага кошобуз. Эгерде сиз бир нече долбоорлордо катышсаңар, сураныч, ар бирөөсүндө бир гана ысымды жана эмейлди колдонуңуз. Биз бир ысым жана эмейлге бир долбоорду гана туура табабыз."
   signup_registration_deadline: "Код саатына катталуу 11-декабрда аяктайт."
   signup_name_placeholder: 'Ысымыңыз'
@@ -265,6 +281,7 @@ ky:
   signup_thank_you_message: 'Сизге баштаганга керектүү маалыматтарды камтыган тастыктоочу эмейл жөнөттүк.'
   map_title: "Код саатынын картасы"
   map_header: 'Дүйнө жүзүндөгү #Код сааты иш-чаралары'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Бардык иш-чараларды көрүү'
   map_header_company: '# компаниянын уюштуруучулары тарабынан'
   map_header_country: '# %{country}'
@@ -280,6 +297,7 @@ ky:
   meta_tag_twitter_title: 'Код сааты: кыймылга кошул'
   meta_tag_twitter_description: 'Код сааты - 180+ өлкөдөн бардык курактагы он миллиондогон окуучулар катышкан, 45тен ашык тилде жеткиликтүү глобалдык кыймыл.'
   twitter_default_text: "Мен быйыл #HourOfCode катышып жатам, сенчи? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'КБС'
   hoc_faq_what_is_hoc_q: 'Код сааты деген эмне?'
   hoc_faq_what_is_hoc_a: "Код сааты - компүтердик илим менен тааныштыруу, анын негиздерин ар ким өздөштүрө ала тургандыгын, \"код жазуу\" татаал эместигин көрсөтүү жана буга кеңири катмарларды тартуу үчүн уюштурулган бир сааттык иш-чара катары башталган. Алгачкы жолкусунан тартып эле 1 сааттык код жазуу иш-чарасы компүтердик илимди майрамдоонун дүйнөлүк аракетине айланып кетти. Бул <a href='%{tutorials}'> жетектемелерди жана тапшырмаларды карагыла.</a> Бул өнөктөштүккө дүйнө боюнча <a href='%{partners}'>400 өнөк</a> жана 200 000 мугалим колдоого алган."
@@ -374,6 +392,7 @@ ky:
   videos_obama_cs: Президент Обама компүтердик илим тууралуу
   videos_anybody_can_learn: Каалаган үйрөнө алат (1 мүн)
   title_country_resources: Өлкөгө тиешелүү ресурсттар
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Код саатын райондордо кантип өтүү керек
   title_how_to_events: Код сааты иш-чарасын кантип өткөзүү керек
   title_how_to_organizations: Код саатын кантип өткөзүү керек - Уюмдар
@@ -382,6 +401,7 @@ ky:
   title_how_to_volunteers: Ыктыярчылар үчүн Код саатын өткөзүү жетектемеси
   title_how_to_parents: Ата-энелер үчүн кандай өтүү жетектемеси
   title_how_to: Кантип кылуу жетектемеси
+  title_international_partners: Contact International Partners
   title_press_release: Шайланма бийликтер үчүн Код сааты пресс-релизи
   title_op_ed: Информатика аптасы менен Код саатын колдоо документинин үлгүсү
   title_press_kit: Пресс-кит
@@ -433,7 +453,7 @@ ky:
   learn_banner_heading: 'КОД СААТЫ'
   learn_banner_blurb: "Бардык курактарга ылайык, 45тен ашык тилдеги бир сааттык сабакты байкап көргүлө. 180+ өлкөдөн миллиондогон окуучулар жана мугалимдер  менен бирге Код саатына катышкыла."
   learn_banner_beyond: "Улантууну каалайсыңарбы? <a id='learn_banner_beyond'>Бир сааттан ашкыла</a>"
-  learn_banner_teachers: "Мугалимдер:<a id='teacher_banner_host'>Код саатын өткүлө</a>же<a id='teacher_banner_howto'>кантип өтүү жетектемесин окугула</a>"
+  learn_banner_teachers: "Мугалимдер: <a id='teacher_banner_host'>Код саатын өткүлө</a> же <a id='teacher_banner_howto'>кантип өтүү жетектемесин окугула</a>"
   learn_robotics_banner_heading: 'Роботикс жана схемалар'
   learn_robotics_banner_blurb: 'Роботтор же физикалык эсептөөчү жабдыктар барбы? Аларды алдында берилген тапшырмаларда колдонуп, бардык курактардагы окуучуларга реалдуу Код саатын өткөргүлө! Кээ бир тапшырмалар симуляцияны сунуш кылышат, ошондуктан силер ишти куралсыз баштай аласыңар.'
   tutorial_athlete_name: "Өздүк спорт оюнуңду коддо"

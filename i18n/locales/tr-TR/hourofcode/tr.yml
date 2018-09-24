@@ -11,12 +11,21 @@ tr:
   campaign_date_full: "7-13 Aralık"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 Aralık, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Tarihteki en yaygın eğitim etkinliğine sen de katıl, 7-13 Aralık 2015'
   front_intro_default: 'Kodlama Saati 180''den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. Herkes dünyanın herhangi bir yerinde herhangi bir Kodlama Saati etkinliğini organize edebilir. Bir saatlik dersler 30''dan fazla dile çevrilmiştir. <strong>4''ten 104 yaşına kadar herkes için.</strong>'
   front_watch_video: 'Yeni videoyu izleyin'
   front_watch_regular_video: 'Video İzleyin'
   front_volunteers: 'Teknik gönüllüler istedi'
   front_start_learning: 'Öğrenmeye başlayın'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Kaynaklar'
   header_menu_faq: 'SSS'
   header_menu_how_to: 'Nasıl Yapılır'
@@ -222,6 +231,8 @@ tr:
   front_join_us_challenge: "Bir ünlü ile sınıf içinde bir video sohbet kazanın!"
   front_join_us_learn_more: "Daha fazla bilgi edinin"
   signup_closed: 'Kodlama saati kayıtları kapandı. Bir sonraki etkinlik kayıtları Ekim ayında.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '%{campaign_date} Tarihlerinde bir Kodlama Saati organize edin ve buradan kaydolun.'
   signup_name_label: 'İsminiz'
   signup_name_error: 'İsim gereklidir.'
@@ -243,6 +254,11 @@ tr:
   signup_your_event: 'Etkinliğinizi kaydettirin'
   signup_host_an_hour: 'Yaklaşık bir saat'
   signup_match_volunteer: 'Bana öğrencilere ilham verecek yerel yazılım mühendisleri bulmam için yardımcı ol'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Eğer birden fazla etkinliğe ev sahipliği ediyorsan, lütfen isim veya mail adresinden birini gönder. Bir e-mail için bir etkinlik ayarlanır."
   signup_registration_deadline: "Kod saatine kayıt 12 aralıkta kapanır."
   signup_name_placeholder: 'İsminiz'
@@ -265,6 +281,7 @@ tr:
   signup_thank_you_message: 'Size başlamanıza yardımcı olacak bilgiler içeren bir onay e-postası gönderdik.'
   map_title: "Kodlama Saati haritası"
   map_header: '# Kodlama Saati etkinlikleri dünyanın her yerinde'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Tüm etkinlikleri gör'
   map_header_company: 'Şirket organizatörleri tarafından # adet'
   map_header_country: '#%{country}''de'
@@ -280,6 +297,7 @@ tr:
   meta_tag_twitter_title: 'Kodlama Saati geliyor'
   meta_tag_twitter_description: 'Kodlama Saati 180''den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. 4''ten 104 yaşına kadar herkes için.'
   twitter_default_text: "Ben bu yıl #KodlamaSaati 'ne katılıyorum, ya siz? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'SSS'
   hoc_faq_what_is_hoc_q: 'Kodlama Saati nedir?'
   hoc_faq_what_is_hoc_a: "Kodlama Saati bilgisayar bilimine bir saatlik bir giriştir, kodlamanın sırrını çözmeniz ve herkesin temelleri öğrenebileceğini görmeniz için tasarlanmıştır. <a href='http://code.org/learn'>Öğreticileri inceleyin</a>."
@@ -374,6 +392,7 @@ tr:
   videos_obama_cs: Başkan Obama'nın bilgisayar bilimi hakkında konuşması
   videos_anybody_can_learn: Herkes öğrenebilir (1 dakika)
   title_country_resources: Ülkeye özel kaynaklar
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Bölgeler için nasıl Hour of Code yapılır
   title_how_to_events: Kodlama Saati Etkinlik Rehberi
   title_how_to_organizations: Kodlama Saati Organizasyonunu nasıl evsahipliği yapabilirsiniz
@@ -382,6 +401,7 @@ tr:
   title_how_to_volunteers: Kodlama Saati Gönüllüleri için Etkinlik rehberi
   title_how_to_parents: Ebeveynler İçin Etkinlik rehberi
   title_how_to: Etkinlik Rehberi
+  title_international_partners: Contact International Partners
   title_press_release: Seçilmiş Yetkililer için Kodlama Saati Basın Notları
   title_op_ed: Örnek Bilgisayar Destekli Eğitim Öğretim haftası ve Kodlama Saati
   title_press_kit: Basın için Malzemeler

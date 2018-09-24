@@ -11,12 +11,21 @@ uk:
   campaign_date_full: "5-11 грудня"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 грудня 2016 року"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Приєднуйтесь до найбільшої навчальної події в історії, 7-13 грудня 2015 року'
   front_intro_default: 'Година Коду є глобальним заходом, який залучає десятки мільйонів учнів у більш, як 180 країнах світу. Кожен може організувати заходи в рамках Години Коду. Одно-годинний курс доступний більш, як 45 мовами. Без попередніх вимог. <strong>Для всіх віком від 4 до 104.</strong>'
   front_watch_video: 'Дивіться новий ролик'
   front_watch_regular_video: 'Дивіться відео'
   front_volunteers: 'Потрібні технічні волонтери'
   front_start_learning: 'Початок навчання'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Ресурси'
   header_menu_faq: 'Часті питання'
   header_menu_how_to: 'Інструкції'
@@ -222,6 +231,8 @@ uk:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Організуйте захід Години коду протягом %{campaign_date}, та зареєструйте його тут.'
   signup_name_label: 'Ваше ім''я'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ uk:
   signup_your_event: 'Зареєструйте свій захід'
   signup_host_an_hour: 'Проведіть Годину коду'
   signup_match_volunteer: 'Допоможіть знайти місцевого програміста, щоб надихнути моїх учнів'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Якщо Ви проводите кілька заходів, заповніть унікальну назву та електронну скриньку для кожного із них. Ми рахуємо події за комбінацією назви та електронної скриньки."
   signup_registration_deadline: "Реєстрація на Годину коду завершується 12 грудня."
   signup_name_placeholder: 'Ваше ім''я'
@@ -265,6 +281,7 @@ uk:
   signup_thank_you_message: 'Ми надішлемо лист-підтвердження з додатковою інформацією.'
   map_title: "Карта Години коду"
   map_header: '# заходів Години коду по всьому світу'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Переглянути всі події'
   map_header_company: '# від організаторів'
   map_header_country: '# в %{country}'
@@ -280,6 +297,7 @@ uk:
   meta_tag_twitter_title: 'Кожна дитина заслуговує на можливості'
   meta_tag_twitter_description: 'Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш, як 180 країн, які розмовляють більш, як 45 мовами. Для будь-якого віку від 4 до 104.'
   twitter_default_text: "Я беру участь в цьогорічній #HourOfCode, а ви? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Запитання й відповіді'
   hoc_faq_what_is_hoc_q: 'Що таке Година коду?'
   hoc_faq_what_is_hoc_a: "Година коду є одно-годинним вступом до інформатики, призначеним для демістифікації програмування, а також демонстрації того, що кожен може опанувати його основи, і залучення учасників до сфери інформатики. Ця кампанія стала всесвітнім заходом визнання інформатики, починаючи з одно-годинних вправ з кодування, і далі поширюючись на інші події у спільнотах. Перегляньте <a href='%{tutorials}'>підручники та вправи</a>. Ця масова кампанія підтримується більш, як <a href='%{partners}'>400 партнерами</a> та 200000 вчителями з усього світу."
@@ -333,8 +351,8 @@ uk:
   stats_hoc: "Година коду: 5 днів"
   stats_global: "Більше 100 мільйонів учнів спробували Годину коду"
   stats_girls_more: "За цей час інформатику спробували більше дівчаток, ніж за останні 70 років"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна Ніколс Пірі, педагог'
   stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате, 5 клас'
   stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Майкл Кларк, педагог'
@@ -374,6 +392,7 @@ uk:
   videos_obama_cs: Президент Обама про інформатику
   videos_anybody_can_learn: Навчитись може кожен (1 хв)
   title_country_resources: Ресурси за країнами
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Інструкції Години коду для районів
   title_how_to_events: Інструкції для заходів Години коду
   title_how_to_organizations: Як провести Годину коду - Організаціям
@@ -382,6 +401,7 @@ uk:
   title_how_to_volunteers: Інструкції з Години коду для волонтерів
   title_how_to_parents: Інструкції для батьків
   title_how_to: Інструкції
+  title_international_partners: Contact International Partners
   title_press_release: Прес-реліз Години коду для виборних посадових осіб
   title_op_ed: Зразок заяви у підтримку тижня інформатики та Години коду
   title_press_kit: Прес-кіт

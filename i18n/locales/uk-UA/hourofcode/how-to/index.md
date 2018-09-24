@@ -5,9 +5,13 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Як вчити Години коду</h1>
+# How to teach one Hour of Code with your class
 
-Приєднайтесь до цього руху, і познайомте групу учнів з їхньою першою годиною інформатики за допомогою наступних кроків. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### Приєднайтесь до цього руху, і познайомте групу учнів з їхньою першою годиною інформатики за допомогою наступних кроків. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+
+* * *
 
 ## 1. Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 

@@ -1,23 +1,37 @@
 ---
-title: <%= hoc_s(:title_how_to_districts) %>
+title: <%= hoc_s(:title_how_to_districts).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Làm thế nào để mang "Giờ lập trình" tới cộng đồng trường học
+# How to involve your entire school district
+
+### Every school in your district can take part in the largest learning event in history.
+
+---
 
 ## Hãy lôi kéo tất cả các trường học tham gia, để mọi học sinh đều có cơ hội học tập!
 
-1. **Tuyển chọn các trường học địa phương.** Chia sẻ [email này](<%= resolve_url('/promote/resources#sample-emails') %>) và [bản hướng dẫn giáo viên](<%= resolve_url('/how-to') %>), hoặc đăng một [đoạn quảng cáo ngắn](<%= resolve_url('/promote/stats') %>) trên thư tin/ trang tin địa phương.
+### 1. Recruit local schools
 
-2. **Đưa ra bản mẫu kế hoạch hậu cần cho các trường.** Chia sẻ[kế hoạch hậu cần mẫu này](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) với các trường để họ biết cách tổ chức sự tham gia của toàn trường. Sẽ rất dễ dàng nếu tổ chức hoạt động này trong các lớp học toán, phòng sinh hoạt chung hoặc sử dụng luân phiên phòng máy tính các ngày trong tuần.
+Share [this email](<%= resolve_url('/promote/resources#sample-emails') %>) and [teacher how to guide](<%= resolve_url('/how-to') %>), or include a [short blurb](<%= resolve_url('/promote/stats') %>) in newsletters/district communications. <br />
 
-3. Chia sẻ thông qua mạng xã hội. Đăng tải lên Facebook hoặc Twitter. Hoặc chia sẻ một trong những [câu nói, bức ảnh truyền cảm hứng](<%= resolve_url('/promote/resources#social') %>) từ các nhà lãnh đạp trên thế giới, hoặc [từ số liệu thống kê](<%= resolve_url('/promote/stats') %>).
+### 2. Provide a sample logistics plan for schools
 
-4. **Thúc đẩy quảng cáo trên trang chủ của địa phương.** Hãy để những người truy cập biết về sự tham gia của bạn và các sự kiện của Giờ Lập Trình. Liên kết nó với địa chỉ của [Giờ Lập Trình](<%= resolve_url('/') %>).
+Share this [sample logistics plan](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
 
-5. **Tổ chức một sự kiện Giờ Lập trình ở địa phương.** Theo dõi [hướng dẫn cách tổ chức sự kiện](<%= hoc_uri('/resources/how-to-event') %>) của chúng tôi để làm mẫu chạy chương trình, tiếp cận phương tiện truyền thông và các nguồn hỗ trợ sự kiện khác.
+### 3. Share on social media
+
+Post to [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) or [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes](<%= resolve_url('/promote/resources#social') %>) from world leaders, or [stats](<%= resolve_url('/promote/stats') %>).
+
+### 4. Promote on your district’s homepage
+
+Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code](<%= resolve_url('/') %>).
+
+### 5. Host a district Hour of Code event
+
+See our [event how to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit, and other supports.
 
 ## Tiếp theo Hour of Code sẽ là gì?
 

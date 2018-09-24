@@ -119,19 +119,13 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Основні просувальні партнери
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
-* * *
-
-# Міжнародні партнери
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Додаткові партнери
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

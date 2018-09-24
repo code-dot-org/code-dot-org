@@ -7,56 +7,41 @@ nav: promote_nav
 
 # Contoh siaran akhbar untuk pegawai yang dilantik
 
-Untuk Keluaran Segera  
-[**TARIKH**]  
-Sila Hubungi: [**MAKLUMAT ORANG HUBUNGAN**]  
-  
+### Use this sample press release language to help craft your message about participating in the Hour of Code.
+
+* * *
+
+#### For Immediate Release  
 
 
-<strong> 
+#### [DATE]  
 
-<center>
-  GABENOR/SENATOR/AHLIPARLIMEN/WAKIL/DATUKBANDAR/AHLIMAJLIS [MASUKKAN NAMA][TELAH MENGAMBIL BAHAGIAN DALAM HOUR OF CODE BERSAMA DENGAN PELAJAR-PELAJAR TEMPATAN]</strong><br /> Semua komuniti telah bekerjasama untuk memupuk kesedaran tentang kepentingan pendidikan sains komputer dengan mengambil bahagian dalam Minggu Pendidikan Sains Komputer
-</center>
 
-<br /> <br /></p> 
+#### Contact: [CONTACT INFORMATION]
 
-<p>
-  <strong>TARIKH</strong> - [<strong>MASUKKAN NAMA</strong>] telah menyertai pengetua dan ahli fakulti [<strong>MASUKKAN NAMA SEKOLAH</strong>], pemimpin-pemimpin perniagaan dan keluarga tempatan pada hari ini untuk [<strong>NAMA ACARA</strong>] untuk mengambil bahagian dalam Hour of Code sebagai sebahagian daripada Minggu Pendidikan Sains Komputer . [MASUKKAN NAMA] dan ahli-ahli komuniti merupakan antara berpuluhan juta orang di seluruh dunia yang telah mengambil bahagian dalam acara pembelajaran yang terbesar dalam sejarah.
-</p>
+<br />
 
-<p>
-  [<strong>MASUKKAN BUTIRAN ACARA, GUNAKAN BAHASA YANG DESKRIPTIF DAN BOLEH DIKUANTITIKAN. SEBAGAI COMTOHNYA:</strong>]<br /> "Sekolah Rendah Daniels Run telah menganjurkan sebuah acara Hour of Code yang melibatkan seluruh sekolah untuk mendedahkan para pelajar kepada sains komputer. Lebih daripada 700 pelajar daripada semua gred telah melaksanakan sekurang-kurangnya satu Hour of Code. Dan juga beberapa orang ibu bapa dan sukarelawan daripada komuniti telah membantu melancarkan acara pada hari tersebut dan membawa kanak-kanak bersama untuk hadir ke perhimpunan yang mempamerkan mengapa sains komputer adalah penting dalam kehidupan para pelajar."
-</p>
+**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
 
-<p>
-  [<strong>CONTOH TEKS STANDARD UNTUK KONTEKS:</strong>]<br /> Komputer ada di mana-mana tempat sahaja, tetapi masih lagi sikit sekolah yang mengajar sains komputer berbanding dengan 10 tahun yang lalu. Kanak-kanak perempuan dan pelajar yang mempunyai warna kulit yang berbeza tidak diberikan langsung pendedahan. Berita baiknya ialah kita sedang mengubah situasi ini menjadi lebih baik. Hour of Code merupakan suatu jalan perhubungan untuk memberikan akses kepada pendidikan sains komputer yang berkualiti tinggi kepada semua pelajar.
-</p>
+Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
 
-<p>
-  Lebih daripada 100 juta pelajar dari seluruh dunia sudah telah mencuba suatu Hour of Code. Terima kasih kepada Hour of Code, sains komputer telah dipaparkan pada laman Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua merasmikan Hour of Code dengan video-video. Lebih daripada 100 rakan kongsi telah bersama untuk menyokong gerakan ini.
-</p>
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
 
-<p>
-  [<strong>MASUKKAN PETIKAN DARIPADA JURUCAKAP, CONTOHNYA DI BAWAH:</strong>] <br /> "Kita haruslah menggalakkan dan menerima minat pelajar-pelajar kita dalam sains komputer," dikatakan oleh [<strong>MASUKKAN NAMA</strong>]. "Setiap pelajar berlayak untuk mempunyai peluang untuk belajar sains komputer untuk mengakses kepada pekerjaan yang terbaik pada abad ke-21."
-</p>
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
 
-<p>
-  [<strong>MASUKKAN LEBIH BANYAK MAKLUMAT MENGENAI ACARA ANDA DAN/ATAU ORGANISASI ANDA</strong>]
-</p>
+[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
 
-<p>
-  [<strong>MASUKKAN PETIKAN DARIPADA ORGANISASI YANG LAIN ATAU SESEORANG YANG TELAH MENGHADIRI ACARA TERSEBUT</strong>]
-</p>
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
 
-<p>
-  Untuk maklumat yang lebih lanjut mengenai [<strong>ACARA/PROGRAM/DAN SEBAGAINYA</strong>], lawati [<strong>MASUKKAN LAMAN SESAWANG</strong>] atau hubungi [<strong>MASUKKAN MAKLUMAT KENALAN</strong>]
-</p>
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
 
-<p>
-  <br /> <br />
-</p>
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
 
-<p>
-  <%= view :signup_button %>
-</p>
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+<%= view :signup_button %>

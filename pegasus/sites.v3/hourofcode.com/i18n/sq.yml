@@ -11,12 +11,21 @@ sq:
   campaign_date_full: "5-11 dhjetor"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 Dhjetor, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Bashkohuni eventit më të madh në histori, %{campaign_date}'
   front_intro_default: 'Ora e Kodimit është lëvizje globale që përfshin dhjetëra miliona pjesëmarrës nga më shumë se 180 shtete. Kushdo, kudo mund të organizojë eventin Ora e Kodimit. Tutoriale një orëshe janë të vlefshme në mbi 30 gjuhë. Përvoja nuk është e nevojshme. <strong>Moshat nga 4 deri 104.</strong>'
   front_watch_video: 'Shikoje videon e re'
   front_watch_regular_video: 'Shiko videon'
   front_volunteers: 'Technical volunteers wanted'
   front_start_learning: 'Filloni të mësoni'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Burime'
   header_menu_faq: 'Pyetje të Shpeshta (PESH)'
   header_menu_how_to: 'Si'
@@ -222,6 +231,8 @@ sq:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organizoni një Orë Kodim gjatë %{campaign_date} dhe regjistroheni këtu.'
   signup_name_label: 'Emri juaj'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ sq:
   signup_your_event: 'Regjistroni eventin tuaj'
   signup_host_an_hour: 'Zhvillo një Orë'
   signup_match_volunteer: 'Më ndihmoni të gjej inxhinier programesh për të nxitur studentët'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Nëse ju po organizoni më shumë se një event, ju lutem dërgoni një emër ose email të veçant për secilin event. Ne njofim vetëm një event për një emër dhe email."
   signup_registration_deadline: "Rregjistrimet për Orën e Kodimit mbyllen në 12 Dhjetor."
   signup_name_placeholder: 'Emri juaj'
@@ -265,6 +281,7 @@ sq:
   signup_thank_you_message: 'Ua dërguam email konfirmimin me informacionin që ju ndihmon të filloni.'
   map_title: "Harta e Orës së Kodimit"
   map_header: '# evente Ora e Kodimit nëpër botë'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Shiko të gjitha eventet'
   map_header_company: '# nga organizator kompanie'
   map_header_country: '# në %{country}'
@@ -280,6 +297,7 @@ sq:
   meta_tag_twitter_title: 'Ora e Kodimit po vjen'
   meta_tag_twitter_description: 'Ora e Kodimit është lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 45 gjuhë.'
   twitter_default_text: "Këtë vit jam pjesëmarres në #OraeKodimit, po ju? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'PESH (Pyetjet e shpeshta)'
   hoc_faq_what_is_hoc_q: 'Çfarë është Ora e Kodimit?'
   hoc_faq_what_is_hoc_a: "Ora e Kodimit është prezantim një orësh për shkencat kompjuterike, i dizenjuar të çmitizojë kodimin dhe të dëshmojë që çdo kush mund të mësojë gjërat bazike. <a href='%{tutorials}'>Shikoni tutorialet dhe aktivitetet</a>.Kjo fushatë bazë është mbështetur nga mbi <a href='%{partners}'> 400 partnerë </a> dhe 200.000 edukatorët në mbarë botën."
@@ -333,8 +351,8 @@ sq:
   stats_hoc: "Ora e Kodimit: 5 ditë"
   stats_global: "Më shumë se 100M nxënës kanë provuar Orën e Kodimit"
   stats_girls_more: "Më shumë vajza provuan shkencat kompjuterike se sa në 70 vitet e fundit"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Çdo ditë kishte të njëjtat rezultate&mdash;me një angazhim 100%." - - Nina Nichols Peery, Mësuese'
   stats_student: '"E dija që kjo ishte një mundësi që të vjen <b>një herë në jetë</b>." - Mariana Alzate, nxënëse e klasës së 5-të'
   stats_michael: '"Nuk i kam parë<b> kurrë më parë</b> studentët e mi kaq të emocionuar për të mësuar." - Micheal Clark, Mësuese'
@@ -374,6 +392,7 @@ sq:
   videos_obama_cs: Presidenti Obama për shkencat kompjuterike
   videos_anybody_can_learn: Çdokush mund të mësojë (1 min)
   title_country_resources: Resurset Specifike të Vendit/Shtetit
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Ora e Kodimit Metoda për Shpërndarje
   title_how_to_events: Eventi i Orës së Kodimit, Metoda
   title_how_to_organizations: Si të behemi nikoqir të Orës së Kodimit- Organizatat
@@ -382,6 +401,7 @@ sq:
   title_how_to_volunteers: Udhëzues për vullnetarët e Orës së Kodimit
   title_how_to_parents: Udhëzues për prindërit
   title_how_to: Si të Drejtojmë
+  title_international_partners: Contact International Partners
   title_press_release: Deklarata për Shtyp e Orës së Kodimit për zyrtarët e zgjedhur
   title_op_ed: Shëmbull Kundër dhe Pro Mbështetëse të Javës së Arsimit në Shkencat Kompjuterike dhe Orës së Kodimit
   title_press_kit: Materiale për shtyp
