@@ -197,7 +197,7 @@ la:
   front_join_us_header: 'Cualquiera puede aprender los conceptos básicos y ¡divertirse haciéndolo!'
   front_join_us_volunteer_header: 'Voluntarios para la Hora del Código'
   front_join_us_tutorials: "¡Elige tu tutorial hora de código!"
-  front_join_us_tutorials_link: '¡Filtrar y navegar por <i>más de 200 tutoriales y lecciones</i>! Encuentra actividades para diferentes áreas, diferentes necesidades de hardware y estudiantes de cualquier nivel de experiencia.'
+  front_join_us_tutorials_link: '¡Filtra y navega por <i>más de 200 tutoriales y lecciones</i>! Encuentra actividades para diferentes áreas, múltiples necesidades de hardware y estudiantes de cualquier nivel de experiencia.'
   front_join_us_robotics: '¿Tienes robots?'
   front_join_us_robotics_link: 'Gracias nuestros socios en robótica (que están más abajo) si en tu colegio hay robots, entonces haz clic en los logos y encuentra una lista de actividades relacionadas con robótica.'
   front_join_us_teacher: '¿Eres profesor?'
@@ -221,18 +221,18 @@ la:
   front_join_us_students: "Estudiantes"
   front_join_us_teachers: "Profesores"
   front_join_us_everyone: "Todos"
-  front_join_us_try: "Inténtalo"
-  front_join_us_sign_up: "Inscribirme"
+  front_join_us_try: "Pruébalo"
+  front_join_us_sign_up: "Regístrate"
   front_join_us_host: "Organiza"
   front_join_us_support: "Apóyala"
   front_join_us_more_info: "Para más información, por favor visite <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Para más información, por favor visite code.org"
-  front_join_us_n_students_served: "# estudiantes han participado"
+  front_join_us_n_students_served: "# estudiantes que an sido apoyados"
   front_join_us_challenge: "¡Gane una video conferencias con una celebridad para su clase!"
   front_join_us_learn_more: "Aprender más"
   signup_closed: 'Registro para Hour of Code está cerrado. Por favor verifique de nuevo en Octubre para inscribirse para el siguiente Hour of Code.'
-  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
-  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
+  signup_registration_not_required: "¡No es necesario registrarse para participar! Las actividades de La Hora del Código están disponibles durante todo el año. <a href='%{hoc_activities_url}'>probar una actividad</a> o leer nuestros <a href='%{howto_guide_url}'>Guía Práctica</a> para planificar un evento para su clase."
+  signup_registration_closed: "Y cada año en diciembre, su clase puede unirse a millones de estudiantes alrededor del mundo celebrando La Semana de Educación en Ciencias de la Computación con La Hora del Código. Abriremos la inscripción para la celebración anual en octubre."
   signup_header: 'Organiza una Hora del Código del %{campaign_date} y regístrate.'
   signup_name_label: 'Su nombre'
   signup_name_error: 'El nombre es obligatorio.'
@@ -246,19 +246,19 @@ la:
   signup_event_entire_school_label: 'Toma mi escuela está participando'
   signup_event_location_label: 'Locación del evento'
   signup_event_location_error: 'La locación del evento es obligatoria.'
-  signup_special_event_flag_label: 'Destaca mi evento especial'
+  signup_special_event_flag_label: 'Mi evento involucrará a un distrito completo, miembros de la comunidad y/u otros planes especiales para ir más allá de una hora'
   signup_special_event_details_label: 'Aplicar para ser resaltado como un evento especial'
-  signup_send_posters_flag_label: 'Envía <a href= "/resources#posters">carteles</a> a mi colegio, instituto u organización (sólo EEUU)'
+  signup_send_posters_flag_label: 'Envía <a href= "/resources/promote#posters">carteles</a> a mi escuela, instituto u organización ( solamente en los Estados Unidos de Norteamerica, disponibles hasta agotar existencia)'
   signup_send_posters_address_label: 'Dirección de la escuela u organización'
   signup_whole_school_flag_label: 'Este evento es para toda una escuela'
   signup_your_event: 'Registre su evento'
   signup_host_an_hour: 'Organiza una Hora del Código'
   signup_match_volunteer: 'Ayúdeme a encontrar un ingeniero de software local para inspirar a mis studiantes'
-  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_opt_in: '¿Podemos enviarle correos electrónicos sobre actualizaciones de cursos de Code.org, oportunidades locales u otras noticias de la ciencia de la computación?'
   signup_email_preference_privacy: '(Ver nuestra política de privacidad)'
   signup_email_preference_yes: 'Si'
   signup_email_preference_no: 'No'
-  signup_email_preference_error: 'Email preference is required'
+  signup_email_preference_error: 'Se requiere preferencia de correo electrónico'
   signup_multiple_event_warning: "Pondremos el nombre de su escuela y ciudad en el mapa cuando se registre. Si está alojando eventos múltiples, por favor envíe un nombre único o correo electrónico para cada uno. Sólo podemos contar un evento por la combinación de nombre y correo electrónico."
   signup_registration_deadline: "El registro para la Hora del Código es el 8 de octubre."
   signup_name_placeholder: 'Su Nombre'
@@ -273,15 +273,15 @@ la:
   signup_event_type_out_of_school: 'Afuera de la escuela'
   signup_submit_census_label: 'Enviar'
   signup_submit_census_error_message: "Lo sentimos. Se ha producido un error. Por favor intente subir el formulario de nuevo."
-  signup_submit_label: 'Inscribirme'
+  signup_submit_label: 'Regístrate'
   signup_submit_error_message: "Ocurrió un error. Por favor verifique para asegurar de que todos los campos requeridos han sido llenados correctamente."
   signup_submit_and_continue_label: 'Subir y Continuar'
   signup_continue_label: 'Continuar'
-  signup_thank_you_header: "Gracias por registrarse para organizar una Hora del Código."
+  signup_thank_you_header: "¡Gracias por inscribirte para ser anfitrión de una Hora del Código!"
   signup_thank_you_message: 'Le enviamos un correo electrónico de confirmación con información para ayudarlo a comenzar.'
   map_title: "Mapa de Hour of Code"
   map_header: 'Numero de eventos registrados para hora de codigo en 2017'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} eventos registrados para La Hora del Código %{year}'
   see_all_events: 'Ver todos los eventos'
   map_header_company: '# por los organizadores de la compañía'
   map_header_country: '# en %{country}'
@@ -292,36 +292,36 @@ la:
   map_legend_hoc_events: 'Evento de Hour of Code'
   map_legend_cs_tech_jam: 'Evento especial'
   map_warning: "El mapa de Hora del Código sólo muestra los primeros 200.000 eventos registrados. Todos los eventos registrados con una dirección válida pueden verse en <a href='%{events_url}'> la página de eventos.</a>"
-  meta_tag_og_title: 'La Hora del Código está aquí'
-  meta_tag_og_description: 'La hora del código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 40 idiomas, con edades entre 4 y 104 años.'
-  meta_tag_twitter_title: 'La Hora del Código está aquí'
-  meta_tag_twitter_description: 'La hora del código es un movimiento global en el que participan decenas de millones de estudiantes en más de 180 países y en más de 40 idiomas, con edades entre 4 y 104 años.'
-  twitter_default_text: "Yo participo este año en #HourOfCode, ¿Y tú? @codeorg"
-  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  meta_tag_og_title: 'Hora del Código: únete al movimiento'
+  meta_tag_og_description: 'La Hora del Código es un movimiento global, el alcanze es de decenas de millones de estudiantes de todas las edades en más de 180 países y más de 45 idiomas.'
+  meta_tag_twitter_title: 'Hora del Código: únete al movimiento'
+  meta_tag_twitter_description: 'La Hora del Código es un movimiento global, el alcanze es de decenas de millones de estudiantes de todas las edades en más de 180 países y más de 45 idiomas.'
+  twitter_default_text: "Este año estoy participando en #HourOfCode, ¿Y usted? @codeorg"
+  twitter_donor_text: "Este año #HourOfCode es sobre la creatividad. ¡Yo voy a participar! ¿Y tú? (Gracias %{random_donor} por apoyar a @codeorg)"
   hoc_faq_title: 'Preguntas frecuentes'
   hoc_faq_what_is_hoc_q: '¿Qué es la Hora del Código?'
-  hoc_faq_what_is_hoc_a: "La Hora del Código es una introducción de una hora de duración a las Ciencias de la Computación, diseñada para mostrar que todo el mundo puede aprender a programar y así comprender los fundamentos básicos de la disciplina. \n<a href='http://code.org/learn'>Accede a los tutoriales</a>."
-  hoc_faq_last_year: "Prueba los tutoriales."
-  hoc_faq_when_is_hoc_q: '¿Cuándo es la Hora del Código?'
+  hoc_faq_what_is_hoc_a: "La Hora del Código comenzó como una hora de introducción a la informática, diseñado para desmitificar el \"código\", para demostrar que cualquiera puede aprender los conceptos básicos y para ampliar la participación en el campo de la informática. Desde entonces, se ha convertido en un esfuerzo mundial para celebrar las ciencias de la computación, comenzando con las actividades de codificación de una hora pero ampliándose a todo tipo de esfuerzos comunitarios. Conoce los <a href='%{tutorials}'> tutoriales y actividades </a>. Esta campaña comunitaria está respaldada por más de <a href='%{partners}'> 400 socios </a> y 200.000 educadores de todo el mundo."
+  hoc_faq_last_year: "Prueba los tutoriales"
+  hoc_faq_when_is_hoc_q: '¿Cuándo es La Hora del Código?'
   hoc_faq_when_is_hoc_a: "La Hora del Código tiene lugar cada año durante la <a href='%{csedweek_url}'> Semana de la Educación en Ciencias de la Computación </a>. La semana de educación en informática %{campaign_date_year} será %{campaign_date_full}, pero puede alojar una hora de código durante todo el año. La Semana de la Educación en Ciencias de la Computación se celebra anualmente en reconocimiento al cumpleaños de la <a href='%{grace_hopper}'> pionera de computación, el Almirante Grace Murray Hopper </a> (9 de diciembre de 1906)."
   hoc_faq_why_cs_q: '¿Por qué ciencias de la computación?'
-  hoc_faq_why_cs_a: "<i>Todos</i> los estudiantes deben tener la oportunidad de aprender Ciencias de la Computación. Ayuda a fomentar las habilidades de resolución de problemas, la lógica y la creatividad. Introducir a los estudiantes de forma temprana en las ciencias de la computación, les permitirá disponer de conocimientos imprescindibles en el s.XXI; fundamentales sea cual sea su futuro desarrollo profesional. Ver más estadísticas en <a href='http://code.org'>Code.org</a>."
+  hoc_faq_why_cs_a: "<i> Todos </ i> los estudiantes deberían tener la oportunidad de aprender informática. Ayuda a fomentar las habilidades para resolver problemas, la lógica y la creatividad. Al comenzar temprano, los estudiantes tendrán una base para el éxito en cualquier carrera profesional del siglo XXI. Ver más estadísticas <a href='%{stats_url}'> aquí </a>."
   hoc_faq_how_participate_q: '¿Cómo puedo participar en la Hora del Código?'
   hoc_faq_how_participate_a: "<a href='/how-to'>Comienza a planificar aquí</a> revisando nuestra guía de cómo hacerlo. Podrás organizar un evento de la Hora del Código en tu colegio, instituto o en tu comunidad &mdash; por ejemplo, en un taller extraescolar, en una organización sin ánimo de lucro o en tu lugar de trabajo. Simplemente, pruébalo cuando llegue el %{campaign_date}."
-  hoc_faq_behind_hoc_q: '¿Quién está detrás de la Hora de Programación?'
-  hoc_faq_behind_hoc_a: "La Hora del Código está organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a promover la participación en escuelas e institutos de las Ciencias de la Computación, con una especial atención en incrementar el número de mujeres y estudiantes de colectivos minoritarios que aprenden a programar. Una <a href='%{codeorg_url}/about/partners'>coalición sin precedentes de socios</a>que se ha reunido para apoyar la Hora del Código, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y College Board."
+  hoc_faq_behind_hoc_q: '¿Quién está detrás de La Hora del Código?'
+  hoc_faq_behind_hoc_a: "La Hora del Código está impulsada por la Hora del Código y la Semana de Educación en Informática <a href='%{partner_url}'> Comités de Asesoría y Revisión </a>, así como por una coalición de socios sin precedentes que se han unido para apoyar a la Hora del Código &mdash; incluyendo Microsoft, Apple, Amazon, Boys and Girls Clubs of America y el College Board."
   hoc_faq_host_q: "No sé nada acerca de programación. ¿Aún así puedo organizar un evento?"
-  hoc_faq_host_a: "Por supuesto. Las actividades de La Hora del Código son auto guiadas. Todo lo que tienes que hacer es <a href='%{codeorg_url}/learn'>probar nuestros actuales tutoriales</a>, seleccionar el tutorial que quieras y elegir una hora &mdash; nosotros nos encargaremos del resto. Tenemos opciones para cada edad y nivel de experiencia, desde jardín de infancia para arriba. Empieza a planear tu evento leyendo nuestra <a href='/how-to'>guía</a>."
-  hoc_faq_devices_q: "¿Qué dispositivos debo usar para mis estudiantes?"
+  hoc_faq_host_a: "Por supuesto. Las actividades de la Hora del Cóðigo son autodirigidas. Todo lo que tienes que hacer es <a href='%{codeorg_url}/learn'>intentar con nuestros tutoriales</a>, selecciona el tutorial que tu quieras, y elige una hora &mdash; nosotros nos ocupamos del resto. También tenemos opciones para todas las edades y todos los niveles de experiencia, desde el jardín de niños en adelante. Inicia organizando tu evento leyendo nuestra <a href='/how-to'>guía</a>."
+  hoc_faq_devices_q: "¿Qué dispositivos debería utilizar para mis estudiantes?"
   hoc_faq_devices_a: "Los tutoriales de Code.org funcionan en todos los dispositivos y navegadores. Puedes ver más información sobre las necesidades de tecnología de tutorial de Code.org <a href='%{codeorg_url}/educate/it'>aquí</a>. Las necesidades de tecnología para los tutoriales de nonCode.org se pueden encontrar en <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> en la descripción específica del tutorial. No olvide que también ofrecemos <a href='%{unplugged_url}'>actividades desconectadas</a> si su escuela no puede acomodar los tutoriales!"
   hoc_faq_need_computers_q: '¿Necesito computadoras para todos los participantes?'
-  hoc_faq_need_computers_a: "No. Tenemos tutoriales de la Hora del Código que funcionan en PCs, teléfonos móviles, tabletas y algunos que no requieren ¡ordenador! Tú puedes unirte desde donde estés, con lo que tengas. <p><i>Aquí están algunas opciones:</i> <br> <ul><li><b>Trabaja en parejas.</b> Las investigaciones muestran que los estudiantes aprenden mejor en<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>pares de programación</a>, compartiendo un ordenador y trabajando juntos. Anima a tus estudiantes a trabajar en pares. <li><b>Un cañón proyector.</b> Si tú tienes un proyector y un ordenador conectado a Internet, el grupo entero puede hacer una Hora del Código juntos. Viendo partes de los vídeos y estableciendo turnos para resolver y responder las preguntas. <li><b>Desconéctate.</b> Ofrecemos tutoriales que no requieren ordenador. </ul>"
+  hoc_faq_need_computers_a: "No. Tenemos tutoriales de la Hora del Código que funcionan en PC, teléfonos inteligentes, tabletas y algunos que no requieren computadora en absoluto. Puedes unirte donde sea que estés, con lo que sea que tengas. <p> <i> Aquí hay algunas opciones: </ i> <br> <ul> <li> <b> Trabajar en parejas. </ b> <a href='%{pair_programming_research}'> La investigación muestra que < / a> los estudiantes aprenden mejor con <a href='%{pair_programming_video}'> programación de pares </a>, compartiendo una computadora y trabajando juntos. Anima a tus alumnos a trabajar en pares. <li> <b> Usa una pantalla proyectada. </ b> Si tienes un proyector y una pantalla con una computadora conectada a la Web, tu grupo entero puede hacer una Hora de Código juntos. Mirar partes de videos juntos y tomar turnos para resolver acertijos o responder preguntas. <li> <b> Desconéctate. </ b> Ofrecemos <a href='%{unplugged_url}'> tutoriales que no requieren computadora </a>. </ ul>"
   hoc_faq_international_q: "Estoy en Latinoamérica. ¿Cómo puedo participar internacionalmente?"
   hoc_faq_international_a: "Todos pueden organizar un evento de la Hora del Código, en cualquier parte del mundo. En los últimos años, estudiantes de todo el mundo se han unido por la Hora del Código. Encuentra más información <a href='/promote'>aquí</a>."
   hoc_faq_tutorial_q: '¿Cómo puedo hacer un tutorial para la Hora del Código?'
-  hoc_faq_tutorial_a: "Si estás interesado en presentar tutoriales, <a href='target-tutorial-guidelines'>revisa nuestras directrices e instrucciones</a>. Queremos ofrecer una variedad de opciones atractivas, pero la meta principal es optimizar la experiencia de los estudiantes y profesores que apenas se inician en las ciencias de computación."
+  hoc_faq_tutorial_a: "Si estás interesado en convertirte en nuestro socio de tutoriales, mira <a href='/tutorial-guidelines'>nuestra guía e instrucciones</a>. Nos gustaría tener una variedad de atractivas opciones, pero la principal meta es optimizar la experiencia de los estudiantes y profesores que son nuevos en informática."
   hoc_faq_account_q: "¿Los estudiantes necesitan iniciar sesión con una cuenta registrada?"
-  hoc_faq_account_a: "No. No se requiere registro o iniciar sesión para que los estudiantes prueben la Hora del Código. La mayoría de los <a href='%{codeorg_url}/learn/beyond'> cursos de continuación</a> requieren que se cree una cuenta para guardar el avance del estudiante. Registrarse en la Hora del Código no crea automáticamente una cuenta en Studio Code. Si quieres crear cuentas para tus estudiantes, por favor sigue estas <a href='https://youtu.be/_smelV_KISE'>instrucciones</a>."
+  hoc_faq_account_a: "No. No se requiere registro o iniciar sesión para que los estudiantes prueben la Hora del Código. La mayoría de los <a href='%{codeorg_url}/learn/beyond'> cursos de continuación</a> requieren la creación de una cuenta para guardar el avance del estudiante. Registrarse en la Hora del Código no crea automáticamente una cuenta en Studio Code. Si quieres crear cuentas para tus estudiantes, por favor sigue estas <a href='https://youtu.be/_smelV_KISE'>instrucciones</a>."
   hoc_faq_high_school_q: "¿Que actividades debería hacer yo con estudiantes de secundaria?"
   hoc_faq_high_school_a: "Nuestros tutoriales de Star Wars y Minecraft son geniales para los estudiantes de secundaria, especialmente la versión Javascript de Star Wars y el nivel de juego libre de ambos tutoriales. Alternativamente, le recomendamos intentar uno de los tutoriales para principiantes en <a href='%{codeorg_url}/learn'>%{partner_url}/Aprende</a> para empezar, como el tutorial de Angry Birds o con Ana y Elsa. Un estudiante de secundaria será capaz de finalizarlo en 30 minutos y después puede intentar un tutorial más avanzado en Javascript como Khan Academy o CodeHS."
   hoc_faq_scratch_q: "Enseño Scratch para la Hora del Código, pero ¿qué pasa si mis estudiantes usan iPads en lugar de laptops?"
@@ -329,20 +329,20 @@ la:
   hoc_faq_count_hoc_q: "¿Cómo se cuentan las Hora de Código?"
   hoc_faq_map_q: "¿Por qué no puedo ver mi punto en el mapa?"
   hoc_faq_map_a: "Sentimos que no pueda ver su evento en el mapa de la Hora del Código. Debido a las decenas de miles de organizadores que se inscriben, el mapa agrupa los datos y muestra un punto para varios eventos. Si hace clic en el número de arriba del mapa será dirigido a una lista de todos los eventos por estado y encontrará su evento en la lista. Además, debido a las miles de personas que se registra para la Hora del Código, el mapa y la lista de evento generalmente tarda 48 horas en actualizarse. ¡Compruébalo en unos días!"
-  hoc_faq_count_hoc_a: "El seguimiento de la Hora del Código no es una medición exacta del uso. No contamos las identificaciones únicas de los estudiantes con precisión cuando hacemos seguimiento de la participación en la Hora del Código, sobre todo porque no requerimos que los estudiantes inicien sesión o se registren. Como resultado, no podemos contar el número de participantes que trabajan al mismo tiempo. Conoce todos los detalles <a href='%{codeorg_url}/loc'> aquí</a>."
+  hoc_faq_count_hoc_a: "El seguimiento de la Hora del Código no es una medición exacta del uso. No contamos las identificaciones únicas de los estudiantes con precisión cuando hacemos seguimiento de la participación en la Hora del Código, sobre todo porque no requerimos que los estudiantes inicien sesión o se registren. Como resultado, no podemos contar la cantidad de participantes que trabajan al mismo tiempo. Conoce todos los detalles <a href='%{codeorg_url}/loc'> aquí</a>."
   hoc_faq_one_hour_q: "¿Cuánto se puede aprender en una hora?"
-  hoc_faq_one_hour_a: 'El objetivo de la Hora del Código no es enseñar a nadie a convertirse en un experto informático en una hora. Una hora es solo para aprender que las Ciencias de la Computación es divertida y creativa, que es accesible para todas las edades, para todos los estudiantes, sin importar su historia. La medida del éxito de esta campaña no es cuanta Ciencias de la Computación aprenden los estudiantes- el éxito se refleja en la amplia participación por género y grupos étnicos y socioeconómicos y el aumento en la inscripción y participación en los cursos de Ciencias de la Computación en todos los niveles. Millones de maestros y estudiantes participantes han decidido ir más allá de una hora - para aprender en un día o una semana o más, y muchos estudiantes han decidido inscribirse en un curso entero (o incluso en la universidad) como resultado. <br/> <br/> Además de los estudiantes, otro "estudiante" es el educador quien gana confianza después de una hora para enseñar Ciencias de la Computación a pesar de no tener un título universitario como un científico de la computación. Decenas de miles de maestros deciden continuar en Ciencias de la Computación, ofreciendo cursos de continuación online, asistir a PD o ambos. Y esto también se aplica a los administradores de la escuela también, quienes se dan cuenta de que las Ciencias de la Computación es algo que quieren sus estudiantes y sus maestros son capaces de realizar. <br/> <br/> Sobre todo, que todos los participantes pueden aprender en una hora es como nosotros podemos hacer esto.'
+  hoc_faq_one_hour_a: 'La meta de la Hora de Código no es enseñar a cualquiera para que se convierta en un científico de computación experto en una hora. Una Hora es suficiente para aprender que la ciencia de la computación es divertida y creativa,, que es accesible a todas las edades, para todos los estudiantes, sin importar su situación. La medida de éxito de esta campaña no es cuántos estudiantes de ciencias de computación aprenden -el éxito se refleja en una amplia participación entre los distintos grupos de género, étnicos y socioeconómicos, y en el consecuente aumento de las inscripciones y participación en cursos de computación en todos los niveles. Millones de maestros participantes y estudiantes han decidido ir más allá de una hora - para aprender durante un día entero, una semana entera, o aún más, y muchos estudiantes han decidido inscribirse en un curso completo (inclusive en una universidad). <br/><br/> Junto a los estudiantes, otro "aprendiz" es el educador que luego de una hora gana la confianza para poder enseñar ciencia de la computación aún cuando no tenga un grado universitario como científico de computación. Decenas de miles de maestros deciden continuar con la ciencia de computación, sea inscribiéndose en un PhD, en cursos en línea, o en ambos. Y esto aplica también a escuelas de administradores, que se dan cuenta de que la ciencia de la computación es algo que sus estudiantes desean y que sus maestros están capacitados para enseñar.<br/><br/>Sobre todas las cosas, lo que todos los participantes aprenden en una hora es que pueden aprender.'
   hoc_faq_more_questions_q: "¿Aún tienes preguntas?"
   hoc_faq_more_questions_a: "Intenta encontrar respuestas en nuestro <a href='http://support.code.org'>foro de soporte</a>."
   hoc_faq_keep_learning_q: "¿Cómo sigo aprendiendo luego de la Hora de Código?"
-  hoc_faq_keep_learning_a: "Cualquier persona puede alojar una Hora del Código en cualquier momento. Los tutoriales permanecen durante todo el año. Usted puede esperar que todos nuestros tutoriales y planes de estudios estén disponibles en nuestro sitio perpetuamente. Por favor visite <a href='/promote'> nuestros recursos</a> para guías de procedimientos de evento y otros recursos que ayuden a hacer de su evento de la Hora del Código un éxito."
+  hoc_faq_keep_learning_a: "Cualquier persona puede organizar una Hora del Código en cualquier momento. Los tutoriales permanecen durante todo el año. Todos nuestros tutoriales y planes de estudios estarán disponibles en nuestro sitio perpetuamente. Por favor visita <a href='/promote'> nuestros recursos</a> para guías de procedimientos de evento y otros recursos que ayuden a hacer de tu evento de la Hora del Código un éxito."
   hoc_faq_certificates_q: "¿Donde puedo imprimir certificados para mis alumnos?"
-  hoc_faq_certificates_a: "Ve a nuestra <a href='%{codeorg_url}/certificates'> página de certificados</a> donde puedes imprimir certificados para su clase entera antes de tiempo."
-  hoc_faq_logo_q: "¿Existen limitaciones acerca de como puedo usar el logotipo o el nombre de la Hora de Código?"
-  hoc_faq_logo_a: "Hora de Código es una marca registrada. No queremos evitar su uso, pero queremos asegurarnos de que su uso quede dentro de unos cuantos límites. Por favor vea <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>esta guía para el uso</a>."
+  hoc_faq_certificates_a: "Vaya a nuestra <a href='%{codeorg_url}/certificates'>página de cértificados</a> donde podrá imprimir los certificados para su clase entera. Usted también podrá imprimir <a href='%{codeorg_url}/certificates?course=mc'>certificados especiales</a> para aquellos estudiantes que hayan realizado el tutorial de Minecraft."
+  hoc_faq_logo_q: "¿Existen limitaciones acerca de como puedo usar el logotipo o el nombre de la Hora del Código?"
+  hoc_faq_logo_a: "La Hora del Código es una marca registrada. Queremos evitar su uso, pero queremos hacer que su uso quede dentro de unos límites. Consulte <a href='%{logo_url}'>estas directrices para el uso</a>."
   stats_hoc_2013_image_alt: 'Estadísticas de la Hora del Código de 2013'
-  stats_growth: "Fue el más rápido alcanzando 15 millones de usuarios."
-  stats_i18n: "Los estudiantes están aprendiendo en 40 idiomas"
+  stats_growth: "Fue el más rápido en alcanzar los 15 millones de usuarios."
+  stats_i18n: "Los estudiantes están aprendiendo en más de 45 idiomas"
   stats_tumblr: "Tumblr: 3.5 años"
   stats_facebook: "Facebook: 3 años"
   stats_twitter: "Twitter: 2.5 años"
@@ -352,16 +352,16 @@ la:
   stats_global: "Más de 100M de estudiantes han probado Hour of Code"
   stats_girls_more: "Más chicas probaron ciencias de la computación que en los últimos 70 años"
   stats_females: "La participación de mujeres en ciencias de la computación es sólo 20% en cursos colegiales, cursos universitarios, y fuerza de trabajo."
-  stats_females_more: "Durante el Hour of Code, ¡las mujeres constituyen el <b>50% de todos los participantes</ b>!"
+  stats_females_more: "Durante la Hora del Código, ¡las mujeres conforman el <b>50% de todos los participantes</ b>!"
   stats_nina: '"Cada día produjo los mismos resultados&mdash; 100% de compromiso." Nina Nichols Peery, Profesora'
   stats_student: '"Sabía que esto sería una oportunidad de <b>una-vez-en-la-vida</b>." Mariana Alzate, 5to grado'
-  stats_michael: '"<b>nunca</b> había visto a mis estudiantes tan entuciasmados por el aprendizaje." - Michael Clark, Profesor'
+  stats_michael: '"<b>Nunca, jamás</b> había visto a mis estudiantes tan entusiasmados por el aprendizaje." - Michael Clark, Profesor'
   resources_how_to: Guía para profesores
   resources_how_to_events: Guía "Cómo organizar" un evento
   resources_how_to_districts: Guía de instrucciones para distritos
   resources_how_to_officials: Guía de instrucciones para funcionarios públicos
-  resources_handouts: Folletos promociónales
-  resources_one_pager: Resumen
+  resources_handouts: Folletos de difusión
+  resources_one_pager: Folleto de una página
   resources_brochure: Folleto
   resources_posters: Carteles
   resources_videos: Videos
@@ -373,14 +373,14 @@ la:
   resources_social: Social
   resources_country_resources: Recursos de Países Específicos
   resources_stickers: Pegatinas
-  resources_how_to_guides: 'Guías y ayuda'
+  resources_how_to_guides: 'Guías explicativas'
   resources_promote: 'Promueve'
-  resources_nav_tutorials: 'Prueba los tutoriales.'
+  resources_nav_tutorials: 'Prueba los tutoriales'
   resources_nav_promote: 'Correr la voz'
   resources_nav_spread_word: 'Cómo participar'
   resources_banner_promote_text: "Promueve"
-  resources_banner_promote_button: "Pide a otras personas que participen, enseñándoles los folletos, posters y banners."
-  resources_banner_howto_text: "Cómo"
+  resources_banner_promote_button: "Anime a otros a inscribirse con folletos, carteles inspiradores y pancartas en las redes sociales."
+  resources_banner_howto_text: "Cómo se hace"
   resources_banner_howto_button: "Recursos para educadores, padres y distritos para alojar un Hour of Code."
   handouts_section: Camparte estos folletos
   handouts_onepager: Corra la voz con este folleto de una página
@@ -388,62 +388,62 @@ la:
   handouts_participationguide: Planifique su Hour of Code con esta guía de participación
   videos_title: Muestra estos videos para inspirar a estudiantes
   videos_what_most_schools_dont_teach: Lo Que La Mayoría De Las Escuelas No Enseña (5 min)
-  videos_hoc_2014: La Hora del Código ha llegado - Todo el mundo puede aprender
+  videos_hoc_2014: La Hora del Código está aquí - Todos pueden aprender
   videos_obama_cs: El Presidente Obama en ciencias de la computación
   videos_anybody_can_learn: Quien Sea Puede Aprender (1 min)
   title_country_resources: Recursos de Países Específicos
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
-  title_how_to_districts: Guía de instrucciones de la Hora de código para los distritos
-  title_how_to_events: Como organizar un evento de la Hora del código
+  title_hoc_advisory_committee: Comité de prevención de la Hora del Código y la Semana por la Educación de las Ciencias de la Computación
+  title_how_to_districts: Guía explicativa de la Hora del Código para Distritos
+  title_how_to_events: Cómo organizar un evento de la Hora del Código
   title_how_to_organizations: Cómo alojar un Hour of Code - Organizaciones
   title_how_to_companies: Cómo alojar un Hour of Code - Compañías
   title_how_to_officials: Guía de instrucciones para funcionarios públicos
-  title_how_to_volunteers: Guía para voluntarios de la hora del código
-  title_how_to_parents: Guía para familias
+  title_how_to_volunteers: Guía para voluntarios de la Hora del Código
+  title_how_to_parents: Guía para padres de familia
   title_how_to: Guía de instrucciones
-  title_international_partners: Contact International Partners
-  title_press_release: Versión de prensa de la hora del código para funcionarios electos
-  title_op_ed: Ejemplo de página de opinión de apoyo a la Semana de Educación para las Ciencias de la Computación y la Hora del Código
+  title_international_partners: Contacta socios internacionales
+  title_press_release: Rueda de prensa sobre la Hora del Código para funcionarios electos
+  title_op_ed: Ejemplo de un artículo de opinión que apoye la Semana por la Educación de las Ciencias de la Computación y la Hora del Código
   title_press_kit: Paquete de prensa
-  title_proclamation: Resolución de ejemplo de soporte a la Semana de la Educación de las Ciencias de la Computación y la Hora del Código
-  title_stats: Publicidad y estadísticas
+  title_proclamation: Resolución de Ejemplo Soporte de la Semana de Educación de Ciencia de Computación y Una Hora de Código
+  title_stats: Información y Estadísticas
   title_partners: Socios
   title_resources: Recursos
-  title_signup_thanks: '¡Gracias por inscribirte para ser anfitrión de una Hora de Código!'
-  title_tutorial_guidelines: Guía del tutorial
+  title_signup_thanks: '¡Gracias por registrarte como anfitrión de la Hora del Código!'
+  title_tutorial_guidelines: Guía para las actividades
   title_whole_school: Participación de toda la escuela
   events_nav_title: Eventos de la Hora del Código
   events_nav_all: Todos los Eventos
   events_nav_whole_schools: Escuelas Completas
   events_nav_special: Eventos Especiales
   events_nav_orgs: Organizaciones
-  events_all_old_title: "Todos los eventos de la Hora del Código @year"
-  events_all_title: Todos los eventos de Hora de Código
-  events_whole_school_title: Eventos de Hora de Código en toda la escuela
-  events_special_title: Eventos especiales de Hora del Código
-  events_orgs_title: Todos los eventos de Hora de Código son coordinados  por Organizaciones Asociadas
+  events_all_old_title: "Todos los eventos de Una Hora de Código para el año @year"
+  events_all_title: Todos los eventos de la Hora del Código
+  events_whole_school_title: Eventos de Hora de Programación en Salones de Clase
+  events_special_title: Eventos especiales de la Hora del Código
+  events_orgs_title: Todos los eventos de la Hora del Código organizados por organizaciones asociadas
   event: evento
   events: eventos
   highlights_title: Destacados
   highlights_header: Puntos destacados de la Hora de Código
-  highlights_description: Algunos de nuestros momentos favoritos de la campaña Hora de Código.
-  higlights_see_more: Ver más destacados
+  highlights_description: Algunos de nuestros momentos favoritos de la campaña La Hora del Código.
+  higlights_see_more: Ver más puntos destacados
   highlights_readmore: Leer más
   highlights_watchvideo: Vee el video
   highlights_facebook: Compartir en Facebook
-  highlights_constant_alba_heading: La actriz, activista y empresaria organizaró una Hora de Código con todo el personal en The Honest Company.
-  highlights_constant_alba_short_heading: Jessica Alba aprende una Hora de Código
-  highlights_constant_obama_heading: Presidente Obama es el primer presidente que escribe una línea de código, Acogiendo una Hora del código histórica para estudiantes en la Casa Blanca.
+  highlights_constant_alba_heading: La actriz, activista y emprendedora organizaró una Hora de Código con todo el personal en The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba aprende en una Hora del Código
+  highlights_constant_obama_heading: El Presidente Obama es el primer presidente en escribir una línea de código, siendo anfitrión de una histórica Hora del Código para estudiantes en la Casa Blanca.
   highlights_constant_obama_short_heading: Jefe de Programación
-  highlights_constant_malala_heading: "\"Todas las chicas merecen participar en la creación de la tecnología que cambiará nuestro mundo y cambiar quién lo dirige.\""
-  highlights_constant_malala_short_heading: Ganador del Premio Nobel de la paz Malala
-  highlights_constant_trudeau_heading: El primer ministro canadiense, Justin Trudeau, programó un juego simple con su deporte favorito.
+  highlights_constant_malala_heading: "\"Toda niña merece formar parte en la creación de tecnología que cambiará nuestro mundo, y cambiar quién lo dirige.\""
+  highlights_constant_malala_short_heading: Ganadora del Premio Nobel de la paz Malala
+  highlights_constant_trudeau_heading: El primer ministro canadiense, Justin Trudeau, programó un juego simple basado en su deporte favorito.
   highlights_constant_trudeau_short_heading: El Primer Ministro Justin Trudeau programa un juego
   highlights_constant_ny_heading: Después de una batalla épica, 80% de las escuelas de Brooklyn hicieron el Hour of Code vs. 60% en Chicago. ¡Nada mal!
   highlights_constant_ny_short_heading: Brooklyn le gana a Chicago
   highlights_constant_athletes_heading: Los campeones y medallistas de oro Serena Williams, Neymar Jr, Carmelo Anthony y más inspiran a estudiantes a esforzarse.
   highlights_constant_athletes_short_heading: Esfuérzate
-  footer_copyright_message: 'Copyright Code.org 2015. Todos los derechos reservados.'
+  footer_copyright_message: 'Copyright %{current_year} Code.org. Todos los derechos reservados.'
   footer_trademark_message: 'Hora del código ™ es una marca registrada de Code.org.'
   footer_menu_partners: 'Socios y Asesores'
   footer_menu_contact: 'Contáctenos'
@@ -475,32 +475,32 @@ la:
   tutorial_foos_name: "codeSpark Academia con los Foos"
   tutorial_tynkerdd_name: "La guarida del Dragón"
   tutorial_tynkerana_name: "Kit de reloj analógico STEM"
-  tutorial_vidcard_name: "VidCoder: Tarjeta de felicitación de Bestie"
+  tutorial_vidcard_name: "VidCode: Tarjeta de felicitación de Bestie"
   tutorial_spritebox_name: "Codificación de una caja de sprite"
   tutorial_tynkerch_name: "Tuneo del contador"
   tutorial_lightbot_name: "Robot de luz"
   tutorial_hoc_name: "Marcador de posición para el nuevo code.org/hoc"
   tutorial_code_name: "Codifica tu primer programa de computación"
   tutorial_tinspire_name: "10 minutos de código para la TI-Nspire CX"
-  tutorial_itchbounceball_name: "ITCH,  La bola que rebota (en Scratch)"
-  tutorial_vidclim_name: "VidCoder: La Ciencia del clima y Code"
+  tutorial_itchbounceball_name: "ITCH, La bola que rebota (en Scratch)"
+  tutorial_vidclim_name: "VidCoder: Ciencia del clima y código"
   tutorial_matlab_name: "Aprenda a Programas con MATLAB"
   tutorial_flap_name: "Crea un juego Flappy"
-  tutorial_galaxy_name: "Galaxy Game Jam"
+  tutorial_galaxy_name: "Jam del juego de galaxia"
   tutorial_inf_name: "Laboratorio de Juego Infinity"
-  tutorial_tynkersol_name: "Sistema de Kit solar STEM"
+  tutorial_tynkersol_name: "Kit STEM del Sistema Solar"
   tutorial_itchg_name: "Dilo con ITCH - Geografía"
   tutorial_como_name: "Aventura de Programación"
-  tutorial_processfound_name: "La fundación de los Procesos - Hola Procesos"
-  tutorial_tynkerhomo_name: "Kit de palabras homófonas STEM"
+  tutorial_processfound_name: "La fundación de los Procesos - Proceso Hola"
+  tutorial_tynkerhomo_name: "Kit STEM de palabras homófonas"
   tutorial_art_name: "Artista"
   tutorial_tynkerbrick_name: "Kit de juego Brick Breaker"
   tutorial_itchbio_name: "Dilo con ITCH - Las partes de la Célula Biológica"
   tutorial_itchj_name: "ITCH Saltando (en Scratch)"
-  tutorial_tickleo_name: "Swimming Orca - por Tickle App"
+  tutorial_tickleo_name: "Orca nadadora - por Tickle App"
   tutorial_hopgeo_name: "Saltador geométrico"
-  tutorial_tynkermult_name: "Kit de Escape de la Multiplicación STEM"
-  tutorial_monster_name: "Concurso de programación Mystery Island"
+  tutorial_tynkermult_name: "Kit STEM de Escape de la Multiplicación"
+  tutorial_monster_name: "Búsqueda de programación Isla Misteriosa"
   tutorial_tynkerapp_name: "Construye una App"
   tutorial_tynkerpup_name: "Aventura con mascotas"
   tutorial_livecode_name: "Tableros de sonido LiveCode"
@@ -508,14 +508,14 @@ la:
   tutorial_tynkerspin_name: "Girar Para Sortear Kit de Animación"
   tutorial_code-avengers_name: "Construye un juego con JavaScript"
   tutorial_tynkercq_name: "Búsqueda de Caramelos"
-  tutorial_makeschool_name: "¡Construye un juego de iPhone en tu navegador!"
+  tutorial_makeschool_name: "Construye un juego de iPhone en tu navegador!"
   tutorial_cmgame_name: "Constructor del Juego CodeMonkey"
   tutorial_codesters_name: "Codesters"
   tutorial_qrm_name: "Programación accesible (con soporte de lector de pantalla)"
   tutorial_texas-instruments_name: "10 minutos de código"
-  tutorial_cajava_name: "Dibujar Banderas con JavaScript"
+  tutorial_cajava_name: "Dibujando Banderas con JavaScript"
   tutorial_codehs_name: "Aprende a programar con el perro Karel"
-  tutorial_hopemo_name: "Sorteo de Emoji"
+  tutorial_hopemo_name: "Dibuja un Emoji"
   tutorial_tynkercm_name: "Code Monsters"
   tutorial_codesterswintergreet_name: "Saludos de invierno"
   tutorial_codestersc_name: "El Plano de Coordenadas"
@@ -538,23 +538,23 @@ la:
   tutorial_capost_name: "Crea una postal digital con HTML y CSS"
   tutorial_marco_name: "Corre Marco! "
   tutorial_codestersflappybike_name: "Bicicleta Flappy"
-  tutorial_kanopong_name: "Kano computación - hacer Pong"
-  tutorial_tynkerright_name: "Declaración de Derechos STEM Kit"
+  tutorial_kanopong_name: "Computación Kano - Crea Pong"
+  tutorial_tynkerright_name: "Declaración de Derechos del Kit de STEM"
   tutorial_flatverse_name: "Flatverse"
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "Code Commander"
-  tutorial_bamboo_name: "Bamboo JS"
+  tutorial_bamboo_name: "Bambú JS"
   tutorial_robojav_name: "Robots y Java: Una introducción a Java"
   tutorial_roboba_name: "Aprenda Algebra con RoboBlockly"
   tutorial_knodsnake_name: "Serpiente de JavaScript"
-  tutorial_soccharater_name: "Construccion de Caracteres"
+  tutorial_soccharater_name: "Construccion de personajes"
   tutorial_silent_name: "Maestro Silencioso"
-  tutorial_robomesh_name: "Programa VEX IQ Robots con Blockly"
+  tutorial_robomesh_name: "Programa Robots VEX IQ con Blockly"
   tutorial_amaze_name: "Algo laberintico"
   tutorial_codestersds_name: "Secuencia de Sueños"
-  tutorial_knodtext_name: "Aventura en texto: Python"
+  tutorial_knodtext_name: "Texto de la aventura: Python"
   tutorial_alicegar_name: "Animando con Alice y Garfield"
-  tutorial_codesterstransform_name: "Puzles de transformación"
+  tutorial_codesterstransform_name: "Rompecabezas de transformación"
   tutorial_flexfrog_name: "Flexbox Froggy"
   tutorial_codemoji_name: "Codemoji"
   tutorial_robobii_name: "Aprenda Programación con RoboBlocly"
@@ -564,9 +564,9 @@ la:
   tutorial_coders_name: "Los programadores contraatacan: Introducción a la programación de robots"
   tutorial_tynkerhw_name: "Aprenda a Programar con Hot Wheels"
   tutorial_tynkermh_name: "Aprenda a Programar con Monster High"
-  tutorial_caphoto_name: "Construye una App de Fotomatón"
-  tutorial_mozillahw_name: "Generador de excusas de deberes de Mozilla"
-  tutorial_ticklep_name: "El loro asombroso"
+  tutorial_caphoto_name: "Construye una aplicación de cabina de fotos"
+  tutorial_mozillahw_name: "Generador de excusas de tarea Mozilla"
+  tutorial_ticklep_name: "El loro maravilla"
   tutorial_bbot_name: "Bomberbot: actividades divertidas y fáciles de programar"
   tutorial_scratchg_name: "Programando Juegos en Scratch"
   tutorial_roboticfriends_name: "Mis Amigos Robóticos"
@@ -586,7 +586,7 @@ la:
   tutorial_ozo_name: "El Tutorial de Ozobot"
   tutorial_bbcla_name: "Bitsbox Codificacion + Lenguaje"
   tutorial_bbcsci_name: "Bitsbox Codificacion + Science"
-  tutorial_tlctour_name: "Actividad de guía de Tour"
+  tutorial_tlctour_name: "Actividad guiada"
   tutorial_codesterstj_name: "CS Tech Jam"
   tutorial_tlclocked_name: "Encerrado"
   tutorial_baubles_name: "Adornos Binarios"
@@ -603,7 +603,7 @@ la:
   tutorial_bbcphys_name: "Bitsbox Codificacion + Fisica"
   tutorial_bitsbox_name: "Construye aplicaciones locas con Bitsbox"
   tutorial_tlcemo_name: "Maquina de Emociones: Disene una tarjeta - rostro"
-  tutorial_crd_name: "Condicioales con cartas"
+  tutorial_crd_name: "Condicionales con tarjetas"
   tutorial_bbcbio_name: "Bitsbox Codificacion + Biologia"
   tutorial_ticklebb8_name: "BB-8 Swing"
   tutorial_grok_name: "Aprendizaje Grok"
@@ -620,37 +620,37 @@ la:
   tutorial_unfortunate_name: "Una Serie de Eventos Desafortunados"
   tutorial_cha_name: "Actividad de la Historia de la Computación"
   tutorial_elaseq_name: "Escritura y programación: integración de ELA con estándares básicos comunes"
-  tutorial_bbcmathi_name: "Bitsbox Codificación + Matemáticas (3-5)"
-  tutorial_tlcpixel_name: "Puzzles Pixel"
+  tutorial_bbcmathi_name: "Programación Bitsbox + Matemáticas (3-5)"
+  tutorial_tlcpixel_name: "Rompecabezas Pixel"
   tutorial_arduino_name: "Actividad de Arduino"
   tutorial_introrobo_name: "Introducción a la Robótica"
   tutorial_tlcinvis_name: "Actividad invisible de palmeo"
   tutorial_tlcjflap_name: "JFLAP: Creación de máquinas de estado finito"
-  tutorial_procolor_name: "Programando con colores"
+  tutorial_procolor_name: "Conduce a la escuela con Ozobot"
   tutorial_spiralsfinch_name: "Espirales con el pinzón"
-  tutorial_ozoi_name: "Una introducción a la programación y Ozobot"
-  tutorial_ticklel_name: "LEGO ladrillador"
-  tutorial_spiralsdash_name: "Dibujar espirales con Dash"
+  tutorial_ozoi_name: "Introducción a Ozobot y OzoCodes"
+  tutorial_ticklel_name: "Ladrillador LEGO"
+  tutorial_spiralsdash_name: "Dibuja espirales con Dash"
   tutorial_ghdebug_name: "Actividad de depuración de Grace Hopper"
-  tutorial_tlckk_name: "Kriss Kross Puzzles"
+  tutorial_tlckk_name: "Rompecabezas Kriss Kross"
   tutorial_firstcomp_name: "Mi Primer Computador"
   tutorial_mazefinch_name: "A través del laberinto con Finch Robot"
-  tutorial_tlccc_name: "Código de compresión Puzzles"
+  tutorial_tlccc_name: "Rompecabezas de código de compresión"
   tutorial_tlcdoodle_name: "Algoritmos con Doodle Art"
   tutorial_tlcpunch_name: "Actividad de búsqueda de tarjetas perforadas"
   tutorial_finchfract_name: "Fractales de Pinzón"
   tutorial_tlcmind_name: "La actividad de fusión mental rojo negro"
-  tutorial_tlctelebot_name: "Actividad de teletransportar el Robot"
+  tutorial_tlctelebot_name: "Actividad del Robot teletransportador"
   tutorial_tlcaus_name: "Actividad de sueño del mago australiano"
   tutorial_oralhist_name: "Proyecto de historia oral"
   tutorial_tlcmicro_name: "Actividad de video de carreras de microondas"
   tutorial_imathematician_name: "iMatematico"
   tutorial_tlcmagic_name: "Libro mágico de magia"
-  tutorial_scratchmus_name: "Hacer música con Scratch"
+  tutorial_scratchmus_name: "Hacer música scratch"
   tutorial_scratchanim_name: "Animar Su Nombre con Scratch"
   tutorial_scratchfly_name: "Hágalo Volar con Scratch"
-  tutorial_tynkerarc_name: "Kit juego Arcade bajo el mar"
-  tutorial_grokffpython_name: "Fractales congelados (Python Turtle)"
+  tutorial_tynkerarc_name: "Kit de juego Arcade bajo el mar"
+  tutorial_grokffpython_name: "Fractales congelados (Tortuga Python)"
   tutorial_grokffblock_name: "Fractales congelados (Blockly Turtle)"
   tutorial_grokeliza_name: "¿Es Eliza un Humano? (Python)"
   tutorial_tynkercan_name: "Cañón de Física, juego de 2 jugadores"
@@ -666,7 +666,7 @@ la:
   tutorial_app-inventor_name: "Hora de código con AppInventor"
   tutorial_bits_name: "Bits & Bricks"
   tutorial_blockly_name: "Blockly"
-  tutorial_tynker_name: "Construye tu propio juego"
+  tutorial_tynker_name: "Desarrolla tu propio juego"
   tutorial_baypt_name: "Código Baymax"
   tutorial_code-combat_name: "CodeCombat"
   tutorial_mky_name: "CodeMonkey"
@@ -699,7 +699,7 @@ la:
   tutorial_swb_name: "Star Wars: Construyendo una Galaxia con Código"
   tutorial_build-a-galaxy_name: "Star Wars: Construyendo una Galaxia con Código"
   tutorial_alicesims_name: "Guión gráfico y Programación con Alicia y Los Sims"
-  tutorial_tchr_name: "Planes de lecciones dirigidas por el maestro"
+  tutorial_tchr_name: "Planes de lecciones dirigidas por el profesor"
   tutorial_robogame_name: "Los Juegos del Robot"
   tutorial_tap_name: "Tynker en Tablets"
   tutorial_cintl_name: "Codifica tu primer programa de computación"
@@ -708,7 +708,7 @@ la:
   tutorial_tynkerpd_name: "Peep: Baile con amigos"
   tutorial_persistence_name: "Persistencia: Construyendo una base"
   tutorial_getloopy_name: "Ciclándose"
-  tutorial_createface_name: "Crear una cara"
+  tutorial_createface_name: "Crear-una-cara"
   tutorial_happymaps_name: "Mapas Felices"
   tutorial_moveit_name: "¡Muévelo, Muévelo!"
   tutorial_bigevent_name: "El Gran Evento"
@@ -725,12 +725,12 @@ la:
   tutorial_wolframp_name: "Dibuja un Polígono"
   tutorial_wolframn_name: "Generador de nombres Ninja"
   tutorial_soloweb_name: "¡Tu primera página web en un Hora!"
-  tutorial_bloxmobapp_name: "Construye TU APP mobil"
+  tutorial_bloxmobapp_name: "Construye TU APP móvil"
   tutorial_khanweb_name: "Khan Academy: Páginas web"
   tutorial_khandata_name: "Khan Academy: Bases de datos"
-  tutorial_robomeshiq_name: "Programa VEX IQ Robots con Blockly"
+  tutorial_robomeshiq_name: "Programa Robots VEX IQ con Blockly"
   tutorial_googlelogo_name: "Crea tu propio logo de Google"
-  tutorial_playtune_name: "Juaga esta Aplicación de Tune"
+  tutorial_playtune_name: "Juega esa Aplicación de tonos"
   tutorial_computeit_name: "Calcula esto"
   tutorial_codesterssj_name: "Chistes Espaciales"
   tutorial_cmchat_name: "Python Chatbot"
@@ -750,7 +750,7 @@ la:
   tutorial_gfbloons_name: "Defensa Trigonométrica de Bloons"
   tutorial_raspipong_name: "Sense HAT Pong"
   tutorial_codehsvr_name: "Crear mundos virtuales con CodeHS"
-  tutorial_codesterstp_name: "Puzles de transformación"
+  tutorial_codesterstp_name: "Rompecabezas de transformación"
   tutorial_codestersbb_name: "Baloncesto"
   tutorial_gfcrossyroad_name: "Aprende a codificar con Crossy Road"
   tutorial_googleww_name: "Mujer Maravilla"
@@ -778,7 +778,7 @@ la:
   tutorial_codehspython_name: "Programa en Python con CodeHS"
   tutorial_codehsjava_name: "Programación en Java con CodeHS"
   tutorial_techioda_name: "Caminos más cortos con el algoritmo de Dijkstra"
-  tutorial_grokmonster_name: "¡Creador de monstruos!"
+  tutorial_grokmonster_name: "Creador de monstruos!"
   tutorial_techmjs_name: "Aceptar JavaScript moderno - ES6 y más allá"
   tutorial_techga_name: "Algoritmos genéticos"
   tutorial_techioan_name: "Evitar anti patrones nulos"
@@ -873,7 +873,7 @@ la:
   tutorial_accai_name: "Exploración del planeta con Inteligencia Artificial"
   tutorial_vceclipse_name: "Programa el Eclipse"
   tutorial_pmzero_name: "Pac-Man ZERO"
-  tutorial_hsela_name: "Contarndo historias: ELA + programación"
+  tutorial_hsela_name: "Contando historias: ELA + programación"
   tutorial_ticklear_name: "¿Qué es AR?"
   tutorial_bcrobot_name: "BlocksCAD Robot"
   tutorial_bcsnow_name: "BlocksCAD Copo de nieve"
@@ -1311,7 +1311,7 @@ la:
   tutorial_accai_shortdescription: "¡Enséñale a un robot de Inteligencia Artificial a explorar un nuevo planeta!"
   tutorial_vceclipse_shortdescription: "¡Programa una simulación de eclipse solar con JavaScript!"
   tutorial_pmzero_shortdescription: "Crea y programa un Pac-Man Maze World en 3D"
-  tutorial_hsela_shortdescription: "Contarndo historias: ELA + programación"
+  tutorial_hsela_shortdescription: "Contando historias: ELA + programación"
   tutorial_ticklear_shortdescription: "Cualquiera puede ahora codificar personajes virtuales y AR y programar dispositivos reales para interactuar con ellos: ¡mezclando a la perfección la imaginación y la realidad en una sola experiencia!"
   tutorial_bcrobot_shortdescription: "Con solo dos bloques, los estudiantes pueden diseñar, crear y pensar en 3D. Pueden construir su propio robot, mientras aprenden conceptos básicos de matemática y pensamiento computacional."
   tutorial_bcsnow_shortdescription: "¡Los estudiantes usarán BlocksCAD para pensar, diseñar y crear en 3D!"
@@ -2986,11 +2986,11 @@ la:
   tutorial_gpbcatapult_string_platforms: "Todos los navegadores modernos"
   tutorial_quorumastro_string_platforms: "Todos los navegadores modernos, tablets Android, iPad, teléfonos Windows, teléfonos Android, iPhone"
   tutorial_alicewonder_string_platforms: "Todos los navegadores modernos"
-  tutorial_rginter_string_platforms: "Chrome, Firefox, tablet Android"
+  tutorial_rginter_string_platforms: "Chrome, Firefox, tableta Android"
   tutorial_bloxmobscience_string_platforms: "Todos los navegadores modernos"
   tutorial_cssgrid_string_platforms: "Todos los navegadores modernos"
   tutorial_bloxmobdesign_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Safari"
-  tutorial_jshero_string_platforms: "Todos los navegadores modernos, tablets Android, teléfonos Android"
+  tutorial_jshero_string_platforms: "Todos los navegadores modernos, tabletas Android, teléfonos Android"
   tutorial_codemojipy_string_platforms: "iPad, iPhone"
   tutorial_bloxmobcomp_string_platforms: "Todos los navegadores modernos"
   tutorial_nclabdrone_string_platforms: "Todos los navegadores modernos"
@@ -3000,7 +3000,7 @@ la:
   tutorial_techcpp_string_platforms: "Todos los navegadores modernos, tablets Android, iPad, teléfonos Windows, teléfonos Android, iPhone"
   tutorial_beetik_string_platforms: "Chrome, Firefox, Android tablet, iPad"
   tutorial_codedj_string_platforms: "Chrome, Firefox, Safari, Android tablet, iPad"
-  tutorial_rgadvan_string_platforms: "Chrome, Firefox, tablet Android"
+  tutorial_rgadvan_string_platforms: "Chrome, Firefox, tableta Android"
   tutorial_codehsrn_string_platforms: "Chrome, Firefox, Safari, teléfono Android, iPhone"
   tutorial_codehswd_string_platforms: "Chrome, Firefox, Safari"
   tutorial_turtlerobot_string_platforms: "Chrome, tablet Android, iPad, teléfono Android, iPhone"
@@ -3047,7 +3047,7 @@ la:
   tutorial_woncollect_string_platforms: "iPads, iPhones, tablets Android, teléfonos Android, Dash robot"
   tutorial_wonsecret_string_platforms: "iPads, iPhones, tablets Android, teléfonos Android, Cue robot"
   tutorial_hsscience_string_platforms: "iPad, iPhone"
-  tutorial_popculture_string_platforms: "Todos los navegadores modernos, tablets Android, teléfonos Android"
+  tutorial_popculture_string_platforms: "Todos los navegadores modernos, tabletas Android, teléfonos Android"
   tutorial_legorobust_string_platforms: "Todos los navegadores modernos, tablets Android, iPad, WeDo 2.0"
   tutorial_legoplants_string_platforms: "Todos los navegadores modernos, tablets Android, iPad, WeDo 2.0"
   tutorial_legopark_string_platforms: "Todos los navegadores modernos, tablets Android, iPad, MINDSTORMS® EV3"
@@ -3748,7 +3748,7 @@ la:
   tutorial_scratch_string_detail_programming_languages: "Independiente del idioma"
   tutorial_bayes_string_detail_programming_languages: "Bloques"
   tutorial_gumball_string_detail_programming_languages: "no mostrar"
-  tutorial_hrm_string_detail_programming_languages: "Assembly"
+  tutorial_hrm_string_detail_programming_languages: "Ensamblador"
   tutorial_ice-age_string_detail_programming_languages: "no mostrar"
   tutorial_koapp_string_detail_programming_languages: "no mostrar"
   tutorial_lightbot-intl_string_detail_programming_languages: "Bloques"
@@ -3995,8 +3995,8 @@ la:
   teacher: "Profesor"
   administrator: "Administrador"
   parent: "Padres"
-  volunteer_or_advocate: "Voluntario/Defensor de la comunidad"
-  other: "Otros"
+  volunteer_or_advocate: "Voluntario/Defensor comunitario"
+  other: "Otro"
   other_describe: "Otros (por favor explica debajo) "
   none: "Ninguno"
   some: "Algunos"

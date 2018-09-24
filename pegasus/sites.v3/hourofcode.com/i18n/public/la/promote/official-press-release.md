@@ -7,25 +7,25 @@ nav: promote_nav
 
 # Muestra del comunicado a la prensa para los funcionarios electos
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+### Utiliza este ejemplo del lenguaje para comunicado de prensa como ayuda para elaborar el mensaje sobre la participación en la Hora del Código.
 
 ---
 
-#### For Immediate Release  
+#### Para publiación inmediata  
 
 
 #### [DATE]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Contacto: [CONTACT INFORMATION]
 
 <br />
 
-**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+**Gobierno/Senador/Miebro de Asamble/Representante/Alcalde/Miembro del Consejo [INSERTE NOMBRE] participó en la Hora del Código con estudiantes locales** <br />
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+La comunidad se une para tomar conciencia sobre la importancia de la educación de las ciencias de la computación participando en la semana de la educación de la ciencia de computación <br /> <br />
 
-**FECHA** - [**INSERTE NOMBRE**] se unió a los directores y miembros de la Facultad de[**INSERTE NOMBRE DE LA ESCUELA**], líderes empresariales y familias locales hoy en [**NOMBRE DEL EVENTO**] para participar en la Hora de Código como parte de la Semana Educativa de Ciencias de Computación . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
+**FECHA** - [**INSERTE NOMBRE**] se unió a los directores y miembros de la Facultad de[**INSERTE NOMBRE DE LA ESCUELA**], líderes empresariales y familias locales hoy en [**NOMBRE DEL EVENTO**] para participar en la Hora de Código como parte de la Semana Educativa de Ciencias de Computación . **INSERTE NOMBRE** y los miembros de la comunidad se unieron a decenas de millones de personas alrededor del mundo que forman parte del evento educativo más grande en la historia. <br />
 
 [**INSERTE DETALLES DEL EVENTO, USE LENGUAJE DESCRIPTIVO Y CUANTIFICABLE. POR EJEMPLO:**]  
 "La escuela primaria Daniels Run celebró en toda la escuela un evento de la Hora de Código para exponer a sus estudiantes a las Ciencias de la Computación. Más de 700 estudiantes de todos los grados hicieron al menos una Hora del Código. Una docena de padres y voluntarios de la comunidad ayudaron durante el día y reunieron a los niños para una demostración de por qué ciencias de la computación es importante en la vida de estos estudiantes" <br />

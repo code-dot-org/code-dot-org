@@ -1,15 +1,15 @@
 ---
-title: <%= hoc_s(:title_op_ed) %>
+title: <%= hoc_s(:title_op_ed).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Write an op-ed in support of Computer Science Education Week
+# Escribe un artículo de opinión que apoye a la semana de la educación de ciencias de la computación
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### Abajo está un ejemplo de un artículo de opinión que apoya la semana por la educación de la ciencia de la computación -y sus metas- que puede ser utilizado por legisladores estatales y locales, líderes de negocio, y otros.
 
-### Visit [advocacy.code.org](%= resolve_url('https://advocacy.code.org') %) to find state specific information about computer science.
+### Visita [advocacy.code.org](%= resolve_url('https://advocacy.code.org') %) para encontrar información específica del estado sobre la ciencia de la computación.
 
 * * *
 

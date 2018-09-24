@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_parents) %>
+title: <%= hoc_s(:title_how_to_parents).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -23,7 +23,7 @@ Ofrecemos una gran variedad de tutoriales divertidos, de una hora de duración, 
 
 ## 3) Planifique lo que necesita de tecnología
 
-La mejor experiencia de Hora de Código será con computadoras conectadas a Internet. Pero usted **no** necesita una computadora. Hay muchas actividades que son "desconectadas" y se pueden hacer sin ninguna tecnología en absoluto. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+La mejor experiencia de Hora de Código será con computadoras conectadas a Internet. Pero usted **no** necesita una computadora. Hay muchas actividades que son "desconectadas" y se pueden hacer sin ninguna tecnología en absoluto. Prueba los tutoriales en tu computadora o dispositivo. Asegúrate que funcionan correctamente en navegadores con sonido y video.
 
 **¿Quiere aprender junto a su hijo?** Pruebe [la programación por parejas.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) La Informática es social y colaborativa.
 
