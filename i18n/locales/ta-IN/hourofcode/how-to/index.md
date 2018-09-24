@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -84,7 +84,7 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 [/col-33]
 
 - [Print certificates](%= codeorg_url('/certificates')%) for your students.
-- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](%= fix_url('/promote/resources#stickers') %)
+- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](%= resolve_url('/promote/resources#stickers') %)
 - உங்கள் பள்ளிக்காக  தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும்.</li> 
     
     - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</ul> 

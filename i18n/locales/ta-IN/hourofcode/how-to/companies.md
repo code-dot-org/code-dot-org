@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_companies) %>
+title: <%= hoc_s(:title_how_to_companies).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -36,7 +36,7 @@ For more instructions on encouraging employees and connecting your employees wit
 
 ## 3. Choose an activity
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](%= fix_url('learn') %)
+We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](%= resolve_url('/learn') %)
 
 **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 

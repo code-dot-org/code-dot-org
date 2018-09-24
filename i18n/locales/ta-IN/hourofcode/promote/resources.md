@@ -1,6 +1,6 @@
 ---
-title: '& lt;% = hoc_s (: title_resources)% & gt;'
-layout: பரந்த
+title: <%= hoc_s(:title_resources).inspect %>
+layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
