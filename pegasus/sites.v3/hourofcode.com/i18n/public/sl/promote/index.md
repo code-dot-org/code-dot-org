@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_promote) %>
+title: <%= hoc_s(:title_how_to_promote).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -16,7 +16,7 @@ nav: promote_nav
 
 ## 1. Razširite glas
 
-Tell your friends about the **#HourOfCode**!
+Povejte svojim prijateljem **#HourOfCode #UraZaKodo**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

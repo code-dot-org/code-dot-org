@@ -1,16 +1,20 @@
 ---
-title: <%= hoc_s(:title_how_to_events) %>
+title: <%= hoc_s(:title_how_to_events).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Cum sa organizezi un eveniment Hour of Code
+# How to organize an Hour of Code assembly or event
+
+### Get your entire school or community involved in an Hour of Code!
+
+---
 
 ## 1. Pregătiți-vă pentru eveniment
 
 - Stabiliți un loc, o dată şi o oră.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Invită mass-media şi presa locală, ziaristi sau bloggeri tech/educatie. Pentru ajutor, vedeti [kit-ul de presă](<%= resolve_url('/promote/press-kit') %>).
 
 ## 2. În timpul evenimentului dumneavoastră
@@ -19,7 +23,7 @@ nav: how_to_nav
 - Formulati o introducere despre importanta studiului tehnologiei computerelor si programare folosind aceste [statistici si infografice](<%= resolve_url('/promote/stats') %>).   
       
     
-- Alte idei de eveniment: 
+- **Other event ideas**: 
     - Invitați un lider din industria locală, pentru a discuta despre felul în care informatica îl sau o ajută în munca sa.
     - Invitați un politician local şi lăsați elevii să-l sau să o înveţe cum să programeze.
     - Desemnați un grup de elevi care sa susțină demonstrativ o activitate fără calculator.
@@ -28,30 +32,31 @@ nav: how_to_nav
 
 ## 3. Împărtășiți cum a decurs evenimentul
 
-- Distribuie fotografii ale evenimentului tau pe Facebook si Twitter. 
-- Folosiți eticheta **#HourOfCode**
+Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+
+---
 
 ## Găzduiți o Noapte de Programare în Familie cu Ora de Cod și invitați părinții să participe
 
-Considerați găzduirea unui eveniment de seară de clasa a 5-a și invitați părinții să se alăture elevilor lor pentru o oră de informatică. Aceasta este o modalitate foarte buna de a implica o comunitate mai mare și de a încuraja părinții să susțină informatica în școala dumneavoastră. Partenerii noștri la Noaptea de Cod în Familie au creat un kit al evenimentului ce cuprinde listele de planificare, script-uk prezentatorului, email-uri invitație, postere, prezentări PowerPoint și altele, pentru a rula propriul eveniment. [ click aici pentru a descărca Kit-ul de eveniment](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## Exemplu de plan pentru eveniment
+---
 
-**Eveniment:** Saptamana Informaticii in Educatie, program desfasurat la nivelul intregii scoli
+## Example plan for a school assembly or event
+
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**Desfasurare:** In timpul zilelor de scoala. Evenimentele organizate dimineata sunt preferate. Desfasurarea dureaza aproximativ o ora.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Locatie:** O sala din scoala(de exemplu amfiteatrul, sala de sport, sala de mese)   
-  
-
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
 ## Desfasurarea evenimentului
 
 | Orar           | Activitati                                                                                                                                                                                    |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 am | Incepeti cu unul dintre [videoclipurile motivationale](<%= resolve_url('/promote/resources#videos') %>)                                                                                         |
+| 10:00-10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).                                                                                                   |
 | 10:05-10:15 am | Directorul începe cu o introducere în care se subliniază importanța programării și tehnologiei computerelor. Folosiți aceste [statistici și infografice](<%= resolve_url('/promote/stats') %>). |
 | 10:15-10:30 am | Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.                                                                          |
 | 10:30-10:40 am | Elevii vor desfășura o activitate demonstrativă în cadrul Orei de Programare pentru școală. Întorsătura amuzantă - ei trebuie să îi predea directorului, politicienilor sau altor elevi!      |

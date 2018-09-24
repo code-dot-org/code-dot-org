@@ -50,6 +50,7 @@
     "validation_code": "if (World.frameCount > 50) {\r\n  if (!World.hasOwnProperty('background_color') || World.background_color == \"white\") {\r\n    levelSuccess(3);\r\n  } else {\r\n  \tlevelSuccess(0);\r\n  }\r\n}",
     "project_template_level_name": "Fish Tank Template",
     "instructions": "Use the `set background color` block to make the background blue.",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

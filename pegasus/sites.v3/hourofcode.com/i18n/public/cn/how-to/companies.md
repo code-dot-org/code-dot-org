@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_companies) %>
+title: <%= hoc_s(:title_how_to_companies).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,125 +7,93 @@ nav: how_to_nav
 
 # 如何将编程一小时带到您的公司
 
-## 激发学生和志愿者服务编程一小时活动
+### Find out how you and your employees can inspire students to try computer science!
 
-Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+---
 
-- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
-- 请参阅[公司合作伙伴指南](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>)来了解如何鼓励员工参与、如何快速融入课堂的有关信息。
+## Connect with local classrooms and volunteer for the Hour of Code
 
-## 其他一些公司可以支持编程一小时活动的方式：
+Code.org 可以为你的员工提供一些与当地参与编程一小时活动、且可以分享自己教学经验和如何激励学生学习计算机科学的[教学机构](<%= codeorg_url('/volunteer') %>)对接的机会。
 
-- 请你的CEO[发送一封全体电邮](<%= resolve_url('/promote/resources#sample-emails') %>)强调计算机科学的重要性，并鼓励员工去传播这个信息。
-- 与同事一起尝试使用[教程](<%= resolve_url('/learn') %>)开展快乐的编程一小时活动。
-- 在您公司的办公地为当地的学生或公益伙伴举办编程一小时活动。请参阅以下的操作指南。
+<button>Sign up to volunteer!</button> <br /> <br /></p> 
+
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
+
+## Additional ways companies can support the Hour of Code
+
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
+- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 # 如何和学生一起来举办编程一小时的活动
 
 ## 1. 推广你的编程一小时活动
 
-- 推广你的[编程一小时](<%= resolve_url('/promote') %>)活动，并鼓励他人举办。
-- 鼓励您公司的软件工程师参观当地课堂，以便帮助引导他们开展编程一小时，并鼓励学生们学习计算机科学。 They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
+- Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. 观看视频指导 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. 选择一个活动
 
-我们通过各种各样的合作者为所有年龄的参与者举办一场[丰富多彩的一小时活动](<%= resolve_url('/learn') %>)。 [点击这里试一试！](<%= resolve_url('/learn') %>)
+We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [点击这里试一试！](<%= resolve_url('/learn') %>)
 
-**编程一小时活动**不需要很多的提前准备时间。参加者可以依照自己的节奏和技能水平进行自我学习。
+**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4. 您所需的教学设备——电脑不是必需的
 
-要获得编程一小时活动的最佳体验，需要一台联网的电脑。 但是你**不一定需要电脑**才能做参与活动，没有电脑也可以参与编程一小时活动。
+要获得编程一小时活动的最佳体验，需要一台联网的电脑。 But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**提前准备！**在开始前做下面的工作：
+**Plan Ahead!** Do the following before your event starts:
 
-- 在电脑或设备上进行教程测试。确保课程能够在浏览器里正常使用，并能播放视频和声音。
-- 如果选择的课程需要很好的音响效果，提供耳机给参加者或者让他们自带。
-- **电脑不够？**采取[搭档合作编程](https://www.youtube.com/watch?v=vgkahOzFH2Q)的方式。 搭档合作可以让参与者互相帮助，减少对组织者的依赖。 他们将明白编程也是一种社交和协作。
-- 担心**频带宽度太低？**，在活动开始前先播视频，这样参加者不会现场自行下载视频。或者可以选择线下不上网的活动。
-
-<img src="/images/fit-350/group_ipad.jpg" />
+- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+- **电脑不够？**采取[搭档合作编程](https://www.youtube.com/watch?v=vgkahOzFH2Q)的方式。 When participants partner up, they help each other and rely less on the organizer. 他们将明白编程也是一种社交和协作。
+- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 ## 播放一段激励人心的视频来开始你的编程一小时。
 
-讨论计算机科学对我们生活的各个方面的影响，鼓舞参与者，启动编程一小时活动 分享更多关于那些激励你探索计算机科学和你在公司的角色。
+讨论计算机科学对我们生活的各个方面的影响，鼓舞参与者，启动编程一小时活动 Share more about what inspired you to pursue computer science and your role at your company.
 
 **播放鼓舞人心的视频：**
 
 - Code.org 推出比尔·盖茨，马克·扎克伯格，NBA球星克里斯·波什为主演的视频（它们的长度分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)，和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)。）
 - [全球 编程一小时活动 视频 ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [总统奥巴马号召所有学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
-- 从[这里](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)寻找更多的励志视频。
+- 更多励志的视频可以[ 点此查看](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 
-**介绍给学生编程一小时活动的建议。**
+**Ideas to introduce your Hour of Code activity to students:**
 
-- 用一些男孩子们和女孩子们都关心的问题来解释科技对我们生活的影响——拯救生命，帮助人类，与他人交流。
-- 如果您所在的是一家科技公司，可以演示您公司的有趣的， 创新的产品。
-- 如果您不是一家科技公司，可以讨论您公司是如何使用技术来解决问题和完成目标的。
-- 邀请您公司的软件工程师谈谈为什么他们决定学习计算机科学以及他们目前从事的项目。
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
+- If you are a tech company, demo fun, innovative products your company is working on.
+- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- 帮助女孩对计算机科学感兴趣的小贴士见[这里](<%= codeorg_url('/girls') %>)。
 
 ## 6. 编程！
 
 **在活动中指导参与者**
 
-- 在白板上写下活动链接。你可以在[你选择的活动信息](<%= resolve_url('/learn') %>)参与人数的下方找到链接。
-- 对于年龄更小的学生，提前将活动页加载或将其保存为书签。
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](<%= resolve_url('/learn') %>) under the number of participants.
+- For younger students, load the activity page ahead of time or save it as a bookmark.
 
-**当参与者遇到困难时，你可以使用的回答：**
+**When participants come across difficulties it's okay to respond:**
 
 - "我也不知道。让我们一起来找到问题的答案吧"。
-- “科学技术并不总是同我们期望的方式一样工作。”
 - “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；你不会马上就说得很流利。”
 
 **如果某些学生完成得比较快可以怎样做？**
 
-- 他们可以尝试 hourofcode.com/learn 中的另一个编程一小时活动
-- 或者请他们帮助在编程一小时活动中遇到困难的朋友。
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+- They can try another Hour of Code activity at hourofcode.com/learn.
+- Or, ask them to help a friend who are having trouble with the activity.
 
 ## 7) 庆祝
 
 - [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
-- [打印"我完成了编程一小时 ！"](<%= resolve_url('/promote/resources#stickers') %>)贴纸。
-- 为您的员工[预订定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
+- [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
-
-[col-33]
-
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 <%= view :signup_button %>
