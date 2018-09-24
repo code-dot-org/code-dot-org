@@ -182,63 +182,6 @@ GameLabP5.prototype.startExecution = function (dancelab) {
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
-      // Overload _draw function to make it two-phase
-      p5obj._draw = function () {
-        /*
-         * Copied code from p5 _draw()
-         */
-        this._thisFrameTime = window.performance.now();
-        var time_since_last = this._thisFrameTime - this._lastFrameTime;
-        var target_time_between_frames = 1000 / this._targetFrameRate;
-
-        // only draw if we really need to; don't overextend the browser.
-        // draw if we're within 5ms of when our next frame should paint
-        // (this will prevent us from giving up opportunities to draw
-        // again when it's really about time for us to do so). fixes an
-        // issue where the frameRate is too low if our refresh loop isn't
-        // in sync with the browser. note that we have to draw once even
-        // if looping is off, so we bypass the time delay if that
-        // is the case.
-        var epsilon = 5;
-        if (!this._loop ||
-            time_since_last >= target_time_between_frames - epsilon) {
-
-          //mandatory update values(matrixs and stack) for 3d
-          if (this._renderer.isP3D) {
-            this._renderer._update();
-          }
-
-          this._setProperty('frameCount', this.frameCount + 1);
-          this.redraw();
-          this._updateMouseCoords();
-          this._updateTouchCoords();
-        } else {
-          this._drawEpilogue();
-        }
-      }.bind(p5obj);
-
-      p5obj.afterRedraw = function () {
-        /*
-         * Copied code from p5 _draw()
-         */
-        this._frameRate = 1000.0/(this._thisFrameTime - this._lastFrameTime);
-        this._lastFrameTime = this._thisFrameTime;
-
-        this._drawEpilogue();
-      }.bind(p5obj);
-
-      p5obj._drawEpilogue = function () {
-        /*
-         * Copied code from p5 _draw()
-         */
-
-        // get notified the next time the browser gives us
-        // an opportunity to draw.
-        if (this._loop) {
-          this._requestAnimId = window.requestAnimationFrame(this._draw);
-        }
-      }.bind(p5obj);
-
       // Overload _setup function to make it two-phase
       p5obj._setup = function () {
         /*
@@ -447,18 +390,8 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
       }
     },
     { instance: window.p5 },
-    { instance: this.p5.Camera },
     { instance: this.p5.Animation },
     { instance: this.p5.SpriteSheet },
-    { instance: window.p5.Vector },
-    { instance: window.p5.Color },
-    { instance: window.p5.Image },
-    { instance: window.p5.Renderer },
-    { instance: window.p5.Graphics },
-    { instance: window.p5.Font },
-    { instance: window.p5.Table },
-    { instance: window.p5.TableRow },
-    // TODO: Maybe add collider types here?
   ];
 };
 
@@ -531,7 +464,6 @@ GameLabP5.prototype.debugSprites = function (debugSprites) {
 
 GameLabP5.prototype.afterDrawComplete = function () {
   this.p5.afterUserDraw();
-  this.p5.afterRedraw();
 };
 
 /**
