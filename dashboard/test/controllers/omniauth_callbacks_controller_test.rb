@@ -680,6 +680,33 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal uid, attributes['uid']
   end
 
+  test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration' do
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '', # Google doesn't provider user_type
+      refresh_token: 'fake-refresh-token'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_redirected_to 'http://test.host/users/sign_up'
+    assert_equal auth[:credentials][:token], CDO.shared_cache.read("oauth_token-#{auth[:info][:email]}")
+    assert_equal auth[:credentials][:refresh_token], CDO.shared_cache.read("oauth_refresh_token-#{auth[:info][:email]}")
+
+    # Oh no! This is broken - we don't persist the expiration
+    # during a multi-step sign-up.
+    # attributes = session['devise.user_attributes']
+    # assert_equal auth[:credentials][:expires_at], attributes['oauth_token_expiration']
+  end
+
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
