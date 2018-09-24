@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
 ---
