@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -23,65 +23,32 @@ social:
 
     twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%> 感謝ozobot，德克斯特行業，littleBits和奇幻工房的慷慨相助，超過100多間教室將被選定為他們的班級得到機器人或電路！ 為了有資格獲得一套, 請務必完成從 Code.org 發送後的《編程一小時》的調查。 Code.org 將選擇獲獎的教室。 同時檢查一部分機器人和電子設備的活動。 請注意，這只對美國的學校開放。
-</p>
+%> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<p>
-  <br /> <strong>在《編程一小時》項目運行期間。我們將在新的課程和其它令人興奮的更新推出時與您聯繫。您現在可以做些什麼呢？ </strong>
-</p>
+## 1. 在您的學校和社區傳播這則信息
 
-<h2>
-  1. 在您的學校和社區傳播這則信息
-</h2>
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<p>
-  告訴您的朋友們您剛剛加入了<strong>編程一小時的活動</strong>的相關信息。
-</p>
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 你不必在學校學習新的技能。 Invite a local politician or policy maker to visit your school for the Hour of Code. 它能為你在你領域的計算機科學找到一小時之外的支持。
 
-<p>
-  <%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> 鼓勵他人與我們的示例電子郵件一起參與<a href="%= resolve_url('/promote/resources#sample-emails')%">. </a>聯繫您的校長, 挑戰您學校的每一個教室來註冊。 招募當地團體---男孩/女孩童子軍俱樂部, 教會, 大學, 退伍軍人團體, 工會, 甚至一些朋友。 你不必在學校學習新的技能。 邀請當地的政治家或者決策者來參觀您們學校的《編程一小時》活動。 它能為你在你領域的計算機科學找到一小時之外的支持。
-</p>
+為你的活動使用這些[海報、 橫幅、 貼紙、 視頻以及更多](<%= resolve_url('/promote/resources') %>)。
 
-<p>
-  為你的活動使用這些<a href="%= resolve_url('/promote/resources') %">海報、 橫幅、 貼紙、 視頻以及更多</a>。
-</p>
+## 2. 尋找當地的志工來協助活動。
 
-<h2>
-  2. 尋找當地的志工來協助活動。
-</h2>
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-<p>
-  <a href="%= codeorg_url('/volunteer/local') %">Search our volunteer map</a> for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
-</p>
+## 3. 計劃您的《編程一小時》
 
-<h2>
-  3. 計劃您的《編程一小時》
-</h2>
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
-<p>
-  為您的課堂選擇一項<a href="https://hourofcode.com/learn">《編程一小時》活動</a>並<a href="%= resolve_url('/how-to') %">查看基本指南</a>。
-</p>
+# 《編程一小時》以外的更多內容
 
-<h1>
-  《編程一小時》以外的更多內容
-</h1>
+<% if @country == 'us' %> 《編程一小時》只是一個開始。 Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-<p>
-  <% if @country == 'us' %> 《編程一小時》只是一個開始。 無論您是管理者、老師還是倡導者，我們都有<a href="https://code.org/yourschool">專業開發、課程以及一些其它資源來幫助您將計算機科學課堂帶入您的學校或者推廣您的宣傳。 </a>如果您已經從事計算機科學教育，在CS教育週期間使用這些資源來爭取您的政府、家長和社區的支持。
-</p>
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-<p>
-  您有很多選擇適合您的學校。 大多數的組織提供《編程一小時》教程也提供有課程和專業發展。 如果您發現一個您喜歡的課程，去了解更多。 為了幫助您入門, 我們重點介紹了一些 <a href="https://hourofcode.com/beyond"> 課程提供商將幫助您或您的學生超過一小時. </a>
-</p>
+<% else %> 《編程一小時》只是一個開始。 Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-<p>
-  <% else %> 《編程一小時》只是一個開始。 大多數提供《編程一小時》課程的組織也有更多的課程可供進一步學習。 為了幫助您入門, 我們重點介紹了一些 <a href="https://hourofcode.com/beyond"> 課程提供商將幫助您或您的學生超過一小時. </a>
-</p>
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
-<p>
-  Code.org 還提供完整的<a href="https://code.org/educate/curriculum/cs-fundamentals-international"> 計算機科學入門課程</a>, 免費為您或您的學校翻譯成超過25種的語言。 <% end %>
-</p>
-
-<p>
-  <%= view 'popup_window.js' %>
-</p>
+<%= view 'popup_window.js' %>
