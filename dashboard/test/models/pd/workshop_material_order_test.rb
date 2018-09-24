@@ -37,6 +37,7 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   setup do
     @fake_geocoder_response = [
       OpenStruct.new(
+        city: 'Seattle',
         postal_code: '98101',
         state_code: 'WA',
         street_number: '1501'
@@ -153,6 +154,14 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     order = build :pd_workshop_material_order, street: "i don't exist"
     refute order.valid?
     assert_equal ['Address could not be verified. Please double-check.'], order.errors.full_messages
+  end
+
+  test 'address validation fails for incorrect city' do
+    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Downtown Seattle, WA, 98101').returns(@fake_geocoder_response)
+
+    order = build :pd_workshop_material_order, city: 'Downtown Seattle'
+    refute order.valid?
+    assert_equal ["City doesn't match the address. Did you mean Seattle?"], order.errors.full_messages
   end
 
   test 'address validation fails for incorrect zip code' do
