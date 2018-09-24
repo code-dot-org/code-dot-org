@@ -51,7 +51,7 @@ module Pd::Application
         accepted_notified_by_partner
         accepted_no_cost_registration
         registration_sent
-        invoiced
+        paid
         withdrawn
       )
     end
