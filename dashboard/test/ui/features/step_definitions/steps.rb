@@ -837,22 +837,6 @@ And(/^I set the language cookie$/) do
   debug_cookies(@browser.manage.all_cookies)
 end
 
-And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
-  params = {
-    name: "pm",
-    value: cookie_value
-  }
-
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  @browser.manage.add_cookie params
-
-  debug_cookies(@browser.manage.all_cookies)
-end
-
 Given(/^I sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
