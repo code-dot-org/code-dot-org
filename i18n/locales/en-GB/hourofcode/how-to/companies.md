@@ -1,5 +1,5 @@
 ---
-title: 怎样把《编程一小时》带到你的公司
+title: <%= hoc_s(:title_how_to_companies).inspect %>
 layout: wide
 nav: how_to_nav
 ---
