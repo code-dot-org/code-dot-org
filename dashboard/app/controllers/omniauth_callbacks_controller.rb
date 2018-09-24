@@ -16,7 +16,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     user = find_user_by_credential
     if user
-      user.update_oauth_credential_tokens(auth_hash)
       sign_in_clever user
     else
       sign_up_clever
@@ -32,7 +31,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     user = find_user_by_credential
     if user
-      user.update_oauth_credential_tokens(auth_hash)
       sign_in_google_oauth2 user
     else
       sign_up_google_oauth2
@@ -165,6 +163,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_in_google_oauth2(user)
     prepare_locale_cookie user
+    user.update_oauth_credential_tokens auth_hash
 
     @user = user
     if allows_google_classroom_takeover user
@@ -200,6 +199,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_in_clever(user)
     prepare_locale_cookie user
+    user.update_oauth_credential_tokens auth_hash
     @user = user
     handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
   end
