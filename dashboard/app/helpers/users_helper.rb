@@ -336,7 +336,9 @@ module UsersHelper
       # Retrieve the level information for those embedded levels.  These results
       # won't necessarily match the order of level names as requested, but
       # fortunately we are just accumulating a count and don't mind the order.
-      Level.where(name: embedded_level_names).each do |embedded_level|
+      embedded_levels = Level.where(name: embedded_level_names).to_a
+      embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional}
+      embedded_levels.each do |embedded_level|
         level_id = embedded_level.id
 
         # Do we have a valid result for this level in the LevelGroup last_attempt?
@@ -350,7 +352,7 @@ module UsersHelper
       page_completed_value =
         if page_valid_result_count.zero?
           nil
-        elsif page_valid_result_count == page["levels"].length
+        elsif page_valid_result_count == embedded_levels.length
           ActivityConstants::FREE_PLAY_RESULT
         else
           ActivityConstants::UNSUBMITTED_RESULT
