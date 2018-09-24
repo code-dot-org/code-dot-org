@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -27,18 +27,13 @@ social:
 
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
-
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
-
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. あなたのまわりの学校やコミュニティに広めましょう
 
-あなたはHour of Code運動に参加したばかりです。ハッシュタグ**#HourOfCode**を使ってお友達に広めてください！
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> [サンプルメールで](<%= resolve_url('/promote/resources#sample-emails') %>)他の人に参加するよう勧めてください。校長先生に連絡してあなたの学校のすべてのクラスがサインアップするようお願いしてみましょう。 ボーイ/ガールスカウトクラブ、教会、大学、退役軍人のグループ、労働組合やお友達など地域のグループに声を掛けます。 新しいスキルを学ぶ場所は必ずしも学校である必要はありません。 地元の政治家や政策立案者を、Hour of Codeのためにあなたの学校を訪れるよう招待してください。 この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 新しいスキルを学ぶ場所は、必ずしも学校である必要はありません。 Invite a local politician or policy maker to visit your school for the Hour of Code. この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
 
 [これらのポスターやバナー、ステッカーやビデオ](<%= resolve_url('/promote/resources') %>)をイベントで利用しましょう。
 
