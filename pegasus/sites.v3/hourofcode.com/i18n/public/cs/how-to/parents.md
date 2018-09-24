@@ -42,7 +42,7 @@ Je to v pořádku, pokud vy a vaše dítě jste noví v informatice. Zde jsou n�
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Dejte dohromady seznam věcí používající kód v každodenním životě.
-- Podívejte se na několik tipů, jak [zaujmout dívky informatikou](http://<%= codeorg_url('/girls') %>).
+- Podívejte se na několik tipů, jak [zaujmout dívky informatikou](<%= codeorg_url('/girls') %>).
 
 Chcete další nápady? Podívejte se na naše [šablony hodiny](/files/AfterschoolEducatorLessonPlanOutline.docx) pro tipy a zkušenosti.
 
