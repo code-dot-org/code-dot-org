@@ -937,7 +937,20 @@ es-MX:
       Course 4 Play Lab Params 4_markdown_instruction: "Aquí hay una función denominada \"patrulla\". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles."
       Course 4 Play Lab Params 8_markdown_instruction: Use un bloque "cuando el actor toque" para enviar al Perro de regreso al lado superior izquierdo SOLAMENTE si el Perro toca a alguno de los otros actores.
       Course 4 Play Lab Vars 2_markdown_instruction: '¡Esa carrera en ese último problema no fue justa! Cambie la variable de "velocidad_perro" para asegurarse de que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!'
-      Course 4 Play Lab Vars 6_markdown_instruction: "<h5><b>\\r\nEn nuestro juego, ¿Cómo deberíamos marcar los puntos? \\r\n</b></h5> \\r\n<br/>\\r\n\\r\n1. Agrega 1 a tu variable `puntos` cada vez que el perro golpee al gato un un trozo de torta.  <br/>    <br/> \\r\n2. Usa el evento `cuando el actor 2 toque cualquier cosa` para gatillar una actualización a tu puntaje. Puedes incrementar tu variable estableciendo `puntos= punto + 1.`  <br/>   <br/> \\r\n3. Llega a un puntaje de 10 para pasar de nivel.\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**Nota:** ¡Usa la flecha derecha para lanzar torta!\\r\n</h4>"
+      Course 4 Play Lab Vars 6_markdown_instruction: |-
+        <h5><b>\r
+        En nuestro juego, ¿Cómo deberíamos marcar los puntos? \r
+        </b></h5> \r
+        <br/>\r
+        \r
+        1. Agrega 1 a tu variable `puntos` cada vez que el perro golpee al gato un un trozo de torta.  <br/>    <br/> \r
+        2. Usa el evento `cuando el actor 2 toque cualquier cosa` para gatillar una actualización a tu puntaje. Puedes incrementar tu variable estableciendo `puntos= punto + 1.`  <br/>   <br/> \r
+        3. Llega a un puntaje de 10 para pasar de nivel.\r
+        \r
+        <br/><br/>\r
+        <h4>\r
+        **Nota:** ¡Usa la flecha derecha para lanzar torta!\r
+        </h4>
       Course 4 Play Lab Vars 9_markdown_instruction: "¡Momento de juego gratis! Aquí están todas las variables con las  que hemos jugado hasta ahora, así como unas pocas más en caso que las quieras. \\r\n\\r\n¡Observa ahora que hay tantos bloques en nuestra caja de herramientas que necesitan ser organizadas Aquí hemos puesto cada pieza en una categoría apropiada. Tómate un tiempo para explorar todo lo que hay disponible. Cuando hayas terminado de navegar, haz un juego o historia usando repeticiones, variables y eventos.  \\r\n\\r\n*Sugerencia: desplázate hacia abajo para ver todos los comandos en el espacio de trabajo.*"
       Course 4 Play Labs For Loops 1_markdown_instruction: Vamos a hacer que el perro diga todos los números desde el 1 hasta el 100. Usa un ciclo y un bloque contador para decir la variable contador cada vez que se ejecute el ciclo.
       Course 4 Playlab For Loops 5b_markdown_instruction: Ajusta el intervalo de los bucles 'for' para que ambos personajes terminen exactamente en el mismo lugar.
