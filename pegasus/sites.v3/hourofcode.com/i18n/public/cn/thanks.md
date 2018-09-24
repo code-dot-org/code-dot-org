@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 
@@ -44,7 +44,7 @@ social:
 
 ## 2. 找当地的志愿者来帮助你的活动
 
-[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[搜索我们的志愿者分布图](<%= codeorg_url('/volunteer/local') %>) 志愿者可以到访您的教室或者通过远程视频聊天来激发你的学生了解计算机科学所能带来的广泛可能性。
 
 ## 3. 计划您的《编程一小时》
 
