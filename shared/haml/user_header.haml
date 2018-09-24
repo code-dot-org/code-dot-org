@@ -1,34 +1,61 @@
 -# Locals: current_user, loc_prefix, [session_pairings]
+- show_updated_header = request.cookies['pm'] == 'create_header_2018'
 - if current_user
-  .header_button.header_user.user_menu
-    - if current_user.can_pair? && session_pairings.present?
-      %i.fa.fa-users
-      %span= I18n.t("#{loc_prefix}label", username: I18n.t("#{loc_prefix}team"))
-    - else
-      - short_name = ERB::Util.h(current_user.short_name)
-      %span.user_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}label", username: short_name)
-    &nbsp;
-    %i.user_menu_arrow_down{class: "fa fa-caret-down"}
-    %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
-    .user_options{style: 'display: none'}
-      - if current_user.can_pair?
-        - if session_pairings.present?
-          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-            %i.fa.fa-user-plus
-            = I18n.t("#{loc_prefix}pair_programming")
-            .pairing_summary
-              #{I18n.t("#{loc_prefix}driver")}:
-              = h(current_user.short_name)
-              - session_pairings.map do |id|
-                %br
-                #{I18n.t("#{loc_prefix}navigator")}:
-                = h(User.find(id).short_name)
-        - else
-          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-            %i.fa.fa-user-plus
-            = I18n.t("#{loc_prefix}pair_programming")
-      %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
-      %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
+  - if show_updated_header
+    .header_button.header_user.user_menu.user_icon
+      - if current_user.can_pair? && session_pairings.present?
+        %i.fa.fa-users
+      - else
+        %i.fa.fa-user
+      .user_options{style: 'display: none'}
+        - if current_user.can_pair?
+          - if session_pairings.present?
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+              .pairing_summary
+                #{I18n.t("#{loc_prefix}driver")}:
+                = h(current_user.short_name)
+                - session_pairings.map do |id|
+                  %br
+                  #{I18n.t("#{loc_prefix}navigator")}:
+                  = h(User.find(id).short_name)
+          - else
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+        %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
+        %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
+  - else
+    .header_button.header_user.user_menu
+      - if current_user.can_pair? && session_pairings.present?
+        %i.fa.fa-users
+        %span= I18n.t("#{loc_prefix}label", username: I18n.t("#{loc_prefix}team"))
+      - else
+        - short_name = ERB::Util.h(current_user.short_name)
+        %span.user_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}label", username: short_name)
+      &nbsp;
+      %i.user_menu_arrow_down{class: "fa fa-caret-down"}
+      %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+      .user_options{style: 'display: none'}
+        - if current_user.can_pair?
+          - if session_pairings.present?
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+              .pairing_summary
+                #{I18n.t("#{loc_prefix}driver")}:
+                = h(current_user.short_name)
+                - session_pairings.map do |id|
+                  %br
+                  #{I18n.t("#{loc_prefix}navigator")}:
+                  = h(User.find(id).short_name)
+          - else
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+        %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
+        %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
 - else
   %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
     .header_button.header_user

@@ -324,6 +324,11 @@ img.video_thumbnail {
     }
   }
 
+  .user_icon {
+    font-size: 25px;
+    border-width: 0;
+  }
+
   #sign_in_or_user {
     html[dir=rtl] & {
       padding-right: 20px;
@@ -353,6 +358,8 @@ img.video_thumbnail {
       position: absolute;
       top: 55px;
       right: 55px;
+      font-size: 14px;
+      line-height: 20px;
     }
 
     .user_menu_arrow_down,
