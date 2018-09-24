@@ -57,10 +57,8 @@
     ],
     "instructions": "What do you think will happen when you click on the alien?  ",
     "name_suffix": "_simple",
-    "encrypted_examples": [
-
-    ],
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "block_pool": "gamelab"
   },
   "published": true,
   "notes": "",
