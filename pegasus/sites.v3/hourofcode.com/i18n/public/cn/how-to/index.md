@@ -1,5 +1,5 @@
 ---
-title: 如何在课后兴趣班讲授编程一小时
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
