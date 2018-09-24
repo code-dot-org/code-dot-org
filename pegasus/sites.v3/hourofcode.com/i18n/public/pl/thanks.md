@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -26,11 +26,6 @@ social:
 %>
 
 # Dziękujemy za rejestrację jako organizator Godziny Kodowania!
-
-Dziękujemy za pomoc w umożliwieniu uczniom nauki informatyki. Chcielibyśmy dać wam zestaw profesjonalnych plakatów, pokazujących różne przykłady, do waszej klasy. Użyj kodu **FREEPOSTERS** przy kasie. (Uwaga: jest to wyłącznie dla dostępnych zapasów, należy pokryć koszty wysyłki. Ponieważ plakaty wysyłane są ze Stanów Zjednoczonych, koszty przesyłki mogą być wyższe niż do Kanady i na arenie międzynarodowej. Rozumiemy, że może to przewyższać twój budżet, dlatego zachęcamy do wydrukowania [pliki PDF](https://code.org/inspire) dla Twojej klasy.)  
-<br />[<button>Pobierz plakaty</button>](https://store.code.org/products/code-org-posters-set-of-12) Użyj kodu do pobrania darmowych plakatów
-
-<% if @country == 'us' %> Dzięki hojności Ozobot, Dexter Industries, littleBits, i Wonder Workshop, ponad 100 klas będzie wybranych do otrzymania zestawów robotów lub części dla swojej klasy! Aby mieć możliwość otrzymania zestawu, wypełnij ankietę na Code.org po Godzinie Kodowania. Code.org wylosuje zwycięzców. W międzyczasie, sprawdź niektóre działania robotyki i obwody. Pamiętaj, akcja ta jest dostępna tylko dla szkół w USA. <% end %>
 
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
