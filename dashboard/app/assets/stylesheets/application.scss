@@ -356,7 +356,7 @@ img.video_thumbnail {
       font-size: 30px;
     }
 
-    .user_options, {
+    .user_options {
       position: absolute;
       top: 55px;
       right: 55px;
@@ -373,7 +373,7 @@ img.video_thumbnail {
       width: 200px;
       a {
         color: $teal;
-        font-weight: 900;
+        font-family: $gotham-bold;
         height: 70px;
         width: 198px;
         float: left;
@@ -383,7 +383,7 @@ img.video_thumbnail {
       }
       a:hover {
         color: $teal;
-        font-weight: 900;
+        font-family: $gotham-bold;
         background-color: $white;
         cursor: pointer;
       }
