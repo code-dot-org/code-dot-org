@@ -508,6 +508,38 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.oauth_refresh_token, auth[:credentials][:refresh_token]
   end
 
+  test 'google_oauth2: updates tokens when migrated user is found by credentials' do
+    # Given I have a Google-Code.org account
+    user = create(:teacher,
+      :with_migrated_google_authentication_option,
+      uid: 'fake-uid'
+    )
+    assert user.migrated?
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: user.primary_contact_info.authentication_id,
+      token: 'new-token',
+      expires_at: 23456,
+      refresh_token: 'new-refresh-token'
+
+    # And my tokens have changed
+    refute_equal user.primary_contact_info.data_hash[:oauth_token], auth[:credentials][:token]
+    refute_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
+    refute_equal user.primary_contact_info.data_hash[:oauth_refresh_token], auth[:credentials][:refresh_token]
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :google_oauth2
+
+    # Then my OAuth tokens are updated
+    user.reload
+    assert_equal user.primary_contact_info.data_hash[:oauth_token], auth[:credentials][:token]
+    assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
+    assert_equal user.primary_contact_info.data_hash[:oauth_refresh_token], auth[:credentials][:refresh_token]
+  end
+
   test 'google_oauth2: redirects to complete registration if user is not found by credentials' do
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
