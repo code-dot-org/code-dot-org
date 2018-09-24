@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 social:
@@ -22,18 +22,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Bir saat kodu oluşturduğunuz için teşekkürler!
 
-Bilgisayar eğitimi almak isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. Ödeme sırasında ** FREEPOSTERS </ strong> teklif kodunu kullanın. (Not: gönderdiğimiz posterleri ücretsiz kullanabilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Posterler Amerika'dan kargolandığı için, Kanada ve diğer ülkelere kargo ücreti oldukça fazla olabilir. Bunun, bütçenize göre olmayabileceğini düşünüyoruz ve sınıfınız için  PDF dosyalarını </ 0> basmanızı öneriyoruz.)   
-<br /> [<button>Poster edinin</button>](https://store.code.org/products/code-org-posters-set-of-12) Bedava poster için teklif kodunu kullanınız</p> 
-
-<% if @country == 'us' %> Ozobot, Dexter Industries, littleBits ve Wonder Workshop sayesinde, derslerde kullanılması amacıyla robot veya devre gönderilecek, bunun için100'den fazla sınıf seçilecek! Bir set almaya hak kazanmak için, Kodlamadan sonra Code.org tarafından gönderilecek anketi doldurmayı unutmayın. Code.org, kazanan derslikleri seçecek. Bu arada bazı robotların devre faaliyetlerine göz atın. Lütfen bunun yalnızca bizim okullarımız için açık olduğunu unutmayın. <% end %>
-
-<br /> **Kod Saati projesi <%= campaign_date('full')%> tarihinde son bulacaktır. Yeni uygulamalar ve diğer güncellemeler hakkında sizinle irtibat halinde olacağız. Bu arada, şuan sizin için ne yapabiliriz? **
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Okuldakilere ve tanıdıklarınıza Kod Saati'ni duyurun
 
-Kodlama Saati organizasyonuna katıldınız. Arkadaşlarınızı**#HourOfCode** etiketi ile haberdar edebilirsiniz
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Başkalarını, [ örnek e-postalarımızla katılmaya teşvik edin](%= resolve_url('/promote/resources#sample-emails') %) Yöneticinizle iletişime geçin ve okuldaki tüm sınıflara başvurmak için kayıt olun. Yakın çevrenizdeki gruplara haber verin — öğrenci kulüpleri, dernekler, üniversiteler, sendikalar ve hatta arkadaş gruplarınız. Yeni nitelikler öğrenmek için okulda olmana gerek yok. Yerel bir politikacı veya politika üreticisini, Kod Saati için okulunuzu ziyaret etmesi için davet edin. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Yeni beceriler öğrenmek için okulda olmana gerek yok. Invite a local politician or policy maker to visit your school for the Hour of Code. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
 
 Bu [ poster, afiş, çıkartma, video ve daha fazlasını](%= resolve_url('/promote/resources') %) etkinlik için kullan.
 
@@ -43,16 +38,16 @@ Bu [ poster, afiş, çıkartma, video ve daha fazlasını](%= resolve_url('/prom
 
 ## Kodlama yapmak istediğiniz saatinizi planlayın
 
-Sınıfınız için bir [Kodlama Saati etkinliği](https://hourofcode.com/learn) seçin ve [bu kullanma kılavuzunu inceleyin](%= resolve_url('/how-to') %).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
 
 # Kod saatinin ötesine gidin
 
-<% if @country == 'us' %> Kod saati sadece başlangıçtır. Bir yönetici, öğretmen veya avukat iseniz, bilgisayar bilimi derslerini okulunuza getirmenize veya olanaklarınızı genişletmenize yardımcı olacak kaynaklara, meslek gelişimine ve öğretim programına [’a sahibiz.](https://code.org/yourschool) Halihazırda bilgisayar bilimi öğretiyorsanız, yöneticinizden, velilerden ve toplumdan destek almak için CS eğitim haftası boyunca bu kaynakları kullanın.
+<% if @country == 'us' %> Kod saati sadece başlangıçtır. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-Okulunuza uygun birçok seçeneğiniz var. Kod saatini sunan öğretici kuruluşların çoğun da müfredat ve profesyonel gelişim mevcut vardır. Eğer istediğiniz bir ders bulursanız, ilerleme isteyebilirsiniz. Başlamanız yardımcı olmak için, sizin veya öğrencilerinizin bir saatten daha da öte gitmenize yardım edecek, bir dizi [müfredat sağlayıcılarını vurguladık](https://hourofcode.com/beyond)
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-<% else %> Kod saati sadece başlangıçtır. Hour of Code sunan kuruluşların çoğunun ayrıca ilerlemeye hazır müfredatları vardır. Başlamanız yardımcı olmak için, sizin veya öğrencilerinizin bir saatten daha da öte gitmenize yardım edecek, bir dizi [müfredat sağlayıcılarını vurguladık](https://hourofcode.com/beyond)
+<% else %> Kod saati sadece başlangıçtır. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-Code.org sitesi hiçbir ücret talep etmeden, okulunuza veya öğrencilere 25 bilgisayar dillerinin tam eğitimini[bilgisayar giriş dili dersini](https://code.org/educate/curriculum/cs-fundamentals-international)size ücretsiz sunuyor. <% end %>
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>
