@@ -151,15 +151,6 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
-          {
-            this.props.data.payFee && this.props.data.payFee.startsWith('No,') && (
-              <div>
-                Would you like to be considered for funding support? Note that funding
-                support is not guaranteed.
-                {this.singleCheckboxFor('wantFunding', {required: false})}
-              </div>
-            )
-          }
         </div>
         {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
           [TextFields.otherWithText] : "other"
