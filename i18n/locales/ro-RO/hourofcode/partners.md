@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Hour of Code este condus de catre comitetul Hour of code si Computer Science Education Week.
 

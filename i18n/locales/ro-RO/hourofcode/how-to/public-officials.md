@@ -1,19 +1,19 @@
 ---
-title: <%= hoc_s(:title_how_to_officials) %>
+title: <%= hoc_s(:title_how_to_officials).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to involve your entire community
+# Cum să implicați întreaga comunitate a dumneavoastră
 
-### Show your state, district, or city your commitment to computer science
+### Arătați angajamentul dumneavoastră în domeniul Informaticii în țara, județul sau orașul dvs.
 
 * * *
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## Găzduiți un oficial ales la evenimentul dumneavoastră Ora de Cod?
 
 [View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
 

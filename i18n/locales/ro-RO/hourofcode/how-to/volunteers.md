@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers) %>
+title: <%= hoc_s(:title_how_to_volunteers).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Ghidul pentru voluntari
 
-### Fă o diferență într-o clasă azi!
+### Faceți o diferență într-o clasă azi!
 
 * * *
 
