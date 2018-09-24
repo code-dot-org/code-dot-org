@@ -16,6 +16,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     user = find_user_by_credential
     if user
+      user.update_oauth_credential_tokens(auth_hash)
       sign_in_clever user
     else
       sign_up_clever
@@ -31,6 +32,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     user = find_user_by_credential
     if user
+      user.update_oauth_credential_tokens(auth_hash)
       sign_in_google_oauth2 user
     else
       sign_up_google_oauth2
