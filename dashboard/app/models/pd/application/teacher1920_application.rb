@@ -154,6 +154,7 @@ module Pd::Application
       )
     end
 
+    # @override
     def self.required_fields
       %i(
         country
@@ -171,28 +172,33 @@ module Pd::Application
         principal_confirm_email
         principal_phone_number
         completing_on_behalf_of_someone_else
+
         program
         cs_how_many_minutes
         cs_how_many_days_per_week
         cs_how_many_weeks_per_year
         plan_to_teach
         replace_existing
+
         subjects_teaching
         have_cs_license
         subjects_licensed_to_teach
         taught_in_past
         previous_yearlong_cdo_pd
         cs_offered_at_school
-        committed
+
         pay_fee
         willing_to_travel
+        interested_in_online_program
 
         gender_identity
         race
+
         agree
       )
     end
 
+    # @override
     def dynamic_required_fields(hash)
       [].tap do |required|
         if hash[:completing_on_behalf_of_someone_else] == YES
@@ -204,7 +210,7 @@ module Pd::Application
         end
 
         if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
-          required.contact [:scholarship_reasons]
+          required.concat [:scholarship_reasons]
         end
 
         if hash[:program] == PROGRAMS[:csd]
@@ -218,8 +224,24 @@ module Pd::Application
           ]
         end
 
-        required.concat [hash[:committed] == YES ? :able_to_attend_single : :able_to_attend_multiple]
+        if hash[:regional_partner_workshop_ids].presence
+          required.concat [
+            :able_to_attend_multiple,
+            :committed
+          ]
+        end
       end
+    end
+
+    # @override
+    def additional_text_fields
+      super.concat [
+        [:cs_terms, TEXT_FIELDS[:other_with_text]],
+        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
+        [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
+        [:able_to_attend, TEXT_FIELDS[:not_sure_explain]],
+        [:how_heard, TEXT_FIELDS[:other_with_text]]
+      ]
     end
 
     # @override
