@@ -1146,7 +1146,7 @@ FactoryGirl.define do
     group 1
   end
 
-  factory :regional_partner_summer_workshops do
+  factory :regional_partner_with_summer_workshops, parent: :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     contact_name "Contact Name"
     contact_email "contact@code.org"
