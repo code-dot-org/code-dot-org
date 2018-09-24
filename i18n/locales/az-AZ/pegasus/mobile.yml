@@ -4,12 +4,14 @@
   'yes': 'Bəli'
   'no': 'Xeyr'
   select_language: "Zəhmət olmazsa, dilinizi seçin"
+  upgrade_ie_message: "Code.org tezlikdə Internet Explorer 8, 9 və 10 versiyalarını dəstəkləməyəcək. Zəhmət olmasa müasir bir brauzerə yüksəldin."
+  upgrade_ie_message_csedweek: "CSEdWeek.org tezlikdə Internet Explorer 8, 9 və 10 versiyalarını dəstəkləməyəcək. Zəhmət olmasa müasir bir brauzerə yüksəldin."
   upgrade_ie_link: "Daha ətraflı"
   en: "İnformatika"
-  computer_science_edweek: "İnformatika təhsili həftəsi"
+  computer_science_edweek: "İnformatika Təhsili Həftəsi"
   csedweek_dates: "8-14 dekabr 2014"
-  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kod Saatı</a> gəlir. Bütün müəllim və təşkilaçıları səsləyirik, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">öz Kod Saatınızı planlaşdırın</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">İnformatika müəllimisiniz? İnformatika Təhsili Həftəsi üçün digər materiallarımızı nəzərdən keçirin</a>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kod Saatı</a> gəlir. Bütün müəllim və təşkilaçıları <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">öz Kod Saatınızı planlaşdırmağa</a> çağırırıq'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">İnformatika müəllimisiniz? İnformatika Təhsil Həftəsi üçün digər materiallarımızı nəzərdən keçirin</a>'
   n_have_learned_an_hoc: "<h1>Kod Saatında</h1><h2>özünüzü sınayın</h2><h3># nəfər faydalanıb</h3>"
   anybody_can_learn: "Hər kəs öyrənə bilər."
   learn_now: "İndi öyrən"
@@ -24,7 +26,10 @@
   twentyhours_heading: "Bizim İnformatika Giriş kursumuzu sınaqdan keçirin"
   twentyhours_text: "İlk Kod saatınızı bitirdiniz? Kursları izləyərək kompyuter sahəsi və proqramlaşdırma anlayışları barədə daha çox şey öyrənin."
   og_title: 'Hər bir uşaq fürsətə layiqdir'
-  csedweek_og_title: "İnformatika təhsili həftəsi"
+  og_title_here: "Kod Saatı buradadır!"
+  og_description: "Hər məktəbdəki hər şagird informatikanı öyrənməyə layiqdir."
+  og_description_celeb: "Yeni dərslikləri sınaqdan keçirin, özünüz və ya sinifiniz üçün məşhur bir video qazanın!"
+  csedweek_og_title: "İnformatika Təhsili Həftəsi"
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Kod Saatı</a>na qoşulun<br/>8 - 14 dekabr, 2014<br/>"
   hoc2014_students: "Şagirdlər"
   hoc2014_try: "Sınaqdan keçirin"
@@ -48,6 +53,7 @@
   california_text: "İstənilən müəllim <a href='http://studio.code.org/'>pulsuz kurslarımızı</a> deyə bilər. İstənilən ibtidai sinifdə <a href='http://code.org/educate/k5'>informatika tədris oluna</a> bilər. Məktəblərdən xahiş edin ki, <a href='http://code.org/educate/districts'>bizimlə tərəfdaş olsunlar."
   california_button: "Daha çox"
   flappy_heading: "Qanad günün mübarək, Code.org"
+  flappy_text: "Code.org-in 1 yaşı tamam oldu.<br/><br/> Öz şəxsi <b>Flappy</b> oyununuzu tərtib edərək bunu bizimlə qeyd edin. Öz qaydalarınızı kodlaşdırın və onu dostlarınızla paylaşın!"
   view_english_site: "İngiliscə saytı göstər"
   non_english_tutorials: 'Bir neçə dilə tərcümə olunmuş dərsliklər:'
   write_your_first_program: "İlk kompüter proqramınızı yazın"
@@ -62,8 +68,14 @@
   congrats_next_tutorials_title: "Kursları sına"
   get_a_certificate_of_achievement: "Nailiyyət sertifikatı əldə edin"
   view_course: "Kursu göstər"
+  view_unit: "Bölməyə bax"
+  make_app: "Bir tətbiq yaradın"
   third_party_gradelevel_6plus: "6+ siniflər"
   third_party_gradelevel_8plus: "8+ siniflər"
+  third_party_platform_all: 'Platforma: Web, iPad və Android'
+  third_party_platform_mobile: 'Platforma: iPad və Android'
+  third_party_platform_web: 'Platforma: Veb'
+  third_party_price_varies: 'Qiymət: Fərqli planlar'
   third_party_price_free: 'Hədiyyə: Pulsuz'
   third_party_price_299: 'Hədiyyə: $2.99/endirin'
   third_party_scratch_btn_curriculum: "Kurrikulum xəttini endirin"
