@@ -1052,7 +1052,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Expect notification about validation failure
     Honeybadger.expects(:notify).with(
       error_class: 'Failed to update User during silent takeover',
-      error_message: 'Update failed with errors: ["Display Name is required"]',
+      error_message: 'Validation failed: Display Name is required',
       context: {
         user_id: malformed_account.id,
         tags: 'accounts'
@@ -1090,12 +1090,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Stub to break creation of new AuthenticationOptions by returning
     # an un-persisted instance
-    AuthenticationOption.stubs(:create).returns(AuthenticationOption.new)
+    AuthenticationOption.stubs(:create!).raises('Intentional test failure')
 
     # Expect notification about validation failure
     Honeybadger.expects(:notify).with(
       error_class: 'Failed to create AuthenticationOption during silent takeover',
-      error_message: 'Create failed with errors: []',
+      error_message: 'Intentional test failure',
       context: {
         user_id: account.id,
         tags: 'accounts'
