@@ -36,11 +36,9 @@
     "use_default_sprites": "false",
     "markdown_instructions": "\"I'm just dancing on my own!\" Use the `Make a new \"Duck\"` block to create a backup dancer called `backup_dancer1` to dance with the cat.",
     "parent_level_id": 14505,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "validation_code": "if(getTime(\"measures\") > 6){\r\n  if (sprites.length >1) {\r\n  \tlevelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}"
+    "validation_code": "if(getTime(\"measures\") > 6){\r\n  if (sprites.length >1) {\r\n  \tlevelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
+    "block_pool": "Dancelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

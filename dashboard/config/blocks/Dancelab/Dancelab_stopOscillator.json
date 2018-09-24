@@ -1,7 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "func": "stopOscillator",
-    "blockText": "stop oscillator"
-  }
-}

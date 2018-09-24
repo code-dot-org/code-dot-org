@@ -278,6 +278,12 @@ img.video_thumbnail {
     }
   }
 
+  @media screen and (max-width: 1023px) {
+    .create_menu {
+      display: none !important;
+    }
+  }
+
   .headerlinks {
     margin-top: 12px;
     margin-left: 74px;
@@ -324,18 +330,23 @@ img.video_thumbnail {
     }
   }
 
+  .user_icon {
+    font-size: 25px;
+    border-width: 0;
+  }
+
   #sign_in_or_user {
     html[dir=rtl] & {
       padding-right: 20px;
     }
   }
 
-  .user_menu {
+  .user_menu, .create_menu {
     margin-top: 6px;
     height: 38px;
     user-select: none;
 
-    .user_name {
+    .user_name, .create_button {
       max-width: 120px;
       display: inline-block;
       float: left;
@@ -345,7 +356,9 @@ img.video_thumbnail {
     }
 
     .user_menu_arrow_down,
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_down,
+    .create_menu_arrow_up, {
       font-size: 30px;
     }
 
@@ -353,18 +366,64 @@ img.video_thumbnail {
       position: absolute;
       top: 55px;
       right: 55px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .create_options {
+      position: absolute;
+      top: 55px;
+      right: 55px;
+      font-size: 14px;
+      background-color: $white;
+      width: 200px;
+      a {
+        color: $teal;
+        font-family: $gotham-bold;
+        height: 70px;
+        width: 198px;
+        float: left;
+        border-left: 1px solid $charcoal;
+        border-right: 1px solid $charcoal;
+        border-top: 1px solid $charcoal;
+      }
+      a:hover {
+        color: $teal;
+        font-family: $gotham-bold;
+        background-color: $white;
+        cursor: pointer;
+      }
+      img {
+        height: 70px;
+        width: 70px;
+        float: left;
+      }
+      .project_link {
+        padding-left: 10px;
+        line-height: 62px;
+        float: left;
+      }
+      #view_all_projects {
+        width: 189px;
+        height: 70px;
+        border-bottom: 1px solid $charcoal;
+      }
     }
 
     .user_menu_arrow_down,
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_down,
+    .create_menu_arrow_up, {
       font-size: 25px;
     }
 
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_up {
       margin-top: -3px;
     }
 
-    .user_menu_arrow_down {
+    .user_menu_arrow_down,
+    .create_menu_arrow_down {
       margin-top: -2px;
     }
   }
