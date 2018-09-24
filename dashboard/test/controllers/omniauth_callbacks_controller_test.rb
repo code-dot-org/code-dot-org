@@ -556,6 +556,29 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
+  test 'clever: sets tokens on new user' do
+    SignUpTracking.stubs(:new_sign_up_experience?).returns(false)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-clever"
+
+    # When I hit the clever oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: uid,
+      user_type: 'teacher'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :clever
+
+    # Then I go to the registration page to finish signing up
+    user = User.find_by_credential(
+      type: AuthenticationOption::CLEVER,
+      id: uid
+    )
+    assert_equal user.oauth_token, auth[:credentials][:token]
+    assert_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
+  end
+
   test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create :student, :unmigrated_google_sso
