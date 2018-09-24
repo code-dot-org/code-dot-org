@@ -395,42 +395,43 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       )
     end
 
-    if @user.migrated?
-      success = AuthenticationOption.create(
-        user: @user,
-        email: lookup_email,
-        credential_type: auth_hash.provider.to_s,
-        authentication_id: auth_hash.uid,
-        data: {
+    begin
+      if @user.migrated?
+        AuthenticationOption.create!(
+          user: @user,
+          email: lookup_email,
+          credential_type: auth_hash.provider.to_s,
+          authentication_id: auth_hash.uid,
+          data: {
+            oauth_token: auth_hash.credentials&.token,
+            oauth_token_expiration: auth_hash.credentials&.expires_at,
+            oauth_refresh_token: auth_hash.credentials&.refresh_token
+          }.to_json
+        )
+      else
+        @user.update!(
+          email: lookup_email,
+          provider: auth_hash.provider.to_s,
+          uid: auth_hash.uid,
           oauth_token: auth_hash.credentials&.token,
           oauth_token_expiration: auth_hash.credentials&.expires_at,
           oauth_refresh_token: auth_hash.credentials&.refresh_token
-        }.to_json
-      )
-      unless success
-        # This should never happen if other logic is working correctly, so notify
-        Honeybadger.notify(
-          error_class: 'Failed to create AuthenticationOption during silent takeover',
-          error_message: "Failed for user with id #{@user.id}"
         )
-        return
       end
-    else
-      success = @user.update(
-        provider: auth_hash.provider.to_s,
-        uid: auth_hash.uid,
-        oauth_token: auth_hash.credentials&.token,
-        oauth_token_expiration: auth_hash.credentials&.expires_at,
-        oauth_refresh_token: auth_hash.credentials&.refresh_token
+    rescue => err
+      error_class = @user.migrated? ?
+        'Failed to create AuthenticationOption during silent takeover' :
+        'Failed to update User during silent takeover'
+      # This should never happen if other logic is working correctly, so notify
+      # This can happen if the account being taken over is already invalid
+      Honeybadger.notify(
+        error_class: error_class,
+        error_message: err.to_s,
+        context: {
+          user_id: @user.id,
+          tags: 'accounts'
+        }
       )
-      unless success
-        # This should never happen if other logic is working correctly, so notify
-        Honeybadger.notify(
-          error_class: 'Failed to update User during silent takeover',
-          error_message: "Failed for user with id #{@user.id}"
-        )
-        return
-      end
     end
   end
 
