@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Ang Hour of Code is hinihimok ng Hour of Code and Computer Science Education Week Advisory at Review Committees.
 
