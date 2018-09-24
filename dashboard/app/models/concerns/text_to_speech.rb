@@ -7,34 +7,6 @@ require 'redcarpet/render_strip'
 
 TTS_BUCKET = 'cdo-tts'.freeze
 
-VOICES = {
-  'en-US': {
-    VOICE: 'sharon22k',
-    SPEED: 180,
-    SHAPE: 100
-  },
-  'es-ES': {
-    VOICE: 'ines22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  'es-MX': {
-    VOICE: 'rosa22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  'it-IT': {
-    VOICE: 'vittorio22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  'pt-BR': {
-    VOICE: 'marcia22k',
-    SPEED: 180,
-    SHAPE: 100,
-  }
-}.freeze
-
 class TTSSafe < Redcarpet::Render::StripDown
   def block_code(code, language)
     ''
@@ -64,6 +36,34 @@ TTSSafeScrubber.tags = ['xml']
 
 module TextToSpeech
   extend ActiveSupport::Concern
+
+  VOICES = {
+    'en-US': {
+      VOICE: 'sharon22k',
+      SPEED: 180,
+      SHAPE: 100
+    },
+    'es-ES': {
+      VOICE: 'ines22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'es-MX': {
+      VOICE: 'rosa22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'it-IT': {
+      VOICE: 'vittorio22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    'pt-BR': {
+      VOICE: 'marcia22k',
+      SPEED: 180,
+      SHAPE: 100,
+    }
+  }.freeze
 
   # TODO: this concern actually depends on the SerializedProperties
   # concern ... I'm not sure how best to deal with that.
