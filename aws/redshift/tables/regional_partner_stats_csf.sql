@@ -85,6 +85,7 @@ pd_facilitators as
          ss_user.school_id school_id,
          ss_user.city city,
          ss_user.state state,
+         ss_user.zip zip,
          ss_user.school_district_name school_district_name,
          ss_user.school_district_id school_district_id,
          ss_user.high_needs high_needs_school,
@@ -103,8 +104,11 @@ pd_facilitators as
          csfa.funded,
          csfa.funding_type,
          csfa.capacity,
+         csfa.zip as zip_workshop,
+         csfa.state as state_workshop,
          csfa.facilitator_name,
-         csfa.facilitator_id,        
+         csfa.facilitator_id,  
+         csfa.studio_person_id_facilitator,     
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
@@ -120,7 +124,7 @@ pd_facilitators as
           -- student gender
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
-  FROM csf_teachers_trained d 
+  FROM analysis.csf_teachers_trained d 
   JOIN analysis.training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
