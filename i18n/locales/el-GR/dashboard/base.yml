@@ -231,9 +231,16 @@ el:
         playlab: 'Δημιουργήστε μια εφαρμογή'
         artist: 'Ζωγραφίστε κάτι'
         applab: 'Δημιουργήστε μια εφαρμογή'
-      courses: "Τες"
       project_gallery: "Έργα"
       educate_hoc: "Η Ώρα του Κώδικα"
+    create_button:
+      create: 'Δημιουργία'
+      applab: 'Εργαστήριο εφαρμογών'
+      artist: 'Καλλιτέχνης'
+      gamelab: 'Game Lab'
+      playlab: 'Εργαστήριο Παιχνιδιού'
+      minecraft: 'Minecraft'
+      flappy: 'Πουλάκι'
     user:
       classroom: 'Αρχική Σελίδα Εκπαιδευτή'
       district_dashboard: 'Περιοχή Ταμπλό'
