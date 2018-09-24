@@ -5,8 +5,6 @@ import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from "@cdo/locale";
 import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
-import processMarkdown from 'marked';
-import renderer from "@cdo/apps/util/StylelessRenderer";
 import {
   getCurrentQuestion,
   getStudentAnswersForCurrentQuestion,
@@ -14,6 +12,7 @@ import {
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
   dialog: {
@@ -57,7 +56,6 @@ class MultipleChoiceDetailsDialog extends Component {
     const {questionAndAnswers, studentAnswers} = this.props;
 
     // Questions are in markdown format and should not display as plain text in the dialog.
-    const renderedMarkdown = processMarkdown(questionAndAnswers.question, { renderer });
 
     return (
       <BaseDialog
@@ -69,8 +67,9 @@ class MultipleChoiceDetailsDialog extends Component {
         <h2>{i18n.questionDetails()}</h2>
         <div
           style={styles.instructions}
-          dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
-        />
+        >
+         <UnsafeRenderedMarkdown markdown={questionAndAnswers.question} />
+        </div>
         {(questionAndAnswers.answers && questionAndAnswers.answers.length > 0) &&
           <div>
             {questionAndAnswers.answers.map((answer, index) => {
@@ -85,8 +84,8 @@ class MultipleChoiceDetailsDialog extends Component {
                   <div style={styles.answerLetter}>{answer.letter}</div>
                   <div
                     style={styles.answers}
-                    dangerouslySetInnerHTML={{ __html: processMarkdown(answer.text, { renderer }) }}
                   />
+                   <UnsafeRenderedMarkdown markdown={answer.text} />
                   <div style={{clear: 'both'}}></div>
                 </div>
               );
