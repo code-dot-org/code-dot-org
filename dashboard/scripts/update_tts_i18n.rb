@@ -28,13 +28,24 @@ ENABLED_LANGUAGES.each do |lang|
     script.levels.each do |level|
       next unless level.is_a?(Blockly)
 
-      # Instructions
+      # Short Instructions
 
       translated_text = TextToSpeech.sanitize(level.localized_short_instructions || "")
       english_text = TextToSpeech.sanitize(level.short_instructions || "")
 
       if text_translated?(translated_text, english_text)
         level.tts_upload_to_s3(translated_text)
+      end
+
+      # Long Instructions
+
+      unless script.csf_international? || script.twenty_hour?
+        translated_text = TextToSpeech.sanitize(level.localized_long_instructions || "")
+        english_text = TextToSpeech.sanitize(level.long_instructions || "")
+
+        if text_translated?(translated_text, english_text)
+          level.tts_upload_to_s3(translated_text)
+        end
       end
 
       # Authored Hints
