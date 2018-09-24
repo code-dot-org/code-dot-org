@@ -1,4 +1,3 @@
----
 ky:
   data:
     blocks:
@@ -6,19 +5,19 @@ ky:
         options:
           UNIT:
             '"seconds"': секунд
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: баары
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: баары
+          MOVE:
+            MOVES.Rest: Жок
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Жок
           DIR:
             '1': "→"
             "-1": "←"
@@ -26,33 +25,23 @@ ky:
         options:
           PROPERTY:
             '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
+            '"height"': бийиктиги
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: баары
+          MOVE:
+            MOVES.Rest: Жок
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Жок
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -61,23 +50,37 @@ ky:
         options:
           PROPERTY:
             '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
+            '"height"': бийиктиги
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Жок
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": туш келди
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: баары
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': оңго
-            '"left"': солго
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
       Dancelab_randomColor:
         text: кокус түс
       Dancelab_setBackgroundEffect:
@@ -100,30 +103,21 @@ ky:
         options:
           PROPERTY:
             '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
+            '"height"': бийиктиги
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: баары
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
+            '"height"': бийиктиги
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
+            '"height"': бийиктиги
       Dancelab_whenKey:
         options:
           KEY:
@@ -149,8 +143,8 @@ ky:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': туура
-            'false': жалган
+            'true': 'туура'
+            'false': 'жалган'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -237,14 +231,52 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      Mikelab_randomColor:
+        text: кокус түс
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': шаар
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
-      Vanilla_randomColor:
-        text: кокус түс
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': оңго
+            '"left"': солго
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': жебе өйдө
+            '"down"': жебе төмөн
+            '"left"': жебе солго
+            '"right"': жебе оңго
+            '"w"': Б
+            '"a"': A
+            '"s"': Түш
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': жебе өйдө
+            '"down"': жебе төмөн
+            '"left"': жебе солго
+            '"right"': жебе оңго
+            '"w"': Б
+            '"a"': A
+            '"s"': Түш
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': жебе өйдө
+            '"down"': жебе төмөн
+            '"left"': жебе солго
+            '"right"': жебе оңго
       craft_ifPath:
         options:
           DIR:
