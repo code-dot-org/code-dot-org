@@ -1,34 +1,99 @@
 -# Locals: current_user, loc_prefix, [session_pairings]
-- if current_user
-  .header_button.header_user.user_menu
-    - if current_user.can_pair? && session_pairings.present?
-      %i.fa.fa-users
-      %span= I18n.t("#{loc_prefix}label", username: I18n.t("#{loc_prefix}team"))
-    - else
-      - short_name = ERB::Util.h(current_user.short_name)
-      %span.user_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}label", username: short_name)
+- show_updated_header = request.cookies['pm'] == 'create_header_2018'
+- user_under_13 = request.cookies["_user_type_#{rack_env}"] == "student_y"
+- if show_updated_header
+  .header_button.create_menu
+    %span.create_button
+      = I18n.t("nav.create_button.create")
     &nbsp;
-    %i.user_menu_arrow_down{class: "fa fa-caret-down"}
-    %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
-    .user_options{style: 'display: none'}
-      - if current_user.can_pair?
-        - if session_pairings.present?
-          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-            %i.fa.fa-user-plus
-            = I18n.t("#{loc_prefix}pair_programming")
-            .pairing_summary
-              #{I18n.t("#{loc_prefix}driver")}:
-              = h(current_user.short_name)
-              - session_pairings.map do |id|
-                %br
-                #{I18n.t("#{loc_prefix}navigator")}:
-                = h(User.find(id).short_name)
-        - else
-          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-            %i.fa.fa-user-plus
-            = I18n.t("#{loc_prefix}pair_programming")
-      %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
-      %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
+    %i.create_menu_arrow_down{class: "fa fa-caret-down"}
+    %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+    .create_options{style: 'display: none'}
+      %a.project_link_box{href: CDO.studio_url('projects/playlab/new')}
+        %img{src: "/shared/images/fill-70x70/courses/logo_playlab.png"}
+        .project_link#create_dropdown_playlab
+          = I18n.t("nav.create_button.playlab")
+      %a.project_link_box{href: CDO.studio_url('projects/artist/new')}
+        %img{src: "/shared/images/fill-70x70/courses/logo_artist.png"}
+        .project_link#create_dropdown_artist
+          = I18n.t("nav.create_button.artist")
+      - if user_under_13
+        %a.project_link_box{href: CDO.studio_url('projects/flappy/new')}
+          %img{src: "/shared/images/fill-70x70/courses/logo_flappy.png"}
+          .project_link#create_dropdown_flappy
+            = I18n.t("nav.create_button.flappy")
+        %a.project_link_box{href: CDO.studio_url('projects/minecraft_designer/new')}
+          %img{src: "/shared/images/fill-70x70/courses/logo_minecraft.png"}
+          .project_link#create_dropdown_minecraft
+            = I18n.t("nav.create_button.minecraft")
+      - else
+        %a.project_link_box{href: CDO.studio_url('projects/applab/new')}
+          %img{src: "/shared/images/fill-70x70/courses/logo_applab_square.png"}
+          .project_link#create_dropdown_applab
+            = I18n.t("nav.create_button.applab")
+        %a.project_link_box{href: CDO.studio_url('projects/gamelab/new')}
+          %img{src: "/shared/images/fill-70x70/courses/logo_gamelab_square.png"}
+          .project_link#create_dropdown_gamelab
+            = I18n.t("nav.create_button.gamelab")
+      %a.project_link_box{href: CDO.studio_url('projects/public')}
+        .project_link#view_all_projects
+          = I18n.t("nav.create_button.view_all")
+- if current_user
+  - if show_updated_header
+    .header_button.header_user.user_menu.user_icon
+      - if current_user.can_pair? && session_pairings.present?
+        %i.fa.fa-users
+      - else
+        %i.fa.fa-user
+      .user_options{style: 'display: none'}
+        - if current_user.can_pair?
+          - if session_pairings.present?
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+              .pairing_summary
+                #{I18n.t("#{loc_prefix}driver")}:
+                = h(current_user.short_name)
+                - session_pairings.map do |id|
+                  %br
+                  #{I18n.t("#{loc_prefix}navigator")}:
+                  = h(User.find(id).short_name)
+          - else
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+        %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
+        %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
+  - else
+    .header_button.header_user.user_menu
+      - if current_user.can_pair? && session_pairings.present?
+        %i.fa.fa-users
+        %span= I18n.t("#{loc_prefix}label", username: I18n.t("#{loc_prefix}team"))
+      - else
+        - short_name = ERB::Util.h(current_user.short_name)
+        %span.user_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}label", username: short_name)
+      &nbsp;
+      %i.user_menu_arrow_down{class: "fa fa-caret-down"}
+      %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+      .user_options{style: 'display: none'}
+        - if current_user.can_pair?
+          - if session_pairings.present?
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+              .pairing_summary
+                #{I18n.t("#{loc_prefix}driver")}:
+                = h(current_user.short_name)
+                - session_pairings.map do |id|
+                  %br
+                  #{I18n.t("#{loc_prefix}navigator")}:
+                  = h(User.find(id).short_name)
+          - else
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = I18n.t("#{loc_prefix}pair_programming")
+        %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
+        %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
 - else
   %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
     .header_button.header_user
@@ -92,6 +157,31 @@
         }
       });
     });
+
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+
+          $("#hamburger-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+
 
     if (typeof dashboard !== 'undefined') {
       dashboard.pairing.init('#{CDO.studio_url('pairing')}', hideUserOptions, #{show_pairing_dialog});
