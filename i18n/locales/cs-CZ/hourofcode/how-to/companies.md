@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_companies) %>
+title: <%= hoc_s(:title_how_to_companies).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -70,7 +70,7 @@ Začněte s Hodinou kódu tím, že budete inspirovat účastníky a diskutovat 
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- Podívejte se na několik tipů, jak [zaujmout dívky informatikou](http://<%= codeorg_url() %>/girls).
+- Podívejte se na několik tipů, jak [zaujmout dívky informatikou](%= codeorg_url('/girls') %).
 
 ## 6. Code!
 
