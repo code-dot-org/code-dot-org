@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_companies) %>
+title: <%= hoc_s(:title_how_to_companies).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,23 +7,23 @@ nav: how_to_nav
 
 # Cómo llevar acabo la Hora de Código en su empresa
 
-### Find out how you and your employees can inspire students to try computer science!
+### ¡Descubra cómo usted y sus empleados pueden inspirar a los estudiantes para intentar Ciencias de la Computación!
 
 * * *
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## Contactar con escuelas locales y voluntarios para la hora del código
 
 Code.org brinda la oportunidad para que sus empleados [se conecten](%= codeorg_url('/volunteer') %) con las aulas locales y participando en la Hora del Código, en donde pueden compartir su experiencia profesional en tecnología e inspirar estudiantes para estudiar ciencias de la computación.
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+<button>¡Inscríbete como voluntario!</button> <br /> <br /></p> 
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+Para obtener más instrucciones sobre cómo alentar a sus empleados y cómo conectarlos con las aulas, consulte nuestra [guía para socios corporativos](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
-## Additional ways companies can support the Hour of Code
+## Formas adicionales de cómo las empresas pueden apoyar la Hora del Código
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Pídale al Director de su empresa que [envíe un correo electrónico a toda la compañía](%= resolve_url('/promote/resources#sample-emails') %) que enfatice la importancia de la informática y anime a los empleados a difundirla.
+- Organice una Hora Feliz de Hora de Código con sus compañeros de trabajo para probar los [ tutoriales ](%= resolve_url('/learn') %).
+- Organiza un evento de la Hora del Código para una escuela local o socios sin ánimo de lucro en la oficina de su empresa. Vea la guía práctica del evento a continuación.
 
 # Cómo organizar un evento de la Hora de Código con estudiantes
 
