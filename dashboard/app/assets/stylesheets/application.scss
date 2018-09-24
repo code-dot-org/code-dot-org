@@ -1582,6 +1582,57 @@ a.download-video {
 }
 
 #signup, #school-info-modal {
+  // NEW SIGN-UP FORM
+  .finish-signup {
+    width: 600px;
+
+    $school-info-background: #f7f7f7;
+    $school-info-border-color: #e5e5e5;
+    #school-info-inputs {
+      width: 100%;
+      background-color: $school-info-background;
+      border: 1px solid $school-info-border-color;
+
+      h5 {
+        font-weight: bold;
+      }
+      hr {
+        border: 1px solid $school-info-border-color;
+      }
+    }
+    #terms-of-service {
+      display: flex;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      label {
+        padding-left: 10px;
+      }
+    }
+    .field {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    select, input[type=text] {
+      height: 36px;
+      width: 350px;
+    }
+    input[type=text] {
+      width: 338px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    #submit {
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+      font-weight: bolder;
+      min-width: 400px;
+    }
+  }
+
+  // OLD SIGN-UP FORM
   .signupform {
     padding: 20px;
     margin-bottom: 0;
