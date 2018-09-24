@@ -480,6 +480,31 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
+  test 'clever: updates tokens when unmigrated user is found by credentials' do
+    # Given I have a Clever-Code.org account
+    user = create :teacher, :unmigrated_clever_sso
+
+    # When I hit the clever oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: user.uid,
+      token: 'new-token',
+      expires_at: 23456
+
+    # And my tokens have changed
+    refute_equal user.oauth_token, auth[:credentials][:token]
+    refute_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :clever
+
+    # Then my OAuth tokens are updated
+    user.reload
+    assert_equal user.oauth_token, auth[:credentials][:token]
+    assert_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
+  end
+
   test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create :student, :unmigrated_google_sso
