@@ -5,9 +5,13 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>איך ללמד שעה אחת של קוד</h1>
+# How to teach one Hour of Code with your class
 
-הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+
+* * *
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -21,13 +25,13 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. אבל **אינך** נדרש למחשב עבור כל ילד, וגם באפשרותך לבצע "שעה של קוד" ללא מחשב כלל.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+ודא שניסית מדריכים על מחשבי או מכשירי הסטודנטים כדי לאשש שאכן הם עובדים בצורה תקינה על הדפדפנים יחד עם קול ווידאו. **יש רוחב פס נמוך?** תכנן להציג סרטונים בפני כל הכיתה, כך שאף תלמיד לא יידרש להוריד בעצמו את הסרטונים. או נסה את המדריכים הלא מקוונים.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+ספק אזניות עבור הכיתה, או בקש מהתלמידים להביא את שלהם, אם המדריך אשר בחרת עובד הכי טוב עם שמע.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). כאשר תלמידים מתחברים יחד, הם עוזרים אחד לשני ונסמכים פחות על המורה. They’ll also see that computer science is social and collaborative.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 

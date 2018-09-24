@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - آرگنائزرز کے لیے تیاری کا کم از کم درکار وقت
 - یہ سیلف-گائیڈڈ ہوں گے – جو اسٹوڈینٹس کو ان کی رفتار اور اسکل-لیول کے مطابق انہیں کام کرنے کی سہولت دیں گے۔
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **اسٹوڈینٹس کمپیوٹرز یا ڈیوائسز پر ٹیٹوریئلز ٹیسٹ کرسکیں گے۔ **یقینی اطمینان کرلیں کہ یہ براؤزرز پر ساؤنڈ اور وڈیو کے ساتھ مناسب طور پر کام کر رہے ہیں۔
-- **کانگریٹس پیج کا پری-ویو لیں** تاکہ یہ دیکھیں کہ جب اسٹوڈینٹس فنش کریں گے تو وہ کیا دیکھیں گے۔ 
+- **کانگریٹس پیج کا پری-ویو لیں** تاکہ یہ دیکھیں کہ جب اسٹوڈینٹس فنش کریں گے تو وہ کیا دیکھیں گے۔
 - **اپنی کلاس کے لیے ھیڈ فون فراہم کریں، یا اسٹوڈینٹس سے کہیں کہ وہ اپنے ہیڈفونز اپنے ساتھ لے کر آئیں، **جبکہ آپ کا منتخب کردہ ٹیٹوریئل ساؤنڈ کے ساتھ بہترین کام کرتا ہو۔
 
 ## 3) Plan ahead based on your technology available

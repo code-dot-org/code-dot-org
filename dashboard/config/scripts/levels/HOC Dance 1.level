@@ -36,10 +36,8 @@
     "use_default_sprites": "false",
     "markdown_instructions": "Let's get this moose dancing! add the `\"dancer1\" do \"Floss\" forever` block onto the `after 4 measures` block to make it start flossing after the fourth measure.\r\n\r\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
     "validation_code": "if (World.frameCount == 1) validationProps.status = 0;\r\n\r\nif (getTime(\"measures\") < 4) {\r\n  if (sprites.length > 0) {\r\n  \tvalidationProps.current_move = sprites[0].current_move;\r\n  } else {\r\n    validationProps.status = 3;\r\n  }\r\n} else if (getTime(\"measures\") > 6) {\r\n  if (sprites.length > 0) {\r\n  \tif (sprites[0].current_move === validationProps.current_move) {\r\n      validationProps.status = 3;\r\n    }\r\n  } else {\r\n    validationProps.status = 3;\r\n  }\r\n  levelSuccess(validationProps.status);\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "Dancelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

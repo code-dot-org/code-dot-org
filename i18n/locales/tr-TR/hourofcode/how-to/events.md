@@ -5,12 +5,16 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Kod-Saati etkinliğini nasıl düzenlerim
+# How to organize an Hour of Code assembly or event
+
+### Get your entire school or community involved in an Hour of Code!
+
+* * *
 
 ## 1. Etkinliğiniz için hazırlanın
 
 - Yerine, gününe ve saatine karar verin.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Medyayı (yerel haber kanalları, gazeteler, eğitim ve teknoloji bloggerları,... vb.) davet edin. Bu konuda yardım için [basın kiti](%= resolve_url('/promote/press-kit') %)mizi inceleyin.
 
 ## 2. Etkinlik esnasında
@@ -19,7 +23,7 @@ nav: how_to_nav
 - Bu [istatistikleri ve grafikleri](%= resolve_url('/promote/stats') %) kullanarak bilgisayar biliminin öneminden bahseden bir giriş konuşması yapın.   
       
     
-- Diğer etkinlik fikirleri: 
+- **Other event ideas**: 
     - Yerelde, bilgisayar bilimleri ile çalışan bir şirket sahibini davet edin.
     - Yerel bir politikacıyı davet edin ve öğrencinize, davet ettiğiniz kişiye kodlamanın nasıl yapılacağını anlatmasını söyleyin.
     - İnternet bağlantısı gerektirmeyen bir aktiviteyi göstermek için, bir grup öğrenci seçin.
@@ -28,30 +32,31 @@ nav: how_to_nav
 
 ## 3. Nasıl geçtiğini paylaşın
 
-- Etkinliklerinizi facebook ve twitter da paylaşın 
-- **#HourofCode** etiketini kullanın
+Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+
+* * *
 
 ## Kod-Saati ile Aileler Gece Kodluyor etkinliğine ev sahipliği yap, aileleri katılmaları için davet et
 
-K-5 akşam etkinliğine düzenlemeyi ve aileleri. bir saat bilgisayar bilimleri dersinde, çocuklarına katılmalarını davet etmeyi düşün. Daha geniş toplulukları işin içine katmak ve aileleri, okulunuzda ki bilgisayar bilimleri dersi için desteklemek harika bir yöntemdir. Ortaklarımız, Aileler Gece Kodluyor etkinliğinde, kontrol listesi planlama, sunucu dosyası, davet e-postaları, posterler, powerpoint sunuları ve kendi etkinliğini çalıştırmak için hepsi dahil bir Etkinlik Kiti oluşturdular. [ Etkinlik Kitini indirmek için buraya tıklayın.](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## Örnek Etkinlik Planı
+* * *
 
-**Etkinlik:** Okul geneli Bilgisayar Bilimleri Eğitim Haftası başlangıç toplantısı
+## Example plan for a school assembly or event
+
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**Saat:** Okul zamanı. Tercihen sabah vakti. Yaklaşık 1 saat.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Yer:** Okul toplantı salonu (tiyatro, spor salonu, kafeterya gibi)   
-  
-
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
 ## Gösteriyi Başlat
 
 | Saat          | Etkinlik                                                                                                                                                          |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10.00 - 10.05 | [İlham verici videolarımızdan](%= resolve_url('/promote/resources#videos') %) biriyle açılışı yapın                                                               |
+| 10.00 - 10.05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                       |
 | 10.05 - 10.15 | Okul müdürü bilgisayar bilimlerinin öneminden bahseden bir açılış konuşması yapar. Bu [istatistik ve grafikleri](%= resolve_url('/promote/stats') %) kullanın.    |
 | 10.15 - 10.30 | Misafir konuşmacı biraz kendisinden, biraz da teknolojinin ve bilgisayar biliminin günlük hayatımızda nasıl önemli bir rol aldığından bahseden bir konuşma yapar. |
 | 10.30 - 10.40 | Öğrenciler okul için Hour of Code gösterisi yaparlar. Eğlence zamanı: öğrencilere okul müdürüne, politikacılara ve diğer öğrencilere öğretmesini söyleyin!        |

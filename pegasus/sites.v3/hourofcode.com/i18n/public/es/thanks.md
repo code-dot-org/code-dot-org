@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 
@@ -44,7 +44,7 @@ Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](<%= res
 
 ## 2. Encuentre un voluntario local para ayudarte con tu evento.
 
-[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Busque en nuestro mapa de voluntarios](<%= codeorg_url('/volunteer/local') %>) para que los voluntarios puedan visitar su clase o chatear por video de forma remota para inspirar a sus estudiantes sobre la amplitud de posibilidades de la informática.
 
 ## 3. Planifique su Hora del Código
 

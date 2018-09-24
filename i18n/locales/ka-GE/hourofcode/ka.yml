@@ -11,12 +11,21 @@ ka:
   campaign_date_full: "4-10 დეკემბერი"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 დეკემბერი, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას %{campaign_date}-ში'
   front_intro_default: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან. კოდის ერთი საათის ორგანიზება შეუძლია ნებისმიერ ადამიანს, ნებისმიერ ადგილას. ერთსაათიანი ტუტორიალები 40 ენაზეა მისაწვდომი. გამოცდილება საჭირო არ არის. <strong>ასაკი: 4 წლიდან 104 წლამდე.</strong>'
   front_watch_video: 'უყურეთ ახალ ვიდეოს'
   front_watch_regular_video: 'უყურეთ ვიდეოს'
   front_volunteers: 'გვესაჭიროება ტექ–მოხალისეები'
   front_start_learning: 'სწავლის დაწყება'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'რესურსები'
   header_menu_faq: 'ხშირად დასმული კითხვები'
   header_menu_how_to: 'როგორ ვიხმაროთ'
@@ -222,12 +231,14 @@ ka:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'ამჟამად რეგისტრაცია კოდის ერთ საათზე დახურულია. შემდეგ კოდის ერთ საათზე დასარეგისტრირებლად გთხოვთ, კიდევ ერთხელ სცადოთ ოქტომბერში.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'დაგეგმეთ კოდის ერთი საათი მოცემულ ვადებში: %{campaign_date} და დაარეგისტრირეთ ის აქ.'
   signup_name_label: 'თქვენი სახელი'
   signup_name_error: 'სახელი სავალდებულოა.'
   signup_email_label: 'თქვენი ელ.ფოსტა'
-  signup_email_error: 'ელ. ფოსტა სავალდებულოა'
-  signup_invalid_email_error: 'მითითებულაი ელ-ფოსტა არასწორია'
+  signup_email_error: 'ელფოსტა სავალდებულოა'
+  signup_invalid_email_error: 'მითითებულაი ელფოსტა არასწორია'
   signup_organization_name_label: 'ორგანიზაციის სახელი'
   signup_organization_name_error: 'ორგანიზაციის სახელი სავალდებულოა.'
   signup_event_type_label: 'ღონისძიების ტიპი'
@@ -243,7 +254,12 @@ ka:
   signup_your_event: 'დაარეგისტრირეთ თქვენი ღონისძიება'
   signup_host_an_hour: 'უმასპინძლეთ კოდის ერთ საათს'
   signup_match_volunteer: 'მაპოვნინეთ ადგილობრივი პროგრამისტი, მოსწავლეებისთვის მაგალითის საჩვენებლად'
-  signup_multiple_event_warning: "თუ რამდნიმე ღონისძიებას ატარებთ, ყოველისთვის უნიკალური სახელი ან ელ. ფოსტა შეარჩიეთ. ჩვენ ვითვლით ღონისძიებებს სახელისა და ელ. ფოსტის უნიკალური კომბინაციებით."
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
+  signup_multiple_event_warning: "თუ რამდნიმე ღონისძიებას ატარებთ, ყოველისთვის უნიკალური სახელი ან ელფოსტა შეარჩიეთ. ჩვენ ვითვლით ღონისძიებებს სახელისა და ელფოსტის უნიკალური კომბინაციებით."
   signup_registration_deadline: "კოდის ერთ საათზე რეგისტრაცია სრულდება 11 დეკემბერს."
   signup_name_placeholder: 'თქვენი სახელი'
   signup_email_placeholder: 'you@example.com'
@@ -265,6 +281,7 @@ ka:
   signup_thank_you_message: 'ჩვენ გამოგიგზავნეთ დასტურის წერილი, სადაც მითითებულია დასაწყებად საჭირო ინფორმაცია.'
   map_title: "კოდის ერთი საათი - რუკა"
   map_header: '# 2017 წლის კოდის ერთ საათზე დარეგისტრირებული ღონისძიებები'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'ყველა ღონისძიება'
   map_header_company: '# კომპანიის ორგანიზატორების მიერ'
   map_header_country: '# %{country}–ში'
@@ -280,6 +297,7 @@ ka:
   meta_tag_twitter_title: 'კოდის ერთი საათის დროა'
   meta_tag_twitter_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   twitter_default_text: "მე ვიღებ მონაწილეობას წლევანდელ #HourOfCode–ში, და შენ? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'ხშირად დასმული კითხვები'
   hoc_faq_what_is_hoc_q: 'რა არის კოდის ერთი საათი?'
   hoc_faq_what_is_hoc_a: "კოდის ერთი საათი არის ერთსაათიანი შესავალი კურსი კომპიუტერულ მეცნიერებებში, რომლის მიზანიცაა აჩვენოს, რომ პროგრამირების საწყისების სწავლა შეუძლია ყველას. <a href='http://code.org/learn'>გაეცანით ტუტორიალებს</a>."
@@ -305,7 +323,7 @@ ka:
   hoc_faq_account_q: "სჭირდებათ თუ არა მოსწავლეებს ანგარიშის შექმნა და სადმე შესვლა?"
   hoc_faq_account_a: "არა. რეგისტრაცია ან საიტზე შესვლა არ არის საჭირო მოსწავლეებისთვის კოდის ერთ საათში მონაწილეობის მისაღებად. <a href='http://code.org/learn/beyond'>განგრძობადი კურსების</a> უმეტესობა ანგარიშის შექმნას მოსწავლის შედეგების შესანახად მოითხოვს."
   hoc_faq_high_school_q: "რა აქტივობები ავირჩიო დამამთავრებელი კლასების მოსწავლეებისთვის?"
-  hoc_faq_high_school_a: "ჩვენი ვარსკვლავური ომებისა და მაინკრაფტის ახალი ტუტორიალები გადასარევია უფროსკლასელებისთვის, განსაკუთრებით ვარსკვალვური ომების JavaScript ვერსია და ორივე ტუტორიალზე უფასო სათამაშო დონე. ნებისმიერი ასაკისთვის ჩვენი რჩევაა დაიწყოთ დამწყები დონის ტუტორიალით <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, მაგალითად Angry Birds ან ანასა და ელზას ტუტორიალებით. დამამთავრებელი კლასების მოსწავლეს უნდა შეეძლოს მათი 30 წუთში დასრულება, შემდეგ კი უფრო რთულ JavaScript ტუტორიალეზე გადასვლა, მაგალითად ხანის აკადემიის ან CodeHS ტუტორიალებზე."
+  hoc_faq_high_school_a: "ჩვენი ვარსკვლავური ომებისა და Minecraft-ის ახალი ტუტორიალები გადასარევია უფროსკლასელებისთვის, განსაკუთრებით ვარსკვალვური ომების JavaScript ვერსია და ორივე ტუტორიალზე უფასო სათამაშო დონე. ნებისმიერი ასაკისთვის ჩვენი რჩევაა დაიწყოთ დამწყები დონის ტუტორიალით <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, მაგალითად Angry Birds ან ანასა და ელზას ტუტორიალებით. დამამთავრებელი კლასების მოსწავლეს უნდა შეეძლოს მათი 30 წუთში დასრულება, შემდეგ კი უფრო რთულ JavaScript ტუტორიალეზე გადასვლა, მაგალითად ხანის აკადემიის ან CodeHS ტუტორიალებზე."
   hoc_faq_scratch_q: "კოდის ერთი საათისთვის სკრატჩის ტუტორიალი ავირჩიე, მაგრამ რა მოხდება, თუ ჩემს მოსწავლეებს ლეპტოპების მაგვირად პლანშეტები აქვთ?"
   hoc_faq_scratch_a: "სკრატჩი არ მუშაობს პლანშეტებზე. თუ პატარა მოსწავლეები გყავთ, მათ შეუძლიათ გამოიყენონ ScratchJR iPad აპლიკაცია. თუ გადახევდავთ ტუტორიალებს აქ<a href='http://code.org/learn'>Code.org/learn</a>, იპოვით სხვა ტუტორიალებსაც, რომლებიც მუშაობს პლანშეტზე და შექმნილია Code.org, Tynker, Lightbot, ან CodeSpark-ის მიერ."
   hoc_faq_count_hoc_q: "როგორ ვითვლით კოდის საათებს?"
@@ -319,7 +337,7 @@ ka:
   hoc_faq_keep_learning_q: "როგორ გავაგრძელო სწავლა კოდის ერთი საათის შემდეგ?"
   hoc_faq_keep_learning_a: "კოდის ერთი საათის ჩატარება შეუძლია ნებისმიერ ადამიანს ნებისმიერ დროს. ტუტორიალები ჩვენს საიტზე მთელი წლის განმავლობაში არის წარდგენილი. გადადით <a href='/promote'>ჩვენი რესურსების</a> გვერდზე და გაიგეთ, როგორ უნდა ჩაატაროთ ღონისძიება."
   hoc_faq_certificates_q: "სად ამოვბეჭდო სერტიფიკატები ჩემი სტუდენტებისთვის?"
-  hoc_faq_certificates_a: "გადადით ჩვენს <a href='%{codeorg_url}/certificates'>სერტიფიკატების გვერდზე</a>, სადაც წინასწარ შეძლებთ ამობეჭდოთ სერტიფიკატები მთელი თქვენი კლასისთვის. ასევე შეგიძლიათ ამობეჭდოთ <a href='%{codeorg_url}/certificates?course=mc'>სპეციალური სერტიფიკატები</a> იმ მოსწვლეებისთვის, რომლებიც მაინკრაფტის ტუტორიალს გაივლიან."
+  hoc_faq_certificates_a: "გადადით ჩვენს <a href='%{codeorg_url}/certificates'>სერტიფიკატების გვერდზე</a>, სადაც წინასწარ შეძლებთ ამობეჭდოთ სერტიფიკატები მთელი თქვენი კლასისთვის. ასევე შეგიძლიათ ამობეჭდოთ <a href='%{codeorg_url}/certificates?course=mc'>სპეციალური სერტიფიკატები</a> იმ მოსწვლეებისთვის, რომლებიც Minecraft-ის ტუტორიალს გაივლიან."
   hoc_faq_logo_q: "არსებობს თუ არა რამე შეზღუდვები კოდის ერთი საათის ლოგოსა ან სახელის გამოყენებაზე?"
   hoc_faq_logo_a: "Hour of Code (კოდის ერთი საათი) სასაქონლო ნიშანია. ჩვენ არ გვსურს მისი გამოყენების შეზღუდვა, მაგრამ გვინდა დავრწმუნდეთ, რომ იგი გარკვეულ წესებს შეესაბამება. გთხოვთ, ნახეთ<a href='%{logo_url}'>გამოყენების წესები</a>."
   stats_hoc_2013_image_alt: '2013 წლის კოდის ერთი საათის სტატისტიკა'
@@ -374,6 +392,7 @@ ka:
   videos_obama_cs: პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ
   videos_anybody_can_learn: ნებისმიერს შეუძლია სწავლა (1 წთ)
   title_country_resources: რესურსები ქვეყნების მიხედვით
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: როგორ მოვაწყოთ კოდის ერთი საათი უბანში
   title_how_to_events: კოდის ერთი საათის ორგანიზება - ინსტრუქციები
   title_how_to_organizations: როგორ მოვაწყოთ კოდის ერთი საათი - ორგანიზაციებს
@@ -382,6 +401,7 @@ ka:
   title_how_to_volunteers: როგორ–უნდა სახელმძღვანელო კოდის ერთი საათის მოხალისეებისთვის
   title_how_to_parents: სახელმძღვანელო მშობლებისთვის
   title_how_to: ინსტრუქციები
+  title_international_partners: Contact International Partners
   title_press_release: კოდის ერთი საათის პრეს-რელიზი
   title_op_ed: კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულისა და კოდის ერთი საათის მისაწვდომობის მხარდამჭერი განცხადების ტექსტი
   title_press_kit: პრესისთვის
@@ -440,7 +460,7 @@ ka:
   tutorial_moana_name: "მოანა: გზის გაკვლევა კოდის საშუალებით"
   tutorial_star-wars_name: "ვარსკვლავური ომები: გალაქტიკის შექმნა კოდის საშუალებით"
   tutorial_gumadventure_name: "გამბოლის პროგრამირების მოგზაურობა"
-  tutorial_mchoc_name: "მაინკრაფტის კოდის ერთი საათი"
+  tutorial_mchoc_name: "Minecraft-ის კოდის ერთი საათი"
   tutorial_vidnews_name: "ვიდკოდი: დააპროგრამეთ ამბები"
   tutorial_kodable-pre_name: "Kodable (დამწყები მკითველების მისალმება)"
   tutorial_highseas_name: "თავგადასავალი ღია ზღვაში"
@@ -666,9 +686,9 @@ ka:
   tutorial_ice-age_name: "გამყინვარების პერიოდის სათამაშო ლაბორატორია"
   tutorial_koapp_name: "Kodable (დამწყები მკითველების მისალმება)"
   tutorial_lightbot-intl_name: "Lightbot"
-  tutorial_rmc_name: "მაინკრაფტის კოდის ერთი საათი"
-  tutorial_smc_name: "მაინკრაფტის კოდის ერთი საათი"
-  tutorial_minecraft-2016_name: "მაინკრაფტის კოდის ერთი საათი"
+  tutorial_rmc_name: "Minecraft-ის კოდის ერთი საათი"
+  tutorial_smc_name: "Minecraft-ის კოდის ერთი საათი"
+  tutorial_minecraft-2016_name: "Minecraft-ის კოდის ერთი საათი"
   tutorial_thinkersmith-es_name: "Mis Amigos Roboticos"
   tutorial_pixie_name: "PIXIE-ის გამოწვევები"
   tutorial_play_name: "სათამაშო ლაბორატორია"
@@ -878,7 +898,7 @@ ka:
   tutorial_moana_shortdescription: "მოანა მამაცი და უშიშარია და მტკიცედ აქვს გადაწყვეტილი იპოვოს საკუთარი გზა."
   tutorial_star-wars_shortdescription: "ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში."
   tutorial_gumadventure_shortdescription: "გამოიყენოთ კოდი, რათა გადახვიდეთ გამბოლის გასაოცარი სამყაროს ახალ ეპიზოდზე."
-  tutorial_mchoc_shortdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი მაინკრაფტის სამყაროში."
+  tutorial_mchoc_shortdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი Minecraft-ის სამყაროში."
   tutorial_vidnews_shortdescription: "დააპროგრამეთ ეფექტები და გრაფიკა, რათა შექმნათ საინფორმაციო ამბავი ტექნოლოგიებზე, სხვადასხვა თემატიკაზე, ბავშვებზე და პროგრამირებაზე."
   tutorial_kodable-pre_shortdescription: "მხიარული თამაში, რომლის მიზანია კომპიუტერული პროგრამირების კონცეფციების სწავლება"
   tutorial_highseas_shortdescription: "ამ აქტივობაში თქვენ შექმნით სათავგადასავლო ამბავს ორი პერსონაჟის მონაწილეობით, რომელიც ვითარდება ღია ზღვებში!"
@@ -889,7 +909,7 @@ ka:
   tutorial_boxisland_shortdescription: "იმგზავრეთ ყუთების კუნძულზე და შეაგროვეთ ყველა ვარსკვლავი!"
   tutorial_textcomp_shortdescription: "გამოიკვლიეთ დანაკარგის არმქონე შეკუმშვის ტექნიკები ტექსტის შეკუმშვის ვიდჯეტის საშუალებით"
   tutorial_encryption_shortdescription: "წარმოგიდგენთ დაშიფვრის საჭიროებას და საიდუმლო შეტყობინებების გატეხვის მარტივ ტექნიკებს."
-  tutorial_kanopixel_shortdescription: "დაწერეთ კოდი და იხილიეთ ვიდეო თამაშების ისტორიის საკულტო სურათები, ტეტრისიდან მაინკრაფტამდე!"
+  tutorial_kanopixel_shortdescription: "დაწერეთ კოდი და იხილიეთ ვიდეო თამაშების ისტორიის საკულტო სურათები, ტეტრისიდან Minecraft-ამდე!"
   tutorial_foos_shortdescription: "\"The Foos\" არის პროგრამირების სწავლისთვის შექმნილი სახალისო და დამწყებებისთვის მოსახერხებელი თამაში."
   tutorial_tynkerdd_shortdescription: "გაემგზავრეთ ეპიკურ მოგზაურობაში განძეულობის მოსაპოვებლად."
   tutorial_tynkerana_shortdescription: "შექმენით მომუშავე ანალოგური საათი."
@@ -1104,8 +1124,8 @@ ka:
   tutorial_ice-age_shortdescription: "მოიგონეთ გამყინვარების პერიოდთან დაკავშირებული ამბავი ან შექმენით თამაში სათამაშო ლაბორატორიაში!"
   tutorial_koapp_shortdescription: "მხიარული iPad-ის თამაში, რომლის მიზანია კომპიუტერული პროგრამირების კონცეფციების სწავლება"
   tutorial_lightbot-intl_shortdescription: "თამაში, რომლის მიზანია პროგრამირების კონცეფციების სწავლება"
-  tutorial_rmc_shortdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი მაინკრაფტის სამყაროში."
-  tutorial_smc_shortdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი მაინკრაფტის სამყაროში."
+  tutorial_rmc_shortdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი Minecraft-ის სამყაროში."
+  tutorial_smc_shortdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი Minecraft-ის სამყაროში."
   tutorial_minecraft-2016_shortdescription: "შექმენით Minecraft-ის თამაში. შექმენით ქათმების, ცხვრების, ქრიფერების, ზომბების და სხვა არსებების საკუთარი ვერსიები."
   tutorial_thinkersmith-es_shortdescription: "სახელმძღვანელო უკომპიუტერო ჯგუფისთვის"
   tutorial_pixie_shortdescription: "ვიზუალური ენა, რომელიც განკუთვნილია პროგრამირების ეტაპობრივი სწავლისთვის გამოწვევების და თამაშების საშუალებით."
@@ -1316,7 +1336,7 @@ ka:
   tutorial_moana_longdescription: "ახალი Disney-ის კოდის ერთი საათის ტუტორიალი იყენებს პროგრამირების ვიზუალურ ენას, სადაც მოსწავლეები კოდის დასაწერად უბრალოდ ქაჩავენ და აგდებენ ვიზუალურ ბლოკებს. ვიზუალური პროგრამირება არის სახალიხო და გასაგებად მარტივი გზა კოდის წერის ლოგიკის სასწავლებლად. ვიზუალური პროგრამირების ცოდნა ქმნის საფუძველს ტექსტზე დაფუძნებული პროგრამირებისთვის, რაც უფრო რთული აქტივობაა. ეს სახელმძღვანელო გამიზნულია 8+ ასაკის ბავშვებისთვის და მათთვის, ვინც პროგრამირებას პირველად ცდის. ხელმისაწვდომია 23 ენაზე და ლოკალიზებულია აშშ-ს გარეთ. ეს სახელმძღვანელო ხელმისაწვდომია უფასოდ ონლაინ და მოიცავს ციფრულ ხელსაწყოებს ინგლისურ და ესპანურ ენებზე, მასწავლებლებისა და ღონისძიების ორგანიზატორებისთვის."
   tutorial_star-wars_longdescription: "ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში."
   tutorial_gumadventure_longdescription: "Amazing World of Gumball-ის ეპიზოდში \"The Signal\" ხარვეზი ახდენს გავლენას პერსონაჟების ურთიერთობაზე. ამ აქტივობაში გააგრძელეთ ეს ამბავი თქვენი ხარვეზის შექმნით და წარმოიდგინეთ, როგორი რეაქცია ექნებოდათ მასზე Gumball-სა და მის მეგობრებს."
-  tutorial_mchoc_longdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი მაინკრაფტის სამყაროში."
+  tutorial_mchoc_longdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი Minecraft-ის სამყაროში."
   tutorial_vidnews_longdescription: "It's the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. \"Breaking News: 400 students at Roosevelt participate in the Hour of Code\""
   tutorial_kodable-pre_longdescription: "\"დაკოდვადი\" არის თვითმართვადი თამაში, რომელიც 5+ ასაკის ბავშვებს აცნობს პროგრამირებას. მასწავლებლის ან მშობლის დახმარება სასურველია, მაგრამ არ არის აუცილებელი."
   tutorial_highseas_longdescription: "მოახდინეთ ოკეანეს ანიმირება, რათა შექმნათ გარემო, შემდეგ კი მოყვეთ ამბავი, რომელიც ვითარდება ღია ზღვებში."
@@ -1327,7 +1347,7 @@ ka:
   tutorial_boxisland_longdescription: "იმოგზაურეთ ყუთების კუნძულზე და შეაგროვეთ ყველა ვარსკვლავი! ყუთების კუნძული ლამაზი, მობილურისთვის განკუთვნილი პროგრამული თამაშია, რომელიც ბავშვებს საინტერესო მომაჯადოვებელ კუნძულზე ამოგზაურებს. ამ ტუტორიალში თქვენ შეისწავლით ალგორითმების საფუძვლებს, მიმდევრობებს, ციკლებსა და პირობით გამოსახულებებს!"
   tutorial_textcomp_longdescription: "რაღაც მომენტში ვაღწევთ ბიტების გაგზავნის სისწრაფის ფიზიკურ ლიმიტს და თუ დიდი მოცულობის ინფორმაციის გაგზავნა უფრო სწრაფად გვინდა, უნდა გამოვნახოთ ისეთი გზა, რომ იგივე ინფორმაცია წარმოვადგინოთ უფრო ცოტა ბიტით - ანუ, მონაცემები უნდა შევკუმშოთ. ამ გაკვეთილში მოსწავლეები გამოიყენებენ \"ტექსტის შეკუმშვის მოწყობილობას\" ინგლისური ტექსტის სეგმენტების შესაკუმშად სქემების მოძებნით და ტექსტის უფრო დიდი სქემების სიმბოლოებით ჩანაცვლებით. "
   tutorial_encryption_longdescription: "მოსწავლეები გაეცნობიან დაშიფრვას და საიდუმლო შეტყობინებების გატეხვის მარტივ ტექნიკებს. ისინი თავად ცდიან კლასიკური კეისრის შიფრით და შემთხვევითი ჩანაცვლების შიფრით დაშიფრული შეტყობინებების გატეხვას. მოსწავლეები უკეთ გაეცნობიან ინტერნეტით ინფორმაციის გაგზავნისას საიდუმლოობის საჭიროებას და იმას, რომ ძლიერი გამომთვლელი ხელსაწყოების ეპოქაში საჭიროა, დაშიფრვის ტექნიკები იყოს უფრო დახვეწილი. "
-  tutorial_kanopixel_longdescription: "ყველა ასაკის შემქმნელი სწავლობს კოდის წერას ნამდვილი პროგრამირების ენით და ხედავს, როგორ ცოცხლდება მისი ბრძანებები კოდის დახმარებით 13 სურათის თანმიმდევრობის შექმნით. გზადაგზა ისინი ისწავლიან ვიდეო თამაშების ხელოვნების ისტორიას, დაწყებული \"პონგითა\" და სხვა რეტრო თამაშებით, დამთავრებული 8-ბიტის ხელოვნებით და \"მაინკრაფტით\". ისინი დააკავშირებენ კომპიუტერულ მეცნიერებებს ხელოვნებასთან, ისტორიასთან და ამბის თხრობასთან. სწავლის გრაფიკი მოქნილია - შეგიძლიათ, დახარჯოთ 1 საათი ან რამდენიმე საათი, გაანაწილოთ მასალა ერთ ან რამდენიმე სესიად. მოსწავლეებს შეუძლიათ, დამოუკიდებლად შეასრულონ Pixel Hack-ი, გამოწვევებს შორის ინსტრუქციების გამოყენებით, ან შეუძლიათ, ჩართონ Pixel Hack-ი ინსტრუქტორის წინამძღოლობით - მითითებებით სავსე ყოველმხრივი სახელმძღვანელოთი. მოსწავლეებს შეუძლიათ, დაამატონ საკუთარი კრეატიული იდეები ჩვენი გამოწვევების დაჰაკვით, და მოიპოვონ Pixel-ის ჰაკერის სერთიფიკატი."
+  tutorial_kanopixel_longdescription: "ყველა ასაკის შემქმნელი სწავლობს კოდის წერას ნამდვილი პროგრამირების ენით და ხედავს, როგორ ცოცხლდება მისი ბრძანებები კოდის დახმარებით 13 სურათის თანმიმდევრობის შექმნით. გზადაგზა ისინი ისწავლიან ვიდეო თამაშების ხელოვნების ისტორიას, დაწყებული \"პონგითა\" და სხვა რეტრო თამაშებით, დამთავრებული 8-ბიტის ხელოვნებით და \"Minecraft-ით\". ისინი დააკავშირებენ კომპიუტერულ მეცნიერებებს ხელოვნებასთან, ისტორიასთან და ამბის თხრობასთან. სწავლის გრაფიკი მოქნილია - შეგიძლიათ, დახარჯოთ 1 საათი ან რამდენიმე საათი, გაანაწილოთ მასალა ერთ ან რამდენიმე სესიად. მოსწავლეებს შეუძლიათ, დამოუკიდებლად შეასრულონ Pixel Hack-ი, გამოწვევებს შორის ინსტრუქციების გამოყენებით, ან შეუძლიათ, ჩართონ Pixel Hack-ი ინსტრუქტორის წინამძღოლობით - მითითებებით სავსე ყოველმხრივი სახელმძღვანელოთი. მოსწავლეებს შეუძლიათ, დაამატონ საკუთარი კრეატიული იდეები ჩვენი გამოწვევების დაჰაკვით, და მოიპოვონ Pixel-ის ჰაკერის სერთიფიკატი."
   tutorial_foos_longdescription: "დააპროგრამეთ საყვარელი Foo-ები ისე, რომ მათ ამოხსნან თავსატეხები, რომლებიც ასწავლიან კომპიუტერული მეცნიერების ისეთ ფუნდამენტურ კონცეფციების როგორებიცაა მიმდევრობები და ციკლები. ყველას და ყველგან შეუძლია პროგრამირების სწავლა codeSpark-ის აკადემიის ჯილდოს მფლობელი \"უსიტყვო\" ინტერფეისის საშუალებით. დაწმყებო პროგრამისტებო და დაწყებითი კლასის მოსწავლეებო, კეთილი იყოს თქვენი მობრძანება!"
   tutorial_tynkerdd_longdescription: "შექმენით თქვენი საკუთარი, უნიკალური დრაკონი, შემდეგ გამოიყენეთ პროგრამირება, რათა ამოახსნევინოთ მას მხიარული თავსატეხები და მოიპოვოთ განძეულობა და მონეტები! განძეულობის მოსაპოვებლად, თქვენ მოგიწევთ ჩახლართულ ციხესიმაგრეებში მოგზაურობა, გაძლიერებების პოვნა და რაინდების დაპყრობა."
   tutorial_tynkerana_longdescription: "გამოიყენეთ მათემატიკისა და გეომეტრიის ცოდნა და შექმენით მუშა ისრებიანი საათი წამების, წუთების და საათის მოძრავი ისრებით. ამისთვის დაგჭირდებათ, გამოთვალოთ, რა კუთხეს უნდა აჩვენებდეს თითოეული ისარი იმის მიხედვით, თუ რა დროა. როცა მორჩებით, შეგიძლიათ, დაამატოთ შეხსენება იმის შესახებ, თუ რისი გაკეთება დაგჭირდებათ დღის განმავლობაში საკუთარი მაღვიძარას შესაქმნელად!"
@@ -1542,8 +1562,8 @@ ka:
   tutorial_ice-age_longdescription: "შექმენით ამბავი ან თამაში სათამაშო ლაბორატორიის საშუალებით! ამოძრავეთ Gumball-ის პერსონაჟები, ააჟღერეთ ისინი, შეაგროვეთ ქულები და ისროლეთ ფიფქები!"
   tutorial_koapp_longdescription: "Kodable არის iPad-ის თვითმოხმარებადი თამაში, რომელიც 5+ ასაკის ბავშვებს აცნობს პროგრამირებას. მასწავლებლის ან მშობლის დახმარება სასურველია, მაგრამ არ არის აუცილებელი."
   tutorial_lightbot-intl_longdescription: "შეისწავლეთ ძირითადი პროგრამული ლოგიკა, დაწყებული სუპერ-მარტივი პროგრამირებით 4+ ასაკებისთვის iOS ან Android (ან ვებ ბრაუზერ) პლატფორმებზე. ისწავლეთ ბრძანებების მიმდევრულად განლაგება, ნიმუშების ამოცნობა, პროცედურებისა და ციკლების გამოყენება!"
-  tutorial_rmc_longdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი მაინკრაფტის სამყაროში."
-  tutorial_smc_longdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი მაინკრაფტის სამყაროში."
+  tutorial_rmc_longdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი Minecraft-ის სამყაროში."
+  tutorial_smc_longdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი Minecraft-ის სამყაროში."
   tutorial_minecraft-2016_longdescription: "შექმენით Minecraft-ის თამაში. შექმენით ქათმების, ცხვრების, ქრიფერების, ზომბების და სხვა არსებების საკუთარი ვერსიები."
   tutorial_thinkersmith-es_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
   tutorial_pixie_longdescription: "კოდის ერთი საათის ტუტორიალი პიქსისთან ერთად"

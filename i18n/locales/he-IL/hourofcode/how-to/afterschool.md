@@ -7,13 +7,15 @@ nav: how_to_nav
 
 # איך ללמד "שעה של קוד" בשיעורים לאחר שעות הלימודים ובמועדוניות
 
-הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### הצטרפו לתנועה והצעידו קבוצת תלמידים אל שעתם הראשונה בלימודי המחשבים בעזרת צעדים אלו. קל לעבוד עם "שעה של קוד" - גם עבור מתחילים! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+
+* * *
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. בחרו סרטון הדרכה
 
-אנו מספקים מגוון של [סרטוני הדרכה כיפיים באורך של שעה אחת](%= resolve_url('/learn') %)עבור משתתפים מכל הגילאים, שנוצרו על ידי מגוון של שותפים. [נסו אותם!](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [נסו אותם!](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
@@ -27,88 +29,49 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and e
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. אבל **אינך** נדרש למחשב עבור כל ילד, וגם באפשרותך לבצע "שעה של קוד" ללא מחשב כלל.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+ודא שניסית מדריכים על מחשבי או מכשירי הסטודנטים כדי לאשש שאכן הם עובדים בצורה תקינה על הדפדפנים יחד עם קול ווידאו. **יש רוחב פס נמוך?** תכנן להציג סרטונים בפני כל הכיתה, כך שאף תלמיד לא יידרש להוריד בעצמו את הסרטונים. או נסה את המדריכים הלא מקוונים.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+ספק אזניות עבור הכיתה, או בקש מהתלמידים להביא את שלהם, אם המדריך אשר בחרת עובד הכי טוב עם שמע.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). כאשר תלמידים מתחברים יחד, הם עוזרים אחד לשני ונסמכים פחות על המורה. They’ll also see that computer science is social and collaborative.
 
-<img src="/images/fit-350/group_ipad.jpg" />
-
-## 5. Start your Hour of Code off with an inspiring video
+## 5. התחל את "שעה של קוד" עם סרטון מעורר השראה
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Show an inspirational video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- סרטונים ההשקה המקוריים של Code.org, יחד עם ביל גייטס, מרק צוקרברג, וכוכב ה-NBA כריס בוש - קיימים בגרסאות של [דקה אחת](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 דקות](https://www.youtube.com/watch?v=nKIu9yen5nc) ו[9 דקות](https://www.youtube.com/watch?v=dU1xS07N-FA).
+- [סרטון בינלאומי של "שעה של קוד"](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- מצא עוד סרטוני השראה נוספים [כאן](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- הסבר כיצד טכנולוגיה משפיעה על חיינו, עם דוגמאות שיתחברו אליהם, גם לבנות וגם לבנים (דבר על אפליקציות וטכנולוגיות שעוזרות להציל חיים, לעזור לאנשים, לחבר אנשים וכדו').
 - ערכו רשימה של דברים שמשתמשים בקוד בחיי היום יום.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- ראה טיפים לגרום לבנות להתעניין במדעי המחשב [כאן](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6) קודד!
 
-**Direct participants to the activity**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**When someone comes across difficulties it's okay to respond:**
-
-- "אני לא יודע.. בוא נפתור את זה יחד."
-- "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
-- "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
-
-**מה לעשות אם מישהו מסיים מוקדם?**
-
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
-- Or, ask those who finish early to help others who are having trouble.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Celebrate
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-- [הזמן חולצות מותאמות אישית](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) לבית הספר שלך.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - שתפו תמונות וסרטוני וידאו של אירוע "שעה של קוד" ברשתות החברתיות. השתמשו בתג #HourOfCode ו@codeorg כדי שנוכל גם אנחנו להדגיש את הצלחתכם!
 
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-## Other Hour of Code resources for educators
+## מקורות מידע נוספים במסגרת "שעה של קוד" למורים
 
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
@@ -117,9 +80,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## איך ממשיכים אחרי "שעה של קוד"?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
-
-- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
-- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
 
 <%= view :signup_button %>

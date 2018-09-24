@@ -11,12 +11,21 @@ zu:
   campaign_date_full: "uZibandlela 5-11"
   campaign_date_year: "2016"
   campaign_date_full_year: "uZibandlela 5-11, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Zibandakanye nawona mcimbi omkhulu kumlandu, uZiba 7-13, 2015'
   front_intro_default: 'Ihora loKufingqwa lingumnyakazo womhlaba wonke ofinyelela izigidi nezigidi zabafundi emazweni adlulela kukhulu elimashumi ayishagalolunye. Yinomangubani, nomakuphi ongahlela umcimbi weHora loKufingqwa. Ihora elilodwa lwezimfundiso luyatholakala ngamalwimi adlulela kumashumi amane. Ubungcweti abudingakali. <amandla> Iminyaka 4 ukuya ku 104.</amandla>'
   front_watch_video: 'Bukela levidiyo ensha'
   front_watch_regular_video: 'Bukela levidiyo'
   front_volunteers: 'Amavolontiya anobuchwepheshe ayafuneka'
   front_start_learning: 'Qala ukufunda'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Izinsiza'
   header_menu_faq: 'IMIBUZO EJWAYELEKILE UKUBUZWA'
   header_menu_how_to: 'Yenza- Kanjani'
@@ -222,6 +231,8 @@ zu:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Hlela iHora loKufingqwa ngesikhathi %{campaign_date}, uphinda ubhalise lapha.'
   signup_name_label: 'Igama lakho'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ zu:
   signup_your_event: 'Bhalisa umcimbi wakho'
   signup_host_an_hour: 'Hlela ihora'
   signup_match_volunteer: 'Ngisize ngithole unjiniyela wendawo ukuba azokhuthaza abafundi bami'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Uma uhlela imicimbi eminingi, sicela usiphe igama elikhethekile okanye i-imeyili yalowo nalowo. Umcimbi owodwa siwubala ngenhlanganisela yegama kanye ne-imeyili."
   signup_registration_deadline: "Ukubhalisa kweHora lokufingqwa kuvalwa mhlaka 12 Disemba."
   signup_name_placeholder: 'Igama lakho'
@@ -265,6 +281,7 @@ zu:
   signup_thank_you_message: 'Sikuthumele i-imeyili eyisiqinisekiso enolwazi lokukusiza ukwazi ukuqala.'
   map_title: "Imephu yeHora loKufingqwa"
   map_header: '# Imicimbi yeHora loKufingqwa uhlaba wonke'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Bona imicimbi yonke'
   map_header_company: '# by company organizers'
   map_header_country: '# ku %{country}'
@@ -280,6 +297,7 @@ zu:
   meta_tag_twitter_title: 'Zonke izingane zifanelwe yithuba'
   meta_tag_twitter_description: 'IHora loKufingqwa lingumjikelezo oyimbulunga ofinyelela amashumi ezigidi zabafundi kumazwe aphezulu ku-180 nezilimi eziphezu kuka 45. Iminyaka 4 ukuya 104.'
   twitter_default_text: "Ngithatha iqhaza ku #iHoraloKufingqwa kulonyaka, wena? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'IMIBUZO EJWAYELEKE UKUBUZWA'
   hoc_faq_what_is_hoc_q: 'Liyini iHora loKufingqwa?'
   hoc_faq_what_is_hoc_a: "IHora loKufingqwa liqale njengehora elilodwa lokwazisa ikhompyutha sayensi, elisongozele ukwenza ukufingqwa kubelula, ukubonisa ukuba yinoma ngubani ongafunda okokuqala ezintweni eziyisisekelo, kanye nokunabisa ukuhlanganyela kwemikhakha yekhompyutha sayensi. Ukusukela lapho ibengumzamo umhlaba wonke wokugubha ikhompyutha sayensi, ukuqala ngehora elilodwa lwemisebenzi yokufingqwa kodwa enwebela kumizamo eyomphakathi ehlukile. Bheka ku <a href='%{tutorials}'>izifundiso kanye nemisebenzi</a>. Lesisekelo somnyakazo sisekelwe abadlulela ku<a href='%{partners}'>400 yabahlanganeli</a> kanye 200,000 yothisha umhlaba wonke."
@@ -333,8 +351,8 @@ zu:
   stats_hoc: "IHora loKufingqwa: 5 amalanga"
   stats_global: "Badlulele kuzigidi ezi100 abafundi abazame iHora loKufingqwa"
   stats_girls_more: "Maningi kakhulu amantombazane azame ikhompyutha sayensi kumunyaka eyi70 edlulile"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Nsuku zonke kubonakale imiphumela efanayo&mdash; 100% yokuzinikezela." - Nina Nichols Peery, Uthisha'
   stats_student: '"Ngazile ukuba lokhu kwaba <b>elilodwa-impilo-yonke</b> ithuba." - Mariana Alzate, ibanga 5th'
   stats_michael: '"Angikaze <b>nanini na</b> ngibone abafundi bami bejabule ngendlela engaka ngokufunda." - Micheal Clark, Uthisha'
@@ -374,6 +392,7 @@ zu:
   videos_obama_cs: Umangameli uObama kukhompyutha sayensi
   videos_anybody_can_learn: Yinoma Ngubani Ongafunda (1 umzuzu)
   title_country_resources: Izinsiza Ezithize zeZwe
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Indlela Yokwenza yeHora loKufingqwa yeziFunda
   title_how_to_events: Indlela Yokwenza Umcimbi yeHora loKufingqwa
   title_how_to_organizations: Indlela yokuhlela iHora loKufingqwa - Izinhlangano
@@ -382,6 +401,7 @@ zu:
   title_how_to_volunteers: Indlela yokuqondisa yovolontiya beHora loKufingqwa
   title_how_to_parents: Indlela yokuqondisa eyenzelwe abazali
   title_how_to: Indlela Yokuqondisa
+  title_international_partners: Contact International Partners
   title_press_release: Okukhululiwe kwezikhulu kwaHora loKufingqwa
   title_op_ed: Isampula ye Op-ed Esekela Iviki leMfundiso yeKhompyutha Sayensi kanye neHora loKufingqwa
   title_press_kit: Ikhithi yabokusasaza

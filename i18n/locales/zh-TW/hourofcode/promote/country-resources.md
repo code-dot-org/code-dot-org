@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - 是自學式的-允許學生用自己的步調和技能層次進行。
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2)規劃您的硬體需求 — 電腦非必需品
 
 在一小時玩程式的活動使用有網路的電腦可以有最佳體驗，但不見要人手一台電腦，就算沒有電腦，照樣可以舉辦一小時玩程式活動。
 
 - **在學生端電腦或設備上測試教案。**請確保它們能正常運作(含聲音和影片)。
-- **預覽恭喜頁面** 去看看學生完成時會看到什麼。 
+- **預覽恭喜頁面** 去看看學生完成時會看到什麼。
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3)以您現有的科技環境為基礎規畫下一步

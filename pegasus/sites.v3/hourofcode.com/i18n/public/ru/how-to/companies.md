@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_companies) %>
+title: <%= hoc_s(:title_how_to_companies).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,52 +7,55 @@ nav: how_to_nav
 
 # Как вовлечь Вашу компанию в Час Кода
 
-## Вдохновляйте учеников и волонтеров
+### Find out how you and your employees can inspire students to try computer science!
+
+---
+
+## Connect with local classrooms and volunteer for the Hour of Code
 
 Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
-- За дополнительными инструкциями по вовлечению ваших сотрудников и сотрудничеству с классами, загляните в наше [руководство для корпоративных партнеров](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
+<button>Sign up to volunteer!</button> <br /> <br /></p> 
 
-## Дополнительные способы которыми компании могут поддержать Час Кода:
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
-- Попросите вашего директора [послать электронное письмо для всей компании](<%= resolve_url('/promote/resources#sample-emails') %>), подчеркивающее важность компьютерных наук и поощряющее сотрудников распространять информацию о Часе Кода.
-- Проведите Счастливый Час Часа Кода с коллегами, чтобы опробовать такую [деятельность](<%= resolve_url('/learn') %>).
-- Проведите Час Кода для учеников местного класса или позвольте некоммерческим партнерам провести Час Кода в офисе вашей компании. Ниже вы найдете руководство по проведению мероприятий.
+## Additional ways companies can support the Hour of Code
+
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
+- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 # Как провести Час Кода с учениками
 
 ## 1. Поддержите свой Час Кода
 
-- Делитесь информацией о вашем [Часе Кода](<%= resolve_url('/promote') %>) и вдохновляйте других проводить свои.
-- Поощряйте разработчиков программного обеспечения в вашей компании на посещение местных классов, чтобы помогать вести Час Кода и вдохновлять учеников на изучение компьютерных наук. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
+- Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Посмотрите эту видео инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Выберите занятие
 
-Мы предоставляем разнообразные [веселые, продолжительные уроки](<%= resolve_url('/learn') %>) для участников всех возрастов, созданные нашими партнерами. [Попробуй их!](<%= resolve_url('/learn') %>)
+We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Попробуй их!](<%= resolve_url('/learn') %>)
 
-**Все уроки Часа Кода** требуют минимального времени на подготовку для организаторов и предназначены для самостоятельной работы - позволяя детям работать в своем собственном темпе и на своем уровне навыков.
+**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4. Определите вашу потребность в оборудовании - компьютеры не обязательны
 
-Час Кода лучше всего проводить с компьютерами имеющими интернет подключение. Но вам **не** нужен компьютер для каждого участника, и вы даже можете провести Час Кода вообще без компьютеров.
+Час Кода лучше всего проводить с компьютерами имеющими интернет подключение. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Планируйте Заранее!** Выполните следующие действия до начала мероприятия:
+**Plan Ahead!** Do the following before your event starts:
 
-- Протестируйте уроки на компьютерах или устройствах. Убедитесь что они корректно работают в браузерах со звуком и видео.
-- Предоставьте наушники, или попросите участников принести свои собственные, если занятие, который вы выбрали, лучше всего работает со звуком.
-- **Не хватает компьютеров?** Работайте [парами](https://www.youtube.com/watch?v=vgkahOzFH2Q). Когда участники работают вместе, они помогают друг другу и меньше полагаются на ведущего. Также они увидят, что компьютерная наука социальна и кооперативна.
-- **Низкая скорость интернета?** Запланируйте показать видео всему классу, чтобы каждый участник не скачивал свое собственное видео. Или попробуйте оффлайн занятия.
-
-<img src="/images/fit-350/group_ipad.jpg" />
+- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+- **Не хватает компьютеров?** Работайте [парами](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Также они увидят, что компьютерная наука социальна и кооперативна.
+- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 ## 5. Начните ваш Час Кода с вдохновляющего видео
 
-Сделайте Час Кода более эффективным, рассказывая о роли компьютерной науки в жизни каждого и вдохновляя учеников. Расскажите больше о том, что вдохновляет Вас заниматься компьютерной наукой и о Вашей работе в компании.
+Сделайте Час Кода более эффективным, рассказывая о роли компьютерной науки в жизни каждого и вдохновляя учеников. Share more about what inspired you to pursue computer science and your role at your company.
 
 **Покажите вдохновляющее видео:**
 
@@ -61,71 +64,36 @@ Code.org offers the opportunity for your employees to [connect](<%= codeorg_url(
 - [Президент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Найти больше вдохновляющих видео можно [здесь](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Идеи как представить ученикам ваш Часа Кода:**
+**Ideas to introduce your Hour of Code activity to students:**
 
-- Объясните как технологии влияют на наши жизни, с примерами которые тронут и мальчиков и девочек - расскажите о технологиях, которые спасают жизни, помогают людям и объединяют людей.
-- Если ваша компания работает в технологической области, продемонстрируйте интересные и инновационные продукты, над которыми компания работает.
-- Если Ваша компания не занимается технологиями, обсудите с учениками, как Ваша компания использует технологии для решения проблем и достижения целей.
-- Пригласите программистов, работающих в Вашей компании, для рассказа о том, как и почему они приняли решение изучать компьютерные технологии и над какими проектами они сейчас работают.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
+- If you are a tech company, demo fun, innovative products your company is working on.
+- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Вы можете найти советы, как заинтересовать девочек информатикой, [здесь](http://code. org/girls).
 
 ## 6. Программируйте!
 
 **Объясните участникам как начать**
 
-- Запишите на доске ссылку на урок. Найти ссылку можно в [информации для выбранного урока](<%= resolve_url('/learn') %>) под числом участников.
-- Для учеников помладше заранее откройте страницу с уроком или сохраните ее как закладку.
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](<%= resolve_url('/learn') %>) under the number of participants.
+- For younger students, load the activity page ahead of time or save it as a bookmark.
 
-**Если кто-то столкнулся с трудностями, будет правильно ответить:**
+**When participants come across difficulties it's okay to respond:**
 
 - “Я не знаю. Давай разберемся вместе”
-- “Технология не всегда работает так, как мы хотим”
 - “Изучение программирования - это как изучение нового языка, вы не сразу станете говорить свободно.”
 
 **Что делать, если кто-то справляется раньше всех?**
 
-- Они могут попробовать выполнить другие задания Часа Кода на сайте hourofcode.com/learn
-- Или попросите их помочь другу или подруге, у которых возникли трудности с выполнением задания.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+- They can try another Hour of Code activity at hourofcode.com/learn.
+- Or, ask them to help a friend who are having trouble with the activity.
 
 ## 7) Отпразднуйте
 
 - [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
-- [Распечатайте наклейки](<%= resolve_url('/promote/resources#stickers') %>) "Я участвовал в Часе Кода".
-- [Закажите футболки](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для своих сотрудников.
+- [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - Поделитесь фотографиями и видео о вашем Часе Кода в социальных медиа. Используйте хештеги #HourOfCode и @codeorg, чтобы мы тоже смогли отметить ваш успех!
-
-[col-33]
-
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 <%= view :signup_button %>

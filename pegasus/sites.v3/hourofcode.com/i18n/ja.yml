@@ -11,12 +11,21 @@ ja:
   campaign_date_full: "12月 5 − 11日"
   campaign_date_year: "2016"
   campaign_date_full_year: "2016 年 12 月 5 - 11 日"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: '%{campaign_date} は、史上最大の学習イベントに参加しよう'
   front_intro_default: 'Hour of Code は、180カ国以上から数千万人の生徒が参加する世界的なムーブメントです。誰でも、どこでもHour of Codeのイベントを開催できます。1時間のチュートリアルは45ヵ国の言語に翻訳されています。<strong>4歳から104歳まで</strong>、経験は必要ありません。'
   front_watch_video: '新しいビデオを見る'
   front_watch_regular_video: 'ビデオを見る'
   front_volunteers: 'エンジニアボランティアを募集しています'
   front_start_learning: '学習を開始しましょう'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: '資料'
   header_menu_faq: 'よくある質問'
   header_menu_how_to: '開催ガイド'
@@ -221,7 +230,9 @@ ja:
   front_join_us_n_students_served: "# 人が受講"
   front_join_us_challenge: "有名人とのあなたの教室のビデオチャットに勝つ！"
   front_join_us_learn_more: "もっと詳しく知る"
-  signup_closed: 'コード時間の登録が終了しました。次の勤務時間にサインアップするために、10月に再度確認してください。'
+  signup_closed: 'Hour of Codeへの登録は終了しています。10月に次回のHour of Codeのサインアップを再開しますのでまた確認してください。'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '%{campaign_date} の間に、Hour of Codeのイベントを開催する準備を終えたら、ここに登録しましょう！'
   signup_name_label: 'お名前'
   signup_name_error: '名前が必要です。'
@@ -243,6 +254,11 @@ ja:
   signup_your_event: 'イベントを登録'
   signup_host_an_hour: '開催する'
   signup_match_volunteer: '日本で働くソフトウェアエンジニアを探すのを助けて欲しい'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "複数のイベントを開催する場合は、それぞれに一意の名前またはメールアドレスを提出してください。我々は、名前とメールアドレスの組み合わせごとに1 つのイベントとしてカウントします。"
   signup_registration_deadline: "Hour of Codの登録締め切りは 12 月 12 日。"
   signup_name_placeholder: "お名前\n"
@@ -264,7 +280,8 @@ ja:
   signup_thank_you_header: "Hour of Codeのイベントを主催していただきありがとうございます。"
   signup_thank_you_message: '確認メールを送信しました。'
   map_title: "Hour of Code の地図"
-  map_header: '世界中で、#個ものHour of Codeが行われています'
+  map_header: '世界中でHour of Code 2017に登録された#個のイベント'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'すべてのイベントを見る'
   map_header_company: '# 会社主催'
   map_header_country: 'そのうち # 個は%{country} で行われています。'
@@ -280,32 +297,33 @@ ja:
   meta_tag_twitter_title: '全ての子供に機会を得る権利があります'
   meta_tag_twitter_description: 'Hour of Codeは、すでに180 以上の国々及び45の言語で数千万人の生徒を対象に行われた、世界的なムーブメントです。4歳から104歳が対象です。'
   twitter_default_text: "私は今年の #HourOfCode に参加します。あなたは? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'よくある質問'
   hoc_faq_what_is_hoc_q: 'Hour of Codeとは何ですか？'
-  hoc_faq_what_is_hoc_a: "Hour of Code は、「コード（プログラミング）」の謎を解き明かし、全ての人が基本を学ぶことができることを示し、コンピューターサイエンス分野の幅広い参加者に向けて作成された、1時間のコンピューターサイエンス入門として始まりました。1 時間のコーディング（プログラミング）が、いまや様々なコミュニティの努力へ拡大し、コンピュータサイエンスの発展のための世界的な努力となっています。<a href='%{tutorials}'> チュートリアルと活動</a>をご覧ください。この草の根キャンペーンは、世界中の<a href='%{partners}'> 400 以上のパートナー</a> と 200,000 以上の教育者によってサポートされています。"
+  hoc_faq_what_is_hoc_a: "Hour of Codeは、「コード（プログラム）」の謎を解き明かし、誰もがその基本を学ぶことが可能なことを明らかにして、コンピューターサイエンス分野への参加者を拡大するため、1時間のコンピューターサイエンス入門として始まりました。1時間のコーディング（プログラミング）が、いまや様々なコミュニティの取り組みへと拡大し、コンピュータサイエンスの発展のための世界的な取り組みとなっています。<a href='%{tutorials}'>チュートリアルとアクティビティ</a>をご覧ください。この草の根キャンペーンは、世界中の<a href='%{partners}'>400以上のパートナー</a>と200,000以上の教育者によってサポートされています。"
   hoc_faq_last_year: "チュートリアルを試す"
   hoc_faq_when_is_hoc_q: 'Hour of Code はいつ行われますか？'
-  hoc_faq_when_is_hoc_a: "Hour of Code は、毎年 <a href='%{csedweek_url}'>コンピュータサイエンス学習週間</a> の間に開かれます。%{campaign_date_year} コンピュータサイエンス学習週間は %{campaign_date_full} ですが、あなたは Hour of Code を一年中開催することができます。コンピュータサイエンス学習週間は、コンピューティングの先駆者 <a href='%{grace_hopper}'>アドミラル・グレース・マーレー・ホッパー</a> (1906年12月9日) の誕生日を記念して毎年開催されます。"
+  hoc_faq_when_is_hoc_a: "Hour of Codeは、毎年<a href='%{csedweek_url}'>コンピュータサイエンス教育週間</a>の間に実施されます。%{campaign_date_year}年のコンピュータサイエンス教育週間は%{campaign_date_full}ですが、あなたは年間を通じてHour of Codeを開催できます。コンピュータサイエンス教育週間は、コンピュータの先駆者<a href='%{grace_hopper}'>アドミラル・グレース・マーレー・ホッパー</a>の誕生日 (1906年12月9日) を記念して毎年開催されています。"
   hoc_faq_why_cs_q: 'なぜコンピュータサイエンスなのですか？'
-  hoc_faq_why_cs_a: "<i>すべての</i> 生徒にコンピュータサイエンスを学ぶ機会があるべきです。それは、問題解決能力、論理的思考、創造性を育むことを助けます。早くから始める事により、生徒は 21 世紀のキャリアで成功するための基礎を獲得します。詳しい統計は <a href='%{stats_url}'>ここ</a> を参照してください。"
+  hoc_faq_why_cs_a: "<i>すべての</i>生徒はコンピュータサイエンスを学ぶ機会を与えられるべきです。それは、問題解決能力、論理的思考、創造性を育む手助けになります。早期に始めることにより、21世紀のいずれのキャリアパスにおいても成功する基盤を身に付けることができます。詳しい統計データは<a href='%{stats_url}'>ここ</a>を参照してください。"
   hoc_faq_how_participate_q: 'どうすればHour of Codeの運動に参加できますか?'
   hoc_faq_how_participate_a: "<a href='/how-to'>イベント開催ガイド</a>を見て、プランを立て始めましょう。Hour of Codeのイベントは、学校や地域コミュニティー、学校での課外活動等様々な場所で簡単に開催することができます。もしくは、%{campaign_date} の期間内にご自分で試していただいても問題ありません！"
   hoc_faq_behind_hoc_q: 'Hour of Codeは誰が運営しているのですか?'
-  hoc_faq_behind_hoc_a: "Hour of Codeは<a href='http://code.org'>Code.org</a>により運営されています。この非営利団体は、より多くの学校がHour of Codeに参加する事、女性の参加を増やす事そして、マイノリティーの学生にコンピュータサイエンスへの参加を拡大させることに専念しています。 <a href='%{codeorg_url}/about/partners'>前例にないパートナー達</a>が一緒になってHour of Codeを支援してくれています。 &mdash; マイクロソフト, アップル、アマゾン、そして、大学の理事会などを含みます。"
+  hoc_faq_behind_hoc_a: "Hour of Codeは、Hour of Codeとコンピュータサイエンス教育週間の<a href='%{partner_url}'>諮問委員会と審査委員会</a>、およびマイクロソフト、アップル、アマゾン、ボーイズ・アンド・ガールズ・クラブ・オブ・アメリカ、大学の理事会を含む、Hour of Codeを一体となって支援しているパートナーたちの、前例のない連携により運営されています。"
   hoc_faq_host_q: "プログラミングについて知らなくても、イベントを開催できますか？"
   hoc_faq_host_a: "もちろんです。Hour of Codeのチュートリアルは、生徒が自分のペースで一人で進められるようになっています。イベントを開催するにあたってあなたがやるべきことは<a href='%{codeorg_url}/learn'> 現在のチュートリアルを試してみる</a>ことだけです。後は私たちのチュートリアルに任せてください。それではいますぐ、<a href='/resources/how-to'> How to ガイド</a> を読んでイベントを計画しましょう！"
   hoc_faq_devices_q: "生徒はどのようなデバイスを使用する必要がありますか？"
-  hoc_faq_devices_a: "Code.orgのチュートリアルは、どのようなデバイスでも、どのようなブラウザでも動作します。<a href='%{codeorg_url}/educate/it'>こちら</a>から、より詳細な情報を入手できますので、ご覧ください。Code.org以外のチュートリアルに関しては、<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>を御覧ください。あなたの学校にチュートリアルに必要な機材が無くても、私たちは<a href='%{unplugged_url}'>コンピュータを必要としないアクティビティ</a> を用意していますので、忘れないでくださいね！"
+  hoc_faq_devices_a: "Code.orgのチュートリアルは、どのようなデバイスでも、どのようなブラウザでも動作します。<a href='%{codeorg_url}/educate/it'>こちら</a>から、より詳細な情報を入手できますのでご覧ください。Code.org以外のチュートリアルに関しては、<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>のチュートリアルの説明をご覧ください。あなたの学校にチュートリアルに必要な機材が無くても、私たちは<a href='%{unplugged_url}'>コンピュータを必要としないアクティビティ</a>を用意していますので、忘れないでくださいね！"
   hoc_faq_need_computers_q: '参加者の人数分のコンピュータが必要ですか？'
-  hoc_faq_need_computers_a: "いいえ。Hour of Code のチュートリアルはパソコン、スマートフォン、タブレットで動きますし、いくつかはコンピュータがまったく不要です。どの場所からでも、あなたの持っているもので参加できます。<p><i>いくつかのやり方があります:</i> <br> <ul> <li><b>二人で作業する。</b> <a href='%{pair_programming_research}'>調査の結果</a> コンピューターを共有して一緒に作業する事、<a href='%{pair_programming_video}'>ペア プログラミング</a>によって、生徒は最も良く学びます。生徒にペアを組むように勧めましょう。<li><b>プロジェクター・スクリーンを使う。</b> もしウェブに接続されたコンピューター用にプロジェクターとスクリーンが用意できるなら、全てのグループが一緒に Hour of Code を行えます。一緒にビデオを見たり、順番にパズルを解いたり質問に答えたりしましょう。<li><b>コンピューターは不要</b> まったく <a href='%{unplugged_url}'>コンピューターが不要のチュートリアル</a> も提供しています。</ul>"
+  hoc_faq_need_computers_a: "いいえ。Hour of Codeのチュートリアルはパソコン、スマートフォン、タブレットで動きますし、いくつかはコンピュータがまったく不要です。どの場所からでも、持っているものがどんなものでも参加できます。<p><i>いくつかのやり方があります:</i> <br> <ul> <li><b>2人のペアで作業する。</b><a href='%{pair_programming_research}'>調査によると</a>、コンピュータを共有して一緒に作業する<a href='%{pair_programming_video}'>ペアプログラミング</a>によって、生徒は最もよく学ぶことができるそうです。生徒にペアを組むように呼びかけましょう。<li><b>プロジェクター・スクリーンを使う。</b>もしウェブに接続されたコンピュータ用にプロジェクターとスクリーンが用意できるなら、グループ全員が一緒にHour of Codeを行えます。一緒にビデオを見たり、順番にパズルを解いたり、質問に答えたりしましょう。<li><b>コンピュータは不要。</b><a href='%{unplugged_url}'>コンピュータがまったく不要のチュートリアル</a>も提供しています。</ul>"
   hoc_faq_international_q: "日本でHour of Codeに参加もしくはイベントを開催するにはどうしたら良いでしょう？"
   hoc_faq_international_a: "誰でも、どこでもHour of Codeのイベントを開催することができます。昨年も、世界中の生徒がHour of Codeの取り組みに参加しました。2015年は、あなたの番です。<a href='/promote'>もっと知る</a>。"
   hoc_faq_tutorial_q: 'Hour of Codeのチュートリアルを作成するにはどうしたら良いですか？'
   hoc_faq_tutorial_a: "もしあなた自身がチュートリアルを提供する「チュートリアルパートナー」になる事に興味がありましたら、<a href='/tutorial-guidelines'> 当社のガイドラインと手順を参照してください</a> 。現在提供しているチュートリアルより多くの、より魅力的でバラエティに富んだチュートリアルを提供したいと思っています。"
   hoc_faq_account_q: "生徒たちが、アカウントを取得してログインする必要はありますか？"
-  hoc_faq_account_a: "いいえ。生徒が Hour of Code を試すのに、サインアップやログインは全く必要ありません。<a href='%{codeorg_url}/learn/beyond'>続きのコース</a>の多くは、生徒の進捗を保存するためにアカウントの作成が必要です。さらに、 Hour of Code へのサインアップは、自動的に Code Studio アカウントを作成するものではありません。生徒の為のアカウントを作成したい場合は、以下の <a href='https://youtu.be/_smelV_KISE'>手順</a> に従ってください。"
+  hoc_faq_account_a: "いいえ。生徒がHour of Codeを試すのに、サインアップやログインは全く必要ありません。<a href='%{codeorg_url}/learn/beyond'>続きのコース</a>の多くは、生徒の進捗を保存するためにアカウントの作成が必要です。また、Hour of Codeへサインアップしても、自動的にCode Studioアカウントを作成することはありません。生徒の為のアカウントを作成したい場合は、<a href='https://youtu.be/_smelV_KISE'>手順</a>に従ってください。"
   hoc_faq_high_school_q: "高校生は、どのチュートリアルから始めるべきですか？"
-  hoc_faq_high_school_a: "スターウォーズやマインクラフトのチュートリアル、特にスターウォーズ JavaScript バージョンは高校生にぴったりで、両方のチュートリアルは操作のレベルに左右されません。他には、 <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> の初心者用チュートリアル、アングリーバードやアナと雪の女王、から始めるのもお勧めです。高校生なら、１つを30 分程で終了することができるはずなので、カーンアカデミーや CodeHS などの、より高度な JavaScript チュートリアルを試すことも出来ます。"
+  hoc_faq_high_school_a: "スターウォーズやマインクラフトのチュートリアル、特にJavaScript版のスターウォーズは高校生にぴったりで、両方のチュートリアルは操作のレベルに左右されません。他には、<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>の初心者用チュートリアルである、アングリーバードやアナと雪の女王から始めるのもお勧めです。高校生ならば、1つのチュートリアルを30分程で完了することができるはずです。次には、カーンアカデミーやCodeHSなどより高度なJavaScriptチュートリアルを試すことも出来ます。"
   hoc_faq_scratch_q: "Hour of CodeでScratchをやりたいと思っています。もし生徒がノートパソコンでなくiPadを持っていたらどうしたら良いでしょう？"
   hoc_faq_scratch_a: "タブレットではScratchは実行できません。もし生徒が小さいのならScratchJr iPadアプリ (初心者向け) を試してみることをお勧めします。 その他に <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> には、Code.org、Tynker、Lightbot や CodeSpark から提供されている iPad 用のチュートリアルもあります。"
   hoc_faq_count_hoc_q: "Hour of Codeの参加者の数はどうやって測っていますか？"
@@ -324,7 +342,7 @@ ja:
   hoc_faq_logo_a: "Hour of Code は登録商標です。我々はその使用を妨げませんが、いくつかの制限を確実に守るようにして下さい。<a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'> 使用法のガイドライン</a> を参照してください。"
   stats_hoc_2013_image_alt: 'Hour of Codeの 2013 の統計情報'
   stats_growth: "1500 万ユーザーに到達する最速記録でした。"
-  stats_i18n: "45 以上の言語で生徒たちが学んでいます"
+  stats_i18n: "45以上の言語で生徒たちが学んでいます"
   stats_tumblr: "Tumblr： 3.5 年"
   stats_facebook: "Facebook: 3 年"
   stats_twitter: "Twitter: 2.5 年"
@@ -333,7 +351,7 @@ ja:
   stats_hoc: "Hour of Code: 5 日"
   stats_global: "1億人以上の生徒が Hour of Code を使ってみています"
   stats_girls_more: "過去70年の合計よりも多くの女子生徒が、コンピュータサイエンスを学んでいます。"
-  stats_females: "女性のコンピュータサイエンスへの参加は、高校のコース、大学のコース、および労働力のわずか20％です。"
+  stats_females: "コンピュータサイエンスへの女性の参加は、高校課程、大学課程、および労働人口のわずか20％です。"
   stats_females_more: "コードの時間中、女性は全参加者の<b> 50％を占めます</b>！"
   stats_nina: '"毎日、同じ結果が得られました&mdash; 100 ％ の取り組み。"-ニーナ ・ ニコルズ ピーリー、教師。'
   stats_student: '"<b>一生に一度</b> のチャンスだと思っていました。"-マリアナ 　アルザテ、小学 5 年生。'
@@ -374,6 +392,7 @@ ja:
   videos_obama_cs: オバマ大統領もコンピューター科学を
   videos_anybody_can_learn: 誰でも学べるプログラミング （１分）
   title_country_resources: 日本の方向けの資料
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: 地域向けのイベント開催ガイド
   title_how_to_events: Hour of Codeのイベント開催ガイド
   title_how_to_organizations: 組織で Hour of Code を開催する方法
@@ -382,6 +401,7 @@ ja:
   title_how_to_volunteers: Hour of Codeボランティアの手引き
   title_how_to_parents: 保護者用の手引き
   title_how_to: イベント開催ガイド
+  title_international_partners: Contact International Partners
   title_press_release: 議員向けのHour of Codeのプレスリリース
   title_op_ed: コンピューターサイエンス学習週間と Hour of Code 支援の解説文例
   title_press_kit: プレスキット

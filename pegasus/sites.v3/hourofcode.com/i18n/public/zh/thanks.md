@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 
@@ -23,15 +23,7 @@ social:
 
     twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
-%> "#HourOfCode"%
-
-# 謝謝您報名舉辦一小時玩程式活動！
-
-為了感謝的您幫助，使學生們開始學習計算機科學成為可能，我們想為您的課堂提供一套免費的具有各種重要例題的專業印刷海報。 在結賬時使用**免單劵**。 （注意：這只能用於最後的物品清單，而您需要支付運費。 由於這些海報從美國出口，如果發往加拿大或者世界各地運費將會相當高。 我們知道這可能不在您的預算中, 我們鼓勵您為您的教室打印 [ PDF 文件 ](https://code.org/inspire)。   
-<br /> <button> 獲取海報</ button> </a> 使用提供代碼FREEPOSTERS</p> 
-
-<p>
-  <% if @country == 'us' %> 感謝ozobot，德克斯特行業，littleBits和奇幻工房的慷慨相助，超過100多間教室將被選定為他們的班級得到機器人或電路！ 為了有資格獲得一套, 請務必完成從 Code.org 發送後的《編程一小時》的調查。 Code.org 將選擇獲獎的教室。 同時檢查一部分機器人和電子設備的活動。 請注意，這只對美國的學校開放。 <% end %>
+%> 感謝ozobot，德克斯特行業，littleBits和奇幻工房的慷慨相助，超過100多間教室將被選定為他們的班級得到機器人或電路！ 為了有資格獲得一套, 請務必完成從 Code.org 發送後的《編程一小時》的調查。 Code.org 將選擇獲獎的教室。 同時檢查一部分機器人和電子設備的活動。 請注意，這只對美國的學校開放。
 </p>
 
 <p>

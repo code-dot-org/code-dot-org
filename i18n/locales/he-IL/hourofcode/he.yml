@@ -11,12 +11,21 @@ he:
   campaign_date_full: "בין הרביעי לעשירי בדצמבר"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10 בדצמבר, 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'הצטרף לאירוע הלמידה הגדול בהסטוריה %{campaign_date}'
   front_intro_default: 'שעת תכנות הוא מייזם עולמי הנגיש למליוני תלמידים במעל ל 180 מדינות. כל אחד, בכל מקים יכול לארגן אירוע שעת תכנות. לרשותכם מערכי שיעור בין 45 דקות במעל ל 45 שפות. לא נדרש כל ניסיון מוקדם. <strong>מתאים לבני גיל 4 עד 104.</strong>'
   front_watch_video: 'צפה בסרטון החדש'
   front_watch_regular_video: 'צפה בוידאו'
   front_volunteers: 'דרושים מתנדבים לסיוע טכני'
   front_start_learning: 'התחל ללמוד'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'מקורות'
   header_menu_faq: 'שאלות ותשובות'
   header_menu_how_to: 'כיצד'
@@ -26,7 +35,7 @@ he:
   not_found_desc: 'הדף המבוקש לא נמצא'
   not_found_instructions: 'בדוק את כתובת העמוד או בחר קישור מהרשימה הבאה.'
   company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
+  company_asa: ברית אחה"צ
   company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
@@ -39,7 +48,7 @@ he:
   company_ngcp: National Girls Collaborative Project
   company_teachforall: Teach for All
   company_teachforamerica: Teach for America
-  company_tntp: TNTP
+  company_tntp: מו"ח
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
   company_afterschool: after school
@@ -70,10 +79,10 @@ he:
   company_ccsoh: Columbus City School District
   company_cresskillboe: Cresskill Public Schools
   company_dallasisd: Dallas Independent School District
-  company_disney: Disney
-  company_dpsk12: Denver Public Schools
-  company_dcsdk12: Douglas County Schools
-  company_dpsnc: Durham Public Schools
+  company_disney: דיסני
+  company_dpsk12: בתי הספר הציבוריים בדנוור
+  company_dcsdk12: בתי ספר במחוז דאגלס
+  company_dpsnc: בתי הספר הציבוריים בדרהאם
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
@@ -222,6 +231,8 @@ he:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'ארחו אירוע "שעה של קוד" במהלך %{campaign_date}, ורישמו אותו כאן.'
   signup_name_label: 'שמך'
   signup_name_error: 'דרוש שם.'
@@ -243,6 +254,11 @@ he:
   signup_your_event: 'הירשם האירוע שלכם'
   signup_host_an_hour: 'ארחו שעה'
   signup_match_volunteer: 'עזרו לי למצוא מהנדס/ת תוכנה מקומי/ת עבור השראה לתלמידים שלי'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "אם אתם מארחים יותר מאירוע אחד, אנא הגישו אותם עם שם או אימייל ייחודי לכל אחד מהם. שילוב של אותו שם וכתובת אימייל נחשב אצלנו כאירוע אחד."
   signup_registration_deadline: "ההרשמה ל\"שעה של קוד\" נסגרת ב11 לדצמבר."
   signup_name_placeholder: 'שמך'
@@ -265,6 +281,7 @@ he:
   signup_thank_you_message: 'שלחנו לך מייל אישור עם פרטים, כדי לעזור לך להתחיל בעבודה.'
   map_title: "מפת \"שעה של קוד\""
   map_header: '# אירועים של Hour of Code ברחבי העולם'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'לרשימת כל האירועים'
   map_header_company: '# לפי החברה המארגנת'
   map_header_country: '# ב %{country}'
@@ -280,12 +297,13 @@ he:
   meta_tag_twitter_title: 'Hour of Code מגיע'
   meta_tag_twitter_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
   twitter_default_text: "אני משתתפת בתערוכה של השנה #HourOfCode, האם אתה? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'שאלות נפוצות'
   hoc_faq_what_is_hoc_q: 'מהו Hour of Code?'
   hoc_faq_what_is_hoc_a: "\"שעה של הקוד\" היא שעה אחת של מבוא למדעי המחשב, שנועדו להסביר מה זה קוד ולהראות כי כל אחד יכול ללמוד את היסודות של מדעי המחשב. <a href='http://code.org/learn'> בדוק את הלימוד</a>."
   hoc_faq_last_year: "נסה את חומר הלימוד"
   hoc_faq_when_is_hoc_q: 'מתי הHour of Code?'
-  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: 'De ce tehnologia computerelor?'
   hoc_faq_why_cs_a: "<i>כל</i> תלמיד צריך את ההזדמנות ללמוד מדעי המחשב.  זה מסייעת לטפח מיומנויות לפתרון בעיות, לוגיקה ויצירתיות. על ידי התחלה מוקדמת, לתלמידים יהיה בסיס להצלחה בכל נתיב הקריירה המאה ה-21. ראה סטטיסטיקה ב- <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: 'כיצד ניתן להשתתף ב-לHour of Code?'
@@ -317,7 +335,7 @@ he:
   hoc_faq_more_questions_q: "עדיין יש עוד שאלות?"
   hoc_faq_more_questions_a: "נסה למצוא תשובה <a href='http://support.code.org'> בפורום התמיכה  שלנו</a>."
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
@@ -333,8 +351,8 @@ he:
   stats_hoc: " Hour of Code: 5 ימים"
   stats_global: "Over 100M students have tried an Hour of Code"
   stats_girls_more: "More girls tried computer science than in the last 70 years"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"בכל יום הניבו תוצאות זהות &mdash; 100% האירוסין."-Peery ניקולס נינה, מורה'
   stats_student: '". זאה היתה ההזדמנות <b>של פעם בחיים</b> ."-מריאנה Alzate, לזוז'
   stats_michael: '" <b>לעולם לא</b> ראיתי את התלמידים שלי מתרגשים כך מלמידה."-Michael קלארק, מורה'
@@ -374,6 +392,7 @@ he:
   videos_obama_cs: אובמה הנשיא לשעבר על מדעי המחשב
   videos_anybody_can_learn: כל אחד יכול ללמוד (1דקות)
   title_country_resources: משאבים בהתאמה למדינה ספציפית
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: שעת תכנות כיצד ל.. למחוזות
   title_how_to_events: שעת תכנות כיצד ל...
   title_how_to_organizations: כיצד לבצע שעת תכנות - לארגונים
@@ -382,6 +401,7 @@ he:
   title_how_to_volunteers: מדריך למתנדבים
   title_how_to_parents: מדריך להורים
   title_how_to: מדריך כיצד ל...
+  title_international_partners: Contact International Partners
   title_press_release: שעת תכנות - הודעה לעתונות לנבחרי ציבור
   title_op_ed: דוגמה למשאב לתמיכה בשבוע החינוך ושעת תכנות
   title_press_kit: ערכה לעיתונאים
@@ -973,22 +993,22 @@ he:
   tutorial_knodtext_shortdescription: "Learn to make a text adventure game in Python!"
   tutorial_alicegar_shortdescription: "Tell stories and be creative while learning to code. "
   tutorial_codesterstransform_shortdescription: "חקור, זהה ובצע טרנספורמציות על מרחב הצירים בפרוייקט המתמטי מוכוון הליבה המשותפת."
-  tutorial_flexfrog_shortdescription: "A game for learning CSS flexbox"
+  tutorial_flexfrog_shortdescription: "משחק ללימוד CSS דינאמי"
   tutorial_codemoji_shortdescription: "Codemoji מלמד את התלמידים עיצוב אתרים בסיסי ומושגי תכנות בעזרת אמוג׳ים כדרך לשמור את התלמידים מתעניינים ולומדים מושגי קוד אמיתיים."
-  tutorial_robobii_shortdescription: "RoboBlockly is designed for beginners to learn coding with robots in Blockly. "
-  tutorial_robobm_shortdescription: "RoboBlockly is designed for beginners to learn math with robots in Blockly. "
-  tutorial_codingrobots_shortdescription: "RoboBlockly is designed for beginners to learn coding and math with robots. "
-  tutorial_robob_shortdescription: "RoboBlockly is designed for beginners to learn robotics in Blockly. "
+  tutorial_robobii_shortdescription: "RoboBlockly עוצב עבור מתחילים ללמידת קידוד עם רובוטים בסביבת Blockly. "
+  tutorial_robobm_shortdescription: "RoboBlockly עוצב עבור מתחילים ללמידת מתמטיקה עם רובוטים בסביבת Blockly. "
+  tutorial_codingrobots_shortdescription: "RoboBlockly עוצב עבור מתחילים ללמידת קידוד ומתמטיקה יחד עם רובוטים בסביבת Blockly. "
+  tutorial_robob_shortdescription: "RoboBlockly עוצב עבור מתחילים ללמידת רובוטיקה בסביבת Blockly. "
   tutorial_coders_shortdescription: "גלה את תיכנות הבוט דרך משחק מירוץ החלל! (גיל 14 +)"
-  tutorial_tynkerhw_shortdescription: "Solve fun coding puzzles to navigate your Hot Wheels car and win the race!"
-  tutorial_tynkermh_shortdescription: "Solve fun coding puzzles with the ghouls of Monster High."
-  tutorial_caphoto_shortdescription: "Build an app that lets you customize photos with stickers and filters."
+  tutorial_tynkerhw_shortdescription: "לפתור בכיף חידות קידוד כדי לנווט את המכונית ולנצח במירוץ!"
+  tutorial_tynkermh_shortdescription: "לפתור חידות קידוד בכיף פאזלים עם מפלצתונים של בית הספר למפלצות."
+  tutorial_caphoto_shortdescription: "בנה אפליקציה המאפשרת לך לעצב תמונות עם סטיקרים ופילטרים."
   tutorial_mozillahw_shortdescription: "Learners will remix JavaScript code to change the words on a website"
   tutorial_ticklep_shortdescription: "With Tickle, an user-friendly coding app, you can easily program Parrot Drone to swim in a number of ways by simply dragging and dropping coding blocks to create a command for it to follow."
-  tutorial_bbot_shortdescription: "Teach your students (ages 7 and up) programming in a fun and easy way. No prior programming knowledge or experience needed!"
-  tutorial_scratchg_shortdescription: "Learn how to program games in Scratch"
+  tutorial_bbot_shortdescription: "למד את תלמידך (גילאי 7 ומעלה) לתכנת בדרך כיפית ופשוטה. אין צורך בידע או ניסיון מוקדם בתכנות!"
+  tutorial_scratchg_shortdescription: "למד איך לתכנת משחקים בסביבת Scratch"
   tutorial_roboticfriends_shortdescription: "הדרכה מנותקת בשביל קבוצה ללא מכשירים"
-  tutorial_sjforest_shortdescription: "Use the ScratchJr programming app to make a program in which different animals move in a dark forest setting."
+  tutorial_sjforest_shortdescription: "השתמש באפליקציית התכנות ScratchJr ליצירת תוכנה שבה חיות שונות זזות ביער האפל."
   tutorial_sjgreet_shortdescription: "Use the ScratchJr programming app to make a program in which a kitten and a dog \"meet\" each other and exchange hellos."
   tutorial_sjsunset_shortdescription: "Use the ScratchJr programming app to make a program in which the sun sets over a city landscape."
   tutorial_fufafrenz_shortdescription: "Learn sequence to program a \"robot\"! "
