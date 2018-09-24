@@ -278,6 +278,12 @@ img.video_thumbnail {
     }
   }
 
+  @media screen and (max-width: 1023px) {
+    .create_menu {
+      display: none !important;
+    }
+  }
+
   .headerlinks {
     margin-top: 12px;
     margin-left: 74px;
