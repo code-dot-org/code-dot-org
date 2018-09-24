@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import {WorkshopApplicationStates} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import $ from 'jquery';
 
 class RegionalPartnerSearch extends Component {
@@ -10,6 +12,7 @@ class RegionalPartnerSearch extends Component {
 
   state = {
     partnerInfo: undefined,
+    stateValue: "",
     zipValue: "",
     allowZip: false,
     noPartner: false
@@ -29,6 +32,7 @@ class RegionalPartnerSearch extends Component {
 
   handleStateChange = (e) => {
     this.setState({
+      stateValue: e.target.value,
       zipValue: "",
       allowZip: false,
       partnerInfo: undefined,
@@ -42,9 +46,9 @@ class RegionalPartnerSearch extends Component {
     }).done(this.workshopSuccess).fail(this.workshopFail);
   };
 
-  handleZipChange(event) {
+  handleZipChange = (event) => {
     this.setState({zipValue: event.target.value});
-  }
+  };
 
   handleZipSubmit = (event) => {
     this.setState({partnerInfo: undefined, noPartner: false});
@@ -72,9 +76,8 @@ class RegionalPartnerSearch extends Component {
       }
     ];
 
-    const appsOpenNow = partnerInfo && partnerInfo.apps_dates.open_now;
-    const appsOpenDate = !appsOpenNow && partnerInfo && partnerInfo.apps_dates.earliest_open_date;
-    const appsClosedNow = partnerInfo && partnerInfo.apps_dates.closed_now;
+    const appState = partnerInfo && partnerInfo.application_state.state;
+    const appsOpenDate = partnerInfo && partnerInfo.application_state.earliest_open_date;
 
     const applicationLink = (partnerInfo && partnerInfo.link_to_partner_application) ||
       "https://studio.code.org/pd/application/teacher";
@@ -83,17 +86,18 @@ class RegionalPartnerSearch extends Component {
       <div>
         <h2>Ready to apply?</h2>
         School State:
-        <select onChange={this.handleStateChange} style={{width: '150px'}}>
+        <select value={this.state.stateValue} onChange={this.handleStateChange} style={{width: '150px'}}>
+          <option disabled value=""/>
           {this.props.states.map(item => {
             return <option key={item[0]} value={item[0]}>{item[1]}</option>;
           })}
         </select>
 
         {this.state.allowZip && (
-          <form onSubmit={e => this.handleZipSubmit(e)}>
+          <form onSubmit={this.handleZipSubmit}>
             <label>
               School Zip Code:
-              <input type="text" value={this.state.zipValue} onChange={e => this.handleZipChange(e)} />
+              <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} />
             </label>
             <div>
               <input type="submit" value="Submit" />
@@ -160,21 +164,21 @@ class RegionalPartnerSearch extends Component {
               </div>
             )}
 
-            {appsClosedNow && (
+            {appState === WorkshopApplicationStates.now_closed && (
               <div>Applications are now closed.</div>
             )}
 
-            {!appsClosedNow && appsOpenNow && (
+            {appState === WorkshopApplicationStates.currently_open && (
               <a href={applicationLink}>
                 <button>Start application</button>
               </a>
             )}
 
-            {!appsClosedNow && !appsOpenNow && appsOpenDate && (
+            {appState === WorkshopApplicationStates.opening_at && (
               <div>Applications open {appsOpenDate}</div>
             )}
 
-            {!appsClosedNow && !appsOpenNow && !appsOpenDate && (
+            {appState === WorkshopApplicationStates.opening_sometime && (
               <div>
                 <div>Applications will be open soon.</div>
                 <a href="https://studio.code.org/pd/regional_partner_contact/new">
