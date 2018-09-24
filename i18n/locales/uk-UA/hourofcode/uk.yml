@@ -12,8 +12,8 @@ uk:
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 грудня 2016 року"
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  cookie_banner_more_information: "Переглянути політику конфіденційності в Code.org."
+  cookie_banner_accept: 'Погоджуюся'
   front_header_banner: 'Приєднуйтесь до найбільшої навчальної події в історії, 7-13 грудня 2015 року'
   front_intro_default: 'Година Коду є глобальним заходом, який залучає десятки мільйонів учнів у більш, як 180 країнах світу. Кожен може організувати заходи в рамках Години Коду. Одно-годинний курс доступний більш, як 45 мовами. Без попередніх вимог. <strong>Для всіх віком від 4 до 104.</strong>'
   front_watch_video: 'Дивіться новий ролик'
@@ -25,7 +25,7 @@ uk:
   gdpr_dialog_link_intro: 'For details see our'
   gdpr_dialog_privacy_policy: 'privacy policy'
   gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_yes: 'Так'
   header_menu_resources: 'Ресурси'
   header_menu_faq: 'Часті питання'
   header_menu_how_to: 'Інструкції'
@@ -256,7 +256,7 @@ uk:
   signup_match_volunteer: 'Допоможіть знайти місцевого програміста, щоб надихнути моїх учнів'
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes: 'Так'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Якщо Ви проводите кілька заходів, заповніть унікальну назву та електронну скриньку для кожного із них. Ми рахуємо події за комбінацією назви та електронної скриньки."

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_officials) %>
+title: <%= hoc_s(:title_how_to_officials).inspect %>
 layout: wide
 nav: how_to_nav
 ---
