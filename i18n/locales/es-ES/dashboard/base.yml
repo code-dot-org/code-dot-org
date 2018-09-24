@@ -262,9 +262,7 @@ es:
         applab: 'Hacer una aplicación para el Laboratorio de Aplicaciones'
         gamelab: 'Hacer un proyecto de laboratorio de Juegos'
         weblab: 'Hacer un proyecto de laboratorio de Juegos (beta)'
-      home: "Inicio"
       my_dashboard: "Mi Panel de Control"
-      courses: "Cursos"
       course_catalog: "Catalogo de cursos"
       project_gallery: "Proyectos"
       sections: "Secciones"
@@ -299,6 +297,14 @@ es:
       help_us: "Ayudenos"
       teach: "Enseñar"
       about: "Acerca de"
+    create_button:
+      create: 'Crear'
+      applab: 'Laboratorio de Aplicaciones'
+      artist: 'Artista'
+      gamelab: 'Laboratorio de juego'
+      playlab: 'Laboratorio de juegos'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Página de inicio del maestro'
       district_dashboard: 'Tablero de distrito'
