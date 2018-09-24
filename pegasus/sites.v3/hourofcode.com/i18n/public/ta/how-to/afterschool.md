@@ -15,7 +15,7 @@ nav: how_to_nav
 
 ## 2. ஒரு பயிற்சியை தேர்ந்தெடுக்க
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](<%= resolve_url('learn') %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 

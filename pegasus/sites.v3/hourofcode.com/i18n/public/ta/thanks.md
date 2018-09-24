@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -27,11 +27,6 @@ social:
 
 # Thanks for signing up to host an Hour of Code!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
-
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
-
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Spread the word in your school and community
@@ -40,7 +35,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. புதிய திறமைகளை கற்றுக்கொள்ள நீங்கள் பள்ளியில் இருக்க வேண்டியதில்லை. Invite a local politician or policy maker to visit your school for the Hour of Code. இது ஒரு மணி நேரத்திற்கு அப்பால் உங்கள் பகுதியில் கணினி அறிவியல் ஆதரவு உருவாக்க உதவ முடியும்.
 
-உங்கள் சொந்த நிகழ்விற்கான இந்த [ சுவரொட்டிகள், பதாகைகள், ஸ்டிக்கர்கள், வீடியோக்கள் மற்றும் பலவற்றை ](<%= resolve_url('/promote/resources') %>) பயன்படுத்தவும்.
+உங்கள் சொந்த நிகழ்விற்கான இந்த [ சுவரொட்டிகள், பதாகைகள், ஸ்டிக்கர்கள், வீடியோக்கள் மற்றும் பலவற்றை ](<%= fix_url('/promote/resources') %>) பயன்படுத்தவும்.
 
 ## 2. Find a local volunteer to help you with your event.
 
