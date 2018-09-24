@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Är självinstruerande så att alla kan jobba i sin takt på sin nivå
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Vad behöver du för hårdvara? -datorer är inte nödvändiga
 
 Den bästa upplevelsen av Hour of Code får du med internetuppkopplade datorer, men det behövs inte en dator per elev och du behöver inte ha datorer för att genomföra en Hour of Code.
 
 - **Testa övningarna på elevdatorer eller enheter.** Kontrollera att de fungerar korrekt (med ljud och video).
-- **Förhandsgranska Diplomsidan** för att se vad eleverna kommer att se när de är klara. 
+- **Förhandsgranska Diplomsidan** för att se vad eleverna kommer att se när de är klara.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Planera baserat på den teknik som är tillgänglig
@@ -134,12 +134,10 @@ Visa elever en inspirerande video till starta Hour of Code. Exempel:
 
 # La Hora del Código Perú <iframe width="560" height="315" src="https://www.youtube.com/embed/whSt53kn0lM" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-<
-
-p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
+[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtube.com/watch?v=whSt53kn0lM)
 
 <% else %>
 
-# Se fler övningar och material för Sverige på edvira.com/hoc!
+# Se fler övningar och material för Sverige på [edvira.com/hoc](edvira.com/hoc)!
 
 <% end %>

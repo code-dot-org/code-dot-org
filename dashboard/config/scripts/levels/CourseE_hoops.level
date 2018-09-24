@@ -45,6 +45,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
     "include_shared_functions": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

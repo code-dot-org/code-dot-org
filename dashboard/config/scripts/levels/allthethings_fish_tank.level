@@ -49,6 +49,7 @@
     "validation_code": "if (World.frameCount > 50) {\r\n  var status = 0;\r\n  \r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      if (sprite.getAnimationLabel() == \"tumbleweed\") {\r\n        status = 3;\r\n      }\r\n    }\r\n  }\r\n  levelSuccess(status);\r\n}",
     "include_shared_functions": "false",
     "markdown_instructions": "All-the-things test level.",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,
