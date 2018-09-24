@@ -2,11 +2,11 @@
   "category": "Events",
   "config": {
     "color": [
-      140,
-      1,
-      0.74
+      322,
+      0.9,
+      0.95
     ],
-    "func": "whenTouchesAny",
+    "func": "whileTouchingAny",
     "blockText": "while{TARGET} is touching any sprite\n{STATEMENT}",
     "args": [
       {
@@ -19,6 +19,6 @@
         "statement": true
       }
     ],
-    "eventBlock": true
+    "eventLoopBlock": true
   }
 }

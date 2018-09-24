@@ -22,15 +22,23 @@
             "\"scale\""
           ],
           [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
             "rotation",
             "\"rotation\""
           ],
           [
-            "x position",
+            "horizontal position",
             "\"x\""
           ],
           [
-            "y position",
+            "vertial position",
             "\"y\""
           ],
           [
@@ -40,10 +48,6 @@
           [
             "tint",
             "\"tint\""
-          ],
-          [
-            "dance speed",
-            "\"dance_speed\""
           ]
         ]
       },

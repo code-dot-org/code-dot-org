@@ -791,8 +791,21 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_teacher1920_application_hash_common, parent: :pd_teacher1819_application_hash_common
-  factory :pd_teacher1920_application_hash, parent: :pd_teacher1819_application_hash
+  # default to csp
+  factory :pd_teacher1920_application_hash, parent: :pd_teacher1920_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher1920_application_hash_common, parent: :pd_teacher1819_application_hash_common do
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    replace_existing 'Yes'
+    pay_fee 'Yes, my school or I will be able to pay the full program fee.'
+    what_license_required 'CSTA'
+    plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'
+  end
 
   factory :pd_teacher1920_application, class: 'Pd::Application::Teacher1920Application' do
     association :user, factory: [:teacher, :with_school_info], strategy: :create

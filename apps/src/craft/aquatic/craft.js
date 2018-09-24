@@ -365,6 +365,7 @@ Craft.initializeAppLevel = function (levelConfig) {
 
   Craft.gameController.loadLevel({
     isAquaticLevel: levelConfig.isAquaticLevel,
+    ocean: levelConfig.ocean,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
     groundDecorationPlane: levelConfig.groundDecorationPlane,
@@ -393,7 +394,7 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
     default:
-      return ['heroAllAssetsMinusPlayer'];
+      return ['aquaticAllAssetsMinusPlayer'];
   }
 };
 

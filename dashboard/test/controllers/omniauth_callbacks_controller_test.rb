@@ -280,6 +280,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "login: adding google classroom permissions redirects to the homepage with a param to open the roster dialog" do
     user = create(:user, provider: 'google_oauth2', uid: '1111')
+    sign_in user
 
     @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(provider: user.provider, uid: user.uid)
     @request.env['omniauth.params'] = {
@@ -458,6 +459,47 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       assert_nil oauth_student.deleted_at
       assert_nil student.provider
     end
+  end
+
+  test 'google_oauth2: signs in user if user is found by credentials' do
+    # Given I have a Google-Code.org account
+    user = create :student, :unmigrated_google_sso
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: user.uid
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I am signed in
+    user.reload
+    assert_equal user.id, signed_in_user_id
+  end
+
+  test 'google_oauth2: redirects to complete registration if user is not found by credentials' do
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '' # Google doesn't provider user_type
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_redirected_to 'http://test.host/users/sign_up'
+    attributes = session['devise.user_attributes']
+    assert_equal AuthenticationOption::GOOGLE, attributes['provider']
+    assert_equal uid, attributes['uid']
   end
 
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do

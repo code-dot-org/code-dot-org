@@ -19,7 +19,8 @@ class ApiController < ApplicationController
   def clever_classrooms
     return head :forbidden unless current_user
 
-    query_clever_service("v1.1/teachers/#{current_user.uid}/sections") do |response|
+    uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
+    query_clever_service("v1.1/teachers/#{uid}/sections") do |response|
       json = response.map do |section|
         data = section['data']
         {

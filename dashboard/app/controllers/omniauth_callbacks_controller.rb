@@ -10,32 +10,40 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
 
-  # GET /users/auth/google_oauth2/callback
-  def google_oauth2
-    if should_connect_provider?
-      connect_provider
+  # GET /users/auth/clever/callback
+  def clever
+    return connect_provider if should_connect_provider?
+
+    user = find_user_by_credential
+    if user
+      user.update_oauth_credential_tokens(auth_hash)
+      sign_in_clever user
     else
-      login
+      sign_up_clever
     end
   end
 
-  # GET /users/auth/clever/callback
-  def clever
-    if should_connect_provider?
-      connect_provider
+  # GET /users/auth/google_oauth2/callback
+  def google_oauth2
+    # Redirect to open roster dialog on home page if user just authorized access
+    # to Google Classroom courses and rosters
+    return redirect_to '/home?open=rosterDialog' if just_authorized_google_classroom?
+    return connect_provider if should_connect_provider?
+
+    user = find_user_by_credential
+    if user
+      user.update_oauth_credential_tokens(auth_hash)
+      sign_in_google_oauth2 user
     else
-      login
+      sign_up_google_oauth2
     end
   end
 
   # All remaining providers
   # GET /users/auth/:provider/callback
   def all
-    if should_connect_provider?
-      connect_provider
-    else
-      login
-    end
+    return connect_provider if should_connect_provider?
+    login
   end
 
   TYPES_ROUTED_TO_ALL.each do |provider|
@@ -46,7 +54,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def connect_provider
     return head(:bad_request) unless can_connect_provider?
 
-    auth_hash = request.env['omniauth.auth']
     provider = auth_hash.provider.to_s
     return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
 
@@ -107,37 +114,30 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def login
     auth_hash = request.env['omniauth.auth']
-    auth_params = request.env['omniauth.params']
     provider = auth_hash.provider.to_s
     session[:sign_up_type] = provider
 
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session)
+
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'
-      auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
+      auth_hash = extract_powerschool_data(auth_hash)
     end
 
     # Microsoft formats email and name differently, so update it to match expected structure
     if provider == AuthenticationOption::MICROSOFT
-      auth_hash = extract_microsoft_data(request.env["omniauth.auth"])
+      auth_hash = extract_microsoft_data(auth_hash)
     end
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
-    # Set user-account locale only if no cookie is already set.
-    if @user.locale &&
-      @user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
+    prepare_locale_cookie @user
 
-      set_locale_cookie(@user.locale)
-    end
-
-    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
-      # Redirect to open roster dialog on home page if user just authorized access
-      # to Google Classroom courses and rosters
-      redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
+    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
       handle_untrusted_email_signin(@user, provider)
-    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
+    elsif allows_silent_takeover(@user, auth_hash)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
@@ -145,12 +145,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       check_and_apply_oauth_takeover(@user)
       sign_in_user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
-      # Note that @user.email is populated by User.from_omniauth even for students
-      if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
-      else
-        redirect_to "/users/sign_in?providerNotLinked=#{provider}&email=#{@user.email}"
-      end
+      email_already_taken_redirect \
+        provider: provider,
+        found_provider: looked_up_user.provider,
+        email: @user.email
     else
       # This is a new registration
       register_new_user(@user)
@@ -165,15 +163,112 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
+  def sign_in_google_oauth2(user)
+    prepare_locale_cookie user
+
+    @user = user
+    if allows_google_classroom_takeover user
+      silent_takeover @user, auth_hash
+    end
+    sign_in_user
+  end
+
+  def sign_up_google_oauth2
+    session[:sign_up_type] = AuthenticationOption::GOOGLE
+
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+
+    user = User.from_omniauth auth_hash, auth_params, session
+    prepare_locale_cookie user
+
+    if allows_silent_takeover user, auth_hash
+      @user = user
+      silent_takeover @user, auth_hash
+      sign_in_user
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
+      email_already_taken_redirect \
+        provider: AuthenticationOption::GOOGLE,
+        found_provider: looked_up_user.provider,
+        email: user.email
+    else
+      # This is a new registration
+      register_new_user user
+    end
+  end
+
+  def sign_in_clever(user)
+    prepare_locale_cookie user
+    @user = user
+    handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
+  end
+
+  def sign_up_clever
+    session[:sign_up_type] = AuthenticationOption::CLEVER
+
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+
+    @user = User.from_omniauth(auth_hash, auth_params, session)
+
+    prepare_locale_cookie @user
+
+    if @user.persisted?
+      handle_untrusted_email_signin(@user, AuthenticationOption::CLEVER)
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
+      email_already_taken_redirect \
+        provider: AuthenticationOption::CLEVER,
+        found_provider: looked_up_user.provider,
+        email: @user.email
+    else
+      # This is a new registration
+      register_new_user(@user)
+    end
+  end
+
+  def find_user_by_credential
+    User.find_by_credential \
+      type: auth_hash.provider,
+      id: auth_hash.uid
+  end
+
+  def auth_hash
+    request.env['omniauth.auth']
+  end
+
+  def auth_params
+    request.env['omniauth.params']
+  end
+
+  def prepare_locale_cookie(user)
+    # Set user-account locale only if no cookie is already set.
+    if user.locale &&
+      user.locale != request.env['cdo.locale'] &&
+      cookies[:language_].nil?
+
+      set_locale_cookie(user.locale)
+    end
+  end
+
+  def email_already_taken_redirect(provider:, found_provider:, email:)
+    if found_provider == 'clever'
+      redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
+    else
+      redirect_to "/users/sign_in?providerNotLinked=#{provider}&email=#{email}"
+    end
+  end
+
   def register_new_user(user)
     move_oauth_params_to_cache(user)
     session["devise.user_attributes"] = user.attributes
 
-    # For some providers, signups can happen without ever having hit the sign_up page, where
-    # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session)
-
-    redirect_to new_user_registration_url
+    if SignUpTracking.new_sign_up_experience?(session)
+      redirect_to users_finish_sign_up_url
+    else
+      redirect_to new_user_registration_url
+    end
   end
 
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
@@ -251,11 +346,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def just_authorized_google_classroom(user, params)
-    scopes = (params['scope'] || '').split(',')
-    user.persisted? &&
-      user.provider == 'google_oauth2' &&
-      scopes.include?('classroom.rosters.readonly')
+  def just_authorized_google_classroom?
+    current_user &&
+    current_user.providers.include?(AuthenticationOption::GOOGLE) &&
+      has_google_oauth2_scope?('classroom.rosters.readonly')
+  end
+
+  def has_google_oauth2_scope?(scope_name)
+    scopes = (auth_params&.[]('scope') || '').split(',')
+    scopes.include?(scope_name)
   end
 
   def allows_google_classroom_takeover(user)
