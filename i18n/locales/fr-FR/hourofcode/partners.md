@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 L'Heure du Code est rendu possible grâce à la Commission Consultative et aux Comités d'Examen de l'Heure du Code et de l'Informatique.
 
