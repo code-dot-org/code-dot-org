@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -15,7 +15,7 @@ nav: how_to_nav
 
 ## 2. ஒரு பயிற்சியை தேர்ந்தெடுக்க
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](%= fix_url('learn') %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [ அவற்றை முயற்சிக்கவும்! ](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
@@ -67,7 +67,7 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and e
 ## 7. கொண்டாடுங்கள்
 
 - [Print certificates](%= codeorg_url('/certificates') %) for your students.
-- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](%= fix_url('/promote/resources#stickers') %)
+- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](%= resolve_url('/promote/resources#stickers') %)
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
 
