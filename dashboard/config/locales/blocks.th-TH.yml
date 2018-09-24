@@ -6,59 +6,11 @@ th:
         options:
           UNIT:
             '"seconds"': วินาที
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: ทั้งหมด
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: ทั้งหมด
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ถัดไป
             '"prev"': ก่อนหน้า
           DIR:
@@ -67,44 +19,16 @@ th:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ถัดไป
             '"prev"': ก่อนหน้า
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_doMoveEachLR:
@@ -112,109 +36,19 @@ th:
           GROUP:
             sprites: ทั้งหมด
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ถัดไป
             '"prev"': ก่อนหน้า
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ถัดไป
             '"prev"': ก่อนหน้า
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -223,23 +57,24 @@ th:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ไปทางซ้าย
+            "{x: 300, y: 200}": ไปทางขวา
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: ทั้งหมด
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': อยู่ที่แกน X
-            '"y"': อยู่ที่แกน Y
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ไปทางขวา
-            '"left"': ไปทางซ้าย
+          LOCATION:
+            "{x: 100, y: 200}": ไปทางซ้าย
+            "{x: 300, y: 200}": ไปทางขวา
       Dancelab_randomColor:
         text: สุ่มสี
       Dancelab_setDanceSpeed:
@@ -254,28 +89,25 @@ th:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: ทั้งหมด
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': อยู่ที่แกน X
-            '"y"': อยู่ที่แกน Y
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_whenKey:
@@ -391,14 +223,48 @@ th:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
+      Mikelab_randomColor:
+        text: สุ่มสี
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
-      Vanilla_randomColor:
-        text: สุ่มสี
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ไปทางขวา
+            '"left"': ไปทางซ้าย
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': ลูกศรชี้ขึ้น
+            '"down"': ลูกศรชี้ลง
+            '"left"': ลูกศรชี้ทางซ้าย
+            '"right"': ลูกศรชี้ทางขวา
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': ลูกศรชี้ขึ้น
+            '"down"': ลูกศรชี้ลง
+            '"left"': ลูกศรชี้ทางซ้าย
+            '"right"': ลูกศรชี้ทางขวา
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': ลูกศรชี้ขึ้น
+            '"down"': ลูกศรชี้ลง
+            '"left"': ลูกศรชี้ทางซ้าย
+            '"right"': ลูกศรชี้ทางขวา
       craft_ifPath:
         options:
           DIR:
