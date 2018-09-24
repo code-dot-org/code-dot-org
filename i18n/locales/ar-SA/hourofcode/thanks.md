@@ -18,7 +18,7 @@ social:
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # شكراً لمشاركتك في استضافة حدث "ساعة البرمجة"!
 
@@ -39,7 +39,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. البحث عن متطوع محلي لمساعدتك في الحدث الخاص بك.
 
-[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[ابحث في خريطة المتطوعين الخاصة بنا](%= codeorg_url('/volunteer/local') %) عن متطوعين يمكنهم زيارة فصلك او يحادثونك بالفيديو عن بعد ليلهموا طلابك بالحديث عن سعة الاحتمالات في علم الكمبيوتر.
 
 ## 3. ضع خطة لساعتك من البرمجة
 

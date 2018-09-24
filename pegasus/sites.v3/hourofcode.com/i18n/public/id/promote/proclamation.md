@@ -1,55 +1,59 @@
 ---
-title: <%= hoc_s(:title_proclamation) %>
+title: <%= hoc_s(:title_proclamation).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+# Sample Computer Science Education Week resolution
 
-  
-[RUMAH, SENATE, STATE, COUNTY ATAU RESOLUSI KOTA ATAU PROKLAMASI ###] - Bahwa Pekan Pendidikan Ilmu Komputer menyoroti peran penting yang dimainkan oleh ilmu komputer dalam mengubah masyarakat kita dan bagaimana ilmu komputer memungkinkan inovasi dan menciptakan peluang ekonomi;
+### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
 
-[RUMAH ATAU RESOLUSI SENATE ###]
+---
 
-[TANGGAL]
+#### **RESOLUTION**  
 
-Padahal teknologi komputasi merupakan bagian integral dari budaya modern dan mengubah bagaimana orang berinteraksi satu sama lain dan dunia di sekitar mereka;
 
-Sedangkan ilmu komputer mengubah industri, menciptakan bidang perdagangan baru, mendorong inovasi di semua bidang sains, dan meningkatkan produktivitas di sektor ekonomi yang mapan;
+#### Supporting the goals and ideals of "Computer Science Education Week"
 
-Sedangkan bidang ilmu komputer mendasari sektor teknologi informasi ekonomi kita, yang merupakan kontributor signifikan terhadap output ekonomi Amerika Serikat;
+Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-Sedangkan bidang ilmu komputer adalah ilmu dasar untuk era digital;
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Sedangkan sektor teknologi informasi diposisikan secara unik untuk membantu pemulihan ekonomi melalui penelitian dan pengembangan inovasi baru;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Sedangkan prospek pekerjaan ilmu komputer cerah dengan lebih dari 500.000 posisi komputasi terbuka di seluruh negeri;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Sementara memberikan siswa kesempatan untuk berpartisipasi dalam kegiatan sains komputer berkualitas tinggi menghadapkan mereka pada peluang kaya yang ditawarkan lapangan dan memberikan kemampuan berpikir kritis yang akan melayani mereka sepanjang hidup mereka;
+Whereas the field of computer science is a foundational science for the digital age;
+
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
 Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
 Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-Sedangkan berpartisipasi dalam Jam Kode selama Pekan Pendidikan Ilmu Komputer dapat berfungsi untuk menyederhanakan bidang sains komputer dan mendorong lebih banyak siswa untuk mengambil studi lebih lanjut tentang ilmu komputer;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Sedangkan bidang ilmu komputer memiliki hambatan ekuitas yang signifikan untuk ditangani, termasuk menarik lebih banyak partisipasi oleh perempuan dan minoritas yang kurang terwakili ke semua tingkat dan cabang;
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-Sedangkan Grace Murray Hopper, salah satu wanita pertama di bidang ilmu komputer, merancang bahasa pemrograman baru dan mempelopori standar sistem komputer yang meletakkan dasar bagi banyak kemajuan dalam ilmu komputer; dan
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-Terselesaikan, Bahwa [RUMAH ATAU SENAT, NEGARA, COUNTY, KOTA ATAU SEKOLAH SEKOLAH] -
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
 (1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
 (2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) mendorong sekolah, guru, peneliti, universitas, pemimpin bisnis dan pembuat kebijakan untuk mengidentifikasi mekanisme bagi guru untuk mendapatkan pengembangan profesional terdepan untuk memberikan pengalaman belajar yang berkelanjutan dalam ilmu komputer di semua tingkat pendidikan dan mendorong siswa untuk terpapar pada konsep sains komputer;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) mendorong kesempatan, termasuk melalui program yang ada, untuk perempuan dan minoritas yang kurang terwakili dalam ilmu komputer.
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
 <%= view :signup_button %>

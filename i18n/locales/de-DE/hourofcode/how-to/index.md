@@ -5,19 +5,23 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Wie Sie eine "Hour of Code" unterrichten</h1>
+# How to teach one Hour of Code with your class
 
-Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+
+* * *
 
 ## 1. Schauen Sie sich dieses Tutorialvideo an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Wählen Sie ein Tutorial für Ihre Stunde aus
 
-Wir bieten eine Vielzahl von unterhaltsamen, [von Schüler für Schüler Tutorials](%= resolve_url('/learn') %) für alle Alters- und Erfahrungsgruppen an. Die Schüler führen die Aktivitäten eigenständig durch. Es stehen für viele Aktivitäten Unterrichtspläne für die Einheiten (der Link erscheint, wenn Sie auf die Aktivität klickst) zur Verfügung, damit die Unterrichtenden die Diskussionen moderieren oder die Aktivität erweitern können. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-## 3. Bewerben Sie Ihre "Hour of Code"
+## 3. Machen Sie Ihre "Hour of Code" bekannt
 
-Machen Sie [mit diesen Unterlagen](%= resolve_url('/promote/resources') %) Werbung für Ihre "Hour of Code" und ermutigen Sie andere ihre eigenen Veranstaltungen durchzuführen.
+Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
 
 ## 4. Planen Sie ihren Bedarf an technischer Ausstattung - Computer sind nicht immer erforderlich
 
@@ -40,7 +44,7 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 - Das originale Code.org Einführungsvideo mit Bill Gates, Mark Zuckerberg und dem NBA Star Chris Bosh. (Es stehen mehrere Versionen zur Verfügung: [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Es ist kein Problem, wenn Sie und ihre Schüler absolute Neulinge in der Informatik sind. Hier finden sie einige Ideen, wie sie Ihre "Hour of Code" Aktivität vorstellen können:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die Jungen und Mädchen interessieren (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
 - Zählen Sie gemeinsam Dinge auf, die im Alltag Computerprogramme nutzen.
@@ -48,17 +52,17 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 
 ## 6. Programmieren!
 
-**Bringen sie ihre Student zu ihrer Aktivität**
+**Direct students to the activity**
 
 - Schreiben Sie den Link für das Tutorial an das Whiteboard. Wählen Sie den Link, der in der Information [ Ihres ausgewählten Tutorials ](%= resolve_url('/learn') %) unter der Anzahl der Teilnehmerinnen und Teilnehmer angezeigt wird.
 
-**Wenn Ihre Schülerinnen und Schüler Schwierigkeiten haben, können Sie Folgendes darauf antworten:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Ich weiß es nicht. Lass uns das Problem gemeinsam lösen."
 - "Die Technik funktioniert nicht immer so, wie wir es wollen."
 - "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
 
-**Was, wenn eine Schülerin oder ein Schüler früher fertig wird?**
+**What if a student finishes early?**
 
 - Schülerinnen und Schüler können sich alle Tutorials ansehen und sich an [andere Hour of Code Aktivitäten](%= resolve_url('/learn')%) versuchen.
 - Oder Sie bitten die Schülerinnen und Schüler, die früher fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.

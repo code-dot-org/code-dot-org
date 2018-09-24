@@ -11,12 +11,21 @@ ro:
   campaign_date_full: "5-11 decembrie"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 decembrie, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}'
   front_intro_default: 'Hour of Code (Ora de Programare) este o mişcare globală ce a atins zeci de milioane de elevi si studenţi din peste 180+ de ţări. Oricine, oriunde poate organiza un eveniment Hour of Code. Tutoriale de o ora sunt traduse în peste 40 de limbi. Nu ai nevoie de cunostinte speciale. <strong>Vârsta: de la 4 la 104 ani.</strong>'
   front_watch_video: 'Urmăriţi noul clip video'
   front_watch_regular_video: 'Urmăriţi clipul video'
   front_volunteers: 'Cautam voluntari tehnici'
   front_start_learning: 'Începe sa înveti'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Resurse'
   header_menu_faq: 'Întrebări frecvente'
   header_menu_how_to: 'Tutoriale informative'
@@ -222,6 +231,8 @@ ro:
   front_join_us_challenge: "Câștiga un chat video cu o celebritate pentru clasa ta!"
   front_join_us_learn_more: "Aflați mai multe"
   signup_closed: 'Înregistrarea pentru Hour of Code este închisă acum. Verificați din nou în luna Octombrie pentru a vă înscrie la următoarea Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organizeaza un eveniment Hour of Code in perioada %{campaign_date} şi înregistreaza-l aici.'
   signup_name_label: 'Numele tău'
   signup_name_error: 'Numele este obligatoriu.'
@@ -243,6 +254,11 @@ ro:
   signup_your_event: 'Înscrieţi-vă evenimentul'
   signup_host_an_hour: 'Organizeaza o ora'
   signup_match_volunteer: 'Ajuta-ma sa gasesc un inginer software care sa ii poata inspira pe elevii mei'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Dacă organizați mai multe evenimente, vă rugăm să trimiteți un nume unic sau câte un e-mail pentru fiecare. Noi luăm în considerare doar un eveniment pe un nume și combinație de e-mail."
   signup_registration_deadline: "Inregistrarile pentru Hour of Code se vor inchide pe 12 decembrie."
   signup_name_placeholder: 'Numele tău'
@@ -265,6 +281,7 @@ ro:
   signup_thank_you_message: 'Am trimis un e-mail de confirmare cu informaţii pentru a vă ajuta să începeţi.'
   map_title: "Mapa Hour of Code"
   map_header: 'Evenimentele Hour of Code din întreaga lume'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Vezi toate evenimentele'
   map_header_company: '# de '
   map_header_country: '# în %{country}'
@@ -280,6 +297,7 @@ ro:
   meta_tag_twitter_title: 'Hour of Code se apropie'
   meta_tag_twitter_description: 'Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani.'
   twitter_default_text: "În acest an particip la #HourOfCode, tu? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Întrebări frecvente'
   hoc_faq_what_is_hoc_q: 'Ce reprezintă Hour of Code?'
   hoc_faq_what_is_hoc_a: "Ora de Programare reprezinta o introducere de o ora in stiinta computerului si programare, cu scopul de a demistifica limbajul specific si de a arata ca oricine poate invata bazele acestuia. Incearcarea de a apropia elevii de tehnologia computerelor si programare a devenit un efort global. Acesta incepe printr parcurgerea unor activitati de o ora, insa se extinde la tot felul de eforturi ale comunitatii. Iata <a href='%{tutorials}'> tutorialele si activitatile </a>. Aceasta campanie este sustinuta de peste <a href='%{partners}'> 400 de parteneri</a> si 200.000 de educatori din toata lumea."
@@ -374,6 +392,7 @@ ro:
   videos_obama_cs: Președintele Obama despre tehnologia computerelor
   videos_anybody_can_learn: Oricine poate învăţa (1 min)
   title_country_resources: Resurse specifice ţării
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Cum sa organizezi Hour of Code pentru cartiere
   title_how_to_events: Cum sa organizezi un eveniment Hour of Code
   title_how_to_organizations: Cum sa organizezi Hour of Code pentru organizatii
@@ -382,6 +401,7 @@ ro:
   title_how_to_volunteers: Cum sa organizezi - Ghid pentru voluntari
   title_how_to_parents: Ghidul de organizare pentru parinti
   title_how_to: Ghidul de organizare
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code - Comunicat de presa pentru oficialii alesi
   title_op_ed: Proba de sustinere a Tehnologiei computerelor si programarii si a evenimentului Hour of Code
   title_press_kit: Kit pentru presă

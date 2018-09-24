@@ -119,19 +119,13 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Негізгі Жарнама Серіктестері
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
-* * *
-
-# Халықаралық Серіктестері
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Қосымша Серіктестер
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

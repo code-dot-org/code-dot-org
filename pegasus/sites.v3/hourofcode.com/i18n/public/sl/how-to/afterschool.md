@@ -1,17 +1,19 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Kako učiti Uro Za Kodo v izbirnih predmetih in krožkih
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Pridružite se gibanju in uvedite skupino učencev, dijakov ali študentov v njihovo prvo uro računalništva z naslednjimi koraki. Izvajanje tečajev Ura Za Kodo je preprosto - tudi za začetnike! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your after-school class or club.
+
+---
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. Izberite tečaj
 
 We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Preizkusite jih!](<%= resolve_url('/learn') %>)
 
@@ -27,17 +29,15 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Ampak **ne potrebujete** računalnika za vsakega učenca in Uro Za Kodo lahko izvajate tudi brez račinalnika.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Preverite ponujene tečaje nprvo preverite ali delujejo pravilno na brskljalnikih učencev z zvokom in sliko. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Tako si učenci pomagajo in so manj odvisni od učitelja. Naučili se bodo, da je programiranje družabno in je pomembno sodelovanje.
 
-<img src="/images/fit-350/group_ipad.jpg" />
-
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Začnite vašo Uro Za Kodo z navdihujočim video posnetkom
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
@@ -46,67 +46,30 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- [Poiščite](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) še več navdihujočih video posnetkov.
 
 **It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Razložite kako tehnologija vpliva na naše življenje. Poiščite primere, ki bodo blizu tako fantom kot dekletom (pogovarjajte se o tehnologiji, ki rešuje življenja, pomaga ljudem, povezuje ljudi itd).
 - List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- [Tukaj](<%= resolve_url('https://code.org/girls') %>) si oglejte nasvete, kako programiranje približati dekletom.
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Code!
 
-**Direct participants to the activity**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**When someone comes across difficulties it's okay to respond:**
-
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
-
-**What to do if someone finishes early?**
-
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Celebrate
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 ## Other Hour of Code resources for educators
 
@@ -117,9 +80,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Kaj pride po Uri za kodo?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
-
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>

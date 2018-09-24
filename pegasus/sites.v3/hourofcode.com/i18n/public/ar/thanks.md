@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 
@@ -44,7 +44,7 @@ social:
 
 ## 2. البحث عن متطوع محلي لمساعدتك في الحدث الخاص بك.
 
-[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[ابحث في خريطة المتطوعين الخاصة بنا](<%= codeorg_url('/volunteer/local') %>) عن متطوعين يمكنهم زيارة فصلك او يحادثونك بالفيديو عن بعد ليلهموا طلابك بالحديث عن سعة الاحتمالات في علم الكمبيوتر.
 
 ## 3. ضع خطة لساعتك من البرمجة
 
