@@ -2,7 +2,6 @@
 require_relative('../config/environment')
 require 'cdo/properties'
 
-ENABLED_LANGUAGES = [:'es-ES', :'it-IT', :'pt-BR'].freeze
 k1_scripts = Script.all.select(&:text_to_speech_enabled?)
 
 def clean(value)
@@ -21,7 +20,9 @@ def text_translated?(left, right)
   clean(left) != clean(right)
 end
 
-ENABLED_LANGUAGES.each do |lang|
+TextToSpeech::VOICES.keys.each do |lang|
+  next if lang == :'en-US'
+
   I18n.locale = lang
   puts "updating text-to-speech for #{I18n.locale}"
   k1_scripts.each do |script|
