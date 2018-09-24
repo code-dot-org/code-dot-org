@@ -186,13 +186,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user = user
       silent_takeover @user, auth_hash
       sign_in_user
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
-      email_already_taken_redirect \
-        provider: AuthenticationOption::GOOGLE,
-        found_provider: looked_up_user.provider,
-        email: user.email
     else
-      # This is a new registration
       register_new_user user
     end
   end

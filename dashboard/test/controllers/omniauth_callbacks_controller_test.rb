@@ -796,6 +796,44 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User.last.id, signed_in_user_id
   end
 
+  test 'sign_up_clever: email taken redirect if _two_ users are already using your email address' do
+    # TODO: Make this not a thing
+    email = 'alreadytaken@example.com'
+    create :student, email: email
+    create :student, email: email + '.oauthemailalreadytaken'
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      user_type: User::TYPE_TEACHER,
+      email: email
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    refute_creates(User) do
+      get :clever
+    end
+    assert_redirected_to "/users/sign_in?providerNotLinked=clever&email=#{email}.oauthemailalreadytaken"
+  end
+
+  test 'sign_up_clever: clever email taken redirect if _two_ users are already using your email address and one of them is clever' do
+    # TODO: Make this not a thing
+    email = 'alreadytaken@example.com'
+    create :student, email: email
+    create :student, email: email + '.oauthemailalreadytaken', provider: AuthenticationOption::CLEVER
+
+    auth = generate_auth_user_hash(
+      provider: AuthenticationOption::CLEVER,
+      user_type: User::TYPE_TEACHER,
+      email: email
+    )
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    refute_creates(User) do
+      get :clever
+    end
+    assert_redirected_to "/users/sign_in?providerNotLinked=clever&useClever=true"
+  end
+
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
     email = 'test@xyz.foo'
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
