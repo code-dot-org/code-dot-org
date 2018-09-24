@@ -26,7 +26,9 @@
 require "csv"
 
 class Craft < Blockly
-  # before_save :update_maps
+  def shared_blocks
+    Block.for('craft') if is_aquatic_level
+  end
 
   serialized_attrs(
     :ground_plane,
@@ -60,6 +62,7 @@ class Craft < Blockly
     :level_verification_timeout,
     :use_player,
     :free_play,
+    :ocean,
     :songs
   )
 
@@ -406,7 +409,7 @@ class Craft < Blockly
   }.freeze
 
   def self.start_directions
-    [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
+    [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end
 
   def self.song_options

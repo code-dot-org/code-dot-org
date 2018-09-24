@@ -79,7 +79,11 @@ class Block < ApplicationRecord
   end
 
   def write_additional_files
-    File.write js_path, helper_code if helper_code.try(:present?)
+    if helper_code.try(:present?)
+      File.write js_path, helper_code
+    else
+      delete_additional_files
+    end
   end
 
   def delete_additional_files

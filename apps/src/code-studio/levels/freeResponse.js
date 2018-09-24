@@ -4,8 +4,9 @@ import { onAnswerChanged } from './codeStudioLevels';
 import { sourceForLevel } from '../clientState';
 
 export default class FreeResponse {
-  constructor(levelId) {
+  constructor(levelId, optional) {
     this.levelId = levelId;
+    this.optional = !!optional;
 
     $(document).ready(function () {
       var textarea = $(`textarea#level_${levelId}.response`);
@@ -22,6 +23,10 @@ export default class FreeResponse {
         onAnswerChanged(levelId, false);
       });
     });
+  }
+
+  getOptional() {
+    return this.optional;
   }
 
   getResult() {
