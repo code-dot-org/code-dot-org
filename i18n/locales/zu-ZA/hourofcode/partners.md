@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 IHora loKufingqwa liqhutshwa iKomidi yoKweluleka noku Bhekisisa ye Hora loKufingqwa kanye neViki leMfundiso yeKhompyutha Sayensi.
 
