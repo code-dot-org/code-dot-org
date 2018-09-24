@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 'Jam Kod' diselia oleh Jawatankuasa Penasihat dan Jawatankuasa Pemantauan Minggu Pendidikan Sains Komputer dan Jam Kod.
 
