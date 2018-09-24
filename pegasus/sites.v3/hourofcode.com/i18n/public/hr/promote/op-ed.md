@@ -1,20 +1,21 @@
 ---
-title: <%= hoc_s(:title_op_ed) %>
+title: <%= hoc_s(:title_op_ed).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### U nastavku je uzorak op-ed podrške tjednu računarstva i njegovih ciljeva koje mogu koristiti država, lokalni zakonodavci poslovni ljudi itd.
+# Write an op-ed in support of Computer Science Education Week
 
-  
+### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
 
+### Visit [advocacy.code.org](<%= resolve_url('https://advocacy.code.org') %>) to find state specific information about computer science.
 
-Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
+---
 
-**Title: Computing…Where the Jobs Are**
+#### Title: Computing…Where the Jobs Are
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
 Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
@@ -22,7 +23,7 @@ But who exactly is going to write this software?
 
 Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
 Why is this? And how can we address it?
 

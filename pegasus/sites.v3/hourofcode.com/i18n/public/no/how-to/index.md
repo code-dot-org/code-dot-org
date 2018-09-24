@@ -1,23 +1,27 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Hvordan undervise i kodetimen </h1>
+# How to teach one Hour of Code with your class
 
-Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig](<%= resolve_url('https://code.org/volunteer/local') %>) som kan hjelpe til med å organisere Kodetimen for klassen din.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Se denne veiledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Velg et undervisningsopplegg
 
-Vi har et utvalg av morsomme [oppgaver laget av elever](<%= resolve_url('/learn') %>) tilpasset ulike aldersgrupper og erfaringsnivåer. Elevene gjør oppgaver på egenhånd. Mange av aktivitetene og oppgavene inkluderer en veiledning for lærere (lenkene vises når du velger en aktivitet) hvordan styre diskusjoner og utvide oppgaven. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Markedsfør Kodetimen din
 
-Reklamer for Kodetimen din for eksempel ved hjelp av [disse verktøyene](<%= resolve_url('/promote/resources') %>), og oppmuntr andre til å arrangere egne Kodetimer.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Planlegg hva du trenger av utstyr - datamaskin er valgfritt
 
@@ -40,25 +44,25 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 - Den opprinnelige lanseringsvideoen fra Code.org med Bill Gates, Mark Zuckerberg og NBA-stjerne Chris Bosh. (Finnes i versjoner på [1 minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA).)
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det er helt greit om hverken du eller elevene har noen tidligere erfaring med informatikk. Her er noen tips til hvordan du kan introdusere Kodetimen:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Forklar hvordan informasjonsteknologi påvirker livene våre. Bruk gjerne eksempler som både jenter og gutter kan kjenne seg igjen i (snakk om hvordan teknologi kan redde liv, forenkle hverdagen vår, om sosiale medier og kommunikasjon, o. l.).
 - Gå sammen i klassen om å lage en liste over ting vi bruker i hverdagen, som inneholder programkode.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
+- Se tips for å få jenter interessert i dataprogrammering [her](http://<%= codeorg_url('/girls')%>)
 
 ## 6. Koding!
 
-**Sett i gang elevene med valgt oppgave**
+**Direct students to the activity**
 
 - Skriv adressen til oppgaven på tavlen. Adressen finner du sammen med annen [informasjon om den valgte aktiviteten](<%= resolve_url('/learn')%>), nedenfor deltagerantaller.
 
-**Når elevene har spørsmål eller synes noe er vanskelig, er det helt greit å svare:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Jeg vet ikke. La oss finne det ut sammen."
 - "Det er ikke alltid teknologien oppfører seg slik vi ønsker."
 - "Å lære seg å programmere er som å lære seg et nytt språk; du kan det ikke flytende med en gang."
 
-**Hva hvis en elev blir ferdig før tiden?**
+**What if a student finishes early?**
 
 - Eleven kan prøve seg på en av de [andre Kodetimen-aktivitetene](<%= resolve_url('/learn')%>).
 - Eller du kan be de elevene som blir fort ferdige om å hjelpe de som sliter med å få det til.
@@ -79,7 +83,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 [/col-33]
 
-- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
+- [Skriv ut diplomer](<%= resolve_url('https://code.org/certificates') %>) for elevene.
 - [Skriv ut "Jeg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>)-klistremerker til elevene.
 - [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skolen din.
 - Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
@@ -101,7 +105,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 Kodetimen er bare første steg på en reise for å lære seg mer om hvordan teknologien fungerer og hvordan du kan lage dine egne programmer. For å fortsette på denne reisen:
 
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- Oppmuntre elevene til å fortsette å [lære på nettet](<%= resolve_url('https://code.org/learn/beyond')%>).
 - [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

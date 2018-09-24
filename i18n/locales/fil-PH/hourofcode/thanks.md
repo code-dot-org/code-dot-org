@@ -18,7 +18,7 @@ social:
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url na =>"http://hourofcode.com", :kaugnay =>'codeorg', :hashtags=>'', :teksto =>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' malibang hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Maraming salamat sa pagsama bilang host ng Hour of Code!
 

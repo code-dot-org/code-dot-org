@@ -5,15 +5,19 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Hur du lär ut Hour of Code</h1>
+# How to teach one Hour of Code with your class
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. En timme kod är lätt att köra - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### Häng på och introducera en grupp elever i deras första programmeringstimme genom dessa steg. Hour of Code är lätt att delta i - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+
+* * *
 
 ## 1. Se den här video-guiden <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Välj en övning till din timme
 
-Här hittar du en mängd roliga [elev-guidade övningar](%= resolve_url('/learn') %) för alla åldrar och kunskapsnivåer. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
 ## 3. Marknadsför din Hour of Code
 

@@ -5,36 +5,37 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Πώς να συμπληρώσετε την Ώρα του Κώδικα μαζί με το παιδί σας
+# How to do an Hour of Code with your child
 
-Συμπληρώστε την Ώρα του Κώδικα στο σπίτι, ή γίνε εθελοντής για να το φέρεις στην τάξη του παιδιού σου! Δες εδώ πώς:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+* * *
 
 ## 1) Παρακολουθήστε το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Επιλέξτε έναν εκπαιδευτικό οδηγό:
+## 2) Choose a tutorial
 
-Παρέχουμε μια ποικιλία από διασκέδαση, ωριαία εκπαιδευτικά βίντεο για μαθητές όλων των ηλικιών, που δημιουργήθηκαν από μια πληθώρα των συνεταίρων. [Δοκιμάστε τα τώρα!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**Όλα τα εκπαιδευτικά βιντεάκια της Ώρας του Κώδικα είναι αυτό-καθοδηγούμενα, επιτρέποντας στο παιδί σας να προχωρεί με το δικό του ρυθμό και επίπεδο δεξιοτήτων**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Σχεδίασε τις τεχνολογικές σου ανάγκες
 
-Η καλύτερη εμπειρία της Ώρας του Κώδικα θα είναι με υπολογιστές συνδεδεμένους στο Internet. Αλλά εσείς **δεν** χρειάζεστε έναν υπολογιστή. There are many activities that are "unplugged" and can be done without any technology at all.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Θέλετε να μάθετε μαζί με το παιδί σας;** Δοκιμάστε [ζεύγος προγραμματισμού.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Επιστήμη των υπολογιστών είναι κοινωνική και συλλογική.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 5) Ξεκινήστε την δική σας Ώρα του Κώδικα με ένα βίντεο που θα σας εμπνεύσει
+## 4) Start your Hour of Code with an inspiring video
 
 Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
 
 **Δείξτε ένα βίντεο που να εμπνέει:**
 
-- Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Ο πρόεδρος Ομπάμα καλεί όλους του μαθητές να μάθουν την Επιστήμη της Πληροφορικής](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
@@ -65,11 +66,9 @@ It’s okay to respond:
 
 Μοιραστείτε φωτογραφίες και βίντεο της εκδήλωσής σας στα μέσα κοινωνικής δικτύωσης. Χρησιμοποιήστε #HourOfCode και @codeorg, ώστε να μπορούμε να αναδείξουμε την επιτυχία σας επίσης!
 
-**Other Hour of Code resources:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Δείτε την [ώρα του κώδικα FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
-
-**Τι γίνεται μετά την Ώρα του Κώδικα;**
+## Τι γίνεται μετά την Ώρα του Κώδικα;
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

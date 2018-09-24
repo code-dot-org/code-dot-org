@@ -7,13 +7,13 @@ nav: promote_nav
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Get your community involved in the Hour of Code
 
 ## 1. Razširite glas
 
-Tell your friends about the **#HourOfCode**!
+Povejte svojim prijateljem **#HourOfCode #UraZaKodo**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

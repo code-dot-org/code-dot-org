@@ -1,47 +1,48 @@
 ---
-title: <%= hoc_s(:title_op_ed) %>
+title: <%= hoc_s(:title_op_ed).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Төмөндө компүтердик билим алуу аптасын жана максаттарын колдогон мамлекеттик органдын, жергиликтүү кеңештин, бизнес лидеринин кулактандыруусунун үлгүсү.
+# Write an op-ed in support of Computer Science Education Week
 
-  
+### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
 
+### Visit [advocacy.code.org](<%= resolve_url('https://advocacy.code.org') %>) to find state specific information about computer science.
 
-Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
+---
 
-**Аталышы: Эсептөө... Жумуш бар жер**
+#### Title: Computing…Where the Jobs Are
 
-**[АТЫ] ЖАНА [ОКУТУУЧУ, ДИРЕКТОР ЖЕ БИЗНЕС ЛИДЕР МЕНЕН АВТОРЛОШТУКТА]**
+#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Компүтерлер бардык жерде. Чөнтөгүбүздө. Дубалыбызда. Автомашинебизде. Алар кубат тармактары, кыймыл башкаруу жарыктары, финансы базарынын иштерине чейин колдонулган, инфраструктуранын маанилүү бөлүгү. Бул компүтерлердин баарына жалпы бир нерсе бар. Алар эмне кылышты айтып турган програмдан көз каранды.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Бул програмды ким жазат?
+But who exactly is going to write this software?
 
-Жашообузду технологиялар канчалык тез өзгөртүп жатканын эске алсак, азыркы учурда компүтердик технологияларды окуп жаткан мектеп окуучуларынын саны көп деп күтсөңөр керек. Жаңылышасыз. Иш жүзүндө, он жыл мурункуга караганда компүтерди окуган студенттердин саны азайып, аны окуткан мектептер андан дагы аз болуп калган.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-Жөндөмдүү програмчыларга талап туу чокусуна жеткенде, компүтерди окугандарын саны кыскарып кеткен. Азыркы жумушсуздуктун жогорку деңгээлине карабастан, миңдеген жумуш бар, алардын көбү мында - **[INSERT STATE/CITY]** жана жөндөмү туура келген киши жоктугунан улам бош калат.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
-Эмнеге мындай? Жана кантип өзгөртө алабыз?
+Why is this? And how can we address it?
 
-Маселе орто жана жогорку класстарда башталат. Он мектептин ичинен тогузунда компүтердик програмдоо сабагы окутулбайт. Былтыр **[РАЙОНДОГУ МЕКТЕПТЕРДИН]** ичинен **[САНЫ]** гана коллеж деңгээлиндеги кеңейтилип өтүлүүчү компүтердик билим сынагын тапшырган. Болгону биз окуучуларыбызды бул жакшы төлөнгөн, абдан керектүү ишке жетиштүү түрдө шыктандырбай жатабыз.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Дээрлик бардык компүтердик инновациялар биздин өлкөдө ойлоп чыгарылган, бирок эгерде биз азыр эч нерсе жасабай койсок, бул лидерликти жоготуп алабыз.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Бир нерсени өзгөртүш керек.
+We need to make some changes.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Олуттуу өзгөрүүлөрдүн бири болуп, информатиканын жогорку класстагы математика же бүтүрүүчүлөрдүн талаптарына жооп берүү болмок. **[INSERT STATE]** мектептеринде информатика курстары тандалма. Академиялык талаптарды эске алганда, окуучулар өз эрки менен информатика курстарын алууга мүмкүнчүлүктөрү жок. Бул өзгөрүш чоң таасир берет. Информатика сабагы милдеттүү түрдө окутулган штаттарда, тандоо сабагы катары окутулган штаттарга караганда курстардын катышуусу элүү пайызга көбүрөөк.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Ошондой эле биз жаш окуучуларды информатика жана код жазууга кызыктырыш үчүн алар менен иштешибиз керек. Биздин балдар колдонмолорду колдонуу менен видео оюндарды ойногонду гана билбестен - аларды жасаганды да билиши керек. Балдар экинчи класстан баштап эле код жазууну үйрөнүп башташса болот.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Биз информатика окутуучуларга иш орундарын берип, бул тармактын профессионалдык өнүгүүсүн колдошубуз керек. Азыркы учурда жаңы технологиялар окутуучулар үчүн жеткиликтүү болууга жана алар тууралуу окуучуларды кабардар кылып турууга жардам берчү көптөгөн онлайн ресурстар бар.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Иш камсыздоо бюросунун статистикасы боюнча, 2020-жылы STEM тармагында 9.2 миллион иш орун ачылат. 4.6 миллион жумуш орунунун жарымы эсептөө же маалымат технологиялар тармагында болот. Компүтер илими - 21-кылымдын негизги түшүнүгү болуп баратат. Эгерде биздин балдар үчүн керектүү жөндөмдөрдү өздөштүрүүгө мүмкүнчүлүк түзүлбөсө, бул жумуш орундарды кимдер толуктайт?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-Бул жума - <%= campaign_date('full') %> Компүтердик билим аптасы. **[STATE]** мектептеринде окуган окуучуларыбыз компүтер илимин жайылтыш үчүн жана бул илим жөнүндө көбүрөөк үйрөнүш үчүн улуттук Код сааты долбоорунда катышышат. Мен аларга кошулам жана силерди да кошулууга чакырам. Код жазганды баары билиши керек. Бул жерге кирип: https://hourofcode.com/<%= @country %> маалымат алгыла да баштагыла. Ошондой эле **[STATE]** мектептеринде компүтердик илимди көбүрөөк окутуу аракетибизди колдоңуз.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
 <%= view :signup_button %>

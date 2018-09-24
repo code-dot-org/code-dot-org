@@ -11,12 +11,21 @@ el:
   campaign_date_full: "7 - 13 Δεκεμβρίου"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-12 Δεκεμβρίου, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση, 7-13 Δεκεμβρίου, 2015'
   front_intro_default: 'H ώρα του κώδικα είναι ένα παγκόσμιο κίνημα που φθάνει σε δεκάδες εκατομμύρια μαθητές σε 180+ χώρες. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα. Ωριαία μαθήματα είναι διαθέσιμα σε πάνω από 30 γλώσσες. Δεν χρειάζεται καμία εμπειρία. <strong>Για ηλικίες από 4 έως 104.</strong>'
   front_watch_video: 'Δες το νέο βίντεο'
   front_watch_regular_video: 'Δείτε το βίντεο'
   front_volunteers: 'Ζητούνται εθελοντές Τεχνικοί'
   front_start_learning: 'Αρχίστε να μαθαίνετε'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Πόροι'
   header_menu_faq: 'Συχνές ερωτήσεις'
   header_menu_how_to: 'Πώς να'
@@ -222,6 +231,8 @@ el:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Οργανώστε μία Ώρα του Κώδικα στις %{campaign_date}, και εγγράψτε την εδώ.'
   signup_name_label: 'Το όνομά σου'
   signup_name_error: 'Απαιτείται όνομα.'
@@ -243,6 +254,11 @@ el:
   signup_your_event: 'Προσθέστε την εκδήλωσή σας'
   signup_host_an_hour: 'Φιλοξενήστε μια ώρα'
   signup_match_volunteer: 'Βοήθησέ με να βρω έναν τοπικό μηχανικό λογισμικού για να εμπνεύσω τους μαθητές μου'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Εάν φιλοξενείτε πολλές εκδηλώσεις, παρακαλούμε να υποβάλλετε ένα μοναδικό όνομα ή ηλεκτρονικό ταχυδρομείο για κάθε μια. Μετράμε μόνο μία εκδήλωση ανά συνδυασμό ονόματος και ηλεκτρονικού ταχυδρομείου."
   signup_registration_deadline: "Η εγγραφή για την Ώρα του Κώδικα λήγει την 11η Δεκεμβρίου."
   signup_name_placeholder: 'Το όνομα σας'
@@ -265,6 +281,7 @@ el:
   signup_thank_you_message: 'Σας στέλνουμε ένα email επιβεβαίωσης με πληροφορίες που θα σας βοηθήσουν να ξεκινήσετε.'
   map_title: "Χάρτης της Ώρας του Κώδικα"
   map_header: '#Εκδηλώσεις για την Ώρα του Κώδικα  σε όλο τον κόσμο'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Δείτε όλες τις εκδηλώσεις'
   map_header_company: '# από τισ διοργανώτριες εταιρίες'
   map_header_country: '# στην %{country}'
@@ -280,6 +297,7 @@ el:
   meta_tag_twitter_title: 'Η Ώρα του Κώδικα πλησιάζει'
   meta_tag_twitter_description: 'Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.'
   twitter_default_text: "Συμμετέχω στη φετινή #HourOfCode, εσύ; @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Συχνές ερωτήσεις'
   hoc_faq_what_is_hoc_q: 'Τί είναι το Hour of Coding;'
   hoc_faq_what_is_hoc_a: "Στην ώρα του κώδικα είναι μια ωριαία εισαγωγή στην επιστήμη των υπολογιστών, σχεδιασμένο να απομυθοποιήσει κώδικα και να δείξει ότι μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'> Ρίξτε μια ματιά στα έτοιμα μαθήματα</a>."
@@ -333,8 +351,8 @@ el:
   stats_hoc: "H Ώρα του Κώδικα: 5 ημέρες"
   stats_global: "Πάνω από 100εκ μαθητές δοκίμασαν μια Ώρα του Κώδικα"
   stats_girls_more: "Περισσότερα κορίτσια δοκίμασαν την επιστήμη των υπολογιστών απ' ότι τα τελευταία 70 χρόνια"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Κάθε μέρα είχαμε τα ίδια αποτελεέσματα &mdash; 100%  συμμετοχή" - Nina Nichols Peery, Εκπαιδευτικός'
   stats_student: 'Ήξερα ότι αυτή ήταν μια <b>ευκαιρία ζωής</b> - Mariana Alzate, Ε Δημοτικού'
   stats_michael: '«Δεν είχα ξαναδεί μαθητές μου <b>τόσο ενθουσιώδεις</b> με τη μάθηση» - Michael Clark, Δάσκαλος'
@@ -374,6 +392,7 @@ el:
   videos_obama_cs: Ο Πρόεδρος Ομπάμα για την  Πληροφορική
   videos_anybody_can_learn: Οποιοσδήποτε μπορεί να μάθει (1 λεπτό)
   title_country_resources: Πόροι ανά Χώρα
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Η Ώρα του Κώδικα ανά περιοχή
   title_how_to_events: Οδηγίες για εκδηλώσεις στην Ώρα του Κώδικα
   title_how_to_organizations: Πώς να φιλοξενήσετε μια ώρα του κώδικα - για οργανισμούς
@@ -382,6 +401,7 @@ el:
   title_how_to_volunteers: Πως-να-το-κάνω οδηγός για εθελοντές Κώδικα
   title_how_to_parents: '"Πώς να" οδηγός για τους γονείς'
   title_how_to: Οδηγός βήμα-βήμα
+  title_international_partners: Contact International Partners
   title_press_release: Έντυπη ανακοίνωση της Ώρας Κώδικα για εκλεγμένες αρχές
   title_op_ed: Δείγματα ανοικτού λογισμικού (Op-ed) υποστηρικτικού υλικού για εκπαίδευση κατά την εβδομάδα της επιστήμης υπολογιστών και την ώρα του κώδικα
   title_press_kit: Υλικό για τα ΜΜΕ

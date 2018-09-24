@@ -5,33 +5,37 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>چگونه ساعت کدنویسی را تدریس کنیم</h1>
+# How to teach one Hour of Code with your class
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### به این جنبش بپیوندید و با این مراحل، گروهی از دانش آموزان را با اولین ساعتشان با علوم کامپیوتر آشنا کنید. اجرای ساعت کدنویسی خیلی آسان است - حتی برای مبتدیان! اگر میخواهید افراد کمکی دیگری داشته باشید، می توانید یک [داوطلب محلی](%= codeorg_url('/volunteer/local') %) برای اجرای ساعت کدنویسی در کلاس خود پیدا کنید.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
 
-## 2. Choose a tutorial for your hour
+* * *
+
+## 1. این فیلم آموزشی را ببینید <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2. یکی از آموزش ها را برای دوره خود انتخاب کنید
 
 We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-## 3. Promote your Hour of Code
+## 3. برنامه ساعت کدنویسی خود را اطلاع رسانی کنید
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
 
-## 4. Plan your technology needs - computers are optional
+## 4. برای تکنولوژی های مورد نیاز خود برنامه ریزی کنید - داشتن رایانه اختیاری است
 
-بهترین ساعتهای یکساعت کدنویسی زمانهایی است که به اینترنت وصل هستند. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+بهترین ساعتهای یکساعت کدنویسی زمانهایی است که به اینترنت وصل هستند. اما برای هر دانش آموز به یک کامپیوتر **نیاز ندارید**، و حتی این امکان وجود دارد که ساعت کدنویسی را بدون کامپیوتر برگزار کنید.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+برنامه های آموزشی را بر روی کامپیوتر یا دستگاه های دیگر دانش آموزان امتحان کنید تا مطمئن شوید که مرورگرها، ویدئوها را به درستی با صدا و تصویر نمایش می دهند. **پهناي باند كمي داريد؟** ويدئوها را خودتان براي كل كلاس نمايش دهيد تا هر دانش آموز مجبور نشود ويدئوها را جداگانه دانلود كند. یا از آموزش های آفلاین استفاده کنید.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+اگر برنامه آموزشی مورد نظرتان با صدا بهتر کار می کند، براي كلاس تان هدفون تهيه كنيد، يا از دانش آموزان بخواهيد که هدفون های خودشان را به کلاس بياورند.
 
 **رایانه به اندازه کافی ندارید؟** از [برنامه نویسی جفتی](https://www.youtube.com/watch?v=vgkahOzFH2Q) استفاده کنید. هنگامي كه دانش آموزان همكاري مي‌كنند، به هم كمك كرده و تكيه‌شان بر معلم كمتر مي‌شود. همچنين متوجه مي شوند كه دانش كامپيوتر يك فعاليت اجتماعي و مبتني بر همكاري است.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5. ساعت کدنویسی خود را با یک سخنرانی یا ویدیوی الهام بخش آغاز کنید
 
 **Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 

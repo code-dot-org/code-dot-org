@@ -11,12 +11,21 @@ kk:
   campaign_date_full: "5-11 желтоқсан"
   campaign_date_year: "2016"
   campaign_date_full_year: "Желтоқсан 5-11, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Тарихтағы ең ірі үйрену оқиғасына қосылыңыз, 7-13 желтоқсан, 2015'
   front_intro_default: 'Кодтау сағаты - бұл 180+ мемлекетте ондаған миллион оқушыларға жететін ғаламдық бастама. Әркім кез-келген жерде Кодтау сағатын өткізе алады. Бір сағаттық жаттығулар 40-тан астам тілде дайын. Тәжірибе міндетті емес.<strong> 4 жастан 104 жасқа дейін </strong>'
   front_watch_video: 'Жаңа бейне-роликті тамашалау'
   front_watch_regular_video: 'Бейне-роликті тамашалау'
   front_volunteers: 'Техникалық волонтер керек'
   front_start_learning: 'Үйренуді баста'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Ресурстар'
   header_menu_faq: 'Жиі қойылатын сұрақтар'
   header_menu_how_to: 'Қалай'
@@ -222,6 +231,8 @@ kk:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '%{campaign_date} аралығында өтетін Кодтау сағатын ұйымдастыр және оны осында тіркеп қой.'
   signup_name_label: 'Аты-жөніңіз'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ kk:
   signup_your_event: 'Бастамаңызды тіркеу'
   signup_host_an_hour: 'Кодтау сағатын жүргіз'
   signup_match_volunteer: 'Оқушыларды бағдарлама жазуға шабыттандыру үшін жергілікті бағдарламалаушыны табуға көмек беріңіз'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Бірнеше іс-шара ұйымдастырып жатсаңыз, әрқайсысының аты немесе электрондық поштасы бірегей екекіне көз жеткізіңіз. Іс-шараны санаған кезде аты мен электрондық поштасының комбинациясын пайдаланамыз."
   signup_registration_deadline: "Кодтау сағатына тіркелу желтоқсанның 12 күні жабылады."
   signup_name_placeholder: 'Аты-жөніңіз'
@@ -265,6 +281,7 @@ kk:
   signup_thank_you_message: 'Бастау көмектесу үшін ақпарат растау біз сізге бар электрондық пошта хабарын жіберген болатынбыз.'
   map_title: "Код Сағаты Картасы"
   map_header: '#Кодтау Сағаты бүкіл әлемде'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Барлық бастамаларды көру'
   map_header_company: '# by company organizers'
   map_header_country: '# %{country} мемлекетінде'
@@ -280,6 +297,7 @@ kk:
   meta_tag_twitter_title: 'Кодтау сағаты мұнда'
   meta_tag_twitter_description: 'Кодтау сағаты - 180 астам елдегі 45 астам тілде сөйлейтін әр жастағы ондаған миллион оқушыны қамтитын жаһандық қозғалыс.'
   twitter_default_text: "Мен осы жылы #HourOfCode (#КодтауСағаты-на) қатысамын, сен ше? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Жиі қойылатын сұрақтар'
   hoc_faq_what_is_hoc_q: 'Кодтау сағаты - ол не?'
   hoc_faq_what_is_hoc_a: "Кодтау сағаты бағдарламалауды көпшілікке таныстыратын әрі оның негіздерін әркім игеріп әрі қарай алып кете алатындығын көрсететін, компьютерлік ғылымға (информатикаға) бірсағаттық кіріспе ретінде басталған болатын. Бұл бірсағаттық бағдарламалау шаралары қауыдмастықтың көмегімен бірге информатиканың атын шығаруға үлес қосатын әлемдік қозғалысқа ұласып кетті. <a href='%{tutorials}'>Үйрену материалдары мен іс-шараларды</a> қарап шығыңыз. Бұл бұқаралық науқанды әлем бойынша <a href='%{partners}'>400 астам серіктес</a> пен 200 000 астам оқытушы қолдайды."
@@ -333,8 +351,8 @@ kk:
   stats_hoc: "Кодтау Сағаты: 5 күн"
   stats_global: "100 миллионнан астам балалар Кодтау Сағатын өтіп көрді"
   stats_girls_more: "Информатиканы осы жерде оқып көрген қыздар саны соңғы 70 жылда үйренгеннен көбірек"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Нәтижесі әр күн сайын біркелкі &mdash; 100% қатысу." - Нина Никольс Пери, Оқытушы'
   stats_student: '"Мұны <b>өмірде бір рет берілетін</b> шансым деп білдім." - Мариана Алзат, 5 сынып оқушысы'
   stats_michael: '"Оқушыларымның сондай қызығушылықпен оқығанын <b>бұрын көрмеппін</b>." - Майкл Кларк, оқытушы'
@@ -374,6 +392,7 @@ kk:
   videos_obama_cs: Президент Обама Компьютер Ғылымы туралы
   videos_anybody_can_learn: Әркім үйрене алады(1 мин)
   title_country_resources: Мемлекетке айрықша ресурстар
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Аймақтарға арналған кодтау сағатының нұсқауы
   title_how_to_events: Кодтау сағаты қалай өткізу
   title_how_to_organizations: '"Кодтау Сағатын" қалай ұйымдастыруға болады - Ұжымдар үшін'
@@ -382,6 +401,7 @@ kk:
   title_how_to_volunteers: Кодтау сағатының волонтерлерге арналған нұсқауы
   title_how_to_parents: Ата-аналарға арналған нұсқау
   title_how_to: Қалай жүргізу жолнұсқасы
+  title_international_partners: Contact International Partners
   title_press_release: Сайланған өкілдерге арналған Кодтау сағатының баспасөз релизі
   title_op_ed: Компьютер ғылымын оқытудың аптасы мен Кодтау сағатын қолдау хатының нұсқасы
   title_press_kit: Баспасөз жиынтығы

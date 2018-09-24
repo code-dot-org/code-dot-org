@@ -1,23 +1,27 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Paano magturo sa unang oras ng Hour of Code</h1>
+# How to teach one Hour of Code with your class
 
-Sumali sa kilusan at ipakilala ang grupo ng mga studyante sa kanilang unang oras ng computer science sa mga hakbang na ito. Ang Oras ng Code ay madaling gumana - kahit para sa mga baguhan! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Sumali sa kilusan at ipakilala ang grupo ng mga studyante sa kanilang unang oras ng computer science sa mga hakbang na ito. Ang Oras ng Code ay madaling gumana - kahit para sa mga baguhan! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Panoorin ang video kung paano <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Piliin ang pagtuturo para sa iyong oras
 
-Naglalaan kami ng iba't ibang kasiyahan, [mga pagtuturo na gabay sa mga estudyante](<%= resolve_url('/learn') %>)para sa lahat ng grupo ng edad at lebel ng karanasan. Gagawing mag isa ng mga studyante, kahit na karamihan sa mga aktibidad ay kasama ang lsson plan ng mga guro (makikita mo ang link kapag pinindot ang aktibidad) para gabayan ang talakayan o i-extend ang aktibidad. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Paunlarin ang iyong Hour of Code
 
-Paunlarin ang iyong Hour of Code [gamit ang mga tool na ito](<%= resolve_url('/promote/resources') %>) at hikayatin ng iba na mag host ng kanilang sariling kaganapan.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Planuhin ang pangangailangan ng iyong teknolohiya - ang computer ay opsyonal
 
@@ -40,7 +44,7 @@ Maglaan ng headphones para sa iyong klase, o kaya ay pagdalhin ang mga studyante
 - Ang orihinal na Code.org na inilunsad na video, nabilang sina Bill Gates, Mark Zuckerberg, at NBA star na si Chris Bosh. (Mayroong [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuto](https://www.youtube.com/watch?v=nKIu9yen5nc), at[9 minuto](https://www.youtube.com/watch?v=dU1xS07N-FA) na mga version available)
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ayos lang kahit ikaw at ang mga estudyante mo ay baguhan lamang sa computer science. Narito ang ilan sa mga ideya kung paano ipakikilala ang iyong Hour of Code na aktibidad:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Ipaliwanag ang mga paraan kung paano naapektuhan ng teknolohiya ang ating mga buhay, sa mga halimbawa ang parehong lalaki at babae ay aasikasuhin (makipag-usap tungkol sa pag-save ng mga buhay, pagtulong sa mga tao, pagkonekta sa mga tao, atbp.).
 - Bilang isang klase, mag lista ng mga bagay na ginagamitan ng code sa araw araw na buhay.
@@ -48,17 +52,17 @@ Maglaan ng headphones para sa iyong klase, o kaya ay pagdalhin ang mga studyante
 
 ## 6. Mag-Code!
 
-**Patnubayan ang mga estudyante sa aktibidad**
+**Direct students to the activity**
 
 - Isulat ang link ng pagtuturo sa whiteboard. Hanapin ang link sa listahan [impomasyon para sa iyong napiling pagtuturo](<%= resolve_url('/learn')%>) sa ilalim ng numero ng mga kalahok.
 
-**Kung ang iyong mga estudyante ay nahihirapan ay ayos lang na tumugon:**
+**When your students come across difficulties it's okay to respond:**
 
 - "Hindi ko alam. Subukan nating alaman ito ng magkasama"
 - "Ang teknolohiya ay hindi palaging nakaayon sa ating kagustuhan."
 - "Ang pag-aaral kung paano mag-program ay katulad ng pag-aaral ng isang bagong wika; hindi ka kaagad maging mahusay."
 
-**Paano kung ang estudyante ay natapos ng maaga?**
+**What if a student finishes early?**
 
 - Makikita ng mga estudyante ang lahat ng mga pagtuturo at [ subukan ng ibang Hour of Code na aktibidad](<%= resolve_url('/learn')%>).
 - O, tanungin ang mga estudyanteng maagang natapos kung pwedeng makatulong sila sa mga nahihirapan sa aktibidad.
