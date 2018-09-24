@@ -5,11 +5,11 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Cómo enseñar la Hora de Código con su clase
+# Cómo enseñar la Hora de Código en su clase
 
-### Únete al movimiento introduciendo un grupo de estudiantes a su primer hora de ciencias de la computación con estos pasos. ¡La hora de código se ejecuta fácilmente - incluso para principiantes! Si desea un par de manos adicionales para ayudar, puede encontrar un [voluntario local](<%= codeorg_url('/volunteer/local') %>) para ayudarlo a organizar una Hora de Código en tu clase.
+### Únete al movimiento e introduce a un grupo de estudiantes a su primer hora de ciencias de la computación con los estos pasos. La hora de código es fácil de hacer - incluso para principiantes! Si desea un par de manos adicionales para ayudar, puede encontrar un [voluntario local](<%= codeorg_url('/volunteer/local') %>) para ayudarlo a organizar una Hora de Código en tu clase.
 
-### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+### Dale un vistazo a nuestra [guía de participación](<%= localized_file('/files/participation-guide.pdf') %>) si aún tienes preguntas.
 
 ---
 
