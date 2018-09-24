@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Hodina Kódu je riadená Komisiou a poradným výborom Hodiny Kódu a Tyždňom výuky informatiky.
 
