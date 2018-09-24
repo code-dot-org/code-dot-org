@@ -260,9 +260,7 @@ ru:
         applab: 'Создать приложение'
         gamelab: 'Создать проект Игровой Лаборатории'
         weblab: 'Создать проект Web-Лаборатории (beta)'
-      home: "На главную"
       my_dashboard: "Моя доска"
-      courses: "курсы"
       course_catalog: "Каталог курсов"
       project_gallery: "Проекты"
       sections: "Секции"
@@ -297,6 +295,14 @@ ru:
       help_us: "Помогите нам"
       teach: "Учить"
       about: "О разработчике"
+    create_button:
+      create: 'Создать'
+      applab: 'Лаборатория приложений'
+      artist: 'Художник'
+      gamelab: 'Игровая лаборатория'
+      playlab: 'Лаборатория игр'
+      minecraft: 'Minecraft'
+      flappy: 'Порхающий код'
     user:
       classroom: 'Домашняя страница преподавателя'
       district_dashboard: 'Панель управления области'
