@@ -57,7 +57,6 @@ var Dance = function () {
   this.eventHandlers = {};
   this.Globals = {};
   this.interpreterStarted = false;
-  this.globalCodeRunsDuringPreload = false;
   this.drawInProgress = false;
   this.setupInProgress = false;
   this.reportPreloadEventHandlerComplete_ = null;
@@ -325,7 +324,6 @@ Dance.prototype.reset = function () {
   this.setupInProgress = false;
   this.initialCaptureComplete = false;
   this.reportPreloadEventHandlerComplete_ = null;
-  this.globalCodeRunsDuringPreload = false;
 
   this.consoleLogger_.detach();
 
@@ -517,8 +515,6 @@ Dance.prototype.initInterpreter = function () {
           CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
     }
   }, this);
-
-  this.globalCodeRunsDuringPreload = !!this.eventHandlers.setup;
 };
 
 Dance.prototype.onTick = function () {
@@ -602,20 +598,15 @@ Dance.prototype.runPreloadEventHandler_ = function () {
         this.reportPreloadEventHandlerComplete_ = null;
         resolve();
       };
-      if (this.globalCodeRunsDuringPreload) {
-        this.JSInterpreter.executeInterpreter(true);
-        this.interpreterStarted = true;
 
-        // In addition, execute the global function called preload()
-        if (this.eventHandlers.preload) {
-          this.eventHandlers.preload.apply(null);
-        }
-      } else {
-        if (this.eventHandlers.preload) {
-          this.log("WARNING: preload() was ignored because setup() was not provided");
-          this.eventHandlers.preload = null;
-        }
+      this.JSInterpreter.executeInterpreter(true);
+      this.interpreterStarted = true;
+
+      // In addition, execute the global function called preload()
+      if (this.eventHandlers.preload) {
+        this.eventHandlers.preload.apply(null);
       }
+
       this.completePreloadIfPreloadComplete();
     } else {
       // If we didn't run anything resolve now.
@@ -636,8 +627,7 @@ Dance.prototype.completePreloadIfPreloadComplete = function () {
     return;
   }
 
-  if (this.globalCodeRunsDuringPreload &&
-      !this.JSInterpreter.startedHandlingEvents) {
+  if (!this.JSInterpreter.startedHandlingEvents) {
     // Global code should run during the preload phase, but global code hasn't
     // completed.
     return;
@@ -669,12 +659,7 @@ Dance.prototype.onP5Setup = function () {
     }
 
     this.setupInProgress = true;
-    if (!this.globalCodeRunsDuringPreload) {
-      // If the setup() method was not provided, we need to run the interpreter
-      // for the first time at this point:
-      this.JSInterpreter.executeInterpreter(true);
-      this.interpreterStarted = true;
-    }
+
     if (this.eventHandlers.setup) {
       this.eventHandlers.setup.apply(null);
     }
@@ -684,14 +669,6 @@ Dance.prototype.onP5Setup = function () {
 
 Dance.prototype.completeSetupIfSetupComplete = function () {
   if (!this.setupInProgress) {
-    return;
-  }
-
-  if (!this.globalCodeRunsDuringPreload &&
-      !this.JSInterpreter.startedHandlingEvents) {
-    // Global code should run during the setup phase, but global code hasn't
-    // completed.
-    this.gameLabP5.afterSetupStarted();
     return;
   }
 
