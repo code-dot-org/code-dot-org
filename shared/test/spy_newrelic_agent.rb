@@ -40,5 +40,13 @@ module NewRelic
         regex.match event.first
       end
     end
+
+    def self.add_custom_attributes(params)
+      (@@attributes ||= {}).merge!(params)
+    end
+
+    def self.custom_attributes
+      @@attributes ||= {}
+    end
   end
 end
