@@ -90,6 +90,7 @@ module Pd::Application
         '2 trimesters',
         'Full year'
       ],
+
       school_type: [
         'Public school',
         'Private school',
