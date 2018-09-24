@@ -79,7 +79,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     reset_view_options
 
-    @level.name = 'this_level_doesnt_exist'
+    @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
   end
