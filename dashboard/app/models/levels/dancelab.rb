@@ -31,6 +31,9 @@ class Dancelab < GamelabJr
         game: Game.gamelab,
         level_num: 'custom',
         properties: {
+          block_pools: [
+            "Dancelab",
+          ],
           helper_libraries: [
             "DanceLab",
           ],

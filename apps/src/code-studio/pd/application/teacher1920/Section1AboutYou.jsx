@@ -1,22 +1,26 @@
 import React, {PropTypes} from 'react';
 import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+import {
+  PageLabels, SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import {
+  Row,
+  Col,
+  ControlLabel,
   FormGroup,
   Modal,
   Button
 } from 'react-bootstrap';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {styles} from "./TeacherApplicationConstants";
 
 const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
 const PD_RESOURCES_URL = 'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
-const WHICH_PROGRAM_URL = 'https://code.org/files/PL-Program-for-Me.pdf';
-const PL_FAQ_URL = 'https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#heading=h.83a4cw26rwmq';
-  const PL_LANDING_URL = 'https://code.org/educate/professional-learning-2018#open-regions';
-const TEACHER_EMAIL = 'teacher@code.org';
 const INTERNATIONAL = 'International';
 const US = 'United States';
 
@@ -71,24 +75,8 @@ export default class Section1AboutYou extends LabeledFormComponent {
       <FormGroup>
         <p>
           Thanks for your interest in the Code.org Professional Learning Program!
-        </p>
-        <p>
-          This application should take 10 - 15 minutes to complete,
-          and will require your principal’s approval. Fields marked with a
-          {' '}<span style={{color: "red"}}>*</span>{' '}
-          are required.
-        </p>
-        <p>
-          <strong>
-            The priority deadline for applications has passed, and some regions are no
-            longer considering applicants. Please check
-            {' '}<a href={PL_LANDING_URL} target="_blank">this list</a>{' '}
-            to see which regions are still accepting applications.
-            If you have questions, be sure to
-            {' '}<a href={PL_FAQ_URL} target="_blank">check out our FAQs</a>{' '}
-            or contact us at
-            {' '}<a href={`mailto:${TEACHER_EMAIL}`}>{TEACHER_EMAIL}</a>.
-          </strong>
+          This application should take 10 - 15 minutes to complete. Fields marked with a
+          {' '}<span style={{color: "red"}}>*</span>{' '} are required.
         </p>
         <p>
           If you need more information about the program before you apply,
@@ -97,11 +85,14 @@ export default class Section1AboutYou extends LabeledFormComponent {
           and
           {' '}<a href={CSP_URL} target="_blank">CS Principles</a>.{' '}
           If you’re not sure which program is the right fit for your classroom,
-          we encourage you to check our guidance in
-          {' '}<a href={WHICH_PROGRAM_URL} target="_blank">Which Program is Right for Me?</a>{' '}
-          For additional questions regarding the program or application,
-          please contact
-          {' '}<a href={`mailto:${TEACHER_EMAIL}`}>{TEACHER_EMAIL}</a>.
+          we encourage you to{' '}
+          <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit" target="_blank">
+            check out our course and professional learning options.
+          </a>
+          {' '}For additional questions regarding the program or application, please
+          <a href="https://code.org/educate/regional-partner/contact" target="_blank">
+            {' '}contact your Regional Partner.
+          </a>
         </p>
 
         <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>
@@ -116,7 +107,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
         })}
 
         {this.inputFor("firstName")}
-        {this.inputFor("preferredFirstName", {required: false})}
         {this.inputFor("lastName")}
 
         {this.inputFor("accountEmail", {
@@ -133,10 +123,86 @@ export default class Section1AboutYou extends LabeledFormComponent {
         {this.selectFor("state", {placeholder: "Select a state"})}
         {this.inputFor("zipCode")}
 
-        {this.radioButtonsFor("genderIdentity")}
-        {this.checkBoxesFor("race")}
+        <p>
+          If you work in a school district, please select your district and school below:
+        </p>
+
+        <FormGroup
+          id="school"
+          controlId="school"
+          validationState={this.getValidationState("school")}
+        >
+          <Row>
+            <Col md={6}>
+              <ControlLabel>
+                School
+                <span style={{color: 'red'}}> *</span>
+              </ControlLabel>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <SchoolAutocompleteDropdown
+                value={this.props.data.school}
+                onChange={this.handleSchoolChange}
+              />
+            </Col>
+          </Row>
+        </FormGroup>
+
+        {this.props.data.school && this.props.data.school === '-1' &&
+        <div style={styles.indented}>
+          {this.inputFor("schoolName")}
+          {this.inputFor("schoolDistrictName")}
+          {this.inputFor("schoolAddress")}
+          {this.inputFor("schoolCity")}
+          {this.selectFor("schoolState", {placeholder: "Select a state"})}
+          {this.inputFor("schoolZipCode")}
+          {this.radioButtonsFor("schoolType")}
+        </div>
+        }
+
+        {
+          // Disable auto complete for principal fields, so they are not filled with the teacher's details.
+          // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
+          // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
+        }
+        {this.inputFor("principalFirstName", {autoComplete: "never"})}
+        {this.inputFor("principalLastName", {autoComplete: "never"})}
+        {this.inputFor("principalEmail", {autoComplete: "never"})}
+        {this.inputFor("principalConfirmEmail", {autoComplete: "never"})}
+        {this.usPhoneNumberInputFor("principalPhoneNumber", {autoComplete: "never"})}
+
+        {this.radioButtonsWithAdditionalTextFieldsFor("currentRole", {
+          [TextFields.otherPleaseList] : "other"
+        })}
+        {this.radioButtonsFor('completingOnBehalfOfSomeoneElse')}
+        {
+          this.props.data.completingOnBehalfOfSomeoneElse === 'Yes' &&
+            this.largeInputFor('completingOnBehalfOfName')
+        }
       </FormGroup>
     );
+  }
+
+  /**
+   * @override
+   */
+  static getDynamicallyRequiredFields(data) {
+    const requiredFields = [];
+
+    if (data.completingOnBehalfOfSomeoneElse === 'Yes') {
+      requiredFields.push('completingOnBehalfOfName');
+    }
+
+    return requiredFields;
+  }
+
+  static processPageData(data) {
+    const changes = {};
+    if (data.completingOnBehalfOfSomeoneElse === 'No') {
+      changes.completingOnBehalfOfName = undefined;
+    }
   }
 
   /**
@@ -155,6 +221,18 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
     if (!UsPhoneNumberInput.isValid(data.phone)) {
       formatErrors.phone = "Must be a valid phone number including area code";
+    }
+
+    if (!UsPhoneNumberInput.isValid(data.principalPhoneNumber)) {
+      formatErrors.principalPhoneNumber = "Must be a valid phone number including area code";
+    }
+
+    if (!isEmail(data.principalEmail)) {
+      formatErrors.principalEmail = "Must be a valid email address";
+    }
+
+    if (data.principalEmail !== data.principalConfirmEmail) {
+      formatErrors.principalConfirmEmail = "Must match above email";
     }
 
     return formatErrors;

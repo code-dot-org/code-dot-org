@@ -57,6 +57,8 @@ The pre-forum begins at 8:30 am on Thursday, September 27 as a prelude to the op
 * Networking
 * Team Planning Time
 
+Download the [agenda](https://advocacy.code.org/2018_state_policy_pre_forum_agenda.pdf).
+
 </p>
 </details>
 
@@ -74,6 +76,8 @@ The main forum begins at 2:00 pm on Thursday, September 27 following the pre-for
 * Workshops: Standards, State Plan, Legislation, Microcredentials, Advocacy
 * Birds of a Feather Discussions
 * Team Planning Time
+
+Download the [agenda](https://advocacy.code.org/2018_state_policy_main_forum_agenda.pdf).
 
 </p>
 </details>

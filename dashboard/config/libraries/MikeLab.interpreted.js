@@ -41,6 +41,8 @@ var scoreColor = "red";
 var scoreboard = false;
 var scoreX = 0;
 var scoreY = 0;
+var dialog =[];
+var mikeLabBG = loadImage("https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png");
 
 function initialize(setupHandler) {
   setupHandler();
@@ -71,6 +73,12 @@ function removeBehavior(sprite, behavior) {
     return;
   }
   sprite.behaviors.splice(index, 1);
+}
+
+function removeAllBehaviors(sprite) {
+  if (sprite) {
+    sprite.behaviors = [];
+  }
 }
 
 function Behavior(func, extraArgs) {
@@ -121,64 +129,55 @@ function behaviorsEqual(behavior1, behavior2) {
 
 //Events
 
-function whenUpArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'up'});
+function whenKeyPressed(key, event) {
+  inputEvents.push({type: keyWentDown, event: event, param: key});
+  console.log("key pressed");
+  console.log(key);
+}
+function whenKeyReleased(key, event) {
+  inputEvents.push({type: keyWentUp, event: event, param: key});
+  console.log("key released");
+  console.log(key);
 }
 
-function whenDownArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'down'});
-}
 
-function whenLeftArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'left'});
-}
-
-function whenRightArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'right'});
-}
-
-function whenSpace(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'space'});
-}
-
-function whileUpArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'up'});
-}
-
-function whileDownArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'down'});
-}
-
-function whileLeftArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'left'});
-}
-
-function whileRightArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'right'});
-}
-
-function whileSpace(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'space'});
+function whileKeyPressed(key, event) {
+  inputEvents.push({type: keyDown, event: event, param: key});
 }
 
 function whenMouseClicked(event) {
   touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
 }
 
-function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
-  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
-  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
+function whileMouseClicked(event) {
+  touchEvents.push({type: mouseDown, event: event, param: 'leftButton'});
+}
+function whenMouseReleased(event) {
+  touchEvents.push({type: mouseWentUp, event: event, param: 'leftButton'});
 }
 
-function clickedOn(spriteGetter, event) {
+
+/*function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
+  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
+  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
+}*/
+
+function whenClickedOn(spriteGetter, event) {
   var sprite = spriteGetter();
   register(function () {
     if (mouseWentDown('leftButton') && mousePressedOver(sprite)) {
       event();
     }
   });
-  //touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
-  //touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
+}
+
+function whileClicked(spriteGetter, event) {
+  var sprite = spriteGetter();
+  register(function () {
+    if (mouseDown('leftButton') && mousePressedOver(sprite)) {
+      event();
+    }
+  });
 }
 
 function spriteDestroyed(sprite, event) {
@@ -190,6 +189,17 @@ function whenTouching(a, b, event) {
 }
 
 function whenTouchesAny(spriteGetter, event) {
+  register(function () {
+    var sprite = spriteGetter();
+    sprite.overlap(World.allSprites,function (a,b){
+      b.tint = "red";
+      a.tint = "blue";
+      event();
+    });
+  });
+}
+
+function whileTouchingAny(spriteGetter, event) {
   register(function () {
     var sprite = spriteGetter();
     sprite.overlap(World.allSprites,function (a,b){
@@ -352,6 +362,17 @@ function showScoreboard(label, textColor, color, corner) {
   scoreLabel = label;
   if (corner == "right") scoreX=300;
 }
+function showText(textGetter, location, spriteGetter) {
+  stroke("black");
+  strokeWeight(5);
+  	fill("white");
+  var sprite = spriteGetter;
+    ellipse(sprite.x,sprite.y-75,textGetter.length*10,25);
+    fill("black");
+  noStroke();
+  textAlign(CENTER, CENTER);
+    text(textGetter,sprite.x, sprite.y-75);
+}
 
 function hideTitleScreen() {
   title = subTitle = '';
@@ -366,9 +387,11 @@ function unitVectorTowards(from, to) {
   return p5.Vector.fromAngle(angle);
 }
 
+
+
 function draw() {
   background(World.background_color || "white");
-
+	image(mikeLabBG);
   callbacks.forEach(function (callback) {
     callback();
   });
@@ -446,10 +469,10 @@ function draw() {
 
   drawSprites();
 if (scoreboard) {
-fill(scoreColor);
-  rect(scoreX,scoreY,100,25);
-  fill(scoreTextColor);
-  text(scoreLabel + ":   " + score, scoreX+5, scoreY+15);
+  	fill(scoreColor);
+    rect(scoreX,scoreY,100,25);
+    fill(scoreTextColor);
+    text(scoreLabel + ":   " + score, scoreX+5, scoreY+15);
 }
   if (show_score) {
     fill("black");

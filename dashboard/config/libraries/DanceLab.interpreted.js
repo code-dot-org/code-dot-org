@@ -16,15 +16,19 @@ var sprites_by_type = {};
 
 if (LOW_BAND) {
   var SPRITE_NAMES = ["CAT", "DOG", "DUCK", "MOOSE"];
-  var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet_exsm/";
+  var img_base = "https://curriculum.code.org/images/sprites/spritesheet_exsm/";
   var SIZE = 200;
 } else {
   var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "POO", "ROBOT", "SHARK", "UNICORN"];
-  var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites/spritesheet_sm/";
+  var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
   var SIZE = 300;
 }
 
 var MOVE_NAMES = [
+  {
+    name: "Rest",
+    mirror: true
+  },
   {
     name: "ClapHigh",
     mirror: true
@@ -58,10 +62,6 @@ var MOVE_NAMES = [
     mirror: true
   },
   {
-    name: "Rest",
-    mirror: true
-  },
-  {
     name: "Roll",
     mirror: true
   },
@@ -74,34 +74,50 @@ var MOVE_NAMES = [
     mirror: true
   }
 ];
+
+var MOVES = {
+  Rest: 0,
+  ClapHigh: 1,
+  Clown: 2,
+  Dab: 3,
+  DoubleJam: 4,
+  Drop: 5,
+  Floss: 6,
+  Fresh: 7,
+  Kick: 8,
+  Roll: 9,
+  ThisOrThat: 10,
+  Thriller: 11
+};
+
 var ANIMATIONS = {};
 var FRAMES = 24;
 
 // Songs
 var songs = {
   macklemore: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3',
+    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
     bpm: 146,
     delay: 0.2, // Seconds to delay before calculating measures
     verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
     chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
   },
   macklemore90: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/hold.mp3',
+    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
     bpm: 146,
     delay: 0.0, // Seconds to delay before calculating measures
     verse: [0, 26.3], // Array of timestamps in seconds where verses occur
     chorus: [65.75] // Array of timestamps in seconds where choruses occur
   },
   hammer: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/touch.mp3',
+    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
     bpm: 133,
     delay: 2.32, // Seconds to delay before calculating measures
     verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
     chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
   },
   peas: {
-    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/feeling.mp3',
+    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
     bpm: 128,
     delay: 0.0, // Seconds to delay before calculating measures
     verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
@@ -116,6 +132,7 @@ var backup_dancers = createGroup();
 function preload() {
   // Load song
   Dance.song.load(song_meta.url);
+
   // Load spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
     var this_sprite = SPRITE_NAMES[i];
@@ -157,6 +174,8 @@ function setup() {
   Dance.song.start();
 }
 
+// Using the same base set of effecgts for BG and FG effects,
+// but exposing different lists in the block dropdowns
 function Effects(alpha, blend) {
   var self = this;
   this.alpha = alpha || 1;
@@ -320,9 +339,334 @@ var fg_effects = new Effects(0.8);
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;
 
+function setBackground(color) {
+  World.background_color = color;
+}
+
+function setBackgroundEffect(effect) {
+  World.bg_effect = bg_effects[effect];
+}
+
+function setForegroundEffect(effect) {
+  World.fg_effect = fg_effects[effect];
+}
 
 function initialize(setupHandler) {
   setupHandler();
+}
+
+//
+// Block Functions
+//
+
+
+function makeNewDanceSprite(costume, name, location) {
+  
+  // Default to first dancer if selected a dancer that doesn't exist
+  // to account for low-bandwidth mode limited character set
+  if (SPRITE_NAMES.indexOf(costume) < 0) {
+    costume = SPRITE_NAMES[0];
+  }
+
+  if (!location) {
+    location = {
+      x: 200,
+      y: 200
+    };
+  }
+
+  var sprite = createSprite(location.x, location.y);
+
+  sprite.style = costume;
+  if (!sprites_by_type.hasOwnProperty(costume)) {
+    sprites_by_type[costume] = createGroup();
+  }
+  sprites_by_type[costume].add(sprite);
+
+  sprite.mirroring = 1;
+  sprite.looping_move = 0;
+  sprite.looping_frame = 0;
+  sprite.current_move = 0;
+  sprite.previous_move = 0;
+
+  for (var i = 0; i < ANIMATIONS[costume].length; i++) {
+    sprite.addAnimation("anim" + i, ANIMATIONS[costume][i].animation);
+  }
+  sprite.animation.stop();
+  sprites.add(sprite);
+  sprite.speed = 10;
+  sprite.sinceLastFrame = 0;
+  sprite.dance_speed = 1;
+  sprite.previous_speed = 1;
+  sprite.behaviors = [];
+
+  // Add behavior to control animation
+  addBehavior(sprite, function () {
+    var delta = 1 / (frameRate() + 0.01) * 1000;
+    sprite.sinceLastFrame += delta;
+    var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
+    var msPerFrame = msPerBeat / FRAMES;
+    while (sprite.sinceLastFrame > msPerFrame) {
+      sprite.sinceLastFrame -= msPerFrame;
+      sprite.looping_frame++;
+      if (sprite.animation.looping) {
+        sprite.animation.changeFrame(sprite.looping_frame % sprite.animation.images.length);
+      } else {
+        sprite.animation.nextFrame();
+      }
+
+      if (sprite.looping_frame % FRAMES === 0) {
+        if (ANIMATIONS[sprite.style][sprite.current_move].mirror) sprite.mirroring *= -1;
+        if (sprite.animation.looping) {
+          sprite.mirrorX(sprite.mirroring);
+        }
+      }
+
+      var currentFrame = sprite.animation.getFrame();
+      if (currentFrame === sprite.animation.getLastFrame() && !sprite.animation.looping) {
+        //changeMoveLR(sprite, sprite.current_move, sprite.mirroring);
+        sprite.changeAnimation("anim" + sprite.current_move);
+        sprite.animation.changeFrame(sprite.looping_frame % sprite.animation.images.length);
+        sprite.mirrorX(sprite.mirroring);
+        sprite.animation.looping = true;
+      }
+    }
+  });
+
+  sprite.setTint = function (color) {
+    sprite.tint = color;
+  };
+  sprite.removeTint = function () {
+    sprite.tint = null;
+  };
+
+  sprite.setPosition = function (position) {
+    if (position === "random") {
+      sprite.x = randomNumber(50, 350);
+      sprite.y = randomNumber(50, 350);
+    } else {
+      sprite.x = position.x;
+      sprite.y = position.y;
+    }
+  };
+  sprite.setScale = function (scale) {
+    sprite.scale = scale;
+  };
+  return sprite;
+}
+
+// Dance Moves
+
+function changeMoveLR(sprite, move, dir) {
+  if (!spriteExists(sprite)) return;
+  if (move == "next") {
+    move = 1 + ((sprite.current_move + 1) % (ANIMATIONS[sprite.style].length - 1));
+  } else if (move == "prev") {
+    move = 1 + ((sprite.current_move - 1) % (ANIMATIONS[sprite.style].length - 1));
+  } else if (move == "rand") {
+    // Make sure random switches to a new move
+    move = sprite.current_move;
+    while (move == sprite.current_move) {
+      move = randomNumber(0, ANIMATIONS[sprite.style].length - 1);
+    }
+  }
+  sprite.mirroring = dir;
+  sprite.mirrorX(dir);
+  sprite.changeAnimation("anim" + move);
+  if (sprite.animation.looping) sprite.looping_frame = 0;
+  sprite.animation.looping = true;
+  sprite.current_move = move;
+}
+
+function doMoveLR(sprite, move, dir) {
+  if (!spriteExists(sprite)) return;
+  if (move == "next") {
+    move = (sprite.current_move + 1) % ANIMATIONS[sprite.style].length;
+  } else if (move == "prev") {
+    move = (sprite.current_move - 1) % ANIMATIONS[sprite.style].length;
+  } else if (move == "rand") {
+    move = sprite.current_move;
+    while (move == sprite.current_move) {
+      move = randomNumber(0, ANIMATIONS[sprite.style].length - 1);
+    }
+  }
+  sprite.mirrorX(dir);
+  sprite.changeAnimation("anim" + move);
+  sprite.animation.looping = false;
+  sprite.animation.changeFrame(FRAMES / 2);
+}
+
+function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
+  if (!spriteExists(sprite)) return;
+  if (sprite.current_dance == dance) {
+    ifStatement();
+  } else {
+    elseStatement();
+  }
+}
+
+// Group Blocks
+
+function changeMoveEachLR(group, move, dir) {
+  if (typeof (group) == "string") {
+    if (!sprites_by_type.hasOwnProperty(group)) {
+      console.log("There is no group of " + group);
+      return;
+    }
+    group = sprites_by_type[group];
+  }
+  group.forEach(function (sprite) {
+    changeMoveLR(sprite, move, dir);
+  });
+}
+
+function doMoveEachLR(group, move, dir) {
+    if (typeof(group) == "string") {
+      if (!sprites_by_type.hasOwnProperty(group)) {
+        console.log("There is no group of " + group);
+        return;
+      }
+      group = sprites_by_type[group];
+    }
+	group.forEach(function(sprite) { doMoveLR(sprite, move, dir);});
+}
+
+// Properties
+
+function setProp(sprite, property, val) {
+  if (!spriteExists(sprite) || val === undefined) return;
+  
+  if (property == "scale") {
+    sprite.scale = val / 100;
+  } else if (property == "width" || property == "height") {
+    sprite[property] = SIZE * (val / 100);
+  } else if (property=="y"){
+    sprite.y = World.height - val;
+  } else if (property == "costume") {
+    sprite.setAnimation(val);
+  } else if (property == "tint" && typeof (val) == "number") {
+    sprite.tint = "hsb(" + (Math.round(val) % 360) + ", 100%, 100%)";
+  } else {
+    sprite[property] = val;
+  }
+}
+
+function getProp(sprite, property) {
+  if (!spriteExists(sprite)) return;
+
+  if (property == "scale") {
+    return sprite.scale * 100;
+  } else if (property == "width" || property == "height") {
+    return (sprite[property] / SIZE) * 100;
+  } else if (property=="y"){
+    return World.height - sprite.y;
+  } else if (property == "costume") {
+    return sprite.getAnimationLabel();
+  } else if (property == "direction") {
+    return getDirection(sprite);
+  } else {
+    return sprite[property];
+  }
+}
+
+function changePropBy(sprite,  property, val) {
+  if (!spriteExists(sprite) || val === undefined) return;
+  
+  if (property == "scale") {
+    sprite.setScale(sprite.getScale() + val / 100);
+    if (sprite.scale < 0) {
+      sprite.scale = 0;
+    }
+  } else if (property == "width" || property == "height") {
+    sprite[property] = getProp(sprite, property) + (SIZE * (val / 100));
+  } else if (property=="direction") {
+   	sprite.direction = getDirection(sprite) + val;
+  } else if (property=="y"){
+    sprite.y-=val;
+  } else {
+    sprite[property] += val;
+  }
+}
+
+function jumpTo(sprite, location) {
+  if (!spriteExists(sprite)) return;
+  sprite.x = location.x;
+  sprite.y = location.y;
+}
+
+function setDanceSpeed(sprite, speed) {
+  if (!spriteExists(sprite)) return;
+  sprite.dance_speed = speed;
+}
+
+// Music Helpers
+
+function getEnergy(range) {
+  if (range == "low") {
+    return Dance.fft.getEnergy(20, 200);
+  } else if (range == "mid") {
+    return Dance.fft.getEnergy(400, 2600);
+  } else {
+    return Dance.fft.getEnergy(2700, 4000);
+  }
+}
+
+function nMeasures(n) {
+  return (240 * n) / song_meta.bpm;
+}
+
+function getTime(unit) {
+  if (unit == "measures") {
+    return song_meta.bpm * (Dance.song.currentTime(0) / 240);
+  } else {
+    return Dance.song.currentTime(0);
+  }
+}
+
+// Music Events
+
+function atTimestamp(timestamp, unit, event) {
+  registerSetup(function () {
+    if (unit == "measures") {
+      timestamp = nMeasures(timestamp);
+      timestamp += song_meta.delay;
+    }
+    Dance.song.addCue(0, timestamp, event);
+  });
+}
+
+function everySeconds(n, unit, event) {
+  registerSetup(function () {
+    if (unit == "measures") n = nMeasures(n);
+    if (n > 0) {
+      var timestamp = song_meta.delay;
+      while (timestamp < Dance.song.duration()) {
+        Dance.song.addCue(0, timestamp, event);
+        timestamp += n;
+      }
+    }
+  });
+}
+
+function everySecondsRange(n, start, stop, event) {
+  registerSetup(function () {
+    if (unit == "measures") n = nMeasures(n);
+    if (n > 0) {
+      var timestamp = start;
+      while (timestamp < stop) {
+        Dance.song.addCue(0, timestamp, event);
+        timestamp += n;
+      }
+    }
+  });
+}
+
+function everyVerseChorus(unit, event) {
+  registerSetup(function() {
+    song_meta[unit].forEach(function(timestamp){
+      Dance.song.addCue(0, timestamp, event);
+    });
+  });
 }
 
 // Behaviors
@@ -373,13 +717,83 @@ function behaviorsEqual(behavior1, behavior2) {
   return extraArgsEqual;
 }
 
+function startMapping(sprite, property, range) {
+  var behavior = new Behavior(function(sprite) {
+    var energy = Dance.fft.getEnergy(range);
+    if (property == "x") {
+      energy = Math.round(map(energy, 0, 255, 50, 350));
+    } else if (property == "y") {
+      energy = Math.round(map(energy, 0, 255, 350, 50));
+    } else if (property == "scale") {
+      energy = map(energy, 0, 255, 0, 2);
+    } else if (property == "width" || property == "height") {
+      energy = map(energy, 0, 255, 50, 150);
+    } else if (property == "rotation" || property == "direction") {
+      energy = Math.round(map(energy, 0, 255, -180, 180));
+    } else if (property == "tint") {
+      energy = Math.round(map(energy, 0, 255, 0, 360));
+      energy = "hsb(" + energy + ",100%,100%)";
+    }
+    sprite[property] = energy;
+  }, [property, range]);
+  behavior.func.name = "mapping" + property + range;
+  addBehavior(sprite, behavior);
+}
+
+function stopMapping(sprite, property, range) {
+  var behavior = new Behavior(function(sprite) {
+    var energy = Dance.fft.getEnergy(range);
+    if (property == "x") {
+      energy = Math.round(map(energy, 0, 255, 50, 350));
+    } else if (property == "y") {
+      energy = Math.round(map(energy, 0, 255, 350, 50));
+    } else if (property == "size") {
+      energy = map(energy, 0, 255, 0, 2);
+    } else if (property == "rotation" || property == "direction") {
+      energy = Math.round(map(energy, 0, 255, -180, 180));
+    } else if (property == "tint") {
+      energy = Math.round(map(energy, 0, 255, 0, 360));
+      energy = "hsb(" + energy + ",100%,100%)";
+    }
+    console.log(property + " " + energy);
+    sprite[property] = energy;
+  }, [property, range]);
+  behavior.func.name = "mapping" + property + range;
+  removeBehavior(sprite, behavior);
+}
+
 //Events
+
+function whenSetupSong(song, event) {
+  song_meta = songs[song];
+  setupCallbacks.push(event);
+}
 
 function spriteDestroyed(sprite, event) {
   inputEvents.push({
     type: isDestroyed,
     event: event,
     param: sprite
+  });
+}
+
+function whenKey(key, event) {
+  inputEvents.push({
+    type: keyWentDown,
+    event: event,
+    param: key
+  });
+}
+
+function whenPeak(range, event) {
+  /*
+  // This approach only allows one event handler per beat detector
+  Dance.fft.onPeak(range, event);
+  */
+  inputEvents.push({
+    type: Dance.fft.isPeak,
+    event: event,
+    param: range
   });
 }
 
@@ -428,9 +842,30 @@ function makeNewGroup() {
   return group;
 }
 
-// Helper functions
+// Miscellaneus Helpers
 
+function changeColorBy(input, method, amount) {
+  push();
+  colorMode(HSB, 100);
+  var c = color(input);
+  var hsb = {
+    hue: c._getHue(),
+    saturation: c._getSaturation(),
+    brightness: c._getBrightness()
+  };
+  hsb[method] = Math.round((hsb[method] + amount) % 100);
+  var new_c = color(hsb.hue, hsb.saturation, hsb.brightness);
+  pop();
+  return new_c;
+}
 
+function mixColors(color1, color2) {
+  return lerpColor(color(color1), color(color2), 0.5);
+}
+
+function randomColor() {
+  return color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
+}
 
 function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
@@ -449,7 +884,9 @@ function shouldUpdate() {
   return World.frameCount > 1;
 }
 
-
+function spriteExists(sprite) {
+  return World.allSprites.indexOf(sprite) > -1;
+}
 
 function draw() {
   Dance.fft.analyze();
@@ -491,88 +928,88 @@ function draw() {
         event();
         var event_run = false;
         // if has validator, run it
-        if (typeof(validationProps) == "object") {
+        if (typeof (validationProps) == "object") {
           if (validationProps.hasOwnProperty("events")) {
-              for (var j = 0; j < validationProps.events.length; j++) {
-                // TODO check for existence before trying to run these events
-                validType = validationProps.events[j].type;
-                validParam = validationProps.events[j].param;
-                validPre = validationProps.events[j].pre;
-                validPost = validationProps.events[j].post;
-                if (eventType == validType && param == validParam) {
-                  validPre();
-                  event();
-                  event_run = true;
-                  validPost();
-                }
+            for (var j = 0; j < validationProps.events.length; j++) {
+              // TODO check for existence before trying to run these events
+              validType = validationProps.events[j].type;
+              validParam = validationProps.events[j].param;
+              validPre = validationProps.events[j].pre;
+              validPost = validationProps.events[j].post;
+              if (eventType == validType && param == validParam) {
+                validPre();
+                event();
+                event_run = true;
+                validPost();
               }
             }
           }
-          if (!event_run) event();
         }
+        if (!event_run) event();
       }
+    }
 
-      // Run touch events
-      for (i = 0; i < touchEvents.length; i++) {
-        eventType = touchEvents[i].type;
-        event = touchEvents[i].event;
-        param = touchEvents[i].sprite ?
-          touchEvents[i].sprite() :
-          touchEvents[i].param;
-        if (param && eventType(param)) {
-          event();
+    // Run touch events
+    for (i = 0; i < touchEvents.length; i++) {
+      eventType = touchEvents[i].type;
+      event = touchEvents[i].event;
+      param = touchEvents[i].sprite ?
+        touchEvents[i].sprite() :
+        touchEvents[i].param;
+      if (param && eventType(param)) {
+        event();
+      }
+    }
+
+    var createCollisionHandler = function (collisionEvent) {
+      return function (sprite1, sprite2) {
+        if (!collisionEvent.touching || collisionEvent.keepFiring) {
+          collisionEvent.event(sprite1, sprite2);
         }
-      }
-
-      var createCollisionHandler = function (collisionEvent) {
-        return function (sprite1, sprite2) {
-          if (!collisionEvent.touching || collisionEvent.keepFiring) {
-            collisionEvent.event(sprite1, sprite2);
-          }
-        };
       };
-      // Run collision events
-      for (i = 0; i < collisionEvents.length; i++) {
-        var collisionEvent = collisionEvents[i];
-        var a = collisionEvent.a && collisionEvent.a();
-        var b = collisionEvent.b && collisionEvent.b();
-        if (!a || !b) {
-          continue;
-        }
-        if (a.overlap(b, createCollisionHandler(collisionEvent))) {
-          collisionEvent.touching = true;
-        } else {
-          if (collisionEvent.touching && collisionEvent.eventEnd) {
-            collisionEvent.eventEnd(a, b);
-          }
-          collisionEvent.touching = false;
-        }
+    };
+    // Run collision events
+    for (i = 0; i < collisionEvents.length; i++) {
+      var collisionEvent = collisionEvents[i];
+      var a = collisionEvent.a && collisionEvent.a();
+      var b = collisionEvent.b && collisionEvent.b();
+      if (!a || !b) {
+        continue;
       }
-
-      // Run loops
-      for (i = 0; i < loops.length; i++) {
-        var loop = loops[i];
-        if (!loop.condition()) {
-          loops.splice(i, 1);
-        } else {
-          loop.loop();
+      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
+        collisionEvent.touching = true;
+      } else {
+        if (collisionEvent.touching && collisionEvent.eventEnd) {
+          collisionEvent.eventEnd(a, b);
         }
+        collisionEvent.touching = false;
       }
     }
 
-    drawSprites();
-
-    if (World.fg_effect != fg_effects.none) {
-      push();
-      blendMode(fg_effects.blend);
-      World.fg_effect.draw();
-      pop();
+    // Run loops
+    for (i = 0; i < loops.length; i++) {
+      var loop = loops[i];
+      if (!loop.condition()) {
+        loops.splice(i, 1);
+      } else {
+        loop.loop();
+      }
     }
-
-    fill("black");
-    textStyle(BOLD);
-    textAlign(TOP, LEFT);
-    textSize(20);
-    text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
-    /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
+
+  drawSprites();
+
+  if (World.fg_effect != fg_effects.none) {
+    push();
+    blendMode(fg_effects.blend);
+    World.fg_effect.draw();
+    pop();
+  }
+
+  fill("black");
+  textStyle(BOLD);
+  textAlign(TOP, LEFT);
+  textSize(20);
+  text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+  /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
+}

@@ -26,6 +26,7 @@ class GameLabView extends React.Component {
     // Provided manually
     showFinishButton: PropTypes.bool.isRequired,
     onMount: PropTypes.func.isRequired,
+    danceLab: PropTypes.bool.isRequired,
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
@@ -76,7 +77,7 @@ class GameLabView extends React.Component {
           style={visualizationColumnStyle}
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
-          <GameLabVisualizationColumn finishButton={showFinishButton}/>
+          <GameLabVisualizationColumn finishButton={showFinishButton} danceLab={this.props.danceLab}/>
         </div>
         {this.props.isIframeEmbed &&
          !this.props.isRunning &&

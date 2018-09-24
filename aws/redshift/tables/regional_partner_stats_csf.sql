@@ -1,22 +1,3 @@
--- PLAN for adding CSF data
--- add data on the facilitator, district sponsorship, workshop size, day of week, time of year
--- create separate csf_facilitator csf_workshops table to connect to this one?
-
---CHANGES
--- addition of school years beyond 2017 --  includes teaching data from the same year they were trained and any subsequent years 
--- removed 'location'
-
--- ISSUES
--- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
-      -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
-      -- to Mary, this does not seem ideal 
-
--- NOTES ON HOW TO UPDATE 
--- after updating at the dependencies listed above and noted with 'PUBLIC' in the code....
--- replace all instances of 'public.regional_partner_stats_csf_pivoted' with 'analysis.regional_partner_stats_csf' and re-run table creation
--- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
-
-
 drop table if exists analysis_pii.regional_partner_stats_csf;
 create table analysis_pii.regional_partner_stats_csf AS
 
@@ -43,7 +24,8 @@ implementation_365 as
 (select 
 tt.user_id,
 date_part(month, trained_at) month_trained,
-date_part(dayofweek, trained_at) day_of_week_trained, 
+date_part(dayofweek, trained_at) day_of_week_trained,
+date_part(hour, trained_at) hour_trained, 
 min(datediff(day, tt.trained_at, st.started_at)) as days_to_start,
 min(datediff(day, tt.trained_at, ct.completed_at)) as days_to_complete,
 CASE WHEN days_to_start < 0 then 1 else 0 end as started_before_training,
@@ -55,7 +37,7 @@ CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
 from analysis.csf_teachers_trained tt
 left join analysis.csf_started_teachers st on st.user_id = tt.user_id  
 left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id  
-group by 1, 2, 3
+group by 1, 2, 3, 4
 ),
 pd_enrollments_with_year as
 ( 
@@ -103,17 +85,30 @@ pd_facilitators as
          ss_user.school_id school_id,
          ss_user.city city,
          ss_user.state state,
+         ss_user.zip zip,
          ss_user.school_district_name school_district_name,
          ss_user.school_district_id school_district_id,
          ss_user.high_needs high_needs_school,
          ss_user.rural rural_school, 
-         -- the next three things need to be fixed in the csfa based on the new csf_teachers_trained table:
          csfa.workshop_id,
          CASE WHEN csfa.subject is null THEN 'Intro Workshop' else csfa.subject END as subject,
          CASE WHEN csfa.trained_by_regional_partner is null then 0 else csfa.trained_by_regional_partner END as trained_by_regional_partner,
          d.trained_at as trained_at,
          coalesce(csfa.workshop_date, d.trained_at)  as workshop_date, 
+         CASE WHEN trunc(workshop_date) > trained_at then 1 else 0 end as repeat_training,
          extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) || csfa.workshop_id::varchar(16)  as workshop_id_year,
+         csfa.month_workshop,
+         csfa.day_of_week_workshop,
+         csfa.hour_workshop, 
+         CASE WHEN csfa.audience = 'District' then 'Private' else csfa.audience end as audience,
+         csfa.funded,
+         csfa.funding_type,
+         csfa.capacity,
+         csfa.zip as zip_workshop,
+         csfa.state as state_workshop,
+         csfa.facilitator_name,
+         csfa.facilitator_id,  
+         csfa.studio_person_id_facilitator,     
          pwf.facilitator_names,
          -- started and completed
          case when s.user_id is not null then 1 else 0 end as started,
@@ -129,7 +124,7 @@ pd_facilitators as
           -- student gender
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
-  FROM csf_teachers_trained d 
+  FROM analysis.csf_teachers_trained d 
   JOIN analysis.training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
@@ -174,3 +169,8 @@ pd_facilitators as
 
 GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csf TO GROUP admin;
 GRANT SELECT ON analysis_pii.regional_partner_stats_csf TO GROUP reader_pii;
+
+-- ISSUES
+-- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
+      -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
+      -- to Mary, this does not seem ideal 
