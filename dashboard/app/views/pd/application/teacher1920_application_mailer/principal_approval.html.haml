@@ -5,37 +5,44 @@
 %p
   A teacher at your school,
   = @application.teacher_full_name + ','
-  has submitted an application to participate in Code.org's Professional Learning Program in order to teach the
-  = @application.program
-  curriculum during the 2018-19 school year.
+  has submitted an application to participate in
+  = @application.regional_partner.name + "'s"
+  Professional Learning Program in order to teach the
+  = @application.course_name
+  curriculum during the 2019-20 school year.
   We are excited that this teacher is committed to computer science education!
 
 %p
   %strong In order for us to consider your teacher’s application, we first need your approval.
-  Please take five minutes to
-  = link_to('complete this form as soon as possible', @application.principal_approval_url) + '.'
-  Please note that all applications and principal approvals are due as soon as possible.
 
 %p
-  This program requires the following time commitment:
+  Please take five minutes to complete
+  = link_to('this form', @application.principal_approval_url)
+  as soon as possible.
+  Please note that your teacher’s application is not considered complete until we receive this form.
+
+%p
+  Registration for the Professional Learning Program may have a cost,
+  but there may also be scholarships available. Please
+  = link_to 'review this page', 'https://code.org/educate/professional-learning/program-information'
+  to see the cost of the program in your region.
+
+%p
+  For participating teachers we require the following commitment:
   %ul
-    %li
-      One five-day summer workshop in 2018, hosted by Code.org at TeacherCon or by your local Code.org
-      Regional Partner. Flights, lodging, and meals will be provided for TeacherCon attendees;
-      meals (and potentially some travel) will be provided for Regional Partner-hosted workshop.
-    %li
-      Up to four one-day local workshops during the 2018-19 school year (usually held on Saturdays)
+    %li To attend one, five-day summer workshop in 2019
+    %li To attend up to four, one-day local workshops during the 2019-20 school year (usually held on Saturdays)
+    %li To teach the course in the 2019-20 school year
+
+%p{style: 'margin-bottom: 0'}
+  Please direct all questions or concerns to:
+  %div{style: 'padding-left: 2em'}
+    = render partial: 'partner_signature'
 
 %p
   For more information about Code.org’s Professional Learning Programs, please visit
   = link_to('https://code.org/educate', 'https://code.org/educate') + '.'
-  Please send any additional questions to
-  = link_to('teacher@code.org', 'mailto:teacher@code.org') + '.'
   Thank you very much for your support of computer science for all!
 
 %p
-  Sarah Fairweather
-  %br
-  Education Team Program Manager
-  %br
-  Code.org
+  = render partial: 'partner_signature'

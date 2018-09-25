@@ -21,8 +21,7 @@ module Api::V1::Pd::Application
 
     def on_successful_create
       @application.update_user_school_info!
-
-      TEACHER_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
+      @application.queue_email(:confirmation, deliver_now: true)
     end
   end
 end
