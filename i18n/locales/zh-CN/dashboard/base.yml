@@ -265,9 +265,7 @@ zh-CN:
         applab: '创建一个游戏实验室应用'
         gamelab: '创建一个游戏实验室项目'
         weblab: '开始一个网站实验室（测试版）项目'
-      home: "首页"
       my_dashboard: "我的控制面板"
-      courses: "课程"
       course_catalog: "课程分类"
       project_gallery: "项目"
       sections: "小组"
@@ -302,6 +300,14 @@ zh-CN:
       help_us: "帮助我们"
       teach: "教学"
       about: "关于"
+    create_button:
+      create: '创建'
+      applab: '应用实验室'
+      artist: '小艺术家'
+      gamelab: '游戏实验室'
+      playlab: '游戏实验室'
+      minecraft: '我的世界'
+      flappy: 'Flappy Bird'
     user:
       classroom: '教师主页'
       district_dashboard: '分区信息'

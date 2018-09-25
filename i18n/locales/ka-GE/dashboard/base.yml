@@ -267,9 +267,7 @@ ka:
         applab: 'აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში'
         gamelab: 'შექმენით "კომპიუტერული თამაშების ლაბორატორიის" პროექტი'
         weblab: 'შექმენით "ვებ ლაბორატორიის (ბეტა)" პროექტი'
-      home: "მთავარი"
       my_dashboard: "ჩემი მთავარი პანელი"
-      courses: "კურსები"
       course_catalog: "კურსების კატალოგი"
       project_gallery: "პროექტები"
       sections: "განყოფილებები"
@@ -304,6 +302,14 @@ ka:
       help_us: "დაგვეხმარე"
       teach: "ასწავლე"
       about: "გაიცანით"
+    create_button:
+      create: 'შექმნა'
+      applab: 'App Lab'
+      artist: 'მხატვარი'
+      gamelab: 'თამაშების ლაბი'
+      playlab: 'თამაშების ლაბი'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'მასწავლებლის მთავარი გვერდი'
       district_dashboard: 'განყოფილების მართვის პანელი'

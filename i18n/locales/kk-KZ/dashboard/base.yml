@@ -184,9 +184,15 @@ kk:
         playlab: 'Қосымша бағдарлама жасау'
         artist: 'Кез келген нәрсе салу'
         applab: 'Қосымша бағдарлама жасау'
-      courses: "Курстар"
       project_gallery: "Жобалар"
       educate_hoc: "Код жазу Сағаты"
+    create_button:
+      create: 'Құру'
+      applab: 'Қосымшалар Лабораториясы'
+      artist: 'Кейіпкер'
+      playlab: 'Ойындар Лабораториясы'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Оқытушының жеке парақшасы'
       district_dashboard: 'Ақпарат панелі'

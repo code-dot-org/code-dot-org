@@ -112,8 +112,9 @@ ur:
     submit: 'جمع کرائیں'
   nav:
     header:
-      courses: "کورسز"
       educate_hoc: "آور-آف-کوڈ"
+    create_button:
+      create: 'بنائیں'
     user:
       classroom: 'استاد کی ہوم پیج'
   teacher:

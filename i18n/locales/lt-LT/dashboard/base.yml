@@ -216,9 +216,7 @@ lt:
         playlab: 'Sukurk programėlę'
         artist: 'Nupiešk ką nors'
         applab: 'Sukurk programėlę'
-      home: "Pradžia"
       my_dashboard: "Valdymo skydelis"
-      courses: "Kursai"
       project_gallery: "Projektai"
       report_bug: "Pranešti apie klaidą"
       teacher_community: "Mokytojų bendruomenė"
@@ -231,6 +229,14 @@ lt:
       educate_inspire: "Įkvėpkite mokinius"
       educate_community: "Virtuali bendruomenė"
       educate_tools: "Įrankiai ir vaizdo įrašai"
+    create_button:
+      create: 'Sukurti'
+      applab: 'App Lab'
+      artist: 'Menininkas'
+      gamelab: 'Žaidimų laboratorija'
+      playlab: 'Laboratorija'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Mokytojo namų puslapis'
       district_dashboard: 'Prietaisų skydelis'

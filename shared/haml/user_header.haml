@@ -11,29 +11,29 @@
     .create_options{style: 'display: none'}
       %a.project_link_box{href: CDO.studio_url('projects/playlab/new')}
         %img{src: "/shared/images/fill-70x70/courses/logo_playlab.png"}
-        .project_link#create_dropdown_playlab
+        .project_link
           = I18n.t("nav.create_button.playlab")
       %a.project_link_box{href: CDO.studio_url('projects/artist/new')}
         %img{src: "/shared/images/fill-70x70/courses/logo_artist.png"}
-        .project_link#create_dropdown_artist
+        .project_link
           = I18n.t("nav.create_button.artist")
       - if user_under_13
         %a.project_link_box{href: CDO.studio_url('projects/flappy/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_flappy.png"}
-          .project_link#create_dropdown_flappy
+          .project_link
             = I18n.t("nav.create_button.flappy")
         %a.project_link_box{href: CDO.studio_url('projects/minecraft_designer/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_minecraft.png"}
-          .project_link#create_dropdown_minecraft
+          .project_link
             = I18n.t("nav.create_button.minecraft")
       - else
         %a.project_link_box{href: CDO.studio_url('projects/applab/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_applab_square.png"}
-          .project_link#create_dropdown_applab
+          .project_link
             = I18n.t("nav.create_button.applab")
         %a.project_link_box{href: CDO.studio_url('projects/gamelab/new')}
           %img{src: "/shared/images/fill-70x70/courses/logo_gamelab_square.png"}
-          .project_link#create_dropdown_gamelab
+          .project_link
             = I18n.t("nav.create_button.gamelab")
       %a.project_link_box{href: CDO.studio_url('projects/public')}
         .project_link#view_all_projects

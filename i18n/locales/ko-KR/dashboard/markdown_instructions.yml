@@ -261,6 +261,7 @@ ko:
       K-1 Maze Loops 2_markdown_instruction: 돼지에게 갈 수 있도록, 반복(횟수) 블록을 사용해보세요.
       K-1 Maze Loops 8_markdown_instruction: 돼지에게 갈 수 있도록 해주세요! 반복(횟수) 구조를 사용하세요.
       MC Agent Freeplay_markdown_instruction: "**무료플레이:** 이제 실력을 발휘할 시간입니다! Agent의 코드를 사용해 월드를 탐험하세요."
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "일부 게임에서는 점수를 얻을 수 있습니다. 철 골렘과 술래잡기를 하세요. 철 골렘을 건드리면 점수를 얻을 수 있도록 '1점 추가' 블록을 사용하세요. 5점을 획득하여 승리하세요!"
       MC_HOC_2017 Agent Test_markdown_instruction: "'실행'을 클릭한 다음 **화살키**를 사용해 플레이어를 움직이세요.  \\r\n\\r\n이 레벨을 통과하려면 문까지 이동한 다음 **스페이스바**를 사용해 문을 열고 그 안에 있는 주황색 네모 칸에 도달해야 합니다."
       MC_HOC_2017_01_markdown_instruction: "'실행'을 클릭한 다음 **화살키**를 사용해 플레이어를 움직이세요.  \\r\n\\r\n이 레벨을 통과하려면 문까지 이동한 다음 **스페이스바**를 사용해 문을 열고 그 안에 있는 주황색 네모 칸에 도달해야 합니다."
       MC_HOC_2017_01_Cole_markdown_instruction: 여정에 필요한 도구를 모두 확보해야 합니다. **방향키**를 사용해 원하는 방향으로 이동하세요. 길목에 있는 상자에 도달하면 성공입니다.
@@ -347,10 +348,22 @@ ko:
       NEW Course 4 Artist Vars 4_markdown_instruction: "다시 한 번 해보세요. \\r\n\\r\n육각형들로 이런 멋진 디자인을 만들기 위해 \"길이\" 변수값을 60으로 설정해 보세요."
       NEW Course 4 Artist Vars 6_markdown_instruction: "\"길이\" 변수의 값을 정확히 입력하고 이 변수를 모든 알맞은 위치에 넣어서 100 픽셀짜리 오각형 패턴을 그려보세요. \\r\n\\r\n길이 변수의 값을 한 번만 입력하면, 그 값을 계속 사용할 수 있다는 것을 알 수 있습니다."
       New Minecraft Hero Project_markdown_instruction: "**무료플레이:** 이제 실력을 발휘할 시간입니다! Agent의 코드를 사용해 월드를 탐험하세요."
+      Overworld Chop Tree_markdown_instruction: 나무는 매우 중요한 자원입니다. 나무로 많은 것들을 만들 수 있지요. 나무로 걸어간 후 "블록 부수기" 명령을 이용해 나무를 베세요.
+      Overworld Chop Tree_2018_markdown_instruction: 나무는 매우 중요한 자원입니다. 나무로 많은 것들을 만들 수 있지요. 나무로 걸어간 후 "블록 부수기" 명령을 이용해 나무를 베세요.
+      Overworld House Frame Chosen_markdown_instruction: 여러분이 원하는 재료를 이용해서, 집의 나머지 부분을 완성해보세요. "repeat" 명령은 편리하게 사용할 수 있습니다.
+      Overworld House Frame Chosen_2018_markdown_instruction: 여러분이 원하는 재료를 이용해서, 집의 나머지 부분을 완성해보세요. "repeat" 명령은 편리하게 사용할 수 있습니다.
       Overworld Move to Sheep_markdown_instruction: 두 번째 `앞으로 이동` 명령을 더해서 양에게 도달하세요.
       Overworld Move to Sheep_2018_markdown_instruction: 두 번째 `앞으로 이동` 명령을 더해서 양에게 도달하세요.
+      Overworld Place Wall_markdown_instruction: 모든 집은 벽을 짓는 것부터 시작합니다. "놓기"와 "앞으로 이동" 명령을 반복문 안에 놓아서 집의 첫 번째 부분을 지어보세요.
+      Overworld Place Wall_2018_markdown_instruction: 모든 집은 벽을 짓는 것부터 시작합니다. "놓기"와 "앞으로 이동" 명령을 반복문 안에 놓아서 집의 첫 번째 부분을 지어보세요.
+      Overworld Shear Sheep_markdown_instruction: 양털 깎기 시간이에요! 두 마리 양에게서 양털을 채집하려면, "털 깎기" 명령을 사용하세요.
+      Overworld Shear Sheep_2018_markdown_instruction: 양털 깎기 시간이에요! 두 마리 양에게서 양털을 채집하려면, "털 깎기" 명령을 사용하세요.
       PS copy 2-3 Bee Conditionals 5_markdown_instruction: "이 마술 자주색 꽃들은 변화 합니다!\\r\n\\r\n퍼즐을 실행 할때마다 1개의 꽃꿀을 가지고 있을 수도 있고 없을 수도 있습니다.\n하지만 꽃꿀을 가지고 있는지는 코드를 실행전에 알 수 없습니다.\\r\n\\r\n꽃꿀이 없는 자주색 꽃에서 꽃꿀을 모으지 않도록 주의하세요.\\r\n먼저 '꽃꿀이 있으면' 블록을 이용해서 꽃꿀의 양이 1인지(=있는지) 확인해야합니다."
       Testing Quantum Farmer_markdown_instruction: "와! 진짜 깊은 구덩이를 발견했습니다. \\r\n\\r\n얼마나 흙을 메워야 할지 모르겠어요. \\r\n\"메우기\" 블록을 사용하여 구덩이가 다 메워질 때까지 계속 흙을 채우는 프로그램을 작성해 보세요.  "
+      Underground Avoiding Lava_markdown_instruction: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약) 명령은 여기서 유용할 거에요. 올바른 곳에 "앞으로 이동" 명령을 더해서 이 블록을 채굴하세요.
+      Underground Avoiding Lava_2018_markdown_instruction: 이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약) 명령은 여기서 유용할 거에요. 올바른 곳에 "앞으로 이동" 명령을 더해서 이 블록을 채굴하세요.
+      Underground If Statements_markdown_instruction: 점점 더 어려워지고 있어요. 레드스톤 3개를 채굴하세요. 하지만 용암으로 떨어지지는 마세요. "if"(만약) 명령을 사용해서 용암을 발견하면 조약돌을 놓으세요.
+      Underground If Statements_2018_markdown_instruction: 점점 더 어려워지고 있어요. 레드스톤 3개를 채굴하세요. 하지만 용암으로 떨어지지는 마세요. "if"(만약) 명령을 사용해서 용암을 발견하면 조약돌을 놓으세요.
       course4_artist_fwp_challenge1_markdown_instruction: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로 만들어 봐도 됩니다.)
       courseD_bee_nestedLoops5_markdown_instruction: "각 꽃의 꽃꿀들을 모두 모아서\n벌집에서 꿀을 만들어 보세요. \\r\n\\r\n중첩 반복을 사용하면 됩니다. "
       courseD_bee_nestedLoops8_markdown_instruction: "각 꽃의 꽃꿀들을 모두 모아서\n벌집에서 꿀을 만들어 보세요. \\r\n\\r\n중첩 반복을 사용하면 됩니다. "

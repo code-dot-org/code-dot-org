@@ -365,7 +365,7 @@ sk:
         CSF_stevie_big_project: Števko a Veľký projekt
         CSF_unspotted_bugs: Nenájdené chyby
         CSF_zuck_loops_short: Slučky s opakovaním
-        frozen_intro: Úvod do Hodiny kódu
+        frozen_intro: Úvod do Hodiny Kódu
         frozen_loops: Úvod do cyklov
         frozen_functions: Úvod do funkcií
         playlab_intro: Úvod do Play Lab
@@ -501,11 +501,11 @@ sk:
         edit_get_nectar: Použite toto tlačidlo pre úpravu funkcie a zmenu smeru, ktorým pôjde včela pre nektár.
         logic_category: Otvorte panel "Logické" pre bloky "if/else".
         length_parameter: Viete aktualizovať túto funkciu, aby sa v nej použil parameter "dĺžka"?
-        frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
-        frozen_circle_function_in_circle_turn: Nezabudnite po vytvorení každého kruhu zabočiť.
-        frozen_circle_function_with_parameter_circle: Použite blok "Vytvoriť kruh" a zmeňte veľkost.
-        frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
-        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_circle_function_in_circle_turn: Nezabudni sa po vytvorení každej kružnice otočiť.
+        frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň veľkost.
+        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
+        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
         playlab_drag_say: Presuňte sem blok "Povedz" a napíšte "ahoj"
         playlab_use_twice: Použite tento blok dvakrát a nezabudnte zmeniť počet umelcov
         playlab_move_girl: Použite blok "posuň doprava" pre posunutie Dievčatka tenistky

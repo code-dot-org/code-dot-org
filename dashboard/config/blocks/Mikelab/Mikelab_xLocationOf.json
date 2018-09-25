@@ -1,13 +1,19 @@
 {
-  "category": "Math",
+  "category": "Sprites",
   "config": {
     "func": "xLocationOf",
     "blockText": "x coordinate of {SPRITE}",
     "returnType": "Number",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       }
     ]
   }

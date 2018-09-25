@@ -5,6 +5,7 @@ ja:
         csd_2018_category_name: コンピューターサイエンス 発展 ('18~'19)
         csf_category_name: コンピューター・サイエンスの基礎
         csf_2018_category_name: コンピューターサイエンス 初歩 (2018)
+        csf_international_category_name: コンピューターサイエンス 初歩 (多言語)
         csf2_draft_category_name: '開発中: コース A - F'
         csp_category_name: "'15-'16 コンピューター・サイエンス原理"
         csp_2018_category_name: コンピューターサイエンス 入門 ('18~'19)
@@ -991,6 +992,7 @@ ja:
               name: プレイ ラボのイベント
           title: コース A
           assignment_family_title: コース A
+          description_short: 読み書き前の子ども向けのコンピューターサイエンスの紹介
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1009,6 +1011,7 @@ ja:
               name: プレイ ラボのイベント
           title: コース B
           assignment_family_title: コース B
+          description_short: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
         coursec-2017:
           stages:
             Programming in Maze:
@@ -1029,6 +1032,7 @@ ja:
               name: 入れ子のループ
           title: コース D
           assignment_family_title: コース D
+          description_short: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
         coursee-2017:
           stages:
             Songwriting with Parameters:
@@ -1041,6 +1045,7 @@ ja:
               name: 入れ子のループ
           title: コース E
           assignment_family_title: コース E
+          description_short: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
         coursef-2017:
           stages:
             Building a Foundation:
@@ -1049,6 +1054,7 @@ ja:
               name: アーティストくりかえし
           title: コース F
           assignment_family_title: コース F
+          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
         express-2017:
           stages:
             Introduction:
@@ -1067,6 +1073,8 @@ ja:
               name: ピラミッドをたてよう
             Nested Loops:
               name: 入れ子のループ
+          title: エクスプレスコース
+          assignment_family_title: エクスプレスコース
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1237,6 +1245,7 @@ ja:
               name: リスト
         coursea-2018:
           assignment_family_title: コース A
+          description_short: 読み書き前の子ども向けのコンピューターサイエンスの紹介
           stages:
             'Debugging: Unspotted Bugs':
               name: 気づかれていないバグ
@@ -1262,6 +1271,7 @@ ja:
             'Persistence & Frustration: Stevie and the Big Project':
               name: スティーヴィーと大きなプロジェクト
         express-2018:
+          assignment_family_title: エクスプレスコース
           stages:
             'Algorithms: Graph Paper Programming':
               name: グラフ用紙のプログラミング
@@ -1375,6 +1385,7 @@ ja:
               name: Minecraft Hour of Code プログラミング入門
         coursef-2018:
           assignment_family_title: コース F
+          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
           stages:
             'Programming: My Robotic Friends':
               name: 私のロボットの友だち
