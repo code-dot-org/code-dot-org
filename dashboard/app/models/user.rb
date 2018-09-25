@@ -82,7 +82,7 @@ class User < ActiveRecord::Base
   include LocaleHelper
   include UserMultiAuthHelper
   include UserPermissionGrantee
-  include PartialRegistrationHelper
+  include PartialRegistration
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:

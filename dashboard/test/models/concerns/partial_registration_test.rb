@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class PartialRegistrationHelperTest < ActiveSupport::TestCase
-  # The PartialRegistrationHelper concern is only included in User, so we
+class PartialRegistrationTest < ActiveSupport::TestCase
+  # The PartialRegistration concern is only included in User, so we
   # are testing against User.
 
   test 'partial_registration? is false when session has no user attributes' do
@@ -69,7 +69,7 @@ class PartialRegistrationHelperTest < ActiveSupport::TestCase
 
   def fake_session(user_attributes = {})
     {
-      PartialRegistrationHelper::USER_ATTRIBUTES_SESSION_KEY => user_attributes
+      PartialRegistration::USER_ATTRIBUTES_SESSION_KEY => user_attributes
     }
   end
 end
