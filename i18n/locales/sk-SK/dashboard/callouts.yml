@@ -891,7 +891,11 @@ sk:
       coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov pre ich odstránenie.
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle: Použite blok "Vytvoriť kruh" a zmeňte veľkost.
+        frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň veľkost.
+      frozen circle function with parameter_b_callout:
+        frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň jej veľkosť.
+      frozen circle function with parameter_test_callout:
+        frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň jej veľkosť.
       frozen cross rotate_callout:
         replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen cross rotate_b_callout:
@@ -902,9 +906,9 @@ sk:
         repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov na pracovnej ploche"
         repeat_blocks_2: (2) Presuňte sem blok "Zopakovať" a umiestnite šedé bloky do jeho vnútra
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
       frozen diamond_callout:
-        frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
       frozen freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       frozen freeplay_b_callout:
@@ -912,26 +916,32 @@ sk:
       frozen freeplay_test_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       frozen line_callout:
-        run: Kliknite na "Spustiť" pre spustenie Vášho programu!
+        run: Aby si spustil svoj program, stlač tlačidlo "Spustiť"!
         move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
       frozen line_b_callout:
-        run: Kliknite na "Spustiť" pre spustenie Vášho programu!
+        run: Aby si spustil svoj program, stlač tlačidlo "Spustiť"!
         move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
       frozen line_test_callout:
-        run: Kliknite na "Spustiť" pre spustenie Vášho programu!
+        run: Aby si spustil svoj program, stlač tlačidlo "Spustiť"!
         move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
       frozen perpendicular_callout:
         turn_elsa: Použite blok "Otočiť" pre otočenie Elsy. Číslo vo vyberacom poli určí, koľkokrát sa Elsa otočí
+      frozen perpendicular_b_callout:
+        turn_elsa: 'Použi blok "Otoč sa" aby sa Elsa otočila. '
+      frozen perpendicular_test_callout:
+        turn_elsa: 'Použi blok "Otoč sa" aby sa Elsa otočila. '
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
+        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
+      frozen snowflake branch_b_callout:
+        frozen_snowflake_branch: Použi funkciu "Vytvor rameno vločky"
       frozen snowflake branch_test_callout:
-        frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
+        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
       frozen square iterative_callout:
-        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
       frozen square iterative_b_callout:
-        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
       frozen square iterative_test_callout:
-        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
       frozen square loop 3x_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen square loop 3x_b_callout:
@@ -990,13 +1000,13 @@ sk:
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: Použite blok "Vytvoriť kruh" a zmeňte veľkost.
+        frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň veľkost.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
       grade4_frozen_square_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       grade4_frozen_square_loop1_callout:

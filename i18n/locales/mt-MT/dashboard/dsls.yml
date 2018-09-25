@@ -27,8 +27,6 @@ mt:
       test matching text:
         blue: Ikħal
     multi:
-      CB_Question_3:
-        Y: true
       CSP Unit 1 Ch 1 MC binary to dec simple:
         '0010': '0010'
         '0101': '0101'
@@ -141,24 +139,8 @@ mt:
         '16': '16'
         17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
         18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-      U2L13 Assessment4:
-        '26': '26'
       U2L13 Assessment4_2018:
         '26': '26'
-      U2L14 Assessment3:
-        'false': 'falz'
-        'true': 'veru/minnu'
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
       U2L19 multichoice 13 MOD 17_2018:
         '0': '0'
         '13': '13'
@@ -170,24 +152,12 @@ mt:
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
       U2L19 mutlichoice 20 mod 15_2018:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
         '20': '20'
         '5': '5'
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
       U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
@@ -240,11 +210,6 @@ mt:
         14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
         16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-      cspu5_assess1_fivemore:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_fivemore_2018:
         "-2": "-2"
         '3': '3'
@@ -255,20 +220,12 @@ mt:
         '3': '3'
         '5': '5'
         '8': '8'
-      cspu5_assess1_flowchart:
-        '10': '10'
-        '5': '5'
       cspu5_assess1_flowchart_2018:
         '10': '10'
         '5': '5'
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
-      cspu5_assess1_increase:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_increase_2018:
         '10': '10'
         '13': '13'
@@ -279,15 +236,9 @@ mt:
         '13': '13'
         '5': '5'
         '8': '8'
-      cspu5_assess2_addstrings:
-        result: riżultat
       cspu5_assess2_addstrings_2018:
         result: riżultat
       cspu5_assess2_addstrings_exam_prep:
-        result: riżultat
-      cspu5_assess2_combineString:
-        '10': '10'
-        '55': '55'
         result: riżultat
       cspu5_assess2_combineString_2018:
         '10': '10'
@@ -297,10 +248,6 @@ mt:
         '10': '10'
         '55': '55'
         result: riżultat
-      cspu5_assess2_oldEnough:
-        '35': '35'
-        'false': 'falz'
-        'true': 'veru/minnu'
       cspu5_assess2_oldEnough_2018:
         '35': '35'
         'false': 'falz'
@@ -327,11 +274,6 @@ mt:
         '30': '30'
         '50': '50'
         '75': '75'
-      cspu5_assess3_array1:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
       cspu5_assess3_array1_2018:
         '10': '10'
         '4': '4'
@@ -342,12 +284,6 @@ mt:
         '4': '4'
         '7': '7'
         '9': '9'
-      cspu5_assess3_array2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_array2_2018:
         '2': '2'
         '3': '3'
@@ -360,11 +296,6 @@ mt:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess3_array4:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
       cspu5_assess3_array4_2018:
         '0': '0'
         '1': '1'
@@ -375,11 +306,6 @@ mt:
         '1': '1'
         '2': '2'
         '8': '8'
-      cspu5_assess3_listAppend:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
       cspu5_assess3_listAppend_2018:
         '1': '1'
         '2': '2'
@@ -390,11 +316,6 @@ mt:
         '2': '2'
         '3': '3'
         '6': '6'
-      cspu5_assess3_loopValue1:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
       cspu5_assess3_loopValue1_2018:
         '2': '2'
         '3': '3'
@@ -405,22 +326,12 @@ mt:
         '3': '3'
         '4': '4'
         '5': '5'
-      cspu5_assess3_loopValue2:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_loopValue2_2018:
         '0': '0'
         '4': '4'
         '5': '5'
         '6': '6'
       cspu5_assess3_loopValue2_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -435,12 +346,6 @@ mt:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess4_dataReturns:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
       cspu5_assess4_dataReturns_2018:
         '10': '10'
         '16': '16'
@@ -452,11 +357,6 @@ mt:
         '16': '16'
         '3': '3'
         '4': '4'
-        '9': '9'
-      cspu5_assess4_listOutput:
-        '17': '17'
-        '3': '3'
-        '42': '42'
         '9': '9'
       cspu5_assess4_listOutput_2018:
         '17': '17'
@@ -512,8 +412,3 @@ mt:
         Prefer not to answer: Nippreferi li ma nwegiebx
       pre-assessment survey q30:
         Prefer not to answer: Nippreferi li ma nwegiebx
-      sarah_test_maggie:
-        test: prova
-    text_match:
-      U2L07 Assessment4:
-        '43': '43'

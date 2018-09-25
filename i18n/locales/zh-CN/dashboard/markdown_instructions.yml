@@ -2115,6 +2115,88 @@ zh-CN:
         * 在岩石表中找到让整个页面背景是蓝色的代码。
         * 改动代码，让页面成为不同的颜色。
         * 试着只改动这些段落的背景颜色。
+      CSD U2 layout style body_2018_markdown_instruction: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        
+        <summary>
+        
+        **`body`选择器做什么？**
+        
+        </summary>
+        由于网站的内容全都包含在`body` 标签中, body选择器给出网页上所有内容的样式。</details>
+        <details>
+        <summary>
+        
+        **`color`属性做什么？**
+        
+        </summary>
+        `color`属性决定文本的颜色。如果那里没有文本，那么看起来就像无事发生。了解更多在<a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>，中文教程请搜索菜鸟教程。
+        </details>
+        <details>
+        <summary>
+        
+        **`text-align`属性做什么？**
+        
+        </summary>
+        `text-align`属性使文本左对齐，右对齐，或居中.了解更多在<a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
+        </details>
+        <details>
+        <summary>
+        
+        **`text-decoration`属性做什么？**
+        
+        </summary>
+        `text-decoration`属性会在文本的上面，下面，或中间划一道线.  了解更多在<a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
+        </details>
+        <details>
+        <summary>
+        
+        **`font-family`属性做什么？**
+        
+        </summary>
+        `font-family`属性改变文本的字体。这给出了对应使用字体的大致描述， 但在不同的浏览器中识别可能有差异。了解更多在<a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
+        </details>
+        <details>
+        <summary>
+        
+        **`font-size`属性做什么？**
+        
+        </summary>
+        `font-size` 属性改变文本的大小。您可以使用通用术语，如“小”、“中”和“大”，也可以指定精确的大小(以像素为单位)，如“20px”。 了解更多在<a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
+        </details>
+        <details>
+        <summary>
+        
+        **样式表是什么？**
+        
+        </summary>
+        样式表是控制网页如何显示的文档。外部样式表是链接到HTML页面的独立文件。
+        </details>
+        <details>
+        <summary>
+        
+        **CSS是什么？**
+        
+        </summary>
+        
+        CSS是一种决定网站上的内容如何显示的语言。它使用规则集来改变页面的样子。每个规则集都有一个选择器，他决定了页面上的哪些元素会受到影响，规则解释如何显示元素。每条规则都由一个属性和该属性的值组成。
+        
+        
+        例子：这是一个将文本打上`h2`标签，字体颜色为蓝色，字体为cursive的规则集：
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        </pre>
+        
+        本例中，`h2`是选择器，`color`和`font-family`是属性，`blue`和`cursive`是这些属性的值。</details>
+        </div>
+        
+        #Body 元素
+        
+        * 在样式表中找到`body`规则集。
+        * 和同伴讨论若在`body`规则集中添加`text-align`，`color`或其他文本属性会发生什么。
+        * 尝试其他属性来检验你的猜测。
       CSD U2 layout style border_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -2308,53 +2390,69 @@ zh-CN:
         \r
         
       CSD U2 lists intro_markdown_instruction: |-
-        # Lists\r
+        # 列表
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是列表的两种类型？**</summary>\r
+        markdown="1">
+        <details>
+        <summary>
         
-        HTML中有两种类型的列表，有序的和无序的列表。\r
-        </details>\r
-        \r
-        <details>\r
-        <summary>**什么是无序的列表？**</summary>\r
-        无序列表就是一组符号列表。\r
-        <br /><br />\r
-        无序列表元素的标签是`<ul> </ul>`。这是<strong>U</strong>nordered <strong>L</strong>ist（无序列表）的缩写。列表中的每个条目都通过元素`<li> </li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，无序列表里。\r
-        </details>\r
-        \r
-        <details>\r
-        <summary>**我该如何增加一个无序列表？**</summary>\r
+        **什么是列表的两种类型？**
+        
+        </summary>
+        
+        HTML中有两种类型的列表，有序的和无序的列表。
+        </details>
+        
+        <details>
+        <summary>
+        
+        **什么是无序的列表？**
+        
+        </summary>
+        无序列表就是一组符号列表。
+        <br /><br />
+        无序列表元素的标签是`<ul> </ul>`。这是<strong>U</strong>nordered <strong>L</strong>ist（无序列表）的缩写。列表中的每个条目都通过元素`<li> </li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，无序列表里。
+        </details>
+        
+        <details>
+        <summary>
+        
+        **我该如何增加一个无序列表？**
+        
+        </summary>
         制作一个无序列表需要两步：制作列表和增加列表条目。先写上无序列表标签 `<ul> </ul>`来增加无序列表。接着将你的列表条目加到无序列表标签的**里面**。用标签`<li>
-        </li>` 来增加列表条目，将内容都加到这对标签里。\r
-        <br /><br />\r
-        给你的`<li> </li>`标签加上缩进会有助于表达这些条目是在`<ul> </ul>`标签里面的。\r
-        </details>\r
-        \r
-        <details>\r
-        <summary>**什么是有序列表？**</summary>\r
-        有序列表是一组数字符号的列表。\r
-        <br /><br />\r
-        有序列表元素的标签是`<ol> </ol>`。这是<strong>O</strong>rdered <strong>L</strong>ist（有序列表）的缩写。列表中的每个条目都通过元素`<li> </li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，有序列表里。\r
-        </details>\r
-        \r
-        <details>\r
-        <summary>**我该如何增加一个有序列表？**</summary>\r
+        </li>` 来增加列表条目，将内容都加到这对标签里。
+        <br /><br />
+        给你的`<li> </li>`标签加上缩进会有助于表达这些条目是在`<ul> </ul>`标签里面的。
+        </details>
+        
+        <details>
+        <summary>
+        
+        **什么是有序列表？**
+        
+        </summary>
+        有序列表是一组数字符号的列表。
+        <br /><br />
+        有序列表元素的标签是`<ol> </ol>`。这是<strong>O</strong>rdered <strong>L</strong>ist（有序列表）的缩写。列表中的每个条目都通过元素`<li> </li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，有序列表里。
+        </details>
+        
+        <details>
+        <summary>**我该如何增加一个有序列表？**</summary>
         制作一个有序列表需要两步：制作列表和增加列表条目。先写上有序列表标签 `<ol> </ol>`来增加有序列表。接着将你的列表条目加到有序列表标签的**里面**。用标签`<li>
-        </li>` 来增加列表条目，将内容都加到这对标签里。\r
-        <br /><br/>\r
-        给你的`<li> </li>`标签加上缩进会有助于表达这些条目是在`<ol> </ol>` 标签里面的。\r
-        </details>\r
-        </div>\r
-        \r
-        你也能用HTML来给页面增加不同类型的列表。这个配方页面包括两种类型的列表，一个有序的（数字的），一个无序的（符号的）。\r
-        \r
-        #  这样做\r
-        \r
-        * 用检查器来看看这两种不同类型的列表\r
-        * 确保你和你的伙伴都对这不同类型的标签是什么达成一致。\r
+        </li>` 来增加列表条目，将内容都加到这对标签里。
+        <br /><br/>
+        给你的`<li> </li>`标签加上缩进会有助于表达这些条目是在`<ol> </ol>` 标签里面的。
+        </details>
+        </div>
+        
+        你也能用HTML来给页面增加不同类型的列表。这个配方页面包括两种类型的列表，一个有序的（数字的），一个无序的（符号的）。
+        
+        #  这样做
+        
+        * 用检查器来看看这两种不同类型的列表
+        * 确保你和你的伙伴都对这不同类型的标签是什么达成一致。
         * 修复代码，使得每个列表中的第二个条目能正确显示。
       CSD U2 lists intro_2018_markdown_instruction: |-
         # Lists\r
@@ -2408,83 +2506,97 @@ zh-CN:
       CSD U2 navigation_markdown_instruction: |
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是超链接？**</summary>\r
-        超链接能够连接到本站网页或是外面的网页。要增加到本站网页的导航，你需要增加一些能够链接到本站网页的超链接。你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>\r
-        \r
-        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。<br><br>\r
-        \r
-        <pre>\r
-        &lt;a
-        href=”houses.html”&gt; 独特的房子 &lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details>\r
-        <summary>**如何增加一个超链接？**</summary>\r
-        你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>\r
-        \r
-        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。 <br><br>\r
-        \r
-        <pre>\r
-        &lt;a href=”houses.html”&gt; 独特的房子 &lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        </div>\r
-        \r
-        # 创建导航栏\r
-        \r
-        这是你以前的项目。你要将两个页面通过页面顶部的**导航栏**连接在一起。网站通常会有一个所有页面都有的，相同的导航栏。这样就能在网站中的不同页面间跳转了。<a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
-        target="_new">这个页面</a>有个导航栏的例子。\r
-        \r
-        # 这样做\r
-        * 在你的首页(index.html)的顶部增加两个超链接，一个指向列表页面，一个指向首页。\r
-        * *虽然有个指向自己的页面看起来很奇怪，但是这让导航栏在每个页面上都是完全一样的，从而减少困惑。*\r
-        * 将导航栏代码复制到列表页面的顶部。\r
-        * 在预览区域点击它们来测试链接。\r
+        markdown="1">
+        <details>
+        <summary>
         
+        **什么是超链接？**
+        
+        </summary>
+        超链接能够连接到本站网页或是外面的网页。要增加到本站网页的导航，你需要增加一些能够链接到本站网页的超链接。你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>
+        
+        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。<br><br>
+        
+        <pre>
+        &lt;a
+        href=”houses.html”&gt; 独特的房子 &lt;/a&gt;
+        </pre>
+        
+        </details>
+        <details>
+        <summary>
+        
+        **如何增加一个超链接？**
+        
+        </summary>
+        你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>
+        
+        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。 <br><br>
+        
+        <pre>
+        &lt;a href=”houses.html”&gt; 独特的房子 &lt;/a&gt;
+        </pre>
+        
+        </details>
+        </div>
+        
+        # 创建导航栏
+        
+        这是你以前的项目。你要将两个页面通过页面顶部的**导航栏**连接在一起。网站通常会有一个所有页面都有的，相同的导航栏。这样就能在网站中的不同页面间跳转了。<a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
+        target="_new">这个页面</a>有个导航栏的例子。
+        
+        # 这样做
+        * 在你的首页(index.html)的顶部增加两个超链接，一个指向列表页面，一个指向首页。
+        * *虽然有个指向自己的页面看起来很奇怪，但是这让导航栏在每个页面上都是完全一样的，从而减少困惑。*
+        * 将导航栏代码复制到列表页面的顶部。
+        * 在预览区域点击它们来测试链接。
       CSD U2 navigation_2018_markdown_instruction: |
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是超链接？**</summary>\r
-        超链接能够连接到本站网页或是外面的网页。要增加到本站网页的导航，你需要增加一些能够链接到本站网页的超链接。你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>\r
-        \r
-        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。<br><br>\r
-        \r
-        <pre>\r
-        &lt;a
-        href=”houses.html”&gt; 独特的房子 &lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        <details>\r
-        <summary>**如何增加一个超链接？**</summary>\r
-        你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>\r
-        \r
-        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。 <br><br>\r
-        \r
-        <pre>\r
-        &lt;a href=”houses.html”&gt; 独特的房子 &lt;/a&gt;\r
-        </pre>\r
-        \r
-        </details>\r
-        </div>\r
-        \r
-        # 创建导航栏\r
-        \r
-        这是你以前的项目。你要将两个页面通过页面顶部的**导航栏**连接在一起。网站通常会有一个所有页面都有的，相同的导航栏。这样就能在网站中的不同页面间跳转了。<a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
-        target="_new">这个页面</a>有个导航栏的例子。\r
-        \r
-        # 这样做\r
-        * 在你的首页(index.html)的顶部增加两个超链接，一个指向列表页面，一个指向首页。\r
-        * *虽然有个指向自己的页面看起来很奇怪，但是这让导航栏在每个页面上都是完全一样的，从而减少困惑。*\r
-        * 将导航栏代码复制到列表页面的顶部。\r
-        * 在预览区域点击它们来测试链接。\r
+        markdown="1">
+        <details>
+        <summary>
         
+        **什么是超链接？**
+        
+        </summary>
+        超链接能够连接到本站网页或是外面的网页。要增加到本站网页的导航，你需要增加一些能够链接到本站网页的超链接。你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>
+        
+        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。<br><br>
+        
+        <pre>
+        &lt;a
+        href=”houses.html”&gt; 独特的房子 &lt;/a&gt;
+        </pre>
+        
+        </details>
+        <details>
+        <summary>
+        
+        **如何增加一个超链接？**
+        
+        </summary>
+        你可以**用`<a>`元素来给你的网页增加超链接**。你想在超链接中显示的文本，要放在超链接的开、闭标签之间。`<a>`元素有一个`href`属性能够定位到链接到的位置。本站网页的位置只是到那个页面的文件地址。<br> <br>
+        
+        例如，链接到独特的房子页面，需要将下面的代码增加到`<body>`元素里。 <br><br>
+        
+        <pre>
+        &lt;a href=”houses.html”&gt; 独特的房子 &lt;/a&gt;
+        </pre>
+        
+        </details>
+        </div>
+        
+        # 创建导航栏
+        
+        这是你以前的项目。你要将两个页面通过页面顶部的**导航栏**连接在一起。网站通常会有一个所有页面都有的，相同的导航栏。这样就能在网站中的不同页面间跳转了。<a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
+        target="_new">这个页面</a>有个导航栏的例子。
+        
+        # 这样做
+        * 在你的首页(index.html)的顶部增加两个超链接，一个指向列表页面，一个指向首页。
+        * *虽然有个指向自己的页面看起来很奇怪，但是这让导航栏在每个页面上都是完全一样的，从而减少困惑。*
+        * 将导航栏代码复制到列表页面的顶部。
+        * 在预览区域点击它们来测试链接。
       CSD U2 new page_markdown_instruction: |+
         # 为你的网站创建一个新页面。\r
         \r
@@ -2515,8 +2627,8 @@ zh-CN:
         * 一个标头\r
         \r
         
-      CSD U2 ordered list_markdown_instruction: "# 有序列表\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**什么是列表的两种类型？**</summary>\\r\n\nHTML中有两种类型的列表，有序的和无序的列表。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是有序列表？**</summary>\\r\n有序列表是一组数字符号的列表。\\r<br /><br />\\r\n有序列表元素的标签是`<ol>`。这是<strong>O</strong>rdered <strong>L</strong>ist（有序列表）的缩写。\n列表中的每个条目都通过元素`<li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，有序列表(`<ol>`)里。\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**该如何增加一个有序列表？**</summary>\\r\n制作一个有序列表需要两步：制作列表和增加列表条目。先写上有序列表标签 `<ol> </ol>`来增加有序列表。接着将你的列表条目加到有序列表标签的**里面**。用标签`<li>\n</li>` 来增加列表条目，将内容都加到这对标签里。\\r\n<br /><br />\\r\n给你的`<li>`标签加上缩进会有助于表达这些条目是在`<ol> ` 标签里面的。\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**给我看看实际的代码。**</summary>\\r\n<table\nborder=\"1\">\\r\n<tr>\\r\n<td>例子</td>\\r\n<td>结果</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br> &lt;li&gt;步骤1 &lt;/li&gt; <br> &lt;li&gt;步骤2 &lt;/li&gt;\n<br> &lt;li&gt;步骤3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\n这个页面应该包含一个有序列表，但它少写了列表标签。\\r\n\\r\n#\n这样做\\r\n\\r\n* 用`<ol>`和`<li>` 标签来将内容变为有序列表的结构，并看起来和下面的一样。\\r\n\\r\n*提示: 在你的代码里不能有数字。* \\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
-      CSD U2 ordered list_2018_markdown_instruction: "# 有序列表\\r\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**什么是列表的两种类型？**</summary>\\r\n\nHTML中有两种类型的列表，有序的和无序的列表。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是有序列表？**</summary>\\r\n有序列表是一组数字符号的列表。\\r<br /><br />\\r\n有序列表元素的标签是`<ol>`。这是<strong>O</strong>rdered <strong>L</strong>ist（有序列表）的缩写。\n列表中的每个条目都通过元素`<li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，有序列表(`<ol>`)里。\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**该如何增加一个有序列表？**</summary>\\r\n制作一个有序列表需要两步：制作列表和增加列表条目。先写上有序列表标签 `<ol> </ol>`来增加有序列表。接着将你的列表条目加到有序列表标签的**里面**。用标签`<li>\n</li>` 来增加列表条目，将内容都加到这对标签里。\\r\n<br /><br />\\r\n给你的`<li>`标签加上缩进会有助于表达这些条目是在`<ol> ` 标签里面的。\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**给我看看实际的代码。**</summary>\\r\n<table\nborder=\"1\">\\r\n<tr>\\r\n<td>例子</td>\\r\n<td>结果</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br> &lt;li&gt;步骤1 &lt;/li&gt; <br> &lt;li&gt;步骤2 &lt;/li&gt;\n<br> &lt;li&gt;步骤3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\n这个页面应该包含一个有序列表，但它少写了列表标签。\\r\n\\r\n#\n这样做\\r\n\\r\n* 用`<ol>`和`<li>` 标签来将内容变为有序列表的结构，并看起来和下面的一样。\\r\n\\r\n*提示: 在你的代码里不能有数字。* \\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
+      CSD U2 ordered list_markdown_instruction: "# 有序列表\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n\n**什么是列表的两种类型？**\n\n</summary>\n\nHTML中有两种类型的列表，有序的和无序的列表。\n</details>\n<details>\n<summary>**什么是有序列表？**</summary>\n有序列表是一组数字符号的列表。<br /><br />\n有序列表元素的标签是`<ol>`。这是<strong>O</strong>rdered <strong>L</strong>ist（有序列表）的缩写。\n列表中的每个条目都通过元素`<li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，有序列表(`<ol>`)里。\n\n</details>\n\n<details>\n<summary>\n\n**该如何增加一个有序列表？**\n\n</summary>\n制作一个有序列表需要两步：制作列表和增加列表条目。先写上有序列表标签 `<ol> </ol>`来增加有序列表。接着将你的列表条目加到有序列表标签的**里面**。用标签`<li>\n</li>` 来增加列表条目，将内容都加到这对标签里。\n<br /><br />\n给你的`<li>`标签加上缩进会有助于表达这些条目是在`<ol> ` 标签里面的。\n\n</details>\n\n<details>\n<summary>\n\n**给我看看实际的代码**\n\n</summary>\n<table\nborder=\"1\">\n<tr>\n<td>例子</td>\n<td>结果</td>\n</tr>\n<tr>\n<td><pre>\n&lt;ol&gt; <br> &lt;li&gt;步骤1 &lt;/li&gt; <br> &lt;li&gt;步骤2 &lt;/li&gt;\n<br> &lt;li&gt;步骤3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n</details>\n</div>\n\n这个页面应该包含一个有序列表，但它少写了列表标签。\n\n# 这样做\n\n* 用`<ol>`和`<li>` 标签来将内容变为有序列表的结构，并看起来和下面的一样。\n\n*提示: 在你的代码里不能有数字。* \n\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png)"
+      CSD U2 ordered list_2018_markdown_instruction: "# 有序列表\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n\n**什么是列表的两种类型？**\n\n</summary>\n\nHTML中有两种类型的列表，有序的和无序的列表。\n</details>\n<details>\n<summary>**什么是有序列表？**</summary>\n有序列表是一组数字符号的列表。<br /><br />\n有序列表元素的标签是`<ol>`。这是<strong>O</strong>rdered <strong>L</strong>ist（有序列表）的缩写。\n列表中的每个条目都通过元素`<li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，有序列表(`<ol>`)里。\n\n</details>\n\n<details>\n<summary>\n\n**该如何增加一个有序列表？**\n\n</summary>\n制作一个有序列表需要两步：制作列表和增加列表条目。先写上有序列表标签 `<ol> </ol>`来增加有序列表。接着将你的列表条目加到有序列表标签的**里面**。用标签`<li>\n</li>` 来增加列表条目，将内容都加到这对标签里。\n<br /><br />\n给你的`<li>`标签加上缩进会有助于表达这些条目是在`<ol> ` 标签里面的。\n\n</details>\n\n<details>\n<summary>\n\n**给我看看实际的代码**\n\n</summary>\n<table\nborder=\"1\">\n<tr>\n<td>例子</td>\n<td>结果</td>\n</tr>\n<tr>\n<td><pre>\n&lt;ol&gt; <br> &lt;li&gt;步骤1 &lt;/li&gt; <br> &lt;li&gt;步骤2 &lt;/li&gt;\n<br> &lt;li&gt;步骤3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n</details>\n</div>\n\n这个页面应该包含一个有序列表，但它少写了列表标签。\n\n# 这样做\n\n* 用`<ol>`和`<li>` 标签来将内容变为有序列表的结构，并看起来和下面的一样。\n\n*提示: 在你的代码里不能有数字。* \n\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png)"
       CSD U2 project review_markdown_instruction: |
         # 复查你的项目\r
         \r
@@ -2572,7 +2684,11 @@ zh-CN:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary>**这些代码是如何起作用的？**</summary>
+        <summary>
+        
+        **这些代码是如何起作用的？**
+        
+        </summary>
         这是让`h1`元素有下划线的代码：
         
         <pre>h1 {
@@ -2582,11 +2698,15 @@ zh-CN:
         
         * `h1`是_选择器_。它指定了哪些元素要使用花括号里的规则。这里的`p`表示段落（paragraph）。
         * `text-decoration: underline;`是一条规则，它能让`h1`标签里的文本有下划线。
-         * `text-decoration`是_属性_。它解释了这是什么规则，在这里，表示用什么修饰。
-         * `underline`是_值_。它解释了这条规则如何应用，在这里，表示用下划线。
+        * `text-decoration`是_属性_。它解释了这是什么规则，在这里，表示用什么修饰。
+        * `underline`是_值_。它解释了这条规则如何应用，在这里，表示用下划线。
         </details>
         <details>
-        <summary>**文本修饰都有什么可用的值？**</summary>
+        <summary>
+        
+        **文本修饰都有什么可用的值？**
+        
+        </summary>
         可选的项目有"underline", "overline", 和"line-through"。你可以阅读<a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools
         - CSS text-decoration 属性</a>来了解更多。
         </details>
@@ -2595,11 +2715,19 @@ zh-CN:
         这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
         </details>
         <details>
-        <summary>**什么是样式表？**</summary>
+        <summary>
+        
+        **什么是样式表？**
+        
+        </summary>
         样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
         </details>
         <details>
-        <summary>**什么是CSS？**</summary>
+        <summary>
+        
+        **什么是CSS？**
+        
+        </summary>
         CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
         
         
@@ -2614,8 +2742,7 @@ zh-CN:
         在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
         </details>
         </div>
-        #
-        下划线
+        # 下划线
         
         * 找到样式表中，让h1标签有下划线的代码。
         * 改动文本修饰，选择一个你喜欢的值。
@@ -2626,7 +2753,11 @@ zh-CN:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary>**这些代码是如何起作用的？**</summary>
+        <summary>
+        
+        **这些代码是如何起作用的？**
+        
+        </summary>
         这是控制段落字体的代码：
         
         <pre>p {
@@ -2636,24 +2767,40 @@ zh-CN:
         
         * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。
         * `font-family: cursive;`是一条规则，它让`p`标签里的文本采用某种字体。
-         * `font-family`是_属性_。它解释了这条规则是关于什么的，这条是关于字体的。
-         * `cursive`是_值_。它解释了规则是如何被应用的，在这里，会让文本成为草书。
+        * `font-family`是_属性_。它解释了这条规则是关于什么的，这条是关于字体的。
+        * `cursive`是_值_。它解释了规则是如何被应用的，在这里，会让文本成为草书。
         </details>
         <details>
-        <summary>**有哪些可用的字体族？**</summary>
+        <summary>
+        
+        **有哪些可用的字体族？**
+        
+        </summary>
         你可以从"serif"，"sans-serif"，"cursive"，"fantasy"和"monospace"中选择。也可以从<a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools
         - CSS 网页安全字体组合</a>里选一种字体。
         </details>
         <details>
-        <summary>**为什么我要所有这些符号？**</summary>
+        <summary>
+        
+        **为什么我要所有这些符号？**
+        
+        </summary>
         这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
         </details>
         <details>
-        <summary>**什么是样式表？**</summary>
+        <summary>
+        
+        **什么是样式表？**
+        
+        </summary>
         样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
         </details>
         <details>
-        <summary>**什么是CSS？**</summary>
+        <summary>
+        
+        **什么是CSS？**
+        
+        </summary>
         CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
         
         
@@ -2668,8 +2815,7 @@ zh-CN:
         在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
         </details>
         </div>
-        #
-        改变字体
+        # 改变字体
         
         * 在样式表中找到决定段落标签样式的CSS规则集。
         * 选择一种最喜欢的字体族，并改变原来的值。
@@ -2698,12 +2844,20 @@ zh-CN:
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary>**我能在CSS里使用什么颜色？**</summary>
+        <summary>
+        
+        **我能在CSS里使用什么颜色？**
+        
+        </summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
         - CSS正确的颜色值</a>查看更多信息。
         </details><details>
-        <summary>**这些代码是如何起作用的？**</summary>
+        <summary>
+        
+        **这些代码是如何起作用的？**
+        
+        </summary>
         这是让`h1`标题变红的代码：
         
         <pre>h1 {
@@ -2711,22 +2865,32 @@ zh-CN:
         }</pre>
         
         * `h1`是_选择器_。它指定了哪些元素上会应用花括号里的规则。
-        *
-        `color: red;`是让`h1`标签里的文本变红的规则。
-        
+        * `color: red;`是让`h1`标签里的文本变红的规则。
         * `color` 是_属性_。它解释了这是关于什么的规则，在这里，表示文本颜色。
-         * `red`是_值_。它解释了规则如何被应用，在这里，会让文本变红。
+        * `red`是_值_。它解释了规则如何被应用，在这里，会让文本变红。
         </details>
         <details>
-        <summary>**为什么我要所有这些符号？**</summary>
+        <summary>
+        
+        **为什么我要所有这些符号？**
+        
+        </summary>
         这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
         </details>
         <details>
-        <summary>**什么是样式表？**</summary>
+        <summary>
+        
+        **什么是样式表？**
+        
+        </summary>
         样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
         </details>
         <details>
-        <summary>**什么是CSS？**</summary>
+        <summary>
+        
+        **什么是CSS？**
+        
+        </summary>
         CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
         
         
@@ -2742,8 +2906,7 @@ zh-CN:
         在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
         </details>
         </div>
-        #
-        CSS和文本颜色
+        # CSS和文本颜色
         
         这个HTML文件使用了一个样式表（"style.css"）来给页面一个特定的样式。这个样式表包含了关于每个HTML元素应该看起来是什么样子的信息。
         
@@ -3006,7 +3169,11 @@ zh-CN:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary>**这些代码是如何起作用的？**</summary>
+        <summary>
+        
+        **这些代码是如何起作用的？**
+        
+        </summary>
         这是控制段落文本对齐的代码：
         
         <pre>p
@@ -3021,24 +3188,44 @@ zh-CN:
          * `left`是_值_。它解释了规则是如何被应用的，在这里，它让文本对齐到段落的左边。
         </details>
         <details>
-        <summary>**为什么`text-align: left;`看起来什么都没改变？**</summary>
+        <summary>
+        
+        **为什么`text-align: left;`看起来什么都没改变？**
+        
+        </summary>
         大多数属性都有默认值。这些默认值是一个元素自动会应用上的样式，不需要加到样式表中。`text-align`的默认值是`left`，因此它没有改变任何样式。
         </details>
         <details>
-        <summary>**文本对齐都有哪些可能的值？**</summary>
+        <summary>
+        
+        **文本对齐都有哪些可能的值？**
+        
+        </summary>
         你可以在"left"，"right"，和"center"中选一个。阅读<a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools
         - CSS text-align属性</a>了解更多关于文本对齐的内容。
         </details>
         <details>
-        <summary>**为什么我要所有这些符号？**</summary>
+        <summary>
+        
+        **为什么我要所有这些符号？**
+        
+        </summary>
         这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
         </details>
         <details>
-        <summary>**什么是样式表？**</summary>
+        <summary>
+        
+        **什么是样式表？**
+        
+        </summary>
         样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
         </details>
         <details>
-        <summary>**什么是CSS？**</summary>
+        <summary>
+        
+        **什么是CSS？**
+        
+        </summary>
         CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
         
         
@@ -3054,8 +3241,7 @@ zh-CN:
         </details>
         </details>
         </div>
-        #
-        文本对齐
+        # 文本对齐
         
         `text-align`属性设置了文本在每一行上，水平（从一边到另一边）方向的位置。
         
@@ -10281,18 +10467,42 @@ zh-CN:
         <hr/>\r
         <i>玩游戏，并且达到第3级来到达下一关。 </i>
       Course 4 Play Lab Params 2_markdown_instruction: "现在，我们明白了有些旗帜太高了，跳不上去！让我们一起使用“上”和“下”方向键，来让我们能跳不同的高度。\\r\n\\r\n我们需要添加一个叫做“高度”的参数到“跳”的函数中。\\r\n- 上方向键让小狗跳200像素。\\r\n- 下方向键让它只跳100像素。\\r\n"
-      Course 4 Play Lab Params 3_markdown_instruction: "我们已经给“跳”函数添加了另一个参数，因此它可以用在别的演员上了。每个演员都有一个编号，编号从1开始。\\r\n\\r\n<br/>\\r\n编辑“跳”函数来使用“演员”参数，使它能够让正确的演员跳起来。 "
+      Course 4 Play Lab Params 3_markdown_instruction: |-
+        我们已经给“跳”函数添加了另一个参数，因此它可以用在别的演员上了。每个演员都有一个编号，编号从1开始。\r
+        \r
+        <br/>\r
+        编辑“跳”函数来使用“演员”参数，使它能够让正确的演员跳起来。 
       Course 4 Play Lab Params 4_markdown_instruction: "这里有个函数叫做`巡逻`。\\r\n\\r\n编辑`巡逻`来让猫向上移动400像素，再向下移动400像素。"
       Course 4 Play Lab Params 5_markdown_instruction: 编辑`巡逻`函数来添加一个`演员`参数。调用它时，能让屏幕上每个演员都动起来。记住，演员对应到数字1和2，3上。
       Course 4 Play Lab Params 6_markdown_instruction: 添加另一个叫做“速度”的参数到“巡逻”函数里。试着在“设置速度”模块中使用新的“速度”参数，来帮助企鹅在别的小动物之前得到所有旗帜。
       Course 4 Play Lab Params 7_markdown_instruction: "来点好玩的！看看这里的代码，是否你能明白每个模块都做了什么。\\r\n\\r\n看完以后，用方向键来让小狗收集到所有旗帜。\\r\n\\r\n注意：你不必改动代码。"
       Course 4 Play Lab Params 8_markdown_instruction: 在小狗碰到任何一个演员时，用“当演员碰到”模块来把小狗送回左上角。
       Course 4 Play Lab Params 9_markdown_instruction: "这是一个早先的游戏，但是大部分代码都隐藏了。我们加了个新函数叫做“score_points”（得分）。\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\n编辑这个函数，使得“points”（分数）参数能加到“player_score”（玩家分数）变量上。\\r\n<br/>\\r\n“player_score”（玩家分数）变量会在每次小狗的馅饼碰到小猫时增加，在小猫的三明治碰到小狗时减少。\\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*注意：当你完成后，点击“运行”来玩玩。当小狗得到6分时，就可以进入下一关。*"
-      Course 4 Play Lab Vars 1_markdown_instruction: "这次你不需要写任何代码，点击“运行”来玩游戏吧！\\r\n\\r\n<br/>\\r\n在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。当你玩完以后，点击“完成”。"
+      Course 4 Play Lab Vars 1_markdown_instruction: |-
+        这次你不需要写任何代码，点击“运行”来玩游戏吧！\r
+        \r
+        <br/>\r
+        在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。当你玩完以后，点击“完成”。
       Course 4 Play Lab Vars 2_markdown_instruction: 上次关卡的比赛不是很公平！改变“dog_speed”（小狗速度）变量来让你能比小猫收集到更多的旗帜。最先收集到10个旗帜的就算赢！
       Course 4 Play Lab Vars 3_markdown_instruction: "这是一种新的游戏!\\r\n\\r\n你不需要在这个关卡上改变任何东西. \\r\n\\r\n**玩法: ** 使用左右箭头来移动, 向上箭头来跳跃。看看你能否收集所有的旗子。"
       Course 4 Play Lab Vars 4_markdown_instruction: "现在，我们用一个叫做“高度”的变量来控制小狗能跳多高。修改“高度”变量，让小狗能跳足够高，得到所有旗帜。\\r\n"
-      Course 4 Play Lab Vars 6_markdown_instruction: "<h5><b>\\r\n在我们的游戏里，应该如何得分？\\r\n</b></h5> \\r\n<br/>\\r\n\\r\n1. 每次小狗用一块馅饼打到猫时，在`point`（得分）变量上加1。<br/>    <br/> \\r\n2.\n用`当演员2碰到任何东西时`事件来触发对分数的更新。可以通过`points = points + 1.`来增加变量。  <br/>   <br/>\n\\r\n3. 设置为得到10分时通过这关。\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**注意：**\n用右方向键来扔出馅饼！\\r\n</h4>"
+      Course 4 Play Lab Vars 6_markdown_instruction: |-
+        <h5><b>\r
+        在我们的游戏里，应该如何得分？\r
+        </b></h5> \r
+        <br/>\r
+        \r
+        1. 每次小狗用一块馅饼打到猫时，在`point`（得分）变量上加1。<br/>    <br/> \r
+        2.
+        用`当演员2碰到任何东西时`事件来触发对分数的更新。可以通过`points = points + 1.`来增加变量。  <br/>   <br/>
+        \r
+        3. 设置为得到10分时通过这关。\r
+        \r
+        <br/><br/>\r
+        <h4>\r
+        **注意：**
+        用右方向键来扔出馅饼！\r
+        </h4>
       Course 4 Play Lab Vars 7_markdown_instruction: "很好，让确保这个游戏不是太简单！\\r\n\\r\n任何时候，小狗（演员1）被小猫（演员2）扔出的三明治击中时，就丢失1分。\\r\n\\r\n让我们从10分开始，这样就不会太难了。让你的分数从10减到0来通过这一关。"
       Course 4 Play Lab Vars 9_markdown_instruction: "自由游戏时间！这是除了使用过的所有变量，还有一些别的变量。\\r\n\\r\n注意：现在工具箱里有很多模块需要组织在一起！我们将这些模块放到了合适的分类中。花一些时间来看看每种类型都有哪些模块吧。当你看完后，可以用重复、变量和事件做出一个故事或者游戏。\\r\n\\r\n*提示：往下滚动鼠标来查看工作区的所有命令。*"
       Course 4 Play Labs For Loops 1_markdown_instruction: 让小狗说出从1到100的所有数字。用一个计数循环和一个计数器模块来让小狗在每次循环时说出计数器变量。
@@ -10340,7 +10550,22 @@ zh-CN:
         width="250px"/>\r
         \r
         ** 变量超级挑战：** 你已经学会了制作像这样的图案的所有知识了！这关有点困难。你能坚持下去，直到找到解决方案吗？
-      Course 4 SCV 3_markdown_instruction: "**变量超级挑战：** 你已经学会了解决这个难题需要的所有知识了！这个游戏有点困难。你能坚持下去，直到找到解决方案吗？\\r\n\\r\n<hr/>\\r\n\\r\n现在是捉人游戏！捉住猫得两分。捉住企鹅得3分。得到正好10分就能赢了！\\r\n但是要小心，猫和企鹅能够互相捉，这样他们会将分数拿回去。\\r\n\\r\n<strong>\\r\n添加需要的模块来让游戏像描述的那样运行。\\r\n- 如何用方向键让小狗向各个方向移动？\\r\n- 如何在小狗抓到猫或企鹅时得分？\\r\n- 如何在猫和企鹅碰到的时候减分？\\r\n</strong>\\r\n\\r\n<hr/>"
+      Course 4 SCV 3_markdown_instruction: |-
+        **变量超级挑战：** 你已经学会了解决这个难题需要的所有知识了！这个游戏有点困难。你能坚持下去，直到找到解决方案吗？\r
+        \r
+        <hr/>\r
+        \r
+        现在是捉人游戏！捉住猫得两分。捉住企鹅得3分。得到正好10分就能赢了！\r
+        但是要小心，猫和企鹅能够互相捉，这样他们会将分数拿回去。\r
+        \r
+        <strong>\r
+        添加需要的模块来让游戏像描述的那样运行。\r
+        - 如何用方向键让小狗向各个方向移动？\r
+        - 如何在小狗抓到猫或企鹅时得分？\r
+        - 如何在猫和企鹅碰到的时候减分？\r
+        </strong>\r
+        \r
+        <hr/>
       Course 4 SCV 4_markdown_instruction: "**变量超级挑战：** 用最少的模块通过这个关卡。"
       Course 4 SCV 5_markdown_instruction: "**变量超级挑战：** 用最少的模块通过这个关卡。"
       Course 4 SCV 6_markdown_instruction: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n** 变量超级挑战: ** 你已经学会了制作像这样的图案的所有知识了！这关有点困难。你能坚持下去，直到找到解决方案吗？  "
@@ -11310,7 +11535,7 @@ zh-CN:
         \r
         ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\r
         
-      U3L07 - allSeaGrass_markdown_instruction: |+
+      U3L07 - allSeaGrass_markdown_instruction: |-
         # 添加海草\r
         <img src="https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42
         PM.png" style="width: 200px; float: right">\r
@@ -11320,7 +11545,7 @@ zh-CN:
         \r
         *
         **添加一个`计数循环`**到`drawAllSeagrass`里，用更新后的`drawSeagrass`函数，来画大约**50条海草**。
-      U3L07 - allSeaGrass_2018_markdown_instruction: |+
+      U3L07 - allSeaGrass_2018_markdown_instruction: |-
         # 添加海草\r
         <img src="https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42
         PM.png" style="width: 200px; float: right">\r

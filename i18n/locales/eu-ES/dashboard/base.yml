@@ -179,9 +179,15 @@ eu:
         playlab: 'Aplikazio bat sortu'
         artist: 'Marraztu zerbait'
         applab: 'Aplikazio bat sortu'
-      courses: "Mailak"
       project_gallery: "Proiektuak"
       educate_hoc: "Kode Ordua"
+    create_button:
+      create: 'Sortu'
+      applab: 'App laborategia'
+      artist: 'Artista'
+      playlab: 'Jolas Laborategia'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Irakasleen sarrera orria'
       district_dashboard: 'Hezkuntza distritua'

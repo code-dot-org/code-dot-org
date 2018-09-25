@@ -476,6 +476,8 @@ pt-BR:
       4-5 While Loops 7_instruction: "Uau, agora há três grandes montes de terra!\nVocê pode escrever um programa que remova cada um deles até que o solo fique nivelado?"
       4-5 While Loops 8_instruction: " Há um buraco realmente fundo e um monte de terra\nrealmente grande. Quantas pás cheias de terra são necessárias para\ntornar o solo plano?"
       4-5 While Loops Assessment 1_instruction: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
+      Alien Defender_instruction: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
+      Alien Defender_2018_instruction: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       AllTheThings Applab - Turtle move with button_instruction: "Arraste um botão para fora da tela e\ndefina seu texto como \"Vá em frente!\". Adicione um manipulador de eventos para o botão que\nfaz a tartaruga se mover para a frente. Execute o programa para ver se ele funciona. "
       App Lab test_instruction: teste
       Applab AllTheThings ResourcesTab AllResources_instruction: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
@@ -1140,11 +1142,19 @@ pt-BR:
       Farmer for TTS testing_instruction: "Uau, eu encontrei um buraco realmente fundo! Eu não\nsei quantas pás de terra são necessárias. Você pode escrever um programa que preencha-o\naté que o solo fique nivelado. Dica: dessa vez, tente usar o laço enquanto."
       Finalize Your Chaser Game v.1_instruction: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
       Finalize Your Chaser Game v.1_2018_instruction: "Introdução do comando setPosition!\nSubstitua o moveTo no manipulador de eventos de clique do botão para usar setPosition\npara mover o botão para uma posição aleatória quando ele for clicado."
+      Fish Tank 3-validated Ram_instruction: Mude o comportamento do peixe de modo que ele consiga nadar ao redor do tanque.
+      Fish Tank 3-validated_instruction: Mude o comportamento do peixe de modo que ele consiga nadar ao redor do tanque.
+      Fish Tank 3-validated_simple_instruction: Mude o comportamento do peixe de modo que ele consiga nadar ao redor do tanque.
+      Fish Tank 4-validated_instruction: Use o bloco `definir cor de fundo` para definir o plano de fundo azul.
+      Fish Tank 4-validated_simple_instruction: Use o bloco `definir cor de fundo` para definir o plano de fundo azul.
       Fish Tank 5-validated_simple_instruction: O peixe quer um amigo.   Adicione um novo sprite.
       Fish Tank 6-validated_instruction: Adicione um comportamento o novo amigo do peixe.
       Fish Tank 6-validated_simple_instruction: Adicione um comportamento o novo amigo do peixe.
       Food Fight!_instruction: "Adicionamos uma última função para\nvocê.\\r\n\\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número.\\r\n\\r\nPor\nexemplo: \"pontos_jogador\" > 6\\r\n\\r\nJogue e chegue até o nível 3\npara ir para o próximo desafio. "
       Function intro Ryan_instruction: Use a função 'construir ponte' duas vezes para criar um caminho até a tocha.
+      GLJr_Behavior_6_instruction: Vamos tentar mais alguns comportamentos - faça o cachorro correr para cima e o gato correr para a direita.
+      HOC 2018 Level_10_instruction: Vá para a entrada do Monumento do Oceano.
+      HOC 2018 Level_6_instruction: Navegue através do gelo para chegar ao templo.
       Infinity_catch_instruction: "Você pode fazer Elsa (\"personagem 2\") alcançar\nAnna usando as setas do teclado?"
       Infinity_finale_instruction: Crie o que quiser e compartilhe!
       Infinity_move_collide_instruction: "Hiro é o \"personagem 1\". Mova-o em direção a\nBaymax e reproduza um som quando eles se tocarem."
@@ -1393,6 +1403,7 @@ pt-BR:
       NEW Course 4 Artist Params 13_instruction: "Vamos editar a função \"desenhe um\npolígono\". Ela já tem um parâmetro \"lados\". Agora, vamos adicionar um parâmetro\n\"comprimento\". \\r \nO perímetro de cada forma tem 200 pixels de comprimento. Você se lembra\nda equação para fazer as formas ficarem do mesmo tamanho quando elas têm um número diferente\nde lados?"
       NEW Course 4 Artist Params 14_instruction: "Edite \"desenhe uma borda espiral\" para\nusar os parâmetros \"comprimento\" e \"lados\" e então recrie essas formas."
       NEW Course 4 Artist Params 15_instruction: "Atividade livre: aqui estão as funções\nque você escreveu e mais algumas para você usar. Desenhe algo incrível!\nBrinque com a largura da caneta para ver como seus desenhos ficam diferentes!"
+      NEW Course 4 Artist Params 2_instruction: Crie uma função `desenhar um triângulo` desde o início, para fazer um triângulo com lados de 50 pixels.
       NEW Course 4 Artist Params 3_instruction: "Vamos usar a função para desenhar\n5 triângulos em sequência. Cada triângulo está separado por 30 pixels.\\r\n"
       NEW Course 4 Artist Params 4_instruction: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
       NEW Course 4 Artist Params 5_instruction: "Preencha \"???\" no bloco\ndo parâmetro \"comprimento\". O pentágono tem lados de 100 pixels. "
@@ -1644,11 +1655,23 @@ pt-BR:
       Valentine_playlab_01_instruction: 'Programa Kiki (Ator 1) para mover ao esquerda e direto quando as botoes esquerda e direto sao pressionado. Quado Kiki esta clicado, ela precisa lancar coracoes na direcao das amigas dela. '
       Virtual Pet 1 Predict_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Virtual Pet 1 Predict_simple_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
+      Virtual Pet 4_instruction: Adicione um comportamento ao seu sabonete para torná-lo arrastável e, em seguida, arraste-o para limpar a girafa!
+      Virtual Pet 4_simple_instruction: Adicione um comportamento ao seu sabonete para torná-lo arrastável e, em seguida, arraste-o para limpar a girafa!
       XML Scratchpad_instruction: Use este nível de teste para pegar xml para testes de unidade
       aE7_instruction: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés da direita, o que acontece? \\r\n\\r\nVocê pode repetir tudo\nisso para desenhar essa onda?"
       aE8_instruction: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \\r\n\\r\nSe repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
+      artistFunctionsVideo1_instruction: Siga as instruções para fazer sua própria função.
       artistLoopsK1_instruction: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       beeDebugVideo1_instruction: Use um laço "repita" para coletar todo o néctar.
+      behavior bash mary_instruction: Clone este nível e faça seus próprios blocos!
+      behaviors clone me 2_instruction: Clone este nível e faça seus próprios blocos!
+      behaviors clone me Ram_instruction: Clone este nível e faça seus próprios blocos!
+      behaviors clone me joshl_instruction: Clone este nível e faça seus próprios blocos!
+      behaviors clone me nk_instruction: Clone este nível e faça seus próprios blocos!
+      behaviors clone me tanya_instruction: Clone este nível e faça seus próprios blocos!
+      behaviors clone me_instruction: Clone este nível e faça seus próprios blocos!
+      behaviors_caley_instruction: Clone este nível e faça seus próprios blocos!
+      ben's first level_instruction: Clone este nível e faça seus próprios blocos!
       birdsDebugVideo1_instruction: "Trace o caminho e leve-me até o porco bobalhão. Desvie\ndo TNT, ou penas vão voar!"
       bounce_1_instruction: Conecte um bloco ao bloco "quando clicar na seta para a esquerda" e clique em "Executar". Mova a raquete usando a seta para a esquerda para alcançar o objetivo final.
       bounce_10_instruction: Agora há um alvo na parte de cima. Conecte os blocos "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um jogo. Veja quantos pontos você consegue marcar antes que seu oponente marque duas vezes.
@@ -1686,8 +1709,13 @@ pt-BR:
       bounce_7_2018_instruction: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja o alvo.
       bounce_7_basketball_instruction: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja a bandeira.
       bounce_7_sports_instruction: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja a bandeira.
+      brendan behaviors clone_instruction: Clone este nível e faça seus próprios blocos!
+      clone me mary_instruction: Clone este nível e faça seus próprios blocos!
+      collector example_instruction: Ponha estes blocos em ordem para coletar todo o ouro e resolver o desafio.
+      collectorDebugVideo2_instruction: Ponha estes blocos em ordem para coletar todo o ouro e resolver o desafio.
       collectorSkinVideo1_instruction: Colete todas as quatro pilhas para passar esse nível.
       collectorSkinVideo2_instruction: Colete uma pilha de ouro para passar deste nível.
+      conditionals_forvideo_playlab_instruction: Marque quantos pontos você conseguir!
       course1_artist_loops_challenge3_instruction: '"Você pode me ajudar a fazer duas casas de pássaros?"'
       course1_artist_loops_challenge4_instruction: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
       course1_collector_loops_challenge1_instruction: '"Você pode me ajudar encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
@@ -1695,6 +1723,10 @@ pt-BR:
       course1_collector_loops_challenge3_instruction: 'Desta vez você só pode usar um bloco de cada seta. Pegue todo o tesouro! '
       course1_collector_loops_challenge4_instruction: Vamos pegar o tesouro! Ajuda-me em cada linha, em seguida, voltar para iniciar a próxima linha. Você consegue achar um padrão?
       course1_maze_debugging_challenge2_instruction: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
+      course2_artist_nestedLoops_challenge1_instruction: Você consegue descobrir como fazer uma imagem como esta?
+      course2_artist_nestedLoops_challenge2_instruction: Você consegue descobrir como fazer uma imagem como esta?
+      course2_bee_conditionals_challenge1_instruction: Colete todo o néctar ou faça todo o mel.
+      course2_bee_conditionals_challenge2_instruction: Colete todo o néctar ou faça todo o mel.
       course2_collector_loops_challenge2_instruction: Pegar todos os tesouros!
       course2_collector_prog_challenge1_instruction: Preste atenção! Você consegue coletar todas as *10* peças do tesouro?
       course2_collector_prog_challenge2_instruction: Há 20 peças de tesouro para serem encontradas. Colete pelo menos metade para finalizar este desafio!
@@ -1714,6 +1746,8 @@ pt-BR:
       course2_playlab_stage17_6_instruction: "Agora escreva um programa que faça Valfredo\nse mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!"
       course2_playlab_stage17_8_instruction: "Você pode fazer Valfredo (personagem 1) dizer\n\"Ai!\" e reproduzir um som de \"batida\" se ele encontrar Chomp? \\r\n\\r\nQuando\nterminar, jogue para que isso aconteça."
       course2_playlab_stage17_9_instruction: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com Otávia (personagem 3)? \\r\nJogue e mova Valfredo\ncom as setas do teclado até marcar ponto!"
+      course3_collector_debugging_challenge2_instruction: Você é um especialista em laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
+      course3_farmer_condLoops_challenge2_instruction: Colete tudo para completar o nível.
       course3_playlab_stage16_1_instruction: Você consegue fazer esse cachorro dizer "Olá, mundo"?
       course3_playlab_stage16_2_instruction: "Você pode fazer o cachorro dizer alguma coisa e,\ndepois, fazer a gata dizer alguma coisa?"
       course3_playlab_stage16_3_instruction: "Você consegue escrever um programa para fazer este\ncachorro se mover até o gato?"
@@ -2016,6 +2050,10 @@ pt-BR:
       courseC_PlayLab_events6_2018_instruction: Agora escreva um programa que faça Valfredo o Penguin se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!
       courseC_PlayLab_events7_instruction: O bloco `repetir para sempre` permite você executar um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro (personagem  2) 400 pixels para cima e para baixo, para sempre.
       courseC_PlayLab_events7_2018_instruction: O bloco `repetir para sempre` permite você executar um código várias vezes para sempre. Use este bloco para mover Chomp o dinossauro (personagem  2) 400 pixels para cima e para baixo, para sempre.
+      courseC_PlayLab_eventsFP_instruction: Crie sua própria estória. Quando terminar, clique em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias nas dicas.
+      courseC_PlayLab_eventsFP_2018_instruction: Crie sua própria estória. Quando terminar, clique em "Concluir" para compartilhar com seus amigos. Veja ideias para estórias nas dicas.
+      courseC_artist_loops3a_instruction: Agora adicione um morcego!
+      courseC_artist_loops3a_2018_instruction: Agora adicione um morcego!
       courseC_artist_loops5a_instruction: Experimente novos adesivos!
       courseC_artist_loops5a_2018_instruction: Experimente novos adesivos!
       courseC_artist_loops5b_instruction: Tente adicionar linhas!
@@ -2028,6 +2066,12 @@ pt-BR:
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
       courseC_artist_prog5_2018_instruction: |-
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
+      courseC_artist_prog6_instruction: Desenhe este diamante com lados de 200 pixels.
+      courseC_artist_prog6_2018_instruction: Desenhe este diamante com lados de 200 pixels.
+      courseC_artist_prog_challenge1_instruction: 'Desenhe quartos para cada um dos animais. '
+      courseC_artist_prog_challenge1_2018_instruction: 'Desenhe quartos para cada um dos animais. '
+      courseC_artist_prog_challenge2a_instruction: '*"Ajuda-me a pintar as linhas amarelas nesta estrada!"*'
+      courseC_artist_prog_challenge2a_2018_instruction: '*"Ajuda-me a pintar as linhas amarelas nesta estrada!"*'
       courseC_collector_loops_challenge2_instruction: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_loops_challenge2_2018_instruction: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_prog2_instruction: Mova Laurel até o tesouro, então use `coletar` para pegar.
@@ -2051,9 +2095,38 @@ pt-BR:
       courseC_collector_prog_challenge2_instruction: Colete pelo menos **10** peças do tesouro para finalizar este desafio!
       courseC_collector_prog_challenge2_2018_instruction: Colete pelo menos **10** peças do tesouro para finalizar este desafio!
       courseC_flappy_embed_events_instruction: Aquie está um exemplo de um jogo que você está prestes a criar! Jogue-o uma ou duas vezes para ter uma ideia do que você está prestes a fazer.
+      courseC_flappy_events10_instruction: 'Crie seu próprio jogo Flappy Bird! '
+      courseC_flappy_events10_2018_instruction: 'Crie seu próprio jogo Flappy Bird! '
+      courseC_flappy_events6_instruction: Veja se você ainda pode marcar um ponto depois de fazer o passarinho bater as asas cada vez que você clica.
+      courseC_flappy_events6_2018_instruction: Veja se você ainda pode marcar um ponto depois de fazer o passarinho bater as asas cada vez que você clica.
+      courseC_harvester_loops1_instruction: Use laços para pegar todas as abóboras.
+      courseC_harvester_loops10_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops10_2018_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_2018_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops1_2018_instruction: Use laços para pegar todas as abóboras.
       courseC_harvester_loops3_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_instruction: Colete todas as abóboras.
+      courseC_harvester_loops4_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops4_2018_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops5_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops5_2018_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_2018_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_2018_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops8_instruction: "**Desafio:** coletar todo o milho e as abóboras."
+      courseC_harvester_loops8_2018_instruction: "**Desafio:** coletar todo o milho e as abóboras."
+      courseC_harvester_loops9_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops9_2018_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops_forVid_instruction: Recolha todo o milho, a alface e todos as abóboras.
+      courseC_maze_debugging1_instruction: Corrija o código para levar Scrat até a noz.
       courseC_maze_debugging10_instruction: "Depure esse nível reorganizando e trocando\nblocos para me levar até o porco!"
+      courseC_maze_debugging1_2018_instruction: Corrija o código para levar Scrat até a noz.
+      courseC_maze_debugging3_instruction: Remova os blocos para levar Scrat até a noz!
+      courseC_maze_debugging3_2018_instruction: Remova os blocos para levar Scrat até a noz!
+      courseC_maze_debugging_challenge1_instruction: Ajude Scrat a decidir que lado ir para chegar até a noz.
+      courseC_maze_debugging_challenge1_2018_instruction: Ajude Scrat a decidir que lado ir para chegar até a noz.
       courseC_maze_loops1_instruction: Você consegue levar o pássaro até o porco?
       courseC_maze_loops10_instruction: Você está indo bem! Continuem assim!
       courseC_maze_loops11_instruction: Você está quase lá! Desta vez, escolha o caminho que você preferir!
@@ -2098,12 +2171,20 @@ pt-BR:
       courseD_artist_binary7_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_artist_binary7_2018_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_artist_binaryFP8_instruction: "**Atividade livre**: desenhe o que você quiser com números binários! "
+      courseD_artist_nestedLoopsPre1_instruction: Crie um triângulo para começar esta etapa.
+      courseD_artist_nestedLoops_challenge1_instruction: Você consegue descobrir como fazer uma imagem como esta?
+      courseD_artist_nestedLoops_challenge1_2018_instruction: Você consegue descobrir como fazer uma imagem como esta?
       courseD_artist_nestedLoops_challenge2_instruction: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2018_instruction: Conserte o código para fazer esta pintura!
       courseD_artist_ramp12_instruction: Use o que você aprendeu para desenhar este triângulo dentro de um quadrado.
       courseD_autorun_binary4_2019_instruction: "Você consegue desenhar este padrão repetindo\napenas três dígitos binários? (0 e 1)?"
       courseD_autorun_binary6_2019_instruction: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
       courseD_autorun_binary7_2019_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
+      courseD_bee_conditionals9_instruction: Colete todo o néctar ou faça todo o mel.
+      courseD_bee_conditionals9_2018_instruction: Colete todo o néctar ou faça todo o mel.
+      courseD_bee_conditionals_challenge1_instruction: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals_challenge1_2018_instruction: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals_challenge3_instruction: Colete todo o néctar ou faça todo o mel.
       courseD_bee_debugging3_instruction: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."
       courseD_bee_nestedLoops3_instruction: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseD_bee_nestedLoops5_instruction: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
@@ -2123,12 +2204,19 @@ pt-BR:
       courseD_bounce_events5_instruction: Vamos lançar uma bola em direção à raquete. Conecte um bloco ao bloco "quando a bola bater na raquete" para garantir que a bola atinja o alvo.
       courseD_bounce_events6_instruction: Agora o alvo está no topo. Você precisa conectar blocos em ambos os blocos "quando a bola bater" para resolver este desafio.
       courseD_bounce_events7_instruction: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja o alvo.
+      courseD_collector_debugging_challenge2_instruction: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
+      courseD_collector_debugging_challenge2_2018_instruction: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
+      courseD_collector_nested_loops_challenge2a_instruction: Ajude Laurel a coletar pelo menos duas pilhas de tesouro.
       courseD_collector_ramp10_instruction: Ajude Laurel a coletar todo o tesouro.
       courseD_collector_ramp8_instruction: Ajude Laurel a coletar todo o tesouro.
       courseD_collector_ramp9_instruction: Ajude Laurel a coletar todo o tesouro.
+      courseD_collector_until_challenge1_instruction: Você é um especialista em laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_debugging_3_instruction: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."
       courseD_farmer_condLoops2_instruction: Ajude a colheitadeira coletar o milho e o alface do campo.
       courseD_farmer_condLoops2_2018_instruction: Ajude a colheitadeira coletar o milho e o alface do campo.
+      courseD_farmer_condLoops_challenge2_instruction: Colete tudo para completar o nível.
+      courseD_farmer_condLoops_challenge2_2018_instruction: Colete tudo para completar o nível.
+      courseD_farmer_condLoops_challenge2_clone_instruction: Colete tudo para completar o nível.
       courseD_iceage_loops1_instruction: Ajude Scrat a atravessar o gelo e chegar na noz!
       courseD_iceage_loops10_instruction: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12_instruction: Pegue a noz da maneira que você conseguir!
@@ -2165,6 +2253,8 @@ pt-BR:
       courseE_artist_ramp12_instruction: Use o que você aprendeu para desenhar este triângulo dentro de um quadrado.
       courseE_bee_concept1_instruction: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseE_bee_concept1_2018_instruction: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
+      courseE_bee_concept5_instruction: Ajude a abelha a coletar todo o nectar das flores.
+      courseE_bee_concept5_2018_instruction: Ajude a abelha a coletar todo o nectar das flores.
       courseE_bee_functions1_instruction: Colete todo o néctar de cada flor.
       courseE_bee_functions1_2018_instruction: Colete todo o néctar de cada flor.
       courseE_bee_functions3_instruction: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
@@ -2177,6 +2267,9 @@ pt-BR:
       courseE_farmer_concept2_instruction: Colete todas as abóboras.
       courseE_farmer_concept2_2018_instruction: Colete todas as abóboras.
       courseE_farmer_concept4_instruction: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
+      courseE_farmer_functions10b_instruction: Use sua nova função duas vezes para resolver este desafio.
+      courseE_farmer_functions10b_2018_instruction: Use sua nova função duas vezes para resolver este desafio.
+      courseE_farmer_functions13_2018_instruction: Solucione este desafio com 23 blocos ou menos.
       courseE_farmer_functions2b_instruction: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_functions2b_2018_instruction: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_ramp11a_instruction: Enquanto houver uma pilha, remova a areia.
@@ -2216,6 +2309,8 @@ pt-BR:
       courseF_bee_for_challenge3_instruction: "Resolva este desafio usando o menor número\npossível de blocos."
       courseF_bee_functions4_instruction: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \\r\n\\r\nUse\na função para coletar todo o néctar."
       courseF_bee_functions4_2018_instruction: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \\r\n\\r\nUse\na função para coletar todo o néctar."
+      courseF_bee_fwp5_instruction: Use esta função para coletar todo o nectar.
+      courseF_bee_fwp5_2018_instruction: Use esta função para coletar todo o nectar.
       courseF_bee_variables_5_2018_instruction: Crie seu próprio código para resolver este enigma
       courseF_bee_variables_7_2018_instruction: Este enigma é um pouco diferente. O que você precisa para resolvê-lo?
       courseF_bee_variables_8_2018_instruction: Quantos néctares a abelha irá coletar desta flor?
@@ -2306,6 +2401,8 @@ pt-BR:
         consegue fazê-lo parecer com um C de novo?
       grade2_collector_10_instruction: Você está quase acabando! Colete o máximo de peças do tesouro que você conseguir para terminar a fase!
       grade2_collector_10_2018_instruction: Você está quase acabando! Colete o máximo de peças do tesouro que você conseguir para terminar a fase!
+      grade2_collector_2_instruction: Mova Laurel até o ouro, então use `coletar` para pegar.
+      grade2_collector_3_instruction: Ponha estes blocos em ordem para coletar todo o ouro e resolver o desafio.
       grade2_collector_5_instruction: Estes blocos estão na ordem errada. Você pode consertá-los?
       grade2_collector_6_instruction: Reordene os blocos para coletar todo o tesouro.
       grade2_collector_9_instruction: '*"Vamos pegar todas as moedas!"*'
@@ -2665,6 +2762,7 @@ pt-BR:
       level 'grade3_Loops_8_instruction: "Colete todo o néctar e produza todo o mel\nusando o menor número possível de blocos."
       level 'grade3_Loops_9_instruction: "Colete o néctar de cada flor e produza mel\nem cada colmeia usando o menor número possível de blocos."
       level grade3_Loops_2_instruction: Desta vez, use um laço para juntar todo o néctar.
+      marina_gameLab_play_instruction: Clone este nível e faça seus próprios blocos!
       ramp_artist_loops9_instruction: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018_instruction: Resolva este enigma desenhando um quadrado.
       scrat 16 (copy 1)_instruction: "Bolota! Bolota! Bolota! Use um bloco \"se\" para me levar até lá\ncom o menor número de blocos."
