@@ -119,6 +119,7 @@ FROM sections_geos
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          wsz.zip as zip,
          coalesce(sa.state_abbreviation, wsz.state) as state,
+         wsz.processed_location as processed_location,
          --u.name as facilitator_name,
          FIRST_VALUE(u.name) OVER (PARTITION BY u.studio_person_id  ORDER BY 1 DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as facilitator_name,
          u.studio_person_id as studio_person_id_facilitator,
@@ -148,7 +149,7 @@ FROM sections_geos
       ON  rpm.regional_partner_id = rp2.id  
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
-  group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, u.name, 19, 20
+  group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, u.name, 20, 21
   
 UNION ALL 
 
@@ -170,6 +171,7 @@ UNION ALL
          rpm.regional_partner_id AS regional_partner_id,
          ssz.zip as zip,
          coalesce(sa.state_abbreviation, ssz.state) as state,
+         'based on facilitator' as processed_location,
         -- coalesce(u.name, forms.name) as facilitator_name,
          coalesce(FIRST_VALUE(u.name) OVER (PARTITION BY u.studio_person_id  ORDER BY u.id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ), forms.name) as facilitator_name,
          u.studio_person_id as studio_person_id_facilitator,
