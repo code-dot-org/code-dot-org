@@ -46,10 +46,11 @@
       - else
         %i.fa.fa-user
       .user_options{style: 'display: none'}
+        - short_name = ERB::Util.h(current_user.short_name)
+        .display_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}display_name", username: short_name)
         - if current_user.can_pair?
           - if session_pairings.present?
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-              %i.fa.fa-user-plus
               = I18n.t("#{loc_prefix}pair_programming")
               .pairing_summary
                 #{I18n.t("#{loc_prefix}driver")}:
@@ -60,7 +61,6 @@
                   = h(User.find(id).short_name)
           - else
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-              %i.fa.fa-user-plus
               = I18n.t("#{loc_prefix}pair_programming")
         %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
         %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
