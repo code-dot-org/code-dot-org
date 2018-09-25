@@ -4,7 +4,7 @@ require 'cdo/shared_cache'
 # registration process.
 #
 # This concern assumes it will be included on User.
-module PartialRegistrationHelper
+module PartialRegistration
   extend ActiveSupport::Concern
 
   USER_ATTRIBUTES_SESSION_KEY = 'devise.user_attributes'
