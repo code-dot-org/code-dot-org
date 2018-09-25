@@ -872,7 +872,7 @@ module Pd::Application
 
       application = build :pd_teacher1920_application, form_data_hash: application_hash
       refute application.valid?
-      assert_equal ['csd_which_grades'], application.errors.messages[:form_data]
+      assert_equal ['csdWhichGrades'], application.errors.messages[:form_data]
     end
 
     test 'test csp dynamically required fields' do
@@ -883,7 +883,7 @@ module Pd::Application
 
       application = build :pd_teacher1920_application, form_data_hash: application_hash
       refute application.valid?
-      assert_equal %w(csp_which_grades csp_how_offer), application.errors.messages[:form_data]
+      assert_equal %w(cspWhichGrades cspHowOffer), application.errors.messages[:form_data]
     end
 
     private
