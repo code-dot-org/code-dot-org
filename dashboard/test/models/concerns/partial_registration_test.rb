@@ -61,6 +61,28 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal 'Different fake name', user.name
   end
 
+  test 'new_from_partial_registration loads oauth_token from cache' do
+    email = 'oauth@example.com'
+    CDO.shared_cache.write("oauth_token-#{email}", 'fake-oauth-token')
+    user = User.new_from_partial_registration fake_session(
+      user_type: 'student',
+      name: 'Fake Name',
+      email: email
+    )
+    assert_equal 'fake-oauth-token', user.oauth_token
+  end
+
+  test 'new_from_partial_registration loads oauth_refresh_token from cache' do
+    email = 'oauth@example.com'
+    CDO.shared_cache.write("oauth_refresh_token-#{email}", 'fake-refresh-token')
+    user = User.new_from_partial_registration fake_session(
+      user_type: 'student',
+      name: 'Fake Name',
+      email: email
+    )
+    assert_equal 'fake-refresh-token', user.oauth_refresh_token
+  end
+
   private
 
   def fake_empty_session
