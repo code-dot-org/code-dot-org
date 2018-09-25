@@ -266,9 +266,7 @@ he:
         applab: 'צור אפליקציה במעבדת המשחקים'
         gamelab: 'צור פרויקט מעבדת משחקים'
         weblab: 'צור פרויקט מעבדת אינטרנט (ביטה)'
-      home: "בית"
       my_dashboard: "לוח הבקרה שלי"
-      courses: "מסלולים"
       course_catalog: "קטלוג קורסים"
       project_gallery: "פרויקטים"
       sections: "קבוצות"
@@ -303,6 +301,14 @@ he:
       help_us: "עזור לנו"
       teach: "למד"
       about: "אודות"
+    create_button:
+      create: 'צור'
+      applab: 'מעבדת היישומים'
+      artist: 'אמן'
+      gamelab: 'מעבדת המשחקים'
+      playlab: 'מעבדת הצעצועים'
+      minecraft: 'מיינקראפט'
+      flappy: 'פלאפי'
     user:
       classroom: 'דף הבית של המורה'
       district_dashboard: 'לוח ניהול מחוזי'

@@ -1,4 +1,3 @@
----
 fr:
   data:
     blocks:
@@ -6,215 +5,51 @@ fr:
         options:
           UNIT:
             '"seconds"': des secondes
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Suivant
-            '"prev"': Précédent
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: tout
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Suivant
-            '"prev"': Précédent
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: tout
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Suivant
             '"prev"': Précédent
+            MOVES.Rest: Aucun
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Suivant
             '"prev"': Précédent
+            MOVES.Rest: Aucun
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Suivant
-            '"prev"': Précédent
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': taille
-            '"x"': position x
-            '"y"': position y
+            '"height"': hauteur
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: tout
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Suivant
             '"prev"': Précédent
+            MOVES.Rest: Aucun
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Suivant
-            '"prev"': Précédent
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Suivant
             '"prev"': Précédent
+            MOVES.Rest: Aucun
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Suivant
-            '"prev"': Précédent
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Suivant
-            '"prev"': Précédent
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Suivant
-            '"prev"': Précédent
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -223,23 +58,37 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
-            '"x"': position x
-            '"y"': position y
+            '"height"': hauteur
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Aucun
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vers la gauche
+            "{x: 300, y: 200}": vers la droite
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: tout
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': taille
-            '"x"': position x
-            '"y"': position y
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': vers la droite
-            '"left"': vers la gauche
+          LOCATION:
+            "{x: 100, y: 200}": vers la gauche
+            "{x: 300, y: 200}": vers la droite
       Dancelab_randomColor:
         text: couleur aléatoire
       Dancelab_setBackgroundEffect:
@@ -262,30 +111,21 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
-            '"x"': position x
-            '"y"': position y
+            '"height"': hauteur
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: tout
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': taille
-            '"x"': position x
-            '"y"': position y
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': taille
-            '"x"': position x
-            '"y"': position y
+            '"height"': hauteur
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': taille
-            '"x"': position x
-            '"y"': position y
+            '"height"': hauteur
       Dancelab_whenKey:
         options:
           KEY:
@@ -311,8 +151,8 @@ fr:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': vrai
-            'false': faux
+            'true': 'vrai'
+            'false': 'faux'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -399,14 +239,52 @@ fr:
             '"scale"': taille
             '"x"': position x
             '"y"': position y
+      Mikelab_randomColor:
+        text: couleur aléatoire
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ville
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': taille
             '"x"': position x
             '"y"': position y
-      Vanilla_randomColor:
-        text: couleur aléatoire
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': vers la droite
+            '"left"': vers la gauche
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': flèche « vers le haut »
+            '"down"': 'flèche «&#160;vers le bas »'
+            '"left"': flèche « vers la gauche »
+            '"right"': flèche « vers la droite »
+            '"w"': O
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': flèche « vers le haut »
+            '"down"': 'flèche «&#160;vers le bas »'
+            '"left"': flèche « vers la gauche »
+            '"right"': flèche « vers la droite »
+            '"w"': O
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': flèche « vers le haut »
+            '"down"': 'flèche «&#160;vers le bas »'
+            '"left"': flèche « vers la gauche »
+            '"right"': flèche « vers la droite »
       craft_ifPath:
         options:
           DIR:

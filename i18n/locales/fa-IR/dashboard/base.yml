@@ -201,9 +201,16 @@ fa:
         playlab: 'ایجاد یک برنامه'
         artist: 'چیزی بکش'
         applab: 'ایجاد یک برنامه'
-      courses: "مراحل"
       project_gallery: "پروژه ها"
       educate_hoc: "ساعت کد نویسی"
+    create_button:
+      create: 'ایجاد'
+      applab: 'آزمایشگاه نرم افزار'
+      artist: 'هنرمند'
+      gamelab: 'کارگاه بازی سازی'
+      playlab: 'آزمایشگاه بازی'
+      minecraft: 'ماینکرفت'
+      flappy: 'فلاپی'
     user:
       classroom: 'صفحه اصلی معلم'
       district_dashboard: 'محدوده ی داشبورد'

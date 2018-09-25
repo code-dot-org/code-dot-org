@@ -1,4 +1,3 @@
----
 uk:
   data:
     blocks:
@@ -6,59 +5,11 @@ uk:
         options:
           UNIT:
             '"seconds"': секунди
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Далі
-            '"prev"': Назад
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: усі
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Далі
-            '"prev"': Назад
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: усі
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Далі
             '"prev"': Назад
           DIR:
@@ -67,154 +18,34 @@ uk:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Далі
             '"prev"': Назад
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Далі
-            '"prev"': Назад
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
+            '"height"': висота
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: усі
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Далі
             '"prev"': Назад
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Далі
-            '"prev"': Назад
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Далі
             '"prev"': Назад
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Далі
-            '"prev"': Назад
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Далі
-            '"prev"': Назад
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Далі
-            '"prev"': Назад
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -223,23 +54,22 @@ uk:
         options:
           PROPERTY:
             '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
+            '"height"': висота
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": випадковий
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: усі
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': праворуч
-            '"left"': ліворуч
+          LOCATION:
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
       Dancelab_randomColor:
         text: випадковий колір
       Dancelab_setDanceSpeed:
@@ -254,30 +84,21 @@ uk:
         options:
           PROPERTY:
             '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
+            '"height"': висота
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: усі
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
+            '"height"': висота
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': розмір
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
+            '"height"': висота
       Dancelab_whenKey:
         options:
           KEY:
@@ -303,8 +124,8 @@ uk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': Істина
-            'false': Хибність
+            'true': 'Істина'
+            'false': 'Хибність'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -391,14 +212,48 @@ uk:
             '"scale"': розмір
             '"x"': позиція по осі x
             '"y"': позиція по осі y
+      Mikelab_randomColor:
+        text: випадковий колір
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': розмір
             '"x"': позиція по осі x
             '"y"': позиція по осі y
-      Vanilla_randomColor:
-        text: випадковий колір
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': праворуч
+            '"left"': ліворуч
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': стрілка вгору
+            '"down"': стрілка вниз
+            '"left"': стрілка ліворуч
+            '"right"': стрілка праворуч
+            '"w"': Зх
+            '"s"': Пд
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': стрілка вгору
+            '"down"': стрілка вниз
+            '"left"': стрілка ліворуч
+            '"right"': стрілка праворуч
+            '"w"': Зх
+            '"s"': Пд
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': стрілка вгору
+            '"down"': стрілка вниз
+            '"left"': стрілка ліворуч
+            '"right"': стрілка праворуч
       craft_ifPath:
         options:
           DIR:
