@@ -21,7 +21,7 @@ const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
 const PD_RESOURCES_URL = 'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
-const INTERNATIONAL = 'International';
+const INTERNATIONAL = 'Other country';
 const US = 'United States';
 
 export default class Section1AboutYou extends LabeledFormComponent {

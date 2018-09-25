@@ -271,12 +271,6 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-
-    if (data.regionalPartnerGroup !== 1) {
-      changes.understandFee = undefined;
-      changes.payFee = undefined;
-    }
-
     if (data.payFee !== TextFields.noPayFee) {
       changes.considerForFunding = undefined;
     }
