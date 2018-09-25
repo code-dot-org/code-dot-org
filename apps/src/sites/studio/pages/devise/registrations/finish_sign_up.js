@@ -15,12 +15,22 @@ const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FI
 const scriptData = getScriptData('signup');
 const {usIp} = scriptData;
 
-// Auto-fill country in SchoolInfoInputs if we detect a US IP address.
-let schoolData = {country: usIp ? 'United States' : ''};
+// Auto-fill country and countryCode if we detect a US IP address.
+let schoolData = {
+  country: usIp ? 'United States' : '',
+  countryCode: usIp ? 'US' : '',
+};
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById("school-info-inputs");
   renderSchoolInfo();
+
+  $(".finish-signup").submit(function () {
+    // The country set in our form is the long-form string name of the country.
+    // We want it to be the 2-letter country code, so we change the value on form submission.
+    const countryInputEl = $('input[name="user[school_info_attributes][country]"]');
+    countryInputEl.val(schoolData.countryCode);
+  });
 
   $("#print-terms").click(function () {
     $("#print-frame")[0].contentWindow.print();
@@ -89,7 +99,10 @@ $(document).ready(() => {
   }
 
   function onCountryChange(_, event) {
-    schoolData.country = event ? event.value : '';
+    if (event) {
+      schoolData.country = event.value;
+      schoolData.countryCode = event.label;
+    }
     renderSchoolInfo();
   }
 
