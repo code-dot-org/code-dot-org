@@ -48,6 +48,7 @@
     "custom_helper_library": "function spriteCostume(costume) {\r\n  \r\n  return costume;\r\n}",
     "custom_blocks": "[]\n",
     "include_shared_functions": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

@@ -37,10 +37,8 @@
     "markdown_instructions": "This song needs some flash! Use the `set background effect` block to make the stage come alive.",
     "parent_level_id": 14503,
     "validation_code": "if (World.frameCount == 1) validationProps.status = 3;\r\nif(getTime(\"measures\") > 10){\r\n  if(World.bg_effect != bg_effects.none){\r\n    validationProps.status = 0;\r\n  }\r\n\tlevelSuccess(validationProps.status);\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "Dancelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

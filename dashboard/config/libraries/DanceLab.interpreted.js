@@ -19,7 +19,7 @@ if (LOW_BAND) {
   var img_base = "https://curriculum.code.org/images/sprites/spritesheet_exsm/";
   var SIZE = 200;
 } else {
-  var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "POO", "ROBOT", "SHARK", "UNICORN"];
+  var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
   var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
   var SIZE = 300;
 }
@@ -531,6 +531,54 @@ function doMoveEachLR(group, move, dir) {
 	group.forEach(function(sprite) { doMoveLR(sprite, move, dir);});
 }
 
+function layoutSprites(group, format) {
+    if (typeof(group) == "string") {
+      if (!sprites_by_type.hasOwnProperty(group)) {
+        console.log("There is no group of " + group);
+        return;
+      }
+      group = sprites_by_type[group];
+      if (!group) return;
+    }
+    var count = group.length;
+    var sprite, i, j;
+    if (format == "grid") {
+      var cols = Math.ceil(Math.sqrt(count));
+      var rows = Math.ceil(count / cols);
+      var current = 0;
+      for (i=0; i<rows; i++) {
+        if (count - current >= cols) {
+          for (j=0; j<cols; j++) {
+            sprite = group[current];
+            sprite.x = (j+1) * (400 / (cols + 1));
+            sprite.y = (i+1) * (400 / (rows + 1));
+            current++;
+          }
+        } else {
+          var remainder = count - current;
+          for (j=0; j<remainder; j++) {
+            sprite = group[current];
+            sprite.x = (j+1) * (400 / (remainder + 1));
+            sprite.y = (i+1) * (400 / (rows + 1));
+            current++;
+          }
+        }
+      }
+    } else if (format == "row") {
+      for (i=0; i<count; i++) {
+        sprite = group[i];
+        sprite.x = (i+1) * (400 / (count + 1));
+        sprite.y = 200;
+      }
+    } else {
+      for (i=0; i<count; i++) {
+        sprite = group[i];
+        sprite.x = 200;
+        sprite.y = (i+1) * (400 / (count + 1));
+      }
+    }
+}
+
 // Properties
 
 function setProp(sprite, property, val) {
@@ -679,6 +727,29 @@ function Behavior(func, extraArgs) {
   this.extraArgs = extraArgs;
 }
 
+function addBehavior(sprite, behavior) {
+  if (!spriteExists(sprite) || behavior === undefined) return;
+  
+  behavior = normalizeBehavior(behavior);
+
+  if (findBehavior(sprite, behavior) !== -1) {
+    return;
+  }
+  sprite.behaviors.push(behavior);
+}
+
+function removeBehavior(sprite, behavior) {
+  if (!spriteExists(sprite) || behavior === undefined) return;
+  
+  behavior = normalizeBehavior(behavior);
+
+  var index = findBehavior(sprite, behavior);
+  if (index === -1) {
+    return;
+  }
+  sprite.behaviors.splice(index, 1);
+}
+
 function normalizeBehavior(behavior) {
   if (typeof behavior === 'function') {
     return new Behavior(behavior);
@@ -725,7 +796,7 @@ function startMapping(sprite, property, range) {
     } else if (property == "y") {
       energy = Math.round(map(energy, 0, 255, 350, 50));
     } else if (property == "scale") {
-      energy = map(energy, 0, 255, 0, 2);
+      energy = map(energy, 0, 255, 0.5, 1.5);
     } else if (property == "width" || property == "height") {
       energy = map(energy, 0, 255, 50, 150);
     } else if (property == "rotation" || property == "direction") {
@@ -747,15 +818,16 @@ function stopMapping(sprite, property, range) {
       energy = Math.round(map(energy, 0, 255, 50, 350));
     } else if (property == "y") {
       energy = Math.round(map(energy, 0, 255, 350, 50));
-    } else if (property == "size") {
-      energy = map(energy, 0, 255, 0, 2);
+    } else if (property == "scale") {
+      energy = map(energy, 0, 255, 0.5, 1.5);
+    } else if (property == "width" || property == "height") {
+      energy = map(energy, 0, 255, 50, 159);
     } else if (property == "rotation" || property == "direction") {
       energy = Math.round(map(energy, 0, 255, -180, 180));
     } else if (property == "tint") {
       energy = Math.round(map(energy, 0, 255, 0, 360));
       energy = "hsb(" + energy + ",100%,100%)";
     }
-    console.log(property + " " + energy);
     sprite[property] = energy;
   }, [property, range]);
   behavior.func.name = "mapping" + property + range;
@@ -763,6 +835,10 @@ function stopMapping(sprite, property, range) {
 }
 
 //Events
+
+function whenSetup(event) {
+  setupCallbacks.push(event);
+}
 
 function whenSetupSong(song, event) {
   song_meta = songs[song];

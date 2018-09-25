@@ -13,10 +13,6 @@
     "hide_animation_mode": "true",
     "show_type_hints": "true",
     "use_modal_function_editor": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "display_name": "New Dance Party Project",
@@ -38,7 +34,9 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
-    "use_default_sprites": "false"
+    "use_default_sprites": "false",
+    "block_pool": "Dancelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

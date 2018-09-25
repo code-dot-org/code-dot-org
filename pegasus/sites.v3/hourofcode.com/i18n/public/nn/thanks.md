@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 
@@ -44,7 +44,7 @@ Bruk desse [plakatar, bannere, klistremerke, videoar og meir](<%= resolve_url('/
 
 ## 2. Finn en lokal frivillig som kan hjelpe deg med arrangementet.
 
-[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Søk på kartet over påmeldte frivillige](<%= resolve_url('https://code.org/volunteer/local') %>) for å finne en som kan besøke klassen, eller delta på en videokonferanse, hvor de forteller elevene om de uendelige mulighetene som finnes innenfor informatikkfaget.
 
 ## 3. Planlegging av Kodetimen
 

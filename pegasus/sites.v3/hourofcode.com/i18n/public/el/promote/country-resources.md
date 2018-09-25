@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Απαιτούν ελάχιστο χρόνο προετοιμασίας από τους διοργανωτές
 - Είναι αυτο-καθοδηγούμενοι - επιτρέποντας στους μαθητές να δουλεύουν με τον δικό τους ρυθμό και σύμφωνα με τις ικανότητές τους
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Σχεδίασε τις ανάγκες σου σε υλικό - οι υπολογιστές είναι προαιρετικοί
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Δοκίμασε τους οδηγους στους υπολογιστές ή τις συσκευές των μαθητών.** Βεβαιώσου ότι δουλεύουν σωστά (με ήχο και βίντεο).
-- **Κάνε προεπισκόπηση της σελίδας των συγχαρητηρίων** για να δεις τι θα βλέπουν οι μαθητές όταν τελειώνουν. 
+- **Κάνε προεπισκόπηση της σελίδας των συγχαρητηρίων** για να δεις τι θα βλέπουν οι μαθητές όταν τελειώνουν.
 - **Δώσε ακουστικά στην ομάδα σου**, ή ζήτησε τους να φέρουν τα δικά τους, αν η δραστηριότητα που επέλεξες λειτουργεί καλύτερα με ήχο.
 
 ## 3) Σχεδίασε έγκαιρα βασισμένος στη διαθέσιμη τεχνολογία

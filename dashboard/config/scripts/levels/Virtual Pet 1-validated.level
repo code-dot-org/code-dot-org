@@ -55,7 +55,8 @@
     "contained_level_names": [
       "Virtual Pet Predict",
       "Virtual Pet Predict"
-    ]
+    ],
+    "block_pool": "gamelab"
   },
   "published": true,
   "notes": "",

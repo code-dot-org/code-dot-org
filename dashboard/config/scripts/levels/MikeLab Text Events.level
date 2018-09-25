@@ -51,6 +51,7 @@
     "show_type_hints": "true",
     "include_shared_functions": "false",
     "instructions": "**DEBUGGING!** What happens when you click the sprite?\r\n\r\n Make the sprite say something as long as you are clicking it. Try using the `while clicked` event or the `saying` behavior.",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

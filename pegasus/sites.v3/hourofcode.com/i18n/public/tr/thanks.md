@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 
@@ -27,7 +27,7 @@ social:
 
 # Bir saat kodu oluşturduğunuz için teşekkürler!
 
-Bilgisayar eğitimi almak isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. </strong>FREEPOSTERS</0> Promosyon kuponunuzdur, posterinizi ücretsiz almak için kodu kullanınız. (Not: gönderdiğimiz posterleri ücretsiz kullanabilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Posterler Amerika'dan kargolandığı için, Kanada ve diğer ülkelere kargo ücreti oldukça fazla olabilir. Bunun, bütçenize göre olmayabileceğini düşünüyoruz ve sınıfınız için  PDF dosyalarını </ 0> basmanızı öneriyoruz.)   
+Bilgisayar eğitimi almak isteyen öğrencilere yaptığınız yardım için teşekkür ederiz. Profesyonel bir şekilde hazırladığımız paketi ücretsiz olarak vermek istiyoruz. Ödeme sırasında ** FREEPOSTERS </ strong> teklif kodunu kullanın. (Not: gönderdiğimiz posterleri ücretsiz kullanabilirsiniz. Almak için sevkiyat ve kargo ücretini sizin ödemeniz gerekli. Posterler Amerika'dan kargolandığı için, Kanada ve diğer ülkelere kargo ücreti oldukça fazla olabilir. Bunun, bütçenize göre olmayabileceğini düşünüyoruz ve sınıfınız için  PDF dosyalarını </ 0> basmanızı öneriyoruz.)   
 <br /> [<button>Poster edinin</button>](https://store.code.org/products/code-org-posters-set-of-12) Bedava poster için teklif kodunu kullanınız</p> 
 
 <% if @country == 'us' %> Ozobot, Dexter Industries, littleBits ve Wonder Workshop sayesinde, derslerde kullanılması amacıyla robot veya devre gönderilecek, bunun için100'den fazla sınıf seçilecek! Bir set almaya hak kazanmak için, Kodlamadan sonra Code.org tarafından gönderilecek anketi doldurmayı unutmayın. Code.org, kazanan derslikleri seçecek. Bu arada bazı robotların devre faaliyetlerine göz atın. Lütfen bunun yalnızca bizim okullarımız için açık olduğunu unutmayın. <% end %>
