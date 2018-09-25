@@ -2,7 +2,6 @@ import $ from 'jquery';
 import i18n from "@cdo/locale";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
@@ -19,10 +18,6 @@ const {usIp} = scriptData;
 // Auto-fill country in SchoolInfoInputs if we detect a US IP address.
 let schoolData = {country: usIp ? 'United States' : ''};
 
-function getCountryCodeForCountry(countryName) {
-  return COUNTRIES.find(pair => pair.value === countryName).label;
-}
-
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById("school-info-inputs");
   renderSchoolInfo();
@@ -31,8 +26,7 @@ $(document).ready(() => {
     // The country set in our form is the long-form string name of the country.
     // We want it to be the 2-letter country code, so we change the value on form submission.
     const countryInputEl = $('input[name="user[school_info_attributes][country]"]');
-    const countryCode = getCountryCodeForCountry(schoolData.country);
-    countryInputEl.val(countryCode);
+    countryInputEl.val(schoolData.countryCode);
   });
 
   $("#print-terms").click(function () {
@@ -102,7 +96,10 @@ $(document).ready(() => {
   }
 
   function onCountryChange(_, event) {
-    schoolData.country = event ? event.value : '';
+    if (event) {
+      schoolData.country = event.value;
+      schoolData.countryCode = event.label;
+    }
     renderSchoolInfo();
   }
 
