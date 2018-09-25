@@ -139,8 +139,7 @@ Scenario: Basic teacher application submission
 
   Then I see no difference for "Principal approval form"
 
-  And I scroll the "button[type='submit']" element into view
-  And I press the first "button[type='submit']" element
+  And I press the first "button#submit" element
   Then I wait until element "h1" contains text "Thank you for submitting this form!"
   Then I see no difference for "Principal approval confirmation form"
   Then I close my eyes
