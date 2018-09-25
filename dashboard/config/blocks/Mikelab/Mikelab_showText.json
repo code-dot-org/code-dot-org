@@ -2,9 +2,9 @@
   "category": "World",
   "config": {
     "color": [
-      240,
-      0.45,
-      0.65
+      258,
+      "0.35",
+      "0.62"
     ],
     "func": "showText",
     "blockText": "show text {TEXT} {PREPOSITION} {SPRITE}",
@@ -27,7 +27,8 @@
       },
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       }
     ],
     "inline": false

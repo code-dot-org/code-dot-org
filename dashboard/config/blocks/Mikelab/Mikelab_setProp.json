@@ -1,12 +1,13 @@
 {
-  "category": "Sprites",
+  "category": "Actions",
   "config": {
     "func": "setProp",
-    "blockText": "set {SPRITE} {PROPERTY} to {VAL}",
+    "blockText": "set {PROPERTY} of {SPRITE} to {VAL}",
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       },
       {
         "name": "PROPERTY",
@@ -30,10 +31,6 @@
           [
             "movement direction",
             "\"direction\""
-          ],
-          [
-            "tint",
-            "\"tint\""
           ]
         ]
       },
