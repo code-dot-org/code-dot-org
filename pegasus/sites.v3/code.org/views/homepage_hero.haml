@@ -1,6 +1,6 @@
 :ruby
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
-  actions = Homepage.get_actions
+  actions = Homepage.get_actions(request)
   show_census_layout, show_census_announcement, census_announcement = Homepage.get_census(request)
 
 - main_actions = capture_haml do
