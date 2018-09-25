@@ -77,6 +77,9 @@ module Pd
       if found.empty?
         errors.add(:base, ADDRESS_NOT_VERIFIED)
       else
+        if found.first.city != city
+          errors.add(:city, "#{DOES_NOT_MATCH_ADDRESS} #{found.first.city}?")
+        end
         if found.first.postal_code != zip_code
           errors.add(:zip_code, "#{DOES_NOT_MATCH_ADDRESS} #{found.first.postal_code}?")
         end
