@@ -58,7 +58,7 @@
         %h1.custom-h1= t('terms_interstitial.privacy_notice')
         = render partial: 'home/privacy_notice'
 
-    #terms-of-service{style: "display: none;"}
+    #terms-of-service.checkbox{style: "display: none;"}
       = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
       = f.label :terms_of_service_version do
         = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
@@ -70,6 +70,14 @@
         = t('signup_form.email_preference_question')
         = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
       = f.select :email_preference_opt_in, email_preference_options, include_blank: true
+
+    -# If GDPR applies, show an additional checkbox.
+    - if request.gdpr? || request.params['force_in_eu']
+      #data_transfer_agreement_accepted.checkbox
+        = f.check_box :data_transfer_agreement_accepted
+        = f.label :data_transfer_agreement_accepted do
+          = t('signup_form.agree_us_website')
+          = t('signup_form.my_data_to_us')
 
     %button#submit{style: "display: none;"}
       = t('signup_form.submit')

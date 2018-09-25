@@ -337,7 +337,7 @@ module UsersHelper
       # won't necessarily match the order of level names as requested, but
       # fortunately we are just accumulating a count and don't mind the order.
       embedded_levels = Level.where(name: embedded_level_names).to_a
-      embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional}
+      embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
       embedded_levels.each do |embedded_level|
         level_id = embedded_level.id
 

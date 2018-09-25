@@ -69,7 +69,7 @@ ________________
 - [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators
 - [Important Resources for CS Discoveries Facilitators](https://curriculum.code.org/plcsd/) - See full list of resources and agendas for CS Discoveries Facilitators
 - <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated August 2018]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
-- <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#bookmark=id.ovp6b82y4lw3" target=_blank>K-5 Fundamentals Facilitator Travel Policy in CS Fundamentals Process Doc</a>
+- <a href="/educate/regional-partner/playbook/payments#csftravel" target=_blank>K-5 Fundamentals Facilitator Travel Policy</a>
 
 [**Back to the top**](#top)
 
