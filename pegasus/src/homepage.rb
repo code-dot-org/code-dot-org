@@ -104,7 +104,21 @@ class Homepage
     ]
   end
 
-  def self.get_actions
+  def self.get_actions(request)
+    # Show a Latin specific video to users browsing in Spanish (Mexico) to
+    # promote LATM HOC.
+    if request.language == "es-mx"
+      youtube_id = ""
+      download_path = ""
+      facebook = ""
+      twitter = ""
+    else
+      youtube_id = "nKIu9yen5nc"
+      download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
+      twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+    end
+
     [
       {
         text: "homepage_action_text_learn",
@@ -114,10 +128,10 @@ class Homepage
       {
         text: "homepage_action_text_codevideo",
         type: "video",
-        youtube_id: "nKIu9yen5nc",
-        download_path: "//videos.code.org/social/what-most-schools-dont-teach.mp4",
-        facebook: "https://www.facebook.com/Code.org/videos/10100689712053311/",
-        twitter: "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+        youtube_id: youtube_id,
+        download_path: download_path,
+        facebook: facebook,
+        twitter: twitter
       }
     ]
   end
@@ -275,8 +289,8 @@ class Homepage
     end
   end
 
-  def self.get_video
-    video = get_actions.find {|a| a[:type] == "video"}
+  def self.get_video(request)
+    video = get_actions(request).find {|a| a[:type] == "video"}
 
     {
       video_code: video[:youtube_id],
