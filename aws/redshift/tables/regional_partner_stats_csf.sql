@@ -106,6 +106,7 @@ pd_facilitators as
          csfa.capacity,
          csfa.zip as zip_workshop,
          csfa.state as state_workshop,
+         csfa.processed_location as processed_location,
          csfa.facilitator_name, 
          csfa.studio_person_id_facilitator,     
          pwf.facilitator_names,
