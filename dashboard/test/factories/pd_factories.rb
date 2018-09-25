@@ -825,8 +825,63 @@ FactoryGirl.define do
 
   factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
 
-  factory :pd_principal_approval1920_application_hash_common, parent: :pd_principal_approval1819_application_hash_common
-  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1819_application_hash
+  # default to do_you_approve: other
+  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval1920_application_hash_common, parent: :form_data_hash do
+    title 'Dr.'
+    first_name 'Albus'
+    last_name 'Dumbledore'
+    email 'albus@hogwarts.edu'
+    confirm_principal true
+
+    trait :approved_no do
+      do_you_approve 'No'
+    end
+
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      going_to_teach 'Yes'
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50%'
+      white '16%'
+      black '15%'
+      hispanic '14%'
+      asian '13%'
+      pacific_islander '12%'
+      american_indian '11%'
+      other '10%'
+      committed_to_master_schedule 'Yes'
+      cspImplementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
+      replace_course Pd::Application::PrincipalApproval1920Application::REPLACE_COURSE_NO
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
+      how_heard Pd::Application::PrincipalApproval1920Application.options[:how_heard][0]
+    end
+
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
 
   factory :pd_principal_approval1920_application, class: 'Pd::Application::PrincipalApproval1920Application' do
     association :teacher_application, factory: :pd_teacher1920_application
