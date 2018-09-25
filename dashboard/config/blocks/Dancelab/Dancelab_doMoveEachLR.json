@@ -17,6 +17,14 @@
             "sprites"
           ],
           [
+            "all aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "all bears",
+            "\"BEAR\""
+          ],
+          [
             "all cats",
             "\"CAT\""
           ],
@@ -29,12 +37,16 @@
             "\"DUCK\""
           ],
           [
+            "all frogs",
+            "\"FROG\""
+          ],
+          [
             "all moose",
             "\"MOOSE\""
           ],
           [
-            "all poos",
-            "\"POO\""
+            "all pineapples",
+            "\"PINEAPPLE\""
           ],
           [
             "all robots",

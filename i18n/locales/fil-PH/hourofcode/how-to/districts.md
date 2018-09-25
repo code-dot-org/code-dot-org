@@ -5,25 +5,39 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Paano dalhin ang Hour of Code sa iyong buong distrito ng paaralan
+# How to involve your entire school district
+
+### Every school in your district can take part in the largest learning event in history.
+
+* * *
 
 ## Kunin ang bawat paaralan para makilahok, bawat mag-aaral ay matututo!
 
-1. **Kumalap ng mga lokal na paaralan.** Ibahagi [itong email](%= resolve_url('/promote/resources#sample-emails') %) at [gabay kung paano sa guro](%= resolve_url('/how-to') %), o isama ang isang [maikling blurb](%= resolve_url('/promote/stats') %) sa newsletter/kumonikasyon sa distrito.
+### 1. Recruit local schools
 
-2. **Maglaan ng isang halimbawa ng planong logistik para sa paaralan.** Ibahagi ito [halimbawa ng planong logistik](%= localized_file('/files/HOC_Logistics_plan.pdf') %) sa paaralan para mabigyan sila ng ideya kung paano i-organize ang paglahok buong paaralan. Ito ay napaka-dali tulad ng paggawa nito sa bawat klase ng matematika, homeroom, o sa pagikot nito sa loob ng bawat linggo sa computer lab.
+Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications. <br />
 
-3. ** Ibahagi sa social media. </ 0> I-post sa  Facebook </ 1> o  Twitter </ 2> .** O ibahagi ang isa sa mga nakakapukaw na [mga litrato at mga quote](%= resolve_url('/promote/resources#social') %) mula sa mga leader ng mundo, o [stats](%= resolve_url('/promote/stats') %).</p></li> 
-    
-    - **Paunlarin sa iyong distritong homepage. ** Ipaalam sa mga bisita ang inyong paglahok at mga kaganapan sa Hour of Code. I-link ito sa [Hour of Code](%= resolve_url('/') %).
-    
-    - **Mag-host ng pang distritong kaganapan ng Hour of Code. ** Tignan ang aming [kaganapang gabay kung paano ](%= resolve_url('/how-to/events') %) para sa halimbawa ng takbo ng palabas, media outreach kit at ibang mga suporta.</ol> 
-    
-    ## Ano ang susunod pagkatapos ng Hour of Code?
-    
-    Ang Hour of Code ay unang hakbang lamang sa ekspedisyon upang mas matutunan kung paano gumagana ang teknolohiya at kung paano gumawa ng software applications. Para magpatuloy sa ekspedisyon:
-    
-    - Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
-    - [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
-    
-    <%= view :signup_button %>
+### 2. Provide a sample logistics plan for schools
+
+Share this [sample logistics plan](%= localized_file('/files/HOC_Logistics_plan.pdf') %) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
+
+### 3. Share on social media
+
+Post to [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) or [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes](%= resolve_url('/promote/resources#social') %) from world leaders, or [stats](%= resolve_url('/promote/stats') %).
+
+### 4. Promote on your district’s homepage
+
+Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code](%= resolve_url('/') %).
+
+### 5. Host a district Hour of Code event
+
+See our [event how to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit, and other supports.
+
+## Ano ang susunod pagkatapos ng Hour of Code?
+
+Ang Hour of Code ay unang hakbang lamang sa ekspedisyon upang mas matutunan kung paano gumagana ang teknolohiya at kung paano gumawa ng software applications. Para magpatuloy sa ekspedisyon:
+
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

@@ -53,6 +53,7 @@ class AppServerMetricsTest < Minitest::Test
       report_count: 2,
       listeners: [TCP_LISTENER, SOCKET_LISTENER]
     )
+    listener.spawn_reporting_task
     Cdo::Metrics.expects(:push).at_least(1)
     sleep 0.3
   ensure

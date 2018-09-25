@@ -52,11 +52,9 @@
     "show_type_hints": "true",
     "instructions": "Change the behavior inside the `___ begins ___` block to make the alien start spinning around.",
     "name_suffix": "_simple",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

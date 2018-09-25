@@ -5,13 +5,17 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Jak vyučovat jednu Hodinu kódu</h1>
+# How to teach one Hour of Code with your class
 
-Přidejte se k hnutí a absolvujte se skupinou studentů jejich první hodinu informatiky podle těchto kroků. Hodina kódu je jednoduchá i pro začátečníky! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### Přidejte se k hnutí a absolvujte se skupinou studentů jejich první hodinu informatiky podle těchto kroků. Hodina kódu je jednoduchá i pro začátečníky! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+
+* * *
 
 ## 1. Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Zvolte kurz pro vaše hodiny
+## 2. Zvolte kurz pro svoje hodiny
 
 We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
@@ -21,7 +25,7 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## 4. Plan your technology needs - computers are optional
 
-Nejlepší zkušenost s Hodinou kódu je na počítačích připojených na Internet. Ale **nepotřebujete** počítač pro každé dítě a Hodinu Kódu můžete provozovat i bez počítače.
+Nejlepší zkušenost s Hodinou kódu je na počítačích připojených na internet. Ale **nepotřebujete** počítač pro každé dítě a Hodinu Kódu můžete provozovat i bez počítače.
 
 Otestujte si návody na počítačích nebo zařízení studentů a skontrolujte, že fungují správně v prohlížečích se zvukem a videem. **Nízká rychlost internetu?** Pusťte videa hromadně pro celou třídu, aby nemuseli studenti stahovat videa osobně. Nebo zkuste offline návody.
 
@@ -35,10 +39,10 @@ Rozdejte sluchátka studentům, nebo požádejte studenty, aby si přinesli své
 
 **Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
-**Ukaž inspirativní video:**
+**Ukažte inspirativní video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Najděte další inspirativní [zdroje](%= resolve_url('https://code.org/inspire') %) a [videa](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
@@ -60,7 +64,7 @@ Rozdejte sluchátka studentům, nebo požádejte studenty, aby si přinesli své
 
 **What if a student finishes early?**
 
-- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
+- Studenti si můžou prohlédnout všechny návody a [vyzkoušet jinou aktivitu Hodiny kódu](%= resolve_url('/learn')%).
 - Nebo požádejte studenty, kteří jsou brzy hotoví, aby pomohli spolužákům, kteří mají s aktivitou potíže.
 
 [col-33]
@@ -94,8 +98,8 @@ Rozdejte sluchátka studentům, nebo požádejte studenty, aby si přinesli své
 
 ## Jiné zdroje Hodiny kódu pro pedagogy:
 
-- Navštivte [fórum učitelů Hodiny kódu ](http://forum.code.org/c/plc/hour-of-code) získat radu, pochopení a podporu od ostatních pedagogů. <% if @country == 'us' %>
-- Projděte si [Nejčastěji kladené otázky (FAQ) Hodiny Kódu ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Navštivte [fórum učitelů Hodiny kódu ](http://forum.code.org/c/plc/hour-of-code) a získejte radu, vhled a podporu od ostatních pedagogů. <% if @country == 'us' %>
+- Projděte si [Nejčastěji kladené otázky (FAQ) o Hodině kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co následuje po Hodině kódu?
 

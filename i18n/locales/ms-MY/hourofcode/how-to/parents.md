@@ -5,41 +5,42 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Bagaimana untuk melaksanakan suatu Hour of Code dengan anak anda
+# How to do an Hour of Code with your child
 
-Selesaikan sebuah Hour of Code di rumah, atau membawanya kepada bilik darjah anak anda secara sukarela. Inilah caranya:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+* * *
 
 ## 1) Lihat video bagaimana untuk melaksanakannya <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Pilih satu tutorial:
+## 2) Choose a tutorial
 
-Kami menyediakan pelbagai tutorial yang seronok dan berjam lamanya untuk pelajar daripada semua peringkat umur, dan kesemuanya dicipta oleh pelbagai pihak. [Cubalah mereka!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**Kesemua tutorial Hour of Code adalah berpandukan diri - membenarkan anak anda untuk melaksanakannya mengikut kadar dan tahap kemahiran mereka sendiri**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Rancangkan keperluan teknologi anda
 
-Pengalaman Hour of Code yang terbaik melibatkan komputer yang disambungkan kepada Internet. Tetapi anda **tidak** memerlukan sebuah komputer. Terdapat banyak aktiviti yang bersifat "tercabut" dan boleh dilaksanakan tanpa sebarang teknologi langsung.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Menguji tutorial pada komputer atau peranti anda. Pastikan mereka berfungsi dengan betul dalam pelayar dengan adanya bunyi dan video.
-- **Mahu untuk belajar bersama anak anda?** Cubalah [Pengaturcaraan secara pasangan.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Sains Komputer adalah berkaitan dengan sosial dan kerjasama.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) Mulakan Hour of Code anda dengan suatu video yang memberi inspirasi
+## 4) Start your Hour of Code with an inspiring video
 
 Mulakan Hour of Code anda dengan memberi inspirasi kepada anak anda dan membincangkan bagaimana sains komputer akan memberi impak kepada setiap bahagian kehidupan kita.
 
 **Tunjukkan sebuah video yang memberi inspirasi:**
 
-- Video asal pelancaran Code.org, bersama dengan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh (Terdapat versi [ 1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Video Antarabangsa Hour of Code](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Presiden Obama memanggil kesemua pelajar untuk belajar sains komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- Video asal pelancaran Code.org, bersama dengan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh (terdapat versi [ 1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [Presiden Obama memanggil kesemua pelajar untuk belajar sains komputer](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Tidak mengapa jika anda dan anak anda masih lagi baru kepada sains komputer. Di sini terdapat beberapa idea untuk memperkenalkan aktiviti Hour of Code anda:
 
-- Terangkan cara-cara teknologi memberi impak kepada kehidupan kita, dengan contoh-contoh di mana kanak-kanak lelaki dan perempuan akan mengambil berat tentangnya (Bercakap tentang menyelamatkan nyawa, membantu orang ramai, menghubungkan orang ramai dan sebagainya).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Senaraikan perkara-perkara yang menggunakan kod dalam kehidupan seharian.
 - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
@@ -65,15 +66,13 @@ Tidak mengapa jika menjawab:
 
 Kongsi gambar-gambar dan video-viceo acara Hour of Code and di media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
-**Sumber Hour of Code yang lain:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Mengkaji semula [Soalan Lazim Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Apakah pula selepas Hour of Code?
 
-**Apakah pula selepas Hour of Code?**
-
-Hour of Code hanya merupakan langkah pertama di dalam perjalanan untuk mengetahui lebih mendalam tentang bagaimana teknologi berfungsi dan bagaimana untuk mencipta aplikasi perisian. Untuk meneruskan perjalanan ini:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Membantu untuk [mempromosikan](%= resolve_url('/promote') %) pendidikan sains komputer di daerah sekolah anak anda.
+- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
 
 <%= view :signup_button %>

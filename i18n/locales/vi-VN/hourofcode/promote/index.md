@@ -7,17 +7,17 @@ nav: promote_nav
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Kêu gọi cộng đồng của bạn tham gia vào Giờ Lập Trình
 
 ## 1. Truyền tải thông điệp
 
-Giới thiệu cho bạn bè của bạn về **#HourOfCode**!
+Giới thiệu cho bạn bè của bạn về **#GiờLậpTrình**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Đề nghị trường của bạn tổ chức một Giờ Lập Trình
+## 2. Đề nghị trường của bạn tổ chức Giờ Lập Trình
 
 [Gửi email này](%= resolve_url('/promote/resources#sample-emails') %) cho hiệu trưởng của bạn và thách thức mỗi lớp học tại trường học của bạn để đăng ký.
 

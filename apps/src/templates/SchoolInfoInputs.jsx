@@ -33,6 +33,7 @@ export default class SchoolInfoInputs extends Component {
     fieldNames: PropTypes.object,
     showErrors: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
+    styles: PropTypes.object,
   };
 
   static defaultProps = {
@@ -107,7 +108,7 @@ export default class SchoolInfoInputs extends Component {
                           : i18n.schoolName();
 
     return (
-      <div style={{width: 600}}>
+      <div style={{width: 600, ...this.props.styles}}>
         <CountryAutocompleteDropdown
           onChange={this.props.onCountryChange}
           value={this.props.country}

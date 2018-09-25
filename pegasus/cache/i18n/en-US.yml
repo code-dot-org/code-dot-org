@@ -1516,6 +1516,7 @@
   csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "Hi %{username}"
+  user_header_display_name: "%{username}"
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"

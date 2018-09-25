@@ -5,9 +5,13 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>How to teach one Hour of Code</h1>
+# How to teach one Hour of Code with your class
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### Liituge liikumisega ja tutvustage õpilaste rühma nende esimeseks tundideks arvutiteadusega järgmiste sammudega. Kooditunde on lihtne joosta - isegi algajatele! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+
+* * *
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -21,9 +25,9 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Kuid te ei vaja arvutit iga lapse jaoks ja saate isegi koodi tunde ilma arvutita üldse teha.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Veenduge, et proovite õpetusi õpilasarvutitelt või seadmetest, et veenduda, et need töötavad heli ja video brauseritega korralikult. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 
@@ -44,7 +44,7 @@ Na Vašej udalosti využite [plagáty, bannery, nálepky, či videá](<%= resolv
 
 ## 2. Nájdite si dobrovoľníka vo Vašom okolí, ktorý Vám pomôže s organizáciou udalosti
 
-[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Pozrite si našu mapu s dobrovoľníkmi](<%= codeorg_url('/volunteer/local') %>) a nájdite si dobrovoľníka, ktorý vie navštíviť Vašu triedu alebo sa pripojiť prostredníctvom videa a tak inšpirovať Vašich študentov.
 
 ## 3. Naplánujte si Vašu Hodinu Kódu
 
