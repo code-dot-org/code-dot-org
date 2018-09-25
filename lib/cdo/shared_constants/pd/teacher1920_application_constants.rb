@@ -104,7 +104,7 @@ module Pd
           :willing_to_travel,
         ).merge(
           {
-            able_to_attend: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
+            able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
             able_to_travel_to_another: 'If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?',
             scholarship_reasons: 'Please provide any additional information you’d like to share about why your application should be considered for a scholarship.',
             interested_in_online_program: 'Are you interested in this online program for school year workshops?'
