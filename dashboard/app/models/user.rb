@@ -73,7 +73,6 @@ require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 
@@ -83,6 +82,7 @@ class User < ActiveRecord::Base
   include LocaleHelper
   include UserMultiAuthHelper
   include UserPermissionGrantee
+  include PartialRegistration
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -781,20 +781,9 @@ class User < ActiveRecord::Base
   end
 
   def self.new_with_session(params, session)
-    if session["devise.user_attributes"]
-      new(session["devise.user_attributes"]) do |user|
-        user.attributes = params
-        cache = CDO.shared_cache
-        OmniauthCallbacksController::OAUTH_PARAMS_TO_STRIP.each do |param|
-          next if user.send(param)
-          # Grab the oauth token from memcached if it's there
-          oauth_cache_key = OmniauthCallbacksController.get_cache_key(param, user)
-          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
-        end
-        user.valid?
-      end
-    else
-      super
+    return super unless PartialRegistration.in_progress? session
+    new_from_partial_registration session do |user|
+      user.attributes = params
     end
   end
 
