@@ -1146,6 +1146,22 @@ FactoryGirl.define do
     group 1
   end
 
+  factory :regional_partner_with_summer_workshops, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    contact_name "Contact Name"
+    contact_email "contact@code.org"
+    group 1
+    apps_open_date_csp_teacher {Date.today - 1.day}
+    apps_open_date_csd_teacher {Date.today - 2.days}
+    apps_close_date_csp_teacher {Date.today + 3.days}
+    apps_close_date_csd_teacher {Date.today + 4.days}
+    csd_cost 10
+    csp_cost 12
+    cost_scholarship_information "Additional scholarship information will be here."
+    additional_program_information "Additional program information will be here."
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+  end
+
   factory :regional_partner_program_manager do
     regional_partner {create :regional_partner}
     program_manager {create :teacher}
