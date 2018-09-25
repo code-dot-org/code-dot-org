@@ -586,9 +586,11 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop single local workshop' do
-      workshop = create :pd_workshop
+      workshop = create :pd_workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
       application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash, regional_partner_workshop_ids: [workshop.id]
+        build :pd_teacher1920_application_hash,
+          regional_partner_workshop_ids: [workshop.id],
+          able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
       )
 
       assert_equal workshop, application.get_first_selected_workshop
@@ -617,7 +619,7 @@ module Pd::Application
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash, :with_multiple_workshops,
           regional_partner_workshop_ids: workshops.map(&:id),
-          able_to_attend_multiple: []
+          able_to_attend_multiple: ['Not a workshop', 'Not a workshop 2']
         )
       )
       assert_equal workshops.first, application.get_first_selected_workshop
@@ -632,19 +634,12 @@ module Pd::Application
       assert_nil application.get_first_selected_workshop
     end
 
-    test 'get_first_selected_workshop returns nil for teachercon even with local workshops' do
-      workshop = create :pd_workshop
-      application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash, teachercon: TC_PHOENIX, regional_partner_workshop_ids: [workshop.id]
-      )
-
-      assert_nil application.get_first_selected_workshop
-    end
-
     test 'get_first_selected_workshop ignores single deleted workshops' do
-      workshop = create :pd_workshop
+      workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, location_address: 'Buffalo, NY', sessions_from: Date.new(2019, 1, 1)
       application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash, regional_partner_workshop_ids: [workshop.id]
+        build :pd_teacher1920_application_hash,
+          regional_partner_workshop_ids: [workshop.id],
+          able_to_attend_multiple: ['January 1-5, 2019 in Buffalo, NY']
       )
 
       workshop.destroy
@@ -657,7 +652,7 @@ module Pd::Application
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash, :with_multiple_workshops,
           regional_partner_workshop_ids: workshops.map(&:id),
-          able_to_attend_multiple: []
+          able_to_attend: [workshops.first.id, workshops.second.id]
         )
       )
 
@@ -854,6 +849,41 @@ module Pd::Application
       assert Email.exists?(unrelated_email.id)
       assert Email.exists?(associated_sent_email.id)
       refute Email.exists?(associated_unsent_email.id)
+    end
+
+    test 'test non course dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash,
+        completing_on_behalf_of_someone_else: YES,
+        does_school_require_cs_license: YES,
+        pay_fee: TEXT_FIELDS[:no_pay_fee_1920],
+        regional_partner_workshop_ids: [1, 2, 3],
+        what_license_required: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+
+      refute application.valid?
+      assert_equal %w(completingOnBehalfOfName whatLicenseRequired scholarshipReasons ableToAttendMultiple), application.errors.messages[:form_data]
+    end
+
+    test 'test csd dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash_common,
+        :csd,
+        csd_which_grades: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      refute application.valid?
+      assert_equal ['csd_which_grades'], application.errors.messages[:form_data]
+    end
+
+    test 'test csp dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash_common,
+        :csp,
+        csp_which_grades: nil,
+        csp_how_offer: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      refute application.valid?
+      assert_equal %w(csp_which_grades csp_how_offer), application.errors.messages[:form_data]
     end
 
     private

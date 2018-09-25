@@ -65,7 +65,9 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
         {this.inputFor('csHowManyMinutes', {style: {width: '100px'}})}
         {this.inputFor('csHowManyDaysPerWeek', {style: {width: '100px'}})}
         {this.inputFor('csHowManyWeeksPerYear', {style: {width: '100px'}})}
-        {this.radioButtonsFor('csTerms')}
+        {this.radioButtonsWithAdditionalTextFieldsFor('csTerms', {
+          [TextFields.otherWithText]: "other"
+        })}
         {this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
           [TextFields.dontKnowIfIWillTeachExplain]: "other"
         })}

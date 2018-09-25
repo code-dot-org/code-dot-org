@@ -100,7 +100,7 @@
                 %i.fa.fa-mobile
             - if !@hide_sign_in_option && signin_button_enabled
               %span#sign_in_or_user
-                = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
+                =# render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
             = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if request.path == "/home"
