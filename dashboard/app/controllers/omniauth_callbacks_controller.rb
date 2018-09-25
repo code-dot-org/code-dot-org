@@ -115,6 +115,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     provider = auth_hash.provider.to_s
     session[:sign_up_type] = provider
 
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session)
+
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'
       auth_hash = extract_powerschool_data(auth_hash)
@@ -149,16 +153,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  OAUTH_PARAMS_TO_STRIP = %w{oauth_token oauth_refresh_token}.freeze
-
-  def self.get_cache_key(oauth_param, user)
-    "#{oauth_param}-#{user.email}"
-  end
-
   private
 
   def sign_in_google_oauth2(user)
     prepare_locale_cookie user
+    user.update_oauth_credential_tokens auth_hash
 
     @user = user
     if allows_google_classroom_takeover user
@@ -170,6 +169,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def sign_up_google_oauth2
     session[:sign_up_type] = AuthenticationOption::GOOGLE
 
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+
     user = User.from_omniauth auth_hash, auth_params, session
     prepare_locale_cookie user
 
@@ -177,25 +180,24 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user = user
       silent_takeover @user, auth_hash
       sign_in_user
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
-      email_already_taken_redirect \
-        provider: AuthenticationOption::GOOGLE,
-        found_provider: looked_up_user.provider,
-        email: user.email
     else
-      # This is a new registration
       register_new_user user
     end
   end
 
   def sign_in_clever(user)
     prepare_locale_cookie user
+    user.update_oauth_credential_tokens auth_hash
     @user = user
     handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
   end
 
   def sign_up_clever
     session[:sign_up_type] = AuthenticationOption::CLEVER
+
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
 
     @user = User.from_omniauth(auth_hash, auth_params, session)
 
@@ -247,14 +249,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def register_new_user(user)
-    move_oauth_params_to_cache(user)
-    session["devise.user_attributes"] = user.attributes
+    PartialRegistration.persist_attributes(session, user)
 
-    # For some providers, signups can happen without ever having hit the sign_up page, where
-    # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session)
-
-    redirect_to new_user_registration_url
+    if SignUpTracking.new_sign_up_experience?(session)
+      redirect_to users_finish_sign_up_url
+    else
+      redirect_to new_user_registration_url
+    end
   end
 
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
@@ -319,19 +320,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_user
   end
 
-  def move_oauth_params_to_cache(user)
-    # Because some oauth tokens are quite large, we strip them from the session
-    # variables and pass them through via the cache instead - they are pulled out again
-    # from User::new_with_session
-    cache = CDO.shared_cache
-    return unless cache
-    OAUTH_PARAMS_TO_STRIP.each do |param|
-      param_value = user.attributes['properties'].delete(param)
-      cache_key = OmniauthCallbacksController.get_cache_key(param, user)
-      cache.write(cache_key, param_value)
-    end
-  end
-
   def just_authorized_google_classroom?
     current_user &&
     current_user.providers.include?(AuthenticationOption::GOOGLE) &&
@@ -381,42 +369,43 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       )
     end
 
-    if @user.migrated?
-      success = AuthenticationOption.create(
-        user: @user,
-        email: lookup_email,
-        credential_type: auth_hash.provider.to_s,
-        authentication_id: auth_hash.uid,
-        data: {
+    begin
+      if @user.migrated?
+        AuthenticationOption.create!(
+          user: @user,
+          email: lookup_email,
+          credential_type: auth_hash.provider.to_s,
+          authentication_id: auth_hash.uid,
+          data: {
+            oauth_token: auth_hash.credentials&.token,
+            oauth_token_expiration: auth_hash.credentials&.expires_at,
+            oauth_refresh_token: auth_hash.credentials&.refresh_token
+          }.to_json
+        )
+      else
+        @user.update!(
+          email: lookup_email,
+          provider: auth_hash.provider.to_s,
+          uid: auth_hash.uid,
           oauth_token: auth_hash.credentials&.token,
           oauth_token_expiration: auth_hash.credentials&.expires_at,
           oauth_refresh_token: auth_hash.credentials&.refresh_token
-        }.to_json
-      )
-      unless success
-        # This should never happen if other logic is working correctly, so notify
-        Honeybadger.notify(
-          error_class: 'Failed to create AuthenticationOption during silent takeover',
-          error_message: "Failed for user with id #{@user.id}"
         )
-        return
       end
-    else
-      success = @user.update(
-        provider: auth_hash.provider.to_s,
-        uid: auth_hash.uid,
-        oauth_token: auth_hash.credentials&.token,
-        oauth_token_expiration: auth_hash.credentials&.expires_at,
-        oauth_refresh_token: auth_hash.credentials&.refresh_token
+    rescue => err
+      error_class = @user.migrated? ?
+        'Failed to create AuthenticationOption during silent takeover' :
+        'Failed to update User during silent takeover'
+      # This should never happen if other logic is working correctly, so notify
+      # This can happen if the account being taken over is already invalid
+      Honeybadger.notify(
+        error_class: error_class,
+        error_message: err.to_s,
+        context: {
+          user_id: @user.id,
+          tags: 'accounts'
+        }
       )
-      unless success
-        # This should never happen if other logic is working correctly, so notify
-        Honeybadger.notify(
-          error_class: 'Failed to update User during silent takeover',
-          error_message: "Failed for user with id #{@user.id}"
-        )
-        return
-      end
     end
   end
 

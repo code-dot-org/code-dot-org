@@ -46,6 +46,7 @@
     "custom_helper_library": "\r\nfunction mapProp(property, val) {\r\n  var behavior = function(sprite, property, val) {\r\n    console.log(sprite[property]);\r\n    sprite[property] = val;\r\n  };\r\n  behavior.name = 'mapProp';\r\n  return behavior;\r\n}",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"mapProp\",\r\n    \"blockText\": \"setting {PROPERTY} to {VAL}\",\r\n    \"returnType\": \"Behavior\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"PROPERTY\",\r\n        \"options\": [\r\n          [\r\n            \"size\",\r\n            \"\\\"scale\\\"\"\r\n          ],\r\n          [\r\n            \"rotation\",\r\n            \"\\\"rotation\\\"\"\r\n          ],\r\n          [\r\n            \"x position\",\r\n            \"\\\"x\\\"\"\r\n          ],\r\n          [\r\n            \"y position\",\r\n            \"\\\"y\\\"\"\r\n          ],\r\n          [\r\n            \"movement direction\",\r\n            \"\\\"direction\\\"\"\r\n          ],\r\n          [\r\n            \"tint\",\r\n            \"\\\"tint\\\"\"\r\n          ]\r\n        ]\r\n      },\r\n      {\r\n        \"name\": \"VAL\"\r\n      }\r\n    ],\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
     "hide_custom_blocks": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

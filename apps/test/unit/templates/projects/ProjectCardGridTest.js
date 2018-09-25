@@ -24,8 +24,8 @@ describe('ProjectCardGrid', () => {
     // Should show all project types.
     expect(wrapper).to.have.exactly(7).descendants(ProjectAppTypeArea);
     expect(wrapper.find(ProjectAppTypeArea).first()).to.have.props({
-      labKey: "playlab",
-      labName: "Stories and Games with Play Lab",
+      labKey: "gamelab",
+      labName: "Game Lab",
       numProjectsToShow: 4,
     });
 

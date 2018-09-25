@@ -11,12 +11,21 @@ ar:
   campaign_date_full: "7-13 كانون الأول/ديسمبر"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 كانون الأول/ديسمبر، عام 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'انضم إلى أكبر حدث تعليمي في التاريخ، 7-13 ديسمبر، 2015'
   front_intro_default: '"ساعة البرمجة" هي حمله عالمية تسعى للوصول إلى عشرات الملايين من الطلاب ، في أكثر من 180 دولة. ويمكن لأي شخص وفي أي مكان تنظيم حدث "ساعة البرمجة". تتوفر دروس مدتها ساعة واحدة بأكثر من 40 لغة. <strong> لمن تتراوح أعمارهم ما بين 4 و104.</strong> ولا يشترط وجود خبرة في البرمجة'
   front_watch_video: 'شاهد الفيديو الجديد'
   front_watch_regular_video: 'مشاهدة الفيديو'
   front_volunteers: 'مطلوب متطوعين تقنيين'
   front_start_learning: 'البدء في التعلم'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'المصادر'
   header_menu_faq: 'الأسئلة المتداولة'
   header_menu_how_to: 'الكيفية'
@@ -222,6 +231,8 @@ ar:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'قم بتنظيم ساعة برمجة في الفترة %{campaign_date}، وسَجِّلها هنا.'
   signup_name_label: 'اسمُكَ'
   signup_name_error: 'الاسم مطلوب.'
@@ -243,6 +254,11 @@ ar:
   signup_your_event: 'سجل وشارك الحدث الخاص بك'
   signup_host_an_hour: 'تبنى ساعة'
   signup_match_volunteer: 'أرجو مساعدتي في العثور على مهندس برمجيات في نفس نطاقي الجغرافي ليساعدني في إلهام طلابي'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "اذا تبنيت عدة احداث, من فضلك سلم اسم وبريد الكتروني نادر لكل منهما, نحن نقوم بعد حدث واحد لكل اسم وبريد الكتروني معا."
   signup_registration_deadline: "التسجيل على\"ساعة من البرمجة\" ينتهي يوم 11 كانون الأول/ديسمبر."
   signup_name_placeholder: 'اسمُك'
@@ -265,6 +281,7 @@ ar:
   signup_thank_you_message: 'أرسلنا لك رسالة تأكيد بالبريد الإلكتروني مع معلومات لمساعدتك على البدء.'
   map_title: "خريطة ساعة من البرمجة"
   map_header: 'أحداث #ساعة من البرمجة حول العالم'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'انظر كافة الأحداث'
   map_header_company: '# by company organizers'
   map_header_country: '# في %{country}'
@@ -280,12 +297,13 @@ ar:
   meta_tag_twitter_title: 'ساعة من البرمجة قادمة'
   meta_tag_twitter_description: 'ساعة البرمجة حركة عالمية تضم عشرات ملايين طلاب في 200 دولة وما يزيد على 30 لغة. تتراوح الأعمارهم من 4 إلى 104.'
   twitter_default_text: "أنا سأشارك هذا العام في ساعة من البرمجة HourOfCode#، و أنت؟ @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'الأسئلة المتكررة'
   hoc_faq_what_is_hoc_q: 'ما هي ساعة البرمجة؟'
   hoc_faq_what_is_hoc_a: "ساعة البرمجة هي مقدمة في علوم الحاسب مدتها ساعة واحدة، تم إعدادها بهدف تسهيل تَعلُّم البرمجة وإثبات أن أي شخص يمكنه تَعلُّم أساسيات البرمجة. <a href='%{codeorg_url}'>تفقَّد هذه الدروس</a>."
   hoc_faq_last_year: "قُم بتجربة هذه الدروس"
   hoc_faq_when_is_hoc_q: 'متى تقام ساعة البرمجة؟'
-  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
   hoc_faq_why_cs_q: 'لماذا علوم الحاسوب؟'
   hoc_faq_why_cs_a: "يجب أن يحصُل <i>كل</i> طالب على فرصة لتعلم علوم الحاسب. فذلك يساعد على تنمية مهارات حل المشكلات والمنطق والإبداع. وبالبدء في وقت مبكر، سوف تتاح للطلاب أسس للنجاح في أي مسار وظيفي من تلك التي يوفرها القرن الحادي والعشرين. شاهد المزيد من الإحصائيات على <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: 'كيفية القيام بالمشاركة في ساعة البرمجة؟'
@@ -317,7 +335,7 @@ ar:
   hoc_faq_more_questions_q: "لديك المزيد من الأسئلة؟"
   hoc_faq_more_questions_a: "حاول أن تعثر على الإجابة في  <a href='http://support.code.org'>منتدى الدعم</a>."
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "كيف يمكنني طباعة الشهادات التي سأقدمها للطلاب؟"
   hoc_faq_certificates_a: "من خلال <a href='%{codeorg_url}/certificates'>صفحة الشهادات</a> يمكنك طباعة شهادات جميع الطلاب قبل البدء في التدريب."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
@@ -333,8 +351,8 @@ ar:
   stats_hoc: "ساعة البرمجة: 5 أيام"
   stats_global: "قام أكثر من 100 مليون طالب بتجربة \"ساعة البرمجة\""
   stats_girls_more: "تقوم المزيد من الفتيات بتجربة علوم الحاسوب بنسبة أكبر مقارنة بالـ 70 سنة الماضية"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: 'خلال كل يوم توصلنا لنفس النتائج &mdash;   مائة بالمائة من الالتزام - نينا نيكولس بيري، معلمة'
   stats_student: '"كنت أعرف ان  هذا كان فرصة <b>وحيدة العمر</b> ."-ماريانا الزاتي، الصف الخامس'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
@@ -374,6 +392,7 @@ ar:
   videos_obama_cs: الرئيس أوباما يتحدث عن علوم الحاسوب
   videos_anybody_can_learn: Anybody Can Learn (1 min)
   title_country_resources: Country Specific Resources
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
@@ -382,6 +401,7 @@ ar:
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to_parents: How-to guide for parents
   title_how_to: How-to Guide
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: مواد صحفية

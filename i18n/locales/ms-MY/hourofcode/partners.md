@@ -1,9 +1,9 @@
 ---
 title: <%= hoc_s(:title_partners) %>
 ---
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+'Jam Kod' diselia oleh Jawatankuasa Penasihat dan Jawatankuasa Pemantauan Minggu Pendidikan Sains Komputer dan Jam Kod.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+Jawatankuasa Penasihat terdiri daripada wakil-wakil dari K-12, ahli-ahli akademik, badan-badan keuntungan dan bukan keuntungan, serta badan-badan antarabangsa. Jawatankuasa ini membentuk strategi untuk kempen Jam Kod.
 
 The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
@@ -119,19 +119,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Major Promotional Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
-* * *
-
 # International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

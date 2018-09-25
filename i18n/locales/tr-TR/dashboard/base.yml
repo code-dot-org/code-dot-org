@@ -259,9 +259,7 @@ tr:
         applab: 'Uygulama oluşturun'
         gamelab: 'Bir Oyun Laboratuvarı projesi yap'
         weblab: 'Bir Web Lab (beta) projesi yap'
-      home: "Ana Sayfa"
       my_dashboard: "Kontrol panelim"
-      courses: "kurslar"
       course_catalog: "Kurs Kataloğu"
       project_gallery: "Projeler"
       sections: "Bölümler"
@@ -296,6 +294,14 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
+    create_button:
+      create: 'Oluştur'
+      applab: 'App Laboratuvarı'
+      artist: 'Sanatçı'
+      gamelab: 'Oyun Laboratuvarı'
+      playlab: 'Oyun Laboratuvarı'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Öğretmen ana sayfa'
       district_dashboard: 'Kontrol Paneli Bölgesi'

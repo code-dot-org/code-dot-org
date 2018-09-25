@@ -195,9 +195,7 @@ sl:
         playlab: 'Ustvari Play Lab app'
         artist: 'Nariši kaj'
         applab: 'Ustvari App Lab app'
-      home: "Domov"
       my_dashboard: "Moja nadzorna plošča"
-      courses: "Predavanja"
       course_catalog: "Katalog tečajev"
       project_gallery: "Projekti"
       educate_overview: "Vzgojiteljev pregled"
@@ -224,6 +222,12 @@ sl:
       help_us: "Pomagaj nam"
       teach: "Predavaj"
       about: "O programu"
+    create_button:
+      create: 'Ustvari'
+      artist: 'Umetnik'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Učiteljeva domača stran'
       district_dashboard: 'Nadzorna plošča za okrožje'

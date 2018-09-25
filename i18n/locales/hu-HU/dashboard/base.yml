@@ -224,8 +224,6 @@ hu:
         playlab: 'Készíts egy Játéklabor applikációt'
         artist: 'Rajzolj valamit'
         applab: 'Készíts egy App Lab applikációt'
-      home: "Főmenü"
-      courses: "tanfolyamok"
       project_gallery: "Projektek"
       sections: "Csoportok"
       help_support: "Súgó és támogatás"
@@ -258,6 +256,13 @@ hu:
       help_us: "Támogass minket"
       teach: "Taníts"
       about: "Rólunk"
+    create_button:
+      create: 'Létrehoz'
+      applab: 'App Lab'
+      artist: 'Művész'
+      playlab: 'Játéklabor'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Tanári kezdőlap'
       district_dashboard: 'Tankerületi munkafelület'

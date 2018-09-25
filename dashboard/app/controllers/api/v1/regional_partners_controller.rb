@@ -1,5 +1,5 @@
 class Api::V1::RegionalPartnersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :find
 
   # GET /api/v1/regional_partners
   def index
@@ -14,6 +14,30 @@ class Api::V1::RegionalPartnersController < ApplicationController
     regional_partner_value = current_user.workshop_admin? ? params[:regional_partner_value] : current_user.regional_partners.first.try(:id)
 
     render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
+  end
+
+  # GET /api/v1/regional_partners/find
+  def find
+    if params[:school]
+      school = School.find(params[:school])
+      state = school.state
+      zip_code = school.zip
+    else
+      zip_code = params[:zip_code]
+      state = params[:state]
+
+      # lookup state abbreviation, since the supplied state can be the full name
+      state = get_us_state_abbr_from_name(state, true) if state && state.length > 2
+    end
+
+    # Find the matching partner
+    partner = RegionalPartner.find_by_region(zip_code, state)
+
+    if partner
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+    else
+      render_404
+    end
   end
 
   private

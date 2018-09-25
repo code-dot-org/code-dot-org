@@ -84,7 +84,7 @@ GameLabP5.prototype.init = function (options) {
     window.p5.prototype.loadImage = function (path) {
       // Make sure to pass all arguments through to loadImage, which can get
       // wrapped and take additional arguments during preload.
-      arguments[0] = assetPrefix.fixPath(path, { bypassMediaProxy: true });
+      arguments[0] = assetPrefix.fixPath(path);
       return GameLabP5.baseP5loadImage.apply(this, arguments);
     };
   }
@@ -143,6 +143,7 @@ GameLabP5.prototype.init = function (options) {
  * Reset GameLabP5 to its initial state. Called before each time it is used.
  */
 GameLabP5.prototype.resetExecution = function () {
+  this.danceAPI = null;
   teardown();
   gameLabSprite.setCreateWithDebug(false);
 
@@ -179,6 +180,12 @@ GameLabP5.prototype.drawDebugSpriteColliders = function () {
   }
 };
 
+GameLabP5.prototype.loadSound = function (url) {
+  if (this.p5 && this.p5.loadSound) {
+    return this.p5.loadSound(url);
+  }
+};
+
 /**
  * Instantiate a new p5 and start execution
  */
@@ -192,7 +199,7 @@ GameLabP5.prototype.startExecution = function (dancelab) {
       this.setP5FrameRate();
       this.gameLabWorld = new GameLabWorld(p5obj);
       if (dancelab) {
-        this.danceAPI = createDanceAPI(this.p5);
+        this.danceAPI = createDanceAPI(this);
       }
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);

@@ -11,12 +11,21 @@ bs:
   campaign_date_full: "4-10 Decembra"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10 Decembra, 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Pridružite se najvećoj edukaciji u historiji, %{campaign_date}'
   front_intro_default: 'Sat programiranja je globalni pokret u kojem učestvuju deseci miliona studenata iz 180 i više zemalja. Bilo tko, bilo gdje, možete organizovati događaj sata programiranja. Jednosatni tutoriali su dostupni u više od 45 jezika. Nije potrebno prethodno iskustvo. <strong>Za dob od 4-104.</strong>'
   front_watch_video: 'Pogledajte novi video'
   front_watch_regular_video: 'Pogledajte video'
   front_volunteers: 'Tražimo tehničke volontere'
   front_start_learning: 'Počni učiti'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Resursi'
   header_menu_faq: 'ČESTO POSTAVLJANA PITANJA'
   header_menu_how_to: 'Kako-Da'
@@ -222,6 +231,8 @@ bs:
   front_join_us_challenge: "Osvoji video razgovor sa zvijezdom za svoj razred!"
   front_join_us_learn_more: "Saznaj više"
   signup_closed: 'Registracija za Čas Kodiranja je sad zatvorena. Molimo provjerite opet u oktobru da se prijavite za sljedeći Čas Kodiranja.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organizirajte Sat Kodiranja tokom %{campaign_date}, i registrujte ga ovdje.'
   signup_name_label: 'Ime'
   signup_name_error: 'Obavezno unesite ime.'
@@ -243,6 +254,11 @@ bs:
   signup_your_event: 'Prijavite vaš događaj'
   signup_host_an_hour: 'Budite domaćin sata'
   signup_match_volunteer: 'Pomozi mi da nađem lokalne softver inženjere za inspirisanje mojih studenata'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Ako organizujete više događaja, molimo vas da pošaljete jedinstveni naziv ili e-mail za svaki od njih. Računamo samo jedan događaj po kombinaciji imena i e-mail."
   signup_registration_deadline: "Registracija za Sat Kodiranja se zatvara na 11. Decembar"
   signup_name_placeholder: 'Vaše ime'
@@ -265,6 +281,7 @@ bs:
   signup_thank_you_message: 'Poslali smo vam e-mail potvrdu s informacijama koje će vam pomoći da počnete.'
   map_title: "Mapa Sata Kodiranja"
   map_header: '# događaja registriranih za Sat Kodiranja 2017'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Vidi sve događaje'
   map_header_company: '# Organizirano od strane firme'
   map_header_country: '# u %{country}'
@@ -280,6 +297,7 @@ bs:
   meta_tag_twitter_title: 'Sat Kodiranja: Svako može naučiti'
   meta_tag_twitter_description: 'Sat Kodiranja je globalni pokret koji doseže desetine miliona učenika svih uzrasta u 180 i više zemalja svijeta, i preveden je na 45 i više jezika.'
   twitter_default_text: "Ja sudjelujem u ovogodišnjem #HourOfCode. Sudjeluješ li ti? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'ČESTO POSTAVLJANA PITANJA'
   hoc_faq_what_is_hoc_q: 'Što je Sat kodiranja? '
   hoc_faq_what_is_hoc_a: "Sata Kodiranja je počeo kao jednosatni uvod u računarstvo, i dizajniran je da demistifikuje \"kodiranje\", i da demonstrira da svako može naučiti osnove i proširiti sudjelovanje u polju računarstva. Sat Kodiranja je od tada postao svjetski napor za promoviranje računarstva počevši sa jednim satom aktivnosti kodiranja, nakon čega je uslijedilo brzo proširenje. Pogledajte <a href='%{tutorials}'> tutorijale i aktivnosti</a>. Ova rasprostranjena kampanja je podržana sa preko <a href='%{partners}'> 400 partnera</a> i 200.000 edukatora diljem svijeta."
@@ -374,6 +392,7 @@ bs:
   videos_obama_cs: Predsjednik Obama o računarstvu
   videos_anybody_can_learn: Svako može naučiti (1 min)
   title_country_resources: Resursi za specifičnu državu
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Vodič Sata Kodiranja za distrikte
   title_how_to_events: Upute za Sat Kodiranja događaje
   title_how_to_organizations: Kako organizovati Sat Kodiranja - za organizacije
@@ -382,6 +401,7 @@ bs:
   title_how_to_volunteers: Vodič za Sat Kodiranja volontere
   title_how_to_parents: Kako-da vodič za roditelje
   title_how_to: Kako-da vodič
+  title_international_partners: Contact International Partners
   title_press_release: Sata Kodiranja priopćenje za tisak za izabrane dužnosnike
   title_op_ed: Uzorak "op-ed" podrške Sedmici Edukacije Računarstva i Sata Kodiranja
   title_press_kit: Materijal za novinare

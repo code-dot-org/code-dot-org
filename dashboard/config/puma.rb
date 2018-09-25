@@ -24,6 +24,7 @@ before_fork do
   PEGASUS_DB.disconnect
   DASHBOARD_DB.disconnect
   ActiveRecord::Base.connection_pool.disconnect!
+  Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 end
 
 on_worker_boot do |_index|

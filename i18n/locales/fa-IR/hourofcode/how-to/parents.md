@@ -5,41 +5,42 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# چگونه ساعت کدنویسی را با فرزندتان تکمیل کنید
+# How to do an Hour of Code with your child
 
-ساعت کد را در خانه تکمیل کنید، یا داوطلب شوید که آن را به کلاس درس فرزندتان ببرید! به این شکل:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+* * *
 
 ## 1) این فیلم آموزشی را ببینید <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) آموزش مد نظرتان را انتخاب کنید:
+## 2) Choose a tutorial
 
-ما برای دانش آموزان سنین مختلف یک سری جلسات آموزشی یک ساعته ی سرگرم کننده فراهم میکنیم که توسط شرکتهای همکار ما تولید شدند. [آنها را امتحان کنید!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**تمام جلسات آموزشی ساعت کد خود-آموز هستند - که به فرزند شما اجازه می دهد در سرعت و سطح مهارت خود کار کند**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) فناوري های مورد نیازتان را آماده کنید
 
-بهترین تجربه ساعت کد با کامپیوترهای متصل به اینترنت می باشد. اما شما نیازی به کامپیوتر**ندارید**. بسیاری از فعالیت ها "خاموش" هستند، و بدون داشتن برق و یا دسترسی به هر گونه فناوری قابل اجرا می باشند.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- برنامه های آموزشی را بر روی کامپیوتر یا هر وسیله ی دیگر خود امتحان کنید. مطمئن شوید که مرورگرها ویدئوها را با صدا و تصویر نمایش می دهند.
-- **آیا می خواهید همزمان با فرزندتان یادبگیرید؟**[ برنامه نویسی دونفره](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) را آزمایش کنید. علم کامپیوتر شراکتی و اجتماعی است.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 5) ساعت کد نویسی خودتان را با یک ویدیوی الهام بخش شروع کنید
+## 4) Start your Hour of Code with an inspiring video
 
 ساعت کد خود را با تشویق کردن فرزندتان و صحبت بر سر اینکه علوم کامپیوتر چگونه بر همه ابعاد زندگیمان تاثیر دارد، شروع کنید.
 
 **ویدئوهای الهام بخش را نمایش دهید:**
 
-- سایت code.org فیلم هایی از بیل گیتز ، مارک زوکربرگ ، و ستاره ان بی ای کریس بوش آماده کرده است .( فیلم ها در نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای ](https://www.youtube.com/watch?v=nKIu9yen5nc)و [9 دقیقه ای ](https://www.youtube.com/watch?v=dU1xS07N-FA)موجودند )
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [آقای اوباما رییس جمهور آمریکا به تمام دانش آموزان می گوید که کامپیوتر بیاموزند](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 هیچ مشکلی نیست، اگر شما و فرزندتان هر دو در علم کامپیوتر تازه وارد هستید. در اینجا ایده هایی برای آشنایی با تمرین های ساعت کد هست:
 
-- اثرات فن آوری بر زندگی ما را توضیح دهید، با مثال هایی که هم دخترها و هم پسرها به آنها علاقمند هستند (بحث در مورد نجات زندگی اشخاص، کمک به مردم، ایجاد ارتباط بین مردم، و غیره).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - چیزهایی که در زندگی روزمره از کد استفاده میکنند را لیست کنید.
 - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
@@ -65,15 +66,13 @@ nav: how_to_nav
 
 عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
 
-**دیگر منابع ساعت کد:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## مرحله بعد از ساعت كدنويسي چيست؟
 
-**مرحله بعد از ساعت كدنويسي چيست؟**
-
-ساعت کد تنها اولین گام در سفری برای کسب اطلاعات بیشتر در مورد چگونگی کارکرد فن آوری و نحوه ایجاد نرم افزارهای کاربردی است. برای ادامه این سفر:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- به [ترویج](%= resolve_url('/promote') %) آموزش علوم رایانه در منطقه مدرسه فرزندتان کمک کنید.
+- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
 
 <%= view :signup_button %>

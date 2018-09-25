@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ Disponibilizaremos diversos tutoriais divertidos com duração de uma hora, cria
 - Exigem um tempo mínimo de preparação dos organizadores
 - São autoexplicativos, o que permite que os alunos trabalhem em seu próprio ritmo e nível de habilidade
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Planeje suas necessidades de hardware (computadores são opcionais)
 
 A melhor experiência do Hour of Code será com computadores conectados à Internet. Mas você não precisa de um computador para cada participante, e pode até fazer a Hora do Código sem um computador.
 
 - **Teste os tutoriais nos computadores ou dispositivos dos alunos.** Verifique se eles funcionam da maneira adequada (com som e vídeo).
-- **Visualize a página de parabenização** para saber o que os alunos veem quando terminam. 
+- **Visualize a página de parabenização** para saber o que os alunos veem quando terminam.
 - **Forneça fones de ouvido para o seu grupo** ou peça aos alunos que tragam seus próprios fones, se o tutorial escolhido funcionar melhor com som.
 
 ## 3) Programe-se com antecedência com base na tecnologia disponível

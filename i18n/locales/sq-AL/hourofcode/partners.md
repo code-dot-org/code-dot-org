@@ -119,19 +119,13 @@ Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së K
 
 * * *
 
-# Partnerët Kryesorë Të Promovimit
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
-* * *
-
-# Partnerët Ndërkombëtarë
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së K
 
 * * *
 
-# Partnerët Plotësues
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

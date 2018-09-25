@@ -1,4 +1,3 @@
----
 it:
   data:
     blocks:
@@ -13,237 +12,59 @@ it:
             '"hue"': tonalità
             '"saturation"': saturazione
             '"brightness"': luminosità
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Seguente
-            '"prev"': Precedente
-            '"rand"': Casuale
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: tutto
-            '"unicorn"': Unicorno
-            '"mrwiggles"': MrOndulino
-          MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Seguente
-            '"prev"': Precedente
-            '"rand"': Casuale
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: tutto
-            '"unicorn"': Unicorno
           MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Seguente
             '"prev"': Precedente
             '"rand"': Casuale
+            MOVES.Rest: Nessuno
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Seguente
             '"prev"': Precedente
             '"rand"': Casuale
+            MOVES.Rest: Nessuno
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Seguente
-            '"prev"': Precedente
-            '"rand"': Casuale
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"height"': altezza
             '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"direction"': direzione di movimento
             '"tint"': tinta
-      Dancelab_distance:
-        text: distanza tra {LOCATION1} e {LOCATION2}
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: tutto
-            '"unicorn"': Unicorno
           MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Seguente
             '"prev"': Precedente
             '"rand"': Casuale
+            MOVES.Rest: Nessuno
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Seguente
-            '"prev"': Precedente
-            '"rand"': Casuale
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Seguente
             '"prev"': Precedente
             '"rand"': Casuale
+            MOVES.Rest: Nessuno
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Dormi
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Seguente
-            '"prev"': Precedente
-            '"rand"': Casuale
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Seguente
-            '"prev"': Precedente
-            '"rand"': Casuale
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Dormi
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Seguente
-            '"prev"': Precedente
-            '"rand"': Casuale
       Dancelab_everySeconds:
-        text: 'ogni {N} {UNIT} '
+        text: 'ogni [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': misure
@@ -254,9 +75,7 @@ it:
             measures: Misure
             seconds: Secondi
       Dancelab_everyVerseChorus:
-        text: 'ogni {UNIT} '
-      Dancelab_frameRate:
-        text: imposta il framerate a {RATE}
+        text: 'ogni [UNIT][0] '
       Dancelab_getEnergy:
         options:
           RANGE:
@@ -264,77 +83,54 @@ it:
             '"mid"': medio
             '"high"': alto
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"height"': altezza
             '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"direction"': direzione di movimento
             '"tint"': tinta
       Dancelab_getTime:
         options:
           UNIT:
             '"measures"': Misure
             '"seconds"': Secondi
-      Dancelab_helloWorld:
-        text: ciao mondo
-      Dancelab_isTouching:
-        text: "{THIS} sta toccando {TARGET}"
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Nessuno
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": a sinistra
+            "{x: 300, y: 200}": a destra
+            "{x: 200, y: 200}": centro
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": un oggetto a caso
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: tutto
-            '"unicorn"': Unicorno
-            '"mrwiggles"': MrOndulino
           FORMAT:
             '"grid"': griglia
             '"column"': colonna
-      Dancelab_locationCenter:
-        text: centro
-      Dancelab_locationPointer:
-        text: posizione del puntatore
-      Dancelab_location_picker:
-        text: "{LOCATION}"
       Dancelab_makeNewDanceSprite:
         options:
-          COSTUME:
-            '"unicorn"': Unicorno
-            '"mrwiggles"': MrOndulino
-      Dancelab_makeNewDanceSpriteRight:
-        options:
-          COSTUME:
-            '"unicorn"': Unicorno
-            '"mrwiggles"': MrOndulino
-      Dancelab_makeNewDanceSpriteSync:
-        options:
-          COSTUME:
-            '"alien"': Alieno
-            '"mrwiggles"': MrOndulino
-            '"pizza"': Pizza
-            '"unicorn"': Unicorno
-      Dancelab_makeNewDanceSpriteTest:
-        options:
-          COSTUME:
-            '"unicorn"': Unicorno
-            '"mrwiggles"': MrOndulino
-      Dancelab_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': dimensione
-            '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"direction"': direzione di movimento
-            '"tint"': tinta
-          RANGE:
-            '"mid"': medio
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': a destra
-            '"left"': a sinistra
+          LOCATION:
+            "{x: 100, y: 200}": a sinistra
+            "{x: 300, y: 200}": a destra
+            "{x: 200, y: 200}": centro
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
       Dancelab_randomColor:
         text: colore scelto a caso
       Dancelab_setBackgroundEffect:
@@ -345,7 +141,7 @@ it:
             '"diamonds"': Diamanti
             "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Casuale
       Dancelab_setDanceSpeed:
-        text: cambia la velocità di ballo di {SPRITE} a {SPEED}
+        text: cambia la velocità di ballo di [SPRITE][0] a [SPEED][1]
         options:
           SPEED:
             '1': normale
@@ -354,22 +150,18 @@ it:
             '0.5': lento
             '0.25': molto lento
       Dancelab_setForegroundEffect:
-        text: imposta effetto di primo piano {EFFECT}
+        text: imposta effetto di primo piano [EFFECT][0]
         options:
           EFFECT:
             '"none"': Nessuno
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Casuale
-      Dancelab_setFreq:
-        text: imposta frequenza {FREQ}
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"height"': altezza
             '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
             '"tint"': tinta
-            '"dance_speed"': velocità di ballo
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -381,51 +173,31 @@ it:
           VISIBILITY:
             'true': visibile
             'false': invisibile
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': dimensione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"costume"': costume
-            '"direction"': direzione di movimento
-            '"rotation"': rotazione o direzione
-            '"tint"': tinta
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"height"': altezza
             '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
-            '"direction"': direzione di movimento
             '"tint"': tinta
           RANGE:
+            '"bass"': basso
             '"mid"': medio
-      Dancelab_startOscillator:
-        text: avvia oscillatore
-      Dancelab_startVisualizer:
-        text: mostra visualizzatore
+            '"treble"': alto
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"height"': altezza
             '"rotation"': rotazione
-            '"x"': posizione x
-            '"y"': posizione y
             '"direction"': direzione di movimento
             '"tint"': tinta
-            '"dance_speed"': velocità di ballo
           RANGE:
+            '"bass"': basso
             '"mid"': medio
-      Dancelab_stopOscillator:
-        text: ferma oscillatore
+            '"treble"': alto
       Dancelab_whenKey:
-        text: quando {KEY} è premuto
+        text: quando [KEY][0] è premuto
         options:
           KEY:
             '"up"': in alto
@@ -440,13 +212,11 @@ it:
       Dancelab_whenPeak:
         options:
           RANGE:
-            '0': bass
+            '0': basso
             '1': medio
-            '2': treble
-      Dancelab_whenTouching:
-        text: quando {SPRITE1} tocca {SPRITE2}
+            '2': alto
       Dancelab_whileKey:
-        text: quando {KEY} è premuto
+        text: quando [KEY][0] è premuto
         options:
           KEY:
             '"up"': in alto
@@ -458,8 +228,6 @@ it:
             '"w"': w
             '"s"': s
             '"d"': d
-      Dancelab_whileTouching:
-        text: quando {SPRITE1} sta toccando {SPRITE2}
       gamelab_changeColor:
         options:
           METHOD:
@@ -482,15 +250,15 @@ it:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': vero
-            'false': falso
+            'true': 'vero'
+            'false': 'falso'
       gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
+        text: "[SPRITE][0] [COSTUME][1]"
         options:
           COSTUME:
             '"costume"': costume
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -500,20 +268,20 @@ it:
             '"direction"': direzione di movimento
             '"tint"': tinta
       gamelab_isTouching:
-        text: "{THIS} sta toccando {TARGET}"
+        text: "[THIS][0] sta toccando [TARGET][1]"
       gamelab_locationDelta:
         options:
           DIR:
             "'random'": un oggetto a caso
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
       gamelab_moveInDirection2:
-        text: sposta {SPRITE} di {DISTANCE} pixel verso {DIRECTION}
+        text: sposta [SPRITE][0] di [DISTANCE][1] pixel verso [DIRECTION][2]
       gamelab_randColor:
         text: colore scelto a caso
       gamelab_randomColor:
@@ -560,14 +328,14 @@ it:
           OP:
             '"="': "="
             '">"': ">"
-            '"<"': "\\<"
+            '"<"': "&lt;"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
       gamelab_whenKey:
-        text: quando {KEY} è premuto
+        text: quando [KEY][0] è premuto
         options:
           KEY:
             '"up"': in alto
@@ -587,9 +355,9 @@ it:
             "'left'": a sinistra
             "'right'": a destra
       gamelab_whenTouching:
-        text: quando {SPRITE1} tocca {SPRITE2}
+        text: quando [SPRITE1][0] tocca [SPRITE2][1]
       gamelab_whileKey:
-        text: quando {KEY} è premuto
+        text: quando [KEY][0] è premuto
         options:
           KEY:
             '"up"': in alto
@@ -602,7 +370,7 @@ it:
             '"s"': s
             '"d"': d
       gamelab_whileTouching:
-        text: quando {SPRITE1} sta toccando {SPRITE2}
+        text: quando [SPRITE1][0] sta toccando [SPRITE2][1]
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -612,12 +380,12 @@ it:
             '"y"': posizione y
             '"direction"': direzione di movimento
       Mikelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
+        text: "[SPRITE][0] [COSTUME][1]"
         options:
           COSTUME:
             '"costume"': costume
       Mikelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -627,12 +395,18 @@ it:
             '"direction"': direzione di movimento
             '"tint"': tinta
       Mikelab_isAnim:
-        text: "{SPRITE} {COSTUME}"
+        text: "[SPRITE][0] [COSTUME][1]"
         options:
           COSTUME:
             '"costume"': costume
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
+      Mikelab_randomColor:
+        text: colore scelto a caso
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -642,18 +416,51 @@ it:
             '"y"': posizione y
             '"direction"': direzione di movimento
             '"tint"': tinta
-      Vanilla_randomColor:
-        text: colore scelto a caso
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': a destra
+            '"left"': a sinistra
+      Mikelab_whenKeyPressed:
+        text: quando [KEY][0] è premuto
+        options:
+          KEY:
+            '"up"': si preme sulla freccia verso l'alto
+            '"down"': si preme sulla freccia verso il basso
+            '"left"': si preme sulla freccia verso sinistra
+            '"right"': si preme sulla freccia verso destra
+            '"w"': O
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': si preme sulla freccia verso l'alto
+            '"down"': si preme sulla freccia verso il basso
+            '"left"': si preme sulla freccia verso sinistra
+            '"right"': si preme sulla freccia verso destra
+            '"w"': O
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': si preme sulla freccia verso l'alto
+            '"down"': si preme sulla freccia verso il basso
+            '"left"': si preme sulla freccia verso sinistra
+            '"right"': si preme sulla freccia verso destra
       Vector_positionCenter:
         text: centro
       Vector_push:
-        text: imposta velocità {VECTOR}
+        text: imposta velocità [VECTOR][0]
       Vector_setColor:
-        text: imposta colore a {COLOR}
+        text: imposta colore a [COLOR][0]
       Vector_setSize:
-        text: imposta larghezza {WIDTH} altezza {HEIGHT}
+        text: imposta larghezza [WIDTH][0] altezza [HEIGHT][1]
       Vector_where:
-        text: per ogni personaggio dove {PROPERTY} è {VALUE} esegui {STATEMENT}
+        text: per ogni personaggio dove [PROPERTY][0] è [VALUE][1] esegui [STATEMENT][2]
         options:
           PROPERTY:
             "'shapeColor'": colore

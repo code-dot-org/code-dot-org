@@ -15,6 +15,11 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     end
+    trait :local_summer_workshop_upcoming do
+      local_summer_workshop
+      num_sessions 5
+      sessions_from Date.today + 3.months
+    end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_FIT
@@ -85,6 +90,37 @@ FactoryGirl.define do
         end
       end
     end
+  end
+
+  factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
+    mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
+  end
+
+  factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
+    # Link to partner-specific site.
+    link_to_partner_application "https://code.org/specific-link"
+    mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
+  end
+
+  factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
+    # Applications are closed.
+    apps_open_date_csp_teacher {Date.today - 5.days}
+    apps_open_date_csd_teacher {Date.today - 6.days}
+    apps_close_date_csp_teacher {Date.today - 2.days}
+    apps_close_date_csd_teacher {Date.today - 3.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
+  end
+
+  factory :regional_partner_newjersey, parent: :regional_partner_with_summer_workshops do
+    # No contact details, and no workshops submitted.
+    contact_name nil
+    contact_email nil
+    apps_open_date_csp_teacher nil
+    apps_open_date_csd_teacher nil
+    apps_close_date_csp_teacher nil
+    apps_close_date_csd_teacher nil
+    mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
@@ -825,8 +861,63 @@ FactoryGirl.define do
 
   factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
 
-  factory :pd_principal_approval1920_application_hash_common, parent: :pd_principal_approval1819_application_hash_common
-  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1819_application_hash
+  # default to do_you_approve: other
+  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval1920_application_hash_common, parent: :form_data_hash do
+    title 'Dr.'
+    first_name 'Albus'
+    last_name 'Dumbledore'
+    email 'albus@hogwarts.edu'
+    confirm_principal true
+
+    trait :approved_no do
+      do_you_approve 'No'
+    end
+
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      going_to_teach 'Yes'
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50%'
+      white '16%'
+      black '15%'
+      hispanic '14%'
+      asian '13%'
+      pacific_islander '12%'
+      american_indian '11%'
+      other '10%'
+      committed_to_master_schedule 'Yes'
+      cspImplementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
+      replace_course Pd::Application::PrincipalApproval1920Application::REPLACE_COURSE_NO
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
+      how_heard Pd::Application::PrincipalApproval1920Application.options[:how_heard][0]
+    end
+
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
 
   factory :pd_principal_approval1920_application, class: 'Pd::Application::PrincipalApproval1920Application' do
     association :teacher_application, factory: :pd_teacher1920_application

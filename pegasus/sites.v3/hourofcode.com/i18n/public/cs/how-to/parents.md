@@ -1,47 +1,48 @@
 ---
-title: <%= hoc_s(:title_how_to_parents) %>
+title: <%= hoc_s(:title_how_to_parents).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Jak si projít Hodinu Kódu s Vaším dítětem
+# How to do an Hour of Code with your child
 
-Projděte si Hodinu Kódu doma, nebo nabídněte že jí ukážete u něj ve třídě. Tady je jak na to:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+---
 
 ## 1) Pusťte si toto video "jak na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Zvolte si výukový kurz:
+## 2) Choose a tutorial
 
-Poskytujeme různé zábavné, hodinové kurzy pro studenty všech věkových kategorií, vytvořené řadou partnerů. [ Vyzkoušejte si je !](<%= resolve_url('/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-**Všechny Hodiny Kódu jsou individuální a umožňují vašemu dítěti pracovat svým vlastním tempem.**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Připravte si techniku
 
-Nejlepší zkušenosti s Hodinou kódu bude s počítači připojenými na Internet. Ale ne vždy je třeba **počítač**. Existuje mnoho činností, které mohou být provedeny bez jakékoliv technologie.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Vyzkoušej si výukové kurzy na počítačích nebo zařízeních. Ujisti se, že fungují správně, se zvukem a videem.
-- **Chcete se učit společně s dítětem?** Zkuste [ párové programování.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Informatika je společenská a týmová.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 4) začněte Hodinu kódu tímto inspirativním videem
+## 4) Start your Hour of Code with an inspiring video
 
 Začněte vaší Hodinu kódu inspirováním dítěte a diskusí o tom, jak informatika ovlivňuje každou část našich životů.
 
-**Ukaž inspirativní video:**
+**Ukažte inspirativní video:**
 
-- Původní video od Code.org, ukazující Billa Gates, Zuckerberga a NBA hvězdu Chrise Boshe (Délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [Mezinárodní video Hodiny Kódu](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama vyzývá všechny studenty, aby se učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Původní video z Code.org, ukazující Billa Gatese, Marka Zuckerberga a basketbalovou hvězdu Chrise Boshe (Délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [Prezident Obama povzbuzující všechny studenty ke studiu informatiky](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Najděte další inspirativní [zdroje](<%= resolve_url('https://code.org/inspire') %>) a [videa](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Je to v pořádku, pokud vy a vaše dítě jste noví v informatice. Zde jsou některé nápady, jak uvést aktivitu Hodinu kódu:
 
-- Vysvětlete způsoby technologického ovlivnění našich životů, s příklady o které budou mít zájem, jak chlapci tak i dívky (tématem může být o záchrana životů, pomoc lidem, propojování lidí atd.).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Dejte dohromady seznam věcí používající kód v každodenním životě.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
+- Podívejte se na několik tipů, jak [zaujmout dívky informatikou](http://<%= codeorg_url('/girls') %>).
 
 Chcete další nápady? Podívejte se na naše [šablony hodiny](/files/AfterschoolEducatorLessonPlanOutline.docx) pro tipy a zkušenosti.
 
@@ -61,19 +62,17 @@ Je v pořádku říci:
 
 ## 6) Oslavte úspěch
 
-[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
+[Vytiskněte certifikáty](<%= codeorg_url('/certificates') %>) pro své studenty (a pro sebe).
 
 Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Použijte #HourOfCode a @codeorg, umíme též zvýraznit váš úspěch!
 
-**Další zdroje Hodiny Kódu:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Projděte si [Nejčastěji kladené otázky (FAQ) Hodiny Kódu ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Co následuje po Hodině kódu?
 
-**Co následuje po Hodině kódu?**
-
-Hodina kódu je pouze první krok, na cestě k poučení o tom, jak technologie funguje, a jak vytvářet softwarové aplikace. K pokračování této cesty:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
-- Pomozte [ podpořit](<%= resolve_url('/promote') %>) vzdělání v informatice ve škole vašeho dítěte.
+- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>

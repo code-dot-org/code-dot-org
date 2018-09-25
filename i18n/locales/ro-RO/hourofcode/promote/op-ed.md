@@ -5,43 +5,44 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Mai jos se gaseste un model de acordare de sprinjin pentru Saptamana Stiintei Computerului si programarii in Educatie si scopurile sale, care poate fi folosit de stat, legislatorii locali, liderii de afaceri etc.
+# Write an op-ed in support of Computer Science Education Week
 
-  
+### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
 
+### Visit [advocacy.code.org](%= resolve_url('https://advocacy.code.org') %) to find state specific information about computer science.
 
-Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
+* * *
 
-**Titlu: Utilizarea computerului la Locurile de Munca**
+#### Title: Computing…Where the Jobs Are
 
-**De [NUME] si [CO-AUTORI PRECUM PEDAGOG, INSPECTOR SAU LIDER DE AFACERI]**
+#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Computerele sunt peste tot. Sunt in buzunarele noastre. Pe peretii nostri. In masinile noastre. Sunt un element indispensabil al infrastructurii noastre, de la retelele electrice - la semafoare, pana la functionarea pietelor noastre financiare. Si toate aceste computere au un lucru in comun. Ele depind de partea de programare pentru a le dicta ce sa execute.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Dar cine mai exact va implementa aceste programe?
+But who exactly is going to write this software?
 
-Luând în considerare cât de repede lumea noastra este tranformată de tehnologie, probabil vă așteptați ca numărul de elevi care fac informatică în școala generală în ziua de azi să fie foarte ridicat. Dar nu e așa. De fapt, tot mai puțini elevi fac informatică și tot mai puține școli o predau, față de acum un deceniu.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-Acum când nevoia de programatori iscusiți este tot mai mare, sunt tot mai puțini informaticieni. Chiar și acum când numarul șomerilor este foarte mare, mii de job-uri, multe dintre ele chiar in **[INSERT STATE/CITY]**, rămân neocupate deoarece nu sunt suficiente persoane care să aibă abilitățle necesare.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
-De ce se întâmplă asta? Și cum putem rezolva asta?
+Why is this? And how can we address it?
 
-Problema începe în școlile generale și în licee. Nouă din zece școli nu oferă ore de informatică. În **[SCHOOL DISTRICT]** anul trecut, doar **[NUMBER]** elevi au luat examenul de informatica, nivel de colegiu, Advance Placement (AP), doar **[%]** din toți studenții care au dat acest examen în statul nostru. Pur și simplu nu facem tot ce ne stă în puteri pentru a pregăti sau încuraja elevii să urmeze aceste cariere vitale și lucrative.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Aproape toate inovațiile majore de calcul au fost inventate în această țară, dar suntem în pericol de a pierde acest avantaj dacă nu acționăm acum.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Trebuie să facem niște schimbări.
+We need to make some changes.
 
-**[OPȚIONAL PENTRU STATELE ÎN CARE ACEST LUCRU SE APLICĂ]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-O schimbare pozitiva ar fi sa permita cursuri riguroase de stiinta computerului si programare pentru a satisface cerinta unor licee de matematica sau stiinte. In **[INTRODUCETI STAT]**, studierea stiintei computerului este electiva. Avand in vedere cerintele academice, elevii nu isi pot permite sa ia cursuri de stiinta calculatorului elective. Si prin aceasta schimbare vom aduce un mare impact. In statele in care cursurile de stiinta computerului conteaza la cerintele de absolvire, cursurile sunt cu 50% mai mari si rata participarii minoritatilor este mai mare decat in statele in care aceasta meterie este considereata electiva.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-De asemenea, ar trebui sa lucram cu elevi aflati la o varsta frageda, pentru a le putea trezi interesul in stiinta computer-ului si programare. Copiii noştri nu ar trebui să ştie doar cum să utilizeze aplicaţii şi jocuri video-acestia ar trebui sa stie cum sa le creeze. Copiii pot învăţa elementele de bază de programare încă din clasa a doua.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Trebuie sa recrutam mai multi profesori de stiinta computerului si sa incurajam dezvoltarea profesionala in domeniul lor. Astăzi, există multe resurse online, care pot ajuta profesorii sa acceseze si sa fie la curent cu cea mai noua tehnologie pentru elevii lor.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Potrivit Biroului de statistică a muncii, până în 2020, vor fi disponibile 9,2 milioane de locuri de muncă în domenii STEM. Jumătate din aceste locuri de muncă-4,6 milioane — vor fi in It si tehnologie. Si stiinta calculatorului este intr-o continua crestere a cunostintelor fundamentale ale secolului 21. Cine va ocupa aceste locuri de munca disponibile daca elevilor nu le este data oportunitatea de a aduna aceste abilitati necesare?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-Aceasta saptamana <%= campaign_date('full') %>, este numita Saptamana Educatiei in Tehnologia computerelor si programare. In scolile din **[STATUL]**, elevii vor participa la un eveniment national marca Hour of Code, demistificand ideea stiintei computerului si speram ca va fi stimulat apetitul lor de cunoastere si vor invata mai multe. Eu ma voi alatura lor si va invit si pe voi sa va alaturati. Toata lumea ar trebui sa invete cum sa programeze. Vizitaţi https://hourofcode.com/<%= @country %> pentru a afla mai multe şi pentru a începe. Și sprijiniți eforturile noastre pentru a aduce informatica în cât mai multe școli din **[STATE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
 <%= view :signup_button %>
