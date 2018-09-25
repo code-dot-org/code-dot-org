@@ -8,6 +8,7 @@ bg:
       already_authenticated: "Вече сте влезли."
       inactive: "Вашият акаунт все още не е активиран."
       invalid: "Невалиден имейл или парола."
+      invalid_token: "Направено е невалидно удостоверяване."
       locked: "Вашият акаунт е заключен."
       not_found_in_database: "Невалиден имейл или парола."
       timeout: "Вашата сесия е изтекла, моля, влезте отново, за да продължите."
@@ -62,6 +63,9 @@ bg:
       new:
         header: "Изпращане на покана"
         submit_button: "Изпратете покана"
+      edit:
+        header: "Въведете паролата си"
+        submit_button: "Задаване на парола"
     mailer:
       invitation_instructions:
         subject: 'Инструкции за покана'

@@ -8558,16 +8558,50 @@ fr:
         <i>Play
         the game, and make it to level 3 to move to the next puzzle.</i>
       Course 4 Play Lab Params 2_markdown_instruction: "Now we've got flags that\nare too high for our current jump! Let's use both the \"up\" and \"down\"\narrows so that we can have multiple jump heights.  \\r\n\\r\nWe need to add\na parameter to our jump function called `height`.  \\r\n- The up arrow should\ncause the dog to jump 200 pixels \\r\n- The down arrow should make it jump\nonly 100 pixels. \\r\n"
-      Course 4 Play Lab Params 3_markdown_instruction: "We have added another parameter\nto the jump function so that we can use it with other actors. Each actor is\nrepresented by a number, starting from one. \\r\n\\r\n<br/>\\r\nEdit the `jump`\nfunction so that it uses the `actor` parameter to make the correct character\njump. "
+      Course 4 Play Lab Params 3_markdown_instruction: |-
+        We have added another parameter
+        to the jump function so that we can use it with other actors. Each actor is
+        represented by a number, starting from one. \\r
+        \\r
+        <br/>\\r
+        Edit the `jump`
+        function so that it uses the `actor` parameter to make the correct character
+        jump. 
       Course 4 Play Lab Params 4_markdown_instruction: "Here's a function called\n`patrol`. \\r\n\\r\nEdit `patrol` to move Cat up 400 pixels and then down 400\npixels."
       Course 4 Play Lab Params 7_markdown_instruction: "Let's have some fun! Look\nat the code provided to see if you can figure out what each block does.  \\r\n\\r\nWhen\nyou're done, use the arrow keys to control Dog and collect all of the flags.\\r\n\\r\n**NOTE:**\nYou don't need to make any changes to the program"
       Course 4 Play Lab Params 8_markdown_instruction: Utilise un bloc « Quand acteur touche » pour renvoyer le Chien en haut à gauche UNIQUEMENT s'il touche un des autres acteurs.
       Course 4 Play Lab Params 9_markdown_instruction: "Here's our game from an\nearlier stage but most of the code is hidden. We've added a new function\ncalled `score_points.`\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\nEdit the function\nso that a new parameter called `points` is added to `player_score`.  \\r\n<br/>\\r\nThe\nvariable `player_score` should increase each time Dog tags Cat with pie, and\ndecrease each time that Cat tags Dog with a sandwich.\\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*Note:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle.*"
-      Course 4 Play Lab Vars 1_markdown_instruction: "This time you don't have to\nwrite any code, just hit `Run` to play the game! \\r\n\\r\n<br/>\\r\nIn this\ngame, you're the dog who is trying to collect more flags than the cat. Use\nthe down arrow to control the dog. Press `Finish` when you're done playing."
+      Course 4 Play Lab Vars 1_markdown_instruction: |-
+        This time you don't have to
+        write any code, just hit `Run` to play the game! \\r
+        \\r
+        <br/>\\r
+        In this
+        game, you're the dog who is trying to collect more flags than the cat. Use
+        the down arrow to control the dog. Press `Finish` when you're done playing.
       Course 4 Play Lab Vars 2_markdown_instruction: La course dans ce dernier puzzle n'était pas très équitable ! Change la variable «Vitesse du chien» pour t'assurer que tu peux obtenir plus de drapeaux que le chat. Le premier à obtenir 10 drapeaux gagne !
       Course 4 Play Lab Vars 3_markdown_instruction: "Here's a new kind of game!\n\\r\n\\r\nYou don't need to change anything on this level.\\r\n\\r\n**Directions:**\nUse the left and right arrows to move, and the up arrow to jump. See if you\ncan collect all of the flags."
       Course 4 Play Lab Vars 4_markdown_instruction: "Now we're using a variable\ncalled `height` to control how high the dog can jump. Update the `height`\nvariable so that the dog can jump high enough to reach all the flags. \\r\n"
-      Course 4 Play Lab Vars 6_markdown_instruction: "<h5><b>\\r\nIn our game, how\nshould we score points? \\r\n</b></h5> \\r\n<br/>\\r\n\\r\n1. Add 1 to your `points`\nvariable each time Dog hits Cat with a piece of pie.  <br/>    <br/> \\r\n2.\nUse the `when actor 2 touches anything` event to trigger an update to your\nscore. You can increment your variable by setting `points = points + 1.`  <br/>   <br/>\n\\r\n3. Get your score up to 10 to pass the level.\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**Note:**\nUse the right arrow to throw pie!\\r\n</h4>"
+      Course 4 Play Lab Vars 6_markdown_instruction: |-
+        <h5><b>\\r
+        In our game, how
+        should we score points? \\r
+        </b></h5> \\r
+        <br/>\\r
+        \\r
+        1. Add 1 to your `points`
+        variable each time Dog hits Cat with a piece of pie.  <br/>    <br/> \\r
+        2.
+        Use the `when actor 2 touches anything` event to trigger an update to your
+        score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/>
+        \\r
+        3. Get your score up to 10 to pass the level.\\r
+        \\r
+        <br/><br/>\\r
+        <h4>\\r
+        **Note:**
+        Use the right arrow to throw pie!\\r
+        </h4>
       Course 4 Play Lab Vars 7_markdown_instruction: "Nice, now let's make sure\nthis game isn't too easy to play!  \\r\n\\r\nAny time Dog (actor 1) gets hit\nby a sandwich from Cat (actor 2), you should lose a point. \\r\n\\r\nStart with\n10 points so it's not too hard. Let your score drop down from 10 to 0 to\npass the level."
       Course 4 Play Lab Vars 9_markdown_instruction: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \\r\n\\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \\r\n\\r\n*Hint: scroll down to see all the commands\nin the workspace.*"
       Course 4 Play Labs For Loops 1_markdown_instruction: Nous allons faire dire chaque nombre de 1 à 100 au chien. Utilise une « Boucle pour » et le bloc « Compteur » pour faire parler la variable chaque fois que la boucle est exécutée.
@@ -8618,7 +8652,31 @@ fr:
         **Variables Super Challenge:** You've now learned
         everything you need to know to make a pattern like this! This puzzle is meant
         to be difficult.  Can you stick with it until you figure out the solution?
-      Course 4 SCV 3_markdown_instruction: "**Variables Super Challenge:** You've\nnow learned everything you need to know to solve this puzzle! This game is\nmeant to be difficult.  Can you stick with it until you figure out the solution?\\r\n\\r\n<hr/>\\r\n\\r\nNow\nfor a game of tag!  Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get\nexactly 10 points to win!\\r\nBut be careful, when Cat and Penguin tag each\nother, they take points away.\\r\n\\r\n<strong>\\r\nAdd the blocks necessary\nto make this game work the way it's been explained. \\r\n- How will you get\nDog to move in all directions using the arrow keys?  \\r\n- How will you add\npoints when Dog tags Cat or Penguin?  \\r\n- How will you subtract points when\nCat and Penguin touch?\\r\n</strong>\\r\n\\r\n<hr/>"
+      Course 4 SCV 3_markdown_instruction: |-
+        **Variables Super Challenge:** You've
+        now learned everything you need to know to solve this puzzle! This game is
+        meant to be difficult.  Can you stick with it until you figure out the solution?\\r
+        \\r
+        <hr/>\\r
+        \\r
+        Now
+        for a game of tag!  Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get
+        exactly 10 points to win!\\r
+        But be careful, when Cat and Penguin tag each
+        other, they take points away.\\r
+        \\r
+        <strong>\\r
+        Add the blocks necessary
+        to make this game work the way it's been explained. \\r
+        - How will you get
+        Dog to move in all directions using the arrow keys?  \\r
+        - How will you add
+        points when Dog tags Cat or Penguin?  \\r
+        - How will you subtract points when
+        Cat and Penguin touch?\\r
+        </strong>\\r
+        \\r
+        <hr/>
       Course 4 SCV 6_markdown_instruction: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Variables Super Challenge:** You've now learned\neverything you need to know to make a pattern like this! This puzzle is meant\nto be difficult.  Can you stick with it until you figure out the solution?  "
       Course 4 SCVP 1_markdown_instruction: Crée une fonction avec des paramètres qui permettent à l'Artiste de sauter vers l'avant ou l'arrière de «x» pixels, et aussi vers le haut ou le bas de «y» pixels (en utilisant des chiffres positifs et négatifs).
       CourseF_PlayLab_vars10_markdown_instruction: "Free Play time! Here are all\nof the variables we've played with so far in this stage, as well as a few\nmore in case you want them. \\r\n\\r\nNotice that there are now so many blocks\nin our toolbox that they need to be organized!  Here, we've put each piece\ninto an appropriate category.  Take some time to explore everything that is\navailable. When you're done browsing, make a game or story using repeats,\nvariables, and events.  \\r\n\\r\n*Hint: scroll down to see all the commands\nin the workspace.*"
@@ -9753,7 +9811,7 @@ fr:
         \\r
         ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\\r
         
-      U3L07 - allSeaGrass_markdown_instruction: |+
+      U3L07 - allSeaGrass_markdown_instruction: |-
         # Add Seagrass\\r
         <img src="https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42
         PM.png" style="width: 200px; float: right">\\r
@@ -9766,7 +9824,7 @@ fr:
         *
         **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of
         seagrass using your updated `drawSeagrass` function.
-      U3L07 - allSeaGrass_2018_markdown_instruction: |+
+      U3L07 - allSeaGrass_2018_markdown_instruction: |-
         # Add Seagrass\\r
         <img src="https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42
         PM.png" style="width: 200px; float: right">\\r
@@ -9832,7 +9890,41 @@ fr:
         ![](https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35
         PM.png)
       U3L07 - seaGrass_markdown_instruction: "# Controlling Loops with Parameters\\r\n<img\nsrc=\"https://images.code.org/37d6dbcab707f67485ab3b0cc2a1cae9-image-1443114033511.png\"\nstyle=\"width: 200px; float: right\">\\r\nThis time you will modify one of\nthe lower-level functions - `drawSeagrass`. Notice that the current version\nof `drawSeagrass` actually uses a loop. We want to modify this function so\nthat we control the number of times it loops with **a parameter**.\\r\n\\r\n#\nDo This:\\r\n\\r\n* **Look at** the `drawSeagrass` function to see how it currently\nworks.\\r\n\\r\n* **Add a parameter ** that will be used to indicate how many\nwaves the seagrass makes.\\r\n\\r\n<img src=\"https://images.code.org/1f2f0c5e1fc17e541760c4f0fd24b13b-image-1447887194713.7.10\ndrawSeagrass add param.gif\" style=\"width:350px;padding-left:22px;\">\\r\n\\r\n*\n**Modify the `'for` loop** so that it uses that **parameter** as the number\nof times to repeat.\\r\n\\r\n ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\\r\n\n\\r\n* Finally, **modify `drawAllSeagrass`** to call this new two-param version\nof `drawSeagrass` supplying a reasonable random value for the second parameter\nas well.\\r\n\\r\n<img src=\"https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG\"\nstyle=\"width:400px;padding-left:22px;\">"
-      U3L07 - seaGrass_2018_markdown_instruction: "# Controlling Loops with Parameters\\r\n<img\nsrc=\"https://images.code.org/37d6dbcab707f67485ab3b0cc2a1cae9-image-1443114033511.png\"\nstyle=\"width: 200px; float: right\">\\r\nThis time you will modify one of\nthe lower-level functions - `drawSeagrass`. Notice that the current version\nof `drawSeagrass` actually uses a loop. We want to modify this function so\nthat we control the number of times it loops with **a parameter**.\\r\n\\r\n#\nDo This:\\r\n\\r\n* **Look at** the `drawSeagrass` function to see how it currently\nworks.\\r\n\\r\n* **Add a parameter ** that will be used to indicate how many\nwaves the seagrass makes.\\r\n\\r\n<img src=\"https://images.code.org/1f2f0c5e1fc17e541760c4f0fd24b13b-image-1447887194713.7.10\ndrawSeagrass add param.gif\" style=\"width:350px;padding-left:22px;\">\\r\n\\r\n*\n**Modify the `'for` loop** so that it uses that **parameter** as the number\nof times to repeat.\\r\n\\r\n ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\\r\n\n\\r\n* Finally, **modify `drawAllSeagrass`** to call this new two-param version\nof `drawSeagrass` supplying a reasonable random value for the second parameter\nas well.\\r\n\\r\n<img src=\"https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG\"\nstyle=\"width:400px;padding-left:22px;\">"
+      U3L07 - seaGrass_2018_markdown_instruction: |2
+        # Controlling Loops with Parameters\\r
+        <img
+        src="https://images.code.org/37d6dbcab707f67485ab3b0cc2a1cae9-image-1443114033511.png"
+        style="width: 200px; float: right">\\r
+        This time you will modify one of
+        the lower-level functions - `drawSeagrass`. Notice that the current version
+        of `drawSeagrass` actually uses a loop. We want to modify this function so
+        that we control the number of times it loops with **a parameter**.\\r
+        \\r
+        #
+        Do This:\\r
+        \\r
+        * **Look at** the `drawSeagrass` function to see how it currently
+        works.\\r
+        \\r
+        * **Add a parameter ** that will be used to indicate how many
+        waves the seagrass makes.\\r
+        \\r
+        <img src="https://images.code.org/1f2f0c5e1fc17e541760c4f0fd24b13b-image-1447887194713.7.10
+        drawSeagrass add param.gif" style="width:350px;padding-left:22px;">\\r
+        \\r
+        *
+        **Modify the `'for` loop** so that it uses that **parameter** as the number
+        of times to repeat.\\r
+        \\r
+         ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\\r
+        
+        \\r
+        * Finally, **modify `drawAllSeagrass`** to call this new two-param version
+        of `drawSeagrass` supplying a reasonable random value for the second parameter
+        as well.\\r
+        \\r
+        <img src="https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG"
+        style="width:400px;padding-left:22px;">
       U3L07 - seaStar_markdown_instruction: "# Add Sea Stars\\r\n\\r\nWe're now\nready to add sea stars to our image by writing `drawAllSeaStars`. Recall that\nwe've already written loops to draw much more complex stars. \\r\n\\r\n# Do\nThis:\\r\n\\r\n* **Read** the `drawSeaStar` function to know how it works and\nwhat **parameters** it accepts.\\r\n\\r\n* **First: Update** `drawSeaStar` to\nuse a `for` loop \\r\n\\r\n\\t* `drawSeaStar` has a portion of code that uses\na longer sequence of repetitious single commands.  \\r\n    * Find the pattern\nand \"wrap a loop\" around it so that the repetition is done with a loop rather\nthan many lines of declarative function calls.\\r\n\\r\n* **Second: Add a loop**\nto `drawAllSeaStars`.\\r\n    \\r\n\\t* **Place the commands already inside the\nfunction in your loop.** This way your code will **move the turtle randomly**\naround the **bottom pixels (y values between 360 and 450)** of the image.\\r\n\\r\n*\n**Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\\r\n\\r\n![](https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\nPM.png)"
       U3L07 - seaStar_2018_markdown_instruction: "# Add Sea Stars\\r\n\\r\nWe're now\nready to add sea stars to our image by writing `drawAllSeaStars`. Recall that\nwe've already written loops to draw much more complex stars. \\r\n\\r\n# Do\nThis:\\r\n\\r\n* **Read** the `drawSeaStar` function to know how it works and\nwhat **parameters** it accepts.\\r\n\\r\n* **First: Update** `drawSeaStar` to\nuse a `for` loop \\r\n\\r\n\\t* `drawSeaStar` has a portion of code that uses\na longer sequence of repetitious single commands.  \\r\n    * Find the pattern\nand \"wrap a loop\" around it so that the repetition is done with a loop rather\nthan many lines of declarative function calls.\\r\n\\r\n* **Second: Add a loop**\nto `drawAllSeaStars`.\\r\n    \\r\n\\t* **Place the commands already inside the\nfunction in your loop.** This way your code will **move the turtle randomly**\naround the **bottom pixels (y values between 360 and 450)** of the image.\\r\n\\r\n*\n**Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\\r\n\\r\n![](https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\nPM.png)"
       U3L08 - introUnderTheSea - clone for recovery_markdown_instruction: "# Recover\nyour Under the Sea project code!\\r\n\\r\nBelow you should see your code for\nthe Under the Sea project from CSP Unit 3 - Lesson 8 in the state it was in\naround 3pm ET, Monday Oct. 30, 2017.\\r\n\\r\n**Students:** To get the code\nbelow back into Unit 3 - Lesson 8...\\r\n* Select all your code from the workspace\nbelow (Highlight with mouse, or ctrl+A)\\r\n* Copy it (Edit -> Copy, or ctrl+C)\\r\n*\nPaste it (Edit -> Paste, or ctrl+V) into the project in Unit 3\\r\n    * Here\nis a link to the project that will open in a new window: <a href=\"https://studio.code.org/s/csp3/stage/8/puzzle/17\"\ntarget=_blank>https://studio.code.org/s/csp3/stage/8/puzzle/17</a>\\r\n\\r\n**Teachers:**\nYou can view your students' work here using the blue teacher tray.  Alternatively,\nyou can ask students to use the process above.\\r\n\\r\n**Details:**\\r\n* The\nUnder the Sea code is a \"project\" that sat behind eight levels (\"bubbles\")\n10-17 in Unit 3, Lesson 8.  \\r\n* On Oct. 30, 2017 we updated that project\nin a way that caused code to appear missing for those who had done work prior\nto the change.\\r\n* Your code still exists! It's just associated with the\nold project, which is what we have provided below.\\r\n* You can copy and paste\nyour code from below into any of the current Unit 3, Lesson 8, levels 10-17\nand it will work for all. (In other words, the code for level 17 is actually\nreferring to the same project as levels 10-17)\\r\n\\r\nWe're sorry about this\nmistake and for the inconvenience and disappointment it may have caused. Hopefully,\nyou were able to recover the code you worked so hard on.\\r\n\\r\nIf you have\nfurther questions please submit a bug report (option in the top-right menu)\nor send email to support@code.org\\r\n\\r\nThanks,\\r\n\\r\nCSP Team"

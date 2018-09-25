@@ -153,12 +153,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  OAUTH_PARAMS_TO_STRIP = %w{oauth_token oauth_refresh_token}.freeze
-
-  def self.get_cache_key(oauth_param, user)
-    "#{oauth_param}-#{user.email}"
-  end
-
   private
 
   def sign_in_google_oauth2(user)
@@ -255,8 +249,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def register_new_user(user)
-    move_oauth_params_to_cache(user)
-    session["devise.user_attributes"] = user.attributes
+    PartialRegistration.persist_attributes(session, user)
 
     if SignUpTracking.new_sign_up_experience?(session)
       redirect_to users_finish_sign_up_url
@@ -325,19 +318,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       user.save!
     end
     sign_in_user
-  end
-
-  def move_oauth_params_to_cache(user)
-    # Because some oauth tokens are quite large, we strip them from the session
-    # variables and pass them through via the cache instead - they are pulled out again
-    # from User::new_with_session
-    cache = CDO.shared_cache
-    return unless cache
-    OAUTH_PARAMS_TO_STRIP.each do |param|
-      param_value = user.attributes['properties'].delete(param)
-      cache_key = OmniauthCallbacksController.get_cache_key(param, user)
-      cache.write(cache_key, param_value)
-    end
   end
 
   def just_authorized_google_classroom?

@@ -1,17 +1,12 @@
 {
-  "category": "Sprites",
+  "category": "Actions",
   "config": {
     "func": "changeAnim",
     "inline": false,
-    "blockText": "change sprite called {NAME} \n to costume {COSTUME}",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "blockText": "set {SPRITE}'s to costume to {COSTUME}",
     "args": [
       {
-        "name": "NAME",
+        "name": "SPRITE",
         "assignment": true,
         "customInput": "spritePicker"
       },

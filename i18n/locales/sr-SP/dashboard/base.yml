@@ -189,8 +189,12 @@ sr:
         playlab: 'Направи апликацију'
         artist: 'Нацртај нешто'
         applab: 'Направи апликацију'
-      courses: "курсеви"
       educate_hoc: "Час кода"
+    create_button:
+      create: 'Креирај'
+      artist: 'Уметник'
+      playlab: 'Играоница'
+      flappy: 'Флапи'
     user:
       classroom: 'Почетна страница за учитеље'
       district_dashboard: 'Регионална огласна табла'

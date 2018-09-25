@@ -1,4 +1,3 @@
----
 bn:
   data:
     blocks:
@@ -6,55 +5,9 @@ bn:
         options:
           UNIT:
             '"seconds"': সেকেন্ড
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      Dancelab_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
       Dancelab_changeMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
           DIR:
@@ -63,150 +16,32 @@ bn:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_doMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -215,15 +50,18 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
-      Dancelab_mappingProp:
+            '"height"': উচ্চতা
+      Dancelab_jumpTo:
         options:
-          PROPERTY:
-            '"scale"': আকার
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_makeNewDanceSprite:
         options:
-          DIRECTION:
-            '"right"': ডানে
-            '"left"': বামে
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
       Dancelab_randomColor:
         text: যেকোনো রঙ
       Dancelab_setDanceSpeed:
@@ -238,18 +76,17 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_whenKey:
         options:
           KEY:
@@ -273,8 +110,8 @@ bn:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': সত্যি
-            'false': মিথ্যা
+            'true': 'সত্যি'
+            'false': 'মিথ্যা'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -349,12 +186,46 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      Mikelab_randomColor:
+        text: যেকোনো রঙ
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': আকার
-      Vanilla_randomColor:
-        text: যেকোনো রঙ
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ডানে
+            '"left"': বামে
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"down"': নিচের তীর
+            '"left"': বামের তীর
+            '"right"': ডানমুখী তীর
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"down"': নিচের তীর
+            '"left"': বামের তীর
+            '"right"': ডানমুখী তীর
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"down"': নিচের তীর
+            '"left"': বামের তীর
+            '"right"': ডানমুখী তীর
       craft_ifPath:
         options:
           DIR:

@@ -256,9 +256,7 @@ fil:
         applab: 'Lumikha ng App'
         gamelab: 'Gumawa ng Game Lab na proyekto'
         weblab: 'Gumawa ng Web Lab (beta) na proyekto'
-      home: "Home"
       my_dashboard: "Aking Dashboard"
-      courses: "Mga kurso"
       course_catalog: "Katalogo ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
@@ -293,6 +291,14 @@ fil:
       help_us: "Tulungan Kami"
       teach: "Magturo"
       about: "Tungkol"
+    create_button:
+      create: 'I-create'
+      applab: 'App na Lab'
+      artist: 'Artista'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Home Page ng Teacher'
       district_dashboard: 'Dashboard ng Distrito'

@@ -687,6 +687,7 @@ pt-BR:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
         Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha horizontal.
         Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que você estiver na localização vertical correta, você tem que virar seu artista novamente para trás e pular para trás 320 pixels."
+        Course_4_SCF_1_d: "Antes de desenhar a terceira linha de hexágonos, você precisa virar à direita em 60 graus e avançar 40 pixels.\n\nUma vez que você esteja no local vertical correto, você tem que virar seu artista de volta e retroceder 440 pixels (120 pixels mais distante do que a função `deslocar para baixo / para frente`. "
         Course_4_SCF_1_e: |-
           **Solução:**
           
@@ -873,6 +874,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCF 1a_authored_hint:
+        Course_4_SCF_1a_a: Lembre-se de suas funções da fase 16.
+        Course_4_SCF_1a_b: "Veja este caminho como sua rota principal:\n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
+        Course_4_SCF_1a_c: Você deve considerar usar um laço `para`. Não para as etapas, mas para o parâmetro da função.
         Course_4_SCF_1a_d: |-
           **Solução:**
           
@@ -1096,6 +1100,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCF 1b_authored_hint:
+        Course_4_SCF_1b_a: "Observe que a forma de todos os pontos de mel é semelhante.\n\nBom lugar para uma função!"
+        Course_4_SCF_1b_b: "Veja esta idéia de como a abelha pode viajar: \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
+        Course_4_SCF_1b_c: Você deve considerar o uso de um laço 'para' na distância percorrida pela abelha.
         Course_4_SCF_1b_d: |-
           **Solução:**
           
@@ -1210,11 +1217,19 @@ pt-BR:
           </xml>
       Course 4 SCF 2_authored_hint:
         Course_4_SCF_2_a: Cada octógono tem 40 pixels de lado.
+        Course_4_SCF_2_b: Há um salto de 136 pixels entre cada octógono em cada linha horizontal.
+        Course_4_SCF_2_c: "Antes de desenhar a segunda linha de octógonos, você precisa virar à direita em 45 graus e avançar 96 pixels. \n\nQuando estiver no local vertical correto, você terá que virar seu artista de volta novamente e retroceder 408 pixels. "
+        Course_4_SCF_2_d: "Observe que, como há menos octógonos nas linhas pares, você não precisa retroceder mais para chegar ao ponto inicial das linhas ímpares.\n\nIsso significa que você pode usar a mesma função para todas as linhas."
         Course_4_SCF_2_e: |-
           ** Solução: **
           
           ![Solução blocos] (https://images.code.org/de5a99b0fb4c079504ff7cca9a249f02-image-1469727175091.png)
       Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        Course_4_SCF_3_b: 'Esta é uma série de octógonos com lados que são de comprimento do ''contador'' em pixels. '
+        Course_4_SCF_3_c: 'Cada octógono é chamado de dentro de um laço ''for'' que vai de 200 até 2 por 2. '
+        Course_4_SCF_3_d: 'Não esqueça de virar 22,5 graus no final de cada iteração. '
+        Course_4_SCF_3_e: Tanto a cor de cada octógono como a largura da caneta são controladas pela variável 'contador'.
         Course_4_SCF_3_f: |-
           **Solução:**
           
@@ -1362,6 +1377,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 1_authored_hint:
+        Course_4_SCFL_1_a: "Dê uma olhada nesta opção de movimento:  \n\n! [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        Course_4_SCFL_1_b: 'Tente usar dois laços ''para'': um para subir e pegar o néctar e o outro para descer e fazer mel.'
+        Course_4_SCFL_1_c: "Observe que um laço 'para' precisa de várias execuções de seu interior que se repetem o número de vezes do 'contador' para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma execução para fazer do 'contador' a quantidade de mel."
         Course_4_SCFL_1_d: |-
           **Solução:**
           
@@ -1496,6 +1514,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 1a_authored_hint:
+        Course_4_SCFL_1a_a: Você pode ter que viajar mais longe no geral para usar o menor número de blocos.
+        Course_4_SCFL_1a_b: "Dê uma olhada nesta opção de movimento:  \n\n![](https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)"
+        Course_4_SCFL_1a_c: Um laço 'para' irá ajudá-lo a executar o mesmo padrão, mas com uma mudança no número de passos. Observe que o número de passos necessários diminui de 7 para 5 por 1.
         Course_4_SCFL_1a_d: |-
           **Solução:**
           
@@ -1575,6 +1596,8 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 1b_authored_hint:
+        Course_4_SCFL_1b_a: Tente usar um laço 'para'.
+        Course_4_SCFL_1b_b: "Dê uma olhada nesta opção de movimento:  \n\n![](https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)"
         Course_4_SCFL_1b_c: |-
           **Solução:**
           
@@ -1637,6 +1660,8 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 2_authored_hint:
+        Course_4_SCFL_2_a: "Dê uma olhada nesta opção de movimento:  \n\n![](https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)"
+        Course_4_SCFL_2_b: Observe que há três pontos durante cada iteração deste laço 'para' onde você para de interagir com objetos.
         Course_4_SCFL_2_d: |-
           **Solução:**
           
@@ -5647,11 +5672,21 @@ pt-BR:
           
           ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_b: 'Esta é uma série de octógonos com lados que são de comprimento do ''contador'' em pixels. '
+        courseF_artist_fwp_challenge1_c: 'Cada octógono é chamado de dentro de um laço ''for'' que vai de 200 até 2 por 2. '
+        courseF_artist_fwp_challenge1_d: 'Não esqueça de virar 22,5 graus no final de cada iteração. '
+        courseF_artist_fwp_challenge1_e: Tanto a cor de cada octógono como a largura da caneta são controladas pela variável 'contador'.
         courseF_artist_fwp_challenge1_f: |-
           **Solução:**
           
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_fwp_challenge2_2018_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_b: 'Esta é uma série de octógonos com lados que são de comprimento do ''contador'' em pixels. '
+        courseF_artist_fwp_challenge1_c: 'Cada octógono é chamado de dentro de um laço ''for'' que vai de 200 até 2 por 2. '
+        courseF_artist_fwp_challenge1_d: 'Não esqueça de virar 22,5 graus no final de cada iteração. '
+        courseF_artist_fwp_challenge1_e: Tanto a cor de cada octógono como a largura da caneta são controladas pela variável 'contador'.
         courseF_artist_fwp_challenge1_f: |-
           **Solução:**
           
@@ -5980,6 +6015,9 @@ pt-BR:
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: "** Lembre-se: ** este quebra-cabeça muda cada vez que ele é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`) para resolver o desafio."
       courseF_bee_for_challenge2_authored_hint:
+        courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n! [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Tente usar dois laços ''para'': um para subir e pegar o néctar e o outro para descer e fazer mel.'
+        courseF_bee_for_challenge2_c: "Observe que um laço 'para' precisa de várias execuções de seu interior que se repetem o número de vezes do 'contador' para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma execução para fazer do 'contador' a quantidade de mel."
         courseF_bee_for_challenge2_d: |-
           **Solução:**
           
@@ -6114,6 +6152,9 @@ pt-BR:
           </block>
           </xml>
       courseF_bee_for_challenge2_2018_authored_hint:
+        courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n! [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Tente usar dois laços ''para'': um para subir e pegar o néctar e o outro para descer e fazer mel.'
+        courseF_bee_for_challenge2_c: "Observe que um laço 'para' precisa de várias execuções de seu interior que se repetem o número de vezes do 'contador' para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma execução para fazer do 'contador' a quantidade de mel."
         courseF_bee_for_challenge2_d: |-
           **Solução:**
           
@@ -6248,6 +6289,9 @@ pt-BR:
           </block>
           </xml>
       courseF_bee_for_challenge3_authored_hint:
+        courseF_bee_for_challenge2_a: "Dê uma olhada nesta opção de movimento:  \n\n! [a] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
+        courseF_bee_for_challenge2_b: 'Tente usar dois laços ''para'': um para subir e pegar o néctar e o outro para descer e fazer mel.'
+        courseF_bee_for_challenge2_c: "Observe que um laço 'para' precisa de várias execuções de seu interior que se repetem o número de vezes do 'contador' para seguir o padrão da escada. \n\nO outro laço 'para' só precisa de uma execução para fazer do 'contador' a quantidade de mel."
         courseF_bee_for_challenge2_d: |-
           **Solução:**
           
@@ -7159,10 +7203,12 @@ pt-BR:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
         Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha horizontal.
         Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que você estiver na localização vertical correta, você tem que virar seu artista novamente para trás e pular para trás 320 pixels."
+        Course_4_SCF_1_d: "Antes de desenhar a terceira linha de hexágonos, você precisa virar à direita em 60 graus e avançar 40 pixels.\n\nUma vez que você esteja no local vertical correto, você tem que virar seu artista de volta e retroceder 440 pixels (120 pixels mais distante do que a função `deslocar para baixo / para frente`. "
       grade4_artist_functions_challenge2_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
         Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha horizontal.
         Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que você estiver na localização vertical correta, você tem que virar seu artista novamente para trás e pular para trás 320 pixels."
+        Course_4_SCF_1_d: "Antes de desenhar a terceira linha de hexágonos, você precisa virar à direita em 60 graus e avançar 40 pixels.\n\nUma vez que você esteja no local vertical correto, você tem que virar seu artista de volta e retroceder 440 pixels (120 pixels mais distante do que a função `deslocar para baixo / para frente`. "
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: 'O metade-hexágono tem um ** comprimento de 30 ** e gira para a direita em ** 60 graus **.  '
         Course_4_Artist_11_b: 'Os 2/3 do triângulo tem um ** comprimento de 80 ** e gira para a direita em ** 120 graus **. '
