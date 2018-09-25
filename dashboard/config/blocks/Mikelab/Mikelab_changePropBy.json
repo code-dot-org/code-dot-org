@@ -1,12 +1,13 @@
 {
-  "category": "Sprites",
+  "category": "Actions",
   "config": {
     "func": "changePropBy",
-    "blockText": "change {SPRITE} {PROPERTY} by {VAL}",
+    "blockText": "change {PROPERTY} of {SPRITE} by {VAL}",
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       },
       {
         "name": "PROPERTY",

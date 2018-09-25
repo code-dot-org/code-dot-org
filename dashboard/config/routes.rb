@@ -416,6 +416,7 @@ Dashboard::Application.routes.draw do
       post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
+      get 'regional_partners/find', to: 'regional_partners#find'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
@@ -435,6 +436,8 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
