@@ -1,12 +1,13 @@
 {
-  "category": "Logic",
+  "category": "Booleans",
   "config": {
     "func": "hasBehavior",
     "blockText": "{SPRITE} is currently {BEHAVIOR}",
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       },
       {
         "name": "BEHAVIOR",
