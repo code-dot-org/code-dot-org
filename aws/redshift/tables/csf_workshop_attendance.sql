@@ -98,7 +98,8 @@ FROM sections_geos
 
 )
 
-  SELECT pde.user_id as user_id,
+  SELECT distinct
+         pde.user_id as user_id,
          pdw.course as course,
          pdw.id AS workshop_id, -- section_id in the other table (below)
          CASE WHEN subject in ('Intro Workshop', 'Intro') then 'Intro Workshop' ELSE pdw.subject END as subject,
@@ -118,9 +119,9 @@ FROM sections_geos
          coalesce (pdw.regional_partner_id, rpm.regional_partner_id) AS regional_partner_id,
          wsz.zip as zip,
          coalesce(sa.state_abbreviation, wsz.state) as state,
-         u.name as facilitator_name,
+         --u.name as facilitator_name,
+         FIRST_VALUE(u.name) OVER (PARTITION BY u.studio_person_id  ORDER BY 1 DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as facilitator_name,
          u.studio_person_id as studio_person_id_facilitator,
-         pdf.user_id as facilitator_id,
          sy.school_year,
          min(CASE WHEN pds.start < DATEADD(day,-3,GETDATE()) and pda.id is null then 1 else 0 END) as not_attended
    FROM  dashboard_production_pii.pd_workshops pdw 
@@ -147,11 +148,12 @@ FROM sections_geos
       ON  rpm.regional_partner_id = rp2.id  
   WHERE pdw.course = 'CS Fundamentals'
   AND   pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')
-  group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+  group by 1, 2, 3, 4,  9, 10, 11, 12, 13, 14, 15, 16, 17, u.name, 19, 20
   
 UNION ALL 
 
-    SELECT f.student_user_id user_id,
+    SELECT distinct 
+         f.student_user_id user_id,
          'CS Fundamentals' as course,
          se.id as workshop_id, -- is workshop id in the other table (above)
          'Intro Workshop' as subject,
@@ -160,7 +162,7 @@ UNION ALL
          date_part(dayofweek, workshop_date) day_of_week_workshop,
          date_part(hour, workshop_date) hour_workshop, 
          JSON_EXTRACT_PATH_TEXT(forms.data_text,'type_s') as audience,
-         null as funded,
+         null::smallint as funded,
          null as funding_type,
          case when trim(JSON_EXTRACT_PATH_TEXT(forms.data_text,'capacity_s')) ~ '^[0-9]+$' then trim(JSON_EXTRACT_PATH_TEXT(forms.data_text,'capacity_s'))  else null  end::int as capacity,
          0 AS trained_by_regional_partner,
@@ -168,9 +170,9 @@ UNION ALL
          rpm.regional_partner_id AS regional_partner_id,
          ssz.zip as zip,
          coalesce(sa.state_abbreviation, ssz.state) as state,
-         coalesce(u.name, forms.name) as facilitator_name,
+        -- coalesce(u.name, forms.name) as facilitator_name,
+         coalesce(FIRST_VALUE(u.name) OVER (PARTITION BY u.studio_person_id  ORDER BY u.id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ), forms.name) as facilitator_name,
          u.studio_person_id as studio_person_id_facilitator,
-         se.user_id as facilitator_id,
          sy.school_year, 
          0 as not_attended
     FROM dashboard_production.followers f
