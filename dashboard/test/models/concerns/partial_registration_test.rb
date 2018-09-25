@@ -4,12 +4,12 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   # The PartialRegistration concern is only included in User, so we
   # are testing against User.
 
-  test 'partial_registration? is false when session has no user attributes' do
-    refute User.partial_registration? fake_empty_session
+  test 'in_progress? is false when session has no user attributes' do
+    refute PartialRegistration.in_progress? fake_empty_session
   end
 
-  test 'partial_registration? is true when session has user attributes' do
-    assert User.partial_registration? fake_session
+  test 'in_progress? is true when session has user attributes' do
+    assert PartialRegistration.in_progress? fake_session
   end
 
   test 'new_from_partial_registration raises unless a partial registration is available' do
