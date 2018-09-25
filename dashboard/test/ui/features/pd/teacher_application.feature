@@ -44,8 +44,7 @@ Scenario: Basic teacher application submission
 
   # Section 2
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
-
-  And I press the first "input[name='program']" element
+  And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
   And I press keys "50" for element "input#csHowManyMinutes"
   And I press keys "5" for element "input#csHowManyDaysPerWeek"
@@ -61,7 +60,7 @@ Scenario: Basic teacher application submission
 
   # Section 3
   Then I wait until element "h3" contains text "Section 3: Teaching Background"
-  And I press the first "input[name='subjectsTeaching']" element
+  And I press "input[name='subjectsTeaching']:first" using jQuery
   And I press the first "input[name='doesSchoolRequireCsLicense']" element
   Then I wait until element "textarea#whatLicenseRequired" is visible
     And I press keys "license" for element "textarea#whatLicenseRequired"
@@ -76,7 +75,7 @@ Scenario: Basic teacher application submission
 
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Professional Learning Program Requirements"
-  And I press the first "input[name='committed']" element
+  And I press "input[name='committed']:first" using jQuery
   And I press the first "input[name='payFee']" element
   And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
@@ -85,7 +84,7 @@ Scenario: Basic teacher application submission
 
   # Section 5
   Then I wait until element "h3" contains text "Section 5: Additional Demographic Information"
-  And I press the first "input[name='genderIdentity']" element
+  And I press "input[name='genderIdentity']:first" using jQuery
   And I press the first "input[name='race']" element
   And I press the first "input[name='howHeard']" element
   Then I see no difference for "Section 5: Submission"
@@ -140,6 +139,7 @@ Scenario: Basic teacher application submission
 
   Then I see no difference for "Principal approval form"
 
+  And I scroll the "button[type='submit']" element into view
   And I press the first "button[type='submit']" element
   Then I wait until element "h1" contains text "Thank you for submitting this form!"
   Then I see no difference for "Principal approval confirmation form"
