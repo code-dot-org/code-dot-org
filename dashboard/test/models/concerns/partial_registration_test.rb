@@ -83,6 +83,60 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal 'fake-refresh-token', user.oauth_refresh_token
   end
 
+  test 'persist_attributes puts most attributes in the session' do
+    session = fake_empty_session
+    user = build :user,
+      provider: 'google_oauth2',
+      uid: 'fake-uid'
+
+    PartialRegistration.persist_attributes session, user
+
+    assert_equal user.user_type, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['user_type']
+    assert_equal user.name, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['name']
+    assert_equal user.email, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['email']
+    assert_equal user.provider, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['provider']
+    assert_equal user.uid, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['uid']
+  end
+
+  test 'persist_attributes puts tokens in the cache' do
+    session = fake_empty_session
+    user = build :user,
+      provider: 'google_oauth2',
+      uid: 'fake-uid',
+      oauth_token: 'fake-oauth-token',
+      oauth_refresh_token: 'fake-refresh-token'
+    PartialRegistration.persist_attributes session, user
+
+    # Tokens are in cache
+    assert_equal user.oauth_token, CDO.shared_cache.read("oauth_token-#{user.email}")
+    assert_equal user.oauth_refresh_token, CDO.shared_cache.read("oauth_refresh_token-#{user.email}")
+
+    # ...not in session
+    refute_equal user.oauth_token, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['oauth_token']
+    refute_equal user.oauth_refresh_token, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['oauth_refresh_token']
+  end
+
+  test 'round-trip' do
+    session = fake_empty_session
+    user = build :user,
+      provider: 'google_oauth2',
+      uid: 'fake-uid',
+      oauth_token: 'fake-oauth-token',
+      oauth_refresh_token: 'fake-refresh-token'
+
+    PartialRegistration.persist_attributes session, user
+
+    result_user = User.new_from_partial_registration session
+
+    assert_equal user.user_type, result_user.user_type
+    assert_equal user.name, result_user.name
+    assert_equal user.email, result_user.email
+    assert_equal user.provider, result_user.provider
+    assert_equal user.uid, result_user.uid
+    assert_equal user.oauth_token, result_user.oauth_token
+    assert_equal user.oauth_refresh_token, result_user.oauth_refresh_token
+  end
+
   private
 
   def fake_empty_session
