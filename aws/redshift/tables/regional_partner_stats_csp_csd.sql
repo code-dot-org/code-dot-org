@@ -1,4 +1,4 @@
-drop table if exists analysis_pii.regional_partner_stats_csp_csd;
+sdrop table if exists analysis_pii.regional_partner_stats_csp_csd;
 
 create table analysis_pii.regional_partner_stats_csp_csd 
 AS
@@ -36,7 +36,7 @@ pd_enrollments_with_year as
       on pde.pd_workshop_id = pw.id
       join analysis.school_years sy 
       on pw.started_at between sy.started_at and sy.ended_at
-      and pw.deleted_at is null and pde.deleted_at is null
+      and pw.deleted_at is null and pde.deleted_at is null -- do these 'deleted_at's need to be changed?? probably... pd_workshops can be deleted and its okay?
   )
   SELECT distinct 
          d.studio_person_id,
