@@ -230,7 +230,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
           {this.props.data.payFee === TextFields.noPayFee1920 && this.largeInputFor('scholarshipReasons')}
           {this.radioButtonsFor('willingToTravel')}
           We may offer online academic year workshops for those unable to travel to their
-          local academic year workshops. Important notes.
+          local academic year workshops. Important notes:
           <ol>
             <li>
               The online option for academic year workshops is not guaranteed - we are

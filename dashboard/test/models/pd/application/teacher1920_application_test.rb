@@ -851,6 +851,41 @@ module Pd::Application
       refute Email.exists?(associated_unsent_email.id)
     end
 
+    test 'test non course dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash,
+        completing_on_behalf_of_someone_else: YES,
+        does_school_require_cs_license: YES,
+        pay_fee: TEXT_FIELDS[:no_pay_fee_1920],
+        regional_partner_workshop_ids: [1, 2, 3],
+        what_license_required: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+
+      refute application.valid?
+      assert_equal %w(completingOnBehalfOfName whatLicenseRequired scholarshipReasons ableToAttendMultiple), application.errors.messages[:form_data]
+    end
+
+    test 'test csd dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash_common,
+        :csd,
+        csd_which_grades: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      refute application.valid?
+      assert_equal ['csd_which_grades'], application.errors.messages[:form_data]
+    end
+
+    test 'test csp dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash_common,
+        :csp,
+        csp_which_grades: nil,
+        csp_how_offer: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      refute application.valid?
+      assert_equal %w(csp_which_grades csp_how_offer), application.errors.messages[:form_data]
+    end
+
     private
 
     def assert_status_log(expected, application)
