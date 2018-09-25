@@ -183,6 +183,7 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   test 'address validation fails for PO boxes' do
     Geocoder.expects(:search).with('PO Box 123, Seattle, WA, 98155').returns(
       [OpenStruct.new(
+        city: 'Seattle',
         postal_code: '98155',
         state_code: 'WA'
       )]
