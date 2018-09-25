@@ -47,7 +47,7 @@
         %i.fa.fa-user
       .user_options{style: 'display: none'}
         - short_name = ERB::Util.h(current_user.short_name)
-        .display_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}display_name", username: short_name)
+        .display_name= short_name
         - if current_user.can_pair?
           - if session_pairings.present?
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do

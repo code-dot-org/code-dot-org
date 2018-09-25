@@ -351,7 +351,6 @@ en:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'
-      display_name: '%{username}'
       stats: 'Code Studio'
       settings: 'Account settings'
       logout: 'Sign out'
