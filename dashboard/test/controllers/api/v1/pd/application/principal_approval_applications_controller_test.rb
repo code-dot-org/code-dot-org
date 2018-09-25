@@ -43,7 +43,7 @@ module Api::V1::Pd::Application
         free_lunch_percent: '50%',
         underrepresented_minority_percent: '52.0',
         wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
-        can_pay_fee: 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
+        can_pay_fee: 'Yes, my school or teacher will be able to pay the full program fee.'
       }
       actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
 

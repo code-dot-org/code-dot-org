@@ -73,5 +73,5 @@ Scenario: Can See App Lab/Game Lab View More Links
   Then I wait until element ".ui-project-app-type-area" is in the DOM
   And the project gallery contains 7 project types
   And the project gallery contains 7 view more links
-  And element ".ui-project-app-type-area:eq(4)" contains text "View more App Lab projects"
-  And element ".ui-project-app-type-area:eq(5)" contains text "View more Game Lab projects"
+  And element ".ui-project-app-type-area:eq(1)" contains text "View more App Lab projects"
+  And element ".ui-project-app-type-area:eq(0)" contains text "View more Game Lab projects"
