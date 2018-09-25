@@ -80,8 +80,10 @@ uz:
     confirm: 'Aminmisiz?'
   nav:
     header:
-      courses: "Kurslar"
       educate_hoc: "Dasturlash soati"
+    create_button:
+      create: 'Yaratmoq'
+      applab: 'Ilova labaratoriyasi'
     user:
       classroom: 'O‘qituvchining bosh sahifasi'
   teacher:

@@ -157,8 +157,6 @@ uz:
         5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
       4-5 Suncatchers Multi 1:
         Multiple Choice: Turlicha tanlash
-      CB_Question_3:
-        Y: true
       CSD Prediction Header Size:
         Question: Savol
       'CSP U4L04 Assessment 1 ':
@@ -320,24 +318,8 @@ uz:
         '16': '16'
         17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
         18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-      U2L13 Assessment4:
-        '26': '26'
       U2L13 Assessment4_2018:
         '26': '26'
-      U2L14 Assessment3:
-        'false': 'yolgʻon'
-        'true': 'rost'
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
       U2L19 multichoice 13 MOD 17_2018:
         '0': '0'
         '13': '13'
@@ -349,24 +331,12 @@ uz:
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
       U2L19 mutlichoice 20 mod 15_2018:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
         '20': '20'
         '5': '5'
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
       U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
@@ -430,11 +400,6 @@ uz:
         0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
         1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
         Other: Boshqa
-      cspu5_assess1_fivemore:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_fivemore_2018:
         "-2": "-2"
         '3': '3'
@@ -445,20 +410,12 @@ uz:
         '3': '3'
         '5': '5'
         '8': '8'
-      cspu5_assess1_flowchart:
-        '10': '10'
-        '5': '5'
       cspu5_assess1_flowchart_2018:
         '10': '10'
         '5': '5'
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
-      cspu5_assess1_increase:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_increase_2018:
         '10': '10'
         '13': '13'
@@ -469,15 +426,9 @@ uz:
         '13': '13'
         '5': '5'
         '8': '8'
-      cspu5_assess2_addstrings:
-        result: natija
       cspu5_assess2_addstrings_2018:
         result: natija
       cspu5_assess2_addstrings_exam_prep:
-        result: natija
-      cspu5_assess2_combineString:
-        '10': '10'
-        '55': '55'
         result: natija
       cspu5_assess2_combineString_2018:
         '10': '10'
@@ -487,10 +438,6 @@ uz:
         '10': '10'
         '55': '55'
         result: natija
-      cspu5_assess2_oldEnough:
-        '35': '35'
-        'false': 'yolgʻon'
-        'true': 'rost'
       cspu5_assess2_oldEnough_2018:
         '35': '35'
         'false': 'yolgʻon'
@@ -517,11 +464,6 @@ uz:
         '30': '30'
         '50': '50'
         '75': '75'
-      cspu5_assess3_array1:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
       cspu5_assess3_array1_2018:
         '10': '10'
         '4': '4'
@@ -532,12 +474,6 @@ uz:
         '4': '4'
         '7': '7'
         '9': '9'
-      cspu5_assess3_array2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_array2_2018:
         '2': '2'
         '3': '3'
@@ -550,11 +486,6 @@ uz:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess3_array4:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
       cspu5_assess3_array4_2018:
         '0': '0'
         '1': '1'
@@ -565,11 +496,6 @@ uz:
         '1': '1'
         '2': '2'
         '8': '8'
-      cspu5_assess3_listAppend:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
       cspu5_assess3_listAppend_2018:
         '1': '1'
         '2': '2'
@@ -580,11 +506,6 @@ uz:
         '2': '2'
         '3': '3'
         '6': '6'
-      cspu5_assess3_loopValue1:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
       cspu5_assess3_loopValue1_2018:
         '2': '2'
         '3': '3'
@@ -595,22 +516,12 @@ uz:
         '3': '3'
         '4': '4'
         '5': '5'
-      cspu5_assess3_loopValue2:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_loopValue2_2018:
         '0': '0'
         '4': '4'
         '5': '5'
         '6': '6'
       cspu5_assess3_loopValue2_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -625,12 +536,6 @@ uz:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess4_dataReturns:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
       cspu5_assess4_dataReturns_2018:
         '10': '10'
         '16': '16'
@@ -642,11 +547,6 @@ uz:
         '16': '16'
         '3': '3'
         '4': '4'
-        '9': '9'
-      cspu5_assess4_listOutput:
-        '17': '17'
-        '3': '3'
-        '42': '42'
         '9': '9'
       cspu5_assess4_listOutput_2018:
         '17': '17'
@@ -709,13 +609,7 @@ uz:
       pre-assessment survey q30:
         Other: Boshqa
         Prefer not to answer: Javob bermaslikni ma’qul ko‘raman
-      sarah_test_maggie:
-        Question: Savol
-        test: test
       test me:
         Question: Savol
       unique level name here:
         Question: Savol
-    text_match:
-      U2L07 Assessment4:
-        '43': '43'

@@ -1,4 +1,3 @@
----
 ur:
   data:
     blocks:
@@ -22,19 +21,10 @@ ur:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
+      Dancelab_jumpTo:
         options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_randomColor:
         text: بے ترتیب رنگ
       Dancelab_setDanceSpeed:
@@ -57,7 +47,7 @@ ur:
         options:
           VAL:
             'true': 'True'
-            'false': غلط
+            'false': 'غلط'
       gamelab_locationDelta:
         options:
           DIR:
@@ -78,8 +68,22 @@ ur:
         options:
           KEY:
             '"space"': خلاء
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: بے ترتیب رنگ
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"w"': مغرب
+            '"s"': جنوب
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"w"': مغرب
+            '"s"': جنوب
       craft_ifPath:
         options:
           DIR:

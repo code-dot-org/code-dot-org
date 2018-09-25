@@ -203,8 +203,6 @@ uk:
         playlab: 'Створити програму'
         artist: 'Намалювати щось'
         applab: 'Створити програму в App Lab'
-      home: "Головна"
-      courses: "курси"
       project_gallery: "Проекти"
       educate_overview: "Огляд для педагога"
       educate_elementary: "Початкова школа"
@@ -231,6 +229,14 @@ uk:
       help_us: "Допомога нам"
       teach: "Вчити"
       about: "Про"
+    create_button:
+      create: 'Створити'
+      applab: 'App Lab'
+      artist: 'Художник'
+      gamelab: 'Ігрова лабораторія'
+      playlab: 'Ігрова студія'
+      minecraft: 'Майнкрафт'
+      flappy: 'Пурх'
     user:
       classroom: 'Домашня сторінка вчителя'
       district_dashboard: 'Панель області'

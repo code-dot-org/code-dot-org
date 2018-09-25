@@ -1,4 +1,3 @@
----
 sq:
   data:
     blocks:
@@ -6,55 +5,9 @@ sq:
         options:
           UNIT:
             '"seconds"': sekondat
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
-      Dancelab_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
       Dancelab_changeMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Tjetër
             '"prev"': Paraardhëse
           DIR:
@@ -63,150 +16,32 @@ sq:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Tjetër
             '"prev"': Paraardhëse
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_doMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Tjetër
             '"prev"': Paraardhëse
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Tjetër
             '"prev"': Paraardhëse
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -215,15 +50,18 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
-      Dancelab_mappingProp:
+            '"height"': gjatësia
+      Dancelab_jumpTo:
         options:
-          PROPERTY:
-            '"scale"': madhësia
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
+      Dancelab_makeNewDanceSprite:
         options:
-          DIRECTION:
-            '"right"': djathtas
-            '"left"': majtas
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
       Dancelab_setDanceSpeed:
@@ -238,18 +76,17 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_whenKey:
         options:
           KEY:
@@ -273,8 +110,8 @@ sq:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': e saktë
-            'false': e gabuar
+            'true': 'e saktë'
+            'false': 'e gabuar'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -349,12 +186,46 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      Mikelab_randomColor:
+        text: ngjyrë e rastësishme
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': madhësia
-      Vanilla_randomColor:
-        text: ngjyrë e rastësishme
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': djathtas
+            '"left"': majtas
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': shigjetë drejtuar lart
+            '"down"': shigjetë drejtuar poshtë
+            '"left"': shigjetë drejtuar majtas
+            '"right"': shigjetë drejtuar djathtas
+            '"w"': P
+            '"s"': J
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': shigjetë drejtuar lart
+            '"down"': shigjetë drejtuar poshtë
+            '"left"': shigjetë drejtuar majtas
+            '"right"': shigjetë drejtuar djathtas
+            '"w"': P
+            '"s"': J
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': shigjetë drejtuar lart
+            '"down"': shigjetë drejtuar poshtë
+            '"left"': shigjetë drejtuar majtas
+            '"right"': shigjetë drejtuar djathtas
       craft_ifPath:
         options:
           DIR:

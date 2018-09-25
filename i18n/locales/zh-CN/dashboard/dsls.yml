@@ -1,6 +1,8 @@
 zh-CN:
   data:
     evaluation_multi:
+      U2 evaluation q0:
+        Interpreting visual data to better understand a topic: 可视化表达数据来更好地理解主题
       U5 evaluation q1:
         'No': '不'
         'Yes': '对'
@@ -633,8 +635,6 @@ zh-CN:
         description here: 描述
       'Technique: Frequency Analysis_2018':
         description here: 描述
-      Terminology Recap:
-        description here: 描述
       Terminology Recap_2018:
         description here: 描述
       Tips For Working on Your Own:
@@ -643,26 +643,12 @@ zh-CN:
       Tips For Working on Your Own_2018:
         description here: 描述
         title: 标题
-      U1L1 Student Lesson Introduction:
-        description here: 描述
       U1L1 Student Lesson Introduction_2018:
         description here: 描述
       U1L10 Student Lesson Introduction:
         description here: 描述
         title: 标题
       U1L11 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
-      U1L12 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
-      U1L13 Student Lesson Summary:
-        description here: 描述
-        title: 标题
-      U1L14 Student Lesson Summary:
-        description here: 描述
-        title: 标题
-      U1L15 Student Lesson Summary:
         description here: 描述
         title: 标题
       U1L16 Student Lesson Introduction:
@@ -682,9 +668,6 @@ zh-CN:
         title: 标题
       U1L4 Widget Demo - Video:
         description here: 描述
-      U1L5 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       U1L6 Student Lesson Introduction:
         description here: 描述
         title: 标题
@@ -692,9 +675,6 @@ zh-CN:
         description here: 描述
         title: 标题
       U1L8 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
-      U1L9 Student Lesson Introduction:
         description here: 描述
         title: 标题
       U2L1 Student Lesson Introduction:
@@ -705,8 +685,6 @@ zh-CN:
       U2L12 Student Lesson Introduction:
         description here: 描述
         title: 标题
-      U2L14 Student Lesson Introduction:
-        Cracking the Code: 解析代码
       U2L16 Student Lesson Introduction:
         Alice and Bob and Asymmetric Keys: 爱丽丝和鲍勃与非对称密钥
       U2L17 Student Lesson Introduction:
@@ -715,9 +693,6 @@ zh-CN:
         The Need for Addressing: 寻址的需要
       U2L5 Student Lesson Introduction:
         Packets and Making a Reliable Internet: 数据包和构建一个可信赖的互联网
-      U2L7 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       U2L8 Student Lesson Introduction:
         description here: 描述
         title: 标题
@@ -919,9 +894,6 @@ zh-CN:
       U4L08v2 Student Intro:
         description here: 描述
         title: 标题
-      U4L09 Student Lesson Intro Practice PT big data dilemma:
-        description here: 描述
-        title: 标题
       U4L09 Student Lesson Introduction:
         description here: 描述
         title: 标题
@@ -1078,26 +1050,15 @@ zh-CN:
       Unit 2 Lesson 1 Overview Clone:
         description here: 描述
         title: 标题
-      Unit 4 Lesson 1 Introduction:
-        description here: 描述
-        title: 标题
       Unit 4 Lesson 1 Introduction_2018:
-        description here: 描述
-        title: 标题
-      Unit 4 Lesson 2 Introduction:
         description here: 描述
         title: 标题
       Unit 4 Lesson 2 Introduction_2018:
         description here: 描述
         title: 标题
-      Unit 4 Lesson 5 Introduction:
-        description here: 描述
-        title: 标题
       Unit 4 Lesson 5 Introduction_2018:
         description here: 描述
         title: 标题
-      Unit 4 Lesson 6 Introduction:
-        Cracking the Code: 解析代码
       Unit 4 Lesson 6 Introduction_2018:
         Cracking the Code: 解析代码
       Unit 5 Lesson 1:
@@ -1179,9 +1140,6 @@ zh-CN:
       'Worked Example: If-statements and Robot_2018':
         description here: 描述
         title: 标题
-      brad-repro-bug-000:
-        Brad Repro Bug 000: Brad报告错误000
-        description here: 描述
       brad-test-continue-buttons-in-markdown:
         description here: 描述
       challenges sample 3:
@@ -1373,9 +1331,6 @@ zh-CN:
       csp_unit5_finalassessment_overview_exam_prep:
         description here: 描述
         title: 标题
-      csp_unit_assessment_overview:
-        description here: 描述
-        title: 标题
       csp_unit_assessment_overview_2018:
         description here: 描述
         title: 标题
@@ -1511,10 +1466,6 @@ zh-CN:
       sciPDpart4_S1_L1:
         description here: 描述
         title: 标题
-      swipeRightPassThrough:
-        Recruitment Scenarios Session: 招聘方案会议
-      swipeRightPassThrough-test123:
-        Recruitment Scenarios Session: 招聘方案会议
       test cb level:
         description here: 描述
       test discourse level type:
@@ -1539,9 +1490,6 @@ zh-CN:
         HTTP and Abstraction: HTTP 和抽象
       v2 U1L13 Student Lesson Introduction_2018:
         HTTP and Abstraction: HTTP 和抽象
-      v2 U1L14 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       v2 U1L14 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
@@ -1563,9 +1511,6 @@ zh-CN:
       v2 U1L4 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
-      v2 U1L5 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       v2 U1L5 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
@@ -1575,19 +1520,11 @@ zh-CN:
       v2 U1L6 Student Lesson Introduction_2018:
         Sending Numbers: 发送数字
         description here: 描述
-      v2 U1L8 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       v2 U1L8 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
-      v2 U1L9 Student Lesson Introduction:
-        The Need for Addressing: 寻址的需要
       v2 U1L9 Student Lesson Introduction_2018:
         The Need for Addressing: 寻址的需要
-      v2 U2L1 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       v2 U2L1 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
@@ -1595,9 +1532,6 @@ zh-CN:
         description here: 描述
         title: 标题
       v2 U2L10 Student Lesson Introduction_2018:
-        description here: 描述
-        title: 标题
-      v2 U2L11 Student Lesson Introduction:
         description here: 描述
         title: 标题
       v2 U2L11 Student Lesson Introduction_2018:
@@ -1621,9 +1555,6 @@ zh-CN:
       v2 U2L14 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
-      v2 U2L15 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       v2 U2L15 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
@@ -1633,27 +1564,15 @@ zh-CN:
       v2 U2L2 Student Lesson Summary_2018:
         description here: 描述
         title: 标题
-      v2 U2L3 Student Lesson Summary:
-        description here: 描述
-        title: 标题
       v2 U2L3 Student Lesson Summary_2018:
-        description here: 描述
-        title: 标题
-      v2 U2L4 Student Lesson Summary:
         description here: 描述
         title: 标题
       v2 U2L4 Student Lesson Summary_2018:
         description here: 描述
         title: 标题
-      v2 U2L5 Student Lesson Introduction:
-        Lossy Compression and File Formats: 有损压缩和文件格式
-        description here: 描述
       v2 U2L5 Student Lesson Introduction_2018:
         Lossy Compression and File Formats: 有损压缩和文件格式
         description here: 描述
-      v2 U2L6 Student Lesson Introduction:
-        description here: 描述
-        title: 标题
       v2 U2L6 Student Lesson Introduction_2018:
         description here: 描述
         title: 标题
@@ -1667,9 +1586,6 @@ zh-CN:
         description here: 描述
         title: 标题
       v2 U2L8 Student Lesson Introduction_2018:
-        description here: 描述
-        title: 标题
-      v2 U2L9 Student Lesson Introduction:
         description here: 描述
         title: 标题
       v2 U2L9 Student Lesson Introduction_2018:
@@ -1709,11 +1625,6 @@ zh-CN:
         Functions and Top-Down Design: 函数和至上而下的设计
       v2 U3L6 Student Lesson Introduction_2018:
         Functions and Top-Down Design: 函数和至上而下的设计
-      v2 U4L05 Student Lesson Intro Encryption Caesar:
-        description here: 描述
-        title: 标题
-      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
-        Cracking the Code: 解析代码
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: 用按键组合完成跳舞动作。
@@ -1816,18 +1727,18 @@ zh-CN:
         Matching: 匹配
       PDAlg Design Recipe Video:
         Definition: 定义
+        Intro to Data Types: 数据类型简介
       PDAlg Types Video:
         Image: 图像
+        Intro to Data Types: 数据类型简介
+        Match each data type with its color code: 将每个数据类型与其颜色代码匹配
         Number: 数字
         String: 字符串
+        "https://studio.code.org/script_assets/pd/blue.png": https://studio.code.org/script_assets/pd/blue.png
+        "https://studio.code.org/script_assets/pd/purple.png": https://studio.code.org/script_assets/pd/purple.png
+        "https://studio.code.org/script_assets/pd/teal.png": https://studio.code.org/script_assets/pd/teal.png
       PDK5 What is unplugged:
         Question: 问题
-      'U2L06 - Matching: Label the Diagram':
-        A: A
-        B: B
-        C: C
-        D: D
-        E: 东
       U3L14 - Matching Events to Description:
         click: 单击
       U3L19 - MATCH what are values of abc:
@@ -1855,7 +1766,14 @@ zh-CN:
         '5': '5'
         '6': '6'
       parts of contract:
+        Here is a contract for a new function. Match each item with the word that describes it.: 这里是一个新的函数的约束。匹配每一项目和描述它的词。
+        Parts of a Contract: 合同的组成
+        domain: 域名
+        example: 示例
+        function name: 函数名称
         image: 图片
+        range: 范围
+        yearbook-picture: 年鉴图片
       test matching image:
         Instructions: 说明
       test matching text:
@@ -2013,9 +1931,6 @@ zh-CN:
       4-5 maze multi 1:
         Maze Multiple Choice: 迷宫的选择题
         Which blocks solve the puzzle?: 哪些模块解决了这一问题？
-      CB_Question_3:
-        A: A
-        Y: true
       CSD Prediction Header Size:
         Question: 问题
       CSD U3 Boolean MC:
@@ -2229,12 +2144,6 @@ zh-CN:
         '1': '1'
         '2': '2'
         '4': '4'
-      U1L07 Assessment 1:
-        A: A
-        B: B
-        C: C
-        D: D
-        E: 东
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -2263,31 +2172,20 @@ zh-CN:
         18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
       U2L05 Lossy vs. Lossless MC 1_2018:
         Lossy vs. Lossless Compression: 有损和无损压缩
-      'U2L06 - MC: Which is an MST?':
-        0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
-        A: A
-        B: B
-        C: C
-        D: D
-        E: 东
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-      U2L13 Assessment4:
-        '26': '26'
+      U2L09 Assessment1_2018:
+        0: '？一个IP地址和名称的中央注册器（一个DNS样式系统）是将人类可读的名称转换为IP地址的有效方法。下面哪个不是DNS能解决的的问题？'
+        1: '：一个IP地址和名称的中央注册器（一个DNS样式系统）是将人类可读的名称转换为IP地址的有效方法。下面哪个不是DNS能解决的的问题？'
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A. 让每个人都在互联网上维护自己的IP地址列表是完全没有效率的。
+        B. There are too few IP addresses to meet the current demand.: B. 当前的ip地址数量太少，无法满足需求。
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C. 当某人新加入互联网时，必须告知其他人他的 IP 地址
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. 当IP地址改变时，在拥有者声明改动前，在网络上找到那台计算机是不可能的。
+        'The Need for DNS: Question 1': 'DNS需求：问题 1'
+      U2L11 Assessment 2_2018:
+        An HTTP response code is only used when a server could not fulfill a request.: 只有当服务器无法满足请求时, 才使用 HTTP协议状态码。
+        Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: 为了获取所有必要的数据, 显示网页通常需要发起多个 HTTP 请求。
+        HTTP requests and responses have identical formats.: HTTP 的请求和响应具有相同的格式。
       U2L13 Assessment4_2018:
         '26': '26'
-      U2L14 Assessment3:
-        'false': '错'
-        'true': '真'
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
       U2L19 multichoice 13 MOD 17_2018:
         '0': '0'
         '13': '13'
@@ -2299,26 +2197,12 @@ zh-CN:
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
       U2L19 mutlichoice 20 mod 15_2018:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L3 Assessment 3:
-        Invent an Addressing Protocol: 发明一个寻址协议
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
       U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
@@ -2590,11 +2474,6 @@ zh-CN:
       csp_ap_taking_ap_class:
         'No': '不'
         'Yes': '对'
-      cspu5_assess1_fivemore:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_fivemore_2018:
         "-2": "-2"
         '3': '3'
@@ -2605,20 +2484,12 @@ zh-CN:
         '3': '3'
         '5': '5'
         '8': '8'
-      cspu5_assess1_flowchart:
-        '10': '10'
-        '5': '5'
       cspu5_assess1_flowchart_2018:
         '10': '10'
         '5': '5'
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
-      cspu5_assess1_increase:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_increase_2018:
         '10': '10'
         '13': '13'
@@ -2629,15 +2500,9 @@ zh-CN:
         '13': '13'
         '5': '5'
         '8': '8'
-      cspu5_assess2_addstrings:
-        result: 结果
       cspu5_assess2_addstrings_2018:
         result: 结果
       cspu5_assess2_addstrings_exam_prep:
-        result: 结果
-      cspu5_assess2_combineString:
-        '10': '10'
-        '55': '55'
         result: 结果
       cspu5_assess2_combineString_2018:
         '10': '10'
@@ -2647,10 +2512,6 @@ zh-CN:
         '10': '10'
         '55': '55'
         result: 结果
-      cspu5_assess2_oldEnough:
-        '35': '35'
-        'false': '错'
-        'true': '真'
       cspu5_assess2_oldEnough_2018:
         '35': '35'
         'false': '错'
@@ -2677,11 +2538,6 @@ zh-CN:
         '30': '30'
         '50': '50'
         '75': '75'
-      cspu5_assess3_array1:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
       cspu5_assess3_array1_2018:
         '10': '10'
         '4': '4'
@@ -2692,12 +2548,6 @@ zh-CN:
         '4': '4'
         '7': '7'
         '9': '9'
-      cspu5_assess3_array2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_array2_2018:
         '2': '2'
         '3': '3'
@@ -2710,11 +2560,6 @@ zh-CN:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess3_array4:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
       cspu5_assess3_array4_2018:
         '0': '0'
         '1': '1'
@@ -2725,11 +2570,6 @@ zh-CN:
         '1': '1'
         '2': '2'
         '8': '8'
-      cspu5_assess3_listAppend:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
       cspu5_assess3_listAppend_2018:
         '1': '1'
         '2': '2'
@@ -2740,11 +2580,6 @@ zh-CN:
         '2': '2'
         '3': '3'
         '6': '6'
-      cspu5_assess3_loopValue1:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
       cspu5_assess3_loopValue1_2018:
         '2': '2'
         '3': '3'
@@ -2755,22 +2590,12 @@ zh-CN:
         '3': '3'
         '4': '4'
         '5': '5'
-      cspu5_assess3_loopValue2:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_loopValue2_2018:
         '0': '0'
         '4': '4'
         '5': '5'
         '6': '6'
       cspu5_assess3_loopValue2_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -2785,21 +2610,12 @@ zh-CN:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess3_mysterySwap:
-        a: a
-        d: d
       cspu5_assess3_mysterySwap_2018:
         a: a
         d: d
       cspu5_assess3_mysterySwap_exam_prep:
         a: a
         d: d
-      cspu5_assess4_dataReturns:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
       cspu5_assess4_dataReturns_2018:
         '10': '10'
         '16': '16'
@@ -2811,11 +2627,6 @@ zh-CN:
         '16': '16'
         '3': '3'
         '4': '4'
-        '9': '9'
-      cspu5_assess4_listOutput:
-        '17': '17'
-        '3': '3'
-        '42': '42'
         '9': '9'
       cspu5_assess4_listOutput_2018:
         '17': '17'
@@ -2902,9 +2713,6 @@ zh-CN:
         Other: 其他
         Prefer not to answer: 不愿回答
         White: 白人
-      sarah_test_maggie:
-        Question: 问题
-        test: 测试
       sciPD PreQ 1:
         'No': '不'
         'Yes': '对'
@@ -2924,6 +2732,3 @@ zh-CN:
         Question: 问题
         description here: 描述
         title: 标题
-    text_match:
-      U2L07 Assessment4:
-        '43': '43'

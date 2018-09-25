@@ -129,7 +129,7 @@ fr:
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
     error: "Une erreur est apparue."
-    email_preference_question: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique\\_?"
+    email_preference_question: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique\_?"
     email_preference_privacy: "(Voir notre politique de protection des données)"
     email_preference_yes: "Oui"
     email_preference_no: "Non"
@@ -267,9 +267,7 @@ fr:
         applab: 'Crée une application'
         gamelab: 'Créer un projet Game Lab'
         weblab: 'Créer un projet Web Lab (bêta)'
-      home: "Accueil"
       my_dashboard: "Mon tableau de bord"
-      courses: "Cours"
       course_catalog: "Catalogue des cours"
       project_gallery: "Projets"
       sections: "Sections"
@@ -304,6 +302,14 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
+    create_button:
+      create: 'Créer'
+      applab: 'Labo des applis'
+      artist: 'Artiste'
+      gamelab: 'Game Lab'
+      playlab: 'Labo de jeux'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Page d''accueil de l''enseignant'
       district_dashboard: 'Tableau de bord du district'

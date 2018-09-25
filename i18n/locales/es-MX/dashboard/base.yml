@@ -262,9 +262,7 @@ es-MX:
         applab: 'Hacer una aplicación'
         gamelab: 'Hacer un proyecto de Game Lab'
         weblab: 'Hacer un proyecto de Web Lab (beta)'
-      home: "Página principal"
       my_dashboard: "Mi panel de control"
-      courses: "cursos"
       course_catalog: "Catálogo de cursos"
       project_gallery: "Proyectos"
       sections: "Secciones"
@@ -299,6 +297,14 @@ es-MX:
       help_us: "Ayúdanos"
       teach: "Enseñar"
       about: "Acerca de"
+    create_button:
+      create: 'Crear'
+      applab: 'Laboratorio de App'
+      artist: 'Artista'
+      gamelab: 'Laboratorio de juegos'
+      playlab: 'Laboratorio de juegos'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Página de inicio del maestro'
       district_dashboard: 'Tablero de Distrito'

@@ -605,18 +605,40 @@ zh-TW:
         <hr/>\r
         <i>玩玩看這個遊戲，達到 level 3 你就可以移動到下個關卡。</i>
       Course 4 Play Lab Params 2_markdown_instruction: "現在我們知道有些旗子太高了，跳不上去！讓我們使用「向上」、「向下」方向鍵來讓我們能夠跳躍不同的高度。\\r\n\\r\n我們添加一個 `height`（高度）參數到 `jump`（跳躍）函式裡，\\r\n- 向上鍵用來讓小狗跳 200 像素高 \\r\n- 向下鍵用來讓小狗跳 100 像素高。\\r\n"
-      Course 4 Play Lab Params 3_markdown_instruction: "我們已經添加另一個參數到 `jump`（跳躍）函式裡，這樣一來我們就可以在其他角色使用它。每個角色有個數字作代表，從 1 開始算起。\\r\n\\r\n<br/>\\r\n編輯這個 `jump` 函式，讓它使用 `actor`（角色）參數來讓正確的角色跳起來。 "
+      Course 4 Play Lab Params 3_markdown_instruction: |-
+        我們已經添加另一個參數到 `jump`（跳躍）函式裡，這樣一來我們就可以在其他角色使用它。每個角色有個數字作代表，從 1 開始算起。\r
+        \r
+        <br/>\r
+        編輯這個 `jump` 函式，讓它使用 `actor`（角色）參數來讓正確的角色跳起來。 
       Course 4 Play Lab Params 4_markdown_instruction: "這裡有個函式叫做 `patrol`（巡邏）。\n\\r\n\\r\n編輯 `patrol` 讓貓能夠向上移動 400 像素，再向下 400 像素。"
       Course 4 Play Lab Params 5_markdown_instruction: 編輯 `patrol`（巡邏）函式，加進一個 `actor`（角色）參數，這樣一來我們就可以為每個在畫面上的角色呼叫它。記住這些角色分別對應數字 1、2、3。
       Course 4 Play Lab Params 6_markdown_instruction: 添加一個名為 `speed`（速度）的參數到 `patrol`（巡邏）函式中。試著在「設定速度」積木中使用新的參數，來幫助企鵝趕在其他動物前得到所有旗幟。
       Course 4 Play Lab Params 7_markdown_instruction: "我們來點有趣的！仔細看看提供的程式碼，你能不能想像每個積木在做些什麼。 \\r\n\\r\n當你完成後，使用方向鍵來控制小狗，並收集到所有的旗子。 \\r\n\\r\n**注意：**\n你不需要對程式進行任何修改"
       Course 4 Play Lab Params 8_markdown_instruction: 使用`當角色碰到`積木，在小狗碰到其他角色時，把狗送回左上方的位置。
       Course 4 Play Lab Params 9_markdown_instruction: "這是一個早先的遊戲，但是大部分程式都隱藏了。這裡有個新函式叫做 `score_points`（獲得分數）。\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\n編輯這個函式，使得 `points`（分數）參數能被添加到 `player_score` （玩家分數）變數上。 \\r\n<br/>\\r\n變數 `player_score` 應該會在每次小狗的派碰到小貓時增加；在每次小貓的三明治碰到小狗時減少。 \\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*注意：當你完成後，點擊「運行」玩玩看，當小狗得到 6 分時，就可以進入下一關。"
-      Course 4 Play Lab Vars 1_markdown_instruction: "這一次你不需要寫任何程式，只要點擊「運行」來玩這個遊戲！\\r\n\\r\n<br/>\\r\n在這個遊戲裡，你扮演一隻狗，要想辦法比貓拿到更多的旗子。使用向下鍵來控制狗，點你玩完了，點擊「完成」。"
+      Course 4 Play Lab Vars 1_markdown_instruction: |-
+        這一次你不需要寫任何程式，只要點擊「運行」來玩這個遊戲！\r
+        \r
+        <br/>\r
+        在這個遊戲裡，你扮演一隻狗，要想辦法比貓拿到更多的旗子。使用向下鍵來控制狗，點你玩完了，點擊「完成」。
       Course 4 Play Lab Vars 2_markdown_instruction: 上一關的比賽一點都不公平！修改 `dog_speed`（小狗的速度）變數，確保你可以收集到比貓還要多的旗子，誰先拿到 10 個旗子就勝利！
       Course 4 Play Lab Vars 3_markdown_instruction: "這裡有個新型態的遊戲！\n\\r\n\\r\n這一關你不需要改變任何東西。\\r\n\\r\n**指引：**\n使用向左鍵和向右鍵移動，向上鍵是跳，看看你能不能收集到所有旗子。"
       Course 4 Play Lab Vars 4_markdown_instruction: "現在，我們使用了一個叫作 `height`（高度）的變數來控制小狗能跳躍的高度。更新 `height` 變數來讓小狗能夠跳得夠高以碰到所有旗子。\\r\n"
-      Course 4 Play Lab Vars 6_markdown_instruction: "<h5><b>\\r在我們的遊戲中，要怎樣才能獲得分數呢？\\r\n</b></h5>\\r\n<br/>\\r\n\\r\n1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\\r\n2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>\n\\r\n3. 分數到達 10 分（每次加 1 分）就過關。\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**注意：**\n使用向右鍵扔出派！\\r\n</h4>"
+      Course 4 Play Lab Vars 6_markdown_instruction: |-
+        <h5><b>\r在我們的遊戲中，要怎樣才能獲得分數呢？\r
+        </b></h5>\r
+        <br/>\r
+        \r
+        1. 在每次小狗用派擊中小貓時，加 1 到你的 `points` 變數上。<br/><br/>\r
+        2. 使用`當角色2碰到任何東西`事件來觸發分數更新。你可以利用 `points = points +1` 的方式增加變數值。<br/><br/>
+        \r
+        3. 分數到達 10 分（每次加 1 分）就過關。\r
+        \r
+        <br/><br/>\r
+        <h4>\r
+        **注意：**
+        使用向右鍵扔出派！\r
+        </h4>
       Course 4 Play Lab Vars 7_markdown_instruction: "很好，現在我們來確定這個遊戲不至於太簡單！\\r\n\\r\n每當小狗（角色1）被小貓（角色2）的三明治丟到時就扣 1 分。\\r\n\\r\n初始分數 10 分似乎不大困難，我們把分數從 10 改成 0 後再試試吧。"
       Course 4 Play Lab Vars 9_markdown_instruction: "自由遊戲時間！這裡我們目前為止玩過的所有變數，還有一些是你可能想要的。\\r\n\\r\n注意現在在工具箱裡有好多好多可以被組合的積木！在這裡，我們已經將它們分類放好。花點時間去嘗試每一個東西，當你一切就緖，就可以用重複、變數、事件類的各種指令製作一個遊戲或是故事。\\r\n\\r\n*提示：可以捲動頁面以查看工作區裡的所有指令。*"
       Course 4 Play Labs For Loops 1_markdown_instruction: 我們來讓狗從 1 叫到 100。使用計數迴圈（for loop）還有計數器積木，在每循環一次時就念出計數器變數當前數值。
@@ -664,7 +686,24 @@ zh-TW:
         width="250px"/>\r
         \r
         **變數超級挑戰：**你現在學會了所有東西，能做出這樣圖案了！這個關卡相當困難，在想出解決方法前，你能堅持得了嗎？
-      Course 4 SCV 3_markdown_instruction: "**變數超級挑戰：** 你現在已經學會完成所有關卡該知道的事了！這個遊戲相當的困難。在找到解法前，你能堅持的住嗎？\\r\n\\r\n<hr/>\\r\n\\r\n現在玩個捉人遊戲！捉到小貓可以獲得 2 分，捉到企鵝可以獲得 3 分。得到 10 分就勝利！\\r\n不過要小心的地方是，當小貓和企鵝互抓時，牠們會把分數偷回去。\\r\n\\r\n<strong>\\r\n要讓遊戲能如說明一樣運行，要添加些必須的積木。\\r\n- 要怎樣用方向鍵來控制小狗？  \\r\n- 當小狗碰到企鵝或小貓時，你要如何才能加分？  \\r\n- 當小貓和企鵝碰在一起時，你要怎麼才能減分？\\r\n</strong>\\r\n\\r\n<hr/>\\r\n\\r\n"
+      Course 4 SCV 3_markdown_instruction: |-
+        **變數超級挑戰：** 你現在已經學會完成所有關卡該知道的事了！這個遊戲相當的困難。在找到解法前，你能堅持的住嗎？\r
+        \r
+        <hr/>\r
+        \r
+        現在玩個捉人遊戲！捉到小貓可以獲得 2 分，捉到企鵝可以獲得 3 分。得到 10 分就勝利！\r
+        不過要小心的地方是，當小貓和企鵝互抓時，牠們會把分數偷回去。\r
+        \r
+        <strong>\r
+        要讓遊戲能如說明一樣運行，要添加些必須的積木。\r
+        - 要怎樣用方向鍵來控制小狗？  \r
+        - 當小狗碰到企鵝或小貓時，你要如何才能加分？  \r
+        - 當小貓和企鵝碰在一起時，你要怎麼才能減分？\r
+        </strong>\r
+        \r
+        <hr/>\r
+        \r
+        
       Course 4 SCV 4_markdown_instruction: "**變數超級挑戰：**完成這個關卡，用的積木愈少愈好。\\r\n\\r\n"
       Course 4 SCV 5_markdown_instruction: "**變數超級挑戰：**完成這個關卡，用的積木愈少愈好。\\r\n\\r\n"
       Course 4 SCV 6_markdown_instruction: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**變數超級挑戰：**你現在學會了所有東西，能做出這樣圖案了！這個關卡相當困難，在想出解決方法前，你能堅持得了嗎？  "
