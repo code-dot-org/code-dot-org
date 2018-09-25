@@ -1,10 +1,8 @@
-function getAnim(sprite, costume) {
+function getAnim(sprite) {
   if (!sprite) {
     return undefined;
   }
-  if (costume=="costume") {
+  else {
    	return sprite.getAnimationLabel();
-  } else {
-  	return sprite[property];
   }
 }
