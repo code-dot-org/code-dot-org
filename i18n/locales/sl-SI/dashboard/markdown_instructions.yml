@@ -154,7 +154,11 @@ sl:
       Course 4 Bee 3_markdown_instruction: "Neznani objekt je rožica ali satje. Tokrat uporabi če/sicer blok, da dobiš en nektar v primeru, da je rožica, sicer pa naredi en med (ker je v tem primeru spodaj satje)."
       Course 4 Play Lab Vars 2_markdown_instruction: Igra v prejšnji nalogi ni bila najbolj poštena. Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
       Course 4 Play Lab Vars 3_markdown_instruction: "Pred tabo je nova vrsta igre!\nNe spreminjaj ničesar.\nUporabi puščici levo in desno za premikanje psa in puščico gor za skok. Ali lahko zbereš vse zastave?"
-      Course 4 Play Lab Vars 6_markdown_instruction: "Uporabi gumb puščica desno, da vržeš pito.\nKako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke \"points\" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo \"ko igralec 2 se dotakne česarkoli\" tudi za večanje vrednosti spremenljivke \"points\".\nVrednost spremenljivke lahko večaš tako, da nastaviš \"points = points + 1.\"\nZberi 10 točk (vsako posebej...) da končaš to nalogo."
+      Course 4 Play Lab Vars 6_markdown_instruction: |-
+        Uporabi gumb puščica desno, da vržeš pito.
+        Kako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke "points" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo "ko igralec 2 se dotakne česarkoli" tudi za večanje vrednosti spremenljivke "points".
+        Vrednost spremenljivke lahko večaš tako, da nastaviš "points = points + 1."
+        Zberi 10 točk (vsako posebej...) da končaš to nalogo.
       CourseF_PlayLab_vars2_markdown_instruction: Igra v prejšnji nalogi ni bila najbolj poštena. Spremeni vrednost spremenljivke hitrost psa 'dog speed' tako, da boš lahko pobral več zastavic, kot maček. Prvi, ki prvi zbere 10 točk, zmaga!
       CourseF_PlayLab_vars3_markdown_instruction: "Pred tabo je nova vrsta igre!\nNe spreminjaj ničesar.\nUporabi puščici levo in desno za premikanje psa in puščico gor za skok. Ali lahko zbereš vse zastave?"
       CourseF_PlayLab_vars6_markdown_instruction: "Uporabi gumb puščica desno, da vržeš pito.\nKako bomo v tej igri šteli točke?  Dodaj po eno točko vrednosti spremenljivke \"points\" vsakič, ko pes zadene mačko s kosom pite. Uporabi funkcijo \"ko igralec 2 se dotakne česarkoli\" tudi za večanje vrednosti spremenljivke \"points\".\nVrednost spremenljivke lahko večaš tako, da nastaviš \"points = points + 1.\"\nZberi 10 točk (vsako posebej...) da končaš to nalogo."

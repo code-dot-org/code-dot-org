@@ -81,33 +81,33 @@ tr:
         turtle_1_3: Sadece 3 blok kullanarak bir kare yapın.
         turtle_1_4: 'Her seferinde farklı bir renk alan "rastgele renk" seçeneğini kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar uzağa dönmeniz gerektiğini dönüş bloğundaki numaraya tıklayarak bulmanız gerek.'
         turtle_1_5: Şimdi, bir üçgen ve sonra bir kare çizerek zarf oluşturun.
-        turtle_1_6: 'Bir karenin ve bir üçgenin nasıl çizileceğini anlayabildiniz mi? İpucu: Önce üçgeni çizin, sonra kare çizmeden önce kaç kez dönmeniz gerektiğini bulun.'
-        turtle_1_7: Hadi biraz daha zorlaştıralım - yeşil gözlükleri çizip çizemeyeceğinizi görelim. Her köşede bulunan kareler 100 piksel büyüklüğünde birbirlerinden 50 piksel uzaklıktadır. Çizgilerinizi yeşik renk ile çizmeyi unutmayın!
-        turtle_1_8: Tamam, bu kodu çalıştırıdığınızda ne olduğunu görelim (ya da "Çalıştır" düğmesini tıklayın). O halde, çizimi tamalamak için yeteri kadar tekrar edin. Renkler her defasında farkı olsun.
-        turtle_1_9: Çember çizmek için soru işaretli yere gelmesi gereken sayısı bulabilir misiniz?
-        turtle_1_10: 'Başardınız! Şimdi, istediğiniz her hangi bir şeyi çiziniz.Eğlenceli olabilecek bazı fikirler:kartanesi ya da spiral olabilir.Ayrıca "kalınlığını belirleyin " bloğunu kullanabilirisniz.Eğlenin!'
+        turtle_1_6: 'Bu karenin ve üçgenin nasıl çizileceğini anlayabildiniz mi? İpucu: Önce üçgeni çizin, sonra kare çizmeden önce kaç kez dönmeniz gerektiğini bulun.'
+        turtle_1_7: Hadi biraz daha zorlaştıralım - yeşil gözlükleri çizip çizemeyeceğinizi görelim. Her köşede bulunan kareler 100 piksel büyüklüğünde birbirlerinden 50 piksel uzaklıktadır. Yeşil ile çizmeyi unutmayın!
+        turtle_1_8: Tamam, bu kodu çalıştırıdığında ne olduğunu görelim (ya da "Çalıştır" düğmesini tıklayın). Sonra, çizimi tamamlamak için yeteri kadar tekrar edin. Renkler her defasında farklı olur.
+        turtle_1_9: Çember çizmek için soru işaretli yere gelmesi gereken sayıyı tahmin edebilir misin?
+        turtle_1_10: 'Başardın! Şimdi, istediğin her hangi bir şeyi çiz. Eğlenceli olabilecek bazı fikirler: kartanesi ya da spiral olabilir.Ayrıca "genişiliği ayarla " bloğunu kullanabilirsin. Keyfine bakın!'
         turtle_4_1: 'Sadece 3 blok kullanarak bir üçgen(her kenarı 100 piksel olacka) çizebilir misin? İpucu:"tekrar" bloğu kullanın.'
         turtle_4_2: Bu üçgenleri çizebilmek için çalışma masasında mevcut olan programın ortasına bir "90 derece sağa dön" bloğu ekle.
         turtle_4_3: Tamam, bir üçgen çizmek için yazdığınız kod burda."Tekrarla" ve "dön" bloğu ile güzel bir çiçek yapabilir misiniz?
         turtle_4_4: 'Bir önceki labirent ile aynı kodları verdik , fakat her üçgen çizdikten sonra 36 derecelik bir açıyla döneceğiz.Bu işlemi kaç kez tekrar etmelisiniz? (İpucu: Tam bir çember oluşturmak için 360 derece dönmeniz gerekmektedir.)'
         turtle_4_5: 'Bir önceki bulmaca ile aynı kodları görüyorsunuz fakat 36 kez dönme işlemi uygulanıyor. Her defasında kaç derecelik bir açıyla döndürülmeli?(İpucu:Tam bir çember 360 derece döndürülerek oluşturulabilir.)'
-        turtle_4_6: Sadece üç blok kullanarak bir kenarı 20 piksel lacak bir kare çizebilir misiniz?
-        turtle_4_7: 'İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine merdiven gibi bitişik 10 tane kare çizmek için tekrarlayabilir misin? İpucu: Yalnızca iki bloga daha ihtiyacın var.'
+        turtle_4_6: Sadece üç blok kullanarak bir kenarı 20 piksel olacak bir kare çizebilir misiniz?
+        turtle_4_7: 'İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine merdiven gibi bitişik 10 tane kare çizmek için tekrarlayabilir misin? İpucu: Yalnızca iki bloğa daha ihtiyacın var.'
         turtle_4_8: Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2 blok daha ekleyebilir misin?
-        turtle_4_9: Önceki bulmaca çözümü burada. Kaç derece çizimin tamamlanması için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)
+        turtle_4_9: Önceki bulmaca çözümü burada. Resmin tamamlanması için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)
         turtle_4_10: Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar gerekli?
         turtle_4_11: Farklı desenler yapmak için "dön" ve "tekrarla" bloklarındaki sayıları değiştirmeyi dene. Ya da, istediğin herhangi bir şeyi çizmek için kodun geri kalanını değiştirmeyi dene.
         maze_karel_1_1: Merhaba, ben bir çiftçiyim. Çiftlikteki alanı ekime hazırlamak için düzleştirmemde yardımına ihtiyacım var. Beni bir toprak yığınına doğru hareket ettir ve "Kaldır" bloğunu yığını kaldırmam için kullan.
-        maze_karel_1_2: Daha sonra beni deliğe hareket ve  deliği "doldur" blogunu kullanarak, iki kürek dolusu toprak ile doldur.
+        maze_karel_1_2: Daha sonra beni çukura götür ve "doldur" bloğunu kullanarak, iki kürek dolusu toprak ile doldur.
         maze_karel_1_3: Beni toprak yığınına doğru hareket ettir ve olabildiğince az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle.
-        maze_karel_1_4: 'Tüm toprak yığınlarını kaldırmama yardımcı olabilir miin? İpucu: Mümkünse repeat blogunu kullan.'
-        maze_karel_1_5: 'Delikleri 5 kürekdolusu toprakla doldurmam için bana yardım et. İpucu: "While" blogunun içine "tekrar" blogunu yerleştirebilirsin.'
-        maze_karel_1_6: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak kaldır. Liste menüsündeki yeni secenekler bana bir yığının mı yoksa bir deliğin mi üstünde olduğumu söyler.
+        maze_karel_1_4: 'Dört toprak yığınını kaldırmama yardımcı olabilir misin? İpucu: Mümkünse tekrarla bloğu kullan.'
+        maze_karel_1_5: 'Delikleri 5 kürek dolusu toprakla doldurmam için bana yardım et. İpucu: "süresince" bloğunun içine "tekrar" bloğunu yerleştirebilirsin.'
+        maze_karel_1_6: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak kaldır. Liste menüsündeki yeni seçenekler bana bir yığının mı yoksa bir çukurun mu üstünde olduğumu söyler.
         maze_karel_1_7: Wow, çok derin bir çukur buldum! Kaç kürek dolusu toprağa ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program yazabilir misin?
         maze_karel_1_8: Alanın sonundaki çukuru doldurmama yardım et, kullanabildiğin kadar az blok kullanarak.
-        maze_karel_1_9: 'Tüm toprak yığınlarını yok etmememi sağla. Kullanabildiğin kadar az blok kullanmaya çalış. İpucu:"sürece" bloğunu kullanmaya çalış.'
-        maze_karel_1_10: Geç saatlere kadar çalışıyorum,yani dışarısı karanlık,ve yığınların ne kadar geniş olduğunu söyleyemem."while" bloğunda eskiden olduğu kadar seçeneğe sahip değilim.Beni alanda hareket ettir,ve bir yığın varsa onu kaldır.
-        maze_karel_1_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir delik var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
+        maze_karel_1_9: 'Tüm toprak yığınlarını yok etmemi sağla. Kullanabildiğin kadar az blok kullanmaya çalış. İpucu:"süresince" bloğunu kullanmaya çalış.'
+        maze_karel_1_10: "Geç saatlere kadar çalışıyorum,yani dışarısı karanlık,ve yığınların ne kadar geniş olduğunu söyleyemem.\"Süresince\" bloğunda eskiden olduğu kadar seçeneğe sahip değilim.\nBeni alanda hareket ettir ve bir yığın varsa onu kaldır."
+        maze_karel_1_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
         turtle_2_1: 'Merhaba. Ben olmak zombi sanatçı! Ben sevmek çizmeyi! Özel renkte bir kare çizmeme yardım et. Önemli not: aynı bloklara sahipsin ama artık kategorilere ayrıldılar.'
         turtle_2_2: Fonksiyonların kullanımına hoş geldiniz,yeni bloklar tanımanıza imkan veren yere!Yeni "bir kare çiz bloğu,50x50 yeşil küçük bir kare çizmek için Fonksiyonlar kategorisinde bulunuyor.
         turtle_2_3: 100 boyutunda 120 derece aralıklı 3 kare çizmek için döngüler kategorisinde ki tekrar et bloğunu kullan.Ve 3 ünüde farklı,rastgele renklerde yap.

@@ -10,12 +10,15 @@ cs:
       messages:
         blank: "je požadováno"
         blank_plural: "jsou potřeba"
+        invalid: "je neplatný"
         invalid_plural: "jsou neplatné"
     attributes:
       user:
         name: 'Zobrazit jméno'
         name_example: 'Zobrazované jméno <br/> (např. Cool kodér nebo Jana S.)'
         email: 'E-mail'
+        parent_email: 'E-mail rodiče/zákonného zástupce'
+        personal_email: "Osobní e-mailová adresa <a href=\"%{url}\">(klikněte zde pokud nemáte e-mailovou adresu)</a>"
         username: 'uživatelské jméno'
         password: 'Heslo'
         password_confirmation: 'Potvrzení hesla'
@@ -43,6 +46,7 @@ cs:
       label: 'Přidat učitele:'
       placeholder: "Kód sekce (ABCDEF)"
       instructions: "Prosím, vložte kód, který vám dal váš učitel. Je to šestipísmenný kód, jako například \"ABCDEF\"."
+      instructions_short: "Zadejte svůj 6 písmenný kód oddílu"
     submit: 'Přidat učitele'
   add_hint_form:
     placeholder: 'Zadej zde svůj tip'
@@ -55,6 +59,7 @@ cs:
   courses: 'kurzy'
   courses_page:
     title_student: "Poznat Code studio"
+    title_teacher: "Vyučujte informatiku"
   unplugged_activity: 'Aktivita bez počítače'
   of: "z"
   more: "VÍCE"
@@ -79,10 +84,16 @@ cs:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft účet'
+    clever: 'Chytrý účet'
+    powerschool: 'PowerSchool účet'
     forgot_password: 'Zapomněl jsi heslo?'
+    migration_success: 'Povedlo se! Přepnuli jste účet do nové podoby.'
+    demigration_success: 'Nové podoba účtu je nyní vypnuta.'
     need_confirmation: "Nedostal jsi instrukce pro potvrzení?"
     need_unlock: "Nezískal si instrukce pro odemčení?"
     not_linked: "Váš účet Code.org není propojen s %{provider}. Budete se muset přihlásit zadáním vašeho hesla níže."
+    use_clever: "Váš účet Code.org není bohužel propojen se systémem %{provider}. Přihlaste se prosím prostřednictvím systému Clever Portal."
+    unable_to_connect_provider: "Váš účet Code.org nelze propojit se systémem %{provider}. Opakujte prosím akci."
   signup_form:
     student_count: 'Již se zaregistrovalo %{count} studentů.'
     teacher_count: 'Již se přihlásilo %{count} učitelů.'
@@ -107,17 +118,25 @@ cs:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovat nejméně 6 znaků"
     mismatch_password: "Zadaná dvě hesla se neshodují"
+    agree_tos_privacy: "Souhlasím tímto s <a href='http://code.org/tos'>Podmínkami poskytování služeb</a> a se <a href='http://code.org/privacy'>Zásadami ochrany osobních údajů</a>."
+    under_13_consent: "Pokud jsem mladší 13 let, mohu potvrdit, že mám souhlas svého rodiče nebo zákonného zástupce k používání služeb Code.org."
+    agree_us_website: "Souhlasím s používáním webových stránek provozovaných ve Spojených státech."
+    my_data_to_us: "Informace ohledně mého používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány."
     student_terms: "Souhlasím, že budu dodržovat <a href='http://code.org/tos'>podmínky služeb</a>. Pokud jsem mladší 13 let, přihlášením potvrzuji souhlas rodičů nebo mého zákonného zástupce s používáním služeb Code.org.<br/><br/> E-mailové adresy se neukládají. Studenti nebudou dostávat e-maily od Code.org s výjimkou obnovení hesla. Pro více informací navštivte<a href='http://code.org/privacy'>zásady ochrany osobních údajů</a>."
     teacher_terms: "Souhlasím, že budu dodržovat podmínky služeb Code.org. Více informací najdete na <a href='http://code.org/privacy'>Zásady ochrany osobních údajů</a>."
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
+    user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
     user_type_teacher: "Učitel"
     user_type_student: "student"
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
+    error: "Došlo k chybě."
+    email_preference_question: "Můžeme Vám posílat e-maily s informacemi o změnách v našich kurzech, lokálních příležitostech a jiných informatických zprávách?"
     email_preference_privacy: "(Viz Zásady ochrany osobních údajů)"
     email_preference_yes: "Ano"
     email_preference_no: "Ne"
+    email_preference_required: "Musíte vyplnit nastavení e-mailové komunikace."
   school_info:
     title: 'Název školy (nepovinné)'
     school_country: 'Země školy'
@@ -165,6 +184,9 @@ cs:
       instructions: "Potvrď svoji e-mailovou adresu a my ti zašleme pokyny pro obnovení hesla."
       email: 'E-mailová adresa'
       submit: 'Odeslat'
+    reset_errors:
+      captcha_required: 'Vyplňte prosím CAPTCHA pro obnovení svého hesla.'
+      invalid_email: 'Vypadá to, že jste se přihlásili s neplatnou e-mailovou adresu. Napište prosím na support@code.org, abychom Vám poslali odkaz na obnovení hesla.'
     change_form:
       title: 'Změň si heslo'
       new_password: 'Nové heslo'
@@ -180,6 +202,11 @@ cs:
       Cvičení jsou zábavná, vzhledově poutavá a učí základy počítačových věd pomocí jednoduchých, řízených herních hádanek. Naučíš se programovat s pomocí Billa Gatese, Marka Zuckerberga, Angry Birds a Plants vs. Zombies! :-)
       
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Přihlašovací údaje na Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Vítejte na Code.org!'
+    delete_teacher_subject: 'Oznámení od Code.org: Váš účet byl odstraněn'
   section:
     your_section:
       one: 'Vaše sekce:'
@@ -189,8 +216,11 @@ cs:
       remove: 'Jste si jisti, že chcete opustit tuto sekci?'
     remove: '(odstranit sekci)'
     type:
+      picture: 'Obrázkové heslo'
       word: 'Tajné slovo'
       email: 'E-mail'
+      google_classroom: 'Učebna Google'
+      clever: 'Systém Clever'
   follower:
     invite_sent: 'Pozvánka odeslána'
     added_teacher: '%{name} přidán jako tvůj učitel'
@@ -203,6 +233,7 @@ cs:
       section_not_found: "Nelze nalézt sekci s kódem \"%{section_code}\"."
       blank_code: "Zadej prosím kód sekce"
       cant_join_own_section: "Lituji, ale nemůžete se připojit s vlastní sekcí."
+      provider_managed_section: "Tento oddíl je spravován jiným poskytovatelem a nelze se k němu připojit. Požádejte Vašeho učitele, aby Vás prostřednictvím %{provider} přidal a provedl opětovnou synchronizaci své sekce."
     mail:
       student_disassociated:
         subject: "Code.org upozornění: %{student_name} už není vašim studentem."
@@ -223,6 +254,12 @@ cs:
     updated: '%{model} byl úspěšně aktualizován.'
     destroyed: '%{model} byl/a úspěšně odstraněn/a.'
     access_denied: 'nemáte přístup k tomuto %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "E-mailová adresa, kterou jste zadali, neodpovídá e-mailové adrese z tohoto účtu"
+        personal_login_created_email: 'Osobní přihlašovací údaje byly úspěšně vytvořeny. Nyní se můžete přihlásit k Vašemu účtu pomocí e-mailu a hesla'
+        personal_login_created_username: 'Osobní přihlašovací údaje byly úspěšně vytvořeny. Nyní se můžete přihlásit k Vašemu účtu pomocí uživatelského jména (%{username}) a hesla'
   nav:
     header:
       finished_hoc: "Dokončil jsem Hodinu Kódu"
@@ -231,10 +268,40 @@ cs:
         playlab: 'Vytvořit aplikaci'
         artist: 'Nakresli něco'
         applab: 'Vytvořit aplikaci'
-      courses: "kurzy"
+        gamelab: 'Vytvořit projekt Game Lab'
+        weblab: 'Vytvořit Web Lab (beta) projekt'
+      my_dashboard: "Můj přehled"
+      course_catalog: "Katalog kurzů"
       project_gallery: "Projekty"
+      sections: "Oddíly"
+      report_bug: "Nahlásit chybu"
+      teacher_community: "Komunita učitelů"
+      educate_overview: "Pedagogův přehled"
+      educate_elementary: "Základní škola"
+      educate_middle: "2. stupeň ZŠ"
+      educate_high: "Střední škola"
       educate_hoc: "Hodina kódu"
+      educate_partner: "Navažte s námi partnerství"
+      educate_beyond: "Nad rámec Code.org"
+      educate_inspire: "Inspirovat studenta"
+      educate_community: "Online komunita"
+      educate_tools: "Nástroje a videa"
+      about_us: "O nás"
+      about_leadership: "Koordinátoři"
+      about_donors: "Dárci"
+      about_partners: "Partneři"
+      about_team: "Celý tým"
+      about_news: "Zprávy a média"
+      about_evaluation: "Vyzkoušení"
+      about_jobs: "Pracovní místa"
       stats: "Statistiky"
+    create_button:
+      create: 'Vytvořit'
+      applab: 'App Lab'
+      artist: 'Umělec'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Učitelská domovská stránka'
       district_dashboard: 'Okresní řídicí panel'

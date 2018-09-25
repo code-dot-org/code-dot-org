@@ -1,13 +1,19 @@
 {
-  "category": "Sprites",
+  "category": "Behaviors",
   "config": {
     "func": "addBehaviorSimple",
     "blockText": "sprite {SPRITE} begins {BEHAVIOR}",
     "inline": false,
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       },
       {
         "name": "BEHAVIOR",

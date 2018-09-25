@@ -3247,6 +3247,8 @@ pl:
               name: Kładąc podwaliny (Building a Foundation)
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w pszczole
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
         csp3-a:
           stages:
             new stage:
@@ -3731,6 +3733,8 @@ pl:
               name: Binarne obrazy (Binary Images)
             Artist Binary:
               name: 'Artysta: Binarny'
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
             Graph Paper Programming:
               name: Programowanie na papierze milimetrowym
             Relay Programming:
