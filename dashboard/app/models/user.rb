@@ -781,7 +781,7 @@ class User < ActiveRecord::Base
   end
 
   def self.new_with_session(params, session)
-    super unless partial_registration? session
+    return super unless partial_registration? session
     new_from_partial_registration session do |user|
       user.attributes = params
     end
