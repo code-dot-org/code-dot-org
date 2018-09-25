@@ -15,8 +15,11 @@ const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FI
 const scriptData = getScriptData('signup');
 const {usIp} = scriptData;
 
-// Auto-fill country in SchoolInfoInputs if we detect a US IP address.
-let schoolData = {country: usIp ? 'United States' : ''};
+// Auto-fill country and countryCode if we detect a US IP address.
+let schoolData = {
+  country: usIp ? 'United States' : '',
+  countryCode: usIp ? 'US' : '',
+};
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById("school-info-inputs");
