@@ -36,15 +36,13 @@
     "use_default_sprites": "false",
     "markdown_instructions": "This song needs some flash! Use the `set background effect` block to make the stage come alive.",
     "parent_level_id": 14503,
-    "validation_code": "if (World.frameCount == 1) validationProps.status = 3;\r\nif(getTime(\"measures\") > 10){\r\n  if(World.bg_effect != bg_effects[\"none\"]){\r\n    validationProps.status = 0;\r\n  }\r\n\tlevelSuccess(validationProps.status);\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "validation_code": "if (World.frameCount == 1) validationProps.status = 3;\r\nif(getTime(\"measures\") > 10){\r\n  if(World.bg_effect != bg_effects.none){\r\n    validationProps.status = 0;\r\n  }\r\n\tlevelSuccess(validationProps.status);\r\n}",
+    "block_pool": "Dancelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 05:04:43 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:06:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:07:49 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:08:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:16:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:16:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:47:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 15:56:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 15:58:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-18 05:09:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:10:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:34:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 05:04:43 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:06:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:07:49 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:08:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:16:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 05:16:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:47:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 15:56:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-14 15:58:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-09-18 05:09:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:10:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:34:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-20 21:23:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 04:05:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 04:06:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 04:08:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,11 +55,7 @@
             <block type="Dancelab_makeNewDanceSprite">
               <title name="COSTUME">"ROBOT"</title>
               <title name="NAME">dancer1</title>
-              <value name="LOCATION">
-                <block type="Dancelab_location_picker">
-                  <title name="LOCATION">{"x":200,"y":200}</title>
-                </block>
-              </value>
+              <title name="LOCATION">{x: 200, y: 200}</title>
             </block>
           </statement>
         </block>
@@ -71,7 +65,7 @@
           <next>
             <block type="Dancelab_changeMoveLR">
               <title name="SPRITE">dancer1</title>
-              <title name="MOVE">2</title>
+              <title name="MOVE">MOVES.Dab</title>
               <title name="DIR">-1</title>
             </block>
           </next>
@@ -82,164 +76,10 @@
           <next>
             <block type="Dancelab_changeMoveLR">
               <title name="SPRITE">dancer1</title>
-              <title name="MOVE">1</title>
+              <title name="MOVE">MOVES.Clown</title>
               <title name="DIR">-1</title>
             </block>
           </next>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>Maps a sprite's x position to a given sound energy range</description>
-          </mutation>
-          <title name="NAME">mapping my x position to</title>
-          <statement name="STACK">
-            <block type="controls_if">
-              <mutation elseif="1" else="1"/>
-              <value name="IF0">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">low</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"x"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"low"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <value name="IF1">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">med</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO1">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"x"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"mid"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"x"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"high"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="behavior_definition" deletable="false" movable="false" editable="false">
-          <mutation>
-            <arg name="this sprite" type="Sprite"/>
-            <description>Maps a sprite's y position to a given sound energy range</description>
-          </mutation>
-          <title name="NAME">mapping my y position to</title>
-          <statement name="STACK">
-            <block type="controls_if">
-              <mutation elseif="1" else="1"/>
-              <value name="IF0">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">low</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"y"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"low"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <value name="IF1">
-                <block type="logic_compare">
-                  <title name="OP">EQ</title>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <mutation output="String"/>
-                      <title name="VAR">range</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="text">
-                      <title name="TEXT">med</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO1">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"y"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"mid"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="Dancelab_setProp">
-                  <title name="SPRITE">this_sprite</title>
-                  <title name="PROPERTY">"y"</title>
-                  <value name="VAL">
-                    <block type="Dancelab_getEnergy">
-                      <title name="RANGE">"high"</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </statement>
         </block>
       </xml>
     </start_blocks>
@@ -251,15 +91,11 @@
         <block type="Dancelab_makeNewDanceSprite">
           <title name="COSTUME">"ROBOT"</title>
           <title name="NAME">dancer1</title>
-          <value name="LOCATION">
-            <block type="Dancelab_location_picker">
-              <title name="LOCATION">{"x":200,"y":200}</title>
-            </block>
-          </value>
+          <title name="LOCATION">{x: 200, y: 100}</title>
         </block>
         <block type="Dancelab_changeMoveLR">
           <title name="SPRITE">dancer1</title>
-          <title name="MOVE">0</title>
+          <title name="MOVE">MOVES.ClapHigh</title>
           <title name="DIR">-1</title>
         </block>
         <block type="Dancelab_atTimestamp">

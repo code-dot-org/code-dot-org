@@ -2,11 +2,17 @@
   "category": "Behaviors",
   "config": {
     "func": "removeAllBehaviors",
-    "blockText": "sprite{SPRITE} stops everything",
+    "blockText": "sprite{SPRITE} stops all behaviors",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       }
     ]
   }

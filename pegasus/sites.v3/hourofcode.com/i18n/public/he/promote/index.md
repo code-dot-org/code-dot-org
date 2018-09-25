@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_promote) %>
+title: <%= hoc_s(:title_how_to_promote).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -14,7 +14,7 @@ nav: promote_nav
 
 # Get your community involved in the Hour of Code
 
-## 1. Răspândește vestea
+## 1. הפיצו את השמועה
 
 Tell your friends about the **#HourOfCode**!
 

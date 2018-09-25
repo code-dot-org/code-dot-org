@@ -26,7 +26,9 @@
 require "csv"
 
 class Craft < Blockly
-  # before_save :update_maps
+  def shared_blocks
+    Block.for('craft') if is_aquatic_level
+  end
 
   serialized_attrs(
     :ground_plane,
@@ -151,6 +153,60 @@ class Craft < Blockly
     planksJungle: true,
     planksOak: true,
     planksSpruce: true,
+
+    # Aquatic
+    strippedOak: true,
+    strippedDarkOak: true,
+    stoneBricks: true,
+    mossyStoneBricks: true,
+    crackedStoneBricks: true,
+    decorativeStoneBricks: true,
+    magmaBlock: true,
+    blueCoralBlock: true,
+    pinkCoralBlock: true,
+    magentaCoralBlock: true,
+    redCoralBlock: true,
+    yellowCoralBlock: true,
+    blueDeadCoralBlock: true,
+    pinkDeadCoralBlock: true,
+    magentaDeadCoralBlock: true,
+    readDeadCoralBlock: true,
+    yellowDeadCoralBlock: true,
+    prismarine: true,
+    darkPrismarine: true,
+    seaLantern: true,
+    packedIce: true,
+    blueIce: true,
+    blackConcrete: true,
+    blueCoral: true,
+    pinkCoral: true,
+    magentaCoral: true,
+    redCoral: true,
+    yellowCoral: true,
+    seaGrass: true,
+    kelp: true,
+    polishedGranite: true,
+    blueCoralFan: true,
+    pinkCoralFan: true,
+    magentaCoralFan: true,
+    redCoralFan: true,
+    yellowCoralFan: true,
+    blueCoralFanTop: true,
+    pinkCoralFanTop: true,
+    magentaCoralFanTop: true,
+    redCoralFanTop: true,
+    yellowCoralFanTop: true,
+    blueCoralFanLeft: true,
+    pinkCoralFanLeft: true,
+    magentaCoralFanLeft: true,
+    redCoralFanLeft: true,
+    yellowCoralFanLeft: true,
+    blueCoralFanRight: true,
+    pinkCoralFanRight: true,
+    magentaCoralFanRight: true,
+    redCoralFanRight: true,
+    yellowCoralFanRight: true,
+    seaPickles: true,
   }.freeze
 
   ALL_MINIBLOCKS = {
@@ -407,7 +463,7 @@ class Craft < Blockly
   }.freeze
 
   def self.start_directions
-    [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
+    [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end
 
   def self.song_options

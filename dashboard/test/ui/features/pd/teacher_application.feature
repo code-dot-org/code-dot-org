@@ -104,6 +104,7 @@ Scenario: Basic teacher application submission
   Then I navigate to the principal approval page for "Severus"
   Then I wait until element "h1" contains text "2019-2020 Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
+  Then I press the first "input[name='goingToTeach']" element
 
   And I press keys "nonexistent" for element "#school input"
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
@@ -127,14 +128,14 @@ Scenario: Basic teacher application submission
   Then I press keys "10" for element "#other"
 
   Then I press the first "input[name='committedToMasterSchedule']" element
-  Then I press the first "input[name='hoursPerYear']" element
-  Then I press the first "input[name='termsPerYear']" element
+  Then I press the first "input[name='csdImplementation']" element
   Then I press the first "input[name='replaceCourse']" element
   Then I press the first "input[name='replaceWhichCourseCsd']" element
 
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
   Then I press the first "input[name='payFee']" element
+  Then I press the first "input[name='howHeard']" element
   Then I press the first "#confirmPrincipal" element
 
   Then I see no difference for "Principal approval form"

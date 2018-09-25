@@ -123,20 +123,28 @@ NoClassroomsFound.propTypes = {
   rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const LoadError = ({error}) =>
+const LoadError = ({error, rosterProvider, loginType}) =>
   <div>
     <p>
-      {locale.authorizeGoogleClassroomsText()}
+      {locale.errorLoadingRosteredSections({type: loginType})}
     </p>
-    <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
-      {locale.authorizeGoogleClassrooms()}
-    </a>
+    {rosterProvider === OAuthSectionTypes.google_classroom &&
+      <p>
+        {locale.authorizeGoogleClassroomsText()}
+        {' '}
+        <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
+          {locale.authorizeGoogleClassrooms()}
+        </a>
+      </p>
+    }
     <p style={styles.error}>
       {error.status} {error.message}
     </p>
   </div>;
 LoadError.propTypes = {
   error: loadErrorShape,
+  rosterProvider: PropTypes.string,
+  loginType: PropTypes.string,
 };
 
 class RosterDialog extends React.Component {
@@ -172,12 +180,15 @@ class RosterDialog extends React.Component {
 
   render() {
     let title = '';
+    let loginType = '';
     switch (this.props.rosterProvider) {
       case OAuthSectionTypes.google_classroom:
         title = locale.selectGoogleClassroom();
+        loginType = locale.loginTypeGoogleClassroom();
         break;
       case OAuthSectionTypes.clever:
         title = locale.selectCleverSection();
+        loginType = locale.loginTypeClever();
         break;
     }
 
@@ -194,7 +205,11 @@ class RosterDialog extends React.Component {
         </h2>
         <div style={styles.content}>
           {this.props.loadError ?
-            <LoadError error={this.props.loadError}/> :
+            <LoadError
+              error={this.props.loadError}
+              rosterProvider={this.props.rosterProvider}
+              loginType={loginType}
+            /> :
             this.props.classrooms ?
               <ClassroomList
                 classrooms={this.props.classrooms}

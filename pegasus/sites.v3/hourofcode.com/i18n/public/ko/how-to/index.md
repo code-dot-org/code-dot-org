@@ -1,13 +1,17 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>1시간짜리 Hour of Code 교육 방법</h1>
+# How to teach one Hour of Code with your class
 
-이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### 이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -23,7 +27,7 @@ Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources
 
 Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 하지만 모든 아이들이 컴퓨터가 필요한 것은 **아닙니다**, 그리고 Hour of Code는 컴퓨터 없이도 가능합니다.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+튜토리얼들이 되는지 확실히 확인하시고 학생들 컴퓨터와 디바이스들에서도 제대로 소리나는 브라우저나 비디오에서 되는지 확인하세요 **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. 아니면 오프라인 자습서를 시도해보세요.
 
 소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
 

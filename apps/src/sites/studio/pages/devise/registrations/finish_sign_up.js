@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import i18n from "@cdo/locale";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
@@ -6,7 +7,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
 const STUDENT_ONLY_FIELDS = ["#student-name-label", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#name-field", "#gender-dropdown", "#terms-of-service"];
+const SHARED_FIELDS = ["#name-field", "#gender-dropdown", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -14,12 +15,22 @@ const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FI
 const scriptData = getScriptData('signup');
 const {usIp} = scriptData;
 
-// Auto-fill country in SchoolInfoInputs if we detect a US IP address.
-let schoolData = {country: usIp ? 'United States' : ''};
+// Auto-fill country and countryCode if we detect a US IP address.
+let schoolData = {
+  country: usIp ? 'United States' : '',
+  countryCode: usIp ? 'US' : '',
+};
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById("school-info-inputs");
   renderSchoolInfo();
+
+  $(".finish-signup").submit(function () {
+    // The country set in our form is the long-form string name of the country.
+    // We want it to be the 2-letter country code, so we change the value on form submission.
+    const countryInputEl = $('input[name="user[school_info_attributes][country]"]');
+    countryInputEl.val(schoolData.countryCode);
+  });
 
   $("#print-terms").click(function () {
     $("#print-frame")[0].contentWindow.print();
@@ -62,28 +73,36 @@ $(document).ready(() => {
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
-        <SchoolInfoInputs
-          schoolType={schoolData.schoolType}
-          country={schoolData.country}
-          ncesSchoolId={schoolData.ncesSchoolId}
-          schoolName={schoolData.schoolName}
-          schoolCity={schoolData.schoolCity}
-          schoolState={schoolData.schoolState}
-          schoolZip={schoolData.schoolZip}
-          schoolLocation={schoolData.schoolLocation}
-          useGoogleLocationSearch={schoolData.useGoogleLocationSearch}
-          onCountryChange={onCountryChange}
-          onSchoolTypeChange={onSchoolTypeChange}
-          onSchoolChange={onSchoolChange}
-          onSchoolNotFoundChange={onSchoolNotFoundChange}
-        />,
+        <div style={{padding: 10}}>
+          <h5>{i18n.schoolInformationHeader()}</h5>
+          <hr/>
+          <SchoolInfoInputs
+            schoolType={schoolData.schoolType}
+            country={schoolData.country}
+            ncesSchoolId={schoolData.ncesSchoolId}
+            schoolName={schoolData.schoolName}
+            schoolCity={schoolData.schoolCity}
+            schoolState={schoolData.schoolState}
+            schoolZip={schoolData.schoolZip}
+            schoolLocation={schoolData.schoolLocation}
+            useGoogleLocationSearch={schoolData.useGoogleLocationSearch}
+            onCountryChange={onCountryChange}
+            onSchoolTypeChange={onSchoolTypeChange}
+            onSchoolChange={onSchoolChange}
+            onSchoolNotFoundChange={onSchoolNotFoundChange}
+            styles={{width: 580}}
+          />
+        </div>,
         schoolInfoMountPoint
       );
     }
   }
 
   function onCountryChange(_, event) {
-    schoolData.country = event ? event.value : '';
+    if (event) {
+      schoolData.country = event.value;
+      schoolData.countryCode = event.label;
+    }
     renderSchoolInfo();
   }
 
