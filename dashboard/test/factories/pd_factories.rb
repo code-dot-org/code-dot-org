@@ -15,6 +15,11 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     end
+    trait :local_summer_workshop_upcoming do
+      local_summer_workshop
+      num_sessions 5
+      sessions_from Date.today + 3.months
+    end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_FIT
@@ -85,6 +90,37 @@ FactoryGirl.define do
         end
       end
     end
+  end
+
+  factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
+    mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
+  end
+
+  factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
+    # Link to partner-specific site.
+    link_to_partner_application "https://code.org/specific-link"
+    mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
+  end
+
+  factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
+    # Applications are closed.
+    apps_open_date_csp_teacher {Date.today - 5.days}
+    apps_open_date_csd_teacher {Date.today - 6.days}
+    apps_close_date_csp_teacher {Date.today - 2.days}
+    apps_close_date_csd_teacher {Date.today - 3.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
+  end
+
+  factory :regional_partner_newjersey, parent: :regional_partner_with_summer_workshops do
+    # No contact details, and no workshops submitted.
+    contact_name nil
+    contact_email nil
+    apps_open_date_csp_teacher nil
+    apps_open_date_csd_teacher nil
+    apps_close_date_csp_teacher nil
+    apps_close_date_csd_teacher nil
+    mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
+    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
