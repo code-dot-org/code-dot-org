@@ -11,16 +11,21 @@ class RegistrationsController < Devise::RegistrationsController
 
   def new
     session[:user_return_to] ||= params[:user_return_to]
-    @already_hoc_registered = params[:already_hoc_registered]
 
-    SignUpTracking.begin_sign_up_tracking(session)
-    FirehoseClient.instance.put_record(
-      study: 'account-sign-up',
-      event: 'load-sign-up-page',
-      data_string: session[:sign_up_uid]
-    )
-
-    super
+    if PartialRegistration.in_progress?(session)
+      # TODO: double check user_params
+      user_params = params[:user] || {}
+      @user = User.new_with_session(user_params, session)
+    else
+      @already_hoc_registered = params[:already_hoc_registered]
+      SignUpTracking.begin_sign_up_tracking(session)
+      FirehoseClient.instance.put_record(
+        study: 'account-sign-up',
+        event: 'load-sign-up-page',
+        data_string: session[:sign_up_uid]
+      )
+      super
+    end
   end
 
   #
@@ -47,13 +52,6 @@ class RegistrationsController < Devise::RegistrationsController
       end
 
     respond_to_account_update(successfully_updated)
-  end
-
-  #
-  # GET /users/finish_sign_up
-  #
-  def finish_sign_up
-    @user = User.new
   end
 
   def create

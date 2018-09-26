@@ -250,12 +250,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
-
-    if SignUpTracking.new_sign_up_experience?(session)
-      redirect_to users_finish_sign_up_url
-    else
-      redirect_to new_user_registration_url
-    end
+    redirect_to new_user_registration_url
   end
 
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
