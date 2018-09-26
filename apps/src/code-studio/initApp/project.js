@@ -29,7 +29,8 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange'
+  workspaceChange: 'workspaceChange',
+  continueButtonPressed: 'continueButtonPressed',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -508,11 +509,14 @@ var projects = module.exports = {
           this.setName('My Project');
         }
 
-        $(window).on(events.appModeChanged, function (event, callback) {
+        const eventName = appOptions.level.skipRunSave ?
+          events.continueButtonPressed :
+          events.appModeChanged;
+
+        $(window).on(eventName, function (event, callback) {
           this.saveIfSourcesChanged().then(callback);
         }.bind(this));
 
-        // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
           this.sourceHandler.getLevelSource(currentSources.source).then(response => {
@@ -522,7 +526,11 @@ var projects = module.exports = {
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval(this.autosave.bind(this), AUTOSAVE_INTERVAL);
+
+        if (!appOptions.level.skipAutosave) {
+          // Autosave every AUTOSAVE_INTERVAL milliseconds
+          window.setInterval(this.autosave.bind(this), AUTOSAVE_INTERVAL);
+        }
 
         if (current.hidden) {
           if (!this.isFrozen()) {
