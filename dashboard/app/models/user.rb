@@ -963,11 +963,12 @@ class User < ActiveRecord::Base
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
+    max_credential_size = 255
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
     login = conditions.delete(:login)
     if login.present?
-      return nil if login.utf8mb4?
+      return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       from("users IGNORE INDEX(index_users_on_deleted_at)").where(
@@ -976,8 +977,8 @@ class User < ActiveRecord::Base
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
         ]
       ).first
-    elsif hashed_email = conditions.delete(:hashed_email)
-      return nil if hashed_email.utf8mb4?
+    elsif (hashed_email = conditions.delete(:hashed_email))
+      return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
       return find_by_hashed_email(hashed_email)
     else
       nil
