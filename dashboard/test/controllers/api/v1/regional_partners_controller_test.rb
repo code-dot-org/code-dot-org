@@ -23,6 +23,10 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     )
   end
 
+  setup do
+    Pd::Workshop.any_instance.stubs(:process_location) # don't actually call Geocoder service
+  end
+
   [:index, :capacity].each do |action|
     test_redirect_to_sign_in_for action
     test_user_gets_response_for action, user: :user, response: :success
@@ -230,6 +234,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'find regional partner summer workshops for specific zip' do
+    Geocoder.expects(:search).never
+
     regional_partner = create :regional_partner_beverly_hills
 
     get :find, zip_code: 90210
@@ -239,7 +245,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'find regional partner summer workshops for state fallback' do
     mock_illinois_object = OpenStruct.new(state_code: "IL")
-    Geocoder.stubs(:search).returns([mock_illinois_object])
+    Geocoder.expects(:search).returns([mock_illinois_object])
 
     regional_partner = create :regional_partner_illinois
 
@@ -250,7 +256,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'find no regional partner summer workshops for a state' do
     mock_washington_object = OpenStruct.new(state_code: "WA")
-    Geocoder.stubs(:search).returns([mock_washington_object])
+    Geocoder.expects(:search).returns([mock_washington_object])
 
     get :find, zip_code: 98104
     assert_response 404
