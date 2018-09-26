@@ -1,4 +1,5 @@
 require 'cdo/db'
+require 'cdo/cache'
 DB = PEGASUS_DB
 
 # A wrapper class around the PEGASUS_DB[:properties] table.
@@ -8,7 +9,9 @@ class Properties
   # @param key [String] the key to retrieve the value of.
   # @return [JSON] the value associated with key, nil if key does not exist.
   def self.get(key)
-    i = @@table.where(key: key.to_s).first
+    i = CDO.cache.fetch("properties/#{key}", expires_in: 60) do
+      @@table.where(key: key.to_s).first
+    end
     return nil unless i
     JSON.load(StringIO.new(i[:value]))
   end
@@ -18,6 +21,7 @@ class Properties
   # @return [String] the value parameter
   def self.set(key, value)
     key = key.to_s
+    CDO.cache.delete("properties/#{key}")
 
     i = @@table.where(key: key).first
     if i.nil?
@@ -32,6 +36,7 @@ class Properties
   # @param key [String] the key to delete.
   # @return [Integer] the number of rows deleted.
   def self.delete(key)
+    CDO.cache.delete("properties/#{key}")
     @@table.where(key: key).delete
   end
 
