@@ -123,6 +123,10 @@ FactoryGirl.define do
     pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
   end
 
+  factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
+    mappings {[create(:pd_regional_partner_mapping, zip_code: "90210")]}
+  end
+
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
     num_sessions 1
     started_at {Time.zone.now}
