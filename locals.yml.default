@@ -91,3 +91,13 @@ dashboard_enable_pegasus: true
 # in Applab.
 #firebase_name: 'cdo-v3-dev'
 #firebase_secret:
+
+
+# Configuration and credentials for the Geocoder gem.  Google Maps provides a
+# street address geocoding service, while freegeoip provides an IP address
+# geocoding service.  (The former is "lookup" in the Geocoder config, while the
+# latter is "ip_lookup".)  We send both street address and IP address strings
+# into Geocoder#search and the appropriate service is used.
+#google_maps_client_id:
+#google_maps_secret:
+#freegeoip_host:
