@@ -6,15 +6,13 @@ import $ from 'jquery';
 
 class RegionalPartnerSearch extends Component {
   static propTypes = {
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    states: PropTypes.arrayOf(PropTypes.array)
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
   };
 
   state = {
     partnerInfo: undefined,
     stateValue: "",
     zipValue: "",
-    allowZip: false,
     noPartner: false
   };
 
@@ -22,28 +20,8 @@ class RegionalPartnerSearch extends Component {
     this.setState({partnerInfo: response });
   };
 
-  workshopFail = (response) => {
-    this.setState({allowZip: true});
-  };
-
   workshopZipFail = (response) => {
     this.setState({noPartner: true});
-  };
-
-  handleStateChange = (e) => {
-    this.setState({
-      stateValue: e.target.value,
-      zipValue: "",
-      allowZip: false,
-      partnerInfo: undefined,
-      noPartner: false
-    });
-
-    $.ajax({
-      url: "/dashboardapi/v1/regional_partners/find?state=" + e.target.value,
-      type: "get",
-      dataType: "json"
-    }).done(this.workshopSuccess).fail(this.workshopFail);
   };
 
   handleZipChange = (event) => {
@@ -85,25 +63,16 @@ class RegionalPartnerSearch extends Component {
     return (
       <div>
         <h2>Ready to apply?</h2>
-        School State:
-        <select value={this.state.stateValue} onChange={this.handleStateChange} style={{width: '150px'}}>
-          <option disabled value=""/>
-          {this.props.states.map(item => {
-            return <option key={item[0]} value={item[0]}>{item[1]}</option>;
-          })}
-        </select>
 
-        {this.state.allowZip && (
-          <form onSubmit={this.handleZipSubmit}>
-            <label>
-              School Zip Code:
-              <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} />
-            </label>
-            <div>
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
-        )}
+        <form onSubmit={this.handleZipSubmit}>
+          <label>
+            School Zip Code:
+            <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} />
+          </label>
+          <div>
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
 
         {this.state.noPartner || partnerInfo && (
           <h3>Regional Partner hosting the Professional Development Program in this region:</h3>
