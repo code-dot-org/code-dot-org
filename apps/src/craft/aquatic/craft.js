@@ -299,7 +299,7 @@ var preloadImage = function (url) {
 };
 
 Craft.characterAssetPackName = function (playerName) {
-  return 'player' + playerName;
+  return 'player' + playerName + 'Aquatic';
 };
 
 Craft.getCurrentCharacter = function () {
