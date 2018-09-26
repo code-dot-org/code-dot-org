@@ -87,8 +87,14 @@ social:
                 = view :index_video
                 %div{style: "clear: both;"}
               #leftbutton.visible-xs
-                %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
-                %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
+                -# If language is Espanol(Mexico), show alternate promo video
+                -# for LATM Hour of Code.
+                - unless @language == "la"
+                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
+                - if @language == "la"
+                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "60", onclick: "return startLATMVideo();", style: "cursor: pointer;"}
         .col-sm-6.col-xs-12.col-md-4
           #textbacking
             %div.front-header-banner{style: "color: white; margin-top: 0px;"}
@@ -101,9 +107,16 @@ social:
                 = view :hoc_action_buttons, hoc_mode: hoc_mode
 
             #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
-              %div.watch-video-small{onclick: "return startVideo();"}
-                =hoc_s(:front_watch_regular_video)
-                %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
+              -# If language is Espanol(Mexico), show alternate promo video
+              -# for LATM Hour of Code.
+              - unless @language == "la"
+                %div.watch-video-small{onclick: "return startVideo();"}
+                  =hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
+              - if @language == "la"
+                %div.watch-video-small{onclick: "return startLATAMVideo();"}
+                  =hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "25", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
           %br/
           %br/
 
@@ -211,6 +224,34 @@ social:
       return;
 
     $("<iframe allowfullscreen frameborder='0' src='https://www.youtube-nocookie.com/embed/KsOIlDT145A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+
+    $("#videodiv").fadeTo(1000, 1);
+    $("#leftbutton").fadeTo(500, 0).remove();
+
+    $("#fullwidth" + currentImage).fadeTo(1000, 0.3);
+
+    videoStarted = true;
+
+    clearInterval(timerId);
+  }
+  $(function() {
+    $('.highlight-item').mouseover(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeIn();
+    });
+
+    $('.highlight-item').mouseleave(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeOut();
+    });
+  });
+
+  function startLATAMVideo()
+  {
+    if (videoStarted)
+      return;
+
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtube-nocookie.com/embed/OpgWbXthMlQ?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();
