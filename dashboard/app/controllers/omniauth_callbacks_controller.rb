@@ -77,7 +77,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       move_sections_and_destroy_source_user \
         source_user: existing_credential_holder,
         destination_user: current_user,
-        takeover_type: 'connect_provider'
+        takeover_type: 'connect_provider',
+        provider: provider
     end
 
     # TODO: some of this won't work right for non-Google providers, because info comes in differently
@@ -346,13 +347,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def silent_takeover(oauth_user, auth_hash)
     lookup_email = oauth_user.email.presence || auth_hash.info.email
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
+    provider = auth_hash.provider.to_s
 
     unless lookup_user.present?
       # Even if silent takeover is not available for student imported from Google Classroom, we still want
       # to attach the email received from Google login to the student's account since GC imports do not provide emails.
       if allows_google_classroom_takeover(oauth_user)
         oauth_user.update_email_for(
-          provider: auth_hash.provider.to_s,
+          provider: provider,
           uid: auth_hash.uid,
           email: lookup_email
         )
@@ -365,7 +367,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return unless move_sections_and_destroy_source_user(
         source_user: oauth_user,
         destination_user: lookup_user,
-        takeover_type: 'silent'
+        takeover_type: 'silent',
+        provider: provider,
       )
     end
 
@@ -374,7 +377,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         AuthenticationOption.create!(
           user: lookup_user,
           email: lookup_email,
-          credential_type: auth_hash.provider.to_s,
+          credential_type: provider,
           authentication_id: auth_hash.uid,
           data: {
             oauth_token: auth_hash.credentials&.token,
@@ -385,7 +388,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else
         lookup_user.update!(
           email: lookup_email,
-          provider: auth_hash.provider.to_s,
+          provider: provider,
           uid: auth_hash.uid,
           oauth_token: auth_hash.credentials&.token,
           oauth_token_expiration: auth_hash.credentials&.expires_at,
