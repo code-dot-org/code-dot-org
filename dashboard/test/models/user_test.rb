@@ -676,6 +676,22 @@ class UserTest < ActiveSupport::TestCase
     # this used to raise a mysql error, now we sanitize it into a nonsense string
   end
 
+  test "find_for_authentication with very long query" do
+    # Our username and email columns are 255 characters wide.  We should
+    # fail-fast if the query is longer than that.
+    long_query = 'x' * 256
+
+    User.expects(:from).never
+    User.expects(:where).never
+    User.expects(:find_by_hashed_email).never
+
+    result = User.find_for_authentication login: long_query
+    assert_nil result
+
+    result = User.find_for_authentication hashed_email: long_query
+    assert_nil result
+  end
+
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
     migrated_student = create(:student, :with_email_authentication_option, :multi_auth_migrated, email: email)

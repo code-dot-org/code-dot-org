@@ -30,10 +30,10 @@ export default class LabeledFormComponent extends FormComponent {
     };
   }
 
-  defaultOptions(name) {
+  defaultOptions(name, props = {}) {
     return {
       name,
-      label: this.labelFor(name),
+      label: props.label || this.labelFor(name),
       controlWidth: {md: 6},
       required: true
     };
@@ -41,14 +41,14 @@ export default class LabeledFormComponent extends FormComponent {
 
   singleCheckboxFor(name, props = {}) {
     return this.buildSingleCheckbox({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       ...props
     });
   }
 
   checkBoxesFor(name, props = {}) {
     return this.buildButtonsFromOptions({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "check",
       ...props
     });
@@ -56,7 +56,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   checkBoxesWithAdditionalTextFieldsFor(name, textFieldMap, props = {}) {
     return this.buildButtonsWithAdditionalTextFieldsFromOptions({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "check",
       textFieldMap,
       ...props
@@ -65,7 +65,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   radioButtonsWithAdditionalTextFieldsFor(name, textFieldMap, props = {}) {
     return this.buildButtonsWithAdditionalTextFieldsFromOptions({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "radio",
       textFieldMap,
       ...props
@@ -74,7 +74,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   radioButtonsFor(name, props = {}) {
     return this.buildButtonsFromOptions({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "radio",
       ...props
     });
@@ -82,7 +82,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   dynamicRadioButtonsWithAdditionalTextFieldsFor(name, options, textFieldMap, props = {}) {
     return this.buildButtonsWithAdditionalTextFields({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "radio",
       options,
       textFieldMap,
@@ -92,7 +92,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   dynamicCheckBoxesFor(name, options, props = {}) {
     return this.buildButtons({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: 'check',
       answers: options,
       ...props
@@ -101,7 +101,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   dynamicCheckBoxesWithAdditionalTextFieldsFor(name, options, textFieldMap, props = {}) {
     return this.buildButtonsWithAdditionalTextFields({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "check",
       options,
       textFieldMap,
@@ -111,7 +111,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   selectFor(name, props = {}) {
     return this.buildSelectFieldGroupFromOptions({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "select",
       ...props
     });
@@ -119,7 +119,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   inputFor(name, props = {}) {
     return this.buildFieldGroup({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "text",
       ...props
     });
@@ -127,7 +127,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   numberInputFor(name, props = {}) {
     return this.buildFieldGroup({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       type: "number",
       ...props
     });
@@ -145,7 +145,7 @@ export default class LabeledFormComponent extends FormComponent {
 
   usPhoneNumberInputFor(name, props={}) {
     return this.buildUsPhoneNumberInput({
-      ...this.defaultOptions(name),
+      ...this.defaultOptions(name, props),
       ...props
     });
   }
