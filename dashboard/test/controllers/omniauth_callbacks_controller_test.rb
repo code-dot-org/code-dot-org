@@ -698,13 +698,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     # Then I go to the registration page to finish signing up
     assert_redirected_to 'http://test.host/users/sign_up'
-    assert_equal auth[:credentials][:token], CDO.shared_cache.read("oauth_token-#{auth[:info][:email]}")
-    assert_equal auth[:credentials][:refresh_token], CDO.shared_cache.read("oauth_refresh_token-#{auth[:info][:email]}")
+    assert PartialRegistration.in_progress? session
+    partial_user = User.new_with_session({}, session)
 
-    # Oh no! This is broken - we don't persist the expiration
-    # during a multi-step sign-up.
-    # attributes = session['devise.user_attributes']
-    # assert_equal auth[:credentials][:expires_at], attributes['oauth_token_expiration']
+    assert_equal AuthenticationOption::GOOGLE, partial_user.provider
+    assert_equal uid, partial_user.uid
+    assert_equal auth[:credentials][:token], partial_user.oauth_token
+    assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
+    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
