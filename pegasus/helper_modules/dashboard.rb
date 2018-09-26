@@ -33,6 +33,7 @@ module Dashboard
     # Retrieves the indicated user from the database, respecting soft-deletes.
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
+      return nil if user_id.nil?
       row = Dashboard.db[:users].where(id: user_id, deleted_at: nil).first
       return nil unless row
       Dashboard::User.new(row)
@@ -41,6 +42,7 @@ module Dashboard
     # Retrieves the indicated user from the database, ignoring soft-deletes.
     # @returns [User] for given user_id, or nil if not found in database
     def self.get_with_deleted(user_id)
+      return nil if user_id.nil?
       row = Dashboard.db[:users].where(id: user_id).first
       return nil unless row
       Dashboard::User.new(row)
