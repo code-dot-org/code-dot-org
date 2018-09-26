@@ -13,7 +13,6 @@ class RegistrationsController < Devise::RegistrationsController
     session[:user_return_to] ||= params[:user_return_to]
 
     if PartialRegistration.in_progress?(session)
-      # TODO: double check user_params
       user_params = params[:user] || {}
       @user = User.new_with_session(user_params, session)
     else
