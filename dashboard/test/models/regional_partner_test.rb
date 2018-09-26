@@ -3,6 +3,8 @@ require 'test_helper'
 class RegionalPartnerTest < ActiveSupport::TestCase
   freeze_time
 
+  include Pd::SharedWorkshopConstants
+
   test "create regional partner with valid attributes creates regional partner" do
     assert_creates RegionalPartner do
       create :regional_partner,
@@ -219,5 +221,48 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner = build :regional_partner, applications_principal_approval: 'Invalid principal_approval'
     refute regional_partner.valid?
     assert_equal ["Applications principal approval is not included in the list"], regional_partner.errors.full_messages
+  end
+
+  test 'regional_partner_summer_workshop_open' do
+    regional_partner = create :regional_partner_alabama
+
+    assert_equal "Contact Name", regional_partner.contact_name
+    assert_equal "contact@code.org", regional_partner.contact_email
+
+    summer_workshops = regional_partner.upcoming_summer_workshops
+    assert_equal 1, summer_workshops.length
+    assert_equal "Training building", summer_workshops[0][:location_name]
+    assert_equal "CS Principles", summer_workshops[0][:course]
+
+    assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
+    assert_nil regional_partner.link_to_partner_application
+  end
+
+  test 'regional_partner_summer_workshop_open_custom_link' do
+    regional_partner = create :regional_partner_illinois
+
+    assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
+    assert_equal "https://code.org/specific-link", regional_partner.link_to_partner_application
+  end
+
+  test 'regional_partner_summer_workshop_closed' do
+    regional_partner = create :regional_partner_kentucky
+
+    assert_equal WORKSHOP_APPLICATION_STATES[:now_closed], regional_partner.summer_workshops_application_state
+  end
+
+  test 'regional_partner_summer_workshop_missing_informaiton' do
+    regional_partner = create :regional_partner_newjersey
+
+    assert_nil regional_partner.contact_name
+    assert_nil regional_partner.contact_email
+
+    assert_equal WORKSHOP_APPLICATION_STATES[:opening_sometime], regional_partner.summer_workshops_application_state
+  end
+
+  test 'regional_partner_summer_workshop_opening_on_date' do
+    regional_partner = create :regional_partner_oregon
+
+    assert_equal WORKSHOP_APPLICATION_STATES[:opening_at], regional_partner.summer_workshops_application_state
   end
 end

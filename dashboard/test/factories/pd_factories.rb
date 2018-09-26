@@ -125,6 +125,15 @@ FactoryGirl.define do
     pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
   end
 
+  factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
+    # Opening at a specific date in the future.
+    apps_open_date_csp_teacher {Date.today + 5.days}
+    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_close_date_csp_teacher {Date.today + 14.days}
+    apps_close_date_csd_teacher {Date.today + 15.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
+  end
+
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
