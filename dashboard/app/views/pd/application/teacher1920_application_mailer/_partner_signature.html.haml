@@ -1,0 +1,12 @@
+- if @application.regional_partner
+  = @application.regional_partner.contact_name
+  %br
+  = mail_to @application.regional_partner.contact_email
+  %br
+  = @application.regional_partner.name
+- else
+  Anthonette Peña
+  %br
+  National Program Manager
+  %br
+  Code.org

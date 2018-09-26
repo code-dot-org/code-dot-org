@@ -74,6 +74,9 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  bottomMargin: {
+    marginBottom: 20
+  }
 };
 
 // Cell formatters.
@@ -296,7 +299,7 @@ class PersonalProjectsTable extends React.Component {
     const noProjects = this.props.personalProjectsList.length === 0;
 
     return (
-      <div>
+      <div style={styles.bottomMargin}>
         {!noProjects &&
           <Table.Provider
             columns={columns}

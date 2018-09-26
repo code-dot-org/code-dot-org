@@ -3,23 +3,20 @@
   = @application.first_name + ","
 
 %p
-  Thank you for applying to join Code.org's Professional Learning Program for
+  Thank you for applying to
+  = @application.effective_regional_partner_name + "'s'"
+  2019-20 Professional Learning Program for
   = @application.course_name + "."
-  All of our seats in the program have been filled, but we have reserved a
-  space for you in our waitlist. As additional spaces become available, we will
-  offer them to waitlisted teachers.
+  Our team appreciated the opportunity to review your application and learn about your
+  commitment to computer science education. I'm writing to let you know we are currently
+  unable to offer you a space in the Professional Learning Program this year.
 
 %p
-  Please contact
-  = link_to('teacher@code.org', 'mailto:teacher@code.org')
-  with any questions or if you would like us to remove you from our waitlist
-  and close your application.
+  However, we have placed you on our waitlist should a space become available later.
+  Please respond to this message if you have any questions or if you would like to
+  withdraw your application from consideration.
 
 %p
   Thank you,
-%p
-  Sarah Fairweather
-  %br
-  Education Team Program Manager
-  %br
-  Code.org
+
+= render partial: 'partner_signature'
