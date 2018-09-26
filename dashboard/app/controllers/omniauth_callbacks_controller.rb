@@ -206,6 +206,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if SignUpTracking.new_sign_up_experience? session
       user = User.new
       User.initialize_new_oauth_user user, auth_hash, auth_params
+      user.oauth_token = auth_hash.credentials&.token
+      user.oauth_token_expiration = auth_hash.credentials&.expires_at
+
       prepare_locale_cookie user
       register_new_user user
     else

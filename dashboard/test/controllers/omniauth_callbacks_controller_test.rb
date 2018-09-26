@@ -547,7 +547,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :clever
     end
 
-    # Then I go to the registration page to finish signing up
+    # Then my account is created
+    # And I'm signed in
+    # And I go to my dashboard
     user = User.find_by_credential(
       type: AuthenticationOption::CLEVER,
       id: uid
@@ -577,6 +579,35 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
     assert_equal user.oauth_token, auth[:credentials][:token]
     assert_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
+  end
+
+  test 'clever: directs user to finish sign-up (new_sign_up_experience) ' do
+    SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-clever"
+
+    # When I hit the clever oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: uid,
+      user_type: 'teacher'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    refute_creates User do
+      get :clever
+    end
+
+    # Then I am not signed in
+    # And I'm looking at a finish-sign-up experience
+    # And my partial info is available
+    assert_nil signed_in_user_id
+    assert_redirected_to 'http://test.host/users/finish_sign_up'
+    assert PartialRegistration.in_progress? session
+    partial_user = User.new_with_session({}, session)
+    assert_equal AuthenticationOption::CLEVER, partial_user.provider
+    assert_equal uid, partial_user.uid
+    assert_equal auth[:credentials][:token], partial_user.oauth_token
+    assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
   end
 
   test 'google_oauth2: signs in user if user is found by credentials' do
