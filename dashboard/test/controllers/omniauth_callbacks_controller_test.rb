@@ -601,7 +601,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # And I'm looking at a finish-sign-up experience
     # And my partial info is available
     assert_nil signed_in_user_id
-    assert_redirected_to 'http://test.host/users/finish_sign_up'
+    assert_redirected_to 'http://test.host/users/sign_up'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
     assert_equal AuthenticationOption::CLEVER, partial_user.provider
