@@ -129,27 +129,27 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = extract_microsoft_data(auth_hash)
     end
 
-    @user = User.from_omniauth(auth_hash, auth_params, session)
+    user = User.from_omniauth(auth_hash, auth_params, session)
 
-    prepare_locale_cookie @user
+    prepare_locale_cookie user
 
-    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
-      handle_untrusted_email_signin(@user, provider)
-    elsif allows_silent_takeover(@user, auth_hash)
-      silent_takeover(@user, auth_hash)
-      sign_in_user
-    elsif @user.persisted?
+    if User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && user.persisted?
+      handle_untrusted_email_signin user, provider
+    elsif allows_silent_takeover(user, auth_hash)
+      user = silent_takeover user, auth_hash
+      sign_in_user user
+    elsif user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_oauth_takeover(@user)
-      sign_in_user
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
+      check_and_apply_oauth_takeover user
+      sign_in_user user
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
       email_already_taken_redirect \
         provider: provider,
         found_provider: looked_up_user.provider,
-        email: @user.email
+        email: user.email
     else
       # This is a new registration
-      register_new_user(@user)
+      register_new_user user
     end
   end
 
@@ -159,11 +159,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
 
-    @user = user
     if allows_google_classroom_takeover user
-      silent_takeover @user, auth_hash
+      user = silent_takeover user, auth_hash
     end
-    sign_in_user
+    sign_in_user user
   end
 
   def sign_up_google_oauth2
@@ -177,9 +176,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     prepare_locale_cookie user
 
     if allows_silent_takeover user, auth_hash
-      @user = user
-      silent_takeover @user, auth_hash
-      sign_in_user
+      user = silent_takeover user, auth_hash
+      sign_in_user user
     else
       register_new_user user
     end
@@ -188,7 +186,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def sign_in_clever(user)
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
-    @user = user
     handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
   end
 
@@ -199,20 +196,21 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # our tracking data is usually populated, so do it here
     SignUpTracking.begin_sign_up_tracking(session, split_test: true)
 
-    @user = User.from_omniauth(auth_hash, auth_params, session)
+    user = User.from_omniauth(auth_hash, auth_params, session)
 
-    prepare_locale_cookie @user
+    prepare_locale_cookie user
 
-    if @user.persisted?
-      handle_untrusted_email_signin(@user, AuthenticationOption::CLEVER)
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
-      email_already_taken_redirect \
+    if user.persisted?
+      handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
+      email_already_taken_redirect(
         provider: AuthenticationOption::CLEVER,
         found_provider: looked_up_user.provider,
-        email: @user.email
+        email: user.email
+      )
     else
       # This is a new registration
-      register_new_user(@user)
+      register_new_user user
     end
   end
 
@@ -317,7 +315,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       user.seen_oauth_connect_dialog = true
       user.save!
     end
-    sign_in_user
+    sign_in_user user
   end
 
   def just_authorized_google_classroom?
@@ -340,6 +338,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       !user.has_activity?
   end
 
+  # Looks for an existing user with an email address matching the oauth credentials.
+  # If an existing user is found, destroys the source user and moves credentials and section
+  # membership to the existing user.
+  #
+  # @param [User] oauth_user (may or may not be persisted)
+  # @param [Hash] auth_hash
+  #
+  # @returns [User] that survives the takeover - this might be the the oauth_user passed in, or a
+  #   _different_ user that was taken over.  Either way, the caller should consider the returned
+  #   user the one that should be signed in at the end of the auth flow.
   def silent_takeover(oauth_user, auth_hash)
     lookup_email = oauth_user.email.presence || auth_hash.info.email
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
@@ -354,25 +362,22 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           email: lookup_email
         )
       end
-      return
+      return oauth_user
     end
-
-    # Continue with silent takeover
-    @user = lookup_user
 
     # Transfer sections and destroy Google Classroom user if takeover is possible
     if allows_google_classroom_takeover(oauth_user)
       return unless move_sections_and_destroy_source_user(
         source_user: oauth_user,
-        destination_user: @user,
+        destination_user: lookup_user,
         takeover_type: 'silent'
       )
     end
 
     begin
-      if @user.migrated?
+      if lookup_user.migrated?
         AuthenticationOption.create!(
-          user: @user,
+          user: lookup_user,
           email: lookup_email,
           credential_type: auth_hash.provider.to_s,
           authentication_id: auth_hash.uid,
@@ -383,7 +388,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           }.to_json
         )
       else
-        @user.update!(
+        lookup_user.update!(
           email: lookup_email,
           provider: auth_hash.provider.to_s,
           uid: auth_hash.uid,
@@ -393,7 +398,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         )
       end
     rescue => err
-      error_class = @user.migrated? ?
+      error_class = lookup_user.migrated? ?
         'Failed to create AuthenticationOption during silent takeover' :
         'Failed to update User during silent takeover'
       # This should never happen if other logic is working correctly, so notify
@@ -402,20 +407,21 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         error_class: error_class,
         error_message: err.to_s,
         context: {
-          user_id: @user.id,
+          user_id: lookup_user.id,
           tags: 'accounts'
         }
       )
     end
+    lookup_user
   end
 
-  def sign_in_user
+  def sign_in_user(user)
     flash.notice = I18n.t('auth.signed_in')
 
     # Will only log if the sign_up page session cookie is set, so this is safe to call in all cases
-    SignUpTracking.log_sign_in(resource, session, request)
+    SignUpTracking.log_sign_in(user, session, request)
 
-    sign_in_and_redirect @user
+    sign_in_and_redirect user
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
