@@ -132,7 +132,10 @@ const LoadError = ({rosterProvider, loginType}) => {
             </a>
           </p>
           <p>
-            <a href={ROSTERED_SECTIONS_SUPPORT_URL}>
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+            >
               {locale.errorLoadingRosteredSectionsSupport()}
             </a>
           </p>
@@ -143,7 +146,10 @@ const LoadError = ({rosterProvider, loginType}) => {
         <p>
           {locale.errorLoadingRosteredSections({type: loginType})}
           {' '}
-          <a href={ROSTERED_SECTIONS_SUPPORT_URL}>
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+          >
             {locale.errorLoadingRosteredSectionsSupport()}
           </a>
         </p>
