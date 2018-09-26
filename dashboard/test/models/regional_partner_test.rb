@@ -251,7 +251,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal WORKSHOP_APPLICATION_STATES[:now_closed], regional_partner.summer_workshops_application_state
   end
 
-  test 'regional_partner_summer_workshop_missing_informaiton' do
+  test 'regional_partner_summer_workshop_missing_information' do
     regional_partner = create :regional_partner_newjersey
 
     assert_nil regional_partner.contact_name
