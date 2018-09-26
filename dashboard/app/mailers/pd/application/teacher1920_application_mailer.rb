@@ -27,7 +27,7 @@ module Pd::Application
         to: @application.formatted_principal_email,
         cc: @application.formatted_teacher_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Action Needed: Your teacher has applied to #{@application.regional_partner.name}'s Professional Learning Program!"
+        subject: "Action Needed: Your teacher has applied to #{@application.effective_regional_partner_name}'s Professional Learning Program!"
       )
     end
 
@@ -46,7 +46,7 @@ module Pd::Application
       @application = teacher_application
 
       mail(
-        from: 'Anthonette Pena <teacher@code.org>',
+        from: 'Anthonette Peña <teacher@code.org>',
         to: @application.formatted_partner_contact_email,
         subject: 'A principal has completed the principal approval form'
       )
@@ -58,7 +58,7 @@ module Pd::Application
       mail(
         to: @application.formatted_teacher_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Congratulations from #{@application.regional_partner.name} and Code.org!"
+        subject: "Congratulations from #{@application.effective_regional_partner_name} and Code.org!"
       )
     end
 
@@ -68,7 +68,7 @@ module Pd::Application
       mail(
         to: @application.formatted_teacher_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Register for the #{@application.regional_partner.name} #{@application.course_name} Summer Workshop"
+        subject: "Register for the #{@application.effective_regional_partner_name} #{@application.course_name} Summer Workshop"
       )
     end
 
