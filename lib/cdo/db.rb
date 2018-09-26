@@ -1,5 +1,7 @@
 require 'sequel'
 require 'sequel/connection_pool/threaded'
+require 'cdo/cache'
+require pegasus_dir 'data/static_models'
 
 # Connects to database.  Uses the Sequel connection_validator:
 #   http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html
@@ -57,6 +59,7 @@ PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
 POSTE_DB = PEGASUS_DB
 # Use Pegasus as the default database for Sequel Models.
 Sequel::Model.db = PEGASUS_DB
+PEGASUS_DB.singleton_class.prepend StaticModels
 
 DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader
 DASHBOARD_REPORTING_DB_READER = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader
