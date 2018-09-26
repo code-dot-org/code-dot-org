@@ -1,4 +1,3 @@
----
 id:
   data:
     blocks:
@@ -12,229 +11,57 @@ id:
             '"hue"': Corak warna warni
             '"saturation"': Saturasi
             '"brightness"': Kecerahan
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
-            '"rand"': Acak
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: semua
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
-            '"rand"': Acak
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: semua
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Selanjutnya
             '"prev"': Sebelumnya
             '"rand"': Acak
+            MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Selanjutnya
             '"prev"': Sebelumnya
             '"rand"': Acak
+            MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
-            '"rand"': Acak
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"height"': tinggi
             '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
             '"tint"': Mewarnai
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: semua
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Selanjutnya
             '"prev"': Sebelumnya
             '"rand"': Acak
+            MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
-            '"rand"': Acak
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Selanjutnya
             '"prev"': Sebelumnya
             '"rand"': Acak
+            MOVES.Rest: Tidak ada
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
-            '"rand"': Acak
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
-            '"rand"': Acak
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
-            '"rand"': Acak
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -249,13 +76,31 @@ id:
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"height"': tinggi
             '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
             '"tint"': Mewarnai
-      Dancelab_helloWorld:
-        text: Halo dunia
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Tidak ada
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -264,40 +109,13 @@ id:
             '"grid"': Kisi
             '"row"': baris
             '"column"': kolom
-      Dancelab_locationCenter:
-        text: Tengah
-      Dancelab_locationPointer:
-        text: Posisi tengah
-      Dancelab_makeNewDanceSpriteSync:
+      Dancelab_makeNewDanceSprite:
         options:
-          COSTUME:
-            '"alien"': Alien
-      Dancelab_makeNewGroupSprite:
-        options:
-          COSTUME:
-            '"circle"': Putaran
-            '"wiggles"': Berliat-liut
-          GROUP:
-            lead_dancers: Memimpin
-            backup_dancers: Cadangkan
-      Dancelab_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
-          RANGE:
-            '"bass"': Bass
-            '"mid"': Sedang
-            '"treble"': Trebel
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': kanan
-            '"left"': kiri
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Dancelab_randomColor:
         text: warna acak
       Dancelab_setBackgroundEffect:
@@ -322,48 +140,36 @@ id:
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"height"': tinggi
             '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
             '"tint"': Mewarnai
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: semua
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"height"': tinggi
             '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
             '"tint"': Mewarnai
           RANGE:
-            '"bass"': Bass
+            '"bass"': Kecil
             '"mid"': Sedang
-            '"treble"': Trebel
+            '"treble"': Besar
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': ukuran
+            '"height"': tinggi
             '"rotation"': Perputaran
-            '"x"': posisi x
-            '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
           RANGE:
-            '"bass"': Bass
+            '"bass"': Kecil
             '"mid"': Sedang
-            '"treble"': Trebel
+            '"treble"': Besar
       Dancelab_whenKey:
         options:
           KEY:
@@ -375,9 +181,9 @@ id:
       Dancelab_whenPeak:
         options:
           RANGE:
-            '0': Bass
+            '0': Kecil
             '1': Sedang
-            '2': Trebel
+            '2': Besar
       Dancelab_whileKey:
         options:
           KEY:
@@ -409,8 +215,8 @@ id:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': Benar
-            'false': Salah
+            'true': 'Benar'
+            'false': 'Salah'
       gamelab_enableDebug:
         text: mengaktifkan debugging
       gamelab_firstTouched:
@@ -550,6 +356,12 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
+      Mikelab_randomColor:
+        text: warna acak
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': kota
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -559,8 +371,36 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
-      Vanilla_randomColor:
-        text: warna acak
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': kanan
+            '"left"': kiri
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': panah keatas
+            '"down"': panah kebawah
+            '"left"': panah kekiri
+            '"right"': panah kekanan
+            '"w"': B
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': panah keatas
+            '"down"': panah kebawah
+            '"left"': panah kekiri
+            '"right"': panah kekanan
+            '"w"': B
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': panah keatas
+            '"down"': panah kebawah
+            '"left"': panah kekiri
+            '"right"': panah kekanan
       Vector_positionCenter:
         text: Tengah
       Vector_vectorNorth:

@@ -2,15 +2,8 @@
 class Pd::Teacher1920ApplicationMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
-  def confirmation__with_partner
-    Pd::Application::Teacher1920ApplicationMailer.confirmation build_application
-  end
-
-  def confirmation__without_partner
-    Pd::Application::Teacher1920ApplicationMailer.confirmation build_application(matched: false)
-  end
-
   %w(
+    confirmation
     principal_approval
     principal_approval_completed
     principal_approval_completed_partner
@@ -19,8 +12,11 @@ class Pd::Teacher1920ApplicationMailerPreview < ActionMailer::Preview
     declined
     waitlisted
   ).each do |mail_type|
-    define_method mail_type.to_sym do
-      Pd::Application::Teacher1920ApplicationMailer.send mail_type, build_application
+    define_method "#{mail_type}__with_partner".to_sym do
+      Pd::Application::Teacher1920ApplicationMailer.send mail_type, build_application(matched: true)
+    end
+    define_method "#{mail_type}__without_partner".to_sym do
+      Pd::Application::Teacher1920ApplicationMailer.send mail_type, build_application(matched: false)
     end
   end
 

@@ -1,4 +1,3 @@
----
 tr:
   data:
     blocks:
@@ -6,215 +5,51 @@ tr:
         options:
           UNIT:
             '"seconds"': saniye
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Sonraki
-            '"prev"': Önceki
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: tüm
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Sonraki
-            '"prev"': Önceki
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: tüm
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Sonraki
             '"prev"': Önceki
+            MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Sonraki
             '"prev"': Önceki
+            MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Sonraki
-            '"prev"': Önceki
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
+            '"height"': Yükseklik
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: tüm
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Sonraki
             '"prev"': Önceki
+            MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Sonraki
-            '"prev"': Önceki
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Sonraki
             '"prev"': Önceki
+            MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Sonraki
-            '"prev"': Önceki
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Sonraki
-            '"prev"': Önceki
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Sonraki
-            '"prev"': Önceki
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -223,23 +58,37 @@ tr:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
+            '"height"': Yükseklik
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Hiçbiri
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: tüm
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': sağ
-            '"left"': sol
+          LOCATION:
+            "{x: 100, y: 200}": sol
+            "{x: 300, y: 200}": sağ
       Dancelab_randomColor:
         text: rastgele renk
       Dancelab_setBackgroundEffect:
@@ -262,30 +111,21 @@ tr:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
+            '"height"': Yükseklik
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: tüm
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
+            '"height"': Yükseklik
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': boyut
-            '"x"': x konumu
-            '"y"': y konumu
+            '"height"': Yükseklik
       Dancelab_whenKey:
         options:
           KEY:
@@ -311,7 +151,7 @@ tr:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': doğru
+            'true': 'doğru'
             'false': 'false'
       gamelab_getProp:
         options:
@@ -399,14 +239,52 @@ tr:
             '"scale"': boyut
             '"x"': x konumu
             '"y"': y konumu
+      Mikelab_randomColor:
+        text: rastgele renk
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': boyut
             '"x"': x konumu
             '"y"': y konumu
-      Vanilla_randomColor:
-        text: rastgele renk
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': sağ
+            '"left"': sol
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': yukarı ok
+            '"down"': aşağı ok
+            '"left"': sol ok
+            '"right"': sağ ok
+            '"w"': B
+            '"a"': A
+            '"s"': G
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': yukarı ok
+            '"down"': aşağı ok
+            '"left"': sol ok
+            '"right"': sağ ok
+            '"w"': B
+            '"a"': A
+            '"s"': G
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': yukarı ok
+            '"down"': aşağı ok
+            '"left"': sol ok
+            '"right"': sağ ok
       craft_ifPath:
         options:
           DIR:

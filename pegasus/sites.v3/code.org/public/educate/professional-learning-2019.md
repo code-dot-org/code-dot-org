@@ -32,8 +32,8 @@ social:
 ## New to computer science? No worries!
 
 Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support.  We've designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
- 
-<br> 
+
+<br>
 The program supports teachers with diverse teaching backgrounds as they prepare to teach either of the following courses:
 
 [col-50]
@@ -68,9 +68,11 @@ The Code.org Professional Learning Program is open to teachers who are intereste
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
 
 ## Ready to apply?
-Regional Partners throughout the US are hosting the professional learning program in your area. 
+Regional Partners throughout the US are hosting the professional learning program in your area.
 
 Enter your zip code below to get details about the professional learning program in your local region.
 <br/>
+
+<%= view :regional_partner_search %>
 
 <%= view :answerdash %>

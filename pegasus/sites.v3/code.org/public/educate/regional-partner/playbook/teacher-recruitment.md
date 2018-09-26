@@ -18,24 +18,17 @@ ________________
 <a id="teachapp"></a>
 ## Teacher Applications and Recruitment
 
-**Note:** The Teacher Application Process Document will be updated for the teachers in the 2019-2020 Professional Learning Program soon.  In the meantime, please note that the teacher application rubrics have been updated and are available here:
+### Teacher Application Rubrics
+
 - <a href="https://drive.google.com/open?id=1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd" target=_blank>CS Principles Teacher Application Rubric (PDF)</a>
 - <a href="https://drive.google.com/open?id=12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj" target=_blank>CS Discoveries Teacher Application Rubric (PDF)</a>
 
-### What does the application process look like and how is my organization involved?
-Review the [2018 Teacher Application Process Document](https://docs.google.com/document/d/10fGyKGqX9ybLn8zaSDFcYZWdIsGELFflLsNyi1llbtM/edit#heading=h.9egyv1wsx26t) for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, and copies of the communications applicants will receive.
+### What does the application process look like?
+Review the [2019-20 Teacher Application Process Document](https://docs.google.com/document/d/1Bx-o1kRCKZxM_prrQqxQH7mXp9jXY0vT_eufgNpkKYM/edit?usp=sharing) for everything you need to know about the Code.org teacher application process including finalizing your Local Summer Workshop dates, the list of teacher application questions and how they map to the rubrics, using the Code.org teacher applications system, and FAQs.
 
 ### What are the important dates I need to know about?
-- Jan. 16: Applications open!
-- March 30: Priority Deadline for applications
-- April 6: Priority deadline for Group 3 to accept applications to TeacherCon
-- April - July: Application link will remain open for Group 1 and 2, and as needed for Group 3
-- April 20: Deadline for accepting teachers for TeacherCon 1
-- May 18: Deadline for accepting teachers for TeacherCon 2
-- June 17 - 22: TeacherCon 1
-- July 22 - 27: TeacherCon 2
-
-**Note:** Two months prior to your summer workshops is the deadline for accepting minimum cohort (for Group 1 & 2 Partners). April 6 is the deadline for accepting minimum cohort for Group 3.
+- <b>Two months</b> prior to your Local Summer Workshops is the deadline for accepting a minimum cohort of teachers. This is to allow adequate time to go through the process of cancelling a workshop, if absolutely necessary, and reaccommodating teachers into another workshop outside your region.
+- <b>Four weeks</b> prior to your Local Summer Workshop is the deadline for accepting teachers as this is also the deadline for ordering workshop supplies.  
 
 ### Application Links
 - Computer Science Discoveries - Coming Soon
