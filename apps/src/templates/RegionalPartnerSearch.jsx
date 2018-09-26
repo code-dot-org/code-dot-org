@@ -5,9 +5,6 @@ import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import $ from 'jquery';
 
 const styles = {
-  heading: {
-    marginBottom: 5
-  },
   form: {
     marginTop: 20
   },
@@ -89,7 +86,6 @@ class RegionalPartnerSearch extends Component {
 
     return (
       <div>
-        <h2 style={styles.heading}>Ready to apply?</h2>
         <div>Our Regional Partners offer local workshops throughout the United States. Enter your location to find a workshop near you.</div>
 
         <form onSubmit={this.handleZipSubmit} style={styles.form}>
@@ -110,8 +106,9 @@ class RegionalPartnerSearch extends Component {
             <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something your school can cover.</p>
             <p>
               All of our curriculum, tools, and courses are also available for your school at no cost.
+              Or,
               {' '}
-              <a href="https://code.org/educate/curriculum/3rd-party">Or, contact one of these computer science providers</a>
+              <a href="https://code.org/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
             <p>Applications open January 15, 2019.</p>
@@ -180,18 +177,19 @@ class RegionalPartnerSearch extends Component {
             )}
 
             {appState === WorkshopApplicationStates.opening_at && (
-              <div>Applications will open on {appsOpenDate}.</div>
+              <h3>Applications will open on {appsOpenDate}.</h3>
             )}
 
             {appState === WorkshopApplicationStates.opening_sometime && (
-              <div>
-                <h3>Program information and the application for this region will be available soon!</h3>
-                <a href="https://studio.code.org/pd/regional_partner_contact/new">
-                  <button>
-                    Tell me when applications open
-                  </button>
-                </a>
-              </div>
+              <h3>Program information and the application for this region will be available soon!</h3>
+            )}
+
+            {appState !== WorkshopApplicationStates.currently_open && (
+              <a href="https://studio.code.org/pd/regional_partner_contact/new">
+                <button>
+                  Tell me when applications open
+                </button>
+              </a>
             )}
           </div>
         )}
