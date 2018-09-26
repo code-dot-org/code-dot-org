@@ -23,7 +23,7 @@ video_player: true
 
 ## New to computer science? No worries.
 
-Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through the workshops and thousands more attend every month. Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our professional learning program is a great way to get started.
+Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through the workshops and thousands more attend every month. Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started.
 
 [/col-50]
 
@@ -62,7 +62,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 * Kicks off with a 5-day summer workshop where you’ll have an opportunity to work hands-on with the curriculum and meet other teachers from your area
 * Throughout the year, we offer online support for upcoming units, forum support, and follow-up workshops
 <br/><br/>
-**We have two curriculum options for high school classrooms:**
+**We have two course options:**
 * For younger students, our [Computer Science Discoveries curriculum](/educate/csd) is designed for educators in 6th - 10th grade classrooms. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming, and learning about data.
 * Our [Computer Science Principles curriculum](/educate/csp) is also an introductory course that requires no computer science background (from students or teachers). It can be taught as an AP or non-AP course, and is designed for educators in 9th - 12th grade classrooms. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 

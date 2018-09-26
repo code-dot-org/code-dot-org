@@ -49,19 +49,14 @@ module Pd::Application
       class_name: 'Pd::FitWeekend1819Registration',
       foreign_key: 'pd_application_id'
 
-    def send_decision_notification_email
-      # Accepted, declined, and waitlisted are the only valid "final" states;
-      # all other states shouldn't need emails, and we plan to send "Accepted"
-      # emails manually
-      return unless %w(declined waitlisted).include?(status)
-
-      Pd::Application::Facilitator1819ApplicationMailer.send(status, self).deliver_now
-      update!(decision_notification_email_sent_at: Time.zone.now)
-    end
-
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = FACILITATOR_APPLICATION
+    end
+
+    # override
+    def self.statuses
+      super + %w(interview)
     end
 
     PROGRAMS = {
