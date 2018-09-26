@@ -32,6 +32,7 @@ const styles = {
     height: '95px'
   },
   statusSelect: {
+    width: 250, // wide enough for the widest status
     marginRight: '5px'
   },
   editMenuContainer: {
@@ -434,9 +435,9 @@ export class DetailViewContents extends React.Component {
         style={styles.statusSelect}
       >
         {
-          this.statuses.map((status, i) => (
-            <option value={status.toLowerCase()} key={i}>
-              {status}
+          Object.keys(this.statuses).map((status, i) => (
+            <option value={status} key={i}>
+              {this.statuses[status]}
             </option>
           ))
         }
