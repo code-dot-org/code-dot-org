@@ -13,7 +13,7 @@ theme: responsive
 
 Every year, Code.org kicks off Computer Science Education Week with a signature event – at the White House, opening the stock market, or in Silicon Valley with leading women in tech, like Sheryl Sandberg, Susan Wojcicki and Peggy Johnson.
 
-You’re invited to a special event to launch Computer Science Education Week 2018, to celebrate the accomplishments of the CS education community, and to make new announcements and pledges to K-12 computer science.
+You're invited to a special event to launch Computer Science Education Week 2018, to celebrate the accomplishments of the CS education community, and to make new announcements and pledges to K-12 computer science.
 
 ### Featured speaker:
 <br>
@@ -40,6 +40,16 @@ These announcements represent an opportunity to celebrate a recent achievement o
 [Please complete this form](https://bit.ly/csedweek2017form) by **November 2nd** to submit an announcement and/or pledge to be considered for the 2018 CSEdWeek kickoff event. See examples of [pledges and announcements here](https://docs.google.com/document/d/1YzicRgPnuJzkzxqF06v2NZsXdmZNxSYAKmclRPShf9M).
 
 Thank you for your support of computer science education. Have questions? Contact eric.fershtman@code.org.
+
+
+## **Champions of Computer Science Awards**
+
+Know of someone who’s achieved something outstanding in computer science education this past year? Tell us about it! [Nominate a student, teacher, school, district, after-school club, organization, etc.](http://bit.ly/2OS05Uz), to be recognized as a **2018 Champion of Computer Science**.
+
+Those selected will be awarded a trip to Seattle, WA to be recognized on stage at the kickoff of CSEdWeek. The awards event is a collaboration between the CSTA and Code.org. This opportunity is only available for US submissions.
+
+[Please complete this form](http://bit.ly/2OS05Uz) by **November 2nd** to nominate your Champion of Computer Science. Email awards@csteachers.org if you have questions.
+
 <br/>
 <br/>
 
