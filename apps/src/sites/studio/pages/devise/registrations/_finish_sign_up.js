@@ -23,7 +23,13 @@ let schoolData = {
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById("school-info-inputs");
-  renderSchoolInfo();
+  init();
+
+  function init() {
+    const userType = $("#user_user_type")[0].value;
+    setUserType(userType);
+    renderSchoolInfo();
+  }
 
   $(".finish-signup").submit(function () {
     // The country set in our form is the long-form string name of the country.
@@ -38,7 +44,11 @@ $(document).ready(() => {
 
   $("#user_user_type").change(function () {
     var value = $(this).val();
-    switch (value) {
+    setUserType(value);
+  });
+
+  function setUserType(userType) {
+    switch (userType) {
       case "teacher":
         switchToTeacher();
         break;
@@ -48,7 +58,7 @@ $(document).ready(() => {
       default:
         hideFields(ALL_FIELDS);
     }
-  });
+  }
 
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
