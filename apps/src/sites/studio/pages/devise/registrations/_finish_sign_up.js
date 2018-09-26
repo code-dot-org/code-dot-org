@@ -6,8 +6,8 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
-const STUDENT_ONLY_FIELDS = ["#student-name-label", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#name-field", "#gender-dropdown", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
+const STUDENT_ONLY_FIELDS = ["#student-name-label", "#gender-dropdown", "#age-dropdown", "#student-consent"];
+const SHARED_FIELDS = ["#name-field", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 // Values loaded from scriptData are always initial values, not the latest
