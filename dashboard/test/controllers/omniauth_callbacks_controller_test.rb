@@ -739,6 +739,35 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
+  test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration (new_sign_up_experience)' do
+    SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '', # Google doesn't provider user_type
+      refresh_token: 'fake-refresh-token'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_redirected_to 'http://test.host/users/sign_up'
+    assert PartialRegistration.in_progress? session
+    partial_user = User.new_with_session({}, session)
+
+    assert_equal AuthenticationOption::GOOGLE, partial_user.provider
+    assert_equal uid, partial_user.uid
+    assert_equal auth[:credentials][:token], partial_user.oauth_token
+    assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
+    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
+  end
+
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
