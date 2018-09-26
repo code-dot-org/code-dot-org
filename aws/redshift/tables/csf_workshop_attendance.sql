@@ -25,45 +25,45 @@ other_processed AS (
 SELECT id,
   processed_location,
   CASE
-  WHEN id in (3604, 876, 2976, 1952, 1951, 2881, 2989, 1949) THEN 'FL'
-  WHEN id = 2281	THEN 'MS'
-  WHEN id = 2920	THEN 'IL'
-  WHEN id = 2914	THEN 'IL'
-  WHEN id = 2233	THEN 'MO'
-  WHEN id = 2356	THEN 'KS'
-  WHEN id = 3966	THEN 'LA'
-  WHEN id = 2460	THEN 'TX'
-  WHEN id = 1928	THEN 'ID'
-  WHEN id = 2124	THEN 'AZ'
-  WHEN id = 2477	THEN 'CA'
-  WHEN id = 2649	THEN 'OR'
-  WHEN id = 5132	THEN 'WA'
-  WHEN id in (5261, 5262, 5262) THEN 'IA'
-  WHEN id = 5060 THEN 'ID'
-  WHEN id = 4865 THEN 'WV'
-  WHEN json_extract_path_text(processed_location, 'state') != '' THEN json_extract_path_text(processed_location, 'state')
+      WHEN id in (3604, 876, 2976, 1952, 1951, 2881, 2989, 1949) THEN 'FL'
+      WHEN id = 2281	THEN 'MS'
+      WHEN id = 2920	THEN 'IL'
+      WHEN id = 2914	THEN 'IL'
+      WHEN id = 2233	THEN 'MO'
+      WHEN id = 2356	THEN 'KS'
+      WHEN id = 3966	THEN 'LA'
+      WHEN id = 2460	THEN 'TX'
+      WHEN id = 1928	THEN 'ID'
+      WHEN id = 2124	THEN 'AZ'
+      WHEN id = 2477	THEN 'CA'
+      WHEN id = 2649	THEN 'OR'
+      WHEN id = 5132	THEN 'WA'
+      WHEN id in (5261, 5262, 5262) THEN 'IA'
+      WHEN id = 5060 THEN 'ID'
+      WHEN id = 4865 THEN 'WV'
+      WHEN json_extract_path_text(processed_location, 'state') != '' THEN json_extract_path_text(processed_location, 'state')
   ELSE regexp_substr(
             json_extract_path_text(processed_location, 'formatted_address')
         , '[A-Z][A-Z]')
   END AS state,
   CASE
-  WHEN id in (876, 2976, 1952, 1951, 2881, 2989, 1949) THEN '33172'
-  WHEN id = 3604 THEN '32801'
-  WHEN id = 2281	THEN '38801'
-  WHEN id = 2920	THEN '60134'
-  WHEN id = 2914	THEN '62501'
-  WHEN id = 2233	THEN '64106'
-  WHEN id = 2356	THEN '67801'
-  WHEN id = 3966	THEN '71115'
-  WHEN id = 2460	THEN '75203'
-  WHEN id = 1928	THEN '83333'
-  WHEN id = 2124	THEN '85296'
-  WHEN id = 2477	THEN '92782'
-  WHEN id = 2649	THEN '97366'
-  WHEN id = 5132	THEN '98087'
-  WHEN id in (5261, 5262, 5262) THEN '52401'
-  WHEN id = 5060 THEN '83647'
-  WHEN id = 4865 THEN '26506'
+      WHEN id in (876, 2976, 1952, 1951, 2881, 2989, 1949) THEN '33172'
+      WHEN id = 3604 THEN '32801'
+      WHEN id = 2281	THEN '38801'
+      WHEN id = 2920	THEN '60134'
+      WHEN id = 2914	THEN '62501'
+      WHEN id = 2233	THEN '64106'
+      WHEN id = 2356	THEN '67801'
+      WHEN id = 3966	THEN '71115'
+      WHEN id = 2460	THEN '75203'
+      WHEN id = 1928	THEN '83333'
+      WHEN id = 2124	THEN '85296'
+      WHEN id = 2477	THEN '92782'
+      WHEN id = 2649	THEN '97366'
+      WHEN id = 5132	THEN '98087'
+      WHEN id in (5261, 5262, 5262) THEN '52401'
+      WHEN id = 5060 THEN '83647'
+      WHEN id = 4865 THEN '26506'
   ELSE regexp_substr(
     json_extract_path_text(processed_location, 'formatted_address')
   , '[0-9][0-9][0-9][0-9][0-9]', -15) 
@@ -86,7 +86,7 @@ FROM other_processed
 ),
 
 sections_manual AS(
-select workshop_id, state_workshop, zip_workshop
+select workshop_id, state_workshop, zip_workshop, 'manual matching' as processed_location
 from public.mb_workshop_state_zip_manual
 ),
 
@@ -94,7 +94,8 @@ sections_locations AS(
 select distinct 
      se.id, 
      json_extract_path_text(processed_data_text, 'location_state_s') as state,  
-     json_extract_path_text(processed_data_text, 'location_postal_code_s') as zip
+     json_extract_path_text(processed_data_text, 'location_postal_code_s') as zip,
+     processed_data_text as processed_location
      FROM pegasus_pii.forms 
         join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
         join dashboard_production.followers f on f.section_id = se.id
@@ -105,7 +106,10 @@ select distinct
 ),
 
 sections_schools AS(
-SELECT se.id, ss_user.state as state, ss_user.zip as zip
+SELECT se.id, 
+       ss_user.state as state, 
+      ss_user.zip as zip, 
+      'based on facilitator school' as processed_location
 
   FROM dashboard_production.sections se 
   JOIN dashboard_production_pii.users u  -- users just needed to get school_info_id
@@ -124,9 +128,12 @@ SELECT se.id, ss_user.state as state, ss_user.zip as zip
 ),
 
 sections_geos AS (
-SELECT se.id, 
-CASE WHEN se.user_id = 1423830 then 'OH' ELSE ug.state END as state, -- 1423830 is only facilitator in this list not with user_geos in the US 
-CASE WHEN se.user_id = 1423830 then '44113' ELSE ug.postal_code END as zip 
+SELECT 
+    se.id, 
+    CASE WHEN se.user_id = 1423830 then 'OH' ELSE ug.state END as state, -- 1423830 is only facilitator in this list not with user_geos in the US 
+    CASE WHEN se.user_id = 1423830 then '44113' ELSE ug.postal_code END as zip,
+    'based on facilitator geo' as processed_location
+
 FROM dashboard_production.sections se 
 JOIN dashboard_production_pii.user_geos ug
  ON se.user_id = ug.user_id
@@ -236,7 +243,7 @@ UNION ALL
          rpm.regional_partner_id AS regional_partner_id,
          ssz.zip as zip,
          coalesce(sa.state_abbreviation, ssz.state) as state,
-         'based on facilitator' as processed_location,
+         ssz.processed_location,
         -- coalesce(u.name, forms.name) as facilitator_name,
          coalesce(FIRST_VALUE(u.name) OVER (PARTITION BY u.studio_person_id  ORDER BY u.id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ), forms.name) as facilitator_name,
          u.studio_person_id as studio_person_id_facilitator,
