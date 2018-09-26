@@ -5,7 +5,7 @@ import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
-import { StatusColors } from './constants';
+import { StatusColors, ApplicationStatuses } from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import SendPrincipalApprovalButton from './send_principal_approval_button';
 
@@ -118,9 +118,9 @@ export class QuickViewTable extends React.Component {
         transforms: [sortable]
       },
       cell: {
-        format: (status) => {
-          return _.upperFirst(status);
-        },
+        format: (status) => (
+          ApplicationStatuses[this.props.viewType][status] || _.upperFirst(status)
+        ),
         transforms: [
           (status) => ({
             style: {...styles.statusCellCommon, ...styles.statusCell[status]}
