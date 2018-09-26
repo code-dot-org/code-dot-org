@@ -239,9 +239,7 @@ bg:
         artist: 'Начертай нещо'
         applab: 'Направи Play Lab приложение'
         gamelab: 'Направи Game Lab проект'
-      home: "Начало"
       my_dashboard: "Моето табло"
-      courses: "Курсове"
       course_catalog: "Каталог на курса"
       project_gallery: "Проекти"
       sections: "Раздели"
@@ -272,6 +270,14 @@ bg:
       help_us: "Помогнете ни"
       teach: "Обучи"
       about: "Относно"
+    create_button:
+      create: 'Създай'
+      applab: 'Лаборатория за приложения'
+      artist: 'Художник'
+      gamelab: 'Играта лаборатория'
+      playlab: 'Театрална лаборатория'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Начална страница на учителя'
       district_dashboard: 'Областно табло'

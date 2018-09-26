@@ -3248,6 +3248,8 @@ zh-CN:
       frozen circle function_instruction: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。
       frozen circle_instruction: 圆形是一种特殊的形. 你可以计算出什么号码能取代问号来画圆形吗?
       frozen cross rotate dense_instruction: '让我们重复90次！ 90进入360是多少次？提示：这是一个非常小的数目。'
+      frozen cross rotate dense_b_instruction: 让我们重复这行 **90** 次!
+      frozen cross rotate dense_test_instruction: 让我们重复这行 **90** 次!
       frozen cross rotate_instruction: 现在请尝试重复 10 次。每个行之间你需要转多少度？
       frozen cross_instruction: 将这些命令放到“重复”模块里来画一个加号。你注意到爱莎可以前后移动了吗？
       frozen diamond mini snowflake_instruction: 你知道每个雪花的形状都不同吗？让我们用另一个循环来重复平行四边形4次来创建一个新的雪花。在每个平行四边形之间转90度。
