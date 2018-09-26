@@ -30,17 +30,17 @@ theme: responsive
 
 <div style="clear: both;"></div>
 
-## Apply for professional learning
-
-Want to get notified when applications open? Provide your contact information to a Code.org Regional Partner.
-
-<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button></a>
-
 ## New to computer science? No worries!
 
 Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support. We’ve designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
 
 [Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Interested in sharing details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
+
+## Apply for professional learning
+
+Want to get notified when applications open? Provide your contact information to a Code.org Regional Partner.
+
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button></a>
 
 ## Find the right course for your classroom
 
@@ -84,7 +84,7 @@ The Code.org Professional Learning Program has both in-person and online support
 <details>
   <summary>**Teaching and learning in context**</summary>
   <p>
-  <br>
+  <br/>
 Participants will engage with the curriculum both as instructors and as learners. By experiencing the course content as an active learner, participants will gain important, concrete insight into the perspective their students will have during the academic year. By interacting with curriculum content as instructors, participants will learn how to plan and deliver lessons.
 </p>
 </details>
@@ -100,7 +100,7 @@ Participants will engage with the curriculum both as instructors and as learners
 <details>
   <summary>**One cohesive set of resources**</summary>
   <p>
-  <br>
+  <br/>
 ​Our professional learning and curriculum flow seamlessly together, empowering teachers to deliver the course with confidence. In-person workshops combine with online tools to provide participants with a broad selection of resources to help them plan ahead for implementing the course in their classrooms, while also collaborating with other educators.
 </p>
 </details>
@@ -108,7 +108,7 @@ Participants will engage with the curriculum both as instructors and as learners
 <details>
   <summary>**Join the community of educators**</summary>
   <p>
-  <br>
+  <br/>
 All teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum.
 
 To help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time.
@@ -138,7 +138,7 @@ The Code.org Professional Learning Program is open to educators who are interest
 
 ## <a name="cost"></a>What does the program cost?
 
-Generous scholarships and grants are available across the country to cover the partial or full cost of the program. Costs in each region will be available when applications open
+Generous scholarships and grants are available across the country to cover the cost of the program. Costs in each region will be available when applications open.
 
 Want to get notified when applications open? Provide your contact information to your local Regional Partner.
 
@@ -146,9 +146,9 @@ Want to get notified when applications open? Provide your contact information to
 
 ## Have questions?
 
-We're here to help! 
+Along with our Regional Partners, we're here to help! 
 
-Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a> or write to us at <a href="mailto:teacher@code.org">teacher@code.org</a>.
+Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a> or <a href="https://studio.code.org/pd/regional_partner_contact/new">contact your Regional Partner</a>.
 
 ## <a name="apply"></a>Ready to apply?
 
