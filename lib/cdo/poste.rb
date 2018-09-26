@@ -212,6 +212,10 @@ module Poste2
   # Takes a hash of name=>content, saves each to a file, and returns a
   # hash of name=>saved_filename
   def self.save_attachments(attachments)
+    # Prevent saving attachments on a non-daemon server,
+    # to avoid missing file errors in deliver_poste_messages which runs on the daemon
+    raise "Emails with attachments can only be generated on a daemon server" unless CDO.daemon
+
     timestamp = DateTime.now.strftime('%Y%m%d_%H%M_%S%L')
     {}.tap do |saved|
       attachments.each do |name, content|
@@ -308,6 +312,7 @@ module Poste2
         subject: mail.subject.to_s,
         from: sender
       }
+      mail_params[:cc] = mail[:cc].formatted.first if mail[:cc]
       mail_params[:reply_to] = mail[:reply_to].formatted.first if mail[:reply_to]
       mail_params[:attachments] = attachments if attachments
       recipient = Poste2.ensure_recipient(to_address, name: to_name, ip_address: '127.0.0.1')

@@ -38,6 +38,86 @@ module Pd::Application
   class Teacher1920Application < TeacherApplicationBase
     include Pd::Teacher1920ApplicationConstants
 
+    serialized_attrs %w(status_log)
+
+    # @override
+    def self.statuses
+      %w(
+        unreviewed
+        pending
+        waitlisted
+        declined
+        accepted_not_notified
+        accepted_notified_by_partner
+        accepted_no_cost_registration
+        registration_sent
+        paid
+        withdrawn
+      )
+    end
+
+    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # In these decision emails, status and email_type are the same.
+    AUTO_EMAIL_STATUSES = %w(
+      accepted_no_cost_registration
+      declined
+      waitlisted
+      registration_sent
+    )
+
+    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
+
+    before_save :log_status, if: -> {status_changed?}
+
+    def should_send_decision_email?
+      AUTO_EMAIL_STATUSES.include?(status)
+    end
+
+    def log_status
+      self.status_log ||= []
+      status_log.push({status: status, at: Time.zone.now})
+
+      # delete any unsent emails, and queue a new status email if appropriate
+      emails.unsent.destroy_all
+      queue_email(status) if should_send_decision_email?
+    end
+
+    # @override
+    # @param [Pd::Application::Email] email
+    # Note - this should only be called from within Pd::Application::Email.send!
+    def deliver_email(email)
+      unless email.pd_application_id == id
+        raise "Expected application id #{id} from email #{email.id}. Actual: #{email.pd_application_id}"
+      end
+
+      # email_type maps to the mailer action
+      Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
+    end
+
+    def formatted_teacher_email
+      "#{teacher_full_name} <#{user.email}>"
+    end
+
+    def formatted_partner_contact_email
+      if regional_partner
+        "#{regional_partner.contact_name} <#{regional_partner.contact_email}>"
+      else
+        'Code.org <partner@code.org>'
+      end
+    end
+
+    def formatted_principal_email
+      "#{principal_greeting} <#{principal_email}>"
+    end
+
+    def effective_regional_partner_name
+      regional_partner&.name || 'Code.org'
+    end
+
+    def accepted?
+      status.start_with? 'accepted'
+    end
+
     # @override
     def self.options
       super.merge(
