@@ -439,7 +439,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     flash.notice = I18n.t('auth.signed_in')
 
     # Will only log if the sign_up page session cookie is set, so this is safe to call in all cases
-    SignUpTracking.log_sign_in(resource, session, request)
+    SignUpTracking.log_sign_in(user, session, request)
 
     sign_in_and_redirect user
   end
