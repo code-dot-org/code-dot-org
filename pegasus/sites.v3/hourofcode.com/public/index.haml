@@ -89,12 +89,12 @@ social:
               #leftbutton.visible-xs
                 -# If language is Espanol(Mexico), show alternate promo video
                 -# for LATM Hour of Code.
-                - unless @language == "la"
-                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
-                  %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
                 - if @language == "la"
                   %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
                   %img{src: "/images/play-button.png", width: "60", onclick: "return startLATMVideo();", style: "cursor: pointer;"}
+                - else
+                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
         .col-sm-6.col-xs-12.col-md-4
           #textbacking
             %div.front-header-banner{style: "color: white; margin-top: 0px;"}
@@ -117,6 +117,10 @@ social:
                 %div.watch-video-small{onclick: "return startLATAMVideo();"}
                   =hoc_s(:front_watch_regular_video)
                   %img{src: "/images/play-button.png", width: "25", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
+              - else
+                %div.watch-video-small{onclick: "return startVideo();"}
+                  =hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
           %br/
           %br/
 
