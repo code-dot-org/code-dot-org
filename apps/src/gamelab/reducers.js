@@ -12,6 +12,7 @@ import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
 import locationPicker from './locationPickerModule';
+import songSelector from './DanceLab/songSelectorModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
@@ -78,6 +79,7 @@ module.exports = {
   animationJsonViewer,
   gridOverlay,
   locationPicker,
+  songSelector,
   defaultMobileControlsConfigState,
   mobileControlsConfig,
 };

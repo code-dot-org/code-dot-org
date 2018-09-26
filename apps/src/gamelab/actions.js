@@ -18,6 +18,8 @@ export const UPDATE_LOCATION = 'gamelab/UPDATE_LOCATION';
 
 export const SET_MOBILE_CONTROLS_CONFIG = 'gamelab/SET_MOBILE_CONTROLS_CONFIG';
 
+export const SET_SONG = 'gamelab/DanceLab/SET_SONG';
+
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode
