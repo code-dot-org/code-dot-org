@@ -30,8 +30,8 @@ ENABLED_LANGUAGES.each do |lang|
 
       # Instructions
 
-      translated_text = TextToSpeech.sanitize(level.localized_instructions || "")
-      english_text = TextToSpeech.sanitize(level.instructions || "")
+      translated_text = TextToSpeech.sanitize(level.localized_short_instructions || "")
+      english_text = TextToSpeech.sanitize(level.short_instructions || "")
 
       if text_translated?(translated_text, english_text)
         level.tts_upload_to_s3(translated_text)
