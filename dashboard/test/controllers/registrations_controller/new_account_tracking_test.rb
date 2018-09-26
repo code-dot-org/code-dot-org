@@ -115,7 +115,7 @@ module RegistrationsControllerTests
       end
     end
 
-    test 'in experiment, Google goes to finish_sign_up page without creating a user' do
+    test 'in experiment, Google goes to finish-sign-up experience without creating a user' do
       # Google Oauth doesn't normally give us a user-type by default.
       OmniAuth.config.mock_auth[:google_oauth2] = generate_auth_user_hash(
         provider: AuthenticationOption::GOOGLE,
@@ -153,7 +153,7 @@ module RegistrationsControllerTests
       # assert_redirected_to '/home'
     end
 
-    test 'in experiment, Clever goes to finish_sign_up page without creating a user' do
+    test 'in experiment, Clever goes to finish-sign-up experience without creating a user' do
       # Google Oauth doesn't normally give us a user-type by default.
       OmniAuth.config.mock_auth[:clever] = generate_auth_user_hash(
         provider: AuthenticationOption::CLEVER,
@@ -167,14 +167,15 @@ module RegistrationsControllerTests
       get '/users/auth/clever'
       assert_redirected_to '/users/auth/clever/callback'
 
-      # /users/auth/clever/callback sends us to /users/finish_sign_up
+      # /users/auth/clever/callback sends us to /users/sign_up
       refute_creates User do
         follow_redirect!
       end
-      assert_redirected_to '/users/finish_sign_up'
+      assert_redirected_to '/users/sign_up'
 
       # We end up on the finish_sign_up page
       follow_redirect!
+      assert_template partial: '_finish_sign_up'
 
       # TODO: Update test to perform final user creation in this flow
       # assert_creates User do
