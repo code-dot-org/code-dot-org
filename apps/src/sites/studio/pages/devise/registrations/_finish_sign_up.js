@@ -100,6 +100,7 @@ $(document).ready(() => {
             onSchoolTypeChange={onSchoolTypeChange}
             onSchoolChange={onSchoolChange}
             onSchoolNotFoundChange={onSchoolNotFoundChange}
+            showRequiredIndicator={false}
             styles={{width: 580}}
           />
         </div>,
