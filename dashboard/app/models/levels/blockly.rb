@@ -77,6 +77,8 @@ class Blockly < Level
     thumbnail_url
     include_shared_functions
     preload_asset_list
+    skip_autosave
+    skip_run_save
   )
 
   before_save :update_ideal_level_source
