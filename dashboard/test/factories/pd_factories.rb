@@ -94,6 +94,8 @@ FactoryGirl.define do
 
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
     mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
+    cost_scholarship_information "Some **important** information about scholarships."
+    additional_program_information "And some _additional_ program information."
   end
 
   factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
@@ -124,7 +126,7 @@ FactoryGirl.define do
   end
 
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
-    mappings {[create(:pd_regional_partner_mapping, zip_code: "90210")]}
+    mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
