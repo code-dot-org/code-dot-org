@@ -176,6 +176,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       if SignUpTracking.new_sign_up_experience?(session)
         User.new.tap do |u|
           User.initialize_new_oauth_user(u, auth_hash, auth_params)
+          u.oauth_token = auth_hash.credentials&.token
+          u.oauth_token_expiration = auth_hash.credentials&.expires_at
+          u.oauth_refresh_token = auth_hash.credentials&.refresh_token
         end
       else
         User.from_omniauth auth_hash, auth_params, session
