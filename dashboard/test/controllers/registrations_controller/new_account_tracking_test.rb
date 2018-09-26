@@ -139,7 +139,7 @@ module RegistrationsControllerTests
 
       # /users/auth/google_oauth2/callback reports a sign-up error
       # because the user couldn't be immediately created (we might want
-      # to adjust this) and sends us to /users/finish_sign_up
+      # to adjust this) and sends us to /users/sign_up
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
@@ -147,10 +147,11 @@ module RegistrationsControllerTests
           data[:data_string] == UUID
       end
       follow_redirect!
-      assert_redirected_to '/users/finish_sign_up'
+      assert_redirected_to '/users/sign_up'
 
       # We end up on the finish_sign_up page
       follow_redirect!
+      assert_template partial: '_finish_sign_up'
 
       # TODO: Update test to perform final user creation in this flow
       # assert_creates User do
