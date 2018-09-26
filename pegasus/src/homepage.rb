@@ -104,7 +104,7 @@ class Homepage
     ]
   end
 
-  def self.get_actions(request)
+  def self.get_actions
     # Show a Latin specific video to users browsing in Spanish (Mexico) to
     # promote LATM HOC.
     if I18n.locale == "es-MX"
@@ -289,8 +289,8 @@ class Homepage
     end
   end
 
-  def self.get_video(request)
-    video = get_actions(request).find {|a| a[:type] == "video"}
+  def self.get_video
+    video = get_actions.find {|a| a[:type] == "video"}
 
     {
       video_code: video[:youtube_id],
