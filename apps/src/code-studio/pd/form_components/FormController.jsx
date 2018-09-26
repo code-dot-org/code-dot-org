@@ -441,6 +441,7 @@ export default class FormController extends React.Component {
           bsStyle="primary"
           disabled={this.state.submitting}
           key="submit"
+          id="submit"
           type="submit"
         >
           {this.constructor.submitButtonText}
