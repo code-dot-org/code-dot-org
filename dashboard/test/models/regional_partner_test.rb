@@ -5,6 +5,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
   include Pd::SharedWorkshopConstants
 
+  setup do
+    Pd::Workshop.any_instance.stubs(:process_location) # don't actually call Geocoder service
+  end
+
   test "create regional partner with valid attributes creates regional partner" do
     assert_creates RegionalPartner do
       create :regional_partner,
@@ -224,7 +228,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   end
 
   test 'regional_partner_summer_workshop_open' do
-    regional_partner = create :regional_partner_alabama
+    regional_partner = nil
+    Timecop.freeze Time.zone.local(2018, 9, 27, 21, 25) do
+      regional_partner = create :regional_partner_alabama
+    end
 
     assert_equal "Contact Name", regional_partner.contact_name
     assert_equal "contact@code.org", regional_partner.contact_email
@@ -233,8 +240,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal 1, summer_workshops.length
     assert_equal "Training building", summer_workshops[0][:location_name]
     assert_equal "CS Principles", summer_workshops[0][:course]
+    assert_equal "December 26, 2018 - December 30, 2018", summer_workshops[0][:workshop_date_range_string]
 
     assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
+    assert_equal "September 25, 2018", regional_partner.summer_workshops_earliest_apps_open_date
     assert_nil regional_partner.link_to_partner_application
   end
 
