@@ -14,7 +14,7 @@ module Api::V1::Pd::Application
     end
 
     setup do
-      TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval_received).returns(
+      TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval_completed).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
     end
@@ -126,7 +126,7 @@ module Api::V1::Pd::Application
     end
 
     test 'Sends principal approval received email on successful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_received).
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_completed).
         with(@teacher_application).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
@@ -135,7 +135,7 @@ module Api::V1::Pd::Application
     end
 
     test 'Does not send email on unsuccessful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_received).never
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_completed).never
 
       put :create, params: {form_data: {first_name: ''}, application_guid: 'invalid'}
       assert_response :bad_request
