@@ -474,7 +474,7 @@ describe('entry tests', () => {
     'courses/index':                       './src/sites/studio/pages/courses/index.js',
     'courses/show':                        './src/sites/studio/pages/courses/show.js',
     'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
-    'devise/registrations/finish_sign_up': './src/sites/studio/pages/devise/registrations/finish_sign_up.js',
+    'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
   };
 
   var internalEntries = {
