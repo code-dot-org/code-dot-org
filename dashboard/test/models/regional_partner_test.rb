@@ -274,4 +274,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     assert_equal WORKSHOP_APPLICATION_STATES[:opening_at], regional_partner.summer_workshops_application_state
   end
+
+  test 'regional_partner_summer_workshop_opening_on_date_for_csd_only' do
+    regional_partner = create :regional_partner_wyoming
+
+    assert_equal WORKSHOP_APPLICATION_STATES[:opening_at], regional_partner.summer_workshops_application_state
+  end
 end

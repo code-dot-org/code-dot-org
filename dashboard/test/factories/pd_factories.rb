@@ -135,6 +135,15 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
+  factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
+    # CSD dates but no CSP dates.
+    apps_open_date_csp_teacher nil
+    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_close_date_csp_teacher nil
+    apps_close_date_csd_teacher {Date.today + 15.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
+  end
+
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
     contact_name "Beverly Hills Contact"
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
