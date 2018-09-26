@@ -115,10 +115,10 @@ module RegistrationsControllerTests
       end
     end
 
-    test 'successful oauth sign up in split test reports split' do
+    test 'in experiment, Google goes to finish-sign-up experience without creating a user' do
       # Google Oauth doesn't normally give us a user-type by default.
       OmniAuth.config.mock_auth[:google_oauth2] = generate_auth_user_hash(
-        provider: 'google_oauth2',
+        provider: AuthenticationOption::GOOGLE,
         user_type: ''
       )
       SignUpTracking.stubs(:split_test_percentage).returns(100)
@@ -137,16 +137,40 @@ module RegistrationsControllerTests
       get '/users/auth/google_oauth2'
       assert_redirected_to '/users/auth/google_oauth2/callback'
 
-      # /users/auth/google_oauth2/callback reports a sign-up error
-      # because the user couldn't be immediately created (we might want
-      # to adjust this) and sends us to /users/sign_up
-      FirehoseClient.instance.expects(:put_record).with do |data|
-        data[:study] == STUDY &&
-          data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
-          data[:event] == 'google_oauth2-sign-up-error' &&
-          data[:data_string] == UUID
+      refute_creates User do
+        follow_redirect!
       end
+      assert_redirected_to '/users/sign_up'
+
+      # We end up on the finish_sign_up page
       follow_redirect!
+      assert_template partial: '_finish_sign_up'
+
+      # TODO: Update test to perform final user creation in this flow
+      # assert_creates User do
+      #   post '/users', params: {user: {user_type: 'teacher'}}
+      # end
+      # assert_redirected_to '/home'
+    end
+
+    test 'in experiment, Clever goes to finish-sign-up experience without creating a user' do
+      # Google Oauth doesn't normally give us a user-type by default.
+      OmniAuth.config.mock_auth[:clever] = generate_auth_user_hash(
+        provider: AuthenticationOption::CLEVER,
+      )
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
+
+      # The user signs in with Clever for the first time.
+      # The oauth endpoint (which is in test mode here)
+      # redirects to the oauth callback
+      # @request.env["devise.mapping"] = Devise.mappings[:user]
+      get '/users/auth/clever'
+      assert_redirected_to '/users/auth/clever/callback'
+
+      # /users/auth/clever/callback sends us to /users/sign_up
+      refute_creates User do
+        follow_redirect!
+      end
       assert_redirected_to '/users/sign_up'
 
       # We end up on the finish_sign_up page
