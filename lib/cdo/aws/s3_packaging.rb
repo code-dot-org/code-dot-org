@@ -63,7 +63,7 @@ class S3Packaging
     Dir.chdir(@target_location) do
       # Clear out existing package
       FileUtils.rm_rf Dir.glob("#{@target_location}/*")
-      RakeUtils.system "tar -zxf #{package.path}"
+      RakeUtils.system "tar -zxfm #{package.path}"
     end
     @logger.info "Decompressed"
   end
