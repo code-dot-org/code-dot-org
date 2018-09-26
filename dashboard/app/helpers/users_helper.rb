@@ -15,7 +15,7 @@ module UsersHelper
 
   # Move followed sections from source_user to destination_user and destroy source_user.
   # Returns a boolean - true if all steps were successful, false otherwise.
-  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:)
+  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
     # No-op if source_user is nil
     return true unless source_user.present?
 
@@ -23,7 +23,7 @@ module UsersHelper
       source_user: source_user,
       destination_user: destination_user,
       type: takeover_type,
-      provider: destination_user.provider,
+      provider: provider,
     }
 
     if source_user.has_activity?
@@ -65,7 +65,8 @@ module UsersHelper
       return unless move_sections_and_destroy_source_user(
         source_user: existing_account,
         destination_user: user,
-        takeover_type: 'oauth'
+        takeover_type: 'oauth',
+        provider: provider,
       )
 
       if user.migrated?
@@ -96,7 +97,7 @@ module UsersHelper
 
   def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit',
+      study: 'user-soft-delete-audit-v2',
       event: "#{type}-account-takeover", # Silent or OAuth takeover
       user_id: source_user.id, # User account being "taken over" (deleted)
       data_int: destination_user.id, # User account after takeover

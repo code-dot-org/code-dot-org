@@ -100,6 +100,7 @@ FactoryGirl.define do
 
   factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
     # Link to partner-specific site.
+    contact_name "Illinois Contact"
     link_to_partner_application "https://code.org/specific-link"
     mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
   end
@@ -126,6 +127,7 @@ FactoryGirl.define do
   end
 
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
+    contact_name "Beverly Hills Contact"
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
 
