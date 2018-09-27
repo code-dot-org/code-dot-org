@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-radio", "#printable-terms-of-service"];
+const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-radio"];
 const STUDENT_ONLY_FIELDS = ["#student-name-label", "#gender-dropdown", "#age-dropdown", "#student-consent"];
 const SHARED_FIELDS = ["#name-field", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
@@ -36,10 +36,6 @@ $(document).ready(() => {
     // We want it to be the 2-letter country code, so we change the value on form submission.
     const countryInputEl = $('input[name="user[school_info_attributes][country]"]');
     countryInputEl.val(schoolData.countryCode);
-  });
-
-  $("#print-terms").click(function () {
-    $("#print-frame")[0].contentWindow.print();
   });
 
   $("#user_user_type").change(function () {

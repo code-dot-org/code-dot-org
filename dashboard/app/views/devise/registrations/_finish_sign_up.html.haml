@@ -52,24 +52,6 @@
           = ff.hidden_field :country
           = ff.hidden_field :full_address
 
-    .field
-      #printable-terms-of-service{style: "display: none;"}
-        .right
-          %iframe#print-frame{src: '/terms-and-privacy', style: 'display: none'}
-          %a#print-terms{href: "#"}
-            %i.fa.fa-print.right-margin-5
-            = t('terms_interstitial.print')
-        .clear
-        .scroll-box
-          %h1.custom-h1= t('terms_interstitial.tos')
-          = render partial: 'home/tos'
-          %hr
-          %h1.custom-h1= t('terms_interstitial.privacy')
-          = render partial: 'home/privacy'
-          %hr
-          %h1.custom-h1= t('terms_interstitial.privacy_notice')
-          = render partial: 'home/privacy_notice'
-
     #terms-of-service.checkbox{style: "display: none;"}
       = f.label :terms_of_service_version do
         = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
