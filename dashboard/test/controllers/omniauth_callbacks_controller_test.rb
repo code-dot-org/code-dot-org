@@ -531,6 +531,85 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
   end
 
+  test 'clever: creates user if user is not found by credentials' do
+    SignUpTracking.stubs(:new_sign_up_experience?).returns(false)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-clever"
+
+    # When I hit the clever oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: uid,
+      user_type: 'teacher'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_creates User do
+      get :clever
+    end
+
+    # Then my account is created
+    # And I'm signed in
+    # And I go to my dashboard
+    user = User.find_by_credential(
+      type: AuthenticationOption::CLEVER,
+      id: uid
+    )
+    assert_redirected_to 'http://test.host/home'
+    assert_equal user.id, signed_in_user_id
+  end
+
+  test 'clever: sets tokens on new user' do
+    SignUpTracking.stubs(:new_sign_up_experience?).returns(false)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-clever"
+
+    # When I hit the clever oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: uid,
+      user_type: 'teacher'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :clever
+
+    # Then I go to the registration page to finish signing up
+    user = User.find_by_credential(
+      type: AuthenticationOption::CLEVER,
+      id: uid
+    )
+    assert_equal user.oauth_token, auth[:credentials][:token]
+    assert_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
+  end
+
+  test 'clever: directs user to finish sign-up (new_sign_up_experience) ' do
+    SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-clever"
+
+    # When I hit the clever oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: uid,
+      user_type: 'teacher'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    refute_creates User do
+      get :clever
+    end
+
+    # Then I am not signed in
+    # And I'm looking at a finish-sign-up experience
+    # And my partial info is available
+    assert_nil signed_in_user_id
+    assert_redirected_to 'http://test.host/users/sign_up'
+    assert PartialRegistration.in_progress? session
+    partial_user = User.new_with_session({}, session)
+    assert_equal AuthenticationOption::CLEVER, partial_user.provider
+    assert_equal uid, partial_user.uid
+    assert_equal auth[:credentials][:token], partial_user.oauth_token
+    assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
+  end
+
   test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create :student, :unmigrated_google_sso
@@ -630,6 +709,63 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     attributes = session['devise.user_attributes']
     assert_equal AuthenticationOption::GOOGLE, attributes['provider']
     assert_equal uid, attributes['uid']
+  end
+
+  test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration' do
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '', # Google doesn't provider user_type
+      refresh_token: 'fake-refresh-token'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_redirected_to 'http://test.host/users/sign_up'
+    assert PartialRegistration.in_progress? session
+    partial_user = User.new_with_session({}, session)
+
+    assert_equal AuthenticationOption::GOOGLE, partial_user.provider
+    assert_equal uid, partial_user.uid
+    assert_equal auth[:credentials][:token], partial_user.oauth_token
+    assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
+    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
+  end
+
+  test 'google_oauth2: sets tokens in session/cache when redirecting to complete registration (new_sign_up_experience)' do
+    SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
+    # Given I do not have a Code.org account
+    uid = "nonexistent-google-oauth2"
+
+    # When I hit the google oauth callback
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: uid,
+      user_type: '', # Google doesn't provider user_type
+      refresh_token: 'fake-refresh-token'
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    # Then I go to the registration page to finish signing up
+    assert_redirected_to 'http://test.host/users/sign_up'
+    assert PartialRegistration.in_progress? session
+    partial_user = User.new_with_session({}, session)
+
+    assert_equal AuthenticationOption::GOOGLE, partial_user.provider
+    assert_equal uid, partial_user.uid
+    assert_equal auth[:credentials][:token], partial_user.oauth_token
+    assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
+    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
