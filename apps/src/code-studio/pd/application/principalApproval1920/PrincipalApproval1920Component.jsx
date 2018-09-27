@@ -82,13 +82,14 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderSchoolInfoSection() {
+    const goingToTeachOther = 'I don’t know if they will teach this course (Please Explain):';
     return (
       <div>
         {
           this.radioButtonsWithAdditionalTextFieldsFor('goingToTeach', {
-            [TextFields.otherWithText]: "other"
+            [goingToTeachOther] : "other"
           }, {
-            label: `Is ${this.props.teacherApplication.name} going to teach this course in
+            label: `Is ${this.props.teacherApplication.name} planning to teach this course in
                     the ${YEAR} school year?`,
           })
         }
@@ -152,7 +153,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
         </div>
-        {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
+        {this.checkBoxesWithAdditionalTextFieldsFor('howHeard', {
           [TextFields.otherWithText] : "other"
         }, {
           label:
@@ -210,24 +211,24 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderImplementationSection() {
-    const question_label = (<span>To participate in Code.org’s {this.props.teacherApplication.course} Professional
+    const questionLabel = (<span>To participate in Code.org’s {this.props.teacherApplication.course} Professional
                   Learning Program, we require that this course be offered in one of the following
                   ways. Please select which option will be implemented at your school. Be sure
                   to <a href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18" target="_blank">
                   review the guidance on required number of hours here</a> prior to answering.</span>);
-    const other_label = "We will use a different implementation schedule. (Please Explain):";
+    const otherLabel = "We will use a different implementation schedule. (Please Explain):";
 
     if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
       return this.radioButtonsWithAdditionalTextFieldsFor('csdImplementation', {
-          [other_label] : 'other'
+          [otherLabel] : 'other'
         },
-        {label: question_label}
+        {label: questionLabel}
       );
     } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
       return this.radioButtonsWithAdditionalTextFieldsFor('cspImplementation', {
-          [other_label] : 'other'
+          [otherLabel] : 'other'
         },
-        {label: question_label}
+        {label: questionLabel}
       );
     }
   }

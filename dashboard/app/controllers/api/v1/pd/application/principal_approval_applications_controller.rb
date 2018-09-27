@@ -26,7 +26,7 @@ module Api::V1::Pd::Application
       teacher_application.update_form_data_hash(
         {
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          going_to_teach: principal_response.values_at(:going_to_teach, :goint_to_teach_other).compact.join(" "),
+          going_to_teach: principal_response.values_at(:going_to_teach, :going_to_teach_other).compact.join(" "),
           schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           implementation: implementation_string,
           diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
