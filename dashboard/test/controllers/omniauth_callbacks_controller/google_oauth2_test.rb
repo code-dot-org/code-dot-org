@@ -1,14 +1,14 @@
 require 'test_helper'
+require_relative './utils'
 
 module OmniauthCallbacksControllerTests
   #
   # Tests over Google sign-up and sign-in stories
   #
   class GoogleOAuth2Test < ActionDispatch::IntegrationTest
-    setup do
-      # See https://github.com/omniauth/omniauth/wiki/Integration-Testing
-      OmniAuth.config.test_mode = true
+    include OmniauthCallbacksControllerTests::Utils
 
+    setup do
       # Skip firehose logging for these tests, unless explicitly requested
       FirehoseClient.instance.stubs(:put_record)
 
@@ -139,9 +139,8 @@ module OmniauthCallbacksControllerTests
     EMAIL = 'upgraded@code.org'
     DEFAULT_UID = '1111'
 
-    def mock_oauth(auth_hash = generate_auth_hash)
-      @auth_hash = auth_hash
-      OmniAuth.config.mock_auth[:google_oauth2] = @auth_hash
+    def mock_oauth
+      mock_oauth_for AuthenticationOption::GOOGLE, generate_auth_hash
     end
 
     def generate_auth_hash(args = {})
