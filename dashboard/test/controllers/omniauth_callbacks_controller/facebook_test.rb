@@ -89,9 +89,6 @@ module OmniauthCallbacksControllerTests
 
     private
 
-    EMAIL = 'upgraded@code.org'
-    DEFAULT_UID = '1111'
-
     def mock_oauth
       mock_oauth_for AuthenticationOption::FACEBOOK, generate_auth_hash(
         provider: AuthenticationOption::FACEBOOK
