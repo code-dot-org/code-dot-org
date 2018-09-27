@@ -224,8 +224,10 @@ module Pd::Application
           required.concat [:what_license_required]
         end
 
-        unless ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).empty?
-          required.concat [:travel_to_another_workshop]
+        if hash[:able_to_attend_multiple]
+          unless ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).empty?
+            required.concat [:travel_to_another_workshop]
+          end
         end
 
         if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
