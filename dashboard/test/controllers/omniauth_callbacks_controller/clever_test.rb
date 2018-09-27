@@ -17,7 +17,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-up" do
-      mock_oauth generate_auth_hash user_type: User::TYPE_STUDENT
+      mock_oauth user_type: User::TYPE_STUDENT
 
       # The user signs in through their Clever portal
       # The oauth endpoint (which is mocked) redirects to the oauth callback,
@@ -48,7 +48,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "teacher sign-up" do
-      mock_oauth generate_auth_hash user_type: User::TYPE_TEACHER
+      mock_oauth user_type: User::TYPE_TEACHER
 
       # The user signs in through their Clever portal
       # The oauth endpoint (which is mocked) redirects to the oauth callback,
@@ -76,7 +76,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-up (new sign-up flow)" do
-      mock_oauth generate_auth_hash user_type: User::TYPE_STUDENT
+      mock_oauth user_type: User::TYPE_STUDENT
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
       # The user signs in through their Clever portal
@@ -114,7 +114,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "teacher sign-up (new sign-up flow)" do
-      mock_oauth generate_auth_hash user_type: User::TYPE_TEACHER
+      mock_oauth user_type: User::TYPE_TEACHER
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
       # The user signs in through their Clever portal
@@ -149,7 +149,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-in" do
-      mock_oauth generate_auth_hash user_type: User::TYPE_STUDENT
+      mock_oauth user_type: User::TYPE_STUDENT
 
       student = create(:student, :unmigrated_clever_sso, uid: @auth_hash.uid)
 
@@ -172,7 +172,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "teacher sign-in" do
-      mock_oauth generate_auth_hash user_type: User::TYPE_TEACHER
+      mock_oauth user_type: User::TYPE_TEACHER
 
       teacher = create(:teacher, :unmigrated_clever_sso, uid: @auth_hash.uid)
 
@@ -197,25 +197,25 @@ module OmniauthCallbacksControllerTests
     EMAIL = 'upgraded@code.org'
     DEFAULT_UID = '1111'
 
-    def mock_oauth(auth_hash = generate_auth_hash)
-      @auth_hash = auth_hash
+    def mock_oauth(override_params = {})
+      @auth_hash = generate_auth_hash override_params
       OmniAuth.config.mock_auth[:clever] = @auth_hash
     end
 
-    def generate_auth_hash(args = {})
+    def generate_auth_hash(override_params = {})
       OmniAuth::AuthHash.new(
-        uid: args[:uid] || DEFAULT_UID,
-        provider: args[:provider] || AuthenticationOption::CLEVER,
+        uid: override_params[:uid] || DEFAULT_UID,
+        provider: override_params[:provider] || AuthenticationOption::CLEVER,
         info: {
-          name: args[:name] || 'someone',
-          email: args[:email] || EMAIL,
-          user_type: args[:user_type].presence,
-          dob: args[:dob] || Date.today - 20.years,
-          gender: args[:gender] || 'f'
+          name: override_params[:name] || 'someone',
+          email: override_params[:email] || EMAIL,
+          user_type: override_params[:user_type].presence,
+          dob: override_params[:dob] || Date.today - 20.years,
+          gender: override_params[:gender] || 'f'
         },
         credentials: {
-          token: args[:token] || 'fake-token',
-          expires_at: args[:expires_at] || 'fake-token-expiration'
+          token: override_params[:token] || 'fake-token',
+          expires_at: override_params[:expires_at] || 'fake-token-expiration'
         }
       )
     end
