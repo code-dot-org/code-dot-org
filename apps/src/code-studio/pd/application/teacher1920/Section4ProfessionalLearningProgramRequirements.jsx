@@ -166,28 +166,21 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
                     "travelToAnotherWorkshop",
                     {[TextFields.notSureExplain]: 'notSure'},
                     {
-                      // Ugly hack because this is required but we don't want the asterisk
-                      // to render on a new line
-                      required: false,
                       label: (
-                        <div>
-                          <p>
-                            <strong>
-                              If you are unable to make any of the above workshop dates,
-                              would you be open to traveling to another region for your
-                              local summer workshop?
-                            </strong>
-                          </p>
-                          <p>
-                            Note: This option may have other fees or costs associated with
-                            it. Additionally, please note that we are not able to
-                            guarantee a space for you in a different location, and you
-                            will be responsible for the costs related to traveling to that
-                            location. If you indicate yes, your Regional Partner will
-                            follow up with more information.
-                            <span style={{color: 'red'}}> *</span>
-                          </p>
-                        </div>
+                        <span>
+                          <strong>
+                            If you are unable to make any of the above workshop dates,
+                            would you be open to traveling to another region for your
+                            local summer workshop?
+                          </strong>
+                          <br/>
+                          Note: This option may have other fees or costs associated with
+                          it. Additionally, please note that we are not able to
+                          guarantee a space for you in a different location, and you
+                          will be responsible for the costs related to traveling to that
+                          location. If you indicate yes, your Regional Partner will
+                          follow up with more information.
+                        </span>
                       )
                     }
                   )
