@@ -208,6 +208,7 @@ class Craft < Blockly
     redCoralFanRight: true,
     yellowCoralFanRight: true,
     seaPickles: true,
+    chest: true,
   }.freeze
 
   ALL_MINIBLOCKS = {
