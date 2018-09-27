@@ -115,7 +115,7 @@ FactoryGirl.define do
   end
 
   factory :regional_partner_newjersey, parent: :regional_partner_with_summer_workshops do
-    # No contact details, and no workshops submitted.
+    # No contact details, and no workshop application dates.
     contact_name nil
     contact_email nil
     apps_open_date_csp_teacher nil
