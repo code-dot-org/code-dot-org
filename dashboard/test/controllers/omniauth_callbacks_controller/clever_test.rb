@@ -30,10 +30,7 @@ module OmniauthCallbacksControllerTests
       assert created_user.student?
       assert_empty created_user.email
       assert_nil created_user.hashed_email
-      assert_equal @auth_hash.provider, created_user.provider
-      assert_equal @auth_hash.uid, created_user.uid
-      assert_equal @auth_hash.credentials.token, created_user.oauth_token
-      assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
+      assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
     end
@@ -49,10 +46,7 @@ module OmniauthCallbacksControllerTests
       assert created_user.valid?
       assert created_user.teacher?
       assert_equal @auth_hash.info.email, created_user.email
-      assert_equal @auth_hash.provider, created_user.provider
-      assert_equal @auth_hash.uid, created_user.uid
-      assert_equal @auth_hash.credentials.token, created_user.oauth_token
-      assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
+      assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
     end
@@ -77,10 +71,7 @@ module OmniauthCallbacksControllerTests
       assert created_user.student?
       assert_empty created_user.email
       assert_nil created_user.hashed_email
-      assert_equal @auth_hash.provider, created_user.provider
-      assert_equal @auth_hash.uid, created_user.uid
-      assert_equal @auth_hash.credentials.token, created_user.oauth_token
-      assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
+      assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
     end
@@ -102,10 +93,7 @@ module OmniauthCallbacksControllerTests
       assert created_user.valid?
       assert created_user.teacher?
       assert_equal @auth_hash.info.email, created_user.email
-      assert_equal @auth_hash.provider, created_user.provider
-      assert_equal @auth_hash.uid, created_user.uid
-      assert_equal @auth_hash.credentials.token, created_user.oauth_token
-      assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
+      assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
     end
@@ -123,8 +111,7 @@ module OmniauthCallbacksControllerTests
 
       assert_equal student.id, signed_in_user_id
       student.reload
-      assert_equal @auth_hash.credentials.token, student.oauth_token
-      assert_equal @auth_hash.credentials.expires_at, student.oauth_token_expiration
+      assert_credentials @auth_hash, student
     end
 
     test "teacher sign-in" do
@@ -138,8 +125,7 @@ module OmniauthCallbacksControllerTests
 
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
-      assert_equal @auth_hash.credentials.token, teacher.oauth_token
-      assert_equal @auth_hash.credentials.expires_at, teacher.oauth_token_expiration
+      assert_credentials @auth_hash, teacher
     end
 
     private
@@ -216,6 +202,13 @@ module OmniauthCallbacksControllerTests
           }.merge(override_params)
         }
       end
+    end
+
+    def assert_credentials(from_auth_hash, on_created_user)
+      assert_equal from_auth_hash.provider, on_created_user.provider
+      assert_equal from_auth_hash.uid, on_created_user.uid
+      assert_equal from_auth_hash.credentials.token, on_created_user.oauth_token
+      assert_equal from_auth_hash.credentials.expires_at, on_created_user.oauth_token_expiration
     end
   end
 end
