@@ -43,7 +43,7 @@ de:
     code:
       label: 'Lehrer hinzufügen:'
       placeholder: "Code für diesen Abschnitt (ABCDEF)"
-      instructions: "Bitte gib den Code ein, den du von deinem Lehrer erhalten hast. Es ist ein Code mit 6 Buchstaben, z.\\_B. wie \"ABCDEF\""
+      instructions: "Bitte gib den Code ein, den du von deinem Lehrer erhalten hast. Es ist ein Code mit 6 Buchstaben, z.\_B. wie \"ABCDEF\""
     submit: 'Lehrer hinzufügen'
   add_hint_form:
     placeholder: 'Gebe hier deinen Hinweis ein'
@@ -61,7 +61,7 @@ de:
   more: "MEHR"
   less: "WENIGER"
   beta: "Beta"
-  try_hoc: "Probiere \"The Hour of Code\" aus, klicke hier >>\\_ "
+  try_hoc: "Probiere \"The Hour of Code\" aus, klicke hier >>\_ "
   try_k8intro: "Probiere unseren Einführungskurs in die Informatik (15-25 Stunden)"
   k8intro: "Einführung in die Informatik (15-25 Stunden)"
   already_started: "Schon angefangen? Hier geht es weiter >> "
@@ -243,9 +243,7 @@ de:
         artist: 'Zeichne etwas'
         applab: 'Erstelle eine App'
         gamelab: 'Ein Game Lab Projekt eröffnen.'
-      home: "Home"
       my_dashboard: "Mein Armaturenbrett"
-      courses: "Kurse"
       course_catalog: "Kurs Katalog"
       project_gallery: "Projekte"
       sections: "Sektionen"
@@ -278,6 +276,14 @@ de:
       help_us: "Helfen Sie uns"
       teach: "Unterrichten"
       about: "Über"
+    create_button:
+      create: 'Erstellen'
+      applab: 'App-Labor'
+      artist: 'Künstler'
+      gamelab: 'Spielelabor'
+      playlab: 'Spielelabor'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Lehrer-Homepage'
       district_dashboard: 'Landkreis-Dashboard'

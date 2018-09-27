@@ -1,4 +1,3 @@
----
 haw:
   data:
     blocks:
@@ -22,19 +21,6 @@ haw:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
       Dancelab_setDanceSpeed:
         options:
           SPEED:

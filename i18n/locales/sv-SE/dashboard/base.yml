@@ -213,8 +213,6 @@ sv:
         playlab: 'Skapa en App'
         artist: 'Rita något'
         applab: 'Skapa en App'
-      home: "Hem"
-      courses: "kurser"
       project_gallery: "Projekt"
       sections: "Avsnitt"
       help_support: "Hjälp och support"
@@ -245,6 +243,13 @@ sv:
       help_us: "Hjälp oss"
       teach: "Undervisa"
       about: "Om"
+    create_button:
+      create: 'Skapa'
+      applab: 'App Lab'
+      artist: 'Konstnären'
+      playlab: 'Spel-labb'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Lärare hemsida'
       district_dashboard: 'Distriktets kontrollpanel'

@@ -263,9 +263,7 @@ ja:
         applab: 'アプリラボ で作る'
         gamelab: 'ゲームラボで作る'
         weblab: 'Web 研究室 (ベータ版) のプロジェクトを作る'
-      home: "ホーム"
       my_dashboard: "マイ ダッシュボード"
-      courses: "コース"
       course_catalog: "コース カタログ"
       project_gallery: "プロジェクト"
       sections: "セクション"
@@ -300,6 +298,14 @@ ja:
       help_us: "手を貸して下さい"
       teach: "教える"
       about: "概要"
+    create_button:
+      create: 'つくる'
+      applab: 'アプリ ラボ'
+      artist: 'アーティスト'
+      gamelab: 'ゲーム ラボ'
+      playlab: 'プレイラボ'
+      minecraft: 'マインクラフト'
+      flappy: 'フラッピー'
     user:
       classroom: '先生用ホームページ'
       district_dashboard: '地区のダッシュ ボード'
@@ -928,6 +934,7 @@ ja:
       robotics:
         kodable: 'Kodable'
       workshop_course:
+        csd: 'コンピューターサイエンス 発展'
         csp: 'コンピューターサイエンス 入門'
       email_opt_in:
         opt_in_yes: 'はい'

@@ -2,10 +2,13 @@ lv:
   data:
     markdown_instructions:
       2-3 Artist 3.4_markdown_instruction: "Lēkšanas bloks pārvieto aktieri bez zīmēšanas.\nZīmējiet pārtrauktu līniju, izmantojot `lēkšanas` un `pārvietošanas` blokus."
+      2-3 Artist 3new_markdown_instruction: "Sarkanā cepure ir 100 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir par 70 pikseļiem zemāka.\n(Katras cepures platums ir 50 pikseļi.)"
       2-3 Artist 4_markdown_instruction: Palīdzi man pabeigt māju šim kaķim.
+      2-3 Artist 6_markdown_instruction: "Šai mājai ir nepieciešams jumts! Uzzīmē trijstūri.\nPadoms: visas 3 malas ir vienāda garuma."
       2-3 Artist 9 NEW_markdown_instruction: Pabeidz gaisa pūķi
       2-3 Artist 9 REPLACEMENT_markdown_instruction: Pabeidz zīmēt šīs kāpnes!
       2-3 Artist 9_markdown_instruction: Pabeidz gaisa pūķi
+      2-3 Artist Debugging 1_markdown_instruction: "Šai cepurei jābūt tikai 50 pikseļus platai. Vai vari to salabot?\n"
       2-3 Artist Debugging 10_markdown_instruction: "Spēļu kontroliera kursorsvira ir pārāk šaura. \\r\n\\r\nVai vari to izveidot 10 pikseļus platāku?"
       2-3 Artist Debugging 2_markdown_instruction: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\r\n\\r\nIzlabo kodu, lai visām ūsām būtu vienāds garums."
       2-3 Artist Debugging 3_markdown_instruction: "Manā laivā ir caurums! \\r\n\\r\nVai vari izlabot zīmējumu, lai cauruma nebūtu?"
@@ -41,6 +44,7 @@ lv:
       2-3 Bee Loops 4A_markdown_instruction: "Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu."
       2-3 Maze 15_markdown_instruction: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
       2-3 Maze Loops 18_markdown_instruction: "Aizved mani pie saulespuķes, lietojot pēc iespējas mazāk blokus!\nPamēģini lietot vienu \"Atkārtot\" bloku iekš cita, lai samazinātu kopējo bloku skaitu."
+      4-5 Artist 1_markdown_instruction: "Palīdzi man pabeigt uzzīmēt kasti. (Katra līnija ir 300 pikseļus gara) "
       4-5 Artist 5_markdown_instruction: Ar ko aizstāt "???", lai zombijs pabeigtu zīmējumu, izmantojot doto ciklu?
       4-5 Bee Conditionals 2_markdown_instruction: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
       Overworld Move to Sheep_markdown_instruction: Pievieno otru "pārvieto uz priekšu" komandu, lai sasniegtu aitu.
@@ -76,6 +80,7 @@ lv:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
       grade3_maze_nestedLoops4_markdown_instruction: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
       grade4_bee_conditionals_quantum2_markdown_instruction: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      grade4_review_artist2_markdown_instruction: "Šai mājai ir nepieciešams jumts! Uzzīmē trijstūri.\nPadoms: visas 3 malas ir vienāda garuma."
       grade4_review_artist3_markdown_instruction: "Lēkšanas bloks pārvieto aktieri bez zīmēšanas.\nZīmējiet pārtrauktu līniju, izmantojot `lēkšanas` un `pārvietošanas` blokus."
       grade4_review_bee1_markdown_instruction: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
       level 'grade3_Loops_4_markdown_instruction: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.

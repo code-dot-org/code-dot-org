@@ -254,9 +254,7 @@ id:
         applab: 'Buat sebuah aplikasi Lab Aplikasi'
         gamelab: 'Buat sebuah proyek Lab Permainan'
         weblab: 'Membuat proyek Lab Web (beta)'
-      home: "Beranda"
       my_dashboard: "Dasbor saya"
-      courses: "Kursus"
       course_catalog: "Katalog kursus"
       project_gallery: "Proyek"
       sections: "Sesi"
@@ -291,6 +289,14 @@ id:
       help_us: "Bantu Kami"
       teach: "Mengajar"
       about: "Tentang"
+    create_button:
+      create: 'Buat'
+      applab: 'Laboratorium Aplikasi'
+      artist: 'Artis'
+      gamelab: 'Laboratorium Game'
+      playlab: 'Play Lab/Lab Permainan'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Beranda guru'
       district_dashboard: 'Wilayah Dashboard'

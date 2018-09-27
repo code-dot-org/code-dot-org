@@ -179,8 +179,13 @@ lv:
         playlab: 'Izveidot aplikāciju'
         artist: 'Uzzīmēt kaut ko'
         applab: 'Izveidot aplikāciju'
-      courses: "Kursi"
       educate_hoc: "Programmēšanas stunda"
+    create_button:
+      create: 'Izveidot'
+      applab: 'Aplikāciju laborotorija'
+      artist: 'Mākslinieks'
+      playlab: 'Spēles laboratorija'
+      flappy: 'Flapijs'
     user:
       classroom: 'Skolotāju mājas lapa'
       label: 'Sveiki, %{username}'

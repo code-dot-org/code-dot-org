@@ -8,6 +8,11 @@ const styles = {
   formText: {
     fontSize: 14
   },
+  questionText: {
+    fontSize: 14,
+    lineHeight: '20px',
+    fontWeight: 'bold'
+  },
   checkBoxAfterButtonList: {
     marginTop: -30
   }

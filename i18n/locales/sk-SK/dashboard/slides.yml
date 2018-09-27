@@ -173,51 +173,51 @@ sk:
         text: "Zobraz poznámky už čoskoro!"
     frozen_intro:
       1:
-        text: "Ahoj, volám sa Lyndsey. Som modelkou, herečkou a píšem si svoje vlastné aplikácie. Poďme použiť kód pre pridanie sa k Anne a Else počas ich objavovania krás a čarov ľadu."
+        text: "Ahoj, volám sa Lyndsey. Som modelkou, herečkou a píšem si svoje vlastné aplikácie. Použi kód a pridaj sa k Anne a Else ako objavujú krásu a čaro ľadu."
       2:
-        text: "Korčuľovaním po ľade stvoríš snehové vločky i vzory a vytvoríš tak zimnú krajinu zázrakov, ktorú potom môžeš zdieľať so svojimi priateľmi."
+        text: "Korčuľovaním po ľade vytváraš snehové vločky i vzory a vznikne ti tak zimná krajina zázrakov, ktorú potom môžeš zdieľať so svojimi priateľmi."
       3:
-        text: "Počas nasledujúcej hodiny sa naučíte základy používania kódu. Tradičné programovanie je obvykle v textovej forme, ale my použijeme Blockly, ktorý používa obrázkove bloky, ktoré môžete presúvať pre vytvorenie programu. Takto sa učia základy dokonca aj vysokoškoláci. Avšak pod kapotou stále vytvárate kód."
+        text: "Počas nasledujúcej hodiny sa naučíš základy používania kódu. Tradičné programovanie je obvykle v textovej forme, ale my použijeme Blockly, ktorý používa obrázkove bloky, ktoré môžete presúvať pre vytvorenie programu. Takto sa učia základy dokonca aj vysokoškoláci. Avšak pod kapotou stále vytváraš kód."
       4:
-        text: "Program je sada inštrukcií, ktorá hovorí počítaču, čo má robiť. Poďme vytvoriť kód, alebo program, ktorý pomôže Else vytvoriť jednoduchú čiaru. Toto potom použijeme neskôr pre vytvorenie zložitejších vzorov."
+        text: "Program je sada inštrukcií, ktorá hovorí počítaču, čo má robiť. Vytvorme kód, alebo program, ktorý pomôže Else vytvoriť jednoduchú čiaru. Toto využijeme neskôr pre vytvorenie zložitejších vzorov."
       5:
-        text: "Vaša obrazovka je rozdelená do troch hlavných častí. Naľavo je ľadová plocha, kde bude bežať Váš program. Pokyny pre každý level sú napísané hneď pod plochou."
+        text: "Tvoja obrazovka je rozdelená do troch hlavných častí. Naľavo je ľadová plocha, kde bude bežať tvoj program. Pokyny pre každú úroveň sú napísané hneď pod plochou."
       6:
-        text: "Táto prostredná oblasť sa nazýva panel nástrojov, a každý z týchto blokov predstavuje určitú akciu, ktorú môže Elsa a Anna vykonať."
+        text: "Táto prostredná oblasť sa nazýva panel nástrojov, a každý z týchto blokov predstavuje určitú akciu, ktorú môžu Elsa a Anna vykonať."
       7:
-        text: "Biele miesto na pravej strane sa volá pracovná plocha a v nej budeme skladať náš program. Pre pohyb po ľadovej ploche použijete blok \"Posunúť dopredu\"."
+        text: "Biele miesto na pravej strane sa volá pracovná plocha a v nej budeme skladať náš program. Pre pohyb po ľadovej ploche použiješ blok \"Posuň sa dopredu\"."
       8:
-        text: "Teraz hovorí blok \"Posunúť dopredu\" \"posunúť dopredu o 100 pixelov\". Čo sa stane, keď stlačíme \"Spustiť\"? Elsa sa pohne dopredu o určitú hodnotu, konkrétne o 100 pixelov! Pixely sú vlastne veľmi malé štvorčeky na obrazovke Vášho počítača."
+        text: "Blok \"Posuň sa dopredu\" hovorí \"posuň sa dopredu o 100 pixelov\". Čo sa stane, keď stlačíš \"Spustiť\"? Elsa sa pohne dopredu o určitú hodnotu, konkrétne o 100 pixelov! Pixely sú vlastne veľmi malé štvorčeky na obrazovke tvojho počítača."
       9:
-        text: "Ďaľší blok, ktorý máme v tomto cvičení je \"zaboč doprava o 90 stupňov\". A keď použijeme tento blok \"Zaboč doprava\", Elsa sa otočí o určitú hodnotu. Môžete sa pohrať s viacerými hodnotami a otočiť Elsu rôznymi smermi. Uhol otočenia sa meria od cesty kolmo pred Elsou. Takže toto je otočka o 90 stupňov. A toto je otočka o 120 stupňov."
+        text: "Ďaľší blok, ktorý máme v tomto cvičení je \"Otoč sa vpravo o 90 stupňov\". Keď použijeme tento blok \"Otoč sa vpravo\", Elsa sa otočí o určitú hodnotu. Môžeš sa pohrať s viacerými hodnotami a otočiť Elsu rôznymi smermi. Uhol otočenia sa meria od cesty kolmo pred Elsou. Takže toto je otočka o 90 stupňov. A toto je otočka o 120 stupňov."
       10:
-        text: "Zapamätaj si, že môžeš meniť počet pixelov a stupňov klikaním na šípky vedľa nich."
+        text: "Zapamätaj si, že môžeš meniť počet pixelov a stupňov kliknutím na šípku vedľa nich."
     frozen_loops:
       1:
-        text: "Ahoj, volám sa Paola! Počítače sú skutočne dobré v opakovaní akcií. Ty dokážeš napočítať do 10, 20, alebo do 100. Lenže počítač dokáže počítať do miliardy, alebo do triliónu. Nezačne sa nudiť, a bude mu to trvať len zopár sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače dokážu opakovať veci stovky, alebo dokonca miliardy krát."
+        text: "Ahoj, volám sa Paola! Počítače sú skutočne dobré v opakovaní akcií. Ty dokážeš napočítať do 10, 20, alebo do 100. Lenže počítač dokáže počítať do miliardy, alebo do triliónu. Nezačne sa nudiť a potvrá mu to len pár sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače dokážu opakovať veci stovky, alebo dokonca miliardy krát."
       2:
-        text: "V programovaní voláme toto slučkou. Slučka znamená, že Váš kód sa zopakuje znova a znova. V ďaľšom cvičení máte za úlohu pomôcť Anne vytvoriť štvorec pomocou bloku \"Zopakovať\"."
+        text: "V programovaní toto voláme slučka. Slučka znamená, že Tvoj kód sa zopakuje znova a znova. V ďaľšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec pomocou bloku \"Opakuj\"."
       3:
-        text: "Akýkoľvek blok kódu, ktorý vložíš do bloku \"Opakuj\", sa bude opakovať v sekvencii toľkokrát, koľko budeš chcieť."
+        text: "Akýkoľvek blok kódu, ktorý vložíš do bloku \"Opakuj\", sa bude opakovať v sekvencii toľkokrát, koľko len budeš chcieť."
       4:
-        text: "Pre nakreslenie štvorca môžete 4krát použiť bloky \"Posunúť dopredu\" a \"Otočiť doprava\". Avšak jednoduchšie je počítaču povedať \"Posunúť dopredu\" a \"Otočiť sa o 90 stupňov\" raz a potom mu povedať, nech to celé zopakuje 4 krát. Pre toto musíte bloky \"Posunúť dopredu\" a \"Otočiť doprava\" umiestniť dovnútra bloku \"Zopakovať\"."
+        text: "Pre nakreslenie štvorca môžeš 4-krát použiť bloky \"Posuň sa dopredu\" a \"Otoč sa vpravo\". Avšak jednoduchšie je počítaču povedať \"Posuň sa dopredu\" a \"Otoč sa o 90 stupňov\" raz a potom mu povedať, nech to celé zopakuje 4-krát. Pre toto musíš bloky \"Posuň sa dopredu\" a \"Otoč sa vpravo\" umiestniť dovnútra bloku \"Opakuj\"."
       5:
-        text: "Pamätaj si, že môžeš akokoľvek meniť čísla v bloku \"Opakovať\", a že to čo je v bloku zapísané sa bude toľko krát opakovať."
+        text: "Pamätaj si, že môžeš akokoľvek meniť čísla v bloku \"Opakuj\", a že to čo je v bloku zapísané sa toľko krát zopakuje."
     frozen_functions:
       1:
-        text: "Ahoj, volám sa Chris Bosh. Som profesionálnym hráčom basketbalu, a kódujem na škole."
+        text: "Ahoj, volám sa Chris Bosh. Som profesionálnym hráčom basketbalu, a kódoval som na škole."
       2:
-        text: "Jeden z najdôležitejších konceptov v informatike je definovanie nových príkazov. Väčšina programovacích jazykov má len okolo 100 slov alebo príkazov. A práve vo vytváraní vlastných nových slov z týchto stavebných blokov je čaro a krása programovania."
+        text: "Jeden z najdôležitejších konceptov v informatike je definovanie nových príkazov. Väčšina programovacích jazykov má len okolo 100 slov alebo príkazov. A práve vo vytváraní vlastných nových slov z týchto stavebných blokov je umenie a čaro programovania."
       3:
-        text: "Keď už naučíte počítač, ako vykonať akciu použitím tejto postupnosti príkazov, môžete si vymyslieť vlastný názov pre túto akciu, aby ste to nabudúce mohli jednoducho zopakovať. Definovanie vlastných príkazov a pomenovanie ich sa volá funkcia."
+        text: "Keď už naučíš počítač vykonať akciu použitím tejto postupnosti príkazov, môžeš si pre túto akciu vymyslieť vlastný názov, aby si ju nabudúce mohol jednoducho zopakovať. Keď definujeme vlastný príkaz a dáme mu meno vytvorili sme funkciu."
       4:
-        text: "Ahoj, som Jess. Pri programovaní s blokmi asi budete používať funkcie, ak máte sadu činností, ktoré chcete použíť viackrát. Napríklad, napísali ste kód na nakreslenie štvorca."
+        text: "Ahoj, som Jess. Pri programovaní s blokmi asi budeš používať funkcie, pomocou ktorých môžeš skupinu činností zopakovať mnoho krát. Napríklad, napísal si kód na nakreslenie štvorca."
       5:
-        text: "Funkciu môžete definovať ako funkciu s názvom \"Vytvoriť štvorec.\" "
+        text: "Toto si môžeš zadefinovať ako funkciu s názvom \"Vytvor štvorec.\" "
       6:
-        text: "Teraz máte nový blok, ktorý môžete použiť viackrát pre vytvorenie viacerých štvorcov."
+        text: "Teraz máš nový blok, ktorý môžeš použiť viackrát pre vytvorenie viacerých štvorcov."
       7:
-        text: "Veľa jednoduchých tvarov sa môže použiť na nakreslenie zložitých vzorov. V ďaľšom cvičení bude kód, ktorý ste práve napísali na nakreslenie kruhu dostupný ako nová funkcia, takže budete môcť vytvoriť kruhy rôznych veľkostí. Viete ju použiť a pomôcť nakresliť Else zložité a nádherné vzory v snehu?"
+        text: "Veľa jednoduchých tvarov sa môže použiť na nakreslenie zložitých vzorov. V ďaľšom cvičení bude kód, ktorý si práve napísal pre nakreslenie kružnice známy ako nová funkcia, takže budeš môcť vytvárať kružnice rôznych veľkostí. Vieš tento blok použiť a pomôcť nakresliť Else do snehu zložité a nádherné vzory?"
     playlab_events:
       1:
       2:
@@ -456,7 +456,7 @@ sk:
       2:
         text: "Moje meno je Melissa a som objavujúci používateľ Minecraftu. To, o čo sa naozaj zaujímam je ako ľudia myslia a pracujú s technológiami a táto práca je perfektná práca pre mňa na spojenie dokopy počítačového strojárstva s psychológiou: ako ľudia myslia a správajú sa."
       3:
-        text: "Uvidíte vašu obrazovku, ktorá je rozdelená na tri hlavné časti. 1) Naľavo je hra Minecraft. Práve teraz je svet zamrznutý ale ideme ho opraviť kódom."
+        text: "Uvidíš tvoju obrazovku rozdelenú na tri hlavné časti. 1) Naľavo je hra Minecraft. Práve teraz je svet zamrznutý ale ideme ho opraviť kódom."
       4:
         text: "2) Táto stredná časť je panel nástrojov. Každý z týchto blokov je príkaz, ktorým kurčatá, ovce a ďalšie Minecraft stvorenia môžu rozumieť."
       5:

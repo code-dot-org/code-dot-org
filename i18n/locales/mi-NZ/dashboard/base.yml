@@ -192,8 +192,14 @@ mi:
         playlab: 'Hangaia tētahi taupānga Taiwhanga Tākaro'
         artist: 'Tāngia tētahi mea'
         applab: 'Hangaia tētahi taupānga Taiwhanga Taupānga'
-      courses: "Akoranga"
       project_gallery: "Ngā Tūmahi"
+    create_button:
+      create: 'Waihanga'
+      applab: 'Taiwhanga Taupānga'
+      artist: 'Rehetoi'
+      playlab: 'Taiwhanga Tākaro'
+      minecraft: 'Mahimaina'
+      flappy: 'Flappy'
     user:
       district_dashboard: 'Paemana ā-Rohe'
       label: 'Tēnā koe %{username}'

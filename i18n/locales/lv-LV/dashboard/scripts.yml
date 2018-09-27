@@ -564,6 +564,8 @@ lv:
           stages:
             Functions:
               name: Funkcijas
+            Velocity:
+              name: Ātrums
         CSF_Secret_Sample:
           description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
         algebraFacilitator:
@@ -648,6 +650,8 @@ lv:
               name: 'Lauksaimnieks: Nosacījuma cikli'
         csd3-2017:
           stages:
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
             Variables:
@@ -839,10 +843,14 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd3-old:
           stages:
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd2-draft:
@@ -855,6 +863,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
             'null':
@@ -1027,6 +1037,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd3-2018:
@@ -1035,6 +1047,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd2-2018:

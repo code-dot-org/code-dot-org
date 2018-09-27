@@ -270,9 +270,7 @@ it:
         applab: 'Costruisci una App in Sviluppo App'
         gamelab: 'Crea un progetto in Sviluppo Giochi'
         weblab: 'Crea un progetto in Sviluppo Web (versione provvisoria)'
-      home: "Home"
       my_dashboard: "Controllo"
-      courses: "Corsi"
       course_catalog: "Corsi"
       project_gallery: "Progetti"
       sections: "Classi"
@@ -307,6 +305,14 @@ it:
       help_us: "Aiutaci"
       teach: "Insegna"
       about: "Informazioni"
+    create_button:
+      create: 'Crea'
+      applab: 'Sviluppo App'
+      artist: 'Artista'
+      gamelab: 'Sviluppo Giochi'
+      playlab: 'Laboratorio'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Cruscotto di Controllo dell''insegnante'
       district_dashboard: 'Dashboard'

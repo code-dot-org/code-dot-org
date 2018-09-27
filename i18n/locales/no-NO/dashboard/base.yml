@@ -260,9 +260,7 @@
         applab: 'Lag en app'
         gamelab: 'Opprett et Spill-lab prosjekt'
         weblab: 'Opprett et Web-lab (beta) prosjekt'
-      home: "Hjem"
       my_dashboard: "Mitt Kontrollpanel"
-      courses: "kurs"
       course_catalog: "Kurskatalog"
       project_gallery: "Prosjekter"
       sections: "Seksjoner"
@@ -297,6 +295,14 @@
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
+    create_button:
+      create: 'Opprett'
+      applab: 'App Lab'
+      artist: 'Kunstner'
+      gamelab: 'Spill-lab'
+      playlab: 'Spill-lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flakse'
     user:
       classroom: 'Hjemmeside for lærere'
       district_dashboard: 'Distrikt skrivebord'

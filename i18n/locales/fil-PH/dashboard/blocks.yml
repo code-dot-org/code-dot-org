@@ -1,4 +1,3 @@
----
 fil:
   data:
     blocks:
@@ -6,215 +5,51 @@ fil:
         options:
           UNIT:
             '"seconds"': segundo
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Susunod
-            '"prev"': Nakaraan
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: lahat
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Susunod
-            '"prev"': Nakaraan
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: lahat
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Susunod
             '"prev"': Nakaraan
+            MOVES.Rest: Wala
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Susunod
             '"prev"': Nakaraan
+            MOVES.Rest: Wala
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Susunod
-            '"prev"': Nakaraan
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
+            '"height"': taas
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: lahat
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Susunod
             '"prev"': Nakaraan
+            MOVES.Rest: Wala
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Susunod
-            '"prev"': Nakaraan
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Susunod
             '"prev"': Nakaraan
+            MOVES.Rest: Wala
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Susunod
-            '"prev"': Nakaraan
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Susunod
-            '"prev"': Nakaraan
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Susunod
-            '"prev"': Nakaraan
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -223,23 +58,37 @@ fil:
         options:
           PROPERTY:
             '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
+            '"height"': taas
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Wala
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: lahat
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': kanan
-            '"left"': kaliwa
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
       Dancelab_randomColor:
         text: iba-ibang kulay
       Dancelab_setBackgroundEffect:
@@ -262,30 +111,21 @@ fil:
         options:
           PROPERTY:
             '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
+            '"height"': taas
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: lahat
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
+            '"height"': taas
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': sukat
-            '"x"': x na posisyon
-            '"y"': y na posisyon
+            '"height"': taas
       Dancelab_whenKey:
         options:
           KEY:
@@ -311,8 +151,8 @@ fil:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': tama
-            'false': mali
+            'true': 'tama'
+            'false': 'mali'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -399,14 +239,48 @@ fil:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
+      Mikelab_randomColor:
+        text: iba-ibang kulay
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
-      Vanilla_randomColor:
-        text: iba-ibang kulay
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': kanan
+            '"left"': kaliwa
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': pataas na arrow
+            '"down"': pababa na arrow
+            '"left"': kaliwang arrow
+            '"right"': kanang arrow
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': pataas na arrow
+            '"down"': pababa na arrow
+            '"left"': kaliwang arrow
+            '"right"': kanang arrow
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': pataas na arrow
+            '"down"': pababa na arrow
+            '"left"': kaliwang arrow
+            '"right"': kanang arrow
       craft_ifPath:
         options:
           DIR:
