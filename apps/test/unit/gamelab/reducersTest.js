@@ -29,6 +29,7 @@ describe('gamelabReducer', function () {
     expect(initialState.pageConstants.assetUrl).to.be.a.function;
     expect(initialState.pageConstants.isEmbedView).to.be.undefined;
     expect(initialState.pageConstants.isShareView).to.be.undefined;
+    expect(initialState.songSelector).to.equal("");
   });
 
   describe('action: changeInterfaceMode', function () {
@@ -78,6 +79,22 @@ describe('gamelabReducer', function () {
       const newState = store.getState();
       expect(newState.mobileControlsConfig).to.equal(newConfig);
       expect(newState).to.not.equal(initialState);
+    });
+  });
+
+  describe('action: songSelector', function () {
+    const { setSong } = actions;
+
+    it('sets selection to given string', function () {
+      expect(store.getState().songSelector).to.equal("");
+      store.dispatch(setSong("Alpha"));
+      expect(store.getState().songSelector).to.equal("Alpha");
+    });
+
+    it('selection sets to most recent string', function () {
+      store.dispatch(setSong("Beta"));
+      store.dispatch(setSong("Gamma"));
+      expect(store.getState().songSelector).to.equal("Gamma");
     });
   });
 
