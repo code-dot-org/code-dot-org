@@ -18,7 +18,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
   # GET /api/v1/regional_partners/find
   def find
-    zip_code = params[:zip_code]
+    zip_code = params[:zip_code] if RegexpUtils.us_zip_code?(params[:zip_code])
     state = nil
 
     # Try to find the matching partner using the ZIP code.
