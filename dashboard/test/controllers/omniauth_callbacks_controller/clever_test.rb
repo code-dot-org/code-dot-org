@@ -121,24 +121,10 @@ module OmniauthCallbacksControllerTests
     private
 
     def mock_oauth(override_params = {})
-      mock_oauth_for AuthenticationOption::CLEVER, generate_auth_hash(override_params)
-    end
-
-    def generate_auth_hash(override_params = {})
-      OmniAuth::AuthHash.new(
-        uid: override_params[:uid] || '1111',
-        provider: override_params[:provider] || AuthenticationOption::CLEVER,
-        info: {
-          name: override_params[:name] || 'someone',
-          email: override_params[:email] || 'auth_test@code.org',
-          user_type: override_params[:user_type].presence,
-          dob: override_params[:dob] || Date.today - 20.years,
-          gender: override_params[:gender] || 'f'
-        },
-        credentials: {
-          token: override_params[:token] || 'fake-token',
-          expires_at: override_params[:expires_at] || 'fake-token-expiration'
-        }
+      mock_oauth_for AuthenticationOption::CLEVER, generate_auth_hash(
+        {
+          provider: AuthenticationOption::CLEVER
+        }.merge(override_params)
       )
     end
 
