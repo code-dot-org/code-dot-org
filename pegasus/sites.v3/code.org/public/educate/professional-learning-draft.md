@@ -30,7 +30,7 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 <div style="clear: both;"></div>
 
 ## Professional Learning Program Offerings
-Select the grade level below to learn more about our programs. Have questions about which program is for you? Learn more about implementation options or contact us at [teacher@code.org](mailto: teacher@code.org).
+Select a grade level from the options below to learn more about our programs. 
 <br>
 <br/>
 

@@ -191,6 +191,7 @@ Recommended courses from 3rd parties
 |--------------|------------|---------------|---------------|
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
 | [Code Red Education](http://www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
+| [Parallax Inc.](https://www.parallax.com/education/teach/program-options/elementary-school) | Pre-programmed and re-programmable educational robot that fits into a wide variety of program formats. Uses the visual BlocklyProp programming tool. Curriculum is FREE. Robot purchase required. | FREE in-person immersive single day trainings. Occasional live webinars. |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
