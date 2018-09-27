@@ -1,5 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import {Row} from 'react-bootstrap';
 import {Summary} from '@cdo/apps/code-studio/pd/application_dashboard/summary';
 import {expect} from 'chai';
 import sinon from 'sinon';
@@ -25,7 +26,7 @@ describe("Summary", () => {
     expect(summary.find('Spinner')).to.have.length(1);
   });
 
-  it("Generates 5 tables after hearing from server", () => {
+  it("Generates 5 tables in 2 rows after hearing from server", () => {
     let server = sinon.fakeServer.create();
 
     server.respondWith("GET", '/api/v1/pd/applications',
@@ -83,7 +84,11 @@ describe("Summary", () => {
     let summary = createSummary();
 
     server.respond();
-    expect(summary.find('.row').children()).to.have.length(5);
+    const rows = summary.find(Row);
+    expect(rows).to.have.length(2);
+    expect(rows.at(0).children()).to.have.length(3);
+    expect(rows.at(1).children()).to.have.length(2);
+
     expect(summary.find('Spinner')).to.have.length(0);
   });
 });
