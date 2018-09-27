@@ -2,9 +2,9 @@ require 'test_helper'
 
 module OmniauthCallbacksControllerTests
   #
-  # Tests over Google sign-up and sign-in stories
+  # Tests over Clever sign-up and sign-in stories
   #
-  class GoogleOAuth2Test < ActionDispatch::IntegrationTest
+  class CleverTest < ActionDispatch::IntegrationTest
     setup do
       # See https://github.com/omniauth/omniauth/wiki/Integration-Testing
       OmniAuth.config.test_mode = true
@@ -17,39 +17,27 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-up" do
-      mock_oauth
+      mock_oauth user_type: User::TYPE_STUDENT
 
-      get '/users/sign_up'
-      sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_sign_up'
-
-      assert_creates(User) {finish_sign_up User::TYPE_STUDENT}
+      assert_creates(User) {sign_in_through_clever}
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+      assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_student @auth_hash.info.email, created_user
+      assert_valid_student created_user
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "teacher sign-up" do
-      mock_oauth
+      mock_oauth user_type: User::TYPE_TEACHER
 
-      get '/users/sign_up'
-      sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_sign_up'
-
-      assert_creates(User) {finish_sign_up User::TYPE_TEACHER}
+      assert_creates(User) {sign_in_through_clever}
       assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+      assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
       created_user = User.find signed_in_user_id
       assert_valid_teacher @auth_hash.info.email, created_user
@@ -59,11 +47,10 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-up (new sign-up flow)" do
-      mock_oauth
+      mock_oauth user_type: User::TYPE_STUDENT
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
-      get '/users/sign_up'
-      sign_in_through_google
+      sign_in_through_clever
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
@@ -75,18 +62,17 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_student @auth_hash.info.email, created_user
+      assert_valid_student created_user
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "teacher sign-up (new sign-up flow)" do
-      mock_oauth
+      mock_oauth user_type: User::TYPE_TEACHER
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
-      get '/users/sign_up'
-      sign_in_through_google
+      sign_in_through_clever
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
@@ -103,12 +89,11 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-in" do
-      mock_oauth
+      mock_oauth user_type: User::TYPE_STUDENT
 
-      student = create(:student, :unmigrated_google_sso, uid: @auth_hash.uid)
+      student = create(:student, :unmigrated_clever_sso, uid: @auth_hash.uid)
 
-      get '/users/sign_in'
-      sign_in_through_google
+      sign_in_through_clever
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
@@ -120,12 +105,11 @@ module OmniauthCallbacksControllerTests
     end
 
     test "teacher sign-in" do
-      mock_oauth
+      mock_oauth user_type: User::TYPE_TEACHER
 
-      teacher = create(:teacher, :unmigrated_google_sso, uid: @auth_hash.uid)
+      teacher = create(:teacher, :unmigrated_clever_sso, uid: @auth_hash.uid)
 
-      get '/users/sign_in'
-      sign_in_through_google
+      sign_in_through_clever
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
@@ -139,36 +123,35 @@ module OmniauthCallbacksControllerTests
     EMAIL = 'upgraded@code.org'
     DEFAULT_UID = '1111'
 
-    def mock_oauth(auth_hash = generate_auth_hash)
-      @auth_hash = auth_hash
-      OmniAuth.config.mock_auth[:google_oauth2] = @auth_hash
+    def mock_oauth(override_params = {})
+      @auth_hash = generate_auth_hash override_params
+      OmniAuth.config.mock_auth[:clever] = @auth_hash
     end
 
-    def generate_auth_hash(args = {})
+    def generate_auth_hash(override_params = {})
       OmniAuth::AuthHash.new(
-        uid: args[:uid] || DEFAULT_UID,
-        provider: args[:provider] || AuthenticationOption::GOOGLE,
+        uid: override_params[:uid] || DEFAULT_UID,
+        provider: override_params[:provider] || AuthenticationOption::CLEVER,
         info: {
-          name: args[:name] || 'someone',
-          email: args[:email] || EMAIL,
-          user_type: args[:user_type].presence,
-          dob: args[:dob] || Date.today - 20.years,
-          gender: args[:gender] || 'f'
+          name: override_params[:name] || 'someone',
+          email: override_params[:email] || EMAIL,
+          user_type: override_params[:user_type].presence,
+          dob: override_params[:dob] || Date.today - 20.years,
+          gender: override_params[:gender] || 'f'
         },
         credentials: {
-          token: args[:token] || 'fake-token',
-          expires_at: args[:expires_at] || 'fake-token-expiration',
-          refresh_token: args[:refresh_token] || 'fake-refresh-token'
+          token: override_params[:token] || 'fake-token',
+          expires_at: override_params[:expires_at] || 'fake-token-expiration'
         }
       )
     end
 
-    # The user signs in through Google
+    # The user signs in through their Clever portal
     # The oauth endpoint (which is mocked) redirects to the oauth callback,
     # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
-    def sign_in_through_google
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
+    def sign_in_through_clever
+      get '/users/auth/clever'
+      assert_redirected_to '/users/auth/clever/callback'
       follow_redirect!
     end
 
@@ -211,10 +194,12 @@ module OmniauthCallbacksControllerTests
       end
     end
 
-    def assert_valid_student(expected_email, user)
+    def assert_valid_student(user)
       assert user.valid?
       assert user.student?
-      assert_equal User.hash_email(expected_email), user.hashed_email
+      # We don't save emails at all for Clever students
+      assert_empty user.email
+      assert_nil user.hashed_email
     end
 
     def assert_valid_teacher(expected_email, user)
@@ -228,7 +213,6 @@ module OmniauthCallbacksControllerTests
       assert_equal from_auth_hash.uid, on_created_user.uid
       assert_equal from_auth_hash.credentials.token, on_created_user.oauth_token
       assert_equal from_auth_hash.credentials.expires_at, on_created_user.oauth_token_expiration
-      assert_equal from_auth_hash.credentials.refresh_token, on_created_user.oauth_refresh_token
     end
   end
 end
