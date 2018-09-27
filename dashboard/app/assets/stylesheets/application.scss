@@ -1682,6 +1682,10 @@ a.download-video {
       .field_with_errors > label {
         color: $black;
       }
+      .field_with_errors > input,
+      .field_with_errors > select {
+        background-color: $white;
+      }
     }
     .error {
       color: $red;
