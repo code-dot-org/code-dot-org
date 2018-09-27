@@ -17,7 +17,7 @@ module SignUpTracking
   def self.begin_sign_up_tracking(session, split_test: false)
     unless session[:sign_up_tracking_expiration]&.future?
       session[:sign_up_uid] = SecureRandom.uuid.to_s
-      session[:sign_up_tracking_expiration] = 5.minutes.from_now
+      session[:sign_up_tracking_expiration] = 1.day.from_now
     end
 
     if split_test
