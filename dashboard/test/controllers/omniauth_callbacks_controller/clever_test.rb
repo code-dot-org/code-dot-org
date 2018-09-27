@@ -66,10 +66,7 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
       assert_template partial: '_finish_sign_up'
 
-      # The user fills out the form and clicks "Sign up"
-      assert_creates User do
-        post '/users', params: finish_sign_up_params(user_type: User::TYPE_STUDENT)
-      end
+      assert_creates(User) {finish_sign_up User::TYPE_STUDENT}
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
@@ -97,10 +94,7 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
       assert_template partial: '_finish_sign_up'
 
-      # The user fills out the form and clicks "Sign up"
-      assert_creates User do
-        post '/users', params: finish_sign_up_params(user_type: User::TYPE_TEACHER)
-      end
+      assert_creates(User) {finish_sign_up User::TYPE_TEACHER}
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
@@ -183,6 +177,10 @@ module OmniauthCallbacksControllerTests
       get '/users/auth/clever'
       assert_redirected_to '/users/auth/clever/callback'
       follow_redirect!
+    end
+
+    def finish_sign_up(user_type)
+      post '/users', params: finish_sign_up_params(user_type: user_type)
     end
 
     def finish_sign_up_params(override_params)
