@@ -15,6 +15,25 @@ module OmniauthCallbacksControllerTests
       OmniAuth.config.mock_auth[provider.to_sym] = @auth_hash
     end
 
+    def generate_auth_hash(args = {})
+      OmniAuth::AuthHash.new(
+        uid: args[:uid] || '1111',
+        provider: args[:provider] || AuthenticationOption::GOOGLE,
+        info: {
+          name: args[:name] || 'someone',
+          email: args[:email] || 'auth_test@code.org',
+          user_type: args[:user_type].presence,
+          dob: args[:dob] || Date.today - 20.years,
+          gender: args[:gender] || 'f'
+        },
+        credentials: {
+          token: args[:token] || 'fake-token',
+          expires_at: args[:expires_at] || 'fake-token-expiration',
+          refresh_token: args[:refresh_token] || nil
+        }
+      )
+    end
+
     # The user signs in through OAuth
     # The oauth endpoint (which is mocked) redirects to the oauth callback,
     # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.

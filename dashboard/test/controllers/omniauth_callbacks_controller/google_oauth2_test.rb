@@ -140,25 +140,9 @@ module OmniauthCallbacksControllerTests
     DEFAULT_UID = '1111'
 
     def mock_oauth
-      mock_oauth_for AuthenticationOption::GOOGLE, generate_auth_hash
-    end
-
-    def generate_auth_hash(args = {})
-      OmniAuth::AuthHash.new(
-        uid: args[:uid] || '1111',
-        provider: args[:provider] || AuthenticationOption::GOOGLE,
-        info: {
-          name: args[:name] || 'someone',
-          email: args[:email] || 'auth_test@code.org',
-          user_type: args[:user_type].presence,
-          dob: args[:dob] || Date.today - 20.years,
-          gender: args[:gender] || 'f'
-        },
-        credentials: {
-          token: args[:token] || 'fake-token',
-          expires_at: args[:expires_at] || 'fake-token-expiration',
-          refresh_token: args[:refresh_token] || 'fake-refresh-token'
-        }
+      mock_oauth_for AuthenticationOption::GOOGLE, generate_auth_hash(
+        provider: AuthenticationOption::GOOGLE,
+        refresh_token: 'fake-refresh-token'
       )
     end
 
