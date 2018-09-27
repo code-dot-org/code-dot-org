@@ -1669,6 +1669,9 @@ a.download-video {
         padding-left: 10px;
       }
     }
+    .radio {
+      display: flex;
+    }
     .field-row {
       display: flex;
       align-items: center;
@@ -1689,6 +1692,7 @@ a.download-video {
     }
     .error {
       color: $red;
+      font-style: italic;
       padding-left: 10px;
     }
     select, input[type=text] {
