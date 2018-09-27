@@ -18,7 +18,7 @@ FactoryGirl.define do
     trait :local_summer_workshop_upcoming do
       local_summer_workshop
       num_sessions 5
-      sessions_from Date.today + 3.months
+      sessions_from {Date.today + 3.months}
     end
     trait :fit do
       course Pd::Workshop::COURSE_CSP

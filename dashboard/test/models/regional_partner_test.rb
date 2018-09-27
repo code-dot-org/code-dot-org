@@ -239,7 +239,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
       assert_equal 1, summer_workshops.length
       assert_equal "Training building", summer_workshops[0][:location_name]
       assert_equal "CS Principles", summer_workshops[0][:course]
-      assert_equal "December 26, 2018 - December 30, 2018", summer_workshops[0][:workshop_date_range_string]
+      assert_equal "December 27, 2018 - December 31, 2018", summer_workshops[0][:workshop_date_range_string]
 
       assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
       assert_equal "September 25, 2018", regional_partner.summer_workshops_earliest_apps_open_date
