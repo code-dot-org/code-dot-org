@@ -144,9 +144,9 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         }
         <p style={styles.questionText}>
           There may be a fee associated with your teacher’s professional learning program.
-          Please <a href="https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo" target="_blank">
-          check here</a> to see if there are fees for your teacher’s professional learning program and/or if there are scholarships available in your region.
-
+          Please <a href="https://code.org/educate/professional-learning/program-information" target="_blank">
+          check here</a> to see if there are fees for your teacher’s professional learning
+          program and/or if there are scholarships available in your region.
         </p>
         <div>
           {this.singleCheckboxFor('understandFee')}
@@ -174,6 +174,8 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
               tied to individual students, will not be used to evaluate teachers, and will greatly
               help Code.org evaluate its program effectiveness.`
             })}
+            <br/>
+            <br/>
           </div>
         }
         <p>
@@ -231,15 +233,15 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   render() {
+    const courseSuffix = this.props.teacherApplication.course === 'Computer Science Discoveries' ? 'csd' : 'csp';
     return (
       <FormGroup>
         <p>
-          Thank you for your support of computer science education! A teacher at your
-          school, {this.props.teacherApplication.name}, has applied to be a part of
-          Code.org’s Professional Learning Program to teach the {' '}
-          {this.props.teacherApplication.course} curriculum during the {YEAR} school
-          year. Your approval is required for the teacher’s application
-          to be considered.
+          A teacher at your school, {this.props.teacherApplication.name}, has applied to be a part
+          of <a href="https://code.org/educate/professional-learning-2019" target="_blank">Code.org’s Professional Learning Program</a>
+          {' '} in order to teach the <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">{this.props.teacherApplication.course} curriculum</a>
+          {' '} during the 2018-19 school year. Your approval is required for the
+          teacher’s application to be considered.
         </p>
         {
           this.selectFor('title', {
