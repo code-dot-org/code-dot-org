@@ -77,11 +77,17 @@
         %span#student-consent{style: "display: none;"}
           = t('signup_form.student_consent')
 
-    #email-preference-dropdown.field{style: "display: none;"}
-      = f.label :email_preference_opt_in do
+    #email-preference-radio.field{style: "display: none;"}
+      %span
         = t('signup_form.email_preference_question')
         = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
-      = f.select :email_preference_opt_in, email_preference_options, include_blank: true
+      %span
+        .radio
+          = f.radio_button :email_preference_opt_in, 'yes'
+          = f.label :email_preference_opt_in, t('signup_form.email_preference_yes'), value: 'yes'
+        .radio
+          = f.radio_button :email_preference_opt_in, 'no'
+          = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
 
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
