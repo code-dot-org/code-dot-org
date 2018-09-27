@@ -1,5 +1,5 @@
-import {SET_SONG} from '../actions';
-import {getStore} from '../../redux';
+import {SET_SONG} from './actions';
+import {getStore} from '../redux';
 
 export default function songSelector(state, action) {
   state = state || {
