@@ -23,7 +23,7 @@ module Pd
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
-        alternate_email: 'If you use another email, enter it here:',
+        alternate_email: 'If you use another email (especially during summer months), enter it here:',
         phone: 'Home or Cell Phone',
         address: 'Home address',
         city: 'City',
@@ -141,7 +141,7 @@ module Pd
            for the summer workshop you attend.'
         ),
         pay_fee:
-          'If there is a fee for your summer workshop, will you or your school be able to pay for the fee?',
+          'If there is a fee for your program, will you or your school be able to pay for the fee?',
         consider_for_funding:
           'Would you like to be considered for funding support? Note that funding support is not guaranteed.',
         committed: 'Are you committed to participating in the entire Professional Learning Program?',

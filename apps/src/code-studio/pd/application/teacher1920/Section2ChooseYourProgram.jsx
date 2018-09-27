@@ -60,13 +60,32 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           Please provide information about your course implementation plans.{' '}
           <a href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18" target="_blank">
             Click here
-          </a> for guidance on required number of hours.
+          </a> for guidance on required number of hours. Your Regional Partner will
+          follow up if your responses below don't meet the requirements, or if they have
+          additional questions.
         </p>
-        {this.inputFor('csHowManyMinutes', {style: {width: '100px'}})}
-        {this.inputFor('csHowManyDaysPerWeek', {style: {width: '100px'}})}
-        {this.inputFor('csHowManyWeeksPerYear', {style: {width: '100px'}})}
+        {this.inputFor('csHowManyMinutes', {
+          style: {
+            width: '100px',
+          },
+          label: PageLabels.section2ChooseYourProgram.csHowManyMinutes.replace('program', this.props.data.program === PROGRAM_CSD ? 'Discoveries' : 'Principles')
+        })}
+        {this.inputFor('csHowManyDaysPerWeek', {
+          style: {
+            width: '100px',
+          },
+          label: PageLabels.section2ChooseYourProgram.csHowManyDaysPerWeek.replace('program', this.props.data.program === PROGRAM_CSD ? 'Discoveries' : 'Principles')
+        })}
+        {this.inputFor('csHowManyWeeksPerYear', {
+          style: {
+            width: '100px',
+          },
+          label: PageLabels.section2ChooseYourProgram.csHowManyWeeksPerYear.replace('program', this.props.data.program === PROGRAM_CSD ? 'Discoveries' : 'Principles')
+        })}
         {this.radioButtonsWithAdditionalTextFieldsFor('csTerms', {
           [TextFields.otherWithText]: "other"
+        }, {
+          label: PageLabels.section2ChooseYourProgram.csTerms.replace('program', this.props.data.program === PROGRAM_CSD ? 'Discoveries' : 'Principles')
         })}
         {this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
           [TextFields.dontKnowIfIWillTeachExplain]: "other"

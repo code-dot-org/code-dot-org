@@ -146,10 +146,16 @@ module Pd::Application
             'No, someone else from my school will teach this course this year (2019-20)',
             TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
           ],
+          travel_to_another_workshop: [
+            'Yes, please provide me with additional information about attending a local summer workshop outside of my region.',
+            'No, I’m not interested in travelling to attend a local summer workshop outside of my region.',
+            TEXT_FIELDS[:not_sure_explain]
+          ],
           pay_fee: [
             'Yes, my school or I will be able to pay the full program fee.',
             TEXT_FIELDS[:no_pay_fee_1920],
-            'Not applicable: there is no program fee for teachers in my region.'
+            'Not applicable: there is no program fee for teachers in my region.',
+            'Not applicable: there is no Regional Partner is my region.'
           ],
           willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
           interested_in_online_program: [YES, NO]
@@ -175,6 +181,7 @@ module Pd::Application
         principal_confirm_email
         principal_phone_number
         completing_on_behalf_of_someone_else
+        current_role
 
         program
         cs_how_many_minutes
@@ -183,6 +190,7 @@ module Pd::Application
         plan_to_teach
         replace_existing
 
+        does_school_require_cs_license
         subjects_teaching
         have_cs_license
         subjects_licensed_to_teach
@@ -210,6 +218,10 @@ module Pd::Application
 
         if hash[:does_school_require_cs_license] == YES
           required.concat [:what_license_required]
+        end
+
+        unless ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).empty?
+          required.concat [:travel_to_another_workshop]
         end
 
         if hash[:pay_fee] == TEXT_FIELDS[:no_pay_fee_1920]
@@ -242,7 +254,9 @@ module Pd::Application
         [:cs_terms, TEXT_FIELDS[:other_with_text]],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
-        [:able_to_attend, TEXT_FIELDS[:not_sure_explain]],
+        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain]],
+        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend_1920]],
+        [:travel_to_another_workshop, TEXT_FIELDS[:not_sure_explain]],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
     end
