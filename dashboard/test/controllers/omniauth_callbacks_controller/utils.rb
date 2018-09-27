@@ -30,16 +30,24 @@ module OmniauthCallbacksControllerTests
       assert_equal from_auth_hash.uid, on_created_user.uid
       assert_equal from_auth_hash.credentials.token, on_created_user.oauth_token
       assert_equal from_auth_hash.credentials.expires_at, on_created_user.oauth_token_expiration
-      assert_equal from_auth_hash.credentials.refresh_token, on_created_user.oauth_refresh_token
+      unless from_auth_hash.credentials.refresh_token.nil?
+        assert_equal from_auth_hash.credentials.refresh_token, on_created_user.oauth_refresh_token
+      end
     end
 
-    def assert_valid_student(expected_email, user)
+    def assert_valid_student(user, expected_email: nil)
       assert user.valid?
       assert user.student?
-      assert_equal User.hash_email(expected_email), user.hashed_email
+      # For some providers (e.g. Clever) we expect _not_ to save email at all.
+      if expected_email.nil?
+        assert_empty user.email
+        assert_nil user.hashed_email
+      else
+        assert_equal User.hash_email(expected_email), user.hashed_email
+      end
     end
 
-    def assert_valid_teacher(expected_email, user)
+    def assert_valid_teacher(user, expected_email:)
       assert user.valid?
       assert user.teacher?
       assert_equal expected_email, user.email

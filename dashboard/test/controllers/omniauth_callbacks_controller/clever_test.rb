@@ -40,7 +40,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher @auth_hash.info.email, created_user
+      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -82,7 +82,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher @auth_hash.info.email, created_user
+      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -188,14 +188,6 @@ module OmniauthCallbacksControllerTests
           }.merge(override_params)
         }
       end
-    end
-
-    def assert_valid_student(user)
-      assert user.valid?
-      assert user.student?
-      # We don't save emails at all for Clever students
-      assert_empty user.email
-      assert_nil user.hashed_email
     end
   end
 end
