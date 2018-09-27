@@ -231,20 +231,20 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner = nil
     Timecop.freeze Time.zone.local(2018, 9, 27, 21, 25) do
       regional_partner = create :regional_partner_alabama
+
+      assert_equal "Contact Name", regional_partner.contact_name
+      assert_equal "contact@code.org", regional_partner.contact_email
+
+      summer_workshops = regional_partner.upcoming_summer_workshops
+      assert_equal 1, summer_workshops.length
+      assert_equal "Training building", summer_workshops[0][:location_name]
+      assert_equal "CS Principles", summer_workshops[0][:course]
+      assert_equal "December 27, 2018 - December 31, 2018", summer_workshops[0][:workshop_date_range_string]
+
+      assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
+      assert_equal "September 25, 2018", regional_partner.summer_workshops_earliest_apps_open_date
+      assert_nil regional_partner.link_to_partner_application
     end
-
-    assert_equal "Contact Name", regional_partner.contact_name
-    assert_equal "contact@code.org", regional_partner.contact_email
-
-    summer_workshops = regional_partner.upcoming_summer_workshops
-    assert_equal 1, summer_workshops.length
-    assert_equal "Training building", summer_workshops[0][:location_name]
-    assert_equal "CS Principles", summer_workshops[0][:course]
-    assert_equal "December 26, 2018 - December 30, 2018", summer_workshops[0][:workshop_date_range_string]
-
-    assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
-    assert_equal "September 25, 2018", regional_partner.summer_workshops_earliest_apps_open_date
-    assert_nil regional_partner.link_to_partner_application
   end
 
   test 'regional_partner_summer_workshop_open_custom_link' do
@@ -271,6 +271,12 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
   test 'regional_partner_summer_workshop_opening_on_date' do
     regional_partner = create :regional_partner_oregon
+
+    assert_equal WORKSHOP_APPLICATION_STATES[:opening_at], regional_partner.summer_workshops_application_state
+  end
+
+  test 'regional_partner_summer_workshop_opening_on_date_for_csd_only' do
+    regional_partner = create :regional_partner_wyoming
 
     assert_equal WORKSHOP_APPLICATION_STATES[:opening_at], regional_partner.summer_workshops_application_state
   end
