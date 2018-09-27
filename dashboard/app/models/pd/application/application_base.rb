@@ -89,7 +89,7 @@ module Pd::Application
         '1 semester',
         '2 trimesters',
         'A full year',
-        OTHER
+        OTHER_WITH_TEXT
       ],
 
       school_type: [

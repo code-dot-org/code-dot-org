@@ -83,9 +83,9 @@ export default class Section1AboutYou extends LabeledFormComponent {
           please visit
           {' '}<a href={CSD_URL} target="_blank">CS Discoveries</a>{' '}
           and
-          {' '}<a href={CSP_URL} target="_blank">CS Principles</a>.{' '}
-          If you’re not sure which program is the right fit for your classroom,
-          we encourage you to{' '}
+          {' '}<a href={CSP_URL} target="_blank">CS Principles</a>{' '}
+          landing pages. If you’re not sure which program is the right fit for your
+          classroom, we encourage you to{' '}
           <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit" target="_blank">
             check out our course and professional learning options.
           </a>

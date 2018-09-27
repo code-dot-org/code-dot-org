@@ -14,6 +14,7 @@ import {
 } from "./TeacherApplicationConstants";
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
+import _ from 'lodash';
 
 const styles = {
   ...defaultStyles,
@@ -99,83 +100,104 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     };
   }
 
-  renderAssignedWorkshopList() {
-    if (!this.props.data.regionalPartnerId) {
+  renderRegionalPartnerName() {
+    if (!this.state.regionalPartnerName) {
       return (
-        <p>
-          There is no Regional Partner in your region at this time. Code.org will review
-          your application and either assign your application to the nearest Regional
-          Partner or reach out with options for you.
-        </p>
+        <div>
+          <p>
+            <strong>
+              There is no Regional Partner in your region at this time
+            </strong>
+          </p>
+          <p>
+            Code.org will review your application and contact you with options for joining
+            another Regional Partner program. Please note that we are not able to
+            guarantee a space for you in a different location, and you will be responsible
+            for the costs related to traveling to that location.
+          </p>
+        </div>
       );
     } else {
-      if (this.state.partnerWorkshops.length === 0) {
-        return (
-          <p>
-            Local summer workshop dates have not yet been finalized for your region. Your
-            Regional Partner will be in touch once workshop dates and locations are known.
-          </p>
-        );
-      } else {
-        return this.renderPartnerWorkshops();
-      }
+      return (
+        <p>
+          <strong>
+            Your Regional Partner is: {this.state.regionalPartnerName}
+          </strong>
+        </p>
+      );
     }
   }
 
-  renderPartnerWorkshops() {
-    let contents;
-
-    const options = this.state.partnerWorkshops.map(workshop =>
-      `${workshop.dates} in ${workshop.location} hosted by ${this.state.regionalPartnerName}`
-    );
-    options.push(TextFields.notSureExplain);
-    options.push(TextFields.unableToAttend);
-    const textFieldMap = {[TextFields.notSureExplain]: 'notSureExplain'};
-    contents = this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
-      "ableToAttendMultiple",
-      options,
-      textFieldMap
-    );
-
-    return (
-      <div>
-        {contents}
+  renderAssignedWorkshopList() {
+    if (this.state.partnerWorkshops.length === 0) {
+      return (
         <p>
-          Teachers in this program are required to participate in both:
+          <strong>
+            Local summer workshop dates have not yet been finalized for your region. Your
+            Regional Partner will be in touch once workshop dates and locations are known.
+          </strong>
         </p>
-        <ul>
-          <li>
-            One five-day, in-person summer workshop in 2019
-          </li>
-          <li>
-            Up to four one-day, in-person local workshops during the 2019-20 school year
-            (typically held on Saturdays)
-          </li>
-        </ul>
-        {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
-          [TextFields.noExplain]: 'other'
-        })}
-      </div>
-    );
-  }
+      );
+    } else {
+      const options = this.state.partnerWorkshops.map(workshop =>
+        `${workshop.dates} in ${workshop.location}`
+      );
+      options.push(TextFields.notSureExplain);
+      options.push(TextFields.unableToAttend1920);
+      const textFieldMap = {
+        [TextFields.notSureExplain]: 'notSureExplain',
+        [TextFields.unableToAttend1920]: 'unableToAttend'
+      };
 
-  render() {
-    return (
-      <FormGroup>
-        <h3>Section
-          4: {SectionHeaders.section4ProfessionalLearningProgramRequirements}</h3>
-
-        <p>
-          All participants in Code.org’s Professional Learning Program are required to
-          attend a five-day in-person summer workshop. These workshops are hosted locally
-          by Code.org’s Regional Partners. Participants are assigned to workshops based on
-          their Regional Partner. Meals (and in some cases travel costs) will be provided
-          for summer workshops.
-        </p>
-
-        {this.renderContents()}
-      </FormGroup>
-    );
+      return (
+        <div>
+          {
+            this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
+              "ableToAttendMultiple",
+              options,
+              textFieldMap
+            )
+          }
+          {
+            _.intersection([TextFields.notSureExplain, TextFields.unableToAttend1920], this.props.data.ableToAttendMultiple).length > 0 && (
+              <div>
+                {
+                  this.radioButtonsWithAdditionalTextFieldsFor(
+                    "travelToAnotherWorkshop",
+                    {[TextFields.notSureExplain]: 'notSure'},
+                    {
+                      // Ugly hack because this is required but we don't want the asterisk
+                      // to render on a new line
+                      required: false,
+                      label: (
+                        <div>
+                          <p>
+                            <strong>
+                              If you are unable to make any of the above workshop dates,
+                              would you be open to traveling to another region for your
+                              local summer workshop?
+                            </strong>
+                          </p>
+                          <p>
+                            Note: This option may have other fees or costs associated with
+                            it. Additionally, please note that we are not able to
+                            guarantee a space for you in a different location, and you
+                            will be responsible for the costs related to traveling to that
+                            location. If you indicate yes, your Regional Partner will
+                            follow up with more information.
+                            <span style={{color: 'red'}}> *</span>
+                          </p>
+                        </div>
+                      )
+                    }
+                  )
+                }
+              </div>
+            )
+          }
+        </div>
+      );
+    }
   }
 
   renderContents() {
@@ -205,31 +227,34 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
           </p>
         </div>
       );
-    }
-
-    return (
-      <div>
-        <div id="assignedWorkshops">
-          {this.renderAssignedWorkshopList()}
-        </div>
+    } else {
+      return (
         <div>
-          <label>
-            Your application has been assigned to a program hosted by one of our Regional
-            Partners based on your geographic location. There may be a fee associated with
-            the program in your region. There also may be scholarships available to help
-            cover the cost of the program. You can check{' '}
-            <a
-              href="https://code.org/educate/regional-partner/summer-workshop-fee"
-              target="_blank"
-            >
-              this page to see if there are
-            </a>
-            {' '}fees and/or scholarships available in your region.
-          </label>
-          {this.radioButtonsFor("payFee")}
-          {this.props.data.payFee === TextFields.noPayFee1920 && this.largeInputFor('scholarshipReasons')}
+          <div id="regionalPartnerName">
+            {this.renderRegionalPartnerName()}
+          </div>
+          <p>
+            Teachers in this program are required to participate in both:
+          </p>
+          <ul>
+            <li>
+              One five-day, in-person summer workshop in 2019
+            </li>
+            <li>
+              Up to four one-day, in-person local workshops during the 2019-20 school year
+              (typically held on Saturdays)
+            </li>
+          </ul>
+          {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
+            [TextFields.noExplain]: 'other'
+          })}
+          <div id="assignedWorkshops">
+            {this.props.data.regionalPartnerId && this.renderAssignedWorkshopList()}
+          </div>
           {this.radioButtonsFor('willingToTravel')}
-          We may offer online academic year workshops for those unable to travel to their
+
+          We may offer online academic year workshops for those unable to travel to
+          their
           local academic year workshops. Important notes:
           <ol>
             <li>
@@ -238,14 +263,53 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
               before rolling it out large-scale.
             </li>
             <li>
-              An online option for the five-day summer workshop does not currently exist -
-              all participants accepted to the Professional Learning Program will need to
-              commit to attending the five-day summer workshop in-person.
+              An online option for the five-day summer workshop does not currently exist
+              - all participants accepted to the Professional Learning Program will need
+              to commit to attending the five-day summer workshop in-person.
             </li>
           </ol>
           {this.radioButtonsFor('interestedInOnlineProgram')}
+
+          <div>
+            <label>
+              There may be a fee associated with the program in your region. There also
+              may be scholarships available to help cover the cost of the program. You can
+              check{' '}
+              <a
+                href="https://code.org/educate/professional-learning/program-information"
+                target="_blank"
+              >
+                this page to see if there are
+              </a>
+              {' '}fees and/or scholarships available in your region.
+            </label>
+            {this.radioButtonsFor("payFee")}
+            {this.props.data.payFee === TextFields.noPayFee1920 && this.largeInputFor('scholarshipReasons')}
+
+
+          </div>
         </div>
-      </div>
+      );
+    }
+  }
+
+
+  render() {
+    return (
+      <FormGroup>
+        <h3>Section
+          4: {SectionHeaders.section4ProfessionalLearningProgramRequirements}</h3>
+
+        <p>
+          All participants in Code.org’s Professional Learning Program are required to
+          attend a five-day in-person summer workshop. These workshops are hosted locally
+          by Code.org’s Regional Partners. Participants are assigned to a program hosted
+          by one of our Regional Partners based on their school's geographic location.
+          Meals (and in some cases travel costs) will be provided for summer workshops.
+        </p>
+
+        {this.renderContents()}
+      </FormGroup>
     );
   }
 
@@ -262,6 +326,14 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
       );
     }
 
+    if (data.payFee === TextFields.noPayFee1920) {
+      requiredFields.push('scholarshipReasons');
+    }
+
+    if (_.intersection([TextFields.notSureExplain, TextFields.unableToAttend1920], data.ableToAttendMultiple).length > 0) {
+      requiredFields.push('travelToAnotherWorkshop');
+    }
+
     return requiredFields;
   }
 
@@ -273,6 +345,10 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
 
     if (data.payFee !== TextFields.noPayFee) {
       changes.considerForFunding = undefined;
+    }
+
+    if (_.intersection([TextFields.notSureExplain, TextFields.unableToAttend1920], data.ableToAttendMultiple).length === 0) {
+      changes.travelToAnotherWorkshop = undefined;
     }
 
     return changes;

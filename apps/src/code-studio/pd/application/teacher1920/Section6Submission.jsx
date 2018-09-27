@@ -38,10 +38,18 @@ export default class Section6Submission extends LabeledFormComponent {
           with our Regional Partners - all information will be de-identified and
           aggregated. Our Regional Partners are contractually obliged to treat this
           information with the same level of confidentiality as Code.org. To see the full
-          Code.org privacy policy, visit{' '}
+          Code.org privacy policy, visit {' '}
           <a href="http://code.org/privacy" target="_blank">
             code.org/privacy
           </a>
+        </p>
+
+        <p>
+          Teachers may be required to get principal approval process for your submission
+          to the Professional Learning Program. As part of this process your principal may
+          opt-in to let the College Board share de-identified and aggregated Computer
+          Science AP scores with Code.org to help us improve the program and curriculum.
+          AP test scores will not be shared with Regional Partners.
         </p>
 
         {this.singleCheckboxFor("agree")}
