@@ -175,7 +175,32 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-in" do
-      skip 'not implemented'
+      mock_oauth
+
+      student = create(:student, :unmigrated_google_sso, uid: @auth_hash.uid)
+
+      # User visits the sign-in page
+      get '/users/sign_in'
+
+      # The user clicks "Sign in with Google Account".
+      # The oauth endpoint (which is mocked) redirects to the oauth callback,
+      # which in turn signs the user in.
+      get '/users/auth/google_oauth2'
+      assert_redirected_to '/users/auth/google_oauth2/callback'
+      follow_redirect!
+      assert_redirected_to '/'
+      follow_redirect!
+      assert_redirected_to '/home'
+      assert_equal I18n.t('auth.signed_in'), flash[:notice]
+      assert_equal student.id, signed_in_user_id
+
+      # Make sure user has all the oauth info we'd expect
+      student.reload
+      assert student.valid?
+      assert student.student?
+      assert_equal @auth_hash.credentials.token, student.oauth_token
+      assert_equal @auth_hash.credentials.expires_at, student.oauth_token_expiration
+      assert_equal @auth_hash.credentials.refresh_token, student.oauth_refresh_token
     end
 
     test "teacher sign-in" do
