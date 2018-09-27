@@ -11,7 +11,9 @@ end
 %>
 from: <%= formatted_from.inspect %>
 subject: <%= subject.inspect %>
-reply-to: <%= reply_to ? reply_to.inspect : nil %>
+reply-to: <%= reply_to&.inspect %>
+cc: <%= cc&.inspect %>
+bcc: <%= bcc&.inspect %>
 ---
 <%= body %>
 
