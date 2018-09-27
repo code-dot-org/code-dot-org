@@ -75,10 +75,11 @@ tg:
   nav:
     header:
       sign_in_to_save: 'Барои захира кардани муваффақият, ворид шавед'
-      courses: "Дарсҳо"
       project_gallery: "Лоиҳаҳо"
       educate_hoc: "Соати рамз"
       stats: "Омор"
+    create_button:
+      create: 'Сохтан'
     user:
       label: 'Салом %{username}'
       settings: 'Ҳисоби ман'

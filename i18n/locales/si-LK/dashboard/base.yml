@@ -205,10 +205,16 @@ si:
         artist: 'යමක් අඳින්න'
         calculate: 'යමක් ගණනය කරන්න'
         applab: 'App එකක් හදන්න'
-      courses: "පාඨමාලාව"
       project_gallery: "ව්යාපෘති"
       educate_hoc: "Hour of Code"
       stats: "සංඛ්‍යාන"
+    create_button:
+      create: 'තනන්න'
+      applab: 'මෘදුකාංග විද්‍යාගාරය'
+      artist: 'කලාකරු'
+      playlab: 'ක්‍රීඩා පරීක්ෂණාගාරය'
+      minecraft: 'Minecraft'
+      flappy: 'ෆ්ලැපි'
     user:
       classroom: 'ගුරු මුල් පිටුව'
       district_dashboard: 'දිස්ත්‍රික්ක උපකරණ පුවරුව'

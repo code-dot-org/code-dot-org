@@ -3827,18 +3827,42 @@ is:
         <hr/>\r
         <i>Spilaðu leikinn og náðu að ljúka borði 3 til að fara í næstu þraut. </i>
       Course 4 Play Lab Params 2_markdown_instruction: "Nú höfum við flögg sem eru of hátt uppi fyrir núverandi stökk! Við skulum nota bæði \"upp\" og \"niður\" örvarnar svo að við getum haft margar stökkhæðir.\\r\n\\r\nVið þurfum að bæta stikanum `hæð` við stökkfallið. \\r\n- Örvarlykillinn upp ætti að láta hundinn stökkva upp 200 díla\\r\n- Örvarlykillinn niður ætti að láta hann stökkva aðeins 100 díla.\\r\n"
-      Course 4 Play Lab Params 3_markdown_instruction: "Við höfum bætt við öðrum stika við stökkfallið svo við getum notað það með öðrum leikmönnum. Hver leikmaður er táknaður með tölu, talið frá 1. \\r\n\\r\n<br/>\\r\nBreyttu fallinu `stökkva` svo að það noti stikann `leikmaður` til að láta réttan leikmann stökkva. "
+      Course 4 Play Lab Params 3_markdown_instruction: |-
+        Við höfum bætt við öðrum stika við stökkfallið svo við getum notað það með öðrum leikmönnum. Hver leikmaður er táknaður með tölu, talið frá 1. \r
+        \r
+        <br/>\r
+        Breyttu fallinu `stökkva` svo að það noti stikann `leikmaður` til að láta réttan leikmann stökkva. 
       Course 4 Play Lab Params 4_markdown_instruction: "Hér er fallið `rása`. \\r\n\\r\nBreyttu því svo að Köttur færist upp 400 díla og svo niður 400."
       Course 4 Play Lab Params 5_markdown_instruction: Breyttu `rása` fallinu með því að bæta við stikanum `leikmaður`, svo að við getum kallað á það fyrir hvern leikmann á skjánum. Mundu að leikmennirnir hafa tölurnar 1, 2 og 3.
       Course 4 Play Lab Params 6_markdown_instruction: Bættu við öðrum stika `hraði` við fallið `rása`. Prófaðu að nota `stilla hraða` kubb með nýja stikanum `hraði` til að hjálpa Mörgæs að ná báðum flöggunum áður en hinir leikmennirnir ná svo mikið sem einum.
       Course 4 Play Lab Params 7_markdown_instruction: "Skemmtum okkur! Skoðaðu gefna kóðann og reyndu að finna út hvað hver kubbur gerir.\\r\n\\r\nNotaðu svo örvarlyklana til að stjórna Hundi og safna öllum flöggunum.\\r\n\\r\n**Taktu eftir:** Þú þarft ekki að breyta forritinu neitt"
       Course 4 Play Lab Params 8_markdown_instruction: Notaðu kubbinn `þegar leikmaður snertir` til að senda Hund aftur efst til vinstri en AÐEINS ef Hundur snertir einhvern annan leikmann.
       Course 4 Play Lab Params 9_markdown_instruction: "Hér er leikurinn okkar frá því áður, en mest af kóðanum er falið. Það er nýtt fall `skora_stig`.\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\nBreyttu fallinu svo að nýjum stika `stig` sé bætt við breytuna `skor_spilara`.\\r\n<br/>\\r\nBreytan `skor_spilara` ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum og lækka í hvert sem Köttur klukkar Hund með samloku.\\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*Athugaðu*: Smelltu svo á \"Keyra\" til að spila. Þegar Hundur nær að skora 6 stig, munt þú færast áfram í næstu þraut.*"
-      Course 4 Play Lab Vars 1_markdown_instruction: "Í þetta sinn þarft þú ekki að búa til neinn kóða heldur bara ýta á `Keyra` til að spila leikinn! \\r\n\\r\n<br/>\\r\nÍ leiknum ert þú hundurinn sem reynir að safna fleiri flöggum en kötturinn. Notaðu örvarlykilinn niður til að stjórna hundinum. Ýttu á `Ljúka` þegar þú vilt hætta."
+      Course 4 Play Lab Vars 1_markdown_instruction: |-
+        Í þetta sinn þarft þú ekki að búa til neinn kóða heldur bara ýta á `Keyra` til að spila leikinn! \r
+        \r
+        <br/>\r
+        Í leiknum ert þú hundurinn sem reynir að safna fleiri flöggum en kötturinn. Notaðu örvarlykilinn niður til að stjórna hundinum. Ýttu á `Ljúka` þegar þú vilt hætta.
       Course 4 Play Lab Vars 2_markdown_instruction: Keppnin í síðustu þraut var ekki sanngjörn! Breyttu breytunni `hraði_hunds` til að tryggja að þú náir að safna fleiri flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
       Course 4 Play Lab Vars 3_markdown_instruction: "Hér er ný tegund leiks!\n\\r\n\\r\nÞú þarft ekki að breyta neinu í þessum áfanga.\\r\n\\r\n**Leiðbeiningar:**\nNotaðu hægri og vinstri örvar til að færa og upp örina til að stökkva. Reyndu að safna öllum flöggunum."
       Course 4 Play Lab Vars 4_markdown_instruction: "Nú notum við breytuna `hæð` til að stjórna hve hátt hundurinn getur stokkið. Uppfærðu breytuna `hæð` svo að hundurinn geti stokkið nógu hátt til að ná öllum flöggunum.\\r\n"
-      Course 4 Play Lab Vars 6_markdown_instruction: "<h5><b>\\r\nHvernig gætum við skorað stig í þessum leik? \\r\n</b></h5> \\r\n<br/>\\r\n\\r\n1. Bættu 1 við `stig`breytuna í hvert sinn sem Hundur hittir Kött með kökusneið.  <br/>    <br/> \\r\n2.\nNotaðu `þegar leikmaður 2 snertir eitthvað` atburðinn til að koma af stað uppfærslu á skorinu. Þú getur aukið breytuna með `stig = stig + 1.`  <br/>   <br/>\n\\r\n3. Náðu skorinu 10 til að standast áfangann.\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**Athugaðu:**\nNotaðu hægri örina fyrir kökukastið!\\r\n</h4>"
+      Course 4 Play Lab Vars 6_markdown_instruction: |-
+        <h5><b>\r
+        Hvernig gætum við skorað stig í þessum leik? \r
+        </b></h5> \r
+        <br/>\r
+        \r
+        1. Bættu 1 við `stig`breytuna í hvert sinn sem Hundur hittir Kött með kökusneið.  <br/>    <br/> \r
+        2.
+        Notaðu `þegar leikmaður 2 snertir eitthvað` atburðinn til að koma af stað uppfærslu á skorinu. Þú getur aukið breytuna með `stig = stig + 1.`  <br/>   <br/>
+        \r
+        3. Náðu skorinu 10 til að standast áfangann.\r
+        \r
+        <br/><br/>\r
+        <h4>\r
+        **Athugaðu:**
+        Notaðu hægri örina fyrir kökukastið!\r
+        </h4>
       Course 4 Play Lab Vars 7_markdown_instruction: "Fínt en nú skulum við tryggja að leikurinn sé ekki of auðveldur. \\r\n\\r\nÍ hvert sinn sem hundurinn (leikmaður 1) verður fyrir samloku frá kettinum (leikmanni 2) ættir þú að tapa stigi. \\r\n\\r\nByrjaðu með 10 stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára áfangann."
       Course 4 Play Lab Vars 9_markdown_instruction: "Frjáls æfing: Hér eru allar breyturnar sem við höfum notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota þær.\\r\n\\r\nTaktu eftir að nú eru svo margir kubbar í verkfærakassanum að við höfum þurft að raða þeim í viðeigandi flokka. Taktu þér tíma til að skoða hvað þú hefur. Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum.\\r\n\\r\n*Vísbending: Flettu niður til að sjá allar skipanirnar á vinnusvæðinu.*"
       Course 4 Play Labs For Loops 1_markdown_instruction: Við skulum láta hundinn segja hverja tölu frá 1 til 100. Notaðu `frá` lykkju og teljarakubbinn til að segja teljarann í hverri umferð lykkjunnar.
@@ -3886,7 +3910,24 @@ is:
         width="250px"/>\r
         \r
         **Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?
-      Course 4 SCV 3_markdown_instruction: "**Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið. Getur þú haldið þig við hana þar til þú finnur lausn?\\r\n\\r\n<hr/>\\r\n\\r\nNú er það klukkleikur! Klukkaðu Kött til að fá 2 stig. Klukkaðu Mörgæs til að fá 3 stig.  Náðu nákvæmlega 10 stigum til að vinna!\\r\nEn gættu þín því ef Köttur og Mörgæs klukka hvort annað þá tapast stig.\\r\n\\r\n<strong>\\r\nBættu við þeim kubbum sem þarf til að leikurinn virki eins og hér var lýst. \\r\n- Hvernig læturðu Hund færast í allar áttir með örvarlyklunum?  \\r\n- Hvernig ætlarðu að bæta við stigum þegar Hundur klukkar Kött eða Mörgæs?  \\r\n- Hvernig ætlarðu að draga frá stig þegar Köttur og Mörgæs snertast?\\r\n</strong>\\r\n\\r\n<hr/>\\r\n\\r\n"
+      Course 4 SCV 3_markdown_instruction: |-
+        **Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið. Getur þú haldið þig við hana þar til þú finnur lausn?\r
+        \r
+        <hr/>\r
+        \r
+        Nú er það klukkleikur! Klukkaðu Kött til að fá 2 stig. Klukkaðu Mörgæs til að fá 3 stig.  Náðu nákvæmlega 10 stigum til að vinna!\r
+        En gættu þín því ef Köttur og Mörgæs klukka hvort annað þá tapast stig.\r
+        \r
+        <strong>\r
+        Bættu við þeim kubbum sem þarf til að leikurinn virki eins og hér var lýst. \r
+        - Hvernig læturðu Hund færast í allar áttir með örvarlyklunum?  \r
+        - Hvernig ætlarðu að bæta við stigum þegar Hundur klukkar Kött eða Mörgæs?  \r
+        - Hvernig ætlarðu að draga frá stig þegar Köttur og Mörgæs snertast?\r
+        </strong>\r
+        \r
+        <hr/>\r
+        \r
+        
       Course 4 SCV 4_markdown_instruction: "**Ofuráskorun með breytur:** Leystu þessa þraut með eins fáum kubbum og mögulegt er.\\r\n\\r\n"
       Course 4 SCV 5_markdown_instruction: "**Ofuráskorun með breytur:** Leystu þessa þraut með eins fáum kubbum og mögulegt er.\\r\n\\r\n"
       Course 4 SCV 6_markdown_instruction: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Ofuráskorun með breytur:** Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?  "

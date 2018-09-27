@@ -1,4 +1,3 @@
----
 lv:
   data:
     blocks:
@@ -6,55 +5,9 @@ lv:
         options:
           UNIT:
             '"seconds"': sekundes
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
-      Dancelab_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
       Dancelab_changeMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Nākamā
             '"prev"': Iepriekšējā
           DIR:
@@ -63,150 +16,32 @@ lv:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Nākamā
             '"prev"': Iepriekšējā
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': izmērs
+            '"height"': augstums
       Dancelab_doMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Nākamā
             '"prev"': Iepriekšējā
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Nākamā
             '"prev"': Iepriekšējā
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Nākamā
-            '"prev"': Iepriekšējā
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -215,15 +50,18 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
-      Dancelab_mappingProp:
+            '"height"': augstums
+      Dancelab_jumpTo:
         options:
-          PROPERTY:
-            '"scale"': izmērs
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": pa kreisi
+            "{x: 300, y: 200}": pa labi
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
+      Dancelab_makeNewDanceSprite:
         options:
-          DIRECTION:
-            '"right"': pa labi
-            '"left"': pa kreisi
+          LOCATION:
+            "{x: 100, y: 200}": pa kreisi
+            "{x: 300, y: 200}": pa labi
       Dancelab_randomColor:
         text: nejauša krāsa
       Dancelab_setDanceSpeed:
@@ -238,18 +76,17 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
+            '"height"': augstums
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': izmērs
+            '"height"': augstums
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': izmērs
+            '"height"': augstums
       Dancelab_whenKey:
         options:
           KEY:
@@ -273,8 +110,8 @@ lv:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': patiess
-            'false': nepatiess
+            'true': 'patiess'
+            'false': 'nepatiess'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -349,12 +186,46 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      Mikelab_randomColor:
+        text: nejauša krāsa
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': pilsēta
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': izmērs
-      Vanilla_randomColor:
-        text: nejauša krāsa
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': pa labi
+            '"left"': pa kreisi
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': bultiņa uz augšu
+            '"down"': bultiņa uz leju
+            '"left"': bultiņa pa kreisi
+            '"right"': bultiņa pa labi
+            '"w"': R
+            '"s"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': bultiņa uz augšu
+            '"down"': bultiņa uz leju
+            '"left"': bultiņa pa kreisi
+            '"right"': bultiņa pa labi
+            '"w"': R
+            '"s"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': bultiņa uz augšu
+            '"down"': bultiņa uz leju
+            '"left"': bultiņa pa kreisi
+            '"right"': bultiņa pa labi
       craft_ifPath:
         options:
           DIR:

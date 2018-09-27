@@ -160,10 +160,16 @@ bn:
       free_play:
         playlab: 'একটি অ্যাপ তৈরি করুন'
         applab: 'একটি অ্যাপ তৈরি করুন'
-      courses: "পাঠ্যতালিকা"
       project_gallery: "প্রকল্প"
       educate_hoc: "এক ঘন্টার কোড"
       stats: "পরিসংখ্যান"
+    create_button:
+      create: 'তৈরি করুন'
+      applab: 'অ্যাপ ল্যাব'
+      artist: 'শিল্পী'
+      playlab: 'প্লে ল্যাব'
+      minecraft: 'মাইনক্র্যাফট'
+      flappy: 'ফ্লাপি'
     user:
       classroom: 'শিক্ষক হোম পেজ'
       label: 'হ্যালো %{username}'

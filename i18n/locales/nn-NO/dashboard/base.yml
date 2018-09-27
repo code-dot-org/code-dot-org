@@ -260,9 +260,7 @@ nn:
         applab: 'Lag ein app i Spel-lab'
         gamelab: 'Lag eit prosjekt i Spel-lab'
         weblab: 'Lag eit Nett-lab-prosjekt (beta)'
-      home: "Heim"
       my_dashboard: "Kontrollpanel"
-      courses: "Kurs"
       course_catalog: "Kurskatalog"
       project_gallery: "Prosjekt"
       sections: "Seksjonar"
@@ -297,6 +295,14 @@ nn:
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
+    create_button:
+      create: 'Opprett'
+      applab: 'App-lab'
+      artist: 'Kunstnar'
+      gamelab: 'Spel-lab'
+      playlab: 'Spel-lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flakse'
     user:
       classroom: 'Side for lærarar'
       district_dashboard: 'Distrikt dashboard'

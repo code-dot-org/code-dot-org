@@ -266,9 +266,7 @@ sk:
         applab: 'Vytvoriť aplikáciu'
         gamelab: 'Vytvorte projekt v Hernom laboratóriu'
         weblab: 'Vytvorte prjekt vo Webovom laboratóriu (beta verzia)'
-      home: "Domov"
       my_dashboard: "Môj hlavný panel"
-      courses: "Kurzy"
       course_catalog: "Katalóg kurzov"
       project_gallery: "Projekty"
       sections: "Sekcie"
@@ -282,7 +280,7 @@ sk:
       educate_elementary: "Základná škola"
       educate_middle: "2. stupeň základnej školy"
       educate_high: "Stredná škola"
-      educate_hoc: "Hodina kódovania"
+      educate_hoc: "Hodina Kódu"
       educate_partner: "Staňte sa naším partnerom"
       educate_beyond: "Nad rámec Code.org"
       educate_inspire: "Inšpirujte študenta"
@@ -303,6 +301,14 @@ sk:
       help_us: "Pomôžte nám"
       teach: "Vyučujte"
       about: "O nás"
+    create_button:
+      create: 'Vytvoriť'
+      applab: 'Laboratórium aplikácií'
+      artist: 'Umelec'
+      gamelab: 'Herné laboratórium'
+      playlab: 'Herné laboratórium'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Domovská stránka učiteľa'
       district_dashboard: 'Oblasť Nástenka'
@@ -575,7 +581,7 @@ sk:
       body_short: 'Naučte sa základy počítačovej vedy v zrýchlenej verzií kurzov 2-4.'
     hoc2014:
       try_new_tutorial: 'Skúste náš nový kurz Hodina Kódu, v betaverzii'
-      try_frozen: 'Postavy s Annou a Elsou z Frozen'
+      try_frozen: 'Umelec s Annou a Elsou z Frozen'
     gallery:
       title: "Galéria"
       body: "Zobraziť galériu aplikácií a obrázkov vytvorených našími užívateľmi"
@@ -592,7 +598,7 @@ sk:
       audience: "Vek 13+"
       cta: "Nauč sa ako"
     frozen:
-      title: "Zamrznutý"
+      title: "Frozen"
     starwars:
       title: "Star Wars"
     infinity:

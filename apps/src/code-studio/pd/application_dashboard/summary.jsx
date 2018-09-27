@@ -5,6 +5,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
+import {Row, Col} from 'react-bootstrap';
 import RegionalPartnerDropdown, {RegionalPartnerPropType} from '../components/regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
 import AdminNavigationButtons from './admin_navigation_buttons';
@@ -82,38 +83,55 @@ export class Summary extends React.Component {
           <RegionalPartnerDropdown/>
         }
         <h1>{this.props.regionalPartnerFilter.label}</h1>
-        <div className="row">
-          <SummaryTable
-            id="summary-csf-facilitators"
-            caption="CS Fundamentals Facilitators"
-            data={this.state.applications["csf_facilitators"]}
-            path="csf_facilitators"
-          />
-          <SummaryTable
-            id="summary-csd-facilitators"
-            caption="CS Discoveries Facilitators"
-            data={this.state.applications["csd_facilitators"]}
-            path="csd_facilitators"
-          />
-          <SummaryTable
-            id="summary-csp-facilitators"
-            caption="CS Principles Facilitators"
-            data={this.state.applications["csp_facilitators"]}
-            path="csp_facilitators"
-          />
-          <SummaryTable
-            id="summary-csd-teachers"
-            caption="CS Discoveries Teachers"
-            data={this.state.applications["csd_teachers"]}
-            path="csd_teachers"
-          />
-          <SummaryTable
-            id="summary-csp-teachers"
-            caption="CS Principles Teachers"
-            data={this.state.applications["csp_teachers"]}
-            path="csp_teachers"
-          />
-        </div>
+        <Row>
+          <Col sm={4}>
+            <SummaryTable
+              id="summary-csf-facilitators"
+              caption="CS Fundamentals Facilitators"
+              data={this.state.applications["csf_facilitators"]}
+              path="csf_facilitators"
+              applicationType="facilitator"
+            />
+          </Col>
+          <Col sm={4}>
+            <SummaryTable
+              id="summary-csd-facilitators"
+              caption="CS Discoveries Facilitators"
+              data={this.state.applications["csd_facilitators"]}
+              path="csd_facilitators"
+              applicationType="facilitator"
+            />
+          </Col>
+          <Col sm={4}>
+            <SummaryTable
+              id="summary-csp-facilitators"
+              caption="CS Principles Facilitators"
+              data={this.state.applications["csp_facilitators"]}
+              path="csp_facilitators"
+              applicationType="facilitator"
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={6}>
+            <SummaryTable
+              id="summary-csd-teachers"
+              caption="CS Discoveries Teachers"
+              data={this.state.applications["csd_teachers"]}
+              path="csd_teachers"
+              applicationType="teacher"
+            />
+          </Col>
+          <Col sm={6}>
+            <SummaryTable
+              id="summary-csp-teachers"
+              caption="CS Principles Teachers"
+              data={this.state.applications["csp_teachers"]}
+              path="csp_teachers"
+              applicationType="teacher"
+            />
+          </Col>
+        </Row>
       </div>
     );
   }

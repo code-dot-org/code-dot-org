@@ -1,6 +1,18 @@
 lv:
   data:
     callouts:
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Pievieno savu kodu šeit
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Pievieno savu kodu šeit
+      CSD U6 light show predict_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show_callout:
+        CSDUDL03P09: Ko dara šī līnija?
+      CSD U6 light show_2018_callout:
+        CSDUDL03P09: Ko dara šī līnija?
       Course 4 Artist 4_callout:
         repeat_full_circle: Ievadi skaitli, cik reižu zombijam jāpakustas, lai izveidotu pilnu apli
       Course 4 Artist 7_callout:

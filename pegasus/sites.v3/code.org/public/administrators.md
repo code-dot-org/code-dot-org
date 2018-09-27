@@ -92,7 +92,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Make computer science courses count</h3>
 
 - How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
-- 40 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
+- 41 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 - If possible, we recommend allowing computer science courses to satisfy graduation requirements and exist as both an Academic and CTE course.
 
 [/col-80]

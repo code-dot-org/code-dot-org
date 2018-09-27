@@ -242,8 +242,8 @@ tr:
       2-3_instruction: Mor çiçekler 1 yada 0 nektara sahip olabilir. Dikkatli ol! Eğer mor çiçek hiç nektara sahip değilse, toplamaya çalışma.
       2-3level1_instruction: İleri giderek kuşa yaramaz domuzu yakalamak için yardım et
       20hr_farmer_stage9_1_instruction: Merhaba, ben bir çiftçiyim. Çiftlikteki alanı ekime hazırlamak için düzleştirmemde yardımına ihtiyacım var. Beni bir toprak yığınına doğru hareket ettir ve "Kaldır" bloğunu yığını kaldırmam için kullan.
-      20hr_farmer_stage9_11_instruction: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir delik var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
-      20hr_farmer_stage9_2_instruction: Daha sonra beni deliğe hareket ve  deliği "doldur" blogunu kullanarak, iki kürek dolusu toprak ile doldur.
+      20hr_farmer_stage9_11_instruction: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
+      20hr_farmer_stage9_2_instruction: Daha sonra beni çukura götür ve "doldur" bloğunu kullanarak, iki kürek dolusu toprak ile doldur.
       20hr_farmer_stage9_3_instruction: Beni toprak yığınına doğru hareket ettir ve olabildiğince az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle.
       20hr_farmer_stage9_4_instruction: 'Tüm toprak yığınlarını kaldırmama yardımcı olabilir miin? İpucu: Mümkünse repeat blogunu kullan.'
       20hr_farmer_stage9_5_instruction: 'Delikleri 5 kürekdolusu toprakla doldurmam için bana yardım et. İpucu: "While" blogunun içine "tekrar" blogunu yerleştirebilirsin.'
@@ -2528,11 +2528,11 @@ tr:
       grade3_maze_nestedLoops2_instruction: 'Bu beş bloğu sadece iki blokla yer değiştirebilir misin? (İpucu: "kez tekrarla" bloğunu kullanarak döngü oluştur.)'
       grade3_maze_nestedLoops3_instruction: Sadece iki blok kullanarak beni domuzun yanına götür.
       grade3_maze_nestedLoops4_instruction: Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.
-      grade3_robotFarmer_ConditionalsIntro_11_instruction: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir delik var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
+      grade3_robotFarmer_ConditionalsIntro_11_instruction: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
       grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
         * "Ne kadar toprak olduğunu bilmiyorum!" * \r \r 'sürece' döngüsü kullanarak tüm yığını kaldırmak için çiftçiye yardım et.
-      grade3_robotFarmer_ConditionalsIntro_6_instruction: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak kaldır. Liste menüsündeki yeni secenekler bana bir yığının mı yoksa bir deliğin mi üstünde olduğumu söyler.
-      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Delikleri 5 kürekdolusu toprakla doldurmam için bana yardım et. İpucu: "While" blogunun içine "tekrar" blogunu yerleştirebilirsin.'
+      grade3_robotFarmer_ConditionalsIntro_6_instruction: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak kaldır. Liste menüsündeki yeni seçenekler bana bir yığının mı yoksa bir çukurun mu üstünde olduğumu söyler.
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Delikleri 5 kürek dolusu toprakla doldurmam için bana yardım et. İpucu: "süresince" bloğunun içine "tekrar" bloğunu yerleştirebilirsin.'
       grade4_arist_nested_loop_circles1_instruction: 'Değerlendirme: Tasarımı tamamlamak için iç içe döngüler kullan.'
       grade4_arist_nested_loop_flags1_instruction: Bir yel değirmeni oluşturmak için verilen kodu döngü içinde kullan.
       grade4_arist_nested_loop_polygons1_instruction: "Bu kodu 10 defa döngüye koyun. Her seferinde ne kadar dönmen gerektiğini buldun mu?"
@@ -2582,7 +2582,7 @@ tr:
       grade4_bee_nestedLoops3_instruction: İç içe döngü kullanarak bütün nektarları topla.
       grade4_bee_nestedLoops4_instruction: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
       grade4_frozen_freeplay_instruction: Resmen bir usta sanatçı haline geldiniz! Kış harikalar diyarı yaratın.
-      grade4_frozen_functions0_instruction: Çember çizmek için soru işaretli yere gelmesi gereken sayısı bulabilir misiniz?
+      grade4_frozen_functions0_instruction: Çember çizmek için soru işaretli yere gelmesi gereken sayıyı tahmin edebilir misin?
       grade4_frozen_functions1a_instruction: 10 tane üst üste çember oluşturmak için "Çember oluştur" yani "Create a circle"bloğunu kullanın. Çemberler arasında ileri zıplamayı unutmayın.
       grade4_frozen_functions2_instruction: Şimdi herbirini çizdikten sonra 18 derece bırakacağınız 20 tane çember oluşturun.
       grade4_frozen_functions3_instruction: '"Çember oluştur" "create circle" bloğuyla farklı büyüklüklerde çemberler oluşturabilirsiniz. Bunu 5 birim ve 10 birimlik çemberler çizmek için kullanır mısınız?'

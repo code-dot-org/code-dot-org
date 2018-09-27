@@ -265,9 +265,7 @@ ko:
         applab: 'Play Lab 앱 만들기'
         gamelab: '게임 연구소 프로젝트 만들기'
         weblab: '웹 연구소(베타) 프로젝트 만들기'
-      home: "홈"
       my_dashboard: "대시보드"
-      courses: "courses"
       course_catalog: "강의 목록"
       project_gallery: "프로젝트"
       sections: "섹션"
@@ -302,6 +300,14 @@ ko:
       help_us: "도움주기"
       teach: "가르치기"
       about: "안내"
+    create_button:
+      create: '만들기'
+      applab: '앱 연구실'
+      artist: '화가'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: '마인크래프트'
+      flappy: '플래피'
     user:
       classroom: '선생님 홈페이지'
       district_dashboard: '대시보드 구역'

@@ -84,8 +84,9 @@ ta:
     destroy: 'அழிக்கவும்'
   nav:
     header:
-      courses: "பாடங்கள்"
       educate_hoc: "நிரல்வரி நேரம்"
+    create_button:
+      create: 'உருவாக்கு'
     user:
       label: 'வணக்கம் %{username}'
       settings: 'எனது கணக்கு'

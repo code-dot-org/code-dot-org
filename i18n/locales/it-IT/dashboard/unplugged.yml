@@ -90,7 +90,7 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       DigitalCitizenship:
         title: Cittadinanza Digitale
         desc: Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no.
@@ -201,7 +201,7 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       courseE_unplugged_songwriting:
         title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.

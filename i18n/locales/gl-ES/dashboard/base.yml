@@ -252,9 +252,7 @@ gl:
         applab: 'Crea unha aplicación do Laboratorio de Aplicacións'
         gamelab: 'Crea un proxecto de Laboratorio de Xogos'
         weblab: 'Crea un proxecto (beta) de Laboratorio Web'
-      home: "Inicio"
       my_dashboard: "O meu panel de control"
-      courses: "Cursos"
       course_catalog: "Catálogo de cursos"
       project_gallery: "Proxectos"
       sections: "Seccións"
@@ -285,6 +283,13 @@ gl:
       help_us: "Axúdenos"
       teach: "Ensinar"
       about: "Sobre"
+    create_button:
+      create: 'Crear'
+      applab: 'Laboratorio de aplicacións'
+      artist: 'Artista'
+      playlab: 'Laboratorio de Xogos'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy bird'
     user:
       classroom: 'Páxina inicial do profesor'
       district_dashboard: 'Panel do distrito'

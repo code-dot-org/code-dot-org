@@ -270,9 +270,7 @@ zh-TW:
         applab: '製作一個 App Lab app'
         gamelab: '製作遊戲實驗室專案'
         weblab: '製作網路實驗室 (測試版) 專案'
-      home: "主頁"
       my_dashboard: "我的控制台"
-      courses: "課程"
       course_catalog: "課程目錄"
       project_gallery: "所有專案"
       sections: "學習小組"
@@ -307,6 +305,14 @@ zh-TW:
       help_us: "幫助我們"
       teach: "教育"
       about: "關於"
+    create_button:
+      create: '建立'
+      applab: 'App Lab'
+      artist: '藝術家'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: '像素鳥'
     user:
       classroom: '教師主頁'
       district_dashboard: '分區控制台'

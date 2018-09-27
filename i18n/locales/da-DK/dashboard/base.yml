@@ -225,8 +225,6 @@ da:
         playlab: 'Lav en App'
         artist: 'Tegn noget'
         applab: 'Lav en App'
-      home: "Hjem"
-      courses: "kurser"
       project_gallery: "Projekter"
       report_bug: "Rapporter fejl"
       educate_overview: "Oversigt for undervisere"
@@ -253,6 +251,13 @@ da:
       help_us: "Hjælp os"
       teach: "Undervis"
       about: "Om"
+    create_button:
+      create: 'Opret'
+      applab: 'App Lab'
+      artist: 'Kunstner'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Lærerens startside'
       district_dashboard: 'Særskilt betjeningspanel'
