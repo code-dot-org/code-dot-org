@@ -120,20 +120,17 @@ module OmniauthCallbacksControllerTests
 
     private
 
-    EMAIL = 'upgraded@code.org'
-    DEFAULT_UID = '1111'
-
     def mock_oauth(override_params = {})
       mock_oauth_for AuthenticationOption::CLEVER, generate_auth_hash(override_params)
     end
 
     def generate_auth_hash(override_params = {})
       OmniAuth::AuthHash.new(
-        uid: override_params[:uid] || DEFAULT_UID,
+        uid: override_params[:uid] || '1111',
         provider: override_params[:provider] || AuthenticationOption::CLEVER,
         info: {
           name: override_params[:name] || 'someone',
-          email: override_params[:email] || EMAIL,
+          email: override_params[:email] || 'auth_test@code.org',
           user_type: override_params[:user_type].presence,
           dob: override_params[:dob] || Date.today - 20.years,
           gender: override_params[:gender] || 'f'
@@ -149,45 +146,6 @@ module OmniauthCallbacksControllerTests
     # and redirects to something else: homepage, finish_sign_up, etc.
     def sign_in_through_clever
       sign_in_through AuthenticationOption::CLEVER
-    end
-
-    def finish_sign_up(user_type)
-      post '/users', params: finish_sign_up_params(user_type: user_type)
-    end
-
-    def finish_sign_up_params(override_params)
-      user_type = override_params[:user_type] || User::TYPE_STUDENT
-      if user_type == User::TYPE_STUDENT
-        {
-          user: {
-            locale: 'en-US',
-            user_type: user_type,
-            name: @auth_hash.info.name,
-            age: '13',
-            gender: 'f',
-            school_info_attributes: {
-              country: 'US'
-            },
-            terms_of_service_version: 1,
-            email_preference_opt_in: nil,
-          }.merge(override_params)
-        }
-      else
-        {
-          user: {
-            locale: 'en-US',
-            user_type: user_type,
-            name: @auth_hash.info.name,
-            age: '21+',
-            gender: nil,
-            school_info_attributes: {
-              country: 'US'
-            },
-            terms_of_service_version: 1,
-            email_preference_opt_in: 'yes',
-          }.merge(override_params)
-        }
-      end
     end
   end
 end

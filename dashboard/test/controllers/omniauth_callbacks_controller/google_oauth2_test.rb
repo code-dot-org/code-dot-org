@@ -145,11 +145,11 @@ module OmniauthCallbacksControllerTests
 
     def generate_auth_hash(args = {})
       OmniAuth::AuthHash.new(
-        uid: args[:uid] || DEFAULT_UID,
+        uid: args[:uid] || '1111',
         provider: args[:provider] || AuthenticationOption::GOOGLE,
         info: {
           name: args[:name] || 'someone',
-          email: args[:email] || EMAIL,
+          email: args[:email] || 'auth_test@code.org',
           user_type: args[:user_type].presence,
           dob: args[:dob] || Date.today - 20.years,
           gender: args[:gender] || 'f'
@@ -166,45 +166,6 @@ module OmniauthCallbacksControllerTests
     # and redirects to something else: homepage, finish_sign_up, etc.
     def sign_in_through_google
       sign_in_through AuthenticationOption::GOOGLE
-    end
-
-    def finish_sign_up(user_type)
-      post '/users', params: finish_sign_up_params(user_type: user_type)
-    end
-
-    def finish_sign_up_params(override_params)
-      user_type = override_params[:user_type] || User::TYPE_STUDENT
-      if user_type == User::TYPE_STUDENT
-        {
-          user: {
-            locale: 'en-US',
-            user_type: user_type,
-            name: @auth_hash.info.name,
-            age: '13',
-            gender: 'f',
-            school_info_attributes: {
-              country: 'US'
-            },
-            terms_of_service_version: 1,
-            email_preference_opt_in: nil,
-          }.merge(override_params)
-        }
-      else
-        {
-          user: {
-            locale: 'en-US',
-            user_type: user_type,
-            name: @auth_hash.info.name,
-            age: '21+',
-            gender: nil,
-            school_info_attributes: {
-              country: 'US'
-            },
-            terms_of_service_version: 1,
-            email_preference_opt_in: 'yes',
-          }.merge(override_params)
-        }
-      end
     end
   end
 end
