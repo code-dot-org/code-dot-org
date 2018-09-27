@@ -16,7 +16,7 @@ describe('pegasus()', () => {
   describe('from pegasus', () => {
     stubWindowDashboard(undefined);
 
-    it('returns the relative URL if not', () => {
+    it('returns a relative URL', () => {
       expect(window.dashboard).to.be.undefined;
       expect(pegasus('/relative-path')).to.equal('/relative-path');
     });
@@ -37,7 +37,7 @@ describe('studio()', () => {
   describe('from studio', () => {
     stubWindowPegasus(undefined);
 
-    it('returns the relative URL if not', () => {
+    it('returns a relative URL', () => {
       expect(window.pegasus).to.be.undefined;
       expect(studio('/relative-path')).to.equal('/relative-path');
     });
