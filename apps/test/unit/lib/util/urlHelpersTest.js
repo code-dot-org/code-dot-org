@@ -1,5 +1,5 @@
 import {expect} from '../../../util/configuredChai';
-import {pegasus, metaTagDescription} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio, metaTagDescription} from '@cdo/apps/lib/util/urlHelpers';
 import sinon from 'sinon';
 
 describe('pegasus()', () => {
@@ -19,6 +19,27 @@ describe('pegasus()', () => {
     it('returns the relative URL if not', () => {
       expect(window.dashboard).to.be.undefined;
       expect(pegasus('/relative-path')).to.equal('/relative-path');
+    });
+  });
+});
+
+describe('studio()', () => {
+  describe('from pegasus', () => {
+    stubWindowPegasus({
+      STUDIO_URL: '//test-studio.code.org'
+    });
+
+    it('gives an absolute studio url', () => {
+      expect(studio('/relative-path')).to.equal('//test-studio.code.org/relative-path');
+    });
+  });
+
+  describe('from studio', () => {
+    stubWindowPegasus(undefined);
+
+    it('returns the relative URL if not', () => {
+      expect(window.pegasus).to.be.undefined;
+      expect(studio('/relative-path')).to.equal('/relative-path');
     });
   });
 });
@@ -97,4 +118,11 @@ function stubWindowDashboard(value) {
   before(() => originalDashboard = window.dashboard);
   after(() => window.dashboard = originalDashboard);
   beforeEach(() => window.dashboard = value);
+}
+
+function stubWindowPegasus(value) {
+  let originalPegasus;
+  before(() => originalPegasus = window.pegasus);
+  after(() => window.pegasus = originalPegasus);
+  beforeEach(() => window.pegasus = value);
 }
