@@ -9,10 +9,20 @@ const styles = {
     marginTop: 20
   },
   schoolZipLabel: {
-    width: 150,
+    marginRight: 40
+  },
+  zipInput: {
+    height: 28
   },
   zipSubmit: {
-    marginTop: 20
+    marginTop: 20,
+    display: "inline-block",
+    marginLeft: 10
+  },
+  spinner: {
+    fontSize: 32,
+    marginTop: 20,
+    marginLeft: 48
   },
   noPartner: {
     marginTop: 20
@@ -31,15 +41,16 @@ class RegionalPartnerSearch extends Component {
     partnerInfo: undefined,
     stateValue: "",
     zipValue: "",
-    noPartner: false
+    noPartner: false,
+    loading: false
   };
 
   workshopSuccess = (response) => {
-    this.setState({partnerInfo: response });
+    this.setState({partnerInfo: response, loading: false});
   };
 
   workshopZipFail = (response) => {
-    this.setState({noPartner: true});
+    this.setState({noPartner: true, loading: false});
   };
 
   handleZipChange = (event) => {
@@ -47,7 +58,7 @@ class RegionalPartnerSearch extends Component {
   };
 
   handleZipSubmit = (event) => {
-    this.setState({partnerInfo: undefined, noPartner: false});
+    this.setState({partnerInfo: undefined, noPartner: false, loading: true});
 
     $.ajax({
       url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
@@ -90,7 +101,7 @@ class RegionalPartnerSearch extends Component {
 
         <form onSubmit={this.handleZipSubmit} style={styles.form}>
           <label style={styles.schoolZipLabel}>School Zip Code:</label>
-          <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} />
+          <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
           <div style={styles.zipSubmit}>
             <input type="submit" value="Submit" />
           </div>
@@ -98,6 +109,10 @@ class RegionalPartnerSearch extends Component {
 
         {this.state.noPartner || partnerInfo && (
           <h3>Code.org Regional Partner for your region:</h3>
+        )}
+
+        {this.state.loading && (
+          <i className="fa fa-spinner fa-spin" style={styles.spinner}/>
         )}
 
         {this.state.noPartner && (
