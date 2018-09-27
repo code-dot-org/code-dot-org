@@ -162,13 +162,10 @@ module OmniauthCallbacksControllerTests
       )
     end
 
-    # The user signs in through Google
-    # The oauth endpoint (which is mocked) redirects to the oauth callback,
-    # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
+    # The user signs in through Google, which hits the oauth callback
+    # and redirects to something else: homepage, finish_sign_up, etc.
     def sign_in_through_google
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
+      sign_in_through AuthenticationOption::GOOGLE
     end
 
     def finish_sign_up(user_type)
