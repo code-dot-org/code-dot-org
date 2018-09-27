@@ -914,7 +914,7 @@ FactoryGirl.define do
     end
 
     trait :with_approval_fields do
-      going_to_teach 'Yes'
+      plan_to_teach 'Yes'
       school 'Hogwarts Academy of Witchcraft and Wizardry'
       total_student_enrollment 200
       free_lunch_percent '50%'
