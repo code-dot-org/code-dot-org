@@ -581,6 +581,10 @@ function layoutSprites(group, format) {
 
 // Properties
 
+function setTint(sprite, val) {
+  setProp(sprite, "tint", val);
+}
+
 function setProp(sprite, property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
   

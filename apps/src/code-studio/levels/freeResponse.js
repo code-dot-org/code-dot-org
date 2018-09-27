@@ -6,7 +6,8 @@ import { sourceForLevel } from '../clientState';
 export default class FreeResponse {
   constructor(levelId, optional) {
     this.levelId = levelId;
-    this.optional = !!optional;
+    // Levelbuilder booleans are undefined, 'true', or 'false'.
+    this.optional = [true, 'true'].includes(optional);
 
     $(document).ready(function () {
       var textarea = $(`textarea#level_${levelId}.response`);

@@ -2,7 +2,7 @@
 
 let osc, fft, peakDetect, customPeakDetects, songs, part;
 
-export function createDanceAPI(p5Inst) {
+export function createDanceAPI(gamelabP5) {
   osc = new p5.Oscillator();
   fft = new p5.FFT(0.7, 128);
   peakDetect = new p5.PeakDetect(3000, 5000, 0.1, 3);
@@ -57,7 +57,7 @@ export function createDanceAPI(p5Inst) {
     },
 
     song: {
-      load: song => songs.push(p5Inst.loadSound(song)) - 1,
+      load: song => songs.push(gamelabP5.loadSound(song)) - 1,
       start: (n = 0) => songs[n].play(),
       stop: (n = 0) => songs[n].stop(),
       isPlaying: (n = 0) => songs[n].isPlaying(),
@@ -83,7 +83,10 @@ export function teardown() {
     return;
   }
 
-  songs.forEach(song => song.stop());
+  songs.forEach(song => {
+    song.clearCues();
+    song.stop();
+  });
   songs.length = 0;
   customPeakDetects.length = 0;
   peakDetect = null;

@@ -1,8 +1,13 @@
 {
-  "category": "Sprites",
+  "category": "World",
   "config": {
     "func": "setBG",
     "blockText": "set background to {BG}",
+    "color": [
+      258,
+      "0.35",
+      "0.62"
+    ],
     "args": [
       {
         "name": "BG",
