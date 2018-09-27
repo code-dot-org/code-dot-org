@@ -365,6 +365,7 @@ Craft.initializeAppLevel = function (levelConfig) {
 
   Craft.gameController.loadLevel({
     isAquaticLevel: levelConfig.isAquaticLevel,
+    boat: levelConfig.boat,
     ocean: levelConfig.ocean,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
@@ -374,7 +375,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     entities: levelConfig.entities,
     playerStartPosition: levelConfig.playerStartPosition,
     playerStartDirection: levelConfig.playerStartDirection,
-    playerName: Craft.getCurrentCharacter(),
+    playerName: Craft.getCurrentCharacter() + 'Aquatic',
     assetPacks: levelAssetPacks,
     specialLevelType: levelConfig.specialLevelType,
     houseBottomRight: levelConfig.houseBottomRight,
