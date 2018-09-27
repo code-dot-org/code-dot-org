@@ -32,7 +32,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_student @auth_hash.info.email, created_user
+      assert_valid_student created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -52,7 +52,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher @auth_hash.info.email, created_user
+      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -75,7 +75,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_student @auth_hash.info.email, created_user
+      assert_valid_student created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -96,7 +96,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher @auth_hash.info.email, created_user
+      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
