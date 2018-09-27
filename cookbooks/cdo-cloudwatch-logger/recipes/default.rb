@@ -28,6 +28,7 @@ end
 
 poise_service 'cloudwatch-logger' do
   command "#{script_path}/#{name}"
+  user node[:user]
   subscribes :restart, 'file[cloudwatch-logger]', :delayed
 end
 
