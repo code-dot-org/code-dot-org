@@ -6,6 +6,8 @@ module SignUpTracking
   CONTROL_GROUP = 'v2-control'
   NEW_SIGN_UP_GROUP = 'v2-finish-sign-up'
 
+  USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
+
   def self.study_group(session)
     session[:sign_up_study_group] || NOT_IN_STUDY_GROUP
   end
@@ -60,7 +62,7 @@ module SignUpTracking
         event: "#{sign_up_type}-sign-up-#{result}",
         data_string: session[:sign_up_uid],
         data_json: {
-          detail: user.to_json,
+          detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST).to_json,
           errors: user.errors&.messages
         }.to_json
       }
