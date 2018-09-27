@@ -105,9 +105,10 @@ class Homepage
   end
 
   def self.get_actions
-    # Show a Latin specific video to users browsing in Spanish (Mexico) to
-    # promote LATM HOC.
-    if I18n.locale == "es-MX"
+    # Show a Latin American specific video to users browsing in Spanish or
+    # Portuguese(Brazil) to promote LATAM HOC.
+    latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR"]
+    if latam_language_codes.include?(I18n.locale)
       youtube_id = ""
       download_path = ""
       facebook = ""
