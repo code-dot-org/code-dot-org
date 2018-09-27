@@ -1672,6 +1672,16 @@ a.download-video {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .field_with_errors > label {
+        color: $black;
+      }
+      .field_with_errors > input,
+      .field_with_errors > select,
+      .required > select {
+        background-color: $white;
+        border: 1px solid $red;
+      }
     }
     select, input[type=text] {
       height: 36px;

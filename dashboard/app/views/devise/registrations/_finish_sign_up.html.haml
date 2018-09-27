@@ -25,7 +25,8 @@
 
     #age-dropdown.field{style: "display: none;"}
       = f.label :age
-      = f.select :age, age_options, include_blank: true
+      %span{class: "required"}
+        = f.select :age, age_options, include_blank: true
 
     #gender-dropdown.field{style: "display: none;"}
       = f.label :gender, t('signup_form.gender')
