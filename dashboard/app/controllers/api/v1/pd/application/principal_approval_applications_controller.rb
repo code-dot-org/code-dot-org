@@ -38,12 +38,9 @@ module Api::V1::Pd::Application
           can_pay_fee: principal_response[:pay_fee]
         }
       )
-      teacher_application.save
+      teacher_application.save!
       teacher_application.auto_score!
-
-      TEACHER_APPLICATION_MAILER_CLASS.principal_approval_received(
-        @application.teacher_application
-      ).deliver_now
+      teacher_application.queue_email(:principal_approval_completed, deliver_now: true)
     end
   end
 end

@@ -110,6 +110,10 @@ module Pd::Application
       "#{principal_greeting} <#{principal_email}>"
     end
 
+    def effective_regional_partner_name
+      regional_partner&.name || 'Code.org'
+    end
+
     def accepted?
       status.start_with? 'accepted'
     end

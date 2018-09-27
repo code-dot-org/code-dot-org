@@ -73,7 +73,6 @@ require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 
@@ -83,6 +82,7 @@ class User < ActiveRecord::Base
   include LocaleHelper
   include UserMultiAuthHelper
   include UserPermissionGrantee
+  include PartialRegistration
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -781,20 +781,9 @@ class User < ActiveRecord::Base
   end
 
   def self.new_with_session(params, session)
-    if session["devise.user_attributes"]
-      new(session["devise.user_attributes"]) do |user|
-        user.attributes = params
-        cache = CDO.shared_cache
-        OmniauthCallbacksController::OAUTH_PARAMS_TO_STRIP.each do |param|
-          next if user.send(param)
-          # Grab the oauth token from memcached if it's there
-          oauth_cache_key = OmniauthCallbacksController.get_cache_key(param, user)
-          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
-        end
-        user.valid?
-      end
-    else
-      super
+    return super unless PartialRegistration.in_progress? session
+    new_from_partial_registration session do |user|
+      user.attributes = params
     end
   end
 
@@ -974,11 +963,12 @@ class User < ActiveRecord::Base
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
+    max_credential_size = 255
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
     login = conditions.delete(:login)
     if login.present?
-      return nil if login.utf8mb4?
+      return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       from("users IGNORE INDEX(index_users_on_deleted_at)").where(
@@ -987,8 +977,8 @@ class User < ActiveRecord::Base
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
         ]
       ).first
-    elsif hashed_email = conditions.delete(:hashed_email)
-      return nil if hashed_email.utf8mb4?
+    elsif (hashed_email = conditions.delete(:hashed_email))
+      return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
       return find_by_hashed_email(hashed_email)
     else
       nil
