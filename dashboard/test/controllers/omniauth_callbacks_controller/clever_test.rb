@@ -1,14 +1,14 @@
 require 'test_helper'
+require_relative './utils'
 
 module OmniauthCallbacksControllerTests
   #
   # Tests over Clever sign-up and sign-in stories
   #
   class CleverTest < ActionDispatch::IntegrationTest
-    setup do
-      # See https://github.com/omniauth/omniauth/wiki/Integration-Testing
-      OmniAuth.config.test_mode = true
+    include OmniauthCallbacksControllerTests::Utils
 
+    setup do
       # Skip firehose logging for these tests, unless explicitly requested
       FirehoseClient.instance.stubs(:put_record)
 
@@ -124,8 +124,7 @@ module OmniauthCallbacksControllerTests
     DEFAULT_UID = '1111'
 
     def mock_oauth(override_params = {})
-      @auth_hash = generate_auth_hash override_params
-      OmniAuth.config.mock_auth[:clever] = @auth_hash
+      mock_oauth_for AuthenticationOption::CLEVER, generate_auth_hash(override_params)
     end
 
     def generate_auth_hash(override_params = {})
