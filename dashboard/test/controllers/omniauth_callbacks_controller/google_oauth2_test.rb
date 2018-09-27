@@ -22,12 +22,7 @@ module OmniauthCallbacksControllerTests
       # User visits the sign-up page
       get '/users/sign_up'
 
-      # The user clicks "Sign in with Google Account".
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
+      sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_sign_up'
@@ -62,12 +57,7 @@ module OmniauthCallbacksControllerTests
       # User visits the sign-up page
       get '/users/sign_up'
 
-      # The user clicks "Sign in with Google Account".
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
+      sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_sign_up'
@@ -101,12 +91,7 @@ module OmniauthCallbacksControllerTests
       # User visits the sign-up page
       get '/users/sign_up'
 
-      # The user clicks "Sign in with Google Account".
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
+      sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
@@ -142,12 +127,7 @@ module OmniauthCallbacksControllerTests
       # User visits the sign-up page
       get '/users/sign_up'
 
-      # The user clicks "Sign in with Google Account".
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
+      sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
@@ -182,12 +162,7 @@ module OmniauthCallbacksControllerTests
       # User visits the sign-in page
       get '/users/sign_in'
 
-      # The user clicks "Sign in with Google Account".
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn signs the user in.
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
+      sign_in_through_google
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
@@ -209,12 +184,7 @@ module OmniauthCallbacksControllerTests
       # User visits the sign-in page
       get '/users/sign_in'
 
-      # The user clicks "Sign in with Google Account".
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn signs the user in.
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
+      sign_in_through_google
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
       assert_equal teacher.id, signed_in_user_id
@@ -253,6 +223,15 @@ module OmniauthCallbacksControllerTests
           refresh_token: args[:refresh_token] || 'fake-refresh-token'
         }
       )
+    end
+
+    # The user signs in through Google
+    # The oauth endpoint (which is mocked) redirects to the oauth callback,
+    # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
+    def sign_in_through_google
+      get '/users/auth/google_oauth2'
+      assert_redirected_to '/users/auth/google_oauth2/callback'
+      follow_redirect!
     end
 
     def finish_sign_up_params(override_params)

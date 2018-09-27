@@ -19,14 +19,7 @@ module OmniauthCallbacksControllerTests
     test "student sign-up" do
       mock_oauth user_type: User::TYPE_STUDENT
 
-      # The user signs in through their Clever portal
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/clever'
-      assert_redirected_to '/users/auth/clever/callback'
-      assert_creates User do
-        follow_redirect!
-      end
+      assert_creates(User) {sign_in_through_clever}
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
@@ -50,14 +43,7 @@ module OmniauthCallbacksControllerTests
     test "teacher sign-up" do
       mock_oauth user_type: User::TYPE_TEACHER
 
-      # The user signs in through their Clever portal
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/clever'
-      assert_redirected_to '/users/auth/clever/callback'
-      assert_creates User do
-        follow_redirect!
-      end
+      assert_creates(User) {sign_in_through_clever}
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
@@ -79,12 +65,7 @@ module OmniauthCallbacksControllerTests
       mock_oauth user_type: User::TYPE_STUDENT
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
-      # The user signs in through their Clever portal
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/clever'
-      assert_redirected_to '/users/auth/clever/callback'
-      follow_redirect!
+      sign_in_through_clever
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
@@ -117,12 +98,7 @@ module OmniauthCallbacksControllerTests
       mock_oauth user_type: User::TYPE_TEACHER
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
-      # The user signs in through their Clever portal
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn redirects to the finish-sign-up experience.
-      get '/users/auth/clever'
-      assert_redirected_to '/users/auth/clever/callback'
-      follow_redirect!
+      sign_in_through_clever
       assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_finish_sign_up'
@@ -153,12 +129,7 @@ module OmniauthCallbacksControllerTests
 
       student = create(:student, :unmigrated_clever_sso, uid: @auth_hash.uid)
 
-      # The user signs in through their Clever portal
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn signs the user in.
-      get '/users/auth/clever'
-      assert_redirected_to '/users/auth/clever/callback'
-      follow_redirect!
+      sign_in_through_clever
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
@@ -176,12 +147,7 @@ module OmniauthCallbacksControllerTests
 
       teacher = create(:teacher, :unmigrated_clever_sso, uid: @auth_hash.uid)
 
-      # The user signs in through their Clever portal
-      # The oauth endpoint (which is mocked) redirects to the oauth callback,
-      # which in turn signs the user in.
-      get '/users/auth/clever'
-      assert_redirected_to '/users/auth/clever/callback'
-      follow_redirect!
+      sign_in_through_clever
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
       assert_equal teacher.id, signed_in_user_id
@@ -218,6 +184,15 @@ module OmniauthCallbacksControllerTests
           expires_at: override_params[:expires_at] || 'fake-token-expiration'
         }
       )
+    end
+
+    # The user signs in through their Clever portal
+    # The oauth endpoint (which is mocked) redirects to the oauth callback,
+    # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
+    def sign_in_through_clever
+      get '/users/auth/clever'
+      assert_redirected_to '/users/auth/clever/callback'
+      follow_redirect!
     end
 
     def finish_sign_up_params(override_params)
