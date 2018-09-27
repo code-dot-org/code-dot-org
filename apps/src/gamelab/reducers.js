@@ -70,7 +70,7 @@ function mobileControlsConfig(state, action) {
 }
 
 function selectedSong(state, action) {
-  state = state || "";
+  state = state || "macklemore90";
   switch (action.type) {
     case SET_SONG:
       return action.value;
