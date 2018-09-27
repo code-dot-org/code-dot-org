@@ -961,7 +961,7 @@ function hideTitleScreen() {
 }
 
 function shouldUpdate() {
-  return World.frameCount > 1;
+  return World.frameCount > 2;
 }
 
 function spriteExists(sprite) {
