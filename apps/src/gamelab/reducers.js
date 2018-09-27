@@ -69,7 +69,7 @@ function mobileControlsConfig(state, action) {
   }
 }
 
-function songSelector(state, action) {
+function selectedSong(state, action) {
   state = state || "";
   switch (action.type) {
     case SET_SONG:
@@ -89,7 +89,7 @@ module.exports = {
   animationJsonViewer,
   gridOverlay,
   locationPicker,
-  songSelector,
+  selectedSong,
   defaultMobileControlsConfigState,
   mobileControlsConfig,
 };
