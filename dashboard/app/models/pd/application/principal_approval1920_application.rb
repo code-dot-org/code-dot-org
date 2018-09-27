@@ -69,7 +69,7 @@ module Pd::Application
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
-        going_to_teach: [
+        plan_to_teach: [
           'Yes, they are planning to teach this course this year (2019-20)',
           'I hope they will be able teach this course this year (2019-20)',
           'No, they are not planning to teach this course this year (2019-20), but they hope to teach this course the following year (2020-21)',
@@ -171,7 +171,7 @@ module Pd::Application
               :pacific_islander,
               :american_indian,
               :other,
-              :going_to_teach,
+              :plan_to_teach,
               :committed_to_master_schedule,
               :replace_course,
               :committed_to_diversity,
@@ -208,7 +208,7 @@ module Pd::Application
         [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve],
-        [:going_to_teach],
+        [:plan_to_teach],
         [:how_heard]
       ]
     end

@@ -12,7 +12,7 @@ import {styles} from '../teacher1920/TeacherApplicationConstants';
 const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
   'schoolState', 'schoolZipCode', 'schoolType'];
 const RACE_LIST = ['white', 'black', 'hispanic', 'asian', 'pacificIslander', 'americanIndian', 'other'];
-const REQUIRED_SCHOOL_INFO_FIELDS = ['goingToTeach', 'school', 'totalStudentEnrollment',
+const REQUIRED_SCHOOL_INFO_FIELDS = ['planToTeach', 'school', 'totalStudentEnrollment',
   'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'replaceCourse', 'committedToDiversity',
   'understandFee', 'payFee', 'howHeard'
 ];
@@ -30,7 +30,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     ...REPLACE_COURSE_FIELDS,
     ...IMPLEMENTATION_FIELDS,
     'doYouApprove',
-    'goingToTeach',
+    'planToTeach',
     'committedToMasterSchedule',
     'committedToDiversity',
     'howHeard'
@@ -82,12 +82,12 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderSchoolInfoSection() {
-    const goingToTeachOther = 'I don’t know if they will teach this course (Please Explain):';
+    const planToTeachOther = 'I don’t know if they will teach this course (Please Explain):';
     return (
       <div>
         {
-          this.radioButtonsWithAdditionalTextFieldsFor('goingToTeach', {
-            [goingToTeachOther] : "other"
+          this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
+            [planToTeachOther] : "other"
           }, {
             label: `Is ${this.props.teacherApplication.name} planning to teach this course in
                     the ${YEAR} school year?`,
