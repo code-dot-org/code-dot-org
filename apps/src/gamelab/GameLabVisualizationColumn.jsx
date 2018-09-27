@@ -19,7 +19,7 @@ import {
   updateLocation,
   isPickingLocation
 } from './locationPickerModule';
-import {setSong} from './DanceLab/songSelectorModule';
+import {setSong} from './songSelectorModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
 import experiments from "@cdo/apps/util/experiments";
