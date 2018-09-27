@@ -18,7 +18,7 @@ FactoryGirl.define do
     trait :local_summer_workshop_upcoming do
       local_summer_workshop
       num_sessions 5
-      sessions_from Date.today + 3.months
+      sessions_from {Date.today + 3.months}
     end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
@@ -100,6 +100,7 @@ FactoryGirl.define do
 
   factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
     # Link to partner-specific site.
+    contact_name "Illinois Contact"
     link_to_partner_application "https://code.org/specific-link"
     mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
   end
@@ -114,7 +115,7 @@ FactoryGirl.define do
   end
 
   factory :regional_partner_newjersey, parent: :regional_partner_with_summer_workshops do
-    # No contact details, and no workshops submitted.
+    # No contact details, and no workshop application dates.
     contact_name nil
     contact_email nil
     apps_open_date_csp_teacher nil
@@ -125,7 +126,26 @@ FactoryGirl.define do
     pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
   end
 
+  factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
+    # Opening at a specific date in the future.
+    apps_open_date_csp_teacher {Date.today + 5.days}
+    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_close_date_csp_teacher {Date.today + 14.days}
+    apps_close_date_csd_teacher {Date.today + 15.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
+  end
+
+  factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
+    # CSD dates but no CSP dates.
+    apps_open_date_csp_teacher nil
+    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_close_date_csp_teacher nil
+    apps_close_date_csd_teacher {Date.today + 15.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
+  end
+
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
+    contact_name "Beverly Hills Contact"
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
 
@@ -895,7 +915,7 @@ FactoryGirl.define do
     end
 
     trait :with_approval_fields do
-      going_to_teach 'Yes'
+      plan_to_teach 'Yes'
       school 'Hogwarts Academy of Witchcraft and Wizardry'
       total_student_enrollment 200
       free_lunch_percent '50%'
@@ -908,7 +928,7 @@ FactoryGirl.define do
       other '10%'
       committed_to_master_schedule 'Yes'
       cspImplementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
-      replace_course Pd::Application::PrincipalApproval1920Application::REPLACE_COURSE_NO
+      replace_course "No, I plan to add this course to the 2019-20 master schedule, but it won't replace an existing computer science course"
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]

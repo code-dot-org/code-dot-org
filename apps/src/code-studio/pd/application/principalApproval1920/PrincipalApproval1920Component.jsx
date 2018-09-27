@@ -12,7 +12,7 @@ import {styles} from '../teacher1920/TeacherApplicationConstants';
 const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
   'schoolState', 'schoolZipCode', 'schoolType'];
 const RACE_LIST = ['white', 'black', 'hispanic', 'asian', 'pacificIslander', 'americanIndian', 'other'];
-const REQUIRED_SCHOOL_INFO_FIELDS = ['goingToTeach', 'school', 'totalStudentEnrollment',
+const REQUIRED_SCHOOL_INFO_FIELDS = ['planToTeach', 'school', 'totalStudentEnrollment',
   'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'replaceCourse', 'committedToDiversity',
   'understandFee', 'payFee', 'howHeard'
 ];
@@ -30,7 +30,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     ...REPLACE_COURSE_FIELDS,
     ...IMPLEMENTATION_FIELDS,
     'doYouApprove',
-    'goingToTeach',
+    'planToTeach',
     'committedToMasterSchedule',
     'committedToDiversity',
     'howHeard'
@@ -82,13 +82,14 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderSchoolInfoSection() {
+    const planToTeachOther = 'I don’t know if they will teach this course (Please Explain):';
     return (
       <div>
         {
-          this.radioButtonsWithAdditionalTextFieldsFor('goingToTeach', {
-            [TextFields.otherWithText]: "other"
+          this.radioButtonsWithAdditionalTextFieldsFor('planToTeach', {
+            [planToTeachOther] : "other"
           }, {
-            label: `Is ${this.props.teacherApplication.name} going to teach this course in
+            label: `Is ${this.props.teacherApplication.name} planning to teach this course in
                     the ${YEAR} school year?`,
           })
         }
@@ -144,15 +145,15 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         }
         <p style={styles.questionText}>
           There may be a fee associated with your teacher’s professional learning program.
-          Please <a href="https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo" target="_blank">
-          check here</a> to see if there are fees for your teacher’s professional learning program and/or if there are scholarships available in your region.
-
+          Please <a href="https://code.org/educate/professional-learning/program-information" target="_blank">
+          check here</a> to see if there are fees for your teacher’s professional learning
+          program and/or if there are scholarships available in your region.
         </p>
         <div>
           {this.singleCheckboxFor('understandFee')}
           {this.radioButtonsFor('payFee')}
         </div>
-        {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
+        {this.checkBoxesWithAdditionalTextFieldsFor('howHeard', {
           [TextFields.otherWithText] : "other"
         }, {
           label:
@@ -174,6 +175,8 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
               tied to individual students, will not be used to evaluate teachers, and will greatly
               help Code.org evaluate its program effectiveness.`
             })}
+            <br/>
+            <br/>
           </div>
         }
         <p>
@@ -208,38 +211,38 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   }
 
   renderImplementationSection() {
-    const question_label = (<span>To participate in Code.org’s {this.props.teacherApplication.course} Professional
+    const questionLabel = (<span>To participate in Code.org’s {this.props.teacherApplication.course} Professional
                   Learning Program, we require that this course be offered in one of the following
                   ways. Please select which option will be implemented at your school. Be sure
                   to <a href="https://docs.google.com/document/d/1nFp033SuO_BMR-Bkinrlp0Ti_s-XYQDsOc-UjqNdrGw/edit#heading=h.6s62vrpws18" target="_blank">
                   review the guidance on required number of hours here</a> prior to answering.</span>);
-    const other_label = "We will use a different implementation schedule. (Please Explain):";
+    const otherLabel = "We will use a different implementation schedule. (Please Explain):";
 
     if (this.props.teacherApplication.course === 'Computer Science Discoveries') {
       return this.radioButtonsWithAdditionalTextFieldsFor('csdImplementation', {
-          [other_label] : 'other'
+          [otherLabel] : 'other'
         },
-        {label: question_label}
+        {label: questionLabel}
       );
     } else if (this.props.teacherApplication.course === 'Computer Science Principles') {
       return this.radioButtonsWithAdditionalTextFieldsFor('cspImplementation', {
-          [other_label] : 'other'
+          [otherLabel] : 'other'
         },
-        {label: question_label}
+        {label: questionLabel}
       );
     }
   }
 
   render() {
+    const courseSuffix = this.props.teacherApplication.course === 'Computer Science Discoveries' ? 'csd' : 'csp';
     return (
       <FormGroup>
         <p>
-          Thank you for your support of computer science education! A teacher at your
-          school, {this.props.teacherApplication.name}, has applied to be a part of
-          Code.org’s Professional Learning Program to teach the {' '}
-          {this.props.teacherApplication.course} curriculum during the {YEAR} school
-          year. Your approval is required for the teacher’s application
-          to be considered.
+          A teacher at your school, {this.props.teacherApplication.name}, has applied to be a part
+          of <a href="https://code.org/educate/professional-learning-2019" target="_blank">Code.org’s Professional Learning Program</a>
+          {' '} in order to teach the <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">{this.props.teacherApplication.course} curriculum</a>
+          {' '} during the 2018-19 school year. Your approval is required for the
+          teacher’s application to be considered.
         </p>
         {
           this.selectFor('title', {
