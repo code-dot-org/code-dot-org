@@ -1,6 +1,9 @@
 # Rack middleware for rewriting explicitly-insecure references in an HTML document to prevent serving mixed-content pages via HTTPS.
 # Aims to be a server-side polyfill-approximation of the "Upgrade Insecure Requests" spec:
 # http://www.w3.org/TR/upgrade-insecure-requests
+#
+# Can be removed once our supported-browser matrix broadly supports Upgrade Insecure Requests:
+# https://caniuse.com/#feat=upgradeinsecurerequests
 
 require 'cdo/rack/process_html'
 require 'dynamic_config/dcdo'
@@ -11,22 +14,23 @@ module Rack
     # Most of the time, switching scheme from http to https will work, but we can add any exceptions to this list.
     # Only the first match is rewritten
     HTTPS_DOMAINS = {
-      /\Ahttp:\/\/.+\.jotformpro\.com/ => '//secure.jotformpro.com',
-      /\Ahttp:\/\// => '//'
+      /http:\/\/.+\.jotformpro\.com/ => '//secure.jotformpro.com',
+      /http:\/\// => '//'
     }.freeze
+
+    MATCH_REGEX = Regexp.union(HTTPS_DOMAINS.keys).freeze
 
     def initialize(app)
       super(
           app,
-          xpath: %w(img script embed iframe).map {|x| "//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
-      ) do |nodes, env|
+          xpath: %w(img script embed iframe).map {|x| "//#{x}[@src[starts-with(.,'http://')]]"}.join(' | '),
+          skip_if: ->(*, content) {!content.match?(MATCH_REGEX)}
+      ) do |nodes, _env|
         nodes.each do |node|
           # Output the urls we're rewriting so we can update them to https
           # in our codebase.
-          if ssl?(env)
-            puts "REWRITING: #{node}"
-            process(node)
-          end
+          puts "REWRITING: #{node}"
+          process(node)
         end
       end
     end
@@ -82,17 +86,13 @@ module Rack
       Request.new(env).ssl?
     end
 
-    def not_ssl?(env, *_)
-      !ssl?(env)
-    end
-
     def process(node)
       node['src'] = process_url(node['src']) if node['src']
     end
 
     def process_url(src)
       HTTPS_DOMAINS.each do |http, https|
-        matched = src.sub!(http, https)
+        matched = src.sub!(/\A#{http}/, https)
         return src if matched
       end
       src

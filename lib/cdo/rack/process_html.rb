@@ -32,13 +32,17 @@ module Rack
       status, headers, body = @app.call(env)
       headers = Utils::HeaderHash.new(headers)
 
-      unless should_process?(env, status, headers, body)
+      unless should_process?(env, status, headers)
         return [status, headers, body]
       end
 
       content = ''
       body.each {|x| content << x}
       body.close if body.respond_to? :close
+      unless should_parse?(env, status, headers, content)
+        return [status, headers, [content]]
+      end
+
       doc = ::Nokogiri::HTML(content)
       process_doc(doc, env)
       content = doc.to_html
@@ -57,7 +61,7 @@ module Rack
       @block.call(nodes, env) unless nodes.empty?
     end
 
-    def should_process?(env, status, headers, body)
+    def should_process?(env, status, headers)
       # Skip processing empty entity body responses and responses with
       # no-transform set.
       if Utils::STATUS_WITH_NO_ENTITY_BODY.include?(status) ||
@@ -89,9 +93,13 @@ module Rack
         return false
       end
 
+      true
+    end
+
+    def should_parse?(env, status, headers, content)
       # Skip if :skip_if lambda is provided and evaluates to true
       if @skip_if &&
-          @skip_if.call(env, status, headers, body)
+        @skip_if.call(env, status, headers, content)
         return false
       end
 
