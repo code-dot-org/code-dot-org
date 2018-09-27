@@ -1677,8 +1677,7 @@ a.download-video {
         color: $black;
       }
       .field_with_errors > input,
-      .field_with_errors > select,
-      .required > select {
+      .field_with_errors > select {
         background-color: $white;
         border: 1px solid $red;
       }
