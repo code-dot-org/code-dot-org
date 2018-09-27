@@ -98,14 +98,14 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   def summer_workshops_earliest_apps_open_date
-    if apps_open_date_csd_teacher && apps_open_date_csp_teacher
-      Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].min).strftime('%B %e, %Y')
+    if apps_open_date_csd_teacher || apps_open_date_csp_teacher
+      Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].compact.min).strftime('%B %e, %Y')
     end
   end
 
   def summer_workshops_latest_apps_close_date
-    if apps_close_date_csd_teacher && apps_close_date_csp_teacher
-      Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].max).strftime('%B %e, %Y')
+    if apps_close_date_csd_teacher || apps_close_date_csp_teacher
+      Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].compact.max).strftime('%B %e, %Y')
     end
   end
 

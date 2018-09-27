@@ -5,17 +5,24 @@ import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import $ from 'jquery';
 
 const styles = {
-  heading: {
-    marginBottom: 5
-  },
   form: {
     marginTop: 20
   },
   schoolZipLabel: {
-    width: 150,
+    marginRight: 40
+  },
+  zipInput: {
+    height: 28
   },
   zipSubmit: {
-    marginTop: 20
+    marginTop: 20,
+    display: "inline-block",
+    marginLeft: 10
+  },
+  spinner: {
+    fontSize: 32,
+    marginTop: 20,
+    marginLeft: 48
   },
   noPartner: {
     marginTop: 20
@@ -34,15 +41,16 @@ class RegionalPartnerSearch extends Component {
     partnerInfo: undefined,
     stateValue: "",
     zipValue: "",
-    noPartner: false
+    noPartner: false,
+    loading: false
   };
 
   workshopSuccess = (response) => {
-    this.setState({partnerInfo: response });
+    this.setState({partnerInfo: response, loading: false});
   };
 
   workshopZipFail = (response) => {
-    this.setState({noPartner: true});
+    this.setState({noPartner: true, loading: false});
   };
 
   handleZipChange = (event) => {
@@ -50,7 +58,7 @@ class RegionalPartnerSearch extends Component {
   };
 
   handleZipSubmit = (event) => {
-    this.setState({partnerInfo: undefined, noPartner: false});
+    this.setState({partnerInfo: undefined, noPartner: false, loading: true});
 
     $.ajax({
       url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
@@ -89,12 +97,11 @@ class RegionalPartnerSearch extends Component {
 
     return (
       <div>
-        <h2 style={styles.heading}>Ready to apply?</h2>
         <div>Our Regional Partners offer local workshops throughout the United States. Enter your location to find a workshop near you.</div>
 
         <form onSubmit={this.handleZipSubmit} style={styles.form}>
           <label style={styles.schoolZipLabel}>School Zip Code:</label>
-          <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} />
+          <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
           <div style={styles.zipSubmit}>
             <input type="submit" value="Submit" />
           </div>
@@ -104,14 +111,19 @@ class RegionalPartnerSearch extends Component {
           <h3>Code.org Regional Partner for your region:</h3>
         )}
 
+        {this.state.loading && (
+          <i className="fa fa-spinner fa-spin" style={styles.spinner}/>
+        )}
+
         {this.state.noPartner && (
           <div style={styles.noPartner}>
             <p>We do not yet have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
             <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something your school can cover.</p>
             <p>
               All of our curriculum, tools, and courses are also available for your school at no cost.
+              Or,
               {' '}
-              <a href="https://code.org/educate/curriculum/3rd-party">Or, contact one of these computer science providers</a>
+              <a href="https://code.org/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
             <p>Applications open January 15, 2019.</p>
@@ -180,18 +192,19 @@ class RegionalPartnerSearch extends Component {
             )}
 
             {appState === WorkshopApplicationStates.opening_at && (
-              <div>Applications will open on {appsOpenDate}.</div>
+              <h3>Applications will open on {appsOpenDate}.</h3>
             )}
 
             {appState === WorkshopApplicationStates.opening_sometime && (
-              <div>
-                <h3>Program information and the application for this region will be available soon!</h3>
-                <a href="https://studio.code.org/pd/regional_partner_contact/new">
-                  <button>
-                    Tell me when applications open
-                  </button>
-                </a>
-              </div>
+              <h3>Program information and the application for this region will be available soon!</h3>
+            )}
+
+            {appState !== WorkshopApplicationStates.currently_open && (
+              <a href="https://studio.code.org/pd/regional_partner_contact/new">
+                <button>
+                  Tell me when applications open
+                </button>
+              </a>
             )}
           </div>
         )}
