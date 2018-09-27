@@ -1,13 +1,13 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: Completando una hora de código con tecnología asistida
 ---
-# Completing an Hour of Code with Assistive Technology
+# Completando una hora de código con tecnología asistida
 
-Anyone can try an Hour of Code during Computer Science Education Week.
+Cualquiera puede probar una Hora de Programación durante la Semana de Educación de Informática.
 
-## Using Screen Readers
+## Usando lectores de pantalla
 
-If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Si utilizas un lector de pantalla, el tutorial de quórum de [para principiantes](https://quorumlanguage.com/hourofcode/astro1.html) o el tutorial de quórum [para estudiantes cómodo](https://quorumlanguage.com/hourofcode/part1.html) son buenos puntos para empezar a una hora del programación. Quórum comenzó como un lenguaje interpretado, diseñado originalmente para ser accesible a través de lectores de pantalla. It has become a general purpose programming language designed for any user. Y, si quieres ir más allá de una Hora de Código, el equipo de Quórum tiene planes de estudios y herramientas adicionales.
 
 [![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 

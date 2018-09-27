@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # ¿Cómo enseñar una Hora de Código después de la escuela en clases y en clubes?
 
-### Únete al movimiento e introduce a un grupo de estudiantes a su primer hora de ciencias de la computación con los estos pasos. La hora de código es fácil de hacer - incluso para principiantes! Si deseas un par de manos adicionales, puedes encontrar un [voluntario local](%= codeorg_url('/volunteer/local') %) para ayudarte a organizar una Hora de Código en tu clase.
+### Únete al movimiento e introduce a un grupo de estudiantes a su primer hora de ciencias de la computación con estos pasos. La hora de código es fácil de hacer - ¡incluso para principiantes! Si deseas un par de manos adicionales, puedes encontrar a un [voluntario local](%= codeorg_url('/volunteer/local') %) para ayudarte a organizar una Hora de Código en tu clase o club.
 
 * * *
 
@@ -15,17 +15,17 @@ nav: how_to_nav
 
 ## 2. Selecciona un tutorial
 
-Ofrecemos una variedad de [ tutoriales divertidos, de una hora ](%= resolve_url('/learn') %) para todas las edades, creados por una variedad de socios. [¡Revísalos aquí!](%= resolve_url('/learn') %)
+Proveemos una variedad de [ tutoriales divertidos, de una hora ](%= resolve_url('/learn') %) para todas las edades, creados por una variedad de socios. [¡Pruébalos aquí!](%= resolve_url('/learn') %)
 
-**Todos los tutoriales de Hora de Código ** requieren un mínimo de preparación para los organizadores, y son autoguiados, permitiendo que los niños trabajen a su propio ritmo de habilidad.
+**Todos los tutoriales de Hora de Código ** requieren un mínimo de preparación de los organizadores, y son autoguiados, permitiendo que los niños trabajen a su propio ritmo y habilidades.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**¿Necesita un plan de aprendizaje para su hora de código después de la escuela?** ¡Echale un vistazo esta [plantilla](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**¿Necesita un plan de aprendizaje para su hora de código después de la escuela?** ¡Echale un vistazo a esta [plantilla](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promueve tu Hora de Código
 
-Promociona tu Hora del Código [con estas herramientas](%= resolve_url('/promote') %) y anima a otros a organizar sus propios eventos.
+Promociona tu Hora de Código [con estas herramientas](%= resolve_url('/promote') %) y anima a otros a organizar sus propios eventos.
 
 ## 4. Planifica tus necesidades tecnológicas - los ordenadores son opcionales
 
@@ -43,16 +43,16 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 
 **Muestre un video inspirador:**
 
-- El vídeo original del lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh. Están disponibles en [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA).
+- El vídeo original del lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh. Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA).
 - El [vídeo mundial de la Hora del Código](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [El presidente Obama llama a todos los estudiantes a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encuentra más videos inspiradores [aquí](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Está bien si es completamente nuevo en ciencias de la computación. Aquí están algunas ideas para iniciar su hora de código:**
+**Está bien si eres completamente nuevo en ciencias de la computación. Aquí hay algunas ideas para iniciar tu hora de código:**
 
-- Explique diversas formas en que la tecnología impacta nuestras vidas, con ejemplos interesantes para niñas y niños (habla de aplicaciones y tecnología que se usan para salvar vidas, ayudar y conectar personas, etc.).
+- Explica formas diversas en que la tecnología impacta nuestras vidas, con ejemplos interesantes para niñas y niños (habla de aplicaciones y tecnología que se usan para salvar vidas, ayudar y conectar personas, etc.).
 - Haz una lista de las cosas que utilizan programación en la vida cotidiana.
-- - Vea ideas para que las niñas se interesen en la Informática [aquí](%= resolve_url('https://code.org/girls') %).
+- Ve ideas para que las niñas se interesen en la Informática [aquí](%= resolve_url('https://code.org/girls') %).
 
 **¿Necesitas más orientación?** Descarga esta [plantilla de planificación de la lección](/files/EducatorHourofCodeLessonPlanOutline. docx).
 
