@@ -14,6 +14,9 @@ social:
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
+-# Spanish(Mexico), Spanish(Spain), and Portuguese(Brazil)
+-latam_language_codes = ["la", "es", "pt"]
+
 :ruby
   HIGHLIGHTS_CONSTANTS = [
     {:id=>64, :heading_s=>hoc_s(:highlights_constant_trudeau_heading), :short_heading_s=>hoc_s(:highlights_constant_trudeau_short_heading), :image_url_s=>"hoc-trudeau.jpg", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://www.youtube.com/watch?v=8QwT58VTj_g"},
@@ -87,9 +90,9 @@ social:
                 = view :index_video
                 %div{style: "clear: both;"}
               #leftbutton.visible-xs
-                -# If language is Espanol(Mexico), show alternate promo video
-                -# for LATM Hour of Code.
-                - if @language == "la"
+                -# If language Spanish or Brazilian Portuguese, show alternate
+                -# promo video for LATM Hour of Code.
+                - if latam_language_codes.include?(@language)
                   %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
                   %img{src: "/images/play-button.png", width: "60", onclick: "return startLATMVideo();", style: "cursor: pointer;"}
                 - else
@@ -107,13 +110,9 @@ social:
                 = view :hoc_action_buttons, hoc_mode: hoc_mode
 
             #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
-              -# If language is Espanol(Mexico), show alternate promo video
-              -# for LATM Hour of Code.
-              - unless @language == "la"
-                %div.watch-video-small{onclick: "return startVideo();"}
-                  =hoc_s(:front_watch_regular_video)
-                  %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
-              - if @language == "la"
+              -# If language Spanish or Brazilian Portuguese, show alternate
+              -# promo video for LATM Hour of Code.
+              - if latam_language_codes.include?(@language)
                 %div.watch-video-small{onclick: "return startLATAMVideo();"}
                   =hoc_s(:front_watch_regular_video)
                   %img{src: "/images/play-button.png", width: "25", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
