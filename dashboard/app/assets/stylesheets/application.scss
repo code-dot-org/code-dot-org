@@ -1671,6 +1671,10 @@ a.download-video {
     }
     .radio {
       display: flex;
+
+      input[type=radio] {
+        margin-right: 5px;
+      }
     }
     .field-row {
       display: flex;
