@@ -30,6 +30,7 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
       assert_redirected_to '/users/sign_up'
       follow_redirect!
+      assert_template partial: '_sign_up'
 
       # The user fills out the form and clicks "Sign up"
       assert_creates User do
@@ -56,7 +57,41 @@ module OmniauthCallbacksControllerTests
     end
 
     test "teacher sign-up" do
-      skip 'not implemented'
+      mock_oauth
+
+      # User visits the sign-up page
+      get '/users/sign_up'
+
+      # The user clicks "Sign in with Google Account".
+      # The oauth endpoint (which is mocked) redirects to the oauth callback,
+      # which in turn redirects to the finish-sign-up experience.
+      get '/users/auth/google_oauth2'
+      assert_redirected_to '/users/auth/google_oauth2/callback'
+      follow_redirect!
+      assert_redirected_to '/users/sign_up'
+      follow_redirect!
+      assert_template partial: '_sign_up'
+
+      # The user fills out the form and clicks "Sign up"
+      assert_creates User do
+        post '/users', params: finish_sign_up_params(user_type: User::TYPE_TEACHER)
+      end
+      assert_redirected_to '/home'
+      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+
+      # Locate new user, make sure it has all the oauth info we'd expect
+      created_user = User.find_by_credential(
+        type: @auth_hash.provider,
+        id: @auth_hash.uid
+      )
+      assert created_user.valid?
+      assert created_user.teacher?
+      assert_equal @auth_hash.info.email, created_user.email
+      assert_equal @auth_hash.credentials.token, created_user.oauth_token
+      assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
+      assert_equal @auth_hash.credentials.refresh_token, created_user.oauth_refresh_token
+    ensure
+      created_user&.destroy!
     end
 
     test "student sign-up (new sign-up flow)" do
