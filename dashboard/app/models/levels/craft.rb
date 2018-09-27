@@ -63,6 +63,7 @@ class Craft < Blockly
     :use_player,
     :free_play,
     :ocean,
+    :boat,
     :songs
   )
 
