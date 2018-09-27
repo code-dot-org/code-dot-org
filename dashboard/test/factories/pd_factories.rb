@@ -123,7 +123,7 @@ FactoryGirl.define do
     apps_close_date_csp_teacher nil
     apps_close_date_csd_teacher nil
     mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
-    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
+    pd_workshops {[]}
   end
 
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
