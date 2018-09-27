@@ -1,4 +1,4 @@
-- if PartialRegistration.in_progress? session
+- if SignUpTracking.new_sign_up_experience?(session) && PartialRegistration.in_progress?(session)
   = render 'finish_sign_up'
 - else
   = render 'sign_up'
