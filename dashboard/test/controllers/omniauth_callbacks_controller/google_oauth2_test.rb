@@ -32,9 +32,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert created_user.valid?
-      assert created_user.student?
-      assert_equal User.hash_email(@auth_hash.info.email), created_user.hashed_email
+      assert_valid_student @auth_hash.info.email, created_user
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -54,9 +52,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert created_user.valid?
-      assert created_user.teacher?
-      assert_equal @auth_hash.info.email, created_user.email
+      assert_valid_teacher @auth_hash.info.email, created_user
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -79,9 +75,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert created_user.valid?
-      assert created_user.student?
-      assert_equal User.hash_email(@auth_hash.info.email), created_user.hashed_email
+      assert_valid_student @auth_hash.info.email, created_user
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -102,9 +96,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert created_user.valid?
-      assert created_user.teacher?
-      assert_equal @auth_hash.info.email, created_user.email
+      assert_valid_teacher @auth_hash.info.email, created_user
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -217,6 +209,18 @@ module OmniauthCallbacksControllerTests
           }.merge(override_params)
         }
       end
+    end
+
+    def assert_valid_student(expected_email, user)
+      assert user.valid?
+      assert user.student?
+      assert_equal User.hash_email(expected_email), user.hashed_email
+    end
+
+    def assert_valid_teacher(expected_email, user)
+      assert user.valid?
+      assert user.teacher?
+      assert_equal expected_email, user.email
     end
 
     def assert_credentials(from_auth_hash, on_created_user)
