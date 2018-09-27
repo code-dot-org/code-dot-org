@@ -19,9 +19,7 @@ module OmniauthCallbacksControllerTests
     test "student sign-up" do
       mock_oauth
 
-      # User visits the sign-up page
       get '/users/sign_up'
-
       sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
@@ -36,14 +34,12 @@ module OmniauthCallbacksControllerTests
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
-      # Locate new user, make sure it has all the oauth info we'd expect
-      created_user = User.find_by_credential(
-        type: @auth_hash.provider,
-        id: @auth_hash.uid
-      )
+      created_user = User.find signed_in_user_id
       assert created_user.valid?
       assert created_user.student?
       assert_equal User.hash_email(@auth_hash.info.email), created_user.hashed_email
+      assert_equal @auth_hash.provider, created_user.provider
+      assert_equal @auth_hash.uid, created_user.uid
       assert_equal @auth_hash.credentials.token, created_user.oauth_token
       assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
       assert_equal @auth_hash.credentials.refresh_token, created_user.oauth_refresh_token
@@ -54,9 +50,7 @@ module OmniauthCallbacksControllerTests
     test "teacher sign-up" do
       mock_oauth
 
-      # User visits the sign-up page
       get '/users/sign_up'
-
       sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
@@ -69,14 +63,12 @@ module OmniauthCallbacksControllerTests
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
-      # Locate new user, make sure it has all the oauth info we'd expect
-      created_user = User.find_by_credential(
-        type: @auth_hash.provider,
-        id: @auth_hash.uid
-      )
+      created_user = User.find signed_in_user_id
       assert created_user.valid?
       assert created_user.teacher?
       assert_equal @auth_hash.info.email, created_user.email
+      assert_equal @auth_hash.provider, created_user.provider
+      assert_equal @auth_hash.uid, created_user.uid
       assert_equal @auth_hash.credentials.token, created_user.oauth_token
       assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
       assert_equal @auth_hash.credentials.refresh_token, created_user.oauth_refresh_token
@@ -88,9 +80,7 @@ module OmniauthCallbacksControllerTests
       mock_oauth
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
-      # User visits the sign-up page
       get '/users/sign_up'
-
       sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
@@ -105,14 +95,12 @@ module OmniauthCallbacksControllerTests
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
-      # Locate new user, make sure it has all the oauth info we'd expect
-      created_user = User.find_by_credential(
-        type: @auth_hash.provider,
-        id: @auth_hash.uid
-      )
+      created_user = User.find signed_in_user_id
       assert created_user.valid?
       assert created_user.student?
       assert_equal User.hash_email(@auth_hash.info.email), created_user.hashed_email
+      assert_equal @auth_hash.provider, created_user.provider
+      assert_equal @auth_hash.uid, created_user.uid
       assert_equal @auth_hash.credentials.token, created_user.oauth_token
       assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
       assert_equal @auth_hash.credentials.refresh_token, created_user.oauth_refresh_token
@@ -124,9 +112,7 @@ module OmniauthCallbacksControllerTests
       mock_oauth
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
-      # User visits the sign-up page
       get '/users/sign_up'
-
       sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
@@ -139,14 +125,12 @@ module OmniauthCallbacksControllerTests
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
-      # Locate new user, make sure it has all the oauth info we'd expect
-      created_user = User.find_by_credential(
-        type: @auth_hash.provider,
-        id: @auth_hash.uid
-      )
+      created_user = User.find signed_in_user_id
       assert created_user.valid?
       assert created_user.teacher?
       assert_equal @auth_hash.info.email, created_user.email
+      assert_equal @auth_hash.provider, created_user.provider
+      assert_equal @auth_hash.uid, created_user.uid
       assert_equal @auth_hash.credentials.token, created_user.oauth_token
       assert_equal @auth_hash.credentials.expires_at, created_user.oauth_token_expiration
       assert_equal @auth_hash.credentials.refresh_token, created_user.oauth_refresh_token
@@ -159,17 +143,14 @@ module OmniauthCallbacksControllerTests
 
       student = create(:student, :unmigrated_google_sso, uid: @auth_hash.uid)
 
-      # User visits the sign-in page
       get '/users/sign_in'
-
       sign_in_through_google
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
-      assert_equal student.id, signed_in_user_id
 
-      # Make sure user has all the oauth info we'd expect
+      assert_equal student.id, signed_in_user_id
       student.reload
       assert_equal @auth_hash.credentials.token, student.oauth_token
       assert_equal @auth_hash.credentials.expires_at, student.oauth_token_expiration
@@ -181,15 +162,12 @@ module OmniauthCallbacksControllerTests
 
       teacher = create(:teacher, :unmigrated_google_sso, uid: @auth_hash.uid)
 
-      # User visits the sign-in page
       get '/users/sign_in'
-
       sign_in_through_google
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
-      assert_equal teacher.id, signed_in_user_id
 
-      # Make sure user has all the oauth info we'd expect
+      assert_equal teacher.id, signed_in_user_id
       teacher.reload
       assert_equal @auth_hash.credentials.token, teacher.oauth_token
       assert_equal @auth_hash.credentials.expires_at, teacher.oauth_token_expiration
