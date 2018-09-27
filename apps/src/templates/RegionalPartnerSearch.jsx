@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import {WorkshopApplicationStates} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import $ from 'jquery';
 
 const styles = {
@@ -91,7 +92,7 @@ class RegionalPartnerSearch extends Component {
       applicationLink = partnerInfo.link_to_partner_application;
       applicationLinkTarget = "_blank";
     } else {
-      applicationLink = "https://studio.code.org/pd/application/teacher";
+      applicationLink = studio("/pd/application/teacher");
       applicationLinkTarget = null;
     }
 
@@ -123,7 +124,7 @@ class RegionalPartnerSearch extends Component {
               All of our curriculum, tools, and courses are also available for your school at no cost.
               Or,
               {' '}
-              <a href="https://code.org/educate/curriculum/3rd-party">contact one of these computer science providers</a>
+              <a href="/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
             <p>Applications open January 15, 2019.</p>
@@ -142,7 +143,7 @@ class RegionalPartnerSearch extends Component {
             {!partnerInfo.contact_email && (
               <div>Direct any questions to your Regional Partner by
                 {' '}
-                <a href="https://studio.code.org/pd/regional_partner_contact/new">completing this form</a>
+                <a href={studio("/pd/regional_partner_contact/new")}>completing this form</a>
                 .
               </div>
             )}
@@ -200,7 +201,7 @@ class RegionalPartnerSearch extends Component {
             )}
 
             {appState !== WorkshopApplicationStates.currently_open && (
-              <a href="https://studio.code.org/pd/regional_partner_contact/new">
+              <a href={studio("/pd/regional_partner_contact/new")}>
                 <button>
                   Tell me when applications open
                 </button>
