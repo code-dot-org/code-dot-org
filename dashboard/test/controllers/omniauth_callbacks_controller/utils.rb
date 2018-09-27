@@ -25,6 +25,45 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
     end
 
+    def finish_sign_up(user_type)
+      post '/users', params: finish_sign_up_params(user_type: user_type)
+    end
+
+    def finish_sign_up_params(override_params)
+      user_type = override_params[:user_type] || User::TYPE_STUDENT
+      if user_type == User::TYPE_STUDENT
+        {
+          user: {
+            locale: 'en-US',
+            user_type: user_type,
+            name: @auth_hash.info.name,
+            age: '13',
+            gender: 'f',
+            school_info_attributes: {
+              country: 'US'
+            },
+            terms_of_service_version: 1,
+            email_preference_opt_in: nil,
+          }.merge(override_params)
+        }
+      else
+        {
+          user: {
+            locale: 'en-US',
+            user_type: user_type,
+            name: @auth_hash.info.name,
+            age: '21+',
+            gender: nil,
+            school_info_attributes: {
+              country: 'US'
+            },
+            terms_of_service_version: 1,
+            email_preference_opt_in: 'yes',
+          }.merge(override_params)
+        }
+      end
+    end
+
     def assert_credentials(from_auth_hash, on_created_user)
       assert_equal from_auth_hash.provider, on_created_user.provider
       assert_equal from_auth_hash.uid, on_created_user.uid
