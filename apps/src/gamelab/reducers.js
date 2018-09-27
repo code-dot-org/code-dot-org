@@ -6,13 +6,13 @@ import {
   HIDE_ANIMATION_JSON,
   TOGGLE_GRID_OVERLAY,
   SET_MOBILE_CONTROLS_CONFIG,
+  SET_SONG
 } from './actions';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
 import locationPicker from './locationPickerModule';
-import songSelector from './songSelectorModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
@@ -64,6 +64,16 @@ function mobileControlsConfig(state, action) {
   switch (action.type) {
     case SET_MOBILE_CONTROLS_CONFIG:
       return action.mobileControlsConfig;
+    default:
+      return state;
+  }
+}
+
+function songSelector(state, action) {
+  state = state || "";
+  switch (action.type) {
+    case SET_SONG:
+      return action.value;
     default:
       return state;
   }

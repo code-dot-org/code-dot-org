@@ -11,7 +11,7 @@ import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
-import {toggleGridOverlay} from './actions';
+import {toggleGridOverlay, setSong} from './actions';
 import GridOverlay from './GridOverlay';
 import {
   cancelLocationSelection,
@@ -19,7 +19,6 @@ import {
   updateLocation,
   isPickingLocation
 } from './locationPickerModule';
-import {setSong} from './songSelectorModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
 import experiments from "@cdo/apps/util/experiments";
