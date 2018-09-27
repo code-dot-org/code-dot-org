@@ -206,17 +206,5 @@ module OmniauthCallbacksControllerTests
         }
       end
     end
-
-    def assert_valid_student(expected_email, user)
-      assert user.valid?
-      assert user.student?
-      assert_equal User.hash_email(expected_email), user.hashed_email
-    end
-
-    def assert_valid_teacher(expected_email, user)
-      assert user.valid?
-      assert user.teacher?
-      assert_equal expected_email, user.email
-    end
   end
 end

@@ -197,11 +197,5 @@ module OmniauthCallbacksControllerTests
       assert_empty user.email
       assert_nil user.hashed_email
     end
-
-    def assert_valid_teacher(expected_email, user)
-      assert user.valid?
-      assert user.teacher?
-      assert_equal expected_email, user.email
-    end
   end
 end
