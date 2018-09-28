@@ -586,6 +586,8 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop single local workshop' do
+      Pd::Workshop.any_instance.stubs(:process_location)
+
       workshop = create :pd_workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
       application = create :pd_teacher1920_application, form_data_hash: (
         build :pd_teacher1920_application_hash,
@@ -635,6 +637,8 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop ignores single deleted workshops' do
+      Pd::Workshop.any_instance.stubs(:process_location)
+
       workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, location_address: 'Buffalo, NY', sessions_from: Date.new(2019, 1, 1)
       application = create :pd_teacher1920_application, form_data_hash: (
         build :pd_teacher1920_application_hash,
