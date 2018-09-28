@@ -1,4 +1,3 @@
-var GameLabWorld = require('./GameLabWorld');
 import {createDanceAPI, teardown} from './DanceLabP5';
 
 /**
@@ -7,7 +6,6 @@ import {createDanceAPI, teardown} from './DanceLabP5';
  */
 var GameLabP5 = function () {
   this.p5 = null;
-  this.gameLabWorld = null;
   this.danceAPI = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
@@ -49,7 +47,6 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5.remove();
     this.p5 = null;
     this.p5decrementPreload = null;
-    this.gameLabWorld = null;
   }
 };
 
@@ -71,7 +68,6 @@ GameLabP5.prototype.startExecution = function (dancelab) {
       // within _syncAnimationSizes()
       this.p5._fixedSpriteAnimationFrameSizes = true;
 
-      this.gameLabWorld = new GameLabWorld(p5obj);
       if (dancelab) {
         this.danceAPI = createDanceAPI(this.p5);
       }
@@ -141,7 +137,6 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
   return [
-    { instance: GameLabWorld },
     {
       instance: this.p5.Sprite,
       ensureIdenticalMarshalInstances: true,
@@ -208,9 +203,6 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // Create a 'p5' object in the global namespace:
   propList.p5 = [this.p5, window];
 
-  // Create a 'World' object in the global namespace:
-  propList.World = [this.gameLabWorld, this];
-
   propList.console = [console, window];
 
   if (this.danceAPI) {
@@ -219,14 +211,4 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   }
 
   return propList;
-};
-
-/**
- * Reset just the world object without reloading the rest of p5
- */
-GameLabP5.prototype.resetWorld = function () {
-  if (!this.p5) {
-    return;
-  }
-  this.gameLabWorld = new GameLabWorld(this.p5);
 };
