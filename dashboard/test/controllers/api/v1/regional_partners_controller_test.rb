@@ -261,4 +261,9 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     get :find, zip_code: 98104
     assert_response 404
   end
+
+  test 'find no regional partner summer workshops for invalid ZIP code' do
+    get :find, zip_code: "XX"
+    assert_response 404
+  end
 end

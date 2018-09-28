@@ -27,6 +27,7 @@ ________________
 Review the [2019-20 Teacher Application Process Document](https://docs.google.com/document/d/1Bx-o1kRCKZxM_prrQqxQH7mXp9jXY0vT_eufgNpkKYM/edit?usp=sharing) for everything you need to know about the Code.org teacher application process including finalizing your Local Summer Workshop dates, the list of teacher application questions and how they map to the rubrics, using the Code.org teacher applications system, and FAQs.
 
 ### What are the important dates I need to know about?
+- <b> Two weeks </b> before your application open date your set-up forms are due.  [Save this table](https://drive.google.com/file/d/1_wJkryXiRLnH2tTaKMURR7x_LDmXq6zU/view) for a quick way to reference these important dates. 
 - <b>Two months</b> prior to your Local Summer Workshops is the deadline for accepting a minimum cohort of teachers. This is to allow adequate time to go through the process of cancelling a workshop, if absolutely necessary, and reaccommodating teachers into another workshop outside your region.
 - <b>Four weeks</b> prior to your Local Summer Workshop is the deadline for accepting teachers as this is also the deadline for ordering workshop supplies.  
 

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:titulo_como_se_voluntariar).inspect %>
+title: <%= hoc_s(:title_how_to_volunteers).inspect %>
 layout: wide
 nav: how_to_nav
 ---
