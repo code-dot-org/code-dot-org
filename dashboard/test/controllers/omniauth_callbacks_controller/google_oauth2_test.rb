@@ -40,6 +40,7 @@ module OmniauthCallbacksControllerTests
           load-sign-up-page
           google_oauth2-callback
           google_oauth2-sign-up-error
+          load-sign-up-page
           google_oauth2-sign-up-success
         )
       )
@@ -70,6 +71,7 @@ module OmniauthCallbacksControllerTests
           load-sign-up-page
           google_oauth2-callback
           google_oauth2-sign-up-error
+          load-sign-up-page
           google_oauth2-sign-up-success
         )
       )
@@ -102,6 +104,7 @@ module OmniauthCallbacksControllerTests
         %w(
           load-sign-up-page
           google_oauth2-callback
+          load-finish-sign-up-page
           google_oauth2-sign-up-success
         )
       )
@@ -132,6 +135,7 @@ module OmniauthCallbacksControllerTests
         %w(
           load-sign-up-page
           google_oauth2-callback
+          load-finish-sign-up-page
           google_oauth2-sign-up-success
         )
       )
