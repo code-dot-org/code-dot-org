@@ -20,7 +20,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up', "Response: #{response.body}"
+      assert_redirected_to '/users/sign_up'
       follow_redirect!
       assert_template partial: '_sign_up'
 
