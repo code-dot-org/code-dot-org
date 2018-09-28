@@ -21,42 +21,51 @@ select
   from analysis.csf_started_teachers 
 ),
 implementation_365 as
-(select 
-tt.user_id,
-date_part(month, trained_at) month_trained,
-date_part(dayofweek, trained_at) day_of_week_trained,
-date_part(hour, trained_at) hour_trained, 
-min(datediff(day, tt.trained_at, st.started_at)) as days_to_start,
-min(datediff(day, tt.trained_at, ct.completed_at)) as days_to_complete,
-CASE WHEN days_to_start < 0 then 1 else 0 end as started_before_training,
-CASE WHEN days_to_complete < 0 then 1 else 0 end as completed_before_training,
-CASE WHEN days_to_start <= 365  and started_before_training = 0 then 1 else 0 end as started_365,
-CASE WHEN days_to_complete <= 365 and completed_before_training = 0 then 1 else 0 end as completed_365,
-CASE WHEN days_to_start <= 365  then 1 else 0 end as started_365_or_before,
-CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
-from analysis.csf_teachers_trained tt
-left join analysis.csf_started_teachers st on st.user_id = tt.user_id  
-left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id  
-group by 1, 2, 3, 4
+(
+select 
+    tt.user_id,
+    date_part(month, trained_at) month_trained,
+    date_part(dayofweek, trained_at) day_of_week_trained,
+    date_part(hour, trained_at) hour_trained, 
+    min(datediff(day, tt.trained_at, st.started_at)) as days_to_start,
+    min(datediff(day, tt.trained_at, ct.completed_at)) as days_to_complete,
+    CASE WHEN days_to_start < 0 then 1 else 0 end as started_before_training,
+    CASE WHEN days_to_complete < 0 then 1 else 0 end as completed_before_training,
+    CASE WHEN days_to_start <= 365  and started_before_training = 0 then 1 else 0 end as started_365,
+    CASE WHEN days_to_complete <= 365 and completed_before_training = 0 then 1 else 0 end as completed_365,
+    CASE WHEN days_to_start <= 365  then 1 else 0 end as started_365_or_before,
+    CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
+  from analysis.csf_teachers_trained tt
+    left join analysis.csf_started_teachers st on st.user_id = tt.user_id  
+    left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id  
+  group by 1, 2, 3, 4
 ),
 pd_enrollments_with_year as
 ( 
-  select pd_workshop_id, first_name, last_name, email, user_id, school_year
-    from dashboard_production_pii.pd_enrollments pde
+  select 
+    pd_workshop_id, 
+    first_name, 
+    last_name, 
+    email, 
+    user_id, 
+    school_year
+  from dashboard_production_pii.pd_enrollments pde
     join dashboard_production_pii.pd_workshops pw
-    on pde.pd_workshop_id = pw.id
+        on pde.pd_workshop_id = pw.id
     join analysis.training_school_years sy 
-    on pw.started_at between sy.started_at and sy.ended_at
-    and pw.deleted_at is null and pde.deleted_at is null
+        on pw.started_at between sy.started_at and sy.ended_at
+        and pw.deleted_at is null and pde.deleted_at is null
 ),
 pd_facilitators as
-( select pdw.id as workshop_id,
- listagg(u2.name, ', ') as facilitator_names
+( 
+select   
+    pdw.id as workshop_id,
+    listagg(u2.name, ', ') as facilitator_names
   FROM dashboard_production_pii.pd_workshops pdw
-  JOIN dashboard_production_pii.pd_workshops_facilitators pwf
-        ON pwf.pd_workshop_id = pdw.id
-  JOIN dashboard_production_pii.users u2
-        ON  pwf.user_id = u2.id
+    JOIN dashboard_production_pii.pd_workshops_facilitators pwf
+          ON pwf.pd_workshop_id = pdw.id
+    JOIN dashboard_production_pii.users u2
+          ON  pwf.user_id = u2.id
   group by 1
 )
   SELECT distinct 
@@ -136,9 +145,8 @@ pd_facilitators as
 -- attendance
  -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
   LEFT JOIN analysis.csf_workshop_attendance csfa   
-        ON csfa.user_id = d.user_id
-        AND csfa.school_year = sy.school_year
-        AND csfa.not_attended = 0 
+        ON  csfa.user_id = d.user_id
+        AND csfa.not_attended = 0 -- removes workshops where the person did not attend
 --pii tables (regional partner names, person names, emails, locations)
   LEFT JOIN pd_facilitators pwf
       ON pwf.workshop_id = csfa.workshop_id
