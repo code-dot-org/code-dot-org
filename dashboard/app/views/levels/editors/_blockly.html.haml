@@ -70,6 +70,11 @@
   #plusPreloadAssetList
     %i.fa.fa-plus-circle
 
+.field
+  = f.label :default_song, 'Dance Lab Only - Default Song'
+  = f.select :default_song, options_for_select({"Hammer": "hammer", "Macklemore": "macklemore90", "Peas": "peas"})
+
+
 :ruby
   script_data = {
     pageOptions: {
