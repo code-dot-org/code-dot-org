@@ -66,14 +66,14 @@
           %span.error= t('signup_form.accept_terms')
 
     -# If GDPR applies, show an additional checkbox.
-    -# - if request.gdpr? || request.params['force_in_eu']
-    #data_transfer_agreement_accepted.checkbox
-      = f.label :data_transfer_agreement_accepted do
-        = f.check_box :data_transfer_agreement_accepted
-        = t('signup_form.agree_us_website')
-        = t('signup_form.my_data_to_us')
-        - if @user.errors[:data_transfer_agreement_accepted].present?
-          %span.error= t('signup_form.accept_terms')
+    - if request.gdpr? || request.params['force_in_eu']
+      #data_transfer_agreement_accepted.checkbox
+        = f.label :data_transfer_agreement_accepted do
+          = f.check_box :data_transfer_agreement_accepted
+          = t('signup_form.agree_us_website')
+          = t('signup_form.my_data_to_us')
+          - if @user.errors[:data_transfer_agreement_accepted].present?
+            %span.error= t('signup_form.accept_terms')
 
     #email-preference-radio.field{style: "display: none;"}
       %span
