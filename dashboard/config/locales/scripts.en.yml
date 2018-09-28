@@ -7968,6 +7968,12 @@ en:
               name: Relay Programming
             Introduction to Online Puzzles:
               name: Introduction to Online Puzzles
+            Events in Bouncey:
+              name: Events in Bouncey
+            Nested Loops in Bees:
+              name: Nested Loops in Bees
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
         jr-test:
           stages:
             Programming with Behaviors:

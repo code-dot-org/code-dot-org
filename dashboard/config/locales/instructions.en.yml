@@ -455,6 +455,7 @@ en:
         Why doesn't this game do anything?
 
         Can you find any "hidden" bugs?  Some are easier than others.
+      AB_Debug_PlayLab3_instruction: Move the knight to each of the flags. If something goes wrong, look for bugs!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       Alien Defender_2018_instruction: 'Project Idea: Make a defender game in Play Lab!'
@@ -1730,6 +1731,7 @@ en:
       HOC 2018 Level_9b_instruction: 'Use the coral as waypoints to reach the treasure.
 
 '
+      Hannah DataVis Test_instruction: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
       HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
@@ -2017,6 +2019,11 @@ en:
       Mike Test Bee Conditionals 1_instruction: This cloud is blocking my view! Check to see if there's a flower under the cloud, and only get nectar if there's a flower. Be careful, it can change!
       Mike Test Bee Conditionals 2_instruction: Collect all of the nectar. You can only collect nectar from flowers, but you can check any space to see if there is a flower.
       MikeAssessment1_instruction: Now do it right!
+      MikeLab Key Events_instruction: Create a sprite. Make it so that each time you click the sprite, it says something and spins around. It should stop as soon as you stop clicking.
+      MikeLab Text Events_instruction: |-
+        **DEBUGGING!** What happens when you click the sprite?
+
+         Make the sprite say something as long as you are clicking it. Try using the `while clicked` event or the `saying` behavior.
       MikeStar_instruction: Draw this.
       MikeStarHard_instruction: Draw this.
       MikeStarNested_instruction: Draw this.

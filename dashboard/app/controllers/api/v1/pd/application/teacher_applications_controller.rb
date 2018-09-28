@@ -12,17 +12,19 @@ module Api::V1::Pd::Application
     end
 
     def resend_principal_approval
-      PRINCIPAL_APPROVAL_APPLICATION_CLASS.create_placeholder_and_send_mail(
-        TEACHER_APPLICATION_CLASS.find(params[:id])
-      )
+      application = TEACHER_APPLICATION_CLASS.find(params[:id])
+      application.queue_email :principal_approval, deliver_now: true
     end
 
     protected
 
     def on_successful_create
       @application.update_user_school_info!
+      @application.queue_email :confirmation, deliver_now: true
 
-      TEACHER_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
+      unless @application.regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+        @application.queue_email :principal_approval, deliver_now: true
+      end
     end
   end
 end

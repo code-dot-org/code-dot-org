@@ -2,9 +2,7 @@ function isAnim(sprite, costume) {
   if (!sprite) {
     return undefined;
   }
-  if (costume=="costume") {
-   	return sprite.getAnimationLabel();
-  } else {
-  	return sprite[property];
+  else {
+   	return sprite.getAnimationLabel() == costume;
   }
 }
