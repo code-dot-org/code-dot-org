@@ -529,18 +529,9 @@ Dance.prototype.onP5ExecutionStarting = function () {
  * - start its execution
  * - (optional) execute global code
  * - call the user's preload function
- *
- * @return {Boolean} FALSE so that P5 will internally increment a preload count;
- *         calling notifyPreloadPhaseComplete is then necessary to continue
- *         loading the game.
  */
 Dance.prototype.onP5Preload = function () {
-  Promise.all([
-      this.runPreloadEventHandler_()
-  ]).then(() => {
-    this.gameLabP5.notifyPreloadPhaseComplete();
-  });
-  return false;
+  this.runPreloadEventHandler_();
 };
 
 Dance.prototype.loadValidationCodeIfNeeded_ = function () {
