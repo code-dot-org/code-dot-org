@@ -67,6 +67,7 @@
 
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
+      = f.hidden_field :data_transfer_agreement_required, value: "1"
       #data_transfer_agreement_accepted.checkbox
         = f.label :data_transfer_agreement_accepted do
           = f.check_box :data_transfer_agreement_accepted
