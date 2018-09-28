@@ -31,6 +31,7 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         'v2-control',
         %w(
+          clever-callback
           clever-sign-up-success
           clever-sign-in
         )
@@ -53,6 +54,7 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         'v2-control',
         %w(
+          clever-callback
           clever-sign-up-success
           clever-sign-in
         )
@@ -83,6 +85,7 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         'v2-finish-sign-up',
         %w(
+          clever-callback
           clever-sign-up-success
         )
       )
@@ -110,6 +113,7 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         'v2-finish-sign-up',
         %w(
+          clever-callback
           clever-sign-up-success
         )
       )
