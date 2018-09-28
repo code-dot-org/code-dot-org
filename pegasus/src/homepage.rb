@@ -108,7 +108,8 @@ class Homepage
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese(Brazil) to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR"]
-    if latam_language_codes.include?(I18n.locale)
+    show_latam_videos = DCDO.get("show_latam_videos", nil)
+    if latam_language_codes.include?(I18n.locale) && show_latam_videos
       youtube_id = ""
       download_path = ""
       facebook = ""
