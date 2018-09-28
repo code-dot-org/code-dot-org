@@ -73,9 +73,9 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [col-33]
 
-[<center><img src="/images/csp/csp_syllabus.png" width="90%">](/files/CSPSyllabusMay2017.pdf)
+[<center><img src="/images/csp/csp_syllabus.png" width="90%">](/files/CSPSyllabusMay2018.pdf)
 
-<div style="margin-left: 15px; margin-top: 5px;">Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabusMay2017.pdf">2017 AP Endorsed Syllabus</a> for the AP course audit.</div>
+<div style="margin-left: 15px; margin-top: 5px;">Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabusMay2018.pdf">2018-19 AP Endorsed Syllabus</a> for the AP course audit.</div>
 
 [/col-33]
 
@@ -101,7 +101,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 ### Don't miss these additional resources:
 
 - [**Course Materials List**](#materials)
-- <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**,/a
+- <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**
 - [**Code.org Video Library**](/educate/resources/videos)
 
 
@@ -115,7 +115,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp2'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Digital Information', description: 'Using a variety of tools, students look at, generate, clean, and manipulate data to explore the relationship between information and data. Students also create and use visualizations to identify patterns and trends.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp2'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Digital Information', description: 'Students learn how complex information like text and images is stored in a computer and the way compression helps reduce the size of those files.'%>
 
 [/col-50]
 
@@ -157,7 +157,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csppostap'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to use App Lab's database capabilities to make apps that store data in the cloud so that it can be retrieved later.
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csppostap'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to analyze data using spreadsheets and use App Lab's database capabilities to create apps that store data in the cloud.
 <br><br>"%>
 
 [/col-50]

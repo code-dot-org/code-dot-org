@@ -4,7 +4,7 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
-import {StatusColors} from './constants';
+import {StatusColors, ApplicationStatuses} from './constants';
 import _ from 'lodash';
 
 const styles = {
@@ -13,7 +13,6 @@ const styles = {
     paddingRight: '15px'
   },
   tableWrapper: {
-    width: '33.3%',
     paddingBottom: '30px'
   },
   statusCell: StatusColors,
@@ -35,7 +34,8 @@ export class SummaryTable extends React.Component {
     // keys are available statuses: {status: ApplicationDataPropType}
     data: PropTypes.objectOf(ApplicationDataPropType),
     path: PropTypes.string.isRequired,
-    id: PropTypes.string
+    id: PropTypes.string,
+    applicationType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
   static contextTypes = {
@@ -49,7 +49,7 @@ export class SummaryTable extends React.Component {
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
-            {_.upperFirst(status)}
+            {ApplicationStatuses[this.props.applicationType][status] || _.upperFirst(status)}
           </td>
           {this.props.showLocked && <td>{statusData.locked}</td>}
           {this.props.showLocked && <td>{statusData.unlocked}</td>}
@@ -71,7 +71,7 @@ export class SummaryTable extends React.Component {
 
   render() {
     return (
-      <div className="col-xs-4" style={styles.tableWrapper}>
+      <div style={styles.tableWrapper}>
         <Table
           id={this.props.id}
           striped

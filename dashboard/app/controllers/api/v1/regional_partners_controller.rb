@@ -18,8 +18,10 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
   # GET /api/v1/regional_partners/find
   def find
-    zip_code = params[:zip_code]
+    zip_code = nil
     state = nil
+
+    zip_code = params[:zip_code] if RegexpUtils.us_zip_code?(params[:zip_code])
 
     # Try to find the matching partner using the ZIP code.
     partner = RegionalPartner.find_by_region(zip_code, nil)

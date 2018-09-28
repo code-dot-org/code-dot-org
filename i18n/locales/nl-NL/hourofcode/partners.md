@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 'Hour of Code' wordt gedreven door de 'Hour of Code and Computer Science Education Week' adviesraad en beoordelingscommisie.
 
