@@ -250,9 +250,7 @@ nl:
         applab: 'Maak een App'
         gamelab: 'Maak een Game Lab project'
         weblab: 'Maak een Web Lab (beta) project'
-      home: "Home"
       my_dashboard: "Mijn Dashboard"
-      courses: "Cursussen"
       course_catalog: "Cursuscatalogus"
       project_gallery: "Projecten overzicht"
       sections: "Secties"
@@ -284,6 +282,14 @@ nl:
       help_us: "Help ons"
       teach: "Onderwijzen"
       about: "Over"
+    create_button:
+      create: 'Maak'
+      applab: 'App Lab'
+      artist: 'Kunstenaar'
+      gamelab: 'Game Lab'
+      playlab: 'Speel Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Startpagina voor de leerkracht'
       district_dashboard: 'District Ovezicht'

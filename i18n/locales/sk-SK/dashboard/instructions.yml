@@ -473,7 +473,7 @@ sk:
       Kiki_StarWars_Test_5_Example_instruction: Text
       MC Agent Freeplay_instruction: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       MC HOC 2016 Level 10_instruction: Je čas vytvoriť si vlastný Minecraft! Vytváraj postavy a nauč ich robiť čokoľvek. Zabav sa!
-      MC HOC 2016 Level 2-2_instruction: Kuracie mäso je zmrazené. Umiestni bloky 'presunúť' a 'otočiť' do časti 'pri vytvorení', aby sa pohyb spustil.
+      MC HOC 2016 Level 2-2_instruction: Kuracie mäso je zmrazené. Umiestni bloky "Posuň sa" a "Otoč sa" do časti "Pri vytvorení", aby sa pohyb spustil.
       MC HOC 2016 Level 3_instruction: "Skvelé, kurča sa pohlo! Ale potom zastavilo. V hrách kurčatá kráčajú stále. Použi slučku 'nekonečne opakuj', aby si udržal kurčatá v pohybe.\\r\n"
       MC HOC 2016 Level 4_instruction: Teraz sa ale kurčatá hýbu rovnako a vyzerá to čudne. Hry používajú náhodné pohyby, aby vyzerali reálne. Nauč kurčatá 'náhodne otoč'.
       MC HOC 2016 Level 5_instruction: Tieto kravy sú stratené! Priveď ich k tráve pomocou bloku 'urob krok smerom ku' v slučke 'nekonečne opakuj'.
@@ -609,7 +609,7 @@ sk:
       courseD_artist_binary1_instruction: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_binary1_2018_instruction: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_embed_frozen_instruction: Stlačte "Spustiť" pre ukázanie dizajnu snehovej vločky!
-      courseD_artist_embed_frozen2_instruction: Stlačte "Spustiť" pre ukázanie dizajnu snehovej vločky.
+      courseD_artist_embed_frozen2_instruction: Stlač tlačidlo"Spustiť", aby sa ti ukázal dizajn tvojej snehovej vločky.
       courseD_bee_debugging3_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       courseD_debugging_3_instruction: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       courseE_bee_functions1_instruction: Zozbieraj všetok nektár z každého kvetu.
@@ -626,67 +626,67 @@ sk:
       courseF_bee_functions4_instruction: Funkcia "move and get nectar" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár.
       courseF_bee_functions4_2018_instruction: Funkcia "move and get nectar" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár.
       frozen circle function in circle_instruction: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi každým z nich sa otočíme o 18 stupňov.
-      frozen circle function in circle_b_instruction: Teraz si vytvorme **20** prekrývajúcich sa kružníc, medzi každou z nich sa otočíme **o 18 stupňov**.
-      frozen circle function in circle_test_instruction: Teraz si vytvorme **20** prekrývajúcich sa kružníc, medzi každou z nich sa otočíme **o 18 stupňov**.
+      frozen circle function in circle_b_instruction: Teraz vytvor **20** prekrývajúcich sa kružníc, medzi každou z nich sa otoč **o 18 stupňov**.
+      frozen circle function in circle_test_instruction: Teraz vytvor **20** prekrývajúcich sa kružníc, medzi každou z nich sa otoč **o 18 stupňov**.
       frozen circle function with parameter_instruction: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       frozen circle function with parameter_b_instruction: Pomocou novej funkcie vytvor malý kruh veľkosti **5** a väčší kruh veľkosti **10**.
       frozen circle function with parameter_test_instruction: Pomocou novej funkcie vytvor malý kruh veľkosti **5** a väčší kruh veľkosti **10**.
       frozen circle function_instruction: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
-      frozen circle function_b_instruction: Použi novú funkciu "vytvor kružnicu" pre nakreslenie 10 prekrývajúcich se kružníc. Nezabudni medzi kružnicami skočiť dopredu o 25 pixelov (bodov, súradníc)!
-      frozen circle function_test_instruction: Použi novú funkciu "vytvor kružnicu" pre nakreslenie 10 prekrývajúcich se kružníc. Nezabudni medzi kružnicami skočiť dopredu o 25 pixelov (bodov, súradníc)!
+      frozen circle function_b_instruction: Použi novú funkciu "vytvoriť kružnicu" pre nakreslenie 10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu o 25 pixelov!
+      frozen circle function_test_instruction: Použi novú funkciu "vytvoriť kružnicu" pre nakreslenie 10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu o 25 pixelov!
       frozen circle_instruction: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
-      frozen circle_b_instruction: Prídeš na to, čo treba urobiť **"???"** aby si nakreslil kružnicu?
-      frozen circle_test_instruction: Prídeš na to, čo treba urobiť **"???"** aby si nakreslil kružnicu?
+      frozen circle_b_instruction: Prídeš na to, akou hodnotou nahradiť **"???"**, aby si nakreslil kružnicu?
+      frozen circle_test_instruction: Prídeš na to, akou hodnotou nahradiť **"???"**, aby si nakreslil kružnicu?
       frozen cross rotate dense_instruction: 'Zopakujme to 90-krát! Koľkokrát sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
-      frozen cross rotate dense_b_instruction: Poďme si zopakovať riadok ** 90 ** krát!
-      frozen cross rotate dense_test_instruction: Poďme si zopakovať riadok ** 90 ** krát!
+      frozen cross rotate dense_b_instruction: Poď si zopakovať riadok ** 90 ** krát!
+      frozen cross rotate dense_test_instruction: Poď si zopakovať riadok ** 90 ** krát!
       frozen cross rotate_instruction: Teraz to skús zopakovať 10-krát. O koľko stupňov sa musíš otočiť medzi jednotlivými čiarami?
-      frozen cross rotate_b_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
-      frozen cross rotate_test_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
+      frozen cross rotate_b_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš otočiť medzi jednotlivými čiarami?
+      frozen cross rotate_test_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš otočiť medzi jednotlivými čiarami?
       frozen cross_instruction: Vytvor znamienko plus pomocou bloku "Opakuj". Všimol si si, že Elsa sa môže pohybovať dopredu i dozadu?
       frozen cross_b_instruction: Nakresli čiaru, ktorá je dlhá ** 100 ** pixelov, potom sa vráť do stredu kým sa otočíš o ** 90 stupňov **. Zopakuj ** 4 ** krát.
       frozen cross_test_instruction: Nakresli čiaru, ktorá je dlhá ** 100 ** pixelov, potom sa vráť do stredu kým sa otočíš o ** 90 stupňov **. Zopakuj ** 4 ** krát.
       frozen diamond mini snowflake_instruction: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
-      frozen diamond mini snowflake_b_instruction: Opakovaním tohto diamantu 4 krát, urob novú vločku.
-      frozen diamond mini snowflake_test_instruction: Opakovaním tohto diamantu 4 krát, urob novú vločku.
-      frozen diamond snowflake_instruction: Teraz vytvorme novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakujeme 10-krát a po každom z nich sa otočíme vpravo o 36 stupňov.
+      frozen diamond mini snowflake_b_instruction: Opakovaním tohto diamantu 4-krát, urob novú vločku.
+      frozen diamond mini snowflake_test_instruction: Opakovaním tohto diamantu 4-krát, urob novú vločku.
+      frozen diamond snowflake_instruction: Teraz vytvor novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36 stupňov.
       frozen diamond snowflake_b_instruction: Tvoja snehová vločka bude úžasná, keď zopakovuješ diamant ** 10 ** krát.
       frozen diamond snowflake_test_instruction: Tvoja snehová vločka bude úžasná, keď zopakovuješ diamant ** 10 ** krát.
-      frozen diamond_instruction: Použite opakovanie okolo týchto blokov pre vytvorenie lichobežníka. Vyzerá ako obdĺžnik, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto 90 stupňov v každom rohu.
+      frozen diamond_instruction: Použi opakovanie okolo týchto blokov pre vytvorenie lichobežníka. Vyzerá ako obdĺžnik, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto 90 stupňov v každom rohu.
       frozen diamond_b_instruction: 'Pridaj jeden blok do tohto kódu aby si vytvoril rovnobežník. '
       frozen diamond_test_instruction: 'Pridaj jeden blok do tohto kódu aby si vytvoril rovnobežník. '
       frozen freeplay_instruction: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
       frozen freeplay_b_instruction: Tu je všetko, čo potrebuješ na vytvorenie vlastnej zimnej krajiny zázrakov!
       frozen freeplay_test_instruction: Tu je všetko, čo potrebuješ na vytvorenie vlastnej zimnej krajiny zázrakov!
-      frozen line_instruction: Ahoj, som Elsa z Arendellu. Pomôž mi nakresliť jednoduchú čiaru.
-      frozen line_b_instruction: Pomôž nakresliť Elsa čiaru, ktorá je 100 pixelov dlhá.
-      frozen line_test_instruction: Pomôž nakresliť Elsa čiaru, ktorá je 100 pixelov dlhá.
-      frozen perpendicular_instruction: Teraz skúsme vytvoriť dve čiary, ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč" spolu s blokom "Posuň".
-      frozen perpendicular_b_instruction: Teraz sprav dve kolmé čiary.
-      frozen perpendicular_test_instruction: Teraz sprav dve kolmé čiary.
+      frozen line_instruction: Ahoj, som Elsa z Arendelle. Pomôž mi nakresliť jednoduchú čiaru.
+      frozen line_b_instruction: Pomôž Else nakresliť čiaru, ktorá je 100 pixelov dlhá.
+      frozen line_test_instruction: Pomôž Else nakresliť čiaru, ktorá je 100 pixelov dlhá.
+      frozen perpendicular_instruction: Teraz skúsme vytvoriť dve čiary, ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč sa" spolu s blokom "Posuň sa".
+      frozen perpendicular_b_instruction: 'Teraz sprav dve kolmé čiary. (Pomôcka: zvierajú uhol 90 stupňov.)'
+      frozen perpendicular_test_instruction: 'Teraz sprav dve kolmé čiary. (Pomôcka: zvierajú uhol 90 stupňov.)'
       frozen snowflake branch_instruction: Skús použiť blok "Vytvor rameno vločky", aby si vytvoril tri ramená, ktoré začnú vyzerať ako snehová vločka.
-      frozen snowflake branch_b_instruction: Skús použiť funkciu "vytvor novú vetvu snehovej vločky" pre dosiahnutie vločky s troma ramenami.
-      frozen snowflake branch_template_instruction: Skús použiť funkciu "vytvor novú vetvu snehovej vločky" pre dosiahnutie vločky s troma ramenami.
-      frozen snowflake branch_test_instruction: Skús použiť funkciu "vytvor novú vetvu snehovej vločky" pre dosiahnutie vločky s troma ramenami.
+      frozen snowflake branch_b_instruction: Skús použiť novú funkciu "Vytvor rameno vločky" a vytvor vločku s troma ramenami.
+      frozen snowflake branch_template_instruction: Skús použiť novú funkciu "Vytvor rameno vločky" a vytvor vločku s troma ramenami.
+      frozen snowflake branch_test_instruction: Skús použiť blok "Vytvor rameno vločky" a vytvor vločku s troma ramenami.
       frozen snowflake full_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
-      frozen snowflake full_b_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
-      frozen snowflake full_test_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
-      frozen snowflake fuller_b_instruction: Čo sa stane, ak skočíš späť skôr než nakreslíš každú vetvu vločky?
+      frozen snowflake full_b_instruction: A teraz to zopakuj 8 krát, aby si nakreslil prekrásnu vločku!
+      frozen snowflake full_test_instruction: A teraz to zopakuj 8 krát, aby si nakreslil prekrásnu vločku!
+      frozen snowflake fuller_b_instruction: Čo sa stane, ak skočíš späť skôr, než nakreslíš každé rameno vločky?
       frozen snowflower_instruction: Zložité snehové vzory je možné vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
       frozen snowflower_b_instruction: Dokážeš vytvoriť novú vločku opakovaním tohto kódu ** 5 ** krát a otočením o  ** 72 ** stupňov medzi každým setom?
       frozen snowflower_test_instruction: Dokážeš vytvoriť novú vločku opakovaním tohto kódu ** 5 ** krát a otočením o  ** 72 ** stupňov medzi každým setom?
       frozen square iterative_instruction: Zdá sa, že sme na polceste k vytvoreniu štvorca. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
-      frozen square iterative_b_instruction: Pridaj dalšie štyri bloky kódu pre končenie štvorca.
-      frozen square iterative_test_instruction: Pridaj dalšie štyri bloky kódu pre končenie štvorca.
-      frozen square loop 3x_instruction: Vytvorme tri štvorce tak, že sa po každom štvorci otočíme. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
-      frozen square loop 3x_b_instruction: 'Pomôž Anna nakresliť tri štvorce tak, že, sa otočíš o ** 120 stupňov ** po každom. '
-      frozen square loop 3x_test_instruction: 'Pomôž Anna nakresliť tri štvorce tak, že, sa otočíš o ** 120 stupňov ** po každom. '
+      frozen square iterative_b_instruction: Pridaj dalšie štyri bloky kódu a dokonči štvorec.
+      frozen square iterative_test_instruction: Pridaj dalšie štyri bloky kódu a dokonči štvorec.
+      frozen square loop 3x_instruction: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
+      frozen square loop 3x_b_instruction: 'Pomôž Anne nakresliť tri štvorce a po každom sa otoč o ** 120 stupňov **. '
+      frozen square loop 3x_test_instruction: 'Pomôž Anne nakresliť tri štvorce a po každom sa otoč o ** 120 stupňov **. '
       frozen square loop_instruction: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
-      frozen square loop_b_instruction: Koľkokrát (?) by príkaz "opakovať" mal spušťať kód pre vznik štvorca?
-      frozen square loop_test_instruction: Koľkokrát (?) by príkaz "opakovať" mal spušťať kód pre vznik štvorca?
-      frozen square snowflake_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
-      frozen square snowflake_b_instruction: Z poslednej úlohy zmeň kód tak, aby sa vločka otočila o ** 10 ** štvorcov  a ** 36 stupňov **. 
-      frozen square snowflake_test_instruction: Z poslednej úlohy zmeň kód tak, aby sa vločka otočila o ** 10 ** štvorcov  a ** 36 stupňov **. 
+      frozen square loop_b_instruction: Koľkokrát (???) by sa mal spustiť kód vo vnútri príkazu "Opakuj", ak chceme vytvoriť štvorec?
+      frozen square loop_test_instruction: Koľkokrát (???) by sa mal spustiť kód vo vnútri príkazu "Opakuj", ak chceme vytvoriť štvorec?
+      frozen square snowflake_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
+      frozen square snowflake_b_instruction: Zmeň kód z poslednej úlohy tak, aby si vločku vytvoril z ** 10 ** štvorcov s otočkami o ** 36 stupňov **.
+      frozen square snowflake_test_instruction: Zmeň kód z poslednej úlohy tak, aby si vločku vytvoril z ** 10 ** štvorcov s otočkami o ** 36 stupňov **.
       grade2_CaringForNewPet_10_instruction: Dostaň ma k prasiatku!
       grade2_CaringForNewPet_5_instruction: Dostaň ma k prasiatku!
       grade2_MakeDogTag_10_instruction: Nakresli niečo zábavné.
@@ -809,11 +809,11 @@ sk:
       grade4_frozen_functions3_instruction: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       grade4_frozen_functions4_instruction: Zložité snehové vzory je možné vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
       grade4_frozen_nested_loop_diamonds2_instruction: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
-      grade4_frozen_nested_loop_diamonds3_instruction: Teraz vytvorme novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakujeme 10-krát a po každom z nich sa otočíme vpravo o 36 stupňov.
+      grade4_frozen_nested_loop_diamonds3_instruction: Teraz vytvor novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36 stupňov.
       grade4_frozen_square_instruction: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       grade4_frozen_square_loop1_instruction: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
-      grade4_frozen_square_loop2_instruction: Vytvorme tri štvorce tak, že sa po každom štvorci otočíme. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
-      grade4_frozen_square_loop3_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
+      grade4_frozen_square_loop2_instruction: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
+      grade4_frozen_square_loop3_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
       grade4_review_artist1_instruction: Ahoj, ja som umelec. Napíš program a môžeš ma naučiť kresliť takmer všetko. Pomocou pár blokov ma nauč kresliť sivé čiary na obrázku. (Každá z čiar je 100 pixelov dlhá)
       grade4_review_artist2_instruction: 'Tento dom potrebuje strechu! Nakresli trojuholník. Pomôcka: všetky tri strany majú rovnakú dĺžku.'
       grade4_review_artist3_instruction: Blok so skokom posunie umelca bez toho, aby bolo treba nieco nakreslit. Nakreslite prerušovanú čiaru použitím blokov "poskočiť dopredu" a "posunúť dopredu". Každá čiara má mať dĺžku 50 pixelov.

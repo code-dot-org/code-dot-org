@@ -343,6 +343,7 @@ pt-BR:
       NEW Course 4 Artist Functions 12_markdown_instruction: "Use a função \"desenhe uma fileira de quadrados\"\ndo último desafio para desenhar esse padrão."
       NEW Course 4 Artist Functions 3_markdown_instruction: "Temos aqui um novo tipo de bloco.\nEle é chamado de \"função\". Clique em \"editar\" e então preencha-o com o código\npara desenhar um quadrado com lados de 100 pixels. \\r\n\\r\nQuando terminar de editar\na função, clique em \"Fechar\" para retornar ao seu programa."
       NEW Course 4 Artist Functions 9_markdown_instruction: "Você consegue resolver isso adicionando\napenas um bloco?"
+      NEW Course 4 Artist Params 2_markdown_instruction: Crie uma função `desenhar um triângulo` desde o início, para fazer um triângulo com lados de 50 pixels.
       NEW Course 4 Artist Params 4_markdown_instruction: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
       NEW Course 4 Artist Vars 12_markdown_instruction: "Agora, recrie o algoritmo do último\nnível para criar um pentágono de lados 150."
       NEW Course 4 Artist Vars 4_markdown_instruction: "Vamos tentar de novo! \\r\n\\r\nVocê consegue\ndefinir a variável \"comprimento\" em 60 para fazer este design bacana com hexágonos?"
@@ -358,6 +359,7 @@ pt-BR:
       course1_maze_debugging_challenge1_markdown_instruction: Depure esse nível. Remova blocos extras, e adicione blocos que estão faltando. Leve o pássaro até o porco!
       course1_maze_debugging_challenge2_markdown_instruction: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
       course2_collector_prog_challenge1_markdown_instruction: Preste atenção! Você consegue coletar todas as **10** peças do tesouro?
+      course3_collector_debugging_challenge2_markdown_instruction: Você é um especialista em laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       course4_artist_fwp_challenge1_markdown_instruction: Execute este programa e faça alterações para ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo totalmente diferente)
       courseA_artist_loops10_markdown_instruction: |-
         ## Hora de voltar à terra. Me ajude a colocar pedras para que eu não caia na água!
@@ -739,8 +741,21 @@ pt-BR:
       courseC_collector_prog9_markdown_instruction: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_prog9_2018_markdown_instruction: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_progA_markdown_instruction: Ajude Laurel a coletar todo o tesouro.
+      courseC_harvester_loops10_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops10_2018_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops11_2018_markdown_instruction: Colete todo os milhos e as abóboras.
       courseC_harvester_loops3_markdown_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_markdown_instruction: Colete todas as abóboras.
+      courseC_harvester_loops5_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops5_2018_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops6_2018_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops7_2018_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops9_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops9_2018_markdown_instruction: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops_forVid_markdown_instruction: Colete todo os milhos e as abóboras.
       courseC_maze_programming8_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming8_2018_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming8_predict1_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
@@ -767,6 +782,8 @@ pt-BR:
       courseE_bee_functions3_markdown_instruction: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_bee_functions3_2018_markdown_instruction: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_farmer_concept4_markdown_instruction: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
+      courseE_farmer_functions10b_markdown_instruction: Use sua nova função duas vezes para resolver este desafio.
+      courseE_farmer_functions10b_2018_markdown_instruction: Use sua nova função duas vezes para resolver este desafio.
       courseF_bee_for_challenge2_markdown_instruction: "Resolva este desafio com o menor número de blocos\npossível."
       courseF_bee_for_challenge2_2018_markdown_instruction: "Resolva este desafio com o menor número de blocos\npossível."
       coursea_maze_ramp1_2018_markdown_instruction: Para levar o pássaro até o porco, encaixe o <xml><block type="maze_moveEast"/></xml> bloco no final do <xml><block type="when_run"/></xml> bloco e aperte "▶ Executar"!
@@ -839,6 +856,7 @@ pt-BR:
         \r
         Você
         consegue fazê-lo parecer com um C de novo?
+      grade2_collector_2_markdown_instruction: Mova Laurel até o ouro, então use `coletar` para pegar.
       grade2_collector_9_markdown_instruction: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_A_markdown_instruction: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018_markdown_instruction: Ajude Laurel a coletar todo o tesouro.

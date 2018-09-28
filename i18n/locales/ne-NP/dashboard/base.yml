@@ -198,10 +198,16 @@ ne:
         playlab: 'Make a Play Lab app'
         artist: 'Draw something'
         applab: 'Make an App Lab app'
-      courses: "पाठ्यक्रम"
       project_gallery: "Projects"
       educate_hoc: "Hour of Code"
       stats: "Stats"
+    create_button:
+      create: 'बनाउनुहोस्'
+      applab: 'App Lab'
+      artist: 'Artist'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'

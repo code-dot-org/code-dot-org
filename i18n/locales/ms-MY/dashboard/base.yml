@@ -154,8 +154,10 @@ ms:
     header:
       finished_hoc: "Saya telah menyelesaikan Hour of Code saya"
       sign_in_to_save: 'Daftar Masuk untuk menyimpan kemajuan'
-      courses: "kursus-kursus"
       educate_hoc: "Hour of Code"
+    create_button:
+      create: 'Buat'
+      flappy: 'Flappy'
     user:
       classroom: 'Laman Utama Guru'
       label: 'Hi %{username}'

@@ -6,6 +6,8 @@ module SignUpTracking
   CONTROL_GROUP = 'v2-control'
   NEW_SIGN_UP_GROUP = 'v2-finish-sign-up'
 
+  USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
+
   def self.study_group(session)
     session[:sign_up_study_group] || NOT_IN_STUDY_GROUP
   end
@@ -17,7 +19,7 @@ module SignUpTracking
   def self.begin_sign_up_tracking(session, split_test: false)
     unless session[:sign_up_tracking_expiration]&.future?
       session[:sign_up_uid] = SecureRandom.uuid.to_s
-      session[:sign_up_tracking_expiration] = 5.minutes.from_now
+      session[:sign_up_tracking_expiration] = 1.day.from_now
     end
 
     if split_test
@@ -60,8 +62,8 @@ module SignUpTracking
         event: "#{sign_up_type}-sign-up-#{result}",
         data_string: session[:sign_up_uid],
         data_json: {
-          detail: user.to_json,
-          errors: user.errors&.messages
+          detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST),
+          errors: user.errors&.full_messages
         }.to_json
       }
       FirehoseClient.instance.put_record(tracking_data)

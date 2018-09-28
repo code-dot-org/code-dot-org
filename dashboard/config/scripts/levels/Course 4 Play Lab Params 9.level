@@ -46,10 +46,20 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "hint_prompt_attempts_threshold": 2,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "default_num_example_blocks": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-28 06:31:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2018-09-28 06:34:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "events": 1,

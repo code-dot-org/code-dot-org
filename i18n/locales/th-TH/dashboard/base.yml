@@ -198,13 +198,17 @@ th:
         gamelab: 'สร้างโปรเจคเกมแลป'
         weblab: 'สร้างโปรเจคเว็บแลป (เบต้า)'
       my_dashboard: "แดชบอร์ดของฉัน"
-      courses: "คอร์ส"
       project_gallery: "โปรเจกต์"
       help_support: "การช่วยเหลือและสนับสนุน"
       professional_learning: "การเรียนรู้อย่างมืออาชีพ"
       educate_hoc: "ช่วงเวลาของ Code"
       stats: "สถิติ"
       help_us: "ช่วยเรา"
+    create_button:
+      create: 'สร้าง'
+      applab: 'แอ๊ปแล็บ'
+      artist: 'ศิลปิน'
+      gamelab: 'เกมแล๊ป (Game Lab)'
     user:
       classroom: 'หน้าแรกของคุณครู'
       label: 'สวัสดี %{username}'

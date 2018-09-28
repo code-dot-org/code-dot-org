@@ -150,7 +150,7 @@ class Deliverer
     from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
     message.puts 'From: ' + format_address(from_address)
 
-    ['Reply-To', 'Sender'].each do |field|
+    ['Reply-To', 'Sender', 'CC', 'BCC'].each do |field|
       next unless address = parse_address(header[field.downcase])
       message.puts "#{field}: " + format_address(address)
     end

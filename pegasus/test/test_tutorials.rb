@@ -18,4 +18,12 @@ class TutorialsTest < Minitest::Test
     refute_empty beginner_tutorials
     assert_equal 'codeorg_beyond', beginner_tutorials["codeorg_beyond"][:code]
   end
+
+  def test_tutorials_contents_immutable
+    Tutorials.new(:tutorials) # Warm cache
+
+    tutorial = Tutorials.new(:tutorials).contents('code.org').first
+    tutorial[:image] = 'xyz'
+    refute_equal Tutorials.new(:tutorials).contents('code.org').first[:image], tutorial[:image]
+  end
 end

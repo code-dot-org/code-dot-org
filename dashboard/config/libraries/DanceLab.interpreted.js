@@ -581,6 +581,10 @@ function layoutSprites(group, format) {
 
 // Properties
 
+function setTint(sprite, val) {
+  setProp(sprite, "tint", val);
+}
+
 function setProp(sprite, property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
   
@@ -957,7 +961,7 @@ function hideTitleScreen() {
 }
 
 function shouldUpdate() {
-  return World.frameCount > 1;
+  return World.frameCount > 2;
 }
 
 function spriteExists(sprite) {
@@ -1071,21 +1075,21 @@ function draw() {
         loop.loop();
       }
     }
+
+    drawSprites();
+
+    if (World.fg_effect != fg_effects.none) {
+      push();
+      blendMode(fg_effects.blend);
+      World.fg_effect.draw();
+      pop();
+    }
+
+    fill("black");
+    textStyle(BOLD);
+    textAlign(TOP, LEFT);
+    textSize(20);
+    text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+    /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
-
-  drawSprites();
-
-  if (World.fg_effect != fg_effects.none) {
-    push();
-    blendMode(fg_effects.blend);
-    World.fg_effect.draw();
-    pop();
-  }
-
-  fill("black");
-  textStyle(BOLD);
-  textAlign(TOP, LEFT);
-  textSize(20);
-  text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
-  /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
 }

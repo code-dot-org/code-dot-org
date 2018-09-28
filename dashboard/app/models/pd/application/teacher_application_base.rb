@@ -65,10 +65,6 @@ module Pd::Application
 
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
 
-    def self.statuses
-      Pd::Application::ApplicationBase.statuses.except('interview')
-    end
-
     VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
     validates_uniqueness_of :user_id
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
@@ -302,6 +298,16 @@ module Pd::Application
           'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
+        how_heard: [
+          'Code.org Website',
+          'Code.org Email',
+          'Regional Partner website',
+          'Regional Partner Email',
+          'From a teacher that has participated in a Code.org program',
+          'From an administrator',
+          TEXT_FIELDS[:other_with_text]
+        ],
+
         committed: [
           YES,
           'No (Please Explain):'
@@ -441,6 +447,7 @@ module Pd::Application
       hash = sanitize_form_data_hash
       hash[:preferred_first_name] || hash[:first_name]
     end
+    alias_method :teacher_first_name, :first_name
 
     def last_name
       sanitize_form_data_hash[:last_name]

@@ -37,6 +37,7 @@ en:
       user:
         name: 'Display Name'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
+        other_name_example: 'Display Name<br/>(e.g. Ms. Smith)'
         email: 'Email'
         parent_email: 'Parent/guardian email'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
@@ -48,6 +49,8 @@ en:
         age: 'Age'
         gender: 'Gender'
         edit_header: 'Edit Account Details'
+        finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating your Code.org account.'
         error:
           future: can't be in the future
 
@@ -117,6 +120,8 @@ en:
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
+    already_in_use: "Your %{provider} is already connected to another Code.org account."
+    already_linked: "Your %{provider} is already linked to your Code.org account."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
@@ -143,6 +148,7 @@ en:
     mismatch_password: "The two passwords you entered do not match"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
     under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
     agree_us_website: "I agree to using a website based in the United States."
     my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
@@ -160,6 +166,7 @@ en:
     email_preference_yes: "Yes"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
+    create_user_type: 'Create account as a'
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -294,9 +301,7 @@ en:
         applab: 'Make an App Lab app'
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
-      home: "Home"
       my_dashboard: "My Dashboard"
-      courses: "Courses"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
       sections: "Sections"
@@ -331,6 +336,16 @@ en:
       help_us: "Help Us"
       teach: "Teach"
       about: "About"
+
+    create_button:
+      create: 'Create'
+      applab: 'App Lab'
+      artist: 'Artist'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      view_all: 'View all projects...'
 
     user:
       classroom: 'Teacher Home Page'

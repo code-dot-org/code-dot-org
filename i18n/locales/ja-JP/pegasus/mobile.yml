@@ -9,7 +9,7 @@
   upgrade_ie_link: "もっと詳しく知る"
   en: "コンピュータサイエンス"
   computer_science_edweek: "Hour of Code がやってくる"
-  csedweek_dates: "2018年10月3～9日"
+  csedweek_dates: "2018年12月3～9日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>が始まります。先生方と主催者のみなさん、<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>の計画をしましょう'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください</a>'
   n_have_learned_an_hoc: "<h1>さあ、</h1><h2>コードの時間</h2><h3># をはじめよう</h3>"
@@ -32,7 +32,7 @@
   og_description_celeb: "新しいチュートリアルに挑戦し、1人もしくはクラスで著名人とのビデオチャットを勝ちとりましょう！"
   csedweek_og_title: "Hour of Code がやってくる"
   csedweek_og_description: "Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。"
-  csedweek_og_description_soon: "Hour of Codeが2018年10月3~9日にやってきます。コンピューター科学は、すべての生徒たちが学ぶべき基礎です。"
+  csedweek_og_description_soon: "Hour of Codeが2018年12月3~9日にやってきます。コンピューター科学は、すべての生徒たちが学ぶべき基礎です。"
   csedweek_og_description_here: "Hour of Codeがやってきました。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。"
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14 日まで<br/>"
   hoc2014_students: "生徒の皆さん"
@@ -203,7 +203,7 @@
   just_did_coursef: "コースF完了 - やったー！@codeorg"
   just_did_accelerated: "上級コース完了 - やったー！@codeorg"
   just_did_hoc_donor: '#HourOfCode をやってみました！良ければ見てみて！ (%{donor_twitter} さん、@codeorgのご支援ありがとう！)'
-  just_did_course_donor: "%{course} をやりきりました！良ければ見てみて！%{donor_twitter} さん、@codeorgのご支援ありがとう！"
+  just_did_course_donor: "%{course} を終了！みてみて！\n%{donor_twitter} 、@codeorg への支援ありがとう"
   twitter_teach_cs: "10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc 。Https://code.org/ をご覧ください。"
   twitter_cs_foundational: "コンピューターサイエンスは、学生が学ぶすべての基本です。https://youtu.be/QvyTEx1wyOY。"
   learn_hoc: "Hour of Codeを学ぶ"
@@ -240,10 +240,10 @@
   studiobar_donate_body: "1ドルの寄付ごとに、一人の子供が学びます"
   studiobar_shop_title: "ショップ"
   studiobar_shop_body: "いままでの考え方を変えよう。誇りを持って私たちのロゴをつけよう。"
-  homepage_stats_students: "もの米国の生徒がCode.orgのアカウントを持っています"
-  homepage_stats_female: "の生徒が女性です"
-  homepage_stats_teachers: "もの先生がCode.orgを使っています"
-  homepage_stats_hourofcodde: "もの世界中の学生がこれまでにHour of Codeに挑戦しました"
+  homepage_stats_students: "人もの米国の生徒がCode.orgのアカウントを持っています"
+  homepage_stats_female: "人の生徒が女性です"
+  homepage_stats_teachers: "人もの先生がCode.orgを使っています"
+  homepage_stats_hourofcodde: "名もの世界中の学生がこれまでにHour of Codeに挑戦しました"
   homepage_stats_policy: "の米国の州がコンピューターサイエンスを後押しするように政策を変更しました"
   homepage_stats_title: "わたしたちは変化を起こしています"
   homepage_hero_text_malala: "&ldquo;私はすべての国の女の子に、Hour of Code を 1 つ学ぶことを提案します。&rdquo; \nマララ, ノーベル平和賞受賞者"
@@ -426,7 +426,8 @@
   minecraft_teach_resources: "教材および授業プラン"
   minecraft_leader_guide: "イベント開催に役立つ資料をダウンロード"
   minecraft_facilitating_event: "ファシリテーター向けクイックスタートガイドや各学年の生徒向けのパワーポイントプレゼンテーションを<a href='%{minecraft_facilitator_download}', target='_blank'>ダウンロード</a>"
-  minecraft_join_online_training: "MinecraftのHour of Codeを開催したいけれど、どこから始めればよいかわからない？わたしたちの<a href='%{minecraft_webinar_url}', target='_blank'>オンラインセミナー</a>をご覧ください。開催の方法、すぐに使えるファシリテーター用資料、Minecraftチームによる新しいチュートリアル｢主人公の旅｣の紹介を見ることができます。コンピューター科学教育週間 (10月4~10日) 以降に子どもたちにHour of Codeを与えるには何が必要かを考える際の参考なさってください。"
+  minecraft_join_online_training: "MinecraftのHour of Codeを開催したいけれど、どこから始めればよいかわからない？わたしたちの<a href='%{minecraft_webinar_url}', target='_blank'>オンラインセミナー</a>をご覧ください。開催の方法、すぐに使えるファシリテーター用資料、Minecraftチームによる新しいチュートリアル｢主人公の旅｣の紹介を見ることができます。コンピューター科学教育週間 (12月4~10日) 以降に子どもたちにHour of Codeを与えるには何が必要かを考える際の参考なさってください。"
+  minecraft_continue_learning: '誰にでもコンピューターサイエンスを: Hour of Codeの次をMicrosoft Storeで'
   minecraft_continue_learning_description: "コンピューターサイエンスの経験はいりません！すべての子どもたちがコンピューターサイエンス教育を通して役立つスキルを学ぶ手助けをしませんか？Microsoft Storeでは、1時間のワークショップ3つに登録し、楽しくラクなコーディングを体験し、コンピュータ科学のキーコンセプトを知り、あなたの教室やコミュニティでHour of Codeを開催する準備をすることができます。あなたならできます！<a href='%{minecraft_continue_learning_url}', target='_blank'>登録はこちら</a>。"
   minecraft_future: "子どもたちが将来の準備をする手助けをしましょう"
   minecraft_future_description: "デジタルリテラシーからコンピューターサイエンスに至るまでのデジタルスキルを、学校や非営利団体がどのように自らに取り入れたかをご覧ください。異なるモデルを考え、工夫を知り、高く評価された<a href='%{minecraft_future_url}', target='_blank'>資料にアクセス</a>してください。"
@@ -551,6 +552,7 @@
   volunteer_engineer_submission_type_task_remote: "子供たちを励ますために、私の教室に Skype のビデオ通話をして欲しいです。"
   volunteer_engineer_submission_type_task_mentor: "生徒とのプログラミング授業のために、私の準備を手伝って指導していただける方を探しています。"
   petition_age: "年齢"
+  dashboard_announce_hoc_scaling_progress: "おかげさまでHour of Codeは大盛況です！今週だした成果は保存していただけませんが、先週までの成果はきちんと保存されていますのでご安心ください。"
   dashboard_announce_learn_more_button: "もっと詳しく知る"
   dashboard_landing_title: "先生用ホームページ"
   dashboard_landing_welcome: "新しく改良された先生用ダッシュ ボードへようこそ"
@@ -679,6 +681,7 @@
   dashboard_error_none_selected: "移動する生徒が選択されていません。少なくとも 1 人の生徒を選択してください。"
   dashboard_error_other_section: "あなたが管理するセクション間で生徒を移動する場合は、ドロップダウン リストからあなたのセクションを選択してください。生徒を別の教師のセクションに移動する場合のみ、「その他のセクション」を選択してください。"
   dashboard_students_add_multiple: '１行について１人の生徒の名前をタイプまたはペーストします。'
+  dashboard_students_new_google_classroom_section: "生徒の追加には <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> へ行き、上部の<b>Sync students from Google Classroom</b> をクリックしてください。"
   dashboard_students_new_section: "新しいセクションを作成しました！<b>生徒を追加</b>、<b>複数の生徒を追加</b>ボタンをつかって、生徒を追加してください。"
   dashboard_students_name: "名前"
   dashboard_students_progress: "進行状況"
@@ -716,7 +719,10 @@
   dashboard_coursed: 'コース D： '
   dashboard_coursee: 'コース E： '
   dashboard_coursef: 'コース F： '
+  dashboard_pre-express: '読み書き前エクスプレスコース: '
+  dashboard_express: 'エクスプレスコース: '
   dashboard_unplugged: "コンピューターが無い場合は、 <a href='%{unplugged_url}'> コンピューター不要のレッスン</a> を教室で試してください。"
+  dashboard_tools: 'ツール: '
   dashboard_curriculum: "カリキュラム"
   dashboard_curriculum_overview: "K 5 カリキュラム概要"
   dashboard_overview: "概要"
@@ -734,6 +740,8 @@
   dashboard_curriculum_csins: '理科とコンピュータサイエンス:'
   dashboard_curriculum_csp: 'コンピューターサイエンス 入門'
   dashboard_curriculum_ecs: 'コンピュータサイエンスの世界を探検する:'
+  dashboard_curriculum_csd: 'コンピューターサイエンス 発展: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java テスト: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "その他"
   dashboard_login_word: "単語"
@@ -814,12 +822,18 @@
   carousel_heading_webpages: "Web ページ制作を学ぶ"
   carousel_heading_robots: "ロボットとプログラミングを学ぶ"
   carousel_heading_ide: "先生方に人気のプラットフォーム"
+  carousel_heading_desktop: "パソコンでプログラムを学ぶ"
+  carousel_heading_mobtabelem: "ズマートフォン・タブレット用"
+  carousel_heading_prereader: "読み書き前"
+  carousel_heading_beyondblocks: "ブロックの次はプログラミング言語を学びましょう"
+  carousel_heading_nointernet: "ネットがない・弱い場合は、これらのアプリをインストールしてください。"
   educator_notes: "教育者ノート"
   teach_led_lesson_plans: "先生が主導する授業計画"
   learn_footer_all_tutorials: "<a href=\"https://code.org/educate/allhourofcode\">Hour of Code チュートリアルの包括的なリスト</a> を参照してください。私たちの基準と、Hour of Code チュートリアル提出ガイドラインは <a href=\"https://hourofcode.com/tutorial-guidelines\"> ここをクリックします</a>。"
   how_to_teach_hoc: "「コードの時間」の教え方"
   more_resources_educators: "先生方と教育者向け資料"
   beyond_submission: "１時間を超えるチュートリアルを提出したいですか？条件と提出フォームを参照してください。"
+  third_party_submission: "チュートリアルをここを登録したい場合は、<a href=\"%{submission_url}\"> こちらから要件と提出様式を確認できます。</a>"
   participants: "参加者"
   teachers_notes: "先生向けの説明"
   teachers_notes_hoc: '先生方：先生用の重要事項をお読みください'
@@ -900,6 +914,8 @@
   coursee-2017_name: コース E (2017)
   coursef-2017_name: コース F (2017)
   accelerated_name: "上級コース"
+  express_name: "エクスプレスコース"
+  pre-express_name: 読み書き前エクスプレスコース
   express-2017_name: エクスプレスコース (2017)
   pre-express-2017_name: 読み書き前 エクスプレスコース (2017)
   pre-express-2018_name: 読み書き前 エクスプレスコース (2018)
@@ -927,6 +943,8 @@
   csppostap-2018_name: 'ポストAP: アプリ内でのデータベース'
   csp1_name: '第 1 章: インターネット'
   csp2_name: '第 2 章: デジタル情報'
+  csp3-a_name: 'ユニット 3: プログラミングへ (バージョンA)'
+  csp3-research-mxghyt_name: 'ユニット 3: プログラミングへ (サブゴール)'
   csp-ap_name: AP パフォーマンス タスク
   csppostap_name: 'ポストAP: アプリ内でのデータベース'
   csp-post-survey_name: コース後の生徒たちの調査
@@ -951,6 +969,7 @@
   csf_category_name: "コンピューター・サイエンスの基礎"
   csf_2017_category_name: "コンピューターサイエンス 初歩 (2017)"
   csf_2018_category_name: "コンピューターサイエンス 初歩 (2018)"
+  csf_international_category_name: "コンピューターサイエンス 初歩 (多言語)"
   csf2_draft_category_name: '開発中: コース A - F'
   csd_2018_category_name: "コンピューターサイエンス 発展 ('18~'19)"
   csp_category_name: "'15-'16 コンピューター・サイエンス原理"
@@ -1134,6 +1153,21 @@
   course2_shortdescription_congrats: "基本的な読書スキルを持つ生徒のため、このコースはコース 1になります。生徒はプログラムを作って問題を解決したり、インタラクティブなゲームや物語を開発して共有します。小学2年～5年生が対象です。"
   course3_shortdescription_congrats: "次のレベルの準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
   course4_shortdescription_congrats: "次に行く準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
+  coursea_shortdescription_congrats: "読み書き前の子ども向けのコンピューターサイエンスの紹介"
+  courseb_shortdescription_congrats: "読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)"
+  coursed_shortdescription_congrats: "コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。"
+  coursee_shortdescription_congrats: "コースCとDのおさらいをしたあとに、関数へとすすみましょう。"
+  coursef_shortdescription_congrats: "コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。"
+  coursea-2017_shortdescription_congrats: 読み書き前の子ども向けのコンピューターサイエンスの紹介
+  courseb-2017_shortdescription_congrats: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
+  coursed-2017_shortdescription_congrats: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
+  coursee-2017_shortdescription_congrats: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
+  coursef-2017_shortdescription_congrats: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+  coursea-2018_shortdescription_congrats: 読み書き前の子ども向けのコンピューターサイエンスの紹介
+  courseb-2018_shortdescription_congrats: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
+  coursed-2018_shortdescription_congrats: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
+  coursee-2018_shortdescription_congrats: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
+  coursef-2018_shortdescription_congrats: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
   codeorg_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   codeintl_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   thinkersmithspanish_longdescription: "\"ロボット語\"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。"
@@ -1396,10 +1430,38 @@
   header_tutorials: "チュートリアル"
   header_documentation: "ドキュメント"
   csp_name: "コンピューターサイエンス 入門"
+  csd_name: "コンピューターサイエンス 発展"
+  csd_2018_name: "コンピューターサイエンス 発展"
   full_course_category_name: "すべてのコース"
   user_header_label: "やあ %{username}"
   user_header_settings: "アカウント"
   user_header_logout: "サインアウト"
   user_header_signin: "サインイン"
   view_all_sections: "すべてのセクションを表示"
+  view_section: "セクションを見る"
+  view_named_section: "%{section_name} を見る"
+  privacy_doc_explanation: "プライバシー関連書類を生徒とシェアまたは印刷するにはこちらをクリック。"
+  signing_in: "サインインしています"
+  sign_in_overview: '生徒は、次の手順でCode.orgアカウントにサインインすることができます。'
+  sign_in_instruct_website: "%{code_org_url} へ。"
+  sign_in_instruct_code: '彼らのセクションコードを入力してください: %{section_code}.'
+  sign_in_instruct_name: "表示名を選択する。"
+  sign_in_instruct_secret: "あいことば %{secret} を選ぶ。"
+  sign_in_instruct_button: "「サインイン」ボタンをクリックする。"
+  sign_in_overview_cards: "ログインカードに記載のあいことば %{secret} を含む、生徒のすべての情報が以下に載っています。"
+  reset_student_password: "生徒のパスワードをリセットする"
+  reset_student_password_instructions: "生徒のあいことば <word/picture> をリセットするには、セクションの「生徒を管理する」タブへ行き、「パスワード」列の下の「あいことばを表示」をクリックし、「あいことばをリセット」をクリックしてください。"
+  login_cards: "ログインカード"
+  print_login_cards: "ログインカードを印刷する"
+  joining_section: "あなたのセクションに参加する (初回のみ)"
+  joining_section_overview: "生徒がまだあなたのセクションに参加していない場合、次の手順に従わせてください。この手順は初回のみ必要です。あなたのセクションに参加することで、生徒は割り当てられたコースを見ることができ、あなたはサインインしている生徒が完成させた課題の進捗を見ることができるようになります。"
+  joining_section_instruct_website: '生徒がCode.orgアカウントを持っていない場合は作成してください。https://studio.code.org/users/sign_up で作成することができます。生徒はメールアドレスとパスワード、またはボタンを押すことでGoogle, Facebook, Microsoft経由で登録することができます。'
+  joining_section_instruct_account: "彼らのCode.orgアカウントにサインインしてください。"
+  joining_section_instruct_code: '%{code_org_url} へ案内し、セクションコード %{section_code} を入力してください。'
+  joining_section_instruct_button: "生徒は「始める」ボタンを押すことであなたのセクションに追加されます。"
+  signing_in_single_instruct: "生徒は、 https://code.org/ へ行き右上の「サインイン」ボタンをクリックすることでCode.orgアカウントにサインインすることができます。"
+  reset_student_password_email: "生徒が (Google, Facebook, Microsoft, Cleverのアカウントでのサインインではなく) 自分のメールアドレスとパスワードでアカウントを作成した場合、セクションの「生徒を管理する」タブへ行き「パスワード」列の下の「パスワードをリセットする」ボタンをクリックすることでパスワードをリセットすることができます。"
+  syncing_students: "生徒リストを同期しています"
+  syncing_students_instructions: 'Code.orgセクションで使うGoogle Classroomの生徒リストを更新したい場合は、「生徒を管理する」タブの「Google Classroomから生徒を同期する」ボタンをクリックしてください:'
+  google_sign_in_instruct: 'ここでは、「グーグルアカウントでサインイン」のオプションを選ぶことができます。'
   applab-intro_name: App Labの紹介

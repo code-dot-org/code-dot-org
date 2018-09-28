@@ -1,4 +1,3 @@
----
 si:
   data:
     blocks:
@@ -6,55 +5,9 @@ si:
         options:
           UNIT:
             '"seconds"': තත්පර
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
-      Dancelab_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
       Dancelab_changeMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ඊළඟ
             '"prev"': පෙරට
           DIR:
@@ -63,150 +16,32 @@ si:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ඊළඟ
             '"prev"': පෙරට
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_doMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ඊළඟ
             '"prev"': පෙරට
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': ඊළඟ
             '"prev"': පෙරට
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -215,15 +50,18 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
-      Dancelab_mappingProp:
+            '"height"': උස
+      Dancelab_jumpTo:
         options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
+      Dancelab_makeNewDanceSprite:
         options:
-          DIRECTION:
-            '"right"': දකුණ
-            '"left"': වම
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
       Dancelab_randomColor:
         text: අහඹු වර්ණයක්
       Dancelab_setDanceSpeed:
@@ -238,18 +76,17 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_whenKey:
         options:
           KEY:
@@ -273,7 +110,7 @@ si:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': සත්‍ය
+            'true': 'සත්‍ය'
             'false': 'false'
       gamelab_getProp:
         options:
@@ -349,12 +186,46 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      Mikelab_randomColor:
+        text: අහඹු වර්ණයක්
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': නගරය
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
-      Vanilla_randomColor:
-        text: අහඹු වර්ණයක්
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': දකුණ
+            '"left"': වම
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': උඩ ඊතලය
+            '"down"': පහල ඊතලය
+            '"left"': වම් ඊතලය
+            '"right"': දකුණු ඊතලය
+            '"w"': බ
+            '"s"': ද
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': උඩ ඊතලය
+            '"down"': පහල ඊතලය
+            '"left"': වම් ඊතලය
+            '"right"': දකුණු ඊතලය
+            '"w"': බ
+            '"s"': ද
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': උඩ ඊතලය
+            '"down"': පහල ඊතලය
+            '"left"': වම් ඊතලය
+            '"right"': දකුණු ඊතලය
       craft_ifPath:
         options:
           DIR:
