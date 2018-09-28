@@ -483,20 +483,7 @@ Dance.prototype.initInterpreter = function () {
   this.consoleLogger_.attachTo(this.JSInterpreter);
 
   let code = '';
-  if (this.level.helperLibraries) {
-    code += this.level.helperLibraries
-      .map((lib) => this.studioApp_.libraries[lib])
-      .join("\n") + '\n';
-  }
-  if (this.level.sharedBlocks) {
-    code += this.level.sharedBlocks
-      .map(blockOptions => blockOptions.helperCode)
-      .filter(helperCode => helperCode)
-      .join("\n") + '\n';
-  }
-  if (this.level.customHelperLibrary) {
-    code += this.level.customHelperLibrary + '\n';
-  }
+  code += require('!!raw-loader!./p5.dance');
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
