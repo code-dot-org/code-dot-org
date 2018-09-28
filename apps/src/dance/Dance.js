@@ -20,6 +20,8 @@ var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
+import {createDanceAPI, teardown} from './DanceLabP5';
+import initDance from './p5.dance';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -78,10 +80,10 @@ Dance.prototype.init = function (config) {
   this.skin.winAvatar = MEDIA_URL + 'avatar.png';
   this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
 
-  injectErrorHandler(new BlocklyModeErrorHandler(
-    () => this.JSInterpreter,
-    null,
-  ));
+  // injectErrorHandler(new BlocklyModeErrorHandler(
+  //   () => this.JSInterpreter,
+  //   null,
+  // ));
 
   this.level.helperLibraries = this.level.helperLibraries || [];
   this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
@@ -239,11 +241,11 @@ Dance.prototype.reset = function () {
   this.gameLabP5.resetExecution();
 
   // Discard the interpreter.
-  if (this.JSInterpreter) {
-    this.JSInterpreter.deinitialize();
-    this.JSInterpreter = null;
-    this.interpreterStarted = false;
-  }
+  // if (this.JSInterpreter) {
+  //   this.JSInterpreter.deinitialize();
+  //   this.JSInterpreter = null;
+  //   this.interpreterStarted = false;
+  // }
   this.executionError = null;
 };
 
@@ -344,13 +346,13 @@ Dance.prototype.execute = function () {
 
   this.gameLabP5.startExecution(this.isDanceLab);
 
-  if (!this.JSInterpreter ||
-      !this.JSInterpreter.initialized() ||
-      this.executionError) {
-    return;
-  }
-
-  this.startTickTimer();
+  // if (!this.JSInterpreter ||
+  //     !this.JSInterpreter.initialized() ||
+  //     this.executionError) {
+  //   return;
+  // }
+  //
+  // this.startTickTimer();
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -366,35 +368,34 @@ Dance.prototype.initInterpreter = function () {
           propList[prop][1]);
     }
   };
-  this.JSInterpreter = new JSInterpreter({
-    studioApp: this.studioApp_,
-    maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-    shouldRunAtMaxSpeed: () => (this.gameLabP5.stepSpeed >= 1),
-    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
-    customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
-  });
+  // this.JSInterpreter = new JSInterpreter({
+  //   studioApp: this.studioApp_,
+  //   maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+  //   shouldRunAtMaxSpeed: () => (this.gameLabP5.stepSpeed >= 1),
+  //   customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
+  //   customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
+  // });
+  //
+  // this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
 
-  this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
+  const Dance = createDanceAPI(this.gameLabP5.p5);
+  const hooks = initDance(this.gameLabP5.p5, Dance);
+  let code = this.studioApp_.getCode();
 
-  let code = '';
-  code += require('!!raw-loader!./p5.dance').replace(/export function/g, 'function');
-  code += this.studioApp_.getCode();
-  this.JSInterpreter.parse({
-    code,
-    blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-    enableEvents: true,
-    initGlobals: injectGamelabGlobals
-  });
-  if (!this.JSInterpreter.initialized()) {
-    return;
-  }
+  // this.JSInterpreter.parse({
+  //   code,
+  //   blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
+  //   enableEvents: true,
+  //   initGlobals: injectGamelabGlobals
+  // });
+  // if (!this.JSInterpreter.initialized()) {
+  //   return;
+  // }
+
+  const interpreter = CustomMarshalingInterpreter.evalWith(code, hooks);
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
-    var func = this.JSInterpreter.findGlobalFunction(eventName);
-    if (func) {
-      this.eventHandlers[eventName] =
-          CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
-    }
+    this.eventHandlers[eventName] = hooks[eventName];
   }, this);
 };
 
@@ -416,7 +417,7 @@ Dance.prototype.onTick = function () {
 Dance.prototype.onP5ExecutionStarting = function () {
   this.gameLabP5.p5eventNames.forEach(function (eventName) {
     this.gameLabP5.registerP5EventHandler(eventName, function () {
-      if (this.JSInterpreter && this.eventHandlers[eventName]) {
+      if (this.eventHandlers[eventName]) {
         this.eventHandlers[eventName].apply(null);
       }
     }.bind(this));
@@ -435,14 +436,13 @@ Dance.prototype.onP5ExecutionStarting = function () {
 Dance.prototype.onP5Preload = function () {
     this.initInterpreter();
     // Execute the interpreter for the first time:
-    if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-      this.JSInterpreter.executeInterpreter(true);
-      this.interpreterStarted = true;
 
-      // In addition, execute the global function called preload()
-      if (this.eventHandlers.preload) {
-        this.eventHandlers.preload.apply(null);
-      }
+    //this.JSInterpreter.executeInterpreter(true);
+    this.interpreterStarted = true;
+
+    // In addition, execute the global function called preload()
+    if (this.eventHandlers.preload) {
+      this.eventHandlers.preload.apply(null);
     }
 };
 
@@ -452,23 +452,23 @@ Dance.prototype.onP5Preload = function () {
  * setup function.
  */
 Dance.prototype.onP5Setup = function () {
-  if (this.JSInterpreter) {
+  //if (this.JSInterpreter) {
     // Re-marshal restored preload methods for the interpreter:
-    const preloadMethods = _.intersection(
-      this.gameLabP5.p5._preloadMethods,
-      this.gameLabP5.getMarshallableP5Properties()
-    );
-    for (const method in preloadMethods) {
-      this.JSInterpreter.createGlobalProperty(
-          method,
-          this.gameLabP5.p5[method],
-          this.gameLabP5.p5);
-    }
+    // const preloadMethods = _.intersection(
+    //   this.gameLabP5.p5._preloadMethods,
+    //   this.gameLabP5.getMarshallableP5Properties()
+    // );
+    // for (const method in preloadMethods) {
+    //   this.JSInterpreter.createGlobalProperty(
+    //       method,
+    //       this.gameLabP5.p5[method],
+    //       this.gameLabP5.p5);
+    // }
 
     if (this.eventHandlers.setup) {
       this.eventHandlers.setup.apply(null);
     }
-  }
+  //}
 };
 
 /**
@@ -476,7 +476,7 @@ Dance.prototype.onP5Setup = function () {
  * draw function.
  */
 Dance.prototype.onP5Draw = function () {
-  if (this.JSInterpreter && this.eventHandlers.draw) {
+  if (this.eventHandlers.draw) {
     if (getStore().getState().runState.isRunning) {
       this.eventHandlers.draw.apply(null);
     }
