@@ -186,28 +186,5 @@ module OmniauthCallbacksControllerTests
     def sign_in_through_google
       sign_in_through AuthenticationOption::GOOGLE
     end
-
-    # Skip firehose logging for these tests
-    # Instead record the sequence of events logged, for easy validation in test cases.
-    def stub_firehose
-      @firehose_records = []
-      FirehoseClient.instance.stubs(:put_record).with do |args|
-        @firehose_records << args
-        true
-      end
-    end
-
-    def assert_sign_up_tracking(expected_study_group, expected_events)
-      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
-      study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
-      study_events = study_records.map {|e| e[:event]}
-      assert_equal [expected_study_group], study_groups
-      assert_equal expected_events, study_events
-    end
-
-    def refute_sign_up_tracking
-      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
-      assert_empty study_records
-    end
   end
 end
