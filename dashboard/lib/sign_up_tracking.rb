@@ -2,6 +2,7 @@ require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 module SignUpTracking
+  STUDY_NAME = 'account-sign-up'
   NOT_IN_STUDY_GROUP = 'v1'
   CONTROL_GROUP = 'v2-control'
   NEW_SIGN_UP_GROUP = 'v2-finish-sign-up'
@@ -42,7 +43,7 @@ module SignUpTracking
     provider = request.env['omniauth.auth'].provider.to_s
     if session[:sign_up_tracking_expiration]&.future?
       tracking_data = {
-        study: 'account-sign-up',
+        study: STUDY_NAME,
         event: "#{provider}-sign-in",
         data_string: session[:sign_up_uid]
       }
@@ -57,7 +58,7 @@ module SignUpTracking
     if session[:sign_up_tracking_expiration]&.future?
       result = user.persisted? ? 'success' : 'error'
       tracking_data = {
-        study: 'account-sign-up',
+        study: STUDY_NAME,
         study_group: study_group(session),
         event: "#{sign_up_type}-sign-up-#{result}",
         data_string: session[:sign_up_uid],

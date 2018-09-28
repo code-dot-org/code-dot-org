@@ -9,8 +9,7 @@ module OmniauthCallbacksControllerTests
     include OmniauthCallbacksControllerTests::Utils
 
     setup do
-      # Skip firehose logging for these tests, unless explicitly requested
-      FirehoseClient.instance.stubs(:put_record)
+      stub_firehose
 
       # Force split-test to control group (override in tests over experiment)
       SignUpTracking.stubs(:split_test_percentage).returns(0)
@@ -34,6 +33,15 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_student created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        'v2-control',
+        %w(
+          load-sign-up-page
+          google_oauth2-sign-up-error
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -54,6 +62,15 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        'v2-control',
+        %w(
+          load-sign-up-page
+          google_oauth2-sign-up-error
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -77,6 +94,14 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_student created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        'v2-finish-sign-up',
+        %w(
+          load-sign-up-page
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -98,6 +123,14 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        'v2-finish-sign-up',
+        %w(
+          load-sign-up-page
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -117,6 +150,8 @@ module OmniauthCallbacksControllerTests
       assert_equal student.id, signed_in_user_id
       student.reload
       assert_credentials auth_hash, student
+
+      refute_sign_up_tracking
     end
 
     test "teacher sign-in" do
@@ -132,6 +167,8 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
       assert_credentials auth_hash, teacher
+
+      refute_sign_up_tracking
     end
 
     private
@@ -148,6 +185,29 @@ module OmniauthCallbacksControllerTests
     # and redirects to something else: homepage, finish_sign_up, etc.
     def sign_in_through_google
       sign_in_through AuthenticationOption::GOOGLE
+    end
+
+    # Skip firehose logging for these tests
+    # Instead record the sequence of events logged, for easy validation in test cases.
+    def stub_firehose
+      @firehose_records = []
+      FirehoseClient.instance.stubs(:put_record).with do |args|
+        @firehose_records << args
+        true
+      end
+    end
+
+    def assert_sign_up_tracking(expected_study_group, expected_events)
+      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
+      study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
+      study_events = study_records.map {|e| e[:event]}
+      assert_equal [expected_study_group], study_groups
+      assert_equal expected_events, study_events
+    end
+
+    def refute_sign_up_tracking
+      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
+      assert_empty study_records
     end
   end
 end
