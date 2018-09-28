@@ -17,7 +17,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-up" do
-      mock_oauth user_type: User::TYPE_STUDENT
+      auth_hash = mock_oauth user_type: User::TYPE_STUDENT
 
       assert_creates(User) {sign_in_through_clever}
       assert_redirected_to '/'
@@ -27,27 +27,27 @@ module OmniauthCallbacksControllerTests
 
       created_user = User.find signed_in_user_id
       assert_valid_student created_user
-      assert_credentials @auth_hash, created_user
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "teacher sign-up" do
-      mock_oauth user_type: User::TYPE_TEACHER
+      auth_hash = mock_oauth user_type: User::TYPE_TEACHER
 
       assert_creates(User) {sign_in_through_clever}
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
-      assert_credentials @auth_hash, created_user
+      assert_valid_teacher created_user, expected_email: auth_hash.info.email
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "student sign-up (new sign-up flow)" do
-      mock_oauth user_type: User::TYPE_STUDENT
+      auth_hash = mock_oauth user_type: User::TYPE_STUDENT
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
       sign_in_through_clever
@@ -55,7 +55,7 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
       assert_template partial: '_finish_sign_up'
 
-      assert_creates(User) {finish_sign_up User::TYPE_STUDENT}
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
@@ -63,13 +63,13 @@ module OmniauthCallbacksControllerTests
 
       created_user = User.find signed_in_user_id
       assert_valid_student created_user
-      assert_credentials @auth_hash, created_user
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "teacher sign-up (new sign-up flow)" do
-      mock_oauth user_type: User::TYPE_TEACHER
+      auth_hash = mock_oauth user_type: User::TYPE_TEACHER
       SignUpTracking.stubs(:split_test_percentage).returns(100)
 
       sign_in_through_clever
@@ -77,21 +77,21 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
       assert_template partial: '_finish_sign_up'
 
-      assert_creates(User) {finish_sign_up User::TYPE_TEACHER}
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
-      assert_credentials @auth_hash, created_user
+      assert_valid_teacher created_user, expected_email: auth_hash.info.email
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "student sign-in" do
-      mock_oauth user_type: User::TYPE_STUDENT
+      auth_hash = mock_oauth user_type: User::TYPE_STUDENT
 
-      student = create(:student, :unmigrated_clever_sso, uid: @auth_hash.uid)
+      student = create(:student, :unmigrated_clever_sso, uid: auth_hash.uid)
 
       sign_in_through_clever
       assert_redirected_to '/'
@@ -101,13 +101,13 @@ module OmniauthCallbacksControllerTests
 
       assert_equal student.id, signed_in_user_id
       student.reload
-      assert_credentials @auth_hash, student
+      assert_credentials auth_hash, student
     end
 
     test "teacher sign-in" do
-      mock_oauth user_type: User::TYPE_TEACHER
+      auth_hash = mock_oauth user_type: User::TYPE_TEACHER
 
-      teacher = create(:teacher, :unmigrated_clever_sso, uid: @auth_hash.uid)
+      teacher = create(:teacher, :unmigrated_clever_sso, uid: auth_hash.uid)
 
       sign_in_through_clever
       assert_redirected_to '/home'
@@ -115,7 +115,7 @@ module OmniauthCallbacksControllerTests
 
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
-      assert_credentials @auth_hash, teacher
+      assert_credentials auth_hash, teacher
     end
 
     private
