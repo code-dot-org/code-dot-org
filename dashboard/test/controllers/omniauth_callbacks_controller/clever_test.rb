@@ -33,7 +33,6 @@ module OmniauthCallbacksControllerTests
         %w(
           clever-callback
           clever-sign-up-success
-          clever-sign-in
         )
       )
     ensure
@@ -56,7 +55,6 @@ module OmniauthCallbacksControllerTests
         %w(
           clever-callback
           clever-sign-up-success
-          clever-sign-in
         )
       )
     ensure
