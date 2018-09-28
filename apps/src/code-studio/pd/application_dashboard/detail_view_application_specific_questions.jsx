@@ -35,13 +35,14 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     scores: PropTypes.object,
     handleScoreChange: PropTypes.func,
     applicationGuid: PropTypes.string,
-    principalApprovalState: PropTypes.oneOf(['not_sent', 'sent', 'received'])
+    principalApprovalState: PropTypes.oneOf(['not_sent', 'sent', 'received']),
+    schoolStats: PropTypes.object
   };
 
   constructor(props) {
     super(props);
 
-    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission']) : FacilitatorSectionHeaders;
+    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section6Submission']) : FacilitatorSectionHeaders;
     this.pageLabels = props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels;
     this.labelOverrides = props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides;
     this.numberedQuestions = props.applicationType === TEACHER ? [] : NumberedQuestions;
@@ -88,6 +89,27 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
           </span>
         );
       }
+    } else if (section === 'detailViewAboutTheSchool') {
+       /* if we have a school id */
+      return (
+        <div>
+          <DetailViewResponse
+            question="Title I status (code)"
+            answer={`${this.props.schoolStats.title_i_status}`}
+            layout="lineItem"
+          />
+          <DetailViewResponse
+            question="Free and reduced-price lunch eligible"
+            answer={`${this.props.schoolStats.frl_eligible_percent}%`}
+            layout="lineItem"
+          />
+          <DetailViewResponse
+            question="Underrepresented minority students"
+            answer={`${this.props.schoolStats.urm_percent}%`}
+            layout="lineItem"
+          />
+        </div>
+      );
     } else {
       return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (

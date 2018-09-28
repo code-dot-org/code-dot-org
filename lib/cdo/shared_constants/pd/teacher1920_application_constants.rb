@@ -14,7 +14,8 @@ module Pd
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
       section_5_additional_demographic_information: 'Additional Demographic Information',
       section_6_submission: 'Submission',
-      detail_view_principal_approval: 'Principal Approval'
+      detail_view_principal_approval: 'Principal Approval',
+      detail_view_about_the_school: 'About the School'
     }
 
     PAGE_LABELS = {
