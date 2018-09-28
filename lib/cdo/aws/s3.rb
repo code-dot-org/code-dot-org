@@ -184,6 +184,17 @@ module AWS
       end
     end
 
+    # Generate and return a presigned URL that allows a file upload.
+    # @raise [ArgumentError] Raised if `:expires_in` exceeds one week (604800 seconds).
+    # @return [String]
+    def self.presigned_upload_url(bucket, key, params = {})
+      params = params.merge(
+        bucket: bucket,
+        key: key
+      )
+      Aws::S3::Presigner.new(client: create_client).presigned_url(:put_object, params)
+    end
+
     class LogUploader
       # A LogUploader is constructed with some preconfigured settings that will
       # apply to all log uploads - presumably you may be uploading many similar
