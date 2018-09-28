@@ -66,20 +66,20 @@ nav: how_to_nav
 
 ## 7. ほめてあげる
 
-- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
+- 生徒達に[修了証を印刷](<%= codeorg_url('/certificates') %>)します。
 - 生徒へ配る[「Hour of Codeをやったよ！」](<%= resolve_url('/promote/resources#stickers') %>)ステッカーを印刷します。
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- 参加者向けの[特製Tシャツを注文](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)します。
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 
 ## Hour of Codeの教育者向けその他資料
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- 過去にHour of Codeを開催した人の[ベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見てみましょう。
+- 録画された[Hour of Code教育者用ガイドのウェビナー](https://youtu.be/EJeMeSW2-Mw)を見てみましょう。
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。 <% end %>
 
 ## Hour of Codeを終えたら？
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
+Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>
