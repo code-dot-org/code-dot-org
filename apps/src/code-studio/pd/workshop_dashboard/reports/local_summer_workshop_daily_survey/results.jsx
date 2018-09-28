@@ -28,31 +28,17 @@ export default class Results extends React.Component {
       }
 
       if (['scale', 'singleSelect'].includes(question['answer_type'])) {
-        if (section === "facilitator") {
-          return Object.keys(answers[questionId]).map(facilitatorName => {
-            return (
-              <SingleChoiceResponses
-                question={question['text'].replace("{facilitatorName}", facilitatorName)}
-                answers={answers[questionId][facilitatorName]}
-                possibleAnswers={question['options']}
-                key={[i, facilitatorName].join('.')}
-                answerType={question['answer_type']}
-                otherText={question['other_text']}
-              />
-            );
-          });
-        } else {
-          return (
-            <SingleChoiceResponses
-              question={question['text']}
-              answers={answers[questionId]}
-              possibleAnswers={question['options']}
-              key={i}
-              answerType={question['answer_type']}
-              otherText={question['other_text']}
-            />
-          );
-        }
+        return (
+          <SingleChoiceResponses
+            perFacilitator={section === "facilitator"}
+            question={question['text']}
+            answers={answers[questionId]}
+            possibleAnswers={question['options']}
+            key={i}
+            answerType={question['answer_type']}
+            otherText={question['other_text']}
+          />
+        );
       } else if (question['answer_type'] === 'text') {
         return (
           <TextResponses
