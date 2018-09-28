@@ -12,7 +12,7 @@ class RegistrationsController < Devise::RegistrationsController
   def new
     session[:user_return_to] ||= params[:user_return_to]
 
-    if PartialRegistration.in_progress?(session)
+    if SignUpTracking.new_sign_up_experience?(session) && PartialRegistration.in_progress?(session)
       user_params = params[:user] || {}
       @user = User.new_with_session(user_params, session)
     else
