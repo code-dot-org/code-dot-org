@@ -17,24 +17,9 @@ var GameLabP5 = function () {
   ];
   this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
   this.stepSpeed = 1;
-
-  this.setLoop = (shouldLoop) => {
-    if (!this.p5) {
-      return;
-    }
-    if (shouldLoop) {
-      // Calling p5.loop() invokes p5.draw(), but we might still be waiting for
-      // animations to load.
-      this.p5._loop = true;
-    } else {
-      this.p5.noLoop();
-    }
-  };
 };
 
 module.exports = GameLabP5;
-
-GameLabP5.baseP5loadImage = null;
 
 /**
  * Initialize this GameLabP5 instance.
@@ -91,13 +76,9 @@ GameLabP5.prototype.startExecution = function (dancelab) {
         this.danceAPI = createDanceAPI(this.p5);
       }
 
-      p5obj.preload = function () {
-        this.onPreload();
-      }.bind(this);
+      p5obj.preload = this.onPreload.bind(this);
 
-      p5obj.setup = function () {
-        this.onSetup();
-      }.bind(this);
+      p5obj.setup = this.onSetup.bind(this);
 
       p5obj.draw = this.onDraw.bind(this);
 
@@ -105,20 +86,6 @@ GameLabP5.prototype.startExecution = function (dancelab) {
 
     }.bind(this),
     'divGameLab');
-};
-
-GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
-  // Synthesize an event and send it to the internal p5 handler for keydown
-  if (this.p5) {
-    this.p5._onkeydown({ which: keyCode });
-  }
-};
-
-GameLabP5.prototype.notifyKeyCodeUp = function (keyCode) {
-  // Synthesize an event and send it to the internal p5 handler for keyup
-  if (this.p5) {
-    this.p5._onkeyup({ which: keyCode });
-  }
 };
 
 GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
@@ -170,10 +137,6 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
     bottomEdge: this.p5,
     edges: this.p5
   };
-};
-
-GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
-  return [];
 };
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
@@ -248,31 +211,14 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // Create a 'World' object in the global namespace:
   propList.World = [this.gameLabWorld, this];
 
+  propList.console = [console, window];
+
   if (this.danceAPI) {
     // Create a 'Dance' object in the global namespace:
     propList.Dance = [this.danceAPI, this];
   }
 
   return propList;
-};
-
-/**
- * Return the current frame rate
- */
-GameLabP5.prototype.getFrameRate = function () {
-  return this.p5 ? this.p5.frameRate() : 0;
-};
-
-/**
- * Mark all current and future sprites as debug=true.
- * @param {boolean} debugSprites - Enable or disable debug flag on all sprites
- */
-GameLabP5.prototype.debugSprites = function (debugSprites) {
-  if (this.p5) {
-    this.p5.allSprites.forEach(sprite => {
-      sprite.debug = debugSprites;
-    });
-  }
 };
 
 /**

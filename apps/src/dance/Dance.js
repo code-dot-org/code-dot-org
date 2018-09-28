@@ -12,22 +12,16 @@ var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '../lib/util/timeoutList';
 var GameLabP5 = require('./GameLabP5');
 import {
-  initializeSubmitHelper,
   onSubmitComplete
 } from '../submitHelper';
 var dom = require('../dom');
-import { initFirebaseStorage } from '../storage/firebaseStorage';
 import {getStore} from '../redux';
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
-import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
-
-// Number of ticks after which to capture a thumbnail image of the play space.
-const CAPTURE_TICK_COUNT = 250;
 
 /**
  * An instantiable GameLab class
@@ -65,8 +59,6 @@ Dance.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
-Dance.baseP5loadImage = null;
-
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
  * @param {!AppOptionsConfig} config
@@ -103,16 +95,7 @@ Dance.prototype.init = function (config) {
     }
   }
 
-  config.usesAssets = true;
-
   this.studioApp_.labUserId = config.labUserId;
-  this.studioApp_.storage = initFirebaseStorage({
-    channelId: config.channel,
-    firebaseName: config.firebaseName,
-    firebaseAuthToken: config.firebaseAuthToken,
-    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-    showRateLimitAlert: this.studioApp_.showRateLimitAlert
-  });
 
   this.gameLabP5.init({
     gameLab: this,
@@ -141,22 +124,16 @@ Dance.prototype.init = function (config) {
   // them on.
   config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
 
-  var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
-    config.afterEditorReady = this.afterEditorReady_.bind(this, breakpointsEnabled);
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
-
-    // Ignore user's code on embedded levels, so that changes made
-    // to starting code by levelbuilders will be shown.
-    config.ignoreLastAttempt = config.embed;
 
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
@@ -169,12 +146,6 @@ Dance.prototype.init = function (config) {
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
     }
-
-    initializeSubmitHelper({
-      studioApp: this.studioApp_,
-      onPuzzleComplete: this.onPuzzleComplete.bind(this),
-      unsubmitUrl: this.level.unsubmitUrl
-    });
   };
 
   var showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
@@ -204,12 +175,6 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
-Dance.prototype.calculateVisualizationScale_ = function () {
-  var divGameLab = document.getElementById('divGameLab');
-  // Calculate current visualization scale:
-  return divGameLab.getBoundingClientRect().width / divGameLab.offsetWidth;
-};
-
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
@@ -228,17 +193,6 @@ Dance.prototype.afterInject_ = function (config) {
 
     // Don't add infinite loop protection
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
-  }
-};
-
-/**
- * Initialization to run after ace/droplet is initialized.
- * @param {!boolean} areBreakpointsEnabled
- * @private
- */
-Dance.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
-  if (areBreakpointsEnabled) {
-    this.studioApp_.enableBreakpoints();
   }
 };
 
@@ -283,9 +237,6 @@ Dance.prototype.reset = function () {
   Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
-
-  // Import to reset these after this.gameLabP5 has been reset
-  this.initialCaptureComplete = false;
 
   // Discard the interpreter.
   if (this.JSInterpreter) {
@@ -334,14 +285,13 @@ Dance.prototype.onPuzzleComplete = function (submit, testResult) {
     const onComplete = submit ? onSubmitComplete : this.onReportComplete.bind(this);
 
     this.studioApp_.report({
-      app: 'gamelab',
+      app: 'dance',
       level: this.level.id,
       result: levelComplete,
       testResult: this.testResults,
       submitted: submit,
       program: program,
-      image: this.encodedFeedbackImage,
-      onComplete
+      onComplete,
     });
   };
 
@@ -377,7 +327,7 @@ Dance.prototype.runButtonClick = function () {
   }
 };
 
-Dance.prototype.execute = function (keepTicking = true) {
+Dance.prototype.execute = function () {
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
@@ -393,7 +343,6 @@ Dance.prototype.execute = function (keepTicking = true) {
   }
 
   this.gameLabP5.startExecution(this.isDanceLab);
-  this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
       !this.JSInterpreter.initialized() ||
@@ -401,15 +350,11 @@ Dance.prototype.execute = function (keepTicking = true) {
     return;
   }
 
-  if (keepTicking) {
-    this.startTickTimer();
-  }
+  this.startTickTimer();
 };
 
 Dance.prototype.initInterpreter = function () {
-
   const injectGamelabGlobals = () => {
-    this.JSInterpreter.createGlobalProperty('console', console);
     const propList = this.gameLabP5.getGlobalPropertyList();
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
@@ -421,16 +366,14 @@ Dance.prototype.initInterpreter = function () {
           propList[prop][1]);
     }
   };
-
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
     shouldRunAtMaxSpeed: () => (this.gameLabP5.stepSpeed >= 1),
     customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
-    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
     customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
   });
-  window.tempJSInterpreter = this.JSInterpreter;
+
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
 
   let code = '';
@@ -462,8 +405,6 @@ Dance.prototype.onTick = function () {
     if (this.interpreterStarted) {
       this.JSInterpreter.executeInterpreter();
     }
-
-    this.captureInitialImage();
   }
 };
 
@@ -542,18 +483,6 @@ Dance.prototype.onP5Draw = function () {
   }
 };
 
-/**
- * Capture a thumbnail image of the play space if the app has been running
- * for long enough and we have not done so already.
- */
-Dance.prototype.captureInitialImage = function () {
-  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
-    return;
-  }
-  this.initialCaptureComplete = true;
-  captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
-};
-
 Dance.prototype.handleExecutionError = function (err, lineNumber, outputString) {
   outputError(outputString, lineNumber);
   if (err.native) {
@@ -575,12 +504,7 @@ Dance.prototype.displayFeedback_ = function () {
     message: this.message,
     response: this.response,
     level: level,
-    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
-    // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing: !level.disableSharing && (level.freePlay /* || level.impressive */),
-    // impressive levels are already saved
-    // alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
+    showingSharing: level.freePlay,
     saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
