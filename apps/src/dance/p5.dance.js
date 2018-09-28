@@ -11,8 +11,11 @@ var callbacks = [];
 var setupCallbacks = [];
 var loops = [];
 
+console.log('hello');
+console.log(p5);
+
 // Sprites
-var sprites = createGroup();
+var sprites = p5.createGroup();
 var sprites_by_type = {};
 
 if (LOW_BAND) {

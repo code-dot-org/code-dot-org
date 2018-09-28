@@ -338,34 +338,7 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 };
 
 GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
-  return [
-    'arguments',
-    'callee',
-    'caller',
-    'constructor',
-    'eval',
-    'prototype',
-    'stack',
-    'unwatch',
-    'valueOf',
-    'watch',
-    '_userNode',
-    '_elements',
-    '_curElement',
-    'elt',
-    'canvas',
-    'parent',
-    'p5',
-    'downloadFile',
-    'writeFile',
-    'httpGet',
-    'httpPost',
-    'httpDo',
-    'loadJSON',
-    'loadStrings',
-    'loadTable',
-    'loadXML',
-  ];
+  return [];
 };
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
@@ -411,12 +384,11 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
  * @returns {Array.<string>}
  */
 GameLabP5.prototype.getMarshallableP5Properties = function () {
-  const blockedProps = this.getCustomMarshalBlockedProperties();
   const globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
   const propNames = [];
   for (const prop in this.p5) {
-    if (-1 === blockedProps.indexOf(prop) &&
+    if (
         -1 === this.p5specialFunctions.indexOf(prop) &&
         !globalCustomMarshalProps[prop]) {
       propNames.push(prop);
@@ -436,7 +408,7 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   }
 
   // Create a 'p5' object in the global namespace:
-  propList.p5 = [{ Vector: window.p5.Vector }, window];
+  propList.p5 = [this.p5, window];
 
   // Create a 'Game' object in the global namespace
   // to make older blocks compatible:

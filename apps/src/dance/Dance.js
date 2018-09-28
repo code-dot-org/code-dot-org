@@ -210,7 +210,7 @@ Dance.prototype.init = function (config) {
   });
 
   this.loadValidationCodeIfNeeded_();
-  const loader = this.studioApp_.loadLibraries(this.level.helperLibraries).then(() => ReactDOM.render((
+  ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
@@ -218,12 +218,7 @@ Dance.prototype.init = function (config) {
         danceLab={this.isDanceLab}
       />
     </Provider>
-  ), document.getElementById(config.containerId)));
-
-  if (IN_UNIT_TEST) {
-    return loader.catch(() => {});
-  }
-  return loader;
+  ), document.getElementById(config.containerId));
 };
 
 Dance.prototype.loadAudio_ = function () {
@@ -458,6 +453,7 @@ Dance.prototype.execute = function (keepTicking = true) {
 Dance.prototype.initInterpreter = function () {
 
   const injectGamelabGlobals = () => {
+    this.JSInterpreter.createGlobalProperty('console', console);
     const propList = this.gameLabP5.getGlobalPropertyList();
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
