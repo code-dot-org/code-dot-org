@@ -20,7 +20,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
+      assert_redirected_to '/users/sign_up', "Response: #{response.body}"
       follow_redirect!
       assert_template partial: '_sign_up'
 
@@ -38,6 +38,7 @@ module OmniauthCallbacksControllerTests
         'v2-control',
         %w(
           load-sign-up-page
+          google_oauth2-callback
           google_oauth2-sign-up-error
           google_oauth2-sign-up-success
         )
@@ -67,6 +68,7 @@ module OmniauthCallbacksControllerTests
         'v2-control',
         %w(
           load-sign-up-page
+          google_oauth2-callback
           google_oauth2-sign-up-error
           google_oauth2-sign-up-success
         )
@@ -99,6 +101,7 @@ module OmniauthCallbacksControllerTests
         'v2-finish-sign-up',
         %w(
           load-sign-up-page
+          google_oauth2-callback
           google_oauth2-sign-up-success
         )
       )
@@ -128,6 +131,7 @@ module OmniauthCallbacksControllerTests
         'v2-finish-sign-up',
         %w(
           load-sign-up-page
+          google_oauth2-callback
           google_oauth2-sign-up-success
         )
       )
@@ -169,6 +173,28 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, teacher
 
       refute_sign_up_tracking
+    end
+
+    test "sign-in from sign-up page" do
+      auth_hash = mock_oauth
+
+      teacher = create(:teacher, :unmigrated_google_sso, uid: auth_hash.uid)
+
+      get '/users/sign_up'
+      sign_in_through_google
+      assert_redirected_to '/home'
+      assert_equal I18n.t('auth.signed_in'), flash[:notice]
+
+      assert_equal teacher.id, signed_in_user_id
+
+      assert_sign_up_tracking(
+        'v1', # Not in control or experiment since this wasn't a sign-up
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          google_oauth2-sign-in
+        )
+      )
     end
 
     private
