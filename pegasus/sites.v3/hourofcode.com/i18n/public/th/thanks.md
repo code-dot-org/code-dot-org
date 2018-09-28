@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -27,37 +27,32 @@ social:
 
 # Thanks for signing up to host an Hour of Code!
 
-เพื่อเป็นการขอบคุณที่ช่วยทำให้มันเป็นไปได้สำหรับนักเรียนที่จะเริ่มเรียนรู้วิชาวิทยาการคอมพิวเตอร์ เราขอมอบโปสเตอร์แสดงบุคคลตัวอย่างที่หลากหลายที่พิมพ์แล้วอย่างมืออาชีพฟรีให้คุณ ใช้รหัสโปรโมชัน **FREEPOSTERS** ที่เช็คเอาท์ (หมายเหตุ: มีเฉพาะเมื่อของยังเหลืออยู่ เเละคุณจะต้องจ่ายค่าขนส่งด้วย เนื่องจากโปสเตอร์เหล่านี้ส่งจากสหรัฐอเมริกา ค่าขนส่งอาจสูงหากส่งไปที่แคนาดาหรือทั่วโลก เราเข้าใจว่านี่อาจจะไม่อยู่ในงบประมาณของคุณ และเราแนะนำให้คุณพิมพ์[ไฟล์ PDF](https://code.org/inspire)สำหรับชั้นเรียนของคุณ)  
-<br /> [<button>รับโปสเตอร์</button>](https://store.code.org/products/code-org-posters-set-of-12) ใช้รหัสโปรโมชัน FREEPOSTERS
-
-<% if @country == 'us' %> ขอขอบคุณความกรุณาจาก Ozobot, Dexter Industries, littleBits, และ Wonder Workshop ห้องเรียนมากกว่า 100 ห้องจะได้รับการเลือกให้รับหุ่นยนต์และวงจรสำหรับชั้นเรียนของพวกเขา! เพื่อที่จะมีสิทธิ์รับชุดหนึ่ง กรุณาทำแบบสำรวจที่ส่งจาก Code.org หลังจาก Hour of Code Code.org จะเลือกห้องเรียนที่ชนะ ในระหว่างนี้ ลองดูกิจกรรมเกี่ยวกับหุ่นยนต์และวงจร โปรดทราบว่านี่สำหรับโรงเรียนในสหรัฐอเมริกาเท่านั้น <% end %>
-
-<br /> **Hour of Code มีระยะเวลาช่วง <%= campaign_date('full') %> และเราจะติดต่อไปเกี่ยวกับการสอนใหม่เเละอัพเดทที่น่าตื่นเต้นอื่นๆเมื่อมีออกมา ในระหว่างนี้ คุณสามารถทำอะไรได้บ้าง**
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. บอกต่อในโรงเรียนและชุมชนของคุณ
 
-คุณเพิ่งจะร่วมการเคลื่อนไหว Hour of Code บอกเพื่อนๆของคุณด้วย **#HourOfCode**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> แนะนำคนอื่นๆให้เข้าร่วม[ด้วยอีเมลตัวอย่างของเรา](<%= resolve_url('/promote/resources#sample-emails') %>) ติดต่อผู้อำนวยการของคุณและท้าทายทุกห้องเรียนในโรงเรียนของคุณให้ลงทะเบียน รับสมัครกลุ่มในท้องถิ่น — ลูกเสือ/เนตรนารี, มหาวิทยาลัย, กลุ่มทหารผ่านศึก, สหภาพแรงงาน, หรือเพื่อนๆ คุณ​ไม่จำเป็นต้อง​อยู่ในโรงเรียน​เพื่อเรียน​ทักษะ​ใหม่​ เชิญชวนนักการเมืองท้องถิ่นหรือผู้วางนโยบายให้เยี่ยมชมโรงเรียนของคุณในช่วง Hour of Code มันสามารถช่วยสร้างการสนับสนุนสำหรับ​วิชาวิทยาการคอมพิวเตอร์ในพื้นที่ของคุณได้มากไปกว่าหนึ่งชั่วโมง
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. คุณ​ไม่จำเป็นต้อง​อยู่ในโรงเรียน​เพื่อเรียน​ทักษะ​ใหม่​ Invite a local politician or policy maker to visit your school for the Hour of Code. มันสามารถช่วยสร้างการสนับสนุนสำหรับ​วิทยาศาสตร์​คอมพิวเตอร์ในพื้นที่ของคุณต่อไปได้
 
-ใช้ [โปสเตอร์,​ ป้าย,​ สติกเกอร์,​ วิดีโอ​ และอื่นๆ](<%= resolve_url('/promote/resources') %>) สำหรับ​กิจกรรม​ของ​คุณ​
+ใช้ [โพสเตอร์​ ป้าย​ สติ๊กเกอร์​ วีดีโอ​ ฯลฯ​](<%= resolve_url('/promote/resources') %>) สำหรับ​กิจกรรม​ของ​คุณ​
 
 ## 2. หาอาสาสมัครท้องถิ่นเพื่อช่วยกิจกรรมของคุณ
 
-[ค้นหาแผนที่อาสาสมัครของเรา](<%= codeorg_url('/volunteer/local') %>) สำหรับอาสาสมัครที่สามารถไปที่ห้องเรียนของคุณหรือพูดคุยผ่านวิดีโอทางไกลได้ เพื่อสร้างแรงบันดาลใจให้นักเรียนของคุณถึงความกว้างของความเป็นไปได้ด้วยวิทยาการคอมพิวเตอร์
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. วางแผน Hour of Code ของคุณ
 
-เลือก[กิจกรรม Hour of Code](https://hourofcode.com/learn)สำหรับห้องเรียนของคุณ และ[อ่านคู่มือวิธีทำนี้](<%= resolve_url('/how-to') %>)
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
 # นอกเหนือจาก Hour of Code
 
-<% if @country == 'us' %> Hour of Code เป็นแค่จุดเริ่มต้น ไม่ว่าคุณจะเป็นผู้บริหาร, ครู, หรือผู้สนับสนุน เรามี[การฝึกอย่างมืออาชีพ, หลักสูตร และแหล่งความรู้ เพื่อช่วยทำให้มีวิชาวิทยาการคอมพิวเตอร์ที่โรงเรียนของคุณ หรือช่วยขยายความช่วยเหลือของคุณ](https://code.org/yourschool) ถ้าคุณสอนวิชาวิทยาการคอมพิวเตอร์อยู่แล้ว ใช้แหล่งเหล่านี้ในสัปดาห์การศึกษาวิทยาการคอมพิวเตอร์เพื่อระดมการสนับสนุนจากผู้บริหารของคุณ, ผู้ปกครอง และชุมชน
+<% if @country == 'us' %> Hour of Code เป็นแค่จุดเริ่มต้น Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-คุณมีหลายทางเลือกที่เหมาะกับโรงเรียนของคุณ องค์กรส่วนใหญ่ที่ให้การสอน Hour of Code จะมีหลักสูตรและการฝึกอย่างมืออาชีพด้วย ถ้าคุณพบบทเรียนที่คุณชอบ ลองถามว่าจะไปต่อได้อย่างไร เพื่อที่จะช่วยคุณเริ่มต้น เราได้เน้น[ผู้จัดหาหลักสูตรจำนวนหนึ่งที่จะช่วยคุณหรือนักเรียนของคุณไปต่อได้มากกว่าแค่หนึ่งชั่วโมง](https://hourofcode.com/beyond)
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-<% else %> Hour of Code เป็นแค่จุดเริ่มต้น องค์กรส่วนใหญ่ที่เสนอบทเรียน Hour of Code จะมีหลักสูตรสำหรับไปต่อด้วย เพื่อที่จะช่วยคุณเริ่มต้น เราได้เน้น[ผู้จัดหาหลักสูตรจำนวนหนึ่งที่จะช่วยคุณหรือนักเรียนของคุณไปต่อได้มากกว่าแค่หนึ่งชั่วโมง](https://hourofcode.com/beyond)
+<% else %> Hour of Code เป็นแค่จุดเริ่มต้น Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-Code.org ยังเสนอ[หลักสูตรวิชาวิทยาการคอมพิวเตอร์เบื้องต้น](https://code.org/educate/curriculum/cs-fundamentals-international)แบบเต็ม ที่แปลแล้วมากกว่า 25 ภาษา โดยไม่มีค่าใช้จ่ายสำหรับคุณหรือโรงเรียนของคุณ <% end %>
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

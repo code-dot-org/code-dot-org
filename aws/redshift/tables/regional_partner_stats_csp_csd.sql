@@ -43,14 +43,13 @@ teachers_trained_2017 as
 select tt17.*, u.studio_person_id
   FROM analysis_pii.teachers_trained_2017 tt17
   JOIN dashboard_production.users u 
-        ON tt17.user_id = u.id
-        )
-        
+    ON tt17.user_id = u.id
+)      
   SELECT distinct 
          d.studio_person_id,
-         coalesce(tt17.first_name, pd16.first_name) as first_name,
-         coalesce(tt17.last_name, pd16.last_name) as last_name,
-         coalesce(tt17.email, pd16.email) as email,
+         coalesce(tt18.first_name, tt17.first_name, pd16.first_name) as first_name,
+         coalesce(tt18.last_name, tt17.last_name, pd16.last_name) as last_name,
+         coalesce(tt18.email, tt17.email, pd16.email) as email,
          d.course,
          d.school_year as school_year_trained,
          s.school_year as school_year_taught,
@@ -84,6 +83,8 @@ select tt17.*, u.studio_person_id
          sa.students_hawaiian,
          sa.students_race
   FROM analysis.csp_csd_teachers_trained d
+  LEFT JOIN analysis_pii.teachers_trained_2018 tt18
+        ON d.studio_person_id = tt18.studio_person_id
   LEFT JOIN teachers_trained_2017 tt17
         ON d.studio_person_id = tt17.studio_person_id
   LEFT JOIN pd_enrollments_2016 pd16
