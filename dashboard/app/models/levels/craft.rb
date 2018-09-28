@@ -63,6 +63,7 @@ class Craft < Blockly
     :use_player,
     :free_play,
     :ocean,
+    :boat,
     :songs
   )
 
@@ -207,6 +208,7 @@ class Craft < Blockly
     redCoralFanRight: true,
     yellowCoralFanRight: true,
     seaPickles: true,
+    chest: true,
   }.freeze
 
   ALL_MINIBLOCKS = {
