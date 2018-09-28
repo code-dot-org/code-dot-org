@@ -62,8 +62,8 @@ module SignUpTracking
         event: "#{sign_up_type}-sign-up-#{result}",
         data_string: session[:sign_up_uid],
         data_json: {
-          detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST).to_json,
-          errors: user.errors&.messages
+          detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST),
+          errors: user.errors&.full_messages
         }.to_json
       }
       FirehoseClient.instance.put_record(tracking_data)
