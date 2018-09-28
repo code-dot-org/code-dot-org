@@ -18,11 +18,6 @@ class RegistrationsController < Devise::RegistrationsController
     else
       @already_hoc_registered = params[:already_hoc_registered]
       SignUpTracking.begin_sign_up_tracking(session)
-      FirehoseClient.instance.put_record(
-        study: 'account-sign-up',
-        event: 'load-sign-up-page',
-        data_string: session[:sign_up_uid]
-      )
       super
     end
   end

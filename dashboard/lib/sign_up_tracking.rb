@@ -2,9 +2,10 @@ require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 module SignUpTracking
-  NOT_IN_STUDY_GROUP = 'v1'
-  CONTROL_GROUP = 'v2-control'
-  NEW_SIGN_UP_GROUP = 'v2-finish-sign-up'
+  STUDY_NAME = 'account-sign-up-v2'
+  NOT_IN_STUDY_GROUP = 'not-in-study'
+  CONTROL_GROUP = 'control'
+  NEW_SIGN_UP_GROUP = 'experiment'
 
   USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
 
@@ -28,6 +29,12 @@ module SignUpTracking
     end
   end
 
+  def self.end_sign_up_tracking(session)
+    session.delete(:sign_up_tracking_expiration)
+    session.delete(:sign_up_uid)
+    session.delete(:sign_up_study_group)
+  end
+
   # DCDO 'sign_up_split_test' can be used to dynamically configure how many
   #   users see the new sign up experience.
   # When 0 (default) sends no users to new experience.
@@ -37,17 +44,47 @@ module SignUpTracking
     DCDO.get('sign_up_split_test', 0)
   end
 
+  def self.log_load_sign_up(session)
+    FirehoseClient.instance.put_record(
+      study: STUDY_NAME,
+      event: 'load-sign-up-page',
+      data_string: session[:sign_up_uid]
+    )
+  end
+
+  def self.log_load_finish_sign_up(session)
+    FirehoseClient.instance.put_record(
+      study: STUDY_NAME,
+      study_group: study_group(session),
+      event: 'load-finish-sign-up-page',
+      data_string: session[:sign_up_uid]
+    )
+  end
+
+  def self.log_oauth_callback(provider, session)
+    return unless provider && session
+    if session[:sign_up_tracking_expiration]&.future?
+      FirehoseClient.instance.put_record(
+        study: STUDY_NAME,
+        study_group: study_group(session),
+        event: "#{provider}-callback",
+        data_string: session[:sign_up_uid]
+      )
+    end
+  end
+
   def self.log_sign_in(user, session, request)
     return unless user && session && request
     provider = request.env['omniauth.auth'].provider.to_s
     if session[:sign_up_tracking_expiration]&.future?
       tracking_data = {
-        study: 'account-sign-up',
+        study: STUDY_NAME,
         event: "#{provider}-sign-in",
         data_string: session[:sign_up_uid]
       }
       FirehoseClient.instance.put_record(tracking_data)
     end
+    end_sign_up_tracking session
   end
 
   def self.log_sign_up_result(user, session)
@@ -57,7 +94,7 @@ module SignUpTracking
     if session[:sign_up_tracking_expiration]&.future?
       result = user.persisted? ? 'success' : 'error'
       tracking_data = {
-        study: 'account-sign-up',
+        study: STUDY_NAME,
         study_group: study_group(session),
         event: "#{sign_up_type}-sign-up-#{result}",
         data_string: session[:sign_up_uid],
@@ -68,5 +105,6 @@ module SignUpTracking
       }
       FirehoseClient.instance.put_record(tracking_data)
     end
+    end_sign_up_tracking session if user.persisted?
   end
 end
