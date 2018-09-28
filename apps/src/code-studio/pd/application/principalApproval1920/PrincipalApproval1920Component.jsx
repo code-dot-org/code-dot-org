@@ -129,7 +129,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           [TextFields.dontKnowExplain] : "other"
         })}
         {
-          this.props.data.replaceCourse === 'Yes' && this.renderCourseReplacementSection()
+          this.props.data.replaceCourse === 'Yes, it will replace an existing computer science course.' && this.renderCourseReplacementSection()
         }
         {this.renderImplementationSection()}
         {
