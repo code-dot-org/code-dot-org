@@ -79,6 +79,39 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
+    test "fail to finish sign-up" do
+      auth_hash = mock_oauth
+
+      get '/users/sign_up'
+      sign_in_through_google
+      assert_redirected_to '/users/sign_up'
+      follow_redirect!
+      assert_template partial: '_sign_up'
+
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_sign_up'
+
+      # Let's try that one more time...
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_sign_up'
+
+      assert_sign_up_tracking(
+        'v2-control',
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          google_oauth2-sign-up-error
+          load-sign-up-page
+          load-sign-up-page
+          google_oauth2-sign-up-error
+          load-sign-up-page
+          google_oauth2-sign-up-error
+        )
+      )
+    end
+
     test "student sign-up (new sign-up flow)" do
       auth_hash = mock_oauth
       SignUpTracking.stubs(:split_test_percentage).returns(100)
@@ -141,6 +174,39 @@ module OmniauthCallbacksControllerTests
       )
     ensure
       created_user&.destroy!
+    end
+
+    test "fail to finish sign-up (new sign-up flow)" do
+      auth_hash = mock_oauth
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
+
+      get '/users/sign_up'
+      sign_in_through_google
+      assert_redirected_to '/users/sign_up'
+      follow_redirect!
+      assert_template partial: '_finish_sign_up'
+
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_finish_sign_up'
+
+      # Let's try that one more time...
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_finish_sign_up'
+
+      assert_sign_up_tracking(
+        'v2-finish-sign-up',
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          load-finish-sign-up-page
+          load-finish-sign-up-page
+          google_oauth2-sign-up-error
+          load-finish-sign-up-page
+          google_oauth2-sign-up-error
+        )
+      )
     end
 
     test "student sign-in" do
