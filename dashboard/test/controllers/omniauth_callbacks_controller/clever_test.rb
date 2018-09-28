@@ -86,6 +86,7 @@ module OmniauthCallbacksControllerTests
         'v2-finish-sign-up',
         %w(
           clever-callback
+          load-finish-sign-up-page
           clever-sign-up-success
         )
       )
@@ -114,6 +115,7 @@ module OmniauthCallbacksControllerTests
         'v2-finish-sign-up',
         %w(
           clever-callback
+          load-finish-sign-up-page
           clever-sign-up-success
         )
       )
