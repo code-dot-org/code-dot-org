@@ -193,21 +193,14 @@ GameLabP5.prototype.getMarshallableP5Properties = function () {
 GameLabP5.prototype.getGlobalPropertyList = function () {
   const propList = {};
 
-  // Include every property on the p5 instance in the global property list
-  // except those on the custom marshal lists:
-  const p5PropertyNames = this.getMarshallableP5Properties();
-  for (const prop of p5PropertyNames) {
-    propList[prop] = [this.p5[prop], this.p5];
-  }
-
   // Create a 'p5' object in the global namespace:
-  propList.p5 = [this.p5, window];
+  propList.p5 = this.p5;
 
-  propList.console = [console, window];
+  propList.console = console;
 
   if (this.danceAPI) {
     // Create a 'Dance' object in the global namespace:
-    propList.Dance = [this.danceAPI, this];
+    propList.Dance = this.danceAPI;
   }
 
   return propList;

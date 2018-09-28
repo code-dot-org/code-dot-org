@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-vars, curly, eqeqeq */
-/* global p5, Dance, World, validationProps */
+/* global p5, Dance, validationProps */
+
+export default function init(p5, Dance) {
+  var exports = {};
 
 // Event handlers, loops, and callbacks
 var inputEvents = [];
@@ -130,7 +133,7 @@ var songs = {
 };
 var song_meta = songs.macklemore;
 
-function preload() {
+exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
 
@@ -149,7 +152,7 @@ function preload() {
   }
 }
 
-function setup() {
+exports.setup = function setup() {
   // Create animations from spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
     var this_sprite = SPRITE_NAMES[i];
@@ -336,15 +339,15 @@ var fg_effects = new Effects(0.8);
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;
 
-export function setBackground(color) {
+exports.setBackground = function setBackground(color) {
   World.background_color = color;
 }
 
-export function setBackgroundEffect(effect) {
+exports.setBackgroundEffect = function setBackgroundEffect(effect) {
   World.bg_effect = bg_effects[effect];
 }
 
-export function setForegroundEffect(effect) {
+exports.setForegroundEffect = function setForegroundEffect(effect) {
   World.fg_effect = fg_effects[effect];
 }
 
@@ -357,7 +360,7 @@ function initialize(setupHandler) {
 //
 
 
-export function makeNewDanceSprite(costume, name, location) {
+exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location) {
 
   // Default to first dancer if selected a dancer that doesn't exist
   // to account for low-bandwidth mode limited character set
@@ -454,7 +457,7 @@ export function makeNewDanceSprite(costume, name, location) {
 
 // Dance Moves
 
-export function changeMoveLR(sprite, move, dir) {
+exports.changeMoveLR = function changeMoveLR(sprite, move, dir) {
   if (!spriteExists(sprite)) return;
   if (move == "next") {
     move = 1 + ((sprite.current_move + 1) % (ANIMATIONS[sprite.style].length - 1));
@@ -475,7 +478,7 @@ export function changeMoveLR(sprite, move, dir) {
   sprite.current_move = move;
 }
 
-export function doMoveLR(sprite, move, dir) {
+exports.doMoveLR = function doMoveLR(sprite, move, dir) {
   if (!spriteExists(sprite)) return;
   if (move == "next") {
     move = (sprite.current_move + 1) % ANIMATIONS[sprite.style].length;
@@ -493,7 +496,7 @@ export function doMoveLR(sprite, move, dir) {
   sprite.animation.changeFrame(FRAMES / 2);
 }
 
-export function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
+exports.ifDanceIs = function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
   if (!spriteExists(sprite)) return;
   if (sprite.current_dance == dance) {
     ifStatement();
@@ -504,7 +507,7 @@ export function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
 
 // Group Blocks
 
-export function changeMoveEachLR(group, move, dir) {
+exports.changeMoveEachLR = function changeMoveEachLR(group, move, dir) {
   if (typeof (group) == "string") {
     if (!sprites_by_type.hasOwnProperty(group)) {
       console.log("There is no group of " + group);
@@ -517,7 +520,7 @@ export function changeMoveEachLR(group, move, dir) {
   });
 }
 
-export function doMoveEachLR(group, move, dir) {
+exports.doMoveEachLR = function doMoveEachLR(group, move, dir) {
   if (typeof(group) == "string") {
     if (!sprites_by_type.hasOwnProperty(group)) {
       console.log("There is no group of " + group);
@@ -528,7 +531,7 @@ export function doMoveEachLR(group, move, dir) {
   group.forEach(function (sprite) { doMoveLR(sprite, move, dir);});
 }
 
-export function layoutSprites(group, format) {
+exports.layoutSprites = function layoutSprites(group, format) {
   if (typeof(group) == "string") {
     if (!sprites_by_type.hasOwnProperty(group)) {
       console.log("There is no group of " + group);
@@ -578,11 +581,11 @@ export function layoutSprites(group, format) {
 
 // Properties
 
-export function setTint(sprite, val) {
+exports.setTint = function setTint(sprite, val) {
   setProp(sprite, "tint", val);
 }
 
-export function setProp(sprite, property, val) {
+exports.setProp = function setProp(sprite, property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
 
   if (property == "scale") {
@@ -600,7 +603,7 @@ export function setProp(sprite, property, val) {
   }
 }
 
-export function getProp(sprite, property) {
+exports.getProp = function getProp(sprite, property) {
   if (!spriteExists(sprite)) return;
 
   if (property == "scale") {
@@ -618,7 +621,7 @@ export function getProp(sprite, property) {
   }
 }
 
-export function changePropBy(sprite,  property, val) {
+exports.changePropBy = function changePropBy(sprite,  property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
 
   if (property == "scale") {
@@ -637,20 +640,20 @@ export function changePropBy(sprite,  property, val) {
   }
 }
 
-export function jumpTo(sprite, location) {
+exports.jumpTo = function jumpTo(sprite, location) {
   if (!spriteExists(sprite)) return;
   sprite.x = location.x;
   sprite.y = location.y;
 }
 
-export function setDanceSpeed(sprite, speed) {
+exports.setDanceSpeed = function setDanceSpeed(sprite, speed) {
   if (!spriteExists(sprite)) return;
   sprite.dance_speed = speed;
 }
 
 // Music Helpers
 
-export function getEnergy(range) {
+exports.getEnergy = function getEnergy(range) {
   if (range == "low") {
     return Dance.fft.getEnergy(20, 200);
   } else if (range == "mid") {
@@ -660,11 +663,11 @@ export function getEnergy(range) {
   }
 }
 
-export function nMeasures(n) {
+exports.nMeasures = function nMeasures(n) {
   return (240 * n) / song_meta.bpm;
 }
 
-export function getTime(unit) {
+exports.getTime = function getTime(unit) {
   if (unit == "measures") {
     return song_meta.bpm * (Dance.song.currentTime(0) / 240);
   } else {
@@ -674,7 +677,7 @@ export function getTime(unit) {
 
 // Music Events
 
-export function atTimestamp(timestamp, unit, event) {
+exports.atTimestamp = function atTimestamp(timestamp, unit, event) {
   registerSetup(function () {
     if (unit == "measures") {
       timestamp = nMeasures(timestamp);
@@ -684,7 +687,7 @@ export function atTimestamp(timestamp, unit, event) {
   });
 }
 
-export function everySeconds(n, unit, event) {
+exports.everySeconds = function everySeconds(n, unit, event) {
   registerSetup(function () {
     if (unit == "measures") n = nMeasures(n);
     if (n > 0) {
@@ -697,7 +700,7 @@ export function everySeconds(n, unit, event) {
   });
 }
 
-export function everySecondsRange(n, unit, start, stop, event) {
+exports.everySecondsRange = function everySecondsRange(n, unit, start, stop, event) {
   registerSetup(function () {
     if (unit == "measures") n = nMeasures(n);
     if (n > 0) {
@@ -710,7 +713,7 @@ export function everySecondsRange(n, unit, start, stop, event) {
   });
 }
 
-export function everyVerseChorus(unit, event) {
+exports.everyVerseChorus = function everyVerseChorus(unit, event) {
   registerSetup(function () {
     song_meta[unit].forEach(function (timestamp) {
       Dance.song.addCue(0, timestamp, event);
@@ -789,7 +792,7 @@ function behaviorsEqual(behavior1, behavior2) {
   return extraArgsEqual;
 }
 
-export function startMapping(sprite, property, range) {
+exports.startMapping = function startMapping(sprite, property, range) {
   var behavior = new Behavior(function (sprite) {
     var energy = Dance.fft.getEnergy(range);
     if (property == "x") {
@@ -812,7 +815,7 @@ export function startMapping(sprite, property, range) {
   addBehavior(sprite, behavior);
 }
 
-export function stopMapping(sprite, property, range) {
+exports.stopMapping = function stopMapping(sprite, property, range) {
   var behavior = new Behavior(function (sprite) {
     var energy = Dance.fft.getEnergy(range);
     if (property == "x") {
@@ -837,16 +840,16 @@ export function stopMapping(sprite, property, range) {
 
 //Events
 
-export function whenSetup(event) {
+exports.whenSetup = function whenSetup(event) {
   setupCallbacks.push(event);
 }
 
-export function whenSetupSong(song, event) {
+exports.whenSetupSong = function whenSetupSong(song, event) {
   song_meta = songs[song];
   setupCallbacks.push(event);
 }
 
-export function whenKey(key, event) {
+exports.whenKey = function whenKey(key, event) {
   inputEvents.push({
     type: p5.keyWentDown,
     event: event,
@@ -854,7 +857,7 @@ export function whenKey(key, event) {
   });
 }
 
-export function whenPeak(range, event) {
+exports.whenPeak = function whenPeak(range, event) {
   /*
   // This approach only allows one event handler per beat detector
   Dance.fft.onPeak(range, event);
@@ -878,7 +881,7 @@ function registerSetup(callback) {
 
 // Miscellaneus Helpers
 
-export function changeColorBy(input, method, amount) {
+exports.changeColorBy = function changeColorBy(input, method, amount) {
   p5.push();
   p5.colorMode(p5.HSB, 100);
   var c = p5.color(input);
@@ -893,11 +896,11 @@ export function changeColorBy(input, method, amount) {
   return new_c;
 }
 
-export function mixColors(color1, color2) {
+exports.mixColors = function mixColors(color1, color2) {
   return p5.lerpColor(p5.color(color1), p5.color(color2), 0.5);
 }
 
-export function randomColor() {
+exports.randomColor = function randomColor() {
   return p5.color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
 }
 
@@ -905,7 +908,7 @@ function spriteExists(sprite) {
   return p5.allSprites.indexOf(sprite) > -1;
 }
 
-function draw() {
+exports.draw = function draw() {
   Dance.fft.analyze();
 
   p5.background("white");
@@ -1028,4 +1031,6 @@ function draw() {
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
   p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+}
+  return exports;
 }
