@@ -1,123 +1,123 @@
 ---
 mt:
   data:
-    instructions:
-      20hr_maze_stage2_19_instruction: Ezempju iehor tal-blokka "if-else", jirnexxilek
+    short_instructions:
+      20hr_maze_stage2_19: Ezempju iehor tal-blokka "if-else", jirnexxilek
         taghmila ma l'ewwel darba?
-      App Lab test_instruction: prova
-      Course 4 Bee Params 5_instruction: Ejja nibdew mill-bidu - tista toħloq funzjoni
+      App Lab test: prova
+      Course 4 Bee Params 5: Ejja nibdew mill-bidu - tista toħloq funzjoni
         ġdid imsejjħa "Ikseb nettaru 5" b'parametru direzzjonali?
-      Infinity_catch_instruction: Tistgha iggieghel il-Elsa ("attur 2") tilhaq il-Anna
+      Infinity_catch: Tistgha iggieghel il-Elsa ("attur 2") tilhaq il-Anna
         billi tuza l'Arrow Keys (Keys bil-vlegeg)?
-      Infinity_finale_instruction: Ohloq kull ma jogbok u qassamha!
-      Infinity_move_collide_instruction: Hiro huwa "attur 1". Mexxih lejn Baymax,
+      Infinity_finale: Ohloq kull ma jogbok u qassamha!
+      Infinity_move_collide: Hiro huwa "attur 1". Mexxih lejn Baymax,
         u ghamel hoss meta jmissu.
-      Infinity_move_directions_instruction: Baymax huwa "attur 2". Zid Blokki "Mexxi"
+      Infinity_move_directions: Baymax huwa "attur 2". Zid Blokki "Mexxi"
         u mexxi il Baymax billi tuza l'Arrow Keys. Ghalu jmiss liz-zewg karattri l'ohra.
-      Infinity_move_right_instruction: Hiro huwa "attur 1".  Uża l-Blokk "Mexxi" biex
+      Infinity_move_right: Hiro huwa "attur 1".  Uża l-Blokk "Mexxi" biex
         tmexxi dritt il-Hiro biex imiss il-Baymax.
-      Infinity_repeat_instruction: Uza il-Blokka "Irrepeti ghal-Dejjem" biex tmexxi
+      Infinity_repeat: Uza il-Blokka "Irrepeti ghal-Dejjem" biex tmexxi
         il Anna 400pixels il-fuq jew l-isfel.
-      Infinity_say_instruction: Ghamel il Anna tighd "Hello" billi tuza il-Blokka
+      Infinity_say: Ghamel il Anna tighd "Hello" billi tuza il-Blokka
         "Ghid" / "Say".
-      Infinity_shoot_instruction: Baymax huwa "attur 2". Gijel il-Baymax jitfa rokit
+      Infinity_shoot: Baymax huwa "attur 2". Gijel il-Baymax jitfa rokit
         il-Hiro.
-      Infinity_shoot_directions_instruction: Hiro huwa "attur 3". Gijel il-Hiro jitfla
+      Infinity_shoot_directions: Hiro huwa "attur 3". Gijel il-Hiro jitfla
         projectile lill-kull wiehed mil-4 karattri / atturi. Stenna sekonda bejn kull
         tefa'.
-      Infinity_touch_faster_instruction: Miss aktar snowflakes!
-      Infinity_touch_four_instruction: Miexxi il-Anna, il-fuq l'isfel lejn il-lemin
+      Infinity_touch_faster: Miss aktar snowflakes!
+      Infinity_touch_four: Miexxi il-Anna, il-fuq l'isfel lejn il-lemin
         u xellug biex tmiss kull wahda mill-erbgha snowflakes.
-      Infinity_touch_score_instruction: Ghamel il Anna tiehu puntegg kull darba li
+      Infinity_touch_score: Ghamel il Anna tiehu puntegg kull darba li
         tmiss snowflake. Imbghad kilkkja "Run" u suqa biex tmiss kull snowflake.
-      New Gumball Project_instruction: Ohloq kull ma jogbok u qassamha!
-      New Ice Age Project_instruction: Ohloq kull ma jogbok u qassamha!
-      New Infinity Project_instruction: Ohloq kull ma jogbok u qassamha!
-      SpecialFrozenLevel_instruction: Inti sirt ufficjalment Artist Mustaccun! Ohloq
+      New Gumball Project: Ohloq kull ma jogbok u qassamha!
+      New Ice Age Project: Ohloq kull ma jogbok u qassamha!
+      New Infinity Project: Ohloq kull ma jogbok u qassamha!
+      SpecialFrozenLevel: Inti sirt ufficjalment Artist Mustaccun! Ohloq
         art tax-xitwa magika.
-      frozen circle function in circle_instruction: Issa ejja noħloqu 20 ċirku li
+      frozen circle function in circle: Issa ejja noħloqu 20 ċirku li
         jirkbu fuq xulxin, dawwar 18 il-grad bejn kull ċirku.
-      frozen circle function with parameter_instruction: "Hawn huwa Blokk \"Oħloq
+      frozen circle function with parameter: "Hawn huwa Blokk \"Oħloq
         ċirku\" \nli jistgħA jagħmEL ċrieki ta ' daqsijiet differenti. Tista ' tuża
         dan il-blokk biex tohloq ċirku żgħir ta ' daqs 5 u ċirku ikbar ta ' daqs 10?"
-      frozen circle function_instruction: Uża l-Blokk ġdid "Oħloq ċirku" biex toħloq
+      frozen circle function: Uża l-Blokk ġdid "Oħloq ċirku" biex toħloq
         10 ċrieki jirkbu fuq xulxin. Tinsiex taqbeż il-quddiem bejn cirku u iehor.
-      frozen circle_instruction: Ċirku huwa forma speċjali. Tistgħa tahseb f'numru
+      frozen circle: Ċirku huwa forma speċjali. Tistgħa tahseb f'numru
         biex jissostitwixxi (?) biex tpingi cirku?
-      frozen cross rotate dense_instruction: 'Ejja nirrepetu 90 darba! Kemm il darba
+      frozen cross rotate dense: 'Ejja nirrepetu 90 darba! Kemm il darba
         90 jithol f''360? Hjiel: Huwa numru verament zghir.'
-      frozen cross rotate_instruction: Issa ejja nipprovaw nirrepetu 10 darbiet. Kemm
+      frozen cross rotate: Issa ejja nipprovaw nirrepetu 10 darbiet. Kemm
         għandek bżonn idawwar gradi bejn kull linja?
-      frozen diamond snowflake_instruction: Issa, ejja noħolqu snowflake ġdida bl-użu
+      frozen diamond snowflake: Issa, ejja noħolqu snowflake ġdida bl-użu
         ta ' l-Blokk Irrepeti biex nirrepetu l-parallelogram 10 darbiet, u induru
         lejn il-lemin b'36 grad bejn kull wieħed.
-      frozen freeplay_instruction: Inti sirt ufficjalment Artist Mustaccun! Ohloq
+      frozen freeplay: Inti sirt ufficjalment Artist Mustaccun! Ohloq
         art tax-xitwa magika.
-      frozen line_instruction: Hello!  Jien Elsa minn Arendelle. Ghinni npingi linja.
-      frozen perpendicular_instruction: Issa ejja naraw jekk jirnexxilnix noholqu
+      frozen line: Hello!  Jien Elsa minn Arendelle. Ghinni npingi linja.
+      frozen perpendicular: Issa ejja naraw jekk jirnexxilnix noholqu
         zewg linji li qeghdin 90 grad min xulxin. Ha jkollok bzonn tuza il Blokka
         "Turn" / "Dawwar" w anke il Blokka "Mexxi"/"Move".
-      frozen snowflake branch_instruction: Prova uza il blokka "Create a snowflake
+      frozen snowflake branch: Prova uza il blokka "Create a snowflake
         branch" biex tohloq tlett ferghat, hekk tibda tidher qisha borra/snowflake.
-      frozen snowflake full_instruction: Issa ejja nirrepetu kollox 8 darbiet, ha
+      frozen snowflake full: Issa ejja nirrepetu kollox 8 darbiet, ha
         naghmlu snowflake sabiha.
-      frozen snowflower_instruction: Forom ta snowflakes kumplikati jistghu jigu krejati
+      frozen snowflower: Forom ta snowflakes kumplikati jistghu jigu krejati
         billi tiza ftit forom semplici. Tistgha tahmel forma billi tirripeti 5 criki
         ta qis 5 u 5 ohra ta qis 10?
-      frozen square iterative_instruction: Jidher li wasalna nofs triq biex naghmlu
+      frozen square iterative: Jidher li wasalna nofs triq biex naghmlu
         kaxxa. Ejja nitfghu 4 linji flimkien biex noholqu kaxxa.
-      frozen square loop 3x_instruction: Ejja nikrejaw tlett kaxxi, induru wara kull
+      frozen square loop 3x: Ejja nikrejaw tlett kaxxi, induru wara kull
         kaxxa. Kunu certi li iddawru b'120 grad qabel ma tikrejaw kull kaxxa.
-      frozen square loop_instruction: Hello, Jien Anna ta Arendelle!, Ejja noholqu
+      frozen square loop: Hello, Jien Anna ta Arendelle!, Ejja noholqu
         kaxxa billi nuzaw il-Blokka "Irrepeti" / "Repeat", b'hekk nuzaw inqas blokki.
         Kemm il darba (???)  il-Blokka "Irrepeti" trid tirrepeti il Blokkok l'ohra
         ta go fijha biex taghmel kaxxa?
-      frozen square snowflake_instruction: Tistgha tohloq snowflake billi tuza il
+      frozen square snowflake: Tistgha tohloq snowflake billi tuza il
         Blokka "Irrepeti" / "Repeat" bix taghmel kaxxa 10 darbiet, u il Blokka "Dawwar"
         / "Turn" biex idawwar kull kaxxa 36 grad?
-      grade4_frozen_freeplay_instruction: Inti sirt ufficjalment Artist Mustaccun!
+      grade4_frozen_freeplay: Inti sirt ufficjalment Artist Mustaccun!
         Ohloq art tax-xitwa magika.
-      grade4_frozen_functions1a_instruction: Uża l-Blokk ġdid "Oħloq ċirku" biex toħloq
+      grade4_frozen_functions1a: Uża l-Blokk ġdid "Oħloq ċirku" biex toħloq
         10 ċrieki jirkbu fuq xulxin. Tinsiex taqbeż il-quddiem bejn cirku u iehor.
-      grade4_frozen_functions2_instruction: Issa ejja noħloqu 20 ċirku li jirkbu fuq
+      grade4_frozen_functions2: Issa ejja noħloqu 20 ċirku li jirkbu fuq
         xulxin, dawwar 18 il-grad bejn kull ċirku.
-      grade4_frozen_functions3_instruction: "Hawn huwa Blokk \"Oħloq ċirku\" \nli
+      grade4_frozen_functions3: "Hawn huwa Blokk \"Oħloq ċirku\" \nli
         jistgħA jagħmEL ċrieki ta ' daqsijiet differenti. Tista ' tuża dan il-blokk
         biex tohloq ċirku żgħir ta ' daqs 5 u ċirku ikbar ta ' daqs 10?"
-      grade4_frozen_functions4_instruction: Forom ta snowflakes kumplikati jistghu
+      grade4_frozen_functions4: Forom ta snowflakes kumplikati jistghu
         jigu krejati billi tiza ftit forom semplici. Tistgha tahmel forma billi tirripeti
         5 criki ta qis 5 u 5 ohra ta qis 10?
-      grade4_frozen_nested_loop_diamonds3_instruction: Issa, ejja noħolqu snowflake
+      grade4_frozen_nested_loop_diamonds3: Issa, ejja noħolqu snowflake
         ġdida bl-użu ta ' l-Blokk Irrepeti biex nirrepetu l-parallelogram 10 darbiet,
         u induru lejn il-lemin b'36 grad bejn kull wieħed.
-      grade4_frozen_square_instruction: Hello, Jien Anna ta Arendelle!, Ejja noholqu
+      grade4_frozen_square: Hello, Jien Anna ta Arendelle!, Ejja noholqu
         kaxxa billi nuzaw il-Blokka "Irrepeti" / "Repeat", b'hekk nuzaw inqas blokki.
         Kemm il darba (???)  il-Blokka "Irrepeti" trid tirrepeti il Blokkok l'ohra
         ta go fijha biex taghmel kaxxa?
-      grade4_frozen_square_loop1_instruction: Hello, Jien Anna ta Arendelle!, Ejja
+      grade4_frozen_square_loop1: Hello, Jien Anna ta Arendelle!, Ejja
         noholqu kaxxa billi nuzaw il-Blokka "Irrepeti" / "Repeat", b'hekk nuzaw inqas
         blokki. Kemm il darba (???)  il-Blokka "Irrepeti" trid tirrepeti il Blokkok
         l'ohra ta go fijha biex taghmel kaxxa?
-      grade4_frozen_square_loop2_instruction: Ejja nikrejaw tlett kaxxi, induru wara
+      grade4_frozen_square_loop2: Ejja nikrejaw tlett kaxxi, induru wara
         kull kaxxa. Kunu certi li iddawru b'120 grad qabel ma tikrejaw kull kaxxa.
-      grade4_frozen_square_loop3_instruction: Tistgha tohloq snowflake billi tuza
+      grade4_frozen_square_loop3: Tistgha tohloq snowflake billi tuza
         il Blokka "Irrepeti" / "Repeat" bix taghmel kaxxa 10 darbiet, u il Blokka
         "Dawwar" / "Turn" biex idawwar kull kaxxa 36 grad?
-      scrat 16 (copy 1)_instruction: Acorn! Acorn! Acorn! Uża l-Blokka "jekk"/"if"
+      scrat 16 (copy 1): Acorn! Acorn! Acorn! Uża l-Blokka "jekk"/"if"
         biex twassalni hemm bl'inqas numru ta ' blokki.
-      scrat 16_instruction: Acorn! Acorn! Acorn! Uża l-Blokka "jekk"/"if" biex twassalni
+      scrat 16: Acorn! Acorn! Acorn! Uża l-Blokka "jekk"/"if" biex twassalni
         hemm bl'inqas numru ta ' blokki.
-      scrat 17_instruction: TAJJEB, ejja nerġgħu naghmluha għall-prattika – din mhux
+      scrat 17: TAJJEB, ejja nerġgħu naghmluha għall-prattika – din mhux
         differenti ħafna, imma oqghod attent għall-ħajt!
-      scrat 18 (copy 1)_instruction: Il-blokka "If-else" ticcekja kundizzjoni, imbghad
+      scrat 18 (copy 1): Il-blokka "If-else" ticcekja kundizzjoni, imbghad
         taghmel haga jew ohra. Prova wassalni sac-cipressa billi tuza din il blokka
         gdida.
-      scrat 18_instruction: Il-blokka "If-else" ticcekja kundizzjoni, imbghad taghmel
+      scrat 18: Il-blokka "If-else" ticcekja kundizzjoni, imbghad taghmel
         haga jew ohra. Prova wassalni sac-cipressa billi tuza din il blokka gdida.
-      scrat 19 (copy 1)_instruction: Ezempju iehor tal-blokka "if-else", jirnexxilek
+      scrat 19 (copy 1): Ezempju iehor tal-blokka "if-else", jirnexxilek
         taghmila ma l'ewwel darba?
-      scrat 19_instruction: Ezempju iehor tal-blokka "if-else", jirnexxilek taghmila
+      scrat 19: Ezempju iehor tal-blokka "if-else", jirnexxilek taghmila
         ma l'ewwel darba?
-      scrat 20_instruction: Tistgha izzid tlett (3) blokks biss bighx tighni insolvi
+      scrat 20: Tistgha izzid tlett (3) blokks biss bighx tighni insolvi
         il-maze? Jekk taghmila sew, Nistgha nimxi kwalunkwe moghdija sserrep irrispettivament
         mit-tul. Ghaggel! Is-silg qed idub!
