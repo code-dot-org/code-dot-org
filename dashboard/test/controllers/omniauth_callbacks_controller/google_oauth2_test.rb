@@ -185,7 +185,7 @@ module OmniauthCallbacksControllerTests
       teacher = create(:teacher, :unmigrated_google_sso, uid: auth_hash.uid)
 
       get '/users/sign_up'
-      sign_in_through_google
+      refute_creates(User) {sign_in_through_google}
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
