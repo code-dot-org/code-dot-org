@@ -1,7 +1,5 @@
-/* eslint-disable */
-// Low bandwidth pressure valve
-var LOW_BAND = false;
-if (LOW_BAND) console.log("Running in low bandwidth mode. A limited set of sprites are available (including cat, dog, duck, and moose)");
+/* eslint-disable no-unused-vars, curly, eqeqeq */
+/* global p5, Dance, World, validationProps, unit */
 
 // Event handlers, loops, and callbacks
 var inputEvents = [];
@@ -14,19 +12,17 @@ var loops = [];
 console.log('hello');
 console.log(p5);
 
+function randomNumber(min, max) {
+  return Math.floor(p5.random(min, max));
+}
+
 // Sprites
 var sprites = p5.createGroup();
 var sprites_by_type = {};
 
-if (LOW_BAND) {
-  var SPRITE_NAMES = ["CAT", "DOG", "DUCK", "MOOSE"];
-  var img_base = "https://curriculum.code.org/images/sprites/spritesheet_exsm/";
-  var SIZE = 200;
-} else {
-  var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
-  var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
-  var SIZE = 300;
-}
+var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
+var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
+var SIZE = 300;
 
 var MOVE_NAMES = [
   {
@@ -129,9 +125,6 @@ var songs = {
   }
 };
 var song_meta = songs.macklemore;
-var processed_peaks;
-var lead_dancers = createGroup();
-var backup_dancers = createGroup();
 
 function preload() {
   // Load song
@@ -144,7 +137,7 @@ function preload() {
     for (var j = 0; j < MOVE_NAMES.length; j++) {
       var url = img_base + this_sprite + "_" + MOVE_NAMES[j].name + ".png";
       var dance = {
-        spritesheet: loadSpriteSheet(url, SIZE, SIZE, FRAMES),
+        spritesheet: p5.loadSpriteSheet(url, SIZE, SIZE, FRAMES),
         mirror: MOVE_NAMES[j].mirror
       };
       ANIMATIONS[this_sprite].push(dance);
@@ -157,7 +150,7 @@ function setup() {
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
     var this_sprite = SPRITE_NAMES[i];
     for (var j = 0; j < ANIMATIONS[this_sprite].length; j++) {
-      ANIMATIONS[this_sprite][j].animation = loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
+      ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
   }
 
@@ -168,12 +161,6 @@ function setup() {
   Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / song_meta.bpm) * World.frameRate));
   Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / song_meta.bpm) * World.frameRate));
   Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / song_meta.bpm) * World.frameRate));
-  /*
-  Dance.song.processPeaks(0, function(peaks) {
-    console.log(peaks);
-    processed_peaks = peaks;
-  });
-  */
 
   Dance.song.start();
 }
@@ -183,23 +170,25 @@ function setup() {
 function Effects(alpha, blend) {
   var self = this;
   this.alpha = alpha || 1;
-  this.blend = blend || BLEND;
+  this.blend = blend || p5.BLEND;
   this.none = {
     draw: function () {
-      background(World.background_color || "white");
+      p5.background(World.background_color || "white");
     }
   };
   this.rainbow = {
-    color: color('hsla(0, 100%, 80%, ' + self.alpha + ')'),
+    color: p5.color('hsla(0, 100%, 80%, ' + self.alpha + ')'),
     update: function () {
-      push();
-      colorMode(HSL);
-      this.color = color(this.color._getHue() + 10, 100, 80, self.alpha);
-      pop();
+      p5.push();
+      p5.colorMode(p5.HSL);
+      this.color = p5.color(this.color._getHue() + 10, 100, 80, self.alpha);
+      p5.pop();
     },
     draw: function () {
-      if (Dance.fft.isPeak()) this.update();
-      background(this.color);
+      if (Dance.fft.isPeak()) {
+        this.update();
+      }
+      p5.background(this.color);
     }
   };
   this.disco = {
@@ -208,23 +197,23 @@ function Effects(alpha, blend) {
       if (this.colors.length < 16) {
         this.colors = [];
         for (var i = 0; i < 16; i++) {
-          this.colors.push(color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")"));
+          this.colors.push(p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")"));
         }
       } else {
         for (var j = randomNumber(5, 10); j > 0; j--) {
-          this.colors[randomNumber(0, this.colors.length - 1)] = color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")");
+          this.colors[randomNumber(0, this.colors.length - 1)] = p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")");
         }
       }
     },
     draw: function () {
       if (Dance.fft.isPeak() || World.frameCount == 1) this.update();
-      push();
-      noStroke();
+      p5.push();
+      p5.noStroke();
       for (var i = 0; i < this.colors.length; i++) {
-        fill(this.colors[i]);
-        rect((i % 4) * 100, Math.floor(i / 4) * 100, 100, 100);
+        p5.fill(this.colors[i]);
+        p5.rect((i % 4) * 100, Math.floor(i / 4) * 100, 100, 100);
       }
-      pop();
+      p5.pop();
     }
   };
   this.diamonds = {
@@ -234,18 +223,18 @@ function Effects(alpha, blend) {
     },
     draw: function () {
       if (Dance.fft.isPeak()) this.update();
-      push();
-      colorMode(HSB);
-      rectMode(CENTER);
-      translate(200, 200);
-      rotate(45);
-      noFill();
-      strokeWeight(map(Dance.fft.getCentroid(), 0, 4000, 0, 50));
+      p5.push();
+      p5.colorMode(p5.HSB);
+      p5.rectMode(p5.CENTER);
+      p5.translate(200, 200);
+      p5.rotate(45);
+      p5.noFill();
+      p5.strokeWeight(p5.map(Dance.fft.getCentroid(), 0, 4000, 0, 50));
       for (var i = 5; i > -1; i--) {
-        stroke((this.hue + i * 10) % 360, 100, 75, self.alpha);
-        rect(0, 0, i * 100 + 50, i * 100 + 50);
+        p5.stroke((this.hue + i * 10) % 360, 100, 75, self.alpha);
+        p5.rect(0, 0, i * 100 + 50, i * 100 + 50);
       }
-      pop();
+      p5.pop();
     }
   };
   this.strobe = {
@@ -256,17 +245,17 @@ function Effects(alpha, blend) {
       this.waitTime = 6;
     },
     draw: function () {
-      var bgcolor = rgb(1, 1, 1);
+      var bgcolor = p5.rgb(1, 1, 1);
       if (Dance.fft.isPeak()) this.update();
       if (this.flashing) {
-        bgcolor = rgb(255, 255, 255);
+        bgcolor = p5.rgb(255, 255, 255);
         this.waitTime--;
       }
       if (this.waitTime <= 0) {
-        bgcolor = rgb(1, 1, 1);
+        bgcolor = p5.rgb(1, 1, 1);
         this.flashing = false;
       }
-      background(bgcolor);
+      p5.background(bgcolor);
     }
   };
   this.rain = {
@@ -280,24 +269,24 @@ function Effects(alpha, blend) {
         });
       }
     },
-    color: rgb(127, 127, 255, 0.5),
+    color: p5.rgb(127, 127, 255, 0.5),
     update: function () {
-      this.color = rgb(127, 127, randomNumber(127, 255), 0.5);
+      this.color = p5.rgb(127, 127, randomNumber(127, 255), 0.5);
     },
     draw: function () {
       if (this.drops.length < 1) this.init();
-      strokeWeight(3);
-      stroke(this.color);
-      push();
+      p5.strokeWeight(3);
+      p5.stroke(this.color);
+      p5.push();
       for (var i = 0; i < this.drops.length; i++) {
-        push();
-        translate(this.drops[i].x - 20, this.drops[i].y - 20);
-        line(0, 0, this.drops[i].length, this.drops[i].length * 2);
-        pop();
+        p5.push();
+        p5.translate(this.drops[i].x - 20, this.drops[i].y - 20);
+        p5.line(0, 0, this.drops[i].length, this.drops[i].length * 2);
+        p5.pop();
         this.drops[i].y = (this.drops[i].y + this.drops[i].length) % 420;
         this.drops[i].x = (this.drops[i].x + (this.drops[i].length / 2)) % 420;
       }
-      pop();
+      p5.pop();
     }
   };
   this.raining_tacos = {
@@ -319,20 +308,20 @@ function Effects(alpha, blend) {
     draw: function () {
       if (this.tacos.length < 1) this.init();
       for (var i = 0; i < this.tacos.length; i++) {
-        push();
+        p5.push();
         var taco = this.tacos[i];
-        translate(taco.x, taco.y);
-        rotate(taco.rot);
-        textAlign(CENTER, CENTER);
-        textSize(this.size);
-        text('taco', 0, 0);
+        p5.translate(taco.x, taco.y);
+        p5.rotate(taco.rot);
+        p5.textAlign(p5.CENTER, p5.CENTER);
+        p5.textSize(this.size);
+        p5.text(String.fromCodePoint(55356, 57134), 0, 0);
         taco.y += taco.speed;
         taco.rot++;
         if (taco.y > 450) {
           taco.x = randomNumber(20, 380);
           taco.y = -50;
         }
-        pop();
+        p5.pop();
       }
     }
   };
@@ -379,11 +368,11 @@ function makeNewDanceSprite(costume, name, location) {
     };
   }
 
-  var sprite = createSprite(location.x, location.y);
+  var sprite = p5.createSprite(location.x, location.y);
 
   sprite.style = costume;
   if (!sprites_by_type.hasOwnProperty(costume)) {
-    sprites_by_type[costume] = createGroup();
+    sprites_by_type[costume] = p5.createGroup();
   }
   sprites_by_type[costume].add(sprite);
 
@@ -406,7 +395,7 @@ function makeNewDanceSprite(costume, name, location) {
 
   // Add behavior to control animation
   addBehavior(sprite, function () {
-    var delta = 1 / (frameRate() + 0.01) * 1000;
+    var delta = 1 / (p5.frameRate() + 0.01) * 1000;
     sprite.sinceLastFrame += delta;
     var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
@@ -532,7 +521,7 @@ function doMoveEachLR(group, move, dir) {
     }
     group = sprites_by_type[group];
   }
-  group.forEach(function(sprite) { doMoveLR(sprite, move, dir);});
+  group.forEach(function (sprite) { doMoveLR(sprite, move, dir);});
 }
 
 function layoutSprites(group, format) {
@@ -596,7 +585,7 @@ function setProp(sprite, property, val) {
     sprite.scale = val / 100;
   } else if (property == "width" || property == "height") {
     sprite[property] = SIZE * (val / 100);
-  } else if (property=="y"){
+  } else if (property=="y") {
     sprite.y = World.height - val;
   } else if (property == "costume") {
     sprite.setAnimation(val);
@@ -614,12 +603,12 @@ function getProp(sprite, property) {
     return sprite.scale * 100;
   } else if (property == "width" || property == "height") {
     return (sprite[property] / SIZE) * 100;
-  } else if (property=="y"){
+  } else if (property=="y") {
     return World.height - sprite.y;
   } else if (property == "costume") {
     return sprite.getAnimationLabel();
   } else if (property == "direction") {
-    return getDirection(sprite);
+    return p5.getDirection(sprite);
   } else {
     return sprite[property];
   }
@@ -634,10 +623,10 @@ function changePropBy(sprite,  property, val) {
       sprite.scale = 0;
     }
   } else if (property == "width" || property == "height") {
-    sprite[property] = getProp(sprite, property) + (SIZE * (val / 100));
+    sprite[property] = p5.getProp(sprite, property) + (SIZE * (val / 100));
   } else if (property=="direction") {
-    sprite.direction = getDirection(sprite) + val;
-  } else if (property=="y"){
+    sprite.direction = p5.getDirection(sprite) + val;
+  } else if (property=="y") {
     sprite.y-=val;
   } else {
     sprite[property] += val;
@@ -718,8 +707,8 @@ function everySecondsRange(n, start, stop, event) {
 }
 
 function everyVerseChorus(unit, event) {
-  registerSetup(function() {
-    song_meta[unit].forEach(function(timestamp){
+  registerSetup(function () {
+    song_meta[unit].forEach(function (timestamp) {
       Dance.song.addCue(0, timestamp, event);
     });
   });
@@ -797,20 +786,20 @@ function behaviorsEqual(behavior1, behavior2) {
 }
 
 function startMapping(sprite, property, range) {
-  var behavior = new Behavior(function(sprite) {
+  var behavior = new Behavior(function (sprite) {
     var energy = Dance.fft.getEnergy(range);
     if (property == "x") {
-      energy = Math.round(map(energy, 0, 255, 50, 350));
+      energy = Math.round(p5.map(energy, 0, 255, 50, 350));
     } else if (property == "y") {
-      energy = Math.round(map(energy, 0, 255, 350, 50));
+      energy = Math.round(p5.map(energy, 0, 255, 350, 50));
     } else if (property == "scale") {
-      energy = map(energy, 0, 255, 0.5, 1.5);
+      energy = p5.map(energy, 0, 255, 0.5, 1.5);
     } else if (property == "width" || property == "height") {
-      energy = map(energy, 0, 255, 50, 150);
+      energy = p5.map(energy, 0, 255, 50, 150);
     } else if (property == "rotation" || property == "direction") {
-      energy = Math.round(map(energy, 0, 255, -180, 180));
+      energy = Math.round(p5.map(energy, 0, 255, -180, 180));
     } else if (property == "tint") {
-      energy = Math.round(map(energy, 0, 255, 0, 360));
+      energy = Math.round(p5.map(energy, 0, 255, 0, 360));
       energy = "hsb(" + energy + ",100%,100%)";
     }
     sprite[property] = energy;
@@ -820,20 +809,20 @@ function startMapping(sprite, property, range) {
 }
 
 function stopMapping(sprite, property, range) {
-  var behavior = new Behavior(function(sprite) {
+  var behavior = new Behavior(function (sprite) {
     var energy = Dance.fft.getEnergy(range);
     if (property == "x") {
-      energy = Math.round(map(energy, 0, 255, 50, 350));
+      energy = Math.round(p5.map(energy, 0, 255, 50, 350));
     } else if (property == "y") {
-      energy = Math.round(map(energy, 0, 255, 350, 50));
+      energy = Math.round(p5.map(energy, 0, 255, 350, 50));
     } else if (property == "scale") {
-      energy = map(energy, 0, 255, 0.5, 1.5);
+      energy = p5.map(energy, 0, 255, 0.5, 1.5);
     } else if (property == "width" || property == "height") {
-      energy = map(energy, 0, 255, 50, 159);
+      energy = p5.map(energy, 0, 255, 50, 159);
     } else if (property == "rotation" || property == "direction") {
-      energy = Math.round(map(energy, 0, 255, -180, 180));
+      energy = Math.round(p5.map(energy, 0, 255, -180, 180));
     } else if (property == "tint") {
-      energy = Math.round(map(energy, 0, 255, 0, 360));
+      energy = Math.round(p5.map(energy, 0, 255, 0, 360));
       energy = "hsb(" + energy + ",100%,100%)";
     }
     sprite[property] = energy;
@@ -863,7 +852,7 @@ function spriteDestroyed(sprite, event) {
 
 function whenKey(key, event) {
   inputEvents.push({
-    type: keyWentDown,
+    type: p5.keyWentDown,
     event: event,
     param: key
   });
@@ -911,12 +900,8 @@ function registerSetup(callback) {
 
 // Sprite and Group creation
 
-function makeNewSpriteLocation(animation, loc) {
-  return makeNewSprite(animation, loc.x, loc.y);
-}
-
 function makeNewGroup() {
-  var group = createGroup();
+  var group = p5.createGroup();
   group.addBehaviorEach = function (behavior) {
     for (var i = 0; i < group.length; i++) {
       addBehavior(group[i], behavior);
@@ -929,39 +914,30 @@ function makeNewGroup() {
 // Miscellaneus Helpers
 
 function changeColorBy(input, method, amount) {
-  push();
-  colorMode(HSB, 100);
-  var c = color(input);
+  p5.push();
+  p5.colorMode(p5.HSB, 100);
+  var c = p5.color(input);
   var hsb = {
     hue: c._getHue(),
     saturation: c._getSaturation(),
     brightness: c._getBrightness()
   };
   hsb[method] = Math.round((hsb[method] + amount) % 100);
-  var new_c = color(hsb.hue, hsb.saturation, hsb.brightness);
-  pop();
+  var new_c = p5.color(hsb.hue, hsb.saturation, hsb.brightness);
+  p5.pop();
   return new_c;
 }
 
 function mixColors(color1, color2) {
-  return lerpColor(color(color1), color(color2), 0.5);
+  return p5.lerpColor(p5.color(color1), p5.color(color2), 0.5);
 }
 
 function randomColor() {
-  return color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
+  return p5.color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
 }
 
 function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
-}
-
-function showTitleScreen(titleArg, subTitleArg) {
-  title = titleArg;
-  subTitle = subTitleArg;
-}
-
-function hideTitleScreen() {
-  title = subTitle = '';
 }
 
 function shouldUpdate() {
@@ -975,7 +951,7 @@ function spriteExists(sprite) {
 function draw() {
   Dance.fft.analyze();
 
-  background("white");
+  p5.background("white");
   if (World.bg_effect) {
     World.bg_effect.draw();
   } else {
@@ -1081,19 +1057,18 @@ function draw() {
     }
   }
 
-  drawSprites();
+  p5.drawSprites();
 
   if (World.fg_effect != fg_effects.none) {
-    push();
-    blendMode(fg_effects.blend);
+    p5.push();
+    p5.blendMode(fg_effects.blend);
     World.fg_effect.draw();
-    pop();
+    p5.pop();
   }
 
-  fill("black");
-  textStyle(BOLD);
-  textAlign(TOP, LEFT);
-  textSize(20);
-  text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
-  /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
+  p5.fill("black");
+  p5.textStyle(p5.BOLD);
+  p5.textAlign(p5.TOP, p5.LEFT);
+  p5.textSize(20);
+  p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
 }
