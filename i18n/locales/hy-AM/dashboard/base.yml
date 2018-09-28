@@ -182,10 +182,16 @@ hy:
         playlab: 'Կատարել է Play Lab հավելվածը'
         artist: 'Ոչ ոքի մի բան'
         applab: 'Կատարել App Lab հավելվածը'
-      courses: "Դասընթացներ"
       project_gallery: "ծրագրեր"
       educate_hoc: "Կոդի ժամ"
       stats: "Վիճակագրություն"
+    create_button:
+      create: 'Ստեղծել'
+      applab: 'App Lab'
+      artist: 'Արտիստ'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Ուսուցչի գլխավոր էջը'
       district_dashboard: 'District Dashboard'

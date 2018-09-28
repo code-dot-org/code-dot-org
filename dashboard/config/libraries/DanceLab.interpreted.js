@@ -581,6 +581,10 @@ function layoutSprites(group, format) {
 
 // Properties
 
+function setTint(sprite, val) {
+  setProp(sprite, "tint", val);
+}
+
 function setProp(sprite, property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
   
@@ -957,7 +961,7 @@ function hideTitleScreen() {
 }
 
 function shouldUpdate() {
-  return World.frameCount > 1;
+  return World.frameCount > 2;
 }
 
 function spriteExists(sprite) {

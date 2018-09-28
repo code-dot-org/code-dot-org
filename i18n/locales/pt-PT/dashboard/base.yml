@@ -217,8 +217,6 @@ pt:
         playlab: 'Criar uma aplicação Play Lab'
         artist: 'Desenhar alguma coisa'
         applab: 'Criar uma aplicação App Lab'
-      home: "Início"
-      courses: "Cursos"
       project_gallery: "Projetos"
       sections: "Turmas"
       help_support: "Ajuda e suporte"
@@ -238,6 +236,13 @@ pt:
       about_contact: "Contacte-nos"
       about_faqs: "Perguntas frequentes"
       stats: "Estatística"
+    create_button:
+      create: 'Criar'
+      applab: 'Laboratório de aplicações'
+      artist: 'Artista'
+      playlab: 'Laboratório'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy Bird'
     user:
       classroom: 'Página inicial do Professor'
       district_dashboard: 'Painel do distrito'

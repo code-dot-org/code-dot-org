@@ -196,7 +196,7 @@ sk:
       MC_HOC_2017_10_RETRY_markdown_instruction: "Nájdete rozdiel medzi dvoma funkciami v pracovnom priestore? \\r\n \\r\nTieto funkcie použite s iným kódom z panela s nástrojmi na uvoľnenie cesty pre banský vozík. Potom získajte **kresadlo** [flint_and_steel]. \\r\n "
       MC_HOC_2017_10_RYAN_markdown_instruction: Skúste úplne od začiatku vytvoriť funkcie, ktoré uľahčia agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
       MC_HOC_2017_10_RYAN2_markdown_instruction: Skúste úplne od začiatku vytvoriť funkcie, ktoré uľahčia agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
-      MC_HOC_2017_11_Kiki_markdown_instruction: Teraz je to na vás! Uvidíme, čo dokážete vytvoriť okolo tohto zamrznutého jazera.
+      MC_HOC_2017_11_Kiki_markdown_instruction: Teraz je to na tebe! Skús, čo dokážeš vytvoriť okolo tohto zamrznutého jazera.
       MC_HOC_2017_13_Cole_markdown_instruction: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
       MC_HOC_2017_4.5v2_markdown_instruction: |-
         Dostali ste sa z močiara. Teraz bezpečne presuňte hráča na oranžové políčko. 
@@ -221,28 +221,98 @@ sk:
       courseF_bee_for_challenge2_markdown_instruction: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2018_markdown_instruction: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       frozen circle function in circle_markdown_instruction: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi každým z nich sa otočíme o 18 stupňov.
+      frozen circle function in circle_b_markdown_instruction: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
+      frozen circle function in circle_test_markdown_instruction: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
       frozen circle function with parameter_markdown_instruction: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+      frozen circle function with parameter_b_markdown_instruction: "Blok \"Vytvor kružnicu\", dokáže kresliť kružnice rôznych veľkostí. \n\nPouži ho na vytvorenie malej kružnice s veľkosťou **5** a väčšej kružnice s veľkosťou **10**."
+      frozen circle function with parameter_test_markdown_instruction: "Blok \"Vytvor kružnicu\", dokáže kresliť kružnice rôznych veľkostí. \n\nPouži ho na vytvorenie malej kružnice s veľkosťou **5** a väčšej kružnice s veľkosťou **10**."
       frozen circle function_markdown_instruction: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      frozen circle function_b_markdown_instruction: "Z kódu v predchádzajúcej úlohe sme vytvorili funkciu!\n\nSkús použiť nový blok \"Vytvor kružnicu\" a dokonči kresbu. Nezabudni medzi každou z ** 10 ** kružníc skočiť o **25** pixelov!"
+      frozen circle function_test_markdown_instruction: "Z kódu v predchádzajúcej úlohe sme vytvorili funkciu!\n\nSkús použiť nový blok \"Vytvor kružnicu\" a dokonči kresbu. Nezabudni medzi každou z ** 10 ** kružníc skočiť o **25** pixelov!"
       frozen circle_markdown_instruction: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
+      frozen circle_b_markdown_instruction: "Kružnica je výnimočny útvar. \n\nVieš zistiť aký príkaz použiť pre nakreslenie kružnice?"
+      frozen circle_test_markdown_instruction: "Kružnica je výnimočny útvar. \n\nVieš zistiť aký príkaz použiť pre nakreslenie kružnice?"
       frozen cross rotate dense_markdown_instruction: 'Zopakujme to 90-krát! Koľkokrát sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
+      frozen cross rotate dense_b_markdown_instruction: "Skús čiaru zopakovať ** 90 ** krát!\n\nKoľko krát sa musíš otočiť?\nNápoveda: je to malé číslo **(360÷90)**."
+      frozen cross rotate dense_test_markdown_instruction: "Skús čiaru zopakovať ** 90 ** krát!\n\nKoľko krát sa musíš otočiť?\nNápoveda: je to malé číslo **(360÷90)**."
       frozen cross rotate_markdown_instruction: Teraz to skús zopakovať 10-krát. O koľko stupňov sa musíš otočiť medzi jednotlivými čiarami?
-      frozen cross rotate_b_markdown_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
-      frozen cross rotate_test_markdown_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš posunúť medzi jednotlivými riadkami?
+      frozen cross rotate_b_markdown_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš otočiť medzi jednotlivými čiarami?
+      frozen cross rotate_test_markdown_instruction: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš otočiť medzi jednotlivými čiarami?
       frozen cross_markdown_instruction: Vytvor znamienko plus pomocou bloku "Opakuj". Všimol si si, že Elsa sa môže pohybovať dopredu i dozadu?
+      frozen cross_b_markdown_instruction: "*\"Čas vytvoriť niečo nové!\"*\n\nNakresli **100** pixelov dlhú čiaru, vráť sa do stredu a otoč sa o  **90 stupňov**.  \nZopakuj to **4** krát.\n"
+      frozen cross_test_markdown_instruction: "*\"Čas vytvoriť niečo nové!\"*\n\nNakresli **100** pixelov dlhú čiaru, vráť sa do stredu a otoč sa o  **90 stupňov**.  \nZopakuj to **4** krát.\n"
       frozen diamond mini snowflake_markdown_instruction: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
-      frozen diamond snowflake_markdown_instruction: Teraz vytvorme novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakujeme 10-krát a po každom z nich sa otočíme vpravo o 36 stupňov.
-      frozen diamond_markdown_instruction: Použite opakovanie okolo týchto blokov pre vytvorenie lichobežníka. Vyzerá ako obdĺžnik, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto 90 stupňov v každom rohu.
+      frozen diamond mini snowflake_b_markdown_instruction: |-
+        *"Snehové vločky makú mnoho podôb!"*
+        
+        Vytvor vločku z diamantov tak, že zopakuješ tento kód **4** krát a medzi opakovaniami sa otočíš o **90 stupňov**.
+      frozen diamond mini snowflake_test_markdown_instruction: |-
+        *"Snehové vločky makú mnoho podôb!"*
+        
+        Vytvor vločku z diamantov tak, že zopakuješ tento kód **4** krát a medzi opakovaniami sa otočíš o **90 stupňov**.
+      frozen diamond snowflake_markdown_instruction: Teraz vytvor novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36 stupňov.
+      frozen diamond snowflake_b_markdown_instruction: "*\"Chceš si spraviť snehovú vločku?\"*\n\nTvoja kresba bude úžasná, ak vytvoríš diamant **10 krát**.\nMedzi každým sa otoč o **36 stupňov**."
+      frozen diamond snowflake_test_markdown_instruction: "*\"Chceš si spraviť snehovú vločku?\"*\n\nTvoja kresba bude úžasná, ak vytvoríš diamant **10 krát**.\nMedzi každým sa otoč o **36 stupňov**."
+      frozen diamond_markdown_instruction: Použi opakovanie okolo týchto blokov pre vytvorenie lichobežníka. Vyzerá ako obdĺžnik, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto 90 stupňov v každom rohu.
+      frozen diamond_b_markdown_instruction: "Tomuto kódu pridaj jeden blok a vytvoríš rovnobežník.  \n\nTen by mal mať ** 60 ** a ** 120 stupňové ** uhly namiesto 90 stupňových."
+      frozen diamond_test_markdown_instruction: "Tomuto kódu pridaj jeden blok a vytvoríš rovnobežník.  \n\nTen by mal mať ** 60 ** a ** 120 stupňové ** uhly namiesto 90 stupňových."
       frozen freeplay_markdown_instruction: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
-      frozen perpendicular_markdown_instruction: Teraz skúsme vytvoriť dve čiary, ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč" spolu s blokom "Posuň".
+      frozen freeplay_b_markdown_instruction: "*\"Si majster v ľadovej tvorbe!\"*\n  \nTu je všetko, čo potrebuješ, aby si si vytvoril vlastnú krajinu zimných zázrakov!"
+      frozen freeplay_test_markdown_instruction: "*\"Si majster v ľadovej tvorbe!\"*\n  \nTu je všetko, čo potrebuješ, aby si si vytvoril vlastnú krajinu zimných zázrakov!"
+      frozen line_b_markdown_instruction: "*\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"*  \n&nbsp;\n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
+      frozen line_test_markdown_instruction: "*\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"*  \n&nbsp;\n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
+      frozen perpendicular_markdown_instruction: Teraz skúsme vytvoriť dve čiary, ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč sa" spolu s blokom "Posuň sa".
+      frozen perpendicular_b_markdown_instruction: |-
+        *"Pokračuj a neprestávaj!"*
+        
+        &nbsp;
+        
+        Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
+        <title name="DIR">Otoč sa vpravo</title>
+        <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        </xml> a k nemu blok <xml>
+        <block type="draw_move_by_constant_dropdown">
+        <title name="DIR">Posuň sa Dopredu</title>
+        <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        </xml> a vytvoríš v ľade tento tvar.
+      frozen perpendicular_test_markdown_instruction: |-
+        *"Pokračuj a neprestávaj!"*
+        
+        &nbsp;
+        
+        Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
+        <title name="DIR">Otoč sa vpravo</title>
+        <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        </xml> a k nemu blok <xml>
+        <block type="draw_move_by_constant_dropdown">
+        <title name="DIR">Posuň sa Dopredu</title>
+        <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        </xml> a vytvoríš v ľade tento tvar.
       frozen snowflake branch_markdown_instruction: Skús použiť blok "Vytvor rameno vločky", aby si vytvoril tri ramená, ktoré začnú vyzerať ako snehová vločka.
+      frozen snowflake branch_b_markdown_instruction: "Vyskúšaj novú funkciu \"Vytvor rameno vločky\" a urob trojcípu snehovu vločku.\n\nNezabudni sa otočiť o **45 stupňov** medzi každým ramenom."
+      frozen snowflake branch_template_markdown_instruction: "Vyskúšaj novú funkciu \"Vytvor rameno vločky\" a urob trojcípu snehovu vločku.\n\nNezabudni sa otočiť o **45 stupňov** medzi každým ramenom."
+      frozen snowflake branch_test_markdown_instruction: "Pomocou bloku \"Vytvor rameno vločky\" vytvor trojcípu snehovú vločku.\n\nNezabudni sa otočiť o **45 stupňov** medzi každým ramenom."
       frozen snowflake full_markdown_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
-      frozen snowflake full_b_markdown_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
-      frozen snowflake full_test_markdown_instruction: A teraz to zopakujme 8 krát, aby sme nakreslili prekrásnu vločku!
+      frozen snowflake full_b_markdown_instruction: A teraz to zopakuj 8 krát, aby si nakreslil prekrásnu vločku!
+      frozen snowflake full_test_markdown_instruction: A teraz to zopakuj 8 krát, aby si nakreslil prekrásnu vločku!
+      frozen snowflake fuller_b_markdown_instruction: Čo sa stane, ak skočíš späť o **25** pixelov skôr než nakreslíš každé rameno vločky?
       frozen snowflower_markdown_instruction: Zložité snehové vzory je možné vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
+      frozen snowflower_b_markdown_instruction: "Zložité snehové vzory môžu byť vytvorené pomocou veľmi jednoduchých tvarov!  \n\nVieš vyrobiť novú vločku opakovaním tohto kódu ** 5 ** krát, pričom medzi každou sadou je ** 72 stupňov **?"
+      frozen snowflower_test_markdown_instruction: "Zložité snehové vzory môžu byť vytvorené pomocou veľmi jednoduchých tvarov!  \n\nVieš vyrobiť novú vločku opakovaním tohto kódu ** 5 ** krát, pričom medzi každou sadou je ** 72 stupňov **?"
       frozen square iterative_markdown_instruction: Zdá sa, že sme na polceste k vytvoreniu štvorca. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
-      frozen square loop 3x_markdown_instruction: Vytvorme tri štvorce tak, že sa po každom štvorci otočíme. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
+      frozen square iterative_b_markdown_instruction: "*\"Už sme na polceste k vytvoreniu štvorca!\"* \n\n&nbsp;\n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
+      frozen square iterative_test_markdown_instruction: "*\"Už sme na polceste k vytvoreniu štvorca!\"* \n\n&nbsp;\n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
+      frozen square loop 3x_markdown_instruction: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
+      frozen square loop 3x_b_markdown_instruction: "Vedel si, že môžeš vložit slučku \"Opakovať\" do inej opakovacej slučky?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
+      frozen square loop 3x_test_markdown_instruction: "Vedel si, že môžeš vložit slučku \"Opakovať\" do inej opakovacej slučky?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
       frozen square loop_markdown_instruction: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
-      frozen square snowflake_markdown_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
+      frozen square snowflake_markdown_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
+      frozen square snowflake_b_markdown_instruction: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
+      frozen square snowflake_test_markdown_instruction: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
       grade2_MakeDogTag_8_markdown_instruction: A teraz pripojme niekoľko Véčiek spolu do slučky.
       grade2_PuppyLoops_10_markdown_instruction: |-
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
@@ -309,11 +379,11 @@ sk:
       grade4_frozen_functions3_markdown_instruction: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       grade4_frozen_functions4_markdown_instruction: Zložité snehové vzory je možné vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
       grade4_frozen_nested_loop_diamonds2_markdown_instruction: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
-      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Teraz vytvorme novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakujeme 10-krát a po každom z nich sa otočíme vpravo o 36 stupňov.
+      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Teraz vytvor novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36 stupňov.
       grade4_frozen_square_markdown_instruction: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       grade4_frozen_square_loop1_markdown_instruction: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
-      grade4_frozen_square_loop2_markdown_instruction: Vytvorme tri štvorce tak, že sa po každom štvorci otočíme. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
-      grade4_frozen_square_loop3_markdown_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
+      grade4_frozen_square_loop2_markdown_instruction: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
+      grade4_frozen_square_loop3_markdown_instruction: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
       grade4_review_artist3_markdown_instruction: Blok so skokom posunie umelca bez toho, aby bolo treba nieco nakreslit. Nakreslite prerušovanú čiaru použitím blokov "poskočiť dopredu" a "posunúť dopredu". Každá čiara má mať dĺžku 50 pixelov.
       grade4_review_bee1_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       level 'grade3_Loops_3_markdown_instruction: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.

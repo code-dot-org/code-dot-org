@@ -1,245 +1,94 @@
----
 ko:
   data:
     blocks:
       Dancelab_atTimestamp:
         options:
           UNIT:
-            '"seconds"': "~초 기다리기"
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 다음
-            '"prev"': 이전
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: 모두
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 다음
-            '"prev"': 이전
+            '"seconds"': '~초 기다리기'
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: 모두
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': 다음
             '"prev"': 이전
+            MOVES.Rest: 없음
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': 다음
             '"prev"': 이전
+            MOVES.Rest: 없음
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 다음
-            '"prev"': 이전
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
+            '"height"': '높이:'
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: 모두
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': 다음
             '"prev"': 이전
+            MOVES.Rest: 없음
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 다음
-            '"prev"': 이전
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': 다음
             '"prev"': 이전
+            MOVES.Rest: 없음
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 다음
-            '"prev"': 이전
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 다음
-            '"prev"': 이전
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 다음
-            '"prev"': 이전
       Dancelab_everySeconds:
         options:
           UNIT:
-            '"seconds"': "~초 기다리기"
+            '"seconds"': '~초 기다리기'
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
+            '"height"': '높이:'
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': 없음
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random(랜덤)
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: 모두
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': 오른쪽으로
-            '"left"': 왼쪽으로
+          LOCATION:
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
       Dancelab_randomColor:
         text: 랜덤 색
       Dancelab_setBackgroundEffect:
@@ -262,30 +111,21 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
+            '"height"': '높이:'
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: 모두
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
+            '"height"': '높이:'
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
+            '"height"': '높이:'
       Dancelab_whenKey:
         options:
           KEY:
@@ -311,8 +151,8 @@ ko:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 참
-            'false': 거짓
+            'true': '참'
+            'false': '거짓'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -399,14 +239,52 @@ ko:
             '"scale"': 크기
             '"x"': x 좌표
             '"y"': y 좌표
+      Mikelab_randomColor:
+        text: 랜덤 색
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': 크기
             '"x"': x 좌표
             '"y"': y 좌표
-      Vanilla_randomColor:
-        text: 랜덤 색
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': 오른쪽으로
+            '"left"': 왼쪽으로
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': 위쪽 방향키를 누르면
+            '"down"': 아래쪽 방향키를 누르면
+            '"left"': 왼쪽 방향키를 누르면
+            '"right"': 오른쪽 방향키를 누르면
+            '"w"': 왼쪽
+            '"a"': A
+            '"s"': 아래쪽
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': 위쪽 방향키를 누르면
+            '"down"': 아래쪽 방향키를 누르면
+            '"left"': 왼쪽 방향키를 누르면
+            '"right"': 오른쪽 방향키를 누르면
+            '"w"': 왼쪽
+            '"a"': A
+            '"s"': 아래쪽
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': 위쪽 방향키를 누르면
+            '"down"': 아래쪽 방향키를 누르면
+            '"left"': 왼쪽 방향키를 누르면
+            '"right"': 오른쪽 방향키를 누르면
       craft_ifPath:
         options:
           DIR:

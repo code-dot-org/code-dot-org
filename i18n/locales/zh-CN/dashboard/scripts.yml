@@ -8297,6 +8297,8 @@ zh-CN:
           stages:
             new stage:
               name: 新的阶段
+            Dance Party:
+              name: 舞蹈派对
         frozen-2018-test-b:
           stages:
             Artist:

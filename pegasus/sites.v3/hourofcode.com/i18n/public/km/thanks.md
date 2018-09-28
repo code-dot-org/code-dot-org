@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -26,11 +26,6 @@ social:
 %>
 
 # អរគុណសំរាប់ការចុះឈ្មេាះក្នុងការធ្វើជាម្ចាស់ផ្ទះ ម៉ោងសំរាប់កូដ
-
-ជាការអរគុណសំរាប់​ជំនួយរបស់​អ្នក​ ដែល​ធ្វើ​អោយ​សិស្សានុសិស្សអាច​ចាំផ្ដើម​រៀន​វិទ្យាសាស្រ្ត​កុំព្យូទ័រ ពួក​យើង​មាន​សេចក្ដី​សោមន្សរីករាយ​នឹង​ប្រគល់​ជូន​លោក​អ្នក​នៅបដា​មួយដែល​បង្ហាញពីគំរូរម៉ូដែល​ចំរុះ សំរាប់ថ្នាក់​រៀន​របស់​អ្នក ប្រើកូដដែល​ផ្លល់អោយ​នេះ **FREEPOSTERS** ពេល​ចាក​ចេញ. ចំណាំ: វាអាចប្រើបាននៅពេលដែលការផ្គត់ផ្គង់ចុងក្រោយហើយអ្នកនឹងត្រូវការចំណាយលើការដឹកជញ្ជូន Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
-
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

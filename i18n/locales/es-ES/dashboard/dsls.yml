@@ -622,8 +622,6 @@ es:
         description here: descripción aquí
       'Technique: Frequency Analysis_2018':
         description here: descripción aquí
-      Terminology Recap:
-        description here: descripción aquí
       Terminology Recap_2018:
         description here: descripción aquí
       Tips For Working on Your Own:
@@ -632,26 +630,12 @@ es:
       Tips For Working on Your Own_2018:
         description here: descripción aquí
         title: Título
-      U1L1 Student Lesson Introduction:
-        description here: descripción aquí
       U1L1 Student Lesson Introduction_2018:
         description here: descripción aquí
       U1L10 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
       U1L11 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L12 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L13 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      U1L14 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      U1L15 Student Lesson Summary:
         description here: descripción aquí
         title: Título
       U1L16 Student Lesson Introduction:
@@ -670,9 +654,6 @@ es:
         title: Título
       U1L4 Widget Demo - Video:
         description here: descripción aquí
-      U1L5 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       U1L6 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
@@ -682,26 +663,18 @@ es:
       U1L8 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
-      U1L9 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       U2L1 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
       U2L12 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
-      U2L14 Student Lesson Introduction:
-        Cracking the Code: Descifrando el código
       U2L17 Student Lesson Introduction:
         description here: descripción aquí
       U2L2 Student Lesson Introduction:
         The Need for Addressing: La necesidad para el redireccionamiento
       U2L5 Student Lesson Introduction:
         Packets and Making a Reliable Internet: Paquetes y realización de una internet que sea de confianza
-      U2L7 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       U2L8 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
@@ -899,9 +872,6 @@ es:
       U4L08v2 Student Intro:
         description here: descripción aquí
         title: Título
-      U4L09 Student Lesson Intro Practice PT big data dilemma:
-        description here: descripción aquí
-        title: Título
       U4L09 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
@@ -1058,26 +1028,15 @@ es:
       Unit 2 Lesson 1 Overview Clone:
         description here: descripción aquí
         title: Título
-      Unit 4 Lesson 1 Introduction:
-        description here: descripción aquí
-        title: Título
       Unit 4 Lesson 1 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 2 Introduction:
         description here: descripción aquí
         title: Título
       Unit 4 Lesson 2 Introduction_2018:
         description here: descripción aquí
         title: Título
-      Unit 4 Lesson 5 Introduction:
-        description here: descripción aquí
-        title: Título
       Unit 4 Lesson 5 Introduction_2018:
         description here: descripción aquí
         title: Título
-      Unit 4 Lesson 6 Introduction:
-        Cracking the Code: Descifrando el código
       Unit 4 Lesson 6 Introduction_2018:
         Cracking the Code: Descifrando el código
       Unit 5 Lesson 1:
@@ -1159,8 +1118,6 @@ es:
       'Worked Example: If-statements and Robot_2018':
         description here: descripción aquí
         title: Título
-      brad-repro-bug-000:
-        description here: descripción aquí
       brad-test-continue-buttons-in-markdown:
         description here: descripción aquí
       challenges sample 3:
@@ -1308,9 +1265,6 @@ es:
       csp_unit5_finalassessment_overview_exam_prep:
         description here: descripción aquí
         title: Título
-      csp_unit_assessment_overview:
-        description here: descripción aquí
-        title: Título
       csp_unit_assessment_overview_2018:
         description here: descripción aquí
         title: Título
@@ -1450,9 +1404,6 @@ es:
         The Need for DNS: La necesidad para el DNS
       v2 U1L12 Student Lesson Introduction_2018:
         The Need for DNS: La necesidad para el DNS
-      v2 U1L14 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       v2 U1L14 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
@@ -1474,9 +1425,6 @@ es:
       v2 U1L4 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
-      v2 U1L5 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       v2 U1L5 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
@@ -1486,19 +1434,11 @@ es:
       v2 U1L6 Student Lesson Introduction_2018:
         Sending Numbers: Envío de los números
         description here: descripción aquí
-      v2 U1L8 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       v2 U1L8 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
-      v2 U1L9 Student Lesson Introduction:
-        The Need for Addressing: La necesidad para el redireccionamiento
       v2 U1L9 Student Lesson Introduction_2018:
         The Need for Addressing: La necesidad para el redireccionamiento
-      v2 U2L1 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       v2 U2L1 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
@@ -1506,9 +1446,6 @@ es:
         description here: descripción aquí
         title: Título
       v2 U2L10 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L11 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
       v2 U2L11 Student Lesson Introduction_2018:
@@ -1532,9 +1469,6 @@ es:
       v2 U2L14 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
-      v2 U2L15 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       v2 U2L15 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
@@ -1544,25 +1478,14 @@ es:
       v2 U2L2 Student Lesson Summary_2018:
         description here: descripción aquí
         title: Título
-      v2 U2L3 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
       v2 U2L3 Student Lesson Summary_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L4 Student Lesson Summary:
         description here: descripción aquí
         title: Título
       v2 U2L4 Student Lesson Summary_2018:
         description here: descripción aquí
         title: Título
-      v2 U2L5 Student Lesson Introduction:
-        description here: descripción aquí
       v2 U2L5 Student Lesson Introduction_2018:
         description here: descripción aquí
-      v2 U2L6 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
       v2 U2L6 Student Lesson Introduction_2018:
         description here: descripción aquí
         title: Título
@@ -1576,9 +1499,6 @@ es:
         description here: descripción aquí
         title: Título
       v2 U2L8 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L9 Student Lesson Introduction:
         description here: descripción aquí
         title: Título
       v2 U2L9 Student Lesson Introduction_2018:
@@ -1606,11 +1526,6 @@ es:
         Looping and Random Numbers: Bucles y Números Aleatorios
       v2 U3L09 Student Lesson Introduction_2018:
         Looping and Random Numbers: Bucles y Números Aleatorios
-      v2 U4L05 Student Lesson Intro Encryption Caesar:
-        description here: descripción aquí
-        title: Título
-      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
-        Cracking the Code: Descifrando el código
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Haz que coincidan las combinaciones de botones con los movimientos.
@@ -1714,12 +1629,6 @@ es:
         String: Cadena
       PDK5 What is unplugged:
         Question: Pregunta
-      'U2L06 - Matching: Label the Diagram':
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
       U3L19 - MATCH what are values of abc:
         '10': '10'
         '12': '12'
@@ -1885,9 +1794,6 @@ es:
       4-5 maze multi 1:
         Maze Multiple Choice: Laberinto - Opción Múltiple
         Which blocks solve the puzzle?: '¿Qué bloque resuelve el rompecabezas?'
-      CB_Question_3:
-        A: A
-        Y: true
       CSD Prediction Header Size:
         Question: Pregunta
       CSD U3 Boolean MC:
@@ -2098,12 +2004,6 @@ es:
         '1': '1'
         '2': '2'
         '4': '4'
-      U1L07 Assessment 1:
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -2130,31 +2030,8 @@ es:
         '16': '16'
         17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
         18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
-      'U2L06 - MC: Which is an MST?':
-        0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-      U2L13 Assessment4:
-        '26': '26'
       U2L13 Assessment4_2018:
         '26': '26'
-      U2L14 Assessment3:
-        'false': 'falso'
-        'true': 'verdadero'
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
       U2L19 multichoice 13 MOD 17_2018:
         '0': '0'
         '13': '13'
@@ -2166,26 +2043,12 @@ es:
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
       U2L19 mutlichoice 20 mod 15_2018:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L3 Assessment 3:
-        Invent an Addressing Protocol: Crear un protocolo de direccionamiento
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
       U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
@@ -2448,11 +2311,6 @@ es:
       csp_ap_taking_ap_class:
         'No': 'No'
         'Yes': 'Sí'
-      cspu5_assess1_fivemore:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_fivemore_2018:
         "-2": "-2"
         '3': '3'
@@ -2463,20 +2321,12 @@ es:
         '3': '3'
         '5': '5'
         '8': '8'
-      cspu5_assess1_flowchart:
-        '10': '10'
-        '5': '5'
       cspu5_assess1_flowchart_2018:
         '10': '10'
         '5': '5'
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
-      cspu5_assess1_increase:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_increase_2018:
         '10': '10'
         '13': '13'
@@ -2487,15 +2337,9 @@ es:
         '13': '13'
         '5': '5'
         '8': '8'
-      cspu5_assess2_addstrings:
-        result: resultado
       cspu5_assess2_addstrings_2018:
         result: resultado
       cspu5_assess2_addstrings_exam_prep:
-        result: resultado
-      cspu5_assess2_combineString:
-        '10': '10'
-        '55': '55'
         result: resultado
       cspu5_assess2_combineString_2018:
         '10': '10'
@@ -2505,10 +2349,6 @@ es:
         '10': '10'
         '55': '55'
         result: resultado
-      cspu5_assess2_oldEnough:
-        '35': '35'
-        'false': 'falso'
-        'true': 'verdadero'
       cspu5_assess2_oldEnough_2018:
         '35': '35'
         'false': 'falso'
@@ -2535,11 +2375,6 @@ es:
         '30': '30'
         '50': '50'
         '75': '75'
-      cspu5_assess3_array1:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
       cspu5_assess3_array1_2018:
         '10': '10'
         '4': '4'
@@ -2550,12 +2385,6 @@ es:
         '4': '4'
         '7': '7'
         '9': '9'
-      cspu5_assess3_array2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_array2_2018:
         '2': '2'
         '3': '3'
@@ -2568,11 +2397,6 @@ es:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess3_array4:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
       cspu5_assess3_array4_2018:
         '0': '0'
         '1': '1'
@@ -2583,11 +2407,6 @@ es:
         '1': '1'
         '2': '2'
         '8': '8'
-      cspu5_assess3_listAppend:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
       cspu5_assess3_listAppend_2018:
         '1': '1'
         '2': '2'
@@ -2598,11 +2417,6 @@ es:
         '2': '2'
         '3': '3'
         '6': '6'
-      cspu5_assess3_loopValue1:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
       cspu5_assess3_loopValue1_2018:
         '2': '2'
         '3': '3'
@@ -2613,22 +2427,12 @@ es:
         '3': '3'
         '4': '4'
         '5': '5'
-      cspu5_assess3_loopValue2:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_loopValue2_2018:
         '0': '0'
         '4': '4'
         '5': '5'
         '6': '6'
       cspu5_assess3_loopValue2_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -2643,12 +2447,6 @@ es:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess4_dataReturns:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
       cspu5_assess4_dataReturns_2018:
         '10': '10'
         '16': '16'
@@ -2660,11 +2458,6 @@ es:
         '16': '16'
         '3': '3'
         '4': '4'
-        '9': '9'
-      cspu5_assess4_listOutput:
-        '17': '17'
-        '3': '3'
-        '42': '42'
         '9': '9'
       cspu5_assess4_listOutput_2018:
         '17': '17'
@@ -2751,9 +2544,6 @@ es:
         Other: Otros
         Prefer not to answer: Prefiero no contestar
         White: Blanco
-      sarah_test_maggie:
-        Question: Pregunta
-        test: prueba
       sciPD PreQ 1:
         'No': 'No'
         'Yes': 'Sí'
@@ -2773,6 +2563,3 @@ es:
         Question: Pregunta
         description here: descripción aquí
         title: Título
-    text_match:
-      U2L07 Assessment4:
-        '43': '43'

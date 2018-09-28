@@ -1,4 +1,3 @@
----
 et:
   data:
     blocks:
@@ -6,215 +5,51 @@ et:
         options:
           UNIT:
             '"seconds"': sekundit
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Järgmine
-            '"prev"': Eelmine
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: kõik
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Järgmine
-            '"prev"': Eelmine
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: kõik
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Järgmine
             '"prev"': Eelmine
+            MOVES.Rest: Pole
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Järgmine
             '"prev"': Eelmine
+            MOVES.Rest: Pole
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Järgmine
-            '"prev"': Eelmine
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
+            '"height"': kõrgus
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: kõik
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Järgmine
             '"prev"': Eelmine
+            MOVES.Rest: Pole
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Järgmine
-            '"prev"': Eelmine
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Järgmine
             '"prev"': Eelmine
+            MOVES.Rest: Pole
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Järgmine
-            '"prev"': Eelmine
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Järgmine
-            '"prev"': Eelmine
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Järgmine
-            '"prev"': Eelmine
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -223,23 +58,37 @@ et:
         options:
           PROPERTY:
             '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
+            '"height"': kõrgus
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Pole
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasakule
+            "{x: 300, y: 200}": paremale
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": juhuslik
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: kõik
-      Dancelab_mappingProp:
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
-      Dancelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': paremale
-            '"left"': vasakule
+          LOCATION:
+            "{x: 100, y: 200}": vasakule
+            "{x: 300, y: 200}": paremale
       Dancelab_randomColor:
         text: juhuslik värv
       Dancelab_setBackgroundEffect:
@@ -262,30 +111,21 @@ et:
         options:
           PROPERTY:
             '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
+            '"height"': kõrgus
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: kõik
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
+            '"height"': kõrgus
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
+            '"height"': kõrgus
       Dancelab_whenKey:
         options:
           KEY:
@@ -311,8 +151,8 @@ et:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': tõene
-            'false': väär
+            'true': 'tõene'
+            'false': 'väär'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -399,14 +239,48 @@ et:
             '"scale"': suurus
             '"x"': x asukoht
             '"y"': y asukoht
+      Mikelab_randomColor:
+        text: juhuslik värv
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': suurus
             '"x"': x asukoht
             '"y"': y asukoht
-      Vanilla_randomColor:
-        text: juhuslik värv
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': paremale
+            '"left"': vasakule
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': nool üles
+            '"down"': nool alla
+            '"left"': nool vasakule
+            '"right"': nool paremale
+            '"w"': Lääs
+            '"s"': Lõuna
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': nool üles
+            '"down"': nool alla
+            '"left"': nool vasakule
+            '"right"': nool paremale
+            '"w"': Lääs
+            '"s"': Lõuna
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': nool üles
+            '"down"': nool alla
+            '"left"': nool vasakule
+            '"right"': nool paremale
       craft_ifPath:
         options:
           DIR:

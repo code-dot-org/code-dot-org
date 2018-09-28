@@ -1,4 +1,3 @@
----
 ca:
   data:
     blocks:
@@ -6,55 +5,9 @@ ca:
         options:
           UNIT:
             '"seconds"': segons
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Següent
-            '"prev"': Anterior
-      Dancelab_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Següent
-            '"prev"': Anterior
       Dancelab_changeMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Següent
             '"prev"': Anterior
           DIR:
@@ -63,150 +16,32 @@ ca:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Següent
             '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Següent
-            '"prev"': Anterior
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': mida
+            '"height"': alçcada
       Dancelab_doMoveEachLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Següent
             '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Següent
-            '"prev"': Anterior
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
             '"next"': Següent
             '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Següent
-            '"prev"': Anterior
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Següent
-            '"prev"': Anterior
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Següent
-            '"prev"': Anterior
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -215,15 +50,18 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
-      Dancelab_mappingProp:
+            '"height"': alçcada
+      Dancelab_jumpTo:
         options:
-          PROPERTY:
-            '"scale"': mida
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
+      Dancelab_makeNewDanceSprite:
         options:
-          DIRECTION:
-            '"right"': dret
-            '"left"': esquerra
+          LOCATION:
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
       Dancelab_randomColor:
         text: color aleatori
       Dancelab_setDanceSpeed:
@@ -238,18 +76,17 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': mida
+            '"height"': alçcada
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': mida
+            '"height"': alçcada
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': mida
+            '"height"': alçcada
       Dancelab_whenKey:
         options:
           KEY:
@@ -273,8 +110,8 @@ ca:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': cert
-            'false': fals
+            'true': 'cert'
+            'false': 'fals'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -349,12 +186,46 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
+      Mikelab_randomColor:
+        text: color aleatori
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciutat
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': mida
-      Vanilla_randomColor:
-        text: color aleatori
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': dret
+            '"left"': esquerra
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': fletxa cap amunt
+            '"down"': fletxa cap avall
+            '"left"': fletxa esquerra
+            '"right"': fletxa dreta
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': fletxa cap amunt
+            '"down"': fletxa cap avall
+            '"left"': fletxa esquerra
+            '"right"': fletxa dreta
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': fletxa cap amunt
+            '"down"': fletxa cap avall
+            '"left"': fletxa esquerra
+            '"right"': fletxa dreta
       craft_ifPath:
         options:
           DIR:

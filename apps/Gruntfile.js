@@ -475,7 +475,7 @@ describe('entry tests', () => {
     'courses/index':                       './src/sites/studio/pages/courses/index.js',
     'courses/show':                        './src/sites/studio/pages/courses/show.js',
     'devise/registrations/edit':           './src/sites/studio/pages/devise/registrations/edit.js',
-    'devise/registrations/finish_sign_up': './src/sites/studio/pages/devise/registrations/finish_sign_up.js',
+    'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
   };
 
   var internalEntries = {
@@ -560,6 +560,7 @@ describe('entry tests', () => {
 
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
+    'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
   };
@@ -762,7 +763,7 @@ describe('entry tests', () => {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
-    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer', 'regionalPartnerSearch').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';

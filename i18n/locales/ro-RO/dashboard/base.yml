@@ -264,8 +264,6 @@ ro:
         applab: 'Creează o aplicație'
         gamelab: 'Creați un proiect în Laboratorul de Joc'
         weblab: 'Creați un proiect în Laboratorul Web (beta)'
-      home: "Acasă"
-      courses: "cursuri"
       course_catalog: "Catalog de cursuri"
       project_gallery: "Proiecte"
       sections: "Secțiuni"
@@ -299,6 +297,14 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
+    create_button:
+      create: 'Crează'
+      applab: 'Laboratului Aplicației'
+      artist: 'Artist'
+      gamelab: 'Laborator de jocuri'
+      playlab: 'Laborator de Joacă'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'

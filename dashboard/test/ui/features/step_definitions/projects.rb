@@ -10,16 +10,16 @@ And(/^I confirm correct visibility of view more links$/) do
   if hidden_view_more_links
     steps %Q{
       And the project gallery contains 5 view more links
-      And element ".ui-project-app-type-area:eq(4)" contains text "App Lab"
-      And element ".ui-project-app-type-area:eq(4)" does not contain text "View more"
-      And element ".ui-project-app-type-area:eq(5)" contains text "Game Lab"
-      And element ".ui-project-app-type-area:eq(5)" does not contain text "View more"
+      And element ".ui-project-app-type-area:eq(1)" contains text "App Lab"
+      And element ".ui-project-app-type-area:eq(1)" does not contain text "View more"
+      And element ".ui-project-app-type-area:eq(0)" contains text "Game Lab"
+      And element ".ui-project-app-type-area:eq(0)" does not contain text "View more"
     }
   else
     steps %Q{
       And the project gallery contains 7 view more links
-      And element ".ui-project-app-type-area:eq(4)" contains text "View more App Lab projects"
-      And element ".ui-project-app-type-area:eq(5)" contains text "View more Game Lab projects"
+      And element ".ui-project-app-type-area:eq(1)" contains text "View more App Lab projects"
+      And element ".ui-project-app-type-area:eq(0)" contains text "View more Game Lab projects"
     }
   end
 end

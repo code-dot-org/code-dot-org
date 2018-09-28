@@ -263,9 +263,7 @@ vi:
         applab: 'Tạo một ứng dụng'
         gamelab: 'Tạo một dự án trò chơi'
         weblab: 'Tạo một dự án Web thử nghiệm (beta)'
-      home: "Trang chủ"
       my_dashboard: "Bảng điều khiển của tôi"
-      courses: "Các khóa học"
       course_catalog: "Danh mục khóa học"
       project_gallery: "chương trình"
       sections: "Mục"
@@ -299,6 +297,14 @@ vi:
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
       about: "Thông tin"
+    create_button:
+      create: 'Tạo'
+      applab: 'Phòng thí nghiệm ứng dụng'
+      artist: 'Họa sĩ'
+      gamelab: 'Kho Trò chơi'
+      playlab: 'Phòng trò chơi'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy bird'
     user:
       classroom: 'Trang chủ giáo viên'
       district_dashboard: 'khu vực điều khiển'

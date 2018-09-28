@@ -180,9 +180,15 @@ ca:
         playlab: 'Fes un App'
         artist: 'Dibuixa alguna cosa'
         applab: 'Fes un App'
-      courses: "cursos"
       project_gallery: "Projectes"
       educate_hoc: "Hora del codi"
+    create_button:
+      create: 'Crea'
+      applab: 'Laboratori d''aplicacions'
+      artist: 'Artista'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Pàgina d''inici de mestre'
       label: 'Hola %{username}'

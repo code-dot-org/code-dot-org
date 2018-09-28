@@ -181,8 +181,6 @@ GameLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
-GameLab.baseP5loadImage = null;
-
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
  * @param {!AppOptionsConfig} config
@@ -1131,7 +1129,6 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
     customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
     customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
   });
-  window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
   if (attachDebugger) {

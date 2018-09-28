@@ -1,7 +1,7 @@
 # Returns a random donor's twitter handle.
 def get_random_donor_twitter
   weight = SecureRandom.random_number
-  donor = DB[:cdo_donors].where('((twitter_weight_f - ?) >= 0)', weight).first
+  donor = DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
   if donor && donor[:twitter_s]
     return donor[:twitter_s]
   else
@@ -18,7 +18,7 @@ def get_random_donor_email_message
   link_html = "<a href=\"#{share_link}\">Tweet a message of thanks</a>"
   rest_of_message = " to Microsoft, one of our donors"
   weight = SecureRandom.random_number
-  donor = DB[:cdo_donors].where('((twitter_weight_f - ?) >= 0)', weight).first
+  donor = DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
   if donor && donor[:twitter_s]
     link_html.sub!('%40microsoft', "%40#{donor[:twitter_s][1..-1]}")
     rest_of_message.sub!('Microsoft', donor[:name_s])
