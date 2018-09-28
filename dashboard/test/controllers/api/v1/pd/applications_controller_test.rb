@@ -127,7 +127,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 3, data['csp_teachers']['accepted']['locked']
+      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
     end
 
     test "index shows multiple locked applications" do
@@ -139,7 +139,8 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 3, data['csp_teachers']['accepted']['locked']
+
+      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -154,7 +155,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 3, data['csp_teachers']['accepted']['locked']
+      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
       assert_equal 2, data['csp_teachers']['unreviewed']['unlocked']
     end
 
@@ -169,7 +170,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 3, data['csp_teachers']['accepted']['locked']
+      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
       assert_equal 2, data['csp_teachers']['unreviewed']['unlocked']
     end
 
@@ -420,7 +421,7 @@ module Api::V1::Pd
 
     test 'cohort view returns applications that are accepted and withdrawn' do
       expected_applications = []
-      (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
+      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
         application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
         if ['accepted', 'withdrawn'].include? status
@@ -455,7 +456,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
+        application.status = 'accepted_not_notified'
         application.save!
         application.lock!
 
@@ -473,7 +474,7 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted'
+            status: 'accepted_not_notified'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -492,7 +493,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
+        application.status = 'accepted_not_notified'
         application.save!
         application.lock!
 
@@ -510,7 +511,7 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted'
+            status: 'accepted_not_notified'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -572,7 +573,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
+        application.status = 'accepted_not_notified'
         application.save!
         application.lock!
 
@@ -590,7 +591,7 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
-            status: 'accepted'
+            status: 'accepted_not_notified'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -608,7 +609,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
+        application.status = 'accepted_not_notified'
         application.save!
         application.lock!
 
@@ -626,7 +627,7 @@ module Api::V1::Pd
             email: 'minerva@hogwarts.edu',
             assigned_workshop: nil,
             registered_workshop: nil,
-            status: 'accepted'
+            status: 'accepted_not_notified'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end

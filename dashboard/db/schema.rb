@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180823163642) do
+ActiveRecord::Schema.define(version: 20180919002239) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -570,6 +570,16 @@ ActiveRecord::Schema.define(version: 20180823163642) do
     t.string   "course",                 null: false
     t.integer  "user_id",                null: false
     t.integer  "teacher_application_id"
+  end
+
+  create_table "pd_application_emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_application_id",  null: false
+    t.string   "application_status", null: false
+    t.string   "email_type",         null: false
+    t.string   "to",                 null: false
+    t.datetime "created_at",         null: false
+    t.datetime "sent_at"
+    t.index ["pd_application_id"], name: "index_pd_application_emails_on_pd_application_id", using: :btree
   end
 
   create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1621,6 +1631,7 @@ ActiveRecord::Schema.define(version: 20180823163642) do
   add_foreign_key "ib_school_codes", "schools"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "other_curriculum_offerings", "schools"
+  add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"

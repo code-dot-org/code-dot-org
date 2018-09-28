@@ -1,40 +1,48 @@
 import {expect} from 'chai';
-import PrincipalApprovalComponent, {RACE_LIST, MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS} from '@cdo/apps/code-studio/pd/application/principalApproval1920/PrincipalApproval1920Component';
+import PrincipalApprovalComponent, {RACE_LIST, MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS, ALWAYS_REQUIRED_FIELDS} from '@cdo/apps/code-studio/pd/application/principalApproval1920/PrincipalApproval1920Component';
 
 describe("Principal Approval Component", () => {
   it("Requires only the top few fields if application is rejected", () => {
     expect(PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'No'
-    })).to.deep.equal([]);
+    })).to.deep.equal(ALWAYS_REQUIRED_FIELDS);
   });
 
   it("Requires more fields if the application is accepted", () => {
-    expect(PrincipalApprovalComponent.getDynamicallyRequiredFields({
+    const expectedFields = [...ALWAYS_REQUIRED_FIELDS, ...REQUIRED_SCHOOL_INFO_FIELDS];
+    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes'
-    })).to.deep.equal(REQUIRED_SCHOOL_INFO_FIELDS);
+    });
+    expect(actualFields).to.deep.equal(expectedFields);
   });
 
   it("Requires more fields if the application is accepted and the school is manually entered", () => {
-    expect(PrincipalApprovalComponent.getDynamicallyRequiredFields({
+    const expectedFields = [...ALWAYS_REQUIRED_FIELDS, ...REQUIRED_SCHOOL_INFO_FIELDS, ...MANUAL_SCHOOL_FIELDS].sort();
+    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes',
       school: '-1'
-    }).sort()).to.deep.equal([...REQUIRED_SCHOOL_INFO_FIELDS, ...MANUAL_SCHOOL_FIELDS].sort());
+    }).sort();
+    expect(actualFields).to.deep.equal(expectedFields);
   });
 
   it("Requires more fields if the application is accepted and is replacing a csd course", () => {
-    expect(PrincipalApprovalComponent.getDynamicallyRequiredFields({
+    const expectedFields = [...ALWAYS_REQUIRED_FIELDS, ...REQUIRED_SCHOOL_INFO_FIELDS, 'replaceWhichCourseCsd', 'csdImplementation'].sort();
+    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes',
       course: 'Computer Science Discoveries',
       replaceCourse: 'Yes'
-    }).sort()).to.deep.equal([...REQUIRED_SCHOOL_INFO_FIELDS, 'replaceWhichCourseCsd'].sort());
+    }).sort();
+    expect(actualFields).to.deep.equal(expectedFields);
   });
 
   it("Requires more fields if the application is accepted and is replacing a csp course", () => {
-    expect(PrincipalApprovalComponent.getDynamicallyRequiredFields({
+    const expectedFields = [...ALWAYS_REQUIRED_FIELDS, ...REQUIRED_SCHOOL_INFO_FIELDS, 'replaceWhichCourseCsp', 'cspImplementation'].sort();
+    const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes',
       course: 'Computer Science Principles',
       replaceCourse: 'Yes'
-    }).sort()).to.deep.equal([...REQUIRED_SCHOOL_INFO_FIELDS, 'replaceWhichCourseCsp'].sort());
+    }).sort();
+    expect(actualFields).to.deep.equal(expectedFields);
   });
 
   it("Expect student enrollment to be an integer", () => {

@@ -391,7 +391,7 @@ module Pd::Application
       assert_nil application.accepted_at
 
       Timecop.freeze(today) do
-        application.update!(status: 'accepted')
+        application.update!(status: 'accepted_not_notified')
         assert_equal today, application.accepted_at.to_time
 
         application.update!(status: 'declined')
@@ -399,7 +399,7 @@ module Pd::Application
       end
 
       Timecop.freeze(tomorrow) do
-        application.update!(status: 'accepted')
+        application.update!(status: 'accepted_not_notified')
         assert_equal tomorrow, application.accepted_at.to_time
       end
     end
@@ -466,7 +466,7 @@ module Pd::Application
       workshop = create :pd_workshop
 
       application.pd_workshop_id = workshop.id
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
 
       assert_creates(Pd::Enrollment) do
         application.lock!
@@ -481,7 +481,7 @@ module Pd::Application
       second_workshop = create :pd_workshop
 
       application.pd_workshop_id = first_workshop.id
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
       application.lock!
 
       first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
@@ -499,7 +499,7 @@ module Pd::Application
       workshop = create :pd_workshop
 
       application.pd_workshop_id = workshop.id
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
       application.lock!
       first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
 
@@ -510,7 +510,7 @@ module Pd::Application
       assert first_enrollment.reload.deleted?
 
       application.unlock!
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
 
       assert_creates(Pd::Enrollment) do
         application.lock!
@@ -801,6 +801,65 @@ module Pd::Application
       refute filtered_labels_csd.include? :csd_which_grades
       assert filtered_labels_csd.include? :csp_which_grades
       assert_equal ['csd', 'csp'], Teacher1920Application::FILTERED_LABELS.keys
+    end
+
+    test 'status changes are logged' do
+      application = build :pd_teacher1920_application
+      assert_nil application.status_log
+
+      application.save!
+      assert application.status_log.is_a? Array
+      assert_status_log [{status: 'unreviewed', at: Time.zone.now}], application
+
+      # update unrelated field
+      Timecop.freeze 1
+      application.update!(notes: 'some notes')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 1, application.status_log.count
+
+      Timecop.freeze 1
+      application.update!(status: 'pending')
+      assert_status_log(
+        [
+          {status: 'unreviewed', at: Time.zone.now - 2.seconds},
+          {status: 'pending', at: Time.zone.now}
+        ],
+        application
+      )
+    end
+
+    test 'setting an auto-email status queues up an email' do
+      application = create :pd_teacher1920_application
+      assert_empty application.emails
+
+      application.expects(:queue_email).with('accepted_no_cost_registration')
+      application.update!(status: 'accepted_no_cost_registration')
+    end
+
+    test 'setting an non auto-email status does not queue up a status email' do
+      application = create :pd_teacher1920_application
+      assert_empty application.emails
+
+      application.expects(:queue_email).never
+      application.update!(status: 'pending')
+    end
+
+    test 'setting an auto-email status deletes unsent emails for the application' do
+      unrelated_email = create :pd_application_email
+      application = create :pd_teacher1920_application
+      associated_sent_email = create :pd_application_email, application: application, sent_at: Time.now
+      associated_unsent_email = create :pd_application_email, application: application
+
+      application.update!(status: 'waitlisted')
+      assert Email.exists?(unrelated_email.id)
+      assert Email.exists?(associated_sent_email.id)
+      refute Email.exists?(associated_unsent_email.id)
+    end
+
+    private
+
+    def assert_status_log(expected, application)
+      assert_equal JSON.parse(expected.to_json), application.status_log
     end
   end
 end
