@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
