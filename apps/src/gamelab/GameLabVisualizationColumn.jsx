@@ -53,7 +53,7 @@ const SongSelector = Radium(class extends React.Component {
     return (
       <div>
         <label><b>{gamelabMsg.selectSong()}</b></label>
-        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} defaultValue={this.props.selectedSong}>
+        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
           {Object.keys(songLibrary).map((option, i) => (
             <option key={i} value={option}>{songLibrary[option].title}</option>
           ))}
