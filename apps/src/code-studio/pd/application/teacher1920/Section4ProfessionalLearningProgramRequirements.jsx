@@ -247,8 +247,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
           {this.radioButtonsFor('willingToTravel')}
 
           We may offer online academic year workshops for those unable to travel to
-          their
-          local academic year workshops. Important notes:
+          their local academic year workshops. Important notes:
           <ol>
             <li>
               The online option for academic year workshops is not guaranteed - we are
@@ -335,7 +334,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
     const changes = {};
 
     if (data.payFee !== TextFields.noPayFee) {
-      changes.considerForFunding = undefined;
+      changes.scholarshipReasons = undefined;
     }
 
     if (_.intersection([TextFields.notSureExplain, TextFields.unableToAttend1920], data.ableToAttendMultiple).length === 0) {
