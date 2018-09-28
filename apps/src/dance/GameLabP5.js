@@ -2,8 +2,6 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
 import {createDanceAPI, teardown} from './DanceLabP5';
 
-const defaultFrameRate = 30;
-
 /**
  * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
  * specific places to enable GameLab functionality
@@ -20,22 +18,6 @@ var GameLabP5 = function () {
   ];
   this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
   this.stepSpeed = 1;
-
-  this.setP5FrameRate = () => {
-    if (!this.p5) {
-      return;
-    }
-    if (this.stepSpeed < 1) {
-      // TODO: properly handle overriding frameRate (this implementation doesn't
-      // account for any calls to frameRate() that occur while we are in the
-      // slow mode - we'll need to patch p5 to capture those and update
-      // this.prevFrameRate)
-      this.prevFrameRate = this.p5.frameRate();
-      this.p5.frameRate(1);
-    } else {
-      this.p5.frameRate(this.prevFrameRate || defaultFrameRate);
-    }
-  };
 
   this.setLoop = (shouldLoop) => {
     if (!this.p5) {
@@ -85,26 +67,6 @@ GameLabP5.prototype.init = function (options) {
     };
   }
 
-  // Override p5.redraw to make it two-phase after userDraw()
-  window.p5.prototype.redraw = function () {
-    /*
-     * Copied code from p5 from redraw()
-     */
-    const userSetup = this.setup || window.setup;
-    const userDraw = this.draw || window.draw;
-    if (typeof userDraw === 'function') {
-      this.resetMatrix();
-      if (typeof userSetup === 'undefined') {
-        this.scale(this.pixelDensity, this.pixelDensity);
-      }
-      const preMethods = this._registeredMethods.pre;
-      for (let i = 0; i < preMethods.length; i++) {
-        preMethods[i].call(this);
-      }
-      userDraw();
-    }
-  };
-
   // Create 2nd phase function afterUserDraw()
   window.p5.prototype.afterUserDraw = function () {
     /*
@@ -115,18 +77,6 @@ GameLabP5.prototype.init = function (options) {
       postMethods[i].call(this);
     }
   };
-
-  // Disable fullscreen() method:
-  // (we don't make this change in our fork of p5.play, as we want this restriction
-  //  only while running within Code Studio)
-  window.p5.prototype.fullscreen = function (val) {
-    return false;
-  };
-
-  window.p5.prototype.gamelabPreload = function () {
-    this.p5decrementPreload = window.p5._getDecrementPreload.apply(this.p5, arguments);
-  }.bind(this);
-
 };
 
 /**
@@ -151,19 +101,6 @@ GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
   this.p5[eventName] = handler;
 };
 
-GameLabP5.prototype.changeStepSpeed = function (stepSpeed) {
-  this.stepSpeed = stepSpeed;
-  this.setP5FrameRate();
-};
-
-GameLabP5.prototype.drawDebugSpriteColliders = function () {
-  if (this.p5) {
-    this.p5.allSprites.forEach(sprite => {
-      sprite.display(true);
-    });
-  }
-};
-
 /**
  * Instantiate a new p5 and start execution
  */
@@ -174,41 +111,10 @@ GameLabP5.prototype.startExecution = function (dancelab) {
       // within _syncAnimationSizes()
       this.p5._fixedSpriteAnimationFrameSizes = true;
 
-      this.setP5FrameRate();
       this.gameLabWorld = new GameLabWorld(p5obj);
       if (dancelab) {
         this.danceAPI = createDanceAPI(this.p5);
       }
-
-      p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
-
-      // Overload _setup function to make it two-phase
-      p5obj._setup = function () {
-        /*
-         * Copied code from p5 _setup()
-         */
-
-        // return preload functions to their normal vals if switched by preload
-        var context = this._isGlobal ? window : this;
-        if (typeof context.preload === 'function') {
-          for (var f in this._preloadMethods) {
-            context[f] = this._preloadMethods[f][f];
-            if (context[f] && this) {
-              context[f] = context[f].bind(this);
-            }
-          }
-        }
-
-        // Short-circuit on this, in case someone used the library in "global"
-        // mode earlier
-        if (typeof context.setup === 'function') {
-          context.setup();
-        } else {
-          this._setupEpiloguePhase1();
-          this._setupEpiloguePhase2();
-        }
-
-      }.bind(p5obj);
 
       p5obj._setupEpiloguePhase1 = function () {
         /*
@@ -237,14 +143,7 @@ GameLabP5.prototype.startExecution = function (dancelab) {
       }.bind(p5obj);
 
       p5obj.preload = function () {
-        if (!this.onPreload()) {
-          // If onPreload() returns false, it means that the preload phase has
-          // not completed, so we need to grab increment p5's preloadCount by
-          // calling the gamelabPreload() method.
-
-          // Call our gamelabPreload() to force _start/_setup to wait.
-          p5obj.gamelabPreload();
-        }
+        this.onPreload();
       }.bind(this);
 
       p5obj.setup = function () {

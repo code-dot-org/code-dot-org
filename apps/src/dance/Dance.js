@@ -331,15 +331,6 @@ Dance.prototype.reset = function () {
   this.executionError = null;
 };
 
-Dance.prototype.rerunSetupCode = function () {
-  this.gameLabP5.resetWorld();
-  this.gameLabP5.p5.allSprites.removeSprites();
-  this.JSInterpreter.deinitialize();
-  this.initInterpreter();
-  this.onP5Setup();
-  this.gameLabP5.p5.redraw();
-};
-
 Dance.prototype.onPuzzleComplete = function (submit, testResult) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
@@ -506,10 +497,6 @@ Dance.prototype.onTick = function () {
   if (this.JSInterpreter) {
     if (this.interpreterStarted) {
       this.JSInterpreter.executeInterpreter();
-
-      if (this.gameLabP5.stepSpeed < 1) {
-        this.gameLabP5.drawDebugSpriteColliders();
-      }
     }
 
     this.completePreloadIfPreloadComplete();
