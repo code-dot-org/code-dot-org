@@ -9,8 +9,7 @@ module OmniauthCallbacksControllerTests
     include OmniauthCallbacksControllerTests::Utils
 
     setup do
-      # Skip firehose logging for these tests, unless explicitly requested
-      FirehoseClient.instance.stubs(:put_record)
+      stub_firehose
     end
 
     test "student sign-up" do
