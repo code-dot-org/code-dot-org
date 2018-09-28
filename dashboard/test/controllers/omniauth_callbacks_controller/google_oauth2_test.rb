@@ -35,7 +35,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-control',
+        SignUpTracking::CONTROL_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback
@@ -66,7 +66,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-control',
+        SignUpTracking::CONTROL_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback
@@ -98,7 +98,7 @@ module OmniauthCallbacksControllerTests
       assert_template partial: '_sign_up'
 
       assert_sign_up_tracking(
-        'v2-control',
+        SignUpTracking::CONTROL_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback
@@ -133,7 +133,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-finish-sign-up',
+        SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback
@@ -164,7 +164,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-finish-sign-up',
+        SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback
@@ -196,7 +196,7 @@ module OmniauthCallbacksControllerTests
       assert_template partial: '_finish_sign_up'
 
       assert_sign_up_tracking(
-        'v2-finish-sign-up',
+        SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback
@@ -258,7 +258,7 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
 
       assert_sign_up_tracking(
-        'v1', # Not in control or experiment since this wasn't a sign-up
+        SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback

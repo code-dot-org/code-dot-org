@@ -2,10 +2,10 @@ require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 module SignUpTracking
-  STUDY_NAME = 'account-sign-up'
-  NOT_IN_STUDY_GROUP = 'v1'
-  CONTROL_GROUP = 'v2-control'
-  NEW_SIGN_UP_GROUP = 'v2-finish-sign-up'
+  STUDY_NAME = 'account-sign-up-v2'
+  NOT_IN_STUDY_GROUP = 'not-in-study'
+  CONTROL_GROUP = 'control'
+  NEW_SIGN_UP_GROUP = 'experiment'
 
   USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
 
