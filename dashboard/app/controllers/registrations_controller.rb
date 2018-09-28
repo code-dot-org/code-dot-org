@@ -54,9 +54,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    # Merge sign_up_params into user params to set additional required fields for
-    # email opt-in preference and GDPR data agreement.
-    params[:user].merge!(sign_up_params)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
     end
