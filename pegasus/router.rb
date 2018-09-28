@@ -124,6 +124,10 @@ class Documents < Sinatra::Base
     Haml::TempleEngine.disable_option_validator!
   end
 
+  def self.should_internationalize(site)
+    return site == 'hourofcode.com'
+  end
+
   before do
     $log.debug request.url
 
@@ -139,7 +143,7 @@ class Documents < Sinatra::Base
 
     @dirs = []
 
-    if request.site == 'hourofcode.com'
+    if Documents.should_internationalize(request.site)
       @dirs << [File.join(request.site, 'i18n')]
     end
 
@@ -386,9 +390,9 @@ class Documents < Sinatra::Base
         site_glob = site_sub = content_dir(site, 'public')
 
         next if site == 'drupal.code.org'
-        if site == 'hourofcode.com'
-          # hourofcode.com has custom logic to include
-          # optional `/i18n` folder in its file-search path.
+        if Documents.should_internationalize(site)
+          # domains that internationalize documents should include optional
+          # `/i18n` folder in their file-search path.
           site_glob.sub!(site, "{#{site},#{site}/i18n}")
           site_sub = /#{content_dir(site)}(\/i18n)?\/public/
         end
@@ -400,9 +404,11 @@ class Documents < Sinatra::Base
             sub(/#{File.extname(file)}$/, '').
             sub(/\/index$/, '')
 
-          # hourofcode.com has custom logic to resolve `/:country/:language/:path` URIs to
-          # `/:language/:path` document paths, so prepend default `us` country code to reduce document path to URI.
-          uri.prepend('/us') if site == 'hourofcode.com'
+          # domains that internationalize documents should resolve
+          # `/:country/:language/:path` URIs to `/:language/:path` document
+          # paths, so prepend default `us` country code to reduce document
+          # path to URI.
+          uri.prepend('/us') if Documents.should_internationalize(site)
 
           {site: site, uri: uri}
         end
