@@ -332,15 +332,15 @@ var fg_effects = new Effects(0.8);
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;
 
-function setBackground(color) {
+export function setBackground(color) {
   World.background_color = color;
 }
 
-function setBackgroundEffect(effect) {
+export function setBackgroundEffect(effect) {
   World.bg_effect = bg_effects[effect];
 }
 
-function setForegroundEffect(effect) {
+export function setForegroundEffect(effect) {
   World.fg_effect = fg_effects[effect];
 }
 
@@ -353,7 +353,7 @@ function initialize(setupHandler) {
 //
 
 
-function makeNewDanceSprite(costume, name, location) {
+export function makeNewDanceSprite(costume, name, location) {
 
   // Default to first dancer if selected a dancer that doesn't exist
   // to account for low-bandwidth mode limited character set
@@ -450,7 +450,7 @@ function makeNewDanceSprite(costume, name, location) {
 
 // Dance Moves
 
-function changeMoveLR(sprite, move, dir) {
+export function changeMoveLR(sprite, move, dir) {
   if (!spriteExists(sprite)) return;
   if (move == "next") {
     move = 1 + ((sprite.current_move + 1) % (ANIMATIONS[sprite.style].length - 1));
@@ -471,7 +471,7 @@ function changeMoveLR(sprite, move, dir) {
   sprite.current_move = move;
 }
 
-function doMoveLR(sprite, move, dir) {
+export function doMoveLR(sprite, move, dir) {
   if (!spriteExists(sprite)) return;
   if (move == "next") {
     move = (sprite.current_move + 1) % ANIMATIONS[sprite.style].length;
@@ -489,7 +489,7 @@ function doMoveLR(sprite, move, dir) {
   sprite.animation.changeFrame(FRAMES / 2);
 }
 
-function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
+export function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
   if (!spriteExists(sprite)) return;
   if (sprite.current_dance == dance) {
     ifStatement();
@@ -500,7 +500,7 @@ function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
 
 // Group Blocks
 
-function changeMoveEachLR(group, move, dir) {
+export function changeMoveEachLR(group, move, dir) {
   if (typeof (group) == "string") {
     if (!sprites_by_type.hasOwnProperty(group)) {
       console.log("There is no group of " + group);
@@ -513,7 +513,7 @@ function changeMoveEachLR(group, move, dir) {
   });
 }
 
-function doMoveEachLR(group, move, dir) {
+export function doMoveEachLR(group, move, dir) {
   if (typeof(group) == "string") {
     if (!sprites_by_type.hasOwnProperty(group)) {
       console.log("There is no group of " + group);
@@ -524,7 +524,7 @@ function doMoveEachLR(group, move, dir) {
   group.forEach(function (sprite) { doMoveLR(sprite, move, dir);});
 }
 
-function layoutSprites(group, format) {
+export function layoutSprites(group, format) {
   if (typeof(group) == "string") {
     if (!sprites_by_type.hasOwnProperty(group)) {
       console.log("There is no group of " + group);
@@ -574,11 +574,11 @@ function layoutSprites(group, format) {
 
 // Properties
 
-function setTint(sprite, val) {
+export function setTint(sprite, val) {
   setProp(sprite, "tint", val);
 }
 
-function setProp(sprite, property, val) {
+export function setProp(sprite, property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
 
   if (property == "scale") {
@@ -596,7 +596,7 @@ function setProp(sprite, property, val) {
   }
 }
 
-function getProp(sprite, property) {
+export function getProp(sprite, property) {
   if (!spriteExists(sprite)) return;
 
   if (property == "scale") {
@@ -614,7 +614,7 @@ function getProp(sprite, property) {
   }
 }
 
-function changePropBy(sprite,  property, val) {
+export function changePropBy(sprite,  property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
 
   if (property == "scale") {
@@ -633,20 +633,20 @@ function changePropBy(sprite,  property, val) {
   }
 }
 
-function jumpTo(sprite, location) {
+export function jumpTo(sprite, location) {
   if (!spriteExists(sprite)) return;
   sprite.x = location.x;
   sprite.y = location.y;
 }
 
-function setDanceSpeed(sprite, speed) {
+export function setDanceSpeed(sprite, speed) {
   if (!spriteExists(sprite)) return;
   sprite.dance_speed = speed;
 }
 
 // Music Helpers
 
-function getEnergy(range) {
+export function getEnergy(range) {
   if (range == "low") {
     return Dance.fft.getEnergy(20, 200);
   } else if (range == "mid") {
@@ -656,11 +656,11 @@ function getEnergy(range) {
   }
 }
 
-function nMeasures(n) {
+export function nMeasures(n) {
   return (240 * n) / song_meta.bpm;
 }
 
-function getTime(unit) {
+export function getTime(unit) {
   if (unit == "measures") {
     return song_meta.bpm * (Dance.song.currentTime(0) / 240);
   } else {
@@ -670,7 +670,7 @@ function getTime(unit) {
 
 // Music Events
 
-function atTimestamp(timestamp, unit, event) {
+export function atTimestamp(timestamp, unit, event) {
   registerSetup(function () {
     if (unit == "measures") {
       timestamp = nMeasures(timestamp);
@@ -680,7 +680,7 @@ function atTimestamp(timestamp, unit, event) {
   });
 }
 
-function everySeconds(n, unit, event) {
+export function everySeconds(n, unit, event) {
   registerSetup(function () {
     if (unit == "measures") n = nMeasures(n);
     if (n > 0) {
@@ -693,7 +693,7 @@ function everySeconds(n, unit, event) {
   });
 }
 
-function everySecondsRange(n, unit, start, stop, event) {
+export function everySecondsRange(n, unit, start, stop, event) {
   registerSetup(function () {
     if (unit == "measures") n = nMeasures(n);
     if (n > 0) {
@@ -706,7 +706,7 @@ function everySecondsRange(n, unit, start, stop, event) {
   });
 }
 
-function everyVerseChorus(unit, event) {
+export function everyVerseChorus(unit, event) {
   registerSetup(function () {
     song_meta[unit].forEach(function (timestamp) {
       Dance.song.addCue(0, timestamp, event);
@@ -785,7 +785,7 @@ function behaviorsEqual(behavior1, behavior2) {
   return extraArgsEqual;
 }
 
-function startMapping(sprite, property, range) {
+export function startMapping(sprite, property, range) {
   var behavior = new Behavior(function (sprite) {
     var energy = Dance.fft.getEnergy(range);
     if (property == "x") {
@@ -808,7 +808,7 @@ function startMapping(sprite, property, range) {
   addBehavior(sprite, behavior);
 }
 
-function stopMapping(sprite, property, range) {
+export function stopMapping(sprite, property, range) {
   var behavior = new Behavior(function (sprite) {
     var energy = Dance.fft.getEnergy(range);
     if (property == "x") {
@@ -833,11 +833,11 @@ function stopMapping(sprite, property, range) {
 
 //Events
 
-function whenSetup(event) {
+export function whenSetup(event) {
   setupCallbacks.push(event);
 }
 
-function whenSetupSong(song, event) {
+export function whenSetupSong(song, event) {
   song_meta = songs[song];
   setupCallbacks.push(event);
 }
@@ -850,7 +850,7 @@ function spriteDestroyed(sprite, event) {
   });
 }
 
-function whenKey(key, event) {
+export function whenKey(key, event) {
   inputEvents.push({
     type: p5.keyWentDown,
     event: event,
@@ -858,7 +858,7 @@ function whenKey(key, event) {
   });
 }
 
-function whenPeak(range, event) {
+export function whenPeak(range, event) {
   /*
   // This approach only allows one event handler per beat detector
   Dance.fft.onPeak(range, event);
@@ -895,7 +895,7 @@ function makeNewGroup() {
 
 // Miscellaneus Helpers
 
-function changeColorBy(input, method, amount) {
+export function changeColorBy(input, method, amount) {
   p5.push();
   p5.colorMode(p5.HSB, 100);
   var c = p5.color(input);
@@ -910,11 +910,11 @@ function changeColorBy(input, method, amount) {
   return new_c;
 }
 
-function mixColors(color1, color2) {
+export function mixColors(color1, color2) {
   return p5.lerpColor(p5.color(color1), p5.color(color2), 0.5);
 }
 
-function randomColor() {
+export function randomColor() {
   return p5.color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
 }
 
