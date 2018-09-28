@@ -927,7 +927,7 @@ FactoryGirl.define do
       other '10%'
       committed_to_master_schedule Pd::Application::PrincipalApproval1920Application.options[:committed_to_master_schedule][0]
       csp_implementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
-      replace_course 'No, it will not replace an existing computer science course.'
+      replace_course Pd::Application::PrincipalApproval1920Application.options[:replace_course][1]
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
