@@ -377,7 +377,7 @@ Dance.prototype.initInterpreter = function () {
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
 
   let code = '';
-  code += require('!!raw-loader!./p5.dance');
+  code += require('!!raw-loader!./p5.dance').replace(/export function/g, 'function');
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,

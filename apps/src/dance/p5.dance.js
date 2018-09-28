@@ -12,6 +12,10 @@ var loops = [];
 console.log('hello');
 console.log(p5);
 
+var World = {
+  height: 400
+};
+
 function randomNumber(min, max) {
   return Math.floor(p5.random(min, max));
 }
@@ -158,9 +162,9 @@ function setup() {
     callback();
   });
 
-  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / song_meta.bpm) * World.frameRate));
-  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / song_meta.bpm) * World.frameRate));
-  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / song_meta.bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / song_meta.bpm));
+  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / song_meta.bpm));
+  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / song_meta.bpm));
 
   Dance.song.start();
 }
@@ -206,7 +210,7 @@ function Effects(alpha, blend) {
       }
     },
     draw: function () {
-      if (Dance.fft.isPeak() || World.frameCount == 1) this.update();
+      if (Dance.fft.isPeak() || p5.frameCount == 1) this.update();
       p5.push();
       p5.noStroke();
       for (var i = 0; i < this.colors.length; i++) {
@@ -842,14 +846,6 @@ export function whenSetupSong(song, event) {
   setupCallbacks.push(event);
 }
 
-function spriteDestroyed(sprite, event) {
-  inputEvents.push({
-    type: isDestroyed,
-    event: event,
-    param: sprite
-  });
-}
-
 export function whenKey(key, event) {
   inputEvents.push({
     type: p5.keyWentDown,
@@ -880,19 +876,6 @@ function registerSetup(callback) {
   setupCallbacks.push(callback);
 }
 
-// Sprite and Group creation
-
-function makeNewGroup() {
-  var group = p5.createGroup();
-  group.addBehaviorEach = function (behavior) {
-    for (var i = 0; i < group.length; i++) {
-      addBehavior(group[i], behavior);
-    }
-  };
-  group.destroy = group.destroyEach;
-  return group;
-}
-
 // Miscellaneus Helpers
 
 export function changeColorBy(input, method, amount) {
@@ -918,12 +901,8 @@ export function randomColor() {
   return p5.color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
 }
 
-function isDestroyed(sprite) {
-  return World.allSprites.indexOf(sprite) === -1;
-}
-
 function spriteExists(sprite) {
-  return World.allSprites.indexOf(sprite) > -1;
+  return p5.allSprites.indexOf(sprite) > -1;
 }
 
 function draw() {
@@ -940,7 +919,7 @@ function draw() {
     callback();
   });
 
-  {
+  if (p5.frameCount > 2) {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
       sprite.behaviors.forEach(function (behavior) {
