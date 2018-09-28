@@ -29,7 +29,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-control',
+        SignUpTracking::CONTROL_GROUP,
         %w(
           clever-callback
           clever-sign-up-success
@@ -51,7 +51,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-control',
+        SignUpTracking::CONTROL_GROUP,
         %w(
           clever-callback
           clever-sign-up-success
@@ -81,7 +81,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-finish-sign-up',
+        SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
           clever-callback
           load-finish-sign-up-page
@@ -110,7 +110,7 @@ module OmniauthCallbacksControllerTests
       assert_credentials auth_hash, created_user
 
       assert_sign_up_tracking(
-        'v2-finish-sign-up',
+        SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
           clever-callback
           load-finish-sign-up-page
