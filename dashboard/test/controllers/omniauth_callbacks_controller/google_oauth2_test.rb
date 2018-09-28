@@ -1,14 +1,14 @@
 require 'test_helper'
+require_relative './utils'
 
 module OmniauthCallbacksControllerTests
   #
   # Tests over Google sign-up and sign-in stories
   #
   class GoogleOAuth2Test < ActionDispatch::IntegrationTest
-    setup do
-      # See https://github.com/omniauth/omniauth/wiki/Integration-Testing
-      OmniAuth.config.test_mode = true
+    include OmniauthCallbacksControllerTests::Utils
 
+    setup do
       # Skip firehose logging for these tests, unless explicitly requested
       FirehoseClient.instance.stubs(:put_record)
 
@@ -32,7 +32,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_student @auth_hash.info.email, created_user
+      assert_valid_student created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -52,7 +52,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher @auth_hash.info.email, created_user
+      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -75,7 +75,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_student @auth_hash.info.email, created_user
+      assert_valid_student created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -96,7 +96,7 @@ module OmniauthCallbacksControllerTests
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher @auth_hash.info.email, created_user
+      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
       assert_credentials @auth_hash, created_user
     ensure
       created_user&.destroy!
@@ -139,96 +139,17 @@ module OmniauthCallbacksControllerTests
     EMAIL = 'upgraded@code.org'
     DEFAULT_UID = '1111'
 
-    def mock_oauth(auth_hash = generate_auth_hash)
-      @auth_hash = auth_hash
-      OmniAuth.config.mock_auth[:google_oauth2] = @auth_hash
-    end
-
-    def generate_auth_hash(args = {})
-      OmniAuth::AuthHash.new(
-        uid: args[:uid] || DEFAULT_UID,
-        provider: args[:provider] || AuthenticationOption::GOOGLE,
-        info: {
-          name: args[:name] || 'someone',
-          email: args[:email] || EMAIL,
-          user_type: args[:user_type].presence,
-          dob: args[:dob] || Date.today - 20.years,
-          gender: args[:gender] || 'f'
-        },
-        credentials: {
-          token: args[:token] || 'fake-token',
-          expires_at: args[:expires_at] || 'fake-token-expiration',
-          refresh_token: args[:refresh_token] || 'fake-refresh-token'
-        }
+    def mock_oauth
+      mock_oauth_for AuthenticationOption::GOOGLE, generate_auth_hash(
+        provider: AuthenticationOption::GOOGLE,
+        refresh_token: 'fake-refresh-token'
       )
     end
 
-    # The user signs in through Google
-    # The oauth endpoint (which is mocked) redirects to the oauth callback,
-    # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
+    # The user signs in through Google, which hits the oauth callback
+    # and redirects to something else: homepage, finish_sign_up, etc.
     def sign_in_through_google
-      get '/users/auth/google_oauth2'
-      assert_redirected_to '/users/auth/google_oauth2/callback'
-      follow_redirect!
-    end
-
-    def finish_sign_up(user_type)
-      post '/users', params: finish_sign_up_params(user_type: user_type)
-    end
-
-    def finish_sign_up_params(override_params)
-      user_type = override_params[:user_type] || User::TYPE_STUDENT
-      if user_type == User::TYPE_STUDENT
-        {
-          user: {
-            locale: 'en-US',
-            user_type: user_type,
-            name: @auth_hash.info.name,
-            age: '13',
-            gender: 'f',
-            school_info_attributes: {
-              country: 'US'
-            },
-            terms_of_service_version: 1,
-            email_preference_opt_in: nil,
-          }.merge(override_params)
-        }
-      else
-        {
-          user: {
-            locale: 'en-US',
-            user_type: user_type,
-            name: @auth_hash.info.name,
-            age: '21+',
-            gender: nil,
-            school_info_attributes: {
-              country: 'US'
-            },
-            terms_of_service_version: 1,
-            email_preference_opt_in: 'yes',
-          }.merge(override_params)
-        }
-      end
-    end
-
-    def assert_valid_student(expected_email, user)
-      assert user.valid?
-      assert user.student?
-      assert_equal User.hash_email(expected_email), user.hashed_email
-    end
-
-    def assert_valid_teacher(expected_email, user)
-      assert user.valid?
-      assert user.teacher?
-      assert_equal expected_email, user.email
-    end
-
-    def assert_credentials(from_auth_hash, on_created_user)
-      assert_equal from_auth_hash.provider, on_created_user.provider
-      assert_equal from_auth_hash.uid, on_created_user.uid
-      assert_equal from_auth_hash.credentials.token, on_created_user.oauth_token
-      assert_equal from_auth_hash.credentials.expires_at, on_created_user.oauth_token_expiration
-      assert_equal from_auth_hash.credentials.refresh_token, on_created_user.oauth_refresh_token
+      sign_in_through AuthenticationOption::GOOGLE
     end
   end
 end
