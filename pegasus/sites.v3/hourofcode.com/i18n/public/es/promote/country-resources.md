@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:titulo_pais_recursos).inspect %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
