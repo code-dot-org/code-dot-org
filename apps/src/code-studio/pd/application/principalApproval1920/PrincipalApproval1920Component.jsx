@@ -238,11 +238,11 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     return (
       <FormGroup>
         <p>
-          A teacher at your school, {this.props.teacherApplication.name}, has applied to be a part
-          of <a href="https://code.org/educate/professional-learning-2019" target="_blank">Code.org’s Professional Learning Program</a>
-          {' '} in order to teach the <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">{this.props.teacherApplication.course} curriculum</a>
-          {' '} during the {YEAR} school year. Your approval is required for the
-          teacher’s application to be considered.
+          A teacher at your school, {this.props.teacherApplication.name}, has applied to be a part of{' '}
+          <a href="https://code.org/educate/professional-learning-2019" target="_blank">Code.org’s Professional Learning Program</a>
+          {' '}in order to teach the{' '}
+          <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">{this.props.teacherApplication.course} curriculum</a>
+          {' '}during the {YEAR} school year. Your approval is required for the teacher’s application to be considered.
         </p>
         {
           this.selectFor('title', {
