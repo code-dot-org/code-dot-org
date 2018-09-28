@@ -358,9 +358,16 @@ class Blockly < Level
 
   # @param resolve [Boolean] if true (default), localize property using I18n#t.
   #   if false, just return computed property key directly.
-  def get_localized_property(property_name, resolve: true)
+  # @param extra_identifier [Boolean] we for some reason use the property name
+  #   twice in the internationalization key: once pluralized as a category name,
+  #   and once again singularized as an addition to the level name itself. This
+  #   is unnecessary, so we are gradually removing the extra key. If this is
+  #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
+  #   instances of this extra key and then this property.
+  def get_localized_property(property_name, resolve: true, extra_identifier: true)
     if should_localize? && try(property_name)
-      key = "data.#{property_name.pluralize}.#{name}_#{property_name.singularize}"
+      key = "data.#{property_name.pluralize}.#{name}"
+      key += "_#{property_name.singularize}" if extra_identifier
       return key unless resolve
       I18n.t(key, default: nil)
     end
@@ -371,7 +378,7 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("markdown_instructions")
+    get_localized_property("long_instructions", true, false)
   end
 
   def localized_authored_hints
@@ -411,7 +418,7 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("instructions")
+      loc_val = get_localized_property("short_instructions", true, false)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
