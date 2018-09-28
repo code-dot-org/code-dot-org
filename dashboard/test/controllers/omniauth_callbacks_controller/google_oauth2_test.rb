@@ -9,8 +9,7 @@ module OmniauthCallbacksControllerTests
     include OmniauthCallbacksControllerTests::Utils
 
     setup do
-      # Skip firehose logging for these tests, unless explicitly requested
-      FirehoseClient.instance.stubs(:put_record)
+      stub_firehose
 
       # Force split-test to control group (override in tests over experiment)
       SignUpTracking.stubs(:split_test_percentage).returns(0)
@@ -34,6 +33,17 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_student created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::CONTROL_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          google_oauth2-sign-up-error
+          load-sign-up-page
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -54,8 +64,52 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::CONTROL_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          google_oauth2-sign-up-error
+          load-sign-up-page
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
+    end
+
+    test "fail to finish sign-up" do
+      auth_hash = mock_oauth
+
+      get '/users/sign_up'
+      sign_in_through_google
+      assert_redirected_to '/users/sign_up'
+      follow_redirect!
+      assert_template partial: '_sign_up'
+
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_sign_up'
+
+      # Let's try that one more time...
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_sign_up'
+
+      assert_sign_up_tracking(
+        SignUpTracking::CONTROL_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          google_oauth2-sign-up-error
+          load-sign-up-page
+          load-sign-up-page
+          google_oauth2-sign-up-error
+          load-sign-up-page
+          google_oauth2-sign-up-error
+        )
+      )
     end
 
     test "student sign-up (new sign-up flow)" do
@@ -77,6 +131,16 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_student created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::NEW_SIGN_UP_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          load-finish-sign-up-page
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -98,8 +162,51 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::NEW_SIGN_UP_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          load-finish-sign-up-page
+          google_oauth2-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
+    end
+
+    test "fail to finish sign-up (new sign-up flow)" do
+      auth_hash = mock_oauth
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
+
+      get '/users/sign_up'
+      sign_in_through_google
+      assert_redirected_to '/users/sign_up'
+      follow_redirect!
+      assert_template partial: '_finish_sign_up'
+
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_finish_sign_up'
+
+      # Let's try that one more time...
+      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
+      assert_response :success
+      assert_template partial: '_finish_sign_up'
+
+      assert_sign_up_tracking(
+        SignUpTracking::NEW_SIGN_UP_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          load-finish-sign-up-page
+          load-finish-sign-up-page
+          google_oauth2-sign-up-error
+          load-finish-sign-up-page
+          google_oauth2-sign-up-error
+        )
+      )
     end
 
     test "student sign-in" do
@@ -117,6 +224,8 @@ module OmniauthCallbacksControllerTests
       assert_equal student.id, signed_in_user_id
       student.reload
       assert_credentials auth_hash, student
+
+      refute_sign_up_tracking
     end
 
     test "teacher sign-in" do
@@ -132,6 +241,30 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
       assert_credentials auth_hash, teacher
+
+      refute_sign_up_tracking
+    end
+
+    test "sign-in from sign-up page" do
+      auth_hash = mock_oauth
+
+      teacher = create(:teacher, :unmigrated_google_sso, uid: auth_hash.uid)
+
+      get '/users/sign_up'
+      refute_creates(User) {sign_in_through_google}
+      assert_redirected_to '/home'
+      assert_equal I18n.t('auth.signed_in'), flash[:notice]
+
+      assert_equal teacher.id, signed_in_user_id
+
+      assert_sign_up_tracking(
+        SignUpTracking::NOT_IN_STUDY_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          google_oauth2-sign-in
+        )
+      )
     end
 
     private
