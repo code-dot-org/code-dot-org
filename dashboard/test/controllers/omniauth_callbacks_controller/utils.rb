@@ -86,10 +86,12 @@ module OmniauthCallbacksControllerTests
     def assert_credentials(from_auth_hash, on_created_user)
       assert_equal from_auth_hash.provider, on_created_user.provider
       assert_equal from_auth_hash.uid, on_created_user.uid
-      assert_equal from_auth_hash.credentials.token, on_created_user.oauth_token
-      assert_equal from_auth_hash.credentials.expires_at, on_created_user.oauth_token_expiration
-      unless from_auth_hash.credentials.refresh_token.nil?
-        assert_equal from_auth_hash.credentials.refresh_token, on_created_user.oauth_refresh_token
+      if from_auth_hash.credentials
+        assert_equal from_auth_hash.credentials.token, on_created_user.oauth_token
+        assert_equal from_auth_hash.credentials.expires_at, on_created_user.oauth_token_expiration
+        unless from_auth_hash.credentials.refresh_token.nil?
+          assert_equal from_auth_hash.credentials.refresh_token, on_created_user.oauth_refresh_token
+        end
       end
     end
 
