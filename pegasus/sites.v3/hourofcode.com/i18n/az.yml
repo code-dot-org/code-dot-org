@@ -12,20 +12,20 @@ az:
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10 dekabr 2017"
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  cookie_banner_more_information: "\"Code.org\"un məxfilik siyasətini nəzərdən keçirin."
+  cookie_banner_accept: 'Razıyam'
   front_header_banner: 'Tarixin ən böyük təhsil hadisəsinə qoşulun, %{campaign_date}'
   front_intro_default: 'Kod Saatı 180-dən çox ölkədə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. Hər kəs, istədiyi hər yerdə bir Kod Saatı tədbiri təşkil edə bilər. Bir saatlıq dərsliklər 45-dən çox dildə mövcuddur. Heç bir ilkin təcrübə tələb olunmur. <strong>4 yaşdan tutmuş 104 yaşa qədər.</strong>'
   front_watch_video: 'Yeni videoya baxın'
   front_watch_regular_video: 'Videoya baxın'
   front_volunteers: 'Texniki biliyi olan könüllülər axtarılır'
   front_start_learning: 'Öyrənməyə başlayın'
-  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
-  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_heading: 'ABŞ-da yerləşən bir veb-saytı istifadə etməyə razısınız?'
+  gdpr_dialog_message: 'Bu saytı istifadə edərkən toplanan verilənlər ABŞ-da saxlanmaq və ya emal olunmaq üçün göndərilə bilər.'
   gdpr_dialog_link_intro: 'For details see our'
-  gdpr_dialog_privacy_policy: 'privacy policy'
-  gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_privacy_policy: 'məxfilik siyasəti'
+  gdpr_dialog_logout: 'Çıxış'
+  gdpr_dialog_yes: 'Bəli'
   header_menu_resources: 'Resurslar'
   header_menu_faq: 'Tez-tez verilən suallar'
   header_menu_how_to: 'Təlimatlar'
@@ -165,12 +165,12 @@ az:
   how_to_nav_educators: "Təlimçilər üçün"
   how_to_nav_after_school: "Məktəb sonrası üçün"
   how_to_nav_parents: "Valideynlər üçün"
-  how_to_nav_public_officials: "For public officials"
-  how_to_nav_districts: "For districts"
-  how_to_nav_assemblies: "For school assemblies"
+  how_to_nav_public_officials: "Hökumət rəsmiləri üçün"
+  how_to_nav_districts: "Rayon təhsil şöbələri üçün"
+  how_to_nav_assemblies: "Məktəb komitələri üçün"
   how_to_nav_organizations: "Təşkilatlar üçün"
   how_to_nav_companies: "Şirkətlər üçün"
-  how_to_nav_afterschool_educators: "For after-school educators"
+  how_to_nav_afterschool_educators: "Məktəbdənkənar təlimçilər üçün"
   how_to_nav_volunteers: "Könüllülər üçün"
   whats_next_header: "Bəs sonra?"
   whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
@@ -256,8 +256,8 @@ az:
   signup_match_volunteer: 'Şagirdlərimi həvəsləndirmək üçün yerli bir proqramçı tapmağıma kömək edin'
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
-  signup_email_preference_no: 'No'
+  signup_email_preference_yes: 'Bəli'
+  signup_email_preference_no: 'Xeyr'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "We will put your school name and city on the map when you register. If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_registration_deadline: "Registration for the Hour of Code closes December 11."
@@ -271,12 +271,12 @@ az:
   signup_send_posters_address_placeholder: 'Bu ünvan bizim xəritədə paylaşdırılmayacaq'
   signup_event_type_in_school: 'Məktəbdə'
   signup_event_type_out_of_school: 'Məktəbdən kənar'
-  signup_submit_census_label: 'Submit'
+  signup_submit_census_label: 'Göndər'
   signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: 'Qeydiyyatdan keçin'
   signup_submit_error_message: "Səhv baş verdi. Bütün vacib sahələrin düzgün doldurulduğunuzu yoxlayın."
   signup_submit_and_continue_label: 'Submit and Continue'
-  signup_continue_label: 'Continue'
+  signup_continue_label: 'Davam et'
   signup_thank_you_header: "Kod Saatı tədbiri təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür edirik."
   signup_thank_you_message: 'İşə başlamağa kömək etmək üçün sizə təsdiq məktubu göndərildi.'
   map_title: "Kod Saatı xəritəsi"
@@ -285,7 +285,7 @@ az:
   see_all_events: 'Bütün tədbirləri nəzərdən keçirin'
   map_header_company: '# şirkətlər tərəfindən'
   map_header_country: 'ölkənizdə (%{country}) # tədbir'
-  map_search_placeholder: 'Search for Hour of Code events'
+  map_search_placeholder: 'Kod Saatı tədirlərini axtarın'
   map_search_search: 'Axtarış'
   map_search_reset: 'Sıfırla'
   map_legend_title: 'Şərti işarələr'
@@ -326,15 +326,15 @@ az:
   hoc_faq_high_school_a: "Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: "I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?"
   hoc_faq_scratch_a: "\"Scratch\" planşetlərdə işləmir. Əgər şagirdlərinizin yaşı azdırsa, onda \"iPad\" proqram əlavəsi \"ScratchJR\"dan (oxumağı yeni öyrənənlər üçün) istifadə edə bilərlər. Əgər <a href='http://code.org/learn'>Code.org/learn</a> ünvanındakı dərsliklərə baxsanız, \"iPad\"də işləyən digər dərslikləri tapa bilərsiniz - \"Code.org\"dan, \"Tynker\", \"Lightbot\" və ya \"CodeSpark\" dan."
-  hoc_faq_count_hoc_q: "How do you count Hours of Code?"
-  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_count_hoc_q: "Kod Saatı tədbirlərini necə sayırsınız?"
+  hoc_faq_map_q: "Nəyə görə xəritədə öz nöqtəmi görmürəm?"
   hoc_faq_map_a: "We're so sorry you aren't seeing your event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
-  hoc_faq_one_hour_q: "How much can one learn in an hour?"
+  hoc_faq_one_hour_q: "Bir saat ərzində nə qədər öyrənə bilərəm?"
   hoc_faq_one_hour_a: 'Kodlama Saatının məqsədi, kimsəyə bir saat içində mütəxəssis bir kompüter alimi olmağı öyrətmək deyil. Bir saat, tələbələr keçmişinə asılı olmayaraq, hər yaşda əlçatan olması səbəbiylə, yalnız kompüter elmlərinin əyləncəli və yaradıcı olduğunu öyrənmək üçün kifayətdir. Bu kampaniyanın müvəffəqiyyət ölçüsü, Kompüter elmlərində tələbələr nə qədər öyrəndiyi deyil. Müvəffəqiyyət, cinsiyyət, etnik və sosial-iqtisadi qruplar arasında geniş iştirak və bunun nəticəsində bütün sinif səviyyələrində Kompüter Elmləri dərslərində gördüyümüz qeydiyyatdan və iştirak artımına əks olunar. Milyonlarla iştirakçı müəllim və şagird bir saatdan daha irəli getməyə qərar verdilər - bütün bir gün və ya bir həftə və ya daha uzun müddət öyrənmək və bunun nəticəsində bir çox şagird bütün bir kursa (hətta bütün fəaliyyətlərə) qeydiyyatdan olmağa qərar verdilər.<br/> <br/> Tələbə yanında başqa bir "şagird", kompüter alimi olaraq kollec diplomuna sahib olmamasına baxmayaraq, bir saatlıq təhsillə kompüter elmlərini öğretebilecekleri mövzusunda özünə güvənən pedaqoqların. On minlərlə müəllim, kompüter elmlərinə davam etmək, Professional İnkişaf təhsillərini (PD) iştirak etmək, təqib edən online dərsləri təqdim etmək ya da hər ikisini birdən etmək üçün qərar verirlər. Və bu, kompüter elmini şagirdlərinin istədiyi və müəllimlərinin edə biləcəyini fərq edən məktəb rəhbərləri üçün də etibarlıdır.<br/> <br/> Hər şeydən əvvəl, bizim edə biləcəyimiz tək şey, bütün iştirakçıların bir saat içində öğrenecekleridir.'
   hoc_faq_more_questions_q: "Hələ də suallarınız var?"
   hoc_faq_more_questions_a: "<a href='http://support.code.org'>dəstək forumunda</a>suallarınıza cavab axtarın."
-  hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
+  hoc_faq_keep_learning_q: "Kod Saatından sonra öyrənməyə neə davam edim?"
   hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."

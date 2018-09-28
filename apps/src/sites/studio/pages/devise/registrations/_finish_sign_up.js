@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-dropdown", "#printable-terms-of-service"];
-const STUDENT_ONLY_FIELDS = ["#student-name-label", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#name-field", "#gender-dropdown", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
+const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-radio"];
+const STUDENT_ONLY_FIELDS = ["#student-name-label", "#gender-dropdown", "#age-dropdown", "#student-consent"];
+const SHARED_FIELDS = ["#name-field", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
 const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -23,7 +23,13 @@ let schoolData = {
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById("school-info-inputs");
-  renderSchoolInfo();
+  init();
+
+  function init() {
+    const userType = $("#user_user_type")[0].value;
+    setUserType(userType);
+    renderSchoolInfo();
+  }
 
   $(".finish-signup").submit(function () {
     // The country set in our form is the long-form string name of the country.
@@ -32,13 +38,13 @@ $(document).ready(() => {
     countryInputEl.val(schoolData.countryCode);
   });
 
-  $("#print-terms").click(function () {
-    $("#print-frame")[0].contentWindow.print();
-  });
-
   $("#user_user_type").change(function () {
     var value = $(this).val();
-    switch (value) {
+    setUserType(value);
+  });
+
+  function setUserType(userType) {
+    switch (userType) {
       case "teacher":
         switchToTeacher();
         break;
@@ -48,7 +54,7 @@ $(document).ready(() => {
       default:
         hideFields(ALL_FIELDS);
     }
-  });
+  }
 
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
@@ -90,6 +96,7 @@ $(document).ready(() => {
             onSchoolTypeChange={onSchoolTypeChange}
             onSchoolChange={onSchoolChange}
             onSchoolNotFoundChange={onSchoolNotFoundChange}
+            showRequiredIndicator={false}
             styles={{width: 580}}
           />
         </div>,

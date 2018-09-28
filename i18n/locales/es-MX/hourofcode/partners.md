@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 La Hora del Código es dirigida por los comités de asesoramiento y revisión de la Hora del Código y la Semana de Educación en Informática.
 
