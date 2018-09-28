@@ -16,6 +16,7 @@ social:
 
 -# Spanish(Mexico), Spanish(Spain), and Portuguese(Brazil)
 -latam_language_codes = ["la", "es", "pt"]
+-show_latam_videos = DCDO.get("show_latam_videos", nil)
 
 :ruby
   HIGHLIGHTS_CONSTANTS = [
@@ -92,7 +93,7 @@ social:
               #leftbutton.visible-xs
                 -# If language Spanish or Brazilian Portuguese, show alternate
                 -# promo video for LATM Hour of Code.
-                - if latam_language_codes.include?(@language)
+                - if latam_language_codes.include?(@language) && show_latam_videos
                   %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
                   %img{src: "/images/play-button.png", width: "60", onclick: "return startLATMVideo();", style: "cursor: pointer;"}
                 - else
@@ -112,7 +113,7 @@ social:
             #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
               -# If language Spanish or Brazilian Portuguese, show alternate
               -# promo video for LATM Hour of Code.
-              - if latam_language_codes.include?(@language)
+              - if latam_language_codes.include?(@language) && show_latam_videos
                 %div.watch-video-small{onclick: "return startLATAMVideo();"}
                   =hoc_s(:front_watch_regular_video)
                   %img{src: "/images/play-button.png", width: "25", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
