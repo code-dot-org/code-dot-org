@@ -1,7 +1,7 @@
-@eyes
 @dashboard_db_access
 Feature: Stage Locking
 
+@eyes
 Scenario: Stage Locking Dialog
   When I open my eyes to test "stage locking"
   Given I create an authorized teacher-associated student named "bobby"
