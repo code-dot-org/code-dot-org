@@ -378,7 +378,7 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("long_instructions", true, false)
+    get_localized_property("long_instructions", extra_identifier: false)
   end
 
   def localized_authored_hints
@@ -418,7 +418,7 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("short_instructions", true, false)
+      loc_val = get_localized_property("short_instructions", extra_identifier: false)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
