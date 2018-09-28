@@ -74,7 +74,7 @@ module Pd
         ),
         csp_how_offer: BASE_PAGE_LABELS[:section_3_choose_your_program][:csp_how_offer],
         cs_how_many_minutes: clean_multiline(
-          'How many minutes will your CS program classes last? (Include the
+          'How many minutes will your CS program class last? (Include the
           number of minutes from start to finish that you see your students per class
           period. If it varies from day to day, estimate the average number of minutes
           you meet per class period.)'

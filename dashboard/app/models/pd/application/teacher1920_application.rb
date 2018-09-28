@@ -131,11 +131,11 @@ module Pd::Application
           ],
           cs_terms: COMMON_OPTIONS[:terms_per_year],
           how_heard: [
-            'Code.org Website',
-            'Code.org Email',
-            'Regional Partner Website',
-            'Regional Partner Email',
-            'From a teacher that has participated in a Code.org program',
+            'Code.org website',
+            'Code.org email',
+            'Regional Partner website',
+            'Regional Partner email',
+            'From a teacher',
             'From an administrator',
             TEXT_FIELDS[:other_with_text]
           ],
@@ -159,7 +159,7 @@ module Pd::Application
             'Yes, my school or I will be able to pay the full program fee.',
             TEXT_FIELDS[:no_pay_fee_1920],
             'Not applicable: there is no program fee for teachers in my region.',
-            'Not applicable: there is no Regional Partner is my region.'
+            'Not applicable: there is no Regional Partner in my region.'
           ],
           willing_to_travel: TeacherApplicationBase.options[:willing_to_travel] << 'I am unable to travel to the school year workshops',
           interested_in_online_program: [YES, NO]
@@ -191,6 +191,7 @@ module Pd::Application
         cs_how_many_minutes
         cs_how_many_days_per_week
         cs_how_many_weeks_per_year
+        cs_terms
         plan_to_teach
         replace_existing
 
