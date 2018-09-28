@@ -5,14 +5,13 @@ module OmniauthCallbacksControllerTests
     # Mock OAuth in integration tests to immediately redirect to the
     # oauth callback for the given provider with the given auth_hash.
     #
+    # @return [OmniAuth::AuthHash] that will be passed to the callback when test-mode OAuth is invoked
+    #
     def mock_oauth_for(provider, auth_hash)
-      # We should only have one @auth_hash for a given test, so make it
-      # available everywhere for use when checking results.
-      @auth_hash = auth_hash
-
       # See https://github.com/omniauth/omniauth/wiki/Integration-Testing
       OmniAuth.config.test_mode = true
-      OmniAuth.config.mock_auth[provider.to_sym] = @auth_hash
+      OmniAuth.config.mock_auth[provider.to_sym] = auth_hash
+      auth_hash
     end
 
     def generate_auth_hash(args = {})
@@ -44,8 +43,8 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
     end
 
-    def finish_sign_up(user_type)
-      post '/users', params: finish_sign_up_params(user_type: user_type)
+    def finish_sign_up(auth_hash, user_type)
+      post '/users', params: finish_sign_up_params(name: auth_hash.info.name, user_type: user_type)
     end
 
     def finish_sign_up_params(override_params)
@@ -55,7 +54,7 @@ module OmniauthCallbacksControllerTests
           user: {
             locale: 'en-US',
             user_type: user_type,
-            name: @auth_hash.info.name,
+            name: 'Student User',
             age: '13',
             gender: 'f',
             school_info_attributes: {
@@ -70,7 +69,7 @@ module OmniauthCallbacksControllerTests
           user: {
             locale: 'en-US',
             user_type: user_type,
-            name: @auth_hash.info.name,
+            name: 'Teacher User',
             age: '21+',
             gender: nil,
             school_info_attributes: {
