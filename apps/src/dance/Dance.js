@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -252,13 +251,6 @@ Dance.prototype.afterInject_ = function (config) {
     // Don't add infinite loop protection
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   }
-
-  // Update gameLabP5's scale and keep it updated with future resizes:
-  this.gameLabP5.scale = this.calculateVisualizationScale_();
-
-  window.addEventListener('resize', function () {
-    this.gameLabP5.scale = this.calculateVisualizationScale_();
-  }.bind(this));
 };
 
 /**
@@ -635,7 +627,6 @@ Dance.prototype.completeSetupIfSetupComplete = function () {
 
   if (!this.eventHandlers.setup ||
       this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.gameLabP5.afterSetupComplete();
     this.setupInProgress = false;
   }
 };
@@ -700,9 +691,7 @@ Dance.prototype.captureInitialImage = function () {
 
 Dance.prototype.completeRedrawIfDrawComplete = function () {
   if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.gameLabP5.afterDrawComplete();
     this.drawInProgress = false;
-    $('#bubble').text('FPS: ' + this.gameLabP5.getFrameRate().toFixed(0));
   }
 };
 
