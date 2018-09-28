@@ -158,19 +158,6 @@ GameLabP5.prototype.startExecution = function (dancelab) {
     'divGameLab');
 };
 
-/**
- * Called when the preload phase is complete. When a distinct setup() method is
- * provided, a student's global code must finish executing before this phase is
- * done. This allows us to release our "preload" count reference in p5, which
- * means that setup() can begin.
- */
-GameLabP5.prototype.notifyPreloadPhaseComplete = function () {
-  if (this.p5decrementPreload) {
-    this.p5decrementPreload();
-    this.p5decrementPreload = null;
-  }
-};
-
 GameLabP5.prototype.notifyKeyCodeDown = function (keyCode) {
   // Synthesize an event and send it to the internal p5 handler for keydown
   if (this.p5) {
