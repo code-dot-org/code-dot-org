@@ -244,10 +244,12 @@ class DeleteAccountsHelper
   # @param [String] email An email address
   def remove_census_submissions(email)
     @log.puts "Removing CensusSubmission"
-    records = Census::CensusSubmission.where(submitter_email_address: email)
-    record_count = records.count
-    records.each(&:destroy)
-    @log.puts "Removed #{record_count} CensusSubmission" if record_count > 0
+    census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
+    csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
+    deleted_csfm_count = csfms.delete_all
+    deleted_submissions_count = census_submissions.delete_all
+    @log.puts "Removed #{deleted_csfm_count} CensusSubmissionFormMap" if deleted_csfm_count > 0
+    @log.puts "Removed #{deleted_submissions_count} CensusSubmission" if deleted_submissions_count > 0
   end
 
   # Removes EmailPreference records associated with this email address.
