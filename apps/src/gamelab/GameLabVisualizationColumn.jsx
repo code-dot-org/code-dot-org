@@ -17,7 +17,7 @@ import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
-  isPickingLocation
+  isPickingLocation,
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
@@ -41,16 +41,21 @@ const styles = {
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
-    setSong: PropTypes.func.isRequired
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired
+  };
+
+  changeSong = (event) => {
+    this.props.setSong(event.target.value);
   };
 
   render() {
     return (
       <div>
         <label><b>{gamelabMsg.selectSong()}</b></label>
-        <select id="song_selector" style={styles.selectStyle} onChange={this.props.setSong}>
+        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
           {Object.keys(songLibrary).map((option, i) => (
-            <option key={i} value={songLibrary[option].value}>{songLibrary[option].title}</option>
+            <option key={i} value={option}>{songLibrary[option].title}</option>
           ))}
         </select>
       </div>
@@ -74,7 +79,8 @@ class GameLabVisualizationColumn extends React.Component {
     updatePicker: PropTypes.func.isRequired,
     mobileControlsConfig: PropTypes.object.isRequired,
     danceLab: PropTypes.bool,
-    setSong: PropTypes.func.isRequired
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -83,10 +89,6 @@ class GameLabVisualizationColumn extends React.Component {
     mouseX: -1,
     mouseY: -1
   };
-
-  componentDidMount() {
-    this.setDanceLabSong();
-  }
 
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
@@ -160,13 +162,6 @@ class GameLabVisualizationColumn extends React.Component {
     );
   }
 
-  setDanceLabSong() {
-    if (document.getElementById("song_selector")) {
-      let song = document.getElementById("song_selector").value;
-      this.props.setSong(song);
-    }
-  }
-
   render() {
     const { isResponsive, isShareView, mobileControlsConfig } = this.props;
     const { dpadVisible, spaceButtonVisible, mobileOnly } = mobileControlsConfig;
@@ -190,7 +185,7 @@ class GameLabVisualizationColumn extends React.Component {
     return (
       <span>
         {this.props.danceLab && experiments.isEnabled("songSelector") &&
-          <SongSelector setSong={this.setDanceLabSong.bind(this)}/>
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
         }
         <ProtectedVisualizationDiv>
           <Pointable
@@ -249,6 +244,7 @@ export default connect(state => ({
   mobileControlsConfig: state.mobileControlsConfig,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
+  selectedSong: state.selectedSong,
 }), dispatch => ({
   toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
   cancelPicker: () => dispatch(cancelLocationSelection()),
