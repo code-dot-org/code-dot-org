@@ -6,7 +6,7 @@ module RegistrationsControllerTests
     PASSWORD = '1234567'
     DEFAULT_UID = '1111' # sso uid
     UUID = 'abcdefg1234567' # tracking uuid
-    STUDY = 'account-sign-up'
+    STUDY = SignUpTracking::STUDY_NAME
 
     USER_PARAMS_GOOD = {
       name: 'A name',
