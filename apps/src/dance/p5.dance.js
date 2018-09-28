@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars, curly, eqeqeq */
-/* global p5, Dance, World, validationProps, unit */
+/* global p5, Dance, World, validationProps */
 
 // Event handlers, loops, and callbacks
 var inputEvents = [];
@@ -693,7 +693,7 @@ function everySeconds(n, unit, event) {
   });
 }
 
-function everySecondsRange(n, start, stop, event) {
+function everySecondsRange(n, unit, start, stop, event) {
   registerSetup(function () {
     if (unit == "measures") n = nMeasures(n);
     if (n > 0) {
@@ -870,24 +870,6 @@ function whenPeak(range, event) {
   });
 }
 
-// Loops
-
-function repeatWhile(condition, loop) {
-  loops.push({
-    'condition': condition,
-    'loop': loop
-  });
-}
-
-function forever(loop) {
-  loops.push({
-    'condition': function () {
-      return true;
-    },
-    'loop': loop
-  });
-}
-
 // Draw loop callbacks
 
 function register(callback) {
@@ -940,10 +922,6 @@ function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
 }
 
-function shouldUpdate() {
-  return World.frameCount > 2;
-}
-
 function spriteExists(sprite) {
   return World.allSprites.indexOf(sprite) > -1;
 }
@@ -962,7 +940,7 @@ function draw() {
     callback();
   });
 
-  if (shouldUpdate()) {
+  {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
       sprite.behaviors.forEach(function (behavior) {
