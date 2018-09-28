@@ -14,7 +14,7 @@ module OmniauthCallbacksControllerTests
     end
 
     test "student sign-up" do
-      mock_oauth user_type: User::TYPE_STUDENT
+      auth_hash = mock_oauth user_type: User::TYPE_STUDENT
 
       assert_creates(User) {sign_in_through_powerschool}
       assert_redirected_to '/'
@@ -24,29 +24,29 @@ module OmniauthCallbacksControllerTests
 
       created_user = User.find signed_in_user_id
       assert_valid_student created_user
-      assert_credentials @auth_hash, created_user
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "teacher sign-up" do
-      mock_oauth user_type: 'staff'
+      auth_hash = mock_oauth user_type: 'staff'
 
       assert_creates(User) {sign_in_through_powerschool}
       assert_redirected_to '/home'
       assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
-      assert_credentials @auth_hash, created_user
+      assert_valid_teacher created_user, expected_email: auth_hash.info.email
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "student sign-in" do
-      mock_oauth user_type: User::TYPE_STUDENT
+      auth_hash = mock_oauth user_type: User::TYPE_STUDENT
 
-      student = create(:student, :unmigrated_powerschool_sso, uid: @auth_hash.uid)
+      student = create(:student, :unmigrated_powerschool_sso, uid: auth_hash.uid)
 
       sign_in_through_powerschool
       assert_redirected_to '/'
@@ -56,13 +56,13 @@ module OmniauthCallbacksControllerTests
 
       assert_equal student.id, signed_in_user_id
       student.reload
-      assert_credentials @auth_hash, student
+      assert_credentials auth_hash, student
     end
 
     test "teacher sign-in" do
-      mock_oauth user_type: 'staff'
+      auth_hash = mock_oauth user_type: 'staff'
 
-      teacher = create(:teacher, :unmigrated_powerschool_sso, uid: @auth_hash.uid)
+      teacher = create(:teacher, :unmigrated_powerschool_sso, uid: auth_hash.uid)
 
       sign_in_through_powerschool
       assert_redirected_to '/home'
@@ -70,7 +70,7 @@ module OmniauthCallbacksControllerTests
 
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
-      assert_credentials @auth_hash, teacher
+      assert_credentials auth_hash, teacher
     end
 
     private
@@ -82,7 +82,7 @@ module OmniauthCallbacksControllerTests
     def generate_powerschool_auth_hash(user_type)
       user_type = 'staff' if user_type == User::TYPE_TEACHER
       OmniAuth::AuthHash.new(
-        uid: '12345',
+        uid: SecureRandom.uuid,
         provider: AuthenticationOption::POWERSCHOOL,
         info: {
           name: nil,
