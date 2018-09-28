@@ -1489,6 +1489,18 @@ class UserTest < ActiveSupport::TestCase
     assert student.sponsored?
   end
 
+  test 'should_disable_user_type? true if user_type present and oauth_provided_user_type' do
+    user = build :user, user_type: User::TYPE_TEACHER
+    user.expects(:oauth_provided_user_type).returns(true)
+    assert user.should_disable_user_type?
+  end
+
+  test 'should_disable_user_type? false if user_type present and not oauth_provided_user_type' do
+    user = build :user, user_type: User::TYPE_TEACHER
+    user.expects(:oauth_provided_user_type).returns(false)
+    refute user.should_disable_user_type?
+  end
+
   test 'can_edit_password? is true for user with or without a password' do
     student1 = create :student
     refute_empty student1.encrypted_password
