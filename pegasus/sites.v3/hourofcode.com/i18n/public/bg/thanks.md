@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks).inspect %>
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 
@@ -26,11 +26,6 @@ social:
 %>
 
 # Благодаря за регистрирането ви като домакин на Hour of Code събитие!
-
-Като благодарност за подпомагане на учениците да започнат да учат компютърни науки бихме искали да ви дадем безплатен набор от професионално отпечатани плакати с участието на различни модели за подражание за класната стая. Използвайте код**FREEPOSTERS** за регистриране. (Забележка: трябва да покриете транспортните разходи.). Тъй като тези плакати се изпращат от Съединените щати, транспортните разходи може да са доста високи за Канада и в международен план. Ние разбираме, че това може да не е в бюджета ви, и ви препоръчваме да отпечатате [ PDF файлове](https://code.org/inspire) за класната стая.)   
-<br /> [ <button>плакати</button>](https://store.code.org/products/code-org-posters-set-of-12) използвате кода FREEPOSTERS
-
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
