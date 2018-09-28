@@ -256,9 +256,7 @@ class DeleteAccountsHelper
   # @param [String] email An email address
   def remove_email_preferences(email)
     @log.puts "Removing EmailPreference"
-    records = EmailPreference.where(email: email)
-    record_count = records.count
-    records.each(&:destroy)
+    record_count = EmailPreference.where(email: email).delete_all
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
   end
 
