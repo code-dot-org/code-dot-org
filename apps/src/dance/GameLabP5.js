@@ -1,4 +1,3 @@
-import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
 import {createDanceAPI, teardown} from './DanceLabP5';
 
@@ -49,34 +48,10 @@ GameLabP5.baseP5loadImage = null;
  * @param {!Function} options.onDraw callback to run during each draw()
  */
 GameLabP5.prototype.init = function (options) {
-
   this.onExecutionStarting = options.onExecutionStarting;
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
-  this.scale = options.scale || 1;
-
-  // Override p5.loadImage so we can modify the URL path param
-  if (!GameLabP5.baseP5loadImage) {
-    GameLabP5.baseP5loadImage = window.p5.prototype.loadImage;
-    window.p5.prototype.loadImage = function (path) {
-      // Make sure to pass all arguments through to loadImage, which can get
-      // wrapped and take additional arguments during preload.
-      arguments[0] = assetPrefix.fixPath(path);
-      return GameLabP5.baseP5loadImage.apply(this, arguments);
-    };
-  }
-
-  // Create 2nd phase function afterUserDraw()
-  window.p5.prototype.afterUserDraw = function () {
-    /*
-     * Copied code from p5 from redraw()
-     */
-    const postMethods = this._registeredMethods.post;
-    for (let i = 0; i < postMethods.length; i++) {
-      postMethods[i].call(this);
-    }
-  };
 };
 
 /**
@@ -115,32 +90,6 @@ GameLabP5.prototype.startExecution = function (dancelab) {
       if (dancelab) {
         this.danceAPI = createDanceAPI(this.p5);
       }
-
-      p5obj._setupEpiloguePhase1 = function () {
-        /*
-         * Modified code from p5 _setup() (safe to call multiple times in the
-         * event that the debugger has slowed down the process of completing
-         * the setup phase)
-         */
-
-        // unhide any hidden canvases that were created
-        var canvases = document.getElementsByTagName('canvas');
-        for (var i = 0; i < canvases.length; i++) {
-          var k = canvases[i];
-          if (k.dataset.hidden === 'true') {
-            k.style.visibility = '';
-            delete(k.dataset.hidden);
-          }
-        }
-      }.bind(p5obj);
-
-      p5obj._setupEpiloguePhase2 = function () {
-        /*
-         * Modified code from p5 _setup()
-         */
-        this._setupDone = true;
-
-      }.bind(p5obj);
 
       p5obj.preload = function () {
         this.onPreload();
@@ -296,10 +245,6 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // Create a 'p5' object in the global namespace:
   propList.p5 = [this.p5, window];
 
-  // Create a 'Game' object in the global namespace
-  // to make older blocks compatible:
-  propList.Game = [this.gameLabWorld, this];
-
   // Create a 'World' object in the global namespace:
   propList.World = [this.gameLabWorld, this];
 
@@ -328,29 +273,6 @@ GameLabP5.prototype.debugSprites = function (debugSprites) {
       sprite.debug = debugSprites;
     });
   }
-};
-
-GameLabP5.prototype.afterDrawComplete = function () {
-  this.p5.afterUserDraw();
-};
-
-/**
- * Setup has started and the debugger may be at a breakpoint. Run Phase1 of
- * of the epilogue so the student can see what they may be drawing in their
- * setup code while debugging.
- */
-GameLabP5.prototype.afterSetupStarted = function () {
-  this.p5._setupEpiloguePhase1();
-};
-
-/**
- * Setup has completed. Run Phase1 and Phase2 of the epilogue. It is safe to
- * call _setupEpiloguePhase1() multiple times in the event that it may already
- * have been called.
- */
-GameLabP5.prototype.afterSetupComplete = function () {
-  this.p5._setupEpiloguePhase1();
-  this.p5._setupEpiloguePhase2();
 };
 
 /**
