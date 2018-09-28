@@ -19,6 +19,15 @@
     top: 7px;
     padding: 0;
 
+    .display_name {
+      font-family: $gotham-bold;
+      background-color: $charcoal;
+      color: $white;
+      padding: 10px;
+      text-align: center;
+      cursor: default;
+    }
+
     a {
       display: block;
       padding: 10px;

@@ -18,8 +18,8 @@ module PartialRegistration
         OAUTH_PARAMS_TO_STRIP.each do |param|
           next if user.send(param)
           # Grab the oauth token from memcached if it's there
-          oauth_cache_key = PartialRegistration.cache_key(param, user)
-          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
+          cache_key = PartialRegistration.cache_key(param, user)
+          user.send("#{param}=", cache.read(cache_key)) if cache
         end
         yield user if block_given?
         user.valid?
@@ -47,7 +47,11 @@ module PartialRegistration
     session[USER_ATTRIBUTES_SESSION_KEY] = user.attributes
   end
 
-  def self.cache_key(oauth_param, user)
-    "#{oauth_param}-#{user.email}"
+  def self.cache_key(param_name, user)
+    if user.uid.present?
+      "#{user.provider}-#{user.uid}-#{param_name}"
+    else
+      "#{User.hash_email(user.email)}-#{param_name}"
+    end
   end
 end

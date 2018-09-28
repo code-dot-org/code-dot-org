@@ -140,6 +140,7 @@ Recommended courses from 3rd parties
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student       | 3-day, in-person training and ongoing online PD, fee included in student price |
 | [Mobile CSP](http://www.mobile-csp.org/) | Year-long Computer Science Principles course, materials available online, FREE | Online, regional in-person offered in CT, MA, NH and CA (others may be available), FREE, stipends available |
 | [NMSI](http://www.nms.org/)              | Year-long AP CS Principles/AP CS A course, FREE | In-person summer training + 4 days of PD throughout the year. One-on-one mentoring available to partner schools, FREE |
+| [Parallax Inc.](https://www.parallax.com/education/teach/program-options/high-school) | Variety of robotics kits and tutorials to teach students critical thinking and logical reasoning. Different options for electronics beginners or intermediate/advanced programmers. Curriculum is FREE. Robot purchase required. | FREE in-person immersive single day trainings. Occasional live webinars. |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-computer-science/pltw-computer-science-curriculum) | 3 courses, $2000/school                  | 5 or 10-day in-person training, $1200 or $2400, depending on course |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE                      | In-person educator meet-ups and online MOOC, FREE |
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE       | Program implemented by TEALS volunteers, $5000 |

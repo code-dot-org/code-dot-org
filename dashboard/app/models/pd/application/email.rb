@@ -18,5 +18,21 @@
 module Pd::Application
   class Email < ActiveRecord::Base
     self.table_name = 'pd_application_emails'
+
+    belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: 'pd_application_id'
+    scope :unsent, -> {where(sent_at: nil)}
+
+    def send!
+      application.deliver_email self
+      mark_sent!
+    end
+
+    def mark_sent!
+      update!(sent_at: Time.zone.now)
+    end
+
+    def self.send_all_queued_emails
+      unsent.find_each(&:send!)
+    end
   end
 end

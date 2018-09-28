@@ -14,13 +14,10 @@ $(document).ready(initRegionalPartnerSearch);
 
 function showRegionalPartnerSearch() {
   const regionalPartnerSearchElement = $('#regional-partner-search');
-  const states = regionalPartnerSearchElement.data("states");
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <RegionalPartnerSearch
-        states={states}
-      />
+      <RegionalPartnerSearch/>
     </Provider>,
     regionalPartnerSearchElement[0]
   );

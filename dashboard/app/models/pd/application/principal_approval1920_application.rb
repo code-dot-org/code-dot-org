@@ -48,7 +48,7 @@ module Pd::Application
       primary_key: :application_guid, foreign_key: :application_guid
 
     def self.create_placeholder_and_send_mail(teacher_application)
-      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(teacher_application).deliver_now
+      teacher_application.queue_email :principal_approval, deliver_now: true
 
       Pd::Application::PrincipalApproval1920Application.create(
         form_data: {}.to_json,

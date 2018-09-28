@@ -28,11 +28,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     }
   end
 
-  test "new" do
-    get :new
-    assert_response :success
-  end
-
   test "update: returns bad_request if user param is nil" do
     student = create(:student)
     sign_in student

@@ -11,16 +11,20 @@ class RegistrationsController < Devise::RegistrationsController
 
   def new
     session[:user_return_to] ||= params[:user_return_to]
-    @already_hoc_registered = params[:already_hoc_registered]
 
-    SignUpTracking.begin_sign_up_tracking(session)
-    FirehoseClient.instance.put_record(
-      study: 'account-sign-up',
-      event: 'load-sign-up-page',
-      data_string: session[:sign_up_uid]
-    )
-
-    super
+    if PartialRegistration.in_progress?(session)
+      user_params = params[:user] || {}
+      @user = User.new_with_session(user_params, session)
+    else
+      @already_hoc_registered = params[:already_hoc_registered]
+      SignUpTracking.begin_sign_up_tracking(session)
+      FirehoseClient.instance.put_record(
+        study: 'account-sign-up',
+        event: 'load-sign-up-page',
+        data_string: session[:sign_up_uid]
+      )
+      super
+    end
   end
 
   #
@@ -47,13 +51,6 @@ class RegistrationsController < Devise::RegistrationsController
       end
 
     respond_to_account_update(successfully_updated)
-  end
-
-  #
-  # GET /users/finish_sign_up
-  #
-  def finish_sign_up
-    @user = User.new
   end
 
   def create
@@ -387,7 +384,7 @@ class RegistrationsController < Devise::RegistrationsController
   def log_account_deletion_to_firehose(current_user, dependent_users)
     # Log event for user initiating account deletion.
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit',
+      study: 'user-soft-delete-audit-v2',
       event: 'initiated-account-deletion',
       user_id: current_user.id,
       data_json: {
@@ -400,7 +397,7 @@ class RegistrationsController < Devise::RegistrationsController
     # This should only happen for teachers.
     dependent_users.each do |user|
       FirehoseClient.instance.put_record(
-        study: 'user-soft-delete-audit',
+        study: 'user-soft-delete-audit-v2',
         event: 'dependent-account-deletion',
         user_id: user[:id],
         data_json: {
