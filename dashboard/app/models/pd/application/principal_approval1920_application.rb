@@ -96,9 +96,9 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
-          YES,
-          'No, I plan to add this course to the 2019-20 master schedule, but it won’t replace an existing computer science course',
-          'No, I hope to add this course to the 2019-20 master schedule, but it won’t replace an existing computer science course',
+          'Yes, it will replace an existing computer science course.',
+          'No, it will not replace an existing computer science course.',
+          'No, this course will not be added to the schedule.',
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
@@ -134,12 +134,13 @@ module Pd::Application
         committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
           'Yes, my school or teacher will be able to pay the full program fee.',
-          'No, my school or teacher will not be able to pay the program fee. We would like to be considered for scholarship.',
+          'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.',
           'Not applicable: there is no fee for the program for teachers in my region.',
           'Not applicable: there is no Regional Partner in my region.'
         ],
         how_heard: [
           'From a teacher',
+          'From an administrator',
           'Code.org website',
           'Code.org email',
           'Regional Partner website',

@@ -125,13 +125,13 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
                     course name as determined by your district.`
           })
         }
-        {this.renderImplementationSection()}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
           [TextFields.dontKnowExplain] : "other"
         })}
         {
           this.props.data.replaceCourse === 'Yes' && this.renderCourseReplacementSection()
         }
+        {this.renderImplementationSection()}
         {
           this.radioButtonsWithAdditionalTextFieldsFor('committedToDiversity', {
             [TextFields.otherPleaseExplain] : "other"
@@ -158,7 +158,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         }, {
           label:
             <span style={styles.questionText}>How did you hear about Code.org’s Professional Learning program? (To see a list of local Regional
-              Partners, <a href="https://code.org/educate/regional-partner/partners" target="_blank">visit this page</a>.)
+              Partners, <a href="https://code.org/educate/professional-learning/about-partners" target="_blank">visit this page</a>.)
             </span>
         })}
         {this.props.teacherApplication.course === 'Computer Science Principles' &&
@@ -241,7 +241,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           A teacher at your school, {this.props.teacherApplication.name}, has applied to be a part
           of <a href="https://code.org/educate/professional-learning-2019" target="_blank">Code.org’s Professional Learning Program</a>
           {' '} in order to teach the <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">{this.props.teacherApplication.course} curriculum</a>
-          {' '} during the 2018-19 school year. Your approval is required for the
+          {' '} during the {YEAR} school year. Your approval is required for the
           teacher’s application to be considered.
         </p>
         {
