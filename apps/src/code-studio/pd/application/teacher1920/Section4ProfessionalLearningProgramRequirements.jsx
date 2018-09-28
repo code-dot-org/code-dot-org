@@ -294,11 +294,9 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
           4: {SectionHeaders.section4ProfessionalLearningProgramRequirements}</h3>
 
         <p>
-          All participants in Code.org’s Professional Learning Program are required to
-          attend a five-day in-person summer workshop. These workshops are hosted locally
-          by Code.org’s Regional Partners. Participants are assigned to a program hosted
-          by one of our Regional Partners based on their school's geographic location.
-          Meals (and in some cases travel costs) will be provided for summer workshops.
+          Participants are assigned to a program hosted by one of our Regional Partners
+          based on their school's geographic location. Meals (and in some cases travel
+          costs) will be provided for summer workshops.
         </p>
 
         {this.renderContents()}
