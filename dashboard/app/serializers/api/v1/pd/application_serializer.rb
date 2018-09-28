@@ -3,11 +3,10 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
     :school_name, :district_name, :email, :application_type, :response_scores, :course, :course_name,
-    :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
     :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
     :fit_workshop_id, :fit_workshop_name, :fit_workshop_url, :application_guid,
     :registered_teachercon, :registered_fit_weekend, :attending_teachercon,
-    :principal_approval_state
+    :principal_approval_state, :school_stats
 
   def email
     object.user.email
@@ -78,6 +77,27 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
       approval.placeholder? ? 'sent' : 'received'
     else
       'not_sent'
+    end
+  end
+
+  def school_stats
+    if object.school_id
+      stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
+      urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
+
+      {
+        title_i_status: stats.title_i_status,
+        frl_eligible_percent: 100 * stats.frl_eligible_total / stats.students_total,
+        urm_percent: 100 * urm_total / stats.students_total,
+        students_total: stats.students_total,
+        student_am_count: stats.student_am_count,
+        student_as_count: stats.student_as_count,
+        student_hi_count: stats.student_hi_count,
+        student_bl_count: stats.student_bl_count,
+        student_wh_count: stats.student_wh_count,
+        student_hp_count: stats.student_hp_count,
+        student_tr_count: stats.student_tr_count
+      }
     end
   end
 end
