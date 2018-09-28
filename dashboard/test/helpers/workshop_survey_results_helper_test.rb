@@ -525,7 +525,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         'sampleDailyScale' => {}
       },
       facilitator: {
-        'sampleFacilitatorText' => {}
+        'sampleFacilitatorText' => {},
+        'sampleFacilitatorScale' => {}
       }
     }
 
@@ -557,6 +558,10 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
             'sampleFacilitatorText' => {
               @workshop.facilitators.first.name => ['Great!'],
               @workshop.facilitators.second.name => ['Bad!']
+            },
+            'sampleFacilitatorScale' => {
+              @workshop.facilitators.first.name => {4 => 1},
+              @workshop.facilitators.second.name => {2 => 1}
             }
           }
         },
