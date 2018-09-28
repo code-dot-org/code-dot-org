@@ -8,10 +8,8 @@ import {
 import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var consoleApi = require('../consoleApi');
 var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '../lib/util/timeoutList';
-var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 import {
   initializeSubmitHelper,
@@ -31,8 +29,6 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 // Number of ticks after which to capture a thumbnail image of the play space.
 const CAPTURE_TICK_COUNT = 250;
 
-const validationLibraryName = 'ValidationSetup';
-
 /**
  * An instantiable GameLab class
  * @constructor
@@ -50,30 +46,13 @@ var Dance = function () {
   /** @type {JSInterpreter} */
   this.JSInterpreter = null;
 
-  /** @private {JsInterpreterLogger} */
-  this.consoleLogger_ = new JsInterpreterLogger(window.console);
-
   this.eventHandlers = {};
   this.Globals = {};
   this.interpreterStarted = false;
-  this.drawInProgress = false;
-  this.setupInProgress = false;
-  this.reportPreloadEventHandlerComplete_ = null;
   this.gameLabP5 = new GameLabP5();
-
-  consoleApi.setLogMethod(this.log.bind(this));
 };
 
 module.exports = Dance;
-
-/**
- * Forward a log message to both logger objects.
- * @param {?} object
- * @param {string} logLevel
- */
-Dance.prototype.log = function (object, logLevel) {
-  this.consoleLogger_.log(object);
-};
 
 /**
  * Inject the studioApp singleton.
@@ -208,7 +187,6 @@ Dance.prototype.init = function (config) {
     isSubmitted: !!config.level.submitted
   });
 
-  this.loadValidationCodeIfNeeded_();
   ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
@@ -307,12 +285,7 @@ Dance.prototype.reset = function () {
   this.gameLabP5.resetExecution();
 
   // Import to reset these after this.gameLabP5 has been reset
-  this.drawInProgress = false;
-  this.setupInProgress = false;
   this.initialCaptureComplete = false;
-  this.reportPreloadEventHandlerComplete_ = null;
-
-  this.consoleLogger_.detach();
 
   // Discard the interpreter.
   if (this.JSInterpreter) {
@@ -459,7 +432,6 @@ Dance.prototype.initInterpreter = function () {
   });
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
-  this.consoleLogger_.attachTo(this.JSInterpreter);
 
   let code = '';
   code += require('!!raw-loader!./p5.dance');
@@ -491,10 +463,7 @@ Dance.prototype.onTick = function () {
       this.JSInterpreter.executeInterpreter();
     }
 
-    this.completePreloadIfPreloadComplete();
-    this.completeSetupIfSetupComplete();
     this.captureInitialImage();
-    this.completeRedrawIfDrawComplete();
   }
 };
 
@@ -523,35 +492,9 @@ Dance.prototype.onP5ExecutionStarting = function () {
  * - call the user's preload function
  */
 Dance.prototype.onP5Preload = function () {
-  this.runPreloadEventHandler_();
-};
-
-Dance.prototype.loadValidationCodeIfNeeded_ = function () {
-  if (this.level.validationCode && !this.level.helperLibraries.some(name => name === validationLibraryName)) {
-    this.level.helperLibraries.unshift(validationLibraryName);
-  }
-};
-
-/**
- * Run the preload event handler, and optionally global code, and report when
- * it is done by resolving a returned Promise.
- * @returns {Promise} Which will resolve immediately if there is no code to run,
- *          otherwise will resolve when the preload handler has completed.
- * @private
- */
-Dance.prototype.runPreloadEventHandler_ = function () {
-  return new Promise(resolve => {
     this.initInterpreter();
     // Execute the interpreter for the first time:
     if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-      // Start executing the interpreter's global code as long as a setup() method
-      // was provided. If not, we will skip running any interpreted code in the
-      // preload phase and wait until the setup phase.
-      this.reportPreloadEventHandlerComplete_ = () => {
-        this.reportPreloadEventHandlerComplete_ = null;
-        resolve();
-      };
-
       this.JSInterpreter.executeInterpreter(true);
       this.interpreterStarted = true;
 
@@ -559,37 +502,7 @@ Dance.prototype.runPreloadEventHandler_ = function () {
       if (this.eventHandlers.preload) {
         this.eventHandlers.preload.apply(null);
       }
-
-      this.completePreloadIfPreloadComplete();
-    } else {
-      // If we didn't run anything resolve now.
-      resolve();
     }
-  });
-};
-
-/**
- * Called on tick to check whether preload code is done running, and trigger
- * the appropriate report of completion if it is.
- */
-Dance.prototype.completePreloadIfPreloadComplete = function () {
-  // This function will have been created in runPreloadEventHandler if we
-  // actually had an interpreter and might have run preload code.  It could
-  // be null if we didn't have an interpreter, or we've already called it.
-  if (typeof this.reportPreloadEventHandlerComplete_ !== 'function') {
-    return;
-  }
-
-  if (!this.JSInterpreter.startedHandlingEvents) {
-    // Global code should run during the preload phase, but global code hasn't
-    // completed.
-    return;
-  }
-
-  if (!this.eventHandlers.preload ||
-      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.reportPreloadEventHandlerComplete_();
-  }
 };
 
 /**
@@ -611,53 +524,8 @@ Dance.prototype.onP5Setup = function () {
           this.gameLabP5.p5);
     }
 
-    this.setupInProgress = true;
-
     if (this.eventHandlers.setup) {
       this.eventHandlers.setup.apply(null);
-    }
-    this.completeSetupIfSetupComplete();
-  }
-};
-
-Dance.prototype.completeSetupIfSetupComplete = function () {
-  if (!this.setupInProgress) {
-    return;
-  }
-
-  if (!this.eventHandlers.setup ||
-      this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.setupInProgress = false;
-  }
-};
-
-Dance.prototype.runValidationCode = function () {
-  if (this.level.validationCode) {
-    try {
-      const validationResult =
-        this.JSInterpreter.interpreter.marshalInterpreterToNative(
-          this.JSInterpreter.evalInCurrentScope(`
-            (function () {
-              validationState = null;
-              validationResult = null;
-              ${this.level.validationCode}
-              return {
-                state: validationState,
-                result: validationResult
-              };
-            })();
-          `)
-        );
-      if (validationResult.state === 'succeeded') {
-        const testResult = validationResult.result ||
-            TestResults.ALL_PASS;
-        this.onPuzzleComplete(false, testResult);
-      } else if (validationResult === 'failed') {
-        // TODO(ram): Show failure feedback
-      }
-    } catch (e) {
-      // If validation code errors, assume it was neither a success nor failure
-      console.error(e);
     }
   }
 };
@@ -668,13 +536,10 @@ Dance.prototype.runValidationCode = function () {
  */
 Dance.prototype.onP5Draw = function () {
   if (this.JSInterpreter && this.eventHandlers.draw) {
-    this.drawInProgress = true;
     if (getStore().getState().runState.isRunning) {
       this.eventHandlers.draw.apply(null);
-      this.runValidationCode();
     }
   }
-  this.completeRedrawIfDrawComplete();
 };
 
 /**
@@ -687,12 +552,6 @@ Dance.prototype.captureInitialImage = function () {
   }
   this.initialCaptureComplete = true;
   captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
-};
-
-Dance.prototype.completeRedrawIfDrawComplete = function () {
-  if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.drawInProgress = false;
-  }
 };
 
 Dance.prototype.handleExecutionError = function (err, lineNumber, outputString) {
