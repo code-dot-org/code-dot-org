@@ -857,13 +857,13 @@ module Pd::Application
         does_school_require_cs_license: YES,
         pay_fee: TEXT_FIELDS[:no_pay_fee_1920],
         regional_partner_workshop_ids: [1, 2, 3],
-        able_to_attend_multiple: TEXT_FIELDS[:not_sure_explain],
+        able_to_attend_multiple: [TEXT_FIELDS[:unable_to_attend_1920]],
         what_license_required: nil
 
       application = build :pd_teacher1920_application, form_data_hash: application_hash
 
       refute application.valid?
-      assert_equal %w(completingOnBehalfOfName whatLicenseRequired travelToAnotherWorkshop scholarshipReasons ableToAttendMultiple), application.errors.messages[:form_data]
+      assert_equal %w(completingOnBehalfOfName whatLicenseRequired travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
     end
 
     test 'test csd dynamically required fields' do

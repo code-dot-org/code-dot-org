@@ -226,7 +226,7 @@ module Pd::Application
         end
 
         if hash[:able_to_attend_multiple]
-          unless ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).empty?
+          if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).any?
             required.concat [:travel_to_another_workshop]
           end
         end
