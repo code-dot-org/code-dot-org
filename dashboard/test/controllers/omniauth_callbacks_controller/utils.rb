@@ -17,7 +17,7 @@ module OmniauthCallbacksControllerTests
 
     def generate_auth_hash(args = {})
       OmniAuth::AuthHash.new(
-        uid: args[:uid] || '1111',
+        uid: args[:uid] || SecureRandom.uuid,
         provider: args[:provider] || AuthenticationOption::GOOGLE,
         info: {
           name: args[:name] || 'someone',

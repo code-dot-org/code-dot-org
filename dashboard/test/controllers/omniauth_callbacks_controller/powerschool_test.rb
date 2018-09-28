@@ -82,7 +82,7 @@ module OmniauthCallbacksControllerTests
     def generate_powerschool_auth_hash(user_type)
       user_type = 'staff' if user_type == User::TYPE_TEACHER
       OmniAuth::AuthHash.new(
-        uid: '12345',
+        uid: SecureRandom.uuid,
         provider: AuthenticationOption::POWERSCHOOL,
         info: {
           name: nil,
