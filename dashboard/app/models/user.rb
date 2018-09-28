@@ -2166,6 +2166,7 @@ class User < ActiveRecord::Base
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
+  # Note: This does not restore any of the user's permissions, which are hard-deleted.
   # @raise [RuntimeError] If the user is purged.
   def undestroy
     raise 'Unable to restore a purged user' if purged_at
