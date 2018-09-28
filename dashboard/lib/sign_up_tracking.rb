@@ -29,6 +29,12 @@ module SignUpTracking
     end
   end
 
+  def self.end_sign_up_tracking(session)
+    session.delete(:sign_up_tracking_expiration)
+    session.delete(:sign_up_uid)
+    session.delete(:sign_up_study_group)
+  end
+
   # DCDO 'sign_up_split_test' can be used to dynamically configure how many
   #   users see the new sign up experience.
   # When 0 (default) sends no users to new experience.
@@ -78,6 +84,7 @@ module SignUpTracking
       }
       FirehoseClient.instance.put_record(tracking_data)
     end
+    end_sign_up_tracking session
   end
 
   def self.log_sign_up_result(user, session)
@@ -98,5 +105,6 @@ module SignUpTracking
       }
       FirehoseClient.instance.put_record(tracking_data)
     end
+    end_sign_up_tracking session if user.persisted?
   end
 end
