@@ -3,12 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   outputError,
-  injectErrorHandler
 } from '../lib/util/javascriptMode';
-import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
+
 import * as apiTimeoutList from '../lib/util/timeoutList';
 var GameLabP5 = require('./GameLabP5');
 import {
@@ -20,10 +18,8 @@ var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
-import {createDanceAPI, teardown} from './DanceLabP5';
+import {createDanceAPI} from './DanceLabP5';
 import initDance from './p5.dance';
-
-var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
 /**
  * An instantiable GameLab class
@@ -356,18 +352,7 @@ Dance.prototype.execute = function () {
 };
 
 Dance.prototype.initInterpreter = function () {
-  const injectGamelabGlobals = () => {
-    const propList = this.gameLabP5.getGlobalPropertyList();
-    for (const prop in propList) {
-      // Each entry in the propList is an array with 2 elements:
-      // propListItem[0] - a native property value
-      // propListItem[1] - the property's parent object
-      this.JSInterpreter.createGlobalProperty(
-          prop,
-          propList[prop][0],
-          propList[prop][1]);
-    }
-  };
+
   // this.JSInterpreter = new JSInterpreter({
   //   studioApp: this.studioApp_,
   //   maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
@@ -379,8 +364,14 @@ Dance.prototype.initInterpreter = function () {
   // this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
 
   const Dance = createDanceAPI(this.gameLabP5.p5);
-  const hooks = initDance(this.gameLabP5.p5, Dance);
-  let code = this.studioApp_.getCode();
+  const api = initDance(this.gameLabP5.p5, Dance);
+  let code = require('!!raw-loader!./p5.dance.interpreted');
+  code += this.studioApp_.getCode();
+
+  const events = {
+    runUserSetup: {code: 'runUserSetup();'},
+    runUserEvents: {code: 'runUserEvents();'},
+  };
 
   // this.JSInterpreter.parse({
   //   code,
@@ -392,10 +383,10 @@ Dance.prototype.initInterpreter = function () {
   //   return;
   // }
 
-  const interpreter = CustomMarshalingInterpreter.evalWith(code, hooks);
+  this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
-    this.eventHandlers[eventName] = hooks[eventName];
+    this.eventHandlers[eventName] = api[eventName];
   }, this);
 };
 
@@ -468,6 +459,7 @@ Dance.prototype.onP5Setup = function () {
     if (this.eventHandlers.setup) {
       this.eventHandlers.setup.apply(null);
     }
+    this.hooks.find(v => v.name === 'runUserSetup').func();
   //}
 };
 
