@@ -530,7 +530,9 @@ Dance.prototype.onP5Setup = function () {
 Dance.prototype.onP5Draw = function () {
   if (this.eventHandlers.draw) {
     if (getStore().getState().runState.isRunning) {
-      this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
+      if (this.currentFrameEvents.any) {
+        this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
+      }
       this.eventHandlers.draw.apply(null);
     }
   }

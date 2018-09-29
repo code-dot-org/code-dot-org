@@ -759,24 +759,27 @@ function spriteExists(sprite) {
   return p5.allSprites.indexOf(sprite) > -1;
 }
 
-exports.currentFrameEvents = {
+const events = exports.currentFrameEvents = {
   'p5.keyWentDown': {},
   'Dance.fft.isPeak': {},
 };
 
 function updateEvents() {
-  exports.currentFrameEvents['p5.keyWentDown'] = {};
-  exports.currentFrameEvents['Dance.fft.isPeak'] = {};
+  events.any = false;
+  events['p5.keyWentDown'] = {};
+  events['Dance.fft.isPeak'] = {};
 
   for (let key of WATCHED_KEYS) {
     if (p5.keyWentDown(key)) {
-      exports.currentFrameEvents['p5.keyWentDown'][key] = true;
+      events.any = true;
+      events['p5.keyWentDown'][key] = true;
     }
   }
 
   for (let range of WATCHED_RANGES) {
     if (Dance.fft.isPeak(range)) {
-      exports.currentFrameEvents['Dance.fft.isPeak'][range] = true;
+      events.any = true;
+      events['Dance.fft.isPeak'][range] = true;
     }
   }
 }
