@@ -1,16 +1,8 @@
-/* eslint-disable no-unused-vars, curly, eqeqeq */
+/* eslint-disable no-unused-vars, curly, eqeqeq, babel/semi */
 /* global p5, Dance, validationProps */
 
 export default function init(p5, Dance) {
   var exports = {};
-
-// Event handlers, loops, and callbacks
-var inputEvents = [];
-var touchEvents = [];
-var collisionEvents = [];
-var callbacks = [];
-var setupCallbacks = [];
-var loops = [];
 
 console.log('hello');
 console.log(p5);
@@ -32,70 +24,19 @@ var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
 var SIZE = 300;
 
 var MOVE_NAMES = [
-  {
-    name: "Rest",
-    mirror: true
-  },
-  {
-    name: "ClapHigh",
-    mirror: true
-  },
-  {
-    name: "Clown",
-    mirror: false
-  },
-  {
-    name: "Dab",
-    mirror: true
-  },
-  {
-    name: "DoubleJam",
-    mirror: false
-  },
-  {
-    name: "Drop",
-    mirror: true
-  },
-  {
-    name: "Floss",
-    mirror: true
-  },
-  {
-    name: "Fresh",
-    mirror: true
-  },
-  {
-    name: "Kick",
-    mirror: true
-  },
-  {
-    name: "Roll",
-    mirror: true
-  },
-  {
-    name: "ThisOrThat",
-    mirror: false
-  },
-  {
-    name: "Thriller",
-    mirror: true
-  }
+  {name: "Rest", mirror: true},
+  {name: "ClapHigh", mirror: true},
+  {name: "Clown", mirror: false},
+  {name: "Dab", mirror: true},
+  {name: "DoubleJam", mirror: false},
+  {name: "Drop", mirror: true},
+  {name: "Floss", mirror: true},
+  {name: "Fresh", mirror: true},
+  {name: "Kick", mirror: true},
+  {name: "Roll", mirror: true},
+  {name: "ThisOrThat", mirror: false},
+  {name: "Thriller", mirror: true},
 ];
-
-var MOVES = {
-  Rest: 0,
-  ClapHigh: 1,
-  Clown: 2,
-  Dab: 3,
-  DoubleJam: 4,
-  Drop: 5,
-  Floss: 6,
-  Fresh: 7,
-  Kick: 8,
-  Roll: 9,
-  ThisOrThat: 10,
-  Thriller: 11
-};
 
 var ANIMATIONS = {};
 var FRAMES = 24;
@@ -131,7 +72,7 @@ var songs = {
     chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
   }
 };
-var song_meta = songs.macklemore;
+var song_meta = songs.hammer;
 
 exports.preload = function preload() {
   // Load song
@@ -160,10 +101,6 @@ exports.setup = function setup() {
       ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
   }
-
-  setupCallbacks.forEach(function (callback) {
-    callback();
-  });
 
   Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / song_meta.bpm));
   Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / song_meta.bpm));
@@ -452,7 +389,7 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
   sprite.setScale = function (scale) {
     sprite.scale = scale;
   };
-  return sprite;
+  //return sprite;
 }
 
 // Dance Moves
@@ -516,7 +453,7 @@ exports.changeMoveEachLR = function changeMoveEachLR(group, move, dir) {
     group = sprites_by_type[group];
   }
   group.forEach(function (sprite) {
-    changeMoveLR(sprite, move, dir);
+    exports.changeMoveLR(sprite, move, dir);
   });
 }
 
@@ -528,7 +465,7 @@ exports.doMoveEachLR = function doMoveEachLR(group, move, dir) {
     }
     group = sprites_by_type[group];
   }
-  group.forEach(function (sprite) { doMoveLR(sprite, move, dir);});
+  group.forEach(function (sprite) { exports.doMoveLR(sprite, move, dir);});
 }
 
 exports.layoutSprites = function layoutSprites(group, format) {
@@ -582,7 +519,7 @@ exports.layoutSprites = function layoutSprites(group, format) {
 // Properties
 
 exports.setTint = function setTint(sprite, val) {
-  setProp(sprite, "tint", val);
+  exports.setProp(sprite, "tint", val);
 }
 
 exports.setProp = function setProp(sprite, property, val) {
@@ -675,52 +612,6 @@ exports.getTime = function getTime(unit) {
   }
 }
 
-// Music Events
-
-exports.atTimestamp = function atTimestamp(timestamp, unit, event) {
-  registerSetup(function () {
-    if (unit == "measures") {
-      timestamp = nMeasures(timestamp);
-      timestamp += song_meta.delay;
-    }
-    Dance.song.addCue(0, timestamp, event);
-  });
-}
-
-exports.everySeconds = function everySeconds(n, unit, event) {
-  registerSetup(function () {
-    if (unit == "measures") n = nMeasures(n);
-    if (n > 0) {
-      var timestamp = song_meta.delay;
-      while (timestamp < Dance.song.duration()) {
-        Dance.song.addCue(0, timestamp, event);
-        timestamp += n;
-      }
-    }
-  });
-}
-
-exports.everySecondsRange = function everySecondsRange(n, unit, start, stop, event) {
-  registerSetup(function () {
-    if (unit == "measures") n = nMeasures(n);
-    if (n > 0) {
-      var timestamp = start;
-      while (timestamp < stop) {
-        Dance.song.addCue(0, timestamp, event);
-        timestamp += n;
-      }
-    }
-  });
-}
-
-exports.everyVerseChorus = function everyVerseChorus(unit, event) {
-  registerSetup(function () {
-    song_meta[unit].forEach(function (timestamp) {
-      Dance.song.addCue(0, timestamp, event);
-    });
-  });
-}
-
 // Behaviors
 
 function Behavior(func, extraArgs) {
@@ -811,7 +702,7 @@ exports.startMapping = function startMapping(sprite, property, range) {
     }
     sprite[property] = energy;
   }, [property, range]);
-  behavior.func.name = "mapping" + property + range;
+  //behavior.func.name = "mapping" + property + range;
   addBehavior(sprite, behavior);
 }
 
@@ -834,52 +725,9 @@ exports.stopMapping = function stopMapping(sprite, property, range) {
     }
     sprite[property] = energy;
   }, [property, range]);
-  behavior.func.name = "mapping" + property + range;
+  //behavior.func.name = "mapping" + property + range;
   removeBehavior(sprite, behavior);
 }
-
-//Events
-
-exports.whenSetup = function whenSetup(event) {
-  setupCallbacks.push(event);
-}
-
-exports.whenSetupSong = function whenSetupSong(song, event) {
-  song_meta = songs[song];
-  setupCallbacks.push(event);
-}
-
-exports.whenKey = function whenKey(key, event) {
-  inputEvents.push({
-    type: p5.keyWentDown,
-    event: event,
-    param: key
-  });
-}
-
-exports.whenPeak = function whenPeak(range, event) {
-  /*
-  // This approach only allows one event handler per beat detector
-  Dance.fft.onPeak(range, event);
-  */
-  inputEvents.push({
-    type: Dance.fft.isPeak,
-    event: event,
-    param: range
-  });
-}
-
-// Draw loop callbacks
-
-function register(callback) {
-  callbacks.push(callback);
-}
-
-function registerSetup(callback) {
-  setupCallbacks.push(callback);
-}
-
-// Miscellaneus Helpers
 
 exports.changeColorBy = function changeColorBy(input, method, amount) {
   p5.push();
@@ -918,10 +766,6 @@ exports.draw = function draw() {
     bg_effects.none.draw();
   }
 
-  callbacks.forEach(function (callback) {
-    callback();
-  });
-
   if (p5.frameCount > 2) {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
@@ -929,92 +773,6 @@ exports.draw = function draw() {
         behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
       });
     });
-
-    var i;
-    var eventType;
-    var event;
-    var param;
-    var validType;
-    var validParam;
-    var validPre;
-    var validPost;
-
-    // Run key events
-    for (i = 0; i < inputEvents.length; i++) {
-      eventType = inputEvents[i].type;
-      event = inputEvents[i].event;
-      param = inputEvents[i].param;
-      if (eventType(param)) {
-        event();
-        var event_run = false;
-        // if has validator, run it
-        if (typeof (validationProps) == "object") {
-          if (validationProps.hasOwnProperty("events")) {
-            for (var j = 0; j < validationProps.events.length; j++) {
-              // TODO check for existence before trying to run these events
-              validType = validationProps.events[j].type;
-              validParam = validationProps.events[j].param;
-              validPre = validationProps.events[j].pre;
-              validPost = validationProps.events[j].post;
-              if (eventType == validType && param == validParam) {
-                validPre();
-                event();
-                event_run = true;
-                validPost();
-              }
-            }
-          }
-        }
-        if (!event_run) event();
-      }
-    }
-
-    // Run touch events
-    for (i = 0; i < touchEvents.length; i++) {
-      eventType = touchEvents[i].type;
-      event = touchEvents[i].event;
-      param = touchEvents[i].sprite ?
-        touchEvents[i].sprite() :
-        touchEvents[i].param;
-      if (param && eventType(param)) {
-        event();
-      }
-    }
-
-    var createCollisionHandler = function (collisionEvent) {
-      return function (sprite1, sprite2) {
-        if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
-        }
-      };
-    };
-    // Run collision events
-    for (i = 0; i < collisionEvents.length; i++) {
-      var collisionEvent = collisionEvents[i];
-      var a = collisionEvent.a && collisionEvent.a();
-      var b = collisionEvent.b && collisionEvent.b();
-      if (!a || !b) {
-        continue;
-      }
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
-        collisionEvent.touching = true;
-      } else {
-        if (collisionEvent.touching && collisionEvent.eventEnd) {
-          collisionEvent.eventEnd(a, b);
-        }
-        collisionEvent.touching = false;
-      }
-    }
-
-    // Run loops
-    for (i = 0; i < loops.length; i++) {
-      var loop = loops[i];
-      if (!loop.condition()) {
-        loops.splice(i, 1);
-      } else {
-        loop.loop();
-      }
-    }
   }
 
   p5.drawSprites();
