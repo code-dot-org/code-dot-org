@@ -430,7 +430,7 @@ Dance.prototype.initInterpreter = function () {
 
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
-    runUserEvents: {code: 'runUserEvents();'},
+    runUserEvents: {code: 'runUserEvents(events);', args: ['events']},
   };
 
   // this.JSInterpreter.parse({
@@ -530,7 +530,7 @@ Dance.prototype.onP5Setup = function () {
 Dance.prototype.onP5Draw = function () {
   if (this.eventHandlers.draw) {
     if (getStore().getState().runState.isRunning) {
-      console.log(this.currentFrameEvents['p5.keyWentDown']);
+      this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
       this.eventHandlers.draw.apply(null);
     }
   }

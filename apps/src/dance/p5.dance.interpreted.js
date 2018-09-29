@@ -62,12 +62,12 @@ function runUserSetup() {
   });
 }
 
-function runUserEvents() {
+function runUserEvents(events) {
   for (var i = 0; i < inputEvents.length; i++) {
     var eventType = inputEvents[i].type;
     var event = inputEvents[i].event;
     var param = inputEvents[i].param;
-    if (eventType(param)) {
+    if (events[eventType] && events[eventType][param]) {
       event();
     }
   }
