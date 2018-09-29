@@ -30,7 +30,7 @@ describe("Principal Approval Component", () => {
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes',
       course: 'Computer Science Discoveries',
-      replaceCourse: 'Yes'
+      replaceCourse: 'Yes, it will replace an existing computer science course'
     }).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });
@@ -40,7 +40,7 @@ describe("Principal Approval Component", () => {
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes',
       course: 'Computer Science Principles',
-      replaceCourse: 'Yes'
+      replaceCourse: 'Yes, it will replace an existing computer science course'
     }).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });

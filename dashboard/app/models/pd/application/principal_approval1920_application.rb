@@ -96,9 +96,9 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
-          'Yes, it will replace an existing computer science course.',
-          'No, it will not replace an existing computer science course.',
-          'No, this course will not be added to the schedule.',
+          'Yes, it will replace an existing computer science course',
+          'No, it will not replace an existing computer science course',
+          'No, this course will not be added to the schedule',
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
