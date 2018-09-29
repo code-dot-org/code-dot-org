@@ -1,13 +1,8 @@
-import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  outputError,
-} from '../lib/util/javascriptMode';
-var msg = require('@cdo/gamelab/locale');
+import msg from '@cdo/gamelab/locale'; // TODO: update
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
-import * as apiTimeoutList from '../lib/util/timeoutList';
 var GameLabP5 = require('./GameLabP5');
 import {
   onSubmitComplete
@@ -29,8 +24,6 @@ import initDance from './p5.dance';
 var Dance = function () {
   this.skin = null;
   this.level = null;
-  this.tickIntervalId = 0;
-  this.tickCount = 0;
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -39,8 +32,6 @@ var Dance = function () {
   this.JSInterpreter = null;
 
   this.eventHandlers = {};
-  this.Globals = {};
-  this.interpreterStarted = false;
   this.gameLabP5 = new GameLabP5();
 };
 
@@ -76,23 +67,6 @@ Dance.prototype.init = function (config) {
   this.skin.winAvatar = MEDIA_URL + 'avatar.png';
   this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
 
-  // injectErrorHandler(new BlocklyModeErrorHandler(
-  //   () => this.JSInterpreter,
-  //   null,
-  // ));
-
-  this.level.helperLibraries = this.level.helperLibraries || [];
-  this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
-
-  this.level.softButtons = this.level.softButtons || {};
-  if (this.level.startAnimations && this.level.startAnimations.length > 0) {
-    try {
-      this.startAnimations = JSON.parse(this.level.startAnimations);
-    } catch (err) {
-      console.error("Unable to parse default animation list", err);
-    }
-  }
-
   this.studioApp_.labUserId = config.labUserId;
 
   this.gameLabP5.init({
@@ -109,18 +83,8 @@ Dance.prototype.init = function (config) {
 
   config.appMsg = msg;
 
-  // hide makeYourOwn on the share page
-  config.makeYourOwn = false;
-
-  config.centerEmbedded = false;
-  config.wireframeShare = true;
-  config.responsiveEmbedded = true;
-  config.noHowItWorks = true;
-
-  // Display CSF-style instructions when using Blockly. Otherwise provide a way
-  // for us to have top pane instructions disabled by default, but able to turn
-  // them on.
-  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
+  // Display CSF-style instructions.
+  config.noInstructionsWhenCollapsed = true;
 
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
@@ -128,40 +92,31 @@ Dance.prototype.init = function (config) {
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this, config);
-
-    // Store p5specialFunctions in the unusedConfig array so we don't give warnings
-    // about these functions not being called:
-    config.unusedConfig = this.gameLabP5.p5specialFunctions;
-
-    if (this.studioApp_.isUsingBlockly()) {
-      // Custom blockly config options for game lab jr
-      config.valueTypeTabShapeMap = Dance.valueTypeTabShapeMap(Blockly);
-    }
+    config.valueTypeTabShapeMap = Dance.valueTypeTabShapeMap(Blockly);
 
     this.studioApp_.init(config);
 
-    var finishButton = document.getElementById('finishButton');
+    const finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
     }
   };
 
-  var showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
-  var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  const showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
   });
 
   ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
-        showFinishButton={finishButtonFirstLine && showFinishButton}
+        showFinishButton={showFinishButton}
         onMount={onMount}
-        danceLab={this.isDanceLab}
+        danceLab={true}
       />
     </Provider>
   ), document.getElementById(config.containerId));
@@ -178,7 +133,7 @@ Dance.prototype.loadAudio_ = function () {
  */
 Dance.prototype.afterInject_ = function (config) {
   if (this.studioApp_.isUsingBlockly()) {
-    // Add to reserved word list: API, local variables in execution evironment
+    // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords([
       'code',
@@ -194,82 +149,31 @@ Dance.prototype.afterInject_ = function (config) {
   }
 };
 
-Dance.prototype.haltExecution_ = function () {
-  this.eventHandlers = {};
-  this.stopTickTimer();
-  this.tickCount = 0;
-};
-
-Dance.prototype.isTickTimerRunning = function () {
-  return this.tickIntervalId !== 0;
-};
-
-Dance.prototype.stopTickTimer = function () {
-  if (this.tickIntervalId !== 0) {
-    window.clearInterval(this.tickIntervalId);
-    this.tickIntervalId = 0;
-  }
-};
-
-Dance.prototype.startTickTimer = function () {
-  if (this.isTickTimerRunning()) {
-    console.warn('Tick timer is already running in startTickTimer()');
-  }
-  // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
-  const fastPeriod = 1;
-  // Set to 100ms interval when we are in the experiment with the speed slider
-  // and the slider has been slowed down (we only support two speeds for now):
-  const slowPeriod = 100;
-  const intervalPeriod = this.gameLabP5.stepSpeed < 1 ? slowPeriod : fastPeriod;
-  this.tickIntervalId = window.setInterval(this.onTick.bind(this), intervalPeriod);
-};
-
 /**
- * Reset GameLab to its initial state.
+ * Reset Dance to its initial state.
  */
 Dance.prototype.reset = function () {
-  this.haltExecution_();
+  this.eventHandlers = {};
 
-  apiTimeoutList.clearTimeouts();
-  apiTimeoutList.clearIntervals();
   Sounds.getSingleton().stopAllAudio();
 
   this.gameLabP5.resetExecution();
-
-  // Discard the interpreter.
-  // if (this.JSInterpreter) {
-  //   this.JSInterpreter.deinitialize();
-  //   this.JSInterpreter = null;
-  //   this.interpreterStarted = false;
-  // }
-  this.executionError = null;
 };
 
 Dance.prototype.onPuzzleComplete = function (submit, testResult) {
-  if (this.executionError) {
-    this.result = ResultType.ERROR;
-  } else {
-    // In most cases, submit all results as success
-    this.result = ResultType.SUCCESS;
-  }
+  // Stop everything on screen.
+  this.reset();
 
-  // If we know they succeeded, mark levelComplete true
-  const levelComplete = (this.result === ResultType.SUCCESS);
-
-  if (this.executionError) {
-    this.testResults = this.studioApp_.getTestResults(levelComplete, {
-        executionError: this.executionError
-    });
-  } else if (testResult) {
+  if (testResult) {
     this.testResults = testResult;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
 
-  // Stop everything on screen
-  this.reset();
+  // If we know they succeeded, mark `levelComplete` true.
+  const levelComplete = (this.result === ResultType.SUCCESS);
 
-  // We're using blockly, report the program as xml
+  // We're using blockly, report the program as xml.
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   let program = encodeURIComponent(Blockly.Xml.domToText(xml));
 
@@ -316,7 +220,7 @@ Dance.prototype.runButtonClick = function () {
   this.execute();
 
   // Enable the Finish button if is present:
-  var shareCell = document.getElementById('share-cell');
+  const shareCell = document.getElementById('share-cell');
   if (shareCell && !this.level.validationCode) {
     shareCell.className = 'share-cell-enabled';
 
@@ -340,29 +244,10 @@ Dance.prototype.execute = function () {
     return;
   }
 
-  this.gameLabP5.startExecution(this.isDanceLab);
-
-  // if (!this.JSInterpreter ||
-  //     !this.JSInterpreter.initialized() ||
-  //     this.executionError) {
-  //   return;
-  // }
-  //
-  // this.startTickTimer();
+  this.gameLabP5.startExecution();
 };
 
 Dance.prototype.initInterpreter = function () {
-
-  // this.JSInterpreter = new JSInterpreter({
-  //   studioApp: this.studioApp_,
-  //   maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-  //   shouldRunAtMaxSpeed: () => (this.gameLabP5.stepSpeed >= 1),
-  //   customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
-  //   customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
-  // });
-  //
-  // this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
-
   const Dance = createDanceAPI(this.gameLabP5.p5);
   const nativeAPI = initDance(this.gameLabP5.p5, Dance);
   this.currentFrameEvents = nativeAPI.currentFrameEvents;
@@ -433,31 +318,11 @@ Dance.prototype.initInterpreter = function () {
     runUserEvents: {code: 'runUserEvents(events);', args: ['events']},
   };
 
-  // this.JSInterpreter.parse({
-  //   code,
-  //   blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-  //   enableEvents: true,
-  //   initGlobals: injectGamelabGlobals
-  // });
-  // if (!this.JSInterpreter.initialized()) {
-  //   return;
-  // }
-
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     this.eventHandlers[eventName] = nativeAPI[eventName];
   }, this);
-};
-
-Dance.prototype.onTick = function () {
-  this.tickCount++;
-
-  if (this.JSInterpreter) {
-    if (this.interpreterStarted) {
-      this.JSInterpreter.executeInterpreter();
-    }
-  }
 };
 
 /**
@@ -486,10 +351,6 @@ Dance.prototype.onP5ExecutionStarting = function () {
  */
 Dance.prototype.onP5Preload = function () {
     this.initInterpreter();
-    // Execute the interpreter for the first time:
-
-    //this.JSInterpreter.executeInterpreter(true);
-    this.interpreterStarted = true;
 
     // In addition, execute the global function called preload()
     if (this.eventHandlers.preload) {
@@ -503,24 +364,10 @@ Dance.prototype.onP5Preload = function () {
  * setup function.
  */
 Dance.prototype.onP5Setup = function () {
-  //if (this.JSInterpreter) {
-    // Re-marshal restored preload methods for the interpreter:
-    // const preloadMethods = _.intersection(
-    //   this.gameLabP5.p5._preloadMethods,
-    //   this.gameLabP5.getMarshallableP5Properties()
-    // );
-    // for (const method in preloadMethods) {
-    //   this.JSInterpreter.createGlobalProperty(
-    //       method,
-    //       this.gameLabP5.p5[method],
-    //       this.gameLabP5.p5);
-    // }
-
-    if (this.eventHandlers.setup) {
-      this.eventHandlers.setup.apply(null);
-    }
-    this.hooks.find(v => v.name === 'runUserSetup').func();
-  //}
+  if (this.eventHandlers.setup) {
+    this.eventHandlers.setup.apply(null);
+  }
+  this.hooks.find(v => v.name === 'runUserSetup').func();
 };
 
 /**
@@ -529,22 +376,11 @@ Dance.prototype.onP5Setup = function () {
  */
 Dance.prototype.onP5Draw = function () {
   if (this.eventHandlers.draw) {
-    if (getStore().getState().runState.isRunning) {
-      if (this.currentFrameEvents.any) {
-        this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
-      }
-      this.eventHandlers.draw.apply(null);
+    if (this.currentFrameEvents.any) {
+      this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
     }
+    this.eventHandlers.draw.apply(null);
   }
-};
-
-Dance.prototype.handleExecutionError = function (err, lineNumber, outputString) {
-  outputError(outputString, lineNumber);
-  if (err.native) {
-    console.error(err.stack);
-  }
-  this.executionError = { err: err, lineNumber: lineNumber };
-  this.haltExecution_();
 };
 
 /**

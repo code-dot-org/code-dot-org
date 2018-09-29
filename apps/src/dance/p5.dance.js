@@ -7,9 +7,6 @@ export default function init(p5, Dance) {
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
   const WATCHED_RANGES = [0, 1, 2];
 
-console.log('hello');
-console.log(p5);
-
 var World = {
   height: 400
 };
