@@ -389,7 +389,7 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
   sprite.setScale = function (scale) {
     sprite.scale = scale;
   };
-  //return sprite;
+  return sprite;
 }
 
 // Dance Moves

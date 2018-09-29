@@ -364,7 +364,62 @@ Dance.prototype.initInterpreter = function () {
   // this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
 
   const Dance = createDanceAPI(this.gameLabP5.p5);
-  const api = initDance(this.gameLabP5.p5, Dance);
+  const nativeAPI = initDance(this.gameLabP5.p5, Dance);
+  const sprites = [];
+
+  const api = {
+    setBackground: color => {
+      nativeAPI.setBackground(color.toString());
+    },
+    setBackgroundEffect: effect => {
+      nativeAPI.setBackgroundEffect(effect.toString());
+    },
+    setForegroundEffect: effect => {
+      nativeAPI.setForegroundEffect(effect.toString());
+    },
+    makeNewDanceSprite: (costume, name, location) => {
+      return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
+    },
+    changeMoveLR: (spriteIndex, move, dir) => nativeAPI.changeMoveLR(sprites[spriteIndex], move, dir),
+    doMoveLR: (spriteIndex, move, dir) => nativeAPI.doMoveLR(sprites[spriteIndex], move, dir),
+    // TODO: ifDanceIs: function ifDanceIs(sprite, dance, ifStatement, elseStatement),
+
+    // changeMoveEachLR: function changeMoveEachLR(group, move, dir),
+    // doMoveEachLR: function doMoveEachLR(group, move, dir),
+    // layoutSprites: function layoutSprites(group, format),
+    // setTint: function setTint(sprite, val),
+
+    setProp: (spriteIndex, property, val) => {
+      nativeAPI.setProp(sprites[spriteIndex], property, val);
+    },
+    getProp: (spriteIndex, property, val) => {
+      return nativeAPI.setProp(sprites[spriteIndex], property, val);
+    },
+    changePropBy: (spriteIndex, property, val) => {
+      nativeAPI.changePropBy(sprites[spriteIndex], property, val);
+    },
+    jumpTo: (sprite, location) => {
+      nativeAPI.jumpTo(sprite, location);
+    },
+    setDanceSpeed: (sprite, speed) => {
+      nativeAPI.setDanceSpeed(sprite, speed);
+    },
+    getEnergy: range => {
+      return Number(nativeAPI.getEnergy(range));
+    },
+    nMeasures: n => {
+      return Number(nativeAPI.nMeasures(n));
+    },
+    getTime: unit => {
+      return Number(nativeAPI.getTime(unit));
+    },
+    startMapping: () => {}, // TODO: function startMapping(sprite, property, range),
+    stopMapping: () => {}, // TODO: function stopMapping(sprite, property, range),
+    changeColorBy: () => {}, // TODO: function changeColorBy(input, method, amount),
+    mixColors: () => {}, // TODO: function mixColors(color1, color2),
+    randomColor: () => {}, // TODO: function randomColor(),
+  };
+
   let code = require('!!raw-loader!./p5.dance.interpreted');
   code += this.studioApp_.getCode();
 
@@ -386,7 +441,7 @@ Dance.prototype.initInterpreter = function () {
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
-    this.eventHandlers[eventName] = api[eventName];
+    this.eventHandlers[eventName] = nativeAPI[eventName];
   }, this);
 };
 
