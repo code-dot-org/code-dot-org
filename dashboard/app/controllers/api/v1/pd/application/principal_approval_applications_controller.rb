@@ -39,7 +39,6 @@ module Api::V1::Pd::Application
         }
       )
       teacher_application.save!
-      teacher_application.auto_score!
       teacher_application.queue_email(:principal_approval_completed, deliver_now: true)
     end
   end

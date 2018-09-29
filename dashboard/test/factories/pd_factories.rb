@@ -916,7 +916,7 @@ FactoryGirl.define do
     end
 
     trait :with_approval_fields do
-      plan_to_teach 'Yes'
+      plan_to_teach Pd::Application::PrincipalApproval1920Application.options[:plan_to_teach][0]
       school 'Hogwarts Academy of Witchcraft and Wizardry'
       total_student_enrollment 200
       free_lunch_percent '50%'
@@ -927,9 +927,9 @@ FactoryGirl.define do
       pacific_islander '12%'
       american_indian '11%'
       other '10%'
-      committed_to_master_schedule 'Yes'
-      cspImplementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
-      replace_course "No, I plan to add this course to the 2019-20 master schedule, but it won't replace an existing computer science course"
+      committed_to_master_schedule Pd::Application::PrincipalApproval1920Application.options[:committed_to_master_schedule][0]
+      csp_implementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
+      replace_course Pd::Application::PrincipalApproval1920Application.options[:replace_course][1]
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
