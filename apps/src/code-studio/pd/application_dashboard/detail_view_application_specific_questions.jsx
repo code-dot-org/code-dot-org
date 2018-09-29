@@ -89,27 +89,6 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
           </span>
         );
       }
-    } else if (section === 'detailViewAboutTheSchool') {
-       /* if we have a school id */
-      return (
-        <div>
-          <DetailViewResponse
-            question="Title I status (code)"
-            answer={`${this.props.schoolStats.title_i_status}`}
-            layout="lineItem"
-          />
-          <DetailViewResponse
-            question="Free and reduced-price lunch eligible"
-            answer={`${this.props.schoolStats.frl_eligible_percent}%`}
-            layout="lineItem"
-          />
-          <DetailViewResponse
-            question="Underrepresented minority students"
-            answer={`${this.props.schoolStats.urm_percent}%`}
-            layout="lineItem"
-          />
-        </div>
-      );
     } else {
       return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (
