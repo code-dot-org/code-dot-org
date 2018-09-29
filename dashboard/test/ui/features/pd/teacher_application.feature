@@ -96,7 +96,7 @@ Scenario: Basic teacher application submission
   And I press the first "button[type='submit']" element
 
   # Confirmation page
-  Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
+  Then I wait until element "h1" contains text "Thank you for submitting your application!"
   Then I see no difference for "Confirmation"
 
   # Principal approval
