@@ -7,7 +7,8 @@ import {
   SplitButton,
   MenuItem,
   FormControl,
-  InputGroup
+  InputGroup,
+  Table
 } from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
@@ -63,6 +64,9 @@ const styles = {
   lockedStatus: {
     fontFamily: '"Gotham 7r"',
     marginTop: 10
+  },
+  caption: {
+    color: "black"
   }
 };
 
@@ -651,6 +655,55 @@ export class DetailViewContents extends React.Component {
     );
   };
 
+  renderAboutTheSchool = () => {
+    if (this.props.applicationData.school_stats) {
+      return (
+        <Row>
+          <Col md={4}>
+            <h3>About the School</h3>
+            <DetailViewResponse
+              question="Title I status (code)"
+              answer={`${this.props.applicationData.school_stats.title_i_status}`}
+              layout="lineItem"
+            />
+            <DetailViewResponse
+              question="Free and reduced-price lunch eligible"
+              answer={this.props.applicationData.school_stats.frl_eligible_percent}
+              layout="lineItem"
+            />
+            <DetailViewResponse
+              question="Underrepresented minority students"
+              answer={this.props.applicationData.school_stats.urm_percent}
+              layout="lineItem"
+            />
+            <Table condensed>
+              <caption style={styles.caption}>
+                There are {this.props.applicationData.school_stats.students_total} total students at this school.
+              </caption>
+              <tbody>
+                {this.props.applicationData.school_stats.race_data.map(
+                  (race, i) => (
+                    <tr key={i}>
+                      <td>
+                        {race.percent}
+                      </td>
+                      <td>
+                        {race.total}
+                      </td>
+                      <td>
+                        {race.label}
+                      </td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      );
+    }
+  };
+
   renderNotes = () => {
     return (
       <div>
@@ -687,6 +740,7 @@ export class DetailViewContents extends React.Component {
         <br/>
         {this.renderTopSection()}
         {this.renderQuestions()}
+        {this.renderAboutTheSchool()}
         {this.renderNotes()}
         {this.renderEditMenu()}
       </div>
