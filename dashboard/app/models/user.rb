@@ -2165,6 +2165,21 @@ class User < ActiveRecord::Base
       update(state: 'deleted', updated_at: Time.now)
   end
 
+  # Restores all of this user's projects that were soft-deleted after the given time
+  # Called after undestroy
+  private def restore_channels_deleted_after(deleted_at)
+    return unless user_storage_id
+
+    channel_ids = PEGASUS_DB[:storage_apps].
+      where(storage_id: user_storage_id).
+      map(:id)
+
+    PEGASUS_DB[:storage_apps].
+      where(id: channel_ids, state: 'deleted').
+      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
+      update(state: 'active', updated_at: Time.now)
+  end
+
   # Gets the user's user_storage_id from the pegasus database, if it's available.
   # Note: Known that this duplicates some logic in storage_id_for_user_id, but
   # that method is globally stubbed in tests :cry: and therefore not very helpful.
@@ -2179,8 +2194,12 @@ class User < ActiveRecord::Base
   def undestroy
     raise 'Unable to restore a purged user' if purged_at
 
+    soft_delete_time = deleted_at
+
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
-    restore(recursive: true, recovery_window: 5.minutes)
+    result = restore(recursive: true, recovery_window: 5.minutes)
+    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    result
   end
 
   def depended_upon_for_login?
