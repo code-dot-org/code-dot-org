@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import msg from '@cdo/gamelab/locale'; // TODO: update
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 var GameLabP5 = require('./GameLabP5');
-import {
-  onSubmitComplete
-} from '../submitHelper';
 var dom = require('../dom');
 import {getStore} from '../redux';
 var GameLabView = require('./GameLabView');
@@ -79,24 +75,19 @@ Dance.prototype.init = function (config) {
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
-  config.appMsg = msg;
-
-  // Display CSF-style instructions.
-  config.noInstructionsWhenCollapsed = true;
-
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
-    config.afterInject = this.afterInject_.bind(this, config);
+    config.afterInject = this.afterInject_.bind(this);
     config.valueTypeTabShapeMap = Dance.valueTypeTabShapeMap(Blockly);
 
     this.studioApp_.init(config);
 
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete());
     }
   };
 
@@ -105,8 +96,6 @@ Dance.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
-    isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted,
   });
 
   ReactDOM.render((
@@ -129,7 +118,7 @@ Dance.prototype.loadAudio_ = function () {
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
-Dance.prototype.afterInject_ = function (config) {
+Dance.prototype.afterInject_ = function () {
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution environment
     // (execute) and the infinite loop detection function.
@@ -158,7 +147,7 @@ Dance.prototype.reset = function () {
   this.gameLabP5.resetExecution();
 };
 
-Dance.prototype.onPuzzleComplete = function (submit, testResult) {
+Dance.prototype.onPuzzleComplete = function (testResult) {
   // Stop everything on screen.
   this.reset();
 
@@ -182,16 +171,13 @@ Dance.prototype.onPuzzleComplete = function (submit, testResult) {
   }
 
   const sendReport = () => {
-    const onComplete = submit ? onSubmitComplete : this.onReportComplete.bind(this);
-
     this.studioApp_.report({
       app: 'dance',
       level: this.level.id,
       result: levelComplete,
       testResult: this.testResults,
-      submitted: submit,
       program: program,
-      onComplete,
+      onComplete: this.onReportComplete.bind(this),
     });
   };
 
@@ -238,7 +224,7 @@ Dance.prototype.execute = function () {
 
   if (this.studioApp_.hasUnwantedExtraTopBlocks() || this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // Immediately check answer, which will fail and report top level blocks.
-    this.onPuzzleComplete(false);
+    this.onPuzzleComplete();
     return;
   }
 
@@ -379,12 +365,9 @@ Dance.prototype.displayFeedback_ = function () {
     response: this.response,
     level: level,
     showingSharing: level.freePlay,
-    saveToLegacyGalleryUrl: level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
-      reinfFeedbackMsg: msg.reinfFeedbackMsg(),
-      sharingText: msg.shareGame()
+      reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
-    hideXButton: true,
   });
 };
 

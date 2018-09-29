@@ -4,7 +4,6 @@ import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
-import CompletionButton from '../templates/CompletionButton';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import experiments from "@cdo/apps/util/experiments";
 import songLibrary from "../code-studio/songLibrary.json";
@@ -61,7 +60,6 @@ class GameLabVisualizationColumn extends React.Component {
         </ProtectedVisualizationDiv>
         <GameButtons>
           <ArrowButtons />
-          <CompletionButton />
         </GameButtons>
         <BelowVisualization />
       </span>
