@@ -6,14 +6,7 @@ import {teardown} from './DanceLabP5';
  */
 var GameLabP5 = function () {
   this.p5 = null;
-  this.p5decrementPreload = null;
-  this.p5eventNames = [
-    'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
-    'mouseClicked', 'mouseWheel',
-    'keyPressed', 'keyReleased', 'keyTyped'
-  ];
-  this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
-  this.stepSpeed = 1;
+  this.p5specialFunctions = ['preload', 'draw', 'setup'];
 };
 
 module.exports = GameLabP5;
@@ -22,15 +15,11 @@ module.exports = GameLabP5;
  * Initialize this GameLabP5 instance.
  *
  * @param {!Object} options
- * @param {!Function} options.gameLab instance of parent GameLab object
- * @param {Number} [options.scale] Scale ratio of containing element (<1 is small)
- * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
  * @param {!Function} options.onDraw callback to run during each draw()
  */
 GameLabP5.prototype.init = function (options) {
-  this.onExecutionStarting = options.onExecutionStarting;
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
@@ -45,16 +34,7 @@ GameLabP5.prototype.resetExecution = function () {
   if (this.p5) {
     this.p5.remove();
     this.p5 = null;
-    this.p5decrementPreload = null;
   }
-};
-
-/**
- * Register a p5 event handler function. The provided function replaces the
- * method stored on our p5 instance.
- */
-GameLabP5.prototype.registerP5EventHandler = function (eventName, handler) {
-  this.p5[eventName] = handler;
 };
 
 /**
@@ -72,9 +52,6 @@ GameLabP5.prototype.startExecution = function () {
       p5obj.setup = this.onSetup.bind(this);
 
       p5obj.draw = this.onDraw.bind(this);
-
-      this.onExecutionStarting();
-
     }.bind(this),
     'divGameLab');
 };

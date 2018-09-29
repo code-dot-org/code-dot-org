@@ -70,8 +70,6 @@ Dance.prototype.init = function (config) {
   this.studioApp_.labUserId = config.labUserId;
 
   this.gameLabP5.init({
-    gameLab: this,
-    onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
     onDraw: this.onP5Draw.bind(this)
@@ -322,21 +320,6 @@ Dance.prototype.initInterpreter = function () {
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     this.eventHandlers[eventName] = nativeAPI[eventName];
-  }, this);
-};
-
-/**
- * This is called while this.gameLabP5 is in startExecution(). We use the
- * opportunity to create native event handlers that call down into interpreter
- * code for each event name.
- */
-Dance.prototype.onP5ExecutionStarting = function () {
-  this.gameLabP5.p5eventNames.forEach(function (eventName) {
-    this.gameLabP5.registerP5EventHandler(eventName, function () {
-      if (this.eventHandlers[eventName]) {
-        this.eventHandlers[eventName].apply(null);
-      }
-    }.bind(this));
   }, this);
 };
 
