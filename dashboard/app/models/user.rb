@@ -1852,6 +1852,14 @@ class User < ActiveRecord::Base
       can_edit_password? && encrypted_password.blank?
   end
 
+  def should_disable_user_type?
+    user_type.present? && oauth_provided_user_type
+  end
+
+  def oauth_provided_user_type
+    [AuthenticationOption::CLEVER].include?(provider)
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords

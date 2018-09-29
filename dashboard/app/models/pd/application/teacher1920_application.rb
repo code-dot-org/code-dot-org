@@ -99,11 +99,11 @@ module Pd::Application
     end
 
     def formatted_partner_contact_email
-      if regional_partner
-        "#{regional_partner.contact_name} <#{regional_partner.contact_email}>"
-      else
-        'Code.org <partner@code.org>'
-      end
+      return nil unless regional_partner && regional_partner.contact_email.present?
+
+      regional_partner.contact_name.present? ?
+        "#{regional_partner.contact_name} <#{regional_partner.contact_email}>" :
+        regional_partner.contact_email
     end
 
     def formatted_principal_email
