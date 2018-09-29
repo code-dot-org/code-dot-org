@@ -38,13 +38,6 @@ module SharedConstants
     }
   ).freeze
 
-  # The set of default values for a section
-  SECTION_DEFAULTS = OpenStruct.new(
-    {
-      name: 'Untitled Section'
-    }
-  ).freeze
-
   # The set of valid login types for a section
   SECTION_LOGIN_TYPE = OpenStruct.new(
     {

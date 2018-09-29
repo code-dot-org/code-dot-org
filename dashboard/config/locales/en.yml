@@ -237,6 +237,7 @@ en:
     code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
+    default_name: 'Untitled Section'
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
