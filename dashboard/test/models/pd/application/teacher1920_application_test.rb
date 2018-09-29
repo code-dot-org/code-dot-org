@@ -856,6 +856,30 @@ module Pd::Application
       refute Email.exists?(associated_unsent_email.id)
     end
 
+    test 'formatted_partner_contact_email' do
+      application = build :pd_teacher1920_application
+      partner = build :regional_partner
+
+      # no partner
+      assert_nil application.formatted_partner_contact_email
+
+      # partner w no contact info
+      application.regional_partner = partner
+      assert_nil application.formatted_partner_contact_email
+
+      # name only? still nil
+      partner.contact_name = 'We Teach Code'
+      assert_nil application.formatted_partner_contact_email
+
+      # name and email
+      partner.contact_email = 'we_teach_code@ex.net'
+      assert_equal 'We Teach Code <we_teach_code@ex.net>', application.formatted_partner_contact_email
+
+      # email only
+      partner.contact_name = nil
+      assert_equal 'we_teach_code@ex.net', application.formatted_partner_contact_email
+    end
+
     private
 
     def assert_status_log(expected, application)
