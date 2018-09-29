@@ -4,6 +4,9 @@
 export default function init(p5, Dance) {
   var exports = {};
 
+  const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
+  const WATCHED_RANGES = [0, 1, 2];
+
 console.log('hello');
 console.log(p5);
 
@@ -756,6 +759,28 @@ function spriteExists(sprite) {
   return p5.allSprites.indexOf(sprite) > -1;
 }
 
+exports.currentFrameEvents = {
+  'p5.keyWentDown': {},
+  'Dance.fft.isPeak': {},
+};
+
+function updateEvents() {
+  exports.currentFrameEvents['p5.keyWentDown'] = {};
+  exports.currentFrameEvents['Dance.fft.isPeak'] = {};
+
+  for (let key of WATCHED_KEYS) {
+    if (p5.keyWentDown(key)) {
+      exports.currentFrameEvents['p5.keyWentDown'][key] = true;
+    }
+  }
+
+  for (let range of WATCHED_RANGES) {
+    if (Dance.fft.isPeak(range)) {
+      exports.currentFrameEvents['Dance.fft.isPeak'][range] = true;
+    }
+  }
+}
+
 exports.draw = function draw() {
   Dance.fft.analyze();
 
@@ -774,6 +799,8 @@ exports.draw = function draw() {
       });
     });
   }
+
+  updateEvents();
 
   p5.drawSprites();
 

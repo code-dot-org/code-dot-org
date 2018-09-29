@@ -365,6 +365,7 @@ Dance.prototype.initInterpreter = function () {
 
   const Dance = createDanceAPI(this.gameLabP5.p5);
   const nativeAPI = initDance(this.gameLabP5.p5, Dance);
+  this.currentFrameEvents = nativeAPI.currentFrameEvents;
   const sprites = [];
 
   const api = {
@@ -413,8 +414,12 @@ Dance.prototype.initInterpreter = function () {
     getTime: unit => {
       return Number(nativeAPI.getTime(unit));
     },
-    startMapping: () => {}, // TODO: function startMapping(sprite, property, range),
-    stopMapping: () => {}, // TODO: function stopMapping(sprite, property, range),
+    startMapping: (spriteIndex, property, val) => {
+      return nativeAPI.startMapping(sprites[spriteIndex], property, val);
+    },
+    stopMapping: (spriteIndex, property, val) => {
+      return nativeAPI.stopMapping(sprites[spriteIndex], property, val);
+    },
     changeColorBy: () => {}, // TODO: function changeColorBy(input, method, amount),
     mixColors: () => {}, // TODO: function mixColors(color1, color2),
     randomColor: () => {}, // TODO: function randomColor(),
@@ -525,6 +530,7 @@ Dance.prototype.onP5Setup = function () {
 Dance.prototype.onP5Draw = function () {
   if (this.eventHandlers.draw) {
     if (getStore().getState().runState.isRunning) {
+      console.log(this.currentFrameEvents['p5.keyWentDown']);
       this.eventHandlers.draw.apply(null);
     }
   }
