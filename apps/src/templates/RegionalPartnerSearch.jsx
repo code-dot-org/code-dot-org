@@ -6,9 +6,6 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import $ from 'jquery';
 
 const styles = {
-  form: {
-    marginTop: 20
-  },
   schoolZipLabel: {
     marginRight: 40
   },
@@ -87,20 +84,9 @@ class RegionalPartnerSearch extends Component {
     const appState = partnerInfo && partnerInfo.application_state.state;
     const appsOpenDate = partnerInfo && partnerInfo.application_state.earliest_open_date;
 
-    let applicationLink, applicationLinkTarget;
-    if (partnerInfo && partnerInfo.link_to_partner_application) {
-      applicationLink = partnerInfo.link_to_partner_application;
-      applicationLinkTarget = "_blank";
-    } else {
-      applicationLink = studio("/pd/application/teacher");
-      applicationLinkTarget = null;
-    }
-
     return (
       <div>
-        <div>Our Regional Partners offer local workshops throughout the United States. Enter your location to find a workshop near you.</div>
-
-        <form onSubmit={this.handleZipSubmit} style={styles.form}>
+        <form onSubmit={this.handleZipSubmit}>
           <label style={styles.schoolZipLabel}>School Zip Code:</label>
           <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
           <div style={styles.zipSubmit}>
@@ -127,7 +113,12 @@ class RegionalPartnerSearch extends Component {
               <a href="/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
-            <p>Applications open January 15, 2019.</p>
+            <p>Applications will open soon.</p>
+            <a href={studio("/pd/regional_partner_contact/new")}>
+              <button>
+                Notify me when I can apply
+              </button>
+            </a>
           </div>
         )}
 
@@ -166,7 +157,9 @@ class RegionalPartnerSearch extends Component {
               </div>
             ))}
 
-            <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 one-day, in-person academic year workshops during the 2019-20 school year. Academic year workshop dates will be finalized and shared by your Regional Partner.</div>
+            {(workshopCollections[0].workshops.length > 0 || workshopCollections[1].workshops.length > 0) && (
+              <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 required one-day, in-person academic year workshops during the 2019-20 school year.</div>
+            )}
 
             {partnerInfo.cost_scholarship_information && (
               <div>
@@ -186,9 +179,15 @@ class RegionalPartnerSearch extends Component {
               <div>Applications are now closed.</div>
             )}
 
-            {appState === WorkshopApplicationStates.currently_open && (
-              <a href={applicationLink} target={applicationLinkTarget}>
+            {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
+              <a href={studio("/pd/application/teacher")}>
                 <button>Start application</button>
+              </a>
+            )}
+
+            {appState === WorkshopApplicationStates.currently_open && partnerInfo.link_to_partner_application && (
+              <a href={partnerInfo.link_to_partner_application} target="_blank">
+                <button>Apply on partner’s site</button>
               </a>
             )}
 
@@ -200,7 +199,15 @@ class RegionalPartnerSearch extends Component {
               <h3>Program information and the application for this region will be available soon!</h3>
             )}
 
-            {appState !== WorkshopApplicationStates.currently_open && (
+            {(appState === WorkshopApplicationStates.opening_at || appState === WorkshopApplicationStates.opening_sometime) && (
+              <a href={studio("/pd/regional_partner_contact/new")}>
+                <button>
+                  Notify me when I can apply
+                </button>
+              </a>
+            )}
+
+            {appState === WorkshopApplicationStates.now_closed && (
               <a href={studio("/pd/regional_partner_contact/new")}>
                 <button>
                   Tell me when applications open
