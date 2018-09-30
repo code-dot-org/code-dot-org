@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import {WorkshopApplicationStates} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {WorkshopApplicationStates, WorkshopSearchErrors} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import * as color from "../util/color";
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import $ from 'jquery';
@@ -22,6 +23,10 @@ const styles = {
     marginTop: 20,
     marginLeft: 48
   },
+  noState: {
+    marginTop: 20,
+    color: color.dark_red
+  },
   noPartner: {
     marginTop: 20
   },
@@ -39,16 +44,20 @@ class RegionalPartnerSearch extends Component {
     partnerInfo: undefined,
     stateValue: "",
     zipValue: "",
-    noPartner: false,
+    error: false,
     loading: false
   };
 
   workshopSuccess = (response) => {
-    this.setState({partnerInfo: response, loading: false});
+    if (response.error) {
+      this.setState({error: response.error, loading: false});
+    } else {
+      this.setState({partnerInfo: response, loading: false});
+    }
   };
 
   workshopZipFail = (response) => {
-    this.setState({noPartner: true, loading: false});
+    this.setState({error: WorkshopSearchErrors.unknown, loading: false});
   };
 
   handleZipChange = (event) => {
@@ -56,7 +65,7 @@ class RegionalPartnerSearch extends Component {
   };
 
   handleZipSubmit = (event) => {
-    this.setState({partnerInfo: undefined, noPartner: false, loading: true});
+    this.setState({partnerInfo: undefined, error: false, loading: true});
 
     $.ajax({
       url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
@@ -94,15 +103,19 @@ class RegionalPartnerSearch extends Component {
           </div>
         </form>
 
-        {this.state.noPartner || partnerInfo && (
+        {(this.state.error === WorkshopSearchErrors.no_partner || partnerInfo) && (
           <h3>Code.org Regional Partner for your region:</h3>
+        )}
+
+        {this.state.error === WorkshopSearchErrors.no_state && (
+          <div style={styles.noState}>Please enter a 5 digit ZIP code.</div>
         )}
 
         {this.state.loading && (
           <i className="fa fa-spinner fa-spin" style={styles.spinner}/>
         )}
 
-        {this.state.noPartner && (
+        {this.state.error === WorkshopSearchErrors.no_partner && (
           <div style={styles.noPartner}>
             <p>We do not yet have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
             <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something your school can cover.</p>
