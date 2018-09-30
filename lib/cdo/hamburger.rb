@@ -16,6 +16,7 @@ class Hamburger
     show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
     show_help_options = HIDE_ALWAYS
+    show_intl_about = SHOW_MOBILE
 
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
@@ -81,7 +82,8 @@ class Hamburger
       show_student_options: show_student_options,
       show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
-      show_help_options: show_help_options
+      show_help_options: show_help_options,
+      show_intl_about: show_intl_about
     }
   end
 
@@ -168,7 +170,19 @@ class Hamburger
       entries << {type: "divider", class: visibility[:show_student_options], id: "after-student"}
     else
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
+      if options[:language] == "en"
+        entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
+      end
+    end
+
+    if options[:language] != "en"
+      entries << {
+        title: I18n.t("#{loc_prefix}about"),
+        url: CDO.code_org_url("/international/about"),
+        class: visibility[:show_intl_about],
+        id: "header-intl-about"
+      }
+      entries << {type: "divider", class: visibility[:show_intl_about], id: "after-signed-out"}
     end
 
     # Help-related.
@@ -315,7 +329,8 @@ class Hamburger
     else
       [
         {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"}
+        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"},
+        {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-intl-about"}
       ]
     end
   end
