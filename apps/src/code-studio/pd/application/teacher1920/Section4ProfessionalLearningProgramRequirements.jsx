@@ -294,8 +294,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
 
         <p>
           Participants are assigned to a program hosted by one of our Regional Partners
-          based on their school's geographic location. Meals (and in some cases travel
-          costs) will be provided for summer workshops.
+          based on their school's geographic location.
         </p>
 
         {this.renderContents()}
