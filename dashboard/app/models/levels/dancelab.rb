@@ -47,4 +47,10 @@ class Dancelab < GamelabJr
 
   def common_blocks(type)
   end
+
+  # Manually curated
+  # TODO - epeach - manually populate these values from song manifest
+  def self.hoc_songs
+    [["Hammer", "hammer"], ["Macklemore", "macklemore90"], ["Peas", "peas"]]
+  end
 end
