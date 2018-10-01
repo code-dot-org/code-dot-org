@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars, curly, eqeqeq, babel/semi */
 /* global p5, Dance, validationProps */
 
+import Effects from './Effects';
+
 export default function init(p5, Dance) {
   var exports = {};
 
@@ -109,169 +111,8 @@ exports.setup = function setup() {
   Dance.song.start();
 }
 
-// Using the same base set of effecgts for BG and FG effects,
-// but exposing different lists in the block dropdowns
-function Effects(alpha, blend) {
-  var self = this;
-  this.alpha = alpha || 1;
-  this.blend = blend || p5.BLEND;
-  this.none = {
-    draw: function () {
-      p5.background(World.background_color || "white");
-    }
-  };
-  this.rainbow = {
-    color: p5.color('hsla(0, 100%, 80%, ' + self.alpha + ')'),
-    update: function () {
-      p5.push();
-      p5.colorMode(p5.HSL);
-      this.color = p5.color(this.color._getHue() + 10, 100, 80, self.alpha);
-      p5.pop();
-    },
-    draw: function () {
-      if (Dance.fft.isPeak()) {
-        this.update();
-      }
-      p5.background(this.color);
-    }
-  };
-  this.disco = {
-    colors: [],
-    update: function () {
-      if (this.colors.length < 16) {
-        this.colors = [];
-        for (var i = 0; i < 16; i++) {
-          this.colors.push(p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")"));
-        }
-      } else {
-        for (var j = randomNumber(5, 10); j > 0; j--) {
-          this.colors[randomNumber(0, this.colors.length - 1)] = p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")");
-        }
-      }
-    },
-    draw: function () {
-      if (Dance.fft.isPeak() || p5.frameCount == 1) this.update();
-      p5.push();
-      p5.noStroke();
-      for (var i = 0; i < this.colors.length; i++) {
-        p5.fill(this.colors[i]);
-        p5.rect((i % 4) * 100, Math.floor(i / 4) * 100, 100, 100);
-      }
-      p5.pop();
-    }
-  };
-  this.diamonds = {
-    hue: 0,
-    update: function () {
-      this.hue += 25;
-    },
-    draw: function () {
-      if (Dance.fft.isPeak()) this.update();
-      p5.push();
-      p5.colorMode(p5.HSB);
-      p5.rectMode(p5.CENTER);
-      p5.translate(200, 200);
-      p5.rotate(45);
-      p5.noFill();
-      p5.strokeWeight(p5.map(Dance.fft.getCentroid(), 0, 4000, 0, 50));
-      for (var i = 5; i > -1; i--) {
-        p5.stroke((this.hue + i * 10) % 360, 100, 75, self.alpha);
-        p5.rect(0, 0, i * 100 + 50, i * 100 + 50);
-      }
-      p5.pop();
-    }
-  };
-  this.strobe = {
-    waitTime: 0,
-    flashing: false,
-    update: function () {
-      this.flashing = true;
-      this.waitTime = 6;
-    },
-    draw: function () {
-      var bgcolor = p5.rgb(1, 1, 1);
-      if (Dance.fft.isPeak()) this.update();
-      if (this.flashing) {
-        bgcolor = p5.rgb(255, 255, 255);
-        this.waitTime--;
-      }
-      if (this.waitTime <= 0) {
-        bgcolor = p5.rgb(1, 1, 1);
-        this.flashing = false;
-      }
-      p5.background(bgcolor);
-    }
-  };
-  this.rain = {
-    drops: [],
-    init: function () {
-      for (var i = 0; i < 20; i++) {
-        this.drops.push({
-          x: randomNumber(0, 380),
-          y: randomNumber(0, 380),
-          length: randomNumber(10, 20)
-        });
-      }
-    },
-    color: p5.rgb(127, 127, 255, 0.5),
-    update: function () {
-      this.color = p5.rgb(127, 127, randomNumber(127, 255), 0.5);
-    },
-    draw: function () {
-      if (this.drops.length < 1) this.init();
-      p5.strokeWeight(3);
-      p5.stroke(this.color);
-      p5.push();
-      for (var i = 0; i < this.drops.length; i++) {
-        p5.push();
-        p5.translate(this.drops[i].x - 20, this.drops[i].y - 20);
-        p5.line(0, 0, this.drops[i].length, this.drops[i].length * 2);
-        p5.pop();
-        this.drops[i].y = (this.drops[i].y + this.drops[i].length) % 420;
-        this.drops[i].x = (this.drops[i].x + (this.drops[i].length / 2)) % 420;
-      }
-      p5.pop();
-    }
-  };
-  this.raining_tacos = {
-    tacos: [],
-    size: 50,
-    init: function () {
-      for (var i = 0; i < 20; i++) {
-        this.tacos.push({
-          x: randomNumber(20, 380),
-          y: randomNumber(20, 380),
-          rot: randomNumber(0, 359),
-          speed: randomNumber(2, 5)
-        });
-      }
-    },
-    update: function () {
-      this.size += randomNumber(-5, 5);
-    },
-    draw: function () {
-      if (this.tacos.length < 1) this.init();
-      for (var i = 0; i < this.tacos.length; i++) {
-        p5.push();
-        var taco = this.tacos[i];
-        p5.translate(taco.x, taco.y);
-        p5.rotate(taco.rot);
-        p5.textAlign(p5.CENTER, p5.CENTER);
-        p5.textSize(this.size);
-        p5.text(String.fromCodePoint(55356, 57134), 0, 0);
-        taco.y += taco.speed;
-        taco.rot++;
-        if (taco.y > 450) {
-          taco.x = randomNumber(20, 380);
-          taco.y = -50;
-        }
-        p5.pop();
-      }
-    }
-  };
-}
-var bg_effects = new Effects(1);
-var fg_effects = new Effects(0.8);
+var bg_effects = new Effects(p5, 1);
+var fg_effects = new Effects(p5, 0.8);
 
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;
@@ -783,13 +624,14 @@ function updateEvents() {
 
 exports.draw = function draw() {
   Dance.fft.analyze();
+  const context = {
+    isPeak: Dance.fft.isPeak(),
+    centroid: Dance.fft.getCentroid(),
+    backgroundColor: World.background_color,
+  };
 
   p5.background("white");
-  if (World.bg_effect) {
-    World.bg_effect.draw();
-  } else {
-    bg_effects.none.draw();
-  }
+  (World.bg_effect || bg_effects.none).draw(context);
 
   if (p5.frameCount > 2) {
     // Perform sprite behaviors
@@ -804,10 +646,10 @@ exports.draw = function draw() {
 
   p5.drawSprites();
 
-  if (World.fg_effect != fg_effects.none) {
+  if (World.fg_effect !== fg_effects.none) {
     p5.push();
     p5.blendMode(fg_effects.blend);
-    World.fg_effect.draw();
+    World.fg_effect.draw(context);
     p5.pop();
   }
 
