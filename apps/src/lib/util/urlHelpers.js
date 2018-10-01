@@ -17,6 +17,22 @@ export function pegasus(relativeUrl) {
 }
 
 /**
+ * Attempt to construct an absolute Studio url (that is,
+ * starting with https://studio.code.org or the appropriate
+ * equivalent for the current environment) from a given
+ * relative url.  If we're already on dashboard we'll
+ * just return the relative url.
+ * @param {string} relativeUrl - should start with a
+ *   leading slash.
+ */
+export function studio(relativeUrl) {
+  if (window.pegasus && window.pegasus.STUDIO_URL) {
+    return window.pegasus.STUDIO_URL + relativeUrl;
+  }
+  return relativeUrl;
+}
+
+/**
  * Fetch the meta description tag from the specified url
  * Memoize so that we only request once per relative url.
  */

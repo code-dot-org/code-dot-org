@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Часът на кода се ръководи от Hour of Code и Computer Science Education Week консултативни и ревизионни комисии.
 

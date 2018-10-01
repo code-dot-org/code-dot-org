@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Hour of Code จัดการโดยคณะกรรมการที่ปรึกษาและตรวจสอบ Hour of Code และ สัปดาห์การศึกษาวิชาวิทยาการคอมพิวเตอร์
 

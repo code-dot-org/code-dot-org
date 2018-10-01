@@ -1,13 +1,12 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import {WorkshopApplicationStates} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {WorkshopApplicationStates, WorkshopSearchErrors} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import * as color from "../util/color";
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import $ from 'jquery';
 
 const styles = {
-  form: {
-    marginTop: 20
-  },
   schoolZipLabel: {
     marginRight: 40
   },
@@ -23,6 +22,10 @@ const styles = {
     fontSize: 32,
     marginTop: 20,
     marginLeft: 48
+  },
+  noState: {
+    marginTop: 20,
+    color: color.dark_red
   },
   noPartner: {
     marginTop: 20
@@ -41,16 +44,20 @@ class RegionalPartnerSearch extends Component {
     partnerInfo: undefined,
     stateValue: "",
     zipValue: "",
-    noPartner: false,
+    error: false,
     loading: false
   };
 
   workshopSuccess = (response) => {
-    this.setState({partnerInfo: response, loading: false});
+    if (response.error) {
+      this.setState({error: response.error, loading: false});
+    } else {
+      this.setState({partnerInfo: response, loading: false});
+    }
   };
 
   workshopZipFail = (response) => {
-    this.setState({noPartner: true, loading: false});
+    this.setState({error: WorkshopSearchErrors.unknown, loading: false});
   };
 
   handleZipChange = (event) => {
@@ -58,7 +65,7 @@ class RegionalPartnerSearch extends Component {
   };
 
   handleZipSubmit = (event) => {
-    this.setState({partnerInfo: undefined, noPartner: false, loading: true});
+    this.setState({partnerInfo: undefined, error: false, loading: true});
 
     $.ajax({
       url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
@@ -86,20 +93,9 @@ class RegionalPartnerSearch extends Component {
     const appState = partnerInfo && partnerInfo.application_state.state;
     const appsOpenDate = partnerInfo && partnerInfo.application_state.earliest_open_date;
 
-    let applicationLink, applicationLinkTarget;
-    if (partnerInfo && partnerInfo.link_to_partner_application) {
-      applicationLink = partnerInfo.link_to_partner_application;
-      applicationLinkTarget = "_blank";
-    } else {
-      applicationLink = "https://studio.code.org/pd/application/teacher";
-      applicationLinkTarget = null;
-    }
-
     return (
       <div>
-        <div>Our Regional Partners offer local workshops throughout the United States. Enter your location to find a workshop near you.</div>
-
-        <form onSubmit={this.handleZipSubmit} style={styles.form}>
+        <form onSubmit={this.handleZipSubmit}>
           <label style={styles.schoolZipLabel}>School Zip Code:</label>
           <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
           <div style={styles.zipSubmit}>
@@ -107,15 +103,19 @@ class RegionalPartnerSearch extends Component {
           </div>
         </form>
 
-        {this.state.noPartner || partnerInfo && (
+        {(this.state.error === WorkshopSearchErrors.no_partner || partnerInfo) && (
           <h3>Code.org Regional Partner for your region:</h3>
+        )}
+
+        {this.state.error === WorkshopSearchErrors.no_state && (
+          <div style={styles.noState}>Please enter a 5 digit ZIP code.</div>
         )}
 
         {this.state.loading && (
           <i className="fa fa-spinner fa-spin" style={styles.spinner}/>
         )}
 
-        {this.state.noPartner && (
+        {this.state.error === WorkshopSearchErrors.no_partner && (
           <div style={styles.noPartner}>
             <p>We do not yet have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. If you are willing to travel, please fill out the application. We'll let you know if we can find you a nearby spot in the program!</p>
             <p>If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something your school can cover.</p>
@@ -123,10 +123,15 @@ class RegionalPartnerSearch extends Component {
               All of our curriculum, tools, and courses are also available for your school at no cost.
               Or,
               {' '}
-              <a href="https://code.org/educate/curriculum/3rd-party">contact one of these computer science providers</a>
+              <a href="/educate/curriculum/3rd-party">contact one of these computer science providers</a>
               {' '}
               for other Professional Development options in your area.</p>
-            <p>Applications open January 15, 2019.</p>
+            <p>Applications will open soon.</p>
+            <a href={studio("/pd/regional_partner_contact/new")}>
+              <button>
+                Notify me when I can apply
+              </button>
+            </a>
           </div>
         )}
 
@@ -142,7 +147,7 @@ class RegionalPartnerSearch extends Component {
             {!partnerInfo.contact_email && (
               <div>Direct any questions to your Regional Partner by
                 {' '}
-                <a href="https://studio.code.org/pd/regional_partner_contact/new">completing this form</a>
+                <a href={studio("/pd/regional_partner_contact/new")}>completing this form</a>
                 .
               </div>
             )}
@@ -165,7 +170,9 @@ class RegionalPartnerSearch extends Component {
               </div>
             ))}
 
-            <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 one-day, in-person academic year workshops during the 2019-20 school year. Academic year workshop dates will be finalized and shared by your Regional Partner.</div>
+            {(workshopCollections[0].workshops.length > 0 || workshopCollections[1].workshops.length > 0) && (
+              <div>In addition to attending a five-day summer workshop, the professional learning program includes up to 4 required one-day, in-person academic year workshops during the 2019-20 school year.</div>
+            )}
 
             {partnerInfo.cost_scholarship_information && (
               <div>
@@ -185,9 +192,15 @@ class RegionalPartnerSearch extends Component {
               <div>Applications are now closed.</div>
             )}
 
-            {appState === WorkshopApplicationStates.currently_open && (
-              <a href={applicationLink} target={applicationLinkTarget}>
+            {appState === WorkshopApplicationStates.currently_open && !partnerInfo.link_to_partner_application && (
+              <a href={studio("/pd/application/teacher")}>
                 <button>Start application</button>
+              </a>
+            )}
+
+            {appState === WorkshopApplicationStates.currently_open && partnerInfo.link_to_partner_application && (
+              <a href={partnerInfo.link_to_partner_application} target="_blank">
+                <button>Apply on partner’s site</button>
               </a>
             )}
 
@@ -199,8 +212,16 @@ class RegionalPartnerSearch extends Component {
               <h3>Program information and the application for this region will be available soon!</h3>
             )}
 
-            {appState !== WorkshopApplicationStates.currently_open && (
-              <a href="https://studio.code.org/pd/regional_partner_contact/new">
+            {(appState === WorkshopApplicationStates.opening_at || appState === WorkshopApplicationStates.opening_sometime) && (
+              <a href={studio("/pd/regional_partner_contact/new")}>
+                <button>
+                  Notify me when I can apply
+                </button>
+              </a>
+            )}
+
+            {appState === WorkshopApplicationStates.now_closed && (
+              <a href={studio("/pd/regional_partner_contact/new")}>
                 <button>
                   Tell me when applications open
                 </button>
