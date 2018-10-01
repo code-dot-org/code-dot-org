@@ -103,7 +103,7 @@ module Pd::Application
 
       regional_partner.contact_name.present? ?
         "#{regional_partner.contact_name} <#{regional_partner.contact_email}>" :
-        regional_partner.contact_email
+        regional_partner.contact_email_with_backup
     end
 
     def formatted_principal_email
