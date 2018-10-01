@@ -61,6 +61,7 @@ describe('entry tests', () => {
     'bounce',
     'calc',
     'craft',
+    'dance',
     'eval',
     'flappy',
     'gamelab',
@@ -562,7 +563,6 @@ describe('entry tests', () => {
     'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
-    dance: './src/gamelab/dance.js',
   };
 
   // Create a config for each of our bundles

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Kodetimen er drevet av Hour of Code og Computer Science Education Week sine rådgivende og evaluerende komiteer.
 

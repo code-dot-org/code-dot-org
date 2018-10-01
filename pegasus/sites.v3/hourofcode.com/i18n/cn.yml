@@ -11,9 +11,9 @@ cn:
   campaign_date_full: "12 月 4-10日"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017年12月4日至12月10日"
-  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  cookie_banner_message: '通过继续浏览我们的网站或单击 "我同意", 您同意在您的计算机或设备上存储 cookie。'
+  cookie_banner_more_information: "请参Code.org的隐私政策。"
+  cookie_banner_accept: '我同意'
   front_header_banner: '%{campaign_date}，加入有史以来最大的学习活动'
   front_intro_default: '编程一小时活动是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动。编程一小时活动的课程已经支持超过40种语言。不需要经验。<strong>4岁以上即可参与。</strong>'
   front_watch_video: '观看新的视频'

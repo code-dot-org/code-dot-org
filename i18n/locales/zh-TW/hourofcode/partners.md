@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 一小時玩程式活動是由一小時玩程式與計算機科學教育諮詢與審查委員會所推動。
 

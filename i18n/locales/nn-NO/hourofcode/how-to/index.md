@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -48,7 +48,7 @@ Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgå
 
 - Forklar korleis teknologi påverkar liva våre. Bruk gjerne døme som både jenter og gutar kan kjenne seg att i (snakk om å redde liv, hjelpe andre eller om sosiale medier).
 - Lag ei liste over daglegdagse ting som er programmert.
-- Se tips for å få jenter interessert i dataprogrammering [her](http://<%= codeorg_url() %>/girls)
+- Sjå tips for å få jenter interesserte i programmering [her](%= codeorg_url('/girls')%).
 
 ## 6. Start å kode!
 
