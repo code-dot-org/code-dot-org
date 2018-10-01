@@ -42,7 +42,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
   constructor(props) {
     super(props);
 
-    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section6Submission']) : FacilitatorSectionHeaders;
+    this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission']) : FacilitatorSectionHeaders;
     this.pageLabels = props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels;
     this.labelOverrides = props.applicationType === TEACHER ? TeacherLabelOverrides : FacilitatorLabelOverrides;
     this.numberedQuestions = props.applicationType === TEACHER ? [] : NumberedQuestions;
