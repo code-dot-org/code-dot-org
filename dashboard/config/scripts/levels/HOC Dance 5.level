@@ -1,11 +1,11 @@
 <Dancelab>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 63,
   "created_at": "2018-08-29T16:05:05.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,10 +38,6 @@
     "parent_level_id": 14505,
     "validation_code": "if(getTime(\"measures\") > 6){\r\n  if (sprites.length >1) {\r\n  \tlevelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
     "block_pool": "Dancelab",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "preload_asset_list": [
       "https://curriculum.code.org/images/sprites/spritesheet_sm/ALIEN_Rest.png",
       "https://curriculum.code.org/images/sprites/spritesheet_sm/ALIEN_ClapHigh.png",
@@ -57,7 +53,8 @@
       "https://curriculum.code.org/images/sprites/spritesheet_sm/ALIEN_Thriller.png"
     ],
     "custom_helper_library": "SPRITE_NAMES = [\"ALIEN\", \"CAT\", \"DUCK\", \"MOOSE\", \"ROBOT\"];",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add your new dancer here\",\r\n  \"element_id\": \".svgGroup [block-id=\\\"10\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add your new dancer here\",\r\n  \"element_id\": \".svgGroup [block-id=\\\"10\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
