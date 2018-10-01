@@ -3297,7 +3297,7 @@ en:
             Test stage with bubbles:
               name: Test stage with bubbles
         csd3-2017:
-          title: CSD Unit 3 - Animations and Games
+          title: CSD Unit 3 - Animations and Games ('17-'18)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -3546,7 +3546,7 @@ en:
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
         csd1-2017:
-          title: CSD Unit 1 - Problem Solving
+          title: CSD Unit 1 - Problem Solving ('17-'18)
           description_short: "  Learn how humans work with computers to solve problems."
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
@@ -3755,7 +3755,7 @@ en:
             Auto-Run Binary Artist Puzzles:
               name: Auto-Run Binary Artist Puzzles
         csd2-2017:
-          title: CSD Unit 2 - Web Development
+          title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
           description_short: "  Learn to build your own web site in Web Lab."
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
@@ -3885,7 +3885,7 @@ en:
             AP Preparation and Support:
               name: AP Preparation and Support
         csd4-2017:
-          title: CSD Unit 4 - The Design Process
+          title: CSD Unit 4 - The Design Process ('17-'18)
           description_audience: ''
           description_short: "  Learn how to design a program that meets the needs of your users."
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -4786,7 +4786,7 @@ en:
             'Real Life Algorithms: Dice Race':
               name: 'Real Life Algorithms: Dice Race'
         csd6-2017:
-          title: CSD Unit 6 - Physical Computing
+          title: CSD Unit 6 - Physical Computing ('17-'18)
           description_audience: ''
           description_short: Learn to program with physical devices.
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -5026,7 +5026,7 @@ en:
             'Project: Design a Game':
               name: 'Project: Design a Game'
         csd5-2017:
-          title: CSD Unit 5 - Data and Society
+          title: CSD Unit 5 - Data and Society ('17-'18)
           description_audience: ''
           description_short: Learn how people use computers to solve data problems.
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -7360,7 +7360,7 @@ en:
           description_short: ''
           description: ''
         csd3-2018:
-          title: CSD Unit 3 - Animations and Games
+          title: CSD Unit 3 - Animations and Games ('18-'19)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
@@ -7463,7 +7463,7 @@ en:
               description_student: ''
               description_teacher: ''
         csd2-2018:
-          title: CSD Unit 2 - Web Development
+          title: CSD Unit 2 - Web Development ('18-'19)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
@@ -8144,7 +8144,7 @@ en:
             Looking Ahead:
               name: Looking Ahead with Minecraft
         csd6-2018:
-          title: CSD Unit 6 - Physical Computing
+          title: CSD Unit 6 - Physical Computing ('18-'19)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           description_short: Learn to program with physical devices.
           description_audience: ''
@@ -8643,7 +8643,7 @@ en:
               description_student: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. The class evaluates various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
               description_teacher: 'This lesson reviews the input, output, storage, and processing aspects of a computer in a context that is relevant and familiar to students: apps. In pairs, students evaluate smartphone applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the processing that turns those inputs into the desired output, and what information they would want to store for later. The class concludes with a discussion that connects the lesson to apps students are more familiar with. '
         csd4-2018:
-          title: CSD Unit 4 - The Design Process
+          title: CSD Unit 4 - The Design Process ('18-'19)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
@@ -8713,7 +8713,7 @@ en:
               description_student: Each team prepares a presentation to "pitch" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
         csd5-2018:
-          title: CSD Unit 5 - Data and Society
+          title: CSD Unit 5 - Data and Society ('18-'19)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
@@ -9650,6 +9650,20 @@ en:
             Aquatic:
               name: Aquatic
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sconyers:
+          stages:
+            Lesson the first:
+              name: Lesson the first
+            Digital Design:
+              name: Digital Design
+            Linking Screens:
+              name: Linking Screens
+            Test Lesson:
+              name: Test Lesson
+          title: Tracey's Playground
           description_audience: ''
           description_short: ''
           description: ''
