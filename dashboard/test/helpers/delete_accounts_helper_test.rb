@@ -1,6 +1,6 @@
 require 'test_helper'
+require 'testing/storage_apps_test_utils'
 require 'cdo/delete_accounts_helper'
-require_relative '../../../shared/middleware/helpers/storage_apps'
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 
 #
@@ -19,6 +19,8 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
+  include StorageAppsTestUtils
+
   NULL_STREAM = File.open File::NULL, 'w'
 
   def run(*_args, &_block)
@@ -2225,30 +2227,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_includes @log.string, expected_message
   end
 
-  def with_channel_for(owner)
-    with_storage_id_for owner do |storage_id|
-      encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
-      _, id = storage_decrypt_channel_id encrypted_channel_id
-      yield id, storage_id
-    ensure
-      storage_apps.where(id: id).delete if id
-    end
-  end
-
-  def with_storage_id_for(user)
-    owns_storage_id = false
-
-    storage_id = user_storage_ids.where(user_id: user.id).first&.[](:id)
-    unless storage_id
-      storage_id = user_storage_ids.insert(user_id: user.id)
-      owns_storage_id = true
-    end
-
-    yield storage_id
-  ensure
-    user_storage_ids.where(id: storage_id).delete if owns_storage_id
-  end
-
   def with_contact_rollup_for(user)
     pardot_id = user.id
     contact_rollups_id = contact_rollups.insert(
@@ -2402,14 +2380,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ensure
       PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
     end
-  end
-
-  def storage_apps
-    PEGASUS_DB[:storage_apps]
-  end
-
-  def user_storage_ids
-    PEGASUS_DB[:user_storage_ids]
   end
 
   def contact_rollups
