@@ -96,9 +96,9 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
-          'Yes, it will replace an existing computer science course.',
-          'No, it will not replace an existing computer science course.',
-          'No, this course will not be added to the schedule.',
+          TEXT_FIELDS[:yes_replace_existing_course],
+          'No, it will not replace an existing computer science course',
+          'No, this course will not be added to the schedule',
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
@@ -181,16 +181,16 @@ module Pd::Application
               :how_heard
             ]
 
-            if course == 'csd'
+            if teacher_application&.course == 'csd'
               required << :csd_implementation
-            elsif course == 'csp'
+            elsif teacher_application&.course == 'csp'
               required << :csp_implementation
             end
 
-            if hash[:replace_course] == YES
-              if course == 'csd'
+            if hash[:replace_course] == TEXT_FIELDS[:yes_replace_existing_course]
+              if teacher_application&.course == 'csd'
                 required << :replace_which_course_csd
-              elsif course == 'csp'
+              elsif teacher_application&.course == 'csp'
                 required << :replace_which_course_csp
               end
             end

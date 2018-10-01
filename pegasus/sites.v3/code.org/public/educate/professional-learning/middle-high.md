@@ -60,7 +60,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 [/col-50]
 
-Teach a different grade level or have fewer hours available with your students? <a href="https://code.org/files/course-pl_2019-20.pdf", target=_"blank">Find the right course for your classroom.</a>
+Teach a different grade level or have fewer hours available with your students? <a href="https://code.org/files/course-pl-options.pdf", target=_"blank">Find the right course for your classroom.</a>
 
 ## Program commitments 
 The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles.
@@ -129,7 +129,7 @@ Check out these 3 key benefits of ISTE membership:
 
 ## <a name="participate"></a>Who can participate?
 
-The Code.org Professional Learning Program is open to educators who are interested in teaching Code.org courses - no prior experience required! In order to participate in this program, we ask that applicants:
+The Code.org Professional Learning Program is open to educators who are interested in teaching Code.org courses - no prior computer science experience required! In order to participate in this program, we ask that applicants:
 
 * Commit to participating in the full, year-long professional learning program
 * Plan to teach the course in the 2019-20 school year
@@ -143,7 +143,7 @@ Professional learning workshops will be hosted by our [Regional Partners](/educa
 
 Generous scholarships and grants are available across the country to cover the cost of the program. Costs in each region will be available when applications open.
 
-Enter your location to find your Regional Partner, the program cost, when applications will be available, and workshop information for your region.
+Enter your school's zip code to learn more.
 
 <%= view :regional_partner_search %>
 
@@ -153,7 +153,9 @@ Along with our Regional Partners, we're here to help!
 
 Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a> or <a href="https://studio.code.org/pd/regional_partner_contact/new">contact your Regional Partner</a>.
 
-<a href="https://code.org/educate/professional-learning/program-information"><button>Apply now!</button>
+## Ready to apply?
+
+<a href="https://code.org/educate/professional-learning/program-information"><button>Get started!</button>
 
 
 <!--
