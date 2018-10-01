@@ -127,6 +127,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
       );
     }
 
+    if (data.replaceExisting === 'Yes') {
+      requiredFields.push('replaceWhichCourse');
+    }
+
     return requiredFields;
   }
 
@@ -143,6 +147,10 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
 
     if (data.program === PROGRAM_CSP) {
       changes.csdWhichGrades = undefined;
+    }
+
+    if (data.replaceExisting !== 'Yes') {
+      changes.replaceWhichCourse = undefined;
     }
 
     return changes;

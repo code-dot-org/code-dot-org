@@ -332,7 +332,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (data.payFee !== TextFields.noPayFee) {
+    if (data.payFee !== TextFields.noPayFee1920) {
       changes.scholarshipReasons = undefined;
     }
 
