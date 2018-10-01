@@ -116,8 +116,7 @@ Dance.prototype.loadAudio_ = function () {
  */
 Dance.prototype.afterInject_ = function () {
   if (this.studioApp_.isUsingBlockly()) {
-    // Add to reserved word list: API, local variables in execution environment
-    // (execute) and the infinite loop detection function.
+    // Add to reserved word list: API, validation variables.
     Blockly.JavaScript.addReservedWords([
       'code',
       'validationState',
@@ -126,9 +125,6 @@ Dance.prototype.afterInject_ = function () {
       'levelSuccess',
       'levelFailure',
     ].join(','));
-
-    // Don't add infinite loop protection
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   }
 };
 
