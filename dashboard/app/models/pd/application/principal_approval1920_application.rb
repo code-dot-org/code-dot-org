@@ -181,16 +181,16 @@ module Pd::Application
               :how_heard
             ]
 
-            if teacher_application.course == 'csd'
+            if teacher_application&.course == 'csd'
               required << :csd_implementation
-            elsif teacher_application.course == 'csp'
+            elsif teacher_application&.course == 'csp'
               required << :csp_implementation
             end
 
             if hash[:replace_course] == TEXT_FIELDS[:yes_replace_existing_course]
-              if teacher_application.course == 'csd'
+              if teacher_application&.course == 'csd'
                 required << :replace_which_course_csd
-              elsif teacher_application.course == 'csp'
+              elsif teacher_application&.course == 'csp'
                 required << :replace_which_course_csp
               end
             end
