@@ -6,7 +6,7 @@ module RegistrationsControllerTests
   #
   class NewTest < ActionDispatch::IntegrationTest
     test 'renders finish_sign_up if new flow and partial registration is in progress' do
-      SignUpTracking.expects(:new_sign_up_experience?).returns(true)
+      SignUpTracking.expects(:new_sign_up_experience?).returns(true).twice
       PartialRegistration.expects(:in_progress?).returns(true).twice
       User.expects(:new_with_session).returns(build(:user))
 
@@ -16,7 +16,7 @@ module RegistrationsControllerTests
     end
 
     test 'renders sign_up if partial registration is not in progress' do
-      SignUpTracking.expects(:new_sign_up_experience?).returns(true)
+      SignUpTracking.expects(:new_sign_up_experience?).returns(true).twice
       SignUpTracking.expects(:begin_sign_up_tracking)
       FirehoseClient.instance.expects(:put_record)
 

@@ -595,6 +595,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Removed 1 CensusSubmission"
   end
 
+  test "deletes census_submission_form_maps associated census_submissions associated with user email" do
+    user = create :teacher
+    email = user.email
+    submission = create :census_your_school2017v0, submitter_email_address: email
+    census_submission_form_map = create :census_submission_form_map, :with_form, census_submission: submission
+    id = census_submission_form_map.id
+
+    refute_empty Census::CensusSubmissionFormMap.where(id: id),
+      "Expected at least one CensusSubmission under this email"
+
+    purge_user user
+
+    assert_empty Census::CensusSubmissionFormMap.where(id: id),
+      "Rows are actually gone, not just anonymized"
+
+    assert_logged "Removed 1 CensusSubmissionFormMap"
+  end
+
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
     user = create :teacher
     email = user.email
