@@ -63,7 +63,7 @@ module Api::V1::Pd::Application
         application_guid: teacher_application.application_guid,
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
           {
-            replace_course: 'Yes, it will replace an existing computer science course:',
+            replace_course: 'Yes, it will replace an existing computer science course',
             replace_which_course_csp: ['CodeHS', 'CS50']
           }.stringify_keys
         )
