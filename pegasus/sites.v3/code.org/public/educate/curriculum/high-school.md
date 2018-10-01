@@ -30,7 +30,7 @@ For high schools, we offer two years of Computer Science courses for beginners. 
 
 Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
-[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
+[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
 
 [/col-60]
 
@@ -58,7 +58,7 @@ Designed for 9-12 grade students, Computer Science Principles introduces student
 <% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
 <% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>"Computer Science Principles. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
 
-[<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
+[<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
 
 [/col-60]
 

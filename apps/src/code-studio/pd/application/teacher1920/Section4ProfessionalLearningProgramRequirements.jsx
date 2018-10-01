@@ -294,8 +294,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
 
         <p>
           Participants are assigned to a program hosted by one of our Regional Partners
-          based on their school's geographic location. Meals (and in some cases travel
-          costs) will be provided for summer workshops.
+          based on their school's geographic location.
         </p>
 
         {this.renderContents()}
@@ -333,7 +332,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
-    if (data.payFee !== TextFields.noPayFee) {
+    if (data.payFee !== TextFields.noPayFee1920) {
       changes.scholarshipReasons = undefined;
     }
 
