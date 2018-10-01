@@ -27,6 +27,12 @@ Computer Science Discoveries is appropriate for 6 - 10th grade students and can 
 <div style="clear:both"></div>
 
 <hr/>
+## <a name="pl"></a>Professional Learning
+
+Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through our professional development workshops and thousands more attend every month. Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.
+
+[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
+
 ## <a name="content"></a>Curriculum Resources and Features
 
 [col-33]
@@ -195,12 +201,14 @@ We have forums for educators to discuss and trade ideas about CS Discoveries and
 <div class="col-50" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video4", video_code: "g4qfsH8bc8s", play_button: 'center', letterbox: 'false' %>
+<i>Inspire students</i>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video5", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
+<i>Share with administrators</i>
 
 </div>
 
@@ -261,7 +269,7 @@ Want to get notified when applications open for the 2019-2020 school year? Provi
 
 ## <a name="what"></a>Professional Learning - Applications now available!
 
-Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
 
 **Applications for the [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) are now available!**
 
