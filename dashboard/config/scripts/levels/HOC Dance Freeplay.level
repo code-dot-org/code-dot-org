@@ -38,7 +38,8 @@
     "parent_level_id": 14509,
     "block_pool": "Dancelab",
     "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "skip_autosave": true
   },
   "published": true,
   "notes": "",
