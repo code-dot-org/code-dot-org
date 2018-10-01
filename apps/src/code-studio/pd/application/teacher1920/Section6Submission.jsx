@@ -44,6 +44,14 @@ export default class Section6Submission extends LabeledFormComponent {
           </a>
         </p>
 
+        <p>
+          Teachers may be required to get principal approval process for your submission
+          to the Professional Learning Program. As part of this process your principal may
+          opt-in to let the College Board share de-identified and aggregated Computer
+          Science AP scores with Code.org to help us improve the program and curriculum.
+          AP test scores will not be shared with Regional Partners.
+        </p>
+
         {this.singleCheckboxFor("agree")}
       </FormGroup>
     );
