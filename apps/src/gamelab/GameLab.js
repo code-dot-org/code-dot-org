@@ -236,7 +236,6 @@ GameLab.prototype.init = function (config) {
   }
 
   if (this.level.defaultSong) {
-    console.log(this.level.defaultSong);
     getStore().dispatch(setSong(this.level.defaultSong));
   }
 
