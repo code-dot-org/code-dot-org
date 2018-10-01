@@ -117,9 +117,7 @@ module Api::V1::Pd::Application
 
     test 'Sends principal approval received emails on successful create' do
       PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_MAILER_CLASS.expects(email_type).
-          with(@teacher_application).
-          returns(mock {|mail| mail.expects(:deliver_now)})
+        TEACHER_APPLICATION_CLASS.any_instance.expects(:queue_email).with(email_type, deliver_now: true)
       end
 
       put :create, params: @test_params
