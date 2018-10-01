@@ -98,19 +98,6 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
-    if  options[:language] == "en"
-      teacher_entries << {
-        title: I18n.t("#{loc_prefix}professional_learning"),
-        url: CDO.studio_url("/my-professional-learning"),
-      }
-    else
-      teacher_entries << {
-        title: I18n.t("#{loc_prefix}about"),
-        url: CDO.code_org_url("/international/about"),
-        id: "header-intl-about"
-      }
-    end
-
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
       {title: "course_catalog", url: CDO.studio_url("/courses")},
@@ -124,6 +111,24 @@ class Hamburger
       {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end
+
+    if  options[:language] == "en"
+      if options[:user_type] == "teacher"
+        teacher_entries << {
+          title: I18n.t("#{loc_prefix}professional_learning"),
+          url: CDO.studio_url("/my-professional-learning"),
+        }
+      end
+    else
+      entries = [teacher_entries, student_entries, signed_out_entries]
+      entries.each do |entry|
+        entry << {
+          title: I18n.t("#{loc_prefix}about"),
+          url: CDO.code_org_url("/international/about"),
+          id: "header-intl-about"
+        }
+      end
     end
 
     # When viewing courses, a signed-out user in English gets the teacher view.
@@ -182,15 +187,7 @@ class Hamburger
       entries << {type: "divider", class: visibility[:show_student_options], id: "after-student"}
     else
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      if options[:language] == "en"
-        entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
-      else
-        entries << {
-          title: I18n.t("#{loc_prefix}about"),
-          url: CDO.code_org_url("/international/about"),
-          id: "header-intl-about"
-        }
-      end
+      entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
     end
 
     # Help-related.
@@ -356,7 +353,7 @@ class Hamburger
       else
         header_links.concat(about_intl)
       end
-    elsif options[:user_type] = "student"
+    elsif options[:user_type] == "student"
       header_links = student_links
       if options[:language] != "en"
         header_links.concat(about_intl)
