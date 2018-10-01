@@ -70,7 +70,8 @@ class RegionalPartnerSearch extends Component {
     $.ajax({
       url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
       type: "get",
-      dataType: "json"
+      dataType: "json",
+      jsonp: false
     }).done(this.workshopSuccess).fail(this.workshopZipFail);
 
     event.preventDefault();
@@ -107,7 +108,7 @@ class RegionalPartnerSearch extends Component {
           <h3>Code.org Regional Partner for your region:</h3>
         )}
 
-        {this.state.error === WorkshopSearchErrors.no_state && (
+        {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
           <div style={styles.noState}>Please enter a 5 digit ZIP code.</div>
         )}
 
@@ -212,18 +213,10 @@ class RegionalPartnerSearch extends Component {
               <h3>Program information and the application for this region will be available soon!</h3>
             )}
 
-            {(appState === WorkshopApplicationStates.opening_at || appState === WorkshopApplicationStates.opening_sometime) && (
+            {appState !== WorkshopApplicationStates.currently_open && (
               <a href={studio("/pd/regional_partner_contact/new")}>
                 <button>
                   Notify me when I can apply
-                </button>
-              </a>
-            )}
-
-            {appState === WorkshopApplicationStates.now_closed && (
-              <a href={studio("/pd/regional_partner_contact/new")}>
-                <button>
-                  Tell me when applications open
                 </button>
               </a>
             )}
