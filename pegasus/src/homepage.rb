@@ -110,10 +110,11 @@ class Homepage
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR"]
     show_latam_videos = DCDO.get("show_latam_videos", nil)
     if latam_language_codes.include?(I18n.locale) && show_latam_videos
-      youtube_id = ""
-      download_path = ""
-      facebook = ""
-      twitter = ""
+      youtube_id = "EGgdCryC8Uo"
+      download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
+      # TODO: (ErinB) update this link when the marketing team has a new tweet.
+      twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
     else
       youtube_id = "nKIu9yen5nc"
       download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
