@@ -1,11 +1,11 @@
 <Dancelab>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 63,
   "created_at": "2018-08-28T22:36:28.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,7 +38,6 @@
     "validation_code": "if (World.frameCount == 1) validationProps.status = 0;\r\n\r\nif (getTime(\"measures\") < 4) {\r\n  if (sprites.length > 0) {\r\n  \tvalidationProps.current_move = sprites[0].current_move;\r\n  } else {\r\n    validationProps.status = 3;\r\n  }\r\n} else if (getTime(\"measures\") > 6) {\r\n  if (sprites.length > 0) {\r\n  \tif (sprites[0].current_move === validationProps.current_move) {\r\n      validationProps.status = 3;\r\n    }\r\n  } else {\r\n    validationProps.status = 3;\r\n  }\r\n  levelSuccess(validationProps.status);\r\n}",
     "block_pool": "Dancelab",
     "custom_helper_library": "SPRITE_NAMES = [\"CAT\", \"MOOSE\"];\r\n\r\nMOVE_NAMES = [\r\n  {\r\n    name: \"Rest\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"ClapHigh\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Clown\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Dab\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"DoubleJam\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Drop\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Floss\",\r\n    mirror: true\r\n  }\r\n  ];",
-    "contained_level_names": null,
     "preload_asset_list": [
       "https://curriculum.code.org/media/uploads/touch.mp3",
       "https://curriculum.code.org/images/sprites/spritesheet_sm/CAT_Rest.png",
@@ -56,10 +55,8 @@
       "https://curriculum.code.org/images/sprites/spritesheet_sm/MOOSE_Drop.png",
       "https://curriculum.code.org/images/sprites/spritesheet_sm/MOOSE_Floss.png"
     ],
-    "encrypted_examples": [
-
-    ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add this block to your program!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add this block to your program!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
