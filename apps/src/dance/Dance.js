@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import AppView from '../templates/AppView';
+import {getStore} from "../redux";
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 var GameLabP5 = require('./GameLabP5');
 var dom = require('../dom');
-import {getStore} from '../redux';
-var GameLabView = require('./GameLabView');
-var Provider = require('react-redux').Provider;
+import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {createDanceAPI} from './DanceLabP5';
@@ -57,12 +58,6 @@ Dance.prototype.init = function (config) {
   this.level = config.level;
   this.skin = config.skin;
 
-  const MEDIA_URL = '/blockly/media/spritelab/';
-  this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
-  this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
-  this.skin.winAvatar = MEDIA_URL + 'avatar.png';
-  this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
-
   this.studioApp_.labUserId = config.labUserId;
 
   this.gameLabP5.init({
@@ -81,7 +76,7 @@ Dance.prototype.init = function (config) {
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this);
-    config.valueTypeTabShapeMap = Dance.valueTypeTabShapeMap(Blockly);
+    config.valueTypeTabShapeMap = {[Blockly.BlockValueType.SPRITE]: 'angle'};
 
     this.studioApp_.init(config);
 
@@ -100,10 +95,11 @@ Dance.prototype.init = function (config) {
 
   ReactDOM.render((
     <Provider store={getStore()}>
-      <GameLabView
-        showFinishButton={showFinishButton}
+      <AppView
+        visualizationColumn={
+          <DanceVisualizationColumn showFinishButton={showFinishButton} />
+        }
         onMount={onMount}
-        danceLab={true}
       />
     </Provider>
   ), document.getElementById(config.containerId));
@@ -369,12 +365,4 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
   });
-};
-
-Dance.valueTypeTabShapeMap = function (blockly) {
-  return {
-    [blockly.BlockValueType.SPRITE]: 'angle',
-    [blockly.BlockValueType.BEHAVIOR]: 'rounded',
-    [blockly.BlockValueType.LOCATION]: 'square',
-  };
 };
