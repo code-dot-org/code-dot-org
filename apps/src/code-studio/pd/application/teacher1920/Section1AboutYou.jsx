@@ -90,7 +90,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
             check out our course and professional learning options.
           </a>
           {' '}For additional questions regarding the program or application, please
-          <a href="https://code.org/educate/regional-partner/contact" target="_blank">
+          <a href="/pd/regional_partner_contact/new" target="_blank">
             {' '}contact your Regional Partner.
           </a>
         </p>

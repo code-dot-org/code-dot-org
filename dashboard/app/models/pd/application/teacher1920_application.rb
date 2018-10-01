@@ -135,6 +135,7 @@ module Pd::Application
             'Code.org email',
             'Regional Partner website',
             'Regional Partner email',
+            'Regional Partner event or workshop',
             'From a teacher',
             'From an administrator',
             TEXT_FIELDS[:other_with_text]
