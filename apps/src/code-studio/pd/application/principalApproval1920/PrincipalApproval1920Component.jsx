@@ -22,8 +22,6 @@ const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd']
 const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
 const YEAR = "2019-20";
 
-const REPLACE_COURSE_YES = 'Yes, it will replace an existing computer science course';
-
 export default class PrincipalApproval1920Component extends LabeledFormComponent {
   static labels = PageLabels;
 
@@ -131,7 +129,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           [TextFields.dontKnowExplain] : "other"
         })}
         {
-          this.props.data.replaceCourse === REPLACE_COURSE_YES && this.renderCourseReplacementSection()
+          this.props.data.replaceCourse === TextFields.yesReplaceExistingCourse && this.renderCourseReplacementSection()
         }
         {this.renderImplementationSection()}
         {
@@ -349,7 +347,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     }
 
     // Clear out replaced course if we are not replacing a course
-    if (data.replaceCourse !== REPLACE_COURSE_YES) {
+    if (data.replaceCourse !== TextFields.yesReplaceExistingCourse) {
       fieldsToClear.add(REPLACE_COURSE_FIELDS);
     }
 
