@@ -1235,6 +1235,7 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
+      this.gameLabP5.setDanceSong(getStore().getState().selectedSong),
       this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.runPreloadEventHandler_()
   ]).then(() => {
