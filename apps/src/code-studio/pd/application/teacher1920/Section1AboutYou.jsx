@@ -20,6 +20,7 @@ import {styles} from "./TeacherApplicationConstants";
 const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
 const PD_RESOURCES_URL = 'https://support.code.org/hc/en-us/articles/115003865532';
+const REGIONAL_PARTNER_URL = '/pd/regional_partner_contact/new';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const INTERNATIONAL = 'Other country';
 const US = 'United States';
@@ -90,7 +91,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
             check out our course and professional learning options.
           </a>
           {' '}For additional questions regarding the program or application, please
-          <a href="https://code.org/educate/regional-partner/contact" target="_blank">
+          <a href={REGIONAL_PARTNER_URL} target="_blank">
             {' '}contact your Regional Partner.
           </a>
         </p>

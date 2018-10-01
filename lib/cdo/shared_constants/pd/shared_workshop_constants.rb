@@ -75,6 +75,12 @@ module Pd
       opening_sometime: "opening_sometime"
     }.freeze
 
+    WORKSHOP_SEARCH_ERRORS = {
+      no_partner: "no_partner",
+      no_state: "no_state",
+      unknown: "unknown"
+    }.freeze
+
     WORKSHOP_TYPES = {
       teachercon: SUBJECT_TEACHER_CON,
       local_summer: SUBJECT_SUMMER_WORKSHOP,
