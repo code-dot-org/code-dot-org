@@ -38,34 +38,14 @@ module Api::V1::Pd::Application
       @teacher_application.reload
       expected_principal_fields = {
         principal_approval: 'Yes',
-        schedule_confirmed: 'Yes',
-        diversity_recruitment: 'Yes',
-        free_lunch_percent: '50%',
-        underrepresented_minority_percent: '52.0',
-        wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
-        can_pay_fee: 'Yes, my school or teacher will be able to pay the full program fee.'
+        principal_schedule_confirmed: 'Yes, I plan to include this course in the 2019-20 master schedule',
+        principal_diversity_recruitment: 'Yes',
+        principal_free_lunch_percent: '50%',
+        principal_underrepresented_minority_percent: '52.0',
+        principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
+        principal_pay_fee: 'Yes, my school or teacher will be able to pay the full program fee.'
       }
       actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
-
-      assert_equal(
-        {
-          regional_partner_name: NO,
-          committed: YES,
-          able_to_attend_single: YES,
-          principal_approval: YES,
-          csp_which_grades: YES,
-          csp_course_hours_per_year: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          taught_in_past: 2,
-          schedule_confirmed: YES,
-          diversity_recruitment: YES,
-          free_lunch_percent: 5,
-          underrepresented_minority_percent: 5,
-          wont_replace_existing_course: 5
-        }, @teacher_application.response_scores_hash
-      )
-
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
@@ -76,7 +56,7 @@ module Api::V1::Pd::Application
         application_guid: teacher_application.application_guid,
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
           {
-            replace_course: "Yes",
+            replace_course: 'Yes, it will replace an existing computer science course',
             replace_which_course_csp: ['CodeHS', 'CS50']
           }.stringify_keys
         )
@@ -87,7 +67,10 @@ module Api::V1::Pd::Application
         assert_response :success
       end
 
-      assert_equal 'Yes: CodeHS, CS50', teacher_application.reload.sanitize_form_data_hash[:wont_replace_existing_course]
+      assert_equal(
+        'Yes, it will replace an existing computer science course: CodeHS, CS50',
+        teacher_application.reload.sanitize_form_data_hash[:principal_wont_replace_existing_course]
+      )
     end
 
     test 'application update includes Other fields' do
@@ -114,9 +97,9 @@ module Api::V1::Pd::Application
 
       expected_principal_fields = {
         principal_approval: "Other: this is the other for do you approve",
-        schedule_confirmed: "Other: this is the other for master schedule",
-        diversity_recruitment: "Other (Please Explain): this is the other for diversity",
-        wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
+        principal_schedule_confirmed: "Other: this is the other for master schedule",
+        principal_diversity_recruitment: "Other (Please Explain): this is the other for diversity",
+        principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
       actual_principal_fields = teacher_application.reload.sanitize_form_data_hash.select do |k, _|
         expected_principal_fields.keys.include? k
