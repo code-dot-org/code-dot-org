@@ -13,10 +13,17 @@ module Api::V1::Pd::Application
       }
     end
 
+    PRINCIPAL_APPROVAL_EMAILS = [
+      :principal_approval_completed,
+      :principal_approval_completed_partner
+    ]
+
     setup do
-      TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval_completed).returns(
-        mock {|mail| mail.stubs(:deliver_now)}
-      )
+      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+        TEACHER_APPLICATION_MAILER_CLASS.stubs(email_type).returns(
+          mock {|mail| mail.stubs(:deliver_now)}
+        )
+      end
     end
 
     # no log in required
@@ -108,17 +115,21 @@ module Api::V1::Pd::Application
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
-    test 'Sends principal approval received email on successful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_completed).
-        with(@teacher_application).
-        returns(mock {|mail| mail.expects(:deliver_now)})
+    test 'Sends principal approval received emails on successful create' do
+      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+        TEACHER_APPLICATION_MAILER_CLASS.expects(email_type).
+          with(@teacher_application).
+          returns(mock {|mail| mail.expects(:deliver_now)})
+      end
 
       put :create, params: @test_params
       assert_response :success
     end
 
-    test 'Does not send email on unsuccessful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_completed).never
+    test 'Does not send emails on unsuccessful create' do
+      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+        TEACHER_APPLICATION_MAILER_CLASS.expects(email_type).never
+      end
 
       put :create, params: {form_data: {first_name: ''}, application_guid: 'invalid'}
       assert_response :bad_request
