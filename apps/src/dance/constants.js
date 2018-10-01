@@ -1,5 +1,5 @@
 /** @const {number} */
-module.exports.GAME_WIDTH = 400;
+export const GAME_WIDTH = 400;
 
 /** @const {number} */
-module.exports.GAME_HEIGHT = 400;
+export const GAME_HEIGHT = 400;
