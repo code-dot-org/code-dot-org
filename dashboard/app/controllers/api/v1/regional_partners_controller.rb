@@ -1,5 +1,9 @@
+require 'cdo/firehose'
+
 class Api::V1::RegionalPartnersController < ApplicationController
   before_action :authenticate_user!, except: :find
+
+  include Pd::SharedWorkshopConstants
 
   # GET /api/v1/regional_partners
   def index
@@ -18,8 +22,10 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
   # GET /api/v1/regional_partners/find
   def find
-    zip_code = params[:zip_code]
+    zip_code = nil
     state = nil
+
+    zip_code = params[:zip_code] if RegexpUtils.us_zip_code?(params[:zip_code])
 
     # Try to find the matching partner using the ZIP code.
     partner = RegionalPartner.find_by_region(zip_code, nil)
@@ -51,8 +57,15 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
     if partner
       render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+    elsif state
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
     else
-      render_404
+      FirehoseClient.instance.put_record(
+        study: 'regional-partner-search-log',
+        event: "no-state-for-zip",
+        data_string: params[:zip_code]
+      )
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_state]}
     end
   end
 
