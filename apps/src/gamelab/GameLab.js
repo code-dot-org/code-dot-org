@@ -6,6 +6,7 @@ import {
   changeInterfaceMode,
   viewAnimationJson,
   setMobileControlsConfig,
+  setSong
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -232,6 +233,10 @@ GameLab.prototype.init = function (config) {
     } catch (err) {
       console.error("Unable to parse default animation list", err);
     }
+  }
+
+  if (this.level.defaultSong) {
+    getStore().dispatch(setSong(this.level.defaultSong));
   }
 
   config.usesAssets = true;

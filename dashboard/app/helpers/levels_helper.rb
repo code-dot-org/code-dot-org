@@ -534,6 +534,10 @@ module LevelsHelper
       level_options[:sharedFunctions] = nil # TODO: handle non-standard pools
     end
 
+    if @level.is_a? Dancelab
+      level_options[:defaultSong] = @level.default_song
+    end
+
     unless params[:no_last_attempt]
       level_options[:lastAttempt] = @last_attempt
       if @last_activity
