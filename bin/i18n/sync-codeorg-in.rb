@@ -92,6 +92,7 @@ end
 #   authored hints
 #   callouts
 def localize_level_content
+  level_display_name = Hash.new
   level_instructions = Hash.new
   level_markdown_instructions = Hash.new
   level_failure_message_overrides = Hash.new
@@ -107,6 +108,11 @@ def localize_level_content
 
       # Properties
       config = JSON.parse(level_xml.xpath('//../config').first.text)
+
+      ## Display Name
+      if display_name = config["properties"]["display_name"]
+        level_display_name[level_name] = sanitize(display_name)
+      end
 
       ## Instructions
       if instructions = config["properties"]["instructions"]
@@ -157,6 +163,7 @@ def localize_level_content
     end
   end
 
+  copy_to_yml("display_name", level_display_name)
   copy_to_yml("instructions", level_instructions)
   copy_to_yml("markdown_instructions", level_markdown_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
