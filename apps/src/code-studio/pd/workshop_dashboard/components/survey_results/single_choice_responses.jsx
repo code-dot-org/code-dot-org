@@ -64,12 +64,13 @@ export default class SingleChoiceResponses extends React.Component {
 
   renderPerFacilitatorAnswerCounts() {
     const facilitatorNames = Object.keys(this.props.answers);
+    const showTotalCount = facilitatorNames.length > 1;
 
     const headerRow = (
       <tr key="header">
         <td></td>
         {facilitatorNames.map((name, i) => <td style={{paddingLeft: '20px'}} key={i}>{name}</td>)}
-        <td style={{paddingLeft: '20px'}}>Total Responses</td>
+        {showTotalCount && <td style={{paddingLeft: '20px'}}>Total Responses</td>}
         <td style={{paddingLeft: '20px'}}>Total Percentage</td>
       </tr>
     );
@@ -88,9 +89,9 @@ export default class SingleChoiceResponses extends React.Component {
               {count}
             </td>
           ))}
-          <td style={{paddingLeft: '20px'}}>
+          {showTotalCount && <td style={{paddingLeft: '20px'}}>
             {totalCount}
-          </td>
+          </td>}
           <td style={{paddingLeft: '20px'}}>
             {
               (totalCount / this.getTotalAnswers())

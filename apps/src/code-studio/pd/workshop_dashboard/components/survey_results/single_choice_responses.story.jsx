@@ -84,6 +84,25 @@ export default storybook => {
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
+        name: 'Single choice responses for only one facilitator',
+        story: () => (
+          <SingleChoiceResponses
+            question="What is your favorite pizza topping?"
+            perFacilitator={true}
+            answers={{
+              Tom: {
+                'Peppers': 4,
+                'Mushrooms': 2,
+                'Olives': 2,
+                'Sausage': 3
+              }
+            }}
+            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples']}
+            answerType="selectText"
+          />
+        )
+      },
+      {
         name: 'Single choice responses without other',
         story: () => (
           <SingleChoiceResponses
