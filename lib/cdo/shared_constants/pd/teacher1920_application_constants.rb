@@ -74,14 +74,14 @@ module Pd
         ),
         csp_how_offer: BASE_PAGE_LABELS[:section_3_choose_your_program][:csp_how_offer],
         cs_how_many_minutes: clean_multiline(
-          'How many minutes will your CS <Program> classes last? (Include the
+          'How many minutes will your CS program class last? (Include the
           number of minutes from start to finish that you see your students per class
           period. If it varies from day to day, estimate the average number of minutes
           you meet per class period.)'
         ),
-        cs_how_many_days_per_week: 'How many days per week will your CS <Program> class be offered to one section of students?',
+        cs_how_many_days_per_week: 'How many days per week will your CS program class be offered to one section of students?',
         cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
-        cs_terms: 'Will you offer CS <Program> for:',
+        cs_terms: 'How will you be offering this CS program course to students?',
         plan_to_teach: BASE_PAGE_LABELS[:section_3_choose_your_program][:plan_to_teach].sub('18-19', '19-20'),
         replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
         replace_which_course: 'If yes, please describe the course it will be replacing and why:'
@@ -98,11 +98,14 @@ module Pd
         ).merge({subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}),
       section_4_professional_learning_program_requirements:
         BASE_PAGE_LABELS[:section_4_summer_workshop].slice(
+          :alternate_workshops,
           :committed,
           :pay_fee,
           :willing_to_travel,
         ).merge(
           {
+            able_to_attend_multiple: 'Your Regional Partner is hosting local summer workshop(s) at the following dates and locations. Please indicate which workshops you are able to attend. Select all that apply.',
+            travel_to_another_workshop: 'If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?',
             scholarship_reasons: 'Please provide any additional information you’d like to share about why your application should be considered for a scholarship.',
             interested_in_online_program: 'Are you interested in this online program for school year workshops?'
           }

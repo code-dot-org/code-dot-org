@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import {connect} from 'react-redux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -34,15 +33,13 @@ const SongSelector = class extends React.Component {
 };
 
 
-class GameLabVisualizationColumn extends React.Component {
+export default class DanceVisualizationColumn extends React.Component {
   static propTypes = {
-    finishButton: PropTypes.bool.isRequired,
-    isResponsive: PropTypes.bool.isRequired,
-    isShareView: PropTypes.bool.isRequired,
+    showFinishButton: PropTypes.bool.isRequired,
   };
 
   render() {
-    const divGameLabStyle = {
+    const divDanceStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT
@@ -55,10 +52,10 @@ class GameLabVisualizationColumn extends React.Component {
         <ProtectedVisualizationDiv>
           <div
             id="divGameLab"
-            style={divGameLabStyle}
+            style={divDanceStyle}
           />
         </ProtectedVisualizationDiv>
-        <GameButtons>
+        <GameButtons showFinishButton={this.props.showFinishButton}>
           <ArrowButtons />
         </GameButtons>
         <BelowVisualization />
@@ -66,8 +63,3 @@ class GameLabVisualizationColumn extends React.Component {
     );
   }
 }
-
-export default connect(state => ({
-  isResponsive: state.pageConstants.isResponsive,
-  isShareView: state.pageConstants.isShareView,
-}))(GameLabVisualizationColumn);
