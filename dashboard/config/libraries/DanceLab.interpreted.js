@@ -297,6 +297,7 @@ function Effects(alpha, blend) {
     }
   };
   this.raining_tacos = {
+    emoji: "tacos",
     tacos: [],
     size: 50,
     init: function () {
@@ -321,7 +322,7 @@ function Effects(alpha, blend) {
         rotate(taco.rot);
         textAlign(CENTER, CENTER);
         textSize(this.size);
-        text('taco', 0, 0);
+        text(emoji, 0, 0);
         taco.y += taco.speed;
         taco.rot++;
         if (taco.y > 450) {
@@ -451,6 +452,9 @@ function makeNewDanceSprite(costume, name, location) {
   };
   sprite.setScale = function (scale) {
     sprite.scale = scale;
+  };
+  sprite.getScale = function () {
+    return sprite.scale * 100;
   };
   return sprite;
 }
