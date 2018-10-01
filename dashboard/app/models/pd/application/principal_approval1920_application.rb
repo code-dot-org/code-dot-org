@@ -2,25 +2,24 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                  :integer          not null, primary key
+#  user_id             :integer
+#  type                :string(255)      not null
+#  application_year    :string(255)      not null
+#  application_type    :string(255)      not null
+#  regional_partner_id :integer
+#  status              :string(255)
+#  locked_at           :datetime
+#  notes               :text(65535)
+#  form_data           :text(65535)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  course              :string(255)
+#  response_scores     :text(65535)
+#  application_guid    :string(255)
+#  accepted_at         :datetime
+#  properties          :text(65535)
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -96,9 +95,9 @@ module Pd::Application
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
-          'Yes, it will replace an existing computer science course.',
-          'No, it will not replace an existing computer science course.',
-          'No, this course will not be added to the schedule.',
+          TEXT_FIELDS[:yes_replace_existing_course],
+          'No, it will not replace an existing computer science course',
+          'No, this course will not be added to the schedule',
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
@@ -181,16 +180,16 @@ module Pd::Application
               :how_heard
             ]
 
-            if course == 'csd'
+            if teacher_application&.course == 'csd'
               required << :csd_implementation
-            elsif course == 'csp'
+            elsif teacher_application&.course == 'csp'
               required << :csp_implementation
             end
 
-            if hash[:replace_course] == YES
-              if course == 'csd'
+            if hash[:replace_course] == TEXT_FIELDS[:yes_replace_existing_course]
+              if teacher_application&.course == 'csd'
                 required << :replace_which_course_csd
-              elsif course == 'csp'
+              elsif teacher_application&.course == 'csp'
                 required << :replace_which_course_csp
               end
             end

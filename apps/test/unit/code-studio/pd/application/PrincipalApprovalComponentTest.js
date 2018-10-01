@@ -1,5 +1,6 @@
 import {expect} from 'chai';
 import PrincipalApprovalComponent, {RACE_LIST, MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS, ALWAYS_REQUIRED_FIELDS} from '@cdo/apps/code-studio/pd/application/principalApproval1920/PrincipalApproval1920Component';
+import {TextFields} from '@cdo/apps/generated/pd/principalApproval1920ApplicationConstants';
 
 describe("Principal Approval Component", () => {
   it("Requires only the top few fields if application is rejected", () => {
@@ -30,7 +31,7 @@ describe("Principal Approval Component", () => {
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes',
       course: 'Computer Science Discoveries',
-      replaceCourse: 'Yes'
+      replaceCourse: TextFields.yesReplaceExistingCourse
     }).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });
@@ -40,7 +41,7 @@ describe("Principal Approval Component", () => {
     const actualFields = PrincipalApprovalComponent.getDynamicallyRequiredFields({
       doYouApprove: 'Yes',
       course: 'Computer Science Principles',
-      replaceCourse: 'Yes'
+      replaceCourse: TextFields.yesReplaceExistingCourse
     }).sort();
     expect(actualFields).to.deep.equal(expectedFields);
   });
