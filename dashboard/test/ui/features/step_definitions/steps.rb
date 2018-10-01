@@ -1409,6 +1409,11 @@ Then /^I unlock the stage for students$/ do
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
+Then /^I show stage answers for students$/ do
+  @browser.execute_script("$('.modal-body button:contains(Show answers)').click()")
+  @browser.execute_script('$(".modal-body button:contains(Save)").click()')
+end
+
 Then /^I select the first section$/ do
   steps %{
     And I wait to see ".uitest-sectionselect"
