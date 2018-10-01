@@ -299,7 +299,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
       }
     }
 
-    if (data.replaceCourse === 'Yes') {
+    if (data.replaceCourse === TextFields.yesReplaceExistingCourse) {
       if (data.course === 'Computer Science Discoveries') {
         requiredFields.push('replaceWhichCourseCsd');
       } else if (data.course === 'Computer Science Principles') {
