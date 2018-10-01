@@ -4,10 +4,27 @@
 import Effects from './Effects';
 
 export default function init(p5, Dance) {
-  var exports = {};
+  const exports = {};
 
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
   const WATCHED_RANGES = [0, 1, 2];
+
+  /**
+   * Patch p5 tint to use fast compositing (see https://github.com/code-dot-org/p5.play/pull/42).
+   */
+  window.p5.Renderer2D.prototype._getTintedImageCanvas = function (img) {
+    this._tintCanvas = this._tintCanvas || document.createElement('canvas');
+    this._tintCanvas.width = img.canvas.width;
+    this._tintCanvas.height = img.canvas.height;
+    const tmpCtx = this._tintCanvas.getContext('2d');
+    tmpCtx.fillStyle = 'hsl(' + this._pInst.hue(this._tint) + ', 100%, 33%)';
+    tmpCtx.fillRect(0, 0, this._tintCanvas.width, this._tintCanvas.height);
+    tmpCtx.globalCompositeOperation = 'destination-atop';
+    tmpCtx.drawImage(img.canvas, 0, 0, this._tintCanvas.width, this._tintCanvas.height);
+    tmpCtx.globalCompositeOperation = 'screen';
+    tmpCtx.drawImage(img.canvas, 0, 0, this._tintCanvas.width, this._tintCanvas.height);
+    return this._tintCanvas;
+  };
 
 var World = {
   height: 400
@@ -392,30 +409,15 @@ exports.getProp = function getProp(sprite, property) {
     return World.height - sprite.y;
   } else if (property == "costume") {
     return sprite.getAnimationLabel();
-  } else if (property == "direction") {
-    return p5.getDirection(sprite);
+  } else if (property == "tint") {
+    return p5.color(sprite.tint)._getHue();
   } else {
     return sprite[property];
   }
 }
 
 exports.changePropBy = function changePropBy(sprite,  property, val) {
-  if (!spriteExists(sprite) || val === undefined) return;
-
-  if (property == "scale") {
-    sprite.setScale(sprite.getScale() + val / 100);
-    if (sprite.scale < 0) {
-      sprite.scale = 0;
-    }
-  } else if (property == "width" || property == "height") {
-    sprite[property] = p5.getProp(sprite, property) + (SIZE * (val / 100));
-  } else if (property=="direction") {
-    sprite.direction = p5.getDirection(sprite) + val;
-  } else if (property=="y") {
-    sprite.y-=val;
-  } else {
-    sprite[property] += val;
-  }
+  exports.setProp(sprite, property, exports.getProp(sprite, property) + val);
 }
 
 exports.jumpTo = function jumpTo(sprite, location) {
