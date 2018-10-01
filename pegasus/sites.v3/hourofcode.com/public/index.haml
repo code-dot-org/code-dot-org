@@ -92,10 +92,10 @@ social:
                 %div{style: "clear: both;"}
               #leftbutton.visible-xs
                 -# If language Spanish or Brazilian Portuguese, show alternate
-                -# promo video for LATM Hour of Code.
+                -# promo video for LATAM Hour of Code.
                 - if latam_language_codes.include?(@language) && show_latam_videos
                   %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
-                  %img{src: "/images/play-button.png", width: "60", onclick: "return startLATMVideo();", style: "cursor: pointer;"}
+                  %img{src: "/images/play-button.png", width: "60", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
                 - else
                   %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
                   %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
@@ -112,7 +112,7 @@ social:
 
             #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
               -# If language Spanish or Brazilian Portuguese, show alternate
-              -# promo video for LATM Hour of Code.
+              -# promo video for LATAM Hour of Code.
               - if latam_language_codes.include?(@language) && show_latam_videos
                 %div.watch-video-small{onclick: "return startLATAMVideo();"}
                   =hoc_s(:front_watch_regular_video)
