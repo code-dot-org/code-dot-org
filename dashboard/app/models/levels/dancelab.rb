@@ -51,6 +51,6 @@ class Dancelab < GamelabJr
   # Manually curated
   # TODO - epeach - manually populate these values from song manifest
   def self.hoc_songs
-    [["Hammer", "hammer"], ["Macklemore", "macklemore90"], ["Peas", "peas"]]
+    [["MC Hammer - U Can't Touch This", "hammer"], ["Macklemore - Can't Hold Us", "macklemore90"], ["The Black Eyed Peas - I Got a Feeling", "peas"]]
   end
 end
