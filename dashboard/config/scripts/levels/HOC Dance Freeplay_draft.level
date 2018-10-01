@@ -39,7 +39,8 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "skip_autosave": true
   },
   "published": true,
   "notes": "",
