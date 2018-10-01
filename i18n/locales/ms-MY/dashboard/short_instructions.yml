@@ -1,0 +1,34 @@
+ms:
+  data:
+    short_instructions:
+      20hr_farmer_stage9_1: Hai, saya ialah farmer. Saya perlukan pertolongan anda untuk meratakan kawasan kebun saya supaya sedia untuk penanaman. Gerakkan saya ke timbunan kotor dan gunakan "alihkan" blok utuk mengalihkannya.
+      20hr_farmer_stage9_11: 'Ianya masih gelap di luar. Gerakkan saya sepanjang lapangan. Jika terdapat longgokan, keluarkan ia, dan jika ada lubang, timbuskan ia. Petunjuk: gunakan menu dropdown dari pilihan di blok "Jika".'
+      20hr_farmer_stage9_2: Seterusnya, pindahkan saya ke lubang dan isi dengan DUA  penggali kotoran, menggunakan blok "isi".
+      20hr_farmer_stage9_3: Pindahkan saya ke longgokan kotoran dan beritahu saya berapa banyak penggali untuk mengalih keluar menggunakan blok-blok yang sedikit mungkin.
+      20hr_farmer_stage9_4: 'Bolehkan anda membantu saya untuk membuang kesemua empat longgokan kotor? Petunjuk: guna blok berulang jika boleh.'
+      20hr_farmer_stage9_5: 'Bantu saya untuk memasukkan kesemua lubang dengan 5 penggali kotoran. Petunjuk: anda boleh meletakkan blok "berulang" dalam blok "sementara".'
+      20hr_farmer_stage9_6: Alihkan semua timbunan kotoran, gunakan blok yang sedikit yang mungkin. Pilihan baru dalam menu dropdown di blok "manakala" beritahu saya jika saya sedang berdiri di atas longgokan atau lubang.
+      20hr_farmer_stage9_7: Wow, saya mendapati lubang yang benar-benar dalam! Saya tidak tahu berapa banyak penggali kotoran yang diperlukan. Bolehkah anda menulis aturcara yang mengisinya sehingga dipenuhi tanah?
+      20hr_farmer_stage9_8: Bantu saya untuk mengisi lubang di hujung lapangan, gunakan blok sedikit yang mungkin.
+      20hr_maze_stage2_13: OK, ini adalah sama, tetapi berbeza sedikit. Boleh lakukannya hanya dengan 5 blok?
+      20hr_maze_stage2_7: Cuba bawa saya ke penceroboh hijau dengan hanya menggunakan tiga blok.
+      App Lab test: ujian
+      Crack Random Substitution: Arahan
+      Crack Random Substitution_2018: Arahan
+      Crack a Caesar Cipher: Arahan
+      Crack a Caesar Cipher_2018: Arahan
+      Kiki_StarWars_Test_3: teks
+      Kiki_StarWars_Test_4: teks
+      Kiki_StarWars_Test_5: teks
+      Kiki_StarWars_Test_5_Example: teks
+      The Vigenere Cipher Widget: Arahan
+      The Vigenere Cipher Widget_2018: Arahan
+      The Vigenere Cipher: Arahan
+      U2 frequency caesar: Arahan
+      U2 frequency random sub: Arahan
+      U2 vigenere cipher: Arahan
+      U4 vigenere cipher 2: Arahan
+      grade3_robotFarmer_ConditionalsIntro_11: 'Ianya masih gelap di luar. Gerakkan saya sepanjang lapangan. Jika terdapat longgokan, keluarkan ia, dan jika ada lubang, timbuskan ia. Petunjuk: gunakan menu dropdown dari pilihan di blok "Jika".'
+      grade3_robotFarmer_ConditionalsIntro_6: Alihkan semua timbunan kotoran, gunakan blok yang sedikit yang mungkin. Pilihan baru dalam menu dropdown di blok "manakala" beritahu saya jika saya sedang berdiri di atas longgokan atau lubang.
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Bantu saya untuk memasukkan kesemua lubang dengan 5 penggali kotoran. Petunjuk: anda boleh meletakkan blok "berulang" dalam blok "sementara".'
+      grade4_frozen_functions0: Bolehkah anda memikirkan apa nombor untuk menggantikan tanda soal untuk melukis bulatan?
