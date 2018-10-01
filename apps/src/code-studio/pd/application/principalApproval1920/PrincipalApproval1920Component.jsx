@@ -129,7 +129,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           [TextFields.dontKnowExplain] : "other"
         })}
         {
-          this.props.data.replaceCourse === 'Yes, it will replace an existing computer science course.' && this.renderCourseReplacementSection()
+          this.props.data.replaceCourse === TextFields.yesReplaceExistingCourse && this.renderCourseReplacementSection()
         }
         {this.renderImplementationSection()}
         {
@@ -347,7 +347,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
     }
 
     // Clear out replaced course if we are not replacing a course
-    if (data.replaceCourse !== 'Yes') {
+    if (data.replaceCourse !== TextFields.yesReplaceExistingCourse) {
       fieldsToClear.add(REPLACE_COURSE_FIELDS);
     }
 
