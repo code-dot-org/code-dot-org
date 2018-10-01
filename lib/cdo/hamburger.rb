@@ -94,10 +94,22 @@ class Hamburger
       {title: "my_dashboard", url: CDO.studio_url("/home")},
       {title: "course_catalog", url: CDO.studio_url("/courses?view=teacher")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
-      {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    end
+
+    if  options[:language] == "en"
+      teacher_entries << {
+        title: I18n.t("#{loc_prefix}professional_learning"),
+        url: CDO.studio_url("/my-professional-learning"),
+      }
+    else
+      teacher_entries << {
+        title: I18n.t("#{loc_prefix}about"),
+        url: CDO.code_org_url("/international/about"),
+        id: "header-intl-about"
+      }
+    end
 
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
@@ -105,14 +117,14 @@ class Hamburger
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    end
 
     signed_out_entries = [
       {title: "course_catalog", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    end
 
     # When viewing courses, a signed-out user in English gets the teacher view.
     teach_url =
@@ -172,17 +184,13 @@ class Hamburger
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
       if options[:language] == "en"
         entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
+      else
+        entries << {
+          title: I18n.t("#{loc_prefix}about"),
+          url: CDO.code_org_url("/international/about"),
+          id: "header-intl-about"
+        }
       end
-    end
-
-    if options[:language] != "en"
-      entries << {
-        title: I18n.t("#{loc_prefix}about"),
-        url: CDO.code_org_url("/international/about"),
-        class: visibility[:show_intl_about],
-        id: "header-intl-about"
-      }
-      entries << {type: "divider", class: visibility[:show_intl_about], id: "after-signed-out"}
     end
 
     # Help-related.
@@ -301,37 +309,66 @@ class Hamburger
 
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
+    header_links = []
+
+    any_teacher_links = [
+      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
+      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
+    ]
+
+    en_teacher = [
+      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
+    ]
+
+    student_links = [
+      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
+      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
+    ]
+
+    any_signed_out_links = [
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-projects"},
+    ]
+
+    en_signed_out_links = [
+      # When signed out, "Learn" will take an English user to the student view of /courses.
+      {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
+      # When signed out, "Teach" will take an English user to the teacher view of /courses.
+      {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
+      {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
+      {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
+    ]
+
+    non_en_signed_out_links = [
+      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
+    ]
+
+    about_intl = [
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-intl-about"}
+    ]
 
     if options[:user_type] == "teacher"
-      [
-        {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
-        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
-        {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
-      ]
-    elsif options[:user_type] == "student"
-      [
-        {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
-        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
-      ]
-    elsif options[:language] == "en"
-      [
-        # When signed out, "Learn" will take an English user to the student view of /courses.
-        {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
-        # When signed out, "Teach" will take an English user to the teacher view of /courses.
-        {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"},
-        {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
-        {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
-        {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
-      ]
+      header_links = any_teacher_links
+      if options[:language] == "en"
+        header_links.concat(en_teacher)
+      else
+        header_links.concat(about_intl)
+      end
+    elsif options[:user_type] = "student"
+      header_links = student_links
+      if options[:language] != "en"
+        header_links.concat(about_intl)
+      end
     else
-      [
-        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"},
-        {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-intl-about"}
-      ]
+      header_links = any_signed_out_links
+      if options[:language] == "en"
+        header_links.concat(en_signed_out_links)
+      else
+        header_links.concat(non_en_signed_out_links).concat(about_intl)
+      end
     end
+    header_links
   end
 end
