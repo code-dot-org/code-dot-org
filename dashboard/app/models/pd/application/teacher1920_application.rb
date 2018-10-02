@@ -101,7 +101,7 @@ module Pd::Application
       return nil unless regional_partner && regional_partner.contact_email.present?
 
       regional_partner.contact_name.present? ?
-        "#{regional_partner.contact_name} <#{regional_partner.contact_email}>" :
+        "#{regional_partner.contact_name} <#{regional_partner.contact_email_with_backup}>" :
         regional_partner.contact_email_with_backup
     end
 
@@ -115,6 +115,15 @@ module Pd::Application
 
     def accepted?
       status.start_with? 'accepted'
+    end
+
+    # @override
+    def queue_email(email_type, deliver_now: false)
+      if email_type == :principal_approval_completed_partner && formatted_partner_contact_email.nil?
+        CDO.log.info "Skipping principal_approval_completed_partner for application id #{id}"
+      else
+        super
+      end
     end
 
     # @override
