@@ -599,7 +599,7 @@ et:
       Course 4 Binary 8: Saad enamiku pildist valmis teha, korrates viiebitist kahendarvu. Siis on sul vaja ainult üht neljabitist arvu, et saada alumisse parempoolsesse nurka.
       Course 4 EC 1a: Reegleid pole, vihjeid pole – ainult väljakutse!
       Course 4 EC 1b: Reegleid pole, vihjeid pole – ainult väljakutse!
-      Course 4 EC 2a: '**Eriti raske väljakutse:** reegleid pole, vihjeid pole – ainult väljakutse!'
+      Course 4 EC 2a: Reegleid pole, vihjeid pole – ainult väljakutse!
       Course 4 EC 2b: Reegleid pole, vihjeid pole – ainult väljakutse!
       Course 4 EC 2c: Reegleid pole, vihjeid pole – ainult väljakutse!
       Course 4 EC 2d: Reegleid pole, vihjeid pole – ainult väljakutse!
@@ -883,10 +883,10 @@ et:
       MC_HOC_2017_09_Kiki: Programmeri Agent, et ta teeks mängija raja puhtaks ja saaks minna surveplaadi juurde.
       MC_HOC_2017_10_Cole: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
       MC_HOC_2017_10_Cole_old: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
-      MC_HOC_2017_10_Kiki: Koosta funktsioon, mis aitavad teil lõpetada selle Minecart'i.
+      MC_HOC_2017_10_Kiki: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
       MC_HOC_2017_10_RETRY: Kasutage funktsioone, et saaksid lõpetada selle minecart'i loo.
       MC_HOC_2017_10_RYAN: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
-      MC_HOC_2017_10_RYAN2: Koosta funktsioon, mis aitavad teil lõpetada selle Minecart'i.
+      MC_HOC_2017_10_RYAN2: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
       MC_HOC_2017_13_Cole: "** Vabamäng: ** Aeg uurida ise edasi!"
       MC_HOC_2017_4.5v2: Liiguta Agent surveplaadile.
       MC_HOC_2017_Ali: Kasutage funktsioone, et leida viis minna üle laava.
@@ -993,7 +993,7 @@ et:
       Play Lab Rocket 4 (copy 1): Päris rakettide starikiirus on üsna aeglane, alles hiljem hakkavad nad kiirust koguma- paneme enda oma ka! Kirjuta astmeline funktsioon mis kirjeldab seda raketti mis liigub "sekundeid" ruudus meetrit sekundis.
       Quantum Bee: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda nektarit lillalt õielt, kui seal seda ei ole. Kontrolli, kas nektari arv võrdub 1, kasutades plokki „kui“.
       Ryan - 4-5 Bee Conditionals 2: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
-      Ryan - Bee Conditionals: Mesilane tahab ainult nektarit praegu. Kõik asjad ei ole lilled, nii et vaata IGA PILVE alla, et näha kas see peidab lille. Kui peidab, siis saad sa nektarit koguda.
+      Ryan - Bee Conditionals: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
       Ryan Test Locked Blocks: Siin on funktsioon nimega „patrull“. Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
       SpecialFrozenLevel: Sa oled ametlikult meister kunstnik! Loo talve võlumaa.
       Standalone_Artist_1: Tere tulemast rakendusse Kunstnik! Proovime kõigepealt teha lihtsa ruudu, kasutades paremale pööramise plokki ja edasiliikumise plokki. Iga külg peab olema 100 piksli pikkune.

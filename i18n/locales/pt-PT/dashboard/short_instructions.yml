@@ -187,7 +187,7 @@ pt:
       2-3 Bee Loops 9: "O laço enquanto pode realizar a mesma ação que\num comando se em um laço. Adicione um laço enquanto a esse código para realizar a mesma\ntarefa."
       2-3 Bee Loops Assessment 1: "Avaliação - use um laço enquanto para coletar\ntodo o néctar dessa flor."
       2-3 Maze 1: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha alguns blocos `mover para a frente` por baixo do bloco `quando executar` e depois clica em \"Executar\". "
-      2-3 Maze 10: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze 10: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze 11: "Estou com fome, leve-me até a flor! Quantas vezes\nvocê precisa repetir um bloco?"
       2-3 Maze 12 (copy 1): "Você pode substituir a resposta anterior por apenas dois\nblocos? (Dica: crie um laço usando um bloco \"repita vezes\")"
       2-3 Maze 12 (copy 2): "Você pode substituir a resposta anterior por apenas dois\nblocos? (Dica: crie um laço usando um bloco \"repita vezes\")"
@@ -205,12 +205,12 @@ pt:
       2-3 Maze 16: Leve-me até o girassol. Repita a sequência!
       2-3 Maze 2: Esse porco está me irritando. Ajude-me a chegar até ele!
       2-3 Maze 3: "Trace o caminho e leve-me até o porco bobalhão. Desvie\ndo TNT, ou penas vão voar!"
-      2-3 Maze 4: Guia-me até à maldade verde! (Cuidado com a dinamite)
-      2-3 Maze 5: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze 4: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
+      2-3 Maze 5: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze 6: "Fique calmo e ajude-me a chegar até o porco malvado. Senão\neu vou ficar braco!"
-      2-3 Maze 7: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze 7: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze 8: Leve-me até o porco!
-      2-3 Maze 9: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze 9: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze Loops 1: Consegues levar-me até ao porquinho com 5 blocos do mesmo género?
       2-3 Maze Loops 17: Leve-me até o girassol!
       2-3 Maze Loops 18: "Leve-me até o girassol!"
@@ -221,7 +221,7 @@ pt:
       2-3 Maze sq10: Leve-me até o porco! Que blocos foram repetidos?
       2-3 Maze sq10v2: Leve-me até o porco! Que blocos foram repetidos?
       2-3 Maze sq2: "Trace o caminho e leve-me até o porco bobalhão. Desvie\ndo TNT, ou penas vão voar!"
-      2-3 Maze sq3: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze sq3: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze sq4: "Fique calmo e ajude-me a chegar até o porco malvado. Senão\neu vou ficar braco!"
       2-3 Maze sq5: "Leve-me até o porco! Quantas vezes você precisa\nrepetir um bloco?"
       2-3 Maze sq6: "Você pode substituir a resposta anterior por apenas dois\nblocos? (Dica: crie um laço usando um bloco \"repita vezes\")"
@@ -455,11 +455,11 @@ pt:
       Course 4 Artist 11: "Agora um desafio!  Temos aqui um design que\nusa apenas blocos que já foram mostrados. Você consegue descobrir como\nrecriá-lo sem usar qualquer informação extra? Dica: fique à vontade para usar tentativa\ne erro. Não esperamos que você seja perfeito na primeira vez."
       Course 4 Artist 12: |-
         Atividade livre - Inspiração: agora você aprendeu
-        tudo o que precisa para criar um padrão como esse! Se essa imagem inspira
-        você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
+        tudo o que precisa saber para criar um padrão como esse! Se essa imagem
+        inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r
         
         \r
-        Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105671120/edit
+        Quer saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit
         para ver a solução.
       Course 4 Artist 13: "Ainda jogando?  Temos aqui uma tela em branco\nna qual você pode projetar o que quiser!"
       Course 4 Artist 2: "Você consegue repetir este código para desenhar\no quadrado em cinza?"
@@ -1064,7 +1064,7 @@ pt:
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
       courseC_artist_prog5_2018: |-
         Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.
-      courseC_maze_debugging10: "Depure esse nível reorganizando e adicionando\nblocos para me levar até o porco!"
+      courseC_maze_debugging10: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
       courseD_artist_binary4: "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?"
       courseD_artist_binary4_2018: "Você consegue desenhar este padrão usando\na repetição de uma string binária de 3 dígitos?"
       courseD_artist_binary6: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
@@ -1411,7 +1411,7 @@ pt:
         resulta no número de graus a virar.
       grade5_artist_variables_triangles2: "Ao invés de \"avance por 100,\"\no bloco \"mova\" agora referencia a variável \"comprimento\". Você pode definir\n\"comprimento\" como 150 para desenhar esse triângulo novo?"
       grade5_artist_variables_triangles3: "Arraste um bloco numérico para o bloco \"defina o comprimento\"\npara desenhar um conjunto de triângulos de 50 pixels."
-      grade5_bee_for_loops1: "Use um laço para coletar o néctar de\ntodas as flores."
+      grade5_bee_for_loops1: "Use um laço para coletar o néctar\nde cada flor."
       grade5_bee_for_loops2: "Adicione o código necessário para garantir que\na abelha colete todo o néctar. Olhe quanto código você precisa para esse desafio!\n(Vamos aprender uma maneira mais simples no próximo desafio)."
       grade5_bee_for_loops6: "Você também pode usar um laço \"para\" para fazer contagem\nregressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1."
       grade5_bee_for_loops8: "Se seu laço está contando, o\nincremento é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6 e 9 néctares?\\r\n"
@@ -1457,5 +1457,5 @@ pt:
       scrat 18 (copy 1): "Os blocos \"se-senão\" verificam uma condição e, em seguida,\nfazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco."
       scrat 18: "Os blocos \"se-senão\" verificam uma condição e, em seguida,\nfazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco."
       scrat 19 (copy 1): Pratica mais uma vez o bloco "se-senão", consegues à primeira tentativa?
-      scrat 19: "Vamos praticar o uso do bloco \"se-senão\" mais uma vez. Você consegue\nacertar na primeira tentativa?"
+      scrat 19: Pratica mais uma vez o bloco "se-senão", consegues à primeira tentativa?
       scrat 20: Podes adicionar mais 3 blocos para me ajudares a resolver um labirinto mais complicado? Se o fizeres bem, eu consigo andar qualquer caminho com curvas, não interessa o comprimento.  Despacha-te! O gelo está a derreter!

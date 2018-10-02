@@ -191,18 +191,6 @@ ro:
             '2': mare
       Dancelab_whenSetup:
         text: configurare
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': sus
-            '"down"': jos
-            '"left"': stânga
-            '"right"': dreapta
-            '"space"': spaţiu
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_changeColor:
         options:
           METHOD:
@@ -433,10 +421,17 @@ ro:
             '"x"': poziţie x
             '"y"': poziţie y
             '"direction"': direcţie de mişcare
-      Mikelab_getAnim:
+      Mikelab_createNewSprite:
         options:
-          COSTUME:
-            '"costume"': costum
+          LOCATION:
+            "{x: 100, y: 200}": stânga
+            "{x: 300, y: 200}": dreapta
+            "{x: 200, y: 200}": centru
+            "{x: 100, y: 100}": stânga sus
+            "{x: 300, y: 100}": dreapta sus
+            "{x: 100, y: 300}": stânga jos
+            "{x: 300, y: 300}": dreapta jos
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatoriu
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -445,11 +440,6 @@ ro:
             '"x"': poziţie x
             '"y"': poziţie y
             '"direction"': direcţie de mişcare
-            '"tint"': tentă
-      Mikelab_isAnim:
-        options:
-          COSTUME:
-            '"costume"': costum
       Mikelab_randomColor:
         text: culoare aleatorie
       Mikelab_setBG:
@@ -464,7 +454,6 @@ ro:
             '"x"': poziţie x
             '"y"': poziţie y
             '"direction"': direcţie de mişcare
-            '"tint"': tentă
       Mikelab_showScoreboard:
         options:
           CORNER:

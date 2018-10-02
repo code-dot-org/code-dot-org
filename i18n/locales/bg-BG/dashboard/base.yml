@@ -288,7 +288,6 @@ bg:
       signin: 'Вход'
       signup: 'Създаване на акаунт'
       already_registered: 'Вече сте регистриран?'
-      pair_programming: 'Програмиране по двойки'
       team: 'Екип'
       driver: 'Шофьор'
       navigator: 'Навигатор'

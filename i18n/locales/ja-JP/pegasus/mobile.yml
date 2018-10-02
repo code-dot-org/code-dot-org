@@ -70,7 +70,7 @@
   congratulations: "おめでとうございます ！"
   congratulations_on_completing_hoc: "おめでとうございます。Hour of Codeのセッションをひとつ修了しました。"
   congratulations_volunteer: 'おめでとうございます: あなたは Hour of Code を体験しました、 <a href="https://code.org/volunteer">クラスルームのボランティアに参加</a> して、生徒が Hour of Code を学習するのを手助けしましょう！'
-  congratulations_on_completing_course: "おめでとうございます。%{course} を終了しました"
+  congratulations_on_completing_course: "%{course} 終了おめでとうございます"
   congrats_next_tutorials_title: "次のレベルへ進む"
   congrats_next_tutorials_desc: "短めの1時間チュートリアル、または <a href=\"%{current_path}/next\">パートナーのチュートリアル</a> を試してください。"
   get_a_certificate_of_achievement: "達成の証明書を取得する"
@@ -202,7 +202,7 @@
   just_did_coursee: "コースE完了 - やったー！@codeorg"
   just_did_coursef: "コースF完了 - やったー！@codeorg"
   just_did_accelerated: "上級コース完了 - やったー！@codeorg"
-  just_did_hoc_donor: '#HourOfCode をやってみました！良ければ見てみて！ (%{donor_twitter} さん、@codeorgのご支援ありがとう！)'
+  just_did_hoc_donor: '#HourOfCode をやりました！みてみて！ ( %{donor_twitter} 、@codeorgへの支援ありがとう)'
   just_did_course_donor: "%{course} を終了！みてみて！\n%{donor_twitter} 、@codeorg への支援ありがとう"
   twitter_teach_cs: "10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc 。Https://code.org/ をご覧ください。"
   twitter_cs_foundational: "コンピューターサイエンスは、学生が学ぶすべての基本です。https://youtu.be/QvyTEx1wyOY。"
@@ -216,7 +216,7 @@
   lines_of_code: "<b># 行</b> 上の日付に書き込まれます。"
   lines_of_code_alt: "<b>#</b>学生によって書かれたコードの行"
   who_has_done_hoc: '#HourOfCode に挑戦したのは誰？ @codeorg'
-  who_has_done_hoc_donor: '#HourOfCode をやったことがある人はいますか？ ( %{donor_twitter} さん、@codeorgのご支援ありがとう！)'
+  who_has_done_hoc_donor: '#HourOfCode をやった人いますか？ ( %{donor_twitter} 、@codeorg への支援ありがとう)'
   hoc_leaderboards: "Hour of Codeが行われている場所"
   students_and_lines: "学生%{students} がHour of Code を行い、%{lines}行のコードを書きました"
   start_hoc: "Hour of Codeに今すぐ挑戦する"
@@ -420,7 +420,7 @@
   minecraft_no_internet: "インターネットが無い？"
   minecraft_download_adventurer: "Minecraftアドベンチャーのオフライン版をダウンロード。"
   minecraft_subtitle: "Minecraft Hour of Code プログラミング入門"
-  minecraft_store_camps: "無料のMinecraftのHour of CodeがMicrosoft Storeにあります"
+  minecraft_store_camps: "無料のMinecraftのHour of CodeキャンプがMicrosoft Storeにあります"
   minecraft_signup_store_camps: "米国、オーストラリア、カナダ、プエルトリコのMicrosoft Storeに<a href='%{signup_store_camp}', target='_blank'>登録</a>し、無料のMinecraftのHour of Codeワークショップに参加しましょう。コーディングが平等で、創造性を橋渡しし、課題を解決し、そしてとても楽しいことを体感してください。"
   minecraft_host_event: "MinecraftのHour of Codeイベントを開催する"
   minecraft_teach_resources: "教材および授業プラン"
@@ -1035,24 +1035,24 @@
   course2_gradelevel: "6-18 才"
   course3_gradelevel: "8-18 才"
   course4_gradelevel: "10-18 才"
-  coursea_gradelevel: "5年生以上"
-  courseb_gradelevel: "6年生以上"
-  coursec_gradelevel: "7年生以上"
+  coursea_gradelevel: "4 ~ 7 歳"
+  courseb_gradelevel: "5 ~ 8 歳"
+  coursec_gradelevel: "6 ~ 10 歳"
   coursed_gradelevel: "中学2年生以上向け"
   coursee_gradelevel: "9年生以上"
-  coursef_gradelevel: "10年生以上"
-  coursea-2017_gradelevel: 5年生以上
-  courseb-2017_gradelevel: 6年生以上
-  coursec-2017_gradelevel: 7年生以上
+  coursef_gradelevel: "9 ~ 13 歳"
+  coursea-2017_gradelevel: 4 ~ 7 歳
+  courseb-2017_gradelevel: 5 ~ 8 歳
+  coursec-2017_gradelevel: 6 ~ 10 歳
   coursed-2017_gradelevel: 中学2年生以上向け
   coursee-2017_gradelevel: 8才-12才
-  coursef-2017_gradelevel: 10年生以上
-  coursea-2018_gradelevel: 5年生以上
-  courseb-2018_gradelevel: 6年生以上
-  coursec-2018_gradelevel: 7年生以上
+  coursef-2017_gradelevel: 9 ~ 13 歳
+  coursea-2018_gradelevel: 4 ~ 7 歳
+  courseb-2018_gradelevel: 5 ~ 8 歳
+  coursec-2018_gradelevel: 6 ~ 10 歳
   coursed-2018_gradelevel: 中学2年生以上向け
   coursee-2018_gradelevel: 8才-12才
-  coursef-2018_gradelevel: 10年生以上
+  coursef-2018_gradelevel: 9 ~ 13 歳
   accelerated_gradelevel: "10-18 才"
   codeorg_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   codeintl_platformtext: "最新ブラウザ、スマート フォン、タブレット"

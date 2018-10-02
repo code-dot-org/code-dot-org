@@ -118,14 +118,6 @@ th:
             '"left"': ไปทางซ้าย
             '"right"': ไปทางขวา
             '"space"': อวกาศ
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ไปทางซ้าย
-            '"right"': ไปทางขวา
-            '"space"': อวกาศ
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -217,6 +209,7 @@ th:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
+      Mikelab_createNewSprite: {}
       Mikelab_getProp:
         options:
           PROPERTY:

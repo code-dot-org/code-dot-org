@@ -238,7 +238,6 @@ sl:
       signin: 'Prijava'
       signup: 'Ustvari račun'
       already_registered: 'Že registrirani?'
-      pair_programming: 'Programiranje parov'
       team: 'Ekipa'
       driver: 'Voznik'
       navigator: 'Navigator'

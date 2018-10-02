@@ -400,11 +400,11 @@
         Lag en sol ved å legge startkoden inni en annen løkke.\r
         \r
         For å få til dette kule mønsteret med et hult senter må du hoppe fremover med den samme lengden som trekanten sin side før du snur deg.
-      4-5 Nested Loops 5: Bruk koden som er lagt inn som utgangspunkt og repeter den for å lage en vindmølle.
-      4-5 Nested Loops 6: Får til til å tegne en sekskant ved å repetere triangelkoden?
+      4-5 Nested Loops 5: Bruk en løkke rundt denne koden for å lage en vindmølle.
+      4-5 Nested Loops 6: Kan du tegne en sekskant ved å gjenta trekant-koden?
       4-5 Nested Loops 7: "Gjenta dette mønsteret 10 ganger. \\r\n\\r\nHvor mye må du snu hver gang du gjentar?"
       4-5 Nested Loops 8: "Repeter designet 6 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 6?)"
-      4-5 Nested Loops 9: Tegn tennene i munnen til alligatoren!
+      4-5 Nested Loops 9: Tegn tennene i alligatoren sin munn!
       4-5 Nested Loops Assessment 1: 'Bruk en løkke i løkke for å fullføre designet.'
       4-5 While Loops 1: Flytt meg bort til hullet og fyll det med to spader med jord ved å bruke blokka `fyll`.
       4-5 While Loops 2: Flytt meg til jordhaugen og bruk blokken `fjern 1` til å fjerne den på 5 spadetak.
@@ -429,7 +429,7 @@
       Artist Autorun Test: Plasser funksjonen inni en løkke for å tegne disse kvadratene.
       Artist Inspiration: "Inspirasjon til fritt spill: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis dette bildet inspirerer deg, kan du prøve å lage noe lignende, ellers du kan skape noe helt eget. \\r \\r Vil du vite hvordan vårt inspirasjonsmønster ble laget? "
       Auto Open Function Editor: 'Du kan kalle på funksjoner fra innsiden av andre funksjoner! Bruk "figur"-funksjonen som grunnlag, opprett 3 hus-figurer som hver er 20 piksler større enn den forrige. Den første starter på 50 piksler i lengde. Å bruke en teller-løkke kan være nyttig. '
-      Bee Recommended Blocks test: Lilla blomster har enten 1 eller 0 nektar, men du vet ikke hvilken! Pass på at du ikke prøver å samle inn nektar fra blomster som ikke har nektar. Sjekk om nektar er lik 1 ved å bruke en "hvis"-blokk.
+      Bee Recommended Blocks test: Lilla blomster kan ha enten 1 eller 0 nektar, men du vet ikke hvilken! Vær forsiktig med å samle nektar fra en lilla blomst hvis den ikke har noe. Sjekk om nektar er lik 1 ved hjelp av hvis blokken.
       Bergeron Robot Maze1: 'Kan du hjelpe meg å fange den slemme grisen? Sett sammen et par "gå fremover"-blokker og trykk "Kjør". '
       Brad Spooky House Copy: 'Frilek: Her er funksjonene du har skrevet, og litt mer for å leke med. Tegn noe kjempestilig! Lek med pennetykkelsen for å se hvor ulike tegningene dine blir!'
       Brad Spooky House: 'Frilek: Her er funksjonene du har skrevet, og litt mer for å leke med. Tegn noe kjempestilig! Lek med pennetykkelsen for å se hvor ulike tegningene dine blir!'
@@ -471,10 +471,10 @@
         Frilek: Ha det gøy og tegn det det du har lyst til. 
       Course 4 Artist 11: 'Nå til en utfordring! Her er et design som kun bruker blokker som du allerede har blitt vist. Kan du finne ut hvordan du kan gjenskape det uten noen ekstra informasjon? Hint: Ikke vær redd for å prøve og feile. Det er ikke forventet at du får det til perfekt første gangen.'
       Course 4 Artist 12: |-
-        Fritt spill-inspirasjon: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis dette bildet inspirerer deg, prøv å lage noe lignende. Hvis ikke, lag noe helt på egenhånd.\r
+        Fritt spill: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke, lag noe helt annet.\r
         
         \r
-        Vil du vite hvordan vårt inspirasjons-mønster ble laget? Besøk https://studio.code.org/c/105671120/edit for å se løsningen.
+        Vil du vite hvordan vårt mønster ble laget? Besøk https://studio.code.org/c/105765376/edit for å se løsningen.
       Course 4 Artist 13: Spiller du fortsatt? Her er et blankt lerret hvor du kan designe alt du vil!
       Course 4 Artist 2: Kan du repetere denne koden slik at den tegner det nedtonede kvadratet?
       Course 4 Artist 20: Spiller du fortsatt? Her er et blankt lerret hvor du kan designe alt du vil!
@@ -643,7 +643,7 @@
       Course 4 Binary 8: Du kan fullføre mesteparten av dette bildet ved å kjøre en løkke over et 5-bits binærtall - så trenger du et til 4-bits binærtall til å få til nedre høyre hjørne.
       Course 4 EC 1a: Ingen regler. Ingen hint. Bare utfordringen!
       Course 4 EC 1b: Ingen regler. Ingen hint. Bare utfordringen!
-      Course 4 EC 2a: '**Ekstrem utfordring:** Ingen regler. Ingen hint. Bare utfordringen!'
+      Course 4 EC 2a: Ingen regler. Ingen hint. Bare utfordringen!
       Course 4 EC 2b: Ingen regler. Ingen hint. Bare utfordringen!
       Course 4 EC 2c: Ingen regler. Ingen hint. Bare utfordringen!
       Course 4 EC 2d: Ingen regler. Ingen hint. Bare utfordringen!
@@ -1069,7 +1069,7 @@
       Prompt Test: Bygg hva enn du vil. Dette er et eksempel på et siffergjettingsspill!
       Quantum Bee: Lilla blomster kan ha enten 1 eller 0 nektar, men du vet ikke hvilken! Vær forsiktig med å samle nektar fra en lilla blomst hvis den ikke har noe. Sjekk om nektar er lik 1 ved hjelp av hvis blokken.
       Ryan - 4-5 Bee Conditionals 2: Bien vil bare ha nektar akkura nå. Ikke alle objektene er blomster, så sjekk under HVER ENESTE SKY for å se om det gjemmer seg en blomst der. Hvis det gjør det kan du samle nektar.
-      Ryan - Bee Conditionals: Bien ønsker bare nektar akkurat nå. Ikke alle objekter er blomster, så sjekk under HVER SKY til å se om det skjuler seg en blomst. Hvis det er, så du kan samle nektar.
+      Ryan - Bee Conditionals: Bien vil bare ha nektar akkura nå. Ikke alle objektene er blomster, så sjekk under HVER ENESTE SKY for å se om det gjemmer seg en blomst der. Hvis det gjør det kan du samle nektar.
       Ryan Test Locked Blocks: Her er en funksjon kalt "patruljer". Endre den slik at Katt beveger seg opp 400 piksler og så ned 400 piksler.
       SpecialFrozenLevel: "Du er nå offisielt blitt en mesterkunstner! \nLag et vinterparadis!"
       Standalone_Artist_1: Velkommen til Kunstner! Først, la oss prøve å lage en enkelt firkant ved å bruke brikkene for å snu til høyre og flytte framover. Hver side burde være 100 piksler lange.
@@ -1083,7 +1083,7 @@
       Standalone_Artist_8: Her er en funksjon kalt "Tegn en figur" som vi har programmert til å tegne sekskanter. Kjør koden for å se hva den gjør og så kan du eksperimentere med den og se hva som skjer hvis du endrer på den. Kan du få den til å tegne et mønster av firkanter, trekanter og åttekanter?
       Standalone_Artist_9: Lag akkurat det bildet du vil! Du har også fått en ny, tom funksjon som du kan bruke til å lage den funksjonen du vil ha!
       Standalone_Artist_v2: Velkommen til Kunstner! Først, la oss prøve å lage en enkelt firkant ved å bruke brikkene for å snu til høyre og flytte framover. Hver side burde være 100 piksler lange.
-      Testing Quantum Farmer: "Wow, jeg fant et virkelig dypt hull! Jeg vet ikke hvor mange spadetak med jord det tar å fylle det. Kan du skrive et program som fyller oppi det til bakken er helt jevn? Tips bruk en mens-løkke denne gangen."
+      Testing Quantum Farmer: "Wow, se på det! \\r\n\\r\nJeg vet ikke hvor mange spadetak som trengs for å fylle dette hullet. \\r\nKan du skrive et program som fortsetter å  bruke blokka`fyll` helt til bakken er jevn?  "
       The Vigenere Cipher Widget: Instruksjoner
       The Vigenere Cipher Widget_2018: Instruksjoner
       The Vigenere Cipher: Instruksjoner
@@ -1103,8 +1103,8 @@
       Underground Iron_2018: Det er ikke lurt å gå rett inn i smeltet lava. Bruk brostein til å lage en bro, og så utvinner du minst to av jernblokkene.
       Underground Mining Coal: De mest verdifulle ressursene finner du under bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
       Underground Mining Coal_2018: De mest verdifulle ressursene finner du under bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst to kull.
-      aE7: "Hva skjer dersom du kopierer løkken og snur mot venstre fremfor høyre? Kan du du bruke en gjenta-blokk til å tegne denne bølgen?"
-      aE8: "La oss nå gjenta det hele fire ganger for å opprette bilderammen. Se opp for hjørnene – du kan ikke bare snu deg 90 grader! En halvsirkel kan lages ved å repetere 3 grader 60 ganger. Så hvilke av disse kodeblokkene må du bruke for å lage en kvart-sirkel for hjørnene?"
+      aE7: "Hva skjer dersom du kopierer løkken og snur mot venstre fremfor høyre? \\r \n\\r\nKlarer du å gjenskape denne bølgeformen?"
+      aE8: "La oss nå gjenta det hele fire ganger for å opprette bilderammen. Se opp for hjørnene – du kan ikke bare snu deg 90 grader! \\r\n\\r\nEn halvsirkel kan lages ved å repetere 3 grader 60 ganger. Så hvilke av disse kodeblokkene må du bruke for å lage en kvart-sirkel for hjørnene?"
       beeDebugVideo1: Bruk en `gjenta`-løkke for å samle all nektaren.
       birdsDebugVideo1: Følg stien og led meg til den dumme grisen. Unngå dynamitten hvis du ikke vil at jeg skal forsvinne i en sky av fjær!
       bounce_1: Fest en blokk til «Når pil venstre» blokken og trykk «Kjør». Flytt åren ved å bruke venstre pil for å nå målet.
@@ -1160,17 +1160,17 @@
       course2_playlab_stage17_9: "Kan du legge til en blokk for å skåre poeng når Waddles treffer Octacia (skuespiller 3)?\\r\nSpill spillet og flytt Waddles med piltastene til du skårer!"
       course3_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       course3_playlab_stage16_1: Kan du få denne hunden til å si «hallo verden»?
-      course3_playlab_stage16_2: Kan du få hunden til å si noe, og få katten til å si noe etterpå?
-      course3_playlab_stage16_3: Kan du skrive et program for å få hunden til å bevege seg til katten?
-      course3_playlab_stage16_4: Kan du skrive et program som får hunden til å flytte til katten, og så få katten til å si "hallo" når hunden kommer fram?
-      course3_playlab_stage16_5: Kan du legge til en blokk som gjør blekkspruten glad?
+      course3_playlab_stage16_2: Kan du få hunden til å si noe og etterpå få katten til å si noe?
+      course3_playlab_stage16_3: Kan du skrive et program for å få denne hunden flytte seg til katten?
+      course3_playlab_stage16_4: Kan du skrive et program som gjør at hunden flytter til katten, og lar katten si "Hei" når hunden når ham?
+      course3_playlab_stage16_5: Kan du legge til en blokk for å gjøre blekkspruten glad?
       course3_playlab_stage16_6: Nå kan du lage din egen historie. Når du er ferdig, klikker du Fullfør for å la venner prøve din historie på sine telefoner.
-      course3_playlab_stage17_1: Kan du skrive et program som får blekkspruten til å si "hallo" når den blir klikket på?
-      course3_playlab_stage17_2: Kan du skrive et program som får Waddles til å flytte seg rundt ved å bruke opp / ned / venstre / høyre-knappene og treffe alle målene?
-      course3_playlab_stage17_3: '"Gjenta for alltid"-blokken gjør at koden blir kjørt kontinuerlig. Kan du legge til blokker for å flytte dinosauren opp og ned hele tiden?'
+      course3_playlab_stage17_1: Kan du skrive et program som får en blekksprut til å si "Hei" når den klikkes?
+      course3_playlab_stage17_2: Kan du skrive et program for å få denne pingvinen til å gå rundt med opp / ned / venstre/høyre-tastene for å treffe alle målene?
+      course3_playlab_stage17_3: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig. Kan du legge til blokker for å flytte denne dinosauren opp og ned flere ganger?'
       course3_playlab_stage17_4: Kan du få Waddles til å si "Au!" og spille en "treff"-lyd når han treffer dinosauren, og så flytte ham med piltastene for å få det til å skje?
-      course3_playlab_stage17_5: Kan du legge til en blokk for å skåre poeng når Waddles treffer blekkspruten, og så flytte ham med piltastene til du får poeng?
-      course3_playlab_stage17_6: Kan du legge til blokker for å endre bakgrunnen og hastigheten til Waddles, og så flytte ham med piltastene til du får poeng?
+      course3_playlab_stage17_5: Kan du legge til en blokk for å skåre et poeng når pingvinen kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
+      course3_playlab_stage17_6: Kan du legge til blokker for å forandre bakgrunnen og hastigheten til pingvinen, og deretter bevege den med pil-tastene til du score?
       course3_playlab_stage17_7: Nå kan du lage din egen historie. Når du er ferdig, klikker du Fullfør for å la venner prøve din historie på sine telefoner.
       course4_artist_fwp_challenge1: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
       courseA_maze_seq2: Endre denne koden for å få meg bort til grisen!
@@ -1183,7 +1183,7 @@
         Dette huset trenger ett tak. Tegn trekanten. Hint: alle de tre sidene skal være like lange.
       courseC_artist_prog5_2018: |-
         Dette huset trenger ett tak. Tegn trekanten. Hint: alle de tre sidene skal være like lange.
-      courseC_maze_debugging10: Rett opp feil i denne levelen ved å flytte rundt på og legge til brikker, slik at jeg kommer meg bort til grisen!
+      courseC_maze_debugging10: Feilsøk denne levelen ved å flytte rundt på brikkene og å legge til brikker, slik at jeg kommer meg bort til grisen!
       courseD_artist_binary1: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
       courseD_artist_binary1_2018: "Binær er en måte å representere informasjon ved å bare bruke to alternativer. Vi skal bruke alternativene \"av\" (representert av tallet 0) og \"på\" (representert av tallet 1). \\r\n\\r\nVi har gitt deg et rutenett av \"piksler\" som du kan gå igjennom og lage mønstre ved å skru på spesifikke ruter. Kan du få artisten til å tegne \"01010101\" i binært i første rad?"
       courseD_artist_binary4: Kan du tegne dette mønsteret ved å kjøre en løkke over en tresifret binærstreng?
@@ -1335,10 +1335,10 @@
       grade3_ConditionalsElse_4: Det ukjente objektet er enten en blomst eller en bikube. bruk "hvis/ellers" blokk til å samle inn nektar dersom det er en blomst, hvis ikke så lager du honning (fordi det er en bikube).
       grade3_ConditionalsElse_5: |-
         Det kan være en blomst eller en bikube under skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en blomst. Hvis ikke så lager du honning (for da er det en bikube).
-      grade3_ConditionalsElse_6: "Denne lilla blomsten kan ha enten 3, 2 eller 1 nektar. Her er en \"hvis/ellers\"-blokk kombinert med en annen \"hvis/ellers\"-blokk for å danne en \"Hvis/ellers hvis, ellers\"-blokk. fullfør løsningen for å samle inn en ukjent mengde med nektar."
+      grade3_ConditionalsElse_6: "Jeg er ikke sikker på hvor mye nektar denne blomsten har, men jeg vet at den har enten 1, 2 eller 3 nektar. \\r\n\\r\nKombiner betingelsene (`hvis` og/eller `hvis/ellers`) for å bare hente mengden nektar som blomsten har. \\r\n\\r\nHusk at mengen nektar kan endre seg hver gang du kjører oppgaven!"
       grade3_ConditionalsElse_7: "Disse blomstene har 3, 2 eller 1 nektar. \\r\n\\r\nFullfør funksjonen `check purple flower` for bruk den for å samle all nektaren i blomstene."
-      grade3_ConditionalsElse_8: "Skriv en funksjon inni blokken som heter `check flower make\nhoney`. Funksjonen din skal sjekke hvor mye nektar det er i den lilla blomsten og hente den. Deretter skal den bevege seg fremover og så lage honning."
-      grade3_ConditionalsElse_9: "Lekse: Denne koden er feil.\nFullfør \"hent nektar og lag honning\" funksjonen, deretter bruker du den til å samle inn all nektar og honning. Husk at lilla blomster kan ha 3, 2 eller 1 nektar."
+      grade3_ConditionalsElse_8: "Skriv funksjonen check\nflower make honey`. \\r\n\\r\nFunksjonen din burde sjekke om de lilla blomstene har 3, 2 eller 1 nektar og hente all nektaren som er der. \\r\nSå burde den flytte framover og lage honning."
+      grade3_ConditionalsElse_9: "**Oppgave:** Skyen skjuler enten en blomst med en nektar eller en bikube som trenger en honning. \\r\n\\r\nFullfør funksjonen `get nectar or make honey` og så kall den for å samle all nektaren eller honningen. \\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Det kan være en blomst eller en bikube under skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en blomst. Hvis ikke så lager du honning (for da er det en bikube).
       grade3_Conditionals_1 BAD: Bruk en løkke til å samle inn all nektaren.
@@ -1376,7 +1376,7 @@
       grade3_Loops_12: Bruk en loop for å samle inn nektar fra alle blomstene og lag honing i alle bikubene.
       grade3_Loops_2: Klarer du å løse oppgaven lettere ved å bruke en løkke?
       grade3_Loops_3: Bruk en `gjenta`-løkke for å samle all nektaren.
-      grade3_Loops_4: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar og lage honning.
+      grade3_Loops_4: Bruk en `gjenta`-løkke for å samle all nektaren og lage all honningen.
       grade3_Loops_5: Sett disse blokkene i en loop for å samle inn nektar fra alle blomstene.
       grade3_Loops_6: "Hvor mange ganger burde du gjenta for å få til denne oppgaven? \\r\n\\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre denne oppgaven med så få blokker som mulig."
       grade3_Loops_7: |-
@@ -1400,18 +1400,19 @@
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Hjelp meg å fylle alle disse hullene med 5 spadetak med jord. Hint: Du kan sette en "gjenta" blokk inni en "så lenge" blokk.'
       grade4_arist_nested_loop_circles1: 'Bruk en løkke i løkke for å fullføre designet.'
       grade4_arist_nested_loop_flags1: Bruk en løkke rundt denne koden for å lage en vindmølle.
-      grade4_arist_nested_loop_polygons1: "Repeter designet 10 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 10?)"
+      grade4_arist_nested_loop_polygons1: "Gjenta dette mønsteret 10 ganger. \\r\n\\r\nHvor mye må du snu hver gang du gjentar?"
       grade4_arist_nested_loop_polygons2: "Repeter designet 6 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 6?)"
       grade4_arist_nested_loop_squares1: Klarer du å tegne de 10 firkantene på fortauet ved å bruke en løkke i løkke? Hver firkant er 30 piksler.
       grade4_arist_nested_loop_triangles2: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en løkke i løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
       grade4_arist_nested_loop_triangles3: Kan du tegne en sekskant ved å gjenta trekant-koden?
       grade4_arist_nested_loop_triangles4: Tegn tennene i alligatoren sin munn!
       grade4_arist_nested_loop_triangles5: |-
-        Tegn en sol ved å legge koden fra utgangspunktet inni en annen løkke. Dette kalles en løkke i løkke.\r
-        
+        Lag en sol ved å legge startkoden inni en annen løkke.\r
+        \r
+        For å få til dette kule mønsteret med et hult senter må du hoppe fremover med den samme lengden som trekanten sin side før du snur deg.
       grade4_arist_nested_loop_triangles6: Får du til å tegne disse 36 trianglene ved hjelp av en løkke i løkke?
       grade4_artist_functions1: "Hallo. Meg zombie artist. Meg tegne elsker! Hjelp meg med å tegne de firkantete brillene. Hint: mellomrommet mellom brilleglassene er 25 piksler kortere enn lengden på firkantene."
-      grade4_artist_functions2: "Funksjoner lar deg definere nye blokker! Vi har flyttet blokker for å tegne et kvadrat i en funksjon kalt \"tegne en firkant\". Kan du bruke funksjonen \"tegne en firkant\" for å opprette vinduer? kvadratene er 75 piksler fra hverandre."
+      grade4_artist_functions2: "Funksjoner lar deg lage nye blokker!\\r\n\\r\nVi har flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \\r\n\\r\nFirkantene er 75 piksler fra hverandre."
       grade4_artist_functions_challenge: Bruk de foreslåtte funksjonene til å tegne fire rader av sekskanter. Legger du merke til hvordan våre partallsrader er flyttet til høyre?
       grade4_artist_functions_challenge2: Bruk de foreslåtte funksjonene til å tegne fire rader av sekskanter. Legger du merke til hvordan våre partallsrader er flyttet til høyre?
       grade4_artist_nestedLoops_challenge: |-
@@ -1423,8 +1424,9 @@
       grade4_artist_nested_loop_squares1: Klarer du å tegne de 10 firkantene på fortauet ved å bruke en løkke i løkke? Hver firkant er 30 piksler.
       grade4_artist_nested_loop_triangles1: 'Fullfør koden for å tegne disse triangelen. Den første er gjort ferdig for deg. Tips: 3 triangler rotert til sammen 360 grader.'
       grade4_artist_nested_loop_triangles5: |-
-        Tegn en sol ved å legge koden fra utgangspunktet inni en annen løkke. Dette kalles en løkke i løkke.\r
-        
+        Lag en sol ved å legge startkoden inni en annen løkke.\r
+        \r
+        For å få til dette kule mønsteret med et hult senter må du hoppe fremover med den samme lengden som trekanten sin side før du snur deg.
       grade4_artist_nested_loop_triangles6: Får du til å tegne disse 36 trianglene ved hjelp av en løkke i løkke?
       grade4_artist_parameters_squares1: 'Klikk "Rediger" for å fylle ut funksjonen til "tegn en firkant" og legg til en parameter. Det vil kreve en lengdeparameter, akkurat som i trekanten. Tegn nå 3 kvadrat med 25, 50 og 75 piksler i lengde, alle 100 piksler fra hverandre.'
       grade4_artist_parameters_triangles2: Legger du merke til noe annerledes med disse funksjonsblokkene? Klikk "Kjør" for å se hva som skjer.
@@ -1466,7 +1468,7 @@
       grade4_review_artist1: Hei, jeg er en kunstner. Du kan skrive kode for å få meg til å tegne nesten hva som helst. Bruk noen blokker for å få meg til å tegne over de grå linjene på bildet. (Hver linje er 100 piksler lange)
       grade4_review_artist2: 'Dette huset trenger ett tak. Tegn trekanten. Hint: alle de tre sidene skal være like lange.'
       grade4_review_artist3: Blokken `hopp` beveger kunstneren uten å tegne. Tegn den stiplede linjen ved hjelp av både `hopp fremover` og `flytt fremover`-blokker.
-      grade4_review_bee1: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar og lage honning.
+      grade4_review_bee1: Bruk en `gjenta`-løkke for å samle all nektaren og lage all honningen.
       grade4_review_bee2: Samle inn nektar fra alle blomstene og lag honning i hver av bikubene.
       grade4_review_bee3: |-
         Bruk en løkke som i forrige oppgave men ta med en "snu"-blokk.
@@ -1560,10 +1562,10 @@
       level 'grade3_Loops_11: "Bruk en loop får å gå ned trinnene og samle inn nektaren."
       level 'grade3_Loops_12: Bruk en loop for å samle inn nektar fra alle blomstene og lag honing i alle bikubene.
       level 'grade3_Loops_2: Klarer du å løse oppgaven lettere ved å bruke en løkke?
-      level 'grade3_Loops_3: Kan du bruke en løkke til å samle inn all nektaren?
+      level 'grade3_Loops_3: Bruk en `gjenta`-løkke for å samle all nektaren.
       level 'grade3_Loops_4: Bruk en `gjenta`-løkke for å samle all nektaren og lage all honningen.
       level 'grade3_Loops_5: Sett disse blokkene i en loop for å samle inn nektar fra alle blomstene.
-      level 'grade3_Loops_6: "Hva skjer dersom du gjentar dette 3 ganger? \nIkke glem å lage honning til slutt!"
+      level 'grade3_Loops_6: "Hvor mange ganger burde du gjenta for å få til denne oppgaven? \\r\n\\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre denne oppgaven med så få blokker som mulig."
       level 'grade3_Loops_7: |-
         Hver blomst inneholder en enhet med nektar. Samle inn nektar fra alle blomstene. 
       level 'grade3_Loops_8: Bruk en løkke for å samle alle nektarene og å lage honningen.

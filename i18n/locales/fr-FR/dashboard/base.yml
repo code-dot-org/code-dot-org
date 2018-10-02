@@ -320,7 +320,6 @@ fr:
       signin: 'Connexion'
       signup: 'Créer un compte'
       already_registered: 'Déjà enregistré ?'
-      pair_programming: 'Programmation en Binôme'
       team: 'Équipe'
       driver: 'Pilote'
       navigator: 'Navigateur'

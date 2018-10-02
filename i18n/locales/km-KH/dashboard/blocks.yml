@@ -126,14 +126,6 @@ km:
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -225,6 +217,11 @@ km:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
       Mikelab_getProp:
         options:
           PROPERTY:

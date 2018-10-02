@@ -134,14 +134,6 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': 위로
-            '"down"': 아래로
-            '"left"': 왼쪽으로
-            '"right"': 오른쪽으로
-            '"space"': 우주
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -233,6 +225,11 @@ ko:
             '"scale"': 크기
             '"x"': x 좌표
             '"y"': y 좌표
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
       Mikelab_getProp:
         options:
           PROPERTY:

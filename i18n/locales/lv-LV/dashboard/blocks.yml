@@ -95,14 +95,6 @@ lv:
             '"left"': pa kreisi
             '"right"': pa labi
             '"space"': telpa
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -182,6 +174,11 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": pa kreisi
+            "{x: 300, y: 200}": pa labi
       Mikelab_getProp:
         options:
           PROPERTY:
