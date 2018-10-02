@@ -17,6 +17,8 @@
 class Pd::RegionalPartnerContact < ActiveRecord::Base
   include Pd::Form
 
+  UNMATCHED_FORM_EMAIL = 'partner@code.org'
+
   belongs_to :user
   belongs_to :regional_partner
 
@@ -35,14 +37,14 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
 
       if regional_partner_program_managers.empty?
         matched_but_no_pms = true
-        Pd::RegionalPartnerContactMailer.unmatched(form, 'tawny@code.org', matched_but_no_pms).deliver_now
+        Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL, matched_but_no_pms).deliver_now
       else
         regional_partner_program_managers.each do |rp_pm|
           Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
         end
       end
     else
-      Pd::RegionalPartnerContactMailer.unmatched(form, 'tawny@code.org').deliver_now
+      Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL).deliver_now
     end
 
     Pd::RegionalPartnerContactMailer.receipt(form, regional_partner).deliver_now
