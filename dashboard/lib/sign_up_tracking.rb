@@ -5,7 +5,7 @@ module SignUpTracking
   STUDY_NAME = 'account-sign-up-v2'
   NOT_IN_STUDY_GROUP = 'not-in-study'
   CONTROL_GROUP = 'control'
-  NEW_SIGN_UP_GROUP = 'experiment'
+  NEW_SIGN_UP_GROUP = 'experiment-v2'
 
   USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
 
