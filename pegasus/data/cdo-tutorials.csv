@@ -1011,13 +1011,11 @@ CT.L2-03 Define an algorithm as a sequence of instructions that can be processed
 CT.L3A-01 Use predefined functions and parameters, classes and methods to divide a complex problem into simpler parts.
 
 CD.L2-01 Recognize that computers are devices that execute programs.",120,999,76,79,999
-1449,1,1449,1449,1,itch_bounceball,ITCH Bouncing Ball (in Scratch),Ucodemy,http://hoc.ucodemy.com/v2/website/web/course_catalogue/38356#cour*seinfo=4ebbb55c7e2d2a89d14a12d504e88624,Use ITCH - Scratch integrated with a video lesson to make your own bouncing ball project,"We take you through an introduction to Itch, utilizing the Scratch visual programming language.
+1449,1,1449,1449,1,itch_bounceball,ITCH Bouncing Ball (in Scratch),Ucodemy,http://hoc.ucodemy.com/v2/website/web/course_catalogue/38356#cour*seinfo=4ebbb55c7e2d2a89d14a12d504e88624,Use ITCH - Scratch integrated with a video lesson to make your own bouncing ball project,"Now with Scratch 3.0 - You can also run this on iPADs! 
 
-This lesson provides a video and text directions for the code students need to add to get a ball bouncing zanily around the screen.
+We take you through an introduction to the Scratch 3.0 visual programming language. This lesson provides a video and text directions for the code students need to add to get a ball bouncing zanily around the screen with lots of customization options.
 
-Once students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!
-
-All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.","Web based, Android tablet",Grades 2-8,/images/tutorials/new/itch_bounceball.jpg,2016-tutorial,,English only,en,itchbounceball,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,math,"computers,android","Chrome, Firefox, Android Tablet",,1hour,blocks,"Blocks, Scratch","ISTE
+Once students complete this activity there are prompts for other changes and activities. There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects! All instruction is contained within the iTCH environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.","Web based, Android tablet, iPad",Grades 2-8,/images/tutorials/new/itch_bounceball.jpg,2016-tutorial,,English only,en,itchbounceball,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,math,"computers,android","Chrome, Firefox, Android Tablet, iPad",,1hour,blocks,"Blocks, Scratch 3.0","ISTE
 1.c – Use models and simulation to explore complex systems and issues
 4.b – Plan and manage activities to develop a solution or complete a project 
 6.a – Understand and use technology systems
