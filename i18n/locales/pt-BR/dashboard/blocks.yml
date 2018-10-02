@@ -217,18 +217,6 @@ pt-BR:
             '2': alta
       Dancelab_whenSetup:
         text: configuração
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': para cima
-            '"down"': para baixo
-            '"left"': para esquerda
-            '"right"': para direita
-            '"space"': espaço
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_changeColor:
         options:
           METHOD:
@@ -459,10 +447,17 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
-      Mikelab_getAnim:
+      Mikelab_createNewSprite:
         options:
-          COSTUME:
-            '"costume"': fantasia
+          LOCATION:
+            "{x: 100, y: 200}": para esquerda
+            "{x: 300, y: 200}": para direita
+            "{x: 200, y: 200}": centro
+            "{x: 100, y: 100}": superior esquerdo
+            "{x: 300, y: 100}": superior direito
+            "{x: 100, y: 300}": inferior esquerdo
+            "{x: 300, y: 300}": inferior direito
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -471,11 +466,6 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
-            '"tint"': tinta
-      Mikelab_isAnim:
-        options:
-          COSTUME:
-            '"costume"': fantasia
       Mikelab_randomColor:
         text: cor aleatória
       Mikelab_setBG:
@@ -490,7 +480,6 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
-            '"tint"': tinta
       Mikelab_showScoreboard:
         options:
           CORNER:

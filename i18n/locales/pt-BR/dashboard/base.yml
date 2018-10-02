@@ -27,6 +27,8 @@ pt-BR:
         age: 'Idade'
         gender: 'Gênero'
         edit_header: 'Editar Detalhes da Conta'
+        finish_sign_up_header: 'Finalize a criação da sua conta'
+        finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org.'
         error:
           future: não pode estar no futuro
   hello: "Olá, mundo"
@@ -324,7 +326,6 @@ pt-BR:
       signin: 'Entrar'
       signup: 'Criar uma conta'
       already_registered: 'Já se cadastrou?'
-      pair_programming: 'Programação em duplas'
       team: 'Equipe'
       driver: 'Líder'
       navigator: 'Navegador'
