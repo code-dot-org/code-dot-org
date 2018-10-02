@@ -208,7 +208,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
     # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+    # Clever performed poorly in our split test, so never send it to the experiment
+    SignUpTracking.begin_sign_up_tracking(session, split_test: false)
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
     if SignUpTracking.new_sign_up_experience? session

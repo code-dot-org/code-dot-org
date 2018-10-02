@@ -40,6 +40,7 @@ module Api::V1::Pd::Application
       )
       teacher_application.save!
       teacher_application.queue_email(:principal_approval_completed, deliver_now: true)
+      teacher_application.queue_email(:principal_approval_completed_partner, deliver_now: true)
     end
   end
 end
