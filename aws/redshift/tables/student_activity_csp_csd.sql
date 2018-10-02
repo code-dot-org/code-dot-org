@@ -17,7 +17,7 @@ CREATE table analysis.student_activity_csp_csd AS
       ON fo.section_id = se.id
     JOIN dashboard_production.user_scripts us
       ON us.user_id = fo.student_user_id 
-      AND us.script_id IN (select distinct script_id from course_structure where course_name_short in ('csd', 'csp'))-- student progress included whether CSP or CSD 
+      AND us.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd', 'csp'))-- student progress included whether CSP or CSD 
     JOIN dashboard_production_pii.users u_students
       ON u_students.id = us.user_id AND u_students.user_type = 'student'
     JOIN dashboard_production_pii.users u_teachers

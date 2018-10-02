@@ -74,8 +74,8 @@ def redact_level_content
   puts "Redacting"
   %w(
     authored_hints
-    instructions
-    markdown_instructions
+    short_instructions
+    long_instructions
   ).each do |content_type|
     puts "\t#{content_type}"
     source = "i18n/locales/source/dashboard/#{content_type}.yml"
@@ -86,15 +86,17 @@ end
 
 # Pull in various fields for levelbuilder levels from .level files and
 # save them to [field_name].en.yml files to be translated. Fields included:
-#   instructions
-#   markdown instructions
+#   short instructions
+#   long instructions
 #   failure message override
 #   authored hints
 #   callouts
+#
+# See Blockly.get_localized_property in dashboard models for usage
 def localize_level_content
   level_display_name = Hash.new
-  level_instructions = Hash.new
-  level_markdown_instructions = Hash.new
+  level_short_instructions = Hash.new
+  level_long_instructions = Hash.new
   level_failure_message_overrides = Hash.new
   level_authored_hints = Hash.new
   level_callouts = Hash.new
@@ -115,13 +117,13 @@ def localize_level_content
       end
 
       ## Instructions
-      if instructions = config["properties"]["instructions"]
-        level_instructions["#{level_name}_instruction"] = sanitize(instructions)
+      if short_instructions = config["properties"]["short_instructions"]
+        level_short_instructions[level_name] = sanitize(short_instructions)
       end
 
       ## Markdown Instructions
-      if markdown_instructions = config["properties"]["markdown_instructions"]
-        level_markdown_instructions["#{level_name}_markdown_instruction"] = sanitize(markdown_instructions)
+      if long_instructions = config["properties"]["long_instructions"]
+        level_long_instructions[level_name] = sanitize(long_instructions)
       end
 
       ## Failure message overrides
@@ -164,8 +166,8 @@ def localize_level_content
   end
 
   copy_to_yml("display_name", level_display_name)
-  copy_to_yml("instructions", level_instructions)
-  copy_to_yml("markdown_instructions", level_markdown_instructions)
+  copy_to_yml("short_instructions", level_short_instructions)
+  copy_to_yml("long_instructions", level_long_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
   copy_to_yml("authored_hints", level_authored_hints)
   copy_to_yml("callouts", level_callouts)

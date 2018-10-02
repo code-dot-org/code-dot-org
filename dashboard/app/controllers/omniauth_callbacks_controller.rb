@@ -157,6 +157,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def sign_in_google_oauth2(user)
+    SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
 
@@ -172,6 +173,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # For some providers, signups can happen without ever having hit the sign_up page, where
     # our tracking data is usually populated, so do it here
     SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+    SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
 
     user =
       if SignUpTracking.new_sign_up_experience?(session)
@@ -195,6 +197,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def sign_in_clever(user)
+    SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
     handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
@@ -205,7 +208,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
     # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+    # Clever performed poorly in our split test, so never send it to the experiment
+    SignUpTracking.begin_sign_up_tracking(session, split_test: false)
+    SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
     if SignUpTracking.new_sign_up_experience? session
       user = User.new
