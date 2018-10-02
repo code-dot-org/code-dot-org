@@ -38,16 +38,19 @@ module Pd::Application
         to: @application.formatted_principal_email,
         cc: @application.formatted_teacher_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Thank you for completing your teacher’s application"
+        subject: "Thank you for completing your principal approval form"
       )
     end
 
     def principal_approval_completed_partner(teacher_application)
       @application = teacher_application
 
+      partner_contact_email = @application.formatted_partner_contact_email
+      raise "Partner contact email is required, application id #{@application.id}" unless partner_contact_email
+
       mail(
         from: 'Anthonette Peña <teacher@code.org>',
-        to: @application.formatted_partner_contact_email,
+        to: partner_contact_email,
         subject: 'A principal has completed the principal approval form'
       )
     end
@@ -90,6 +93,13 @@ module Pd::Application
         reply_to: @application.formatted_partner_contact_email,
         subject: "Your Professional Learning Program application status"
       )
+    end
+
+    protected
+
+    # Remove empty params. This can happen when the regional partner contact info is missing
+    def mail(params)
+      super params.compact
     end
   end
 end

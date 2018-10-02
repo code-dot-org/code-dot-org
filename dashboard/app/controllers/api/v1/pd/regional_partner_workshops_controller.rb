@@ -39,7 +39,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
   end
 
   def get_filtered_workshops
-    @partners = RegionalPartner.includes(:pd_workshops_organized)
+    @partners = RegionalPartner.includes(:pd_workshops)
 
     @course = params[:course]
     @partners = @partners.where(pd_workshops: {course: @course}) if @course.present?

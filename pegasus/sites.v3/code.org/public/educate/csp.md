@@ -19,7 +19,8 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 <br>
 <div class="col-50" style="padding-right: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/cs-principles/what-is-cs-principles.mp4" %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
+<i>Want a video you can use for student recruitment for the course? <a href="https://youtu.be/jQm0z894CG0" target="_blank">Click here</a></i>
 
 </div>
 
@@ -33,12 +34,18 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <hr/>
 
+## <a name="pl"></a>Professional Learning
+
+Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through our professional development workshops and thousands more attend every month. Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.
+
+[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
+
 ## Code.org's AP CS Principles Curriculum
 
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
 
  * [Code.org 2018-19 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2018.pdf)
- * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
+ * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/d/e/2PACX-1vTSyvx8DlFWGAofOpLgyw4PlcphZbEDydsd9-_kEwoqjWzIPSq-MwyTg8u6roRfp8AeETrqTryoS5vm/pub)
 
 <div style="clear:both"></div>
 
@@ -48,7 +55,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [<center><img src="/images/csp/csp-crop-cover.png" width="90%">](https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">Curriculum Guide</a> contains details about the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
 [/col-33]
 
@@ -73,7 +80,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [col-33]
 
-[<center><img src="/images/csp/csp_syllabus.png" width="90%">](/files/CSPSyllabusMay2018.pdf)
+[<center><img src="/images/csp/CSPSyllabus2018-19.png" width="90%">](/files/CSPSyllabusMay2018.pdf)
 
 <div style="margin-left: 15px; margin-top: 5px;">Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabusMay2018.pdf">2018-19 AP Endorsed Syllabus</a> for the AP course audit.</div>
 
@@ -222,24 +229,27 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 [![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
 [![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
 
-### Share these videos with students, parents, or administrators:
+### Share these videos with students, teachers, and administrators:
 
 
 <div class="col-33" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video4", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
+<i>Inspire students</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video5", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
+<i>Recruit teachers</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video6", video_code: "POiMh0qISpI", play_button: 'center', letterbox: 'false' %>
+<i>Engage administrators</i>
 
 </div>
 
