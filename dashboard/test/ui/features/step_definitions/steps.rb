@@ -1519,14 +1519,16 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
 end
 
 Then /^I hide unit "([^"]+)"$/ do |unit_name|
-  @browser.execute_script("$('.uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash').click();")
+  selector = ".uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash"
+  @browser.execute_script("$(#{selector.inspect}).click();")
   wait_short_until do
     @browser.execute_script("return window.__TestInterface.toggleHiddenUnitComplete;")
   end
 end
 
 Then /^unit "([^"]+)" is marked as (not )?visible$/ do |unit_name, negation|
-  visibility = @browser.execute_script("return $('.uitest-CourseScript:contains(#{unit_name})').attr('data-visibility');")
+  selector = ".uitest-CourseScript:contains(#{unit_name})"
+  visibility = @browser.execute_script("return $(#{selector.inspect}).attr('data-visibility');")
   expect(visibility).to eq(negation ? 'hidden' : 'visible')
 end
 
