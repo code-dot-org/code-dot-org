@@ -95,7 +95,7 @@ class RegionalPartnerContactComponent extends FormComponent {
             name: 'jobTitle',
             label: 'Job Title',
             type: 'text',
-            required: true
+            required: false
           })
         }
         {

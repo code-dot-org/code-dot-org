@@ -54,7 +54,6 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       :last_name,
       :email,
       :role,
-      :job_title,
       :grade_levels,
       :opt_in
     ]

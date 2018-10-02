@@ -170,4 +170,8 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal 'Thank you for contacting us', mail.subject
     assert_equal ['tanya_parker@code.org'], mail.from
   end
+
+  test 'Job Title is not required' do
+    refute_includes RegionalPartnerContact.required_fields, :job_title
+  end
 end
