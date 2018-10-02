@@ -1,4 +1,3 @@
-
 create or replace view analysis.csf_teachers_trained as
 
 WITH
