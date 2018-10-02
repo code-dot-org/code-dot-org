@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Ghidul pentru voluntari
 
-### Fă o diferență într-o clasă azi!
+### Faceți o diferență într-o clasă azi!
 
 ---
 

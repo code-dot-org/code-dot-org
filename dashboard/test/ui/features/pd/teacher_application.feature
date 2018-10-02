@@ -96,7 +96,7 @@ Scenario: Basic teacher application submission
   And I press the first "button[type='submit']" element
 
   # Confirmation page
-  Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
+  Then I wait until element "h1" contains text "Thank you for submitting your application!"
   Then I see no difference for "Confirmation"
 
   # Principal approval
@@ -104,7 +104,7 @@ Scenario: Basic teacher application submission
   Then I navigate to the principal approval page for "Severus"
   Then I wait until element "h1" contains text "2019-2020 Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
-  Then I press the first "input[name='goingToTeach']" element
+  Then I press the first "input[name='planToTeach']" element
 
   And I press keys "nonexistent" for element "#school input"
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
@@ -141,7 +141,7 @@ Scenario: Basic teacher application submission
   Then I see no difference for "Principal approval form"
 
   And I press the first "button#submit" element
-  Then I wait until element "h1" contains text "Thank you for submitting this form!"
+  Then I wait until element "h1" contains text "Thank you. Your teacher's application is now considered complete and will be reviewed."
   Then I see no difference for "Principal approval confirmation form"
   Then I close my eyes
 

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_international_partners) %>
+title: <%= hoc_s(:title_international_partners).inspect %>
 layout: wide
 ---
 
