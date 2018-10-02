@@ -41,15 +41,6 @@ These announcements represent an opportunity to celebrate a recent achievement o
 
 Thank you for your support of computer science education. Have questions? Contact eric.fershtman@code.org.
 
-
-## **Champions of Computer Science Awards**
-
-Know of someone who’s achieved something outstanding in computer science education this past year? Tell us about it! [Nominate a student, teacher, school, district, after-school club, organization, etc.](http://bit.ly/2OS05Uz), to be recognized as a **2018 Champion of Computer Science**.
-
-Those selected will be awarded a trip to Seattle, WA to be recognized on stage at the kickoff of CSEdWeek. The awards event is a collaboration between the CSTA and Code.org. This opportunity is only available for US submissions.
-
-[Please complete this form](http://bit.ly/2OS05Uz) by **November 2nd** to nominate your Champion of Computer Science. Email awards@csteachers.org if you have questions.
-
 <br/>
 <br/>
 

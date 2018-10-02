@@ -50,7 +50,8 @@ en:
         gender: 'Gender'
         edit_header: 'Edit Account Details'
         finish_sign_up_header: 'Finish creating your account'
-        finish_sign_up_subheader: 'Fill out the following information to finish creating your Code.org account.'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account'
+        finish_sign_up_subheader_provider: 'using your <strong>%{provider}</strong> for <strong>%{email}</strong>'
         error:
           future: can't be in the future
 
@@ -159,9 +160,9 @@ en:
     user_type_teacher: "Teacher"
     user_type_student: "Student"
     field_is_required: "is required"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "You must agree to create an account."
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Yes"
     email_preference_no: "No"

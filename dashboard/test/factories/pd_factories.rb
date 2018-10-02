@@ -18,7 +18,7 @@ FactoryGirl.define do
     trait :local_summer_workshop_upcoming do
       local_summer_workshop
       num_sessions 5
-      sessions_from Date.today + 3.months
+      sessions_from {Date.today + 3.months}
     end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
@@ -100,6 +100,7 @@ FactoryGirl.define do
 
   factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
     # Link to partner-specific site.
+    contact_name "Illinois Contact"
     link_to_partner_application "https://code.org/specific-link"
     mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
   end
@@ -114,7 +115,7 @@ FactoryGirl.define do
   end
 
   factory :regional_partner_newjersey, parent: :regional_partner_with_summer_workshops do
-    # No contact details, and no workshops submitted.
+    # No contact details, no workshop application dates, and no workshops.
     contact_name nil
     contact_email nil
     apps_open_date_csp_teacher nil
@@ -122,10 +123,29 @@ FactoryGirl.define do
     apps_close_date_csp_teacher nil
     apps_close_date_csd_teacher nil
     mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
-    pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming)]}
+    pd_workshops {[]}
+  end
+
+  factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
+    # Opening at a specific date in the future.
+    apps_open_date_csp_teacher {Date.today + 5.days}
+    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_close_date_csp_teacher {Date.today + 14.days}
+    apps_close_date_csd_teacher {Date.today + 15.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
+  end
+
+  factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
+    # CSD dates but no CSP dates.
+    apps_open_date_csp_teacher nil
+    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_close_date_csp_teacher nil
+    apps_close_date_csd_teacher {Date.today + 15.days}
+    mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
+    contact_name "Beverly Hills Contact"
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
 
@@ -843,10 +863,12 @@ FactoryGirl.define do
     cs_how_many_minutes 45
     cs_how_many_days_per_week 5
     cs_how_many_weeks_per_year 20
+    cs_terms '1 quarter'
     replace_existing 'Yes'
     pay_fee 'Yes, my school or I will be able to pay the full program fee.'
     what_license_required 'CSTA'
     plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'
+    interested_in_online_program 'Yes'
   end
 
   factory :pd_teacher1920_application, class: 'Pd::Application::Teacher1920Application' do
@@ -894,7 +916,7 @@ FactoryGirl.define do
     end
 
     trait :with_approval_fields do
-      going_to_teach 'Yes'
+      plan_to_teach Pd::Application::PrincipalApproval1920Application.options[:plan_to_teach][0]
       school 'Hogwarts Academy of Witchcraft and Wizardry'
       total_student_enrollment 200
       free_lunch_percent '50%'
@@ -905,9 +927,9 @@ FactoryGirl.define do
       pacific_islander '12%'
       american_indian '11%'
       other '10%'
-      committed_to_master_schedule 'Yes'
-      cspImplementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
-      replace_course Pd::Application::PrincipalApproval1920Application::REPLACE_COURSE_NO
+      committed_to_master_schedule Pd::Application::PrincipalApproval1920Application.options[:committed_to_master_schedule][0]
+      csp_implementation Pd::Application::PrincipalApproval1920Application.options[:csp_implementation][0]
+      replace_course Pd::Application::PrincipalApproval1920Application.options[:replace_course][1]
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]

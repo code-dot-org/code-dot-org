@@ -245,7 +245,7 @@ module Pd
             raise if synced_question_form_ids.include? placeholder.form_id
 
             # The first time a sync fails for a particular form id, try to re-sync the questions and try again.
-            synced_question_form_ids << form_id
+            synced_question_form_ids << placeholder.form_id
             placeholder.force_sync_questions
             placeholder.sync_from_jotform
           end

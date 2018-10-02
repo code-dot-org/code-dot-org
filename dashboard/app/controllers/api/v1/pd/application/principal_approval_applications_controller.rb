@@ -26,21 +26,21 @@ module Api::V1::Pd::Application
       teacher_application.update_form_data_hash(
         {
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          going_to_teach: principal_response.values_at(:going_to_teach, :goint_to_teach_other).compact.join(" "),
-          schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
-          implementation: implementation_string,
-          diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
-          free_lunch_percent: principal_response[:free_lunch_percent],
-          underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
-          wont_replace_existing_course: replace_course_string,
+          principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
+          principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
+          principal_implementation: implementation_string,
+          principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
+          principal_free_lunch_percent: principal_response[:free_lunch_percent],
+          principal_underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
+          principal_wont_replace_existing_course: replace_course_string,
           principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
-          send_ap_scores: principal_response[:send_ap_scores],
-          can_pay_fee: principal_response[:pay_fee]
+          principal_send_ap_scores: principal_response[:send_ap_scores],
+          principal_pay_fee: principal_response[:pay_fee]
         }
       )
       teacher_application.save!
-      teacher_application.auto_score!
       teacher_application.queue_email(:principal_approval_completed, deliver_now: true)
+      teacher_application.queue_email(:principal_approval_completed_partner, deliver_now: true)
     end
   end
 end

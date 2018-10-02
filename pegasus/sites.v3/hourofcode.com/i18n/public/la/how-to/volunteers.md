@@ -7,13 +7,13 @@ nav: how_to_nav
 
 # Guía para voluntarios
 
-### ¡Haga una diferencia en una clase hoy!
+### ¡Haz la diferencia en un salón de clases hoy!
 
 ---
 
 ## ¿Por qué ser voluntario?
 
-Vea algunos testimonios de los últimos voluntarios:
+Mira algunos testimonios de los últimos voluntarios:
 
 - "La mejor parte de mi experiencia era que toda la clase era mujeres y personas de color. Un buen presagio para el futuro de nuestra industria para tener la oportunidad de llegar y emocionar a estos niños."
 - "Disfruté especialmente alentando a las muchachas jóvenes a introducirse en la tecnología. Me sentía como si estuviera ayudando a la siguiente generación en mi zona"
@@ -21,20 +21,20 @@ Vea algunos testimonios de los últimos voluntarios:
 
 ## Cualquier persona puede ser voluntario/a
 
-### Volunteers and speakers in tech:
+### Voluntarios y oradores de tecnología:
 
-Do you have a connection to CS or tech? ¡Si trabaja en ingeniería de software, en una empresa de tecnología en cualquier papel (no ingeniero o ingeniero), o si ha tomado clases de ciencias de las computadoras, usted puede ayudar a inspirar estudiantes! Muchos estudiantes nunca han conocido a alguien que trabaja en la industria de la tecnología y nuestros maestros adoran poder conectar sus clases con profesionales y estudiantes de universidad.
+¿Tienes una conexión con Ciencias de la Computación o la tecnología? ¡Si trabaja en ingeniería de software, en una empresa de tecnología en cualquier papel (no ingeniero o ingeniero), o si ha tomado clases de ciencias de las computadoras, usted puede ayudar a inspirar estudiantes! Muchos estudiantes nunca han conocido a alguien que trabaja en la industria de la tecnología y nuestros maestros adoran poder conectar sus clases con profesionales y estudiantes de universidad.
 
 Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a con una actividad. Visitar una clase en su localidad para inspirar a los estudiantes a seguir aprendiendo ciencias de la computación.<br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer">Regístrate hoy para ser un profesor voluntario! <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Alguien apasionado con la oportunidad de expandirse:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? ¡Ayude en una clase local u organice un evento después de escuela! No necesita tener ningún conocimiento en ciencias de la computación para tener una Hora de Código. Y, solamente con que ofrezca ayudar es a menudo suficiente para convencer al/la maestro/a de su hijo/a, un/a amigo/a, o un club a que lo intenten una hora.
+  ¿Crees que aprender Ciencias de la Computación puede abrir puerta de oportunidades a los estudiantes? ¡Ayuda en una clase local u organiza un evento después de escuela! No necesitas tener ningún conocimiento en ciencias de la computación para organizar una Hora de Código. Y, solamente con que ofrezcas ayudar es a menudo suficiente para convencer al/la maestro/a de su hijo/a, un/a amigo/a, o un club a que lo intenten una hora.
 </p>
 
 <h3>
@@ -241,7 +241,7 @@ Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a c
           ¿A qué grupo de edad es la actividad de hora de código apropiado para?
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org y nuestros patrocinadores diseñamos todas las actividades de la Hora del Código para compromenter a los estudiantes de todos los niveles escolares (K-12), niños y niñas, de todos los orígenes. Todos, incluso adultos puede divertirse participando!
         </p>
         <p>
           <%= view :signup_button %>

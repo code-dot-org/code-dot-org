@@ -27,7 +27,7 @@ require "csv"
 
 class Craft < Blockly
   def shared_blocks
-    Block.for('craft') if is_aquatic_level
+    Block.for('craft') if JSONValue.value(is_aquatic_level)
   end
 
   serialized_attrs(
@@ -63,6 +63,7 @@ class Craft < Blockly
     :use_player,
     :free_play,
     :ocean,
+    :boat,
     :songs
   )
 
@@ -207,6 +208,7 @@ class Craft < Blockly
     redCoralFanRight: true,
     yellowCoralFanRight: true,
     seaPickles: true,
+    chest: true,
   }.freeze
 
   ALL_MINIBLOCKS = {
