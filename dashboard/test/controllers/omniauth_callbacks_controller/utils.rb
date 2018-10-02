@@ -5,19 +5,18 @@ module OmniauthCallbacksControllerTests
     # Mock OAuth in integration tests to immediately redirect to the
     # oauth callback for the given provider with the given auth_hash.
     #
+    # @return [OmniAuth::AuthHash] that will be passed to the callback when test-mode OAuth is invoked
+    #
     def mock_oauth_for(provider, auth_hash)
-      # We should only have one @auth_hash for a given test, so make it
-      # available everywhere for use when checking results.
-      @auth_hash = auth_hash
-
       # See https://github.com/omniauth/omniauth/wiki/Integration-Testing
       OmniAuth.config.test_mode = true
-      OmniAuth.config.mock_auth[provider.to_sym] = @auth_hash
+      OmniAuth.config.mock_auth[provider.to_sym] = auth_hash
+      auth_hash
     end
 
     def generate_auth_hash(args = {})
       OmniAuth::AuthHash.new(
-        uid: args[:uid] || '1111',
+        uid: args[:uid] || SecureRandom.uuid,
         provider: args[:provider] || AuthenticationOption::GOOGLE,
         info: {
           name: args[:name] || 'someone',
@@ -44,8 +43,20 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
     end
 
-    def finish_sign_up(user_type)
-      post '/users', params: finish_sign_up_params(user_type: user_type)
+    def finish_sign_up(auth_hash, user_type)
+      post '/users', params: finish_sign_up_params(
+        name: auth_hash.info.name,
+        user_type: user_type
+      )
+    end
+
+    # Intentionally fail to finish sign-up by _not_ checking the terms-of-service box
+    def fail_sign_up(auth_hash, user_type)
+      post '/users', params: finish_sign_up_params(
+        name: auth_hash.info.name,
+        user_type: user_type,
+        terms_of_service_version: 0
+      )
     end
 
     def finish_sign_up_params(override_params)
@@ -55,7 +66,7 @@ module OmniauthCallbacksControllerTests
           user: {
             locale: 'en-US',
             user_type: user_type,
-            name: @auth_hash.info.name,
+            name: 'Student User',
             age: '13',
             gender: 'f',
             school_info_attributes: {
@@ -70,7 +81,7 @@ module OmniauthCallbacksControllerTests
           user: {
             locale: 'en-US',
             user_type: user_type,
-            name: @auth_hash.info.name,
+            name: 'Teacher User',
             age: '21+',
             gender: nil,
             school_info_attributes: {
@@ -111,6 +122,29 @@ module OmniauthCallbacksControllerTests
       assert user.valid?
       assert user.teacher?
       assert_equal expected_email, user.email
+    end
+
+    # Skip firehose logging for these tests
+    # Instead record the sequence of events logged, for easy validation in test cases.
+    def stub_firehose
+      @firehose_records = []
+      FirehoseClient.instance.stubs(:put_record).with do |args|
+        @firehose_records << args
+        true
+      end
+    end
+
+    def assert_sign_up_tracking(expected_study_group, expected_events)
+      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
+      study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
+      study_events = study_records.map {|e| e[:event]}
+      assert_equal [expected_study_group], study_groups
+      assert_equal expected_events, study_events
+    end
+
+    def refute_sign_up_tracking
+      study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
+      assert_empty study_records
     end
   end
 end

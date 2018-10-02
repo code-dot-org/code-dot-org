@@ -10,47 +10,43 @@ Code.org works with many organizations around the country to bring computer scie
 
 | Region | Organization Name | Contact Name | Contact Email |
 |--------|-------------------|--------------|---------------|
-| XY | 9 Dots Community Learning Center | First Last | name@org.com |
-| XY | A+ College Ready | First Last | name@org.com |
-| XY | Alameda County Office of Education | First Last | name@org.com |
-| XY | Alaska Staff Development Network | First Last | name@org.com |
-| XY | Allegheny Intermediate Unit 3 | First Last | name@org.com |
-| XY | BATEC | First Last | name@org.com |
-| XY | Battelle Education | First Last | name@org.com |
-| XY | Broward County Public Schools | First Last | name@org.com |
-| XY | Center for STEM Education, The University of Texas at Austin | First Last | name@org.com |
-| XY | Charles County Public Schools | First Last | name@org.com |
-| XY | Code/Interactive | First Last | name@org.com |
-| XY | CodeVA | First Last | name@org.com |
-| XY | Contra Costa County Office of Education | First Last | name@org.com |
-| XY | Delaware County Intermediate Unit | First Last | name@org.com |
-| XY | DePaul University | First Last | name@org.com |
-| XY | Educate Maine and the Maine Mathematics and Science Alliance | First Last | name@org.com |
-| XY | Elementary Institute of Science | First Last | name@org.com |
-| XY | Explora - Science Center and Children's Museum | First Last | name@org.com |
-| XY | Florida International University | First Last | name@org.com |
-| XY | Florida State College Jacksonville | First Last | name@org.com |
-| XY | Fresno County Superintendent of Schools | First Last | name@org.com |
-| XY | George Fox University | First Last | name@org.com |
-| XY | Georgia Tech Center for Education Integrating Science, Mathematics, and Computing | First Last | name@org.com |
-| XY | Grand Canyon University & Science Foundation Arizona | First Last | name@org.com |
-| XY | Idaho Digital Learning Academy | First Last | name@org.com |
-| XY | Illinois Math and Science Academy | First Last | name@org.com |
-| XY | Institute for School Partnership Washington University in St. Louis | First Last | name@org.com |
-| XY | Kentucky Science and Technology Corporation | First Last | name@org.com |
-| XY | KIPP | First Last | name@org.com |
-| XY | Los Angeles Unified School District | First Last | name@org.com |
-| XY | Lumity | First Last | name@org.com |
-| XY | Marquette University | First Last | name@org.com |
-| XY | Maryland Codes | First Last | name@org.com |
-| XY | Mason-Lake Oceana Mathematics and Science Center at West Shore | First Last | name@org.com |
-| XY | McNeese State University | First Last | name@org.com |
+| CA | 9 Dots Community Learning Center | First Last | name@org.com |
+| AL | A+ College Ready | First Last | name@org.com |
+| CA | Alameda County Office of Education | First Last | name@org.com |
+| AK | Alaska Staff Development Network | Cheryl Bobo | cbobo@alaskaacsa.org |
+| PA | Allegheny Intermediate Unit 3 | First Last | name@org.com |
+| MA | BATEC | First Last | name@org.com |
+| OH | Battelle Education | First Last | name@org.com |
+| FL | Broward County Public Schools | First Last | name@org.com |
+| TX | Center for STEM Education, The University of Texas at Austin | First Last | name@org.com |
+| NY | Code/Interactive | First Last | name@org.com |
+| VA | CodeVA | First Last | name@org.com |
+| CA | Contra Costa County Office of Education | Hilary Dito | hdito@cccoe.k12.ca.us |
+| PA | Delaware County Intermediate Unit | First Last | name@org.com |
+| ME | Educate Maine and the Maine Mathematics and Science Alliance | First Last | name@org.com |
+| CA | Elementary Institute of Science | First Last | name@org.com |
+| NM | Explora - Science Center and Children's Museum | First Last | name@org.com |
+| FL | Florida International University | First Last | name@org.com |
+| FL | Florida State College Jacksonville | First Last | name@org.com |
+| CA | Fresno County Superintendent of Schools | First Last | name@org.com |
+| OR | George Fox University | Yune Tran | ytran@georgefox.edu |
+| GA | Georgia Tech Center for Education Integrating Science, Mathematics, and Computing | First Last | name@org.com |
+| AZ | Grand Canyon University & Science Foundation Arizona | First Last | name@org.com |
+| ID | Idaho Digital Learning Academy | First Last | name@org.com |
+| IL | Illinois Math and Science Academy | First Last | name@org.com |
+| MO | Institute for School Partnership Washington University in St. Louis | First Last | name@org.com |
+| KY | Kentucky Science and Technology Corporation | First Last | name@org.com |
+| CA | Los Angeles Unified School District | First Last | name@org.com |
+| IL | Lumity | First Last | name@org.com |
+| WI | Marquette University | First Last | name@org.com |
+| MD | Maryland Codes | First Last | name@org.com |
+| LA | McNeese State University | First Last | name@org.com |
 | XY | Michigan Mathematics and Science Centers Network | First Last | name@org.com |
-| XY | mindSpark Learning | First Last | name@org.com |
+| CO | mindSpark Learning | Tina Granato | tina@mymindsparklearning.org |
 | XY | Mississippi State University | First Last | name@org.com |
 | XY | New Bohemian Innovation Collaborative (NewBoCo) | First Last | name@org.com |
-| XY | Nextech | First Last | name@org.com |
-| XY | NorthEast Washington Educational Service District 101 | First Last | name@org.com |
+| IN | Nextech | Stephanie Zircher | teachers@nextech.org |
+| WA | NorthEast Washington Educational Service District 101 | First Last | name@org.com |
 | XY | Oklahoma Public School Resource Center (OPSRC) | First Last | name@org.com |
 | XY | Orlando Science Center | First Last | name@org.com |
 | XY | Puget Sound Educational Service District | First Last | name@org.com |
@@ -65,9 +61,9 @@ Code.org works with many organizations around the country to bring computer scie
 | XY | Teachers Teaching Tech (MT) | First Last | name@org.com |
 | XY | Teachers Teaching Tech (ND, SD, WY) | First Last | name@org.com |
 | XY | Tennessee Department of Education | First Last | name@org.com |
-| XY | The Friday Institute | First Last | name@org.com |
+| NC | The Friday Institute | Sam Morris | srmorri3@ncsu.edu |
 | XY | The STEM Center of Excellence at the The Citadel | First Last | name@org.com |
-| XY | Twin Cities Public Television | First Last | name@org.com |
+| MN | Twin Cities Public Television | Alex Dexheimer | adexheimer@tpt.org |
 | XY | UNH STEM Teachers' Collaborative | First Last | name@org.com |
 | XY | Union Station | First Last | name@org.com |
 | XY | University of Nebraska | First Last | name@org.com |
@@ -76,7 +72,6 @@ Code.org works with many organizations around the country to bring computer scie
 | XY | USC Viterbi VAST | First Last | name@org.com |
 | XY | Utah STEM Action Center | First Last | name@org.com |
 | XY | Vermont Computer Science Alliance | First Last | name@org.com |
-| XY | West Virginia University | First Last | name@org.com |
-| XY | WNY STEM Hub | First Last | name@org.com |
-| XY | Women in Technology | First Last | name@org.com |
-
+| WV | West Virginia University | Amanda Jelsema | codewv@mail.wvu.edu |
+| NY | WNY STEM Hub | First Last | name@org.com |
+| HI | Women in Technology | First Last | name@org.com |

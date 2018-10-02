@@ -15,6 +15,16 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
     qap.resolve!
   end
 
+  test "resolve! purges the user account when user is already soft-deleted" do
+    qap = create :queued_account_purge
+    user = qap.user
+    user.destroy
+    qap.reload
+
+    AccountPurger.any_instance.expects(:purge_data_for_account).with(user).once
+    qap.resolve!
+  end
+
   test "resolve! deletes the QueuedAccountPurge" do
     AccountPurger.any_instance.stubs(:purge_data_for_account)
 
