@@ -14,7 +14,8 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
     school_district: 'District',
     school_state: 'OH',
     school_zipcode: '45242',
-    opt_in: 'Yes'
+    opt_in: 'Yes',
+    notes: 'I have a question about teaching computer science.'
   }
 
   test 'matched links are valid urls' do
