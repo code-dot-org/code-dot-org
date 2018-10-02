@@ -1468,12 +1468,33 @@ class User < ActiveRecord::Base
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
-  # @return [Boolean]
-  def any_visible_assigned_scripts?
+  # @return [Array] of Scripts
+  def visible_assigned_scripts
     user_scripts.where("assigned_at").
       map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
-      flatten.
-      any?
+      flatten
+  end
+
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @return [Boolean]
+  def any_visible_assigned_scripts?
+    visible_assigned_scripts.any?
+  end
+
+  def most_recently_assigned_script
+    most_recent_user_script = user_scripts.
+      where("assigned_at").
+      sort_by(&:assigned_at).
+      last
+    Script.where(id: most_recent_user_script.script_id, hidden: 'false')
+  end
+
+  def script_with_most_recent_progress
+    user_script_with_most_recent_progress = user_scripts.
+      where("last_progress_at").
+      sort_by(&:last_progress_at).
+      last
+    Script.where(id: user_script_with_most_recent_progress.script_id, hidden: 'false')
   end
 
   # Checks if there are any non-hidden scripts or courses assigned to the user.
