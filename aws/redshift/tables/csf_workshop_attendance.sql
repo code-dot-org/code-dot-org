@@ -297,7 +297,7 @@ AS(
          sy.school_year, 
          0 AS not_attended,
          0 AS future_event
-    FROM anlysis.csf_teachers_trained tt
+    FROM analysis.csf_teachers_trained tt
     JOIN dashboard_production.sections se 
        ON se.id = tt.section_id 
     JOIN dashboard_production_pii.users u -- join to get facilitator data
