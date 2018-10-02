@@ -220,7 +220,6 @@ fa:
       logout: 'خروج'
       signin: 'ورود'
       already_registered: 'قبلا ثبت نام کرده اید؟?'
-      pair_programming: 'برنامه نویسی دوتایی'
     popup:
       progress_for_user: "درصد پیشرفت %{name}"
       progress: 'پیشرفت شما'
