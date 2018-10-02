@@ -67,14 +67,6 @@ class RegionalPartnerContactComponent extends FormComponent {
           })
         }
         {
-          this.buildButtonsFromOptions({
-            name: 'title',
-            label: 'Title',
-            type: 'radio',
-            required: false
-          })
-        }
-        {
           this.buildFieldGroup({
             name: 'email',
             label: 'Email',
@@ -139,4 +131,4 @@ class RegionalPartnerContactComponent extends FormComponent {
 }
 
 RegionalPartnerContactComponent.associatedFields =
-  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'notes', 'optIn'];
+  ['firstName', 'lastName', 'email', 'role', 'jobTitle', 'gradeLevels', 'notes', 'optIn'];

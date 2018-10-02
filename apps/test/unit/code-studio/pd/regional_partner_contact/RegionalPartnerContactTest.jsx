@@ -6,7 +6,6 @@ import RegionalPartnerContact from '@cdo/apps/code-studio/pd/regional_partner_co
 describe('RegionalPartnerContactTest', () => {
   const API_ENDPOINT = "/api/v1/pd/regional_partner_contacts";
   const OPTIONS = {
-    title: ['Mr.', 'Mrs.', 'Ms.', 'Dr.'],
     role: ['Teacher', 'School Administrator', 'District Administrator'],
     gradeLevels: ['High School (9-12)', 'Middle School (6-8)', 'Elementary School (K-5)'],
     optIn: ['Yes', 'No']
