@@ -42,7 +42,10 @@ export default class DanceVisualizationColumn extends React.Component {
     const divDanceStyle = {
       touchAction: 'none',
       width: GAME_WIDTH,
-      height: GAME_HEIGHT
+      height: GAME_HEIGHT,
+      backgroundColor: '#fff',
+      position: 'relative',
+      overflow: 'hidden',
     };
     return (
       <span>
@@ -51,7 +54,7 @@ export default class DanceVisualizationColumn extends React.Component {
         }
         <ProtectedVisualizationDiv>
           <div
-            id="divGameLab"
+            id="divDance"
             style={divDanceStyle}
           />
         </ProtectedVisualizationDiv>

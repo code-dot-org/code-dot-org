@@ -53,5 +53,5 @@ GameLabP5.prototype.startExecution = function () {
 
       p5obj.draw = this.onDraw.bind(this);
     }.bind(this),
-    'divGameLab');
+    'divDance');
 };
