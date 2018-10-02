@@ -1,5 +1,6 @@
 class Pd::RegionalPartnerContactMailer < ActionMailer::Base
-  default from: 'Tanya Parker <tanya_parker@code.org>'
+  NO_REPLY = 'Code.org <noreply@code.org>'
+  default from: 'Anthonette Pena <anthonette@code.org>'
 
   def matched(form, rp_pm)
     @form = form
@@ -32,6 +33,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     @form = form
     @regional_partner = regional_partner
     mail(
+      from: NO_REPLY,
       to: form[:email],
       subject: "Thank you for contacting your Code.org Regional Partner",
     )
