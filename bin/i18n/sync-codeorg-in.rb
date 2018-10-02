@@ -94,6 +94,7 @@ end
 #
 # See Blockly.get_localized_property in dashboard models for usage
 def localize_level_content
+  level_display_name = Hash.new
   level_short_instructions = Hash.new
   level_long_instructions = Hash.new
   level_failure_message_overrides = Hash.new
@@ -109,6 +110,11 @@ def localize_level_content
 
       # Properties
       config = JSON.parse(level_xml.xpath('//../config').first.text)
+
+      ## Display Name
+      if display_name = config["properties"]["display_name"]
+        level_display_name[level_name] = sanitize(display_name)
+      end
 
       ## Instructions
       if short_instructions = config["properties"]["short_instructions"]
@@ -159,6 +165,7 @@ def localize_level_content
     end
   end
 
+  copy_to_yml("display_name", level_display_name)
   copy_to_yml("short_instructions", level_short_instructions)
   copy_to_yml("long_instructions", level_long_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
