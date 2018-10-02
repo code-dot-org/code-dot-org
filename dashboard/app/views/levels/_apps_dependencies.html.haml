@@ -68,8 +68,8 @@
   - preload_asset_list.each do |asset|
     - case Addressable::URI.parse(asset).extname.downcase
       - when ".mp3", ".ogg"
-        %link{rel: 'preload', as: "fetch", crossorigin: true, href: asset}
+        %link{rel: 'preload', as: "fetch", crossorigin: "anonymous", href: asset}
       - when ".png", ".gif", ".jpg", ".jpeg"
-        %link{rel: 'preload', as: "image", crossorigin: true, href: asset}
+        %link{rel: 'preload', as: "image", crossorigin: "anonymous", href: asset}
       - when ".mov", ".mp4"
-        %link{rel: 'preload', as: "video", crossorigin: true, href: asset}
+        %link{rel: 'preload', as: "video", crossorigin: "anonymous", href: asset}
