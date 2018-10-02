@@ -89,7 +89,7 @@ export function createDanceAPI(gamelabP5) {
     },
 
     song: {
-      load: () => songs.push(p5Inst.loadSound(song_meta.url)) - 1,
+      load: () => songs.push(gamelabP5.loadSound(song_meta.url)) - 1,
       start: (n = 0) => songs[n].play(),
       stop: (n = 0) => songs[n].stop(),
       isPlaying: (n = 0) => songs[n].isPlaying(),
