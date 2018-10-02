@@ -487,6 +487,24 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       )
     ).save(validate: false)
 
+    2.times do
+      Pd::WorkshopFacilitatorDailySurvey.create(
+        common_survey_hash.merge(
+          pd_session_id: @workshop.sessions.first.id,
+          form_id: CDO.jotform_forms['local_summer']['facilitator'],
+          day: 1,
+          facilitator_id: @workshop.facilitators.first.id,
+          user: create(:teacher),
+          submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:id) || 0) + 1,
+          answers: {
+            '1' => 'Great!',
+            '2' => '4',
+            '3' => @workshop.facilitators.first.id
+          }.to_json
+        )
+      )
+    end
+
     Pd::WorkshopFacilitatorDailySurvey.create(
       common_survey_hash.merge(
         pd_session_id: @workshop.sessions.first.id,
@@ -496,12 +514,30 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         user: create(:teacher),
         submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:id) || 0) + 1,
         answers: {
-          '1' => 'Great!',
-          '2' => '4',
+          '1' => 'Pretty good!',
+          '2' => '3',
           '3' => @workshop.facilitators.first.id
         }.to_json
       )
     )
+
+    2.times do
+      Pd::WorkshopFacilitatorDailySurvey.create(
+        common_survey_hash.merge(
+          pd_session_id: @workshop.sessions.first.id,
+          form_id: CDO.jotform_forms['local_summer']['facilitator'],
+          day: 1,
+          facilitator_id: @workshop.facilitators.second.id,
+          user: create(:teacher),
+          submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:id) || 0) + 1,
+          answers: {
+            '1' => 'Bad!',
+            '2' => '2',
+            '3' => @workshop.facilitators.second.id
+          }.to_json
+        )
+      )
+    end
 
     Pd::WorkshopFacilitatorDailySurvey.create(
       common_survey_hash.merge(
@@ -512,8 +548,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         user: create(:teacher),
         submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:id) || 0) + 1,
         answers: {
-          '1' => 'Bad!',
-          '2' => '2',
+          '1' => 'Okay!',
+          '2' => '3',
           '3' => @workshop.facilitators.second.id
         }.to_json
       )
@@ -556,12 +592,12 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           },
           facilitator: {
             'sampleFacilitatorText' => {
-              @workshop.facilitators.first.name => ['Great!'],
-              @workshop.facilitators.second.name => ['Bad!']
+              @workshop.facilitators.first.name => ['Great!', 'Great!', 'Pretty good!'],
+              @workshop.facilitators.second.name => ['Bad!', 'Bad!', 'Okay!']
             },
             'sampleFacilitatorScale' => {
-              @workshop.facilitators.first.name => {4 => 1},
-              @workshop.facilitators.second.name => {2 => 1}
+              @workshop.facilitators.first.name => {4 => 2, 3 => 1},
+              @workshop.facilitators.second.name => {3 => 1, 2 => 2}
             }
           }
         },
