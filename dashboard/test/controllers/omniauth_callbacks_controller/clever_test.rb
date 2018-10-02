@@ -9,11 +9,11 @@ module OmniauthCallbacksControllerTests
     include OmniauthCallbacksControllerTests::Utils
 
     setup do
-      # Skip firehose logging for these tests, unless explicitly requested
-      FirehoseClient.instance.stubs(:put_record)
+      stub_firehose
 
-      # Force split-test to control group (override in tests over experiment)
-      SignUpTracking.stubs(:split_test_percentage).returns(0)
+      # Force split-test on
+      # Even with split test on, Clever should use old sign-up flow
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
     end
 
     test "student sign-up" do
@@ -28,6 +28,14 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_student created_user
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::NOT_IN_STUDY_GROUP,
+        %w(
+          clever-callback
+          clever-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -42,48 +50,14 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
-    ensure
-      created_user&.destroy!
-    end
 
-    test "student sign-up (new sign-up flow)" do
-      auth_hash = mock_oauth user_type: User::TYPE_STUDENT
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-
-      sign_in_through_clever
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
-
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
-      assert_redirected_to '/'
-      follow_redirect!
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-
-      created_user = User.find signed_in_user_id
-      assert_valid_student created_user
-      assert_credentials auth_hash, created_user
-    ensure
-      created_user&.destroy!
-    end
-
-    test "teacher sign-up (new sign-up flow)" do
-      auth_hash = mock_oauth user_type: User::TYPE_TEACHER
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-
-      sign_in_through_clever
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
-
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-
-      created_user = User.find signed_in_user_id
-      assert_valid_teacher created_user, expected_email: auth_hash.info.email
-      assert_credentials auth_hash, created_user
+      assert_sign_up_tracking(
+        SignUpTracking::NOT_IN_STUDY_GROUP,
+        %w(
+          clever-callback
+          clever-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -102,6 +76,8 @@ module OmniauthCallbacksControllerTests
       assert_equal student.id, signed_in_user_id
       student.reload
       assert_credentials auth_hash, student
+
+      refute_sign_up_tracking
     end
 
     test "teacher sign-in" do
@@ -116,6 +92,8 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
       assert_credentials auth_hash, teacher
+
+      refute_sign_up_tracking
     end
 
     private
