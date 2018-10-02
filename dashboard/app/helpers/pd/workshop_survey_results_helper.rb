@@ -188,7 +188,8 @@ module Pd::WorkshopSurveyResultsHelper
     # if the current user is a facilitator and not a program manager, workshop
     # organizer, or workshop admin, only show them responses about themselves,
     # not any other facilitator
-    show_only_user = current_user.facilitator? &&
+    show_only_user = current_user &&
+      current_user.facilitator? &&
       !(current_user.program_manager? ||
         current_user.workshop_organizer? ||
         current_user.workshop_admin)
