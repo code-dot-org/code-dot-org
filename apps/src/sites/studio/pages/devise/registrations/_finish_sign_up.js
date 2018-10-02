@@ -7,7 +7,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-radio"];
 const STUDENT_ONLY_FIELDS = ["#student-name-label", "#gender-dropdown", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#user-type-field", "#name-field", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -55,13 +54,11 @@ $(document).ready(() => {
 
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
-    fadeInFields(SHARED_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
   }
 
   function switchToStudent() {
     fadeInFields(STUDENT_ONLY_FIELDS);
-    fadeInFields(SHARED_FIELDS);
     hideFields(TEACHER_ONLY_FIELDS);
   }
 
