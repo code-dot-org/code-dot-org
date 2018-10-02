@@ -21,7 +21,6 @@ import {
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
-import experiments from "@cdo/apps/util/experiments";
 import Radium from "radium";
 import songLibrary from "../code-studio/songLibrary.json";
 import gamelabMsg from '@cdo/gamelab/locale';
@@ -184,7 +183,7 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
-        {this.props.danceLab && experiments.isEnabled("songSelector") &&
+        {this.props.danceLab &&
           <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
         }
         <ProtectedVisualizationDiv>
