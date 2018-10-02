@@ -17,10 +17,12 @@
 
     = f.hidden_field :locale, value: locale
 
-    .field-row
+    .field-row#user-type-field{style: "display: none;"}
       .field
         = f.label :user_type, t('signup_form.create_user_type')
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
+      - if @user.errors[:user_type].present?
+        %span.error.padded= t('activerecord.errors.messages.blank')
 
     .field-row#name-field{style: "display: none;"}
       .field
