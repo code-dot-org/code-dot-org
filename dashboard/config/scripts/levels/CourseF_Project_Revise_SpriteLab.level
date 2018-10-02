@@ -47,7 +47,8 @@
     "display_name": "Revise Sprite Lab Project",
     "project_template_level_name": "CourseF_Project_Template_SpriteLab",
     "block_pool": "gamelab",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

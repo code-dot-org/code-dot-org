@@ -38,10 +38,13 @@
       "courseD_multi_artist_binary8_predict1_2018"
     ],
     "parent_level_id": 8589,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "preload_asset_list": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

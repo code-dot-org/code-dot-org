@@ -40,7 +40,8 @@
     "shape_shift": "false",
     "parent_level_id": 8585,
     "name_suffix": "_2018",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

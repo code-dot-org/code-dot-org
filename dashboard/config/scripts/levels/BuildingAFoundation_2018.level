@@ -7,6 +7,8 @@
     "video_key": "C1_building_foundation",
     "name_suffix": "_2018"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Unplugged>

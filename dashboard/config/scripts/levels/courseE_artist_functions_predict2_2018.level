@@ -40,7 +40,8 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
