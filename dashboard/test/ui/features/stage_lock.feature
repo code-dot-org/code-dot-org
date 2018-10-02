@@ -36,7 +36,8 @@ Scenario: Lock settings for students
   When I sign out
   And I sign in as "Teacher_bobby"
   And I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
+  # Wait until detail view loads
+  And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
   And I unlock the stage for students
   And I wait until element ".modal-backdrop" is gone
@@ -72,7 +73,8 @@ Scenario: Lock settings for students
   When I sign out
   And I sign in as "Teacher_bobby"
   And I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
+  # Wait until detail view loads
+  And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
   And I show stage answers for students
   And I wait until element ".modal-backdrop" is gone
