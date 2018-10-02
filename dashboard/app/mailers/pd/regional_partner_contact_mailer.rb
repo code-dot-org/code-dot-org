@@ -32,7 +32,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
 
     mail(
       to: form[:email],
-      subject: "Thank you for contacting us"
+      subject: "Thank you for contacting your Code.org Regional Partner"
     )
   end
 end
