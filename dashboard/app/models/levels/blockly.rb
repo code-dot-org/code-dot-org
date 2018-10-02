@@ -79,7 +79,6 @@ class Blockly < Level
     preload_asset_list
     skip_autosave
     skip_run_save
-    default_song
   )
 
   before_save :update_ideal_level_source
