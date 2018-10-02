@@ -227,7 +227,7 @@ module Pd::WorkshopSurveyResultsHelper
               session_summary[response_section][q_key] = sum
             end
           else
-            # For bubble responses, return a frequency map with nulls removed
+            # For multiple-choice responses, return a frequency map with nulls removed
             # [1, 1, 2, 2, 3, 5, 7, 7, 7, 7, 7, nil, nil] => {1: 2, 2: 2, 3: 1, 5: 1, 7: 5}
             #
             # For facilitator-specific responses, return a map per facilitator:
