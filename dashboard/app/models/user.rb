@@ -1481,20 +1481,35 @@ class User < ActiveRecord::Base
     visible_assigned_scripts.any?
   end
 
+  def most_recently_assigned_user_script
+    user_scripts.
+    where("assigned_at").
+    sort_by(&:assigned_at).
+    last
+  end
+
   def most_recently_assigned_script
-    most_recent_user_script = user_scripts.
-      where("assigned_at").
-      sort_by(&:assigned_at).
-      last
-    Script.where(id: most_recent_user_script.script_id, hidden: 'false')
+    Script.where(id: most_recently_assigned_user_script.script_id, hidden: 'false')
+  end
+
+  def user_script_with_most_recent_progress
+    user_scripts.
+    where("last_progress_at").
+    sort_by(&:last_progress_at).
+    last
   end
 
   def script_with_most_recent_progress
-    user_script_with_most_recent_progress = user_scripts.
-      where("last_progress_at").
-      sort_by(&:last_progress_at).
-      last
     Script.where(id: user_script_with_most_recent_progress.script_id, hidden: 'false')
+  end
+
+  def most_recent_progress_in_recently_assigned_script?
+    script_with_most_recent_progress.id == most_recently_assigned_script.id
+  end
+
+  def last_assignment_after_most_recent_progress?
+    most_recently_assigned_user_script[:assigned_at] >=
+    user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Checks if there are any non-hidden scripts or courses assigned to the user.

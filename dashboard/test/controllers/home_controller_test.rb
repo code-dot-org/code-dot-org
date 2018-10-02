@@ -36,21 +36,59 @@ class HomeControllerTest < ActionController::TestCase
     end
   end
 
-  test "student with progress but not an assigned course/script will go to index" do
+  test "student with progress but not an assigned script will go to index" do
     student = create :student
     script = create :script
     sign_in student
-    User.any_instance.stubs(:primary_script).returns(script)
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
     get :index
 
     assert_redirected_to '/home'
   end
 
-  test "student with assigned course or script is redirected to course overview" do
+  test "student with assigned script and no progress is redirected to course overview" do
     student = create :student
     script = create :script
     sign_in student
     student.assign_script(script)
+    get :index
+
+    assert_redirected_to script_path(script)
+  end
+
+  test "student with assigned script then recent progress in a different script will go to index" do
+    student = create :student
+    script = create :script
+    other_script = create :script
+    sign_in student
+    student.assign_script(script)
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(other_script)
+
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with recent progress then an assigned script should go to the assigned script overview" do
+    student = create :student
+    script = create :script
+    other_script = create :script
+    sign_in student
+    student.assign_script(script)
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(other_script)
+
+    get :index
+
+    assert_redirected_to script_path(script)
+  end
+
+  test "student with assigned script then recent progress in that script will go to script overview" do
+    student = create :student
+    script = create :script
+    sign_in student
+    student.assign_script(script)
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
+
     get :index
 
     assert_redirected_to script_path(script)
