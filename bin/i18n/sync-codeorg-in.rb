@@ -17,8 +17,31 @@ def sync_in
   localize_level_content
   localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_pegasus_markdown_content
   redact_level_content
   redact_block_content
+end
+
+def localize_pegasus_markdown_content
+  # The in script grabs all the serialized pegasus strings, but we also want to
+  # localize some markdown pages. As of September 2018, there is exactly one
+  # page we want to localize, but we expect there to be more eventually.
+  markdown_to_localize = %w(
+    educate/curriculum/csf-transition-guide
+  ).freeze
+
+  src_dir = 'pegasus/sites.v3/code.org/public'.freeze
+  dest_dir = 'i18n/locales/source/pegasus/public'.freeze
+
+  # If we wanted to preprocess the markdown before it goes into crowdin (for
+  # example, to strip out the YAML header or perform redaction), right here is
+  # where we would likely do it.
+  markdown_to_localize.each do |md|
+    src_file = File.join src_dir, "#{md}.md"
+    dest_file = File.join dest_dir, "#{md}.md"
+    FileUtils.mkdir_p File.dirname(dest_file)
+    FileUtils.cp src_file, dest_file
+  end
 end
 
 def copy_to_yml(label, data)
