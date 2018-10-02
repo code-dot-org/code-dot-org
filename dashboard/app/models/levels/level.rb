@@ -187,10 +187,6 @@ class Level < ActiveRecord::Base
   def self.palette_categories
   end
 
-  # Overriden by different level types.
-  def self.hoc_songs
-  end
-
   def self.custom_levels
     Naturally.sort_by(Level.where.not(user_id: nil), :name)
   end
