@@ -35,4 +35,20 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
 
     assert links_are_complete_urls?(mail)
   end
+
+  test 'matched receipt links are valid urls' do
+    regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.to_json
+    form = regional_partner_contact.sanitize_and_trim_form_data_hash
+    mail = Pd::RegionalPartnerContactMailer.receipt(form, regional_partner_contact.regional_partner)
+
+    assert links_are_complete_urls?(mail)
+  end
+
+  test 'unmatched receipt links are valid urls' do
+    regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.to_json
+    form = regional_partner_contact.sanitize_and_trim_form_data_hash
+    mail = Pd::RegionalPartnerContactMailer.receipt(form, nil)
+
+    assert links_are_complete_urls?(mail)
+  end
 end
