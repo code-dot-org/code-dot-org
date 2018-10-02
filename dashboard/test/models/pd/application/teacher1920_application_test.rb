@@ -936,6 +936,25 @@ module Pd::Application
       end
     end
 
+    test 'should_send_decision_email?' do
+      application = build :pd_teacher1920_application, status: :pending
+
+      # no auto-email status: no email
+      refute application.should_send_decision_email?
+
+      # auto-email status with no partner: yes email
+      application.status = :accepted_no_cost_registration
+      assert application.should_send_decision_email?
+
+      # auto-email status, partner with sent_by_system: yes email
+      application.regional_partner = build(:regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM)
+      assert application.should_send_decision_email?
+
+      # auto-email status, partner with sent_by_partner: no email
+      application.regional_partner.applications_decision_emails = RegionalPartner::SENT_BY_PARTNER
+      refute application.should_send_decision_email?
+    end
+
     private
 
     def assert_status_log(expected, application)
