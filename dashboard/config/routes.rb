@@ -437,6 +437,7 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
+  get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
