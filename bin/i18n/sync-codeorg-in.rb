@@ -17,8 +17,31 @@ def sync_in
   localize_level_content
   localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_pegasus_markdown_content
   redact_level_content
   redact_block_content
+end
+
+def localize_pegasus_markdown_content
+  # The in script grabs all the serialized pegasus strings, but we also want to
+  # localize some markdown pages. As of September 2018, there is exactly one
+  # page we want to localize, but we expect there to be more eventually.
+  markdown_to_localize = %w(
+    educate/curriculum/csf-transition-guide
+  ).freeze
+
+  src_dir = 'pegasus/sites.v3/code.org/public'.freeze
+  dest_dir = 'i18n/locales/source/pegasus/public'.freeze
+
+  # If we wanted to preprocess the markdown before it goes into crowdin (for
+  # example, to strip out the YAML header or perform redaction), right here is
+  # where we would likely do it.
+  markdown_to_localize.each do |md|
+    src_file = File.join src_dir, "#{md}.md"
+    dest_file = File.join dest_dir, "#{md}.md"
+    FileUtils.mkdir_p File.dirname(dest_file)
+    FileUtils.cp src_file, dest_file
+  end
 end
 
 def copy_to_yml(label, data)
@@ -74,8 +97,8 @@ def redact_level_content
   puts "Redacting"
   %w(
     authored_hints
-    instructions
-    markdown_instructions
+    short_instructions
+    long_instructions
   ).each do |content_type|
     puts "\t#{content_type}"
     source = "i18n/locales/source/dashboard/#{content_type}.yml"
@@ -86,14 +109,17 @@ end
 
 # Pull in various fields for levelbuilder levels from .level files and
 # save them to [field_name].en.yml files to be translated. Fields included:
-#   instructions
-#   markdown instructions
+#   short instructions
+#   long instructions
 #   failure message override
 #   authored hints
 #   callouts
+#
+# See Blockly.get_localized_property in dashboard models for usage
 def localize_level_content
-  level_instructions = Hash.new
-  level_markdown_instructions = Hash.new
+  level_display_name = Hash.new
+  level_short_instructions = Hash.new
+  level_long_instructions = Hash.new
   level_failure_message_overrides = Hash.new
   level_authored_hints = Hash.new
   level_callouts = Hash.new
@@ -108,14 +134,19 @@ def localize_level_content
       # Properties
       config = JSON.parse(level_xml.xpath('//../config').first.text)
 
+      ## Display Name
+      if display_name = config["properties"]["display_name"]
+        level_display_name[level_name] = sanitize(display_name)
+      end
+
       ## Instructions
-      if instructions = config["properties"]["instructions"]
-        level_instructions["#{level_name}_instruction"] = sanitize(instructions)
+      if short_instructions = config["properties"]["short_instructions"]
+        level_short_instructions[level_name] = sanitize(short_instructions)
       end
 
       ## Markdown Instructions
-      if markdown_instructions = config["properties"]["markdown_instructions"]
-        level_markdown_instructions["#{level_name}_markdown_instruction"] = sanitize(markdown_instructions)
+      if long_instructions = config["properties"]["long_instructions"]
+        level_long_instructions[level_name] = sanitize(long_instructions)
       end
 
       ## Failure message overrides
@@ -157,8 +188,9 @@ def localize_level_content
     end
   end
 
-  copy_to_yml("instructions", level_instructions)
-  copy_to_yml("markdown_instructions", level_markdown_instructions)
+  copy_to_yml("display_name", level_display_name)
+  copy_to_yml("short_instructions", level_short_instructions)
+  copy_to_yml("long_instructions", level_long_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
   copy_to_yml("authored_hints", level_authored_hints)
   copy_to_yml("callouts", level_callouts)
