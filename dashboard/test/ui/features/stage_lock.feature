@@ -55,7 +55,7 @@ Scenario: Lock settings for students
 
   # student submits
 
-  When I click selector "tr:contains(Anonymous student survey 2) .uitest-ProgressBubble:last" to load a new page
+  When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I click selector "#ok-button"
