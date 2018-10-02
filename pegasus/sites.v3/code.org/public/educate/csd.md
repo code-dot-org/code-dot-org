@@ -100,13 +100,13 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd1'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'Problem Solving', description: 'Explore the problem-solving process and the different ways humans and computers solve problems.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd1-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'Problem Solving', description: 'Explore the problem-solving process and the different ways humans and computers solve problems.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd2'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Web Development', description: 'Discover the languages powering the web. Build your own websites in HTML and CSS using Web Lab.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd2-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Web Development', description: 'Discover the languages powering the web. Build your own websites in HTML and CSS using Web Lab.'%>
 
 [/col-50]
 
@@ -114,13 +114,13 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd3'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Animations and Games', description: 'Learn the powerful constructs underlying programming languages. Build interactive games in JavaScript using Game Lab.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd3-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Animations and Games', description: 'Learn the powerful constructs underlying programming languages. Build interactive games in JavaScript using Game Lab.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd4'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'The Design Process', description: 'Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using App Lab.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd4-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'The Design Process', description: 'Follow a design process to identify and empathize with problems faced by a target audience. Prototype an app to help solve that problem using App Lab.'%>
 
 [/col-50]
 
@@ -128,13 +128,13 @@ Code.org offers hands-on workshops and online support. Over 80,000 teachers have
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd5'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Data and Society', description: 'Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd5-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Data and Society', description: 'Develop binary representations of different kinds of information. Collect, analyze, visualize, and make automated decisions using data.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csd6-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csd/unit6/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 6', ages: 'Physical Computing', description: "Explore the relationship between hardware and software, while building interactive projects on Adafruit's Circuit Playground."%>
 
 [/col-50]
 
@@ -222,7 +222,7 @@ We have forums for educators to discuss and trade ideas about CS Discoveries and
 
 CS Discoveries was written using both the K-12 Framework for Computer Science and the newly revised 2017 CSTA standards as guidance. Currently, every lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
  The summary of of all CSTA 2017 mappings can be found at [curriculum.code.org/csd/standards](https://curriculum.code.org/csd/standards)
- 
+
 ### How/Where can I get professional development for this course?
 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and follow up workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. [Click here](/educate/professional-learning/cs-discoveries) to learn more.
