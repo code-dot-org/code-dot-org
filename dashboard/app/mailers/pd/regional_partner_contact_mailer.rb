@@ -4,14 +4,13 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
 
   def matched(form, rp_pm)
     @form = form
-    role = form[:role].downcase
 
     pm = User.find(rp_pm.program_manager_id)
     @name = pm.name
 
     mail(
       to: pm.email,
-      subject: "A " + role + " would like to connect with you"
+      subject: "A teacher and/or administrator would like to connect with you"
     )
   end
 
