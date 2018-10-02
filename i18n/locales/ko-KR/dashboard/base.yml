@@ -318,7 +318,6 @@ ko:
       signin: '로그인'
       signup: '회원가입'
       already_registered: '이미 등록하였나요?'
-      pair_programming: '페어 프로그래밍'
       team: '팀'
       driver: '로그인됨'
       navigator: '파트너'
