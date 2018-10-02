@@ -45,9 +45,12 @@ module Pd::Application
     def principal_approval_completed_partner(teacher_application)
       @application = teacher_application
 
+      partner_contact_email = @application.formatted_partner_contact_email
+      raise "Partner contact email is required, application id #{@application.id}" unless partner_contact_email
+
       mail(
         from: 'Anthonette Peña <teacher@code.org>',
-        to: @application.formatted_partner_contact_email,
+        to: partner_contact_email,
         subject: 'A principal has completed the principal approval form'
       )
     end
