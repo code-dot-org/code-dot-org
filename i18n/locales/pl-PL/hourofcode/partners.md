@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Godziną Kodowania kieruje Komitet Doradczo-Odwoławczy inicjatyw Godzina Kodowania i Tydzień Edukacji Informatycznej.
 

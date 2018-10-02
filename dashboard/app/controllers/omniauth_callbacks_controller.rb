@@ -77,7 +77,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       move_sections_and_destroy_source_user \
         source_user: existing_credential_holder,
         destination_user: current_user,
-        takeover_type: 'connect_provider'
+        takeover_type: 'connect_provider',
+        provider: provider
     end
 
     # TODO: some of this won't work right for non-Google providers, because info comes in differently
@@ -156,6 +157,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def sign_in_google_oauth2(user)
+    SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
 
@@ -171,8 +173,19 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # For some providers, signups can happen without ever having hit the sign_up page, where
     # our tracking data is usually populated, so do it here
     SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+    SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
 
-    user = User.from_omniauth auth_hash, auth_params, session
+    user =
+      if SignUpTracking.new_sign_up_experience?(session)
+        User.new.tap do |u|
+          User.initialize_new_oauth_user(u, auth_hash, auth_params)
+          u.oauth_token = auth_hash.credentials&.token
+          u.oauth_token_expiration = auth_hash.credentials&.expires_at
+          u.oauth_refresh_token = auth_hash.credentials&.refresh_token
+        end
+      else
+        User.from_omniauth auth_hash, auth_params, session
+      end
     prepare_locale_cookie user
 
     if allows_silent_takeover user, auth_hash
@@ -184,6 +197,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def sign_in_clever(user)
+    SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
     handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
@@ -194,23 +208,34 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # For some providers, signups can happen without ever having hit the sign_up page, where
     # our tracking data is usually populated, so do it here
-    SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+    # Clever performed poorly in our split test, so never send it to the experiment
+    SignUpTracking.begin_sign_up_tracking(session, split_test: false)
+    SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
-    user = User.from_omniauth(auth_hash, auth_params, session)
+    if SignUpTracking.new_sign_up_experience? session
+      user = User.new
+      User.initialize_new_oauth_user user, auth_hash, auth_params
+      user.oauth_token = auth_hash.credentials&.token
+      user.oauth_token_expiration = auth_hash.credentials&.expires_at
 
-    prepare_locale_cookie user
-
-    if user.persisted?
-      handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
-    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
-      email_already_taken_redirect(
-        provider: AuthenticationOption::CLEVER,
-        found_provider: looked_up_user.provider,
-        email: user.email
-      )
-    else
-      # This is a new registration
+      prepare_locale_cookie user
       register_new_user user
+    else
+      user = User.from_omniauth(auth_hash, auth_params, session)
+      prepare_locale_cookie user
+
+      if user.persisted?
+        handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
+      elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
+        email_already_taken_redirect(
+          provider: AuthenticationOption::CLEVER,
+          found_provider: looked_up_user.provider,
+          email: user.email
+        )
+      else
+        # This is a new registration
+        register_new_user user
+      end
     end
   end
 
@@ -248,12 +273,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
-
-    if SignUpTracking.new_sign_up_experience?(session)
-      redirect_to users_finish_sign_up_url
-    else
-      redirect_to new_user_registration_url
-    end
+    redirect_to new_user_registration_url
   end
 
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
@@ -351,13 +371,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def silent_takeover(oauth_user, auth_hash)
     lookup_email = oauth_user.email.presence || auth_hash.info.email
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
+    provider = auth_hash.provider.to_s
 
     unless lookup_user.present?
       # Even if silent takeover is not available for student imported from Google Classroom, we still want
       # to attach the email received from Google login to the student's account since GC imports do not provide emails.
       if allows_google_classroom_takeover(oauth_user)
         oauth_user.update_email_for(
-          provider: auth_hash.provider.to_s,
+          provider: provider,
           uid: auth_hash.uid,
           email: lookup_email
         )
@@ -370,7 +391,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return unless move_sections_and_destroy_source_user(
         source_user: oauth_user,
         destination_user: lookup_user,
-        takeover_type: 'silent'
+        takeover_type: 'silent',
+        provider: provider,
       )
     end
 
@@ -379,7 +401,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         AuthenticationOption.create!(
           user: lookup_user,
           email: lookup_email,
-          credential_type: auth_hash.provider.to_s,
+          credential_type: provider,
           authentication_id: auth_hash.uid,
           data: {
             oauth_token: auth_hash.credentials&.token,
@@ -390,7 +412,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else
         lookup_user.update!(
           email: lookup_email,
-          provider: auth_hash.provider.to_s,
+          provider: provider,
           uid: auth_hash.uid,
           oauth_token: auth_hash.credentials&.token,
           oauth_token_expiration: auth_hash.credentials&.expires_at,

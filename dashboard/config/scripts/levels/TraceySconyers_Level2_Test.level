@@ -1,0 +1,53 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-09-28T23:02:07.000Z",
+  "level_num": "custom",
+  "user_id": 842,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "setChecked": null,
+      "getNumber": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "display_name": "Better Name Level 1",
+    "start_blocks": "// this is a comment\r\n// review Javascript\r\ndoSomething();",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "markdown_instructions": "### This is a test\r\n* this is only a test\r\n- thank goodness I've been practicing markdown in Big Data\r\n",
+    "parent_level_id": 14611,
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button1\" style=\"padding: 0px; margin: 0px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 110px; top: 250px; height: 60px;\">Click Me</button></div></div>",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "This is my beta test",
+  "audit_log": "[{\"changed_at\":\"2018-09-28 22:59:48 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":842,\"changed_by_email\":\"tracey.sconyers@gmail.com\"},{\"changed_at\":\"2018-09-28 23:05:23 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":842,\"changed_by_email\":\"tracey.sconyers@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

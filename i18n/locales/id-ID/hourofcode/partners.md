@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 The Hour dari Kode didorong oleh Jam Kode dan Ilmu Komputer Pendidikan Minggu Komite Penasehat dan Ulasan.
 

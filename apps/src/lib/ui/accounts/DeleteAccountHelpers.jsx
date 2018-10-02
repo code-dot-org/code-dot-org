@@ -53,9 +53,11 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-         <UnsafeRenderedMarkdown
-           markdown={i18n.deleteAccountDialog_checkbox1({explanationUrl: RELEASE_OR_DELETE_RECORDS_EXPLANATION})}
-         />
+        <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
+        {i18n.deleteAccountDialog_checkbox1_2()}
+        <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+          {i18n.learnMore()}
+        </a>
       </span>
     )
   },
@@ -63,9 +65,11 @@ const CHECKBOX_MAP = {
     checked: false,
     label: (
       <span>
-         <UnsafeRenderedMarkdown
-           markdown={i18n.deleteAccountDialog_checkbox2({explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL})}
-         />
+        {i18n.deleteAccountDialog_checkbox2_1()}
+        <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
+          {i18n.deleteAccountDialog_checkbox2_2()}
+        </a>
+        {i18n.deleteAccountDialog_checkbox2_3()}
       </span>
     )
   },

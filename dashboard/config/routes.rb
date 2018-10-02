@@ -134,7 +134,6 @@ Dashboard::Application.routes.draw do
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
-    get '/users/finish_sign_up', to: 'registrations#finish_sign_up'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
@@ -438,6 +437,7 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
+  get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 

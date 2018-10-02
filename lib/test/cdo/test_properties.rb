@@ -8,6 +8,7 @@ class PropertiesTest < Minitest::Test
 
   def setup
     DB[:properties].insert(key: KEY, value: VALUE.to_json)
+    CDO.cache.clear
   end
 
   def test_set_with_new_values

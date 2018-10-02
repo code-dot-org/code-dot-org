@@ -20,8 +20,9 @@ import {styles} from "./TeacherApplicationConstants";
 const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
 const PD_RESOURCES_URL = 'https://support.code.org/hc/en-us/articles/115003865532';
+const REGIONAL_PARTNER_URL = '/pd/regional_partner_contact/new';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
-const INTERNATIONAL = 'International';
+const INTERNATIONAL = 'Other country';
 const US = 'United States';
 
 export default class Section1AboutYou extends LabeledFormComponent {
@@ -83,14 +84,14 @@ export default class Section1AboutYou extends LabeledFormComponent {
           please visit
           {' '}<a href={CSD_URL} target="_blank">CS Discoveries</a>{' '}
           and
-          {' '}<a href={CSP_URL} target="_blank">CS Principles</a>.{' '}
-          If you’re not sure which program is the right fit for your classroom,
-          we encourage you to{' '}
+          {' '}<a href={CSP_URL} target="_blank">CS Principles</a>{' '}
+          landing pages. If you’re not sure which program is the right fit for your
+          classroom, we encourage you to{' '}
           <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit" target="_blank">
             check out our course and professional learning options.
           </a>
           {' '}For additional questions regarding the program or application, please
-          <a href="https://code.org/educate/regional-partner/contact" target="_blank">
+          <a href={REGIONAL_PARTNER_URL} target="_blank">
             {' '}contact your Regional Partner.
           </a>
         </p>

@@ -1643,7 +1643,7 @@ a.download-video {
 #signup, #school-info-modal {
   // NEW SIGN-UP FORM
   .finish-signup {
-    width: 600px;
+    width: 800px;
 
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
@@ -1661,17 +1661,43 @@ a.download-video {
     }
     .checkbox {
       display: flex;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      width: 600px;
+      padding: 10px;
 
       label {
         padding-left: 10px;
       }
     }
+    .radio {
+      display: flex;
+
+      input[type=radio] {
+        margin-right: 5px;
+      }
+    }
+    .field-row {
+      display: flex;
+      align-items: center;
+    }
     .field {
+      width: 600px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .field_with_errors label {
+      color: $black;
+    }
+    .field_with_errors > input,
+    .field_with_errors > select {
+      background-color: $white;
+    }
+    .error {
+      color: $red;
+      font-style: italic;
+    }
+    .padded {
+      padding-left: 10px;
     }
     select, input[type=text] {
       height: 36px;
@@ -1682,12 +1708,16 @@ a.download-video {
       padding-top: 0;
       padding-bottom: 0;
     }
+    #school-type {
+      width: 370px !important;
+    }
     #submit {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
       font-weight: bolder;
       min-width: 400px;
+      margin: 5px 0;
     }
   }
 

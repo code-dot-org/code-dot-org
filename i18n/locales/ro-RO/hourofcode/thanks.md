@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 social:
@@ -22,18 +22,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-Ca un mulțumesc pentru ajutorul oferit de a face posibil pentru studenți sa înceapă să învețe ștința computărelor, ne-ar plăcea să va oferim un set gratis ds postere printate profesionist oferind diverse modele de urmat pentru clasa dumneavoastra. Foloseste codul oferit **POSTEREGRATUITE** la verificare. (Nota: aceasta este valabila doar in timp ce resursele dureaza si o sa ai nevoie sa acopere costurile de livrare. Intru-cat aceste postere sunt transportate din Statele Unite, costurile de transport pot fi destul de ridicate daca sunt transportate in Canada si international. Înțelegem că acestea s-ar putea sa nu se afle în bugetul dvs. și vă incurajăm să inserați [fișiere Pdf](https://code.org/inspire) pentru clasa dvs.)  
-<br mark="crud-mark" /> [ <button>Obțineți postere</button>](https://store.code.org/products/code-org-posters-set-of-12) Folosiți codul de ofertă POSTEREGRATUITE
-
-<% if @country == 'us' %> Datorită generozității Ozobot, Dexter Industries, littleBits şi Wonder Workshop, peste 100 de săli de clase vor fi selectate pentru a primi roboţi sau circuite pentru clasa lor! Pentru a fi eligibil în a primi un set, asiguraţi-vă că ați finalizat sondajul trimis de Code.org după Ora de Cod. Code.org va selecta săli de clasă câștigătoare. Între timp, aruncați-vă o privire asupra unora dintre activităţile de robotică şi circuite. Vă rugăm să reţineţi că acest lucru este deschis numai pentru şcolile din SUA. <% end %>
-
-<br /> **Ora de Cod se derulează pe parcursul <%=campaign_date('full') %> și vă vom informa despre noile tutoriale și alte actualizări captivante în funcție de cum apar acestea. Între timp, ce poți face tu acum?**
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Imprastie vestea in scoala si comunitatea ta
 
-Tocmai te-ai alăturat mișcării Hour of Code. Spune-le și prietenilor cu **#HourOfCode**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Incurajeză și alte persoane să participe[ cu e-mailuri eșantion.](%= resolve_url('/promote/resources#sample-emails') %) Contactează-ți directorul și provoacă fiecare clasă din școala ta să se înscrie. Recrutează un grup local - club de cercetași băieți/fete, biserică, universitate, grup de veterani, sindicat sau chiar și câțiva prieteni. Nu trebuie să fiți în şcoală ca să învățaţi noi competenţe. Invită un politician sau legislator să îți viziteze școala pentru Ora de Cod. Toate acestea te pot ajuta în construirea susținerii informaticii și dincolo de o oră.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nu trebuie să fii in şcoală ca să înveţi noi competenţe. Invite a local politician or policy maker to visit your school for the Hour of Code. Acestea te pot ajuta in construirea unei sustineri pentru tehnologia computerelor si programare si dincolo de tutorialele de o ora.
 
 Foloseşte aceste [postere, bannere, stickere, videoclipuri si multe altele](%= resolve_url('/promote/resources') %) pentru evenimentul tau.
 
@@ -43,7 +38,7 @@ Foloseşte aceste [postere, bannere, stickere, videoclipuri si multe altele](%= 
 
 ## 7. Planificați-vă Ora de Programare
 
-Alegeți o [activitate Ora de Cod](https://hourofcode.com/learn) pentru clasa dvs. și[ revizuiți acest ghid](%= resolve_url('/how-to') %).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](%= resolve_url('/how-to') %).
 
 # Mergi mai departe de Ora Codului
 

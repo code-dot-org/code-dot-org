@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: <%= hoc_s(:title_signup_thanks).inspect %>
 layout: wide
 nav: how_to_nav
 social:
@@ -21,11 +21,6 @@ social:
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!
-
-Như một lời cảm ơn vì đã giúp thực hiện nó khả thi cho các bạn học sinh nhằm bắt đầu học về công nghệ máy tính, chúng tôi mong muốn gửi đến các bạn một bộ áp phích chuyên nghiệp miễn phí in sẵn có tính năng đa dạng mô hình cho lớp học của bạn. Sử dụng mã khuyến mãi **FREEPOSTERS** lúc thanh toán. (Lưu ý: điều này chỉ có sẵn trong khi nguồn cung cuối và bạn sẽ cần để chi trả cho phí vận chuyển. Kể từ khi những áp phích này giao từ Hoa Kỳ, phí vận chuyển có thể khá cao nếu giao đến Canada và quốc tế. Chúng tôi hiếu điều đó có thể không nằm trong ngân sách chi tiêu của bạn, và chúng tôi khuyến khích các bạn in [tệp tin PDF](https://code.org/inspire) cho lớp học của bạn.)  
-<br />[Nhận Áp phích</button>](https://store.code.org/products/code-org-posters-set-of-12) Sử dụng mã khuyến mại FREEPOSTERS
-
-<% if @country == 'us' %> Nhờ lòng hảo tâm của Ozobot, Dexter Industries, littleBits, và Wonder Workshop, hơn 100 lớp học sẽ được chọn để nhẫn rôbốt hoặc bảng mạch cho lớp của mình! Để biết điều kiện để nhận được một bộ, hãy chắc chắn đã hoàn thành các khảo sát được gửi từ Code.org sau Hour of Code. Code.org sẽ lựa chọn lớp học giành chiến thắng. Trong lúc đó, kiểm tra một vài robot và bảng mạch hoạt động. Xin chú ý rằng điều này chỉ mở cho các trường học ở Hoa Kỳ. <% end %>
 
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

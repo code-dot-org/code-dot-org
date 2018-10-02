@@ -45,7 +45,7 @@ class LevelsHelperTest < ActionView::TestCase
   test "non-custom level displays localized instruction after locale switch" do
     default_locale = 'en-US'
     new_locale = 'es-ES'
-    @level.instructions = nil
+    @level.short_instructions = nil
     @level.user_id = nil
     @level.level_num = '2_2'
 
@@ -66,7 +66,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal @level.instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['instructions']
   end
 
   test "custom level displays localized instruction if exists" do
@@ -75,13 +75,13 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = new_locale
     @level = Level.find_by_name 'frozen line'
     options = blockly_options
-    assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
+    assert_equal I18n.t("data.short_instructions.#{@level.name}", locale: new_locale), options[:level]['instructions']
 
     reset_view_options
 
-    @level.name = 'this_level_doesnt_exist'
+    @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
-    assert_equal @level.instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['instructions']
   end
 
   test "get video choices" do

@@ -82,8 +82,6 @@ en:
             '"x"': horizontal position
             '"y"': vertical position
             '"tint"': tint
-      Dancelab_comment:
-        text: 'comment: {COMMENT}'
       Dancelab_doMoveEachLR:
         text: "{GROUP} do {MOVE} {DIR} once"
         options:
@@ -235,8 +233,6 @@ en:
             '"grid"': grid
             '"row"': row
             '"column"': column
-      Dancelab_log:
-        text: log message {MESSAGE}
       Dancelab_makeNewDanceSprite:
         text: |-
           make a new {COSTUME}
@@ -391,19 +387,6 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us (90 sec)
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
-      Dancelab_whileKey:
-        text: while {KEY} pressed
-        options:
-          KEY:
-            '"up"': up
-            '"down"': down
-            '"left"': left
-            '"right"': right
-            '"space"': space
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_add:
         text: add {SPRITE} to group {THIS}
       gamelab_addBehaviorSimple:
@@ -461,6 +444,8 @@ en:
         text: edges block {SPRITE} from moving
       gamelab_enableDebug:
         text: enable debugging
+      gamelab_eval:
+        text: eval {CODE}
       gamelab_firstTouched:
         text: first touched sprite
       gamelab_forEachSpriteWithCostume:
@@ -782,9 +767,9 @@ en:
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       Mikelab_changeAnim:
-        text: "change sprite called {NAME} \n to costume {COSTUME}"
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
-        text: change {SPRITE} {PROPERTY} by {VAL}
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': size
@@ -795,14 +780,31 @@ en:
       Mikelab_checkAnim:
         text: "{SPRITE} is a {COSTUME}"
       Mikelab_createNewSprite:
-        text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
-      Mikelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
-          COSTUME:
-            '"costume"': costume
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_edgesDisplace:
+        text: edges block {SPRITE} from moving
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': size
@@ -810,14 +812,10 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
-            '"tint"': tint
       Mikelab_hasBehavior:
         text: "{SPRITE} is currently {BEHAVIOR}"
       Mikelab_isAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': costume
+        text: "{SPRITE}'s costume is {COSTUME}"
       Mikelab_locationAt:
         text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -825,9 +823,11 @@ en:
       Mikelab_randomColor:
         text: random color
       Mikelab_removeAllBehaviors:
-        text: sprite{SPRITE} stops everything
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} stops {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
       Mikelab_setBG:
         text: set background to {BG}
         options:
@@ -852,7 +852,7 @@ en:
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
-        text: set {SPRITE} {PROPERTY} to {VAL}
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': size
@@ -860,9 +860,8 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
-            '"tint"': tint
       Mikelab_setTint:
-        text: change color of {THIS} to {COLOR}
+        text: change color of {SPRITE} to {COLOR}
       Mikelab_showScoreboard:
         text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
@@ -908,9 +907,11 @@ en:
       Mikelab_whenMouseReleased:
         text: when mouse released
       Mikelab_whenTouchesAny:
-        text: when{TARGET} touches any sprite
+        text: when{SPRITE} touches any sprite
       Mikelab_whileClicked:
-        text: while {SPRITE} clicked
+        text: 'while clicking on{SPRITE}
+
+'
       Mikelab_whileKeyPressed:
         text: while {KEY} stays pressed
         options:
@@ -922,7 +923,7 @@ en:
             '"space"': spacebar
       Mikelab_whileTouchingAny:
         text: |-
-          while{TARGET} is touching any sprite
+          while{SPRITE} is touching any sprite
           {STATEMENT}
       Mikelab_worldSeconds:
         text: number of seconds
@@ -980,6 +981,8 @@ en:
         text: log message {MESSAGE}
       craft_moveForward:
         text: move forward
+      craft_placeBlock:
+        text: place prismarine
       craft_placeTorch:
         text: place torch
       craft_repeatUntilGoal:
