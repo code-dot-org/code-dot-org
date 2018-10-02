@@ -1105,14 +1105,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 'In Progress', @workshop.state
   end
 
-  test 'workshop organizers cannot unstart' do
-    sign_in @workshop_organizer
+  test 'program managers cannot unstart' do
+    sign_in @program_manager
     post :unstart, params: {id: @workshop.id}
     assert_response :forbidden
   end
 
-  test 'workshop organizers cannot reopen' do
-    sign_in @workshop_organizer
+  test 'program managers cannot reopen' do
+    sign_in @program_manager
     post :reopen, params: {id: @workshop.id}
     assert_response :forbidden
   end
