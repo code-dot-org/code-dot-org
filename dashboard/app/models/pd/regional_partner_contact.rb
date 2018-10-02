@@ -45,7 +45,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       Pd::RegionalPartnerContactMailer.unmatched(form, 'tawny@code.org').deliver_now
     end
 
-    Pd::RegionalPartnerContactMailer.receipt(form).deliver_now
+    Pd::RegionalPartnerContactMailer.receipt(form, regional_partner).deliver_now
   end
 
   def self.required_fields

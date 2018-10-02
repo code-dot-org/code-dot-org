@@ -26,13 +26,14 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     )
   end
 
-  def receipt(form)
+  # @param [Hash] form
+  # @param [RegionalPartner] regional_partner (can be nil if unmatched)
+  def receipt(form, regional_partner)
     @form = form
-    @interest = form[:role] == "Teacher" ? "professional learning program" : "administrator support"
-
+    @regional_partner = regional_partner
     mail(
       to: form[:email],
-      subject: "Thank you for contacting your Code.org Regional Partner"
+      subject: "Thank you for contacting your Code.org Regional Partner",
     )
   end
 end
