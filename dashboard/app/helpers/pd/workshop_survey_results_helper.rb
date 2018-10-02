@@ -185,6 +185,14 @@ module Pd::WorkshopSurveyResultsHelper
     workshop_summary = {}
     facilitator_map = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
+    # if the current user is a facilitator and not a program manager, workshop
+    # organizer, or workshop admin, only show them responses about themselves,
+    # not any other facilitator
+    show_only_user = current_user.facilitator? &&
+      !(current_user.program_manager? ||
+        current_user.workshop_organizer? ||
+        current_user.workshop_admin)
+
     # Each session has a general response section.
     # Some also have a facilitator response section
     questions.each do |session, response_sections|
@@ -209,7 +217,7 @@ module Pd::WorkshopSurveyResultsHelper
                 facilitator_responses[survey['facilitatorId'].to_i] = (facilitator_responses[survey['facilitatorId'].to_i] || []).append survey[q_key]
               end
 
-              if current_user&.facilitator?
+              if show_only_user
                 facilitator_responses.slice! current_user.id
               end
               session_summary[:facilitator][q_key] = facilitator_responses.transform_keys {|k| facilitator_map[k]}
@@ -231,7 +239,7 @@ module Pd::WorkshopSurveyResultsHelper
                 facilitator_responses[survey['facilitatorId'].to_i] = (facilitator_responses[survey['facilitatorId'].to_i] || []).append survey[q_key]
               end
 
-              if current_user&.facilitator?
+              if show_only_user
                 facilitator_responses.slice! current_user.id
               end
 
