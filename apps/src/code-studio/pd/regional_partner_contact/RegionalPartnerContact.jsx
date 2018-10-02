@@ -107,14 +107,6 @@ class RegionalPartnerContactComponent extends FormComponent {
           })
         }
         {
-          this.buildButtonsFromOptions({
-            name: 'program',
-            label: 'Which programs are you interested in?',
-            type: 'check',
-            required: false
-          })
-        }
-        {
           this.buildFieldGroup({
             name: 'notes',
             label: 'Notes for your local Regional Partner (ex: why you want to bring CS to your school/district, questions you have, etc.)',
@@ -146,4 +138,4 @@ class RegionalPartnerContactComponent extends FormComponent {
 }
 
 RegionalPartnerContactComponent.associatedFields =
-  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes', 'optIn'];
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'notes', 'optIn'];
