@@ -64,7 +64,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       {
         title: %w(Mr. Mrs. Ms. Dr.),
         role: ['Teacher', 'School Administrator', 'District Administrator'],
-        gradeLevels: ['High School', 'Middle School', 'Elementary School'],
+        gradeLevels: ['High School (9-12)', 'Middle School (6-8)', 'Elementary School (K-5)'],
         opt_in: ['Yes', 'No']
       }
     )
