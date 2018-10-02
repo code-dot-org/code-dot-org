@@ -79,7 +79,7 @@ class RegionalPartnerSearch extends Component {
 
   partnerIdSuccess = (response) => {
     if (response.error) {
-      this.setState({showZip: true, error: false, loading: false});
+      this.setState({showZip: true, loading: false});
     } else {
       this.setState({partnerInfo: response, loading: false});
     }

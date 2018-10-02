@@ -23,11 +23,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
   # GET /api/v1/regional_partners/show/:id
   def show
     partner_id = params[:partner_id]
-    begin
-      partner = RegionalPartner.find(partner_id)
-    rescue ActiveRecord::RecordNotFound
-      partner = nil
-    end
+    partner = RegionalPartner.find_by_id(partner_id)
 
     if partner
       render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
