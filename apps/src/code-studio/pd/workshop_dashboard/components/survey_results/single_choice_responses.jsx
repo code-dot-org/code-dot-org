@@ -35,6 +35,14 @@ export default class SingleChoiceResponses extends React.Component {
     }
   }
 
+  formatPercentage(percentage) {
+    return percentage.toLocaleString('en-US', {
+      style: 'percent',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+
   renderSingleAnswerCounts() {
     return this.props.possibleAnswers.map((possibleAnswer, i) => {
       let count = this.props.answers[this.getAnswerIndex(possibleAnswer, i)] || 0;
@@ -42,14 +50,7 @@ export default class SingleChoiceResponses extends React.Component {
       return (
         <tr key={i}>
           <td>
-            {
-              (count / this.getTotalAnswers())
-                .toLocaleString('en-US', {
-                  style: 'percent',
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2
-                })
-            }
+            {this.formatPercentage(count / this.getTotalAnswers())}
           </td>
           <td style={{paddingLeft: '20px'}}>
             {count}
@@ -93,14 +94,7 @@ export default class SingleChoiceResponses extends React.Component {
             {totalCount}
           </td>}
           <td style={{paddingLeft: '20px'}}>
-            {
-              (totalCount / this.getTotalAnswers())
-                .toLocaleString('en-US', {
-                  style: 'percent',
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2
-                })
-            }
+            {this.formatPercentage(totalCount / this.getTotalAnswers())}
           </td>
         </tr>
       );
@@ -133,14 +127,7 @@ export default class SingleChoiceResponses extends React.Component {
             this.props.otherText && (
               <tr>
                 <td>
-                  {
-                    (otherAnswers.length / this.getTotalAnswers())
-                      .toLocaleString('en-US', {
-                        style: 'percent',
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2
-                      })
-                  }
+                  {this.formatPercentage(otherAnswers.length / this.getTotalAnswers())}
                 </td>
                 <td style={{paddingLeft: '20px'}}>
                   {otherAnswers.length}
