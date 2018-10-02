@@ -4,7 +4,6 @@ import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import experiments from "@cdo/apps/util/experiments";
 import songLibrary from "../code-studio/songLibrary.json";
 import gamelabMsg from '@cdo/gamelab/locale';
 
@@ -49,9 +48,7 @@ export default class DanceVisualizationColumn extends React.Component {
     };
     return (
       <span>
-        {experiments.isEnabled("songSelector") &&
-          <SongSelector/>
-        }
+        <SongSelector/>
         <ProtectedVisualizationDiv>
           <div
             id="divDance"

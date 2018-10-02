@@ -786,7 +786,7 @@ GameLab.prototype.runButtonClick = function () {
   this.execute();
 
   //Log song count in Dance Lab
-  if (this.isDanceLab && experiments.isEnabled("songSelector")) {
+  if (this.isDanceLab) {
     const song = getStore().getState().selectedSong;
     trackEvent('HoC_Song', 'Play', song);
   }
