@@ -27,6 +27,7 @@
   %br
   %b Grade Levels:
   = "#{@form[:grade_levels].join(', ')}"
-  %br
+
+%p
   %b Message:
   = @form[:notes] ? "#{@form[:notes]}" : "None"
