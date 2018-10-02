@@ -66,36 +66,41 @@ export default class SingleChoiceResponses extends React.Component {
   renderPerFacilitatorAnswerCounts() {
     const facilitatorNames = Object.keys(this.props.answers);
     const showTotalCount = facilitatorNames.length > 1;
+    const totalCountsPerFacilitator = facilitatorNames.map(name => {
+        return Object.values(this.props.answers[name]).reduce((sum, count) => sum + count, 0);
+    });
 
     const headerRow = (
       <tr key="header">
         <td></td>
-        {facilitatorNames.map((name, i) => <td style={{paddingLeft: '20px'}} key={i}>{name}</td>)}
-        {showTotalCount && <td style={{paddingLeft: '20px'}}>Total Responses</td>}
-        <td style={{paddingLeft: '20px'}}>Total Percentage</td>
+        {facilitatorNames.map((name, i) => <td colSpan={2} style={{paddingLeft: '20px'}} key={i}>{name}</td>)}
+        {showTotalCount && <td colSpan={2} style={{paddingLeft: '20px'}}>Total Responses</td>}
       </tr>
     );
 
     const contentRows = this.props.possibleAnswers.map((possibleAnswer, i) => {
-      let countsByFacilitator = facilitatorNames.map(name => {
+      const countsByFacilitator = facilitatorNames.map(name => {
         return this.props.answers[name][this.getAnswerIndex(possibleAnswer, i)] || 0;
       });
-      let totalCount = countsByFacilitator.reduce((sum, count) => sum + count, 0);
+      const totalCount = countsByFacilitator.reduce((sum, count) => sum + count, 0);
 
       return (
         <tr key={i}>
           <td>{possibleAnswer}</td>
-          {countsByFacilitator.map((count, j) => (
-            <td style={{ paddingLeft: '20px' }} key={j}>
+          {countsByFacilitator.map((count, j) => ([
+            <td style={{ paddingLeft: '20px' }} key={`${j}.count`}>
               {count}
+            </td>,
+            <td style={{ paddingLeft: '4px' }} key ={`${j}.percentage`}>
+              {`(${this.formatPercentage(count / totalCountsPerFacilitator[j])})`}
             </td>
-          ))}
+          ]))}
           {showTotalCount && <td style={{paddingLeft: '20px'}}>
             {totalCount}
           </td>}
-          <td style={{paddingLeft: '20px'}}>
-            {this.formatPercentage(totalCount / this.getTotalAnswers())}
-          </td>
+          {showTotalCount && <td style={{ paddingLeft: '4px' }}>
+            {`(${this.formatPercentage(totalCount / this.getTotalAnswers())})`}
+          </td>}
         </tr>
       );
     });
