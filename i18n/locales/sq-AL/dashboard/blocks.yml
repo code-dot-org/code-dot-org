@@ -95,14 +95,6 @@ sq:
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': lart
-            '"down"': poshtë
-            '"left"': majtas
-            '"right"': djathtas
-            '"space"': hapësirë
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -182,6 +174,11 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
       Mikelab_getProp:
         options:
           PROPERTY:
