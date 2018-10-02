@@ -172,6 +172,10 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
   end
 
   test 'Job Title is not required' do
-    refute_includes RegionalPartnerContact.required_fields, :job_title
+    refute_includes Pd::RegionalPartnerContact.required_fields, :job_title
+  end
+
+  test 'Notes is required' do
+    assert_includes Pd::RegionalPartnerContact.required_fields, :notes
   end
 end
