@@ -36,7 +36,7 @@ Whether you are new to teaching computer science (CS) or have experience teachin
 
 [Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Interested in sharing details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
 
-<a href="https://staging.code.org/educate/professional-learning/program-information"><button>Apply now!</button>
+<a href="https://code.org/educate/professional-learning/program-information"><button>Apply now!</button>
 
 ## Find the right course for your classroom
 
