@@ -357,7 +357,7 @@ en:
       signin: 'Sign in'
       signup: 'Create an account'
       already_registered: 'Already registered?'
-      pair_programming: 'Pair Programming'
+      pair_programming: 'Pair programming'
       team: 'Team'
       driver: 'Logged in'
       navigator: 'Partner'

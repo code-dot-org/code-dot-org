@@ -4,6 +4,7 @@ import {WorkshopApplicationStates, WorkshopSearchErrors} from '@cdo/apps/generat
 import * as color from "../util/color";
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import queryString from 'query-string';
 import $ from 'jquery';
 
 const styles = {
@@ -40,15 +41,55 @@ class RegionalPartnerSearch extends Component {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
   };
 
-  state = {
-    partnerInfo: undefined,
-    stateValue: "",
-    zipValue: "",
-    error: false,
-    loading: false
+  constructor(props) {
+    super(props);
+
+    let showZip = true;
+    let error = false;
+    let loading = false;
+
+    const partnerId = queryString.parse(window.location.search).partner;
+
+    if (partnerId) {
+      if (partnerId === "0") {
+        showZip = false;
+        error = WorkshopSearchErrors.no_partner;
+      } else {
+        $.ajax({
+          url: "/dashboardapi/v1/regional_partners/show/" + partnerId,
+          type: "get",
+          dataType: "json",
+          jsonp: false
+        }).done(this.partnerIdSuccess).fail(this.partnerIdFail);
+
+        showZip = false;
+        loading = true;
+      }
+    }
+
+    this.state = {
+      showZip: showZip,
+      partnerInfo: undefined,
+      stateValue: "",
+      zipValue: "",
+      error: error,
+      loading: loading
+    };
+  }
+
+  partnerIdSuccess = (response) => {
+    if (response.error) {
+      this.setState({showZip: true, loading: false});
+    } else {
+      this.setState({partnerInfo: response, loading: false});
+    }
   };
 
-  workshopSuccess = (response) => {
+  partnerIdFail = (response) => {
+    this.setState({showZip: true, error: false, loading: false});
+  };
+
+  partnerZipSuccess = (response) => {
     if (response.error) {
       this.setState({error: response.error, loading: false});
     } else {
@@ -56,7 +97,7 @@ class RegionalPartnerSearch extends Component {
     }
   };
 
-  workshopZipFail = (response) => {
+  partnerZipFail = (response) => {
     this.setState({error: WorkshopSearchErrors.unknown, loading: false});
   };
 
@@ -70,8 +111,9 @@ class RegionalPartnerSearch extends Component {
     $.ajax({
       url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
       type: "get",
-      dataType: "json"
-    }).done(this.workshopSuccess).fail(this.workshopZipFail);
+      dataType: "json",
+      jsonp: false
+    }).done(this.partnerZipSuccess).fail(this.partnerZipFail);
 
     event.preventDefault();
   };
@@ -95,19 +137,21 @@ class RegionalPartnerSearch extends Component {
 
     return (
       <div>
-        <form onSubmit={this.handleZipSubmit}>
-          <label style={styles.schoolZipLabel}>School Zip Code:</label>
-          <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
-          <div style={styles.zipSubmit}>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
+        {this.state.showZip && (
+          <form onSubmit={this.handleZipSubmit}>
+            <label style={styles.schoolZipLabel}>School Zip Code:</label>
+            <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
+            <div style={styles.zipSubmit}>
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        )}
 
         {(this.state.error === WorkshopSearchErrors.no_partner || partnerInfo) && (
           <h3>Code.org Regional Partner for your region:</h3>
         )}
 
-        {this.state.error === WorkshopSearchErrors.no_state && (
+        {(this.state.error === WorkshopSearchErrors.no_state || this.state.error === WorkshopSearchErrors.unknown) && (
           <div style={styles.noState}>Please enter a 5 digit ZIP code.</div>
         )}
 
@@ -212,18 +256,10 @@ class RegionalPartnerSearch extends Component {
               <h3>Program information and the application for this region will be available soon!</h3>
             )}
 
-            {(appState === WorkshopApplicationStates.opening_at || appState === WorkshopApplicationStates.opening_sometime) && (
+            {appState !== WorkshopApplicationStates.currently_open && (
               <a href={studio("/pd/regional_partner_contact/new")}>
                 <button>
                   Notify me when I can apply
-                </button>
-              </a>
-            )}
-
-            {appState === WorkshopApplicationStates.now_closed && (
-              <a href={studio("/pd/regional_partner_contact/new")}>
-                <button>
-                  Tell me when applications open
                 </button>
               </a>
             )}
