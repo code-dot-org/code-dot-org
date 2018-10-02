@@ -69,7 +69,11 @@ module Pd::Application
     before_save :log_status, if: -> {status_changed?}
 
     def should_send_decision_email?
-      AUTO_EMAIL_STATUSES.include?(status)
+      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+        false
+      else
+        AUTO_EMAIL_STATUSES.include?(status)
+      end
     end
 
     def log_status
