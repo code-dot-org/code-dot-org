@@ -48,9 +48,7 @@ class HomeController < ApplicationController
     if current_user
       if current_user.student? && !account_takeover_in_progress? && current_user.most_recently_assigned_script
         if current_user.script_with_most_recent_progress &&
-          current_user.script_with_most_recent_progress != current_user.most_recently_assigned_script
-          redirect_to '/home'
-        else
+          (most_recent_progress_in_recently_assigned_script? || last_assignment_after_most_recent_progress?)
           redirect_to script_path(current_user.most_recently_assigned_script)
         end
       else
