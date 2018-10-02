@@ -17057,6 +17057,7 @@ en:
 
         1. ReadRecords for all records
         2. Way to loop through and count
+      CSP Loops: "# Changing *if* to *while*\n\n**How many times would we have to roll a die before it comes up as a 6?** In the program you're about to see, we **simulate rolling a die (generating a random number between 1 and 6)** in order to answer this question.\n\n# Do This:\n\n**Starter code** is provided which re-rolls a die once if the first roll is not a 6. \n* **Change the `if` statement to a `while` loop** so the program will keep rolling the die **while the current roll is not a 6.**\n\t* **Hint:** The easiest way to do this is to change the text from `if` to `while`.\n* Run the program to test out the change.\n    \n<img src=\"https://images.code.org/50b97e8858bf5ebf82eb1d358f875854-image-1446739013775.gif\" style=\"width: 350px; border: solid 1px black \">\n\n"
       CSP U4 - CreateRecord with JSON: |-
         Good news! we can also store objects in the easy way!
         Starting code is some kind of pre-composed object. And call to createRecord that shows using the javascript object as the the thing being stored.
@@ -21221,6 +21222,10 @@ en:
 
         ![](https://images.code.org/24b3411b056e5a4e4c40ac71cb116b9c-image-1536739103297.png)
       HOC 2018 Level_9b: The treasure map says Blue is Right but Red's not wrong. Could they be talking about the coral color?
+      HOC Dance 1 preload test: |-
+        Let's get this moose dancing! add the `"dancer1" do "Floss" forever` block onto the `after 4 measures` block to make it start flossing after the fourth measure.
+
+        **Measures** are used to count time in music. In this tutorial, a measure is four beats long.
       HOC Dance 1: |-
         Let's get this moose dancing! add the `"dancer1" do "Floss" forever` block onto the `after 4 measures` block to make it start flossing after the fourth measure.
 
