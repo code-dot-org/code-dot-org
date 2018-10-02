@@ -23,4 +23,16 @@ describe('RegionalPartnerContactTest', () => {
     const fieldGroup = wrapper.find('FieldGroup').filterWhere(c => c.prop('id') === 'jobTitle');
     expect(fieldGroup).to.have.prop('required', false);
   });
+
+  it('Notes is required', () => {
+    const wrapper = mount(
+      <RegionalPartnerContact
+        apiEndpoint={API_ENDPOINT}
+        options={OPTIONS}
+      />
+    );
+
+    const fieldGroup = wrapper.find('FieldGroup').filterWhere(c => c.prop('id') === 'notes');
+    expect(fieldGroup).to.have.prop('required', true);
+  });
 });

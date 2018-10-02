@@ -109,8 +109,9 @@ class RegionalPartnerContactComponent extends FormComponent {
         {
           this.buildFieldGroup({
             name: 'notes',
-            label: 'Notes for your local Regional Partner (ex: why you want to bring CS to your school/district, questions you have, etc.)',
-            componentClass: 'textarea'
+            label: 'Questions or notes for your local Regional Partner',
+            componentClass: 'textarea',
+            required: true
           })
         }
         {
