@@ -242,15 +242,24 @@ Dance.prototype.initInterpreter = function () {
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
     },
-    changeMoveLR: (spriteIndex, move, dir) => nativeAPI.changeMoveLR(sprites[spriteIndex], move, dir),
-    doMoveLR: (spriteIndex, move, dir) => nativeAPI.doMoveLR(sprites[spriteIndex], move, dir),
-    // TODO: ifDanceIs: function ifDanceIs(sprite, dance, ifStatement, elseStatement),
-
-    // changeMoveEachLR: function changeMoveEachLR(group, move, dir),
-    // doMoveEachLR: function doMoveEachLR(group, move, dir),
-    // layoutSprites: function layoutSprites(group, format),
-    // setTint: function setTint(sprite, val),
-
+    changeMoveLR: (spriteIndex, move, dir) => {
+      nativeAPI.changeMoveLR(sprites[spriteIndex], move, dir);
+    },
+    doMoveLR: (spriteIndex, move, dir) => {
+      nativeAPI.doMoveLR(sprites[spriteIndex], move, dir);
+    },
+    changeMoveEachLR: (group, move, dir) => {
+      nativeAPI.changeMoveEachLR(group, move, dir);
+    },
+    doMoveEachLR: (group, move, dir) => {
+      nativeAPI.doMoveEachLR(group, move, dir);
+    },
+    layoutSprites: (group, format) => {
+      nativeAPI.layoutSprites(group, format);
+    },
+    setTint: (spriteIndex, val) => {
+      nativeAPI.setTint(sprites[spriteIndex], val);
+    },
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);
     },
@@ -260,17 +269,14 @@ Dance.prototype.initInterpreter = function () {
     changePropBy: (spriteIndex, property, val) => {
       nativeAPI.changePropBy(sprites[spriteIndex], property, val);
     },
-    jumpTo: (sprite, location) => {
-      nativeAPI.jumpTo(sprite, location);
+    jumpTo: (spriteIndex, location) => {
+      nativeAPI.jumpTo(sprites[spriteIndex], location);
     },
-    setDanceSpeed: (sprite, speed) => {
-      nativeAPI.setDanceSpeed(sprite, speed);
+    setDanceSpeed: (spriteIndex, speed) => {
+      nativeAPI.setDanceSpeed(sprites[spriteIndex], speed);
     },
     getEnergy: range => {
       return Number(nativeAPI.getEnergy(range));
-    },
-    nMeasures: n => {
-      return Number(nativeAPI.nMeasures(n));
     },
     getTime: unit => {
       return Number(nativeAPI.getTime(unit));
@@ -281,6 +287,7 @@ Dance.prototype.initInterpreter = function () {
     stopMapping: (spriteIndex, property, val) => {
       return nativeAPI.stopMapping(sprites[spriteIndex], property, val);
     },
+    // TODO: ifDanceIs: function ifDanceIs(sprite, dance, ifStatement, elseStatement),
     changeColorBy: () => {}, // TODO: function changeColorBy(input, method, amount),
     mixColors: () => {}, // TODO: function mixColors(color1, color2),
     randomColor: () => {}, // TODO: function randomColor(),

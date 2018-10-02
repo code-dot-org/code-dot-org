@@ -32,6 +32,7 @@ var songs = {
   }
 };
 var song_meta = songs.hammer;
+var sprites = 'all'; // compat
 
 var MOVES = {
   Rest: 0,

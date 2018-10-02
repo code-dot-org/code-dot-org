@@ -302,39 +302,31 @@ exports.ifDanceIs = function ifDanceIs(sprite, dance, ifStatement, elseStatement
 
 // Group Blocks
 
-exports.changeMoveEachLR = function changeMoveEachLR(group, move, dir) {
-  if (typeof (group) == "string") {
-    if (!sprites_by_type.hasOwnProperty(group)) {
-      console.log("There is no group of " + group);
-      return;
+  function getGroupByName(group) {
+    if (group !== "all") {
+      if (!sprites_by_type.hasOwnProperty(group)) {
+        console.log("There is no group of " + group);
+        return;
+      }
+      return sprites_by_type[group];
     }
-    group = sprites_by_type[group];
+    return p5.allSprites;
   }
+
+exports.changeMoveEachLR = function changeMoveEachLR(group, move, dir) {
+  group = getGroupByName(group);
   group.forEach(function (sprite) {
     exports.changeMoveLR(sprite, move, dir);
   });
 }
 
 exports.doMoveEachLR = function doMoveEachLR(group, move, dir) {
-  if (typeof(group) == "string") {
-    if (!sprites_by_type.hasOwnProperty(group)) {
-      console.log("There is no group of " + group);
-      return;
-    }
-    group = sprites_by_type[group];
-  }
+  group = getGroupByName(group);
   group.forEach(function (sprite) { exports.doMoveLR(sprite, move, dir);});
 }
 
 exports.layoutSprites = function layoutSprites(group, format) {
-  if (typeof(group) == "string") {
-    if (!sprites_by_type.hasOwnProperty(group)) {
-      console.log("There is no group of " + group);
-      return;
-    }
-    group = sprites_by_type[group];
-    if (!group) return;
-  }
+  group = getGroupByName(group);
   var count = group.length;
   var sprite, i, j;
   if (format == "grid") {
