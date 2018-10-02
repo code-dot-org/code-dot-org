@@ -26,7 +26,7 @@ Feature: Using the teacher homepage sections feature
 
   Scenario: Navigate to course and unit pages
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet"
+    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
     And I create a new section
     Then the section table should have 2 rows
 
@@ -88,7 +88,7 @@ Feature: Using the teacher homepage sections feature
     And element ".uitest-sectionselect" has value ""
 
   Scenario: Assign hidden unit to section
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet"
+    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
     Then the section table should have 1 rows
     And I save the section id from row 0 of the section table
 
@@ -97,8 +97,8 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
 
     # Hide a unit from the section
-    When I hide unit "CSP Unit 2 - Digital Information"
-    And unit "CSP Unit 2 - Digital Information" is marked as not visible
+    When I hide unit "CSP Unit 2 - Digital Information ('17-'18)"
+    And unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as not visible
 
     # Verify hidden unit warning banner appears
     When I am on "http://studio.code.org/s/csp2-2017"
@@ -110,7 +110,7 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".ui-test-section-dropdown"
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 2 - Digital Information" option in dropdown "uitest-secondary-assignment"
+    And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
     Then I wait to see a dialog containing text "unit is currently hidden"
 
@@ -122,7 +122,7 @@ Feature: Using the teacher homepage sections feature
     # Verify the unit was unhidden
     When I am on "http://studio.code.org/courses/csp-2017"
     And I wait until element ".uitest-CourseScript" is visible
-    Then unit "CSP Unit 2 - Digital Information" is marked as visible
+    Then unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as visible
 
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
@@ -145,7 +145,7 @@ Feature: Using the teacher homepage sections feature
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet"
+    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet ('18-'19)"
     Then the section table should have 1 rows
 
     # save the older section id, from the last row of the table

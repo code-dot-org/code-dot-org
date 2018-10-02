@@ -30,6 +30,7 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
+import trackEvent from '../util/trackEvent';
 import {
   initializeSubmitHelper,
   onSubmitComplete
@@ -783,6 +784,12 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  //Log song count in Dance Lab
+  if (this.isDanceLab && experiments.isEnabled("songSelector")) {
+    const song = getStore().getState().selectedSong;
+    trackEvent('HoC_Song', 'Play', song);
+  }
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
