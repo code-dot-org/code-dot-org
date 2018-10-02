@@ -93,6 +93,10 @@ var songs = {
 };
 var song_meta = songs.hammer;
 
+exports.addCues = function (timestamps) {
+  console.log(timestamps);
+};
+
 exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
@@ -433,10 +437,6 @@ exports.getEnergy = function getEnergy(range) {
   } else {
     return Dance.fft.getEnergy(2700, 4000);
   }
-}
-
-exports.nMeasures = function nMeasures(n) {
-  return (240 * n) / song_meta.bpm;
 }
 
 exports.getTime = function getTime(unit) {

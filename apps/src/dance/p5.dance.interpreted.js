@@ -61,6 +61,16 @@ function nMeasures(n) {
   return (240 * n) / song_meta.bpm;
 }
 
+function getCueList() {
+  var timestamps = [];
+  for (var i = 0; i < inputEvents.length; i++) {
+    if (inputEvents[i].type === 'cue') {
+      timestamps.push(inputEvents[i].param);
+    }
+  }
+  return timestamps;
+}
+
 function registerSetup(callback) {
   setupCallbacks.push(callback);
 }
@@ -120,7 +130,7 @@ function atTimestamp(timestamp, unit, event) {
 }
 
 function everySeconds(n, unit, event) {
-  everySecondsRange(n, unit, start, song_meta.duration, event);
+  everySecondsRange(n, unit, start, song_meta.duration || 90, event);
 }
 
 function everySecondsRange(n, unit, start, stop, event) {

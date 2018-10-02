@@ -299,9 +299,12 @@ Dance.prototype.initInterpreter = function () {
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
     runUserEvents: {code: 'runUserEvents(events);', args: ['events']},
+    getCueList: {code: 'return getCueList();'},
   };
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
+  const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
+  nativeAPI.addCues(timestamps);
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     this.eventHandlers[eventName] = nativeAPI[eventName];
