@@ -1,25 +1,23 @@
 ---
-title: 2017 Champions for Computer Science Awards
+title: 2018 Champions for Computer Science Awards
 nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# 2017 Champions for Computer Science Awards
+# 2018 Champions for Computer Science Awards
 
-In celebration of the 2017 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to announce the inaugural Champions for Computer Science. From developing a wristband and app to help parents monitor their young children, to serving as a hub to expand computer science to rural communities statewide, these winners represent the students, teachers, schools, districts, and organizations on the forefront of the national computer science education movement.
+In celebration of the 2018 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to present the 2nd annual Champions of Computer Science Awards.
 
+Know of someone who’s achieved something outstanding in computer science education this past year? Tell us about it! Nominate a student, teacher, school, district, after-school club, organization, etc., to be recognized as a **2018 Champion of Computer Science**.
 
+Those selected will be awarded a trip to Seattle, WA to be recognized on stage at the kickoff of CSEdWeek. This opportunity is only available for US submissions.
 
-<figure style="margin:10px">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/80-tkIR6o5s?rel=0&amp;start=3137" frameborder="0" gesture="media" style="display:block;margin:0 auto" allow="encrypted-media" allowfullscreen></iframe>  
-    <figcaption style="text-align:center;font-style:italic;font-size:12px">Watch the presentation of the awards at the CSEdWeek Kickoff Event</figcaption>
-</figure>
+Please complete this form by **November 2nd** to nominate your Champion of Computer Science. Email awards@csteachers.org if you have questions.
+<br>
 
-Selected from a pool of nearly 1,000 nominees, the winners were presented with their awards at a special 2017 CSEdWeek kickoff event on December 4th featuring Peggy Johnson of Microsoft, Sheryl Sandberg of Facebook, and Susan Wojcicki of YouTube. Deborah Seehorn, Interim Executive Director of the CSTA said, "We are ecstatic to have such a tremendous response to the call for nominations. The selection committee had a difficult time choosing the winners from so many exemplary entries. These are people who are truly broadening participation in CS, advocating for CS, innovating, and making an impact in their community."
-
-"It is an honor to recognize the work these champions are doing in their local communities and to celebrate the achievements of the thousands like them around the country as part of this year's CSEdWeek," said Pat Yongpradit, Chief Academic Officer for Code.org. "We are all inspired by these champions."
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegubyumtMByf_hg8Wos2GoA3TnKHerRSkbRSPvz6b7d7Rq9A/viewform?embedded=true" width="640" height="1327" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 <div class="row">
   <div class="col-md-12">
@@ -28,6 +26,8 @@ Selected from a pool of nearly 1,000 nominees, the winners were presented with t
     <img src="/images/avatars/computer_science_teachers_association.jpg" width="50%" style="margin: 0 25%"> 
   </div>
 </div>
+<br>
+# Last Year's Winners
 
 ## Students
 
