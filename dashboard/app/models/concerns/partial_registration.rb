@@ -22,7 +22,6 @@ module PartialRegistration
           user.send("#{param}=", cache.read(cache_key)) if cache
         end
         yield user if block_given?
-        user.valid?
       end
     end
   end
