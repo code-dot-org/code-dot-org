@@ -51,7 +51,23 @@
     "instructions": "1. Switch to text mode and type instructions; 2. drag blocks out into text mode; 3. experiment with code completion",
     "start_blocks": "var score = 0;\r\nconsole.log(\"The value of score is: \");\r\nconsole.log(score);",
     "execute_palette_apis_only": "false",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-28 06:14:18 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2018-09-28 06:16:01 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

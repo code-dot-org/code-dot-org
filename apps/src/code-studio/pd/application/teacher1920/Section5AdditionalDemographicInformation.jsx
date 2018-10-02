@@ -22,7 +22,7 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
         </h3>
         {this.radioButtonsFor('genderIdentity')}
         {this.checkBoxesFor('race')}
-        {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
+        {this.checkBoxesWithAdditionalTextFieldsFor('howHeard', {
           [TextFields.otherWithText]: "other"
         }, {
           required: false

@@ -67,6 +67,10 @@ The Code.org Professional Learning Program is open to teachers who are intereste
 
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
 
+<br/>
+
+Our Regional Partners offer local workshops throughout the United States. Enter your location to find a workshop near you.
+
 <%= view :regional_partner_search %>
 
 <%= view :answerdash %>

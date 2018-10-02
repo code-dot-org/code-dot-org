@@ -297,6 +297,7 @@ function Effects(alpha, blend) {
     }
   };
   this.raining_tacos = {
+    emoji: "tacos",
     tacos: [],
     size: 50,
     init: function () {
@@ -321,7 +322,7 @@ function Effects(alpha, blend) {
         rotate(taco.rot);
         textAlign(CENTER, CENTER);
         textSize(this.size);
-        text('taco', 0, 0);
+        text(emoji, 0, 0);
         taco.y += taco.speed;
         taco.rot++;
         if (taco.y > 450) {
@@ -451,6 +452,9 @@ function makeNewDanceSprite(costume, name, location) {
   };
   sprite.setScale = function (scale) {
     sprite.scale = scale;
+  };
+  sprite.getScale = function () {
+    return sprite.scale * 100;
   };
   return sprite;
 }
@@ -1075,21 +1079,21 @@ function draw() {
         loop.loop();
       }
     }
+
+    drawSprites();
+
+    if (World.fg_effect != fg_effects.none) {
+      push();
+      blendMode(fg_effects.blend);
+      World.fg_effect.draw();
+      pop();
+    }
+
+    fill("black");
+    textStyle(BOLD);
+    textAlign(TOP, LEFT);
+    textSize(20);
+    text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+    /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
-
-  drawSprites();
-
-  if (World.fg_effect != fg_effects.none) {
-    push();
-    blendMode(fg_effects.blend);
-    World.fg_effect.draw();
-    pop();
-  }
-
-  fill("black");
-  textStyle(BOLD);
-  textAlign(TOP, LEFT);
-  textSize(20);
-  text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
-  /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
 }

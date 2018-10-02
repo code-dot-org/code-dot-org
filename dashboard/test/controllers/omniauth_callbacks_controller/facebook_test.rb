@@ -9,12 +9,11 @@ module OmniauthCallbacksControllerTests
     include OmniauthCallbacksControllerTests::Utils
 
     setup do
-      # Skip firehose logging for these tests, unless explicitly requested
-      FirehoseClient.instance.stubs(:put_record)
+      stub_firehose
     end
 
     test "student sign-up" do
-      mock_oauth
+      auth_hash = mock_oauth
 
       get '/users/sign_up'
       sign_in_through_facebook
@@ -22,21 +21,21 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
       assert_template partial: '_sign_up'
 
-      assert_creates(User) {finish_sign_up User::TYPE_STUDENT}
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_student created_user, expected_email: @auth_hash.info.email
-      assert_credentials @auth_hash, created_user
+      assert_valid_student created_user, expected_email: auth_hash.info.email
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "teacher sign-up" do
-      mock_oauth
+      auth_hash = mock_oauth
 
       get '/users/sign_up'
       sign_in_through_facebook
@@ -44,21 +43,21 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
       assert_template partial: '_sign_up'
 
-      assert_creates(User) {finish_sign_up User::TYPE_TEACHER}
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
       assert_redirected_to '/home'
       assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
 
       created_user = User.find signed_in_user_id
-      assert_valid_teacher created_user, expected_email: @auth_hash.info.email
-      assert_credentials @auth_hash, created_user
+      assert_valid_teacher created_user, expected_email: auth_hash.info.email
+      assert_credentials auth_hash, created_user
     ensure
       created_user&.destroy!
     end
 
     test "student sign-in" do
-      mock_oauth
+      auth_hash = mock_oauth
 
-      student = create(:student, :unmigrated_facebook_sso, uid: @auth_hash.uid)
+      student = create(:student, :unmigrated_facebook_sso, uid: auth_hash.uid)
 
       get '/users/sign_in'
       sign_in_through_facebook
@@ -69,13 +68,13 @@ module OmniauthCallbacksControllerTests
 
       assert_equal student.id, signed_in_user_id
       student.reload
-      assert_credentials @auth_hash, student
+      assert_credentials auth_hash, student
     end
 
     test "teacher sign-in" do
-      mock_oauth
+      auth_hash = mock_oauth
 
-      teacher = create(:teacher, :unmigrated_facebook_sso, uid: @auth_hash.uid)
+      teacher = create(:teacher, :unmigrated_facebook_sso, uid: auth_hash.uid)
 
       get '/users/sign_in'
       sign_in_through_facebook
@@ -84,7 +83,7 @@ module OmniauthCallbacksControllerTests
 
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
-      assert_credentials @auth_hash, teacher
+      assert_credentials auth_hash, teacher
     end
 
     private
