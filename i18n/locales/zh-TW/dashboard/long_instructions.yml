@@ -211,10 +211,10 @@ zh-TW:
         \r
         用`如果…否則`積木，如果是花的話就採集花蜜，\r
         否則，就釀造蜂蜜。
-      4-5 Bee Conditionals 6: "我不確定這朵花裡有多少花蜜，也許是 1 或 2 或 3 個。\\r\n\\r\n組合這些條件判斷積木（`如果`和`如果…否則`）來取得花朵中實際的花蜜數。\n\\r\n\\r\n記住，花蜜的數量會在你每次運行之後改變！"
+      4-5 Bee Conditionals 6: "我不確定這朵花裡有多少花蜜，也許是 1 或 2 或 3 個。\\r\n\\r\n組合這個條件判斷積木（`如果`和`如果…否則`）來取得花朵中實際的花蜜數。\n\\r\n\\r\n記住，花蜜的數量會在你每次運行之後改變！"
       4-5 Bee Conditionals 7: "這些花朵上可能有 3、2 或 1 個花蜜。\\r\n\\r\n完成 `check purple flower`（檢查紫花）這個函式，並使用它來收集花朵上的所有花蜜。"
       4-5 Bee Conditionals 8: "寫個 `check flower make honey`（檢查花朵釀造蜂蜜）的函式。\\r\n\\r\n你的函式應該要檢查紫花裡有多少的花蜜（1-3 不等）並採集起來。\\r\n然後，再向前移動釀造蜂蜜。"
-      4-5 Bee Conditionals Assessment 1: "**評量：**雲朵中可能隱藏著帶有花蜜的花朵，或是可裝蜂蜜的蜂窩。\\r\n\\r\n完成這個 `get nectar or make honey` （採到花蜜或釀成蜂蜜）的函式，然後呼叫它來收集花蜜或蜂蜜。\\r\n"
+      4-5 Bee Conditionals Assessment 1: "**評量：**雲朵中可能隱藏著帶有花蜜的花朵，或是可裝蜂蜜的蜂窩。\\r\n\\r\n完成這個`get nectar or make honey`的函式，然後調用它來收集花蜜或蜂蜜。（註：get nectar or make honey 是採到花蜜或釀成蜂蜜的意思）\\r\n"
       4-5 Bee Debugging 1: "這些積木真是讓我一陣錯亂！\\r\n\\r\n你可以修正它們嗎？"
       4-5 Bee Debugging 6: "在你每次運行時，紫色的花朵都會有不同數量的花蜜。\\r\n\\r\n修正這個程式以在每次運行時都能採集到花朵上的所有花蜜。"
       4-5 Bee Debugging Assessment 1: "**評量：**修正程式碼。"
@@ -772,7 +772,7 @@ zh-TW:
       LaurelDebugging4Video1: |-
         這是冒險家 Laurel！\r
         \r
-        讓她四處移動，並盡可能獲得最多的黃金。
+        讓她四處移動，並盡可能獲得最多的寶石。
       MC Agent Freeplay: "**自由遊戲：**現在，就看您的表現了！使用 Agent 的代碼來探索這個世界。"
       MC_HOC_2017 Agent Test: "按一下「執行」，即可使用**箭頭按鍵**移動玩家。 \n\n\n若要完成此關卡，您將必須到門的位置並開門 (使用**空白鍵**)，這樣您就可前往門內的橙色方塊。"
       MC_HOC_2017_01: "按一下「執行」，即可使用**箭頭按鍵**移動玩家。 \n\n\n若要完成此關卡，您將必須到門的位置並開門 (使用**空白鍵**)，這樣您就可前往門內的橙色方塊。"
@@ -1257,25 +1257,25 @@ zh-TW:
       courseA_collector_loops1: |-
         這是冒險家 Laurel！\r
         \r
-        讓她四處移動，並盡可能獲得最多的黃金。
+        讓她四處移動，並盡可能獲得最多的寶石。
       courseA_collector_loops1_2018: |-
         這是冒險家 Laurel！\r
         \r
-        讓她四處移動，並盡可能獲得最多的黃金。
+        讓她四處移動，並盡可能獲得最多的寶石。
       courseA_collector_loops2: |-
-        移動 Laurel 到黃金那兒，然後使用`收集`積來把它撿起來。\r
+        移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
-        收集 3 堆黃金以完成這個關卡。
+        收集 3 堆寶石以完成這個關卡。
       courseA_collector_loops2_2018: |-
-        移動 Laurel 到黃金那兒，然後使用`收集`積來把它撿起來。\r
+        移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
-        收集 3 堆黃金以完成這個關卡。
+        收集 3 堆寶石以完成這個關卡。
       courseA_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_preLoops7: |-
-        移動 Laurel 到黃金那兒，然後使用`收集`積來把它撿起來。\r
+        移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
-        收集 3 堆黃金以完成這個關卡。
+        收集 3 堆寶石以完成這個關卡。
       courseA_maze_ramp3_2018: "*「這隻豬真的把我惹毛了！」*\\r\n\\r\n有個積木會讓鳥崩潰，把它移除掉（拖曳回工具箱）。\\r"
       courseA_maze_ramp4_2018: "*「順著路徑讓我抓到那隻蠢豬。」\\r\n\\r\n當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！"
       courseA_maze_ramp5_2018: |-
@@ -1442,20 +1442,28 @@ zh-TW:
       courseB_collector_loops1: |-
         這是冒險家 Laurel！\r
         \r
-        讓她四處移動，並盡可能獲得最多的黃金。
-      courseB_collector_loops1_2018: "這是冒險家 Laurel！\\r\n\\r\n讓她四處移動，並盡可能獲得最多的黃金。"
+        讓她四處移動，並盡可能獲得最多的寶石。
+      courseB_collector_loops1_2018: "這是冒險家 Laurel！\\r\n\\r\n讓她四處移動，並盡可能獲得最多的寶石。"
       courseB_collector_loops2: |-
-        移動 Laurel 到黃金那兒，然後使用`收集`積來把它撿起來。\r
+        移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
-        收集 4 堆黃金以完成這個關卡。
+        收集 4 堆寶石以完成這個關卡。
       courseB_collector_loops2_2018: |-
-        移動 Laurel 到黃金那兒，然後使用`收集`積來把它撿起來。\r
+        移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
-        收集 4 堆黃金以完成這個關卡。
+        收集 4 堆寶石以完成這個關卡。
       courseB_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops3_predict1: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
-      courseB_collector_prog3: Laurel 要怎麼只使用一個「向東」積木收集所有的 5 堆黃金？
+      courseB_collector_loops_challenge2a: |-
+        *快拿到那些寶石！*
+        
+        幫 Laurel 拿到至少 **5** 塊寶石才能過關。
+      courseB_collector_loops_challenge2a_2018: |-
+        *快拿到那些寶石！*
+        
+        幫 Laurel 拿到至少 **5** 塊寶石才能過關。
+      courseB_collector_prog3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_maze_seq3: '*「修正這個程式，使我抓到這頭豬！」*'
       courseB_maze_seq9: "**挑戰：**繞開 TNT 炸蘗，讓鳥能夠抓到豬！"
       courseB_maze_seq9_challenge1: "*那隻豬現在藏在哪裡？*"
@@ -1464,6 +1472,7 @@ zh-TW:
       courseC_collector_prog8_2018: '*「就是這樣！繼續幫助我收集所有的硬幣。」*'
       courseC_collector_prog9: '*「讓我們獲得所有的硬幣！」*'
       courseC_collector_prog9_2018: '*「讓我們獲得所有的硬幣！」*'
+      courseC_collector_progA: 幫 Laurel 收集到所有寶石。
       courseC_harvester_loops_challenge1: 收集所有的玉米。
       courseC_harvester_loops_challenge2: "收集所有的生菜。\n注意避開樹木和田地！"
       courseC_harvester_loops_challenge2_2018: "收集所有的生菜。\n注意避開樹木和田地！"
@@ -1545,9 +1554,9 @@ zh-TW:
       courseD_farmer_condLoops9_predict1_2018: 收集所有的玉米和生菜，然後收成南瓜。
       courseD_farmer_conditionals1: "*「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」*\\r\n\\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
       courseD_farmer_conditionals4: |-
-        *「我不知道這堆土裡有多少污泥」*\r
+        *「我不知道這堆土裡有多少污泥！」*\r
         \r
-        使用「當…時」迴圈，幫助農夫移除全部的土堆。
+        使用`當…時`迴圈，幫助農夫移除全部的土堆。
       courseD_farmer_conditionals8: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_farmer_while1: "*「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」*\\r\n\\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
       courseD_farmer_while1_2018: "*「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」*\\r\n\\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
@@ -1877,8 +1886,12 @@ zh-TW:
         看起來Ｃ被畫反了！\r
         \r
         你可以將它改正嗎？
+      grade2_collector_2: 讓 Laurel  移動到寶石處，然後用「採集」積木把它撿起來。
       grade2_collector_9: '*「讓我們獲得所有的硬幣！」*'
       grade2_collector_9a: "**挑戰：**拿到所有的硬幣。"
+      grade2_collector_A: 幫 Laurel 收集到所有寶石。
+      grade2_collector_A_2018: 幫 Laurel 收集到所有寶石。
+      grade2_collector_pre1: "*「哈囉，我是 Laurel。我正在狗狗公園找寶石！」*  \n\n利用這些程式積木，看看你能不能幫 Laurel 收集到寶石。"
       grade2_link_RunMarco_partner: "<a href=\"https://www.allcancode.com/runmarco\"></a><img\nsrc=\"https://images.code.org/c754e82a395ab69e5c1e3b2dfe8bf9ff-image-1486603338831.22.10.png\"\nwidth=\"400px\"/></a>"
       grade2_maze_debuggingFP: '*「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」*'
       grade2_puppy_loops2: |-
