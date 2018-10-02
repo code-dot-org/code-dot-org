@@ -5,7 +5,6 @@ import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {assetButtonStyles} from "./AddAssetButtonRow";
 import {AudioErrorType} from "./AssetManager";
 import firehoseClient from "@cdo/apps/lib/util/firehose";
-import experiments from "@cdo/apps/util/experiments";
 
 const styles = {
   buttonRow: {
@@ -107,12 +106,11 @@ export default class AudioRecorder extends React.Component {
   };
 
   startRecording = () => {
-    const studyGroup = this.props.imagePicker ? 'manage-assets' :
-      (experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab');
+    const studyGroup = this.props.imagePicker ? 'manage-assets' : 'library-tab';
     this.recorder.start();
     firehoseClient.putRecord(
       {
-        study: 'sound-dialog-1',
+        study: 'sound-dialog-2',
         study_group: studyGroup,
         event: 'record-sound',
         data_json: this.state.audioName,
