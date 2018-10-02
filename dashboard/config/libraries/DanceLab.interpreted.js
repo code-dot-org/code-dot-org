@@ -129,9 +129,9 @@ function setup() {
     callback();
   });
 
-  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / Dance.song.bpm()) * World.frameRate));
-  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / Dance.song.bpm()) * World.frameRate));
-  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / Dance.song.bpm()) * World.frameRate));
+  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / Dance.song.songData().bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / Dance.song.songData().bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / Dance.song.songData().bpm) * World.frameRate));
   /*
   Dance.song.processPeaks(0, function(peaks) {
     console.log(peaks);
@@ -373,7 +373,7 @@ function makeNewDanceSprite(costume, name, location) {
   addBehavior(sprite, function () {
     var delta = 1 / (frameRate() + 0.01) * 1000;
     sprite.sinceLastFrame += delta;
-    var msPerBeat = 60 * 1000 / (Dance.song.bpm() * (sprite.dance_speed / 2));
+    var msPerBeat = 60 * 1000 / (Dance.song.songData().bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
@@ -636,12 +636,12 @@ function getEnergy(range) {
 }
 
 function nMeasures(n) {
-  return (240 * n) / Dance.song.bpm();
+  return (240 * n) / Dance.song.songData().bpm;
 }
 
 function getTime(unit) {
   if (unit == "measures") {
-    return Dance.song.bpm() * (Dance.song.currentTime(0) / 240);
+    return Dance.song.songData().bpm * (Dance.song.currentTime(0) / 240);
   } else {
     return Dance.song.currentTime(0);
   }
@@ -653,7 +653,7 @@ function atTimestamp(timestamp, unit, event) {
   registerSetup(function () {
     if (unit == "measures") {
       timestamp = nMeasures(timestamp);
-      timestamp += Dance.song.delay();
+      timestamp += Dance.song.songData().delay;
     }
     Dance.song.addCue(0, timestamp, event);
   });
@@ -663,7 +663,7 @@ function everySeconds(n, unit, event) {
   registerSetup(function () {
     if (unit == "measures") n = nMeasures(n);
     if (n > 0) {
-      var timestamp = Dance.song.delay();
+      var timestamp = Dance.song.songData().delay;
       while (timestamp < Dance.song.duration()) {
         Dance.song.addCue(0, timestamp, event);
         timestamp += n;
@@ -686,10 +686,16 @@ function everySecondsRange(n, start, stop, event) {
 }
 
 function everyVerseChorus(unit, event) {
-  registerSetup(function() {
-    song_meta[unit].forEach(function(timestamp){
-      Dance.song.addCue(0, timestamp, event);
-    });
+  registerSetup(function(){
+    if(unit === 'verse'){
+      Dance.song.songData().verse.forEach(function(timestamp){
+        Dance.song.addCue(0, timestamp, event);
+	  });
+    } else {
+	  Dance.song.songData().chorus.forEach(function(timestamp){
+        Dance.song.addCue(0, timestamp, event);
+      });
+    }
   });
 }
 
@@ -1060,7 +1066,7 @@ function draw() {
     textStyle(BOLD);
     textAlign(TOP, LEFT);
     textSize(20);
-    text("Measure: " + (Math.floor(((Dance.song.currentTime() - Dance.song.delay()) * Dance.song.bpm()) / 240) + 1), 10, 20);
+    text("Measure: " + (Math.floor(((Dance.song.currentTime() - Dance.song.songData().delay) * Dance.song.songData().bpm) / 240) + 1), 10, 20);
     /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
 }
