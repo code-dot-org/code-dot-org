@@ -39,10 +39,12 @@ export default function Sound(config, audioContext) {
  * @param {number} [options.volume] default 1.0, which is "no change"
  * @param {boolean} [options.loop] default false
  * @param {function} [options.onEnded]
+ * @param {function} [options.callback]
  */
 Sound.prototype.play = function (options) {
   options = options || {};
   if (!this.audioElement && !this.reusableBuffer) {
+    this.handlePlayFailed(options);
     return;
   }
 
@@ -63,12 +65,13 @@ Sound.prototype.play = function (options) {
     } else {
       this.playableBuffer.noteOn(0);
     }
-    this.isPlaying_ = true;
+    this.handlePlayStarted(options);
     return;
   }
 
   if (!this.config.allowHTML5Mobile && isMobile()) {
     // Don't play HTML 5 audio on mobile
+    this.handlePlayFailed(options);
     return;
   }
 
@@ -89,7 +92,20 @@ Sound.prototype.play = function (options) {
   this.audioElement.addEventListener('ended', unregisterAndCallback);
   this.audioElement.addEventListener('pause', unregisterAndCallback);
   this.audioElement.play();
+  this.handlePlayStarted(options);
+};
+
+Sound.prototype.handlePlayFailed = function (options) {
+  if (options.callback) {
+    options.callback(false);
+  }
+};
+
+Sound.prototype.handlePlayStarted = function (options) {
   this.isPlaying_ = true;
+  if (options.callback) {
+    options.callback(true);
+  }
 };
 
 Sound.prototype.stop = function () {
