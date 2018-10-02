@@ -218,7 +218,7 @@ class Game < ActiveRecord::Base
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, SCRATCH, DANCE, PIXELATION].include? app
+    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION].include? app
   end
 
   # Format: name:app:intro_video
