@@ -233,6 +233,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
+  test 'capacity returns nil for non workshop admin with no regional partners' do
+    sign_in create(:admin)
+
+    get :capacity, params: {role: 'csd_teachers', regional_partner_value: 'all'}
+    assert_response :success
+    assert_nil JSON.parse(@response.body)['capacity']
+  end
+
   test 'show regional partner summer workshops for valid partner ID' do
     regional_partner = create :regional_partner_beverly_hills
 

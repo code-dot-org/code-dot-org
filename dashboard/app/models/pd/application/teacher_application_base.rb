@@ -65,7 +65,7 @@ module Pd::Application
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
 
     VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
-    validates_uniqueness_of :user_id
+
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
