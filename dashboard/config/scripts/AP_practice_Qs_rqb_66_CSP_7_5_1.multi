@@ -1,0 +1,9 @@
+name 'AP_practice_Qs_rqb_66_CSP_7_5_1'
+type 'multi2'
+wrong 'A student copies and pastes an analysis of a poem from another person's literary review site into her own paper and submits it as her own.'
+wrong 'A student changes the tense of a written piece from first person to second person and submits it as his own work.'
+right 'A student uses a complicated idea from a source in her paper and gives attribution.'
+right 'A student refers to the fact that Washington D.C. is the capitol of the United States, without providing a citation.'
+markdown <<MARKDOWN
+Which of the following is NOT an example of plagiarism? (CHOOSE TWO)
+MARKDOWN
