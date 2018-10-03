@@ -178,7 +178,7 @@ nl:
       2-3 Bee Loops 9: De 'while' lus kan dezelfde acties uitvoeren als een als-instructie in een lus. Voeg een een 'while' lus toe aan deze code om de dezelfde taak uit te voeren.
       2-3 Bee Loops Assessment 1: 'Proef - Gebruik een ''while'' lus voor het verzamelen van alle nectar van deze bloem.'
       2-3 Maze 1: 'Kun je me helpen het ondeugende biggetje te pakken? Plak een paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij te laten komen. '
-      2-3 Maze 10: Breng me naar de groene naarling! (Pas op voor dynamiet)
+      2-3 Maze 10: Breng me naar de groene slechterik! (Pas op voor TNT)
       2-3 Maze 11: Breng me naar de bloem, ik heb honger! Hoeveel keer heb je het blok herhaald?
       2-3 Maze 12 (copy 1): "Kun je het vorige antwoord vervangen door eentje \nmet maar twee blokken? (Hint: Maak een lus door een \"herhaal x keer\" \nblok te gebruiken.)"
       2-3 Maze 12 (copy 2): "Kun je het vorige antwoord vervangen door eentje \nmet maar twee blokken? (Hint: Maak een lus door een \"herhaal x keer\" \nblok te gebruiken.)"
@@ -196,12 +196,12 @@ nl:
       2-3 Maze 16: Breng me naar de zonnebloem. Gebruik een lus!
       2-3 Maze 2: Het biggetje werkt me op mijn zenuwen. Help me bij hem te komen!
       2-3 Maze 3: "Overtrek het pad en leid me naar het zotte zwijntje.\nVermijd TNT of de veren zullen eraf vliegen!"
-      2-3 Maze 4: Breng me naar de groene naarling! (Pas op voor dynamiet)
-      2-3 Maze 5: Breng me naar de groene naarling! (Pas op voor dynamiet)
+      2-3 Maze 4: Breng me naar de groene slechterik! (Pas op voor TNT)
+      2-3 Maze 5: Breng me naar de groene slechterik! (Pas op voor TNT)
       2-3 Maze 6: Rustig blijven, help me het slechte biggetje te vinden. Anders word ik misschien nog boos!
-      2-3 Maze 7: Breng me naar de groene naarling! (Pas op voor dynamiet)
+      2-3 Maze 7: Breng me naar de groene slechterik! (Pas op voor TNT)
       2-3 Maze 8: Breng me naar het varken!
-      2-3 Maze 9: Breng me naar de groene naarling! (Pas op voor dynamiet)
+      2-3 Maze 9: Breng me naar de groene slechterik! (Pas op voor TNT)
       2-3 Maze Loops 1: Kun je bij het varken brengen met 5 blokken?
       2-3 Maze Loops 17: Help me tot bij de zonnebloem!
       2-3 Maze Loops 18: "Help me tot bij de zonnebloem!"
@@ -212,7 +212,7 @@ nl:
       2-3 Maze sq10: Breng me naar het varken! Welke blokken werden herhaald?
       2-3 Maze sq10v2: Breng me naar het varken! Welke blokken werden herhaald?
       2-3 Maze sq2: "Volg het pad en breng me naar het malle varken. Vermijd de\nTNT, want anders zullen de veren in het rond vliegen!"
-      2-3 Maze sq3: Breng me naar de groene naarling! (Pas op voor dynamiet)
+      2-3 Maze sq3: Breng me naar de groene slechterik! (Pas op voor TNT)
       2-3 Maze sq4: Rustig blijven, help me het slechte biggetje te vinden. Anders word ik misschien nog boos!
       2-3 Maze sq5: "Breng me naar het varken? Hoe vaak dien je een blok\nte herhalen?"
       2-3 Maze sq6: "Kun je het vorige antwoord vervangen door eentje \nmet maar twee blokken? (Hint: Maak een lus door een \"herhaal x keer\" \nblok te gebruiken.)"
@@ -429,7 +429,7 @@ nl:
       Artist Autorun Test: Plaats de functie nu in de herhaling om deze 3 vierkanten te tekenen.
       Artist Inspiration: "Vrij spel inspiratie. Je hebt alles geleerd dat je nodig hebt om een patroon als dit te maken! Als dit je inspireert, probeer dan ook zoiets te maken. Of bedenk zelf iets heel anders.\\r\n\\r\nWil je weten hoe wij ons patroon hebben gemaakt? "
       Auto Open Function Editor: "In een functie kun je andere functies aanroepen!\nGebruik je \"vorm\" functie als basis, maak 3 huizen. Ek volgende huis moet 20 pixels groter zijn.\nHet eerste huis moet 50 pixels zijn.\nTip: een for-lus kan handig zijn. "
-      Bee Recommended Blocks test: Paarse bloemen hebben 1 of 0 nectar, maar je weet niet welke. Je moet alleen nectar verzamelen als dat er is. Controleer of de nectar gelijk is aan 1 met een "als blok".
+      Bee Recommended Blocks test: Paarse bloemen hebben 1 of 0 nektar, maar je weet niet welke. Zorg dat je geen nektar van een paarse bloem haalt, als die geen nektar heeft. Controleer of de nektar gelijk is aan 1 met een "als blok".
       Bergeron Robot Maze1: 'Kun je me helpen het ondeugende biggetje te pakken? Plak een paar "vooruit" blokken op elkaar en klik op "Uitvoeren" om me erbij te laten komen. '
       Brad Spooky House Copy: 'Vrij spelen: hier zijn de functies die je hebt geschreven, en ook nog wat extra om mee te spelen. Teken iets geweldigs! Speel met de pen breedte en kijk wat je daarmee kan doen!'
       Brad Spooky House: 'Vrij spelen: hier zijn de functies die je hebt geschreven, en ook nog wat extra om mee te spelen. Teken iets geweldigs! Speel met de pen breedte en kijk wat je daarmee kan doen!'
@@ -1136,8 +1136,8 @@ nl:
       SG U3L08 - fish: Voeg een parameter toe aan drawFish dat de grootte van de getekende vis wijzigt. (Klik voor volledige instructies)
       SG U3L08 - freePlay: Blijf dingen toevoegen aan je afbeelding door je nieuwe functies meermaals aan te roepen met parameters. (Klik voor volledige instructies)
       SG U3L08 - introUnderTheSea - recovery: Voeg een extra vis, zeevis, en stuk zeegras toe aan de afbeelding. Bekijk de functies de ze creëert, maar verander ze niet. (Klik om de volledige instructies te zien)
-      SG U3L08 - introUnderTheSea: Voeg een extra vis, zeevis en stukje zeegras toe aan de afbeelding. Bekijk de functies die hen creëert, maar verander ze niet. (Klik voor volledige instructies)
-      SG U3L08 - randomInput: Gebruik randomNumber() blokken om de functies te testen die je ontworpen hebt met willekeurige invoer. (Klik voor volledige instructies)
+      SG U3L08 - introUnderTheSea: Voeg een extra vis, zeevis, en stuk zeegras toe aan de afbeelding. Bekijk de functies de ze creëert, maar verander ze niet. (Klik om de volledige instructies te zien)
+      SG U3L08 - randomInput: Gebruik randomNumber() blokken om de functies te testen die je ontworpen hebt met willekeurige invoer. (Klik om volledige instructies te zien)
       SG U3L08 - squareTwoParams: Roep drawSquare() aan om de tekening van twee vierkanten te vervolledigen. (Klik om volledige instructies te zien)
       SG U3L08 comments: Gebruik randomNumber() blokken om de functies te testen die je ontworpen hebt met willekeurige invoer. (Klik om volledige instructies te zien)
       SG U3L08 how to add comments: Gebruik randomNumber() blokken om de functies te testen die je ontworpen hebt met willekeurige invoer. (Klik om volledige instructies te zien)
@@ -1241,10 +1241,10 @@ nl:
       Underground Iron_2018: Het is niet slim om in gesmolten lava te lopen. Plaats keien om een brug te maken. Delf vervolgens minstens twee blokken ijzer.
       Underground Mining Coal: De kostbaarste grondstoffen vind je onder de grond, maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken steenkool.
       Underground Mining Coal_2018: De kostbaarste grondstoffen vind je onder de grond, maar daar is het donker. Plaats minstens 2 fakkels en delf minstens 2 blokken steenkool.
-      aE7: "Als je deze lus kopieert en naar links draait in plaats van naar rechts, wat gebeurt er dan? Kun je dit herhalen om deze golf te tekenen?"
-      aE8: "Laten we het geheel vier keer herhalen om deze fotolijst te maken. Kijk uit voor de hoeken - je kunt niet enkel 90 graden draaien! Als 60 keer herhalen van een 3 graden draai een halve cirkel maakt, welke van deze blokken van code maakt dan een kwart cirkel voor de hoeken?"
+      aE7: "Wat gebeurt er als je een andere herhaling maakt zoals deze, maar links draait in plaats van rechts? \\r \n\\r\nKan je dit allemaal herhalen om deze golf te tekenen?"
+      aE8: "Laat ons nu het geheel 4 keer herhalen om deze fotokader te creëren. Let op voor de hoeken - je kan enkel 90 graden draaien! \\r \n\\r\nAls een herhaling van 60 keer een 3 graden draai maakt voor een halve cirkel, welke van deze codeblokken zal dan een bijkomend kwart van een cirkel aanmaken voor deze hoeken?"
       allHallows2017: Vang de Code.org werknemers in het potlodendoosje door een vierkant met zijde van 320 pixels te tekenen!
-      artistDebugVideo1: Gebruik de `herhaal` lus om golven toe te voegen aan het water.
+      artistDebugVideo1: Gebruik de 'herhaal` lus om golven aan het water toe te voegen.
       artistFunctionsVideo1: Volg de instructies om je eigen functie te maken.
       beeDebugVideo1: Gebruik een `herhaal` lust om alle nectar te verzamelen.
       birdsDebugVideo1: "Overtrek het pad en leid me naar het zotte zwijntje.\nVermijd TNT of de veren zullen eraf vliegen!"
@@ -1253,8 +1253,8 @@ nl:
       bounce_10_2018: Nu is het doel boven. Plak het "Punten" en "Punten tegenstander" blok aan het "als bal het doel raakt" en "als de bal het batje mist" blok om er een spel van te maken. Zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt.
       bounce_10_basketball: Het doel staat nu bovenaan. Koppel de "scoor punt" en "punt voor de tegenstander" blokken aan de "Wanneer bal in het doel is" en "wanneer bal hand mist" blokken om een spel te maken. Bekijk hoeveel punten je kan scoren vooraleer je tegenstander tweemaal scoort.
       bounce_11: "Je kan nu blokken toevoegen aan het \"als gestart\" blok. Je dient de nieuwe \"lanceer nieuwe bal\" blok op meer dan één plaats te plakken.\nProbeer ook het tafereel, de snelheid van het batje en de bal te veranderen en bekijk hoeveel punten je kan scoren vooraleer je tegenstander tweemaal scoort."
-      bounce_11_2018: Je kan nu blokken plakken aan het "als het spel start" blok. Je moet het nieuwe "nieuwe bal" blok op meerdere plaatsen plakken. Probeer ook de achtergrond of de snelheid van het batje en de bal te veranderen. En zie hoeveel punten je kan krijgen voordat je tegenstander twee punten krijgt.
-      bounce_12: Maak je eigen stuiterspel. Je kan alle plaatjes en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te laten proberen op hun telefoons.
+      bounce_11_2018: "Je kan nu blokken toevoegen aan het \"als gestart\" blok. Je dient de nieuwe \"lanceer nieuwe bal\" blok op meer dan één plaats te plakken.\nProbeer ook het tafereel, de snelheid van het batje en de bal te veranderen en bekijk hoeveel punten je kan scoren vooraleer je tegenstander tweemaal scoort."
+      bounce_12: Maak je eigen Stuiterspel. Je kan alle plaatjes en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te laten proberen op hun telefoons.
       bounce_12_2018: Maak je eigen Stuiterspel. Je kan alle plaatjes en regels wijzigen. Klik wanneer je klaar bent op Voltooien om je vrienden je spel te laten proberen op hun telefoons.
       bounce_12_basketball: Creëer je eigen basketbal spel. Je kan alle regels veranderen. Wanneer je gedaan hebt, klik dan op Klaar om je vrienden je spel uit te laten proberen op hun telefoons.
       bounce_12_sports: 'Creëer je eigen spel! Jij bent hier de baas: je kan alle regels wijzigen. Meng verschillende sporten of bouw er één na. Wees creatief! Klik wanneer je klaar bent op ''Voltooien'' om je vrienden je spel te laten proberen op hun telefoons.'
@@ -1294,7 +1294,7 @@ nl:
       course1_collector_loops_challenge3: 'Je kan deze keer slechts één van ieder pijltjesblok gebruiken. Verzamel alle schatten! '
       course1_collector_loops_challenge4: "Laten we de schatten verzamelen! Help me door iedere rij en kom iedere keer terug om aan de volgende rij te beginnen.\nKan jij een patroon vinden?"
       course1_maze_debugging_challenge1: Debug dit level. Verwijder de extra blokken en voeg de missende blokken toe. Laat de vogel het zwijntje bereiken!
-      course1_maze_debugging_challenge2: "Debug dit level. Dit zijn\nde juiste blokken, maar in de verkeerde volgorde!"
+      course1_maze_debugging_challenge2: Debug dit level. Dit zijn de correct blokken, maar ze staan in de verkeerde volgorde!
       course1_maze_seq_challenge1: '"Volg het pad en leid me naar het dwaze varkentje. Vermeid TNT of de veren zullen eraf vliegen!"'
       course1_maze_seq_challenge2: Je kan slechts 4 keer bewegen in elke richting. Vind je een pad voordat je blokken op zijn?
       course1_playlab_events_challenge1: '"Waar verstoppen mijn vrienden zich? Kan je code schrijven om m''n overblijvende vrienden tevoorschijn te toveren?"'
@@ -1311,7 +1311,7 @@ nl:
       course2_maze_loops_challenge1: 'Nu wil Scrat proberen gebruikmaken van lussen om zijn eikel te vinden! '
       course2_maze_programming_challenge1: '*" Het varken verstopt zich! Kan jij me helpen een omweg te vinden?"*'
       course2_maze_programming_challenge2: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
-      course2_maze_seq_challenge1: Volg het pad en leid me naar het dwaze varkentje. Vermeid TNT of de veren zullen eraf vliegen!
+      course2_maze_seq_challenge1: Volg het pad en breng me bij het gekke biggetje. Blijf weg bij de TNT of er zullen veertjes dwarrelen!
       course2_maze_seq_challenge2: Je kan slechts 4 keer bewegen in elke richting. Vind je een pad voordat je blokken op zijn?
       course2_playlab_stage17_1: Kun je Jorge de Hond (actor 1) "Hallo" laten zeggen?
       course2_playlab_stage17_10: |-
@@ -1331,21 +1331,21 @@ nl:
       course3_maze_debugging_challenge2: '*"Als ik te vaak ronddraai, kan ik duizelig worden! Helm me de eikel te bereiken met slechts vier `draai` commando''s."*'
       course3_playLab_challenge1: "Er zou iets moeten gebeuren wanneer je voldoende punten gescoord hebt of net wanneer je te weinig punten hebt.\nVoeg code toe aan de `win spel` en `verlies spel` functies om het spel te laten werken zoals het zou moeten.\\r\nKlik op de hints voor ideeën!"
       course3_playlab_stage16_1: Kan je deze hond "hallo wereld" laten zeggen?
-      course3_playlab_stage16_2: Kan je de hond iets laten zeggen om daarna de kat iets te laten zeggen?
+      course3_playlab_stage16_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
       course3_playlab_stage16_3: Kan je een programma schrijven dat deze hond naar de kat laat bewegen?
-      course3_playlab_stage16_4: Kan je een programma schrijven dat de hond naar de kat laat bewegen en de kat "hello" laat zeggen wanneer de hond hem bereikt?
+      course3_playlab_stage16_4: Kun je een programma maken die de hond naar de kat verplaatst, en de kat "hallo" laat zeggen wanneer de hond bij de kat is?
       course3_playlab_stage16_5: Kan je een blok toevoegen zodat de inktvis blij wordt?
       course3_playlab_stage16_6: Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op Voltooien zodat je vrienden je verhaal kunnen uitproberen op hun telefoons.
-      course3_playlab_stage17_1: Kan je een programma schrijven waardoor de inktvis "hallo" zegt wanneer je op hem klikt?
-      course3_playlab_stage17_2: Kan je een programma schrijven om Waddles te laten bewegen met de rondbewegen met de boven / beneden / links / rechts toetsen om alle doelwitten te raken?
-      course3_playlab_stage17_3: "Het \"blijven herhalen\" blokje laat je toe\nom code continu te laten uitvoeren. Kan je blokken toevoegen om de dinosaurus\ncontinue naar boven en onder te laten bewegen?"
-      course3_playlab_stage17_4: Kan je Waddles "Ouch!" laten zeggen en een "raak" geluid afspelen wanneer hij de dinosaurus raakt, en hem verplaatsen met de pijltjestoetsen om dat te laten gebeuren?
-      course3_playlab_stage17_5: "Kan je een blokje toevoegen om een punt te scoren\nwanneer Waddles op de octupus loopt, en hem vervolgens te verplaatsen met de pijltjes totdat je scoort?"
-      course3_playlab_stage17_6: Kan je blokken toevoegen die de snelheid van Waddles en de achtergrond wijzigen? Laat hem vervolgens rond bewegen met de pijltjestoetsen totdat je scoort.
+      course3_playlab_stage17_1: Kun je een programma schrijven die de octopus "hallo" laat zeggen wanneer op hem geklikt wordt?
+      course3_playlab_stage17_2: Kun je een programma maken dat de pinguïn laat bewegen met de boven / onder / links / rechts pijltjes zodat je alle doelen kunt raken?
+      course3_playlab_stage17_3: Het "blijven herhalen" blok zorgt er voor dat je code blijft herhalen. Kan je blokken aan elkaar plakken die er voor zorgen dat deze dinosaurus op en neer blijft bewegen?
+      course3_playlab_stage17_4: Kan je de pinguïn "Auw!" laten zeggen en een "raak" geluid afspelen als hij tegen de dinosaurus botst, en hem dan verplaatsen met de pijltjes zodat dat gebeurd?
+      course3_playlab_stage17_5: Kan je een blok toevoegen die een punt toevoegt wanneer de pinguïn met de octopus botst, en hem dan verplaatsen met de pijltjes totdat je scoort?
+      course3_playlab_stage17_6: Kan je blokken toevoegen die de achtergrond en de snelheid van de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat je scoort?
       course3_playlab_stage17_7: Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op Voltooien zodat je vrienden je verhaal kunnen uitproberen op hun telefoons.
       course4_artist_binary_challenge1: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       course4_artist_binary_challenge2: Ben jij volhardend genoeg om dit logo terug naar normaal te herstellen?
-      course4_artist_fwp_challenge1: "Probeer dit programma uit te voeren,\nen maak veranderen om te zien wat er gebeurt. Begrijp je hoe het werkt? (Of verwijder het\nen verander het door iets totaal anders)"
+      course4_artist_fwp_challenge1: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
       courseA_artist_loops10: Help me stenen neer te zetten zodat ik niet val!
       courseA_artist_loops10_2018: Help me stenen neer te zetten zodat ik niet val!
       courseA_artist_loops11: Help me een trapje te bouwen om het schip te zien weg zeilen.
@@ -1957,7 +1957,7 @@ nl:
         
       grade4_arist_nested_loop_triangles6: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_functions1: "Hallo. Ik zombie kunstenaar. Mij houd van tekenen!\nHelp me de bril met vierkante glazen tekenen. Tip: De brug tussen de glazen is 25 pixels korter dan de lengte van een glas."
-      grade4_artist_functions2: "Met functies kan je nieuwe blokken definiëren! We hebben de blokken om een vierkant te tekenen in een functie met de naam \"teken een vierkant\". Kan je de \"teken een vierkant\" functie gebruiken om de brillenglazen te tekenen? De vierkanten staan 75 pixels uit elkaar."
+      grade4_artist_functions2: "Functies laten je nieuwe blokken definiëren. \\r \n\\r\nWe hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken een vierkant' gebruiken om de brillen te creëren."
       grade4_artist_functions_challenge: Gebruik de functies om vier rijen zeshoeken te tekenen. Zie je hoe de even rijen naar rechts zijn opgeschoven?
       grade4_artist_functions_challenge2: Gebruik de functies om vier rijen zeshoeken te tekenen. Zie je hoe de even rijen naar rechts zijn opgeschoven?
       grade4_artist_nestedLoops_challenge: |-
@@ -2116,7 +2116,7 @@ nl:
       level 'grade3_Loops_11: "Gebruik een lus om de trappen af te dalen en de nektar te verzamelen."
       level 'grade3_Loops_12: Gebruik een lus om nektar van elke bloem te verzamelen en honing op elke honingraat te maken.
       level 'grade3_Loops_2: Kan je dezelfde opdracht eenvoudiger met een lus maken?
-      level 'grade3_Loops_3: Kan je een lus gebruiken om alle nectar te verzamelen?
+      level 'grade3_Loops_3: Gebruik een `herhaal` lust om alle nectar te verzamelen.
       level 'grade3_Loops_4: Gebruik nu het nieuwe herhaalblok om alle nectar te verzamelen en om alle honing te maken.
       level 'grade3_Loops_5: Zet deze blokken in een lus om nektar van elke bloem te verzamelen.
       level 'grade3_Loops_6: "Wat gebeurt er als je deze reeks driemaal uitvoert in een lus? Vergeet niet om aan het eind de honing te maken!"

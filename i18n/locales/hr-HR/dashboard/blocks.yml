@@ -95,14 +95,6 @@ hr:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': gore
-            '"down"': dolje
-            '"left"': lijevo
-            '"right"': desno
-            '"space"': svemir
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -194,6 +186,11 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
       Mikelab_getProp:
         options:
           PROPERTY:

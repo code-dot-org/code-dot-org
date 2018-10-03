@@ -18,8 +18,9 @@ tr:
       2-3 Artist Debugging 1: "Bu şapka sadece 50 piksel genişliğinde olmalıdır. \\r tamir edebilir misin? \\r \\r <br/> \\r\n"
       2-3 Artist Debugging 10: "Oyun kumandasında yön altlığı çok dardır. \\r \\r 10 piksel daha geniş yapabilirsiniz? \\r \\r Neyin yanlış olduğunu görmek için kodu çalıştırmayı deneyin."
       2-3 Artist Debugging 11: |-
-        Benim güzel kar tanemi bitirmede bana yardım edin.
-        Bitirmek için kaç kez "kere tekrarla" komutuna ihtiyacım var?
+        Kar tanemde bir hata var! \r
+        \r
+        Neyin yanlış olduğunu bulabilir misin?
       2-3 Artist Debugging 2: "Kedi bıyıkları için bu kod yanlıştır. \\r \\r\nHatayı bulun ve aynı uzunlukta olan bıyıkları çizin."
       2-3 Artist Debugging 3: "Benim teknede bir delik var! \\r \\r Tamir etmek için neye ihtiyacım var?"
       2-3 Artist Debugging 5: "Bacak ve ayak için elimizdeki kod yanlıştır. \\r \\r Düzeltebilir misin?"
@@ -47,8 +48,8 @@ tr:
       2-3 Artist Functions 11: "\"Kare çiz\" fonksiyonunu \"Altıgen çiz\" olarak yeniden adlandırdık, fakat kareler çizmeye devam ediyor! \\r\n\\r \"Altıgen çiz\" fonksiyonunu 50 piksel kenarlı altıgen çizmek düzenleyebilir misin? \\r\n\\r\nYeni fonksiyonu kullanarak resmi çiz!"
       2-3 Artist Functions 12 Mike: "Fonksiyonlar karmaşık şeyleri birçok kez çizmek için mükemmeldir. \\r\n\\r\n\"Çiçek çiz\" fonksiyonunu kullanarak saksının geri kalanını doldurabilir misin?\\r\n\\r (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  "
       2-3 Artist Functions 12 a: "Fonksiyonlar karmaşık şeyleri birçok kez çizmek için mükemmeldir. \\r\n\\r\n\"Çiçek çiz\" fonksiyonunu kullanarak saksının geri kalanını doldurabilir misin?\\r\n\\r (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  "
-      2-3 Artist Functions 12: "Fonksiyonlar karmaşık şeyleri birçok kez çizmek için mükemmeldir.\\r\n\\r \"Çiçek çiz\" fonksiyonunu kullanarak saksının geri kalanını doldurabilir misin? \\r\nTüm bitkiler birbirinden 100 piksel uzaktadır."
-      2-3 Artist Functions 2: "Fonksiyonlar yeni bloklar tanımlamanı sağlar!\\r\n\\r\nKare çizmek için gerekli olan tüm blokları 'Kare çiz' fonksiyonuna taşıdık. 'Kare çiz' fonksiyonunu kullanarak bardakları çizebilir misin? \\r\n\\r\nKareler 75 piksel uzaklıktadır."
+      2-3 Artist Functions 12: "Fonksiyonlar karmaşık şeyleri birçok kez çizmek için mükemmeldir. \\r\n\\r\n\"Çiçek çiz\" fonksiyonunu kullanarak saksının geri kalanını doldurabilir misin?\\r\n\\r (İpucu: Tüm bitkiler birbirinden 100 piksel uzaktadır)  "
+      2-3 Artist Functions 2: "Fonksiyonlar yeni bloklar tanımlamanı sağlar! \\r\n\\r\nKare çizmek için gerekli blokları \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\" fonksiyonunu kullanarak gözlükleri çizebilir misin? \\r\n\\r\nKareler birbirlerinden 75 piksel uzaklıktadır."
       2-3 Artist Functions 3: "Fonksiyonu 115 piksel kenar uzunluğunda\nbir kare çizmek için düzenle ve daha büyük bir gözlük çiz. \\r\n\\r\nKareler birbirlerinden 45 piksel\nuzaklığındalar."
       2-3 Artist Functions 4: Şimdi bu üç kareyi çizmek için fonksiyonu döngü içine koy.
       2-3 Artist Functions 9: "**Serbest Oyun:** İşte bir kartanesi fonksiyonu. Bir kış\nsahnesi oluşturmak için onunla denemeler yap. \\r\n\\r\nBu bir serbest oyun bölümü, yani çözmen gereken bir bilmece yok. İyi eğlenceler!"
@@ -87,13 +88,15 @@ tr:
       2-3 Artist Nested Loops 8: "Şimdi, resmimize biraz da çimen ekleyelim. \\r\n\\r\n Her tutam çimen birbirinden 50 piksel uzaklıktadır."
       2-3 Artist Nested Loops 9: "Bu resmi bir çiçek ekleyerek bitireceğiz. \\r\n\\r\nÇiçeğini çizmek için 12 kez baklava şekli döngüsü oluştur."
       2-3 Artist Nested Loops Free Play: Serbest oyun, içiçe döngülerle havalı bir şeyler çiz.
-      2-3 Bee Conditionals 11: "Nektarı olan çiçeklerden nektar topla."
+      2-3 Bee Conditionals 11: "Buralarda neler var merak ediyorum!\\r\n\\r\nBahçede dolanıp nektarı olan çiçeklerden nektar toplamama yardım et."
       2-3 Bee Conditionals 13: |-
-        Nektarı topla ve bal yap. İpucu: "eğer nektar varsa" şartlı komutunu kırmızı çiçek üzerinde kullanırsan ne olur? Bunu bir döngüyle tamamlayabilir misin?
+        Buralarda ne çok şey oluyor!\r
+        \r
+        Öğrendiklerinizi kullanarak tüm nektarı toplayın ve bal yapın.
       2-3 Bee Conditionals 14: "Her şeyi ortaya koyalım! \\r \\r Öğrendiklerini kullan ve çiçeklerden nektarı topla. Mümkün olduğunca az blok kullan. \\r \n\\r Sonunda bal yapmayı unutma."
       2-3 Bee Conditionals 15: "Bu merdiven basamağı deseni tanıdık görünmelidir.  \\r \\r Mümkün olduğunca az blok kullanarak yalnızca  nektar olan çiçeklerden nektar toplayabilir misin?"
       2-3 Bee Conditionals 2: "Ben aç bir arıyım! \\r \\r \\rTüm nektarı en az sayıda blok kullanarak toplamaya yardım et."
-      2-3 Bee Conditionals 3: "Çiçeklerden tüm nektarı toplayıp bal yapmama yardım et. Döngü kullan. "
+      2-3 Bee Conditionals 3: "Tüm şu nektara bak!\\r\n\\r\nEn az sayıda blokla çiçekteki tüm nektarı toplayıp bal yapmama yardım et.  "
       2-3 Bee Conditionals 5: "Bu sihirli mor çiçekler değişiyor! \\r \\r Bulmacayı her çalıştırdığında mor çiçeklerde 1 veya 0 nektar olabilir.. Ama kodu çalıştırmadan bilemezsin! \\r \\r Eğer nektar yoksa nektar toplamamalısın. \\r\n 'Eğer' bloğu kullanarak nektar miktarının 1 e eşit olup olmadığını gör."
       2-3 Bee Conditionals Assessment 1: "**Değerlendirme:** Tüm nektarları topla.  \\r\nNektarı olmayan mor çiçeklerden nektar toplamamaya dikkat et."
       2-3 Bee Debugging 1: |-
@@ -109,7 +112,9 @@ tr:
       2-3 Bee Debugging 6: |-
         Ne güzel bir meydan okuma!\r \r Hataları düzelt ve nektarları topla.
       2-3 Bee Debugging 9: |-
-        Bu bloklar gerçekten beni dinlemiyor. Bütün balları yapıp ve bütün nektarları toplamak için hata(lar) düzelt.
+        Burada "sabırlı" olmalısın!\r
+        \r
+        Tüm nektarları toplamak ve balları yapmak için bu programdaki bazı şeyleri düzeltmen gerekiyor.
       2-3 Bee Debugging Assessment 1: |-
         ** Değerlendirme: ** Şimdi bildiklerini gösterme zamanı! \r \r Tüm nektarı toplamak ve tüm balları yapmak için hataları düzelt.
       2-3 Bee Functions 1: "Fonksiyonlar, bir görevi gerçekleştiren kod bloklarıdır.  \\r\n\\r\n'2 nektar al' fonksiyonunu kullanarak tüm çiçeklerden nektarları topla."
@@ -123,12 +128,12 @@ tr:
         \r
         En az blokla her çiçekten nektar toplayın.
       2-3 Bee Loops 13: "** Değerlendirme: ** mümkün olan en az sayıda blok kullanarak nektarı topla."
-      2-3 Bee Loops 3A: Döngü kullanarak bütün nektarı topla.
+      2-3 Bee Loops 3A: Tüm nektarları toplamak için bir döngü kullanabilir misin?
       2-3 Bee Loops 3B: Şimdi tüm nektarları toplamak ve balları yapmak için 'Tekrarla' bloğunu kullan.
       2-3 Bee Loops 4: |-
         Çalışkan bir arı! \r \r 
         Arının en az sayıda blok ile tüm nektarı toplamasını ve bal yapmasını sağlayın.
-      2-3 Bee Loops 4A: "Döngüler bu bulmacada kaç defa işine yarayabilir?  \\r \\r döngüler senin dostundur! Birkaç tanesini kullan ve  mümkün olan en az sayıda blok ile bu bulmacayı tamamla."
+      2-3 Bee Loops 4A: "Bu bulmacada kaç kere döngü kullanabilirsin? \\r\n\\r\nDöngüler senin sağ kolun! Bu bulmacayı en az blokla bitirmek için birkaç tane döngü kullan."
       2-3 Bee Loops 5: "Bu yolun şekli diğerlerinden farklıdır. \\r \\r Mümkün olduğunca az blok kullanarak tüm nektarı topla?"
       2-3 Bee Loops 7: "Ne güzel bir çiçek tarlası!   \\r \\r Arının her bir çiçeği dolaşmasına yardım et. \\r\n\\r 7 bloktan az kullanarak yapabilir misin?"
       2-3 Bee Loops 8: "Bu mor çiçeklerin sahip olduğu nektar miktarı bilinmiyor.\\r\n\\r Tüm nektarları toplamak için 'süresince nektar' döngüsünü kullanarak tüm nektarları topla.\\r\n\\r Bu döngü 'nektar>0' şartı doğru olduğu süresince çalışacak."
@@ -185,8 +190,8 @@ tr:
       4-5 Bee Conditionals 6: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       4-5 Bee Conditionals 7: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
       4-5 Bee Conditionals 8: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
-      4-5 Bee Conditionals Assessment 1: "**Değerlendirme:** Bu bulut ya bir nektarı olan bir çiçek saklıyor ya da bir bala ihtiyacı olan bir bal peteğini.  \\r\n\\r\n`get nectar or make honey` (nektarı al ya da bal yap) fonksiyonunu tamamla, sonra\nbu fonksiyonu nektarı toplamak veya bal yapmak için kullan. \\r\n"
-      4-5 Bee Debugging 1: "Bu bloklar kafamı karıştırıyor. Düzeltmeme yardımcı olabilir misin?"
+      4-5 Bee Conditionals Assessment 1: "**Değerlendirme:** Bu bulut ya bir nektarı olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \\r\n\\r\n`nektar al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için bu fonksiyonu kullan.. \\r\n"
+      4-5 Bee Debugging 1: "Bu bloklar kafamı karıştırıyor.  \\r\n\\r\nDüzeltmeme yardımcı olabilir misin?"
       4-5 Bee Debugging 6: "Mor çiçekteki nektarı miktarı bulmaca her çalıştırıldığında değişir. \\r \\r Tüm çiçeklerden tüm nektarı almak için blokları düzelt."
       4-5 Bee Debugging Assessment 1: "Değerlendirme: Kodu Düzelt."
       4-5 Bee Nested Loops 2: "Her çiçekteki bütün nektarı topla. İç içe döngü kullan. "
@@ -200,9 +205,9 @@ tr:
       4-5 Maze Conditionals 2: Zombi ayçiçeğine ulaşana kadar tekrarla bloğunu kullan.
       4-5 Maze Conditionals 3: "Eğer bloğunu kullanarak ne zaman döneceğime karar ver \n"
       4-5 Maze Conditionals 4: Tamam, bu sadece son bulmaca gibi ama "Eğer" bloğu ile "Tekrarla" bloğunu nasıl birlikte kullandığını hatırlaman gerekiyor.
-      4-5 Maze Conditionals 5: "\"Ben ayçiçeği istiyorum.\"  \\r \\r zombi için ayçiçeği almak için en az sayıda blok kullanın ve eğer bloğu kullanın."
+      4-5 Maze Conditionals 5: "Ayçiçeğini istiyorum! Sadece bir \"Eğer\" bloğu kullanarak, en az sayıda blok ile oraya ulaşmamı sağla."
       4-5 Maze Conditionals 6: |-
-        "Ayçiçeği ye!" \r \r zombi için ayçiçeği almak için en az sayıda blok kullanın ve eğer bloğu kullanın.
+        Ayçiçeğini istiyorum! Sadece bir "Eğer" bloğu kullanarak, en az sayıda blok ile oraya ulaşmamı sağla.
       4-5 Maze Conditionals 7: Bu bulmaca çözümü çok farklı değil, Zombilerden lerden uzak dur!
       4-5 Maze Conditionals 8: "' eğer/değilse' bloğu bir koşulu denetler ve bir işi yada ötekini yapar. \\r \\r bu yeni bloğu bana ayçiçeği almak için kullanın."
       4-5 Maze Conditionals 9: |-
@@ -784,7 +789,7 @@ tr:
         **Takıldınız mı? Buraya tıklayınız:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       Artist Autorun Test: Şimdi bu üç kareyi çizmek için fonksiyonu döngü içine koy.
       Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/> \\r \\r ** Serbest ilham: ** Şimdi böyle bir model yapmak için bilmeniz gereken her şeyi öğrendin! \\r \\r bu resimden ilham almayı deneyin ve benzer bir şey yapın. Aksi takdirde, kendiniz birşey yaratın. \\r \\r dikkat: 'set Alfa' bloğu kullandım."
-      Bergeron Robot Maze1: "Yaramaz domuzcuğu yakalamak için bana yardım edebilir misin? Birkaç \"ileri git\" bloğunu ard arda koyarak \"çalıştır\" tuşuna basın. "
+      Bergeron Robot Maze1: "Yaramaz domuzcuğu yakalamak için bana yardım edebilir misin?\\r\n\\r\n Birkaç \"ilerle\" bloğunu ard arda koyarak 'çalıştır' tuşuna basın.\n"
       CDU U6 Playground Sound Board: |-
         # Ses Kartı 2.0\r
         \r
@@ -2323,10 +2328,9 @@ tr:
       CSD U3 L12 Freeplay: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L12 Freeplay_2018: |-
         # Serbest Oyun\r
         \r
@@ -2396,11 +2400,9 @@ tr:
       CSD U3 L19 Freeplay: |+
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi öğrendiklerini kullanarak oluştur.  Bitirdiğin zaman, bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya yaptığın şeyi proje galerisine göndermek için buna tıkla ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) \r
-        \r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L19 Freeplay_2018: |+
         # Serbest Oyun\r
         \r
@@ -2410,13 +2412,9 @@ tr:
       CSD U3 L3 Freeplay: |+
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan. Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya yaptığın şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) \r
-        \r
-        \r
-        \r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L3 Freeplay_2018: |
         # Serbest Oyun\r
         \r
@@ -5477,7 +5475,7 @@ tr:
       Course 4 Play Lab Params 9: "Önceki aşamadaki oyunumuz fakat kodlar saklanmış. Puan al \"score points\" fonksiyonu yeni.\nFonksiyonu düzenle ve puan \"points\" parametresi ekle ve oyuncu puanı \"player_Score\" değişkenine eklensin. player_score değişkeni köpek kediye pasta verdiğinde artsın fakat kedi köpeğe  sandviç verdiğinde azalsın.\nNot: Çalıştır tuşuna bas ve oyna, köpek 6 puan kazandığında sonraki seviyeye geçebilrisin. "
       Course 4 Play Lab Vars 1: |-
         Bu sefer kod yazman gerekmiyor. Sadece çalıştır düğmesine bas ve oyunu oyna! Bu oyunda köpek kediden fazla bayrak toplamak istiyor. aşağı tuşu ile köpeği kontrol et. Oyunun bitince bitiş tuşuna bas.
-      Course 4 Play Lab Vars 2: Önceki oyundaki bulmaca adil değildi. dog_speed değişkeni ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını sağla. Önce 10 bayrak toplayan kazanır!
+      Course 4 Play Lab Vars 2: Son bulmacadaki yarış pek adil değildi. Kediden daha fazla bayrak topladığından emin olmak için 'köpel_hızı' değişkenini değiştirin. 10 bayrağı ilk toplayan kazanır!
       Course 4 Play Lab Vars 3: "İşte yeni bir tür oyun!\\r\n\\r\nBu düzeyde bir şey değiştirmenize gerek yoktur.\\r\n\\r\n**Talimatlar:** \nTaşımak için sol ve sağ okları ve atlamak için yukarı oku kullanın. Bütün bayrakları toplayıp toplamayacağınıza bakın."
       Course 4 Play Lab Vars 4: "Height yükseklik değişkeni köpeğin ne kadar zıplayacağını kontrol ediyor. Bu değişkeni güncelleyerek köpeğin bayrağa ulaşmasını sağla."
       Course 4 Play Lab Vars 6: |-
@@ -5740,7 +5738,7 @@ tr:
       Overworld Chop Tree_2018: "Odun çok önemli bir kaynaktır.\nBirçok şey odundan yapılır. Ağaca doğru yürü ve devirmek için 'yok et' bloğunu kullan."
       Overworld House Frame Chosen: İstediğin materyalleri kullanarak evinin geri kalanını inşa et. 'Tekrarla' komutu oldukça işine yarayacak.
       Overworld House Frame Chosen_2018: İstediğin materyalleri kullanarak evinin geri kalanını inşa et. 'Tekrarla' komutu oldukça işine yarayacak.
-      Overworld Move to Sheep: Koyunlara ulaşmak için ikinci bir "ilerle" komutu ekleyin.
+      Overworld Move to Sheep: Koyuna ulaşmak için ikinci bir “ilerle“ komutu ekle.
       Overworld Move to Sheep_2018: Koyuna ulaşmak için ikinci bir “ilerle“ komutu ekle.
       Overworld Place Wall: "Her ev bir duvarla başlar.\nTekrarla döngüsü içine 'yerleştir' ve 'ilerle' komutlarını koyarak evinin ilk parçasını inşa et."
       Overworld Place Wall_2018: "Her ev bir duvarla başlar.\nTekrarla döngüsü içine 'yerleştir' ve 'ilerle' komutlarını koyarak evinin ilk parçasını inşa et."
@@ -6058,7 +6056,7 @@ tr:
         Tweet tweet! İki kuş evi yapmama yardımcı olabilir misin?
       course1_artist_loops_challenge4: 'Zar atma zamanı! Çizmek için yardımcı olabilir misin?'
       course1_maze_debugging_challenge1: "Hatayı ayıkla.\nFazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!"
-      course1_maze_debugging_challenge2: "Hatayı ayıkla.\nBu bloklar doğru fakat onlara yanlış emirler verilmiş!"
+      course1_maze_debugging_challenge2: Bu bölümün hatalarını ayıkla. Bunlar doğru bloklar, ama yanlış sıradalar!
       course1_maze_seq_challenge2: Her yönde yalnızca 4 kez ilerleyebilirsin. Kod bloklarını bitirmeden bir çözüm yolu bulabilir misin?
       course1_playlab_events_challenge1: |-
         Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesin. Kim en hızlı koşar
@@ -6100,7 +6098,7 @@ tr:
       course2_maze_seq_challenge2: Her yönde yalnızca 4 kez ilerleyebilirsin. Kod bloklarını bitirmeden bir çözüm yolu bulabilir misin?
       course2_playlab_stage17_11: "Kendi hikaye oluşturun. İşiniz bittiğinde, hikayeni arkadaşların telefonlarında denesin. \\r  <br/> \\r \\r <h5>\\r <details>\\r <summary><b>fikir gerekiyor mu?</b></summary> \\r \\t <br/> \\r \\t<h5>\\r \\t\\t<ul>\\r \\t <li><strong>kim var orada?</strong>- rasgele karekterler görüntüle ve böylece sırada hangisi gösterilecek kimse bilmesin.</li> \\r <li><strong>bir maceraya gidiyoruz</strong> - arka plan değiştir, sonra  karakterler şu anda nerede oldukları hakkında konuşsun.</li> \\r <li><strong>pinball</strong> - ok tuşlarını kullanarak karakteri hareket ettir ( 'yukarı ok ', 'aşağı ok ne zaman'), ekranda  karakterler diğerleri ile çarpıştığında rasgele sesleri oynat.</li> \\r         </ul>\\r \\t</h5>\\r </details>\\r </h5>\\r\n"
       course3_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/> \\r \\r şimdi bir meydan okuma!  \\r \\r burada sadece gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan çekinmeyin. \\r \\r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde kullanılan uzunluk biraz daha küçük. "
-      course3_artist_functions_challenge1: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
+      course3_artist_functions_challenge1: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
       course3_artist_functions_challenge2: |2
         Sadece tuvalin köşeleri gibi daha önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki kodu dene, sonra kendi programını yap!\r
         <xml>\r
@@ -6121,7 +6119,7 @@ tr:
       course3_farmer_until_challenge2: Kıvrımlı yolu takip etmek için eğer/değilse (if/else) bloklarını kullan. Her köşede ürünleri silmek amacıyla bir döngü içerisinde 'remove1' komutunu kullan.
       course3_maze_debugging_challenge1: '* "Ben sadece çember içinde mi dolaşıyorum?" *'
       course3_maze_debugging_challenge2: '* "Çok sık dönersem, başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et." *'
-      course3_maze_until_challenge1: "İpucu yok, sadece meydan okuma.\nZombiyi ayçiçeğine götür.\\r\nTalimatlari izle"
+      course3_maze_until_challenge1: Hiçbir ipuçları yok sadece meydan okuma. Zombiyi ayçiçeğine ulaştır.
       course3_playLab_challenge1: "* **Sincaplar** **dinozorların** şehre indiğini görünce dehşete kapıldılar. Cesur **şövalye**onları paniklemekten kurtarabilir mi?*\\r\n\\r\nBurada sizin için önceden başlatılmış çeşitli oyunlar var! Nasıl çalıştığını görmek için oyna. \\r\n\\r\n\\r\nYeterince puan aldığınıza ve bitirdiğinizde bir şeyler olmalı. Oyunun olması gerektiği gibi çalışması için 'oyun kazan' (win game) ve 'oyun kaybet' (lose game) fonksiyonlarına birkaç kod ekleyin. \\r\nFikirler için ipucuna tıklayın!"
       course3_playlab_challenge2: |-
         "Falcı" uygulamasının nasıl çalıştığını anlayabiliyor musun? Bu oyuna aşağıdaki özelliklerden birkaçını eklemeye çalış:\r
@@ -6668,7 +6666,7 @@ tr:
       courseC_artist_loopsPrePre1a_2018: "Sanatçıyı oyun alanının merkezine getirmek için '200 yukarı 200 aşağı zıpla' komutunu kullan, ardından '50 piksel ilerle' bloğu ile 50 piksel uzunluğunda bir çizgi çiz."
       courseC_artist_loopsTemplateA: 'Sanatçıyı oyun alanının merkezine getirmek için ''200 yukarı 200 aşağı zıpla'' komutunu kullan, ardından ''bir çıkartma çiz'' bloğu ile bir kuş ortaya çıkar. '
       courseC_artist_loopsTemplateA_2018: 'Sanatçıyı oyun alanının merkezine getirmek için ''200 yukarı 200 aşağı zıpla'' komutunu kullan, ardından ''bir çıkartma çiz'' bloğu ile bir kuş ortaya çıkar. '
-      courseC_artist_prog_challenge1-doghouse: Jorge için bir köpek kulübesi yapalım!
+      courseC_artist_prog_challenge1-doghouse: Jorge için bir köpek evi inşa edelim!
       courseC_artist_prog_challenge1: Hayvanların her biri için odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin her kenarı 100 piksel uzunluğundadır. 
       courseC_artist_prog_challenge1_2018: Hayvanların her biri için odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen! Karelerin her kenarı 100 piksel uzunluğundadır. 
       courseC_artist_prog_challenge2: "* Bana bu yoldaki sarı çizgileri boyamaya yardım et! *"
@@ -6717,7 +6715,7 @@ tr:
       courseC_harvester_loops_challenge1: Bütün mısırları topla.
       courseC_harvester_loops_challenge2: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
       courseC_harvester_loops_challenge2_2018: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
-      courseC_harvester_loops_forVid: Bütün balkabağı ve mısırı toplayın.
+      courseC_harvester_loops_forVid: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_maze_debugging_challenge2: '* "Çok sık dönersem, başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et." *'
       courseC_maze_debugging_challenge2_2018: '* "Çok sık dönersem, başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et." *'
       courseC_maze_loops2_predict1: "Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu içindeki kodu tekrar tekrar çalıştırır. \\r \\r 'tekrarla' bloğu içine İlerlebloğu koyarak domuza ulaşmayı sağla?"
@@ -7181,7 +7179,7 @@ tr:
       courseD_farmer_condLoops8_2018: Mısır ve marulların hepsini topla sonra kabakları seç.
       courseD_farmer_condLoops9: Mısır ve marulların hepsini topla sonra kabakları seç.
       courseD_farmer_condLoops9_2018: Mısır ve marulların hepsini topla sonra kabakları seç.
-      courseD_farmer_condLoops9_predict1: Tüm Mısır ve marulları topla sonra kabak topla.
+      courseD_farmer_condLoops9_predict1: Mısır ve marulların hepsini topla sonra kabakları seç.
       courseD_farmer_condLoops9_predict1_2018: Mısır ve marulların hepsini topla sonra kabakları seç.
       courseD_farmer_condLoops_challenge1: "Kabaklar nereden dönmen gerektiğini belirliyor. *Kabaklardan sağa dön.* Aksi halde düz gitmeye devam et ama yol boyunca bütün marul ve mısırları toplamayı unutma. \\r\n\\r\n**Her gizli ürün bir mısır ya da marula sahip.**"
       courseD_farmer_condLoops_challenge1_2018: "Kabaklar nereden dönmen gerektiğini belirliyor. *Kabaklardan sağa dön.* Aksi halde düz gitmeye devam et ama yol boyunca bütün marul ve mısırları toplamayı unutma. \\r\n\\r\n**Her gizli ürün bir mısır ya da marula sahip.**"
@@ -7234,7 +7232,7 @@ tr:
       courseD_maze_ramp7: "* \"Kızgın olma zamanı!\" * \\r \\r ** meydan okuma: ** kuşu domuza iletmek için öğrendiklerini kullanın!"
       courseD_maze_until10: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until10_2018: Ayçiçeğine ulaşması için zombiye yardım et.
-      courseD_maze_until10_predict2: Zombi yi ayçiçeği ne ulaştır.
+      courseD_maze_until10_predict2: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until10_predict2_2018: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until6: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until6_2018: Ayçiçeğine ulaşması için zombiye yardım et.
@@ -7250,8 +7248,8 @@ tr:
         İpucu yok, sadece meydan okuma.
         Zombiyi ayçiçeğine götür.\r
         Talimatlari izle
-      courseD_maze_until_challenge1: "İpucu yok, sadece meydan okuma.\nZombiyi ayçiçeğine götür.\\r\nTalimatlari izle"
-      courseD_maze_until_challenge1_2018: "İpucu yok, sadece meydan okuma.\nZombiyi ayçiçeğine götür.\\r\nTalimatlari izle"
+      courseD_maze_until_challenge1: Hiçbir ipuçları yok sadece meydan okuma. Zombiyi ayçiçeğine ulaştır.
+      courseD_maze_until_challenge1_2018: Hiçbir ipuçları yok sadece meydan okuma. Zombiyi ayçiçeğine ulaştır.
       courseD_maze_until_challenge2: |-
         İpucu yok, sadece meydan okuma.
         Zombiyi ayçiçeğine götür.\r
@@ -7283,8 +7281,8 @@ tr:
       courseD_scrat_ramp1_2018: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
       courseD_scrat_ramp2: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
       courseD_scrat_ramp2_2018: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
-      courseD_scrat_ramp4: Scrat'i güvende tutmak için çatlak buzdan uzak durun!
-      courseD_scrat_ramp4_2018: Scrat'i güvende tutmak için çatlak buzdan uzak durun!
+      courseD_scrat_ramp4: Scrat'in güvende olması için onu çatlak buzdan koru!
+      courseD_scrat_ramp4_2018: Scrat'in güvende olması için onu çatlak buzdan koru!
       courseD_scrat_ramp5: Kırık buzdan kaçının!
       courseD_scrat_ramp5_2018: Kırık buzdan kaçının!
       courseD_scrat_ramp6: Scrat'in döngü kullanarak meşe palamuduna ulaşmasını sağla!
@@ -7297,9 +7295,9 @@ tr:
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png" width="200px"/> \r \r şimdi bir meydan okuma!  \r \r burada sadece gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan çekinmeyin. \r \r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde kullanılan uzunluk biraz daha küçük. 
       courseE_artist_concept_challenge2: Aşağıdaki kodları kullanarak beş adet rüzgar gülü tasarımı oluştur.
       courseE_artist_concept_challenge2_2018: Aşağıdaki kodları kullanarak beş adet rüzgar gülü tasarımı oluştur.
-      courseE_artist_functions_challenge: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
-      courseE_artist_functions_challenge1: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
-      courseE_artist_functions_challenge1_2018: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
+      courseE_artist_functions_challenge: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
+      courseE_artist_functions_challenge1: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
+      courseE_artist_functions_challenge1_2018: Bir kez bir fonksiyonu tanımladıktan sonra onu tekrar tekrar çalıştırabilirsin - ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu deneyin, sonra onu kendi etkileyici tasarımınızı yapmak için değiştirin!
       courseE_artist_functions_challenge2: |2
         Sadece tuvalin köşeleri gibi daha önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki kodu dene, sonra kendi programını yap!\r
         <xml>\r
@@ -7484,7 +7482,7 @@ tr:
       courseF_IceAge_10: "Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.   \\r\n\\r\nSid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması için `aktör __ fırlat` komutunu kullanın! \\r\nKalpler Granny' ye çarptığında, Granny' nin modunu mutlu olarak ayarlayın."
       courseF_IceAge_11: "Kendi oyununu ya da hikayeni yaratma zamanı!  \\r\n\\r\nTamamladığın zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu denemelerine izin vermek için \"Bitir\" butonuna tıkla!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıkla."
       courseF_IceAge_2: Manny (aktör 1), Sid (aktör 2) ' i buldu ve onu bir maceraya davet etmek istiyor. `Aktör ___ söyle` bloğunu iki kez kullanarak onların birbirleriyle selamlaşmalarına yardımcı ol.
-      courseF_IceAge_3: Scrat onun meşe palamudu arıyor! Son 200 pikseli taşımasına yardımcı olabilir misiniz?
+      courseF_IceAge_3: Scrat meşe palamudunu arıyor! Son 200 pikseli hareket ettirerek ona yardımcı olur musun?
       courseF_IceAge_5: '''Sürekli tekrarla'' bloğu kodun devamlı çalışmasını sağlar. Granny'' nin sağa ve sola tekrar tekrar hareket ederek bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı ''sürekli tekrarla'' bloğunun içine koyabilir misin?'
       courseF_IceAge_6: "Sid' e tıkladığında, onun arkadaşlarına seslenmesine yardımcı olur musun?  \\r\n\\r\nİşin bittiğinde, oynamak için \"Çalıştır\" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!"
       courseF_IceAge_7: "Scrat hâlâ meşe palamutlarını arıyor!\n\\r\nHerbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\\r\nİşiniz bittiğinde, \"Çalıştır\" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin."
@@ -7890,7 +7888,7 @@ tr:
       grade3_ConditionalsElse_6: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       grade3_ConditionalsElse_7: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
       grade3_ConditionalsElse_8: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
-      grade3_ConditionalsElse_9: "Değerlendirme: Bu kod yanlıştır. \"Nektar al ya da bal yap\" fonksiyonunu tamamla, sonra tüm nektar ve balı topla. Mor çiçekler 3, 2 veya 1 nektar içerebilir."
+      grade3_ConditionalsElse_9: "**Değerlendirme:** Bu bulut ya bir nektarı olan bir çiçek ya da bir bala ihtiyacı olan bir bal peteği saklıyor..  \\r\n\\r\n`nektar al veya bal yap` fonksiyonunu tamamla, sonra nektar ya da bal toplamak için bu fonksiyonu kullan.. \\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
       grade3_Conditionals_1: "Ben aç bir arıyım! \\r \\r \\rTüm nektarı en az sayıda blok kullanarak toplamaya yardım et."
@@ -8013,7 +8011,7 @@ tr:
       grade5_artist_binary10: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"\nwidth=\"250px\"/>\\r \\r\nSerbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n"
       grade5_artist_binary2: "Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar. Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \\r\n\\r\nBu kodu çalıştırın ve nasıl bir desen çizdiğini görün."
       grade5_artist_for_loops1: 'Bu üçgeni 50 piksel genişliğinde çiz. İpucu: Tekrar bloğu kullan.'
-      grade5_artist_for_loops10: "Öğrendiğin şeyleri kullanarak bu görüntüyü nasıl oluşturacağını çözebildin mi?\\r\n\\r\nYardıma mı ihtiyacın var? Buraya tıkla."
+      grade5_artist_for_loops10: "** Meydan Okuma: ** Öğrendiklerini kullanarak bu çokgenleri çizin. Kenar uzunlukları 40 piksel."
       grade5_artist_for_loops5: |-
         Sadece küçük bir kod değişikliğiyle bu çizimi oluşturmak mümkün. Neyin değişeceğini görebildin mi?
         İpucu: Bir şeyleri çıkartman gerekiyor!
@@ -8087,8 +8085,8 @@ tr:
       iceage_hello2_2018: Manny (aktör 1), Sid (aktör 2) ' i buldu ve onu bir maceraya davet etmek istiyor. `Aktör ___ söyle` bloğunu iki kez kullanarak onların birbirleriyle selamlaşmalarına yardımcı ol.
       iceage_move_events: "Scrat hâlâ meşe palamutlarını arıyor!\n\\r\nHerbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\\r\nİşiniz bittiğinde, \"Çalıştır\" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin."
       iceage_move_events_2018: "Scrat hâlâ meşe palamutlarını arıyor!\n\\r\nHerbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\\r\nİşiniz bittiğinde, \"Çalıştır\" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin."
-      iceage_move_to_flag: Scrat onun meşe palamudu arıyor! Son 200 pikseli taşımasına yardımcı olabilir misiniz?
-      iceage_move_to_flag_2018: Scrat onun meşe palamudu arıyor! Son 200 pikseli taşımasına yardımcı olabilir misiniz?
+      iceage_move_to_flag: Scrat meşe palamudunu arıyor! Son 200 pikseli hareket ettirerek ona yardımcı olur musun?
+      iceage_move_to_flag_2018: Scrat meşe palamudunu arıyor! Son 200 pikseli hareket ettirerek ona yardımcı olur musun?
       iceage_repeat: '''Sürekli tekrarla'' bloğu kodun devamlı çalışmasını sağlar. Granny'' nin sağa ve sola tekrar tekrar hareket ederek bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı ''sürekli tekrarla'' bloğunun içine koyabilir misin?'
       iceage_repeat_2018: '''Sürekli tekrarla'' bloğu kodun devamlı çalışmasını sağlar. Granny'' nin sağa ve sola tekrar tekrar hareket ederek bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı ''sürekli tekrarla'' bloğunun içine koyabilir misin?'
       iceage_throw_hearts: "Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.   \\r\n\\r\nSid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması için `aktör __ fırlat` komutunu kullanın! \\r\nKalpler Granny' ye çarptığında, Granny' nin modunu mutlu olarak ayarlayın."
@@ -8130,8 +8128,8 @@ tr:
       ramp_artist_loops2_2018: Her hareket arasında rasgele bir renk değiştirip, bu adımı beş kez tekrarlayarak biraz güzellik katın.
       ramp_artist_loops3: "Renkli çizgiyi tekrar 5 kere çizin, \nbu sefer bir 'tekrarla' döngüsü kullanarak."
       ramp_artist_loops3_2018: "Renkli çizgiyi tekrar 5 kere çizin, \nbu sefer bir 'tekrarla' döngüsü kullanarak."
-      ramp_artist_loops4: Döngünüzün içindeki her şeyden sonra 72 derece sağa dönüş eklerseniz ne olur?
-      ramp_artist_loops4_2018: Döngünüzün içindeki her şeyden sonra 72 derece sağa dönüş eklerseniz ne olur?
+      ramp_artist_loops4: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
+      ramp_artist_loops4_2018: Diğer her şey döngünün içine girdikten sonra 72 derece sağa dön eklediğinde ne olur?
       ramp_artist_loops5: |-
         Döngüler kesinlikle kod yazmayı daha kolay hale getirir!
         Bu merdiveni çizmek için döngüleri kullanın.

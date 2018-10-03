@@ -406,7 +406,7 @@ id:
         \r
         Untuk mendapatkan desain keren ini dengan pusat berlubang, Anda harus melompat maju dengan panjang segitiga sebelum berputar.
       4-5 Nested Loops 5: Lingkaran yang diberikan kode untuk membuat sebuah kincir angin.
-      4-5 Nested Loops 6: Dapatkah Anda menggambar sebuah segi enam dengan perulangan kode segitiga?
+      4-5 Nested Loops 6: Bisakah Anda menggambar sebuah segi enam dengan loop kode segitiga?
       4-5 Nested Loops 7: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
       4-5 Nested Loops 8: "Loop bentuk ini sebanyak 6 kali. \\r\n\\r\nBerapa banyak\nAnda harus memutar tiap kali melakukan loop? "
       4-5 Nested Loops 9: Gambarkan gigi di mulut buaya!
@@ -502,11 +502,11 @@ id:
       CSDU4 - AppLab - 1: "Baca dokumentasi untuk\npenColor() dan penWidth() sebelum menggunakannya untuk menggambar bujur sangkar biru."
       CSDU6 - Arrays - expressionsAsIndexes: Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSDU6 - Arrays - indexPractice: Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)
-      CSDU6 - for loop - color buttons with for: "Tuliskan isi\ndari larik di layar dengan urutan numerik. (Klik di sini untuk melihat instruksi lengkap)"
+      CSDU6 - for loop - color buttons with for: Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)
       CSDU6 - for loop - color buttons: Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)
       CSDU6 - for loop - why for: Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)
       CSDU6 arrays rainbow: Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)
-      CSDU6 arrays random: "Tuliskan sebuah program yang menampilkan \nwarna dari larik yang dipilih secara acak. (Klik di sini untuk melihat instruksi lengkap)"
+      CSDU6 arrays random: Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select icons: Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select rainbow: Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)
       CSDU6 arrays select rainbow_2018: Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)
@@ -1005,8 +1005,8 @@ id:
       Underground Iron_2018: Jalan kaki memasuki lava mencair bukan ide yang bagus. Tempatkan batu alam untuk membuat jembatan, lalu tambang setidaknya dua balok besi.
       Underground Mining Coal: Kamu akan menemukan sumber daya paling berharga di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor dan tambang setidaknya 2 batu bara.
       Underground Mining Coal_2018: Kamu akan menemukan sumber daya paling berharga di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor dan tambang setidaknya 2 batu bara.
-      aE7: "Jika kamu menyalin putaran itu dan berbelok ke kiri daripada ke kanan, apa yang terjadi? Dapatkah kamu mengulangnya untuk menggambar gelombang ini?"
-      aE8: "Sekarang mari kita putar semuanya empat kali untuk membuat bingkai gambar ini. Perhatikan ujung-ujungnya - kamu tidak bisa hanya membelokkannya 90 derajat! Jika memutar sebuah 3 derajat sebanyak 60 kali membuat sebuah setengah lingkaran, kode blok manakah yang akan membuat sebuah seperempat lingkaran untuk membuat ujung-ujung tersebut?"
+      aE7: "Jika Anda membuat lingkaran lain seperti ini, tapi belok kiri bukan kanan, apa yang terjadi? \\ r \n\\ r \nDapatkah Anda mengulangi semua itu untuk menarik gelombang ini?"
+      aE8: "Sekarang mari kita lingkaran yang semuanya empat kali untuk membuat bingkai foto ini. Hati-hati untuk sudut - Anda tidak bisa hanya mengubah 90 derajat! \\ r \n\\ r \nJika  perulangan  suatu 3 derajat 60 kali membuat  sebuah \nsetengah lingkaran, yang ini blok kode akan membuat  sebuah lingkaran kuartal tambahan untuk sudut?\n \n"
       allHallows2017: "Jebaklah karyawan Code.org dalam kotak krayon\ndengan menggambar sebuah bujur sangkar dengan sisi 320 pixel!"
       beeDebugVideo1: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
       birdsDebugVideo1: Bawa saya menelusuri jalan menuju babi nakal itu. Hindarilah TNT atau bulu-bulu akan beterbangan!
@@ -1205,9 +1205,9 @@ id:
       grade3_ConditionalsElse_4: Benda yang tidak diketahui adalah bunga atau sarang lebah. Gunakan blok jika/jika tidak untuk mengumpulkan nektar jika ia sebuah bunga, jika tidak untuk membuat madu (karena itu adalah sarang lebah).
       grade3_ConditionalsElse_5: |-
         Mungkin ada bunga atau sarang lebah di bawah awan itu. Gunakan blok jika/jika tidak untuk mengumpulkan nektar jika ada bunga, lain untuk membuat madu (karena ada sarang lebah).
-      grade3_ConditionalsElse_6: "Bunga ungu ini mungkin memiliki 3, 2, atau 1 nektar. Di sini sebuah blok jika/jika tidak dikombinasikan dengan blok jika/lain untuk membuat sebuah blok jika, lain-jika, lain. Lengkapi solusi untuk mengumpulkan jumlah nektar yang tidak diketahui."
+      grade3_ConditionalsElse_6: "Saya tidak yakin memiliki beberapa banyak nektar\nbunga ini, tapi aku tahu itu baik 1, 2, atau 3 menit jalan kaki. \\r\n\\r\nMenggabungkan blok bersyarat (`jika` dan/atau `jika/jika tidak`) hanya untuk mendapatkan nektar sebanyak banyaknya seperti bunga itu. \\r\n\\r\nIngat, jumlah nektar yang dapat mengubah masing-masing\nsaat anda menjalankan teka-teki!"
       grade3_ConditionalsElse_7: "Bunga ini bisa memiliki 3, 2,\natau 1 madu bunga. \\r\n\\r\nlengkapi fungsi ' periksa bunga ungu ' dan gunakan itu\nuntuk mengumpulkan semua madu bunga pada bunga."
-      grade3_ConditionalsElse_8: "Tuliskan di dalam fungsi \"periksa bunga membuat madu\". Fungsi Anda harus memeriksa apakah bunga ungu memiliki 1, 2 atau 3 nektar dan mengumpulkan semua nektar. Kemudian, gerak maju dan buatlah madu."
+      grade3_ConditionalsElse_8: "Tuliskan fungsi untuk `check flower make honey`. \\ r \n\\ r \nAnda fungsi harus memeriksa apakah bunga ungu memiliki 3, 2, atau 1 nektar dan mendapatkan semua nektar. \\ r \nKemudian, bergerak maju dan\n membuat madu."
       grade3_ConditionalsElse_9: "Penilaian: Kode ini salah. Selesaikan fungsi \"mendapatkan nektar atau membuat madu\", lalu panggilkan untuk mengumpulkan semua nektar dan madu. Ingat bahwa bunga-bunga ungu dapat memiliki 3, 2 atau 1 nektar."
       grade3_ConditionalsElse_TeacherIDo: |-
         Mungkin ada bunga atau sarang lebah di bawah awan itu. Gunakan blok jika/jika tidak untuk mengumpulkan nektar jika ada bunga, lain untuk membuat madu (karena ada sarang lebah).
@@ -1248,7 +1248,7 @@ id:
       grade3_Loops_12: Gunakan perulangan untuk mengumpulkan nektar dari bunga masing-masing dan membuat madu pada setiap sarang lebah.
       grade3_Loops_2: Dapatkah kamu lakukan tugas yang sama lebih mudah dengan perulangan?
       grade3_Loops_3: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
-      grade3_Loops_4: Sekarang gunakan blok ulangi yang baru untuk mengumpulkan semua nektar dan membuat semua madu.
+      grade3_Loops_4: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.
       grade3_Loops_5: Tempatkan blok-blok ini menjadi sebuah perulangan untuk mengumpulkan nektar dari setiap bunga.
       grade3_Loops_6: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
       grade3_Loops_7: |-
@@ -1284,7 +1284,7 @@ id:
         Untuk mendapatkan desain keren ini dengan pusat berlubang, Anda harus melompat maju dengan panjang segitiga sebelum berputar.
       grade4_arist_nested_loop_triangles6: Anda dapat menarik 36 segitiga ini menggunakan sebuah lingkaran bersarang?
       grade4_artist_functions1: "Hello. Saya artis zombie. Saya suka menggambar!\nBantu saya menggambar kacamata persegi. Petunjuk: jembatan antara gelas adalah\n25 piksel lebih pendek dari panjang persegi."
-      grade4_artist_functions2: "Fungsi membiarkan Anda mendefinisikan blok baru! Kami sudah\nmemindahkan blok untuk menggambar persegi menjadi fungsi yang disebut dengan \"menggambar persegi\".\nDapatkah Anda gunakan fungsi \"menggambar persegi\" untuk membuat kacamata? Masing-masing kotak terpisah sejauh 75 piksel."
+      grade4_artist_functions2: "Fungsi membiarkan anda mendefinisikan blok baru! \\r\n\\r\nKami sudah memindahkan blok yang diperlukan untuk menggambar persegi menjadi\nfungsi yang disebut `menggambar persegi`. Kali ini, gunakan fungsi `menggambar persegi`\nuntuk membuat kacamata. \\r\n\\r\nPersegi itu berjauhan 75 piksel."
       grade4_artist_functions_challenge: Gunakan fungsi yang disarankan untuk menggambar empat baris segi empat. Apakah kamu memperhatikan bagaimana baris bernomor genap kami bergeser ke kanan?
       grade4_artist_functions_challenge2: Gunakan fungsi yang disarankan untuk menggambar empat baris segi empat. Apakah kamu memperhatikan bagaimana baris bernomor genap kami bergeser ke kanan?
       grade4_artist_nestedLoops_challenge: |-
@@ -1336,7 +1336,7 @@ id:
       grade4_review_artist1: Hi, saya seorang seniman. Anda dapat menuliskan kode agar membuat saya dapat menggambar apa saja. Gunakan beberapa blok agar membuat saya menggambar diatas garis abu-abu pada foto (setiap baris panjangnya adalah 100 piksel)
       grade4_review_artist2: "Rumah ini membutuhkan atap! Gambarkan segitiga. Petunjuk:\nsemua tiga sisi panjangnya sama."
       grade4_review_artist3: "Blok lompatan memindahkan seniman tanpa menggambar.\nGambarkan garis putus-putus dengan menggunakan kedua blok melompat dan menggambar."
-      grade4_review_bee1: Sekarang gunakan blok ulangi yang baru untuk mengumpulkan semua nektar dan membuat semua madu.
+      grade4_review_bee1: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.
       grade4_review_bee2: Kumpulkan nektar dari masing-masing bunga dan buatlah madu pada setiap sarang lebah.
       grade4_review_bee3: |-
         Gunakan perulangan serupa sebagai teka-teki terakhir, tetapi gunakan sebuah belokan di dalamnya.
@@ -1435,17 +1435,17 @@ id:
       grade5_playlab_variables71: "Berikut adalah permainan kami dari tahap awal, tetapi sebagian besar kode tersembunyi. Ada fungsi baru 'score_points.' \\r \\r mengedit fungsi sehingga parameter baru yang disebut 'titik' dapat ditambahkan ke 'player_score'. \\r \\r 'player_score' variabel harus meningkatkan setiap kali kucing anjing tag dengan pie, dan mengurangi setiap kali bahwa kucing Tag anjing dengan sandwich. \\r \\r Catatan: ketika Anda sudah selesai, klik \"Run\" untuk bermain.  Ketika anjing nilai 6 poin, Anda akan melanjutkan untuk teka-teki berikutnya. "
       grade5_playlab_variables81: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\\r\n\\r\nGunakan pernyataan \"jika\" untuk memprogram permainan Anda untuk memanggil fungsi \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\\r\n\\r\nSebagai\ncontoh: \"player_score\"> 6\\r\n\\r\nMainkan sampai ke level 3\nuntuk pindah ke teka-teki berikutnya. "
       grade5_playlab_variables9: "Di sini adalah fungsi disebut 'patroli'. \\r \\r mengedit 'patroli' untuk memindahkan kucing 400 piksel dan kemudian turun 400 piksel."
-      grade5_playlab_variables_freeplay: "Waktu bermain gratis! Berikut adalah semua variabel yang kami telah bermain dengan sejauh dalam tahap ini, serta beberapa lagi jika Anda ingin mereka. \\r \\r pemberitahuan bahwa sekarang ada begitu banyak blok dalam toolbox kami bahwa mereka perlu diatur!  Di sini, kami telah menempatkan setiap potongan ke dalam kategori yang sesuai.  Luangkan waktu untuk menjelajahi segala yang tersedia. Bila Anda telah selesai browsing, membuat permainan atau cerita menggunakan mengulangi, variabel, dan acara.  \\r \\r petunjuk: gulir ke bawah untuk melihat semua perintah dalam ruang kerja."
+      grade5_playlab_variables_freeplay: "Waktu nya permainan bebas! Ini merupakan semua variabel yang sudah kita mainkan pada tahap ini, juga beberapa variabel lain jika kamu membutuhkannya!\\r\n\\r \nPerhatikan sekarang ada sangat banyak blok didalam toolbox kita yang perlu disusun! Sekarang, kita sudah meletakkan setiap potongan kedalam sebuah kategori yang sesuai. Ambil waktu sejenak untuk menjelajahi semua kemungkinan yang ada. Saat kamu sudah selesai melihat-lihat, buatlah sebuah permainan atau cerita menggunakan pengulangan, variabel-variabel, dan kejadian-kejadian. \\r\n\\r\nPetunjuk:\nskrol kebawah untuk meilhat semua perintah di dalam tempat kerja."
       k-1 maze 1: Dapatkah Anda membuat saya pindah ke Barat untuk mendapatkan babi?
       level 'grade3_Loops_10: |-
         Gunakan perulangan serupa sebagai teka-teki terakhir, tetapi gunakan sebuah belokan di dalamnya.
       level 'grade3_Loops_11: "Gunakan perulangan untuk menuruni tangga dan mengumpulkan nektar."
       level 'grade3_Loops_12: Gunakan perulangan untuk mengumpulkan nektar dari bunga masing-masing dan membuat madu pada setiap sarang lebah.
       level 'grade3_Loops_2: Dapatkah kamu lakukan tugas yang sama lebih mudah dengan perulangan?
-      level 'grade3_Loops_3: Bisakah Anda menggunakan perulangan untuk mengumpulkan semua nektar itu?
+      level 'grade3_Loops_3: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
       level 'grade3_Loops_4: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.
       level 'grade3_Loops_5: Tempatkan blok-blok ini menjadi sebuah perulangan untuk mengumpulkan nektar dari setiap bunga.
-      level 'grade3_Loops_6: "Apa yang terjadi jika Anda mengulangi urutan ini 3 kali? Jangan lupa untuk membuat madu di akhir!"
+      level 'grade3_Loops_6: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
       level 'grade3_Loops_7: |-
         Setiap bunga berisi satu unit nektar. Kumpulkan nektar dari masing-masing bunga. 
       level 'grade3_Loops_8: Gunakan perulangan untuk mengumpulkan nektar dan membuat madu.

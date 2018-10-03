@@ -253,7 +253,6 @@ pt:
       signin: 'Iniciar sessão'
       signup: 'Criar uma conta'
       already_registered: 'Já criaste uma conta?'
-      pair_programming: 'Programação em duplas'
       team: 'Equipa'
       driver: 'Controlador'
       navigator: 'Navegador'

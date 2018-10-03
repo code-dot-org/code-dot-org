@@ -215,19 +215,6 @@ it:
             '0': basso
             '1': medio
             '2': alto
-      Dancelab_whileKey:
-        text: quando [KEY][0] è premuto
-        options:
-          KEY:
-            '"up"': in alto
-            '"down"': in basso
-            '"left"': a sinistra
-            '"right"': a destra
-            '"space"': spaziale
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_changeColor:
         options:
           METHOD:
@@ -379,11 +366,15 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione di movimento
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": a sinistra
+            "{x: 300, y: 200}": a destra
+            "{x: 200, y: 200}": centro
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
       Mikelab_getAnim:
         text: "[SPRITE][0] [COSTUME][1]"
-        options:
-          COSTUME:
-            '"costume"': costume
       Mikelab_getProp:
         text: "[SPRITE][0] [PROPERTY][1]"
         options:
@@ -393,12 +384,8 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione di movimento
-            '"tint"': tinta
       Mikelab_isAnim:
         text: "[SPRITE][0] [COSTUME][1]"
-        options:
-          COSTUME:
-            '"costume"': costume
       Mikelab_location_picker:
         text: "[LOCATION][0]"
       Mikelab_randomColor:
@@ -415,7 +402,6 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione di movimento
-            '"tint"': tinta
       Mikelab_showScoreboard:
         options:
           CORNER:

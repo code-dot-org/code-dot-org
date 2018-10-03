@@ -344,7 +344,7 @@ ga:
       4-5 Nested Loops 2: 'Anois cuir an lúb seo isteach i lúb eile chun 10 dtriantán a tharraingt. Tugtar "lúb neadaithe" air seo.  '
       4-5 Nested Loops 3: |-
         Cuir an cód atá ann isteach i lúb chun an ghrian a tharraingt. Leis an dearadh iontach seo a dhéanamh le lár folamh, caithfidh tú léim ar aghaidh fad an triantáin sula gcasfaidh tú.
-      4-5 Nested Loops 5: Cuir an cód atá ann i lúb chun muileann gaoithe a dhéanamh.
+      4-5 Nested Loops 5: Cuir an cód atá ann isteach i lúb chun muileann gaoithe a dhéanamh.
       4-5 Nested Loops 6: An féidir leat an cód a dhéanann triantán a chur isteach i lúb chun heicseagán a tharraingt?
       4-5 Nested Loops 7: "Athdhéan an dearadh seo 10 n-uaire. Cad é an uillinn le casadh tar éis gach lúb?"
       4-5 Nested Loops 8: "Athdhéan an cruth seo 6 huaire. Cad é an uillinn le casadh tar éis gach lúb? "
@@ -1421,7 +1421,7 @@ ga:
       courseC_maze_programming5: Seachain an TNT.
       courseC_maze_programming5_2018: Seachain an TNT.
       courseC_maze_programming6: '"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
-      courseC_maze_programming6_2018: 'Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!'
+      courseC_maze_programming6_2018: '"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseC_maze_programming7: "**Dúshlán:** Tá go leor fabhtanna sa chód seo. Caithfidh tú roinnt blocanna a bhaint agus cinn eile a chur leis."
       courseC_maze_programming7_2018: "**Dúshlán:** Tá go leor fabhtanna sa chód seo. Caithfidh tú roinnt blocanna a bhaint agus cinn eile a chur leis."
       courseC_maze_programming8: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
@@ -1546,7 +1546,7 @@ ga:
       courseD_bee_debugging6: 'Dúshlán: Ceartaigh na botúin chun an neachtar go léir a bhailiú agus an mhil a dhéanamh.'
       courseD_bee_debugging9: Cabhraigh leis an mbeach an cód a dheisiú chun an neachtar go léir a bhailiú.
       courseD_bee_nestedLoops1: Cabhraigh leis an mbeach an neachtar go léir a bhailiú.
-      courseD_bee_nestedLoops1_2018: Cuir an líon is mó neachtar a bhaileoidh an beach in áit ??? sa lúb "do gach". 
+      courseD_bee_nestedLoops1_2018: Cabhraigh leis an mbeach an neachtar go léir a bhailiú.
       courseD_bee_nestedLoops1a: Cabhraigh leis an mbeach an neachtar go léir a bhailiú.
       courseD_bee_nestedLoops1a_2018: Cabhraigh leis an mbeach an neachtar go léir a bhailiú.
       courseD_bee_nestedLoops2: An uair seo, cabhraigh leis an mbeach an neachtar go léir a bhailiú leis an líon is lú blocanna agus is féidir.
@@ -1747,7 +1747,7 @@ ga:
       courseE_artist_concept4: Athdhéan an líníocht seo.
       courseE_artist_concept4_2018: Athdhéan an líníocht seo.
       courseE_artist_concept_challenge1: 'Cabhraigh leis an ealaíontóir an cruth uathúil seo a tharraingt. '
-      courseE_artist_concept_challenge1_2018: 'Tá fáilte romhat "triail agus earráid" a úsáid. Nílimid ag súil le pictiúr foirfe ar an gcéad iarracht. An bhfuil cabhair uait? Cliceáil anseo!'
+      courseE_artist_concept_challenge1_2018: 'Cabhraigh leis an ealaíontóir an cruth uathúil seo a tharraingt. '
       courseE_artist_functions1: "Cabhraigh leis an zombaí spéaclaí a dhéanamh as cearnóga, 100 picteilín ar gach taobh. Tá an droichead idir na spéaclaí 75 picteilín ar fad."
       courseE_artist_functions1_2018: "Cabhraigh leis an zombaí spéaclaí a dhéanamh as cearnóga, 100 picteilín ar gach taobh. Tá an droichead idir na spéaclaí 75 picteilín ar fad."
       courseE_artist_functions2: 'An uair seo, úsáid an fheidhm "tarraing cearnóg" chun na spéaclaí a dhéanamh. '
@@ -1859,7 +1859,7 @@ ga:
       courseF_artist_fwp5: 'Bain úsáid as an bhfeidhm ón dúshlán roimhe seo chun an tsraith cruthanna seo a tharraingt.  '
       courseF_artist_fwp5_2018: 'Bain úsáid as an bhfeidhm ón dúshlán roimhe seo chun an tsraith cruthanna seo a tharraingt.  '
       courseF_artist_fwp6: 'Dúshlán: Cuir an fheidhm "draw a spiral edge" in eagar sa chaoi go mbainfidh sí úsáid as paraiméadair "length" agus "sides", ansin tarraing na cruthanna seo.'
-      courseF_artist_fwp6_2018: 'Cuir an fheidhm "draw a spiral edge" in eagar sa chaoi go mbainfidh sí úsáid as paraiméadair "length" agus "sides", ansin tarraing na cruthanna seo.'
+      courseF_artist_fwp6_2018: 'Dúshlán: Cuir an fheidhm "draw a spiral edge" in eagar sa chaoi go mbainfidh sí úsáid as paraiméadair "length" agus "sides", ansin tarraing na cruthanna seo.'
       courseF_artist_fwp7: Cuir an fheidhm "draw a spiral edge" i gcrích trí paraiméadar amháin eile a chur léi a thugann fad lár na bíse.
       courseF_artist_fwp7_2018: Cuir an fheidhm "draw a spiral edge" i gcrích trí paraiméadar amháin eile a chur léi a thugann fad lár na bíse.
       courseF_artist_fwp8: An féidir leat an fheidhm a scríobh tú a úsáid chun an pictiúr seo a tharraingt?
@@ -1867,9 +1867,9 @@ ga:
       courseF_artist_fwp9: 'Saorimirt: Tarraing rud éigin iontach! Athraigh leithead an phinn agus féach cé chomh difriúil atá na pictiúir!'
       courseF_artist_fwp9_2018: 'Saorimirt: Tarraing rud éigin iontach! Athraigh leithead an phinn agus féach cé chomh difriúil atá na pictiúir!'
       courseF_artist_fwp_challenge1: An féidir leat déanamh amach conas a oibríonn an ríomhchlár seo?
-      courseF_artist_fwp_challenge1_2018: Bain triail as an gclár seo, déan athruithe, agus féach cad a tharlóidh. An féidir leat déanamh amach conas a oibríonn sé? (Nó scrios é agus scríobh rud éigin go hiomlán difriúil ina áit)
+      courseF_artist_fwp_challenge1_2018: An féidir leat déanamh amach conas a oibríonn an ríomhchlár seo?
       courseF_artist_fwp_challenge2: Úsáid gach rud a d'fhoghlaim tú sa leibhéal roimhe seo chun pictiúr cosúil leis seo a tharraingt.
-      courseF_artist_fwp_challenge2_2018: 'Úsáid gach rud a d''fhoghlaim tú sa leibhéal roimhe seo chun pictiúr cosúil leis seo a tharraingt. Nóta: Is féidir an cód a shimpliú le paraiméadair. '
+      courseF_artist_fwp_challenge2_2018: Úsáid gach rud a d'fhoghlaim tú sa leibhéal roimhe seo chun pictiúr cosúil leis seo a tharraingt.
       courseF_artist_ramp8: Anois déan cearnóg leis an Ealaíontóir!
       courseF_artist_ramp8_2018: Anois déan cearnóg leis an Ealaíontóir!
       courseF_artist_ramp9: Úsáid ar fhoghlaim tú go dtí seo chun an triantán seo a dhéanamh.
@@ -1901,7 +1901,7 @@ ga:
       courseF_bee_functions4: Nuair a úsáidtear an fheidhm "move and get nectar", casann an beach, bailíonn sé neachtar, ansin filleann sé ar an áit ar thosaigh sé. Úsáid an fheidhm seo chun an neachtar go léir a bhailiú.
       courseF_bee_functions4_2018: Nuair a úsáidtear an fheidhm "move and get nectar", casann an beach, bailíonn sé neachtar, ansin filleann sé ar an áit ar thosaigh sé. Úsáid an fheidhm seo chun an neachtar go léir a bhailiú.
       courseF_bee_functions7: Úsáid an fheidhm a scríobh tú sa dúshlán is déanaí chun éalú ón chathair ghríobháin.
-      courseF_bee_functions7_2018: Bailigh an neachtar go léir agus déan an mhil go léir!
+      courseF_bee_functions7_2018: Úsáid an fheidhm a scríobh tú sa dúshlán is déanaí chun éalú ón chathair ghríobháin.
       courseF_bee_functions8a: Bailigh an neachtar go léir nó déan an mhil go léir!
       courseF_bee_functions8a_2018: Bailigh an neachtar go léir nó déan an mhil go léir!
       courseF_bee_functions_challenge2_recursion: Bailigh an neachtar go léir nó déan an mhil go léir!
@@ -2180,15 +2180,15 @@ ga:
       grade4_bee_nestedLoops3: Bailigh an neachtar go léir trí lúb neadaithe a chruthú.
       grade4_bee_nestedLoops4: 'Bailigh an neachtar go léir ó gach bláth agus déan mil ag an gcíor mheala. Úsáid lúb neadaithe. '
       grade4_frozen_freeplay: Is sárealaíontóir thú anois! Cruthaigh do thírdhreach geimhriúil féin.
-      grade4_frozen_functions0: Is cruth speisialta é an ciorcal. Cén uimhir a chuirfeá in áit na gcomharthaí ceiste chun ciorcal a dhéanamh?
+      grade4_frozen_functions0: Cén uimhir a chuirfeá in áit na gcomharthaí ceiste chun ciorcal a dhéanamh?
       grade4_frozen_functions1a: Bain úsáid as an mbloc nua "cruthaigh ciorcal" chun deich gciorcal forluite a tharraingt. Ná déan dearmad léim ar aghaidh tar éis gach ciorcal.
       grade4_frozen_functions2: Anois déanaimis fiche ciorcal forluite, ag casadh ocht gcéim déag tar éis gach ciorcal.
       grade4_frozen_functions3: Seo é bloc nua "cruthaigh ciorcal" lenar féidir méid an chiorcail a shocrú. An bhféadfá an bloc seo a úsáid chun ciorcal 5 phicteilín agus ciorcal níos mó, 10 bpicteilín, a tharraingt?
       grade4_frozen_functions4: Is féidir patrúin chasta sa sneachta a dhéanamh as cruthanna an-simplí. An féidir leat patrún a chruthú as cúig chiorcal bheaga (méid 5) agus cúig chiorcal níos mó (méid 10)?
       grade4_frozen_nested_loop_diamonds2: An bhfuil a fhios agat go bhfuil cruth uathúil ar gach calóg shneachta? Déanaimis calóg shneachta úrnua! Bain úsáid bloc "athdhéan" eile chun ceithre chomhthreomharán a tharraingt, ag casadh 90 céim idir gach ceann.
       grade4_frozen_nested_loop_diamonds3: Anois, déanaimis calóg shneachta nua! Bain úsáid as an mbloc "athdhéan" chun deich gcomhthreomharán a tharraingt, ag casadh 36 céim tar éis gach ceann.
-      grade4_frozen_square: Dia dhuit! Is mise Anna as Arendelle! Déanaimis cearnóg leis an mbloc "athdhéan", cleas a úsáideann níos lú blocanna. Cé mhéad uair (???) ar chóir na blocanna laistigh den bhloc bándearg a athdhéanamh le cearnóg a dhéanamh?
-      grade4_frozen_square_loop1: Dia dhuit! Is mise Anna as Arendelle! Déanaimis cearnóg leis an mbloc "athdhéan", cleas a úsáideann níos lú blocanna. Cé mhéad uair (???) ar chóir na blocanna laistigh den bhloc bándearg a athdhéanamh le cearnóg a dhéanamh?
+      grade4_frozen_square: Dia dhuit! Is mise Anna as Arendelle! Déanaimis cearnóg leis an mbloc "athdhéan", cleas a úsáideann níos lú blocanna. Cé mhéad uair (???) ar chóir na blocanna laistigh den bhloc bándearg a athdhéanamh chun cearnóg a dhéanamh?
+      grade4_frozen_square_loop1: Dia dhuit! Is mise Anna as Arendelle! Déanaimis cearnóg leis an mbloc "athdhéan", cleas a úsáideann níos lú blocanna. Cé mhéad uair (???) ar chóir na blocanna laistigh den bhloc bándearg a athdhéanamh chun cearnóg a dhéanamh?
       grade4_frozen_square_loop2: Déanaimis trí chearnóg anois, ag casadh tar éis gach ceann. Ní mór duit casadh trí 120 céim sula dtosóidh tú ar an chéad chearnóg eile.
       grade4_frozen_square_loop3: An féidir leat calóg shneachta a chruthú? Bain úsáid as an mbloc "athdhéan" chun deich gcearnóg a tharraingt, agus an bloc "cas" le casadh 36 céim tar éis gach cearnóg.
       grade4_playlab_freeplay: 'Saorimirt! Bain taitneamh as na blocanna go léir atá i do bhosca uirlisí. '
@@ -2220,7 +2220,7 @@ ga:
       grade5_artist_for_loops5: |-
         Athrú beag amháin ar an gcód ón bpictiúr roimhe seo. An féidir leat an t-athrú a dhéanamh amach? Leid: Is gá rud éigin a scriosadh!
       grade5_artist_for_loops6: Má chasann tú beagáinín níos mó nó níos lú ná mar is gnáth, déanann sé éifeacht an-deas. Bain úsáid as cód ón leibhéal roimhe seo, ach cas 89 céim gach uair chun an bhís chearnógach a chruthú.
-      grade5_artist_for_loops7: Athraigh trí rud beag sa chód ón leibhéal roimhe seo chun an ceann seo a dhéanamh!
+      grade5_artist_for_loops7: Athraigh trí rud bheaga sa chód ón leibhéal roimhe seo chun an ceann seo a dhéanamh!
       grade5_artist_for_loops8: 'An cuimhin leat i gcéim roimhe seo nuair a bhaineamar úsáid as athróg chun líon na dtaobhanna a rialú? Táimid ar tí an rud céanna a dhéanamh leis an athróg "counter". Tosaíonn an patrún seo le triantán ansin cuireann sé taobhanna leis de réir a chéile go dtí go ndéanann sé deacagán (10 dtaobh). Ba chóir do gach taobh a bheith 100 picteilín ar fad. '
       grade5_artist_for_loops9: |-
         Cuirimis le chéile é! Tarraing an patrún seo ina bhfuil dhá thaobh sa bhreis ag gach cruth ná a bhí ag an gcruth roimhe sin, ag baint úsáide as an eolas mór atá agat ar lúba "do gach" agus ar an athróg "counter". Bí cinnte go bhfuil gach taobh deich n-uaire chomh fada le líon na dtaobhanna sa pholagán. Níor thugamar ach beagán den chód duit.
