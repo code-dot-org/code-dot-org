@@ -95,7 +95,6 @@ var songs = {
 var song_meta = songs.hammer;
 
 exports.addCues = function (timestamps) {
-  console.log(timestamps);
   timestamps.forEach(timestamp => {
     Dance.song.addCue(0, timestamp, () => World.cuesThisFrame.push(timestamp));
   });

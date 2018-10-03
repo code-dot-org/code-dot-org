@@ -130,7 +130,7 @@ function atTimestamp(timestamp, unit, event) {
 }
 
 function everySeconds(n, unit, event) {
-  everySecondsRange(n, unit, start, song_meta.duration || 90, event);
+  everySecondsRange(n, unit, 0, song_meta.duration || 90, event);
 }
 
 function everySecondsRange(n, unit, start, stop, event) {
