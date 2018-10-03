@@ -105,8 +105,9 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     user = build :user, :unmigrated_google_sso
     session = fake_session user.attributes
 
+    SignUpTracking.expects(:log_cancel_finish_sign_up)
     SignUpTracking.expects(:end_sign_up_tracking)
-    new_session = PartialRegistration.cancel session
+    new_session = PartialRegistration.cancel(session)
 
     assert_nil new_session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]
   end
