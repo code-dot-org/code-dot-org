@@ -1,19 +1,16 @@
 %p
   %b Name:
-  - if @form[:title]
-    = "#{@form[:title]}" + ' '
   = "#{@form[:first_name]}" + ' ' + "#{@form[:last_name]}"
   %br
   %b Email:
   = "#{@form[:email]}"
   %br
-  %b Job Role:
+  %b Role:
   = "#{@form[:role]}"
   %br
   %b Job Title:
-  = "#{@form[:job_title]}"
-
-%p
+  = @form[:job_title] ? "#{@form[:job_title]}" : "Not specified"
+  %br
   %b School State:
   = "#{@form[:school_state]}"
   %br
@@ -28,12 +25,6 @@
   %br
   %b Grade Levels:
   = "#{@form[:grade_levels].join(', ')}"
-  %br
-  %b Program:
-  - if @form[:program]
-    = "#{@form[:program].map {|item| item.gsub(/\((.*)\)/, '').strip}.join(', ')}"
-  - else
-    = "None"
 
 %p
   %b Message:

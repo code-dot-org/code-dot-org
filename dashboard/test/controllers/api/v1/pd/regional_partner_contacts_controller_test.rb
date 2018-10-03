@@ -13,7 +13,8 @@ class Api::V1::Pd::RegionalPartnerContactsControllerTest < ::ActionController::T
     school_state: 'NY',
     school_district_other: true,
     school_district_name: 'Hogwarts',
-    opt_in: 'Yes'
+    opt_in: 'Yes',
+    notes: 'I have a question about boggarts.'
   }
 
   test 'create creates a new regional partner contact' do
@@ -22,7 +23,6 @@ class Api::V1::Pd::RegionalPartnerContactsControllerTest < ::ActionController::T
         form_data: SAMPLE_FORM_DATA
       }
     end
-
     assert_response :created
   end
 
