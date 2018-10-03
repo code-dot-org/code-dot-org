@@ -93,45 +93,13 @@ var MOVES = {
 var ANIMATIONS = {};
 var FRAMES = 24;
 
-// Songs
-var songs = {
-  macklemore: {
-    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
-    bpm: 146,
-    delay: 0.2, // Seconds to delay before calculating measures
-    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
-    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
-  },
-  macklemore90: {
-    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
-    bpm: 146,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
-    chorus: [65.75] // Array of timestamps in seconds where choruses occur
-  },
-  hammer: {
-    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
-    bpm: 133,
-    delay: 2.32, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  },
-  peas: {
-    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
-    bpm: 128,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  }
-};
-var song_meta = songs.macklemore;
 var processed_peaks;
 var lead_dancers = createGroup();
 var backup_dancers = createGroup();
 
 function preload() {
   // Load song
-  Dance.song.load(song_meta.url);
+  Dance.song.load();
 
   // Load spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
@@ -161,9 +129,9 @@ function setup() {
     callback();
   });
 
-  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / song_meta.bpm) * World.frameRate));
-  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / song_meta.bpm) * World.frameRate));
-  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / song_meta.bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / Dance.song.songData().bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / Dance.song.songData().bpm) * World.frameRate));
+  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / Dance.song.songData().bpm) * World.frameRate));
   /*
   Dance.song.processPeaks(0, function(peaks) {
     console.log(peaks);
@@ -405,7 +373,7 @@ function makeNewDanceSprite(costume, name, location) {
   addBehavior(sprite, function () {
     var delta = 1 / (frameRate() + 0.01) * 1000;
     sprite.sinceLastFrame += delta;
-    var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
+    var msPerBeat = 60 * 1000 / (Dance.song.songData().bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
@@ -668,12 +636,12 @@ function getEnergy(range) {
 }
 
 function nMeasures(n) {
-  return (240 * n) / song_meta.bpm;
+  return (240 * n) / Dance.song.songData().bpm;
 }
 
 function getTime(unit) {
   if (unit == "measures") {
-    return song_meta.bpm * (Dance.song.currentTime(0) / 240);
+    return Dance.song.songData().bpm * (Dance.song.currentTime(0) / 240);
   } else {
     return Dance.song.currentTime(0);
   }
@@ -685,7 +653,7 @@ function atTimestamp(timestamp, unit, event) {
   registerSetup(function () {
     if (unit == "measures") {
       timestamp = nMeasures(timestamp);
-      timestamp += song_meta.delay;
+      timestamp += Dance.song.songData().delay;
     }
     Dance.song.addCue(0, timestamp, event);
   });
@@ -695,7 +663,7 @@ function everySeconds(n, unit, event) {
   registerSetup(function () {
     if (unit == "measures") n = nMeasures(n);
     if (n > 0) {
-      var timestamp = song_meta.delay;
+      var timestamp = Dance.song.songData().delay;
       while (timestamp < Dance.song.duration()) {
         Dance.song.addCue(0, timestamp, event);
         timestamp += n;
@@ -718,10 +686,16 @@ function everySecondsRange(n, start, stop, event) {
 }
 
 function everyVerseChorus(unit, event) {
-  registerSetup(function() {
-    song_meta[unit].forEach(function(timestamp){
-      Dance.song.addCue(0, timestamp, event);
-    });
+  registerSetup(function(){
+    if(unit === 'verse'){
+      Dance.song.songData().verse.forEach(function(timestamp){
+        Dance.song.addCue(0, timestamp, event);
+	  });
+    } else {
+	  Dance.song.songData().chorus.forEach(function(timestamp){
+        Dance.song.addCue(0, timestamp, event);
+      });
+    }
   });
 }
 
@@ -849,7 +823,6 @@ function whenSetup(event) {
 }
 
 function whenSetupSong(song, event) {
-  song_meta = songs[song];
   setupCallbacks.push(event);
 }
 
@@ -1093,7 +1066,7 @@ function draw() {
     textStyle(BOLD);
     textAlign(TOP, LEFT);
     textSize(20);
-    text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+    text("Measure: " + (Math.floor(((Dance.song.currentTime() - Dance.song.songData().delay) * Dance.song.songData().bpm) / 240) + 1), 10, 20);
     /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
 }
