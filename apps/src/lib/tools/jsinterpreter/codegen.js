@@ -110,11 +110,13 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
         funcName = funcComponents[1];
       }
       var func = block.parent[funcName];
+      const { dontMarshal, nativeIsAsync, nativeCallsBackInterpreter } = block;
       var wrapper = interpreter.makeNativeMemberFunction({
           nativeFunc: func,
           nativeParentObj: block.parent,
-          dontMarshal: block.dontMarshal,
-          nativeIsAsync: block.nativeIsAsync
+          dontMarshal,
+          nativeIsAsync,
+          nativeCallsBackInterpreter,
       });
       var intFunc;
       if (block.nativeIsAsync) {
