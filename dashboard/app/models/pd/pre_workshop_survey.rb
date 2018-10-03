@@ -39,8 +39,7 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
   def validate_required_fields
     super
     hash = sanitize_form_data_hash
-
-    add_key_error(:lesson) unless hash[:unit] == UNIT_NOT_STARTED || hash.key?(:lesson)
+    add_key_error(:lesson) unless unit_not_started? || hash.key?(:lesson)
   end
 
   def self.units_and_lessons(workshop)
@@ -51,11 +50,17 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
     sanitize_form_data_hash[:unit]
   end
 
+  def unit_not_started?
+    unit == UNIT_NOT_STARTED
+  end
+
   def lesson
     sanitize_form_data_hash[:lesson]
   end
 
   def unit_lesson_short_name
+    return nil if unit_not_started?
+
     # Attempt to extract the number from "Unit {n}: unit name"
     unit_number = unit.match(/Unit (\d+)/).try(:[], 1)
 
