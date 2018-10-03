@@ -101,6 +101,8 @@ exports.addCues = function (timestamps) {
 };
 
 exports.reset = function () {
+  Dance.song.stopAll();
+
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
   }
