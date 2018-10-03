@@ -4,6 +4,7 @@ import {WorkshopApplicationStates, WorkshopSearchErrors} from '@cdo/apps/generat
 import * as color from "../util/color";
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import queryString from 'query-string';
 import $ from 'jquery';
 
 const styles = {
@@ -40,15 +41,55 @@ class RegionalPartnerSearch extends Component {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
   };
 
-  state = {
-    partnerInfo: undefined,
-    stateValue: "",
-    zipValue: "",
-    error: false,
-    loading: false
+  constructor(props) {
+    super(props);
+
+    let showZip = true;
+    let error = false;
+    let loading = false;
+
+    const partnerId = queryString.parse(window.location.search).partner;
+
+    if (partnerId) {
+      if (partnerId === "0") {
+        showZip = true;
+        error = WorkshopSearchErrors.no_partner;
+      } else {
+        $.ajax({
+          url: "/dashboardapi/v1/regional_partners/show/" + partnerId,
+          type: "get",
+          dataType: "json",
+          jsonp: false
+        }).done(this.partnerIdSuccess).fail(this.partnerIdFail);
+
+        showZip = false;
+        loading = true;
+      }
+    }
+
+    this.state = {
+      showZip: showZip,
+      partnerInfo: undefined,
+      stateValue: "",
+      zipValue: "",
+      error: error,
+      loading: loading
+    };
+  }
+
+  partnerIdSuccess = (response) => {
+    if (response.error) {
+      this.setState({showZip: true, loading: false});
+    } else {
+      this.setState({showZip: true, partnerInfo: response, loading: false});
+    }
   };
 
-  workshopSuccess = (response) => {
+  partnerIdFail = (response) => {
+    this.setState({showZip: true, loading: false});
+  };
+
+  partnerZipSuccess = (response) => {
     if (response.error) {
       this.setState({error: response.error, loading: false});
     } else {
@@ -56,7 +97,7 @@ class RegionalPartnerSearch extends Component {
     }
   };
 
-  workshopZipFail = (response) => {
+  partnerZipFail = (response) => {
     this.setState({error: WorkshopSearchErrors.unknown, loading: false});
   };
 
@@ -72,7 +113,7 @@ class RegionalPartnerSearch extends Component {
       type: "get",
       dataType: "json",
       jsonp: false
-    }).done(this.workshopSuccess).fail(this.workshopZipFail);
+    }).done(this.partnerZipSuccess).fail(this.partnerZipFail);
 
     event.preventDefault();
   };
@@ -96,13 +137,15 @@ class RegionalPartnerSearch extends Component {
 
     return (
       <div>
-        <form onSubmit={this.handleZipSubmit}>
-          <label style={styles.schoolZipLabel}>School Zip Code:</label>
-          <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
-          <div style={styles.zipSubmit}>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
+        {this.state.showZip && (
+          <form onSubmit={this.handleZipSubmit}>
+            <label style={styles.schoolZipLabel}>School ZIP Code:</label>
+            <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
+            <div style={styles.zipSubmit}>
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        )}
 
         {(this.state.error === WorkshopSearchErrors.no_partner || partnerInfo) && (
           <h3>Code.org Regional Partner for your region:</h3>

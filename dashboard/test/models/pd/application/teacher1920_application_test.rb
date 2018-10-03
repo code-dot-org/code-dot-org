@@ -936,6 +936,41 @@ module Pd::Application
       end
     end
 
+    test 'should_send_decision_email?' do
+      application = build :pd_teacher1920_application, status: :pending
+
+      # no auto-email status: no email
+      refute application.should_send_decision_email?
+
+      # auto-email status with no partner: yes email
+      application.status = :accepted_no_cost_registration
+      assert application.should_send_decision_email?
+
+      # auto-email status, partner with sent_by_system: yes email
+      application.regional_partner = build(:regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM)
+      assert application.should_send_decision_email?
+
+      # auto-email status, partner with sent_by_partner: no email
+      application.regional_partner.applications_decision_emails = RegionalPartner::SENT_BY_PARTNER
+      refute application.should_send_decision_email?
+    end
+
+    test 'Can create applications for the same user in 1819 and 1920' do
+      teacher = create :teacher
+
+      assert_creates Pd::Application::Teacher1819Application do
+        create :pd_teacher1819_application, user: teacher
+      end
+
+      assert_creates Pd::Application::Teacher1920Application do
+        create :pd_teacher1920_application, user: teacher
+      end
+
+      assert_raises ActiveRecord::RecordInvalid do
+        create :pd_teacher1920_application, user: teacher
+      end
+    end
+
     private
 
     def assert_status_log(expected, application)

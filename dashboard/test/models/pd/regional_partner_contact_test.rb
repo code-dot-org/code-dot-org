@@ -115,8 +115,8 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal 'A school administrator would like to connect with you', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal 'A teacher and/or administrator would like to connect with you', mail.subject
+    assert_equal ['anthonette@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
   end
 
@@ -132,8 +132,8 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal 'A school administrator would like to connect with you', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal 'A teacher and/or administrator would like to connect with you', mail.subject
+    assert_equal ['anthonette@code.org'], mail.from
     assert_equal 3, ActionMailer::Base.deliveries.count
   end
 
@@ -146,9 +146,9 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['tawny@code.org'], mail.to
+    assert_equal ['anthonette@code.org'], mail.to
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal ['anthonette@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
   end
 
@@ -156,9 +156,9 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['tawny@code.org'], mail.to
+    assert_equal ['anthonette@code.org'], mail.to
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal ['anthonette@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
   end
 
@@ -167,7 +167,15 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     mail = ActionMailer::Base.deliveries.last
 
     assert_equal ['foo@bar.com'], mail.to
-    assert_equal 'Thank you for contacting us', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal 'Thank you for contacting your Code.org Regional Partner', mail.subject
+    assert_equal ['noreply@code.org'], mail.from
+  end
+
+  test 'Job Title is not required' do
+    refute_includes Pd::RegionalPartnerContact.required_fields, :job_title
+  end
+
+  test 'Notes is required' do
+    assert_includes Pd::RegionalPartnerContact.required_fields, :notes
   end
 end
