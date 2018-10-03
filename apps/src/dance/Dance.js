@@ -298,10 +298,16 @@ Dance.prototype.initInterpreter = function () {
     stopMapping: (spriteIndex, property, val) => {
       return nativeAPI.stopMapping(sprites[spriteIndex], property, val);
     },
+    changeColorBy: (input, method, amount) => {
+      return nativeAPI.changeColorBy(input, method, amount);
+    },
+    mixColors: (color1, color2) => {
+      return nativeAPI.mixColors(color1, color2);
+    },
+    randomColor: () => {
+      return nativeAPI.randomColor();
+    },
     // TODO: ifDanceIs: function ifDanceIs(sprite, dance, ifStatement, elseStatement),
-    changeColorBy: () => {}, // TODO: function changeColorBy(input, method, amount),
-    mixColors: () => {}, // TODO: function mixColors(color1, color2),
-    randomColor: () => {}, // TODO: function randomColor(),
   };
 
   let code = require('!!raw-loader!./p5.dance.interpreted');
