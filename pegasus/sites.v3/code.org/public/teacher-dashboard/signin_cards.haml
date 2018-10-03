@@ -39,6 +39,9 @@ content-type: text/ng-template
         %dd{:style=>'margin:0px'}
           https:#{CDO.studio_url('/sections/{{section.code}}')}
       %dl
+        %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_section_name')
+        %dd{:style=>'margin:0px'} {{section.name}}
+      %dl
         %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_name')
         %dd{:style=>'margin:0px'} {{student.name}}
       %dl{"ng-if" => "section.login_type === 'picture'"}

@@ -1852,6 +1852,14 @@ class User < ActiveRecord::Base
       can_edit_password? && encrypted_password.blank?
   end
 
+  def should_disable_user_type?
+    user_type.present? && oauth_provided_user_type
+  end
+
+  def oauth_provided_user_type
+    [AuthenticationOption::CLEVER].include?(provider)
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -2157,6 +2165,21 @@ class User < ActiveRecord::Base
       update(state: 'deleted', updated_at: Time.now)
   end
 
+  # Restores all of this user's projects that were soft-deleted after the given time
+  # Called after undestroy
+  private def restore_channels_deleted_after(deleted_at)
+    return unless user_storage_id
+
+    channel_ids = PEGASUS_DB[:storage_apps].
+      where(storage_id: user_storage_id).
+      map(:id)
+
+    PEGASUS_DB[:storage_apps].
+      where(id: channel_ids, state: 'deleted').
+      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
+      update(state: 'active', updated_at: Time.now)
+  end
+
   # Gets the user's user_storage_id from the pegasus database, if it's available.
   # Note: Known that this duplicates some logic in storage_id_for_user_id, but
   # that method is globally stubbed in tests :cry: and therefore not very helpful.
@@ -2166,12 +2189,17 @@ class User < ActiveRecord::Base
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
+  # Note: This does not restore any of the user's permissions, which are hard-deleted.
   # @raise [RuntimeError] If the user is purged.
   def undestroy
     raise 'Unable to restore a purged user' if purged_at
 
+    soft_delete_time = deleted_at
+
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
-    restore(recursive: true, recovery_window: 5.minutes)
+    result = restore(recursive: true, recovery_window: 5.minutes)
+    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    result
   end
 
   def depended_upon_for_login?

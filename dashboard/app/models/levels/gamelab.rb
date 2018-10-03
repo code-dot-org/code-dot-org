@@ -49,6 +49,7 @@ class Gamelab < Blockly
     custom_setup_code
     validation_code
     helper_libraries
+    default_song
   )
 
   # List of possible skins, the first is used as a default.

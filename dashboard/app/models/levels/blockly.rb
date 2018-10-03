@@ -267,6 +267,60 @@ class Blockly < Level
     options.freeze
   end
 
+  # simple helper to set the given key and value on the given hash unless the
+  # value is nil, used to set localized versions of level options without
+  # calling the localization methods twice
+  def set_unless_nil(hash, key, value)
+    hash[key] = value unless value.nil?
+  end
+
+  def localized_blockly_level_options(script)
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options") do
+      level_options = blockly_level_options.dup
+
+      # For historical reasons, `localized_instructions` and
+      # `localized_authored_hints` should happen independent of `should_localize?`
+      # TODO: elijah: update these instructions values to new names once we
+      # migrate to the new keys
+      set_unless_nil(level_options, 'instructions', localized_short_instructions)
+      set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
+
+      if should_localize?
+        # Don't ever show non-English markdown instructions for Course 1 - 4 or
+        # the 20-hour course. We're prioritizing translation of Course A - F.
+        if script && (script.csf_international? || script.twenty_hour?)
+          level_options.delete('markdownInstructions')
+        else
+          set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
+        end
+        set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
+
+        # Unintuitively, it is completely possible for a Blockly level to use
+        # Droplet, so we need to confirm the editor style before assuming that
+        # these fields contain Blockly xml.
+        unless uses_droplet?
+          set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
+
+          %w(
+            initializationBlocks
+            startBlocks
+            toolbox
+            levelBuilderRequiredBlocks
+            levelBuilderRecommendedBlocks
+            solutionBlocks
+          ).each do |xml_block_prop|
+            next unless level_options.key? xml_block_prop
+            set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
+          end
+        end
+      end
+
+      level_options
+    end
+
+    options.freeze
+  end
+
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_level_options
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
@@ -358,9 +412,16 @@ class Blockly < Level
 
   # @param resolve [Boolean] if true (default), localize property using I18n#t.
   #   if false, just return computed property key directly.
-  def get_localized_property(property_name, resolve: true)
+  # @param extra_identifier [Boolean] we for some reason use the property name
+  #   twice in the internationalization key: once pluralized as a category name,
+  #   and once again singularized as an addition to the level name itself. This
+  #   is unnecessary, so we are gradually removing the extra key. If this is
+  #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
+  #   instances of this extra key and then this property.
+  def get_localized_property(property_name, resolve: true, extra_identifier: true)
     if should_localize? && try(property_name)
-      key = "data.#{property_name.pluralize}.#{name}_#{property_name.singularize}"
+      key = "data.#{property_name.pluralize}.#{name}"
+      key += "_#{property_name.singularize}" if extra_identifier
       return key unless resolve
       I18n.t(key, default: nil)
     end
@@ -371,7 +432,7 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("markdown_instructions")
+    get_localized_property("long_instructions", extra_identifier: false)
   end
 
   def localized_authored_hints
@@ -411,7 +472,7 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("instructions")
+      loc_val = get_localized_property("short_instructions", extra_identifier: false)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end

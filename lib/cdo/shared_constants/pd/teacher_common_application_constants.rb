@@ -23,7 +23,7 @@ module Pd
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
-        alternate_email: 'If you use another email, enter it here:',
+        alternate_email: 'If you use another email (especially during summer months), enter it here:',
         phone: 'Home or Cell Phone',
         address: 'Home address',
         city: 'City',
@@ -140,14 +140,13 @@ module Pd
           'By checking this box, you indicate that you understand there may be a program fee
            for the summer workshop you attend.'
         ),
-        pay_fee:
-          'If there is a fee for your summer workshop, will you or your school be able to pay for the fee?',
+        pay_fee: 'Will you or your school be able to pay for the fee?',
         consider_for_funding:
           'Would you like to be considered for funding support? Note that funding support is not guaranteed.',
         committed: 'Are you committed to participating in the entire Professional Learning Program?',
         willing_to_travel: clean_multiline(
           'The four one-day school year workshops are typically held on Saturdays, with an approximate
-           schedule of 9 am - 4pm. How far would you be willing to travel to each workshop?'
+           schedule of 9am - 4pm. How far would you be willing to travel to each workshop?'
         )
       },
 
@@ -221,7 +220,9 @@ module Pd
       no_explain: "No (Please Explain):".freeze,
       no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
       i_dont_know_explain: "I don't know (Please Explain):",
-      no_pay_fee_1920: 'No, my school or I will not be able to pay the program fee.'
+      no_pay_fee_1920: 'No, my school or I will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      not_sure_explain: 'Not sure (Please explain):',
+      unable_to_attend_1920: 'I’m not able to attend any of the above workshop dates. (Please explain):'
     }.freeze
   end
 end

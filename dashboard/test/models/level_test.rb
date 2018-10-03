@@ -6,9 +6,9 @@ class LevelTest < ActiveSupport::TestCase
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
-    @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
+    @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", short_instructions: "sdfdfs", type: 'Artist'}
     @custom_turtle_data = {user_id: 1}
-    @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
+    @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", short_instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
     @gamelab_data = {game_id: 48, name: 'some gamelab level', level_num: 'custom', type: 'Gamelab'}
     @custom_level = Level.create(@custom_maze_data.dup)
@@ -34,7 +34,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'create level' do
-    Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze')
+    Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", short_instructions: "sdfdfs", type: 'Maze')
   end
 
   test "throws argument error on bad data" do
@@ -112,7 +112,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get_question_text returns question text for free response level" do
-    free_response_level = create :level, name: 'A question', markdown_instructions: 'Answer this question.',
+    free_response_level = create :level, name: 'A question', long_instructions: 'Answer this question.',
       type: 'FreeResponse'
     assert_equal free_response_level.get_question_text, 'Answer this question.'
   end
@@ -157,27 +157,27 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'serialize properties' do
     level = Blockly.new
-    level.instructions = 'test!'
-    assert_equal 'test!', level.properties['instructions']
-    assert_equal level.instructions, level.properties['instructions']
+    level.short_instructions = 'test!'
+    assert_equal 'test!', level.properties['short_instructions']
+    assert_equal level.short_instructions, level.properties['short_instructions']
   end
 
   test 'create with serialized properties' do
-    level = Blockly.create(instructions: 'test')
-    assert_equal 'test', level.instructions
-    level.instructions = 'test2'
-    assert_equal 'test2', level.instructions
+    level = Blockly.create(short_instructions: 'test')
+    assert_equal 'test', level.short_instructions
+    level.short_instructions = 'test2'
+    assert_equal 'test2', level.short_instructions
   end
 
   test 'update serialized column with properties hash' do
-    level = Blockly.create(instructions: 'test')
-    level.update(instructions: 'test2', properties: {skin: 'skin'})
-    assert_equal 'test2', level.instructions
+    level = Blockly.create(short_instructions: 'test')
+    level.update(short_instructions: 'test2', properties: {skin: 'skin'})
+    assert_equal 'test2', level.short_instructions
     assert_equal 'skin', level.skin
   end
 
   test 'cannot have non-existent properties' do
-    level = Blockly.create(instructions: 'test')
+    level = Blockly.create(short_instructions: 'test')
     level.update(properties: {property_that_does_not_exist: 'impossible value storage'})
     assert_raises(NoMethodError) do
       level.property_that_does_not_exist
@@ -185,7 +185,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can have video key' do
-    level = Blockly.create(instructions: 'test')
+    level = Blockly.create(short_instructions: 'test')
     video = create(:video)
     level.update(properties: {video_key: video.key})
     assert_equal video.key, level.video_key
@@ -224,7 +224,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'prioritize property over column data in merged update' do
-    level = Level.create(instructions: 'test', type: 'Maze')
+    level = Level.create(short_instructions: 'test', type: 'Maze')
     level.update(maze: '', properties: {maze: 'maze'})
     assert_equal 'maze', level.maze
   end
@@ -328,7 +328,7 @@ EOS
   end
 
   test 'delete removed level properties on import' do
-    level = Level.create(name: 'test delete properties', instructions: 'test', type: 'Studio', embed: true)
+    level = Level.create(name: 'test delete properties', short_instructions: 'test', type: 'Studio', embed: true)
 
     assert_equal true, level.embed
 
@@ -659,14 +659,14 @@ EOS
     assert_equal 9360, JSON.parse(level.audit_log).length
 
     # add a new entry that will put us over the limit
-    level.instructions = "new actual instructions"
+    level.short_instructions = "new actual instructions"
     level.log_changes
 
     # audit log should have dropped off several entries in order get back under
     # the limit, since the test entries are individually much smaller than the
     # new actual entry
-    assert_equal 65533, level.audit_log.length
-    assert_equal 9351, JSON.parse(level.audit_log).length
+    assert_equal 65532, level.audit_log.length
+    assert_equal 9350, JSON.parse(level.audit_log).length
   end
 
   test "can validate XML field with valid XML" do

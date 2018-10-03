@@ -6,6 +6,7 @@ import {
   changeInterfaceMode,
   viewAnimationJson,
   setMobileControlsConfig,
+  setSong
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -29,6 +30,7 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
+import trackEvent from '../util/trackEvent';
 import {
   initializeSubmitHelper,
   onSubmitComplete
@@ -234,6 +236,10 @@ GameLab.prototype.init = function (config) {
     }
   }
 
+  if (this.level.defaultSong) {
+    getStore().dispatch(setSong(this.level.defaultSong));
+  }
+
   config.usesAssets = true;
 
   this.studioApp_.labUserId = config.labUserId;
@@ -400,6 +406,14 @@ GameLab.prototype.init = function (config) {
     (config.initialAnimationList && !config.embed && !config.hasContainedLevels) ?
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  // Pre-register all audio preloads with our Sounds API, which will load
+  // them into memory so they can play immediately:
+  $("link[as=fetch][rel=preload]").each((i, { href }) => {
+    const soundConfig = { id: href };
+    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
+    Sounds.getSingleton().register(soundConfig);
+  });
 
   this.loadValidationCodeIfNeeded_();
   const loader = this.studioApp_.loadLibraries(this.level.helperLibraries).then(() => ReactDOM.render((
@@ -778,6 +792,12 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  //Log song count in Dance Lab
+  if (this.isDanceLab && experiments.isEnabled("songSelector")) {
+    const song = getStore().getState().selectedSong;
+    trackEvent('HoC_Song', 'Play', song);
+  }
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');

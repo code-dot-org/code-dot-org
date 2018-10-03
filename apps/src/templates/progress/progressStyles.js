@@ -34,6 +34,12 @@ const statusStyle = {
     backgroundColor: color.level_submitted,
     color: color.white,
   },
+  // Note: There are submittable levels that are not assessments.
+  [LevelStatus.readonly]: {
+    borderColor: color.level_submitted,
+    backgroundColor: color.level_submitted,
+    color: color.white,
+  },
   // Below three are used by peer reviews
   [LevelStatus.review_rejected]: {
     color: color.white,

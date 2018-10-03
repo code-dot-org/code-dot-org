@@ -6,6 +6,7 @@ import {
   HIDE_ANIMATION_JSON,
   TOGGLE_GRID_OVERLAY,
   SET_MOBILE_CONTROLS_CONFIG,
+  SET_SONG
 } from './actions';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 import animationList from './animationListModule';
@@ -68,6 +69,16 @@ function mobileControlsConfig(state, action) {
   }
 }
 
+function selectedSong(state, action) {
+  state = state || "macklemore90";
+  switch (action.type) {
+    case SET_SONG:
+      return action.value;
+    default:
+      return state;
+  }
+}
+
 module.exports = {
   ...jsDebuggerReducers,
   animationPicker,
@@ -78,6 +89,7 @@ module.exports = {
   animationJsonViewer,
   gridOverlay,
   locationPicker,
+  selectedSong,
   defaultMobileControlsConfigState,
   mobileControlsConfig,
 };
