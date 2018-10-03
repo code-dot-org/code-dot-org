@@ -201,7 +201,6 @@ hy:
       logout: 'Դուրս գալ'
       signin: 'Մուտք գործել'
       already_registered: 'Արդեն գրանցված եք'
-      pair_programming: 'Զույգ Ծրագրավորում'
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: 'Ձեր առաջընթացը'

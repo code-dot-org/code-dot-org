@@ -426,9 +426,7 @@ eu:
         Hemen duzu forma interesgarri batentzako kodea. Zer gertatzen da errepikatzen baduzu? Kontuan izan forma honetan biraketek 420 gradu batzen dituztela eta, ondorioz, zure artistak marrazkia amaitzen duenean ez dela hasierako noranzkoan geldituko. Noranzko berria hasierakoaren 60 grado eskuinera izango da.
       Course 4 Artist 11: Eta orain erronka bat! Hemen diseinu bat aurkezten dugu, zuk jadanik ikusita dituzun blokeak bakarrik erabiltzen dituena. Pentsa al dezakezu nola berregin daitekeen? proba eta errorea teknika aplikatzeko libre zara. Lehen aldian borobil-borobil egitea ez da espero. Iradokizun gehiago ikusi nahi? Hemen klikatu!
       Course 4 Artist 12: |-
-        Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\r
-        \r
-        Bestela, diseinu osoa zure kasa egin ezazu!
+        Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\r \r Bestela, diseinu osoa zure kasa egin ezazu!
       Course 4 Artist 13: Oraindik jolasean? hemen canvas edo oihal zuria duzu, non nahi duzun guztia diseina dezakezun!
       Course 4 Artist 2: Honako kodearekin begizta sor al dezakezu laukia grisean marraz dezan?
       Course 4 Artist 20: Oraindik jolasean? hemen canvas edo oihal zuria duzu, non nahi duzun guztia sor dezakezun!
@@ -1361,7 +1359,7 @@ eu:
         Egin klik hemen pistara itzultzeko!
       grade5_artist_variables_triangles2: '"Mugitu aurrera 150" ordez, oraingoan "mugitu" blokeak "luzera" izeneko aldagaiari egiten dio erreferentzia. Eman diezaiokezu "luzera" aldagaiari 150 balioa triangelu berri hau marrazteko?'
       grade5_artist_variables_triangles3: 'Arrastatu zenbaki blokea "ezarri luzera" blokera 50 pixeleko triangelu multzo bat marrazteko.'
-      grade5_bee_for_loops1: Erabili begizta bat lore bakoitzaren nektarra biltzeko.
+      grade5_bee_for_loops1: Begizta bat erabil ezazu loreen nektarra jasotzeko.
       grade5_bee_for_loops2: Erleak nektar guztia biltzen duela ziurtatzeko beharrezko kodea gehitu. Begiratu zenbat kode behar duzun ariketa honetarako! (Hurrengo ariketan era errazagoa ikasiko dugu.)
       grade5_bee_for_loops6: For begizta bat ere erabil dezakezu kontaketa egiteko. Saia zaitez nektarra jasotzen 5 etik hasita beherantz zenbatuz, banaka-banaka.
       grade5_bee_for_loops8: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
@@ -1405,5 +1403,5 @@ eu:
       scrat 18 (copy 1): '"if-else" blokeak baldintza bat ziurtatzen du, eta gero gauza bat EDO beste egiten du. Erabili bloke berri hau ni ezkurreraino eramateko.'
       scrat 18: '"if-else" blokeak baldintza bat ziurtatzen du, eta gero gauza bat EDO beste egiten du. Erabili bloke berri hau ni ezkurreraino eramateko.'
       scrat 19 (copy 1): Beste ariketa bat gehiago "baldin-bestela" blokearekin. Lehenengo saiakeran lor dezakezu?
-      scrat 19: '"bestela baldin" blokearen praktika bat gehiago egin ezazu, lortu ahal dezakezu lehengo saiakeran?'
+      scrat 19: Beste ariketa bat gehiago "baldin-bestela" blokearekin. Lehenengo saiakeran lor dezakezu?
       scrat 20: Labirinto honetatik hiru bloke erabiliz ateratzea lortuko zenuke? Zuzen egin ezkero, edozein bide egin ahal izango dut. Berdin du bidea motz ala luze izan,  bidean ezker ala eskuin egin. Korri! Izotza urtzen ari da eta.

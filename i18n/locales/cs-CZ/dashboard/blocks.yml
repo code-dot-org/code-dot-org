@@ -107,14 +107,6 @@ cs:
             '"left"': vlevo
             '"right"': vpravo
             '"space"': vesmír
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': nahoru
-            '"down"': dolů
-            '"left"': vlevo
-            '"right"': vpravo
-            '"space"': vesmír
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -206,6 +198,11 @@ cs:
             '"scale"': velikost
             '"x"': souřadnice X
             '"y"': souřadnice Y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vlevo
+            "{x: 300, y: 200}": vpravo
       Mikelab_getProp:
         options:
           PROPERTY:

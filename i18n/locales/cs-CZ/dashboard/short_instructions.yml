@@ -413,7 +413,7 @@ cs:
       Artist Autorun Test: Použij blok "opakování" k nakreslení těchto 3 čtverců.
       Artist Inspiration: "Volná hra inspirace: Nyní už víš vše, co potřebuješ vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \\r \\r Chtěj vědět, jak náš vzor byl udělán pro inspiraci? "
       Auto Open Function Editor: 'Můžeš volat funkci uvnitř jiné funkce! Pomocí funkce "tvar" jako základ, vytvoř 3 tvary domu každý o 20 pixelů větší než poslední, začíná se na délce 50 pixelů. Použití čítače cyklu mohlo by být užitečné. '
-      Bee Recommended Blocks test: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který je z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
+      Bee Recommended Blocks test: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
       Bergeron Robot Maze1: 'Můžeš mi pomoci chytit zlobivé prase? Sklož dohromady několik bloků "posun vpřed" a stiskni tlačítko "Run". '
       Brad Spooky House Copy: 'Volná hra: Zde jsou funkce, které jste napsali a ještě víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys viděl, jak odlišně vypadají tvoje kresby!'
       Brad Spooky House: 'Volná hra: Zde jsou funkce, které jste napsali a ještě víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys viděl, jak odlišně vypadají tvoje kresby!'
@@ -494,7 +494,7 @@ cs:
         Chceš-li vidět znova  pokyny! \r \r zde je kód pro zajímavé tvary.  Co se stane, když je opakuješ?   Všimni si, že se střídavě v tomto tvaru přidává až 420 stupňů, což znamená, že když tvůj umělec dodělá kreslení, bude čelem jiným směrem, než když jste začali.  Tento nový směr je přesně o 60 stupňů vpravo od toho,  kde jste začali.
       Course 4 Artist 11: Nyní výzva!  Tady je návrh, který využívá pouze bloky, které se již ukázaly.  Umíš zjistit, jak je znovu vytvořit?  Bez obav zkoušej metodou pokus a omyl. Neočekává se, že to bude perfektní napoprvé.  Chceš vidět další pokyny?  Klepni zde!
       Course 4 Artist 12: |-
-        Chceš druhý impulz na inspiraci návrhu nebo tipy?  Klepni sem! \r \r, jinak udělej návrh zcela sám!
+        Chceš druhý impulz k inspiraci návrhu nebo tipy?  Klepni sem! \r \r, jinak udělej návrh zcela sám!
       Course 4 Artist 13: Stále si hraješ?  Zde je prázdné plátno, kde si můžeš navrhnout cokoliv chceš!
       Course 4 Artist 2: Dovedeš opakovat tento kód k nakreslení vyšedlého čtverce?
       Course 4 Artist 20: Stále si hraješ?  Zde je prázdné plátno, kde si můžeš navrhnout cokoliv chceš!
@@ -1548,7 +1548,7 @@ cs:
       level 'grade3_Loops_3: Umíš použít cyklus sesbírat všechen tento nektar?
       level 'grade3_Loops_4: Nyní pomocí nového bloku opakování shromáždit všechen nektar a všechen med.
       level 'grade3_Loops_5: Vlož tyto bloky do cyklu ke sběru nektaru z každého květu.
-      level 'grade3_Loops_6: "Co se stane, když zacykluješ 3 krát posloupnost? Nezapomeň si na konci udělat med!"
+      level 'grade3_Loops_6: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
       level 'grade3_Loops_7: |-
         Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 
       level 'grade3_Loops_8: Použij cyklus pro sběr nektaru a udělat med.
@@ -1560,6 +1560,6 @@ cs:
       scrat 18 (copy 1): "Blok \"když-jinak\" vyhodnotí podmínku a pak provede \njednu věc NEBO druhou. Abys mě dostal k žaludu, zkus využít tento nový blok."
       scrat 18: "Blok \"když-jinak\" vyhodnotí podmínku a pak provede \njednu věc NEBO druhou. Abys mě dostal k žaludu, zkus využít tento nový blok."
       scrat 19 (copy 1): Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?
-      scrat 19: "Ještě jeden příklad s blokem \"když-jinak\". Dokážeš\nto udělat správně na první pokus?"
+      scrat 19: Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?
       scrat 20: "Zvládneš přidat jen 3 bloky, abys mi pomohl vyřešit složitější\nbludiště? Když to uděláš správně, dokážu projít libovolně klikatou cestu\nbez ohledu na délku. Rychle! Led už taje!"
       subgoalU3L2_TurtleSquare_right: Nakreslete čtverec dopředu a vpravo od počátečního umístění. (Klepnutím zobrazíte podrobné pokyny)

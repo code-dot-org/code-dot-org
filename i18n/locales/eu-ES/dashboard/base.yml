@@ -197,7 +197,6 @@ eu:
       logout: 'Amaitu saioa'
       signin: 'Hasi saioa'
       already_registered: 'Dagoeneko izena emanda?'
-      pair_programming: 'Bikoteka programatzen'
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: 'Zure aurrerapena'

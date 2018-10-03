@@ -312,7 +312,6 @@ cs:
       signin: 'Přihlásit'
       signup: 'Vytvořit účet'
       already_registered: 'Už jste zaregistrováni?'
-      pair_programming: 'Párové programování'
       team: 'Tým'
       driver: 'Řidič'
       navigator: 'Navigátor'

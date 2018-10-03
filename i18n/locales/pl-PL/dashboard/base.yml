@@ -314,7 +314,6 @@ pl:
       signin: 'Zaloguj się'
       signup: 'Załóż konto'
       already_registered: 'Czy jesteś Już zarejestrowany?'
-      pair_programming: 'Programowanie w parach'
       team: 'Zespół'
       driver: 'Kierowca'
       navigator: 'Nawigator'

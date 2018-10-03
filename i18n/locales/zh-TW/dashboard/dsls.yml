@@ -2043,58 +2043,58 @@ zh-TW:
         '20': '20'
         '21': '21'
       U4L01 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L02 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L03 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L04 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L05 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L06 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L06 Reflection Q 1:
         Question: 問題
         random: 隨機
       U4L07 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L08 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L09 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L10 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L11 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L12 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L13 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L14 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L15 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L16 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L17 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L18 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L19 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L20 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L21 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L22 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L23 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4L24 Multiple Choice:
-        right: 向右
+        right: 到右方
       U4LXX Multiple Choice:
-        right: 向右
+        right: 到右方
       U5 assess_weight_v2:
         Question: 問題
         description here: 在這裡描述一下
@@ -2107,6 +2107,17 @@ zh-TW:
         '10': '10'
         '5': '5'
         '50': '50'
+      courseA_multi_collector_loops11_predict2:
+        0: '? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+        1: ': Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+        Laurel will get all of the treasure along the top and side, but not along the bottom.: Laurel 可以從頂部和邊緣拿到寶石，但是不會沿著底部。
+        Laurel will get all of the treasure.: Laurel 會收集到所有寶石。
+        Laurel will not get any treasure at all.: Laurel 無法拿到所有寶石。
+        2: '? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+        3: ': The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+      courseA_multi_collector_loops3_predict1:
+        Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.: 正確。這個程式用到 `重複` 迴圈來讓 Laurel 向前移動 5 次。
+        Laurel will move forward and get treasure five times in a row.: Laurel 先向前移動再收集寶石，共做這個動作 5 次。
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
