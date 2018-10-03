@@ -24,7 +24,7 @@ Feature: Using the teacher dashboard
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
     And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
-    And I click selector "a:contains('New Section')" once I see it
+    And I click selector "a:contains('Untitled Section')" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
 
     # Stats tab
@@ -120,7 +120,7 @@ Feature: Using the teacher dashboard
     And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
-    When I click selector "a:contains('New Section')" once I see it
+    When I click selector "a:contains('Untitled Section')" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "CSP Student Post-Course Survey ('17-'18)"
 
     # Assessments tab
@@ -146,7 +146,7 @@ Feature: Using the teacher dashboard
     And I sign out
 
     When I sign in as "Teacher_Sally"
-    And I click selector "a:contains('New Section')" once I see it
+    And I click selector "a:contains('Untitled Section')" once I see it
     And I click selector "#learn-tabs a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I click selector "a:contains('thumb wars')" once I see it
@@ -165,7 +165,7 @@ Feature: Using the teacher dashboard
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
     And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
-    And I click selector "a:contains('New Section')" once I see it
+    And I click selector "a:contains('Untitled Section')" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
     And I press the first ".uitest-summary-cell" element
     And I see ".uitest-detail-cell"
@@ -248,7 +248,7 @@ Feature: Using the teacher dashboard
     # Enable the showProjectThumbnails experiment on Pegasus for this test.
     Given I am on "http://code.org/teacher-dashboard?no_home_redirect=1&enableExperiments=showProjectThumbnails"
     Then I am on "http://studio.code.org/home"
-    And I click selector "a:contains('New Section')" once I see it
+    And I click selector "a:contains('Untitled Section')" once I see it
     And I click selector "#learn-tabs a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
