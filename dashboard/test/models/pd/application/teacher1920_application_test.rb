@@ -955,6 +955,22 @@ module Pd::Application
       refute application.should_send_decision_email?
     end
 
+    test 'Can create applications for the same user in 1819 and 1920' do
+      teacher = create :teacher
+
+      assert_creates Pd::Application::Teacher1819Application do
+        create :pd_teacher1819_application, user: teacher
+      end
+
+      assert_creates Pd::Application::Teacher1920Application do
+        create :pd_teacher1920_application, user: teacher
+      end
+
+      assert_raises ActiveRecord::RecordInvalid do
+        create :pd_teacher1920_application, user: teacher
+      end
+    end
+
     private
 
     def assert_status_log(expected, application)
