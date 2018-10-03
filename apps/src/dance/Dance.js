@@ -5,12 +5,11 @@ import AppView from '../templates/AppView';
 import {getStore} from "../redux";
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
-var GameLabP5 = require('./GameLabP5');
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
-import {createDanceAPI} from './DanceLabP5';
+import {createDanceAPI, teardown} from './DanceLabP5';
 import initDance from './p5.dance';
 
 /**
@@ -29,7 +28,6 @@ var Dance = function () {
   this.JSInterpreter = null;
 
   this.eventHandlers = {};
-  this.gameLabP5 = new GameLabP5();
 };
 
 module.exports = Dance;
@@ -59,12 +57,6 @@ Dance.prototype.init = function (config) {
   this.skin = config.skin;
 
   this.studioApp_.labUserId = config.labUserId;
-
-  this.gameLabP5.init({
-    onPreload: this.onP5Preload.bind(this),
-    onSetup: this.onP5Setup.bind(this),
-    onDraw: this.onP5Draw.bind(this)
-  });
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -136,7 +128,12 @@ Dance.prototype.reset = function () {
 
   Sounds.getSingleton().stopAllAudio();
 
-  this.gameLabP5.resetExecution();
+  teardown();
+
+  if (this.p5) {
+    this.p5.remove();
+    this.p5 = null;
+  }
 };
 
 Dance.prototype.onPuzzleComplete = function (testResult) {
@@ -212,7 +209,6 @@ Dance.prototype.execute = function () {
 
   // Reset all state.
   this.reset();
-  this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.hasUnwantedExtraTopBlocks() || this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // Immediately check answer, which will fail and report top level blocks.
@@ -220,12 +216,20 @@ Dance.prototype.execute = function () {
     return;
   }
 
-  this.gameLabP5.startExecution();
+  new window.p5(p5obj => {
+    p5obj._fixedSpriteAnimationFrameSizes = true;
+
+    p5obj.preload = this.onP5Preload.bind(this);
+    p5obj.setup = this.onP5Setup.bind(this);
+    p5obj.draw = this.onP5Draw.bind(this);
+
+    this.p5 = p5obj;
+  }, 'divDance');
 };
 
 Dance.prototype.initInterpreter = function () {
-  const Dance = createDanceAPI(this.gameLabP5.p5);
-  const nativeAPI = initDance(this.gameLabP5.p5, Dance);
+  const Dance = createDanceAPI(this.p5);
+  const nativeAPI = initDance(this.p5, Dance);
   this.nativeAPI = nativeAPI;
   this.currentFrameEvents = nativeAPI.currentFrameEvents;
   const sprites = [];
@@ -305,7 +309,7 @@ Dance.prototype.initInterpreter = function () {
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 
-  this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
+  ['preload', 'draw', 'setup'].forEach(function (eventName) {
     this.eventHandlers[eventName] = nativeAPI[eventName];
   }, this);
 };
