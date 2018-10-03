@@ -60,8 +60,10 @@ class HomeControllerTest < ActionController::TestCase
     student = create :student
     script = create :script
     other_script = create :script
+    other_script.stubs(:last_progress_at) = 1.day.ago
     sign_in student
     student.assign_script(script)
+    script.stubs(:assigned_at) = 2.days.ago
     User.any_instance.stubs(:script_with_most_recent_progress).returns(other_script)
 
     get :index
@@ -73,8 +75,10 @@ class HomeControllerTest < ActionController::TestCase
     student = create :student
     script = create :script
     other_script = create :script
+    other_script.stubs(:last_progress_at) = 2.day.ago
     sign_in student
     student.assign_script(script)
+    script.stubs(:assigned_at) = 1.day.ago
     User.any_instance.stubs(:script_with_most_recent_progress).returns(other_script)
 
     get :index
