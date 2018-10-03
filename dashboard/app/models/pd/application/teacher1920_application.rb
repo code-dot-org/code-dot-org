@@ -37,6 +37,8 @@ module Pd::Application
   class Teacher1920Application < TeacherApplicationBase
     include Pd::Teacher1920ApplicationConstants
 
+    validates_uniqueness_of :user_id
+
     serialized_attrs %w(status_log)
 
     # @override

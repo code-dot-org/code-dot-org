@@ -564,6 +564,7 @@ Craft.executeUserCode = function () {
       Craft.gameController.getEntity().position).blockType,
     isStandingOnMiniBlock: () => Craft.gameController.levelModel.actionPlane.getBlockAt(
       Craft.gameController.getEntity().position).getIsMiniblock(),
+    isFinished: () => (Craft.gameController.levelModel.isFailed() || Craft.gameController.levelModel.isSolved())
   }, {
     asyncFunctionList: Object.values(asyncMethods),
   });
