@@ -247,7 +247,6 @@ lt:
       signin: 'Prisijungti'
       signup: 'Sukurti paskyrą'
       already_registered: 'Jau užsiregistravote?'
-      pair_programming: 'Programavimas poroje'
       team: 'Komanda'
       driver: 'Tvarkyklė'
       navigator: 'Navigatorius'

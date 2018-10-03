@@ -3,7 +3,59 @@ tr:
     contract_match:
       CREATING CONTRACTS FROM EXAMPLES 1:
         Big Triangle: Büyük Üçgen
+        Big Triangle|Image|Number|String: Büyük üçgen |Resim | Sayı | Sicim
+        EXAMPLE 1.solution_blocks, 300: Örnek 1.çözüm_blokları, 300
+        Write a contract for a big red triangle that is 100 pixels in size: 100 pixel büyüklüğünde olan bir büyük kırmızı üçgen için kontrat yazın
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: Örnek 2.çözüm_blokları,300
+        Square Contract: Kare Kontrat
+        Square|Image|Number|String: Kare|Resim| Sayı| Cisim
+        Write a contract for a purple square that is 15 pixels in size.: 15 pixel büyüklüğünde olan bir büyük kırmızı üçgen için kontrat yazın.
+      Creating Contracts From Examples 3A:
+        Banner Contract: Afiş Kontratı
+        Banner Function block: Afiş Fonksiyon Bloğu
+        Examples 3.solution_blocks, 300: Örnek 3.çözüm_blokları,300
     evaluation_multi:
+      CSP PD Example Question 2:
+        How will you teach students?: Öğrencilere nasıl öğreteceksiniz?
+      CSP PD Q2:
+        How will you teach students?: Öğrencilere nasıl öğreteceksiniz?
+      TeacherCon Eval Q2:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      TeacherCon Eval Q3:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar halinde bilgi edinmek için çalışması
+      U1 Eval q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U1 Eval q8:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar halinde bilgi edinmek için çalışması
+      U1 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U1 evaluation q8:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar halinde bilgi edinmek için çalışması
+      U2 evaluation q10:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U2 evaluation q11:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar halinde bilgi edinmek için çalışması
+      U3 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U3 evaluation q8:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar halinde bilgi edinmek için çalışması
+      U4 evaluation q6:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: Öğrencilerin çoğu aktiviteyi bilgisayarlarında yaptığı dersleri öğretme konusunda ne kadar konforlusunuz?
+        Not Comfortable: Konforsuz
+        Very Comfortable: Çok Konforlu
+      U4 evaluation q7:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar halinde bilgi edinmek için çalışması
       U5 evaluation q1:
         'No': 'Hayır'
         'Yes': 'Evet'
@@ -14,6 +66,8 @@ tr:
         Processing Arrays: Dizileri işleme
         Variables and Strings: Değişkenler ve Metinler
         While Loops: While(...durumunda) Döngüleri
+      U5 evaluation q3:
+        Students working in small groups to build knowledge: Öğrencilerin küçük gruplar halinde bilgi edinmek için çalışması
     external:
       AWS Demo:
         description here: açıklama burada

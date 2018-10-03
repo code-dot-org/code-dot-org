@@ -19,35 +19,29 @@ pl:
       2-3 Artist Debugging 10: "Podkładka kierunkowa mojego kontrolera gier jest zbyt wąska. \\r \\r Czy możesz ja poszerzyć o 10 pikseli? \\r \\r Spróbuj najpierw uruchomić kod, aby zobaczyć, co źle działa."
       2-3 Artist Debugging 11: |-
         Moja śnieżynka się rozpada! \r \r Czy mógłbyś zobaczyć, co się złego dzieje?
-      2-3 Artist Debugging 2: "Kod dla kocich wąsów jest zły. \\r\n\\r\nPopraw kod aby narysować wąsy o takiej samej długości."
-      2-3 Artist Debugging 3: "Moja łódka ma dziurę! \\r\n\\r\nCo musisz naprawić, aby zatkać dziurę?"
-      2-3 Artist Debugging 5: "Kod, który mamy dla nogi i stopy jest zły. \\r\n\\r\nCzy możesz to naprawić?"
+      2-3 Artist Debugging 2: "Ten kod dla wąsów kota jest zły. \\r \\r Napraw ten kod, by rysował wąsy, które są tej samej długości."
+      2-3 Artist Debugging 3: "Moja łódź ma dziurę! \\r \\r Co potrzebujesz, by ją zatkać?"
+      2-3 Artist Debugging 5: "Kod nogi i stopy, które mamy, jest zły. \\r \\r Czy możesz go naprawić?"
       2-3 Artist Debugging 6: |-
-        Wygląda na to, że siedzę na krześle, któremu brakuje nogi!\r
-        \r
-        Edytuj kod, aby narysować brakującą nogę.
+        Wygląda na to, że siedzę na krześle, któremu brakuje nogi. \r \r Popraw kod, aby narysować ostatnią nogę.
       2-3 Artist Debugging 7: |-
-        Wygląda na to, że C w kodzie (code) jest narysowane wspak!\r
-        \r
-        Czy możesz sprawić, aby wyglądało jak C z powrotem?
+        Wygląda na to, że C w kodzie jest rysowane odwrotnie. \r \r Czy mógłbyś je poprawić, by wyglądało jak C?
       2-3 Artist Debugging 8: |-
-        Mój nauczyciel powiedział, że powinienem skończyć to, co zacząłem!\r
-        \r
-        Pomóż mi skończyć mój wiatrak. Wiesz co jest źle?
+        Mój nauczyciel mówi, że powinienem skończyć to, co zacząłem! \r \r Pomóż mi ukończyć mój wiatraczek. Czy widzisz, co jest źle?
       2-3 Artist Debugging 9: |-
         Coś nie tak! \r \r Kod tej łodygi nie jest prawidłowy. Czy wiesz, jak spowodować, by artysta poprowadził łodygę we właściwy sposób?
       2-3 Artist Debugging Assessment 1: "**Sprawdzian:** \\r\nDlaczego ten kwadrat jest o 75 pikseli za mały z każdej strony? \\r\n\\r\nCo w kodzie poszło nie tak?"
-      2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek zechcesz.
+      2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Functions 1 a: "\"Ja być zombie! Ja lubię rysować!\"\n\\r\n\\r\nPomóż zombie narysować kwadratowe okulary. \\r\n\\r\nMostek między okularami jest 25 pikseli krótszy niż szerokość okularów, która wynosi 100 pikseli.\\r\n\\r\n"
       2-3 Artist Functions 1: "\"Ja być zombie! Ja lubię rysować!\"\n\\r\n\\r\nPomóż zombie narysować kwadratowe okulary. \\r\n\\r\nMostek między okularami jest 25 pikseli krótszy niż szerokość okularów, która wynosi 100 pikseli.\\r\n\\r\n"
       2-3 Artist Functions 10: "**Czas na zabawę:** Oto dwie funkcje, jedna do rysowania dużego koła zębatego, a druga do rysowania małego. \\r\n\\r\nUżyj ich, by narysować wnętrze maszyny!"
-      2-3 Artist Functions 11.5: "Jest to ta funkcja `draw a hexagon`.\\r\n\\r\nCo się stanie jeśli zapętlisz program 6 razy, obracając o 60 stopni za każdą pętlą programu?"
+      2-3 Artist Functions 11.5: "Tutaj jest ta sama funkcja \"draw a hexagon\" (rysuj sześciokąt). \\r \\r Co się stanie, jeśli powtórzysz główny program 6 razy, obracając się o 60 stopni w każdej iteracji?"
       2-3 Artist Functions 12 Mike: "Funkcje są naprawdę świetne do rysowania złożonych obiektów wiele razy. \\r \\r Czy mógłbyś użyć funkcji \"draw a flower\" (rysuj kwiat), aby wypełnić resztę pola plantatora? \\r Rośliny są oddalone od siebie o 100 pikseli."
       2-3 Artist Functions 12 a: "Funkcje są naprawdę świetne do rysowania złożonych obiektów wiele razy. \\r \\r Czy mógłbyś użyć funkcji \"draw a flower\" (rysuj kwiat), aby wypełnić resztę pola plantatora? \\r Rośliny są oddalone od siebie o 100 pikseli."
       2-3 Artist Functions 12: "Funkcje są naprawdę świetne do rysowania złożonych obiektów wiele razy. \\r \\r Czy mógłbyś użyć funkcji \"draw a flower\" (rysuj kwiat), aby wypełnić resztę pola plantatora? \\r Rośliny są oddalone od siebie o 100 pikseli."
-      2-3 Artist Functions 2: "Funkcje pozwalają Ci definiować nowe bloki!\\r\n\\r\nPrzenieśliśmy bloki potrzebne do narysowania kwadratu do funkcji nazwanej `draw a square`. Tym razem wykorzystaj funkcję `draw a square`, aby stworzyć okulary.\\r\n\\r\nKwadraty są oddalone o 75 pikseli."
-      2-3 Artist Functions 3: "Edytuj tą funkcję aby narysować kwadrat o boku 115, aby narysować większe okulary. \\r\n\\r\nKwadraty oddalone są od siebie o 45 pikseli."
-      2-3 Artist Functions 4: Umieść funkcję wewnątrz pętli aby narysować te trzy kwadraty.
+      2-3 Artist Functions 2: "Funkcje umożliwiają definiowanie nowych bloków! \\r \\r Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie \"draw a square\" (rysuj kwadrat). Tym razem, użyj tej funkcji, aby narysować okulary. \\r \\r Kwadraty są oddalone od siebie o 75 pikseli."
+      2-3 Artist Functions 3: "Zmodyfikuj funkcję, aby narysować kwadrat o boku długości 115 i narysuj większe okulary. \\r \\r Kwadraty są teraz oddalone od siebie o 45 pikseli."
+      2-3 Artist Functions 4: Teraz, umieść funkcję w pętli, aby narysować te 3 kwadraty.
       2-3 Artist Loops 1: Czy mógłbyś utworzyć sześciokąt o bokach długości 100 pikseli, aby ukończyć rysowanie komórki? Pamiętaj, że oznacza to, iż będzie trzeba obracać się o 60 stopni!
       2-3 Artist Loops 2: Teraz użyj bloku "powtórz", aby z komórki utworzyć powłokę.
       2-3 Artist Loops New 1: |
@@ -56,9 +50,9 @@ pl:
         \r
         <br/>\r
         
-      2-3 Artist Loops New 10: Teraz połączmy razem kilka V w pętli.
+      2-3 Artist Loops New 10: Teraz połączmy kilka V rysując je w pętli.
       2-3 Artist Loops New 11: "Czas zrobić coś odlotowego!\n\\r\n\\r\nPrzebuduj kod z ostatniej łamigłówki, ale tym razem dodaj w pętli skręt w lewo o 30 stopni. Teraz, powtórz to 24 razy zamiast 8."
-      2-3 Artist Loops New 12: 'Narysuj diament o bokach 100 pikseli. '
+      2-3 Artist Loops New 12: "Narysuj diament o bokach 100 pikseli.\n"
       2-3 Artist Loops New 13: "Zacznij z kodem (na szaro), by narysować diament. \\r \\r Powtórz szary kod, aby utworzyć zabawny wzór!"
       2-3 Artist Loops New 15: |+
         Teraz, narysuj to, co chcesz!\r
@@ -66,10 +60,8 @@ pl:
         \r
         
       2-3 Artist Loops New 2: |-
-        Jest to taka sama zagadka jak ta, którą przed chwilą rozwiązaliśmy, ale tym razem, możemy wykorzystać tylko jeden blok `move forward`i jeden blok `turn`.\r
-        \r
-        Czy możesz użyć `repeat` aby rozwiązać tą zagadkę?
-      2-3 Artist Loops New 9: Narysuj kształt V (gdzie każda strona ma 50 pikseli) aby ukończyć strzałę.
+        Tutaj jest taka sama łamigłówka, którą właśnie rozwiązaliśmy, ale tym razem możemy użyć tylko jednego bloku "idź do przodu" i jednego bloku "skręć". r\ r\ Czy mógłbyś użyć bloku "powtórz", by rozwiązać tę łamigłówkę?
+      2-3 Artist Loops New 9: Narysuj prosty V, gdzie oba boki mają długość 50 pikseli, aby wykonać strzałkę.
       2-3 Artist Nested Loops 1: |+
         Wcześniej do rysowania kształtów używaliśmy pętel, teraz umieścimy pętle w innych pętlach!\r
         \r
@@ -78,23 +70,23 @@ pl:
         <br/>\r
         \r
         
-      2-3 Artist Nested Loops 10: Zapętl ten kod 12 razy, aby uzupełnić wzór.
-      2-3 Artist Nested Loops 11: Zapętl ten kod 4 razy, aby ukończyć wzór, obróć się o 90 stopni po każdym obiegu.
+      2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten rysunek.
+      2-3 Artist Nested Loops 11: Powtórz w pętli ten kod 4 razy, aby ukończyć ten obrazek, obróć się o 90 stopni po każdym obiegu.
       2-3 Artist Nested Loops 12: Powtórz w pętli ten kod 12 razy, aby otrzymać te loki.
-      2-3 Artist Nested Loops 2: "Teraz powtórz w pętli trójkąt 6 razy.\n\\r\n\\r\nPo każdym trójkącie, musisz wykonać obrót o 60 stopni przed narysowaniem kolejnego."
+      2-3 Artist Nested Loops 2: "Teraz powtórz w pętli trójkąt 6 razy. \\r \\r Po każdym trójkącie, musisz wykonać obrót o 60 stopni przed narysowaniem kolejnego trójkąta."
       2-3 Artist Nested Loops 3: "Musisz powtórzyć twój trójkąt w pętli 12 razy, aby narysować ten wzór. \\r \\r \nPodziel liczbę stopni w okręgu (360) przez liczbę kształtów do narysowania (12), aby określić, ile powinien wynieść obrót po każdym kształcie."
-      2-3 Artist Nested Loops 4: "Zapętl ten diament 12 razy, aby narysować kwiat. \\r \\r Wskazówka: Użyjemy tego samego kąta przy powtarzaniu 12 diamentów, jaki użyliśmy dla 12 trójkątów. \\r Ile powinien wynosić obrót po każdym kształcie?"
-      2-3 Artist Nested Loops 5: "Wypełnij okna w tym budynku używając zagnieżdżonych pętel.\\r\n\\r\nOkna mają 20 pikseli długości i są oddalone od siebie o 20 pikseli."
+      2-3 Artist Nested Loops 4: "Powtórz w pętli ten diament 12 razy, aby narysować kwiat. \\r \\r Wskazówka: Użyjemy tego samego kąta przy powtarzaniu 12 diamentów, jaki użyliśmy dla 12 trójkątów. \\r Ile powinien wynosić obrót po każdym kształcie?"
+      2-3 Artist Nested Loops 5: "Wypełnij okna w tym budynku przy użyciu zagnieżdżającej się pętli. \\r \\r Okna mają długość 20 pikseli i znajdują się 20 pikseli od siebie."
       2-3 Artist Nested Loops 6: "Ten dinozaur ma 8 kolców wystających z jego ogona. \\r\n\\r\nKażdy kolec ma długość 30 pikseli. \\r\n\\r\nPowtórz trójkąt 8 razy w pętli, ale upewnij się, aby skoczyć w przód po każdym z nich!"
-      2-3 Artist Nested Loops 7: "Powtórz w pętli ten trójkąt 10 razy, aby narysować słońce. \\r \\r \nPo każdym trójkącie będziesz musiał wykonać ruch i obrót. \\r \\r \nMożesz określić o ile musisz wykonać obrót, dzieląc liczbę kątów w kole przez liczbę trójkątów, które je tworzą."
+      2-3 Artist Nested Loops 7: "Powtórz w pętli ten trójkąt 10 razy, aby narysować słońce. \\r \\r Po każdym trójkącie będziesz musiał wykonać ruch i obrót. \\r \\r Aby określić, ile ma wynieść obrót, podziel liczbę stopni w okręgu przez liczbę kształtów, które go tworzą."
       2-3 Artist Nested Loops 8: "Teraz dodajmy trochę trawy do naszego obrazka. \\r \\r Kępy trawy są oddalone od siebie o 50 pikseli."
-      2-3 Artist Nested Loops 9: "Ukończymy ten obrazek dodając nasz kwiatek. \\r \\r Zapętl diament 12 razy, aby narysować kwiatek."
+      2-3 Artist Nested Loops 9: "Ukończymy ten obrazek dodając kwiat. \\r \\r Powtórz diament 12 razy w pętli, aby narysować kwiat."
       2-3 Artist Nested Loops Free Play: Masz wolną rękę, narysuj coś fajnego używając zagnieżdżonych pętli.
       2-3 Bee Conditionals 11: "Jestem ciekaw, co tutaj jest! \\r \\r pomóż mi oblecieć cały teren i zebrać nektar tylko z kwiatów, które go mają. "
       2-3 Bee Conditionals 13: |-
         Wiele się tutaj dzieje!\r \r Skorzystaj z tego, czego się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód.
       2-3 Bee Conditionals 14: "Połączmy wszystko razem!\\r\n\\r\nWykorzystaj to, czego nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów, które go mają, używając jak najmniejszej liczby bloków. \\r\n\\r\nNie zapomnij na koniec zrobić miodu."
-      2-3 Bee Conditionals 15: "Ten wzór stopni schodów powinien wyglądać znajomo. \\r \\r Czy potrafisz zebrać nektar tylko z tych kwiatów, które go mają, używając możliwie najmniejszej liczby bloków?"
+      2-3 Bee Conditionals 15: "Te schody wyglądają znajomo. \\r \\r Czy potrafisz zebrać nektar tylko z tych kwiatów, które go mają, używając możliwie najmniejszej liczby bloków?"
       2-3 Bee Conditionals 2: "Jestem głodną pszczółką! \\r\\r\\r Pomóż mi zebrać cały nektar z kwiatów, używając możliwie najmniejszej liczby bloków."
       2-3 Bee Conditionals 3: "Patrz na cały nektar! \\r \\r Pomóż mi zebrać nektar i zrobić miód używając możliwie najmniejszej liczby bloków.  "
       2-3 Bee Conditionals 5: "Te magiczne, fioletowe kwiatki się zmieniają!\\r\n\\r\nZa każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1 nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\\r\n\\r\nBądź ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\\r\nMusisz sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if nectar`."
@@ -107,11 +99,9 @@ pl:
         Czy mógłbyś znaleźć tutaj problem? \r \r
         Napraw błędy, aby zebrać cały nektar.
       2-3 Bee Debugging 3: |-
-        Oh, ta pszczoła żądli! \r \r 
-        Napraw błędy, aby zebrać cały nektar.
+        Ooh, to jedno użądlenie! \r \r Napraw błędy, aby zebrać cały nektar.
       2-3 Bee Debugging 6: |-
-        Jakie słodkie wyzwanie! \r \r 
-        Napraw błędy, aby zebrać cały nektar.
+        Jakie słodkie wyzwanie! \r \r Napraw błędy, aby zebrać cały nektar.
       2-3 Bee Debugging 9: |-
         Pszczółka cierpliwa w tej łamigłówce! \r \r Musisz naprawić kilka miejsc w tym programie, aby zebrać cały nektar i zrobić miód.
       2-3 Bee Debugging Assessment 1: |-
@@ -119,18 +109,18 @@ pl:
         Napraw błędy, aby zebrać cały nektar i zrobić miód.
       2-3 Bee Functions 1: "Funkcje są blokami kodu, które wykonują określone zadanie. \\r\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
       2-3 Bee Functions 10: "Fioletowe kwiaty mogą mieć 1 lub 0 nektaru za każdym razem, gdy rozwiązujesz tę łamigłówkę \\r \\r  Utwórz funkcję \"collect purple nectar\" (zbierz fioletowy nektar), która zbiera nektar tylko z tych fioletowych kwiatów, które mają nektar."
-      2-3 Bee Functions 2: "Funkcje są blokami kodu, które wykonują określone zadanie. \\r \\r \nUżyj funkcji `get 5`, aby pobrać 5 nektarów."
+      2-3 Bee Functions 2: "Funkcje są blokami kodu, które wykonują określone zadanie. \\r \\r Użyj funkcji \"get 5\" (pobierz 5), aby pobrać 5 nektarów."
       2-3 Bee Functions 4: "Funkcja \"move and get nectar\" (przejdź i pobierz nektar) uruchamia pszczołę, zbiera nektar, a następnie prowadzi pszczołę do miejsca, gdzie zaczęła. \\r \\r Użyj tej funkcji, aby zebrać cały nektar."
       2-3 Bee Functions Assessment 1: "**Sprawdzian:** Użyj danej funkcji, aby zebrać nektar z każdego kwiatka."
       2-3 Bee Loops 1: |-
         Te kwiaty wyglądaj smacznie! \r \r Zbierz nektar z każdego z kwiatów używając możliwie najmniejszej liczby bloków.
       2-3 Bee Loops 13: "**Sprawdzian:** Zbierz cały nektar używając możliwie najmniejszej liczby bloków."
-      2-3 Bee Loops 3A: Użyj pętli `repeat`, by zebrać cały nektar.
-      2-3 Bee Loops 3B: Teraz użyj bloku `repeat`, aby zebrać cały nektar i zrobić cały miód.
+      2-3 Bee Loops 3A: Użyj pętli "powtórz", by zebrać cały nektar.
+      2-3 Bee Loops 3B: Teraz użyj nowego bloku "powtórz", aby zebrać cały nektar i zrobić cały miód.
       2-3 Bee Loops 4: |-
         Jaka pracowita pszczółka! \r \r 
         Pomóż pszczółce zebrać cały nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej liczby bloków.
-      2-3 Bee Loops 4A: "Ile razy pętle mogą ci pomóc w tej łamigłówce? \\r \\r \nPętle to twój przyjaciel! Użyj kilka z nich, aby ukończyć tę łamigłówkę za pomocą możliwie najmniejszej liczby bloków."
+      2-3 Bee Loops 4A: "Ile razy w tej łamigłówce pomogły Ci pętle? \\r \\r Pętle to Twoi przyjaciele! Użyj możliwie najmniej z nich, aby ukończyć tę łamigłówkę za pomocą możliwie najmniejszej liczby bloków."
       2-3 Bee Loops 5: "Kształt tej drogi jest inny od pozostałych. \\r \\r \nCzy potrafisz zebrać cały nektar używając możliwie najmniejszej liczby bloków?"
       2-3 Bee Loops 7: "Jakie piękne pole kwiatów! \\r \\r\nPomóż pszczółce odwiedzić każdy z nich. \\r \\r\nCzy potrafisz to zrobić za pomocą mniej niż 7 bloków?"
       2-3 Bee Loops 8: "Te fioletowe kwiaty zawierają inną ilość nektaru za każdym razem, gdy rozwiązujesz tę łamigłówkę. \\r \\r Użyj pętli \"dopóki nektar\", aby zebrać cały nektar. \\r \\r Ta pętla działa tak długo, jak długo warunek jest spełniony, w tym przypadku nektar > 0."
@@ -143,10 +133,10 @@ pl:
       4-5 Artist Free Draw 1: Wolny wybór!  Narysuj cokolwiek, co inspiruje Cię do kreatywności.
       4-5 Artist Patterns 1: |-
         Narysuj ten kwadrat używając pętli. \r \r Każdy bok ma długość 20 pikseli.
-      4-5 Artist Patterns 12: "Co się stanie, jeśli zrobisz kolejną pętlę jak ta, ale zamiast skręcać w prawo, skręcisz w lewo?\\r\n\\r\nCzy możesz to wszystko powtórzyć, aby narysować tę falę?"
+      4-5 Artist Patterns 12: "Jeśli skopiujesz tę pętlę i zamiast skrętu w lewo wykonasz skręt w prawo, to co się stanie? \\r \\r Czy możesz to powtórzyć, by narysować tę falę?"
       4-5 Artist Patterns 13: "Teraz powtórz to wszystko 4 razy w pętli, aby utworzyć ramkę na obrazek. Uważaj na rogi - nie możesz tak po prostu obrócić się o 90 stopni! \\r \\r Jeśli powtórzenie w pętli 3 stopni 60 razy tworzy półokrąg, to które z tych bloków kodu spowodują utworzenie ćwiartki okręgu na rogach?"
       4-5 Artist Patterns 3: Przejdźmy teraz jeden poziom dalej! Zagnieździliśmy cały blok kodu w innej pętli, ale teraz musisz wydostać artystę z powrotem do miejsca, w którym narysuje następną linię. Które z tych bloków kodu możesz umieścić na końcu najbardziej zewnętrznej pętli, aby narysować całą siatkę?
-      4-5 Artist Patterns 8: Użyj pętli, aby narysować ten sześciokąt z bokami o długości 40 pikseli i kątami 60 stopni.
+      4-5 Artist Patterns 8: Użyj pętli, by narysować ten sześciokąt z bokami o długości 40 pikseli i kątami 60 stopni.
       4-5 Artist Patterns 9: "Teraz powtórz ten kod 3 razy, aby narysować cały rząd. \\r \\r Każdy sześciokąt jest szeroki na 80 pikseli od lewej do prawej."
       4-5 Artist Patterns Free Play: Czas na zabawę - spróbuj swoich sił tworząc własny wzór!
       4-5 Bee Conditionals 2: "Więcej chmur!  \\r \\r Sprawdź, czy pod każdą z nich jest kwiat zanim zbierzesz nektar. \\r \\r Pamiętaj: nie wszystkie chmurki coś ukrywają!"
@@ -160,38 +150,38 @@ pl:
       4-5 Bee Debugging 6: "Fioletowy kwiatek zawiera inną ilość nektaru za każdym razem, gdy rozwiązujesz tę łamigłówkę. \\r \\r Napraw bloki, aby za każdym razem zebrać cały nektar z kwiatka."
       4-5 Bee Debugging Assessment 1: "**Sprawdzian:** Popraw kod."
       4-5 Bee Nested Loops 2: "Zbierz cały nektar z każdego kwiatka. \\r\\r\nUżyj zagnieżdżonej pętli. "
-      4-5 Bee Nested Loops 4: "Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \\r\\r\nUżyj zagnieżdżonej pętli. "
+      4-5 Bee Nested Loops 4: "Zbierz cały nektar z każdego kwiatka i zrób miód na plastrze miodu. \\r \\r Użyj zagnieżdżonej pętli. "
       4-5 Bee Nested Loops Assessment 1: "**Sprawdzian:** Zbierz cały nektar i zrób cały miód używając pętli."
       4-5 Maze 9: "Teraz mamy nowy blok o nazwie \"powtarzaj aż\".  \\r Umożliwia on powtarzanie poleceń, aż zombie dotrze do słonecznika.  \\r \\r Użyj tego bloku, aby rozwiązać tę łamigłówkę z możliwie najmniejszą liczbą bloków."
       4-5 Maze Assessment 1: "**Sprawdzian:** Dojdź do słonecznika używając możliwie najmniejszej liczby bloków."
-      4-5 Maze Conditionals 1: Użyj bloku `repeat until`, by doprowadzić zombie do słonecznika.
-      4-5 Maze Conditionals 10: "Czy mógłbyś dodać tylko 3 bloki, aby pomóc zombie rozwiązać bardziej złożoną łamigłówkę? \\r \\r\nJeśli zrobisz to właściwie, to będzie mógł spacerować jakąkolwiek drogą, bez względu na jej długość!"
+      4-5 Maze Conditionals 1: Użyj bloku "powtarzaj aż", by doprowadzić zombie do słonecznika.
+      4-5 Maze Conditionals 10: "Czy mógłbyś dodać tylko 3 bloki, aby pomóc zombie rozwiązać tę bardziej złożoną łamigłówkę? \\r \\r Jeśli zrobisz to właściwie, to on będzie mógł spacerować jakąkolwiek drogą, bez względu na jej długość!"
       4-5 Maze Conditionals 2: Użyj bloku "powtarzaj aż", by doprowadzić zombie do słonecznika.
-      4-5 Maze Conditionals 3: "Użyj bloku `if`, aby mi pomóc zadecydować, kiedy skręcać. \\r\n"
-      4-5 Maze Conditionals 4: "Ok, rozwiąż tę łamigłówkę podobnie, jak poprzednią, ale musisz pamiętać, jak użyłeś bloków `if` i `repeat\nuntil` razem."
-      4-5 Maze Conditionals 5: "Potrzeba mi słonecznika! \\r \\r Użyj bloku `if`, aby doprowadzić zombie do słonecznika z wykorzystaniem najmniejszej liczby bloków."
+      4-5 Maze Conditionals 3: "Użyj bloku \"jeśli\", aby mi pomóc zadecydować, kiedy skręcić. \\r\n"
+      4-5 Maze Conditionals 4: Ok, rozwiąż tę łamigłówkę podobnie, jak poprzednią, ale musisz pamiętać, jak użyłeś bloków "jeśli" i "powtarzaj aż" razem.
+      4-5 Maze Conditionals 5: "Potrzeba mi słonecznik! \\r \\r Użyj bloku \"jeśli\", aby doprowadzić mnie tam z najmniejszą liczbę bloków."
       4-5 Maze Conditionals 6: |-
-        "Jeść słonecznik!" \r \r Użyj bloku `if`, aby doprowadzić zombie do słonecznika z wykorzystaniem najmniejszej liczby bloków.
-      4-5 Maze Conditionals 7: Rozwiązanie tej łamigłówki nie jest bardzo trudne, ale uważaj na chrupaczy!
-      4-5 Maze Conditionals 8: "Blok `if/else` sprawdza warunek, a następnie wykonuje jedno ALBO drugie. \\r \\r Użyj tego nowego bloku, aby doprowadzić mnie do słonecznika."
+        "Jeść słonecznik!" \r \r Użyj bloku "jeśli", aby doprowadzić zombie do słonecznika z najmniejszą liczbą bloków.
+      4-5 Maze Conditionals 7: Rozwiązanie tej łamigłówki nie jest specjalnie inne, ale uważaj na chrupaczy!
+      4-5 Maze Conditionals 8: "Blok \"jeśli-w przeciwnym razie\" sprawdza warunek, a następnie wykonuje jedno albo drugie. \\r \\r Użyj tego nowego bloku, aby doprowadzić mnie do słonecznika."
       4-5 Maze Conditionals 9: |-
-        Jeszcze jedno ćwiczenie z wykorzystaniem bloku `if/else`. \r \r Wytycz drogę palcem i spróbuj wykonać je za pierwszym razem.
-      4-5 Maze Conditionals Assessment 1: "**Sprawdzian:** Użyj bloków `repeat until` i `if/else`, aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków."
+        Jeszcze jedno ćwiczenie z wykorzystaniem bloku "Jeśli-w przeciwnym razie". \r \r Wytycz drogę palcem i spróbuj wykonać ją za pierwszym razem.
+      4-5 Maze Conditionals Assessment 1: "**Sprawdzian:** Użyj bloków \"powtarzaj aż\" i \"jeśli-w przeciwnym razie\", aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków."
       4-5 Nested Loops 1: "Uzupełnij kod do rysowania tych trójkątów.  Pierwszy z nich już wykonano dla Ciebie.  Wskazówka: 3 trójkąty w rotacji 360 stopni.\\r\\r\n"
       4-5 Nested Loops 11: "Czy potrafisz narysować te 10 kwadratów na tym chodniku przy użyciu zagnieżdżonej pętli? \\r\\rKażdy kwadrat ma bok długości 30 pikseli."
       4-5 Nested Loops 12: Czy potrafisz narysować tych 36 trójkątów za pomocą zagnieżdżonej pętli?
       4-5 Nested Loops 2: "Teraz umieść tę pętlę wewnątrz innej pętli, by narysować 10 trójkątów. \\r To się nazywa \"zagnieżdżona\" pętla.  "
       4-5 Nested Loops 3: |-
-        Utwórz słońce zagnieżdżając początkowy kod w innej pętli. \r \r Aby utworzyć ten fajny wzór z pustym środkiem, będziesz musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem obrotu.
+        Utwórz słońce zagnieżdżając początkowy kod w innej pętli. \r \r Aby utworzyć ten fajny wzór z pustym środkiem, będziesz musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem skrętu.
       4-5 Nested Loops 5: Umieść w pętli dany kod, aby utworzyć wiatrak.
       4-5 Nested Loops 6: Czy potrafisz narysować sześciokąt powtarzając kod trójkąta?
       4-5 Nested Loops 7: "Powtórz ten wzór 10 razy. \\r \\r O ile trzeba skręcić w każdym obrocie pętli?"
       4-5 Nested Loops 8: "Powtórz ten wzór 6 razy. \\r \\r O ile trzeba skręcić w każdym obrocie pętli? "
       4-5 Nested Loops 9: Narysuj zęby w paszczy aligatora!
       4-5 Nested Loops Assessment 1: "**Sprawdzian:** Użyj zagnieżdżonej pętli, aby ukończyć wzór."
-      4-5 While Loops 1: Doprowadź mnie do otworu i wypełnij go z dwoma szufelkami śmieci przy użyciu bloku `fill`.
+      4-5 While Loops 1: Doprowadź mnie do otworu i wypełnij go z dwoma szufelkami śmieci przy użyciu bloku "wypełnij".
       4-5 While Loops 2: Doprowadź mnie do kupy śmieci i usuń je za pomocą 5 szufelek przy użyciu bloku "usuń 1".
-      4-5 While Loops 3: "Użyj możliwie jak najmniej bloków, aby ukończyć tę łamigłówkę! \\r \\r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przemieść się do otworu i wypełnij go całkowicie."
+      4-5 While Loops 3: "Użyj możliwie jak najmniej bloków, aby ukończyć tę łamigłówkę! \\r \\r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przejdź do otworu i wypełnij go całkowicie."
       4-5 While Loops 4: "Wow, popatrz! \\r \\r Nie wiem, ile szufelek śmieci potrzebuje ten otwór.  \\r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\" aż wypełni ten otwór do poziomu ziemi?  "
       Alien Defender: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
       Alien Defender_2018: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
@@ -347,7 +337,7 @@ pl:
       Mike Test Bee Conditionals 2: "**Sprawdzian:** Zbierz cały nektar. \\r\nUważaj, aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma."
       NEW Course 4 Artist Functions 10.1: Użyj funkcji z poprzednich łamigłówek, aby narysować ten wzór.
       NEW Course 4 Artist Functions 10: "Kliknij na \"edytuj\", by wypełnić bloki w definicji funkcji, aby utworzyć kwadrat boku 40 pikseli.\\r\\r\n"
-      NEW Course 4 Artist Functions 12: Użyj funkcji `draw a line of squares` z poprzedniej łamigłówki, by narysować ten wzór.
+      NEW Course 4 Artist Functions 12: Użyj funkcji "draw a line of squares" (rysuj rząd kwadratów) z poprzedniej łamigłówki, by narysować ten wzór.
       NEW Course 4 Artist Functions 2: "Czy mógłbyś narysować 3 kwadraty oddalone od siebie o 20 pikseli? \\r\\r\nBok każdego kwadratu wynosi 100 pikseli."
       NEW Course 4 Artist Functions 3: "Oto nowy typ bloku. Nazywa się \"funkcja\". Kliknij przycisk \"edytuj\" a następnie wypełnij go kodem do rysowania kwadratu o boku 100 pikseli. \\r \\r Po zakończeniu edycji funkcji, kliknij przycisk \"Zamknij\", aby wrócić do programu."
       NEW Course 4 Artist Functions 4: 'Użyj funkcji `draw a square` do narysowania tego wzoru. '

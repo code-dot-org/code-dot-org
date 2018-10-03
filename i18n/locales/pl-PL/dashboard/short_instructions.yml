@@ -455,7 +455,7 @@ pl:
       CSDU6 - for loop - color buttons: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSDU6 - for loop - why for: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSDU6 arrays rainbow: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
-      CSDU6 arrays random: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Kliknij, aby wyświetlić pełne instrukcje)
+      CSDU6 arrays random: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select icons: Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
       CSDU6 arrays select rainbow: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
       CSDU6 arrays select rainbow_2018: "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)"
@@ -664,7 +664,7 @@ pl:
       Course 4 Binary 8: Możesz wykonać większość tego obrazka powtarzając w pętli 5-cio bitową liczbę - następnie będziesz potrzebować 4-bitową liczbę, aby otrzymać prawy dolny róg.
       Course 4 EC 1a: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
       Course 4 EC 1b: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
-      Course 4 EC 2a: '** Ekstremalne Wyzwanie: ** Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!'
+      Course 4 EC 2a: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
       Course 4 EC 2b: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
       Course 4 EC 2c: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
       Course 4 EC 2d: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
@@ -761,7 +761,7 @@ pl:
       Course1BeePuzzle12: Zbierz trzy nektary i następnie zrób dwa miody
       CourseF_PlayLab_vars1: 'Aby zagrać w tą grę, nie musisz pisać żadnego kodu, po prostu naciśnij "Graj"! '
       CourseF_PlayLab_vars10: "Czas na zabawę! Mamy tutaj wszystkie zmienne, których używaliśmy na tym etapie, jak również kilka dodatkowych, gdyby były potrzebne. \\r\n\\r\nMamy teraz w przyborniku tak wiele bloków, że powinny być uporządkowane. Każdy z nich przydzieliliśmy więc do odpowiedniej kategorii. Poświęć trochę czasu, by poznać, jakie bloki są dostępne. Kiedy już przejrzysz wszystko, utwórz grę lub historyjkę, która korzysta z powtórzeń, zmiennych i zdarzeń. \\r\n\\r\nWskazówka: przewiń ekran do dołu, aby zobaczyć wszystkie polecenia w polu roboczym."
-      CourseF_PlayLab_vars2: Wyścig w poprzedniej zagadce nie był zbyt sprawiedliwy! Zmień zmienną`dog_speed` aby upewnić się, że zbierzesz więcej flag niż kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
+      CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy! Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
       CourseF_PlayLab_vars3: Używaj strzałek w lewo i w prawo, aby się przesunąć, i strzałki do góry, aby skoczyć. Spróbuj, czy potrafisz zebrać wszystkie flagi.
       CourseF_PlayLab_vars4: 'Używamy teraz zmiennej "height" (wysokość) do ustalenia, jak wysoko pies może podskoczyć. Zaktualizuj wartość zmiennej "height" (wysokość) tak, że pies podskakuje wystarczająco wysoko, aby dosięgnąć wszystkich flag. Wskazówka: nowe flagi są na wysokości 200 pikseli.'
       CourseF_PlayLab_vars5: 'Zbudujmy grę! Najpierw potrzebujemy wyniku. Zmodyfikuj kod z poprzedniej łamigłówki, aby ustawić wynik na 10. '
@@ -774,7 +774,7 @@ pl:
       CourseF_PlayLab_vars8: |-
         Użyj strzałki w prawo, aby strzelać sercami. \r \r 
         Jak powinniśmy zdobywać punkty w naszej grze? Dodaj 1 do zmiennej "points" za każdym razem, gdy Pies trafi Kota sercem. Użyj zdarzenia "kiedy postać 2 dotyka czegoś", by uaktualnić wynik, Możesz zwiększyć wartość wyniku (points) przypisując "points = points + 1". Aby ukończyć tę grę, otrzymaj wynik równy 10 (powiększając go co jeden!).
-      CourseF_PlayLab_vars9: Dobrze, teraz upewnijmy się, że gra nie jest zbyt prosta. Za każdym razem gdy Pies(aktor 1) zostanie uderzony kanapką przez Kota (aktor 2), powinieneś stracić punkt. Zacznij od 10 punktów, aby nie było zbyt trudno. Aby przejść ten poziom Twój wynik musi spaść z 10 do 0.
+      CourseF_PlayLab_vars9: Ładnie, teraz spowodujmy, że ta gra nie jest zbyt łatwa - za każdym razem, gdy Pies (postać 1) zostaje trafiony żółtymi sercami przez Kota (postać 2) powinieneś stracić punkt. Zacznij z 10 punktami, aby nie było to zbyt trudne. Aby ukończyć ten poziom, niech Twój wynik zmniejszy się od 10 do 0.
       Crack Random Substitution: Instrukcje
       Crack Random Substitution_2018: Instrukcje
       Crack a Caesar Cipher: Instrukcje
@@ -914,7 +914,7 @@ pl:
       K-1 maze debug 2: Zorientuj się, czego brakuje, a następnie dodaj bloki, by doprowadzić mnie do świnki!
       K-1 maze debug 3: Coś tutaj nie gra. Usuń bloki, aby doprowadzić mnie do świnki!
       K-1 maze debug 4: Przejrzyj te bloki i popraw je! Wydaje mi się, będę podążać w złym kierunku.
-      K-1 maze debug 5: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
+      K-1 maze debug 5: Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki!
       K-1 maze debug 6: Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki!
       K-1 maze debug 7: Napraw ten program przestawiając lub zmieniając bloki, aby doprowadzić mnie do świnki!
       K-1 maze debug 8: Napraw ten program przestawiając lub dodając bloki, aby doprowadzić mnie do świnki!
@@ -1204,7 +1204,7 @@ pl:
         \r
         Czy możesz narysować dom? Spraw, aby wyglądał tak, jak Ty tego chcesz! Spróbuj wyszukać wzory, które się powtarzają!
       course1_artist_loops_challenge2: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
-      course1_maze_debugging_challenge2: Debuguj ten poziom. To poprawne bloki, ale w złej kolejności!
+      course1_maze_debugging_challenge2: Debuguj ten poziom. Te bloki są poprawne, ale w złej kolejności!
       course2_artist_nestedLoops_challenge1: '** Wyzwanie: ** Czy możesz dojść do tego jak utworzyć obrazek taki jak ten?'
       course2_artist_nestedLoops_challenge2: '** Wyzwanie: ** Czy możesz dojść do tego jak utworzyć obrazek taki jak ten?'
       course2_artist_prog_challenge2: "*Pomóż mi narysować żółte linie na tej drodze!*"
@@ -1259,7 +1259,7 @@ pl:
       courseA_artist_loops7_forVideo: Użyj pętli `repeat` aby dodać fale na wodzie.
       courseA_artist_loops9: 'Wyzwanie: Napraw schody.'
       courseA_artist_loops9_2018: 'Wyzwanie: Napraw schody.'
-      courseA_artist_loops_challenge3: "Zagrajmy! Narysuj tak wiele X-ów jak potrafisz!\nDasz radę zrobić 3 z rzędu?"
+      courseA_artist_loops_challenge3: "Zagrajmy w grę!\nNarysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?"
       courseA_collector_loops7: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops7_2018: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops_challenge2kp: Zbierz przynajmniej *3* części skarbu aby przejść ten poziom.
@@ -1429,8 +1429,8 @@ pl:
       courseD_bounce_events4: Tym razem musisz dodać cztery bloki. Przenieś paletki do wszystkich czterech miejsc końcowych, by zakończyć układankę.
       courseD_bounce_events4s: Tym razem musisz dodać cztery bloki. Przenieś paletki do wszystkich czterech miejsc końcowych, by zakończyć układankę.
       courseD_bounce_events5: Mamy zamiar skierować piłkę lecącą w dół w kierunku paletki. Dołącz blok do bloku "kiedy piłka uderza paletkę", aby upewnić się, że piłka osiąga ostateczny cel.
-      courseD_bounce_events6: Teraz ostateczny cel jest na górze. Musisz dołączyć bloki do obu bloków "when ball hits", aby rozwiązać tę łamigłówkę.
-      courseD_bounce_events7: Dołącz bloki do każdego z bloków "when". Odbijaj piłeczkę, aż osiągnie ostateczny cel.
+      courseD_bounce_events6: Teraz ostateczny cel jest na górze. Musisz dołączyć bloki do obu bloków "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.
+      courseD_bounce_events7: Dołącz bloki do każdego z bloków "kiedy". Odbijaj piłeczkę, aż osiągnie ostateczny cel.
       courseD_collector_debugging1: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging1_2018: Napraw błędy, aby zebrać wszystkie skarby.
       courseD_collector_debugging1a: Napraw błędy, aby zebrać wszystkie skarby.
@@ -1458,7 +1458,7 @@ pl:
       courseD_farmer_condLoops5: Zbierz całą kukurydzę oraz sałatę, a na koniec dynie.
       courseD_farmer_condLoops5_2018: Zbierz całą kukurydzę oraz sałatę, a na koniec dynie.
       courseD_farmer_condLoops_challenge2: Zbierz wszystko, aby ukończyć ten poziom.
-      courseD_farmer_condLoops_challenge2_2018: Zbierz wszystko, aby ukończyć poziom.
+      courseD_farmer_condLoops_challenge2_2018: Zbierz wszystko, aby ukończyć ten poziom.
       courseD_farmer_condLoops_challenge2_clone: Zbierz wszystko, aby ukończyć ten poziom.
       courseD_farmer_while_challenge1: Wypełnij wszystkie dziury i usuń wszystkie stosy.
       courseD_farmer_while_challenge1_2018: Wypełnij wszystkie dziury i usuń wszystkie stosy.
@@ -1539,7 +1539,7 @@ pl:
       courseF_bee_functions8a_2018: Zbierz cały nektar lub zrób cały miód!
       courseF_bee_functions_challenge2: Wykorzystaj wszystko czego się nauczyłeś, aby rozwiązać tą zagadkę!
       courseF_bee_functions_challenge2_2018: Wykorzystaj wszystko czego się nauczyłeś, aby rozwiązać tą zagadkę!
-      courseF_bee_functions_challenge2_recursion: "Zbierz cały nektar\nlub zrób cały miód!"
+      courseF_bee_functions_challenge2_recursion: Zbierz cały nektar lub zrób cały miód!
       courseF_bee_fwp2: "Wciągnij ten kod do funkcji, potem wywołaj\nfunkcję, by poszukać nektaru w tym rzędzie."
       courseF_bee_fwp2_2018: "Wciągnij ten kod do funkcji, potem wywołaj\nfunkcję, by poszukać nektaru w tym rzędzie."
       courseF_bee_fwp3: "Zobaczmy, czy funkcja ułatwia zbieranie\nnektaru w tych trzech rzędach."

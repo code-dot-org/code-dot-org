@@ -233,6 +233,28 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
+  test 'capacity returns nil for non workshop admin with no regional partners' do
+    sign_in create(:admin)
+
+    get :capacity, params: {role: 'csd_teachers', regional_partner_value: 'all'}
+    assert_response :success
+    assert_nil JSON.parse(@response.body)['capacity']
+  end
+
+  test 'show regional partner summer workshops for valid partner ID' do
+    regional_partner = create :regional_partner_beverly_hills
+
+    get :show, partner_id: regional_partner.id
+    assert_response :success
+    assert_equal regional_partner.contact_name, JSON.parse(@response.body)['contact_name']
+  end
+
+  test 'show regional partner summer workshops for invalid partner ID' do
+    get :show, partner_id: "YY"
+    assert_response :success
+    assert_equal "no_partner", JSON.parse(@response.body)['error']
+  end
+
   test 'find regional partner summer workshops for specific zip' do
     Geocoder.expects(:search).never
 

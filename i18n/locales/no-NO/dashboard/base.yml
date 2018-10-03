@@ -313,7 +313,6 @@
       signin: 'Logg inn'
       signup: 'Opprett en konto'
       already_registered: 'Allerede registrert?'
-      pair_programming: 'Par Programmering'
       team: 'Team'
       driver: 'Logget inn som'
       navigator: 'Kartleser'

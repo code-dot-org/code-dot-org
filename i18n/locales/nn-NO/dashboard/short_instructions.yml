@@ -413,7 +413,7 @@ nn:
         \r
         For å få dette kule designet med eit hult senter, må du hoppe fram med lengda på triangelet før du snur.
       4-5 Nested Loops 5: Gjenta koden som er gitt til å lage ei vindmølle.
-      4-5 Nested Loops 6: Klarar du å teikne ein sekskant ved å gjenta trekantkoden?
+      4-5 Nested Loops 6: Klarar du å teikne ein sekskant ved å få trekantkoden i løkke?
       4-5 Nested Loops 7: "Gjenta designet 10 gongar. \\r\n\\r\nKor mykje må du rotere i kvar repetisjon?"
       4-5 Nested Loops 8: "Gjenta designet 6 gongar. \\r\n\\r\nKor mykje må du rotere i kvar repetisjon? "
       4-5 Nested Loops 9: Teikn tennene i munnen til alligatoren!
@@ -485,7 +485,7 @@ nn:
       CSDU4 - AppLab - 1: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
       CSDU6 - Arrays - expressionsAsIndexes: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 - Arrays - indexPractice: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
-      CSDU6 - for loop - color buttons with for: Skriv innhaldet i matrisa på skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 - for loop - color buttons with for: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 - for loop - color buttons: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 - for loop - why for: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays rainbow: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
@@ -527,9 +527,9 @@ nn:
         Her er koden til ein interessant figur. Kva skjer når du gjentar den mange gongar og snur mellom kvar køyring? Legg merke til at vinklane i denne figuren er 420 grader, noko som betyr at når teikninga er ferdig vil den ha ei anna retning enn når du starta. Den nye retninga er nøyaktig 60 grader til høgre for der du begynte.
       Course 4 Artist 11: 'Nå til ei utfordring! Her er eit design som kun brukar blokkar som du allereie har blitt vist. Kan du finne ut korleis du kan lage det uten nokre ekstra informasjon? Tips: Ikkje ver redd for å prøve og feile. Det er ikkje forventa at du får det til perfekt første gongen!'
       Course 4 Artist 12: |-
-        Vent eit augneblink og ta ein titt på mønsteret eller tipsa. Klikk her!\r
+        Ønsker du eit nytt glimt på hinta eller inspirasjonsdesignet? Klikk her\r
         \r
-        Om du vil, kan du lage eit mønster heilt på eigen hand!
+        Om ikkje, kan du lage ditt eige design!
       Course 4 Artist 13: Spelar du framleis? Her er eit blankt lerret der du kan designe det du vil!
       Course 4 Artist 2: Kan du gjenta denne koden slik at den teiknar det tona ned kvadratet? (Kvar side er 300 pikslar lang)
       Course 4 Artist 20: Spelar du framleis? Her eit blankt lerret der du kan designe det du vil!
@@ -803,23 +803,23 @@ nn:
       Course 4 SCVP 1: Opprett en funksjon med parametere som tillater kunstneren å hoppe framover og bakover med x antall piksler, og opp og ned med y antall piksler. Bruk positive og negative tall.
       Course 4 Variables Assessment: Kan du lage dette bildet ved å bruke en variabel for sidene? Hver linje skal være 50 piksler lange.
       Course1BeePuzzle12: Hent tre nektar og lag to honning
-      CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane me har brukt så langt, i tillegg til nokre ekstra om du vil bruke dem.\\r\n\\r\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har me lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \\r\n\\r\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
+      CourseF_PlayLab_vars10: "Tid for fritt spel! Her er alle variablane vi har brukt så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har vi lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \n\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
       CourseF_PlayLab_vars2: Løpet i førre oppgåve var ikkje veldig rettferdig. Endre variabelen "hund_fart" for å sikra at du kan samla fleire flagg enn Katt. Den fyrste til å samle 10 flagg vinn! 
       CourseF_PlayLab_vars3: Her er eit nytt type spel! Bruk venstre- og høgrepilene til å bevega deg, og opp-pila til å hoppa. Sjå om du kan sanke alle flagga. 
       CourseF_PlayLab_vars4: No nyttar vi ein variabel kalla «høgde» for å kontrollere kor høgt hunden kan hoppe. Sett «høgde»-variabelen slik at hunden kan hoppe høgt nok til å nå alle flagga.
       CourseF_PlayLab_vars5: 'La oss lage eit spel! Det fyrste vi treng er ein poengsum. Bruk «Sett poeng til»-blokka for å sette poengsummen til 10. '
       CourseF_PlayLab_vars6: |-
-        Bruk høgre piltast til å kaste pai.
-        
-        Korleis skal vi få poeng i spelet vårt? Legg til 1 til din "poeng"-variabel kvar gong Hund treff Katt med eit stykke pai. Bruk "når figur 2 rører noko"-hendinga til å utløyse ei oppdatering av poengsummen din. Du kan auke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gongen!) for å klare nivået.
+        Bruk høgre piltast til å skyte hjarte.\r
+        \r
+        I vårt spel, korleis skal me score poeng? Legg til 1 til din "poeng"-variabel kvar gong Hund treff Katt med eit hjarte. Bruk "når figur 2 røre noko"-hendinga til å utløyse ei oppdatering av poeng-scoren din. Du kan auke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gongen!) for å bestå nivået.
       CourseF_PlayLab_vars7: |-
-        Bruk høgre piltast til å kaste pai.
-        
-        Korleis skal vi få poeng i spelet vårt? Legg til 1 til din "poeng"-variabel kvar gong Hund treff Katt med eit stykke pai. Bruk "når figur 2 røre noko"-hendinga til å utløyse ei oppdatering av poengsummen din. Du kan auke variabelen ved å sette "poeng = poeng + 1". Få poengsummen din opp til 10 (ved å gå opp 1 poeng av gongen!) for å klare nivået.
+        Bruk høgre piltast til å skyte hjarte.\r
+        \r
+        I vårt spel, korleis skal me score poeng? Legg til 1 til din "poeng"-variabel kvar gong Hund treff Katt med eit hjarte. Bruk "når figur 2 røre noko"-hendinga til å utløyse ei oppdatering av poeng-scoren din. Du kan auke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gongen!) for å bestå nivået.
       CourseF_PlayLab_vars8: |-
-        Bruk høgre piltast til å kaste pai
-        
-        Korleis skal vi få poeng i spelet vårt? Legg til 1 til din "poeng"-variabel kvar gong Hund treff Katt med eit stykke pai. Bruk "når figur 2 røre noko"-hendinga til å utløyse ei oppdatering av poengsummen din. Du kan auke variabelen ved å sette "poeng = poeng + 1". Få poengsummen din opp til 10 (ved å gå opp 1 poeng av gongen!) for å klare nivået.
+        Bruk høgre piltast til å skyte hjarte.\r
+        \r
+        I vårt spel, korleis skal me score poeng? Legg til 1 til din "poeng"-variabel kvar gong Hund treff Katt med eit hjarte. Bruk "når figur 2 røre noko"-hendinga til å utløyse ei oppdatering av poeng-scoren din. Du kan auke variabelen ved å sette "poeng = poeng + 1". Få din poeng-score opp til 10 (ved å gå opp 1 poeng av gongen!) for å bestå nivået.
       CourseF_PlayLab_vars9: Bra! La oss gjere spelet litt vanskelegare å spele. Kvar gong Hund (figur 1) blir truffe av gule hjarter frå Katt (spelar 2) skal du miste eitt poeng. Start med 10 poeng slik at det ikke er for vanskeleg. For å fullføre nivået må poeng-scoren falle frå 10 til 0.
       Crack Random Substitution: Instruksjonar
       Crack Random Substitution_2018: Instruksjonar
@@ -965,7 +965,7 @@ nn:
       K-1 maze debug 2: Finn ut kva som manglar og legg så til dei manglande blokkene for å få meg bort til grisen!
       K-1 maze debug 3: Finn ut kva som manglar og FJERN så blokkar for å få meg bort til grisen!
       K-1 maze debug 4: Køyr gjennom desse blokkene og fiks dei! Eg trur eg går i feil retning.
-      K-1 maze debug 5: Feilsøk dette nivået ved å flytte rundt på og legge til blokkar, slik at eg kjem meg bort til grisen!
+      K-1 maze debug 5: Rett opp feil i dette nivået ved å flytte rundt på og legge til blokker, slik at eg kjem meg bort til grisen!
       K-1 maze debug 6: Rett opp feil i dette nivået ved å flytte rundt på og legge til blokker, slik at eg kjem meg bort til grisen!
       K-1 maze debug 7: Rett opp feil i dette nivået ved å flytte rundt på og legge til blokker, slik at eg kjem meg bort til grisen!
       K-1 maze debug 8: Feilsøk dette nivået ved å flytte rundt på og legge til blokker, slik at eg kjem meg bort til grisen!
@@ -1082,7 +1082,7 @@ nn:
       NEW Course 4 Artist Vars 4 5: Fantastisk jobb på den forrige oppgaven! La oss lage dette kule designet på sekskanter med 60 piksler lange sider.
       NEW Course 4 Artist Vars 4: "Lat oss prøve igjen!\\r\n\\r\nKan du setje «lengde»-variabelen til 60 for å lage dette kule designet med sekskantar?"
       NEW Course 4 Artist Vars 6: "Dette mønsteret med femkantar med sider på 100 pikslar teiknar du ved å setje dei rette verdiane for «lengde» og så setje variabelen «lengde» inn på alle dei rette stadane.\\r\n\\r\nSer du at du berre treng å setje verdien for «lenge» ein gong, og så blir den rette verdien brukt alle stader?"
-      NEW Course 4 Bee For Loops 1: "Bruk ei løkke for å samle nektaren\nfrå alle blomane."
+      NEW Course 4 Bee For Loops 1: Bruk ei løkke til å samle all nektaren frå kvar blom.
       NEW Course 4 Bee For Loops 10: Bruk for-løkkas teller-variabel til å kontrollere hvor langt du beveger deg vannrett.
       NEW Course 4 Bee For Loops 10a: "Er du klar for ei utfordring? Ta det\ndu har lært om løkker og prøv å løyse dette problemet. Hugs: Du må kanskje\nprøvekøyre løysinga di fleire gongar før du klarer å finne alle dei naudsynte\nstega."
       NEW Course 4 Bee For Loops 11: "Kan du bruke løkkevariabelen for å\nkontrollere rørsla og nektarinnsamlinga?"
@@ -1190,7 +1190,7 @@ nn:
       SG U3L08 - introUnderTheSea: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - randomInput: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - squareTwoParams: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
-      SG U3L08 comments: Bruk randomNumber()-blokker for å teste funksjonane du lagde med tilfeldig input. (Klikk for å sjå fullstendige instruksjonar)
+      SG U3L08 comments: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 how to add comments: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L2 Using Simple Commands part 1: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
       SG U3L2 Using Simple Commands: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
@@ -1304,7 +1304,7 @@ nn:
       aE7: "Kva skjer om du kopierer løkka og snur mot venstre i staden for mot høgre? \\r\n\\r\nKan du du bruke ei gjenta-blokk til å teikne denne bølgja?"
       aE8: "La oss no gjere det heile opp att fire gonger for å lage biletramme. Sjå opp for hjørna – du kan ikkje berre snu deg 90 gradar!\\r\n\\r \nEin halvsirkel kan du lage ved å repetere 3 gradar 60 gonger. Så kva for nokre kodeblokkar må du bruke for å lage ein kvart-sirkel til hjørna?"
       allHallows2017: Fang Code.org-ansatte i tegnestiftboksen ved å tegne eit kvadrat med 320 pixel lange sider!
-      artistDebugVideo1: Bruk "løkka" for å lage bølger på vatnet.
+      artistDebugVideo1: Bruk "løkka" for å lage bølgjer på vatnet.
       artistFunctionsVideo1: Følg instruksjonane for å lage ein eigen funksjon.
       beeDebugVideo1: Kan du bruke ei løkke for å samle inn all nektaren?
       birdsDebugVideo1: Følg stien og lei meg til den tåpelege grisen. Unngå dynamitt ellers vil fjøra mine fyke!
@@ -1317,7 +1317,7 @@ nn:
       bounce_11_2018: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på rekkerten og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger.'
       bounce_11_basketball: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på handa og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger!'
       bounce_11_sports: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på handa og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger!'
-      bounce_12: Opprett ditt eget Sprett-spel. Du kan endre alle bilda og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på sine telefonar.
+      bounce_12: Opprett ditt eiget Sprett-spel. Du kan endre alle bileta og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på telefonane sine.
       bounce_12_2018: Opprett ditt eiget Sprett-spel. Du kan endre alle bileta og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på telefonane sine.
       bounce_12_basketball: Opprett ditt eget basketball-spel. Du kan endre alle reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på sine telefonar.
       bounce_12_sports: 'Lag ditt eige spel! Du bestemmer: Du kan endre på alle reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig, trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve det på sine telefonar!'
@@ -1360,7 +1360,7 @@ nn:
       course1_collector_loops_challenge3: 'Denne gongen kan du berre bruke ein av kvar pil-blokk. Få tak i heile skatten! '
       course1_collector_loops_challenge4: "La oss få tak i skatten! Hjelp \nmeg over kvar rad og kom deretter tilbake for å starte neste rad. Kan du finne eit mønster?"
       course1_maze_debugging_challenge1: Debug dette nivået. Fjern dei ekstra blokkene og legg til blokkene som manglar. Få fuglen til grisen!
-      course1_maze_debugging_challenge2: Debug dette nivået. Det er dei rette blokkene, men dei er i feil rekkefølge!
+      course1_maze_debugging_challenge2: "Feilsøk dette nivået. Dette er dei rette\nblokkene, men dei ligg i feil rekkefølgje!"
       course1_maze_seq_challenge1: '"Følg stien og leid meg til den tåpelege grisen. Unngå TNT ellers vil fjørene mine fyke!"'
       course1_maze_seq_challenge2: "Du kan bare flytte opp til fire gonger \ni kvar retning. Finn du ein bane før du går tom for blokker?"
       course1_playlab_events_challenge1: '"Kor har venene mine gøymd seg? Kan du skrive koden slik at venene mine kjem fram?"'
@@ -1713,7 +1713,7 @@ nn:
       courseC_starWars_loops10_2018: Du er flink! Fortsett med det!
       courseC_starWars_loops10_predict2: Du er flink! Fortsett med det!
       courseC_starWars_loops10_predict2_2018: Du er flink! Fortsett med det!
-      courseC_starWars_loops1_2018: BB-8 vil plukke opp metallavfall langs banen han beveger seg i. Bruk fem av dei same blokkene til å få BB-8 til å plukke opp skrapmetall i spelområdet.
+      courseC_starWars_loops1_2018: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops1_predict1: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops1_predict1_2018: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops2: Prøv å lage ei løkke som bruker berre ei blokk inni for å få tak i alt skrapmetallet.
@@ -1802,7 +1802,7 @@ nn:
       courseD_bounce_embed_endgame: Bruk venstre og høgre piltast til å flytte åra. Sjå kor mange poeng du kan få før motstandaren skårar to gongar!
       courseD_bounce_embedded: Skriv instruksjonar her
       courseD_bounce_events1: Kople ei blokk til "når venstre pil"-blokka og trykk "Køyr" for å flytte spelaren til flagget.
-      courseD_bounce_events10: Det er no eit mål på toppen. Fest «skår eit poeng» og «skår motstandaren eit poeng» blokkene til «når ein ball i mål» og «når ein ball bommar på racket»-blokkene for å lage eit spel! Sjå kor mange poeng du greier å skåre før motstandaren din skårar to gongar.
+      courseD_bounce_events10: Det er no eit mål på toppen. Fest «skår eit poeng» og «skår motstanderen et poeng» blokkene til «når ein ball i mål» og «når ein ball bommar på rekkerten»-blokkene for å lage eit spel! Sjå kor mange poeng du greier å skåre før motstandaren din skårer to gonger!
       courseD_bounce_events11: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på rekkerten og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger.'
       courseD_bounce_events12: Opprett ditt eiget Sprett-spel. Du kan endre alle bileta og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på telefonane sine.
       courseD_bounce_events2: Fest ei blokk til «når høgre pil»- og «når venstre pil»-blokkene. Flytt rekkerten for å nå begge måla.
@@ -2042,7 +2042,7 @@ nn:
       grade3_ConditionalsElse_6: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\\r\n\\r\nKombinér dei betinga blokkene ('viss' og/eller 'viss/elles') for å berre få så mykje nektar som blomen har.\n\\r\n\\r\nHugs: talet på nektrar kan endre seg for kvar gong du køyrer oppgåva!"
       grade3_ConditionalsElse_7: "Hugs at lilla blomar kan ha 3, 2 og 1 nektar. \n\\r\n\\r\nFullfør \"kontroller lilla blomar\"-funksjonen og bruk den til å samle inn nektar frå alle blomane."
       grade3_ConditionalsElse_8: "Skriv ein funksjon som heiter \"Sjekk blom og lag honning\". \\r\n\\r\nFunksjonen din skal sjekke om den lilla blomen har 3, 2 eller 1 nektar og hente all nektaren. \\r\nDeretter skal den bevege seg framover og så lage honning."
-      grade3_ConditionalsElse_9: "**Oppgåve**: Denne skya skjular enten ein blom med ein nektar eller ei bikake som treng honning. \\r\n\\r \nFullfør \"hent nektar og lag honning\"-funksjonen, deretter brukar du den til å samle inn all nektar og honning. \\r\n"
+      grade3_ConditionalsElse_9: "**Oppgåve** Denne skya gjømmer ein blomst med ein nektar eller ei honningkake som treng ein honning.\n\\r\n\\r\nGjer ferdig \"hent nektar eller lag honning\"-funksjonen og kall den for å sanke nektar eller honning.\\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Det kan vere ein blome eller ein bikube under skyene. \r
         \r
@@ -2126,7 +2126,7 @@ nn:
         For å få dette kule designet med eit hult senter, må du hoppe fram med lengda på triangelet før du snur.
       grade4_arist_nested_loop_triangles6: Klarar du å teikne desse 36 trekantane ved hjelp av ei løkke i ei løkke?
       grade4_artist_functions1: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \\rMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på firkantane."
-      grade4_artist_functions2: "Funksjonar lar deg definere nye blokkar!\\r\n\\r\nVi har flytta blokkar som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa? \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
+      grade4_artist_functions2: "Funksjonar lar deg definere nye blokker!\\r\n\\r\nVi har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa? \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
       grade4_artist_functions_challenge: "Bruk dei foreslåtte funksjonane til å teikne fire rader\nav sekskantar. Legg du merke til korleis partallsradene våre er flytta til høgre?"
       grade4_artist_functions_challenge2: "Bruk dei foreslåtte funksjonane til å teikne fire rader\nav sekskantar. Legg du merke til korleis partallsradene våre er flytta til høgre?"
       grade4_artist_nestedLoops_challenge: |-

@@ -88,18 +88,19 @@ restart)
 reload|upgrade)
         # Signal USR2 to current process.
         if sig 0 &&
-          old_workers=$(get_workers) &&
+          old_pid=$(cat $PID 2>&-) &&
           sig USR2
         then
-                # Wait $UPGRADE_DELAY seconds for the old workers to exit.
+                # Wait $UPGRADE_DELAY seconds for all of the old workers to exit and/or the PID to change.
                 n=$UPGRADE_DELAY
                 while test $n -ge 0 &&
-                      test x"$old_workers" = x"$(get_workers)"
+                      test x"$(cat $PID 2>&-)" = x"$old_pid" &&
+                      test -n "$(get_workers)"
                 do
                         printf '.' && sleep 1 && n=$(( $n - 1 ))
                 done
                 if test $n -lt 0; then
-                        echo >&2 "Old workers still exist after $UPGRADE_DELAY seconds"
+                        echo >&2 "Old process still exists after $UPGRADE_DELAY seconds"
                         exit 1
                 fi
 

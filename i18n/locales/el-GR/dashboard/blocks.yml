@@ -107,14 +107,6 @@ el:
             '"left"': αριστερά
             '"right"': δεξιά
             '"space"': διάστημα
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': επάνω
-            '"down"': κάτω
-            '"left"': αριστερά
-            '"right"': δεξιά
-            '"space"': διάστημα
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -206,6 +198,11 @@ el:
             '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": αριστερά
+            "{x: 300, y: 200}": δεξιά
       Mikelab_getProp:
         options:
           PROPERTY:

@@ -20,17 +20,17 @@ es-MX:
       2-3 Artist Debugging 10: "La almohadilla de dirección en mi dispositivo de juego es demasiado estrecha. \n¿Puede usted hacer más ancho por 10 píxeles? \nIntenta ejecutar el código primero para ver qué está mal."
       2-3 Artist Debugging 11: |-
         Ayúdame a terminar mi hermoso copo de nieve. ¿Cuántas veces necesito "Repetir" para finalizarlo?
-      2-3 Artist Debugging 2: "Este código para los bigotes del gato \nes incorrecto. \\ r \n\\ r \nCorrige este código para dibujar bigotes que tengan la misma longitud."
-      2-3 Artist Debugging 3: "¡Mi barco tiene un agujero! ¿Qué es lo que se necesita para abrir los lados?"
-      2-3 Artist Debugging 5: "El código que tenemos para la pierna y el pie es incorrecto. \\ r \\ r ¿Puedes arreglarlo?"
+      2-3 Artist Debugging 2: "El código para los tres bigotes que ves es incorrecto. Sugerencia: cada bigote tiene 75 píxeles de largo. Repara este código para dibujar los bigotes."
+      2-3 Artist Debugging 3: "¡Mi barco tiene un agujero! ¿Puedes repararlo cambiando el ángulo de la línea? Sugerencia: el último ángulo está errado por 15 grados."
+      2-3 Artist Debugging 5: "El código para la pierna y el pie está equivocado. Sugerencia: El pie es demasiado largo, podríamos necesitar eliminar un paso (juego de palabras intencional)"
       2-3 Artist Debugging 6: |-
-        ¡Parece que estoy en una silla a la que le falta una pata! Edita el código para dibujar la última pata.
+        Parece que estoy sentado en una silla a la que le falta una pata. Edita los Bloques para dibujar la pata.
       2-3 Artist Debugging 7: |-
-        ¡Parace que la C en "código" está dibujada al revés! \ r \ r ¿Puedes hacer que parezca una C de nuevo?
+        Parece que la C en Código está dibujada al revés - ¿Puedes hacer que parezca una C?
       2-3 Artist Debugging 8: |-
-        ¡Mi maestra dice que debería acabar lo que empiezo! Ayúdame a terminar mi molinillo. ¿Puedes ver qué parte está mal?
+        Mi molinillo de viento no está terminado. ¿Cuántas veces necesito repetir para terminarlo?
       2-3 Artist Debugging 9: |-
-        ¡Algo raro pasa aquí! El código de este tallo está mal. ¿Puedes averiguar cómo hacer la artista lo pinte bien?
+        El código de este tallo es incorrecto. Sugerencia: El ángulo está fuera por 60 grados
       2-3 Artist Debugging Assessment 1: "** Evaluación: ** ¿Por qué este cuadrado acaba siendo 75 píxeles más corto de la cuenta en cada lado? \\ r \\ r ¿Dónde está mal el código?"
       2-3 Artist Free Play: '¡Juego gratis! Dibuja lo que quieras.'
       2-3 Artist Functions 1 a: "\"Yo artista zombie. ¡Me encanta dibujar!\"\n\\ r \n\\ r \nAyuda al zombie a dibujar gafas cuadradas.  \\ r \n\\ r \nEl puente entre las gafas es 25 píxeles más corto que el ancho de los cuadrados, que es de 100 píxeles. \\ r \n\\ r\n"
@@ -42,13 +42,13 @@ es-MX:
       2-3 Artist Functions 11: "Hemos cambiado el nombre de la función \"dibujar un cuadrado\" a \"dibujar un hexágono\", pero todavía nos está dando cuadrados!  \\r\n\\r\n¿Se puede modificar la función ` dibujar un hexagon` para dibujar un hexágono con 50 píxeles  lados?\n\\r\n\\r\nDibuje la imagen usando la nueva función!"
       2-3 Artist Functions 12 Mike: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 12 a: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
-      2-3 Artist Functions 12: "Las funciones son realmente geniales para \ndibujar cosas complejas varias veces. \\r\n\\r\n¿Se puede utilizar la función` dibujar una flor`\npara llenar el resto de la maceta? \\ r \nLas plantas son todos los 100 píxeles \nde diferencia."
+      2-3 Artist Functions 12: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 2 a: "¡Las funciones te permiten definir nuevos\n bloques! \\r\n\\r\nMovimos los bloques necesarios para dibujar un cuadro con una\n función llamada ` dibujar un cuadro`. Ahora, utiliza la función ` dibujar un cuadro`\npara crear las gafas \\r\n\\r\nLos cuadros están separados por 75 píxeles."
-      2-3 Artist Functions 2: "¡Las funciones te permiten definir nuevos\n bloques! \\r\n\\r\nHemos movido los bloques necesarios para dibujar un cuadrado en una\n función llamada ` dibujar un cuadrado`. Esta vez, utilice el ` dibujar un square` función \npara crear las gafas \\r\n\\r\nLos cuadrados están separados por 75 píxeles."
-      2-3 Artist Functions 3: "Edita la función para dibujar un cuadrado con una longitud lateral de 115 para dibujar los vasos más grandes. \\r\n\\r\nLos cuadrados están ahora a 45 píxeles de distancia."
+      2-3 Artist Functions 2: "¡Las funciones permiten definir nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función llamada \"dibuja un cuadrado\". ¿Puedes utilizar la función \"dibuja un cuadrado\" para crear los lentes? Los cuadrados están separados por 75 píxeles."
+      2-3 Artist Functions 3: "Edita la función para dibujar un cuadrado con una longitud lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora separados 45 píxeles."
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 9: "** Freeplay: ** Aquí hay una función de copo de nieve. ¡Experimenta con él para crear una escena de invierno!\\r\n\\r\nEste es un nivel de juego libre, por lo que no hay ningún rompecabezas para resolver. ¡Que te diviertas!"
-      2-3 Artist Loops 1: "¿Puedes hacer un hexágono con lados \nque tengan 100 píxeles de largo para terminar la celda? Recuerde, eso significa que solo tendrá que girar 60 grados!"
+      2-3 Artist Loops 1: '¿Podrías hacer un hexágono cuyos lados midan 100 píxeles de largo para terminar la célula? Recuerda, eso significa que ¡sólo deberás girar 60 grados!'
       2-3 Artist Loops 2: Ahora, usa un bloque de repetición para que la célula se convierta en una concha.
       2-3 Artist Loops New 1: |
         Vamos a dibujar la cabeza de este robot! ¿Puedes hacer un cuadrado con lados de 100 píxeles?\r
@@ -57,8 +57,8 @@ es-MX:
         
       2-3 Artist Loops New 10: Ahora conectemos un montón de V juntas en un ciclo.
       2-3 Artist Loops New 11: "¡Es hora de hacer algo elegante!\n\\r\n\\r\nReconstruye el código del último rompecabezas, pero esta vez, agrega un giro a la izquierda de 30 grados dentro del ciclo. Ahora, repítelo 24 veces en lugar de 8."
-      2-3 Artist Loops New 12: 'Dibuja un diamante con lados de 100 píxeles. '
-      2-3 Artist Loops New 13: "Vamos a comenzar con\n algo de código para hacer un diamante \\r\n\\r el código gris para crear \nun patrón divertido!"
+      2-3 Artist Loops New 12: 'Dibuja un diamante con lados de 100 píxeles.'
+      2-3 Artist Loops New 13: "Ahora dibuja un diamante 3 veces en una iteración."
       2-3 Artist Loops New 14: "Juega un poco con el código para \nel diamante y ve lo que otros patrones pueden hacer \\r\n\\r\nIntenta cambiar \ncuántos grados se activa y cuántas veces usas el ciclo."
       2-3 Artist Loops New 15: |+
         ¡Ahora, dibuja lo que quieras!\r
@@ -80,7 +80,7 @@ es-MX:
         \r
         
       2-3 Artist Nested Loops 10: Pasa este código 12 veces para completar el patrón.
-      2-3 Artist Nested Loops 11: Itera este código 4 veces para completar el patrón, gire 90 grados después de cada círculo.
+      2-3 Artist Nested Loops 11: Haga un bucle de este código 4 veces para completar el patrón, gire 90 grados después de cada círculo.
       2-3 Artist Nested Loops 12: Itera este código 12 veces para completar las curvas.
       2-3 Artist Nested Loops 2: "Ahora haga un bucle del triángulo 6 veces. Después de cada triángulo, usted necesitará girar 60 grados antes de dibujar el siguiente."
       2-3 Artist Nested Loops 3: "Necesitaras un enlace que repita tu triangulo 12 veces para dibujar este patrón.\\r\n\\r\nDivide el número de grados \nde un círculo(360) entre el número de figuras que debes dibujar (12) para saber cuantos grados debes girar antes de repetir cada triangulo."
@@ -986,6 +986,7 @@ es-MX:
         - ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu escalera?\r
         - ¿Qué sucede si haces el patrón de tu diamante más largo o más corto?\r
         -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?
+      Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Una **función** llamada \"Construye puente\" se encuentra en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar el río! \\r\n \\r\nAjusta el pequeño bloque verde en tu área de trabajo dos veces para arreglar el camino y llevar a {currentPlayerName} hasta la antorcha de piedra rojiza [redstone_torch]."
       K-1 Bee Loops 2: '¡Utiliza un enlace para moverte y obtener el néctar y hacer miel!'
       K-1 Bee Loops 3: '¡Utiliza enlaces para obtener néctar y para hacer miel!'
@@ -1174,14 +1175,18 @@ es-MX:
         \ r 
         ! [expandable] (https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops10_2018: |-
-        ## Es hora de regresar a la tierra. ¡Ayúdame a poner piedras para que no me caiga! \ r \ r! [expandable] (https://images.code.[expandable]org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+        ## Es hora de regresar a la tierra. ¡Ayúdame a poner piedras para no caer! \ r 
+        \ r 
+        ! [expandable] (https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11: |-
         ## Ayúdame a construir pasos para ver cómo navega el barco. \ r 
         \ r 
         ! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
         
       courseA_artist_loops11_2018: |-
-        ## Ayúdame a construir pasos para ver cómo navegar el barco. \ r \ r! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+        ## Ayúdame a construir pasos para ver cómo navega el barco. \ r 
+        \ r 
+        ! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
         
       courseA_artist_loops12: |-
         El artista vio algo gracioso en la distancia.  Dibuja lo que crees que vio. \ r 
@@ -1208,18 +1213,17 @@ es-MX:
         \r 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops2_2018: |-
-        Ayude al artista a dibujar esta línea dos veces hacia adelante. \ r 
-        \ r 
-        ! [] (https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+        Ayuda al artista a dibujar esta línea dos veces hacia adelante.\r
+        \r 
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3: |-
         Nuestro artista está tratando de trazar una línea cinco veces, pero no puede hacerlo bien. ¿Puedes ayudarlo?\r 
         \r 
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2018: |-
-        Nuestro artista está tratando de trazar 
-        una línea cinco veces, pero no puede hacerlo bien. ¿Puede usted ayudar? \ r 
-        \ r 
-        ! [expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        Nuestro artista está tratando de trazar una línea cinco veces, pero no puede hacerlo bien. ¿Puedes ayudarlo?\r 
+        \r 
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4: |-
         Ahora, ¡utiliza un bucle <xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="2-6">5</title></block></xml> para dibujar esta línea cinco veces!\r
@@ -1235,17 +1239,17 @@ es-MX:
         \r
         ! [expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018: |-
-        ## Dibuja una línea de siete pasos de largo. Esto se convertirá en nuestro horizonte. \ r 
-        \ r 
-        ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+        ## Dibuja una línea de siete pasos de largo. Este será nuestro horizonte.\r
+        \r
+        ! [expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6: |-
         ## Pongamos una colina bonita en la parte posterior.\r
         \r
         ! [expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops6_2018: |-
-        ## Pongamos una buena colina en la parte posterior. \ r 
-        \ r 
-        ! [expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+        ## Pongamos una colina bonita en la parte posterior.\r
+        \r
+        ! [expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
         ## Use el <xml><block
         type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
@@ -1333,11 +1337,10 @@ es-MX:
         Arrastra los bloques al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos un elemento para pasar este nivel.
       courseA_collector_loops12: "*\"¡Eureka, consigue tanto tesoro como puedas!\"*  \\r\n(No tienes que obtenerlo todo)"
       courseA_collector_loops12_2018: "*\"¡Eureka, consigue tanto tesoro como puedas!\"*  \\r\n(No tienes que obtenerlo todo)"
-      courseA_collector_loops1_2018: |2
-        ** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\r
+      courseA_collector_loops1_2018: |-
+        **** Juego gratis: ** ¡Esta es Laurel la Aventurera! Muévela y consigue todo el tesoro que puedas.\r
         \r
-        Arrastra
-         bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel.
+        Arrastra los bloques al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos un elemento para pasar este nivel.
       courseA_collector_loops2: |2
         ¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\r
           <xml><block type="collector_collect"/></xml>
@@ -1887,7 +1890,7 @@ es-MX:
       courseC_collector_prog8_2018: '*"¡Sigue con el buen trabajo! Ayúdame a recolectar todo el tesoro."*'
       courseC_collector_prog9: '*"¡Vamos por todo el tesoro!"*'
       courseC_collector_prog9_2018: '*"¡Vamos por todo el tesoro!"*'
-      courseC_collector_progA: Ayuda a Laurel a recolectar todo el tesoro.
+      courseC_collector_progA: Ayuda Laurel a recolectar todo el tesoro.
       courseC_collector_progB: "¡Casi estas listo!  \\r\n\\r\n¡Recolecta tantas mnedas como puedas para terminar el escenario!"
       courseC_collector_prog_challenge2: Hay 20 piezas del tesoro en esta cueva. Recoge al menos **10** para termnar el desafío!
       courseC_collector_prog_challenge2_2018: Hay 20 piezas del tesoro en esta cueva. Recoge al menos **10** para termnar el desafío!
@@ -1912,9 +1915,9 @@ es-MX:
       courseC_flappy_events9: Para mezclar las cosas, en lugar de finalizar el juego cuando Flappy golpee un obstáculo, trata de volver el puntaje a 0.
       courseC_flappy_events9_2018: Para mezclar las cosas, en lugar de finalizar el juego cuando Flappy golpee un obstáculo, trata de volver el puntaje a 0.
       courseC_harvester_loops1: "Los bucles se puede usar para repetir más que movimientos.  \\r\n\\r\nUsa los bucles para recolectar las cuatro calabazas."
-      courseC_harvester_loops10: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops10: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops10_2018: Recoge todo el maíz y todas las calabazas.
-      courseC_harvester_loops11: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops11: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11_2018: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops1_2018: "Los bucles se puede usar para repetir más que movimientos.  \\r\n\\r\nUsa los bucles para recolectar las cuatro calabazas."
       courseC_harvester_loops2: '¿Puedes combinar dos bucles diferentes para moverte hacia las calabazas, luego recogerlas todas?'
@@ -2481,7 +2484,7 @@ es-MX:
         *"¡Esto va a ser genial!"*\r
         \r
         Ayuda a la abeja a recoger todo el néctar.
-      courseD_bee_nestedLoops2: Esta vez, ayuda a la abeja a recoger todo el néctar usando la menor cantidad de bloques como sea posible.
+      courseD_bee_nestedLoops2: Esta vez, ayuda a la abeja a recoger todo el néctar usando los menos bloques posible.
       courseD_bee_nestedLoops2_2018: Esta vez, ayuda a la abeja a recoger todo el néctar usando los menos bloques posible.
       courseD_bee_nestedLoops2_predict1: Esta vez, ayuda a la abeja a recoger todo el néctar usando los menos bloques posible.
       courseD_bee_nestedLoops2_predict1_2018: Esta vez, ayuda a la abeja a recoger todo el néctar usando los menos bloques posible.
@@ -2725,9 +2728,9 @@ es-MX:
         ¿Puedes descifrar cómo recoger la calabaza?  Asegúrate de recoger todo el maíz a lo largo del camino!
       courseD_farmer_condLoops7: "**Desafío:** Reoge todo el máiz y las lechugas, luego recoge la calabaza."
       courseD_farmer_condLoops7_2018: "**Desafío:** Reoge todo el máiz y las lechugas, luego recoge la calabaza."
-      courseD_farmer_condLoops8: Recoge todo el maíz y todas las lechugas, luego recoge la calabaza.
+      courseD_farmer_condLoops8: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       courseD_farmer_condLoops8_2018: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
-      courseD_farmer_condLoops9: Recoge todo el maíz y todas las lechugas, luego recoge la calabaza.
+      courseD_farmer_condLoops9: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       courseD_farmer_condLoops9_2018: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       courseD_farmer_condLoops9_predict1: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       courseD_farmer_condLoops9_predict1_2018: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
@@ -2852,7 +2855,7 @@ es-MX:
         \r
         Cuando tienes varios de los mismos bloques en una fila, intenta usar un bucle 'repetir'. ¡Hará lo mismo con menos códigos!
       courseD_maze_ramp7: "*\"¡Es momento de enojarse!\"*  \\r\n\\r\n\\r\nUsa lo que has aprendido para llevar al pájaro hasta el cerdo!"
-      courseD_maze_until10: Ayuda al zombe a llegar al girasol.
+      courseD_maze_until10: Ayuda al zombie a llegar al girasol.
       courseD_maze_until10_2018: Ayuda al zombie a llegar al girasol.
       courseD_maze_until10_predict2: Ayuda al zombie a llegar al girasol.
       courseD_maze_until10_predict2_2018: Ayuda al zombie a llegar al girasol.
@@ -2935,7 +2938,7 @@ es-MX:
       courseD_playLab_cond6cloneForTest: '¿Podemos hacer que esto funcione?'
       courseD_scrat_ramp1: Para este rompecabezas, encaja todos los bloques juntos y haz clic en "Ejecutar" ¡para verlos funcionar!
       courseD_scrat_ramp1_2018: Para este rompecabezas, encaja todos los bloques juntos y haz clic en "Ejecutar" ¡para verlos funcionar!
-      courseD_scrat_ramp2: Arrastra un bloque adicional 'mover hacia adelante' desde la caja de herramientas, luego adjunta todos los bloques 'cuand ejecutar' a tu código final.
+      courseD_scrat_ramp2: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseD_scrat_ramp2_2018: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseD_scrat_ramp3: "Hay un bloue extra que va a causar que Scrat se estrelle. \\r\nEliminalo desconectándolo de los otros bloques y arrastrándolo a la caja de herramientas."
       courseD_scrat_ramp3_2018: "Hay un bloue extra que va a causar que Scrat se estrelle. \\r\nEliminalo desconectándolo de los otros bloques y arrastrándolo a la caja de herramientas."
@@ -3265,7 +3268,7 @@ es-MX:
         \r
         Usa bucles anidados para llevar al pájaro hasta el cerdo.
       courseE_maze_ramp1_2018: Para este rompecabezas, arrastra todos los bloques para juntarlos y haz click en "Ejecutar" ¡para verlo funcionar!
-      courseE_maze_ramp2: Arrastra un bloque adicional 'mover hacia adelante' desde la caja de herramientas, luego argega todos los bloques al 'cuando ejecuta' para finalizar tu código.
+      courseE_maze_ramp2: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseE_maze_ramp2_2018: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseE_maze_ramp3: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       courseE_maze_ramp3_2018: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
@@ -3329,7 +3332,7 @@ es-MX:
         Usa bloques de eventos como el 'cuando actores tocan' para cambiar el puntaje. Marca 10 puntos para compeltar el rompecabezas.
       courseE_playLab_scaffold5: '¡Gran trabajo! Tienes todos los componentes básicos de un juego funcionando. Ahora gasta algún tiemp asegurándote que el juego funciones de la forma que quieres. Incluye una forma de ganar o perder tu juego, luego juega hasta que necesites una de esa condiciones.'
       courseE_playLab_scaffold5_2018: '¡Gran trabajo! Tienes todos los componentes básicos de un juego funcionando. Ahora gasta algún tiemp asegurándote que el juego funciones de la forma que quieres. Incluye una forma de ganar o perder tu juego, luego juega hasta que necesites una de esa condiciones.'
-      courseE_playLab_scaffold6: '¡Has terminado! ¡Ahora puedes jugar tu juego o compartirlo cin tus amigos y compañeros!'
+      courseE_playLab_scaffold6: '¡Has terminado! Ahora puedes jugar tu juego o compartirlo con tus amigos o compañeros!'
       courseE_playLab_scaffold6_2018: '¡Has terminado! Ahora puedes jugar tu juego o compartirlo con tus amigos o compañeros!'
       courseE_playlab_challenge2: |-
         ¿Puedes descifrar cómo funciona esta aplicación 'Adivino"? Inenta agregar alguna de las siguientes características al juego:\r
@@ -3476,7 +3479,7 @@ es-MX:
       courseF_artist_ramp9: |-
         Usa lo que has aprendido para dibujar este triángulo.\r
         ___\r
-        ##### Cada lado es de 100 pixeles de largo. Necesitarás girar 120 grados en cada esquina.
+        ##### Cada lado es de 100 pixeles de largo. Necesitarás girar en 120 grados en cada esquina.
       courseF_artist_ramp9_2018: |-
         Usa lo que has aprendido para dibujar este triángulo.\r
         ___\r
@@ -3487,7 +3490,7 @@ es-MX:
       courseF_artist_variables2_2018: "Ahra usa oro bucle para dibujar tres de esos triángulos uno al lado del otro. \\r\n\\r\nPuede anidar el código dentro del interior de tu último rompecabezas."
       courseF_artist_variables3: "Antes que las cosas se pongan díficiles, ¿Puedes mover la longitud de 50 a una variable para que así podamos usarla en el próximo rompecabezas?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseF_artist_variables3_2018: "Antes que las cosas se pongan díficiles, ¿Puedes mover la longitud de 50 a una variable para que así podamos usarla en el próximo rompecabezas?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
-      courseF_artist_variables4: Ahora, usa la variable 'longitud' para que el artista salte hacia adelante y hacia abajo a lo largo de la 'longitud' de pixeles entre los triángulos.
+      courseF_artist_variables4: Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.
       courseF_artist_variables4_2018: Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.
       courseF_artist_variables6: "**¡Ups!**  \\r\n\\r\nRealmente necesitamos que los triángulos sean de 60 pixeles de ancho, con saltos de 60 pixeles.  \\r\n\\r\n¿No estás feliz de estar usando una variable?"
       courseF_artist_variables6_2018: "**¡Ups!**  \\r\n\\r\nRealmente necesitamos que los triángulos sean de 60 pixeles de ancho, con saltos de 60 pixeles.  \\r\n\\r\n¿No estás feliz de estar usando una variable?"
@@ -3551,13 +3554,13 @@ es-MX:
         root -> data -> markdown_instructions -> courseF_artist_variables8_markdown_instruction.
       courseF_artist_variables9: "¡Tiempo de hacer algo de arte!  \\r\n\\r\n¡Ve lo que sucede cuando repites el código del último rompecabezas **30** veces en lugar de sólo 3!\\r\n\\r\nSiente la libertad de hacer tus líneas de cualquier color o patrón para algo de diversión extra."
       courseF_artist_variables9_2018: "¡Tiempo de hacer algo de arte!  \\r\n\\r\n¡Ve lo que sucede cuando repites el código del último rompecabezas **30** veces en lugar de sólo 3!\\r\n\\r\nSiente la libertad de hacer tus líneas de cualquier color o patrón para algo de diversión extra."
-      courseF_artist_variablesFP: "**Juego libre:** Toma lo que has aprendido y haz tu propio dibujo. \\r\n\\r\n¿Cómo puedes usar las variables con os cuadrados, los pentágono o los hexágonos?"
+      courseF_artist_variablesFP: "**Juego libre:** Toma lo que has aprendido y haz tu propio dibujo. \\r\n\\r\n¿Cómo puedes usar las variables con cuadrados, pentágonos o hexágonos?"
       courseF_artist_variablesFP_2018: "**Juego libre:** Toma lo que has aprendido y haz tu propio dibujo. \\r\n\\r\n¿Cómo puedes usar las variables con cuadrados, pentágonos o hexágonos?"
       courseF_artist_variables_10: "Aquí está tu código del último rompecabezas. Intenta editar la variable de otras formas.  \\r\n-  ¿Qué sucede si comienzas con una 'longitud' de menos de 150? \\r\n-  ¿Qué pasa si multiplicamos tu variable por 1.25 a través cada vez\\r\n-? Cuál será tu código si giras 119 grados?"
       courseF_artist_variables_2: "Ahra usa oro bucle para dibujar tres de esos triángulos uno al lado del otro. \\r\n\\r\nPuede anidar el código dentro del interior de tu último rompecabezas."
       courseF_artist_variables_3: "Antes que las cosas se pongan dífíciles, ¿puedes mover la longitud de 50 hacia una variable y asi poder usarla en los próximos rompecabezas? \\r\n<br/>\\r\n\\r\n<img src=\"https://images.code.org/e6eac1f6aeb68a9a7584516e28663c14-image-1477533059853.gif\" width=\"65%\"/>"
       courseF_artist_variables_4: Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.
-      courseF_artist_variables_5: Agrega otro grupo de bucles al final de tu código para agregar 3 triángulos más. Esta vez, ¡muevete hacia adelante y hacia arriba!
+      courseF_artist_variables_5: Agrega otro grupo de bucles al final de tu código para agregera tres triángulos más. ¡Esta vez, para moverse hacia adelante y hacia arriba!
       courseF_artist_variables_6: "¡Ups! Realmente necesitamos que los lados de los triángulos sean de 60 pixele de ancho, con 60 pixeles para saltar. \\r\n¿No estás feliz de estar usando una variable?"
       courseF_artist_variables_6a: Usa lo que has aprendido para construir este diseño donde los cuadrados tengan lados de 80 pixeles y el artista salte 80 pixeles por sobre y por debajo entre cada uno.
       courseF_artist_variables_7: "Comencemos esta sección dibujando un triángulo con lados de 150 pixeles. \\r\n\\r\nAsegúrate de usar la variable 'longitud' y un bucle de repetir."
@@ -3890,7 +3893,7 @@ es-MX:
       grade2_CaringForNewPet_0: Para este rompecabezas, arrastra todos los bloques para juntarlos y haz click en "Ejecutar" ¡para verlo funcionar!
       grade2_CaringForNewPet_11: '*"Mantén la calma y ayúdame a encontrar al cerdo malo."*'
       grade2_CaringForNewPet_2: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
-      grade2_CaringForNewPet_2courseC_maze_programming3: "*\"Este cerdo está arrugando mis plumas.\"*\\r\n\\r\nHay un bloque extra que va a hacer que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
+      grade2_CaringForNewPet_2courseC_maze_programming3: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       grade2_MakeDogTag_1: "*\"¡Hagamos una jaula para mi mascota monstruo!\"*\\r\n\\r\narrastra los bloques a la pantalla para que el artista dibuje sobre las lineas gises de la imagen.  \\r\n(Each line is 100 pixels long)"
       grade2_MakeDogTag_2: |-
         *"¡Esta nave espacial necesita una ventana!"*\r

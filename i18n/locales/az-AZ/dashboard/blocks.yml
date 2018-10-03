@@ -134,14 +134,6 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': yuxarı
-            '"down"': aşağı
-            '"left"': sola
-            '"right"': sağa
-            '"space"': kosmos
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -221,6 +213,11 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": sola
+            "{x: 300, y: 200}": sağa
       Mikelab_getProp:
         options:
           PROPERTY:
