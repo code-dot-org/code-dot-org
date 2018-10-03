@@ -91,4 +91,12 @@ class Pd::PreWorkshopSurveyTest < ActiveSupport::TestCase
 
     assert_equal 'Custom oddly formatted unit name, Custom oddly formatted lesson name', survey.unit_lesson_short_name
   end
+
+  test 'unit_lesson_short_name returns nil for unit not started' do
+    survey = build :pd_pre_workshop_survey, form_data: {
+      unit: Pd::PreWorkshopSurvey::UNIT_NOT_STARTED
+    }.to_json
+
+    assert_nil survey.unit_lesson_short_name
+  end
 end
