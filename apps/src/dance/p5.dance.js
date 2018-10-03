@@ -27,7 +27,8 @@ export default function init(p5, Dance) {
   };
 
 var World = {
-  height: 400
+  height: 400,
+  cuesThisFrame: [],
 };
 
 function randomNumber(min, max) {
@@ -95,6 +96,9 @@ var song_meta = songs.hammer;
 
 exports.addCues = function (timestamps) {
   console.log(timestamps);
+  timestamps.forEach(timestamp => {
+    Dance.song.addCue(0, timestamp, () => World.cuesThisFrame.push(timestamp));
+  });
 };
 
 exports.preload = function preload() {
@@ -600,6 +604,7 @@ function updateEvents() {
   events.any = false;
   events['p5.keyWentDown'] = {};
   events['Dance.fft.isPeak'] = {};
+  events['cue'] = {};
 
   for (let key of WATCHED_KEYS) {
     if (p5.keyWentDown(key)) {
@@ -613,6 +618,11 @@ function updateEvents() {
       events.any = true;
       events['Dance.fft.isPeak'][range] = true;
     }
+  }
+
+  for (let timestamp of World.cuesThisFrame) {
+    events.any = true;
+    events['cue'][timestamp] = true;
   }
 }
 
@@ -637,6 +647,7 @@ exports.draw = function draw() {
   }
 
   updateEvents();
+  World.cuesThisFrame.length = 0;
 
   p5.drawSprites();
 

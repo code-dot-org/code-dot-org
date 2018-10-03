@@ -226,6 +226,7 @@ Dance.prototype.execute = function () {
 Dance.prototype.initInterpreter = function () {
   const Dance = createDanceAPI(this.gameLabP5.p5);
   const nativeAPI = initDance(this.gameLabP5.p5, Dance);
+  this.nativeAPI = nativeAPI;
   this.currentFrameEvents = nativeAPI.currentFrameEvents;
   const sprites = [];
 
@@ -303,8 +304,6 @@ Dance.prototype.initInterpreter = function () {
   };
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
-  const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
-  nativeAPI.addCues(timestamps);
 
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     this.eventHandlers[eventName] = nativeAPI[eventName];
@@ -339,6 +338,8 @@ Dance.prototype.onP5Setup = function () {
     this.eventHandlers.setup.apply(null);
   }
   this.hooks.find(v => v.name === 'runUserSetup').func();
+  const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
+  this.nativeAPI.addCues(timestamps);
 };
 
 /**
