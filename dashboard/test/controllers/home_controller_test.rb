@@ -28,12 +28,11 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student without progress or assigned course/script redirected to index" do
-    user = create(:user)
-    sign_in user
-    assert_queries 4 do
-      get :index
-      assert_redirected_to '/home'
-    end
+    student = create :student
+    sign_in student
+    get :index
+
+    assert_redirected_to '/home'
   end
 
   test "student with progress but not an assigned script will go to index" do
@@ -58,13 +57,11 @@ class HomeControllerTest < ActionController::TestCase
 
   test "student with assigned script then recent progress in a different script will go to index" do
     student = create :student
-    script = create :script
-    other_script = create :script
-    other_script.stubs(:last_progress_at) = 1.day.ago
     sign_in student
-    student.assign_script(script)
-    script.stubs(:assigned_at) = 2.days.ago
-    User.any_instance.stubs(:script_with_most_recent_progress).returns(other_script)
+    assigned_user_script = create :user_script, user: student, assigned_at: 2.days.ago
+    user_script_with_progress = create :user_script, user: student, last_progress_at: 1.day.ago
+    User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
+    User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
 
     get :index
 
@@ -73,17 +70,15 @@ class HomeControllerTest < ActionController::TestCase
 
   test "student with recent progress then an assigned script should go to the assigned script overview" do
     student = create :student
-    script = create :script
-    other_script = create :script
-    other_script.stubs(:last_progress_at) = 2.day.ago
     sign_in student
-    student.assign_script(script)
-    script.stubs(:assigned_at) = 1.day.ago
-    User.any_instance.stubs(:script_with_most_recent_progress).returns(other_script)
+    assigned_user_script = create :user_script, user: student, assigned_at: 1.day.ago
+    user_script_with_progress = create :user_script, user: student, last_progress_at: 2.days.ago
+    User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
+    User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
 
     get :index
 
-    assert_redirected_to script_path(script)
+    assert_redirected_to script_path(assigned_user_script.script)
   end
 
   test "student with assigned script then recent progress in that script will go to script overview" do
