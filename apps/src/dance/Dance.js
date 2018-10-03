@@ -82,6 +82,14 @@ Dance.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
+  // Pre-register all audio preloads with our Sounds API, which will load
+  // them into memory so they can play immediately:
+  $("link[as=fetch][rel=preload]").each((i, { href }) => {
+    const soundConfig = { id: href };
+    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
+    Sounds.getSingleton().register(soundConfig);
+  });
+
   ReactDOM.render((
     <Provider store={getStore()}>
       <AppView
