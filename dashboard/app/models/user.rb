@@ -1489,13 +1489,7 @@ class User < ActiveRecord::Base
   end
 
   def most_recently_assigned_script
-    script = Script.where(id: most_recently_assigned_user_script[:script_id], hidden: 'false')
-    puts "most recently assigned script"
-    puts
-    print script.to_json
-    puts
-    puts
-    script
+    most_recently_assigned_user_script.script
   end
 
   def user_script_with_most_recent_progress
@@ -1506,7 +1500,7 @@ class User < ActiveRecord::Base
   end
 
   def script_with_most_recent_progress
-    Script.where(id: user_script_with_most_recent_progress.script_id, hidden: 'false')
+    user_script_with_most_recent_progress.script
   end
 
   def most_recent_progress_in_recently_assigned_script?
