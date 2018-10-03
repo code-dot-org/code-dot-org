@@ -73,6 +73,7 @@ module Pd
           is not available for grades K-8. (select all that apply)'
         ),
         csp_how_offer: BASE_PAGE_LABELS[:section_3_choose_your_program][:csp_how_offer],
+        cs_total_course_hours: 'Total course hours:',
         cs_how_many_minutes: clean_multiline(
           'How many minutes will your CS program class last? (Include the
           number of minutes from start to finish that you see your students per class
@@ -134,5 +135,24 @@ module Pd
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
+
+    VALID_SCORES = {
+      # Minimum requirements
+      regional_partner_name: YES_NO,
+      csd_which_grades: YES_NO,
+      csp_which_grades: YES_NO,
+      cs_total_course_hours: YES_NO,
+      cs_terms: YES_NO,
+      plan_to_teach: YES_NO,
+      have_cs_license: YES_NO,
+      committed: YES_NO,
+      willing_to_travel: YES_NO,
+      # Scholarship requirements
+      previous_yearlong_cdo_pd: YES_NO,
+      # Bonus Points
+      csp_how_offer: [2, 0],
+      replace_existing: [5, 0],
+      taught_in_past: [2, 0],
+    }
   end
 end

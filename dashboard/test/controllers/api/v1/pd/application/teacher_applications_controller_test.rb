@@ -82,5 +82,19 @@ module Api::V1::Pd::Application
       sign_in @applicant
       put :create, params: @test_params
     end
+
+    test 'updates course hours computation on successful create' do
+      application_hash = build(
+        TEACHER_APPLICATION_HASH_FACTORY,
+        cs_how_many_minutes: 45,
+        cs_how_many_days_per_week: 5,
+        cs_how_many_weeks_per_year: 30
+      )
+
+      sign_in @applicant
+      put :create, params: {form_data: application_hash}
+
+      assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
+    end
   end
 end
