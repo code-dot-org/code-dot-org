@@ -48,6 +48,7 @@ module PartialRegistration
   end
 
   def self.cancel(session)
+    SignUpTracking.log_cancel_finish_sign_up(session)
     SignUpTracking.end_sign_up_tracking(session)
     session.delete(USER_ATTRIBUTES_SESSION_KEY)
     session
