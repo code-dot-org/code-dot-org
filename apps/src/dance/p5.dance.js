@@ -100,6 +100,13 @@ exports.addCues = function (timestamps) {
   });
 };
 
+exports.reset = function () {
+  while (p5.allSprites.length > 0) {
+    p5.allSprites[0].remove();
+  }
+  exports.currentFrameEvents.any = false;
+};
+
 exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
@@ -131,7 +138,9 @@ exports.setup = function setup() {
   Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / song_meta.bpm));
   Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / song_meta.bpm));
   Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / song_meta.bpm));
+}
 
+exports.play = function () {
   Dance.song.start();
 }
 
