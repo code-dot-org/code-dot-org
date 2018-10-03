@@ -309,12 +309,9 @@ exports.doMoveLR = function doMoveLR(sprite, move, dir) {
   sprite.animation.changeFrame(FRAMES / 2);
 }
 
-exports.ifDanceIs = function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
-  if (!spriteExists(sprite)) return;
-  if (sprite.current_dance == dance) {
-    ifStatement();
-  } else {
-    elseStatement();
+exports.getCurrentDance = function (sprite) {
+  if (spriteExists(sprite)) {
+    return sprite.current_move;
   }
 }
 

@@ -253,6 +253,9 @@ Dance.prototype.initInterpreter = function () {
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
     },
+    getCurrentDance: (spriteIndex) => {
+      return nativeAPI.getCurrentDance(sprites[spriteIndex]);
+    },
     changeMoveLR: (spriteIndex, move, dir) => {
       nativeAPI.changeMoveLR(sprites[spriteIndex], move, dir);
     },
@@ -307,7 +310,6 @@ Dance.prototype.initInterpreter = function () {
     randomColor: () => {
       return nativeAPI.randomColor();
     },
-    // TODO: ifDanceIs: function ifDanceIs(sprite, dance, ifStatement, elseStatement),
   };
 
   let code = require('!!raw-loader!./p5.dance.interpreted');
