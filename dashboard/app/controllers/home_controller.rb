@@ -46,11 +46,9 @@ class HomeController < ApplicationController
   # Signed out: redirect to /courses
   def index
     if current_user
-      if current_user.student? && !account_takeover_in_progress? && current_user.most_recently_assigned_script
-        if current_user.script_with_most_recent_progress &&
-          (most_recent_progress_in_recently_assigned_script? || last_assignment_after_most_recent_progress?)
-          redirect_to script_path(current_user.most_recently_assigned_script)
-        end
+      if current_user.student? && !account_takeover_in_progress? && current_user.most_recently_assigned_script && current_user.script_with_most_recent_progress &&
+      (current_user.most_recent_progress_in_recently_assigned_script? || current_user.last_assignment_after_most_recent_progress?)
+        redirect_to script_path(current_user.most_recently_assigned_script)
       else
         redirect_to '/home'
       end
