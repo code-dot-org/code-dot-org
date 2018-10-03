@@ -1,11 +1,11 @@
 name 'AP_practice_Qs_rqb_86_CSP_4_1_1'
-wrong '<img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" height="200">'
-wrong '<img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" height="200">'
-wrong '<img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" height="200">'
-right '<img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" height="200">'
+wrong '<img src="https://curriculum.code.org/media/uploads/csp/c7d593125a90ac3c790a78d5b5d098af" height="200">'
+wrong '<img src="https://curriculum.code.org/media/uploads/csp/f9506ef1e6ea5e845699feaac9686a5d" height="200">'
+wrong '<img src="https://curriculum.code.org/media/uploads/csp/2ffc72ca9ba682bcd443104de50ac8a5" height="200">'
+right '<img src="https://curriculum.code.org/media/uploads/csp/6b450add4f3ff7310fa1a3c2d6a1b27a" height="200">'
 markdown <<MARKDOWN
-<img src="https://codehs.com/uploads/9b1b80fb7aeeda43777044012770a1e8" height="200">
+<img src="https://curriculum.code.org/media/uploads/csp/9b1b80fb7aeeda43777044012770a1e8" height="200">
 
 What will the final image look like after this program runs?
-<img src="https://codehs.com/uploads/b919f0a3f52efe3abe7932c94701f121" height="200">
+<img src="https://curriculum.code.org/media/uploads/csp/b919f0a3f52efe3abe7932c94701f121" height="200">
 MARKDOWN
