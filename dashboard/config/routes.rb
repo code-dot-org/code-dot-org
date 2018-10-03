@@ -371,7 +371,9 @@ Dashboard::Application.routes.draw do
         end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
+          post :unstart
           post :end
+          post :reopen
           get  :summary
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]

@@ -6,7 +6,7 @@ es:
       2-3 Artist 12: |-
         Configura el bloque "repetir" de tal forma que cree un "círculo" para terminar el globo ocular. Si cada movimiento gira un grado a la derecha, ¿cuántas veces necesitas repetir para completar el círculo? ¿180? ¿360? ¿500?
       2-3 Artist 2 new: 'Esta casa tiene una pared a medio terminar. Cada lado mide 100, pero la pared incompleta solo mide 50. Completa la pared. '
-      2-3 Artist 2: 'Esta casa tiene una pared a medio terminar. Cada lado es 100, pero la pared a medio terminar es sólo 50. Termine la pared.'
+      2-3 Artist 2: 'Esta casa tiene una pared a medio terminar. Cada lado mide 100, pero la pared incompleta solo mide 50. Completa la pared. '
       2-3 Artist 3.4: "El bloque Salta mueve el artista sin dibujar.\nDibuja la línea punteada utilizando los bloques Salta y Dibuja."
       2-3 Artist 3: Este sombrero mide 100 pixels de alto. Dibuja un sombrero que mida 70 pixels menos.
       2-3 Artist 3new: "El sombrero rojo tiene 100 pixeles de alto. Termina de dibujar un sombrero negro que tiene 70 pixeles menos. El ancho del sombrero negro es de 50 pixeles."
@@ -52,6 +52,7 @@ es:
       2-3 Artist Functions 12 a: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 12: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 13: "Tienes cuatro funciones.\nUtilízalas como quieras dentro de uno o varios bucles para hacer dibujos que puedes compartir con tus amigos. Pulsa \"run\" para ver un ejemplo."
+      2-3 Artist Functions 2 a: 'Usa el bloque pequeño verde de ''dibujar un cuadrado'' para llamar a esta nueva función y crear las gafas. '
       2-3 Artist Functions 2: "¡Las funciones permiten definir nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función llamada \"dibuja un cuadrado\". ¿Puedes utilizar la función \"dibuja un cuadrado\" para crear los lentes? Los cuadrados están separados por 75 píxeles."
       2-3 Artist Functions 3: "Editar la función para dibujar un cuadrado con una longitud lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora separados 45 píxeles."
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
@@ -215,7 +216,7 @@ es:
       2-3 Maze sq3: '¡Guíame al demonio verde! (Cuidado con el TNT)'
       2-3 Maze sq4: Manten la calma y ayúdame a encontrar al cerdo malo. Sino, puede que me enfade!
       2-3 Maze sq5: "¡Llévame al cerdo! ¿Cuántas veces debes\nrepetir un bloque?"
-      2-3 Maze sq6: "¿Podrías reemplazar la respuesta anterior con solo dos\nbloques? (Sugerencia: Crea un ciclo usando un bloque de \"repeticiones\".)"
+      2-3 Maze sq6: "¿Podrías reemplazar la respuesta anterior con\nsolo dos bloques? (Sugerencia: Crea un ciclo utilizando un bloque de \"repeticiones\".)"
       2-3 Maze sq7: Llévame al intruso verde usando solo tres bloques.
       2-3 Maze sq8: Llevame hacia el cerdo! (¿Dónde está el bloque "repeticiones" cuando lo necesito?)
       2-3 Maze sq9: Crea bucles para llegar al cerdo usando menos bloques.
@@ -367,7 +368,7 @@ es:
       4-5 Maze 5 (copy 1): '¿Puedes resolver este rompecabezas utilizando el menor número de bloque posibles?'
       4-5 Maze 5: '¿Puedes resolver este rompecabezas utilizando el menor número de bloque posibles?'
       4-5 Maze 6 (copy 1): '¿Puedes resolver este rompecabezas utilizando el menor número de bloque posibles?'
-      4-5 Maze 6: '¿Puedes resolver este rompecabezas utilizando el menor número de bloque posibles?'
+      4-5 Maze 6: '¡Llévame al girasol!'
       4-5 Maze 7: Estimada persona. Yo zombie. Debe...llegar...al girasol.
       4-5 Maze 8: "Utiliza el bloque \"repeat\" para llevar al zombie hasta el girasol. (¡Evadiendo a los chompers!)"
       4-5 Maze 9: "Ahora te presentamos el nuevo bloque llamado Repetir Hasta = \"Repeat Until\" \\r\n\\r\nEste crea un ciclo hasta que el Zombie llegue al girasol. \\r\n\\r\nEste nuevo bloque te ayuda a solucionar el ejercicio con menos bloques."
@@ -402,10 +403,10 @@ es:
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado. \r
         
       4-5 Nested Loops 5: has un bucle con el código dado para crear un molino de viento.
-      4-5 Nested Loops 6: '¿Puedes dibujar un hexágono con un bucle del código del triángulo?'
+      4-5 Nested Loops 6: "¿Puedes dibujar un hexágono haciendo un enlace\ncon el código triangular?"
       4-5 Nested Loops 7: "con el bucle repite este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuanto es 360 dividido por 10?)"
       4-5 Nested Loops 8: "Repite el bucle 6 veces. ¿Cuánto tienes que girar cada vez el bucle? (Pista: ¿Cuánto es 360 dividido por 6?)"
-      4-5 Nested Loops 9: Dibuja los dientes en la boca de cocodrilo!
+      4-5 Nested Loops 9: Dibujar los dientes en la boca del cocodrilo!
       4-5 Nested Loops Assessment 1: 'Usar un bucle anidado para completar el diseño.'
       4-5 While Loops 1: "Muéveme al hoyo y llénalo con\ndos paladas de tierra, usando el bloque `llenar`."
       4-5 While Loops 2: "Moverme a la pila de tierra y eliminar\neso con 5 palas de cuchara, usando el bloque `remover 1`."
@@ -434,7 +435,7 @@ es:
       Artist Autorun Test: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       Artist Inspiration: "Inspiración de juego libre: Ahora has aprendido todo lo que necesitas saber para hacer un patrón como este! Si te inspira esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por tu cuenta. \\r \\r quieres saber cómo se hizo nuestro patron de inspiración? Visita https://studio.code.org/c/106387604 para la solución."
       Auto Open Function Editor: '¡Puedes llamar una función dentro de otra función! Utilizando tu función "shape" como base, crea 3 formas de casa cada una de 20 píxeles mas larga que la anterior, empezando con 50 píxeles de longitud. Usar un circuito de contar puede ser útil.'
-      Bee Recommended Blocks test: Las flores moradas pueden tener 1 o 0 néctar, ¡Pero tu no sabes cual de los dos! Ten cuidado de no recolectar néctar de una flor morada que no tenga. Comprueba que el néctar es igual a 1 utilizando un bloque si-entonces.
+      Bee Recommended Blocks test: '¡ Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar el néctar de una flor morada sin  néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”. '
       Bergeron Robot Maze1: "¿Me puedes ayudar a atrapar al cerdo malo? Apila un\npar de bloques \"avanzar\" juntos y presiona \"Ejecutar\". "
       Brad Spooky House Copy: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Brad Spooky House: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
@@ -445,6 +446,9 @@ es:
       C3-Farmer While Loops 6: Wow, ahora hay un monton de tierra! ¿Puedes escribir un programa que quite todo eso para que el suelo quede parejo?
       C3-Farmer While Loops 7: '¡Wow, ahora hay tres montones de tierra! ¿Puedes escribir un programa que elimine cada uno de ellos hasta que la tierre quede plana?'
       C3-Farmer While Loops Assessment 1: Existen un montón de huecos y pilotes. Ayúdame a llenarlos y removerlos para aplanar la tierra.
+      CDEF_debugging_flappy2: '¿Por qué no funciona este juego?'
+      CSD U5 black white images pixelation 5: Dibuja cualquier cosa
+      CSD U5 black white images pixelation 5_2018: Dibuja cualquier cosa
       CSPU5_U3 - Canvas - freePlay: Extiende la funcionalidad de uno de los efectos o crea uno completamente nuevo (haz clic para ver instrucciones completas)
       CSPU5_U3 - Canvas - freePlay_2018: Extiende la funcionalidad de uno de los efectos o crea uno completamente nuevo (haz clic para ver instrucciones completas)
       CSPU5_U3 - Keys - Final Image Scroller: Actualice el desplazamiento de la imagen para responder a los botones y presionar las teclas. (Haga clic para ver instrucciones completas)
@@ -611,7 +615,7 @@ es:
       Course 4 Bee Params 8 Clone 2: Oooh, ahora hay miel con la que lidiar también! Cómo puedes actualizar tu función para así obtener néctar o hacer miel.
       Course 4 Bee Params 8 Clone: Oooh, ahora hay miel con la que lidiar también! Cómo puedes actualizar tu función para así obtener néctar o hacer miel.
       Course 4 Bee Params 8 clone 3: Oooh, ahora hay miel con la que lidiar también! Cómo puedes actualizar tu función para así obtener néctar o hacer miel.
-      Course 4 Bee Params 8 new: Oooh, ahora también hay miel de la que ocuparse! Cómo puedes actualizar tu función para así obtener néctar o hacer miel?
+      Course 4 Bee Params 8 new: Oooh, ahora hay miel con la que lidiar también! Cómo puedes actualizar tu función para así obtener néctar o hacer miel.
       Course 4 Bee Params 8: 'Desafio: Ahora hay que ocuparse de la miel! Vuelve a escribir tu funcion para usar las dos el numero de unidades de miel y el numero de unidades de nectar. ¿Cómo utilizarias esos numeros para decidir que puedes hacer?'
       Course 4 Bee Params Ex: Trata de utilizar tu nueva función para recolectar todos este néctar.
       Course 4 Binary 1: Esta es una función que toma una cadena binaria de 0s y 1s e instruye al granjero girar de izquierda a derecha, de arriba a abajo, girando en los cuadrados donde el número tiene un cero. Ejecute el código proporcionado para ver cómo los granjeros utilizan binario para dibujar una imagen.
@@ -625,7 +629,7 @@ es:
       Course 4 Binary 8: Puedes completar la mayor parte de esta imagen repitiendo un numero binario de 5 bits - luego, necesitarás un número más de 4 bits a la esquina inferior derecha.
       Course 4 EC 1a: Sin reglas. Sin pistas. ¡Sólo el desafío!
       Course 4 EC 1b: Sin reglas. Sin pistas. ¡Sólo el desafío!
-      Course 4 EC 2a: '**Reto Extremo:** No Reglas. No Pistas. Solo el reto!'
+      Course 4 EC 2a: Sin reglas. Sin pistas. ¡Sólo el desafío!
       Course 4 EC 2b: Sin reglas. Sin pistas. ¡Sólo el desafío!
       Course 4 EC 2c: Sin reglas. Sin pistas. ¡Sólo el desafío!
       Course 4 EC 2d: Sin reglas. Sin pistas. ¡Sólo el desafío!
@@ -741,6 +745,7 @@ es:
       Crack Random Substitution_2018: Instrucciones
       Crack a Caesar Cipher: Instrucciones
       Crack a Caesar Cipher_2018: Instrucciones
+      Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Food Fight!: "Añadimos una última función para\nti. \\r\n\\r\nUtiliza una sentencia \"Si\" para que tu programa llame la funcion \"livel_mas\" solo cuando \"puntuacion_jugador\" sea mayor que un cierto numero.\\r\n\\r\nPor\nejemplo: \"puntuacion_jugador\" > 6\\r\n\\r\nJuega el juego, y hazlo pasar de nivel\n4 para mover al siguiente problema. "
       Function intro Ryan: Utiliza la función "construir puente" dos veces para abrir un camino hasta la antorcha.
       Infinity_catch: '¿Puedes hacer que Elsa ("actor2") alcance a Anna utilizando las teclas de flecha?'
@@ -1075,7 +1080,7 @@ es:
       Standalone_Artist_8: Aquí hay una función llamada "Dibuja una figura" que hemos programado para dibujar hexágonos. Ejecuta el código para ver lo que hace y luego experimenta con la función para ver qué pasa. ¿Puedes hacer que dibuje un patrón de cuadrados, triángulos u octágonos?
       Standalone_Artist_9: '¡Ahora sigue adelante y haz la imagen que tu quieras! ¡Incluso tienes una función vacía con la que puedes hacer lo que quieras!'
       Standalone_Artist_v2: '¡ Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo.'
-      Testing Quantum Farmer: "Wow, encontre un agujero realmente profundo! no se cuantas paleadas de tierra necesita. ¿Puedes escribir un programa que llene hasta que el suelo este parejo? Sugerencia: trata usando el bucle mientras."
+      Testing Quantum Farmer: "Wow, mira eso! \\r\n\\r\nYo no\nse cuántas palas de tierra necesita este hoyo. \\r\n¿Puedes tu escribir un programa\nque siga usando el bloque `llenar` hasta que el suelo esté parejo?\n  "
       The Vigenere Cipher Widget: Instrucciones
       The Vigenere Cipher Widget_2018: Instrucciones
       The Vigenere Cipher: Instrucciones
@@ -1158,7 +1163,7 @@ es:
         \r
         Juega y
         mueve a Waddles con las flechas hasta que anotes.
-      course2_playlab_stage17_11: "Crea tu propia historia. Cuando\ntermines, da clic en Terminar para dejar que tus amigos prueben tu historia en sus teléfonos."
+      course2_playlab_stage17_11: Crea tu propia historia. Cuando finalices, haz clic en Terminar para que tus amigos prueben tu historia en sus teléfonos.
       course2_playlab_stage17_2: '¿Puedes hacer que el perro diga algo y que a continuación el gato le conteste?'
       course2_playlab_stage17_3: '¿Puedes escribir un programa para hacer que el perro se mueva hasta el gato?'
       course2_playlab_stage17_4: "¿Puedes escribir un programa que haga que\nJorge (actor 1) mueva a Olive el Gato, y que Olive diga \"Hola\" cuando Jorge\nla alcance?"
@@ -1168,17 +1173,17 @@ es:
       course2_playlab_stage17_9: "¿Puedes agregar un bloque para ganar un punto\ncuando Waddles choque con Octavia (actor 3)?\\r\n¡Juega y mueve a Waddles\ncon las flechas hasta que anotes!"
       course3_playlab_challenge2: "¿Puedes averiguar cómo funciona esta aplicación \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
       course3_playlab_stage16_1: '¿Puedes hacer que este perro diga "Hola mundo"?'
-      course3_playlab_stage16_2: '¿Puedes hacer que el perro diga algo y que a continuación el gato le conteste?'
-      course3_playlab_stage16_3: '¿Puedes escribir un programa para hacer que el perro se mueva hasta el gato?'
-      course3_playlab_stage16_4: "¿Puedes escribir un programa que haga\nque el perro se mueva hacia el gato, y que el gato diga \"hola\" cuando el perro\nlo alcance?"
-      course3_playlab_stage16_5: '¿Puedes agregar un bloque para hacer feliz al pulpo?'
+      course3_playlab_stage16_2: '¿Puedes hacer que el perro diga algo y que el gato le conteste algo?'
+      course3_playlab_stage16_3: '¿Puedes crear un programa que haga que el perro se mueva hacia el gato?'
+      course3_playlab_stage16_4: '¿Puedes escribir un programa que haga que el perro se mueva hacia el gato, y que el gato diga "hola" cuando el perro se acerque a él?'
+      course3_playlab_stage16_5: '¿Puedes agregar un bloque para que el pulpo esté feliz?'
       course3_playlab_stage16_6: Crea tu propia historia. Cuando finalices, haz clic en Terminar para que tus amigos prueben tu historia en sus teléfonos.
-      course3_playlab_stage17_1: "¿Puedes escribir un programa que haga que \nel pulpo diga \"hola\" cuando se hace clic en él?"
-      course3_playlab_stage17_2: "¿Puedes escribir un programa que haga que Waddles\nse mueva usando las teclas arriba/abajo/izquierda/derecha para alcanzar todos los objetivos?"
-      course3_playlab_stage17_3: "El bloque \"repetir para siempre\" te permite\nejecutar tu código continuamente. ¿Puedes agregar bloques para mover este dinosaurio\nhacia arriba y hacia abajo repetidamente?"
-      course3_playlab_stage17_4: "¿Puedes hacer que Waddles diga \"Ouch!\"\ny reproduzca un sonido de \"choque\" si choca con el dinosaurio, y moverlo con \nlas flechas para hacer que esto suceda?"
-      course3_playlab_stage17_5: "¿Puedes agregar un bloque para ganar un punto\ncuando Waddles choque con el pulpo, y moverlo \ncon las flechas hasta que anotes?"
-      course3_playlab_stage17_6: "¿Puedes agregar bloques para cambiar el fondo\ny la velocidad de Waddles, y luego moverlo con las flechas hasta que anotes?"
+      course3_playlab_stage17_1: '¿Puedes escribir un programa para hacer que el pulpo diga "hola" cuando se hace clic sobre él?'
+      course3_playlab_stage17_2: '¿Puedes escribir un programa que haga que este pingüino se mueva al pulsar las teclas de flecha arriba/abajo/izquierda/derecha para alcanzar todos los objetivos?'
+      course3_playlab_stage17_3: El bloque de "repetir para siempre" te permite ejecutar el código de manera continua. ¿Puedes adjuntar los bloques que se necesitan para mover este dinosaurio hacia arriba y hacia abajo continuamente?
+      course3_playlab_stage17_4: '¿Puedes hacer que el pingüino diga "¡Ay!" y reproduzca un sonido de "golpe", si él choca con el dinosaurio? Hay que moverlo con las teclas de flecha para hacer que esto ocurra'
+      course3_playlab_stage17_5: '¿Puedes agregar un bloque para anotar un punto cuando el pingüino choque con el pulpo? Hay que moverlo con las teclas de flecha para anotar un punto'
+      course3_playlab_stage17_6: '¿Puedes agregar bloques para cambiar el fondo y la velocidad del pingüino y moverlo con las teclas de flecha hasta anotar?'
       course3_playlab_stage17_7: Crea tu propia historia. Cuando finalices, haz clic en Terminar para que tus amigos prueben tu historia en sus teléfonos.
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente diferente)
       course4_playlab_variables_challenge1: "Usa estos bloques para hacer \nque los actores compartan una broma de toc-toc. ¡Cambia la configuración y la frase final para contar con tu propio chiste!"
@@ -1396,7 +1401,7 @@ es:
       grade3_Loops_12: "Utiliza un ciclo para recolectar néctar de cada flor\ny hacer miel en cada panal."
       grade3_Loops_2: "¿Podrías hacer la misma tarea más fácilmente con un \nciclo?"
       grade3_Loops_3: '¿Podrías utilizar un ciclo para recolectar todo el néctar?'
-      grade3_Loops_4: "Ahora usa el nuevo bloque repeat para recolectar todo\nel néctar y hacer toda la miel."
+      grade3_Loops_4: Ahora usa el bloque 'repetir' para recolectar todo el néctar y crear toda la miel.
       grade3_Loops_5: "Pon estos bloques en un ciclo para recolectar néctar\nde cada flor."
       grade3_Loops_6: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces?\n¡No olvides hacer la miel al final!"
       grade3_Loops_7: |-
@@ -1492,7 +1497,7 @@ es:
       grade4_review_artist1: Hola, soy un artista. Puedes escribir código para hacerme dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)
       grade4_review_artist2: '¡Esta casa necesita un techo! Dibuja el triángulo. Pista: Los 3 lados tienen la misma longitud.'
       grade4_review_artist3: "El bloque Salta mueve el artista sin dibujar.\nDibuja la línea punteada utilizando los bloques Salta y Dibuja."
-      grade4_review_bee1: "Ahora usa el nuevo bloque repeat para recolectar todo\nel néctar y hacer toda la miel."
+      grade4_review_bee1: Ahora usa el bloque 'repetir' para recolectar todo el néctar y crear toda la miel.
       grade4_review_bee2: "Recolecta el néctar de cada flor y haz miel \nen cada panal."
       grade4_review_bee3: |-
         Utiliza un ciclo similar al del último problema, pero ahora utiliza
@@ -1538,7 +1543,7 @@ es:
       grade5_artist_variables_freeplay14: |-
         Juego Gratis: revísalo, ahora tu algoritmo está anidado dentro de otro circuito. Experimenta cambiando los valores de tus dos variables para dibujar patrones asombrosos.
       grade5_artist_variables_freeplay15: |-
-        Inspiración para ejercicio libre: ¡Ya has aprendido todo lo que necesitas saber para hacer un patrón como este!  Si te inspira esta imagen, tratar de hacer algo similar.  Si no, crea algo por tu cuenta \r \r ¿Quieres saber cómo se hizo nuestro modelo de inspiración? Echa un vistazo aquí: https://levelbuilder-studio.code.org/c/8781/edit
+        ¿Quieres un segundo vistazo al diseño de inspiración o los consejos?  Haga clic aquí! \r \r si lo prefieres, ¡crea un diseño propio!
       grade5_artist_variables_freeplay16: '¿Aún jugando? aquí hay un lienzo en blanco donde usted podrá crear lo que quiera!'
       grade5_artist_variables_hexagons1: "Vamos a intentarlo otra vez. Ahora, vamos a hacer este diseño cool con un hexágono de 60 píxeles."
       grade5_artist_variables_letterT11: Aquí está el mismo algoritmo que ideamos con el último rompecabezas - ¿Qué debes establecer en la variable "sides" para dibujar este dibujo de cuadrados?
@@ -1557,7 +1562,7 @@ es:
         ¡Click aquí para regresar a la pista!
       grade5_artist_variables_triangles2: En lugar de avanzar por 100 "moving forward by 100", el bloque mover "move" ahora referencia la variable longitud "lengh". ¿ Podrías establecer la longitud "lengh" a 150 para dibujar este nuevo triángulo?.
       grade5_artist_variables_triangles3: 'Arrastra un bloque de número hasta el bloque "establecer longitud" para dibujar un conjunto de triángulos de 50 píxeles. '
-      grade5_bee_for_loops1: Utilizar un bucle para recolectar el néctar de cada flor.
+      grade5_bee_for_loops1: Utiliza un bucle para recolectar el néctar de cada flor.
       grade5_bee_for_loops2: Agrega el código necesario para asegurarte que la abeja recolecta todo el néctar. Mira cuánto código necesitas para este puzzle! (Aprenderemos una manera más simple en el siguiente puzzle).
       grade5_bee_for_loops6: También puedes utilizar un bucle a contar hacia atrás. Trata de recoger este néctar por la cuenta regresiva del 5 al 1 por 1.
       grade5_bee_for_loops8: "Si tu bucle está contando, el incremento se agrega a la variable contador en cada ciclo. ¿Cuál debe ser el incremento para recoger 3, 6, 9 de néctar? \\r\n"
@@ -1582,7 +1587,7 @@ es:
       grade5_playlab_variables71: "Aquí esta nuestro juego de una etapa anterior,\npero la mayoría del código está oculto. Hay una nueva función \"puntuación.\"\\r\n\\r\neditar\nla función para que el parámetro \"puntos\" sea agregado a la variable \"puntuacion_jugador\". \\r\n\\r\nLa variable \"puntuación_jugador\" debe aumentar cada vez que\nPerro etiquete Gato con corazones y disminuir cada vez que Gato etiquete Perro con corazones. \\r\n\\r\nNota: cuando haya terminado, haga clic en \"Ejecutar\" para jugar. Cuando perro tenga 6 puntos, Tú serás llevado al siguiente rompecabezas. "
       grade5_playlab_variables81: "Añadimos una última función para\nti. \\r\n\\r\nUtiliza una sentencia \"Si\" para que tu programa llame la funcion \"livel_mas\" solo cuando \"puntuacion_jugador\" sea mayor que un cierto numero.\\r\n\\r\nPor\nejemplo: \"puntuacion_jugador\" > 6\\r\n\\r\nJuega el juego, y hazlo pasar de nivel\n4 para mover al siguiente problema. "
       grade5_playlab_variables9: "Aquí hay una función denominada \"patrulla\". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles."
-      grade5_playlab_variables_freeplay: "Tiempo Libre para jugar! Aquí estan todas las variables con las que hemos jugado hasta ahora, tambien unas pocas mas en caso de necesitarlas. Haz un juego o historia que utilice estas variables. Sugerencia: desplazate hacia abajo para ver todos los comandos en el área de trabajo."
+      grade5_playlab_variables_freeplay: "¡Momento de un juego gratis! Aquí están todas las variables con las que hemos jugado hasta ahora en esta etapa, así como algunas más en caso de que las desees. \\r\n\\r\n¡Observa que ahora hay tantos bloques en nuestra caja de herramientas que necesitan organizarse! Aquí, hemos puesto cada pieza en una categoría apropiada. Tómate tu tiempo para explorar todo lo que está disponible. Cuando hayas terminado de navegar, crea un juego o una historia con repeticiones, variables y eventos. \\r\n\\r\nSugerencia: desplázate hacia abajo para ver todos los comandos en el espacio de trabajo."
       harvey_snowflake_artist1: '¡Prepara tu copo de nieve para la impresión en 3D!'
       harvey_snowflake_artist2: '¡Prepara tu copo de nieve para la impresión en 3D!'
       harvey_tictactoe: "¡Vamos a jugar un juego!! Dibuja tantas X como tú\npuedas! ¿Puedes obtener 3 en una fila?"

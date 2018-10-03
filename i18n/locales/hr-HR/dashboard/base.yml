@@ -195,7 +195,6 @@ hr:
       logout: 'Odjava'
       signin: 'Prijava'
       already_registered: 'Jeste li već registrirani?'
-      pair_programming: 'Programiranje u paru'
     popup:
       progress_for_user: "Napredak %{name}"
       progress: 'Tvoj napredak'

@@ -134,14 +134,6 @@ nn:
             '"left"': venstre
             '"right"': høgre
             '"space"': verdsrommmet
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': opp
-            '"down"': ned
-            '"left"': venstre
-            '"right"': høgre
-            '"space"': verdsrommmet
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -233,6 +225,11 @@ nn:
             '"scale"': størrelse
             '"x"': x-posisjon
             '"y"': y-posisjon
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": høgre
       Mikelab_getProp:
         options:
           PROPERTY:

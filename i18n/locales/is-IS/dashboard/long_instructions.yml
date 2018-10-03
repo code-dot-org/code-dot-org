@@ -50,7 +50,7 @@ is:
       2-3 Artist Functions 11: "Við höfum breytt heiti `teikna ferning` fallsins í `teikna sexhyrning`, en það teiknar samt bara ferninga! \\r\n\\r\nGetur þú breytt `teikna sexhyrning` fallinu svo það teikni sexhyrning með 50 díla hliðar?\\r\n\\r\nTeiknaðu myndina með nýja fallinu!"
       2-3 Artist Functions 12 Mike: "Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \\r\n\\r\nGetur þú notað fallið `teikna blóm` til að fylla blómabeðið? \\r\n\\r\nÞað eru 100 dílar á milli plantna."
       2-3 Artist Functions 12 a: "Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \\r\n\\r\nGetur þú notað fallið `teikna blóm` til að fylla blómabeðið? \\r\n\\r\nÞað eru 100 dílar á milli plantna."
-      2-3 Artist Functions 12: "Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \\r\n\\r\nGetur þú notað fallið `teikna blóm` til að fylla blómabeðið?\n\\r\nÞað eru 100 dílar á milli plantna."
+      2-3 Artist Functions 12: "Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \\r\n\\r\nGetur þú notað fallið `teikna blóm` til að fylla blómabeðið? \\r\n\\r\nÞað eru 100 dílar á milli plantna."
       2-3 Artist Functions 2: "Með föllum getur þú búið til nýja kubba! \\r\n\\r\nVið höfum fært kubbana sem þarf til að teikna ferning inn í fall, sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \\r\n\\r\nÞað eru 75 dílar á milli ferninganna."
       2-3 Artist Functions 3 a: "Breyttu `teikna ferning` fallinu svo það teikni gleraugu þar sem umgjarðirnar hafa 115 díla hliðar. \\r\n\\r\nBilið á milli ferninganna er nú 45 dílar."
       2-3 Artist Functions 3: "Breyttu fallinu svo það búi til ferning með 115 díla hliðar og teiknaðu stærri gleraugu. \\r\n\\r\nNú eru 45 dílar á milli ferninga."
@@ -258,7 +258,7 @@ is:
       4-5 Nested Loops Assessment 1: "**Mat:** Notaðu faldaða lykkju til að ljúka teikningunni."
       4-5 While Loops 1: Færðu mig að holunni og notaðu `fylla` kubbinn til að fylla hana með tveimur skóflufyllum af mold.
       4-5 While Loops 2: Færðu mig að moldarhaugnum og notaðu `fjarlægja 1` kubbinn til að fjarlægja hann með 5 skóflustungum.
-      4-5 While Loops 3: "Notaðu sem fæsta kubba til að ljúka þessari þraut! \\r\n\\r\nFærðu mig að haugnum og fjarlægðu hann allan. Farðu svo að holunni og fylltu hana."
+      4-5 While Loops 3: "Notaðu sem fæsta kubba til að ljúka þessari þraut! \\r\n\\r\nFærðu mig að haugnum og fjarlægðu hann allan. Farðu svo að holunni og fylltu hana. "
       4-5 While Loops 4: "Vá, ég fann mjög djúpa holu! \\r\n\\r\nÉg veit ekki hve mörg skóflufylli af mold þarf. \\r\nGetur þú skrifað forrit sem notar `fylla` kubbinn þar til hún er sléttfull?  "
       Alien Defender: "**Hugmynd að verkefni:** Búðu til Defender leik í Leikjasmiðjunni!"
       Alien Defender_2018: "**Hugmynd að verkefni:** Búðu til Defender leik í Leikjasmiðjunni!"
@@ -1932,8 +1932,7 @@ is:
         \r
         Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) til að senda það í Verkefnagalleríið þitt.\r
-        
+        PM.png) til að senda það í Verkefnagalleríið þitt.
       CSD U3 L12 Freeplay_2018: |-
         # Frjáls æfing\r
         \r
@@ -2005,9 +2004,7 @@ is:
         \r
         Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) til að senda það í Verkefnagalleríið þitt.\r
-        \r
-        
+        PM.png) til að senda það í Verkefnagalleríið þitt.
       CSD U3 L19 Freeplay_2018: |+
         # Frjáls æfing\r
         \r
@@ -2019,11 +2016,7 @@ is:
         \r
         Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) til að senda það í Verkefnagalleríið þitt.\r
-        \r
-        \r
-        \r
-        
+        PM.png) til að senda það í Verkefnagalleríið þitt.
       CSD U3 L3 Freeplay_2018: |
         # Frjáls æfing\r
         \r
@@ -3663,7 +3656,7 @@ is:
       Calc Circles of Eval .3: Hér er fall fyrir samlagningu sem tekur tvær tölur og skilar summu þeirra. Notaðu samlagningarkubbinn til að reikna 3 + 6.
       Calc Circles of Eval .4: Hér höfum við faldað kubbinn Samlagning innan í kubbinn Margföldun. Ljúktu kóðanum svo að hann margfaldi 3 með (4 + 1)
       Calc Circles of Eval 2: Notaðu margföldunarkubb til að ljúka þessum kóða.
-      Calc Circles of Eval 3: Ljúktu við matskubbinn svo hann samsvari þessari formúlu.
+      Calc Circles of Eval 3: Ljúktu við matskubbana svo þeir samsvari þessari formúlu.
       Calc Circles of Eval 4: Í þennan kóða vantar tvo matskubba. Gættu þess að hafa allt í réttri röð.
       Calc Circles of Eval 7: Ljúktu við matskubbana svo þeir samsvari þessari formúlu.
       Calc Circles of Eval 8: Ljúktu við matskubbana svo þeir samsvari þessari formúlu.
@@ -4543,9 +4536,9 @@ is:
       course3_collector_debugging_challenge2: Taktu eftir hvernig býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til allt hunangið?
       course3_farmer_condLoops_challenge1: "Graskerin sýna hvar þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en mundu að safna öllu káli eða maís á leiðinni. \\r\n\\r\n**Hver falin planta hefur bara 1 af maís eða káli.**"
       course3_farmer_condLoops_challenge2: "Þetta er grænt völundarhús. Snúðu til hægri við grasker, til vinstri við kál. Safnaðu öllu til að ljúka áfanganum."
-      course3_farmer_until_challenge2: Notaðu `ef/annars` kubba til að fylgja krókóttum stígnum. Notaðu `fjarlægja 1` kubbinn í lykkju á hverju horni til að fjarlægja haugana.
+      course3_farmer_until_challenge2: Notaðu "ef/annars" kubba til að fylgja krókóttum stígnum. Notaðu "fjarlægja 1" kubbinn á hverju horni til að fjarlægja haugana.
       course3_maze_debugging_challenge1: '*"Fer ég bara í hringi?"*'
-      course3_maze_until_challenge1: "Engar vísbendingar, bara áskorun.\nKomdu dauðyflinu til sólblómsins.\\r\nMarkdown leiðbeiningar"
+      course3_maze_until_challenge1: Engar vísbendingar - bara áskorun. Komdu uppvakningnum til sólblómsins.
       course3_playLab_challenge1: "*Nú eru **íkornarnir** skelfingu lostnir yfir því að það er **risaeðla** mætt á svæðið! Getur hugrakki **riddarinn** komið í veg fyrir að þeir hlaupi í burtu?*\\r\n\\r\nHér er öðruvísi leikur sem hefur verið byrjað á fyrir þig! Spilaðu hann til að sjá hvernig hann virkar. \\r\n\\r\n\\r\nEitthvað ætti að gerast þegar þú færð nógu mörg stig eða þegar þú klárar stigin. Bættu kóða í föllin `vinna leik` og `tapa leik` til að leikurinn virki eins og hann á að gera. \\r\nSmelltu á vísbendingarnar til að fá hugmyndir!"
       course3_playlab_challenge2: |-
         Getur þú fundið út hvernig þetta "Völvu"-app virkar? Prófaðu að bæta einhverju af þessari virkni við leikinn:\r
@@ -4573,7 +4566,7 @@ is:
             <title
         name="YPOS">???</title>\r
             </block></xml>
-      course4_artist_fwp_challenge1: Prófaðu að keyra þetta forrit og gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig það virkar? (Eða eytt því og búið til eitthvað gjörólíkt)
+      course4_artist_fwp_challenge1: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og sett eitthvað allt annað í staðinn)
       course4_artist_variables_challenge1: Getur þú búið til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
       course4_artist_variables_challenge2: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
@@ -4908,8 +4901,8 @@ is:
         Náðu öllum fjórum hrúgunum til að ljúka áfanganum.
       courseB_collector_loops3: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
       courseB_collector_loops3_2018: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
-      courseB_collector_loops3_predict1: Hvernig getur Laurel náð öllum fimm gullhrúgunum með því að nota bara einn `[A-->]` kubb?
-      courseB_collector_prog3: Hvernig getur Laurel náð öllum fimm gullhrúgunum með því að nota bara einn `[A-->]` kubb?
+      courseB_collector_loops3_predict1: Hvernig getur Laurel safnað öllum fimm gullhrúgunum með aðeins einum `E->` kubbi?
+      courseB_collector_prog3: Hvernig getur Laurel safnað öllum fimm gullhrúgunum með aðeins einum `E->` kubbi?
       courseB_iceage_loops10: Hjálpaðu Scrat að komast alla leið yfir til akarnsins!
       courseB_iceage_loops11: Hjálpaðu Skrat að komast til akarnsins!
       courseB_iceage_loops11_forVideo: Hjálpaðu Skrat að komast til akarnsins!
@@ -5425,7 +5418,7 @@ is:
         Hjálpaðu bóndanum að fjarlægja hauginn með `meðan` lykkju.
       courseD_farmer_until_challenge2: Notaðu `ef/annars` kubba til að fylgja krókóttum stígnum. Notaðu `fjarlægja 1` kubbinn í lykkju á hverju horni til að fjarlægja haugana.
       courseD_farmer_until_challenge2_2018: Notaðu `ef/annars` kubba til að fylgja krókóttum stígnum. Notaðu `fjarlægja 1` kubbinn í lykkju á hverju horni til að fjarlægja haugana.
-      courseD_farmer_while1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hann."
+      courseD_farmer_while1: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       courseD_farmer_while1_2018: "*\"Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \\r\n\\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hauginn."
       courseD_farmer_while4: |-
         *"Ég veit ekki hve mikil mold er í þessum haug!"*\r
@@ -5461,7 +5454,7 @@ is:
       courseD_maze_loops_challenge1: Komum í fjársjóðaleit - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins með kubbunum í verkfærakassanum.
       courseD_maze_nestedLoops4: "Komdu mér til sólsblómsins með sem allra fæstum kubbum!\\r\n\\r\nReyndu að nota einn \"endurtaka\" kubb innan í öðrum til að kóðinn verði sem stystur."
       courseD_maze_nestedLoops4_2018: "Komdu mér til sólsblómsins með sem allra fæstum kubbum!\\r\n\\r\nReyndu að nota einn \"endurtaka\" kubb innan í öðrum til að kóðinn verði sem stystur."
-      courseD_maze_ramp1: 'Í þessari þraut: Dragðu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseD_maze_ramp1: 'Í þessari þraut: Festu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_maze_ramp1_2018: 'Í þessari þraut: Festu alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_maze_ramp2: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
       courseD_maze_ramp2_2018: Dragðu annan `færa áfram` kubb úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
@@ -5502,8 +5495,8 @@ is:
         Engar vísbendingar, bara áskorun.
         Komdu dauðyflinu til sólblómsins.\r
         Markdown leiðbeiningar
-      courseD_maze_until_challenge1: "Engar vísbendingar, bara áskorun.\nKomdu dauðyflinu til sólblómsins.\\r\nMarkdown leiðbeiningar"
-      courseD_maze_until_challenge1_2018: "Engar vísbendingar, bara áskorun.\nKomdu dauðyflinu til sólblómsins.\\r\nMarkdown leiðbeiningar"
+      courseD_maze_until_challenge1: Engar vísbendingar - bara áskorun. Komdu uppvakningnum til sólblómsins.
+      courseD_maze_until_challenge1_2018: Engar vísbendingar - bara áskorun. Komdu uppvakningnum til sólblómsins.
       courseD_maze_until_challenge2: |-
         Engar vísbendingar, bara áskorun.
         Komdu dauðyflinu til sólblómsins.\r
@@ -5742,7 +5735,7 @@ is:
         \r
         Kíktu á vísbendingarnar ef þú þarft hjálp með þessar áskoranir!
       courseF_IceAge_10: "Sid vill láta ömmu sína, Granny, vita að honum þyki vænt um hana. \n \\r\n\\r\nNotaðu `leikari varpar` skipunina til láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \\r\nBreyttu skapi Granny í gleði þegar hjörtun lenda á henni."
-      courseF_IceAge_3: Skrat er að leita að akarninu! Getur þú hjálpað honum að komast síðustu 200 dílana?
+      courseF_IceAge_3: Skrat er að leita að akarninu (nema hvað)! Hjálpaðu honum síðustu 200 dílana.
       courseF_IceAge_6: "Getur þú hjálpað Sid að kalla á vini sína þegar þú smellir á hann?\\r\n\\r\nSmelltu svo á \"Keyra\" til að spila. Smelltu á Sid til að sjá kóðann þinn virka!"
       courseF_IceAge_7: "Scrat er enn að leita að akörnum! \n\\r\nHjálpaðu honum að skondrast um með því að tengja `færa leikmann 1` kubbinn við hvert atvik svo að hægt sé að stjórna stefnunni með örvarlyklunum. \\r\nSmelltu svo á \"Keyra\" og reyndu að safna öllum akörnunum."
       courseF_IceAge_template: "Scrat er enn að leita að akörnum! \n\\r\nHjálpaðu honum að skondrast um með því að tengja `færa leikmann 1` kubbinn við hvert atvik svo að hægt sé að stjórna stefnunni með örvarlyklunum. \\r\nSmelltu svo á \"Keyra\" og reyndu að safna öllum akörnunum."
@@ -6255,7 +6248,7 @@ is:
       grade3_ConditionalsElse_6: "Þetta blóm gæti innihaldið 1, 2 eða 3 af blómasafa. \\r\n\\r\nNotaðu skilyrðiskubba (`ef` og/eða `ef-annars`) saman til að safna nákvæmlega þeim safa sem blóm hefur. \\r\n\\r\nMundu að magn blómasafans getur breyst í hvert sinn sem þrautin er keyrð!"
       grade3_ConditionalsElse_7: "Þessi blóm geta haft 3, 2 eða 1 af blómasafa. \\r\n\\r\nLjúktu við fallið `athuga fjólublátt blóm` og notaðu það til að safna öllum safa úr blómunum."
       grade3_ConditionalsElse_8: "Skrifaðu fallið `athuga blóm búa til hunang`. \\r\n\\r\nFallið á að athuga hvort fjólubláa blómið hefur 3, 2 eða 1 af blómasafa og safna öllum safanum. \\r\nFæra svo áfram og búa til hunang."
-      grade3_ConditionalsElse_9: "**Mat:** Þetta ský felur annað hvort blóm með 1 safa eða býflugnabú sem þarf 1 hunang.\\r\n\\r\nLjúktu við fallið `sækja blómasafa eða búa til hunang` og kallaðu svo á það til að safna öllum safanum eða búa til hunangið.\\r\n"
+      grade3_ConditionalsElse_9: "**Mat:** Þetta ský felur annað hvort blóm með 1 safa eða býkúpu sem þarf 1 hunang.\\r\n\\r\nLjúktu við fallið `sækja blómasafa búa til hunang` og kallaðu svo á það til að safna öllum safanum eða búa til hunangið.\\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Þessi ský fela annað hvort blóm eða býflugnabú! \r
         \r
@@ -6368,7 +6361,7 @@ is:
       grade4_frozen_freeplay: Þú ert hér með orðin meistari í ísteikningu! Búðu nú til ævintýralegt vetrarríki.
       grade4_frozen_functions0: Hringur er sérstakt form. Geturðu fundið út hvaða tölu þarf að setja í stað spurningarmerkjanna til að teikna hring?
       grade4_frozen_functions1a: Notaðu nýja `gera hring` kubbinn til að búa til 10 hringa sem skarast. Ekki gleyma að hoppa áfram milli hringa.
-      grade4_frozen_functions2: Gerum nú 20 hringi sem skarast og snúum um 18 gráður eftir hvern hring.
+      grade4_frozen_functions2: Gerum nú 20 hringi sem skarast og snúum um 18 gráður á milli hringa.
       grade4_frozen_functions3: Hér er kubburinn `gera hring` sem getur teiknað hringa í mismunandi stærðum. Getur þú notað hann til að teikna lítinn hring í stærð 5 og annan í stærð 10?
       grade4_frozen_functions4: Flókin mynstur geta verið búin til úr mjög einföldum formum. Getur þú búið mynstur með því að endurtaka 5 hringi í stærð 5 og 5 hringi í stærð 10?
       grade4_frozen_nested_loop_diamonds2: Vissirðu að það eru engin tvö snjókorn eins? Búum til nýtt snjókorn með því að nota "endurtaka" kubbinn til að teikna samsíðung 4 sinnum, með snúning um 90 gráður eftir hvern samsíðung.
@@ -6382,7 +6375,7 @@ is:
       grade4_playlab_test2: "Hér er fallið `stökkva` sem lætur leikmann stökkva upp 100 díla. \\r\n\\r\nKeyrðu forritið og notaðu `stökkva` fallið til að safna öllum flöggunum með því að hreyfa hundinn með örvarlyklunum."
       grade4_review_artist1: "Hæ, ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er. Notaðu kubba til að láta mig teikna í gráu strikin á myndinni. (Hver lína er 100 díla löng)\\r\n\\r\n<br> \\r\n"
       grade4_review_artist2: "Þetta hús þarf þak! Teiknaðu þríhyrninginn.  \\r\n\\r\nVísbending:\nallar þrjár hliðarnar hafa sömu lengd.\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
-      grade4_review_artist3: Kubburinn `hoppa` færir listamanninn án þess að teikna. Teiknaðu þankastrikin með því að nota bæði `hoppa áfram` og `færa áfram` kubbana. Hver lína er 50 díla löng.
+      grade4_review_artist3: Kubburinn `hoppa` færir listamanninn án þess að teikna. Gerðu brotalínuna með því að nota bæði hoppa og færa kubbana. Hver lína er 50 díla löng.
       grade4_review_bee1: Notaðu nú `endurtaka` kubbinn til að safna öllum blómasafanum og búa til allt hunangið.
       grade4_review_bee3: |-
         Þetta er býsna duglegt bý!\r
@@ -6475,8 +6468,8 @@ is:
       iceage_click_hello_2018: "Getur þú hjálpað Sid að kalla á vini sína þegar þú smellir á hann?\\r\nSmelltu svo á \"Keyra\" til að spila. Smelltu á Sid til að sjá kóðann þinn virka!"
       iceage_move_events: "Scrat er enn að leita að akörnum! \n\\r\nHjálpaðu honum að skondrast um með því að tengja `færa leikmann 1` kubbinn við hvert atvik svo að hægt sé að stjórna stefnunni með örvarlyklunum. \\r\nSmelltu svo á \"Keyra\" og reyndu að safna öllum akörnunum."
       iceage_move_events_2018: "Scrat er enn að leita að akörnum! \n\\r\nHjálpaðu honum að skondrast um með því að tengja `færa leikmann 1` kubbinn við hvert atvik svo að hægt sé að stjórna stefnunni með örvarlyklunum. \\r\nSmelltu svo á \"Keyra\" og reyndu að safna öllum akörnunum."
-      iceage_move_to_flag: Skrat er að leita að akarninu! Getur þú hjálpað honum að komast síðustu 200 dílana?
-      iceage_move_to_flag_2018: Skrat er að leita að akarninu! Getur þú hjálpað honum að komast síðustu 200 dílana?
+      iceage_move_to_flag: Skrat er að leita að akarninu (nema hvað)! Hjálpaðu honum síðustu 200 dílana.
+      iceage_move_to_flag_2018: Skrat er að leita að akarninu (nema hvað)! Hjálpaðu honum síðustu 200 dílana.
       iceage_throw_hearts: "Sid vill láta ömmu sína, Granny, vita að honum þyki vænt um hana. \n \\r\n\\r\nNotaðu `leikari varpar` skipunina til láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \\r\nBreyttu skapi Granny í gleði þegar hjörtun lenda á henni."
       iceage_throw_hearts_2018: "Sid vill láta ömmu sína, Granny, vita að honum þyki vænt um hana. \n \\r\n\\r\nNotaðu `leikari varpar` skipunina til láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \\r\nBreyttu skapi Granny í gleði þegar hjörtun lenda á henni."
       level 'grade3_Loops_10: |-

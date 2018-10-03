@@ -307,7 +307,6 @@ id:
       signin: 'Masuk'
       signup: 'Buat sebuah akun'
       already_registered: 'Apa Sudah Terdaftar?'
-      pair_programming: 'Pemrograman berpasangan'
       team: 'Tim'
       driver: 'Masuk'
       navigator: 'Mitra'

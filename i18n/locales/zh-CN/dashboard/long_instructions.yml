@@ -848,20 +848,25 @@ zh-CN:
       CSD U2 CSS explore CSS_2018: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>** 如何在文件之间切换？ ** </summary> \r
-        单击要查看的文件的名称。菜单在屏幕左侧. \r
-        </details> \r
-        </div> \r
-        \r
-        # 添加样式\r
-        \r
-        此 Web 实验室项目正在使用一种新语言向页面添加样式。与伙伴一起探索 `index.html`和 `style.css`文件。准备好讨论以下问题。\r
-        \r
-        * 这个新的语言对页面有什么变化？\r
-        *
-        这个语言与 html 的区别是什么？\r
+        markdown="1">
+        <details>
+        
+        <summary>
+        
+        ** 如何在文件之间切换？ ** 
+        
+        </summary> 
+        单击要查看的文件的名称。菜单在屏幕左侧. 
+        
+        </details> 
+        </div> 
+        
+        # 添加样式
+        
+        此 Web 实验室项目正在使用一种新语言向页面添加样式。与伙伴一起探索 `index.html`和 `style.css`文件。准备好讨论以下问题。
+        
+        * 这个新的语言对页面有什么变化？
+        * 这个语言与 html 的区别是什么？
         * `index.html`和`style.css`文件是怎样联系起来的？
       CSD U2 Debugging 1: "# 调试\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\n\n# 这样做\n\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\n\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\n\\t * 标题不够大。\n\\t * 列表中的第二项没有编号。\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\n"
       CSD U2 Debugging 1_2018: "# 调试\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n\n** 什么是bug（缺陷）？ **\n\n</summary>\n缺陷是代码中的错误，导致代码不按照计划起作用。\n</details>\n<details>\n<summary>\n\n** 什么是debugging（调试缺陷）？ **\n\n</summary>\n调试缺陷是查找和修复缺陷的过程。调试是一个解决问题的过程，因此请在调试时使用您的问题解决流程。\n</details>\n<details>\n<summary>**有没有缺陷的例子？**</summary>\n缺陷是任何可能导致代码不按计划运行的原因。有些是拼写错误，有些事将代码放到了错误的地方，使用了错误的标签，或者忘了关闭一个标签。\n</details>\n</div>\n\n计算机代码是由人写的，所有人都会犯错误。作为一个好的计算机科学家，其中一部分是发现你代码里的错误，并修复它们。在计算机科学中，我们将错误称为**bugs（缺陷）**。查找和修复这些缺陷的过程称为 ** debugging（调试） **。 在接下来的两个级别中，您将要锻炼你的调试技能。\n\n# 这样做\n\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56\nAM.png\" style=\"float:right;border:black solid 5px;\">\n\n* 看看网页代码，并与您的伙伴讨论导致以下两个bug的原因：\n\\t * 标题不够大。\n\\t * 列表中的第二项没有编号。\n\\t * 修复代码中的所有缺陷，以便最终结果与图像匹配在右边。\n"
@@ -1022,11 +1027,19 @@ zh-CN:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary>**什么是段落元素？**</summary>
+        <summary>
+        
+        **什么是段落元素？**
+        
+        </summary>
         段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
         </details>
         <details>
-        <summary>**我该如何创建多个段落呢？**</summary>
+        <summary>
+        
+        **我该如何创建多个段落呢？**
+        
+        </summary>
         这是一行里有多个段落标签的例子。这个代码会放在你的网页的body部分里。
         
         <pre>
@@ -1038,8 +1051,7 @@ zh-CN:
         
         </div>
         
-        #
-        使用段落标签
+        # 使用段落标签
         
         `<p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。
         
@@ -1108,15 +1120,21 @@ zh-CN:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary><strong>什么是段落元素？</strong></summary>
+        <summary>
+        <strong>什么是段落元素？</strong>
+        </summary>
         段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
         </details>
         <details>
-        <summary><strong>为什么有时HTML不正确，页面也能显示出来？</strong></summary>
+        <summary>
+        <strong>为什么有时HTML不正确，页面也能显示出来？</strong>
+        </summary>
         HTML被你的网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。
         </details>
         <details>
-        <summary><strong>为什么代码有时候会变成粉红色？</strong></summary>
+        <summary>
+        <strong>为什么代码有时候会变成粉红色？</strong>
+        </summary>
         网络实验室被开发成能够自动检测一些HTML中的错误。当它注意到一个错误时，就会将代码显示为粉色。这表示粉色的地方或者粉色的代码之前有错误。你需要仔细的调试，来找到错误。
         </details>
         </div>
@@ -1132,39 +1150,48 @@ zh-CN:
       CSD U2 HTML Debug Paragraphs_2018: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary><strong>什么是段落元素？</strong></summary>\r
-        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。\r
-        </details>\r
-        <details>\r
-        <summary><strong>为什么有时HTML不正确，页面也能显示出来？</strong></summary>\r
-        HTML被你的网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。\r
-        </details>\r
-        <details>\r
-        <summary><strong>为什么代码有时候会变成粉红色？</strong></summary>\r
-        网络实验室被开发成能够自动检测一些HTML中的错误。当它注意到一个错误时，就会将代码显示为粉色。这表示粉色的地方或者粉色的代码之前有错误。你需要仔细的调试，来找到错误。\r
-        </details>\r
-        </div>\r
-        \r
-        #
-        调试：修复缺失的标签\\r
-        \r
-        这个简单的网页有些问题，这会造成内容显示不正确。找到并修复问题。这个过程叫做“调试”你的代码。\r
-        \r
-        #
-        这样做\r
-        \r
-        * 修复缺失的代码，让网页能够正确的显示\r
-        *
-        将你修复的问题与旁边的同学进行比较
+        markdown="1">
+        <details>
+        <summary>
+        
+        <strong>什么是段落元素？</strong>
+        
+        </summary>
+        段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        </details>
+        <details>
+        <summary>
+        
+        <strong>为什么有时HTML不正确，页面也能显示出来？</strong>
+        
+        </summary>
+        HTML被你的网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。
+        </details>
+        <details>
+        <summary>
+        
+        <strong>为什么代码有时候会变成粉红色？</strong>
+        
+        </summary>
+        网络实验室被开发成能够自动检测一些HTML中的错误。当它注意到一个错误时，就会将代码显示为粉色。这表示粉色的地方或者粉色的代码之前有错误。你需要仔细的调试，来找到错误。
+        </details>
+        </div>
+        
+        # 调试：修复缺失的标签
+        
+        这个简单的网页有些问题，这会造成内容显示不正确。找到并修复问题。这个过程叫做“调试”你的代码。
+        
+        # 这样做
+        
+        * 修复缺失的代码，让网页能够正确的显示
+        * 将你修复的问题与旁边的同学进行比较
       CSD U2 Header Demo: "# 标头\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n</div>\n\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样。\n\n这样做：\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\n* 确保你和你的伙伴对标签能做什么达成共识。\n* 修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
       CSD U2 Header Sizes: "# 标头尺寸\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\n\n\n\n这样做：\n* 用检查器来找到什么让这些标头有不一样的尺寸\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\n\n<img\nsrc=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\n"
       CSD U2 Header Test: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
       CSD U2 Heading Demo: "# 标头\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。.\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n</div>\n\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样。\n\n这样做：\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\n* 确保你和你的伙伴对标签能做什么达成共识。\n* 修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
       CSD U2 Heading Demo_2018: "# 标头\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是Header（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。.\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n</div>\n\n好了，你已经能将你的内容组织进段落了。另一种组织代码的方式是使用**标头**。一个标头是一小段放在章节最顶上的文本，就像标题一样。\n\n这样做：\n* 用检查器来找到下面代码中用到的标头，并看看它们的代码。\n* 确保你和你的伙伴对标签能做什么达成共识。\n* 修改代码，使得“Drawing”（画画）和\"2 years\"（两年）和页面其它部分的标头一致。"
       CSD U2 Heading Sizes: "# Heading Sizes\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是Heading（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\n\n\n\n这样做：\n* 用检查器来找到什么让这些标头有不一样的尺寸\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\n"
-      CSD U2 Heading Sizes_2018: "# Heading Sizes\\r\n\\r\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\\r\n<details>\\r\n<summary>**什么是Heading（标头）？**</summary>\\r\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\\r\n</details>\\r\n<details>\\r\n<summary>**如何制作不同大小的标头？**</summary>\\r\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML？**</summary>\\r\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML元素？**</summary>\\r\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\\r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\\r\n</details>\\r\n<details>\\r\n<summary>**什么是HTML标签？**</summary>\\r\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\\r\n</details>\\r\n\\r\n</div>\\r\n\\r\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\\r\n\\r\n\\r\n\\r\n这样做：\\r\n* 用检查器来找到什么让这些标头有不一样的尺寸\\r\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\\r\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\\r\n\\r\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\\r\n"
+      CSD U2 Heading Sizes_2018: "# Heading Sizes\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是Heading（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。\n你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。. HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n标头有不同的尺寸。在这个页面中，有6个不同尺寸的标头，但它们都混起来了。你和你的伙伴能指出如何修复它们吗？\n\n\n\n这样做：\n* 用检查器来找到什么让这些标头有不一样的尺寸\n* 确保你和你的伙伴能在不同的标头标签有什么作用上达成共识。\n* 改动这些标签，让这些标头从大到小排列，并让这些图片下的文本表明了正确的尺寸。\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\" style=\"width:100px\" style=\"float:left\">\n"
       CSD U2 Heading Test: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是headings（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
       CSD U2 Heading Test_2018: "# 标头和段落\n\n<div\nstyle=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**什么是段落元素？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。在网页中的所有文本都应该被HTML元素所包含（标头或者段落元素）段落能将句子分组，在不同组之间加上一些空间。\n</details>\n<details>\n<summary>**我该如何创建多个段落呢？**</summary>\n段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。你需要用多组开始、关闭的<p>标签来创建多个段落。例如\n<pre>\n\\t&lt;p&gt;\n\\t这是一个段落。\n&lt;/p&gt;\n\\t&lt;p&gt;\n\\t这是另一个段落。\n&lt;/p&gt;\n</pre>\n</details>\n<details>\n<summary>**什么是headings（标头）？**</summary>\n标头是一个网页中不同大小的章节的标题。标头通过在网页中加入这些结构来分隔内容，从而帮助读者阅读。\n</details>\n<details>\n<summary>**如何制作不同大小的标头？**</summary>\n标头有6个不同的尺寸。最常用的标头是&lt;h1&gt; 在HTML标签中的数字1指明这是最大的标头。最小的标头是&lt;h6&gt;。你也可以试试&lt;h2&gt;，&lt;h3&gt;，&lt;h4&gt;，和&lt;h5&gt; 标签，数字越小，标头尺寸越大。\n</h1>\n</details>\n<details>\n<summary>**什么是HTML？**</summary>\nHTML是Hypertext Markup Language（超文本标记语言）的缩写。HTML用来向网页中加入结构。THML通过标签来表明某个特定结构的开始和结束。这些标签用了不是英文字母的字符组成，这样就能将结构与内容区分开了。\n</details>\n<details>\n<summary>**什么是HTML元素？**</summary>\n一个HTML元素是网站的一小部分，它有一个开始标签，有时还有一个结束标签。这个元素也会在标签中包含一些内容。例如：\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"\nstyle=\"width:500px\">\n</details>\n<details>\n<summary>**什么是HTML标签？**</summary>\n一个HTML标签是一组特殊的字符的集合，它告诉机器，一个HTML元素的开始和结束的位置，以及这个HTML元素是什么。\n</details>\n\n</div>\n\n这个页面的作者加入了许多的东西，但没有想过结构。所有的文本都混在一起。\n\n这样做：\n* 和你的伙伴一起看一下这些内容，然后想一下最好的结构应该是什么样的。\n* 用你的标头和段落标签来给这个页面的内容加上结构。\n"
       CSD U2 Image Tag 1: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 图片\n\n狗和猫的网页已经开始制作了。下面的网页里已经加上了狗的图片。用一个图片标签将`cat.jpeg`加到页面里猫标头的下面。"
@@ -1172,9 +1199,9 @@ zh-CN:
       CSD U2 Image Tag 2: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 上传图片\n\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\n\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\n\n# 这样做\n\n* 上传至少一张图片到这个网页中。\n* 用`<img>`标签在你的网页中显示图片。\n* 确保图片有`alt`属性。"
       CSD U2 Image Tag 2_2018: "<div style=\"float: right; height:\n250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 上传图片\n\n你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。\n\n一旦图片准备好后，点击 ![](https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49\nPM.png) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。\n\n# 这样做\n\n* 上传至少一张图片到这个网页中。\n* 用`<img>`标签在你的网页中显示图片。\n* 确保图片有`alt`属性。"
       CSD U2 Image Tag Attribution: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 给予功劳\n\n当你使用一张知识共享许可的图片时，你需要给原始作者以功劳，（这也被叫做 _署名_ ）。这里有很多方法来提供书名，但最简单的方法是在图片下标识出作者和来源网站。\n\n# 这样做\n\n在这个页面中，我们已经添加并署名了一张青蛙的图片。用知识共享引擎找到另一张凉席动物的图片。将找到的图片加入到页面中，并且进行正确的署名，包括：\n\n* 创作者的名字（如果有的话）\n* 来源网站(例如：commons.wikimedia.org)\n* 它发布时的许可协议 (如： CC-BY)"
-      CSD U2 Image Tag Attribution_2018: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n`<img>`让你在网页中能够加入图片。<br><br>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 给予功劳\\r\n\\r\n当你使用一张知识共享许可的图片时，你需要给原始作者以功劳，（这也被叫做 _署名_ ）。这里有很多方法来提供书名，但最简单的方法是在图片下标识出作者和来源网站。\\r\n\\r\n# 这样做\\r\n\\r\n在这个页面中，我们已经添加并署名了一张青蛙的图片。用知识共享引擎找到另一张凉席动物的图片。将找到的图片加入到页面中，并且进行正确的署名，包括：\\r\n\\r\n* 创作者的名字（如果有的话）\\r\n* 来源网站(例如：commons.wikimedia.org)\\r\n*\n它发布时的许可协议 (如： CC-BY)"
+      CSD U2 Image Tag Attribution_2018: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 给予功劳\n\n当你使用一张知识共享许可的图片时，你需要给原始作者以功劳，（这也被叫做 _署名_ ）。这里有很多方法来提供书名，但最简单的方法是在图片下标识出作者和来源网站。\n\n# 这样做\n\n在这个页面中，我们已经添加并署名了一张青蛙的图片。用知识共享引擎找到另一张凉席动物的图片。将找到的图片加入到页面中，并且进行正确的署名，包括：\n\n* 创作者的名字（如果有的话）\n* 来源网站(例如：commons.wikimedia.org)\n* 它发布时的许可协议 (如： CC-BY)"
       CSD U2 Image Tag Debug: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**如何添加图片？**</summary>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 细节问题\n\n`src`属性需要填上要使用图片的 _完全匹配的_ 文件名。 这意味着你要注意图片的拼写，大消息，以及扩展名。这个页面上的三个图片都被破坏了，因为它们的`src`属性都不正确。参考文件菜单来修复这些图片标签。\n\n_注意：虽然图片没能正确加载，但我们的网站仍然能在图片位置显示出描述文本。这是因为我们用了`alt`属性。太棒了！_"
-      CSD U2 Image Tag Debug_2018: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**如何添加图片？**</summary>\\r\n\\r\n例如：\\r\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\\r\n\\r\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\\r\n\\r\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\\r\n\\r\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\\r\n\\r\n</details>\\r\n<details>\\r\n<summary>**为什么图片标签没有关闭标签呢？**</summary>\\r\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是attribute（属性）？**</summary>\\r\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\\r\n\\r\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\\r\n</details>\\r\n</div>\\r\n\\r\n# 细节问题\\r\n\\r\n`src`属性需要填上要使用图片的 _完全匹配的_ 文件名。 这意味着你要注意图片的拼写，大消息，以及扩展名。这个页面上的三个图片都被破坏了，因为它们的`src`属性都不正确。参考文件菜单来修复这些图片标签。\\r\n\\r\n_注意：虽然图片没能正确加载，但我们的网站仍然能在图片位置显示出描述文本。这是因为我们用了`alt`属性。太棒了！_"
+      CSD U2 Image Tag Debug_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>\n<strong>**如何添加图片？**</strong>\n</summary>\n\n`<img>`标签能在网页中显示图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本)属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary><strong>**为什么图片标签没有关闭标签呢？**</strong></summary>\n图片标签不需要关闭标签，因为它没有必须包含的文本内容。这种标签显示的内容是通过它的属性来决定的。\n</details>\n<details>\n<summary><strong>**什么是attribute（属性）？**</strong></summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n# 细节问题\n\n`src`属性需要填上要使用图片的 _完全匹配的_ 文件名。 这意味着你要注意图片的拼写，大消息，以及扩展名。这个页面上的三个图片都被破坏了，因为它们的`src`属性都不正确。参考文件菜单来修复这些图片标签。\n\n_注意：虽然图片没能正确加载，但我们的网站仍然能在图片位置显示出描述文本。这是因为我们用了`alt`属性。太棒了！_"
       CSD U2 Info Page Content: |
         # 添加您的内容\r
         \r
@@ -1347,11 +1374,11 @@ zh-CN:
         style="font-size: 16px">
         <br />
         <details>
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <summary><strong>**为什么红色和绿色能组合出黄色？**</strong></summary>
         <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a>
         </p> </details>
         <details>
-        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <summary><strong>**我能用RGB组合出多少种颜色？**</strong></summary>
         <p>
         用RGB大概能组合出一千六百万种不同的颜色。
         </p></details>
@@ -1368,15 +1395,19 @@ zh-CN:
         
         <div style="font-size: 16px">
         <br />
-        <details><summary>**哪里能看到所有颜色类型的范围？**</summary>
+        <details><summary>
+        <strong>**哪里能看到所有颜色类型的范围？**</strong>
+        </summary>
+        
         可以在 <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_new">W3Schools - HTML颜色选择器</a> 找到可选择的很多颜色。</details>
         <details>
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <summary>
+        <strong>**为什么红色和绿色能组合出黄色？**</strong>
+        </summary>
         <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
         <details>
         <summary>
-        
-        **我能用RGB组合出多少种颜色？**</summary>
+        <strong>**我能用RGB组合出多少种颜色？**</strong></summary>
         
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
@@ -1395,16 +1426,12 @@ zh-CN:
         <details>
         
         <summary>
-        
-        **为什么红色和绿色能组合出黄色？**
-        
+        <strong>**为什么红色和绿色能组合出黄色？**</strong>
         </summary>
         <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
         <details>
         <summary>
-        
-        **我能用RGB组合出多少种颜色？**
-        
+        <strong>**我能用RGB组合出多少种颜色？**</strong>
         </summary>
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
@@ -1421,13 +1448,15 @@ zh-CN:
         <div
         style="font-size: 16px">
         <br />
-        <details><summary>**如何让颜色变浅?**</summary>
+        <details><summary>
+        <strong>**如何让颜色变浅?**</strong></summary>
         <p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>
         <details>
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <summary>
+        <strong>**为什么红色和绿色能组合出黄色？**</strong></summary>
         <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
         <details>
-        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <summary><strong>**我能用RGB组合出多少种颜色？**</strong></summary>
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 add content: |
@@ -1556,55 +1585,53 @@ zh-CN:
       CSD U2 add file_2018: |2
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是样式表?**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS?**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
+        markdown="1">
+        <details>
+        <summary><strong>**什么是样式表?**</strong></summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary><strong>**什么是CSS?**</strong></summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
         <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        <details>\r
-        <summary>**如何创建新的样式表?**</summary>\r
-        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。\r
-        </details>\r
-        <details>\r
-        <summary>**如何命名我的样式表?**</summary>\r
+        {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        <details>
+        <summary><strong>**如何创建新的样式表?**</strong></summary>
+        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。
+        </details>
+        <details>
+        <summary><strong>**如何命名我的样式表?**</strong></summary>
         你可以随意命名，但最好选一个相关的名字例如 "style.css"（样式表）
-        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。.\r
-        </details>\r
-        <details>\r
-        <summary>**如何重新命名文件?**</summary>\r
-        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。\r
-        </details>\r
-        <details>\r
-        <summary>**如何在网页里添加样式表?**</summary>\r
-        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。\r
-        </details>\r
-        </div>\r
-        #
-        添加样式表\r
-        \r
-        这是你之前的项目。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。\r
-        \r
-        1.
-        为你的项目创建新的格式表。.\r
-        2. 重新命名格式表文档.\r
-        3.
-        把你的格式表添加到你的HTML网页。\r
-        \r
+        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。.
+        </details>
+        <details>
+        <summary><strong>**如何重新命名文件?**</strong></summary>
+        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。
+        </details>
+        <details>
+        <summary><strong>**如何在网页里添加样式表?**</strong></summary>
+        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。
+        </details>
+        </div>
+        
+        # 添加样式表
+        
+        这是你之前的项目。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。
+        
+        1. 为你的项目创建新的格式表。.
+        2. 重新命名格式表文档.
+        3. 把你的格式表添加到你的HTML网页。
+        
         <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png"
         style=" max-width:500px">
       CSD U2 challenge: |
@@ -1679,49 +1706,50 @@ zh-CN:
       CSD U2 classes modify_2018: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**代码是如何起作用的？**</summary>\r
-        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\r
-        \r
-        样式表中的类是像下面的代码。\r
-        \r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
-        \r
-        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
-        </details>\r
-        <details>\r
-        <summary>**什么样的规则能够加到类的规则组里？**</summary>\r
-        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        <details>\r
-        <summary>**我的RBG值不一样，但也是对的。**</summary>\r
-        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\r
-        \r
-        </details>\r
-        </div>\r
-        # 添加规则\r
-        \r
-        冬天的词语应该用同样的颜色和字体。\r
-        \r
-        *
-        在样式表种找到给冬天的词语的样式组。\r
-        * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。\r
+        markdown="1">
+        <details>
+        
+        <summary><strong>**代码是如何起作用的？**</strong></summary>
+        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。
+        
+        样式表中的类是像下面的代码。
+        
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。
+        
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。
+        </details>
+        <details>
+        <summary><strong>**什么样的规则能够加到类的规则组里？**</strong>
+        </summary>
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。
+        </details>
+        <details>
+        <summary><strong>**为什么选择器前面有个句点？**</strong></summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary><strong>**为什么网页开发人员需要用类？**</strong></summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        <details>
+        <summary><strong>**我的RBG值不一样，但也是对的。**</strong></summary>
+        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。
+        
+        </details>
+        </div>
+        # 添加规则
+        
+        冬天的词语应该用同样的颜色和字体。
+        
+        * 在样式表种找到给冬天的词语的样式组。
+        * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。
         * 为冬天词语添加任何你喜欢的规则。
       CSD U2 classes sample: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**代码是如何起作用的？**</summary>\\r\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\\r\n\\r\n样式表中的类是像下面的代码。\\r\n\\r\n<pre>.winter {\\r\n  color: rgb(195,230,255);\\r\n}</pre>\\r\n\\r\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\\r\n\\r\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么选择器前面有个句点？**</summary>\\r\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么网页开发人员需要用类？**</summary>\\r\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\\r\n</details>\\r\n<details>\\r\n<summary>**我的RBG值不一样，但也是对的。**</summary>\\r\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\\r\n\\r\n</details>\\r\n</div>\\r\n# 类(Class)\\r\n\\r\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\\r\n\\r\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\\r\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\\r\n*\n看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \\r\n* 和伙伴讨论一下这些代码是如何起作用的。"
-      CSD U2 classes sample_2018: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**代码是如何起作用的？**</summary>\\r\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\\r\n\\r\n样式表中的类是像下面的代码。\\r\n\\r\n<pre>.winter {\\r\n  color: rgb(195,230,255);\\r\n}</pre>\\r\n\\r\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\\r\n\\r\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么选择器前面有个句点？**</summary>\\r\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么网页开发人员需要用类？**</summary>\\r\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\\r\n</details>\\r\n<details>\\r\n<summary>**我的RBG值不一样，但也是对的。**</summary>\\r\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\\r\n\\r\n</details>\\r\n</div>\\r\n# 类(Class)\\r\n\\r\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\\r\n\\r\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\\r\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\\r\n*\n看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \\r\n* 和伙伴讨论一下这些代码是如何起作用的。"
+      CSD U2 classes sample_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>代码是如何起作用的？</strong>\n</summary>\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\n\n样式表中的类是像下面的代码。\n\n<pre>.winter {\n  color: rgb(195,230,255);\n}</pre>\n\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\n\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\n</details>\n<details>\n<summary>\n<strong>为什么选择器前面有个句点？</strong>\n</summary>\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\n</details>\n<details>\n<summary>\n<strong>为什么网页开发人员需要用类？</strong>\n</summary>\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\n</details>\n<details>\n<summary>\n<strong>我的RBG值不一样，但也是对的。</strong>\n</summary>\n\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\n\n</details>\n</div>\n# 类(Class)\n\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\n\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\n* 看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \n* 和伙伴讨论一下这些代码是如何起作用的。"
       CSD U2 classes spring: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -4374,13 +4402,15 @@ zh-CN:
         \r
         用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) 将它发送到你的作品集里。
+        PM.png) 将它发送到你的作品集里。\r
+        
       CSD U3 L12 Freeplay_2018: |-
         # 自由发挥\r
         \r
         用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) 将它发送到你的作品集里。
+        PM.png) 将它发送到你的作品集里。\r
+        
       CSD U3 L13 Freeplay: |-
         # 自由发挥\r
         \r
@@ -4457,7 +4487,6 @@ zh-CN:
         用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) 将它发送到你的作品集里。\r
-        \r
         
       CSD U3 L19 Freeplay_2018: |+
         # 自由发挥\r
@@ -4465,7 +4494,6 @@ zh-CN:
         用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) 将它发送到你的作品集里。\r
-        \r
         
       CSD U3 L3 Freeplay: |+
         # 自由发挥\r
@@ -4473,19 +4501,13 @@ zh-CN:
         用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
         PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png) 将它发送到你的作品集里。\r
-        \r
-        \r
-        \r
         
       CSD U3 L3 Freeplay_2018: |
         # 自由发挥\r
         \r
-        用你学过的知识来创建你喜欢的东西。当你完成后，可以点击 ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  来将作品发送给朋友，或点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) 来将它发送到你的作品集里。\r
-        \r
-        \r
-        \r
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)发送给朋友。或者点击 ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) 将它发送到你的作品集里。\r
         
       CSD U3 L4 Freeplay: |+
         # 自由发挥\r
@@ -9325,7 +9347,7 @@ zh-CN:
         就用一个按钮来玩游戏，然后观察`player_y`值得变化。\r
         *
         决定`player_y`是多少时，表明它到了屏幕底端。
-      CSD-Arrays: "今天，你会学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个新命名的模块，它里面含有你想要运行的所有代码。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n准备熟悉函数，学习如何编辑它们，并创建自己的函数！"
+      CSD-Arrays: "今天，你会学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个有名字的新模块，将你想要运行的代码都放在它里面。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n准备熟悉函数，学习如何编辑它们，并创建自己的函数！"
       CSD-Arrays_2018: "今天，你会学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个有名字的新模块，将你想要运行的代码都放在它里面。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n准备熟悉函数，学习如何编辑它们，并创建自己的函数！"
       'CSD: Cake Defender Exemplar': |-
         # 保卫你的蛋糕！\r
@@ -9878,7 +9900,7 @@ zh-CN:
         这样做\r
         \r
         最后再润色一下你的应用。返回你的计划向导，确保应用符合了最初的目标。
-      CSDU6 - toggle state LED prediction: 请参见包含的降价级别
+      CSDU6 - toggle state LED prediction: 请参见降价的包含级别
       CSDU6 - toggle state LED prediction_2018: 请参见降价的包含级别
       CSDU6 - toggleswitch state setProp: |-
         # 状态和切换开关\r
@@ -9953,8 +9975,8 @@ zh-CN:
       CSDU6 arrays random: |-
         # 表达式作为索引：使用变量\r
         \r
-        * 这里已经提供了一些**初始的代码**，创建了一个列表，包括了一些图标库里图标的标识。\r
-        * **写下代码**来让屏幕上的图片为列表中的随机图标。
+        * 这里已经提供了一些**初始的代码**，它为图标库里的图标创建了一组标识。\r
+        * **编写代码**把屏幕上的图片设为列表中随机的图标。
       CSDU6 arrays select icons: |-
         # 表达式作为索引：使用变量\r
         \r
@@ -10483,7 +10505,7 @@ zh-CN:
         \r
         <br/>\r
         在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。当你玩完以后，点击“完成”。
-      Course 4 Play Lab Vars 2: 上次关卡的比赛不是很公平！改变“dog_speed”（小狗速度）变量来让你能比小猫收集到更多的旗帜。最先收集到10个旗帜的就算赢！
+      Course 4 Play Lab Vars 2: 最后关卡中的比赛不是很公平! 更改`dog_speed`（狗_速度）变量以确保你可以收集比猫更多的旗子。第一个收集到10面旗子的赢！
       Course 4 Play Lab Vars 3: "这是一种新的游戏!\\r\n\\r\n你不需要在这个关卡上改变任何东西. \\r\n\\r\n**玩法: ** 使用左右箭头来移动, 向上箭头来跳跃。看看你能否收集所有的旗子。"
       Course 4 Play Lab Vars 4: "现在，我们用一个叫做“高度”的变量来控制小狗能跳多高。修改“高度”变量，让小狗能跳足够高，得到所有旗帜。\\r\n"
       Course 4 Play Lab Vars 6: |-
@@ -10869,7 +10891,7 @@ zh-CN:
       Overworld Chop Tree_2018: 木材是一种非常重要的资源。许多东西都是由它制成的。走到树边, 并使用`摧毁方块`模块命令将它砍倒。
       Overworld House Frame Chosen: 用你想要的任何材料来建立房子的剩余部分。`重复`命令将派上用场。
       Overworld House Frame Chosen_2018: 用你想要的任何材料来建立房子的剩余部分。`重复`命令将派上用场。
-      Overworld Move to Sheep: 请添加第二个`向前移动`命令来到达到羊的位置。
+      Overworld Move to Sheep: 添加第二个 `向前移动` 模块达到绵羊的位置。
       Overworld Move to Sheep_2018: 添加第二个 `向前移动` 模块达到绵羊的位置。
       Overworld Place Wall: 每栋房子都是从墙开始的。把`放置`和`向前移动`命令放进重复循环中来构建房子的第一部分。
       Overworld Place Wall_2018: 每栋房子都是从墙开始的。把`放置`和`向前移动`命令放进重复循环中来构建房子的第一部分。
@@ -11438,7 +11460,7 @@ zh-CN:
         \r
         拖出所需的子目标标签模块。
       Testing Quantum Farmer: "哇，瞧瞧这里！\\r\n\\r\n我不知道要多少铲土才能填满它。\\r\n你能写一个程序用“填充”模块，直到它和地面一样平吗？  "
-      The Accelerometer: "今天，你将要学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个新命名的模块，将你想要运行的代码都放在它里面。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n做好熟悉函数的准备，学习如何编辑它们，并创建自己的函数！"
+      The Accelerometer: "今天，你会学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个有名字的新模块，将你想要运行的代码都放在它里面。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n准备熟悉函数，学习如何编辑它们，并创建自己的函数！"
       The Accelerometer_2018: "今天，你会学习如何创建和使用**函数**。\\r\n\\r\n创建函数会让你制作自己的模块！制作函数有两部分：\\r\n\\r\n制作一个有名字的新模块，将你想要运行的代码都放在它里面。\\r\n-函数的xml定义- \\r\n\\r\n单个绿色的模块，是你使用或调用创建的函数。\\r\n-函数调用的xml-\\r\n\\r\n准备熟悉函数，学习如何编辑它们，并创建自己的函数！"
       U1L11 Abstraction Reflection_2018: |-
         抽象是用简单的东西来表示比较复杂的东西。在今天的课中, 十进制数是一个有用的抽象。对下面两个问题写一个简短的回答。 
@@ -12601,7 +12623,7 @@ zh-CN:
       course3_bee_functions_challenge1: 你得自己独立接受这个挑战。这可能比看起来更难！
       course3_bee_functions_challenge2: 你得自己独立面对这个挑战。
       course3_bee_functions_challenge3: 创建一个新的函数, 当前方有路的时候，收集所有的花蜜和蜂蜜。用它来完成关卡!
-      course3_bee_functions_challenge4: 用你所学的来完成这关！
+      course3_bee_functions_challenge4: 用你所学的来解决这个关卡。
       course3_collector_debugging_challenge2: 您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!
       course3_farmer_condLoops_challenge1: "南瓜标记你应该转弯的地方。*在南瓜那向右转。* 否则继续前进，但记得沿途收集所有的莴苣或玉米。\\r\n\\r\n**每个隐藏的作物只有一个玉米或莴苣。**"
       course3_farmer_condLoops_challenge2: "*\"这是蔬菜迷宫！\"*\\r\n\\r\n在南瓜那里向右转，在莴苣那里向左转。收集所有东西来完成此关卡。"
@@ -12713,7 +12735,7 @@ zh-CN:
         ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif) 
       courseA_artist_loops3_2018: |-
         我们的艺术家试图画一条线五次, 但还是不能把它的画好。你能帮忙吗？\r
-        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif) 
       courseA_artist_loops4: |-
         现在使用 一个<xml><block type="controls_repeat_simplified_dropdown"><title
         name="TIMES" config="2-6">5</title></block></xml>循环画这条线5 次！\r
@@ -12837,7 +12859,7 @@ zh-CN:
       courseA_collector_loops2_2018: |2
         得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops3: "罗瑞尔怎么能用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
+      courseA_collector_loops3: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops3_2018: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops_challenge1: '*"你能帮我找出一些缺陷吗？我知道想走哪条路，但我不确定要走多少步。"*'
       courseA_collector_loops_challenge1_2018: '*"你能帮我找出一些缺陷吗？我知道想走哪条路，但我不确定要走多少步。"*'
@@ -12853,7 +12875,7 @@ zh-CN:
       courseA_harvester_loops10: 帮助收割者捡起所有5束玉米！
       courseA_harvester_loops11: "试试自己做一个！\n"
       courseA_harvester_loops2: 收割者需要采摘所有的玉米！找到规律了吗？
-      courseA_harvester_loops3: 你能只用**一个**移动模块捡起所有玉米吗？
+      courseA_harvester_loops3: 你能只用**一个**移动模块来采摘所有玉米吗？
       courseA_harvester_loops4: |-
         *"我需要找到哪里错了！"*\r
         \r
@@ -13044,7 +13066,7 @@ zh-CN:
         PM.png)
       courseB_Scrat_ramp1_2018: "让斯奎特到达橡子，将<xml><block type=\"maze_moveEast\"/></xml>模块粘到<xml><block type=\"when_run\"/></xml>模块的下面，然后点击\"▶ 运行\"！\n"
       courseB_Scrat_ramp2_2018: "将两个<xml><block type=\"maze_moveEast\"/></xml>\n模块附加到<xml><block type=\"when_run\"/></xml>上来完成代码，然后点击\"▶ 运行\"。\n"
-      courseB_Scrat_ramp3a_2018: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n\n"
+      courseB_Scrat_ramp3a_2018: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶ 运行\"。\n"
       courseB_Scrat_ramp4a_2018: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018: 试试自己完成它！
       courseB_artist_loops10: |-
@@ -13092,7 +13114,7 @@ zh-CN:
         拿到所有四堆宝藏来通过此关卡。
       courseB_collector_loops3: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseB_collector_loops3_2018: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
-      courseB_collector_loops3_predict1: 罗瑞尔怎样才能只用`E -->`模块来收集所有5堆金子？
+      courseB_collector_loops3_predict1: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
       courseB_collector_loops_challenge2a: |-
         *”让我们得到宝藏！“*\r
         \r
@@ -13476,7 +13498,7 @@ zh-CN:
         用你在别的关卡学到的知识！
       courseC_maze_loops8: "**挑战：**将前几关的主意组合起来，完成这一关。"
       courseC_maze_loops_challenge2: 让我们使用循环来寻找宝藏! 通过找出此代码错误来帮助收集者得到所有的宝藏!
-      courseC_maze_programming1: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始！
+      courseC_maze_programming1: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
       courseC_maze_programming1_2018: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
       courseC_maze_programming2: "从工具箱中拖出一个额外的<xml><block\ntype=\"maze_moveForward\"/></xml>模块来完成你的代码。"
       courseC_maze_programming2_2018: "从工具箱中拖出一个额外的<xml><block\ntype=\"maze_moveForward\"/></xml>模块来完成你的代码。"
@@ -13512,7 +13534,7 @@ zh-CN:
         这个代码有很多缺陷。你需要移除一些模块，并加上一些。
       courseC_maze_programming8: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming8_2018: '*"保持冷静，帮我找到那只坏猪。"*'
-      courseC_maze_programming8_predict1: "*\"保持冷静\n 帮我找到那只坏蛋猪。\"*"
+      courseC_maze_programming8_predict1: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming8_predict1_2018: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming9: '*"现在，用任何方法让我偷偷到达猪那里！"*'
       courseC_maze_programming9_2018: '*"现在，用任何方法让我偷偷到达猪那里！"*'
@@ -13994,8 +14016,8 @@ zh-CN:
         *"这是花蜜仙境！"*\r
         \r
         帮助蜜蜂修好代码来采集所有的花蜜。
-      courseD_bee_debugging_challenge1: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？
-      courseD_bee_debugging_challenge1_2018: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？
+      courseD_bee_debugging_challenge1: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
+      courseD_bee_debugging_challenge1_2018: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
       courseD_bee_debugging_challenge1a: |-
         *"嗡嗡嗡！我知道怎么采花蜜，现在帮我酿蜂蜜！"*\r
         \r
@@ -14055,8 +14077,8 @@ zh-CN:
         看看在对手得分两次前，你能得多少分！
       courseD_bounce_events1s: "把球投到篮框里！ \\r\n加一个模块到`当按左方向键时`事件，并点击\"运行\"来将玩家移动到网那里。"
       courseD_bounce_events1s_2018: "把球投到篮框里！ \n\n加一个模块到`当按左方向键时`事件，并点击\"运行\"来将玩家移动到网那里。"
-      courseD_bounce_events2s: 现在, 在 `当向右时`中附加一个模块, 这样手就可以够到两个篮子。
-      courseD_bounce_events2s_2018: 现在, 在 `当向右时`中附加一个模块, 这样手就可以够到两个篮子。
+      courseD_bounce_events2s: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
+      courseD_bounce_events2s_2018: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
       courseD_bounce_events5s: 我们会朝着手发一个球。在`当球碰到手时`事件中加一个模块来确保球到达篮筐。
       courseD_bounce_events5s_2018: 我们会朝着手发一个球。在`当球碰到手时`事件中加一个模块来确保球到达篮筐。
       courseD_bounce_events6s: "现在篮筐在顶部。 \\r\n\\r\n添加代码，当球碰到墙时，让球弹起来，这样来通过这关。"
@@ -14583,7 +14605,7 @@ zh-CN:
         <title name="YPOS">???</title>
         </block></xml>
       courseE_artist_functions_challenge2_2018: |-
-        不仅能跳到一些预先设定的位置，比如画布的角落，还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！
+        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！
         
         <xml>
         <block type="jump_to_xy">
@@ -14633,9 +14655,9 @@ zh-CN:
         ___\r
         ##### 这些边每条都是100像素长。每个角转120度。
       courseE_artist_ramp9_2018: |-
-        用你学会的来画这个三角形。\r
+        用你所学的来画个等边三角形。\r
         ___\r
-        ##### 这些边每条都是100像素长。你需要在每个角落转120度。
+        ##### 这些边每条都是100像素长。每个角转120度。
       courseE_artist_ramp9_2_2018: |-
         用你所学的来画个等边三角形。\r
         ___\r
@@ -14808,7 +14830,7 @@ zh-CN:
         这关会让你练习`重复直到`哦模块。采摘所有的玉米和莴苣，直到到达南瓜。
         （别忘了也要捡起南瓜！）
       courseE_farmer_ramp16: "** 挑战: ** 用最少的块数解决这个关卡。"
-      courseE_maze_ramp1: 对于这个关卡，把所有的模块都拖到一起，并点击"运行"来看看！
+      courseE_maze_ramp1: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
       courseE_maze_ramp13: |-
         是时候把上一关的都拉到一起了！\r
         \r
@@ -14851,7 +14873,7 @@ zh-CN:
         \r
         躲开TNT炸药。
       courseE_playLab_challenge1: "* **松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？*\n\n规则：\n1. *碰到松鼠得分。*\n2. *碰到恐龙丢很多分。*\n\n这是和玩过的不同的游戏！玩一玩，看看它是如何工作的。 \n\n\n当你有足够的分数或者分数太低时，会发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照它的方法工作。 \n点击提示获得主意！"
-      courseE_playLab_challenge1_2018: "_**松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？_\n\n规则：\n1. *碰到松鼠得分。*\n2. *碰到恐龙丢很多分。*\n\n这是一种和已经开始的不同的游戏！玩一玩，看看它是如何工作的。 \n\n\n当有足够的分数或者分数太低时，应该发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照想法工作。 \n点击提示获得主意！"
+      courseE_playLab_challenge1_2018: "* **松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？*\n\n规则：\n1. *碰到松鼠得分。*\n2. *碰到恐龙丢很多分。*\n\n这是和玩过的不同的游戏！玩一玩，看看它是如何工作的。 \n\n\n当你有足够的分数或者分数太低时，会发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照它的方法工作。 \n点击提示获得主意！"
       courseE_playLab_scaffold1: |-
         你学到的大量知识太令人惊奇了！让我们一步步做个游戏。\r
         \r
@@ -14908,7 +14930,7 @@ zh-CN:
       courseF_IceAge_10: "喜得想让他的奶奶格瑞尼，知道他很爱她。\\r\n\\r\n用`演员 __ 扔`命令来让喜得（演员1）向格瑞尼（演员2）扔爱心！\\r\n当格瑞尼碰到爱心时，设置她的表情为高兴。"
       courseF_IceAge_11: "是时候创建你自己的故事了！\\r\n\\r\n完成后，点击\"完成\"来让朋友们在他们的手机、平板或计算机上试试你的游戏。\\r\n不知道如何做？点击提示来获得详细方法。"
       courseF_IceAge_2: 曼尼（演员2）发现了喜得（演员1），想邀请他一同冒险。通过使用`演员__说`模块两次来帮助他们相互打招呼。
-      courseF_IceAge_3: 斯奎特在找他的橡子！你能帮他移动最后200像素吗？
+      courseF_IceAge_3: 斯奎特 在找他的橡子! 你能帮他移动最后200像素吗？
       courseF_IceAge_4: 迪亚哥（演员1）正在寻找曼尼（演员2）你能帮忙将他俩带到一起吗？将一个模块连接到`当演员碰到时`事件下，在当他俩碰到一起时，播放声音。
       courseF_IceAge_5: '`一直重复`模块能让你连续的运行代码。你能将模块放到它里面，帮助格瑞尼不停的左右移动来进行锻炼吗？'
       courseF_IceAge_6: "当你点击喜得时，能帮助他呼唤他的朋友吗？\\r\n\\r\n完成后，点击\"运行\"来开始。点击喜得来让你的代码起作用！"
@@ -15288,14 +15310,14 @@ zh-CN:
         这一关中，每次补丁需要变量比上一次少1。如果想在这关用同样的函数，要在每次循环时让变量减少1。
       courseF_bee_functions_challenge1: 创建一个新的函数, 当前方有路的时候，收集所有的花蜜和蜂蜜。用它来完成关卡!
       courseF_bee_functions_challenge1_2018: 创建一个新的函数, 当前方有路的时候，收集所有的花蜜和蜂蜜。用它来完成关卡!
-      courseF_bee_functions_challenge2: 用你所学的来完成这关！
-      courseF_bee_functions_challenge2_2018: 用你所学的来完成这关！
+      courseF_bee_functions_challenge2: 用你所学的来解决这个关卡。
+      courseF_bee_functions_challenge2_2018: 用你所学的来解决这个关卡。
       courseF_bee_functions_challenge2_recursion: "在云的下面，可能有不知道有多少花蜜的花，或者不知道有多少蜂蜜的蜂窝\\r\n\\r\n你能写一个程序来处理这些情况吗？"
       courseF_bee_fwp1: "检查云下面，来看看是否花里有花蜜。 \\r\n\\r\n在整个阶段，每朵花都有正好**一个**花蜜，每个蜂窝也会有正好**一个**蜂蜜。 \\r\n\\r\n\\r\n"
       courseF_bee_fwp1_2018: "检查云下面，来看看是否花里有花蜜。 \\r\n\\r\n在整个阶段，每朵花都有正好**一个**花蜜，每个蜂窝也会有正好**一个**蜂蜜。 \\r\n\\r\n\\r\n"
       courseF_bee_fwp2: "这里有一些通过上一关的代码。  \\r\n让我们将它拖到一个函数里，然后调用这个函数来检查一行花蜜。 \\r\n___\\r\n这现在看起来是很奇怪的一步，但它很快就真的有帮助！"
       courseF_bee_fwp2_2018: "这里有一些通过上一关的代码。  \\r\n让我们将它拖到一个函数里，然后调用这个函数来检查一行花蜜。 \\r\n___\\r\n这现在看起来是很奇怪的一步，但它很快就真的有帮助！"
-      courseF_bee_fwp3: "是时候测试函数了！\n\\r\n\\r\n让我们看看是否有更容易的方法收集所有三行花蜜。"
+      courseF_bee_fwp3: "是时候测试函数了！ \\r\n\\r\n让我们看看是否有更容易的方法收集所有三行花蜜。"
       courseF_bee_fwp3_2018: "是时候测试函数了！ \\r\n\\r\n让我们看看是否有更容易的方法收集所有三行花蜜。"
       courseF_bee_fwp4: "*\"你的函数怎么样了？\"*   \\r\n\\r\n在这里，我们需要一些调节。点击\"编辑\"来增加一个`length`（长度）参数到函数里，这样当每行长度不同时，它也能工作。"
       courseF_bee_fwp4_2018: "*\"你的函数怎么样了？\"*   \\r\n\\r\n在这里，我们需要一些调节。点击\"编辑\"来增加一个`length`（长度）参数到函数里，这样当每行长度不同时，它也能工作。"
@@ -15409,7 +15431,7 @@ zh-CN:
       courseF_playlab_variables3b: '帮助琪琪和布赖恩对话，使用变量`age`来放到所有需要使用年龄`12`的地方。 '
       courseF_playlab_variables3bEdit: '帮助琪琪和布赖恩对话，使用变量`A1`来放到所有需要使用年龄`12`的地方。 '
       courseF_playlab_variables3b_josh: '帮助琪琪和布赖恩对话，使用变量`age`来放到所有需要使用年龄`12`的地方。 '
-      courseF_playlab_variables3b_josh_2018: '帮助琪琪和布赖恩对话，使用变量`age`（年龄）来放到所有需要使用年龄`12`的地方。 '
+      courseF_playlab_variables3b_josh_2018: '帮助琪琪和布赖恩对话，使用变量`age`来放到所有需要使用年龄`12`的地方。 '
       courseF_playlab_variables4: "现在，我们要用`用... 创建文本`模块加入一个变量到海盗下个句子开始的地方。\\r\n\\r\n你能在工具箱里找到正确的变量填到这个空位里吗？\\r\n\\r\n"
       courseF_playlab_variables4b: "现在，海盗有些问题要问布赖恩。\\r\n\\r\n代码用了一个`问`模块，因此你可以在点击\"运行\"按钮后，输入布赖恩的回答。\\r\n\\r\n将变量放到正确的地方来创建这个对话。"
       courseF_playlab_variables4b_2018: "现在，海盗有些问题要问布赖恩。\\r\n\\r\n代码用了一个`问`模块，因此你可以在点击\"运行\"按钮后，输入布赖恩的回答。\\r\n\\r\n将变量放到正确的地方来创建这个对话。"
@@ -16438,7 +16460,7 @@ zh-CN:
       grade4_frozen_freeplay: 你已经正式成为艺术大师！创建一个冬季仙境。
       grade4_frozen_functions0: 圆形是一种特殊的形. 你可以计算出什么号码能取代问号来画圆形吗?
       grade4_frozen_functions1a: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。
-      grade4_frozen_functions2: 现在让我们创建20个交叠的圆圈，在每个圆圈之间转18度。
+      grade4_frozen_functions2: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       grade4_frozen_functions3: 这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?
       grade4_frozen_functions4: 错综复杂的雪花模式可以用非常简单的形状来创建。 你可以重复5个大小为5的圆圈和5个大小为10的圆圈来做成一个模式吗?
       grade4_frozen_nested_loop_diamonds2: 你知道每个雪花的形状都不同吗？让我们用另一个循环来重复平行四边形4次来创建一个新的雪花。在每个平行四边形之间转90度。
@@ -16521,7 +16543,7 @@ zh-CN:
       grade5_bee_parameters_new8a: 使用你的新函数来解决这个螺旋。
       grade5_bee_parameters_new9a: 使用你的新函数来解决这个螺旋。
       grade5_playlab_freeplay: "现在是自由发挥时间！\n你可以用工具箱你的所有模块了，祝你玩得愉快！\\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>需要一些创意吗？</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t\\t<ul>\\r\n\\t<li><strong>标签</strong>\n- 让角色2闲逛，然后用方向键控制角色1来追逐他，直到他俩碰到一起。</li>\\r\n<li><strong>敲击小精灵</strong>\n- 让小精灵不断的从随机的位置突然出现。如果在它消失前点到了它，就得分。</li>\\r\n<li><strong>最佳猜想</strong> - 让两个角色都消失，然后在一个随机的位置随机出现一个角色。点击到角色1时，得一分。但如果点击到了角色2，就扣一分！</li>\\r\n</ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>\\r\n"
-      grade5_playlab_variables1: "这次你不需要写任何代码，点击“运行”来玩游戏吧！\\r\n\\r\n<br/>\\r\n在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。当你玩完以后，点击“完成”。"
+      grade5_playlab_variables1: "这次你不需要写任何代码，点击`运行`来玩游戏吧！\n\n<br/>\n在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。玩完后，点击`完成`。"
       grade5_playlab_variables10: 编辑`巡逻`函数来添加一个`演员`参数。调用它时，能让屏幕上每个演员都动起来。记住，演员对应到数字1和2，3上。
       grade5_playlab_variables11: 添加另一个叫做“速度”的参数到“巡逻”函数里。试着在“设置速度”模块中使用新的“速度”参数，来帮助企鹅在别的小动物之前得到所有旗帜。
       grade5_playlab_variables12: "来点好玩的！看看这里的代码，是否你能明白每个模块都做了什么。\\r\n\\r\n看完以后，用方向键来让小狗收集到所有旗帜。\\r\n\\r\n注意：你不必改动代码。"
@@ -16570,7 +16592,7 @@ zh-CN:
         
         完成后，右击来保存图片，然后将它通过<a
         href="https://classroom.google.com">Google课堂</a>发给我。
-      harvey_snowflake_artist2: |2
+      harvey_snowflake_artist2: |-
         *是时候让雪花准备好3D打印了！*
         
         ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
@@ -16586,7 +16608,7 @@ zh-CN:
         <block type="jump_to"><title name="VALUE">7</title>
         </block></xml>
         
-            完成后，右击来保存图片，然后将它通过<a
+        完成后，右击来保存图片，然后将它通过<a
         href="https://classroom.google.com">Google课堂</a>发给我。
       iceAgeLoopsforVideo: 你能只用一个 <xml><block type="maze_moveForward"/></xml>模块来获得橡子吗？试试用循环！
       iceage_click_hello: "当你点击喜得时，能帮助他呼唤他的朋友吗？\\r\n完成后，点击\"运行\"来开始。点击喜得来让你的代码起作用！"
@@ -16602,8 +16624,8 @@ zh-CN:
       iceage_move_events_2018: "斯奎特一直在找橡子！\n\\r\n给每个事件模块下加一个`移动演员1`的模块，并改变其方向来让每个方向键都能起作用。这样来帮助他能四处跑。\\r\n完成后，点击\"运行\"并试着收集所有的橡子。"
       iceage_move_to_actor: 迪亚哥（演员1）正在寻找曼尼（演员2）你能帮忙将他俩带到一起吗？将一个模块连接到`当演员碰到时`事件下，在当他俩碰到一起时，播放声音。
       iceage_move_to_actor_2018: 迪亚哥（演员1）正在寻找曼尼（演员2）你能帮忙将他俩带到一起吗？将一个模块连接到`当演员碰到时`事件下，在当他俩碰到一起时，播放声音。
-      iceage_move_to_flag: "斯奎特 在找他的橡子！\n你能帮他移动最后200像素吗？"
-      iceage_move_to_flag_2018: 斯奎特在找他的橡子！你能帮他移动最后200像素吗？
+      iceage_move_to_flag: 斯奎特 在找他的橡子! 你能帮他移动最后200像素吗？
+      iceage_move_to_flag_2018: 斯奎特 在找他的橡子! 你能帮他移动最后200像素吗？
       iceage_repeat: '`一直重复`模块能让你连续的运行代码。你能将模块放到它里面，帮助格瑞尼不停的左右移动来进行锻炼吗？'
       iceage_repeat_2018: '`一直重复`模块能让你连续的运行代码。你能将模块放到它里面，帮助格瑞尼不停的左右移动来进行锻炼吗？'
       iceage_sound_and_points: "这是你上一关的代码，这个代码也会左右移动格瑞尼。\\r\n你能完成这个程序，当喜得和格瑞尼碰上是，让它**播放声音**并**得一分**吗？\\r\n点击\"运行\"来玩这个游戏。"

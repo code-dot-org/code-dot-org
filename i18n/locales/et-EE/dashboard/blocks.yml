@@ -134,14 +134,6 @@ et:
             '"left"': vasakule
             '"right"': paremale
             '"space"': kosmos
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': üles
-            '"down"': alla
-            '"left"': vasakule
-            '"right"': paremale
-            '"space"': kosmos
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -233,6 +225,11 @@ et:
             '"scale"': suurus
             '"x"': x asukoht
             '"y"': y asukoht
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasakule
+            "{x: 300, y: 200}": paremale
       Mikelab_getProp:
         options:
           PROPERTY:
