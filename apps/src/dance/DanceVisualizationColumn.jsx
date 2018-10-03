@@ -6,7 +6,7 @@ import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import experiments from "@cdo/apps/util/experiments";
 import songLibrary from "../code-studio/songLibrary.json";
-import gamelabMsg from '@cdo/gamelab/locale';
+import i18n from '@cdo/locale';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -21,7 +21,7 @@ const SongSelector = class extends React.Component {
   render() {
     return (
       <div id="song_selector">
-        <label><b>{gamelabMsg.selectSong()}</b></label>
+        <label><b>{i18n.selectSong()}</b></label>
         <select style={styles.selectStyle}>
           {Object.keys(songLibrary).map((option, i) => (
             <option key={i}>{songLibrary[option].title}</option>
