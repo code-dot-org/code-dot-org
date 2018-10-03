@@ -273,7 +273,6 @@ hu:
       signin: 'Bejelentkezés'
       signup: 'Regisztrálj'
       already_registered: 'Már regisztráltál?'
-      pair_programming: 'Páros programozás'
       team: 'Csapat'
       driver: 'Vezető'
       navigator: 'Navigátor'

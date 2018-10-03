@@ -930,7 +930,7 @@ th:
         Matching: การจับคู่
       K-1 Maze Match 1:
         Instructions: คำแนะนำ
-        Match the puzzles and blocks: จับคู่ปริศนากับบล๊อก
+        Match the puzzles and blocks: จับคู่ปริศนากับบล็อก
         Matching: การจับคู่
       K-1 Move It Match 1:
         Matching: การจับคู่
@@ -1226,7 +1226,7 @@ th:
         Pick the correct repeat block.: เลือกบล็อกทำซ้ำ(Repeat block) ที่ถูกต้อง
       K-1 Maze Multiple Choice 2:
         Maze: เขาวงกต
-        Which answer solves this level?: คำถามอันไหนแก้ปริศนาในด่านนี้ได้?
+        Which answer solves this level?: คำตอบใดแก้ปริศนาในด่านนี้?
       K-1 Move It Multi 1:
         Multiple Choice: คำถามแบบปรนัย
         Which algorithm gets the Flurb to the flowers?: อัลกอลิทึมอันไหนที่ช่วยพาเจ้าเฉิ่มนี่ไปที่ดอกไม้ได้?

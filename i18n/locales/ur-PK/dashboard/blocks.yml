@@ -39,10 +39,6 @@ ur:
         options:
           KEY:
             '"space"': خلاء
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': خلاء
       gamelab_debugSprite:
         options:
           VAL:

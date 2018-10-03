@@ -365,7 +365,7 @@ km:
         will you get Dog to move in all directions using the arrow keys?  How will
         you add points when Dog tags Cat or Penguin?  How will you subtract points
         when Cat and Penguin touch?
-      CourseF_PlayLab_vars10: "Free Play time! Here are all of the variables\nwe've played with so far in this stage, as well as a few more in case you\nwant them. \\r\n\\r\nNotice that there are now so many blocks in our toolbox\nthat they need to be organized!  Here, we've put each piece into an appropriate\ncategory.  Take some time to explore everything that is available. When you're\ndone browsing, make a game or story using repeats, variables, and events.  \\r\n\\r\nHint:\nscroll down to see all the commands in the workspace."
+      CourseF_PlayLab_vars10: "Free Play time! Here are all of the\nvariables we've played with so far in this stage, as well as a few more in\ncase you want them. \\r\n\\r\nNotice that there are now so many blocks in our\ntoolbox that they need to be organized!  Here, we've put each piece into\nan appropriate category.  Take some time to explore everything that is available.\nWhen you're done browsing, make a game or story using repeats, variables,\nand events.  \\r\n\\r\nHint: scroll down to see all the commands in the workspace."
       CourseF_PlayLab_vars6: |-
         Use the right arrow to throw pie.\\r
         \\r
@@ -563,18 +563,18 @@ km:
         (The long sides are 200 pixels each and the short sides are
         each 100 pixels)
       courseC_artist_prog5_2018: |-
-        Finish this tag by drawing a rectangle
-        around the outside.\\r
-        (The long sides are 200 pixels each and the short sides
-        are each 100 pixels)
+        Finish this tag by drawing a rectangle around
+        the outside.\\r
+        (The long sides are 200 pixels each and the short sides are
+        each 100 pixels)
       courseC_artist_prog8: |-
         One more tag.  This is a triangle for Pi.\\r
         (Each
         side is 150 pixels)
       courseC_artist_prog8_2018: |-
-        One more tag.  This is a triangle for
-        Pi.\\r
-        (Each side is 150 pixels)
+        One more tag.  This is a triangle for Pi.\\r
+        (Each
+        side is 150 pixels)
       courseC_playLab_embedded: |-
         Here's a game for you to play! To win,
         use your arrow keys to get the penguin to run into the octopus.\\r
@@ -888,11 +888,10 @@ km:
         For even more effect, try playing
         with color!  Use random colors inside loops to see how it changes your design.
       grade5_artist_variables_freeplay15: |-
-        Want a second peek at the inspiration
-        design or the hints?  Click here!\\r
+        Want a second peek at the inspiration design
+        or the hints?  Click here!\\r
         \\r
-        Otherwise, make a design all your
-        own!
+        Otherwise, make a design all your own!
       grade5_artist_variables_hexagons1: "Let's try it again! \\r\n\\r\nCan you\nset the `length` variable to 60 to make this cool design with hexagons?"
       grade5_artist_variables_octagons13: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the `length` variable, let's use a math block with the `sides`\nvariable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       grade5_artist_variables_pentagon8: |-

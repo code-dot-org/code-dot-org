@@ -107,14 +107,6 @@ de:
             '"left"': links
             '"right"': rechts
             '"space"': Weltall
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': hoch
-            '"down"': runter
-            '"left"': links
-            '"right"': rechts
-            '"space"': Weltall
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -206,6 +198,11 @@ de:
             '"scale"': Größe
             '"x"': x-Position
             '"y"': y-Position
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
       Mikelab_getProp:
         options:
           PROPERTY:

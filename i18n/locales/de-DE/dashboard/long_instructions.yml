@@ -20,21 +20,17 @@ de:
       2-3 Artist Debugging 10: "Das Steuerkreuz auf meinem Game-Controller ist zu klein. \\r\n\\r\nKannst Du es 10 Pixel breiter machen?.\\r\n\\r\nStarte das Programm zuerst einmal, um zusehen, was du ändern musst."
       2-3 Artist Debugging 11: |-
         Hilf mir, meine schöne Schneeflocke zu beenden. Wie oft muss ich es „wiederholen“, um es zu beenden?
-      2-3 Artist Debugging 2: "Der Code für die Schnurrhaare ist falsch. \\r\n\\r\nVerbessere diesen Code, um Schnurrhaare zu zeichnen, die alle gleichlang sind."
-      2-3 Artist Debugging 3: "Mein Boot hat ein Loch! \\r\n\\r\nWas musst du ändern, so dass sich die Enden treffen?"
-      2-3 Artist Debugging 5: "Der Code für das Bein und den Fuß ist falsch? \\r\n\\r\nKannst du das beheben?"
+      2-3 Artist Debugging 2: "Der Code für die drei Schnurrhaare, die du siehst, ist falsch. Hinweis: Jedes Schnurrhaar ist 75 Pixel lang. Verbessere diesen Code, um die Schnurrhaare zu zeichnen."
+      2-3 Artist Debugging 3: "Mein Boot hat ein Loch! Kannst du es stopfen, indem du den Winkel der Linie änderst? Hinweis: Der letzte Winkel weicht um 15 Grad ab."
+      2-3 Artist Debugging 5: "Der Code für das Bein und den Fuß, den du siehst, ist falsch. Hinweis:  Der Fuß ist zu lang, wir müssen möglicherweise einen Schritt (Wortspiel beabsichtigt) löschen."
       2-3 Artist Debugging 6: |-
         Ich scheine auf einen Stuhl, dem ein Bein fehlt, zu sitzen.\r
         \r
         Ändere den Code, um das letzte Bein zu zeichnen.
       2-3 Artist Debugging 7: |-
-        Das C in "code" ist verkehrt herum gezeichnet.\r
-        \r
-        Kannst Du es wieder wie ein C aussehen lassen?
+        Es sieht aus als ob C in Code spiegelverkehrt ist. Kannst du es wie ein C aussehen lassen?
       2-3 Artist Debugging 8: |-
-        Mein Lehrer sagt, dass ich beendet sollte, was ich starte.\r
-        \r
-        Hilf mir mein Windrad zu beenden. Findest du heraus, was falsch ist?
+        Mein Windrad ist noch nicht fertig. Wie oft muss ich es „wiederholen“, um es zu beenden?
       2-3 Artist Debugging 9: |-
         Der Code für diesen Stiel ist falsch. Hinweis:  Der Winkel weicht um 60 Grad ab.
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
@@ -44,7 +40,7 @@ de:
       2-3 Artist Functions 12: "Funktionen sind für das mehrfache Zeichnen von komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben alle 100 Pixel Abstand zueinander.)  "
       2-3 Artist Functions 2: "Funktionen erlauben dir, neue Blöcke zu definieren! Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel."
       2-3 Artist Functions 3: "Bearbeite die Funktion, um ein Quadrat mit einer Seitenlänge von 115 und zeichne die größeren Gläser. Die Quadrate sind jetzt 45 Pixel auseinander."
-      2-3 Artist Functions 4: Steck jetzt die Funktion in eine Schleife hinein, um diese drei Quadrate zu zeichnen.
+      2-3 Artist Functions 4: Verwende den „Wiederholen"-Block, um diese 3 Quadrate zu zeichnen.
       2-3 Artist Loops 1: Kannst du ein Sechseck mit Seiten, die 100 Pixel lang sind, zeichnen, um die Zelle zu beenden? Bedenke, das du nur 60 Grad drehen musst!
       2-3 Artist Loops 2: Jetzt verwende einen Wiederholen-Block, um die Zelle zur Muschel zu machen.
       2-3 Artist Loops New 1: |
@@ -59,7 +55,7 @@ de:
         <br/><br/>
       2-3 Artist Loops New 2: |-
         Hier ist Teil des Codes, den du verwendet hast, um das Quadrat zu zeichnen. Was passiert, wenn du den Wiederholen-Baustein verwendest, um diesen Code 4 Mal auszuführen?
-      2-3 Artist Loops New 9: Zeichne ein einfaches V (bei dem beide Seiten 50 Pixel lang sind) um den Pfeil zu vervollständigen.
+      2-3 Artist Loops New 9: Zeichne ein einfaches V, bei dem beide Seiten 50 Pixel lang sind, um den Pfeil zu vervollständigen.
       2-3 Artist Nested Loops 10: Wiederhole diesen Code 12 Mal, um das Muster zu zeichnen.
       2-3 Artist Nested Loops 11: Wiederhole diesen Code 4 Mal, um das Muster zu vervollständigen und drehe es um 90 Grad nach jedem Kreis.
       2-3 Artist Nested Loops 12: Wiederhole diesen Code 12 Mal, um die Wirbel zu vervollständigen.

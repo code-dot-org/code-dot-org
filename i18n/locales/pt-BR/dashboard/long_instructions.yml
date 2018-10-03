@@ -16,31 +16,30 @@ pt-BR:
       2-3 Artist 9: Termine esta pipa
       2-3 Artist Assessment 1: "**Avaliação:** Termine de desenhar\n o último dente. Ele tem 25 pixels de largura e 25 pixels de altura."
       2-3 Artist Debugging 1: "Este chapéu deve ter somente 50 pixels \nde largura. \\r\nVocê pode consertá-lo?\\r\n\\r\n<br/>\\r\n"
-      2-3 Artist Debugging 10: "Os direcionais do controle do meu\njogo estão muito apertados. \\r\n\\r\nVocê pode aumentá-los em 10 pixels?\\r\n\\r\nTente\nrodar o código antes para o ver o que há de errado."
+      2-3 Artist Debugging 10: "O controlador de direção do controle do meu jogo\né muito estreito. \\r\n\\r\nVocê consegur aumentar a largura dele em 10 pixels?\\r\n\\r\nExecute\no código primeiro para ver o que está errado."
       2-3 Artist Debugging 11: |-
         Meu floco de neve está se desfazendo!\r
         \r
         Você
         consegue descobrir o que há de errado?
-      2-3 Artist Debugging 2: "Este código para os bigodes do gato\nestá errado. \\r\n\\r\nConserte este código para desenhar bigodes todos com o mesmo comprimento."
-      2-3 Artist Debugging 3: "Meu barco tem um buraco! \\r\n\\r\nO que\nvocê precisa consertar para juntar as extremidades?"
-      2-3 Artist Debugging 5: "O código que temos para\na perna e pé está errado. \\r\n\\r\nVocê pode consertá-lo?"
+      2-3 Artist Debugging 2: "O código dos bigodes do gato está errado.\n\\r\n\\r\nCorrija o código para desenhar os bigodes, todos com o mesmo tamanho."
+      2-3 Artist Debugging 3: "Meu barco tem um buraco! \\r\n\\r\nO que você\nprecisa corrigir para unir as extremidades?"
+      2-3 Artist Debugging 5: "O código para a perna e\npara o pé está errado. \\r\n\\r\nVocê consegue corrigi-lo?"
       2-3 Artist Debugging 6: |-
-        Parece que estou sentando em
-        uma cadeira com uma perna faltando!\r
+        Parece que estou sentado em uma cadeira
+        sem uma perna!\r
         \r
         Edite o código para desenhar a última perna.
       2-3 Artist Debugging 7: |-
-        Parece que o C no código está desenhado
-        ao contrário!\r
+        Parece que o C no código está desenhado ao contrário!\r
         \r
-        Você pode fazê-lo parecer com um C novamente?
+        Você
+        consegue fazê-lo parecer com um C de novo?
       2-3 Artist Debugging 8: |-
-        Meu professor diz que eu tenho que
-        terminar o que eu começo!\r
+        Meu professor diz que eu devo terminar o que
+        comecei!\r
         \r
-        Me ajude a finalizar meu cata-vento. Você consegue descobrir
-        o que está errado?
+        Ajude-me a terminar meu cata-vento. Você consegue descobrir o que há de errado?
       2-3 Artist Debugging 9: |-
         Algo está estranho!\r
         \r
@@ -63,7 +62,7 @@ pt-BR:
       2-3 Artist Loops 1: "Você consegue fazer um hexágono com lados de\n100 pixels de comprimento para terminar a célula? Lembre-se, isso significa que você só vai\nprecisar virar 60 graus!"
       2-3 Artist Loops 2: "Agora, use um bloco \"repita\" para transformar a célula em uma\nconcha."
       2-3 Artist Loops New 10: "Agora vamos conectar um monte de \"V\"\nem um laço."
-      2-3 Artist Loops New 12: 'Desenhe um diamante com lados de 100 pixels. '
+      2-3 Artist Loops New 12: "Desenhe um diamante com lados de 100 pixels.\n"
       2-3 Artist Loops New 13: "Você vai conhecer alguns códigos\n(em cinza) para fazer um diamante. \\r\n\\r\nRepita o código cinza para criar um padrão\ndivertido!"
       2-3 Artist Loops New 15: |+
         Agora, desenhe qualquer coisa que tenha vontade
@@ -204,7 +203,7 @@ pt-BR:
       Big Game Booleans 1: "Da última vez que você trabalhou em seu jogo fizemos\nnossos alvo e inimigo voarem pela tela, mas eles nunca\nvoltaram. Clique em \"Executar\" para ver como seu jogo está funcionando agora e depois clique\nem concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem\nsaído."
       Big Game Booleans 5: "Nesse ponto do seu jogo, seu inimigo deve percorrer\na tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para\na direita e eles devem retornar para o lado oposto, repetidamente. Veja\nse seu jogo está funcionando como você gostaria e então clique em\nConcluir para seguir em frente."
       Big Game Collision 1: "Até agora você programou um jogo\ncom um alvo e um inimigo que se movem, sendo que ambos retornam à tela quando\nsaem, e um jogador que responde à entrada do teclado. Clique em Executar para\nver como seu jogo está funcionando e então vamos para o que\nestá faltando - a detecção de colisão!"
-      Big Game Vars 1: "Vamos começar o seu Grande Jogo!\nAqui você vai ver um monte de trechos de código para reservar espaço que você eventualmente\nvai substituir pelo seu próprio código, mas por enquanto vamos nos preocupar somente\nem definir as variáveis. Clique em \"Executar\" para ver como é o jogo com os\nvalores-padrão."
+      Big Game Vars 1: "Vamos começar o seu Grande Jogo! Aqui você vai\nver um monte de trechos de código para reservar espaço que você eventualmente vai substituir\npelo seu próprio código, mas por enquanto vamos nos preocupar somente em definir as variáveis.\nClique em \"Executar\" para ver como é o jogo com os valores-padrão."
       Big Game Vars 4: "Incrível! Agora você pode atualizar as variáveis para\no jogador, o alvo e o inimigo. Fique à vontade para brincar com todas as variáveis\ne assim deixar seu jogo do jeito que você quer. Clique em \"Concluir\"\nquando você terminar."
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
       CSD U5 Waze Data Video_2018: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
@@ -779,6 +778,16 @@ pt-BR:
       courseD_maze_nestedLoops4_2018: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
       courseD_maze_ramp5d: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
+      courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_predict2: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_predict2_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until6: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until6_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until7: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_bee_functions3_2018: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_farmer_concept4: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
@@ -829,6 +838,8 @@ pt-BR:
       frozen circle: "Um círculo é uma forma especial. Você pode descobrir\nque número usar para substituir os pontos de interrogação para desenhar um círculo?"
       frozen cross rotate dense: "Vamos repetir isso 90 vezes! Quantas\nvezes 90 cabe em 360? Dica: é um número realmente pequeno."
       frozen cross rotate: "Agora, tente repetir isso 10 vezes. Quantos graus\nvocê precisa virar entre cada reta?"
+      frozen cross rotate_b: Agora, tente repetir isso **10** vezes. **Quantos graus** você precisa virar entre cada reta?
+      frozen cross rotate_test: Agora, tente repetir isso **10** vezes. **Quantos graus** você precisa virar entre cada reta?
       frozen cross: "Envolva um bloco \"Repita\" em torno desses comandos para criar\num sinal de adição. Você notou que Elsa pode se mover para a frente e para trás?"
       frozen diamond mini snowflake: "Você sabia que cada floco de neve\ntem uma forma diferente? Vamos criar um novo floco de neve usando o bloco \"Repita\"\npara repetir um paralelogramo 4 vezes, virando 90 graus à direita entre\ncada paralelogramo."
       frozen diamond snowflake: "Agora, vamos criar um novo floco de neve\nusando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus\nà direita entre cada um."
@@ -837,6 +848,8 @@ pt-BR:
       frozen perpendicular: "Agora, vamos ver se podemos criar duas retas\nque formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco \"vire\"\ne também o bloco \"mova\"."
       frozen snowflake branch: "Tente usar o bloco \"crie um floco de neve do tipo ramificado”\npara criar três ramificações, o que começa a parecer um floco de neve."
       frozen snowflake full: "Agora, vamos repetir isso 8 vezes para fazer um\nbelo floco de neve!"
+      frozen snowflake full_b: Agora, vamos repetir isso **8** vezes para criar um lindo floco de neve!
+      frozen snowflake full_test: Agora, vamos repetir isso **8** vezes para criar um lindo floco de neve!
       frozen snowflower: "Padrões de neve complexos podem ser criados com\nformas muito simples. Você pode criar um padrão repetindo 5 círculos de tamanho\n5 e 5 círculos de tamanho 10?"
       frozen square iterative: "Parece que estamos na metade do caminho para fazer\num quadrado. Vamos juntar 4 retas para criar um quadrado."
       frozen square loop 3x: "Vamos criar três quadrados, virando depois\nde cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado."

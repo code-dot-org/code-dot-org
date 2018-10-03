@@ -542,7 +542,7 @@ sk:
       Overworld Avoid Monsters_2018: "Bežať ku \"Creeperovi\" nie je dobrý nápad.\nOpatrne prebehnite poza neho a dostante sa do bezpečia svojho domova."
       Overworld Chop Tree - allthethings: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
       Overworld Chop Tree: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
-      Overworld Chop Tree_2018: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi "destroy block" na to aby si ho vyrúbal.
+      Overworld Chop Tree_2018: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
       Overworld Chop Trees: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
       Overworld Chop Trees_2018: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
       Overworld Free Play 20x20: Gratulujeme! Dokončili ste všetky úlohy! Teraz ťaž v bani, stavaj a vytváraj niečo jedinečné použitím všetkých veci, čo si sa doteraz naučil.
@@ -562,6 +562,17 @@ sk:
       PS - test - pixelation: Dokončite tvar X písaním núl a jednotiek
       PS copy 2-3 Bee Conditionals 5: "Fialové kvety môžu mať buď 1 alebo 0 nektáru, ale nevieš, ktorý z nich! Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú. Skontrolujte, či nektár je rovný 1 pomocou bloku \"if\"."
       SpecialFrozenLevel: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
+      Standalone_Artist_1: Vitaj v kurze Umelec! Najskôr si vyskúšajme jednoduchý štvorec použitím blokov "Otoč sa vpravo" a "Posuň sa dopredu". Každá strana má mať 100 pixelov.
+      Standalone_Artist_2: Nakresli tento diamant so 120 a 60 stupňovými uhlami a dĺžkou strán 150 pixelov.
+      Standalone_Artist_3: Vieš nakresliť tento šesťuholník so stranami 100 pixelov a s otočkami 60 stupňov?
+      Standalone_Artist_4: A teraz je tvojim novým blokom na hranie slučka. Tá bude opakovať radu príkazov. Čo sa stane ak zoslučkuješ tieto príkazy do šiestich?
+      Standalone_Artist_5.5: 'Všimaš si, ako sa slučkou kód pre diamant zjednodušil? Ak celú radu zoslučkuješ 12 krát, vznikne ti kvetina. Nápoveda: Po slučke s diamantom sa budeš musieť otočiť o 30 stupňov, inak kreslíš stále po tom istom.'
+      Standalone_Artist_5: Koľko krát potrebuješ diamant zoslučkovať aby ti vznikla kvetina?
+      Standalone_Artist_6: 'Zoslučkuj kód pre šesťuholník 6 krát a vytvoríš kresbu.Pod akým uhlom sa vždy otáčaš? Nápoveda: '
+      Standalone_Artist_7: 'Funkcia je len ďalším nástrojom ako sa neopakovať. Táto funkcia nakreslí kvetinu, takže ju môžes hocikedy na to použiť. Použi ju v kombinácii s novým blokom skoč a nakresli viacero kvetín. Nápoveda: Kvetiny su od seba vzdialené 150 pixelov'
+      Standalone_Artist_8: Táto funkcia sa volá "Nakresli tvar" a naprogramovali sme ju aby sme kreslili šesťuholník. Spusti kód nech vidíš čo vie a pohraj sa s touto funkciou. Vedel by si ju použiť tak, aby nakreslila obraz štvorcov, trojuholníkov alebo osemuholníkov?
+      Standalone_Artist_9: A teraz smelo do toho a nakresli okrázok aký len chceš! Dokonca máš jednú nevyužitú funkciu, ktorá spraví čokolvek si zmyslíš!
+      Standalone_Artist_v2: Vitaj v kurze Umelec! Najskôr si vyskúšajme jednoduchý štvorec použitím blokov "Otoč sa vpravo" a "Posuň sa dopredu". Každá strana má mať 100 pixelov.
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       The Vigenere Cipher Widget: Inštrukcie
       The Vigenere Cipher Widget_2018: Inštrukcie

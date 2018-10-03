@@ -921,7 +921,7 @@ sv:
       NEW Course 4 Artist Vars 4 5: Fantastiskt jobb på sista pusslet, låt oss prova igen men denna gång låt oss göra denna coola design med med 60 pixlars hexagoner.
       NEW Course 4 Artist Vars 4: "Låt oss försöka igen. Kan du ange variabeln längd för att göra denna coola design med hexagoner? Tips: Det är en multipel av 10."
       NEW Course 4 Artist Vars 6: "Rita detta mönster genom att släppa variabeln längd på rätt ställen, och sedan ange det rätta värdet för längd. (Ledtråd: det är en multipel av 10).  \\r \\r se hur du bara behöver ange värdet för längd en gång, och koden använder det rätta värdet överallt? \\r \\r \\r\n"
-      NEW Course 4 Bee For Loops 1: Använd en slinga för att samla nektar från varje blomma.
+      NEW Course 4 Bee For Loops 1: Använd en loop (upprepa) för att samla nektar från varje blomma.
       NEW Course 4 Bee For Loops 10: Använd din för-loop "räknare" variabel för att styra hur långt du vill flytta horisontellt.
       NEW Course 4 Bee For Loops 10a: 'Redo för en utmaning?  Använd det du lärt dig om loopar och försöka lösa problemet. Kom ihåg: Du kan behöva köra din lösning flera gånger innan du listat ut alla steg.'
       NEW Course 4 Bee For Loops 11: Kan du använda variabeln loop för att styra rörelse och insamling av nektar?
@@ -1385,9 +1385,7 @@ sv:
         \r
         Lek med färger för att få ännu mer effekt! Använd slumpmässiga färger inuti loopar för att se hur det förändrar din design.
       grade5_artist_variables_freeplay15: |-
-        Vill du ha en andra titt på design-inspirationerna eller tipsen? Tryck här!\r
-        \r
-        Annars kan du skapa en egen design!
+        Vill du få en andra titt på inspirationsdesignen eller tips?  Klicka här! \r \r  Skapa annars en egen design!
       grade5_artist_variables_freeplay16: Spelar fortfarande?  Här är en tom duk där du kan skapa vad du vill!
       grade5_artist_variables_hexagons1: "Låt oss försöka igen. Kan du ange variabeln längd för att göra denna coola design med hexagoner? Tips: Det är en multipel av 10."
       grade5_artist_variables_letterT11: Här är mer komplicerat kod som använder samma begrepp som från det senaste pusslet - vad bör du ställa in variabeln "sidor" till för att rita denna bild gjord av rutor?
@@ -1444,5 +1442,5 @@ sv:
       scrat 18 (copy 1): '"Om-annars"-block kontrollerar ett villkor, och gör sedan en sak ELLER en annan. För att få mig till ekollonet: försök att använda detta nya block.'
       scrat 18: '"Om-annars"-block kontrollerar ett villkor, och gör sedan en sak ELLER en annan. För att få mig till ekollonet: försök att använda detta nya block.'
       scrat 19 (copy 1): Mer träning med "Om/annars"-blocket, kan du få det rätt på första försöket?
-      scrat 19: En till övning av "om-annars"-blocket. Kan du få det rätt på första försöket?
+      scrat 19: Mer träning med "Om/annars"-blocket, kan du få det rätt på första försöket?
       scrat 20: Kan du lägga till endast 3 block för att hjälpa mig att lösa en mer komplex labyrint? Om du gör det rätt, så kan jag gå en kurvig väg oavsett längd. Skynda! Isen smälter!
