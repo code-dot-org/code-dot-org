@@ -1,5 +1,8 @@
 zh-CN:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: 大三角形
     evaluation_multi:
       U2 evaluation q0:
         Interpreting visual data to better understand a topic: 可视化表达数据来更好地理解主题

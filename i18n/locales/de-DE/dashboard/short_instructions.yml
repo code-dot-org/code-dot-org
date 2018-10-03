@@ -6,7 +6,7 @@ de:
       2-3 Artist 12: |-
         Stelle den „Wiederholen“-Baustein so ein, dass es einen „Kreis“ malt, um den Augapfel abzuschließen. Wenn jede Bewegung ein Grad rechts dreht, wie oft musst du wiederholen, um den Kreis zu vervollständigen? 180? 360? 500?
       2-3 Artist 2 new: 'Dieses Haus hat eine halbfertige Wand. Jede Seite hat 100 Pixel, aber die halbfertige nur 50. Vervollständige die Wand. '
-      2-3 Artist 2: 'Dieses Haus hat eine halb fertige Wand. Jede Seite ist 100 pixel lang, aber die halbfertigen Wand ist nur 50 pixel lang. Beende die Wand. '
+      2-3 Artist 2: 'Dieses Haus hat eine halbfertige Wand. Jede Seite hat 100 Pixel, aber die halbfertige nur 50. Vervollständige die Wand. '
       2-3 Artist 3.4: "Der \"springe\"-Block bewegt den Künstler, ohne eine Linie zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\" und \"bewegen\"-Blöcke."
       2-3 Artist 3: Dieser Hut ist 100 Pixel hoch. Zeichne einen Hut, der 70 Pixel kleiner ist.
       2-3 Artist 3new: "Der rote Hut ist 100 Pixel hoch. Zeichne den schwarzen Hut, der 70 Pixel kleiner ist, zu Ende. Die Breite des schwarzen Hutes beträgt 50 Pixel."
@@ -165,7 +165,7 @@ de:
       2-3 Bee Loops 9: Die Solange-Schleife kann dasselbe bewirken wie eine Falls-Anweisung in einer Schleife. Füge eine Solange-Schleife zu dem Programm hinzu, so dass dieselbe Aufgabe erledigt wird.
       2-3 Bee Loops Assessment 1: 'Prüfung - Benutze eine Solange-Schleife, um den ganzen Nektar dieser Blüte zu sammeln.'
       2-3 Maze 1: 'Hilfst du mir, das freche Schwein zu fangen? Stecke ein paar „vorwärts bewegen“-Bausteine zusammen und drücke „Ausführen“. '
-      2-3 Maze 10: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
+      2-3 Maze 10: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze 11: Hol mir die Blüte, ich bin hungrig! Wie oft musst du einen Baustein wiederholen?
       2-3 Maze 12 (copy 1): 'Kannst du die vorige Bearbeitung durch eine Lösung ersetzen, in der nur zwei Bausteine verwendet werden? (Hinweis: Erstelle eine Schleife, die einen „wiederhole ...-mal“ - Baustein enthält.)'
       2-3 Maze 12 (copy 2): 'Kannst du die vorige Bearbeitung durch eine Lösung ersetzen, in der nur zwei Bausteine verwendet werden? (Hinweis: Erstelle eine Schleife, die einen „wiederhole ...-mal“ - Baustein enthält.)'
@@ -183,12 +183,12 @@ de:
       2-3 Maze 16: Bring mich zu der Sonnenblume. Lass die Anweisungsfolge in einer Schleife laufen!
       2-3 Maze 2: Dieses Schwein zerrauft meine Federn. Hilf mir, zu ihm zu kommen!
       2-3 Maze 3: Verfolge den Pfad und führe mich zu dem dummen Schwein. Vermeide das TNT, sonst fliegen die Federn!
-      2-3 Maze 4: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
-      2-3 Maze 5: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
+      2-3 Maze 4: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
+      2-3 Maze 5: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze 6: Bleib ruhig und hilf mir, das böse Schwein zu finden. Sonst könnte ich wütend werden!
-      2-3 Maze 7: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
+      2-3 Maze 7: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze 8: Bring mich zum Schwein!
-      2-3 Maze 9: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
+      2-3 Maze 9: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze Loops 1: Kannst du mich zu dem Schwein bringen, indem du 5 Bausteine benutzt?
       2-3 Maze Loops 17: Bring mich zu der Sonnenblume!
       2-3 Maze Loops 18: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
@@ -199,7 +199,7 @@ de:
       2-3 Maze sq10: Bring mich zum Schwein! Welche Blöcke wurden wiederholt?
       2-3 Maze sq10v2: Bring mich zum Schwein! Welche Blöcke wurden wiederholt?
       2-3 Maze sq2: Verfolge den Pfad und führe mich zu dem dummen Schwein.  Vermeide das TNT, sonst muss ich Federn lassen!
-      2-3 Maze sq3: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
+      2-3 Maze sq3: Führe mich zu dem grünen Bösewicht! (Pass auf das TNT auf)
       2-3 Maze sq4: Bleib ruhig und hilf mir, das böse Schwein zu finden. Sonst könnte ich wütend werden!
       2-3 Maze sq5: Bring mich zum Schwein! Wie oft musst du einen Baustein wiederholen?
       2-3 Maze sq6: 'Kannst du die vorige Bearbeitung durch eine Lösung ersetzen, in der nur zwei Bausteine verwendet werden? (Hinweis: Erstelle eine Schleife, die einen „wiederhole ...-mal“ - Baustein enthält.)'
@@ -623,7 +623,7 @@ de:
       Course 4 Binary 8: Den größten Teil dieses Bildes kannst du zeichnen, indem du eine 5-stellige Binärzeichenfolge in eine Schleife durchlaufen lässt - danach benötigst du für rechts unten noch eine weitere 4-stellige Binärfolge.
       Course 4 EC 1a: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
       Course 4 EC 1b: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
-      Course 4 EC 2a: '**Extrem-Herausforderung:** Es gibt keine Regeln oder Hinweise, nur die Aufgabe.'
+      Course 4 EC 2a: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
       Course 4 EC 2b: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
       Course 4 EC 2c: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
       Course 4 EC 2d: Keine Regeln. Keine Hinweise. Nur die Herausforderung!
@@ -1079,7 +1079,7 @@ de:
       artistDebugVideo1: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
       artistFunctionsVideo1: Folgen Sie die Anweisungen, um Ihre eigene Funktion zu machen.
       beeDebugVideo1: Kannst du eine Schleife verwenden um den ganzen Nektar einzusammeln?
-      birdsDebugVideo1: Verfolge den Pfad und führe mich zum Schwein. Vermeide das TNT, sonst fliegen die Federn!
+      birdsDebugVideo1: Verfolge den Pfad und führe mich zu dem dummen Schwein. Vermeide das TNT, sonst fliegen die Federn!
       bounce_1: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und drücke „Ausführen“. Bewege den Schläger mit dem Linkspfeil, um das Ziel zu erreichen.
       bounce_10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball Schläger verfehlt“, um ein Spiel zu erzeugen. Finde heraus, wie viele Punkte du erreichen kannst, bevor dein Gegner zwei Punkte erhält.
       bounce_10_2018: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball Schläger verfehlt“, um ein Spiel zu erzeugen. Finde heraus, wie viele Punkte du erreichen kannst, bevor dein Gegner zwei Punkte erhält.
@@ -1126,7 +1126,7 @@ de:
         Füge unterhalb des Ereignis-Blocks "wenn Ausführen" weitere Programm-Blöcke hinzu, um den Hintergrund zu ändern und die Geschwindigkeit des Pinguins 'Watschel' zu ändern. 
         \r\r
         Wenn du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest.
-      course2_playlab_stage17_11: Erstelle deine eigene Geschichte. Wenn du fertig bist, klicke auf "Abschließen" damit deinen Freunden die Geschichte an ihren Smartphones ausprobieren können.
+      course2_playlab_stage17_11: Mache deine eigene Geschichte. Wenn du fertig bist, klicke auf "Abschließen" um deine Geschichte deinen Freunden an ihren Smartphones zu zeigen.
       course2_playlab_stage17_2: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) und anschliessend Olivia, die Katze (Figur 2) etwas sagen?
       course2_playlab_stage17_3: Kannst Du ein Programm schreiben, so dass Jorge, der Hund (Figur 1) sich zu Olivia, der Katze hinbewegt?
       course2_playlab_stage17_4: "Kannst Du ein Programm schreiben, so dass sich \\r\\r\nzuerst Jorge, der Hund (Figur 1) zu Olivia der Katze hinbewegt \\r\nund anschliessend -- sobald Jorge die Katze erreicht hat -- Olivia \"Hallo\" sagt?"
@@ -1135,17 +1135,17 @@ de:
       course2_playlab_stage17_8: "Kannst Du ein Programm schreiben, so dass der Pinguin (Figur 1) \"Autsch!\" sagt und gleichzeitig ein \"Treffer\"-Geräusch ertönt, sobald er in den Dinosaurier läuft?\\r\n\\r\nWenn du fertig bist, spiele Dein Spiel und versuche aus, ob es so funktioniert."
       course2_playlab_stage17_9: "Kannst du einen Programm-Block hinzufügen, so dass du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\\r\n\\r\nWenn du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
       course3_playlab_stage16_1: Kannst du diesen Hund "Hallo Welt" sagen lassen?
-      course3_playlab_stage16_2: "Kannst Du ein Programm schreiben, so dass zuerst der Hund \nund anschliessend die Katze irgendetwas sagt?"
-      course3_playlab_stage16_3: "Kannst Du ein Programm schreiben, so dass sich der Hund \nzur Katze hinbewegt?"
-      course3_playlab_stage16_4: "Kannst Du ein Programm schreiben, so dass sich \\r\\r\nzuerst Jorge, der Hund (Figur 1) zu Olivia der Katze hinbewegt \\r\nund anschliessend -- sobald Jorge die Katze erreicht hat -- Olivia \"Hallo\" sagt?"
-      course3_playlab_stage16_5: Kannst du einen Programm-Block hinzufügen, um den Tintenfisch glücklich zu machen?
+      course3_playlab_stage16_2: Kannst du erst den Hund und danach die Katze etwas sagen lassen?
+      course3_playlab_stage16_3: Kannst du ein Programm schreiben, bei welchem der Hund auf die Katze zugeht?
+      course3_playlab_stage16_4: Kannst du ein Programm schreiben, bei welchem der Hund zur Katze geht und die Katze "Hallo" sagt, sobald der Hund sie erreicht?
+      course3_playlab_stage16_5: Kannst du einen Baustein hinzufügen, um den Tintenfisch fröhlich zu machen?
       course3_playlab_stage16_6: Mache deine eigene Geschichte. Wenn du fertig bist, klicke auf "Abschließen" um deine Geschichte deinen Freunden an ihren Smartphones zu zeigen.
-      course3_playlab_stage17_1: Kannst du ein Programm schreiben, so dass der Tintenfisch "Hallo" sagt, wenn er angeklickt wird?
-      course3_playlab_stage17_2: Schreib als nächstes ein Programm, mit dem Du Watschel, den Pinguin mit den Pfeiltasten -- hoch / runter/ links / rechts -- steuern kannst und versuche anschliessend alle Ziele zu treffen.
-      course3_playlab_stage17_3: Mit dem "ewig wiederholen"-Baustein läuft Dein Programm ohne Ende weiter. Kannst du in dem Baustein weitere Bausteine einfügen, so dass der Dinosaurier immer auf und ab läuft?
-      course3_playlab_stage17_4: "Kannst Du ein Programm schreiben, so dass der Pinguin (Figur 1) \"Autsch!\" sagt und gleichzeitig ein \"Treffer\"-Geräusch ertönt, sobald er in den Dinosaurier läuft?\\r\n\\r\nWenn du fertig bist, spiele Dein Spiel und versuche aus, ob es so funktioniert."
-      course3_playlab_stage17_5: "Kannst du einen Programm-Block hinzufügen, so dass du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\\r\n\\r\nWenn du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
-      course3_playlab_stage17_6: "Kannst Du dieses Programm mit weiteren Bausteinen erweiten, um den Hintergrund und die Geschwindigkeit des Pinguins 'Watschel' zu verändern. \n\\r\\r\nWenn du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
+      course3_playlab_stage17_1: Kannst du ein Programm schreiben, bei dem der Tintenfisch "Hallo" sagt, wenn er geklickt wird?
+      course3_playlab_stage17_2: Kannst du ein Programm schreiben, um den Pinguin mit den Pfeiltasten zu steuern und alle Ziele zu treffen?
+      course3_playlab_stage17_3: Mit dem „ewig wiederholen“-Baustein kannst du den Code kontinuierlich ausführen. Kannst du Bausteine anhängen, um den Dinosaurier wiederholt nach oben und nach unten zu bewegen?
+      course3_playlab_stage17_4: Kannst du den Pinguin "Autsch!" sagen lassen und einen "Treffer"-Geräusch abspielen, wenn er gegen den Dinosaurier läuft, und ihn dann mit den Pfeiltasten dorthin bewegen?
+      course3_playlab_stage17_5: Kannst du einen Baustein hinzufügen, um einen Punkt zu erzielen, wenn der Pinguin gegen den Tintenfisch rennt, und ihn dann mit den Pfeiltasten bewegen, bis du einen Punkt erzielst?
+      course3_playlab_stage17_6: Kannst du Bausteine hinzufügen, um den Hintergrund und die Geschwindigkeit des Pinguins zu ändern, und ihn dann mit den Pfeiltasten bewegen, bis du punktest?
       course3_playlab_stage17_7: Mache deine eigene Geschichte. Wenn du fertig bist, klicke auf "Abschließen" um deine Geschichte deinen Freunden an ihren Smartphones zu zeigen.
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
       courseA_artist_loops10: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
@@ -1511,7 +1511,7 @@ de:
       grade4_artist_nested_loop_flags1: Benutze den angegebenen Code in einer Schleife, um eine Windmühle zu erstellen.
       grade4_artist_nested_loop_polygons1: "Führe dieses Design 10 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 10?)"
       grade4_artist_nested_loop_squares1: Kannst du diese 10 Quadrate dieses Gehsteigs mit einer verschachtelten Schleife zeichnen? Jedes Quadrat hat eine Seitenlänge von 30 Pixeln.
-      grade4_artist_nested_loop_triangles1: 'Vervollständige den Code, damit diese Dreiecke gezeichnet werden. Das erste hast du erledigt. Hinweis: 3 Dreiecke in einer 360- Grad- Drehung.'
+      grade4_artist_nested_loop_triangles1: 'Vervollständige den Code, um diese Dreiecke zu zeichnen.  Das erste ist für dich erledigt.  Hinweis:  3 Dreiecke in einer 360- Grad- Drehung.'
       grade4_artist_nested_loop_triangles5: |-
         Male eine Sonne indem Du den Startbefehl in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
       grade4_artist_nested_loop_triangles6: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife zeichnen?

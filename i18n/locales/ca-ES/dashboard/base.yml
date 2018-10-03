@@ -197,7 +197,6 @@ ca:
       logout: 'Tanca la sessió'
       signin: 'Inicia la sessió'
       already_registered: 'Ja estàs registrat?'
-      pair_programming: 'Programació per parelles'
     popup:
       progress_for_user: "Progrés de %{name}"
       progress: 'El teu progrés'

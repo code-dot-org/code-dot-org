@@ -220,7 +220,6 @@ sq:
       signin: 'Futu'
       signup: 'Krijo një llogari'
       already_registered: 'Jeni i rregistruar?'
-      pair_programming: 'Programim në çift'
       team: 'Skuadra'
       driver: 'Përdorues'
       navigator: 'Lundrues'

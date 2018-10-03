@@ -491,9 +491,9 @@ km:
         ##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner.
       courseF_artist_variables10: "Here's your code from the\nlast puzzle.  Try editing the variable in other ways.  \\r\n-  What happens\nif you start out with `length` less than 150? \\r\n-  What if you multiply\nyour variable by 1.25 each time through?\\r\n-  What will your code do if you\nturn 119 degrees?"
-      courseF_artist_variables10_2018: "Here's your code from\nthe last puzzle.  Try editing the variable in other ways.  \\r\n-  What happens\nif you start out with `length` less than 150? \\r\n-  What if you multiply\nyour variable by 1.25 each time through?\\r\n-  What will your code do if you\nturn 119 degrees?"
+      courseF_artist_variables10_2018: "Here's your code from the\nlast puzzle.  Try editing the variable in other ways.  \\r\n-  What happens\nif you start out with `length` less than 150? \\r\n-  What if you multiply\nyour variable by 1.25 each time through?\\r\n-  What will your code do if you\nturn 119 degrees?"
       courseF_artist_variables2: "Now use another loop to draw\nthree of those triangles right next to each other.   \\r\n\\r\nYou can nest\nthe code from your last puzzle inside."
-      courseF_artist_variables2_2018: "Now use another loop\nto draw three of those triangles right next to each other.   \\r\n\\r\nYou can\nnest the code from your last puzzle inside."
+      courseF_artist_variables2_2018: "Now use another loop to draw\nthree of those triangles right next to each other.   \\r\n\\r\nYou can nest\nthe code from your last puzzle inside."
       courseF_artist_variables3: "Before things get tricky,\ncan you move the length of 50 into a variable so we can use it in the next\nfew puzzles?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseF_artist_variables3_2018: "Before things get tricky,\ncan you move the length of 50 into a variable so we can use it in the next\nfew puzzles?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseF_artist_variables6: "**OOPS!**  \\r\n\\r\nWe\nactually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \\r\n\\r\nAren't\nyou glad you're using a variable?"
@@ -572,7 +572,7 @@ km:
         length of the first side of the triangle is 150 pixels.
       courseF_artist_variables9: "Time to make some art!  \\r\n\\r\nSee\nwhat happens when you repeat the code from the last puzzle **30** times instead\nof only 3!\\r\n\\r\nFeel free to make your lines any color or pattern for some\nextra zest."
       courseF_artist_variables9_2018: "Time to make some art!  \\r\n\\r\nSee\nwhat happens when you repeat the code from the last puzzle **30** times instead\nof only 3!\\r\n\\r\nFeel free to make your lines any color or pattern for some\nextra zest."
-      courseF_artist_variablesFP: "**Freeplay:** Take what you've\nlearned and make your own drawing. \\r\n\\r\nHow can you use variables with\nsquares, pentagons, or hexagons?"
+      courseF_artist_variablesFP: "**Freeplay:** Take what\nyou've learned and make your own drawing. \\r\n\\r\nHow can you use variables\nwith squares, pentagons, or hexagons?"
       courseF_artist_variablesFP_2018: "**Freeplay:** Take what\nyou've learned and make your own drawing. \\r\n\\r\nHow can you use variables\nwith squares, pentagons, or hexagons?"
       courseF_artist_variables_10: "Here's your code from the\nlast puzzle.  Try editing the variable in other ways.  \\r\n-  What happens\nif you start out with `length` less than 150? \\r\n-  What if you multiply\nyour variable by 1.25 each time through?\\r\n-  What will your code do if you\nturn 119 degrees?"
       courseF_artist_variables_2: "Now use another loop to draw\nthree of those triangles right next to each other.   \\r\n\\r\nYou can nest\nthe code from your last puzzle inside."
@@ -616,11 +616,11 @@ km:
         Collect all of the
         nectar and make all of the honey.
       courseF_bee_conditionals10_2018: |-
-        Conditionals can be
-        helpful, even when you know exactly what is in each spot!\\r
+        Conditionals can be helpful,
+        even when you know exactly what is in each spot!\\r
         \\r
-        Collect all
-        of the nectar and make all of the honey.
+        Collect all of the
+        nectar and make all of the honey.
       courseF_bee_conditionals1_predict1: |-
         *"This cloud is
         blocking my view!"*\\r
@@ -628,11 +628,11 @@ km:
         Check to see if there's a flower under the cloud.
         If there's a flower, get nectar.
       courseF_bee_conditionals1_predict1_2018: |-
-        *"This cloud
-        is blocking my view!"*\\r
+        *"This cloud is
+        blocking my view!"*\\r
         \\r
-        Check to see if there's a flower under the
-        cloud. If there's a flower, get nectar.
+        Check to see if there's a flower under the cloud.
+        If there's a flower, get nectar.
       courseF_bee_conditionals2: "*\"It's too cloudy to\nsee any flowers!\"*\\r\n\\r\nCheck underneath every cloud to see if it is hiding\na flower before you get nectar. If there is a flower underneath the cloud,\nthe bee will need to get nectar **once**.  \\r\n\\r\nRemember: Not all clouds\nhide the same thing!"
       courseF_bee_conditionals2_2018: "*\"It's too cloudy to\nsee any flowers!\"*\\r\n\\r\nCheck underneath every cloud to see if it is hiding\na flower before you get nectar. If there is a flower underneath the cloud,\nthe bee will need to get nectar **once**.  \\r\n\\r\nRemember: Not all clouds\nhide the same thing!"
       courseF_bee_conditionals4: |-
@@ -757,7 +757,7 @@ km:
       courseF_bee_functions7: "Rebuild your function from\nthe last puzzle to solve this maze.\\r\n\\r\nTurn left at the honeycomb and\nright at the flowers.  \\r\n**Note:** Some corners are unmarked!"
       courseF_bee_functions7_2018: "Rebuild your function from\nthe last puzzle to solve this maze.\\r\n\\r\nTurn left at the honeycomb and\nright at the flowers.  \\r\n**Note:** Some corners are unmarked!"
       courseF_bee_functions8a: "Underneath\nthis cloud, there might be a flower with an unknown amount of nectar, or a\nhoneycomb with an unknown amount of honey.  \\r\n\\r\nCan you write a program\nthat can handle either?"
-      courseF_bee_functions8a_2018: "Underneath this cloud,\nthere might be a flower with an unknown amount of nectar, or a honeycomb with\nan unknown amount of honey.  \\r\n\\r\nCan you write a program that can handle\neither?"
+      courseF_bee_functions8a_2018: "Underneath\nthis cloud, there might be a flower with an unknown amount of nectar, or a\nhoneycomb with an unknown amount of honey.  \\r\n\\r\nCan you write a program\nthat can handle either?"
       courseF_bee_functionsPre7: "Now try building a function\nto solve this maze.  How is it different from last time?  \\r\n\\r\nTurn left\nat the honeycomb and right at the flowers.  \\r\n**Note:** Some corners are\nunmarked!"
       courseF_bee_functionsPre7_2018: "Now try building a function\nto solve this maze.  How is it different from last time?  \\r\n\\r\nTurn left\nat the honeycomb and right at the flowers.  \\r\n**Note:** Some corners are\nunmarked!"
       courseF_bee_functions_challenge2_recursion: "Underneath\nthis cloud, there might be a flower with an unknown amount of nectar, or a\nhoneycomb with an unknown amount of honey.  \\r\n\\r\nCan you write a program\nthat can handle either?"
@@ -766,7 +766,7 @@ km:
       courseF_bee_fwp2: "Here's some code that solves\nthe last puzzle.  \\r\nLet's pull it into a function, then call the function\nto check this row for nectar.  \\r\n___\\r\nThis may seem like a strange step\nnow, but it will be really helpful soon!"
       courseF_bee_fwp2_2018: "Here's some code that solves\nthe last puzzle.  \\r\nLet's pull it into a function, then call the function\nto check this row for nectar.  \\r\n___\\r\nThis may seem like a strange step\nnow, but it will be really helpful soon!"
       courseF_bee_fwp3: "Time to put the function to the test!\n\\r\n\\r\nLet's see if it makes collecting these three rows of nectar any easier."
-      courseF_bee_fwp3_2018: "Time to put the function to the\ntest! \\r\n\\r\nLet's see if it makes collecting these three rows of nectar\nany easier."
+      courseF_bee_fwp3_2018: "Time to put the function to the test!\n\\r\n\\r\nLet's see if it makes collecting these three rows of nectar any easier."
       courseF_bee_fwp4: "*\"How is your function holding up?\"*   \\r\n\\r\nWe\nneed to make some adjustments here. Click \"edit\" to add a `length` parameter\nto the function so that it will still work when the row is a different length."
       courseF_bee_fwp4_2018: "*\"How is your function holding up?\"*   \\r\n\\r\nWe\nneed to make some adjustments here. Click \"edit\" to add a `length` parameter\nto the function so that it will still work when the row is a different length."
       courseF_bee_fwp5: |-
@@ -982,7 +982,7 @@ km:
       course_playlab_variables1: "This is Pirate Pegleg.  He's\nawfully hard to understand these days!  \\r\n\\r\nDecode his speech by changing\nthese pieces of text in the code:\\r\n- \"arrrg\" should be \"a\" \\r\n- \"ye\"\nshould be \"e\"\\r\n\\r\n"
       course_playlab_variables2: "Now, decode Pirate Pegleg's\nspeech by changing the value of the variables in just two places!   \\r\n-\n\"arrrg\" should be \"a\" \\r\n- \"ye\" should be \"e\"\\r\n\\r\n"
       course_playlab_variables3: "Now, decode Pirate Pegleg's\nspeech by changing the value of the variables in just two places!   \\r\n-\n\"arrrg\" should be \"a\" \\r\n- \"ye\" should be \"e\"\\r\n\\r\n"
-      coursef_maze_ramp3: "*\"This pig is ruffling my feathers.\"*\\r\n\\r\nThere\nis one extra block that is going to cause the bird to crash.  \\r\nThrow it\naway by dragging it back to the toolbox."
+      coursef_maze_ramp3: "*\"This\npig is ruffling my feathers.\"*\\r\n\\r\nThere is one extra block that is going\nto cause the bird to crash.  \\r\nThrow it away by dragging it back to the\ntoolbox."
       coursef_maze_ramp3_2018: "*\"This\npig is ruffling my feathers.\"*\\r\n\\r\nThere is one extra block that is going\nto cause the bird to crash.  \\r\nThrow it away by dragging it back to the\ntoolbox."
       csd-thursday-facilitation: |
         # Thursday Facilitation Reflection\\r
@@ -1737,18 +1737,18 @@ km:
       iceage_click_hello: "Can you help Sid call for his\nfriends when you click on him? \\r\nOnce you're done, press \"Run\" to play.  Click\non Sid to see your code work!"
       iceage_click_hello_2018: "Can you help Sid call for his\nfriends when you click on him? \\r\nOnce you're done, press \"Run\" to play.  Click\non Sid to see your code work!"
       iceage_free_play: "Time to create your own game or story!  \\r\n\\r\nWhen\nyou're done, click \"Finish\" to let friends try your game on their phones,\ntablets, or computers!\\r\nDon't know what to make? Click the hints for details."
-      iceage_free_play_2018: "Time to create your own game or\nstory!  \\r\n\\r\nWhen you're done, click \"Finish\" to let friends try your\ngame on their phones, tablets, or computers!\\r\nDon't know what to make?\nClick the hints for details."
-      iceage_free_playcourseF_IceAge_11: "Time to create your\nown game or story!  \\r\n\\r\nWhen you're done, click \"Finish\" to let friends\ntry your game on their phones, tablets, or computers!\\r\nDon't know what\nto make? Click the hints for details."
+      iceage_free_play_2018: "Time to create your own game or story!  \\r\n\\r\nWhen\nyou're done, click \"Finish\" to let friends try your game on their phones,\ntablets, or computers!\\r\nDon't know what to make? Click the hints for details."
+      iceage_free_playcourseF_IceAge_11: "Time to create your own game or story!  \\r\n\\r\nWhen\nyou're done, click \"Finish\" to let friends try your game on their phones,\ntablets, or computers!\\r\nDon't know what to make? Click the hints for details."
       iceage_hello1: "Sid (actor 1) wants to gather everyone\nfor a new adventure. Can you help him say \"Hello!\" by dragging the `say`\nblock out and connecting it to the bottom of the `when run` event?   \\r\n\\r\nDon't\nforget to type \"Hello!\" inside!"
       iceage_hello1_2018: "Sid (actor 1) wants to gather everyone\nfor a new adventure. Can you help him say \"Hello!\" by dragging the `say`\nblock out and connecting it to the bottom of the `when run` event?   \\r\n\\r\nDon't\nforget to type \"Hello!\" inside!"
       iceage_move_events: "Scrat is still looking for acorns!\n\\r\nHelp him scamper around by attaching a `move actor 1` block to each of\nthe events and changing the direction to work for each arrow key. \\r\nWhen\nyou’re done, click \"Run\" and try to collect all of the acorns."
       iceage_move_events_2018: "Scrat is still looking for acorns!\n\\r\nHelp him scamper around by attaching a `move actor 1` block to each of\nthe events and changing the direction to work for each arrow key. \\r\nWhen\nyou’re done, click \"Run\" and try to collect all of the acorns."
       iceage_sound_and_points: "Here is your code from the last\npuzzle, as well as the code to move Granny left and right. \\r\nCan you finish\nthe program to make it so that you both **play a sound** and **score a point**\nwhen Sid and Granny collide? \\r\nPress \"Run\" to play the game."
-      iceage_sound_and_points_2018: "Here is your code from\nthe last puzzle, as well as the code to move Granny left and right. \\r\nCan\nyou finish the program to make it so that you both **play a sound** and **score\na point** when Sid and Granny collide? \\r\nPress \"Run\" to play the game."
+      iceage_sound_and_points_2018: "Here is your code from the last\npuzzle, as well as the code to move Granny left and right. \\r\nCan you finish\nthe program to make it so that you both **play a sound** and **score a point**\nwhen Sid and Granny collide? \\r\nPress \"Run\" to play the game."
       iceage_throw_hearts: "Sid wants to let his grandmother,\nGranny, know that he loves her.   \\r\n\\r\nUse the `actor __ throw` command\nto have Sid (actor 1) throw hearts at Granny (actor 2)! \\r\nSet Granny's\nmood to happy when she gets hit with the hearts."
       iceage_throw_hearts_2018: "Sid wants to let his grandmother,\nGranny, know that he loves her.   \\r\n\\r\nUse the `actor __ throw` command\nto have Sid (actor 1) throw hearts at Granny (actor 2)! \\r\nSet Granny's\nmood to happy when she gets hit with the hearts."
       iceage_warn_ice_age: "Everyone needs to move faster because\nan ice storm is coming! \\r\nChange the scene to an icy background and set\nSid’s (actor 1) speed to fast.\\r\nPress \"Run\" and move Sid to Diego to warn\nhim."
-      iceage_warn_ice_age_2018: "Everyone needs to move faster\nbecause an ice storm is coming! \\r\nChange the scene to an icy background\nand set Sid’s (actor 1) speed to fast.\\r\nPress \"Run\" and move Sid to Diego\nto warn him."
+      iceage_warn_ice_age_2018: "Everyone needs to move faster because\nan ice storm is coming! \\r\nChange the scene to an icy background and set\nSid’s (actor 1) speed to fast.\\r\nPress \"Run\" and move Sid to Diego to warn\nhim."
       level 'grade3_Loops_6: "How many times can loops help you in this puzzle?  \\r\n\\r\nLoops\nare your friend! Use a few of them to complete this puzzle with the fewest\nblocks possible."
       level 'grade3_Loops_7: |-
         Those flowers look tasty!\\r

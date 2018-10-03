@@ -416,7 +416,7 @@ vi:
       New Gumball Project: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
       New Ice Age Project: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
       New Infinity Project: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
-      New Minecraft Hero Project: "**Chơi tự do:** Thời gian để bạn tự khám phá và sáng tạo!"
+      New Minecraft Hero Project: "Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!"
       Overworld Avoid Monsters: Đi thẳng về phía một Creeper là một ý kiến không hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Avoid Monsters_2018: Đi thẳng về phía một Creeper là một ý kiến không hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Chop Tree - allthethings: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ được làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn cây.
@@ -628,7 +628,7 @@ vi:
       grade3_robotFarmer_ConditionalsIntro_6: Xúc hết tất cả các ụ đất bẩn, sử dụng càng ít khối lệnh càng tốt. Các tùy chọn mới trong trình đơn thả xuống trên khối "trong khi" sẽ cho biết "người nông dân đang đứng trên ụ đất hay hố đất".
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: "Giúp tôi lấp đầy tất cả các cái hố này với 5 xẻng đất\nGợi ý: bạn có thể đặt nhưng khối lệnh lặp trong khối lệnh \"trong khi\"."
       grade4_artist_functions1: "Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn so với độ dài cạnh vuông."
-      grade4_artist_functions2: "Hàm giúp bạn định nghĩa khối mới! Chúng tôi đã chuyển các khối để vẽ một hình vuông vào một hàm gọi là \"vẽ hình vuông\".\nBạn có thể dùng hàm \"vẽ hình vuông\" để tạo ra chiếc kính không? Các hình vuông các nhau 75 điểm ảnh."
+      grade4_artist_functions2: "Hàm giúp bạn tạo ra khối lệnh mới! \\r\n\\r\nChúng ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\". Hãy dùng hàm, này để vẽ một khung cửa kính. \\r\n\\r\nCác hình vuông cách nhau 75 pixel."
       grade4_artist_parameters_triangles2b: 'Bạn có thể hoàn thành bản vẽ này? Gợi ý: Mỗi tam giác có độ phân lớn hơn so với tam giác trước là 25.  Tam giác đầu tiên có độ phân giải là 25.'
       grade4_artist_parameters_triangles3: 'Bạn có thể hoàn thành bản vẽ này? Gợi ý: Mỗi tam giác có độ phân lớn hơn so với tam giác trước là 25.  Tam giác đầu tiên có độ phân giải là 25.'
       grade4_artist_parameters_trianglesx: 'Bạn có thể hoàn thành bản vẽ này? Gợi ý: Mỗi tam giác có độ phân lớn hơn so với tam giác trước là 25.  Tam giác đầu tiên có độ phân giải là 25.'

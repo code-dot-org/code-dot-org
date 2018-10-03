@@ -498,7 +498,7 @@ pt-BR:
       Artist Autorun Test: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
       Artist Inspiration: "Atividade livre - Inspiração: agora você\naprendeu tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\r\n \\r\nQuer saber como nosso padrão de inspiração foi feito? "
       Auto Open Function Editor: "Você pode chamar funções de dentro\nde outras funções! Usando sua função \"forma\" como base, crie 3 formas\nde casa, cada uma 20 pixels maior que a anterior, começando com um comprimento de 50 pixels. Usar\num laço com contador pode ser útil. "
-      Bee Recommended Blocks test: "Flores roxas podem ter 1\nou 0 néctar, mas você não sabe quais delas têm! Tome cuidado para não coletar néctar\nde uma flor roxa quando ela não tem néctar algum. Verifique se o néctar é igual\na 1 usando o bloco se."
+      Bee Recommended Blocks test: "As flores roxas podem ter 1 ou 0 néctar,\nmas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa\nque não tenha néctar algum. Verifique se o néctar é igual a 1 usando\no bloco se."
       Bergeron Robot Maze1: "Você pode me ajudar a pegar o porco malvado? Junte alguns\nblocos \"avance\" abaixo do bloco \"quando executar\" e clique em \"Executar\". "
       Big Game Animation 1: "Agora que você aprendeu a escrever funções lineares\nsimples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.\nClique em \"Executar\" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que\nvocê quiser e depois clique em Concluir para seguir em frente."
       Big Game Animation 2: "A função \"atualize-alvo\" recebe o\nvalor atual de x do alvo e retorna um valor atualizado. Complete a função \"atualize-alvo\"\npara que ela some ao valor de x toda vez que for chamada. Quanto mais você\nadicionar a x, mais rápido será o alvo."
@@ -885,7 +885,7 @@ pt-BR:
       Course 4 Binary 8: "Você pode completar a maior parte dessa imagem\nrepetindo um número binário de 5 bits - então você vai precisar de mais um número de 4 bits\npara completar o canto inferior direito."
       Course 4 EC 1a: Sem regras. Sem pistas. Só o desafio!
       Course 4 EC 1b: Sem regras. Sem pistas. Só o desafio!
-      Course 4 EC 2a: '* * Desafio Supremo: * * Sem regras. Sem pistas. Só o desafio!'
+      Course 4 EC 2a: Sem regras. Sem pistas. Só o desafio!
       Course 4 EC 2b: Sem regras. Sem pistas. Só o desafio!
       Course 4 EC 2c: Sem regras. Sem pistas. Só o desafio!
       Course 4 EC 2d: Sem regras. Sem pistas. Só o desafio!
@@ -1155,6 +1155,7 @@ pt-BR:
       GLJr_Behavior_6: Vamos tentar mais alguns comportamentos - faça o cachorro correr para cima e o gato correr para a direita.
       HOC 2018 Level_10: Vá para a entrada do Monumento do Oceano.
       HOC 2018 Level_6: Navegue através do gelo para chegar ao templo.
+      HoCAB_labyrinth1: Use os blocos de seta para resolver este labirinto!
       Infinity_catch: "Você pode fazer Elsa (\"personagem 2\") alcançar\nAnna usando as setas do teclado?"
       Infinity_finale: Crie o que quiser e compartilhe!
       Infinity_move_collide: "Hiro é o \"personagem 1\". Mova-o em direção a\nBaymax e reproduza um som quando eles se tocarem."
@@ -1366,7 +1367,7 @@ pt-BR:
       MC_HOC_2017_Ryan_05: Destrua esses cactos para que o jogador consiga chegar à meta.
       MC_HOC_Kiki_02: Leve o Agent para a placa de pressão.
       MSM Big Game Empty: "Todas as variáveis e funções atualmente são\ncampos vazios. A progressão de cada desafio será concentrada na definição e em vários\ndeles e, portanto, na adição de funcionalidade."
-      MSM Big Game Vars 1 (copy 1): "Na caixa de ferramentas de variáveis você vai\nver diversas variáveis que definem a aparência dos personagens do seu jogo e como eles se movem e\ninteragem"
+      MSM Big Game Vars 1 (copy 1): "Na caixa de ferramentas de variáveis você vai ver diversas\nvariáveis que definem a aparência dos personagens do seu jogo e como eles se movem e\ninteragem"
       MSM Big Game Vars 1: "Na caixa de ferramentas de variáveis você vai ver diversas\nvariáveis que definem a aparência dos personagens do seu jogo e como eles se movem e\ninteragem"
       MSM Big Game Vars Backup: "Na caixa de ferramentas de variáveis você vai ver diversas\nvariáveis que definem a aparência dos personagens do seu jogo e como eles se movem e\ninteragem"
       MSM Defining Vars 1 (copy 1): "Escreva um programa que produz um triângulo\nverde sólido de 50 pixels."
@@ -1419,7 +1420,7 @@ pt-BR:
       NEW Course 4 Artist Vars 4 5: "Belo trabalho no último desafio,\nvamos tentar novamente. Desta vez, vamos fazer esse design bacana com hexágonos\nde 60 pixels."
       NEW Course 4 Artist Vars 4: "Vamos tentar de novo! \\r\n\\r\nVocê consegue\ndefinir a variável \"comprimento\" em 60 para fazer este design bacana com hexágonos?"
       NEW Course 4 Artist Vars 6: "Desenhe esse padrão de pentágonos com\nlados de 100 pixels definindo o valor correto para \"comprimento\" e colocando a variável\n\"comprimento\" em todos os lugares corretos. \\r\n\\r\nVocê percebeu que só precisa\ndefinir o valor de \"comprimento\" uma vez, e o código usa o valor correto em todos os lugares?"
-      NEW Course 4 Bee For Loops 1: "Use um laço para coletar o néctar\nde cada flor."
+      NEW Course 4 Bee For Loops 1: "Use um laço para coletar o néctar de\ntodas as flores."
       NEW Course 4 Bee For Loops 10: "Use a variável \"contador\" do seu laço \"para\"\npara controlar a distância do movimento horizontal."
       NEW Course 4 Bee For Loops 10a: "Pronto para um desafio? Use o que\nvocê aprendeu sobre laços e tente resolver esse problema. Lembre-se: você pode\nter que executar sua solução várias vezes antes de descobrir todas as\netapas."
       NEW Course 4 Bee For Loops 11: "Você pode usar a variável do laço para\ncontrolar o movimento e a coleta de néctar?"
@@ -1510,7 +1511,7 @@ pt-BR:
       Play Lab Rocket 5: "Muito melhor, mas vamos escrever mais uma função\ncom aceleração simples. Dessa vez o foguete deve estar a 15 metros em 1 segundo,\n45 metros em 2 segundos, 95 metros em 3 segundos e 165 metros em 4 segundos."
       Play Lab Rocket Free Play: "Atividade livre: faça uma experiência com sua função altura-foguete\npara fazer o foguete voar de formas diferentes. Clique em \"Concluir\" quando você\nterminar."
       Poorva copy U3L2 Using Simple Commands: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
-      Quantum Bee: Flores roxas podem ter 1 ou 0 néctar, mas você não saberá qual delas! Tenha cuidado para não recolher o néctar de uma flor roxa que não tem nenhum. Verifique se o néctar é igual a 1, usando o bloco "if".
+      Quantum Bee: "As flores roxas podem ter 1 ou 0 néctar,\nmas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa\nque não tenha néctar algum. Verifique se o néctar é igual a 1 usando\no bloco se."
       Ram Spritelab Validation Test: Pressione a seta para cima
       Ryan - 4-5 Bee Conditionals 2: "Agora, a abelha só quer néctar.\nNem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se\nela está escondendo uma flor. Se estiver, então você pode coletar o néctar."
       Ryan - Bee Conditionals: "Agora, a abelha só quer néctar.\nNem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se\nela está escondendo uma flor. Se estiver, então você pode coletar o néctar."
@@ -1871,7 +1872,7 @@ pt-BR:
       courseA_maze_seq13_2018: Pegue aquele porco da maneira que você conseguir!
       courseA_maze_seq1_2018: Leve o pássaro até o porco mau!
       courseA_maze_seq2: Altere o código para me levar até o porco!
-      courseA_maze_seq2_2018: Corrija o código para levar o pássaro até o porco.
+      courseA_maze_seq2_2018: Altere o código para me levar até o porco!
       courseA_maze_seq3: Corrija o código para levar o pássaro até o porco!
       courseA_maze_seq3_2018: Corrija o código para levar o pássaro até o porco!
       courseA_maze_seq4: REMOVA um bloco para levar o pássaro até o porco!
@@ -2121,7 +2122,7 @@ pt-BR:
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops_forVid: Recolha todo o milho, a alface e todos as abóboras.
       courseC_maze_debugging1: Corrija o código para levar Scrat até a noz.
-      courseC_maze_debugging10: "Depure esse nível reorganizando e trocando\nblocos para me levar até o porco!"
+      courseC_maze_debugging10: "Depure esse nível reorganizando e trocando blocos\npara me levar até o porco!"
       courseC_maze_debugging1_2018: Corrija o código para levar Scrat até a noz.
       courseC_maze_debugging3: Remova os blocos para levar Scrat até a noz!
       courseC_maze_debugging3_2018: Remova os blocos para levar Scrat até a noz!
@@ -2184,8 +2185,13 @@ pt-BR:
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals_challenge1: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals_challenge1_2018: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals_challenge2: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals_challenge2_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals_challenge3: Colete todo o néctar ou faça todo o mel.
+      courseD_bee_debugging1: Corrija o(s) erro(s) para coletar todo o néctar.
+      courseD_bee_debugging2: Corrija o(s) erro(s) para coletar todo o néctar.
       courseD_bee_debugging3: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."
+      courseD_bee_debugging4: Corrija o(s) erro(s) para fazer todo o mel.
       courseD_bee_nestedLoops3: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseD_bee_nestedLoops5: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops6_2018: "Vamos subir o nível! \\r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
@@ -2204,6 +2210,22 @@ pt-BR:
       courseD_bounce_events5: Vamos lançar uma bola em direção à raquete. Conecte um bloco ao bloco "quando a bola bater na raquete" para garantir que a bola atinja o alvo.
       courseD_bounce_events6: Agora o alvo está no topo. Você precisa conectar blocos em ambos os blocos "quando a bola bater" para resolver este desafio.
       courseD_bounce_events7: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja o alvo.
+      courseD_collector_debugging1: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging1_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging1a: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging1a_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a: Corrija o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a_2018: Corrija o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging_challenge2: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_collector_debugging_challenge2_2018: Você é um especialista de laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       courseD_collector_nested_loops_challenge2a: Ajude Laurel a coletar pelo menos duas pilhas de tesouro.
@@ -2211,7 +2233,10 @@ pt-BR:
       courseD_collector_ramp8: Ajude Laurel a coletar todo o tesouro.
       courseD_collector_ramp9: Ajude Laurel a coletar todo o tesouro.
       courseD_collector_until_challenge1: Você é um especialista em laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
+      courseD_debugging_1: Corrija o(s) erro(s) para coletar todo o néctar.
+      courseD_debugging_2: Corrija o(s) erro(s) para coletar todo o néctar.
       courseD_debugging_3: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."
+      courseD_debugging_4: Corrija o(s) erro(s) para fazer todo o mel.
       courseD_farmer_condLoops2: Ajude a colheitadeira coletar o milho e o alface do campo.
       courseD_farmer_condLoops2_2018: Ajude a colheitadeira coletar o milho e o alface do campo.
       courseD_farmer_condLoops_challenge2: Colete tudo para completar o nível.
@@ -2239,9 +2264,19 @@ pt-BR:
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
       courseD_maze_ramp7: Leve o pássaro até o porco!
       courseD_maze_until1: Leve o Angry Bird até o porco.
+      courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_predict2: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until10_predict2_2018: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until1_2018: Leve o Angry Bird até o porco.
       courseD_maze_until3: Leve o pássaro até o porco.
       courseD_maze_until3_2018: Leve o pássaro até o porco.
+      courseD_maze_until6: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until6_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until7: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
+      courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
       courseD_playLab_cond6cloneForTest: Testando
       courseE_artist_concept1: 'Recrie esta imagem. '
       courseE_artist_concept1_2018: 'Recrie esta imagem. '
@@ -2311,6 +2346,7 @@ pt-BR:
       courseF_bee_functions4_2018: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \\r\n\\r\nUse\na função para coletar todo o néctar."
       courseF_bee_fwp5: Use esta função para coletar todo o nectar.
       courseF_bee_fwp5_2018: Use esta função para coletar todo o nectar.
+      courseF_bee_variables_4_2018: Altere o código para funcionar com este desafio.
       courseF_bee_variables_5_2018: Crie seu próprio código para resolver este enigma
       courseF_bee_variables_7_2018: Este enigma é um pouco diferente. O que você precisa para resolvê-lo?
       courseF_bee_variables_8_2018: Quantos néctares a abelha irá coletar desta flor?
@@ -2353,7 +2389,11 @@ pt-BR:
       frozen circle function: "Use o novo bloco \"crie um círculo\" para\ncriar 10 círculos sobrepostos. Não se esqueça de avançar entre os círculos."
       frozen circle: "Um círculo é uma forma especial. Você pode descobrir\nque número usar para substituir os pontos de interrogação para desenhar um círculo?"
       frozen cross rotate dense: "Vamos repetir isso 90 vezes! Quantas\nvezes 90 cabe em 360? Dica: é um número realmente pequeno."
+      frozen cross rotate dense_b: Vamos repetir a linha **90** vezes!
+      frozen cross rotate dense_test: Vamos repetir a linha **90** vezes!
       frozen cross rotate: "Agora, tente repetir isso 10 vezes. Quantos graus\nvocê precisa virar entre cada reta?"
+      frozen cross rotate_b: Agora, tente repetir isso **10** vezes. **Quantos graus** você precisa virar entre cada reta?
+      frozen cross rotate_test: Agora, tente repetir isso **10** vezes. **Quantos graus** você precisa virar entre cada reta?
       frozen cross: "Envolva um bloco \"Repita\" em torno desses comandos para criar\num sinal de adição. Você notou que Elsa pode se mover para a frente e para trás?"
       frozen diamond mini snowflake: "Você sabia que cada floco de neve\ntem uma forma diferente? Vamos criar um novo floco de neve usando o bloco \"Repita\"\npara repetir um paralelogramo 4 vezes, virando 90 graus à direita entre\ncada paralelogramo."
       frozen diamond snowflake: "Agora, vamos criar um novo floco de neve\nusando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus\nà direita entre cada um."
@@ -2363,6 +2403,8 @@ pt-BR:
       frozen perpendicular: "Agora, vamos ver se podemos criar duas retas\nque formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco \"vire\"\ne também o bloco \"mova\"."
       frozen snowflake branch: "Tente usar o bloco \"crie um floco de neve do tipo ramificado”\npara criar três ramificações, o que começa a parecer um floco de neve."
       frozen snowflake full: "Agora, vamos repetir isso 8 vezes para fazer um\nbelo floco de neve!"
+      frozen snowflake full_b: Agora, vamos repetir isso **8** vezes para criar um lindo floco de neve!
+      frozen snowflake full_test: Agora, vamos repetir isso **8** vezes para criar um lindo floco de neve!
       frozen snowflower: "Padrões de neve complexos podem ser criados com\nformas muito simples. Você pode criar um padrão repetindo 5 círculos de tamanho\n5 e 5 círculos de tamanho 10?"
       frozen square iterative: "Parece que estamos na metade do caminho para fazer\num quadrado. Vamos juntar 4 retas para criar um quadrado."
       frozen square loop 3x: "Vamos criar três quadrados, virando depois\nde cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado."

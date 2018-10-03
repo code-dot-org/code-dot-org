@@ -316,7 +316,6 @@ ja:
       signin: 'サインイン'
       signup: 'アカウントを作る'
       already_registered: '既にアカウントをお持ちですか?'
-      pair_programming: 'ペアプログラミング'
       team: 'チーム'
       driver: 'ドライバー'
       navigator: 'ナビゲーター'

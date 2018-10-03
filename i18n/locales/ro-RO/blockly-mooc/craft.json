@@ -1,7 +1,7 @@
 {
   "absolute": "absolut(ă)",
   "agentGenericFailureMessage": "Continuă să codezi! Amintește-ți să folosești Agentul pentru ajutor.",
-  "agentTooFewBlocksFailureMessage": "Încercați să adăugați doar câte un bloc deodată pentru a duce pe Agentul la locul potrivit.",
+  "agentTooFewBlocksFailureMessage": "Încercați să adăugați doar câte un bloc deodată pentru a duce Agentul la locul potrivit.",
   "at": "la",
   "agentDiamondPathCongrats": "Felicitări, ai găsit durpul de diamant! Ai colectat  {count, plural, one {1 diamant} other {#diamante}} până în prezent!",
   "blockActionAdd": "adaugă",
@@ -111,7 +111,7 @@
   "blockTypeRedstoneWire": "fir de piatrăroșie",
   "blockTypeSand": "nisip",
   "blockTypeSandstone": "gresie",
-  "blockTypeSnow": "",
+  "blockTypeSnow": "zăpadă",
   "blockTypeStone": "piatra",
   "blockTypeTnt": "TNT",
   "blockTypeTree": "copac",
