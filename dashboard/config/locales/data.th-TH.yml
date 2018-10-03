@@ -249,8 +249,8 @@ th:
         CSF_artist_angles: เรื่องของมุม กับศิลปิน
         CSF_collector_k1_blocks: 'พื้นฐานด้านวิทยาการคอมพิวเตอร์: นักสะสม'
         CSF_collector_text_blocks: 'พื้นฐานด้านวิทยาการคอมพิวเตอร์: นักสะสม'
-        CSF_debugging_k1_blocks: การดีบั๊ก
-        CSF_debugging_text_blocks: การดีบั๊ก
+        CSF_debugging_k1_blocks: การแก้ไขจุดบกพร่อง
+        CSF_debugging_text_blocks: การแก้ไขจุดบกพร่อง
         CSF_maze_intro_k1_blocks: โค้ดสตูดิโอเบื้องต้น
         CSF_maze_intro_text_blocks: โค้ดสตูดิโอเบื้องต้น
         CSF_my_robotic_friends: เพื่อนหุ่นยนต์

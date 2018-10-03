@@ -48,7 +48,7 @@
       2-3 Artist Functions 11 a: "Vi har gitt funksjonen `tegn en firkant`det nye navnet, `tegn en sekskant`, men de gir oss fortsatt firkanter! \\r\n\\r\nKan du endre `tegn en sekskant`-funksjonen til å tegne en sekskant med sider på 50 piksler?\n\\r\n\\r\nTegn bildet ved å bruke den nye funksjonen!"
       2-3 Artist Functions 11.5: "Her er den samme `tegn en sekskant`-funksjonen. \\r\n\\r\nHva skjer hvis du gjentar hovedprogrammet 6 ganger, snur 60 grader hver gang du gjentar?"
       2-3 Artist Functions 11: "Vi har gitt funksjonen `tegn en firkant`det nye navnet, `tegn en sekskant`, men de gir oss fortsatt firkanter! \\r\n\\r\nKan du endre `tegn en sekskant`-funksjonen til å tegne en sekskant med sider på 50 piksler?\n\\r\n\\r\nTegn bildet ved å bruke den nye funksjonen!"
-      2-3 Artist Functions 12 Mike: "Funksjoner er virkelig flott for å tegne komplekse ting flere ganger. Kan du bruke funksjonen \"tegne en blomst\" til å fylle resten av planteboksen? (Hint: planter er atskilt med 100 pikslers avstand)  "
+      2-3 Artist Functions 12 Mike: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 12 a: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 12: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 2: "Funksjoner lar deg lage nye blokker!\\r\n\\r\nVi har flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \\r\n\\r\nFirkantene er 75 piksler fra hverandre."
@@ -244,7 +244,7 @@
       4-5 Nested Loops Assessment 1: "**Oppgave:** Bruk løkke-i-løkke for å fullføre mønsteret."
       4-5 While Loops 1: Flytt meg bort til hullet og fyll det med to spader med jord ved å bruke blokka `fyll`.
       4-5 While Loops 2: Flytt meg til jordhaugen og bruk blokken `fjern 1` til å fjerne den på 5 spadetak.
-      4-5 While Loops 3: "Bruk så få blokker som mulig for å fullføre denne oppgaven! \\r\n\\r\nFlytt meg over til haugen og fjern all jord. Gå deretter bort til hullet og fyll det helt opp."
+      4-5 While Loops 3: "Bruk så få blokker som mulig! \\r\n\\r\nFlytt meg til jordhaugen og fjern all jorda. Etterpå flytter du meg til hullet og fyller det helt opp."
       4-5 While Loops 4: "Wow, se på det! \\r\n\\r\nJeg vet ikke hvor mange spadetak som trengs for å fylle dette hullet. \\r\nKan du skrive et program som fortsetter å  bruke blokka`fyll` helt til bakken er jevn?  "
       Alien Defender: "**Prosjektide**: Lag et forsvarsspill i Play Lab!"
       Alien Defender_2018: "**Prosjektide**: Lag et forsvarsspill i Play Lab!"
@@ -371,7 +371,7 @@
       Testing Quantum Farmer: "Wow, se på det! \\r\n\\r\nJeg vet ikke hvor mange spadetak som trengs for å fylle dette hullet. \\r\nKan du skrive et program som fortsetter å  bruke blokka`fyll` helt til bakken er jevn?  "
       Underground If Statements: Nå begynner det å bli vanskelig. Utvinn 3 redstone, men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over all lava du kommer over.
       Underground If Statements_2018: Nå begynner det å bli vanskelig. Utvinn 3 redstone, men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over all lava du kommer over.
-      course3_farmer_until_challenge2: Bruk blokken hvis/ellers for å følge den svingete veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
+      course3_farmer_until_challenge2: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       course4_artist_fwp_challenge1: Prøv å kjøre dette programmet, og gjør endringer for å se hva som skjer. Kan du finne ut hvordan det fungerer? (Eller fjerne det og erstatte det med noe helt annet)
       courseD_bee_nestedLoops5: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
       courseD_bee_nestedLoops8: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
@@ -440,7 +440,7 @@
       grade3_ConditionalsElse_6: "Jeg er ikke sikker på hvor mye nektar denne blomsten har, men jeg vet at den har enten 1, 2 eller 3 nektar. \\r\n\\r\nKombiner betingelsene (`hvis` og/eller `hvis/ellers`) for å bare hente mengden nektar som blomsten har. \\r\n\\r\nHusk at mengen nektar kan endre seg hver gang du kjører oppgaven!"
       grade3_ConditionalsElse_7: "Disse blomstene har 3, 2 eller 1 nektar. \\r\n\\r\nFullfør funksjonen `check purple flower` for bruk den for å samle all nektaren i blomstene."
       grade3_ConditionalsElse_8: "Skriv funksjonen check\nflower make honey`. \\r\n\\r\nFunksjonen din burde sjekke om de lilla blomstene har 3, 2 eller 1 nektar og hente all nektaren som er der. \\r\nSå burde den flytte framover og lage honning."
-      grade3_ConditionalsElse_9: "Lekse: Denne koden er feil.\nFullfør \"hent nektar og lag honning\" funksjonen, deretter bruker du den til å samle inn all nektar og honning. Husk at lilla blomster kan ha 3, 2 eller 1 nektar."
+      grade3_ConditionalsElse_9: "**Oppgave:** Skyen skjuler enten en blomst med en nektar eller en bikube som trenger en honning. \\r\n\\r\nFullfør funksjonen `get nectar or make honey` og så kall den for å samle all nektaren eller honningen. \\r\n"
       grade3_ConditionalsElse_TeacherIDo: |-
         Det kan være en blomst eller en bikube under skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en blomst. Hvis ikke så lager du honning (for da er det en bikube).
       grade3_Conditionals_1: "Jeg er en sulten bie!\\r\n\\r\n\\r\nHjelp meg med å samle all nektaren fra blomstene og bruk så få blokker som mulig."

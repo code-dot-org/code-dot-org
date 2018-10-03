@@ -41,12 +41,12 @@ cs:
       2-3 Artist Nested Loops 10: Opakuj tento kód 12 krát k dokončení vzoru.
       2-3 Artist Nested Loops 11: Opakovat tento kód 4 krát k dokončení vzoru, otoč o 90 ° po každém průchodu.
       2-3 Artist Nested Loops 12: Opakovat tento kód 12 krát dokončit kudrlinek.
-      2-3 Artist Nested Loops 2: "Nyní cykluj trojúhelník 6 krát. Po každém trojúhelníku je třeba se otočit o 60 stupňů před kreslením dalšího."
+      2-3 Artist Nested Loops 2: "Nyní zopakuj trojúhelník 6 krát. Po nakreslení každého trojúhelníku je třeba se otočit o 60 stupňů před kreslením dalšího."
       2-3 Artist Nested Loops 4: "Opakovat tento kosodélník 12 krát k nakreslení květiny. Rada: 12 kosodélníků je stejně udělaná jako 12 trojúhelníků, co jsi udělal - kolik musíš otočit po každém tvaru?"
       2-3 Artist Nested Loops 5: "Vyplň okna budovy vnořeným cyklem. Okna jsou dlouhá 20 pixelů a od sebe 20 pixelů."
       2-3 Artist Nested Loops 7: "Opakovat 10 krát tento trojúhelník k nakreslené slunce. Budeš se muset přesunout a otočit po každém trojúhelníku. Můžeš zjistit, kolik se musíš otočit vydělením počtu stupňů v kruhu počtem vytvořených obrazců."
       2-3 Artist Nested Loops 8: "Přidejme nyní trochu trávy na náš obrázek. Každý trs trávy je od sebe 50 pixelů."
-      2-3 Artist Nested Loops 9: "Dokončíme tento obrázek přidáním květ. Cykluj kosodélník 12 krát k nakreslení tvé květiny."
+      2-3 Artist Nested Loops 9: "Nyní dokončíme obrázek přidáním květiny. Květinu nakreslíš pomoci 12 diamantů."
       2-3 Artist Nested Loops Free Play: Zahraj si zdarma, nakresli něco cool s vnořenými cykly.
       2-3 Bee Conditionals 11: "Sbírej nektar, kde květy mají nektar."
       2-3 Bee Conditionals 13: |-
@@ -66,7 +66,7 @@ cs:
         Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 
       2-3 Bee Loops 3A: Umíš použít cyklus sesbírat všechen tento nektar?
       2-3 Bee Loops 3B: Nyní pomocí nového bloku opakování shromáždit všechen nektar a všechen med.
-      2-3 Bee Loops 4A: "Co se stane, když zacykluješ 3 krát posloupnost? Nezapomeň si na konci udělat med!"
+      2-3 Bee Loops 4A: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
       2-3 Bee Loops 8: "Fialové květiny mají neznámé množství nektaru. Použij cyklus \"while nektar\" sesbírat všechen nektar. Tento cyklus bude fungovat tak dlouho, pokud je podmínka pravdivá, v tomto případě nektar > 0."
       2-3 Maze 15: Použij dva cykly se dostat k prasátku pomocí méně bloků.
       2-3 Maze Loops 18: "Dostaň mě ke slunečnici!"

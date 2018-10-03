@@ -16,6 +16,7 @@ zh-CN:
       user:
         name: '显示名称'
         name_example: '显示的名字<br/>（例如酷码、晓明）'
+        other_name_example: '显示名称<br/>(如史密斯女士)'
         email: '电子邮件'
         parent_email: '父母/监护人电子邮箱'
         personal_email: "个人电子邮箱地址 <a href=\"%{url}\">(如果没有电子邮箱请点击这里)</a>"
@@ -27,6 +28,8 @@ zh-CN:
         age: '年龄'
         gender: '性别'
         edit_header: '编辑用户信息'
+        finish_sign_up_header: '完成创建帐户'
+        finish_sign_up_subheader: '填写以下信息以完成创建 Code.org 帐户。'
         error:
           future: 不能选择将来的时间
   hello: "世界你好"
@@ -87,11 +90,15 @@ zh-CN:
     clever: 'Clever 账号'
     powerschool: 'Powerschool 帐户'
     forgot_password: '忘记了您的密码吗？'
+    migration_success: '成功！已经更新为新的帐户体验。'
+    demigration_success: '新帐户体验已禁用。'
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
     not_linked: "对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。"
     use_clever: "对不起，您的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。"
     unable_to_connect_provider: "无法将您的 Code.org 帐户连接到 %{provider}。请重试。"
+    already_in_use: "你的 %{provider} 已连接到另一个 Code.org 帐户。"
+    already_linked: "你的 %{provider} 已连接到了 Code.org 帐户。"
   signup_form:
     student_count: '%{count} 位学生已经注册。'
     teacher_count: '%{count} 位教师已经注册。'
@@ -318,7 +325,6 @@ zh-CN:
       signin: '登录'
       signup: '创建一个账户'
       already_registered: '已经注册了？'
-      pair_programming: '结对编程'
       team: '团队'
       driver: '已登录'
       navigator: '搭档'

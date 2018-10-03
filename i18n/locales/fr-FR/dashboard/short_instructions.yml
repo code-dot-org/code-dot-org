@@ -6,7 +6,7 @@ fr:
       2-3 Artist 12: |-
         Définis le bloc «Répéter plusieurs fois» pour qu'il crée un «cercle» afin de terminer le globe oculaire. Si chaque mouvement tourne à droite d'un degré, combien de fois dois-tu le répéter pour boucler la boucle ? 180 ? 360 ? 500 ?
       2-3 Artist 2 new: 'Cette maison a un mur à moitié fini. Chaque côté fait 100 pixels, mais le mur à moitié fini fait seulement 50 pixels. Termine le mur. '
-      2-3 Artist 2: 'Le mur de cette maison est à moitié terminé. Chaque côté a une longueur de 100, mais le mur à moitié fait a une hauteur de 50. Finis le mur. '
+      2-3 Artist 2: 'Cette maison a un mur à moitié fini. Chaque côté fait 100 pixels, mais le mur à moitié fini fait seulement 50 pixels. Termine le mur. '
       2-3 Artist 3.4: Le bloc de saut déplace l'artiste sans rien dessiner. Dessine la ligne pointillée en utilisant les blocs de saut et de dessin.
       2-3 Artist 3: Ce chapeau fait 100 pixels de haut. Dessine un chapeau qui fait 70 pixels de moins.
       2-3 Artist 3new: "Le chapeau rouge mesure 100 pixels. Termine de dessiner un chapeau noir qui est plus court de 70 pixels. La largeur du chapeau noir est de 50 pixels."
@@ -163,7 +163,7 @@ fr:
       2-3 Bee Loops 9: La boucle « Tant que » peut exécuter la même action que l’instruction « Si » dans une boucle. Ajoute une boucle « Tant que » à ce code pour effectuer la même tâche.
       2-3 Bee Loops Assessment 1: 'Évaluation - utilise une boucle «Tant que» pour recueillir tout le nectar de cette fleur.'
       2-3 Maze 1: 'Peux-tu m''aider à attraper le vilain cochon ? Assemble deux blocs «Avancer» et clique sur «Exécuter». '
-      2-3 Maze 10: Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)
+      2-3 Maze 10: Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)
       2-3 Maze 11: Emmène-moi à la fleur, j'ai faim ! Combien de fois dois-tu répéter un bloc ?
       2-3 Maze 12 (copy 1): 'Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Indice : crée une boucle à l''aide d''un bloc «Répéter plusieurs fois».)'
       2-3 Maze 12 (copy 2): 'Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Indice : crée une boucle à l''aide d''un bloc «Répéter plusieurs fois».)'
@@ -181,12 +181,12 @@ fr:
       2-3 Maze 16: Amène-moi jusqu'au tournesol. Mets la séquence en boucle !
       2-3 Maze 2: Ce cochon me casse les pieds. Aide-moi à aller jusqu’à lui !
       2-3 Maze 3: Trace le chemin et amène-moi à ce stupide cochon. Évite le TNT ou des plumes vont voler !
-      2-3 Maze 4: Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)
-      2-3 Maze 5: Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)
+      2-3 Maze 4: Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)
+      2-3 Maze 5: Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)
       2-3 Maze 6: Garde ton calme et aide-moi à trouver le méchant cochon. Autrement je pourrais me fâcher !
-      2-3 Maze 7: Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)
+      2-3 Maze 7: Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)
       2-3 Maze 8: Amène-moi au cochon !
-      2-3 Maze 9: Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)
+      2-3 Maze 9: Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)
       2-3 Maze Loops 1: Peux-tu m'amener au cochon en utilisant 5 blocs?
       2-3 Maze Loops 17: Amène-moi jusqu'au tournesol !
       2-3 Maze Loops 18: "Amène-moi jusqu'au tournesol !\n(Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)"
@@ -198,8 +198,8 @@ fr:
       2-3 Maze sq10: Amène-moi au cochon ! Quels blocs ont été répétés ?
       2-3 Maze sq10v2: Amène-moi au cochon ! Quels blocs ont été répétés ?
       2-3 Maze sq2: Trace le chemin et amène-moi à ce stupide cochon.  Évite le TNT ou les plumes vont voler !
-      2-3 Maze sq3: Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)
-      2-3 Maze sq4: Garde ton calme et aide-moi à trouver le méchant cochon. Dans le cas contraire, je pourrais m'énerver !
+      2-3 Maze sq3: Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)
+      2-3 Maze sq4: Garde ton calme et aide-moi à trouver le méchant cochon. Autrement je pourrais me fâcher !
       2-3 Maze sq5: Amène-moi au cochon ! Combien de fois dois-tu répéter un bloc ?
       2-3 Maze sq6: 'Peux-tu remplacer la réponse précédente avec seulement deux blocs ? (Indice : crée une boucle à l''aide d''un bloc «Répéter plusieurs fois».)'
       2-3 Maze sq7: Amène-moi jusqu'à l'intrus vert en utilisant seulement trois blocs.
@@ -226,24 +226,24 @@ fr:
       20hr_farmer_stage9_9: 'Fais-moi enlever tous ces tas de terre. Essaie d’utiliser le moins de blocs possible. Indice : essaie d''utiliser un bloc «Tant que».'
       20hr_maze_stage2_1: Peux-tu m'aider à attraper le vilain cochon ? Assemble deux blocs «Avancer» et clique sur «Exécuter» pour m'aider à me déplacer. 
       20hr_maze_stage2_10: Ok, essaie le nouveau bloc «Répéter jusqu'à»- il se répétera jusqu'à ce que j'atteigne ce cochon agaçant.
-      20hr_maze_stage2_11: Ok, une dernière fois pour s'entraîner - peux-tu résoudre ce puzzle à l'aide de seulement 4 blocs?
+      20hr_maze_stage2_11: OK, une dernière fois pour s'entraîner - peux-tu résoudre ce puzzle à l'aide de seulement 4 blocs?
       20hr_maze_stage2_12: Cher humain. Moi zombie. Moi faim. Devoir... atteindre... tournesol... Peux-tu me faire aller là-bas avec seulement 5 blocs ?
-      20hr_maze_stage2_13: "Ok, c'est la même chose, en légèrement différent. \nPeux-tu le faire en seulement 5 blocs ?"
-      20hr_maze_stage2_14: 'Utilise le nouveau bloc «Si» pour me laisser décider quand il faut tourner. Indice: tu n’as besoin que d''un bloc supplémentaire, mais regarde comment nous avons fait pour pouvoir le refaire tout seul la prochaine fois.'
-      20hr_maze_stage2_15: Ok, c'est la même chose que le puzzle précédent, mais tu dois te rappeler comment tu as utilisé le bloc «Si» et le bloc «Répéter» ensemble.
+      20hr_maze_stage2_13: OK, c'est pareil, mais légèrement différent. Peux-tu le faire en seulement 5 blocs ?
+      20hr_maze_stage2_14: 'Utilise le nouveau bloc «Si» pour me laisser décider quand tourner. Indice: tu n’as besoin que d''un bloc supplémentaire, mais apprends comment nous avons fait, pour pouvoir le refaire tout seul la prochaine fois.'
+      20hr_maze_stage2_15: OK, c'est la même chose que le puzzle précédent, mais tu dois te rappeler comment tu as utilisé le bloc «Si» et le bloc «Répéter» ensemble.
       20hr_maze_stage2_16: Moi veux tournesol ! Utilise un bloc «Si» pour m'y amener avec le plus petit nombre de blocs possible.
-      20hr_maze_stage2_17: Ok, nous allons le refaire encore une fois pour nous entraîner - ce n'est pas très différent, mais attention aux plantes carnivores!
-      20hr_maze_stage2_18: Le bloc "Si-sinon" vérifie une condition et puis fait une chose OU une autre. Pour m'amener au tournesol essaie d'utiliser ce nouveau bloc.
+      20hr_maze_stage2_17: OK, nous allons le refaire encore une fois pour nous entraîner - ce n'est pas très différent, mais attention aux plantes carnivores!
+      20hr_maze_stage2_18: Les blocs «Si/Sinon» vérifient une condition et puis font une chose OU une autre. Pour m'amener au tournesol, essaie d'utiliser ce nouveau bloc.
       20hr_maze_stage2_19: Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès le premier essai?
-      20hr_maze_stage2_2: Ce cochon me hérisse les plumes. Aide-moi à l'atteindre !
+      20hr_maze_stage2_2: Ce cochon me casse les pieds. Aide-moi à le trouver !
       20hr_maze_stage2_20: Peux-tu ajouter seulement 3 blocs pour m’aider à résoudre un labyrinthe plus complexe? Si tu le fais bien, je peux emprunter n’importe quelle voie sinueuse - peu importe la longueur.
       20hr_maze_stage2_3: Trace le chemin et amène-moi à ce stupide cochon. Évite le TNT ou les plumes vont voler !
       20hr_maze_stage2_4: Guide-moi jusqu'à cette maudite créature verte! (Attention au TNT)
-      20hr_maze_stage2_5: Reste calme et aide-moi à trouver cet affreux cochon. Sinon, je pourrais me fâcher !
+      20hr_maze_stage2_5: Garde ton calme et aide-moi à trouver le méchant cochon. Autrement je pourrais me fâcher !
       20hr_maze_stage2_6: Il y a un moyen d'attraper ce stupide cochon avec seulement 2 blocs. Peux-tu le trouver?
-      20hr_maze_stage2_7: Essaie de me faire aller jusqu'à l'intrus vert avec juste trois blocs.
-      20hr_maze_stage2_8: Aide-moi à bannir ce méchant cochon en utilisant le moins de blocs possible. Essaie d’utiliser plus d'un bloc «Répéter x fois».
-      20hr_maze_stage2_9: 'Lorsqu''un bloc est gris, cela signifie que tu ne peux pas le supprimer. Résous ce puzzle en utilisant le bloc «Répéter» qui répète 3 fois. Essaie de mettre ces 3 blocs dans le bloc gris «Répéter»: se déplacer, se déplacer, tourner.'
+      20hr_maze_stage2_7: Essaie de m’emmener jusqu'à l'intrus vert en utilisant seulement trois blocs.
+      20hr_maze_stage2_8: Aide-moi à bannir ce méchant cochon en utilisant le plus petit nombre de blocs. Essaie d’utiliser plus d'un bloc «Répéter plusieurs fois».
+      20hr_maze_stage2_9: 'Lorsqu''un bloc est gris, cela signifie que tu ne peux pas le supprimer. Résous ce puzzle en utilisant le bloc «Répéter» qui se répète 3 fois. Essaie de mettre ces 3 blocs dans le bloc gris «Répéter»: se déplacer, se déplacer, tourner.'
       4-5 Artist 1: 'Aide-moi à terminer de dessiner ma boîte. (Chaque ligne a une longueur de 300 pixels) '
       4-5 Artist 10: Appuie sur « Exécuter » pour tester le code. Ensuite, répète-le suffisamment de fois pour terminer le dessin. Les couleurs seront différentes chaque fois.
       4-5 Artist 11: Complète les lignes vertes. Les lignes ont 300 pixels de long et sont à 15 pixels l’une de l’autre.
@@ -637,7 +637,7 @@ fr:
       Course 4 Binary 8: Tu peux compléter la plus grande partie de cette image en répétant un nombre binaire de 5 bits - ensuite, tu auras besoin d'un nombre de 4 bits pour compléter le coin en bas à droite.
       Course 4 EC 1a: Pas de règles. Pas d’indices. Juste un défi à relever !
       Course 4 EC 1b: Pas de règles. Pas d’indices. Juste un défi à relever !
-      Course 4 EC 2a: '** Challenge extrême : ** pas de règle. Pas d''indice. Juste le Challenge !'
+      Course 4 EC 2a: Pas de règles. Pas d’indices. Juste un défi à relever !
       Course 4 EC 2b: Pas de règles. Pas d’indices. Juste un défi à relever !
       Course 4 EC 2c: Pas de règles. Pas d’indices. Juste un défi à relever !
       Course 4 EC 2d: Pas de règles. Pas d’indices. Juste un défi à relever !
@@ -742,7 +742,7 @@ fr:
       Course1BeePuzzle12: Recueille trois nectars et fabrique ensuite deux miels
       CourseF_PlayLab_vars1: 'Pour jouer à ce jeu, tu n''as besoin d''écrire aucun code, juste d''appuyer sur "Run"! '
       CourseF_PlayLab_vars10: "L’heure de l’activité libre ! Voici toutes les variables avec lesquelles nous avons joué jusqu'à présent, mais aussi quelques-unes de plus au cas où tu les voudrais.\n\nNote qu'il y a maintenant tellement de blocs dans notre boîte à outils qu’ils doivent être organisés !  Ici, nous avons mis chaque pièce dans une catégorie appropriée.  Prends le temps de découvrir tout ce qui est disponible. Lorsque tu as tout révisé, fais un jeu ou une histoire en utilisant les répétitions, les variables et les événements.\n\nIndice : fais défiler le menu pour voir toutes les commandes dans l'espace de travail."
-      CourseF_PlayLab_vars2: La course dans ce dernier puzzle n'était pas très équitable! Change la variable "vitesse du chien" pour être sur de collecter plus de drapeaux que le chat. Le premier à collecter 10 drapeaux gagne!
+      CourseF_PlayLab_vars2: La course dans ce dernier puzzle n'était pas très équitable ! Change la variable «Vitesse du chien» pour t'assurer que tu peux obtenir plus de drapeaux que le chat. Le premier à obtenir 10 drapeaux gagne !
       CourseF_PlayLab_vars3: Voici un nouveau genre de jeu ! Utilise les flèches vers la gauche et vers la droite pour te déplacer et la flèche vers le haut pour sauter. Vois si tu peux obtenir tous les drapeaux.
       CourseF_PlayLab_vars4: Maintenant nous utilisons une variable appelée « Hauteur » pour contrôler à quelle hauteur le chien peut sauter. Mets à jour la variable « Hauteur » afin que le chien puisse sauter assez haut pour atteindre tous les drapeaux.
       CourseF_PlayLab_vars5: 'Construisons un jeu ! Tout d''abord nous aurons besoin d''un score. Reconstruis le code que tu as vu au dernier niveau pour définir le score à 10. '
@@ -895,7 +895,7 @@ fr:
       K-1 maze debug 2: Trouve ce qui manque, puis ajoute des blocs pour m'amener au cochon !
       K-1 maze debug 3: Quelque chose ne va pas. RETIRE des blocs pour m’amener au cochon !
       K-1 maze debug 4: Exécute ces blocs et répare-les ! Je pense que je vais dans la mauvaise direction.
-      K-1 maze debug 5: Débogue ce niveau en réorganisant et en ajoutant des blocs afin de m'amener au cochon !
+      K-1 maze debug 5: Débogue ce niveau en réorganisant et en changeant des blocs afin de m'amener au cochon !
       K-1 maze debug 6: Débogue ce niveau en réorganisant et en changeant des blocs afin de m'amener au cochon !
       K-1 maze debug 7: Débogue ce niveau en réorganisant et en changeant des blocs afin de m'amener au cochon !
       K-1 maze debug 8: Débogue ce niveau en réorganisant et en ajoutant des blocs afin de m'amener au cochon !
@@ -1072,7 +1072,7 @@ fr:
       PS copy 2-3 Bee Conditionals 5: "Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si»."
       Pixelation - Lesson 14 - Make the Letter A: 'Faire une lettre ''A'' de 3x5. Le widget est configuré avec des dimensions incorrectes. Votre première tâche sera de remplir le second octet avec le code binaire sur 8 bits pour 5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
       Pixelation - Lesson 14 - Make the Letter A_2018: 'Faire une lettre ''A'' de 3x5. Le widget est configuré avec des dimensions incorrectes. Votre première tâche sera de remplir le second octet avec le code binaire sur 8 bits pour 5: 0000 0101. Ensuite commencez à entrer les donnés de pixels.'
-      Quantum Bee: Les fleurs violettes peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles ! Veille à ne pas butiner de fleur violette si elle n'en a pas. Vérifie si le nectar est égal à 1 à l'aide du bloc « si ».
+      Quantum Bee: Les fleurs pourpres peuvent avoir 1 ou 0 nectar, mais tu ne sais pas lesquelles en ont! Veille à ne pas butiner une fleur pourpre si elle n'a pas de nectar. Vérifier si le nectar est égal à 1 à l'aide du bloc «Si».
       Ryan - 4-5 Bee Conditionals 2: L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar.
       Ryan - Bee Conditionals: L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar.
       Ryan Test Locked Blocks: Voici une fonction appelée «Patrouille». Modifie-la pour déplacer le Chat vers le haut de 400 pixels, puis vers le bas de 400 pixels.
@@ -1116,13 +1116,13 @@ fr:
       aE4: Alternative
       aE5: Exemple de puzzle avec la forme la plus difficile.
       aE6: 'Combien de fois dois-tu boucler cela pour dessiner un demi-cercle? '
-      aE7: "Si tu crées une autre boucle comme celle-ci, mais que tu tournes à gauche au lieu de tourner à droite, que se passe-t-il? \\r\n\\r\nPeux-tu répéter le tout pour dessiner cette vague?"
-      aE8: "Maintenant, faisons une boucle qui répète la totalité du programme 4 fois\npour créer ce cadre photo. Attention aux coins, tu ne peux pas juste tourner de 90 degrés!\n\\r\n\\r\nSi une boucle répétant 60 fois un virage de 3 degrés crée un demi-cercle, lequel de ces blocs de code créera un quart de cercle supplémentaire pour les coins?"
+      aE7: "Si tu copies cette boucle et tourne à gauche plutôt qu'à droite, que se passe-t-il ? Peux-tu répéter cela pour dessiner cette vague ?"
+      aE8: "Maintenant nous allons boucler tout cela quatre fois pour créer ce cadre photo. Attention aux coins - tu ne peux simplement pas tourner à 90 degrés ! Si boucler un virage de 3 degrés 60 fois donne un demi cercle, lequel de ces blocs de code fera un quart de cercle pour les coins ?"
       aEfreeplay: Activité libre!
       artistDebugVideo1: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
       artistFunctionsVideo1: "Suivez les instructions pour faire votre propre\nfonction."
       beeDebugVideo1: Peux-tu utiliser une boucle pour recueillir tout ce nectar ?
-      birdsDebugVideo1: "Trace le chemin et mène moi jusqu'au cochon stupide.\nÉvite le TNT ou les plumes vont voler!"
+      birdsDebugVideo1: Trace le chemin et amène-moi à ce stupide cochon. Évite le TNT ou des plumes vont voler !
       bounce_1: Attache un bloc au bloc « Quand flèche vers la gauche »  et appuie sur « Exécuter ». Déplace la raquette à l'aide de la flèche de gauche pour atteindre la cible visée.
       bounce_10: Il y a maintenant un but en haut. Attache les blocs « Marquer un point » et « Marquer un point pour l’adversaire » aux blocs « Quand la balle dans le but » et « Quand la balle manque la raquette » pour créer un jeu. Vois combien de points tu peux marquer avant que ton adversaire marque deux fois.
       bounce_10_2018: Il y a maintenant un but en haut. Attache les blocs « Marquer un point » et « Marquer un point pour l’adversaire » aux blocs « Quand la balle dans le but » et « Quand la balle manque la raquette » pour créer un jeu. Vois combien de points tu peux marquer avant que ton adversaire marque deux fois.
@@ -1132,7 +1132,7 @@ fr:
       bounce_11_2018: Tu peux maintenant attacher des blocs au bloc « Lors du lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle » à plusieurs endroits. Essaie également de changer la scène ou la vitesse de la raquette et de la balle pour voir combien de points tu peux marquer avant que ton adversaire marque deux fois.
       bounce_11_basketball: Tu peux maintenant attacher des blocs au bloc « Lors du lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle » à plusieurs endroits. Essaie également de changer la scène ou la vitesse de la main et de la balle pour voir combien de points tu peux marquer avant que ton adversaire marque deux fois!
       bounce_11_sports: Tu peux maintenant attacher des blocs au bloc « Lors du lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle » à plusieurs endroits. Essaie également de changer la scène ou la vitesse de la main et de la balle pour voir combien de points tu peux marquer avant que ton adversaire marque deux fois!
-      bounce_12: Crée ton propre jeu de Casse-briques à rebond Tu peux modifier tous les visuels et les règles. Lorsque tu as fini, clique sur «Terminer» pour laisser tes amis essayer ton jeu sur leur téléphone.
+      bounce_12: Crée ton propre jeu de Casse-briques. Tu peux changer tous les visuels et toutes les règles. Quand tu as finis, appuie sur Finis pour permettre à tes amis d'essayer le jeu sur leur téléphone.
       bounce_12_2018: Crée ton propre jeu de Casse-briques. Tu peux changer tous les visuels et toutes les règles. Quand tu as finis, appuie sur Finis pour permettre à tes amis d'essayer le jeu sur leur téléphone.
       bounce_12_basketball: Crée ton propre jeu de basketball. Tu peux changer toutes les règles. Quand tu as fini, clique «Terminer» pour que tes amis puissent essayer ton jeu sur leur téléphone.
       bounce_12_sports: 'Créez votre propre jeu! Vous êtes responsable ici: vous pouvez changer toutes les règles, mélanger et faire correspondre les sports, soyez créatifs! Lorsque vous avez terminé, cliquez sur Terminer pour laisser les amis essayer votre jeu sur leurs téléphones.'
@@ -1167,7 +1167,7 @@ fr:
       course2_playlab_stage17_1: Peux-tu faire dire « Salut » à Jorge le chien (acteur 1)?
       course2_playlab_stage17_10: |-
         Peux-tu ajouter des blocs pour changer l'arrière-plan et la vitesse de Waddles, puis déplaces-le avec les flèches jusqu'à ce que tu marques?
-      course2_playlab_stage17_11: Créer ta propre histoire. Quand tu as fini, cliques sur «Terminer» pour que tes amis essayent ton histoire sur leurs téléphones.
+      course2_playlab_stage17_11: Crée ta propre histoire. Quand tu as fini, clique sur «Terminer» pour laisser tes amis essayer ton histoire sur leur téléphone.
       course2_playlab_stage17_2: "Peux-tu faire dire quelque chose au chien\npuis faire parler le chat juste après ?"
       course2_playlab_stage17_3: "Peux-tu écrire un programme pour que ce c\nhien se déplace jusqu'au chat ?"
       course2_playlab_stage17_4: "Peux-tu écrire un programme qui déplace \nle chien jusqu'au chat, et qui fait dire « Bonjour » au chat lorsque le chien le rejoint ?"
@@ -1176,17 +1176,17 @@ fr:
       course2_playlab_stage17_8: "Peux-tu faire dire «Aïe!» à Waddles et jouer un son de «impact» s'il percute le dinosaure, puis déplacer le avec les flèches pour que cela se produise?"
       course2_playlab_stage17_9: "Peux-tu ajouter un bloc qui marque un point lorsque Waddles touche la pieuvre, puis déplaces le avec les flèches jusqu'à ce que tu marques ?"
       course3_playlab_stage16_1: Peux-tu faire dire « Bonjour » à ce chien ?
-      course3_playlab_stage16_2: "Peux-tu faire dire quelque chose au chien\npuis faire parler le chat juste après ?"
-      course3_playlab_stage16_3: "Peux-tu écrire un programme pour que ce c\nhien se déplace jusqu'au chat ?"
-      course3_playlab_stage16_4: "Peux-tu écrire un programme qui déplace \nle chien jusqu'au chat, et qui fait dire « Bonjour » au chat lorsque le chien le rejoint ?"
-      course3_playlab_stage16_5: Peux-tu ajouter un bloc pour rendre la pieuvre heureuse?
+      course3_playlab_stage16_2: Peux-tu faire dire quelque chose au chien puis faire parler le chat juste après?
+      course3_playlab_stage16_3: Peux-tu écrire un programme pour que ce chien se déplace jusqu'au chat?
+      course3_playlab_stage16_4: Peux-tu écrire un programme qui déplace le chien jusqu'au chat, et qui fait dire «Bonjour» au chat lorsque le chien le rejoint?
+      course3_playlab_stage16_5: Peux-tu ajouter un bloc pour rendre la pieuvre heureuse ?
       course3_playlab_stage16_6: Crée ta propre histoire. Quand tu as fini, clique sur «Terminer» pour laisser tes amis essayer ton histoire sur leur téléphone.
-      course3_playlab_stage17_1: Peux-tu coder un programme pour faire dire à la pieuvre «Bonjour» lorsque l'on clique dessus?
-      course3_playlab_stage17_2: Vous pouvez écrire un programme pour que Waddles se déplace avec les touches haut / bas / gauche / droite pour toucher toutes les cibles ?
-      course3_playlab_stage17_3: Le bloc «Répéter à l’infini» te permet d’exécuter le code en continu. Peux-tu attacher des blocs pour faire monter et descendre ce dinosaure plusieurs fois ?
-      course3_playlab_stage17_4: Peux-tu faire dire «Aïe!» à Waddles et jouer un son de «impact» s'il percute le dinosaure, puis déplacer le avec les flèches pour que cela se produise?
-      course3_playlab_stage17_5: Peux-tu ajouter un bloc qui marque un point lorsque Waddles touche la pieuvre, puis déplaces le avec les flèches jusqu'à ce que tu marques ?
-      course3_playlab_stage17_6: Peux-tu ajouter des blocs pour changer l'arrière-plan et la vitesse de Waddles, puis déplaces-le avec les flèches jusqu'à ce que tu marques?
+      course3_playlab_stage17_1: Peux-tu écrire un programme pour faire dire «Bonjour» à la pieuvre lorsque l'on clique dessus?
+      course3_playlab_stage17_2: Peux-tu écrire un programme pour que Waddles se déplace pour toucher toutes les cibles, en utilisant les touches vers le haut / vers le bas / vers la gauche / vers la droite ?
+      course3_playlab_stage17_3: Le bloc «Répéter à l’infini» te permet d’exécuter le code en continu. Peux-tu attacher des blocs pour faire monter et descendre le dinosaure sans arrêt ?
+      course3_playlab_stage17_4: Peux-tu faire dire «Aïe!» à Waddles et jouer le son «Coup» lorsqu'il percute le dinosaure, puis le déplacer avec les flèches pour que cela se produise?
+      course3_playlab_stage17_5: Peux-tu ajouter un bloc qui marque un point lorsque Waddles croise la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques un point?
+      course3_playlab_stage17_6: Peux-tu ajouter des blocs pour changer l'arrière-plan et la vitesse de Waddles, puis le déplacer avec les flèches jusqu'à ce que tu marques un point?
       course3_playlab_stage17_7: Crée ta propre histoire. Quand tu as fini, clique sur «Terminer» pour laisser tes amis essayer ton histoire sur leur téléphone.
       course4_artist_fwp_challenge1: Essayez d'exécuter ce programme, et apportez-y des modifications pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement différent à la place.)
       courseA_artist_loops12: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
@@ -1300,21 +1300,21 @@ fr:
       flappy_1: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
       flappy_11: Crée ton propre jeu Flappy. Tu peux modifier tous les visuels et toutes les règles, même la gravité. Lorsque tu as fini, clique sur «Terminer» pour laisser tes amis essayer ton jeu sur leur téléphone.
       flappy_11_2018: Crée ton propre jeu Flappy. Tu peux modifier tous les visuels et toutes les règles, même la gravité. Lorsque tu as fini, clique sur «Terminer» pour laisser tes amis essayer ton jeu sur leur téléphone.
-      flappy_1_2018: Attache un bloc au bloc « lors d'un clic », puis cliques sur « Lancer ». Clique sur l'écran ou tapote-le pour déplacer Flappy vers la cible.
+      flappy_1_2018: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
       flappy_2: Maintenant, nous avons rajouté un sol.  Attache un bloc au bloc «Quand touche le sol».  Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase.
-      flappy_2_2018: Maintenant, nous avons rajouté le sol.  Attache un bloc au bloc «Quand touche le sol».  Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase.
+      flappy_2_2018: Maintenant, nous avons rajouté un sol.  Attache un bloc au bloc «Quand touche le sol».  Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase.
       flappy_3: Le bloc « Lors du lancement » te permet d'exécuter le code au démarrage de ton jeu.  Essaie de régler la vitesse et de battre des ailes jusqu’à la cible.
-      flappy_3_2018: Le bloc `quand l'exécution commence` te permet d'exécuter du code quand le jeu démarre. Essaie de définir la vitesse du niveau et vole jusqu'à la cible.
+      flappy_3_2018: Le bloc « Lors du lancement » te permet d'exécuter le code au démarrage de ton jeu.  Essaie de régler la vitesse et de battre des ailes jusqu’à la cible.
       flappy_4: Flappy volera parmi les obstacles, sauf si tu écris du code pour qu’il en heurte quelques uns. Attache un bloc au bloc «Quand heurte un obstacle» Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase dans la première série de tuyaux.
-      flappy_4_2018: Flappy volera parmi les obstacles, sauf si tu écris du code pour qu’il en heurte quelques uns. Attache un bloc au bloc «Au contact d'un obstacle». Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase dans la première série de tuyaux.
+      flappy_4_2018: Flappy volera parmi les obstacles, sauf si tu écris du code pour qu’il en heurte quelques uns. Attache un bloc au bloc «Quand heurte un obstacle» Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase dans la première série de tuyaux.
       flappy_5: Nous allons ajouter un tableau de bord et compter les points lorsque Flappy dépasse les obstacles. Ajoute au bloc « Quand passe un obstacle » et ensuite marque un point en faisant voler Flappy au travers la première série de tuyaux.
-      flappy_5_2018: Ajoutons un tableau de scores, et comptons des points quand Flappy passe des obstacles. Ajoute les bonnes instructions au bloc « au passage d'un obstacle », puis marque des points en faisant voler Flappy entre les tuyaux.
+      flappy_5_2018: Nous allons ajouter un tableau de bord et compter les points lorsque Flappy dépasse les obstacles. Ajoute au bloc « Quand passe un obstacle » et ensuite marque un point en faisant voler Flappy au travers la première série de tuyaux.
       flappy_6: Regarde si tu peux encore marquer un point en changeant l’intensité de la force que Flappy met dans ses battements d'ailes.
-      flappy_6_2018: Regarde si tu peux toujours marquer un point en changeant l'énergie que Flappy met dans ses battements d'ailes.
+      flappy_6_2018: Regarde si tu peux encore marquer un point en changeant l’intensité de la force que Flappy met dans ses battements d'ailes.
       flappy_7: Ensuite, essaie de changer la scène en attachant un autre bloc au bloc « Lors du lancement ».
-      flappy_7_2018: Ensuite, essaie de changer l'arrière-plan en attachant un autre bloc au bloc « quand l'exécution commence ».
+      flappy_7_2018: Ensuite, essaie de changer la scène en attachant un autre bloc au bloc « Lors du lancement ».
       flappy_8: Tu peux changer l'apparence à tout moment, pas seulement au démarrage du jeu. Essaie de choisir un arrière-plan ALÉATOIRE lorsque d'autres événements se produisent, par exemple, lors du dépassement d'un obstacle.
-      flappy_8_2018: Tu peux changer l'apparence à tout moment, pas seulement au lancement du jeu. Essaie de choisir un arrière-plan aléatoire lorsque d'autres événements se produisent, par exemple, lors du passage d'un obstacle.
+      flappy_8_2018: Tu peux changer l'apparence à tout moment, pas seulement au démarrage du jeu. Essaie de choisir un arrière-plan ALÉATOIRE lorsque d'autres événements se produisent, par exemple, lors du dépassement d'un obstacle.
       flappy_9: Pour tout mélanger, lorsque tu heurte un obstacle, plutôt que d’arrêter le jeu, essaie de remettre le score à 0.
       flappy_9_2018: Pour tout mélanger, lorsque tu heurte un obstacle, plutôt que d’arrêter le jeu, essaie de remettre le score à 0.
       frozen circle function in circle: Maintenant, nous allons créer 20 cercles superposés, en tournant de 18 degrés entre chaque cercle.
@@ -1328,7 +1328,6 @@ fr:
       frozen diamond snowflake: Maintenant, créons un nouveau flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme 10 fois, en tournant à droite de 36 degrés entre chacun d’entre eux.
       frozen diamond: Utilise un bloc « Répéter » autour de ces blocs pour créer un parallélogramme. C'est comme un rectangle, mais avec des angles différents. Celui-ci a des angles de 60 degrés et 120 degrés au lieu de tous les angles à 90 degrés.
       frozen freeplay: Tu es officiellement devenu un artiste maître ! Crée un merveilleux paysage hivernal.
-      frozen line: Salut! Je suis Elsa de Arendelle. Aide-moi à créer une seule ligne.
       frozen perpendicular: Maintenant, voyons si nous pouvons créer deux lignes qui soient à un angle de 90 degrés l’une de l’autre. Tu devras utiliser le bloc «Tourner» ainsi que le bloc «Déplacer».
       frozen snowflake branch: Essaie d'utiliser le bloc «Créer une branche de flocon de neige» pour créer trois branches, qui commencent à ressembler à un flocon de neige.
       frozen snowflake full: Maintenant, répétons-le 8 fois pour faire un beau flocon de neige !
@@ -1345,11 +1344,8 @@ fr:
       grade2_CaringForNewPet_10: Amène-moi au cochon !
       grade2_CaringForNewPet_5: Amène-moi au cochon !
       grade2_MakeDogTag_10: Dessine quelque chose d'amusant.
-      grade2_MakeDogTag_3: |-
-        Aide-moi à terminer la maison pour ce chat.
       grade2_MakeDogTag_4: |-
         Cette maison a besoin d'un toit ! Dessine le triangle.  Indice : les trois côtés sont de la même longueur.
-      grade2_MakeDogTag_6: 'Activité libre ! Dessine tout ce que tu veux.'
       grade2_MakeDogTag_8: Maintenant connectons ensemble plusieurs « V » en les dessinant dans une boucle.
       grade2_MakeDogTag_9: Cette fois nous allons les dessiner 24 fois. Ajoute un virage à gauche de 30 degrés à ce code et mets le tout dans un bloc « Répéter ».
       grade2_PuppyLoops_1: Peux-tu m'amener au cochon en utilisant 5 blocs?
@@ -1424,11 +1420,9 @@ fr:
       grade3_Loops_9: Recueille le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel.
       grade3_Loops_TeacherIDo: |-
         Chaque fleur contient une unité de nectar. Récolte le nectar de chacune des fleurs. 
-      grade3_bee_conditionals_quantum2: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar."
       grade3_maze_Loop1: 'Évaluation :  amène moi jusqu''au tournesol en utilisant seulement 5 blocs ! '
       grade3_maze_loops2: "Amène-moi jusqu'au tournesol !\n(Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)"
       grade3_maze_loops3: Amène-moi jusqu'au tournesol !
-      grade3_maze_loops4: Amène-moi jusqu'au tournesol !
       grade3_maze_loops5: Amène-moi jusqu'au tournesol !
       grade3_maze_nestedLoops1: Peux-tu m'amener au cochon en utilisant 5 blocs?
       grade3_maze_nestedLoops2: 'Peux-tu remplacer ces cinq blocs par deux blocs seulement ? (Indice : tu dois créer une boucle en utilisant un bloc «Répéter» pour réussir ce niveau.)'
@@ -1552,11 +1546,7 @@ fr:
         
         Besoin d'un indice ? Clique ici.
       grade5_artist_functionparameters10: "Inspiration pour les Activités libres : Tu as maintenant appris tout ce que tu as besoin de savoir pour faire un motif comme ça ! Si cette photo t’inspire, essaie de faire quelque chose de similaire. Autrement, crée quelque chose d’unique.\n\nTu veux savoir comment notre modèle d'inspiration a été créé ?"
-      grade5_artist_functionparameters11: 'Activité libre : Voici les fonctions que tu as écrites, et même un peu plus pour que tu puisses jouer avec. Dessine quelque chose d''incroyable ! Joue avec la largeur du crayon pour voir la différences entre tes dessins !'
       grade5_artist_functionparameters7: Cette image est similaire à la dernière. Peux-tu utiliser une « Boucle pour » avec ta fonction pour faire ce dessin?
-      grade5_artist_functionparameters8: "Modifions cette fonction « Dessiner un polygone ». Elle a déjà un paramètre « Côtés ». Maintenant, ajoutons un paramètre « Longueur ».\nIndice : le périmètre de chaque forme est de 200 pixels. Te souviens-tu de l'équation pour créer des formes de la même taille quand elles ont un nombre différent de côtés ?"
-      grade5_artist_functionparameters_6: |-
-        Peux-tu terminer ce dessin ? Les côtés de toutes les formes font 100 pixels de long.
       grade5_artist_parameters_squares1: 'Clique sur «Modifier» pour compléter la définition de fonction de « Dessiner un carré » et ajouter un paramètre. Elle doit prendre un paramètre de longueur, à l''instar du triangle. Cette fois, dessine 3 carrés : 25, 50 et 75 pixels de long, chacun à 100 pixels de l’autre.'
       grade5_artist_parameters_triangles2a: As-tu remarqué quelque chose de différent dans ces blocs «Fonction» ? Clique sur « Exécuter » pour voir ce qui se passe.
       grade5_artist_parameters_triangles4: Le code de cette fonction «Triangle» est cassé. Peux-tu modifier la fonction pour le réparer et ensuite faire des triangles mesurant 25, 50 et 75 pixels?
@@ -1612,7 +1602,6 @@ fr:
       grade5_playlab_variables_freeplay: "L’heure de l’activité libre ! Voici toutes les variables avec lesquelles nous avons joué jusqu'à présent, mais aussi quelques-unes de plus au cas où tu les voudrais.\n\nNote qu'il y a maintenant tellement de blocs dans notre boîte à outils qu’ils doivent être organisés !  Ici, nous avons mis chaque pièce dans une catégorie appropriée.  Prends le temps de découvrir tout ce qui est disponible. Lorsque tu as tout révisé, fais un jeu ou une histoire en utilisant les répétitions, les variables et les événements.\n\nIndice : fais défiler le menu pour voir toutes les commandes dans l'espace de travail."
       gradek_artist_loops6: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
       gradek_artist_loopsFP: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
-      k-1 maze 1: Peux-tu me faire aller vers l’Ouest pour rejoindre le cochon ?
       k1stickerfreeplay: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
       level 'grade3_Loops_10: |-
         Utilise une boucle semblable au dernier puzzle, mais ajoute-lui un virage.
@@ -1628,11 +1617,5 @@ fr:
       level 'grade3_Loops_8: Utilise une boucle pour recueillir le nectar et produire du miel.
       level 'grade3_Loops_9: Recueille le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel.
       level grade3_Loops_2: Peux-tu faire la même tâche plus facilement avec une boucle ?
-      scrat 16 (copy 1): Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener avec le plus petit nombre de blocs possible.
-      scrat 16: Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener avec le plus petit nombre de blocs possible.
-      scrat 17: Ok, recommençons pour s'entraîner ! Ce n'est pas très différent, mais attention au mur !
-      scrat 18 (copy 1): Les blocs « Si/Sinon » vérifient une condition et puis font une chose OU une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc.
-      scrat 18: Les blocs « Si/Sinon » vérifient une condition et puis font une chose OU une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc.
       scrat 19 (copy 1): Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès le premier essai?
       scrat 19: Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès le premier essai?
-      scrat 20: Peux-tu ajouter seulement 3 blocs pour m’aider à résoudre un labyrinthe plus complexe? Si tu le fais bien, je peux emprunter n’importe quelle voie sinueuse, peu importe sa longueur. Fais-vite ! La glace fond !

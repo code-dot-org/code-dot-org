@@ -315,7 +315,6 @@ ro:
       signin: 'Loghează-te'
       signup: 'Creează un cont'
       already_registered: 'Eşti deja înregistrat?'
-      pair_programming: 'Programare în perechi'
       team: 'Echipa'
       driver: 'Conducătorul'
       navigator: 'Navigator'

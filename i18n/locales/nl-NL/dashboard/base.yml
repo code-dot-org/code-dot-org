@@ -300,7 +300,6 @@ nl:
       signin: 'Aanmelden'
       signup: 'Maak een account aan'
       already_registered: 'Al aangemeld?'
-      pair_programming: 'Programmeren in Tweetallen'
       team: 'Team'
       driver: 'Stuurprogramma'
       navigator: 'Navigator'
