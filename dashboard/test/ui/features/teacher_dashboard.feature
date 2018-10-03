@@ -71,7 +71,7 @@ Feature: Using the teacher dashboard
     And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
-    When I click selector "a:contains('New Section')" once I see it
+    When I click selector "a:contains('Untitled Section')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
 
     # Assessments tab
