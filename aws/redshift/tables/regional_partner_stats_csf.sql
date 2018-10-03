@@ -35,7 +35,7 @@ select
     CASE WHEN days_to_complete <= 365 and completed_before_training = 0 then 1 else 0 end as completed_365,
     CASE WHEN days_to_start <= 365  then 1 else 0 end as started_365_or_before,
     CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
-  from public.mb_csf_teachers_trained tt
+  from analysis.csf_teachers_trained tt
     left join analysis.csf_started_teachers st on st.user_id = tt.user_id  
     left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id  
   group by 1, 2, 3
@@ -47,7 +47,7 @@ repeat_trainings as
     user_id,
     min(trained_at) as first_training
   from 
-    public.mb_csf_teachers_trained
+    analysis.csf_teachers_trained
   group by 1
 ),
 
@@ -113,6 +113,7 @@ select
          csfa.workshop_id,
          CASE WHEN csfa.subject is null THEN 'Intro Workshop' else csfa.subject END as subject,
          CASE WHEN csfa.trained_by_regional_partner is null then 0 else csfa.trained_by_regional_partner END as trained_by_regional_partner,
+         CASE WHEN csfa.trained_by_regional_partner_truth is null then 0 else csfa.trained_by_regional_partner_truth END as trained_by_regional_partner_truth, -- temporary while we figure out how to present to RPs
          d.trained_at as trained_at,
          coalesce(csfa.workshop_date, d.trained_at)  as workshop_date, 
          CASE WHEN rt.first_training != d.trained_at then 1 else 0 end as repeat_training,
@@ -143,7 +144,7 @@ select
           -- student gender
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
-  FROM public.mb_csf_teachers_trained d 
+  FROM analysis.csf_teachers_trained d 
   JOIN analysis.training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
