@@ -147,12 +147,20 @@ module Pd
       have_cs_license: YES_NO,
       committed: YES_NO,
       willing_to_travel: YES_NO,
+      principal_approval: YES_NO,
+      principal_plan_to_teach: YES_NO,
+      principal_schedule_confirmed: YES_NO,
+      principal_diversity_recruitment: YES_NO,
       # Scholarship requirements
       previous_yearlong_cdo_pd: YES_NO,
       # Bonus Points
       csp_how_offer: [2, 0],
       replace_existing: [5, 0],
       taught_in_past: [2, 0],
+      principal_free_lunch_percent: [5, 0],
+      principal_underrepresented_minority_percent: [5, 0]
     }
+
+
   end
 end
