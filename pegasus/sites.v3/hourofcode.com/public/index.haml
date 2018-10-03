@@ -14,6 +14,10 @@ social:
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
+-# Spanish(Mexico), Spanish(Spain), and Portuguese(Brazil)
+-latam_language_codes = ["la", "es", "pt"]
+-show_latam_videos = DCDO.get("show_latam_videos", nil)
+
 :ruby
   HIGHLIGHTS_CONSTANTS = [
     {:id=>64, :heading_s=>hoc_s(:highlights_constant_trudeau_heading), :short_heading_s=>hoc_s(:highlights_constant_trudeau_short_heading), :image_url_s=>"hoc-trudeau.jpg", :link_text_s=>hoc_s(:highlights_watchvideo), :url_s=>"https://www.youtube.com/watch?v=8QwT58VTj_g"},
@@ -87,8 +91,14 @@ social:
                 = view :index_video
                 %div{style: "clear: both;"}
               #leftbutton.visible-xs
-                %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
-                %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
+                -# If language Spanish or Brazilian Portuguese, show alternate
+                -# promo video for LATAM Hour of Code.
+                - if latam_language_codes.include?(@language) && show_latam_videos
+                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "60", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
+                - else
+                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
         .col-sm-6.col-xs-12.col-md-4
           #textbacking
             %div.front-header-banner{style: "color: white; margin-top: 0px;"}
@@ -101,9 +111,16 @@ social:
                 = view :hoc_action_buttons, hoc_mode: hoc_mode
 
             #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
-              %div.watch-video-small{onclick: "return startVideo();"}
-                =hoc_s(:front_watch_regular_video)
-                %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
+              -# If language Spanish or Brazilian Portuguese, show alternate
+              -# promo video for LATAM Hour of Code.
+              - if latam_language_codes.include?(@language) && show_latam_videos
+                %div.watch-video-small{onclick: "return startLATAMVideo();"}
+                  =hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "25", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
+              - else
+                %div.watch-video-small{onclick: "return startVideo();"}
+                  =hoc_s(:front_watch_regular_video)
+                  %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
           %br/
           %br/
 
@@ -211,6 +228,34 @@ social:
       return;
 
     $("<iframe allowfullscreen frameborder='0' src='https://www.youtube-nocookie.com/embed/KsOIlDT145A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+
+    $("#videodiv").fadeTo(1000, 1);
+    $("#leftbutton").fadeTo(500, 0).remove();
+
+    $("#fullwidth" + currentImage).fadeTo(1000, 0.3);
+
+    videoStarted = true;
+
+    clearInterval(timerId);
+  }
+  $(function() {
+    $('.highlight-item').mouseover(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeIn();
+    });
+
+    $('.highlight-item').mouseleave(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeOut();
+    });
+  });
+
+  function startLATAMVideo()
+  {
+    if (videoStarted)
+      return;
+
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtube-nocookie.com/embed/EGgdCryC8Uo?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

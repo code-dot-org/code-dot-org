@@ -203,7 +203,6 @@ kk:
       signin: 'Кіру'
       signup: 'Жеке парақшаны құрыңыз'
       already_registered: 'Тіркелгенсіз бе?'
-      pair_programming: 'Жұптасып Бағдарламалау'
       team: 'Топ'
       navigator: 'Навигатор'
     popup:

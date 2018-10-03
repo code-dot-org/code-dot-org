@@ -5,9 +5,9 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to organize an Hour of Code assembly or event
+# Cómo organizar una asamblea o evento de la Hora del Código
 
-### Get your entire school or community involved in an Hour of Code!
+### Involucra a toda tu escuela o comunidad en la Hora del Código!
 
 ---
 
@@ -32,17 +32,17 @@ nav: how_to_nav
 
 ## 3. Comparte tu experiencia
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Comparte fotos de tu evento en Facebook y Twitter utilizando el hasthtag **#HourOfCode**.
 
 ---
 
-## Organiza una Noche Familiar de la Hora del Código e invita a los padres a participar
+## Organiza una Noche Familiar de la Hora del Código e invita a los padres de familia a participar
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Esta es una buena manera de implicar a la comunidad más grande y fomentar el apoyo de los padres para la informática en la escuela. Nuestros socios en Noche de Código Familiar han creado un kit de eventos con lista de control de planificación, guion del presentador, correos electrónicos de invitación, carteles, powerpoints y más para organizar tu propio evento. [Haga clic aquí para descargar el kit de eventos](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Considera ser anfitrión de un evento K-5 e invita a padres de familia a unirse con estudiantes para una hora de ciencias de la computación. Esta es una buena manera de implicar a la comunidad más grande y fomentar el apoyo de los padres para la informática en la escuela. Nuestros socios en Noche de Código Familiar han creado un kit de eventos con lista de control de planificación, guion del presentador, correos electrónicos de invitación, carteles, powerpoints y más para organizar tu propio evento. [Haga clic aquí para descargar el kit de eventos](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ---
 
-## Example plan for a school assembly or event
+## Ejemplo de un plan para una asamblea escolar o evento
 
 **Evento:**Reunión global escolar de Inicio de la Semana de las Ciencias de la Computación
 

@@ -309,7 +309,6 @@ is:
       signin: 'Innskráning'
       signup: 'Búa til aðgang'
       already_registered: 'Þegar skráð/ur?'
-      pair_programming: 'Félagaforritun'
       team: 'Félagar'
       driver: 'Ökumaður'
       navigator: 'Leiðsögumaður'

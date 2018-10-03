@@ -59,10 +59,6 @@ ta:
         options:
           KEY:
             '"space"': வெளி
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': வெளி
       gamelab_debugSprite:
         options:
           VAL:

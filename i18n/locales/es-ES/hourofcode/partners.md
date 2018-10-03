@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 La hora del código es conducido por la hora del código ordenador ciencia educación semana asesoramiento y comités de.
 

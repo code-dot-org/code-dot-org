@@ -4,6 +4,7 @@ require 'cdo/properties'
 require 'json'
 require 'securerandom'
 require 'active_support/core_ext/enumerable'
+require 'active_support/core_ext/object/deep_dup'
 
 class Tutorials
   # The Tutorials pages used to source data from the tutorials and beyond_tutorials tables, which were imported from
@@ -26,7 +27,7 @@ class Tutorials
     end
     @contents = CDO.cache.fetch("Tutorials/#{@table}/contents") do
       DB[@table].select(*@column_aliases).all
-    end
+    end.deep_dup
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.

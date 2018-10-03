@@ -406,7 +406,7 @@ it:
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
+          <mutation name="disegna un quadrato 20"></mutation>
           <next>
           <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -3584,7 +3584,7 @@ it:
           </block>
           <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation/>
-          <title name="NAME">move and check</title>
+          <title name="NAME">vai avanti e controlla</title>
           <statement name="STACK">
           <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -8321,16 +8321,16 @@ it:
         courseD_artist_functions3_b: Il ciclo dovrà contenere tutti e 3 i blocchi di partenza.
       courseE_artist_functions4_authored_hint:
         courseD_artist_functions4_a: Prova ad usare una funzione!
-        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `draw a star` (*disegna una stella*) nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
-        courseD_artist_functions4_c: Usa il blocco verde `draw a star` (*disegna una stella*) per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
+        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `disegna una stella` nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
+        courseD_artist_functions4_c: Usa il blocco verde `disegna una stella` per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
       courseE_artist_functions4_2018_authored_hint:
         courseD_artist_functions4_a: Prova ad usare una funzione!
-        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `draw a star` (*disegna una stella*) nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
-        courseD_artist_functions4_c: Usa il blocco verde `draw a star` (*disegna una stella*) per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
+        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `disegna una stella` nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
+        courseD_artist_functions4_c: Usa il blocco verde `disegna una stella` per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
       courseE_artist_functions5_authored_hint:
         courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
         courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
-        courseD_artist_functions5_c: Trascina il codice che disegna la stella nel blocco che definisce la funzione `draw a star` (*disegna una stella*), quindi usa questa funzione per disegnare le tre stelle!
+        courseD_artist_functions5_c: Trascina il codice che disegna la stella nel blocco che definisce la funzione `disegna una stella`, quindi usa questa funzione per disegnare le tre stelle!
       courseE_artist_functions5_2018_authored_hint:
         courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
         courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
@@ -8569,29 +8569,29 @@ it:
         courseE_bee_functions1_c: Ricorda che le svolte a destra e a sinistra devi considerarle dalla prospettiva dell'ape.
       courseE_bee_functions2_authored_hint:
         courseE_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
-        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> richiama la funzione già preparata.
+        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="prendi 2 dosi di nettare"/></block></xml> richiama la funzione già preparata.
         courseE_bee_functions2_c: Per risolvere questo esercizio, devi - per due volte - andare avanti e prendere 2 dosi di nettare.
       courseE_bee_functions2_2018_authored_hint:
         courseE_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
-        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> richiama la funzione già preparata.
+        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="prendi 2 dosi di nettare"/></block></xml> richiama la funzione già preparata.
         courseE_bee_functions2_c: Per risolvere questo esercizio, devi - per due volte - andare avanti e prendere 2 dosi di nettare.
       courseE_bee_functions3_authored_hint:
         courseE_bee_functions3_a: 'In questo esercizio, la funzione deve solo raccogliere il nettare, non deve contenere alcun blocco `vai avanti` o `gira`.'
-        courseE_bee_functions3_b: Richiama la funzione `get 5` (*prendi 5 dosi di nettare*) subito sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_bee_functions3_b: Richiama la funzione `prendi 5` subito sotto al blocco `quando si clicca su "Esegui"`.
         courseE_bee_functions3_c: Il tuo programma principale dovrà controllare tutti i movimenti, mentre la funzione serve solo per gestire le azioni dell'ape ogni volta che raggiunge un fiore.
         courseE_bee_functions3_d: Prova a seguire questo percorso.
       courseE_bee_functions3_2018_authored_hint:
         courseE_bee_functions3_a: 'In questo esercizio, la funzione deve solo raccogliere il nettare, non deve contenere alcun blocco `vai avanti` o `gira`.'
-        courseE_bee_functions3_b: Richiama la funzione `get 5` (*prendi 5 dosi di nettare*) subito sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_bee_functions3_b: Richiama la funzione `prendi 5` subito sotto al blocco `quando si clicca su "Esegui"`.
         courseE_bee_functions3_c: Il tuo programma principale dovrà controllare tutti i movimenti, mentre la funzione serve solo per gestire le azioni dell'ape ogni volta che raggiunge un fiore.
         courseE_bee_functions3_d: Prova a seguire questo percorso.
       courseE_bee_functions4_authored_hint:
         courseE_bee_functions4_a: Il codice presente nella funzione fa girare l'ape, la fa andare avanti a prendere il nettare e la fa tornare sul percorso principale. Non hai quindi bisogno di aggiungere questa parte di movimenti nel programma principale.
-        courseE_bee_functions4_b: Usa il blocco verde `move and get nectar` per richiamare questa funzione.
+        courseE_bee_functions4_b: Usa il blocco verde `vai a prendere il nettare` per richiamare questa funzione.
         courseE_bee_functions4_c: Non devi modificare nulla nella definizione della funzione, la puoi direttamente usare nel tuo programma principale.
       courseE_bee_functions4_2018_authored_hint:
         courseE_bee_functions4_a: Il codice presente nella funzione fa girare l'ape, la fa andare avanti a prendere il nettare e la fa tornare sul percorso principale. Non hai quindi bisogno di aggiungere questa parte di movimenti nel programma principale.
-        courseE_bee_functions4_b: Usa il blocco verde `move and get nectar` per richiamare questa funzione.
+        courseE_bee_functions4_b: Usa il blocco verde `vai a prendere il nettare` per richiamare questa funzione.
         courseE_bee_functions4_c: Non devi modificare nulla nella definizione della funzione, la puoi direttamente usare nel tuo programma principale.
       courseE_bee_functions5_authored_hint:
         courseE_bee_functions5_a: Inserisci i blocchi nella definizione della funzione in modo da risolvere l'esercizio senza dover modificare nulla nel programma principale.
@@ -8720,7 +8720,7 @@ it:
         courseE_farmer_functions2b_b: Non ci sono pannocchie nel percorso intermedio, lì la contadina deve solo andare avanti e girare.
         courseE_farmer_functions2b_c: Hai bisogno di due differenti blocchi `ripeti fino a che` per raccogliere tutti gli ortaggi.
       courseE_farmer_functions2ba_authored_hint:
-        courseE_farmer_functions2ba_a: Usa il blocco verde `corn and pumpkin`(*pannocchie e zucca*) per richiamare questa funzione.
+        courseE_farmer_functions2ba_a: Usa il blocco verde `pannocchie e zucca` per richiamare questa funzione.
         courseE_farmer_functions2ba_b: Per vedere come funziona questa funzione, aggancia al blocco arancione `quando si clicca su "Esegui"` tutti i blocchi che trovi sparpagliati nell'area di lavoro.
       courseE_farmer_functions2ba_2018_authored_hint:
         courseE_farmer_functions2ba_a: Usa il blocco verde `prendi tutte le zucche` per essere sicuro di raccoglierle tutte!
@@ -8733,11 +8733,11 @@ it:
       courseE_farmer_functions4b_authored_hint:
         courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseE_farmer_functions4b_b: Ricordati di girare dopo ogni tratta del percorso.
-        courseE_farmer_functions4b_c: Il blocco verde `corn and pumpkin` (*pannocchie e zucca*) si trova nella scheda funzioni della casella degli attrezzi.
+        courseE_farmer_functions4b_c: Il blocco verde `pannocchie e zucca` si trova nella scheda funzioni della casella degli attrezzi.
       courseE_farmer_functions4b_2018_authored_hint:
         courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseE_farmer_functions4b_b: Ricordati di girare dopo ogni tratta del percorso.
-        courseE_farmer_functions4b_c: Il blocco verde `corn and pumpkin` (*pannocchie e zucca*) si trova nella scheda funzioni della casella degli attrezzi.
+        courseE_farmer_functions4b_c: Il blocco verde `pannocchie e zucca` si trova nella scheda funzioni della casella degli attrezzi.
       courseE_farmer_functions5c_authored_hint:
         courseE_farmer_functions5c_a: In questo esercizio, ci sono altri schemi ripetuti che puoi ricondurre ad un ciclo?
         courseE_farmer_functions5c_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
@@ -10755,7 +10755,7 @@ it:
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"></mutation>
+          <mutation name="vai avanti e controlla"></mutation>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnRight</title>
@@ -10857,7 +10857,7 @@ it:
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"></mutation>
+          <mutation name="vai avanti e controlla"></mutation>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnRight</title>

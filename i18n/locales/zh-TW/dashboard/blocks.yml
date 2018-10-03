@@ -78,7 +78,7 @@ zh-TW:
         options:
           LOCATION:
             "{x: 100, y: 200}": 到左方
-            "{x: 300, y: 200}": 向右
+            "{x: 300, y: 200}": 到右方
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
       Dancelab_layoutSprites:
         options:
@@ -88,7 +88,7 @@ zh-TW:
         options:
           LOCATION:
             "{x: 100, y: 200}": 到左方
-            "{x: 300, y: 200}": 向右
+            "{x: 300, y: 200}": 到右方
       Dancelab_randomColor:
         text: 隨機顏色
       Dancelab_setBackgroundEffect:
@@ -132,15 +132,7 @@ zh-TW:
             '"up"': 到上方
             '"down"': 到下方
             '"left"': 到左方
-            '"right"': 向右
-            '"space"': 太空
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': 到上方
-            '"down"': 到下方
-            '"left"': 到左方
-            '"right"': 向右
+            '"right"': 到右方
             '"space"': 太空
       gamelab_changePropBy:
         options:
@@ -166,7 +158,7 @@ zh-TW:
       gamelab_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': 向右
+            '"right"': 到右方
             '"left"': 到左方
       gamelab_randColor:
         text: 隨機顏色
@@ -202,7 +194,7 @@ zh-TW:
       gamelab_turn:
         options:
           DIRECTION:
-            '"right"': 向右
+            '"right"': 到右方
             '"left"': 到左方
       gamelab_whenKey:
         options:
@@ -210,7 +202,7 @@ zh-TW:
             '"up"': 到上方
             '"down"': 到下方
             '"left"': 到左方
-            '"right"': 向右
+            '"right"': 到右方
             '"space"': 太空
       gamelab_whenPressedAndReleased:
         options:
@@ -218,14 +210,14 @@ zh-TW:
             "'up'": 到上方
             "'down'": 到下方
             "'left'": 到左方
-            "'right'": 向右
+            "'right'": 到右方
       gamelab_whileKey:
         options:
           KEY:
             '"up"': 到上方
             '"down"': 到下方
             '"left"': 到左方
-            '"right"': 向右
+            '"right"': 到右方
             '"space"': 太空
       Mikelab_changePropBy:
         options:
@@ -233,6 +225,11 @@ zh-TW:
             '"scale"': 尺寸
             '"x"': x 座標
             '"y"': y 座標
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": 到左方
+            "{x: 300, y: 200}": 到右方
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -254,7 +251,7 @@ zh-TW:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': 向右
+            '"right"': 到右方
             '"left"': 到左方
       Mikelab_whenKeyPressed:
         options:

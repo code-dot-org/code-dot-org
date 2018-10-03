@@ -107,14 +107,6 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': вгору
-            '"down"': вниз
-            '"left"': ліворуч
-            '"right"': праворуч
-            '"space"': космос
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -206,6 +198,11 @@ uk:
             '"scale"': розмір
             '"x"': позиція по осі x
             '"y"': позиція по осі y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
       Mikelab_getProp:
         options:
           PROPERTY:

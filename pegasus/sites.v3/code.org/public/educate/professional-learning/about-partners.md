@@ -12,13 +12,23 @@ theme: responsive
 
 # About the Code.org Regional Partner Program
 
-Code.org works with United States based organizations, as partners, to help spread computer science in a local, sustainable fashion. Regional Partner organizations serve as K-12 computer science hubs for their region, offering professional learning opportunities for teachers and helping to build a strong local community. 
+Code.org partners with United States based organizations such as regional education units, nonprofits and universities who serve as K-12 computer science hubs in each region.
 
-Our Regional Partners include regional education units, nonprofits, and universities with existing, positive relationships with nearby school districts and the local education community.
+**Professional Learning Programs**
+
+Our Regional Partners run the Professional Learning Programs locally. They host high quality  workshops for K-12 teachers with our experienced Code.org-accredited facilitators. 
+
+**Administrators and District Partnerships**
+
+Regional Partners work with local districts and schools to help bring computer science courses to schools, particularly schools without computer science offerings. 
+
+**Community**
+
+Regional Partners provide opportunities for teachers to be part of a local community of computer science educators (or join an existing community).
 
 ## Where does Code.org have partners?
 
-Click on a pin for more information about the region and the Regional Partner who serves that area.
+We are proud to partner with organizations from Alaska to Florida and almost every state in between! Click on a pin for more information about the region and the Regional Partner who serves that area.
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
