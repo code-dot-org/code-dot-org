@@ -140,12 +140,12 @@ def localize_level_content
       end
 
       ## Instructions
-      if short_instructions = config["properties"]["short_instructions"]
+      if short_instructions = (config["properties"]["short_instructions"] || config["properties"]["instructions"])
         level_short_instructions[level_name] = sanitize(short_instructions)
       end
 
       ## Markdown Instructions
-      if long_instructions = config["properties"]["long_instructions"]
+      if long_instructions = (config["properties"]["long_instructions"] || config["properties"]["markdown_instructions"])
         level_long_instructions[level_name] = sanitize(long_instructions)
       end
 

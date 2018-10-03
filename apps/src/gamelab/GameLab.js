@@ -6,6 +6,7 @@ import {
   changeInterfaceMode,
   viewAnimationJson,
   setMobileControlsConfig,
+  setSong
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -235,6 +236,10 @@ GameLab.prototype.init = function (config) {
     }
   }
 
+  if (this.level.defaultSong) {
+    getStore().dispatch(setSong(this.level.defaultSong));
+  }
+
   config.usesAssets = true;
 
   this.studioApp_.labUserId = config.labUserId;
@@ -401,6 +406,14 @@ GameLab.prototype.init = function (config) {
     (config.initialAnimationList && !config.embed && !config.hasContainedLevels) ?
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  // Pre-register all audio preloads with our Sounds API, which will load
+  // them into memory so they can play immediately:
+  $("link[as=fetch][rel=preload]").each((i, { href }) => {
+    const soundConfig = { id: href };
+    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
+    Sounds.getSingleton().register(soundConfig);
+  });
 
   this.loadValidationCodeIfNeeded_();
   const loader = this.studioApp_.loadLibraries(this.level.helperLibraries).then(() => ReactDOM.render((
