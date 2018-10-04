@@ -9,7 +9,7 @@ module PosteAssertions
   # includes some additional constraints, like a limited set of allowed senders.
   #
   # @param [Mail::Message] mail as returned by an ActionMailer::Base's mail() method
-  def assert_deliverable(mail)
+  def assert_sendable(mail)
     delivery_method = Poste2::DeliveryMethod.new
     delivery_id = delivery_method.deliver! mail
   ensure
