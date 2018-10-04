@@ -1,6 +1,6 @@
 class Pd::RegionalPartnerContactMailer < ActionMailer::Base
   NO_REPLY = 'Code.org <noreply@code.org>'
-  default from: 'Anthonette Peña <teacher@code.org>'
+  default from: 'Anthonette Peña <partner@code.org>'
 
   def matched(form, rp_pm)
     @form = form
