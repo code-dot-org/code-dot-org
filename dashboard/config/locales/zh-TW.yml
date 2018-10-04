@@ -18,6 +18,7 @@ zh-TW:
       user:
         name: 顯示名稱
         name_example: 顯示名稱<br/>（例如 Cool Coder 或是 Jane S）
+        other_name_example: 要顯示的名稱<br/>（例如 Ms. Smith）
         email: 電子信箱
         parent_email: 家長或監護人的電子郵件
         personal_email: 個人電子郵件位址 <a href="%{url}"> (如果您沒有電子郵件位址請按這裡)</a>
@@ -29,6 +30,8 @@ zh-TW:
         age: 年齡
         gender: 性別
         edit_header: 編輯帳戶資料
+        finish_sign_up_header: 已成功創建你的帳戶
+        finish_sign_up_subheader: 填妥下面的資料以完成帳戶申請。
         error:
           future: 不能選擇將來的時間
   hello: Hello world
@@ -96,6 +99,8 @@ zh-TW:
     not_linked: 抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。
     use_clever: 對不起，您的 Code.org 帳號無法連結到您的 %{provider}。請改從 Clever 平台登入。
     unable_to_connect_provider: 無法將你的 Code.org 帳戶連接到 %{provider} ，麻煩再試一次。
+    already_in_use: 你的 %{provider} 已與 Code.org 的另一個帳戶綁定。
+    already_linked: 你的 %{provider} 已與 Code.org 的另一個帳戶綁定。
   signup_form:
     student_count: "%{count} 名學生已經註冊。"
     teacher_count: "%{count} 名教師已經註冊。"
@@ -125,6 +130,7 @@ zh-TW:
     mismatch_password: 你輸入的兩次密碼不一致
     agree_tos_privacy: 我同意<a href='http://code.org/tos'>服務條款</a>以及<a href='http://code.org/privacy'>隱私政策</a>。
     under_13_consent: 如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。
+    student_consent: '我確定我的監護人已允許我使用 Code.org 提供的服務。 '
     agree_us_website: 我同意使用位於美國境內的網站。
     my_data_to_us: 我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。
     student_terms: 我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a
@@ -144,6 +150,7 @@ zh-TW:
     email_preference_yes: 是
     email_preference_no: 否
     email_preference_required: 你必須指定一個信箱地址。
+    create_user_type: 創建帳戶，類型為
   school_info:
     title: 學校資訊（非必填）
     school_country: 學校所屬國家
@@ -278,9 +285,7 @@ zh-TW:
         applab: 製作一個 App Lab app
         gamelab: 製作遊戲實驗室專案
         weblab: 製作網路實驗室 (測試版) 專案
-      home: 主頁
       my_dashboard: 我的控制台
-      courses: 課程
       course_catalog: 課程目錄
       project_gallery: 所有專案
       sections: 學習小組
@@ -315,6 +320,15 @@ zh-TW:
       help_us: 幫助我們
       teach: 教育
       about: 關於
+    create_button:
+      create: 建立
+      applab: App Lab
+      artist: 藝術家
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: 像素鳥
+      view_all: 瀏覽所有專案…
     user:
       classroom: 教師主頁
       district_dashboard: 分區控制台
@@ -325,7 +339,6 @@ zh-TW:
       signin: 登入
       signup: 建立一個帳戶
       already_registered: 已經註冊過了？
-      pair_programming: 小組編程
       team: 團隊
       driver: 已登入
       navigator: 夥伴
@@ -637,6 +650,8 @@ zh-TW:
     hoc-encryption:
       title: 簡單加密
     weblab:
+      title: Web Lab (beta)
+      body: Web Lab 是個編程環境，透過它，你可以用 HTML 和 CSS 來建立簡單的網頁，然後快速地把你設計好的網站發佈出去。
       audience: 年齡 13+
       cta: 學習如何做
     frozen:
@@ -977,10 +992,17 @@ zh-TW:
   pd:
     form_labels:
       first_name: 名字
+      first_name_preferred: 名字
+      last_name: 姓氏
       email: 電子信箱
+      email_alternate: 備用信箱
+      gender: 性別
       school_name: 學校名稱
       school_city: 學校所在城市
       school_country: 學校所屬國家
+      ages: 你今年教授的學生的年齡？
+      subjects: 你今年教授的科目？
+      resources: 你使用哪些資源來教授計算機科學？
       robotics: 你使用的機器人設備是？
       workshop_organizer: 工作室發起人
       workshop_facilitator: 工作室主持人
