@@ -616,6 +616,7 @@ FactoryGirl.define do
         job_title: 'title',
         grade_levels: ['High School'],
         school_state: 'NY',
+        notes: 'Sample notes to regional partner',
         opt_in: 'Yes'
       }
     end

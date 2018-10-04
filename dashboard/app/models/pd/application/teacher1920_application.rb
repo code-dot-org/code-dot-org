@@ -2,25 +2,24 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                  :integer          not null, primary key
+#  user_id             :integer
+#  type                :string(255)      not null
+#  application_year    :string(255)      not null
+#  application_type    :string(255)      not null
+#  regional_partner_id :integer
+#  status              :string(255)
+#  locked_at           :datetime
+#  notes               :text(65535)
+#  form_data           :text(65535)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  course              :string(255)
+#  response_scores     :text(65535)
+#  application_guid    :string(255)
+#  accepted_at         :datetime
+#  properties          :text(65535)
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -37,6 +36,8 @@
 module Pd::Application
   class Teacher1920Application < TeacherApplicationBase
     include Pd::Teacher1920ApplicationConstants
+
+    validates_uniqueness_of :user_id
 
     serialized_attrs %w(status_log)
 
@@ -70,7 +71,11 @@ module Pd::Application
     before_save :log_status, if: -> {status_changed?}
 
     def should_send_decision_email?
-      AUTO_EMAIL_STATUSES.include?(status)
+      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+        false
+      else
+        AUTO_EMAIL_STATUSES.include?(status)
+      end
     end
 
     def log_status
@@ -102,7 +107,7 @@ module Pd::Application
       return nil unless regional_partner && regional_partner.contact_email.present?
 
       regional_partner.contact_name.present? ?
-        "#{regional_partner.contact_name} <#{regional_partner.contact_email}>" :
+        "#{regional_partner.contact_name} <#{regional_partner.contact_email_with_backup}>" :
         regional_partner.contact_email_with_backup
     end
 
@@ -116,6 +121,15 @@ module Pd::Application
 
     def accepted?
       status.start_with? 'accepted'
+    end
+
+    # @override
+    def queue_email(email_type, deliver_now: false)
+      if email_type == :principal_approval_completed_partner && formatted_partner_contact_email.nil?
+        CDO.log.info "Skipping principal_approval_completed_partner for application id #{id}"
+      else
+        super
+      end
     end
 
     # @override
