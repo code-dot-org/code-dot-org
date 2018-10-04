@@ -1484,8 +1484,8 @@ class User < ActiveRecord::Base
   def most_recently_assigned_user_script
     user_scripts.
     where("assigned_at").
-    sort_by(&:assigned_at).
-    last
+    order(assigned_at: :desc).
+    first
   end
 
   def most_recently_assigned_script
@@ -1495,8 +1495,8 @@ class User < ActiveRecord::Base
   def user_script_with_most_recent_progress
     user_scripts.
     where("last_progress_at").
-    sort_by(&:last_progress_at).
-    last
+    order(last_progress_at: :desc).
+    first
   end
 
   def script_with_most_recent_progress
