@@ -253,6 +253,9 @@ Dance.prototype.initInterpreter = function () {
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
     },
+    getCurrentDance: (spriteIndex) => {
+      return nativeAPI.getCurrentDance(sprites[spriteIndex]);
+    },
     changeMoveLR: (spriteIndex, move, dir) => {
       nativeAPI.changeMoveLR(sprites[spriteIndex], move, dir);
     },
@@ -298,10 +301,15 @@ Dance.prototype.initInterpreter = function () {
     stopMapping: (spriteIndex, property, val) => {
       return nativeAPI.stopMapping(sprites[spriteIndex], property, val);
     },
-    // TODO: ifDanceIs: function ifDanceIs(sprite, dance, ifStatement, elseStatement),
-    changeColorBy: () => {}, // TODO: function changeColorBy(input, method, amount),
-    mixColors: () => {}, // TODO: function mixColors(color1, color2),
-    randomColor: () => {}, // TODO: function randomColor(),
+    changeColorBy: (input, method, amount) => {
+      return nativeAPI.changeColorBy(input, method, amount);
+    },
+    mixColors: (color1, color2) => {
+      return nativeAPI.mixColors(color1, color2);
+    },
+    randomColor: () => {
+      return nativeAPI.randomColor();
+    },
   };
 
   let code = require('!!raw-loader!./p5.dance.interpreted');
