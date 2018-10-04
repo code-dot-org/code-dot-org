@@ -224,6 +224,7 @@ GameLab.prototype.init = function (config) {
 
   this.level.helperLibraries = this.level.helperLibraries || [];
   this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
+  this.level.isDanceLab = this.isDanceLab;
 
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
