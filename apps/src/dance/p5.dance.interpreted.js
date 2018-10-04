@@ -4,6 +4,7 @@
 var songs = {
   macklemore: {
     url: 'https://curriculum.code.org/media/uploads/chu.mp3',
+    duration: 90,
     bpm: 146,
     delay: 0.2, // Seconds to delay before calculating measures
     verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
@@ -11,6 +12,7 @@ var songs = {
   },
   macklemore90: {
     url: 'https://curriculum.code.org/media/uploads/hold.mp3',
+    duration: 90,
     bpm: 146,
     delay: 0.0, // Seconds to delay before calculating measures
     verse: [0, 26.3], // Array of timestamps in seconds where verses occur
@@ -18,6 +20,7 @@ var songs = {
   },
   hammer: {
     url: 'https://curriculum.code.org/media/uploads/touch.mp3',
+    duration: 90,
     bpm: 133,
     delay: 2.32, // Seconds to delay before calculating measures
     verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
@@ -25,6 +28,7 @@ var songs = {
   },
   peas: {
     url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
+    duration: 90,
     bpm: 128,
     delay: 0.0, // Seconds to delay before calculating measures
     verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
@@ -52,6 +56,20 @@ var MOVES = {
 // Event handlers, loops, and callbacks
 var inputEvents = [];
 var setupCallbacks = [];
+
+function nMeasures(n) {
+  return (240 * n) / song_meta.bpm;
+}
+
+function getCueList() {
+  var timestamps = [];
+  for (var i = 0; i < inputEvents.length; i++) {
+    if (inputEvents[i].type === 'cue') {
+      timestamps.push(inputEvents[i].param);
+    }
+  }
+  return timestamps;
+}
 
 function registerSetup(callback) {
   setupCallbacks.push(callback);
@@ -83,6 +101,14 @@ function whenSetupSong(song, event) {
   setupCallbacks.push(event);
 }
 
+function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
+  if (getCurrentDance(sprite) == Number(dance)) {
+    ifStatement();
+  } else {
+    elseStatement();
+  }
+}
+
 function whenKey(key, event) {
   inputEvents.push({
     type: 'p5.keyWentDown',
@@ -100,45 +126,42 @@ function whenPeak(range, event) {
 }
 
 function atTimestamp(timestamp, unit, event) {
-  registerSetup(function () {
-    if (unit == "measures") {
-      timestamp = nMeasures(timestamp);
-      timestamp += song_meta.delay;
-    }
-    //TODO: Dance.song.addCue(0, timestamp, event);
+  if (unit === "measures") {
+    timestamp = nMeasures(timestamp);
+    timestamp += song_meta.delay;
+  }
+  inputEvents.push({
+    type: 'cue',
+    event: event,
+    param: timestamp
   });
 }
 
 function everySeconds(n, unit, event) {
-  registerSetup(function () {
-    if (unit == "measures") n = nMeasures(n);
-    if (n > 0) {
-      var timestamp = song_meta.delay;
-      while (timestamp < Dance.song.duration()) {
-        //TODO: Dance.song.addCue(0, timestamp, event);
-        timestamp += n;
-      }
-    }
-  });
+  everySecondsRange(n, unit, 0, song_meta.duration || 90, event);
 }
 
 function everySecondsRange(n, unit, start, stop, event) {
-  registerSetup(function () {
-    if (unit == "measures") n = nMeasures(n);
-    if (n > 0) {
-      var timestamp = start;
-      while (timestamp < stop) {
-        //TODO: Dance.song.addCue(0, timestamp, event);
-        timestamp += n;
-      }
+  if (unit === "measures") n = nMeasures(n);
+  if (n > 0) {
+    var timestamp = start;
+    while (timestamp < stop) {
+      inputEvents.push({
+        type: 'cue',
+        event: event,
+        param: timestamp
+      });
+      timestamp += n;
     }
-  });
+  }
 }
 
 function everyVerseChorus(unit, event) {
-  registerSetup(function () {
-    song_meta[unit].forEach(function (timestamp) {
-      //TODO: Dance.song.addCue(0, timestamp, event);
+  song_meta[unit].forEach(function (timestamp) {
+    inputEvents.push({
+      type: 'cue',
+      event: event,
+      param: timestamp
     });
   });
 }
