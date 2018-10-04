@@ -251,7 +251,6 @@ el:
       signin: 'Σύνδεση'
       signup: 'Δημιουργήστε ένα λογαριασμό'
       already_registered: 'Έχετε εγγραφεί ήδη;'
-      pair_programming: 'Προγραμματισμός κατά ζεύγη'
       team: 'Ομάδα'
       driver: 'Οδηγός-αρχηγός'
       navigator: 'Πλοηγός'

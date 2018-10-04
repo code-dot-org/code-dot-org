@@ -297,7 +297,6 @@ fi:
       signin: 'Kirjaudu sisään'
       signup: 'Luo käyttäjätili'
       already_registered: 'Jo rekisteröitynyt?'
-      pair_programming: 'Pariohjelmointi'
       team: 'Tiimi'
       driver: 'Johtaja'
       navigator: 'Neuvonantaja'

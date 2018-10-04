@@ -319,7 +319,6 @@ sk:
       signin: 'Prihlásiť sa'
       signup: 'Vytvoriť účet'
       already_registered: 'Ste už zaregistrovaný?'
-      pair_programming: 'Programovanie v páre'
       team: 'Tím'
       driver: 'Prihlásený'
       navigator: 'Navigátor'

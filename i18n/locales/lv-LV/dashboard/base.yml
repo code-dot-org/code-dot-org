@@ -194,7 +194,6 @@ lv:
       logout: 'Izrakstīties'
       signin: 'Pierakstīties'
       already_registered: 'Jau reģistrējies?'
-      pair_programming: 'Pāru Programmēšana'
     popup:
       progress_for_user: "%{name} panākumi"
       progress: 'Jūsu progress'

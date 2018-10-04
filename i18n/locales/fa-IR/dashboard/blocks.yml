@@ -95,14 +95,6 @@ fa:
             '"left"': سمت چپ
             '"right"': سمت راست
             '"space"': فضا
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': بالا
-            '"down"': پایین
-            '"left"': سمت چپ
-            '"right"': سمت راست
-            '"space"': فضا
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -182,6 +174,11 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": سمت چپ
+            "{x: 300, y: 200}": سمت راست
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -209,7 +206,9 @@ fa:
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
             '"w"': غرب
+            '"a"': الف
             '"s"': جنوب
+            '"d"': د
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -218,7 +217,9 @@ fa:
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
             '"w"': غرب
+            '"a"': الف
             '"s"': جنوب
+            '"d"': د
       Mikelab_whileKeyPressed:
         options:
           KEY:

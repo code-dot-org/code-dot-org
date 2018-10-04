@@ -26,7 +26,7 @@ ga:
       2-3 Artist Functions 12 a: "Tá feidhmeanna an-áisiúil nuair is gá rud éigin casta a tharraingt arís is arís eile. An féidir leat an fheidhm \"draw a flower\" a úsáid chun an soitheach plandaí a líonadh? Tá na plandaí 100 picteilín ó chéile."
       2-3 Artist Functions 12: "Tá feidhmeanna an-áisiúil nuair is gá rud éigin casta a tharraingt arís is arís eile. An féidir leat an fheidhm \"draw a flower\" a úsáid chun an soitheach plandaí a líonadh? Tá na plandaí 100 picteilín ó chéile."
       2-3 Artist Functions 2: "Is féidir leat blocanna nua a chruthú le feidhmeanna! Chuireamar na blocanna a theastaíonn uait chun cearnóg a tharraingt isteach i bhfeidhm nua darb ainm \"draw a square\". Anois, bain úsáid as an bhfeidhm nua seo chun na spéaclaí a chruthú. Tá na cearnóga 75 picteilín ó chéile."
-      2-3 Artist Functions 3 a: "Cuir an fheidhm \"tarraing cearnóg\" in eagar chun spéaclaí le frámaí a tharraingt, 115 picteilín ar gach taobh. \\r\n\\r\nTá na cearnóga 45 picteilín ó chéile faoi láthair."
+      2-3 Artist Functions 3 a: "Cuir an fheidhm \"tarraing cearnóg\" in eagar chun spéaclaí le frámaí a tharraingt, 115 picteilín ar gach taobh. \n\nTá na cearnóga 45 picteilín ó chéile faoi láthair."
       2-3 Artist Functions 3: "Athraigh an fheidhm sa chaoi go ndéanfaidh sí cearnóg níos mó, le gach taobh 115 picteilín ar fad. Úsáid í chun spéaclaí níos mó a tharraingt. Tá na cearnóga 45 picteilín ó chéile anois."
       2-3 Artist Functions 4 a: Anois, cuir an fheidhm isteach i lúb agus cuir cor breise leis chun na trí chearnóg seo a tharraingt.
       2-3 Artist Functions 4: Anois, cuir an fheidhm isteach i lúb chun na trí chearnóg seo a tharraingt.
@@ -43,8 +43,8 @@ ga:
       2-3 Artist Nested Loops 4: "Athdhéan an muileata seo 12 uair chun bláth a tharraingt! Nóta: Úsáidfimid an uillinn chéanna a d'úsáideamar leis na 12 triantán. Cad é an uillinn sin?"
       2-3 Artist Nested Loops 5: "Líon isteach na fuinneoga ar an bhfoirgneamh seo le lúb neadaithe. Tá na fuinneoga 20 picteilín ar fad agus 20 picteilín ó chéile."
       2-3 Artist Nested Loops 7: "Athdhéan an triantán seo deich n-uaire chun an ghrian a tharraingt. Caithfidh tú léim agus casadh tar éis gach triantán. Is féidir leat an uillinn cheart a dhéanamh amach mar an líon céimeanna i gciorcal roinnte ar an líon triantán."
-      2-3 Artist Nested Loops 8: "Anois cuirimis féar lenár bpictiúr. \\r\n\\r\nTá na toim fhéir 50 picteilín ó chéile."
-      2-3 Artist Nested Loops 9: "Anois cuirimis bláth leis an bpictiúr.\\r\n\\r\nAthdhéan an muileata 12 uair chun an bláth a tharraingt."
+      2-3 Artist Nested Loops 8: "Anois cuirimis féar lenár bpictiúr. Tá na toim fhéir 50 picteilín ó chéile."
+      2-3 Artist Nested Loops 9: "Anois cuirimis bláth leis an bpictiúr. Athdhéan an muileata 12 uair chun an bláth a tharraingt."
       2-3 Artist Nested Loops Free Play: Saorimirt - tarraing pictiúr álainn le lúba neadaithe.
       2-3 Bee Conditionals 11: "Ní mé in áit an dhá neachtar nó áit an trí neachtar atá mé! Cabhraigh liom eitilt timpeall an ghoirt agus neachtar a bhailiú ó na bláthanna ina bhfuil sé. "
       2-3 Bee Conditionals 13: |-
@@ -154,7 +154,7 @@ ga:
       NEW Course 4 Artist Vars 12: Anois, athchruthaigh an t-algartam ón leibhéal is déanaí agus cruthaigh peintegán le gach taobh 150 picteilín ar fad.
       NEW Course 4 Artist Vars 4: "Déanaimis arís é! An féidir leat luach 60 a chur ar an athróg \"length\" chun an patrún álainn seo a dhéanamh?"
       NEW Course 4 Artist Vars 6: "Tarraing an grúpa peinteagán seo, gach taobh 100 picteilín ar fad, trí luach oiriúnach a chur ar an athróg \"length\", agus an athróg a chur sna háiteanna cearta sa chód. Ní gá duit an athróg a shocrú ach uair amháin, agus úsáidfidh an cód an luach ceart i ngach uile áit."
-      Overworld Move to Sheep: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun an caora a shroicheadh.
+      Overworld Move to Sheep: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun an chaora a shroicheadh.
       Overworld Move to Sheep_2018: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun an chaora a shroicheadh.
       Testing Quantum Farmer: "Féach sin anois! Níl a fhios agam cé mhéad sluasaid atá de dhíth. An féidir leat an bloc \"líon\" a úsáid go dtí go mbeidh an talamh réidh?  "
       conditionals_forvideo_harvester: Bailigh an t-arbhar agus an leitís go léir, ansin bain an puimcín.
@@ -316,7 +316,7 @@ ga:
       frozen square snowflake: An féidir leat calóg shneachta a chruthú? Bain úsáid as an mbloc "athdhéan" chun deich gcearnóg a tharraingt, agus an bloc "cas" le casadh 36 céim tar éis gach cearnóg.
       grade1_artist_loops6: "**Dúshlán:** Garraí faoi cheilt atá ann! Siúlaimis thart."
       grade2_CaringForNewPet_0: Sa dúshlán seo, tarraing na blocanna go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
-      grade2_CaringForNewPet_1: An féidir leat cabhrú liom greim a fháil ar an muc dhána sin? Ceangail cúpla bloc "téigh ar aghaidh" leis an mbloc "nuair a ritear é" agus cliceáil "Rith". 
+      grade2_CaringForNewPet_1: Tarraing bloc "téigh ar aghaidh" breise as an mbosca uirlisí chun an cód a chur i gcrích.
       grade2_CaringForNewPet_11: '*"Tóg go bog é agus cabhraigh liom an mhuc dhána a aimsiú."*'
       grade2_MakeDogTag_8: Anois, ceanglaímis go leor V-anna le chéile i lúb.
       grade2_PuppyLoops_10: |-

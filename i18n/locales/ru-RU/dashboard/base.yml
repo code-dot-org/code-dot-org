@@ -313,7 +313,6 @@ ru:
       signin: 'Вход'
       signup: 'Создать учетную запись'
       already_registered: 'Уже зарегистрированы?'
-      pair_programming: 'Программирование в парах'
       team: 'Команда'
       driver: 'Водитель'
       navigator: 'Штурман'

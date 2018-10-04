@@ -52,7 +52,7 @@ id:
       2-3 Artist Functions 11 a: "Kami telah mengganti nama fungsi ' menggambar sebuah persegi empat '\nke ' menggambar sebuah persegi enam ', tetapi masi memberi kita persegi empat! \\r\n\\r\ndapatkah\nkamu memodifikasi fungsi ' menggambar sebuah segi enam ' untuk menggambar segi enam   dengan sisinya berukuran 50 piksel?\n\\r\n\\r\nmenggambar sebuah gambar menggunakan fungsi baru!"
       2-3 Artist Functions 11.5: "Ini sama saja dengan fungsi ' menggambar sebuah segienam'. \\r\n\\r\napa yang terjadi jika anda mengulang program sebanyak 6 kali,\nmengubang 60 derajat setiap anda mengulang?"
       2-3 Artist Functions 11: "Kami telah mengganti nama fungsi ' menggambar sebuah persegi empat '\nke ' menggambar sebuah persegi enam ', tetapi masi memberi kita persegi empat! \\r\n\\r\ndapatkah\nkamu memodifikasi fungsi ' menggambar sebuah segi enam ' untuk menggambar segi enam   dengan sisinya berukuran 50 piksel?\n\\r\n\\r\nmenggambar sebuah gambar menggunakan fungsi baru!"
-      2-3 Artist Functions 12 Mike: "Fungsi sangat baik untuk menggambar hal yang rumit berulang kali. Dapatkah Anda menggunakan fungsi \"menggambar bunga\" untuk mengisi seluruh kotak perkebunan? (Petunjuk: semua tanaman dipisahkan dengan jarak 100 piksel)  "
+      2-3 Artist Functions 12 Mike: "Fungsi yang benar-benar bagus untuk\ngambar beberapa hal yang rumit. \\r\n\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi untuk sisa fill planter box?\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 12 a: "Fungsi yang benar-benar bagus untuk\ngambar beberapa hal yang rumit. \\r\n\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi untuk sisa fill planter box?\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 12: "Fungsi yang benar-benar bagus untuk\ngambar beberapa hal yang rumit. \\r\n\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi untuk sisa fill planter box?\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 2: "Fungsi membiarkan anda mendefinisikan blok baru! \\r\n\\r\nKami sudah memindahkan blok yang diperlukan untuk menggambar persegi menjadi\nfungsi yang disebut `menggambar persegi`. Kali ini, gunakan fungsi `menggambar persegi`\nuntuk membuat kacamata. \\r\n\\r\nPersegi itu berjauhan 75 piksel."
@@ -67,7 +67,7 @@ id:
         \r
         <br/>\r
         
-      2-3 Artist Loops New 10: "Sekarang mari kita menghubungkan sekelompok\nV bersama-sama dalam sebuah loop."
+      2-3 Artist Loops New 10: "Sekarang mari kita hubungkan beberapa V secara bersamaan,\ndengan menggambar mereka di dalam perulangan."
       2-3 Artist Loops New 11: "Waktunya untuk membuat sesuatu yang hebat!\n\\r\n\\r\nbuat kembali kode dari teka-teki terakhir, tapi kali ini, tambahkan belok ke kiri\n30 derajat didalam lingkaran. sekarang, ulangi 24 kali bukan 8 kali."
       2-3 Artist Loops New 12: 'Gambar sebuah belah ketupat dengan setiap sisinya berukuran 100 piksel. '
       2-3 Artist Loops New 13: "Kami akan memulai dengan anda\nbeberapa kode (berwarna abu-abu) untuk membuat satu berlian. \\r\n\\r\nLoop kode abu-abu untuk buat sebuah\npola yang menyenangkan!"
@@ -78,10 +78,8 @@ id:
         \r
         
       2-3 Artist Loops New 2: |-
-        Ini adalah teka-teki yang sama
-        dengan yang sudah kami pecahkan, tetapi kali ini, kami hanya bisa menggunakan 'bergerak maju' satu blok dan satu blok saja kali ini.\r
-        \r
-        bisakah kamu menggunakan 'ulangi' untuk memecahkan teka-teki ini?
+        Ini ada beberapa kode yang kamu pakai untuk membuat
+        kotak itu. Apa yang akan terjadi jika kamu menggunakan blok perulangan untuk menjalankan kode berikut 4 kali?
       2-3 Artist Loops New 9: Gambar sebuah V sederhana (dimana setiap sisinya memiliki ukuran 50 piksel) untuk menyelesaikan panah.
       2-3 Artist Nested Loops 1: |+
         Anda telah menggunakan loop untuk menggambar
@@ -93,8 +91,8 @@ id:
         <br/>\r
         \r
         
-      2-3 Artist Nested Loops 10: Ulangi kode ini 12 kali untuk melengkapi pola.
-      2-3 Artist Nested Loops 11: Ulangi kode ini 4 kali untuk melengkapi pola, putar 90 derajat pada setiap lingkaran.
+      2-3 Artist Nested Loops 10: Ulangi kode ini sebanyak 12 kali untuk menyelesaikan pola ini.
+      2-3 Artist Nested Loops 11: Ulangi kode ini sebanyak 4 kali untuk menyelesaikan pola. Pada setiap perulangan, putar sebanyak 90 derajat ke arah kanan.
       2-3 Artist Nested Loops 12: "Loop kode ini sebanyak 12 kali untu\nMelengkapi ikal."
       2-3 Artist Nested Loops 2: "Sekarang lingkari segitiga 6 kali.\n\\ r \n\\ r \nSetelah setiap segitiga, Anda harus mengubah 60 derajat sebelum menggambar \nberikutnya."
       2-3 Artist Nested Loops 3: "Anda harus memutar segitiga anda 12 kali untuk menggambar pola ini. \\r\n\\r\nBagilah jumlah derajat dalam lingkaran (360) dengan jumlah bentuk yang anda gambar (12) untuk mencari tahu\nseberapa jauh untuk mengubah setiap bentuknya."

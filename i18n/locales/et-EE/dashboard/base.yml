@@ -241,7 +241,6 @@ et:
       signin: 'Logi sisse'
       signup: 'Loo konto'
       already_registered: 'Oled juba liitunud?'
-      pair_programming: 'Paarisprogrammeerimine'
       team: 'Võistkond'
       driver: 'Sisse logitud'
       navigator: 'Parnter'

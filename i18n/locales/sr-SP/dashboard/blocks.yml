@@ -95,14 +95,6 @@ sr:
             '"left"': лево
             '"right"': десно
             '"space"': Простор
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': горе
-            '"down"': доле
-            '"left"': лево
-            '"right"': десно
-            '"space"': Простор
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -182,6 +174,11 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
       Mikelab_getProp:
         options:
           PROPERTY:

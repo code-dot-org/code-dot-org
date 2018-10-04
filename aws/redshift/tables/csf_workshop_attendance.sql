@@ -221,7 +221,8 @@ AS(
          pdw.funded,
          pdw.funding_type,
          capacity,
-         CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,
+         CASE WHEN pdw.regional_partner_id IS NOT NULL THEN 1 ELSE 0 END AS trained_by_regional_partner,-- using this definition for now for regional_partner_dash
+         CASE WHEN pdw.funding_type = 'partner' THEN 1 ELSE 0 END AS trained_by_regional_partner_truth,  -- temporary until we figure out how ed team wants to present data to RPs
          CASE WHEN rp1.name IS NOT NULL THEN rp1.name
               WHEN rp2.name IS NOT NULL THEN rp2.name 
               ELSE 'No Partner' END 
@@ -263,7 +264,7 @@ AS(
         ON  rpm.regional_partner_id = rp2.id  
     WHERE pdw.course = 'CS Fundamentals'
     AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')  or pdw.subject is null)
-    group by 1, 2, 3, 4, 5,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, u.name, 20, 21, 23
+    group by 1, 2, 3, 4, 5,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, u.name, 21, 22, 24 
   ),
   
 sections_based 
@@ -286,6 +287,7 @@ AS(
            else null  
            end::int as capacity,
          0 AS trained_by_regional_partner,
+         0 AS trained_by_reginal_partner_truth,  -- temporary until we figure out how ed team wants to present data to RPs
          CASE WHEN rp.name IS NOT NULL THEN rp.name ELSE 'No Partner' END as regional_partner_name,
          rpm.regional_partner_id AS regional_partner_id,
          ssz.zip as zip,
@@ -297,7 +299,7 @@ AS(
          sy.school_year, 
          0 AS not_attended,
          0 AS future_event
-    FROM anlysis.csf_teachers_trained tt
+    FROM analysis.csf_teachers_trained tt
     JOIN dashboard_production.sections se 
        ON se.id = tt.section_id 
     JOIN dashboard_production_pii.users u -- join to get facilitator data

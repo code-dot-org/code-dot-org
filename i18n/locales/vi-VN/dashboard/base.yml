@@ -315,7 +315,6 @@ vi:
       signin: 'Đăng nhập'
       signup: 'Tạo tài khoản'
       already_registered: 'Bạn đã đăng ký?'
-      pair_programming: 'Lập trình đôi'
       team: 'Nhóm'
       driver: 'Người lái xe'
       navigator: 'Định hướng'

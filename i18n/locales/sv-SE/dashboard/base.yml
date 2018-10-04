@@ -260,7 +260,6 @@ sv:
       signin: 'Logga in'
       signup: 'Skapa ett konto'
       already_registered: 'Redan registrerad?'
-      pair_programming: 'Par-programmering'
       team: 'Team'
       driver: 'Förare'
       navigator: 'Navigator'
