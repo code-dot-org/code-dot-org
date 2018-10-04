@@ -101,6 +101,8 @@ exports.addCues = function (timestamps) {
 };
 
 exports.reset = function () {
+  Dance.song.stopAll();
+
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
   }
@@ -307,12 +309,9 @@ exports.doMoveLR = function doMoveLR(sprite, move, dir) {
   sprite.animation.changeFrame(FRAMES / 2);
 }
 
-exports.ifDanceIs = function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
-  if (!spriteExists(sprite)) return;
-  if (sprite.current_dance == dance) {
-    ifStatement();
-  } else {
-    elseStatement();
+exports.getCurrentDance = function (sprite) {
+  if (spriteExists(sprite)) {
+    return sprite.current_move;
   }
 }
 
@@ -588,15 +587,15 @@ exports.changeColorBy = function changeColorBy(input, method, amount) {
   hsb[method] = Math.round((hsb[method] + amount) % 100);
   var new_c = p5.color(hsb.hue, hsb.saturation, hsb.brightness);
   p5.pop();
-  return new_c;
+  return new_c.toString('#rrggbb');
 }
 
 exports.mixColors = function mixColors(color1, color2) {
-  return p5.lerpColor(p5.color(color1), p5.color(color2), 0.5);
+  return p5.lerpColor(p5.color(color1), p5.color(color2), 0.5).toString('#rrggbb');
 }
 
 exports.randomColor = function randomColor() {
-  return p5.color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
+  return p5.color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString('#rrggbb');
 }
 
 function spriteExists(sprite) {
