@@ -21,8 +21,10 @@
       .field
         = f.label :user_type, t('signup_form.create_user_type')
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
+      - if @user.errors[:user_type].present?
+        %span.error.padded= t('activerecord.errors.messages.blank')
 
-    .field-row#name-field{style: "display: none;"}
+    .field-row
       .field
         #teacher-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.other_name_example').html_safe
@@ -57,7 +59,7 @@
           = ff.hidden_field :country
           = ff.hidden_field :full_address
 
-    #terms-of-service.checkbox{style: "display: none;"}
+    .checkbox
       = f.label :terms_of_service_version do
         = f.check_box :terms_of_service_version, {}, User::TERMS_OF_SERVICE_VERSIONS.last
         = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
@@ -69,7 +71,7 @@
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
       = f.hidden_field :data_transfer_agreement_required, value: "1"
-      #data_transfer_agreement_accepted.checkbox
+      .checkbox
         = f.label :data_transfer_agreement_accepted do
           = f.check_box :data_transfer_agreement_accepted
           = t('signup_form.agree_us_website')
@@ -91,13 +93,14 @@
           = f.radio_button :email_preference_opt_in, 'no'
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
 
-    %button#submit{style: "display: none;"}
+    %button#submit
       = t('signup_form.submit')
 
 :ruby
   script_data = {
     signup: {
-      usIp: us_ip
+      usIp: us_ip,
+      signUpUID: "#{session[:sign_up_uid]}"
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/_finish_sign_up.js'), data: script_data}

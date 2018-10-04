@@ -1,7 +1,7 @@
 require 'cdo/firehose'
 
 class Api::V1::RegionalPartnersController < ApplicationController
-  before_action :authenticate_user!, except: :find
+  before_action :authenticate_user!, except: [:find, :show]
 
   include Pd::SharedWorkshopConstants
 
@@ -18,6 +18,18 @@ class Api::V1::RegionalPartnersController < ApplicationController
     regional_partner_value = current_user.workshop_admin? ? params[:regional_partner_value] : current_user.regional_partners.first.try(:id)
 
     render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
+  end
+
+  # GET /api/v1/regional_partners/show/:id
+  def show
+    partner_id = params[:partner_id]
+    partner = RegionalPartner.find_by_id(partner_id)
+
+    if partner
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+    else
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+    end
   end
 
   # GET /api/v1/regional_partners/find
@@ -80,9 +92,9 @@ class Api::V1::RegionalPartnersController < ApplicationController
       partner_id = regional_partner_value ? regional_partner_value : current_user.regional_partners.first
       regional_partner = RegionalPartner.find_by(id: partner_id)
       if role == 'csd_teachers'
-        return regional_partner.cohort_capacity_csd
+        return regional_partner&.cohort_capacity_csd
       elsif role == 'csp_teachers'
-        return regional_partner.cohort_capacity_csp
+        return regional_partner&.cohort_capacity_csp
       end
     end
     nil

@@ -313,7 +313,6 @@ nn:
       signin: 'Logg inn'
       signup: 'Opprett ein konto'
       already_registered: 'Alt registrert?'
-      pair_programming: 'Parprogrammering'
       team: 'Team'
       driver: 'Sjåfør'
       navigator: 'Kartlesar'

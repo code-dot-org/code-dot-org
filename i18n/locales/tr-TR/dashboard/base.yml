@@ -312,7 +312,6 @@ tr:
       signin: 'Giriş Yap'
       signup: 'Hesap oluştur'
       already_registered: 'Zaten hesabınız var mı?'
-      pair_programming: 'Eşli Programlama'
       team: 'Takım'
       driver: 'Giriş yapılmış'
       navigator: 'Takım Arkadaşı'

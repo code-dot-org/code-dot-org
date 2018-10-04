@@ -95,14 +95,6 @@ lt:
             '"left"': kairėje
             '"right"': dešinėje
             '"space"': kosmosas
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': viršuje
-            '"down"': apačioje
-            '"left"': kairėje
-            '"right"': dešinėje
-            '"space"': kosmosas
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -194,6 +186,11 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kairėje
+            "{x: 300, y: 200}": dešinėje
       Mikelab_getProp:
         options:
           PROPERTY:

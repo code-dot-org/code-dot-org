@@ -297,6 +297,7 @@ function Effects(alpha, blend) {
     }
   };
   this.raining_tacos = {
+    emoji: "tacos",
     tacos: [],
     size: 50,
     init: function () {
@@ -321,7 +322,7 @@ function Effects(alpha, blend) {
         rotate(taco.rot);
         textAlign(CENTER, CENTER);
         textSize(this.size);
-        text('taco', 0, 0);
+        text(emoji, 0, 0);
         taco.y += taco.speed;
         taco.rot++;
         if (taco.y > 450) {
@@ -452,6 +453,9 @@ function makeNewDanceSprite(costume, name, location) {
   sprite.setScale = function (scale) {
     sprite.scale = scale;
   };
+  sprite.getScale = function () {
+    return sprite.scale * 100;
+  };
   return sprite;
 }
 
@@ -467,7 +471,7 @@ function changeMoveLR(sprite, move, dir) {
     // Make sure random switches to a new move
     move = sprite.current_move;
     while (move == sprite.current_move) {
-      move = randomNumber(0, ANIMATIONS[sprite.style].length - 1);
+      move = randomNumber(1, ANIMATIONS[sprite.style].length - 1);//Mike set minimum from 0 to 1 on 10/3/18 to prevent random move choosing "rest"
     }
   }
   sprite.mirroring = dir;

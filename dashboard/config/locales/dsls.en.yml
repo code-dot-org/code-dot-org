@@ -15715,6 +15715,11 @@ en:
         <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
         <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
         <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+      destroy me test:
+        right answer: right answer
+        right answer2: right answer2
+        wrong answer: wrong answer
+        wrong answer2: wrong answer2
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.

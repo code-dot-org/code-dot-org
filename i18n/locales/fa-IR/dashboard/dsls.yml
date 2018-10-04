@@ -2065,6 +2065,24 @@ fa:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseD_multi_artist_binary8_predict1:
+        A: الف
+        B: ب
+        C: ج
+        D: د
+      courseD_multi_artist_binary8_predict1_2018:
+        A: الف
+        B: ب
+        C: ج
+        D: د
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: الف
+        B: ب
+        C: ج
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: الف
+        B: ب
+        C: ج
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'

@@ -112,14 +112,6 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
       gamelab_changeColorBy:
         options:
           METHOD:
@@ -216,6 +208,11 @@ ja:
             '"scale"': おおきさ
             '"x"': x 位置
             '"y"': y 位置
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
       Mikelab_getProp:
         options:
           PROPERTY:
