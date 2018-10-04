@@ -47,6 +47,8 @@ ________________
 
 *DISCLAIMER: By providing this example, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter.*
 
+We have created this <a href="https://docs.google.com/document/d/1sdGbB5BSBTjjjjC6abIjAO4XzznXVvgwQe95CRL_c6E/edit?usp=sharing" target=_blank>example Scope of Work</a> that you can use as a planning resource when establishing a relationship with a <b><i>CS Fundamentals facilitator</i></b>. This document lives in our shared Google Drive folder. Please note that we are providing this resource to all partners as a general guide for you to customize and make adjustments that are right for your organization, while still staying within the bounds of the program guidelines Code.org has outlined. It does not constitute legal advice from Code.org
+
 [**Back to the top**](#top)
 ________________
 <a id="recruitment"></a>
