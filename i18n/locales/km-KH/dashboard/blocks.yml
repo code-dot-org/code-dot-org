@@ -1,3 +1,4 @@
+---
 km:
   data:
     blocks:
@@ -135,8 +136,8 @@ km:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'ពិត'
-            'false': 'មិន​ពិត'
+            'true': ពិត
+            'false': មិន​ពិត
       gamelab_getProp:
         options:
           PROPERTY:
