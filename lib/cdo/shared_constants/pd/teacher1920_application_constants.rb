@@ -116,7 +116,20 @@ module Pd
             how_heard: 'How did you hear about this program?'
           }
         ),
-      section_6_submission: BASE_PAGE_LABELS[:section_5_submission].slice(:agree)
+      section_6_submission: BASE_PAGE_LABELS[:section_5_submission].slice(:agree),
+      detail_view_principal_approval: {
+        principal_approval: 'Principal approves this application',
+        principal_plan_to_teach: 'Applying teacher will teach this course',
+        principal_schedule_confirmed: 'Principal has confirmed that CS will be on the master schedule',
+        principal_implementation: 'How will this course be implemented? (Principal response)',
+        principal_diversity_recruitment: 'Principal has committed to recruiting diverse students',
+        principal_free_lunch_percent: 'Percent of students that receive free/reduced lunch',
+        principal_underrepresented_minority_percent: 'Percent of students that are underrepresented minorities',
+        principal_wont_replace_existing_course: 'Will this replace an existing CS course? (Principal response)',
+        principal_how_heard: 'How did you hear about Code.org? (Principal response)',
+        principal_send_ap_scores: 'Principal authorizes college board to send AP Scores',
+        principal_pay_fee: 'Can the school or teacher pay the summer workshop program fee? (Principal response)'
+      }
     }.freeze
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
