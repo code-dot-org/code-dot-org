@@ -200,17 +200,15 @@ module RakeUtils
     `git remote show origin 2>&1 | grep \"local out of date\" | grep --extended-regexp \"#{git_branch} +pushes to #{git_branch}\" | wc -l`.strip.to_i > 0
   end
 
-  def self.git_staged_changes?(path="")
-    `git status --porcelain #{path} 2>/dev/null | egrep \"^\s*(M|A|D)\" | wc -l`.strip.to_i > 0
+  def self.git_staged_changes?(*paths)
+    `git status --porcelain #{paths.join(' ')} 2>/dev/null | egrep \"^\s*(M|A|D)\" | wc -l`.strip.to_i > 0
   end
 
-  # Gets a stable hash of the given directory's git-committed files.
+  # Gets a stable hash of the given paths' git-committed files.
   # Uses a hash of the `git ls-tree` contents because a shallow-clone may not have the
   # full revision history needed to find the original commit SHA.
-  def self.git_folder_hash(dir)
-    Dir.chdir(File.expand_path(dir)) do
-      Digest::SHA2.hexdigest(`git ls-tree -r HEAD 2>/dev/null`)
-    end
+  def self.git_folder_hash(*paths)
+    Digest::SHA2.hexdigest(`git ls-tree -r HEAD #{paths.join(' ')} 2>/dev/null`)
   end
 
   def self.ln_s(source, target)
