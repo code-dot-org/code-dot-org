@@ -5,7 +5,6 @@ import AppView from '../templates/AppView';
 import {getStore} from "../redux";
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
-var GameLabP5 = require('./GameLabP5');
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
@@ -25,11 +24,7 @@ var Dance = function () {
   /** @type {StudioApp} */
   this.studioApp_ = null;
 
-  /** @type {JSInterpreter} */
-  this.JSInterpreter = null;
-
-  this.eventHandlers = {};
-  this.gameLabP5 = new GameLabP5();
+  this.currentFrameEvents = {};
 };
 
 module.exports = Dance;
@@ -59,12 +54,6 @@ Dance.prototype.init = function (config) {
   this.skin = config.skin;
 
   this.studioApp_.labUserId = config.labUserId;
-
-  this.gameLabP5.init({
-    onPreload: this.onP5Preload.bind(this),
-    onSetup: this.onP5Setup.bind(this),
-    onDraw: this.onP5Draw.bind(this)
-  });
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -134,17 +123,29 @@ Dance.prototype.afterInject_ = function () {
       'levelFailure',
     ].join(','));
   }
+
+  new window.p5(p5obj => {
+    p5obj._fixedSpriteAnimationFrameSizes = true;
+
+    p5obj.preload = this.onP5Preload.bind(this);
+    p5obj.setup = this.onP5Setup.bind(this);
+    p5obj.draw = this.onP5Draw.bind(this);
+
+    this.p5 = p5obj;
+  }, 'divDance');
 };
 
 /**
  * Reset Dance to its initial state.
  */
 Dance.prototype.reset = function () {
-  this.eventHandlers = {};
-
   Sounds.getSingleton().stopAllAudio();
 
-  this.gameLabP5.resetExecution();
+  this.nativeAPI.reset();
+  this.p5.noLoop();
+
+  // Allow any pending draws to finish before clearing the screen.
+  setTimeout(() => this.p5.background('#fff'), 0);
 };
 
 Dance.prototype.onPuzzleComplete = function (testResult) {
@@ -218,23 +219,24 @@ Dance.prototype.execute = function () {
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
-  // Reset all state.
-  this.reset();
-  this.studioApp_.clearAndAttachRuntimeAnnotations();
-
   if (this.studioApp_.hasUnwantedExtraTopBlocks() || this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // Immediately check answer, which will fail and report top level blocks.
     this.onPuzzleComplete();
     return;
   }
 
-  this.gameLabP5.startExecution();
+  // TODO: re-run user code, start p5 looping.
+  this.initInterpreter();
+  this.p5.loop();
+
+  this.hooks.find(v => v.name === 'runUserSetup').func();
+  const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
+  this.nativeAPI.addCues(timestamps);
+  this.nativeAPI.play();
 };
 
 Dance.prototype.initInterpreter = function () {
-  const Dance = createDanceAPI(this.gameLabP5.p5);
-  const nativeAPI = initDance(this.gameLabP5.p5, Dance);
-  this.nativeAPI = nativeAPI;
+  const nativeAPI = this.nativeAPI;
   this.currentFrameEvents = nativeAPI.currentFrameEvents;
   const sprites = [];
 
@@ -250,6 +252,9 @@ Dance.prototype.initInterpreter = function () {
     },
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
+    },
+    getCurrentDance: (spriteIndex) => {
+      return nativeAPI.getCurrentDance(sprites[spriteIndex]);
     },
     changeMoveLR: (spriteIndex, move, dir) => {
       nativeAPI.changeMoveLR(sprites[spriteIndex], move, dir);
@@ -296,10 +301,15 @@ Dance.prototype.initInterpreter = function () {
     stopMapping: (spriteIndex, property, val) => {
       return nativeAPI.stopMapping(sprites[spriteIndex], property, val);
     },
-    // TODO: ifDanceIs: function ifDanceIs(sprite, dance, ifStatement, elseStatement),
-    changeColorBy: () => {}, // TODO: function changeColorBy(input, method, amount),
-    mixColors: () => {}, // TODO: function mixColors(color1, color2),
-    randomColor: () => {}, // TODO: function randomColor(),
+    changeColorBy: (input, method, amount) => {
+      return nativeAPI.changeColorBy(input, method, amount);
+    },
+    mixColors: (color1, color2) => {
+      return nativeAPI.mixColors(color1, color2);
+    },
+    randomColor: () => {
+      return nativeAPI.randomColor();
+    },
   };
 
   let code = require('!!raw-loader!./p5.dance.interpreted');
@@ -312,55 +322,32 @@ Dance.prototype.initInterpreter = function () {
   };
 
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
-
-  this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
-    this.eventHandlers[eventName] = nativeAPI[eventName];
-  }, this);
 };
 
 /**
- * This is called while this.gameLabP5 is in the preload phase. Do the following:
- *
- * - load animations into the P5 engine
- * - initialize the interpreter
- * - start its execution
- * - (optional) execute global code
- * - call the user's preload function
+ * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
-    this.initInterpreter();
-
-    // In addition, execute the global function called preload()
-    if (this.eventHandlers.preload) {
-      this.eventHandlers.preload.apply(null);
-    }
+  const Dance = createDanceAPI(this.p5);
+  this.nativeAPI = initDance(this.p5, Dance);
+  this.nativeAPI.preload();
 };
 
 /**
- * This is called while this.gameLabP5 is in the setup phase. We restore the
- * interpreter methods that were modified during preload, then call the user's
- * setup function.
+ * This is called while this.p5 is in the setup phase.
  */
 Dance.prototype.onP5Setup = function () {
-  if (this.eventHandlers.setup) {
-    this.eventHandlers.setup.apply(null);
-  }
-  this.hooks.find(v => v.name === 'runUserSetup').func();
-  const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
-  this.nativeAPI.addCues(timestamps);
+  this.nativeAPI.setup();
 };
 
 /**
- * This is called while this.gameLabP5 is in a draw() call. We call the user's
- * draw function.
+ * This is called while this.p5 is in a draw() call.
  */
 Dance.prototype.onP5Draw = function () {
-  if (this.eventHandlers.draw) {
-    if (this.currentFrameEvents.any) {
-      this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
-    }
-    this.eventHandlers.draw.apply(null);
+  if (this.currentFrameEvents.any) {
+    this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
   }
+  this.nativeAPI.draw();
 };
 
 /**

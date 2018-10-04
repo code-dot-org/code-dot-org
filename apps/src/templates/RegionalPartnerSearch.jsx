@@ -52,7 +52,7 @@ class RegionalPartnerSearch extends Component {
 
     if (partnerId) {
       if (partnerId === "0") {
-        showZip = false;
+        showZip = true;
         error = WorkshopSearchErrors.no_partner;
       } else {
         $.ajax({
@@ -81,12 +81,12 @@ class RegionalPartnerSearch extends Component {
     if (response.error) {
       this.setState({showZip: true, loading: false});
     } else {
-      this.setState({partnerInfo: response, loading: false});
+      this.setState({showZip: true, partnerInfo: response, loading: false});
     }
   };
 
   partnerIdFail = (response) => {
-    this.setState({showZip: true, error: false, loading: false});
+    this.setState({showZip: true, loading: false});
   };
 
   partnerZipSuccess = (response) => {
@@ -139,7 +139,7 @@ class RegionalPartnerSearch extends Component {
       <div>
         {this.state.showZip && (
           <form onSubmit={this.handleZipSubmit}>
-            <label style={styles.schoolZipLabel}>School Zip Code:</label>
+            <label style={styles.schoolZipLabel}>School ZIP Code:</label>
             <input type="text" value={this.state.zipValue} onChange={this.handleZipChange} style={styles.zipInput}/>
             <div style={styles.zipSubmit}>
               <input type="submit" value="Submit" />

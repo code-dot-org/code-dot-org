@@ -439,7 +439,7 @@ function changeMoveLR(sprite, move, dir) {
     // Make sure random switches to a new move
     move = sprite.current_move;
     while (move == sprite.current_move) {
-      move = randomNumber(0, ANIMATIONS[sprite.style].length - 1);
+      move = randomNumber(1, ANIMATIONS[sprite.style].length - 1);//Mike set minimum from 0 to 1 on 10/3/18 to prevent random move choosing "rest"
     }
   }
   sprite.mirroring = dir;
