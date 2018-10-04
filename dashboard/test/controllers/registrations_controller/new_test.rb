@@ -31,7 +31,7 @@ module RegistrationsControllerTests
       assert_template partial: '_finish_sign_up'
     end
 
-    # Note: The analogous for the old signup flow is in registrations_controller_test.rb because
+    # Note: The analogous test for the old signup flow is in registrations_controller_test.rb because
     # it requires access to the session, which ActionDispatch::IntegrationTest does not provide
     test "signup does not display errors on pageload in new flow" do
       SignUpTracking.expects(:new_sign_up_experience?).returns(true).twice
