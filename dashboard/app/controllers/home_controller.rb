@@ -91,13 +91,14 @@ class HomeController < ApplicationController
   private
 
   def should_redirect_to_script_overview?
-    if current_user.student? && !account_takeover_in_progress? && current_user.most_recently_assigned_user_script
-      if current_user.user_script_with_most_recent_progress
-        return current_user.most_recent_progress_in_recently_assigned_script? || current_user.last_assignment_after_most_recent_progress?
-      else
-        return true
-      end
-    end
+    current_user.student? &&
+    !account_takeover_in_progress &&
+    current_user.most_recently_assigned_user_script &&
+    (
+      !current_user.user_script_with_most_recent_progress ||
+      current_user.most_recent_progress_in_recently_assigned_script? ||
+      current_user.last_assignment_after_most_recent_progress?
+    )
   end
 
   def init_homepage
