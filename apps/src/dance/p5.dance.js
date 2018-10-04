@@ -17,11 +17,11 @@ export default function init(p5, Dance) {
     this._tintCanvas.width = img.canvas.width;
     this._tintCanvas.height = img.canvas.height;
     const tmpCtx = this._tintCanvas.getContext('2d');
-    tmpCtx.fillStyle = 'hsl(' + this._pInst.hue(this._tint) + ', 100%, 25%)';
+    tmpCtx.fillStyle = 'hsl(' + this._pInst.hue(this._tint) + ', 100%, 50%)';
     tmpCtx.fillRect(0, 0, this._tintCanvas.width, this._tintCanvas.height);
     tmpCtx.globalCompositeOperation = 'destination-atop';
     tmpCtx.drawImage(img.canvas, 0, 0, this._tintCanvas.width, this._tintCanvas.height);
-    tmpCtx.globalCompositeOperation = 'screen';
+    tmpCtx.globalCompositeOperation = 'multiply';
     tmpCtx.drawImage(img.canvas, 0, 0, this._tintCanvas.width, this._tintCanvas.height);
     return this._tintCanvas;
   };
