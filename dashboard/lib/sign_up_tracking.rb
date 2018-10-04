@@ -61,6 +61,15 @@ module SignUpTracking
     )
   end
 
+  def self.log_cancel_finish_sign_up(session)
+    FirehoseClient.instance.put_record(
+      study: STUDY_NAME,
+      study_group: study_group(session),
+      event: 'cancel-finish-sign-up',
+      data_string: session[:sign_up_uid]
+    )
+  end
+
   def self.log_oauth_callback(provider, session)
     return unless provider && session
     if session[:sign_up_tracking_expiration]&.future?
