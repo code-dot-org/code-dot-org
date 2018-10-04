@@ -101,6 +101,14 @@ function whenSetupSong(song, event) {
   setupCallbacks.push(event);
 }
 
+function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
+  if (getCurrentDance(sprite) == Number(dance)) {
+    ifStatement();
+  } else {
+    elseStatement();
+  }
+}
+
 function whenKey(key, event) {
   inputEvents.push({
     type: 'p5.keyWentDown',

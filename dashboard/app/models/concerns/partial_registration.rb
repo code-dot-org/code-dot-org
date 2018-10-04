@@ -47,6 +47,13 @@ module PartialRegistration
     session[USER_ATTRIBUTES_SESSION_KEY] = user.attributes
   end
 
+  def self.cancel(session)
+    SignUpTracking.log_cancel_finish_sign_up(session)
+    SignUpTracking.end_sign_up_tracking(session)
+    session.delete(USER_ATTRIBUTES_SESSION_KEY)
+    session
+  end
+
   def self.cache_key(param_name, user)
     if user.uid.present?
       "#{user.provider}-#{user.uid}-#{param_name}"
