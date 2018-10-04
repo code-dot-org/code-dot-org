@@ -192,7 +192,7 @@ module Pd::WorkshopSurveyResultsHelper
       current_user.facilitator? &&
       !(current_user.program_manager? ||
         current_user.workshop_organizer? ||
-        current_user.workshop_admin)
+        current_user.workshop_admin?)
 
     # Each session has a general response section.
     # Some also have a facilitator response section
