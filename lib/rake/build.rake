@@ -7,9 +7,9 @@ namespace :build do
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
-      # Only rebuild if apps contents have changed since last build.
+      # Only rebuild if apps contents or shared_constants have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
-      if !RakeUtils.git_staged_changes?(apps_dir) &&
+      if !apps_changed? &&
         File.exist?(commit_hash) &&
         File.read(commit_hash) == RakeUtils.git_folder_hash(apps_dir)
 
@@ -150,4 +150,12 @@ end
 desc 'Builds everything.'
 task :build do
   ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
+end
+
+# Detect if any files have changed in the apps directory,
+# or in shared_constants which also affect apps build.
+def apps_changed?
+  RakeUtils.git_staged_changes?(apps_dir) ||
+    RakeUtils.git_staged_changes?(shared_constants_file) ||
+    RakeUtils.git_staged_changes?(shared_constants_dir)
 end
