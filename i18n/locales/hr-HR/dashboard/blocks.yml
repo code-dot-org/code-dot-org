@@ -1,3 +1,4 @@
+---
 hr:
   data:
     blocks:
@@ -104,8 +105,8 @@ hr:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'točno'
-            'false': 'netočno'
+            'true': točno
+            'false': netočno
       gamelab_getProp:
         options:
           PROPERTY:
