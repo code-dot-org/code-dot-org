@@ -12,6 +12,8 @@ class HomeControllerTest < ActionController::TestCase
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create :teacher
     sign_in teacher
+    assert_nil teacher.user_script_with_most_recent_progress
+    assert_nil teacher.most_recently_assigned_user_script
     get :index
 
     assert_redirected_to '/home'
@@ -22,6 +24,7 @@ class HomeControllerTest < ActionController::TestCase
     script = create :script
     sign_in teacher
     teacher.assign_script(script)
+    assert_equal script, teacher.most_recently_assigned_script
     get :index
 
     assert_redirected_to '/home'
@@ -30,6 +33,8 @@ class HomeControllerTest < ActionController::TestCase
   test "student without progress or assigned course/script redirected to index" do
     student = create :student
     sign_in student
+    assert_nil student.user_script_with_most_recent_progress
+    assert_nil student.most_recently_assigned_user_script
     get :index
 
     assert_redirected_to '/home'
@@ -40,6 +45,8 @@ class HomeControllerTest < ActionController::TestCase
     script = create :script
     sign_in student
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
+    assert_equal script, student.script_with_most_recent_progress
+    assert_nil student.most_recently_assigned_user_script
     get :index
 
     assert_redirected_to '/home'
@@ -50,6 +57,8 @@ class HomeControllerTest < ActionController::TestCase
     script = create :script
     sign_in student
     student.assign_script(script)
+    assert_equal script, student.most_recently_assigned_script
+    assert_nil student.user_script_with_most_recent_progress
     get :index
 
     assert_redirected_to script_path(script)
@@ -62,6 +71,8 @@ class HomeControllerTest < ActionController::TestCase
     user_script_with_progress = create :user_script, user: student, last_progress_at: 1.day.ago
     User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
     User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
+    assert_equal assigned_user_script, student.most_recently_assigned_user_script
+    assert_equal user_script_with_progress, student.user_script_with_most_recent_progress
 
     get :index
 
@@ -75,6 +86,8 @@ class HomeControllerTest < ActionController::TestCase
     user_script_with_progress = create :user_script, user: student, last_progress_at: 2.days.ago
     User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
     User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
+    student.most_recently_assigned_user_script
+    assert_equal user_script_with_progress, student.user_script_with_most_recent_progress
 
     get :index
 
@@ -87,6 +100,8 @@ class HomeControllerTest < ActionController::TestCase
     sign_in student
     student.assign_script(script)
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
+    assert_equal script, student.most_recently_assigned_script
+    assert_equal script, student.script_with_most_recent_progress
 
     get :index
 
