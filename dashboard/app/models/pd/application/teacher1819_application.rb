@@ -37,6 +37,8 @@ module Pd::Application
   class Teacher1819Application < TeacherApplicationBase
     include ::Pd::Teacher1819ApplicationConstants
 
+    validates_uniqueness_of :user_id
+
     # @override
     def year
       YEAR_18_19

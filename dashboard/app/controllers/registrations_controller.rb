@@ -9,6 +9,9 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :verify_authenticity_token, only: [:set_age]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :create]
 
+  #
+  # GET /users/sign_up
+  #
   def new
     session[:user_return_to] ||= params[:user_return_to]
 
@@ -30,7 +33,14 @@ class RegistrationsController < Devise::RegistrationsController
   def begin_sign_up
     user = User.new(begin_sign_up_params)
     PartialRegistration.persist_attributes(session, user)
+  end
 
+  # GET /users/cancel
+  #
+  # Cancels the in-progress partial user registration and redirects to sign-up page.
+  #
+  def cancel
+    PartialRegistration.cancel(session)
     redirect_to new_user_registration_path
   end
 
@@ -60,6 +70,9 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to_account_update(successfully_updated)
   end
 
+  #
+  # POST /users
+  #
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
