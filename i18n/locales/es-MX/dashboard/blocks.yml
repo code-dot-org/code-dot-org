@@ -1,20 +1,21 @@
+---
 es-MX:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: después de [TIMESTAMP][0] [UNIT][1]
+        text: después de {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"seconds"': segundos
       Dancelab_changeColorBy:
-        text: cambiar [COLOR][0] [METHOD][1] en [AMOUNT][2]
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
         options:
           METHOD:
             '"hue"': tono
             '"saturation"': saturación
             '"brightness"': brillo
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] hacer [MOVE][1] [DIR][2] para siempre"
+        text: "{GROUP} hacer {MOVE} {DIR} para siempre"
         options:
           GROUP:
             sprites: todo
@@ -92,7 +93,7 @@ es-MX:
           UNIT:
             seconds: Segundos
       Dancelab_everyVerseChorus:
-        text: 'cada [UNIT][0] '
+        text: 'cada {UNIT} '
         options:
           UNIT:
             '"verse"': verso
@@ -212,9 +213,9 @@ es-MX:
             '1': medios
             '2': agudos
       gamelab_changeColor:
-        text: cambiar [COLOR][0] [METHOD][1] en [AMOUNT][2]
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
       gamelab_changeColorBy:
-        text: cambiar [COLOR][0] [METHOD][1] en [AMOUNT][2]
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
         options:
           METHOD:
             '"hue"': tono
@@ -229,8 +230,8 @@ es-MX:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadero'
-            'false': 'falso'
+            'true': verdadero
+            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
