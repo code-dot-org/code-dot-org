@@ -1,3 +1,4 @@
+---
 sq:
   data:
     blocks:
@@ -102,8 +103,8 @@ sq:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'e saktë'
-            'false': 'e gabuar'
+            'true': e saktë
+            'false': e gabuar
       gamelab_getProp:
         options:
           PROPERTY:
