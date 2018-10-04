@@ -635,7 +635,7 @@ var projects = module.exports = {
         if (appOptions.droplet) {
           return 'gamelab';
         } else if (appOptions.level.isDanceLab) {
-          return 'dancelab';
+          return 'dance';
         }
         return 'spritelab';
       case 'turtle':
