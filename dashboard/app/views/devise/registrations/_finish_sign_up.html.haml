@@ -11,9 +11,12 @@
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
     %p
-      = t('activerecord.attributes.user.finish_sign_up_subheader')
-      - if @user.provider.present? && @user.email.present?
-        %span= t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: t("auth.#{@user.provider}"), email: @user.email).html_safe
+      - if @user.provider.present?
+        - provider = t("auth.#{@user.provider}")
+        = t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: provider, email: @user.email).html_safe
+      - else
+        = t('activerecord.attributes.user.finish_sign_up_subheader', email: @user.email).html_safe
+      %span= link_to 'Cancel', users_cancel_path
 
     = f.hidden_field :locale, value: locale
 
@@ -99,7 +102,8 @@
 :ruby
   script_data = {
     signup: {
-      usIp: us_ip
+      usIp: us_ip,
+      signUpUID: "#{session[:sign_up_uid]}"
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/_finish_sign_up.js'), data: script_data}
