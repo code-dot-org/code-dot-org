@@ -1,3 +1,4 @@
+---
 bn:
   data:
     blocks:
@@ -102,8 +103,8 @@ bn:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'সত্যি'
-            'false': 'মিথ্যা'
+            'true': সত্যি
+            'false': মিথ্যা
       gamelab_getProp:
         options:
           PROPERTY:

@@ -306,9 +306,7 @@ ga:
         applab: Déan aip sa tSaotharlann Aipeanna
         gamelab: Déan tionscadal sa tSaotharlann Cluichíochta
         weblab: Tosaigh togra nua i Saotharlann an Ghréasáin (béite)
-      home: Baile
       my_dashboard: Mo Phainéal
-      courses: Cúrsaí
       course_catalog: Cúrsaí
       project_gallery: Tograí
       sections: Rannáin
@@ -343,6 +341,14 @@ ga:
       help_us: Cabhraigh Linn
       teach: Múineadh
       about: Maidir Linn
+    create_button:
+      create: Cruthaigh
+      applab: Saotharlann Aipeanna
+      artist: Ealaíontóir
+      gamelab: An tSaotharlann Cluichíochta
+      playlab: Spraotharlann
+      minecraft: Minecraft
+      flappy: Flappy
     user:
       classroom: Leathanach Baile do Mhúinteoirí
       district_dashboard: Painéal an Scoilcheantair
@@ -353,7 +359,6 @@ ga:
       signin: Logáil isteach
       signup: Cruthaigh cuntas
       already_registered: Cláraithe cheana?
-      pair_programming: Códáil Bheirte
       team: Foireann
       driver: Logáilte isteach
       navigator: Comhpháirtí

@@ -1,3 +1,4 @@
+---
 ms:
   data:
     blocks:
@@ -87,14 +88,6 @@ ms:
             '"left"': kiri
             '"right"': kanan
             '"space"': angkasa
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': atas
-            '"down"': bawah
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': angkasa
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -102,8 +95,8 @@ ms:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'benar'
-            'false': 'palsu'
+            'true': benar
+            'false': palsu
       gamelab_getProp:
         options:
           PROPERTY:

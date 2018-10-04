@@ -1,3 +1,4 @@
+---
 pt-BR:
   data:
     blocks:
@@ -240,8 +241,8 @@ pt-BR:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadeiro'
-            'false': 'falso'
+            'true': verdadeiro
+            'false': falso
       gamelab_enableDebug:
         text: habilitar a depuração
       gamelab_firstTouched:
