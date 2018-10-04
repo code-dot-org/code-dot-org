@@ -1645,9 +1645,10 @@ a.download-video {
   .signup {
     margin: 20px;
   }
-  .signup, .finish-signup {
+  .finish-signup {
     width: 800px;
-
+  }
+  .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
     #school-info-inputs {
