@@ -17,11 +17,11 @@ export default function init(p5, Dance) {
     this._tintCanvas.width = img.canvas.width;
     this._tintCanvas.height = img.canvas.height;
     const tmpCtx = this._tintCanvas.getContext('2d');
-    tmpCtx.fillStyle = 'hsl(' + this._pInst.hue(this._tint) + ', 100%, 33%)';
+    tmpCtx.fillStyle = 'hsl(' + this._pInst.hue(this._tint) + ', 100%, 50%)';
     tmpCtx.fillRect(0, 0, this._tintCanvas.width, this._tintCanvas.height);
     tmpCtx.globalCompositeOperation = 'destination-atop';
     tmpCtx.drawImage(img.canvas, 0, 0, this._tintCanvas.width, this._tintCanvas.height);
-    tmpCtx.globalCompositeOperation = 'screen';
+    tmpCtx.globalCompositeOperation = 'multiply';
     tmpCtx.drawImage(img.canvas, 0, 0, this._tintCanvas.width, this._tintCanvas.height);
     return this._tintCanvas;
   };
@@ -215,7 +215,7 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
 
   // Add behavior to control animation
   addBehavior(sprite, function () {
-    var delta = 1 / (p5.frameRate() + 0.01) * 1000;
+    var delta = Math.min(100, 1 / (p5.frameRate() + 0.01) * 1000);
     sprite.sinceLastFrame += delta;
     var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
@@ -417,7 +417,7 @@ exports.getProp = function getProp(sprite, property) {
   } else if (property == "costume") {
     return sprite.getAnimationLabel();
   } else if (property == "tint") {
-    return p5.color(sprite.tint)._getHue();
+    return p5.color(sprite.tint || 0)._getHue();
   } else {
     return sprite[property];
   }
