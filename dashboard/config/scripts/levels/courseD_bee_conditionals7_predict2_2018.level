@@ -45,8 +45,7 @@
     "parent_level_id": 8576,
     "name_suffix": "_2018",
     "show_type_hints": "false",
-    "include_shared_functions": "false",
-    "preload_asset_list": null
+    "include_shared_functions": "false"
   },
   "published": true,
   "notes": "",

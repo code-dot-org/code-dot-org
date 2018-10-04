@@ -53,15 +53,12 @@
     "project_template_level_name": "Virtual Pet 2",
     "instructions": "Freeplay: What more can you make your giraffe do? ",
     "block_pool": "gamelab",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "block_pools": [
       "GamelabJr"
     ],
-    "preload_asset_list": null,
-    "include_shared_functions": "true"
+    "include_shared_functions": "true",
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
