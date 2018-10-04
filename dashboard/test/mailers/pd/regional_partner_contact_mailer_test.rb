@@ -28,7 +28,7 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
     mail = Pd::RegionalPartnerContactMailer.matched(form, rp_pm)
 
     assert links_are_complete_urls?(mail)
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   # TODO: When cc is suported, remove email from unmatched
@@ -38,7 +38,7 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
     mail = Pd::RegionalPartnerContactMailer.unmatched(form, 'nimisha@code.org')
 
     assert links_are_complete_urls?(mail)
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   test 'matched receipt links are valid urls' do
@@ -47,7 +47,7 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
     mail = Pd::RegionalPartnerContactMailer.receipt(form, regional_partner_contact.regional_partner)
 
     assert links_are_complete_urls?(mail)
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   test 'unmatched receipt links are valid urls' do
@@ -56,6 +56,6 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
     mail = Pd::RegionalPartnerContactMailer.receipt(form, nil)
 
     assert links_are_complete_urls?(mail)
-    assert_deliverable mail
+    assert_sendable mail
   end
 end

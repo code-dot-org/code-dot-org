@@ -121,7 +121,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal 'A teacher and/or administrator would like to connect with you', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   # If matched and regional partner with multiple pms, send matched email to all pms
@@ -139,7 +139,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal 'A teacher and/or administrator would like to connect with you', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 3, ActionMailer::Base.deliveries.count
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   # If matched but no regional partner pms, send unmatched email
@@ -155,7 +155,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   test 'Unmatched' do
@@ -166,7 +166,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   test 'Receipt email' do
@@ -176,7 +176,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal ['foo@bar.com'], mail.to
     assert_equal 'Thank you for contacting your Code.org Regional Partner', mail.subject
     assert_equal ['noreply@code.org'], mail.from
-    assert_deliverable mail
+    assert_sendable mail
   end
 
   test 'Job Title is not required' do
