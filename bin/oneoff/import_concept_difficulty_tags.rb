@@ -32,8 +32,11 @@ def main(csv_dir)
       end
 
       lcd = LevelConceptDifficulty.find_or_create_by(level: level)
-      lcd.update!(concept_difficulties)
-      level.write_custom_level_file
+
+      if concept_difficulties.any? {|key, value| lcd[key] != value}
+        lcd.update!(concept_difficulties)
+        level.write_custom_level_file
+      end
     end
   end
 end
