@@ -23,6 +23,18 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+  # POST /users/begin_sign_up
+  #
+  # TODO: add description
+  #
+  def begin_sign_up
+    user = User.new(begin_sign_up_params)
+    PartialRegistration.persist_attributes(session, user)
+
+    redirect_to new_user_registration_path
+  end
+
+  #
   # PUT /users
   #
   def update
@@ -110,6 +122,10 @@ class RegistrationsController < Devise::RegistrationsController
         params[:data_transfer_agreement_at] = DateTime.now
       end
     end
+  end
+
+  def begin_sign_up_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called

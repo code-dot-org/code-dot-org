@@ -1,0 +1,12 @@
+= form_for(resource, as: resource_name, url: users_begin_sign_up_path) do |f|
+  = f.label :email
+  = f.text_field :email, maxlength: 255
+
+  = f.label :password
+  = f.password_field :password, maxlength: 255
+
+  = f.label :password_confirmation
+  = f.password_field :password_confirmation, maxlength: 255
+
+  %button#submit
+    = t('signup_form.submit')
