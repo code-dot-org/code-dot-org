@@ -153,7 +153,7 @@ task :build do
 end
 
 # List of paths that, if changed, should trigger an apps build.
-# This contains the apps source itself and anything other dependency that affects the apps build,
+# This contains the apps source itself and any other dependency that affects the apps build,
 # e.g. shared constants (which generate js apps code during apps/script/generateSharedConstants)
 def apps_build_trigger_paths
   [
