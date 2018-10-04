@@ -53,14 +53,11 @@
     "instructions": "Now create your own alien disco!",
     "include_shared_functions": "true",
     "block_pool": "gamelab",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "preload_asset_list": null,
     "block_pools": [
       "GamelabJr"
-    ]
+    ],
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

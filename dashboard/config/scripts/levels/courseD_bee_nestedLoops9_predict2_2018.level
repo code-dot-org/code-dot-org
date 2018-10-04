@@ -44,8 +44,7 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "shape_shift": "false",
-    "name_suffix": "_2018",
-    "preload_asset_list": null
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",

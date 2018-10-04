@@ -54,13 +54,10 @@
     "instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
     "include_shared_functions": "true",
     "block_pool": "gamelab",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "block_pools": [
       "GamelabJr"
     ],
+    "contained_level_names": null,
     "preload_asset_list": null
   },
   "published": true,

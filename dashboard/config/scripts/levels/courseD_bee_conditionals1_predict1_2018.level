@@ -42,13 +42,10 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "parent_level_id": 8574,
-    "name_suffix": "_2018",
-    "preload_asset_list": null
+    "name_suffix": "_2018"
   },
   "published": true,
-  "notes": "",
-  "level_concept_difficulty": {
-  }
+  "notes": ""
 }]]></config>
   <blocks>
     <start_blocks>

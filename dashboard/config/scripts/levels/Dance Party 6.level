@@ -52,12 +52,9 @@
     "show_type_hints": "true",
     "instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
     "block_pool": "gamelab",
+    "include_shared_functions": "true",
     "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "include_shared_functions": "true"
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
