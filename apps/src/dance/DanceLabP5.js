@@ -26,25 +26,13 @@ export function createDanceAPI(p5Inst) {
       load: song => songs.push(p5Inst.loadSound(song)) - 1,
       start: (n = 0) => songs[n].play(),
       stop: (n = 0) => songs[n].stop(),
+      stopAll: () => songs.forEach(song => song.stop()),
       isPlaying: (n = 0) => songs[n].isPlaying(),
       currentTime: (n = 0) => songs[n].currentTime(),
       duration: (n = 0) => songs[n].duration(),
-      processPeaks: (n = 0, ...args) => songs[n].processPeaks(...args),
       addCue: (n, ...args) => songs[n].addCue(...args),
       clearCues: (n = 0) => songs[n].clearCues(),
       setVolume: (n = 0, vol, rampTime) => songs[n].setVolume(vol, rampTime),
     },
   };
-}
-
-export function teardown() {
-  if (!fft) {
-    return;
-  }
-
-  songs.forEach(song => song.stop());
-  songs.length = 0;
-  customPeakDetects.length = 0;
-  peakDetect = null;
-  fft = null;
 }

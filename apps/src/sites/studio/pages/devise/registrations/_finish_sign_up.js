@@ -4,16 +4,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 
 const TEACHER_ONLY_FIELDS = ["#teacher-name-label", "#school-info-inputs", "#email-preference-radio"];
 const STUDENT_ONLY_FIELDS = ["#student-name-label", "#gender-dropdown", "#age-dropdown", "#student-consent"];
-const SHARED_FIELDS = ["#name-field", "#terms-of-service", "#data_transfer_agreement_accepted", "#submit"];
-const ALL_FIELDS = [...TEACHER_ONLY_FIELDS, ...STUDENT_ONLY_FIELDS, ...SHARED_FIELDS];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp} = scriptData;
+const {usIp, signUpUID} = scriptData;
 
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
@@ -44,28 +43,37 @@ $(document).ready(() => {
   });
 
   function setUserType(userType) {
+    if (userType) {
+      trackUserType(userType);
+    }
+
     switch (userType) {
       case "teacher":
         switchToTeacher();
         break;
-      case "student":
-        switchToStudent();
-        break;
       default:
-        hideFields(ALL_FIELDS);
+        // Show student fields by default.
+        switchToStudent();
     }
   }
 
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
-    fadeInFields(SHARED_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
   }
 
   function switchToStudent() {
     fadeInFields(STUDENT_ONLY_FIELDS);
-    fadeInFields(SHARED_FIELDS);
     hideFields(TEACHER_ONLY_FIELDS);
+  }
+
+  function trackUserType(type) {
+    firehoseClient.putRecord({
+      study: 'account-sign-up-v2',
+      study_group: 'experiment-v2',
+      event: 'select-' + type,
+      data_string: signUpUID,
+    });
   }
 
   function fadeInFields(fields) {
