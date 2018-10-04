@@ -7,7 +7,7 @@ if CDO.dashboard_sock
 else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
-workers CDO.dashboard_workers unless CDO.dashboard_workers.to_i < 2
+workers CDO.dashboard_workers
 threads 1, 5
 
 drain_on_shutdown
