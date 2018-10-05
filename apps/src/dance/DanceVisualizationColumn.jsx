@@ -9,6 +9,7 @@ import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
 import * as danceRedux from "../dance/redux";
+import initDance from './p5.dance';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
