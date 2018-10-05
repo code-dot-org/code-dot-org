@@ -4,7 +4,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
-import {createDanceAPI, teardown} from './DanceLabP5';
+import {createDanceAPI, teardown, setSong} from './DanceLabP5';
 
 const defaultFrameRate = 30;
 
@@ -618,4 +618,10 @@ GameLabP5.prototype.resetWorld = function () {
     return;
   }
   this.gameLabWorld = new GameLabWorld(this.p5);
+};
+
+GameLabP5.prototype.setDanceSong = function (url) {
+  if (this.danceAPI) {
+    setSong(url);
+  }
 };
