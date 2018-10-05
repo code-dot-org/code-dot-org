@@ -1,3 +1,4 @@
+---
 sl:
   data:
     blocks:
@@ -95,14 +96,6 @@ sl:
             '"left"': levo
             '"right"': desno
             '"space"': vesolje
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': gor
-            '"down"': dol
-            '"left"': levo
-            '"right"': desno
-            '"space"': vesolje
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -112,8 +105,8 @@ sl:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'velja'
-            'false': 'ne velja'
+            'true': velja
+            'false': ne velja
       gamelab_getProp:
         options:
           PROPERTY:
@@ -194,6 +187,11 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
       Mikelab_getProp:
         options:
           PROPERTY:

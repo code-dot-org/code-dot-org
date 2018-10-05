@@ -320,7 +320,6 @@ ka:
       signin: 'შესვლა'
       signup: 'ანგარიშის შექმნა'
       already_registered: 'უკვე გაქვთ ანგარიში?'
-      pair_programming: 'პროგრამირება წყვილებში'
       team: 'გუნდი'
       driver: 'შესულია'
       navigator: 'პარტნიორი'

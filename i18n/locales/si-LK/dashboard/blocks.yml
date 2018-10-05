@@ -1,3 +1,4 @@
+---
 si:
   data:
     blocks:
@@ -95,14 +96,6 @@ si:
             '"left"': වම
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': උඩ
-            '"down"': යට
-            '"left"': වම
-            '"right"': දකුණ
-            '"space"': අභ්‍යාවකාශය
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -110,7 +103,7 @@ si:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'සත්‍ය'
+            'true': සත්‍ය
             'false': 'false'
       gamelab_getProp:
         options:

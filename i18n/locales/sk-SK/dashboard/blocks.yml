@@ -1,3 +1,4 @@
+---
 sk:
   data:
     blocks:
@@ -134,14 +135,6 @@ sk:
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': hore
-            '"down"': nadol
-            '"left"': vľavo
-            '"right"': vpravo
-            '"space"': vesmír
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ sk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'pravda'
-            'false': 'nepravda'
+            'true': pravda
+            'false': nepravda
       gamelab_getProp:
         options:
           PROPERTY:
@@ -233,6 +226,11 @@ sk:
             '"scale"': veľkosť
             '"x"': pozícia x
             '"y"': pozícia y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vľavo
+            "{x: 300, y: 200}": vpravo
       Mikelab_getProp:
         options:
           PROPERTY:

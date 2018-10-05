@@ -1,3 +1,4 @@
+---
 ur:
   data:
     blocks:
@@ -39,15 +40,11 @@ ur:
         options:
           KEY:
             '"space"': خلاء
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': خلاء
       gamelab_debugSprite:
         options:
           VAL:
             'true': 'True'
-            'false': 'غلط'
+            'false': غلط
       gamelab_locationDelta:
         options:
           DIR:

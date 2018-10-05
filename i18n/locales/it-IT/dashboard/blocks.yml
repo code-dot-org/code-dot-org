@@ -1,3 +1,4 @@
+---
 it:
   data:
     blocks:
@@ -64,7 +65,7 @@ it:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'ogni [N][0] [UNIT][1] '
+        text: 'ogni {N} {UNIT} '
         options:
           UNIT:
             '"measures"': misure
@@ -75,7 +76,7 @@ it:
             measures: Misure
             seconds: Secondi
       Dancelab_everyVerseChorus:
-        text: 'ogni [UNIT][0] '
+        text: 'ogni {UNIT} '
       Dancelab_getEnergy:
         options:
           RANGE:
@@ -83,7 +84,7 @@ it:
             '"mid"': medio
             '"high"': alto
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -141,7 +142,7 @@ it:
             '"diamonds"': Diamanti
             "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Casuale
       Dancelab_setDanceSpeed:
-        text: cambia la velocità di ballo di [SPRITE][0] a [SPEED][1]
+        text: cambia la velocità di ballo di {SPRITE} a {SPEED}
         options:
           SPEED:
             '1': normale
@@ -150,7 +151,7 @@ it:
             '0.5': lento
             '0.25': molto lento
       Dancelab_setForegroundEffect:
-        text: imposta effetto di primo piano [EFFECT][0]
+        text: imposta effetto di primo piano {EFFECT}
         options:
           EFFECT:
             '"none"': Nessuno
@@ -197,7 +198,7 @@ it:
             '"mid"': medio
             '"treble"': alto
       Dancelab_whenKey:
-        text: quando [KEY][0] è premuto
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': in alto
@@ -215,19 +216,6 @@ it:
             '0': basso
             '1': medio
             '2': alto
-      Dancelab_whileKey:
-        text: quando [KEY][0] è premuto
-        options:
-          KEY:
-            '"up"': in alto
-            '"down"': in basso
-            '"left"': a sinistra
-            '"right"': a destra
-            '"space"': spaziale
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_changeColor:
         options:
           METHOD:
@@ -250,15 +238,15 @@ it:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'vero'
-            'false': 'falso'
+            'true': vero
+            'false': falso
       gamelab_getAnim:
-        text: "[SPRITE][0] [COSTUME][1]"
+        text: "{SPRITE} {COSTUME}"
         options:
           COSTUME:
             '"costume"': costume
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -268,20 +256,20 @@ it:
             '"direction"': direzione di movimento
             '"tint"': tinta
       gamelab_isTouching:
-        text: "[THIS][0] sta toccando [TARGET][1]"
+        text: "{THIS} sta toccando {TARGET}"
       gamelab_locationDelta:
         options:
           DIR:
             "'random'": un oggetto a caso
       gamelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
       gamelab_moveInDirection2:
-        text: sposta [SPRITE][0] di [DISTANCE][1] pixel verso [DIRECTION][2]
+        text: sposta {SPRITE} di {DISTANCE} pixel verso {DIRECTION}
       gamelab_randColor:
         text: colore scelto a caso
       gamelab_randomColor:
@@ -328,14 +316,14 @@ it:
           OP:
             '"="': "="
             '">"': ">"
-            '"<"': "&lt;"
+            '"<"': "\\<"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
       gamelab_whenKey:
-        text: quando [KEY][0] è premuto
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': in alto
@@ -355,9 +343,9 @@ it:
             "'left'": a sinistra
             "'right'": a destra
       gamelab_whenTouching:
-        text: quando [SPRITE1][0] tocca [SPRITE2][1]
+        text: quando {SPRITE1} tocca {SPRITE2}
       gamelab_whileKey:
-        text: quando [KEY][0] è premuto
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': in alto
@@ -370,7 +358,7 @@ it:
             '"s"': s
             '"d"': d
       gamelab_whileTouching:
-        text: quando [SPRITE1][0] sta toccando [SPRITE2][1]
+        text: quando {SPRITE1} sta toccando {SPRITE2}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -379,13 +367,17 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione di movimento
-      Mikelab_getAnim:
-        text: "[SPRITE][0] [COSTUME][1]"
+      Mikelab_createNewSprite:
         options:
-          COSTUME:
-            '"costume"': costume
+          LOCATION:
+            "{x: 100, y: 200}": a sinistra
+            "{x: 300, y: 200}": a destra
+            "{x: 200, y: 200}": centro
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
+      Mikelab_getAnim:
+        text: "{SPRITE} [COSTUME][1]"
       Mikelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -393,14 +385,10 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione di movimento
-            '"tint"': tinta
       Mikelab_isAnim:
-        text: "[SPRITE][0] [COSTUME][1]"
-        options:
-          COSTUME:
-            '"costume"': costume
+        text: "{SPRITE} {COSTUME}"
       Mikelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: colore scelto a caso
       Mikelab_setBG:
@@ -415,14 +403,13 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione di movimento
-            '"tint"': tinta
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': a destra
             '"left"': a sinistra
       Mikelab_whenKeyPressed:
-        text: quando [KEY][0] è premuto
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': si preme sulla freccia verso l'alto
@@ -454,13 +441,13 @@ it:
       Vector_positionCenter:
         text: centro
       Vector_push:
-        text: imposta velocità [VECTOR][0]
+        text: imposta velocità {VECTOR}
       Vector_setColor:
-        text: imposta colore a [COLOR][0]
+        text: imposta colore a {COLOR}
       Vector_setSize:
-        text: imposta larghezza [WIDTH][0] altezza [HEIGHT][1]
+        text: imposta larghezza {WIDTH} altezza {HEIGHT}
       Vector_where:
-        text: per ogni personaggio dove [PROPERTY][0] è [VALUE][1] esegui [STATEMENT][2]
+        text: per ogni personaggio dove {PROPERTY} è {VALUE} esegui {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": colore

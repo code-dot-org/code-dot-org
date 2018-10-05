@@ -1,3 +1,4 @@
+---
 nl:
   data:
     blocks:
@@ -134,14 +135,6 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ nl:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'waar'
-            'false': 'onwaar'
+            'true': waar
+            'false': onwaar
       gamelab_getProp:
         options:
           PROPERTY:
@@ -233,6 +226,11 @@ nl:
             '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
       Mikelab_getProp:
         options:
           PROPERTY:

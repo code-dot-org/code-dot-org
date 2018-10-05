@@ -169,7 +169,9 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object, logLevel) {
   this.consoleLogger_.log(object);
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  }
 };
 
 /**
@@ -224,6 +226,7 @@ GameLab.prototype.init = function (config) {
 
   this.level.helperLibraries = this.level.helperLibraries || [];
   this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
+  this.level.isDanceLab = this.isDanceLab;
 
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
@@ -369,8 +372,9 @@ GameLab.prototype.init = function (config) {
   var showDebugButtons = config.level.editCode &&
     (!config.hideSource && !config.level.debuggerDisabled);
   var showDebugConsole = config.level.editCode && !config.hideSource;
+  this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
-  if (showDebugButtons || showDebugConsole) {
+  if (this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.initialize({
       runApp: this.runButtonClick,
     }));
@@ -406,6 +410,14 @@ GameLab.prototype.init = function (config) {
     (config.initialAnimationList && !config.embed && !config.hasContainedLevels) ?
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  // Pre-register all audio preloads with our Sounds API, which will load
+  // them into memory so they can play immediately:
+  $("link[as=fetch][rel=preload]").each((i, { href }) => {
+    const soundConfig = { id: href };
+    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
+    Sounds.getSingleton().register(soundConfig);
+  });
 
   this.loadValidationCodeIfNeeded_();
   const loader = this.studioApp_.loadLibraries(this.level.helperLibraries).then(() => ReactDOM.render((
@@ -639,7 +651,9 @@ GameLab.prototype.reset = function () {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  getStore().dispatch(jsDebugger.detach());
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.detach());
+  }
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -1143,7 +1157,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  if (attachDebugger) {
+  if (attachDebugger && this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   }
   let code = '';

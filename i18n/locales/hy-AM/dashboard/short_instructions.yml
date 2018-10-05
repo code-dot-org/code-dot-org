@@ -476,7 +476,7 @@ hy:
       Artist Autorun Test: "Now, put the function inside of a loop\nto draw these three squares."
       Artist Inspiration: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
       Auto Open Function Editor: "You can call functions from inside\nother functions! Using your \"shape\" function as a base, create 3 house shapes\neach 20 pixels larger than the last starting at 50 pixels in length. Using\na counter loop might be helpful."
-      Bee Recommended Blocks test: "Purple flowers may have either 1\nor 0 nectar, but you don't know which one! Be careful not to collect nectar\nfrom a purple flower if it doesn't have any. Check if the nectar is equal\nto 1 by using the if block."
+      Bee Recommended Blocks test: "Purple flowers may have either 1 or 0 nectar, but\nyou don't know which one! Be careful not to collect nectar from a purple\nflower if it doesn't have any. Check if the nectar is equal to 1 by using\nthe if block."
       Bergeron Robot Maze1: 'Կարո՞ղ ես օգնել չարաճճի խոզուկին բռնել: Միացրու՛ մի քանի «առաջ ընթանալ» բլոկներ «երբ կսկսի» բլոկին և սեղմի՛ր «վազք»:'
       Brad Spooky House Copy: "Freeplay: Here are the functions\nyou've written, and some more for you to play with. Draw something awesome!\nPlay with the pen width to see how different your drawings look!"
       Brad Spooky House: "Freeplay: Here are the functions\nyou've written, and some more for you to play with. Draw something awesome!\nPlay with the pen width to see how different your drawings look!"
@@ -1567,11 +1567,10 @@ hy:
         For even more effect, try playing
         with color!  Use random colors inside loops to see how it changes your design.
       grade5_artist_variables_freeplay15: |-
-        Want a second peek at the inspiration
-        design or the hints?  Click here!\\r
+        Want a second peek at the inspiration design
+        or the hints?  Click here!\\r
         \\r
-        Otherwise, make a design all your
-        own!
+        Otherwise, make a design all your own!
       grade5_artist_variables_freeplay16: "Still playing?  Here is a blank canvas where\nyou can create whatever you want!"
       grade5_artist_variables_hexagons1: "Let's try it again! \\r\n\\r\nCan you\nset the `length` variable to 60 to make this cool design with hexagons?"
       grade5_artist_variables_letterT11: "Here’s more complicated code using the\nsame concepts from the last puzzle - what should you set the \"sides\" variable\nto in order to draw this picture made of squares?"
@@ -1596,7 +1595,7 @@ hy:
         the hint!
       grade5_artist_variables_triangles2: "Instead of using \"move forward by 150,\"\nthe \"move\" block is now referencing a variable called \"length.\" Can you\nset \"length\" to 150 to draw this new triangle?"
       grade5_artist_variables_triangles3: "Drag a number block to both the `set\nlength` block and the `repeat _ times` block to draw a set of 50 pixel triangles."
-      grade5_bee_for_loops1: "Use a loop to collect the nectar from\neach flower."
+      grade5_bee_for_loops1: "Use a loop to collect the nectar\nfrom each flower."
       grade5_bee_for_loops2: "Add the code necessary to make sure\nthe bee collects all the nectar. Look at how much code you need for this puzzle!\n(We'll learn a simpler way in the next puzzle.)"
       grade5_bee_for_loops6: "You can also use a \"for loop\"\nto count down. Try gathering this nectar by counting down from 5 to 1 by 1."
       grade5_bee_for_loops8: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?"

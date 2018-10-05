@@ -1,3 +1,4 @@
+---
 mt:
   data:
     blocks:
@@ -38,8 +39,8 @@ mt:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'veru/minnu'
-            'false': 'falz'
+            'true': veru/minnu
+            'false': falz
       gamelab_locationDelta:
         options:
           DIR:

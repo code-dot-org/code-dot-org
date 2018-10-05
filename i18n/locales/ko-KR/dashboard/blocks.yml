@@ -1,10 +1,11 @@
+---
 ko:
   data:
     blocks:
       Dancelab_atTimestamp:
         options:
           UNIT:
-            '"seconds"': '~초 기다리기'
+            '"seconds"': "~초 기다리기"
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -53,7 +54,7 @@ ko:
       Dancelab_everySeconds:
         options:
           UNIT:
-            '"seconds"': '~초 기다리기'
+            '"seconds"': "~초 기다리기"
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -134,14 +135,6 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': 위로
-            '"down"': 아래로
-            '"left"': 왼쪽으로
-            '"right"': 오른쪽으로
-            '"space"': 우주
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ ko:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': '참'
-            'false': '거짓'
+            'true': 참
+            'false': 거짓
       gamelab_getProp:
         options:
           PROPERTY:
@@ -233,6 +226,11 @@ ko:
             '"scale"': 크기
             '"x"': x 좌표
             '"y"': y 좌표
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": 왼쪽으로
+            "{x: 300, y: 200}": 오른쪽으로
       Mikelab_getProp:
         options:
           PROPERTY:

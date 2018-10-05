@@ -1,3 +1,4 @@
+---
 fr:
   data:
     blocks:
@@ -134,14 +135,6 @@ fr:
             '"left"': vers la gauche
             '"right"': vers la droite
             '"space"': espace
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': vers le haut
-            '"down"': vers le bas
-            '"left"': vers la gauche
-            '"right"': vers la droite
-            '"space"': espace
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ fr:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'vrai'
-            'false': 'faux'
+            'true': vrai
+            'false': faux
       gamelab_getProp:
         options:
           PROPERTY:
@@ -233,6 +226,11 @@ fr:
             '"scale"': taille
             '"x"': position x
             '"y"': position y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vers la gauche
+            "{x: 300, y: 200}": vers la droite
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -260,7 +258,7 @@ fr:
         options:
           KEY:
             '"up"': flèche « vers le haut »
-            '"down"': 'flèche «&#160;vers le bas »'
+            '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
             '"w"': O
@@ -271,7 +269,7 @@ fr:
         options:
           KEY:
             '"up"': flèche « vers le haut »
-            '"down"': 'flèche «&#160;vers le bas »'
+            '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
             '"w"': O
@@ -282,7 +280,7 @@ fr:
         options:
           KEY:
             '"up"': flèche « vers le haut »
-            '"down"': 'flèche «&#160;vers le bas »'
+            '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
       craft_ifPath:

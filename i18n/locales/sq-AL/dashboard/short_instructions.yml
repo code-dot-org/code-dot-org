@@ -480,7 +480,7 @@ sq:
       Calc Circles of Eval 5: "Përfundo Blloqet e Vlerësimit për ta lidhur\nme këtë formulim."
       Calc Circles of Eval 6: "Përfundo Blloqet e Vlerësimit për të lidhur\nkëtë formulim."
       Calc Circles of Eval 7: "Përfundo Blloqet e Vlerësimit për ta lidhur\nme këtë formulim."
-      Calc Circles of Eval 8: "Përfundo Blloqet e Vlerësimit për të lidhur\nkëtë formulim."
+      Calc Circles of Eval 8: "Përfundo Blloqet e Vlerësimit për ta lidhur\nme këtë formulim."
       Calc Circles of Eval 9: "Përfundo Blloqet e Vlerësimit për ta lidhur\nme këtë formulim."
       Calc Circles of Eval Free Play: "Lojë Falas: Përpiqu të përdorësh Blloqet\ne Vlerësimit për të shkruar disa ekuacione nga vetja jote. Si ndikon mbivendosja blloqeve në\nmënyra të ndryshme në vlerësimin e tyre?"
       Calc Define Funcs 1 (copy 1): "Le të shohim disa funksione\nmë algjebrike tani. Këtu kemi një funksion të përkthyer nga funksioni algjebrik i thjeshtë\nf(x) = x + 1. Çfarë do të prisnit si output i këtij funksioni nëse i jepet një input 15?\n"
@@ -951,7 +951,7 @@ sq:
       K-1 maze debug 2: Zbulo çfarë mungon dhe pastaj shto blloqë për të më çuar te derrkuci!
       K-1 maze debug 3: Zbulo çfarë mungon dhe pastaj largo blloqë për të më çuar te derrkuci!
       K-1 maze debug 4: Shikoji këto blloqe dhe korigjoji! Mendoj se po shkoj në drejtimin e gabuar.
-      K-1 maze debug 5: Korigjo këtë nivel duke rregulluar dhe shtuar blloqe për të më çuar te derrkuci!
+      K-1 maze debug 5: Korigjo këtë nivel duke rregulluar dhe shtuar blloqet për të më çuar te derrkuci!
       K-1 maze debug 6: Korigjo këtë nivel duke rregulluar dhe shtuar blloqet për të më çuar te derrkuci!
       K-1 maze debug 7: Korigjo këtë nivel duke rregulluar dhe shtuar blloqet për të më çuar te derrkuci!
       K-1 maze debug 8: Korigjo këtë nivel duke rregulluar dhe shtuar blloqe për të më çuar te derrkuci!
@@ -1017,7 +1017,7 @@ sq:
       NEW Course 4 Artist Vars 4 5: "Punë e shkëlqyer në puzzle e fundit, le ta provojmë përsëri\nkëtë herë le të bëjmë këtë dizajn cool me me 60 piksela gjashtkëndëshi."
       NEW Course 4 Artist Vars 4: "Le ta provojme serish. A mundeni të vendosni një gjatësi variabël për ta bërë këtë dizanj të mrekullueshëm me gjashtëkëndësha? Udhëzim: Eshte shumëfishi i 10-tës."
       NEW Course 4 Artist Vars 6: "Vizato këtë model duke zhvendosur variablin e gjatësisë në vendin e duhur dhe pastaj vendos vlerën e sakt për gjatësinë. (Udhëzim: Është shumfish i 10). \\r\n\\r\nE patë se si e vendosët vlerën për gjatësinë dhe kodi përdori vlerën e duhur kudo?\\r\n\\r\n\\r\n"
-      NEW Course 4 Bee For Loops 1: Perdorni nje cikël per te koleksionuar nektarin nga cdo lule.
+      NEW Course 4 Bee For Loops 1: Perdorni nje cikël per te mbledhur nektarin nga çdo lule.
       NEW Course 4 Bee For Loops 10: Perdor nje litar variabel te kundert per te pare sa larg mund te levizesh horizontalisht.
       NEW Course 4 Bee For Loops 10a: 'Gati për një sfidë? Kujto çfarë ke mësuar rreth cikleve dhe përpiqu të zgjidhësh këtë problem. Mbaj mend: Ti mund ta lëshosh zgjidhjen tënde disa herë përpara se ta zgjidhesh përfundimisht problemin.'
       NEW Course 4 Bee For Loops 11: A mund të përdorësh variablën e ciklit për të kontrolluar lëvizjet dhe mbledhjen e nektarit?
@@ -1398,14 +1398,14 @@ sq:
       grade4_arist_nested_loop_flags1: Ciklo kodin e dhënë për të krijuar një mulli ere.
       grade4_arist_nested_loop_polygons1: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
       grade4_arist_nested_loop_polygons2: "Ciklo këtë dizenjo 6 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 6-she?)"
-      grade4_arist_nested_loop_squares1: "A mund të vizatosh 10 katrorë të kësaj\nrruge duke përdorur një cikël të mbivendosur? Çdo katror është 30 piksela."
+      grade4_arist_nested_loop_squares1: Mund të vizatosh këto 10 rretha në trotuar duke përdorur një cikël të mbivendosur? Secili rreth është 30 piksel.
       grade4_arist_nested_loop_triangles2: 'Lidhe këtë cikël me një tjetër për të vizatuar 10 trekëndësha. Ky quhet cikël i mbivendosur. Kujdes: Të gjithë 10 trekëndëshat plotësojnë një rrotullim prej 360 gradësh.  '
-      grade4_arist_nested_loop_triangles3: "A mund të vizatosh një gjashtëkëndësh duke cikluar\nkodin e trekëndorit?"
+      grade4_arist_nested_loop_triangles3: Mund te vizatosh një gjashtëkëndesh duke cikluar kodin e trekëndëshit?
       grade4_arist_nested_loop_triangles4: Vizato dhëmbët në gojën e krokodilit!
       grade4_arist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
         
-      grade4_arist_nested_loop_triangles6: "A mund ti vizatosh këto 36 trekëndorë duke përdorur\nnjë cikël të mbivendosur?"
+      grade4_arist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_functions1: "Përshëndetje. Unë artisti zombi. Më pëlqen të vizatoj!\nMë ndihmo të vizatoj xhamat katrorë. Ndihmë: ura midis xhamave është \n25 piksela më e shkurtër sesa gjatësia e katrorit."
       grade4_artist_functions2: "Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi\nlëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur \"vizato një katror\".\nA mund ta përdorësh funksionin \"vizato një katror\" për të krijuar xhamat? Katrorët\njanë 75 piksela të veçuar."
       grade4_artist_functions_challenge: "Përdorni funksionet e sugjeruara për të vizatuar katër radhë\ntë hexagonit. Vini re se si rreshtat tona më të numëruara janë zhvendosur në të djathtë?"
@@ -1423,7 +1423,7 @@ sq:
       grade4_artist_nested_loop_flags1: Ciklo kodin e dhënë për të krijuar një mulli ere.
       grade4_artist_nested_loop_polygons1: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
       grade4_artist_nested_loop_squares1: Mund të vizatosh këto 10 rretha në trotuar duke përdorur një cikël të mbivendosur? Secili rreth është 30 piksel.
-      grade4_artist_nested_loop_triangles1: "Plotëso kodin për të vizatuar këta\ntrekëndorë. I pari është bërë për ty. Ndihmë: 3 trekëndorë në një rrotullim\n360 gradë."
+      grade4_artist_nested_loop_triangles1: "Plotëso kodin për të vizatuar këta\ntrekëndësh. I pari është bërë për ty. Ndihmë: 3 trekëndëshi në një rrotullim\n360 gradë."
       grade4_artist_nested_loop_triangles5: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
         

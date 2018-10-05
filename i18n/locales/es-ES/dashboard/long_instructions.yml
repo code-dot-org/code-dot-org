@@ -16,51 +16,39 @@ es:
       2-3 Artist 9: Termina esta cometa
       2-3 Artist Assessment 1: "**Evaluación:** Termina de dibujar\nel último diente. Mide 25 píxeles de ancho y alto."
       2-3 Artist Debugging 1: "Este gorro debería tener 50 píxeles\nde ancho.\\r\n¿Puedes arreglarlo?\\r\n\\r\n<br/>\\r\n"
-      2-3 Artist Debugging 10: "La cruceta de mi juego\nes demasiado estrecha.\\r\n\\r\n¿Puedes hacerla 10 píxeles más ancha?\\r\n\\r\nIntenta\nejecutar el código antes para ver el problema."
+      2-3 Artist Debugging 10: "El pad de dirección en mi control es demasiado angosto. Sugerencia: Hazlo 10 pixeles mas ancho"
       2-3 Artist Debugging 11: |-
         Ayúdame a terminar mi hermoso copo de nieve.
         ¿Cuantas veces necesito "Repetir" para finalizarlo?
-      2-3 Artist Debugging 2: "Este código para los bigotes del gato\nes incorrecto. \\r\n\\r\nArréglalo para dibujar bigotes que sean todos del mismo tamaño."
-      2-3 Artist Debugging 3: "¡Mi barco tiene un agujero! \\r\n\\r\n¿Qué\nnecesitas arreglar para que se unan los lados?"
-      2-3 Artist Debugging 5: "El código que tenemos para la\npierna y el pie es incorrecto. \\r\n\\r\n¿Puedes arreglarlo?"
+      2-3 Artist Debugging 2: "El código para los tres bigotes que ves es incorrecto. Sugerencia: cada bigote tiene 75 pixeles de largo. Repara este código para dibujar los bigotes."
+      2-3 Artist Debugging 3: "¡Mi barco tiene un agujero! ¿Puedes repararlo cambiando el ángulo de la línea? Sugerencia: el último ángulo está errado por 15 grados."
+      2-3 Artist Debugging 5: "El código para la pierna y el pie está equivocado. Sugerencia: El pie es demasiado largo, podríamos necesistar eliminar un paso (juego de palabras intencional)"
       2-3 Artist Debugging 6: |-
-        ¡Parece ser que estoy en una
-        silla a la que le falta una pata!\r
-        \r
-        Edita el código para dibujar la última pata.
+        Parece que estoy sentado un una silla
+        que le falta una pata. Edita los Bloques para dibujar la pata.
       2-3 Artist Debugging 7: |-
-        ¡Parace que la C en "code" está dibujada
-        al revés!\r
-        \r
-        ¿Puedes hacer que parezca una C de nuevo?
+        Parece que la C en Código está dibujada al revés-
+        ¿Puedes hacer que parezca una C?
       2-3 Artist Debugging 8: |-
-        ¡Mi profe dice que debería
-        acabar lo que empiezo!\r
-        \r
-        Ayúdame a terminar mi molinillo. ¿Puedes ver
-        qué parte está mal?
+        Mi molinillo de viento no está terminado. Cuántas veces necesito repetir para terminarlo?
       2-3 Artist Debugging 9: |-
-        ¡Algo raro pasa aquí!\r
-        \r
-        El
-        código de este tallo está mal. ¿Puedes averiguar cómo hacer que el artista
-        lo pinte bien?
+        El código de este tallo es incorrecto. Sugerencia: El ángulo está fuera por 60 grados
       2-3 Artist Debugging Assessment 1: "**Evaluación:**\\r\n¿Por qué\neste cuadrado acaba siendo 75 píxeles más corto de la cuenta en cada lado? \\r\n\\r\n¡Dónde\nestá mal el código?"
       2-3 Artist Free Play: '¡Juego libre! Dibuja lo que quieras.'
       2-3 Artist Functions 1 a: "\"Yo ser artista zombi. ¡Yo gustar dibujar!\"\n\\r\n\\r\nAyuda al zombi a dibujar gafas cuadradas. \\r\n\\r\nEl puente entre las gafas\nes 25 píxeles más corto que el ancho de los acuadrados, que es 100 píxeles.\\r\n\\r\n"
       2-3 Artist Functions 1: "\"Yo ser artista zombi. ¡Yo gustar dibujar!\"\n\\r\n\\r\nAyuda al zombi a dibujar gafas cuadradas. \\r\n\\r\nEl puente entre las gafas\nes 25 píxeles más corto que el ancho de los acuadrados, que es 100 píxeles.\\r\n\\r\n"
       2-3 Artist Functions 10: "**Juego libre:* Aquí hay dos funciones,\nuna para dibujar un engranaje grande y otra para un engranaje pequeño. \\r\n\\r\n¡Úsalas para\ndibujar el interior de una máquina!"
       2-3 Artist Functions 11 a: "Hemos rebautizado la función 'dibujar un cuadrado' a 'dibuja un hexágono', pero del que todavía nos da plazas!  ¿\\r \\r puede modificar la función 'dibujar un hexágono' para dibujar un hexágono con lados de pixel 50? \\r \\r dibujar la imagen usando la nueva función!"
-      2-3 Artist Functions 11.5: "Aquí es esa misma función 'dibujar un hexágono'. \\r \\r ¿qué pasa si lazo el programa principal 6 veces, girar 60 grados cada vez que lazo?"
+      2-3 Artist Functions 11.5: "Aquí está la misma función \"Dibuja un hexágono\". ¿Que pasa si sólo giras 60 grados en cada iteración?"
       2-3 Artist Functions 11: "Hemos rebautizado la función 'dibujar un cuadrado' a 'dibuja un hexágono', pero del que todavía nos da plazas!  ¿\\r \\r puede modificar la función 'dibujar un hexágono' para dibujar un hexágono con lados de pixel 50? \\r \\r dibujar la imagen usando la nueva función!"
       2-3 Artist Functions 12 Mike: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 12 a: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
-      2-3 Artist Functions 12: "Las funciones son realmente grandes para cosas complejas de dibujo varias veces. \\r \\r puede utilizar la función 'dibujar una flor' para llenar el resto de la caja de la jardinera? \\r las plantas son todas 100 píxeles separados."
+      2-3 Artist Functions 12: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 2: "¡Las funciones permiten definir nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función llamada \"dibuja un cuadrado\". ¿Puedes utilizar la función \"dibuja un cuadrado\" para crear los lentes? Los cuadrados están separados por 75 píxeles."
-      2-3 Artist Functions 3: "Edita la función para dibujar un cuadrado con una longitud lateral de 115 y dibuja los anteojos mas grandes. los cuadrados están ahora separados a 45 píxeles."
+      2-3 Artist Functions 3: "Editar la función para dibujar un cuadrado con una longitud lateral de 115 y dibuja los lentes más grandes. Los cuadrados están ahora separados 45 píxeles."
       2-3 Artist Functions 4: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       2-3 Artist Functions 9: "** Freeplay: ** esta es una función del copo de nieve. ¡Experimentar con él para crear una escena de invierno! \\r \\r este es un nivel de juego libre, por lo que no hay rompecabezas para resolver. ¡Que te diviertas!"
-      2-3 Artist Loops 1: '¿Puedes hacer un hexágono con lados de 100 píxeles de largo para terminar la celda? Recuerda, esto significa que solo necesitas girar ¡60 grados!'
+      2-3 Artist Loops 1: '¿Podrías hacer un hexágono que sus lados midan 100 pixeles de largo para terminar la célula? Recuerda, eso significa que ¡sólo deberas girar 60 grados!'
       2-3 Artist Loops 2: Ahora utilice un bloque de repetición para hacer la célula una cáscara.
       2-3 Artist Loops New 1: |
         Vamos a dibujar la cabeza de la robusteza! ¿Se puede hacer un cuadrado con lados que son 100 píxeles? \r \r <br/> \r
@@ -68,7 +56,7 @@ es:
       2-3 Artist Loops New 10: Ahora conectemos un montón de V juntos, dibujándolos en un bucle.
       2-3 Artist Loops New 11: "¡Tiempo para hacer algo elegante! \\r \\r reconstruir el código del último puzzle, pero esta vez, añadir un giro a la izquierda 30 grados dentro del bucle. Ahora, repita 24 veces en lugar de 8."
       2-3 Artist Loops New 12: 'Dibuja un diamante con lados de 100 píxeles. '
-      2-3 Artist Loops New 13: "Vamos a empezar con algo de código (en gris) para hacer un diamante. \\r \\r bucle el código gris para crear un divertido patrón!"
+      2-3 Artist Loops New 13: "Ahora dibuja un diamante 3 veces en una iteración."
       2-3 Artist Loops New 14: "Jugar con el código para el diamante y ver qué otros patrones que usted puede hacer. \\r \\r prueba cambiando cuántos grados gira y cuántas veces te lazo."
       2-3 Artist Loops New 15: |+
         Ahora, dibujar cualquier cosa que te gusta! \r <br/> <br/> \r \r
@@ -95,7 +83,7 @@ es:
       2-3 Bee Conditionals 13: |-
         Recoge néctar y haz miel. Pista: ¿Qué ocurre si usas el condicional "Si nectar" en una flor roja? ¿Puedes completar esto con un bucle (loop)?
       2-3 Bee Conditionals 14: "Vamos a juntar todo!\\r\n\\r\nUsa lo que has aprendido para ayudarme a recolectar néctar sólo de las flores que tienen néctar, utilizando el menor número de bloques posible.  \\r\n\\r\nNo olvides hacer la miel al final."
-      2-3 Bee Conditionals 15: "Este patrón de escalera debería resultarte familiar.  \\r\n\\r\n¿Puedes recolectar néctar sólo de las flores que lo tienen utilizando el menor número de bloques posible?"
+      2-3 Bee Conditionals 15: "Recoge néctar de las cuatro flores."
       2-3 Bee Conditionals 2: "Soy una abeha hambrienta! \\r\n\\r\n\\r\nAyudame a recolectar todo el néctar de las flores utilizando el menor número de flores."
       2-3 Bee Conditionals 3: "Ayúdame a recoger todo el néctar de las flores y a hacer miel. Usa un bucle (loop)."
       2-3 Bee Conditionals 5: "Estas flores púrpura cambian!\\r\n\\r\nCada vez que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero no sabrás el número hasta que ejecutes el código! \\r\n\\r\nTen cuidado de no recolectar néctar de una flor púrpura si no tiene. \\r\nPrimero deberás comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
@@ -129,24 +117,24 @@ es:
         Repare el error(s) para recojer todo
         el néctar y hacer toda la miel.
       2-3 Bee Functions 1: "Las funciones son bloques de código que realizan una tarea. \\r\n\\r\nUsa la función `obtener 2 néctar` para recolectar el néctar de cada flor."
-      2-3 Bee Functions 10: "Las flores púrpuras cambian entre 1 o 0 néctar cada vez que ejecutas el rompecabezas. \\r\n\\r\nCrea una función que recolecte néctar solo de las flores púrpuras que tienen néctar."
+      2-3 Bee Functions 10: "Las flores moradas pueden tener 1 o 0 néctar. Crea una función que recoja el néctar solo de aquellas flores que lo tengan."
       2-3 Bee Functions 2: "Las funciones son bloques de código que realizan una tarea. \\r\n\\r\nUsa la función `obtener 5` para obtener 5 néctares a la vez."
-      2-3 Bee Functions 4: "La función 'moverse y obtener néctar' gira la abeja, recoge el néctar y luego devuelve la abeja al lugar donde comenzó. \\r\n\\r\nUsa la función para recolectar todo el néctar."
+      2-3 Bee Functions 4: "La función \"mover y obtener néctar\" realizada por la abeja, recoge néctar, y entonces devuelve a la abeja al principio. Usa la función para recoger todo el néctar."
       2-3 Bee Functions Assessment 1: "** Evaluación: ** Use la función dada para recolectar néctar de cada flor."
       2-3 Bee Functions Assessment 2: "** Evaluación: ** Crea una función para girar, avanzar y hacer 3 mieles, luego regresa la abeja al lugar donde comenzó y vuelve atrás."
       2-3 Bee Loops 1: |-
         Cada flor continene una unidad de néctar. Recolecta néctar de cada una de las flores. 
       2-3 Bee Loops 13: "** Evaluación: ** Recoge todo el néctar usando la menor cantidad posible de bloques."
-      2-3 Bee Loops 3A: Usa un bucle 'repetir' para recolectar todo el nectar.
+      2-3 Bee Loops 3A: '¿Podrías utilizar un ciclo para recolectar todo el néctar?'
       2-3 Bee Loops 3B: Ahora usa el bloque 'repetir' para recolectar todo el néctar y crear toda la miel.
       2-3 Bee Loops 4: |-
         ¡Una abeja tan ocupada!
         \r
         Ayuda a Abeja a recolectar todo el néctar y hacer toda la miel con la menor cantidad de bloques posible.
-      2-3 Bee Loops 4A: "¿Cuántas veces pueden los bucles ayudarlo en este puzzle? \\r\n\\r\n¡Los bucles son tus amigos! Usa algunos de ellos para completar este puzzle con el menor número posible de bloques."
+      2-3 Bee Loops 4A: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces?\n¡No olvides hacer la miel al final!"
       2-3 Bee Loops 5: "La forma de este camino es diferente de los demás. \\r\n\\r\n¿Puedes recolectar todo el néctar usando la menor cantidad de bloques posible?"
       2-3 Bee Loops 7: "Que hermoso campo de flores! \\r\n\\r\nAyuda\na la abeja a visitar cada uno.\\r\n\\r\nPuedes conseguir la manera de hacerlo con menos de 7 bloques?"
-      2-3 Bee Loops 8: "Estas flores de color púrpura tienen diferentes cantidades de néctar cada vez que ejecutas el rompecabezas. \\r\n\\r\nUsa el ciclo `siempre que el néctar` para recolectar todo el néctar. \\r\n\\r\nEste ciclo se ejecutará siempre que la condición sea verdadera, en este caso `néctar> 0`."
+      2-3 Bee Loops 8: "Estas flores moradas tienen una cantidad desconocida de\nnéctar. Utiliza el ciclo \"while nectar\" para recolectar todo el néctar. Este ciclo\nva a ejecutarse mientras la condición sea verdadera, en este caso Nectar > 0."
       2-3 Bee Loops Assessment 1: "** Evaluación: ** Use un bucle `siempre que`\npara recoger todo el néctar de estas flores."
       2-3 Maze 1: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \\r\n\\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona \"Ejecutar\". "
       2-3 Maze 12 - One Move Block: |-
@@ -164,7 +152,7 @@ es:
         de una 'repetición'?
       2-3 Maze 13: "Llévame al cerdo! tu solo puedes usar un\nbloque de `avanzar`en esta oportunidad"
       2-3 Maze 15: Usa dos ciclos para hacer que el cerdo use menos bloques.
-      2-3 Maze Loops 18: "Llévame al girasol usando la\nmenor cantidad de bloques posibles! \\r\n\\r\nIntenta usar un ciclo de`repetición` dentro de otro\npara reducir la cantidad de códigos que necesitas."
+      2-3 Maze Loops 18: "¡Llévame al girasol!"
       2-3 Maze Loops 19: "¡Llevemos esto a otro nivel!\n\\r\n\\r\nUsa las curvas para llevarme al girasol usando el menor número posible de ellas."
       2-3 Maze Loops Assessment 1: "**Evaluación:** Llévame\nal girasol usando solo 5 bloques! "
       4-5 Artist 1: "Ayúdame a terminar de dibujar mi caja. (Cada línea\ntiene 300 píxeles de largo) \\r\n\\r\n"
@@ -185,28 +173,28 @@ es:
         ¿Puedes dibujar esta cuadro utilizando un bucle? Cada lado es de 20 píxeles de largo.
       4-5 Artist Patterns 10: "Este código dibuja dos filas de hexágonos\n- Circule todo 4 veces para dibujar todo el panal. \\r\n\\r\nUsted\nnecesita retroceder 120 píxeles en su ciclo más externo para asegurarse de que el artista\nno dibuja fuera de la pantalla."
       4-5 Artist Patterns 11: "Cuantas veces necesitas\ncurvar esto para dibujar un medio círculo?"
-      4-5 Artist Patterns 12: "Si tu creas otro circuito como\neste, pero gira a la izquierda en lugar de a la derecha, ¿qué sucede? \\r\n\\r\nPuedes repetir\ntodo eso para dibujar esta ola?"
-      4-5 Artist Patterns 13: "Ahora recorramos todo eso\ncuatro veces para crear este marco de imagen. Ten cuidado con las esquinas: no puedes\nsolamente girar 90 grados! \\r\n\\r\nSi haciendo un giro de 3 grados 60 veces haces un\nmedio círculo, ¿cuál de estos bloques de código hará un cuarto de círculo adicional\npara las esquinas?"
+      4-5 Artist Patterns 12: "Si copia ese bucle y girar a la izquierda en lugar de la derecha, ¿qué pasa? ¿Puedes repetir eso para dibujar esta ola?"
+      4-5 Artist Patterns 13: "Ahora repitamos todo eso cuatro veces para crear este cuadro. Cuidado con las esquinas - ¡simplemente no puedes girar 90 grados! Si repetir 60 veces un giro de 3 grados hace un semicírculo, ¿cuál de estos bloques de código hará un cuarto de círculo para las esquinas?"
       4-5 Artist Patterns 2: "Si coloca su bucle del cuadrado dentro de otro ciclo, llamamos a eso un bucle anidado. \\r\n\\r\nQue necesitas para agregar como un bucle externo para asegurarse de que los 15 cuadrados se alineen uno al lado del otro?"
-      4-5 Artist Patterns 3: "¡Ahora vayamos un nivel más profundo!\nNosotros hemos anidado todo ese bloque de código en otro ciclo, pero debes volver a colocar al artista en su lugar para dibujar la siguiente línea. ¿Cuál de estos bloques de código puede colocar al final del ciclo externo para dibujar toda la cuadrícula?"
+      4-5 Artist Patterns 3: Ahora vamos a un nivel más profundo. Hemos anidado todo el bloque de código en otro bucle, pero tienes que poner al artista en su lugar para dibujar la línea siguiente. ¿Cuál de estos bloques de código puede usted colocar al final del bucle exterior para dibujar la red entera?
       4-5 Artist Patterns 4: "Este diamante tiene lados de 50 píxeles\ny ángulos de 120 y 60 grados. \\r\n\\r\nUsa un recodo para dibujarlo."
       4-5 Artist Patterns 5: "Repite este código para hacer una fila\nde 6 diamantes \\r\n\\r\nTenga en cuenta que hemos cambiado nuestro código de diamante para repetir 3\nveces en lugar de 2 - ¿por qué crees que se hizo?"
       4-5 Artist Patterns 6: "Cuantas veces necesitas\nrepetir este bloque para dibujar la rejilla completa de diamantes?\\r\n\\r\n"
       4-5 Artist Patterns 7: "Modifiquemos el código del último puzzle para hacer este patrón más complejo. Observe cómo los diamantes se superponen ahora, intente cambiar el primer \"retroceso\" de 100 a 50 (la mitad de distancia)\n- ¿ ahora hasta dónde debe llegar el artista en el segundo \"retroceso\"?\\r\n\\r\n"
-      4-5 Artist Patterns 8: Usa un bucle para dibujar este hexágono con lados de 40 píxeles y ángulos de 60 grados.
+      4-5 Artist Patterns 8: Utilice un bucle para dibujar este hexágono con 40 píxeles lados y ángulos de 60 grados.
       4-5 Artist Patterns 9.5: "Vamos a recorrer este código para dibujar dos filas de hexágonos. \\r\n\\r\nObserva cómo nuestra segunda fila se desplaza hacia la derecha."
-      4-5 Artist Patterns 9: "Ahora repite este código 3 veces y dibuja toda la fila. \\r\n\\r\nCada hexágono tiene 80 píxeles de ancho desde los puntos más alejados de izquierda a derecha."
-      4-5 Artist Patterns Free Play: "Juego libre: prueba tu mano\nal hacer un patrón tuyo!"
+      4-5 Artist Patterns 9: "Ahora repite que código 3 veces para dibujar toda la fila. \nSugerencia, cada hexágono es 80 píxeles de ancho desde los puntos más lejano de izquierda a derecha."
+      4-5 Artist Patterns Free Play: Juego libre - prueba tu destreza en la fabricación de un patrón propio!
       4-5 Bee Conditionals 1: "¡Esta nube está bloqueando mi vista!\n\\r\n\\r\nComprueba si hay una flor debajo de la nube, y solo consigue el néctar\nsi hay una flor.  \\r\n¡Ten cuidado, esta puede cambiar!"
       4-5 Bee Conditionals 2: "La abeja sólo quiere néctar ahora . \nRecuerde que no todos los objetos son flores, recoge néctar solamente de las flores."
       4-5 Bee Conditionals 4: "A veces, esta nube cubre una\nflor, y a veces cubre un panal! \\r\n\\r\nUse el bloque `si/no`\npara recolectar néctar solo si es una flor. \\r\nDe lo contrario, haz miel (porque\nes un panal de miel)."
       4-5 Bee Conditionals 5: |-
         Puede haber una flor o un panal bajo esas nubes. Usa el bloque if/else para recoger néctar si hay una flor, sino haz miel (porque hay un panal de abejas).
-      4-5 Bee Conditionals 6: "No estoy seguro de cuánto néctar\nesta flor tiene, pero sé que tiene 1, 2 o 3 néctar. \\r\n\\r\nCombinar\nlos bloques condicionales (`si` y/o` si/no`) solo para obtener el mayor néctar\ncomo la flor tiene disponible. \\r\n\\r\nRecuerde, la cantidad de néctar puede cambiar cada\nvez que ejecutas el rompecabezas!"
-      4-5 Bee Conditionals 7: "Estas flores pueden tener 3, 2,\no 1 néctar. \\r\n\\r\nComplete la función `revisar la flor purpura` y úselo\npara recoger todo el néctar de las flores."
-      4-5 Bee Conditionals 8: "Escribe la función para `verificar\nla flor que hace la miel`. \\r\n\\r\nTu función debería verificar si la flor morada\ntiene 3, 2 o 1 néctar y obtiene todo el néctar. \\r\nLuego, avanza y\nhaz miel."
-      4-5 Bee Conditionals Assessment 1: "** Evaluación: ** Esta\nnube esconde una flor con un néctar o un panal que necesita\nuna miel \\r\n\\r\nCompleta la función `obtener néctar o hacer miel`, luego\nllámalo para recoger el néctar o la miel. \\r\n"
-      4-5 Bee Debugging 1: "Estos bloques realmente están molestándome. \\r\n\\r\n¿Puedes tu arreglarlos?"
+      4-5 Bee Conditionals 6: "Esta flor púrpura puede tener 3, 2 o 1 néctar. Aquí un bloque if-else se combina con otro bloque if-else para crear un bloque if,else-if, else. Completa la solución para recoger la cantidad desconocida de néctar."
+      4-5 Bee Conditionals 7: "Recuerda que las flores púrpura pueden tener 1, 2 ó 3 néctares. Completa la función \"revisar flor púrpura\" y úsala para recoger todo el néctar de las flores."
+      4-5 Bee Conditionals 8: "Escribe una función dentro del bloque llamada \"revisar que la flor hace miel.\" Tu función debe comprobar cuánto néctar tiene la flor púrpura, recogerla, avanzar y luego hacer miel."
+      4-5 Bee Conditionals Assessment 1: "Evaluación: Este código está errado.\nCompleta la función \"consigue néctar o produce miel\" entonces llámalo para recolectar todo el néctar y la miel. Recuerda que las rosas púrpuras pueden tener 3,2 o 1 néctares."
+      4-5 Bee Debugging 1: "Estos bloques realmente me molestan. ¿Puedes arreglarlos?"
       4-5 Bee Debugging 6: "La flor morada tiene una diferente\ncantidad de néctar cada vez que ejecutas el rompecabezas. \\r\n\\r\nArregla los bloques para obtener\ntodo el néctar de la flor cada vez."
       4-5 Bee Debugging Assessment 1: "** Evaluación: ** Repare el\ncódigo."
       4-5 Bee Nested Loops 4: "Recolecta todo el néctar de cada flor y haz miel en cada panel. Utiliza un bucle anidado. "
@@ -214,7 +202,7 @@ es:
       4-5 Maze 7: "Obtiene el Zombie para el girasol rápidamente! \\r\n\\r\nPuedes\ntu resolver el rompecabezas en menos de 11 bloques?"
       4-5 Maze 9: "Ahora te presentamos el nuevo bloque llamado Repetir Hasta = \"Repeat Until\" \\r\n\\r\nEste crea un ciclo hasta que el Zombie llegue al girasol. \\r\n\\r\nEste nuevo bloque te ayuda a solucionar el ejercicio con menos bloques."
       4-5 Maze Assessment 1: "** Evaluación: ** Llega al girasol\nusando la menor cantidad posible de bloques."
-      4-5 Maze Conditionals 1: "Use el bloque 'repetir hasta'\npara llevar al zombi al girasol."
+      4-5 Maze Conditionals 1: Utiliza el bloque repetir hasta para llevar al zombie hasta el girasol.
       4-5 Maze Conditionals 10: "¿Puedes agregar solo 3 bloques para ayudar al zombi a resolver un laberinto más complejo? \\r\n\\r\nSi lo haces bien, él puede caminar cualquier camino curvilíneo sin importar la longitud!"
       4-5 Maze Conditionals 2: Utiliza el bloque repetir hasta para llevar al zombie hasta el girasol.
       4-5 Maze Conditionals 3: "Usa el bloque `si` para ayudarme\na decidir cuándo girar. \\r\n"
@@ -959,6 +947,7 @@ es:
       Course 4 SCFP 1: Crea una función con parámetros que permita al artista saltar hacia adelante y atrás una cantidad x de pixeles, y además arriba y abajo una cantidad y de pixeles (utilizando números positivos y negativos).
       Course 4 SCVP 1: Crea una función con parámetros que permita al artista saltar hacia adelante y atrás una cantidad x de pixeles, y además arriba y abajo una cantidad y de pixeles (utilizando números positivos y negativos).
       CourseF_PlayLab_vars2: "¡Esa carrera en ese ultimo problema no\nfue justa! Cambia la variable de \"velocidad_perro\" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!"
+      Fish Tank 5-validated_simple: El pez quiere un amigo. Agrega un nuevo sprite.
       Function intro Ryan: "Cuentas con una **función** llamada \"construir puente\" en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río ya está implementado! \\r\n \\r\nLleva dos veces el pequeño bloque verde a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName} alcance la antorcha de redstone [redstone_torch]."
       K-1 Bee Loops 2: "¡Utiliza un enlace para moverte obtener el nectar y\nhacer miel!"
       K-1 Bee Loops 3: '¡Utiliza enlaces para obtener nectar, y para hacer miel!'

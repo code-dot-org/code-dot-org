@@ -2,9 +2,13 @@ es-MX:
   data:
     script:
       category:
+        csd_2018_category_name: Descubrimientos de Informática ('18-'19)
         csf_category_name: Fundamentos de CS
+        csf_2018_category_name: Fundamentos de Informática (2018)
+        csf_international_category_name: Fundamentos de Informática Internacional
         csf2_draft_category_name: 'En desarrollo: Cursos A - F'
         csp_category_name: "'15-'16 Principios de CS"
+        csp_2018_category_name: Principios de Informática ('18-'19)
         cspexams_category_name: Prueba de práctica de principios de CS
         csp17_category_name: '''16-''17 Principios de CS'
         full_course_category_name: Cursos Completos
@@ -531,6 +535,8 @@ es-MX:
               name: Cifrado de los números en el mundo real
             Encoding and Sending Text:
               name: Cifrado y envío del texto
+            Lossy Compression and File Formats:
+              name: Compresión con Pérdida y Formatos de Archivos
             Number Systems:
               name: Sistemas de numeración
             Personal Innovations:
@@ -560,6 +566,8 @@ es-MX:
               name: Bloques de evaluación
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teacher Dashboard:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
@@ -577,6 +585,8 @@ es-MX:
               name: Bloques de evaluación
             Luigi's Pizza:
               name: Pizza de Luigi
+            Rocket-Height:
+              name: Altura del cohete
             Sam the Bat:
               name: Sam el murciélago
             Strings and Images:
@@ -603,10 +613,14 @@ es-MX:
           stages:
             Exploring CSP Instructional Materials:
               name: Explorando Materiales Instructivos de CSP
+            Growth Mindset:
+              name: Mentalidad de crecimiento
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teaching Strategies:
               name: Estrategías de enseñanza
             What is CSP?:
@@ -622,18 +636,26 @@ es-MX:
           description: 'Enseñar programación funcional a través de álgebra'
           description_short: 'Enseñar programación funcional a través de álgebra'
           stages:
+            Growth Mindset:
+              name: Mentalidad de crecimiento
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teaching Strategies:
               name: Estrategías de enseñanza
+            What is ECS?:
+              name: '¿Qué es ECS?'
         sciencePD:
           description: 'Enseñar programación funcional a través de álgebra'
           description_short: 'Enseñar programación funcional a través de álgebra'
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelo basado en los elementos de los sistemas adaptivos que son complejos
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensamiento Computacional y el Marco para la Enseñanza de las Ciencias K-12
             Dispositions and Classroom Culture:
               name: Condiciones y cultura del aula
             Introduction to Complex Adaptive Systems:
@@ -642,6 +664,12 @@ es-MX:
               name: Presentación a la ciencia computacional
             Introduction to PD:
               name: Introducción a PD
+            Introduction to StarLogo Nova:
+              name: Introducción a StarLogo Nova
+            Post-Survey:
+              name: Post-encuesta
+            The Tutorial:
+              name: El Tutorial
             Using Computer Models in Science:
               name: Utilizando los tipos de ordenadores en ciencia
             Using Models in the Classroom:
@@ -652,6 +680,10 @@ es-MX:
           stages:
             reference:
               name: referencia
+        Test Wednesday:
+          stages:
+            PDK5 Intro:
+              name: PDK5 Intro
         cspunit3:
           description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
@@ -662,6 +694,8 @@ es-MX:
               name: Más lejos de los botones hacia las aplicaciones
             Canvas and Arrays in Apps:
               name: Lona y las matrices en las aplicaciones
+            Compound Conditional Logic:
+              name: Lógica Condicional Compuesta
             Controlling Memory with Variables:
               name: Manejando la memoria con las variables
             Creating Functions:
@@ -672,6 +706,16 @@ es-MX:
               name: Proyecto de ayuda digital
             Event-Driven Programming and Debugging:
               name: Programación y limpieza justificada en eventos
+            Events Unplugged:
+              name: Eventos desenchufados
+            Functions and Top-Down Design:
+              name: Funciones y el Diseño Top-Down
+            Functions with Return Values:
+              name: Funciones con Valores de Retorno
+            Image Scroller with Key Events:
+              name: Desplazamiento de Imagen con Eventos Clave
+            Introducing Design Mode:
+              name: Introduciendo Modo de Diseño
             Introduction to Arrays:
               name: Introducción a los Arrays
             Introduction to Conditional Logic:
@@ -684,6 +728,8 @@ es-MX:
               name: Bucles y Simulaciones
             Multi-screen Apps:
               name: Aplicaciones multi-pantalla
+            Practice PT - Design a Digital Scene:
+              name: Práctica PT - Diseña una Escena Digital
             Processing Arrays:
               name: Procesando Arrays
             The Need For Programming Languages:
@@ -720,22 +766,34 @@ es-MX:
           description: 'Enseñar programación funcional a través de álgebra'
           description_short: 'Enseñar programación funcional a través de álgebra'
           stages:
+            Growth Mindset:
+              name: Mentalidad de crecimiento
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teaching Strategies:
               name: Estrategías de enseñanza
+            What is ECS?:
+              name: '¿Qué es ECS?'
         ECSPD-iZone:
           description: 'Enseñar programación funcional a través de álgebra'
           description_short: 'Enseñar programación funcional a través de álgebra'
           stages:
+            Growth Mindset:
+              name: Mentalidad de crecimiento
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teaching Strategies:
               name: Estrategías de enseñanza
+            What is ECS?:
+              name: '¿Qué es ECS?'
         algebraPD-NexTech:
           title: Ciencias de la computación en álgebra PD
           description: 'Enseñar programación funcional a través de álgebra'
@@ -747,6 +805,8 @@ es-MX:
               name: Bloques de evaluación
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teacher Dashboard:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
@@ -762,6 +822,8 @@ es-MX:
               name: Bloques de evaluación
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teacher Dashboard:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
@@ -772,6 +834,8 @@ es-MX:
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelo basado en los elementos de los sistemas adaptivos que son complejos
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensamiento Computacional y el Marco para la Enseñanza de las Ciencias K-12
             Dispositions and Classroom Culture:
               name: Condiciones y cultura del aula
             Introduction to Complex Adaptive Systems:
@@ -780,6 +844,12 @@ es-MX:
               name: Presentación a la ciencia computacional
             Introduction to PD:
               name: Introducción a PD
+            Introduction to StarLogo Nova:
+              name: Introducción a StarLogo Nova
+            Post-Survey:
+              name: Post-encuesta
+            The Tutorial:
+              name: El Tutorial
             Using Computer Models in Science:
               name: Utilizando los tipos de ordenadores en ciencia
             Using Models in the Classroom:
@@ -792,6 +862,8 @@ es-MX:
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelo basado en los elementos de los sistemas adaptivos que son complejos
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensamiento Computacional y el Marco para la Enseñanza de las Ciencias K-12
             Dispositions and Classroom Culture:
               name: Condiciones y cultura del aula
             Introduction to Complex Adaptive Systems:
@@ -800,6 +872,12 @@ es-MX:
               name: Presentación a la ciencia computacional
             Introduction to PD:
               name: Introducción a PD
+            Introduction to StarLogo Nova:
+              name: Introducción a StarLogo Nova
+            Post-Survey:
+              name: Post-encuesta
+            The Tutorial:
+              name: El Tutorial
             Using Computer Models in Science:
               name: Utilizando los tipos de ordenadores en ciencia
             Using Models in the Classroom:
@@ -885,6 +963,8 @@ es-MX:
               name: Juego libre
             Luigi's Pizza:
               name: Pizza de Luigi
+            Rocket-Height:
+              name: Altura del cohete
             Sam the Bat:
               name: Sam el murciélago
             Strings and Images:
@@ -981,6 +1061,8 @@ es-MX:
               name: Bloques de evaluación
             Next Steps:
               name: Siguientes pasos
+            Rocket-Height:
+              name: Altura del cohete
             Strings and Images:
               name: Cadenas de texto e imágenes
             Teacher Dashboard:
@@ -1325,6 +1407,10 @@ es-MX:
           stages:
             Canvas and Arrays in Apps:
               name: Lona y las matrices en las aplicaciones
+            Functions with Return Values:
+              name: Funciones con Valores de Retorno
+            Image Scroller with Key Events:
+              name: Desplazamiento de Imagen con Eventos Clave
             Introduction to Arrays:
               name: Introducción a los Arrays
             Loops and Simulations:
@@ -1464,6 +1550,8 @@ es-MX:
               name: Bloques de evaluación
             Introduction to PD:
               name: Introducción a PD
+            Preparing for in-person PD:
+              name: Preparación para un PD en persona
             Teacher Dashboard:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
@@ -1511,6 +1599,8 @@ es-MX:
               name: Codificación de imágenes B&W
             Encoding Color Images:
               name: Codificación de imágenes a color
+            Lossy Compression and File Formats:
+              name: Compresión con Pérdida y Formatos de Archivos
             Text Compression:
               name: Compresión de texto
             Participate in a longitudinal study!:
@@ -1525,8 +1615,12 @@ es-MX:
               name: Las API y los parámetros de las funciones
             Creating Functions:
               name: Creando funciones
+            Functions and Top-Down Design:
+              name: Funciones y el Diseño Top-Down
             Looping and Random Numbers:
               name: Bucles y Números Aleatorios
+            Practice PT - Design a Digital Scene:
+              name: Práctica PT - Diseña una Escena Digital
             The Need For Programming Languages:
               name: La necesidad de lenguajes de programación
             Using Simple Commands:
@@ -1559,12 +1653,22 @@ es-MX:
               name: Más lejos de los botones hacia las aplicaciones
             Canvas and Arrays in Apps:
               name: Lona y las matrices en las aplicaciones
+            Compound Conditional Logic:
+              name: Lógica Condicional Compuesta
             Controlling Memory with Variables:
               name: Manejando la memoria con las variables
             Digital Assistant Project:
               name: Proyecto de ayuda digital
             Event-Driven Programming and Debugging:
               name: Programación y limpieza justificada en eventos
+            Events Unplugged:
+              name: Eventos desenchufados
+            Functions with Return Values:
+              name: Funciones con Valores de Retorno
+            Image Scroller with Key Events:
+              name: Desplazamiento de Imagen con Eventos Clave
+            Introducing Design Mode:
+              name: Introduciendo Modo de Diseño
             Introduction to Arrays:
               name: Introducción a los Arrays
             Introduction to Conditional Logic:
@@ -1608,6 +1712,8 @@ es-MX:
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelo basado en los elementos de los sistemas adaptivos que son complejos
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensamiento Computacional y el Marco para la Enseñanza de las Ciencias K-12
             Dispositions and Classroom Culture:
               name: Condiciones y cultura del aula
             Introduction to Complex Adaptive Systems:
@@ -1616,6 +1722,12 @@ es-MX:
               name: Presentación a la ciencia computacional
             Introduction to PD:
               name: Introducción a PD
+            Introduction to StarLogo Nova:
+              name: Introducción a StarLogo Nova
+            Post-Survey:
+              name: Post-encuesta
+            The Tutorial:
+              name: El Tutorial
             Using Computer Models in Science:
               name: Utilizando los tipos de ordenadores en ciencia
             Using Models in the Classroom:
@@ -1645,6 +1757,8 @@ es-MX:
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelo basado en los elementos de los sistemas adaptivos que son complejos
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensamiento Computacional y el Marco para la Enseñanza de las Ciencias K-12
             Dispositions and Classroom Culture:
               name: Condiciones y cultura del aula
             Introduction to Complex Adaptive Systems:
@@ -1653,6 +1767,12 @@ es-MX:
               name: Presentación a la ciencia computacional
             Introduction to PD:
               name: Introducción a PD
+            Introduction to StarLogo Nova:
+              name: Introducción a StarLogo Nova
+            Post-Survey:
+              name: Post-encuesta
+            The Tutorial:
+              name: El Tutorial
             Using Computer Models in Science:
               name: Utilizando los tipos de ordenadores en ciencia
             Using Models in the Classroom:
@@ -1701,6 +1821,8 @@ es-MX:
               name: Depuración
             Events:
               name: Eventos
+            Events Unplugged:
+              name: Eventos desenchufados
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Aprende a arrastrar y soltar'
             Loops:
@@ -1725,6 +1847,8 @@ es-MX:
               name: Depuración
             Events:
               name: Eventos
+            Events Unplugged:
+              name: Eventos desenchufados
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Aprende a arrastrar y soltar'
             Loops:
@@ -1967,9 +2091,9 @@ es-MX:
             Unit 5 Overview:
               name: Unidad 5 visión general
         basketball:
-          title: Crear un juego de baloncesto
-          description_short: Crear un juego de baloncesto
-          description: Crear un juego de baloncesto
+          title: Elije un equipo y crea un juego de basquetbol
+          description_short: Elije un equipo y crea un juego de basquetbol
+          description: Elije un equipo y crea un juego de basquetbol
           stages:
             Bounce:
               name: Rebotar
@@ -2542,6 +2666,7 @@ es-MX:
               name: Depuración en Collector
           title: Curso D
           assignment_family_title: Curso D
+          description_audience: 'Edades de 7 a 11 años'
           description_short: Rápidamente repasada conceptos del Curso C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
         coursee-2017:
           stages:
@@ -2837,6 +2962,7 @@ es-MX:
             Conditionals & Loops in Harvester:
               name: Condicionales y ciclos en Harvester
           title: Curso Rápido
+          assignment_family_title: Curso Rápido
           description_audience: 'Edades: 9 a 18'
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -2872,10 +2998,14 @@ es-MX:
               name: Uso de comandos simples
             Creating Functions:
               name: Creando funciones
+            Functions and Top-Down Design:
+              name: Funciones y el Diseño Top-Down
             APIs and Function Parameters:
               name: Las API y los parámetros de las funciones
             Looping and Random Numbers:
               name: Bucles y Números Aleatorios
+            Practice PT - Design a Digital Scene:
+              name: Práctica PT - Diseña una Escena Digital
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
           description_short: Programación
@@ -3124,10 +3254,14 @@ es-MX:
               name: Uso de comandos simples
             Creating Functions:
               name: Creando funciones
+            Functions and Top-Down Design:
+              name: Funciones y el Diseño Top-Down
             APIs and Function Parameters:
               name: Las API y los parámetros de las funciones
             Looping and Random Numbers:
               name: Bucles y Números Aleatorios
+            Practice PT - Design a Digital Scene:
+              name: Práctica PT - Diseña una Escena Digital
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
         pwc:
@@ -3389,6 +3523,7 @@ es-MX:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie y el gran proyecto
         express-2018:
+          assignment_family_title: Curso Rápido
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3528,6 +3663,7 @@ es-MX:
               name: Muévelo, Muévelo
         coursed-2018:
           assignment_family_title: Curso D
+          description_audience: 'Edades de 7 a 11 años'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programación de hoja cuadriculada
@@ -3856,6 +3992,8 @@ es-MX:
               name: Codificación de imágenes B&W
             Encoding Color Images:
               name: Codificación de imágenes a color
+            Lossy Compression and File Formats:
+              name: Compresión con Pérdida y Formatos de Archivos
             Check Your Assumptions:
               name: Verifica tus suposiciones
         csp3-2018:
@@ -3868,10 +4006,14 @@ es-MX:
               name: Uso de comandos simples
             Creating Functions:
               name: Creando funciones
+            Functions and Top-Down Design:
+              name: Funciones y el Diseño Top-Down
             APIs and Function Parameters:
               name: Las API y los parámetros de las funciones
             Looping and Random Numbers:
               name: Bucles y Números Aleatorios
+            Practice PT - Design a Digital Scene:
+              name: Práctica PT - Diseña una Escena Digital
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
             Creating Functions with Parameters:
@@ -3904,6 +4046,8 @@ es-MX:
               name: Introducción a los Arrays
             Processing Arrays:
               name: Procesando Arrays
+            Functions with Return Values:
+              name: Funciones con Valores de Retorno
             Participate in a longitudinal study!:
               name: '¡Participe en un estudio longitudinal!'
         csppostap-2018:

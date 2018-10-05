@@ -1,3 +1,4 @@
+---
 ar:
   data:
     blocks:
@@ -107,14 +108,6 @@ ar:
             '"left"': اليسار
             '"right"': اليمين
             '"space"': الفضاء
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': الأعلى
-            '"down"': الأسفل
-            '"left"': اليسار
-            '"right"': اليمين
-            '"space"': الفضاء
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -124,8 +117,8 @@ ar:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'صحيح'
-            'false': 'خطأ'
+            'true': صحيح
+            'false': خطأ
       gamelab_getProp:
         options:
           PROPERTY:
@@ -206,6 +199,11 @@ ar:
             '"scale"': الحجم
             '"x"': موضع س
             '"y"': موضع ص
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": اليسار
+            "{x: 300, y: 200}": اليمين
       Mikelab_getProp:
         options:
           PROPERTY:

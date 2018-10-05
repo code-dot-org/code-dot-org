@@ -1391,7 +1391,7 @@ hu:
         Kattints ide a tipphez való visszatéréshez!
       grade5_artist_variables_triangles2: A "lépj előre 150" használata helyett a "menj" blokk most egy "length" (hossz) nevű változót használ. Be tudod állítani a "length" változó értékét 150-re a következő háromszög megrajzolásához?
       grade5_artist_variables_triangles3: 'Húzz egy "szám"-blokkot az "állítsd be" blokkhoz, hogy 50 pixel oldalú háromszögeket rajzolj! '
-      grade5_bee_for_loops1: Használj ciklust, hogy minden virágból összegyűjtsük a nektárt.
+      grade5_bee_for_loops1: Használj ciklust, hogy minden virágról összegyűjtsd a nektárt.
       grade5_bee_for_loops2: Állítsd össze a kódot, ami az összes nektár összegyűjtéséhez szükséges! Figyeld meg, milyen hosszú kód kell ehhez a feladványhoz! (A következő feladványban tanulunk erre egy egyszerűbb módszert.)
       grade5_bee_for_loops6: A for ciklust lefelé számlálásra is használhatod. Próbáld összegyűjteni a nektárt 5-től 1-ig lefelé számlálva.
       grade5_bee_for_loops8: "Ha a ciklus felfelé számol, akkor minden ciklusban hozzáadódik a lépésköz a változóhoz. Mi legyen a lépésköz, hogy 3,6,9 nektárt gyűjtsünk?\\r\n"

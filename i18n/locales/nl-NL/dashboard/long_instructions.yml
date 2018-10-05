@@ -47,7 +47,7 @@ nl:
       2-3 Artist Functions 11 a: "We hebben de functie 'teken een vierkant' een nieuwe naam gegeven:'teken een zeshoek', maar het tekent nog steeds vierkanten. \\r \n\\r\nKan je de functie 'teken een zeshoek' aanpassen zodat hij zeshoeken tekent met zijdes van 50 pixels lang.\n\\r \n\\r\nTeken de afbeelding door gebruik te maken van de nieuwe functie!"
       2-3 Artist Functions 11.5: "Er is een functie om een zeshoek te tekenen. \\r \n\\r\nWat gebeurt er als ik het hoofdprogramma 6 keer herhaal, terwijl het telkens 60 graden draait bij elke herhaling?"
       2-3 Artist Functions 11: "We hebben de functie 'teken een vierkant' een nieuwe naam gegeven:'teken een zeshoek', maar het tekent nog steeds vierkanten. \\r \n\\r\nKan je de functie 'teken een zeshoek' aanpassen zodat hij zeshoeken tekent met zijdes van 50 pixels lang.\n\\r \n\\r\nTeken de afbeelding door gebruik te maken van de nieuwe functie!"
-      2-3 Artist Functions 12 Mike: "Functies zijn echt geweldig om complexe dingen meerdere keren te tekenen. Kun je de functie \"tekenen een bloem\" gebruiken om de rest van de bloembak te vullen? (Tip: Tussen de bloemen zit een afstand van 100 pixels) "
+      2-3 Artist Functions 12 Mike: "Functies zijn echt geweldig om complexe zaken verschillende keren te tekenen. \\r \n\\r\nKan je de functie 'teken een bloem' gebruiker om de plantenbak te vullen? \\r \n\\r\nDe planten zijn elk 100 pixels groot."
       2-3 Artist Functions 12 a: "Functies zijn echt geweldig om complexe zaken verschillende keren te tekenen. \\r \n\\r\nKan je de functie 'teken een bloem' gebruiker om de plantenbak te vullen? \\r \n\\r\nDe planten zijn elk 100 pixels groot."
       2-3 Artist Functions 12: "Functies zijn echt geweldig om complexe zaken verschillende keren te tekenen. \\r \n\\r\nKan je de functie 'teken een bloem' gebruiker om de plantenbak te vullen? \\r \n\\r\nDe planten zijn elk 100 pixels groot."
       2-3 Artist Functions 2: "Functies laten je nieuwe blokken definiëren. \\r \n\\r\nWe hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken een vierkant' gebruiken om de brillen te creëren."
@@ -82,8 +82,8 @@ nl:
         Plaats een 'herhaal' blok rond de hele stapel codes om een patroon te tekenen. \r 
         \r
         
-      2-3 Artist Nested Loops 10: Herhaal deze code 1é keer om het patroon te vervolledigen.
-      2-3 Artist Nested Loops 11: Herhaal deze code 4 keer om het patroon te vervolledigen, draai 90 graden na elke cirkel.
+      2-3 Artist Nested Loops 10: Laat deze code in een lus 12 keer uitvoeren om het patroon af te maken.
+      2-3 Artist Nested Loops 11: Laat deze code in een lus 4 keer uitvoeren om het patroon af te maken en draai 90 graden na iedere cirkel.
       2-3 Artist Nested Loops 12: Herhaal deze code 12 keer om de krullen af te werken.
       2-3 Artist Nested Loops 2: "Herhaal nu de driehoek 6 keer.\n\\r \n\\r\nNa elke driehoek, zal je 60 graden moeten draaien voor de volgende driehoek."
       2-3 Artist Nested Loops 3: "Je moet deze driehoek 12 keer herhalen om het patroon te tekenen.\\r \n\\r\nDeel het aantal graden van een cirkel (360°) door het aantal vormen (12) dat je wil tekenen om te berekenen hoe ver je moet draaien na elke vorm."

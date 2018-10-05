@@ -1,0 +1,31 @@
+name 'AP_practice_Qs_rqb_119_CSP_4_1_1'
+wrong '```
+IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+```'
+right '```
+IF  ( (number % 2 = 0)  AND  (number % 3 = 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+```'
+wrong '```
+IF  ( (number % 2 != 0)  AND  (number % 3 = 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+```'
+wrong '```
+IF  ( (number % 2 = 0)  OR  (number % 3 != 0) )
+{
+   DISPLAY ("Number is divisible by 6")
+}
+```'
+markdown <<MARKDOWN
+A student is writing a program to solve a problem. She decides to draw a flowchart to visually represent the algorithm. The flowchart uses the oval block to represent the start or end of the algorithm,  a diamond to represent the conditional or decision step which determines the execution path of the algorithm, a rectangle to represent one or more processing steps, and a parallelogram to represent an input statement. 
+<img src="https://codehs.com/uploads/8d97b1823065d613b57c323b95ef4665" height="500">
+
+Which of the following statements is equivalent to the algorithm in the flowchart?
+MARKDOWN

@@ -223,7 +223,6 @@ ar:
       signin: 'تسجيل الدخول'
       signup: 'إنشاء حساب'
       already_registered: 'هل قمت بالتسجيل من قبل؟'
-      pair_programming: 'البرمجة الزوجية'
       team: 'فريق'
       driver: 'سائق'
       navigator: 'مستكشف'

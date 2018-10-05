@@ -888,7 +888,7 @@ gl:
       K-1 maze debug 2: "Descubre o que falta e entón agrega bloques\npara me levar até o porco!"
       K-1 maze debug 3: "Descubre o que falta e entón REMOVE bloques\npara me levar até o porco!"
       K-1 maze debug 4: "Pasa por estes bloques e arránxaos! Eu acho\nque estou indo na dirección errónea."
-      K-1 maze debug 5: "Depure este nivel reorganizando e agregando bloques\npara me levar até o porco!"
+      K-1 maze debug 5: "Depura este nivel reorganizando e agregando\nbloques para me levar até o porco!"
       K-1 maze debug 6: "Depura este nivel reorganizando e agregando\nbloques para me levar até o porco!"
       K-1 maze debug 7: "Depura este nivel reorganizando e agregando\nbloques para me levar até o porco!"
       K-1 maze debug 8: "Depura este nivel reorganizando e agregando bloques\npara me levar até o porco!"
@@ -1450,7 +1450,7 @@ gl:
         Clica aquí para voltar para á indicación!
       grade5_artist_variables_triangles2: "Ao revés de usar \"avance por 150,\"\no bloque \"mova\" está referenciando agora unha variábel chamada \"lonxitude.\" Podes definir \"lonxitude\" como 150 para debuxar este novo triángulo?"
       grade5_artist_variables_triangles3: "Arrastra un bloque numérico para o bloque \"defina a lonxitude\"\npara debuxar un conxunto de triángulos de 50 pixels. "
-      grade5_bee_for_loops1: "Usa un bucle para recoller o néctar de\ntodas as flores."
+      grade5_bee_for_loops1: "Usa un bucle para recoller o néctar\nde cada flor."
       grade5_bee_for_loops2: "Agrega o código necesario para garantir que\na abella recolla todo o néctar. Mira canto código precisas para este desafío!\n(Imos aprender unha maneira máis simple no próximo desafío.)"
       grade5_bee_for_loops6: "Tamén podes usar un bucle \"para\" para facer conta\nregresiva. Tenta recoller este néctar facendo unha conta regresiva de 5 até 1, de 1 en 1."
       grade5_bee_for_loops8: "Conseguido! Cal debe ser o teu incremento\npara recoller 3, 6, 9, 12, 15 néctares?\\r\nPista: canto precisas\nagregar a cada número para obter o número seguinte?"
