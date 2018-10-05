@@ -607,6 +607,22 @@ function setProp(sprite, property, val) {
   }
 }
 
+function setPropRandom(sprite, property) {
+  if (!spriteExists(sprite)) return;
+
+  if (property == "scale") {
+    sprite.scale = randomNumber(0,100)/100;
+  } else if (property == "width" || property == "height") {
+    sprite[property] = SIZE * (randomNumber(0,100)/100);
+  } else if (property=="y" || property =="x"){
+    sprite[property] = randomNumber(50, 350);
+  } else if (property=="rotation"){
+    sprite[property] = randomNumber(0, 359);
+  } else if (property == "tint") {
+    sprite.tint = "hsb(" + (randomNumber(0, 359)) + ", 100%, 100%)";
+  } else return;
+}
+
 function getProp(sprite, property) {
   if (!spriteExists(sprite)) return;
 
@@ -673,7 +689,7 @@ function nMeasures(n) {
 
 function getTime(unit) {
   if (unit == "measures") {
-    return song_meta.bpm * (Dance.song.currentTime(0) / 240);
+    return song_meta.bpm * ((Dance.song.currentTime(0) - song_meta.delay) / 240) + 1;
   } else {
     return Dance.song.currentTime(0);
   }
@@ -1093,7 +1109,8 @@ function draw() {
     textStyle(BOLD);
     textAlign(TOP, LEFT);
     textSize(20);
-    text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+    //text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+    text("Measure: " + Math.floor(getTime("measures")), 10, 20);
     /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
 }

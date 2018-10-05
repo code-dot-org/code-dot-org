@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "changePropBy",
-    "blockText": "change {SPRITE} {PROPERTY} by {VAL}",
+    "func": "setPropRandom",
+    "blockText": "randomize {SPRITE} {PROPERTY}",
     "args": [
       {
         "name": "SPRITE",
@@ -37,10 +37,6 @@
             "\"y\""
           ]
         ]
-      },
-      {
-        "name": "VAL",
-        "field": true
       }
     ]
   }
