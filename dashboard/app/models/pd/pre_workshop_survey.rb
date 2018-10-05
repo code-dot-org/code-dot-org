@@ -42,12 +42,6 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
     unit_not_started? ? [] : [:lesson]
   end
 
-  def validate_required_fields
-    super
-    hash = sanitize_form_data_hash
-    add_key_error(:lesson) unless unit_not_started? || hash.key?(:lesson)
-  end
-
   def self.units_and_lessons(workshop)
     workshop.pre_survey_units_and_lessons.unshift([UNIT_NOT_STARTED, nil])
   end
