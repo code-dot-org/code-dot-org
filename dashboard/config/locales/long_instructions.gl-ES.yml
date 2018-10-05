@@ -12,11 +12,11 @@ gl:
       2-3 Artist Debugging 10: |-
         O controlador de dirección do control do meu xogo
         é moito estreito. Pista: faino 10 pixels máis ancho
-      2-3 Artist Debugging 11: Axúdame a terminar a miña linda
-        folerpa. Cantas veces preciso "repetir" para terminalo?
-      2-3 Artist Debugging 2: 'O código para os tres bigodes
-        que ves está errado. Pista: cada bigode ten a lonxitude de 75 pixels. Corrixe
-        este código para debuxar os bigodes.'
+      2-3 Artist Debugging 11: Axúdame a terminar a miña linda folerpa. Cantas veces
+        preciso "repetir" para terminalo?
+      2-3 Artist Debugging 2: 'O código para os tres bigodes que ves está errado.
+        Pista: cada bigode ten a lonxitude de 75 pixels. Corrixe este código para
+        debuxar os bigodes.'
       2-3 Artist Debugging 3: |-
         O meu barco ten un buraco! Consegues corrixilo
         alterando o ángulo da liña? Pista: o último ángulo está 15 graos fóra de lugar.
@@ -39,18 +39,18 @@ gl:
       2-3 Artist Functions 11.5: |-
         Aquí está a mesma función "Debuxa un hexágono".
         O que acontece se viras só 60 graos en cada repetición?
-      2-3 Artist Functions 12 Mike: "As funcións son óptimas
-        para debuxar\ncousas complexas varias veces. Podes usar a función \"debuxa
-        unha flor\"\npara cubrir o resto de plantas? (Pista: as plantas están todas
-        separadas\npor unha lonxitude de 100 pixels)  "
-      2-3 Artist Functions 12 a: "As funcións son óptimas para
-        debuxar\ncousas complexas varias veces. Podes usar a función \"debuxa unha
-        flor\"\npara cubrir o resto de plantas? (Pista: as plantas están todas separadas\npor
-        unha lonxitude de 100 pixels)  "
-      2-3 Artist Functions 12: "As funcións son óptimas para
-        debuxar\ncousas complexas varias veces. Podes usar a función \"debuxa unha
-        flor\"\npara cubrir o resto de plantas? (Pista: as plantas están todas separadas\npor
-        unha lonxitude de 100 pixels)  "
+      2-3 Artist Functions 12 Mike: "As funcións son óptimas para debuxar\ncousas
+        complexas varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir
+        o resto de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude
+        de 100 pixels)  "
+      2-3 Artist Functions 12 a: "As funcións son óptimas para debuxar\ncousas complexas
+        varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir o resto
+        de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude de
+        100 pixels)  "
+      2-3 Artist Functions 12: "As funcións son óptimas para debuxar\ncousas complexas
+        varias veces. Podes usar a función \"debuxa unha flor\"\npara cubrir o resto
+        de plantas? (Pista: as plantas están todas separadas\npor unha lonxitude de
+        100 pixels)  "
       2-3 Artist Functions 2: |-
         As funcións permiten que definas novos bloques! Movemos
         os bloques para debuxar un cadrado para dentro dunha función chamada "debuxa un cadrado".
@@ -67,12 +67,10 @@ gl:
       2-3 Artist Loops New 10: |-
         Agora imos conectar unha chea de V's,
         debuxándoos nun bucle.
-      2-3 Artist Loops New 12: 'Debuxa un diamante con lados
-        de 100 pixels.
+      2-3 Artist Loops New 12: 'Debuxa un diamante con lados de 100 pixels.
 
 '
-      2-3 Artist Loops New 13: Agora, debuxa o diamante 3 veces
-        en un bucle.
+      2-3 Artist Loops New 13: Agora, debuxa o diamante 3 veces en un bucle.
       2-3 Artist Loops New 2: |-
         Aquí temos algúns dos códigos que usaches para debuxar
         aquel cadrado. O que acontece se usases o bloque "repita" para executar este código 4 veces?
@@ -112,8 +110,7 @@ gl:
       2-3 Artist Nested Loops Free Play: |-
         Actividade libre. Debuxa algo divertido
         con bucles aniñados.
-      2-3 Bee Conditionals 11: Recolle néctar onde as flores
-        teñen néctar.
+      2-3 Bee Conditionals 11: Recolle néctar onde as flores teñen néctar.
       2-3 Bee Conditionals 13: |-
         Recolle néctar e produce mel. Pista:
         o que acontece se usases a condición "se houbese néctar" nunha flor vermella? Podes completar isto cun bucle?
@@ -140,26 +137,23 @@ gl:
         A función "mova e obteña néctar" vira
         a abella, recolle néctar, e entón retorna a abella para onde ela comezou. Usa
         a función para recoller todo o néctar.
-      2-3 Bee Loops 1: "Cada flor contén unha unidade de néctar.
-        Recolle\no néctar de cada unha das flores. "
-      2-3 Bee Loops 3A: Podes usar un bucle para recoller todo
-        o néctar?
-      2-3 Bee Loops 3B: Agora, usa o novo bloque "repita" para
-        recoller todo o néctar e producir todo o mel.
-      2-3 Bee Loops 4A: O que acontece se repetes esta secuencia
-        3 veces? Non te esquezas de facer o mel ao final!
+      2-3 Bee Loops 1: "Cada flor contén unha unidade de néctar. Recolle\no néctar
+        de cada unha das flores. "
+      2-3 Bee Loops 3A: Podes usar un bucle para recoller todo o néctar?
+      2-3 Bee Loops 3B: Agora, usa o novo bloque "repita" para recoller todo o néctar
+        e producir todo o mel.
+      2-3 Bee Loops 4A: O que acontece se repetes esta secuencia 3 veces? Non te esquezas
+        de facer o mel ao final!
       2-3 Bee Loops 8: |-
         Estas flores moradas teñen unha cantidade descoñecida de
         néctar. Usa o bucle "mentres houbese néctar" para recoller todo o néctar. Este bucle
         será executado mentres a condición sexa verdadeira, neste caso, mentres néctar > 0.
-      2-3 Maze 15: Usa dous bucles para chegar até o porco usando
-        menos bloques.
+      2-3 Maze 15: Usa dous bucles para chegar até o porco usando menos bloques.
       2-3 Maze Loops 18: Lévame até o xirasol!
       4-5 Artist 10: |-
         Presiona "Executar" para probar o código. Daquela repite o código
         o número suficiente de veces para completar o debuxo. As cores serán diferentes cada vez.
-      4-5 Artist 2: Podes repetir este código para completar
-        o cadrado?
+      4-5 Artist 2: Podes repetir este código para completar o cadrado?
       4-5 Artist 5: Que ángulo usas?
       4-5 Artist 6: |-
         Este triángulo equilátero ten ángulos de 60, 60
@@ -217,8 +211,8 @@ gl:
       4-5 Bee Debugging 6: |-
         A flor morada ten unha cantidade descoñecida de
         néctar. Corrixe os bloques para recoller todo o néctar da flor.
-      4-5 Bee Nested Loops 4: "Recolle todo o néctar de cada
-        flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
+      4-5 Bee Nested Loops 4: "Recolle todo o néctar de cada flor\ne produce mel en
+        cada colmea. Usa un bucle aniñado. "
       4-5 Bee Nested Loops Assessment 1: |-
         Avaliación- recolle todo o
         néctar e produce todo o mel usando bucles.
@@ -226,9 +220,9 @@ gl:
       4-5 Maze Conditionals 1: |-
         Usa o bloque "repita até" para levar o
         zumbi até o xirasol.
-      4-5 Maze Conditionals 10: "Podes engadir só 3 bloques para
-        axudar ao zombie a completar un labirinto máis complexo? \r\n\r\nSe o fas
-        ben, poderá andar por calquera camiño curvo independentemente da súa lonxitude!"
+      4-5 Maze Conditionals 10: "Podes engadir só 3 bloques para axudar ao zombie
+        a completar un labirinto máis complexo? \r\n\r\nSe o fas ben, poderá andar
+        por calquera camiño curvo independentemente da súa lonxitude!"
       4-5 Maze Conditionals 2: |-
         Usa o bloque "repita até" para levar o
         zumbi até o xirasol.
@@ -262,10 +256,9 @@ gl:
       4-5 Nested Loops 12: |-
         Podes debuxar estes 36 triángulos usando
         un bucle aniñado?
-      4-5 Nested Loops 3: "Crea un sol aniñando o código inicial\ndentro
-        de outro bucle. Chamamos a isto bucle aniñado.\r"
-      4-5 Nested Loops 5: Repite o código dado para crear un
-        muiño de vento.
+      4-5 Nested Loops 3: "Crea un sol aniñando o código inicial\ndentro de outro
+        bucle. Chamamos a isto bucle aniñado.\r"
+      4-5 Nested Loops 5: Repite o código dado para crear un muiño de vento.
       4-5 Nested Loops 6: |-
         Podes debuxar un hexágono repetindo o
         código do triángulo?
@@ -301,23 +294,22 @@ gl:
       Course 4 Artist 8: |-
         Debuxa este sol repetindo todo este bloque de código
         varias veces.
-      Course 4 Artist 8a: "Lémbraste desta figura? Agora ímoste
-        deixar\nconstruíla sen dar ningún bloque inicial!\r\nPista: hai 3 triángulos
-        dentro da rotación de 360 graos... cantas veces cabe 3 en\n360?"
-      Course 4 Artist Binary 1a: "Temos aquí unha función que
-        recibe unha tira\nbinaria de 1's e 0's que indica o artista a moverse da esquerda
-        para\na dereita, de enriba para baixo. O artista vai cubrir os cadrados nos
-        que vexa un 1 e ignorar os que tivesen un 0.\r\n\r\nExecuta este código para
-        ver como\no artista usa números binarios para debuxar este padrón."
+      Course 4 Artist 8a: "Lémbraste desta figura? Agora ímoste deixar\nconstruíla
+        sen dar ningún bloque inicial!\r\nPista: hai 3 triángulos dentro da rotación
+        de 360 graos... cantas veces cabe 3 en\n360?"
+      Course 4 Artist Binary 1a: "Temos aquí unha función que recibe unha tira\nbinaria
+        de 1's e 0's que indica o artista a moverse da esquerda para\na dereita, de
+        enriba para baixo. O artista vai cubrir os cadrados nos que vexa un 1 e ignorar
+        os que tivesen un 0.\r\n\r\nExecuta este código para ver como\no artista usa
+        números binarios para debuxar este padrón."
       Course 4 Artist For Loops 13: |-
         Hmm, esas figuras están ficando cada vez
         maiores! Non tíñamos resolvido xa este problema con variábeis? Como
         podemos usar a variábel contador para deixar os lados menores conforme a figura ten máis lados? En vez de avanzar unha cantidade definida, avanza (100 /
         contador) pixels.
-      Course 4 Artist For Loops 4: "Como podes modificar o que
-        aprendiches para debuxar estes cadrados?\nComezan con 15 pixels de lonxitude,
-        o maior ten 300 pixels de lonxitude, e cada cadrado é 15 pixels maior que
-        o anterior. "
+      Course 4 Artist For Loops 4: "Como podes modificar o que aprendiches para debuxar
+        estes cadrados?\nComezan con 15 pixels de lonxitude, o maior ten 300 pixels
+        de lonxitude, e cada cadrado é 15 pixels maior que o anterior. "
       Course 4 Artist For Loops 6: |-
         Actividade libre: tenta usar un bucle "para"
         para debuxar un padrón crecente de formas co teu propio debuxo.
@@ -328,12 +320,12 @@ gl:
         Só unha pequena alteración no código
         da última imaxe pode crear esta imaxe. Consegues descobrir cal é esa
         alteración?
-      Course 4 Artist For Loops Challenge_a: "Podes descobrir
-        como\nusar todas as cousas que aprendiches para crear esta imaxe?\r\n\r\nPrecisas
-        de unha indicación? Clica aquí."
-      Course 4 Artist Vars 3: "Temos aquí un bucle que debuxa
-        un cadrado pero\nalgo está faltando. Podes correxilo para que use a variábel
-        \"lonxitude\"\npara descobrir cal debe ser o tamaño de cada lado? "
+      Course 4 Artist For Loops Challenge_a: "Podes descobrir como\nusar todas as
+        cousas que aprendiches para crear esta imaxe?\r\n\r\nPrecisas de unha indicación?
+        Clica aquí."
+      Course 4 Artist Vars 3: "Temos aquí un bucle que debuxa un cadrado pero\nalgo
+        está faltando. Podes correxilo para que use a variábel \"lonxitude\"\npara
+        descobrir cal debe ser o tamaño de cada lado? "
       Course 4 Bee 7: |-
         Usa todo o que aprendiches até agora para recoller
         todo o néctar. A flor morada pode ter 1, 2 ou 3 néctares.
@@ -368,23 +360,18 @@ gl:
       K-1 Bee Loops 2: |-
         Usa un bucle "repita" para te mover e entón recolle o néctar e
         produce mel!
-      K-1 Bee Loops 3: Usa tres bucles "repita" para recoller
-        o néctar e fabricar o mel!
+      K-1 Bee Loops 3: Usa tres bucles "repita" para recoller o néctar e fabricar
+        o mel!
       K-1 Bee Loops 4: |-
         Usa bucles "repita" para obter néctar, producir mel e
         para te mover!
-      K-1 Bee Loops 5: Usa bucles "repita" para obter néctar
-        e mel!
-      K-1 Bee Loops 6: Usa un bucle "repita" para recoller néctar,
-        fabricar mel e para moverse!
-      K-1 Maze Loops 11: "Lévame até o porco! \r\nO bucle \"repita\"
-        facilítao."
-      K-1 Maze Loops 12: "Lévame até o porco! \r\nO bucle \"repita\"
-        facilítao."
-      K-1 Maze Loops 2: Usa o bloque "repita" para me levar até
-        o porco!
-      K-1 Maze Loops 8: Usa o bucle "repita" para me levar até
-        o porco.
+      K-1 Bee Loops 5: Usa bucles "repita" para obter néctar e mel!
+      K-1 Bee Loops 6: Usa un bucle "repita" para recoller néctar, fabricar mel e
+        para moverse!
+      K-1 Maze Loops 11: "Lévame até o porco! \r\nO bucle \"repita\" facilítao."
+      K-1 Maze Loops 12: "Lévame até o porco! \r\nO bucle \"repita\" facilítao."
+      K-1 Maze Loops 2: Usa o bloque "repita" para me levar até o porco!
+      K-1 Maze Loops 8: Usa o bucle "repita" para me levar até o porco.
       NEW Course 4 Artist Functions 10.1: |-
         Usa as funcións dos desafíos
         anteriores para debuxar este padrón.
@@ -407,26 +394,26 @@ gl:
       NEW Course 4 Artist Vars 4: |-
         Imos tentar novamente. Consegues definir
         a variábel "lonxitude" para facer este fantástico debuxo con hexágonos? Pista: é un múltiplo de 10.
-      NEW Course 4 Artist Vars 6: "Debuxa este padrón colocando
-        a\nvariábel lonxitude nos lugares correctos e definindo o valor correcto para\nlonxitude.
-        (Pista: é un múltiplo de 10).  \r\n\r\nPercibes como defines o valor de\nlonxitude
+      NEW Course 4 Artist Vars 6: "Debuxa este padrón colocando a\nvariábel lonxitude
+        nos lugares correctos e definindo o valor correcto para\nlonxitude. (Pista:
+        é un múltiplo de 10).  \r\n\r\nPercibes como defines o valor de\nlonxitude
         só unha vez e o código usa o valor correcto en todos os lugares?\r\n\r\n\r\n"
-      Overworld Move to Sheep: Agrega un segundo comando "andar
-        adiante" para chegar á ovella.
-      Overworld Move to Sheep_2018: Agrega un segundo comando
-        "andar adiante" para chegar á ovella.
+      Overworld Move to Sheep: Agrega un segundo comando "andar adiante" para chegar
+        á ovella.
+      Overworld Move to Sheep_2018: Agrega un segundo comando "andar adiante" para
+        chegar á ovella.
       Testing Quantum Farmer: |-
         Uau, atopei un buraco realmente fondo! Non
         sei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle "mentres".
-      course4_artist_fwp_challenge1: Tenta executar este programa
-        e fai as alteracións para ver o que acontece. Podes descubrir como funciona?
-        (Ou eliminalo e substituílo por algo totalmente distinto)
-      courseD_bee_nestedLoops5: "Recolle todo o néctar de cada
-        flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
-      courseD_bee_nestedLoops8: "Recolle todo o néctar de cada
-        flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
-      courseD_bee_nestedLoops8_2018: "Recolle todo o néctar de
-        cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
+      course4_artist_fwp_challenge1: Tenta executar este programa e fai as alteracións
+        para ver o que acontece. Podes descubrir como funciona? (Ou eliminalo e substituílo
+        por algo totalmente distinto)
+      courseD_bee_nestedLoops5: "Recolle todo o néctar de cada flor\ne produce mel
+        en cada colmea. Usa un bucle aniñado. "
+      courseD_bee_nestedLoops8: "Recolle todo o néctar de cada flor\ne produce mel
+        en cada colmea. Usa un bucle aniñado. "
+      courseD_bee_nestedLoops8_2018: "Recolle todo o néctar de cada flor\ne produce
+        mel en cada colmea. Usa un bucle aniñado. "
       courseD_maze_nestedLoops4: Lévame até o xirasol!
       courseD_maze_nestedLoops4_2018: Lévame até o xirasol!
       courseE_bee_functions3: |-
@@ -514,16 +501,14 @@ gl:
       grade2_PuppyLoops_10: |-
         O meu cataventos non está preparado. Cantas
         veces preciso repetir para terminalo?
-      grade2_PuppyLoops_4: Usa dous bucles para chegar até o
-        porco usando menos bloques.
-      grade2_PuppyLoops_8: 'O código para os tres bigodes que
-        ves está errado. Pista: cada bigode ten a lonxitude de 75 pixels. Corrixe
-        este código para debuxar os bigodes.'
+      grade2_PuppyLoops_4: Usa dous bucles para chegar até o porco usando menos bloques.
+      grade2_PuppyLoops_8: 'O código para os tres bigodes que ves está errado. Pista:
+        cada bigode ten a lonxitude de 75 pixels. Corrixe este código para debuxar
+        os bigodes.'
       grade2_PuppyLoops_9: |-
         Parece que o C no código está debuxado ao contrario.
         Podes facelo parecer a un C?
-      grade2_puppy_loops4: Usa dous bucles para chegar até o
-        porco usando menos bloques.
+      grade2_puppy_loops4: Usa dous bucles para chegar até o porco usando menos bloques.
       grade3_ConditionalsElse_2: |-
         Agora a abella só quere néctar. Lémbrate,
         non todos os obxectos son flores, entón mira se o obxecto debaixo da nube é
@@ -557,33 +542,31 @@ gl:
       grade3_Conditionals_2: |-
         Axúdame a recoller todo o néctar das
         flores e a producir mel. Usa un bucle.
-      grade3_Conditionals_8: Recolle néctar onde as flores teñen
-        néctar.
+      grade3_Conditionals_8: Recolle néctar onde as flores teñen néctar.
       grade3_Debugging_6: |-
         Estes bloques están me incomodando. Corrixe o(s)
         erro(s) para recoller todo o néctar.
       grade3_Debugging_9: |-
         Estes bloques estanme incomodando. Corrixe o(s)
         erro(s) para recoller todo o néctar e producir todo o mel.
-      grade3_Loops_3: Podes usar un bucle para recoller todo
-        o néctar?
-      grade3_Loops_4: Agora, usa o novo bloque "repita" para
-        recoller todo o néctar e producir todo o mel.
-      grade3_Loops_6: O que acontece se repetes esta secuencia
-        3 veces? Non te esquezas de facer o mel ao final!
-      grade3_Loops_7: "Cada flor contén unha unidade de néctar.
-        Recolle\no néctar de cada unha das flores. "
-      grade3_Loops_TeacherIDo: "Cada flor contén unha unidade
-        de néctar. Recolle\no néctar de cada unha das flores. "
+      grade3_Loops_3: Podes usar un bucle para recoller todo o néctar?
+      grade3_Loops_4: Agora, usa o novo bloque "repita" para recoller todo o néctar
+        e producir todo o mel.
+      grade3_Loops_6: O que acontece se repetes esta secuencia 3 veces? Non te esquezas
+        de facer o mel ao final!
+      grade3_Loops_7: "Cada flor contén unha unidade de néctar. Recolle\no néctar
+        de cada unha das flores. "
+      grade3_Loops_TeacherIDo: "Cada flor contén unha unidade de néctar. Recolle\no
+        néctar de cada unha das flores. "
       grade3_bee_conditionals_quantum2: |-
         Agora a abella só quere néctar. Lémbrate,
         non todos os obxectos son flores, entón mira se o obxecto debaixo da nube é
         unha flor. Se é, entón podes recoller o néctar.
       grade3_maze_loops2: Lévame até o xirasol!
-      grade3_maze_nestedLoops4: Usa dous bucles para chegar até
-        o porco usando menos bloques.
-      grade4_arist_nested_loop_flags1: Repite o código dado para
-        crear un muiño de vento.
+      grade3_maze_nestedLoops4: Usa dous bucles para chegar até o porco usando menos
+        bloques.
+      grade4_arist_nested_loop_flags1: Repite o código dado para crear un muiño de
+        vento.
       grade4_arist_nested_loop_polygons1: |-
         Repite este debuxo 10 veces. Canto
         necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
@@ -593,10 +576,9 @@ gl:
       grade4_arist_nested_loop_triangles3: |-
         Podes debuxar un hexágono repetindo o
         código do triángulo?
-      grade4_arist_nested_loop_triangles4: Debuxa o dente na
-        boca do crocodilo!
-      grade4_arist_nested_loop_triangles5: "Crea un sol aniñando
-        o código inicial\ndentro de outro bucle. Chamamos a isto bucle aniñado.\r"
+      grade4_arist_nested_loop_triangles4: Debuxa o dente na boca do crocodilo!
+      grade4_arist_nested_loop_triangles5: "Crea un sol aniñando o código inicial\ndentro
+        de outro bucle. Chamamos a isto bucle aniñado.\r"
       grade4_arist_nested_loop_triangles6: |-
         Podes debuxar estes 36 triángulos usando
         un bucle aniñado?
@@ -604,13 +586,13 @@ gl:
         As funcións permiten que definas novos bloques! Movemos
         os bloques para debuxar un cadrado para dentro dunha función chamada "debuxa un cadrado".
         Podes usar a función "debuxa un cadrado" para crear os lentes? Os cadrados están separados por 75 pixels.
-      grade4_artist_nested_loop_flags1: Repite o código dado
-        para crear un muiño de vento.
+      grade4_artist_nested_loop_flags1: Repite o código dado para crear un muiño de
+        vento.
       grade4_artist_nested_loop_polygons1: |-
         Repite este debuxo 10 veces. Canto
         necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
-      grade4_artist_nested_loop_triangles5: "Crea un sol aniñando
-        o código inicial\ndentro de outro bucle. Chamamos a isto bucle aniñado.\r"
+      grade4_artist_nested_loop_triangles5: "Crea un sol aniñando o código inicial\ndentro
+        de outro bucle. Chamamos a isto bucle aniñado.\r"
       grade4_artist_nested_loop_triangles6: |-
         Podes debuxar estes 36 triángulos usando
         un bucle aniñado?
@@ -628,8 +610,8 @@ gl:
       grade4_bee_functions3: |-
         As funcións son bloques de código que realizan
         unha tarefa. Usa a función "obteña 5" para recoller 5 néctares dunha vez. Lémbrate tamén de usar un bucle para obter un contador ideal de bloque.
-      grade4_bee_nestedLoops4: "Recolle todo o néctar de cada
-        flor\ne produce mel en cada colmea. Usa un bucle aniñado. "
+      grade4_bee_nestedLoops4: "Recolle todo o néctar de cada flor\ne produce mel
+        en cada colmea. Usa un bucle aniñado. "
       grade4_frozen_freeplay: |-
         Oficialmente convertícheste nun artista mestre! Crea
         un país das maravillas invernal.
@@ -675,16 +657,15 @@ gl:
       grade4_review_artist3: |-
         O bloque "salta" move o artista sen debuxar.
         Debuxa a liña trazada usando os bloques "salta" e "debuxa".
-      grade4_review_bee1: Agora, usa o novo bloque "repita" para
-        recoller todo o néctar e producir todo o mel.
+      grade4_review_bee1: Agora, usa o novo bloque "repita" para recoller todo o néctar
+        e producir todo o mel.
       grade5_artist_for_loops1: |-
         Debuxa este triángulo que ten 50 pixels.
         Pista: usa un bloque "repita".
-      grade5_artist_for_loops10: "Podes descobrir como\nusar
-        todas as cousas que aprendiches para crear esta imaxe?\r\n\r\nPrecisas de
-        unha indicación? Clica aquí."
-      grade5_artist_for_loops5: "Unha pequena alteración no código\nda
-        última imaxe pode crear este debuxo. Podes descobrir cal é\nesta alteración?\r\n\r\nPista:
+      grade5_artist_for_loops10: "Podes descobrir como\nusar todas as cousas que aprendiches
+        para crear esta imaxe?\r\n\r\nPrecisas de unha indicación? Clica aquí."
+      grade5_artist_for_loops5: "Unha pequena alteración no código\nda última imaxe
+        pode crear este debuxo. Podes descobrir cal é\nesta alteración?\r\n\r\nPista:
         algo precisa ser removido!"
       grade5_artist_parameters_triangles2a: |-
         Percibes algo diferente
@@ -695,11 +676,10 @@ gl:
       grade5_artist_variables_pentagon9: |-
         Agora, recrea o algoritmo do último
         nivel para crear un pentágono de lados de 150.
-      grade5_artist_variables_pentagons1: "Debuxa este padrón
-        colocando a\nvariábel lonxitude nos lugares correctos e definindo o valor
-        correcto para\nlonxitude. (Pista: é un múltiplo de 10).  \r\n\r\nPercibes
-        como defines o valor de\nlonxitude só unha vez e o código usa o valor correcto
-        en todos os lugares?\r\n\r\n\r\n"
+      grade5_artist_variables_pentagons1: "Debuxa este padrón colocando a\nvariábel
+        lonxitude nos lugares correctos e definindo o valor correcto para\nlonxitude.
+        (Pista: é un múltiplo de 10).  \r\n\r\nPercibes como defines o valor de\nlonxitude
+        só unha vez e o código usa o valor correcto en todos os lugares?\r\n\r\n\r\n"
       grade5_playlab_variables13: |-
         Usa un bloque "cando o personaxe toque" para enviar
         o Can de volta para a parte superior esquerda SOMENTE se toca en calquera outro personaxe.
@@ -709,11 +689,10 @@ gl:
       grade5_playlab_variables9: |-
         Aquí temos unha función chamada "patrulle".
         Edítaa para mover o gato 400 pixels para enriba, e entón 400 pixels para baixo.
-      level 'grade3_Loops_3: Podes usar un bucle para recoller
-        todo o néctar?
-      level 'grade3_Loops_4: Agora, usa o novo bloque "repita"
-        para recoller todo o néctar e producir todo o mel.
-      level 'grade3_Loops_6: O que acontece se repetes esta secuencia
-        3 veces? Non te esquezas de facer o mel ao final!
-      level 'grade3_Loops_7: "Cada flor contén unha unidade de
-        néctar. Recolle\no néctar de cada unha das flores. "
+      level 'grade3_Loops_3: Podes usar un bucle para recoller todo o néctar?
+      level 'grade3_Loops_4: Agora, usa o novo bloque "repita" para recoller todo
+        o néctar e producir todo o mel.
+      level 'grade3_Loops_6: O que acontece se repetes esta secuencia 3 veces? Non
+        te esquezas de facer o mel ao final!
+      level 'grade3_Loops_7: "Cada flor contén unha unidade de néctar. Recolle\no
+        néctar de cada unha das flores. "

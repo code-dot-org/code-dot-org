@@ -1,3 +1,4 @@
+---
 uz:
   data:
     blocks:
@@ -51,15 +52,11 @@ uz:
         options:
           KEY:
             '"space"': koinot
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': koinot
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'rost'
-            'false': 'yolgʻon'
+            'true': rost
+            'false': yolgʻon
       gamelab_locationDelta:
         options:
           DIR:

@@ -1,3 +1,4 @@
+---
 ar:
   data:
     blocks:
@@ -116,8 +117,8 @@ ar:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'صحيح'
-            'false': 'خطأ'
+            'true': صحيح
+            'false': خطأ
       gamelab_getProp:
         options:
           PROPERTY:

@@ -1,3 +1,4 @@
+---
 fr:
   data:
     blocks:
@@ -143,8 +144,8 @@ fr:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'vrai'
-            'false': 'faux'
+            'true': vrai
+            'false': faux
       gamelab_getProp:
         options:
           PROPERTY:
@@ -257,7 +258,7 @@ fr:
         options:
           KEY:
             '"up"': flèche « vers le haut »
-            '"down"': 'flèche «&#160;vers le bas »'
+            '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
             '"w"': O
@@ -268,7 +269,7 @@ fr:
         options:
           KEY:
             '"up"': flèche « vers le haut »
-            '"down"': 'flèche «&#160;vers le bas »'
+            '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
             '"w"': O
@@ -279,7 +280,7 @@ fr:
         options:
           KEY:
             '"up"': flèche « vers le haut »
-            '"down"': 'flèche «&#160;vers le bas »'
+            '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
       craft_ifPath:

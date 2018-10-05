@@ -1,3 +1,4 @@
+---
 ku:
   data:
     blocks:
@@ -38,8 +39,8 @@ ku:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'ڕاست'
-            'false': 'هەڵە'
+            'true': ڕاست
+            'false': هەڵە
       gamelab_locationDelta:
         options:
           DIR:
