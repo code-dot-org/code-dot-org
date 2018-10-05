@@ -29,7 +29,7 @@
             "\"diamonds\""
           ],
           [
-            "Random",
+            "(Random)",
             "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]"
           ]
         ]
