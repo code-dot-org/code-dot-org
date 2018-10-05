@@ -1,3 +1,4 @@
+---
 id:
   data:
     blocks:
@@ -207,8 +208,8 @@ id:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'Benar'
-            'false': 'Salah'
+            'true': Benar
+            'false': Salah
       gamelab_enableDebug:
         text: mengaktifkan debugging
       gamelab_firstTouched:

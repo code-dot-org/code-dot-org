@@ -1,3 +1,4 @@
+---
 sk:
   data:
     blocks:
@@ -143,8 +144,8 @@ sk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'pravda'
-            'false': 'nepravda'
+            'true': pravda
+            'false': nepravda
       gamelab_getProp:
         options:
           PROPERTY:

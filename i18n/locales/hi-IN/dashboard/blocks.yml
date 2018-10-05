@@ -1,3 +1,4 @@
+---
 hi:
   data:
     blocks:
@@ -59,10 +60,6 @@ hi:
         options:
           KEY:
             '"space"': अंतरिक्ष
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': अंतरिक्ष
       gamelab_debugSprite:
         options:
           VAL:
@@ -107,7 +104,9 @@ hi:
             '"right"': दायाँ तीर
             '"w"': W
             '"a"': अ
-            '"s"': "S\nS"
+            '"s"': |-
+              S
+              S
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -117,7 +116,9 @@ hi:
             '"right"': दायाँ तीर
             '"w"': W
             '"a"': अ
-            '"s"': "S\nS"
+            '"s"': |-
+              S
+              S
       Mikelab_whileKeyPressed:
         options:
           KEY:

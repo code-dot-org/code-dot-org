@@ -1,3 +1,4 @@
+---
 lt:
   data:
     blocks:
@@ -104,8 +105,8 @@ lt:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'Taip'
-            'false': 'klaida'
+            'true': Taip
+            'false': klaida
       gamelab_getProp:
         options:
           PROPERTY:
