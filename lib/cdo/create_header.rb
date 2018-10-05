@@ -20,12 +20,6 @@ class CreateHeader
 
     younger_than_13_entries = [
       {
-        id: "create_dropdown_flappy",
-        title: I18n.t("nav.create_button.flappy"),
-        url: CDO.studio_url('projects/flappy/new'),
-        image: "logo_flappy.png"
-      },
-      {
         id: "create_dropdown_minecraft",
         title: I18n.t("nav.create_button.minecraft"),
         url: CDO.studio_url('projects/minecraft_designer/new'),
