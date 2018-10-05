@@ -159,7 +159,8 @@ class HttpCache
           },
           # The last puzzle in Dance Party (Hour of Code 2018) is project backed and can't be cached in CloudFront
           {
-            path: "/s/dance/stage/#{Script.find_by!(name: 'dance').script_levels.order(:position).last.chapter}",
+            # TODO(suresh): lookup the last puzzle from the database
+            path: "/s/dance/stage/10",
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
