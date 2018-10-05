@@ -5,7 +5,10 @@ import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import songLibrary from "../code-studio/songLibrary.json";
+import Radium from "radium";
+import {connect} from "react-redux";
 import i18n from '@cdo/locale';
+import * as danceRedux from "../dance/redux";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -16,25 +19,35 @@ const styles = {
   }
 };
 
-const SongSelector = class extends React.Component {
+const SongSelector = Radium(class extends React.Component {
+  static propTypes = {
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired
+  };
+
+  changeSong = (event) => {
+    this.props.setSong(event.target.value);
+  };
+
   render() {
     return (
-      <div id="song_selector">
+      <div>
         <label><b>{i18n.selectSong()}</b></label>
-        <select style={styles.selectStyle}>
+        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
           {Object.keys(songLibrary).map((option, i) => (
-            <option key={i}>{songLibrary[option].title}</option>
+            <option key={i} value={option}>{songLibrary[option].title}</option>
           ))}
         </select>
       </div>
     );
   }
-};
+});
 
-
-export default class DanceVisualizationColumn extends React.Component {
+class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired,
   };
 
   render() {
@@ -48,7 +61,7 @@ export default class DanceVisualizationColumn extends React.Component {
     };
     return (
       <span>
-        <SongSelector/>
+        <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
         <ProtectedVisualizationDiv>
           <div
             id="divDance"
@@ -63,3 +76,9 @@ export default class DanceVisualizationColumn extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  selectedSong: state.selectedSong,
+}), dispatch => ({
+  setSong: song => dispatch(danceRedux.setSong(song))
+}))(DanceVisualizationColumn);
