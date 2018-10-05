@@ -17,18 +17,6 @@ class MakerControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for :home
 
-  def ensure_script(script_name)
-    Script.find_by_name(script_name) ||
-    create(:script, name: script_name).tap do |script|
-      create :script_level, script: script
-    end
-  end
-
-  def ensure_course(course_name)
-    Course.find_by_name(course_name) ||
-      create(:course, name: course_name)
-  end
-
   test "home loads for student" do
     sign_in @student
 
@@ -399,5 +387,19 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal expected, JSON.parse(@response.body)
 
     assert_equal 1, CircuitPlaygroundDiscountApplication.where(user_id: @teacher.id).length
+  end
+
+  private
+
+  def ensure_script(script_name)
+    Script.find_by_name(script_name) ||
+      create(:script, name: script_name).tap do |script|
+        create :script_level, script: script
+      end
+  end
+
+  def ensure_course(course_name)
+    Course.find_by_name(course_name) ||
+      create(:course, name: course_name)
   end
 end
