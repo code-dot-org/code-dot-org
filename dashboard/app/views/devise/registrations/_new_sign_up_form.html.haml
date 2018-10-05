@@ -1,18 +1,20 @@
 = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
-  .field.field-sm
-    = f.label :email
-    = f.text_field :email, maxlength: 255
+  .field-row
+    .field.field-sm
+      = f.label :email
+      %span.input-sm= f.text_field :email, maxlength: 255
     %span.error.padded= @user.errors[:email]&.first
 
-  .field.field-sm
-    = f.label :password
-    = f.password_field :password, maxlength: 255
+  .field-row
+    .field.field-sm
+      = f.label :password
+      %span.input-sm= f.password_field :password, maxlength: 255
     %span.error.padded= @user.errors[:password]&.first
 
-  .field.field-sm
-    = f.label :password_confirmation
-    = f.password_field :password_confirmation, maxlength: 255
+  .field-row
+    .field.field-sm
+      = f.label :password_confirmation
+      %span.input-sm= f.password_field :password_confirmation, maxlength: 255
     %span.error.padded= @user.errors[:password_confirmation]&.first
 
-  %button#submit
-    = t('signup_form.next')
+  %button#submit= t('signup_form.next')

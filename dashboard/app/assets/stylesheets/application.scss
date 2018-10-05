@@ -1690,7 +1690,7 @@ a.download-video {
       align-items: center;
     }
     .field-sm {
-      width: 500px;
+      width: 400px;
     }
     .field_with_errors label {
       color: $black;
@@ -1714,6 +1714,9 @@ a.download-video {
       width: 338px;
       padding-top: 0;
       padding-bottom: 0;
+    }
+    .input-sm input {
+      width: 250px;
     }
     #school-type {
       width: 370px !important;

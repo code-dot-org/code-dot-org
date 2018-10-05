@@ -20,7 +20,8 @@ class RegistrationsController < Devise::RegistrationsController
       @user = User.new_with_session(user_params, session)
     else
       @already_hoc_registered = params[:already_hoc_registered]
-      SignUpTracking.begin_sign_up_tracking(session)
+      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+      # SignUpTracking.begin_sign_up_tracking(session)
       super
     end
   end
