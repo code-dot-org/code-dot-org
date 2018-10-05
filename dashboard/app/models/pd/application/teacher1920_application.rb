@@ -373,5 +373,79 @@ module Pd::Application
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
     end
+
+    # @override
+    # Called once after the application is submitted. Called again after principal
+    # approval is done. Generates scores for responses, is idempotent and does not
+    # override existing scores
+    #
+    # Overriding the base class because scores are somewhat different
+    def auto_score!
+      responses = sanitize_form_data_hash
+
+      scores = {
+        regional_partner_name: regional_partner.presence ? YES : NO,
+      }
+
+      options = self.class.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      # Section 2
+      if course == 'csd'
+        scores.merge!(
+          {
+            csd_which_grades: (responses[:csd_which_grades] & options[:csd_which_grades].last(3)).empty? ? YES : NO,
+            cs_total_course_hours:
+              if responses[:cs_terms].in?(['1 semester', '2 trimesters'])
+                responses[:cs_total_course_hours].to_i >= 50 ? YES : NO
+              elsif responses[:cs_terms] == 'A full year'
+                responses[:cs_total_course_hours].to_i >= 100 ? YES : NO
+              else
+                NO
+              end,
+            cs_terms: responses[:cs_terms].in?(['1 semester', '2 trimesters', 'A full year']) ? YES : NO,
+            previous_yearlong_cdo_pd: (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
+          }
+        )
+      elsif course == 'csp'
+        scores.merge!(
+          {
+            csp_which_grades: responses[:csp_which_grades].exclude?(options[:csp_which_grades].last) ? YES : NO,
+            cs_total_course_hours: (responses[:cs_total_course_hours]&.>= 100) ? YES : NO,
+            cs_terms: responses[:cs_terms] == 'A full year' ? YES : NO,
+            previous_yearlong_cdo_pd: responses[:previous_yearlong_cdo_pd] != 'CS Principles' ? YES : NO,
+            csp_how_offer: responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
+          }
+        )
+      end
+
+      scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
+      scores[:replace_existing] = responses[:replace_existing].in?(options[:replace_existing].values_at(1, 2)) ? 5 : 0
+
+      # Section 3
+      scores[:have_cs_license] = responses[:have_cs_license].in?(options[:have_cs_license].values_at(0, -1)) ? YES : NO
+      scores[:taught_in_past] = responses[:taught_in_past] == [options[:taught_in_past].last] ? 2 : 0
+
+      # Section 4
+      scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
+      scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
+
+      # Section 5
+      scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5)) ? 2 : 0
+
+      # Principal Approval
+      scores.merge!(
+        {
+          principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
+          principal_plan_to_teach: responses[:principal_plan_to_teach].in?(principal_options[:plan_to_teach].values_at(0, 1)) ? YES : NO,
+          principal_schedule_confirmed: responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].values_at(0, 1)) ? YES : NO,
+          principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
+          principal_free_lunch_percent: (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0,
+          principal_underrepresented_minority_percent: (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
+        }
+      )
+
+      update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
+    end
   end
 end

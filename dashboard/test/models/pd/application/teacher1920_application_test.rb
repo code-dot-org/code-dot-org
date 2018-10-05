@@ -81,309 +81,6 @@ module Pd::Application
       assert_equal 10, teacher_application.total_score
     end
 
-    test 'autoscore does not override existing scores' do
-      application_hash = build :pd_teacher1920_application_hash, {
-        committed: YES,
-        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
-        csp_which_grades: ['12'],
-        csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
-        previous_yearlong_cdo_pd: ['CS Discoveries'],
-        csp_how_offer: Pd::Application::Teacher1920Application.options[:csp_how_offer].last,
-        taught_in_past: ['CS in Algebra']
-      }
-
-      application = create(:pd_teacher1920_application, course: 'csp', form_data_hash: application_hash, regional_partner: (create :regional_partner))
-      application.auto_score!
-
-      assert_equal(
-        {
-          regional_partner_name: YES,
-          committed: YES,
-          able_to_attend_single: YES,
-          csp_which_grades: YES,
-          csp_course_hours_per_year: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          taught_in_past: 2
-        }, application.response_scores_hash
-      )
-
-      application.update_form_data_hash(
-        {
-          principal_approval: YES,
-          schedule_confirmed: YES,
-          diversity_recruitment: YES,
-          free_lunch_percent: '50.1%',
-          underrepresented_minority_percent: '50.1%',
-          wont_replace_existing_course: Pd::Application::PrincipalApproval1920Application.options[:replace_course].second,
-        }
-      )
-
-      application.update(response_scores: application.response_scores_hash.merge({regional_partner_name: NO}).to_json)
-
-      application.auto_score!
-      assert_equal(
-        {
-          regional_partner_name: NO,
-          committed: YES,
-          able_to_attend_single: YES,
-          principal_approval: YES,
-          schedule_confirmed: YES,
-          diversity_recruitment: YES,
-          free_lunch_percent: 5,
-          underrepresented_minority_percent: 5,
-          wont_replace_existing_course: 5,
-          csp_which_grades: YES,
-          csp_course_hours_per_year: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          taught_in_past: 2
-        }, application.response_scores_hash
-      )
-    end
-
-    test 'autoscore for a CSP application where they should get YES/Points for everything' do
-      application_hash = build :pd_teacher1920_application_hash, {
-        committed: YES,
-        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
-        principal_approval: YES,
-        schedule_confirmed: YES,
-        diversity_recruitment: YES,
-        free_lunch_percent: '50.1%',
-        underrepresented_minority_percent: '50.1%',
-        wont_replace_existing_course: Pd::Application::PrincipalApproval1920Application.options[:replace_course].second,
-        csp_which_grades: ['12'],
-        csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
-        previous_yearlong_cdo_pd: ['CS Discoveries'],
-        csp_how_offer: Pd::Application::Teacher1920Application.options[:csp_how_offer].last,
-        taught_in_past: ['CS in Algebra']
-      }
-
-      application = create :pd_teacher1920_application, course: 'csp', form_data_hash: application_hash
-      application.update(regional_partner: (create :regional_partner))
-      application.auto_score!
-
-      assert_equal(
-        {
-          regional_partner_name: YES,
-          committed: YES,
-          able_to_attend_single: YES,
-          principal_approval: YES,
-          schedule_confirmed: YES,
-          diversity_recruitment: YES,
-          free_lunch_percent: 5,
-          underrepresented_minority_percent: 5,
-          wont_replace_existing_course: 5,
-          csp_which_grades: YES,
-          csp_course_hours_per_year: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          taught_in_past: 2
-        }, application.response_scores_hash
-      )
-    end
-
-    test 'autoscore for a CSP application where they should get NO/No points for everything' do
-      application_hash = build :pd_teacher1920_application_hash, {
-        committed: Pd::Application::Teacher1920Application.options[:committed].last,
-        able_to_attend_single: TEXT_FIELDS[:no_explain],
-        principal_approval: YES,
-        schedule_confirmed: NO,
-        diversity_recruitment: NO,
-        free_lunch_percent: '49.9%',
-        underrepresented_minority_percent: '49.9%',
-        wont_replace_existing_course: YES,
-        csp_which_grades: ['12'],
-        csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
-        previous_yearlong_cdo_pd: ['CS Principles'],
-        csp_how_offer: Pd::Application::Teacher1920Application.options[:csp_how_offer].first,
-        taught_in_past: ['AP CS A']
-      }
-
-      application = create :pd_teacher1920_application, course: 'csp', form_data_hash: application_hash, regional_partner: nil
-      application.auto_score!
-
-      assert_equal(
-        {
-          regional_partner_name: NO,
-          committed: NO,
-          able_to_attend_single: NO,
-          principal_approval: YES, # Keep this as yes to test additional fields
-          schedule_confirmed: NO,
-          diversity_recruitment: NO,
-          free_lunch_percent: 0,
-          underrepresented_minority_percent: 0,
-          wont_replace_existing_course: nil,
-          csp_which_grades: YES, # Not possible to select responses for which this would be No
-          csp_course_hours_per_year: NO,
-          previous_yearlong_cdo_pd: NO,
-          csp_how_offer: 0,
-          taught_in_past: 0
-        }, application.response_scores_hash
-      )
-    end
-
-    test 'autoscore for a CSD application where they should get YES/Points for everything' do
-      application_hash = build(:pd_teacher1920_application_hash, :csd,
-        committed: YES,
-        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
-        principal_approval: YES,
-        schedule_confirmed: YES,
-        diversity_recruitment: YES,
-        free_lunch_percent: '50.1%',
-        underrepresented_minority_percent: '50.1%',
-        wont_replace_existing_course: Pd::Application::PrincipalApproval1920Application.options[:replace_course].second,
-        csd_which_grades: ['10', '11'],
-        csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
-        previous_yearlong_cdo_pd: ['CS in Science'],
-        taught_in_past: Pd::Application::Teacher1920Application.options[:taught_in_past].last
-      )
-
-      application = create :pd_teacher1920_application, course: 'csd', form_data_hash: application_hash
-      application.update(regional_partner: (create :regional_partner))
-      application.auto_score!
-
-      assert_equal(
-        {
-          regional_partner_name: YES,
-          committed: YES,
-          able_to_attend_single: YES,
-          principal_approval: YES,
-          schedule_confirmed: YES,
-          diversity_recruitment: YES,
-          free_lunch_percent: 5,
-          underrepresented_minority_percent: 5,
-          wont_replace_existing_course: 5,
-          csd_which_grades: YES,
-          csd_course_hours_per_year: YES,
-          previous_yearlong_cdo_pd: YES,
-          taught_in_past: 2
-        }, application.response_scores_hash
-      )
-    end
-
-    test 'autoscore for a CSD application where they should get NO/No points for everything' do
-      application_hash = build(:pd_teacher1920_application_hash, :csd,
-        committed: Pd::Application::Teacher1920Application.options[:committed].last,
-        able_to_attend_single: TEXT_FIELDS[:no_explain],
-        principal_approval: YES,
-        schedule_confirmed: NO,
-        diversity_recruitment: NO,
-        free_lunch_percent: '49.9%',
-        underrepresented_minority_percent: '49.9%',
-        wont_replace_existing_course: YES,
-        csd_which_grades: ['12'],
-        csd_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].last,
-        previous_yearlong_cdo_pd: ['Exploring Computer Science'],
-        taught_in_past: ['Exploring Computer Science']
-      )
-
-      application = create :pd_teacher1920_application, course: 'csd', form_data_hash: application_hash, regional_partner: nil
-      application.auto_score!
-
-      assert_equal(
-        {
-          regional_partner_name: NO,
-          committed: NO,
-          able_to_attend_single: NO,
-          principal_approval: YES, # Keep this as yes to test additional fields
-          schedule_confirmed: NO,
-          diversity_recruitment: NO,
-          free_lunch_percent: 0,
-          underrepresented_minority_percent: 0,
-          wont_replace_existing_course: nil,
-          csd_which_grades: NO,
-          csd_course_hours_per_year: NO,
-          previous_yearlong_cdo_pd: NO,
-          taught_in_past: 0
-        }, application.response_scores_hash
-      )
-    end
-
-    test 'autoscore for able_to_attend_multiple' do
-      application_hash = build :pd_teacher1920_application_hash, :with_multiple_workshops, :csd
-      application = create :pd_teacher1920_application, form_data: application_hash.to_json, regional_partner: nil
-
-      application.auto_score!
-
-      assert_equal(YES, application.response_scores_hash[:able_to_attend_multiple])
-    end
-
-    test 'autoscore for ambiguous responses to able_to_attend_multiple' do
-      application_hash = build(:pd_teacher1920_application_hash, :csd, :with_multiple_workshops,
-        able_to_attend_multiple: [
-          "December 11-15, 2017 in Indiana, USA",
-          TEXT_FIELDS[:no_explain]
-        ]
-      )
-
-      application = create :pd_teacher1920_application, form_data: application_hash.to_json, regional_partner: nil
-      application.auto_score!
-
-      assert_nil application.response_scores_hash[:able_to_attend_multiple]
-    end
-
-    test 'autoscore for not able_to_attend_multiple' do
-      application_hash = build(:pd_teacher1920_application_hash, :csd, :with_multiple_workshops,
-        program: Pd::Application::Teacher1920Application::PROGRAM_OPTIONS.first,
-        able_to_attend_multiple: [TEXT_FIELDS[:no_explain]]
-      )
-
-      application = create :pd_teacher1920_application, form_data: application_hash.to_json, regional_partner: nil
-      application.auto_score!
-
-      assert_equal(NO, application.response_scores_hash[:able_to_attend_multiple])
-    end
-
-    test 'application meets criteria if able to attend single workshop' do
-      application_hash = build(:pd_teacher1920_application_hash,
-        principal_approval: YES,
-        schedule_confirmed: YES,
-        diversity_recruitment: YES
-      )
-      application = create :pd_teacher1920_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
-      application.auto_score!
-
-      assert_equal(YES, application.meets_criteria)
-    end
-
-    test 'application meets criteria if able to attend multiple workshops' do
-      application_hash = build(:pd_teacher1920_application_hash, :with_multiple_workshops,
-        principal_approval: YES,
-        schedule_confirmed: YES,
-        diversity_recruitment: YES
-      )
-      application = create :pd_teacher1920_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
-      application.auto_score!
-
-      assert_equal(YES, application.meets_criteria)
-    end
-
-    test 'application does not meet criteria if unable to attend single workshop' do
-      application_hash = build(:pd_teacher1920_application_hash,
-        able_to_attend_single: [TEXT_FIELDS[:no_explain]],
-        principal_approval: YES,
-        schedule_confirmed: YES,
-        diversity_recruitment: YES
-      )
-      application = create :pd_teacher1920_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
-      application.auto_score!
-
-      assert_equal(NO, application.meets_criteria)
-    end
-
-    test 'application does not meet criteria if unable to attend multiple workshops' do
-      application_hash = build(:pd_teacher1920_application_hash, :with_multiple_workshops,
-        able_to_attend_multiple: [TEXT_FIELDS[:no_explain]],
-        principal_approval: YES,
-        schedule_confirmed: YES,
-        diversity_recruitment: YES
-      )
-      application = create :pd_teacher1920_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
-      application.auto_score!
-      assert_equal(NO, application.meets_criteria)
-    end
-
     test 'accepted_at updates times' do
       today = Date.today.to_time
       tomorrow = Date.tomorrow.to_time
@@ -969,6 +666,227 @@ module Pd::Application
       assert_raises ActiveRecord::RecordInvalid do
         create :pd_teacher1920_application, user: teacher
       end
+    end
+
+    test 'autoscore with everything getting positive response for csd' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
+        csd_which_grades: ['6'],
+        cs_total_course_hours: 50,
+        cs_terms: '1 semester',
+        previous_yearlong_cdo_pd: ['CS Principles'],
+        plan_to_teach: options[:plan_to_teach].first,
+        replace_existing: options[:replace_existing].second,
+        have_cs_license: options[:have_cs_license].first,
+        taught_in_past: [options[:taught_in_past].last],
+        committed: options[:committed].first,
+        willing_to_travel: options[:willing_to_travel].first,
+        race: options[:race].second,
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_plan_to_teach: principal_options[:plan_to_teach].first,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
+        principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
+        principal_free_lunch_percent: 50,
+        principal_underrepresented_minority_percent: 50
+
+      application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application.auto_score!
+
+      assert_equal(
+        {
+          regional_partner_name: YES,
+          csd_which_grades: YES,
+          cs_total_course_hours: YES,
+          cs_terms: YES,
+          previous_yearlong_cdo_pd: YES,
+          plan_to_teach: YES,
+          replace_existing: 5,
+          have_cs_license: YES,
+          taught_in_past: 2,
+          committed: YES,
+          willing_to_travel: YES,
+          race: 2,
+          principal_approval: YES,
+          principal_plan_to_teach: YES,
+          principal_schedule_confirmed: YES,
+          principal_diversity_recruitment: YES,
+          principal_free_lunch_percent: 5,
+          principal_underrepresented_minority_percent: 5
+        }.stringify_keys,
+        JSON.parse(application.response_scores)
+      )
+    end
+
+    test 'autoscore with everything getting a positive response for csp' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        csp_which_grades: ['12'],
+        cs_total_course_hours: 100,
+        cs_terms: 'A full year',
+        previous_yearlong_cdo_pd: ['CS Discoveries'],
+        csp_how_offer: options[:csp_how_offer].last,
+        plan_to_teach: options[:plan_to_teach].first,
+        replace_existing: options[:replace_existing].second,
+        have_cs_license: options[:have_cs_license].first,
+        taught_in_past: [options[:taught_in_past].last],
+        committed: options[:committed].first,
+        willing_to_travel: options[:willing_to_travel].first,
+        race: options[:race].second,
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_plan_to_teach: principal_options[:plan_to_teach].first,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
+        principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
+        principal_free_lunch_percent: 50,
+        principal_underrepresented_minority_percent: 50
+
+      application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application.auto_score!
+
+      assert_equal(
+        {
+          regional_partner_name: YES,
+          csp_which_grades: YES,
+          cs_total_course_hours: YES,
+          cs_terms: YES,
+          previous_yearlong_cdo_pd: YES,
+          csp_how_offer: 2,
+          plan_to_teach: YES,
+          replace_existing: 5,
+          have_cs_license: YES,
+          taught_in_past: 2,
+          committed: YES,
+          willing_to_travel: YES,
+          race: 2,
+          principal_approval: YES,
+          principal_plan_to_teach: YES,
+          principal_schedule_confirmed: YES,
+          principal_diversity_recruitment: YES,
+          principal_free_lunch_percent: 5,
+          principal_underrepresented_minority_percent: 5
+        }.stringify_keys,
+        JSON.parse(application.response_scores)
+      )
+    end
+
+    test 'autoscore with everything getting negative response for csd' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
+        csd_which_grades: ['6', '12'],
+        cs_total_course_hours: 49,
+        cs_terms: '1 quarter',
+        previous_yearlong_cdo_pd: ['CS Discoveries'],
+        plan_to_teach: options[:plan_to_teach].last,
+        replace_existing: options[:replace_existing].first,
+        have_cs_license: options[:have_cs_license].second,
+        taught_in_past: [options[:taught_in_past].first],
+        committed: options[:committed].last,
+        willing_to_travel: options[:willing_to_travel].last,
+        race: options[:race].first,
+        principal_approval: principal_options[:do_you_approve].last,
+        principal_plan_to_teach: principal_options[:plan_to_teach].last,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].last,
+        principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
+        principal_free_lunch_percent: 49,
+        principal_underrepresented_minority_percent: 49
+
+      application = create :pd_teacher1920_application, regional_partner: nil, form_data_hash: application_hash
+      application.auto_score!
+
+      assert_equal(
+        {
+          regional_partner_name: NO,
+          csd_which_grades: NO,
+          cs_total_course_hours: NO,
+          cs_terms: NO,
+          previous_yearlong_cdo_pd: NO,
+          plan_to_teach: NO,
+          replace_existing: 0,
+          have_cs_license: NO,
+          taught_in_past: 0,
+          committed: NO,
+          willing_to_travel: NO,
+          race: 0,
+          principal_approval: NO,
+          principal_plan_to_teach: NO,
+          principal_schedule_confirmed: NO,
+          principal_diversity_recruitment: NO,
+          principal_free_lunch_percent: 0,
+          principal_underrepresented_minority_percent: 0
+        }.stringify_keys,
+        JSON.parse(application.response_scores)
+      )
+    end
+
+    test 'autoscore with everything getting negative response for csp' do
+      options = Pd::Application::Teacher1920Application.options
+      principal_options = Pd::Application::PrincipalApproval1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        csp_which_grades: [options[:csp_which_grades].last],
+        cs_total_course_hours: 99,
+        cs_terms: '1 semester',
+        previous_yearlong_cdo_pd: 'CS Principles',
+        csp_how_offer: options[:csp_how_offer].first,
+        plan_to_teach: options[:plan_to_teach].last,
+        replace_existing: options[:replace_existing].first,
+        have_cs_license: options[:have_cs_license].second,
+        taught_in_past: [options[:taught_in_past].first],
+        committed: options[:committed].last,
+        willing_to_travel: options[:willing_to_travel].last,
+        race: options[:race].first,
+        principal_approval: principal_options[:do_you_approve].last,
+        principal_plan_to_teach: principal_options[:plan_to_teach].last,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].last,
+        principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
+        principal_free_lunch_percent: 49,
+        principal_underrepresented_minority_percent: 49
+
+      application = create :pd_teacher1920_application, regional_partner: nil, form_data_hash: application_hash
+      application.auto_score!
+
+      assert_equal(
+        {
+          regional_partner_name: NO,
+          csp_which_grades: NO,
+          cs_total_course_hours: NO,
+          cs_terms: NO,
+          previous_yearlong_cdo_pd: NO,
+          csp_how_offer: 0,
+          plan_to_teach: NO,
+          replace_existing: 0,
+          have_cs_license: NO,
+          taught_in_past: 0,
+          committed: NO,
+          willing_to_travel: NO,
+          race: 0,
+          principal_approval: NO,
+          principal_plan_to_teach: NO,
+          principal_schedule_confirmed: NO,
+          principal_diversity_recruitment: NO,
+          principal_free_lunch_percent: 0,
+          principal_underrepresented_minority_percent: 0
+        }.stringify_keys,
+        JSON.parse(application.response_scores)
+      )
+    end
+
+    test 'autoscore does not override existing scores' do
+      application = create :pd_teacher1920_application, regional_partner: nil
+      application.update(response_scores: {regional_partner_name: YES}.to_json)
+
+      application.auto_score!
+
+      assert_equal YES, JSON.parse(application.response_scores)['regional_partner_name']
     end
 
     private
