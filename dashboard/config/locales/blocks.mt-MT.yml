@@ -22,19 +22,10 @@ mt:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
+      Dancelab_jumpTo:
         options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": bl-addoċċ
       Dancelab_randomColor:
         text: kulur bl-addoċċ
       Dancelab_setDanceSpeed:
@@ -62,5 +53,5 @@ mt:
         options:
           POSITION:
             '"random"': bl-addoċċ
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: kulur bl-addoċċ

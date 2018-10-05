@@ -1,3 +1,4 @@
+---
 da:
   data:
     blocks:
@@ -116,8 +117,8 @@ da:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'sandt'
-            'false': 'falsk'
+            'true': sandt
+            'false': falsk
       gamelab_getProp:
         options:
           PROPERTY:

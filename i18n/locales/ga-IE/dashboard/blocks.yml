@@ -1,3 +1,4 @@
+---
 ga:
   data:
     blocks:
@@ -143,8 +144,8 @@ ga:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'fíor'
-            'false': 'bréagach'
+            'true': fíor
+            'false': bréagach
       gamelab_getProp:
         options:
           PROPERTY:

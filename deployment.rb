@@ -438,3 +438,11 @@ end
 def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
 end
+
+def shared_constants_dir(*dirs)
+  lib_dir('cdo', 'shared_constants', *dirs)
+end
+
+def shared_constants_file
+  lib_dir('cdo', 'shared_constants.rb')
+end

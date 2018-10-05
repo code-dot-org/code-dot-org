@@ -1,3 +1,4 @@
+---
 az:
   data:
     blocks:
@@ -141,8 +142,8 @@ az:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'doğru'
-            'false': 'yalan'
+            'true': doğru
+            'false': yalan
       gamelab_getProp:
         options:
           PROPERTY:

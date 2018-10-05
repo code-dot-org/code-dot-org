@@ -1,3 +1,4 @@
+---
 tr:
   data:
     blocks:
@@ -143,7 +144,7 @@ tr:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'doğru'
+            'true': doğru
             'false': 'false'
       gamelab_getProp:
         options:

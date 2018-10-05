@@ -1,3 +1,4 @@
+---
 mi:
   data:
     blocks:
@@ -82,14 +83,6 @@ mi:
             '"left"': whakamauī
             '"right"': whakamatau
             '"space"': tuarangi
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': whakarunga
-            '"down"': whakararo
-            '"left"': whakamauī
-            '"right"': whakamatau
-            '"space"': tuarangi
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -97,8 +90,8 @@ mi:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'pono'
-            'false': 'hē'
+            'true': pono
+            'false': hē
       gamelab_getProp:
         options:
           PROPERTY:

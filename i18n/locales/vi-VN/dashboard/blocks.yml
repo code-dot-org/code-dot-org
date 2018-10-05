@@ -1,3 +1,4 @@
+---
 vi:
   data:
     blocks:
@@ -143,8 +144,8 @@ vi:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'đúng'
-            'false': 'sai'
+            'true': đúng
+            'false': sai
       gamelab_getProp:
         options:
           PROPERTY:

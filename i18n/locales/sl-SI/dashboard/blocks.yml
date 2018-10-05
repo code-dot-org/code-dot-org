@@ -1,3 +1,4 @@
+---
 sl:
   data:
     blocks:
@@ -104,8 +105,8 @@ sl:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'velja'
-            'false': 'ne velja'
+            'true': velja
+            'false': ne velja
       gamelab_getProp:
         options:
           PROPERTY:

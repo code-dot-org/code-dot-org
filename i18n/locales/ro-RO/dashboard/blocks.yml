@@ -1,3 +1,4 @@
+---
 ro:
   data:
     blocks:
@@ -214,8 +215,8 @@ ro:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'adevărat'
-            'false': 'fals'
+            'true': adevărat
+            'false': fals
       gamelab_enableDebug:
         text: activează depanare
       gamelab_firstTouched:
