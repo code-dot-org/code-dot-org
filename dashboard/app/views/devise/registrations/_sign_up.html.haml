@@ -12,10 +12,7 @@
   .row
     .span8.signupblock
 
-      - if SignUpTracking.new_sign_up_experience?(session)
-        = render 'new_sign_up_form'
-      - else
-        = render 'old_sign_up_form'
+      = render 'old_sign_up_form'
 
       -# More information for students about email storage.
       .student-options
