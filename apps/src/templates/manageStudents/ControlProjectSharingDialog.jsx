@@ -5,15 +5,13 @@ import Button from '../Button';
 import i18n from "@cdo/locale";
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
-  },
-  instructions: {
-    marginTop: 20
   }
 };
 
@@ -45,10 +43,7 @@ class ControlProjectSharingDialog extends Component {
         >
           <h2>{i18n.projectSharingDialogHeader()}</h2>
           <div>
-            {i18n.projectSharingDialogInstructions1()}
-          </div>
-          <div style={styles.instructions}>
-            {i18n.projectSharingDialogInstructions2()}
+            <UnsafeRenderedMarkdown markdown={i18n.projectSharingDialogInstructions()} />
           </div>
           <DialogFooter>
             <Button

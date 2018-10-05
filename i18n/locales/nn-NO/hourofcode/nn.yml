@@ -11,12 +11,21 @@
   campaign_date_full: "4.-10. desember"
   campaign_date_year: "2017"
   campaign_date_full_year: "4.-10. desember, 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Bli med på det største læringsarrangementet i historia, %{campaign_date}'
   front_intro_default: 'Kodetimen er ei global rørsle som når ut til eit titalls millionar elever i over 180 land. Kven som helst kan organisere ein kodetime kvar som helst. Timeslange leksjonar er tilgjengelege på over 45 språk. Det trengs inga erfaring. <strong>Alder: frå 4 til 104.</strong>'
   front_watch_video: 'Sjå den nye videoen'
   front_watch_regular_video: 'Sjå videoen'
   front_volunteers: 'Vi treng fleire tekniske frivillige'
   front_start_learning: 'Start læringa'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Ressursar'
   header_menu_faq: 'Spørsmål og svar'
   header_menu_how_to: 'Slik gjer du'
@@ -222,6 +231,8 @@
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registrering for Kodetimen er nå stengd. Sjekk igjen i oktober for å registrere deg for neste Kodetime.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organiser ein Kodetime i perioda %{campaign_date}, og registrer den her.'
   signup_name_label: 'Namnet ditt'
   signup_name_error: 'Navnet er påkrevd.'
@@ -243,6 +254,11 @@
   signup_your_event: 'Registrer arrangement ditt'
   signup_host_an_hour: 'Ver vert for ein Kodetime'
   signup_match_volunteer: 'Hjelp meg å finne ein lokal programmerar til å inspirere elevane mine'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Hvis du held flere arrangementer, gjer vel å registrere unike namn og epostadresser for kvart av dei. Vi tel berre eitt arrangement per namn og epost i kombinasjon."
   signup_registration_deadline: "Registreringa til Kodetimen lukkar 11. desember."
   signup_name_placeholder: 'Namnet ditt'
@@ -265,6 +281,7 @@
   signup_thank_you_message: 'Vi har sendt deg bekreftelse på e-post med informasjon for å hjelpe deg i gong.'
   map_title: "Kodetimekartet"
   map_header: '# arrangement som er registrert for Kodetimen 2017'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Sjå alle arrangement'
   map_header_company: '# av arrangørfirma'
   map_header_country: '# i %{country}'
@@ -280,6 +297,7 @@
   meta_tag_twitter_title: 'Kodetimen: Alle kan lære'
   meta_tag_twitter_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 45 språk.'
   twitter_default_text: "Eg skal vera med på #kodetime #HourOfCode i år, skal du? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Vanlege spørsmål'
   hoc_faq_what_is_hoc_q: 'Kva er Kodetimen? '
   hoc_faq_what_is_hoc_a: "Kodetimen starta som ein timeslang introduksjon til datavitskap, designa for å avmystifisere koding og vise at alle kan lære det grunnleggande og for å auka deltaking innan dataprogrammering.\n Det har sidan blitt ein verdsomfattande innsatsi å feire dataprogrammering, som starta som aktivitetar på ein time, men som har utvida seg til all slags engasjement i samfunnet. Sjekk ut <a href='%{tutorials}'>øvingar og aktivitetar</a>. Denne grasrotkampanjen er støtta av over <a href='%{partners}'>400 partnarar</a> og 200.000 lærarar og pedagogar over heile verda."
@@ -374,6 +392,7 @@
   videos_obama_cs: President Obama om programmering
   videos_anybody_can_learn: Alle kan lære (1 min)
   title_country_resources: Landspesifikke ressursar
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Kodetimen - rettleiing for kommuner
   title_how_to_events: Kodetimen - rettleiing for arrangement
   title_how_to_organizations: Korleis halde ein kodetime - for organisasjonar
@@ -382,6 +401,7 @@
   title_how_to_volunteers: Korleis halde ein Kodetime - for frivillige
   title_how_to_parents: Rettleiing for foreldre
   title_how_to: Rettleiing
+  title_international_partners: Contact International Partners
   title_press_release: Kodetimen - pressemelding til folkevalde
   title_op_ed: Eksempel på side som støtter opp om "Computer Science Education Week" og Kodetimen
   title_press_kit: Presse-sett

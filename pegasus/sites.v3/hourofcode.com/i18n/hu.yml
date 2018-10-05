@@ -11,12 +11,21 @@ hu:
   campaign_date_full: "december 7-13"
   campaign_date_year: "2016-ban"
   campaign_date_full_year: "December 5-11, 2016-ban"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Csatlakozz minden idők legnagyobb tanulmányi eseményéhez %{campaign_date}'
   front_intro_default: 'A Kódolás Órája egy globális mozgalom, ami tanulók tízmillióit éri el 180+ országban. Bárki bárhol szervezhet Kódolás Órája eseményt. Az egy órás gyakorlatok több, mint 45 nyelven érhetők el. Nincs szükség tapasztalatra. <strong>4-től 104 éves korig.</strong>'
   front_watch_video: 'Nézd meg az új videót'
   front_watch_regular_video: 'Nézd meg a videót'
   front_volunteers: 'Műszaki önkénteseket keresünk'
   front_start_learning: 'Kezdd a tanulást'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Segédanyagok'
   header_menu_faq: 'GYIK'
   header_menu_how_to: 'Útmutató'
@@ -222,6 +231,8 @@ hu:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Rendezd meg te is a Kódolás Óráját (%{campaign_date}), regisztrálj itt.'
   signup_name_label: 'Név'
   signup_name_error: 'Név megadása kötelező.'
@@ -243,6 +254,11 @@ hu:
   signup_your_event: 'Feliratkozás az eseményre'
   signup_host_an_hour: 'Tarts meg egy órát'
   signup_match_volunteer: 'Segíts nekem találni egy helyi szoftver mérnököt, hogy inspiráljam a tanulóimat'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Ha több eseményt szervezel, akkor adj egyedi nevet vagy emailt mindegyikhez. Csak egy eseménynek számolunk egy név és email kombinációt."
   signup_registration_deadline: "A Kódolás Órájának regisztrációja december 11-én zárul."
   signup_name_placeholder: 'Neved'
@@ -265,6 +281,7 @@ hu:
   signup_thank_you_message: 'Küldtünk egy megerősítő e-mailt, amiben segítséget kapsz az induláshoz is.'
   map_title: "Kódolás Órája térkép"
   map_header: '# Kódolás Órája esemény szerte a nagyvilágban'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Mutasd az összes eseményt'
   map_header_company: '# cégek szervezésében'
   map_header_country: '# itt: %{country}'
@@ -280,6 +297,7 @@ hu:
   meta_tag_twitter_title: 'Hamarosan itt Kódolás Órája'
   meta_tag_twitter_description: 'A Kódolás Órája egy globális mozgalom, ami különböző életkorú tanulók tízmillióit éri el 180+ országban, és több mint 45 nyelven.'
   twitter_default_text: "Én részt veszek az idei #HourOfCode eseményen. És Te? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'GYIK'
   hoc_faq_what_is_hoc_q: 'Mi a Hour of Code?'
   hoc_faq_what_is_hoc_a: "A Kódolás Órája egy egy órás bevezetés a számítástudomány alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>."
@@ -317,7 +335,7 @@ hu:
   hoc_faq_more_questions_q: "További kérdéseid vannak?"
   hoc_faq_more_questions_a: "Nézz körül a <a href='http://support.code.org'>fórumban</a>, hátha megtalálod a kérdéseire a válaszokat."
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Hol tudom kinyomtatni a tanúsítványokat a tanítványaimnak?"
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
@@ -333,8 +351,8 @@ hu:
   stats_hoc: "A Kódolás Órája: 5 nap"
   stats_global: "Több, mint 100 millióan próbálták ki a kódolást egy órán át"
   stats_girls_more: "Több lány próbálta ki a számítógép-tudományt, mint az elmúlt 70 évben"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '„Minden egyes napo ugyanazzal az eredménnyel&mdash; 100%-os elkötelezettség.” - Nina Nichols Peery, tanár'
   stats_student: '„Tudtam, hogy ez egy <b>egyszeri</b> lehetőség.” - Mariana Alzate, 5. osztályos'
   stats_michael: '„<b>Soha életemben</b> nem láttam még a diákjaimat ennyire izgatottnak tanulás közben.” - Michael Clark, tanár'
@@ -374,6 +392,7 @@ hu:
   videos_obama_cs: Obama elnök a számítástechnikáról
   videos_anybody_can_learn: Anybody Can Learn (1 min)
   title_country_resources: Ország specifikus anyagok
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Kódolás Órája útmutató tankerületeknek
   title_how_to_events: Útmutató Kódolás Órája eseményhez
   title_how_to_organizations: How to host an Hour of Code - Organizations
@@ -382,6 +401,7 @@ hu:
   title_how_to_volunteers: Útmutató Kódolás Órája önkénteseknek
   title_how_to_parents: Útmutató szülőknek
   title_how_to: Útmutató
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Sajtóanyag

@@ -2,156 +2,165 @@ ta:
   site_name: 'குறியீடு மணி'
   hour_of_code: 'குறியீடு மணி'
   language: 'English'
-  front_title: 'Join the largest learning event in history, %{campaign_date}'
+  front_title: '%{campaign_date} வரலாற்றில் மிகப் பெரிய கற்றல் நிகழ்வு சேர'
   coming_soon: 'விரைவில் வருகிறது'
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  campaign_date_start_short: "Dec. 4"
-  campaign_date_start_long: "December 4"
-  campaign_date_short: "Dec. 4-10"
-  campaign_date_full: "December 4-10"
+  compatibility_unsupported_browser: "உங்கள் உலாவி ஆதரிக்கப்படவில்லை. உங்கள் உலாவியை <a href='%{supported_browsers_url}' target ='_blank'> எங்களது ஆதரவளிக்கப்பட்ட உலாவிகளில் </a> மேம்படுத்தவும். நீங்கள் பக்கம் பார்க்க முயற்சி செய்யலாம், ஆனால் செயல்பாடு உடைக்கப்பட வேண்டும் என்று எதிர்பார்க்கலாம்."
+  campaign_date_start_short: "டிசம்பர் 4"
+  campaign_date_start_long: "டிசம்பர் 4"
+  campaign_date_short: "டிசம்பர் 4-10"
+  campaign_date_full: "டிசம்பர் 4-10"
   campaign_date_year: "2017"
-  campaign_date_full_year: "December 4-10, 2017"
-  front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
-  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
+  campaign_date_full_year: "டிசம்பர் 4-10, 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
+  front_header_banner: '%{campaign_date} வரலாற்றில் மிகப் பெரிய கற்றல் நிகழ்வு சேர'
+  front_intro_default: 'கோட் ஆஃப் ஹவர் 180+ நாடுகளில் பல்லாயிரக்கணக்கான மாணவர்களை அடையும் ஒரு உலகளாவிய இயக்கமாகும். எவரும் எங்கு வேண்டுமானாலும் கோடீஸ் நிகழ்வு ஏற்பாடு செய்யலாம். ஒரு மணி நேர பயிற்சிகள் 45 மொழிகளில் கிடைக்கின்றன. அனுபவம் தேவை இல்லை. <strong> வயது 4 முதல் 104 வரை. </ strong>'
   front_watch_video: 'புதிய வீடியோ'
   front_watch_regular_video: 'வீடியோ பார்க்க'
   front_volunteers: 'தொழில்நுட்ப தொண்டர்கள் தேவை'
   front_start_learning: 'கற்றல் தொடக்கம்'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'வளங்கள்'
   header_menu_faq: 'கேள்விகளும் பதில்களும்'
   header_menu_how_to: 'எப்படி என்று'
-  header_menu_promote: 'Promote'
+  header_menu_promote: 'ஊக்குவிக்க'
   header_menu_activities: 'செயல்பாடுகள்'
   not_found_title: 'பக்கம் காணப்படவில்லை'
   not_found_desc: 'கோரப்பட்ட பக்கம் காணப்படவில்லை'
   not_found_instructions: 'வலை முகவரியை சரிபார் முறைகளுள் அல்லது இணைப்பை பட்டியலில் இருந்து தேர்வு செய்யவும்.'
-  company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
+  company_4-H: 4-H இளைஞர் மேம்பாடு
+  company_asa: பின்னணி கூட்டணி
   company_asos: ASOS
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_khanacademy: Khan Academy
+  company_bgca: அமெரிக்காவின் பாய்ஸ் அண்ட் கேர்ள்ஸ் கிளப்
+  company_bsusa: அமெரிக்காவின் ஸ்கவுட்ஸ் ஆஃப் அமெரிக்கா
+  company_cgcs: கிரேட் சிட்டி ஸ்கூல் கவுன்சில்
+  company_gsusa: அமெரிக்காவின் பெண் சாரணர்கள்
+  company_khanacademy: கான் அகாடமி
   company_kipp: KIPP
-  company_mesa: Mathematics Engineering Science Achievement
-  company_napcs: National Alliance of Public Charter Schools
-  company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
-  company_teachforamerica: Teach for America
+  company_mesa: கணிதம் பொறியியல் அறிவியல் சாதனை
+  company_napcs: பொது சார்ட்டர் பள்ளிகளின் தேசிய கூட்டமைப்பு
+  company_ngcp: தேசிய பெண்கள் ஒத்துழைப்புத் திட்டம்
+  company_teachforall: அனைவருக்கும் கற்பிக்கவும்
+  company_teachforamerica: அமெரிக்கா கற்றுக்கொடுங்கள்
   company_tntp: TNTP
-  company_abss: Alamance-Burlington School System
-  company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
-  company_laalliance: Alliance College Ready Public Schools
-  company_asd: Arlington Public Schools
-  company_arlingtonpublicschools: Arlington Public Schools
-  company_bisd303: Bainbridge Island School District
-  company_beavertonschooldistrict: Beaverton School District
-  company_bellevuepublicschools: Bellevue Public Schools
-  company_blan: Blanchester Local Schools
-  company_bremertonschools: Bremerton School District
-  company_browardschools: Broward County Schools
-  company_cajonvalley: Cajon Valley School District
-  company_calistogajointunified: Calistoga Joint Unified School District
-  company_canalwinchesterschools: Canal Winchester Local Schools
-  company_canyonsdistrict: Canyons School District
-  company_centralunified: Central Unified School District
-  company_cvsd: Central Valley School District
-  company_ccboe: Charles County Public Schools
-  company_ChathamCountySchools: Chatham County Schools
-  company_chelmsfordpublicschooldistrict: Chelmsford School District
-  company_cheneysd: Cheney School District
-  company_chesterfieldschools: Chesterfield County Public Schools
-  company_codebrooklyn: Code Brooklyn
-  company_cps: Chicago Public Schools
-  company_ccsd: Clark County School District
-  company_cloverparkschooldistrict: Clover Park School District
-  company_ccsoh: Columbus City School District
-  company_cresskillboe: Cresskill Public Schools
-  company_dallasisd: Dallas Independent School District
-  company_disney: Disney
-  company_dpsk12: Denver Public Schools
-  company_dcsdk12: Douglas County Schools
-  company_dpsnc: Durham Public Schools
-  company_evsd: East Valley School District
-  company_eastonvilleschooldistrict: Eatonville School District
-  company_enumclawschooldistrict: Enumclaw School District
-  company_everettsd: Everette Public Schools
-  company_fsusd: Fairfield-Suisun Unified School District
-  company_fayettecountypublicschools: Fayette County Public Schools
-  company_forsythcountyschools: Forsyth County Schools
-  company_fcschools: Franklin County School
-  company_fpschools: Franklin Pierce School District
-  company_frederickcountypublicschools: Frederick County Public Schools
-  company_fultonschools: Fulton County Schools
-  company_vadoe: Governor's School Programs
-  company_gcs: Granville County Schools
-  company_gcisd: Grapevine-Colleyville ISD
-  company_godaddy: Go Daddy
-  company_greenupcountyschooldistrict: Greenup County Schools
-  company_gwinnettcountypublicschools: Gwinnett County Public Schools
-  company_HamptonCitySchools: Hampton City Schools
-  company_HanoverCountyPublicSchools: Hanover County Public Schools
-  company_HenricoCountyPublicSchools: Henrico County Public Schools
-  company_highlineschools: Highline School District
-  company_houstonisd: Houston Independent School District
-  company_hcpss: Howard County Public Schools
-  company_idla: Idaho Digital Learning Academy
-  company_janesvilleschooldistrict: Janesville School District
-  company_johnstoncountyschools: Johnston County Schools
-  company_lps: Lincoln Public School
-  company_littletonpublicschools: Littleton Public Schools
-  company_lausd: Los Angeles Unified School District
-  company_lcps: Louisa County Public Schools
-  company_lcsedu: Lynchburg City Schools
-  company_msvl: Marysville School District
-  company_dadeschools: Miami-Dade Public Schools
-  company_miltonps: Milton Public Schools
-  company_montgomeryschoolsmd: Montgomery County Public Schools
-  company_needhampublicschools: Needham Public Schools
-  company_NelsonCountyPublicSchools: Nelson County Public Schools
-  company_newalbanyschools: New Albany Plain Local Schools
-  company_newkentschools: New Kent County Public Schools
-  company_newarkcityschools: Newark City Schools
-  company_nnschools: Newport News Public Schools
-  company_newtonpublicschools: Newton Public Schools
-  company_nps: Norfolk Public Schools
-  company_nycdoe: NYC Department of Education
-  company_ohlsd: Oak Hills Local School District
-  company_oneclay: One Clay County School District
-  company_ocps: Orange County Schools
-  company_orangeusd: Orange Unified School District
-  company_pbsd: Palm Beach School District
-  company_pvusd: Paradise Valley Unified School District
-  company_PetersburgCityPublicSchools: Petersburg City Public Schools
-  company_pylusd: Placentia-Yorba Linda Union School District
-  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
-  company_pgcps: Prince Georges County Public Schools
-  company_provocityschooldistrict: Provo Public Schools
-  company_reyn: Reynoldsburg City School District
-  company_RichmondPublicSchools: Richmond Public Schools
-  company_RockinghamCountySchools: Rockingham County Schools
-  company_svusd: Saddleback Valley Unified School District
-  company_sfusd: San Francisco Unified School District
-  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
-  company_shorelineschools: Shoreline School District
-  company_sjusd: San Juan Unified School District
-  company_sky: Sky
-  company_spokaneschools: Spokane Public Schools
-  company_StaffordCountyPublicSchools: Stafford County Public Schools
-  company_strongnet: Strongsville School District
-  company_TukwilaSchoolDistrict: Tukwila School District
-  company_vermilionschools: Vermilion Local School District
+  company_abss: அலமன்ஸ்-பர்லிங்டன் ஸ்கூல் சிஸ்டம்
+  company_aldineisd: அல்டின் இன்டிபென்டன்ட் ஸ்கூல் மாவட்டம்
+  company_afterschool: பள்ளிக்குப் பிறகு
+  company_laalliance: அலையன்ஸ் கல்லூரி ரெடி பப்ளிக் ஸ்கூல்ஸ்
+  company_asd: ஆர்லிங்டன் பொது பள்ளிகள்
+  company_arlingtonpublicschools: ஆர்லிங்டன் பொது பள்ளிகள்
+  company_bisd303: பைன்ரிட்ஜ் தீவு பள்ளி மாவட்டம்
+  company_beavertonschooldistrict: Beaverton பள்ளி மாவட்டம்
+  company_bellevuepublicschools: Bellevue பொது பள்ளிகள்
+  company_blan: பிளானெட்செஸ்டர் உள்ளூர் பள்ளிகள்
+  company_bremertonschools: பிரெமர்டன் பள்ளி மாவட்டம்
+  company_browardschools: ப்ரார்டு கவுண்டி பள்ளிகள்
+  company_cajonvalley: காஜோன் பள்ளத்தாக்கு பள்ளி மாவட்டம்
+  company_calistogajointunified: கலிஸ்டாவா கூட்டு ஐக்கியனி பள்ளி மாவட்டம்
+  company_canalwinchesterschools: கால்வாய் வின்செஸ்டர் உள்ளூர் பள்ளிகள்
+  company_canyonsdistrict: கேன்யான்ஸ் பள்ளி மாவட்டம்
+  company_centralunified: மத்திய ஒருங்கிணைந்த பள்ளி மாவட்டம்
+  company_cvsd: மத்திய பள்ளத்தாக்கு பள்ளி மாவட்டம்
+  company_ccboe: சார்ல்ஸ் கவுண்டி பொது பள்ளிகள்
+  company_ChathamCountySchools: சாத்தன் கவுண்டி பள்ளிகள்
+  company_chelmsfordpublicschooldistrict: சேல்ஸ்ஸ்போர்ட் பள்ளி மாவட்டம்
+  company_cheneysd: செனி பள்ளி மாவட்டம்
+  company_chesterfieldschools: செஸ்டர்ஃபீல்ட் கவுண்டி பொது பள்ளிகள்
+  company_codebrooklyn: கோட் புரூக்ளின்
+  company_cps: சிகாகோ பொதுப் பள்ளிகள்
+  company_ccsd: கிளார்க் கவுண்டி பள்ளி மாவட்டம்
+  company_cloverparkschooldistrict: க்ளோவர் பூங்கா பள்ளி மாவட்டம்
+  company_ccsoh: கொலம்பஸ் நகரம் பள்ளி மாவட்டம்
+  company_cresskillboe: Cresskill பொது பள்ளிகள்
+  company_dallasisd: டல்லாஸ் இன்டிபென்டன்ட் ஸ்கூல் மாவட்டம்
+  company_disney: டிஸ்னி
+  company_dpsk12: டென்வர் பொது பள்ளிகள்
+  company_dcsdk12: டக்ளஸ் கவுண்டி பள்ளிகள்
+  company_dpsnc: Durham பொது பள்ளிகள்
+  company_evsd: கிழக்கு பள்ளத்தாக்கு பள்ளி மாவட்டம்
+  company_eastonvilleschooldistrict: Eatonville பள்ளி மாவட்டம்
+  company_enumclawschooldistrict: Enumclaw பள்ளி மாவட்டம்
+  company_everettsd: எவரெட்டி பொது பள்ளிகள்
+  company_fsusd: ஃபேர்ஃபீல்ட்-சூசூன் யூனிஃப்ட் ஸ்கூல் மாவட்டம்
+  company_fayettecountypublicschools: Fayette உள்ளூரில் பொது பள்ளிகள்
+  company_forsythcountyschools: ஃபோர்சைம் கவுண்டி ஸ்கூல்ஸ்
+  company_fcschools: பிராங்க்ளின் உள்ளூரில் பள்ளி
+  company_fpschools: பிராங்க்ளின் பியர்ஸ் பள்ளி மாவட்டம்
+  company_frederickcountypublicschools: பிரடெரிக் கவுண்டி பொது பள்ளிகள்
+  company_fultonschools: ஃபுல்டன் மாவட்ட பள்ளிகள்
+  company_vadoe: கவர்னர் பள்ளி நிகழ்ச்சிகள்
+  company_gcs: ஆம்
+  company_gcisd: கிரேப்வைன்-கால்லேவில் ஐ.எஸ்.டி
+  company_godaddy: போய் அப்பா
+  company_greenupcountyschooldistrict: முகவரி
+  company_gwinnettcountypublicschools: குவின்னெட் உள்ளூரில் பொதுப் பள்ளிகள்
+  company_HamptonCitySchools: ஹாம்ப்டன் நகர பள்ளிகள்
+  company_HanoverCountyPublicSchools: ஹனோவர் உள்ளூரில் பொது பள்ளிகள்
+  company_HenricoCountyPublicSchools: ஹென்றி கவுன் பொது பள்ளிகள்
+  company_highlineschools: உயர்நிலை பள்ளி மாவட்டம்
+  company_houstonisd: ஹூஸ்டன் இன்டிபென்டன்ட் ஸ்கூல் மாவட்டம்
+  company_hcpss: ஹோவர்ட் கவுண்டி பொது பள்ளிகள்
+  company_idla: ஐடஹோ டிஜிட்டல் கற்றல் அகாடமி
+  company_janesvilleschooldistrict: ஜானெஸ்வில்லே பள்ளி மாவட்டம்
+  company_johnstoncountyschools: ஜான்ஸ்டன் உள்ளூரில் பள்ளிகள்
+  company_lps: லிங்கன் பொது பள்ளி
+  company_littletonpublicschools: லிட்டில்டன் பொது பள்ளிகள்
+  company_lausd: லாஸ் ஏஞ்சல்ஸ் ஒருங்கிணைந்த பள்ளி மாவட்டம்
+  company_lcps: லூயிஸா உள்ளூரில் பொது பள்ளிகள்
+  company_lcsedu: லிஞ்ச்சுக் நகர பள்ளிகள்
+  company_msvl: மரிஸ்வில்லே பள்ளி மாவட்டம்
+  company_dadeschools: மியாமி-டேடே பொது பள்ளிகள்
+  company_miltonps: மில்டன் பொது பள்ளிகள்
+  company_montgomeryschoolsmd: மான்ட்கோமரி உள்ளூரில் பொது பள்ளிகள்
+  company_needhampublicschools: நீதம் பொது பள்ளிகள்
+  company_NelsonCountyPublicSchools: நெல்சன் கவுண்டி பொது பள்ளிகள்
+  company_newalbanyschools: புதிய அல்பானி பள்ளத்தாக்கு உள்ளூர் பள்ளிகள்
+  company_newkentschools: புதிய கவுன் கவுண்டி பொது பள்ளிகள்
+  company_newarkcityschools: நெவார்க் நகர பள்ளிகள்
+  company_nnschools: நியூபோர்ட் நியூஸ் பொது பள்ளிகள்
+  company_newtonpublicschools: நியூட்டன் பொது பள்ளிகள்
+  company_nps: நோர்போக் பொது பள்ளிகள்
+  company_nycdoe: NYC கல்வித் துறை
+  company_ohlsd: ஓக் ஹில்ஸ் உள்ளூர் பள்ளி மாவட்டம்
+  company_oneclay: ஒரு களிமண் மாவட்ட பள்ளி மாவட்டம்
+  company_ocps: ஆரஞ்சு மாவட்ட பள்ளிகள்
+  company_orangeusd: ஆரஞ்சு ஐக்கியப்பட்ட பள்ளி மாவட்டம்
+  company_pbsd: பாம் பீச் பள்ளி மாவட்டம்
+  company_pvusd: பாரடைஸ் வேலி யுனிஃபைட் ஸ்கூல் மாவட்டம்
+  company_PetersburgCityPublicSchools: பீட்டர்ஸ்பர்க் நகர பொது பள்ளிகள்
+  company_pylusd: பிளசென்னியா-யார்பா லிண்டா யூனியன் ஸ்கூல் மாவட்டம்
+  company_PowhatanCountyPublicSchools: Powhatan உள்ளூரில் பொது பள்ளிகள்
+  company_pgcps: பிரின்ஸ் ஜார்ஜ் கவுண்டி பொது பள்ளிகள்
+  company_provocityschooldistrict: ப்ரோவோ பொது பள்ளிகள்
+  company_reyn: ரெனால்ட்ஸ்ஸ்பர்க் நகர பள்ளி மாவட்டம்
+  company_RichmondPublicSchools: ரிச்மண்ட் பொது பள்ளிகள்
+  company_RockinghamCountySchools: ராக்கிங்ஹாம் கவுண்டி பள்ளிகள்
+  company_svusd: சாட்லேக் பள்ளத்தாக்கு ஒன்றிணைந்த பள்ளி மாவட்டம்
+  company_sfusd: சான் பிரான்சிஸ்கோ ஒருங்கிணைந்த பள்ளி மாவட்டம்
+  company_ShenandoahCountyPublicSchools: Shenandoah உள்ளூரில் பொது பள்ளிகள்
+  company_shorelineschools: ஷோர்லைன் பள்ளி மாவட்டம்
+  company_sjusd: சான் ஜுவான் யூனிஃப்ட் ஸ்கூல் மாவட்டம்
+  company_sky: வானத்தில்
+  company_spokaneschools: ஸ்போகேன் பொதுப் பள்ளிகள்
+  company_StaffordCountyPublicSchools: ஸ்டாஃபோர்ட் உள்ளூரில் பொது பள்ளிகள்
+  company_strongnet: Strongsville பள்ளி மாவட்டம்
+  company_TukwilaSchoolDistrict: துக்வாலா பள்ளி மாவட்டம்
+  company_vermilionschools: வெர்மிலியன் லோக்கல் ஸ்கூல் மாவட்டம்
   company_vista-equity-partners: "விஸ்டா பங்கு பங்காளிகள்"
-  company_walthampublicschools: Waltham Public Schools
-  company_warrencountyschools: Warren County Schools
-  company_WaynesboroPublicSchools: Waynesboro Public Schools
-  company_WellesleyPublicSchools: Wellesley Public Schools
-  company_wvsd208: West Valley School District
-  company_wuhsd: Whittier Union High School District
-  company_wcschools: Wilson County Schools
-  company_yelp: Yelp
+  company_walthampublicschools: வால்ம்ம் பொது பள்ளிகள்
+  company_warrencountyschools: வாரன் மாவட்ட பள்ளிகள்
+  company_WaynesboroPublicSchools: வேய்ன்ஸ்போரோ பொது பள்ளிகள்
+  company_WellesleyPublicSchools: வெல்லஸ்லே பொது பள்ளிகள்
+  company_wvsd208: மேற்கு பள்ளத்தாக்கு பள்ளி மாவட்டம்
+  company_wuhsd: வைட்டியர் யூனியன் உயர்நிலைப் பள்ளி
+  company_wcschools: வில்சன் கவுண்டி பள்ளிகள்
+  company_yelp: இருந்து நீக்க வேண்டுமா
   nav_back_to_resources: "வளங்கள் மீண்டும்"
   how_to_nav_educators: "கல்வியாளர்கள்"
   how_to_nav_after_school: "பள்ளி முடிந்ததும்"
@@ -166,68 +175,70 @@ ta:
   whats_next_header: "அடுத்தது என்ன?"
   whats_next_description: "பொருட்கள் மற்றும் உங்கள் நிகழ்ச்சி பயனுள்ளதாக குறிப்புகள் அனுப்புவோம். <a href='http://code.org/learn'> தற்போதைய பயிற்சி முயற்சி</a> எந்த உலாவி, ஸ்மார்ட்போன் – அல்லது எந்த கணினி!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
-  whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_promote: "<a href='/promote'> குறியீட்டு மணிநேரத்தை ஊக்குவிக்கவும் </a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'> கோடரியின் மணிநேரத்தை மேம்படுத்துவது எப்படி </a>"
+  whats_next_how_to_promote_link: "<a href='/promote'><a href='/promote'> கோடரியின் மணிநேரத்தை மேம்படுத்துவது எப்படி </a>"
+  whats_next_try: "<a href='%{learn_url}'> பயிற்சிகளை முயற்சி செய்க </a>"
   whats_next_try_button: 'பயிற்சி முயற்சி'
-  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
+  n_have_learned_an_hoc: "<h1> ஒரு </ h1> <h2> குறியீட்டு மணி </ h2> <h3> # பணியாற்றிய </ h3>"
   anybody_can_learn: 'யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்.'
   get_started: 'தொடக்கம்'
   beyond_an_hour: 'குறியீடு அப்பால் ஒரு மணி நேரம்'
   register_now: 'இப்போதே பதிவு'
   share_on_facebook: 'Facebook இல் பகிர்'
-  share_on_twitter: 'Share on Twitter'
-  front_join_us_heading: 'An Hour of Code for every student.'
-  front_join_us_announcements: 'Announcements'
-  front_join_us_anybody_can_learn: 'Anybody can learn'
-  front_join_us_description: 'Computer science is a foundation for every student. Help us introduce it to 100 million.'
-  front_join_us_description_short: 'Computer science is a foundation for every student.'
-  front_join_us_button: 'Join us'
+  share_on_twitter: 'Twitter இல் பகிர்'
+  front_join_us_heading: 'ஒவ்வொரு மாணவருக்கும் ஒரு மணிநேர கோட்.'
+  front_join_us_announcements: 'அறிவிப்புகள்'
+  front_join_us_anybody_can_learn: 'யாராலும் கற்றுக்கொள்ள முடியும்'
+  front_join_us_description: 'கணினி அறிவியல் ஒவ்வொரு மாணவருக்கும் ஒரு அடித்தளம். 100 மில்லியன் டாலர்களை அறிமுகப்படுத்த எங்களுக்கு உதவுங்கள்.'
+  front_join_us_description_short: 'கணினி அறிவியல் ஒவ்வொரு மாணவருக்கும் ஒரு அடித்தளம்.'
+  front_join_us_button: 'எங்களுடன் சேர்'
   front_what_is_hoc: 'ஒரு மணி நேரக் கணினி குறியீடு என்றால் என்ன? '
-  front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
-  front_join_us_volunteer_header: 'Volunteers for the Hour of Code'
-  front_join_us_tutorials: "Choose your Hour of Code tutorial!"
-  front_join_us_tutorials_link: 'Filter and browse <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
-  front_join_us_robotics: 'Win robots or circuits!'
-  front_join_us_robotics_link: 'Do you want a set of robots or physical computing kits to use with your students? Our generous partners are donating sets to over 100 classrooms! Sign up for the Hour of Code to participate. (Classrooms selected by Code.org, US Only)'
-  front_join_us_teacher: 'Are you a teacher?'
-  front_join_us_inspire: 'Inspire students with'
-  front_join_us_inspire_link: 'an Hour of Code in the classroom.'
-  front_join_us_teacher_link: "Inspire students with an Hour of Code in the classroom"
-  front_join_us_teacher_volunteer: "Search for local volunteers who can visit your classroom or inspire your students remotely."
-  front_join_us_parent: 'Are you a parent?'
-  front_join_us_ask_link: 'Ask your local school'
-  front_join_us_ask: 'to host an Hour of Code.'
-  front_join_us_parent_link: "Ask your local school to host an Hour of Code"
-  front_join_us_computer_science: 'Just love computer science?'
-  front_join_us_cs_volunteer: 'Passionate about computer science education?'
-  front_join_us_spread: 'Spread the word.'
-  front_join_us_spread_word: "Spread the word in your community"
-  front_join_us_spread_word_work: "Spread the word in your community or workplace"
-  front_join_us_sign_up_volunteer: 'Sign up to volunteer at a local classroom or through a video chat.'
-  front_join_us_organize: 'Or organize an Hour of Code event yourself.'
-  front_join_us_how_to_run: "Here's how to run an Hour of Code"
-  front_join_us_help_promote: "Help promote the Hour of Code"
-  front_join_us_students: "Students"
-  front_join_us_teachers: "Teachers"
-  front_join_us_everyone: "Everyone"
-  front_join_us_try: "Try it"
+  front_join_us_header: 'யாரும் அடிப்படைகளை கற்றுக் கொள்ளலாம், மேலும் அதை வேடிக்கை செய்து பாருங்கள்!'
+  front_join_us_volunteer_header: 'கோடரியின் மணி நேரம் தொண்டர்கள்'
+  front_join_us_tutorials: "கோட் டுடோரியலின் உங்கள் நேரத்தைத் தேர்வு செய்க!"
+  front_join_us_tutorials_link: '<I> 200 க்கும் மேற்பட்ட பயிற்சி மற்றும் பாடம் திட்டங்கள் </ i> வடிகட்டி மற்றும் உலாவுக! எந்தவொரு அனுபவ மட்டத்திலும் வெவ்வேறு தலைப்புப் பகுதிகளிலும், பல வன்பொருள் தேவைகளுடனும், மாணவர்களுடனும் நடவடிக்கைகளைக் கண்டறிக.'
+  front_join_us_robotics: 'ரோபோக்கள் அல்லது சுற்றுகள் வெற்றி!'
+  front_join_us_robotics_link: 'உங்கள் மாணவர்களுடன் ஒரு ரோபோக்கள் அல்லது உடல் கணினி உபகரணங்களைப் பயன்படுத்த விரும்புகிறீர்களா? எங்கள் தாராள கூட்டாளிகள் 100 க்கும் மேற்பட்ட வகுப்பறைகளுக்கு நன்கொடை அளிக்கின்றனர்! பங்கேற்க கோடரியின் தேதிக்கு பதிவு செய்யவும். (Code.org, US மட்டும் தேர்ந்தெடுக்கப்பட்ட வகுப்பறைகள்)'
+  front_join_us_teacher: 'நீங்கள் ஒரு ஆசிரியரா?'
+  front_join_us_inspire: 'மாணவர்கள் உத்வேகம்'
+  front_join_us_inspire_link: 'வகுப்பறையில் கோடரியின் ஒரு மணி நேரம்.'
+  front_join_us_teacher_link: "வகுப்பறையில் ஒரு மணிநேர குறியீடு கொண்ட மாணவர்களை ஊக்குவிக்கும்"
+  front_join_us_teacher_volunteer: "உங்கள் வகுப்பறையைப் பார்வையிடவோ அல்லது தொலைவிலுள்ள உங்கள் மாணவர்களுக்கு ஊக்கமளிக்கும் உள்ளூர் தொண்டர்களைத் தேடுங்கள்."
+  front_join_us_parent: 'நீங்கள் ஒரு பெற்றோரா?'
+  front_join_us_ask_link: 'உங்கள் உள்ளூர் பள்ளிக்கு கேளுங்கள்'
+  front_join_us_ask: 'ஒரு மணிநேரத்தை நடத்த வேண்டும்'
+  front_join_us_parent_link: "உங்கள் உள்ளூர் பள்ளி கோட் ஒரு மணி நேரம் நடத்த"
+  front_join_us_computer_science: 'கணினி அறிவியல் நேசிக்கிறதா?'
+  front_join_us_cs_volunteer: 'கணினி விஞ்ஞான கல்வி பற்றி ஆர்வமா?'
+  front_join_us_spread: 'வார்த்தையை பரப்புங்கள்.'
+  front_join_us_spread_word: "உங்கள் சமூகத்தில் வார்த்தையை பரப்புங்கள்"
+  front_join_us_spread_word_work: "உங்கள் சமூகத்தில் அல்லது பணியிடத்தில் வார்த்தையை பரப்புங்கள்"
+  front_join_us_sign_up_volunteer: 'ஒரு உள்ளூர் வகுப்பறையில் தன்னார்வலருக்கு அல்லது ஒரு வீடியோ அரட்டை மூலம் பதிவு செய்யுங்கள்.'
+  front_join_us_organize: 'அல்லது கோடை நிகழ்வு ஒரு மணி நேரம் உங்களை ஏற்பாடு.'
+  front_join_us_how_to_run: "கோடரியின் ஒரு மணிநேரத்தை எப்படி நடத்துவது?"
+  front_join_us_help_promote: "கோடை மணிநேரத்தை ஊக்குவிக்க உதவுங்கள்"
+  front_join_us_students: "மாணவர்கள்"
+  front_join_us_teachers: "ஆசிரியர்கள்"
+  front_join_us_everyone: "அனைவரும்"
+  front_join_us_try: "அதை முயற்சிக்கவும்"
   front_join_us_sign_up: "பதிவுபெறு"
   front_join_us_host: "இது ஹோஸ்ட்"
   front_join_us_support: "அதற்கு ஆதரவு"
   front_join_us_more_info: "மேலும் தகவலுக்கு, <a href='https://code.org'> code.org</a> செல்லவும்."
   front_join_us_code_info: "மேலும் விவரங்களுக்கு, தயவுசெய்து வருகை code.org"
   front_join_us_n_students_served: "# உதவியது"
-  front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
-  front_join_us_learn_more: "Learn more"
-  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  front_join_us_challenge: "அதை முயற்சிக்கவும்"
+  front_join_us_learn_more: "மேலும் அறிக"
+  signup_closed: 'கோட்டின் மணி நேரம் பதிவு செய்யப்பட்டுள்ளது. அக்டோபரில் அடுத்த குறியீடாக பதிவு செய்ய, மீண்டும் சரிபார்க்கவும்.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '%{campaign_date} போது ஒரு குறியீடு மணி ஏற்பாடு மற்றும் இங்கே பதிவு செய்க.'
   signup_name_label: 'உங்கள் பெயர்'
   signup_name_error: 'பெயர் தேவைப்படுகிறது.'
   signup_email_label: 'உங்கள் மின்னஞ்சல்'
   signup_email_error: 'மின்னஞ்சல் தேவை'
-  signup_invalid_email_error: 'The email address you entered is invalid'
+  signup_invalid_email_error: 'நீங்கள் உள்ளிட்ட மின்னஞ்சல் முகவரி தவறானது'
   signup_organization_name_label: 'நிறுவன பெயர்'
   signup_organization_name_error: 'நிறுவனத்தின் பெயர் தேவைப்படுகிறது.'
   signup_event_type_label: 'நிகழ்வு வகை'
@@ -243,11 +254,16 @@ ta:
   signup_your_event: 'உங்கள் நிகழ்வு பதிவு'
   signup_host_an_hour: 'ஒரு மணி நேரம் ஹோஸ்ட்'
   signup_match_volunteer: 'என் மாணவர்கள் அளிக்கக் உள்ளூர் மென்பொருள் பொறியாளர் கண்டுபிடிக்க எனக்கு உதவ'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "நீங்கள் பல நிகழ்வுகள் ஹோஸ்டிங் என்றால், ஒரு தனித்துவமான பெயர் அல்லது மின்னஞ்சலை ஒவ்வொருவரும் சமர்ப்பிக்கவும். பெயர் மற்றும் மின்னஞ்சல் ஒரு சம்பவம் மட்டுமே நாங்கள் எண்ணி."
   signup_registration_deadline: "பதிவு குறியீடு மணி டிசம்பர் 11 மூடும்."
   signup_name_placeholder: 'உங்கள் பெயர்'
   signup_email_placeholder: 'you@example.com'
-  signup_organization_name_placeholder: "For example, Lincoln High School"
+  signup_organization_name_placeholder: "உதாரணமாக, லிங்கன் உயர்நிலை பள்ளி"
   signup_event_country_label: "நிகழ்வு நாடு"
   signup_event_country_error: "நாட்டின் தேவை."
   signup_event_location_placeholder: "அஞ்சல் குறியீடு மற்றும் நாடு அல்லது முழு முகவரி."
@@ -265,46 +281,48 @@ ta:
   signup_thank_you_message: 'நீங்கள் ஒரு உறுதிப்படுத்தல் மின்னஞ்சலை நீங்கள் தொடங்குவதற்கு தகவல் அனுப்பினோம்.'
   map_title: "மணி குறியீடு வரைபடம்"
   map_header: '# நிகழ்வுகளை பதிவு குறியீடு 2017 மணி'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'எல்லா நிகழ்வுகளையும் காட்டு'
-  map_header_company: '# by company organizers'
-  map_header_country: '# in %{country}'
+  map_header_company: '# நிறுவனம் அமைப்பாளர்கள்'
+  map_header_country: '%{country}+ இல்'
   map_search_placeholder: 'குறியீடு மணி நிகழ்வுகள் தேடல்'
   map_search_search: 'தேடு'
-  map_search_reset: 'Reset'
-  map_legend_title: 'Legend'
-  map_legend_hoc_events: 'Hour of Code Event'
-  map_legend_cs_tech_jam: 'Special Event'
-  map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
-  meta_tag_og_title: 'Hour of Code: Join the Movement'
+  map_search_reset: 'மீட்டமை'
+  map_legend_title: 'புராண'
+  map_legend_hoc_events: 'கோட் நிகழ்வின் மணி'
+  map_legend_cs_tech_jam: 'சிறப்பு நிகழ்ச்சி'
+  map_warning: "கோட் வரைபடத்தின் மணி முதல் 200,000 பதிவுசெய்யப்பட்ட நிகழ்வுகளை மட்டுமே காட்டுகிறது. செல்லுபடியாகும் முகவரியுடன் பதிவுசெய்யப்பட்ட அனைத்து நிகழ்வுகளும் <a href='%{events_url}'> நிகழ்வுகள் பக்கத்திலும் </a> பார்க்கப்படலாம்."
+  meta_tag_og_title: 'கோடை மணி: இயக்கம் சேர'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
-  meta_tag_twitter_title: 'Hour of Code: Join the Movement'
+  meta_tag_twitter_title: 'கோடை மணி: இயக்கம் சேர'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
-  twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
-  hoc_faq_title: 'FAQs'
+  twitter_default_text: "நான் இந்த ஆண்டு #HourOfCode இல் பங்கு பெறுகிறேன், நீங்களா? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  hoc_faq_title: 'அடிக்கடி கேட்கப்படும் கேள்விகள்'
   hoc_faq_what_is_hoc_q: 'ஒரு மணி நேரக் கணினி குறியீடு என்றால் என்ன? '
-  hoc_faq_what_is_hoc_a: "The Hour of Code started as a one-hour introduction to computer science, designed to demystify \"code\", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide."
-  hoc_faq_last_year: "Try the tutorials"
-  hoc_faq_when_is_hoc_q: 'When is the Hour of Code?'
-  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
-  hoc_faq_why_cs_q: 'Why computer science?'
-  hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats <a href='%{stats_url}'>here</a>."
-  hoc_faq_how_participate_q: 'How do I participate in the Hour of Code?'
+  hoc_faq_what_is_hoc_a: "The Hour of Code started as a one-hour introduction to computer science, designed to demystify \"code\", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide.\n "
+  hoc_faq_last_year: "பயிற்சிகளை முயற்சிக்கவும்"
+  hoc_faq_when_is_hoc_q: 'கோட் ஆஃப் எப்போது?'
+  hoc_faq_when_is_hoc_a: "The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer Science Education Week</a>. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a> (December 9, 1906)."
+  hoc_faq_why_cs_q: 'ஏன் கணினி அறிவியல்?'
+  hoc_faq_why_cs_a: "<i> ஒவ்வொரு </ i> மாணவர் கணினி அறிவியல் கற்று கொள்ள வாய்ப்பு வேண்டும். இது சிக்கல் தீர்க்கும் திறன், தர்க்கம் மற்றும் படைப்பாற்றல் ஆகியவற்றை வளர்ப்பதற்கு உதவுகிறது. ஆரம்பத்தில் தொடங்கி, மாணவர்கள் எந்த 21 ஆம் நூற்றாண்டின் வாழ்க்கை பாதையில் வெற்றிக்கு அடித்தளம் இருக்கும். <a href='%{stats_url}'> இங்கே </a> மேலும் புள்ளிவிவரங்களைக் காண்க."
+  hoc_faq_how_participate_q: 'கோடரியின் மணி நேரத்தில் எப்படி நான் பங்கேற்க வேண்டும்?'
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
-  hoc_faq_behind_hoc_q: 'Who is behind the Hour of Code?'
+  hoc_faq_behind_hoc_q: 'கோட் ஆஃப் ஹவர் பின்னால் யார்?'
   hoc_faq_behind_hoc_a: "The Hour of Code is driven by the Hour of Code and Computer Science Education Week <a href='%{partner_url}'>Advisory and Review Committees</a> as well as an unprecedented coalition of partners that have come together to support the Hour of Code &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
-  hoc_faq_host_q: "I don't know anything about coding. Can I still host an event?"
-  hoc_faq_host_a: "Of course. Hour of Code activities are self-guided. All you have to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the tutorial you want, and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href='/how-to'>how to guide</a>."
-  hoc_faq_devices_q: "What devices should I use for my students?"
+  hoc_faq_host_q: "குறியீட்டு பற்றி எனக்கு எதுவும் தெரியாது. நான் இன்னும் ஒரு நிகழ்ச்சியை நடத்தலாமா?"
+  hoc_faq_host_a: "நிச்சயமாக. குறியீட்டு நடவடிக்கைகள் மணி நேர சுயமாக வழிநடத்தப்படுகின்றன. நீங்கள் செய்ய வேண்டியது எல்லாம் <a href='%{codeorg_url}/learn'> எங்கள் தற்போதைய பயிற்சிகளை முயற்சி செய்க </a>, நீங்கள் விரும்பும் டுடோரியலைத் தேர்ந்தெடுத்து ஒரு மணிநேரத்தை & mdash; நாங்கள் மற்றவர்களை கவனித்துக்கொள்கிறோம். மழலையர் பள்ளி வரை மற்றும் ஒவ்வொரு வயது மற்றும் அனுபவ நிலைக்குமான விருப்பங்களையும் நாங்கள் கொண்டுள்ளோம். எங்கள் <a href='/how-to'> எப்படி வழிகாட்ட வேண்டும் </a> என்பதைப் படிப்பதன் மூலம் உங்கள் நிகழ்வைத் திட்டமிடுக."
+  hoc_faq_devices_q: "எனது மாணவர்களுக்கு என்ன சாதனங்கள் பயன்படுத்த வேண்டும்?"
   hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>. Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged activities</a> if your school can't accommodate the tutorials!"
-  hoc_faq_need_computers_q: 'Do I need computers for every participant?'
+  hoc_faq_need_computers_q: 'ஒவ்வொரு பங்கேற்பாளருக்கும் எனக்கு கணினிகள் தேவையா?'
   hoc_faq_need_computers_a: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing a computer and working together. Encourage your students to double up. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at all. </ul>"
   hoc_faq_international_q: "I am in <country>. How do I participate internationally?"
   hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/promote'>here</a>."
   hoc_faq_tutorial_q: 'How can I make an Hour of Code tutorial?'
   hoc_faq_tutorial_a: "If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science."
-  hoc_faq_account_q: "Do students need to log on using an account?"
-  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on courses</a> require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>."
-  hoc_faq_high_school_q: "Which activity should I do with high school students?"
+  hoc_faq_account_q: "மாண்வர்களுக்கு ஒரு கணக்குடன் உள்ளே நுழையும் தேவை உண்டா?"
+  hoc_faq_account_a: "இல்லை. Hour of Code -இல் முயன்றுபார்ப்பதற்கு மாணவர்களுக்கு பதிவுசெய்ய தேவையில்லை. <a href='%{codeorg_url}/learn/beyond'>அடுத்த நிலையில்</a> உள்ள அநேகப்பயிற்சிகளுக்கு பதிவுசெய்யும் தேவை உண்டு. மேலும், இங்கு பதிவுசெய்வது Code Studio -இல் தானாக பதிவுசெய்யாது. மாணவர்களுக்கு நீங்கள் பதிவுசெய்ய விரும்பினால், <a href='https://youtu.be/_smelV_KISE'>இங்கே</a> சொடுக்கவும்."
+  hoc_faq_high_school_q: "உயர்நிலைப்பள்ளியில் பயிலும் மாணவர்களுக்கு உரிய பயிற்சி யாது?"
   hoc_faq_high_school_a: "Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: "I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?"
   hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
@@ -317,7 +335,7 @@ ta:
   hoc_faq_more_questions_q: "Still have more questions?"
   hoc_faq_more_questions_a: "Try finding an answer in our <a href='http://support.code.org'>support forum</a>."
   hoc_faq_keep_learning_q: "How do I keep learning after the Hour of Code?"
-  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
   hoc_faq_certificates_q: "Where can I print certificates for my students?"
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
@@ -333,58 +351,60 @@ ta:
   stats_hoc: "குறியீடு மணி: 5 நாட்கள்"
   stats_global: "100 மீ ஒரு குறியீடு மணி மாணவர்கள் முயற்சி"
   stats_girls_more: "மேலும் பெண்கள் முயற்சி கணினி அறிவியல் விட கடந்த 70 ஆண்டுகளில்"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"ஒவ்வொரு நாளும் அதே ஈட்டுகிறது &mdash; 100% நிச்சயம்."-நீனா நிக்கொலஸ் Peery, ஆசிரியர்'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  resources_how_to: How-to guide for teachers
-  resources_how_to_events: Event how-to guide
-  resources_how_to_districts: How-to guide for districts
-  resources_how_to_officials: How-to guide for public officials
-  resources_handouts: Handouts to spread the word
-  resources_one_pager: One-page handout
-  resources_brochure: Brochure
-  resources_posters: Posters
-  resources_videos: Videos
-  resources_banners: Social media
-  resources_emails: Sample emails
-  resources_logo: Hour of Code logo
-  resources_stats: Stats and blurbs
-  resources_press_kit: Press Kit
-  resources_social: Social
-  resources_country_resources: Country Specific Resources
-  resources_stickers: Stickers
-  resources_how_to_guides: 'How-to guides'
-  resources_promote: 'Promote'
-  resources_nav_tutorials: 'Try the tutorials'
-  resources_nav_promote: 'Spread the word'
-  resources_nav_spread_word: 'How to get involved'
-  resources_banner_promote_text: "Promote"
-  resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
-  resources_banner_howto_text: "How-to"
-  resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
-  handouts_section: Share these handouts
-  handouts_onepager: Spread the word with this one page handout
-  handouts_brochure: Give this brochure to teachers and schools
-  handouts_participationguide: Plan your Hour of Code with this participation guide
-  videos_title: Show these videos to inspire students
-  videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
-  videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
-  videos_obama_cs: President Obama on computer science
+  resources_how_to: ஆசிரியர்களுக்கான வழிகாட்டல் எப்படி
+  resources_how_to_events: நிகழ்வு எப்படி வழிகாட்டும்
+  resources_how_to_districts: மாவட்டங்களுக்கு வழிகாட்ட எப்படி
+  resources_how_to_officials: பொது அதிகாரிகளுக்கு வழிகாட்ட எப்படி
+  resources_handouts: வார்த்தை பரவுவதற்கான கையேடுகள்
+  resources_one_pager: ஒரு பக்கம் கையேடு
+  resources_brochure: சிற்றேடு
+  resources_posters: சுவரொட்டிகள்
+  resources_videos: வீடியோக்கள்
+  resources_banners: சமூக ஊடகம்
+  resources_emails: மாதிரி மின்னஞ்சல்கள்
+  resources_logo: குறியீடு சின்னத்தின் மணி
+  resources_stats: புள்ளிவிவரங்கள் மற்றும் blurbs
+  resources_press_kit: பிரஸ் கிட்
+  resources_social: சமூக
+  resources_country_resources: நாடு குறிப்பிட்ட வளங்கள்
+  resources_stickers: ஸ்டிக்கர்கள்
+  resources_how_to_guides: 'வழிகாட்டல் எப்படி'
+  resources_promote: 'ஊக்குவிக்க'
+  resources_nav_tutorials: 'பயிற்சிகளை முயற்சிக்கவும்'
+  resources_nav_promote: 'வார்த்தையை பரப்புங்கள்'
+  resources_nav_spread_word: 'தொடர்பு கொள்ள எப்படி'
+  resources_banner_promote_text: "ஊக்குவிக்க"
+  resources_banner_promote_button: "பிரசுரங்கள், உற்சாகமூட்டும் சுவரொட்டிகள் மற்றும் சமூக ஊடக பதாகைகளில் பதிவு செய்ய மற்றவர்களை ஊக்குவிக்கவும்."
+  resources_banner_howto_text: "எப்படி என்று அறிவதற்கான"
+  resources_banner_howto_button: "கல்வியாளர்களுக்கும், பெற்றோர்களுக்கும், மாவட்டங்களுக்கும், ஒரு மணிநேர நியமனம் வழங்குவதற்கான வளங்கள்."
+  handouts_section: இந்த கையேட்டைப் பகிர்ந்து கொள்ளுங்கள்
+  handouts_onepager: இந்த ஒரு பக்கம் கையொப்பத்துடன் வார்த்தைகளை பரப்புங்கள்
+  handouts_brochure: ஆசிரியர்களுக்கும் பள்ளிகளுக்கும் இந்த சிற்றேட்டை கொடுங்கள்
+  handouts_participationguide: இந்த பங்கேற்பு வழிகாட்டியுடன் கோட் ஆஃப் ஹவர் திட்டமிடுங்கள்
+  videos_title: மாணவர்கள் ஊக்குவிக்க இந்த வீடியோக்களைக் காண்பி
+  videos_what_most_schools_dont_teach: பெரும்பாலான பள்ளிகள் என்ன கற்பிக்க வேண்டும் (5 நிமிடம்)
+  videos_hoc_2014: கோட் இன் ஹவர் இங்கே உள்ளது - யாராலும் அறிய முடியும்
+  videos_obama_cs: ஜனாதிபதி ஒபாமா கணினி அறிவியல்
   videos_anybody_can_learn: Anybody Can Learn (1 min)
-  title_country_resources: Country Specific Resources
+  title_country_resources: நாடு குறிப்பிட்ட வளங்கள்
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
   title_how_to_companies: How to host an Hour of Code - Companies
-  title_how_to_officials: How-to guide for public officials
+  title_how_to_officials: பொது அதிகாரிகளுக்கு வழிகாட்ட எப்படி
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
-  title_how_to_parents: How-to guide for parents
-  title_how_to: How-to Guide
+  title_how_to_parents: பெற்றோர்களுக்கு வழிகாட்டுவது எப்படி என்று
+  title_how_to: எப்படி வழிநடத்துவதென்று
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
-  title_press_kit: Press Kit
+  title_press_kit: பிரஸ் கிட்
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
   title_partners: Partners

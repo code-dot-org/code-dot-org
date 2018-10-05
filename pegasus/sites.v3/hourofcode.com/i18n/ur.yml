@@ -11,12 +11,21 @@
   campaign_date_full: "4-10 دسمبر"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10، 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'تاریخ میں ہونے والی سب سے بڑی سیکھنے کی تقریب میں شامل ہوجائیے، 7 تا 13 دسمبر، 2015'
   front_intro_default: 'آور آف کوڈ 180+ سے زائد ممالک میں لاکھوں طالب علموں تک پہنچنے کی ایک عالمی تحریک ہے۔ کوئی بھی کہیں بھی ایک آور-آف-کوڈ کا انعقاد منظم کراسکتا ہے۔ ون-آور ٹیٹوریئلز (اسباق) 40 سے زائد زبانوں میں دستیاب ہیں۔ تجربہ کی ضرورت نہیں۔ <strong>عمر 4 تا 104۔</strong>'
   front_watch_video: 'نئی ویڈیو دیکھیں'
   front_watch_regular_video: 'ویڈیو دیکھیئے'
   front_volunteers: 'تکنیکی رضاکاروں چاہتا تھا'
   front_start_learning: 'سیکھنا شروع کریں'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'وسائل'
   header_menu_faq: 'عمومی سوالات'
   header_menu_how_to: 'کیسے'
@@ -222,6 +231,8 @@
   front_join_us_challenge: "اپنے کلاس روم کے لئے ایک ویڈیو چیٹ کی عظیم شخصیت کے ساتھ جیت!"
   front_join_us_learn_more: "مزید جانیں"
   signup_closed: 'رجسٹریشن کے کوڈ کے گھنٹے کے لئے اب بند کر دیا ہے ۔ کوڈ کی اگلی گھڑی کے لئے سائن اپ کریں پھر اکتوبر میں پڑتال کریں ۔'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'کوڈ کے ایک گھنٹے کے دوران %{campaign_date} کو منظم کرنے اور اسے یہاں رجسٹر کریں ۔'
   signup_name_label: 'آپکا نام:'
   signup_name_error: 'نام کی ضرورت ہے'
@@ -243,6 +254,11 @@
   signup_your_event: 'اپنا ایونٹ سائن اپ کریں'
   signup_host_an_hour: 'ایک گھنٹے کی میزبانی کریں'
   signup_match_volunteer: 'میرے طالب علموں کو حوصلہ افزائی کرنے کے لئے ایک مقامی سوفٹ ویئر انجنیر تلاش کریں'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "رجسٹر ہونے پر ہم آپ کے اسکول کا نام اور شہر نقشہ پر ڈالیں گے. اگر آپ ایک سے زیادہ واقعات کی میزبانی کر رہے ہیں تو، براہ کرم ہر ایک کے لئے مخصوص نام یا ای میل پیش کریں. ہم صرف ایک نام فی ای میل اور ای میل کا مجموعہ شمار کرتے ہیں."
   signup_registration_deadline: "ضابطہ اخلاق پڑھیں یہ تصویر ضابطہ اخلاق کے مطابق ہے."
   signup_name_placeholder: 'آپکا نام'
@@ -265,6 +281,7 @@
   signup_thank_you_message: 'ہم نے آپ کو شروع کرنے میں مدد کرنے کے لئے معلومات کے ساتھ ایک تصدیق ای میل بھیجی ہے.'
   map_title: "کوڈ کا نقشہ"
   map_header: 'قیام کوڈ 2017 کے لئے رجسٹرڈ # واقعات'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'تمام واقعات دیکھیں'
   map_header_company: '# کمپنی کے منتظمین کی طرف سے'
   map_header_country: '# in %{country}'
@@ -280,6 +297,7 @@
   meta_tag_twitter_title: 'کوڈ کا قیام: تحریک میں شمولیت'
   meta_tag_twitter_description: 'کوڈ کا قیام ایک عالمی تحریک ہے جس میں 180+ ممالک اور 45 سے زائد زبانوں میں ہر عمر کی دس لاکھ طالب علم تک پہنچ جاتے ہیں.'
   twitter_default_text: "میں اس سال کے #HourOfCode میں شرکت کر رہا ہوں، کیا آپ ہیں؟ codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'اکثر پوچھے گئے سوالات'
   hoc_faq_what_is_hoc_q: 'آور-آف-کوڈ کیا ہے؟'
   hoc_faq_what_is_hoc_a: "آور-آف-کوڈ (ایک گھنٹہ-پر-مبنی) کمپیوٹر سائنس کا تعارف ہے، جسے ڈیمیسٹیفائی کوڈ (غیر مخمسہ جاتی کوڈ) کے لیے ڈیزائن کیا گیا ہے جو یہ دکھاتا ہے کہ اسے ہر کوئی سیکھ سکتا ہے۔ <a href='%{codeorg_url}'> ٹیٹوریئلز چیک کریں۔</a>"
@@ -374,6 +392,7 @@
   videos_obama_cs: صدر اوباما اور کمپیوٹر سائنس
   videos_anybody_can_learn: کوئی بھی سیکھ سکتا ہے (1 منٹ)
   title_country_resources: ملکی مخصوص وسائل
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: آور-آف-کوڈ ھاؤ-ٹو برائے ڈسٹرکٹس (اضلاع)
   title_how_to_events: "آور-آف-کوڈ ایونٹ ھاؤ-ٹو\n"
   title_how_to_organizations: آور-آف-کوڈ کس طرح ھوسٹ (منعقد) کریں۔ آرگنائزیشنز
@@ -382,6 +401,7 @@
   title_how_to_volunteers: گھنٹے کے کوڈ رضاکاروں کے لئے نکات گائیڈ
   title_how_to_parents: رہنمائی کیسے کریں – ڈسٹرکٹس
   title_how_to: ھاؤ-ٹو-گائیڈ
+  title_international_partners: Contact International Partners
   title_press_release: آور-آف-کوڈ پریس ریلیز برائے الیکٹڈ آفیشیلز
   title_op_ed: کمپیوٹر سائنس ایجوکیشن ویک اور آور-آف-کوڈ Sample Op-ed (معاون مثال)
   title_press_kit: پریس کٹ

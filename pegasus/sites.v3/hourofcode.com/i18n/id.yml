@@ -11,12 +11,21 @@ id:
   campaign_date_full: "Tanggal 7 hingga 13 Desember"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 Desember 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal 7-13 Desember 2015'
   front_intro_default: 'Hour of Code adalah gerakan mendunia yang merengkuh puluhan juta pelajar dari 180+ negara. Setiap orang, di mana saja, dapat mengadakan acara Hour of Code. Tersedia tutorial-tutorial berdurasi satu jam dalam lebih dari 40 bahasa. Tak perlu pengalaman. <strong>Usia 4 sampai 104.</strong>'
   front_watch_video: 'Tonton video terbaru'
   front_watch_regular_video: 'Tontonlah video'
   front_volunteers: 'Teknisi sukarela dibutuhkan'
   front_start_learning: 'Mulai belajar'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Alat-alat Promosi'
   header_menu_faq: 'Pertanyaan Umum'
   header_menu_how_to: 'Cara'
@@ -222,6 +231,8 @@ id:
   front_join_us_challenge: "Menangkan obrolan video untuk kelas Anda dengan selebriti!"
   front_join_us_learn_more: "Belajarlah lagi"
   signup_closed: 'Pendaftaran untuk Jam Kode sekarang ditutup. Silakan periksa lagi di bulan Oktober untuk mendaftar ke Hour of Code berikutnya.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Selenggarakan Hour of Code selama %{campaign_date}, dan daftar di sini.'
   signup_name_label: 'Nama anda'
   signup_name_error: 'Nama diperlukan.'
@@ -243,6 +254,11 @@ id:
   signup_your_event: 'Daftarkan acaramu'
   signup_host_an_hour: 'Host satu jam'
   signup_match_volunteer: 'Bantu saya menemukan seorang ahli program lokal untuk menginspirasi siswa saya'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Jika Anda menyelenggarakan beberapa acara, kirimkan nama atau email unik untuk masing-masing acara. Kami hanya menghitung satu event per kombinasi nama dan email."
   signup_registration_deadline: "Pendaftaran untuk Jam Kode ditutup 11 Desember."
   signup_name_placeholder: 'Nama anda'
@@ -265,6 +281,7 @@ id:
   signup_thank_you_message: 'Kami telah mengirimkan email konfirmasi dengan informasi untuk membantu anda memulai.'
   map_title: "Jam Kode peta"
   map_header: '# Kegiatan Hour of Code diseluruh dunia'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Lihat semua acara'
   map_header_company: '# oleh perusahaan penyelenggara'
   map_header_country: '# di %{country}'
@@ -280,6 +297,7 @@ id:
   meta_tag_twitter_title: 'Hour of Code akan segera hadir'
   meta_tag_twitter_description: 'Hour of Code adalah gerakan mendunia yang mencapai sepuluh juta pelajar dari lebih 180+ negara dan lebih dari 30 bahasa. Dari umur 4 sampai 104.'
   twitter_default_text: "Saya berpartisipasi dalam #HourOfCode tahun ini, Bagaimana dengan Anda? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQ'
   hoc_faq_what_is_hoc_q: 'Apa itu Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code adalah satu jam perkenalan mengenai ilmu komputer, didesain untuk melawan mitos tentang kode dan menunjukkan pada siapa pun bisa belajar dasar-dasarnya. <a href='%{codeorg_url}'>Lihat tutorial</a>."
@@ -374,6 +392,7 @@ id:
   videos_obama_cs: President Obama pada Ilmu Komputer
   videos_anybody_can_learn: Siapapun dapat belajar (1 menit)
   title_country_resources: Sumber daya spesifik negara
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code How-To untuk daerah
   title_how_to_events: How-To untuk acara Hour of Code
   title_how_to_organizations: Bagaimana mengadakan Hour of Code - organisasi
@@ -382,6 +401,7 @@ id:
   title_how_to_volunteers: Cara membimbing relawan Hour of Code
   title_how_to_parents: Cara membimbing orang tua
   title_how_to: Panduan How-To
+  title_international_partners: Contact International Partners
   title_press_release: Siaran pers Hour of Code untuk pejabat terpilih
   title_op_ed: Sampel Op-ed dukungan Minggu Edukasi Ilmu Komputer dan Hour of Code
   title_press_kit: Perlengkapan Media

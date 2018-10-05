@@ -1,8 +1,0 @@
-{
-  "category": "World",
-  "config": {
-    "func": "randomColor",
-    "blockText": "random color",
-    "returnType": "Colour"
-  }
-}

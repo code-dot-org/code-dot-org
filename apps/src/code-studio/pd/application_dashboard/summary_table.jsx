@@ -4,7 +4,7 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
-import {StatusColors} from './constants';
+import {StatusColors, ApplicationStatuses} from './constants';
 import _ from 'lodash';
 
 const styles = {
@@ -13,7 +13,6 @@ const styles = {
     paddingRight: '15px'
   },
   tableWrapper: {
-    width: '33.3%',
     paddingBottom: '30px'
   },
   statusCell: StatusColors,
@@ -31,16 +30,12 @@ export class SummaryTable extends React.Component {
   static propTypes = {
     showLocked: PropTypes.bool,
     caption: PropTypes.string.isRequired,
-    data: PropTypes.shape({
-      accepted: ApplicationDataPropType,
-      declined: ApplicationDataPropType,
-      interview: ApplicationDataPropType,
-      pending: ApplicationDataPropType,
-      unreviewed: ApplicationDataPropType,
-      waitlisted: ApplicationDataPropType,
-    }),
+
+    // keys are available statuses: {status: ApplicationDataPropType}
+    data: PropTypes.objectOf(ApplicationDataPropType),
     path: PropTypes.string.isRequired,
-    id: PropTypes.string
+    id: PropTypes.string,
+    applicationType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
   };
 
   static contextTypes = {
@@ -48,21 +43,19 @@ export class SummaryTable extends React.Component {
   };
 
   tableBody() {
-    return Object.keys(StatusColors).map((status, i) => {
-      if (this.props.data.hasOwnProperty(status)) {
-        const data = this.props.data[status];
-        const total = data.locked + data.unlocked;
-        return (
-          <tr key={i}>
-            <td style={{...styles.statusCell[status]}}>
-              {_.upperFirst(status)}
-            </td>
-            {this.props.showLocked && <td>{data.locked}</td>}
-            {this.props.showLocked && <td>{data.unlocked}</td>}
-            <td>{total}</td>
-          </tr>
-        );
-      }
+    return Object.keys(this.props.data).map((status, i) => {
+      const statusData = this.props.data[status];
+      const total = statusData.locked + statusData.unlocked;
+      return (
+        <tr key={i}>
+          <td style={{...styles.statusCell[status]}}>
+            {ApplicationStatuses[this.props.applicationType][status] || _.upperFirst(status)}
+          </td>
+          {this.props.showLocked && <td>{statusData.locked}</td>}
+          {this.props.showLocked && <td>{statusData.unlocked}</td>}
+          <td>{total}</td>
+        </tr>
+      );
     });
   }
 
@@ -78,7 +71,7 @@ export class SummaryTable extends React.Component {
 
   render() {
     return (
-      <div className="col-xs-4" style={styles.tableWrapper}>
+      <div style={styles.tableWrapper}>
         <Table
           id={this.props.id}
           striped
@@ -105,16 +98,12 @@ export class SummaryTable extends React.Component {
         >
           View all applications
         </Button>
-        {
-          this.props.data.accepted.locked + this.props.data.accepted.unlocked > 0 && (
-            <Button
-              href={this.context.router.createHref(`/${this.props.path}_cohort`)}
-              onClick={this.handleViewCohortClick}
-            >
-              View accepted cohort
-            </Button>
-          )
-        }
+        <Button
+          href={this.context.router.createHref(`/${this.props.path}_cohort`)}
+          onClick={this.handleViewCohortClick}
+        >
+          View accepted cohort
+        </Button>
       </div>
     );
   }

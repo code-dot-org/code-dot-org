@@ -10,7 +10,9 @@ function changePropBy(sprite,  property, val) {
   }
   else if (property=="direction") {
    	sprite.direction = getDirection(sprite) + val;
-  } else {
+  } else if (property=="y"){
+    sprite.y-=val;
+  }else {
   sprite[property] += val;
   }
 }

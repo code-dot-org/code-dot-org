@@ -42,6 +42,7 @@ var scoreboard = false;
 var scoreX = 0;
 var scoreY = 0;
 var dialog =[];
+var mikeLabBG = loadImage("https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png");
 
 function initialize(setupHandler) {
   setupHandler();
@@ -74,11 +75,11 @@ function removeBehavior(sprite, behavior) {
   sprite.behaviors.splice(index, 1);
 }
 
-function removeAllBehaviors(sprite) {
+/*function removeAllBehaviors(sprite) {
   if (sprite) {
     sprite.behaviors = [];
   }
-}
+}*/
 
 function Behavior(func, extraArgs) {
   if (!extraArgs) {
@@ -386,9 +387,11 @@ function unitVectorTowards(from, to) {
   return p5.Vector.fromAngle(angle);
 }
 
+
+
 function draw() {
   background(World.background_color || "white");
-
+	image(mikeLabBG);
   callbacks.forEach(function (callback) {
     callback();
   });
@@ -465,12 +468,13 @@ function draw() {
   }
 
   drawSprites();
-if (scoreboard) {
+  /*if (scoreboard) {
   	fill(scoreColor);
     rect(scoreX,scoreY,100,25);
     fill(scoreTextColor);
     text(scoreLabel + ":   " + score, scoreX+5, scoreY+15);
-}
+  }*/
+  
   if (show_score) {
     fill("black");
     textAlign(CENTER);

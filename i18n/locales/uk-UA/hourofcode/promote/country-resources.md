@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Призначені для самостійного навчання - дозволяючи учням працювати у власному темпі відповідно до свого рівня знань
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Визначтеся з потребами - комп'ютери не обов'язкові
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **Перевірте підручники на учнівських комп'ютерах чи інших пристроях.** Переконайтесь, що все працює коректно (зі звуком та відео).
-- **Ознайомтесь з вітальною сторінкою**, яку побачать учні після завершення роботи. 
+- **Ознайомтесь з вітальною сторінкою**, яку побачать учні після завершення роботи.
 - **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Виходьте з наявних можливостей

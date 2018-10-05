@@ -56,10 +56,8 @@
     "instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
     "name_suffix": "_simple",
     "include_shared_functions": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "gamelab",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

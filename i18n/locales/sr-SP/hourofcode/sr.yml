@@ -11,12 +11,21 @@ sr:
   campaign_date_full: "7-13 децембра"
   campaign_date_year: "2016"
   campaign_date_full_year: "Децембар 5-11, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Прикључи се највећем едукативном догађају у историји од 8-ог до 14-ог децембра 2014'
   front_intro_default: 'Hour of Code је глобални покрет који броји на десетине милиона ученика у преко 180 земаља. Свако и свагде може организовати окупљање Hour of Code. Једносатни курсеви су доступни на преко 30 језика. Није потребно никакво искуство. <strong>За оне од 4 до 104 године.</strong>'
   front_watch_video: 'Погледајте нов снимак'
   front_watch_regular_video: 'Погледајте и видео'
   front_volunteers: 'Тражимо техничке добровољце'
   front_start_learning: 'Почните са учењем'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Ресурси'
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'Како да'
@@ -222,6 +231,8 @@ sr:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organizujte Sat Programiranja tokom %{campaign_date} и региструјте га овде.'
   signup_name_label: 'Ваш име'
   signup_name_error: 'Обавезно унесите име.'
@@ -243,6 +254,11 @@ sr:
   signup_your_event: 'Пријавите ваше окупљање'
   signup_host_an_hour: 'Будите домаћин'
   signup_match_volunteer: 'Помозите ми да пронађем неког програмера у близини, који би инспирисао моје ученике'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Ако планирате да организујете већи број догађаја, молим вас да обезбедите јединствено име догађаја и имејл за сваки од њих. Прихватамо само један догађај по имејл адреси."
   signup_registration_deadline: "Регистрација за час кодирања се затвара 12. децембра."
   signup_name_placeholder: 'Ваш име'
@@ -265,6 +281,7 @@ sr:
   signup_thank_you_message: 'Послали смо Вам и-мејл потврде са информацијама које ће Вам помоћи да започнете.'
   map_title: "Час кода мапа"
   map_header: '# Hour of Code догађаји широм света'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Види све догађаје'
   map_header_company: '# организовано од стране фирме'
   map_header_country: '# у %{country}'
@@ -280,6 +297,7 @@ sr:
   meta_tag_twitter_title: 'Hour of Code се приближава'
   meta_tag_twitter_description: 'Hour of Code је глобални покрет који досеже милионе ученика у 180+ земаља и на преко 30 језика. Узраста од 4 до 104.'
   twitter_default_text: "Ја учествујем у овогодишњем #HourOfCode, а ти? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'Шта је Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code је једносатни увод у рачунарску науку, који ће демистификовати програмирање и показати да свако може научити основе. <a href='http://code.org/learn'>Погледај курсеве</a>."
@@ -333,8 +351,8 @@ sr:
   stats_hoc: "Hour of Code: 5 дана"
   stats_global: "Преко 100 милиона ученика је пробало Сат Програмирања"
   stats_girls_more: "Рачунарске науке је испробало више девојака него у последњих 70 година"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Сваки поједини дан је донео исте резултате &mdash; 100% ангажмана." - Нина Николас Пири, учитељица'
   stats_student: '"Знала сам да је ово прилика која се пружа <b>једном у животу</b>." - Мариана Алзате, ученица 5-ог'
   stats_michael: '"Никада, <b>баш никада</b>, нисам видео моје ученике тако узбуђене ако учења." - Мајкл Кларк, Учитељ'
@@ -374,6 +392,7 @@ sr:
   videos_obama_cs: Председник Обама о информатици
   videos_anybody_can_learn: Свако може да научи програмирање (1 мин)
   title_country_resources: Country Specific Resources
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: Како угостити Час кодирања - организације
@@ -382,6 +401,7 @@ sr:
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to_parents: '"Како да" водич за родитеље'
   title_how_to: '"Како да" водич'
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Материјал за новинаре

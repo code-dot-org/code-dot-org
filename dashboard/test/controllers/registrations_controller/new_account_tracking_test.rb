@@ -6,7 +6,7 @@ module RegistrationsControllerTests
     PASSWORD = '1234567'
     DEFAULT_UID = '1111' # sso uid
     UUID = 'abcdefg1234567' # tracking uuid
-    STUDY = 'account-sign-up'
+    STUDY = SignUpTracking::STUDY_NAME
 
     USER_PARAMS_GOOD = {
       name: 'A name',
@@ -35,23 +35,19 @@ module RegistrationsControllerTests
     setup do
       SecureRandom.stubs(:uuid).returns(UUID)
       OmniAuth.config.test_mode = true
-      OmniAuth.config.mock_auth[:google_oauth2] = generate_auth_user_hash(provider: 'google_oauth2')
+      SignUpTracking.stubs(:split_test_percentage).returns(0)
     end
 
-    test 'loading sign up page sends Firehose page load event' do
-      FirehoseClient.instance.expects(:put_record).once.with do |data|
+    test 'successful email sign up sends Firehose success event' do
+      FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
           data[:event] == 'load-sign-up-page' &&
           data[:data_string] == UUID
       end
-      get '/users/sign_up'
-    end
-
-    test 'successful email sign up sends Firehose success event' do
-      events = %w(load-sign-up-page email-sign-up-success)
-      FirehoseClient.instance.expects(:put_record).times(2).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
-          data[:event] == events.shift &&
+          data[:study_group] == SignUpTracking::NOT_IN_STUDY_GROUP &&
+          data[:event] == 'email-sign-up-success' &&
           data[:data_string] == UUID
       end
 
@@ -65,10 +61,15 @@ module RegistrationsControllerTests
     end
 
     test 'email sign up with wrong password confirmation sends Firehose error event' do
-      events = %w(load-sign-up-page email-sign-up-error)
-      FirehoseClient.instance.expects(:put_record).times(2).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
-          data[:event] == events.shift &&
+          data[:event] == 'load-sign-up-page' &&
+          data[:data_string] == UUID
+      end
+      FirehoseClient.instance.expects(:put_record).with do |data|
+        data[:study] == STUDY &&
+          data[:study_group] == SignUpTracking::NOT_IN_STUDY_GROUP &&
+          data[:event] == 'email-sign-up-error' &&
           data[:data_string] == UUID
       end
 
@@ -81,41 +82,10 @@ module RegistrationsControllerTests
       end
     end
 
-    test 'successful oauth sign up after hitting sign up page sends Firehose success events' do
-      events = %w(load-sign-up-page google_oauth2-sign-up-success)
-      FirehoseClient.instance.expects(:put_record).times(2).with do |data|
-        data[:study] == STUDY &&
-          data[:event] == events.shift &&
-          data[:data_string] == UUID
-      end
-
-      get '/users/sign_up'
-
-      @request.env["devise.mapping"] = Devise.mappings[:user]
-      assert_creates(User) do
-        get '/users/auth/google_oauth2'
-        follow_redirect!
-      end
-    end
-
-    test 'login to existing account after hitting sign up page sends Firehose sign in event' do
-      create :teacher, :unmigrated_google_sso, uid: DEFAULT_UID, email: EMAIL
-      events = %w(load-sign-up-page google_oauth2-sign-in)
-      FirehoseClient.instance.expects(:put_record).times(2).with do |data|
-        data[:study] == STUDY &&
-            data[:event] == events.shift &&
-            data[:data_string] == UUID
-      end
-
-      get '/users/sign_up'
-
-      assert_does_not_create(User) do
-        get '/users/auth/google_oauth2'
-        follow_redirect!
-      end
-    end
-
     test 'tracking cookie is cleared when hitting another random page on the site' do
+      OmniAuth.config.mock_auth[:google_oauth2] = generate_auth_user_hash(
+        provider: 'google_oauth2'
+      )
       create :teacher, :unmigrated_google_sso, uid: DEFAULT_UID, email: EMAIL
       events = %w(load-sign-up-page)
       FirehoseClient.instance.expects(:put_record).once.with do |data|

@@ -11,8 +11,8 @@
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite",
-        "defer": true
+        "assignment": true,
+        "customInput": "spritePicker"
       }
     ],
     "eventBlock": true

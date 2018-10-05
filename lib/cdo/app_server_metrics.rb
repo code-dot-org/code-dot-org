@@ -2,6 +2,7 @@ require 'raindrops'
 require 'cdo/aws/metrics'
 require 'honeybadger'
 require 'concurrent/timer_task'
+require 'active_support/core_ext/module/attribute_accessors'
 
 module Cdo
   # AppServerMetrics extends the Raindrops::Middleware class,
@@ -22,6 +23,8 @@ module Cdo
   #
   # Any errors are forwarded to Honeybadger for logging and notifying.
   class AppServerMetrics < Raindrops::Middleware
+    cattr_accessor :instance
+
     def initialize(app, opts = {})
       # Track max_calling using a modified Stats implementation.
       opts[:stats] ||= StatsWithMax.new
@@ -33,16 +36,16 @@ module Cdo
       @namespace = opts[:namespace] || 'App Server'
       @dimensions = opts[:dimensions] || {}
       @report_count = opts[:report_count] || 60
-      interval = opts[:interval] || 1
-      spawn_reporting_task(interval) unless interval.zero?
+      @interval = opts[:interval] || 1
+      self.instance = self
     end
 
     def shutdown
       @task && @task.shutdown
     end
 
-    def spawn_reporting_task(interval)
-      @task ||= Concurrent::TimerTask.new(execution_interval: interval, &method(:collect_metrics)).
+    def spawn_reporting_task
+      @task ||= Concurrent::TimerTask.new(execution_interval: @interval, &method(:collect_metrics)).
         with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
         execute
     end

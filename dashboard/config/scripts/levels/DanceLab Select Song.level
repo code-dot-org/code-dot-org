@@ -45,6 +45,7 @@
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
     "parent_level_id": 14472,
+    "block_pool": "Dancelab",
     "contained_level_names": null
   },
   "published": true,

@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - 최소한의 시간만으로 준비하고 운영할 수 있습니다.
 - 학생 자신의 진도와 수준에 맞추어 자기주도 학습이 가능합니다.
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) 필요한 하드웨어 - 컴퓨터가 꼭 필요하지는 않습니다.
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
 - **학생용 컴퓨터나 기기들에서 튜토리얼을 테스트 해보세요. ** 잘 실행되는지 살펴보세요.(사운드와 비디오 등)
-- **축하 페이지 미리보기** 를 통해 학생들이 완료했을 때 보게 될 내용들을 살펴보세요. 
+- **축하 페이지 미리보기** 를 통해 학생들이 완료했을 때 보게 될 내용들을 살펴보세요.
 - 소리가 나오는 튜토리얼이 있다면, **헤드폰을 나누주거나<0>, 준비해 오도록 하세요.</li> </ul> 
     
     ## 3) 사용할 수 있는 것들을 미리 준비해 주세요.

@@ -6,6 +6,7 @@ import {
   changeInterfaceMode,
   viewAnimationJson,
   setMobileControlsConfig,
+  setSong
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -29,6 +30,7 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
+import trackEvent from '../util/trackEvent';
 import {
   initializeSubmitHelper,
   onSubmitComplete
@@ -167,7 +169,9 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object, logLevel) {
   this.consoleLogger_.log(object);
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  }
 };
 
 /**
@@ -180,8 +184,6 @@ GameLab.prototype.injectStudioApp = function (studioApp) {
 
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
-
-GameLab.baseP5loadImage = null;
 
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
@@ -224,6 +226,7 @@ GameLab.prototype.init = function (config) {
 
   this.level.helperLibraries = this.level.helperLibraries || [];
   this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
+  this.level.isDanceLab = this.isDanceLab;
 
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
@@ -234,6 +237,10 @@ GameLab.prototype.init = function (config) {
     } catch (err) {
       console.error("Unable to parse default animation list", err);
     }
+  }
+
+  if (this.level.defaultSong) {
+    getStore().dispatch(setSong(this.level.defaultSong));
   }
 
   config.usesAssets = true;
@@ -365,8 +372,9 @@ GameLab.prototype.init = function (config) {
   var showDebugButtons = config.level.editCode &&
     (!config.hideSource && !config.level.debuggerDisabled);
   var showDebugConsole = config.level.editCode && !config.hideSource;
+  this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
-  if (showDebugButtons || showDebugConsole) {
+  if (this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.initialize({
       runApp: this.runButtonClick,
     }));
@@ -403,12 +411,21 @@ GameLab.prototype.init = function (config) {
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
+  // Pre-register all audio preloads with our Sounds API, which will load
+  // them into memory so they can play immediately:
+  $("link[as=fetch][rel=preload]").each((i, { href }) => {
+    const soundConfig = { id: href };
+    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
+    Sounds.getSingleton().register(soundConfig);
+  });
+
   this.loadValidationCodeIfNeeded_();
   const loader = this.studioApp_.loadLibraries(this.level.helperLibraries).then(() => ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
+        danceLab={this.isDanceLab}
       />
     </Provider>
   ), document.getElementById(config.containerId)));
@@ -634,7 +651,9 @@ GameLab.prototype.reset = function () {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  getStore().dispatch(jsDebugger.detach());
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.detach());
+  }
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -779,6 +798,12 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
+
+  //Log song count in Dance Lab
+  if (this.isDanceLab && experiments.isEnabled("songSelector")) {
+    const song = getStore().getState().selectedSong;
+    trackEvent('HoC_Song', 'Play', song);
+  }
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
@@ -1130,10 +1155,9 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
     customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
     customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
   });
-  window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  if (attachDebugger) {
+  if (attachDebugger && this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   }
   let code = '';

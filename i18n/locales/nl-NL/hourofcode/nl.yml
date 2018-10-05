@@ -11,12 +11,21 @@ nl:
   campaign_date_full: "7-13 december"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 December, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Doe mee met het grootste onderwijsproject in de geschiedenis, 7-13 december, 2015'
   front_intro_default: '''Hour of Code'' is een wereldwijde beweging die tientallen miljoenen studenten in meer dan 180 landen bereikt. Iedereen kan waar dan ook een ''Hour of Code'' organiseren. Tutorials van een uur zijn in meer dan 40 talen beschikbaar. Er is geen ervaring nodig. <strong>Leeftijd 4-104</strong>'
   front_watch_video: 'Bekijk de nieuwe video'
   front_watch_regular_video: 'Bekijk de video'
   front_volunteers: 'Technische vrijwilligers gezocht'
   front_start_learning: 'Begin met leren'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Middelen'
   header_menu_faq: 'Veelgestelde Vragen'
   header_menu_how_to: 'Uitleg'
@@ -222,6 +231,8 @@ nl:
   front_join_us_challenge: "Win een video-chat voor de hele klas met een beroemdheid!"
   front_join_us_learn_more: "Meer informatie"
   signup_closed: 'De registratie voor een Uur met Code is gesloten. Probeer het opnieuw in oktober om je aan te melden voor het volgende Uur met Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organiseer een ''Hour of Code'' tijdens %{campaign_date}, en meld hem hier aan.'
   signup_name_label: 'Je naam'
   signup_name_error: 'Je naam is verplicht.'
@@ -243,6 +254,11 @@ nl:
   signup_your_event: 'Meld uw evenement aan'
   signup_host_an_hour: 'Host een uur'
   signup_match_volunteer: 'Help me een software-ontwikkelaar in de buurt te vinden om mijn leerlingen te inspireren'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Als u meerdere evenementen host, geef de evenementen dan verschillende namen of verstuur ze in aparte e-mails. We tellen alleen één evenement per naam en e-mail."
   signup_registration_deadline: "Registratie voor 'Hour of Code' sluit op 11 December."
   signup_name_placeholder: 'Je Naam'
@@ -265,6 +281,7 @@ nl:
   signup_thank_you_message: 'We sturen u een bevestigingse-mail met informatie om u aan de slag te kunnen.'
   map_title: "Uur code kaart"
   map_header: '# geregistreerde ''Hour of Code''-activiteiten over de hele de wereld in 2017'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Bekijk alle evenementen'
   map_header_company: '# door bedijfsorganisatoren'
   map_header_country: '# in %{country}'
@@ -280,6 +297,7 @@ nl:
   meta_tag_twitter_title: '''Hour of Code'': Iedereen kan het leren'
   meta_tag_twitter_description: '''Hour of Code'' is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
   twitter_default_text: "Ik neem dit jaar deel aan het #HourOfCode, jij ook? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Veelgestelde vragen'
   hoc_faq_what_is_hoc_q: 'Wat is ''Hour of Code''?'
   hoc_faq_what_is_hoc_a: "'Hour of Code' is een één uur durende introductie in de wereld van informatica, ontworpen om coderen begrijpbaar te maken en aan te tonen dat iederen de basis kan leren. <a href='%{tutorials}'>Bekijk de handleidingen</a>. Deze vrijwilligerscampagne wordt ondersteund door meer dan <a href='%{partners}'>400 partners</a> en 200.000 leerkrachten van over de hele wereld."
@@ -334,7 +352,7 @@ nl:
   stats_global: "Meer dan 100M leerlingen hebben 'Hour of Code' geprobeerd"
   stats_girls_more: "Meer meisjes hebben informatica geprobeerd dan in de afgelopen 70 jaar"
   stats_females: "De participatie van vrouwen binnen de computerwetenschappen is slechts 20% op scholen en daarmee dus ook de beroepsbevolking."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Iedere dag leverde hetzelfde resultaat op &mdash; 100% deelname." - Nina Nichols Peery, lerares'
   stats_student: '"Ik wist dat dit een <b>once-in-a-lifetime</b>-kans was." - Mariana Alzate, groep-8er'
   stats_michael: 'Ik heb mijn leerlingen nog <b>nooit</b> zo enthousiast gezien over leren." - Michael Clark, leraar'
@@ -374,6 +392,7 @@ nl:
   videos_obama_cs: President Obama over informatica
   videos_anybody_can_learn: Iederen Kan Het Leren (1 min)
   title_country_resources: Middelen Per Land
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: '''Hour of Code''-Handleiding voor Gemeenten'
   title_how_to_events: '''Hour of Code'' Organisatie Handleiding'
   title_how_to_organizations: Hoe organiseer je een 'Hour of Code' - Organisaties
@@ -382,6 +401,7 @@ nl:
   title_how_to_volunteers: Handleiding voor 'Hour of Code'-vrijwilligers
   title_how_to_parents: Hoe-doen-we-dat gids voor ouders
   title_how_to: Handleiding
+  title_international_partners: Contact International Partners
   title_press_release: '''Hour of Code'' Persbericht voor Ambtenaren'
   title_op_ed: Voorbeeld-opiniestuk Computer Science Eductation Week en Hour of Code
   title_press_kit: Persmap
