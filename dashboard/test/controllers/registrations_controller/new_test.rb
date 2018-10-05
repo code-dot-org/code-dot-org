@@ -9,7 +9,7 @@ module RegistrationsControllerTests
     # OLD SIGNUP FLOW
     #
     test 'renders old signup form in old flow' do
-      SignUpTracking.expects(:new_sign_up_experience?).returns(false).times(3)
+      SignUpTracking.expects(:new_sign_up_experience?).returns(false).twice
       PartialRegistration.stubs(:in_progress?).returns(true)
       User.expects(:new_with_session).returns(build(:user))
 
@@ -47,14 +47,15 @@ module RegistrationsControllerTests
       assert_empty assigns(:user).errors.full_messages
     end
 
-    test 'renders new signup form if partial registration is not in progress in new flow' do
-      SignUpTracking.expects(:new_sign_up_experience?).returns(true).times(3)
+    # Making sure new signup form is never rendered at this point, even if user is in new flow
+    test 'renders old signup form if partial registration is not in progress in new flow' do
+      SignUpTracking.expects(:new_sign_up_experience?).returns(true).twice
       SignUpTracking.expects(:begin_sign_up_tracking)
 
       get '/users/sign_up'
       assert_response :success
       assert_template partial: '_sign_up'
-      assert_template partial: '_new_sign_up_form'
+      assert_template partial: '_old_sign_up_form'
     end
   end
 end
