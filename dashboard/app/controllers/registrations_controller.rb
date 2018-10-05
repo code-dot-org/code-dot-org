@@ -28,11 +28,18 @@ class RegistrationsController < Devise::RegistrationsController
   #
   # POST /users/begin_sign_up
   #
-  # TODO: add description
+  # Submit step 1 of the signup process for creating an email/password account.
   #
   def begin_sign_up
-    user = User.new(begin_sign_up_params)
-    PartialRegistration.persist_attributes(session, user)
+    @user = User.new(begin_sign_up_params)
+    @user.validate_for_finish_sign_up
+
+    if @user.errors.blank?
+      PartialRegistration.persist_attributes(session, @user)
+      redirect_to new_user_registration_path
+    else
+      render 'new' # Re-render form to display validation errors
+    end
   end
 
   # GET /users/cancel
