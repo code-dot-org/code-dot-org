@@ -99,4 +99,14 @@ class Pd::PreWorkshopSurveyTest < ActiveSupport::TestCase
 
     assert_nil survey.unit_lesson_short_name
   end
+
+  test 'unit_lesson_short_name defaults to L1 when lesson is missing' do
+    # Lesson should be required when a unit is selected, but we had a bug
+    # and some older data has unit but no lesson. In these cases, default to lesson 1
+    survey = build :pd_pre_workshop_survey, form_data: {
+      unit: UNIT_1
+    }.to_json
+
+    assert_equal 'U1 L1', survey.unit_lesson_short_name
+  end
 end
