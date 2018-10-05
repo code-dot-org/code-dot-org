@@ -2,6 +2,8 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
+import {setSong} from './DanceLabP5';
+import {getStore} from "../redux";
 
 export default function init(p5, Dance) {
   const exports = {};
@@ -111,7 +113,7 @@ exports.reset = function () {
 
 exports.preload = function preload() {
   // Load song
-  Dance.song.load(song_meta.url);
+  Dance.song.load();
 
   // Load spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
@@ -143,6 +145,7 @@ exports.setup = function setup() {
 }
 
 exports.play = function () {
+  Dance.song.load();
   Dance.song.start();
 }
 
@@ -670,6 +673,12 @@ exports.draw = function draw() {
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
   p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+}
+
+exports.loadSong = function loadSong() {
+  setSong(getStore().getState().selectedSong);
+  console.log("Requested Load:" + Dance.song.songData().url);
+  Dance.song.load();
 }
   return exports;
 }
