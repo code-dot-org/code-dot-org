@@ -50,7 +50,8 @@ en:
         gender: 'Gender'
         edit_header: 'Edit Account Details'
         finish_sign_up_header: 'Finish creating your account'
-        finish_sign_up_subheader: 'Fill out the following information to finish creating your Code.org account.'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account using your <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: can't be in the future
 
@@ -159,14 +160,14 @@ en:
     user_type_teacher: "Teacher"
     user_type_student: "Student"
     field_is_required: "is required"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "You must agree to create an account."
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Yes"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
-    create_user_type: 'Create account as a:'
+    create_user_type: 'Create account as a'
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -244,6 +245,7 @@ en:
     code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
+    default_name: 'Untitled Section'
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
@@ -337,6 +339,16 @@ en:
       teach: "Teach"
       about: "About"
 
+    create_button:
+      create: 'Create'
+      applab: 'App Lab'
+      artist: 'Artist'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      view_all: 'View all projects...'
+
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -347,7 +359,7 @@ en:
       signin: 'Sign in'
       signup: 'Create an account'
       already_registered: 'Already registered?'
-      pair_programming: 'Pair Programming'
+      pair_programming: 'Pair programming'
       team: 'Team'
       driver: 'Logged in'
       navigator: 'Partner'

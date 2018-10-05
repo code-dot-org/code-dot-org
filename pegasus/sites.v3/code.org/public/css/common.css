@@ -624,7 +624,7 @@ button {
   margin-left:5%;
 }
 
-.user_menu { /* copied from dashboard's .header-button */
+.user_menu, .create_menu { /* copied from dashboard's .header-button */
   color: white;
   display: inline-block;
   background-color: #ffa400;

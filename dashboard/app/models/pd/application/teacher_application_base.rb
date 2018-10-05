@@ -2,25 +2,24 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                  :integer          not null, primary key
+#  user_id             :integer
+#  type                :string(255)      not null
+#  application_year    :string(255)      not null
+#  application_type    :string(255)      not null
+#  regional_partner_id :integer
+#  status              :string(255)
+#  locked_at           :datetime
+#  notes               :text(65535)
+#  form_data           :text(65535)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  course              :string(255)
+#  response_scores     :text(65535)
+#  application_guid    :string(255)
+#  accepted_at         :datetime
+#  properties          :text(65535)
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -65,12 +64,8 @@ module Pd::Application
 
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
 
-    def self.statuses
-      Pd::Application::ApplicationBase.statuses.except('interview')
-    end
-
     VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
-    validates_uniqueness_of :user_id
+
     validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
@@ -302,6 +297,16 @@ module Pd::Application
           'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
+        how_heard: [
+          'Code.org Website',
+          'Code.org Email',
+          'Regional Partner website',
+          'Regional Partner Email',
+          'From a teacher that has participated in a Code.org program',
+          'From an administrator',
+          TEXT_FIELDS[:other_with_text]
+        ],
+
         committed: [
           YES,
           'No (Please Explain):'
@@ -441,6 +446,7 @@ module Pd::Application
       hash = sanitize_form_data_hash
       hash[:preferred_first_name] || hash[:first_name]
     end
+    alias_method :teacher_first_name, :first_name
 
     def last_name
       sanitize_form_data_hash[:last_name]

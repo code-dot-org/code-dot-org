@@ -299,7 +299,7 @@ var preloadImage = function (url) {
 };
 
 Craft.characterAssetPackName = function (playerName) {
-  return 'player' + playerName;
+  return 'player' + playerName + 'Aquatic';
 };
 
 Craft.getCurrentCharacter = function () {
@@ -365,6 +365,7 @@ Craft.initializeAppLevel = function (levelConfig) {
 
   Craft.gameController.loadLevel({
     isAquaticLevel: levelConfig.isAquaticLevel,
+    boat: levelConfig.boat,
     ocean: levelConfig.ocean,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
@@ -374,7 +375,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     entities: levelConfig.entities,
     playerStartPosition: levelConfig.playerStartPosition,
     playerStartDirection: levelConfig.playerStartDirection,
-    playerName: Craft.getCurrentCharacter(),
+    playerName: Craft.getCurrentCharacter() + 'Aquatic',
     assetPacks: levelAssetPacks,
     specialLevelType: levelConfig.specialLevelType,
     houseBottomRight: levelConfig.houseBottomRight,
@@ -533,6 +534,10 @@ Craft.executeUserCode = function () {
     },
   };
 
+  const isWalkable = block => {
+    return block && block.isWalkable;
+  };
+
   // Run user code.
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
@@ -542,16 +547,16 @@ Craft.executeUserCode = function () {
     },
     ...asyncMethods,
     api: appCodeOrgAPI,
-    walkableAhead: () => Craft.gameController.levelModel.getForwardBlock().isWalkable,
+    walkableAhead: () => isWalkable(Craft.gameController.levelModel.getForwardBlock()),
     walkableToRight: () => {
       Craft.gameController.levelModel.turnRight();
-      const value = Craft.gameController.levelModel.getForwardBlock().isWalkable;
+      const value = isWalkable(Craft.gameController.levelModel.getForwardBlock());
       Craft.gameController.levelModel.turnLeft();
       return value;
     },
     walkableToLeft: () => {
       Craft.gameController.levelModel.turnLeft();
-      const value = Craft.gameController.levelModel.getForwardBlock().isWalkable;
+      const value = isWalkable(Craft.gameController.levelModel.getForwardBlock());
       Craft.gameController.levelModel.turnRight();
       return value;
     },
@@ -559,6 +564,7 @@ Craft.executeUserCode = function () {
       Craft.gameController.getEntity().position).blockType,
     isStandingOnMiniBlock: () => Craft.gameController.levelModel.actionPlane.getBlockAt(
       Craft.gameController.getEntity().position).getIsMiniblock(),
+    isFinished: () => (Craft.gameController.levelModel.isFailed() || Craft.gameController.levelModel.isSolved())
   }, {
     asyncFunctionList: Object.values(asyncMethods),
   });

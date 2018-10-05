@@ -73,7 +73,6 @@ require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 
@@ -83,6 +82,7 @@ class User < ActiveRecord::Base
   include LocaleHelper
   include UserMultiAuthHelper
   include UserPermissionGrantee
+  include PartialRegistration
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -781,20 +781,9 @@ class User < ActiveRecord::Base
   end
 
   def self.new_with_session(params, session)
-    if session["devise.user_attributes"]
-      new(session["devise.user_attributes"]) do |user|
-        user.attributes = params
-        cache = CDO.shared_cache
-        OmniauthCallbacksController::OAUTH_PARAMS_TO_STRIP.each do |param|
-          next if user.send(param)
-          # Grab the oauth token from memcached if it's there
-          oauth_cache_key = OmniauthCallbacksController.get_cache_key(param, user)
-          user.send("#{param}=", cache.read(oauth_cache_key)) if cache
-        end
-        user.valid?
-      end
-    else
-      super
+    return super unless PartialRegistration.in_progress? session
+    new_from_partial_registration session do |user|
+      user.attributes = params
     end
   end
 
@@ -974,11 +963,12 @@ class User < ActiveRecord::Base
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
+    max_credential_size = 255
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
     login = conditions.delete(:login)
     if login.present?
-      return nil if login.utf8mb4?
+      return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       from("users IGNORE INDEX(index_users_on_deleted_at)").where(
@@ -987,8 +977,8 @@ class User < ActiveRecord::Base
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
         ]
       ).first
-    elsif hashed_email = conditions.delete(:hashed_email)
-      return nil if hashed_email.utf8mb4?
+    elsif (hashed_email = conditions.delete(:hashed_email))
+      return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
       return find_by_hashed_email(hashed_email)
     else
       nil
@@ -1478,12 +1468,48 @@ class User < ActiveRecord::Base
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
-  # @return [Boolean]
-  def any_visible_assigned_scripts?
+  # @return [Array] of Scripts
+  def visible_assigned_scripts
     user_scripts.where("assigned_at").
       map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
-      flatten.
-      any?
+      flatten
+  end
+
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @return [Boolean]
+  def any_visible_assigned_scripts?
+    visible_assigned_scripts.any?
+  end
+
+  def most_recently_assigned_user_script
+    user_scripts.
+    where("assigned_at").
+    order(assigned_at: :desc).
+    first
+  end
+
+  def most_recently_assigned_script
+    most_recently_assigned_user_script.script
+  end
+
+  def user_script_with_most_recent_progress
+    user_scripts.
+    where("last_progress_at").
+    order(last_progress_at: :desc).
+    first
+  end
+
+  def script_with_most_recent_progress
+    user_script_with_most_recent_progress.script
+  end
+
+  def most_recent_progress_in_recently_assigned_script?
+    script_with_most_recent_progress == most_recently_assigned_script
+  end
+
+  def last_assignment_after_most_recent_progress?
+    most_recently_assigned_user_script[:assigned_at] >=
+    user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Checks if there are any non-hidden scripts or courses assigned to the user.
@@ -1862,6 +1888,14 @@ class User < ActiveRecord::Base
       can_edit_password? && encrypted_password.blank?
   end
 
+  def should_disable_user_type?
+    user_type.present? && oauth_provided_user_type
+  end
+
+  def oauth_provided_user_type
+    [AuthenticationOption::CLEVER].include?(provider)
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -2167,6 +2201,21 @@ class User < ActiveRecord::Base
       update(state: 'deleted', updated_at: Time.now)
   end
 
+  # Restores all of this user's projects that were soft-deleted after the given time
+  # Called after undestroy
+  private def restore_channels_deleted_after(deleted_at)
+    return unless user_storage_id
+
+    channel_ids = PEGASUS_DB[:storage_apps].
+      where(storage_id: user_storage_id).
+      map(:id)
+
+    PEGASUS_DB[:storage_apps].
+      where(id: channel_ids, state: 'deleted').
+      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
+      update(state: 'active', updated_at: Time.now)
+  end
+
   # Gets the user's user_storage_id from the pegasus database, if it's available.
   # Note: Known that this duplicates some logic in storage_id_for_user_id, but
   # that method is globally stubbed in tests :cry: and therefore not very helpful.
@@ -2176,12 +2225,17 @@ class User < ActiveRecord::Base
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
+  # Note: This does not restore any of the user's permissions, which are hard-deleted.
   # @raise [RuntimeError] If the user is purged.
   def undestroy
     raise 'Unable to restore a purged user' if purged_at
 
+    soft_delete_time = deleted_at
+
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
-    restore(recursive: true, recovery_window: 5.minutes)
+    result = restore(recursive: true, recovery_window: 5.minutes)
+    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    result
   end
 
   def depended_upon_for_login?

@@ -1,0 +1,77 @@
+{
+  "category": "",
+  "config": {
+    "func": "ifDanceIs",
+    "blockText": "if {SPRITE} is doing {DANCE}\n {DO1} {DO2}",
+    "inline": true,
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite",
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "DANCE",
+        "options": [
+          [
+            "Clap High",
+            "0"
+          ],
+          [
+            "Clown",
+            "1"
+          ],
+          [
+            "Dab",
+            "2"
+          ],
+          [
+            "Double Jam",
+            "3"
+          ],
+          [
+            "Drop",
+            "4"
+          ],
+          [
+            "Floss",
+            "5"
+          ],
+          [
+            "Fresh",
+            "6"
+          ],
+          [
+            "Kick",
+            "7"
+          ],
+          [
+            "Roll",
+            "9"
+          ],
+          [
+            "This or That",
+            "10"
+          ],
+          [
+            "Thiller",
+            "11"
+          ],
+          [
+            "None",
+            "8"
+          ]
+        ],
+        "type": "String"
+      },
+      {
+        "name": "DO1",
+        "statement": true
+      },
+      {
+        "name": "DO2",
+        "statement": true
+      }
+    ]
+  }
+}

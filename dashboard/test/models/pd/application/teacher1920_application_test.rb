@@ -391,7 +391,7 @@ module Pd::Application
       assert_nil application.accepted_at
 
       Timecop.freeze(today) do
-        application.update!(status: 'accepted')
+        application.update!(status: 'accepted_not_notified')
         assert_equal today, application.accepted_at.to_time
 
         application.update!(status: 'declined')
@@ -399,7 +399,7 @@ module Pd::Application
       end
 
       Timecop.freeze(tomorrow) do
-        application.update!(status: 'accepted')
+        application.update!(status: 'accepted_not_notified')
         assert_equal tomorrow, application.accepted_at.to_time
       end
     end
@@ -466,7 +466,7 @@ module Pd::Application
       workshop = create :pd_workshop
 
       application.pd_workshop_id = workshop.id
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
 
       assert_creates(Pd::Enrollment) do
         application.lock!
@@ -481,7 +481,7 @@ module Pd::Application
       second_workshop = create :pd_workshop
 
       application.pd_workshop_id = first_workshop.id
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
       application.lock!
 
       first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
@@ -499,7 +499,7 @@ module Pd::Application
       workshop = create :pd_workshop
 
       application.pd_workshop_id = workshop.id
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
       application.lock!
       first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
 
@@ -510,7 +510,7 @@ module Pd::Application
       assert first_enrollment.reload.deleted?
 
       application.unlock!
-      application.status = "accepted"
+      application.status = 'accepted_not_notified'
 
       assert_creates(Pd::Enrollment) do
         application.lock!
@@ -586,9 +586,13 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop single local workshop' do
-      workshop = create :pd_workshop
+      Pd::Workshop.any_instance.stubs(:process_location)
+
+      workshop = create :pd_workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
       application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash, regional_partner_workshop_ids: [workshop.id]
+        build :pd_teacher1920_application_hash,
+          regional_partner_workshop_ids: [workshop.id],
+          able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
       )
 
       assert_equal workshop, application.get_first_selected_workshop
@@ -617,7 +621,7 @@ module Pd::Application
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash, :with_multiple_workshops,
           regional_partner_workshop_ids: workshops.map(&:id),
-          able_to_attend_multiple: []
+          able_to_attend_multiple: ['Not a workshop', 'Not a workshop 2']
         )
       )
       assert_equal workshops.first, application.get_first_selected_workshop
@@ -632,19 +636,14 @@ module Pd::Application
       assert_nil application.get_first_selected_workshop
     end
 
-    test 'get_first_selected_workshop returns nil for teachercon even with local workshops' do
-      workshop = create :pd_workshop
-      application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash, teachercon: TC_PHOENIX, regional_partner_workshop_ids: [workshop.id]
-      )
-
-      assert_nil application.get_first_selected_workshop
-    end
-
     test 'get_first_selected_workshop ignores single deleted workshops' do
-      workshop = create :pd_workshop
+      Pd::Workshop.any_instance.stubs(:process_location)
+
+      workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, location_address: 'Buffalo, NY', sessions_from: Date.new(2019, 1, 1)
       application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash, regional_partner_workshop_ids: [workshop.id]
+        build :pd_teacher1920_application_hash,
+          regional_partner_workshop_ids: [workshop.id],
+          able_to_attend_multiple: ['January 1-5, 2019 in Buffalo, NY']
       )
 
       workshop.destroy
@@ -657,7 +656,7 @@ module Pd::Application
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash, :with_multiple_workshops,
           regional_partner_workshop_ids: workshops.map(&:id),
-          able_to_attend_multiple: []
+          able_to_attend: [workshops.first.id, workshops.second.id]
         )
       )
 
@@ -801,6 +800,181 @@ module Pd::Application
       refute filtered_labels_csd.include? :csd_which_grades
       assert filtered_labels_csd.include? :csp_which_grades
       assert_equal ['csd', 'csp'], Teacher1920Application::FILTERED_LABELS.keys
+    end
+
+    test 'status changes are logged' do
+      application = build :pd_teacher1920_application
+      assert_nil application.status_log
+
+      application.save!
+      assert application.status_log.is_a? Array
+      assert_status_log [{status: 'unreviewed', at: Time.zone.now}], application
+
+      # update unrelated field
+      Timecop.freeze 1
+      application.update!(notes: 'some notes')
+      assert_equal Time.zone.now, application.updated_at
+      assert_equal 1, application.status_log.count
+
+      Timecop.freeze 1
+      application.update!(status: 'pending')
+      assert_status_log(
+        [
+          {status: 'unreviewed', at: Time.zone.now - 2.seconds},
+          {status: 'pending', at: Time.zone.now}
+        ],
+        application
+      )
+    end
+
+    test 'setting an auto-email status queues up an email' do
+      application = create :pd_teacher1920_application
+      assert_empty application.emails
+
+      application.expects(:queue_email).with('accepted_no_cost_registration')
+      application.update!(status: 'accepted_no_cost_registration')
+    end
+
+    test 'setting an non auto-email status does not queue up a status email' do
+      application = create :pd_teacher1920_application
+      assert_empty application.emails
+
+      application.expects(:queue_email).never
+      application.update!(status: 'pending')
+    end
+
+    test 'setting an auto-email status deletes unsent emails for the application' do
+      unrelated_email = create :pd_application_email
+      application = create :pd_teacher1920_application
+      associated_sent_email = create :pd_application_email, application: application, sent_at: Time.now
+      associated_unsent_email = create :pd_application_email, application: application
+
+      application.update!(status: 'waitlisted')
+      assert Email.exists?(unrelated_email.id)
+      assert Email.exists?(associated_sent_email.id)
+      refute Email.exists?(associated_unsent_email.id)
+    end
+
+    test 'formatted_partner_contact_email' do
+      application = build :pd_teacher1920_application
+      partner = build :regional_partner
+
+      # no partner
+      assert_nil application.formatted_partner_contact_email
+
+      # partner w no contact info
+      application.regional_partner = partner
+      assert_nil application.formatted_partner_contact_email
+
+      # name only? still nil
+      partner.contact_name = 'We Teach Code'
+      assert_nil application.formatted_partner_contact_email
+
+      # name and email
+      partner.contact_email = 'we_teach_code@ex.net'
+      assert_equal 'We Teach Code <we_teach_code@ex.net>', application.formatted_partner_contact_email
+
+      # email only
+      partner.contact_name = nil
+      assert_equal 'we_teach_code@ex.net', application.formatted_partner_contact_email
+    end
+
+    test 'test non course dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash,
+        completing_on_behalf_of_someone_else: YES,
+        does_school_require_cs_license: YES,
+        pay_fee: TEXT_FIELDS[:no_pay_fee_1920],
+        regional_partner_workshop_ids: [1, 2, 3],
+        able_to_attend_multiple: [TEXT_FIELDS[:unable_to_attend_1920]],
+        what_license_required: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      assert_nil application.formatted_partner_contact_email
+
+      refute application.valid?
+      assert_equal %w(completingOnBehalfOfName whatLicenseRequired travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
+    end
+
+    test 'test csd dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash_common,
+        :csd,
+        csd_which_grades: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      refute application.valid?
+      assert_equal ['csdWhichGrades'], application.errors.messages[:form_data]
+    end
+
+    test 'test csp dynamically required fields' do
+      application_hash = build :pd_teacher1920_application_hash_common,
+        :csp,
+        csp_which_grades: nil,
+        csp_how_offer: nil
+
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      refute application.valid?
+      assert_equal %w(cspWhichGrades cspHowOffer), application.errors.messages[:form_data]
+    end
+
+    test 'queue_email skips principal_approval_completed_partner with no partner email address' do
+      application = build :pd_teacher1920_application
+      application.expects(:formatted_partner_contact_email).returns(nil)
+      CDO.log.expects(:info).with("Skipping principal_approval_completed_partner for application id #{application.id}")
+
+      assert_does_not_create Email do
+        application.queue_email :principal_approval_completed_partner
+      end
+    end
+
+    test 'queue_email queues up principal_approval_completed_partner with a partner email address' do
+      application = build :pd_teacher1920_application
+      application.expects(:formatted_partner_contact_email).returns('partner@ex.net')
+      CDO.log.expects(:info).never
+
+      assert_creates Email do
+        application.queue_email :principal_approval_completed_partner
+      end
+    end
+
+    test 'should_send_decision_email?' do
+      application = build :pd_teacher1920_application, status: :pending
+
+      # no auto-email status: no email
+      refute application.should_send_decision_email?
+
+      # auto-email status with no partner: yes email
+      application.status = :accepted_no_cost_registration
+      assert application.should_send_decision_email?
+
+      # auto-email status, partner with sent_by_system: yes email
+      application.regional_partner = build(:regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM)
+      assert application.should_send_decision_email?
+
+      # auto-email status, partner with sent_by_partner: no email
+      application.regional_partner.applications_decision_emails = RegionalPartner::SENT_BY_PARTNER
+      refute application.should_send_decision_email?
+    end
+
+    test 'Can create applications for the same user in 1819 and 1920' do
+      teacher = create :teacher
+
+      assert_creates Pd::Application::Teacher1819Application do
+        create :pd_teacher1819_application, user: teacher
+      end
+
+      assert_creates Pd::Application::Teacher1920Application do
+        create :pd_teacher1920_application, user: teacher
+      end
+
+      assert_raises ActiveRecord::RecordInvalid do
+        create :pd_teacher1920_application, user: teacher
+      end
+    end
+
+    private
+
+    def assert_status_log(expected, application)
+      assert_equal JSON.parse(expected.to_json), application.status_log
     end
   end
 end

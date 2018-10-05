@@ -26,7 +26,9 @@
 require "csv"
 
 class Craft < Blockly
-  # before_save :update_maps
+  def shared_blocks
+    Block.for('craft') if JSONValue.value(is_aquatic_level)
+  end
 
   serialized_attrs(
     :ground_plane,
@@ -61,6 +63,7 @@ class Craft < Blockly
     :use_player,
     :free_play,
     :ocean,
+    :boat,
     :songs
   )
 
@@ -151,6 +154,66 @@ class Craft < Blockly
     planksJungle: true,
     planksOak: true,
     planksSpruce: true,
+
+    # Aquatic
+    strippedOak: true,
+    strippedDarkOak: true,
+    stoneBricks: true,
+    mossyStoneBricks: true,
+    crackedStoneBricks: true,
+    magmaBlock: true,
+    blueCoralBlock: true,
+    pinkCoralBlock: true,
+    magentaCoralBlock: true,
+    redCoralBlock: true,
+    yellowCoralBlock: true,
+    deadCoralBlock: true,
+    blueDeadCoralBlock: true,
+    pinkDeadCoralBlock: true,
+    magentaDeadCoralBlock: true,
+    readDeadCoralBlock: true,
+    yellowDeadCoralBlock: true,
+    prismarine: true,
+    darkPrismarine: true,
+    seaLantern: true,
+    packedIce: true,
+    blueIce: true,
+    blackConcrete: true,
+    seaGrass: true,
+    kelp: true,
+    polishedGranite: true,
+    coralFanBlueBottom: true,
+    coralFanPinkBottom: true,
+    coralFanMagentaBottom: true,
+    coralFanRedBottom: true,
+    coralFanYellowFanBottom: true,
+    coralFanBlueTop: true,
+    coralFanPinkTop: true,
+    coralFanMagentaTop: true,
+    coralFanRedTop: true,
+    coralFanYellowFanTop: true,
+    coralFanBlueLeft: true,
+    coralFanPinkLeft: true,
+    coralFanMagentaLeft: true,
+    coralFanRedLeft: true,
+    coralFanYellowFanLeft: true,
+    coralFanBlueRight: true,
+    coralFanPinkRight: true,
+    coralFanMagentaRight: true,
+    coralFanRedRight: true,
+    coralFanYellowFanRight: true,
+    seaPickles: true,
+    coralPlantBlue: true,
+    coralPlantBlueDeep: true,
+    coralPlantPink: true,
+    coralPlantPinkDeep: true,
+    coralPlantMagenta: true,
+    coralPlantMagentaDeep: true,
+    coralPlantRed: true,
+    coralPlantRedDeep: true,
+    coralPlantYellow: true,
+    coralPlantYellowDeep: true,
+    chest: true,
   }.freeze
 
   ALL_MINIBLOCKS = {
@@ -407,7 +470,7 @@ class Craft < Blockly
   }.freeze
 
   def self.start_directions
-    [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
+    [['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end
 
   def self.song_options

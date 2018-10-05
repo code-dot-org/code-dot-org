@@ -1,5 +1,9 @@
+require 'cdo/firehose'
+
 class Api::V1::RegionalPartnersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:find, :show]
+
+  include Pd::SharedWorkshopConstants
 
   # GET /api/v1/regional_partners
   def index
@@ -16,6 +20,67 @@ class Api::V1::RegionalPartnersController < ApplicationController
     render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
   end
 
+  # GET /api/v1/regional_partners/show/:id
+  def show
+    partner_id = params[:partner_id]
+    partner = RegionalPartner.find_by_id(partner_id)
+
+    if partner
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+    else
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+    end
+  end
+
+  # GET /api/v1/regional_partners/find
+  def find
+    zip_code = nil
+    state = nil
+
+    zip_code = params[:zip_code] if RegexpUtils.us_zip_code?(params[:zip_code])
+
+    # Try to find the matching partner using the ZIP code.
+    partner = RegionalPartner.find_by_region(zip_code, nil)
+
+    # Otherwise, get the state for the ZIP code and try to find the matching partner using that.
+    unless partner
+      begin
+        Geocoder.with_errors do
+          # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
+          # See https://github.com/alexreisner/geocoder#error-handling
+          Retryable.retryable(on: StandardError) do
+            state = Geocoder.search(zip_code)&.first&.state_code
+          end
+        end
+      rescue StandardError => e
+        # Log geocoding errors to honeybadger but don't fail
+        Honeybadger.notify(e,
+          error_message: 'Error geocoding regional partner workshop zip_code',
+          context: {
+            zip_code: zip_code
+          }
+        )
+      end
+
+      if state
+        partner = RegionalPartner.find_by_region(nil, state)
+      end
+    end
+
+    if partner
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+    elsif state
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+    else
+      FirehoseClient.instance.put_record(
+        study: 'regional-partner-search-log',
+        event: "no-state-for-zip",
+        data_string: params[:zip_code]
+      )
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_state]}
+    end
+  end
+
   private
 
   # Get the regional partner's cohort capacity for a specific role
@@ -27,9 +92,9 @@ class Api::V1::RegionalPartnersController < ApplicationController
       partner_id = regional_partner_value ? regional_partner_value : current_user.regional_partners.first
       regional_partner = RegionalPartner.find_by(id: partner_id)
       if role == 'csd_teachers'
-        return regional_partner.cohort_capacity_csd
+        return regional_partner&.cohort_capacity_csd
       elsif role == 'csp_teachers'
-        return regional_partner.cohort_capacity_csp
+        return regional_partner&.cohort_capacity_csp
       end
     end
     nil

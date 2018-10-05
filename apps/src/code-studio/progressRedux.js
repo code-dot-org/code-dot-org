@@ -254,7 +254,10 @@ export const getLevelResult = level => {
   if (level.status === LevelStatus.locked) {
     return TestResults.LOCKED_RESULT;
   }
-  if (level.submitted || level.readonly_answers) {
+  if (level.readonly_answers) {
+    return TestResults.READONLY_SUBMISSION_RESULT;
+  }
+  if (level.submitted) {
     return TestResults.SUBMITTED_RESULT;
   }
 
@@ -415,6 +418,7 @@ const levelWithStatus = ({levelProgress, levelPairing = {}, currentLevelId}, lev
     status: statusForLevel(level, levelProgress),
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
     paired: levelPairing[level.activeId],
+    readonlyAnswers: level.readonly_answers,
   };
 };
 

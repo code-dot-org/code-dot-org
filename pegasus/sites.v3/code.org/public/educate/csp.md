@@ -19,13 +19,14 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 <br>
 <div class="col-50" style="padding-right: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/cs-principles/what-is-cs-principles.mp4" %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
+<i>Want a video you can use for student recruitment for the course? <a href="https://youtu.be/jQm0z894CG0" target="_blank">Click here</a></i>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp-2018'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
 
 [/col-50]
 
@@ -33,12 +34,18 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <hr/>
 
+## <a name="pl"></a>Professional Learning
+
+Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through our professional development workshops and thousands more attend every month. Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.
+
+[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
+
 ## Code.org's AP CS Principles Curriculum
 
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
 
  * [Code.org 2018-19 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2018.pdf)
- * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
+ * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/d/e/2PACX-1vTSyvx8DlFWGAofOpLgyw4PlcphZbEDydsd9-_kEwoqjWzIPSq-MwyTg8u6roRfp8AeETrqTryoS5vm/pub)
 
 <div style="clear:both"></div>
 
@@ -48,7 +55,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [<center><img src="/images/csp/csp-crop-cover.png" width="90%">](https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">Curriculum Guide</a> contains details about the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
 [/col-33]
 
@@ -73,9 +80,9 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 [col-33]
 
-[<center><img src="/images/csp/csp_syllabus.png" width="90%">](/files/CSPSyllabusMay2017.pdf)
+[<center><img src="/images/csp/CSPSyllabus2018-19.png" width="90%">](/files/CSPSyllabusMay2018.pdf)
 
-<div style="margin-left: 15px; margin-top: 5px;">Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabusMay2017.pdf">2017 AP Endorsed Syllabus</a> for the AP course audit.</div>
+<div style="margin-left: 15px; margin-top: 5px;">Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabusMay2018.pdf">2018-19 AP Endorsed Syllabus</a> for the AP course audit.</div>
 
 [/col-33]
 
@@ -101,7 +108,7 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 ### Don't miss these additional resources:
 
 - [**Course Materials List**](#materials)
-- <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**,/a
+- <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB", target=_"blank">**CS Principles Video Library**
 - [**Code.org Video Library**](/educate/resources/videos)
 
 
@@ -109,13 +116,13 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp1'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'The Internet', description: "Students learn how the multi-layered systems of the Internet function as they collaboratively solve problems and puzzles about encoding and transmitting data, both 'unplugged' and using Code.org's Internet Simulator."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp1-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit1/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 1', ages: 'The Internet', description: "Students learn how the multi-layered systems of the Internet function as they collaboratively solve problems and puzzles about encoding and transmitting data, both 'unplugged' and using Code.org's Internet Simulator."%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp2'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Digital Information', description: 'Using a variety of tools, students look at, generate, clean, and manipulate data to explore the relationship between information and data. Students also create and use visualizations to identify patterns and trends.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp2-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit2/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 2', ages: 'Digital Information', description: 'Students learn how complex information like text and images is stored in a computer and the way compression helps reduce the size of those files.'%>
 
 [/col-50]
 
@@ -123,13 +130,13 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp3'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Algorithms and Programming', description: "In this unit, students learn the JavaScript language with turtle programming in Code.org's App Lab. Students are introduced the general principles of algorithms and program design that are applicapble to any programming language."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp3-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit3/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 3', ages: 'Algorithms and Programming', description: "In this unit, students learn the JavaScript language with turtle programming in Code.org's App Lab. Students are introduced the general principles of algorithms and program design that are applicapble to any programming language."%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp4'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'Big Data and Privacy', description: 'Students research current events around the complex questions related to public policy, law, ethics, and societal impact. Students are also introduced to the basics of how and why modern encryption works.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp4-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit4/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 4', ages: 'Big Data and Privacy', description: 'Students research current events around the complex questions related to public policy, law, ethics, and societal impact. Students are also introduced to the basics of how and why modern encryption works.'%>
 
 [/col-50]
 
@@ -137,13 +144,13 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp5'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Building Apps', description: "Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming."%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp5-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/unit5/', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Unit 5', ages: 'Building Apps', description: "Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming."%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-explore-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-explore/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Explore Performance Task', ages: 'Explore - Impact of Computing Innovations', description: 'This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.'%>
 
 [/col-50]
 
@@ -151,13 +158,13 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <div class="col-50" style="padding-right: 20px">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-create'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-create/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Create Performance Task', ages: 'Create - Applications from Ideas', description: 'This unit provides activities and resources for students to prepare for and complete the AP Create Performance Task, which asks students to develop a program on a topic that interests them or one that solves a problem.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-create-2018'), cta_text: 'View unit', lesson_plans: 'https://curriculum.code.org/csp/csp-create/', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'AP Create Performance Task', ages: 'Create - Applications from Ideas', description: 'This unit provides activities and resources for students to prepare for and complete the AP Create Performance Task, which asks students to develop a program on a topic that interests them or one that solves a problem.'%>
 
 </div>
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csppostap'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to use App Lab's database capabilities to make apps that store data in the cloud so that it can be retrieved later.
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csppostap-2018'), cta_text: 'View unit', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Post-AP', ages: 'Making Data-backed Apps', description: "After the AP Test, students learn how to analyze data using spreadsheets and use App Lab's database capabilities to create apps that store data in the cloud.
 <br><br>"%>
 
 [/col-50]
@@ -222,24 +229,27 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 [![image](/images/fit-200/madison_maxey_CS_recruitment.png)](/files/programs/madison_maxey_CS_recruitment.pdf)
 [![image](/images/fit-200/javier_aguera_CS_recruitment.png)](/files/programs/javier_aguera_CS_recruitment.pdf)
 
-### Share these videos with students, parents, or administrators:
+### Share these videos with students, teachers, and administrators:
 
 
 <div class="col-33" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video4", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
+<i>Inspire students</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video5", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: 'false' %>
+<i>Recruit teachers</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "video6", video_code: "POiMh0qISpI", play_button: 'center', letterbox: 'false' %>
+<i>Engage administrators</i>
 
 </div>
 

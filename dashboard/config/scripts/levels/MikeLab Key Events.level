@@ -51,6 +51,7 @@
     "show_type_hints": "true",
     "include_shared_functions": "false",
     "instructions": "Create a sprite. Make it so that each time you click the sprite, it says something and spins around. It should stop as soon as you stop clicking.",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

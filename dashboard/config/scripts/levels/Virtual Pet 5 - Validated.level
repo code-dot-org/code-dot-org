@@ -56,6 +56,7 @@
     "instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
     "include_shared_functions": "false",
     "validation_code": "if (World.frameCount > 400) {\r\n  var status = 3;\r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      //check that the sprite is geraldine\r\n      if(sprite.getAnimationLabel() == \"giraffe\"){\r\n        if(sprite.scale != 1){\r\n         status = 0;\r\n        }\r\n        else\r\n        {\r\n           status = 3;\r\n        }\r\n      }\r\n    }\r\n  }\r\n  levelSuccess(status);\r\n}",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

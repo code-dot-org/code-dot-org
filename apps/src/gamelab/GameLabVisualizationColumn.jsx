@@ -11,16 +11,20 @@ import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
-import {toggleGridOverlay} from './actions';
+import {toggleGridOverlay, setSong} from './actions';
 import GridOverlay from './GridOverlay';
 import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
-  isPickingLocation
+  isPickingLocation,
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
+import experiments from "@cdo/apps/util/experiments";
+import Radium from "radium";
+import songLibrary from "../code-studio/songLibrary.json";
+import gamelabMsg from '@cdo/gamelab/locale';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -29,8 +33,36 @@ const MODAL_Z_INDEX = 1050;
 const styles = {
   containedInstructions: {
     marginTop: 10
+  },
+  selectStyle: {
+    width: GAME_WIDTH
   }
 };
+
+const SongSelector = Radium(class extends React.Component {
+  static propTypes = {
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired
+  };
+
+  changeSong = (event) => {
+    this.props.setSong(event.target.value);
+  };
+
+  render() {
+    return (
+      <div>
+        <label><b>{gamelabMsg.selectSong()}</b></label>
+        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
+          {Object.keys(songLibrary).map((option, i) => (
+            <option key={i} value={option}>{songLibrary[option].title}</option>
+          ))}
+        </select>
+      </div>
+    );
+  }
+});
+
 
 class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
@@ -46,6 +78,9 @@ class GameLabVisualizationColumn extends React.Component {
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
     mobileControlsConfig: PropTypes.object.isRequired,
+    danceLab: PropTypes.bool,
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -146,8 +181,12 @@ class GameLabVisualizationColumn extends React.Component {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
     const spriteLab = this.props.spriteLab;
+
     return (
       <span>
+        {this.props.danceLab && experiments.isEnabled("songSelector") &&
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
+        }
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
@@ -205,9 +244,11 @@ export default connect(state => ({
   mobileControlsConfig: state.mobileControlsConfig,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
+  selectedSong: state.selectedSong,
 }), dispatch => ({
   toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
   cancelPicker: () => dispatch(cancelLocationSelection()),
   updatePicker: loc => dispatch(updateLocation(loc)),
   selectPicker: loc => dispatch(selectLocation(loc)),
+  setSong: song => dispatch(setSong(song))
 }))(GameLabVisualizationColumn);
