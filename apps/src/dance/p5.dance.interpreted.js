@@ -61,6 +61,10 @@ function nMeasures(n) {
   return (240 * n) / song_meta.bpm;
 }
 
+function randomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 function getCueList() {
   var timestamps = [];
   for (var i = 0; i < inputEvents.length; i++) {
