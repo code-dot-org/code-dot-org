@@ -7,11 +7,22 @@ export default storybook => storybook
   .withReduxStore()
   .addStoryTable([
     {
-      name: 'Set Up Message for Sections for Teachers',
+      name: 'Set Up Message for Sections - no sections yet',
       description: `Information box if the teacher doesn't have any sections yet`,
       story: () => (
         <SetUpSections
           beginEditingNewSection={action('beginEditingNewSection')}
+          hasSections={false}
+        />
+      )
+    },
+    {
+      name: 'Set Up Message for Sections - already has section',
+      description: `Information box if the teacher does have sections already`,
+      story: () => (
+        <SetUpSections
+          beginEditingNewSection={action('beginEditingNewSection')}
+          hasSections={true}
         />
       )
     },
