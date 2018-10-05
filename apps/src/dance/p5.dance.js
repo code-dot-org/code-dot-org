@@ -26,6 +26,8 @@ export default function init(p5, Dance) {
     return this._tintCanvas;
   };
 
+  window.p5.disableFriendlyErrors = true;
+
 var World = {
   height: 400,
   cuesThisFrame: [],
@@ -106,7 +108,7 @@ exports.reset = function () {
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
   }
-  exports.currentFrameEvents.any = false;
+  events.any = false;
 };
 
 exports.preload = function preload() {
@@ -452,7 +454,8 @@ exports.getEnergy = function getEnergy(range) {
 
 exports.getTime = function getTime(unit) {
   if (unit == "measures") {
-    return song_meta.bpm * (Dance.song.currentTime(0) / 240);
+    // Subtract any delay before the first measure and start counting measures at 1
+    return song_meta.bpm * ((Dance.song.currentTime(0) - song_meta.delay) / 240) + 1;
   } else {
     return Dance.song.currentTime(0);
   }
@@ -605,6 +608,7 @@ function spriteExists(sprite) {
 const events = exports.currentFrameEvents = {
   'p5.keyWentDown': {},
   'Dance.fft.isPeak': {},
+  'cue': {},
 };
 
 function updateEvents() {
