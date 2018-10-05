@@ -157,6 +157,12 @@ class HttpCache
             headers: WHITELISTED_HEADERS + ['User-Agent'],
             cookies: whitelisted_cookies
           },
+          # The last puzzle in Dance Party (Hour of Code 2018) is project backed and can't be cached in CloudFront
+          {
+            path: "/s/dance/stage/#{Script.find_by!(name: 'dance').script_levels.order(:position).last.chapter}",
+            headers: WHITELISTED_HEADERS,
+            cookies: whitelisted_cookies
+          },
           {
             path: CACHED_SCRIPTS_MAP.values,
             headers: WHITELISTED_HEADERS,
