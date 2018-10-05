@@ -109,6 +109,9 @@ exports.reset = function () {
     p5.allSprites[0].remove();
   }
   events.any = false;
+
+  World.fg_effect = fg_effects.none;
+  World.bg_effect = bg_effects.none;
 };
 
 exports.preload = function preload() {
