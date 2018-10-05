@@ -700,7 +700,6 @@ module Pd::Application
           regional_partner_name: YES,
           csd_which_grades: YES,
           cs_total_course_hours: YES,
-          cs_terms: YES,
           previous_yearlong_cdo_pd: YES,
           plan_to_teach: YES,
           replace_existing: 5,
@@ -753,7 +752,6 @@ module Pd::Application
           regional_partner_name: YES,
           csp_which_grades: YES,
           cs_total_course_hours: YES,
-          cs_terms: YES,
           previous_yearlong_cdo_pd: YES,
           csp_how_offer: 2,
           plan_to_teach: YES,
@@ -769,6 +767,46 @@ module Pd::Application
           principal_diversity_recruitment: YES,
           principal_free_lunch_percent: 5,
           principal_underrepresented_minority_percent: 5
+        }.stringify_keys,
+        JSON.parse(application.response_scores)
+      )
+    end
+
+    test 'autoscore works before principal approval' do
+      options = Pd::Application::Teacher1920Application.options
+
+      application_hash = build :pd_teacher1920_application_hash,
+        program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
+        csp_which_grades: ['12'],
+        cs_total_course_hours: 100,
+        cs_terms: 'A full year',
+        previous_yearlong_cdo_pd: ['CS Discoveries'],
+        csp_how_offer: options[:csp_how_offer].last,
+        plan_to_teach: options[:plan_to_teach].first,
+        replace_existing: options[:replace_existing].second,
+        have_cs_license: options[:have_cs_license].first,
+        taught_in_past: [options[:taught_in_past].last],
+        committed: options[:committed].first,
+        willing_to_travel: options[:willing_to_travel].first,
+        race: options[:race].second
+
+      application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application.auto_score!
+
+      assert_equal(
+        {
+          regional_partner_name: YES,
+          csp_which_grades: YES,
+          cs_total_course_hours: YES,
+          previous_yearlong_cdo_pd: YES,
+          csp_how_offer: 2,
+          plan_to_teach: YES,
+          replace_existing: 5,
+          have_cs_license: YES,
+          taught_in_past: 2,
+          committed: YES,
+          willing_to_travel: YES,
+          race: 2
         }.stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -806,7 +844,6 @@ module Pd::Application
           regional_partner_name: NO,
           csd_which_grades: NO,
           cs_total_course_hours: NO,
-          cs_terms: NO,
           previous_yearlong_cdo_pd: NO,
           plan_to_teach: NO,
           replace_existing: 0,
@@ -859,7 +896,6 @@ module Pd::Application
           regional_partner_name: NO,
           csp_which_grades: NO,
           cs_total_course_hours: NO,
-          cs_terms: NO,
           previous_yearlong_cdo_pd: NO,
           csp_how_offer: 0,
           plan_to_teach: NO,
@@ -880,7 +916,7 @@ module Pd::Application
       )
     end
 
-    test 'autoscore does not override existing scores' do
+    test 'autoscore is idempotent' do
       application = create :pd_teacher1920_application, regional_partner: nil
       application.update(response_scores: {regional_partner_name: YES}.to_json)
 

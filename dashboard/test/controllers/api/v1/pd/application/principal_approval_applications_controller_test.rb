@@ -141,5 +141,13 @@ module Api::V1::Pd::Application
       end
       assert_response :success
     end
+
+    test 'application gets autoscored upon submission' do
+      put :create, params: @test_params
+
+      @teacher_application.reload
+
+      assert_equal YES, JSON.parse(@teacher_application.response_scores)['principal_approval']
+    end
   end
 end
