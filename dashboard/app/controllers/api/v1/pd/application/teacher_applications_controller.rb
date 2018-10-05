@@ -19,6 +19,7 @@ module Api::V1::Pd::Application
     protected
 
     def on_successful_create
+      @application.auto_score!
       @application.update_user_school_info!
       @application.queue_email :confirmation, deliver_now: true
       @application.update_form_data_hash(
