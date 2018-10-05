@@ -143,9 +143,6 @@ Dance.prototype.reset = function () {
 
   this.nativeAPI.reset();
   this.p5.noLoop();
-
-  // Allow any pending draws to finish before clearing the screen.
-  setTimeout(() => this.p5.background('#fff'), 0);
 };
 
 Dance.prototype.onPuzzleComplete = function (testResult) {
