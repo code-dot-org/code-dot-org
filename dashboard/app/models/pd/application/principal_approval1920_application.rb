@@ -2,25 +2,24 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                  :integer          not null, primary key
+#  user_id             :integer
+#  type                :string(255)      not null
+#  application_year    :string(255)      not null
+#  application_type    :string(255)      not null
+#  regional_partner_id :integer
+#  status              :string(255)
+#  locked_at           :datetime
+#  notes               :text(65535)
+#  form_data           :text(65535)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  course              :string(255)
+#  response_scores     :text(65535)
+#  application_guid    :string(255)
+#  accepted_at         :datetime
+#  properties          :text(65535)
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -48,7 +47,7 @@ module Pd::Application
       primary_key: :application_guid, foreign_key: :application_guid
 
     def self.create_placeholder_and_send_mail(teacher_application)
-      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(teacher_application).deliver_now
+      teacher_application.queue_email :principal_approval, deliver_now: true
 
       Pd::Application::PrincipalApproval1920Application.create(
         form_data: {}.to_json,
@@ -63,20 +62,24 @@ module Pd::Application
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
 
-    REPLACE_COURSE_NO = "No, this course will be added to the schedule, but it won't replace an existing computer science course"
     def self.options
       {
         title: COMMON_OPTIONS[:title],
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
-        going_to_teach: [YES, NO, TEXT_FIELDS[:other_with_text]],
+        plan_to_teach: [
+          'Yes, they are planning to teach this course this year (2019-20)',
+          'I hope they will be able teach this course this year (2019-20)',
+          'No, they are not planning to teach this course this year (2019-20), but they hope to teach this course the following year (2020-21)',
+          'No, someone else from my school will teach this course this year (2019-20)',
+          'I don’t know if they will teach this course (Please Explain):'
+        ],
         csd_implementation: [
           '50+ instructional hours per section of students for a semester-long course (Units 1 - 3)',
           '100+ instructional hours for a year-long course (Units 1-  6)',
           'I don’t know yet which implementation schedule we will use.',
           'We will use a different implementation schedule. (Please Explain):'
-
         ],
         csp_implementation: [
           '100+ instructional hours for a year-long course',
@@ -84,10 +87,17 @@ module Pd::Application
           'I don’t know yet which implementation schedule we will use.',
           'We will use a different implementation schedule. (Please Explain):'
         ],
-        committed_to_master_schedule: [YES, NO, TEXT_FIELDS[:other_with_text]],
+        committed_to_master_schedule: [
+          'Yes, I plan to include this course in the 2019-20 master schedule',
+          'I hope to include this course in the 2019-20 master schedule',
+          'No, I do not plan to include this course in the 2019-20 master schedule but hope to the following year (2020-21)',
+          'I don’t know if I will be able to include this course in the 2019-20 master schedule',
+          TEXT_FIELDS[:other_with_text]
+        ],
         replace_course: [
-          YES,
-          REPLACE_COURSE_NO,
+          TEXT_FIELDS[:yes_replace_existing_course],
+          'No, it will not replace an existing computer science course',
+          'No, this course will not be added to the schedule',
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
@@ -123,16 +133,18 @@ module Pd::Application
         committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
           'Yes, my school or teacher will be able to pay the full program fee.',
-          'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a full or partial scholarship.',
-          'Not applicable: there is no fee for the progam for teachers in my region.'
+          'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a scholarship.',
+          'Not applicable: there is no fee for the program for teachers in my region.',
+          'Not applicable: there is no Regional Partner in my region.'
         ],
         how_heard: [
           'From a teacher',
-          'Code.org Website',
-          'Code.org Email',
+          'From an administrator',
+          'Code.org website',
+          'Code.org email',
           'Regional Partner website',
-          'Regional Partner Email',
-          'Regional Partner Event/Workshop',
+          'Regional Partner email',
+          'Regional Partner event or workshop',
           TEXT_FIELDS[:other_with_text]
         ]
       }
@@ -159,7 +171,7 @@ module Pd::Application
               :pacific_islander,
               :american_indian,
               :other,
-              :going_to_teach,
+              :plan_to_teach,
               :committed_to_master_schedule,
               :replace_course,
               :committed_to_diversity,
@@ -168,16 +180,16 @@ module Pd::Application
               :how_heard
             ]
 
-            if course == 'csd'
+            if teacher_application&.course == 'csd'
               required << :csd_implementation
-            elsif course == 'csp'
+            elsif teacher_application&.course == 'csp'
               required << :csp_implementation
             end
 
-            if hash[:replace_course] == YES
-              if course == 'csd'
+            if hash[:replace_course] == TEXT_FIELDS[:yes_replace_existing_course]
+              if teacher_application&.course == 'csd'
                 required << :replace_which_course_csd
-              elsif course == 'csp'
+              elsif teacher_application&.course == 'csp'
                 required << :replace_which_course_csp
               end
             end
@@ -196,7 +208,7 @@ module Pd::Application
         [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
         [:do_you_approve],
-        [:going_to_teach],
+        [:plan_to_teach],
         [:how_heard]
       ]
     end

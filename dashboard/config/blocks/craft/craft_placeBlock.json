@@ -1,0 +1,218 @@
+{
+  "category": "",
+  "config": {
+    "func": "placeBlock",
+    "blockText": "place {blockType}",
+    "args": [
+      {
+        "name": "blockType",
+        "options": [
+          [
+            "stripped oak",
+            "\"strippedOak\""
+          ],
+          [
+            "stripped dark oak",
+            "\"strippedDarkOak\""
+          ],
+          [
+            "stone bricks",
+            "\"stoneBricks\""
+          ],
+          [
+            "mossy stone bricks",
+            "\"mossyStoneBricks\""
+          ],
+          [
+            "cracked stone bricks",
+            "\"crackedStoneBricks\""
+          ],
+          [
+            "decorative stone bricks",
+            "\"decorativeStoneBricks\""
+          ],
+          [
+            "blue coral block",
+            "\"blueCoralBlock\""
+          ],
+          [
+            "pink coral block",
+            "\"pinkCoralBlock\""
+          ],
+          [
+            "magenta coral block",
+            "\"magentaCoralBlock\""
+          ],
+          [
+            "red coral block",
+            "\"redCoralBlock\""
+          ],
+          [
+            "yellow coral block",
+            "\"yellowCoralBlock\""
+          ],
+          [
+            "blue dead coral block",
+            "\"blueDeadCoralBlock\""
+          ],
+          [
+            "pink dead coral block",
+            "\"pinkDeadCoralBlock\""
+          ],
+          [
+            "magenta dead coral block",
+            "\"magentaDeadCoralBlock\""
+          ],
+          [
+            "read dead coral block",
+            "\"readDeadCoralBlock\""
+          ],
+          [
+            "yellow dead coral block",
+            "\"yellowDeadCoralBlock\""
+          ],
+          [
+            "prismarine",
+            "\"prismarine\""
+          ],
+          [
+            "dark prismarine",
+            "\"darkPrismarine\""
+          ],
+          [
+            "sea lantern",
+            "\"seaLantern\""
+          ],
+          [
+            "packed ice",
+            "\"packedIce\""
+          ],
+          [
+            "blue ice",
+            "\"blueIce\""
+          ],
+          [
+            "black concrete",
+            "\"blackConcrete\""
+          ],
+          [
+            "blue coral",
+            "\"blueCoral\""
+          ],
+          [
+            "pink coral",
+            "\"pinkCoral\""
+          ],
+          [
+            "magenta coral",
+            "\"magentaCoral\""
+          ],
+          [
+            "red coral",
+            "\"redCoral\""
+          ],
+          [
+            "yellow coral",
+            "\"yellowCoral\""
+          ],
+          [
+            "sea grass",
+            "\"seaGrass\""
+          ],
+          [
+            "kelp",
+            "\"kelp\""
+          ],
+          [
+            "polished granite",
+            "\"polishedGranite\""
+          ],
+          [
+            "blue coral fan",
+            "\"blueCoralFan\""
+          ],
+          [
+            "pink coral fan",
+            "\"pinkCoralFan\""
+          ],
+          [
+            "magenta coral fan",
+            "\"magentaCoralFan\""
+          ],
+          [
+            "red coral fan",
+            "\"redCoralFan\""
+          ],
+          [
+            "yellow coral fan",
+            "\"yellowCoralFan\""
+          ],
+          [
+            "blue coral fan top",
+            "\"blueCoralFanTop\""
+          ],
+          [
+            "pink coral fan top",
+            "\"pinkCoralFanTop\""
+          ],
+          [
+            "magenta coral fan top",
+            "\"magentaCoralFanTop\""
+          ],
+          [
+            "red coral fan top",
+            "\"redCoralFanTop\""
+          ],
+          [
+            "yellow coral fan top",
+            "\"yellowCoralFanTop\""
+          ],
+          [
+            "blue coral fan left",
+            "\"blueCoralFanLeft\""
+          ],
+          [
+            "pink coral fan left",
+            "\"pinkCoralFanLeft\""
+          ],
+          [
+            "magenta coral fan left",
+            "\"magentaCoralFanLeft\""
+          ],
+          [
+            "red coral fan left",
+            "\"redCoralFanLeft\""
+          ],
+          [
+            "yellow coral fan left",
+            "\"yellowCoralFanLeft\""
+          ],
+          [
+            "blue coral fan right",
+            "\"blueCoralFanRight\""
+          ],
+          [
+            "pink coral fan right",
+            "\"pinkCoralFanRight\""
+          ],
+          [
+            "magenta coral fan right",
+            "\"magentaCoralFanRight\""
+          ],
+          [
+            "red coral fan right",
+            "\"redCoralFanRight\""
+          ],
+          [
+            "yellow coral fan right",
+            "\"yellowCoralFanRight\""
+          ],
+          [
+            "sea pickles",
+            "\"seaPickles\""
+          ]
+        ]
+      }
+    ]
+  }
+}

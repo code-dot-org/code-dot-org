@@ -1046,7 +1046,7 @@ FactoryGirl.define do
 
   factory :school_district do
     # School district ids are provided
-    id {(SchoolDistrict.maximum(:id) + 1)}
+    id {(SchoolDistrict.maximum(:id) || 0) + 1}
 
     name "A school district"
     city "Seattle"

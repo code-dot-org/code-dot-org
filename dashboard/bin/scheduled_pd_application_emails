@@ -3,4 +3,4 @@ require_relative '../../lib/cdo/only_one'
 exit unless only_one_running?(__FILE__)
 
 require_relative '../config/environment'
-Pd::Application::ApplicationBase.send_all_decision_notification_emails
+Pd::Application::Email.send_all_queued_emails

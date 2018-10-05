@@ -98,14 +98,14 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   def summer_workshops_earliest_apps_open_date
-    if apps_open_date_csd_teacher && apps_open_date_csp_teacher
-      Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].min).strftime('%B %e, %Y')
+    if apps_open_date_csd_teacher || apps_open_date_csp_teacher
+      Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].compact.min).strftime('%B %e, %Y')
     end
   end
 
   def summer_workshops_latest_apps_close_date
-    if apps_close_date_csd_teacher && apps_close_date_csp_teacher
-      Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].max).strftime('%B %e, %Y')
+    if apps_close_date_csd_teacher || apps_close_date_csp_teacher
+      Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].compact.max).strftime('%B %e, %Y')
     end
   end
 
@@ -136,6 +136,14 @@ class RegionalPartner < ActiveRecord::Base
       regional_partner_id: id,
       program_manager_id: program_manager_id
     )
+  end
+
+  # Since contact_email is defined dynamically by SerializedProperties, that will take precedence,
+  # and we can't 'override' it in this class.
+  # In order to fallback to another value when contact_email is missing, we need a wrapper method:
+  # @return contact_email, or the first program manager's email, or the contact user's email
+  def contact_email_with_backup
+    contact_email || program_managers&.first&.email || contact&.email
   end
 
   def contact

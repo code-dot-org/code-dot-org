@@ -5,9 +5,9 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Como atraer los medios a su evento de la Hora de Código
+# Como atraer a los medios de comunicación a tu evento de la Hora del Código
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+### Haz viral tu evento de la Hora del Código e invita a los medios locales a ver por que es importante la ciencia de la computación en tu escuela.
 
 *Para preguntas de los medios o la prensa, póngase en contacto con <press@code.org>*
 
@@ -18,7 +18,7 @@ nav: promote_nav
 - Contactar los medios dos semanas antes de su evento por correo electrónico. Continua de contactar con teléfono o con correo electrónico si no recibes respuesta.
 - Pide algún personal escolar o voluntario que haga fotos para compartirlas en línea o enviar a la prensa.
 - Escriba sobre la Horal de Código en la página principal de su sitio web y en el periódico de la escuela. Publique los detalles de su evento y fotos de las actividades de tus estudiantes.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- En Facebook y Twitter, comparte actualizaciones de tus planes, anuncia tus eventos, y publica fotografías durante <%= campaign_date('year') %>. Utiliza el hashtag **#HourOfCode** para que Code.org pueda ver y promover tus eventos.
 
 ## Guía paso a paso
 
@@ -32,13 +32,13 @@ nav: promote_nav
 
 ### 2. Identifique a los reporteros que cubren notas escolares o eventos locales
 
-Like local newspapers, TV station or radio stations, or blogs. <br />
+Como periodicos locales, estaciones de televisión y radio, o blogs. <br />
 
 ### 3. Contacta con medios locales
 
-La mejor forma de contacto es por correo electrónico. It should be short and should communicate "why should other people care about this event"? Incluye información de contacto (sobretodo un número de teléfono móvil) para quien esté en el sitio del evento. **[See a sample pitch to media](<%= resolve_url('/promote/press-kit#sample-emails') %>)**.
+La mejor forma de contacto es por correo electrónico. Debería ser corto y comunicar "por qué las personas deberían informarse sobre este evento"? Incluye información de contacto (sobretodo un número de teléfono móvil) para quien esté en el sitio del evento. **[Mira un ejemplo sobre lanzamiento a los medios](<%= resolve_url('/promote/press-kit#sample-emails') %>)**.
 
-Busca en línea la información de contacto de un reportero. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Busca en línea la información de contacto de un reportero. Si no puedes encontrarla, llama a la editora para preguntar, o enviar un correo electrónico a la dirección de atención del medio pidiendo que le redirijan tu mensaje al reportero adecuado. <br />
 
 ### 4. Prepárate para las preguntas que te hagan acerca de tu evento escolar. Aquí hay unos ejemplos:
 
@@ -54,7 +54,7 @@ La tecnologia esta transformando todas las industrias en el planeta. En el ano 2
 
 <a id="sample-emails"></a>
 
-## Sample email to send to invite local media to your event
+## Ejemplo de un correo electrónico enviado para invitar a los medios locales a tu evento
 
 **Asunto**: La escuela local se une a la misión de introducir a los estudiantes en las Ciencias de la computación
 
@@ -68,7 +68,7 @@ Le escribo para invitarle a asistir a nuestra Asamblea de comienzo y a ver cómo
 
 La Hora del Código, organizada por la entidad sin ánimo de lucro Code.org y más de otros 100, es un movimiento que cree los estudiantes de hoy están listos para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únete a nosotros.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Contacto: [TU NOMBRE], [TITLE]. Teléfono: (212) 555-5555. Cuándo: [FECHA y HORA del tu evento]. Dónde: [DIRECCIÓN e INDICACIONES PARA LLEGAR]
 
 Estoy deseando estar en contacto.<br />
 

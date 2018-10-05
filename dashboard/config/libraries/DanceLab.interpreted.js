@@ -297,6 +297,7 @@ function Effects(alpha, blend) {
     }
   };
   this.raining_tacos = {
+    emoji: "tacos",
     tacos: [],
     size: 50,
     init: function () {
@@ -321,7 +322,7 @@ function Effects(alpha, blend) {
         rotate(taco.rot);
         textAlign(CENTER, CENTER);
         textSize(this.size);
-        text('taco', 0, 0);
+        text(emoji, 0, 0);
         taco.y += taco.speed;
         taco.rot++;
         if (taco.y > 450) {
@@ -452,6 +453,9 @@ function makeNewDanceSprite(costume, name, location) {
   sprite.setScale = function (scale) {
     sprite.scale = scale;
   };
+  sprite.getScale = function () {
+    return sprite.scale * 100;
+  };
   return sprite;
 }
 
@@ -467,7 +471,7 @@ function changeMoveLR(sprite, move, dir) {
     // Make sure random switches to a new move
     move = sprite.current_move;
     while (move == sprite.current_move) {
-      move = randomNumber(0, ANIMATIONS[sprite.style].length - 1);
+      move = randomNumber(1, ANIMATIONS[sprite.style].length - 1);//Mike set minimum from 0 to 1 on 10/3/18 to prevent random move choosing "rest"
     }
   }
   sprite.mirroring = dir;
@@ -580,6 +584,10 @@ function layoutSprites(group, format) {
 }
 
 // Properties
+
+function setTint(sprite, val) {
+  setProp(sprite, "tint", val);
+}
 
 function setProp(sprite, property, val) {
   if (!spriteExists(sprite) || val === undefined) return;
@@ -957,7 +965,7 @@ function hideTitleScreen() {
 }
 
 function shouldUpdate() {
-  return World.frameCount > 1;
+  return World.frameCount > 2;
 }
 
 function spriteExists(sprite) {
@@ -1071,21 +1079,21 @@ function draw() {
         loop.loop();
       }
     }
+
+    drawSprites();
+
+    if (World.fg_effect != fg_effects.none) {
+      push();
+      blendMode(fg_effects.blend);
+      World.fg_effect.draw();
+      pop();
+    }
+
+    fill("black");
+    textStyle(BOLD);
+    textAlign(TOP, LEFT);
+    textSize(20);
+    text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+    /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
   }
-
-  drawSprites();
-
-  if (World.fg_effect != fg_effects.none) {
-    push();
-    blendMode(fg_effects.blend);
-    World.fg_effect.draw();
-    pop();
-  }
-
-  fill("black");
-  textStyle(BOLD);
-  textAlign(TOP, LEFT);
-  textSize(20);
-  text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
-  /*text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);*/
 }
