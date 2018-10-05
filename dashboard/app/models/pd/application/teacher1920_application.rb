@@ -403,7 +403,6 @@ module Pd::Application
               else
                 NO
               end,
-            cs_terms: responses[:cs_terms].in?(['1 semester', '2 trimesters', 'A full year']) ? YES : NO,
             previous_yearlong_cdo_pd: (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
           }
         )
@@ -412,7 +411,6 @@ module Pd::Application
           {
             csp_which_grades: responses[:csp_which_grades].exclude?(options[:csp_which_grades].last) ? YES : NO,
             cs_total_course_hours: (responses[:cs_total_course_hours]&.>= 100) ? YES : NO,
-            cs_terms: responses[:cs_terms] == 'A full year' ? YES : NO,
             previous_yearlong_cdo_pd: responses[:previous_yearlong_cdo_pd] != 'CS Principles' ? YES : NO,
             csp_how_offer: responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
           }
@@ -434,16 +432,18 @@ module Pd::Application
       scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5)) ? 2 : 0
 
       # Principal Approval
-      scores.merge!(
-        {
-          principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
-          principal_plan_to_teach: responses[:principal_plan_to_teach].in?(principal_options[:plan_to_teach].values_at(0, 1)) ? YES : NO,
-          principal_schedule_confirmed: responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].values_at(0, 1)) ? YES : NO,
-          principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
-          principal_free_lunch_percent: (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0,
-          principal_underrepresented_minority_percent: (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
-        }
-      )
+      if responses[:principal_approval]
+        scores.merge!(
+          {
+            principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
+            principal_plan_to_teach: responses[:principal_plan_to_teach].in?(principal_options[:plan_to_teach].values_at(0, 1)) ? YES : NO,
+            principal_schedule_confirmed: responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].values_at(0, 1)) ? YES : NO,
+            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
+            principal_free_lunch_percent: (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0,
+            principal_underrepresented_minority_percent: (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
+          }
+        )
+      end
 
       update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
     end

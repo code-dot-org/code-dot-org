@@ -83,7 +83,7 @@ module Api::V1::Pd::Application
       put :create, params: @test_params
     end
 
-    test 'updates course hours computation on successful create' do
+    test 'updates course hours computation and autoscores on successful create' do
       application_hash = build(
         TEACHER_APPLICATION_HASH_FACTORY,
         cs_how_many_minutes: 45,
@@ -95,6 +95,8 @@ module Api::V1::Pd::Application
       put :create, params: {form_data: application_hash}
 
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
+
+      assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
     end
   end
 end
