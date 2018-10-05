@@ -12,6 +12,7 @@ const styles = {
     borderColor: color.border_gray,
     boxSizing: "border-box",
     marginBottom: 20,
+    float: 'left'
   },
   solidBorder: {
     borderStyle: 'solid',
