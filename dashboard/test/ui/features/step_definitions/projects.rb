@@ -36,6 +36,11 @@ Then(/^I remove featured projects from the gallery$/) do
   FeaturedProject.delete_all
 end
 
+Then(/^I scroll the Play Lab gallery section into view$/) do
+  wait_short_until {@browser.execute_script('return $(".ui-playlab").length') > 0}
+  @browser.execute_script('$(".ui-playlab")[0].scrollIntoView(true)')
+end
+
 Then(/^I make a playlab project named "([^"]*)"$/) do |name|
   steps %Q{
     Then I am on "http://studio.code.org/projects/playlab/new"

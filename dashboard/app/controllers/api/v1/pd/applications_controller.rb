@@ -80,11 +80,21 @@ module Api::V1::Pd
       end
     end
 
+    COHORT_VIEW_STATUSES = %w(
+      accepted
+      accepted_not_notified
+      accepted_notified_by_partner
+      accepted_no_cost_registration
+      paid
+      withdrawn
+    )
+
     # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_value=:regional_partner
     def cohort_view
       role = params[:role]
       regional_partner_value = params[:regional_partner_value]
-      applications = get_applications_by_role(role.to_sym).where(status: ['accepted', 'withdrawn'])
+
+      applications = get_applications_by_role(role.to_sym).where(status: COHORT_VIEW_STATUSES)
 
       unless regional_partner_value.nil? || regional_partner_value == REGIONAL_PARTNERS_ALL
         applications = applications.where(regional_partner_id: regional_partner_value == REGIONAL_PARTNERS_NONE ? nil : regional_partner_value)
@@ -252,7 +262,7 @@ module Api::V1::Pd
       {}.tap do |app_data|
         TYPES_BY_ROLE.each do |role, app_type|
           app_data[role] = {}
-          app_type.statuses.keys.each do |status|
+          app_type.statuses.each do |status|
             app_data[role][status] = {
               locked: 0,
               unlocked: 0

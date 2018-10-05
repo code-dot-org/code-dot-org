@@ -30,7 +30,7 @@ Our middle school curriculum focuses on a broad introduction to computer science
 
 Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
-[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
+[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
 
 [/col-60]
 
@@ -117,6 +117,7 @@ Recommended courses from 3rd parties
 | [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. Intro CS JavaScript, Intro CS Python, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500. | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CS Principles, 30-40 hour course, $1500/teacher | Online PD for Teaching Intro CS 1, Teaching Intro CS 2, 30-40 hour course, $1500/teacher |
 | [Codesters](https://www.codesters.com/) |  5-lesson intro and project platform, FREE, 2 40-hr Intro to Python courses and 20-hr Intro to Game Design course, $20/student or a la carte pricing | Half day, 1-day, and 3-day workshops available, $500-$2,000 per teacher depending on length and location. |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
+| [Parallax Inc.](https://www.parallax.com/education/teach/program-options/middle-school) | Line of educational robotics and electronics kits and tutorials. Platforms feature open breadboards for building, prototyping, and customizing with real circuits. Offers the BlocklyProp visual programming tool. Curriculum is FREE. Robot purchase required. | FREE in-person immersive single day trainings. Occasional live webinars. |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
 | [Pythonroom](https://pythonroom.com) | 40-hour Learn Python course, FREE | Online or in-person, $2000/school for all teachers at site|
 | [Scalable Game Design](http://scalablegamedesign.cs.colorado.edu) | Introduction to Game Design, Advanced Game Design (3D), and Introduction to Simulation Design, FREE | In-person summer institute, FREE to schools participating in NSF research. Otherwise, $1900/teacher and travel not included |

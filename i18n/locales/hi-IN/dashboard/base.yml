@@ -161,8 +161,8 @@ hi:
     created: '%{model} सफलतापूर्वक बनाया गया'
     destroyed: '%{model} सफलतापूर्वक हटा दिया गया था।'
   nav:
-    header:
-      courses: "पाठ्यक्रम"
+    create_button:
+      create: 'बनाए'
   teacher:
     panel:
       student: 'छात्र'

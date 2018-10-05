@@ -39,7 +39,6 @@ require src_dir 'curriculum_router'
 require src_dir 'homepage'
 require src_dir 'advocacy_site'
 require 'cdo/hamburger'
-require 'cdo/create_header'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
@@ -274,7 +273,8 @@ class Documents < Sinatra::Base
     #
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
-      @dashboard_user ||= Dashboard.db[:users][id: dashboard_user_id]
+      return nil if (id = dashboard_user_id).nil?
+      @dashboard_user ||= Dashboard.db[:users][id: id]
     end
 
     # Get the current dashboard user wrapped in a helper
@@ -282,7 +282,8 @@ class Documents < Sinatra::Base
     #
     # TODO: When we are using this everywhere, rename to just `dashboard_user`
     def dashboard_user_helper
-      @dashboard_user_helper ||= Dashboard::User.get(dashboard_user_id)
+      return nil if (id = dashboard_user_id).nil?
+      @dashboard_user_helper ||= Dashboard::User.get(id)
     end
 
     # Get the current dashboard user ID

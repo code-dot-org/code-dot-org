@@ -440,9 +440,9 @@ zh-TW:
             The Maze:
               name: 迷宮
         events:
-          title: 所有事件
-          description: 所有事件
-          description_short: 所有事件
+          title: 事件
+          description: 事件
+          description_short: 事件
           stages:
             Bounce:
               name: 彈跳
@@ -603,6 +603,8 @@ zh-TW:
               name: 多螢幕應用程式
             Processing Arrays:
               name: 處理陣列
+            User Input and Strings:
+              name: 使用者輸入與字串
             Using Simple Commands:
               name: 簡單指令的使用
             Using Variables in Apps:
@@ -1439,6 +1441,8 @@ zh-TW:
               name: 多螢幕應用程式
             Processing Arrays:
               name: 處理陣列
+            User Input and Strings:
+              name: 使用者輸入與字串
             Using Variables in Apps:
               name: 在 App 中使用變數
             While Loops:
@@ -1667,7 +1671,7 @@ zh-TW:
           description_audience: 年齡 5-18
           stages:
             Events:
-              name: 所有事件
+              name: 事件
             Events Unplugged:
               name: 事件不插電
             'Jigsaw: Learn to drag and drop':
@@ -1699,7 +1703,7 @@ zh-TW:
           description_audience: 年齡 5-18
           stages:
             Events:
-              name: 所有事件
+              name: 事件
             Events Unplugged:
               name: 事件不插電
             'Jigsaw: Learn to drag and drop':
@@ -1922,7 +1926,7 @@ zh-TW:
             Conditionals:
               name: 條件判斷（Conditionals）
             Events:
-              name: 所有事件
+              name: 事件
             For Loops:
               name: 計數迴圈（For Loops）
             Functions:
@@ -2871,6 +2875,25 @@ zh-TW:
               name: 基本的 App 函式
             Testing the App:
               name: 測試應用程式
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: App Lab 入門 - 選擇你的冒險旅程
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: App Lab 入門 - 選擇你的冒險旅程 2
+            Intro to AppLab - Your First App:
+              name: App Lab 入門 - 你的第一支程式
+            Intro to AppLab - Your First App 2:
+              name: App Lab 入門 - 你的第一支程式 2
+            Intro to AppLab - Your First App 3:
+              name: App Lab 入門 - 你的第一支程式 3
+            Intro to AppLab - Your First App 4:
+              name: App Lab 入門 - 你的第一支程式 4
+            Intro to AppLab - Getting Started:
+              name: App Lab 入門 - 準備開始
+            Intro to App Lab:
+              name: App Lab 入門
+          title: App Lab 入門
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -3052,11 +3075,33 @@ zh-TW:
               name: 用大數據解決問題
             Simple Encryption:
               name: 簡單加密
+            Intro to App Lab:
+              name: App Lab 入門
+            Intro to App Lab (13+):
+              name: App Lab 入門 (13+)
         hero:
           stages:
             Minecraft Hour of Code:
               name: 一小時玩 Minecraft
           description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: App Lab 入門 - 選擇你的冒險旅程
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: App Lab 入門 - 選擇你的冒險旅程 2
+            Intro to AppLab - Your First App:
+              name: App Lab 入門 - 你的第一支程式
+            Intro to AppLab - Your First App 2:
+              name: App Lab 入門 - 你的第一支程式 2
+            Intro to AppLab - Your First App 3:
+              name: App Lab 入門 - 你的第一支程式 3
+            Intro to AppLab - Your First App 4:
+              name: App Lab 入門 - 你的第一支程式 4
+            Intro to AppLab - Getting Started:
+              name: App Lab 入門 - 準備開始
+            Intro to App Lab:
+              name: App Lab 入門
         csp-explore-2017:
           stages:
             new stage:
@@ -3229,6 +3274,8 @@ zh-TW:
               name: 安全的到達地點
             'Loops: Happy Loops':
               name: 迴圈：快樂迴圈
+            Loops in Collector:
+              name: 與 Laurel 一起學習迴圈
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
         express-2018:
@@ -3256,6 +3303,8 @@ zh-TW:
               name: 說明你的專案
             Programming in Maze:
               name: 迷宮中的程式設計
+            Programming in Collector:
+              name: 和 Laurel 一起收集寶石
             'Loops: Getting Loopy':
               name: 學習迴圈
             Nested Loops in Bee:
@@ -3291,6 +3340,8 @@ zh-TW:
               name: 你的數位足跡
             Programming in Maze:
               name: 迷宮中的程式設計
+            Loops in Collector:
+              name: 與 Laurel 一起學習迴圈
             Move It, Move It:
               name: 移動它，移動它
         coursed-2018:
@@ -3302,6 +3353,8 @@ zh-TW:
               name: 介紹
             Building a Foundation:
               name: 打好基礎
+            Debugging in Collector:
+              name: 和 Laurel  一起學習除錯
             Nested Loops in Bee:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
             Nested Loops in Artist:
@@ -3327,6 +3380,8 @@ zh-TW:
               name: 打好基礎
             Programming in Maze:
               name: 迷宮中的程式設計
+            Programming in Collector:
+              name: 和 Laurel 一起收集寶石
             'Loops: Getting Loopy':
               name: 學習迴圈
             'Events: The Big Event':
@@ -3523,6 +3578,8 @@ zh-TW:
               name: 多螢幕應用程式
             Unit 5 Assessment 1:
               name: 單元 5 評量 1
+            User Input and Strings:
+              name: 使用者輸入與字串
             '"If" Statements Unplugged':
               name: '「如果」陳述式不插電教程'
             '"if-else-if" and Conditional Logic':
@@ -3583,6 +3640,8 @@ zh-TW:
               name: 學習滑鼠的拖放
             Programming in Maze:
               name: 迷宮中的程式設計
+            Loops in Collector:
+              name: 與 Laurel 一起學習迴圈
             Spelling Bee:
               name: 拼字蜜蜂
             Move It, Move It:

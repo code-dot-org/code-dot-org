@@ -1,6 +1,12 @@
 lv:
   data:
     authored_hints:
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: Lai pabeigtu māju, mums tikai ir jāuzzīmē kvadrāts!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_c: Katrai trijstūra malai ir tāds pats garums kā katrai kvadrāta malai... 100 pikseļi!
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Katrs solis ir 100 pikseļus plats un 100 pikseļus garš.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -194,3 +200,5 @@ lv:
           </xml>
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_c: Katrai trijstūra malai ir tāds pats garums kā katrai kvadrāta malai... 100 pikseļi!

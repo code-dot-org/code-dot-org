@@ -24,6 +24,9 @@
   = f.label :is_aquatic_level, 'Is an "Aquatic" (HoC 2018) level'
   = boolean_check_box(f, :is_aquatic_level)
 .field
+  = f.label :boat, 'Start player in the rowboat (Aquatic levels only, player must be positioned over water)'
+  = boolean_check_box(f, :boat)
+.field
   = f.label :ocean, 'Underwater overlay type'
   = f.select :ocean, options_for_select([['None', nil], ['Warm Ocean', 'warm'], ['Cold Ocean', 'cold']], @level.ocean)
 .field
@@ -56,7 +59,7 @@
   - Craft::SAMPLE_VERIFICATION_FUNCTIONS.each do |name, value|
     :javascript
       var verificationFunction#{name} = '#{value.gsub('\n', "\\n' + '")}';
-    %a{style:"cursor: pointer", onclick: "verificationEditor.getDoc().setValue(verificationFunction#{name})"}= "#{name}"
+    %a{style:"cursor: pointer", onclick: "verificationEditor.getDoc().setValue(verificationFunction#{name})"}= name
   )
   = f.text_area :verification_function, rows: 10
   :javascript
@@ -67,7 +70,7 @@
   - Craft::SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS.each do |name, value|
     :javascript
       var verificationFunction#{name} = '#{value.gsub('\n', "\\n' + '")}';
-    %a{style:"cursor: pointer", onclick: "verificationEditorTimeout.getDoc().setValue(verificationFunction#{name})"}= "#{name}"
+    %a{style:"cursor: pointer", onclick: "verificationEditorTimeout.getDoc().setValue(verificationFunction#{name})"}= name
   )
   = f.text_area :timeout_verification_function, rows: 10
   :javascript
@@ -78,7 +81,7 @@
   - Craft::SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS.each do |name, value|
     :javascript
       var earlyFailureFunction#{name} = '#{value.gsub('\n', "\\n' + '")}';
-    %a{style:"cursor: pointer", onclick: "earlyFailureEditor.getDoc().setValue(earlyFailureFunction#{name})"}= "#{name}"
+    %a{style:"cursor: pointer", onclick: "earlyFailureEditor.getDoc().setValue(earlyFailureFunction#{name})"}= name
   )
   = f.text_area :failure_check_function, rows: 10
   :javascript

@@ -247,9 +247,7 @@ km:
         applab: 'បង្កើតកម្មវិធី App Lab​មួយ'
         gamelab: 'បង្កើតគម្រោង Game​ Lab​ មួយ'
         weblab: 'បង្កើតគម្រោង Web Lab មួយ (សាកល្បង)'
-      home: "ទំព័រដើម"
       my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
-      courses: "វគ្គ​សិក្សា"
       course_catalog: "មុខវិទ្យាដោយផ្នែក"
       project_gallery: "គម្រោង"
       sections: "វគ្គ"
@@ -276,6 +274,8 @@ km:
       help_us: "ជួយពួកយើង"
       teach: "បង្រៀន"
       about: "អំពី"
+    create_button:
+      create: 'បង្កើត'
     user:
       classroom: 'ទំព័រដើមគ្រូបង្រៀន'
       label: 'សួស្តី%{username}'

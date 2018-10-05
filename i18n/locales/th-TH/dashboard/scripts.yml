@@ -468,7 +468,7 @@ th:
         gradeKinder:
           stages:
             Debugging:
-              name: การดีบั๊ก
+              name: การแก้ไขจุดบกพร่อง
             Events:
               name: เหตุการณ์
             'Jigsaw: Learn to drag and drop':
@@ -486,7 +486,7 @@ th:
         grade1:
           stages:
             Debugging:
-              name: การดีบั๊ก
+              name: การแก้ไขจุดบกพร่อง
             Events:
               name: เหตุการณ์
             'Jigsaw: Learn to drag and drop':

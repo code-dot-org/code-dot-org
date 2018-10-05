@@ -271,9 +271,7 @@ fi:
         applab: Tee sovellus
         gamelab: Tee Pelilabra projekti
         weblab: Tee Nettilabra (beta) projekti
-      home: Etusivu
       my_dashboard: Kojelauta
-      courses: Kurssit
       course_catalog: Kurssiluettelo
       project_gallery: Projektit
       sections: Osiot
@@ -307,6 +305,14 @@ fi:
       help_us: Auta meitä
       teach: Opettaa
       about: Tietoja
+    create_button:
+      create: Luo
+      applab: Sovelluslabra
+      artist: Taiteilija
+      gamelab: Pelilabra
+      playlab: Pelilabra
+      minecraft: Minecraft
+      flappy: Flappy
     user:
       classroom: Opettajan kotisivu
       district_dashboard: Koulupiirin hallintapaneeli
@@ -317,7 +323,6 @@ fi:
       signin: Kirjaudu sisään
       signup: Luo käyttäjätili
       already_registered: Jo rekisteröitynyt?
-      pair_programming: Pariohjelmointi
       team: Tiimi
       driver: Johtaja
       navigator: Neuvonantaja

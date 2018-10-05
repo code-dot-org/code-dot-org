@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to_companies) %>
+title: <%= hoc_s(:title_how_to_companies).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,15 +7,15 @@ nav: how_to_nav
 
 # Cómo llevar acabo la Hora de Código en su empresa
 
-### Find out how you and your employees can inspire students to try computer science!
+### Descubre como tú y tus empleados pueden inspirar a los estudiantes para aprender las ciencias de la computación!
 
 * * *
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## Conéctate con salones de clase locales y voluntarios para la Hora del Código
 
 Code.org ofrece la oportunidad para que sus empleados [se conecten](%= codeorg_url('/volunteer') %) con las aulas locales impartiendo la Hora del Código donde puedan compartir su experiencia profesional en tecnología e inspirar estudiantes a estudiar ciencias de la computación.
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+<button>Regístrate como voluntario!</button> <br /> <br /></p> 
 
 Para más instrucciones sobre como alentar a sus empleados y cómo conectarlos con las aulas, consulte nuestra [guía para socios corporativos](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 

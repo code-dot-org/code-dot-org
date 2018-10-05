@@ -621,8 +621,6 @@ fr:
         description here: description ici
       'Technique: Frequency Analysis_2018':
         description here: description ici
-      Terminology Recap:
-        description here: description ici
       Terminology Recap_2018:
         description here: description ici
       Tips For Working on Your Own:
@@ -631,26 +629,12 @@ fr:
       Tips For Working on Your Own_2018:
         description here: description ici
         title: titre
-      U1L1 Student Lesson Introduction:
-        description here: description ici
       U1L1 Student Lesson Introduction_2018:
         description here: description ici
       U1L10 Student Lesson Introduction:
         description here: description ici
         title: titre
       U1L11 Student Lesson Introduction:
-        description here: description ici
-        title: titre
-      U1L12 Student Lesson Introduction:
-        description here: description ici
-        title: titre
-      U1L13 Student Lesson Summary:
-        description here: description ici
-        title: titre
-      U1L14 Student Lesson Summary:
-        description here: description ici
-        title: titre
-      U1L15 Student Lesson Summary:
         description here: description ici
         title: titre
       U1L16 Student Lesson Introduction:
@@ -670,9 +654,6 @@ fr:
         title: titre
       U1L4 Widget Demo - Video:
         description here: description ici
-      U1L5 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       U1L6 Student Lesson Introduction:
         description here: description ici
         title: titre
@@ -682,22 +663,14 @@ fr:
       U1L8 Student Lesson Introduction:
         description here: description ici
         title: titre
-      U1L9 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       U2L1 Student Lesson Introduction:
         description here: description ici
         title: titre
       U2L12 Student Lesson Introduction:
         description here: description ici
         title: titre
-      U2L14 Student Lesson Introduction:
-        Cracking the Code: Casser le code
       U2L17 Student Lesson Introduction:
         description here: description ici
-      U2L7 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       U2L8 Student Lesson Introduction:
         description here: description ici
         title: titre
@@ -889,9 +862,6 @@ fr:
       U4L08v2 Student Intro:
         description here: description ici
         title: titre
-      U4L09 Student Lesson Intro Practice PT big data dilemma:
-        description here: description ici
-        title: titre
       U4L09 Student Lesson Introduction:
         description here: description ici
         title: titre
@@ -1048,26 +1018,15 @@ fr:
       Unit 2 Lesson 1 Overview Clone:
         description here: description ici
         title: titre
-      Unit 4 Lesson 1 Introduction:
-        description here: description ici
-        title: titre
       Unit 4 Lesson 1 Introduction_2018:
-        description here: description ici
-        title: titre
-      Unit 4 Lesson 2 Introduction:
         description here: description ici
         title: titre
       Unit 4 Lesson 2 Introduction_2018:
         description here: description ici
         title: titre
-      Unit 4 Lesson 5 Introduction:
-        description here: description ici
-        title: titre
       Unit 4 Lesson 5 Introduction_2018:
         description here: description ici
         title: titre
-      Unit 4 Lesson 6 Introduction:
-        Cracking the Code: Casser le code
       Unit 4 Lesson 6 Introduction_2018:
         Cracking the Code: Casser le code
       Unit 5 Lesson 1:
@@ -1149,8 +1108,6 @@ fr:
       'Worked Example: If-statements and Robot_2018':
         description here: description ici
         title: titre
-      brad-repro-bug-000:
-        description here: description ici
       brad-test-continue-buttons-in-markdown:
         description here: description ici
       courseB_external_MRF:
@@ -1288,9 +1245,6 @@ fr:
       csp_unit5_finalassessment_overview_exam_prep:
         description here: description ici
         title: titre
-      csp_unit_assessment_overview:
-        description here: description ici
-        title: titre
       csp_unit_assessment_overview_2018:
         description here: description ici
         title: titre
@@ -1410,9 +1364,6 @@ fr:
       v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
         description here: description ici
         title: titre
-      v2 U1L14 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       v2 U1L14 Student Lesson Introduction_2018:
         description here: description ici
         title: titre
@@ -1434,9 +1385,6 @@ fr:
       v2 U1L4 Student Lesson Introduction_2018:
         description here: description ici
         title: titre
-      v2 U1L5 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       v2 U1L5 Student Lesson Introduction_2018:
         description here: description ici
         title: titre
@@ -1446,13 +1394,7 @@ fr:
       v2 U1L6 Student Lesson Introduction_2018:
         Sending Numbers: Envoi de Nombres
         description here: description ici
-      v2 U1L8 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       v2 U1L8 Student Lesson Introduction_2018:
-        description here: description ici
-        title: titre
-      v2 U2L1 Student Lesson Introduction:
         description here: description ici
         title: titre
       v2 U2L1 Student Lesson Introduction_2018:
@@ -1462,9 +1404,6 @@ fr:
         description here: description ici
         title: titre
       v2 U2L10 Student Lesson Introduction_2018:
-        description here: description ici
-        title: titre
-      v2 U2L11 Student Lesson Introduction:
         description here: description ici
         title: titre
       v2 U2L11 Student Lesson Introduction_2018:
@@ -1488,9 +1427,6 @@ fr:
       v2 U2L14 Student Lesson Introduction_2018:
         description here: description ici
         title: titre
-      v2 U2L15 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       v2 U2L15 Student Lesson Introduction_2018:
         description here: description ici
         title: titre
@@ -1500,27 +1436,15 @@ fr:
       v2 U2L2 Student Lesson Summary_2018:
         description here: description ici
         title: titre
-      v2 U2L3 Student Lesson Summary:
-        description here: description ici
-        title: titre
       v2 U2L3 Student Lesson Summary_2018:
-        description here: description ici
-        title: titre
-      v2 U2L4 Student Lesson Summary:
         description here: description ici
         title: titre
       v2 U2L4 Student Lesson Summary_2018:
         description here: description ici
         title: titre
-      v2 U2L5 Student Lesson Introduction:
-        Lossy Compression and File Formats: Compression avec perte et Format de Fichier
-        description here: description ici
       v2 U2L5 Student Lesson Introduction_2018:
         Lossy Compression and File Formats: Compression avec perte et Format de Fichier
         description here: description ici
-      v2 U2L6 Student Lesson Introduction:
-        description here: description ici
-        title: titre
       v2 U2L6 Student Lesson Introduction_2018:
         description here: description ici
         title: titre
@@ -1534,9 +1458,6 @@ fr:
         description here: description ici
         title: titre
       v2 U2L8 Student Lesson Introduction_2018:
-        description here: description ici
-        title: titre
-      v2 U2L9 Student Lesson Introduction:
         description here: description ici
         title: titre
       v2 U2L9 Student Lesson Introduction_2018:
@@ -1556,11 +1477,6 @@ fr:
         Looping and Random Numbers: Boucles et nombres aléatoires
       v2 U3L09 Student Lesson Introduction_2018:
         Looping and Random Numbers: Boucles et nombres aléatoires
-      v2 U4L05 Student Lesson Intro Encryption Caesar:
-        description here: description ici
-        title: titre
-      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
-        Cracking the Code: Casser le code
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Associe les combinaisons de boutons aux pas de danse.
@@ -1666,12 +1582,6 @@ fr:
         String: Chaîne
       PDK5 What is unplugged:
         Question: Question
-      'U2L06 - Matching: Label the Diagram':
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
       U3L14 - Matching Events to Description:
         click: cliquer
       U3L19 - MATCH what are values of abc:
@@ -1839,9 +1749,6 @@ fr:
       4-5 maze multi 1:
         Maze Multiple Choice: Choix multiple du labyrinthe
         Which blocks solve the puzzle?: Quels blocs permettent de résoudre le puzzle ?
-      CB_Question_3:
-        A: A
-        Y: true
       CSD Prediction Header Size:
         Question: Question
       CSD U3 Boolean MC:
@@ -2051,12 +1958,6 @@ fr:
         '1': '1'
         '2': '2'
         '4': '4'
-      U1L07 Assessment 1:
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -2083,31 +1984,8 @@ fr:
         '16': '16'
         17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
         18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
-      'U2L06 - MC: Which is an MST?':
-        0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-      U2L13 Assessment4:
-        '26': '26'
       U2L13 Assessment4_2018:
         '26': '26'
-      U2L14 Assessment3:
-        'false': 'faux'
-        'true': 'vrai'
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
       U2L19 multichoice 13 MOD 17_2018:
         '0': '0'
         '13': '13'
@@ -2119,24 +1997,12 @@ fr:
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
       U2L19 mutlichoice 20 mod 15_2018:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
         '20': '20'
         '5': '5'
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
       U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
@@ -2399,11 +2265,6 @@ fr:
       csp_ap_taking_ap_class:
         'No': 'Non'
         'Yes': 'Oui'
-      cspu5_assess1_fivemore:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_fivemore_2018:
         "-2": "-2"
         '3': '3'
@@ -2414,20 +2275,12 @@ fr:
         '3': '3'
         '5': '5'
         '8': '8'
-      cspu5_assess1_flowchart:
-        '10': '10'
-        '5': '5'
       cspu5_assess1_flowchart_2018:
         '10': '10'
         '5': '5'
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
-      cspu5_assess1_increase:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_increase_2018:
         '10': '10'
         '13': '13'
@@ -2438,15 +2291,9 @@ fr:
         '13': '13'
         '5': '5'
         '8': '8'
-      cspu5_assess2_addstrings:
-        result: résultat
       cspu5_assess2_addstrings_2018:
         result: résultat
       cspu5_assess2_addstrings_exam_prep:
-        result: résultat
-      cspu5_assess2_combineString:
-        '10': '10'
-        '55': '55'
         result: résultat
       cspu5_assess2_combineString_2018:
         '10': '10'
@@ -2456,10 +2303,6 @@ fr:
         '10': '10'
         '55': '55'
         result: résultat
-      cspu5_assess2_oldEnough:
-        '35': '35'
-        'false': 'faux'
-        'true': 'vrai'
       cspu5_assess2_oldEnough_2018:
         '35': '35'
         'false': 'faux'
@@ -2486,11 +2329,6 @@ fr:
         '30': '30'
         '50': '50'
         '75': '75'
-      cspu5_assess3_array1:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
       cspu5_assess3_array1_2018:
         '10': '10'
         '4': '4'
@@ -2501,12 +2339,6 @@ fr:
         '4': '4'
         '7': '7'
         '9': '9'
-      cspu5_assess3_array2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_array2_2018:
         '2': '2'
         '3': '3'
@@ -2519,11 +2351,6 @@ fr:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess3_array4:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
       cspu5_assess3_array4_2018:
         '0': '0'
         '1': '1'
@@ -2534,11 +2361,6 @@ fr:
         '1': '1'
         '2': '2'
         '8': '8'
-      cspu5_assess3_listAppend:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
       cspu5_assess3_listAppend_2018:
         '1': '1'
         '2': '2'
@@ -2549,11 +2371,6 @@ fr:
         '2': '2'
         '3': '3'
         '6': '6'
-      cspu5_assess3_loopValue1:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
       cspu5_assess3_loopValue1_2018:
         '2': '2'
         '3': '3'
@@ -2564,22 +2381,12 @@ fr:
         '3': '3'
         '4': '4'
         '5': '5'
-      cspu5_assess3_loopValue2:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_loopValue2_2018:
         '0': '0'
         '4': '4'
         '5': '5'
         '6': '6'
       cspu5_assess3_loopValue2_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -2594,12 +2401,6 @@ fr:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess4_dataReturns:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
       cspu5_assess4_dataReturns_2018:
         '10': '10'
         '16': '16'
@@ -2611,11 +2412,6 @@ fr:
         '16': '16'
         '3': '3'
         '4': '4'
-        '9': '9'
-      cspu5_assess4_listOutput:
-        '17': '17'
-        '3': '3'
-        '42': '42'
         '9': '9'
       cspu5_assess4_listOutput_2018:
         '17': '17'
@@ -2702,9 +2498,6 @@ fr:
         Other: Autre
         Prefer not to answer: Préfère ne pas répondre
         White: Blanc
-      sarah_test_maggie:
-        Question: Question
-        test: test
       sciPD PreQ 1:
         'No': 'Non'
         'Yes': 'Oui'
@@ -2722,6 +2515,3 @@ fr:
         Question: Question
         description here: description ici
         title: titre
-    text_match:
-      U2L07 Assessment4:
-        '43': '43'
