@@ -30,7 +30,7 @@ export default class RecentCourses extends Component {
     const { courses, topCourse, isTeacher } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
-    const hasCourse = courses.length > 0 || topCourse;
+    const hasCourse = courses.length > 0 || topCourse !== null;
 
     return (
       <div id="recent-courses">
