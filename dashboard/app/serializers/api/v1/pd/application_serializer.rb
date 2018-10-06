@@ -1,13 +1,34 @@
 class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
-    :school_name, :district_name, :email, :application_type, :response_scores, :course, :course_name,
-    :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
-    :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
-    :fit_workshop_id, :fit_workshop_name, :fit_workshop_url, :application_guid,
-    :registered_teachercon, :registered_fit_weekend, :attending_teachercon,
-    :principal_approval_state
+  attributes(
+    :regional_partner_name,
+    :regional_partner_id,
+    :locked,
+    :notes,
+    :form_data,
+    :status,
+    :school_name,
+    :district_name,
+    :email,
+    :application_type,
+    :response_scores,
+    :course,
+    :course_name,
+    :meets_criteria,
+    :bonus_points,
+    :pd_workshop_id,
+    :pd_workshop_name,
+    :fit_workshop_id,
+    :pd_workshop_url,
+    :fit_workshop_name,
+    :fit_workshop_url,
+    :application_guid,
+    :registered_teachercon,
+    :registered_fit_weekend,
+    :attending_teachercon,
+    :principal_approval
+  )
 
   def email
     object.user.email
@@ -70,14 +91,5 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def attending_teachercon
     object&.workshop&.teachercon?
-  end
-
-  def principal_approval_state
-    approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: object.application_guid)
-    if approval
-      approval.placeholder? ? 'sent' : 'received'
-    else
-      'not_sent'
-    end
   end
 end

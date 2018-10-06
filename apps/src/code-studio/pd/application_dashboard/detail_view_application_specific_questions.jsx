@@ -13,7 +13,7 @@ import {
   LabelOverrides as FacilitatorLabelOverrides,
   NumberedQuestions
 } from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
-import SendPrincipalApprovalButton from './send_principal_approval_button';
+import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const TEACHER = 'Teacher';
 const FACILITATOR = 'Facilitator';
@@ -35,11 +35,15 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     scores: PropTypes.object,
     handleScoreChange: PropTypes.func,
     applicationGuid: PropTypes.string,
-    principalApprovalState: PropTypes.oneOf(['not_sent', 'sent', 'received'])
+    initialPrincipalApproval: PropTypes.string
   };
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      principalApproval: this.props.initialPrincipalApproval
+    };
 
     this.sectionHeaders = props.applicationType === TEACHER ? _.omit(TeacherSectionHeaders, ['section5Submission']) : FacilitatorSectionHeaders;
     this.pageLabels = props.applicationType === TEACHER ? TeacherPageLabels : FacilitatorPageLabels;
@@ -60,34 +64,61 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     return questionNumber + questionText;
   };
 
+  handlePrincipalApprovalChange = (_id, principalApproval) => {
+    this.setState({principalApproval});
+  };
+
+  renderNoPrincipalApprovalMessage() {
+    if (!this.state.principalApproval) {
+      return (
+        <div>
+          <h4>Select option</h4>
+          <PrincipalApprovalButtons
+            applicationId={this.props.id}
+            showSendEmailButton={true}
+            showNotRequiredButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+          />
+        </div>
+      );
+    } else if (this.state.principalApproval === "Not required") {
+      return (
+        <div>
+          <h4>Not required</h4>
+          <p>
+            If you would like to require principal approval for this teacher,
+            please “Send email” to the principal asking for approval.
+          </p>
+          <PrincipalApprovalButtons
+            applicationId={this.props.id}
+            showSendEmailButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+          />
+        </div>
+      );
+    } else { // incomplete
+      const principalApprovalUrl =
+        `${window.location.origin}/pd/application/principal_approval/${this.props.applicationGuid}`;
+
+      return (
+        <div>
+          <h4>{this.state.principalApproval}</h4>
+          <p>
+            Link to principal approval form:{' '}
+            <a href={principalApprovalUrl} target="_blank">
+              {principalApprovalUrl}
+            </a>
+          </p>
+        </div>
+      );
+    }
+  }
+
   renderResponsesForSection(section) {
-    // Lame edge case but has to be done
-    if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principalApproval']) {
-      if (this.props.principalApprovalState === 'not_sent') {
-        return (
-          <div>
-            <h4>
-              Not required - request not sent to principal
-            </h4>
-            <SendPrincipalApprovalButton
-              id={this.props.id}
-            />
-          </div>
-        );
-      } else {
-        return (
-          <span>
-            <h4>
-              Not yet submitted
-            </h4>
-            <span>
-              Link to principal approval form: (<a href={`/pd/application/principal_approval/${this.props.applicationGuid}`} target="_blank">
-               {`http://studio.code.org/pd/application/principal_approval/${this.props.applicationGuid}`}
-              </a>)
-            </span>
-          </span>
-        );
-      }
+    if (section === 'detailViewPrincipalApproval' &&
+      !(this.state.principalApproval && this.state.principalApproval.startsWith("Complete"))) {
+      // The principal approval section has special messaging when no principal approval has been received.
+      return this.renderNoPrincipalApprovalMessage();
     } else {
       return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (

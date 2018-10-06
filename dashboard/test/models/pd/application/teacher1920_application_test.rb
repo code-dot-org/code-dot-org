@@ -956,6 +956,7 @@ module Pd::Application
     end
 
     test 'Can create applications for the same user in 1819 and 1920' do
+      application = create :pd_teacher1920_application
       teacher = create :teacher
 
       assert_creates Pd::Application::Teacher1819Application do
@@ -969,6 +970,28 @@ module Pd::Application
       assert_raises ActiveRecord::RecordInvalid do
         create :pd_teacher1920_application, user: teacher
       end
+    end
+
+    test 'principal_approval' do
+      application = create :pd_teacher1920_application
+      assert_nil application.principal_approval
+
+      incomplete = "Incomplete - Principal email sent on Oct 8"
+      Timecop.freeze Date.new(2018, 10, 8) do
+        application.stubs(:deliver_email)
+        application.queue_email :principal_approval, deliver_now: true
+        assert_equal incomplete, application.reload.principal_approval
+      end
+
+      # even if it's not required, when an email was sent display incomplete
+      application.update!(principal_approval_not_required: true)
+      assert_equal incomplete, application.reload.principal_approval
+
+      application.emails.last.destroy
+      assert_equal 'Not required', application.reload.principal_approval
+
+      create :pd_principal_approval1920_application, teacher_application: application, approved: 'Yes'
+      assert_equal 'Complete - Yes', application.reload.principal_approval
     end
 
     private
