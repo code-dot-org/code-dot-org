@@ -31,7 +31,7 @@
         %i.fa.fa-user
       .user_options{style: 'display: none'}
         - short_name = ERB::Util.h(current_user.short_name)
-        .display_name= short_name
+        .display_name{'data-id': current_user.id, 'data-shortname': short_name}= short_name
         - if current_user.can_pair?
           - if session_pairings.present?
             = link_to '#', {id: 'pairing_link', style: 'display: none'} do
@@ -104,6 +104,17 @@
       var storedName = cookieMatch && cookieMatch[2];
       if (storedName && !id) {
         nameSpan.innerHTML = nameSpan.innerHTML.replace(dataName, storedName);
+      }
+    }
+
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+    if (displayNameSpan) {
+      var dataName = displayNameSpan.dataset.shortname;
+      var id = displayNameSpan.dataset.id;
+      var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+      var storedName = cookieMatch && cookieMatch[2];
+      if (storedName && !id) {
+        displayNameSpan.innerHTML = displayNameSpan.innerHTML.replace(dataName, storedName);
       }
     }
 
