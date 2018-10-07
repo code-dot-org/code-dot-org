@@ -30,32 +30,27 @@ export default class Effects {
     };
 
     this.disco = {
-      colors: [],
+      bg: undefined,
+      init: function () {
+        this.bg = createGraphics(World.width, World.height);
+        this.bg.noStroke();
+        for (let i = 0; i < 16; i++) {
+          this.bg.fill(
+            p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")"));
+          this.bg.rect((i % 4) * 50, Math.floor(i / 4) * 50, 50, 50);
+        }
+      },
       update: function () {
-        if (this.colors.length < 16) {
-          this.colors = [];
-          for (let i = 0; i < 16; i++) {
-            this.colors.push(
-              p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")"));
-          }
-        } else {
-          for (let j = randomNumber(5, 10); j > 0; j--) {
-            this.colors[randomNumber(0, this.colors.length - 1)] =
-              p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")");
-          }
+        for (let i = randomNumber(5, 10); i > 0; i--) {
+          let loc = randomNumber(0, 15);
+          this.bg.fill(p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")"));
+          this.bg.rect((loc % 4) * 50, Math.floor(i / 4) * 50, 50, 50);
         }
       },
       draw: function ({isPeak}) {
-        if (isPeak || this.colors.length < 1) {
-          this.update();
-        }
-        p5.push();
-        p5.noStroke();
-        for (let i = 0; i < this.colors.length; i++) {
-          p5.fill(this.colors[i]);
-          p5.rect((i % 4) * 100, Math.floor(i / 4) * 100, 100, 100);
-        }
-        p5.pop();
+        if (!this.bg) this.init();
+        if (isPeak) this.update();
+        p5.image(this.bg, 0, 0);
       }
     };
 
