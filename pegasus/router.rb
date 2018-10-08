@@ -39,7 +39,6 @@ require src_dir 'curriculum_router'
 require src_dir 'homepage'
 require src_dir 'advocacy_site'
 require 'cdo/hamburger'
-require 'cdo/create_header'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
