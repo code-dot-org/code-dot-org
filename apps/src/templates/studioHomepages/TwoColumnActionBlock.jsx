@@ -173,13 +173,13 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/images/professional-learning/fill-540x289/teacher-apps-4.png')}
-        subHeading={i18n.specialAnnouncementHeading()}
-        description={i18n.specialAnnouncementDescription()}
+        imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018.jpg')}
+        subHeading={i18n.specialAnnouncementHeadingHoc2018()}
+        description={i18n.specialAnnouncementDescriptionHoc2018()}
         buttons={[
           {
             url: pegasus('/educate/professional-learning-2018'),
-            text: i18n.learnMore()
+            text: i18n.signUpButton()
           },
         ]}
       />
