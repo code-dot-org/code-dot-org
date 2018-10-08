@@ -92,6 +92,8 @@
     // Share cookie with top-level domain.
     var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
     var cookieMeta = "path=/;domain=" + topLevelDomain;
+    var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+    var storedName = cookieMatch && cookieMatch[2];
 
     // Provide current_user.short_name to cached pages via session cookie.
     // There is apps code that also depends on this query-selector, so if changes are made
@@ -100,8 +102,6 @@
     if (nameSpan) {
       var dataName = nameSpan.dataset.shortname;
       var id = nameSpan.dataset.id;
-      var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
-      var storedName = cookieMatch && cookieMatch[2];
       if (storedName && !id) {
         nameSpan.innerHTML = nameSpan.innerHTML.replace(dataName, storedName);
       }
@@ -111,8 +111,6 @@
     if (displayNameSpan) {
       var dataName = displayNameSpan.dataset.shortname;
       var id = displayNameSpan.dataset.id;
-      var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
-      var storedName = cookieMatch && cookieMatch[2];
       if (storedName && !id) {
         displayNameSpan.innerHTML = displayNameSpan.innerHTML.replace(dataName, storedName);
       }
