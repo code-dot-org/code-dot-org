@@ -258,6 +258,10 @@ class CDOImpl < OpenStruct
     site_url('advocacy.code.org', path, scheme)
   end
 
+  def hourofcode_url(path = '', scheme = '')
+    site_url('hourofcode.com', path, scheme)
+  end
+
   CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
 
   def curriculum_url(locale, path = '')
