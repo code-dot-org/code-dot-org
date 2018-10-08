@@ -123,7 +123,7 @@ body.modal-open .supreme-container{
   #homepage #hero {
     overflow: visible;
   }
-  #homepage #actions {
+  #homepage #actions-mobile-gap {
     margin-top: 300px;
   }
 }
@@ -137,6 +137,39 @@ body.modal-open .supreme-container{
   #homepage .bigannounce {
     padding-top: 100px;
   }
+}
+
+#homepage .bigannounce2 {
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 971px)  {
+  #homepage .bigannounce2 {
+    padding-top: 20px;
+  }
+}
+
+#homepage .action .video-play-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: -4px;
+  margin-right: 4px;
+}
+
+.hoc2018_line1 {
+  font-size: 24px;
+  padding-bottom: 25px;
+}
+
+.hoc2018_line2 {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.hoc2018_line3 {
+  font-size: 72px;
+  height: 80px;
 }
 
 #homepage #actions a {
@@ -188,6 +221,17 @@ body.modal-open .supreme-container{
   height: 40px;
   padding: 0 30px;
   margin: 10px 5px 0 0;
+}
+
+#homepage #actions .herohocbutton-solid-white {
+  color: #4d575f;
+  background-color: white;
+  border-color: white;
+}
+
+#homepage #actions .herohocbutton-hollow-white {
+  background-color: initial;
+  border-color: white;
 }
 
 #homepage #actions #volunteeraction {

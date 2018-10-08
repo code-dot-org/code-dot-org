@@ -17,8 +17,9 @@ def get_social_metadata_for_page(request)
   social_tags = {
     "code.org" => {
       "soon-hoc" => {
-        title: I18n.t(:og_title),
-        description: I18n.t(:og_description),
+        title: "What will you create?",
+        description: "This year's #HourOfCode is about creativity. I’m in! Are you?",
+        description_twitter: "This year's #HourOfCode is about creativity. I’m in! What will you create?",
         image: {path: "/images/fit-1220/social-media/default-og-image.jpg", width: 1220, height: 640}
       },
       "week-before-hoc" => {
