@@ -68,7 +68,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     this.setState({principalApproval});
   };
 
-  renderNoPrincipalApprovalMessage() {
+  renderNoPrincipalApprovalButtons() {
     if (!this.state.principalApproval) {
       return (
         <div>
@@ -87,7 +87,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
           <h4>Not required</h4>
           <p>
             If you would like to require principal approval for this teacher,
-            please “Send email” to the principal asking for approval.
+            please click “Send email” to the principal asking for approval.
           </p>
           <PrincipalApprovalButtons
             applicationId={this.props.id}
@@ -118,7 +118,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     if (section === 'detailViewPrincipalApproval' &&
       !(this.state.principalApproval && this.state.principalApproval.startsWith("Complete"))) {
       // The principal approval section has special messaging when no principal approval has been received.
-      return this.renderNoPrincipalApprovalMessage();
+      return this.renderNoPrincipalApprovalButtons();
     } else {
       return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (
