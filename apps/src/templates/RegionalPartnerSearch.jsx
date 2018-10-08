@@ -38,7 +38,8 @@ const styles = {
 
 class RegionalPartnerSearch extends Component {
   static propTypes = {
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    page: PropTypes.string
   };
 
   constructor(props) {
@@ -59,7 +60,10 @@ class RegionalPartnerSearch extends Component {
           url: "/dashboardapi/v1/regional_partners/show/" + partnerId,
           type: "get",
           dataType: "json",
-          jsonp: false
+          jsonp: false,
+          data: {
+            page: this.props.page
+          }
         }).done(this.partnerIdSuccess).fail(this.partnerIdFail);
 
         showZip = false;
@@ -112,7 +116,10 @@ class RegionalPartnerSearch extends Component {
       url: "/dashboardapi/v1/regional_partners/find?zip_code=" + this.state.zipValue,
       type: "get",
       dataType: "json",
-      jsonp: false
+      jsonp: false,
+      data: {
+        page: this.props.page
+      }
     }).done(this.partnerZipSuccess).fail(this.partnerZipFail);
 
     event.preventDefault();
