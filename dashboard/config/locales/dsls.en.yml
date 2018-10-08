@@ -4202,6 +4202,7 @@ en:
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
+        RQB test levelgroup: {}
         SG csp3_U3_turtle_subgoal_mc_levelgroup: {}
         Sample CSP Assessment: {}
         TeacherCon Self-Assessment: {}
@@ -5628,6 +5629,62 @@ en:
         30 minutes.: 30 minutes.
       AP_practice_Qs_rqb_119_CSP_4_1_1:
         ? |-
+          <pre>
+          IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        ? |-
+          <pre>
+          IF  ( (number % 2 != 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF  ( (number % 2 != 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        ? |-
+          <pre>
+          IF  ( (number % 2 = 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF  ( (number % 2 = 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        ? |-
+          <pre>
+          IF  ( (number % 2 = 0)  OR  (number % 3 != 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF  ( (number % 2 = 0)  OR  (number % 3 != 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        ? |-
           ```
           IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
           {
@@ -5694,7 +5751,26 @@ en:
         : A student copies and pastes an analysis of a poem from another person's literary review site into her own paper and submits it as her own.
         A student refers to the fact that Washington D.C. is the capitol of the United States, without providing a citation.: A student refers to the fact that Washington D.C. is the capitol of the United States, without providing a citation.
         A student uses a complicated idea from a source in her paper and gives attribution.: A student uses a complicated idea from a source in her paper and gives attribution.
+        ? A\ student\ changes\ the\ tense\ of\ a\ written\ piece\ from\ first\ person\ to\ second\ person\ and\ submits\ it\ as\ his\ own\ work\.
+        : A\ student\ changes\ the\ tense\ of\ a\ written\ piece\ from\ first\ person\ to\ second\ person\ and\ submits\ it\ as\ his\ own\ work\.
+        ? A\ student\ copies\ and\ pastes\ an\ analysis\ of\ a\ poem\ from\ another\ person's\ literary\ review\ site\ into\ her\ own\ paper\ and\ submits\ it\ as\ her\ own\.
+        : A\ student\ copies\ and\ pastes\ an\ analysis\ of\ a\ poem\ from\ another\ person's\ literary\ review\ site\ into\ her\ own\ paper\ and\ submits\ it\ as\ her\ own\.
+        ? A\ student\ refers\ to\ the\ fact\ that\ Washington\ D\.C\.\ is\ the\ capitol\ of\ the\ United\ States\,\ without\ providing\ a\ citation\.
+        : A\ student\ refers\ to\ the\ fact\ that\ Washington\ D\.C\.\ is\ the\ capitol\ of\ the\ United\ States\,\ without\ providing\ a\ citation\.
+        A\ student\ uses\ a\ complicated\ idea\ from\ a\ source\ in\ her\ paper\ and\ gives\ attribution\.: A\ student\ uses\ a\ complicated\ idea\ from\ a\ source\ in\ her\ paper\ and\ gives\ attribution\.
       AP_practice_Qs_rqb_86_CSP_4_1_1:
+        <br><img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300"><br>: <br><img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300"><br>
+        <br><img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300"><br>: <br><img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300"><br>
+        <br><img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="300"><br>: <br><img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="300"><br>
+        <br><img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="300"><br>: <br><img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="300"><br>
+        <img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="200">: <img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="200">
+        <img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300">: <img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300">
+        <img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="200">: <img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="200">
+        <img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300">: <img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300">
+        <img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="200">: <img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="200">
+        <img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="300">: <img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="300">
+        <img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="200">: <img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="200">
+        <img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="300">: <img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="300">
         <img src="https://curriculum.code.org/media/uploads/csp/2ffc72ca9ba682bcd443104de50ac8a5" height="200">: <img src="https://curriculum.code.org/media/uploads/csp/2ffc72ca9ba682bcd443104de50ac8a5" height="200">
         <img src="https://curriculum.code.org/media/uploads/csp/6b450add4f3ff7310fa1a3c2d6a1b27a" height="200">: <img src="https://curriculum.code.org/media/uploads/csp/6b450add4f3ff7310fa1a3c2d6a1b27a" height="200">
         <img src="https://curriculum.code.org/media/uploads/csp/c7d593125a90ac3c790a78d5b5d098af" height="200">: <img src="https://curriculum.code.org/media/uploads/csp/c7d593125a90ac3c790a78d5b5d098af" height="200">
