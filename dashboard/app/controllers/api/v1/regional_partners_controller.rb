@@ -82,9 +82,8 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
     FirehoseClient.instance.put_record(
       study: 'regional-partner-search-log',
-      event: 'no-state-for-zip',
+      event: result,
       data_string: params[:zip_code],
-      result: result,
       page: params[:page]
     )
   end
