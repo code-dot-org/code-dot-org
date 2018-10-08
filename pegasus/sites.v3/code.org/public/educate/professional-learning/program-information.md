@@ -7,4 +7,4 @@ theme: responsive
 
 Code.org Regional Partners offer Professional Learning Programs for CS Discoveries and CS Principles throughout the United States. Enter your school’s ZIP code to find your Regional Partner and their program’s cost, application, and workshop information.
 
-<%= view :regional_partner_search %>
+<%= view :regional_partner_search, page: "program-information" %>
