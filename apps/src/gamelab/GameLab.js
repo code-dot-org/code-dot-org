@@ -800,7 +800,7 @@ GameLab.prototype.runButtonClick = function () {
   this.execute();
 
   //Log song count in Dance Lab
-  if (this.isDanceLab && experiments.isEnabled("songSelector")) {
+  if (this.isDanceLab) {
     const song = getStore().getState().selectedSong;
     trackEvent('HoC_Song', 'Play', song);
   }
@@ -1256,6 +1256,7 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
+      this.gameLabP5.setDanceSong(getStore().getState().selectedSong),
       this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.runPreloadEventHandler_()
   ]).then(() => {
