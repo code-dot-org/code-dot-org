@@ -84,7 +84,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
       study: 'regional-partner-search-log',
       event: result,
       data_string: params[:zip_code],
-      page: params[:page]
+      source_page_id: params[:source_page_id]
     )
   end
 

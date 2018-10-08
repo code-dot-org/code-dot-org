@@ -145,7 +145,7 @@ Generous scholarships and grants are available across the country to cover the c
 
 Enter your school's zip code to learn more.
 
-<%= view :regional_partner_search, page: "middle-high" %>
+<%= view :regional_partner_search, source_page_id: "middle-high" %>
 
 ## Have questions?
 

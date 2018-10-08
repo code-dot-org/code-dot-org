@@ -39,7 +39,7 @@ const styles = {
 class RegionalPartnerSearch extends Component {
   static propTypes = {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    page: PropTypes.string
+    sourcePageId: PropTypes.string
   };
 
   constructor(props) {
@@ -115,7 +115,7 @@ class RegionalPartnerSearch extends Component {
       dataType: "json",
       jsonp: false,
       data: {
-        page: this.props.page
+        source_page_id: this.props.sourcePageId
       }
     }).done(this.partnerZipSuccess).fail(this.partnerZipFail);
 
