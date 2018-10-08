@@ -26,6 +26,22 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+  # POST /users/begin_sign_up
+  #
+  # Submit step 1 of the signup process for creating an email/password account.
+  #
+  def begin_sign_up
+    @user = User.new(begin_sign_up_params)
+    @user.validate_for_finish_sign_up
+
+    if @user.errors.blank?
+      PartialRegistration.persist_attributes(session, @user)
+      redirect_to new_user_registration_path
+    else
+      render 'new' # Re-render form to display validation errors
+    end
+  end
+
   # GET /users/cancel
   #
   # Cancels the in-progress partial user registration and redirects to sign-up page.
@@ -126,6 +142,10 @@ class RegistrationsController < Devise::RegistrationsController
         params[:data_transfer_agreement_at] = DateTime.now
       end
     end
+  end
+
+  def begin_sign_up_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
