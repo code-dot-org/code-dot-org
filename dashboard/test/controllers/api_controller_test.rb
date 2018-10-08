@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/create_header'
 
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
