@@ -3304,6 +3304,27 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
+  test 'password_required? is false if user is not creating their own account' do
+    user = build :user
+    user.expects(:creating_own_account?).returns(false)
+    refute user.password_required?
+  end
+
+  test 'password_required? is true for new users with no encrypted password' do
+    user = build :user, encrypted_password: nil
+    user.expects(:creating_own_account?).returns(true)
+    assert user.encrypted_password.nil?
+    assert user.password_required?
+  end
+
+  test 'password_required? is true for user changing their password' do
+    user = create :user
+    user.password = "mypassword"
+    user.password_confirmation = "mypassword"
+    user.expects(:creating_own_account?).returns(true)
+    assert user.password_required?
+  end
+
   test 'summarize' do
     assert_equal(
       {
