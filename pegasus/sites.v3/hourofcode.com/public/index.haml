@@ -65,15 +65,17 @@ social:
   - slide1 = @country == 'ca' ? '/images/fit-1500/homepage_1_canada.jpg' : localized_image('/images/fit-1500/homepage_1.jpg')
   - slide3 = @country == 'ca' ? '/images/fit-1500/homepage_3_canada.jpg' : localized_image('/images/fit-1500/homepage_3.jpg')
 
-  #fullwidth0.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_4.jpg')}); opacity: 1; background-position: 50% 10%;"}
+  #fullwidth0.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_hoc2018.jpg')}); opacity: 1; background-position: 50% 10%;"}
 
-  #fullwidth1.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_trudeau.jpg')}); background-position: 50% 50%"}
+  #fullwidth1.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_4.jpg')}); opacity: 0; background-position: 50% 10%;"}
 
-  #fullwidth2.hero-image{style: "background-image: url(#{slide1}); background-position: 50% 50%"}
+  #fullwidth2.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_trudeau.jpg')}); background-position: 50% 50%"}
 
-  #fullwidth3.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_2.jpg')}); background-position: 50% 50%"}
+  #fullwidth3.hero-image{style: "background-image: url(#{slide1}); background-position: 50% 50%"}
 
-  #fullwidth4.hero-image{style: "background-image: url(#{slide3}); background-position: 50% 20%"}
+  #fullwidth4.hero-image{style: "background-image: url(#{localized_image('/images/fit-1500/homepage_2.jpg')}); background-position: 50% 50%"}
+
+  #fullwidth5.hero-image{style: "background-image: url(#{slide3}); background-position: 50% 20%"}
 
   #fullwidth{style: "width: 100%;"}
 
@@ -212,7 +214,7 @@ social:
 
   function cycleImage()
   {
-    var nextImage = (currentImage + 1) % 5;
+    var nextImage = (currentImage + 1) % 6;
     $("#fullwidth" + currentImage).fadeTo(2000, 0);
     $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
     currentImage = nextImage;
