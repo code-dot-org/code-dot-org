@@ -103,7 +103,7 @@
       float: right;
 
       .button-signin {
-        margin-top: -3px;
+        margin-top: -11px;
         background-color: transparent;
         border: 2px solid $white;
         color: $white;
@@ -116,7 +116,7 @@
     background-color: transparent;
     border: 2px solid $white;
     margin-top: -4px;
-    height: 38px;
+    height: 36px;
     user-select: none;
 
     .user_name, .create_button {
@@ -137,17 +137,21 @@
     }
 
     .user_menu_arrow_down,
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_up,
+    .create_menu_arrow_down
+    {
       font-size: 25px;
     }
 
     .user_menu_arrow_up,
-    .create_menu_arrow_up, {
+    .create_menu_arrow_up,
+    .create_menu_arrow_down {
       margin-top: -3px;
     }
 
     .user_menu_arrow_down,
-    .create_menu_arrow_down {
+    {
       margin-top: -2px;
     }
   }
