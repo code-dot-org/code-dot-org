@@ -140,6 +140,7 @@ en:
     age: 'Age'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
+    next: 'Next'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
