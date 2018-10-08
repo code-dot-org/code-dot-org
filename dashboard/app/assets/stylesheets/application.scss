@@ -1643,9 +1643,13 @@ a.download-video {
 
 #signup, #school-info-modal {
   // NEW SIGN-UP FORM
+  .signup {
+    margin: 20px;
+  }
   .finish-signup {
     width: 800px;
-
+  }
+  .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
     #school-info-inputs {
@@ -1686,6 +1690,9 @@ a.download-video {
       justify-content: space-between;
       align-items: center;
     }
+    .field-sm {
+      width: 400px;
+    }
     .field_with_errors label {
       color: $black;
     }
@@ -1700,14 +1707,17 @@ a.download-video {
     .padded {
       padding-left: 10px;
     }
-    select, input[type=text] {
+    select, input[type=text], input[type=password] {
       height: 36px;
       width: 350px;
     }
-    input[type=text] {
+    input[type=text], input[type=password] {
       width: 338px;
       padding-top: 0;
       padding-bottom: 0;
+    }
+    .input-sm input {
+      width: 250px;
     }
     #school-type {
       width: 370px !important;
