@@ -802,14 +802,14 @@ class User < ActiveRecord::Base
     end
   end
 
-  def creating_own_account?
+  def managing_own_account?
     provider.blank? || (provider == User::PROVIDER_MANUAL)
   end
 
   def password_required?
-    # Password is not required if the user is not creating their own account
+    # Password is not required if the user is not managing their own account
     # (i.e., someone is creating their account for them or the user is using OAuth).
-    return false unless creating_own_account?
+    return false unless managing_own_account?
 
     # Password is required for:
     # New users with no encrypted_password set and users changing their password.

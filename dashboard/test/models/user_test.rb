@@ -3306,13 +3306,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'password_required? is false if user is not creating their own account' do
     user = build :user
-    user.expects(:creating_own_account?).returns(false)
+    user.expects(:managing_own_account?).returns(false)
     refute user.password_required?
   end
 
   test 'password_required? is true for new users with no encrypted password' do
     user = build :user, encrypted_password: nil
-    user.expects(:creating_own_account?).returns(true)
+    user.expects(:managing_own_account?).returns(true)
     assert user.encrypted_password.nil?
     assert user.password_required?
   end
@@ -3321,7 +3321,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     user.password = "mypassword"
     user.password_confirmation = "mypassword"
-    user.expects(:creating_own_account?).returns(true)
+    user.expects(:managing_own_account?).returns(true)
     assert user.password_required?
   end
 
