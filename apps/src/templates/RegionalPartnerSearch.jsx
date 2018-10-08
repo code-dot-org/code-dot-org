@@ -60,10 +60,7 @@ class RegionalPartnerSearch extends Component {
           url: "/dashboardapi/v1/regional_partners/show/" + partnerId,
           type: "get",
           dataType: "json",
-          jsonp: false,
-          data: {
-            page: this.props.page
-          }
+          jsonp: false
         }).done(this.partnerIdSuccess).fail(this.partnerIdFail);
 
         showZip = false;
