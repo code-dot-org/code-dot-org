@@ -10,7 +10,9 @@ const PageAction = makeEnum(
   'StartWebRequest',
   'StaticResourceFetchError',
   'PegasusSectionsRedirect',
-  'BrambleError'
+  'BrambleError',
+  'BrambleFilesystemResetSuccess',
+  'BrambleFilesystemResetFailed'
 );
 
 const MAX_FIELD_LENGTH = 4095;
