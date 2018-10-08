@@ -804,12 +804,20 @@ class User < ActiveRecord::Base
     end
   end
 
+  def creating_own_account?
+    provider.blank? || (provider == User::PROVIDER_MANUAL)
+  end
+
   def password_required?
-    # password is required if:
-    (!persisted? || # you are a new user
-     !password.nil? || !password_confirmation.nil?) && # or changing your password
-      (provider.blank? || (User::PROVIDER_MANUAL == provider)) # and you are a person creating your own account
-    # (as opposed to a person who had their account created for them or are logging in with oauth)
+    # Password is not required if the user is not creating their own account
+    # (i.e., someone is creating their account for them or the user is using OAuth).
+    return false unless creating_own_account?
+
+    # Password is required for:
+    # New users with no encrypted_password set and users changing their password.
+    new_without_password = !persisted? && encrypted_password.blank?
+    is_changing_password = password.present? || password_confirmation.present?
+    new_without_password || is_changing_password
   end
 
   def email_required?
