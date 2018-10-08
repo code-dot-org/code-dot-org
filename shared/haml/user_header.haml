@@ -1,12 +1,14 @@
--# Locals: current_user, loc_prefix, [session_pairings]
+-# Locals: current_user, loc_prefix, [session_pairings], level
 :ruby
   user_under_13 = request.cookies["_user_type_#{rack_env}"] == "student_y"
+  level = defined?(local_assigns).nil? ?
+    false :
+    local_assigns[:level]
   options = { user_under_13: user_under_13 }
   show_updated_header = request.cookies['pm'] == 'create_header_2018'
-
   create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
 
-- if show_updated_header
+- if show_updated_header && !level
   .header_button.create_menu
     %span.create_button
       = I18n.t("nav.create_button.create")
