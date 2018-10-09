@@ -64,3 +64,7 @@ Scenario: Student Signed In - shows icon with correct links
   Then I sign out
   And I wait until element "#signin_button" is visible
   And I wait until element ".user_icon" is not visible
+
+# Pair Programming
+
+# Links go where they should 
