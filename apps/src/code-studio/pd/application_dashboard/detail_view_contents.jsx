@@ -88,6 +88,7 @@ export class DetailViewContents extends React.Component {
       application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
+      meets_scholarship_criteria: PropTypes.string,
       bonus_points: PropTypes.number,
       pd_workshop_id: PropTypes.number,
       pd_workshop_name: PropTypes.string,
@@ -499,6 +500,9 @@ export class DetailViewContents extends React.Component {
           </h1>
           <h4>
             Meets minimum requirements? {this.props.applicationData.meets_criteria}
+          </h4>
+          <h4>
+            Meets scholarship criteria? {this.props.applicationData.meets_scholarship_criteria}
           </h4>
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
