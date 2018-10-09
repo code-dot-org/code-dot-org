@@ -20,7 +20,6 @@ const styles = {
   }
 };
 
-
 //TODO: Remove this during clean-up
 var songs = {
   macklemore: {
@@ -62,6 +61,8 @@ const SongSelector = Radium(class extends React.Component {
   changeSong = (event) => {
     let song = event.target.value;
     this.props.setSong(song);
+
+    //Load song
     let options = {id: song};
     options['mp3'] = songs[options.id].url;
     Sounds.getSingleton().register(options);
