@@ -48,6 +48,7 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application,
       Pd::Application::Teacher1819Application,
+      Pd::Application::Teacher1920Application,
       Pd::InternationalOptIn,
       :maker_discount
     ]
@@ -93,6 +94,7 @@ class Ability
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
+        can [:new, :create, :read], Pd::Application::Teacher1920Application, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
       end
@@ -160,6 +162,7 @@ class Ability
             can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
             cannot :delete, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
           end
+          can :send_principal_approval, Pd::Application::Teacher1920Application, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
 
@@ -178,7 +181,7 @@ class Ability
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1819Application
-        can :manage, Pd::Application::Teacher1819Application
+        can :manage, Pd::Application::Teacher1920Application
       end
 
       if user.permission?(UserPermission::PROJECT_VALIDATOR)
