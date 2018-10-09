@@ -31,6 +31,7 @@ export default function init(p5, Dance) {
 var World = {
   height: 400,
   cuesThisFrame: [],
+  validationCallback: () => {},
 };
 
 function randomNumber(min, max) {
@@ -640,6 +641,11 @@ function updateEvents() {
   }
 }
 
+exports.registerValidation = function (callback) {
+  World.validationCallback = callback;
+  console.log(World.validationCallback);
+}
+
 exports.draw = function draw() {
   Dance.fft.analyze();
   const context = {
@@ -677,6 +683,8 @@ exports.draw = function draw() {
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
   p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+
+  World.validationCallback();
 }
   return exports;
 }
