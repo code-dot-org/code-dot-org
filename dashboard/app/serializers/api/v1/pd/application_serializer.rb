@@ -94,12 +94,12 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     object&.workshop&.teachercon?
   end
 
-  def principal_approval
+  def principal_approval_state
     object.try(:principal_approval)
   end
 
   def school_stats
-    if object.school_id
+    if object&.school_id
       stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
       urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
 
