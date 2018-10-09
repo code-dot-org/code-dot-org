@@ -21,7 +21,7 @@ export default class StudentProgressDetailCell extends Component {
   render() {
 
     return (
-      <div style={styles.cell}>
+      <div style={styles.cell} className="uitest-detail-cell">
         <div style={styles.bubbles}>
           <ProgressBubbleSet
             levels={this.props.levelsWithStatus}

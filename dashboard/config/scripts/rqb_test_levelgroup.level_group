@@ -1,0 +1,11 @@
+name 'RQB test levelgroup'
+title 'Test of RQB level import'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'AP_practice_Qs_rqb_118_CSP_4_2_4'
+level 'AP_practice_Qs_rqb_119_CSP_4_1_1'
+level 'AP_practice_Qs_rqb_1_CSP_6_1_1'
+level 'AP_practice_Qs_rqb_66_CSP_7_5_1'
+level 'AP_practice_Qs_rqb_86_CSP_4_1_1'

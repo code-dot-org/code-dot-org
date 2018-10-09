@@ -40,6 +40,8 @@ class RegionalPartner < ActiveRecord::Base
 
   has_many :pd_workshops, class_name: 'Pd::Workshop', foreign_key: 'regional_partner_id'
 
+  include Pd::SharedWorkshopConstants
+
   include SerializedProperties
 
   serialized_attrs %w(
@@ -55,11 +57,11 @@ class RegionalPartner < ActiveRecord::Base
     apps_close_date_csp_facilitator
     applications_principal_approval
     applications_decision_emails
-    link_to_application
+    link_to_partner_application
     csd_cost
     csp_cost
-    csd_cost_description
-    csp_cost_description
+    cost_scholarship_information
+    additional_program_information
     contact_name
     contact_email
   )
@@ -77,6 +79,41 @@ class RegionalPartner < ActiveRecord::Base
   # Upcoming and not ended
   def future_pd_workshops_organized
     pd_workshops_organized.future
+  end
+
+  def summer_workshops_application_state
+    # Now closed.  (Closed date has passed.)
+    if summer_workshops_latest_apps_close_date && summer_workshops_latest_apps_close_date <= Time.zone.now
+      return WORKSHOP_APPLICATION_STATES[:now_closed]
+    # Currently open.  (Not closed, but open date has passed.)
+    elsif summer_workshops_earliest_apps_open_date && summer_workshops_earliest_apps_open_date <= Time.zone.now
+      return WORKSHOP_APPLICATION_STATES[:currently_open]
+    # Applications open at a known date.  (Not closed, not open, but we do have an opening date in the future.)
+    elsif summer_workshops_earliest_apps_open_date && summer_workshops_earliest_apps_open_date > Time.zone.now
+      return WORKSHOP_APPLICATION_STATES[:opening_at]
+    # Applications open, but not sure when.  (Not closed, not open, but we have no opening date yet.)
+    else
+      return WORKSHOP_APPLICATION_STATES[:opening_sometime]
+    end
+  end
+
+  def summer_workshops_earliest_apps_open_date
+    if apps_open_date_csd_teacher || apps_open_date_csp_teacher
+      Date.parse([apps_open_date_csd_teacher, apps_open_date_csp_teacher].compact.min).strftime('%B %e, %Y')
+    end
+  end
+
+  def summer_workshops_latest_apps_close_date
+    if apps_close_date_csd_teacher || apps_close_date_csp_teacher
+      Date.parse([apps_close_date_csd_teacher, apps_close_date_csp_teacher].compact.max).strftime('%B %e, %Y')
+    end
+  end
+
+  def upcoming_summer_workshops
+    pd_workshops.
+      future.
+      where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).
+      map {|w| w.slice(:location_name, :location_address, :workshop_date_range_string, :course)}
   end
 
   # Make sure the phone number contains at least 10 digits.
@@ -99,6 +136,14 @@ class RegionalPartner < ActiveRecord::Base
       regional_partner_id: id,
       program_manager_id: program_manager_id
     )
+  end
+
+  # Since contact_email is defined dynamically by SerializedProperties, that will take precedence,
+  # and we can't 'override' it in this class.
+  # In order to fallback to another value when contact_email is missing, we need a wrapper method:
+  # @return contact_email, or the first program manager's email, or the contact user's email
+  def contact_email_with_backup
+    contact_email || program_managers&.first&.email || contact&.email
   end
 
   def contact

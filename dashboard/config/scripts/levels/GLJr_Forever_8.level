@@ -47,6 +47,7 @@
     "parent_level_id": 11953,
     "markdown_instructions": "The cat and dog are so excited to see each other that they want to have a dance party. If the two sprites are touching, have each run the \"dance party\" block.",
     "show_type_hints": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

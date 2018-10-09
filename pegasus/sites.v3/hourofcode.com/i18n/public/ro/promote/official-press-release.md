@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_press_release) %>
+title: <%= hoc_s(:title_press_release).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -7,56 +7,41 @@ nav: promote_nav
 
 # Model de comunicat de presa pentru oficialii alesi
 
-Pentru lansare imediata  
-[**DATA**]  
-Contact: [**Informatii de contact**]  
-  
+### Use this sample press release language to help craft your message about participating in the Hour of Code.
+
+---
+
+#### For Immediate Release  
 
 
-<strong> 
+#### [DATA]  
 
-<center>
-  GOVERNATORUL/SENATORUL/MEMBRUL DE PARTID/REPREZENTANTUL/PRIMARUL/ MEMBRUL DE CONSILIULUI [INSEREAZĂ NUME][ A PARTICIPAT LA ORA DE COD CU ELEVII LOCALI]</strong><br /> Comunitatea se alătură demersului de conștientizare asupra importanței învățării tehnologiei computerelor și programării prin participarea la Săptămâna Educației în Informatică
-</center>
 
-<br /> <br /></p> 
+#### Contact: [CONTACT INFORMATION]
 
-<p>
-  <strong>DATA</strong> - [<strong>INTRODUCETI NUMELE</strong>] s-a alaturat Directorului si membrilor scolii [<strong>INTRODUCETI NUMELE SCOLII</strong>], liderilor de business si familiilor locale astazi pentru [<strong>NUMITI EVENIMENTUL</strong>] a participa la Hour of Code ca parte a Saptamanii Mondiale a Stiintei si Educatiei in tehnologia computerelor si programare. [INTRODUCETI NUMELE] si membrii comunitatii s-au alaturat milioanelor de oameni din jurul lumii ce au luat parte la cel mai amplu eveniment de invatare din istorie.
-</p>
+<br />
 
-<p>
-  [<strong>INTRODUCETI DETALII DESPRE EVENIMENT, UTILIZATI UN LIMBAJ DESCRIPTIV SI CUANTIFICABIL. DE EXEMPLU:</strong>]<br /> “Scoala elementara Daniels Run a tinut, la nivel de scoala, un eveniment Hour of Code pentru a le expune elevilor stiinta calculatorului. Mai mult de 700 de elevi din toate clasele au participat la cel putin o Ora de Programare. Si cativa parinti si voluntari din comunitate au ajutat in aceasta zi, aducand copii impreuna pentru a le arata de ce stiinta computerului conteaza atat de mult in viata unui elev.
-</p>
+**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
 
-<p>
-  [<strong>TEXT ESANTION PENTRU CONTEXT:</strong>]<br /> Computerele sunt peste tot, dar mai putine scoli predau acum stiinta computerului decat cu 10 ani in urma. Fetele si elevii din minoritati sunt grav subestimati. Vestea buna e ca noi facem aceasta schimbare in bine. Hour of Code este o poarta a elevilor spre accesarea informatiilor de calitate despre stiinta calculatorului.
-</p>
+Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
 
-<p>
-  Peste 100 de milioane de studenţi din întreaga lume au încercat deja o Ora de Programare. Multumita Hour of Code, tehnologia computerelor a fost vizibila pe site-urile Google, MSN, Yahoo! și Disney. Președintele Obama, Shakira și Ashton Kutcher au susținut cu toții Ora de Programare cu secvențe video. S-au adunat peste 100 de parteneri pentru a susține această mișcare.
-</p>
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
 
-<p>
-  [<strong>INSERARE CITAT PURTATOR DE CUVANT, EXEMPLU MAI JOS:</strong>]<br /> “Trebuie sa incurajam si sa atintim interesul elevilor nostri asupra stiintei computerului,” a spus [<strong>INSEREAZA NUME</strong>]. "Fiecare student merita sansa de a invata stiinta computerului si programarea pentru a accesa cele mai bune cariere ale secolului 21."
-</p>
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
+“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
 
-<p>
-  [A SE <strong>INSEREAZA MAI MULTE INFORMAŢII DESPRE EVENIMENTUL SAU/SI ORGANIZAŢIA DUMNEAVOASTRĂ</strong>]
-</p>
+[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
 
-<p>
-  [<strong>INTRODUCEŢI CITAT DE LA O ALTĂ ORGANIZAŢIE SAU CINEVA CARE A PARTICIPAT LA EVENIMENT</strong>]
-</p>
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
 
-<p>
-  Pentru mai multe informaţii despre [<strong>Eveniment/PROGRAM/ETC</strong>], vizitaţi [<strong>INSERATI SITE</strong>] sau contactaţi [<strong>Introduceţi informaţii de CONTACT</strong>]
-</p>
+[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
 
-<p>
-  <br /> <br />
-</p>
+[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
 
-<p>
-  <%= view :signup_button %>
-</p>
+[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+<%= view :signup_button %>

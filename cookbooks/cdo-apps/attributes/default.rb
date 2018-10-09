@@ -20,7 +20,7 @@ default['cdo-apps'] = {
     },
   },
   'nginx_enabled' => true,
-  'app_server' => 'unicorn',
-  'jemalloc' => false
+  'app_server' => 'puma',
+  'jemalloc' => true
 }
 default['omnibus_updater']['version'] = '12.7.2'

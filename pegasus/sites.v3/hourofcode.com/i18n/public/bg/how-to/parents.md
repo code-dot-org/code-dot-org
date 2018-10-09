@@ -1,45 +1,46 @@
 ---
-title: <%= hoc_s(:title_how_to_parents) %>
+title: <%= hoc_s(:title_how_to_parents).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Как да извършите часът на код с вашето дете
+# How to do an Hour of Code with your child
 
-Използвайте часът на кода у дома, или станете доброволец, за да го проведете в класната стая на детето си! Ето как:
+### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+
+---
 
 ## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3) Избор на урок:
+## 2) Choose a tutorial
 
-Ние предлагаме разнообразие от забавни, продължаващи час уроци за ученици от всички възрасти, създадени от различни партньори. [ Изпробвайте ги!](<%= resolve_url('https://code. org/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-**Всички часът на кода уроци са самостоятелно ръководи-което позволява на децата да работят в техните собствени темпове и ниво на умение**
+**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+[![](/images/Fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) планирайте необходимата техника
 
-Най-добрият Час на кода се провежда с Интернет свързани компютри. Но вие **не** се нуждаете от компютър. Има много дейности, които са "unplugged" и може да се направят без никаква техника.
+The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
 
-- Тестирайте уроците на компютри или устройства. Уверете се, че те работят правилно на браузъри със звук и видео.
-- **Искате ли да учите заедно с вашето дете?** Опитайте [ програмиране по двойки.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) В Компютърните науки има място и за общуване и сътрудничество.
+**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
 
-## 5) Започнете Вашия час на кода с вдъхновяващо видео
+## 4) Start your Hour of Code with an inspiring video
 
 Вдъхновете детето с обсъждане как компютърните науки влияят върху всяка част от живота ни.
 
 **Покажи вдъхновяващо видео:**
 
-- Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- [ Видео за световния Час на кода](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [ президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Не е лошо ако Вие и детето сте новаци в компютърните науки. Ето някои идеи, за да въведете дейността Hour of Code:
 
-- Обяснете начина как технологията въздейства на живота ни, с примери, които ще впечатлят момчета и момичета (спасяване на живот, помощ за хората, свързване на хора и др.).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Съставете списък с неща, които използват код в ежедневния живот.
 - See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
@@ -65,15 +66,13 @@ nav: how_to_nav
 
 Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
-**Други ресурси:**
+Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
 
-- Прегледайте [ часът на кода често задавани въпроси](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+## Какво идва след Hour of Code?
 
-**Какво идва след Hour of Code?**
-
-Hour of Code е само първата стъпка в пътешествието в изучаването на това, как технологията работи и как да създавате софтуерни приложения. За да продължите това пътуване:
+The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
-- Помогнете [в насърчаването](<%= resolve_url('/promote') %>)на Cs образованието в училището на детето ви.
+- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>

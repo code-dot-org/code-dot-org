@@ -33,8 +33,8 @@ A new, streamlined process for securing a substitute CS Discoveries/CS Principle
 [**Back to the top**](#top)
 ________________
 <a id="page"></a>
-## Example Facilitator One Pager
-The facilitator one pager should be sent to facilitators at least 10 days prior to the workshop. It provides facilitators all of the logistical information needed to run their workshop.
+## Example Facilitator One Pager for 6-12 Programs
+The facilitator one pager should be sent to facilitators at least 10 days prior to the academic year workshops. It provides facilitators with the logistical information needed to run their workshop.
 
 Use <a href="https://docs.google.com/document/d/1FobsNOHi91ioe5ZoCeiWNgDslQkTPF4w31j2ii8q4Bk/edit" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
 
@@ -46,6 +46,8 @@ ________________
 [This is an example](/files/example-facilitation-agreement.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
 
 *DISCLAIMER: By providing this example, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter.*
+
+We have created this <a href="https://docs.google.com/document/d/1sdGbB5BSBTjjjjC6abIjAO4XzznXVvgwQe95CRL_c6E/edit?usp=sharing" target=_blank>example Scope of Work</a> that you can use as a planning resource when establishing a relationship with a <b><i>CS Fundamentals facilitator</i></b>. This document lives in our shared Google Drive folder. Please note that we are providing this resource to all partners as a general guide for you to customize and make adjustments that are right for your organization, while still staying within the bounds of the program guidelines Code.org has outlined. It does not constitute legal advice from Code.org
 
 [**Back to the top**](#top)
 ________________
@@ -69,7 +71,7 @@ ________________
 - [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators
 - [Important Resources for CS Discoveries Facilitators](https://curriculum.code.org/plcsd/) - See full list of resources and agendas for CS Discoveries Facilitators
 - <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated August 2018]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
-- <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#bookmark=id.ovp6b82y4lw3" target=_blank>K-5 Fundamentals Facilitator Travel Policy in CS Fundamentals Process Doc</a>
+- <a href="/educate/regional-partner/playbook/payments#csftravel" target=_blank>K-5 Fundamentals Facilitator Travel Policy</a>
 
 [**Back to the top**](#top)
 

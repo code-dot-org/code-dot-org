@@ -51,11 +51,9 @@
       "Fish Tank Predict"
     ],
     "include_shared_functions": "false",
-    "encrypted_examples": [
-
-    ],
     "custom_helper_library": "function tumbling(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation -= 6;\r\n    sprite.x -= 3;\r\n  };\r\n  behavior.name = 'tumbling';\r\n  return behavior;\r\n}\r\n",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]"
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Behavior\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
+    "block_pool": "gamelab"
   },
   "published": true,
   "notes": "",

@@ -1,47 +1,48 @@
 ---
-title: <%= hoc_s(:title_op_ed) %>
+title: <%= hoc_s(:title_op_ed).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Ngaphansi yisampula ye op-ed esekela iViki leMfundiso yeKhompyutha Sayensi kanye nemigomo engasetshenziswa nguMbuso, izishayamthetho zendawo, abaholi bezoshishino etc.
+# Write an op-ed in support of Computer Science Education Week
 
-  
+### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
 
+### Visit [advocacy.code.org](<%= resolve_url('https://advocacy.code.org') %>) to find state specific information about computer science.
 
-Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
+---
 
-**Isihloko: Ukukhompyutha... Lapho imisebenzi ikhona**
+#### Title: Computing…Where the Jobs Are
 
-**Nge [NAME] kanye [CABANGELA UKUBHALA OKUHLANYELWE KANYE NOMFUNDISI, OPHETHE NOMA NENHLOKO YOMHWEBO]**
+#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Amakhompyutha akhona kuyo yonke indawo. Basephoketheni lwethu. Bakudonga lwethu. Bangaphakathi kwezimoto zethu. Ziyihlephu elibucayi sengqalasizinda, ukusuka ekusebenzeni kombani ukuya emalobhothini ukuya phakathi ekusebenzeni kwezezimali. Kanye futhi lamakhompyutha onke anento eyodwa evamile. Bathembele kusofthiwe ukuba ibatshale ukuba benzeni.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Kodwa kanye kanye ngubani ozobhala lesofthiwe?
+But who exactly is going to write this software?
 
-Ngokubona indlela esheshile umhlaba wethu uguqulwa ubuchwepheshe bezekhompyutha, ungalinda inombolo yabafundi abafunda ikhompyutha sayensi kumfundiso yeK-12 namhlanje ukuba ibengeyona ephezulu. Uzobe uyaphazama. Empeleni, bambalwa abafundi abafunda ikhompyutha sayensi, kanti futhi zimbalwa izikole eziyi fundisayo, kuneminyaka eyishumi edlule.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-Esikhathini lapho isidingo sabamklami abanekhono singakaze sibephuzulu kudlula lokhu, siguqula abokhompyutha sayensi abambalwa. Ngisho kulesikhathi lapho amathuba omsebenzi engekho, izinkulungwana zemisebenzi, iningi yazo okwamanje lana **[FAKA UMBUSO/IDOLOBHA]**, ihamba ingagcwalisiwe ngokuswela abantu abanamakhono.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
-Kungani lokhu? Kanti futhi singaku xazulula kanjani?
+Why is this? And how can we address it?
 
-Inkinga iqala kuzikole zebanga elincane nezebanga eliphezulu. Eziyishagalolunye kweziyishumi izikole azinikezeli ngemfundiso yokuhlela ngokweze khompyutha. Ku **[ISIFUNDA SESIKOLE]** unyaka ondlule, uma **[INOMBOLO]** abafundi bathethe ukuhlolwa kweKhompyuth Sayensi kwezikole esikhulu, nje **[%]** kubo bonke abafundi abathethe ukuhlolwa kumbuso wethu. Asenzi okwanele ukulungiselela okanye ukukhuthaza abafundi bethu ukuba balandele imisebenzi eseqophelelweni eliphezulu futhi ebhadala ngendlela ephakeme.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Cishe imikhuba eqanjwe kabusha yezekhompyutha isongululwe kulo lelilizwe, kodwa sisengozini yokulahlekelwa yilobo buholi umasingenzi okuthize manje.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Sidinga ukwenza ushinsho oluyingcosana.
+We need to make some changes.
 
-**[UNGAZIKHETHELA KUMAZWE LAPHO LOKHU KUSEBENZA]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Ushintsho olulodwa oluhle lingakwazi ukuvumela izifundiso zekhompyutha sayensi ezinzima ukuba zanelise imfuneko yokuthweswa iziqu kuzibalo esikoleni esiphakeme okanye kusayensi. Ku **[FAKA IDOLOBHA]**, khompyutha sayensi izifundo ziyisi gqugquzeli. Ngezidingo kwezemfundo, abafundi abanamandla okuthatha izimfundiso zekhompyutha sayensi ezigqugquzekile. Kanti ukwenza lolushintsho kungaba nomthelela omuhle. Kumazwe lapho izifindo zekhompyutha sayensi zibalwa kuzidingo zokuthweswa iziqu, izifundiso zingamaphesenti angamashumi amahlanu amakhulu ngokuningi kanye ngentelela enkulu ekuzibandakanyeni kwabangamelwanga kunamazwe lapho ikhompyutha sayensi ibonwa njengendikimba.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Kumele sisebenze nabafundi ebuncaneni babo ukuba sikwazi ukufaka intshisakalo yekhompyutha sayensi kanye nokufingqwa. Izingane zethu akumelanga zazi ukusebenzisa ama-epu kanye nokudlala imidlalo yamavidiyo - kufuneka zazi nokuwadala. Izingane zingafunda izisekelo zokufingqwa kusukela ebangeni lwesibili esikoleni sabanga eliphansi.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Sidinga ukufaka othisha bekhompyutha sayensi kanye nokukhuthaza ukuthuthukiswa kobungcweti ngaphakathi kumkhakha wabo. Namuhla kukhona izinsiza eziningi ezisiza othisha ukufinyelela nokuzigcina basesikhathini ngama thekhinoloji amasha ukusiza abafundi babo.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Ngokolwazi le-Bureau yaBasebenzi ngamaNani, ngo 2020, kuyobe kunemisebenzi eyisigidi eziyishagalolunye kunkambi yeSTEM. Isigamu semisebenzi-4.6 yezigidi-izoba kwezekhompyutha okanye kwezolwazi lwethekhinoloji. Kanti futhi ikhompyutha sayensi ingulwazi oluyisisekelo ngokuya esikhathini samanje. Ngubani ozokwazi ukugcwalisa lemisebenzi uma izingane zethu zinganikwa ithuba lokuthola ulwazi oludingekayo?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-Kulo leliviki, <%= campaign_date('full') %>, kuyiViki leMfundiso yeKhompyutha Sayensi. Ezikoleni ndawo yonke **[ILIZWE]**, abafundi bethu bazibandakanya kuHora loKufingqwa izwe lonke, ukwenza isihloko sekhompyutha sayensi sibonakale ubulula baso kanye nokuqinisa ukulangazelela kwabo ngethemba lokuba bazofunda ukuya phambili. Mina ngiyazibandakanya, kanti nawe ngiyakumema ukuba uzibandakanye. Wonke umuntu kufanele afunde ukufingqwa. Vakashela https://hourofcode.com/<%= @ilizwe %>funda kabanzi ubese uyaqala. And support our efforts to bring computer science to more schools in **[STATE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
 <%= view :signup_button %>

@@ -55,6 +55,7 @@
     "show_type_hints": "true",
     "instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
     "validation_code": "if (World.frameCount > 50) {\r\n  var status = 3;\r\n  \r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      if (sprite.getAnimationLabel() == \"bell\") {\r\n        status = 0;\r\n      }\r\n    }\r\n  }\r\n\r\n  levelSuccess(status);\r\n}",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

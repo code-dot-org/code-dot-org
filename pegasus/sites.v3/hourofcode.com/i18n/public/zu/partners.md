@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 IHora loKufingqwa liqhutshwa iKomidi yoKweluleka noku Bhekisisa ye Hora loKufingqwa kanye neViki leMfundiso yeKhompyutha Sayensi.
 
@@ -119,19 +119,13 @@ Umsebenzi kanye nokuzinikelela kwawo womabili lamakomiti kube nomthelela kumpume
 
 ---
 
-# Abakhulu bokukhuthaza abasebenzisana kubhizinisi
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
-# Abahlanganeli Bezizwe Ezihlikene
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ Umsebenzi kanye nokuzinikelela kwawo womabili lamakomiti kube nomthelela kumpume
 
 ---
 
-# Abahlanganyeli Abangezelelwe
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

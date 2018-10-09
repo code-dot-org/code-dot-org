@@ -44,6 +44,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
+    "block_pool": "Dancelab",
     "contained_level_names": null
   },
   "published": true,

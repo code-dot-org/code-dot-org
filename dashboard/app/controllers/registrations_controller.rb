@@ -9,18 +9,46 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :verify_authenticity_token, only: [:set_age]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :create]
 
+  #
+  # GET /users/sign_up
+  #
   def new
     session[:user_return_to] ||= params[:user_return_to]
-    @already_hoc_registered = params[:already_hoc_registered]
 
-    SignUpTracking.begin_sign_up_tracking(session)
-    FirehoseClient.instance.put_record(
-      study: 'account-sign-up',
-      event: 'load-sign-up-page',
-      data_string: session[:sign_up_uid]
-    )
+    if SignUpTracking.new_sign_up_experience?(session) && PartialRegistration.in_progress?(session)
+      user_params = params[:user] || {}
+      @user = User.new_with_session(user_params, session)
+    else
+      @already_hoc_registered = params[:already_hoc_registered]
+      SignUpTracking.begin_sign_up_tracking(session)
+      super
+    end
+  end
 
-    super
+  #
+  # POST /users/begin_sign_up
+  #
+  # Submit step 1 of the signup process for creating an email/password account.
+  #
+  def begin_sign_up
+    @user = User.new(begin_sign_up_params)
+    @user.validate_for_finish_sign_up
+
+    if @user.errors.blank?
+      PartialRegistration.persist_attributes(session, @user)
+      redirect_to new_user_registration_path
+    else
+      render 'new' # Re-render form to display validation errors
+    end
+  end
+
+  # GET /users/cancel
+  #
+  # Cancels the in-progress partial user registration and redirects to sign-up page.
+  #
+  def cancel
+    PartialRegistration.cancel(session)
+    redirect_to new_user_registration_path
   end
 
   #
@@ -50,12 +78,8 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # GET /users/finish_sign_up
+  # POST /users
   #
-  def finish_sign_up
-    @user = User.new
-  end
-
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
@@ -68,21 +92,7 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
     end
 
-    sign_up_type = session[:sign_up_type]
-    sign_up_type ||= resource.email ? 'email' : 'other'
-    if session[:sign_up_tracking_expiration]&.future?
-      result = resource.persisted? ? 'success' : 'error'
-      tracking_data = {
-        study: 'account-sign-up',
-        event: "#{sign_up_type}-sign-up-#{result}",
-        data_string: session[:sign_up_uid],
-        data_json: {
-          detail: resource.to_json,
-          errors: resource.errors&.full_messages
-        }.to_json
-      }
-      FirehoseClient.instance.put_record(tracking_data)
-    end
+    SignUpTracking.log_sign_up_result resource, session
   end
 
   #
@@ -132,6 +142,10 @@ class RegistrationsController < Devise::RegistrationsController
         params[:data_transfer_agreement_at] = DateTime.now
       end
     end
+  end
+
+  def begin_sign_up_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
@@ -401,7 +415,7 @@ class RegistrationsController < Devise::RegistrationsController
   def log_account_deletion_to_firehose(current_user, dependent_users)
     # Log event for user initiating account deletion.
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit',
+      study: 'user-soft-delete-audit-v2',
       event: 'initiated-account-deletion',
       user_id: current_user.id,
       data_json: {
@@ -414,7 +428,7 @@ class RegistrationsController < Devise::RegistrationsController
     # This should only happen for teachers.
     dependent_users.each do |user|
       FirehoseClient.instance.put_record(
-        study: 'user-soft-delete-audit',
+        study: 'user-soft-delete-audit-v2',
         event: 'dependent-account-deletion',
         user_id: user[:id],
         data_json: {

@@ -1,27 +1,18 @@
 {
-  "category": "Sprites",
+  "category": "Booleans",
   "config": {
     "func": "isAnim",
-    "blockText": "{SPRITE} {COSTUME}",
-    "returnType": "None",
-    "color": [
-      258,
-      "0.35",
-      "0.62"
-    ],
+    "blockText": "{SPRITE}'s costume is {COSTUME}",
+    "returnType": "Boolean",
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "assignment": true,
+        "customInput": "spritePicker"
       },
       {
         "name": "COSTUME",
-        "options": [
-          [
-            "costume",
-            "\"costume\""
-          ]
-        ]
+        "customInput": "costumePicker"
       }
     ]
   }

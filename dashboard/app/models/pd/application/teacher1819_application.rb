@@ -2,25 +2,24 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                  :integer          not null, primary key
+#  user_id             :integer
+#  type                :string(255)      not null
+#  application_year    :string(255)      not null
+#  application_type    :string(255)      not null
+#  regional_partner_id :integer
+#  status              :string(255)
+#  locked_at           :datetime
+#  notes               :text(65535)
+#  form_data           :text(65535)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  course              :string(255)
+#  response_scores     :text(65535)
+#  application_guid    :string(255)
+#  accepted_at         :datetime
+#  properties          :text(65535)
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -38,6 +37,8 @@ module Pd::Application
   class Teacher1819Application < TeacherApplicationBase
     include ::Pd::Teacher1819ApplicationConstants
 
+    validates_uniqueness_of :user_id
+
     # @override
     def year
       YEAR_18_19
@@ -50,43 +51,6 @@ module Pd::Application
 
     def teachercon_registration
       Pd::Teachercon1819Registration.find_by_pd_application_id(id)
-    end
-
-    def send_decision_notification_email
-      # We only want to email unmatched and G3-matched teachers. All teachers
-      # matched with G1 or G2 partners will be emailed by their partners.
-      return if regional_partner && regional_partner.group != 3
-
-      # Accepted, declined, and waitlisted are the only valid "final" states;
-      # all other states shouldn't need emails
-      return unless %w(accepted declined waitlisted).include?(status)
-
-      if status == "accepted"
-        # Acceptance emails need to be handled specially, since they not only
-        # require an associated workshop but also come in two flavors depending
-        # on the nature of the workshop
-        return unless pd_workshop_id
-
-        if workshop.teachercon?
-          Pd::Application::Teacher1819ApplicationMailer.teachercon_accepted(self).deliver_now
-        elsif workshop.local_summer?
-          Pd::Application::Teacher1819ApplicationMailer.local_summer_accepted(self).deliver_now
-        else
-          # Applications should only ever be associated with a workshop that
-          # falls into one of the above two categories, but if a mistake was
-          # made, notify honeybadger
-          Honeybadger.notify(
-            error_message: 'Accepted application has invalid workshop',
-            context: {
-              application_id: id,
-              pd_workshop_id: pd_workshop_id,
-            }
-          )
-        end
-      else
-        Pd::Application::Teacher1819ApplicationMailer.send(status, self).deliver_now
-      end
-      update!(decision_notification_email_sent_at: Time.zone.now)
     end
 
     # @override
@@ -141,6 +105,43 @@ module Pd::Application
       CSV.generate do |csv|
         csv << columns
       end
+    end
+
+    # memoize in a hash, per course
+    FILTERED_LABELS = Hash.new do |h, key|
+      labels_to_remove = (
+      if key == 'csd'
+        [
+          :csp_which_grades,
+          :csp_course_hours_per_week,
+          :csp_course_hours_per_year,
+          :csp_terms_per_year,
+          :csp_how_offer,
+          :csp_ap_exam
+        ]
+      else
+        [
+          :csd_which_grades,
+          :csd_course_hours_per_week,
+          :csd_course_hours_per_year,
+          :csd_terms_per_year
+        ]
+      end
+      )
+
+      # school contains NCES id
+      # the other fields are empty in the form data unless they selected "Other" school,
+      # so we add it when we construct the csv row.
+      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
+
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
     end
   end
 end

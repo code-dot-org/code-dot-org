@@ -3,7 +3,7 @@ module Api::V1::Pd::Application
     include Pd::Application::ApplicationConstants
     include Pd::Application::ActiveApplicationModels
 
-    authorize_resource :teacher_application, class: 'Pd::Application::Teacher1819Application'
+    load_and_authorize_resource class: TEACHER_APPLICATION_CLASS.name, instance_name: 'application'
 
     def new_form
       @application = TEACHER_APPLICATION_CLASS.new(
@@ -11,23 +11,26 @@ module Api::V1::Pd::Application
       )
     end
 
-    def resend_principal_approval
-      PRINCIPAL_APPROVAL_APPLICATION_CLASS.create_placeholder_and_send_mail(
-        TEACHER_APPLICATION_CLASS.find(params[:id])
-      )
+    def send_principal_approval
+      unless @application.emails.exists?(email_type: 'principal_approval')
+        @application.queue_email :principal_approval, deliver_now: true
+      end
+      render json: {principal_approval: @application.principal_approval}
+    end
+
+    def principal_approval_not_required
+      @application.update!(principal_approval_not_required: true)
+      render json: {principal_approval: @application.principal_approval}
     end
 
     protected
 
     def on_successful_create
-      @application.auto_score!
-      @application.assign_default_workshop!
       @application.update_user_school_info!
-
-      TEACHER_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
+      @application.queue_email :confirmation, deliver_now: true
 
       unless @application.regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        TEACHER_APPLICATION_MAILER_CLASS.principal_approval(@application).deliver_now
+        @application.queue_email :principal_approval, deliver_now: true
       end
     end
   end

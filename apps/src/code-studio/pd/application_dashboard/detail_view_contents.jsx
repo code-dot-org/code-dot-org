@@ -32,6 +32,7 @@ const styles = {
     height: '95px'
   },
   statusSelect: {
+    width: 250, // wide enough for the widest status
     marginRight: '5px'
   },
   editMenuContainer: {
@@ -98,7 +99,7 @@ export class DetailViewContents extends React.Component {
       registered_teachercon: PropTypes.bool,
       registered_fit_weekend: PropTypes.bool,
       attending_teachercon: PropTypes.bool,
-      principal_approval_state: PropTypes.oneOf(['not_sent', 'sent', 'received'])
+      principal_approval: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
@@ -434,9 +435,9 @@ export class DetailViewContents extends React.Component {
         style={styles.statusSelect}
       >
         {
-          this.statuses.map((status, i) => (
-            <option value={status.toLowerCase()} key={i}>
-              {status}
+          Object.keys(this.statuses).map((status, i) => (
+            <option value={status} key={i}>
+              {this.statuses[status]}
             </option>
           ))
         }
@@ -644,7 +645,7 @@ export class DetailViewContents extends React.Component {
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
         applicationGuid={this.props.applicationData.application_guid}
-        principalApprovalState={this.props.applicationData.principal_approval_state}
+        initialPrincipalApproval={this.props.applicationData.principal_approval}
       />
     );
   };

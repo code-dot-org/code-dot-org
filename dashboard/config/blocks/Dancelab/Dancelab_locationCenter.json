@@ -1,8 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "func": "locationCenter",
-    "blockText": "center",
-    "returnType": "Location"
-  }
-}

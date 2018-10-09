@@ -11,6 +11,10 @@ module Api::V1::Pd::Application
       }
 
       @applicant = create :teacher
+
+      @program_manager = create :program_manager
+      @partner = @program_manager.regional_partners.first
+      @application = create :pd_teacher1920_application, regional_partner: @partner
     end
 
     setup do
@@ -27,12 +31,20 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
+    test_user_gets_response_for :send_principal_approval,
+      name: 'program managers can send_principal_approval for applications they own',
+      user: -> {@program_manager},
+      params: -> {{id: @application.id}},
+      response: :success
+
+    test_user_gets_response_for :send_principal_approval,
+      name: 'program managers can not send_principal_approval for applications they do not own',
+      user: :program_manager,
+      params: -> {{id: @application.id}},
+      response: :forbidden
+
     test 'sends email on successful create' do
       TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
-
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
@@ -40,18 +52,6 @@ module Api::V1::Pd::Application
 
       put :create, params: @test_params
       assert_response :success
-      assert_equal(
-        {
-          regional_partner_name: NO,
-          committed: YES,
-          able_to_attend_single: YES,
-          csp_which_grades: YES,
-          csp_course_hours_per_year: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          taught_in_past: 2
-        }, TEACHER_APPLICATION_CLASS.last.response_scores_hash
-      )
     end
 
     test 'do not send principal approval email on successful create if RP has selective principal approval' do
@@ -74,6 +74,7 @@ module Api::V1::Pd::Application
     test 'does not send confirmation mail on unsuccessful create' do
       TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).never
       TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).never
+      Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
 
       sign_in @applicant
 
@@ -91,25 +92,39 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
-    test 'auto-scores on successful create' do
-      TEACHER_APPLICATION_CLASS.any_instance.expects(:auto_score!)
-
-      sign_in @applicant
-      put :create, params: @test_params
-    end
-
-    test 'assigns default workshop on successful create' do
-      TEACHER_APPLICATION_CLASS.any_instance.expects(:assign_default_workshop!)
-
-      sign_in @applicant
-      put :create, params: @test_params
-    end
-
     test 'updates user school info on successful create' do
       TEACHER_APPLICATION_CLASS.any_instance.expects(:update_user_school_info!)
 
       sign_in @applicant
       put :create, params: @test_params
+    end
+
+    test 'send_principal_approval queues up an email if none exist' do
+      sign_in @program_manager
+      assert_creates Pd::Application::Email do
+        post :send_principal_approval, params: {id: @application.id}
+        assert_response :success
+      end
+      email = Pd::Application::Email.last
+      assert_equal @application, email.application
+      assert_equal 'principal_approval', email.email_type
+    end
+
+    test 'send_principal_approval does nothing if an email has already been sent' do
+      Pd::Application::Email.create!(
+        application: @application,
+        application_status: @application.status,
+        email_type: 'principal_approval',
+        to: 'principal@ex.net',
+        created_at: Time.now,
+        sent_at: Time.now
+      )
+
+      sign_in @program_manager
+      assert_does_not_create Pd::Application::Email do
+        post :send_principal_approval, params: {id: @application.id}
+        assert_response :success
+      end
     end
   end
 end
