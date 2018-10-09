@@ -287,9 +287,9 @@ module Pd::Application
 
       workshop = create :pd_workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
       application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash,
-          regional_partner_workshop_ids: [workshop.id],
-          able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
+      build :pd_teacher1920_application_hash,
+        regional_partner_workshop_ids: [workshop.id],
+        able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
       )
 
       assert_equal workshop, application.get_first_selected_workshop
@@ -326,8 +326,8 @@ module Pd::Application
 
     test 'get_first_selected_workshop with no workshops returns nil' do
       application = create :pd_teacher1920_application, form_data_hash: (
-      build(:pd_teacher1920_application_hash, :with_multiple_workshops,
-        regional_partner_workshop_ids: []
+        build(:pd_teacher1920_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: []
         )
       )
       assert_nil application.get_first_selected_workshop
@@ -338,9 +338,10 @@ module Pd::Application
 
       workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, location_address: 'Buffalo, NY', sessions_from: Date.new(2019, 1, 1)
       application = create :pd_teacher1920_application, form_data_hash: (
-        build :pd_teacher1920_application_hash,
+        build(:pd_teacher1920_application_hash,
           regional_partner_workshop_ids: [workshop.id],
           able_to_attend_multiple: ['January 1-5, 2019 in Buffalo, NY']
+        )
       )
 
       workshop.destroy
@@ -923,6 +924,28 @@ module Pd::Application
       application.auto_score!
 
       assert_equal YES, JSON.parse(application.response_scores)['regional_partner_name']
+    end
+
+    test 'principal_approval' do
+      application = create :pd_teacher1920_application
+      assert_nil application.principal_approval
+
+      incomplete = "Incomplete - Principal email sent on Oct 8"
+      Timecop.freeze Date.new(2018, 10, 8) do
+        application.stubs(:deliver_email)
+        application.queue_email :principal_approval, deliver_now: true
+        assert_equal incomplete, application.reload.principal_approval
+      end
+
+      # even if it's not required, when an email was sent display incomplete
+      application.update!(principal_approval_not_required: true)
+      assert_equal incomplete, application.reload.principal_approval
+
+      application.emails.last.destroy
+      assert_equal 'Not required', application.reload.principal_approval
+
+      create :pd_principal_approval1920_application, teacher_application: application, approved: 'Yes'
+      assert_equal 'Complete - Yes', application.reload.principal_approval
     end
 
     private

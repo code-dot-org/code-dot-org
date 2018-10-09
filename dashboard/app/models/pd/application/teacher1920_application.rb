@@ -39,7 +39,10 @@ module Pd::Application
 
     validates_uniqueness_of :user_id
 
-    serialized_attrs %w(status_log)
+    serialized_attrs %w(
+      status_log
+      principal_approval_not_required
+    )
 
     # @override
     def self.statuses
@@ -97,6 +100,21 @@ module Pd::Application
 
       # email_type maps to the mailer action
       Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
+    end
+
+    def principal_approval
+      response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
+      return "Complete - #{response.full_answers[:do_you_approve]}" if response
+
+      principal_approval_email = emails.find_by(email_type: 'principal_approval')
+      if principal_approval_email
+        # Format sent date as short-month day, e.g. Oct 8
+        return "Incomplete - Principal email sent on #{principal_approval_email.sent_at.strftime('%b %-d')}"
+      end
+
+      return 'Not required' if principal_approval_not_required
+
+      nil
     end
 
     def formatted_teacher_email

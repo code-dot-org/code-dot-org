@@ -566,46 +566,52 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       }
     }
 
-    assert_equal(
-      {
-        'Pre Workshop' => {
-          response_count: 3,
-          general: {
-            'sampleMatrix_0' => {
-              'Strongly Agree' => 2,
-              'Disagree' => 1
-            },
-            'sampleMatrix_1' => {
-              'Agree' => 3,
-            },
-            'sampleScale' => {
-              2 => 1,
-              4 => 1
-            },
-            'sampleText' => ['Here are my thoughts', 'More thoughts']
-          }
-        },
-        'Day 1' => {
-          response_count: 0,
-          general: {
-            'sampleDailyScale' => {},
+    all_expected_results = {
+      'Pre Workshop' => {
+        response_count: 3,
+        general: {
+          'sampleMatrix_0' => {
+            'Strongly Agree' => 2,
+            'Disagree' => 1
           },
-          facilitator: {
-            'sampleFacilitatorText' => {
-              @workshop.facilitators.first.name => ['Great!', 'Great!', 'Pretty good!'],
-              @workshop.facilitators.second.name => ['Bad!', 'Bad!', 'Okay!']
-            },
-            'sampleFacilitatorScale' => {
-              @workshop.facilitators.first.name => {4 => 2, 3 => 1},
-              @workshop.facilitators.second.name => {3 => 1, 2 => 2}
-            }
-          }
+          'sampleMatrix_1' => {
+            'Agree' => 3,
+          },
+          'sampleScale' => {
+            2 => 1,
+            4 => 1
+          },
+          'sampleText' => ['Here are my thoughts', 'More thoughts']
+        }
+      },
+      'Day 1' => {
+        response_count: 0,
+        general: {
+          'sampleDailyScale' => {},
         },
-        'Day 2' => daily_expected_results,
-        'Day 3' => daily_expected_results,
-        'Day 4' => daily_expected_results,
-        'Day 5' => daily_expected_results
-      }, generate_workshops_survey_summary(@workshop, @expected_questions)
-    )
+        facilitator: {
+          'sampleFacilitatorText' => {
+            @workshop.facilitators.first.name => ['Great!', 'Great!', 'Pretty good!'],
+            @workshop.facilitators.second.name => ['Bad!', 'Bad!', 'Okay!']
+          },
+          'sampleFacilitatorScale' => {
+            @workshop.facilitators.first.name => {4 => 2, 3 => 1},
+            @workshop.facilitators.second.name => {3 => 1, 2 => 2}
+          }
+        }
+      },
+      'Day 2' => daily_expected_results,
+      'Day 3' => daily_expected_results,
+      'Day 4' => daily_expected_results,
+      'Day 5' => daily_expected_results
+    }
+
+    assert_equal(all_expected_results, generate_workshops_survey_summary(@workshop, @expected_questions))
+
+    stubs(:current_user).returns @workshop.facilitators.first
+    first_facilitator_expected_results = all_expected_results.deep_dup
+    first_facilitator_expected_results['Day 1'][:facilitator]['sampleFacilitatorText'].delete @workshop.facilitators.second.name
+    first_facilitator_expected_results['Day 1'][:facilitator]['sampleFacilitatorScale'].delete @workshop.facilitators.second.name
+    assert_equal(first_facilitator_expected_results, generate_workshops_survey_summary(@workshop, @expected_questions))
   end
 end
