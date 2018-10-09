@@ -20,14 +20,14 @@ module HocEventReview
     "HocSignup#{DCDO.get('hoc_year', 2017)}"
   end
 
-  def self.events_by_country(**rest)
+  def self.event_counts_by_country(**rest)
     events_query(rest).
       exclude(COUNTRY_CODE_COLUMN => 'US').
       group_and_count(COUNTRY_CODE_COLUMN.as(:country_code)).
       all
   end
 
-  def self.events_by_state(**rest)
+  def self.event_counts_by_state(**rest)
     country = 'US'
 
     events_query(rest).

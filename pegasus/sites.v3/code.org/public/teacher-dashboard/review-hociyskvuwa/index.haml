@@ -7,8 +7,8 @@ title: Review Hour of Code special events
   forbidden! unless dashboard_user[:user_type] == 'teacher'
 
   require pegasus_dir 'helper_modules/hoc_event_review'
-  events = HocEventReview.events_by_country(reviewed: false, special_events_only: true)
-  us_events = HocEventReview.events_by_state(reviewed: false, special_events_only: true)
+  countries = HocEventReview.event_counts_by_country(reviewed: false, special_events_only: true)
+  states = HocEventReview.event_counts_by_state(reviewed: false, special_events_only: true)
 
 %h1 Review Hour of Code special events
 
@@ -25,13 +25,13 @@ title: Review Hour of Code special events
     %a{href: "/teacher-dashboard/review-hociyskvuwa/us"}
       %span{style: "font-weight: bold;"} United States
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
-      -us_events.each do |event|
+      -states.each do |state|
         %li{class: "hoc-event-state"}
-          %a{href: "/teacher-dashboard/review-hociyskvuwa/us/#{event[:state_code].downcase}"}
-            = event[:state_code]
+          %a{href: "/teacher-dashboard/review-hociyskvuwa/us/#{state[:state_code].downcase}"}
+            = state[:state_code]
 
 %ul
-  -events.each do |event|
+  -countries.each do |country|
     %li{class: "hoc-event-country"}
-      %a{href: "/teacher-dashboard/review-hociyskvuwa/#{event[:country_code].downcase}"}
-        = country_name_from_code event[:country_code]
+      %a{href: "/teacher-dashboard/review-hociyskvuwa/#{country[:country_code].downcase}"}
+        = country_name_from_code country[:country_code]
