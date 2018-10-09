@@ -11,7 +11,7 @@ import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
-import {toggleGridOverlay, setSong} from './actions';
+import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
 import {
   cancelLocationSelection,
@@ -23,7 +23,7 @@ import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
 import Radium from "radium";
 import songLibrary from "../code-studio/songLibrary.json";
-import gamelabMsg from '@cdo/gamelab/locale';
+import * as danceRedux from "../dance/redux";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -51,7 +51,7 @@ const SongSelector = Radium(class extends React.Component {
   render() {
     return (
       <div>
-        <label><b>{gamelabMsg.selectSong()}</b></label>
+        <label><b>{i18n.selectSong()}</b></label>
         <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
           {Object.keys(songLibrary).map((option, i) => (
             <option key={i} value={option}>{songLibrary[option].title}</option>
@@ -249,5 +249,5 @@ export default connect(state => ({
   cancelPicker: () => dispatch(cancelLocationSelection()),
   updatePicker: loc => dispatch(updateLocation(loc)),
   selectPicker: loc => dispatch(selectLocation(loc)),
-  setSong: song => dispatch(setSong(song))
+  setSong: song => dispatch(danceRedux.setSong(song))
 }))(GameLabVisualizationColumn);
