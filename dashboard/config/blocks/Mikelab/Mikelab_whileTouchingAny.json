@@ -1,24 +1,24 @@
 {
-  "category": "Events",
+  "category": "While Events",
   "config": {
     "color": [
-      140,
-      1,
-      0.74
+      322,
+      0.9,
+      0.95
     ],
-    "func": "whenTouchesAny",
-    "blockText": "while{TARGET} is touching any sprite\n{STATEMENT}",
+    "func": "whileTouchingAny",
+    "blockText": "while{SPRITE} is touching any sprite\n{STATEMENT}",
     "args": [
       {
-        "name": "TARGET",
-        "type": "Sprite",
-        "defer": true
+        "name": "SPRITE",
+        "assignment": true,
+        "customInput": "spritePicker"
       },
       {
         "name": "STATEMENT",
         "statement": true
       }
     ],
-    "eventBlock": true
+    "eventLoopBlock": true
   }
 }

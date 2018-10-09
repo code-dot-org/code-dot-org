@@ -9,12 +9,13 @@ pt-BR:
         changePlace1ID: Mude o Id da sua tela aqui.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Clique no título de seu app
+        appLabIntro2_textColor: Role para baixo para alterar a "cor do texto"
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Clique no texto da história nesta tela
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Altera o número aqui
+        CSD_U3_variables: Altere o número aqui
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Altera o número aqui
+        CSD_U3_variables: Altere o número aqui
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Aqui está o código
       CSD U3 debug_2018_callout:
@@ -415,6 +416,10 @@ pt-BR:
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       courseF_playlab_brokenText_callout:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
+      courseF_playlab_variables1a_callout:
+        courseF_playlab_variables1a_1: A caixa de ferramentas foi organizada em categorias para tornar mais fácil encontrar os blocos que você precisa.
+      courseF_playlab_variables1a_2018_callout:
+        courseF_playlab_variables1a_1: A caixa de ferramentas foi organizada em categorias para tornar mais fácil encontrar os blocos que você precisa.
       courseF_playlab_variables2_callout:
         course_playlab_variables2_1: Assim é como se insere o valor da variável. Altere o texto ligado a esse bloco para alterar o que está sendo levado em conta na variável.
       courseF_playlab_variables5c RYAN Copy_callout:
@@ -427,6 +432,10 @@ pt-BR:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
       courseF_playlab_variables6c_2018_callout:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
+      courseF_playlab_variables7c_callout:
+        courseF_playlab_variables7c_1: Encontre o bloco `perguntar` aqui!
+      courseF_playlab_variables7c_2018_callout:
+        courseF_playlab_variables7c_1: Encontre o bloco `perguntar` aqui!
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
       courseF_playlab_variablesTemplate_2018_callout:

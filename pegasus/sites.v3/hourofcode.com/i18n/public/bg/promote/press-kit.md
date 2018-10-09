@@ -1,62 +1,86 @@
 ---
-title: <%= hoc_s(:title_press_kit) %>
+title: <%= hoc_s(:title_press_kit).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-## Как да привлечете вниманието на медиите към вашето Часът на кодирането събитие
+# How to attract media to your Hour of Code event
+
+### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
 *За всички запитвания от медиите, свържете се с <press@code.org>*
 
-### Ключови съвети
+---
+
+## Key Tips
 
 - Информирайте медиите две седмици преди Вашето събитие по електронната поща. Следете по имейл и телефон, ако не получите първоначален отговор.
 - Попитайте дали е възможно в училището да се правят снимки и дали може те да се споделят онлайн.
 - Пишете за инициативата на началната страница на вашия сайт и в училищния вестник. Публикувате информация за събитието и снимки на учебната дейност.
-- Споделете обновените си планове във Facebook и Twitter обявете вашите събития и публикувайте снимки по време на седмицата 5-11 декември. Използвайте hashtag **#HourOfCode** за да може Code.org да види и да популяризира събитията ви.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
-### Стъпка по стъпка ръководство:
+## Step-by-step guide
 
-**1. Планирайте Вашето събитие**
+### 1. Plan your event
 
 - План и програма на събитието.
-- Изпратете [писмо](<%= resolve_url('/promote/resources#sample-emails') %>) на родителите. Помолете ги да помогнат.
-- Изпратете [писмо](<%= resolve_url('/promote/resources#sample-emails') %>) за да поканите Вашия местен кмет, конгресмен, управител или влиятелен бизнесмен да присъства и да говори на учениците Ви.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents and ask them to spread the word.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - Организирайте групови дейности (като демонстриране на "unplugged" уроците без компютър), или покажете създадени от учениците дейности и ги оставете сами да ги представят.
-- Покажете [Code.org видео](<%= resolve_url('/') %>) или едно от [тези](<%= resolve_url('/promote/resources#videos') %>) за вдъхновение.
+- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these videos](<%= resolve_url('/promote/resources#videos') %>) to inspire students. <br />
 
-**2. Идентифицирайте специфични местни репортери, които пишат за образование или местни събития.**
+### 2. Identify specific reporters that cover education or local events
 
-Помислете за статия в местен вестник, ТВ предаване, радиостанция или блог.
+Like local newspapers, TV station or radio stations, or blogs. <br />
 
-Дайте онлайн връзка за информация на репортерите. Ако не можете да се свържете с конкретен репортер, потърсете съвет и информация в редакцията за да ви насочат.
+### 3. Contact local media
 
-**3. Свържете се с местните медии**
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](<%= resolve_url('/promote/press-kit#sample-emails') %>)**.
 
-Най-добрият начин да се свържите е по електронната поща. Писмото трябва да бъде кратко и съдържащо най-важното: Защо трябва хората да са заинтересувани от това събитие? Включете информация за контакт (включително тeлефонен номер) за тези, които ще бъдат на мястото по време на събитието. **Вижте [пробни изявления за медиите](<%= resolve_url('/promote/resources#sample-emails') %>):**
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-**4. Подгответе въпроси за Вашето училищно събитие. Ето някои примери:**
+### 4. Prepare to field questions about your school event. Here are some examples:
 
-*Защо училището Ви участва?*
+#### Защо училището Ви участва?
 
 Всички знаем, че е важно за учениците, да се научат как да навигират в днешния технологичен свят, въпреки това, много учители не са използвали компютърните науки и не знаят откъде да започнат. Това събитие е шанс за всички нас да се запознаем с компютърните науки.
 
-Надяваме се, че ще предизвикаме интерес в учениците да продължават да учат. Изследванията показват също така, че децата разбират понятия от програмирането, преди да се научат как да четат и пишат. В действителност, мозъците им са по-възприемчиви към компютърните езици в ранна възраст, точно както към чуждите езици.
+Надяваме се, че ще предизвикаме интерес в учениците да продължават да учат. Изследванията показват също така, че децата разбират понятия от програмирането, преди да се научат как да четат и пишат. В действителност, мозъците им са по-възприемчиви към компютърните езици в ранна възраст, точно както към чуждите езици. <br /> <br />
 
-*Защо това е важно?*
+#### Защо това е важно?
 
-Технологията е променя всеки отрасъл на планетата. През 2015 г., 7 милиона работни места в САЩ са в професии — включително изкуство и дизайн-изискващи умения в програмирането. Но в 75 процента от училищата в САЩ не се изучават компютърни науки. Време е да навлезнем в 21 век. Ние знаем, че независимо от това, какво ще изберат нашите ученици да учат -медицина, бизнес, политика или изкуства, те трябва да знаят как е изградена технологията, и това ще им даде увереност и ноу-хау, за да успеят.
+Технологията е променя всеки отрасъл на планетата. През 2015 г., 7 милиона работни места в САЩ са в професии — включително изкуство и дизайн-изискващи умения в програмирането. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Ние знаем, че независимо от това, какво ще изберат нашите ученици да учат -медицина, бизнес, политика или изкуства, те трябва да знаят как е изградена технологията, и това ще им даде увереност и ноу-хау, за да успеят. <br />
 
-**За повече информация и предложения, можете да използвате нашите материали**
+<a id="sample-emails"></a>
 
-"Часът на кода има за цел да демитологизира програмирането и да покаже, че компютърните науки не са ракетостроене, и всеки може да научи основите." казва Хади Партови, основател и главен изпълнителен директор на Code.org. "Над 100 милиона ученици по света са пробвали Часът на кода. Търсенето на специалисти по Компютърни Науки в 21в. е безгранично
+## Sample email to send to invite local media to your event
 
-**За Code.org**
+**Subject line**: Local school joins mission to introduce students to computer science
 
-Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броя на заетите жени и социално слабите ученици в програмирането. Неговата визия е, че всеки ученик във всяко училище трябва да има възможност да изучава компютърно програмиране. След като Code.org стартира кампанията пре 2013г.,до сега в нея са взели участие повече от 100 милиона ученици - организацията си парнира с 70 училищни района за разширяване изучаването на компютърните науки. Code.org се поддържа от благотворителни дарения от предприятия, фондации и щедри хора, включително Microsoft, Infosys фондация, САЩ, Фондация Балмър, Omidyar Network и др. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Добрата новина е, че ние сме на път да променим това.
+
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+
+Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+
+I look forward to being in touch. <br />
+
+## Additional details and a quote you can use in materials
+
+"Часът на кода има за цел да демитологизира програмирането и да покаже, че компютърните науки не са ракетостроене, и всеки може да научи основите." казва Хади Партови, основател и главен изпълнителен директор на Code.org. "Над 100 милиона ученици по света са пробвали Часът на кода. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+
+#### За Code.org
+
+Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броя на заетите жени и социално слабите ученици в програмирането. Its vision is that every student in every school has the opportunity to learn computer programming. След като Code.org стартира кампанията пре 2013г.,до сега в нея са взели участие повече от 100 милиона ученици - организацията си парнира с 70 училищни района за разширяване изучаването на компютърните науки. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
+Find more resources and sample emails [here](<%= resolve_url('/promote/resources#sample-emails') %>).
 
 <%= view :signup_button %>

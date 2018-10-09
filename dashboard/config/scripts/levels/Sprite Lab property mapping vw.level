@@ -47,6 +47,7 @@
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"mapProp\",\r\n    \"blockText\": \"setting {PROPERTY} to {VAL}\",\r\n    \"returnType\": \"Behavior\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"PROPERTY\",\r\n        \"options\": [\r\n          [\r\n            \"size\",\r\n            \"\\\"scale\\\"\"\r\n          ],\r\n          [\r\n            \"rotation\",\r\n            \"\\\"rotation\\\"\"\r\n          ],\r\n          [\r\n            \"x position\",\r\n            \"\\\"x\\\"\"\r\n          ],\r\n          [\r\n            \"y position\",\r\n            \"\\\"y\\\"\"\r\n          ],\r\n          [\r\n            \"movement direction\",\r\n            \"\\\"direction\\\"\"\r\n          ],\r\n          [\r\n            \"tint\",\r\n            \"\\\"tint\\\"\"\r\n          ]\r\n        ]\r\n      },\r\n      {\r\n        \"name\": \"VAL\"\r\n      }\r\n    ],\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
     "hide_custom_blocks": "false",
     "parent_level_id": 14417,
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

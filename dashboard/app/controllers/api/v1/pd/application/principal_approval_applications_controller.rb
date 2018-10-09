@@ -20,23 +20,27 @@ module Api::V1::Pd::Application
       # Sub out :: for : because "I don't know:" has a colon on the end
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
+      course = teacher_application.course
+      implementation_string = principal_response.values_at("#{course}_implementation".to_sym, "#{course}_implementation_other".to_sym).compact.join(" ")
+
       teacher_application.update_form_data_hash(
         {
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
-          diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
-          free_lunch_percent: principal_response[:free_lunch_percent],
-          underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
-          wont_replace_existing_course: replace_course_string,
-          can_pay_fee: principal_response[:pay_fee]
+          principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
+          principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
+          principal_implementation: implementation_string,
+          principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
+          principal_free_lunch_percent: principal_response[:free_lunch_percent],
+          principal_underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
+          principal_wont_replace_existing_course: replace_course_string,
+          principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
+          principal_send_ap_scores: principal_response[:send_ap_scores],
+          principal_pay_fee: principal_response[:pay_fee]
         }
       )
-      teacher_application.save
-      teacher_application.auto_score!
-
-      TEACHER_APPLICATION_MAILER_CLASS.principal_approval_received(
-        @application.teacher_application
-      ).deliver_now
+      teacher_application.save!
+      teacher_application.queue_email(:principal_approval_completed, deliver_now: true)
+      teacher_application.queue_email(:principal_approval_completed_partner, deliver_now: true)
     end
   end
 end

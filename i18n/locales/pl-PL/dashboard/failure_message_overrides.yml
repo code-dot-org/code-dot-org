@@ -34,6 +34,7 @@ pl:
       MC HOC 2016 New Walk_failure_message_override: "Aby otworzyć drzwi, naciśnij\nspację lub dotknij planszę stojąc twarzą do niej. Wejdź do niej, by kontynuować."
       MC HOC 2016 SCORE LEVEL_failure_message_override: "Jeśli masz kłopot z\noznaczeniem 5 Golemów, spróbuj zmienić wynik na 2 na oznaczenie."
       MC HOC 2016 Village Test_failure_message_override: "Musisz sprawić, by Żelazny Golem\ngonił i atakował zombie, by wygrać."
+      Valentine_playlab_01_failure_message_override: Prawie!  Spróbuj ponownie.
       WhileAdventure_failure_message_override: Gratulacje! Zebrałeś X monet!
       courseE_playLab_scaffold3_failure_message_override: Należy dodać dwie lub więcej nowych postaci do gry i zaprogramować je tak, żeby się poruszały.
       courseE_playLab_scaffold3_2018_failure_message_override: Należy dodać dwie lub więcej nowych postaci do gry i zaprogramować je tak, żeby się poruszały.

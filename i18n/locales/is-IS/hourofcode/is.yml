@@ -11,12 +11,21 @@ is:
   campaign_date_full: "5. - 11. desember"
   campaign_date_year: "2016"
   campaign_date_full_year: "5.-11. desember 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Taktu þátt í stærsta námsviðburði sögunnar %{campaign_date}'
   front_intro_default: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í 180+ löndum. Hver sem er, hvar sem er getur skipulagt Klukkustund kóðunar viðburð. Klukkustundar kennsluefni er tiltækt á yfir 45 tungumálum. Engin forkunnátta er nauðsynleg. <strong>Fyrir 4 til 104 ára.</strong>'
   front_watch_video: 'Horfa á nýja myndbandið'
   front_watch_regular_video: 'Horfa á myndbandið'
   front_volunteers: 'Sjálfboðaliðar með tæknikunnáttu óskast'
   front_start_learning: 'Byrja að læra'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Tilföng'
   header_menu_faq: 'Algengar spurningar'
   header_menu_how_to: 'Hvernig'
@@ -222,6 +231,8 @@ is:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Skipulegðu Klukkustund kóðunar %{campaign_date} og skráðu það hér.'
   signup_name_label: 'Nafn þitt'
   signup_name_error: 'Name is required.'
@@ -243,6 +254,11 @@ is:
   signup_your_event: 'Skráðu þinn viðburð'
   signup_host_an_hour: 'Halda klukkustund'
   signup_match_volunteer: 'Hjálpaðu mér að finna nálægan hugbúnaðarsérfræðing til að hvetja nemendur mína'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Ef þú ert að skipuleggja fleiri en einn viðburð, þarftu að senda inn sérstakt heiti eða netfang fyrir hvern. Við skráum hvert heiti/netfang sem aðeins einn viðburð."
   signup_registration_deadline: "Skráning Klukkustund kóðunar-viðburða lýkur 12. desember."
   signup_name_placeholder: 'Nafn þitt'
@@ -265,6 +281,7 @@ is:
   signup_thank_you_message: 'Við höfum sent þér tölvupóst til staðfestingar ásamt upplýsingum til að hjálpa þér að byrja.'
   map_title: "Kort fyrir Klukkustund kóðunar"
   map_header: '# Klukkustundir kóðunar um allan heim'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Sjá alla atburði'
   map_header_company: '# af skipuleggjendum fyrirtækja'
   map_header_country: '# á %{country}'
@@ -280,6 +297,7 @@ is:
   meta_tag_twitter_title: 'Klukkustund kóðunar er komin'
   meta_tag_twitter_description: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.'
   twitter_default_text: "Ég tek þátt í #HourOfCode þetta árið. Hvað með þig? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Spurt & svarað'
   hoc_faq_what_is_hoc_q: 'Hvað er Klukkustund kóðunar?'
   hoc_faq_what_is_hoc_a: "Klukkustund kóðunar er einnar klukkustundar kynning á tölvunarfræði sem er ætlað að svipta hulunni af forritun og sýna að allir geti lært grunnatriðin. <a href='http://code.org/learn'>Skoða kennsluefnið</a>."
@@ -333,8 +351,8 @@ is:
   stats_hoc: "Klukkustund kóðunar: 5 daga"
   stats_global: "Yfir 100m nemendur hafa prófað Klukkustund kóðunar"
   stats_girls_more: "Fleiri stúlkur prófuðu tölvunarfræði en síðastliðin 70 ár"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Á hverjum einasta degi var niðurstaðan sú sama &mdash; 100% virkni." - Nina Nichols Peery, kennari'
   stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana Alzate, 5. bekk'
   stats_michael: '"I hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra." - Michael Clark, kennari'
@@ -374,6 +392,7 @@ is:
   videos_obama_cs: Obama forseti um tölvunarfræði
   videos_anybody_can_learn: Allir geta lært (1 mín.)
   title_country_resources: Tilföng einstakra landa
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Klukkustund kóðunar - leiðarvísir fyrir skólaumdæmi
   title_how_to_events: Klukkustund kóðunar - leiðarvísir fyrir viðburði
   title_how_to_organizations: Að halda Klukkustund kóðunar - Félagasamtök
@@ -382,6 +401,7 @@ is:
   title_how_to_volunteers: Leiðarvísir fyrir sjálfboðaliða á Klukkustund kóðunar
   title_how_to_parents: Leiðbeiningar fyrir foreldra
   title_how_to: Leiðarvísir
+  title_international_partners: Contact International Partners
   title_press_release: Klukkustund kóðunar - Fjölmiðlaefni fyrir opinbera aðila
   title_op_ed: Dæmi um blaðagrein til stuðnings Viku tölvunarfræðináms og Klukkustund kóðunar
   title_press_kit: Fjölmiðlapakki

@@ -6,7 +6,7 @@ else
   bind "tcp://#{CDO.pegasus_host}:#{CDO.pegasus_port}"
 end
 
-workers CDO.pegasus_workers unless CDO.pegasus_workers.to_i < 2
+workers CDO.pegasus_workers
 threads 1, 5
 
 drain_on_shutdown
@@ -24,6 +24,7 @@ directory deploy_dir('pegasus')
 before_fork do
   PEGASUS_DB.disconnect
   DASHBOARD_DB.disconnect
+  Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 end
 
 on_worker_boot do |_index|

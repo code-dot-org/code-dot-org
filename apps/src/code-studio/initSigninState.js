@@ -19,10 +19,11 @@ export function getUserSignedInFromCookieAndDom() {
     return true;
   } else {
     // We did not have a cookie, meaning we're probably not signed in. Because
-    // we want ot replicate the logic in user_header.haml, also check to see if
+    // we want to replicate the logic in user_header.haml, also check to see if
     // the server had populated our DOM with a user id.
     const nameSpan = document.querySelector('.header_button.header_user.user_menu .user_name');
-    return !!(nameSpan && nameSpan.dataset.id);
+    const displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+    return !!((nameSpan && nameSpan.dataset.id) || (displayNameSpan && displayNameSpan.dataset.id));
   }
 }
 

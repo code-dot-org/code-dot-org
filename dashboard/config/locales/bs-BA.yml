@@ -213,7 +213,6 @@ bs:
         playlab: Napravi Aplikaciju
         artist: Nacrtaj Nešto
         applab: Napravi Aplikaciju
-      courses: Kursevi
       project_gallery: Projekti
       help_support: Pomoć i podrška
       documentation: Dokumentacija
@@ -227,6 +226,12 @@ bs:
       about_jobs: Poslovi
       help_us: Pomogni nam
       teach: Podučavaj
+    create_button:
+      create: Kreiraj
+      applab: Laboratorij za Aplikacije
+      artist: Umjetnik
+      playlab: Play Lab
+      flappy: Flappy
     user:
       classroom: Početna Stranica za Učitelje
       district_dashboard: Nadzorna ploča za distrikte

@@ -1,8 +1,40 @@
 /* global p5 */
 
-let osc, fft, peakDetect, customPeakDetects, songs, part;
+let osc, fft, peakDetect, customPeakDetects, songs, part, song_meta;
 
-export function createDanceAPI(p5Inst) {
+// Songs
+var songs_data = {
+  macklemore: {
+    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
+    bpm: 146,
+    delay: 0.2, // Seconds to delay before calculating measures
+    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
+    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
+  },
+  macklemore90: {
+    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
+    bpm: 146,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
+    chorus: [65.75] // Array of timestamps in seconds where choruses occur
+  },
+  hammer: {
+    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
+    bpm: 133,
+    delay: 2.32, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  },
+  peas: {
+    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
+    bpm: 128,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  }
+};
+
+export function createDanceAPI(gamelabP5) {
   osc = new p5.Oscillator();
   fft = new p5.FFT(0.7, 128);
   peakDetect = new p5.PeakDetect(3000, 5000, 0.1, 3);
@@ -57,7 +89,7 @@ export function createDanceAPI(p5Inst) {
     },
 
     song: {
-      load: song => songs.push(p5Inst.loadSound(song)) - 1,
+      load: () => songs.push(gamelabP5.loadSound(song_meta.url)) - 1,
       start: (n = 0) => songs[n].play(),
       stop: (n = 0) => songs[n].stop(),
       isPlaying: (n = 0) => songs[n].isPlaying(),
@@ -67,6 +99,7 @@ export function createDanceAPI(p5Inst) {
       addCue: (n, ...args) => songs[n].addCue(...args),
       clearCues: (n = 0) => songs[n].clearCues(),
       setVolume: (n = 0, vol, rampTime) => songs[n].setVolume(vol, rampTime),
+      songData: () => song_meta,
     },
 
     metronome: {
@@ -83,7 +116,10 @@ export function teardown() {
     return;
   }
 
-  songs.forEach(song => song.stop());
+  songs.forEach(song => {
+    song.clearCues();
+    song.stop();
+  });
   songs.length = 0;
   customPeakDetects.length = 0;
   peakDetect = null;
@@ -93,4 +129,8 @@ export function teardown() {
   part.stop();
   part.metro.clock.dispose();
   part = null;
+}
+
+export function setSong(song) {
+  song_meta = songs_data[song];
 }

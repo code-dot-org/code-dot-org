@@ -256,9 +256,7 @@ is:
         applab: 'Búa til forrit í App Lab'
         gamelab: 'Búa til Leikjasmiðjuverkefni'
         weblab: 'Búa til Vefsmiðju (beta) verkefni'
-      home: "Forsíða"
       my_dashboard: "Stjórnborðið mitt"
-      courses: "Námskeið"
       course_catalog: "Námskeiðalisti"
       project_gallery: "Verkefni"
       sections: "Hópar"
@@ -293,6 +291,14 @@ is:
       help_us: "Hjálpaðu"
       teach: "Kenndu"
       about: "Um"
+    create_button:
+      create: 'Búa til'
+      applab: 'Appsmiðja'
+      artist: 'Listamaður'
+      gamelab: 'Leikjasmiðjan'
+      playlab: 'Leikjasmiðja'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Heimasíða kennara'
       district_dashboard: 'Stjórnborð umdæmis'
@@ -303,7 +309,6 @@ is:
       signin: 'Innskráning'
       signup: 'Búa til aðgang'
       already_registered: 'Þegar skráð/ur?'
-      pair_programming: 'Félagaforritun'
       team: 'Félagar'
       driver: 'Ökumaður'
       navigator: 'Leiðsögumaður'

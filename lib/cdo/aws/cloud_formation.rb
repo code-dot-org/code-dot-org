@@ -188,10 +188,6 @@ module AWS
             {
               key: 'environment',
               value: rack_env
-            },
-            {
-              key: 'owner',
-              value: Aws::STS::Client.new.get_caller_identity.arn
             }
           ],
         }.merge(string_or_url(template)).tap do |options|
@@ -200,6 +196,12 @@ module AWS
               CAPABILITY_IAM
               CAPABILITY_NAMED_IAM
             ]
+          end
+          if rack_env?(:adhoc)
+            options[:tags].push(
+              key: 'owner',
+              value: Aws::STS::Client.new.get_caller_identity.arn
+            )
           end
         end
       end

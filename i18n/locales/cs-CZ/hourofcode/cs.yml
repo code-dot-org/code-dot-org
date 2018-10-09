@@ -11,12 +11,21 @@ cs:
   campaign_date_full: "Prosinec 7-13"
   campaign_date_year: "2016"
   campaign_date_full_year: "Prosinec 5.-11, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Připojte se k největší vzdělávací akce v dějinách, Prosinec 7-13, 2015'
   front_intro_default: 'Hodina kódu je celosvětová akce, které se účastní desítky milionů žáků z více než 180 zemí světa. Kdokoliv může zorganizovat svoji akci v rámci Hodiny kódu. Jsou k dispozici jednohodinové výukové programy. Nejsou požadované žádné předchozí zkušenosti. <strong>Určeno pro věk od 4 do 104.</strong>'
   front_watch_video: 'Podívejte se na nové video'
   front_watch_regular_video: 'Podívejte se na video'
   front_volunteers: 'Hledáme technické dobrovolníky'
   front_start_learning: 'Začněte se učit'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Zdroje'
   header_menu_faq: 'Časté otázky'
   header_menu_how_to: 'Návody'
@@ -32,17 +41,17 @@ cs:
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
   company_gsusa: Girl Scouts of America
-  company_khanacademy: Khan Academy
+  company_khanacademy: Khanova Akademie
   company_kipp: KIPP
   company_mesa: Mathematics Engineering Science Achievement
   company_napcs: National Alliance of Public Charter Schools
   company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
+  company_teachforall: Výuka pro všechny
   company_teachforamerica: Teach for America
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
+  company_afterschool: po škole
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -73,7 +82,7 @@ cs:
   company_disney: Disney
   company_dpsk12: Denver Public Schools
   company_dcsdk12: Douglas County Schools
-  company_dpsnc: Durham Public Schools
+  company_dpsnc: Veřejné školy v Durhamu
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
@@ -222,6 +231,8 @@ cs:
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Zaregistrujte se zde a zorganizujte Hodinu kódu během 7. - 13. prosince. (%{campaign_date})'
   signup_name_label: 'Vaše jméno'
   signup_name_error: 'Jméno je vyžadováno.'
@@ -243,6 +254,11 @@ cs:
   signup_your_event: 'Zaregistrujte svoji akci'
   signup_host_an_hour: 'Hostovat hodinu'
   signup_match_volunteer: 'Pomozte mi najít místního experta, aby inspiroval mé studenty'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Pokud pořádáte více událostí, zvolte prosím jiné jméno nebo email pro každou akci. Počítáme pouze jednu událost na jméno a email."
   signup_registration_deadline: "Registrace do Hodiny Kódu končí 11. prosince."
   signup_name_placeholder: 'Vaše jméno'
@@ -265,6 +281,7 @@ cs:
   signup_thank_you_message: 'Zaslali jsme vám potvrzovací e-mail s informacemi, které vám pomohou začít akci.'
   map_title: "Mapa Hodiny kódu"
   map_header: '# akcí Hodiny kódu na celém světě'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Zobrazit všechny události'
   map_header_company: '# od firemních organizátorů'
   map_header_country: '# v České republice (%{country})'
@@ -280,6 +297,7 @@ cs:
   meta_tag_twitter_title: 'Hodina kódu se blíží'
   meta_tag_twitter_description: 'Hodina Kódu je celosvětové hnutí, do kterého se zapojily desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od 4 do 104 let.'
   twitter_default_text: "Účastním se letošní akce #HourOfCode, co ty? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Nejčastější dotazy'
   hoc_faq_what_is_hoc_q: 'Co je Hodina kódu? '
   hoc_faq_what_is_hoc_a: "Hodina kódu je hodinovým úvodem do informatiky, který má za cíl přiblížit programování a ukázat, že každý se může naučit jeho základy. <a href='%{codeorg_url}'> Podívejte se na kurzy</a>."
@@ -333,8 +351,8 @@ cs:
   stats_hoc: "Hodina Kódu: 5 dnů"
   stats_global: "Přes 100M studentů zkusilo Hodinu kódu"
   stats_girls_more: "Informatiku si vyzkoušelo více dívek než za posledních 70 let"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Každý den přinesl stejné výsledky&mdash; 100% zapojení." - Nina Nichols Peery, učitelka'
   stats_student: '„Věděla jsem, že to byla šance <b>jednou za život</b>.“ - Mariana Alzate, žákyně 5. třídy'
   stats_michael: '„<b>Ještě nikdy</b> jsem neviděl své žáky tak nadšené při učení.“ - Michael Clark, učitel'
@@ -374,6 +392,7 @@ cs:
   videos_obama_cs: President Obama o informatice
   videos_anybody_can_learn: Každý se může učit (1 min)
   title_country_resources: Prostředky specifické pro zemi
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Návod Hodiny kódu pro území
   title_how_to_events: Jak na události Hodiny kódu
   title_how_to_organizations: Jak uspořádat hodinu kódu - Organizace
@@ -382,6 +401,7 @@ cs:
   title_how_to_volunteers: Návod pro dobrovolníky Hodiny kódu
   title_how_to_parents: How-to guide for parents
   title_how_to: Návod
+  title_international_partners: Contact International Partners
   title_press_release: Tisková zpráva hodiny kódu pro zvolené úředníky
   title_op_ed: Vzor textu, který podporuje Týden vědy a Hodinu kódu
   title_press_kit: Pro tisk

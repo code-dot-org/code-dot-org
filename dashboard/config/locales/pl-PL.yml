@@ -312,9 +312,7 @@ pl:
         applab: Utwórz aplikację w App Lab
         gamelab: Utwórz projekt w Game Lab
         weblab: Wykonaj projekt Laboratorium Sieci (beta)
-      home: Strona główna
       my_dashboard: Pulpit
-      courses: Kursy
       course_catalog: Katalog Kursów
       project_gallery: Galeria Projektów
       sections: Sekcje
@@ -349,6 +347,14 @@ pl:
       help_us: Pomóż nam
       teach: Ucz
       about: O programie
+    create_button:
+      create: Utwórz
+      applab: App Lab
+      artist: Artysta
+      gamelab: Laboratorium Gier (Game Lab)
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     user:
       classroom: Domowa strona nauczyciela
       district_dashboard: Panel dzielnicy/okręgu
@@ -359,7 +365,6 @@ pl:
       signin: Zaloguj się
       signup: Załóż konto
       already_registered: Czy jesteś Już zarejestrowany?
-      pair_programming: Programowanie w parach
       team: Zespół
       driver: Kierowca
       navigator: Nawigator

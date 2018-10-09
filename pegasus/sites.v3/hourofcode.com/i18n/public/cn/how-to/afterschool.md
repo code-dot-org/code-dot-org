@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
@@ -7,23 +7,25 @@ nav: how_to_nav
 
 # 如何在课后及兴趣班中讲授编程一小时
 
-参与活动，并用下面的步骤向学生们介绍他们第一个小时的计算机科学。 编程一小时的课程哪怕是对初学者来说都非常容易上手！ If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### 参与活动，并用下面的步骤向学生们介绍他们第一个小时的计算机科学。 编程一小时的课程哪怕是对初学者来说都非常容易上手！ 如果你需要额外的帮助，你可以寻找[本地志愿者](<%= codeorg_url('/volunteer/local') %>)来协助开展课后“编程一小时”。
+
+---
 
 ## 1. 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. 请选择一个教程
 
-我们将为所有年龄段的参与者提供丰富多彩的[一小时课程](<%= resolve_url('/learn') %>)内容，而这些内容均是由我们的志愿者编制的。 [点击这里试一试！](<%= resolve_url('/learn') %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [点击这里试一试！](<%= resolve_url('/learn') %>)
 
-对组织者来说，**所有的编程一小时课程**都不需要额外再做其他准备，可以让参与者依照他们自己的进度和技术水平自我学习。
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**需要编程一小时的课外活动大纲？** 看看这个[模版](/files/AfterschoolEducatorLessonPlanOutline.docx)吧
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. 推广你的编程一小时活动
 
-您可以用[这些工具](<%= resolve_url('/promote/resources') %>) 来推广您的编程一小时课程，并鼓励其他人来举办他们自己的活动。
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
 ## 4. 您所需的教学设备——电脑不是必需的
 
@@ -34,8 +36,6 @@ nav: how_to_nav
 如果教程包含音频，那么应提前准备耳机，或者让学生自带耳机。
 
 **电脑不够？**采取[搭档合作编程](https://www.youtube.com/watch?v=vgkahOzFH2Q)的方式。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们将明白编程也是一种社交和协作。
-
-<img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. 用一段鼓舞人心的视频来开始你的编程一小时
 
@@ -48,78 +48,38 @@ nav: how_to_nav
 - [总统奥巴马号召所有学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
 - 更多励志的视频可以[ 点此查看](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 
-**哪怕你对计算机科学一无所知也没关系。这里是一些介绍你可以学习编程一小时的一些想法。**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - 用无论男孩还是女孩都会关心的例子来阐述技术是如何影响我们的生活的（比如一些用于挽救生命、帮助人类、沟通你我的一些软件和技术之类的例子）。
 - 列举日常生活中需要使用程序的情况。
 - [这里](<%= resolve_url('https://code.org/girls') %>)是一些能让女孩对计算机科学感兴趣的小技巧。
 
-**需要更多的指南吗？**，请点击下载[课程计划模板](/files/AfterschoolEducatorLessonPlanOutline.docx)
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. 编程！
 
-**在活动中指导参与者**
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-- 将教程的链接写在白板上。从[你所选择教程的信息](<%= resolve_url('/learn') %>)列表中的参与者人数下找到该链接。
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**当有人遇到困难的时候, 你可以回答:**
-
-- "我也不知道。让我们一起来找到问题的答案吧"。
-- “科学技术并不总是同我们期望的方式一样工作。”
-- “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；你不会马上就说得很流利。”
-
-**如果某些学生完成得比较快可以怎样做？**
-
-- 鼓励他们在[hourofcode.com/learn](<%= resolve_url('/learn') %>) 里尝试另一项活动。
-- 或者，让那些更早完成课程的人来帮助有困难的人。
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. 庆祝
 
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
 - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - 为你的学生[打印"我学过《编程一小时》!"](<%= resolve_url('/promote/resources#stickers') %>) 贴纸。
-- 为你的学校[预订定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 ## 适用于教育工作者的其他编程一小时的资源
 
-- 参照以往编程一小时组织者提供的 [最佳实践 ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- 观看我们为教育工作者主办的编程一小时[在线会议回放](https://youtu.be/EJeMeSW2-Mw)
-- 查看[编程一小时论坛](http://forum.code.org/c/plc/hour-of-code)，从其他组织者身上听取意见、吸收经验、获得帮助。 <% if @country == 'us' %>
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - 阅读 [编程一小时常见问题](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %>
 
 ## 编程一小时之后该做什么？
 
-编程一小时只是学习技术的工作原理和创建软件应用旅程的第一步。继续这个旅程：
-
-- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
-- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](<%= codeorg_url('/learn/beyond') %>)!
 
 <%= view :signup_button %>

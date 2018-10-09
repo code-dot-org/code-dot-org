@@ -16,7 +16,7 @@
   %h2
     =category[:title]
   %p
-    = view :about_donors_image, supporters: DB[:cdo_donors].where(level_s: category[:level]).where("show_s != 'none'"), size: category[:size]
+    = view :about_donors_image, supporters: DB[:cdo_donors].where(level_s: category[:level]).not(show_s: 'none'), size: category[:size]
 
 - categories = []
 - categories << { level: 'bronze', title: 'Bronze Supporters ($100,000+ contribution)' }
@@ -25,7 +25,7 @@
   %h2
     =category[:title]
   %p
-    = view :about_donors_text, supporters: DB[:cdo_donors].where(level_s: category[:level]).where("show_s != 'none'")
+    = view :about_donors_text, supporters: DB[:cdo_donors].where(level_s: category[:level]).not(show_s: 'none')
 
 %hr
 %a{href:"/about/donors-other"}

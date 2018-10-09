@@ -201,9 +201,15 @@ sq:
         playlab: 'Bëj një Aplikacion Play Lab'
         artist: 'Vizato Diçka'
         applab: 'Bëj një Aplikacion App Lab'
-      courses: "Kurset"
       project_gallery: "Projekte"
       educate_hoc: "Ora e Kodimit"
+    create_button:
+      create: 'Krijo'
+      applab: 'Laboratori i Aplikacioneve'
+      artist: 'Artisti'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     user:
       classroom: 'Faqja Kryesore e Mësuesit'
       district_dashboard: 'Pulti i Qarkut'
@@ -214,7 +220,6 @@ sq:
       signin: 'Futu'
       signup: 'Krijo një llogari'
       already_registered: 'Jeni i rregistruar?'
-      pair_programming: 'Programim në çift'
       team: 'Skuadra'
       driver: 'Përdorues'
       navigator: 'Lundrues'

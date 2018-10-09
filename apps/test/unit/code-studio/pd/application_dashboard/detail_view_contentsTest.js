@@ -86,7 +86,7 @@ describe("DetailViewContents", () => {
   });
 
   const expectedTestData = [
-    {type: 'Teacher', applicationSpecificQuestions: 5, scoredQuestions: 2},
+    {type: 'Teacher', applicationSpecificQuestions: 7, scoredQuestions: 2},
     {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0}
   ];
 
@@ -237,10 +237,8 @@ describe("DetailViewContents", () => {
         detailView.find('#DetailViewHeader Button').last().simulate('click');
 
         // lock button is disabled for all statuses except "finalized"
-        ApplicationStatuses[applicationData.type.toLowerCase()].forEach((status) => {
-          // statuses in the constant are Capitalized, values in the form itself
-          // are lowercase
-          status = status.toLowerCase();
+        // statuses in the constant are an object {value: label}
+        Object.keys(ApplicationStatuses[applicationData.type.toLowerCase()]).forEach((status) => {
           const statusIsFinal = ApplicationFinalStatuses.includes(status);
           detailView
             .find('#DetailViewHeader select')

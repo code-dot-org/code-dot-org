@@ -118,16 +118,22 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
       const currentAnswer = subLevel.getResult(true);
       const levelResult = replaceEmoji(currentAnswer.response.toString());
       const valid = currentAnswer.valid;
+      const optional = subLevel.getOptional && subLevel.getOptional();
       lastAttempt[levelId] = {
         result: levelResult,
-        valid: valid
+        valid,
+        optional,
       };
     });
 
-    var validCount = 0;
-    for (var level in lastAttempt) {
-      if (lastAttempt[level].valid) {
-        validCount ++;
+    let validCount = 0;
+    let requiredCount = 0;
+    for (let level in lastAttempt) {
+      if (!lastAttempt[level].optional) {
+        requiredCount++;
+        if (lastAttempt[level].valid) {
+          validCount ++;
+        }
       }
     }
 
@@ -135,7 +141,7 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
     const isSurvey = appOptions.level.anonymous === true ||
       appOptions.level.anonymous === 'true';
     title = isSurvey ? i18n.submitSurvey() : i18n.submitAssessment();
-    if (validCount === levelCount) {
+    if (validCount === requiredCount) {
       id = "levelgroup-submit-complete-dialogcontent";
       body = isSurvey ? i18n.submittableSurveyComplete() : i18n.submittableComplete();
     } else {

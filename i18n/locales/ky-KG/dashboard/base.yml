@@ -64,6 +64,11 @@ ky:
       my_dashboard: "Менин тактам"
       educate_hoc: "Код сааты"
       about_news: "Жаңылыктар"
+    create_button:
+      create: 'Түзүү'
+      applab: 'App Lab'
+      artist: 'Сүрөтчү'
+      gamelab: 'Оюн лабы'
     user:
       signin: 'Кирүү'
   teacher:

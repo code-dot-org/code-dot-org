@@ -23,7 +23,35 @@ hoc_event as (
     from pegasus_pii.forms
     where kind = 'HocSignup2017'
     and json_extract_path_text(data_text, 'nces_school_s') not in ('','-1')
-  )
+  ),
+csf_script_ids as
+  (select  
+    sc.id as script_id,
+    coalesce(sn.script_name_short, sc.name) script_name
+    FROM 
+    dashboard_production.scripts sc
+    left join analysis.script_names sn on sn.versioned_script_id = sc.id
+  where 
+    sc.name in 
+    (
+      '20-hour',
+      'course1',
+      'course2',
+      'course3',
+      'course4'
+    )
+    or sn.script_name_long in 
+    (
+      'Course A',
+      'Course B',
+      'Course C',
+      'Course D',
+      'Course E',
+      'Course F',
+      'Express',
+      'Pre-Express'
+    )
+   )
   SELECT ss.school_id,
          rpm.regional_partner_id::varchar,
          case when rp.name = 'mindSpark Learning' then 'mindSpark Learning and Colorado Education Initiative' else rp.name end as regional_partner,
@@ -44,9 +72,9 @@ hoc_event as (
          -- teacher counts
          COUNT(DISTINCT u.studio_person_id) teachers,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN u.studio_person_id ELSE NULL END) teachers_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN u.studio_person_id ELSE NULL END) teachers_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (223, 187, 181, 169, 221, 189) THEN u.studio_person_id ELSE NULL END) teachers_csd_l365,          
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN u.studio_person_id ELSE NULL END) teachers_csp_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select script_id from csf_script_ids) THEN u.studio_person_id ELSE NULL END) teachers_csf_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd')) THEN u.studio_person_id ELSE NULL END) teachers_csd_l365,          
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csp')) THEN u.studio_person_id ELSE NULL END) teachers_csp_l365,
          -- pd'd teacher counts
          COUNT(DISTINCT CASE WHEN ttf.user_id IS NOT NULL THEN ttf.user_id ELSE NULL END) teachers_csf_pd,        
          COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Discoveries' THEN ttpd.studio_person_id ELSE NULL END) teachers_csd_pd,
@@ -54,9 +82,9 @@ hoc_event as (
          --student counts
          COUNT(DISTINCT f.student_user_id) students_code,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN f.student_user_id ELSE NULL END) students_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (223, 187, 181, 169, 221, 189) THEN f.student_user_id ELSE NULL END) students_csd_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp_l365,      
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select script_id from csf_script_ids) THEN f.student_user_id ELSE NULL END) students_csf_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd')) THEN f.student_user_id ELSE NULL END) students_csd_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csp')) THEN f.student_user_id ELSE NULL END) students_csp_l365,      
          COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
          -- pledge and HOC
          MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,

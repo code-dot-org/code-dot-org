@@ -362,7 +362,7 @@ img.video_thumbnail {
       font-size: 30px;
     }
 
-    .user_options, {
+    .user_options {
       position: absolute;
       top: 55px;
       right: 55px;
@@ -377,9 +377,10 @@ img.video_thumbnail {
       font-size: 14px;
       background-color: $white;
       width: 200px;
+      z-index: 10000;
       a {
         color: $teal;
-        font-weight: 900;
+        font-family: $gotham-bold;
         height: 70px;
         width: 198px;
         float: left;
@@ -389,7 +390,7 @@ img.video_thumbnail {
       }
       a:hover {
         color: $teal;
-        font-weight: 900;
+        font-family: $gotham-bold;
         background-color: $white;
         cursor: pointer;
       }
@@ -1641,6 +1642,98 @@ a.download-video {
 }
 
 #signup, #school-info-modal {
+  // NEW SIGN-UP FORM
+  .signup {
+    margin: 20px;
+  }
+  .finish-signup {
+    width: 800px;
+  }
+  .signup, .finish-signup {
+    $school-info-background: #f7f7f7;
+    $school-info-border-color: #e5e5e5;
+    #school-info-inputs {
+      width: 100%;
+      background-color: $school-info-background;
+      border: 1px solid $school-info-border-color;
+
+      h5 {
+        font-weight: bold;
+      }
+      hr {
+        border: 1px solid $school-info-border-color;
+      }
+    }
+    .checkbox {
+      display: flex;
+      width: 600px;
+      padding: 10px;
+
+      label {
+        padding-left: 10px;
+      }
+    }
+    .radio {
+      display: flex;
+
+      input[type=radio] {
+        margin-right: 5px;
+      }
+    }
+    .field-row {
+      display: flex;
+      align-items: center;
+    }
+    .field {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .field-sm {
+      width: 400px;
+    }
+    .field_with_errors label {
+      color: $black;
+    }
+    .field_with_errors > input,
+    .field_with_errors > select {
+      background-color: $white;
+    }
+    .error {
+      color: $red;
+      font-style: italic;
+    }
+    .padded {
+      padding-left: 10px;
+      max-width: 150px;
+    }
+    select, input[type=text], input[type=password] {
+      height: 36px;
+      width: 350px;
+    }
+    input[type=text], input[type=password] {
+      width: 338px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .input-sm input {
+      width: 250px;
+    }
+    #school-type {
+      width: 370px !important;
+    }
+    #submit {
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+      font-weight: bolder;
+      min-width: 400px;
+      margin: 5px 0;
+    }
+  }
+
+  // OLD SIGN-UP FORM
   .signupform {
     padding: 20px;
     margin-bottom: 0;

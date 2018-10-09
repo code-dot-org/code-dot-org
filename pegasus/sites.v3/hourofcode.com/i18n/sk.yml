@@ -11,12 +11,21 @@ sk:
   campaign_date_full: "4-10. december"
   campaign_date_year: "2017"
   campaign_date_full_year: "4.-10. december 2017"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Pripojte sa k najväčšej vzdelávacej udalosti v dejinách, %{campaign_date}'
   front_intro_default: 'Hodina kódu je celosvetové hnutie, ktorého sa zúčastňujú desiatky miliónov študentov z viac ako 180 zemí sveta. Ktokoľvek, kdekoľvek môže zorganizovať svoju udalosť v rámci Hodiny kódu. K dispozícii sú jednohodinové výukové programy vo viac ako 45 jazykoch. Nie sú požadované žiadne predchádzajúce skúsenosti <strong>Aktivity sú určené pre vek od 4 do 104 rokov.</strong>'
   front_watch_video: 'Pozrite si nové video'
   front_watch_regular_video: 'Pozrite si video'
   front_volunteers: 'Hľadáme technicky zdatných dobrovoľníkov'
   front_start_learning: 'Začnite sa učiť'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Zdroje'
   header_menu_faq: 'Časté otázky'
   header_menu_how_to: 'Ako na to'
@@ -222,6 +231,8 @@ sk:
   front_join_us_challenge: "Vyhrajte video konferenciu s celebritou pre celú Vašu triedu!"
   front_join_us_learn_more: "Viac info"
   signup_closed: 'Registrácia pre Hour of Code je nateraz uzavretá. Skontrolujte prosím znova v Októbri možnosť prihlásenia sa do ďalšej Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Zorganizujte Hodinu kódu počas %{campaign_date} a zaregistrujte sa tu.'
   signup_name_label: 'Vaše meno'
   signup_name_error: 'Meno je povinné pole.'
@@ -243,6 +254,11 @@ sk:
   signup_your_event: 'Zaregistrujte Vašu udalosť'
   signup_host_an_hour: 'Pripraviť hodinu'
   signup_match_volunteer: 'Pomôžte mi nájsť softvérových inžinierov z okolia pre inšpiráciu študentov'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Ak organizujete viacero udalostí, prosím zadajte jedinečný názov alebo e-mail pre každú z nich. Môžeme započítať iba jednu udalosť prislúchajúcu k menu alebo e-mailu."
   signup_registration_deadline: "Registrácia na Hodinu kódu sa uzavrie 12. decembra."
   signup_name_placeholder: 'Vaše meno'
@@ -265,6 +281,7 @@ sk:
   signup_thank_you_message: 'Poslali sme Vám potvrdzujúci email s informáciami, ktoré vám pomôžu začať.'
   map_title: "Hodina kódu mapa"
   map_header: '# Udalosti Hodiny kódu po celom svete'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Zobraziť všetky udalosti'
   map_header_company: '# podľa názvu organizátora'
   map_header_country: '# v %{country}'
@@ -280,6 +297,7 @@ sk:
   meta_tag_twitter_title: 'Každé dieťa si zaslúži príležitosť'
   meta_tag_twitter_description: 'Hodina kódu je globálne hnutie, ktoré má dosah až na desiatky miliónov študentov vo viac ako 180 krajinách a je vo viac ako 45 jazykoch. Pre vek od 4 do 104 rokov.'
   twitter_default_text: "Zúčastňujem sa tohtoročnej akcie #HodinaKodu, čo ty? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Najčastejšie otázky'
   hoc_faq_what_is_hoc_q: 'Čo je Hodina kódu? '
   hoc_faq_what_is_hoc_a: "Projekt Hodina kódu začal ako hodinový úvod do informatiky, navrhnutý demystifikovať \"kód\", ukázať, že ktokoľvek sa môže naučiť základy a rozšíriť účasť v oblasti informatiky. Odvtedy sa celosvetové úsilie na oslavu informatiky, počnúc jednou hodinou programovacích aktivít rozširuje do všetkých spoločenských oblastí. Pozrite sa na <a href='%{tutorials}'> návody a aktivity</a>. Táto kampaň je podporovaná viac ako <a href='%{partners}'> 400 partnermi</a> a 200.000 pedagógmi po celom svete."
@@ -374,6 +392,7 @@ sk:
   videos_obama_cs: Prezident Obama na informatike
   videos_anybody_can_learn: Každý sa môže učiť (1 min)
   title_country_resources: Špecifické zdroje pre krajinu
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hodina kódu Návody pre kraje
   title_how_to_events: Ako na udalosť Hodina hódu
   title_how_to_organizations: Ako zogranizovať Hodinu kódu - Organizácie
@@ -382,6 +401,7 @@ sk:
   title_how_to_volunteers: Príručka - Ako na to pre dobrovoľníkov Hodiny kódu
   title_how_to_parents: Ako na to? Návod pre rodičov
   title_how_to: Príručka - Ako na to
+  title_international_partners: Contact International Partners
   title_press_release: Oficiálna tlačová správa Hodiny kódu
   title_op_ed: Ukážka podporujúca Týždeň vyučovania informatiky a Hodiny kódu
   title_press_kit: Press balíček

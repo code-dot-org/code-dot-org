@@ -244,9 +244,7 @@ et:
         playlab: Loo Play Lab rakendus
         artist: Joonista midagi
         applab: Loo App Lab rakendus
-      home: Kodu
       my_dashboard: Minu töölaud
-      courses: Kursused
       course_catalog: Kursuste kataloog
       project_gallery: Projektid
       help_support: Abi & Klienditugi
@@ -257,6 +255,14 @@ et:
       educate_hoc: KoodiTund
       teach: Õpeta
       about: Info
+    create_button:
+      create: Loo
+      applab: App Lab
+      artist: Kunstnik
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -267,7 +273,6 @@ et:
       signin: Logi sisse
       signup: Loo konto
       already_registered: Oled juba liitunud?
-      pair_programming: Paarisprogrammeerimine
       team: Võistkond
       driver: Sisse logitud
       navigator: Parnter

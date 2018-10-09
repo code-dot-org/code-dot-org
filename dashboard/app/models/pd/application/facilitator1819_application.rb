@@ -2,25 +2,24 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                  :integer          not null, primary key
+#  user_id             :integer
+#  type                :string(255)      not null
+#  application_year    :string(255)      not null
+#  application_type    :string(255)      not null
+#  regional_partner_id :integer
+#  status              :string(255)
+#  locked_at           :datetime
+#  notes               :text(65535)
+#  form_data           :text(65535)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  course              :string(255)
+#  response_scores     :text(65535)
+#  application_guid    :string(255)
+#  accepted_at         :datetime
+#  properties          :text(65535)
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -49,19 +48,14 @@ module Pd::Application
       class_name: 'Pd::FitWeekend1819Registration',
       foreign_key: 'pd_application_id'
 
-    def send_decision_notification_email
-      # Accepted, declined, and waitlisted are the only valid "final" states;
-      # all other states shouldn't need emails, and we plan to send "Accepted"
-      # emails manually
-      return unless %w(declined waitlisted).include?(status)
-
-      Pd::Application::Facilitator1819ApplicationMailer.send(status, self).deliver_now
-      update!(decision_notification_email_sent_at: Time.zone.now)
-    end
-
     def set_type_and_year
       self.application_year = YEAR_18_19
       self.application_type = FACILITATOR_APPLICATION
+    end
+
+    # override
+    def self.statuses
+      super + %w(interview)
     end
 
     PROGRAMS = {

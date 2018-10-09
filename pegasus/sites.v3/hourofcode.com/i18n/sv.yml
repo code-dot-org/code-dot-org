@@ -11,12 +11,21 @@
   campaign_date_full: "5-11 december"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 december 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Delta i det största utbildningsevenemanget någonsin, 5-11 december 2016'
   front_intro_default: 'Hour of Code är en global rörelse som når tiotals miljoner elever i över 180 länder. Vem som helst kan arrangera en Hour of Code var som helst. Det finns en-timmes-övningar på över 45 språk. Inga förkunskaper behövs. <strong>Från 4 till 104 år.</strong>'
   front_watch_video: 'Se den nya filmen'
   front_watch_regular_video: 'Se filmen'
   front_volunteers: 'Frivilliga med teknisk kunskap sökes'
   front_start_learning: 'Börja lära'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Resurser'
   header_menu_faq: 'Vanliga frågor'
   header_menu_how_to: 'Så gör du'
@@ -222,6 +231,8 @@
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organisera en Hour of Code under %{campaign_date} och registrera det här.'
   signup_name_label: 'Ditt namn'
   signup_name_error: 'Namn krävs.'
@@ -243,6 +254,11 @@
   signup_your_event: 'Registrera ditt evenemang'
   signup_host_an_hour: 'Håll en Hour of Code'
   signup_match_volunteer: 'Hjälp mig att hitta en programmerare att inspirera mina elever'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Om du är värd för flera evenemang, skicka in ett unikt namn eller e-post för var och en. Vi räknar endast ett event per namn och mailadress -kombination."
   signup_registration_deadline: "Senaste möjlighet att registrera sig för Hour of Code är den 12:e December."
   signup_name_placeholder: 'Ditt namn'
@@ -265,6 +281,7 @@
   signup_thank_you_message: 'Vi har skickat ett bekräftelsemail med information för att hjälpa dig komma igång.'
   map_title: "Hour of Code kartan"
   map_header: '# Hour of Code evenemang runt om i världen'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Se alla evenemang'
   map_header_company: '# by company organizers'
   map_header_country: '# i %{country}'
@@ -280,6 +297,7 @@
   meta_tag_twitter_title: 'Alla barn bör få möjligheten'
   meta_tag_twitter_description: 'Hour of Code är en global rörelse som når tiotals miljoner elever i 180+ länder och på över 45 språk. Åldrarna 4-104.'
   twitter_default_text: "Jag deltar i årets #HourOfCode, gör du? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'Vanliga frågor'
   hoc_faq_what_is_hoc_q: 'Vad är Hour of Code?'
   hoc_faq_what_is_hoc_a: "Hour of Code började som en timmes introduktion till datavetenskap, med syftet att avdramatisera \"att koda\", att visa att alla kan lära sig grunderna, och att öka mångfalden inom IT-branchen. Idag är det en världsomspännande satsning på datavetenskap, där allt börjar med en timmes programmering men utvecklar sig i en massa olika initiativ. Kolla in <a href='%{tutorials}'>guider och aktiviter</a>. Denna gräsrotsrörelse stöttas av över <a href='%{partners}'> 400 partners </a>och 200000 lärare över hela världen."
@@ -333,8 +351,8 @@
   stats_hoc: "Hour of Code: 5 dagar"
   stats_global: "Över 100 miljoner elever har provat på Hour of Code"
   stats_girls_more: "Fler tjejer har provat datavetenskap än under de senaste 70 åren"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce."
+  stats_females_more: "During the Hour of Code, female students make up <b>50% of all participants</b>!"
   stats_nina: '"Varje dag gav samma resultat &mdash; 100% engagemang."-Nina Nichols Peery, lärare'
   stats_student: '"Jag visste att detta var en <b>unik</b> chans."-Mariana Alzate, årskurs 5'
   stats_michael: '"Jag har <b>aldrig någonsin</b> sett mina elever så exalterade över att lära sig något."-Michael Clark, lärare'
@@ -374,6 +392,7 @@
   videos_obama_cs: President Obama om datavetenskap
   videos_anybody_can_learn: Vem som helst kan lära sig (1 min)
   title_country_resources: Lands-specifikt material
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code-guide för kommuner
   title_how_to_events: Kodtimmen evenemang så-gör-du
   title_how_to_organizations: Hur hålla i en Kodtimme - organisationer
@@ -382,6 +401,7 @@
   title_how_to_volunteers: Så-gör-du guide för Kodtimmen frivilliga
   title_how_to_parents: Handledning för föräldrar
   title_how_to: Så-gör-du guide
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code-pressmeddelande för politiker
   title_op_ed: Exempel på debattinlägg som lyfter Computer Science Education Week och Hour of Code
   title_press_kit: Presskit

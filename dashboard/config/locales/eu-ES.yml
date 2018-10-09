@@ -190,9 +190,15 @@ eu:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
         applab: Aplikazio bat sortu
-      courses: Mailak
       project_gallery: Proiektuak
       educate_hoc: Kode Ordua
+    create_button:
+      create: Sortu
+      applab: App laborategia
+      artist: Artista
+      playlab: Jolas Laborategia
+      minecraft: Minecraft
+      flappy: Flappy
     user:
       classroom: Irakasleen sarrera orria
       district_dashboard: Hezkuntza distritua
@@ -202,7 +208,6 @@ eu:
       logout: Amaitu saioa
       signin: Hasi saioa
       already_registered: Dagoeneko izena emanda?
-      pair_programming: Bikoteka programatzen
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena

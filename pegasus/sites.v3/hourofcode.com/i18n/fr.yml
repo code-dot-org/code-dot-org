@@ -11,12 +11,21 @@ fr:
   campaign_date_full: "Du 7 au 13 décembre"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 décembre, 2016"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: 'Rejoignez le plus grand cours en ligne de l''Histoire, du 7 au 13 décembre 2015'
   front_intro_default: 'Une Heure de Code est un mouvement mondial qui touche plusieurs dizaines de millions d''élèves dans plus de 180 pays. Tout le monde peut organiser un événement Une Heure de Code. Les tutoriels d''une heure sont disponibles dans plus de 40 langues. Que vous ayez ou non de l''expérience. <strong>Pour tous, de 4 à 104 ans.</strong>'
   front_watch_video: 'Regardez la nouvelle vidéo'
   front_watch_regular_video: 'Regardez la vidéo'
   front_volunteers: 'Bénévoles techniques recherchés'
   front_start_learning: 'Commencer à apprendre'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: 'Ressources'
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'Guide pratique'
@@ -25,132 +34,132 @@ fr:
   not_found_title: 'Page introuvable'
   not_found_desc: 'La page demandée n''a pas pu être trouvée'
   not_found_instructions: 'Vérifiez l''addresse Internet et ressoumettez ou choisissez un lien de parmis la liste ci-dessous.'
-  company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
+  company_4-H: Développement des Jeunes 4-H
+  company_asa: Aliiance Après-École
   company_asos: ASOS
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
+  company_bgca: Club des Garçons et Filles des États-Unis
+  company_bsusa: Scouts des États-Unis
+  company_cgcs: Conseil des écoles des grande villes
+  company_gsusa: GIrl Scouts of America (version Americaine des Guides du Canada)
   company_khanacademy: Khan Academy
   company_kipp: KIPP
-  company_mesa: Mathematics Engineering Science Achievement
-  company_napcs: National Alliance of Public Charter Schools
-  company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
-  company_teachforamerica: Teach for America
+  company_mesa: Réalisation en sciences de l'ingénierie mathématique
+  company_napcs: Alliance nationale des écoles à charte publique
+  company_ngcp: Projet de collaboration nationale féminine
+  company_teachforall: Enseigner pour tous
+  company_teachforamerica: Enseigner pour l’Amérique
   company_tntp: TNTP
-  company_abss: Alamance-Burlington School System
+  company_abss: Système scolaire Alamance-Burlington
   company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
+  company_afterschool: après l’école
   company_laalliance: Alliance College Ready Public Schools
-  company_asd: Arlington Public Schools
-  company_arlingtonpublicschools: Arlington Public Schools
-  company_bisd303: Bainbridge Island School District
-  company_beavertonschooldistrict: Beaverton School District
-  company_bellevuepublicschools: Bellevue Public Schools
-  company_blan: Blanchester Local Schools
-  company_bremertonschools: Bremerton School District
-  company_browardschools: Broward County Schools
-  company_cajonvalley: Cajon Valley School District
-  company_calistogajointunified: Calistoga Joint Unified School District
-  company_canalwinchesterschools: Canal Winchester Local Schools
-  company_canyonsdistrict: Canyons School District
-  company_centralunified: Central Unified School District
-  company_cvsd: Central Valley School District
-  company_ccboe: Charles County Public Schools
-  company_ChathamCountySchools: Chatham County Schools
-  company_chelmsfordpublicschooldistrict: Chelmsford School District
-  company_cheneysd: Cheney School District
-  company_chesterfieldschools: Chesterfield County Public Schools
-  company_codebrooklyn: Code Brooklyn
-  company_cps: Chicago Public Schools
-  company_ccsd: Clark County School District
-  company_cloverparkschooldistrict: Clover Park School District
-  company_ccsoh: Columbus City School District
-  company_cresskillboe: Cresskill Public Schools
+  company_asd: Écoles publiques d'arlington
+  company_arlingtonpublicschools: Écoles publiques d'arlington
+  company_bisd303: Groupe scolaire de Bainbridge Island
+  company_beavertonschooldistrict: Groupes scolaire de Beaverton
+  company_bellevuepublicschools: Écoles publiques de Bellevue
+  company_blan: Écoles locales de Blancherster
+  company_bremertonschools: Groupes scolaire de Bremerton
+  company_browardschools: Écoles du comté de Broward
+  company_cajonvalley: Groupe scolaire de Cajon Valley
+  company_calistogajointunified: Groupe scolaire Calistoga joint Unified
+  company_canalwinchesterschools: Écoles locales du calnal Winchester
+  company_canyonsdistrict: Groupe scolaire canyons
+  company_centralunified: Groupe scolaire Central Unified
+  company_cvsd: Groupe scolaire Central Valley
+  company_ccboe: Écoles publiques du comté de Charles
+  company_ChathamCountySchools: École du comté de Chatham
+  company_chelmsfordpublicschooldistrict: Groupe scolaire de Chelmsford
+  company_cheneysd: Groupe scolaire Cheney
+  company_chesterfieldschools: Écoles publiques du comté de Chesterfield
+  company_codebrooklyn: Code de Brooklyn
+  company_cps: Écoles publiques de Chicago
+  company_ccsd: Groupe scolaire Clark County
+  company_cloverparkschooldistrict: Groupes scolaire de Clover Park
+  company_ccsoh: Groupes scolaire de Columbus City
+  company_cresskillboe: Écoles publiques Cresskill
   company_dallasisd: Dallas Independent School District
   company_disney: Disney
-  company_dpsk12: Denver Public Schools
-  company_dcsdk12: Douglas County Schools
-  company_dpsnc: Durham Public Schools
-  company_evsd: East Valley School District
-  company_eastonvilleschooldistrict: Eatonville School District
-  company_enumclawschooldistrict: Enumclaw School District
-  company_everettsd: Everette Public Schools
-  company_fsusd: Fairfield-Suisun Unified School District
-  company_fayettecountypublicschools: Fayette County Public Schools
-  company_forsythcountyschools: Forsyth County Schools
-  company_fcschools: Franklin County School
-  company_fpschools: Franklin Pierce School District
-  company_frederickcountypublicschools: Frederick County Public Schools
-  company_fultonschools: Fulton County Schools
+  company_dpsk12: Écoles publiques de Denver
+  company_dcsdk12: Écoles du comté de Douglas
+  company_dpsnc: Écoles publiques de Durham
+  company_evsd: Groupe scolaire de Valley East
+  company_eastonvilleschooldistrict: Groupe scolaire Eatonville
+  company_enumclawschooldistrict: Groupe scolaire Enumclaw
+  company_everettsd: Écoles publiques Everette
+  company_fsusd: Groupe scolaire de Fairfield-Suisun Unified
+  company_fayettecountypublicschools: Écoles publiques du comté de la Fayette
+  company_forsythcountyschools: Écoles du comté de Forsyth
+  company_fcschools: Écoles du comté de Franklin
+  company_fpschools: Groupe scolaire de Franklin Pierce
+  company_frederickcountypublicschools: Écoles publiques du comté de Frederick
+  company_fultonschools: Écoles du comté de Fulton
   company_vadoe: Governor's School Programs
-  company_gcs: Granville County Schools
+  company_gcs: Écoles du comté de Granville
   company_gcisd: Grapevine-Colleyville ISD
   company_godaddy: Go Daddy
-  company_greenupcountyschooldistrict: Greenup County Schools
-  company_gwinnettcountypublicschools: Gwinnett County Public Schools
-  company_HamptonCitySchools: Hampton City Schools
-  company_HanoverCountyPublicSchools: Hanover County Public Schools
-  company_HenricoCountyPublicSchools: Henrico County Public Schools
-  company_highlineschools: Highline School District
+  company_greenupcountyschooldistrict: Écoles du comté de Greenup
+  company_gwinnettcountypublicschools: Écoles publiques du comté de Gwinnett
+  company_HamptonCitySchools: Écoles de la ville Hampton
+  company_HanoverCountyPublicSchools: Écoles publiques du comté de Hanover
+  company_HenricoCountyPublicSchools: Écoles publiques du comté de Henrico
+  company_highlineschools: Groupe scolaire Highline
   company_houstonisd: Houston Independent School District
-  company_hcpss: Howard County Public Schools
+  company_hcpss: Écoles publiques du comté de Howard
   company_idla: Idaho Digital Learning Academy
-  company_janesvilleschooldistrict: Janesville School District
-  company_johnstoncountyschools: Johnston County Schools
-  company_lps: Lincoln Public School
-  company_littletonpublicschools: Littleton Public Schools
+  company_janesvilleschooldistrict: Groupe scolaire Janesville
+  company_johnstoncountyschools: Écoles du comté de Johnston
+  company_lps: Écoles publiques de lincoln
+  company_littletonpublicschools: Écoles publiques de Littleton
   company_lausd: Los Angeles Unified School District
-  company_lcps: Louisa County Public Schools
-  company_lcsedu: Lynchburg City Schools
-  company_msvl: Marysville School District
-  company_dadeschools: Miami-Dade Public Schools
-  company_miltonps: Milton Public Schools
-  company_montgomeryschoolsmd: Montgomery County Public Schools
-  company_needhampublicschools: Needham Public Schools
-  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_lcps: Écoles publiques du comté de Louisa
+  company_lcsedu: Écoles de la ville de Lynchburg
+  company_msvl: Groupe scolaire Marysville
+  company_dadeschools: Écoles publiques de Miami-Dade
+  company_miltonps: Écoles publiques de Milton
+  company_montgomeryschoolsmd: Écoles publiques du comté de Montgomery
+  company_needhampublicschools: Écoles publiques de Needham
+  company_NelsonCountyPublicSchools: Écoles publiques du comté de Nelson
   company_newalbanyschools: New Albany Plain Local Schools
-  company_newkentschools: New Kent County Public Schools
-  company_newarkcityschools: Newark City Schools
-  company_nnschools: Newport News Public Schools
-  company_newtonpublicschools: Newton Public Schools
-  company_nps: Norfolk Public Schools
+  company_newkentschools: Écoles publiques du comté de New Kent
+  company_newarkcityschools: Écoles de la ville de Newark
+  company_nnschools: Écoles publiques de Newport
+  company_newtonpublicschools: Écoles publiques de Newton
+  company_nps: Écoles publiques de Norfolk
   company_nycdoe: NYC Department of Education
   company_ohlsd: Oak Hills Local School District
-  company_oneclay: One Clay County School District
-  company_ocps: Orange County Schools
+  company_oneclay: Groupe scolaire du comté de One CLay
+  company_ocps: Écoles du comté d'Orange
   company_orangeusd: Orange Unified School District
-  company_pbsd: Palm Beach School District
+  company_pbsd: Le groupe scolaire de Palm Beach
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
   company_PowhatanCountyPublicSchools: Powhatan County Public Schools
   company_pgcps: Prince Georges County Public Schools
-  company_provocityschooldistrict: Provo Public Schools
-  company_reyn: Reynoldsburg City School District
-  company_RichmondPublicSchools: Richmond Public Schools
-  company_RockinghamCountySchools: Rockingham County Schools
+  company_provocityschooldistrict: Écoles publiques de Provo
+  company_reyn: Groupes scolaire de Reynoldsburg City
+  company_RichmondPublicSchools: Écoles publiques de Richmond
+  company_RockinghamCountySchools: École du comté de Rockingham
   company_svusd: Saddleback Valley Unified School District
   company_sfusd: San Francisco Unified School District
-  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
-  company_shorelineschools: Shoreline School District
+  company_ShenandoahCountyPublicSchools: Écoles publiques du comté de Shenandoah
+  company_shorelineschools: Groupe scolaire de Shoreline
   company_sjusd: Quartier de l'école San Juan unifiée
   company_sky: Sky
-  company_spokaneschools: Spokane Public Schools
-  company_StaffordCountyPublicSchools: Stafford County Public Schools
-  company_strongnet: Strongsville School District
-  company_TukwilaSchoolDistrict: Tukwila School District
+  company_spokaneschools: Écoles publiques de Spokane
+  company_StaffordCountyPublicSchools: Écoles publiques du comté de Stafford
+  company_strongnet: Groupe scolaire de Strongsville
+  company_TukwilaSchoolDistrict: Groupe scolaire de Tukwila
   company_vermilionschools: Vermilion Local School District
   company_vista-equity-partners: "Vista Equity Partners"
-  company_walthampublicschools: Waltham Public Schools
-  company_warrencountyschools: Warren County Schools
-  company_WaynesboroPublicSchools: Waynesboro Public Schools
-  company_WellesleyPublicSchools: Wellesley Public Schools
-  company_wvsd208: West Valley School District
+  company_walthampublicschools: Écoles publiques de Waltham
+  company_warrencountyschools: Écoles du comté de Warren
+  company_WaynesboroPublicSchools: Écoles publiques de Waynesboro
+  company_WellesleyPublicSchools: Écoles publiques de Wellesley
+  company_wvsd208: Groupe scolaire de West Valley
   company_wuhsd: Whittier Union High School District
-  company_wcschools: Wilson County Schools
+  company_wcschools: Écoles du comté de Wilson
   company_yelp: Yelp
   nav_back_to_resources: "Retournez aux ressources"
   how_to_nav_educators: "Pour les enseignants"
@@ -219,15 +228,17 @@ fr:
   front_join_us_more_info: "Pour plus d'informations, visitez <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Pour plus d'informations, visitez code.org"
   front_join_us_n_students_served: "# d'élèves l'ont essayé"
-  front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
-  front_join_us_learn_more: "Learn more"
-  signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
+  front_join_us_challenge: "Gagnez un chat vidéo pour votre salle de classe avec une célébrité !"
+  front_join_us_learn_more: "En savoir plus"
+  signup_closed: 'L’inscription à l’heure du Code est maintenant fermée. S’il vous plaît vérifier à nouveau en octobre pour vous inscrire pour la prochaine heure de Code.'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: 'Organisez un évènement Un Heure de Code durant %{campaign_date}, et inscrivez-le ici.'
   signup_name_label: 'Votre Nom'
   signup_name_error: 'Le nom est requis.'
   signup_email_label: 'Votre e-mail'
   signup_email_error: 'Une adresse e-mail est requise'
-  signup_invalid_email_error: 'The email address you entered is invalid'
+  signup_invalid_email_error: 'L''adresse e-mail saisie est invalide'
   signup_organization_name_label: 'Nom de l''école ou de l''organisme'
   signup_organization_name_error: 'Le nom de l''organisation est requis.'
   signup_event_type_label: 'Type d’évènement'
@@ -243,6 +254,11 @@ fr:
   signup_your_event: 'Inscrire votre évènement'
   signup_host_an_hour: 'Acceuillez une Heure'
   signup_match_volunteer: 'Aidez-moi à trouver un ingénieur local afin d''inspirer mes élèves'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Si vous hébergez plusieurs événements, veuillez soumettre un nom unique ou un courriel pour chacun d'eux. Nous comptons seulement un événement par la combinaison de nom et email."
   signup_registration_deadline: "L'inscription pour l'Heure du Code se termine le 12 Décembre."
   signup_name_placeholder: 'Votre Nom'
@@ -265,6 +281,7 @@ fr:
   signup_thank_you_message: 'Nous vous avons envoyé une confirmation par e-mail avec des conseils pour vous aider à commencer.'
   map_title: "Mappe de l'Heure du Code"
   map_header: '# évènements Une Heure de Code dans le monde'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'Voir tous les évènements'
   map_header_company: '# par les organisateurs de la société'
   map_header_country: '# en %{country}'
@@ -280,6 +297,7 @@ fr:
   meta_tag_twitter_title: 'Une Heure de Code va arriver'
   meta_tag_twitter_description: 'Une Heure de Code est un mouvement mondial qui touche des dizaines de millions d’élèves dans plus de 180 pays et plus de 30 langues. De 4 à 104 ans.'
   twitter_default_text: "Je participe à #HourOfCode cette année, et vous ? @codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'Une Heure de Code, qu''est-ce que c''est?'
   hoc_faq_what_is_hoc_a: "Une Heure de Code est une introduction d'une heure à l'informatique. Ce programme est conçu pour démystifier la programmation et montrer que n'importe qui peut en apprendre les rudiments. <a href='%{codeorg_url}'>Découvrez les tutoriels</a>."
@@ -333,8 +351,8 @@ fr:
   stats_hoc: "Une Heure de Code : 5 jours"
   stats_global: "Plus de 100 M d'élèves ont essayé Une Heure de Code"
   stats_girls_more: "Davantage de filles ont essayé l'informatique que durant les 70 dernières années"
-  stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
-  stats_females_more: "During the Hour of Code, females make up <b>50% of all participants</b>!"
+  stats_females: "La participation des femmes en informatique représente seulement 20 % sur les cours de lycée, les cours universitaires et le marché du travail."
+  stats_females_more: "Pendant les heures de Code, les femmes représentent un <b>50 % de tous les participants</b> !"
   stats_nina: '"Chaque jour a apporté les mêmes résultats &mdash; 100 % engagement."-Nina Nichols Peery, enseignante'
   stats_student: '"Je savais que c''était une chance <b>unique</b> ."-Mariana Alzate, élève de 5e'
   stats_michael: '"Je n''ai<b>jamais</b> vu mes étudiants aussi désireux d''apprendre" - Michael Clark, Professeur'
@@ -374,6 +392,7 @@ fr:
   videos_obama_cs: Le président Obama sur l'informatique
   videos_anybody_can_learn: N'importe qui peut apprendre (1 min)
   title_country_resources: Ressources spécifiques sur le pays
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Une Heure de Code Guide d'utilisation pour les mairies, régions et départements
   title_how_to_events: Une Heure de Code comment faire ?
   title_how_to_organizations: Guide de l'organisateur Une Heure de Code
@@ -382,6 +401,7 @@ fr:
   title_how_to_volunteers: Guide pratique pour les bénévoles Une Heure de Code
   title_how_to_parents: Guide pratique pour les parents
   title_how_to: Guide
+  title_international_partners: Contact International Partners
   title_press_release: Une Heure de Code - communiqué de presse pour les élus
   title_op_ed: Exemple de papier d'opinion favorable à la semaine d'éducation sur l'informatique et à Une Heure de Code
   title_press_kit: Dossier de presse
@@ -709,10 +729,10 @@ fr:
   tutorial_khanweb_name: "Khan Academy : pages Web"
   tutorial_khandata_name: "Khan Academy : base de données"
   tutorial_robomeshiq_name: "Programmez les Robots IQ VEX avec Bloquelie"
-  tutorial_googlelogo_name: "Create your own Google logo"
+  tutorial_googlelogo_name: "Créer votre propre logo de Google"
   tutorial_playtune_name: "Play That Tune App"
-  tutorial_computeit_name: "Compute it"
-  tutorial_codesterssj_name: "Space Jokes"
+  tutorial_computeit_name: "Calcule le"
+  tutorial_codesterssj_name: "Espace blagues"
   tutorial_cmchat_name: "Python Chatbot"
   tutorial_tynkerdb_name: "Souffle de dragon"
   tutorial_cmbuild_name: "Game Builder"
@@ -744,66 +764,66 @@ fr:
   tutorial_switchglitch_name: "Switch & Glitch: Robot Adventure"
   tutorial_codecar_name: "Code Car Simulator"
   tutorial_codesterscp_name: "Le Plan des Coordonnées"
-  tutorial_grokpetblock_name: "Virtual Pet (micro:bit Blockly)"
+  tutorial_grokpetblock_name: "Animal de compagnie virtuel (micro : bit Blocky)"
   tutorial_techbim_name: "Basic Image Manipulation"
-  tutorial_techfpp_name: "Introduction to Functional Programming with Python"
-  tutorial_codesterscr_name: "Cheer Routines"
+  tutorial_techfpp_name: "Introduction à la programmation fonctionnelle avec Python"
+  tutorial_codesterscr_name: "Routines d'encouragements"
   tutorial_grokdisease_name: "Disease Epidemic"
   tutorial_techec_name: "Explaining Closures in JS"
-  tutorial_rgbegin_name: "RoboGarden - Beginner"
-  tutorial_myradream_name: "Actimator: Myra's Dream"
-  tutorial_thinkfun_name: "Robot Repair: Can You Fix the Robot Brain?"
+  tutorial_rgbegin_name: "RoboGarden - débutant"
+  tutorial_myradream_name: "Actimator : Rêve de Myra"
+  tutorial_thinkfun_name: "Réparation de Robot : Pouvez vous réparer le cerveau du Robot ?"
   tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
-  tutorial_grokspace_name: "Space (Blockly)"
-  tutorial_codehspython_name: "Code in Python with CodeHS"
-  tutorial_codehsjava_name: "Coding in Java with CodeHS"
-  tutorial_techioda_name: "Shortest Paths with Dijkstra's Algorithm"
+  tutorial_grokspace_name: "Espace (Blockly)"
+  tutorial_codehspython_name: "Code en Python avec CodeHS"
+  tutorial_codehsjava_name: "Codage en Java avec CodeHS"
+  tutorial_techioda_name: "Les plus courts chemins avec l’algorithme de Dijkstra"
   tutorial_grokmonster_name: "Monster Maker!"
   tutorial_techmjs_name: "Embrace Modern JavaScript - ES6 and Beyond"
-  tutorial_techga_name: "Genetic Algorithms"
+  tutorial_techga_name: "Algorithmes génétiques"
   tutorial_techioan_name: "Avoiding Null Anti Patterns"
-  tutorial_techiogsr_name: "Getting Started With Rust"
-  tutorial_groktunnel_name: "The Dark Tunnel"
-  tutorial_stemcod_name: "The Physics of Video Games!"
+  tutorial_techiogsr_name: "Vos premiers pas avec Rust"
+  tutorial_groktunnel_name: "Le Tunnel obscur"
+  tutorial_stemcod_name: "La physique des jeux vidéo !"
   tutorial_techikb_name: "Interactive Kotlin Basics"
-  tutorial_kanostreet_name: "Street Artist"
+  tutorial_kanostreet_name: "Artiste de rue"
   tutorial_nyblebot_name: "Boogie Bot"
-  tutorial_codemojijs_name: "Beginning JavaScript"
-  tutorial_bloxmobmath_name: "iOS and Android Math Apps"
+  tutorial_codemojijs_name: "Début JavaScript"
+  tutorial_bloxmobmath_name: "Applications Math pour iOS et Android"
   tutorial_techapf_name: "Advanced Python Features"
-  tutorial_techfpjs_name: "Practical Introduction to Functional Programming with JS"
-  tutorial_techlinq_name: "Using C# LINQ - A Practical Overview"
-  tutorial_gpbcatapult_name: "Build a Catapult"
-  tutorial_quorumastro_name: "Coding in Astronomy"
-  tutorial_alicewonder_name: "Alice in Wonderland"
-  tutorial_rginter_name: "RoboGarden - Intermediate"
-  tutorial_bloxmobscience_name: "iOS and Android Science Apps"
-  tutorial_cssgrid_name: "Grid Garden"
-  tutorial_bloxmobdesign_name: "App Design Process"
-  tutorial_jshero_name: "JS Hero"
+  tutorial_techfpjs_name: "Introduction partique à la programmation fonctionnelle avec JS"
+  tutorial_techlinq_name: "Utilisation de c# LINQ - un aperçu pratique"
+  tutorial_gpbcatapult_name: "Construire une catapulte"
+  tutorial_quorumastro_name: "Codage en astronomie"
+  tutorial_alicewonder_name: "Alice au pays des merveilles"
+  tutorial_rginter_name: "RoboGarden - intermédiaire"
+  tutorial_bloxmobscience_name: "iOS et Android Apps de Science"
+  tutorial_cssgrid_name: "Grille de jardin"
+  tutorial_bloxmobdesign_name: "Processus de conception de l’app"
+  tutorial_jshero_name: "Héros JS"
   tutorial_codemojipy_name: "Python Lab"
-  tutorial_bloxmobcomp_name: "Computational Problem Solving"
-  tutorial_nclabdrone_name: "Let's Build a Drone!"
-  tutorial_gpbcircle_name: "Make an Interactive Color Circle"
-  tutorial_gpbpaint_name: "Make Your Own Paint Editor"
+  tutorial_bloxmobcomp_name: "Résolution de problèmes informatiques"
+  tutorial_nclabdrone_name: "Construisons un Drone !"
+  tutorial_gpbcircle_name: "Faire un cercle de couleur interactif"
+  tutorial_gpbpaint_name: "Faites votre propre éditeur de peinture"
   tutorial_cocomarcade_name: "CodeCombat: Créez un jeu d'arcade!"
-  tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
-  tutorial_beetik_name: "Code the Music of Franz Liszt"
+  tutorial_techcpp_name: "7 fonctions de C ++ 17 qui va simplifier votre code"
+  tutorial_beetik_name: "Code la musique de Franz Liszt"
   tutorial_codedj_name: "Codez de la musique avec Code DJ"
-  tutorial_rgadvan_name: "RoboGarden - Advanced"
-  tutorial_codehsrn_name: "Creating Apps with React Native"
-  tutorial_codehswd_name: "Web Design with CodeHS"
-  tutorial_turtlerobot_name: "Turtle Robot"
-  tutorial_ozoevo_name: "Intro to Evo: Evo's Force Field"
-  tutorial_ozoexped_name: "Ozobot Expedition to Neptune"
-  tutorial_ozojourney_name: "Magellan's Journey"
-  tutorial_ozocodes_name: "Write your Name with OzoCodes"
+  tutorial_rgadvan_name: "RoboGarden - avancé"
+  tutorial_codehsrn_name: "Création d’applications avec React Native"
+  tutorial_codehswd_name: "Conception de sites Web avec CodeHS"
+  tutorial_turtlerobot_name: "Robot tortue"
+  tutorial_ozoevo_name: "Intro à l’Evo : champ de Force de l’Evo"
+  tutorial_ozoexped_name: "Expédition de Ozobot pour Neptune"
+  tutorial_ozojourney_name: "Voyage de Magellan"
+  tutorial_ozocodes_name: "Écrivez votre nom avec OzoCodes"
   tutorial_ozoeclipse_name: "Eclipses and Celestial Mechanics"
   tutorial_ozosimulator_name: "Program Simulator"
   tutorial_ozoalgorithm_name: "Make a Multiplication Algorithm"
   tutorial_ozotimer_name: "Ozobot Second Timer"
   tutorial_ozohabits_name: "Modeling Animal Habits and Habitats"
-  tutorial_ozoprogram_name: "How to Program Robots"
+  tutorial_ozoprogram_name: "Comment programmer des Robots"
   tutorial_ozopair_name: "Pair Programming with Ozobot"
   tutorial_codesnoopy_name: "La Bataille de Neige de Snoopy"
   tutorial_applabintro_name: "Intro to App Lab"
@@ -840,23 +860,23 @@ fr:
   tutorial_popculture_name: "Pop Culture Data Science"
   tutorial_legorobust_name: "Robust Structures – LEGO® Education WeDo 2.0"
   tutorial_legoplants_name: "Plants and Pollinators – LEGO® Education WeDo 2.0"
-  tutorial_legopark_name: "Autonomous Parking – LEGO® MINDSTORMS® Education EV3"
-  tutorial_legodetect_name: "Object Detection – LEGO® MINDSTORMS® Education EV3"
-  tutorial_legolight_name: "Automatic Headlights – LEGO® MINDSTORMS® Education EV3"
+  tutorial_legopark_name: "Parking autonome – LEGO® MINDSTORMS® Éducation EV3"
+  tutorial_legodetect_name: "Détection d’objet – LEGO® MINDSTORMS® Éducation EV3"
+  tutorial_legolight_name: "Feux et phares automatiques – LEGO® MINDSTORMS® Éducation EV3"
   tutorial_alexa_name: "Amazon Alexa Fact Skill Tutorial: My School Facts"
-  tutorial_grokpetmicro_name: "Virtual Pet (micro:bit MicroPython)"
-  tutorial_pirateplunder_name: "Pirate Plunder"
+  tutorial_grokpetmicro_name: "Animal de compagnie virtuel (micro : bit MicroPython)"
+  tutorial_pirateplunder_name: "Butin de pirate"
   tutorial_cadj_name: "DR DJ Device"
-  tutorial_cacrazy_name: "Code Crazy Creatures"
+  tutorial_cacrazy_name: "Code des créatures folles"
   tutorial_cajump_name: "Jumping Jam"
-  tutorial_carest_name: "Robo-restaurant puzzler"
+  tutorial_carest_name: "Jeu de puzzle de Robo-restaurant"
   tutorial_accai_name: "Accenture Intelligent Space Exploration"
-  tutorial_vceclipse_name: "Code the Eclipse"
+  tutorial_vceclipse_name: "Code de l’éclipse"
   tutorial_pmzero_name: "Pac-Man ZERO"
-  tutorial_hsela_name: "Telling stories: ELA + coding"
-  tutorial_ticklear_name: "What's AR?"
-  tutorial_bcrobot_name: "BlocksCAD Robot"
-  tutorial_bcsnow_name: "BlocksCAD Snowflake"
+  tutorial_hsela_name: "Raconter des histoires : ELA + codage"
+  tutorial_ticklear_name: "Qu'est-ce que AR?"
+  tutorial_bcrobot_name: "Robot BlocksCAD"
+  tutorial_bcsnow_name: "Snowflake BlocksCAD"
   tutorial_ifly_name: "iFly"
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
@@ -865,16 +885,16 @@ fr:
   tutorial_dkcurrency_name: "DevKit: Build the Currency King App"
   tutorial_dkriver_name: "DevKit: Build the River Monsters App"
   tutorial_dkball_name: "DevKit: Build the Bouncing Ball App"
-  tutorial_spheroit_name: "Blocks 2: If/Then Else"
+  tutorial_spheroit_name: "Bloks 2: Si/ Sinon"
   tutorial_gameofcodes_name: "Game Of Codes"
   tutorial_blocklygames_name: "Blockly Games"
-  tutorial_spherohello_name: "Text 1: Hello World"
+  tutorial_spherohello_name: "Texte 1 : Bonjour le monde"
   tutorial_spheroarcade_name: "Sphero Arcade Playground"
-  tutorial_bcpy1_name: "World of Python"
-  tutorial_bcpy2_name: "World of Python 2"
-  tutorial_bcjs1_name: "World of JavaScript"
-  tutorial_bcjs2_name: "World of JavaScript 2"
-  tutorial_athlete_shortdescription: "Choisis entre créer un jeu de basket ou un jeu combinant différents sports\\_!"
+  tutorial_bcpy1_name: "Le monde du Python"
+  tutorial_bcpy2_name: "Le monde du Python 2"
+  tutorial_bcjs1_name: "Le monde du JavaScript"
+  tutorial_bcjs2_name: "Le monde du JavaScript 2"
+  tutorial_athlete_shortdescription: "Choisis entre créer un jeu de basket ou un jeu combinant différents sports\_!"
   tutorial_moana_shortdescription: "Moana est brave, courageux et il est déterminé à trouver sa voie."
   tutorial_star-wars_shortdescription: "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie très très lointaine."
   tutorial_gumadventure_shortdescription: "Utilise le code pour continuer un épisode du Monde incroyable de Gumball."
@@ -886,7 +906,7 @@ fr:
   tutorial_frzn_shortdescription: "Utilise du code pour rejoindre Anna et Elsa tandis qu’elles découvrent la magie et la beauté de la glace."
   tutorial_cocom_shortdescription: "Vaincs les ogres pour apprendre Python ou JavaScript dans cet épique jeu de programmation !"
   tutorial_play-lab_shortdescription: "Programme une histoire ou un jeu dans le Labo de jeux !"
-  tutorial_boxisland_shortdescription: "Take a trip on Box Island and collect all the stars!"
+  tutorial_boxisland_shortdescription: "Faites une excursion sur l’île de boîte et collectionnez toutes les étoiles !"
   tutorial_textcomp_shortdescription: "Découvre les techniques de compression de données sans pertes avec le widget Compression de Texte"
   tutorial_encryption_shortdescription: "Découvre l’intérêt du cryptage ainsi que des techniques simples pour décrypter des messages secrets."
   tutorial_kanopixel_shortdescription: "Programme et découvre des images emblématiques de l'histoire du jeu vidéo, de Tetris à Minecraft !"
@@ -898,7 +918,7 @@ fr:
   tutorial_tynkerch_shortdescription: "Apprends Javascript en vainquant les virus !"
   tutorial_lightbot_shortdescription: "Programme Lightbot pour résoudre des puzzles en utilisant des procédures et des boucles !"
   tutorial_hoc_shortdescription: "Espace réservé pour le nouveau code.org/hoc"
-  tutorial_code_shortdescription: "Apprends à coder avec Mark Zuckerberg et Angry Birds\\_!"
+  tutorial_code_shortdescription: "Apprends à coder avec Mark Zuckerberg et Angry Birds\_!"
   tutorial_tinspire_shortdescription: "Amenez les élèves à commencer la programmation sur leur calculatrice TI-Nspire CX en séances de seulement 10 minutes."
   tutorial_itchbounceball_shortdescription: "Utilizer ITCH- Intégré à Scratch, avec une leçon vidéo pour construire votre projet de balle bondissante"
   tutorial_vidclim_shortdescription: "Combiner la Science de l'Environnement et la CS, et filmez un vidéo concernant le climat."
@@ -911,7 +931,7 @@ fr:
   tutorial_como_shortdescription: "Apprenez et enseignez le codage avec CoffeeScript (scripte café), un vrai langage de programmation. "
   tutorial_processfound_shortdescription: "Observez la programmation dans le cadre des arts plastiques. "
   tutorial_tynkerhomo_shortdescription: "Fabriquez un jeu de narration concernant les homophones!"
-  tutorial_art_shortdescription: "Dessine de superbes images et dessins avec l'Artiste\\_!"
+  tutorial_art_shortdescription: "Dessine de superbes images et dessins avec l'Artiste\_!"
   tutorial_tynkerbrick_shortdescription: "Fais ta propre version de ce classique de l’arcade."
   tutorial_itchbio_shortdescription: "Créez votre propre jeu pour nommer les parties d'une cellule biologique avec ITCH (Scratch pour les classes)"
   tutorial_itchj_shortdescription: "Apprenez comment faire sauter un personnage pour atterrir sur plate-forme avec ITCH (Scratch pour les Enseignants/enseignates)"
@@ -1097,7 +1117,7 @@ fr:
   tutorial_ssw_shortdescription: "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie très très lointaine."
   tutorial_sswb_shortdescription: "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie très très lointaine."
   tutorial_kodable-unplugged_shortdescription: "Un exercice amusant et hors connexion"
-  tutorial_scratch_shortdescription: "Create your own interactive games, stories, and animations with Scratch!"
+  tutorial_scratch_shortdescription: "Crées ton propre jeu interactif, histoires, et animations avec Scratch!"
   tutorial_bayes_shortdescription: "Héroes Grandes"
   tutorial_gumball_shortdescription: "Crée une histoire Gumball ou un jeu avec le Play Lab !"
   tutorial_hrm_shortdescription: "Program little office workers to solve puzzles. Be a good employee! The machines are coming... for your job."
@@ -1107,8 +1127,8 @@ fr:
   tutorial_rmc_shortdescription: "Utiliser des blocs de code pour emmener Alex et Steve dans une aventure à travers le monde de Minecraft."
   tutorial_smc_shortdescription: "Utiliser des blocs de code pour emmener Alex et Steve dans une aventure à travers le monde de Minecraft."
   tutorial_minecraft-2016_shortdescription: "Contruit un jeu Minecraft. Crée tes propres versions de poulet, mouton, Creepers, zombies et plus encore."
-  tutorial_thinkersmith-es_shortdescription: "Tutorial para un grupo sin computadoras"
-  tutorial_pixie_shortdescription: "A visual language to learn to code step by step through challenges and games."
+  tutorial_thinkersmith-es_shortdescription: "Tutoriel pour un groupe sans ordinateurs"
+  tutorial_pixie_shortdescription: "Un langage visuel pour apprendre à coder étapes par étapes via des challenges et des jeux."
   tutorial_play_shortdescription: "Programme une histoire ou un jeu dans le Labo de jeux !"
   tutorial_robomind-nl_shortdescription: "Écrit du code pour un robot virtuel"
   tutorial_spheroi_shortdescription: "Introduction to Lightning Lab, The Sphero App for programming Sphero robots."
@@ -1120,16 +1140,16 @@ fr:
   tutorial_tchr_shortdescription: "Be inspired to design your own Hour of Code event with these lesson plans."
   tutorial_robogame_shortdescription: "The grit, the games, the fun!"
   tutorial_tap_shortdescription: "Learn to program by solving fun coding puzzles."
-  tutorial_cintl_shortdescription: "Apprends à coder avec Mark Zuckerberg et Angry Birds\\_!"
+  tutorial_cintl_shortdescription: "Apprends à coder avec Mark Zuckerberg et Angry Birds\_!"
   tutorial_itchstop_shortdescription: "Learn to create your own Stop Frame Animations in Scratch"
   tutorial_tynkerpn_shortdescription: "Go for a nature walk with Peep!"
-  tutorial_tynkerpd_shortdescription: "Make Peep and his friends dance!"
+  tutorial_tynkerpd_shortdescription: "Fait danser Peep et ses amis !"
   tutorial_persistence_shortdescription: "Ce cours montre que l’échec n’est pas une fin mais un moyen de découvrir comment réussir."
   tutorial_getloopy_shortdescription: "Dans ce cours, les élèves apprennent à transformer un ensemble d’actions en une boucle simple."
   tutorial_createface_shortdescription: "This is an exploration of affective computing, which relates to moods and emotions. The class makes an affective (relating to moods and emotions) robot face out of card, tubes and themselves."
   tutorial_happymaps_shortdescription: "Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe à l’aide d’une seule commande."
   tutorial_moveit_shortdescription: "Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe à l’aide d’une seule commande."
-  tutorial_bigevent_shortdescription: "Les élèves découvrent le concept de la programmation d’«\\_événements\\_», des actions que l’ordinateur contrôle en permanence."
+  tutorial_bigevent_shortdescription: "Les élèves découvrent le concept de la programmation d’«\_événements\_», des actions que l’ordinateur contrôle en permanence."
   tutorial_gpp_shortdescription: "Les élèves écrivent un algorithme (un ensemble d'instructions) en utilisant un ensemble de commandes prédéfinies pour permettre à leurs camarades de classe de reproduire un dessin."
   tutorial_foosgame_shortdescription: "Design and code your own video game with codeSpark Academy with The Foos."
   tutorial_solopython_shortdescription: "Compteur de lettres en Python"
@@ -1164,7 +1184,7 @@ fr:
   tutorial_kodmaze_shortdescription: "Build your own mazes to solve and share to challenge others!"
   tutorial_codestersa_shortdescription: "Design your own fast-paced space adventure game with player controls!"
   tutorial_cmdodo_shortdescription: "Teach addition, angle and degree measurement, and multiplication with new characters."
-  tutorial_tynkerspace_shortdescription: "Learn to code in space!"
+  tutorial_tynkerspace_shortdescription: "Apprends à programmer dans l'espace!"
   tutorial_gfbloons_shortdescription: "Code your own mini-game and learn the maths in Bloons TD5."
   tutorial_raspipong_shortdescription: "Create a Pong game using a Sense HAT and some Python code."
   tutorial_codehsvr_shortdescription: "Create virtual reality worlds using the A-Frame JavaScript Library!"
@@ -1177,7 +1197,7 @@ fr:
   tutorial_hopdropphone_shortdescription: "Make \"Don't Drop the Phone\" on iPad/iPhone"
   tutorial_techfaa_shortdescription: "Simulate a visually impressive life-like behavior of group entities"
   tutorial_codehsjsgraph_shortdescription: "Make your own graphics and drawing programs!"
-  tutorial_thunkable_shortdescription: "1 hour, 10 apps"
+  tutorial_thunkable_shortdescription: "1 heure, 10 applis"
   tutorial_hopcrossyroad_shortdescription: "Make Crossy Road on iPad/iPhone"
   tutorial_switchglitch_shortdescription: "Program cute robots and help them save the galaxy!"
   tutorial_codecar_shortdescription: "Use typed code to control the lights and buttons of a simulated Code Car!"
@@ -1206,17 +1226,17 @@ fr:
   tutorial_techikb_shortdescription: "Basics Kotlin features in a nutshell"
   tutorial_kanostreet_shortdescription: "Make beautiful, unique artwork with Kano's Street Art coding challenges"
   tutorial_nyblebot_shortdescription: "Coding is Magic - helping kids create amazing things with code."
-  tutorial_codemojijs_shortdescription: "Codemoji designed Beginning Javascript to get students typing real javascript commands that will in turn animate the different characters."
-  tutorial_bloxmobmath_shortdescription: "Create your own mobile app. Learn to be an innovative designer and become a computational thinker by creating apps you and your friends can use. Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on both iOS or Android phones immediately. Anyone and everyone can create a mobile app."
-  tutorial_techapf_shortdescription: "7 useful tricks to master Python like a Pro!"
-  tutorial_techfpjs_shortdescription: "Functional programming made easy with Javascript!"
+  tutorial_codemojijs_shortdescription: "Codemoji conçu pour les débutants en Javascript pour amener les élèves, en tapant de réelles commandes javascript, qui animeront les différents personnages."
+  tutorial_bloxmobmath_shortdescription: "Créer votre propre Application mobile. Apprenez à être un concepteur innovant et à devenir un penseur computationnel en créant des apps que vous et vos amis pourrez utiliser. Conçois le en utilisant chat Blox, quiz, cartes, calendriers, cartes, photos et plus dans des histoires ou des applications interactives qui fonctionnent sur iOS ou Android téléphones immédiatement. N’importe qui et tout le monde peuvent créer une application mobile."
+  tutorial_techapf_shortdescription: "7 astuces utiles pour devenir maître en Python comme un Pro !"
+  tutorial_techfpjs_shortdescription: "La programmation fonctionnelle rendu facile avec Javascript!"
   tutorial_techlinq_shortdescription: "A useful introduction to using the LINQ library in C#"
-  tutorial_gpbcatapult_shortdescription: "Make your own game like Angry Birds."
-  tutorial_quorumastro_shortdescription: "Learn about coding and astronomy in this accessible online tutorial."
-  tutorial_alicewonder_shortdescription: "Guide Alice in wonderland using JavaScript."
+  tutorial_gpbcatapult_shortdescription: "Fait ton propre jeu comme Angry Birds."
+  tutorial_quorumastro_shortdescription: "Apprends à coder et l'astronomie dans ce tutoriel accessible en ligne."
+  tutorial_alicewonder_shortdescription: "Guide Alice aux pays des merveilles avec JavaScript."
   tutorial_rginter_shortdescription: "At RoboGarden, we believe in giving learners the opportunity to take an active role in their education."
-  tutorial_bloxmobscience_shortdescription: "Create your own mobile app. Learn to be an innovative designer and become a computational thinker by creating apps you and your friends can use. Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on both iOS or Android phones immediately. Anyone and everyone can create a mobile app."
-  tutorial_cssgrid_shortdescription: "A game for learning CSS Grid."
+  tutorial_bloxmobscience_shortdescription: "Créer votre propre Application mobile. Apprenez à être un concepteur innovant et à devenir un penseur computationnel en créant des apps que vous et vos amis pourrez utiliser. Conçois le en utilisant chat Blox, quiz, cartes, calendriers, cartes, photos et plus dans des histoires ou des applications interactives qui fonctionnent sur iOS ou Android téléphones immédiatement. N’importe qui et tout le monde peuvent créer une application mobile."
+  tutorial_cssgrid_shortdescription: "Un jeu pour apprendre CSS Grid."
   tutorial_bloxmobdesign_shortdescription: "Create your own mobile app. Learn the sequencing and systems thinking to create apps you and your friends can use. Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on any iOS or Android phone. Anyone and everyone can create a mobile app. Your content, Your customization, Your APP on Your Phone."
   tutorial_jshero_shortdescription: "JS Hero provides you with an introduction to programming by means of JavaScript. It provides general programming concepts such as variables, conditions, loops, functions and a lot more. These concepts form the basis of many programming languages."
   tutorial_codemojipy_shortdescription: "Python Lab is an IOS based activity that teaches basic python."
@@ -1230,7 +1250,7 @@ fr:
   tutorial_codedj_shortdescription: "Learn Javascript basics and start composing your own beats with Code DJ"
   tutorial_rgadvan_shortdescription: "At RoboGarden, we believe in giving learners the opportunity to take an active role in their education."
   tutorial_codehsrn_shortdescription: "Make real apps using React Native!"
-  tutorial_codehswd_shortdescription: "Build a website!"
+  tutorial_codehswd_shortdescription: "Créez un site Web!"
   tutorial_turtlerobot_shortdescription: "A programming game meant for kids 2 - 6. Helps teach function calling."
   tutorial_ozoevo_shortdescription: "Use the force field of Evo by Ozobot to play, then create awesome games"
   tutorial_ozoexped_shortdescription: "Color code your way through space!"
@@ -1262,7 +1282,7 @@ fr:
   tutorial_lbvariables_shortdescription: "Having fun is not a variable with this littleBits Code Kit tutorial."
   tutorial_lbfunctions_shortdescription: "The fun don't stop when you combine function-based code blocks & littleBits."
   tutorial_lblogic_shortdescription: "The choice is yours with conditional logic & littleBits."
-  tutorial_lbworld_shortdescription: "You can change the world with code, one game at a time."
+  tutorial_lbworld_shortdescription: "Vous pouvez changer le monde avec le code, un jeu à la fois."
   tutorial_lbloops_shortdescription: "From special effects to secret messages, loops are your secret game weapon."
   tutorial_lbtug_shortdescription: "Make the classic Tug of War epic with functions & littleBits."
   tutorial_lbpotato_shortdescription: "Build & code your own game of Hot Potato. Can you stand the heat?"
@@ -1291,7 +1311,7 @@ fr:
   tutorial_accai_shortdescription: "Teach an Artificial Intelligence robot to explore a new planet!"
   tutorial_vceclipse_shortdescription: "Code a solar eclipse simulation with JavaScript!"
   tutorial_pmzero_shortdescription: "Create and program a 3D Pac-Man Maze World"
-  tutorial_hsela_shortdescription: "Telling stories: ELA + coding"
+  tutorial_hsela_shortdescription: "Raconter des histoires : ELA + codage"
   tutorial_ticklear_shortdescription: "Anyone can now code virtual and AR characters and program real devices to interact with them – seamlessly blending imagination and reality into a single experience!"
   tutorial_bcrobot_shortdescription: "With only two blocks, students can design, create, and think in 3D! They can build their own robot, while learning underlying math and computational thinking concepts."
   tutorial_bcsnow_shortdescription: "Students will use BlocksCAD to think, design, and create in 3D!"
@@ -1312,7 +1332,7 @@ fr:
   tutorial_bcpy2_shortdescription: "Build your own world with Python."
   tutorial_bcjs1_shortdescription: "Build your own world with JavaScript."
   tutorial_bcjs2_shortdescription: "Build your world in JavaScript."
-  tutorial_athlete_longdescription: "Choisis entre créer un jeu de basket ou un jeu combinant différents sports\\_!"
+  tutorial_athlete_longdescription: "Choisis entre créer un jeu de basket ou un jeu combinant différents sports\_!"
   tutorial_moana_longdescription: "Le nouveau tutoriel \"Heure de Code\" de Disney utilise un langage de programmation visuel à l’aide de blocs où les élèves viennent simplement glisser et déposer des blocs visuels pour écrire du code. La programmation visuelle est une façon amusante et facile à comprendre pour enseigner la logique du codage. La sensibilisation à la programmation visuelle établit des bases pour la programmation textuelle, une activité plus complexe. Le tutoriel est ciblé pour les enfants ages de 8 ans et plus et ceux essayant de coder pour la première fois. Disponible en 23 langues. Ce tutoriel est disponible en ligne gratuitement et comprend un ensemble d’outils numérique en anglais et en espagnol pour les éducateurs et organisateurs d’événements."
   tutorial_star-wars_longdescription: "Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie très très lointaine."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode \"The Signal,\" a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
@@ -1323,7 +1343,7 @@ fr:
   tutorial_capython_longdescription: "Python is an engaging and simple language to learn. Learn about using modules, functions, loops, and lists, all while creating fun images with the help of your turtle buddies. Geometry has never been so much fun!"
   tutorial_frzn_longdescription: "Utilise du code pour rejoindre Anna et Elsa tandis qu’elles découvrent la magie et la beauté de la glace. Crée des flocons de neige et des motifs en patinant sur la glace et inventes un univers hivernal féérique que tu pourras ensuite partager avec tes amis !"
   tutorial_cocom_longdescription: "Choisissez votre héros et codez votre chemin à travers les patrouilles de l'ogre, les fosses de lave et les faisceaux laser du Donjon Kithgard. Augmentez votre niveau, gagnez des gemmes et récupérez des objets magiques pour débloquer de nouveaux pouvoirs de programmation!"
-  tutorial_play-lab_longdescription: "Programme une histoire ou un jeu dans le Labo de jeux ! Fais bouger des animaux, des pirates, des zombies, des ninjas et beaucoup d'autres personnages. Crée des sons, marque des points et envoie des boules de feu\\_!"
+  tutorial_play-lab_longdescription: "Programme une histoire ou un jeu dans le Labo de jeux ! Fais bouger des animaux, des pirates, des zombies, des ninjas et beaucoup d'autres personnages. Crée des sons, marque des points et envoie des boules de feu\_!"
   tutorial_boxisland_longdescription: "Take a trip on Box Island and collect all the stars! Box Island is a beautiful mobile coding game that takes kids on an exciting adventure on the charming island. In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   tutorial_textcomp_longdescription: "À un certain moment, la vitesse à laquelle on peut envoyer des bits atteint sa limite physique. Si l’on souhaite envoyer plus rapidement une grande quantité d’information, il faut trouver un moyen de représenter les mêmes informations avec moins de bits, c’est-à-dire en compressant les données. Dans ce cours, les élèves utilisent le widget de Compression de texte pour compresser des segments de texte en anglais, en recherchant des modèles et en remplaçant des symboles par des modèles de texte plus grands. "
   tutorial_encryption_longdescription: "Les élèves découvrent l’intérêt du cryptage ainsi que des techniques simples pour décrypter des messages secrets. Ils doivent essayer de décrypter un message codé avec le chiffrement classique de César et aussi par Substitution aléatoire. Les élèves doivent comprendre qu’il est nécessaire de préserver la confidentialité des informations qui circulent sur Internet et que, du fait des capacités des outils informatiques actuels, les techniques de cryptage sont amenées à devenir de plus en plus sophistiquées. "
@@ -1336,12 +1356,12 @@ fr:
   tutorial_tynkerch_longdescription: "Save the computer from a malicious virus! You'll have to hack your way through the system by deleting viruses, opening doors, solving mazes, and navigating through the portals. Watch out for viruses and glitches!"
   tutorial_lightbot_longdescription: "Lightbot is a game that asks players to use programming logic to solve puzzles! Gain a practical understanding of basic coding concepts by guiding Lightbot to light up all the blue tiles in each level. Learn how to sequence instructions, write procedures, and utilize loops along the way in this self-guided activity. Great for all ages and all skill levels."
   tutorial_hoc_longdescription: "Espace réservé pour le nouveau code.org/hoc"
-  tutorial_code_longdescription: "Découvre les bases de l'informatique avec la programmation par « Glisser-Déposer ». Il s'agit d'un didacticiel ludique auto-dirigé ponctué de conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies. Découvre les boucles «\\_Répéter\\_», les instructions conditionnelles et les algorithmes de base. Disponible en 37 langues."
+  tutorial_code_longdescription: "Découvre les bases de l'informatique avec la programmation par « Glisser-Déposer ». Il s'agit d'un didacticiel ludique auto-dirigé ponctué de conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies. Découvre les boucles «\_Répéter\_», les instructions conditionnelles et les algorithmes de base. Disponible en 37 langues."
   tutorial_tinspire_longdescription: "Introduce students to the basics of coding – in just 10 minutes at a time – using the TI technology they carry in their backpacks every day. These lessons give students an easy-entry into programming that can help spark their interest in coding and computer science.  Students will write programs that can strengthen math concepts using the TI Basic language that is ready-to-use on their TI-Nspire handhelds."
   tutorial_itchbounceball_longdescription: "We take you through an introduction to Itch, utilizing the Scratch visual programming language.\n\nThis lesson provides a video and text directions for the code students need to add to get a ball bouncing zanily around the screen.\n\nOnce students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!\n\nAll instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended."
   tutorial_vidclim_longdescription: "Students research a fact about the Earth's climate, engaging with the work of scientists and artists in response to climate change. Students take their research and plan a video sharing their fact. \n\nVideos can be about\nUnderstanding climate changes and its effects\nPublic responses to the climate change effects\nHow climate change impacts everyday life\nWhat actions can you take to make a difference"
   tutorial_matlab_longdescription: "Learn to Code is an engaging, online, interactive tutorial where you learn how to code. Use MATLAB to find out if the closest meet-up location with your friends is the movies, the mall, or the cafe. Break the problem up into smaller chunks and learn basic programming concepts along the way. By the end of the hour, create an algorithm to find the shortest path to your friends!"
-  tutorial_flap_longdescription: "Utilise la programmation par «\\_Glisser-Déposer\\_» pour créer ton propre jeu Flappy Bird et personnalise-le pour le rendre plus original (Flappy Shark, Flappy Santa ou tout autre combinaison). Ajoute le jeu à ton téléphone en un seul clic."
+  tutorial_flap_longdescription: "Utilise la programmation par «\_Glisser-Déposer\_» pour créer ton propre jeu Flappy Bird et personnalise-le pour le rendre plus original (Flappy Shark, Flappy Santa ou tout autre combinaison). Ajoute le jeu à ton téléphone en un seul clic."
   tutorial_galaxy_longdescription: "Grab your Android smartphone and explore distant galaxies! At the #GalaxyGameJam you can create your very own Android app. Design it with our free Pocket Code app and become part of our mission to outer space. With Pocket Code we aim to inspire kids, teenagers, and young adults to create their very own games, animations, and interactive stories directly on their smartphones. \n"
   tutorial_inf_longdescription: "Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity."
   tutorial_tynkersol_longdescription: "Program an interactive model of our Solar System. This project comes with step-by-step instructions that guide you through creating a simulation with planets orbiting the Sun. Then add facts about each planet that pop up when clicked."
@@ -1349,7 +1369,7 @@ fr:
   tutorial_como_longdescription: "Dans 200 défis en mode histoire et en mode compétence, les utilisateurs aident le singe à attraper des bananes en apprenant à coder. La partie I du codage aventure enseigne des objets, des boucles, des variables, l'indexation de tableaux, des fonctions et plus encore. La partie II enseigne la logique booléenne (Si/sinon, ET, OU et NON), les comparaisons, les valeurs de retour de fonction et les événements déclencheurs à l'aide du clavier et de la souris. Des astuces et conseils personnalisés sont inclus à chaque étape du processus. Pour les 8-16 ans."
   tutorial_processfound_longdescription: "What does it mean to write software to do the things that you often do with your hands, with paper, with pencil with paint? Could you use a computer to create drawings? To create animations? To create images?"
   tutorial_tynkerhomo_longdescription: "You'll follow step-by-step instructions to animate an interactive story with a lot of homophones in it! Each time a character says a word that is a homophone, ask the player which homophone is the correct word for that context. The player better know their homophones, or else the dialog won't make any sense!"
-  tutorial_art_longdescription: "Dessine de superbes images et dessins avec l'Artiste\\_!"
+  tutorial_art_longdescription: "Dessine de superbes images et dessins avec l'Artiste\_!"
   tutorial_tynkerbrick_longdescription: "Use Tynker's physics engine to make your own personalized version of this classic arcade game. Start by programming the paddle to move when the arrow keys are pressed, then add a ball and some bricks. You'll personalize the game by adding custom assets for the ball, bricks, and paddle."
   tutorial_itchbio_longdescription: "Name-IT has you create a game of recognition!\n\nCreate a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!\n\nYou'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!\n\nYou can take the activity even further by adding your own image and labels (along with many other extra project options, the fun never ends). Headphones are recommended."
   tutorial_itchj_longdescription: "Our Jumping activity provides you the coding skills to get a character to jump onto platforms that is used in many arcade style games.\n\nUse the Jumping skills and create your own game goal.\n\nThis uses a cartesian coordinate system so you'll get to learn a little about screen coordinates here.\n\nEnjoy learning all about jumping with Itch! Headphones are recommended."
@@ -1547,7 +1567,7 @@ fr:
   tutorial_minecraft-2016_longdescription: "Contruit un jeu Minecraft. Crée tes propres versions de poulet, mouton, Creepers, zombies et plus encore."
   tutorial_thinkersmith-es_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
   tutorial_pixie_longdescription: "Hour of Code tutorial with Pixie"
-  tutorial_play_longdescription: "Programme une histoire ou un jeu dans le Labo de jeux ! Fais bouger des animaux, des pirates, des zombies, des ninjas et beaucoup d'autres personnages. Crée des sons, marque des points et envoie des boules de feu\\_!"
+  tutorial_play_longdescription: "Programme une histoire ou un jeu dans le Labo de jeux ! Fais bouger des animaux, des pirates, des zombies, des ninjas et beaucoup d'autres personnages. Crée des sons, marque des points et envoie des boules de feu\_!"
   tutorial_robomind-nl_longdescription: "Les élèves apprennent les bases de programmation en contrôlant leur propre robot virtuel. Le cours en ligne est entièrement pour être suivi en autonomie avec des courtes présentations, des films, des jeux-questionnaires et des conseils et une orientation automatiques pour vous aider sur les exercices de programmation. "
   tutorial_spheroi_longdescription: "Welcome to your first blocks activity! This is a great place to start for most users, and can be used for the \"Hour of Code.\" Follow the steps to get an overview of the app, learn how to create programs using block coding, and gain an understanding of loops and operators."
   tutorial_spherol_longdescription: "You will learn a new use for the lights on your robot. In this activity, you will build a spinning top program where the gyroscopic spin rate will control the main LEDs, and you will use the concepts of normalization and absolute value. This is a great activity after you complete Blocks 2, and can be used for the \"Hour of Code.\""
@@ -1558,15 +1578,15 @@ fr:
   tutorial_tchr_longdescription: "Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we collected and curated one-hour teacher-led lesson and activity plans designed for different subject areas for Hour of Code veterans."
   tutorial_robogame_longdescription: "Challenge your school to compete in the Robot Games! Students will compete in a series of mathematics themed activities where they use Dash and Dot to solve a problem and earn points for themselves, their grade, and/or their school."
   tutorial_tap_longdescription: "Learn the basics of coding with one of our six fun puzzle sets. Then choose from over 100 beginner, intermediate, and advanced tutorials. These tutorials come with step-by-step instructions to create drawing, music, animation, storytelling, physics, and arcade game projects. When you're done, you can publish your projects and explore what other kids are making in our fully moderated community."
-  tutorial_cintl_longdescription: "Découvre les bases de l'informatique avec la programmation par « Glisser-Déposer ». Il s'agit d'un didacticiel ludique auto-dirigé ponctué de conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies. Découvre les boucles «\\_Répéter\\_», les instructions conditionnelles et les algorithmes de base. Disponible en 37 langues."
+  tutorial_cintl_longdescription: "Découvre les bases de l'informatique avec la programmation par « Glisser-Déposer ». Il s'agit d'un didacticiel ludique auto-dirigé ponctué de conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies. Découvre les boucles «\_Répéter\_», les instructions conditionnelles et les algorithmes de base. Disponible en 37 langues."
   tutorial_itchstop_longdescription: "We'll be using Itch to build our own stop frame animation projects. Note that headphones are recommended for this course. We will use some existing sprites that support animations and show the code we need to add to animate our characters. We'll also go over how to create our very own animation effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly for animation effects (similar to a flip-book animation) and the code behind it. All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project."
   tutorial_tynkerpn_longdescription: "Follow Peep as he explores the big wide world! In this project, you'll create an interactive scene in which Peep goes on a nature walk and sees lots of interesting items. You'll make different items show up or disappear depending on where Peep is walking. You can even make the items talk and add music to your scene!"
   tutorial_tynkerpd_longdescription: "Are you ready to make Peep and his friends dance? Learn how to use code to animate the birds. In this project, you will use costumes and delays to animate the birds, one frame at a time. You can add your own background and music and even make Peep and his friends talk!"
   tutorial_persistence_longdescription: "Les nouveaux problèmes non encore résolus sont souvent assez difficiles. Si l’on souhaite avoir la possibilité de faire quelque chose de créatif, d’utile et d’intelligent, il faut être prêt à s’attaquer à des problèmes difficiles, même si cela signifie qu’il faudra subir plusieurs échecs avant de réussir. Ce cours montre que l’échec n’est pas une fin mais un moyen de découvrir comment réussir."
   tutorial_getloopy_longdescription: "Les boucles sont un moyen pratique de décrire des actions qui se répètent un certain nombre de fois. Dans ce cours, les élèves apprennent à transformer un ensemble d’actions en une boucle simple."
   tutorial_createface_longdescription: "The aim of this activity is to demonstrate how apparently complicated behaviour can be programmed using some simple rules. It also shows how programs are just rules followed by computers and specifically introduces object-based programming. The activity shows how breaking a program into objects can be much easier to write than trying to write it in one go. The class get to write some simple programs to control the face they created."
-  tutorial_happymaps_longdescription: "L'informatique est basée sur ce que l'on appelle un algorithme. Le mot «\\_algorithme\\_» peut sembler compliqué mais il s'agit simplement d'une série d'instructions qu’une personne peut suivre pour obtenir un résultat donné. Pour offrir à vos élèves des bases solides qui leur permettront de développer leurs connaissances en informatique, nous allons nous efforcer de les familiariser avec les algorithmes."
-  tutorial_moveit_longdescription: "Ce cours permet aux élèves de comprendre que pour donner des instructions claires, ils ont besoin d’un langage commun. Les élèves mettent cette connaissance en pratique en se contrôlant mutuellement à l’aide d’une simple combinaison de gestes de la main. Une fois qu’ils comprennent le langage utilisé, ils commencent alors à «\\_programmer\\_» leurs camarades en leur donnant différentes instructions à l’avance."
+  tutorial_happymaps_longdescription: "L'informatique est basée sur ce que l'on appelle un algorithme. Le mot «\_algorithme\_» peut sembler compliqué mais il s'agit simplement d'une série d'instructions qu’une personne peut suivre pour obtenir un résultat donné. Pour offrir à vos élèves des bases solides qui leur permettront de développer leurs connaissances en informatique, nous allons nous efforcer de les familiariser avec les algorithmes."
+  tutorial_moveit_longdescription: "Ce cours permet aux élèves de comprendre que pour donner des instructions claires, ils ont besoin d’un langage commun. Les élèves mettent cette connaissance en pratique en se contrôlant mutuellement à l’aide d’une simple combinaison de gestes de la main. Une fois qu’ils comprennent le langage utilisé, ils commencent alors à «\_programmer\_» leurs camarades en leur donnant différentes instructions à l’avance."
   tutorial_bigevent_longdescription: "Les événements sont un excellent moyen d’ajouter de la variété à un algorithme écrit à l’avance. Il est parfois nécessaire que votre programme puisse répondre à l’utilisateur exactement quand ce dernier le souhaite. C’est justement ce que permettent les événements."
   tutorial_gpp_longdescription: "En « programmant » leurs camarades pour qu’ils dessinent des images, les élèves découvrent ce qu'est vraiment la programmation. Au début du cours, les élèves demandent à leurs camarades de reproduite une image sur du papier quadrillé en leur donnant des instructions pour colorier les carrés."
   tutorial_foosgame_longdescription: "Code your own video game with codeSpark Academy with The Foos' new Game Kits. This activity guides students brand new to game design using a \"paint-by-numbers\" approach. Students will follow the on screen prompts to design and program a fun video game that they can share with their family and friends."
@@ -1632,7 +1652,7 @@ fr:
   tutorial_hopfireworks_longdescription: "Your students will be so excited when they code their own (explosion free!) fireworks app! Hopscotch is a simple programming tool on the iPad/iPhone, beloved by millions of students for its freedom of creative expression. This self-guided video tutorial teaches kids age 8+ programming basics while they code custom versions of interactive fireworks. "
   tutorial_grokspace_longdescription: "This activity is designed to give you your first experience programming, and has been specially designed for the Hour of Code. Use the visual programming language Blockly to investigate space and reach for the stars."
   tutorial_codehspython_longdescription: "Learn the basics of coding with the Python programming language by writing programs that you can interact with! This hour will cover printing, variables, math, and getting information from users. Write a program that take in and stores data from a user and returns a unique response!"
-  tutorial_codehsjava_longdescription: "Coding in Java with CodeHS"
+  tutorial_codehsjava_longdescription: "Codage en Java avec CodeHS"
   tutorial_techioda_longdescription: "This useful tutorial will interactively teach you how to be able to calculate the shortest path between two nodes in a graph in advance, thanks to the Dijkstra's algorithm."
   tutorial_grokmonster_longdescription: "Get kids into coding with this friendly course specially designed for the Hour of Code! Use drag-and-drop blocks to write your own programs, learn about sequence and ordering, and create fun monster characters!"
   tutorial_techmjs_longdescription: "JavaScript has been an international standard since 1997. In this interactive tutorial, we will explore the modern features of the language that will make your code more robust, concise, and easier to read."
@@ -1645,7 +1665,7 @@ fr:
   tutorial_kanostreet_longdescription: "Art and technology unite! With Kano's Street Art Hour of Code challenges, creative minds of all abilities will code with a paintbrush, making beautiful, unique artwork. Along the way, makers will learn computer science principles while using a real programming language in an intuitive and engaging way. With our teacher resources and guided content, everyone can get in on the fun."
   tutorial_nyblebot_longdescription: "Boogie Bot is a fun and engaging coding app. Bursting with life and energy, this 3D app will introduce kids to the basics of computer programming using Google's visual programming language Blockly. Boogie Bot is a dancing robot, who can be programmed to do dance moves. App Features (all features available in full version) learn to code with coding blocks, create your own dance with code, choose from several different unique dance tracks, transform the room to a trendy party zone, add stunning special effects on stage, earn coins as you learn programming constructs, decorate the room with cool stuff, play and explore in an interactive room full of hidden features, record and save a video of your awesome creation."
   tutorial_codemojijs_longdescription: "Beginning JavaScript is designed to get students typing simple commands that have a big impact on the characters' actions. The students will type commands that make the characters do everything from backflips to make sounds and even talk. This activity will help you learn basic JavaScript ideas and commands."
-  tutorial_bloxmobmath_longdescription: "Create your own mobile app. Learn to be an innovative designer and become a computational thinker by creating apps you and your friends can use. Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on both iOS or Android phones immediately. Anyone and everyone can create a mobile app."
+  tutorial_bloxmobmath_longdescription: "Créer votre propre Application mobile. Apprenez à être un concepteur innovant et à devenir un penseur computationnel en créant des apps que vous et vos amis pourrez utiliser. Conçois le en utilisant chat Blox, quiz, cartes, calendriers, cartes, photos et plus dans des histoires ou des applications interactives qui fonctionnent sur iOS ou Android téléphones immédiatement. N’importe qui et tout le monde peuvent créer une application mobile."
   tutorial_techapf_longdescription: "The interactive tutorial aims to introduce you to useful advanced Python features and tricks you may not know yet to improve your mastery of the Python language."
   tutorial_techfpjs_longdescription: "Functional programming is one of those things that may look too hard or too theoretical to try. Wait no more! In this interactive tutorial, you'll discover functional programming through hands-on examples and exercises in JavaScript."
   tutorial_techlinq_longdescription: "The C# programming language is quite popular with developers, in a large part because of its many powerful and intuitive language features. One of these is LINQ, a library used to execute queries directly in C# syntax against many types of data. This interactive tutorial will show you how to use it, step by step."

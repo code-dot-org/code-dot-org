@@ -55,11 +55,6 @@ const styles = {
     color: '#5b6770',
     border: '1px solid #c5c5c5',
   },
-  error: {
-    fontSize: 10,
-    color: color.light_gray,
-    display: 'none',
-  },
 };
 
 const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) => classrooms.length ?
@@ -123,20 +118,47 @@ NoClassroomsFound.propTypes = {
   rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const LoadError = ({error}) =>
-  <div>
-    <p>
-      {locale.authorizeGoogleClassroomsText()}
-    </p>
-    <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
-      {locale.authorizeGoogleClassrooms()}
-    </a>
-    <p style={styles.error}>
-      {error.status} {error.message}
-    </p>
-  </div>;
+const ROSTERED_SECTIONS_SUPPORT_URL = 'https://support.code.org/hc/en-us/articles/115001319312';
+const LoadError = ({rosterProvider, loginType}) => {
+  switch (rosterProvider) {
+    case OAuthSectionTypes.google_classroom:
+      return (
+        <div>
+          <p>
+            {locale.authorizeGoogleClassroomsText()}
+            {' '}
+            <a href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
+              {locale.authorizeGoogleClassrooms()}
+            </a>
+          </p>
+          <p>
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+            >
+              {locale.errorLoadingRosteredSectionsSupport()}
+            </a>
+          </p>
+        </div>
+      );
+    default:
+      return (
+        <p>
+          {locale.errorLoadingRosteredSections({type: loginType})}
+          {' '}
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+          >
+            {locale.errorLoadingRosteredSectionsSupport()}
+          </a>
+        </p>
+      );
+  }
+};
 LoadError.propTypes = {
-  error: loadErrorShape,
+  rosterProvider: PropTypes.string,
+  loginType: PropTypes.string,
 };
 
 class RosterDialog extends React.Component {
@@ -172,12 +194,15 @@ class RosterDialog extends React.Component {
 
   render() {
     let title = '';
+    let loginType = '';
     switch (this.props.rosterProvider) {
       case OAuthSectionTypes.google_classroom:
         title = locale.selectGoogleClassroom();
+        loginType = locale.loginTypeGoogleClassroom();
         break;
       case OAuthSectionTypes.clever:
         title = locale.selectCleverSection();
+        loginType = locale.loginTypeClever();
         break;
     }
 
@@ -194,7 +219,10 @@ class RosterDialog extends React.Component {
         </h2>
         <div style={styles.content}>
           {this.props.loadError ?
-            <LoadError error={this.props.loadError}/> :
+            <LoadError
+              rosterProvider={this.props.rosterProvider}
+              loginType={loginType}
+            /> :
             this.props.classrooms ?
               <ClassroomList
                 classrooms={this.props.classrooms}

@@ -11,12 +11,21 @@ zh:
   campaign_date_full: "12月4日-10日"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017 年 12 月的 4-10 日"
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
   front_header_banner: '加入史上最大的學習活動， %{campaign_date}'
   front_intro_default: '一小時玩程式（Hour of Code）是個全球性的運動，觸及了來自 180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有<strong>適用於 4 到 104 歲</strong>的教程，支援超過 45 種語言。'
   front_watch_video: '觀看新的影片'
   front_watch_regular_video: '觀賞影片'
   front_volunteers: '徵求專門技術志願者'
   front_start_learning: '開始學習'
+  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_privacy_policy: 'privacy policy'
+  gdpr_dialog_logout: 'Logout'
+  gdpr_dialog_yes: 'Yes'
   header_menu_resources: '資源'
   header_menu_faq: '常見問題與解答'
   header_menu_how_to: '活動指南'
@@ -222,6 +231,8 @@ zh:
   front_join_us_challenge: "贏得與名人的教室視頻聊天！"
   front_join_us_learn_more: "了解更多"
   signup_closed: '程式碼小時注册現已關閉。請在十月再次檢查，以便為下一小時的程式碼注册。'
+  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
+  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
   signup_header: '在 %{campaign_date} 舉辦一場一小時的程式設計課程活動，並在這裡註冊。'
   signup_name_label: '您的姓名'
   signup_name_error: '名稱是必需的。'
@@ -243,6 +254,11 @@ zh:
   signup_your_event: '註冊您的活動'
   signup_host_an_hour: '主辦一小時玩程式'
   signup_match_volunteer: '幫助我找到一位在地的軟體工程師來引導我的學生'
+  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
+  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_yes: 'Yes'
+  signup_email_preference_no: 'No'
+  signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "如果你同時舉辦多場活動，請每場活動提供一個不重複的姓名或電子郵件信箱。我們一個活動只會算入一個姓名和電子郵件信箱。"
   signup_registration_deadline: "一小時玩程式註冊截止日期為12月11日。"
   signup_name_placeholder: '您的姓名'
@@ -265,6 +281,7 @@ zh:
   signup_thank_you_message: '我們已經寄給您確認的電子郵件，內容包含了可以幫助您入門的相關資訊。'
   map_title: "一小時玩程式的地圖"
   map_header: '# 個一小時玩程式活動遍佈世界各地'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: '查看所有事件'
   map_header_company: '# 由公司主辦'
   map_header_country: '在 %{country} 有 # 場'
@@ -280,6 +297,7 @@ zh:
   meta_tag_twitter_title: '一小時玩程式活動來囉'
   meta_tag_twitter_description: '一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。'
   twitter_default_text: "我將要參加今年的 #HourOfCode，你呢？@codeorg"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   hoc_faq_title: '常見問答'
   hoc_faq_what_is_hoc_q: '「一小時玩程式」是什麼？'
   hoc_faq_what_is_hoc_a: "Hour of Code 是個一小時介紹計算機科學的活動，希望在揭開程式設計的神秘面紗的同時，說明它是任何人都可以學習的基礎知識，期望能擴展人們在計算機科學領域的參與。查看<a href='%{tutorials}'>教程和活動</a>。這個草根活動得到了<a href='%{partners}'>400 個合作夥伴</a>和來自世界 20 萬名教師的支持。"
@@ -374,6 +392,7 @@ zh:
   videos_obama_cs: 奧巴馬總統的電腦科學
   videos_anybody_can_learn: 任何人都可以學習 (1 分鐘)
   title_country_resources: 國家特定的資源
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: 給地區的一小時玩程式活動指引
   title_how_to_events: 一小時玩程式活動指引
   title_how_to_organizations: 如何辦理一小時玩程式活動 - 團體組織
@@ -382,6 +401,7 @@ zh:
   title_how_to_volunteers: 給一小時玩程式活動志工的活動指引
   title_how_to_parents: 給家長的活動指引
   title_how_to: 活動指引
+  title_international_partners: Contact International Partners
   title_press_release: 由政治人員發佈的一小時玩程式活動新聞
   title_op_ed: 支持計算機科學週及一小時玩程式活動的專欄文章範例
   title_press_kit: 新聞資料袋

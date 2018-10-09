@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_country_resources) %>
+title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -105,14 +105,14 @@ Nous allons mettre en place plusieurs tutoriels amusants durant un heur, créés
 - Nécessitent un minimum de préparation
 - Sont guidés, pour permettre aux élèves de travailler à leur rythme et à leur niveau
 
-<a href="https://uk.code.org/learn"><img src="https://uk.code.org/images/tutorials.png"></a>
+<a href="https://code.org/learn"><img src="https://code.org/images/tutorials.png"></a>
 
 ## 2) Planifier vos besoins en matériel - les ordinateurs sont facultatifs
 
 La meilleure expérience Heur de Code sera avec des ordinateurs en-ligne. Mais vous n'avez pas besoin d'une ordinateur pour chaque participant, et vous pouvez même faire l'Heur de Code sans aucun ordinateur du tout.
 
 - **Testez les tutoriels sur les ordinateurs ou le matériel qu'utiliseront les élèves.** Assurez-vous que tout fonctionne correctement (avec son et vidéo).
-- **Prévisualisez la page de félicitation** pour voir ce que les élèves verront lorsqu'ils auront fini. 
+- **Prévisualisez la page de félicitation** pour voir ce que les élèves verront lorsqu'ils auront fini.
 - **Fournissez des écouteurs à votre classe**, ou demandez à vos élèves de prendre les leurs, si le tutoriel que vous avez choisi fonctionne mieux avec du son.
 
 ## 3) Planifiez à l'avance vos ressources réseau et matériel disponible

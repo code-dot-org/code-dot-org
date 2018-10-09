@@ -1,17 +1,17 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 L'Heure du Code est rendu possible grâce à la Commission Consultative et aux Comités d'Examen de l'Heure du Code et de l'Informatique.
 
-La [Commission Consultative ](<%= resolve_url('/advisory-committee') %>) est comprise de représentant(e)s d'éducation primaire et secondaire, d'universités, d'organizations sans but lucratif, d'organizations à but lucratif et d'organizations internationales. Cette commission guide la stratégie de la campagne Heure du Code.
+La [Commission Consultative ](<%= resolve_url('/advisory-committee') %>) est comprise de représentant(e)s d'éducation primaire et secondaire, d'universités, d'organisations sans but lucratif, d'organisations à but lucratif et d'organisations internationales. Cette commission guide la stratégie de la campagne Heure du Code.
 
-Le [Comité d'Examen](<%= resolve_url('/review-committee') %>) est compris de 15 éducateurs provenant de toutes tranches d'éducation primaire et secondaire qui évaluent et recommandent des activités tout en utilisant la rubrique de la Commission Consultative. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Le [Comité d'Examen](<%= resolve_url('/review-committee') %>) est compris de 15 éducateurs provenant de toutes tranches d'éducation primaire et secondaire qui évaluent et recommandent des activités tout en utilisant la rubrique de la Commission Consultative. Ces éducateurs examinent des activités pour les élèves et des plans de cours pour les professeurs soumis par des centaines de partenaires éducatifs. Ils évaluent la valeur éducatives des activités, l'engagement des élèves et le potentiel pour attirer différentes catégories d'élèves.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Le travail de ces deux commissions et leur implication ont contribué au succès de l'Heure de Code et à sa vision de permettre à chaque élève une découverte de l'informatique.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Partenaires de l'Amérique Latine
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Partenaires d'Afrique
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Partenaires d'Afrique
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Partenaires de Chine
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Partenaires de France
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Partenaires d'Indonésie
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Partenaires d'Irlande
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'in' %>
 
-# India Partners
+# Partenaires d'Inde
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Partenaires du Japon
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Netherlands des Pays-Bas
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Partenaires de Nouvelle Zélande
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Partenaires des Royaumes-Unis
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,7 +107,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Partenaires du Canada
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -119,19 +119,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 ---
 
-# Principaux partenaires médias
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
-# Partenaires internationaux
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -143,7 +137,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 ---
 
-# Autres partenaires
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

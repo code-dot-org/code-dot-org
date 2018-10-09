@@ -15,7 +15,7 @@ module UsersHelper
 
   # Move followed sections from source_user to destination_user and destroy source_user.
   # Returns a boolean - true if all steps were successful, false otherwise.
-  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:)
+  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:, provider:)
     # No-op if source_user is nil
     return true unless source_user.present?
 
@@ -23,7 +23,7 @@ module UsersHelper
       source_user: source_user,
       destination_user: destination_user,
       type: takeover_type,
-      provider: destination_user.provider,
+      provider: provider,
     }
 
     if source_user.has_activity?
@@ -65,7 +65,8 @@ module UsersHelper
       return unless move_sections_and_destroy_source_user(
         source_user: existing_account,
         destination_user: user,
-        takeover_type: 'oauth'
+        takeover_type: 'oauth',
+        provider: provider,
       )
 
       if user.migrated?
@@ -96,7 +97,7 @@ module UsersHelper
 
   def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit',
+      study: 'user-soft-delete-audit-v2',
       event: "#{type}-account-takeover", # Silent or OAuth takeover
       user_id: source_user.id, # User account being "taken over" (deleted)
       data_int: destination_user.id, # User account after takeover
@@ -266,33 +267,38 @@ module UsersHelper
         readonly_answers = !!ul.try(:readonly_answers)
         locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
 
-        # for now, we don't allow authorized teachers to be "locked"
-        if locked && !user.authorized_teacher?
-          levels[level_id] = {
-            status: LEVEL_STATUS.locked
-          }
-        elsif completion_status != LEVEL_STATUS.not_tried
-          levels[level_id] = {
-            status: completion_status,
-            result: ul.try(:best_result) || 0,
-            submitted: submitted ? true : nil,
-            readonly_answers: readonly_answers ? true : nil,
-            paired: (paired_user_levels.include? ul.try(:id)) ? true : nil
-          }.compact
-
-          # Just in case this level has multiple pages, in which case we add an additional
-          # array of booleans indicating which pages have been completed.
-          pages_completed = get_pages_completed(user, sl)
-          if pages_completed
-            levels[level_id][:pages_completed] = pages_completed
-            pages_completed.each_with_index do |result, index|
-              levels["#{level_id}_#{index}"] = {
-                result: result,
-                submitted: submitted ? true : nil,
-                readonly_answers: readonly_answers ? true : nil
-              }.compact
-            end
+        if completion_status == LEVEL_STATUS.not_tried
+          # for now, we don't allow authorized teachers to be "locked"
+          if locked && !user.authorized_teacher?
+            levels[level_id] = {
+              status: LEVEL_STATUS.locked
+            }
           end
+          next
+        end
+
+        levels[level_id] = {
+          status: completion_status,
+          result: ul.try(:best_result) || 0,
+          submitted: submitted ? true : nil,
+          readonly_answers: readonly_answers ? true : nil,
+          paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
+          locked: locked ? true : nil,
+        }.compact
+
+        # Just in case this level has multiple pages, in which case we add an additional
+        # array of booleans indicating which pages have been completed.
+        pages_completed = get_pages_completed(user, sl)
+
+        next unless pages_completed
+
+        levels[level_id][:pages_completed] = pages_completed
+        pages_completed.each_with_index do |result, index|
+          levels["#{level_id}_#{index}"] = {
+            result: result,
+            submitted: submitted ? true : nil,
+            readonly_answers: readonly_answers ? true : nil
+          }.compact
         end
       end
     end
@@ -331,7 +337,9 @@ module UsersHelper
       # Retrieve the level information for those embedded levels.  These results
       # won't necessarily match the order of level names as requested, but
       # fortunately we are just accumulating a count and don't mind the order.
-      Level.where(name: embedded_level_names).each do |embedded_level|
+      embedded_levels = Level.where(name: embedded_level_names).to_a
+      embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
+      embedded_levels.each do |embedded_level|
         level_id = embedded_level.id
 
         # Do we have a valid result for this level in the LevelGroup last_attempt?
@@ -345,7 +353,7 @@ module UsersHelper
       page_completed_value =
         if page_valid_result_count.zero?
           nil
-        elsif page_valid_result_count == page["levels"].length
+        elsif page_valid_result_count == embedded_levels.length
           ActivityConstants::FREE_PLAY_RESULT
         else
           ActivityConstants::UNSUBMITTED_RESULT
