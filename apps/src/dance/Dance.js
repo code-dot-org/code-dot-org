@@ -222,7 +222,6 @@ Dance.prototype.execute = function () {
     return;
   }
 
-  // TODO: re-run user code, start p5 looping.
   this.initInterpreter();
   this.p5.loop();
 
@@ -230,6 +229,9 @@ Dance.prototype.execute = function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
   this.nativeAPI.play();
+
+  const validationCallback = new Function(this.level.validationCode);
+  this.nativeAPI.registerValidation(validationCallback);
 };
 
 Dance.prototype.initInterpreter = function () {
