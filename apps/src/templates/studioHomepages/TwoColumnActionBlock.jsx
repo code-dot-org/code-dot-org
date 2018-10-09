@@ -178,7 +178,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         description={i18n.specialAnnouncementDescriptionHoc2018()}
         buttons={[
           {
-            url: pegasus('/educate/professional-learning-2018'),
+            url: 'https://hourofcode.com/#join',
             text: i18n.signUpButton()
           },
         ]}
