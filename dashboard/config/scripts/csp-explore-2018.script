@@ -15,7 +15,7 @@ named_level 'CSP ExploreL01 SFLP'
 level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
 stage 'Explore PT - Making a Plan', flex_category: 'csp_ap_2'
-named_level 'CSP ExploreL02 SFLP'
+named_level 'CSP ExploreL02 SFLP_2018'
 
 stage 'Explore PT - Complete the Task', flex_category: 'csp_ap_2'
 named_level 'CSP ExploreL03 SFLP'
