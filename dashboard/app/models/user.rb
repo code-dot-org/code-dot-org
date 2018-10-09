@@ -698,6 +698,8 @@ class User < ActiveRecord::Base
     errors.each do |attribute, _|
       errors.delete(attribute) unless required_fields.include?(attribute)
     end
+
+    email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
   def self.normalize_gender(v)
