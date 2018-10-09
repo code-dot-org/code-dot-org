@@ -1,4 +1,5 @@
-"no":
+---
+'no':
   data:
     blocks:
       Dancelab_atTimestamp:
@@ -143,8 +144,8 @@
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'sann'
-            'false': 'usann'
+            'true': sann
+            'false': usann
       gamelab_getProp:
         options:
           PROPERTY:

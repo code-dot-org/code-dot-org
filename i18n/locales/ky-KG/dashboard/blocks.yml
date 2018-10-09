@@ -1,3 +1,4 @@
+---
 ky:
   data:
     blocks:
@@ -126,14 +127,6 @@ ky:
             '"left"': солго
             '"right"': оңго
             '"space"': космос
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': өйдө
-            '"down"': ылдый
-            '"left"': солго
-            '"right"': оңго
-            '"space"': космос
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -143,8 +136,8 @@ ky:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'туура'
-            'false': 'жалган'
+            'true': туура
+            'false': жалган
       gamelab_getProp:
         options:
           PROPERTY:

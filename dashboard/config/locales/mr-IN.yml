@@ -2,6 +2,9 @@
 mr:
   signup_form:
     user_type_student: विध्यार्थी
+  nav:
+    create_button:
+      create: बनवा
   teacher:
     panel:
       student: विध्यार्थी
