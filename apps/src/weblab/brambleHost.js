@@ -1,5 +1,3 @@
-import logToCloud from '../logToCloud';
-
 /* global requirejs */
 
 /**
@@ -601,12 +599,12 @@ function load(Bramble) {
   });
 
   Bramble.once("error", function (err) {
-    console.error("Bramble error", err);
-
     // Send to New Relic
-    logToCloud.addPageAction(logToCloud.PageAction.BrambleError, {
+    webLab_.addPageAction(webLab_.PageAction.BrambleError, {
       error: err && err.message
     });
+
+    console.error("Bramble error", err);
 
     if (err && err.code === "EFILESYSTEMERROR") {
       modalError(`We're sorry, Web Lab failed to load for some reason. ${SUPPORT_ARTICLE_HTML}`, Bramble);
@@ -652,9 +650,13 @@ function modalError(message, Bramble, showButtons=true) {
     if (Bramble) {
       Bramble.formatFileSystem((err) => {
         if (err) {
+          webLab_.addPageAction(webLab_.PageAction.BrambleFilesystemResetFailed, {
+            error: err && err.message
+          });
           // Unable to create filesystem, fatal (and highly unlikely) error
           modalError(`Failed to reset Bramble's filesystem. ${err.message}. ${SUPPORT_ARTICLE_HTML}`, Bramble);
         } else {
+          webLab_.addPageAction(webLab_.PageAction.BrambleFilesystemResetSuccess, {});
           // filesystem is now clean and empty, use Bramble.getFileSystem() to obtain instance
           modalError(`Bramble filesystem reset.  Reloading...`, Bramble, false);
           reloadWebLab();
