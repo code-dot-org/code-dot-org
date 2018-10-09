@@ -1,5 +1,6 @@
 -# Locals: current_user, loc_prefix, [session_pairings]
 :ruby
+  require 'cdo/create_header'
   user_under_13 = request.cookies["_user_type_#{rack_env}"] == "student_y"
   options = { user_under_13: user_under_13 }
   show_updated_header = request.cookies['pm'] == 'create_header_2018'
