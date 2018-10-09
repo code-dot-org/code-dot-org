@@ -17,9 +17,9 @@ def get_social_metadata_for_page(request)
   social_tags = {
     "code.org" => {
       "soon-hoc" => {
-        title: "What will you create?",
-        description: "This year's #HourOfCode is about creativity. I’m in! Are you?",
-        description_twitter: "This year's #HourOfCode is about creativity. I’m in! What will you create?",
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity),
         image: {path: "/images/fit-1220/social-media/default-og-image.jpg", width: 1220, height: 640}
       },
       "week-before-hoc" => {
@@ -67,9 +67,9 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "soon-hoc" => {
-        title: I18n.t(:og_title_soon),
-        description: hoc_s(:meta_tag_og_description),
-        description_twitter: hoc_s(:meta_tag_twitter_description),
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity),
         image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
         video: videos[:hour_of_code_worldwide]
       },
