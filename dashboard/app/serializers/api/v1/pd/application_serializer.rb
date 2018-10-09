@@ -92,4 +92,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   def attending_teachercon
     object&.workshop&.teachercon?
   end
+
+  def principal_approval
+    object.try(:principal_approval)
+  end
 end
