@@ -259,6 +259,14 @@ Sounds.prototype.play = function (soundId, options) {
   if (sound) {
     sound.play(options);
   }
+  this.audioStartedTime = this.audioContext.currentTime;
+};
+
+//Returns time since the current audio started to play
+Sounds.prototype.getCurrentTime = function () {
+  if (this.audioStartedTime) {
+    return this.audioContext.currentTime - this.audioStartedTime;
+  }
 };
 
 Sounds.prototype.playURL = function (url, playbackOptions) {
