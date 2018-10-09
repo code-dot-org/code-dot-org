@@ -266,6 +266,8 @@ Sounds.prototype.play = function (soundId, options) {
 Sounds.prototype.getCurrentTime = function () {
   if (this.audioStartedTime) {
     return this.audioContext.currentTime - this.audioStartedTime;
+  } else {
+    return 0;
   }
 };
 
