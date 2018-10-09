@@ -956,7 +956,6 @@ module Pd::Application
     end
 
     test 'Can create applications for the same user in 1819 and 1920' do
-      application = create :pd_teacher1920_application
       teacher = create :teacher
 
       assert_creates Pd::Application::Teacher1819Application do
