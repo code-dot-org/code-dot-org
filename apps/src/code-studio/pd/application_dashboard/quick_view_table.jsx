@@ -5,9 +5,12 @@ import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
-import { StatusColors, ApplicationStatuses } from './constants';
+import {
+  StatusColors,
+  ApplicationStatuses
+} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
-import SendPrincipalApprovalButton from './send_principal_approval_button';
+import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const styles = {
   table: {
@@ -31,7 +34,7 @@ const styles = {
 export class QuickViewTable extends React.Component {
   static propTypes = {
     path: PropTypes.string.isRequired,
-    data: PropTypes.array.isRequired,
+    applications: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
     regionalPartnerName: PropTypes.string,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -57,7 +60,10 @@ export class QuickViewTable extends React.Component {
           direction,
           position: 0
         }
-      }
+      },
+
+      // track live in-memory changes, to avoid unnecessary API refresh
+      applicationsDelta: {}
     };
   }
 
@@ -66,6 +72,15 @@ export class QuickViewTable extends React.Component {
     || this.props.viewType === 'facilitator'
     || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
   );
+
+  handlePrincipalApprovalButtonsChange = (applicationId, principal_approval) => {
+    this.setState({
+      applicationsDelta: {
+        ...this.state.applicationsDelta,
+        [applicationId]: {principal_approval}
+      }
+    });
+  };
 
   formatBoolean(bool) {
     return bool ? "Yes" : "No";
@@ -148,6 +163,9 @@ export class QuickViewTable extends React.Component {
         header: {
           label: 'Principal Approval',
           transforms: [sortable]
+        },
+        cell: {
+          format: this.formatPrincipalApprovalCell
         }
       }, {
         property: 'meets_criteria',
@@ -208,8 +226,14 @@ export class QuickViewTable extends React.Component {
   };
 
   constructRows() {
-    let rows = this.props.data;
+    let rows = this.props.applications;
     rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    if (Object.keys(this.state.applicationsDelta).length > 0) {
+      rows = rows.map(row => ({
+        ...row,
+        ...this.state.applicationsDelta[row.id]
+      }));
+    }
     return rows;
   }
 
@@ -237,22 +261,35 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatActionsCell = (id, props) => {
+  formatActionsCell = (id) => {
+    return (
+      <Button
+        bsSize="xsmall"
+        target="_blank"
+        href={this.context.router.createHref(`/${this.props.path}/${id}`)}
+      >
+        View Application
+      </Button>
+    );
+  };
+
+  formatPrincipalApprovalCell = (principal_approval, props) => {
+    if (principal_approval) {
+      return (
+        <span>
+          {principal_approval}
+        </span>
+      );
+    }
+
     return (
       <div>
-        <Button
-          bsSize="xsmall"
-          target="_blank"
-          href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-        >
-          View Application
-        </Button>
-        <br/>
-        {
-          props['rowData']['principal_approval'] === 'No approval sent' && (
-            <SendPrincipalApprovalButton id={id}/>
-          )
-        }
+        <PrincipalApprovalButtons
+          applicationId={props.rowData.id}
+          showSendEmailButton={true}
+          showNotRequiredButton={true}
+          onChange={this.handlePrincipalApprovalButtonsChange}
+        />
       </div>
     );
   };

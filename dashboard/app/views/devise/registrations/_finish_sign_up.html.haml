@@ -19,6 +19,8 @@
       %span= link_to 'Cancel', users_cancel_path
 
     = f.hidden_field :locale, value: locale
+    = f.hidden_field :email
+    = f.hidden_field :encrypted_password
 
     .field-row
       .field
