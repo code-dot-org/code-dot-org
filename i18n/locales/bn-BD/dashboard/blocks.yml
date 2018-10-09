@@ -1,3 +1,4 @@
+---
 bn:
   data:
     blocks:
@@ -95,14 +96,6 @@ bn:
             '"left"': বামে
             '"right"': ডানে
             '"space"': স্থান
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -110,8 +103,8 @@ bn:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'সত্যি'
-            'false': 'মিথ্যা'
+            'true': সত্যি
+            'false': মিথ্যা
       gamelab_getProp:
         options:
           PROPERTY:
@@ -182,6 +175,11 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
       Mikelab_getProp:
         options:
           PROPERTY:

@@ -30,7 +30,7 @@ Our middle school curriculum focuses on a broad introduction to computer science
 
 Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
-[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
+[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
 
 [/col-60]
 

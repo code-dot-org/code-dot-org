@@ -1,3 +1,4 @@
+---
 ta:
   data:
     blocks:
@@ -59,15 +60,11 @@ ta:
         options:
           KEY:
             '"space"': வெளி
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': வெளி
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'மெய்'
-            'false': 'தவறு'
+            'true': மெய்
+            'false': தவறு
       gamelab_locationDelta:
         options:
           DIR:

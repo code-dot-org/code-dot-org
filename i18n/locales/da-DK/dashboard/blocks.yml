@@ -1,3 +1,4 @@
+---
 da:
   data:
     blocks:
@@ -107,14 +108,6 @@ da:
             '"left"': venstre
             '"right"': højre
             '"space"': rummet
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': op
-            '"down"': ned
-            '"left"': venstre
-            '"right"': højre
-            '"space"': rummet
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -124,8 +117,8 @@ da:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'sandt'
-            'false': 'falsk'
+            'true': sandt
+            'false': falsk
       gamelab_getProp:
         options:
           PROPERTY:
@@ -206,6 +199,11 @@ da:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
       Mikelab_getProp:
         options:
           PROPERTY:

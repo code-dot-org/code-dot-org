@@ -1,3 +1,4 @@
+---
 ka:
   data:
     blocks:
@@ -206,18 +207,6 @@ ka:
             '2': მაღალი
       Dancelab_whenSetup:
         text: დაყენება
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ზემოთ
-            '"down"': ქვემოთ
-            '"left"': მარცხნივ
-            '"right"': მარჯვნივ
-            '"space"': კოსმოსი
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_changeColor:
         options:
           METHOD:
@@ -239,8 +228,8 @@ ka:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'ჭეშმარიტი'
-            'false': 'მცდარი'
+            'true': ჭეშმარიტი
+            'false': მცდარი
       gamelab_enableDebug:
         text: გამართვის რეჟიმის ჩართვა
       gamelab_firstTouched:
@@ -438,10 +427,17 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
-      Mikelab_getAnim:
+      Mikelab_createNewSprite:
         options:
-          COSTUME:
-            '"costume"': კოსტუმი
+          LOCATION:
+            "{x: 100, y: 200}": მარცხნივ
+            "{x: 300, y: 200}": მარჯვნივ
+            "{x: 200, y: 200}": ცენტრი
+            "{x: 100, y: 100}": ზედა მარცხენა
+            "{x: 300, y: 100}": ზედა მარჯვენა
+            "{x: 100, y: 300}": ქვედა მარცხენა
+            "{x: 300, y: 300}": ქვედა მარჯვენა
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -450,11 +446,6 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
-      Mikelab_isAnim:
-        options:
-          COSTUME:
-            '"costume"': კოსტუმი
       Mikelab_randomColor:
         text: შემთხვევითი ფერი
       Mikelab_setBG:
@@ -469,7 +460,6 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
       Mikelab_showScoreboard:
         options:
           CORNER:

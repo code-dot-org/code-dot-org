@@ -1,3 +1,4 @@
+---
 fi:
   data:
     blocks:
@@ -134,14 +135,6 @@ fi:
             '"left"': vasemmalle
             '"right"': oikealle
             '"space"': avaruus
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ylös
-            '"down"': alas
-            '"left"': vasemmalle
-            '"right"': oikealle
-            '"space"': avaruus
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ fi:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'tosi'
-            'false': 'epätosi'
+            'true': tosi
+            'false': epätosi
       gamelab_getProp:
         options:
           PROPERTY:
@@ -233,6 +226,11 @@ fi:
             '"scale"': koko
             '"x"': x:än paikka
             '"y"': y:n paikka
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vasemmalle
+            "{x: 300, y: 200}": oikealle
       Mikelab_getProp:
         options:
           PROPERTY:

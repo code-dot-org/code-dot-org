@@ -1,21 +1,36 @@
+---
 es-MX:
   data:
     blocks:
       Dancelab_atTimestamp:
+        text: después de {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"seconds"': segundos
       Dancelab_changeColorBy:
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
         options:
           METHOD:
             '"hue"': tono
             '"saturation"': saturación
             '"brightness"': brillo
       Dancelab_changeMoveEachLR:
+        text: "{GROUP} hacer {MOVE} {DIR} para siempre"
         options:
           GROUP:
             sprites: todo
+            '"ALIEN"': todos los alienígenas
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
           MOVE:
+            MOVES.Clown: Payaso
             '"next"': Siguiente
             '"prev"': Anterior
             MOVES.Rest: Ninguna
@@ -25,6 +40,7 @@ es-MX:
       Dancelab_changeMoveLR:
         options:
           MOVE:
+            MOVES.Clown: Payaso
             '"next"': Siguiente
             '"prev"': Anterior
             MOVES.Rest: Ninguna
@@ -40,7 +56,18 @@ es-MX:
         options:
           GROUP:
             sprites: todo
+            '"ALIEN"': todos los alienígenas
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
           MOVE:
+            MOVES.Clown: Payaso
             '"next"': Siguiente
             '"prev"': Anterior
             MOVES.Rest: Ninguna
@@ -50,6 +77,7 @@ es-MX:
       Dancelab_doMoveLR:
         options:
           MOVE:
+            MOVES.Clown: Payaso
             '"next"': Siguiente
             '"prev"': Anterior
             MOVES.Rest: Ninguna
@@ -60,16 +88,36 @@ es-MX:
         options:
           UNIT:
             '"seconds"': segundos
+      Dancelab_everySecondsRange:
+        options:
+          UNIT:
+            seconds: Segundos
+      Dancelab_everyVerseChorus:
+        text: 'cada {UNIT} '
+        options:
+          UNIT:
+            '"verse"': verso
+            '"chorus"': coro
+      Dancelab_getEnergy:
+        options:
+          RANGE:
+            '"low"': graves
+            '"mid"': medios
+            '"high"': agudos
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': Segundos
       Dancelab_ifDanceIs:
         options:
           DANCE:
             '0': Clap High
-            '1': Clown
+            '1': Payaso
             '2': Dab
             '3': Double Jam
             '4': Drop
@@ -90,6 +138,16 @@ es-MX:
         options:
           GROUP:
             sprites: todo
+            '"ALIEN"': todos los alienígenas
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -127,11 +185,19 @@ es-MX:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+          RANGE:
+            '"bass"': graves
+            '"mid"': medios
+            '"treble"': agudos
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+          RANGE:
+            '"bass"': graves
+            '"mid"': medios
+            '"treble"': agudos
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,15 +206,16 @@ es-MX:
             '"left"': izquierda
             '"right"': derecha
             '"space"': espacio
-      Dancelab_whileKey:
+      Dancelab_whenPeak:
         options:
-          KEY:
-            '"up"': arriba
-            '"down"': abajo
-            '"left"': izquierda
-            '"right"': derecha
-            '"space"': espacio
+          RANGE:
+            '0': graves
+            '1': medios
+            '2': agudos
+      gamelab_changeColor:
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
       gamelab_changeColorBy:
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
         options:
           METHOD:
             '"hue"': tono
@@ -163,8 +230,8 @@ es-MX:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadero'
-            'false': 'falso'
+            'true': verdadero
+            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -245,6 +312,11 @@ es-MX:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": izquierda
+            "{x: 300, y: 200}": derecha
       Mikelab_getProp:
         options:
           PROPERTY:

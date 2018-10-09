@@ -1,3 +1,4 @@
+---
 en-GB:
   data:
     blocks:
@@ -56,10 +57,6 @@ en-GB:
           PROPERTY:
             '"height"': height
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"space"': space
-      Dancelab_whileKey:
         options:
           KEY:
             '"space"': space

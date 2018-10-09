@@ -1,3 +1,4 @@
+---
 he:
   data:
     blocks:
@@ -134,14 +135,6 @@ he:
             '"left"': שמאלה
             '"right"': ימינה
             '"space"': חלל
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': למעלה
-            '"down"': למטה
-            '"left"': שמאלה
-            '"right"': ימינה
-            '"space"': חלל
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ he:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'נכון'
-            'false': 'שגוי'
+            'true': נכון
+            'false': שגוי
       gamelab_getProp:
         options:
           PROPERTY:
@@ -233,6 +226,11 @@ he:
             '"scale"': גודל
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": שמאלה
+            "{x: 300, y: 200}": ימינה
       Mikelab_getProp:
         options:
           PROPERTY:

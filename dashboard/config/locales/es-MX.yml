@@ -25,6 +25,7 @@ es-MX:
       user:
         name: Mostrar Nombre
         name_example: Nombre para mostrar <br/> (Programador cool o Jane S.)
+        other_name_example: Nombre Mostrado<br/>(por ejemplo, Srta. Smith)
         email: Correo electrónico
         parent_email: Email del padre o guardián
         personal_email: Email personal <a href="%{url}">(haz click aquí si no tienes
@@ -37,6 +38,9 @@ es-MX:
         age: Edad
         gender: Sexo
         edit_header: Editar información de la cuenta
+        finish_sign_up_header: Termina la creación de tu cuenta
+        finish_sign_up_subheader: Llena la siguiente información para completar la
+          creación de tu cuenta en Code.org.
         error:
           future: No puede ser en el futuro
   hello: Hola mundo
@@ -99,6 +103,8 @@ es-MX:
     clever: Cuenta inteligente
     powerschool: Cuenta Powerschool
     forgot_password: "¿Olvidaste tu contraseña?"
+    migration_success: Logrado! Te haz actualizado a la nueva experiencia de cuentas.
+    demigration_success: La nueva experiencia de cuentas está desactivada en tu cuenta.
     need_confirmation: "¿No recibiste las instrucciones de confirmación?"
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
     not_linked: Lo sentimos, tu cuenta de Code.org no está conectada a tu %{provider}.
@@ -107,6 +113,8 @@ es-MX:
       Por favor inicia sesión a través de tu Portal Clever.
     unable_to_connect_provider: No se pudo conectar su cuenta Code.org su %{provider}.
       Por favor, inténtelo de nuevo.
+    already_in_use: Tu %{provider} ya está conectado a otra cuenta de Code.org.
+    already_linked: Tu %{provider} ya está vinculado a otra cuenta de Code.org.
   signup_form:
     student_count: "%{count} estudiantes ya se han registrado."
     teacher_count: "%{count} maestros ya se han registrado."
@@ -147,6 +155,8 @@ es-MX:
       y la <a href='http://code.org/privacy'>Política de Privacidad</a>.
     under_13_consent: Si soy menor de 13 años de edad, confirmo que tengo autorización
       de mi padres o de mi tutor legal para utilizar los servicios de Code.org.
+    student_consent: Confirmo que tengo la autorización de mis padres o guardianes
+      legales para utilizar los servicios de Code.org.
     agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
     my_data_to_us: Acepto que se envíen y almacenen datos de mi utilización de este
       sitio web en Estados Unidos.
@@ -176,6 +186,7 @@ es-MX:
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Debes especificar una preferencia de email.
+    create_user_type: Crear cuenta como un
   school_info:
     title: Información de la escuela (opcional)
     school_country: País de la escuela
@@ -321,9 +332,7 @@ es-MX:
         applab: Hacer una aplicación
         gamelab: Hacer un proyecto de Game Lab
         weblab: Hacer un proyecto de Web Lab (beta)
-      home: Página principal
       my_dashboard: Mi panel de control
-      courses: cursos
       course_catalog: Catálogo de cursos
       project_gallery: Proyectos
       sections: Secciones
@@ -358,6 +367,15 @@ es-MX:
       help_us: Ayúdanos
       teach: Enseñar
       about: Acerca de
+    create_button:
+      create: Crear
+      applab: Laboratorio de App
+      artist: Artista
+      gamelab: Laboratorio de juegos
+      playlab: Laboratorio de juegos
+      minecraft: Minecraft
+      flappy: Flappy
+      view_all: Ver todos los proyectos...
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de Distrito
@@ -368,7 +386,6 @@ es-MX:
       signin: Iniciar Sesión
       signup: Crear una cuenta
       already_registered: "¿Ya estás registrado?"
-      pair_programming: Programación de pares
       team: Equipo
       driver: Conectado
       navigator: Navegador
@@ -1343,6 +1360,7 @@ es-MX:
         ages_19_over: 19+ años
       subjects:
         cs: Ciencias de la computación
+        ict: ICT
         math: Matemáticas
         science: Ciencia
         history: Historia/ Estudios Sociales
@@ -1354,11 +1372,22 @@ es-MX:
       resources:
         bootstrap: Bootstrap
         codecademy: Codecademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
         other: 'Otros:'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
         other: 'Otros:'
       workshop_course:
         csf_af: Fundamentos de ciencias de la computación. (curso A-F)

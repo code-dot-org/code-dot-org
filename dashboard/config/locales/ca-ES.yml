@@ -198,9 +198,15 @@ ca:
         playlab: Fes un App
         artist: Dibuixa alguna cosa
         applab: Fes un App
-      courses: cursos
       project_gallery: Projectes
       educate_hoc: Hora del codi
+    create_button:
+      create: Crea
+      applab: Laboratori d'aplicacions
+      artist: Artista
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     user:
       classroom: Pàgina d'inici de mestre
       label: Hola %{username}
@@ -209,7 +215,6 @@ ca:
       logout: Tanca la sessió
       signin: Inicia la sessió
       already_registered: Ja estàs registrat?
-      pair_programming: Programació per parelles
     popup:
       progress_for_user: Progrés de %{name}
       progress: El teu progrés

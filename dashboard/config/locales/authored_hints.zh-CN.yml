@@ -10783,7 +10783,8 @@ zh-CN:
         courseE_farmer_functions3c_a: 这个程序经常重复什么顺序？可以将这些模块拖到函数中吗？
         courseE_farmer_functions3c_b: 不要忘记在你删除模块的时候，在主程序中调用您的函数。
       courseE_farmer_functions3c1_2018_authored_hint:
-        coursee_farmer_functions3c1_2018_b: 添加哪些代码才能绕过拐角？
+        coursee_farmer_functions3c1_2018_a: 您需要使用 "沿路采摘" 函数三次来解决这个难题。
+        coursee_farmer_functions3c1_2018_b: 添加什么代码才能走过拐角？
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: 把所有的代码拽出`重复`循环并放入`去采南瓜`函数中。
         courseE_farmer_functions4_b: 在运行代码之前, 请不要忘记将调用`去采南瓜`函数的模块放在循环中。
@@ -10812,7 +10813,7 @@ zh-CN:
         courseE_farmer_functions6c_b: "`如果/否则`模块能否帮助查找格子里是否有莴苣？"
         courseE_farmer_functions6c_c: 别忘了继续查找玉米!
       courseE_farmer_functions7a1_2018_authored_hint:
-        courseE_farmer_functions7a1_2018_a: 在工具箱的 "函数" 部分下创建函数。
+        courseE_farmer_functions7a1_2018_a: 在工具箱的 `函数` 章节下创建函数。
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: 你不需要一个函数，但如果有帮助，你可以做一个！
         courseE_farmer_functions7b_b: 使用`如果/否则`语句来查找农作物, 然后根据所找到的作物转向。
@@ -10833,6 +10834,9 @@ zh-CN:
         courseE_farmer_functions8b_c: 您需要调用多少次函数？
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: 创建一个把农夫带到玉米，采摘所有的玉米，然后转身回来的函数。
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: 使用你在最后几个谜题中所做的同一个函数。
+        courseE_farmer_functions9a1_2018b: 使用与上一个谜题相同的步骤来解决这个谜题的前半部分。
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: 是否可以使用嵌套的`如果`和`如果/否则`语句来沿路径移动？
         courseE_farmer_functions9b_b: 使用`重复直到南瓜`来沿着所有的路径移动。

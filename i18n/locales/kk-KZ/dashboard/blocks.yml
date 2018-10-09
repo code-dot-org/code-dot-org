@@ -1,3 +1,4 @@
+---
 kk:
   data:
     blocks:
@@ -95,14 +96,6 @@ kk:
             '"left"': солға
             '"right"': оңға
             '"space"': кеңестік
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': жоғары
-            '"down"': төмен
-            '"left"': солға
-            '"right"': оңға
-            '"space"': кеңестік
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -110,8 +103,8 @@ kk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'дұрыс'
-            'false': 'Жалған'
+            'true': дұрыс
+            'false': Жалған
       gamelab_getProp:
         options:
           PROPERTY:
@@ -182,6 +175,11 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
       Mikelab_getProp:
         options:
           PROPERTY:

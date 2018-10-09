@@ -1,3 +1,4 @@
+---
 id:
   data:
     blocks:
@@ -184,14 +185,6 @@ id:
             '0': Kecil
             '1': Sedang
             '2': Besar
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': atas
-            '"down"': turun
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': luar angkasa
       gamelab_changeColor:
         options:
           METHOD:
@@ -215,8 +208,8 @@ id:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'Benar'
-            'false': 'Salah'
+            'true': Benar
+            'false': Salah
       gamelab_enableDebug:
         text: mengaktifkan debugging
       gamelab_firstTouched:
@@ -347,6 +340,13 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
+            "{x: 200, y: 200}": Tengah
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -355,7 +355,6 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
       Mikelab_randomColor:
         text: warna acak
       Mikelab_setBG:
@@ -370,7 +369,6 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
       Mikelab_showScoreboard:
         options:
           CORNER:

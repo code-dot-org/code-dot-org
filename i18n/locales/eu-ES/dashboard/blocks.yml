@@ -1,3 +1,4 @@
+---
 eu:
   data:
     blocks:
@@ -95,14 +96,6 @@ eu:
             '"left"': ezkerrera
             '"right"': eskuinera
             '"space"': espazioa
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': gora
-            '"down"': behera
-            '"left"': ezkerrera
-            '"right"': eskuinera
-            '"space"': espazioa
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -112,8 +105,8 @@ eu:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'egia'
-            'false': 'gezurra'
+            'true': egia
+            'false': gezurra
       gamelab_getProp:
         options:
           PROPERTY:
@@ -194,6 +187,11 @@ eu:
             '"scale"': tamaina
             '"x"': x posizioa
             '"y"': y posizioa
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ezkerrera
+            "{x: 300, y: 200}": eskuinera
       Mikelab_getProp:
         options:
           PROPERTY:

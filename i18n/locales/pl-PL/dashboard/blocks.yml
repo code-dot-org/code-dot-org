@@ -1,3 +1,4 @@
+---
 pl:
   data:
     blocks:
@@ -134,14 +135,6 @@ pl:
             '"left"': w lewo
             '"right"': w prawo
             '"space"': przestrzeń
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': do góry
-            '"down"': do dołu
-            '"left"': w lewo
-            '"right"': w prawo
-            '"space"': przestrzeń
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ pl:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'prawda'
-            'false': 'fałsz'
+            'true': prawda
+            'false': fałsz
       gamelab_getProp:
         options:
           PROPERTY:
@@ -233,6 +226,11 @@ pl:
             '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": w lewo
+            "{x: 300, y: 200}": w prawo
       Mikelab_getProp:
         options:
           PROPERTY:
