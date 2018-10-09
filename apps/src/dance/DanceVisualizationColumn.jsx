@@ -5,7 +5,11 @@ import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import songLibrary from "../code-studio/songLibrary.json";
+import Radium from "radium";
+import {connect} from "react-redux";
 import i18n from '@cdo/locale';
+import * as danceRedux from "../dance/redux";
+import Sounds from "../Sounds";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -16,25 +20,72 @@ const styles = {
   }
 };
 
-const SongSelector = class extends React.Component {
+
+//TODO: Remove this during clean-up
+var songs = {
+  macklemore: {
+    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
+    bpm: 146,
+    delay: 0.2, // Seconds to delay before calculating measures
+    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
+    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
+  },
+  macklemore90: {
+    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
+    bpm: 146,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
+    chorus: [65.75] // Array of timestamps in seconds where choruses occur
+  },
+  hammer: {
+    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
+    bpm: 133,
+    delay: 2.32, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  },
+  peas: {
+    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
+    bpm: 128,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  }
+};
+
+const SongSelector = Radium(class extends React.Component {
+  static propTypes = {
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired
+  };
+
+  changeSong = (event) => {
+    let song = event.target.value;
+    this.props.setSong(song);
+    let options = {id: song};
+    options['mp3'] = songs[options.id].url;
+    Sounds.getSingleton().register(options);
+  };
+
   render() {
     return (
-      <div id="song_selector">
+      <div>
         <label><b>{i18n.selectSong()}</b></label>
-        <select style={styles.selectStyle}>
+        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
           {Object.keys(songLibrary).map((option, i) => (
-            <option key={i}>{songLibrary[option].title}</option>
+            <option key={i} value={option}>{songLibrary[option].title}</option>
           ))}
         </select>
       </div>
     );
   }
-};
+});
 
-
-export default class DanceVisualizationColumn extends React.Component {
+class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired,
   };
 
   render() {
@@ -48,7 +99,7 @@ export default class DanceVisualizationColumn extends React.Component {
     };
     return (
       <span>
-        <SongSelector/>
+        <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
         <ProtectedVisualizationDiv>
           <div
             id="divDance"
@@ -63,3 +114,9 @@ export default class DanceVisualizationColumn extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  selectedSong: state.selectedSong,
+}), dispatch => ({
+  setSong: song => dispatch(danceRedux.setSong(song))
+}))(DanceVisualizationColumn);
