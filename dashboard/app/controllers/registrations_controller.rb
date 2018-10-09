@@ -33,6 +33,7 @@ class RegistrationsController < Devise::RegistrationsController
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
+    SignUpTracking.log_begin_sign_up(@user, session)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
