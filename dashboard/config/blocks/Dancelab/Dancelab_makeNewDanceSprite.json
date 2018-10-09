@@ -104,7 +104,7 @@
             "{x: 300, y: 300}"
           ],
           [
-            "Random",
+            "random",
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}"
           ]
         ]

@@ -685,6 +685,23 @@ class User < ActiveRecord::Base
     end
   end
 
+  # For a user signing up with email/password, we require certain fields to be present and valid
+  # before the user can move on to the "finish signup" step.
+  def validate_for_finish_sign_up
+    raise "Cannot call validate_for_finish_sign_up on a persisted user" if persisted?
+
+    valid? # Run all validations
+
+    # For this step, we only care about email, password, and password confirmation.
+    # Remove any other validation errors for now.
+    required_fields = [:email, :password, :password_confirmation]
+    errors.each do |attribute, _|
+      errors.delete(attribute) unless required_fields.include?(attribute)
+    end
+
+    email_and_hashed_email_must_be_unique # Always check email uniqueness
+  end
+
   def self.normalize_gender(v)
     return nil if v.blank?
     case v.downcase
@@ -787,12 +804,20 @@ class User < ActiveRecord::Base
     end
   end
 
+  def managing_own_credentials?
+    provider.blank? || (provider == User::PROVIDER_MANUAL)
+  end
+
   def password_required?
-    # password is required if:
-    (!persisted? || # you are a new user
-     !password.nil? || !password_confirmation.nil?) && # or changing your password
-      (provider.blank? || (User::PROVIDER_MANUAL == provider)) # and you are a person creating your own account
-    # (as opposed to a person who had their account created for them or are logging in with oauth)
+    # Password is not required if the user is not managing their own account
+    # (i.e., someone is creating their account for them or the user is using OAuth).
+    return false unless managing_own_credentials?
+
+    # Password is required for:
+    # New users with no encrypted_password set and users changing their password.
+    new_without_password = !persisted? && encrypted_password.blank?
+    is_changing_password = password.present? || password_confirmation.present?
+    new_without_password || is_changing_password
   end
 
   def email_required?
