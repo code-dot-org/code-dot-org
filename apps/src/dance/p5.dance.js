@@ -113,7 +113,7 @@ exports.reset = function () {
 
 exports.preload = function preload() {
   // Load song
-  Dance.song.load();
+  Dance.song.load(song_meta.url);
 
   // Load spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {

@@ -375,8 +375,6 @@ Dance.prototype.onP5Preload = function () {
  * This is called while this.p5 is in the setup phase.
  */
 Dance.prototype.onP5Setup = function () {
-  console.log("Loading song");
-  this.nativeAPI.loadSong();
   this.nativeAPI.setup();
 };
 
