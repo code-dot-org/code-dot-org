@@ -58,6 +58,9 @@ $(document).ready(() => {
   }
 
   function switchToTeacher() {
+    // Set teacher age to 21+ to satisfy User model validations.
+    $("#user_age").val("21+");
+
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
   }
