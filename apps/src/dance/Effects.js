@@ -32,7 +32,7 @@ export default class Effects {
     this.disco = {
       bg: undefined,
       init: function () {
-        this.bg = createGraphics(World.width, World.height);
+        this.bg = p5.createGraphics(p5.width, p5.height);
         this.bg.noStroke();
         for (let i = 0; i < 16; i++) {
           this.bg.fill(
@@ -48,8 +48,12 @@ export default class Effects {
         }
       },
       draw: function ({isPeak}) {
-        if (!this.bg) this.init();
-        if (isPeak) this.update();
+        if (!this.bg) {
+          this.init();
+        }
+        if (isPeak) {
+          this.update();
+        }
         p5.image(this.bg, 0, 0);
       }
     };
