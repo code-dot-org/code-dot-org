@@ -2,25 +2,24 @@
 #
 # Table name: pd_applications
 #
-#  id                                  :integer          not null, primary key
-#  user_id                             :integer
-#  type                                :string(255)      not null
-#  application_year                    :string(255)      not null
-#  application_type                    :string(255)      not null
-#  regional_partner_id                 :integer
-#  status                              :string(255)
-#  locked_at                           :datetime
-#  notes                               :text(65535)
-#  form_data                           :text(65535)      not null
-#  created_at                          :datetime         not null
-#  updated_at                          :datetime         not null
-#  course                              :string(255)
-#  response_scores                     :text(65535)
-#  application_guid                    :string(255)
-#  decision_notification_email_sent_at :datetime
-#  accepted_at                         :datetime
-#  properties                          :text(65535)
-#  deleted_at                          :datetime
+#  id                  :integer          not null, primary key
+#  user_id             :integer
+#  type                :string(255)      not null
+#  application_year    :string(255)      not null
+#  application_type    :string(255)      not null
+#  regional_partner_id :integer
+#  status              :string(255)
+#  locked_at           :datetime
+#  notes               :text(65535)
+#  form_data           :text(65535)      not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  course              :string(255)
+#  response_scores     :text(65535)
+#  application_guid    :string(255)
+#  accepted_at         :datetime
+#  properties          :text(65535)
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -106,6 +105,7 @@ module Pd::Application
     before_validation :set_type_and_year
     before_save :update_accepted_date, if: :status_changed?
     before_create :generate_application_guid, if: -> {application_guid.blank?}
+    has_many :emails, class_name: 'Pd::Application::Email'
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
@@ -148,7 +148,7 @@ module Pd::Application
       email.save!
     end
 
-    # Override in any application class that will deliver emails.
+    # Override in any application class that will deliver email.
     # This is only called for classes that have associated Email records.
     # Note - this should only be called from within Pd::Application::Email.send!
     # @param [Pd::Application::Email] email
@@ -265,7 +265,7 @@ module Pd::Application
     end
 
     def self.filtered_labels(course)
-      raise 'Abstract method must be overridden in base class'
+      raise 'Abstract method must be overridden in inheriting class'
     end
 
     def self.can_see_locked_status?(user)

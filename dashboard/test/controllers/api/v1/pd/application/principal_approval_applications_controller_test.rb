@@ -13,10 +13,17 @@ module Api::V1::Pd::Application
       }
     end
 
+    PRINCIPAL_APPROVAL_EMAILS = [
+      :principal_approval_completed,
+      :principal_approval_completed_partner
+    ]
+
     setup do
-      TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval_completed).returns(
-        mock {|mail| mail.stubs(:deliver_now)}
-      )
+      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+        TEACHER_APPLICATION_MAILER_CLASS.stubs(email_type).returns(
+          mock {|mail| mail.stubs(:deliver_now)}
+        )
+      end
     end
 
     # no log in required
@@ -56,7 +63,7 @@ module Api::V1::Pd::Application
         application_guid: teacher_application.application_guid,
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
           {
-            replace_course: 'Yes, it will replace an existing computer science course.',
+            replace_course: 'Yes, it will replace an existing computer science course',
             replace_which_course_csp: ['CodeHS', 'CS50']
           }.stringify_keys
         )
@@ -68,7 +75,7 @@ module Api::V1::Pd::Application
       end
 
       assert_equal(
-        'Yes, it will replace an existing computer science course.: CodeHS, CS50',
+        'Yes, it will replace an existing computer science course: CodeHS, CS50',
         teacher_application.reload.sanitize_form_data_hash[:principal_wont_replace_existing_course]
       )
     end
@@ -108,17 +115,19 @@ module Api::V1::Pd::Application
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
-    test 'Sends principal approval received email on successful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_completed).
-        with(@teacher_application).
-        returns(mock {|mail| mail.expects(:deliver_now)})
+    test 'Sends principal approval received emails on successful create' do
+      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+        TEACHER_APPLICATION_CLASS.any_instance.expects(:queue_email).with(email_type, deliver_now: true)
+      end
 
       put :create, params: @test_params
       assert_response :success
     end
 
-    test 'Does not send email on unsuccessful create' do
-      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval_completed).never
+    test 'Does not send emails on unsuccessful create' do
+      PRINCIPAL_APPROVAL_EMAILS.each do |email_type|
+        TEACHER_APPLICATION_MAILER_CLASS.expects(email_type).never
+      end
 
       put :create, params: {form_data: {first_name: ''}, application_guid: 'invalid'}
       assert_response :bad_request

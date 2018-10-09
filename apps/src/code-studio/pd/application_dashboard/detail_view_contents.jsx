@@ -103,8 +103,8 @@ export class DetailViewContents extends React.Component {
       registered_teachercon: PropTypes.bool,
       registered_fit_weekend: PropTypes.bool,
       attending_teachercon: PropTypes.bool,
-      principal_approval_state: PropTypes.oneOf(['not_sent', 'sent', 'received']),
-      school_stats: PropTypes.object
+      school_stats: PropTypes.object,
+      principal_approval: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
@@ -650,8 +650,8 @@ export class DetailViewContents extends React.Component {
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
         applicationGuid={this.props.applicationData.application_guid}
-        principalApprovalState={this.props.applicationData.principal_approval_state}
         schoolStats={this.props.applicationData.school_stats}
+        initialPrincipalApproval={this.props.applicationData.principal_approval}
       />
     );
   };

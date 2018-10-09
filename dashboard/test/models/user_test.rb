@@ -1,8 +1,10 @@
 require 'test_helper'
 require 'testing/includes_metrics'
+require 'testing/storage_apps_test_utils'
 require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
+  include StorageAppsTestUtils
   self.use_transactional_test_case = true
 
   setup_all do
@@ -2945,6 +2947,36 @@ class UserTest < ActiveSupport::TestCase
     assert old_section.reload.deleted?
   end
 
+  test 'undestroy restores recently soft-deleted projects' do
+    Timecop.freeze do
+      student = create :student
+      with_channel_for student do |channel_id_a|
+        with_channel_for student do |channel_id_b|
+          # Student deleted channel_id_a a day before they were deleted
+          # so we don't expect it to be restored when we undelete them.
+          storage_apps.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+
+          Timecop.travel 1.day
+
+          # Soft-deleting the student also soft-deletes their projects
+          student.destroy
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'deleted', storage_apps.where(id: channel_id_b).first[:state]
+
+          Timecop.travel 1.day
+
+          # Restoring the student only restores projects that were deleted along
+          # with the student
+          student.undestroy
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+        end
+      end
+    end
+  end
+
   test 'undestroy raises for a purged user' do
     user = create :user
     user.clear_user_and_mark_purged
@@ -3270,6 +3302,27 @@ class UserTest < ActiveSupport::TestCase
     google_auth_option.reload
     assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
+  end
+
+  test 'password_required? is false if user is not creating their own account' do
+    user = build :user
+    user.expects(:managing_own_credentials?).returns(false)
+    refute user.password_required?
+  end
+
+  test 'password_required? is true for new users with no encrypted password' do
+    user = build :user, encrypted_password: nil
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.encrypted_password.nil?
+    assert user.password_required?
+  end
+
+  test 'password_required? is true for user changing their password' do
+    user = create :user
+    user.password = "mypassword"
+    user.password_confirmation = "mypassword"
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.password_required?
   end
 
   test 'summarize' do

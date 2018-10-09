@@ -5,7 +5,7 @@ module SignUpTracking
   STUDY_NAME = 'account-sign-up-v2'
   NOT_IN_STUDY_GROUP = 'not-in-study'
   CONTROL_GROUP = 'control'
-  NEW_SIGN_UP_GROUP = 'experiment'
+  NEW_SIGN_UP_GROUP = 'experiment-v2'
 
   USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
 
@@ -57,6 +57,15 @@ module SignUpTracking
       study: STUDY_NAME,
       study_group: study_group(session),
       event: 'load-finish-sign-up-page',
+      data_string: session[:sign_up_uid]
+    )
+  end
+
+  def self.log_cancel_finish_sign_up(session)
+    FirehoseClient.instance.put_record(
+      study: STUDY_NAME,
+      study_group: study_group(session),
+      event: 'cancel-finish-sign-up',
       data_string: session[:sign_up_uid]
     )
   end

@@ -97,6 +97,7 @@ es-ES:
   congratulations_volunteer: Felicitaciones, ahora que has probado la Hora de Code,
     <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a>
     y ayuda a estudiantes a aprender una Hora de Code.
+  congratulations_on_completing_course: Felicitaciones por completar %{course}
   congrats_next_tutorials_title: Prueba estos tutoriales a continuación
   congrats_next_tutorials_desc: Prueba estos tutoriales de duración inferior a una
     hora, o prueba un <a href="%{current_path}/next">tutorial para colaboradores</a>.
@@ -283,6 +284,8 @@ es-ES:
   just_did_accelerated: Acabo de terminar el Curso Acelerado - echa un vistazo! @codeorg
   just_did_hoc_donor: 'Acabo de hacer el #HourOfCode - ¡Dale un vistazo! (Gracias
     %{donor_twitter} por apoyar a @codeorg)'
+  just_did_course_donor: Acabo de terminar %{course} - ¡Dale un vistazo! Gracias %{donor_twitter}
+    por apoyar a @codeorg
   twitter_teach_cs: "¿Por qué no hay más escuelas que enseñen Ciencias de la Computación?
     Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ para
     obtener más información."
@@ -1250,6 +1253,7 @@ es-ES:
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
   accelerated_name: Curso acelerado
+  express_name: Curso Rápido
   pre-express_name: Curso rápido prescolar
   express-2017_name: Curso Rápido (2017)
   pre-express-2017_name: Curso rápido prescolar (2017)
@@ -1303,9 +1307,14 @@ es-ES:
   math_category_name: Matemáticas
   hoc_category_name: Hora del Código
   csf_category_name: Fundamentos de CS
+  csf_2017_category_name: Fundamentos de Informática (2017)
+  csf_2018_category_name: Fundamentos de Informática (2018)
+  csf_international_category_name: Fundamentos de Informática Internacional
   csf2_draft_category_name: 'En desarrollo: Cursos A - F'
+  csd_2018_category_name: Descubrimientos de Informática ('18-'19)
   csp_category_name: "'15-'16 Principios de CS"
   csp17_category_name: "'16-'17 Principios de CS"
+  csp_2018_category_name: Principios de Informática ('18-'19)
   cspexams_category_name: Prueba de práctica de principios de CS
   applab_name: Laboratorio de Aplicaciones
   gamelab_name: Laboratorio de juego
@@ -1530,6 +1539,39 @@ es-ES:
     flexibles a problemas más complejos. Al final de este curso, los estudiantes crearan
     historias interactivas y juegos que podrán compartir con cualquiera. Recomendado
     para los grados 4-8."
+  coursea_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para alumnos mayores.)
+  coursec_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
+    de la computación y crea tu propio arte, historias y juegos.
+  coursed_shortdescription_congrats: Rápidamente cubre conceptos del curso C, luego
+    ve más allá con algoritmos, bucles anidados, condicionales y más.
+  coursee_shortdescription_congrats: Cubre rápidamente los conceptos en el curso C
+    y D y luego ir más allá con funciones.
+  coursef_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de
+    Informática y crea tu propio arte, historia o juego.
+  coursea-2017_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb-2017_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para alumnos mayores.)
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
+    de la computación y crea tu propio arte, historias y juegos.
+  coursed-2017_shortdescription_congrats: Rápidamente cubre conceptos del curso C,
+    luego ve más allá con algoritmos, bucles anidados, condicionales y más.
+  coursee-2017_shortdescription_congrats: Cubre rápidamente los conceptos en el curso
+    C y D y luego ir más allá con funciones.
+  coursef-2017_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
+    de Informática y crea tu propio arte, historia o juego.
+  coursea-2018_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+  courseb-2018_shortdescription_congrats: Una introducción a la informática para pre-lectores.
+    (Similar al curso A, pero con más variedad para alumnos mayores.)
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
+    de la computación y crea tu propio arte, historias y juegos.
+  coursed-2018_shortdescription_congrats: Rápidamente cubre conceptos del curso C,
+    luego ve más allá con algoritmos, bucles anidados, condicionales y más.
+  coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos en el curso
+    C y D y luego ir más allá con funciones.
+  coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
+    de Informática y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,
