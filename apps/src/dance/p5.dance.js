@@ -138,10 +138,11 @@ exports.setup = function setup() {
       ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
   }
+  let songData = songs[getStore().getState().selectedSong];
 
-  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / song_meta.bpm));
-  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / song_meta.bpm));
-  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / song_meta.bpm));
+  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / songData.bpm));
+  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / songData.bpm));
+  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / songData.bpm));
 }
 
 exports.play = function () {
@@ -219,7 +220,7 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
   addBehavior(sprite, function () {
     var delta = Math.min(100, 1 / (p5.frameRate() + 0.01) * 1000);
     sprite.sinceLastFrame += delta;
-    var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
+    var msPerBeat = 60 * 1000 / (songs[getStore().getState().selectedSong].bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
@@ -454,7 +455,7 @@ exports.getEnergy = function getEnergy(range) {
 
 exports.getTime = function getTime(unit) {
   if (unit == "measures") {
-    return song_meta.bpm * (Sounds.getSingleton().getCurrentTime() / 240);
+    return songs[getStore().getState().selectedSong].bpm * (Sounds.getSingleton().getCurrentTime() / 240);
   } else {
     return Sounds.getSingleton().getCurrentTime();
   }
@@ -669,11 +670,13 @@ exports.draw = function draw() {
     p5.pop();
   }
 
+  let songData = songs[getStore().getState().selectedSong];
+
   p5.fill("black");
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((Sounds.getSingleton().getCurrentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+  p5.text("Measure: " + (Math.floor(((Sounds.getSingleton().getCurrentTime() - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
 }
   return exports;
 }
