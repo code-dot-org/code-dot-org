@@ -34,6 +34,16 @@ Scenario: Create Dropdown shows when Signed In
   Then I reload the page
   And I wait to see ".create_menu"
 
+#TOOD: Erin B., remove skip when #25296 is merged
+
+@skip
+Scenario: Create Dropdown does NOT show on level pages
+  Given I create a student named "16 Year Old"
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
+  Given I set the pagemode cookie to "create_header_2018"
+  Then I reload the page
+  And I wait until element ".create_menu" is not visible
+
 Scenario: Dropdown has correct options, age 13+
   Given I create a student named "16 Year Old"
   Given I set the pagemode cookie to "create_header_2018"
@@ -45,7 +55,6 @@ Scenario: Dropdown has correct options, age 13+
   And I wait to see "#create_dropdown_applab"
   And I wait to see "#create_dropdown_gamelab"
   And I wait until element "#create_dropdown_minecraft" is not visible
-  And I wait until element "#create_dropdown_flappy" is not visible
   And I wait to see "#view_all_projects"
 
 Scenario: Dropdown has correct options, younger than 13
@@ -57,7 +66,6 @@ Scenario: Dropdown has correct options, younger than 13
   And I wait to see "#create_dropdown_playlab"
   And I wait to see "#create_dropdown_artist"
   And I wait to see "#create_dropdown_minecraft"
-  And I wait to see "#create_dropdown_flappy"
   And I wait until element "#create_dropdown_applab" is not visible
   And I wait until element "#create_dropdown_gamelab" is not visible
   And I wait to see "#view_all_projects"
