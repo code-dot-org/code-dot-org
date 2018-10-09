@@ -44,8 +44,8 @@ module SignUpTracking
     DCDO.get('sign_up_split_test', 0)
   end
 
-  def self.log_load_sign_up(session, new_flow: false)
-    event_name = new_flow ? 'load-new-sign-up-page' : 'load-sign-up-page'
+  def self.log_load_sign_up(session)
+    event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
       event: event_name,
