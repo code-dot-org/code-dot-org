@@ -1,5 +1,6 @@
 -# Locals: current_user, loc_prefix, [session_pairings], level
 :ruby
+  require 'cdo/create_header'
   user_under_13 = request.cookies["_user_type_#{rack_env}"] == "student_y"
   level = defined?(local_assigns).nil? ?
     false :
