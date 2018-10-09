@@ -165,6 +165,7 @@ Dance.prototype.afterInject_ = function () {
     p5obj.draw = this.onP5Draw.bind(this);
 
     this.p5 = p5obj;
+    wrap(this.p5);
   }, 'divDance');
 };
 
