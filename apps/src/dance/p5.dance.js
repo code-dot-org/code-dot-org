@@ -2,6 +2,8 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
+import Sounds from '../Sounds';
+import {getStore} from "../redux";
 
 export default function init(p5, Dance) {
   const exports = {};
@@ -143,7 +145,7 @@ exports.setup = function setup() {
 }
 
 exports.play = function () {
-  Dance.song.start();
+  Sounds.getSingleton().play(getStore().getState().selectedSong);
 }
 
 var bg_effects = new Effects(p5, 1);
@@ -452,10 +454,12 @@ exports.getEnergy = function getEnergy(range) {
 
 exports.getTime = function getTime(unit) {
   if (unit == "measures") {
-    return song_meta.bpm * (Dance.song.currentTime(0) / 240);
+    return song_meta.bpm * (Sounds.getSingleton().getCurrentTime() / 240);
   } else {
-    return Dance.song.currentTime(0);
+    return Sounds.getSingleton().getCurrentTime();
   }
+
+
 }
 
 // Behaviors
@@ -669,7 +673,7 @@ exports.draw = function draw() {
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+  p5.text("Measure: " + (Math.floor(((Sounds.getSingleton().getCurrentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
 }
   return exports;
 }

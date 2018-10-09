@@ -9,8 +9,9 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
-import {createDanceAPI} from './DanceLabP5';
+import {createDanceAPI, setSong} from './DanceLabP5';
 import initDance from './p5.dance';
+import {reducers} from './redux';
 
 /**
  * An instantiable GameLab class
@@ -328,6 +329,7 @@ Dance.prototype.initInterpreter = function () {
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
+  setSong(getStore().getState().selectedSong);
   const Dance = createDanceAPI(this.p5);
   this.nativeAPI = initDance(this.p5, Dance);
   this.nativeAPI.preload();
@@ -367,4 +369,8 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
   });
+};
+
+Dance.prototype.getAppReducers = function () {
+  return reducers;
 };
