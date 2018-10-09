@@ -7,7 +7,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
     :fit_workshop_id, :fit_workshop_name, :fit_workshop_url, :application_guid,
     :registered_teachercon, :registered_fit_weekend, :attending_teachercon,
-    :principal_approval_state
+    :principal_approval_state, :meets_scholarship_criteria
 
   def email
     object.user.email
@@ -79,5 +79,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     else
       'not_sent'
     end
+  end
+
+  def meets_scholarship_criteria
+    object&.meets_scholarship_criteria
   end
 end

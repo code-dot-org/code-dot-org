@@ -394,22 +394,15 @@ module Pd::Application
       if course == 'csd'
         scores.merge!(
           {
-            csd_which_grades: (responses[:csd_which_grades] & options[:csd_which_grades].last(3)).empty? ? YES : NO,
-            cs_total_course_hours:
-              if responses[:cs_terms].in?(['1 semester', '2 trimesters'])
-                responses[:cs_total_course_hours].to_i >= 50 ? YES : NO
-              elsif responses[:cs_terms] == 'A full year'
-                responses[:cs_total_course_hours].to_i >= 100 ? YES : NO
-              else
-                NO
-              end,
+            csd_which_grades: (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO,
+            cs_total_course_hours: responses[:cs_total_course_hours].to_i >= 50 ? YES : NO,
             previous_yearlong_cdo_pd: (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
           }
         )
       elsif course == 'csp'
         scores.merge!(
           {
-            csp_which_grades: responses[:csp_which_grades].exclude?(options[:csp_which_grades].last) ? YES : NO,
+            csp_which_grades: (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO,
             cs_total_course_hours: (responses[:cs_total_course_hours]&.>= 100) ? YES : NO,
             previous_yearlong_cdo_pd: responses[:previous_yearlong_cdo_pd] != 'CS Principles' ? YES : NO,
             csp_how_offer: responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
@@ -429,15 +422,15 @@ module Pd::Application
       scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
 
       # Section 5
-      scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5)) ? 2 : 0
+      scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5, 6)) ? 2 : 0
 
       # Principal Approval
       if responses[:principal_approval]
         scores.merge!(
           {
             principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
-            principal_plan_to_teach: responses[:principal_plan_to_teach].in?(principal_options[:plan_to_teach].values_at(0, 1)) ? YES : NO,
-            principal_schedule_confirmed: responses[:principal_schedule_confirmed].in?(principal_options[:committed_to_master_schedule].values_at(0, 1)) ? YES : NO,
+            principal_plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
+            principal_schedule_confirmed: responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0] ? YES : NO,
             principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
             principal_free_lunch_percent: (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0,
             principal_underrepresented_minority_percent: (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
@@ -446,6 +439,41 @@ module Pd::Application
       end
 
       update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
+    end
+
+    def meets_criteria
+      response_scores = response_scores_hash
+
+      scored_questions =
+        if course == 'csd'
+          CRITERIA_SCORE_QUESTIONS_CSD
+        elsif course == 'csp'
+          CRITERIA_SCORE_QUESTIONS_CSP
+        end
+
+      responses = scored_questions.map {|q| response_scores[q]}
+
+      if responses.uniq == [YES]
+        YES
+      elsif NO.in? responses
+        NO
+      else
+        'Reviewing incomplete'
+      end
+    end
+
+    def meets_scholarship_criteria
+      responses = response_scores_hash.slice(*SCHOLARSHIP_QUESTIONS).values
+
+      # Edge case for plan to teach
+      #
+      if responses.uniq == [YES]
+        YES
+      elsif NO.in? responses
+        NO
+      else
+        'Reviewing incomplete'
+      end
     end
   end
 end

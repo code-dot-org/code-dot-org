@@ -818,7 +818,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher1920_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
-        csd_which_grades: ['6', '12'],
+        csd_which_grades: ['11', '12'],
         cs_total_course_hours: 49,
         cs_terms: '1 quarter',
         previous_yearlong_cdo_pd: ['CS Discoveries'],
