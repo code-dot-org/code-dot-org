@@ -122,7 +122,7 @@
           $('.user_menu_arrow_down').hide();
           $('.user_menu_arrow_up').show();
           $(document).on('click', hideUserOptions);
-
+          hideCreateOptions()
           $("#hamburger-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
         }
@@ -157,7 +157,7 @@
           $('.create_menu_arrow_down').hide();
           $('.create_menu_arrow_up').show();
           $(document).on('click', hideCreateOptions);
-
+          hideUserOptions()
           $("#hamburger-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
         }
