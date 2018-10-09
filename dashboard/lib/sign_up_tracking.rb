@@ -44,12 +44,27 @@ module SignUpTracking
     DCDO.get('sign_up_split_test', 0)
   end
 
-  def self.log_load_sign_up(session)
+  def self.log_load_sign_up(session, new_flow: false)
+    event_name = new_flow ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
-      event: 'load-sign-up-page',
+      event: event_name,
       data_string: session[:sign_up_uid]
     )
+  end
+
+  def self.log_begin_sign_up(user, session)
+    return unless user && session
+    result = user.errors.empty? ? 'success' : 'error'
+    tracking_data = {
+      study: STUDY_NAME,
+      event: "begin-sign-up-#{result}",
+      data_string: session[:sign_up_uid],
+      data_json: {
+        errors: user.errors&.full_messages
+      }.to_json
+    }
+    FirehoseClient.instance.put_record(tracking_data)
   end
 
   def self.log_load_finish_sign_up(session)
