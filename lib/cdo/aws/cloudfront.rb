@@ -166,6 +166,14 @@ module AWS
               OriginAccessIdentity: ''
             },
           },
+          {
+            Id: 'cdo-restricted',
+            DomainName: "cdo-restricted.s3.amazonaws.com",
+            OriginPath: "/restricted",
+            S3OriginConfig: {
+              OriginAccessIdentity: ''
+            },
+          },
         ],
         PriceClass: 'PriceClass_All',
         Restrictions: {
