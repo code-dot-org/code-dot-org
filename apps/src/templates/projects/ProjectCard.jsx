@@ -116,7 +116,7 @@ export default class ProjectCard extends React.Component {
           >
             <div
               style={styles.title}
-              className="ui-project-name"
+              className={`ui-project-name-${projectData.type}`}
             >
               {projectData.name}
             </div>

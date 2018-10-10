@@ -105,6 +105,7 @@ module Pd::Application
     before_validation :set_type_and_year
     before_save :update_accepted_date, if: :status_changed?
     before_create :generate_application_guid, if: -> {application_guid.blank?}
+    has_many :emails, class_name: 'Pd::Application::Email'
 
     def set_type_and_year
       # Override in derived classes and set to valid values.
@@ -147,7 +148,7 @@ module Pd::Application
       email.save!
     end
 
-    # Override in any application class that will deliver emails.
+    # Override in any application class that will deliver email.
     # This is only called for classes that have associated Email records.
     # Note - this should only be called from within Pd::Application::Email.send!
     # @param [Pd::Application::Email] email
@@ -264,7 +265,7 @@ module Pd::Application
     end
 
     def self.filtered_labels(course)
-      raise 'Abstract method must be overridden in base class'
+      raise 'Abstract method must be overridden in inheriting class'
     end
 
     def self.can_see_locked_status?(user)

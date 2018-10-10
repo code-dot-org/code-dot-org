@@ -42,6 +42,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # Action: Index
 
+  test_user_gets_response_for :index, user: nil, response: :forbidden
+
   test 'admins can list all workshops' do
     sign_in @admin
     assert_equal 3, Pd::Workshop.count

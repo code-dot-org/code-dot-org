@@ -4,10 +4,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Pd::Application::RegionalPartnerTeacherconMapping
 
   COLLECTION_ACTIONS = [:index, :filter].freeze
-  before_action :load_workshops, only: COLLECTION_ACTIONS
 
   load_and_authorize_resource class: 'Pd::Workshop', only:
     [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen] + COLLECTION_ACTIONS
+
+  before_action :load_workshops, only: COLLECTION_ACTIONS
 
   # GET /api/v1/pd/workshops
   def index

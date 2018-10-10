@@ -28,6 +28,8 @@ export default function init(p5, Dance) {
     return this._tintCanvas;
   };
 
+  window.p5.disableFriendlyErrors = true;
+
 var World = {
   height: 400,
   cuesThisFrame: [],
@@ -108,7 +110,10 @@ exports.reset = function () {
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
   }
-  exports.currentFrameEvents.any = false;
+  events.any = false;
+
+  World.fg_effect = fg_effects.none;
+  World.bg_effect = bg_effects.none;
 };
 
 exports.preload = function preload() {
@@ -455,12 +460,12 @@ exports.getEnergy = function getEnergy(range) {
 
 exports.getTime = function getTime(unit) {
   if (unit == "measures") {
-    return songs[getStore().getState().selectedSong].bpm * (Sounds.getSingleton().getCurrentTime() / 240);
+    // Subtract any delay before the first measure and start counting measures at 1
+    let songData = songs[getStore().getState().selectedSong];
+    return songData.bpm * ((Sounds.getSingleton().getCurrentTime() - songData.delay) / 240) + 1;
   } else {
     return Sounds.getSingleton().getCurrentTime();
   }
-
-
 }
 
 // Behaviors
@@ -610,6 +615,7 @@ function spriteExists(sprite) {
 const events = exports.currentFrameEvents = {
   'p5.keyWentDown': {},
   'Dance.fft.isPeak': {},
+  'cue': {},
 };
 
 function updateEvents() {
