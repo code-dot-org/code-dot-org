@@ -8,17 +8,11 @@ gl:
             '"seconds"': segundos
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Seguinte
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Seguinte
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ gl:
             '"height"': altura
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Seguinte
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Seguinte
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ gl:
           LOCATION:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
       Dancelab_randomColor:
         text: cor aleatoria
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ gl:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -240,6 +234,12 @@ gl:
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
+      RyanLab_moveForward:
+        text: avance
+      RyanLab_turnLeft:
+        text: vire á esquerda
+      RyanLab_turnRight:
+        text: vire á dereita
       craft_ifPath:
         options:
           DIR:

@@ -104,6 +104,7 @@ gl:
     age: 'Idade'
     user_type: 'Alumno ou profesor?'
     submit: 'Crear conta'
+    next: 'Seguinte'
     teacher: 'É un profesor?'
     valid_username: "Dispoñíbel!"
     invalid_username: "O nome de usuario ten que ter, polo menos, 5 caracteres"
