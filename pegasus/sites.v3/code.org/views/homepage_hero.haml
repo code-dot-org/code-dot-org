@@ -25,7 +25,22 @@
           %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
           %span#playtext{style: "font-size: 18px; pointer-events: none"}= I18n.t(entry[:text])
 
-#hero
+#hero{style: "position:relative"}
+
+  - if show_single_hero
+    #blackbackground.desktop-feature
+      #blackbox
+      #blacktriangle
+        %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 1 1"}
+          %g
+            %path{style: "fill: black", d: "M0,0 L1,0 L0,1 z"}
+    #blackbackground.mobile-feature
+      #blackbox_mobile
+      #blacktriangle_mobile
+        %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 1 1"}
+          %g
+            %path{style: "fill: black", d: "M0,1 L1,0 L1,1 z"}
+
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -47,13 +62,19 @@
       #mobile-header.mobile-headers.mobile-feature
         = view :mobile_header_responsive
 
+  - if show_single_hero
+    .bigannounce2.desktop-feature{style: "width: 65%; float: left; color: white"}
+      - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
+      %div{id: actions_id}
+        = main_actions
+    .bigannounce2.mobile-feature{style: "color: white"}
+      - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
+      %div{id: actions_id}
+        = main_actions
+
   #caption_container.container_responsive
-    - if show_single_hero
-      .bigannounce2
-        - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
-        .div{id: actions_id}
-          = main_actions
-    - else
+
+    - unless show_single_hero
       .col-66.desktop-feature{style: "position:relative;"}
         - heroes_arranged.each_with_index do |entry, index|
           - unless entry[:text].nil_or_empty? || show_single_hero

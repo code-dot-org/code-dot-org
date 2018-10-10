@@ -172,6 +172,49 @@ body.modal-open .supreme-container{
   height: 80px;
 }
 
+#homepage #blackbox {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
+#homepage #blacktriangle {
+  position: absolute;
+  top: 0;
+  left: 65%;
+  width: 10%;
+  height: 100%;
+  z-index: -1;
+}
+
+#homepage #blackbox_mobile {
+  position:absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: black;
+  z-index: -1;
+}
+
+#homepage #blacktriangle_mobile {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  height: 15%;
+  width: 100%;
+  z-index: -1;
+}
+
+#homepage #blacktrianglesvg {
+  width: 100%;
+  height: 100%;
+}
+
 #homepage #actions a {
   text-decoration: none;
 }
