@@ -10,6 +10,7 @@ title: Review Hour of Code special events
   country = splat.first
   state_code = splat.last unless country == splat.last
 
+  require pegasus_dir 'helper_modules/hoc_event_review'
   events = if country == 'us' && state_code
     HocEventReview.events(special_events_only: true, reviewed: false, state: state_code)
   elsif country == 'all'
