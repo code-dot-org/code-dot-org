@@ -2896,6 +2896,7 @@ fr:
         à 90 degrés.
       frozen freeplay: Tu es officiellement devenu un artiste maître ! Crée un merveilleux
         paysage hivernal.
+      frozen line: Salut! Je suis Elsa de Arendelle. Aide-moi à créer une seule ligne.
       frozen perpendicular: Maintenant, voyons si nous pouvons créer deux lignes qui
         soient à un angle de 90 degrés l’une de l’autre. Tu devras utiliser le bloc
         «Tourner» ainsi que le bloc «Déplacer».
@@ -2927,8 +2928,10 @@ fr:
       grade2_CaringForNewPet_10: Amène-moi au cochon !
       grade2_CaringForNewPet_5: Amène-moi au cochon !
       grade2_MakeDogTag_10: Dessine quelque chose d'amusant.
+      grade2_MakeDogTag_3: Aide-moi à terminer la maison pour ce chat.
       grade2_MakeDogTag_4: 'Cette maison a besoin d''un toit ! Dessine le triangle.  Indice
         : les trois côtés sont de la même longueur.'
+      grade2_MakeDogTag_6: Activité libre ! Dessine tout ce que tu veux.
       grade2_MakeDogTag_8: Maintenant connectons ensemble plusieurs « V » en les dessinant
         dans une boucle.
       grade2_MakeDogTag_9: Cette fois nous allons les dessiner 24 fois. Ajoute un
@@ -3072,12 +3075,17 @@ fr:
         chaque gâteau de miel.
       grade3_Loops_TeacherIDo: 'Chaque fleur contient une unité de nectar. Récolte
         le nectar de chacune des fleurs. '
+      grade3_bee_conditionals_quantum2: L'abeille veut seulement du nectar maintenant.
+        Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour
+        voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du
+        nectar.
       grade3_maze_Loop1: 'Évaluation :  amène moi jusqu''au tournesol en utilisant
         seulement 5 blocs ! '
       grade3_maze_loops2: |-
         Amène-moi jusqu'au tournesol !
         (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
       grade3_maze_loops3: Amène-moi jusqu'au tournesol !
+      grade3_maze_loops4: Amène-moi jusqu'au tournesol !
       grade3_maze_loops5: Amène-moi jusqu'au tournesol !
       grade3_maze_nestedLoops1: Peux-tu m'amener au cochon en utilisant 5 blocs?
       grade3_maze_nestedLoops2: 'Peux-tu remplacer ces cinq blocs par deux blocs seulement
@@ -3335,8 +3343,17 @@ fr:
         Inspiration pour les Activités libres : Tu as maintenant appris tout ce que tu as besoin de savoir pour faire un motif comme ça ! Si cette photo t’inspire, essaie de faire quelque chose de similaire. Autrement, crée quelque chose d’unique.
 
         Tu veux savoir comment notre modèle d'inspiration a été créé ?
+      grade5_artist_functionparameters11: 'Activité libre : Voici les fonctions que
+        tu as écrites, et même un peu plus pour que tu puisses jouer avec. Dessine
+        quelque chose d''incroyable ! Joue avec la largeur du crayon pour voir la
+        différences entre tes dessins !'
       grade5_artist_functionparameters7: Cette image est similaire à la dernière.
         Peux-tu utiliser une « Boucle pour » avec ta fonction pour faire ce dessin?
+      grade5_artist_functionparameters8: |-
+        Modifions cette fonction « Dessiner un polygone ». Elle a déjà un paramètre « Côtés ». Maintenant, ajoutons un paramètre « Longueur ».
+        Indice : le périmètre de chaque forme est de 200 pixels. Te souviens-tu de l'équation pour créer des formes de la même taille quand elles ont un nombre différent de côtés ?
+      grade5_artist_functionparameters_6: Peux-tu terminer ce dessin ? Les côtés de
+        toutes les formes font 100 pixels de long.
       grade5_artist_parameters_squares1: 'Clique sur «Modifier» pour compléter la
         définition de fonction de « Dessiner un carré » et ajouter un paramètre. Elle
         doit prendre un paramètre de longueur, à l''instar du triangle. Cette fois,
@@ -3482,6 +3499,7 @@ fr:
       gradek_artist_loopsFP: |-
         L'artiste a vu quelque chose d'étrange
         au loin. Dessine ce que tu penses qu'il a vu.
+      k-1 maze 1: Peux-tu me faire aller vers l’Ouest pour rejoindre le cochon ?
       k1stickerfreeplay: |-
         L'artiste a vu quelque chose d'étrange
         au loin. Dessine ce que tu penses qu'il a vu.
@@ -3509,7 +3527,21 @@ fr:
         dans chaque gâteau de miel.
       level grade3_Loops_2: Peux-tu faire la même tâche plus facilement avec une boucle
         ?
+      scrat 16 (copy 1): Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener
+        avec le plus petit nombre de blocs possible.
+      scrat 16: Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener avec
+        le plus petit nombre de blocs possible.
+      scrat 17: Ok, recommençons pour s'entraîner ! Ce n'est pas très différent, mais
+        attention au mur !
+      scrat 18 (copy 1): Les blocs « Si/Sinon » vérifient une condition et puis font
+        une chose OU une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau
+        bloc.
+      scrat 18: Les blocs « Si/Sinon » vérifient une condition et puis font une chose
+        OU une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc.
       scrat 19 (copy 1): Encore un exercice avec le bloc « Si/Sinon » - peux-tu y
         arriver dès le premier essai?
       scrat 19: Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès
         le premier essai?
+      scrat 20: Peux-tu ajouter seulement 3 blocs pour m’aider à résoudre un labyrinthe
+        plus complexe? Si tu le fais bien, je peux emprunter n’importe quelle voie
+        sinueuse, peu importe sa longueur. Fais-vite ! La glace fond !
