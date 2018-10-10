@@ -259,11 +259,6 @@ Sounds.prototype.play = function (soundId, options) {
   if (sound) {
     sound.play(options);
   }
-
-  this.audioStartedTime = 0;
-  if (this.audioContext) {
-    this.audioStartedTime = this.audioContext.currentTime;
-  }
 };
 
 Sounds.prototype.playURL = function (url, playbackOptions) {
