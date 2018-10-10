@@ -230,11 +230,6 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = function () {
-  //If the audio is still loading, no action
-  if (!Sounds.getSingleton().isLoaded(getStore().getState().selectedSong)) {
-    return;
-  }
-
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;

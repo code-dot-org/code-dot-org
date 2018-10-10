@@ -266,15 +266,6 @@ Sounds.prototype.play = function (soundId, options) {
   }
 };
 
-//Returns time since the current audio started to play
-Sounds.prototype.getCurrentTime = function () {
-  if (this.audioStartedTime && this.audioContext) {
-    return this.audioContext.currentTime - this.audioStartedTime;
-  } else {
-    return 0;
-  }
-};
-
 Sounds.prototype.playURL = function (url, playbackOptions) {
   // Play a sound given a URL, register it using the URL as id and infer
   // the file type from the extension at the end of the URL
@@ -307,18 +298,6 @@ Sounds.prototype.isPlayingURL = function (url) {
   var sound = this.soundsById[url];
   if (sound) {
     return sound.isPlaying();
-  }
-  return false;
-};
-
-/**
- * @param {!string} id
- * @returns {boolean} whether the given sound is loaded.
- */
-Sounds.prototype.isLoaded = function (id) {
-  var sound = this.soundsById[id];
-  if (sound) {
-    return sound.isLoaded();
   }
   return false;
 };
