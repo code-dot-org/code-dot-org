@@ -3378,6 +3378,305 @@ es:
           formas a la mitad, por lo que tenemos que girar a la derecha por `180` /`
           lados`, lo que significa que necesitamos dos veces tantos de ellos como
           de costumbre (repeticiones `lados` *` 2`). '
+        Course_4_SCV_6_f: |-
+          **Solución:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">red1</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">0</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">green1</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">blue1</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">200</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">red2</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">100</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">green2</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">blue2</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">150</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">70</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">sides</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MULTIPLY</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="variables_get">
+          <title name="VAR">red1</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">green1</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="variables_get">
+          <title name="VAR">blue1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="variables_get">
+          <title name="VAR">red2</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">green2</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="variables_get">
+          <title name="VAR">blue2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">180</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.
@@ -3445,6 +3744,8 @@ es:
           hasta que observes qué es lo que falla."
         MC_HOC_2017_02_Cole_c: Una vez el Agent haya abierto la puerta, utiliza las
           flechas direccionales para mover al jugador por el mapa.
+        MC_HOC_2017_02_Cole_d: "¡Asegúrate que el agente está siguiendo el camino
+          marcado en el mapa!"
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: Haz que el Agent se desplace hacia adelante dos espacios
           para que se sitúe en el plato de presión. Eso abrirá la puerta para tu jugador.
@@ -3571,6 +3872,118 @@ es:
           El bloque `establecer alfa` usa la división para atenuar el color a medida que el contador aumenta.
         after: Cuando hayas terminado con cada "pétalo", asegúrate de "avanzar" 20
           píxeles antes de hacer una rotación de 60 grados.
+        solution: |-
+          **Solución**
+
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#0000cd</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">17</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">500</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="draw a polygon">
+          <arg name="length"></arg>
+          <arg name="sides"></arg>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">30</title>
+          </block>
+          </value>
+          <value name="ARG1">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">20</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">60</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: "Si tu bucle cuenta hacia arriba, el incremento
           es añadido a tu variable de contabilidad cada vez a través. \n\n¿Qué necesitas
@@ -3651,11 +4064,15 @@ es:
           a la oveja?
         mc_3_b: Si necesita cambiar la dirección en la que mira, utilice un bloque
           de 'girar'.
+        mc_3_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Overworld Shear Sheep_2018_authored_hint:
         mc_3_a: El bloque 'esquilar ' obtiene la oveja en frente de usted. ¿Está frente
           a la oveja?
         mc_3_b: Si necesita cambiar la dirección en la que mira, utilice un bloque
           de 'girar'.
+        mc_3_c: "¡No tengas miedo de cometer un error! Ejecuta el código para ver
+          que pasa, aunque aun no hayas resuelto el rompecabezas.  "
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Comience por pensar sobre esta parte: ¿ Cuál es la diferencia en cada paso el camino? ¿ Qué tipo de bloque puede usar para tomas una *decisión* sobre si usted está en una flor o en un panal?
@@ -3716,6 +4133,53 @@ es:
           en estas para minar el carbón."
         mc_9_c: Utilice 'poner antorcha' para poner una antorcha en el espacio donde
           está parado.
+      Valentine_artist2_01_authored_hint:
+        Valentine_artist2_01_a: Cada lado del pasto es 30 píxeles de largo. Intenta
+          usar un patrón de escalones.
+        Valentine_artist2_01_b: "¿Ves algún patrón de repetición? Deberías utilizar
+          dos bloques 'avanzar' y dos bloques 'doblar' distintos dentro de un bucle. "
+        Valentine_artist2_01_c: |-
+          Intenta este bucle:
+
+          <xml><block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">30</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
+      Valentine_artist_01_authored_hint:
+        Valentine_artist_01_a: "¿En qué dirección necesita moverse el artista? ¿Qué
+          dirección necesita tener el artista para colocar un nuevo sticker de llama?"
+        Valentine_artist_01_b: El artista necesita colocar 10 stickers de llamas y
+          girar 90 grados en cada turno.
+      Valentine_playlab_01_authored_hint:
+        Valentine_playlab_01_a: |-
+          Encaja el bloque `actor 1 tiro corazones rojos abajo` en el evento`cuando el actor 1 hace clic`.
+          ¡No te olvides de cambiar `izquierda` a` abajo`!
+        Valentine_playlab_01_b: Utiliza el bloque "mover el actor 1 a la izquierda"
+          haciendo clic en el lugar abajo del evento "cuando haga clic en la flecha
+          izquierda".
       aE2_authored_hint:
         aE2_a: Nota que como los pañuelos tienen 20 píxeles de largo, necesitarás
           saltar 20 píxeles antes de iniciar tu siguiente bucle.
@@ -3792,6 +4256,7 @@ es:
           borrar la línea!"
         allHallows2017_g: 'Sarah dice: "¿Tiene frío? Venga siéntese en la esquina...¡Son
           90 grados!"'
+        allHallows2017_c: 'Jordyn dice: "¡No se detengan ahora! ¡Continúen!"'
         allHallows2017_d: 'Josh dice: "¡Tendrá que recurrir a sus habilidades de codificación
           para completar este rompecabezas!"'
         allHallows2017_e: 'Dani dice: "No soy buena con los juegos de palabras. ¡Intente
@@ -3811,9 +4276,41 @@ es:
       artistLoopsK4_authored_hint:
         artistLoopsK4_a: "¿Atorado? Intente ejecutando el código para ver cual bloque
           es el incorrecto."
+      artistLoopsK5_authored_hint:
+        artistLoopsK5_a: Los 4 bloques iniciales deben ir dentro de tu bloque de repetición
+          para resolver este rompecabezas.
+      artistLoopsK6_authored_hint:
+        artistLoopsK6_a: Intenta ejecutar el código para ver dónde hay un error.
+      artistLoopsK7_authored_hint:
+        artistLoopsK7_a: "¡Todos los bloques que necesitas para este rompecabezas
+          ya están en tu espacio de trabajo!"
+      artistLoopsK8_authored_hint:
+        artistLoopsK8_a: Intenta ejecutar el código para ver dónde hay un error.
+      artistLoopsK9_authored_hint:
+        artistLoopsK9_a: "¡Este desafío utiliza CUATRO bucles, uno tras otro!"
+      artistLoopsKA_authored_hint:
+        artistLoopsKA_a: Usa el bloque de salto para avanzar sin dibujar una línea.
+      artistLoopsKB_authored_hint:
+        artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este
+          rompecabezas.
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Los comentarios también son útiles cuando otras
+          personas intentan leer tu código.
+        courseC_maze_programming4_b: 'Agrega un comentario cuando cambies de dirección:
+          ¿qué hubiera pasado si hubieras girado en sentido contrario?'
+      course1_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_a: "Puede usar bucles como este para crear
+          las paredes y el techo. Intenta repetir diferentes bloques . \n\n! [] (https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+          \n\nDiseña el tuyo o haz clic en ! [] (https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png)
+          para algunas ideas!\n"
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
       course1_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
       course1_artist_loops_challenge3_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml>
+          ¡permitirá que tu artista se mueva de forma inclinada!'
         courseA_artist_loops_challenge2_b: "¡Cuando terminas una casa de ave, `salta`
           a la siguiente!"
         courseA_artist_loops_challenge2_c: Necesitarás MUCHOS bloques dentro del bucle
@@ -3825,17 +4322,66 @@ es:
           haciendo algo una vez.
         courseA_collector_loops_challenge1_c: Hay 6 gemas en el lado derecho de la
           cueva, pero solo necesitas mover y coleccionar 5 veces. ¿Sabes por qué?
+      course1_collector_loops_challenge3_authored_hint:
+        courseB_collector_loops_challenge1_b: |
+          Comience haciendo un bucle en los comandos "mover al sur" y "obtener tesoro".
+          <xml>
+          <block type="maze_moveSouth"/><next>
+          <block type="collector_collect"/></next>
+          </xml>
+        courseB_collector_loops_challenge1_a: |
+          El patrón norte es un poco diferente que el patrón sur.
+          <xml>
+          <block type="collector_collect"/><next>
+          <block type="maze_moveNorth"/></next>next>
+          </xml>
+        courseB_collector_loops_challenge1_c: |
+          Muévete hacia el este dos veces entre cada camino.
+          <xml>
+            <block type="maze_moveEast"/><next>
+            <block type="maze_moveEast"/></next>next>
+            </xml>
+          Puedes hacer esto con solo 14 bloques. Haga clic para obtener una sugerencia más para ver una solución.
       course1_maze_debugging_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Algunos caminos te guiarán al TNT, si vas muy
           lejos.
+      course1_maze_debugging_challenge2_authored_hint:
+        courseB_maze_seq_challenge2_b: Reorganiza los bloques y toma el camino del
+          medio.
       course1_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_b: Intenta moverte al oeste para empezar.
+      course1_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_e: "Finalmente, haz aparecer a Wendel el
+          Mago cuando hagas clic en Spiff!\n\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
       course2_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Intenta crear un buce anidad para
           crear 4 octágonos. Gira 45 grados para hacer el octágono. Salta, entonces
           gira 90 grados luego de cada uno.
         courseD_artist_nestedLoops_challenge1_b: Añade el código para arrastrar un
           triángulo dentro de tu bucle anidado. Usa giros de 120 grados para tu triángulo.
+        courseD_artist_nestedLoops_challenge1_c: |-
+          Use un bucle anidado:
+          -Repite 8 veces
+          -dibuja un octágono
+          -dibuja un triángulo
+          -salta hacia adelante 50 pixeles
+          -gira a la derecha 90 grados
+      course2_artist_prog_challenge1_authored_hint:
+        courseC_artist_prog_challenge1_a: 'El rectángulo tiene 200 píxeles de ancho
+          y 100 píxeles de alto. '
+      course2_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_a: "¿Puedes encontrar un camino que llegue
+          a cada flor y panal sin golpear ningún árbol? El mejor camino es una espiral.
+          \n\n** Puedes resolver esto sin ningún giro a la izquierda. **"
+      course2_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: Puedes usar el comando `collect` más
+          a menudo para recolectar el tesoro adicional.
+      course2_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: Puedes usar el comando `collect` más
+          a menudo para recolectar el tesoro adicional.
       course2_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: "¡Ni siquiera pienses en intentar esto
           sin bucles!"
@@ -3885,6 +4431,14 @@ es:
       course3_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: El botón de `PASO` puede ser muy útil
           en este desafío.
+      course3_farmer_condLoops_challenge2_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: La cantidad de cada vegetal en cada
+          espacio varía. Usa bucles "while" para éstos.
+      course3_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_b: El camino de Scrat es la forma de un
+          rectángulo! Necesita girar en el mismo sentido cada vez!
+        courseC_maze_debugging_challenge1_c: Si te quedas atascado, siempre puedes
+          volver a empezar, o eliminar todo el código y encontrar tu propio camino!
       course3_maze_debugging_challenge2_authored_hint:
         courseC_maze_debugging_challenge2_a: Una manera de resolver esto es añadir
           más pasos hacia adelante y entre los turnos.
@@ -3918,6 +4472,16 @@ es:
           Comience asegurándose de que entiende cómo funciona esta *supuesta* función. A medida que la agricultora se mueve por cada camino, solo intentará recolectar maíz. En cambio, ¿cómo puedes hacer que revise cada una de las 3 verduras y elegir solo la que encuentra?
 
           Agregue declaraciones condicionales a la función para buscar maíz, calabazas y lechuga.
+      courseA_artist_loops2_authored_hint:
+        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comienza uniendo
+          bloques al bloque <xml><block type="when_run"/></xml> para ver qué pasa.
+        courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
+          para resolver este rompecabezas.
+      courseA_artist_loops2_2018_authored_hint:
+        courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comienza uniendo
+          bloques al bloque <xml><block type="when_run"/></xml> para ver qué pasa.
+        courseA_artist_loops2_b: Usa este bloque <xml><block type="simple_move_right"/></xml>
+          para resolver este rompecabezas.
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: Si quiere que el lazo se repita más de 4 veces, usted
           puede cambiar el número en la parte superior del bloque.
@@ -4159,6 +4723,12 @@ es:
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
         '1': Say the steps out loud and see if it helps you figure out the answer.
+      courseA_playlab_events_challengeClone_authored_hint:
+        courseA_playlab_events_challenge1_e: "Finalmente, haz aparecer a Wendel el
+          Mago cuando hagas clic en Spiff!\n\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
@@ -5596,6 +6166,10 @@ es:
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: Si quiere que el lazo se repita más de 4 veces, usted
           puede cambiar el número en la parte superior del bloque.
+      grade1_artist_loops6_authored_hint:
+        grade1_artist_loops6_a: "¡Este desafío utiliza CUATRO bucles, uno tras otro!"
+      grade1_artist_loops7a_authored_hint:
+        artistLoopsK9_a: "¡Este desafío utiliza CUATRO bucles, uno tras otro!"
       grade1_maze_sequence7_authored_hint:
         grade1_maze_sequence7a: Si estás atascado, intenta agregar un bloque a la
           vez hasta que resuelvas el acertijo.
@@ -5943,6 +6517,8 @@ es:
       gradek_artist_loops4_authored_hint:
         artistLoopsK3_a: "¡Intente utilizando lo que ha aprendido acerca de los bloques
           repetir para completar este rompecabezas!"
+      gradek_artist_loops9_authored_hint:
+        artistLoopsKA_a: Usa el bloque de salto para avanzar sin dibujar una línea.
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
       iceage_hello1_authored_hint:

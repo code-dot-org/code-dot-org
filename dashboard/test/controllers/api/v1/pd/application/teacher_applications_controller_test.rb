@@ -11,6 +11,10 @@ module Api::V1::Pd::Application
       }
 
       @applicant = create :teacher
+
+      @program_manager = create :program_manager
+      @partner = @program_manager.regional_partners.first
+      @application = create :pd_teacher1920_application, regional_partner: @partner
     end
 
     setup do
@@ -26,6 +30,18 @@ module Api::V1::Pd::Application
     test_redirect_to_sign_in_for :create
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
+
+    test_user_gets_response_for :send_principal_approval,
+      name: 'program managers can send_principal_approval for applications they own',
+      user: -> {@program_manager},
+      params: -> {{id: @application.id}},
+      response: :success
+
+    test_user_gets_response_for :send_principal_approval,
+      name: 'program managers can not send_principal_approval for applications they do not own',
+      user: :program_manager,
+      params: -> {{id: @application.id}},
+      response: :forbidden
 
     test 'sends email on successful create' do
       TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).
@@ -81,6 +97,34 @@ module Api::V1::Pd::Application
 
       sign_in @applicant
       put :create, params: @test_params
+    end
+
+    test 'send_principal_approval queues up an email if none exist' do
+      sign_in @program_manager
+      assert_creates Pd::Application::Email do
+        post :send_principal_approval, params: {id: @application.id}
+        assert_response :success
+      end
+      email = Pd::Application::Email.last
+      assert_equal @application, email.application
+      assert_equal 'principal_approval', email.email_type
+    end
+
+    test 'send_principal_approval does nothing if an email has already been sent' do
+      Pd::Application::Email.create!(
+        application: @application,
+        application_status: @application.status,
+        email_type: 'principal_approval',
+        to: 'principal@ex.net',
+        created_at: Time.now,
+        sent_at: Time.now
+      )
+
+      sign_in @program_manager
+      assert_does_not_create Pd::Application::Email do
+        post :send_principal_approval, params: {id: @application.id}
+        assert_response :success
+      end
     end
   end
 end

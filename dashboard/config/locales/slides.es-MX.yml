@@ -3084,14 +3084,27 @@ es-MX:
           vaya al programa.
       6:
         image: notes/applab_intro_designmode_6.png
+        text: Si añades un elemento a tu app por error, arrástralo fuera o presiona
+          la tecla Borrar.
       7:
         image: notes/applab_intro_designmode_7.png
+        text: Puedes añadir pantallas totalmente nuevas a tu app arrastrándolas en
+          un elemento de pantalla
       8:
         image: notes/applab_intro_designmode_8.png
+        text: Desde la lista de selección arriba puedes rápidamente cambiar entre
+          las pantallas que creas.
       9:
         image: notes/applab_intro_designmode_9.png
+        text: Dentro de tu app, necesitarás una forma de alternar entre todas estas
+          pantallas, entonces el bloque setScreen ha sido añadido a tu caja de herramientas.
+          Usa "setScreen" dentro del bloque "onEvent" para cambiar pantallas con un
+          click.
       10:
         image: notes/applab_intro_designmode_10.png
+        text: En los próximos niveles trabajaras en un solo proyecto. Primero añadirás
+          un botón y luego añadirás una nueva pantalla. Finalmente escribirás código
+          para que el botón cambie a la nueva pantalla.
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png

@@ -77,7 +77,7 @@ def load_configuration
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_writer'                   => 'mysql://root@localhost/',
-    'default_hoc_mode'            => 'pre-hoc', # overridden by 'hoc_mode' DCDO param, except in :test
+    'default_hoc_mode'            => 'soon-hoc', # overridden by 'hoc_mode' DCDO param, except in :test
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,
@@ -437,4 +437,12 @@ end
 
 def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
+end
+
+def shared_constants_dir(*dirs)
+  lib_dir('cdo', 'shared_constants', *dirs)
+end
+
+def shared_constants_file
+  lib_dir('cdo', 'shared_constants.rb')
 end

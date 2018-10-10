@@ -1,3 +1,4 @@
+---
 eu:
   data:
     blocks:
@@ -104,8 +105,8 @@ eu:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'egia'
-            'false': 'gezurra'
+            'true': egia
+            'false': gezurra
       gamelab_getProp:
         options:
           PROPERTY:

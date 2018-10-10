@@ -1,3 +1,4 @@
+---
 ta:
   data:
     blocks:
@@ -62,8 +63,8 @@ ta:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'மெய்'
-            'false': 'தவறு'
+            'true': மெய்
+            'false': தவறு
       gamelab_locationDelta:
         options:
           DIR:

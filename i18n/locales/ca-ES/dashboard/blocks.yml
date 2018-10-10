@@ -1,3 +1,4 @@
+---
 ca:
   data:
     blocks:
@@ -102,8 +103,8 @@ ca:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'cert'
-            'false': 'fals'
+            'true': cert
+            'false': fals
       gamelab_getProp:
         options:
           PROPERTY:

@@ -1,3 +1,4 @@
+---
 el:
   data:
     blocks:
@@ -116,8 +117,8 @@ el:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'Αληθές'
-            'false': 'ψευδές'
+            'true': Αληθές
+            'false': ψευδές
       gamelab_getProp:
         options:
           PROPERTY:

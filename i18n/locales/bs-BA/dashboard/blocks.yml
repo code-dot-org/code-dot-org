@@ -1,3 +1,4 @@
+---
 bs:
   data:
     blocks:
@@ -95,14 +96,6 @@ bs:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': gore
-            '"down"': dolje
-            '"left"': lijevo
-            '"right"': desno
-            '"space"': svemir
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -110,8 +103,8 @@ bs:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'istinito'
-            'false': 'neistinito'
+            'true': istinito
+            'false': neistinito
       gamelab_getProp:
         options:
           PROPERTY:

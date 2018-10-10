@@ -1,3 +1,4 @@
+---
 uk:
   data:
     blocks:
@@ -116,8 +117,8 @@ uk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'Істина'
-            'false': 'Хибність'
+            'true': Істина
+            'false': Хибність
       gamelab_getProp:
         options:
           PROPERTY:
