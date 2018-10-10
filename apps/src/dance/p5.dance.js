@@ -2,8 +2,8 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
-import Sounds from '../Sounds';
 import {getStore} from "../redux";
+import {commands as audioCommands} from '../lib/util/audioApi';
 
 export default function init(p5, Dance) {
   const exports = {};
@@ -97,6 +97,8 @@ var songs = {
   }
 };
 var song_meta = songs.hammer;
+//Tracks when a song started to play
+let songStartTime = 0;
 
 exports.addCues = function (timestamps) {
   timestamps.forEach(timestamp => {
@@ -151,7 +153,7 @@ exports.setup = function setup() {
 }
 
 exports.play = function () {
-  Sounds.getSingleton().play(getStore().getState().selectedSong);
+  audioCommands.playSound({url: songs[getStore().getState().selectedSong].url, callback: () => {songStartTime = new Date()}});
 }
 
 var bg_effects = new Effects(p5, 1);
@@ -459,12 +461,13 @@ exports.getEnergy = function getEnergy(range) {
 }
 
 exports.getTime = function getTime(unit) {
+  let currentTime = (new Date() - songStartTime) / 1000;
   if (unit == "measures") {
     // Subtract any delay before the first measure and start counting measures at 1
     let songData = songs[getStore().getState().selectedSong];
-    return songData.bpm * ((Sounds.getSingleton().getCurrentTime() - songData.delay) / 240) + 1;
+    return songData.bpm * ((currentTime - songData.delay) / 240) + 1;
   } else {
-    return Sounds.getSingleton().getCurrentTime();
+    return currentTime;
   }
 }
 
@@ -677,12 +680,13 @@ exports.draw = function draw() {
   }
 
   let songData = songs[getStore().getState().selectedSong];
+  let currentTime = (new Date() - songStartTime) / 1000;
 
   p5.fill("black");
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((Sounds.getSingleton().getCurrentTime() - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
+  p5.text("Measure: " + (Math.floor(((currentTime - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
 }
   return exports;
 }
