@@ -143,6 +143,7 @@ pt-BR:
     age: Idade
     user_type: Você é um aluno ou professor?
     submit: Registrar
+    next: Próximo
     teacher: Você é um professor?
     valid_username: Disponível!
     invalid_username: O nome de usuário deve ter ao menos 5 caracteres
@@ -177,8 +178,8 @@ pt-BR:
     field_is_required: é obrigatório
     accept_terms: Você precisa aceitar criar uma conta
     error: Ocorreu um erro.
-    email_preference_question: Podemos lhe enviar e-mails sobre atualizações de nossos
-      cursos, oportunidades locais ou outras novidades referentes à informática?
+    email_preference_question: Podemos te enviar por e-mail atualizações de nossos
+      cursos, oportunidades locais ou outras notícias de ciências da computação?
     email_preference_privacy: "(Consulte a nossa política de privacidade)"
     email_preference_yes: Sim
     email_preference_no: Não
@@ -1310,6 +1311,7 @@ pt-BR:
       email_alternate: Email Alternativo
       gender: Identidade de Gênero
       school_name: Nome da escola
+      school_city: Cidade da Escola
       school_country: País da Escola
       ages: Qual idade(s) você ensina este ano?
       subjects: Qual(is) disciplina(s) você ensina este ano?
