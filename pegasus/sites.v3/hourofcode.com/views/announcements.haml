@@ -16,8 +16,8 @@
 
     .robotics-providers
       - providers.each do |provider|
-        .robotics-provider
-          %a.category-link{href: provider[:url], target: "_blank"}
+        %a.category-link{href: provider[:url], target: "_blank"}
+          .robotics-provider
             %img{style: "width: 100%; margin-bottom: 20px", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-logo.png"}
             %img{style: "width: 100%", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-image.png"}
     .clear
