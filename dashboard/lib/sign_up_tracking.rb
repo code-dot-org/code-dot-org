@@ -4,8 +4,8 @@ require 'dynamic_config/dcdo'
 module SignUpTracking
   STUDY_NAME = 'account-sign-up-v2'
   NOT_IN_STUDY_GROUP = 'not-in-study'
-  CONTROL_GROUP = 'control'
-  NEW_SIGN_UP_GROUP = 'experiment-v2'
+  CONTROL_GROUP = 'control-v3'
+  NEW_SIGN_UP_GROUP = 'experiment-v3'
 
   USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
 
@@ -45,11 +45,26 @@ module SignUpTracking
   end
 
   def self.log_load_sign_up(session)
+    event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
-      event: 'load-sign-up-page',
+      event: event_name,
       data_string: session[:sign_up_uid]
     )
+  end
+
+  def self.log_begin_sign_up(user, session)
+    return unless user && session
+    result = user.errors.empty? ? 'success' : 'error'
+    tracking_data = {
+      study: STUDY_NAME,
+      event: "begin-sign-up-#{result}",
+      data_string: session[:sign_up_uid],
+      data_json: {
+        errors: user.errors&.full_messages
+      }.to_json
+    }
+    FirehoseClient.instance.put_record(tracking_data)
   end
 
   def self.log_load_finish_sign_up(session)

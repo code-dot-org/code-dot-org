@@ -1,0 +1,8 @@
+name 'AP_practice_Qs_rqb_1_CSP_6_1_1'
+wrong 'bandwidth'
+wrong 'hierarchy'
+wrong 'latency'
+right 'redundancy'
+markdown <<MARKDOWN
+In the process of digging, a landscaping company cuts a fiber line. Transmission of Internet traffic is still possible through additional pathways that provide alternate routes between the source and destination. The additional pathways describe a concept known as:
+MARKDOWN

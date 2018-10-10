@@ -323,6 +323,7 @@ img.video_thumbnail {
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
+    float: left;
     cursor: pointer;
     a:hover {
       text-decoration: none;
@@ -374,14 +375,15 @@ img.video_thumbnail {
       position: absolute;
       top: 55px;
       right: 55px;
-      font-size: 14px;
       background-color: $white;
-      width: 200px;
+      width: 260px;
+      z-index: 10000;
       a {
         color: $teal;
         font-family: $gotham-bold;
         height: 70px;
-        width: 198px;
+        width: 258px;
+        font-size: 14px;
         float: left;
         border-left: 1px solid $charcoal;
         border-right: 1px solid $charcoal;
@@ -404,7 +406,7 @@ img.video_thumbnail {
         float: left;
       }
       #view_all_projects {
-        width: 189px;
+        width: 248px;
         height: 70px;
         border-bottom: 1px solid $charcoal;
       }
@@ -1039,6 +1041,8 @@ input.header_input {
 .header_user {
   text-align: right;
   margin-left: 5px;
+  margin-top: 6px;
+  height: 38px;
 }
 
 .header_popup {
@@ -1642,9 +1646,13 @@ a.download-video {
 
 #signup, #school-info-modal {
   // NEW SIGN-UP FORM
+  .signup {
+    margin: 20px;
+  }
   .finish-signup {
     width: 800px;
-
+  }
+  .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
     #school-info-inputs {
@@ -1685,6 +1693,9 @@ a.download-video {
       justify-content: space-between;
       align-items: center;
     }
+    .field-sm {
+      width: 400px;
+    }
     .field_with_errors label {
       color: $black;
     }
@@ -1698,15 +1709,19 @@ a.download-video {
     }
     .padded {
       padding-left: 10px;
+      max-width: 150px;
     }
-    select, input[type=text] {
+    select, input[type=text], input[type=password] {
       height: 36px;
       width: 350px;
     }
-    input[type=text] {
+    input[type=text], input[type=password] {
       width: 338px;
       padding-top: 0;
       padding-bottom: 0;
+    }
+    .input-sm input {
+      width: 250px;
     }
     #school-type {
       width: 370px !important;

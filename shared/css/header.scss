@@ -108,6 +108,10 @@
         border: 2px solid $white;
         color: $white;
       }
+
+      #new_signin_button {
+        margin-top: -11px;
+      }
     }
   }
 
@@ -116,7 +120,7 @@
     background-color: transparent;
     border: 2px solid $white;
     margin-top: -4px;
-    height: 38px;
+    height: 36px;
     user-select: none;
 
     .user_name, .create_button {
@@ -137,17 +141,21 @@
     }
 
     .user_menu_arrow_down,
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_up,
+    .create_menu_arrow_down
+    {
       font-size: 25px;
     }
 
     .user_menu_arrow_up,
-    .create_menu_arrow_up, {
+    .create_menu_arrow_up,
+    .create_menu_arrow_down {
       margin-top: -3px;
     }
 
     .user_menu_arrow_down,
-    .create_menu_arrow_down {
+    {
       margin-top: -2px;
     }
   }
@@ -161,18 +169,20 @@
     position: absolute;
     top: 55px;
     right: 55px;
-    font-size: 14px;
     background-color: $white;
-    width: 200px;
+    width: 260px;
+    z-index: 10000;
     a {
       color: $teal;
-      font-weight: 900;
+      font-family: 'Gotham 5r', sans-serif;
       height: 70px;
-      width: 198px;
+      width: 258px;
+      font-size: 14px;
       float: left;
       border-left: 1px solid $charcoal;
       border-right: 1px solid $charcoal;
       border-top: 1px solid $charcoal;
+      box-sizing: content-box;
     }
     a:hover {
       color: $teal;
