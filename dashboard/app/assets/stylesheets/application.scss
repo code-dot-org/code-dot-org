@@ -374,15 +374,15 @@ img.video_thumbnail {
       position: absolute;
       top: 55px;
       right: 55px;
-      font-size: 14px;
       background-color: $white;
-      width: 200px;
+      width: 260px;
       z-index: 10000;
       a {
         color: $teal;
         font-family: $gotham-bold;
         height: 70px;
-        width: 198px;
+        width: 258px;
+        font-size: 14px;
         float: left;
         border-left: 1px solid $charcoal;
         border-right: 1px solid $charcoal;
@@ -405,7 +405,7 @@ img.video_thumbnail {
         float: left;
       }
       #view_all_projects {
-        width: 189px;
+        width: 248px;
         height: 70px;
         border-bottom: 1px solid $charcoal;
       }
