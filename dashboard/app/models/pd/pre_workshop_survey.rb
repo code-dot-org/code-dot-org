@@ -36,10 +36,10 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
     ].freeze
   end
 
-  def validate_required_fields
-    super
-    hash = sanitize_form_data_hash
-    add_key_error(:lesson) unless unit_not_started? || hash.key?(:lesson)
+  # @override
+  def dynamic_required_fields(sanitized_form_data_hash)
+    # Require lesson also when a unit is selected
+    unit_not_started? ? [] : [:lesson]
   end
 
   def self.units_and_lessons(workshop)
@@ -65,10 +65,12 @@ class Pd::PreWorkshopSurvey < ActiveRecord::Base
     unit_number = unit.match(/Unit (\d+)/).try(:[], 1)
 
     # Attempt to extract the number from "Lesson {n}: lesson name"
-    lesson_number = lesson.match(/^Lesson (\d+):/).try(:[], 1)
+    lesson_number = lesson&.match(/^Lesson (\d+):/).try(:[], 1)
 
-    if unit_number && lesson_number
-      "U#{unit_number} L#{lesson_number}"
+    if unit_number
+      # Lesson should be required when a unit is selected, but we had a bug
+      # and some older data has unit but no lesson. In these cases, default to lesson 1
+      "U#{unit_number} L#{lesson_number || 1}"
     else
       # Unable to parse the numbers? Use the long names instead:
       "#{unit}, #{lesson}"

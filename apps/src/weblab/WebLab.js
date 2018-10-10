@@ -19,6 +19,8 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import { makeEnum } from '../utils';
+import logToCloud from "../logToCloud";
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -496,5 +498,18 @@ WebLab.prototype.reset = function (ignore) {
 WebLab.prototype.getAppReducers = function () {
   return reducers;
 };
+
+/**
+ * Expose New Relic page action hook for use by the enclosed Bramble application.
+ */
+WebLab.prototype.addPageAction = function (...args) {
+  logToCloud.addPageAction(...args);
+};
+
+WebLab.prototype.PageAction = makeEnum(
+  logToCloud.PageAction.BrambleError,
+  logToCloud.PageAction.BrambleFilesystemResetSuccess,
+  logToCloud.PageAction.BrambleFilesystemResetFailed
+);
 
 export default WebLab;
