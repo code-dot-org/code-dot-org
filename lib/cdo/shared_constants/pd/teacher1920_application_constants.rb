@@ -133,6 +133,11 @@ module Pd
       }
     }.freeze
 
+    LABEL_OVERRIDES = {
+      program: 'Which professional learning program would you like to join for the 2019-20 school year?',
+      cs_how_many_minutes: 'How many minutes will your class last?'
+    }.freeze
+
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
 

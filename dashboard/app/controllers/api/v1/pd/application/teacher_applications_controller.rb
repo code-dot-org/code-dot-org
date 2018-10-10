@@ -26,7 +26,6 @@ module Api::V1::Pd::Application
     protected
 
     def on_successful_create
-      @application.auto_score!
       @application.update_user_school_info!
       @application.queue_email :confirmation, deliver_now: true
       @application.update_form_data_hash(
@@ -38,6 +37,8 @@ module Api::V1::Pd::Application
           ).values.map(&:to_i).reduce(:*) / 60
         }
       )
+
+      @application.auto_score!
       @application.save
 
       unless @application.regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
