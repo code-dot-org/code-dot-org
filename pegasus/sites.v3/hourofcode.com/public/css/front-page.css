@@ -42,6 +42,8 @@
 
 a.category-link {
   text-decoration: none;
+  width: 50%;
+  min-width: 182px;
 }
 
 .category-link .category-button:hover {
@@ -55,8 +57,7 @@ a.category-link {
 }
 
 .robotics-provider {
-  width: 182px;
-  height: 210px;
+  width: 90%;
   padding: 20px;
   border: 1px solid #aaa;
   border-radius: 10px;
