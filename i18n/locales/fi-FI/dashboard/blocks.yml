@@ -11,8 +11,6 @@ fi:
           GROUP:
             sprites: kaikki
           MOVE:
-            '"next"': Seuraava
-            '"prev"': Edellinen
             MOVES.Rest: Ei mitään
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ fi:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Seuraava
-            '"prev"': Edellinen
             MOVES.Rest: Ei mitään
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ fi:
           GROUP:
             sprites: kaikki
           MOVE:
-            '"next"': Seuraava
-            '"prev"': Edellinen
             MOVES.Rest: Ei mitään
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ fi:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Seuraava
-            '"prev"': Edellinen
             MOVES.Rest: Ei mitään
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ fi:
           LOCATION:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
       Dancelab_randomColor:
         text: satunnainen väri
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ fi:
           EFFECT:
             '"none"': Ei mitään
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': koko
@@ -279,6 +277,12 @@ fi:
             '"down"': nuoli alas
             '"left"': nuoli vasemmalle
             '"right"': nuoli oikealle
+      RyanLab_moveForward:
+        text: siirry eteenpäin
+      RyanLab_turnLeft:
+        text: käänny vasempaan
+      RyanLab_turnRight:
+        text: käänny oikeaan
       craft_ifPath:
         options:
           DIR:
