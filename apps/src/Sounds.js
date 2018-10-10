@@ -308,6 +308,18 @@ Sounds.prototype.isPlayingURL = function (url) {
 };
 
 /**
+ * @param {!string} id
+ * @returns {boolean} whether the given sound is loaded.
+ */
+Sounds.prototype.isLoaded = function (id) {
+  var sound = this.soundsById[id];
+  if (sound) {
+    return sound.isLoaded();
+  }
+  return false;
+};
+
+/**
  * Stop playing url.
  */
 Sounds.prototype.stopPlayingURL = function (url) {
