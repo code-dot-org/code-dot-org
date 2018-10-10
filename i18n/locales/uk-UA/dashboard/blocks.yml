@@ -10,17 +10,11 @@ uk:
         options:
           GROUP:
             sprites: усі
-          MOVE:
-            '"next"': Далі
-            '"prev"': Назад
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Далі
-            '"prev"': Назад
           DIR:
             '1': "→"
             "-1": "←"
@@ -33,17 +27,11 @@ uk:
         options:
           GROUP:
             sprites: усі
-          MOVE:
-            '"next"': Далі
-            '"prev"': Назад
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Далі
-            '"prev"': Назад
           DIR:
             '1': "→"
             "-1": "←"
@@ -71,6 +59,7 @@ uk:
           LOCATION:
             "{x: 100, y: 200}": ліворуч
             "{x: 300, y: 200}": праворуч
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": випадковий
       Dancelab_randomColor:
         text: випадковий колір
       Dancelab_setDanceSpeed:
@@ -82,6 +71,11 @@ uk:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"height"': висота
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': розмір
@@ -252,6 +246,12 @@ uk:
             '"down"': стрілка вниз
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
+      RyanLab_moveForward:
+        text: рухатись вперед
+      RyanLab_turnLeft:
+        text: повернути ліворуч
+      RyanLab_turnRight:
+        text: повернути праворуч
       craft_ifPath:
         options:
           DIR:
