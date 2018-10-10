@@ -39,9 +39,22 @@ module HocEventReview
       all
   end
 
+  def self.events(**rest)
+    events_query(rest).
+      select(:data, :secret, :processed_data).
+      limit(100).
+      map do |form|
+        JSON.parse(form[:data]).
+          merge(secret: form[:secret]).
+          merge(JSON.parse(form[:processed_data]))
+      end
+  end
+
   private_class_method def self.events_query(
     special_events_only: false,
-    reviewed: nil
+    reviewed: nil,
+    country: nil,
+    state: nil
   )
     query = FORMS.where(kind: kind)
 
@@ -51,6 +64,12 @@ module HocEventReview
 
     unless reviewed.nil?
       query = reviewed ? query.exclude(review: nil) : query.where(review: nil)
+    end
+
+    if state
+      query = query.where(STATE_CODE_COLUMN => state.upcase)
+    elsif country
+      query = query.where(COUNTRY_CODE_COLUMN => country.upcase)
     end
 
     query
