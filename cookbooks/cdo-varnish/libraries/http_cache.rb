@@ -157,10 +157,12 @@ class HttpCache
             headers: WHITELISTED_HEADERS + ['User-Agent'],
             cookies: whitelisted_cookies
           },
-          # The last puzzle in Dance Party (Hour of Code 2018) is project backed and can't be cached in CloudFront
+          # The last puzzle in Dance Party (Hour of Code 2018) is project backed and should not be cached in CloudFront.
+          # Use CloudFront Behavior precedence rules to not cache this path, but all paths in CACHED_SCRIPTS_MAP
+          # that don't match this path will be cached.
           {
             # TODO(suresh): lookup the last puzzle from the database
-            path: "/s/dance/stage/10",
+            path: "/s/dance/stage/12",
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
