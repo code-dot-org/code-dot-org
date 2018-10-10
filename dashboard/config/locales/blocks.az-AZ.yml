@@ -11,8 +11,6 @@ az:
           GROUP:
             sprites: bütün
           MOVE:
-            '"next"': Növbəti
-            '"prev"': Əvvəlki
             MOVES.Rest: Heç biri
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ az:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Növbəti
-            '"prev"': Əvvəlki
             MOVES.Rest: Heç biri
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ az:
           GROUP:
             sprites: bütün
           MOVE:
-            '"next"': Növbəti
-            '"prev"': Əvvəlki
             MOVES.Rest: Heç biri
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ az:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Növbəti
-            '"prev"': Əvvəlki
             MOVES.Rest: Heç biri
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ az:
           LOCATION:
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
       Dancelab_randomColor:
         text: ixtiyari rəng
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ az:
           EFFECT:
             '"none"': Heç biri
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': ölçü
@@ -267,6 +265,12 @@ az:
             '"down"': aşağıya ox
             '"left"': sola ox
             '"right"': sağa ox
+      RyanLab_moveForward:
+        text: irəli get
+      RyanLab_turnLeft:
+        text: sola dön
+      RyanLab_turnRight:
+        text: sağa dön
       craft_ifPath:
         options:
           DIR:
