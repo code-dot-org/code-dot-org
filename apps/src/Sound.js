@@ -138,6 +138,13 @@ Sound.prototype.isPlaying = function () {
   return this.isPlaying_;
 };
 
+/**
+ * @returns {boolean} whether the sound is loaded.
+ */
+Sound.prototype.isLoaded = function () {
+  return this.isLoaded_;
+};
+
 Sound.prototype.newPlayableBufferSource = function (buffer, options) {
   var newSound = this.audioContext.createBufferSource();
 
@@ -264,6 +271,7 @@ Sound.prototype.getPlayableFile = function () {
 };
 
 Sound.prototype.preload = function () {
+  this.isLoaded_ = false;
   var file = this.getPlayableFile();
   if (!file) {
     return;
@@ -308,6 +316,7 @@ Sound.prototype.onSoundLoaded = function () {
   if (this.onLoad) {
     this.onLoad();
   }
+  this.isLoaded_ = true;
 };
 
 Sound.prototype.preloadViaWebAudio = function (filename, onPreloadedCallback) {
