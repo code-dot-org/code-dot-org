@@ -757,6 +757,7 @@ sk:
       Crack Random Substitution_2018: Inštrukcie
       Crack a Caesar Cipher: Inštrukcie
       Crack a Caesar Cipher_2018: Inštrukcie
+      D_Frozen_nested5: Zahraj sa so snehovými vločkami!
       Dance Party 1-validated: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party 1-validated_simple: 'Čo si myslíte, že sa stane, keď kliknete na
         mimozemšťana?  '
@@ -1083,14 +1084,18 @@ sk:
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
         a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž
         a nahraď niečim úplne iným)
+      courseD_Frozen_nested5: Zahraj sa so snehovými vločkami!
+      courseD_artist_5_2018: Zahraj sa so snehovými vločkami!
       courseD_artist_binary1: Použite bloky nižšie, aby umelec nakreslil "01010101"
         v binárnom kóde v prvom riadku.
       courseD_artist_binary1_2018: Použite bloky nižšie, aby umelec nakreslil "01010101"
         v binárnom kóde v prvom riadku.
-      courseD_artist_embed_frozen: Stlačte "Spustiť" pre ukázanie dizajnu snehovej
-        vločky!
+      courseD_artist_embed_frozen: Stlač tlačidlo "Spustiť" aby sa ti ukázal dizajn
+        snehovej vločky!
       courseD_artist_embed_frozen2: Stlač tlačidlo"Spustiť", aby sa ti ukázal dizajn
         tvojej snehovej vločky.
+      courseD_artist_project5: Zahraj sa so snehovými vločkami!
+      courseD_artist_project5_2018: Zahraj sa so snehovými vločkami!
       courseD_bee_debugging3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal
         všetok nektár a urobil celý med.
       courseD_debugging_3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok
@@ -1127,35 +1132,35 @@ sk:
         všetok nektár.
       frozen circle function in circle: Teraz si vytvorme 20 prekrývajúcich sa kruhov,
         medzi každým z nich sa otočíme o 18 stupňov.
-      frozen circle function in circle_b: Teraz vytvor **20** prekrývajúcich sa kružníc,
-        medzi každou z nich sa otoč **o 18 stupňov**.
-      frozen circle function in circle_test: Teraz vytvor **20** prekrývajúcich sa
-        kružníc, medzi každou z nich sa otoč **o 18 stupňov**.
-      frozen circle function with parameter: Tu je blok "Vytvoriť kruh", ktorý dokáže
-        kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu
-        s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+      frozen circle function in circle_b: Teraz si vytvorme **20** prekrývajúcich
+        sa kružníc, medzi každou z nich sa otočíme **o 18 stupňov**.
+      frozen circle function in circle_test: Teraz si vytvorme **20** prekrývajúcich
+        sa kružníc, medzi každou z nich sa otočíme **o 18 stupňov**.
+      frozen circle function with parameter: Tu je blok "Vytvor kružnicu", ktorý dokáže
+        kresliť kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého
+        kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       frozen circle function with parameter_b: Pomocou novej funkcie vytvor malý kruh
         veľkosti **5** a väčší kruh veľkosti **10**.
       frozen circle function with parameter_test: Pomocou novej funkcie vytvor malý
         kruh veľkosti **5** a väčší kruh veľkosti **10**.
-      frozen circle function: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10
-        prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
-      frozen circle function_b: Použi novú funkciu "vytvoriť kružnicu" pre nakreslenie
+      frozen circle function: Použi nový blok "Vytvor kružnicu" pre nakreslenie 10
+        prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu.
+      frozen circle function_b: Použi novú funkciu "Vytvor kružnicu" pre nakreslenie
         10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu o
         25 pixelov!
-      frozen circle function_test: Použi novú funkciu "vytvoriť kružnicu" pre nakreslenie
+      frozen circle function_test: Použi novú funkciu "Vytvor kružnicu" pre nakreslenie
         10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu o
         25 pixelov!
-      frozen circle: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť
-        otázniky, aby sa nakreslil kruh?
+      frozen circle: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom treba
+        nahradiť otázniky, aby sa nakreslila kružnica?
       frozen circle_b: Prídeš na to, akou hodnotou nahradiť **"???"**, aby si nakreslil
         kružnicu?
       frozen circle_test: Prídeš na to, akou hodnotou nahradiť **"???"**, aby si nakreslil
         kružnicu?
       frozen cross rotate dense: 'Zopakujme to 90-krát! Koľkokrát sa 90 vojde do 360?
         Tip: Je to naozaj malé číslo.'
-      frozen cross rotate dense_b: Poď si zopakovať riadok ** 90 ** krát!
-      frozen cross rotate dense_test: Poď si zopakovať riadok ** 90 ** krát!
+      frozen cross rotate dense_b: Zopakujme čiaru ** 90 ** krát!
+      frozen cross rotate dense_test: Zopakujme čiaru ** 90 ** krát!
       frozen cross rotate: Teraz to skús zopakovať 10-krát. O koľko stupňov sa musíš
         otočiť medzi jednotlivými čiarami?
       frozen cross rotate_b: Teraz to skús zopakovať **10-krát**. **O koľko stupňov**
@@ -1165,9 +1170,9 @@ sk:
       frozen cross: Vytvor znamienko plus pomocou bloku "Opakuj". Všimol si si, že
         Elsa sa môže pohybovať dopredu i dozadu?
       frozen cross_b: Nakresli čiaru, ktorá je dlhá ** 100 ** pixelov, potom sa vráť
-        do stredu kým sa otočíš o ** 90 stupňov **. Zopakuj ** 4 ** krát.
+        do stredu a otoč sa o ** 90 stupňov **. Zopakuj ** 4 ** krát.
       frozen cross_test: Nakresli čiaru, ktorá je dlhá ** 100 ** pixelov, potom sa
-        vráť do stredu kým sa otočíš o ** 90 stupňov **. Zopakuj ** 4 ** krát.
+        vráť do stredu a otoč sa o ** 90 stupňov **. Zopakuj ** 4 ** krát.
       frozen diamond mini snowflake: Vedel si, že každá snehová vločka má iný tvar?
         Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme
         4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
@@ -1446,22 +1451,30 @@ sk:
         krajinu zázrakov.
       grade4_frozen_functions0: Dokážeš zistiť aké číslo doplniť miesto otáznikov
         aby si nakreslil kruh?
-      grade4_frozen_functions1a: Použite nový blok "Vytvoriť kruh" pre nakreslenie
-        10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      grade4_frozen_functions1: Použi novú funkciu "Nakresli kružnicu" pre nakreslenie
+        10 prekrývajúcich sa kružníc. Nezabudni medzi kružničami skočiť dopredu.
+      grade4_frozen_functions1a: Použi nový blok "Vytvor kružnicu" pre nakreslenie
+        10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu.
       grade4_frozen_functions2: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi
         každým z nich sa otočíme o 18 stupňov.
-      grade4_frozen_functions3: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy
-        rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou
-        5 a väčšieho kruhu s veľkosťou 10?
+      grade4_frozen_functions3: Tu je blok "Vytvor kružnicu", ktorý dokáže kresliť
+        kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého kruhu s
+        veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       grade4_frozen_functions4: Zložité snehové vzory je možné vytvoriť pomocou veľmi
         jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou
         5 a 5 kružníc s veľkosťou 10?
+      grade4_frozen_nested_loop_diamonds1: Použime blok "Opakuj", aby sme vytvorili
+        kosoštvorec. Podobne ako štvorec, kosoštvorec má všetky strany rovnakej dĺžky,
+        ale má odlišné uhly. Tento má uhly 60 a 120 stupňov (namiesto pravých uhlov).
       grade4_frozen_nested_loop_diamonds2: Vedel si, že každá snehová vločka má iný
         tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník
         zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
       grade4_frozen_nested_loop_diamonds3: Teraz vytvor novú vločku pomocou bloku
         "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš
         vpravo o 36 stupňov.
+      grade4_frozen_nested_loop_rectangle1: Ahoj, som Anna z Arendelle. Použime blok
+        "Opakuj" aby sme vytvorili obdĺžnik. Tento má dĺžku 200 pixelov a výšku 100
+        pixelov. Všetky rohy majú 90 stupňov.
       grade4_frozen_square: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku
         "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí
         blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?

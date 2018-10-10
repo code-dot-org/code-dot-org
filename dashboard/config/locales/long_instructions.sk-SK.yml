@@ -417,17 +417,17 @@ sk:
         skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
       frozen circle function in circle_test: Teraz vytvor **20** prekrývajúcich sa
         kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
-      frozen circle function with parameter: Tu je blok "Vytvoriť kruh", ktorý dokáže
-        kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu
-        s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+      frozen circle function with parameter: Tu je blok "Vytvor kružnicu", ktorý dokáže
+        kresliť kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého
+        kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       frozen circle function with parameter_b: "Blok \"Vytvor kružnicu\", dokáže kresliť
         kružnice rôznych veľkostí. \n\nPouži ho na vytvorenie malej kružnice s veľkosťou
         **5** a väčšej kružnice s veľkosťou **10**."
       frozen circle function with parameter_test: "Blok \"Vytvor kružnicu\", dokáže
         kresliť kružnice rôznych veľkostí. \n\nPouži ho na vytvorenie malej kružnice
         s veľkosťou **5** a väčšej kružnice s veľkosťou **10**."
-      frozen circle function: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10
-        prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      frozen circle function: Použi nový blok "Vytvor kružnicu" pre nakreslenie 10
+        prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu.
       frozen circle function_b: |-
         Z kódu v predchádzajúcej úlohe sme vytvorili funkciu!
 
@@ -436,8 +436,8 @@ sk:
         Z kódu v predchádzajúcej úlohe sme vytvorili funkciu!
 
         Skús použiť nový blok "Vytvor kružnicu" a dokonči kresbu. Nezabudni medzi každou z ** 10 ** kružníc skočiť o **25** pixelov!
-      frozen circle: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť
-        otázniky, aby sa nakreslil kruh?
+      frozen circle: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom treba
+        nahradiť otázniky, aby sa nakreslila kružnica?
       frozen circle_b: "Kružnica je výnimočny útvar. \n\nVieš zistiť aký príkaz použiť
         pre nakreslenie kružnice?"
       frozen circle_test: "Kružnica je výnimočny útvar. \n\nVieš zistiť aký príkaz
@@ -597,6 +597,14 @@ sk:
       frozen square loop: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku
         "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí
         blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
+      frozen square loop_b: |-
+        *Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj!"*
+
+        Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
+      frozen square loop_test: |-
+        *Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj!"*
+
+        Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       frozen square snowflake: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj"
         a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o
         36 stupňov otočíš?
@@ -700,24 +708,32 @@ sk:
         mal ideálny počet blokov.
       grade4_frozen_freeplay: Oficiálne se z teba stal majster umelec! Vytvor zimnú
         krajinu zázrakov.
-      grade4_frozen_functions0: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom
-        treba nahradiť otázniky, aby sa nakreslil kruh?
-      grade4_frozen_functions1a: Použite nový blok "Vytvoriť kruh" pre nakreslenie
-        10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      grade4_frozen_functions0: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom
+        treba nahradiť otázniky, aby sa nakreslila kružnica?
+      grade4_frozen_functions1: Použi novú funkciu "Vytvor kružnicu" pre nakreslenie
+        10 prekrývajúcich sa kružníc. Nezabudni medzi kružničami "Skočiť" dopredu.
+      grade4_frozen_functions1a: Použi nový blok "Vytvor kružnicu" pre nakreslenie
+        10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu.
       grade4_frozen_functions2: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi
         každým z nich sa otočíme o 18 stupňov.
-      grade4_frozen_functions3: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy
-        rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou
-        5 a väčšieho kruhu s veľkosťou 10?
+      grade4_frozen_functions3: Tu je blok "Vytvor kružnicu", ktorý dokáže kresliť
+        kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého kruhu s
+        veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       grade4_frozen_functions4: Zložité snehové vzory je možné vytvoriť pomocou veľmi
         jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou
         5 a 5 kružníc s veľkosťou 10?
+      grade4_frozen_nested_loop_diamonds1: Použime blok "Opakuj", aby sme vytvorili
+        kosoštvorec. Podobne ako štvorec, kosoštvorec má všetky strany rovnakej dĺžky,
+        ale má odlišné uhly. Tento má uhly 60 a 120 stupňov (namiesto pravých uhlov).
       grade4_frozen_nested_loop_diamonds2: Vedel si, že každá snehová vločka má iný
         tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník
         zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
       grade4_frozen_nested_loop_diamonds3: Teraz vytvor novú vločku pomocou bloku
         "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš
         vpravo o 36 stupňov.
+      grade4_frozen_nested_loop_rectangle1: Ahoj, som Anna z Arendelle. Použime blok
+        "Opakuj" aby sme vytvorili obdĺžnik. Tento má dĺžku 200 pixelov a výšku 100
+        pixelov. Všetky rohy majú 90 stupňov.
       grade4_frozen_square: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku
         "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí
         blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
