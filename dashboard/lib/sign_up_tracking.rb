@@ -4,8 +4,8 @@ require 'dynamic_config/dcdo'
 module SignUpTracking
   STUDY_NAME = 'account-sign-up-v2'
   NOT_IN_STUDY_GROUP = 'not-in-study'
-  CONTROL_GROUP = 'control'
-  NEW_SIGN_UP_GROUP = 'experiment-v2'
+  CONTROL_GROUP = 'control-v3'
+  NEW_SIGN_UP_GROUP = 'experiment-v3'
 
   USER_ATTRIBUTES_OF_INTEREST = %i(id provider uid)
 
@@ -44,8 +44,8 @@ module SignUpTracking
     DCDO.get('sign_up_split_test', 0)
   end
 
-  def self.log_load_sign_up(session, new_flow: false)
-    event_name = new_flow ? 'load-new-sign-up-page' : 'load-sign-up-page'
+  def self.log_load_sign_up(session)
+    event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
       event: event_name,

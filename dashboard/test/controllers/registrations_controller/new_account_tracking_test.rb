@@ -38,7 +38,7 @@ module RegistrationsControllerTests
       SignUpTracking.stubs(:split_test_percentage).returns(0)
     end
 
-    test 'successful email sign up sends Firehose success event' do
+    test 'successful email sign up in old signup flow sends Firehose success event' do
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
           data[:event] == 'load-sign-up-page' &&
@@ -46,7 +46,7 @@ module RegistrationsControllerTests
       end
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
-          data[:study_group] == SignUpTracking::NOT_IN_STUDY_GROUP &&
+          data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'email-sign-up-success' &&
           data[:data_string] == UUID
       end
@@ -60,7 +60,31 @@ module RegistrationsControllerTests
       end
     end
 
-    test 'email sign up with wrong password confirmation sends Firehose error event' do
+    test 'successful email sign up in new signup flow sends Firehose success event' do
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
+      SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
+      FirehoseClient.instance.expects(:put_record).with do |data|
+        data[:study] == STUDY &&
+          data[:event] == 'load-new-sign-up-page' &&
+          data[:data_string] == UUID
+      end
+      FirehoseClient.instance.expects(:put_record).with do |data|
+        data[:study] == STUDY &&
+          data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
+          data[:event] == 'email-sign-up-success' &&
+          data[:data_string] == UUID
+      end
+
+      get '/users/sign_up'
+
+      assert_creates(User) do
+        post '/users', params: {
+          user: USER_PARAMS_GOOD
+        }
+      end
+    end
+
+    test 'email sign up with wrong password confirmation in old signup flow sends Firehose error event' do
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
           data[:event] == 'load-sign-up-page' &&
@@ -68,7 +92,7 @@ module RegistrationsControllerTests
       end
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
-          data[:study_group] == SignUpTracking::NOT_IN_STUDY_GROUP &&
+          data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'email-sign-up-error' &&
           data[:data_string] == UUID
       end
@@ -77,6 +101,30 @@ module RegistrationsControllerTests
 
       assert_does_not_create(User) do
         post '/users.json', params: {
+          user: USER_PARAMS_ERROR
+        }
+      end
+    end
+
+    test 'email sign up with wrong password confirmation in new signup flow sends Firehose error event' do
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
+      SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
+      FirehoseClient.instance.expects(:put_record).twice.with do |data|
+        data[:study] == STUDY &&
+          data[:event] == 'load-new-sign-up-page' &&
+          data[:data_string] == UUID
+      end
+      FirehoseClient.instance.expects(:put_record).with do |data|
+        data[:study] == STUDY &&
+          data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
+          data[:event] == 'email-sign-up-error' &&
+          data[:data_string] == UUID
+      end
+
+      get '/users/sign_up'
+
+      assert_does_not_create(User) do
+        post '/users', params: {
           user: USER_PARAMS_ERROR
         }
       end

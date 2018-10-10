@@ -340,16 +340,6 @@ en:
       teach: "Teach"
       about: "About"
 
-    create_button:
-      create: 'Create'
-      applab: 'App Lab'
-      artist: 'Artist'
-      gamelab: 'Game Lab'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
-      view_all: 'View all projects...'
-
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -364,6 +354,15 @@ en:
       team: 'Team'
       driver: 'Logged in'
       navigator: 'Partner'
+      create: 'Create'
+      applab: 'App Lab'
+      artist: 'Artist'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      view_all: 'View all projects...'
+
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'

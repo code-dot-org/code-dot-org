@@ -9,3 +9,20 @@ markdown <<MARKDOWN
 What will the final image look like after this program runs?
 <br><img src="https://codehs.com/uploads/b919f0a3f52efe3abe7932c94701f121" width="300"><br>
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1D, 4.1.1A**
+<hr>
+ (A) 1. This option is incorrect.  This is the position the arrow would be in if the code had repeated 4 times rather than 6.
+
+
+<hr>
+ (B) 2. This option is incorrect.  The square the arrow is in is correct, but it is facing in the wrong direction.  Forgetting to rotate or rotating in the wrong direction is a common mistake.
+
+<hr>
+ (C) 3. This option is incorrect.  If the code had repeated 3 times, then the arrow would be in this location.
+
+<hr>
+ (D) 4. This option is correct.  The arrow is in the correct square and facing in the correct direction.
+
+
+MARKDOWN

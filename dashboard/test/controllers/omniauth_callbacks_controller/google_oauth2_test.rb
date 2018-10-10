@@ -135,7 +135,7 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
-          load-sign-up-page
+          load-new-sign-up-page
           google_oauth2-callback
           load-finish-sign-up-page
           google_oauth2-sign-up-success
@@ -166,7 +166,7 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
-          load-sign-up-page
+          load-new-sign-up-page
           google_oauth2-callback
           load-finish-sign-up-page
           google_oauth2-sign-up-success
@@ -198,7 +198,7 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
-          load-sign-up-page
+          load-new-sign-up-page
           google_oauth2-callback
           load-finish-sign-up-page
           load-finish-sign-up-page
@@ -258,7 +258,7 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
 
       assert_sign_up_tracking(
-        SignUpTracking::NOT_IN_STUDY_GROUP,
+        SignUpTracking::CONTROL_GROUP,
         %w(
           load-sign-up-page
           google_oauth2-callback
