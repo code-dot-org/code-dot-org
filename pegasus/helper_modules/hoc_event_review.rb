@@ -15,11 +15,10 @@ module HocEventReview
   FORMS = ::PEGASUS_DB[:forms]
   COUNTRY_CODE_COLUMN = :location_country_code_s
   STATE_CODE_COLUMN = json('processed_data.location_state_code_s')
+  SPECIAL_EVENT_FLAG_COLUMN = json('data.special_event_flag_b')
 
-  def self.kind
-    "HocSignup#{DCDO.get('hoc_year', 2017)}"
-  end
-
+  # Get non-US event counts by country
+  # (used for event review overview page)
   def self.event_counts_by_country(**rest)
     events_query(rest).
       exclude(COUNTRY_CODE_COLUMN => 'US').
@@ -27,11 +26,11 @@ module HocEventReview
       all
   end
 
+  # Get US event counts by state
+  # (used for event review overview page)
   def self.event_counts_by_state(**rest)
-    country = 'US'
-
     events_query(rest).
-      where(COUNTRY_CODE_COLUMN => country).
+      where(COUNTRY_CODE_COLUMN => 'US').
       exclude(STATE_CODE_COLUMN => nil).
       group_and_count(
         STATE_CODE_COLUMN.as(:state_code)
@@ -39,6 +38,7 @@ module HocEventReview
       all
   end
 
+  # Get events according to given filters
   def self.events(**rest)
     events_query(rest).
       select(:data, :secret, :processed_data).
@@ -59,7 +59,7 @@ module HocEventReview
     query = FORMS.where(kind: kind)
 
     if special_events_only
-      query = query.where(json('data.special_event_flag_b') => true)
+      query = query.where(SPECIAL_EVENT_FLAG_COLUMN => true)
     end
 
     unless reviewed.nil?
@@ -73,5 +73,9 @@ module HocEventReview
     end
 
     query
+  end
+
+  private_class_method def self.kind
+    "HocSignup#{DCDO.get('hoc_year', 2017)}"
   end
 end
