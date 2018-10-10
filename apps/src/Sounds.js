@@ -259,12 +259,16 @@ Sounds.prototype.play = function (soundId, options) {
   if (sound) {
     sound.play(options);
   }
-  this.audioStartedTime = this.audioContext.currentTime;
+
+  this.audioStartedTime = 0;
+  if (this.audioContext) {
+    this.audioStartedTime = this.audioContext.currentTime;
+  }
 };
 
 //Returns time since the current audio started to play
 Sounds.prototype.getCurrentTime = function () {
-  if (this.audioStartedTime) {
+  if (this.audioStartedTime && this.audioContext) {
     return this.audioContext.currentTime - this.audioStartedTime;
   } else {
     return 0;
