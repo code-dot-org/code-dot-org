@@ -323,6 +323,7 @@ img.video_thumbnail {
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
+    float: left;
     cursor: pointer;
     a:hover {
       text-decoration: none;
@@ -1040,6 +1041,8 @@ input.header_input {
 .header_user {
   text-align: right;
   margin-left: 5px;
+  margin-top: 6px;
+  height: 38px;
 }
 
 .header_popup {

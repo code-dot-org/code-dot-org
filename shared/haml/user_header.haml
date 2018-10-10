@@ -83,9 +83,14 @@
         %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
         %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
 - else
-  %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
-    .header_button.header_user
-      %span= I18n.t("#{loc_prefix}signin")
+  - if show_updated_header
+    %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'new_signin_button'}
+      .header_button.header_user
+        %span= I18n.t("#{loc_prefix}signin")
+  - else
+    %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
+      .header_button.header_user
+        %span= I18n.t("#{loc_prefix}signin")
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
   // Use function closure to avoid cluttering global namespace.
