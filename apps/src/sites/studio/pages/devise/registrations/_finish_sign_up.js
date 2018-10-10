@@ -76,7 +76,7 @@ $(document).ready(() => {
   function trackUserType(type) {
     firehoseClient.putRecord({
       study: 'account-sign-up-v2',
-      study_group: 'experiment-v2',
+      study_group: 'experiment-v3',
       event: 'select-' + type,
       data_string: signUpUID,
     });
