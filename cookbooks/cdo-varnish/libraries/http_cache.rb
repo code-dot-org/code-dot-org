@@ -52,7 +52,10 @@ class HttpCache
 
     # Signed-in user type (student/teacher), or signed-out if cookie is not present.
     user_type = "_user_type#{env_suffix}"
-    default_cookies = DEFAULT_COOKIES + [user_type]
+    # Students younger than 13 shouldn't see App Lab and Game Lab unless they
+    # are in a teacher's section for privacy reasons.
+    limit_project_types = "_limit_project_types#{env_suffix}"
+    default_cookies = DEFAULT_COOKIES + [user_type] + [limit_project_types]
 
     # These cookies are whitelisted on all session-specific (not cached) pages.
     whitelisted_cookies = [
