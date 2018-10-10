@@ -15,6 +15,9 @@ Elementary School
 
 Our six Computer Science Fundamentals courses are designed to be flexible for your classroom. How you implement is up to you - teach computer science for your next science unit, add technology time to your schedule once a week, or go deeper with extension activities and projects!
 </p>
+
+<img src="/images/animated-examples/cutesprite.gif" style="float: left;">
+
 New to teaching computer science? No worries! Most of our teachers have never taught computer science before. Try one of our CS Fundamentals courses yourself to learn ahead of your students, or sign up for a [professional development workshop](/professional-development-workshops) near you!
 
 <br>
