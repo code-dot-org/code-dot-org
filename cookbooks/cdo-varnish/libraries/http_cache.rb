@@ -140,6 +140,12 @@ class HttpCache
             cookies: 'none'
           },
           {
+            path: '/restricted/*',
+            proxy: 'cdo-restricted',
+            headers: [],
+            cookies: 'none'
+          },
+          {
             path: %w(
               /v3/assets/*
               /v3/animations/*
