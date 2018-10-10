@@ -15,24 +15,24 @@ Scenario: Create Dropdown shows when Signed Out, Desktop
   Given I am on "http://code.org/"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
-  And I wait to see ".create_menu"
+  And I wait until element ".create_menu" is visible
   # Confirm the create dropdown also shows on Dashboard
   Given I am on "http://studio.code.org/projects/public"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
-  And I wait to see ".create_menu"
+  And I wait until element ".create_menu" is visible
 
 Scenario: Create Dropdown shows when Signed In
   Given I am a teacher
   And check that I am on "http://studio.code.org/home"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
-  And I wait to see ".create_menu"
+  And I wait until element ".create_menu" is visible
   # Confirm the create dropdown also shows on Pegasus
   Given I am on "http://code.org/help"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
-  And I wait to see ".create_menu"
+  And I wait until element ".create_menu" is visible
 
 #TOOD: Erin B., remove skip when #25296 is merged
 
@@ -48,24 +48,24 @@ Scenario: Dropdown has correct options, age 13+
   Given I create a student named "16 Year Old"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
-  And I wait to see ".create_menu"
+  And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait to see "#create_dropdown_playlab"
-  And I wait to see "#create_dropdown_artist"
-  And I wait to see "#create_dropdown_applab"
-  And I wait to see "#create_dropdown_gamelab"
+  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_artist" is visible
+  And I wait until element "#create_dropdown_applab" is visible
+  And I wait until element "#create_dropdown_gamelab" is visible
   And I wait until element "#create_dropdown_minecraft" is not visible
-  And I wait to see "#view_all_projects"
+  And I wait until element "#view_all_projects" is visible
 
 Scenario: Dropdown has correct options, younger than 13
   Given I create a young student named "10 Year Old"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
-  And I wait to see ".create_menu"
+  And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait to see "#create_dropdown_playlab"
-  And I wait to see "#create_dropdown_artist"
-  And I wait to see "#create_dropdown_minecraft"
+  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_artist" is visible
+  And I wait until element "#create_dropdown_minecraft" is visible
   And I wait until element "#create_dropdown_applab" is not visible
   And I wait until element "#create_dropdown_gamelab" is not visible
-  And I wait to see "#view_all_projects"
+  And I wait until element "#view_all_projects" is visible

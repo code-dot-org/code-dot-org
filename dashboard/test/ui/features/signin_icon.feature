@@ -10,7 +10,7 @@ Scenario: Signed Out - sign in button shows regardless of cookie
   And I wait until element ".user_icon" is not visible
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
-  And I wait to see ".create_menu"
+  And I wait until element ".create_menu" is visible
   And I wait until element "#signin_button" is visible
   And I wait until element ".user_icon" is not visible
 
