@@ -9,6 +9,7 @@ var collisionEvents = [];
 var callbacks = [];
 var setupCallbacks = [];
 var loops = [];
+var song_meta;
 
 // Sprites
 var sprites = createGroup();
@@ -117,6 +118,7 @@ function preload() {
 }
 
 function setup() {
+  song_meta=Dance.song.songData();
   // Create animations from spritesheets
   for (var i = 0; i < SPRITE_NAMES.length; i++) {
     var this_sprite = SPRITE_NAMES[i];
