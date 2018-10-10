@@ -6,12 +6,12 @@ Feature: Sign In Icon in Header
 Scenario: Signed Out - sign in button shows regardless of cookie
   Given I am on "http://code.org/"
   And I set the language cookie
-  And I wait until element "#signin_button" is visible
+  And I wait until element "#new_signin_button" is visible
   And I wait until element ".user_icon" is not visible
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
   And I wait until element ".create_menu" is visible
-  And I wait until element "#signin_button" is visible
+  And I wait until element "#new_signin_button" is visible
   And I wait until element ".user_icon" is not visible
 
 Scenario: Teacher Signed In - shows icon with correct links
@@ -38,7 +38,7 @@ Scenario: Teacher Signed In - shows icon with correct links
   And I wait until element "#user-edit" is visible
   And I wait until element "#user-signout" is visible
   Then I sign out
-  And I wait until element "#signin_button" is visible
+  And I wait until element "#new_signin_button" is visible
   And I wait until element ".user_icon" is not visible
 
 Scenario: Student Signed In - shows icon with correct links
@@ -71,7 +71,7 @@ Scenario: Student Signed In - shows icon with correct links
   And I click selector ".user_icon"
   And I wait until element "#user-signout" is visible
   And I click selector "#user-signout"
-  And I wait until element "#signin_button" is visible
+  And I wait until element "#new_signin_button" is visible
   And I wait until element ".user_icon" is not visible
 
 Scenario: Pair Programming Icon
