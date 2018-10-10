@@ -1,3 +1,4 @@
+---
 fil:
   data:
     blocks:
@@ -134,14 +135,6 @@ fil:
             '"left"': kaliwa
             '"right"': kanan
             '"space"': space
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': taas
-            '"down"': baba
-            '"left"': kaliwa
-            '"right"': kanan
-            '"space"': space
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -151,8 +144,8 @@ fil:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'tama'
-            'false': 'mali'
+            'true': tama
+            'false': mali
       gamelab_getProp:
         options:
           PROPERTY:

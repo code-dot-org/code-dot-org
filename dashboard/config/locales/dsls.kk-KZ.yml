@@ -360,14 +360,6 @@ kk:
         title: ат
       U1L11 Student Lesson Introduction:
         title: ат
-      U1L12 Student Lesson Introduction:
-        title: ат
-      U1L13 Student Lesson Summary:
-        title: ат
-      U1L14 Student Lesson Summary:
-        title: ат
-      U1L15 Student Lesson Summary:
-        title: ат
       U1L17 Student Lesson Introduction:
         title: ат
       U1L2 Student Lesson Introduction:
@@ -376,21 +368,15 @@ kk:
         title: ат
       U1L4 Student Lesson Introduction:
         title: ат
-      U1L5 Student Lesson Introduction:
-        title: ат
       U1L6 Student Lesson Introduction:
         title: ат
       U1L7 Student Lesson Introduction:
         title: ат
       U1L8 Student Lesson Introduction:
         title: ат
-      U1L9 Student Lesson Introduction:
-        title: ат
       U2L1 Student Lesson Introduction:
         title: ат
       U2L12 Student Lesson Introduction:
-        title: ат
-      U2L7 Student Lesson Introduction:
         title: ат
       U2L8 Student Lesson Introduction:
         title: ат
@@ -493,8 +479,6 @@ kk:
       U4L08v2 Making Pivot Tables Part 3_2018:
         title: ат
       U4L08v2 Student Intro:
-        title: ат
-      U4L09 Student Lesson Intro Practice PT big data dilemma:
         title: ат
       U4L09 Student Lesson Introduction:
         title: ат
@@ -600,15 +584,9 @@ kk:
         title: ат
       Unit 2 Lesson 1 Overview Clone:
         title: ат
-      Unit 4 Lesson 1 Introduction:
-        title: ат
       Unit 4 Lesson 1 Introduction_2018:
         title: ат
-      Unit 4 Lesson 2 Introduction:
-        title: ат
       Unit 4 Lesson 2 Introduction_2018:
-        title: ат
-      Unit 4 Lesson 5 Introduction:
         title: ат
       Unit 4 Lesson 5 Introduction_2018:
         title: ат
@@ -748,8 +726,6 @@ kk:
         title: ат
       csp_unit5_finalassessment_overview_exam_prep:
         title: ат
-      csp_unit_assessment_overview:
-        title: ат
       csp_unit_assessment_overview_2018:
         title: ат
       csp_unit_assessment_overview_exam_prep:
@@ -816,8 +792,6 @@ kk:
         title: ат
       v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
         title: ат
-      v2 U1L14 Student Lesson Introduction:
-        title: ат
       v2 U1L14 Student Lesson Introduction_2018:
         title: ат
       v2 U1L2 Student Lesson Introduction:
@@ -832,23 +806,15 @@ kk:
         title: ат
       v2 U1L4 Student Lesson Introduction_2018:
         title: ат
-      v2 U1L5 Student Lesson Introduction:
-        title: ат
       v2 U1L5 Student Lesson Introduction_2018:
         title: ат
-      v2 U1L8 Student Lesson Introduction:
-        title: ат
       v2 U1L8 Student Lesson Introduction_2018:
-        title: ат
-      v2 U2L1 Student Lesson Introduction:
         title: ат
       v2 U2L1 Student Lesson Introduction_2018:
         title: ат
       v2 U2L10 Student Lesson Introduction:
         title: ат
       v2 U2L10 Student Lesson Introduction_2018:
-        title: ат
-      v2 U2L11 Student Lesson Introduction:
         title: ат
       v2 U2L11 Student Lesson Introduction_2018:
         title: ат
@@ -864,23 +830,15 @@ kk:
         title: ат
       v2 U2L14 Student Lesson Introduction_2018:
         title: ат
-      v2 U2L15 Student Lesson Introduction:
-        title: ат
       v2 U2L15 Student Lesson Introduction_2018:
         title: ат
       v2 U2L2 Student Lesson Summary:
         title: ат
       v2 U2L2 Student Lesson Summary_2018:
         title: ат
-      v2 U2L3 Student Lesson Summary:
-        title: ат
       v2 U2L3 Student Lesson Summary_2018:
         title: ат
-      v2 U2L4 Student Lesson Summary:
-        title: ат
       v2 U2L4 Student Lesson Summary_2018:
-        title: ат
-      v2 U2L6 Student Lesson Introduction:
         title: ат
       v2 U2L6 Student Lesson Introduction_2018:
         title: ат
@@ -892,8 +850,6 @@ kk:
         title: ат
       v2 U2L8 Student Lesson Introduction_2018:
         title: ат
-      v2 U2L9 Student Lesson Introduction:
-        title: ат
       v2 U2L9 Student Lesson Introduction_2018:
         title: ат
       v2 U3L04 Student Lesson Introduction:
@@ -904,8 +860,6 @@ kk:
         Creating Functions: Функцияларды Құру
       v2 U3L05 Student Lesson Introduction_2018:
         Creating Functions: Функцияларды Құру
-      v2 U4L05 Student Lesson Intro Encryption Caesar:
-        title: ат
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Үйлестіру батырмасын би
@@ -1015,8 +969,6 @@ kk:
         Definition: Анықтама
       PDK5 What is unplugged:
         Question: Сұрақ
-      'U2L06 - Matching: Label the Diagram':
-        E: Ш
       U3L19 - MATCH what are values of abc:
         '10': '10'
         '12': '12'
@@ -1226,8 +1178,6 @@ kk:
       4-5 maze multi 1:
         Maze Multiple Choice: Лабиринтке арналған сұрақтар
         Which blocks solve the puzzle?: Қандай блоктар бас қатырғыштың шешімін табады?
-      CB_Question_3:
-        Y: true
       CSD Prediction Header Size:
         Question: Сұрақ
       CSD U3 Boolean MC:
@@ -1448,8 +1398,6 @@ kk:
         '1': '1'
         '2': '2'
         '4': '4'
-      U1L07 Assessment 1:
-        E: Ш
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -1484,31 +1432,8 @@ kk:
         18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
           the x and y coordinate as separate numbers, what is the minimum number of
           \ bits that you will need to encode a coordinate in that space?"
-      'U2L06 - MC: Which is an MST?':
-        0: ': "<p>The images below all show the same map (or graph) but have different
-          paths between the points highlighted.</p>\n<p>Please choose the image that
-          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
-          “distance” between points is depicted by the number of line segments connecting
-          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
-        E: Ш
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-      U2L13 Assessment4:
-        '26': '26'
       U2L13 Assessment4_2018:
         '26': '26'
-      U2L14 Assessment3:
-        'false': Жалған
-        'true': дұрыс
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
       U2L19 multichoice 13 MOD 17_2018:
         '0': '0'
         '13': '13'
@@ -1520,24 +1445,12 @@ kk:
         '15': '15'
         '20': '20'
         '5': '5'
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
       U2L19 mutlichoice 20 mod 15_2018:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
         '20': '20'
         '5': '5'
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
       U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
@@ -1789,11 +1702,6 @@ kk:
       csp_ap_taking_ap_class:
         'No': Жоқ
         'Yes': Иә
-      cspu5_assess1_fivemore:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_fivemore_2018:
         "-2": "-2"
         '3': '3'
@@ -1804,20 +1712,12 @@ kk:
         '3': '3'
         '5': '5'
         '8': '8'
-      cspu5_assess1_flowchart:
-        '10': '10'
-        '5': '5'
       cspu5_assess1_flowchart_2018:
         '10': '10'
         '5': '5'
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
-      cspu5_assess1_increase:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
       cspu5_assess1_increase_2018:
         '10': '10'
         '13': '13'
@@ -1828,15 +1728,9 @@ kk:
         '13': '13'
         '5': '5'
         '8': '8'
-      cspu5_assess2_addstrings:
-        result: нәтиже
       cspu5_assess2_addstrings_2018:
         result: нәтиже
       cspu5_assess2_addstrings_exam_prep:
-        result: нәтиже
-      cspu5_assess2_combineString:
-        '10': '10'
-        '55': '55'
         result: нәтиже
       cspu5_assess2_combineString_2018:
         '10': '10'
@@ -1846,10 +1740,6 @@ kk:
         '10': '10'
         '55': '55'
         result: нәтиже
-      cspu5_assess2_oldEnough:
-        '35': '35'
-        'false': Жалған
-        'true': дұрыс
       cspu5_assess2_oldEnough_2018:
         '35': '35'
         'false': Жалған
@@ -1876,11 +1766,6 @@ kk:
         '30': '30'
         '50': '50'
         '75': '75'
-      cspu5_assess3_array1:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
       cspu5_assess3_array1_2018:
         '10': '10'
         '4': '4'
@@ -1891,12 +1776,6 @@ kk:
         '4': '4'
         '7': '7'
         '9': '9'
-      cspu5_assess3_array2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_array2_2018:
         '2': '2'
         '3': '3'
@@ -1909,11 +1788,6 @@ kk:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess3_array4:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
       cspu5_assess3_array4_2018:
         '0': '0'
         '1': '1'
@@ -1924,11 +1798,6 @@ kk:
         '1': '1'
         '2': '2'
         '8': '8'
-      cspu5_assess3_listAppend:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
       cspu5_assess3_listAppend_2018:
         '1': '1'
         '2': '2'
@@ -1939,11 +1808,6 @@ kk:
         '2': '2'
         '3': '3'
         '6': '6'
-      cspu5_assess3_loopValue1:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
       cspu5_assess3_loopValue1_2018:
         '2': '2'
         '3': '3'
@@ -1954,22 +1818,12 @@ kk:
         '3': '3'
         '4': '4'
         '5': '5'
-      cspu5_assess3_loopValue2:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
       cspu5_assess3_loopValue2_2018:
         '0': '0'
         '4': '4'
         '5': '5'
         '6': '6'
       cspu5_assess3_loopValue2_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -1984,12 +1838,6 @@ kk:
         '4': '4'
         '5': '5'
         '6': '6'
-      cspu5_assess4_dataReturns:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
       cspu5_assess4_dataReturns_2018:
         '10': '10'
         '16': '16'
@@ -2001,11 +1849,6 @@ kk:
         '16': '16'
         '3': '3'
         '4': '4'
-        '9': '9'
-      cspu5_assess4_listOutput:
-        '17': '17'
-        '3': '3'
-        '42': '42'
         '9': '9'
       cspu5_assess4_listOutput_2018:
         '17': '17'
@@ -2099,9 +1942,6 @@ kk:
         Other: Басқасы
         Prefer not to answer: Жауап беруден бас тартамын
         White: Ақ
-      sarah_test_maggie:
-        Question: Сұрақ
-        test: таңдау
       sciPD PreQ 1:
         'No': Жоқ
         'Yes': Иә
@@ -2117,6 +1957,3 @@ kk:
       unique level name here:
         Question: Сұрақ
         title: ат
-    text_match:
-      U2L07 Assessment4:
-        '43': '43'

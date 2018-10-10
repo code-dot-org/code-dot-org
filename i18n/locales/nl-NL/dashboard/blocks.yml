@@ -1,3 +1,4 @@
+---
 nl:
   data:
     blocks:
@@ -143,8 +144,8 @@ nl:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'waar'
-            'false': 'onwaar'
+            'true': waar
+            'false': onwaar
       gamelab_getProp:
         options:
           PROPERTY:

@@ -1,3 +1,4 @@
+---
 hu:
   data:
     blocks:
@@ -116,8 +117,8 @@ hu:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'igaz'
-            'false': 'hamis'
+            'true': igaz
+            'false': hamis
       gamelab_getProp:
         options:
           PROPERTY:

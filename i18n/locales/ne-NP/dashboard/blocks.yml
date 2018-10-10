@@ -1,3 +1,4 @@
+---
 ne:
   data:
     blocks:
@@ -87,14 +88,6 @@ ne:
             '"scale"': size
             '"height"': height
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-      Dancelab_whileKey:
         options:
           KEY:
             '"up"': माथि

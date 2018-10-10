@@ -1,10 +1,11 @@
+---
 ko:
   data:
     blocks:
       Dancelab_atTimestamp:
         options:
           UNIT:
-            '"seconds"': '~초 기다리기'
+            '"seconds"': "~초 기다리기"
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -53,7 +54,7 @@ ko:
       Dancelab_everySeconds:
         options:
           UNIT:
-            '"seconds"': '~초 기다리기'
+            '"seconds"': "~초 기다리기"
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -143,8 +144,8 @@ ko:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': '참'
-            'false': '거짓'
+            'true': 참
+            'false': 거짓
       gamelab_getProp:
         options:
           PROPERTY:

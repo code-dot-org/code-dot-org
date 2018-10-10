@@ -2,11 +2,9 @@
 zh-CN:
   data:
     short_instructions:
-      2-3 Artist 1 new: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。
-        (每一行是100个像素长)
+      2-3 Artist 1 new: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。 (每一行是100个像素长)
       2-3 Artist 11: "为停止标志画一个八边形的边，边长为100像素。\r\n\r\n"
-      2-3 Artist 12: "画一个圆圈来完成这个眼球！\r\n\r\n如果每次都是转1度，你需要重复次才能完成这个圈？180
-        、360 、还是500次呢？"
+      2-3 Artist 12: "画一个圆圈来完成这个眼球！\r\n\r\n如果每次都是转1度，你需要重复次才能完成这个圈？180 、360 、还是500次呢？"
       2-3 Artist 2 new: '这所房子有一堵墙只完成了一半。每一边长都是 100，但是完成了一半的墙只有 50。请完成该墙。 '
       2-3 Artist 2: '这所房子有一堵墙只完成了一半。每一边长都是 100，但是完成了一半的墙只有 50。请完成该墙。 '
       2-3 Artist 3.4: |-
@@ -42,14 +40,12 @@ zh-CN:
       2-3 Artist Functions 1 a: "“我，僵尸艺术家。我，爱画画 ！”\r\n\r\n请帮它画副方形眼镜。\r\n\r\n正方形的宽度是100像素，而眼镜间的桥比它短25像素。"
       2-3 Artist Functions 1: "“我，僵尸艺术家。我，爱画画 ！”\r\n\r\n请帮它画副方形眼镜。\r\n\r\n正方形的宽度是100像素，而眼镜间的桥比它短25像素。"
       2-3 Artist Functions 10: 自由发挥：这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。用它们来绘制一个机器的内部结构！
-      2-3 Artist Functions 11 a: "我们将`draw a square`（画一个正方形）的函数改成了`draw
-        a hexagon`（画一个六边形），但它实际上还是只能画正方形！你能把`draw a hexagon`（画一个六边形）函数改成能画边长50像素的六边形吗？\r\n\r\n用新函数来画这个图形吧！"
-      2-3 Artist Functions 11.5 a: "这里同样是\"画一个六边形\"的功能。\r\n\r\n如果在循环中每次转
-        60 度，一共转6次，会发生什么呢？"
-      2-3 Artist Functions 11.5: "这里同样是\"画一个六边形\"的功能。\r\n\r\n如果在循环中每次转
-        60 度，一共转6次，会发生什么呢？"
-      2-3 Artist Functions 11: "我们将`draw a square`（画一个正方形）的函数改成了`draw
-        a hexagon`（画一个六边形），但它实际上还是只能画正方形！你能把`draw a hexagon`（画一个六边形）函数改成能画边长50像素的六边形吗？\r\n\r\n用新函数来画这个图形吧！"
+      2-3 Artist Functions 11 a: "我们将`draw a square`（画一个正方形）的函数改成了`draw a hexagon`（画一个六边形），但它实际上还是只能画正方形！你能把`draw
+        a hexagon`（画一个六边形）函数改成能画边长50像素的六边形吗？\r\n\r\n用新函数来画这个图形吧！"
+      2-3 Artist Functions 11.5 a: "这里同样是\"画一个六边形\"的功能。\r\n\r\n如果在循环中每次转 60 度，一共转6次，会发生什么呢？"
+      2-3 Artist Functions 11.5: "这里同样是\"画一个六边形\"的功能。\r\n\r\n如果在循环中每次转 60 度，一共转6次，会发生什么呢？"
+      2-3 Artist Functions 11: "我们将`draw a square`（画一个正方形）的函数改成了`draw a hexagon`（画一个六边形），但它实际上还是只能画正方形！你能把`draw
+        a hexagon`（画一个六边形）函数改成能画边长50像素的六边形吗？\r\n\r\n用新函数来画这个图形吧！"
       2-3 Artist Functions 12 Mike: "函数对于多次画一个复杂的事物非常有帮助。\r\n\r\n你能用“画一朵花”函数来填满整个花盆吗？\r\n提示：每株花应该相隔100像素。"
       2-3 Artist Functions 12 a: "函数对于多次画一个复杂的事物非常有帮助。\r\n\r\n你能用“画一朵花”函数来填满整个花盆吗？\r\n提示：每株花应该相隔100像素。"
       2-3 Artist Functions 12: "函数对于多次画一个复杂的事物非常有帮助。\r\n\r\n你能用“画一朵花”函数来填满整个花盆吗？\r\n提示：每株花应该相隔100像素。"
@@ -372,11 +368,11 @@ zh-CN:
       4-5 Nested Loops 12: 你能用嵌套循环画出36个三角形吗？
       4-5 Nested Loops 2: '现在，把这个循环放到另一个循环里，来画出10个三角形。这就叫做嵌套循环。  '
       4-5 Nested Loops 3: "通过将开始的代码嵌套到另一个循环中来画一个太阳。\r\n\r\n如果要画出这个很酷的中空设计，你需要在转弯前往前跳三角形长度那么多。"
-      4-5 Nested Loops 5: 循环给定的代码来创建一个风车。
+      4-5 Nested Loops 5: 循环下面的代码来创建一个风车。
       4-5 Nested Loops 6: 你可以通过循环三角形代码来画一个六边形吗?
       4-5 Nested Loops 7: "循环这个图形10次。\r\n\r\n你的循环里每次需要转多少度呢？"
       4-5 Nested Loops 8: "循环这个图形6次。\r\n\r\n你的循环里每次需要转多少度呢？ "
-      4-5 Nested Loops 9: 画出鳄鱼嘴里的牙齿！
+      4-5 Nested Loops 9: 在鳄鱼嘴里画上牙齿！
       4-5 Nested Loops Assessment 1: 评估：用嵌套循环来完成这幅画。
       4-5 While Loops 1: 将我移到坑旁边，并且使用“填满”模块来用两铲土填满它。
       4-5 While Loops 2: 将我移到土堆那里，然后用“移除”模块来移除五铲土。
@@ -413,7 +409,7 @@ zh-CN:
       Artist Autorun Test: 现在，将函数放到循环里来画这三个正方形。
       Artist Inspiration: '自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 '
       Auto Open Function Editor: '你能用一个函数里调用其它函数！用你的“形状”函数作为基础，创建三个房子图形，第一个是50像素宽，而每个都比前一个大20像素。用一个计数循环可能会方便一些。 '
-      Bee Recommended Blocks test: 紫色的话可能有一个花蜜，也可能一个都没有，但是你不知道有没有！小心不要从没有花蜜的紫花里收集花蜜。用“如果”模块来检查是否花蜜等于1。
+      Bee Recommended Blocks test: 紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。
       Bergeron Robot Maze1: '可以帮我抓住这只顽皮的猪吗？在“当运行时”模块下放几个“向前移动”的模块，然后点击“运行”。 '
       Brad Spooky House Copy: 自由发挥：这里除了你写的函数，还有更多的函数让你发挥。画些令人惊叹的东西吧！用不同的笔宽度来看看你能画出什么不一样的图形！
       Brad Spooky House: 自由发挥：这里除了你写的函数，还有更多的函数让你发挥。画些令人惊叹的东西吧！用不同的笔宽度来看看你能画出什么不一样的图形！
@@ -436,10 +432,9 @@ zh-CN:
         这里有一个看起来与你之前写的非常类似的但实际上却完全不同的程序。
         你可能需要停下来并与同学们讨论一下再继续。
       CSD U3 Boolean Modify: 修改代码，以便使所有的console.log命令打印“真”。
-      CSD U3 Boolean Modify_2018: 修改代码，以便使所有的console.log命令打印“真”
+      CSD U3 Boolean Modify_2018: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Boolean Predict: 你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
-      CSD U3 Boolean Predict_2018: 你认为这个代码在执行时会做什么？预测一下每个console.log()
-        （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
+      CSD U3 Boolean Predict_2018: 你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
       CSD U3 Draw Loop Discuss: |-
         这里有一个看起来与你之前写的非常类似的但实际上却完全不同的程序。
         你可能需要停下来并与同学们讨论一下再继续。
@@ -448,7 +443,7 @@ zh-CN:
       CSD U3 Keypress Boolean_2018: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Watchers: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Watchers_2018: 修改代码，以便使所有的console.log命令打印“真”。
-      CSD U3 L5 Freeplay: 试着调整petalSize的值几次，绘制的图形因此有何变化呢？
+      CSD U3 L5 Freeplay: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 L5 Freeplay_2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 Simple Drawing - Personal Animation: 做这个
       CSD U3 Sprites intro sprites: 做这个
@@ -496,11 +491,11 @@ zh-CN:
       CSDU4 - AppLab - 1: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
       CSDU6 - Arrays - expressionsAsIndexes: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 - Arrays - indexPractice: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
-      CSDU6 - for loop - color buttons with for: 将数组的内容按照数字顺序写到屏幕上。（点击查看完整说明）
+      CSDU6 - for loop - color buttons with for: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSDU6 - for loop - color buttons: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSDU6 - for loop - why for: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSDU6 arrays rainbow: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
-      CSDU6 arrays random: 编写一个程序, 在数组中显示随机选择的颜色。(点击查看完整说明)
+      CSDU6 arrays random: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 arrays select icons: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       CSDU6 arrays select rainbow: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       CSDU6 arrays select rainbow_2018: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
@@ -536,7 +531,7 @@ zh-CN:
       Course 4 Artist 1: '帮我画个箱子。（每条边都是200像素长） '
       Course 4 Artist 10: "点击这里再看一遍提示！\r\n\r\n这里是这个有趣的图形的代码。当你重复多次，在每次转动之间会发生什么？这样会让图形转动最多420度。这也表示当小艺术家画完后，就和刚开始时面朝不一样的方向了。新的方向正好是向右转了60度。"
       Course 4 Artist 11: 挑战来了！多试验，多试错，不要指望第一次就能完全正确。想看看更多的提示？点击这里！
-      Course 4 Artist 12: "想要再看一眼灵感图形或者提示？点击这里！\r\n\r\n要不然，就设计自己的图形吧！"
+      Course 4 Artist 12: "想再看一次启发人的设计或者提示吗？点击这里！\r\n\r\n除此之外，你也可以设计自己的图形！"
       Course 4 Artist 13: 还想玩？这里是一块空的画布，想画什么就画什么吧！
       Course 4 Artist 2: 你能循环这段代码来画出灰色的正方形吗？（边长是300像素）
       Course 4 Artist 20: 还想玩？这是空白的画布。想画什么就画什么吧！
@@ -581,8 +576,7 @@ zh-CN:
       Course 4 Artist For Loops 5: '上一关完成的很好！让我们再次用“计数器”变量模块画出这个很酷的图。 '
       Course 4 Artist For Loops 6: 自由发挥！试着用计数循环自己设计出一个不断增长的模式。
       Course 4 Artist For Loops 6a: 将上一关的代码做三个小小的改动来画出这个！
-      Course 4 Artist For Loops 7: 如果你保持计数循环中的移动和转向模块不动，但删除掉算法中的重复3次，会发生什么?
-        在这个螺旋三角形中，每条边都比上一条长20像素。
+      Course 4 Artist For Loops 7: 如果你保持计数循环中的移动和转向模块不动，但删除掉算法中的重复3次，会发生什么? 在这个螺旋三角形中，每条边都比上一条长20像素。
       Course 4 Artist For Loops 8: "只从上一关的代码中改动一处就能创建出这幅图像。你能找到什么需要改动吗？\r\n\r\n提示：你需要移除某项！"
       Course 4 Artist For Loops 8a: 只从上一关的代码中改动一处就能创建出这幅图像。你能找到什么需要改动吗？
       Course 4 Artist For Loops 9: 你能创造一个螺旋吗？从1增加到75像素，每次增加1像素。
@@ -738,14 +732,14 @@ zh-CN:
       Course 4 Play Labs For Loops 4: 改变每次增加的值会有帮助，但我们一直是线性计数（每次改变的数量都和上次一样）。如果我想用指数计数呢？不用改变计数循环的设置，你能按照1，4，9，16，25...
         计数吗（按照平方计数）？
       Course 4 Play Labs For Loops 4a: "现在，让我们将一些第7关中的变量和“计数器”变量混合起来制造一些神奇的变化。\r\n\r\n在这一关中，小狗通过“increment”（增加）来从0到1000计数。在代码最开始处，将“increment”设置为10，看看会发生什么。"
-      Course 4 Play Labs For Loops 5: 在上一关中，我们按照每个数的平方计数了。试试将“counter
-        ^ 2”（计数器的2次方）改为“counter ^ 3”（计数器的3次方）来按照每个数的立方来计数。（1，8，27，64，125，216，343...）
+      Course 4 Play Labs For Loops 5: 在上一关中，我们按照每个数的平方计数了。试试将“counter ^ 2”（计数器的2次方）改为“counter
+        ^ 3”（计数器的3次方）来按照每个数的立方来计数。（1，8，27，64，125，216，343...）
       Course 4 Play Labs For Loops 6: 你也许知道质数是指的一个数只能被它自己自己和1整除。用“is_prime”（是否质数）函数来只说出1到100的质数。
       Course 4 Play Labs For Loops 6a: "小狗一直按照计数循环中的增量来按时计数。但这次，我们要将巫师混合进来。你能改变代码，在巫师被点击的时候，让“increment”（增量）每次增加2吗？\r\n\r\n小心！巫师移动得很快！"
       Course 4 Play Labs For Loops 7: 你用用计数循环帮我说出序列1，4，7，10，13，16，19，22，25吗？
       Course 4 Play Labs For Loops 7a: "现在我们有所进展了！开始计数后，在小狗数到30前，我们需要点击多少次巫师？\r\n\r\n添加模块到巫师上，让每次它被点击时，“clicked”（被点击）变量增加1。现在你可以忽略“increment”（增量）变量了。\r\n\r\n小狗会在你点击运行后开始数数。"
-      Course 4 Play Labs For Loops 8: "现在帮助演员们按照计数来移动。\r\n\r\n小狗每次按照增加2（counter
-        + 2）来移动和计数。小猫每次按照乘以2（counter * 2）来移动和计数。企鹅按照指数2（counter ^ 2）来移动和计数。谁会第一个到达旗帜？"
+      Course 4 Play Labs For Loops 8: "现在帮助演员们按照计数来移动。\r\n\r\n小狗每次按照增加2（counter +
+        2）来移动和计数。小猫每次按照乘以2（counter * 2）来移动和计数。企鹅按照指数2（counter ^ 2）来移动和计数。谁会第一个到达旗帜？"
       Course 4 Play Labs For Loops 8a: "要完成这个游戏，需要拿回“increment”（增量）变量！让我们将它设置到游戏级别上。\r\n\r\n1)
         记录巫师被点击的次数。\r\n2) 如果巫师在小狗数到30前，巫师被点击了至少10次，就将“increment”（增量）增加1，并重新开始。\r\n3)
         如果巫师没有被点击10次，游戏就结束。"
@@ -793,8 +787,8 @@ zh-CN:
         = points + 1\"来增加分数。将分数增加到10分（每次只加1分！）来通过这一关。"
       CourseF_PlayLab_vars8: "用右方向键来发射馅饼。\r\n\r\n在游戏中，怎么才能得分呢？每次小狗用馅饼击中小猫时，往“points”（分数）变量上加1。用“当演员2碰到任何东西”来触发分数的更新。通过使用\"points
         = points + 1\"来增加分数。将分数增加到10分（每次只加1分！）来通过这一关。"
-      CourseF_PlayLab_vars9: 很好, 现在让我们来确保这个游戏不是太容易。任何时间狗 (演员 1) 被从猫（演员2）的三明治击中,
-        将失去一分。从10分开始那样就不难了。让你的分数从10下降到 0来通过此关卡。
+      CourseF_PlayLab_vars9: 很好, 现在让我们来确保这个游戏不是太容易。任何时间狗 (演员 1) 被从猫（演员2）的三明治击中, 将失去一分。从10分开始那样就不难了。让你的分数从10下降到
+        0来通过此关卡。
       Crack Random Substitution: 说明
       Crack Random Substitution_2018: 说明
       Crack a Caesar Cipher: 说明
@@ -803,10 +797,10 @@ zh-CN:
       D_Frozen_nested4: 是时候把这些形状分层了!
       D_Frozen_nested5: 玩一玩雪花功能!
       D_Frozen_nested6: 画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。
-      D_Frozen_nested7: 现在, 转180度左右, 再次绘制楼梯图案!
+      D_Frozen_nested7: 现在，转180度，再次绘制楼梯图案!
       D_Frozen_nested8: 在一个圆圈内旋转该形状大约5或6次。
-      D_Frozen_nested9: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
-        会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
+      D_Frozen_nested9: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度, 会发生什么？\r\n-
+        如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
       Dance Party 1-validated: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party 1-validated_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party 2: 改变 `___ begins ___` 模块内的行为, 使外星人开始旋转。
@@ -832,8 +826,8 @@ zh-CN:
       Dance Party Predict: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
       Eval Free Play: 自由发挥： 用代码来创造艺术吧！
-      Eval Strings Images .1: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、
-        数字或其他用引号引起来的字符的任意组合。运行字符串"你好, 世界！"，看看会发生什么。
+      Eval Strings Images .1: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、 数字或其他用引号引起来的字符的任意组合。运行字符串"你好,
+        世界！"，看看会发生什么。
       Find the Wizard: 随便创造一个东西。这是一个猜数游戏的例子！
       Find the Wizard_2018: 随便创造一个东西。这是一个猜数游戏的例子！
       Fish Tank 2-validated: 改变达斯汀（风滚草）为鱼。
@@ -849,8 +843,8 @@ zh-CN:
       Fish Tank 6-validated_simple: 给鱼的新朋友添加一种新行为。
       Fish Tank 7-validated: 使用一些新的模块让鱼缸变得与众不同！
       Fish Tank 7-validated_simple: 使用一些新的模块让鱼缸变得与众不同！
-      Food Fight!: "我们已为你添加了上一关的函数。\r\n\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
-        大于某个值时，调用level_up(升级) 函数。\r\n\r\n例如：“play_score” > 6\r\n\r\n玩游戏，并且达到第3级来到达下一关。 "
+      Food Fight!: "我们已为你添加了上一关的函数。\r\n\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数) 大于某个值时，调用level_up(升级)
+        函数。\r\n\r\n例如：“play_score” > 6\r\n\r\n玩游戏，并且达到第3级来到达下一关。 "
       FoodFight: 这是一个可以在游戏实验室里玩的游戏的示例。
       FoodFight_2018: 这是一个可以在游戏实验室里玩的游戏的示例。
       Function intro Ryan: 使用"建造桥梁"功能两次，制造一条通往红石火把的路径。
@@ -1091,14 +1085,14 @@ zh-CN:
       NEW Course 4 Artist Functions 13: '你能通过`draw a line of squares`（用正方形画一条线）函数来画一个星形吗？  '
       NEW Course 4 Artist Functions 14: '自由游戏时间！ '
       NEW Course 4 Artist Functions 2: 你能画三个正方形，每个之间相隔20像素吗？提示：每个正方形的边长是100像素。
-      NEW Course 4 Artist Functions 3: "这是一个新型的模块。它被称为 \"函数\"模块。单击 \"编辑\",
-        然后用绘制100像素边的正方形的代码来填充它。\r\n\r \n编辑完成后，单击 \"关闭\" 返回到程序中。"
+      NEW Course 4 Artist Functions 3: "这是一个新型的模块。它被称为 \"函数\"模块。单击 \"编辑\", 然后用绘制100像素边的正方形的代码来填充它。\r\n\r
+        \n编辑完成后，单击 \"关闭\" 返回到程序中。"
       NEW Course 4 Artist Functions 4: 用`draw a square`（画一个正方形）函数来画这个图形。
       NEW Course 4 Artist Functions 5: "“画一个正方形”的函数是怎样知道要运行什么命令的呢？点击“画一个正方形”的函数的“编辑”按钮。这些在函数编辑器里定义的模块就是“画一个正方形”所需要的。当你看完后，点击“保存并关闭”，然后点击“运行”。"
       NEW Course 4 Artist Functions 6: "你能用“画正方形”函数来画出这个图形吗？提示：每个正方形相隔20像素。\r\n"
       NEW Course 4 Artist Functions 7: '你已经懂得怎样使用函数模块了吗？让我们改一下代码，来让它的边长是200像素。点击“画一个正方形”函数的“编辑”来改变其长度。记得点击右上角的“保存并关闭”。 '
-      NEW Course 4 Artist Functions 8: 我们已为你创建了一个叫做"画一个三角形"的新函数。 你可以编辑这个函数来画一个边长
-        100 像素的三角形吗?
+      NEW Course 4 Artist Functions 8: 我们已为你创建了一个叫做"画一个三角形"的新函数。 你可以编辑这个函数来画一个边长 100
+        像素的三角形吗?
       NEW Course 4 Artist Functions 9: 你能只添加一个模块来解决这个问题吗？
       NEW Course 4 Artist Functions inspire: 点击这里，再看一次激发灵感的图像。
       NEW Course 4 Artist Params 1: 让我们定义这个函数来画一个边长50像素的正方形。点击“编辑”来开始。
@@ -1159,11 +1153,9 @@ zh-CN:
       New Sports Project: 创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，创造！当你完成后，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。
       Overworld Avoid Monsters: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
       Overworld Avoid Monsters_2018: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
-      Overworld Chop Tree - allthethings: 木材是非常重要的资源。很多东西都是由它制成的。走到树边,
-        用 "摧毁模块" 指令把它砍下来。
+      Overworld Chop Tree - allthethings: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
       Overworld Chop Tree: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
-      Overworld Chop Tree_2018: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块"
-        指令把它砍下来。
+      Overworld Chop Tree_2018: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。
       Overworld Chop Trees: 我们需要在太阳下山之前建一所房子。房子需要很多木头。砍掉所有的3棵树。
       Overworld Chop Trees_2018: 我们需要在太阳下山之前建一所房子。房子需要很多木头。砍掉所有的3棵树。
       Overworld Free Play 20x20: 恭喜！你完成了我们所有谜题！现在，快用你至今为止学会的知识，采矿、建造和创造一些独特的东西吧。
@@ -1184,10 +1176,10 @@ zh-CN:
       PDK5 Functions 2: 函数能让你定义新的模块！我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。你能用“画一个正方形”函数来画个眼镜吗？正方形间隔75像素。
       PS - test - pixelation: 通过键入0和1来完成图形X
       PS copy 2-3 Bee Conditionals 5: "小心不要从没有花蜜的紫花里收集花蜜。\r\n你必须先用“如果”模块来检查是否花蜜等于1。"
-      Pixelation - AllTheThings 4: 这个像素级别演示了 "hide_encoding_controls"
-        选项的使用。 请注意, 该级别以十六进制显示图像数据, 并且不允许您将其更改回二进制。
-      Pixelation - AllTheThings 5: 此像素级别演示如何使用 "隐藏滑块" 选项。 请注意, "宽度" 和
-        "高度" 滑块不可用, 并且 "宽度" 和 "高度" 栏不可编辑。
+      Pixelation - AllTheThings 4: 这个像素级别演示了 "hide_encoding_controls" 选项的使用。 请注意,
+        该级别以十六进制显示图像数据, 并且不允许您将其更改回二进制。
+      Pixelation - AllTheThings 5: 此像素级别演示如何使用 "隐藏滑块" 选项。 请注意, "宽度" 和 "高度" 滑块不可用,
+        并且 "宽度" 和 "高度" 栏不可编辑。
       Pixelation - Lesson 14 - Make the Letter A: 制作一个3x5的字母A。部件的设定尺寸是错误的。你的第一个任务是将第二个字节设置为5的8位二进制码：00000101。然后开始输入像素数据。
       Pixelation - Lesson 14 - Make the Letter A_2018: 制作一个3x5的字母A。部件的设定尺寸是错误的。你的第一个任务是将第二个字节设置为5的8位二进制码：00000101。然后开始输入像素数据。
       Pixelation - Lesson 15 - Color Shades 4x4: 我们已经帮你创建了视频中曼蒂的4x4图像。你的任务是将12位字节的颜色填充到4x4像素网格中。要求如下：第1行
@@ -1202,14 +1194,14 @@ zh-CN:
       Project - Final Image Scroller_2018: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       Project - Finish your canvas app: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
       Project - Make Your Own Clicker Game: 完成你的遥控器游戏 ！（点击查看完整的说明）
-      Prompt Test: 创建任何想象的东西。这是一个猜数游戏的例子 ！
+      Prompt Test: 随便创造一个东西。这是一个猜数游戏的例子！
       Quantum Bee - Ryan: 这些云正在打搅我！在这些云里，一部分有花，而另一部分没有花。我需要从这些有花的云里采集到蜂蜜。
       Quantum Bee: 紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。
       Ram Spritelab Validation Test: 按上方向键
       Robot Doodle: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Robot Doodle_2018: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
-      Robot Drawing: '项目理念: 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划!'
-      Robot: '项目理念: 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划!'
+      Robot Drawing: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
+      Robot: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Ryan - 4-5 Bee Conditionals 2: 蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。
       Ryan - Bee Conditionals: 蜜蜂现在只想要花蜜。不是所有的目标都是花，所以检查每朵云下面是不是藏着花。如果是的话，再采集花蜜。
       Ryan Doily Step 1: |-
@@ -1223,21 +1215,17 @@ zh-CN:
         那么每次转多少度，迭代20次以后能得到360度呢？
       Ryan Test Locked Blocks: 这里有个函数叫做“巡逻”。编辑它来让猫向上移动400像素，再向下移动400像素。
       RyanTest3: 这个级别已打开了形状转换功能! 刷新来查看不同的变量。
-      SG Add Subgoals practice: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置,
-        保持原来的朝向。(点击查看完整说明)
+      SG Add Subgoals practice: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
       SG U3L03 Draw a T using turnAround: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
-      SG U3L03 Three Steps: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备
-        (单击查看完整说明)
+      SG U3L03 Three Steps: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
       SG U3L03 draw diamond: 创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)
       SG U3L06 - moveForwardwithParams: 使用单个命令将乌龟移到屏幕边缘。(点击查看完整说明)
       SG U3L06 Challenge 1 triangle: 使用乌龟命令模块的参数化版本，以100 像素为边长来创建一个三角形。(点击查看完整说明)
-      SG U3L06 Challenge 2 purple square: 请阅读 penColor () 和 penWidth ()
-        的文档, 然后再使用它们绘制蓝色正方形。
+      SG U3L06 Challenge 2 purple square: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
       SG U3L06 Challenge 3 fill pink: 用你喜欢的颜色填充屏幕的背景。(点击查看完整说明)
-      SG U3L06 Challenge 5 overlapping circles: '创建这个图像时，只使用了dot() 和 penColor
-        () 。但是, 我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
-      SG U3L06 Challenge 6 squiggles: '阅读 "arcLeft" 和 "arcRight" 命令的文档,
-        然后按所示画出曲线。
+      SG U3L06 Challenge 5 overlapping circles: '创建这个图像时，只使用了dot() 和 penColor () 。但是,
+        我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
+      SG U3L06 Challenge 6 squiggles: '阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示画出曲线。
 
 '
       SG U3L06 Challenge 7 smiley face: 使用 turnTo () 和 moveTo () 来帮助绘制笑脸。(点击查看完整说明)
@@ -1252,18 +1240,16 @@ zh-CN:
       SG U3L07 More Subgoals: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
       SG U3L08 - fish: 添加一个参数到 drawFish, 来更改所画的鱼的大小。(点击查看完整说明)
       SG U3L08 - freePlay: 通过增加对新函数的参数调用来不断增加您的图像。（单击以查看完整的说明）
-      SG U3L08 - introUnderTheSea - recovery: 在图片里再添加一条鱼, 海星, 以及海草。看一看,
-        但不要改变创建它们的函数。(点击查看完整说明)
-      SG U3L08 - introUnderTheSea: 在图像中再添加一条鱼, 海星, 和一条海草。看一看，但不要改变创建它们的函数。(点击查看完整说明)
+      SG U3L08 - introUnderTheSea - recovery: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
+      SG U3L08 - introUnderTheSea: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       SG U3L08 - randomInput: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
       SG U3L08 - squareTwoParams: 调用 drawSquare () 画两个正方形。(点击查看完整说明)
-      SG U3L08 comments: 使用 randomNumber () 块来测试您设计的随机输入的函数。(点击查看完整说明)
-      SG U3L08 how to add comments: 使用 randomNumber () 块来测试您设计的随机输入的函数。(点击查看完整说明)
+      SG U3L08 comments: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
+      SG U3L08 how to add comments: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
       SG U3L2 Using Simple Commands part 1: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
-      SG U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1 的正方形。单击以查看完整说明。
+      SG U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       SG U3L2_Add-subgoals: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
-      SG U3L2_Turtle3by3Grid: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置,
-        保持原来的朝向。(点击查看完整说明)
+      SG U3L2_Turtle3by3Grid: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
       SG U3L2_TurtleSquare_right: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
       SpecialFrozenLevel: 你已经正式成为艺术大师！创建一个冬季仙境。
       Standalone_Artist_1: 欢迎小艺术家！首先，一起用“右转“块和”向前移“块来画一个简单的正方形。正方形每边的长度是100像素。
@@ -1321,39 +1307,33 @@ zh-CN:
       U3 Variables gray square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3 Variables randomize your square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3L03 Draw a T using turnAround: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
-      U3L03 Draw a T using turnAround_2018: 使用提供的turnAround() 来画一个加号。
-        (点击查看完整说明)
+      U3L03 Draw a T using turnAround_2018: 使用提供的turnAround() 来画一个加号。 (点击查看完整说明)
       U3L03 Three Steps: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
-      U3L03 Three Steps_2018: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备
-        (单击查看完整说明)
+      U3L03 Three Steps_2018: 定义一个名为 drawSide () 的函数，来画三步，并移动乌龟来为下一篇做准备 (单击查看完整说明)
       U3L03 draw diamond: 创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)
       U3L03 draw diamond_2018: 创建一个名为 drawDiamond () 的函数, 它利用您以前的工作来绘制完整的菱形。(点击查看完整说明)
       U3L06 - moveForwardwithParams: 使用单个命令将乌龟移到屏幕边缘。(点击查看完整说明)
       U3L06 - moveForwardwithParams_2018: 使用单个命令将乌龟移到屏幕边缘。(点击查看完整说明)
       U3L06 Challenge 1 triangle: 使用乌龟命令模块的参数化版本，以100 像素为边长来创建一个三角形。(点击查看完整说明)
       U3L06 Challenge 1 triangle_2018: 使用乌龟命令模块的参数化版本，以100 像素为边长来创建一个三角形。(点击查看完整说明)
-      U3L06 Challenge 2 purple square: 请阅读 penColor () 和 penWidth () 的文档,
-        然后再使用它们绘制蓝色正方形。
-      U3L06 Challenge 2 purple square_2018: 请阅读 penColor () 和 penWidth
-        () 的文档, 然后再使用它们绘制蓝色正方形。
+      U3L06 Challenge 2 purple square: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
+      U3L06 Challenge 2 purple square_2018: 请阅读 penColor () 和 penWidth () 的文档, 然后再使用它们绘制蓝色正方形。
       U3L06 Challenge 3 fill pink: 用你喜欢的颜色填充屏幕的背景。(点击查看完整说明)
       U3L06 Challenge 3 fill pink_2018: 用你喜欢的颜色填充屏幕的背景。(点击查看完整说明)
-      U3L06 Challenge 5 overlapping circles: '创建这个图像时，只使用了dot() 和 penColor
-        () 。但是, 我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
-      U3L06 Challenge 5 overlapping circles_2018: '创建这个图像时，只使用了dot() 和
-        penColor () 。但是, 我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
+      U3L06 Challenge 5 overlapping circles: '创建这个图像时，只使用了dot() 和 penColor () 。但是,
+        我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
+      U3L06 Challenge 5 overlapping circles_2018: '创建这个图像时，只使用了dot() 和 penColor ()
+        。但是, 我们如何让这些圆圈变成透明的？ 如果你还没有得到提示: 请参照文档!'
       U3L06 Challenge 6 squiggles: '阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示画出曲线。
 
 '
-      U3L06 Challenge 6 squiggles_2018: '阅读 "arcLeft" 和 "arcRight" 命令的文档,
-        然后按所示画出曲线。
+      U3L06 Challenge 6 squiggles_2018: '阅读 "arcLeft" 和 "arcRight" 命令的文档, 然后按所示画出曲线。
 
 '
       U3L06 Challenge 7 smiley face: 使用 turnTo () 和 moveTo () 来帮助绘制笑脸。(点击查看完整说明)
       U3L06 Challenge 7 smiley face_2018: 使用 turnTo () 和 moveTo () 来帮助绘制笑脸。(点击查看完整说明)
       U3L07 - Free Play Loops and Random: 自由游戏! 使用你从循环和随机中学到的东西, 来制作你自己的小场景。祝您玩得愉快。
-      U3L07 - Free Play Loops and Random_2018: 自由游戏! 使用你从循环和随机中学到的东西,
-        来制作你自己的小场景。祝您玩得愉快。
+      U3L07 - Free Play Loops and Random_2018: 自由游戏! 使用你从循环和随机中学到的东西, 来制作你自己的小场景。祝您玩得愉快。
       U3L07 - allSeaGrass: 通过写循环drawAllSeagrass来添加50片海草到图像里。(点击查看完整说明)
       U3L07 - allSeaGrass_2018: 通过写循环drawAllSeagrass来添加50片海草到图像里。(点击查看完整说明)
       U3L07 - createTriangleParam: 定义一个参数的函数, 来匹配使用函数并完成图像。(点击查看完整说明)
@@ -1372,8 +1352,7 @@ zh-CN:
       U3L08 - fish_2018: 添加一个参数到 drawFish, 来更改所画的鱼的大小。(点击查看完整说明)
       U3L08 - freePlay: 通过增加对新函数的参数调用来不断增加您的图像。（单击以查看完整的说明）
       U3L08 - freePlay_2018: 通过增加对新函数的参数调用来不断增加您的图像。（单击以查看完整的说明）
-      U3L08 - introUnderTheSea with comments: 在图片里再添加一条鱼, 海星, 以及海草。看一看,
-        但不要改变创建它们的函数。(点击查看完整说明)
+      U3L08 - introUnderTheSea with comments: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       U3L08 - introUnderTheSea: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       U3L08 - introUnderTheSea_2018: 在图片里再添加一条鱼, 海星, 以及海草。看一看, 但不要改变创建它们的函数。(点击查看完整说明)
       U3L08 - randomInput: 使用 randomNumber() 模块来测试您设计的随机输入的函数。(点击查看完整说明)
@@ -1389,8 +1368,7 @@ zh-CN:
       U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       U3L2 Using Simple Commands_2018: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
       U3L2_Turtle3by3Grid: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
-      U3L2_Turtle3by3Grid_2018: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置,
-        保持原来的朝向。(点击查看完整说明)
+      U3L2_Turtle3by3Grid_2018: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置, 保持原来的朝向。(点击查看完整说明)
       U3L2_TurtleSquare_right: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
       U3L2_TurtleSquare_right_2018: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
       U4 Model App: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
@@ -1404,21 +1382,16 @@ zh-CN:
         "向前移动"指令来挖掘这些模块。
       Underground Avoiding Lava_2018: 熔岩隐藏在这些模块的下面, 你需要在前进之前把它掩盖起来。"如果"指令将在这里派上用场。在正确的位置添加
         "向前移动"指令来挖掘这些模块。
-      Underground If Statements: 现在事情变得越来越棘手了。挖掘3块红石, 但不要落入熔岩。使用 "如果"
-        指令将圆石放置在任何未掩盖的熔岩上。
-      Underground If Statements_2018: 现在事情变得越来越棘手了。挖掘3块红石, 但不要落入熔岩。使用
-        "如果" 指令将圆石放置在任何未掩盖的熔岩上。
+      Underground If Statements: 现在事情变得越来越棘手了。挖掘3块红石, 但不要落入熔岩。使用 "如果" 指令将圆石放置在任何未掩盖的熔岩上。
+      Underground If Statements_2018: 现在事情变得越来越棘手了。挖掘3块红石, 但不要落入熔岩。使用 "如果" 指令将圆石放置在任何未掩盖的熔岩上。
       Underground Iron: 走进熔岩是个坏主意。放置圆石来创建一座桥梁, 然后挖掘至少两个铁模块。
       Underground Iron_2018: 走进熔岩是个坏主意。放置圆石来创建一座桥梁, 然后挖掘至少两个铁模块。
-      Underground Mining Coal: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少
-        2 块煤炭。
-      Underground Mining Coal_2018: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少
-        2 块煤炭。
+      Underground Mining Coal: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
+      Underground Mining Coal_2018: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Unicorn Tag: 仔细瞧瞧这个项目，你知道它是怎么做出来的了吗？
       Valentine_artist2_01: 编辑程序让艺术家为可爱的小虫画一些草。
       Valentine_artist_01: 帮助艺术家完成大羊驼的心。
-      Valentine_playlab_01: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时,
-        她应该把心投向她的朋友们。 '
+      Valentine_playlab_01: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时, 她应该把心投向她的朋友们。 '
       Virtual Pet 1 Predict: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1 Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
@@ -1469,23 +1442,20 @@ zh-CN:
       behaviors pet test 2: |-
         当黛西获得了一个胡萝卜，她会很兴奋。
         用**"当碰到"**事件和"添加行为"模块来让黛西在得到胡萝卜时做一些有趣的事情。
-      behaviors pet test 3: "**是时候做你自己的虚拟宠物了！**\n你能为自己的宠物改变任何代码。这是一些主意：\r\n*
-        你能在点击宠物时，让它开始一个新行为吗？\r\n*\n你能在将吸尘器拖动到宠物那里时，让它跑掉吗？\r\n* 你能给宠物增加别的动物朋友吗？ "
-      behaviors pet test: "上次你练习了如何用\"行为\"来让精灵永远做一些事情。这次，我们会用行为来制作一个虚拟宠物。
-        \r\n\r\n这条狗的名字叫黛西。黛西非常喜欢胡萝卜电信。将\"拖动并放下\"行为加到胡萝卜上，这样你能将胡萝卜移动到黛西那里。"
+      behaviors pet test 3: "**是时候做你自己的虚拟宠物了！**\n你能为自己的宠物改变任何代码。这是一些主意：\r\n* 你能在点击宠物时，让它开始一个新行为吗？\r\n*\n你能在将吸尘器拖动到宠物那里时，让它跑掉吗？\r\n*
+        你能给宠物增加别的动物朋友吗？ "
+      behaviors pet test: "上次你练习了如何用\"行为\"来让精灵永远做一些事情。这次，我们会用行为来制作一个虚拟宠物。 \r\n\r\n这条狗的名字叫黛西。黛西非常喜欢胡萝卜电信。将\"拖动并放下\"行为加到胡萝卜上，这样你能将胡萝卜移动到黛西那里。"
       behaviors_caley: 克隆这一关，并制作自己的模块！
       ben's first level: 克隆这一关，并制作自己的模块！
       birdsDebugVideo1: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       bounce_1: 在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。
       bounce_10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
-      bounce_10_2018: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨"
-        方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
+      bounce_10_2018: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
       bounce_10_basketball: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
       bounce_10_sports: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"模块来制作游戏。看看在对手获得两分前，你可以获得多少分。
       bounce_11: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"启动新球"模块. 此外，试着改变场景或球拍和球的速度，看看在你对手得两分之前你能得多少分.
       bounce_11_2018: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"启动新球"模块. 此外，试着改变场景或球拍和球的速度，看看在你对手得两分之前你能得多少分.
-      bounce_11_basketball: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"扔新球"模块.
-        此外，试着改变场景或手和球的速度，看看在你对手得两分之前你能得多少分.
+      bounce_11_basketball: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"扔新球"模块. 此外，试着改变场景或手和球的速度，看看在你对手得两分之前你能得多少分.
       bounce_11_sports: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"扔新球"模块. 此外，试着改变场景或手和球的速度，看看在你对手得两分之前你能得多少分.
       bounce_12: 创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。单击完成，让朋友在手机上试试你的游戏。
       bounce_12_2018: 创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。单击完成，让朋友在手机上试试你的游戏。
@@ -1567,16 +1537,15 @@ zh-CN:
       course2_playlab_stage17_7: 利用"一直重复"块，你就可以重复不断地执行代码。您可以再连接一些块来使恐龙迪诺（演员2）反复向上向下移动吗？
       course2_playlab_stage17_8: "你能否让企鹅撞到恐龙时，让它说\"哎哟!\" 同时播放一个“命中”的声音？\r\n\r\n完成后玩一下，用箭头移动企鹅来试试。"
       course2_playlab_stage17_9: "添加一个模块，在企鹅碰到奥克塔维亚（演员3）时得1分？\r然​​后试玩一下，用箭头移动企鹅直到得分！"
-      course3_artist_concept_challenge1: 随意的反复试试。不指望你第一次就能得到完美的图像。  想看更多的提示吗？
-        点击这里!
-      course3_artist_functions_challenge1: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它!
-        尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
+      course3_artist_concept_challenge1: 随意的反复试试。不指望你第一次就能得到完美的图像。  想看更多的提示吗？ 点击这里!
+      course3_artist_functions_challenge1: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的,
+        然后改变它, 让您自己的设计更出色！
       course3_artist_functions_challenge2: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
       course3_bee_debugging_challenge1: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？
       course3_bee_functions_challenge1: 你得独立接受这个挑战。这可能比看起来更难!
       course3_bee_functions_challenge2: 你得自己独立面对这个挑战。
       course3_bee_functions_challenge3: 创建一个新的函数, 当前方有路的时候，收集所有的花蜜和蜂蜜。用它来完成关卡!
-      course3_bee_functions_challenge4: 用你所学的来完成这关！
+      course3_bee_functions_challenge4: 用你所学的来解决这个关卡。
       course3_collector_debugging_challenge2: 您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!
       course3_farmer_condLoops_challenge1: 在南瓜处向右转。收集所有的一切来过这关。每个隐藏的作物只有一个玉米或莴苣。
       course3_farmer_condLoops_challenge2: 收集一切作物来通过这关。
@@ -1603,26 +1572,22 @@ zh-CN:
       course4_artist_binary_challenge2: 你是否有足够的毅力让这个标志回到正常状态？
       course4_artist_concept_challenge2: 使用下面的代码创建五个风车的设计。
       course4_artist_functions_challenge2: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
-      course4_artist_fwp_challenge1: 请尝试运行此程序, 并做些改动看看什么变化。你能弄清楚它是如何工作的吗？(或删除它,
-        用完全不同的东西来取代它)
-      course4_artist_variables_challenge1: 现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
-        你能坚持下去直到你找到解决办法吗？
-      course4_artist_variables_challenge2: 现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
-        你能坚持下去直到你找到解决办法吗？
+      course4_artist_fwp_challenge1: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
+      course4_artist_variables_challenge1: 现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。 你能坚持下去直到你找到解决办法吗？
+      course4_artist_variables_challenge2: 现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。 你能坚持下去直到你找到解决办法吗？
       course4_bee_for_challenge1: 用这个循环来收集所有的花蜜。有几个动作, 你需要重复 ' 计数器 ' 次。
       course4_bee_fwp_challenge1: 在函数中使用一个`计数循环`来收集所有的玉米。通过使用`length`（长度）参数，同样的`计数循环`可以数到不同的最大值。
       course4_bee_fwp_challenge2: 在函数中使用一个`计数循环`来收集所有的蔬菜。通过使用`length`（长度）参数，使这个`计数循环`数到不同的最大值。通过在函数外部再加一个`计数循环`，来让你的程序写得更短。
       course4_collector_nested_loops_challenge2: 帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。
       course4_harvester_nested_loops_challenge1: '"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"'
       course4_playlab_variables_challenge1: 使用这些模块使演员分享一个敲门问答的笑话。改变设置和警句来讲你自己的笑话!
-      course4_playlab_variables_challenge3: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击
-        "更多" 以查看您的挑战。
+      course4_playlab_variables_challenge3: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击 "更多" 以查看您的挑战。
       courseA_artist_loops1: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
       courseA_artist_loops10: 帮我放下石头, 免得我掉下去!
       courseA_artist_loops10_2018: 帮我放下石头, 免得我掉下去!
       courseA_artist_loops11: 帮助我建楼梯, 让我可以看着船驶离。
       courseA_artist_loops11_2018: 帮助我建楼梯, 让我可以看着船驶离。
-      courseA_artist_loops12: 艺术家在远处看到了一些有趣的东西。 画出你认为他看到的东西
+      courseA_artist_loops12: 艺术家在远处看到了一些有趣的东西。 画出你认为他看到的东西。
       courseA_artist_loops12_2018: 艺术家在远处看到了一些有趣的东西。 画出你认为他看到的东西。
       courseA_artist_loops1_2018: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
       courseA_artist_loops2: 帮助艺术家两次向前来画这条线。
@@ -1635,7 +1600,7 @@ zh-CN:
       courseA_artist_loops5_2018: 画一条七步长的线。这将成为我们的地平线。
       courseA_artist_loops6: 让我们在后面放一座漂亮的小山。
       courseA_artist_loops6_2018: 让我们在后面放一座漂亮的小山。
-      courseA_artist_loops7: 使用`重复`循环添加波浪到水中。
+      courseA_artist_loops7: 使用 "重复" 循环在水中添加波浪。
       courseA_artist_loops7_2018: 使用 "重复" 循环在水中添加波浪。
       courseA_artist_loops7_forVideo: 使用 "重复" 循环在水中添加波浪。
       courseA_artist_loops8: 我们需要一个梯子到船上去。
@@ -1647,7 +1612,7 @@ zh-CN:
       courseA_artist_loops_challenge2: '"你能帮我做两个鸟舍吗？"'
       courseA_artist_loops_challenge2a: '*"帮我把这三个帐篷搭建起来!"*'
       courseA_artist_loops_challenge2a_2018: '*"帮我把这三个帐篷搭建起来!"*'
-      courseA_artist_loops_challenge3: 让我们玩游戏吧! 尽可能多地画 X。你可以做到一排放3 个吗？
+      courseA_artist_loops_challenge3: 让我们玩游戏吧! 尽可能多地画 X。你能一排放3个吗？
       courseA_bee_seq1: 摆弄这些模块来帮助蜜蜂获得*一个*花蜜。
       courseA_bee_seq10: 自己试试吧！采集所有花蜜。
       courseA_bee_seq11: 获得所有花蜜。
@@ -1689,12 +1654,10 @@ zh-CN:
       courseA_collector_loops_challenge2: '得到所有的宝藏! '
       courseA_collector_loops_challenge2kp: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2018: 收集至少 **3** 件的宝藏通过这个关。
-      courseA_collector_preLoops1: "这是冒险家罗瑞尔!\r\n\r\n按 \"运行\", 看到她走到宝藏,
-        并拿到它。"
-      courseA_collector_preLoops2: "太好了! 现在你可以自己添加代码了! \r \n\r \n把\"获取宝藏\"
-        块拉倒程序的底部, 然后单击 \"运行\"。"
-      courseA_collector_preLoops3: 将两个 "向东" 块和一个 "获取宝藏" 块放到程序的底部, 然后单击
-        "运行"。
+      courseA_collector_preLoops1: "这是冒险家罗瑞尔!\r\n\r\n按 \"运行\", 看到她走到宝藏, 并拿到它。"
+      courseA_collector_preLoops2: "太好了! 现在你可以自己添加代码了! \r \n\r \n把\"获取宝藏\" 块拉倒程序的底部,
+        然后单击 \"运行\"。"
+      courseA_collector_preLoops3: 将两个 "向东" 块和一个 "获取宝藏" 块放到程序的底部, 然后单击 "运行"。
       courseA_collector_preLoops4: 你能想出解决这个关卡的办法吗？
       courseA_collector_preLoops5: 得到这两块宝石的中的1块来过关。
       courseA_collector_preLoops6: 得到这两件宝物来过关。
@@ -1759,11 +1722,11 @@ zh-CN:
       courseA_maze_seq5_2018: 尝试一下。
       courseA_maze_seq5a_2018: 你能在代码最后加上什么来让小鸟到达猪那里？
       courseA_maze_seq6: 往一条路走，然后走另一条把鸟带到猪那里！
-      courseA_maze_seq6_2018: 向一个方向移动，然后往另一个方向移动来帮鸟到达猪那里！
+      courseA_maze_seq6_2018: 往一条路走，然后走另一条把鸟带到猪那里！
       courseA_maze_seq7: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
       courseA_maze_seq7_2018: 想想这里缺了什么，然后添加模块让鸟到达那只猪那！
       courseA_maze_seq8: 通过这关，把鸟带到猪那！
-      courseA_maze_seq8_2018: 通过这关, 把鸟送到猪那!
+      courseA_maze_seq8_2018: 通过这关，把鸟带到猪那！
       courseA_maze_seq9: 通过添加块来调试这关，让鸟到达猪那里!
       courseA_maze_seq9_2018: 通过添加块来调试这关，让鸟到达猪那里!
       courseA_maze_seq_challenge1: 这里出了点问题。帮助修复代码, 让鸟到达猪那里!
@@ -1806,7 +1769,9 @@ zh-CN:
       courseB_artist_loops2_2018: 艺术家试图画一条线 ** 6 ** 次, 但还没画好。 你能帮忙吗？
       courseB_artist_loops3: 帮助艺术家画一条线7次, 来做花园墙。
       courseB_artist_loops3_2018: 帮助艺术家画一条线7次, 来做花园墙。
-      courseB_artist_loops4: '现在我们要准备好种植用的土壤。在代码中寻找缺陷并帮助艺术家准备好地面。 '
+      courseB_artist_loops4: '现在我们要准备好种植用的土壤。在代码中寻找缺陷并帮助艺术家准备好地面。
+
+'
       courseB_artist_loops4_2018: '现在我们要准备好种植用的土壤。在代码中寻找缺陷并帮助艺术家准备好地面。
 
 '
@@ -1814,7 +1779,7 @@ zh-CN:
       courseB_artist_loops5_2018: 该去修楼梯了! 重复这个图案 ** 5** 次, 这样艺术家就可以到达灌木丛的顶端。
       courseB_artist_loops6: 爬上藤蔓, 看看它延到哪里？
       courseB_artist_loops6_2018: 爬上藤蔓, 看看它延到哪里？
-      courseB_artist_loops7: "** 挑战: ** 这是一个隐蔽的花园! 让我们四处走动一下。"
+      courseB_artist_loops7: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
       courseB_artist_loops7_2018: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
       courseB_artist_loops8: 该回家了。你可以只用一个模块就能修好这个梯子让艺术家下来吗？
       courseB_artist_loops8_2018: 该回家了。你可以只用一个模块就能修好这个梯子让艺术家下来吗？
@@ -1838,7 +1803,7 @@ zh-CN:
       courseB_collector_loops2_2018: 收集所有四个土堆来通关。
       courseB_collector_loops3: 罗瑞尔怎么能只用一个 "向东" 模块来得到五堆财宝呢？
       courseB_collector_loops3_2018: 罗瑞尔怎么能只用一个 "向东" 模块来得到五堆财宝呢？
-      courseB_collector_loops3_predict1: 罗瑞尔怎么能只用一个 "E-->"模块收集所有五堆金子呢？
+      courseB_collector_loops3_predict1: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
       courseB_collector_loops4: 修复罗瑞尔的路径得到所有这些宝藏！
       courseB_collector_loops4_2018: 修复罗瑞尔的路径得到所有这些宝藏！
       courseB_collector_loops5: '添加代码到最后的关卡，得到所有的宝藏。 '
@@ -1860,7 +1825,7 @@ zh-CN:
       courseB_collector_loops_challenge`: '这一次您只能每个箭头使用一次。去拿所有的宝藏吧! '
       courseB_collector_prog1: 这是冒险家罗瑞尔! 你能把她带到附近去找黄金吗？
       courseB_collector_prog2: 4堆金子！收集所有4堆。
-      courseB_collector_prog3: 罗瑞尔怎样才能只用`E -->`模块来收集所有5堆金子？
+      courseB_collector_prog3: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
       courseB_iceage_loops1: 帮助斯奎特穿过冰去拿到橡子！
       courseB_iceage_loops10: 帮助斯奎特走过去拿到橡子！
       courseB_iceage_loops11: 帮助斯奎特得到橡子！
@@ -1917,10 +1882,9 @@ zh-CN:
       courseB_playlab_events5: 现在添加一个事件，当你按下右箭头时，让骑士跑离龙。
       courseB_playlab_events5_2018: 添加一个事件，当你按下右箭头时，让骑士跑离龙。
       courseB_playlab_events6: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
-      courseB_playlab_events6_2018: "帮助骑士得到所有的旗子!\r\n\r\n要做到这些，需要添加事件来帮助骑士向上、向下、向左和向右移动。"
+      courseB_playlab_events6_2018: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
       courseB_playlab_events7: 让这个游戏有趣，设置骑士在去往旗子的路上碰到龙的时候消失！当他们碰撞时播放声音使感觉更真实。
-      courseB_playlab_events7_2018: "1) 设置骑士，让他碰到龙时消失。 \n2) 当他们碰撞时播放声音，这样感觉更真实。
-        \ "
+      courseB_playlab_events7_2018: "1) 设置骑士，让他碰到龙时消失。 \n2) 当他们碰撞时播放声音，这样感觉更真实。  "
       courseB_playlab_events8: 运用你的想象力。你能做些什么让这个游戏更有趣？
       courseB_playlab_eventsFP: 运用你的想象力。你能做些什么让这个游戏更有趣？
       courseB_playlab_eventsFP_2018: "**自由发挥：** 运用你的想象力。你能做些什么让这个游戏更有趣？"
@@ -1930,10 +1894,8 @@ zh-CN:
       courseB_playlab_events_challenge2: 当点击动物时，让它们消失。
       courseB_playlab_events_challenge2_2018: 当点击动物时，让它们消失。
       courseB_playlab_events_challenge2_embed: 这是你完成的游戏!
-      courseB_playlab_events_challenge2_template: 点击来使动物们消失！你也可以添加声音和得分点,
-        创建一个有趣的动物标签游戏!
-      courseB_playlab_events_challenge2_template_2018: 点击来使动物们消失！你也可以添加声音和得分点,
-        创建一个有趣的动物标签游戏!
+      courseB_playlab_events_challenge2_template: 点击来使动物们消失！你也可以添加声音和得分点, 创建一个有趣的动物标签游戏!
+      courseB_playlab_events_challenge2_template_2018: 点击来使动物们消失！你也可以添加声音和得分点, 创建一个有趣的动物标签游戏!
       courseB_scrat_forVideo: 拿到橡子！
       courseB_starWars_prog1: "\"去收集废金属, BB-8!”"
       courseB_starWars_prog10: 帮助 BB-8 收集发光的废旧金属
@@ -1960,25 +1922,19 @@ zh-CN:
       courseC_PlayLab_events1: 让乔治狗 (演员 1) 说 "大家好。“
       courseC_PlayLab_events1_2018: 让乔治狗 (演员 1) 说 "大家好。“
       courseC_PlayLab_events2: 你能让乔治狗 (演员 1) 说点什么, 然后让奥丽芙 (演员 2) 接着说些什么吗？
-      courseC_PlayLab_events2_2018: 你能让乔治狗 (演员 1) 说点什么, 然后让奥丽芙 (演员 2)
-        接着说些什么吗？
+      courseC_PlayLab_events2_2018: 你能让乔治狗 (演员 1) 说点什么, 然后让奥丽芙 (演员 2) 接着说些什么吗？
       courseC_PlayLab_events3: 你可以写一个程序来将乔治（演员1）移动到奥丽芙猫那里吗？
       courseC_PlayLab_events3_2018: 你可以写一个程序来将乔治（演员1）移动到奥丽芙猫那里吗？
-      courseC_PlayLab_events4: 你能写一个程序让乔治 (演员 1) 移到奥丽芙猫那里, 并在乔治到的时候让奥丽芙说
-        "你好"？
-      courseC_PlayLab_events4_2018: 你能写一个程序让乔治 (演员 1) 移到奥丽芙猫那里, 并在乔治到的时候让奥丽芙说
-        "你好"？
+      courseC_PlayLab_events4: 你能写一个程序让乔治 (演员 1) 移到奥丽芙猫那里, 并在乔治到的时候让奥丽芙说 "你好"？
+      courseC_PlayLab_events4_2018: 你能写一个程序让乔治 (演员 1) 移到奥丽芙猫那里, 并在乔治到的时候让奥丽芙说 "你好"？
       courseC_PlayLab_events5: 你能写一个程序让章鱼奥克塔维亚在被点击的时候说 "有什么新鲜事吗？"？
       courseC_PlayLab_events5_2018: 你能写一个程序让章鱼奥克塔维亚在被点击的时候说 "有什么新鲜事吗？"？
       courseC_PlayLab_events6: 现在，写一个程序让企鹅四处移动，使用上/下/左/右键命中所有目标！
       courseC_PlayLab_events6_2018: 现在，写一个程序让企鹅四处移动，使用上/下/左/右键命中所有目标！
-      courseC_PlayLab_events7: "`一直重复` 模块允许你一次又一次一直运行代码。使用这个模块让恐龙迪诺 (演员
-        2) 一直上下移动400像素。"
-      courseC_PlayLab_events7_2018: "`一直重复` 模块允许你一次又一次一直运行代码。使用这个模块让恐龙迪诺
-        (演员 2) 一直上下移动400像素。"
+      courseC_PlayLab_events7: "`一直重复` 模块允许你一次又一次一直运行代码。使用这个模块让恐龙迪诺 (演员 2) 一直上下移动400像素。"
+      courseC_PlayLab_events7_2018: "`一直重复` 模块允许你一次又一次一直运行代码。使用这个模块让恐龙迪诺 (演员 2) 一直上下移动400像素。"
       courseC_PlayLab_events8: "你能让企鹅 (演员 1) 在碰到恐龙时播放 \"命中\" 的声音并说 \"哎呀!”吗？\r\n当你完成的时候，玩游戏来试试。"
-      courseC_PlayLab_events8_2018: "你能让企鹅 (演员 1) 在碰到恐龙时播放 \"命中\" 的声音并说
-        \"哎呀!”吗？\r\n当你完成的时候，玩游戏来试试。"
+      courseC_PlayLab_events8_2018: "你能让企鹅 (演员 1) 在碰到恐龙时播放 \"命中\" 的声音并说 \"哎呀!”吗？\r\n当你完成的时候，玩游戏来试试。"
       courseC_PlayLab_events9: "你可以添加一个模块让企鹅（演员1）在碰到章鱼奥克塔维亚（演员3）的时候得一分吗？\r\n玩此游戏，用箭头移动企鹅直到得分！"
       courseC_PlayLab_events9_2018: "你可以添加一个模块让企鹅（演员1）在碰到章鱼奥克塔维亚（演员3）的时候得一分吗？\r\n玩此游戏，用箭头移动企鹅直到得分！"
       courseC_PlayLab_eventsA: "添加模块到`当运行时`事件来更改背景场面以及企鹅的速度。\r\n\r\n玩此游戏，用箭头移动企鹅直到得分。"
@@ -1991,8 +1947,8 @@ zh-CN:
         \r\n\r\n玩游戏和用箭头移动企鹅, 直到你得分足够的分数。"
       courseC_artist_loop1: 让我们添加一些活泼的东西!
       courseC_artist_loop1_2018: 让我们添加一些活泼的东西!
-      courseC_artist_loops1: "\"僵尸。 画图!\"\r\n\r\n僵尸想画一条线，从它这里到花园向日葵的线。
-        你能帮他吗？ \r \n* (花园在250像素以外) *  "
+      courseC_artist_loops1: "\"僵尸。 画图!\"\r\n\r\n僵尸想画一条线，从它这里到花园向日葵的线。 你能帮他吗？ \r \n*
+        (花园在250像素以外) *  "
       courseC_artist_loops1a: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_loops1a_2018: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_loops2: 现在, 僵尸知道他的路线, 帮助他沿路挖洞种植更多的花朵!
@@ -2020,8 +1976,7 @@ zh-CN:
       courseC_artist_loopsPre1a_2018: 是时候把那条线转过来了!
       courseC_artist_loopsPrePre1a: '把艺术家带到游戏区的中心, 然后画一条线。 '
       courseC_artist_loopsPrePre1a_2018: '把艺术家带到游戏区的中心, 然后画一条线。 '
-      courseC_artist_loopsTemplate: 非常好！ 现在, 花朵已经发芽, 帮助僵尸每隔50像素安置一个朋友来保护花朵,
-        直到他们长大。
+      courseC_artist_loopsTemplate: 非常好！ 现在, 花朵已经发芽, 帮助僵尸每隔50像素安置一个朋友来保护花朵, 直到他们长大。
       courseC_artist_loopsTemplateA: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_loopsTemplateA_2018: '把艺术家带到游戏区的中心, 然后用贴纸画一只鸟。 '
       courseC_artist_prog1: 试试工具箱里的模块看他们能做什么！
@@ -2073,23 +2028,18 @@ zh-CN:
       courseC_collector_prog_challenge2: 收集至少**10**个宝藏完成这一挑战!
       courseC_collector_prog_challenge2_2018: 收集至少**10**个宝藏完成这一挑战!
       courseC_flappy_embed_events: 这里有一个游戏的例子, 你要自己来创造! 通过一两次游戏来想想自己要做什么。
-      courseC_flappy_events1: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间,
-        将像素鸟移动到目的地。
+      courseC_flappy_events1: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间, 将像素鸟移动到目的地。
       courseC_flappy_events10: '创建自己的像素鸟游戏! '
       courseC_flappy_events10_2018: '创建自己的像素鸟游戏! '
-      courseC_flappy_events1_2018: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间,
-        将像素鸟移动到目的地。
+      courseC_flappy_events1_2018: 将 "拍打正常数量" 块附加到 "单击时" 情景, 然后按 "运行"。单击或点击播放空间, 将像素鸟移动到目的地。
       courseC_flappy_events2: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
       courseC_flappy_events2_2018: 在按下 "运行" 按钮时, 尝试添加一个设置速度级别的模块。 玩游戏并飞到目的地来继续。
       courseC_flappy_events3: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。
-      courseC_flappy_events3_2018: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏,
-        把小鸟撞向地面来继续。
+      courseC_flappy_events3_2018: 附加 ' 结束游戏 ' 块到 ' 当击中地面 ' 时的下面。  玩游戏, 把小鸟撞向地面来继续。
       courseC_flappy_events4: 附加一个块到 ' 当击中障碍 ' 事件中，以便在像素鸟撞到第一条管道时，游戏结束。
       courseC_flappy_events4_2018: 附加一个块到 ' 当击中障碍 ' 事件中，以便在像素鸟撞到第一条管道时，游戏结束。
-      courseC_flappy_events5: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行"
-        得一分。
-      courseC_flappy_events5_2018: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按
-        "运行" 得一分。
+      courseC_flappy_events5: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行" 得一分。
+      courseC_flappy_events5_2018: 在 "通过障碍" 情况时添加一个块, 然后等像素鸟飞过第一组管道的时候，按 "运行" 得一分。
       courseC_flappy_events6: 看你是否可以在每次你点击的时候，让像素鸟拍打更大或更小的距离，来得分。
       courseC_flappy_events6_2018: 看你是否可以在每次你点击的时候，让像素鸟拍打更大或更小的距离，来得分。
       courseC_flappy_events7: 接下来, 尝试通过将一个模块附加到 "运行时" 事件来更改场景。
@@ -2163,8 +2113,8 @@ zh-CN:
       courseC_maze_loops_challenge1a: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
       courseC_maze_loops_challenge1a_2018: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
       courseC_maze_loops_challenge2: 让我们使用循环来寻找宝藏! 通过找出此代码错误来帮助收集者得到所有的宝藏!
-      courseC_maze_programming1: 对于这个关卡，把所有的块都拖在一起，并点击"运行"来看看！
-      courseC_maze_programming1_2018: 对于这个关卡，把所有的模块都拖到一起，并点击"运行"来看看！
+      courseC_maze_programming1: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
+      courseC_maze_programming1_2018: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
       courseC_maze_programming2: 从工具箱中拖出另一个`向前移动`模块来完成代码。
       courseC_maze_programming2_2018: 从工具箱中拖出另一个`向前移动`模块来完成代码。
       courseC_maze_programming3: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
@@ -2173,7 +2123,7 @@ zh-CN:
       courseC_maze_programming4_2018: 躲开TNT炸药，否则羽毛会被炸飞！
       courseC_maze_programming5: 躲开TNT炸药！
       courseC_maze_programming5_2018: 躲开TNT炸药！
-      courseC_maze_programming6: "\"保持冷静，帮我找到那只坏猪。否则我会很生气的！“"
+      courseC_maze_programming6: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
       courseC_maze_programming6_2018: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
       courseC_maze_programming7: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
       courseC_maze_programming7_2018: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
@@ -2187,27 +2137,23 @@ zh-CN:
       courseC_maze_programming_challenge1_2018: '猪藏起来了，目标是找到它。 '
       courseC_maze_programming_challenge2: 有时, 解决同一问题的方法不止一种。有时候向后走比前进快!
       courseC_maze_programming_challenge2_2018: 有时, 解决同一问题的方法不止一种。有时候向后走比前进快!
-      courseC_playLab_embedded: "这里有一个游戏给你玩! 要赢的话, 用你的方向键让企鹅遇到章鱼. \n\r\n一旦你完成了,
-        你将学会如何做这个游戏!"
+      courseC_playLab_embedded: "这里有一个游戏给你玩! 要赢的话, 用你的方向键让企鹅遇到章鱼. \n\r\n一旦你完成了, 你将学会如何做这个游戏!"
       courseC_puppy_loops10: 你做得很好! 继续!
       courseC_puppy_loops11: 快要成功了！这次，选择你喜欢的路！
       courseC_puppy_loops8: 挑战：将从前几关的主意组合起来，完成这一关。
       courseC_puppy_loops8courseC_maze_loops8: 挑战：将从前几关的主意组合起来，完成这一关。
       courseC_puppy_loops9: 你做得很好! 继续!
-      courseC_starWars_loops1: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8
-        捡起场地中所有的废旧金属。
+      courseC_starWars_loops1: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8 捡起场地中所有的废旧金属。
       courseC_starWars_loops10: 你做得很好! 继续!
       courseC_starWars_loops10_2018: 你做得很好! 继续!
       courseC_starWars_loops10_predict2: 你做得很好! 继续!
       courseC_starWars_loops10_predict2_2018: 你做得很好! 继续!
       courseC_starWars_loops11: 快要成功了！这次，选择你喜欢的路！
       courseC_starWars_loops11_2018: 快要成功了！这次，选择你喜欢的路！
-      courseC_starWars_loops1_2018: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让
-        BB-8 捡起场地中所有的废旧金属。
-      courseC_starWars_loops1_predict1: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次,
-        让 BB-8 捡起场地中所有的废旧金属。
-      courseC_starWars_loops1_predict1_2018: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次,
-        让 BB-8 捡起场地中所有的废旧金属。
+      courseC_starWars_loops1_2018: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8 捡起场地中所有的废旧金属。
+      courseC_starWars_loops1_predict1: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8 捡起场地中所有的废旧金属。
+      courseC_starWars_loops1_predict1_2018: BB-8 会在他通过的地方捡起任何金属废料。用同一个模块5次, 让 BB-8
+        捡起场地中所有的废旧金属。
       courseC_starWars_loops2: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
       courseC_starWars_loops2_2018: 要获取所有的废金属, 请尝试创建一个在 "重复"模块内只有一个模块的循环。
       courseC_starWars_loops4: 在这个关卡中, 两个`重复`循环将帮你用最少的模块获得 BB-8 的所有金属废料。
@@ -2217,8 +2163,7 @@ zh-CN:
       courseC_starWars_loops6: 循环里能放多于一个模块！你能循环这个序列吗？
       courseC_starWars_loops6_2018: 循环里能放多于一个模块！你能循环这个序列吗？
       courseC_starWars_loops7: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
-      courseC_starWars_loops7_2018: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来,
-        然后找到重复的代码放入循环中。
+      courseC_starWars_loops7_2018: 你能试着只用一个循环就能得到所有的废金属吗？尝试先把所有代码写出来出来, 然后找到重复的代码放入循环中。
       courseC_starWars_loops9: 用你所学的东西来捡起所有的废铁!
       courseC_starWars_loops9_2018: 用你所学的东西来捡起所有的废铁!
       courseD_Frozen_nested1: '绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。  '
@@ -2229,8 +2174,8 @@ zh-CN:
       courseD_Frozen_nested6: 画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。
       courseD_Frozen_nested7: 现在，转180度，再次绘制楼梯图案!
       courseD_Frozen_nested8: 在一个圆圈内旋转该形状大约5或6次。
-      courseD_Frozen_nested9: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
-        会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
+      courseD_Frozen_nested9: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度, 会发生什么？\r\n-
+        如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
       courseD_artist_1_2018: "画一个**50**像素边长的六边形。\r\n"
       courseD_artist_2_2018: "现在，向右转**60**度，然后画一条**150**像素长的直线，并跳回到区域中心。\r\n"
       courseD_artist_3_2018: '将所有代码嵌入到另一个`重复`循环中，并运行**6**次。 '
@@ -2239,8 +2184,8 @@ zh-CN:
       courseD_artist_6_2018: 画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。
       courseD_artist_7_2018: 现在，转180度，再次绘制楼梯图案!
       courseD_artist_8_2018: 在一个圆圈内旋转该形状大约5或6次。
-      courseD_artist_9_2018: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
-        会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
+      courseD_artist_9_2018: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度, 会发生什么？\r\n-
+        如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
       courseD_artist_binary1: 用下面的模块来让小画家在第一行画出二进制字符串“01010101”。
       courseD_artist_binary1_2018: 用下面的模块来让小画家在第一行画出二进制字符串“01010101”。
       courseD_artist_binary2: 运行代码来看看小艺术家如何用二进制画出这幅图案。
@@ -2264,17 +2209,15 @@ zh-CN:
       courseD_artist_binaryFP_2018: "这是更高分辨率的画布 - 16像素乘以16像素！\r\n\r\n看看你用二进制位能创造出什么？"
       courseD_artist_binary_challenge0: 请尝试使用嵌套循环来完成此图。
       courseD_artist_binary_challenge1: 在这个谜题中，您只能使用每个二进制值 (0或1) 一次。请尝试使用嵌套循环来画这幅图。
-      courseD_artist_binary_challenge1_2018: 在这个谜题中，您只能使用每个二进制值 (0或1)
-        一次。请尝试使用嵌套循环来画这幅图。
+      courseD_artist_binary_challenge1_2018: 在这个谜题中，您只能使用每个二进制值 (0或1) 一次。请尝试使用嵌套循环来画这幅图。
       courseD_artist_binary_challenge2: 你是否有足够的毅力让这个标志回到正常状态？
       courseD_artist_binary_challenge2_2018: 你是否有足够的毅力让这个标志回到正常状态？
       courseD_artist_binary_challenge3: 你是否有足够的毅力让这个标志回到正常状态？
       courseD_artist_embed_frozen: 按下运行键来看看雪花设计!
       courseD_artist_embed_frozen2: 按下运行键来看看雪花设计!
       courseD_artist_functions10: 这次，用8个（25像素边长的）六边形的线。
-      courseD_artist_functions2: "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。
-        \r\n"
-      courseD_artist_functions3: 你能通过添加一个重复模块来完成这幅画。
+      courseD_artist_functions2: "这一次, 使用`draw a square`（画一个正方形）函数来创建眼镜。 \r\n"
+      courseD_artist_functions3: 可以通过添加重复模块来绘制此画。
       courseD_artist_functions4: 现在你能画一个星星了，试试画4个星星！
       courseD_artist_functions5: 只画3个星星来完成这关。
       courseD_artist_functions6: 通过画一个正方形来制作这个窗口，然后在画另一个前转90度，等等。
@@ -2316,13 +2259,13 @@ zh-CN:
       courseD_artist_nestedLoops_challenge2: 修复代码来制作这张图！
       courseD_artist_nestedLoops_challenge2_2018: 修复代码来制作这张图！
       courseD_artist_project1: '绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。  '
-      courseD_artist_project1_2018: '绘制一个小形状, 介于 **20到50** 像素宽。 它可以是你喜欢的任何形状。  '
+      courseD_artist_project1_2018: '绘制一个小形状, 介于 ** 20 和50 **像素宽之间。 它可以是任何你喜欢的形状。  '
       courseD_artist_project1a: 画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。
-      courseD_artist_project1a_2018: 使用75到105度之间的转弯来绘制阶梯图案。
+      courseD_artist_project1a_2018: 画一个阶梯楼梯模式, 使用75和105度之间的角度来转弯。
       courseD_artist_project2: 现在用你选的形状连续画两或三个！
       courseD_artist_project2_2018: 现在用你选的形状连续画两或三个！
       courseD_artist_project2a: 现在，转180度，再次绘制楼梯图案!
-      courseD_artist_project2a_2018: 现在, 转180度左右, 再次绘制楼梯图案!
+      courseD_artist_project2a_2018: 现在，转180度，再次绘制楼梯图案!
       courseD_artist_project3: 让我们旋转那个形状的线吧!
       courseD_artist_project3_2018: 让我们旋转那个形状的线吧!
       courseD_artist_project3a: 在一个圆圈内旋转该形状大约5或6次。
@@ -2346,7 +2289,7 @@ zh-CN:
       courseD_autorun_binary7_2019: 能让你重复并画出这个图形的最短的二进制字符串是什么?
       courseD_autorun_binary8_2019: 完成代码来创建此图。
       courseD_autorun_binary8_predict1_2019: 完成代码来创建此图。
-      courseD_bee_conditionals1: 查看这朵云下面有没有一朵花。如果有花，就采花蜜。
+      courseD_bee_conditionals1: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
       courseD_bee_conditionals10: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals10_2018: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals1_predict1: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
@@ -2362,7 +2305,7 @@ zh-CN:
       courseD_bee_conditionals5_2018: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals6: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
       courseD_bee_conditionals6_2018: 有些云下面可能有蜂窝。 一定要检查是否有蜂窝藏在每朵云后面!
-      courseD_bee_conditionals7: 使用`如果/否则`模块收集花朵的花蜜, 并在蜂窝里酿蜂蜜。
+      courseD_bee_conditionals7: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals7_2018: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals7_predict2: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
       courseD_bee_conditionals7_predict2_2018: 使用 "如果/否则" 模块收集花朵的花蜜, 在蜂窝里制作蜂蜜。
@@ -2383,7 +2326,7 @@ zh-CN:
       courseD_bee_debugging6: '挑战: 修复错误来收集所有的花蜜并酿蜂蜜。'
       courseD_bee_debugging9: 帮助蜜蜂修复代码, 获得所有的花蜜。
       courseD_bee_debugging_challenge1: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
-      courseD_bee_debugging_challenge1_2018: 看蜜蜂如何得到花蜜。你能用同一种模式来帮助蜜蜂酿造所有的蜂蜜吗？
+      courseD_bee_debugging_challenge1_2018: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
       courseD_bee_debugging_challenge1a: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
       courseD_bee_debugging_challenge2: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
       courseD_bee_nestedLoops1: 帮助蜜蜂收集所有的花蜜。
@@ -2395,7 +2338,7 @@ zh-CN:
       courseD_bee_nestedLoops2_predict1: 这一次, 使用尽可能少的模块帮助蜜蜂收集所有的花蜜。
       courseD_bee_nestedLoops2_predict1_2018: 这一次, 使用尽可能少的模块帮助蜜蜂收集所有的花蜜。
       courseD_bee_nestedLoops3: 收集每朵花的花蜜。
-      courseD_bee_nestedLoops5: '收集每朵花的花蜜, 并在蜂巢里酿蜂蜜。 '
+      courseD_bee_nestedLoops5: '从所有的花里收集花蜜，然后在蜂窝那里酿花蜜。 '
       courseD_bee_nestedLoops6: 酿花蜜。
       courseD_bee_nestedLoops6_2018: 只使用已有的模块把僵尸带到向日葵那里。
       courseD_bee_nestedLoops7: '挑战: 找出如何只用现有的模块得到所有的花蜜。'
@@ -2415,41 +2358,33 @@ zh-CN:
       courseD_bounce_embed_endgame: 使用左右箭头移动乒乓球拍。看看你的对手两次得分之前你能得到多少分!
       courseD_bounce_embedded: 在此处编写说明
       courseD_bounce_events1: 将一个模块附加到 "当按左键" 块中, 然后按 "运行" 将播放机移动到旗帜上。
-      courseD_bounce_events10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和
-        "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
+      courseD_bounce_events10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
       courseD_bounce_events10s: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
-      courseD_bounce_events10s_2018: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点
-        '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
-      courseD_bounce_events11: 现在可以将块附加到 "运行时" 块。你必须在一个以上的地方附加新的 "发射新球"
-        块。此外, 尝试改变桨和球的场景或速度, 来看看你可以在你对手得到两倍的分数前得多少点。
+      courseD_bounce_events10s_2018: '把 "得分点" 块加到“当球击中”的事件上。将 '' 对手得分点 '' 模块加到“球错过球拍”的事件上。这样来创建这个游戏。 '
+      courseD_bounce_events11: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"启动新球"模块. 此外，试着改变场景或球拍和球的速度，看看在你对手得两分之前你能得多少分.
       courseD_bounce_events11s: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
       courseD_bounce_events11s_2018: '在所有需要新球的游戏里面加上"扔出新球" 模块。 '
-      courseD_bounce_events12: 创建自己的弹跳游戏。你可以改变所有的视觉效果和规则。完成后, 单击 "完成"
-        ，让朋友在手机上试用您的游戏。
-      courseD_bounce_events12s: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成",
-        让朋友在手机上试用您的游戏。
-      courseD_bounce_events12s_2018: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后,
-        单击 "完成", 让朋友在手机上试用您的游戏。
+      courseD_bounce_events12: 创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。单击完成，让朋友在手机上试试你的游戏。
+      courseD_bounce_events12s: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成", 让朋友在手机上试用您的游戏。
+      courseD_bounce_events12s_2018: 让这个游戏成为你自己的。你可以改变所有的视觉效果和规则。完成后, 单击 "完成", 让朋友在手机上试用您的游戏。
       courseD_bounce_events1s: 将一个模块加到 "当按下左键时"模块下，并按 "运行" 将播放机移动到网上。
       courseD_bounce_events1s_2018: 将一个模块加到 "当按下左键时"模块下，并按 "运行" 将播放机移动到网上。
-      courseD_bounce_events2: 将块附加到 "当按右键时" 和 "当按左键时"模块块。移动桨, 以达到两个完成目标。
+      courseD_bounce_events2: 在"当按左方向键时"块和“当按右方向键时”块下面添加块，然后按"运行程序"。移动球拍到达两边的目标。
       courseD_bounce_events2s: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
-      courseD_bounce_events2s_2018: 现在, 在 `当向右时`中附加一个模块, 这样手就可以够到两个篮子。
+      courseD_bounce_events2s_2018: 现在, 在 "当向右时" 中附加一个方块, 这样手就可以够到两个篮子。
       courseD_bounce_events3: 现在，尝试类似的做法用"当按上键时"块，来移动球拍到顶部目标。
       courseD_bounce_events3s: 现在，尝试类似的做法用"当按上键时"块，来移动球拍到顶部目标。
-      courseD_bounce_events4: 这次你需要添加四个模块。移动球拍到所有四个目标来通关。
+      courseD_bounce_events4: 这次你需要添加四个块。移动到所有四个球拍完成目标，以完成这个关卡。
       courseD_bounce_events4s: 这次你需要添加四个块。移动到所有四个球拍完成目标，以完成这个关卡。
-      courseD_bounce_events5: 我们要向球拍发一个球。将一个模块附加到"当球击中球拍时"模块以确保球能到达目标。
+      courseD_bounce_events5: 我们要将球发向球拍。将一个模块附加到"当球击中桨"模块以确保球能到达目标。
       courseD_bounce_events5s: 将一个方块连接到 ' 当球击中手 ' 情景, 以确保球到达篮框。
       courseD_bounce_events5s_2018: 将一个方块连接到 ' 当球击中手 ' 情景, 以确保球到达篮框。
-      courseD_bounce_events6: 现在完成的目标在最上面。您需要将模块附加到这两个"当球击中"模块中得以通过这关。
+      courseD_bounce_events6: 现在完成的目标是在顶上。您需要将模块附加到这两个"当球击中"模块中以通过这关。
       courseD_bounce_events6s: 添加代码, 使球弹跳时, 可以击中墙壁, 这样你才可以通关。
       courseD_bounce_events6s_2018: 添加代码, 使球弹跳时, 可以击中墙壁, 这样你才可以通关。
       courseD_bounce_events7: 将模块附加到每个"当.... 时"中模块。弹起球，直到它击中目标。
-      courseD_bounce_events7s: 加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时, 哨子会响。弹起球,
-        直到它击中完成目标。
-      courseD_bounce_events7s_2018: 加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时,
-        哨子会响。弹起球, 直到它击中完成目标。
+      courseD_bounce_events7s: 加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时, 哨子会响。弹起球, 直到它击中完成目标。
+      courseD_bounce_events7s_2018: 加入声音模块，当你击中篮筐时, 网会发出沙沙声。当球没碰到你的手时, 哨子会响。弹起球, 直到它击中完成目标。
       courseD_collector_debugging1: 修复错误来收集所有的宝藏。
       courseD_collector_debugging1_2018: 修复错误来收集所有的宝藏。
       courseD_collector_debugging1a: 修复错误来收集所有的宝藏。
@@ -2474,7 +2409,7 @@ zh-CN:
       courseD_collector_debugging6_2018: '挑战: 使用调试技巧来修复错误并收集所有的宝藏。'
       courseD_collector_debugging6a: '挑战: 使用工作区的代码得到至少 ** 6 ** 块宝藏!'
       courseD_collector_debugging6a_2018: '挑战: 使用工作区的代码得到至少 ** 6 ** 块宝藏!'
-      courseD_collector_debugging7: '挑战: 所有你需要的命令已经在这里了... 现在, 使用您的排错技巧来找出如何解决这个难题。'
+      courseD_collector_debugging7: 挑战：所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
       courseD_collector_debugging_challenge2: 您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!
       courseD_collector_debugging_challenge2_2018: 您是嵌套循环的专家吗？使用你所学到的收集所有的宝藏!
       courseD_collector_nested_loops_challenge2: 帮助收藏家只使用你工具箱里的块来拿到至少两堆宝藏。这里可能收集到所有4堆。
@@ -2521,9 +2456,7 @@ zh-CN:
       courseD_farmer_conditionals2: 向土堆移动，并用`填满`模块来用6铲土填平它。
       courseD_farmer_conditionals3: 用尽可能少的模块来通过这关。
       courseD_farmer_conditionals4: 用`当`循环来帮助农夫移除整个土堆。
-      courseD_farmer_conditionals5: '帮我移除所有的土。
-
-'
+      courseD_farmer_conditionals5: '帮我移除所有的土。 '
       courseD_farmer_conditionals6: 使用`当`循环能够很容易的填满所有的洞。
       courseD_farmer_conditionals7: 填满每条路尽头的洞。
       courseD_farmer_conditionals8: '挑战：用尽可能少的模块来填满这些洞。 '
@@ -2574,7 +2507,9 @@ zh-CN:
 '
       courseD_iceage_loops8: '你能修好这段代码吗？ '
       courseD_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
-      courseD_maze_loops_challenge1: 让我们来寻找宝藏 - 用循环！只用工具箱里的模块来帮助收藏家至少拿到两堆宝藏。
+      courseD_maze_loops_challenge1: |-
+        让我们寻找宝藏
+        - 使用循环！帮助收集器只使用工具箱中的模块来得到至少两堆宝藏。
       courseD_maze_nestedLoops3: 用尽可能少的模块让僵尸到达向日葵。
       courseD_maze_nestedLoops3_2018: 用尽可能少的模块让僵尸到达向日葵。
       courseD_maze_nestedLoops4: '用尽可能少的模块让僵尸到达向日葵！  '
@@ -2586,7 +2521,7 @@ zh-CN:
       courseD_maze_ramp1: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_maze_ramp1_2018: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_maze_ramp2: 将额外的`向前移动`块拖出工具箱, 然后将所有块附加到`当运行时`以完成代码。
-      courseD_maze_ramp2_2018: 将另一个`向前移动`块拖出工具箱, 然后将所有块附加到`当运行时`以完成代码。
+      courseD_maze_ramp2_2018: 将额外的`向前移动`块拖出工具箱, 然后将所有块附加到`当运行时`以完成代码。
       courseD_maze_ramp3: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseD_maze_ramp3_2018: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseD_maze_ramp4: 躲开TNT炸药，否则羽毛会被炸飞！
@@ -2639,16 +2574,16 @@ zh-CN:
       courseD_playLab_cond3_2018: '让龙的情绪每秒随机改变一次。  '
       courseD_playLab_cond3a: 当Pegleg到达龙那里时, 如果龙是快乐的，得到2分, 否则1分。
       courseD_playLab_cond3a_2018: 当Pegleg到达龙那里时, 如果龙是快乐的，得到2分, 否则1分。
-      courseD_playLab_cond3b: "1) 让龙在每一秒的随机情绪之间变化。 \r \n2) 当 Pegleg 到达龙那里时,
-        如果龙是快乐的，得到2分, 否则1分。"
+      courseD_playLab_cond3b: "1) 让龙在每一秒的随机情绪之间变化。 \r \n2) 当 Pegleg 到达龙那里时, 如果龙是快乐的，得到2分,
+        否则1分。"
       courseD_playLab_cond4: 添加一些代码，让忍者 (演员 3) 在游戏一开始就开始追逐海盗。 如果忍者抓住了海盗，游戏就以失败告终。
       courseD_playLab_cond4_2018: 添加一些代码，让忍者 (演员 3) 在游戏一开始就开始追逐海盗。 如果忍者抓住了海盗，游戏就以失败告终。
       courseD_playLab_cond5: 添加一个`一直重复`循环, 让它不断检查, 如果比分大于 5, 就以胜利结束此游戏。
       courseD_playLab_cond5_2018: 添加一个`一直重复`循环, 让它不断检查, 如果比分大于 5, 就以胜利结束此游戏。
       courseD_playLab_cond6: "1) 在设置忍者 (演员 3) 追逐海盗前，让他先慢下来。 \r\n2) 如果海盗大于225像素时，设置忍者**逃离**海盗。否则,
         设置忍者 *追逐**海盗。  "
-      courseD_playLab_cond6_2018: "1) 在设置忍者 (演员 3) 追逐海盗前，让他先慢下来。 \r\n2)
-        如果海盗大于225像素时，设置忍者**逃离**海盗。否则, 设置忍者 *追逐**海盗。  "
+      courseD_playLab_cond6_2018: "1) 在设置忍者 (演员 3) 追逐海盗前，让他先慢下来。 \r\n2) 如果海盗大于225像素时，设置忍者**逃离**海盗。否则,
+        设置忍者 *追逐**海盗。  "
       courseD_playLab_cond6a: 如果海盗在安全区, 等一秒钟，如果他还停留在章鱼线之下，就扣除一分。
       courseD_playLab_cond6a_2018: 如果海盗在安全区, 等一秒钟，如果他还停留在章鱼线之下，就扣除一分。
       courseD_playLab_cond6cloneForTest: 正在测试
@@ -2656,8 +2591,8 @@ zh-CN:
       courseD_playLab_condFP_2018: 现在，创建你自己的游戏，给朋友们看看吧！
       courseD_playLab_condFP_a: 现在，创建你自己的游戏，给朋友们看看吧！
       courseD_playLab_condForVideo: 现在，创建你自己的游戏，给朋友们看看吧！
-      courseD_playLab_embedded: "用箭头键移动海盗Pegleg。到达龙得分, 但要躲开忍者！站在章鱼线下面会使忍者停止追逐你,
-        但要当心! 你呆在那里的时间越长, 你失去的分数就越多。\r \r\n得到5分就能赢!"
+      courseD_playLab_embedded: "用箭头键移动海盗Pegleg。到达龙得分, 但要躲开忍者！站在章鱼线下面会使忍者停止追逐你, 但要当心!
+        你呆在那里的时间越长, 你失去的分数就越多。\r \r\n得到5分就能赢!"
       courseD_scrat_ramp1: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp1_2018: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp2: 将额外的`向前移动`块拖出工具箱, 然后将所有块附加到`当运行时`以完成代码。
@@ -2665,7 +2600,7 @@ zh-CN:
       courseD_scrat_ramp3: 这儿有一个多余的模块将导致斯奎特崩溃。将其拖回工具箱扔掉。
       courseD_scrat_ramp3_2018: 这儿有一个多余的模块将导致斯奎特崩溃。将其拖回工具箱扔掉。
       courseD_scrat_ramp4: 绕开裂纹的冰来保持斯奎特的安全!
-      courseD_scrat_ramp4_2018: 绕开裂纹的冰来保证斯奎特的安全！
+      courseD_scrat_ramp4_2018: 绕开裂纹的冰来保持斯奎特的安全!
       courseD_scrat_ramp5: 绕开破冰。
       courseD_scrat_ramp5_2018: 绕开破冰。
       courseD_scrat_ramp6: 使用循环帮助斯奎特得到橡子!
@@ -2682,8 +2617,7 @@ zh-CN:
       courseE_artist_concept_challenge1_2018: '帮助小艺术家画出这副独特的图。 '
       courseE_artist_concept_challenge2: 使用下面的代码创建五个风车的设计。
       courseE_artist_concept_challenge2_2018: 使用下面的代码创建五个风车的设计。
-      courseE_artist_embed_functions8: 仔细看这个关卡。要创建这样的设计，你看看需要什么样的函数。你很快就会自己动手做,
-        所以如果你需要帮助就回到这里吧。
+      courseE_artist_embed_functions8: 仔细看这个关卡。要创建这样的设计，你看看需要什么样的函数。你很快就会自己动手做, 所以如果你需要帮助就回到这里吧。
       courseE_artist_functions1: "帮助僵尸艺术家画一个边长为100像素的眼镜。\r\n眼镜之间的桥梁长75像素。"
       courseE_artist_functions10: 这次，用8个（25像素边长的）六边形的线。
       courseE_artist_functions10_2018: 这次，用8个（25像素边长的）六边形的线。
@@ -2697,7 +2631,7 @@ zh-CN:
       courseE_artist_functions5: 只画3个星星来完成这关。
       courseE_artist_functions5_2018: 只画3个星星来完成这关。
       courseE_artist_functions6: 通过画一个正方形来制作这个窗口，然后在画另一个前转90度，等等。
-      courseE_artist_functions6_2018: 画一个正方形来制作这个窗口，然后在画另一个前先转90度，以次类推。
+      courseE_artist_functions6_2018: 通过画一个正方形来制作这个窗口，然后在画另一个前转90度，等等。
       courseE_artist_functions7: 创建`画一个窗口`，然后调用它5次来通过这一关。小心门！
       courseE_artist_functions7_2018: 创建`画一个窗口`，然后调用它5次来通过这一关。小心门！
       courseE_artist_functions8: 挑战：创建你能想到的尽可能多的函数来画出这个50像素的正方形的图案。
@@ -2709,12 +2643,12 @@ zh-CN:
       courseE_artist_functions9: 只用提供的模块来画出这个图。
       courseE_artist_functions9_2018: "**挑战：**只用提供的模块来画出这个图。"
       courseE_artist_functionsProj_2018: "**灵感：**用你学会的做想做的事情！"
-      courseE_artist_functions_challenge: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它!
-        尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
-      courseE_artist_functions_challenge1: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它!
-        尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
-      courseE_artist_functions_challenge1_2018: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它!
-        尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
+      courseE_artist_functions_challenge: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的,
+        然后改变它, 让您自己的设计更出色！
+      courseE_artist_functions_challenge1: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的,
+        然后改变它, 让您自己的设计更出色！
+      courseE_artist_functions_challenge1_2018: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码,
+        看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
       courseE_artist_functions_challenge2: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
       courseE_artist_functions_challenge2_2018: 试试此代码, 看看它是如何工作的, 然后试着自己编程!
       courseE_artist_ramp10: 现在, 将最后一个三角形的代码拖动到一个新的循环中, 将其旋转并制作一个雪花!
@@ -2752,8 +2686,8 @@ zh-CN:
       courseE_bee_functions3_2018: 构建`获取5个`函数, 以便在这个关卡中使用。
       courseE_bee_functions4: "“移动并获得花蜜”函数会让蜜蜂转身并收集花蜜，然后会让蜜蜂返回出发的地方。\r\n\r\n用这个函数收集所有的花蜜。"
       courseE_bee_functions4_2018: "“移动并获得花蜜”函数会让蜜蜂转身并收集花蜜，然后会让蜜蜂返回出发的地方。\r\n\r\n用这个函数收集所有的花蜜。"
-      courseE_bee_functions5: 现在编写函数收集花的花蜜。
-      courseE_bee_functions5_2018: 现在编写函数收集花的花蜜。
+      courseE_bee_functions5: 现在编写函数来采花蜜。
+      courseE_bee_functions5_2018: 现在编写函数来采花蜜。
       courseE_bee_functions6: 创建一个函数, 并调用它来收集每朵花的花蜜, 并在每个蜂窝酿制蜂蜜。
       courseE_bee_functions6_2018: 创建一个函数, 并调用它来收集每朵花的花蜜, 并在每个蜂窝酿制蜂蜜。
       courseE_bee_functions6test: 创建一个函数, 并调用它来收集每朵花的花蜜, 并在每个蜂窝酿制蜂蜜。
@@ -2805,7 +2739,7 @@ zh-CN:
       courseE_farmer_functions3c_2018: 现在, 从代码中拉出模块并将它们放到 ** 函数定义 ** 中来填充函数。
       courseE_farmer_functions4: "很好！现在你有代码可以从任何大小的路径采摘南瓜。\r\n\r\n把代码拉进函数，这样可以让我们用不同的方法使用它...但首先让我们用它来再次过此关。"
       courseE_farmer_functions4b: 使用你的新函数来通关。
-      courseE_farmer_functions4b_2018: 用新函数来过关。
+      courseE_farmer_functions4b_2018: 使用你的新函数来通关。
       courseE_farmer_functions5: 你应该如何改动程序，来让这个函数能够用在每条路上？
       courseE_farmer_functions5a: 你应该如何改动程序，来让这个函数能够用在每条路上？
       courseE_farmer_functions5b: 这些庄稼都长成堆了。添加一些新的`当`循环到你的函数里，来确保能收集到所有的作物。
@@ -2837,7 +2771,7 @@ zh-CN:
       courseE_farmer_ramp11b_2018: 当有一堆土，移走它。
       courseE_farmer_ramp12: 现在，使用嵌套循环来通过这关。
       courseE_farmer_ramp12_2018: 现在，使用嵌套循环来通过这关。
-      courseE_farmer_ramp12_forswap: 现在使用嵌套循环来解决这个难题。
+      courseE_farmer_ramp12_forswap: 现在，使用嵌套循环来通过这关。
       courseE_farmer_ramp12_forswap_2018: 现在，使用嵌套循环来通过这关。
       courseE_farmer_ramp12a: 帮助农民正确地行走在道路上, 收集所有的莴苣。
       courseE_farmer_ramp12a_2018: 帮助农民正确地行走在道路上, 收集所有的莴苣。
@@ -2879,8 +2813,7 @@ zh-CN:
       courseE_multi_maze_ramp5: 躲开TNT炸药！
       courseE_playLab_challenge1: "当你有足够的分数，或者分数不够时，应该有一些后果。添加一些代码到`游戏胜利`和`游戏失败`函数中来确保游戏按照它y应该的方式进行。\n\r\n点击提示来获得一些主意！"
       courseE_playLab_challenge1_2018: "当你有足够的分数，或者分数不够时，应该有一些后果。添加一些代码到`游戏胜利`和`游戏失败`函数中来确保游戏按照它y应该的方式进行。\n\r\n点击提示来获得一些主意！"
-      courseE_playLab_embedded: 这是一个你可以玩的例子游戏 。用你的方向键移动狗。当狗碰到一只猫时, 他得一分!
-        得5分来赢得比赛!
+      courseE_playLab_embedded: 这是一个你可以玩的例子游戏 。用你的方向键移动狗。当狗碰到一只猫时, 他得一分! 得5分来赢得比赛!
       courseE_playLab_exampleProject2: 这是你用来选择卡片的代码 - 试试添加一些别的有趣的功能！
       courseE_playLab_scaffold1: 选择一个背景和地图，然后选择一个演员来作为你的游戏里的英雄。
       courseE_playLab_scaffold1_2018: 选择一个背景和地图，然后选择一个演员来作为你的游戏里的英雄。
@@ -2895,15 +2828,13 @@ zh-CN:
       courseE_playLab_scaffold6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
       courseE_playLab_scaffold6_2018: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
       courseE_playlab_challenge2: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击 "更多" 以查看您的挑战。
-      courseE_playlab_variables_challenge2: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击
-        "更多" 以查看您的挑战。
+      courseE_playlab_variables_challenge2: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击 "更多" 以查看您的挑战。
       courseE_video_createFunctions: 我们还没有创建函数的视频。这是一个占位符。。。
       courseE_video_createFunctions2: 我们还没有创建函数的视频。这是一个占位符。。。
       courseE_video_createFunctions2_2018: 我们还没有创建函数的视频。这是一个占位符。。。
       courseE_video_createFunctions_2018: 我们还没有创建函数的视频。这是一个占位符。。。
       courseF_IceAge_1: 通过把 "演员1说"模块拽出来并连接到 "当运行时" 事件的底部帮助 喜得 说 "你好!",
-      courseF_IceAge_10: 使用 "演员 __ 抛出" 命令让 喜得 (演员 1) 把心扔向格瑞尼 (演员 2), 并设置格瑞尼的心情,
-        让她在被击中时高兴。
+      courseF_IceAge_10: 使用 "演员 __ 抛出" 命令让 喜得 (演员 1) 把心扔向格瑞尼 (演员 2), 并设置格瑞尼的心情, 让她在被击中时高兴。
       courseF_IceAge_11: '是时候创造你自己的游戏或故事了！
 
 '
@@ -2946,7 +2877,7 @@ zh-CN:
       courseF_artist_for_Template_2018: 尝试使用上一关卡的一些代码，但转向89度来创建这个扭曲的方形螺旋。
       courseF_artist_for_challenge1: 你能想出如何重新创建这幅画吗？
       courseF_artist_for_challenge1_2018: 你能想出如何重新创建这幅画吗？
-      courseF_artist_for_challenge2: 你能想出如何用一个循环来重新创建这个绘图吗？
+      courseF_artist_for_challenge2: 你能想出如何使用一个简单的循环来重新创建这幅画吗？
       courseF_artist_for_challenge2_2018: 你能想出如何使用一个简单的循环来重新创建这幅画吗？
       courseF_artist_fwp1: 编辑函数`draw a square`（画一个正方形）来查找缺陷。
       courseF_artist_fwp1_2018: 编辑函数`draw a square`（画一个正方形）来查找缺陷。
@@ -2960,10 +2891,9 @@ zh-CN:
       courseF_artist_fwp4_2018: 编辑此函数，添加一个多边形边数的参数。
       courseF_artist_fwp5: '使用最后一个关卡中的函数来绘制这一系列形状。  '
       courseF_artist_fwp5_2018: '使用最后一个关卡中的函数来绘制这一系列形状。  '
-      courseF_artist_fwp6: '挑战: 用 "长度" 和 "边" 参数来编辑"画一个螺旋边缘"函数, 然后重新创建这些形状。'
-      courseF_artist_fwp6_2018: '挑战: 用`length`（长度）和`sides`（边长）参数来编辑`画一个螺旋边缘`函数,
-        然后重新创建这些形状。'
-      courseF_artist_fwp7: 完成' 画一个螺旋边缘 ' 的函数, 也需要求一个最小长度为中心的螺旋。
+      courseF_artist_fwp6: '挑战: 用`length`（长度）和`sides`（边长）参数来编辑`画一个螺旋边缘`函数, 然后重新创建这些形状。'
+      courseF_artist_fwp6_2018: '挑战: 用`length`（长度）和`sides`（边长）参数来编辑`画一个螺旋边缘`函数, 然后重新创建这些形状。'
+      courseF_artist_fwp7: 完成`画一个螺旋边缘`的函数来要求螺旋的中心也需要一个最小长度。
       courseF_artist_fwp7_2018: 完成`画一个螺旋边缘`的函数来要求螺旋的中心也需要一个最小长度。
       courseF_artist_fwp8: 你能想出如何使用刚才创建的函数来绘制这个图吗？
       courseF_artist_fwp8_2018: 你能想出如何使用刚才创建的函数来绘制这个图吗？
@@ -2999,8 +2929,7 @@ zh-CN:
       courseF_artist_variables8: 用上一关的来重建这个三角形的代码，但这次用`设置长度为`模块，来在循环的末尾处重置`length`（长度）变量为`length`+10。
       courseF_artist_variables8_2018: 用上一关的来重建这个三角形的代码，但这次用`设置长度为`模块，来在循环的末尾处重置`length`（长度）变量为`length`+10。
       courseF_artist_variables9: 看看当你重复最后一个关卡的代码30次, 而不是3次会是什么结果! 你可以选择任何颜色的线条或图案，
-      courseF_artist_variables9_2018: 看看当你重复最后一个关卡的代码30次, 而不是3次会是什么结果!
-        你可以选择任何颜色的线条或图案，
+      courseF_artist_variables9_2018: 看看当你重复最后一个关卡的代码30次, 而不是3次会是什么结果! 你可以选择任何颜色的线条或图案，
       courseF_artist_variablesFP: "**自由发挥：** 用你学到的知识来创建自己的图画。 "
       courseF_artist_variablesFP_2018: "**自由发挥：** 用你学到的知识来创建自己的图画。 "
       courseF_artist_variables_10: '这是最后一个关卡中的代码。请尝试以其他方式编辑该变量。  '
@@ -3012,12 +2941,10 @@ zh-CN:
       courseF_artist_variables_FP: "**自由发挥：** 用你学会的知识来创建自己的图画。 \r\n\r\n怎样使用变量来创建正方形，五边形或六边形？"
       courseF_artist_variables_challenge1: 你能创建一个`length`（长度）变量，并用它来创建这个图案吗？
       courseF_artist_variables_challenge1_2018: 你能创建一个`length`（长度）变量，并用它来创建这个图案吗？
-      courseF_artist_variables_challenge1a: 现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。
-        你能坚持下去直到你找到解决办法吗？
+      courseF_artist_variables_challenge1a: 现在你已经学到了做这个模样需要的所有东西! 这个关卡本来就很困难。 你能坚持下去直到你找到解决办法吗？
       courseF_artist_variables_challenge2: 现在你已经学到了做这个图案需要的所有东西！
       courseF_artist_variables_challenge2_2018: 现在你已经学到了做这个图案需要的所有东西！
-      courseF_artistembed_variables9: 看看当你重复最后一个关卡的代码30次, 而不是3次会是什么结果!
-        你可以选择任何颜色的线条或图案，
+      courseF_artistembed_variables9: 看看当你重复最后一个关卡的代码30次, 而不是3次会是什么结果! 你可以选择任何颜色的线条或图案，
       courseF_bee_conditionals10: 收集所有的花蜜并制作蜂蜜。
       courseF_bee_conditionals10_2018: 收集所有的花蜜并制作蜂蜜。
       courseF_bee_conditionals1_predict1: 看看云下是否有朵花。如果有一朵花, 就采集花蜜。
@@ -3085,7 +3012,7 @@ zh-CN:
       courseF_bee_functions_challenge1: 创建一个新的函数，当前方有路的时候，收集所有的花蜜和蜂蜜。
       courseF_bee_functions_challenge1_2018: 创建一个新的函数，当前方有路的时候，收集所有的花蜜和蜂蜜。
       courseF_bee_functions_challenge2: 用你所学的来解决这个关卡。
-      courseF_bee_functions_challenge2_2018: 用你所学的来完成这个关卡！
+      courseF_bee_functions_challenge2_2018: 用你所学的来解决这个关卡。
       courseF_bee_functions_challenge2_recursion: 收集所有的花蜜或酿造所有的蜂蜜!
       courseF_bee_fwp2: 将此代码拉入一个函数, 然后调用该函数以检查此行是否有花蜜。
       courseF_bee_fwp2_2018: 将此代码拉入一个函数, 然后调用该函数以检查此行是否有花蜜。
@@ -3166,8 +3093,7 @@ zh-CN:
       courseF_playlab_variables_challenge1_2018: '使用这些模块使演员分享一个敲门问答的笑话。 '
       courseF_playlab_variables_challenge2: 这个游戏将使用变量来保存得分。捉住小猫得2分。捉住企鹅得3分。当小猫和企鹅碰到时，分数就没了。正好得到10分时就赢了！
       courseF_playlab_variables_challenge2_2018: 这个游戏将使用变量来保存得分。捉住小猫得2分。捉住企鹅得3分。当小猫和企鹅碰到时，分数就没了。正好得到10分时就赢了！
-      courseF_playlab_variables_challenge3: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击
-        "更多" 以查看您的挑战。
+      courseF_playlab_variables_challenge3: 你能想出这个 "算命先生" 应用程序是如何工作的吗？单击 "更多" 以查看您的挑战。
       courseF_video_createFunctions: 我们还没有创建函数的视频。这是一个占位符。。。
       courseF_video_createFunctions_2018: 我们还没有创建函数的视频。这是一个占位符。。。
       course_playlab_variables1: 这是一个海盗。近来，他非常难以理解！
@@ -3185,14 +3111,13 @@ zh-CN:
       flappy_11_2018: 创建你自己的像素鸟游戏。你可以改变所有的有视效果，所有的规则，甚至重力。当你完成后，单击完成，让朋友在他们手机上试试你的手机游戏。
       flappy_1_2018: 将一个模块附加到"单击时"模块上，然后按"运行"。单击或点击屏幕去移动像素鸟到目标.
       flappy_2: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。当像素鸟撞地时，您的代码需要 ' 结束游戏 '。
-      flappy_2_2018: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。当像素鸟撞地时，您的代码需要 ' 结束游戏
-        '。
+      flappy_2_2018: 现在我们已经添加了一些地面。将一个块附加到"撞到地面时"块。当像素鸟撞地时，您的代码需要 ' 结束游戏 '。
       flappy_3: "“运行时”块允许你在游戏开始时运行你的代码. 尝试设置水平速度和扑向目标。"
       flappy_3_2018: "“运行时”块允许你在游戏开始时运行你的代码. 尝试设置水平速度和扑向目标。"
       flappy_4: Flappy将会穿越障碍，除非你编写代码使他碰撞上。将一个模块附加到"当击中一个障碍"块。当Flappy 撞上到第一组管道时，您的代码需要
         ' 结束游戏 '。
-      flappy_4_2018: Flappy将会穿越障碍，除非你编写代码使他碰撞上。将一个模块附加到"当击中一个障碍"块。当Flappy
-        撞上到第一组管道时，您的代码需要 ' 结束游戏 '。
+      flappy_4_2018: Flappy将会穿越障碍，除非你编写代码使他碰撞上。将一个模块附加到"当击中一个障碍"块。当Flappy 撞上到第一组管道时，您的代码需要
+        ' 结束游戏 '。
       flappy_5: 让我们添加一个记分牌。当 Flappy 穿过障碍计分数。将添加到"当通过一个障碍"块，然后当像素鸟通过第一个管道后得分。
       flappy_5_2018: 让我们添加一个记分牌。当 Flappy 穿过障碍计分数。将添加到"当通过一个障碍"块，然后当像素鸟通过第一个管道后得分。
       flappy_6: 在使得像素鸟飞的距离更小或更大之后，看看是否你仍然能得分。
@@ -3208,6 +3133,8 @@ zh-CN:
       frozen circle function: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。
       frozen circle: 圆形是一种特殊的形. 你可以计算出什么号码能取代问号来画圆形吗?
       frozen cross rotate dense: 让我们重复90次！ 90进入360是多少次？提示：这是一个非常小的数目。
+      frozen cross rotate dense_b: 让我们重复这行 **90** 次!
+      frozen cross rotate dense_test: 让我们重复这行 **90** 次!
       frozen cross rotate: 现在请尝试重复 10 次。每个行之间你需要转多少度？
       frozen cross: 将这些命令放到“重复”模块里来画一个加号。你注意到爱莎可以前后移动了吗？
       frozen diamond mini snowflake: 你知道每个雪花的形状都不同吗？让我们用另一个循环来重复平行四边形4次来创建一个新的雪花。在每个平行四边形之间转90度。
@@ -3250,7 +3177,7 @@ zh-CN:
       grade2_CaringForNewPet_0: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
       grade2_CaringForNewPet_1: 从工具箱中拖出另一个`向前移动`模块来完成代码。
       grade2_CaringForNewPet_10: 帮我到达那只猪。
-      grade2_CaringForNewPet_2courseC_maze_programming3: 有一个额外的块将导致小鸟坠落。将其拖回工具箱中扔掉它。
+      grade2_CaringForNewPet_2courseC_maze_programming3: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       grade2_CaringForNewPet_4: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
       grade2_CaringForNewPet_5: 帮我到达那只猪。
       grade2_MakeDogTag_1: 将模块拖到屏幕上，让艺术家在图中灰色线上画线。(每行100像素长)
@@ -3375,8 +3302,7 @@ zh-CN:
       grade3_robotFarmer_ConditionalsIntro_7: "看看这些洞！每个都需要不同数量的土。 \r\n\r\n你能很容易的用`当`循环来填满它们！"
       grade3_robotFarmer_ConditionalsIntro_8: 填满每条路尽头的洞。
       grade3_robotFarmer_ConditionalsIntro_9: "**挑战：** 用尽可能少的模块填满这些洞。 "
-      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 帮我用五铲子的土来填充这些洞。提示：
-        你可以把"重复"块放在"当"块里面试试。
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 帮我用五铲子的土来填充这些洞。提示： 你可以把"重复"块放在"当"块里面试试。
       grade4_arist_nested_loop_circles1: 评估：用嵌套循环来完成这幅画。
       grade4_arist_nested_loop_flags1: 循环下面的代码来创建一个风车。
       grade4_arist_nested_loop_polygons1: "循环这个图形10次。\r\n\r\n你的循环里每次需要转多少度呢？"
@@ -3437,11 +3363,11 @@ zh-CN:
       grade4_frozen_freeplay: 你已经正式成为艺术大师！创建一个冬季仙境。
       grade4_frozen_functions0: 如果要画一个圆，你知道应该在画问号的地方填上什么数字么？
       grade4_frozen_functions1a: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。
-      grade4_frozen_functions2: 现在让我们创建20个交叠的圆圈，在每个圆圈之间转18度。
+      grade4_frozen_functions2: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       grade4_frozen_functions3: 这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?
       grade4_frozen_functions4: 错综复杂的雪花模式可以用非常简单的形状来创建。 你可以重复5个大小为5的圆圈和5个大小为10的圆圈来做成一个模式吗?
       grade4_frozen_nested_loop_diamonds2: 你知道每个雪花的形状都不同吗？让我们用另一个循环来重复平行四边形4次来创建一个新的雪花。在每个平行四边形之间转90度。
-      grade4_frozen_nested_loop_diamonds3: 现在，让我们用重复模块重复10次来创建一个新的雪花。每个平行四边形之间向右转36度。
+      grade4_frozen_nested_loop_diamonds3: 現在，让我们创建一个新的雪花, 使用“重复”块来重复一个平行四边形10次，把每一个平行四边形之间转右36度
       grade4_frozen_square: 你好！我是艾伦代尔的安娜公主！我们一起应用“重复“块绘制一个正方形。这样一来，我们可以减少必须使用的代码块。你觉得“重复”块必须循环多少次（???）才能让里面的代码块绘制出一个正方形呢？
       grade4_frozen_square_loop1: 你好！我是艾伦代尔的安娜公主！我们一起应用“重复“块绘制一个正方形。这样一来，我们可以减少必须使用的代码块。你觉得“重复”块必须循环多少次（???）才能让里面的代码块绘制出一个正方形呢？
       grade4_frozen_square_loop2: 让我们绘制三个正方形，每绘制一个正方形后，别忘了先转120度后再继续绘制下一个正方形。
@@ -3452,8 +3378,7 @@ zh-CN:
       grade4_playlab_test: "用右方向键来发射馅饼。\r\n\r\n在游戏中，怎么才能得分呢？每次小狗用馅饼击中小猫时，往“points”（分数）变量上加1。用“当演员2碰到任何东西”来触发分数的更新。通过使用\"points
         = points + 1\"来增加分数。将分数增加到10分（每次只加1分！）来通过这一关。"
       grade4_playlab_test2: 这里有个叫做“跳”的函数，它能让你的演员跳100像素。运行程序，用方向箭头来移动小狗，用“跳”函数来收集所有的旗帜。
-      grade4_review_artist1: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。
-        (每一行是100个像素长)
+      grade4_review_artist1: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。 (每一行是100个像素长)
       grade4_review_artist2: 这个房子需要一个屋顶！提示：所有三面都具有相同的长度。
       grade4_review_artist3: |-
         “跳”模块会移动艺术家但不画线。通过使用“向前跳”块和“向前移动”块来画出虚线。
@@ -3467,7 +3392,7 @@ zh-CN:
       grade5_artist_binary11: 自由发挥：这是一张空白的画布。尽情画吧！
       grade5_artist_binary2: "这个函数从一个二进制的字符串里面获得1和0，然后指导小艺术家根据它们来从左到右，从上到下。当小艺术家看到1时，就会填满正方形，当看到0时，则什么也不做。\r\n\r\n运行一下代码，看看小艺术家是怎样用二进制来画出这个图形的。"
       grade5_artist_binary3: 哪个二进制字符串能让你循环8次来画出这个图像？
-      grade5_artist_binary4: 你能通过循环一个三位的二进制字符串（0和1）来画出这个图形吗？
+      grade5_artist_binary4: 你能通过循环3个二进制位（0和1）来画出这个图形吗？
       grade5_artist_binary5: 每个二进制字符串表达这个图形中的一行。你能重新排列他们，从而能够画出一张笑脸，而不是皱眉的脸吗？
       grade5_artist_binary6: 哪个6位的二进制字符串重复11次后能够画出这个图形?
       grade5_artist_binary7: 能让你重复并画出这个图形的最短的二进制字符串是什么?
@@ -3503,8 +3428,7 @@ zh-CN:
       grade5_artist_variables_freeplay15: "想再看一次启发人的设计或者提示吗？点击这里！\r\n\r\n除此之外，你也可以设计自己的图形！"
       grade5_artist_variables_freeplay16: 还想玩？这是空白的画布。想画什么就画什么吧！
       grade5_artist_variables_hexagons1: "让我们再试一次！\r\n\r\n你能通过设置长度变量为60，来画出这个六边形？"
-      grade5_artist_variables_letterT11: 这里有一些更复杂的代码，它也使用了一些上一关的概念 ——
-        你需要将“边数”变量设置成什么来画出这里的正方形？
+      grade5_artist_variables_letterT11: 这里有一些更复杂的代码，它也使用了一些上一关的概念 —— 你需要将“边数”变量设置成什么来画出这里的正方形？
       grade5_artist_variables_octagons13: "当一个图形有很多条边时，为了让它能显示在屏幕中，要让每条边都短一些。\n\r\n让我们重新创建这个算法来得到这个神奇的图形。为了不手动输入“长度”变量，让我们将“边数”变量放到一个“数学”模块中，来确保每个图形都能显示完整。每个多边形的边长都是300像素。\r\n需要提示吗？点击这里。"
       grade5_artist_variables_pentagon8: "用你在上一关中学到的来用边数变量创建这个六边形。\r\n\r\n看看如何就改一个值来画出一个三角形、正方形、五边形或者八边形？"
       grade5_artist_variables_pentagon9: 现在，重新创造上一关的算法，然后创造一个边长为150像素的五边形。
@@ -3523,7 +3447,7 @@ zh-CN:
       grade5_bee_for_loops4: 帮助蜜蜂收集所有的花蜜。
       grade5_bee_for_loops6: 你也能用计数循环递减。试着通过从5到1，每次减1来递减计数收集花蜜。
       grade5_bee_for_loops7: 通过每次增加2来收集所有的花。
-      grade5_bee_for_loops8: 你已经明白了！应该递增多少才能收集到3, 6, 9, 12, 15个花蜜？
+      grade5_bee_for_loops8: 你已经明白了！应该递增多少来收集3，6，9，12，15个花蜜？
       grade5_bee_for_loops9: 用`counter`（计数器）变量来用尽可能少的模块来走过这个花园。
       grade5_pixelation: 用二进制来编码任何你喜欢的图形。二进制语言只用'0'和'1'来代表。
       grade5_playlab_freeplay: '自由游戏时间！可以使用工具箱里的所有模块，玩的开心！ '
@@ -3544,7 +3468,9 @@ zh-CN:
       grade5_playlab_variables81: "我们已为你添加了上一关的函数。\r\n\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
         大于某个值时，调用level_up(升级) 函数。\r\n\r\n例如：“play_score” > 6\r\n\r\n玩游戏，并且达到第3级来到达下一关。 "
       grade5_playlab_variables9: "这里有个函数叫做`巡逻`。\r\n\r\n编辑`巡逻`来让猫向上移动400像素，再向下移动400像素。"
-      grade5_playlab_variables_freeplay: "自由游戏时间！这是除了使用过的所有变量，还有一些别的变量。\r\n\r\n注意：现在工具箱里有很多模块需要组织在一起！我们将这些模块放到了合适的分类中。花一些时间来看看每种类型都有哪些模块吧。当你看完后，可以用重复、变量和事件做出一个故事或者游戏。\r\n\r\n提示：往下滚动鼠标来查看工作区的所有命令。"
+      grade5_playlab_variables_freeplay: "自由发挥时间! 下面是我们在这个阶段所玩过的所有变量, 以及一些你可能需要的额外变量。\r\n\r\n注意到我们的工具箱中现在有这么多的模块,
+        它们需要整理! 在这里, 我们把每一块放到一个合适的类别中。花些时间去探索所有可用的东西。完成浏览后, 使用重复，变量和事件来制作游戏或故事。 \r\n\r\n提示:
+        向下滚动来查看工作区中的所有指令。"
       gradeK_sequence_4: 从头开始尝试这一个。
       gradek_artist_loops1: 帮助艺术家两次向前来画这条线。
       gradek_artist_loops3: 现在, 使用 `重复`循环来绘制这条线五次!
@@ -3566,7 +3492,7 @@ zh-CN:
       harvey_snowflake_artist2: 让你的雪花准备好可以进行3d 打印!
       harvey_tictactoe: 让我们玩游戏吧! 尽可能多地画 X。你能一排放3个吗？
       iceAgeLoopsforVideo: 你能只用一个`向前移动`模块来得到橡子吗？
-      iceage_click_hello: '你能帮喜得在你点击他的时候呼叫他的朋友们吗？ '
+      iceage_click_hello: '你能帮助喜得，在点击他的时候呼叫他的朋友们吗？ '
       iceage_click_hello_2018: '你能帮助喜得，在点击他的时候呼叫他的朋友们吗？ '
       iceage_free_play: '是时候创造你自己的游戏或故事了！
 
@@ -3574,7 +3500,9 @@ zh-CN:
       iceage_free_play_2018: '是时候创造你自己的游戏或故事了！
 
 '
-      iceage_free_playcourseF_IceAge_11: '是时候来创作你自己的游戏或者故事了！ '
+      iceage_free_playcourseF_IceAge_11: '是时候创造你自己的游戏或故事了！
+
+'
       iceage_hello1: 通过拖拽`说`模块出来，并连接`当运行时`事件下来帮助喜得说“你好！”
       iceage_hello1_2018: 通过拖拽`说`模块出来，并连接`当运行时`事件下来帮助喜得说“你好！”
       iceage_hello2: 使用`演员___ 说`模块两次来帮助曼尼和喜得相互打招呼。
@@ -3583,15 +3511,16 @@ zh-CN:
       iceage_move_events_2018: 写代码, 帮助 斯奎特 得到所有的橡子!
       iceage_move_to_actor: 当迭戈发现曼尼时, 通过将一个方块连接到`当演员触碰`事件下来播放声音。
       iceage_move_to_actor_2018: 当迭戈发现曼尼时, 通过将一个方块连接到`当演员触碰`事件下来播放声音。
-      iceage_move_to_flag: 斯奎特在找他的橡子！你能帮他移动最后200像素吗？
-      iceage_move_to_flag_2018: 斯奎特在找他的橡子！你能帮他移动最后200像素吗？
+      iceage_move_to_flag: 斯奎特 在找他的橡子! 你能帮他移动最后200像素吗？
+      iceage_move_to_flag_2018: 斯奎特 在找他的橡子! 你能帮他移动最后200像素吗？
       iceage_repeat: 重复左右移动来帮助格瑞尼做锻炼。
       iceage_repeat_2018: 重复左右移动来帮助格瑞尼做锻炼。
       iceage_sound_and_points: '你可以完成这个程序，使它在喜得和格瑞尼相撞的时候同时**发出声音**并**得一分**吗？ '
       iceage_sound_and_points_2018: '你可以完成这个程序，使它在喜得和格瑞尼相撞的时候同时**发出声音**并**得一分**吗？ '
-      iceage_throw_hearts: 使用`演员__ 扔`的命令使喜得(演员1) 向格瑞尼(演员2) 扔红心，并且当格瑞尼被红心砸中的时候，设定她的心情为开心。
-      iceage_throw_hearts_2018: 使用 "演员 __ 抛出" 命令让 喜得 (演员 1) 把心扔向格瑞尼 (演员
-        2), 并设置格瑞尼的心情, 让她在被击中时高兴。
+      iceage_throw_hearts: 使用 "演员 __ 抛出" 命令让 喜得 (演员 1) 把心扔向格瑞尼 (演员 2), 并设置格瑞尼的心情,
+        让她在被击中时高兴。
+      iceage_throw_hearts_2018: 使用 "演员 __ 抛出" 命令让 喜得 (演员 1) 把心扔向格瑞尼 (演员 2), 并设置格瑞尼的心情,
+        让她在被击中时高兴。
       iceage_warn_ice_age: 把场景切换到一个冰雪的背景，并且设定喜得 (演员1) 的速度为快速。
       iceage_warn_ice_age_2018: 把场景切换到一个冰雪的背景，并且设定喜得 (演员1) 的速度为快速。
       k-1 maze 1: 你能将我移到西边到达那只猪吗？
@@ -3608,8 +3537,7 @@ zh-CN:
       level 'grade3_Loops_8: 用尽可能少的模块来收集花蜜，并酿造蜂蜜。
       level 'grade3_Loops_9: 用最少的模块来收集花蜜，并在蜂窝那里酿造蜂蜜。
       level grade3_Loops_2: 这次，用循环来收集所有花蜜。
-      loop pet test: "上次你练习了如何用\"一直重复\"来让精灵永远做一些事情。这次，我们会用它来制作一个虚拟宠物。
-        \r\n\r\n这条狗的名字叫黛西。黛西非常喜欢胡萝卜点心。用\"拖动并放下\"模块将胡萝卜移动到黛西那里。"
+      loop pet test: "上次你练习了如何用\"一直重复\"来让精灵永远做一些事情。这次，我们会用它来制作一个虚拟宠物。 \r\n\r\n这条狗的名字叫黛西。黛西非常喜欢胡萝卜点心。用\"拖动并放下\"模块将胡萝卜移动到黛西那里。"
       loops_forvideo_angrybirds_ab: 用循环让鸟到猪那里！
       loops_forvideo_angrybirds_cf: 用循环让鸟到猪那里！
       loops_forvideo_bee_cf: 用循环帮助蜜蜂从所有花朵里采花蜜！
@@ -3655,11 +3583,11 @@ zh-CN:
       scrat 18 (copy 1): 这个“如果-否则”代码块检查这个条件是否成立，然后做一件事或另一件事。如果想让我得到橡子的活，你需要尝试使用这个“如果-否则”代码块。
       scrat 18: 这个“如果-否则”代码块检查这个条件是否成立，然后做一件事或另一件事。如果想让我得到橡子的活，你需要尝试使用这个“如果-否则”代码块。
       scrat 19 (copy 1): 让我们来再练习一次使用“如果/否则”块，你能第一次就成功么？
-      scrat 19: 最后一个“如果-否则”模块的练习，你能第一次就做正确吗？
+      scrat 19: 让我们来再练习一次使用“如果/否则”块，你能第一次就成功么？
       scrat 20: 你可以只添加3个代码块就帮我解决一个更复杂的迷宫吗？如果你做对了，我能走任何长度的曲线了。快一点！冰在融化！
       skratDebugVideo1: 让斯奎特到橡子那里。
       subgoal U3 L4 introducing subgoal labels: 介绍东方龟并移动龟。
-      subgoal U3L2 Using Simple Commands: 在上方和乌龟起始位置的左侧画一个 1 x 1 的正方形。点击查看完整的说明。
-      subgoalU3L2_TurtleSquare_right: 在正面和起始位置的右侧画一个正方形的。(单击此处可显示完整的说明)
+      subgoal U3L2 Using Simple Commands: 在龟的起始位置上方和左侧绘制一个1x1的正方形。单击以查看完整说明。
+      subgoalU3L2_TurtleSquare_right: 在起始位置的右前方绘制一个正方形。(单击以显示完整说明)
       u3-old-drawing-view: 做这个
       valentine_artist_03: 现在尝试自己练习!

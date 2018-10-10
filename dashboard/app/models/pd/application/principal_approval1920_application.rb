@@ -198,6 +198,10 @@ module Pd::Application
       end
     end
 
+    def self.filtered_labels(course)
+      ALL_LABELS
+    end
+
     def additional_text_fields
       [
         [:committed_to_master_schedule],

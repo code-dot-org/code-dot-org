@@ -119,6 +119,7 @@ Sound.prototype.stop = function () {
     } else if (this.audioElement) {
       // html 5 audio.
       this.audioElement.pause();
+      this.audioElement.currentTime = 0;
     }
   } catch (e) {
     if (e.name === 'InvalidStateError') {

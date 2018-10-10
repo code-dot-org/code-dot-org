@@ -1,3 +1,4 @@
+---
 hy:
   data:
     blocks:
@@ -102,8 +103,8 @@ hy:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'ճիշտ'
-            'false': 'կեղծ'
+            'true': ճիշտ
+            'false': կեղծ
       gamelab_getProp:
         options:
           PROPERTY:
