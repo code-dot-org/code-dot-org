@@ -48,8 +48,20 @@ a.category-link {
   opacity: 0.7;
 }
 
-.robotics-logo {
-  margin-right: 10px;
+.robotics-providers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.robotics-provider {
+  width: 182px;
+  height: 210px;
+  xfloat: left;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .purple-background {
