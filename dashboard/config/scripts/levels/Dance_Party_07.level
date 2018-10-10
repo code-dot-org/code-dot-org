@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -57,10 +57,7 @@
       "HOC Dance 6prediction_draft"
     ],
     "callout_json": "[]",
-    "default_song": "hammer",
-    "encrypted_examples": [
-
-    ]
+    "default_song": "hammer"
   },
   "published": true,
   "notes": "",
