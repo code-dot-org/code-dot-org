@@ -4,7 +4,6 @@ import {expect} from '../../../util/configuredChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
@@ -55,20 +54,13 @@ describe('RecentCourses', () => {
             linkToOverview={topCourse.linkToOverview}
             linkToLesson={topCourse.linkToLesson}
           />
-          <div>
-            <Notification
-              type={NotificationType.course}
-              notice="Find a course"
-              details="Try new courses to add them to your homepage."
-              buttonText="Find a course"
-              buttonLink="/courses"
-              dismissible={false}
-            />
-          </div>
+          <SetUpCourses
+            isTeacher
+            hasCourse
+          />
         </ContentContainer>
       </div>
     );
-    expect(wrapper.find('SetUpCourses').exists()).to.be.false;
     expect(wrapper.find('CourseCard').exists()).to.be.false;
     expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
   });
@@ -108,16 +100,10 @@ describe('RecentCourses', () => {
               />
             </div>
           </div>
-          <div>
-            <Notification
-              type={NotificationType.course}
-              notice="Find a course"
-              details="Try new courses to add them to your homepage."
-              buttonText="Find a course"
-              buttonLink="/courses"
-              dismissible={false}
-            />
-          </div>
+          <SetUpCourses
+            isTeacher
+            hasCourse
+          />
         </ContentContainer>
       </div>
     );
@@ -175,19 +161,12 @@ describe('RecentCourses', () => {
           <SeeMoreCourses
             courses={moreCourses.slice(4)}
           />
-          <div>
-            <Notification
-              type={NotificationType.course}
-              notice="Find a course"
-              details="Try new courses to add them to your homepage."
-              buttonText="Find a course"
-              buttonLink="/courses"
-              dismissible={false}
-            />
-          </div>
+          <SetUpCourses
+            isTeacher
+            hasCourse
+          />
         </ContentContainer>
       </div>
     );
-    expect(wrapper.find('SetUpCourses').exists()).to.be.false;
   });
 });

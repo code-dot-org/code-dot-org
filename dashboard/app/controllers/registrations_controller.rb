@@ -9,17 +9,50 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :verify_authenticity_token, only: [:set_age]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :create]
 
+  #
+  # GET /users/sign_up
+  #
   def new
+    # Used by old signup form
     session[:user_return_to] ||= params[:user_return_to]
+    # Used by new signup form
+    store_location_for(:user, params[:user_return_to]) if params[:user_return_to]
 
     if SignUpTracking.new_sign_up_experience?(session) && PartialRegistration.in_progress?(session)
       user_params = params[:user] || {}
       @user = User.new_with_session(user_params, session)
     else
       @already_hoc_registered = params[:already_hoc_registered]
-      SignUpTracking.begin_sign_up_tracking(session)
+      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
       super
     end
+  end
+
+  #
+  # POST /users/begin_sign_up
+  #
+  # Submit step 1 of the signup process for creating an email/password account.
+  #
+  def begin_sign_up
+    @user = User.new(begin_sign_up_params)
+    @user.validate_for_finish_sign_up
+    SignUpTracking.log_begin_sign_up(@user, session)
+
+    if @user.errors.blank?
+      PartialRegistration.persist_attributes(session, @user)
+      redirect_to new_user_registration_path
+    else
+      render 'new' # Re-render form to display validation errors
+    end
+  end
+
+  # GET /users/cancel
+  #
+  # Cancels the in-progress partial user registration and redirects to sign-up page.
+  #
+  def cancel
+    PartialRegistration.cancel(session)
+    redirect_to new_user_registration_path
   end
 
   #
@@ -48,6 +81,9 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to_account_update(successfully_updated)
   end
 
+  #
+  # POST /users
+  #
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
@@ -110,6 +146,10 @@ class RegistrationsController < Devise::RegistrationsController
         params[:data_transfer_agreement_at] = DateTime.now
       end
     end
+  end
+
+  def begin_sign_up_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
