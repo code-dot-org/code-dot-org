@@ -2748,6 +2748,8 @@ it:
               name: Programmazione a Staffetta
             Introduction to Online Puzzles:
               name: Introduzione agli Esercizi Online
+            Nested Loops in Maze:
+              name: Cicli Annidati nel Labirinto
         coursec-2018:
           title: Corso C (2018)
           assignment_family_title: Corso C
