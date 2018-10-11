@@ -698,6 +698,11 @@ function updateEvents() {
     events.any = true;
     events['cue-seconds'][World.cues.seconds.splice(0, 1)] = true;
   }
+
+  while (World.cues.measures.length > 0 && World.cues.measures[0] < exports.getCurrentMeasure()) {
+    events.any = true;
+    events['cue-measures'][World.cues.measures.splice(0, 1)] = true;
+  }
 }
 
 exports.registerValidation = function (callback) {
