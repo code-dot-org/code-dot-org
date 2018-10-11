@@ -10,17 +10,11 @@ cs:
         options:
           GROUP:
             sprites: vše
-          MOVE:
-            '"next"': Další
-            '"prev"': Předchozí
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Další
-            '"prev"': Předchozí
           DIR:
             '1': "→"
             "-1": "←"
@@ -33,17 +27,11 @@ cs:
         options:
           GROUP:
             sprites: vše
-          MOVE:
-            '"next"': Další
-            '"prev"': Předchozí
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Další
-            '"prev"': Předchozí
           DIR:
             '1': "→"
             "-1": "←"
@@ -71,6 +59,7 @@ cs:
           LOCATION:
             "{x: 100, y: 200}": vlevo
             "{x: 300, y: 200}": vpravo
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodně
       Dancelab_randomColor:
         text: náhodná barva
       Dancelab_setDanceSpeed:
@@ -82,6 +71,11 @@ cs:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': výška
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': velikost
@@ -256,6 +250,12 @@ cs:
             '"down"': šipka dolů
             '"left"': šipka vlevo
             '"right"': šipka vpravo
+      RyanLab_moveForward:
+        text: posunout vpřed
+      RyanLab_turnLeft:
+        text: otočit vlevo
+      RyanLab_turnRight:
+        text: otočit vpravo
       craft_ifPath:
         options:
           DIR:

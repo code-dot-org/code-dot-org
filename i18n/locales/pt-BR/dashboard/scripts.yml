@@ -959,6 +959,8 @@ pt-BR:
               name: Estúdio
             Text Compression:
               name: Compressão de texto
+            Web Lab:
+              name: Laboratório Web
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'

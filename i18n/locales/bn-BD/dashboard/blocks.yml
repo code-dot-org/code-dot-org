@@ -8,17 +8,11 @@ bn:
             '"seconds"': সেকেন্ড
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ bn:
             '"height"': উচ্চতা
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ bn:
           LOCATION:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
       Dancelab_randomColor:
         text: যেকোনো রঙ
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ bn:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': আকার
@@ -224,6 +218,12 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
+      RyanLab_moveForward:
+        text: সামনে এগিয়ে যান
+      RyanLab_turnLeft:
+        text: বামে যান
+      RyanLab_turnRight:
+        text: ডানে যান
       craft_ifPath:
         options:
           DIR:

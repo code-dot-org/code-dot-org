@@ -80,6 +80,7 @@ bn:
     age: 'বয়স'
     user_type: 'আপনি কি একজন ছাত্র বা শিক্ষক?'
     submit: 'সাইন আপ'
+    next: 'পরবর্তী'
     teacher: 'আপনি কি শিক্ষক?'
     valid_username: "লভ্য!"
     invalid_username: "ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে"

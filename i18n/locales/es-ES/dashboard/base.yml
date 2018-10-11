@@ -116,6 +116,7 @@ es:
     age: 'Edad'
     user_type: '¿Eres estudiante o profesor?'
     submit: 'Registrarse'
+    next: 'Siguiente'
     teacher: '¿Eres profesor/a?'
     valid_username: "¡Disponible!"
     invalid_username: "El Nombre de usuario debe tener al menos 5 caracteres"

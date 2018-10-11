@@ -1244,6 +1244,8 @@ th:
               name: การเขียนกระดาษกราฟ
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
         coursec-2018:
           assignment_family_title: คอร์ส C
           stages:

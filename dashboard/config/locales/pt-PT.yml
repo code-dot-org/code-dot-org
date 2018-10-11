@@ -118,6 +118,7 @@ pt:
     age: Idade
     user_type: Aluno ou professor?
     submit: Criar conta
+    next: Seguinte
     teacher: É um professor?
     valid_username: Disponível!
     invalid_username: O nome de utilizador tem de ter, pelo menos, 5 caracteres

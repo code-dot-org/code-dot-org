@@ -11,8 +11,6 @@ fil:
           GROUP:
             sprites: lahat
           MOVE:
-            '"next"': Susunod
-            '"prev"': Nakaraan
             MOVES.Rest: Wala
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ fil:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Susunod
-            '"prev"': Nakaraan
             MOVES.Rest: Wala
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ fil:
           GROUP:
             sprites: lahat
           MOVE:
-            '"next"': Susunod
-            '"prev"': Nakaraan
             MOVES.Rest: Wala
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ fil:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Susunod
-            '"prev"': Nakaraan
             MOVES.Rest: Wala
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ fil:
           LOCATION:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
       Dancelab_randomColor:
         text: iba-ibang kulay
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ fil:
           EFFECT:
             '"none"': Wala
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': sukat
@@ -226,6 +224,11 @@ fil:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kaliwa
+            "{x: 300, y: 200}": kanan
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -274,6 +277,12 @@ fil:
             '"down"': pababa na arrow
             '"left"': kaliwang arrow
             '"right"': kanang arrow
+      RyanLab_moveForward:
+        text: umabante
+      RyanLab_turnLeft:
+        text: kumaliwa
+      RyanLab_turnRight:
+        text: kumanan
       craft_ifPath:
         options:
           DIR:

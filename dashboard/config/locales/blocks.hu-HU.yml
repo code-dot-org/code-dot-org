@@ -10,17 +10,11 @@ hu:
         options:
           GROUP:
             sprites: összes
-          MOVE:
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
@@ -33,17 +27,11 @@ hu:
         options:
           GROUP:
             sprites: összes
-          MOVE:
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
@@ -71,6 +59,7 @@ hu:
           LOCATION:
             "{x: 100, y: 200}": balra
             "{x: 300, y: 200}": jobbra
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
       Dancelab_randomColor:
         text: Véletlen szín
       Dancelab_setDanceSpeed:
@@ -82,6 +71,11 @@ hu:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"height"': magasság
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': méret
@@ -252,6 +246,12 @@ hu:
             '"down"': lefelé nyíl
             '"left"': balra nyíl
             '"right"': jobbra nyíl
+      RyanLab_moveForward:
+        text: előrelépni
+      RyanLab_turnLeft:
+        text: fordulj balra
+      RyanLab_turnRight:
+        text: fordulj jobbra
       craft_ifPath:
         options:
           DIR:

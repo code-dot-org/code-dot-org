@@ -8,17 +8,11 @@ ca:
             '"seconds"': segons
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Següent
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Següent
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ ca:
             '"height"': alçcada
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Següent
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Següent
-            '"prev"': Anterior
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ ca:
           LOCATION:
             "{x: 100, y: 200}": esquerra
             "{x: 300, y: 200}": dret
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
       Dancelab_randomColor:
         text: color aleatori
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ ca:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"height"': alçcada
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': mida
@@ -224,6 +218,12 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
+      RyanLab_moveForward:
+        text: avança
+      RyanLab_turnLeft:
+        text: gira a l'esquerra
+      RyanLab_turnRight:
+        text: gira a la dreta
       craft_ifPath:
         options:
           DIR:

@@ -663,29 +663,34 @@ it:
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-3#VIDEO" target="_blank">Video doppiato in italiano</a>
       CSDU2 Color Blindness: "# Filtro daltonici\r\n\r\n\r\n\r\n\n"
       Color Blindness Filter: "# Filtro daltonici\r\n\r\n\r\n\r\n\n"
-      Course 4 Artist 10: |-
-        <img src="https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png"
-        width="150px;" style="mix-blend-mode: multiply;" /><br>
-        Ecco il codice per una figura interessante.<br>
-        <br>
-        Che cosa succede se la ripeti più volte? Nota che il codice per disegnarla fa ruotare l'artista di <i>420 gradi</i> in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente <i>60 gradi a destra</i> rispetto alla direzione iniziale.<br>
-        <br>
-        Se ripeti per 6 volte questo codice così com'è, ottieni una rotazione totale pari a 6x60, ossia un giro completo di 360 gradi.<br>
-        <img
-        src="https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png"  width="500px;"  style="mix-blend-mode:
-        multiply;" /><br>
-        <a href="https://studio.code.org/c/105644852" target="_blank">Vedi la soluzione</a>.<br>
-        <br>
-        Se vuoi fare un giro completo con solo 4 ripetizioni, l'artista deve ruotare di 360 gradi/4 = 90 gradi ogni volta. Puoi farlo aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura (dato che 60+30 = 90).<br>
-        <img src="https://programmailfuturo.it/images/codeorg/4-3-11-a.png"
-        width="500px;" style="mix-blend-mode: multiply;" /><br>
-        <a href="https://studio.code.org/c/120106816" target="_blank">Vedi la soluzione</a>.<br>
-        <br>
-        Se vuoi invece ripetere la figura 12 volte, l'artista deve effettuare una rotazione di 360 gradi/12 = 30 gradi ad ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti 60-30 = 30).<br>
-        <img src="https://programmailfuturo.it/images/codeorg/4-3-11-b.png"
-        width="500px;" style="mix-blend-mode: multiply;" />
-        <br>
-        <a href="https://studio.code.org/c/120106805" target="_blank">Vedi la soluzione</a>.
+      Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
+        width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tempo di giocare:**
+        \ Ecco il codice per una figura interessante.   \n\nChe cosa succede se la
+        ripeti più volte, girando ad ogni iterazione?   \n\nNota che il codice per
+        disegnarla fa ruotare l'artista di *420 gradi* in totale. Ciò significa che,
+        una volta completata la figura, l'artista sarà rivolto in una direzione differente
+        rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente *60
+        gradi a destra* rispetto alla direzione iniziale.\n\n<hr/>\n\n<h4>\n<details>\n\n<summary>\n\n<b>Ripeti
+        4</b>\n\n</summary>\n<br/>\nSe vuoi fare un giro completo con solo 4 ripetizioni,
+        l'artista deve ruotare di **360 gradi/4 = 90 gradi** ogni volta. Puoi farlo
+        aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura
+        (dato che **60+30 = 90**).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-a.png\"\nwidth=\"500px;\"
+        style=\"mix-blend-mode: multiply;\" /><br/>\n<a href=\"https://studio.code.org/c/120106816\"
+        target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti
+        6</b>\n\n</summary>\n<br/>\nSe ripeti per 6 volte questo codice così com'è,
+        ottieni una rotazione totale pari a **6x60**, ossia un giro completo di **360
+        gradi**.<br>\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"
+        \ width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" /><br/>\n<a href=\"https://studio.code.org/c/105644852\"
+        target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti
+        12</b>\n\n</summary>\n\n<br/>\nSe vuoi invece ripetere la figura 12 volte,
+        l'artista deve effettuare una rotazione di **360 gradi/12 = 30 gradi** ad
+        ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista
+        deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti
+        60-30 = 30).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-b.png\"\nwidth=\"500px;\"
+        style=\"mix-blend-mode: multiply;\" />\n<br/>\n<a href=\"https://studio.code.org/c/120106805\"
+        target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\nNow
+        it's your turn!  Can you recreate each image by repeating the starting shape?
+        \ "
       Course 4 Artist 11: |-
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
         width="200px"/><br>
@@ -925,12 +930,24 @@ it:
         <br>
         Clicca su "Esegui" ed utilizza questa nuova funzione per raccogliere tutte le bandierine muovendo il cane con i tasti freccia.
       Course 4 Play Lab Params 10: |-
-        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br>
-        <br>
-        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score` > 6).<br>
-        <br>
-        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.<br>
-        <br>
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.
+        <hr/>
+
+
+        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore.
+
+
+
+
+        </h4>
+
+        *Per esempio: `player_score` > 6*
+
+
+        <hr/>
+
+        *Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.*
+
         Nota: nella funzione `level_up` viene usata la variabile `enemy_speed` che significa <i>velocità del nemico</i>.
       Course 4 Play Lab Params 2: |-
         Ora le bandierine sono troppo in alto per poterle raggiungere con la funzione `jump` (<i>salta</i>)! Dovresti associare alle frecce `verso l'alto` e `verso il basso` una funzione che consenta di avere salti di diverse altezze.<br>
@@ -939,11 +956,10 @@ it:
         <br>
         - La freccia verso l'alto dovrebbe permettere al cane di fare un salto in alto di 200 pixel,<br>
         - la freccia verso il basso un salto in alto di soli 100 pixel.
-      Course 4 Play Lab Params 3: "Nella funzione `jump` (<i>salta</i>) è stato aggiunto
-        un ulteriore parametro in modo da poterla usare con diversi personaggi. Ogni
-        `actor` (</i>personaggio</i>) è rappresentato da un numero, a partire da uno.<br>\n<br>\nModifica
-        la funzione `jump` (<i>salta</i>) in modo che il suo codice usi il parametro
-        `actor` (</i>personaggio</i>), oltre al parametro `height` (<i>altezza</i>). "
+      Course 4 Play Lab Params 3: |-
+        Nella funzione `jump` (<i>salta</i>) è stato aggiunto un ulteriore parametro in modo da poterla usare con diversi personaggi. Ogni `actor` (</i>personaggio</i>) è rappresentato da un numero, a partire da uno.
+
+        Modifica la funzione `jump` (<i>salta</i>) in modo che il suo codice usi il parametro `actor` (</i>personaggio</i>), oltre al parametro `height` (<i>altezza</i>).
       Course 4 Play Lab Params 4: In questo esercizio c'è una funzione chiamata `patrol`
         (<i>pattuglia</i>) in cui devi inserire il codice che serve per far muovere
         il gatto prima in su e poi in giù di 400 pixel.
@@ -972,10 +988,10 @@ it:
         il cane con un sandwich.<br>\n<br>\nUna volta concluse queste modifiche clicca
         su \"Esegui\" per giocare. Quando il punteggio arriva a 6 si passa all'esercizio
         successivo. "
-      Course 4 Play Lab Vars 1: In questo esercizio non devi scrivere alcun codice.
-        Devi solo premere "Esegui" per giocare! <br> <br> Qui sei il cane che sta
-        cercando di raccogliere più bandierine del gatto. Utilizza la freccia verso
-        il basso per muovere il cane. Premi "Termina" quando hai finito di giocare.
+      Course 4 Play Lab Vars 1: |-
+        In questo esercizio non devi scrivere alcun codice. Devi solo premere "Esegui" per giocare!
+
+        Qui sei il cane che sta cercando di raccogliere più bandierine del gatto. Utilizza la freccia verso il basso per muovere il cane. Premi "Termina" quando hai finito di giocare.
       Course 4 Play Lab Vars 2: |-
         Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata `dog_speed` (<i>velocità del cane</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine, vince!
         <br><a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO" target="_blank">Video doppiato in italiano</a>
@@ -988,14 +1004,15 @@ it:
         Modifica il valore a cui viene impostata `height`, in modo che il cane possa
         saltare abbastanza in alto da arrivare a raggiungere tutte le bandierine.
       Course 4 Play Lab Vars 6: |-
-        Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>
-        <br>
-        Come vengono assegnati i punti? <br>
-        Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>
-        <br>
-        Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>
-        <br>
-        Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+        Come vengono assegnati i punti?
+
+        1. Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.
+
+        2. Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`
+
+        3. Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+
+        **Nota:** Utilizza la freccia verso destra per far lanciare al cane una fetta di torta!
       Course 4 Play Lab Vars 7: |-
         Bello! Ora facciamo in modo che il gioco non sia troppo facile.<br>
         <br>
@@ -1081,14 +1098,17 @@ it:
         width="250px"/><br>
         <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
       Course 4 SCV 3: |-
-        <b>Super Sfida sulle variabili:</b> ora hai imparato tutto quello che devi sapere per risolvere un esercizio difficile come questo! Il gioco che ti proponiamo di realizzare è complicato. Ce la fai a perseverare fino a trovare la soluzione?<br>
-        <hr>
-        Questo è un gioco di inseguimenti!  Muovendo il cane, tocca il gatto per ottenere 2 punti e il pinguino per ottenere 3 punti.  Arriva <u>esattamente</u> a 10 punti per vincere! Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br>
-        <b>
-        Aggiungi i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.<br>
-        - Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando i tasti freccia?<br>
-        - Come puoi aggiungere punti quando il cane tocca il gatto (personaggio 2) o il pinguino (personaggio 3)?<br>
-        - Come puoi togliere un punto quando il gatto ed il pinguino si toccano?</b>
+        <b>Super Sfida sulle variabili:</b> Ora hai imparato tutto quello che devi sapere per risolvere un esercizio difficile come questo! Il gioco che ti proponiamo di realizzare è complicato. Ce la fai a perseverare fino a trovare la soluzione?
+
+        ---
+
+
+        Questo è un gioco di inseguimenti!  Muovendo il cane, tocca il gatto per ottenere 2 punti e il pinguino per ottenere 3 punti.  Arriva <u>esattamente</u> a 10 punti per vincere! Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.
+
+        **Aggiungi i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.**
+        - **Come puoi muovere il cane (personaggio 1) in tutte le direzioni utilizzando i tasti freccia?**
+        - **Come puoi aggiungere punti quando il cane tocca il gatto (personaggio 2) o il pinguino (personaggio 3)?**
+        - **Come puoi togliere un punto quando il gatto ed il pinguino si toccano?**
       Course 4 SCV 4: "<b>Super Sfida sulle variabili:</b> risolvi questo esercizio
         con il minore numero possibile di blocchi!"
       Course 4 SCV 5: "<b>Super Sfida sulle variabili:</b> risolvi questo esercizio
@@ -1119,32 +1139,47 @@ it:
         destra per muoverti, e la freccia verso l'alto per saltare. Riesci a raccogliere
         tutte le bandierine?
       CourseF_PlayLab_vars6: |-
-        Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>
-        <br>
-        Come vengono assegnati i punti? <br>
-        Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>
-        <br>
-        Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>
-        <br>
-        Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+        <h5><b>
+        Come vengono assegnati i punti?
+        </b></h5>
+        <br/>
+
+        1. Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta. <br/>  <br/>
+        2. Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`  <br/>  <br/>
+        3. Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+
+        <br/><br/>
+        <h4>
+        **Nota:** Usa la freccia verso destra per far lanciare al cane una fetta di torta!
+        </h4>
       CourseF_PlayLab_vars7: |-
-        Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>
-        <br>
-        Come vengono assegnati i punti? <br>
-        Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>
-        <br>
-        Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>
-        <br>
-        Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+        <h5><b>
+        Come vengono assegnati i punti?
+        </b></h5>
+        <br/>
+
+        1. Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta. <br/>  <br/>
+        2. Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`  <br/>  <br/>
+        3. Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+
+        <br/><br/>
+        <h4>
+        **Nota:** Usa la freccia verso destra per far lanciare al cane una fetta di torta!
+        </h4>
       CourseF_PlayLab_vars8: |-
-        Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>
-        <br>
-        Come vengono assegnati i punti? <br>
-        Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>
-        <br>
-        Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>
-        <br>
-        Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+        <h5><b>
+        Come vengono assegnati i punti?
+        </b></h5>
+        <br/>
+
+        1. Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta. <br/>  <br/>
+        2. Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`  <br/>  <br/>
+        3. Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+
+        <br/><br/>
+        <h4>
+        **Nota:** Usa la freccia verso destra per far lanciare al cane una fetta di torta!
+        </h4>
       CourseF_PlayLab_vars9: |-
         Bello! Ora facciamo in modo che il gioco non sia troppo facile.<br>
         <br>
@@ -1292,19 +1327,23 @@ it:
       Fish Tank Predict: "**Fai una previsione**: Che cosa pensi accadrà quando eseguirai
         questo codice?"
       Food Fight!: |-
-        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br>
-        <br>
-        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score` > 6).<br>
-        <br>
-        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.<br>
-        <br>
-        Nota: nella funzione `level_up` viene usata la variabile `enemy_speed` che significa <i>velocità del nemico</i>.
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.
+        <hr/>
+
+        <h4>
+        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore.<br/><br/>
+        </h4>
+        <i>Per esempio: `player_score` > 6</i>
+
+
+        <hr/>
+        <i>Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.</i>
       Function intro Ryan: |-
-        Usa due volte la funzione `costruisci ponte` per creare un sentiero fino alla torcia di pietrarossa.
+        Usa due volte la funzione `costruisci un ponte` per creare un sentiero fino alla torcia di pietrarossa.
 
-        Nella tua area di lavoro c'è una **funzione** chiamata `costruisci ponte`.  Tutto il codice che ti serve per attraversare il fiume è lì dentro!
+        Nella tua area di lavoro c'è una **funzione** chiamata `costruisci un ponte`.  Tutto il codice che ti serve per attraversare il fiume è lì dentro!
 
-        Trascina due volte il piccolo blocco verde <xml> <block type="procedures_callnoreturn" id="callMe"><mutation name="costruisci ponte"/></block></xml> nell'area di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia di pietrarossa [redstone_torch].
+        Trascina due volte il piccolo blocco verde <xml> <block type="procedures_callnoreturn" id="callMe"><mutation name="costruisci un ponte"/></block></xml> nell'area di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia di pietrarossa [redstone_torch].
       Geometric Pattern: "**Idea per un progetto:** Crea un modello utilizzando idee
         geometriche come forme. Realizzarlo richiede pianificazione e persistenza!"
       Geometric Sun: "**Idea per un progetto:** Crea un modello utilizzando idee geometriche
@@ -1417,8 +1456,8 @@ it:
       MC_HOC_2017_06_Kiki: "Un altro fiume, ma questo è molto più largo!  \r\n\r\nCorreggi
         questo codice per aiutare l'Agent a costruire un ponte sull'acqua."
       MC_HOC_2017_07_Cole: "C'è del ghiaccio che blocca il percorso!  \r\n \r\nLa
-        funzione `clear path` (*libera il passaggio*) può aiutarti a rimuovere il
-        ghiaccio e far arrivare {currentPlayerName} fino al vagonetto [minecart_normal]! "
+        funzione `libera il passaggio` può aiutarti a rimuovere il ghiaccio e far
+        arrivare {currentPlayerName} fino al vagonetto [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "I cicli non sono l'unico modo per ripetere il codice!
         \ \r\n\r\nGuarda, ti abbiamo preparato una funzione chiamata \"elimina i cactus\"
         che farà il lavoro sporco e rimuoverà i cactus ogni volta che la userai. Usa
@@ -1636,9 +1675,13 @@ it:
         viene chiamato <i>passo</i>. Ogni volta che il ciclo viene eseguito, la variabile
         `counter` (<i>contatore</i>) cambia del valore indicato dal <i>passo</i>.
         Prova a raccogliere il nettare da questi fiori usando un passo di 2.
-      NEW Course 4 Bee For Loops 7: |-
-        Cosa devi fare in questo esercizio per raccogliere 3, 6, 9, 12, 15 dosi di nettare mentre ti sposti nel giardino? Il segreto è nella variabile `counter` (<i>contatore</i>)! Combina la variabile `counter` e un blocco matematico per spostarti e contemporaneamente raccogliere la giusta quantità di nettare.<br>
-        Ricordati che se il ciclo deve contare "a crescere" il valore del passo deve corrispondere ad un incremento (quindi un numero positivo).
+      NEW Course 4 Bee For Loops 7: |+
+        Ora, combiniamo la variabile `counter` e un blocco matematico per spostarti e contemporaneamente raccogliere la giusta quantità di nettare.
+
+        Cosa devi fare in questo esercizio per raccogliere 3, 6, 9, 12, 15 dosi di nettare mentre ti sposti nel giardino? Il segreto è nella variabile `counter` (<i>contatore</i>)!
+
+        Ricordati che se il ciclo conta "a crescere", ad ogni iterazione del ciclo il valore del passo viene sommato alla variabile "counter" e quindi corrisponde ad un incremento.
+
       NEW Course 4 Bee For Loops 8: Questo codice è da completare! Quale deve essere
         il passo in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi
         di nettare?
@@ -1747,6 +1790,8 @@ it:
         **Fai una previsione:** Questa è Geraldine, la tua nuova giraffa domestica.
 
         Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai su di lei?
+      Virtual Pet 1 fix: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa
+        pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai su di lei?"
       Virtual Pet 1-validated: Questa è Geraldine, la tua nuova giraffa domestica.
         Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai su di lei?
       Virtual Pet 1: "Questa è Geraldine, la tua nuova giraffa domestica.  \n\nCosa
@@ -2033,7 +2078,7 @@ it:
       courseA_collector_loops2: "Raccogli tutte e tre le perle! Muovi Laurel su ogni
         pezzo del tesoro e poi usa questo blocco:\r\n <xml><block type=\"collector_collect\"/></xml>\n"
       courseA_collector_loops2_2018: "Raccogli tutte e tre le perle! Muovi Laurel
-        su ogni pezzo del tesoro e poi usa questo blocco:\r\n <xml><block type=\"collector_collect\"/></xml>\n"
+        su ogni pezzo del tesoro e poi usa questo blocco:\r\n <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: |-
         Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?
         <xml><block type="maze_moveEast"/></xml>
@@ -4458,6 +4503,13 @@ it:
 
         - Le finestre del piano di sopra distano 50 pixel una dall'altra.
         - Le finestre del piano terra si trovano 100 pixel al di sotto delle precedenti.
+      courseE_artist_functions7_2018: "Disegnare singolarmente tutte queste finestra
+        sarebbe una noia!  \n\nProvare a risolvere questo esercizio creando la funzione
+        'disegna una finestra' e richiamandola cinque volte. Fai attenzione alla porta!\n\n---
+        \ \n- Ogni finestra è composta da quattro riquadri da **25** pixel di lato.\n-
+        Le finestre del piano di sopra si disegnano facendo un salto di **100** pixel
+        tra una e l'altra.  \n- Quelle del piano terra si raggiungono facendo un salto
+        di **150** pixel dal piano di sopra."
       courseE_artist_functions8: |-
         **Sfida:** Sai che puoi anche richiamare le funzioni *dall'interno* di altre funzioni?
 
@@ -5668,29 +5720,34 @@ it:
         funzione `disegna una finestra` e richiamandola cinque volte. Stai attento
         alla porta!\n\n- Le finestre del piano di sopra distano 50 pixel una dall'altra.\n-
         Le finestre del piano terra si trovano 100 pixel al di sotto delle precedenti."
-      grade4_artist_nestedLoops_challenge: |-
-        <img src="https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png"
-        width="150px;" style="mix-blend-mode: multiply;" /><br>
-        Ecco il codice per una figura interessante.<br>
-        <br>
-        Che cosa succede se la ripeti più volte? Nota che il codice per disegnarla fa ruotare l'artista di <i>420 gradi</i> in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente <i>60 gradi a destra</i> rispetto alla direzione iniziale.<br>
-        <br>
-        Se ripeti per 6 volte questo codice così com'è, ottieni una rotazione totale pari a 6x60, ossia un giro completo di 360 gradi.<br>
-        <img
-        src="https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png"  width="500px;"  style="mix-blend-mode:
-        multiply;" /><br>
-        <a href="https://studio.code.org/c/105644852" target="_blank">Vedi la soluzione</a>.<br>
-        <br>
-        Se vuoi fare un giro completo con solo 4 ripetizioni, l'artista deve ruotare di 360 gradi/4 = 90 gradi ogni volta. Puoi farlo aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura (dato che 60+30 = 90).<br>
-        <img src="https://programmailfuturo.it/images/codeorg/4-3-11-a.png"
-        width="500px;" style="mix-blend-mode: multiply;" /><br>
-        <a href="https://studio.code.org/c/120106816" target="_blank">Vedi la soluzione</a>.<br>
-        <br>
-        Se vuoi invece ripetere la figura 12 volte, l'artista deve effettuare una rotazione di 360 gradi/12 = 30 gradi ad ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti 60-30 = 30).<br>
-        <img src="https://programmailfuturo.it/images/codeorg/4-3-11-b.png"
-        width="500px;" style="mix-blend-mode: multiply;" />
-        <br>
-        <a href="https://studio.code.org/c/120106805" target="_blank">Vedi la soluzione</a>.
+      grade4_artist_nestedLoops_challenge: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
+        width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Tempo di giocare:**
+        \ Ecco il codice per una figura interessante.   \n\nChe cosa succede se la
+        ripeti più volte, girando ad ogni iterazione?   \n\nNota che il codice per
+        disegnarla fa ruotare l'artista di *420 gradi* in totale. Ciò significa che,
+        una volta completata la figura, l'artista sarà rivolto in una direzione differente
+        rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente *60
+        gradi a destra* rispetto alla direzione iniziale.\n\n<hr/>\n\n<h4>\n<details>\n\n<summary>\n\n<b>Ripeti
+        4</b>\n\n</summary>\n<br/>\nSe vuoi fare un giro completo con solo 4 ripetizioni,
+        l'artista deve ruotare di **360 gradi/4 = 90 gradi** ogni volta. Puoi farlo
+        aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura
+        (dato che **60+30 = 90**).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-a.png\"\nwidth=\"500px;\"
+        style=\"mix-blend-mode: multiply;\" /><br/>\n<a href=\"https://studio.code.org/c/120106816\"
+        target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti
+        6</b>\n\n</summary>\n<br/>\nSe ripeti per 6 volte questo codice così com'è,
+        ottieni una rotazione totale pari a **6x60**, ossia un giro completo di **360
+        gradi**.<br>\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"
+        \ width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" /><br/>\n<a href=\"https://studio.code.org/c/105644852\"
+        target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary>\n\n<b>Ripeti
+        12</b>\n\n</summary>\n\n<br/>\nSe vuoi invece ripetere la figura 12 volte,
+        l'artista deve effettuare una rotazione di **360 gradi/12 = 30 gradi** ad
+        ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista
+        deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti
+        60-30 = 30).<br/>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-b.png\"\nwidth=\"500px;\"
+        style=\"mix-blend-mode: multiply;\" />\n<br/>\n<a href=\"https://studio.code.org/c/120106805\"
+        target=\"_blank\">Vedi la soluzione</a>.\n<br/>\n</details>\n</h4>\n\nNow
+        it's your turn!  Can you recreate each image by repeating the starting shape?
+        \ "
       grade4_artist_nestedLoops_challenge2: |-
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
         width="200px"/><br>
@@ -5828,14 +5885,19 @@ it:
         target="_blank">alcune idee</a>. Puoi usare tutti i blocchi che trovi nella
         cassetta degli attrezzi.'
       grade4_playlab_test: |-
-        Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>
-        <br>
-        Come vengono assegnati i punti? <br>
-        Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>
-        <br>
-        Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>
-        <br>
-        Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+        <h5><b>
+        Come vengono assegnati i punti?
+        </b></h5>
+        <br/>
+
+        1. Bisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta. <br/>  <br/>
+        2. Per ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`  <br/>  <br/>
+        3. Fai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio.
+
+        <br/><br/>
+        <h4>
+        **Nota:** Usa la freccia verso destra per far lanciare al cane una fetta di torta!
+        </h4>
       grade4_playlab_test2: |-
         In questo esercizio c'è una funzione chiamata `jump` (<i>salta</i>) che consente al cane di saltare in alto di 100 pixel.<br>
         <br>
@@ -6001,10 +6063,11 @@ it:
         preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15"
         target="_blank">alcune idee</a>. Puoi usare tutti i blocchi che trovi nella
         cassetta degli attrezzi.'
-      grade5_playlab_variables1: In questo esercizio non devi scrivere alcun codice.
-        Devi solo premere "Esegui" per giocare! <br> <br> Qui sei il cane che sta
-        cercando di raccogliere più bandierine del gatto. Utilizza la freccia verso
-        il basso per muovere il cane. Premi "Termina" quando hai finito di giocare.
+      grade5_playlab_variables1: |-
+        In questo esercizio non devi scrivere alcun codice. Devi solo premere "Esegui" per giocare!
+
+        <br/>
+        Qui sei il cane che sta cercando di raccogliere più bandierine del gatto. Utilizza la freccia verso il basso per muovere il cane. Premi "Termina" quando hai finito di giocare.
       grade5_playlab_variables10: |-
         Modifica la funzione `patrol` (<i>pattuglia</i>) aggiungendo un parametro `actor` (<i>personaggio</i>), in modo tale da poterla eseguire per i diversi personaggi. Ricorda che sono identificati dai numeri 1, 2 e 3.<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
@@ -6046,13 +6109,17 @@ it:
         su \"Esegui\" per giocare. Quando il punteggio arriva a 6 si passa all'esercizio
         successivo. "
       grade5_playlab_variables81: |-
-        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br>
-        <br>
-        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score` > 6).<br>
-        <br>
-        Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.<br>
-        <br>
-        Nota: nella funzione `level_up` viene usata la variabile `enemy_speed` che significa <i>velocità del nemico</i>.
+        Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.
+        <hr/>
+
+        <h4>
+        Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore.<br/><br/>
+        </h4>
+        <i>Per esempio: `player_score` > 6</i>
+
+
+        <hr/>
+        <i>Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.</i>
       grade5_playlab_variables9: In questo esercizio c'è una funzione chiamata `patrol`
         (<i>pattuglia</i>) in cui devi inserire il codice che serve per far muovere
         il gatto prima in su e poi in giù di 400 pixel.

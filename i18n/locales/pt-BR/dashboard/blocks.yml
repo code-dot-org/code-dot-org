@@ -16,9 +16,13 @@ pt-BR:
         options:
           GROUP:
             sprites: todos
+            '"CAT"': todos os gatos
+            '"DUCK"': todos os patos
+            '"FROG"': todos os sapos
+            '"PINEAPPLE"': todos os abacaxis
+            '"ROBOT"': todos os robôs
           MOVE:
-            '"next"': Próximo
-            '"prev"': Anterior
+            MOVES.ThisOrThat: Isso ou Aquilo
             '"rand"': Aleatório
             MOVES.Rest: Nenhum
           DIR:
@@ -27,8 +31,7 @@ pt-BR:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Próximo
-            '"prev"': Anterior
+            MOVES.ThisOrThat: Isso ou Aquilo
             '"rand"': Aleatório
             MOVES.Rest: Nenhum
           DIR:
@@ -41,14 +44,19 @@ pt-BR:
             '"width"': largura
             '"height"': altura
             '"rotation"': rotação
-            '"tint"': tinta
+            '"x"': posição horizontal
+            '"y"': posição vertical
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: todos
+            '"CAT"': todos os gatos
+            '"DUCK"': todos os patos
+            '"FROG"': todos os sapos
+            '"PINEAPPLE"': todos os abacaxis
+            '"ROBOT"': todos os robôs
           MOVE:
-            '"next"': Próximo
-            '"prev"': Anterior
+            MOVES.ThisOrThat: Isso ou Aquilo
             '"rand"': Aleatório
             MOVES.Rest: Nenhum
           DIR:
@@ -57,8 +65,7 @@ pt-BR:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Próximo
-            '"prev"': Anterior
+            MOVES.ThisOrThat: Isso ou Aquilo
             '"rand"': Aleatório
             MOVES.Rest: Nenhum
           DIR:
@@ -73,6 +80,7 @@ pt-BR:
           UNIT:
             seconds: Segundos
       Dancelab_getEnergy:
+        text: obter {RANGE}
         options:
           RANGE:
             '"low"': baixa
@@ -85,12 +93,17 @@ pt-BR:
             '"width"': largura
             '"height"': altura
             '"rotation"': rotação
+            '"x"': posição horizontal
+            '"y"': posição vertical
             '"tint"': tinta
       Dancelab_getTime:
         options:
           UNIT:
             '"seconds"': Segundos
       Dancelab_ifDanceIs:
+        text: |-
+          se {SPRITE} está fazendo {DANCE}
+          {DO1}{DO2}
         options:
           DANCE:
             '0': Clap High
@@ -103,7 +116,7 @@ pt-BR:
             '7': Kick
             '8': Nenhum
             '9': Roll
-            '10': This or That
+            '10': Isso ou Aquilo
             '11': Thiller
       Dancelab_jumpTo:
         options:
@@ -120,12 +133,25 @@ pt-BR:
         options:
           GROUP:
             sprites: todos
+            '"CAT"': todos os gatos
+            '"DUCK"': todos os patos
+            '"FROG"': todos os sapos
+            '"PINEAPPLE"': todos os abacaxis
+            '"ROBOT"': todos os robôs
           FORMAT:
             '"grid"': grade
             '"row"': linha
             '"column"': coluna
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': Alienígena
+            '"BEAR"': Urso
+            '"CAT"': Gato
+            '"DUCK"': Pato
+            '"FROG"': Sapo
+            '"PINEAPPLE"': Abacaxi
+            '"ROBOT"': Robô
           LOCATION:
             "{x: 100, y: 200}": para esquerda
             "{x: 300, y: 200}": para direita
@@ -134,7 +160,7 @@ pt-BR:
             "{x: 300, y: 100}": superior direito
             "{x: 100, y: 300}": inferior esquerdo
             "{x: 300, y: 300}": inferior direito
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_randomColor:
         text: cor aleatória
       Dancelab_setBackgroundEffect:
@@ -157,6 +183,8 @@ pt-BR:
         options:
           EFFECT:
             '"none"': Nenhum
+            '"rain"': Chuva
+            '"raining_tacos"': Tacos
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Aleatório
       Dancelab_setProp:
         options:
@@ -165,11 +193,25 @@ pt-BR:
             '"width"': largura
             '"height"': altura
             '"rotation"': rotação
+            '"x"': posição horizontal
+            '"y"': posição vertical
             '"tint"': tinta
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"width"': largura
+            '"height"': altura
+            '"rotation"': rotação
+            '"x"': posição horizontal
+            '"y"': posição vertical
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: todos
+            '"alien"': Alienígenas
+            '"pizza"': Pizzas
+            '"unicorn"': Unicórnios
           VISIBILITY:
             'true': visível
             'false': invisível
@@ -180,6 +222,8 @@ pt-BR:
             '"width"': largura
             '"height"': altura
             '"rotation"': rotação
+            '"x"': posição horizontal
+            '"y"': posição vertical
             '"tint"': tinta
           RANGE:
             '"bass"': baixa
@@ -192,6 +236,8 @@ pt-BR:
             '"width"': largura
             '"height"': altura
             '"rotation"': rotação
+            '"x"': posição horizontal
+            '"y"': posição vertical
             '"direction"': direção do movimento
             '"tint"': tinta
           RANGE:
@@ -199,6 +245,7 @@ pt-BR:
             '"mid"': média
             '"treble"': alta
       Dancelab_whenKey:
+        text: quando {KEY} for pressionado
         options:
           KEY:
             '"up"': para cima
@@ -218,6 +265,15 @@ pt-BR:
             '2': alta
       Dancelab_whenSetup:
         text: configuração
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
+      gamelab_add:
+        text: adicionar {SPRITE} ao grupo {THIS}
+      gamelab_beginBehavior:
+        text: começar {BEHAVIOR}
       gamelab_changeColor:
         options:
           METHOD:
@@ -238,11 +294,17 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      gamelab_clickedOn:
+        text: quando {SPRITE} for clicado
+      gamelab_comment:
+        text: 'comentário: {COMMENT}'
       gamelab_debugSprite:
         options:
           VAL:
             'true': verdadeiro
             'false': falso
+      gamelab_destroy:
+        text: remover {THIS}
       gamelab_enableDebug:
         text: habilitar a depuração
       gamelab_firstTouched:
@@ -262,8 +324,12 @@ pt-BR:
             '"tint"': tinta
       gamelab_hideTitleScreen:
         text: esconder título
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} está tocando as bordas"
       gamelab_joystickDirection:
         text: direção do joystick
+      gamelab_locationAt:
+        text: localização x:{X} y:{Y}
       gamelab_locationConstant:
         options:
           DIR:
@@ -320,8 +386,12 @@ pt-BR:
         text: cor aleatória
       gamelab_randomLocation:
         text: posição aleatória
+      gamelab_removeTint:
+        text: retirar cor de {THIS}
       gamelab_secondTouched:
         text: segunda fada a ser tocada
+      gamelab_setAnimation:
+        text: alterar fantasia de {THIS} para {ANIMATION}
       gamelab_setPosition:
         options:
           POSITION:
@@ -350,6 +420,8 @@ pt-BR:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
+      gamelab_setTint:
+        text: mudar a cor de {THIS} para {COLOR}
       gamelab_setup:
         text: configuração
       gamelab_spriteDirection:
@@ -392,6 +464,7 @@ pt-BR:
       gamelab_whenJoystick:
         text: quando for o joystick
       gamelab_whenKey:
+        text: quando {KEY} for pressionado
         options:
           KEY:
             '"up"': para cima
@@ -423,6 +496,7 @@ pt-BR:
       gamelab_whileJoystick:
         text: quando for o joystick
       gamelab_whileKey:
+        text: quando {KEY} estiver pressionado
         options:
           KEY:
             '"up"': para cima
@@ -438,8 +512,12 @@ pt-BR:
         text: enquanto a seta para a esquerda estiver pressionada
       gamelab_whileRightArrow:
         text: enquanto a seta para a direita estiver pressionada
+      gamelab_whileTouching:
+        text: enquanto {SPRITE1} estiver tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: enquanto a seta para cima estiver pressionada
+      gamelab_xLocationOf:
+        text: coordenada x de {SPRITE}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -459,6 +537,8 @@ pt-BR:
             "{x: 100, y: 300}": inferior esquerdo
             "{x: 300, y: 300}": inferior direito
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
+      Mikelab_destroy:
+        text: remover {SPRITE}
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -467,6 +547,8 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      Mikelab_locationAt:
+        text: localização x:{X} y:{Y}
       Mikelab_randomColor:
         text: cor aleatória
       Mikelab_setBG:
@@ -486,7 +568,10 @@ pt-BR:
           CORNER:
             '"right"': para direita
             '"left"': para esquerda
+      Mikelab_whenClickedOn:
+        text: quando {SPRITE} for clicado
       Mikelab_whenKeyPressed:
+        text: quando {KEY} for pressionado
         options:
           KEY:
             '"up"': seta para cima
@@ -517,6 +602,14 @@ pt-BR:
             '"down"': seta para baixo
             '"left"': seta para a esquerda
             '"right"': seta para a direita
+      Mikelab_xLocationOf:
+        text: coordenada x de {SPRITE}
+      RyanLab_moveForward:
+        text: avance
+      RyanLab_turnLeft:
+        text: vire à esquerda
+      RyanLab_turnRight:
+        text: vire à direita
       Vector_positionCenter:
         text: centro
       Vector_randomLocation:
