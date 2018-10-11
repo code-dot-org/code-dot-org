@@ -183,7 +183,7 @@ Dance.prototype.onPuzzleComplete = function (testResult, message) {
   // Stop everything on screen.
   this.reset();
 
-  if (testResult) {
+  if (testResult !== undefined) {
     this.testResults = testResult;
     this.message = message;
   } else {

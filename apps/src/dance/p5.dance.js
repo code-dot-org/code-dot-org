@@ -2,7 +2,6 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
-import {TestResults} from '../constants';
 import {getStore} from "../redux";
 import {commands as audioCommands} from '../lib/util/audioApi';
 
@@ -32,11 +31,11 @@ export default function init(p5, Dance, onPuzzleComplete) {
   window.p5.disableFriendlyErrors = true;
 
   exports.pass = function () {
-    onPuzzleComplete(TestResults.ALL_PASS);
+    onPuzzleComplete(true);
   };
 
   exports.fail = function (message) {
-    onPuzzleComplete(TestResults.APP_SPECIFIC_FAIL, message);
+    onPuzzleComplete(false, message);
   };
 
 var World = {
