@@ -6,6 +6,10 @@ require_relative '../helpers/form_helpers'
 # Tests for the HocEventReview helpers module.
 class HocEventReviewTest < Minitest::Test
   describe 'HocEventReview' do
+    before do
+      assert_empty HocEventReview.events, 'Precondition: No HOC events in test DB'
+    end
+
     it 'finds event counts by state' do
       with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
         with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
@@ -35,6 +39,17 @@ class HocEventReviewTest < Minitest::Test
               actual = HocEventReview.event_counts_by_country
               assert_equal expected, actual
             end
+          end
+        end
+      end
+    end
+
+    it 'finds event details' do
+      with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
+        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+          with_form location_country_code_s: 'MX' do
+            actual = HocEventReview.events
+            assert_equal 3, actual.size
           end
         end
       end
