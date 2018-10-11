@@ -215,6 +215,7 @@ AS(
             ELSE pdw.subject 
             END as subject,
          min(pds.start)::date as workshop_date,
+         pdw.ended_at as workshop_date_pdw_ended_at, 
          date_part(month, workshop_date) month_workshop,
          date_part(dayofweek, workshop_date) day_of_week_workshop,
          CASE WHEN pdw.on_map = 1 THEN 'Public' WHEN pdw.on_map = 0 THEN 'Private' ELSE null END as audience,
@@ -244,6 +245,7 @@ AS(
         ON pdw.id = pde.pd_workshop_id
      LEFT JOIN dashboard_production_pii.pd_attendances pda 
          ON pde.id = pda.pd_enrollment_id
+         AND pda.deleted_at is null 
      LEFT JOIN dashboard_production_pii.pd_workshops_facilitators pdf
          ON pdw.id = pdf.pd_workshop_id
      LEFT JOIN dashboard_production_pii.users u
@@ -264,7 +266,7 @@ AS(
         ON  rpm.regional_partner_id = rp2.id  
     WHERE pdw.course = 'CS Fundamentals'
     AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop')  or pdw.subject is null)
-    group by 1, 2, 3, 4, 5,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, u.name, 21, 22, 24 
+    group by 1, 2, 3, 4, 5,  7,   10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, u.name, 22, 23, 25
   ),
   
 sections_based 
@@ -276,6 +278,7 @@ AS(
          tt.section_id as section_id, -- using section_id as workshop_ids for those workshops not in pd_workshops
          'Intro Workshop' as subject,
          tt.trained_at as workshop_date,
+         tt.trained_at as workshop_date_pdw_ended_at,
          date_part(month, tt.trained_at) month_workshop,
          date_part(dayofweek, tt.trained_at) day_of_week_workshop,
          JSON_EXTRACT_PATH_TEXT(forms.data_text,'type_s') as audience,
