@@ -16,7 +16,7 @@ const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
 
 const styles = {
   selectStyle: {
-    width: GAME_WIDTH,
+    width: '100%',
   }
 };
 
