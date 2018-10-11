@@ -1,9 +1,12 @@
-const log = [];
+const DEBUG = true;
 
-export default function wrap(p5) {
-  const origDrawSprites = p5.drawSprites;
-  p5.drawSprites = function () {
-    origDrawSprites.apply(p5, arguments);
+const log = [];
+if (DEBUG) {
+  window.log = log;
+}
+
+export default {
+  logSprites: (p5) => {
     log.push(p5.allSprites.map(function (sprite) {
       const result = {
         animationLabel: sprite.getAnimationLabel(),
@@ -22,7 +25,9 @@ export default function wrap(p5) {
 
       return result;
     }));
-  };
-}
+  },
 
-window.log = log;
+  reset: () => {
+    log.length = 0;
+  }
+};
