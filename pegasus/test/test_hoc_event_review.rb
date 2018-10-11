@@ -11,10 +11,10 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'finds event counts by state' do
-      with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
-        with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
-          with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
-            with_form location_country_code_s: 'MX' do
+      with_form country: 'US', state: 'CA' do
+        with_form country: 'US', state: 'CA' do
+          with_form country: 'US', state: 'OR' do
+            with_form country: 'MX' do
               expected = [
                 {state_code: 'CA', count: 2},
                 {state_code: 'OR', count: 1},
@@ -28,8 +28,8 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'can filter to unreviewed events' do
-      with_form location_country_code_s: 'US', location_state_code_s: 'CA', review: 'approved' do
-        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+      with_form country: 'US', state: 'CA', review: 'approved' do
+        with_form country: 'US', state: 'OR' do
           expected = [
             {state_code: 'OR', count: 1},
           ]
@@ -40,8 +40,8 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'can filter to special events' do
-      with_form location_country_code_s: 'US', location_state_code_s: 'CA', special_event_flag_b: 1 do
-        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+      with_form country: 'US', state: 'CA', special_event: 1 do
+        with_form country: 'US', state: 'OR' do
           expected = [
             {state_code: 'CA', count: 1},
           ]
@@ -52,10 +52,10 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'finds event counts by country' do
-      with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
-        with_form location_country_code_s: 'MX' do
-          with_form location_country_code_s: 'MX' do
-            with_form location_country_code_s: 'IT' do
+      with_form country: 'US', state: 'OR' do
+        with_form country: 'MX' do
+          with_form country: 'MX' do
+            with_form country: 'IT' do
               expected = [
                 {country_code: 'IT', count: 1},
                 {country_code: 'MX', count: 2},
@@ -69,9 +69,9 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'finds event details' do
-      with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
-        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
-          with_form location_country_code_s: 'MX' do
+      with_form country: 'US', state: 'CA' do
+        with_form country: 'US', state: 'OR' do
+          with_form country: 'MX' do
             actual = HocEventReview.events
             assert_equal 3, actual.size
           end
@@ -80,9 +80,9 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'can filter to state' do
-      with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
-        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
-          with_form location_country_code_s: 'MX' do
+      with_form country: 'US', state: 'CA' do
+        with_form country: 'US', state: 'OR' do
+          with_form country: 'MX' do
             actual = HocEventReview.events state: 'CA'
             assert_equal 1, actual.size
           end
@@ -91,9 +91,9 @@ class HocEventReviewTest < Minitest::Test
     end
 
     it 'can filter to country' do
-      with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
-        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
-          with_form location_country_code_s: 'MX' do
+      with_form country: 'US', state: 'CA' do
+        with_form country: 'US', state: 'OR' do
+          with_form country: 'MX' do
             actual = HocEventReview.events country: 'US'
             assert_equal 2, actual.size
           end
@@ -102,19 +102,32 @@ class HocEventReviewTest < Minitest::Test
     end
 
     # Helper to temporarily create a form row for testing retrieval methods.
-    def with_form(review: nil, special_event_flag_b: nil, **processed_data)
+    def with_form(
+      review: nil,
+      special_event: nil,
+      state: nil,
+      country: nil
+    )
       # Necessary stubs for the insert_or_upsert_form helper
       stubs(:dashboard_user).returns(nil)
       Pegasus.stubs(:logger).returns(nil)
       stubs(:request).returns(stub(ip: '1.2.3.4'))
 
+      data = HocEventReviewTest.fake_data.merge(
+        special_event_flag_b: special_event
+      )
+      processed_data = {
+        location_country_code_s: country,
+        location_state_code_s: state
+      }
+
       # Add fake row
       row = insert_or_upsert_form(
         HocEventReview.kind,
-        HocEventReviewTest.fake_data.merge(special_event_flag_b: special_event_flag_b)
+        data
       )
 
-      # Add fake processed data to fake row
+      # Adjust fake row
       form = Form.find(id: row[:id])
       form.update(review: review) unless review.nil?
       form.update(processed_data: processed_data.to_json)
