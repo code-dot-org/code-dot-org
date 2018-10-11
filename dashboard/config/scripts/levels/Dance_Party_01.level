@@ -36,7 +36,7 @@
     "use_default_sprites": "false",
     "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"You need to make a dancer.\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5) {\r\n  nativeAPI.pass();\r\n}",
     "block_pool": "Dancelab",
-    "custom_helper_library": "SPRITE_NAMES = [\"CAT\", \"MOOSE\"];\r\n\r\nMOVE_NAMES = [\r\n  {\r\n    name: \"Rest\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"ClapHigh\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Clown\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Dab\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"DoubleJam\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Drop\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Floss\",\r\n    mirror: true\r\n  }\r\n  ];",
+    "custom_helper_library": "World.SPRITE_NAMES = [\"CAT\", \"MOOSE\"];\r\n\r\nWorld.MOVE_NAMES = [\r\n  {\r\n    name: \"Rest\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"ClapHigh\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Clown\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Dab\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"DoubleJam\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Drop\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Floss\",\r\n    mirror: true\r\n  }\r\n];",
     "preload_asset_list": [
       "https://curriculum.code.org/media/uploads/touch.mp3",
       "https://curriculum.code.org/images/sprites/spritesheet_sm/CAT_Rest.png",

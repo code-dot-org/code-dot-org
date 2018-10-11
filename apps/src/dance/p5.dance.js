@@ -53,11 +53,11 @@ function randomNumber(min, max) {
 var sprites = p5.createGroup();
 var sprites_by_type = {};
 
-var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
+World.SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
 var img_base = "https://curriculum.code.org/images/sprites/spritesheet_tp/";
 var SIZE = 300;
 
-var MOVE_NAMES = [
+World.MOVE_NAMES = [
   {name: "Rest", mirror: true},
   {name: "ClapHigh", mirror: true},
   {name: "Clown", mirror: false},
@@ -141,9 +141,9 @@ exports.preload = function preload() {
   METADATA['peas'] = loadSongMetadata('peas');
 
   // Load spritesheet JSON files
-  SPRITE_NAMES.forEach(this_sprite => {
+  World.SPRITE_NAMES.forEach(this_sprite => {
     ANIMATIONS[this_sprite] = [];
-    MOVE_NAMES.forEach(({ name, mirror }, moveIndex) => {
+    World.MOVE_NAMES.forEach(({ name, mirror }, moveIndex) => {
       const baseUrl = `${img_base}${this_sprite}_${name}`;
       p5.loadJSON(`${baseUrl}.json`, jsonData => {
         ANIMATIONS[this_sprite][moveIndex] = {
@@ -157,8 +157,8 @@ exports.preload = function preload() {
 
 exports.setup = function setup() {
   // Create animations from spritesheets
-  for (var i = 0; i < SPRITE_NAMES.length; i++) {
-    var this_sprite = SPRITE_NAMES[i];
+  for (var i = 0; i < World.SPRITE_NAMES.length; i++) {
+    var this_sprite = World.SPRITE_NAMES[i];
     for (var j = 0; j < ANIMATIONS[this_sprite].length; j++) {
       ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
@@ -205,8 +205,8 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
 
   // Default to first dancer if selected a dancer that doesn't exist
   // to account for low-bandwidth mode limited character set
-  if (SPRITE_NAMES.indexOf(costume) < 0) {
-    costume = SPRITE_NAMES[0];
+  if (World.SPRITE_NAMES.indexOf(costume) < 0) {
+    costume = World.SPRITE_NAMES[0];
   }
 
   if (!location) {
@@ -672,6 +672,10 @@ function updateEvents() {
 
 exports.registerValidation = function (callback) {
   World.validationCallback = callback;
+}
+
+exports.init = function (callback) {
+  callback(World);
 }
 
 exports.draw = function draw() {
