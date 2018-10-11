@@ -17,7 +17,6 @@ export const SELECT_LOCATION = 'gamelab/SELECT_LOCATION';
 export const UPDATE_LOCATION = 'gamelab/UPDATE_LOCATION';
 
 export const SET_MOBILE_CONTROLS_CONFIG = 'gamelab/SET_MOBILE_CONTROLS_CONFIG';
-export const SET_SONG = 'SET_SONG';
 
 /**
  * Change the interface mode between Code Mode and the Animation Tab
@@ -64,11 +63,4 @@ export function viewAnimationJson(animationJson) {
 
 export function hideAnimationJson() {
   return {type: HIDE_ANIMATION_JSON};
-}
-
-export function setSong(song) {
-  return {
-    type: SET_SONG,
-    value: song,
-  };
 }

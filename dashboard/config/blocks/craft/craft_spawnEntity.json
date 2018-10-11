@@ -1,0 +1,18 @@
+{
+  "category": "",
+  "config": {
+    "func": "spawnEntity",
+    "blockText": "spawn {ENTITY}",
+    "args": [
+      {
+        "name": "ENTITY",
+        "options": [
+          [
+            "dolphin",
+            "\"dolphin\""
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -96,7 +96,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     object&.workshop&.teachercon?
   end
 
-  def principal_approval
+  def principal_approval_state
     object.try(:principal_approval)
   end
 
@@ -109,56 +109,55 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def school_stats
-    if object.school_id
-      stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
+    return nil unless object.try(:school_id)
 
-      return nil unless stats
+    stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
+    return nil unless stats
 
-      urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
+    urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
 
-      {
-        title_i_status: stats.title_i_status,
-        frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
-        urm_percent: percent_string(urm_total, stats.students_total),
-        students_total: stats.students_total,
-        race_data: [
-          {
-            percent: percent_string(stats.student_am_count, stats.students_total),
-            total: stats.student_am_count,
-            label: "American Indian/Alaska Native Students"
-          },
-          {
-            percent: percent_string(stats.student_as_count, stats.students_total),
-            total: stats.student_as_count,
-            label: "Asian Students"
-          },
-          {
-            percent: percent_string(stats.student_hi_count, stats.students_total),
-            total: stats.student_hi_count,
-            label: "Hispanic Students"
-          },
-          {
-            percent: percent_string(stats.student_bl_count, stats.students_total),
-            total: stats.student_bl_count,
-            label: "Black Students"
-          },
-          {
-            percent: percent_string(stats.student_wh_count, stats.students_total),
-            total: stats.student_wh_count,
-            label: "White Students"
-          },
-          {
-            percent: percent_string(stats.student_hp_count, stats.students_total),
-            total: stats.student_hp_count,
-            label: "Hawaiian Native/Pacific Islander Students"
-          },
-          {
-            percent: percent_string(stats.student_tr_count, stats.students_total),
-            total: stats.student_tr_count,
-            label: "Two or More Races Students"
-          }
-        ]
-      }
-    end
+    {
+      title_i_status: stats.title_i_status,
+      frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
+      urm_percent: percent_string(urm_total, stats.students_total),
+      students_total: stats.students_total,
+      race_data: [
+        {
+          percent: percent_string(stats.student_am_count, stats.students_total),
+          total: stats.student_am_count,
+          label: "American Indian/Alaska Native Students"
+        },
+        {
+          percent: percent_string(stats.student_as_count, stats.students_total),
+          total: stats.student_as_count,
+          label: "Asian Students"
+        },
+        {
+          percent: percent_string(stats.student_hi_count, stats.students_total),
+          total: stats.student_hi_count,
+          label: "Hispanic Students"
+        },
+        {
+          percent: percent_string(stats.student_bl_count, stats.students_total),
+          total: stats.student_bl_count,
+          label: "Black Students"
+        },
+        {
+          percent: percent_string(stats.student_wh_count, stats.students_total),
+          total: stats.student_wh_count,
+          label: "White Students"
+        },
+        {
+          percent: percent_string(stats.student_hp_count, stats.students_total),
+          total: stats.student_hp_count,
+          label: "Hawaiian Native/Pacific Islander Students"
+        },
+        {
+          percent: percent_string(stats.student_tr_count, stats.students_total),
+          total: stats.student_tr_count,
+          label: "Two or More Races Students"
+        }
+      ]
+    }
   end
 end
