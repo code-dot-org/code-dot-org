@@ -135,6 +135,7 @@ sk:
     age: Vek
     user_type: Ste študent/žiak alebo učiteľ?
     submit: Zaregistrovať sa
+    next: Ďalší
     teacher: Ste učiteľ?
     valid_username: Dostupné!
     invalid_username: Užívateľské meno musí obsahovať aspoň 5 znakov
@@ -801,6 +802,7 @@ sk:
       audience: Vek 13+
       cta: Nauč sa ako
     hoc-encryption:
+      title: Jednoduché šifrovanie
       body: Študenti sa naučia metódy na vytvorenie a prelomenie zašifrovaných správ.
     weblab:
       title: Webové laboratórium (beta)
@@ -1164,6 +1166,7 @@ sk:
     csp_ap_3: 'Kapitola 3: AP výtváranie výkonnovej úlohy'
     csp_postap_1: 'Kapitola 1: Práca s a vizualizácia dát'
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
+    csp2_1_2018: 'Lekcia 2: Digitálne informácie'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
     dlp: Výzvy na zhodnotenie
   external_links:
@@ -1370,6 +1373,7 @@ sk:
       body: Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku
         s nastaveniami Vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte
         tento formulár.
+  courses_category: Všetky kurzy
   cookie_banner:
     message: Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s
       uložením cookies na Vašom počítači alebo zariadení.

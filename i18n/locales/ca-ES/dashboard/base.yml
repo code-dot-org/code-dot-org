@@ -85,6 +85,7 @@ ca:
     age: 'Edat'
     user_type: 'Sou alumne o mestre?'
     submit: 'Inscriure''s'
+    next: 'Següent'
     teacher: 'Sou mestre?'
     valid_username: "Disponible!"
     invalid_username: "El nom d'usuari ha de tenir almenys 5 caràcters"

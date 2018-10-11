@@ -136,6 +136,7 @@ vi:
     age: Tuổi
     user_type: Bạn là học viên hay Giáo viên?
     submit: Đăng ký
+    next: Tiếp
     teacher: Bạn có phải là giáo viên?
     valid_username: Hợp lệ!
     invalid_username: Tên người dùng phải nhiều hơn 5 ký tự

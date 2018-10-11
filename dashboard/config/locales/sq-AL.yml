@@ -114,6 +114,7 @@ sq:
     age: Mosha
     user_type: A jeni nxënës apo mësues?
     submit: Rregjistrohu
+    next: Tjetër
     teacher: A jeni një mësues?
     valid_username: I disponueshëm!
     invalid_username: Emri i përdoruesit duhet të ketë të paktën 5 karaktere

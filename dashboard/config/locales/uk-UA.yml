@@ -126,6 +126,7 @@ uk:
     age: Вік
     user_type: Ви учень або вчитель?
     submit: Реєстрація
+    next: Далі
     teacher: Ви вчитель?
     valid_username: Доступно!
     invalid_username: Ім'я користувача повинно мати хоча б 5 символів

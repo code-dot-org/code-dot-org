@@ -1328,6 +1328,7 @@ fr:
       frozen diamond snowflake: Maintenant, créons un nouveau flocon de neige en utilisant le bloc « Répéter » pour répéter un parallélogramme 10 fois, en tournant à droite de 36 degrés entre chacun d’entre eux.
       frozen diamond: Utilise un bloc « Répéter » autour de ces blocs pour créer un parallélogramme. C'est comme un rectangle, mais avec des angles différents. Celui-ci a des angles de 60 degrés et 120 degrés au lieu de tous les angles à 90 degrés.
       frozen freeplay: Tu es officiellement devenu un artiste maître ! Crée un merveilleux paysage hivernal.
+      frozen line: Salut! Je suis Elsa de Arendelle. Aide-moi à créer une seule ligne.
       frozen perpendicular: Maintenant, voyons si nous pouvons créer deux lignes qui soient à un angle de 90 degrés l’une de l’autre. Tu devras utiliser le bloc «Tourner» ainsi que le bloc «Déplacer».
       frozen snowflake branch: Essaie d'utiliser le bloc «Créer une branche de flocon de neige» pour créer trois branches, qui commencent à ressembler à un flocon de neige.
       frozen snowflake full: Maintenant, répétons-le 8 fois pour faire un beau flocon de neige !
@@ -1344,8 +1345,11 @@ fr:
       grade2_CaringForNewPet_10: Amène-moi au cochon !
       grade2_CaringForNewPet_5: Amène-moi au cochon !
       grade2_MakeDogTag_10: Dessine quelque chose d'amusant.
+      grade2_MakeDogTag_3: |-
+        Aide-moi à terminer la maison pour ce chat.
       grade2_MakeDogTag_4: |-
         Cette maison a besoin d'un toit ! Dessine le triangle.  Indice : les trois côtés sont de la même longueur.
+      grade2_MakeDogTag_6: 'Activité libre ! Dessine tout ce que tu veux.'
       grade2_MakeDogTag_8: Maintenant connectons ensemble plusieurs « V » en les dessinant dans une boucle.
       grade2_MakeDogTag_9: Cette fois nous allons les dessiner 24 fois. Ajoute un virage à gauche de 30 degrés à ce code et mets le tout dans un bloc « Répéter ».
       grade2_PuppyLoops_1: Peux-tu m'amener au cochon en utilisant 5 blocs?
@@ -1420,9 +1424,11 @@ fr:
       grade3_Loops_9: Recueille le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel.
       grade3_Loops_TeacherIDo: |-
         Chaque fleur contient une unité de nectar. Récolte le nectar de chacune des fleurs. 
+      grade3_bee_conditionals_quantum2: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, alors vérifie sous CHAQUE NUAGE pour voir s’il s’y cache une fleur. Si c'est le cas, alors tu peux recueillir du nectar."
       grade3_maze_Loop1: 'Évaluation :  amène moi jusqu''au tournesol en utilisant seulement 5 blocs ! '
       grade3_maze_loops2: "Amène-moi jusqu'au tournesol !\n(Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)"
       grade3_maze_loops3: Amène-moi jusqu'au tournesol !
+      grade3_maze_loops4: Amène-moi jusqu'au tournesol !
       grade3_maze_loops5: Amène-moi jusqu'au tournesol !
       grade3_maze_nestedLoops1: Peux-tu m'amener au cochon en utilisant 5 blocs?
       grade3_maze_nestedLoops2: 'Peux-tu remplacer ces cinq blocs par deux blocs seulement ? (Indice : tu dois créer une boucle en utilisant un bloc «Répéter» pour réussir ce niveau.)'
@@ -1546,7 +1552,11 @@ fr:
         
         Besoin d'un indice ? Clique ici.
       grade5_artist_functionparameters10: "Inspiration pour les Activités libres : Tu as maintenant appris tout ce que tu as besoin de savoir pour faire un motif comme ça ! Si cette photo t’inspire, essaie de faire quelque chose de similaire. Autrement, crée quelque chose d’unique.\n\nTu veux savoir comment notre modèle d'inspiration a été créé ?"
+      grade5_artist_functionparameters11: 'Activité libre : Voici les fonctions que tu as écrites, et même un peu plus pour que tu puisses jouer avec. Dessine quelque chose d''incroyable ! Joue avec la largeur du crayon pour voir la différences entre tes dessins !'
       grade5_artist_functionparameters7: Cette image est similaire à la dernière. Peux-tu utiliser une « Boucle pour » avec ta fonction pour faire ce dessin?
+      grade5_artist_functionparameters8: "Modifions cette fonction « Dessiner un polygone ». Elle a déjà un paramètre « Côtés ». Maintenant, ajoutons un paramètre « Longueur ».\nIndice : le périmètre de chaque forme est de 200 pixels. Te souviens-tu de l'équation pour créer des formes de la même taille quand elles ont un nombre différent de côtés ?"
+      grade5_artist_functionparameters_6: |-
+        Peux-tu terminer ce dessin ? Les côtés de toutes les formes font 100 pixels de long.
       grade5_artist_parameters_squares1: 'Clique sur «Modifier» pour compléter la définition de fonction de « Dessiner un carré » et ajouter un paramètre. Elle doit prendre un paramètre de longueur, à l''instar du triangle. Cette fois, dessine 3 carrés : 25, 50 et 75 pixels de long, chacun à 100 pixels de l’autre.'
       grade5_artist_parameters_triangles2a: As-tu remarqué quelque chose de différent dans ces blocs «Fonction» ? Clique sur « Exécuter » pour voir ce qui se passe.
       grade5_artist_parameters_triangles4: Le code de cette fonction «Triangle» est cassé. Peux-tu modifier la fonction pour le réparer et ensuite faire des triangles mesurant 25, 50 et 75 pixels?
@@ -1602,6 +1612,7 @@ fr:
       grade5_playlab_variables_freeplay: "L’heure de l’activité libre ! Voici toutes les variables avec lesquelles nous avons joué jusqu'à présent, mais aussi quelques-unes de plus au cas où tu les voudrais.\n\nNote qu'il y a maintenant tellement de blocs dans notre boîte à outils qu’ils doivent être organisés !  Ici, nous avons mis chaque pièce dans une catégorie appropriée.  Prends le temps de découvrir tout ce qui est disponible. Lorsque tu as tout révisé, fais un jeu ou une histoire en utilisant les répétitions, les variables et les événements.\n\nIndice : fais défiler le menu pour voir toutes les commandes dans l'espace de travail."
       gradek_artist_loops6: Utilisez la boucle `repeat` pour ajouter des vagues dans l'eau.
       gradek_artist_loopsFP: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
+      k-1 maze 1: Peux-tu me faire aller vers l’Ouest pour rejoindre le cochon ?
       k1stickerfreeplay: "L'artiste a vu quelque chose d'étrange\nau loin. Dessine ce que tu penses qu'il a vu."
       level 'grade3_Loops_10: |-
         Utilise une boucle semblable au dernier puzzle, mais ajoute-lui un virage.
@@ -1617,5 +1628,11 @@ fr:
       level 'grade3_Loops_8: Utilise une boucle pour recueillir le nectar et produire du miel.
       level 'grade3_Loops_9: Recueille le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel.
       level grade3_Loops_2: Peux-tu faire la même tâche plus facilement avec une boucle ?
+      scrat 16 (copy 1): Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener avec le plus petit nombre de blocs possible.
+      scrat 16: Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener avec le plus petit nombre de blocs possible.
+      scrat 17: Ok, recommençons pour s'entraîner ! Ce n'est pas très différent, mais attention au mur !
+      scrat 18 (copy 1): Les blocs « Si/Sinon » vérifient une condition et puis font une chose OU une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc.
+      scrat 18: Les blocs « Si/Sinon » vérifient une condition et puis font une chose OU une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc.
       scrat 19 (copy 1): Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès le premier essai?
       scrat 19: Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès le premier essai?
+      scrat 20: Peux-tu ajouter seulement 3 blocs pour m’aider à résoudre un labyrinthe plus complexe? Si tu le fais bien, je peux emprunter n’importe quelle voie sinueuse, peu importe sa longueur. Fais-vite ! La glace fond !

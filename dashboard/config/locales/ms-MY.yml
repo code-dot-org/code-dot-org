@@ -74,6 +74,7 @@ ms:
     age: Umur
     user_type: Adakah anda seorang pelajar atau guru?
     submit: Mendaftar
+    next: Seterusnya
     teacher: Adakah anda seorang guru?
     valid_username: Boleh digunakan!
     invalid_username: Nama pengguna mestilah sekurang-kurangnya 5 aksara

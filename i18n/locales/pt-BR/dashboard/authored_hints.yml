@@ -1662,6 +1662,7 @@ pt-BR:
       Course 4 SCFL 2_authored_hint:
         Course_4_SCFL_2_a: "Dê uma olhada nesta opção de movimento:  \n\n![](https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)"
         Course_4_SCFL_2_b: Observe que há três pontos durante cada iteração deste laço 'para' onde você para de interagir com objetos.
+        Course_4_SCFL_2_c: Durante cada iteração do laço `for`, o número de cada objeto se relaciona com a variável `contador` de alguma forma.
         Course_4_SCFL_2_d: |-
           **Solução:**
           
@@ -1781,6 +1782,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 3_authored_hint:
+        Course_4_SCFL_3_a: A `largura da caneta` é 1. O primeiro quadrado tem lados de 50 pixels, e cada quadrado é 50 pixels mais largo do que o último.
+        Course_4_SCFL_3_b: A opacidade no pincel é sempre `contador`/2.
+        Course_4_SCFL_3_c: Depois de fazer cada quadrado, não se esqueça de pular pra trás, virar, pular novamente, então virar de volta!
         Course_4_SCFL_3_d: |-
           **Solução:**
           
@@ -1915,6 +1919,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 4_authored_hint:
+        Course_4_SCFL_4_a: A mudança de cor acontece usando o bloco `defina a cor com vermelho, verde, azul`. Vermelho é sempre o valor do `contador`, verde é sempre `255 - contador`, e azul permanece constante exatamente em 255.
+        Course_4_SCFL_4_b: Cada forma é um quadrado com os lados que possuem `contador` pixels de comprimento, começando com 5px, e aumentando em 5px até completar 200px.
+        Course_4_SCFL_4_c: O artista gira 15 graus entre cada quadrado.
         Course_4_SCFL_4_d: |-
           **Solução:**
           
@@ -2020,6 +2027,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 6_authored_hint:
+        Course_4_SCFL_6_a: A mudança de cor acontece usando o bloco `defina a cor com vermelho, verde, azul`. Vermelho é definido constante em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
+        Course_4_SCFL_6_b: O código para isso é muito mais simples do que você imagina. Apenas defina a cor dentro do `laço for`, mova pra frente, então vire.
+        Course_4_SCFL_6_c: 'O `laço for` vai de 5 a 250 de 2 em 2. '
         Course_4_SCFL_6_d: |-
           **Solução:**
           
@@ -2110,6 +2120,7 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCFL 7_authored_hint:
+        Course_4_SCFL_7_a: A mudança de cor acontece usando o bloco `defina a cor com vermelho, verde, azul`. Vermelho é definido no`contador`. Verde é `255 - contador`, e azul é definido constante em 255.
         Course_4_SCFL_7_e: |-
           **Solução:**
           
@@ -5220,6 +5231,9 @@ pt-BR:
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: "**Qual o menor número que você precisa?\nQual é o maior número?\nDe quanto é o aumento cada vez?**\n\nEssas são as questões que você precisa responder para preencher as lacunas no laço `para`."
       courseF_artist_for_challenge1_authored_hint:
+        courseF_artist_for_challenge1_a: A `largura da caneta` é 1. O primeiro quadrado tem lados de 50 pixels, e cada quadrado é 50 pixels mais largo do que o último.
+        courseF_artist_for_challenge1_b: A opacidade no pincel é sempre `contador`/2.
+        courseF_artist_for_challenge1_c: Depois de fazer cada quadrado, não se esqueça de pular pra trás, virar, pular novamente, então virar de volta!
         courseF_artist_for_challenge1_d: |-
           **Solução:**
           
@@ -5354,6 +5368,9 @@ pt-BR:
           </block>
           </xml>
       courseF_artist_for_challenge1_2018_authored_hint:
+        courseF_artist_for_challenge1_a: A `largura da caneta` é 1. O primeiro quadrado tem lados de 50 pixels, e cada quadrado é 50 pixels mais largo do que o último.
+        courseF_artist_for_challenge1_b: A opacidade no pincel é sempre `contador`/2.
+        courseF_artist_for_challenge1_c: Depois de fazer cada quadrado, não se esqueça de pular pra trás, virar, pular novamente, então virar de volta!
         courseF_artist_for_challenge1_d: |-
           **Solução:**
           
@@ -5488,6 +5505,8 @@ pt-BR:
           </block>
           </xml>
       courseF_artist_for_challenge2_authored_hint:
+        courseF_artist_for_challenge2_c: 'O `laço for` vai de 5 a 250 de 2 em 2. '
+        courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco `defina a cor com vermelho, verde, azul`. Vermelho é definido constante em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
         courseF_artist_for_challenge2_d: |-
           **Solução:**
           
@@ -5580,6 +5599,8 @@ pt-BR:
           
           ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_for_challenge2_2018_authored_hint:
+        courseF_artist_for_challenge2_c: 'O `laço for` vai de 5 a 250 de 2 em 2. '
+        courseF_artist_for_challenge2_a: A mudança de cor acontece usando o bloco `defina a cor com vermelho, verde, azul`. Vermelho é definido constante em 255, verde é sempre o valor do`contador`, e azul é sempre `255 - contador`.
         courseF_artist_for_challenge2_d: |-
           **Solução:**
           
