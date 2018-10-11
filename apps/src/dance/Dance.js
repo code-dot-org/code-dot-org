@@ -9,7 +9,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
-import initDance from './p5.dance';
+import initDance from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers} from './redux';
 
 //TODO: Remove this during clean-up
