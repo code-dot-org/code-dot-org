@@ -41,7 +41,10 @@ export default function init(p5, Dance, onPuzzleComplete) {
 
 var World = {
   height: 400,
-  cuesThisFrame: [],
+  cues: {
+    seconds: [],
+    measures: [],
+  },
   validationCallback: () => {},
 };
 
@@ -113,9 +116,7 @@ let songStartTime = 0;
 let metadataLoaded = false;
 
 exports.addCues = function (timestamps) {
-  timestamps.forEach(timestamp => {
-    Dance.song.addCue(0, timestamp, () => World.cuesThisFrame.push(timestamp));
-  });
+  World.cues = timestamps;
 };
 
 exports.reset = function () {
@@ -485,12 +486,15 @@ exports.getCurrentTime = function getCurrentTime() {
   return songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
 }
 
+exports.getCurrentMeasure = function () {
+  const songData = songs[getStore().getState().selectedSong];
+  return songStartTime > 0 ? songData.bpm * ((exports.getCurrentTime() - songData.delay) / 240) + 1 : 0;
+}
+
 exports.getTime = function getTime(unit) {
   let currentTime = this.getCurrentTime();
-  if (unit == "measures") {
-    // Subtract any delay before the first measure and start counting measures at 1
-    let songData = songs[getStore().getState().selectedSong];
-    return songData.bpm * ((currentTime - songData.delay) / 240) + 1;
+  if (unit === "measures") {
+    return exports.getCurrentMeasure();
   } else {
     return currentTime;
   }
@@ -665,14 +669,16 @@ function loadSongMetadata(callback) {
 const events = exports.currentFrameEvents = {
   'p5.keyWentDown': {},
   'Dance.fft.isPeak': {},
-  'cue': {},
+  'cue-seconds': {},
+  'cue-measures': {},
 };
 
 function updateEvents() {
   events.any = false;
   events['p5.keyWentDown'] = {};
   events['Dance.fft.isPeak'] = {};
-  events['cue'] = {};
+  events['cue-seconds'] = {};
+  events['cue-measures'] = {};
 
   for (let key of WATCHED_KEYS) {
     if (p5.keyWentDown(key)) {
@@ -688,9 +694,9 @@ function updateEvents() {
     }
   }
 
-  for (let timestamp of World.cuesThisFrame) {
+  while (World.cues.seconds.length > 0 && World.cues.seconds[0] < exports.getCurrentTime()) {
     events.any = true;
-    events['cue'][timestamp] = true;
+    events['cue-seconds'][World.cues.seconds.splice(0, 1)] = true;
   }
 }
 
@@ -723,7 +729,6 @@ exports.draw = function draw() {
   }
 
   updateEvents();
-  World.cuesThisFrame.length = 0;
 
   p5.drawSprites();
 
@@ -742,7 +747,7 @@ exports.draw = function draw() {
   p5.textSize(20);
 
   World.validationCallback(World, exports, sprites);
-  p5.text("Measure: " + (Math.floor(((this.getCurrentTime() - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
+  p5.text("Measure: " + (Math.floor(exports.getCurrentMeasure())), 10, 20);
 }
   return exports;
 }
