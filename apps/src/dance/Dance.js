@@ -9,7 +9,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
-import initDance from '@code-dot-org/dance-party/src/p5.dance';
+import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers} from './redux';
 
 //TODO: Remove this during clean-up
@@ -373,7 +373,7 @@ Dance.prototype.onP5Preload = function () {
   Sounds.getSingleton().register(options);
   const getSelectedSong = () => getStore().getState().selectedSong;
 
-  this.nativeAPI = initDance(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this));
+  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this));
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
