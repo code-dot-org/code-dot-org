@@ -345,6 +345,9 @@ Dance.prototype.initInterpreter = function () {
     randomColor: () => {
       return nativeAPI.randomColor();
     },
+    getCurrentTime: () => {
+      return nativeAPI.getCurrentTime();
+    },
   };
 
   let code = require('!!raw-loader!./p5.dance.interpreted');
