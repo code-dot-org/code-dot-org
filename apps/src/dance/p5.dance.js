@@ -2,6 +2,8 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
+import {getStore} from "../redux";
+import {commands as audioCommands} from '../lib/util/audioApi';
 
 export default function init(p5, Dance) {
   const exports = {};
@@ -95,6 +97,8 @@ var songs = {
   }
 };
 var song_meta = songs.hammer;
+//Tracks when a song started to play
+let songStartTime = 0;
 
 exports.addCues = function (timestamps) {
   timestamps.forEach(timestamp => {
@@ -105,6 +109,7 @@ exports.addCues = function (timestamps) {
 exports.reset = function () {
   Dance.song.stopAll();
 
+  songStartTime = 0;
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
   }
@@ -141,14 +146,15 @@ exports.setup = function setup() {
       ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
   }
+  let songData = songs[getStore().getState().selectedSong];
 
-  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / song_meta.bpm));
-  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / song_meta.bpm));
-  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / song_meta.bpm));
+  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / songData.bpm));
+  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / songData.bpm));
+  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / songData.bpm));
 }
 
 exports.play = function () {
-  Dance.song.start();
+  audioCommands.playSound({url: songs[getStore().getState().selectedSong].url, callback: () => {songStartTime = new Date()}});
 }
 
 var bg_effects = new Effects(p5, 1);
@@ -222,7 +228,7 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
   addBehavior(sprite, function () {
     var delta = Math.min(100, 1 / (p5.frameRate() + 0.01) * 1000);
     sprite.sinceLastFrame += delta;
-    var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
+    var msPerBeat = 60 * 1000 / (songs[getStore().getState().selectedSong].bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
@@ -456,11 +462,13 @@ exports.getEnergy = function getEnergy(range) {
 }
 
 exports.getTime = function getTime(unit) {
+  let currentTime = (new Date() - songStartTime) / 1000;
   if (unit == "measures") {
     // Subtract any delay before the first measure and start counting measures at 1
-    return song_meta.bpm * ((Dance.song.currentTime(0) - song_meta.delay) / 240) + 1;
+    let songData = songs[getStore().getState().selectedSong];
+    return songData.bpm * ((currentTime - songData.delay) / 240) + 1;
   } else {
-    return Dance.song.currentTime(0);
+    return currentTime;
   }
 }
 
@@ -672,11 +680,14 @@ exports.draw = function draw() {
     p5.pop();
   }
 
+  let songData = songs[getStore().getState().selectedSong];
+  let currentTime = songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
+
   p5.fill("black");
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
+  p5.text("Measure: " + (Math.floor(((currentTime - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
 }
   return exports;
 }
