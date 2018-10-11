@@ -230,6 +230,10 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = function () {
+  if (!this.nativeAPI.metadataLoaded()) {
+    return;
+  }
+
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
@@ -340,6 +344,9 @@ Dance.prototype.initInterpreter = function () {
     },
     randomColor: () => {
       return nativeAPI.randomColor();
+    },
+    getCurrentTime: () => {
+      return nativeAPI.getCurrentTime();
     },
   };
 
