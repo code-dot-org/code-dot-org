@@ -6,7 +6,8 @@ pd_workshop_based as
  ( 
  SELECT DISTINCT 
     pde.user_id, 
-    min(pds.start)::date as trained_at,
+    min(pds.start)::date as trained_at, -- actual workshop date
+    --pdw.ended_at as trained_at, -- workshop date used in accounting and reports from the online dashboard
     pdw.id as workshop_id,
     pdw.section_id as section_id
   FROM dashboard_production_pii.pd_enrollments pde
@@ -15,6 +16,7 @@ pd_workshop_based as
   JOIN dashboard_production_pii.pd_sessions pds ON pds.pd_workshop_id = pdw.id
   WHERE course = 'CS Fundamentals'
   AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop') or pdw.subject is null)
+  AND pda.deleted_at is null
   GROUP BY user_id, workshop_id, section_id
 ), 
 
