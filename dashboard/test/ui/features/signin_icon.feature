@@ -3,22 +3,27 @@ Feature: Sign In Icon in Header
 
 # TOOD: Erin B., remove the pagemode cookie related steps when launched.
 
-Scenario: Signed Out - sign in button shows regardless of cookie
+
+Background:
+  # The pagemode cookie must be set separately on Dashboard and # Pegasus because they are different domains.
   Given I am on "http://code.org/"
-  And I set the language cookie
-  And I wait until element "#new_signin_button" is visible
-  And I wait until element ".user_icon" is not visible
+  Given I set the pagemode cookie to "create_header_2018"
+  Then I reload the page
+  # .create_menu visibility confirms the cookie set
+  And I wait until element ".create_menu" is visible
+  Given I am on "http://studio.code.org/projects/public"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
   And I wait until element ".create_menu" is visible
+
+Scenario: Signed Out - new sign in button shows
+  Given I am on "http://code.org/"
+  And I set the language cookie
   And I wait until element "#new_signin_button" is visible
   And I wait until element ".user_icon" is not visible
 
 Scenario: Teacher Signed In - shows icon with correct links
   Given I create a teacher named "Ms_Frizzle"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
   And I wait until element ".user_icon" is visible
   And I wait until element ".fa-user" is visible
   And I click selector ".user_icon"
@@ -26,9 +31,8 @@ Scenario: Teacher Signed In - shows icon with correct links
   And element ".display_name" contains text "Ms_Frizzle"
   And I wait until element "#user-edit" is visible
   And I wait until element "#user-signout" is visible
+  # Confirm dropdown is as expected on Pegasus
   Given I am on "http://code.org/help"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
   And I wait until element ".create_menu" is visible
   And I wait until element ".user_icon" is visible
   And I wait until element ".fa-user" is visible
@@ -43,9 +47,6 @@ Scenario: Teacher Signed In - shows icon with correct links
 
 Scenario: Student Signed In - shows icon with correct links
   Given I create a student named "Arnold"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
   And I wait until element ".user_icon" is visible
   And I wait until element ".fa-user" is visible
   And I click selector ".user_icon"
@@ -53,10 +54,8 @@ Scenario: Student Signed In - shows icon with correct links
   And element ".display_name" contains text "Arnold"
   And I wait until element "#user-edit" is visible
   And I wait until element "#user-signout" is visible
+  # Confirm dropdown is as expected on Pegasus
   Given I am on "http://code.org/help"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
   And I wait until element ".user_icon" is visible
   And I wait until element ".fa-user" is visible
   And I click selector ".user_icon"
@@ -86,8 +85,6 @@ Scenario: Pair Programming Icon
   Given I create a student named "Thing_Two"
   And I navigate to the section url
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
   And I wait until element ".user_icon" is visible
   And I click selector ".user_icon"
   And I wait until element "#pairing_link" is visible
