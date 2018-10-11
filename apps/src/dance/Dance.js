@@ -375,6 +375,8 @@ Dance.prototype.onP5Preload = function () {
 
   const Dance = createDanceAPI(this.p5);
   this.nativeAPI = initDance(this.p5, Dance, this.onPuzzleComplete.bind(this));
+  const spriteConfig = new Function('World', this.level.customHelperLibrary);
+  this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
 };
 
