@@ -1430,11 +1430,10 @@ ne:
         For even more effect, try playing
         with color!  Use random colors inside loops to see how it changes your design.
       grade5_artist_variables_freeplay15: |-
-        Want a second peek at the inspiration
-        design or the hints?  Click here!\r
+        Want a second peek at the inspiration design
+        or the hints?  Click here!\r
         \r
-        Otherwise, make a design all your
-        own!
+        Otherwise, make a design all your own!
       grade5_artist_variables_freeplay16: "Still playing?  Here is a blank canvas where\nyou can create whatever you want!"
       grade5_artist_variables_hexagons1: "Let's try it again! \\r\n\\r\nCan you\nset the `length` variable to 60 to make this cool design with hexagons?"
       grade5_artist_variables_letterT11: "Here’s more complicated code using the\nsame concepts from the last puzzle - what should you set the \"sides\" variable\nto in order to draw this picture made of squares?"
@@ -1459,7 +1458,7 @@ ne:
         the hint!
       grade5_artist_variables_triangles2: "Instead of using \"move forward by 150,\"\nthe \"move\" block is now referencing a variable called \"length.\" Can you\nset \"length\" to 150 to draw this new triangle?"
       grade5_artist_variables_triangles3: "Drag a number block to both the `set\nlength` block and the `repeat _ times` block to draw a set of 50 pixel triangles.\n"
-      grade5_bee_for_loops1: "Use a loop to collect the nectar from\neach flower."
+      grade5_bee_for_loops1: "Use a loop to collect the nectar\nfrom each flower."
       grade5_bee_for_loops2: "Add the code necessary to make sure\nthe bee collects all the nectar. Look at how much code you need for this puzzle!\n(We'll learn a simpler way in the next puzzle.)"
       grade5_bee_for_loops6: "You can also use a \"for loop\"\nto count down. Try gathering this nectar by counting down from 5 to 1 by 1."
       grade5_bee_for_loops8: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?"

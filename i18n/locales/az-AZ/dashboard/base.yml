@@ -83,6 +83,7 @@ az:
     age: 'Yaşınız'
     user_type: 'Siz tələbəsiniz ya müəllim?'
     submit: 'Qeydiyyatdan keçin'
+    next: 'Növbəti'
     teacher: 'Müəllimsiniz?'
     valid_username: "Olar!"
     invalid_username: "İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır"

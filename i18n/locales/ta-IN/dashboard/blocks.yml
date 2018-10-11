@@ -34,6 +34,10 @@ ta:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Dancelab_setDanceSpeed:
@@ -45,6 +49,10 @@ ta:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"height"': உயரம்
@@ -105,6 +113,12 @@ ta:
           KEY:
             '"w"': மேற்கு
             '"s"': தெற்கு
+      RyanLab_moveForward:
+        text: முன்னோக்கி நகர்த்த
+      RyanLab_turnLeft:
+        text: இடதுபுறம் திரும்பவும்
+      RyanLab_turnRight:
+        text: வலதுபுறம் திரும்பவும்
       craft_ifPath:
         options:
           DIR:

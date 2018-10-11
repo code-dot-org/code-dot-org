@@ -92,6 +92,7 @@ eu:
     age: Adina
     user_type: Ikaslea edo irakaslea zara?
     submit: Eman izena
+    next: Hurrengoa
     teacher: Irakaslea al zara?
     valid_username: Erabilgarri!
     invalid_username: Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu

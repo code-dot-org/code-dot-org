@@ -119,6 +119,7 @@ fi:
     age: Ikä
     user_type: Oletko opiskelija tai opettaja?
     submit: Rekisteröidy
+    next: Seuraava
     teacher: Oletko opettaja?
     valid_username: Vapaa!
     invalid_username: Käyttäjätunnuksen tulee olla vähintään 5 merkkiä pitkä

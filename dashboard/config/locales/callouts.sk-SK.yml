@@ -1223,9 +1223,9 @@ sk:
         repeat_blocks_2: (2) Presuňte sem blok "Zopakovať" a umiestnite šedé bloky
           do jeho vnútra
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       frozen diamond_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       frozen freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
           snehových vločiek!
@@ -1255,17 +1255,17 @@ sk:
       frozen perpendicular_test_callout:
         turn_elsa: 'Použi blok "Otoč sa" aby sa Elsa otočila. '
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
+        frozen_snowflake_branch: Použi blok "Vytvor rameno vločky"
       frozen snowflake branch_b_callout:
         frozen_snowflake_branch: Použi funkciu "Vytvor rameno vločky"
       frozen snowflake branch_test_callout:
-        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
+        frozen_snowflake_branch: Použi blok "Vytvor rameno vločky"
       frozen square iterative_callout:
-        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
       frozen square iterative_b_callout:
-        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
       frozen square iterative_test_callout:
-        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
       frozen square loop 3x_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen square loop 3x_b_callout:
@@ -1346,11 +1346,11 @@ sk:
         frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu"
           a zmeň veľkost.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       grade4_frozen_square_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       grade4_frozen_square_loop1_callout:

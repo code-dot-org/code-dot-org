@@ -3741,6 +3741,8 @@ pl:
               name: Sztafeta programowania
             Introduction to Online Puzzles:
               name: Wprowadzenie do puzzli online
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie
         coursec-2018:
           assignment_family_title: Kurs C
           description_audience: 'W wieku 6-10'
@@ -4129,3 +4131,7 @@ pl:
           stages:
             Artist:
               name: Artysta
+        sconyers:
+          stages:
+            Linking Screens:
+              name: Łączenie ekranów

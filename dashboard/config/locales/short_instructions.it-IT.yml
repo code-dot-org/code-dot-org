@@ -1893,7 +1893,7 @@ it:
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
         Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
-      Function intro Ryan: Usa due volte la funzione `costruisci ponte` per creare
+      Function intro Ryan: Usa due volte la funzione `costruisci un ponte` per creare
         un sentiero fino alla torcia di pietrarossa.
       Geometric Pattern: 'Idea per un progetto: crea un modello utilizzando idee geometriche
         come forme. Realizzarlo richiede pianificazione e persistenza!'
@@ -5110,6 +5110,12 @@ it:
         salti di 60 pixel.  '
       courseF_artist_variables6_2018: 'Ora crea triangoli che siano larghi 60 pixel
         con salti di 60 pixel.  '
+      courseF_artist_variables6a: Realizza questo progetto in cui i quadrati hanno
+        lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti verso
+        il basso tra uno e l'altro.
+      courseF_artist_variables6a_2018: Realizza questo progetto in cui i quadrati
+        hanno lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti
+        verso il basso tra uno e l'altro.
       courseF_artist_variables7: 'Disegna un triangolo con lati di 150 pixel. '
       courseF_artist_variables7_2018: 'Disegna un triangolo con lati di 150 pixel. '
       courseF_artist_variables8: Ricostruisci il codice del triangolo dall'esercizio
@@ -5134,6 +5140,9 @@ it:
         a modificare la variabile `length` (*lunghezza*) in altri modi.  '
       courseF_artist_variables_5: Aggiungi un'altra serie di cicli alla fine del programma
         per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+      courseF_artist_variables_6a: Realizza questo progetto in cui i quadrati hanno
+        lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti verso
+        il basso tra uno e l'altro.
       courseF_artist_variables_9: |-
         Guarda cosa succede quando ripeti il codice dell'esercizio precedente 30 volte invece di 3!
 

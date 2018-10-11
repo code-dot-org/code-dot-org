@@ -106,6 +106,7 @@ nn:
     age: 'Alder'
     user_type: 'Er du elev eller lærar?'
     submit: 'Meld deg på'
+    next: 'Neste'
     teacher: 'Er du ein lærar?'
     valid_username: "Tilgjengeleg!"
     invalid_username: "Brukernamnet må vere minst fem teikn"

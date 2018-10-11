@@ -424,9 +424,7 @@ th:
       courseA_collector_loops2: |-
         เก็บให้หมดทั้งสามกอง! พาลอเรลไปที่สมบัติแต่ละชิ้น แล้วใช้บล็อกนี้: 
         <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |-
-        เก็บให้หมดทั้งสามกอง! พาลอเรลไปที่สมบัติแต่ละชิ้น แล้วใช้บล็อกนี้: 
-        <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "เก็บให้หมดทั้งสามกอง! พาลอเรลไปที่สมบัติแต่ละชิ้น แล้วใช้บล็อกนี้: \n<xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: ลอเรลเก็บสมบัติทั้งห้ากองใข้เพียงแค่บล็อก<xml><block type="maze_moveEast"/></xml> เพียงบล็อกเดียว ได้อย่างไร??
       courseA_collector_loops3_2018: ลอเรลเก็บสมบัติทั้งห้ากองใข้เพียงแค่บล็อก<xml><block type="maze_moveEast"/></xml> เพียงบล็อกเดียว ได้อย่างไร??
       courseA_collector_preLoops7: |-

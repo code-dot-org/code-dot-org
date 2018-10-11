@@ -17,8 +17,6 @@ ro:
           GROUP:
             sprites: toate
           MOVE:
-            '"next"': Următor
-            '"prev"': Anterior
             '"rand"': Aleatoriu
           DIR:
             '1': "→"
@@ -26,8 +24,6 @@ ro:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Următor
-            '"prev"': Anterior
             '"rand"': Aleatoriu
           DIR:
             '1': "→"
@@ -39,14 +35,11 @@ ro:
             '"width"': lăţime
             '"height"': înălțime
             '"rotation"': rotație
-            '"tint"': tentă
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: toate
           MOVE:
-            '"next"': Următor
-            '"prev"': Anterior
             '"rand"': Aleatoriu
           DIR:
             '1': "→"
@@ -54,8 +47,6 @@ ro:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Următor
-            '"prev"': Anterior
             '"rand"': Aleatoriu
           DIR:
             '1': "→"
@@ -107,7 +98,7 @@ ro:
             "{x: 300, y: 100}": dreapta sus
             "{x: 100, y: 300}": stânga jos
             "{x: 300, y: 300}": dreapta jos
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatoriu
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleator
       Dancelab_onPointerDown:
         text: pe indicatorul în jos
       Dancelab_onPointerDrag:
@@ -143,6 +134,13 @@ ro:
             '"height"': înălțime
             '"rotation"': rotație
             '"tint"': tentă
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"width"': lăţime
+            '"height"': înălțime
+            '"rotation"': rotație
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -491,6 +489,12 @@ ro:
             '"down"': săgeată în jos
             '"left"': săgeată la stânga
             '"right"': săgeată dreapta
+      RyanLab_moveForward:
+        text: mută înainte
+      RyanLab_turnLeft:
+        text: ia-o la stânga
+      RyanLab_turnRight:
+        text: ia-o la dreapta
       Vector_positionCenter:
         text: centru
       Vector_randomLocation:

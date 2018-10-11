@@ -11,8 +11,6 @@ he:
           GROUP:
             sprites: כל
           MOVE:
-            '"next"': הבא
-            '"prev"': הקודם
             MOVES.Rest: כלום
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ he:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': הבא
-            '"prev"': הקודם
             MOVES.Rest: כלום
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ he:
           GROUP:
             sprites: כל
           MOVE:
-            '"next"': הבא
-            '"prev"': הקודם
             MOVES.Rest: כלום
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ he:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': הבא
-            '"prev"': הקודם
             MOVES.Rest: כלום
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ he:
           LOCATION:
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
       Dancelab_randomColor:
         text: צבע אקראי
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ he:
           EFFECT:
             '"none"': כלום
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"height"': גובה
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': גודל
@@ -283,6 +281,12 @@ he:
             '"down"': חץ למטה
             '"left"': חץ שמאלה
             '"right"': חץ ימינה
+      RyanLab_moveForward:
+        text: לזוז קדימה
+      RyanLab_turnLeft:
+        text: פנה שמאלה
+      RyanLab_turnRight:
+        text: פנה ימינה
       craft_ifPath:
         options:
           DIR:
