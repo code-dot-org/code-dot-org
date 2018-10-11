@@ -37,14 +37,14 @@ export default class Effects {
         for (let i = 0; i < 16; i++) {
           this.bg.fill(
             p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")"));
-          this.bg.rect((i % 4) * 50, Math.floor(i / 4) * 50, 50, 50);
+          this.bg.rect((i % 4) * 100, Math.floor(i / 4) * 100, 100, 100);
         }
       },
       update: function () {
         for (let i = randomNumber(5, 10); i > 0; i--) {
           let loc = randomNumber(0, 15);
           this.bg.fill(p5.color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")"));
-          this.bg.rect((loc % 4) * 50, Math.floor(loc / 4) * 50, 50, 50);
+          this.bg.rect((loc % 4) * 100, Math.floor(loc / 4) * 100, 100, 100);
         }
       },
       draw: function ({isPeak}) {
