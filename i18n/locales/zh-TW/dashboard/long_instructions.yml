@@ -521,7 +521,11 @@ zh-TW:
       Course 4 Artist For Loops 13: 恩…這些圖形變得愈來愈大了！我們不是已經用變數解決過這種問題了嗎？要怎麼用計數器變數來讓這些邊的長度變小呢？試著把向前移動固定數值改成向前移動（100/計數）像素。
       Course 4 Artist For Loops 14: "如果每次都多轉或少轉一些角度，那麼你可以創作出一種規律效果。\n\\r\n\\r\n試著用上一關的一些程式碼，但是轉向角度變成 89 度，來創造漩渦狀的正方形。"
       Course 4 Artist For Loops 15: "**自由發揮：**試著用`計數迴圈`來繪製一些自己的畫作。我們也為你新增了一些有用的變數。"
-      Course 4 Artist For Loops 2: "我已經在`計數迴圈`（for loop）裡放了可以畫出三角形的積木，計數是從 50 算到 100，間隔數是 10。\\r\n<br/>\\r\n<strong>注意：</strong>\n在你點擊「運行」前，好好的看一下程式內容，後面的關卡會用到。"
+      Course 4 Artist For Loops 2: |-
+        我已經在`計數迴圈`（for loop）裡放了可以畫出三角形的積木，計數是從 50 算到 100，間隔數是 10。\r
+        <br/>\r
+        <strong>注意：</strong>
+        在你點擊「運行」前，好好的看一下程式內容，後面的關卡會用到。
       Course 4 Artist For Loops 3: 參考上個關卡來完成這一關，這個最小的三角形邊長為 20 像素，最大的是 200 像素，每個三角形都比前一個的邊長多 20 像素。
       Course 4 Artist For Loops 4: '要怎麼調整你學過的畫出正方形程式？它們之中最小的邊長是 15 像素，最大的是 300 像素，每個正方形的邊長都比上一個長 15 像素。 '
       Course 4 Artist For Loops 5: "上個關卡表現得很好！讓我們再用一次「計數器」變數積木來畫出這個很酷的圖案。\n\\r\n\\r\n"
@@ -575,7 +579,11 @@ zh-TW:
       Course 4 Bee Params 2: 修改 `get 3 nectar`（採集 3 個花蜜）這個函式，讓我右轉找到花朵，而不是向左轉。
       Course 4 Bee Params 3: "現在，兩邊都有花了！\\r\n\\r\n我們已添加了變數 `left`（左）、`right`（右）到函式裡讓你使用，還有個叫 `direction`（方向）的參數在裡頭。\\r\n\\r\n\\r\n**編輯 `get 3 nectar`（採集 3 個花蜜）函式，讓蜜蜂透過變數 `left` 或 `right` 往正確的方向轉。**"
       Course 4 Bee Params 5: 讓我們從頭開始 - 你能建立一個含有 `direction`（方向）參數的 `get 5 nectar`（拿 5 罐花蜜）的函式嗎？
-      Course 4 Bee Params 6: "如果我們只用一個函式就能收集到所有花蜜的話，那不是很棒嗎？\\r\n\\r\n<br/>\\r\n試著添加一個名為 `nectar units`（花蜜數）的新參數到函式，來控制要採集的花蜜數量。你可能也會想為這個函式重新命名！"
+      Course 4 Bee Params 6: |-
+        如果我們只用一個函式就能收集到所有花蜜的話，那不是很棒嗎？\r
+        \r
+        <br/>\r
+        試著添加一個名為 `nectar units`（花蜜數）的新參數到函式，來控制要採集的花蜜數量。你可能也會想為這個函式重新命名！
       Course 4 Bee Params 7: |
         試著用你的新函式來收集所有的花蜜。\r
         \r
@@ -615,7 +623,19 @@ zh-TW:
       Course 4 Play Lab Params 6: 添加一個名為 `speed`（速度）的參數到 `patrol`（巡邏）函式中。試著在「設定速度」積木中使用新的參數，來幫助企鵝趕在其他動物前得到所有旗幟。
       Course 4 Play Lab Params 7: "我們來點有趣的！仔細看看提供的程式碼，你能不能想像每個積木在做些什麼。 \\r\n\\r\n當你完成後，使用方向鍵來控制小狗，並收集到所有的旗子。 \\r\n\\r\n**注意：**\n你不需要對程式進行任何修改"
       Course 4 Play Lab Params 8: 使用`當角色碰到`積木，在小狗碰到其他角色時，把狗送回左上方的位置。
-      Course 4 Play Lab Params 9: "這是一個早先的遊戲，但是大部分程式都隱藏了。這裡有個新函式叫做 `score_points`（獲得分數）。\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\n編輯這個函式，使得 `points`（分數）參數能被添加到 `player_score` （玩家分數）變數上。 \\r\n<br/>\\r\n變數 `player_score` 應該會在每次小狗的派碰到小貓時增加；在每次小貓的三明治碰到小狗時減少。 \\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*注意：當你完成後，點擊「運行」玩玩看，當小狗得到 6 分時，就可以進入下一關。"
+      Course 4 Play Lab Params 9: |-
+        這是一個早先的遊戲，但是大部分程式都隱藏了。這裡有個新函式叫做 `score_points`（獲得分數）。\r
+        <br/>\r
+        <hr>\r
+        <br/>\r
+        <h4>\r
+        編輯這個函式，使得 `points`（分數）參數能被添加到 `player_score` （玩家分數）變數上。 \r
+        <br/>\r
+        變數 `player_score` 應該會在每次小狗的派碰到小貓時增加；在每次小貓的三明治碰到小狗時減少。 \r
+        </h4>\r
+        <br/>\r
+        <hr>\r
+        *注意：當你完成後，點擊「運行」玩玩看，當小狗得到 6 分時，就可以進入下一關。
       Course 4 Play Lab Vars 1: |-
         這一次你不需要寫任何程式，只要點擊「運行」來玩這個遊戲！\r
         \r
@@ -1266,10 +1286,7 @@ zh-TW:
         移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
         \r
         收集 3 堆寶石以完成這個關卡。
-      courseA_collector_loops2_2018: |-
-        移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\r
-        \r
-        收集 3 堆寶石以完成這個關卡。
+      courseA_collector_loops2_2018: "移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\\r\n\\r\n收集 3 堆寶石以完成這個關卡。"
       courseA_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_preLoops7: |-

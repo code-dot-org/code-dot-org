@@ -8,17 +8,11 @@ lt:
             '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Kitas
-            '"prev"': Ankstesnis
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Kitas
-            '"prev"': Ankstesnis
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ lt:
             '"height"': aukštis
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Kitas
-            '"prev"': Ankstesnis
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Kitas
-            '"prev"': Ankstesnis
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ lt:
           LOCATION:
             "{x: 100, y: 200}": kairėje
             "{x: 300, y: 200}": dešinėje
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_randomColor:
         text: Atsitiktinė spalva
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ lt:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': dydis
@@ -240,6 +234,12 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
+      RyanLab_moveForward:
+        text: judėk į priekį
+      RyanLab_turnLeft:
+        text: pasisuk į kairę
+      RyanLab_turnRight:
+        text: pasisuk į dešinę
       craft_ifPath:
         options:
           DIR:

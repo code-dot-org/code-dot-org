@@ -8,17 +8,11 @@ fa:
             '"seconds"': ثانیه
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ fa:
             '"height"': ارتفاع
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ fa:
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ fa:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -228,6 +222,12 @@ fa:
             '"down"': فلش سمت پایین
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
+      RyanLab_moveForward:
+        text: برو جلو
+      RyanLab_turnLeft:
+        text: بپیچ به چپ
+      RyanLab_turnRight:
+        text: بپیچ به راست
       craft_ifPath:
         options:
           DIR:

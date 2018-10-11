@@ -3373,6 +3373,8 @@ zh-TW:
               name: 圖畫紙程式設計
             Relay Programming:
               name: 接力編程
+            Nested Loops in Maze:
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
         coursec-2018:
           assignment_family_title: 課程 C
           stages:
@@ -3666,3 +3668,7 @@ zh-TW:
           stages:
             Artist:
               name: 藝術家
+        sconyers:
+          stages:
+            Digital Design:
+              name: 數位設計

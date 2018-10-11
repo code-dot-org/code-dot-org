@@ -128,6 +128,7 @@ de:
     age: Alter
     user_type: Bist du Schüler oder Lehrer?
     submit: Registrieren
+    next: Weiter
     teacher: Sind Sie ein Lehrer?
     valid_username: Verfügbar!
     invalid_username: Benutzernamen müssen mindestens 5 Zeichen lang sein

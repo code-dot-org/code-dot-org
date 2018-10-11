@@ -1542,7 +1542,7 @@ fr:
         * Add a new HTML file to your project for your
         informational page.\\r
         * Add a title and description
-      CSD U2 Info Page Final Touches: |
+      CSD U2 Info Page Final Touches: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\\r
         \\r
@@ -3119,13 +3119,6 @@ fr:
         \\r
         * Place two rectangles exactly in the corners
         of the screen, just like the picture.
-      CSD U3 Entertainment Sample 1 - unembed: |-
-        # Alien Jumper\\r
-        \\r
-        Press
-        "Run" to play the game on the left.  You can make the alien jump with the
-        space bar, and move it to the left and right with the arrow keys.  You score
-        by collecting stars, and if you score high enough, the background will change.
       CSD U3 Entertainment Sample 1: |-
         # Alien Jumper\\r
         \\r
@@ -3700,7 +3693,6 @@ fr:
         \\r
         _Tip: If your counter pattern
         isn't working like you expect, add watchers to help debug your program._
-      CSD U3 Plotting Shapes Shape Lab - unembed: "# Drawing Shapes\\r\n\\r\nExplore\nusing this tool that lets you draw different colored shapes. \\r\n\\r\nMake\nsure you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab Open: "# Drawing Shapes\\r\n\\r\nExplore\nusing this tool that lets you draw different colored shapes. \\r\n\\r\nMake\nsure you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab: "# Drawing Shapes\\r\n\\r\nExplore\nusing this tool that lets you draw different colored shapes. \\r\n\\r\nMake\nsure you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab_2018: "# Drawing Shapes\\r\n\\r\nExplore\nusing this tool that lets you draw different colored shapes. \\r\n\\r\nMake\nsure you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
@@ -8435,7 +8427,13 @@ fr:
       Course 4 Artist For Loops 11a: "Let's put it all together!   \\r\n\\r\nUsing\nyour knowledge of `for` loops and the `counter` variable, create this drawing\nwhere each shape has two more sides than the last.  Make sure that each side\nis 10 times as long as the number of sides in the polygon.\\r\n\\r\nVery little\nof the code has been provided for you."
       Course 4 Artist For Loops 13: Hmmm, ces formes sont plus grosses à chaque fois ! N'a-t-on pas déjà résolu ce problème avec des variables ? Comment pouvons-nous utiliser la variable «Compteur» pour rendre les côtés plus petits lorsqu’ils sont plus nombreux ? Au lieu d’avancer d’une distance définie, essaie d’avancer de (100 / compteur) pixels.
       Course 4 Artist For Loops 14: "If you turn a little bit\nmore or less than you normally would for a shape, it creates a neat effect.\n\\r\n\\r\nTry using some of the code from the last level, but turning 89 degrees\nto create this twisted square spiral."
-      Course 4 Artist For Loops 2: "I've put the code for drawing\na triangle inside a `for loop` that counts from 50 to 100 by 10. \\r\n\\r\n<br/>\\r\n<strong>NOTE:</strong>\nMake sure you look at the code *before* you hit \"Run\"."
+      Course 4 Artist For Loops 2: |-
+        I've put the code for drawing
+        a triangle inside a `for loop` that counts from 50 to 100 by 10. \\r
+        \\r
+        <br/>\\r
+        <strong>NOTE:</strong>
+        Make sure you look at the code *before* you hit "Run".
       Course 4 Artist For Loops 4: 'Comment modifierais-tu ce que tu as appris pour dessiner ces carrés ? Ils commencent à 15 pixels de long, le plus grand mesure 300 pixels de long, et chaque carré est plus grand de 15 pixels que le dernier. '
       Course 4 Artist For Loops 5: "Good job on the last puzzle!\nLet's use that \"counter\" variable block again to draw this cool picture.\n\\r\n\\r\n"
       Course 4 Artist For Loops 6: Activité libre ! Essaie d'utiliser une « Boucle pour » afin de dessiner ta propre suite de formes grandissantes.
@@ -8488,7 +8486,15 @@ fr:
       Course 4 Bee For Loops 11: Quel problème présente cette boucle ? Regarde si tu peux la réparer et faire en sorte que les abeilles recueillent tout le nectar.
       Course 4 Bee Params 1: Utilise la fonction «Obtenir 3 nectars» qui fait tourner, se déplacer pour recueillir le nectar et revenir au point de départ. Écris une séquence pour recueillir tout le nectar en utilisant «Obtenir 3 nectars».
       Course 4 Bee Params 3: "Now there are flowers on both\nsides!  \\r\n\\r\nWe've added variables called `left` and `right` for you to\nuse, and now there is a parameter called `direction` inside `get 3 nectar`.\n\\r\n\\r\n**Edit `get 3 nectar` so that the bee turns the correct direction\nwhen the variables `left` or `right` are passed into the function.**"
-      Course 4 Bee Params 6: "Wouldn't it be nice if we could\ncollect all of these nectars with a single function? \\r\n\\r\n<br/>\\r\nTry\nadding a new parameter to your function called `nectar units` to control the\namount of nectar to collect. You'll probably want to rename the function\ntoo!"
+      Course 4 Bee Params 6: |-
+        Wouldn't it be nice if we could
+        collect all of these nectars with a single function? \\r
+        \\r
+        <br/>\\r
+        Try
+        adding a new parameter to your function called `nectar units` to control the
+        amount of nectar to collect. You'll probably want to rename the function
+        too!
       Course 4 Bee Params 7: |
         Try using your new function to
         collect all of this nectar.\\r
@@ -8528,7 +8534,26 @@ fr:
       Course 4 Play Lab Params 4: "Voici une fonction appelée «Patrouille». Modifie-la pour déplacer le Chat vers le haut de 400 pixels, puis vers le bas de 400 pixels."
       Course 4 Play Lab Params 7: "Let's have some fun! Look\nat the code provided to see if you can figure out what each block does.  \\r\n\\r\nWhen\nyou're done, use the arrow keys to control Dog and collect all of the flags.\\r\n\\r\n**NOTE:**\nYou don't need to make any changes to the program"
       Course 4 Play Lab Params 8: Utilise un bloc « Quand acteur touche » pour renvoyer le Chien en haut à gauche UNIQUEMENT s'il touche un des autres acteurs.
-      Course 4 Play Lab Params 9: "Here's our game from an\nearlier stage but most of the code is hidden. We've added a new function\ncalled `score_points.`\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\nEdit the function\nso that a new parameter called `points` is added to `player_score`.  \\r\n<br/>\\r\nThe\nvariable `player_score` should increase each time Dog tags Cat with pie, and\ndecrease each time that Cat tags Dog with a sandwich.\\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*Note:\nWhen you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove on to the next puzzle.*"
+      Course 4 Play Lab Params 9: |-
+        Here's our game from an
+        earlier stage but most of the code is hidden. We've added a new function
+        called `score_points.`\\r
+        <br/>\\r
+        <hr>\\r
+        <br/>\\r
+        <h4>\\r
+        Edit the function
+        so that a new parameter called `points` is added to `player_score`.  \\r
+        <br/>\\r
+        The
+        variable `player_score` should increase each time Dog tags Cat with pie, and
+        decrease each time that Cat tags Dog with a sandwich.\\r
+        </h4>\\r
+        <br/>\\r
+        <hr>\\r
+        *Note:
+        When you're done, click "Run" to play.  When Dog scores 6 points, you will
+        move on to the next puzzle.*
       Course 4 Play Lab Vars 1: |-
         This time you don't have to
         write any code, just hit `Run` to play the game! \\r
@@ -11320,10 +11345,7 @@ fr:
         Get all three piles! Move
         Laurel to each piece of treasure, then use this block:\\r
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |2
-        Get all three piles! Move
-        Laurel to each piece of treasure, then use this block:\\r
-          <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "Get all three piles! Move\nLaurel to each piece of treasure, then use this block:\\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_preLoops1: "This is Laurel the Adventurer!\n\\r\n\\r\nPress \"Run\" to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2: "Great!  Now you get to add\ncode yourself!  \\r\n\\r\nSnap a ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)\nblock to the bottom of the program and click \"Run\"!"
       courseA_collector_preLoops7: |2
