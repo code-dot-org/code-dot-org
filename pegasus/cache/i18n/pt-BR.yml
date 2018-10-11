@@ -38,6 +38,7 @@ pt-BR:
     da computação e seus conceitos nesse curso.
   og_title: A Hora do Código está chegando
   og_title_soon: A Hora do Código está chegando
+  og_title_here: A Hora do Código chegou!
   og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
     da computação. Isso muda tudo.
   csedweek_og_title: A Hora do Código está chegando
@@ -380,6 +381,7 @@ pt-BR:
   homepage_hero_text_stat_students: "#student_count contas de aluno no Code Studio"
   homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
   homepage_hero_hoc_is_coming: A Hora do Código está chegando
+  homepage_hero_hoc_is_here: A Hora do Código chegou
   homepage_slot_text_hoc: A Hour of Code
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Painel de controle do professor
@@ -535,6 +537,9 @@ pt-BR:
   minecraft_no_internet: Não tem Internet?
   minecraft_download_adventurer: Baixe a versão offline do Aventureiro de Minecraft.
   minecraft_subtitle: Hora do Código Minecraft
+  minecraft_host_event: Organize um evento da Hora do Código Minecraft
+  minecraft_teach_resources: Recursos e planos de aula para professores.
+  minecraft_leader_guide: Baixe recursos para ajudá-lo a planejar e conduzir um evento.
   sports_page_title: Hora do Código Esportes
   sports_og_title: Esforce-se. Qualquer um pode aprender.
   sports_og_description: Campeões e medalhistas de ouro encorajá-lo a experimentar
@@ -1992,7 +1997,7 @@ pt-BR:
   user_header_settings: Minha conta
   user_header_logout: Sair
   user_header_signin: Entrar
-  view_all_sections: Ver todas as turmas
+  view_all_sections: Ver todas as seções
   view_section: Ver Seção
   view_named_section: Ver %{section_name}
   signing_in: Fazendo Login
