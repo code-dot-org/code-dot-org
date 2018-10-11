@@ -171,7 +171,7 @@ module AWS
             DomainName: "cdo-restricted.s3.amazonaws.com",
             OriginPath: '',
             S3OriginConfig: {
-              OriginAccessIdentity: ''
+              OriginAccessIdentity: 'origin-access-identity/cloudfront/E17G1PR1YAN7F4'
             },
           },
         ],
