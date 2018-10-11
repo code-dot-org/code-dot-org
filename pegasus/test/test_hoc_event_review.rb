@@ -23,6 +23,23 @@ class HocEventReviewTest < Minitest::Test
       end
     end
 
+    it 'finds event counts by country' do
+      with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+        with_form location_country_code_s: 'MX' do
+          with_form location_country_code_s: 'MX' do
+            with_form location_country_code_s: 'IT' do
+              expected = [
+                {country_code: 'IT', count: 1},
+                {country_code: 'MX', count: 2},
+              ]
+              actual = HocEventReview.event_counts_by_country
+              assert_equal expected, actual
+            end
+          end
+        end
+      end
+    end
+
     # Helper to temporarily create a form row for testing retrieval methods.
     DEFAULT_KIND = HocEventReview.send(:kind)
     def with_form(processed_data)
