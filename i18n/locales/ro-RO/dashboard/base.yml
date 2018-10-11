@@ -109,6 +109,7 @@ ro:
     age: 'Vârsta'
     user_type: 'Ești student sau profesor?'
     submit: 'Înregistrează-te'
+    next: 'Următor'
     teacher: 'Ești profesor?'
     valid_username: "Disponibil!"
     invalid_username: "Numele de utilizator trebuie să aibe cel puțin 5 caractere"

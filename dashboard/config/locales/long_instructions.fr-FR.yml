@@ -1788,7 +1788,7 @@ fr:
         Do This\\\r\n\\\r\nUsing either your own images or those\nfound through a
         Commons Search, add some images to the pages you've already\ncreated. Get
         creative! Use the checklist to the right to keep track of the\nsteps you need
-        to follow when adding images.\\\r\n"
+        to follow when adding images.\\\r"
       CSD U2 Info Page Final Touches_2018: "<div style=\"float: right;\nheight: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\\\r\n\\\r\n<h2>\\\r\nChecklist\\\r\n</h2>\\\r\n\\\r\n<input\ntype=\"checkbox\"
         style=\"float: left\"><span style=\"display: block; margin-left:\n20px; margin-bottom:
@@ -2565,10 +2565,6 @@ fr:
         on the grid or hover with the mouse to help find the x and y position\nyou
         want.\\\r\n\\\r\n# Do This\\\r\n\\\r\n* Place two rectangles exactly in the
         corners\nof the screen, just like the picture."
-      CSD U3 Entertainment Sample 1 - unembed: "# Alien Jumper\\\r\n\\\r\nPress\n\"Run\"
-        to play the game on the left.  You can make the alien jump with the\nspace
-        bar, and move it to the left and right with the arrow keys.  You score\nby
-        collecting stars, and if you score high enough, the background will change."
       CSD U3 Entertainment Sample 1: "# Alien Jumper\\\r\n\\\r\nPress\n\"Run\" to
         play the game on the left.  You can make the alien jump with the\nspace bar,
         and move it to the left and right with the arrow keys.  You score\nby collecting
@@ -2892,9 +2888,6 @@ fr:
         Update\nthose properties using the counter pattern.\\\r\n\\\r\n_Tip: If your
         counter pattern\nisn't working like you expect, add watchers to help debug
         your program._"
-      CSD U3 Plotting Shapes Shape Lab - unembed: "# Drawing Shapes\r\n\r\nExplore\nusing
-        this tool that lets you draw different colored shapes. \r\n\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab Open: "# Drawing Shapes\r\n\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \r\n\r\nMake\nsure
         you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
@@ -5306,7 +5299,7 @@ fr:
         of the code from the last level, but turning 89 degrees\nto create this twisted
         square spiral."
       Course 4 Artist For Loops 2: "I've put the code for drawing\na triangle inside
-        a `for loop` that counts from 50 to 100 by 10. \r\n\r\n<br/>\r\n<strong>NOTE:</strong>\nMake
+        a `for loop` that counts from 50 to 100 by 10. \\\r\n\\\r\n<br/>\\\r\n<strong>NOTE:</strong>\nMake
         sure you look at the code *before* you hit \"Run\"."
       Course 4 Artist For Loops 4: 'Comment modifierais-tu ce que tu as appris pour
         dessiner ces carrés ? Ils commencent à 15 pixels de long, le plus grand mesure
@@ -5438,7 +5431,7 @@ fr:
         3 nectar` so that the bee turns the correct direction\nwhen the variables
         `left` or `right` are passed into the function.**"
       Course 4 Bee Params 6: "Wouldn't it be nice if we could\ncollect all of these
-        nectars with a single function? \r\n\r\n<br/>\r\nTry\nadding a new parameter
+        nectars with a single function? \\\r\n\\\r\n<br/>\\\r\nTry\nadding a new parameter
         to your function called `nectar units` to control the\namount of nectar to
         collect. You'll probably want to rename the function\ntoo!"
       Course 4 Bee Params 7: "Try using your new function to\ncollect all of this
@@ -5482,10 +5475,10 @@ fr:
       Course 4 Play Lab Params 8: Utilise un bloc « Quand acteur touche » pour renvoyer
         le Chien en haut à gauche UNIQUEMENT s'il touche un des autres acteurs.
       Course 4 Play Lab Params 9: "Here's our game from an\nearlier stage but most
-        of the code is hidden. We've added a new function\ncalled `score_points.`\r\n<br/>\r\n<hr>\r\n<br/>\r\n<h4>\r\nEdit
+        of the code is hidden. We've added a new function\ncalled `score_points.`\\\r\n<br/>\\\r\n<hr>\\\r\n<br/>\\\r\n<h4>\\\r\nEdit
         the function\nso that a new parameter called `points` is added to `player_score`.
-        \ \r\n<br/>\r\nThe\nvariable `player_score` should increase each time Dog
-        tags Cat with pie, and\ndecrease each time that Cat tags Dog with a sandwich.\r\n</h4>\r\n<br/>\r\n<hr>\r\n*Note:\nWhen
+        \ \\\r\n<br/>\\\r\nThe\nvariable `player_score` should increase each time
+        Dog tags Cat with pie, and\ndecrease each time that Cat tags Dog with a sandwich.\\\r\n</h4>\\\r\n<br/>\\\r\n<hr>\\\r\n*Note:\nWhen
         you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
         on to the next puzzle.*"
       Course 4 Play Lab Vars 1: "This time you don't have to\nwrite any code, just
@@ -8150,7 +8143,7 @@ fr:
       courseA_collector_loops2: "Get all three piles! Move\nLaurel to each piece of
         treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
       courseA_collector_loops2_2018: "Get all three piles! Move\nLaurel to each piece
-        of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
+        of treasure, then use this block:\\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_preLoops1: "This is Laurel the Adventurer!\n\r\n\r\nPress
         \"Run\" to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2: "Great!  Now you get to add\ncode yourself!  \r\n\r\nSnap

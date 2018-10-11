@@ -120,6 +120,7 @@ zh-CN:
     age: 年龄
     user_type: 你是学生还是老师？
     submit: 注册
+    next: 下一项
     teacher: 你是老师吗？
     valid_username: 可用 ！
     invalid_username: 用户名必须至少 5 个字符

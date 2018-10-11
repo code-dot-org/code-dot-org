@@ -42,9 +42,9 @@ en:
             MOVES.Roll: Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thiller
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -64,9 +64,9 @@ en:
             MOVES.Roll: Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thiller
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -81,7 +81,6 @@ en:
             '"rotation"': rotation
             '"x"': horizontal position
             '"y"': vertical position
-            '"tint"': tint
       Dancelab_doMoveEachLR:
         text: "{GROUP} do {MOVE} {DIR} once"
         options:
@@ -109,9 +108,9 @@ en:
             MOVES.Roll: Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thiller
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -131,9 +130,9 @@ en:
             MOVES.Roll: Roll
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Thiller
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
             MOVES.Rest: None
           DIR:
             "-1": "←"
@@ -260,7 +259,7 @@ en:
             "{x: 300, y: 100}": top right
             "{x: 100, y: 300}": bottom left
             "{x: 300, y: 300}": bottom right
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_mixColors:
         text: mix {COLOR1} and {COLOR2}
       Dancelab_nMeasures:
@@ -283,7 +282,7 @@ en:
             '"disco"': Squares
             '"rainbow"': Colors
             '"diamonds"': Diamonds
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": Random
+            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": "(Random)"
       Dancelab_setDanceSpeed:
         text: change {SPRITE} dance speed to {SPEED}
         options:
@@ -301,9 +300,9 @@ en:
             '"strobe"': Strobe
             '"rain"': Rain
             '"raining_tacos"': Tacos
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Random
+            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": "(Random)"
       Dancelab_setProp:
-        text: set {SPRITE} {PROPERTY} to {VAL}
+        text: 'set {SPRITE} {PROPERTY} to {VAL} '
         options:
           PROPERTY:
             '"scale"': size
@@ -313,6 +312,16 @@ en:
             '"x"': horizontal position
             '"y"': vertical position
             '"tint"': tint
+      Dancelab_setPropRandom:
+        text: randomize {SPRITE} {PROPERTY}
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
       Dancelab_setTint:
         text: set {SPRITE} tint to {VAL}
       Dancelab_setVisibleEach:
@@ -384,7 +393,7 @@ en:
         text: 'setup {SONG} '
         options:
           SONG:
-            '"macklemore90"': Macklemore - Can't Hold Us (90 sec)
+            '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_add:
@@ -440,6 +449,8 @@ en:
         text: "{THIS} blocks {SPRITE} from moving"
       gamelab_distance:
         text: distance from {LOCATION1} to {LOCATION2}
+      gamelab_draggable:
+        text: being draggable
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
       gamelab_enableDebug:
@@ -931,6 +942,16 @@ en:
         text: x coordinate of {SPRITE}
       Mikelab_yLocationOf:
         text: y coordinate of {SPRITE}
+      RyanLab_moveForward:
+        text: move forward
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
+      RyanLab_turnLeft:
+        text: turn left
+      RyanLab_turnRight:
+        text: turn right
       Vector_createSpriteWith:
         text: |-
           create sprite
@@ -982,9 +1003,66 @@ en:
       craft_moveForward:
         text: move forward
       craft_placeBlock:
-        text: place prismarine
+        text: place {blockType}
+        options:
+          blockType:
+            '"strippedOak"': stripped oak
+            '"strippedDarkOak"': stripped dark oak
+            '"stoneBricks"': stone bricks
+            '"mossyStoneBricks"': mossy stone bricks
+            '"crackedStoneBricks"': cracked stone bricks
+            '"decorativeStoneBricks"': decorative stone bricks
+            '"blueCoralBlock"': blue coral block
+            '"pinkCoralBlock"': pink coral block
+            '"magentaCoralBlock"': magenta coral block
+            '"redCoralBlock"': red coral block
+            '"yellowCoralBlock"': yellow coral block
+            '"blueDeadCoralBlock"': blue dead coral block
+            '"pinkDeadCoralBlock"': pink dead coral block
+            '"magentaDeadCoralBlock"': magenta dead coral block
+            '"readDeadCoralBlock"': read dead coral block
+            '"yellowDeadCoralBlock"': yellow dead coral block
+            '"prismarine"': prismarine
+            '"darkPrismarine"': dark prismarine
+            '"seaLantern"': sea lantern
+            '"packedIce"': packed ice
+            '"blueIce"': blue ice
+            '"blackConcrete"': black concrete
+            '"blueCoral"': blue coral
+            '"pinkCoral"': pink coral
+            '"magentaCoral"': magenta coral
+            '"redCoral"': red coral
+            '"yellowCoral"': yellow coral
+            '"seaGrass"': sea grass
+            '"kelp"': kelp
+            '"polishedGranite"': polished granite
+            '"blueCoralFan"': blue coral fan
+            '"pinkCoralFan"': pink coral fan
+            '"magentaCoralFan"': magenta coral fan
+            '"redCoralFan"': red coral fan
+            '"yellowCoralFan"': yellow coral fan
+            '"blueCoralFanTop"': blue coral fan top
+            '"pinkCoralFanTop"': pink coral fan top
+            '"magentaCoralFanTop"': magenta coral fan top
+            '"redCoralFanTop"': red coral fan top
+            '"yellowCoralFanTop"': yellow coral fan top
+            '"blueCoralFanLeft"': blue coral fan left
+            '"pinkCoralFanLeft"': pink coral fan left
+            '"magentaCoralFanLeft"': magenta coral fan left
+            '"redCoralFanLeft"': red coral fan left
+            '"yellowCoralFanLeft"': yellow coral fan left
+            '"blueCoralFanRight"': blue coral fan right
+            '"pinkCoralFanRight"': pink coral fan right
+            '"magentaCoralFanRight"': magenta coral fan right
+            '"redCoralFanRight"': red coral fan right
+            '"yellowCoralFanRight"': yellow coral fan right
+            '"seaPickles"': sea pickles
       craft_placeTorch:
         text: place torch
+      craft_repeatUntilConduit:
+        text: |-
+          repeat until conduit completed
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           repeat until goal

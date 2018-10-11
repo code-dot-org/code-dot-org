@@ -7022,6 +7022,8 @@ zh-CN:
               name: 编程接力
             Introduction to Online Puzzles:
               name: 在线拼图简介
+            Nested Loops in Maze:
+              name: 迷宫里的嵌套循环
         jr-test:
           stages:
             Programming with Behaviors:
@@ -8303,3 +8305,17 @@ zh-CN:
           stages:
             Artist:
               name: 小艺术家
+        sconyers:
+          stages:
+            Digital Design:
+              name: 数字设计
+            Linking Screens:
+              name: 连接屏幕
+        dance--draft:
+          stages:
+            Dance Party:
+              name: 舞蹈派对
+        dance-draft:
+          stages:
+            Dance Party:
+              name: 舞蹈派对

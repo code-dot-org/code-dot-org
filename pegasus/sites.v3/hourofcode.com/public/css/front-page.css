@@ -42,14 +42,26 @@
 
 a.category-link {
   text-decoration: none;
+  width: 50%;
+  min-width: 182px;
 }
 
 .category-link .category-button:hover {
   opacity: 0.7;
 }
 
-.robotics-logo {
-  margin-right: 10px;
+.robotics-providers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.robotics-provider {
+  width: 90%;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .purple-background {

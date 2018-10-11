@@ -94,6 +94,7 @@ fa:
     age: 'سن'
     user_type: 'آیا شما یک دانش آموز یا معلم هستید ؟'
     submit: 'ثبت نام'
+    next: 'بعدي'
     teacher: 'آیا شما یک معلم هستید؟'
     valid_username: "موجود است!"
     invalid_username: "نام کاربری باید حداقل 5 حرف باشد"
@@ -107,6 +108,7 @@ fa:
     user_type_student: "دانش آموز"
     field_is_required: "%s لازم است"
     error: "خطایی رخ داد."
+    email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
     email_preference_yes: "بله"
     email_preference_no: "نه"
   school_info:

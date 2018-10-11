@@ -26,6 +26,10 @@ ur:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_randomColor:
         text: بے ترتیب رنگ
       Dancelab_setDanceSpeed:
@@ -81,6 +85,12 @@ ur:
           KEY:
             '"w"': مغرب
             '"s"': جنوب
+      RyanLab_moveForward:
+        text: آگے چلیں
+      RyanLab_turnLeft:
+        text: بائیں طرف مڑیں
+      RyanLab_turnRight:
+        text: دائیں طرف مڑیں
       craft_ifPath:
         options:
           DIR:

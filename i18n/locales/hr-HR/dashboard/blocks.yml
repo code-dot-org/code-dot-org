@@ -8,17 +8,11 @@ hr:
             '"seconds"': sekunde
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Sljedeći
-            '"prev"': Prethodni
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Sljedeći
-            '"prev"': Prethodni
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ hr:
             '"height"': visina
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Sljedeći
-            '"prev"': Prethodni
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Sljedeći
-            '"prev"': Prethodni
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ hr:
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ hr:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': veličina
@@ -240,6 +234,12 @@ hr:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+      RyanLab_moveForward:
+        text: idi naprijed
+      RyanLab_turnLeft:
+        text: okreni ulijevo
+      RyanLab_turnRight:
+        text: okreni udesno
       craft_ifPath:
         options:
           DIR:

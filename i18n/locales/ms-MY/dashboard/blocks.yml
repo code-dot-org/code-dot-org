@@ -4,17 +4,11 @@ ms:
     blocks:
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
@@ -25,17 +19,11 @@ ms:
             '"height"': ketinggian
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
@@ -55,6 +43,7 @@ ms:
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_randomColor:
         text: warna rawak
       Dancelab_setDanceSpeed:
@@ -66,6 +55,11 @@ ms:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': saiz
@@ -167,6 +161,11 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -196,6 +195,12 @@ ms:
           KEY:
             '"w"': W
             '"s"': S
+      RyanLab_moveForward:
+        text: bergerak ke hadapan
+      RyanLab_turnLeft:
+        text: belok kiri
+      RyanLab_turnRight:
+        text: belok kanan
       craft_ifPath:
         options:
           DIR:

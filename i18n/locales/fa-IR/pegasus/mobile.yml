@@ -343,6 +343,7 @@
   volunteer_engineer_submission_field_description: "توضیحات"
   volunteer_engineer_submission_field_email: "نشانی رایانامه"
   volunteer_engineer_submission_field_email_placeholder: "نشانی رایانامه"
+  volunteer_engineer_submission_field_email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
   volunteer_engineer_submission_field_email_preference_yes: 'بله'
   volunteer_engineer_submission_field_email_preference_no: 'نه'
   volunteer_engineer_submission_submit: "ارسال کنید"

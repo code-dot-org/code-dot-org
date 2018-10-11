@@ -31,8 +31,6 @@ es:
             '"SHARK"': todos los tiburones
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -41,8 +39,6 @@ es:
         options:
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -68,8 +64,6 @@ es:
             '"SHARK"': todos los tiburones
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -78,8 +72,6 @@ es:
         options:
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -153,6 +145,7 @@ es:
           LOCATION:
             "{x: 100, y: 200}": izquierda
             "{x: 300, y: 200}": derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
       Dancelab_randomColor:
         text: color aleatorio
       Dancelab_setBackgroundEffect:
@@ -172,6 +165,11 @@ es:
           EFFECT:
             '"none"': Nada
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -369,6 +367,12 @@ es:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+      RyanLab_moveForward:
+        text: avanzar
+      RyanLab_turnLeft:
+        text: girar a la izquierda
+      RyanLab_turnRight:
+        text: girar a la derecha
       craft_ifPath:
         options:
           DIR:

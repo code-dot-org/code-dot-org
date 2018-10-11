@@ -3,6 +3,8 @@
 
 import Effects from './Effects';
 import {TestResults} from '../constants';
+import {getStore} from "../redux";
+import {commands as audioCommands} from '../lib/util/audioApi';
 
 export default function init(p5, Dance, onPuzzleComplete) {
   const exports = {};
@@ -52,7 +54,7 @@ var sprites = p5.createGroup();
 var sprites_by_type = {};
 
 var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
-var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
+var img_base = "https://curriculum.code.org/images/sprites/spritesheet_tp/";
 var SIZE = 300;
 
 var MOVE_NAMES = [
@@ -105,6 +107,8 @@ var songs = {
   }
 };
 var song_meta = songs.hammer;
+//Tracks when a song started to play
+let songStartTime = 0;
 
 exports.addCues = function (timestamps) {
   timestamps.forEach(timestamp => {
@@ -128,19 +132,19 @@ exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
 
-  // Load spritesheets
-  for (var i = 0; i < SPRITE_NAMES.length; i++) {
-    var this_sprite = SPRITE_NAMES[i];
+  // Load spritesheet JSON files
+  SPRITE_NAMES.forEach(this_sprite => {
     ANIMATIONS[this_sprite] = [];
-    for (var j = 0; j < MOVE_NAMES.length; j++) {
-      var url = img_base + this_sprite + "_" + MOVE_NAMES[j].name + ".png";
-      var dance = {
-        spritesheet: p5.loadSpriteSheet(url, SIZE, SIZE, FRAMES),
-        mirror: MOVE_NAMES[j].mirror
-      };
-      ANIMATIONS[this_sprite].push(dance);
-    }
-  }
+    MOVE_NAMES.forEach(({ name, mirror }, moveIndex) => {
+      const baseUrl = `${img_base}${this_sprite}_${name}`;
+      p5.loadJSON(`${baseUrl}.json`, jsonData => {
+        ANIMATIONS[this_sprite][moveIndex] = {
+          spritesheet: p5.loadSpriteSheet(`${baseUrl}.png`, jsonData.frames),
+          mirror,
+        };
+      });
+    });
+  });
 }
 
 exports.setup = function setup() {
@@ -151,14 +155,15 @@ exports.setup = function setup() {
       ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
   }
+  let songData = songs[getStore().getState().selectedSong];
 
-  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / song_meta.bpm));
-  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / song_meta.bpm));
-  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / song_meta.bpm));
+  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / songData.bpm));
+  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / songData.bpm));
+  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / songData.bpm));
 }
 
 exports.play = function () {
-  Dance.song.start();
+  audioCommands.playSound({url: songs[getStore().getState().selectedSong].url, callback: () => {songStartTime = new Date()}});
 }
 
 var bg_effects = new Effects(p5, 1);
@@ -232,7 +237,7 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
   addBehavior(sprite, function () {
     var delta = Math.min(100, 1 / (p5.frameRate() + 0.01) * 1000);
     sprite.sinceLastFrame += delta;
-    var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
+    var msPerBeat = 60 * 1000 / (songs[getStore().getState().selectedSong].bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
@@ -466,11 +471,13 @@ exports.getEnergy = function getEnergy(range) {
 }
 
 exports.getTime = function getTime(unit) {
+  let currentTime = (new Date() - songStartTime) / 1000;
   if (unit == "measures") {
     // Subtract any delay before the first measure and start counting measures at 1
-    return song_meta.bpm * ((Dance.song.currentTime(0) - song_meta.delay) / 240) + 1;
+    let songData = songs[getStore().getState().selectedSong];
+    return songData.bpm * ((currentTime - songData.delay) / 240) + 1;
   } else {
-    return Dance.song.currentTime(0);
+    return currentTime;
   }
 }
 
@@ -686,13 +693,16 @@ exports.draw = function draw() {
     p5.pop();
   }
 
+  let songData = songs[getStore().getState().selectedSong];
+  let currentTime = (new Date() - songStartTime) / 1000;
+
   p5.fill("black");
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
 
   World.validationCallback(World, exports, sprites);
+  p5.text("Measure: " + (Math.floor(((currentTime - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
 }
   return exports;
 }

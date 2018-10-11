@@ -11,8 +11,6 @@ ga:
           GROUP:
             sprites: uile
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ ga:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ ga:
           GROUP:
             sprites: uile
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ ga:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ ga:
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_randomColor:
         text: dath randamach
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ ga:
           EFFECT:
             '"none"': Dada
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': méid
@@ -283,6 +281,12 @@ ga:
             '"down"': a bhrúitear an tsaighead síos
             '"left"': a bhrúitear an tsaighead chlé
             '"right"': a bhrúitear an tsaighead dheas
+      RyanLab_moveForward:
+        text: téigh ar aghaidh
+      RyanLab_turnLeft:
+        text: cas ar chlé
+      RyanLab_turnRight:
+        text: cas ar dheis
       craft_ifPath:
         options:
           DIR:

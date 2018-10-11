@@ -11,8 +11,6 @@ vi:
           GROUP:
             sprites: tất cả
           MOVE:
-            '"next"': Tiếp
-            '"prev"': Trước
             MOVES.Rest: Rỗng
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ vi:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Tiếp
-            '"prev"': Trước
             MOVES.Rest: Rỗng
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ vi:
           GROUP:
             sprites: tất cả
           MOVE:
-            '"next"': Tiếp
-            '"prev"': Trước
             MOVES.Rest: Rỗng
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ vi:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Tiếp
-            '"prev"': Trước
             MOVES.Rest: Rỗng
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ vi:
           LOCATION:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
       Dancelab_randomColor:
         text: màu ngẫu nhiên
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ vi:
           EFFECT:
             '"none"': Rỗng
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"height"': chiều cao
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': kích thước
@@ -283,6 +281,12 @@ vi:
             '"down"': mũi tên xuống dưới
             '"left"': mũi tên bên trái
             '"right"': mũi tên bên phải
+      RyanLab_moveForward:
+        text: đi thẳng
+      RyanLab_turnLeft:
+        text: rẽ trái
+      RyanLab_turnRight:
+        text: rẽ phải
       craft_ifPath:
         options:
           DIR:
