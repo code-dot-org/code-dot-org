@@ -88,6 +88,30 @@ class HomeController < ApplicationController
     render template: 'api/teacher_announcement', layout: false
   end
 
+  # GET /home/sign-cookies
+  def sign_cookies
+    policy = {
+      "Statement" => [
+        {
+          "Resource" => "/restricted/*",
+          "Condition" => {
+            "DateLessThan" => {"AWS:EpochTime" => (Time.now + 1.hour).tv_sec}
+          }
+        }
+      ]
+    }.to_json
+
+    signer = Aws::CloudFront::CookieSigner.new(
+      key_pair_id: "cf-keypair-id",
+      private_key_path: "./cf_private_key.pem"
+    )
+    expiration_date = Time.now + 1.hour
+    cloudfront_cookies = signer.signed_cookie(policy, expiration_date)
+    cookies.update(cloudfront_cookies)
+
+    head :ok
+  end
+
   private
 
   def should_redirect_to_script_overview?
