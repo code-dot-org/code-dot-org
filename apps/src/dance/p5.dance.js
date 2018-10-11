@@ -64,6 +64,7 @@ var MOVE_NAMES = [
 
 var ANIMATIONS = {};
 var FRAMES = 24;
+var METADATA = {}
 
 // Songs
 var songs = {
@@ -122,6 +123,12 @@ exports.reset = function () {
 exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
+
+  // Retrieves JSON metadata for songs
+  // TODO: only load song data when necessary and don't hardcode the dev songs
+  METADATA['macklemore90'] = loadSongMetadata('macklemore90');
+  METADATA['hammer'] = loadSongMetadata('hammer');
+  METADATA['peas'] = loadSongMetadata('peas');
 
   // Load spritesheet JSON files
   SPRITE_NAMES.forEach(this_sprite => {
@@ -614,6 +621,11 @@ exports.randomColor = function randomColor() {
 
 function spriteExists(sprite) {
   return p5.allSprites.indexOf(sprite) > -1;
+}
+
+function loadSongMetadata(id) {
+  let songDataPath = '/api/v1/sound-library/hoc_song_meta';
+  $.getJSON(songDataPath += `/${id}.json`, (data)=>{console.log("JSON: " + JSON.stringify(data))});
 }
 
 const events = exports.currentFrameEvents = {
