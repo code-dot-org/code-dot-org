@@ -111,6 +111,7 @@ exports.addCues = function (timestamps) {
 exports.reset = function () {
   Dance.song.stopAll();
 
+  songStartTime = 0;
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
   }
@@ -470,8 +471,12 @@ exports.getEnergy = function getEnergy(range) {
   }
 }
 
+exports.getCurrentTime = function getCurrentTime() {
+  return songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
+}
+
 exports.getTime = function getTime(unit) {
-  let currentTime = (new Date() - songStartTime) / 1000;
+  let currentTime = this.getCurrentTime();
   if (unit == "measures") {
     // Subtract any delay before the first measure and start counting measures at 1
     let songData = songs[getStore().getState().selectedSong];
@@ -712,13 +717,12 @@ exports.draw = function draw() {
   }
 
   let songData = songs[getStore().getState().selectedSong];
-  let currentTime = (new Date() - songStartTime) / 1000;
 
   p5.fill("black");
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((currentTime - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
+  p5.text("Measure: " + (Math.floor(((this.getCurrentTime() - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
 }
   return exports;
 }
