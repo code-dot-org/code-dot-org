@@ -122,7 +122,7 @@ module Pd::Application
     end
 
     def formatted_partner_contact_email
-      return nil unless regional_partner && regional_partner.contact_email.present?
+      return nil unless regional_partner && regional_partner.contact_email_with_backup.present?
 
       regional_partner.contact_name.present? ?
         "#{regional_partner.contact_name} <#{regional_partner.contact_email_with_backup}>" :
