@@ -1706,9 +1706,7 @@ en:
       Guess The Number 2: Build whatever you want. This is an example of a number-guessing game!
       Guess The Number: Build whatever you want. This is an example of a number-guessing game!
       Guess The Number_2018: Build whatever you want. This is an example of a number-guessing game!
-      HOC 2018 Level_1: 'Walk to the chest to get supplies for your journey.
-
-'
+      HOC 2018 Level_1: Collect a boat from the chest.
       HOC 2018 Level_10: Get to the entrance of this Ocean Monument.
       HOC 2018 Level_11: 'Build a conduit with Prismarine inside the Ocean Monument.
 
@@ -1716,22 +1714,23 @@ en:
       HOC 2018 Level_12: 'Design your own underwater environment, it’s up to you!
 
 '
-      HOC 2018 Level_2: 'Board the boat at the end of the dock.
+      HOC 2018 Level_2: 'Head to the end of the dock.
 
 '
-      HOC 2018 Level_3: 'Head across the open seas.
+      HOC 2018 Level_3: 'Head across the open seas to the cod.
 
 '
-      HOC 2018 Level_4: Keep rowing, but this time use a loop.
-      HOC 2018 Level_5: Explore the shipwreck and look for treasure.
-      HOC 2018 Level_6: Navigate across the ice to reach the temple.
-      HOC 2018 Level_7a: Get through this temple to find sunken treasure.
-      HOC 2018 Level_8: 'Can you make it past the volcano to the coral reef?
+      HOC 2018 Level_4: Use a loop to get to the dolphin.
+      HOC 2018 Level_5: Explore the shipwreck to reach the chest.
+      HOC 2018 Level_6: Navigate through the ice to reach the salmon.
+      HOC 2018 Level_7a: Search these underwater ruins for a chest.
+      HOC 2018 Level_8: 'TEST SHORT
 
 '
       HOC 2018 Level_9b: 'Use the coral as waypoints to reach the treasure.
 
 '
+      HOC Dance 6prediction_draft: What do you predict will be different about the dancers created by the program in the workspace below? Look for a new block of code.
       Hannah DataVis Test: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
       Harvester Test: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
@@ -3131,6 +3130,7 @@ en:
       Vigenere: Test
       Virtual Pet 1 Predict: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1 Predict_simple: 'What do you think will happen when you click on the alien?  '
+      Virtual Pet 1 fix: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1_simple: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
