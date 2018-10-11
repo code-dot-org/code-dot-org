@@ -58,6 +58,7 @@ module SignUpTracking
     result = user.errors.empty? ? 'success' : 'error'
     tracking_data = {
       study: STUDY_NAME,
+      study_group: study_group(session),
       event: "begin-sign-up-#{result}",
       data_string: session[:sign_up_uid],
       data_json: {
