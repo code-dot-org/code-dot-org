@@ -44,7 +44,7 @@ var sprites = p5.createGroup();
 var sprites_by_type = {};
 
 var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
-var img_base = "https://curriculum.code.org/images/sprites/spritesheet_sm/";
+var img_base = "https://curriculum.code.org/images/sprites/spritesheet_tp/";
 var SIZE = 300;
 
 var MOVE_NAMES = [
@@ -129,19 +129,19 @@ exports.preload = function preload() {
   METADATA['hammer'] = loadSongMetadata('hammer');
   METADATA['peas'] = loadSongMetadata('peas');
 
-  // Load spritesheets
-  for (var i = 0; i < SPRITE_NAMES.length; i++) {
-    var this_sprite = SPRITE_NAMES[i];
+  // Load spritesheet JSON files
+  SPRITE_NAMES.forEach(this_sprite => {
     ANIMATIONS[this_sprite] = [];
-    for (var j = 0; j < MOVE_NAMES.length; j++) {
-      var url = img_base + this_sprite + "_" + MOVE_NAMES[j].name + ".png";
-      var dance = {
-        spritesheet: p5.loadSpriteSheet(url, SIZE, SIZE, FRAMES),
-        mirror: MOVE_NAMES[j].mirror
-      };
-      ANIMATIONS[this_sprite].push(dance);
-    }
-  }
+    MOVE_NAMES.forEach(({ name, mirror }, moveIndex) => {
+      const baseUrl = `${img_base}${this_sprite}_${name}`;
+      p5.loadJSON(`${baseUrl}.json`, jsonData => {
+        ANIMATIONS[this_sprite][moveIndex] = {
+          spritesheet: p5.loadSpriteSheet(`${baseUrl}.png`, jsonData.frames),
+          mirror,
+        };
+      });
+    });
+  });
 }
 
 exports.setup = function setup() {

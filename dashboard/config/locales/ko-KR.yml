@@ -120,6 +120,7 @@ ko:
     age: 나이
     user_type: 학생 또는 선생님이신가요?
     submit: 가입 신청하기
+    next: 다음
     teacher: 선생님이신가요?
     valid_username: 사용 가능!
     invalid_username: 아이디는 최소 5문자 이상이어야 합니다.

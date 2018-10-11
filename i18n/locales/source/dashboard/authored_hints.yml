@@ -3510,6 +3510,159 @@ en:
           Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * Make sure a dancer appears on the screen.
+
+          *This level ends after 4 measures.*
+        challenges: |-
+          **Optional Challenges**
+          * Choose a different song to play.
+          * Choose a different that looks like a moose!
+          * Rename your dancer.
+      Dance_Party_02_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * The dancer needs to switch to a new move after 4 measures.
+
+          *The level ends after 8 measures.*
+      Dance_Party_03_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.
+
+          *The level ends after 12 measures.*
+      Dance_Party_04_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to make the background effect change sometime the seventh measure of the song.
+
+          *This level ends after 10 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.
+      Dance_Party_05_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Your dance must perform different moves throughout the first 12 measures of the song.
+
+          *This level ends after 12 measures.*
+      Dance_Party_06_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to have at least two dancers.
+
+          *This level ends after 6 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Add a third dancer (or as many as you want!)
+          * Make all of your dancers perform different moves at different points in the song.
+      Dance_Party_08_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Two dancers need to have a size other than 100.
+
+          *This level ends after 6 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experiment by changing other properties (width, height, rotation, etc.)
+      Dance_Party_09_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Change the tint of at least one dancer.
+
+          *This level ends after 8 measures.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * Make sure a dancer appears on the screen.
+
+          *This level ends after 4 measures.*
+        challenges: |-
+          **Optional Challenges**
+          * Choose a different song to play.
+          * Choose a different that looks like a moose!
+          * Rename your dancer.
+      Dance_Party_10_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Properties for two or more dancers must change.
+
+          *This level ends after 8 measures.*
+      Dance_Party_11_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Just be creative!
+
+          *This level ends after 8 measures.*
+      Dance_Party_2_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * The dancer needs to switch to a new move after 4 measures.
+
+          *The level ends after 8 measures.*
+      Dance_Party_3_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.
+
+          *The level ends after 12 measures.*
+      Dance_Party_4_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to make the background effect change sometime the seventh measure of the song.
+
+          *This level ends after 10 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.
+      Dance_Party_5_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Your dance must perform different moves throughout the first 12 measures of the song.
+
+          *This level ends after 12 measures.*
+      Dance_Party_6_authored_hint:
+        validation: "**How do I pass this level?**\n\n* You need to have at least two dancers. \n\n*This level ends after 6 measures.*"
+        challenges: |-
+          **Optional Challenge**
+
+          * Add a third dancer (or as many as you want!)
+          * Make all of your dancers perform different moves at different points in the song.
+      Dance_Party_8_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Two dancers need to have a size other than 100.
+
+          *This level ends after 6 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experiment by changing other properties (width, height, rotation, etc.)
+      Dance_Party_9_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Change the tint of at least one dancer.
+
+          *This level ends after 8 measures.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           This is the first hint.
@@ -3530,6 +3683,90 @@ en:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: If you call the functions correctly, this is the path you will travel...
         Function_intro_Ryan_a: You can call a function many times inside of your program!  Try calling it twice to solve this puzzle.
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: What a beautiful coral reef! Blue coral is the **right** way to go, and make sure red coral isn't **left**!
+        voyage_aquatic_9b: How can you use **If standing on** blocks to turn left and right?
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * Make sure a dancer appears on the screen.
+
+          *This level ends after 4 measures.*
+        challenges: |-
+          **Optional Challenges**
+          * Choose a different song to play.
+          * Choose a different that looks like a moose!
+          * Rename your dancer.
+      HOC Dance 1_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+          * The dancer needs to switch to a new move after 4 measures.
+
+          *The level ends after 8 measures.*
+      HOC Dance 2_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.
+
+          *The level ends after 12 measures.*
+      HOC Dance 3_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to make the background effect change sometime the seventh measure of the song.
+
+          *This level ends after 10 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.
+      HOC Dance 4_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Your dance must perform different moves throughout the first 12 measures of the song.
+
+          *This level ends after 12 measures.*
+      HOC Dance 5_draft_authored_hint:
+        validation: "**How do I pass this level?**\n\n* You need to have at least two dancers. \n\n*This level ends after 6 measures.*"
+        challenges: |-
+          **Optional Challenge**
+
+          * Add a third dancer (or as many as you want!)
+          * Make all of your dancers perform different moves at different points in the song.
+      HOC Dance 6_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Two dancers need to have a size other than 100.
+
+          *This level ends after 6 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          * Experiment by changing other properties (width, height, rotation, etc.)
+      HOC Dance 7_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Change the tint of at least one dancer.
+
+          *This level ends after 8 measures.*
+      HOC Dance 8_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Properties for two or more dancers must change.
+
+          *This level ends after 8 measures.*
+      HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Just be creative!
+
+          *This level ends after 8 measures.*
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and make a decision?
       Inspirational Artwork_authored_hint:

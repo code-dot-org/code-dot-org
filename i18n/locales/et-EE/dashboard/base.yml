@@ -102,6 +102,7 @@ et:
     age: 'Vanus'
     user_type: 'Kas sa oled õpilane või õpetaja?'
     submit: 'Liitu'
+    next: 'Järgmine'
     teacher: 'Kas sa oled õpetaja?'
     valid_username: "Vaba!"
     invalid_username: "Kasutajanimi peab olema vähemalt 5 tähemärgi pikkune"

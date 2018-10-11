@@ -1148,7 +1148,7 @@ tr:
         \r
         *Bilgilendirme sayfanız için projenize yeni bir HTML dosyası ekleyin.\r
         * Bir başlık ve açıklama ekleyin
-      CSD U2 Info Page Final Touches: |
+      CSD U2 Info Page Final Touches: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
         \r
@@ -2210,10 +2210,6 @@ tr:
         # Bunu Yap\r
         \r
         * İki dikdörtgeni resimdeki gibi ekranın tam köşelerine yerleştir.
-      CSD U3 Entertainment Sample 1 - unembed: |-
-        # Zıplayan Uzaylı\r
-        \r
-        Sol tarafta ki oyunu oynamak için "çalıştır"a tıklayın.  Boşluk tuşuyla uzaylıyı zıplatabilirsin ve ok tuşlarıyla sağa ve sola hareket ettirebilirsin.  Yıldızları toplayarak puan alırsın ve yeterince yüksek puan yaparsan, arka plan değişecek.
       CSD U3 Entertainment Sample 1: |-
         # Zıplayan Uzaylı\r
         \r
@@ -2579,7 +2575,6 @@ tr:
         * Bu özellikleri güncellemek için sayaç desenini kullanın.\r
         \r
         _İpucu: Eğer sayaç deseni istediğiniz gibi çalışmıyorsa, yardımcı olması için hata ayıklama programına izleyici ekleyebilirsiniz._
-      CSD U3 Plotting Shapes Shape Lab - unembed: "# Şekiller Çizme\\r\n\\r\nBu aracı keşfetmek farklı renklerde şekiller çizmenizi sağlar. \\r\n\\r\nŞekilleri tam olarak yerleştirmenize yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab Open: "# Şekiller Çizme\\r\n\\r\nBu aracı keşfetmek farklı renklerde şekiller çizmenizi sağlar. \\r\n\\r\nŞekilleri tam olarak yerleştirmenize yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab: "# Şekiller Çizme\\r\n\\r\nBu aracı keşfetmek farklı renklerde şekiller çizmenizi sağlar. \\r\n\\r\nŞekilleri tam olarak yerleştirmenize yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab_2018: "# Şekiller Çizme\\r\n\\r\nBu aracı keşfetmek farklı renklerde şekiller çizmenizi sağlar. \\r\n\\r\nŞekilleri tam olarak yerleştirmenize yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
@@ -5396,7 +5391,8 @@ tr:
       Course 4 Artist For Loops 13: Hımm şekiller her seferinde daha büyük oluyor. Sayaç değişkenini kullanarak kenarları daha küçük nasıl çizerim? belli miktara ilerlemek yerine 100/kenar? sayısı kadar piksel ilerlemeyi deneyelim.
       Course 4 Artist For Loops 14: "Eğer her seferinde biraz daha fazla yada az dönerseniz hoş bir etki oluşturur. Önceki seviyedeki aynı kodu kullanın fakat bu sefer 89 derece dönün ve bu sarmal kareyi çizin."
       Course 4 Artist For Loops 15: "Serbest oyun: Şununla say (for) döngüsü kullanarak kendi çizimini yap. Kullanışlı birkaç değişken ekledik."
-      Course 4 Artist For Loops 2: "Üçgen çizmek için şununla say döngüsü içine kod koy. Döngü 10 ar 10 ar  50 den  100 e kadar  sayacaktır.  Not: \"Çalıştır\" tuşuna basmadan koda bakın."
+      Course 4 Artist For Loops 2: |-
+        Üçgen çizmek için şununla say döngüsü içine kod koy. Döngü 10 ar 10 ar  50 den  100 e kadar  sayacaktır.  Not: "Çalıştır" tuşuna basmadan koda bakın.
       Course 4 Artist For Loops 3: "Son bulmaca bunu tamamlamak için bir başvuru olarak kullanın.  En küçük üçgenin 20 piksel kenarı vardır, en büyük 200 piksel kenarı vardır ve her üçgen öncekinden 20 piksel daha büyüktür.\n"
       Course 4 Artist For Loops 4: 'Bu kareleri çizmek için nasıl değişiklikler yaparsın. 15 piksel uzunluğunda kenarla başlar ve en büyüğü 300 piksel olan üçgenlerden oluşur. Her üçgen bir öncekinden 15 piksel daha büyük. '
       Course 4 Artist For Loops 5: "İyi iş çıkarttın. Şimdi sayaç değişkenini tekrar kullanarak bu güzel şekli çizelim. "
@@ -5446,7 +5442,8 @@ tr:
       Course 4 Bee Params 2: ' "3 nektar al" işlevini değiştirin ve sağa döneceğime sola dönmemi sağlayın.'
       Course 4 Bee Params 3: "Şimdi her iki tarafta çiçekler var. Sol \"Left\" ve Sağ \"Right\" isimli iki değişken tanımladık. Ayrıca \"Get 3 nectar\" fonksiyonu için yön\"direction\" parametresi ekledik. Fonksiyonu güncelleyin ve arı left ve rigth değişkenine göre dönüp nektarı alsın.  "
       Course 4 Bee Params 5: Sıfırdan başlayalım - "5 nektar kazan" isminde ve yön parametreli bir fonksiyon yazabilir misin?
-      Course 4 Bee Params 6: "Bütün nektarları tek bir fonksiyonla alsak iyi olmaz mıydı? Nektar miktarı \"nectars\" parametresi ekleyerek toplanacak nektar miktarını kontrol edin. Fonksiyonun adını da değiştirebilirsiniz!"
+      Course 4 Bee Params 6: |-
+        Bütün nektarları tek bir fonksiyonla alsak iyi olmaz mıydı? Nektar miktarı "nectars" parametresi ekleyerek toplanacak nektar miktarını kontrol edin. Fonksiyonun adını da değiştirebilirsiniz!
       Course 4 Bee Params 7: |
         Şimdi yeni yazdığınız fonksiyonu kullanarak nektarları toplayın.
       Course 4 Bee Params 8: "Balda yapmak gerekiyor. Fonksiyonu değiştirerek parametre kadar nektar al yada bal yap şekline getir?"
@@ -5472,7 +5469,10 @@ tr:
       Course 4 Play Lab Params 6: Devriye "patrol" fonkisyonuna hız "speed" parametresi ekle. "ayarla hız" bloğunu kullanarak penguenin diğerlerinden önce her iki bayrağı almasını sağla.
       Course 4 Play Lab Params 7: "Eğlence zamanı. kodu incele ve her bir bloğun ne yaptığına bak. bitirdiğinde ok tuşları ile köpeğin bütün bayrakları toplamasını sağla."
       Course 4 Play Lab Params 8: '"aktör zamanında dokunur" bloğunu kullan ve köpeği başka bir oyuncuya dokunursa sol üst köşeye gönder.'
-      Course 4 Play Lab Params 9: "Önceki aşamadaki oyunumuz fakat kodlar saklanmış. Puan al \"score points\" fonksiyonu yeni.\nFonksiyonu düzenle ve puan \"points\" parametresi ekle ve oyuncu puanı \"player_Score\" değişkenine eklensin. player_score değişkeni köpek kediye pasta verdiğinde artsın fakat kedi köpeğe  sandviç verdiğinde azalsın.\nNot: Çalıştır tuşuna bas ve oyna, köpek 6 puan kazandığında sonraki seviyeye geçebilrisin. "
+      Course 4 Play Lab Params 9: |-
+        Önceki aşamadaki oyunumuz fakat kodlar saklanmış. Puan al "score points" fonksiyonu yeni.
+        Fonksiyonu düzenle ve puan "points" parametresi ekle ve oyuncu puanı "player_Score" değişkenine eklensin. player_score değişkeni köpek kediye pasta verdiğinde artsın fakat kedi köpeğe  sandviç verdiğinde azalsın.
+        Not: Çalıştır tuşuna bas ve oyna, köpek 6 puan kazandığında sonraki seviyeye geçebilrisin. 
       Course 4 Play Lab Vars 1: |-
         Bu sefer kod yazman gerekmiyor. Sadece çalıştır düğmesine bas ve oyunu oyna! Bu oyunda köpek kediden fazla bayrak toplamak istiyor. aşağı tuşu ile köpeği kontrol et. Oyunun bitince bitiş tuşuna bas.
       Course 4 Play Lab Vars 2: Son bulmacadaki yarış pek adil değildi. Kediden daha fazla bayrak topladığından emin olmak için 'köpel_hızı' değişkenini değiştirin. 10 bayrağı ilk toplayan kazanır!
@@ -6305,9 +6305,7 @@ tr:
       courseA_collector_loops2: |-
         Laurel i hazine taşıyın ve sonra <xml><block type="collector_collect"/></xml> bloğu kullanarak hazineyi toplayın \r \r 
         Seviyeyi geçmek için 3 yığınıda alın.
-      courseA_collector_loops2_2018: |-
-        Laurel i hazine taşıyın ve sonra <xml><block type="collector_collect"/></xml> bloğu kullanarak hazineyi toplayın \r \r 
-        Seviyeyi geçmek için 3 yığınıda alın.
+      courseA_collector_loops2_2018: "Laurel i hazine taşıyın ve sonra <xml><block type=\"collector_collect\"/></xml> bloğu kullanarak hazineyi toplayın \\r \\r \nSeviyeyi geçmek için 3 yığınıda alın."
       courseA_collector_loops3: Laurel '[E-->]' sadece bir blok kullanarak beş yığını nasıl toplayabilir?
       courseA_collector_loops3_2018: Laurel '[E-->]' sadece bir blok kullanarak beş yığını nasıl toplayabilir?
       courseA_collector_loops_challenge1: '*"Bazı hataları bulmama yardım eder misin? Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım atacağımdan emin değilim."*'

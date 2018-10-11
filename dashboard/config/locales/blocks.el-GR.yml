@@ -10,17 +10,11 @@ el:
         options:
           GROUP:
             sprites: όλα
-          MOVE:
-            '"next"': Επόμενο
-            '"prev"': Προηγούμενο
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Επόμενο
-            '"prev"': Προηγούμενο
           DIR:
             '1': "→"
             "-1": "←"
@@ -33,17 +27,11 @@ el:
         options:
           GROUP:
             sprites: όλα
-          MOVE:
-            '"next"': Επόμενο
-            '"prev"': Προηγούμενο
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Επόμενο
-            '"prev"': Προηγούμενο
           DIR:
             '1': "→"
             "-1": "←"
@@ -71,6 +59,7 @@ el:
           LOCATION:
             "{x: 100, y: 200}": αριστερά
             "{x: 300, y: 200}": δεξιά
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
       Dancelab_randomColor:
         text: τυχαίο χρώμα
       Dancelab_setDanceSpeed:
@@ -82,6 +71,11 @@ el:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"height"': ύψος
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -256,6 +250,12 @@ el:
             '"down"': κάτω βέλος
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
+      RyanLab_moveForward:
+        text: προχώρησε μπροστά
+      RyanLab_turnLeft:
+        text: στρίψε αριστερά
+      RyanLab_turnRight:
+        text: στρίψε δεξιά
       craft_ifPath:
         options:
           DIR:

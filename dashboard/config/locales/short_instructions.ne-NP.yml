@@ -3012,8 +3012,8 @@ ne:
         nested within one more loop. Experiment with changing the values of your\ntwo
         variables to draw cool patterns.\r\n\r\nFor even more effect, try playing\nwith
         color!  Use random colors inside loops to see how it changes your design."
-      grade5_artist_variables_freeplay15: "Want a second peek at the inspiration\ndesign
-        or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
+      grade5_artist_variables_freeplay15: "Want a second peek at the inspiration design\nor
+        the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
       grade5_artist_variables_freeplay16: |-
         Still playing?  Here is a blank canvas where
         you can create whatever you want!
@@ -3062,8 +3062,8 @@ ne:
         Drag a number block to both the `set
         length` block and the `repeat _ times` block to draw a set of 50 pixel triangles.
       grade5_bee_for_loops1: |-
-        Use a loop to collect the nectar from
-        each flower.
+        Use a loop to collect the nectar
+        from each flower.
       grade5_bee_for_loops2: |-
         Add the code necessary to make sure
         the bee collects all the nectar. Look at how much code you need for this puzzle!

@@ -1780,7 +1780,7 @@ zh-CN:
         type=\"checkbox\" style=\"float: left\"> <span style=\"display: block; margin-left:
         20px; margin-bottom: 10px\">如果该图像不是您自己的, 请在下面添加署名<br/>\r\n\r\n</div>\r\n\r\n\r\n#
         将图片添加您的网站\r\n\r\n你已经创建了一些有着很好内容的网页，现在你可以添加一些图像! \r\n\r\n# 这样做\r\n\r\n使用您自己的或通过共享搜索找到的那些图片,
-        在您已经创建的页面上添加一些图像。有点创意！请使用右侧的核对清单来跟踪添加图像时需要遵循的步骤。\r\n"
+        在您已经创建的页面上添加一些图像。有点创意！请使用右侧的核对清单来跟踪添加图像时需要遵循的步骤。\r"
       CSD U2 Info Page Final Touches_2018: "<div style=\"float:\nright; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<h2>\r\n检查清单\r\n</h2>\r\n\r\n<input\ntype=\"checkbox\"
         style=\"float: left\"><span style=\"display: block; margin-left:\n20px; margin-bottom:
@@ -3110,7 +3110,6 @@ zh-CN:
 
         * 点击如果模块下的_加号_按钮来增加一个否则章节。
         * 增加命令来让齿轮往按下空格时的相反方向转动。
-      CSD U3 Entertainment Sample 1 - unembed: "# 外星人跳跃\r\n\r\n按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。"
       CSD U3 Entertainment Sample 1: "# 外星人跳跃\r\n\r\n按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。"
       CSD U3 Entertainment Sample 1_2018: "# 外星人跳跃\r\n\r\n按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。"
       CSD U3 Entertainment Sample 2: "# 饥饿的小兔子\r\n\r\n兔子饿了, 它正在寻找蘑菇和胡萝卜作为晚餐。\r\n\r\n为了赢得胜利，你需要找到一个晚餐碗，然后收集至少10个胡萝卜和5个蘑菇。\r\n\r\n确保躲过虫子。瓢虫和蜗牛会吃掉你的食物，蜜蜂会蛰你，让你的所有东西都掉下来！\r\n\r\n用空格键来跳跃。你可以通过跳到瓢虫和蜗牛上来把它们踩死。\r\n\r\n单击
@@ -3307,8 +3306,6 @@ zh-CN:
         这样做\r\n\r\n在画图循环中\r\n\r\n* 找到需要改动的精灵属性。\r\n* 用计数器模式来更新属性。\r\n\r\n_提示：如果你的计数器模式不像你期待那样工作，添加监视器来帮助调试程序。_"
       CSD U3 Movement Your Own 2_2018: "# 在动画中增加移动\r\n\r\n当你设置好静态场景后，可以开始加一些动画了。当你对程序感到满意时，点击“提交”按钮来上传。如果你想添加新功能，可以随时取消提交，并继续工作。\r\n\r\n#
         这样做\r\n\r\n在画图循环中\r\n\r\n* 找到需要改动的精灵属性。\r\n* 用计数器模式来更新属性。\r\n\r\n_提示：如果你的计数器模式不像你期待那样工作，添加监视器来帮助调试程序。_"
-      CSD U3 Plotting Shapes Shape Lab - unembed: "#绘制形状 \r\n\r\n探索使用此工具，它可以绘制不同的颜色形状。\r\n\r\n确保点击
-        \"运行\" 并尝试打开网格来帮助精确地放置形状。\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab Open: "#绘制形状 \r\n\r\n探索使用此工具，它可以绘制不同的颜色形状。\r\n\r\n确保点击
         \"运行\" 并尝试打开网格来帮助精确地放置形状。\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab: "#绘制形状 \r\n\r\n探索使用此工具，它可以绘制不同的颜色形状。\r\n\r\n确保点击
@@ -6235,6 +6232,10 @@ zh-CN:
 
         你觉得在按下"▶ 运行"之后点击她会发生什么事？
       Virtual Pet 1 Predict_simple: "**你觉得会怎样？** \n\n这只长颈鹿名字叫杰拉尔丁。  \n\n当你点击她后，她会做什么？"
+      Virtual Pet 1 fix: |-
+        这是杰拉尔丁，你的宠物长颈鹿。
+
+        你觉得在按下"▶ 运行"之后点击她会发生什么事？
       Virtual Pet 1-validated: 这是杰拉尔丁，你的宠物长颈鹿。你觉得按下运行之后点击她会发生什么事？
       Virtual Pet 1: |-
         这是杰拉尔丁，你的宠物长颈鹿。
@@ -6308,7 +6309,7 @@ zh-CN:
       allthethings_ttscsp: "\r\n# 练习试试不同的事件类型\r\n\r\n<img src=\"https://images.code.org/9f013bd84577eb2498061757e18a72f4-image-1444322870272.46.06\nAM.png\"
         style=\"float: right\">\r\n如果你还没有做过，你应该尝试用`onEvent`（当事件发生时）模块来实验不同的事件类型。在这里最好用的是与鼠标相关的比如：\r\n*
         单击\r\n* 鼠标移动\r\n* 向下移动\r\n* 向上移动\r\n* 鼠标悬停\r\n\r\n*有一些事件会从键盘上捕获按键。这些是很有趣的，但他们不像按钮那样好用。现在我们将继续用鼠标事件，以后再去讲键盘事件.*\r\n\r\n**确保**
-        一定要试验每一个以“鼠标...\"开始的事件。\r\n\r\n一旦你练习了一会, 单击 \"完成\" 来继续。\r\n\r\n\n"
+        一定要试验每一个以“鼠标...\"开始的事件。\r\n\r\n一旦你练习了一会, 单击 \"完成\" 来继续。\r\n\r"
       artistLoopsK2: "<div style=\"color: #7665a0; font-size:\n1.6em; line-height:
         1.4em;\" >\r\n现在，用一个`重复`循环来画这条线5次！<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif\"\nwidth=\"300\"/>\r\n"
       artistLoopsK2gradek_artist_loops3: "<div style=\"color: #7665a0; font-size:\n1.6em;
@@ -6493,7 +6494,7 @@ zh-CN:
       courseA_collector_loops2: "得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r\n  <xml><block
         type=\"collector_collect\"/></xml>\n"
       courseA_collector_loops2_2018: "得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r\n  <xml><block
-        type=\"collector_collect\"/></xml>\n"
+        type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: |-
         罗瑞尔怎么能只用一个 <xml><block type="maze_moveEast"/></xml>
         模块得到所有五堆宝藏呢？

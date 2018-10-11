@@ -137,6 +137,7 @@ fil:
     age: Edad
     user_type: Ikaw ba ay mag-aaral o guro?
     submit: Sign up
+    next: Susunod
     teacher: Ikaw ba ay isang guro?
     valid_username: Mayroon!
     invalid_username: Ang Username ay dapat naglalaman ng at least 5 characters
@@ -363,7 +364,6 @@ fil:
       signin: Sign in
       signup: Gumawa ng account
       already_registered: Nakarehistro na?
-      pair_programming: Pair programming
       team: Koponan
       driver: Maglog-in
       navigator: Kasama

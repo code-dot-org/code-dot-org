@@ -260,9 +260,7 @@ he:
       courseA_collector_loops2: |-
         אסוף את כל שלושת המערומים! הזז את לורל לכל אחד מהמטמונים ואז השתמש בבלוק:
         <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |-
-        אסוף את כל שלושת המערומים! הזז את לורל לכל אחד מהמטמונים ואז השתמש בבלוק:
-        <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "אסוף את כל שלושת המערומים! הזז את לורל לכל אחד מהמטמונים ואז השתמש בבלוק:\n<xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_preLoops7: |-
         אסוף את כל שלושת המערומים! הזז את לורל לכל אחד מהמטמונים ואז השתמש בבלוק:
         <xml><block type="collector_collect"/></xml>

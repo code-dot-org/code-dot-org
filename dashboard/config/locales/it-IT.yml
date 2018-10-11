@@ -141,6 +141,7 @@ it:
     age: Età
     user_type: Sei uno studente o un insegnante?
     submit: Iscriviti
+    next: Seguente
     teacher: Sei un insegnante?
     valid_username: Disponibile!
     invalid_username: Il Nome utente deve essere di almeno 5 caratteri
