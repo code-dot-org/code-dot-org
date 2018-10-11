@@ -205,7 +205,7 @@ module AWS
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
     def self.cache_behavior(behavior_config, path=nil)
-      s3 = behavior_config[:proxy] == 'cdo-assets'
+      s3 = ['cdo-assets', 'cdo-restricted'].include? behavior_config[:proxy]
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
