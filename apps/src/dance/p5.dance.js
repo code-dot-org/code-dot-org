@@ -2,10 +2,8 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
-import {getStore} from "../redux";
-import {commands as audioCommands} from '../lib/util/audioApi';
 
-export default function init(p5, onPuzzleComplete) {
+export default function init(p5, getSelectedSong, playSound, onPuzzleComplete) {
   const exports = {};
 
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
@@ -161,11 +159,11 @@ exports.setup = function setup() {
       ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
   }
-  let songData = songs[getStore().getState().selectedSong];
+  let songData = songs[getSelectedSong()];
 }
 
 exports.play = function () {
-  audioCommands.playSound({url: songs[getStore().getState().selectedSong].url, callback: () => {songStartTime = new Date()}});
+  playSound({url: songs[getSelectedSong()].url, callback: () => {songStartTime = new Date()}});
 }
 
 var bg_effects = new Effects(p5, 1);
@@ -239,7 +237,7 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
   addBehavior(sprite, function () {
     var delta = Math.min(100, 1 / (p5.frameRate() + 0.01) * 1000);
     sprite.sinceLastFrame += delta;
-    var msPerBeat = 60 * 1000 / (songs[getStore().getState().selectedSong].bpm * (sprite.dance_speed / 2));
+    var msPerBeat = 60 * 1000 / (songs[getSelectedSong()].bpm * (sprite.dance_speed / 2));
     var msPerFrame = msPerBeat / FRAMES;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
@@ -472,7 +470,7 @@ exports.getCurrentTime = function getCurrentTime() {
 }
 
 exports.getCurrentMeasure = function () {
-  const songData = songs[getStore().getState().selectedSong];
+  const songData = songs[getSelectedSong()];
   return songStartTime > 0 ? songData.bpm * ((exports.getCurrentTime() - songData.delay) / 240) + 1 : 0;
 }
 
