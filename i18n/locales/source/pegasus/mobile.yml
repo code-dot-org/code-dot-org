@@ -359,7 +359,7 @@
   homepage_slot_text_link_donate: "Donate"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
   homepage_slot_text_link_administrators: "Bring CS to your school"
-  homepage_header_codestudio: "Code.org student creations"
+  homepage_header_codestudio: "Over 25 million Code.org projects created"
   homepage_header_donors: "Code.org thanks its supporters"
   homepage_donors_seall: "See all"
   homepage_donors_donate: "Donate"
@@ -1548,3 +1548,4 @@
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  aquatic_name: 'Minecraft: Voyage Aquatic'
