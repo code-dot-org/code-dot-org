@@ -2,8 +2,9 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
+import {TestResults} from '../constants';
 
-export default function init(p5, Dance) {
+export default function init(p5, Dance, onPuzzleComplete) {
   const exports = {};
 
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
@@ -27,6 +28,14 @@ export default function init(p5, Dance) {
   };
 
   window.p5.disableFriendlyErrors = true;
+
+  exports.pass = function () {
+    onPuzzleComplete(TestResults.ALL_PASS);
+  };
+
+  exports.fail = function (message) {
+    onPuzzleComplete(TestResults.APP_SPECIFIC_FAIL, message);
+  };
 
 var World = {
   height: 400,
@@ -643,7 +652,6 @@ function updateEvents() {
 
 exports.registerValidation = function (callback) {
   World.validationCallback = callback;
-  console.log(World.validationCallback);
 }
 
 exports.draw = function draw() {
@@ -684,7 +692,7 @@ exports.draw = function draw() {
   p5.textSize(20);
   p5.text("Measure: " + (Math.floor(((Dance.song.currentTime() - song_meta.delay) * song_meta.bpm) / 240) + 1), 10, 20);
 
-  World.validationCallback();
+  World.validationCallback(World, exports, sprites);
 }
   return exports;
 }
