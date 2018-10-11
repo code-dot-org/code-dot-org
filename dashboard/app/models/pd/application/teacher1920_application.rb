@@ -102,7 +102,7 @@ module Pd::Application
       Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
     end
 
-    def principal_approval
+    def principal_approval_state
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
       return "Complete - #{response.full_answers[:do_you_approve]}" if response
 

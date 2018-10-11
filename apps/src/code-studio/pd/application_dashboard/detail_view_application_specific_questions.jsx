@@ -35,6 +35,7 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     scores: PropTypes.object,
     handleScoreChange: PropTypes.func,
     applicationGuid: PropTypes.string,
+    schoolStats: PropTypes.object,
     initialPrincipalApproval: PropTypes.string
   };
 
