@@ -87,7 +87,7 @@ describe("DetailViewContents", () => {
   });
 
   const expectedTestData = [
-    {type: 'Teacher', applicationSpecificQuestions: 7, scoredQuestions: 2},
+    {type: 'Teacher', applicationSpecificQuestions: 6, scoredQuestions: 2},
     {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0}
   ];
 
