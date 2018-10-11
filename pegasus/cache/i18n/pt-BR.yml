@@ -2234,6 +2234,10 @@
   user_header_view_all: View all projects...
   user_header_view_project_gallery: View project gallery
   user_header_view_my_projects: View my projects
+  privacy_doc_explanation: Click here for our privacy document that can be shared
+    or printed for your students.
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
   sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_overview_cards: Students can find all of this information, including their
     secret %{secret}, in the login cards below.

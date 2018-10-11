@@ -2140,6 +2140,8 @@
   user_header_view_all: View all projects...
   user_header_view_project_gallery: View project gallery
   user_header_view_my_projects: View my projects
+  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
+    these steps:'
   sign_in_overview_cards: Students can find all of this information, including their
     secret %{secret}, in the login cards below.
   reset_student_password_instructions: You can reset the secret <word/picture> for
