@@ -27,6 +27,18 @@ class HocEventReviewTest < Minitest::Test
       end
     end
 
+    it 'can filter to unreviewed events' do
+      with_form location_country_code_s: 'US', location_state_code_s: 'CA', review: 'approved' do
+        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+          expected = [
+            {state_code: 'OR', count: 1},
+          ]
+          actual = HocEventReview.event_counts_by_state reviewed: false
+          assert_equal expected, actual
+        end
+      end
+    end
+
     it 'finds event counts by country' do
       with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
         with_form location_country_code_s: 'MX' do
@@ -56,7 +68,7 @@ class HocEventReviewTest < Minitest::Test
     end
 
     # Helper to temporarily create a form row for testing retrieval methods.
-    def with_form(processed_data)
+    def with_form(review: nil, **processed_data)
       # Necessary stubs for the insert_or_upsert_form helper
       stubs(:dashboard_user).returns(nil)
       Pegasus.stubs(:logger).returns(nil)
@@ -67,6 +79,7 @@ class HocEventReviewTest < Minitest::Test
 
       # Add fake processed data to fake row
       form = Form.find(id: row[:id])
+      form.update(review: review) unless review.nil?
       form.update(processed_data: processed_data.to_json)
       form.refresh
 
