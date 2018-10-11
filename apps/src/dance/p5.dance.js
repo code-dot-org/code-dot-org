@@ -2,10 +2,11 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
+import {TestResults} from '../constants';
 import {getStore} from "../redux";
 import {commands as audioCommands} from '../lib/util/audioApi';
 
-export default function init(p5, Dance) {
+export default function init(p5, Dance, onPuzzleComplete) {
   const exports = {};
 
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
@@ -30,9 +31,18 @@ export default function init(p5, Dance) {
 
   window.p5.disableFriendlyErrors = true;
 
+  exports.pass = function () {
+    onPuzzleComplete(TestResults.ALL_PASS);
+  };
+
+  exports.fail = function (message) {
+    onPuzzleComplete(TestResults.APP_SPECIFIC_FAIL, message);
+  };
+
 var World = {
   height: 400,
   cuesThisFrame: [],
+  validationCallback: () => {},
 };
 
 function randomNumber(min, max) {
@@ -660,6 +670,10 @@ function updateEvents() {
   }
 }
 
+exports.registerValidation = function (callback) {
+  World.validationCallback = callback;
+}
+
 exports.draw = function draw() {
   Dance.fft.analyze();
   const context = {
@@ -699,6 +713,8 @@ exports.draw = function draw() {
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
+
+  World.validationCallback(World, exports, sprites);
   p5.text("Measure: " + (Math.floor(((currentTime - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
 }
   return exports;
