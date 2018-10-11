@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "validation_code": "//assume success\r\nif (World.frameCount == 1) validationProps.status = 0;\r\n\r\n//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    validationProps.status = 3;\r\n    console.log(\"You need to make a dancer.\");\r\n  levelSuccess(validationProps.status);\r\n  }\r\n}\r\n\r\nif (getTime(\"measures\") > 5) {\r\n  levelSuccess(validationProps.status);\r\n}",
+    "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"You need to make a dancer.\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 5) {\r\n  nativeAPI.pass();\r\n}",
     "block_pool": "Dancelab",
     "custom_helper_library": "SPRITE_NAMES = [\"CAT\", \"MOOSE\"];\r\n\r\nMOVE_NAMES = [\r\n  {\r\n    name: \"Rest\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"ClapHigh\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Clown\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Dab\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"DoubleJam\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Drop\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Floss\",\r\n    mirror: true\r\n  }\r\n  ];",
     "preload_asset_list": [
