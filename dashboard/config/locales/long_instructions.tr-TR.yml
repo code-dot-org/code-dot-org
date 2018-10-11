@@ -1852,7 +1852,7 @@ tr:
         sayfalar eklediniz, artık resimler de ekleyebilirsiniz!\n\r\n\r\n# Bunu yapın\r\n\r\nKendi
         resimlerinizi veya internet aramalarında bulduğunuz resimlerinizi oluşturduğunuz
         sayfalara ekleyin. Yaratıcı olun! Resimleri eklerken sağda bulunan kontrol
-        listesini kullanarak, izlemeniz gereken adımları takip edebilirsiniz.\r\n"
+        listesini kullanarak, izlemeniz gereken adımları takip edebilirsiniz.\r"
       CSD U2 Info Page Final Touches_2018: "<div style=\"float: right;\nheight: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n<h2>\r\nKontrol
         listesi\r\n</h2>\r\n\r\n<input\ntype=\"checkbox\" style=\"float: left\"><span
@@ -2615,10 +2615,6 @@ tr:
         y pozisyonunu bulmaya yardımcı olmak için ızgarayı aktif yapabilir ya da fare
         ile üzerinde hareket edebilirsiniz.\r\n\r\n# Bunu Yap\r\n\r\n* İki dikdörtgeni
         resimdeki gibi ekranın tam köşelerine yerleştir."
-      CSD U3 Entertainment Sample 1 - unembed: "# Zıplayan Uzaylı\r\n\r\nSol tarafta
-        ki oyunu oynamak için \"çalıştır\"a tıklayın.  Boşluk tuşuyla uzaylıyı zıplatabilirsin
-        ve ok tuşlarıyla sağa ve sola hareket ettirebilirsin.  Yıldızları toplayarak
-        puan alırsın ve yeterince yüksek puan yaparsan, arka plan değişecek."
       CSD U3 Entertainment Sample 1: "# Zıplayan Uzaylı\r\n\r\nSol tarafta ki oyunu
         oynamak için \"çalıştır\"a tıklayın.  Boşluk tuşuyla uzaylıyı zıplatabilirsin
         ve ok tuşlarıyla sağa ve sola hareket ettirebilirsin.  Yıldızları toplayarak
@@ -2956,10 +2952,6 @@ tr:
         hareketli nesneleri seçin.\r\n* Bu özellikleri güncellemek için sayaç desenini
         kullanın.\r\n\r\n_İpucu: Eğer sayaç deseni istediğiniz gibi çalışmıyorsa,
         yardımcı olması için hata ayıklama programına izleyici ekleyebilirsiniz._"
-      CSD U3 Plotting Shapes Shape Lab - unembed: "# Şekiller Çizme\r\n\r\nBu aracı
-        keşfetmek farklı renklerde şekiller çizmenizi sağlar. \r\n\r\nŞekilleri tam
-        olarak yerleştirmenize yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan
-        ve ızgarayı görünür yaptığınızdan emin olun.\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab Open: "# Şekiller Çizme\r\n\r\nBu aracı keşfetmek
         farklı renklerde şekiller çizmenizi sağlar. \r\n\r\nŞekilleri tam olarak yerleştirmenize
         yardımcı olması için, \"Çalıştır\" butonuna bastığınızdan ve ızgarayı görünür

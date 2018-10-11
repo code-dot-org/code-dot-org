@@ -3709,6 +3709,8 @@ es-MX:
               name: Programación de relevos
             Introduction to Online Puzzles:
               name: Introducción a los acertijos en línea
+            Nested Loops in Maze:
+              name: Ciclos anidados en Maze
         coursec-2018:
           assignment_family_title: Curso C
           description: Crea programas con secuencias, ciclos y eventos. Traduce tus iniciales a binario, investiga distintas tecnicas de resolución de problemas y aprende como responder a las amenazas en linea. ¡Al final del curso, crea tu propio juego o historia que puedes compartir!

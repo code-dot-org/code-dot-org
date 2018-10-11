@@ -164,7 +164,7 @@ cs:
       2-3 Bee Loops 8: "Fialové květiny mají neznámé množství nektaru. Použij cyklus \"while nektar\" sesbírat všechen nektar. Tento cyklus bude fungovat tak dlouho, pokud je podmínka pravdivá, v tomto případě nektar > 0."
       2-3 Bee Loops 9: While smyčky může provádět stejné akce jako if příkaz v cyklu. Přidáním while smyčky cyklu k tomuto kódu lze provést stejný úkol.
       2-3 Bee Loops Assessment 1: 'Hodnocení - použij while cyklus sesbírat všechen nektar z této květiny.'
-      2-3 Maze 1: 'Můžeš mi pomoci chytit zlobivé prase? Sklož dohromady několik bloků "posun vpřed" a stiskni tlačítko "Run". '
+      2-3 Maze 1: 'Můžeš mi pomoci chytit zlobivé prase? Slož dohromady několik bloků "posunout vpřed" a stiskni tlačítko "Spustit". '
       2-3 Maze 10: Naveď mě k zelenému zlu! (Pozor na TNT)
       2-3 Maze 11: Dostaň mě ke květu, mám hlad! Kolikrát budeš muset opakovat blok?
       2-3 Maze 12 (copy 1): 'Můžeš nahradit předchozí odpověď jen dvěma bloky? (Rada: vytvoř cyklus pomocí bloku "opakuj několikrát".)'
@@ -223,10 +223,10 @@ cs:
       20hr_farmer_stage9_7: Páni, našla jsem opravdu hlubokou díru! Nevím, kolik lopat hlíny na ni bude potřeba. Můžeš napsat program, který ji bude plnit dokud nebude země rovná?
       20hr_farmer_stage9_8: Pomoz mi vyplnit díru na konci pole za použití co nejmenšího počtu bloků.
       20hr_farmer_stage9_9: 'Pošli mě odstranit všechny tyto hromádky hlíny. Snaž se použít co nejméně bloků. Tip: zkus použít blok "dokud".'
-      20hr_maze_stage2_10: Dobře, zkus nový blok "opakovat dokud" - bude se opakovat, dokud nechytím to otravné prase.
+      20hr_maze_stage2_10: Dobře, zkus nový blok "opakovat do" - bude se opakovat, dokud nechytím to otravné prase.
       20hr_maze_stage2_11: Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento úkol za použití pouze 4 bloků?
       20hr_maze_stage2_13: Dobře, toto je podobné, jen trošičku odlišné. Zvládneš to vyřešit jen s 5-ti bloky?
-      20hr_maze_stage2_14: 'Použij nový blok "pokud" abych se rozhodoval, kdy se otočit. Tip: stačí ti pouze jeden další blok, ale naučit se, jak jsme to nachystali, aby jsi to příště dokázal sám.'
+      20hr_maze_stage2_14: 'Použij nový typ bloku "pokud", abych se rozhodl, kdy se otočit. Tip: stačí ti pouze jeden další blok, ale nauč se, jak jsme to nachystali, aby jsi to příště dokázal sám.'
       20hr_maze_stage2_15: Dobře, tohle je stejné jako předchozí hádanka, ale musíš si pamatovat, jak jsi použil blok "pokud" a blok "opakovat" dohromady.
       20hr_maze_stage2_16: Já chtít slunečnici! Použij blok "pokud" a dostaň mě tam s co nejmenším počtem bloků.
       20hr_maze_stage2_17: Dobře, pojďme to udělat znovu pro procvičení - není to příliš jiné, ale dávej pozor na masožravky!
@@ -236,11 +236,11 @@ cs:
       20hr_maze_stage2_20: Dokážeš přidat jen 3 bloky a vyřešit složitější bludiště? Pokud to uděláš správně, mohu jít všemi křivolakými cestami bez ohledu na délku.
       20hr_maze_stage2_3: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT, nebo bude peří létat!
       20hr_maze_stage2_4: Naveď mě k zelenému zlu! (Pozor na TNT)
-      20hr_maze_stage2_5: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohlo rozzlobit!
+      20hr_maze_stage2_5: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl rozzlobit!
       20hr_maze_stage2_6: Existuje způsob, jak se mohu dostat k zelenému prasátku za použití pouze 2 bloků. Přijdeš na něj?
       20hr_maze_stage2_7: Pokus se mě dostat k zelenému vetřelci za použití třech bloků.
-      20hr_maze_stage2_8: Pomoz mi zbavit se toho zlobivého prasátka pomocí nejmenšího počtu bloků. Zkus použít více jak jeden blok "opakovat n-krát".
-      20hr_maze_stage2_9: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš tuto hádanku použitím šedého bloku "opakuj". Zkus do něj vložit 3 bloky: posun vpřed, posun vpřed a otoč a nastavit blok "opakuj", aby to zopakoval třikrát.'
+      20hr_maze_stage2_8: Pomoz mi zbavit se toho zlobivého prasátka pomocí co nejmenšího počtu bloků. Zkus použít více než jeden blok "opakuj n-krát".
+      20hr_maze_stage2_9: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš tuto hádanku použitím šedého bloku "opakuj", který opakuje třikrát. Zkus do něj vložit další 3 bloky: posunout vpřed, posunout vpřed, otočit.'
       4-5 Artist 1: "Pomoz mi dokreslit mou krabičku. (Každá čára je 300\npixelů dlouhá) "
       4-5 Artist 10: Stiskni tlačítko "Run" ke zkoušce kódu. Pak opakuj tolikrát, až se dokončí kresba. Barvy budou být pokaždé jiné.
       4-5 Artist 11: "Dokonči zelené čáry. Čáry jsou 300 pixelů dlouhé\na 15 pixelů od sebe vzdálené."
@@ -414,7 +414,7 @@ cs:
       Artist Inspiration: "Volná hra inspirace: Nyní už víš vše, co potřebuješ vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \\r \\r Chtěj vědět, jak náš vzor byl udělán pro inspiraci? "
       Auto Open Function Editor: 'Můžeš volat funkci uvnitř jiné funkce! Pomocí funkce "tvar" jako základ, vytvoř 3 tvary domu každý o 20 pixelů větší než poslední, začíná se na délce 50 pixelů. Použití čítače cyklu mohlo by být užitečné. '
       Bee Recommended Blocks test: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
-      Bergeron Robot Maze1: 'Můžeš mi pomoci chytit zlobivé prase? Sklož dohromady několik bloků "posun vpřed" a stiskni tlačítko "Run". '
+      Bergeron Robot Maze1: 'Můžeš mi pomoci chytit zlobivé prase? Slož dohromady několik bloků "posunout vpřed" a stiskni tlačítko "Spustit". '
       Brad Spooky House Copy: 'Volná hra: Zde jsou funkce, které jste napsali a ještě víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys viděl, jak odlišně vypadají tvoje kresby!'
       Brad Spooky House: 'Volná hra: Zde jsou funkce, které jste napsali a ještě víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys viděl, jak odlišně vypadají tvoje kresby!'
       Building a Foundation Assessment: Vytvoř tříúrovňovou pyramidu, neexistují žádné pokyny, takže si hraj s kousky, které si dostal až dosud!

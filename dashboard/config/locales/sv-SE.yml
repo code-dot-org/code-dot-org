@@ -112,6 +112,7 @@ sv:
     age: Ålder
     user_type: Är du elev eller lärare?
     submit: Registrera dig
+    next: Nästa
     teacher: Är du en lärare?
     valid_username: Tillgängligt!
     invalid_username: Användarnamnet måste innehålla minst fem tecken

@@ -1232,7 +1232,7 @@ zh-CN:
         \r
         * 请在信息页面的项目中添加一个新的 HTML 文件。\r
         * 添加标题和说明
-      CSD U2 Info Page Final Touches: |
+      CSD U2 Info Page Final Touches: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
         \r
@@ -4049,10 +4049,6 @@ zh-CN:
         
         * 点击如果模块下的_加号_按钮来增加一个否则章节。
         * 增加命令来让齿轮往按下空格时的相反方向转动。
-      CSD U3 Entertainment Sample 1 - unembed: |-
-        # 外星人跳跃\r
-        \r
-        按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。
       CSD U3 Entertainment Sample 1: |-
         # 外星人跳跃\r
         \r
@@ -4681,7 +4677,6 @@ zh-CN:
         * 用计数器模式来更新属性。\r
         \r
         _提示：如果你的计数器模式不像你期待那样工作，添加监视器来帮助调试程序。_
-      CSD U3 Plotting Shapes Shape Lab - unembed: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab Open: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab_2018: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
@@ -10404,7 +10399,12 @@ zh-CN:
       Course 4 Artist For Loops 13: 嗯，这些形状每次都变会大一点！准备好用变量来解决这个问题了吗？因为边越来越多，我们应该怎样用计数器变量来让这些边越来越短？别用设置好的变量往前移动，试试移动 (100 除以 计数器）个像素。
       Course 4 Artist For Loops 14: "如果每次都多转或少转一些角度，那么你可以创造出来一个有规律的效果。\n\\r\n\\r\n试着重用上一关的一些代码，但是转89度来创造螺旋的正方形出来。"
       Course 4 Artist For Loops 15: "**自由发挥**：试着用“计数循环”来画自己的画。我们也为你加了一些有用的变量。"
-      Course 4 Artist For Loops 2: "我已经加了一些代码，会在一个从50数到100每次增加10的`计数循环`里画一个三角形。\\r\n\\r\n<br/>\\r\n<strong>注意：</strong>\n在点击“运行”*前*，先检查代码。"
+      Course 4 Artist For Loops 2: |-
+        我已经加了一些代码，会在一个从50数到100每次增加10的`计数循环`里画一个三角形。\r
+        \r
+        <br/>\r
+        <strong>注意：</strong>
+        在点击“运行”*前*，先检查代码。
       Course 4 Artist For Loops 3: 用上一题做为参考来完成这个。最小的三角形的边长是20像素，最大的是200像素，每个三角形的边比上一个大20像素。
       Course 4 Artist For Loops 4: '怎样修改你学会的东西来画这些正方形？它们边长从15像素起，最大边长300像素，每个正方形的边长比上一个大15像素。 '
       Course 4 Artist For Loops 5: "上一关完成的很好！让我们再次用“计数器”变量模块画出这个很酷的图。 \n\\r\n\\r\n"
@@ -10459,7 +10459,11 @@ zh-CN:
       Course 4 Bee Params 2: 修改“收集3个花蜜”函数，来让我向右转，而不是向左转来到达花。
       Course 4 Bee Params 3: "现在，两边都有花了！\\r\n\\r\n现在有两个叫做“左”和“右”的变量，并且给“收集3个花蜜”的函数增加了“方向”参数。\n\\r\n\\r\n**编辑“收集3个花蜜”的函数，当变量“左”或者“右”传递进函数时，让蜜蜂往正确的转向**。"
       Course 4 Bee Params 5: 让我们从头开始，你能创建一个含有方向参数的“拿5罐花蜜”的新函数吗？
-      Course 4 Bee Params 6: "如果你能用一个函数来收集所有花蜜，是否会更好？\\r\n\\r\n<br/>\\r\n试着给你的“花蜜单元”函数加一个新参数来控制收集的花蜜数量。你也许也想重新命名这个函数！"
+      Course 4 Bee Params 6: |-
+        如果你能用一个函数来收集所有花蜜，是否会更好？\r
+        \r
+        <br/>\r
+        试着给你的“花蜜单元”函数加一个新参数来控制收集的花蜜数量。你也许也想重新命名这个函数！
       Course 4 Bee Params 7: |
         试着用新函数来收集所有花蜜。\r
         \r
@@ -10499,7 +10503,19 @@ zh-CN:
       Course 4 Play Lab Params 6: 添加另一个叫做“速度”的参数到“巡逻”函数里。试着在“设置速度”模块中使用新的“速度”参数，来帮助企鹅在别的小动物之前得到所有旗帜。
       Course 4 Play Lab Params 7: "来点好玩的！看看这里的代码，是否你能明白每个模块都做了什么。\\r\n\\r\n看完以后，用方向键来让小狗收集到所有旗帜。\\r\n\\r\n注意：你不必改动代码。"
       Course 4 Play Lab Params 8: 在小狗碰到任何一个演员时，用“当演员碰到”模块来把小狗送回左上角。
-      Course 4 Play Lab Params 9: "这是一个早先的游戏，但是大部分代码都隐藏了。我们加了个新函数叫做“score_points”（得分）。\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\n编辑这个函数，使得“points”（分数）参数能加到“player_score”（玩家分数）变量上。\\r\n<br/>\\r\n“player_score”（玩家分数）变量会在每次小狗的馅饼碰到小猫时增加，在小猫的三明治碰到小狗时减少。\\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*注意：当你完成后，点击“运行”来玩玩。当小狗得到6分时，就可以进入下一关。*"
+      Course 4 Play Lab Params 9: |-
+        这是一个早先的游戏，但是大部分代码都隐藏了。我们加了个新函数叫做“score_points”（得分）。\r
+        <br/>\r
+        <hr>\r
+        <br/>\r
+        <h4>\r
+        编辑这个函数，使得“points”（分数）参数能加到“player_score”（玩家分数）变量上。\r
+        <br/>\r
+        “player_score”（玩家分数）变量会在每次小狗的馅饼碰到小猫时增加，在小猫的三明治碰到小狗时减少。\r
+        </h4>\r
+        <br/>\r
+        <hr>\r
+        *注意：当你完成后，点击“运行”来玩玩。当小狗得到6分时，就可以进入下一关。*
       Course 4 Play Lab Vars 1: |-
         这次你不需要写任何代码，点击“运行”来玩游戏吧！\r
         \r
@@ -12269,6 +12285,7 @@ zh-CN:
         
         你觉得在按下"▶ 运行"之后点击她会发生什么事？
       Virtual Pet 1 Predict_simple: "**你觉得会怎样？** \n\n这只长颈鹿名字叫杰拉尔丁。  \n\n当你点击她后，她会做什么？"
+      Virtual Pet 1 fix: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 1-validated: 这是杰拉尔丁，你的宠物长颈鹿。你觉得按下运行之后点击她会发生什么事？
       Virtual Pet 1: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 1_simple: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
@@ -12377,7 +12394,7 @@ zh-CN:
         \r
         * 写代码在绿色椭圆后面画一个橙色的椭圆。\r
         * 别担心确切的尺寸，只要整个绿色椭圆在橙色里就行。
-      allthethings_ttscsp: |2+
+      allthethings_ttscsp: |-
         \r
         # 练习试试不同的事件类型\r
         \r
@@ -12856,9 +12873,7 @@ zh-CN:
       courseA_collector_loops2: |2
         得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |2
-        得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r
-          <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops3_2018: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops_challenge1: '*"你能帮我找出一些缺陷吗？我知道想走哪条路，但我不确定要走多少步。"*'

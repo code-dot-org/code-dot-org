@@ -140,7 +140,7 @@
   "whenLeftTooltip": "Veikt zemāk esošās darbības, kad nospiež kreiso bultiņu.",
   "whenPaddleCollided": "kad bumba atsitas pret dēlīti",
   "whenPaddleCollidedTooltip": "Veikt zemāk esošās darbības, kad bumba atsitas pret dēlīti.",
-  "whenPlayerCollided": "",
+  "whenPlayerCollided": "kad bumba atsitas pret spēlētāju",
   "whenPlayerCollidedTooltip": "",
   "whenRight": "kad labā bultiņa",
   "whenRightTooltip": "Veikt zemāk esošās darbības, kad nospiež labo bultiņu.",

@@ -37,6 +37,8 @@ eu:
       2-3 Artist 8_authored_hint:
         2-3_Artist_8_a: 200 erditik ebakitzen baduzu, zenbat pixel zabal behar du
           izan karratu bakoitza?
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: Pausu bakoitza 100 pixel zabal eta 100 pixel altuerakoa da.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:

@@ -481,7 +481,7 @@ nn:
 
         * Fiks den øydelagde koden slik at nettsida viser riktig
         * Samanlikn problema du fiksa med den du sit saman med
-      CSD U2 Info Page Final Touches: |
+      CSD U2 Info Page Final Touches: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 

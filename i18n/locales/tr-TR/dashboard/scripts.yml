@@ -6299,6 +6299,8 @@ tr:
               name: Röle Programlama
             Introduction to Online Puzzles:
               name: Online Bulmacalara Giriş
+            Nested Loops in Maze:
+              name: Labirentte İçiçe Döngüler
         coursec-2018:
           assignment_family_title: Kurs C
           description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
@@ -7108,3 +7110,9 @@ tr:
           stages:
             Artist:
               name: Sanatçı
+        sconyers:
+          stages:
+            Digital Design:
+              name: Dijital Tasarım
+            Linking Screens:
+              name: Bağlama Ekranları
