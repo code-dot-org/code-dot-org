@@ -3,9 +3,9 @@ Feature: Sign In Icon in Header
 
 # TOOD: Erin B., remove the pagemode cookie related steps when launched.
 
-
 Background:
-  # The pagemode cookie must be set separately on Dashboard and # Pegasus because they are different domains.
+  # The pagemode cookie must be set separately on Dashboard and
+  # Pegasus because they are different domains.
   Given I am on "http://code.org/"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
