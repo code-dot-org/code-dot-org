@@ -654,16 +654,16 @@ function modalError(message, Bramble, showButtons=true) {
             error: err && err.message
           });
           // Unable to create filesystem, fatal (and highly unlikely) error
-          modalError(`Failed to reset Bramble's filesystem. ${err.message}. ${SUPPORT_ARTICLE_HTML}`, Bramble);
+          modalError(`Failed to reset Web Lab. ${err.message}. ${SUPPORT_ARTICLE_HTML}`, Bramble);
         } else {
           webLab_.addPageAction(webLab_.PageAction.BrambleFilesystemResetSuccess, {});
           // filesystem is now clean and empty, use Bramble.getFileSystem() to obtain instance
-          modalError(`Bramble filesystem reset.  Reloading...`, Bramble, false);
+          modalError(`Web Lab reset complete.  Reloading...`, Bramble, false);
           reloadWebLab();
         }
       });
     } else {
-      modalError(`Bramble was not found. ${SUPPORT_ARTICLE_HTML}`, Bramble);
+      modalError(`An unexpected error occurred (Bramble not found). ${SUPPORT_ARTICLE_HTML}`);
     }
   }
 
@@ -692,7 +692,7 @@ function modalError(message, Bramble, showButtons=true) {
     buttons.style.textAlign = 'center';
     buttons.style.marginTop = '1em';
     buttons.appendChild(button('Try again', reloadWebLab));
-    buttons.appendChild(button('Reset Bramble Filesystem', resetBrambleFilesystem));
+    buttons.appendChild(button('Reset Web Lab', resetBrambleFilesystem));
     buttons.appendChild(button('Dismiss', hideModal));
     messageBox.appendChild(buttons);
   }
