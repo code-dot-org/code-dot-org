@@ -25,35 +25,50 @@ $(document).ready(() => {
   init();
 
   function init() {
-    const userType = $("#user_user_type")[0].value;
-    setUserType(userType);
+    setUserType(getUserType());
     renderSchoolInfo();
   }
 
   $(".finish-signup").submit(function () {
+    // Clean up school data and set age for teachers.
+    if (getUserType() === "teacher") {
+      cleanSchoolInfo();
+      $("#user_age").val("21+");
+    }
+  });
+
+  function cleanSchoolInfo() {
     // The country set in our form is the long-form string name of the country.
     // We want it to be the 2-letter country code, so we change the value on form submission.
     const countryInputEl = $('input[name="user[school_info_attributes][country]"]');
     countryInputEl.val(schoolData.countryCode);
-  });
+
+    // Clear school_id if the searched school is not found.
+    if (schoolData.ncesSchoolId === '-1') {
+      const schoolIdEl = $('input[name="user[school_info_attributes][school_id]"]');
+      schoolIdEl.val("");
+    }
+  }
 
   $("#user_user_type").change(function () {
     var value = $(this).val();
     setUserType(value);
   });
 
+  function getUserType() {
+    return $("#user_user_type")[0].value;
+  }
+
   function setUserType(userType) {
     if (userType) {
       trackUserType(userType);
     }
 
-    switch (userType) {
-      case "teacher":
-        switchToTeacher();
-        break;
-      default:
-        // Show student fields by default.
-        switchToStudent();
+    if (userType === "teacher") {
+      switchToTeacher();
+    } else {
+      // Show student fields by default.
+      switchToStudent();
     }
   }
 
@@ -70,7 +85,7 @@ $(document).ready(() => {
   function trackUserType(type) {
     firehoseClient.putRecord({
       study: 'account-sign-up-v2',
-      study_group: 'experiment-v2',
+      study_group: 'experiment-v3',
       event: 'select-' + type,
       data_string: signUpUID,
     });

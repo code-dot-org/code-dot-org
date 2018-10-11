@@ -108,6 +108,10 @@
         border: 2px solid $white;
         color: $white;
       }
+
+      #new_signin_button {
+        margin-top: -11px;
+      }
     }
   }
 
@@ -165,15 +169,15 @@
     position: absolute;
     top: 55px;
     right: 55px;
-    font-size: 14px;
     background-color: $white;
-    width: 200px;
+    width: 260px;
     z-index: 10000;
     a {
       color: $teal;
       font-family: 'Gotham 5r', sans-serif;
       height: 70px;
-      width: 198px;
+      width: 258px;
+      font-size: 14px;
       float: left;
       border-left: 1px solid $charcoal;
       border-right: 1px solid $charcoal;
