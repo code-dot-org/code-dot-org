@@ -9,7 +9,6 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
-import {createDanceAPI} from './DanceLabP5';
 import initDance from './p5.dance';
 import {reducers} from './redux';
 
@@ -373,8 +372,7 @@ Dance.prototype.onP5Preload = function () {
   options['mp3'] = songs_data[options.id].url;
   Sounds.getSingleton().register(options);
 
-  const Dance = createDanceAPI(this.p5);
-  this.nativeAPI = initDance(this.p5, Dance, this.onPuzzleComplete.bind(this));
+  this.nativeAPI = initDance(this.p5, this.onPuzzleComplete.bind(this));
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();

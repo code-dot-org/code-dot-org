@@ -5,11 +5,11 @@ import Effects from './Effects';
 import {getStore} from "../redux";
 import {commands as audioCommands} from '../lib/util/audioApi';
 
-export default function init(p5, Dance, onPuzzleComplete) {
+export default function init(p5, onPuzzleComplete) {
   const exports = {};
 
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
-  const WATCHED_RANGES = [0, 1, 2];
+  // TODO: const WATCHED_RANGES = [0, 1, 2];
 
   /**
    * Patch p5 tint to use fast compositing (see https://github.com/code-dot-org/p5.play/pull/42).
@@ -119,8 +119,6 @@ exports.addCues = function (timestamps) {
 };
 
 exports.reset = function () {
-  Dance.song.stopAll();
-
   songStartTime = 0;
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
@@ -136,9 +134,6 @@ exports.metadataLoaded = function () {
 };
 
 exports.preload = function preload() {
-  // Load song
-  Dance.song.load(song_meta.url);
-
   // Retrieves JSON metadata for songs
   // TODO: only load song data when necessary and don't hardcode the dev song
   loadSongMetadata(() => {metadataLoaded = true});
@@ -167,10 +162,6 @@ exports.setup = function setup() {
     }
   }
   let songData = songs[getStore().getState().selectedSong];
-
-  Dance.fft.createPeakDetect(20, 200, 0.8, Math.round(60 * 30 / songData.bpm));
-  Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round(60 * 30 / songData.bpm));
-  Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round(60 * 30 / songData.bpm));
 }
 
 exports.play = function () {
@@ -472,13 +463,8 @@ exports.setDanceSpeed = function setDanceSpeed(sprite, speed) {
 // Music Helpers
 
 exports.getEnergy = function getEnergy(range) {
-  if (range == "low") {
-    return Dance.fft.getEnergy(20, 200);
-  } else if (range == "mid") {
-    return Dance.fft.getEnergy(400, 2600);
-  } else {
-    return Dance.fft.getEnergy(2700, 4000);
-  }
+  // TODO:
+  return 100;
 }
 
 exports.getCurrentTime = function getCurrentTime() {
@@ -572,7 +558,7 @@ function behaviorsEqual(behavior1, behavior2) {
 
 exports.startMapping = function startMapping(sprite, property, range) {
   var behavior = new Behavior(function (sprite) {
-    var energy = Dance.fft.getEnergy(range);
+    var energy = exports.getEnergy(range);
     if (property == "x") {
       energy = Math.round(p5.map(energy, 0, 255, 50, 350));
     } else if (property == "y") {
@@ -595,7 +581,7 @@ exports.startMapping = function startMapping(sprite, property, range) {
 
 exports.stopMapping = function stopMapping(sprite, property, range) {
   var behavior = new Behavior(function (sprite) {
-    var energy = Dance.fft.getEnergy(range);
+    var energy = exports.getEnergy(range);
     if (property == "x") {
       energy = Math.round(p5.map(energy, 0, 255, 50, 350));
     } else if (property == "y") {
@@ -683,12 +669,13 @@ function updateEvents() {
     }
   }
 
-  for (let range of WATCHED_RANGES) {
-    if (Dance.fft.isPeak(range)) {
-      events.any = true;
-      events['Dance.fft.isPeak'][range] = true;
-    }
-  }
+  // TODO:
+  // for (let range of WATCHED_RANGES) {
+  //   if (isPeak(range)) {
+  //     events.any = true;
+  //     events['Dance.fft.isPeak'][range] = true;
+  //   }
+  // }
 
   while (World.cues.seconds.length > 0 && World.cues.seconds[0] < exports.getCurrentTime()) {
     events.any = true;
@@ -710,10 +697,9 @@ exports.init = function (callback) {
 }
 
 exports.draw = function draw() {
-  Dance.fft.analyze();
   const context = {
-    isPeak: Dance.fft.isPeak(),
-    centroid: Dance.fft.getCentroid(),
+    isPeak: false, // TODO: isPeak(),
+    centroid: 0, // TODO: getCentroid(),
     backgroundColor: World.background_color,
   };
 
@@ -739,8 +725,6 @@ exports.draw = function draw() {
     World.fg_effect.draw(context);
     p5.pop();
   }
-
-  let songData = songs[getStore().getState().selectedSong];
 
   p5.fill("black");
   p5.textStyle(p5.BOLD);
