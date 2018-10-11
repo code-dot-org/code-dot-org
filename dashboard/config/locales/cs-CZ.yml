@@ -133,6 +133,7 @@ cs:
     age: Věk
     user_type: Jste student nebo učitel?
     submit: Registrace
+    next: Další
     teacher: Jste učitel?
     valid_username: K dispozici!
     invalid_username: Uživatelské jméno musí mít nejméně 5 znaků

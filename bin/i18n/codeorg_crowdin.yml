@@ -64,5 +64,12 @@ files: [
     "/source/blockly-mooc/weblab.json"
   ],
   "update_option" : "update_as_unapproved"
+ }, {
+  "source" : "/source/**/*.md",
+  "translation" : "/%language%/**/%original_file_name%",
+  "ignore" : [
+    "/source/hourofcode/**",
+  ],
+  "update_option" : "update_as_unapproved"
  }
 ]

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -38,13 +38,10 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "default_song": "hammer",
-    "long_instructions": "Get your groove on! Create a dance of your own to share with your friends."
+    "long_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

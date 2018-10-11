@@ -359,7 +359,7 @@
   homepage_slot_text_link_donate: "Donate"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
   homepage_slot_text_link_administrators: "Bring CS to your school"
-  homepage_header_codestudio: "Code.org student creations"
+  homepage_header_codestudio: "Over 25 million Code.org projects created"
   homepage_header_donors: "Code.org thanks its supporters"
   homepage_donors_seall: "See all"
   homepage_donors_donate: "Donate"
@@ -1549,3 +1549,11 @@
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
+  creativity: "creativity"
+  creativity_create: "Create"
+  creativity_what_will_you_create: "What will you create?"
+  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in! Are you?'
+  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. I’m in! What will you create?'
+  account_sign_up_email_opt_in: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
+  account_sign_up_child_accept_terms: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."

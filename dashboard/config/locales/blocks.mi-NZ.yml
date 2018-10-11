@@ -65,6 +65,11 @@ mi:
           PROPERTY:
             '"scale"': rahinga
             '"height"': teitei
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -154,6 +159,11 @@ mi:
         options:
           PROPERTY:
             '"scale"': rahinga
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": whakamauī
+            "{x: 300, y: 200}": whakamatau
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -199,6 +209,12 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
+      RyanLab_moveForward:
+        text: neke ki mua
+      RyanLab_turnLeft:
+        text: huri whakatemauī
+      RyanLab_turnRight:
+        text: huri whakatematau
       craft_ifPath:
         options:
           DIR:

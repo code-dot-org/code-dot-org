@@ -935,6 +935,10 @@ lv:
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Spelling Bee:
               name: Burtošanas bite
+        subgoal-labels-opt-in:
+          stages:
+            Thanks:
+              name: Paldies
         csp3-research-mxghyt:
           stages:
             Creating Functions:

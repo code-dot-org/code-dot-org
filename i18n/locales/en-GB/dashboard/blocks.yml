@@ -34,6 +34,10 @@ en-GB:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_randomColor:
         text: random colour
       Dancelab_setDanceSpeed:
@@ -45,6 +49,10 @@ en-GB:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"height"': height
@@ -105,6 +113,12 @@ en-GB:
           KEY:
             '"w"': W
             '"s"': S
+      RyanLab_moveForward:
+        text: move forward
+      RyanLab_turnLeft:
+        text: turn left
+      RyanLab_turnRight:
+        text: turn right
       craft_ifPath:
         options:
           DIR:

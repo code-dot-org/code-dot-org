@@ -11664,7 +11664,7 @@ it:
           le pannocchie!
       courseE_farmer_functions7a1_2018_authored_hint:
         courseE_farmer_functions7a1_2018_a: Crea la funzione usando l'apposito blocco
-          presente nella sezione `funzioni` nella cassetta degli attrezzi.
+          presente nella sezione "funzioni" nella cassetta degli attrezzi.
         courseE_farmer_functions7a1_2018_b: Dopo che hai creato la funzione, non dimenticati
           di usarla!
       courseE_farmer_functions7b_authored_hint:
@@ -12045,8 +12045,9 @@ it:
           `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio
           del programma.
       courseF_artist_for10_authored_hint:
-        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando un contatore
-          per `set alpha`e una variabile`contatore`/10 come dimensione del pennello.
+        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando la variabile
+          `counter` nel blocco `imposta l'opacità` e `counter/10` per impostare la
+          larghezza del pennello.
         courseF_artist_for10_b: L'immagine nel disegno usa un angolo di 61 gradi.
         courseF_artist_for10_c: |-
           Vuoi sapere come è stata creata l'immagine dell'esempio?
@@ -12133,8 +12134,9 @@ it:
           </block>
           </xml>
       courseF_artist_for10_2018_authored_hint:
-        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando un contatore
-          per `set alpha`e una variabile`contatore`/10 come dimensione del pennello.
+        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando la variabile
+          `counter` nel blocco `imposta l'opacità` e `counter/10` per impostare la
+          larghezza del pennello.
         courseF_artist_for10_b: L'immagine nel disegno usa un angolo di 61 gradi.
         courseF_artist_for10_c: |-
           Vuoi sapere come è stata creata l'immagine dell'esempio?
@@ -12342,13 +12344,13 @@ it:
           conta da 15 a 300 a passi di 2.
         courseF_artist_for7_d: Questa immagine è realizzata girando solo di 89 gradi.
       courseF_artist_for8_authored_hint:
-        courseF_artist_for8_a: Mantieni ogni altra cosa uguale nel tuo codice, bisogna
-          modificare solo l'angolo.
+        courseF_artist_for8_a: In questo programma, mantieni ogni altra cosa uguale
+          a prima, bisogna modificare solo l'angolo.
         courseF_artist_for8_b: Se vuoi, puoi scegliere un colore diverso per disegnare
           la tua spirale!
       courseF_artist_for8_2018_authored_hint:
-        courseF_artist_for8_a: Mantieni ogni altra cosa uguale nel tuo codice, bisogna
-          modificare solo l'angolo.
+        courseF_artist_for8_a: In questo programma, mantieni ogni altra cosa uguale
+          a prima, bisogna modificare solo l'angolo.
         courseF_artist_for8_b: Se vuoi, puoi scegliere un colore diverso per disegnare
           la tua spirale!
       courseF_artist_for9_authored_hint:
@@ -12979,7 +12981,7 @@ it:
           valore 50, nient'altro.
       courseF_artist_variables6a_authored_hint:
         courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare
-          un numero, ricordati di usare la variabile `length`(*lunghezza*).
+          un numero, ricordati di usare la variabile `length` (*lunghezza*).
         courseF_artist_variables6a_b: Questo codice sarà molto simile a quello dei
           triangoli, solo che ora vengono disegnati dei quadrati!
         courseF_artist_variables6a_c: Prima scrivi il codice per disegnare un quadrato,
@@ -12991,7 +12993,7 @@ it:
           ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
       courseF_artist_variables6a_2018_authored_hint:
         courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare
-          un numero, ricordati di usare la variabile `length`(*lunghezza*).
+          un numero, ricordati di usare la variabile `length` (*lunghezza*).
         courseF_artist_variables6a_b: Questo codice sarà molto simile a quello dei
           triangoli, solo che ora vengono disegnati dei quadrati!
         courseF_artist_variables6a_c: Prima scrivi il codice per disegnare un quadrato,
@@ -13072,7 +13074,7 @@ it:
           solo un numero in alto per svolgere questo esercizio.
       courseF_artist_variables_6a_authored_hint:
         courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare
-          un numero, ricordati di usare la variabile `length`(*lunghezza*).
+          un numero, ricordati di usare la variabile `length` (*lunghezza*).
       courseF_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Tutte le linee verticali hanno lunghezza
           fissa pari a `10`.  Mentre ogni linea orizzontale ha una lunghezza pari
@@ -15273,8 +15275,8 @@ it:
           del primo.
       grade5_artist_for_loopsfreeplay12_authored_hint:
         grade5_artist_for_loopsfreeplay12_a: L'immagine nel disegno è stata creata
-          usando un contatore per `set alpha`e una variabile`contatore`/10 come dimensione
-          del pennello.
+          usando la variabile `counter` nel blocco `imposta l'opacità` e `counter/10`
+          per impostare la larghezza del pennello.
         grade5_artist_for_loopsfreeplay12_b: L'immagine nel disegno usa un angolo
           di 61 gradi.
       grade5_artist_functionparameters10_authored_hint:

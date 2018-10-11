@@ -639,7 +639,7 @@ is:
         \r
         * Bættu nýju HTML skjali fyrir upplýsingasíðu í verkefnið þitt.\r
         * Settu inn fyrirsögn og lýsingu
-      CSD U2 Info Page Final Touches: |
+      CSD U2 Info Page Final Touches: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
         \r
@@ -1751,10 +1751,6 @@ is:
         # Gerðu þetta\r
         \r
         * Settu tvo rétthyrninga nákvæmlega í hornin á skjánum eins og sýnt er í myndinni.
-      CSD U3 Entertainment Sample 1 - unembed: |-
-        # Geimstökkull\r
-        \r
-        Ýttu á "Keyra" til að spila leikinn hér til vinstri.  Þú getur látið geimveruna stökkva með upp örinni og hreyft hana til vinstri og hægri með örvarlyklunum.   Þú skorar stig með því að safna stjörnum og ef þú skorar nógu hátt mun bakgrunnurinn breytast.
       CSD U3 Entertainment Sample 1: |-
         # Geimstökkull\r
         \r
@@ -2181,7 +2177,6 @@ is:
         * Uppfærðu þá eiginleika með teljaramynstrinu\r
         \r
         _Ábending: Ef teljaramynstrið þitt er ekki að virka sem skyldi, bættu þá við vaka eða vökum (enska: watchers) til að hjálpa til við villuleit._
-      CSD U3 Plotting Shapes Shape Lab - unembed: "# Að teikna form\\r\n\\r\nKannaðu þetta tæki sem þú getur notað til að teikna form í ýmsum litum. Gættu þess að prófa að kveikja á grindinni sem hjálpar þér að velja staði nákvæmlega."
       CSD U3 Plotting Shapes Shape Lab Open: "# Að teikna form\\r\n\\r\nKannaðu þetta tæki sem þú getur notað til að teikna form í ýmsum litum. Gættu þess að prófa að kveikja á grindinni sem hjálpar þér að velja staði nákvæmlega."
       CSD U3 Plotting Shapes Shape Lab: "# Að teikna form\\r\n\\r\nKannaðu þetta tæki sem þú getur notað til að teikna form í ýmsum litum. Gættu þess að prófa að kveikja á grindinni sem hjálpar þér að velja staði nákvæmlega."
       CSD U3 Plotting Shapes Shape Lab_2018: "# Að teikna form\\r\n\\r\nKannaðu þetta tæki sem þú getur notað til að teikna form í ýmsum litum. Gættu þess að prófa að kveikja á grindinni sem hjálpar þér að velja staði nákvæmlega."
@@ -3736,7 +3731,12 @@ is:
       Course 4 Artist For Loops 13: Hmmm, þessi form fara sístækkandi! Vorum við ekki búin að leysa þetta vandamál með breytum? Hvernig getum við notað teljarann til að stytta hliðarnar eftir því sem þeim fjölgar? Í stað þess að færa áfram um fasta stærð skulum við nú færa áfram um (100 / teljari) díla.
       Course 4 Artist For Loops 14: "Ef þú snýrð tilteknu formi aðeins meira eða minna en venjulega, getur útkoman komið á óvart. \\r\n\\r\nPrófaðu að nota eitthvað af kóðanum úr síðasta áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum."
       Course 4 Artist For Loops 15: "Frjáls æfing! Prófaðu að búa til eigin teikningar með `frá` lykkjum. Við höfum líka bætt við nokkrum gagnlegum breytum sem þú getur notað."
-      Course 4 Artist For Loops 2: "Kóðinn sem teiknar þríhyrning hefur verið settur inn í `frá` lykkju sem telur frá 50 til 100 hlaupandi á 10. \\r\n\\r\n<br/>\\r\n<strong>ATHUGAÐU:</strong>\nGættu þess að skoða kóðann *áður* en þú ýtir á \"Keyra\"."
+      Course 4 Artist For Loops 2: |-
+        Kóðinn sem teiknar þríhyrning hefur verið settur inn í `frá` lykkju sem telur frá 50 til 100 hlaupandi á 10. \r
+        \r
+        <br/>\r
+        <strong>ATHUGAÐU:</strong>
+        Gættu þess að skoða kóðann *áður* en þú ýtir á "Keyra".
       Course 4 Artist For Loops 3: Vísaðu í síðustu þraut til að hjálpa þér að klára þessa. Minnsti þríhyrningurinn hefur 20 díla hliðar, sá stærsti 200, og hver þríhyrningur er 20 dílum stærri en næsti á undan.
       Course 4 Artist For Loops 4: 'Hvernig mundir þú aðlaga það sem þú hefur lært að því að teikna þessa ferninga? Lengd þess fyrsta er 15 dílar, þess stærsta 300 dílar og hver ferningur er 15 dílum stærri en sá á undan. '
       Course 4 Artist For Loops 5: "Vel gert í síðustu þraut! Notum nú breytuna `teljari` aftur til að teikna þessa fínu mynd. \n\\r\n\\r\n"
@@ -3790,7 +3790,11 @@ is:
       Course 4 Bee Params 2: Breyttu `sækja 3 blómasafa` fallinu svo að það láti mig snúa til hægri í stað vinstri til blómanna.
       Course 4 Bee Params 3: "Nú eru blóm á báðar hliðar! \\r\n\\r\nVið höfum bætt við breytunum `vinstri` og `hægri`, sem þú getur notað, og líka bætt stikanum `stefna` við `sækja 3 blómasafa` fallið. \n\\r\n\\r\n**Breyttu `sækja 3 blómasafa` svo að býflugan snúi í rétta átt þegar breyturnar `vinstri` og `hægri` eru settar í fallið.**"
       Course 4 Bee Params 5: Byrjum frá grunni. Getur þú búið til nýtt fall `sækja 5 safa` með stika fyrir stefnu?
-      Course 4 Bee Params 6: "Væri ekki ljúft ef við gætum safnað öllum þessum blómasafa með einu falli? \\r\n\\r\n<br/>\\r\nPrófaðu að bæta nýjum stika `magn` við fallið til að stjórna hve miklum safa á að safna. Þú vilt ábyggilega líka gefa fallinu annað heiti!"
+      Course 4 Bee Params 6: |-
+        Væri ekki ljúft ef við gætum safnað öllum þessum blómasafa með einu falli? \r
+        \r
+        <br/>\r
+        Prófaðu að bæta nýjum stika `magn` við fallið til að stjórna hve miklum safa á að safna. Þú vilt ábyggilega líka gefa fallinu annað heiti!
       Course 4 Bee Params 7: |
         Prófaðu að nota nýja fallið þitt til að safna öllum þessum safa.\r
         \r
@@ -3830,7 +3834,19 @@ is:
       Course 4 Play Lab Params 6: Bættu við öðrum stika `hraði` við fallið `rása`. Prófaðu að nota `stilla hraða` kubb með nýja stikanum `hraði` til að hjálpa Mörgæs að ná báðum flöggunum áður en hinir leikmennirnir ná svo mikið sem einum.
       Course 4 Play Lab Params 7: "Skemmtum okkur! Skoðaðu gefna kóðann og reyndu að finna út hvað hver kubbur gerir.\\r\n\\r\nNotaðu svo örvarlyklana til að stjórna Hundi og safna öllum flöggunum.\\r\n\\r\n**Taktu eftir:** Þú þarft ekki að breyta forritinu neitt"
       Course 4 Play Lab Params 8: Notaðu kubbinn `þegar leikmaður snertir` til að senda Hund aftur efst til vinstri en AÐEINS ef Hundur snertir einhvern annan leikmann.
-      Course 4 Play Lab Params 9: "Hér er leikurinn okkar frá því áður, en mest af kóðanum er falið. Það er nýtt fall `skora_stig`.\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\nBreyttu fallinu svo að nýjum stika `stig` sé bætt við breytuna `skor_spilara`.\\r\n<br/>\\r\nBreytan `skor_spilara` ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum og lækka í hvert sem Köttur klukkar Hund með samloku.\\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*Athugaðu*: Smelltu svo á \"Keyra\" til að spila. Þegar Hundur nær að skora 6 stig, munt þú færast áfram í næstu þraut.*"
+      Course 4 Play Lab Params 9: |-
+        Hér er leikurinn okkar frá því áður, en mest af kóðanum er falið. Það er nýtt fall `skora_stig`.\r
+        <br/>\r
+        <hr>\r
+        <br/>\r
+        <h4>\r
+        Breyttu fallinu svo að nýjum stika `stig` sé bætt við breytuna `skor_spilara`.\r
+        <br/>\r
+        Breytan `skor_spilara` ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum og lækka í hvert sem Köttur klukkar Hund með samloku.\r
+        </h4>\r
+        <br/>\r
+        <hr>\r
+        *Athugaðu*: Smelltu svo á "Keyra" til að spila. Þegar Hundur nær að skora 6 stig, munt þú færast áfram í næstu þraut.*
       Course 4 Play Lab Vars 1: |-
         Í þetta sinn þarft þú ekki að búa til neinn kóða heldur bara ýta á `Keyra` til að spila leikinn! \r
         \r
@@ -4700,13 +4716,7 @@ is:
         Náðu öllum þremur hrúgunum til að ljúka áfanganum.\r
         \r
         
-      courseA_collector_loops2_2018: |-
-        Færðu Laurel að fjársjóðnum og notaðu svo \r
-        ![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png) til að taka hann upp.\r
-        \r
-        Náðu öllum þremur hrúgunum til að ljúka áfanganum.\r
-        \r
-        
+      courseA_collector_loops2_2018: "Færðu Laurel að fjársjóðnum og notaðu svo \\r\n![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png) til að taka hann upp.\\r\n\\r\nNáðu öllum þremur hrúgunum til að ljúka áfanganum.\\r\n\\r\n"
       courseA_collector_loops3: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
       courseA_collector_loops3_2018: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
       courseA_collector_preLoops1: "Þetta er Lára ævintýramær!\\r\n\\r\nÝttu á \"Keyra\" til að sjá hana ganga að fjársjóðnum og grípa hann."

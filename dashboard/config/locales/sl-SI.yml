@@ -103,6 +103,7 @@ sl:
     age: Starost
     user_type: Ste učenec ali učitelj?
     submit: Prijava
+    next: Naslednja
     teacher: Ste učitelj/ica?
     valid_username: Na voljo!
     invalid_username: Uporabniško ime mora imeti vsaj 5 znakov

@@ -1,6 +1,7 @@
 pt-BR:
   data:
     long_instructions:
+      "'pre-assessment survey q25A'": "Se sim, qual(is) curso(s) de ciência da computação você teve antes do seu curso atual?\n"
       2-3 Artist 1 new: "Olá, eu sou um artista. Você pode escrever código para me fazer desenhar praticamente qualquer coisa. Use alguns blocos para me fazer desenhar sobre as linhas cinzas na figura. (Cada linha tem 100 pixels de comprimento)\n"
       2-3 Artist 11: 'Dê a placa de pare uma borda criando um octógono com lados de 100 pixels. '
       2-3 Artist 12: "Crie um circulo para finalizar o globo ocular!\n\\r\n\\r\nSe o artista girar 1 grau em cada iteração, quantas vezes você precisa repetir o código para desenhar o círculo? "
@@ -48,7 +49,11 @@ pt-BR:
         caule da maneira certa?
       2-3 Artist Debugging Assessment 1: "**Avaliação:** \\r\nPor que\neste quadrado acaba ficando com 75 pixels a menos em cada lado? \\r\n\\r\nOnde\no código está errado?"
       2-3 Artist Free Play: Atividade livre! Desenhe o que você quiser.
+      2-3 Artist Functions 1 a: "\"Mim artista zumbi. Mim ama desenhar!\" \n\nAjude o zumbi a desenhar os óculos quadrados.  \n\nA haste entre as lentes é 25 pixels menor que a largura dos quadrados, que é igual a 100 pixels.\n\n"
+      2-3 Artist Functions 1: "\"Mim artista zumbi. Mim ama desenhar!\" \n\nAjude o zumbi a desenhar os óculos quadrados.  \n\nA haste entre as lentes é 25 pixels menor que a largura dos quadrados, que é igual a 100 pixels.\n\n"
+      2-3 Artist Functions 10: "**Atividade livre**: Aqui temos duas funções, uma para desenhar uma engrenagem grande e outra para desenhar uma engrenagem pequena. \n\nUse-as para desenhar o interior de uma máquina!"
       2-3 Artist Functions 11 a: "Nós renomeamos a função `desenhar um quadrado` para `desenhar um hexágono`, mas ela ainda desenha apenas quadrados! \n\nVocê pode modificar a função `desenhar um hexágono` para desenhar um hexágono com lados de 50 pixels?\n\nDesenhe a imagem usando a nova função!"
+      2-3 Artist Functions 11.5 a: "Aqui está a mesma função `desenhe um hexágono`. \n\nO que acontece se você repetir o programa principal **6** vezes, virando **60** graus a cada repetição?"
       2-3 Artist Functions 11.5: "Aqui está a mesma função\n\"Desenhe um hexágono\". \\r\n\\r\nO que acontece se você repetir o programa principal 6 vezes, virando\n60 graus a cada repetição?"
       2-3 Artist Functions 11: "Nós renomeamos a função `desenhar um quadrado` para `desenhar um hexágono`, mas ela ainda desenha apenas quadrados! \n\nVocê pode modificar a função `desenhar um hexágono` para desenhar um hexágono com lados de 50 pixels?\n\nDesenhe a imagem usando a nova função!"
       2-3 Artist Functions 12 Mike: "Funções são ótimas para desenhar\ncoisas complexas várias vezes. \\r\n\\r\nVocê consegue usar a função \"desenhe uma flor\"\npara preencher o resto do canteiro de plantas?\\r\nAs plantas estão todas separadas por uma distância de 100 pixels."
@@ -56,14 +61,21 @@ pt-BR:
       2-3 Artist Functions 12: "Funções são ótimas para desenhar\ncoisas complexas várias vezes. \\r\n\\r\nVocê consegue usar a função \"desenhe uma flor\"\npara preencher o resto do canteiro de plantas?\\r\nAs plantas estão todas separadas por uma distância de 100 pixels."
       2-3 Artist Functions 2 a: "Funções deixam você definir novos blocos! \n\nNós movemos os blocos necessários para desenhar um quadrado para dentro de uma função chamada `desenhar um quadrado`. Desta vez, use o pequeno bloco verde `desenhar um quadrado` para chamar esta nova função e criar os óculos. \n\nOs quadrados neste desenho são separados por 75 pixels."
       2-3 Artist Functions 2: "As funções permitem que você defina novos blocos! \\r\n\\r\nMovemos\nos blocos necessários para desenhar um quadrado para dentro de uma função chamada \"desenhe\num quadrado\". Desta vez, use a função \"desenhe um quadrado\" para criar os óculos.\n\\r\n\\r\nOs quadrados estão separados por uma distância de 75 pixels."
+      2-3 Artist Functions 3 a: "Edite a função \"desenhar um quadrado\" para desenhar quadros que são 115px em cada lado. \n\nOs quadrados estão a 45 pixels de distância."
       2-3 Artist Functions 3: "Edite a função para desenhar um quadrado com\nlados de 115 pixels, para desenhar os óculos maiores. \\r\n\\r\nAgora, os quadrados\nestão separados por 45 pixels."
+      2-3 Artist Functions 4 a: Agora coloque a função dentro de um laço e adicione um turno extra para desenhar esses três quadrados.
       2-3 Artist Functions 4: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
       2-3 Artist Functions 9: "Atividade livre: Esta é uma função de flocos de neve.\nExperimente usá-la para criar uma cena de inverno! Essa é uma atividade livre, então\nnão há desafios para resolver. Divirta-se!"
       2-3 Artist Loops 1: "Você consegue fazer um hexágono com lados de\n100 pixels de comprimento para terminar a célula? Lembre-se, isso significa que você só vai\nprecisar virar 60 graus!"
       2-3 Artist Loops 2: "Agora, use um bloco \"repita\" para transformar a célula em uma\nconcha."
+      2-3 Artist Loops New 1: |
+        Vamos desenhar a cabeça desse robô! Você pode fazer um quadrado com lados de 100 pixels?
+        
+        <br/>
       2-3 Artist Loops New 10: "Agora vamos conectar um monte de \"V\"\nem um laço."
       2-3 Artist Loops New 12: "Desenhe um diamante com lados de 100 pixels.\n"
       2-3 Artist Loops New 13: "Você vai conhecer alguns códigos\n(em cinza) para fazer um diamante. \\r\n\\r\nRepita o código cinza para criar um padrão\ndivertido!"
+      2-3 Artist Loops New 14: "Brinque um pouco com o código do diamante e veja que outros padrões você consegue fazer. \n\nTente mudar quantos graus você vira e o número de repetições."
       2-3 Artist Loops New 15: |+
         Agora, desenhe qualquer coisa que tenha vontade
         
@@ -78,8 +90,10 @@ pt-BR:
       2-3 Artist Nested Loops 11: "Repita este código 4 vezes para completar\no padrão, vire 90 graus após cada círculo."
       2-3 Artist Nested Loops 12: "Repita este código 12 vezes para completar\nas espirais."
       2-3 Artist Nested Loops 2: "Agora, repita o triângulo 6 vezes. \\r\n\\r\nDepois\nde cada triângulo, você precisa virar 60 graus antes de desenhar o próximo."
+      2-3 Artist Nested Loops 3: "Você vai precisar repetir o triângulo 12 vezes para desenhar este padrão. \n\nDivida o número de graus em um círculo (360) pelo número de formas que você está desenhando (12) para descobrir quanto virar depois de cada forma."
       2-3 Artist Nested Loops 4: "Repita este diamante 12 vezes para desenhar\numa flor!\\r\n\\r\nObservação: vamos usar o mesmo ângulo para repetir 12 diamantes,\ncomo fizemos com os 12 triângulos.  \\r\nQuanto você precisa virar depois de cada forma?"
       2-3 Artist Nested Loops 5: "Preencha as janelas deste edifício com\num laço aninhado. \\r\n\\r\nAs janelas têm 20 pixels de comprimento e são separadas por 20 pixels."
+      2-3 Artist Nested Loops 6: "Esse dinossauro tem 8 espinhos ao longo de sua cauda.\n\nCada espinho tem 30 pixels de comprimento. \n\nRepita o triângulo 8 vezes, mas lembre-se de saltar para a frente depois de cada um!"
       2-3 Artist Nested Loops 7: "Repita esse triângulo 10 vezes para desenhar\no Sol. \\r\n\\r\nVocê vai precisar mover e virar depois de cada triângulo. \\r\n\\r\nVocê\npode descobrir quanto virar dividindo o número de graus em um círculo\npelo número de triângulos que o compõem."
       2-3 Artist Nested Loops 8: "Agora vamos adicionar um pouco de grama à imagem.\n\\r\n\\r\nCada tufo de grama é separado por 50 pixels."
       2-3 Artist Nested Loops 9: "Vamos terminar essa imagem adicionando\numa flor. \\r\n\\r\nRepita o diamante 12 vezes para desenhar a flor."
@@ -90,9 +104,16 @@ pt-BR:
         \r
         Use
         o que você aprendeu para coletar todo o néctar e, então, produza o mel.
+      2-3 Bee Conditionals 14: "Vamos unir todas as informações!\n\nUse o que você aprendeu para me ajudar a coletar néctar apenas das flores que têm néctar para oferecer, usando o menor número possível de blocos. \n\nNão se esqueça de produzir o mel para terminar."
       2-3 Bee Conditionals 15: "Este padrão de degrau deve ser familiar.  \\r\n\\r\nVocê\nconsegue coletar néctar apenas das flores que têm néctar para oferecer, usando o menor número de\nblocos possível?"
       2-3 Bee Conditionals 2: "Sou uma abelha faminta! \\r\nAjude-me a coletar\ntodo o néctar das flores usando o menor número possível de blocos."
       2-3 Bee Conditionals 3: "Olhe só todo esse néctar!\\r\n\\r\nAjude-me\na coletar todo o néctar e produzir mel usando o menor número possível de blocos.  "
+      2-3 Bee Conditionals Assessment 1: "**Avaliação:** Colete todo o néctar. \nTenha cuidado para não coletar néctar das flores roxas que não o tiverem."
+      2-3 Bee Debugging 1: |-
+        Esses blocos estão me incomodando!
+        
+        Corrija o(s) erro(s) para coletar todo o néctar.
+      2-3 Bee Debugging 10: "Este desafio está me deixando lelé! \n\nCorrija o(s) erro(s) para coletar todo o néctar e produzir todo o mel."
       2-3 Bee Debugging 2: |-
         Você consegue encontrar o problema aqui?\r
         Corrija o(s)
@@ -102,6 +123,7 @@ pt-BR:
         \r
         Corrija o(s) erro(s)
         para coletar todo o néctar.
+      2-3 Bee Debugging 5: "Essa flor parece deliciosa! \n\nCorrija o(s) erro(s) para coletar todo o néctar. Agora você pode usar os botões \"Executar\" e \"Passo\"."
       2-3 Bee Debugging 6: |-
         Que doce desafio!\r
         \r
@@ -113,36 +135,75 @@ pt-BR:
         Você
         terá que corrigir algumas coisas neste programa para coletar todo o
         néctar e produzir todo o mel.
+      2-3 Bee Debugging Assessment 1: |-
+        **Avaliação:**  Agora é hora de mostrar o que você sabe! 
+        
+        Corrija o(s) erro(s) para coletar todo o néctar e produzir todo o mel.
+      2-3 Bee Functions 1: "As funções são blocos de código que realizam uma tarefa. \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       2-3 Bee Functions 10: "As flores roxas variam entre 1 ou\n0 néctar a cada vez que você executa o desafio.   \\r\n\\r\nCrie uma função que coleta\nnéctar apenas das flores que o têm."
       2-3 Bee Functions 2: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       2-3 Bee Functions 4: "A função \"mova e obtenha néctar\" vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou. \\r\n\\r\nUse\na função para coletar todo o néctar."
+      2-3 Bee Functions Assessment 1: "**Avaliação:** Use a função dada para coletar o néctar de cada flor."
+      2-3 Bee Functions Assessment 2: "**Avaliação:** Crie uma função para virar, avançar e produzir 3 unidades de mel, então retorne a abelha para o local onde ela começou e vire-a de volta."
       2-3 Bee Loops 1: |-
         Essas flores parecem deliciosas!\r
         \r
         Colete o néctar
         de cada uma das flores usando o menor número possível de blocos.
+      2-3 Bee Loops 13: "**Avaliação:** Colete todo o néctar usando o menor número possível de blocos."
       2-3 Bee Loops 3A: Use um laço "repita" para coletar todo o néctar.
       2-3 Bee Loops 3B: "Agora, use o bloco \"repita\" para coletar todo o\nnéctar e produzir todo o mel."
+      2-3 Bee Loops 4: |-
+        Que abelha trabalhadora!
+        
+        Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
       2-3 Bee Loops 4A: "Quantas vezes os laços ajudaram você neste desafio?  \\r\n\\r\nOs laços\nsão seus amigos! Use alguns deles para completar este desafio com o menor número\nde blocos possível."
+      2-3 Bee Loops 5: "O formato deste caminho é diferente dos demais.\n\nVocê consegue coletar todo o néctar usando o menor número possível de blocos?"
+      2-3 Bee Loops 7: "Que lindo campo florido!  \n\nAjude a abelha a visitar cada flor. \n\nVocê consegue achar uma maneira de fazer isso com menos de 7 blocos?"
       2-3 Bee Loops 8: "Essas flores roxas têm uma quantidade diferente de\nnéctar a cada vez que você executa o desafio. \\r\n\\r\nUse o laço \"enquanto houver néctar\" para\ncoletar todo o néctar. \\r\n\\r\nEsse laço será executado enquanto a condição\nfor verdadeira, neste caso, enquanto \"néctar > 0\"."
+      2-3 Bee Loops Assessment 1: "Avaliação: Use um laço `enquanto` para coletar todo o néctar dessas flores."
+      2-3 Maze 1: "Você pode me ajudar a pegar o porco malvado? \n\nJunte alguns blocos `mover para frente` abaixo do bloco `quando executar` e clique em \"Executar\". "
+      2-3 Maze 12 - One Move Block: |-
+        Pegue o porco! Mas, desta vez, você só pode usar um bloco `mover para frente`. 
+        
+        Ah, olhe com cuidado - você está vendo mais algum bloco que poderia te ajudar?
+      2-3 Maze 13: Leve-me até o porco! Você só pode usar um bloco `mover para frente` desta vez
       2-3 Maze 15: "Neste desafio, dois laços \"repita\" ajudarão você\na pegar o porco com o menor número possível de blocos!"
       2-3 Maze Loops 18: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
+      2-3 Maze Loops 19: "Vamos subir o nível! \n\nUse laços para me levar até o girassol com o menor número de laços possível."
+      2-3 Maze Loops Assessment 1: "**Avaliação:** leve-me até o girassol usando apenas 5 blocos! "
+      4-5 Artist 1: "Ajude-me a terminar de desenhar minha caixa. (Cada linha tem 300 pixels de comprimento)\n\n"
       4-5 Artist 10: "Pressione \"Executar\" para testar o código. Em seguida, repita o código\no número suficiente de vezes para completar o desenho. As cores serão diferentes toda vez."
+      4-5 Artist 11: "Complete as retas verdes. \n\nAs retas têm 300 pixels de comprimento e são separadas por 15 pixels."
       4-5 Artist 2: "Repita esse código usando o bloco \"repita\" para completar\no quadrado."
+      4-5 Artist 3.5: "Tente descobrir o que acontece se você executar esse código (ou pressione \"Executar\" para testar o código). \n\nEm seguida, repita o código o número suficiente de vezes para completar o desenho!"
+      4-5 Artist 3: "Esse canteiro de flores retangular tem um perímetro de 600. \nO lado comprido tem 200 de comprimento. \n\nDesenhe o retângulo usando o menor número possível de blocos."
+      4-5 Artist 4: "Quantos graus há em um círculo? \n\nRepita os blocos para criar um círculo de cores."
       4-5 Artist 5: "O que podemos usar para substituir \"???\" para garantir que\no zumbi complete este desenho usando o laço dado?"
       4-5 Artist 6: "Esse triângulo equilátero tem ângulos de 60, 60\ne 60 graus. Cada lado tem 200 pixels. Complete o desenho."
+      4-5 Artist 9: "Desenhe a metade da direita desta imagem de forma que o desenho seja simétrico. \nOs triângulos são equiláteros e têm lados de 50 pixels de comprimento."
+      4-5 Artist Assessment 1: "**Avaliação**: Use um laço para desenhar o triângulo equilátero. Cada lado tem 300 pixels."
       4-5 Artist Free Draw 1: "Desenho livre! Desenhe o que você estiver inspirado\na criar."
       4-5 Artist Patterns 1: |-
         Desenhe esse quadrado usando um laço.\r
         \r
         Cada
         lado tem 20 pixels de comprimento.
+      4-5 Artist Patterns 10: "O código desenha duas fileiras de hexágonos - repita todo o código 4 vezes para desenhar a colmeia inteira. \n\nVocê vai precisar recuar 120 pixels no laço mais externo para garantir que o artista não desenhe fora da tela."
+      4-5 Artist Patterns 11: Quantas vezes você precisa repetir isso para desenhar um semicírculo?
       4-5 Artist Patterns 12: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés da direita, o que acontece? \\r\n\\r\nVocê pode repetir tudo\nisso para desenhar essa onda?"
       4-5 Artist Patterns 13: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \\r\n\\r\nSe repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
+      4-5 Artist Patterns 2: "Se você colocar seu laço do quadrado dentro de outro laço, o chamamos de laço aninhado. \n\nO que você precisa adicionar como um laço externo para garantir que todos os 15 quadrados fiquem próximos um dos outros?"
       4-5 Artist Patterns 3: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
+      4-5 Artist Patterns 4: "Este diamante tem lados de 50 pixels e ângulos de 120 e 60 graus.\n\n Use um laço para desenhá-lo."
+      4-5 Artist Patterns 5: "Repita este código para fazer uma fileira de 6 diamantes. \n\nPerceba que alteramos nosso código do diamante para repetir 3 vezes ao invés\nde 2 - por que você acha que fizemos isso?"
+      4-5 Artist Patterns 6: "Quantas vezes você precisa repetir este bloco para desenhar a grade completa de diamantes?\n\n"
+      4-5 Artist Patterns 7: "Vamos modificar o código do último desafio para fazer esse padrão mais complexo. Perceba como os diamantes se sobrepõem agora. Tente alterar o primeiro \"pule para trás\" de 100 para 50 (metade da distância) - agora, quão longe o artista deve ir no segundo \"pule para trás\"?\n\n"
       4-5 Artist Patterns 8: "Use um laço para desenhar esse hexágono com\nlados de 40 pixels e ângulos de 60 graus."
+      4-5 Artist Patterns 9.5: "Vamos repetir este código para desenhar duas linhas de hexágonos. \n\nPerceba que nossa segunda linha está deslocada para a direita."
       4-5 Artist Patterns 9: "Agora, repita o código 3 vezes e desenhe a\na fileira inteira. \\r\n\\r\nCada hexágono tem 80 pixels de largura da extrema esquerda\nà extrema direita."
       4-5 Artist Patterns Free Play: "Atividade livre - experimente criar\nseu próprio padrão!"
+      4-5 Bee Conditionals 1: "Esta nuvem está tapando minha visão! \n\nVeja se há uma flor atrás da nuvem, e só colete néctar se houver uma flor. Cuidado, isso pode mudar!"
       4-5 Bee Conditionals 2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       4-5 Bee Conditionals 5: |-
         Deve haver uma flor ou uma colmeia
@@ -158,9 +219,12 @@ pt-BR:
       4-5 Bee Debugging 1: "Esses blocos estão me incomodando. \\r\n\\r\nVocê\npode consertá-los?"
       4-5 Bee Debugging 6: "A flor roxa tem uma quantidade diferente\nde néctar a cada vez que você executa o desafio. \\r\n\\r\nCorrija os blocos para coletar todo\no néctar da flor em todas as vezes."
       4-5 Bee Debugging Assessment 1: "**Avaliação:** conserte o código."
+      4-5 Bee Nested Loops 2: "Colete todo o néctar de cada flor.\nUse um loop aninhado. "
       4-5 Bee Nested Loops 4: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       4-5 Bee Nested Loops Assessment 1: "**Avaliação:** colete todo o\nnéctar e produza todo o mel usando laços."
+      4-5 Maze 7: "Leve o zumbi até o girassol sem demora! \n\nVocê consegue resolver o desafio com menos de 11 blocos?"
       4-5 Maze 9: "Agora temos um novo bloco chamado \"repita até\". \\r\nIsso\nnos permitirá repetir comandos até o zumbi chegar no girassol. \\r\n\\r\nUse\no novo bloco \"repita até\" para resolver este desafio com o menor número possível de comandos."
+      4-5 Maze Assessment 1: "**Avaliação:** chegue até o girassol usando o menor número possível de blocos."
       4-5 Maze Conditionals 1: "Use o bloco \"repita até\" para levar o\nzumbi até o girassol."
       4-5 Maze Conditionals 10: "Você pode adicionar apenas 3 blocos para ajudar\no zumbi a resolver um labirinto mais complexo? \\r\n\\r\nSe fizer isso certo, ele poderá andar\nem qualquer caminho com curvas, não importa o tamanho!"
       4-5 Maze Conditionals 2: "Use o bloco \"repita até\" para levar o\nzumbi até o girassol."
@@ -181,7 +245,10 @@ pt-BR:
         Faça o caminho com seu dedo para ver se consegue descobrir a solução
         na sua primeira tentativa.
       4-5 Maze Conditionals Assessment 1: "**Avaliação:** use um bloco\n\"repita até\" e um bloco \"se/senão\" para me levar até o girassol com o menor número de blocos\npossível."
+      4-5 Nested Loops 1: "Complete o código para desenhar esses triângulos. O primeiro já está feito pra você. Dica: 3 triângulos em uma rotação de 360 graus.\n\n"
+      4-5 Nested Loops 11: "Você pode desenhar esses 10 quadrados desta calçada usando um laço aninhado? \n\nCada quadrado tem 30 pixels."
       4-5 Nested Loops 12: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
+      4-5 Nested Loops 2: "Agora, aninhe esse laço dentro de outro laço para desenhar 10 triângulos. \nIsso se chama laço \"aninhado\".  "
       4-5 Nested Loops 3: |-
         Crie um sol aninhando o código inicial em
         outro laço.\r
@@ -199,12 +266,14 @@ pt-BR:
       4-5 While Loops 3: "Use o menor número possível de blocos para completar\neste desafio!  \\r\n\\r\nMova-me para o monte e remova toda a terra, então mova-me para\no buraco e preencha-o completamente."
       4-5 While Loops 4: "Uau, que demais! \\r\n\\r\nEu não sei de quantas\npás cheias de terra esse buraco precisa.  \\r\nVocê pode escrever um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
       Artist Autorun Test: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
+      Bergeron Robot Maze1: "Você pode me ajudar a pegar o porco malvado? \n\nJunte alguns blocos `mover para frente` abaixo do bloco `quando executar` e clique em \"Executar\". "
       Big Game Animation 1: "Agora que você aprendeu a escrever funções lineares\nsimples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.\nClique em \"Executar\" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que\nvocê quiser e depois clique em Concluir para seguir em frente."
       Big Game Booleans 1: "Da última vez que você trabalhou em seu jogo fizemos\nnossos alvo e inimigo voarem pela tela, mas eles nunca\nvoltaram. Clique em \"Executar\" para ver como seu jogo está funcionando agora e depois clique\nem concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem\nsaído."
       Big Game Booleans 5: "Nesse ponto do seu jogo, seu inimigo deve percorrer\na tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para\na direita e eles devem retornar para o lado oposto, repetidamente. Veja\nse seu jogo está funcionando como você gostaria e então clique em\nConcluir para seguir em frente."
       Big Game Collision 1: "Até agora você programou um jogo\ncom um alvo e um inimigo que se movem, sendo que ambos retornam à tela quando\nsaem, e um jogador que responde à entrada do teclado. Clique em Executar para\nver como seu jogo está funcionando e então vamos para o que\nestá faltando - a detecção de colisão!"
       Big Game Vars 1: "Vamos começar o seu Grande Jogo! Aqui você vai\nver um monte de trechos de código para reservar espaço que você eventualmente vai substituir\npelo seu próprio código, mas por enquanto vamos nos preocupar somente em definir as variáveis.\nClique em \"Executar\" para ver como é o jogo com os valores-padrão."
       Big Game Vars 4: "Incrível! Agora você pode atualizar as variáveis para\no jogador, o alvo e o inimigo. Fique à vontade para brincar com todas as variáveis\ne assim deixar seu jogo do jeito que você quer. Clique em \"Concluir\"\nquando você terminar."
+      CSD U3 - images - Embed Project: Exemplo do Projeto Final
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
       CSD U5 Waze Data Video_2018: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
       Calc Circles of Eval .1: "Você vai escrever um tipo de código chamado\nBloco de cálculo, porque cada bloco de código retorna um único valor.\nAltere o ??? nesse código para que o bloco retorne 5."
@@ -338,6 +407,8 @@ pt-BR:
       MC_HOC_2017_Ryan_05: "Às vezes você precisa derrubar o que estiver atrapalhando seu jogador. \\r\nUse o bloco 'destruir' para eliminar todos os cactos entre o Agent e a placa de pressão."
       MC_HOC_Kiki_02: Alguém precisa estar na placa de pressão antes que a porta lateral abra. Ajude o Agent a chegar até a placa para que o jogador possa sair da casa.
       MSM Defining Vars 1: "Escreva um programa que produz um triângulo\nverde sólido de 50 pixels."
+      Mike Test Bee Conditionals 1: "Esta nuvem está tapando minha visão! \n\nVeja se há uma flor atrás da nuvem, e só colete néctar se houver uma flor. Cuidado, isso pode mudar!"
+      Mike Test Bee Conditionals 2: "**Avaliação:** Colete todo o néctar. \nTenha cuidado para não coletar néctar das flores roxas que não o tiverem."
       NEW Course 4 Artist Functions 10.1: "Use as funções dos desafios\nanteriores para desenhar esse padrão."
       NEW Course 4 Artist Functions 12: "Use a função \"desenhe uma fileira de quadrados\"\ndo último desafio para desenhar esse padrão."
       NEW Course 4 Artist Functions 3: "Temos aqui um novo tipo de bloco.\nEle é chamado de \"função\". Clique em \"editar\" e então preencha-o com o código\npara desenhar um quadrado com lados de 100 pixels. \\r\n\\r\nQuando terminar de editar\na função, clique em \"Fechar\" para retornar ao seu programa."
@@ -350,8 +421,14 @@ pt-BR:
       New Minecraft Hero Project: "**Jogo Livre:** Agora é com você! Use o código do Agent para ajudá-lo a explorar este mundo."
       Overworld Move to Sheep: Adicione um segundo comando "andar à frente" para chegar à ovelha.
       Overworld Move to Sheep_2018: Adicione um segundo comando "andar à frente" para chegar à ovelha.
+      PS fr prediction q1: 'O que *você* acha que vai acontecer? '
       Play Lab Rocket 3: "Excelente! Agora, você consegue atualizar essa função para\nque nosso foguete se mova mais rapidamente? Lembre-se de atualizar a instrução de finalidade,\nos exemplos e a definição da função para lançar um foguete a 40 metros por segundo."
       Testing Quantum Farmer: "Uau, que demais! \\r\n\\r\nEu não sei de quantas\npás cheias de terra esse buraco precisa.  \\r\nVocê pode escrever um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
+      Trent Test Level: 'Mais questões!  '
+      U3 Variables misconceptions 3: Qual a saída do Programa 3?
+      U3 Variables misconceptions 4: Qual a saída do Programa 4?
+      U4L02 - Objects - Template1: "# Modelo"
+      U4L02 - Objects - Template1_2018: "# Modelo"
       course1_artist_loops_challenge3: |-
         * * Piu! * *
         * "Pode me ajudar fazer duas casas de pássaro?" *
@@ -520,9 +597,7 @@ pt-BR:
       courseA_collector_loops2: |-
         Pegue todas as três pilhas! Mova Laurel para cada peça do tesouro, e então use esse block: 
         <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |-
-        Pegue todas as três pilhas! Mova Laurel para cada peça do tesouro, e então use esse block: 
-        <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "Pegue todas as três pilhas! Mova Laurel para cada peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops_challenge1: '"Você pode me ajudar encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
       courseA_collector_loops_challenge1_2018: '"Você pode me ajudar encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
       courseA_collector_preLoops1: "Esta é Laurel, a Aventureira!\n\nPressione \"Run\" para vê-la andar até o tesouro e pegá-lo"
@@ -788,6 +863,10 @@ pt-BR:
       courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8_2018: Ajude o zumbi a chegar até o girassol.
+      courseD_scrat_ramp5: Evite o gelo com rachadura!
+      courseD_scrat_ramp5_2018: Evite o gelo com rachadura!
+      courseE_bee_functions2: "As funções são blocos de código que realizam uma tarefa. \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
+      courseE_bee_functions2_2018: "As funções são blocos de código que realizam uma tarefa. \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_bee_functions3_2018: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       courseE_farmer_concept4: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
@@ -873,7 +952,10 @@ pt-BR:
       grade2_collector_9: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_A: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018: Ajude Laurel a coletar todo o tesouro.
+      grade2_maze_intro10: Resolva este desafio.
+      grade2_maze_intro9: Resolva este desafio.
       grade2_puppy_loops4: "Neste desafio, dois laços \"repita\" ajudarão você\na pegar o porco com o menor número possível de blocos!"
+      grade3_ConditionalsElse_1: "Esta nuvem está tapando minha visão! \n\nVeja se há uma flor atrás da nuvem, e só colete néctar se houver uma flor. Cuidado, isso pode mudar!"
       grade3_ConditionalsElse_2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade3_ConditionalsElse_5: |-
         Deve haver uma flor ou uma colmeia
@@ -899,9 +981,17 @@ pt-BR:
         \r
         Use
         o que você aprendeu para coletar todo o néctar e, então, produza o mel.
+      grade3_Conditionals_11 BAD: "Avaliação: Use um laço `enquanto` para coletar todo o néctar dessas flores."
+      grade3_Conditionals_11: "Vamos unir todas as informações!\n\nUse o que você aprendeu para me ajudar a coletar néctar apenas das flores que têm néctar para oferecer, usando o menor número possível de blocos. \n\nNão se esqueça de produzir o mel para terminar."
       grade3_Conditionals_12: "Este padrão de degrau deve ser familiar.  \\r\n\\r\nVocê\nconsegue coletar néctar apenas das flores que têm néctar para oferecer, usando o menor número de\nblocos possível?"
+      grade3_Conditionals_13: "**Avaliação:** Colete todo o néctar. \nTenha cuidado para não coletar néctar das flores roxas que não o tiverem."
       grade3_Conditionals_2: "Olhe só todo esse néctar!\\r\n\\r\nAjude-me\na coletar todo o néctar e produzir mel usando o menor número possível de blocos.  "
       grade3_Conditionals_8: "O que será que tem por aí!\\r\n\\r\nAjude-me\na voar pelo jardim e coletar o néctar apenas das flores que têm\nnéctar para oferecer. "
+      grade3_Debugging_1: |-
+        Esses blocos estão me incomodando!
+        
+        Corrija o(s) erro(s) para coletar todo o néctar.
+      grade3_Debugging_5: "Essa flor parece deliciosa! \n\nCorrija o(s) erro(s) para coletar todo o néctar. Agora você pode usar os botões \"Executar\" e \"Passo\"."
       grade3_Debugging_6: |-
         Que doce desafio!\r
         \r
@@ -913,6 +1003,11 @@ pt-BR:
         Você
         terá que corrigir algumas coisas neste programa para coletar todo o
         néctar e produzir todo o mel.
+      grade3_Loops_10: |-
+        Que abelha trabalhadora!
+        
+        Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
+      grade3_Loops_11: "O formato deste caminho é diferente dos demais.\n\nVocê consegue coletar todo o néctar usando o menor número possível de blocos?"
       grade3_Loops_3: Use um laço "repita" para coletar todo o néctar.
       grade3_Loops_4: "Agora, use o bloco \"repita\" para coletar todo o\nnéctar e produzir todo o mel."
       grade3_Loops_6: "Quantas vezes os laços ajudaram você neste desafio?  \\r\n\\r\nOs laços\nsão seus amigos! Use alguns deles para completar este desafio com o menor número\nde blocos possível."
@@ -927,12 +1022,16 @@ pt-BR:
         Colete o néctar
         de cada uma das flores usando o menor número possível de blocos.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade3_maze_Loop1: "**Avaliação:** leve-me até o girassol usando apenas 5 blocos! "
       grade3_maze_loops2: "Leve-me até o girassol usando o menor número de blocos\npossível! \\r\n\\r\nUse um laço \"repita\" dentro de outro para diminuir\na quantidade de códigos que você precisa."
+      grade3_maze_nestedLoops3: Leve-me até o porco! Você só pode usar um bloco `mover para frente` desta vez
       grade3_maze_nestedLoops4: "Neste desafio, dois laços \"repita\" ajudarão você\na pegar o porco com o menor número possível de blocos!"
       grade4_arist_nested_loop_circles1: "**Avaliação**: use um laço aninhado para\ncompletar o desenho."
       grade4_arist_nested_loop_flags1: Repita o código dado para criar um moinho de vento.
       grade4_arist_nested_loop_polygons1: "Repita esse desenho 10 vezes. \\r\n\\r\nQuanto\nvocê precisa virar a cada repetição?"
       grade4_arist_nested_loop_polygons2: "Repita essa forma 6 vezes. \\r\n\\r\nQuanto\nvocê precisa virar a cada repetição? "
+      grade4_arist_nested_loop_squares1: "Você pode desenhar esses 10 quadrados desta calçada usando um laço aninhado? \n\nCada quadrado tem 30 pixels."
+      grade4_arist_nested_loop_triangles2: "Agora, aninhe esse laço dentro de outro laço para desenhar 10 triângulos. \nIsso se chama laço \"aninhado\".  "
       grade4_arist_nested_loop_triangles3: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
       grade4_arist_nested_loop_triangles4: Desenhe o dente na boca do crocodilo!
       grade4_arist_nested_loop_triangles5: |-
@@ -946,6 +1045,8 @@ pt-BR:
       grade4_artist_nested_loop_circles1: "**Avaliação**: use um laço aninhado para\ncompletar o desenho."
       grade4_artist_nested_loop_flags1: Repita o código dado para criar um moinho de vento.
       grade4_artist_nested_loop_polygons1: "Repita esse desenho 10 vezes. \\r\n\\r\nQuanto\nvocê precisa virar a cada repetição?"
+      grade4_artist_nested_loop_squares1: "Você pode desenhar esses 10 quadrados desta calçada usando um laço aninhado? \n\nCada quadrado tem 30 pixels."
+      grade4_artist_nested_loop_triangles1: "Complete o código para desenhar esses triângulos. O primeiro já está feito pra você. Dica: 3 triângulos em uma rotação de 360 graus.\n\n"
       grade4_artist_nested_loop_triangles5: |-
         Crie um sol aninhando o código inicial em
         outro laço.\r
@@ -954,6 +1055,9 @@ pt-BR:
         dar um pulo para a frente do tamanho do triângulo antes de virar.
       grade4_artist_nested_loop_triangles6: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_parameters_triangles2: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
+      grade4_bee_conditionals_nested_loops: "**Avaliação:** Colete todo o néctar. \nTenha cuidado para não coletar néctar das flores roxas que não o tiverem."
+      grade4_bee_conditionals_new1: "**Avaliação:** Colete todo o néctar. \nTenha cuidado para não coletar néctar das flores roxas que não o tiverem."
+      grade4_bee_conditionals_quantum1: "Esta nuvem está tapando minha visão! \n\nVeja se há uma flor atrás da nuvem, e só colete néctar se houver uma flor. Cuidado, isso pode mudar!"
       grade4_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
       grade4_bee_conditionals_quantum5: |-
         Deve haver uma flor ou uma colmeia
@@ -962,6 +1066,7 @@ pt-BR:
         Use o bloco "se/senão" para coletar néctar
         se houver uma flor.\r
         Caso contrário, produza mel (porque há uma colmeia).
+      grade4_bee_functions2: "As funções são blocos de código que realizam uma tarefa. \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       grade4_bee_functions3: "As funções são blocos de código que realizam\numa tarefa. \\r\n\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
       grade4_bee_nestedLoops4: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       grade4_frozen_freeplay: "Você se tornou oficialmente um artista mestre!\nCrie um país das maravilhas de gelo."
@@ -979,6 +1084,10 @@ pt-BR:
       grade4_review_artist2: "Esta casa precisa de um telhado! Desenhe um triângulo. \\r\n\\r\nDica:\ntodos os três lados tem o mesmo tamanho.\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3: "O bloco \"pule\" move o artista sem desenhar.\nDesenhe a linha tracejada usando os blocos \"pule para a frente\" e \"avance\".\nCada linha tem 50 pixels de comprimento."
       grade4_review_bee1: "Agora, use o bloco \"repita\" para coletar todo o\nnéctar e produzir todo o mel."
+      grade4_review_bee3: |-
+        Que abelha trabalhadora!
+        
+        Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
       grade5_artist_for_loops1: "Use um bloco \"repita\" para desenhar este triângulo\nque tem 50 pixels de largura."
       grade5_artist_for_loops10: "Você consegue descobrir como\nusar todas as coisas que você aprendeu para criar esta imagem?\\r\n\\r\nPrecisa de uma\ndica? Clique aqui."
       grade5_artist_for_loops5: |-
@@ -994,8 +1103,14 @@ pt-BR:
       grade5_playlab_variables13: "Use o bloco \"quando o personagem tocar\"\npara enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem."
       grade5_playlab_variables2: "A corrida do último desafio não foi\nmuito justa! Altere a variável \"velocidade_cão\" para garantir que você possa coletar mais\nbandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!"
       grade5_playlab_variables9: "Aqui temos uma função chamada \"patrulhe\".\n\\r\n\\r\nEdite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
+      level 'grade3_Loops_10: |-
+        Que abelha trabalhadora!
+        
+        Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
+      level 'grade3_Loops_11: "O formato deste caminho é diferente dos demais.\n\nVocê consegue coletar todo o néctar usando o menor número possível de blocos?"
       level 'grade3_Loops_3: Use um laço "repita" para coletar todo o néctar.
       level 'grade3_Loops_4: "Agora, use o bloco \"repita\" para coletar todo o\nnéctar e produzir todo o mel."
+      level 'grade3_Loops_5: "Que lindo campo florido!  \n\nAjude a abelha a visitar cada flor. \n\nVocê consegue achar uma maneira de fazer isso com menos de 7 blocos?"
       level 'grade3_Loops_6: "Quantas vezes os laços ajudaram você neste desafio?  \\r\n\\r\nOs laços\nsão seus amigos! Use alguns deles para completar este desafio com o menor número\nde blocos possível."
       level 'grade3_Loops_7: |-
         Essas flores parecem deliciosas!\r
@@ -1004,3 +1119,4 @@ pt-BR:
         de cada uma das flores usando o menor número possível de blocos.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado com lados de 200 pixels.
+      test_sarah: oi
