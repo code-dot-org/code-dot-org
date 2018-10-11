@@ -2,10 +2,11 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
+import {TestResults} from '../constants';
 import {getStore} from "../redux";
 import {commands as audioCommands} from '../lib/util/audioApi';
 
-export default function init(p5, Dance) {
+export default function init(p5, Dance, onPuzzleComplete) {
   const exports = {};
 
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
@@ -30,9 +31,18 @@ export default function init(p5, Dance) {
 
   window.p5.disableFriendlyErrors = true;
 
+  exports.pass = function () {
+    onPuzzleComplete(TestResults.ALL_PASS);
+  };
+
+  exports.fail = function (message) {
+    onPuzzleComplete(TestResults.APP_SPECIFIC_FAIL, message);
+  };
+
 var World = {
   height: 400,
   cuesThisFrame: [],
+  validationCallback: () => {},
 };
 
 function randomNumber(min, max) {
@@ -64,6 +74,7 @@ var MOVE_NAMES = [
 
 var ANIMATIONS = {};
 var FRAMES = 24;
+var METADATA = {}
 
 // Songs
 var songs = {
@@ -99,6 +110,7 @@ var songs = {
 var song_meta = songs.hammer;
 //Tracks when a song started to play
 let songStartTime = 0;
+let metadataLoaded = false;
 
 exports.addCues = function (timestamps) {
   timestamps.forEach(timestamp => {
@@ -119,9 +131,17 @@ exports.reset = function () {
   World.bg_effect = bg_effects.none;
 };
 
+exports.metadataLoaded = function () {
+  return metadataLoaded;
+};
+
 exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
+
+  // Retrieves JSON metadata for songs
+  // TODO: only load song data when necessary and don't hardcode the dev song
+  loadSongMetadata(() => {metadataLoaded = true});
 
   // Load spritesheet JSON files
   SPRITE_NAMES.forEach(this_sprite => {
@@ -461,8 +481,12 @@ exports.getEnergy = function getEnergy(range) {
   }
 }
 
+exports.getCurrentTime = function getCurrentTime() {
+  return songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
+}
+
 exports.getTime = function getTime(unit) {
-  let currentTime = (new Date() - songStartTime) / 1000;
+  let currentTime = this.getCurrentTime();
   if (unit == "measures") {
     // Subtract any delay before the first measure and start counting measures at 1
     let songData = songs[getStore().getState().selectedSong];
@@ -616,6 +640,28 @@ function spriteExists(sprite) {
   return p5.allSprites.indexOf(sprite) > -1;
 }
 
+function loadSongMetadata(callback) {
+  let songDataPath = '/api/v1/sound-library/hoc_song_meta';
+  let ids = ['macklemore90', 'hammer', 'peas'];
+  $.when(
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[0]}.json`, (data) => {
+      METADATA[ids[0]] = data;
+      console.log(JSON.stringify(data));
+    }),
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[1]}.json`, (data) => {
+      METADATA[ids[1]] = data;
+      console.log(JSON.stringify(data));
+    }),
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[2]}.json`, (data) => {
+      METADATA[ids[2]] = data;
+      console.log(JSON.stringify(data));
+    })
+  ).then( () => {
+    console.log("METADATA LOADED");
+    callback();
+  });
+}
+
 const events = exports.currentFrameEvents = {
   'p5.keyWentDown': {},
   'Dance.fft.isPeak': {},
@@ -646,6 +692,10 @@ function updateEvents() {
     events.any = true;
     events['cue'][timestamp] = true;
   }
+}
+
+exports.registerValidation = function (callback) {
+  World.validationCallback = callback;
 }
 
 exports.draw = function draw() {
@@ -681,13 +731,14 @@ exports.draw = function draw() {
   }
 
   let songData = songs[getStore().getState().selectedSong];
-  let currentTime = songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
 
   p5.fill("black");
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((currentTime - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
+
+  World.validationCallback(World, exports, sprites);
+  p5.text("Measure: " + (Math.floor(((this.getCurrentTime() - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
 }
   return exports;
 }
