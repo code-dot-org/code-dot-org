@@ -28,6 +28,7 @@ class HttpCache
     hero
     sports
     basketball
+    dance
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/stage/*"]
@@ -157,6 +158,15 @@ class HttpCache
               /milestone/*
             ),
             headers: WHITELISTED_HEADERS + ['User-Agent'],
+            cookies: whitelisted_cookies
+          },
+          # The last puzzle in Dance Party (Hour of Code 2018) is project backed and should not be cached in CloudFront.
+          # Use CloudFront Behavior precedence rules to not cache this path, but all paths in CACHED_SCRIPTS_MAP
+          # that don't match this path will be cached.
+          {
+            # TODO(suresh): lookup the last puzzle from the database
+            path: "/s/dance/stage/12",
+            headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
           {
