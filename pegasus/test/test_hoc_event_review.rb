@@ -56,7 +56,6 @@ class HocEventReviewTest < Minitest::Test
     end
 
     # Helper to temporarily create a form row for testing retrieval methods.
-    DEFAULT_KIND = HocEventReview.send(:kind)
     def with_form(processed_data)
       # Necessary stubs for the insert_or_upsert_form helper
       stubs(:dashboard_user).returns(nil)
@@ -64,7 +63,7 @@ class HocEventReviewTest < Minitest::Test
       stubs(:request).returns(stub(ip: '1.2.3.4'))
 
       # Add fake row
-      row = insert_or_upsert_form DEFAULT_KIND, HocEventReviewTest.fake_data
+      row = insert_or_upsert_form HocEventReview.kind, HocEventReviewTest.fake_data
 
       # Add fake processed data to fake row
       form = Form.find(id: row[:id])

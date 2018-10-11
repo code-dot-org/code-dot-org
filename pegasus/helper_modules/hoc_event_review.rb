@@ -75,7 +75,7 @@ module HocEventReview
     query
   end
 
-  private_class_method def self.kind
+  def self.kind
     "HocSignup#{DCDO.get('hoc_year', 2017)}"
   end
 end

@@ -72,7 +72,6 @@ title: Review Hour of Code special events
           %button.btn.btn-danger.btn-sm.btn-reject Reject
           %div.success-message{style: "display: none; font-size: 11px;"} successfully submitted
           %div.failure-message{style: "display: none; font-size: 11px;"} failed to submit
-
 :javascript
   $(function() {
     $('.btn-approve').click(function() {
@@ -89,7 +88,7 @@ title: Review Hour of Code special events
 
   function submitReview(secret, review, row) {
     $.ajax({
-      url: "/v2/forms/HocSignup2018/" + secret + "/review",
+      url: "/v2/forms/#{HocEventReview.kind}/" + secret + "/review",
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify( { review: review } )
