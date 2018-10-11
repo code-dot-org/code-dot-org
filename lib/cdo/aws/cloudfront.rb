@@ -169,7 +169,7 @@ module AWS
           {
             Id: 'cdo-restricted',
             DomainName: "cdo-restricted.s3.amazonaws.com",
-            OriginPath: "/restricted",
+            OriginPath: '',
             S3OriginConfig: {
               OriginAccessIdentity: ''
             },
