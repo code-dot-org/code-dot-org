@@ -15,12 +15,12 @@ module Api::V1::Pd::Application
       unless @application.emails.exists?(email_type: 'principal_approval')
         @application.queue_email :principal_approval, deliver_now: true
       end
-      render json: {principal_approval: @application.principal_approval}
+      render json: {principal_approval: @application.principal_approval_state}
     end
 
     def principal_approval_not_required
       @application.update!(principal_approval_not_required: true)
-      render json: {principal_approval: @application.principal_approval}
+      render json: {principal_approval: @application.principal_approval_state}
     end
 
     protected
