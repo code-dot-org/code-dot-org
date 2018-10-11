@@ -3,52 +3,24 @@ Feature: Create Dropdown in Header
 
 #TOOD: Erin B., remove the pagemode cookie related steps when launched.
 
-Scenario: Create Dropdown does NOT show without cookie
-  Given I am a teacher
-  And check that I am on "http://studio.code.org/home"
-  And I wait until element ".create_menu" is not visible
-  Then I sign out
-  Given I am on "http://code.org/"
-  And I wait until element ".create_menu" is not visible
-
-Scenario: Create Dropdown shows when Signed Out, Desktop
+Background:
+  # The pagemode cookie must be set separately on Dashboard and
+  # Pegasus because they are different domains.
   Given I am on "http://code.org/"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
   And I wait until element ".create_menu" is visible
-  # Confirm the create dropdown also shows on Dashboard
   Given I am on "http://studio.code.org/projects/public"
   Given I set the pagemode cookie to "create_header_2018"
   Then I reload the page
   And I wait until element ".create_menu" is visible
 
-Scenario: Create Dropdown shows when Signed In
-  Given I am a teacher
-  And check that I am on "http://studio.code.org/home"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
-  # Confirm the create dropdown also shows on Pegasus
-  Given I am on "http://code.org/help"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
-
-#TOOD: Erin B., remove skip when #25296 is merged
-
-@skip
 Scenario: Create Dropdown does NOT show on level pages
   Given I create a student named "16 Year Old"
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
   And I wait until element ".create_menu" is not visible
 
-Scenario: Dropdown has correct options, age 13+
-  Given I create a student named "16 Year Old"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
+Scenario: Signed Out - Correct Create Links
   And I click selector ".create_menu"
   And I wait until element "#create_dropdown_playlab" is visible
   And I wait until element "#create_dropdown_artist" is visible
@@ -57,15 +29,48 @@ Scenario: Dropdown has correct options, age 13+
   And I wait until element "#create_dropdown_minecraft" is not visible
   And I wait until element "#view_all_projects" is visible
 
-Scenario: Dropdown has correct options, younger than 13
+Scenario: Teacher - Correct Create Links
+  Given I am a teacher
+  And I click selector ".create_menu"
+  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_artist" is visible
+  And I wait until element "#create_dropdown_applab" is visible
+  And I wait until element "#create_dropdown_gamelab" is visible
+  And I wait until element "#create_dropdown_minecraft" is not visible
+  And I wait until element "#view_all_projects" is visible
+
+Scenario: Student, Age 13+ - Correct Create Links
+  Given I create a student named "16 Year Old"
+  And I click selector ".create_menu"
+  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_artist" is visible
+  And I wait until element "#create_dropdown_applab" is visible
+  And I wait until element "#create_dropdown_gamelab" is visible
+  And I wait until element "#create_dropdown_minecraft" is not visible
+  And I wait until element "#view_all_projects" is visible
+
+Scenario: Young Student, Not in Section - Correct Create Links
   Given I create a young student named "10 Year Old"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
   And I wait until element "#create_dropdown_playlab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_minecraft" is visible
   And I wait until element "#create_dropdown_applab" is not visible
   And I wait until element "#create_dropdown_gamelab" is not visible
+  And I wait until element "#view_all_projects" is visible
+
+Scenario: Young Student, In Section - Correct Create Links
+  Given I create a teacher named "Ms_Frizzle"
+  Then I see the section set up box
+  And I create a new section
+  And I save the section url
+  Then I sign out
+  Given I create a young student named "Young Student - In Section"
+  And I navigate to the section url
+  And I click selector ".create_menu"
+  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_artist" is visible
+  And I wait until element "#create_dropdown_applab" is visible
+  And I wait until element "#create_dropdown_gamelab" is visible
+  And I wait until element "#create_dropdown_minecraft" is not visible
   And I wait until element "#view_all_projects" is visible
