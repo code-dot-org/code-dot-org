@@ -179,12 +179,13 @@ Dance.prototype.reset = function () {
   this.p5.noLoop();
 };
 
-Dance.prototype.onPuzzleComplete = function (testResult) {
+Dance.prototype.onPuzzleComplete = function (testResult, message) {
   // Stop everything on screen.
   this.reset();
 
   if (testResult) {
     this.testResults = testResult;
+    this.message = message;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -260,7 +261,6 @@ Dance.prototype.execute = function () {
     return;
   }
 
-  // TODO: re-run user code, start p5 looping.
   this.initInterpreter();
   this.p5.loop();
 
@@ -268,6 +268,9 @@ Dance.prototype.execute = function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
   this.nativeAPI.play();
+
+  const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
+  this.nativeAPI.registerValidation(validationCallback);
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -371,7 +374,7 @@ Dance.prototype.onP5Preload = function () {
   Sounds.getSingleton().register(options);
 
   const Dance = createDanceAPI(this.p5);
-  this.nativeAPI = initDance(this.p5, Dance);
+  this.nativeAPI = initDance(this.p5, Dance, this.onPuzzleComplete.bind(this));
   this.nativeAPI.preload();
 };
 
