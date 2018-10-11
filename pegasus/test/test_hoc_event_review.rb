@@ -79,6 +79,28 @@ class HocEventReviewTest < Minitest::Test
       end
     end
 
+    it 'can filter to state' do
+      with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
+        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+          with_form location_country_code_s: 'MX' do
+            actual = HocEventReview.events state: 'CA'
+            assert_equal 1, actual.size
+          end
+        end
+      end
+    end
+
+    it 'can filter to country' do
+      with_form location_country_code_s: 'US', location_state_code_s: 'CA' do
+        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+          with_form location_country_code_s: 'MX' do
+            actual = HocEventReview.events country: 'US'
+            assert_equal 2, actual.size
+          end
+        end
+      end
+    end
+
     # Helper to temporarily create a form row for testing retrieval methods.
     def with_form(review: nil, special_event_flag_b: nil, **processed_data)
       # Necessary stubs for the insert_or_upsert_form helper
