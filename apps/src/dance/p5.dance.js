@@ -64,6 +64,7 @@ var MOVE_NAMES = [
 
 var ANIMATIONS = {};
 var FRAMES = 24;
+var METADATA = {}
 
 // Songs
 var songs = {
@@ -99,6 +100,7 @@ var songs = {
 var song_meta = songs.hammer;
 //Tracks when a song started to play
 let songStartTime = 0;
+let metadataLoaded = false;
 
 exports.addCues = function (timestamps) {
   timestamps.forEach(timestamp => {
@@ -119,9 +121,17 @@ exports.reset = function () {
   World.bg_effect = bg_effects.none;
 };
 
+exports.metadataLoaded = function () {
+  return metadataLoaded;
+};
+
 exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
+
+  // Retrieves JSON metadata for songs
+  // TODO: only load song data when necessary and don't hardcode the dev song
+  loadSongMetadata(() => {metadataLoaded = true});
 
   // Load spritesheet JSON files
   SPRITE_NAMES.forEach(this_sprite => {
@@ -618,6 +628,28 @@ exports.randomColor = function randomColor() {
 
 function spriteExists(sprite) {
   return p5.allSprites.indexOf(sprite) > -1;
+}
+
+function loadSongMetadata(callback) {
+  let songDataPath = '/api/v1/sound-library/hoc_song_meta';
+  let ids = ['macklemore90', 'hammer', 'peas'];
+  $.when(
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[0]}.json`, (data) => {
+      METADATA[ids[0]] = data;
+      console.log(JSON.stringify(data));
+    }),
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[1]}.json`, (data) => {
+      METADATA[ids[1]] = data;
+      console.log(JSON.stringify(data));
+    }),
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[2]}.json`, (data) => {
+      METADATA[ids[2]] = data;
+      console.log(JSON.stringify(data));
+    })
+  ).then( () => {
+    console.log("METADATA LOADED");
+    callback();
+  });
 }
 
 const events = exports.currentFrameEvents = {
