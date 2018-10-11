@@ -971,26 +971,26 @@ module Pd::Application
       end
     end
 
-    test 'principal_approval' do
+    test 'principal_approval_state' do
       application = create :pd_teacher1920_application
-      assert_nil application.principal_approval
+      assert_nil application.principal_approval_state
 
       incomplete = "Incomplete - Principal email sent on Oct 8"
       Timecop.freeze Date.new(2018, 10, 8) do
         application.stubs(:deliver_email)
         application.queue_email :principal_approval, deliver_now: true
-        assert_equal incomplete, application.reload.principal_approval
+        assert_equal incomplete, application.reload.principal_approval_state
       end
 
       # even if it's not required, when an email was sent display incomplete
       application.update!(principal_approval_not_required: true)
-      assert_equal incomplete, application.reload.principal_approval
+      assert_equal incomplete, application.reload.principal_approval_state
 
       application.emails.last.destroy
-      assert_equal 'Not required', application.reload.principal_approval
+      assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval1920_application, teacher_application: application, approved: 'Yes'
-      assert_equal 'Complete - Yes', application.reload.principal_approval
+      assert_equal 'Complete - Yes', application.reload.principal_approval_state
     end
 
     private
