@@ -650,15 +650,12 @@ function loadSongMetadata(callback) {
   $.when(
     $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[0]}.json`, (data) => {
       METADATA[ids[0]] = data;
-      console.log(JSON.stringify(data));
     }),
     $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[1]}.json`, (data) => {
       METADATA[ids[1]] = data;
-      console.log(JSON.stringify(data));
     }),
     $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[2]}.json`, (data) => {
       METADATA[ids[2]] = data;
-      console.log(JSON.stringify(data));
     })
   ).then( () => {
     console.log("METADATA LOADED");
