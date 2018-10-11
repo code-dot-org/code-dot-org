@@ -13,9 +13,12 @@ Elementary School
 
 [/solid-block-header]
 
-Our Computer Science Fundamentals courses are designed to be flexible for your classroom. How you implement the course is up to you - teach computer science for your next science unit, add technology time to your schedule once a week, or go deeper with extension activities and projects!
+Our six Computer Science Fundamentals courses are designed to be flexible for your classroom. How you implement is up to you - teach CS Fundamentals for your next science unit, use it to support math concepts, add technology time to your schedule once a week, or go deeper with extension activities and projects!
 </p>
-New to teaching computer science? No worries! Most of our teachers have never taught computer science before. Try one of our courses yourself to learn ahead of your students. 
+
+<img src="/images/animated-examples/cutesprite.gif" style="float: left;">
+
+New to teaching computer science? No worries! Most of our teachers have never taught computer science before. Try one of our CS Fundamentals courses yourself to learn ahead of your students, or sign up for a [professional development workshop](/professional-development-workshops) near you!
 
 <br>
 
@@ -30,17 +33,13 @@ New to teaching computer science? No worries! Most of our teachers have never ta
 
 <div class="col-50" style="float: left; padding-right: 20px;">
 
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/professional-development-workshops'), cta_text: 'Find a workshop', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Support for teachers', ages: 'Professional Learning Opportunities', description: "<p>We offer high-quality, one-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on and fun intro to computer science, pedagogy, the teacher dashboard, and strategies for teaching 'unplugged' classroom activities.
+<%= view :course_wide_block, cta_link: CDO.code_org_url('/professional-development-workshops'), cta_text: 'Find a workshop', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Support for teachers', ages: 'Professional Learning Opportunities', description: "<p>We offer high-quality, one-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on and fun intro to teaching computer science.
 </p>
-Tens of thousands of teachers have participated and rate our workshops 4.8 on a 5 point scale. The majority say, 'It's the best professional development I've ever attended.'"%>
+Tens of thousands of teachers have participated and rate our workshops 4.8 out of 5. The majority say, 'It's the best professional development I've ever attended.'"%>
 
 </div>
 
 <div style="clear:both"></div>
-
-## It's easy to get started.
-
-The courses include daily lesson plans, student activities, and answer keys for teachers. You don't even need a user account to try it out. Once you get a feel for the courses, <a href="https://studio.code.org/users/sign_up", target=_"blank">sign up as a teacher</a> to see the lesson plans, join the teacher forums, and get access to all the resources you need. Next, quickly set up a classroom section from your roster or sync with tools like Clever or Google Classroom to view your students' progress and manage their accounts. Then celebrate your students' learning by printing certificates they can bring home when they finish the course.
 
 ## It's relevant.
 
@@ -53,9 +52,40 @@ Our curriculum was created with the 2017 Computer Science Teachers Association (
 * <a href="http://www.corestandards.org/Math/",  target=_"blank">Common Core Math</a>
 * <a href="http://www.nextgenscience.org/next-generation-science-standards" target=_"blank">Next Generation Science</a>
 
-## It's fun.
+## It's easy to get started.
 
-Your students will create their own games, art, and digital stories that they can share - all while developing problem-solving, collaboration, persistence, and computational thinking skills. Do your students love to get up and move around? Half of the lessons are "unplugged" activities that teach computational thinking and digital citizenship skills without computers.
+The courses include daily lesson plans, student activities, and answer keys for teachers. You don't even need a user account to try it out. Once you get a feel for the courses, <a href="https://studio.code.org/users/sign_up", target=_"blank">sign up as a teacher</a> to see the lesson plans, join the teacher forums, and get access to all the resources you need. Next, quickly set up a classroom section from your roster or sync with tools like Clever or Google Classroom to view your students' progress and manage their accounts. Then celebrate your students' learning by printing certificates they can bring home when they finish the course.
+
+
+## And, did we mention that it's fun!?
+
+Your students will create their own games, art, and digital stories that they can share - all while developing problem-solving, collaboration, persistence, and computational thinking skills. Do your students love to get up and move around? Half of the lessons are "unplugged" activities that teach computational thinking and digital citizenship skills without computers. See some awesome student creations below!
+
+[col-33]
+
+<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
+
+<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a game with multiple levels in which you play against different characters. Game on!</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 [solid-block-header]
 
@@ -135,7 +165,6 @@ CS Fundamentals Express combines the best of Courses A-F into a single condensed
 
 <br>
 <br>
-<br>
 
 # International CS Fundamentals: Courses 1-4 and Accelerated
 
@@ -150,34 +179,6 @@ We are working on translating Courses A-F and the Express Course to languages be
 If you don't have computers in your classroom, these unplugged lessons can either be used alone or with other computer science lessons on related concepts.
 
 <a href="https://code.org/curriculum/unplugged"><button>View unplugged lessons</button></a>
-
-# Examples of student creations
-
-[col-33]
-
-<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
-
-<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
-
-[/col-33]
-
-[col-33]
-
-<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
-
-<div style="margin-left: 15px; margin-top: 5px;">This student created a game with multiple levels in which you play against different characters. Game on!</div>
-
-[/col-33]
-
-[col-33]
-
-<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
-
-<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 [solid-block-header]
 
@@ -197,4 +198,3 @@ Recommended courses from 3rd parties
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
-
