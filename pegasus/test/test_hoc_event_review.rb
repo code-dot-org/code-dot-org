@@ -39,6 +39,18 @@ class HocEventReviewTest < Minitest::Test
       end
     end
 
+    it 'can filter to special events' do
+      with_form location_country_code_s: 'US', location_state_code_s: 'CA', special_event_flag_b: 1 do
+        with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
+          expected = [
+            {state_code: 'CA', count: 1},
+          ]
+          actual = HocEventReview.event_counts_by_state special_events_only: true
+          assert_equal expected, actual
+        end
+      end
+    end
+
     it 'finds event counts by country' do
       with_form location_country_code_s: 'US', location_state_code_s: 'OR' do
         with_form location_country_code_s: 'MX' do
@@ -68,14 +80,17 @@ class HocEventReviewTest < Minitest::Test
     end
 
     # Helper to temporarily create a form row for testing retrieval methods.
-    def with_form(review: nil, **processed_data)
+    def with_form(review: nil, special_event_flag_b: nil, **processed_data)
       # Necessary stubs for the insert_or_upsert_form helper
       stubs(:dashboard_user).returns(nil)
       Pegasus.stubs(:logger).returns(nil)
       stubs(:request).returns(stub(ip: '1.2.3.4'))
 
       # Add fake row
-      row = insert_or_upsert_form HocEventReview.kind, HocEventReviewTest.fake_data
+      row = insert_or_upsert_form(
+        HocEventReview.kind,
+        HocEventReviewTest.fake_data.merge(special_event_flag_b: special_event_flag_b)
+      )
 
       # Add fake processed data to fake row
       form = Form.find(id: row[:id])
