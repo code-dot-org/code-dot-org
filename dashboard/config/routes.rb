@@ -18,6 +18,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
   get "/home", to: "home#home"
+  get "/home/sign-cookies", to: "home#sign_cookies"
 
   get "/congrats", to: "congrats#index"
 
