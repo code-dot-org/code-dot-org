@@ -34,6 +34,10 @@ hi:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_randomColor:
         text: यादृच्छिक रंग
       Dancelab_setDanceSpeed:
@@ -45,6 +49,10 @@ hi:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"height"': ऊँचाई
@@ -126,6 +134,12 @@ hi:
             '"down"': नीचे तीर
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
+      RyanLab_moveForward:
+        text: आगे जाएं
+      RyanLab_turnLeft:
+        text: बाएँ मुड़ें
+      RyanLab_turnRight:
+        text: दाएँ मुड़ें
       craft_ifPath:
         options:
           DIR:

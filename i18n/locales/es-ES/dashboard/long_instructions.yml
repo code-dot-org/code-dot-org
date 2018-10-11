@@ -372,13 +372,6 @@ es:
         declaración if para verificar cuando se presiona la tecla de espacio.\r
         * Mueve el código que
         hace que los engranajes giren dentro del `if`.
-      CSD U3 Entertainment Sample 1 - unembed: |-
-        # Alienígena Saltador\r
-        \r
-        Presiona
-        "Ejecutar" para jugar el juego de la izquierda. Puedes hacer que el alienígena salte con el
-        barra espaciadora, y moverlo hacia la izquierda y hacia la derecha con las teclas de flecha. Tu puntuación
-        sera al recolectar estrellas, y si puntúas lo suficiente, el fondo cambiará.
       CSD U3 Entertainment Sample 1: |-
         # Alienígena Saltador\r
         \r

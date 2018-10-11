@@ -8,17 +8,11 @@ sq:
             '"seconds"': sekondat
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ sq:
             '"height"': gjatësia
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Tjetër
-            '"prev"': Paraardhëse
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ sq:
           LOCATION:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ sq:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': madhësia
@@ -224,6 +218,12 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
+      RyanLab_moveForward:
+        text: lëviz përpara
+      RyanLab_turnLeft:
+        text: kthehu majtas
+      RyanLab_turnRight:
+        text: kthehu djathtas
       craft_ifPath:
         options:
           DIR:

@@ -11,8 +11,6 @@ fr:
           GROUP:
             sprites: tout
           MOVE:
-            '"next"': Suivant
-            '"prev"': Précédent
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ fr:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Suivant
-            '"prev"': Précédent
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ fr:
           GROUP:
             sprites: tout
           MOVE:
-            '"next"': Suivant
-            '"prev"': Précédent
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ fr:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Suivant
-            '"prev"': Précédent
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ fr:
           LOCATION:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_randomColor:
         text: couleur aléatoire
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ fr:
           EFFECT:
             '"none"': Aucun
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"height"': hauteur
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': taille
@@ -283,6 +281,12 @@ fr:
             '"down"': flèche « vers le bas »
             '"left"': flèche « vers la gauche »
             '"right"': flèche « vers la droite »
+      RyanLab_moveForward:
+        text: avancer plus
+      RyanLab_turnLeft:
+        text: tourner à gauche
+      RyanLab_turnRight:
+        text: tourner à droite
       craft_ifPath:
         options:
           DIR:

@@ -119,6 +119,7 @@ ne:
     age: उमेर
     user_type: Are you a student or teacher?
     submit: साइन अप गर्नुहोस्
+    next: अर्को
     teacher: Are you a teacher?
     valid_username: Available!
     invalid_username: Username must be at least 5 characters
@@ -252,7 +253,6 @@ ne:
       signin: साइन इन
       signup: खाता खोल्नुहोस्
       already_registered: Already registered?
-      pair_programming: Pair Programming
       team: Team
       driver: Driver
       navigator: Navigator

@@ -20,8 +20,6 @@ zh-CN:
           GROUP:
             sprites: 所有
           MOVE:
-            '"next"': 下一项
-            '"prev"': 前一项
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -30,8 +28,6 @@ zh-CN:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': 下一项
-            '"prev"': 前一项
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -45,14 +41,11 @@ zh-CN:
             '"width"': 宽度
             '"height"': 高度
             '"rotation"': 旋转
-            '"tint"': 色调
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: 所有
           MOVE:
-            '"next"': 下一项
-            '"prev"': 前一项
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -61,8 +54,6 @@ zh-CN:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': 下一项
-            '"prev"': 前一项
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -205,6 +196,13 @@ zh-CN:
             '"height"': 高度
             '"rotation"': 旋转
             '"tint"': 色调
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
       Dancelab_setVisibleEach:
         text: 设置 {THIS} 可见度为 {VISIBILITY}
         options:
@@ -745,6 +743,12 @@ zh-CN:
         text: "{SPRITE} 的x轴坐标"
       Mikelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
+      RyanLab_moveForward:
+        text: 向前移动
+      RyanLab_turnLeft:
+        text: 向左转
+      RyanLab_turnRight:
+        text: 向右转
       Vector_createSpriteWith:
         text: |-
           创建精灵

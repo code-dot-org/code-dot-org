@@ -10,17 +10,11 @@ sv:
         options:
           GROUP:
             sprites: alla
-          MOVE:
-            '"next"': Nästa
-            '"prev"': Föregående
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Nästa
-            '"prev"': Föregående
           DIR:
             '1': "→"
             "-1": "←"
@@ -33,17 +27,11 @@ sv:
         options:
           GROUP:
             sprites: alla
-          MOVE:
-            '"next"': Nästa
-            '"prev"': Föregående
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Nästa
-            '"prev"': Föregående
           DIR:
             '1': "→"
             "-1": "←"
@@ -71,6 +59,7 @@ sv:
           LOCATION:
             "{x: 100, y: 200}": vänster
             "{x: 300, y: 200}": höger
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slumpad
       Dancelab_randomColor:
         text: slumpad färg
       Dancelab_setDanceSpeed:
@@ -82,6 +71,11 @@ sv:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"height"': höjd
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': storlek
@@ -252,6 +246,12 @@ sv:
             '"down"': pil ner
             '"left"': vänster pil
             '"right"': höger pil
+      RyanLab_moveForward:
+        text: gå framåt
+      RyanLab_turnLeft:
+        text: sväng vänster
+      RyanLab_turnRight:
+        text: sväng höger
       craft_ifPath:
         options:
           DIR:

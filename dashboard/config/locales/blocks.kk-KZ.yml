@@ -8,17 +8,11 @@ kk:
             '"seconds"': секунд
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ kk:
             '"height"': биіктік
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ kk:
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ kk:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': шама
@@ -224,6 +218,12 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      RyanLab_moveForward:
+        text: алдыға қозғалу
+      RyanLab_turnLeft:
+        text: солға бұрылу
+      RyanLab_turnRight:
+        text: оңға бұрылу
       craft_ifPath:
         options:
           DIR:

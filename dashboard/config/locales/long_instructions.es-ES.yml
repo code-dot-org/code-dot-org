@@ -561,11 +561,6 @@ es:
         Use `Flecha bajando` como entrada para la\ndeclaración if para verificar cuando
         se presiona la tecla de espacio.\r\n* Mueve el código que\nhace que los engranajes
         giren dentro del `if`."
-      CSD U3 Entertainment Sample 1 - unembed: "# Alienígena Saltador\r\n\r\nPresiona\n\"Ejecutar\"
-        para jugar el juego de la izquierda. Puedes hacer que el alienígena salte
-        con el\nbarra espaciadora, y moverlo hacia la izquierda y hacia la derecha
-        con las teclas de flecha. Tu puntuación\nsera al recolectar estrellas, y si
-        puntúas lo suficiente, el fondo cambiará."
       CSD U3 Entertainment Sample 1: "# Alienígena Saltador\r\n\r\nPresiona\n\"Ejecutar\"
         para jugar el juego de la izquierda. Puedes hacer que el alienígena salte
         con el\nbarra espaciadora, y moverlo hacia la izquierda y hacia la derecha

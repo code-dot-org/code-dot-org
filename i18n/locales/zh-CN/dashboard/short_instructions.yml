@@ -1495,6 +1495,7 @@ zh-CN:
       Valentine_playlab_01: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时, 她应该把心投向她的朋友们。 '
       Virtual Pet 1 Predict: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1 Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Virtual Pet 1 fix: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 1: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 1_simple: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
       Virtual Pet 2 - Validated (Ram): 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。

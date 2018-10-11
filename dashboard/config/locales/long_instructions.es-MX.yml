@@ -550,11 +550,6 @@ es-MX:
         Use `Flecha bajando` como entrada para la\ndeclaración if para verificar cuando
         se presiona la tecla de espacio.\r\n* Mueve el código que\nhace que los engranajes
         giren dentro del `if`."
-      CSD U3 Entertainment Sample 1 - unembed: "# Alienígena Saltador\r\n\r\nPresiona\n\"Ejecutar\"
-        para jugar el juego de la izquierda. Puedes hacer que el alienígena salte
-        con el\nbarra espaciadora, y moverlo hacia la izquierda y hacia la derecha
-        con las teclas de flecha. Tu puntuación\nsera al recolectar estrellas, y si
-        puntúas lo suficiente, el fondo cambiará."
       CSD U3 Entertainment Sample 1: "# Alienígena Saltador\r\n\r\nPresiona\n\"Ejecutar\"
         para jugar el juego de la izquierda. Puedes hacer que el alienígena salte
         con el\nbarra espaciadora, y moverlo hacia la izquierda y hacia la derecha
@@ -1212,6 +1207,12 @@ es-MX:
       Testing Quantum Farmer: "¡Wow, encontré un agujero realmente profundo! no sé
         cuántas paleadas de tierra necesita. ¿Puedes escribir un programa que llene
         hasta que el suelo esté parejo? Sugerencia: trata usando el bucle mientras."
+      Underground If Statements: Ahora las cosas se complican. Recoge tres bloques
+        de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar
+        roca sobre la lava que descubras.
+      Underground If Statements_2018: Ahora las cosas se complican. Recoge tres bloques
+        de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar
+        roca sobre la lava que descubras.
       conditionals_forvideo_harvester: Recoge todo el máiz y todas las lechugas, luego
         recoge la calabaza.
       course1_artist_loops_challenge2: "¡Vamos a jugar un juego!! Dibuja tantas X
@@ -1432,7 +1433,7 @@ es-MX:
       courseA_collector_loops2: "¡Consigue las tres pilas! Mueva Laurel a cada tesoro,
         luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
       courseA_collector_loops2_2018: "¡Consigue las tres pilas! Mueva Laurel a cada
-        tesoro, luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>\n"
+        tesoro, luego use este bloque:\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: |-
         ¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type="maze_moveEast"/></xml>
         bloque?

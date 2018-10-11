@@ -13,6 +13,14 @@ cs:
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: V kruhu je 360°, takže když se malíř otočí o 1° každou smyčku,
           bude ji potřebovat zopakovat 360x.
+      2-3 Maze 1_authored_hint:
+        2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu
+          bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      Bergeron Robot Maze1_authored_hint:
+        2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu
+          bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
@@ -307,9 +315,39 @@ cs:
           </next>
           </block>
           </xml>
+      courseB_maze_seq6_authored_hint:
+        courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq6_2018_authored_hint:
+        courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseB_maze_seq9_authored_hint:
+        courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu
           o 100 pixelů, nakreslím automaticky cestou čáru.
