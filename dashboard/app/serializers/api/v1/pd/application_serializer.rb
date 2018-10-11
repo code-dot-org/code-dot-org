@@ -11,6 +11,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :school_name,
     :district_name,
     :email,
+    :application_year,
     :application_type,
     :response_scores,
     :course,
@@ -100,7 +101,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def meets_scholarship_criteria
-    object&.meets_scholarship_criteria
+    object.try(:meets_scholarship_criteria)
   end
 
   def percent_string(count, total)
