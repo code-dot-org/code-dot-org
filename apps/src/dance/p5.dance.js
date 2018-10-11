@@ -109,6 +109,7 @@ exports.addCues = function (timestamps) {
 exports.reset = function () {
   Dance.song.stopAll();
 
+  songStartTime = 0;
   while (p5.allSprites.length > 0) {
     p5.allSprites[0].remove();
   }
@@ -680,7 +681,7 @@ exports.draw = function draw() {
   }
 
   let songData = songs[getStore().getState().selectedSong];
-  let currentTime = (new Date() - songStartTime) / 1000;
+  let currentTime = songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
 
   p5.fill("black");
   p5.textStyle(p5.BOLD);
