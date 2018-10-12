@@ -55,15 +55,17 @@
     });
 
     function update_share_buttons() {
-      var pos = $(id + ' .slides').triggerHandler("currentPosition");
-      if(statistics[pos] != null) {
-        var facebook_anchor = $('#stats-section .share-button-facebook').parents('a.window-popup');
-        var new_facebook_href = facebook_anchor.attr('href');
+      if ($('.share_buttons').length) {
+        var pos = $(id + ' .slides').triggerHandler("currentPosition");
+        if(statistics[pos] != null) {
+          var facebook_anchor = $('#stats-section .share-button-facebook').parents('a.window-popup');
+          var new_facebook_href = facebook_anchor.attr('href');
 
-        if(statistics[pos].share_url_s != null) {
-          new_facebook_href = new_facebook_href.replace(/u=[^&]*/i, 'u=' + encodeURIComponent(statistics[pos].share_url_s));
+          if(statistics[pos].share_url_s != null) {
+            new_facebook_href = new_facebook_href.replace(/u=[^&]*/i, 'u=' + encodeURIComponent(statistics[pos].share_url_s));
+          }
+          facebook_anchor.attr('href', new_facebook_href);
         }
-        facebook_anchor.attr('href', new_facebook_href);
       }
     }
   });
