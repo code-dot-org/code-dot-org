@@ -55,6 +55,8 @@
     });
 
     function update_share_buttons() {
+      // Share buttons are hidden for students younger than 13, so check that
+      // these buttons are in the DOM before trying to set the FB link.
       if ($('.share_buttons').length) {
         var pos = $(id + ' .slides').triggerHandler("currentPosition");
         if(statistics[pos] != null) {
