@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom';
 import {
   changeInterfaceMode,
   viewAnimationJson,
-  setMobileControlsConfig,
-  setSong
+  setMobileControlsConfig
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -72,6 +71,7 @@ import {
   mark,
   measure
 } from '@cdo/apps/util/performance';
+import * as danceRedux from "../dance/redux";
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -240,7 +240,7 @@ GameLab.prototype.init = function (config) {
   }
 
   if (this.level.defaultSong) {
-    getStore().dispatch(setSong(this.level.defaultSong));
+    getStore().dispatch(danceRedux.setSong(this.level.defaultSong));
   }
 
   config.usesAssets = true;
