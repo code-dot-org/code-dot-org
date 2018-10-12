@@ -48,6 +48,7 @@ module SignUpTracking
     event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
+      study_group: study_group(session),
       event: event_name,
       data_string: session[:sign_up_uid]
     )
@@ -58,6 +59,7 @@ module SignUpTracking
     result = user.errors.empty? ? 'success' : 'error'
     tracking_data = {
       study: STUDY_NAME,
+      study_group: study_group(session),
       event: "begin-sign-up-#{result}",
       data_string: session[:sign_up_uid],
       data_json: {
