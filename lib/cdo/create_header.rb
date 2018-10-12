@@ -6,45 +6,45 @@ class CreateHeader
     everyone_entries = [
       {
         id: "create_dropdown_playlab",
-        title: I18n.t("nav.create_button.playlab"),
+        title: "playlab",
         url: CDO.studio_url('projects/playlab/new'),
         image: "logo_playlab.png"
       },
       {
         id: "create_dropdown_artist",
-        title: I18n.t("nav.create_button.artist"),
+        title: "artist",
         url: CDO.studio_url('projects/artist/new'),
         image: "logo_artist.png"
       },
     ]
 
-    younger_than_13_entries = [
+    minecraft = [
       {
         id: "create_dropdown_minecraft",
-        title: I18n.t("nav.create_button.minecraft"),
+        title: "minecraft",
         url: CDO.studio_url('projects/minecraft_designer/new'),
         image: "logo_minecraft.png"
       },
     ]
 
-    older_than_13_entries = [
+    applab_gamelab = [
       {
         id: "create_dropdown_applab",
-        title: I18n.t("nav.create_button.applab"),
+        title: "applab",
         url: CDO.studio_url('projects/applab/new'),
         image: "logo_applab_square.png"
       },
       {
         id: "create_dropdown_gamelab",
-        title: I18n.t("nav.create_button.gamelab"),
+        title: "gamelab",
         url: CDO.studio_url('projects/gamelab/new'),
         image: "logo_gamelab_square.png"
       },
     ]
 
-    entries = options[:user_under_13] ?
-      everyone_entries + younger_than_13_entries :
-      everyone_entries + older_than_13_entries
+    entries = options[:limit_project_types] == "true" ?
+      everyone_entries + minecraft :
+      everyone_entries + applab_gamelab
 
     entries
   end

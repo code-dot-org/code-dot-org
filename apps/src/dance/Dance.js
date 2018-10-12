@@ -11,6 +11,40 @@ import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {createDanceAPI} from './DanceLabP5';
 import initDance from './p5.dance';
+import {reducers} from './redux';
+
+//TODO: Remove this during clean-up
+// Songs
+var songs_data = {
+  macklemore: {
+    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
+    bpm: 146,
+    delay: 0.2, // Seconds to delay before calculating measures
+    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
+    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
+  },
+  macklemore90: {
+    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
+    bpm: 146,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
+    chorus: [65.75] // Array of timestamps in seconds where choruses occur
+  },
+  hammer: {
+    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
+    bpm: 133,
+    delay: 2.32, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  },
+  peas: {
+    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
+    bpm: 128,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  }
+};
 
 /**
  * An instantiable GameLab class
@@ -145,12 +179,13 @@ Dance.prototype.reset = function () {
   this.p5.noLoop();
 };
 
-Dance.prototype.onPuzzleComplete = function (testResult) {
+Dance.prototype.onPuzzleComplete = function (testResult, message) {
   // Stop everything on screen.
   this.reset();
 
   if (testResult) {
     this.testResults = testResult;
+    this.message = message;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -196,6 +231,10 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = function () {
+  if (!this.nativeAPI.metadataLoaded()) {
+    return;
+  }
+
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
@@ -222,7 +261,6 @@ Dance.prototype.execute = function () {
     return;
   }
 
-  // TODO: re-run user code, start p5 looping.
   this.initInterpreter();
   this.p5.loop();
 
@@ -230,6 +268,9 @@ Dance.prototype.execute = function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
   this.nativeAPI.play();
+
+  const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
+  this.nativeAPI.registerValidation(validationCallback);
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -307,6 +348,9 @@ Dance.prototype.initInterpreter = function () {
     randomColor: () => {
       return nativeAPI.randomColor();
     },
+    getCurrentTime: () => {
+      return nativeAPI.getCurrentTime();
+    },
   };
 
   let code = require('!!raw-loader!./p5.dance.interpreted');
@@ -325,8 +369,14 @@ Dance.prototype.initInterpreter = function () {
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
+  let options = {id: getStore().getState().selectedSong};
+  options['mp3'] = songs_data[options.id].url;
+  Sounds.getSingleton().register(options);
+
   const Dance = createDanceAPI(this.p5);
-  this.nativeAPI = initDance(this.p5, Dance);
+  this.nativeAPI = initDance(this.p5, Dance, this.onPuzzleComplete.bind(this));
+  const spriteConfig = new Function('World', this.level.customHelperLibrary);
+  this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
 };
 
@@ -364,4 +414,8 @@ Dance.prototype.displayFeedback_ = function () {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
   });
+};
+
+Dance.prototype.getAppReducers = function () {
+  return reducers;
 };
