@@ -17,7 +17,10 @@ Scenario: Student sign in from code.org
   And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  Then element ".user_menu span:first" has text "Hi Bob"
+  And I wait until element ".user_icon" is visible
+  And I click selector ".user_icon"
+  And I wait until element ".display_name" is visible
+  And element ".display_name" contains text "Bob"
 
 Scenario: Student sign in from studio.code.org
   Given I am on "http://studio.code.org/"
@@ -33,7 +36,10 @@ Scenario: Student sign in from studio.code.org
   And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  Then element ".user_menu span:first" has text "Hi Alice"
+  And I wait until element ".user_icon" is visible
+  And I click selector ".user_icon"
+  And I wait until element ".display_name" is visible
+  And element ".display_name" contains text "Alice"
 
 Scenario: Student sign in from studio.code.org in the eu
   Given I am on "http://studio.code.org/"
@@ -49,7 +55,10 @@ Scenario: Student sign in from studio.code.org in the eu
   And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  Then element ".user_menu span:first" has text "Hi Alice"
+  And I wait until element ".user_icon" is visible
+  And I click selector ".user_icon"
+  And I wait until element ".display_name" is visible
+  And element ".display_name" contains text "Alice"
 
 Scenario: Teacher sign in from studio.code.org
   Given I am on "http://studio.code.org/"
@@ -65,7 +74,10 @@ Scenario: Teacher sign in from studio.code.org
   And I click selector "#signin-button" to load a new page
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  Then element ".user_menu span:first" has text "Hi Casey"
+  And I wait until element ".user_icon" is visible
+  And I click selector ".user_icon"
+  And I wait until element ".display_name" is visible
+  And element ".display_name" contains text "Casey"
 
 Scenario: Join non-existent section from sign in page shows error
   Given I am on "http://studio.code.org/users/sign_in/"
