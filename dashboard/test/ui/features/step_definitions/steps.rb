@@ -845,7 +845,7 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Then I click selector "#new_signin_button"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
-    And I click selector "#new_signin-button"
+    And I click selector "#signin-button"
     And I wait to see ".header_user"
   }
 end
