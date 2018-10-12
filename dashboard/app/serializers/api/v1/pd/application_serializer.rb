@@ -28,7 +28,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :registered_teachercon,
     :registered_fit_weekend,
     :attending_teachercon,
-    :principal_approval,
+    :principal_approval_state,
     :meets_scholarship_criteria,
     :school_stats
   )
