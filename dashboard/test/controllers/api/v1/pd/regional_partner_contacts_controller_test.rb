@@ -25,7 +25,7 @@ class Api::V1::Pd::RegionalPartnerContactsControllerTest < ActionDispatch::Integ
     assert_valid_form build(:pd_regional_partner_contact_hash, :private_school)
   end
 
-  test 'create returns appropriate errors if school district data is missing' do
+  test 'create returns generic error if school or district data is missing' do
     form_data = build(:pd_regional_partner_contact_hash, :other_district_and_school).
       merge("school-district-name" => "")
     assert_does_not_create Pd::RegionalPartnerContact do
