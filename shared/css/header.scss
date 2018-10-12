@@ -109,7 +109,7 @@
         color: $white;
       }
 
-      #new_signin_button {
+      #signin_button {
         margin-top: -9px;
         height: 38px;
       }
@@ -124,7 +124,7 @@
     height: 38px;
     user-select: none;
 
-    .user_name, .create_button {
+    .create_button {
       font-family: 'Gotham 4r', sans-serif;
       max-width: 120px;
       display: inline-block;
@@ -220,7 +220,7 @@
     .create_menu {
       display: none !important;
     }
-    #new_signin_button {
+    #signin_button {
      margin-top: -4px !important;
    }
   }
