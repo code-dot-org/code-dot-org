@@ -4,13 +4,12 @@ import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import {getStore} from "../redux";
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-
+import {commands as audioCommands} from '../lib/util/audioApi';
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
-import {createDanceAPI} from './DanceLabP5';
-import initDance from './p5.dance';
+import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers} from './redux';
 
 //TODO: Remove this during clean-up
@@ -183,7 +182,7 @@ Dance.prototype.onPuzzleComplete = function (testResult, message) {
   // Stop everything on screen.
   this.reset();
 
-  if (testResult) {
+  if (testResult !== undefined) {
     this.testResults = testResult;
     this.message = message;
   } else {
@@ -372,9 +371,9 @@ Dance.prototype.onP5Preload = function () {
   let options = {id: getStore().getState().selectedSong};
   options['mp3'] = songs_data[options.id].url;
   Sounds.getSingleton().register(options);
+  const getSelectedSong = () => getStore().getState().selectedSong;
 
-  const Dance = createDanceAPI(this.p5);
-  this.nativeAPI = initDance(this.p5, Dance, this.onPuzzleComplete.bind(this));
+  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this));
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
