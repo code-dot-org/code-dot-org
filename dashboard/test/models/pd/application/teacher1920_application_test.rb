@@ -857,7 +857,9 @@ module Pd::Application
 
     test 'formatted_partner_contact_email' do
       application = build :pd_teacher1920_application
-      partner = build :regional_partner
+
+      partner = build :regional_partner, contact: nil
+      contact = build :teacher
 
       # no partner
       assert_nil application.formatted_partner_contact_email
@@ -870,13 +872,22 @@ module Pd::Application
       partner.contact_name = 'We Teach Code'
       assert_nil application.formatted_partner_contact_email
 
+      # email only? still nil
+      partner.contact_name = nil
+      assert_nil application.formatted_partner_contact_email
+
+      # old contact field
+      partner.contact = contact
+      assert_equal "#{contact.name} <#{contact.email}>", application.formatted_partner_contact_email
+
+      # program manager but no contact_name or contact_email
+      program_manager = build :regional_partner_program_manager, regional_partner: partner
+      assert_equal "#{program_manager.name} <#{program_manager.email}>", application.formatted_partner_contact_email
+
       # name and email
+      partner.contact_name = 'We Teach Code'
       partner.contact_email = 'we_teach_code@ex.net'
       assert_equal 'We Teach Code <we_teach_code@ex.net>', application.formatted_partner_contact_email
-
-      # email only
-      partner.contact_name = nil
-      assert_equal 'we_teach_code@ex.net', application.formatted_partner_contact_email
     end
 
     test 'test non course dynamically required fields' do
