@@ -2,6 +2,7 @@
 
 var sprites = 'all'; // compat
 
+// Needed for block dropdown enum options.
 var MOVES = {
   Rest: 0,
   ClapHigh: 1,
@@ -17,7 +18,7 @@ var MOVES = {
   Thriller: 11
 };
 
-// Event handlers, loops, and callbacks
+// Event handlers, loops, and callbacks.
 var inputEvents = [];
 var setupCallbacks = [];
 
