@@ -169,8 +169,8 @@ export class DetailViewContents extends React.Component {
   };
 
   handleStatusChange = (event) => {
-    const workshopNotAssigned = !this.props.applicationData.pd_workshop_id && !this.props.applicationData.fit_workshop_id;
-    if (this.props.applicationData.regional_partner_emails_sent_by_system && workshopNotAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
+    const workshopAssigned = this.props.applicationData.pd_workshop_id || this.props.applicationData.fit_workshop_id;
+    if (this.props.applicationData.regional_partner_emails_sent_by_system && !workshopAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
       this.setState({
         showCantSaveStatusDialog: true
       });
