@@ -116,6 +116,7 @@ zh-TW:
     age: '年齡'
     user_type: '你是學生還是教師？'
     submit: '註冊'
+    next: '下一個'
     teacher: '你是一名教師？'
     valid_username: "可以使用！"
     invalid_username: "用戶名稱至少需 5 字元"

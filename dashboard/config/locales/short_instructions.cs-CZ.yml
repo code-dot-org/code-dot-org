@@ -287,8 +287,8 @@ cs:
         Přidáním while smyčky cyklu k tomuto kódu lze provést stejný úkol.
       2-3 Bee Loops Assessment 1: Hodnocení - použij while cyklus sesbírat všechen
         nektar z této květiny.
-      2-3 Maze 1: 'Můžeš mi pomoci chytit zlobivé prase? Sklož dohromady několik bloků
-        "posun vpřed" a stiskni tlačítko "Run". '
+      2-3 Maze 1: 'Můžeš mi pomoci chytit zlobivé prase? Slož dohromady několik bloků
+        "posunout vpřed" a stiskni tlačítko "Spustit". '
       2-3 Maze 10: Naveď mě k zelenému zlu! (Pozor na TNT)
       2-3 Maze 11: Dostaň mě ke květu, mám hlad! Kolikrát budeš muset opakovat blok?
       2-3 Maze 12 (copy 1): 'Můžeš nahradit předchozí odpověď jen dvěma bloky? (Rada:
@@ -378,14 +378,14 @@ cs:
         počtu bloků.
       20hr_farmer_stage9_9: 'Pošli mě odstranit všechny tyto hromádky hlíny. Snaž
         se použít co nejméně bloků. Tip: zkus použít blok "dokud".'
-      20hr_maze_stage2_10: Dobře, zkus nový blok "opakovat dokud" - bude se opakovat,
+      20hr_maze_stage2_10: Dobře, zkus nový blok "opakovat do" - bude se opakovat,
         dokud nechytím to otravné prase.
       20hr_maze_stage2_11: Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento
         úkol za použití pouze 4 bloků?
       20hr_maze_stage2_13: Dobře, toto je podobné, jen trošičku odlišné. Zvládneš
         to vyřešit jen s 5-ti bloky?
-      20hr_maze_stage2_14: 'Použij nový blok "pokud" abych se rozhodoval, kdy se otočit.
-        Tip: stačí ti pouze jeden další blok, ale naučit se, jak jsme to nachystali,
+      20hr_maze_stage2_14: 'Použij nový typ bloku "pokud", abych se rozhodl, kdy se
+        otočit. Tip: stačí ti pouze jeden další blok, ale nauč se, jak jsme to nachystali,
         aby jsi to příště dokázal sám.'
       20hr_maze_stage2_15: Dobře, tohle je stejné jako předchozí hádanka, ale musíš
         si pamatovat, jak jsi použil blok "pokud" a blok "opakovat" dohromady.
@@ -405,17 +405,16 @@ cs:
         TNT, nebo bude peří létat!
       20hr_maze_stage2_4: Naveď mě k zelenému zlu! (Pozor na TNT)
       20hr_maze_stage2_5: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych
-        se mohlo rozzlobit!
+        se mohl rozzlobit!
       20hr_maze_stage2_6: Existuje způsob, jak se mohu dostat k zelenému prasátku
         za použití pouze 2 bloků. Přijdeš na něj?
       20hr_maze_stage2_7: Pokus se mě dostat k zelenému vetřelci za použití třech
         bloků.
-      20hr_maze_stage2_8: Pomoz mi zbavit se toho zlobivého prasátka pomocí nejmenšího
-        počtu bloků. Zkus použít více jak jeden blok "opakovat n-krát".
+      20hr_maze_stage2_8: Pomoz mi zbavit se toho zlobivého prasátka pomocí co nejmenšího
+        počtu bloků. Zkus použít více než jeden blok "opakuj n-krát".
       20hr_maze_stage2_9: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat.
-        Vyřeš tuto hádanku použitím šedého bloku "opakuj". Zkus do něj vložit 3 bloky:
-        posun vpřed, posun vpřed a otoč a nastavit blok "opakuj", aby to zopakoval
-        třikrát.'
+        Vyřeš tuto hádanku použitím šedého bloku "opakuj", který opakuje třikrát.
+        Zkus do něj vložit další 3 bloky: posunout vpřed, posunout vpřed, otočit.'
       4-5 Artist 1: "Pomoz mi dokreslit mou krabičku. (Každá čára je 300\npixelů dlouhá) "
       4-5 Artist 10: Stiskni tlačítko "Run" ke zkoušce kódu. Pak opakuj tolikrát,
         až se dokončí kresba. Barvy budou být pokaždé jiné.
@@ -750,8 +749,8 @@ cs:
       Bee Recommended Blocks test: Fialové květiny mohou mít buď 1 nebo 0 nektaru,
         ale neznáš, který z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li
         jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
-      Bergeron Robot Maze1: 'Můžeš mi pomoci chytit zlobivé prase? Sklož dohromady
-        několik bloků "posun vpřed" a stiskni tlačítko "Run". '
+      Bergeron Robot Maze1: 'Můžeš mi pomoci chytit zlobivé prase? Slož dohromady
+        několik bloků "posunout vpřed" a stiskni tlačítko "Spustit". '
       Brad Spooky House Copy: 'Volná hra: Zde jsou funkce, které jste napsali a ještě
         víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys
         viděl, jak odlišně vypadají tvoje kresby!'

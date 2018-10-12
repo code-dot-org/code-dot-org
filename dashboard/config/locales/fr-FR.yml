@@ -19,11 +19,13 @@ fr:
       messages:
         blank: est obligatoire
         blank_plural: est requis
+        invalid: n'est pas valide
         invalid_plural: est invalide
     attributes:
       user:
         name: Nom à afficher
         name_example: Afficher nom <br/> (par ex. SuperCodeur ou Jeanne S.)
+        other_name_example: Afficher nom<br/>(p. ex. Mme Smith)
         email: E-mail
         parent_email: Email du parent/tuteur
         personal_email: Email personnel <a href="%{url}">(click here if you don't
@@ -36,6 +38,9 @@ fr:
         age: Age
         gender: Sexe
         edit_header: Modifier les détails du compte
+        finish_sign_up_header: Terminez la création de votre profil
+        finish_sign_up_subheader: Remplissez les informations suivantes pour finir
+          de créer votre compte Code.org.
         error:
           future: ne peut pas être dans le futur
   hello: Bonjour tout le monde
@@ -140,6 +145,7 @@ fr:
     age: Age
     user_type: Êtes-vous un élève ou un enseignant ?
     submit: S’inscrire
+    next: Suivant
     teacher: Êtes-vous un enseignant?
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
@@ -176,7 +182,7 @@ fr:
     error: Une erreur est apparue.
     email_preference_question: Pouvons-nous vous envoyer des e-mails d’information
       sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
-      le domaine informatique ?
+      le domaine informatique?
     email_preference_privacy: "(Voir notre politique de protection des données)"
     email_preference_yes: Oui
     email_preference_no: Non

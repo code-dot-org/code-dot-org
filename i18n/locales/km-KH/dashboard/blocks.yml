@@ -82,6 +82,7 @@ km:
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
       Dancelab_randomColor:
         text: ពណ៌​ព្រាវ
       Dancelab_setBackgroundEffect:
@@ -101,6 +102,11 @@ km:
           EFFECT:
             '"none"': គ្មាន
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': ទំហំ
@@ -275,6 +281,12 @@ km:
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
+      RyanLab_moveForward:
+        text: រំកិល​ទៅមុខ
+      RyanLab_turnLeft:
+        text: បត់​ឆ្វេង
+      RyanLab_turnRight:
+        text: បត់​ស្ដាំ
       craft_ifPath:
         options:
           DIR:

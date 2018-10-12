@@ -42,6 +42,10 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -54,6 +58,8 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      RyanLab_moveForward:
+        text: qubekela phambili
       craft_ifPath:
         options:
           DIR:

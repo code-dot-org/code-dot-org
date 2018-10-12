@@ -26,6 +26,10 @@ ku:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_randomColor:
         text: رەنگێکی هەڕەمەکی
       Dancelab_setDanceSpeed:

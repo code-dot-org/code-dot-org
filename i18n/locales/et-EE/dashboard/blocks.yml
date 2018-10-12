@@ -11,8 +11,6 @@ et:
           GROUP:
             sprites: kõik
           MOVE:
-            '"next"': Järgmine
-            '"prev"': Eelmine
             MOVES.Rest: Pole
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ et:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Järgmine
-            '"prev"': Eelmine
             MOVES.Rest: Pole
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ et:
           GROUP:
             sprites: kõik
           MOVE:
-            '"next"': Järgmine
-            '"prev"': Eelmine
             MOVES.Rest: Pole
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ et:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Järgmine
-            '"prev"': Eelmine
             MOVES.Rest: Pole
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ et:
           LOCATION:
             "{x: 100, y: 200}": vasakule
             "{x: 300, y: 200}": paremale
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": juhuslik
       Dancelab_randomColor:
         text: juhuslik värv
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ et:
           EFFECT:
             '"none"': Pole
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"height"': kõrgus
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': suurus
@@ -279,6 +277,12 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
+      RyanLab_moveForward:
+        text: liigu edasi
+      RyanLab_turnLeft:
+        text: pööra vasakule
+      RyanLab_turnRight:
+        text: pööra paremale
       craft_ifPath:
         options:
           DIR:

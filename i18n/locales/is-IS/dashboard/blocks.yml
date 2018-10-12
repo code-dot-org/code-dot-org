@@ -11,8 +11,6 @@ is:
           GROUP:
             sprites: allt
           MOVE:
-            '"next"': Næsta
-            '"prev"': Fyrri
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ is:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Næsta
-            '"prev"': Fyrri
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ is:
           GROUP:
             sprites: allt
           MOVE:
-            '"next"': Næsta
-            '"prev"': Fyrri
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ is:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Næsta
-            '"prev"': Fyrri
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ is:
           LOCATION:
             "{x: 100, y: 200}": vinstri
             "{x: 300, y: 200}": hægri
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": eitthvað
       Dancelab_randomColor:
         text: einhver litur
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ is:
           EFFECT:
             '"none"': Ekkert
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"height"': hæð
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': stærð
@@ -279,6 +277,12 @@ is:
             '"down"': niður ör
             '"left"': vinstri ör
             '"right"': hægri ör
+      RyanLab_moveForward:
+        text: færa áfram
+      RyanLab_turnLeft:
+        text: snúa til vinstri
+      RyanLab_turnRight:
+        text: snúa til hægri
       craft_ifPath:
         options:
           DIR:

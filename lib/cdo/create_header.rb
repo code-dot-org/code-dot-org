@@ -18,7 +18,7 @@ class CreateHeader
       },
     ]
 
-    younger_than_13_entries = [
+    minecraft = [
       {
         id: "create_dropdown_minecraft",
         title: "minecraft",
@@ -27,7 +27,7 @@ class CreateHeader
       },
     ]
 
-    older_than_13_entries = [
+    applab_gamelab = [
       {
         id: "create_dropdown_applab",
         title: "applab",
@@ -42,9 +42,9 @@ class CreateHeader
       },
     ]
 
-    entries = options[:user_under_13] ?
-      everyone_entries + younger_than_13_entries :
-      everyone_entries + older_than_13_entries
+    entries = options[:limit_project_types] == "true" ?
+      everyone_entries + minecraft :
+      everyone_entries + applab_gamelab
 
     entries
   end

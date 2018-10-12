@@ -95,6 +95,7 @@ bs:
     age: 'Starosna dob'
     user_type: 'Jeste li učenik ili učitelj?'
     submit: 'Prijava'
+    next: 'Sljedeći'
     teacher: 'Jeste li učitelj?'
     valid_username: "Dostupno!"
     invalid_username: "Korisničko ime mora imati barem 5 znakova"
@@ -230,7 +231,6 @@ bs:
       signin: 'Prijava'
       signup: 'Napravi račun'
       already_registered: 'Jeste li već registrirani?'
-      pair_programming: 'Programiranje u Paru'
       team: 'Tim'
       navigator: 'Partner'
     popup:

@@ -367,13 +367,6 @@ es-MX:
         declaración if para verificar cuando se presiona la tecla de espacio.\r
         * Mueve el código que
         hace que los engranajes giren dentro del `if`.
-      CSD U3 Entertainment Sample 1 - unembed: |-
-        # Alienígena Saltador\r
-        \r
-        Presiona
-        "Ejecutar" para jugar el juego de la izquierda. Puedes hacer que el alienígena salte con el
-        barra espaciadora, y moverlo hacia la izquierda y hacia la derecha con las teclas de flecha. Tu puntuación
-        sera al recolectar estrellas, y si puntúas lo suficiente, el fondo cambiará.
       CSD U3 Entertainment Sample 1: |-
         # Alienígena Saltador\r
         \r
@@ -1092,6 +1085,8 @@ es-MX:
       Pixelation - Lesson 15 - Complete 3-bit color: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Pixelation - Lesson 15 - Complete 3-bit color_2018: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Testing Quantum Farmer: "¡Wow, encontré un agujero realmente profundo! no sé cuántas paleadas de tierra necesita. ¿Puedes escribir un programa que llene hasta que el suelo esté parejo? Sugerencia: trata usando el bucle mientras."
+      Underground If Statements: Ahora las cosas se complican. Recoge tres bloques de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar roca sobre la lava que descubras.
+      Underground If Statements_2018: Ahora las cosas se complican. Recoge tres bloques de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar roca sobre la lava que descubras.
       conditionals_forvideo_harvester: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       course1_artist_loops_challenge2: '¡Vamos a jugar un juego!! Dibuja tantas X como tú puedas! ¿Puedes obtener 3 en una fila?'
       course1_artist_loops_challenge3: |-
@@ -1344,9 +1339,7 @@ es-MX:
       courseA_collector_loops2: |2
         ¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\r
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |2
-        ¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\r
-          <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
       courseA_collector_loops3_2018: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
       courseA_collector_loops_challenge1: '* "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
