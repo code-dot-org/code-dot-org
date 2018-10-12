@@ -69,20 +69,20 @@ module SignUpTracking
     FirehoseClient.instance.put_record(tracking_data)
   end
 
-  def self.log_load_finish_sign_up(session)
+  def self.log_load_finish_sign_up(session, provider)
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
       study_group: study_group(session),
-      event: 'load-finish-sign-up-page',
+      event: "#{provider}-load-finish-sign-up-page",
       data_string: session[:sign_up_uid]
     )
   end
 
-  def self.log_cancel_finish_sign_up(session)
+  def self.log_cancel_finish_sign_up(session, provider)
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
       study_group: study_group(session),
-      event: 'cancel-finish-sign-up',
+      event: "#{provider}-cancel-finish-sign-up",
       data_string: session[:sign_up_uid]
     )
   end
