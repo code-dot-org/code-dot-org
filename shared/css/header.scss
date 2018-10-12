@@ -103,14 +103,15 @@
       float: right;
 
       .button-signin {
-        margin-top: -3px;
+        margin-top: -4px;
         background-color: transparent;
         border: 2px solid $white;
         color: $white;
       }
 
       #new_signin_button {
-        margin-top: -11px;
+        margin-top: -9px;
+        height: 38px;
       }
     }
   }
@@ -120,7 +121,7 @@
     background-color: transparent;
     border: 2px solid $white;
     margin-top: -4px;
-    height: 36px;
+    height: 38px;
     user-select: none;
 
     .user_name, .create_button {
@@ -220,5 +221,8 @@
     .create_menu {
       display: none !important;
     }
+    #new_signin_button {
+     margin-top: -4px !important;
+   }
   }
 }
