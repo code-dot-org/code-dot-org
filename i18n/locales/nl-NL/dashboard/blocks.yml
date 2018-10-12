@@ -11,8 +11,6 @@ nl:
           GROUP:
             sprites: alles
           MOVE:
-            '"next"': Volgende
-            '"prev"': Vorige
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ nl:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Volgende
-            '"prev"': Vorige
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ nl:
           GROUP:
             sprites: alles
           MOVE:
-            '"next"': Volgende
-            '"prev"': Vorige
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ nl:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Volgende
-            '"prev"': Vorige
             MOVES.Rest: Geen
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ nl:
           LOCATION:
             "{x: 100, y: 200}": links
             "{x: 300, y: 200}": rechts
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
       Dancelab_randomColor:
         text: willekeurige kleur
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ nl:
           EFFECT:
             '"none"': Geen
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"height"': hoogte
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': grootte
@@ -283,6 +281,12 @@ nl:
             '"down"': pijltje naar beneden
             '"left"': pijltje naar links
             '"right"': pijltje naar rechts
+      RyanLab_moveForward:
+        text: beweeg vooruit
+      RyanLab_turnLeft:
+        text: Draai linksom
+      RyanLab_turnRight:
+        text: Draai rechtsom
       craft_ifPath:
         options:
           DIR:

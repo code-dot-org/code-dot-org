@@ -4,37 +4,29 @@ uz:
     blocks:
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy

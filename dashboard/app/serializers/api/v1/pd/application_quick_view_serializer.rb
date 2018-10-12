@@ -9,7 +9,7 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :locked,
     :notes,
     :regional_partner_id,
-    :principal_approval,
+    :principal_approval_state,
     :total_score,
     :meets_criteria
   )
@@ -18,8 +18,8 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     object.locked?
   end
 
-  def principal_approval
-    object.try(:principal_approval)
+  def principal_approval_state
+    object.try(:principal_approval_state)
   end
 
   def meets_criteria

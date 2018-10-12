@@ -15,18 +15,17 @@ module Api::V1::Pd::Application
       unless @application.emails.exists?(email_type: 'principal_approval')
         @application.queue_email :principal_approval, deliver_now: true
       end
-      render json: {principal_approval: @application.principal_approval}
+      render json: {principal_approval: @application.principal_approval_state}
     end
 
     def principal_approval_not_required
       @application.update!(principal_approval_not_required: true)
-      render json: {principal_approval: @application.principal_approval}
+      render json: {principal_approval: @application.principal_approval_state}
     end
 
     protected
 
     def on_successful_create
-      @application.auto_score!
       @application.update_user_school_info!
       @application.queue_email :confirmation, deliver_now: true
       @application.update_form_data_hash(
@@ -38,6 +37,8 @@ module Api::V1::Pd::Application
           ).values.map(&:to_i).reduce(:*) / 60
         }
       )
+
+      @application.auto_score!
       @application.save
 
       unless @application.regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL

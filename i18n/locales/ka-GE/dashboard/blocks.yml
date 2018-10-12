@@ -17,8 +17,6 @@ ka:
           GROUP:
             sprites: ყველა
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -27,8 +25,6 @@ ka:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -41,14 +37,11 @@ ka:
             '"width"': სიგრძე
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
-            '"tint"': შეფერადება
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: ყველა
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -57,8 +50,6 @@ ka:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -158,6 +149,13 @@ ka:
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
             '"tint"': შეფერადება
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"width"': სიგრძე
+            '"height"': სიმაღლე
+            '"rotation"': შებრუნება
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -496,6 +494,12 @@ ka:
             '"down"': ქვედა ისარი
             '"left"': მარცხენა ისარი
             '"right"': მარჯვენა ისარი
+      RyanLab_moveForward:
+        text: წინ გადაადგილება
+      RyanLab_turnLeft:
+        text: მარცხნივ მობრუნება
+      RyanLab_turnRight:
+        text: მარჯვნივ მობრუნება
       Vector_positionCenter:
         text: ცენტრი
       Vector_randomLocation:

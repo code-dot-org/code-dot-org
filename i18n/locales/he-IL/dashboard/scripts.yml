@@ -1375,6 +1375,8 @@ he:
               name: הרץ פעולה בשנית
             Introduction to Online Puzzles:
               name: היכרות עם חידות מבוכים
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
         coursec-2018:
           stages:
             Programming in Maze:

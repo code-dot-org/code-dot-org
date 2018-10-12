@@ -48,7 +48,7 @@ fil:
       2-3 Artist Functions 11 a: "Aming binago ang pangalan ng `draw a square` na function sa `draw a hexagon` ngunit ito ay nagbibigay pa rin sa atin ng mga parisukat! \\r\n\\r\nMaaari mo bang baguhin ang `draw a hexagon` na function para makaguhit ng hexagon na may mga gilid na 50 pixel?\n\\r\n\\r\nGumuhit ng larawan gamit ang bagong function!"
       2-3 Artist Functions 11.5: "Narito ang parehong `draw a hexagon` na function. \\r\n\\r\nAno ang mangyayari kapag ini-loop mo ang pangunahing programa nang 6 na mga beses, na umikot nang 60 degrees sa bawat beses na mag-loop ka?"
       2-3 Artist Functions 11: "Aming binago ang pangalan ng `draw a square` na function sa `draw a hexagon` ngunit ito ay nagbibigay pa rin sa atin ng mga parisukat! \\r\n\\r\nMaaari mo bang baguhin ang `draw a hexagon` na function para makaguhit ng hexagon na may mga gilid na 50 pixel?\n\\r\n\\r\nGumuhit ng larawan gamit ang bagong function!"
-      2-3 Artist Functions 12 Mike: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang maraming beses. \\r\n\\r\nMaaari mo bang gamit ang `gumuhit ng bulaklak` na function para punan ang natitirang mga kahon nang nagtanim?\\r\nAng mga tanim ay dapat 100 pixels ang layo."
+      2-3 Artist Functions 12 Mike: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang ilang beses. \\r\n\\r\nMaaari mo bang gamitin ang `draw a flower` na function sa punan ang natitirang mga kahon ng pananim?\\r\nAng mga pananamim ay parehong 100 pixels ang pagitan."
       2-3 Artist Functions 12 a: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang ilang beses. \\r\n\\r\nMaaari mo bang gamitin ang `draw a flower` na function sa punan ang natitirang mga kahon ng pananim?\\r\nAng mga pananamim ay parehong 100 pixels ang pagitan."
       2-3 Artist Functions 12: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang ilang beses. \\r\n\\r\nMaaari mo bang gamitin ang `draw a flower` na function sa punan ang natitirang mga kahon ng pananim?\\r\nAng mga pananamim ay parehong 100 pixels ang pagitan."
       2-3 Artist Functions 2: "Ang mga function ay nagbibigay-daan na makagawa ka ng mga bagong bloke!\\r\n\\r\nAming inilipat ang mga kinakailangang bloke para sa pagguhit ng parisukat sa isang function na tinatawag na `draw a square`. Sa oras na ito, gamitin ang `draw a square` na function para malikha ang mga baso. \\r\n\\r\nAng mga parisukat ay 75 pixels ang pagitan."
@@ -932,7 +932,7 @@ fil:
       courseC_flappy_events7_2018: Kasunod nito, subukang baguhin ang eksena sa pamamagitan ng paglakip ng bloke sa `when run` na pangyayari.
       courseC_flappy_events9: Para haluin ang mga bagay, sa halip na tapusin ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang score pabalik sa 0.
       courseC_flappy_events9_2018: Para haluin ang mga bagay, sa halip na tapusin ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang score pabalik sa 0.
-      courseC_harvester_loops10: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
+      courseC_harvester_loops10: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops10_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops11: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops11_2018: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
@@ -957,7 +957,7 @@ fil:
       courseC_maze_loops_challenge2: Tayo ay maghanap ng mga kayamanan - gamit ang mga loop! Tulungan ang kolektor sa pamamagitan ng pag-debug ng code na ito. Kunin ang lahat ng mga kayamanan!
       courseC_maze_programming1: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseC_maze_programming1_2018: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
-      courseC_maze_programming8: '*"Manatiling kalmado at tulungan akong hanapin ang masamang baboy."*'
+      courseC_maze_programming8: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
       courseC_maze_programming8_2018: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
       courseC_maze_programming8_predict1: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
       courseC_maze_programming8_predict1_2018: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
@@ -971,7 +971,7 @@ fil:
       courseD_bee_debugging_challenge1: Tingnan kung paano ang mga bubuyog kumuha ng nektar. Maaari mo bang gamitin ang parehong uri ng patter para matulungan ang bubuyog na gawing pulot ang lahat?
       courseD_bee_debugging_challenge1_2018: Tingnan kung paano ang mga bubuyog kumuha ng nektar. Maaari mo bang gamitin ang parehong uri ng patter para matulungan ang bubuyog na gawing pulot ang lahat?
       courseD_bee_debugging_challenge2: Tingnan kung paano ang mga bubuyog kumukuha ng nektar. Maaari mo bang gamitin ang parehong tipo ng pattern para matulungan ang bubuyog na gawing pulot ang lahat?
-      courseD_bee_nestedLoops2: Sa oras na ito, tulongan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang hangga't maaari.
+      courseD_bee_nestedLoops2: Sa oras na ito, tulungan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops2_2018: Sa oras na ito, tulungan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops2_predict1: Sa oras na ito, tulungan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
       courseD_bee_nestedLoops2_predict1_2018: Sa oras na ito, tulungan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
@@ -983,8 +983,8 @@ fil:
       courseD_bee_nestedLoops9_2018: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_predict2: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_predict2_2018: Gawin ang lahat ng pulot.
-      courseD_bee_nested_loops_challenge1: Maghanap tayo ng mga kayamanan - gamit ang mga loop! Tulunga ang kolektor na maabot ang hindi bababa sa dalawang tumpok ng yaman gamit ang mga bloke lang na nasa iyong toolbox.
-      courseD_bee_nested_loops_challenge2: Maghanap tayo ng mga kayamanan - gamit ang mga loop! Tulunga ang kolektor na maabot ang hindi bababa sa dalawang tumpok ng yaman gamit ang mga bloke lang na nasa iyong toolbox.
+      courseD_bee_nested_loops_challenge1: Tayo ay manghanap ng mga kayamanan - gamit ang mga loop! Tulungan ang kolektor na makaabot nang hindi bababa sa dalawan tumpok ng yaman gamit lang ang mga bloke na nasa loob ng iyong toolbox.
+      courseD_bee_nested_loops_challenge2: Tayo ay manghanap ng mga kayamanan - gamit ang mga loop! Tulungan ang kolektor na makaabot nang hindi bababa sa dalawan tumpok ng yaman gamit lang ang mga bloke na nasa loob ng iyong toolbox.
       courseD_bounce_events1: Puntahan ang bandila! Maglakip ng mga bloke sa "when left arrow" na bloke at pindutin ang "Run" para ilipat ang manlalaro palapit sa bandila.
       courseD_bounce_events2s: Ngayon, ilakip ang bloke sa `when right event` para ang kamay ay maaaring makakuha sa parehong buslo.
       courseD_bounce_events2s_2018: Ngayon, ilakip ang bloke sa `when right event` para ang kamay ay maaaring makakuha sa parehong buslo.
@@ -1002,7 +1002,7 @@ fil:
       courseD_farmer_while_challenge2: Punan ang lahat ng mga butas at tanggalin ang lahat ng mga tumpok.
       courseD_farmer_while_challenge2_2018: Punan ang lahat ng mga butas at tanggalin ang lahat ng mga tumpok.
       courseD_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
-      courseD_maze_loops_challenge1: Maghanap tayo ng mga kayamanan - gamit ang mga loop! Tulunga ang kolektor na maabot ang hindi bababa sa dalawang tumpok ng yaman gamit ang mga bloke lang na nasa iyong toolbox.
+      courseD_maze_loops_challenge1: Tayo ay manghanap ng mga kayamanan - gamit ang mga loop! Tulungan ang kolektor na makaabot nang hindi bababa sa dalawan tumpok ng yaman gamit lang ang mga bloke na nasa loob ng iyong toolbox.
       courseD_maze_nestedLoops4: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting bloke na posible!  '
       courseD_maze_nestedLoops4_2018: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting bloke na posible!  '
       courseD_maze_ramp1: Para sa palaisipang ito, i-snap ang lahat ng mga bloke nang sama-sama at i-click ang "Run" para tingnan itong umalis!
@@ -1054,7 +1054,7 @@ fil:
       courseE_farmer_concept4: "Ngayon ay pupunta pa tayo ng isang antas na mas malalim!\nAting na-nest ang buong bloke ng code sa isa pang loop, ngunit kakailanganin mog mapabalik ang artista sa lugr para maiguhit ang susunod na linya. Alin sa mga code na mga blokeng ito ang maaari mong ilagay sa dulo ng pinakalabas na loop para maiguhit ang buong grid?"
       courseE_farmer_functions10b: Gamitin ang iyong bagong function nang dalawang beses para malutas ang palaisipang ito.
       courseE_farmer_functions10b_2018: Gamitin ang iyong bagong function nang dalawang beses para malutas ang palaisipang ito.
-      courseE_farmer_functions4b: Gamitin ang iyong bagong function para malutas ang palaisipang ito.
+      courseE_farmer_functions4b: Gamitin ang iyong bagong function para lutasin ang spiral na ito.
       courseE_farmer_functions4b_2018: Gamitin ang iyong bagong function para lutasin ang spiral na ito.
       courseE_farmer_functions5c: Ang iyong function ay talagang magagamit dito.
       courseE_farmer_functions5c_2018: Ang iyong function ay talagang magagamit dito.

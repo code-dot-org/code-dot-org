@@ -72,7 +72,7 @@ sk:
         MC_HOC_2017_01_RETRY_c: Keď agent spustí všetok kód, môžete posúvať hráča
           pomocou klávesov so šípkami.
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Posuňte agenta dopredu o dve políčka, aby sa postavil
+        MC_HOC_2017_02_Cole_a: Posuň agenta dopredu o dve políčka, aby sa postavil
           na prítlačnú dosku. Tým otvorí hráčovi dvere.
         MC_HOC_2017_02_Cole_b: "Stlačte tlačidlo Spustiť. \nKód môžete spustiť, aj
           keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte,
@@ -81,7 +81,7 @@ sk:
           klávesov so šípkami.
         MC_HOC_2017_02_Cole_d: Uistite sa, že agent ide po ceste vyznačenej na mape!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Posuňte agenta dopredu o dve políčka, aby sa postavil
+        MC_HOC_2017_02_Cole_a: Posuň agenta dopredu o dve políčka, aby sa postavil
           na prítlačnú dosku. Tým otvorí hráčovi dvere.
         MC_HOC_2017_02_Cole_b: "Stlačte tlačidlo Spustiť agenta. \nKód môžete spustiť,
           aj keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte,

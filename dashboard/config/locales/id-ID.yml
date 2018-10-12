@@ -133,6 +133,7 @@ id:
     age: Umur
     user_type: Anda Pelajar atau Pengajar?
     submit: Daftar
+    next: Selanjutnya
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
     invalid_username: Nama pengguna harus minimal 5 karakter

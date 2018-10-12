@@ -124,6 +124,7 @@ hu:
     age: Kor
     user_type: Diák vagy tanár vagy?
     submit: Regisztrálás
+    next: Következő
     teacher: Tanár vagy?
     valid_username: Elérhető!
     invalid_username: Felhasználónév minimum 5 karakter hosszú

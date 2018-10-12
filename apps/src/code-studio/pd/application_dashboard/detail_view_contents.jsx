@@ -89,6 +89,7 @@ export class DetailViewContents extends React.Component {
       district_name: PropTypes.string,
       email: PropTypes.string,
       form_data: PropTypes.object,
+      application_year: PropTypes.string,
       application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
@@ -514,14 +515,14 @@ export class DetailViewContents extends React.Component {
           </h4>
           {this.props.applicationData.course === 'csp' &&
             <h4>
-              <a target="_blank" href="https://docs.google.com/document/d/1ounHnw4fdihHiMwcNNjtQeK4avHz8Inw7W121PbDQRw/edit#heading=h.p1d568zb27s0">
+              <a target="_blank" href="https://drive.google.com/file/d/1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd/view">
                 View CS Principles Rubric
               </a>
             </h4>
           }
           {this.props.applicationData.course === 'csd' &&
             <h4>
-              <a target="_blank" href="https://docs.google.com/document/d/1Sjzd_6zjHyXLgzIUgHVp-AeRK2y3hZ1PUjg8lTtWsHs/edit#heading=h.fqiranmp717e">
+              <a target="_blank" href="https://drive.google.com/file/d/12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj/view">
                 View CS Discoveries Rubric
               </a>
             </h4>
@@ -616,6 +617,7 @@ export class DetailViewContents extends React.Component {
         question="Summer Workshop"
         courseName={this.props.applicationData.course_name}
         subjectType="summer"
+        year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
         assignedWorkshop={{
           id: this.state.pd_workshop_id,
           name: this.props.applicationData.pd_workshop_name,
@@ -630,6 +632,7 @@ export class DetailViewContents extends React.Component {
           question="FIT Workshop"
           courseName={this.props.applicationData.course_name}
           subjectType="fit"
+          year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
           assignedWorkshop={{
             id: this.state.fit_workshop_id,
             name: this.props.applicationData.fit_workshop_name,
