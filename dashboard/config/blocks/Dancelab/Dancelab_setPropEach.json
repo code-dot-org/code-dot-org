@@ -1,8 +1,8 @@
 {
   "category": "Groups",
   "config": {
-    "func": "layoutSprites",
-    "blockText": "layout {GROUP} as a {FORMAT}",
+    "func": "setPropEach",
+    "blockText": "set {GROUP} {PROPERTY} to {VAL}",
     "args": [
       {
         "name": "GROUP",
@@ -54,25 +54,41 @@
         ]
       },
       {
-        "name": "FORMAT",
+        "name": "PROPERTY",
         "options": [
           [
-            "circle",
-            "\"circle\""
+            "size",
+            "\"scale\""
           ],
           [
-            "grid",
-            "\"grid\""
+            "width",
+            "\"width\""
           ],
           [
-            "row",
-            "\"row\""
+            "height",
+            "\"height\""
           ],
           [
-            "column",
-            "\"column\""
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "horizontal position",
+            "\"x\""
+          ],
+          [
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
           ]
         ]
+      },
+      {
+        "name": "VAL",
+        "field": true
       }
     ]
   }
