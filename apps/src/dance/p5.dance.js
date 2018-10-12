@@ -2,10 +2,11 @@
 /* global p5, Dance, validationProps */
 
 import Effects from './Effects';
+import {TestResults} from '../constants';
 import {getStore} from "../redux";
 import {commands as audioCommands} from '../lib/util/audioApi';
 
-export default function init(p5, Dance) {
+export default function init(p5, Dance, onPuzzleComplete) {
   const exports = {};
 
   const WATCHED_KEYS = ['w', 'a', 's', 'd', 'up', 'left', 'down', 'right', 'space'];
@@ -30,9 +31,21 @@ export default function init(p5, Dance) {
 
   window.p5.disableFriendlyErrors = true;
 
+  exports.pass = function () {
+    onPuzzleComplete(TestResults.ALL_PASS);
+  };
+
+  exports.fail = function (message) {
+    onPuzzleComplete(TestResults.APP_SPECIFIC_FAIL, message);
+  };
+
 var World = {
   height: 400,
-  cuesThisFrame: [],
+  cues: {
+    seconds: [],
+    measures: [],
+  },
+  validationCallback: () => {},
 };
 
 function randomNumber(min, max) {
@@ -43,11 +56,11 @@ function randomNumber(min, max) {
 var sprites = p5.createGroup();
 var sprites_by_type = {};
 
-var SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
+World.SPRITE_NAMES = ["ALIEN", "BEAR", "CAT", "DOG", "DUCK", "FROG", "MOOSE", "PINEAPPLE", "ROBOT", "SHARK", "UNICORN"];
 var img_base = "https://curriculum.code.org/images/sprites/spritesheet_tp/";
 var SIZE = 300;
 
-var MOVE_NAMES = [
+World.MOVE_NAMES = [
   {name: "Rest", mirror: true},
   {name: "ClapHigh", mirror: true},
   {name: "Clown", mirror: false},
@@ -64,6 +77,7 @@ var MOVE_NAMES = [
 
 var ANIMATIONS = {};
 var FRAMES = 24;
+var METADATA = {}
 
 // Songs
 var songs = {
@@ -99,11 +113,10 @@ var songs = {
 var song_meta = songs.hammer;
 //Tracks when a song started to play
 let songStartTime = 0;
+let metadataLoaded = false;
 
 exports.addCues = function (timestamps) {
-  timestamps.forEach(timestamp => {
-    Dance.song.addCue(0, timestamp, () => World.cuesThisFrame.push(timestamp));
-  });
+  World.cues = timestamps;
 };
 
 exports.reset = function () {
@@ -119,14 +132,22 @@ exports.reset = function () {
   World.bg_effect = bg_effects.none;
 };
 
+exports.metadataLoaded = function () {
+  return metadataLoaded;
+};
+
 exports.preload = function preload() {
   // Load song
   Dance.song.load(song_meta.url);
 
+  // Retrieves JSON metadata for songs
+  // TODO: only load song data when necessary and don't hardcode the dev song
+  loadSongMetadata(() => {metadataLoaded = true});
+
   // Load spritesheet JSON files
-  SPRITE_NAMES.forEach(this_sprite => {
+  World.SPRITE_NAMES.forEach(this_sprite => {
     ANIMATIONS[this_sprite] = [];
-    MOVE_NAMES.forEach(({ name, mirror }, moveIndex) => {
+    World.MOVE_NAMES.forEach(({ name, mirror }, moveIndex) => {
       const baseUrl = `${img_base}${this_sprite}_${name}`;
       p5.loadJSON(`${baseUrl}.json`, jsonData => {
         ANIMATIONS[this_sprite][moveIndex] = {
@@ -140,8 +161,8 @@ exports.preload = function preload() {
 
 exports.setup = function setup() {
   // Create animations from spritesheets
-  for (var i = 0; i < SPRITE_NAMES.length; i++) {
-    var this_sprite = SPRITE_NAMES[i];
+  for (var i = 0; i < World.SPRITE_NAMES.length; i++) {
+    var this_sprite = World.SPRITE_NAMES[i];
     for (var j = 0; j < ANIMATIONS[this_sprite].length; j++) {
       ANIMATIONS[this_sprite][j].animation = p5.loadAnimation(ANIMATIONS[this_sprite][j].spritesheet);
     }
@@ -188,8 +209,8 @@ exports.makeNewDanceSprite = function makeNewDanceSprite(costume, name, location
 
   // Default to first dancer if selected a dancer that doesn't exist
   // to account for low-bandwidth mode limited character set
-  if (SPRITE_NAMES.indexOf(costume) < 0) {
-    costume = SPRITE_NAMES[0];
+  if (World.SPRITE_NAMES.indexOf(costume) < 0) {
+    costume = World.SPRITE_NAMES[0];
   }
 
   if (!location) {
@@ -461,12 +482,19 @@ exports.getEnergy = function getEnergy(range) {
   }
 }
 
+exports.getCurrentTime = function getCurrentTime() {
+  return songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
+}
+
+exports.getCurrentMeasure = function () {
+  const songData = songs[getStore().getState().selectedSong];
+  return songStartTime > 0 ? songData.bpm * ((exports.getCurrentTime() - songData.delay) / 240) + 1 : 0;
+}
+
 exports.getTime = function getTime(unit) {
-  let currentTime = (new Date() - songStartTime) / 1000;
-  if (unit == "measures") {
-    // Subtract any delay before the first measure and start counting measures at 1
-    let songData = songs[getStore().getState().selectedSong];
-    return songData.bpm * ((currentTime - songData.delay) / 240) + 1;
+  let currentTime = this.getCurrentTime();
+  if (unit === "measures") {
+    return exports.getCurrentMeasure();
   } else {
     return currentTime;
   }
@@ -616,17 +644,38 @@ function spriteExists(sprite) {
   return p5.allSprites.indexOf(sprite) > -1;
 }
 
+function loadSongMetadata(callback) {
+  let songDataPath = '/api/v1/sound-library/hoc_song_meta';
+  let ids = ['macklemore90', 'hammer', 'peas'];
+  $.when(
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[0]}.json`, (data) => {
+      METADATA[ids[0]] = data;
+    }),
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[1]}.json`, (data) => {
+      METADATA[ids[1]] = data;
+    }),
+    $.getJSON(`/api/v1/sound-library/hoc_song_meta/${ids[2]}.json`, (data) => {
+      METADATA[ids[2]] = data;
+    })
+  ).then( () => {
+    console.log("METADATA LOADED");
+    callback();
+  });
+}
+
 const events = exports.currentFrameEvents = {
   'p5.keyWentDown': {},
   'Dance.fft.isPeak': {},
-  'cue': {},
+  'cue-seconds': {},
+  'cue-measures': {},
 };
 
 function updateEvents() {
   events.any = false;
   events['p5.keyWentDown'] = {};
   events['Dance.fft.isPeak'] = {};
-  events['cue'] = {};
+  events['cue-seconds'] = {};
+  events['cue-measures'] = {};
 
   for (let key of WATCHED_KEYS) {
     if (p5.keyWentDown(key)) {
@@ -642,10 +691,23 @@ function updateEvents() {
     }
   }
 
-  for (let timestamp of World.cuesThisFrame) {
+  while (World.cues.seconds.length > 0 && World.cues.seconds[0] < exports.getCurrentTime()) {
     events.any = true;
-    events['cue'][timestamp] = true;
+    events['cue-seconds'][World.cues.seconds.splice(0, 1)] = true;
   }
+
+  while (World.cues.measures.length > 0 && World.cues.measures[0] < exports.getCurrentMeasure()) {
+    events.any = true;
+    events['cue-measures'][World.cues.measures.splice(0, 1)] = true;
+  }
+}
+
+exports.registerValidation = function (callback) {
+  World.validationCallback = callback;
+}
+
+exports.init = function (callback) {
+  callback(World);
 }
 
 exports.draw = function draw() {
@@ -669,7 +731,6 @@ exports.draw = function draw() {
   }
 
   updateEvents();
-  World.cuesThisFrame.length = 0;
 
   p5.drawSprites();
 
@@ -681,13 +742,14 @@ exports.draw = function draw() {
   }
 
   let songData = songs[getStore().getState().selectedSong];
-  let currentTime = songStartTime > 0 ? (new Date() - songStartTime) / 1000 : 0;
 
   p5.fill("black");
   p5.textStyle(p5.BOLD);
   p5.textAlign(p5.TOP, p5.LEFT);
   p5.textSize(20);
-  p5.text("Measure: " + (Math.floor(((currentTime - songData.delay) * songData.bpm) / 240) + 1), 10, 20);
+
+  World.validationCallback(World, exports, sprites);
+  p5.text("Measure: " + (Math.floor(exports.getCurrentMeasure())), 10, 20);
 }
   return exports;
 }
