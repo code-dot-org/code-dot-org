@@ -841,8 +841,8 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
-    And I wait to see "#new_signin_button"
-    Then I click selector "#new_signin_button"
+    And I wait to see "#signin_button"
+    Then I click selector "#signin_button"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
