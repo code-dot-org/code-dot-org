@@ -57,6 +57,10 @@
         "name": "FORMAT",
         "options": [
           [
+            "circle",
+            "\"circle\""
+          ],
+          [
             "grid",
             "\"grid\""
           ],
