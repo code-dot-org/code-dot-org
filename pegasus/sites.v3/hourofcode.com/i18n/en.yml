@@ -299,8 +299,10 @@
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
   social_og_title_hoc2018_creativity: "What will you create?"
-  social_og_description_hoc2018_creativity: "This year's #HourOfCode is about creativity. I’m in! Are you?"
-  social_description_twitter_hoc2018_creativity: "This year's #HourOfCode is about creativity. I’m in! What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
 
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
