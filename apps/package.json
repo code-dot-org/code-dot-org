@@ -43,7 +43,7 @@
     "@code-dot-org/blockly": "3.1.6",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "0.1.14",
-    "@code-dot-org/dance-party": "code-dot-org/dance-party#6d297436551946738cff88e09a4ae8651c0f89a5",
+    "@code-dot-org/dance-party": "code-dot-org/dance-party#72435485573eefae1115e12e99adf8f10e819bb5",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
