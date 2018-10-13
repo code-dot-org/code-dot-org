@@ -21,9 +21,9 @@ style_min: true
 
 #homepage.supreme-container
   = view :homepage_hero
+  = view :hoc2018_curriculum_banner
 
   - if request.language == "en"
-    = view :hoc2018_curriculum_banner
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement

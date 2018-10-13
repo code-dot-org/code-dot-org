@@ -115,15 +115,15 @@ body.modal-open .supreme-container{
 #homepage #actions {
   position: relative;
   padding: 20px;
-  margin-top: 40px;
-  text-align: center
+  margin-bottom: 40px;  /* hoc2018 special */
+  text-align: left;     /* hoc2018 special */
 }
 
 @media screen and (max-width: 970px) {
   #homepage #hero {
     overflow: visible;
   }
-  #homepage #actions-mobile-gap {
+  #homepage .hoc2018 #hero-message-gap {
     margin-top: 300px;
   }
 }
@@ -139,15 +139,20 @@ body.modal-open .supreme-container{
   }
 }
 
-#homepage .bigannounce2 {
+#homepage .bigannounce-hoc2018 {
   padding: 20px;
   text-align: center;
 }
 
 @media screen and (min-width: 971px)  {
-  #homepage .bigannounce2 {
+  #homepage .bigannounce-hoc2018 {
     padding-top: 20px;
   }
+}
+
+#homepage .action.hoc2018 {
+  float: left;
+  margin-right: 20px;
 }
 
 #homepage .action .video-play-icon {
@@ -157,60 +162,64 @@ body.modal-open .supreme-container{
   margin-right: 4px;
 }
 
-.hoc2018_line1 {
+.hoc2018 .hero-message-line1 {
   font-size: 24px;
-  padding-bottom: 25px;
+  line-height: 24px;
+  padding-bottom: 3px;
 }
 
-.hoc2018_line2 {
-  font-size: 24px;
-  padding-bottom: 20px;
+.hoc2018 .hero-message-line2 {
+  font-family: 'Gotham 5r', sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  padding-bottom: 40px;
 }
 
-.hoc2018_line3 {
-  font-size: 72px;
-  height: 80px;
+.hoc2018 .hero-message-line3 {
+  font-size: 15px;
+  font-family: 'Gotham 4r', sans-serif;
+  padding-bottom: 3px;
 }
 
-#homepage #blackbox {
+#homepage .hoc2018 #blackbox {
   position:absolute;
   top: 0;
   left: 0;
-  width: 65%;
+  width: 60%;
   height: 100%;
   background-color: black;
   z-index: -1;
 }
 
-#homepage #blacktriangle {
+#homepage .hoc2018 #blacktriangle {
   position: absolute;
   top: 0;
-  left: 65%;
+  left: 60%;
   width: 10%;
   height: 100%;
   z-index: -1;
 }
 
-#homepage #blackbox_mobile {
+#homepage .hoc2018 #blackbox_mobile {
   position:absolute;
-  top: 70%;
+  top: 60%;
   left: 0;
   width: 100%;
-  height: 30%;
+  height: 40%;
   background-color: black;
   z-index: -1;
 }
 
-#homepage #blacktriangle_mobile {
+#homepage .hoc2018 #blacktriangle_mobile {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 0;
-  height: 15%;
+  height: 10%;
   width: 100%;
   z-index: -1;
 }
 
-#homepage #blacktrianglesvg {
+#homepage .hoc2018 #blacktrianglesvg {
   width: 100%;
   height: 100%;
 }
