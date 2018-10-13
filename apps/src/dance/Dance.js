@@ -316,6 +316,9 @@ Dance.prototype.initInterpreter = function () {
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);
     },
+    setPropRandom: (spriteIndex, property) => {
+      nativeAPI.setPropRandom(sprites[spriteIndex], property);
+    },
     getProp: (spriteIndex, property, val) => {
       return nativeAPI.setProp(sprites[spriteIndex], property, val);
     },
