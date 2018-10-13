@@ -18,8 +18,8 @@ def get_social_metadata_for_page(request)
     "code.org" => {
       "soon-hoc" => {
         title: hoc_s(:social_og_title_hoc2018_creativity),
-        description: hoc_s(:social_og_description_hoc2018_creativity),
-        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity_long),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_long),
         image: {path: "/images/fit-1220/social-media/default-og-image.jpg", width: 1220, height: 640}
       },
       "week-before-hoc" => {
@@ -68,8 +68,8 @@ def get_social_metadata_for_page(request)
     "hourofcode.com" => {
       "soon-hoc" => {
         title: hoc_s(:social_og_title_hoc2018_creativity),
-        description: hoc_s(:social_og_description_hoc2018_creativity),
-        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity_short),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_short),
         image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
         video: videos[:hour_of_code_worldwide]
       },
