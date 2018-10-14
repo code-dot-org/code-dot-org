@@ -150,9 +150,35 @@ body.modal-open .supreme-container{
   }
 }
 
+#homepage .bigannounce-hoc2018.desktop-feature {
+  width: 60%;
+  float: left;
+  color: white;
+}
+
+#homepage .bigannounce2-hoc2018.mobile-feature {
+  color: white;
+}
+
 #homepage .action.hoc2018 {
   float: left;
   margin-right: 20px;
+}
+
+#homepage .action.hoc2018 .herohocbutton {
+  min-width: 230px;
+  margin-right: 0px;
+}
+
+#homepage .action.hoc2018 #hero-video {
+  min-width: 230px;
+  background-color: transparent;
+  border: none;
+}
+
+#homepage .action.hoc2018 #hero-video #playtext {
+  font-size: 18px;
+   pointer-events: none;
 }
 
 #homepage .action .video-play-icon {
@@ -175,8 +201,8 @@ body.modal-open .supreme-container{
   padding-bottom: 40px;
 }
 
-.hoc2018 .hoc2018_highlight_word {
-  color: #00adbc;
+.hoc2018 .hoc2018-highlight-word {
+  color: rgb(0,173,188);
 }
 
 .hoc2018 .hero-message-gap {
@@ -195,8 +221,23 @@ body.modal-open .supreme-container{
   text-decoration: underline;
 }
 
+.hoc2018-curriculum-banner {
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(118,101,160);;
+  text-align: center;
+  color: white; padding: 20px;
+  font-size: 15px;
+}
+
+.hoc2018-curriculum-link {
+  color: white !important;
+  font-family: 'Gotham 4r', sans-serif !important;
+  text-decoration: underline !important;
+}
+
 #homepage .hoc2018 #blackbox {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 60%;
@@ -216,7 +257,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage .hoc2018 #blackbox_mobile {
-  position:absolute;
+  position: absolute;
   top: 60%;
   left: 0;
   width: 100%;
@@ -291,7 +332,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions .herohocbutton-solid-white {
-  color: #4d575f;
+  color: black;
   background-color: white;
   border-color: white;
 }
