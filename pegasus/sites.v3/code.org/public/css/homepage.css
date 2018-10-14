@@ -203,6 +203,7 @@ body.modal-open .supreme-container{
   height: 100%;
   background-color: black;
   z-index: -1;
+  -webkit-transform: translate3d(0,0,0);
 }
 
 #homepage .hoc2018 #blacktriangle {
