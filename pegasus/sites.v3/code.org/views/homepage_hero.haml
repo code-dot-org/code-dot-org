@@ -37,15 +37,15 @@
       #blackbackground.desktop-feature
         #blackbox
         #blacktriangle
-          %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 1 1"}
+          %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 2 1"}
             %g
-              %path{style: "fill: black", d: "M0,0 L1,0 L0,1 z"}
+              %path{style: "fill: black", d: "M0,0 L2,0 L1,1 L0,1 z"}
       #blackbackground.mobile-feature
         #blackbox_mobile
         #blacktriangle_mobile
-          %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 1 1"}
+          %svg#blacktrianglesvg{xmlns: "http://www.w3.org/2000/svg", preserveAspectRatio: "none", viewBox: "0 0 1 2"}
             %g
-              %path{style: "fill: black", d: "M0,1 L1,0 L1,1 z"}
+              %path{style: "fill: black", d: "M0,1 L1,0 L1,2 L0,2 z"}
 
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
