@@ -22,11 +22,11 @@
         %a.linktag#hero-hoc{href: entry[:url]}
           - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
           - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
-          %button.herohocbutton{class: extra_class, style: "min-width: 230px; margin-right: 0px"}= I18n.t(entry[:text])
+          %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
       - elsif false && entry[:type] == "video"  # There's a special video link for hoc2018, so don't show video action here
-        %button.clicktag#hero-video{onclick: "return showVideo_mainvideo();", style: "min-width: 230px; background-color: transparent; border: none"}
+        %button.clicktag#hero-video{onclick: "return showVideo_mainvideo();"}
           %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
-          %span#playtext{style: "font-size: 18px; pointer-events: none"}= I18n.t(entry[:text])
+          %span#playtext= I18n.t(entry[:text])
 
   .clear{style: "clear: both"}
 
@@ -69,11 +69,11 @@
         = view :mobile_header_responsive
 
   - if show_single_hero
-    .bigannounce-hoc2018.desktop-feature{style: "width: 60%; float: left; color: white"}
+    .bigannounce-hoc2018.desktop-feature
       - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
       %div{id: actions_id}
         = main_actions
-    .bigannounce2-hoc2018.mobile-feature{style: "color: white"}
+    .bigannounce2-hoc2018.mobile-feature
       - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
       %div{id: actions_id}
         = main_actions
