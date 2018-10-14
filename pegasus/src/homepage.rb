@@ -115,8 +115,8 @@ class Homepage
       facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
       twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
     else
-      youtube_id = "nKIu9yen5nc"
-      download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
+      youtube_id = "VYqHGIR7a_k"
+      download_path = "//videos.code.org/social/creativity-is.mp4"
       facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
       twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
     end
