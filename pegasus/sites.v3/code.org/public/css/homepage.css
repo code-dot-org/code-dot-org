@@ -175,10 +175,24 @@ body.modal-open .supreme-container{
   padding-bottom: 40px;
 }
 
+.hoc2018 .hoc2018_highlight_word {
+  color: #00adbc;
+}
+
+.hoc2018 .hero-message-gap {
+  height: 140px;
+}
+
 .hoc2018 .hero-message-line3 {
   font-size: 15px;
   font-family: 'Gotham 4r', sans-serif;
   padding-bottom: 3px;
+}
+
+.hoc2018 .hero_video_link {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
 }
 
 #homepage .hoc2018 #blackbox {
