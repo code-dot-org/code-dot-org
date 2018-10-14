@@ -308,7 +308,7 @@ class Homepage
   end
 
   def self.show_single_hero
-    return "hoc2018"
+    "hoc2018"
   end
 
   def self.show_single_hero_mobile_gap
