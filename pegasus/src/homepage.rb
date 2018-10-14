@@ -118,7 +118,7 @@ class Homepage
       youtube_id = "VYqHGIR7a_k"
       download_path = "//videos.code.org/social/creativity-is.mp4"
       facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
-      twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+      twitter = "Every student deserves the opportunity to express their creativity with computer science. What will you create? https://twitter.com/codeorg/status/828716370053304321"
     end
 
     [
