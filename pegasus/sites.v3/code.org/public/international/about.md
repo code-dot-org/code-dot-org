@@ -5,11 +5,11 @@ theme: responsive
 
 # About Us
 
-Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org provides the leading curriculum for K-12 computer science in the largest school districts in the United States and Code.org also organizes the annual [Hour of Code](hourofcode.com) campaign which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and [many more](/about/donors).
+Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. Code.org provides the leading curriculum for K-12 computer science in the largest school districts in the United States and Code.org also organizes the annual [Hour of Code](hourofcode.com) campaign which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and [many more](/about/donors).
 
 ## History 
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a video promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
 
 ## What We Do
 
@@ -17,17 +17,18 @@ We do work across the education spectrum: designing our own courses or partnerin
 
 ## Code.org's International Reach 
 
--site usage is 40% international
--Making CS part of international education discourse (Code.org & global leaders) 
--More than 100 international partners promoting the Hour of Code, advocating for policy change, and training teachers 
+Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with more than 100 international partners helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
 
-### Translation 
-- Help us, link to /translate 
+## Translation 
+
+Want to have direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Visit our [translation guide](/translate) for more information. 
 
 ## Our commitment to free curriculum and open source technology
 
-All curriculum resources and tutorials we author will forever be free to use and openly licensed under a Creative Commons license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, contact us. Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an open source project.
+All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
 
 ## Follow us
 
-Sign up to receive status updates about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+
+<%= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg" %>
