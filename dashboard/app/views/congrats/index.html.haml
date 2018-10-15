@@ -6,10 +6,9 @@
   if current_user
     congrats_data[:current_user] = current_user
     # We need to know the user's age to determine whether we should suggest
-    # they use our advanced tools (AppLab & GameLab). For users who do not have
-    # an age set, we default them to 12 so they aren't shown the tools if
-    # they're indeed too young.
-    congrats_data[:user_age] = current_user.age ||= 12
+    # they use our advanced tools (AppLab & GameLab) and whether they should
+    # see social media sharing links.
+    congrats_data[:under_13] = current_user.under_13?
   end
 
 #congrats-container
