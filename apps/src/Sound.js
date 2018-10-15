@@ -32,6 +32,10 @@ export default function Sound(config, audioContext) {
    *          do it ourselves.
    */
   this.isPlaying_ = false;
+  /**
+   * @private {boolean} Whether the sound is loaded.
+   */
+  this.isLoaded_ = false;
 }
 
 /**
@@ -95,6 +99,18 @@ Sound.prototype.play = function (options) {
   this.handlePlayStarted(options);
 };
 
+Sound.prototype.playAfterLoad = function (options) {
+  if (this.isLoaded() || this.config.playAfterLoad) {
+    // If this sound is already loaded, or playAfterLoad has already been
+    // set on this sound, then we must fail this play request
+    this.handlePlayFailed(options);
+    return;
+  }
+  // Store the options and play the sound once the load has completed
+  this.config.playAfterLoad = true;
+  this.config.playAfterLoadOptions = options;
+};
+
 Sound.prototype.handlePlayFailed = function (options) {
   if (options.callback) {
     options.callback(false);
@@ -136,6 +152,13 @@ Sound.prototype.stop = function () {
  */
 Sound.prototype.isPlaying = function () {
   return this.isPlaying_;
+};
+
+/**
+ * @returns {boolean} whether the sound is currently loaded.
+ */
+Sound.prototype.isLoaded = function () {
+  return this.isLoaded_;
 };
 
 Sound.prototype.newPlayableBufferSource = function (buffer, options) {
@@ -302,6 +325,7 @@ Sound.prototype.preload = function () {
 };
 
 Sound.prototype.onSoundLoaded = function () {
+  this.isLoaded_ = true;
   if (this.config.playAfterLoad) {
     this.play(this.config.playAfterLoadOptions);
   }
