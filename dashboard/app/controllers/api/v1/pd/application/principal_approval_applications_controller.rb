@@ -30,8 +30,8 @@ module Api::V1::Pd::Application
           principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_implementation: implementation_string,
           principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
-          principal_free_lunch_percent: principal_response[:free_lunch_percent],
-          principal_underrepresented_minority_percent: @application.underrepresented_minority_percent.to_s,
+          principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
+          principal_underrepresented_minority_percent: format("%0.02f%%", @application.underrepresented_minority_percent),
           principal_wont_replace_existing_course: replace_course_string,
           principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],
@@ -39,6 +39,7 @@ module Api::V1::Pd::Application
         }
       )
       teacher_application.save!
+      teacher_application.auto_score!
       teacher_application.queue_email(:principal_approval_completed, deliver_now: true)
       teacher_application.queue_email(:principal_approval_completed_partner, deliver_now: true)
     end

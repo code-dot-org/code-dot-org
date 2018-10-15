@@ -267,7 +267,11 @@ Sounds.prototype.playURL = function (url, playbackOptions) {
   // (NOTE: not ideal because preload happens inside first play)
   var sound = this.soundsById[url];
   if (sound) {
-    sound.play(playbackOptions);
+    if (sound.isLoaded()) {
+      sound.play(playbackOptions);
+    } else {
+      sound.playAfterLoad(playbackOptions);
+    }
   } else {
     var soundConfig = {id: url};
     var ext = Sounds.getExtensionFromUrl(url);

@@ -4,13 +4,12 @@ import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import {getStore} from "../redux";
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-
+import {commands as audioCommands} from '../lib/util/audioApi';
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
-import {TestResults, ResultType} from '../constants';
-import {createDanceAPI} from './DanceLabP5';
-import initDance from './p5.dance';
+import {TestResults} from '../constants';
+import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers} from './redux';
 
 //TODO: Remove this during clean-up
@@ -179,18 +178,22 @@ Dance.prototype.reset = function () {
   this.p5.noLoop();
 };
 
-Dance.prototype.onPuzzleComplete = function (testResult) {
+Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
-  if (testResult) {
-    this.testResults = testResult;
+  if (result === true) {
+    this.testResults = TestResults.ALL_PASS;
+    this.message = message;
+  } else if (result === false) {
+    this.testResults = TestResults.APP_SPECIFIC_FAIL;
+    this.message = message;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
 
   // If we know they succeeded, mark `levelComplete` true.
-  const levelComplete = (this.result === ResultType.SUCCESS);
+  const levelComplete = result;
 
   // We're using blockly, report the program as xml.
   var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
@@ -230,6 +233,10 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = function () {
+  if (!this.nativeAPI.metadataLoaded()) {
+    return;
+  }
+
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
@@ -246,7 +253,6 @@ Dance.prototype.runButtonClick = function () {
 };
 
 Dance.prototype.execute = function () {
-  this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
@@ -256,7 +262,6 @@ Dance.prototype.execute = function () {
     return;
   }
 
-  // TODO: re-run user code, start p5 looping.
   this.initInterpreter();
   this.p5.loop();
 
@@ -264,6 +269,9 @@ Dance.prototype.execute = function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
   this.nativeAPI.play();
+
+  const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
+  this.nativeAPI.registerValidation(validationCallback);
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -308,6 +316,9 @@ Dance.prototype.initInterpreter = function () {
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);
     },
+    setPropRandom: (spriteIndex, property) => {
+      nativeAPI.setPropRandom(sprites[spriteIndex], property);
+    },
     getProp: (spriteIndex, property, val) => {
       return nativeAPI.setProp(sprites[spriteIndex], property, val);
     },
@@ -341,6 +352,9 @@ Dance.prototype.initInterpreter = function () {
     randomColor: () => {
       return nativeAPI.randomColor();
     },
+    getCurrentTime: () => {
+      return nativeAPI.getCurrentTime();
+    },
   };
 
   let code = require('!!raw-loader!./p5.dance.interpreted');
@@ -362,9 +376,11 @@ Dance.prototype.onP5Preload = function () {
   let options = {id: getStore().getState().selectedSong};
   options['mp3'] = songs_data[options.id].url;
   Sounds.getSingleton().register(options);
+  const getSelectedSong = () => getStore().getState().selectedSong;
 
-  const Dance = createDanceAPI(this.p5);
-  this.nativeAPI = initDance(this.p5, Dance);
+  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this));
+  const spriteConfig = new Function('World', this.level.customHelperLibrary);
+  this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
 };
 

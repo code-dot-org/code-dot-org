@@ -1,43 +1,8 @@
 /* eslint-disable */
 
-// Songs
-var songs = {
-  macklemore: {
-    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
-    duration: 90,
-    bpm: 146,
-    delay: 0.2, // Seconds to delay before calculating measures
-    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
-    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
-  },
-  macklemore90: {
-    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
-    duration: 90,
-    bpm: 146,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
-    chorus: [65.75] // Array of timestamps in seconds where choruses occur
-  },
-  hammer: {
-    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
-    duration: 90,
-    bpm: 133,
-    delay: 2.32, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  },
-  peas: {
-    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
-    duration: 90,
-    bpm: 128,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  }
-};
-var song_meta = songs.hammer;
 var sprites = 'all'; // compat
 
+// Needed for block dropdown enum options.
 var MOVES = {
   Rest: 0,
   ClapHigh: 1,
@@ -53,13 +18,9 @@ var MOVES = {
   Thriller: 11
 };
 
-// Event handlers, loops, and callbacks
+// Event handlers, loops, and callbacks.
 var inputEvents = [];
 var setupCallbacks = [];
-
-function nMeasures(n) {
-  return (240 * n) / song_meta.bpm;
-}
 
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
@@ -67,12 +28,18 @@ function randomNumber(min, max) {
 
 function getCueList() {
   var timestamps = [];
+  var measures = [];
   for (var i = 0; i < inputEvents.length; i++) {
-    if (inputEvents[i].type === 'cue') {
+    if (inputEvents[i].type === 'cue-seconds') {
       timestamps.push(inputEvents[i].param);
+    } else if (inputEvents[i].type === 'cue-measures') {
+      measures.push(inputEvents[i].param);
     }
   }
-  return timestamps;
+  return {
+    seconds: timestamps,
+    measures: measures
+  };
 }
 
 function registerSetup(callback) {
@@ -101,7 +68,6 @@ function whenSetup(event) {
 }
 
 function whenSetupSong(song, event) {
-  //song_meta = songs[song];
   setupCallbacks.push(event);
 }
 
@@ -130,28 +96,24 @@ function whenPeak(range, event) {
 }
 
 function atTimestamp(timestamp, unit, event) {
-  if (unit === "measures") {
-    timestamp = nMeasures(timestamp);
-    timestamp += song_meta.delay;
-  }
   inputEvents.push({
-    type: 'cue',
+    type: 'cue-' + unit,
     event: event,
     param: timestamp
   });
 }
 
 function everySeconds(n, unit, event) {
-  everySecondsRange(n, unit, 0, song_meta.duration || 90, event);
+  // TODO: 90 seconds is the max for songs, but 90 measures is too long
+  everySecondsRange(n, unit, 0, 90, event);
 }
 
 function everySecondsRange(n, unit, start, stop, event) {
-  if (unit === "measures") n = nMeasures(n);
   if (n > 0) {
     var timestamp = start;
     while (timestamp < stop) {
       inputEvents.push({
-        type: 'cue',
+        type: 'cue-' + unit,
         event: event,
         param: timestamp
       });
@@ -161,11 +123,9 @@ function everySecondsRange(n, unit, start, stop, event) {
 }
 
 function everyVerseChorus(unit, event) {
-  song_meta[unit].forEach(function (timestamp) {
-    inputEvents.push({
-      type: 'cue',
-      event: event,
-      param: timestamp
-    });
+  inputEvents.push({
+    type: 'verseChorus',
+    event: event,
+    param: unit
   });
 }
