@@ -73,6 +73,15 @@ module Pd::Application
 
     before_save :log_status, if: -> {status_changed?}
 
+    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
+
+    def workshop_present_if_required_for_status
+      if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
+          ['registration_sent', 'accepted_no_cost_registration'].include?(status) && !pd_workshop_id
+        errors.add :status, "#{status} requires workshop to be assigned"
+      end
+    end
+
     def should_send_decision_email?
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
         false
