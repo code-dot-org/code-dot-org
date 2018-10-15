@@ -13,7 +13,7 @@ $(document).ready(function () {
   const congratsData = JSON.parse(script.dataset.congrats);
   const userType = congratsData.current_user ? congratsData.current_user.user_type : "signedOut";
   const language = congratsData.language;
-  const userAge = congratsData.user_age;
+  const under13 = congratsData.under_13;
   const randomDonorTwitter = congratsData.random_donor_twitter;
 
   let certificateId = '';
@@ -32,7 +32,7 @@ $(document).ready(function () {
         certificateId={certificateId}
         tutorial={tutorial}
         userType={userType}
-        userAge={userAge}
+        under13={under13}
         language={language}
         MCShareLink={mcShareLink}
         randomDonorTwitter={randomDonorTwitter}

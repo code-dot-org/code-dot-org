@@ -22,6 +22,7 @@ describe("DetailViewContents", () => {
       school_name: 'School Name',
       district_name: 'District Name',
       email: 'email',
+      application_year: '2019-2020',
       application_type: applicationType,
       course_name: 'CS Fundamentals',
       registered_fit_weekend: false,
@@ -86,7 +87,7 @@ describe("DetailViewContents", () => {
   });
 
   const expectedTestData = [
-    {type: 'Teacher', applicationSpecificQuestions: 7, scoredQuestions: 2},
+    {type: 'Teacher', applicationSpecificQuestions: 6, scoredQuestions: 2},
     {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0}
   ];
 

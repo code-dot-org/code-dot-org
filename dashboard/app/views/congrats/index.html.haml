@@ -5,7 +5,10 @@
   congrats_data[:random_donor_twitter] = @random_donor_twitter
   if current_user
     congrats_data[:current_user] = current_user
-    congrats_data[:user_age] = UserHelpers.age_from_birthday(current_user[:birthday])
+    # We need to know the user's age to determine whether we should suggest
+    # they use our advanced tools (AppLab & GameLab) and whether they should
+    # see social media sharing links.
+    congrats_data[:under_13] = current_user.under_13?
   end
 
 #congrats-container

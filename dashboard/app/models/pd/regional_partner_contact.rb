@@ -102,7 +102,11 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
         add_key_error(:school_district_data) unless hash[:school_district].presence
       end
     else
-      add_key_error(:school_district_data) unless hash[:school_name].presence && hash[:school_zipcode]
+      add_key_error(:school_district_data) unless hash[:school_name].presence
+    end
+
+    if hash[:school_name].presence && !hash[:school_zipcode].presence
+      add_key_error(:school_district_data)
     end
   end
 

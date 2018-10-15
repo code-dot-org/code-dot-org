@@ -1,3 +1,3 @@
 function spawnEntity(entity) {
-  api.spawnEntity(null, entity, "left");
+  api.spawnEntityAt(null, "chicken",2,2,0);
 }
