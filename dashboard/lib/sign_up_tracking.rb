@@ -18,14 +18,15 @@ module SignUpTracking
   end
 
   def self.begin_sign_up_tracking(session, split_test: false)
-    unless session[:sign_up_tracking_expiration]&.future?
-      session[:sign_up_uid] = SecureRandom.uuid.to_s
-      session[:sign_up_tracking_expiration] = 1.day.from_now
-    end
+    # No-op if sign_up_tracking_expiration is set and in the future.
+    return if session[:sign_up_tracking_expiration]&.future?
+
+    session[:sign_up_uid] = SecureRandom.uuid.to_s
+    session[:sign_up_tracking_expiration] = 1.day.from_now
 
     if split_test
       session[:sign_up_study_group] = Random.rand(100) < split_test_percentage ?
-          NEW_SIGN_UP_GROUP : CONTROL_GROUP
+        NEW_SIGN_UP_GROUP : CONTROL_GROUP
     end
   end
 

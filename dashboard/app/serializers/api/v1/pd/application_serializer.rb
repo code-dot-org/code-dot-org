@@ -11,6 +11,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :school_name,
     :district_name,
     :email,
+    :application_year,
     :application_type,
     :response_scores,
     :course,
@@ -28,6 +29,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :registered_fit_weekend,
     :attending_teachercon,
     :principal_approval_state,
+    :meets_scholarship_criteria,
     :school_stats
   )
 
@@ -98,6 +100,14 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     object.try(:principal_approval)
   end
 
+  def meets_scholarship_criteria
+    object.try(:meets_scholarship_criteria)
+  end
+
+  def percent_string(count, total)
+    "#{(100.0 * count / total).round(2)}%"
+  end
+
   def school_stats
     return nil unless object.try(:school_id)
 
@@ -149,9 +159,5 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
         }
       ]
     }
-  end
-
-  def percent_string(count, total)
-    "#{(100.0 * count / total).round(2)}%"
   end
 end
