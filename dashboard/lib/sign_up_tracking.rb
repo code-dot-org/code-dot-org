@@ -117,20 +117,19 @@ module SignUpTracking
     return unless user && session
     sign_up_type = session[:sign_up_type]
     sign_up_type ||= user.email ? 'email' : 'other'
-    if session[:sign_up_tracking_expiration]&.future?
-      result = user.persisted? ? 'success' : 'error'
-      tracking_data = {
-        study: STUDY_NAME,
-        study_group: study_group(session),
-        event: "#{sign_up_type}-sign-up-#{result}",
-        data_string: session[:sign_up_uid],
-        data_json: {
-          detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST),
-          errors: user.errors&.full_messages
-        }.to_json
-      }
-      FirehoseClient.instance.put_record(tracking_data)
-    end
+    result = user.persisted? ? 'success' : 'error'
+    tracking_data = {
+      study: STUDY_NAME,
+      study_group: study_group(session),
+      event: "#{sign_up_type}-sign-up-#{result}",
+      data_string: session[:sign_up_uid],
+      data_json: {
+        detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST),
+        errors: user.errors&.full_messages
+      }.to_json
+    }
+    FirehoseClient.instance.put_record(tracking_data)
+
     end_sign_up_tracking session if user.persisted?
   end
 end
