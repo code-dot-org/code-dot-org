@@ -856,10 +856,10 @@ module Pd::Application
     end
 
     test 'formatted_partner_contact_email' do
-      application = build :pd_teacher1920_application
+      application = create :pd_teacher1920_application
 
-      partner = build :regional_partner, contact: nil
-      contact = build :teacher
+      partner = create :regional_partner, contact: nil
+      contact = create :teacher
 
       # no partner
       assert_nil application.formatted_partner_contact_email
@@ -881,7 +881,7 @@ module Pd::Application
       assert_equal "#{contact.name} <#{contact.email}>", application.formatted_partner_contact_email
 
       # program manager but no contact_name or contact_email
-      program_manager = build :regional_partner_program_manager, regional_partner: partner
+      program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
       assert_equal "#{program_manager.name} <#{program_manager.email}>", application.formatted_partner_contact_email
 
       # name and email
