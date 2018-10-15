@@ -15,7 +15,7 @@
 
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
-  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create</span>'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
