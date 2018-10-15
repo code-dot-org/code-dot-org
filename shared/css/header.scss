@@ -103,14 +103,15 @@
       float: right;
 
       .button-signin {
-        margin-top: -3px;
+        margin-top: -4px;
         background-color: transparent;
         border: 2px solid $white;
         color: $white;
       }
 
-      #new_signin_button {
-        margin-top: -11px;
+      #signin_button {
+        margin-top: -9px;
+        height: 38px;
       }
     }
   }
@@ -120,10 +121,10 @@
     background-color: transparent;
     border: 2px solid $white;
     margin-top: -4px;
-    height: 36px;
+    height: 38px;
     user-select: none;
 
-    .user_name, .create_button {
+    .create_button {
       font-family: 'Gotham 4r', sans-serif;
       max-width: 120px;
       display: inline-block;
@@ -175,7 +176,6 @@
     a {
       color: $teal;
       font-family: 'Gotham 5r', sans-serif;
-      height: 70px;
       width: 258px;
       font-size: 14px;
       float: left;
@@ -197,7 +197,7 @@
     }
     .project_link {
       padding-left: 10px;
-      line-height: 62px;
+      line-height: 70px;
       float: left;
     }
     #view_all_projects {
@@ -220,5 +220,8 @@
     .create_menu {
       display: none !important;
     }
+    #signin_button {
+     margin-top: -4px !important;
+   }
   }
 }
