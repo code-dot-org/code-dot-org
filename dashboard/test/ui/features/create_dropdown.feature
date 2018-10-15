@@ -1,20 +1,6 @@
 @no_mobile
 Feature: Create Dropdown in Header
 
-#TOOD: Erin B., remove the pagemode cookie related steps when launched.
-
-Background:
-  # The pagemode cookie must be set separately on Dashboard and
-  # Pegasus because they are different domains.
-  Given I am on "http://code.org/"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
-  Given I am on "http://studio.code.org/projects/public"
-  Given I set the pagemode cookie to "create_header_2018"
-  Then I reload the page
-  And I wait until element ".create_menu" is visible
-
 Scenario: Create Dropdown does NOT show on level pages
   Given I create a student named "16 Year Old"
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
