@@ -183,7 +183,7 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
-        {this.props.danceLab &&
+        {this.props.danceLab && !this.props.isShareView &&
           <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
         }
         <ProtectedVisualizationDiv>
