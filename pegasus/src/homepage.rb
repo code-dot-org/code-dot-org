@@ -115,17 +115,22 @@ class Homepage
       facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
       twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
     else
-      youtube_id = "nKIu9yen5nc"
-      download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
-      facebook = "https://www.facebook.com/Code.org/videos/10100689712053311/"
-      twitter = "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+      youtube_id = "VYqHGIR7a_k"
+      download_path = "//videos.code.org/social/creativity-is.mp4"
+      facebook = "https://www.facebook.com/Code.org/videos/279676706209196/"
+      twitter = "Every student deserves the opportunity to express their creativity with computer science. What will you create? https://twitter.com/codeorg/status/1051805228859834368"
     end
 
     [
       {
-        text: "homepage_action_text_learn",
-        type: "cta_button",
-        url: CDO.studio_url("/courses")
+        text: "homepage_action_text_join_us",
+        type: "cta_button_solid_white",
+        url: CDO.hourofcode_url("#join")
+      },
+      {
+        text: "homepage_action_text_try_it",
+        type: "cta_button_hollow_white",
+        url: "/learn"
       },
       {
         text: "homepage_action_text_codevideo",
@@ -302,16 +307,16 @@ class Homepage
     }
   end
 
-  def self.get_census(request)
-    # While showing the professional-learning-2018 banner in "en", use the
-    # census layout (no cycling through hero images) but don't show the census
-    # announcement itself.
-    return request.language == "en", false, nil
+  def self.show_single_hero
+    "hoc2018"
+  end
+
+  def self.show_single_hero_mobile_gap
+    false
   end
 
   def self.get_heroes_arranged(request)
-    show_census_layout, _, _ = Homepage.get_census(request)
-    census_announcement_hero = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
+    hoc2018_hero = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2018.jpg"}]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
@@ -324,8 +329,8 @@ class Homepage
     elsif rack_env != :production && request.params["lock-hero"]
       # For UI tests just lock to the first hero image
       heroes_arranged = heroes[0, 1]
-    elsif show_census_layout
-      heroes_arranged = census_announcement_hero
+    elsif show_single_hero
+      heroes_arranged = hoc2018_hero
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,

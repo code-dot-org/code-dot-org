@@ -347,7 +347,7 @@ img.video_thumbnail {
     height: 38px;
     user-select: none;
 
-    .user_name, .create_button {
+    .create_button {
       max-width: 120px;
       display: inline-block;
       float: left;
@@ -402,7 +402,7 @@ img.video_thumbnail {
       }
       .project_link {
         padding-left: 10px;
-        line-height: 62px;
+        line-height: 70px;
         float: left;
       }
       #view_all_projects {

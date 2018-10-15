@@ -41,6 +41,7 @@ module RegistrationsControllerTests
     test 'successful email sign up in old signup flow sends Firehose success event' do
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
+          data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'load-sign-up-page' &&
           data[:data_string] == UUID
       end
@@ -65,6 +66,7 @@ module RegistrationsControllerTests
       SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
+          data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
           data[:event] == 'load-new-sign-up-page' &&
           data[:data_string] == UUID
       end
@@ -87,6 +89,7 @@ module RegistrationsControllerTests
     test 'email sign up with wrong password confirmation in old signup flow sends Firehose error event' do
       FirehoseClient.instance.expects(:put_record).with do |data|
         data[:study] == STUDY &&
+          data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'load-sign-up-page' &&
           data[:data_string] == UUID
       end

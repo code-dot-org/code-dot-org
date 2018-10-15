@@ -47,8 +47,8 @@ module Api::V1::Pd::Application
         principal_approval: 'Yes',
         principal_schedule_confirmed: 'Yes, I plan to include this course in the 2019-20 master schedule',
         principal_diversity_recruitment: 'Yes',
-        principal_free_lunch_percent: '50%',
-        principal_underrepresented_minority_percent: '52.0',
+        principal_free_lunch_percent: '50.00%',
+        principal_underrepresented_minority_percent: '52.00%',
         principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
         principal_pay_fee: 'Yes, my school or teacher will be able to pay the full program fee.'
       }
@@ -140,6 +140,14 @@ module Api::V1::Pd::Application
         put :create, params: @test_params
       end
       assert_response :success
+    end
+
+    test 'application gets autoscored upon submission' do
+      put :create, params: @test_params
+
+      @teacher_application.reload
+
+      assert_equal YES, JSON.parse(@teacher_application.response_scores)['principal_approval']
     end
   end
 end
