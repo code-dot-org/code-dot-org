@@ -959,8 +959,8 @@ module Pd::Application
       assert_equal 'Complete - Yes', application.reload.principal_approval_state
     end
 
-    test 'require assigned workshop for some statuses when emails sent by system' do
-      statuses = ['accepted_no_cost_registration', 'registration_sent']
+    test 'require assigned workshop for registration-related statuses when emails sent by system' do
+      statuses = Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
       workshop = create :pd_workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
       application = create :pd_teacher1920_application, {
@@ -974,6 +974,32 @@ module Pd::Application
       end
 
       application.pd_workshop_id = workshop.id
+      statuses.each do |status|
+        application.status = status
+        assert application.valid?
+      end
+    end
+
+    test 'do not require assigned workshop for registration-related statuses if emails sent by partner' do
+      statuses = Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
+      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      application = create :pd_teacher1920_application, {
+        regional_partner: partner
+      }
+
+      statuses.each do |status|
+        application.status = status
+        assert application.valid?
+      end
+    end
+
+    test 'do not require workshop for non-registration-related statuses' do
+      statuses = Teacher1920Application.statuses - Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
+      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      application = create :pd_teacher1920_application, {
+        regional_partner: partner
+      }
+
       statuses.each do |status|
         application.status = status
         assert application.valid?
