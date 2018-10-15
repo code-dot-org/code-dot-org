@@ -105,6 +105,7 @@ module SignUpTracking
     if session[:sign_up_tracking_expiration]&.future?
       tracking_data = {
         study: STUDY_NAME,
+        study_group: study_group(session),
         event: "#{provider}-sign-in",
         data_string: session[:sign_up_uid]
       }
