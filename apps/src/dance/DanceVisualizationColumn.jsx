@@ -87,6 +87,7 @@ class DanceVisualizationColumn extends React.Component {
     showFinishButton: PropTypes.bool.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
+    isShareView: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -100,7 +101,9 @@ class DanceVisualizationColumn extends React.Component {
     };
     return (
       <span>
-        <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
+        {!this.props.isShareView &&
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
+        }
         <ProtectedVisualizationDiv>
           <div
             id="divDance"
@@ -117,6 +120,7 @@ class DanceVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
+  isShareView: state.pageConstants.isShareView,
   selectedSong: state.selectedSong,
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
