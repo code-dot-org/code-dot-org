@@ -130,7 +130,7 @@ export default class TeacherHomepage extends Component {
     const { canViewAdvancedTools, isEnglish, queryStringOpen } = this.props;
 
     // Don't show the special announcement for now.
-    const showSpecialAnnouncement = false;
+    const showSpecialAnnouncement = true;
 
     return (
       <div>

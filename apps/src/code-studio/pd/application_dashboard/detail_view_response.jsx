@@ -16,7 +16,9 @@ const styles = {
   },
   panel: {
     width: '66%',
-    minWidth: 500
+    minWidth: 500,
+    marginTop: '10px',
+    marginBottom: '10px'
   }
 };
 

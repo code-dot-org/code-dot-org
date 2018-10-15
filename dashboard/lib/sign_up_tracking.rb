@@ -18,14 +18,15 @@ module SignUpTracking
   end
 
   def self.begin_sign_up_tracking(session, split_test: false)
-    unless session[:sign_up_tracking_expiration]&.future?
-      session[:sign_up_uid] = SecureRandom.uuid.to_s
-      session[:sign_up_tracking_expiration] = 1.day.from_now
-    end
+    # No-op if sign_up_tracking_expiration is set and in the future.
+    return if session[:sign_up_tracking_expiration]&.future?
+
+    session[:sign_up_uid] = SecureRandom.uuid.to_s
+    session[:sign_up_tracking_expiration] = 1.day.from_now
 
     if split_test
       session[:sign_up_study_group] = Random.rand(100) < split_test_percentage ?
-          NEW_SIGN_UP_GROUP : CONTROL_GROUP
+        NEW_SIGN_UP_GROUP : CONTROL_GROUP
     end
   end
 
@@ -48,6 +49,7 @@ module SignUpTracking
     event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
+      study_group: study_group(session),
       event: event_name,
       data_string: session[:sign_up_uid]
     )
@@ -58,6 +60,7 @@ module SignUpTracking
     result = user.errors.empty? ? 'success' : 'error'
     tracking_data = {
       study: STUDY_NAME,
+      study_group: study_group(session),
       event: "begin-sign-up-#{result}",
       data_string: session[:sign_up_uid],
       data_json: {
