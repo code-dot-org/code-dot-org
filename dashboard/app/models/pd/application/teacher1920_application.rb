@@ -69,6 +69,14 @@ module Pd::Application
       registration_sent
     )
 
+    # If the regional partner's emails are SENT_BY_SYSTEM, the application must
+    # have an assigned workshop to be set to one of these statuses because they
+    # trigger emails with a link to the workshop registration form
+    WORKSHOP_REQUIRED_STATUSES = %w(
+      accepted_no_cost_registration
+      registration_sent
+    )
+
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
     before_save :log_status, if: -> {status_changed?}
@@ -77,7 +85,7 @@ module Pd::Application
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
-          ['registration_sent', 'accepted_no_cost_registration'].include?(status) && !pd_workshop_id
+          WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
         errors.add :status, "#{status} requires workshop to be assigned"
       end
     end
