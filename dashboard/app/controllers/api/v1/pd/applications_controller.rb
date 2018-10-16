@@ -175,7 +175,10 @@ module Api::V1::Pd
       # only allow those with full management permission to lock/unlock and edit form data
       if current_user.workshop_admin?
         if current_user.workshop_admin? && application_admin_params.key?(:locked)
-          application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          # only current facilitator applications can be locked/unlocked
+          if @application.is_a? Pd::Application::Facilitator1819Application
+            application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          end
         end
 
         @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
