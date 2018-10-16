@@ -24,6 +24,7 @@ import dom from '../dom';
 import Radium from "radium";
 import songLibrary from "../code-studio/songLibrary.json";
 import * as danceRedux from "../dance/redux";
+import project from '../code-studio/initApp/project';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -45,7 +46,9 @@ const SongSelector = Radium(class extends React.Component {
   };
 
   changeSong = (event) => {
-    this.props.setSong(event.target.value);
+    const song = event.target.value;
+    this.props.setSong(song);
+    project.saveSelectedSong(song);
   };
 
   render() {
