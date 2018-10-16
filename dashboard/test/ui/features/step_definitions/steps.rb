@@ -1477,7 +1477,10 @@ When /^I see the section set up box$/ do
 end
 
 When /^I press the new section button$/ do
-  steps 'When I press the first ".uitest-newsection" element'
+  steps <<-STEPS
+    Given I scroll the ".uitest-newsection" element into view
+    When I press the first ".uitest-newsection" element
+  STEPS
 end
 
 Then /^I should see the new section dialog$/ do
