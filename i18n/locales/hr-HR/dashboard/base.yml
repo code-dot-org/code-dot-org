@@ -180,13 +180,6 @@ hr:
         applab: 'Napravi aplikaciju'
       project_gallery: "Projekti"
       educate_hoc: "Hour of Code"
-    create_button:
-      create: 'Stvori'
-      applab: 'Laboratorij aplikacija'
-      artist: 'Umjetnik'
-      playlab: 'Laboratorij igara'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Učiteljeva Početna stranica'
       district_dashboard: 'Regionalna nadzorna ploča'
@@ -196,6 +189,12 @@ hr:
       logout: 'Odjava'
       signin: 'Prijava'
       already_registered: 'Jeste li već registrirani?'
+      create: 'Stvori'
+      applab: 'Laboratorij aplikacija'
+      artist: 'Umjetnik'
+      playlab: 'Laboratorij igara'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Napredak %{name}"
       progress: 'Tvoj napredak'
