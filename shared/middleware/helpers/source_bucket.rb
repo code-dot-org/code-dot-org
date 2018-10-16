@@ -77,6 +77,7 @@ class SourceBucket < BucketHelper
     src_prefix = s3_path src_owner_id, src_channel_id
 
     # For each file, copy it, update the animations, return it
+    track_list_operation 'SourceBucket.remix_source'
     s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
 
