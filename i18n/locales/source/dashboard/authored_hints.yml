@@ -3683,6 +3683,8 @@ en:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: If you call the functions correctly, this is the path you will travel...
         Function_intro_Ryan_a: You can call a function many times inside of your program!  Try calling it twice to solve this puzzle.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "See the **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? How can you use a conditional with them to get through the Ocean Monument?\n\n"
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: What a beautiful coral reef! Blue coral is the **right** way to go, and make sure red coral isn't **left**!
         voyage_aquatic_9b: How can you use **If standing on** blocks to turn left and right?
@@ -3761,6 +3763,13 @@ en:
 
           *This level ends after 8 measures.*
       HOC Dance 9_draft_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Just be creative!
+
+          *This level ends after 8 measures.*
+      HOC Dance make group_authored_hint:
         validation: |-
           **How do I pass this level?**
 

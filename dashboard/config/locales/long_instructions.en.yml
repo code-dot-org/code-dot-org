@@ -11178,7 +11178,7 @@ en:
 
         <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
 
-        You'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text "Score" and not the actual score. ([Show me where](#triggercallout=code_triggered))  You can see an example of a working scoreboard in [Lesson 16 Level 9](/s/csd3/stage/16/puzzle/9).
+        You'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text "Score" and not the actual score. ([Show me where](#triggercallout=code_triggered))  You can see an example of a working scoreboard in [Lesson 16 Level 9](../../16/puzzle/9).
 
         # Do This
 
@@ -20860,7 +20860,7 @@ en:
       Dance_Party_02: |-
         Let's get this moose dancing!
 
-        Drag out the <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">MOVES.Floss</title><title name="DIR">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Your dancer should start a new move after the fourth measure.
+        Drag out the <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Your dancer should start a new move after the fourth measure.
 
         **Measures** are used to count time in music. In this tutorial, a measure is four beats long.
       Dance_Party_03: "*Now we're grooving!* \n\nAdd a second <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> block to your workspace. Make the dancer start a new move after 6 measures."
@@ -20869,30 +20869,23 @@ en:
 
         Look for new a new block in your toolbox and use it to add a background effect behind your dancer. Watch the effects change in time with the music!
       Dance_Party_05: |-
-        You can repeat code throughout the song with the <xml>
-          <block type="Dancelab_everySeconds">
-            <title name="N">2</title>
-            <title name="UNIT">"measures"</title>
-          </block></xml> block.
+        Use another new block to make the dancer change moves **every 2 measures**!
 
-        Use <xml>
-          <block type="Dancelab_changeMoveLR">
-            <title name="SPRITE">dancer1</title>
-            <title name="MOVE">"next"</title>
-            <title name="DIR">-1</title>
-          </block></xml> to make the dancer switch to another move every 2 measures.
+        * Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run.
       Dance_Party_06: |-
         *We need more dancers!*
 
-        Use the <xml><block type="Dancelab_makeNewDanceSprite"><title name="COSTUME">"DUCK"</title><title name="NAME">backup&#95;dancer1</title><title name="LOCATION">{x: 300, y: 200}</title></block></xml> block to create a backup dancer called `backup_dancer1` to dance with the cat.
+        Create a backup dancer called `backup_dancer1` to dance with the cat.
       Dance_Party_08: Every dancer has a set of _properties_ that control what it looks like. You can make it look like a dancer is in the background by making them smaller. Can you make both backup dancers the same size?
-      Dance_Party_09: Dancers have a "tint" property that can add a layer of color. Try changing the tint of one of your dancers.
+      Dance_Party_09: |-
+        Dancers have a "tint" property that can add a layer of color. Try changing the tint of one of your dancers.
+        * Tints will mix the color you choose with the colors of the dancer.
       Dance_Party_1: "*Let's have a dance party!*\n\nDrag a <xml><block type=\"Dancelab_makeNewDanceSprite\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> block into the workspace. \n\nConnect it inside the <xml><block type=\"Dancelab_whenSetupSong\" movable=\"false\"><title name=\"SONG\">\"hammer\"</title><statement name=\"DO\"></statement></block></xml> block to create your first dancer.\n\n* *You can also click the lightbulb to the left if you want more information or extra challenges.*"
       Dance_Party_10: |-
         Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">dancer1</title>
+            <title name="SPRITE">right_pineapple</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -21283,7 +21276,12 @@ en:
       HOC 2018 Level_7a: "You found the underwater ruins. Search the sandstone for a **chest** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) containing **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) treasure.\n\n"
       HOC 2018 Level_8: "First icebergs, now lava? Get through this volcanic island and find the **tropical fish** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) in the coral reef.\n\n"
       HOC 2018 Level_9b: "You made it to the reef, now search for the **Heart of the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Use the blue and red coral to reach the treasure **chest** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
-      HOC Dance 0_draft: "*Let's have a dance party!*\n\nDrag a <xml><block type=\"Dancelab_makeNewDanceSprite\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> block into the workspace. \n\nConnect it inside the <xml>\n  <block type=\"Dancelab_whenSetup\" movable=\"false\">\n    <statement name=\"DO\">\n    </statement>\n  </block>\n</xml> block to create your first dancer.\n\n* *You can also click the lightbulb to the left if you want more information or extra challenges.*"
+      HOC Dance 0_draft: |-
+        *Let's have a dance party!*
+
+        Drag a make a new sprite block into the workspace. Then connect it inside the `setup` block to create your first dancer.
+
+        * *You can also click the lightbulb to the left if you want more information or extra challenges.*
       HOC Dance 1 preload test: |-
         Let's get this moose dancing! add the `"dancer1" do "Floss" forever` block onto the `after 4 measures` block to make it start flossing after the fourth measure.
 
@@ -21381,6 +21379,15 @@ en:
       HOC Dance Freeplay: Get your groove on! Create a dance of your own to share with your friends.
       HOC Dance Freeplay_draft: Get your groove on! Create a dance of your own to share with your friends.
       HOC Dance Predraw: Get your groove on! Create a dance of your own to share with your friends.
+      HOC Dance make group: |-
+        Look at how the <xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml> can create a bunch of dancers at once!
+
+        Try using some of the "all ducks" blocks to write code that will make all of the ducks dance together.
       HOC Dance up arrow: It's time to take control! Use the `when up pressed` and the new "do move once" block to make the cat do a dance move once whenever you press the up arrow.
       Hannah DataVis Test: |-
         # Expressing Stopping Conditions: "Until Loops"
