@@ -290,14 +290,6 @@ id:
       help_us: "Bantu Kami"
       teach: "Mengajar"
       about: "Tentang"
-    create_button:
-      create: 'Buat'
-      applab: 'Laboratorium Aplikasi'
-      artist: 'Artis'
-      gamelab: 'Laboratorium Game'
-      playlab: 'Play Lab/Lab Permainan'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Beranda guru'
       district_dashboard: 'Wilayah Dashboard'
@@ -311,6 +303,13 @@ id:
       team: 'Tim'
       driver: 'Masuk'
       navigator: 'Mitra'
+      create: 'Buat'
+      applab: 'Laboratorium Aplikasi'
+      artist: 'Artis'
+      gamelab: 'Laboratorium Game'
+      playlab: 'Play Lab/Lab Permainan'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name} kemajuan"
       progress: 'Kemajuan Anda'
