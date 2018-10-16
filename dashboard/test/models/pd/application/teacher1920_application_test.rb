@@ -554,8 +554,10 @@ module Pd::Application
     end
 
     test 'formatted_partner_contact_email' do
-      application = build :pd_teacher1920_application
-      partner = build :regional_partner
+      application = create :pd_teacher1920_application
+
+      partner = create :regional_partner, contact: nil
+      contact = create :teacher
 
       # no partner
       assert_nil application.formatted_partner_contact_email
@@ -568,13 +570,22 @@ module Pd::Application
       partner.contact_name = 'We Teach Code'
       assert_nil application.formatted_partner_contact_email
 
+      # email only? still nil
+      partner.contact_name = nil
+      assert_nil application.formatted_partner_contact_email
+
+      # old contact field
+      partner.contact = contact
+      assert_equal "#{contact.name} <#{contact.email}>", application.formatted_partner_contact_email
+
+      # program manager but no contact_name or contact_email
+      program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
+      assert_equal "#{program_manager.name} <#{program_manager.email}>", application.formatted_partner_contact_email
+
       # name and email
+      partner.contact_name = 'We Teach Code'
       partner.contact_email = 'we_teach_code@ex.net'
       assert_equal 'We Teach Code <we_teach_code@ex.net>', application.formatted_partner_contact_email
-
-      # email only
-      partner.contact_name = nil
-      assert_equal 'we_teach_code@ex.net', application.formatted_partner_contact_email
     end
 
     test 'test non course dynamically required fields' do
@@ -946,6 +957,53 @@ module Pd::Application
 
       create :pd_principal_approval1920_application, teacher_application: application, approved: 'Yes'
       assert_equal 'Complete - Yes', application.reload.principal_approval_state
+    end
+
+    test 'require assigned workshop for registration-related statuses when emails sent by system' do
+      statuses = Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
+      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
+      workshop = create :pd_workshop
+      application = create :pd_teacher1920_application, {
+        regional_partner: partner
+      }
+
+      statuses.each do |status|
+        application.status = status
+        refute application.valid?
+        assert_equal ["#{status} requires workshop to be assigned"], application.errors.messages[:status]
+      end
+
+      application.pd_workshop_id = workshop.id
+      statuses.each do |status|
+        application.status = status
+        assert application.valid?
+      end
+    end
+
+    test 'do not require assigned workshop for registration-related statuses if emails sent by partner' do
+      statuses = Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
+      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      application = create :pd_teacher1920_application, {
+        regional_partner: partner
+      }
+
+      statuses.each do |status|
+        application.status = status
+        assert application.valid?
+      end
+    end
+
+    test 'do not require workshop for non-registration-related statuses' do
+      statuses = Teacher1920Application.statuses - Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
+      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      application = create :pd_teacher1920_application, {
+        regional_partner: partner
+      }
+
+      statuses.each do |status|
+        application.status = status
+        assert application.valid?
+      end
     end
 
     private
