@@ -382,7 +382,12 @@ Dance.prototype.onP5Preload = function () {
   Sounds.getSingleton().register(options);
   const getSelectedSong = () => getStore().getState().selectedSong;
 
-  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this), this.shouldShowSharing());
+  this.nativeAPI = new DanceParty(this.p5, {
+    getSelectedSong,
+    onPuzzleComplete: this.onPuzzleComplete.bind(this),
+    playSound: audioCommands.playSound,
+    recordReplayLog: this.shouldShowSharing(),
+  });
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
