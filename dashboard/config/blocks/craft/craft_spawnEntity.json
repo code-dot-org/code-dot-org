@@ -8,8 +8,28 @@
         "name": "ENTITY",
         "options": [
           [
+            "cod",
+            "\"cod\""
+          ],
+          [
             "dolphin",
             "\"dolphin\""
+          ],
+          [
+            "salmon",
+            "\"salmon\""
+          ],
+          [
+            "sea turtle",
+            "\"seaTurtle\""
+          ],
+          [
+            "squid",
+            "\"squid\""
+          ],
+          [
+            "tropical fish",
+            "\"tropicalFish\""
           ]
         ]
       }

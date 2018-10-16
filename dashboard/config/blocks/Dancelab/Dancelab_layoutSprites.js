@@ -11,18 +11,15 @@ function layoutSprites(group, format) {
   var count = group.length;
   var sprite, i, j;
   if (format == "circle") {
-    push();
-    translate(200, 200);
-    var radius =  50 + (count * 5);
+    var radius =  Math.min(175, 50 + (count * 5));
     var angle = -90 * (Math.PI / 180);
     var step = (2 * Math.PI) / count;
     for (i = 0; i < count; i++) {
       sprite = group[i];
-      sprite.x = radius * Math.cos(angle);
-      sprite.y = radius * Math.sin(angle);
+      sprite.x = 200 + radius * Math.cos(angle);
+      sprite.y = 200 + radius * Math.sin(angle);
       angle += step;
     }
-    pop();
   } else if (format == "grid") {
     var cols = Math.ceil(Math.sqrt(count));
     var rows = Math.ceil(count / cols);

@@ -71,6 +71,10 @@
           [
             "column",
             "\"column\""
+          ],
+          [
+            "random",
+            "\"random\""
           ]
         ]
       }
