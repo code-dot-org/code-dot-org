@@ -479,7 +479,7 @@ export class DetailViewContents extends React.Component {
       </div>
     );
 
-    if (this.props.canLock) {
+    if (this.props.canLock && this.props.applicationData.application_type === 'Facilitator') {
       // Render the select with the lock button in a fancy InputGroup
       return (
         <InputGroup style={styles.statusSelectGroup}>
@@ -500,12 +500,6 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  showLocked = () => (
-    this.props.isWorkshopAdmin
-    || this.props.viewType === 'facilitator'
-    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
-  );
-
   renderEditMenu = (textAlign='left') => {
     return (
       <div style={styles.editMenuContainer}>
@@ -514,7 +508,7 @@ export class DetailViewContents extends React.Component {
           {this.renderEditButtons()}
         </div>
         {
-          this.showLocked() &&
+          this.props.viewType === 'facilitator' &&
           <div style={{...styles.lockedStatus, textAlign}}>
             <FontAwesome icon={this.state.locked ? 'lock' : 'unlock'}/>&nbsp;
             Application is&nbsp;
