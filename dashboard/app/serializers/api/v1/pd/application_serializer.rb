@@ -4,6 +4,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   attributes(
     :regional_partner_name,
     :regional_partner_id,
+    :regional_partner_emails_sent_by_system,
     :locked,
     :notes,
     :form_data,
@@ -98,6 +99,10 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def principal_approval_state
     object.try(:principal_approval)
+  end
+
+  def regional_partner_emails_sent_by_system
+    object&.regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM
   end
 
   def meets_scholarship_criteria

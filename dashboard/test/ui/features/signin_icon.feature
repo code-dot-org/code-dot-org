@@ -30,6 +30,7 @@ Scenario: Teacher Signed In - shows icon with correct links
   And I wait until element "#signin_button" is visible
   And I wait until element ".user_icon" is not visible
 
+@skip
 Scenario: Student Signed In - shows icon with correct links
   Given I create a student named "Arnold"
   And I wait until element ".user_icon" is visible
