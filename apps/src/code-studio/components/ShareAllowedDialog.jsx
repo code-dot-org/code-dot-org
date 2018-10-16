@@ -176,6 +176,8 @@ class ShareAllowedDialog extends React.Component {
   };
 
   componentDidMount() {
+    recordShare('open');
+
     if (this.props.canShareSocial) {
       // check if twitter and facebook are actually available
       // and not blocked by network firewall
@@ -191,7 +193,10 @@ class ShareAllowedDialog extends React.Component {
   }
 
 
-  close = () => this.props.onClose();
+  close = () => {
+    recordShare('close');
+    this.props.onClose();
+  };
 
   showSendToPhone = (event) => {
     this.setState({
