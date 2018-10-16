@@ -19,6 +19,7 @@ module RegistrationsControllerTests
       email = "student@example.com"
 
       get '/users/sign_up'
+      assert_template partial: '_sign_up'
       post '/users/begin_sign_up', params: {
         user: {
           email: email,
