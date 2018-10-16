@@ -5628,7 +5628,12 @@ en:
       AP_practice_Qs_rqb_118_CSP_4_2_4:
         180 minutes: 180 minutes
         240 minutes: 240 minutes
-        270 minutes: 270 minutes
+        ? '270 minutes
+
+'
+        : '270 minutes
+
+'
         30 minutes.: 30 minutes.
       AP_practice_Qs_rqb_119_CSP_4_1_1:
         ? |-
@@ -5693,13 +5698,11 @@ en:
         latency: latency
         redundancy: redundancy
       AP_practice_Qs_rqb_66_CSP_7_5_1:
-        ? A\ student\ changes\ the\ tense\ of\ a\ written\ piece\ from\ first\ person\ to\ second\ person\ and\ submits\ it\ as\ his\ own\ work\.
-        : A\ student\ changes\ the\ tense\ of\ a\ written\ piece\ from\ first\ person\ to\ second\ person\ and\ submits\ it\ as\ his\ own\ work\.
-        ? A\ student\ copies\ and\ pastes\ an\ analysis\ of\ a\ poem\ from\ another\ person's\ literary\ review\ site\ into\ her\ own\ paper\ and\ submits\ it\ as\ her\ own\.
-        : A\ student\ copies\ and\ pastes\ an\ analysis\ of\ a\ poem\ from\ another\ person's\ literary\ review\ site\ into\ her\ own\ paper\ and\ submits\ it\ as\ her\ own\.
-        ? A\ student\ refers\ to\ the\ fact\ that\ Washington\ D\.C\.\ is\ the\ capitol\ of\ the\ United\ States\,\ without\ providing\ a\ citation\.
-        : A\ student\ refers\ to\ the\ fact\ that\ Washington\ D\.C\.\ is\ the\ capitol\ of\ the\ United\ States\,\ without\ providing\ a\ citation\.
-        A\ student\ uses\ a\ complicated\ idea\ from\ a\ source\ in\ her\ paper\ and\ gives\ attribution\.: A\ student\ uses\ a\ complicated\ idea\ from\ a\ source\ in\ her\ paper\ and\ gives\ attribution\.
+        A student changes the tense of a written piece from first person to second person and submits it as his own work.: A student changes the tense of a written piece from first person to second person and submits it as his own work.
+        ? A student copies and pastes an analysis of a poem from another person's literary review site into her own paper and submits it as her own.
+        : A student copies and pastes an analysis of a poem from another person's literary review site into her own paper and submits it as her own.
+        A student refers to the fact that Washington D.C. is the capitol of the United States, without providing a citation.: A student refers to the fact that Washington D.C. is the capitol of the United States, without providing a citation.
+        A student uses a complicated idea from a source in her paper and gives attribution.: A student uses a complicated idea from a source in her paper and gives attribution.
       AP_practice_Qs_rqb_86_CSP_4_1_1:
         <br><img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300"><br>: <br><img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300"><br>
         <br><img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300"><br>: <br><img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300"><br>
