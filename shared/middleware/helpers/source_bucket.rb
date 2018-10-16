@@ -111,6 +111,17 @@ class SourceBucket < BucketHelper
     end
   end
 
+  # Special app_size implementation for Sources bucket that assumes the only file in this
+  # bucket will be called main.json.
+  # This avoids a potentially expensive LIST request to S3.
+  def app_size(encrypted_channel_id)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, MAIN_JSON_FILENAME
+    s3.head_object(bucket: @bucket, key: key).content_length.to_i
+  rescue Aws::S3::Errors::NotFound
+    0
+  end
+
   private
 
   def library_animation?(animation_props)
