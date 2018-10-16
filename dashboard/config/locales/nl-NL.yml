@@ -315,14 +315,6 @@ nl:
       help_us: Help ons
       teach: Onderwijzen
       about: Over
-    create_button:
-      create: Maak
-      applab: App Lab
-      artist: Kunstenaar
-      gamelab: Game Lab
-      playlab: Speel Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Startpagina voor de leerkracht
       district_dashboard: District Ovezicht
@@ -336,6 +328,13 @@ nl:
       team: Team
       driver: Stuurprogramma
       navigator: Navigator
+      create: Maak
+      applab: App Lab
+      artist: Kunstenaar
+      gamelab: Game Lab
+      playlab: Speel Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: Jouw voortgang
