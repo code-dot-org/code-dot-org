@@ -54,9 +54,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@0.1.15":
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.15.tgz#9bb86695e473cf558ce9cbbf775a096440064dea"
+"@code-dot-org/craft@0.1.16":
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.16.tgz#9832c35bde5efda44ea3da8c68f28b3ccf3cd327"
 
 "@code-dot-org/dance-party@code-dot-org/dance-party#72435485573eefae1115e12e99adf8f10e819bb5":
   version "0.0.3"
