@@ -19,7 +19,11 @@ nav: promote_nav
 
 ## Hang these posters in your school
 
-<%= view :promote_posters %>
+[![รูปภาพ](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![รูปภาพ](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![รูปภาพ](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+
+[![รูปภาพ](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![รูปภาพ](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![รูปภาพ](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+
+Looking for our posters from previous years? [Find them here](<%= resolve_url('/promote/previous-posters') %>)!
 
 <a id="social"></a>
 
