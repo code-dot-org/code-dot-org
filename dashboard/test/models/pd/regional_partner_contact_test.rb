@@ -4,85 +4,106 @@ require 'testing/poste_assertions'
 class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
   include PosteAssertions
 
-  test 'Test district validation' do
-    contact = build :pd_regional_partner_contact, form_data: {}.to_json
-    partial_form_data = build :pd_regional_partner_contact_hash
-    refute contact.valid?
+  test 'can create a new regional partner contact with found district and no school' do
+    assert valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :found_district_only
+    )
+  end
 
-    refute build(:pd_regional_partner_contact, form_data: partial_form_data.to_json).valid?
+  test 'school type is required' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :found_district_only
+    ).merge("school-type" => "")
+  end
 
-    refute build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'public',
-        }
-      ).to_json
-    ).valid?
+  test 'school state is required' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :found_district_only
+    ).merge("school-state" => "")
+  end
 
-    refute build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'private',
-        }
-      ).to_json
-    ).valid?
+  test 'school district is required' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :found_district_only
+    ).merge("school-district" => "")
+  end
 
-    refute build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'public',
-          school_district_other: true
-        }
-      ).to_json
-    ).valid?
+  test 'can create a new regional partner contact with found district and school' do
+    assert valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :found_district_and_school
+    )
+  end
 
-    refute build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'public',
-          school_district_other: false
-        }
-      ).to_json
-    ).valid?
+  test 'can create a new regional partner contact with found district and other school' do
+    assert valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :found_district_other_school
+    )
+  end
 
-    assert build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'public',
-          school_district_other: true,
-          school_district_name: 'District name'
-        }
-      ).to_json
-    ).valid?
+  test 'zip code is required for found district and other school' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :found_district_other_school
+    ).merge("school-zipcode" => "")
+  end
 
-    assert build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'public',
-          school_district_other: false,
-          school_district: 'District'
-        }
-      ).to_json
-    ).valid?
+  test 'can create a new regional partner contact with other district and no school' do
+    assert valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :other_district_only
+    )
+  end
 
-    refute build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'private',
-          school_name: 'Name'
-        }
-      ).to_json
-    ).valid?
+  test 'district name is required for other district' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :other_district_only
+    ).merge("school-district-name" => "")
+  end
 
-    assert build(
-      :pd_regional_partner_contact, form_data: partial_form_data.merge(
-        {
-          school_type: 'private',
-          school_name: 'Name',
-          school_zipcode: 'Zipcode'
-        }
-      ).to_json
-    ).valid?
+  test 'can create a new regional partner contact with other district and school' do
+    assert valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :other_district_and_school
+    )
+  end
+
+  test 'zip code is required for other district and school' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :other_district_and_school
+    ).merge("school-zipcode" => "")
+  end
+
+  test 'can create a new regional partner contact with private school' do
+    assert valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :private_school
+    )
+  end
+
+  test 'school name is required for private school' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :private_school
+    ).merge("school-name" => "")
+  end
+
+  test 'zip code is required for private school' do
+    refute valid_form? build(
+      :pd_regional_partner_contact_hash,
+      :private_school
+    ).merge("school-zipcode" => "")
+  end
+
+  private def valid_form?(form_data)
+    build(:pd_regional_partner_contact, form_data: form_data.to_json).valid?
   end
 
   test 'Matches regional partner' do

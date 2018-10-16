@@ -120,6 +120,7 @@ module OmniauthCallbacksControllerTests
       sign_in_through_google
       assert_redirected_to '/users/sign_up'
       follow_redirect!
+      assert_response :success
       assert_template partial: '_finish_sign_up'
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
@@ -137,7 +138,7 @@ module OmniauthCallbacksControllerTests
         %w(
           load-new-sign-up-page
           google_oauth2-callback
-          load-finish-sign-up-page
+          google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-success
         )
       )
@@ -168,12 +169,36 @@ module OmniauthCallbacksControllerTests
         %w(
           load-new-sign-up-page
           google_oauth2-callback
-          load-finish-sign-up-page
+          google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-success
         )
       )
     ensure
       created_user&.destroy!
+    end
+
+    test "cancel sign-up (new sign-up flow)" do
+      mock_oauth
+      SignUpTracking.stubs(:split_test_percentage).returns(100)
+
+      get '/users/sign_up'
+      sign_in_through_google
+      assert_redirected_to '/users/sign_up'
+      follow_redirect!
+      assert_template partial: '_finish_sign_up'
+
+      get '/users/cancel'
+
+      assert_redirected_to '/users/sign_up'
+      assert_sign_up_tracking(
+        SignUpTracking::NEW_SIGN_UP_GROUP,
+        %w(
+          load-new-sign-up-page
+          google_oauth2-callback
+          google_oauth2-load-finish-sign-up-page
+          google_oauth2-cancel-finish-sign-up
+        )
+      )
     end
 
     test "fail to finish sign-up (new sign-up flow)" do
@@ -200,10 +225,10 @@ module OmniauthCallbacksControllerTests
         %w(
           load-new-sign-up-page
           google_oauth2-callback
-          load-finish-sign-up-page
-          load-finish-sign-up-page
+          google_oauth2-load-finish-sign-up-page
+          google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-error
-          load-finish-sign-up-page
+          google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-error
         )
       )

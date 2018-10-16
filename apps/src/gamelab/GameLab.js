@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom';
 import {
   changeInterfaceMode,
   viewAnimationJson,
-  setMobileControlsConfig,
-  setSong
+  setMobileControlsConfig
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -72,6 +71,7 @@ import {
   mark,
   measure
 } from '@cdo/apps/util/performance';
+import * as danceRedux from "../dance/redux";
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -240,7 +240,7 @@ GameLab.prototype.init = function (config) {
   }
 
   if (this.level.defaultSong) {
-    getStore().dispatch(setSong(this.level.defaultSong));
+    getStore().dispatch(danceRedux.setSong(this.level.defaultSong));
   }
 
   config.usesAssets = true;
@@ -331,19 +331,6 @@ GameLab.prototype.init = function (config) {
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
       config.valueTypeTabShapeMap = GameLab.valueTypeTabShapeMap(Blockly);
-
-      this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
-        <div>
-          <p>
-            <strong>Welcome to the Sprite Lab pre-release Beta!</strong>
-          </p>
-          <p>
-            This is a new Code.org project we are still working on. You may
-            notice blocks change or stop working. If a block turns gray, try
-            deleting it and replacing it.
-          </p>
-        </div>, ''
-      );
     }
 
     this.studioApp_.init(config);

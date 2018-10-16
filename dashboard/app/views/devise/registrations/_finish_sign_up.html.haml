@@ -1,4 +1,4 @@
-- SignUpTracking.log_load_finish_sign_up session
+- SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
 - require 'geocoder'
 - require 'country_codes'
 - location = Geocoder.search(request.ip).try(:first)
@@ -24,7 +24,7 @@
 
     .field-row
       .field
-        = f.label :user_type, t('signup_form.create_user_type')
+        = f.label :user_type, t('signup_form.user_type_label')
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
       - if @user.errors[:user_type].present?
         %span.error.padded= t('activerecord.errors.messages.blank')
@@ -32,7 +32,7 @@
     .field-row
       .field
         #teacher-name-label{style: "display: none;"}
-          = f.label :name, t('activerecord.attributes.user.other_name_example').html_safe
+          = f.label :name, t('activerecord.attributes.user.name').html_safe
         #student-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name_example').html_safe
         = f.text_field :name, maxlength: 255

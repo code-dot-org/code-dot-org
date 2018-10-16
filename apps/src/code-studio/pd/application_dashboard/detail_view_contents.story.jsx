@@ -22,6 +22,7 @@ export default storybook => {
               school_name: 'School Name',
               district_name: 'District Name',
               email: 'email',
+              application_year: '2019-2020',
               application_type: 'Facilitator',
               meets_criteria: 'Yes',
               bonus_points: 15,
