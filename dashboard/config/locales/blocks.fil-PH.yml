@@ -77,12 +77,28 @@ fil:
         options:
           GROUP:
             sprites: lahat
+          FORMAT:
+            '"random"': nang hindi pinipili
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": kaliwa
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nang hindi pinipili
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': nang hindi pinipili
       Dancelab_randomColor:
         text: iba-ibang kulay
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ fil:
             '"none"': Wala
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: lahat
           PROPERTY:
             '"scale"': sukat
             '"height"': taas
@@ -296,3 +319,7 @@ fil:
         text: umabante
       craft_placeTorch:
         text: lagay ng tanglaw
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': manok
