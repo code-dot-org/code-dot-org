@@ -35,6 +35,13 @@
       = tag 'meta', attr => "#{namespace}:image:width", content: meta_image_width
       = tag 'meta', attr => "#{namespace}:image:height", content: meta_image_height
 
+      - if @project_video
+        = tag 'meta', attr => "#{namespace}:video", content: @project_image
+        = tag 'meta', attr => "#{namespace}:video:secure_url", content: @project_image
+        = tag 'meta', attr => "#{namespace}:video:type", content: "video/mp4"
+        = tag 'meta', attr => "#{namespace}:video:width", content: meta_image_width
+        = tag 'meta', attr => "#{namespace}:video:height", content: meta_image_height
+
     = tag :meta, name: 'mobile-web-app-capable', content: 'yes'
     = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'
     = tag :meta, name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'

@@ -320,6 +320,8 @@ class ProjectsController < ApplicationController
     )
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    elsif params[:key] == 'dance'
+      @project_video = "https://cdo-p5-replay-videos.s3.amazonaws.com/videos//#{@view_options['channel']}.mp4"
     end
 
     begin
