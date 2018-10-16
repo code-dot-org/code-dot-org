@@ -10,6 +10,9 @@ module OmniauthCallbacksControllerTests
 
     setup do
       stub_firehose
+
+      # Force split-test to control group (override in tests over experiment)
+      SignUpTracking.stubs(:split_test_percentage).returns(0)
     end
 
     test "student sign-up" do
@@ -30,6 +33,17 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_student created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::CONTROL_GROUP,
+        %w(
+          load-sign-up-page
+          facebook-callback
+          facebook-sign-up-error
+          load-sign-up-page
+          facebook-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -50,6 +64,17 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::CONTROL_GROUP,
+        %w(
+          load-sign-up-page
+          facebook-callback
+          facebook-sign-up-error
+          load-sign-up-page
+          facebook-sign-up-success
+        )
+      )
     ensure
       created_user&.destroy!
     end
@@ -69,6 +94,14 @@ module OmniauthCallbacksControllerTests
       assert_equal student.id, signed_in_user_id
       student.reload
       assert_credentials auth_hash, student
+
+      assert_sign_up_tracking(
+        SignUpTracking::NOT_IN_STUDY_GROUP,
+        %w(
+          facebook-callback
+          facebook-sign-in
+        )
+      )
     end
 
     test "teacher sign-in" do
@@ -84,6 +117,14 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
       assert_credentials auth_hash, teacher
+
+      assert_sign_up_tracking(
+        SignUpTracking::NOT_IN_STUDY_GROUP,
+        %w(
+          facebook-callback
+          facebook-sign-in
+        )
+      )
     end
 
     private

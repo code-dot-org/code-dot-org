@@ -45,7 +45,7 @@ module OmniauthCallbacksControllerTests
 
     def finish_sign_up(auth_hash, user_type)
       post '/users', params: finish_sign_up_params(
-        name: auth_hash.info.name,
+        name: auth_hash[:info]&.name,
         user_type: user_type
       )
     end
@@ -53,7 +53,7 @@ module OmniauthCallbacksControllerTests
     # Intentionally fail to finish sign-up by _not_ checking the terms-of-service box
     def fail_sign_up(auth_hash, user_type)
       post '/users', params: finish_sign_up_params(
-        name: auth_hash.info.name,
+        name: auth_hash[:info]&.name,
         user_type: user_type,
         terms_of_service_version: 0
       )

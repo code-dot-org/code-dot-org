@@ -47,8 +47,13 @@ module PartialRegistration
     session[USER_ATTRIBUTES_SESSION_KEY] = user.attributes
   end
 
+  def self.get_provider(session)
+    in_progress?(session) ? session[USER_ATTRIBUTES_SESSION_KEY]['provider'] : nil
+  end
+
   def self.cancel(session)
-    SignUpTracking.log_cancel_finish_sign_up(session)
+    provider = get_provider(session) || 'email'
+    SignUpTracking.log_cancel_finish_sign_up(session, provider)
     SignUpTracking.end_sign_up_tracking(session)
     session.delete(USER_ATTRIBUTES_SESSION_KEY)
     session
