@@ -54,12 +54,28 @@ sv:
         options:
           GROUP:
             sprites: alla
+          FORMAT:
+            '"random"': slumpad
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": vänster
             "{x: 300, y: 200}": höger
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slumpad
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': slumpad
       Dancelab_randomColor:
         text: slumpad färg
       Dancelab_setDanceSpeed:
@@ -72,6 +88,13 @@ sv:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': storlek
+            '"height"': höjd
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: alla
           PROPERTY:
             '"scale"': storlek
             '"height"': höjd
@@ -265,3 +288,7 @@ sv:
         text: gå framåt
       craft_placeTorch:
         text: placera fackla
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': höna
