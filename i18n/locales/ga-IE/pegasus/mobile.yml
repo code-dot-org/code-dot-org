@@ -1436,6 +1436,11 @@
   user_header_settings: "Mo chuntas"
   user_header_logout: "Logáil amach"
   user_header_signin: "Logáil isteach"
+  user_header_gamelab: "An tSaotharlann Cluichíochta"
+  user_header_playlab: "Spraotharlann"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Flappy"
+  user_header_view_my_projects: "Mo chuid tionscadal"
   view_all_sections: "Féach ar an rannán go léir"
   view_section: "Féach ar an Rannán"
   view_named_section: "Féach Rannán %{section_name}"
@@ -1464,3 +1469,5 @@
   syncing_students_instructions: 'Má tá do rannán ar Code.org as sionc leis an liosta daltaí ar Google Classroom, cliceáil an cnaipe "Sioncronaigh daltaí ó Google Classroom" sa gcluaisín "Bainistigh Daltaí":'
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google Account”:'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
+  creativity_create: "Cruthaigh"
+  account_sign_up_email_opt_in: "An bhfuil cead againn ríomhphost a sheoladh chugat maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?"
