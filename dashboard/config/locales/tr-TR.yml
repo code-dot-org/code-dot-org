@@ -344,14 +344,6 @@ tr:
       help_us: Bize yardım edin
       teach: Öğret
       about: Hakkında
-    create_button:
-      create: Oluştur
-      applab: App Laboratuvarı
-      artist: Sanatçı
-      gamelab: Oyun Laboratuvarı
-      playlab: Oyun Laboratuvarı
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi
@@ -365,6 +357,13 @@ tr:
       team: Takım
       driver: Giriş yapılmış
       navigator: Takım Arkadaşı
+      create: Oluştur
+      applab: App Laboratuvarı
+      artist: Sanatçı
+      gamelab: Oyun Laboratuvarı
+      playlab: Oyun Laboratuvarı
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: İlerlemeniz
