@@ -962,7 +962,7 @@ module Pd::Application
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
       statuses = Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
-      workshop = create :pd_workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
+      workshop = create :pd_workshop
       application = create :pd_teacher1920_application, {
         regional_partner: partner
       }
