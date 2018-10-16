@@ -229,9 +229,11 @@ en:
             '"ROBOT"': all robots
             '"SHARK"': all sharks
           FORMAT:
+            '"circle"': circle
             '"grid"': grid
             '"row"': row
             '"column"': column
+            '"random"': random
       Dancelab_makeNewDanceSprite:
         text: |-
           make a new {COSTUME}
@@ -260,6 +262,39 @@ en:
             "{x: 100, y: 300}": bottom left
             "{x: 300, y: 300}": bottom right
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          make {N} new {COSTUME}
+           in a {LAYOUT}
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"ALIEN"': Aliens
+            '"BEAR"': Bears
+            '"CAT"': Cats
+            '"DOG"': Dogs
+            '"DUCK"': Ducks
+            '"FROG"': Frogs
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': Pineapples
+            '"ROBOT"': Robots
+            '"SHARK"': Sharks
+            '"UNICORN"': Unicorns
+          LAYOUT:
+            '"circle"': circle
+            '"grid"': grid
+            '"row"': row
+            '"column"': column
+            '"random"': random
       Dancelab_mixColors:
         text: mix {COLOR1} and {COLOR2}
       Dancelab_nMeasures:
@@ -304,6 +339,29 @@ en:
       Dancelab_setProp:
         text: 'set {SPRITE} {PROPERTY} to {VAL} '
         options:
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
+            '"tint"': tint
+      Dancelab_setPropEach:
+        text: set {GROUP} {PROPERTY} to {VAL}
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
           PROPERTY:
             '"scale"': size
             '"width"': width
@@ -1067,6 +1125,11 @@ en:
         text: |-
           repeat until goal
           {STATEMENT}
+      craft_spawnEntity:
+        text: spawn {ENTITY}
+        options:
+          ENTITY:
+            '"chicken"': chicken
       craft_turn:
         text: turn {DIR}
         options:
