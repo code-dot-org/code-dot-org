@@ -117,7 +117,8 @@ function unpackSources(data) {
     source: data.source,
     html: data.html,
     animations: data.animations,
-    makerAPIsEnabled: data.makerAPIsEnabled
+    makerAPIsEnabled: data.makerAPIsEnabled,
+    selectedSong: data.selectedSong,
   };
 }
 
@@ -866,6 +867,22 @@ var projects = module.exports = {
     } else {
       this.updateChannels_(callback);
     }
+  },
+
+  saveSelectedSong(id) {
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.saveSourceAndHtml_(
+          {
+            ...sourceAndHtml,
+            selectedSong: id,
+          },
+          () => {
+            resolve();
+          }
+        );
+      });
+    });
   },
 
   /**
