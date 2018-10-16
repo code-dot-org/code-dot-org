@@ -39,8 +39,6 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
@@ -58,8 +56,6 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
@@ -74,7 +70,6 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
-            '"tint"': оттенък
       Dancelab_doMoveEachLR:
         text: "{GROUP} направи {MOVE} {DIR} веднъж"
         options:
@@ -99,8 +94,6 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
@@ -118,8 +111,6 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
@@ -195,7 +186,7 @@ bg:
           LOCATION:
             "{x: 100, y: 200}": наляво
             "{x: 300, y: 200}": надясно
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
       Dancelab_randomColor:
         text: случаен цвят
       Dancelab_setBackgroundEffect:
@@ -226,6 +217,14 @@ bg:
             '"x"': хоризонтално положение
             '"y"': вертикално положение
             '"tint"': оттенък
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -461,6 +460,12 @@ bg:
             '"down"': стрелка надолу
             '"left"': лява стрелка
             '"right"': стрелка надясно
+      RyanLab_moveForward:
+        text: върви напред
+      RyanLab_turnLeft:
+        text: завий наляво
+      RyanLab_turnRight:
+        text: завий надясно
       craft_ifPath:
         options:
           DIR:

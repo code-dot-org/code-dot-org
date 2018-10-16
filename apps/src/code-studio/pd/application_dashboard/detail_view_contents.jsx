@@ -7,7 +7,8 @@ import {
   SplitButton,
   MenuItem,
   FormControl,
-  InputGroup
+  InputGroup,
+  Table
 } from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
@@ -64,6 +65,9 @@ const styles = {
   lockedStatus: {
     fontFamily: '"Gotham 7r"',
     marginTop: 10
+  },
+  caption: {
+    color: "black"
   }
 };
 
@@ -77,17 +81,20 @@ export class DetailViewContents extends React.Component {
       course: PropTypes.oneOf(['csf', 'csd', 'csp']),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
-      locked: PropTypes.bool,
+      regional_partner_emails_sent_by_system: PropTypes.bool,
       regional_partner_id: PropTypes.number,
+      locked: PropTypes.bool,
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
       form_data: PropTypes.object,
+      application_year: PropTypes.string,
       application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
       response_scores: PropTypes.object,
       meets_criteria: PropTypes.string,
+      meets_scholarship_criteria: PropTypes.string,
       bonus_points: PropTypes.number,
       pd_workshop_id: PropTypes.number,
       pd_workshop_name: PropTypes.string,
@@ -99,6 +106,7 @@ export class DetailViewContents extends React.Component {
       registered_teachercon: PropTypes.bool,
       registered_fit_weekend: PropTypes.bool,
       attending_teachercon: PropTypes.bool,
+      school_stats: PropTypes.object,
       principal_approval: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -163,8 +171,21 @@ export class DetailViewContents extends React.Component {
   };
 
   handleStatusChange = (event) => {
+    const workshopAssigned = this.props.applicationData.pd_workshop_id || this.props.applicationData.fit_workshop_id;
+    if (this.props.applicationData.regional_partner_emails_sent_by_system && !workshopAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
+      this.setState({
+        showCantSaveStatusDialog: true
+      });
+    } else {
+      this.setState({
+        status: event.target.value
+      });
+    }
+  };
+
+  handleCantSaveStatusOk = (event) => {
     this.setState({
-      status: event.target.value
+      showCantSaveStatusDialog: false
     });
   };
 
@@ -426,22 +447,36 @@ export class DetailViewContents extends React.Component {
 
   renderStatusSelect = () => {
     const selectControl = (
-      <FormControl
-        componentClass="select"
-        disabled={this.state.locked || !this.state.editing}
-        title={this.state.locked && "The status of this application has been locked"}
-        value={this.state.status}
-        onChange={this.handleStatusChange}
-        style={styles.statusSelect}
-      >
-        {
-          Object.keys(this.statuses).map((status, i) => (
-            <option value={status} key={i}>
-              {this.statuses[status]}
-            </option>
-          ))
-        }
-      </FormControl>
+      <div>
+        <FormControl
+          componentClass="select"
+          disabled={this.state.locked || !this.state.editing}
+          title={this.state.locked && "The status of this application has been locked"}
+          value={this.state.status}
+          onChange={this.handleStatusChange}
+          style={styles.statusSelect}
+        >
+          {
+            Object.keys(this.statuses).map((status, i) => (
+              <option value={status} key={i}>
+                {this.statuses[status]}
+              </option>
+            ))
+          }
+        </FormControl>
+        <ConfirmationDialog
+          show={this.state.showCantSaveStatusDialog}
+          onOk={this.handleCantSaveStatusOk}
+          headerText="Cannot save applicant status"
+          bodyText={
+            `Please assign a summer workshop to this applicant before setting this
+            applicant's status to "Accepted - No Cost Registration" or "Registration Sent".
+            These statuses will trigger an automated email with a registration link to their
+            assigned workshop.`
+          }
+          okText="OK"
+        />
+      </div>
     );
 
     if (this.props.canLock) {
@@ -501,18 +536,21 @@ export class DetailViewContents extends React.Component {
             Meets minimum requirements? {this.props.applicationData.meets_criteria}
           </h4>
           <h4>
+            Meets scholarship criteria? {this.props.applicationData.meets_scholarship_criteria}
+          </h4>
+          <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
           </h4>
           {this.props.applicationData.course === 'csp' &&
             <h4>
-              <a target="_blank" href="https://docs.google.com/document/d/1ounHnw4fdihHiMwcNNjtQeK4avHz8Inw7W121PbDQRw/edit#heading=h.p1d568zb27s0">
+              <a target="_blank" href="https://drive.google.com/file/d/1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd/view">
                 View CS Principles Rubric
               </a>
             </h4>
           }
           {this.props.applicationData.course === 'csd' &&
             <h4>
-              <a target="_blank" href="https://docs.google.com/document/d/1Sjzd_6zjHyXLgzIUgHVp-AeRK2y3hZ1PUjg8lTtWsHs/edit#heading=h.fqiranmp717e">
+              <a target="_blank" href="https://drive.google.com/file/d/12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj/view">
                 View CS Discoveries Rubric
               </a>
             </h4>
@@ -607,6 +645,7 @@ export class DetailViewContents extends React.Component {
         question="Summer Workshop"
         courseName={this.props.applicationData.course_name}
         subjectType="summer"
+        year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
         assignedWorkshop={{
           id: this.state.pd_workshop_id,
           name: this.props.applicationData.pd_workshop_name,
@@ -621,6 +660,7 @@ export class DetailViewContents extends React.Component {
           question="FIT Workshop"
           courseName={this.props.applicationData.course_name}
           subjectType="fit"
+          year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
           assignedWorkshop={{
             id: this.state.fit_workshop_id,
             name: this.props.applicationData.fit_workshop_name,
@@ -645,9 +685,59 @@ export class DetailViewContents extends React.Component {
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
         applicationGuid={this.props.applicationData.application_guid}
+        schoolStats={this.props.applicationData.school_stats}
         initialPrincipalApproval={this.props.applicationData.principal_approval}
       />
     );
+  };
+
+  renderAboutTheSchool = () => {
+    if (this.props.applicationData.school_stats) {
+      return (
+        <Row>
+          <Col md={4}>
+            <h3>About the School</h3>
+            <DetailViewResponse
+              question="Title I status (code)"
+              answer={`${this.props.applicationData.school_stats.title_i_status}`}
+              layout="lineItem"
+            />
+            <DetailViewResponse
+              question="Free and reduced-price lunch eligible"
+              answer={this.props.applicationData.school_stats.frl_eligible_percent}
+              layout="lineItem"
+            />
+            <DetailViewResponse
+              question="Underrepresented minority students"
+              answer={this.props.applicationData.school_stats.urm_percent}
+              layout="lineItem"
+            />
+            <Table condensed>
+              <caption style={styles.caption}>
+                There are {this.props.applicationData.school_stats.students_total} total students at this school.
+              </caption>
+              <tbody>
+                {this.props.applicationData.school_stats.race_data.map(
+                  (race, i) => (
+                    <tr key={i}>
+                      <td>
+                        {race.percent}
+                      </td>
+                      <td>
+                        {race.total}
+                      </td>
+                      <td>
+                        {race.label}
+                      </td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      );
+    }
   };
 
   renderNotes = () => {
@@ -686,6 +776,7 @@ export class DetailViewContents extends React.Component {
         <br/>
         {this.renderTopSection()}
         {this.renderQuestions()}
+        {this.renderAboutTheSchool()}
         {this.renderNotes()}
         {this.renderEditMenu()}
       </div>

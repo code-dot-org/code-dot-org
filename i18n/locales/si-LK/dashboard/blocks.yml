@@ -8,17 +8,11 @@ si:
             '"seconds"': තත්පර
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
           DIR:
             '1': "→"
             "-1": "←"
@@ -29,17 +23,11 @@ si:
             '"height"': උස
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': ඊළඟ
-            '"prev"': පෙරට
           DIR:
             '1': "→"
             "-1": "←"
@@ -63,6 +51,7 @@ si:
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_randomColor:
         text: අහඹු වර්ණයක්
       Dancelab_setDanceSpeed:
@@ -74,6 +63,11 @@ si:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
@@ -175,6 +169,11 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -219,6 +218,12 @@ si:
             '"down"': පහල ඊතලය
             '"left"': වම් ඊතලය
             '"right"': දකුණු ඊතලය
+      RyanLab_moveForward:
+        text: ඉදිරියට යන්න
+      RyanLab_turnLeft:
+        text: වමට හැරෙන්න
+      RyanLab_turnRight:
+        text: දකුණට හැරෙන්න
       craft_ifPath:
         options:
           DIR:

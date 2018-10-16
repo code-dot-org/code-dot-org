@@ -803,7 +803,7 @@ it:
       Fish Tank 7-validated_simple: Usa qualche blocco nuovo dalla cassetta degli attrezzi per rendere speciale il tuo acquario!
       Food Fight!: "Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare. Programma il tuo gioco in modo tale da chiamare la funzione `level_up` (<i>sali di un livello</i>) se la variabile `player_score` (<i>punteggio</i>) diventa maggiore di un certo valore (per esempio: `player_score` > 6). Clicca su \"Esegui\" per giocare e arriva al livello 3 per passare al prossimo esercizio. Nota: nella funzione `level_up` viene usata la variabile `enemy_speed` che significa <i>velocità del nemico</i>."
       Food Fight: "Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>\nProgramma il tuo gioco in modo tale da chiamare la funzione \"sali di un livello\" (<i>level_up</i>) se la variabile \"punteggio\" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>\nClicca su \"Esegui\" per giocare e arriva al livello 3 per passare al prossimo esercizio."
-      Function intro Ryan: Usa due volte la funzione `costruisci ponte` per creare un sentiero fino alla torcia di pietrarossa.
+      Function intro Ryan: Usa due volte la funzione `costruisci un ponte` per creare un sentiero fino alla torcia di pietrarossa.
       Geometric Pattern: 'Idea per un progetto: crea un modello utilizzando idee geometriche come forme. Realizzarlo richiede pianificazione e persistenza!'
       Geometric Sun: 'Idea per un progetto: crea un modello utilizzando idee geometriche come forme. Realizzarlo richiede pianificazione e persistenza!'
       Geometric Sun_2018: 'Idea per un progetto: crea un modello utilizzando idee geometriche come forme. Realizzarlo richiede pianificazione e persistenza!'
@@ -2446,6 +2446,8 @@ it:
       courseF_artist_variables5_2018: Aggiungi un'altra serie di cicli alla fine del programma per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
       courseF_artist_variables6: 'Ora crea triangoli che siano larghi 60 pixel con salti di 60 pixel.  '
       courseF_artist_variables6_2018: 'Ora crea triangoli che siano larghi 60 pixel con salti di 60 pixel.  '
+      courseF_artist_variables6a: Realizza questo progetto in cui i quadrati hanno lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti verso il basso tra uno e l'altro.
+      courseF_artist_variables6a_2018: Realizza questo progetto in cui i quadrati hanno lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti verso il basso tra uno e l'altro.
       courseF_artist_variables7: 'Disegna un triangolo con lati di 150 pixel. '
       courseF_artist_variables7_2018: 'Disegna un triangolo con lati di 150 pixel. '
       courseF_artist_variables8: Ricostruisci il codice del triangolo dall'esercizio precedente, ma questa volta usa il blocco `imposta length a` per reimpostare il valore della variabile `length` (*lunghezza*)  a `length+10` alla fine di ogni interazione del ciclo.
@@ -2456,6 +2458,7 @@ it:
       courseF_artist_variablesFP_2018: "**Tempo di giocare:** Usa ciò che hai imparato e crea il tuo disegno. "
       courseF_artist_variables_10: 'Ecco il codice dell''esercizio precedente. Prova a modificare la variabile `length` (*lunghezza*) in altri modi.  '
       courseF_artist_variables_5: Aggiungi un'altra serie di cicli alla fine del programma per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+      courseF_artist_variables_6a: Realizza questo progetto in cui i quadrati hanno lati di 80 pixel e l'artista salta di 80 pixel in avanti e altrettanti verso il basso tra uno e l'altro.
       courseF_artist_variables_9: |-
         Guarda cosa succede quando ripeti il codice dell'esercizio precedente 30 volte invece di 3!
         

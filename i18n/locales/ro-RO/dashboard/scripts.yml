@@ -3546,7 +3546,28 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         aquatic:
-          title: '[șir gol]'
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+        sconyers:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dance--draft:
+          title: '[șir gol]'
+          description: '[șir gol]'
+          description_short: '[șir gol]'
+          description_audience: '[șir gol]'
+          stages:
+            Dance Party:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        dance-draft:
+          title: '[șir gol]'
+          description: '[șir gol]'
+          description_short: '[șir gol]'
+          description_audience: '[șir gol]'
+          stages:
+            Dance Party:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'

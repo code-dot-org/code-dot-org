@@ -71,7 +71,9 @@ pt-BR:
       2-3 Artist Functions 13: "Fornecemos quatro funções para você.\nUse-as da forma que quiser dentro de um ou mais laços para criar imagens que\nvocê pode compartilhar com seus amigos. Pressione \"Executar\" para ver um exemplo."
       2-3 Artist Functions 2 a: 'Use o pequeno bloco verde `desenhar um quadrado` para chamar esta nova função e criar os óculos. '
       2-3 Artist Functions 2: "As funções permitem que você defina novos blocos! \\r\n\\r\nMovemos\nos blocos necessários para desenhar um quadrado para dentro de uma função chamada \"desenhe\num quadrado\". Desta vez, use a função \"desenhe um quadrado\" para criar os óculos.\n\\r\n\\r\nOs quadrados estão separados por uma distância de 75 pixels."
+      2-3 Artist Functions 3 a: "Edite a função \"desenhar um quadrado\" para desenhar quadros que são 115px em cada lado. \n\nOs quadrados estão a 45 pixels de distância."
       2-3 Artist Functions 3: "Edite a função para desenhar um quadrado com\nlados de 115 pixels, para desenhar os óculos maiores. \\r\n\\r\nAgora, os quadrados\nestão separados por 45 pixels."
+      2-3 Artist Functions 4 a: Agora coloque a função dentro de um laço e adicione um turno extra para desenhar esses três quadrados.
       2-3 Artist Functions 4: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
       2-3 Artist Functions 7: "Use a função \"desenhe uma casa\" para desenhar\nduas casas usando dois parâmetros diferentes. (Dica: a primeira casa tem 100 pixels)."
       2-3 Artist Functions 9: "Atividade livre: Esta é uma função para flocos de neve.\nExperimente usá-la para criar uma cena de inverno! Essa é uma atividade livre, então\nnão há desafios para resolver. Divirta-se!"
@@ -256,6 +258,7 @@ pt-BR:
       2-3 Maze Loops 20: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
       2-3 Maze Loops 21: "Leve-me até o girassol usando o menor número possível\nde blocos!"
       2-3 Maze Loops Assessment 1: "Avaliação: Leve-me até o girassol\nusando apenas 5 blocos! "
+      2-3 Maze sq1: Esse porco está me irritando. Ajude-me a encontrá-lo!
       2-3 Maze sq10: Leve-me até o porco! Que blocos foram repetidos?
       2-3 Maze sq10v2: Leve-me até o porco! Que blocos foram repetidos?
       2-3 Maze sq2: "Trace o caminho e leve-me até o porco bobalhão. Desvie\ndo TNT, ou penas vão voar!"
@@ -272,8 +275,10 @@ pt-BR:
       2-3 maze sq14: Você consegue chegar até o girassol usando apenas quatro blocos?
       2-3 maze sq15: Você pode chegar até o girassol usando apenas blocos?
       2-3 maze sq16: "Ok, isso é parecido, mas um pouco diferente. Você pode\nfazer isso em apenas cinco blocos?"
+      2-3: As flores roxas podem ter 1 ou 0 néctar. Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver néctar.
       2-3level1: Ajude o pássaro a pegar o porco safado movendo-o para frente
       20hr_farmer_stage9_1: Olá, eu sou uma fazendeira! Preciso de sua ajuda para aplanar o terreno da minha fazenda, para prepará-lo para o plantio. Leve-me até o monte de terra e use o bloco "remova" para removê-lo.
+      20hr_farmer_stage9_10: Estou trabalhando até tarde, então está escuro, e eu não sei o tamanho desses montes de terra. Agora, eu não tenho todas as opções que eu costumava ter com o bloco "enquanto". Mova-me ao longo do campo e, se houver um monte de terra, remova-o
       20hr_farmer_stage9_11: 'Ainda está escuro lá fora. Mova-me ao longo do terreno. Se houver um monte de terra, remova-o, e se houver um buraco, preencha-o. Dica: use o menu de opções no bloco "se".'
       20hr_farmer_stage9_2: Em seguida, leve-me para perto do buraco e preencha-o com DUAS pás cheias de terra, usando o bloco "preencha".
       20hr_farmer_stage9_3: Leve-me até o monte de terra e me diga quantas pás devo remover, usando o menor número de blocos possível.
@@ -283,8 +288,10 @@ pt-BR:
       20hr_farmer_stage9_7: Uau, eu encontrei um buraco muito fundo! Não sei quantas pás de terra vamos precisar. Você pode escrever um programa para preenchê-lo completamente?
       20hr_farmer_stage9_8: Ajude-me a preencher o buraco no final do terreno, usando o menor número de blocos possível.
       20hr_farmer_stage9_9: 'Faça com que eu remova todos esses montes de terra. Tente usar o menor número de blocos possível. Dica: tente usar um bloco "enquanto".'
+      20hr_maze_stage2_1: Você pode me ajudar a pegar o porco malvado? Junte alguns blocos "avance" e clique em "Executar" para me ajudar a chegar lá.
       20hr_maze_stage2_10: Ok, use o novo bloco "repita até" - ele vai se repetir até que eu chegue naquele porco irritante.
       20hr_maze_stage2_11: Ok, pratique mais uma vez - você pode resolver isso usando apenas 4 blocos?
+      20hr_maze_stage2_12: Pessoa querida. Mim zumbi. Mim com fome. Devo... chegar... no girassol... Você pode me ajudar a chegar lá com apenas 5 blocos?
       20hr_maze_stage2_13: Ok, é parecido, mas um pouco diferente. Você pode usar apenas 5 blocos?
       20hr_maze_stage2_14: 'Use o novo bloco "se" para me deixar decidir quando virar. Dica: você só precisa de mais um bloco, mas veja como o configuramos, então você mesmo poderá fazê-lo na próxima vez.'
       20hr_maze_stage2_15: Ok, esse desafio é como o último, mas você precisa se lembrar de como você usou o bloco "se" e o bloco "repita" juntos.
@@ -542,6 +549,8 @@ pt-BR:
       C3-Farmer While Loops 8: " Há um buraco realmente fundo e um monte de terra\nrealmente grande. Quantas pás de terra são necessárias para\ntornar o solo plano? Dica: use o laço enquanto para ambos."
       C3-Farmer While Loops Assessment 1: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
       CDEF_debugging_flappy2: Por que este jogo não funciona?
+      CSD U3 Mouse Input Bee 2: Faça isso
+      CSD U3 Mouse Input Bee 2_2018: Faça isso
       CSD U5 black white images pixelation 2: Desenhar uma cara de sorriso (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 2_2018: Desenhar uma cara de sorriso (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 5: Desenho algo que você gosta
@@ -1569,6 +1578,16 @@ pt-BR:
       U2 frequency random sub: Instruções
       U2 vigenere cipher: Instruções
       U2L10 NetSim Manual DNS: "Nessa versão do simulador você não pode\nver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um\nserviço de nome, para ajudar a compartilhar os endereços entre si."
+      U3 - Simple Drawing - Comments: Faça isso
+      U3 - Simple Drawing - Ellipse and No Fill: Faça isso
+      U3 - Simple Drawing - No Fill: Faça isso
+      U3 - Simple Drawing - Order of Blocks: Faça isso
+      U3 - Simple Drawing - Stroke and Stroke Weight: Faça isso
+      U3 - Simple Drawing - regular polygon: Faça isso
+      U3 - Sprites and Mod - Mouse Width and Height: Faça isso
+      U3 - Sprites and Mod - Mouse X and Y: Faça isso
+      U3 - Sprites and Mod - Rand Around Mouse: Faça isso
+      U3 - images - bee free play: Faça isso
       U313 Two Buttons with Ids: "Sua vez de tentar! Fornecemos a você um\ncódigo inicial com dois botões e dois manipuladores de evento na tela, mas deixamos\nos Ids padrões de \"id\". Você precisa alterar esses ids para conectar\no manipulador de eventos ao botão correto. (Curiosamente, o programa\nincorreto funciona, mas ele tem um comportamento bizarro. Vamos discutir mais\nsobre isso na próxima lição. Por enquanto, faça os botões funcionarem corretamente)."
       U3L03 Creating Procedures 1: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito. Veja: U3L03-turnAndDown.gif"
       U3L03 Define and use turnAround: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito."
@@ -2450,6 +2469,8 @@ pt-BR:
       grade2_collector_9: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_A: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018: Ajude Laurel a coletar todo o tesouro.
+      grade2_maze_intro10: Resolva este desafio.
+      grade2_maze_intro9: Resolva este desafio.
       grade2_playlab_project_1: "Agora escreva um programa que faça Valfredo\nse mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!"
       grade2_playlab_project_3: "Você pode fazer Valfredo (personagem 1) dizer\n\"Ai!\" e reproduzir um som de \"batida\" se ele encontrar Chomp? \\r\n\\r\nQuando\nterminar, jogue para que isso aconteça."
       grade2_playlab_project_4: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com Otávia (personagem 3)? \\r\nJogue e mova Valfredo\ncom as setas do teclado até marcar ponto!"
@@ -2558,9 +2579,11 @@ pt-BR:
       grade3_maze_nestedLoops2: "Você consegue pegar o porco criando um laço que usa\napenas um bloco \"avance\" dentro de um bloco \"repita\"?"
       grade3_maze_nestedLoops3: "Leve-me até o porco! Você só pode usar um bloco\n\"avance\" desta vez"
       grade3_maze_nestedLoops4: "Neste desafio, dois laços \"repita\" ajudarão você\na pegar o porco com o menor número possível de blocos!"
+      grade3_robotFarmer_ConditionalsIntro_10: Estou trabalhando até tarde, então está escuro, e eu não sei o tamanho desses montes de terra. Agora, eu não tenho todas as opções que eu costumava ter com o bloco "enquanto". Mova-me ao longo do campo e, se houver um monte de terra, remova-o
       grade3_robotFarmer_ConditionalsIntro_11: 'Ainda está escuro lá fora. Mova-me ao longo do terreno. Se houver um monte de terra, remova-o, e se houver um buraco, preencha-o. Dica: use o menu de opções no bloco "se".'
       grade3_robotFarmer_ConditionalsIntro_6: Remova todas as pilhas de terra usando o menor número de blocos possível. As novas opções de menu no bloco "enquanto" mostram se eu estou em uma pilha de terra ou em um buraco.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Ajude-me a encher todos esses buracos com 5 pás de terra. Dica: você pode usar um bloco "repita" dentro de um bloco "enquanto".'
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo2: Estou trabalhando até tarde, então está escuro, e eu não sei o tamanho desses montes de terra. Agora, eu não tenho todas as opções que eu costumava ter com o bloco "enquanto". Mova-me ao longo do campo e, se houver um monte de terra, remova-o
       grade4_arist_nested_loop_circles1: "Avaliação: use um laço aninhado para\ncompletar o desenho."
       grade4_arist_nested_loop_flags1: Repita o código dado para criar um moinho de vento.
       grade4_arist_nested_loop_polygons1: "Repita esse desenho 10 vezes. \\r\n\\r\nQuanto\nvocê precisa virar a cada repetição?"

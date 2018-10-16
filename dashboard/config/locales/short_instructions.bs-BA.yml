@@ -13,8 +13,8 @@ bs:
         ponoviti da bi dobio cijeli krug? 180? 360? 500?
       2-3 Artist 2 new: Ova kuća ima napola gotov zid. Svaka stana je 100, ali napola
         gotov zid ima samo 50. Dovrši zid.
-      2-3 Artist 2: 'Ova kuća ima napola gotov zid. Svaka stana je 100, ali napola
-        gotov zid ima samo 50. Dovrši zid. '
+      2-3 Artist 2: Ova kuća ima napola gotov zid. Svaka stana je 100, ali napola
+        gotov zid ima samo 50. Dovrši zid.
       2-3 Artist 3.4: Blok za skakanje pokreće umjetnika bez crtanja. Nacrtaj isprekidanu
         liniju koristeći u isto vrijeme blokove za crtanje i skakanje.
       2-3 Artist 3: Ovaj šešir je visok 100 piksela. Nacrtaj šešir koji ima 70 piksela
@@ -2414,7 +2414,7 @@ bs:
       grade4_arist_nested_loop_polygons2: 'Ponavljaj ovaj dizajn 6 puta. Za koliko
         moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 6?)'
       grade4_arist_nested_loop_squares1: Možeš li nacrtati ovih 10 kvadrata ovog trotoara
-        koristeći ugniježdenu petlju? Svaki kvadrat ima 30 piksela.
+        koristeći ugniježdene petlje? Svaki kvadrat je širok 30 piksela.
       grade4_arist_nested_loop_triangles2: 'Sada ugnijezdi ovu petlju unutar druge
         petlje da bi nacrtao/la 10 trokutova. Ovo se zove ugniježdena petlja. Savjet:
         Svih 10 trokutova zatvaraju ugao od 360 stepeni.  '
@@ -2638,7 +2638,7 @@ bs:
         150 da bi nacrtao/la novi trokut?
       grade5_artist_variables_triangles3: 'Dovuci broj blok na "postavi dužinu" blok
         da bi nacrtao/la skup od trokutova od 50 piksela veličine. '
-      grade5_bee_for_loops1: Upotrijebi petlju za sakupljanje nektra iz svakog cvijeta.
+      grade5_bee_for_loops1: Upotrijebi petlju za skupljanje nektra iz svakog cvijeta.
       grade5_bee_for_loops2: Dodaj neophodan kod da bi dvije pčele skupile sav nektar.
         Pogledaj koliko koda trebaš za ovaj zadatak! (Naučićemo jednostavniji način
         u slijedećem zadatku)

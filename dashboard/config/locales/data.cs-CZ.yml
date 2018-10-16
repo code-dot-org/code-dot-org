@@ -57,32 +57,31 @@ cs:
     level:
       instructions:
         maze_2_2: 'Pomůžeš mi chytit zlobivé prase? Poskládej dohromady několik bloků
-          "vpřed" a stiskni tlačítko "Spustit", abys mě dostal tam. '
+          "posunout vpřed" a stiskni tlačítko "Spustit", abys mě tam dostal. '
         maze_2_1: To prase mi pije krev. Pomoz mi ho najít!
         maze_2_2_5: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT,
           nebo bude peří létat!
         maze_2_3: Naveď mě k zelenému zlu! (Pozor na TNT)
-        maze_2_4: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohlo
+        maze_2_4: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl
           rozzlobit!
         maze_2_5: Existuje způsob, jak se mohu dostat k zelenému prasátku za použití
           pouze 2 bloků. Přijdeš na něj?
         maze_2_6: Pokus se mě dostat k zelenému vetřelci za použití třech bloků.
-        maze_2_7: Pomoz mi zbavit se toho zlobivého prasátka pomocí nejmenšího počtu
-          bloků. Zkus použít více jak jeden blok "opakovat n-krát".
+        maze_2_7: Pomoz mi zbavit se toho zlobivého prasátka pomocí co nejmenšího
+          počtu bloků. Zkus použít více než jeden blok "opakuj n-krát".
         maze_2_8: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš
-          tuto hádanku použitím šedého bloku "opakuj". Zkus do něj vložit 3 bloky:
-          posun vpřed, posun vpřed a otoč a nastavit blok "opakuj", aby to zopakoval
-          třikrát.'
-        maze_2_9: Dobře, zkus nový blok "opakovat dokud" - bude se opakovat, dokud
-          nechytím to otravné prase.
+          tuto hádanku použitím šedého bloku "opakuj", který opakuje třikrát. Zkus
+          do něj vložit další 3 bloky: posunout vpřed, posunout vpřed, otočit.'
+        maze_2_9: Dobře, zkus nový blok "opakovat do" - bude se opakovat, dokud nechytím
+          to otravné prase.
         maze_2_10: Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento úkol
           za použití pouze 4 bloků?
         maze_2_11: Drahý živý. Já zombie. Já hladový. Muset...se dostat...k té slunečnici...
           Dostaneš mě tam za použití jen 5 bloků?
         maze_2_12: Dobře, toto je podobné, jen trošičku odlišné. Zvládneš to vyřešit
           jen s 5-ti bloky?
-        maze_2_13: 'Použij nový blok "pokud" abych se rozhodoval, kdy se otočit. Tip:
-          stačí ti pouze jeden další blok, ale naučit se, jak jsme to nachystali,
+        maze_2_13: 'Použij nový typ bloku "pokud", abych se rozhodl, kdy se otočit.
+          Tip: stačí ti pouze jeden další blok, ale nauč se, jak jsme to nachystali,
           aby jsi to příště dokázal sám.'
         maze_2_14: Dobře, tohle je stejné jako předchozí hádanka, ale musíš si pamatovat,
           jak jsi použil blok "pokud" a blok "opakovat" dohromady.
@@ -96,13 +95,13 @@ cs:
         maze_2_19: Dokážeš přidat jen 3 bloky a vyřešit složitější bludiště? Pokud
           to uděláš správně, mohu jít všemi křivolakými cestami bez ohledu na délku.
         turtle_1_1: Ahoj já jsem umělec. Můžete napsat kód, abych vám nakreslil téměř
-          cokoliv. Použijte pár bloků, abych kreslil nad šedé čáry v obrázku.
+          cokoliv. Použijte pár bloků, abych obkreslil šedé čáry v obrázku.
         turtle_1_2: 'Teď nakresli čtverec. Poznámka: použij svou oblíbenou barvu vybranou
-          v novém bloku "nastavení barev".'
+          v novém bloku "nastav barvu".'
         turtle_1_3: Udělej čtverec použitím pouze 3 bloků.
         turtle_1_4: 'Namaluj trojúhelník, jehož strany mají každá jinou barvu. Použij
           možnost "náhodná barva", která vybere pokaždé jinou barvu. Tip: budeš muset
-          přijít na to jak moc se otočit tím, že klikneš na číslo v bloku otočit.'
+          přijít na to, jak moc se otočit tím, že klikneš na číslo v bloku otočit.'
         turtle_1_5: Teď pro procvičení, nakresli trojúhelník a čtverec tak aby vznikla
           poštovní obálka.
         turtle_1_6: 'Přijdeš na to, jak nakreslit tento trojúhelník a čtverec? Tip:

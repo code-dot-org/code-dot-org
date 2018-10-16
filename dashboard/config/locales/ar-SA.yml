@@ -111,6 +111,7 @@ ar:
     age: العمر
     user_type: هل أنت طالب أو معلّم؟
     submit: تسجيل
+    next: التالي
     teacher: هل أنت معلم؟
     valid_username: متاح!
     invalid_username: اسم المستخدم يجب ان يكون على الاقل 5 احرف

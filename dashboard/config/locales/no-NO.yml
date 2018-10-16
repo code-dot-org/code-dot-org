@@ -132,6 +132,7 @@
     age: Alder
     user_type: Er du elev eller lærer?
     submit: Meld deg på
+    next: Neste
     teacher: Er du en lærer?
     valid_username: Tilgjengelig!
     invalid_username: Brukernavnet må bestå av minimum fem tegn

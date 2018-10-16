@@ -11,8 +11,6 @@ ko:
           GROUP:
             sprites: 모두
           MOVE:
-            '"next"': 다음
-            '"prev"': 이전
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -20,8 +18,6 @@ ko:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': 다음
-            '"prev"': 이전
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -36,8 +32,6 @@ ko:
           GROUP:
             sprites: 모두
           MOVE:
-            '"next"': 다음
-            '"prev"': 이전
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -45,8 +39,6 @@ ko:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': 다음
-            '"prev"': 이전
             MOVES.Rest: 없음
           DIR:
             '1': "→"
@@ -90,6 +82,7 @@ ko:
           LOCATION:
             "{x: 100, y: 200}": 왼쪽으로
             "{x: 300, y: 200}": 오른쪽으로
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random(랜덤)
       Dancelab_randomColor:
         text: 랜덤 색
       Dancelab_setBackgroundEffect:
@@ -109,6 +102,11 @@ ko:
           EFFECT:
             '"none"': 없음
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"height"': '높이:'
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': 크기
@@ -283,6 +281,12 @@ ko:
             '"down"': 아래쪽 방향키를 누르면
             '"left"': 왼쪽 방향키를 누르면
             '"right"': 오른쪽 방향키를 누르면
+      RyanLab_moveForward:
+        text: 앞으로 이동
+      RyanLab_turnLeft:
+        text: 왼쪽으로 회전
+      RyanLab_turnRight:
+        text: 오른쪽으로 회전
       craft_ifPath:
         options:
           DIR:

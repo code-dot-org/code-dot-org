@@ -225,6 +225,9 @@ it:
       CSDU2L01 SFLP:
         description here: Descrizione qui
         title: titolo
+      CSP ExploreL02 SFLP:
+        description here: Descrizione qui
+        title: titolo
       CSP Journal Entry Placeholder2:
         description here: Descrizione qui
         title: titolo
@@ -617,6 +620,8 @@ it:
         description here: Descrizione qui
       'Technique: Frequency Analysis_2018':
         description here: Descrizione qui
+      Terminology Recap:
+        description here: Descrizione qui
       Terminology Recap_2018:
         description here: Descrizione qui
       Tips For Working on Your Own:
@@ -625,12 +630,26 @@ it:
       Tips For Working on Your Own_2018:
         description here: Descrizione qui
         title: titolo
+      U1L1 Student Lesson Introduction:
+        description here: Descrizione qui
       U1L1 Student Lesson Introduction_2018:
         description here: Descrizione qui
       U1L10 Student Lesson Introduction:
         description here: Descrizione qui
         title: titolo
       U1L11 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
+      U1L12 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
+      U1L13 Student Lesson Summary:
+        description here: Descrizione qui
+        title: titolo
+      U1L14 Student Lesson Summary:
+        description here: Descrizione qui
+        title: titolo
+      U1L15 Student Lesson Summary:
         description here: Descrizione qui
         title: titolo
       U1L16 Student Lesson Introduction:
@@ -649,6 +668,9 @@ it:
         title: titolo
       U1L4 Widget Demo - Video:
         description here: Descrizione qui
+      U1L5 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       U1L6 Student Lesson Introduction:
         description here: Descrizione qui
         title: titolo
@@ -656,6 +678,9 @@ it:
         description here: Descrizione qui
         title: titolo
       U1L8 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
+      U1L9 Student Lesson Introduction:
         description here: Descrizione qui
         title: titolo
       U2L1 Student Lesson Introduction:
@@ -666,6 +691,9 @@ it:
         title: titolo
       U2L17 Student Lesson Introduction:
         description here: Descrizione qui
+      U2L7 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       U2L8 Student Lesson Introduction:
         description here: Descrizione qui
         title: titolo
@@ -855,6 +883,9 @@ it:
       U4L08v2 Student Intro:
         description here: Descrizione qui
         title: titolo
+      U4L09 Student Lesson Intro Practice PT big data dilemma:
+        description here: Descrizione qui
+        title: titolo
       U4L09 Student Lesson Introduction:
         description here: Descrizione qui
         title: titolo
@@ -1011,10 +1042,19 @@ it:
       Unit 2 Lesson 1 Overview Clone:
         description here: Descrizione qui
         title: titolo
+      Unit 4 Lesson 1 Introduction:
+        description here: Descrizione qui
+        title: titolo
       Unit 4 Lesson 1 Introduction_2018:
         description here: Descrizione qui
         title: titolo
+      Unit 4 Lesson 2 Introduction:
+        description here: Descrizione qui
+        title: titolo
       Unit 4 Lesson 2 Introduction_2018:
+        description here: Descrizione qui
+        title: titolo
+      Unit 4 Lesson 5 Introduction:
         description here: Descrizione qui
         title: titolo
       Unit 4 Lesson 5 Introduction_2018:
@@ -1099,6 +1139,8 @@ it:
       'Worked Example: If-statements and Robot_2018':
         description here: Descrizione qui
         title: titolo
+      brad-repro-bug-000:
+        description here: Descrizione qui
       brad-test-continue-buttons-in-markdown:
         description here: Descrizione qui
       courseB_external_MRF:
@@ -1236,6 +1278,9 @@ it:
       csp_unit5_finalassessment_overview_exam_prep:
         description here: Descrizione qui
         title: titolo
+      csp_unit_assessment_overview:
+        description here: Descrizione qui
+        title: titolo
       csp_unit_assessment_overview_2018:
         description here: Descrizione qui
         title: titolo
@@ -1355,6 +1400,9 @@ it:
       v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
+      v2 U1L14 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       v2 U1L14 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
@@ -1376,6 +1424,9 @@ it:
       v2 U1L4 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
+      v2 U1L5 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       v2 U1L5 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
@@ -1383,7 +1434,13 @@ it:
         description here: Descrizione qui
       v2 U1L6 Student Lesson Introduction_2018:
         description here: Descrizione qui
+      v2 U1L8 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       v2 U1L8 Student Lesson Introduction_2018:
+        description here: Descrizione qui
+        title: titolo
+      v2 U2L1 Student Lesson Introduction:
         description here: Descrizione qui
         title: titolo
       v2 U2L1 Student Lesson Introduction_2018:
@@ -1393,6 +1450,9 @@ it:
         description here: Descrizione qui
         title: titolo
       v2 U2L10 Student Lesson Introduction_2018:
+        description here: Descrizione qui
+        title: titolo
+      v2 U2L11 Student Lesson Introduction:
         description here: Descrizione qui
         title: titolo
       v2 U2L11 Student Lesson Introduction_2018:
@@ -1416,6 +1476,9 @@ it:
       v2 U2L14 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
+      v2 U2L15 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       v2 U2L15 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
@@ -1425,14 +1488,25 @@ it:
       v2 U2L2 Student Lesson Summary_2018:
         description here: Descrizione qui
         title: titolo
+      v2 U2L3 Student Lesson Summary:
+        description here: Descrizione qui
+        title: titolo
       v2 U2L3 Student Lesson Summary_2018:
+        description here: Descrizione qui
+        title: titolo
+      v2 U2L4 Student Lesson Summary:
         description here: Descrizione qui
         title: titolo
       v2 U2L4 Student Lesson Summary_2018:
         description here: Descrizione qui
         title: titolo
+      v2 U2L5 Student Lesson Introduction:
+        description here: Descrizione qui
       v2 U2L5 Student Lesson Introduction_2018:
         description here: Descrizione qui
+      v2 U2L6 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       v2 U2L6 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
@@ -1448,6 +1522,9 @@ it:
       v2 U2L8 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
+      v2 U2L9 Student Lesson Introduction:
+        description here: Descrizione qui
+        title: titolo
       v2 U2L9 Student Lesson Introduction_2018:
         description here: Descrizione qui
         title: titolo
@@ -1461,6 +1538,9 @@ it:
         Creating Functions: Creazione di funzioni
       v2 U3L05 Student Lesson Introduction_2018:
         Creating Functions: Creazione di funzioni
+      v2 U4L05 Student Lesson Intro Encryption Caesar:
+        description here: Descrizione qui
+        title: titolo
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Associa ogni sequenza di figure alla relativa sequenza di mosse di danza, usando la corrispondenza sopra illustrata.
@@ -1566,6 +1646,12 @@ it:
         Pair programming: Programmazione in coppia
       PDK5 What is unplugged:
         Question: Domanda
+      'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
       U3L19 - MATCH what are values of abc:
         '10': '10'
         '12': '12'
@@ -1733,6 +1819,9 @@ it:
       4-5 maze multi 1:
         Maze Multiple Choice: Esercizio di Verifica (Risposte Multiple)
         Which blocks solve the puzzle?: Quale sequenza di blocchi è corretta?
+      CB_Question_3:
+        A: A
+        Y: true
       CSD Prediction Header Size:
         Question: Domanda
         right answer: risposta giusta
@@ -1961,6 +2050,12 @@ it:
         '1': '1'
         '2': '2'
         '4': '4'
+      U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
       U1L6 Assessment multiple choice:
         '10': '10'
         '12': '12'
@@ -1987,8 +2082,31 @@ it:
         '16': '16'
         17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
         18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+      'U2L06 - MC: Which is an MST?':
+        0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: A
+        B: B
+        C: C
+        D: D
+        E: E
+      U2L08 Assessment 1:
+        '11': '11'
+        '5': '5'
+        '6': '6'
+        '8': '8'
+        '9': '9'
+      U2L13 Assessment4:
+        '26': '26'
       U2L13 Assessment4_2018:
         '26': '26'
+      U2L14 Assessment3:
+        'false': 'falso'
+        'true': 'vero'
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        '13': '13'
+        '17': '17'
+        '4': '4'
       U2L19 multichoice 13 MOD 17_2018:
         '0': '0'
         '13': '13'
@@ -2000,12 +2118,24 @@ it:
         '15': '15'
         '20': '20'
         '5': '5'
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
       U2L19 mutlichoice 20 mod 15_2018:
         '0': '0'
         '1.5': '1.5'
         '15': '15'
         '20': '20'
         '5': '5'
+      U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
       U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
@@ -2132,6 +2262,7 @@ it:
       courseB_multi_maze_seq10_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        The bird will not move at all.: L'uccellino non si muoverà.
       courseB_multi_maze_seq10_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
@@ -2277,30 +2408,62 @@ it:
         C: C
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno lo ripete 4 volte in cerchio.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno realizzerà questo programma quando cliccherai su "Esegui"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Il ciclo interno realizza un pentagono e quello esterno lo ripete 4 volte in cerchio.
       courseD_multi_artist_nestedLoops9_predict1_2018:
         A: A
         B: B
         C: C
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno lo ripete 4 volte in cerchio.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno realizzerà questo programma quando cliccherai su "Esegui"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Il ciclo interno realizza un pentagono e quello esterno lo ripete 4 volte in cerchio.
       courseD_multi_bee_conditionals1_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
-        1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare se c'è un fiore sotto alla nuvola.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo se lì sotto troverà un fiore.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere una dose di nettare. '
+        0: '? La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto questa nuvola. Se c''è un fiore, l''ape dovrebbe raccogliere il nettare una volta. Se non c''è alcun fiore, l''ape non dovrebbe fare nulla. Dai un''occhiata al codice presente nell''area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"?'
+        1: ': La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto questa nuvola. Se c''è un fiore, l''ape dovrebbe raccogliere il nettare una volta. Se non c''è alcun fiore, l''ape non dovrebbe fare nulla. Dai un''occhiata al codice presente nell''area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"?'
       courseD_multi_bee_conditionals1_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
-        1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare se c'è un fiore sotto alla nuvola.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo se lì sotto troverà un fiore.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere una dose di nettare. '
+        0: '? La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto questa nuvola. Se c''è un fiore, l''ape dovrebbe raccogliere il nettare una volta. Se non c''è alcun fiore, l''ape non dovrebbe fare nulla. Dai un''occhiata al codice presente nell''area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"?'
+        1: ': La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto questa nuvola. Se c''è un fiore, l''ape dovrebbe raccogliere il nettare una volta. Se non c''è alcun fiore, l''ape non dovrebbe fare nulla. Dai un''occhiata al codice presente nell''area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"?'
       courseD_multi_bee_conditionals7_predict2:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere il nettare da ogni fiore e fare il miele in ogni favo.
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere il nettare da ogni fiore e fare il miele in ogni favo.
+        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: sotto ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
+        0: ': ''Guarda molto attentamente il codice presente nell''area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'''
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare da ogni fiore e fare il miele in ogni favo.
+        The bee will get nectar at each flower and honey at each honeycomb.: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
+        The bee will try to get honey from both flowers and honeycomb.: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+        The bee will try to get nectar from both flowers and honeycomb.: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
       courseD_multi_bee_conditionals7_predict2_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere il nettare da ogni fiore e fare il miele in ogni favo.
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere il nettare da ogni fiore e fare il miele in ogni favo.
+        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: sotto ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
+        0: ': ''Guarda molto attentamente il codice presente nell''area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'''
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare da ogni fiore e fare il miele in ogni favo.
+        The bee will get nectar at each flower and honey at each honeycomb.: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
+        The bee will try to get honey from both flowers and honeycomb.: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+        The bee will try to get nectar from both flowers and honeycomb.: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
       courseD_multi_bee_debugging9_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
@@ -2308,37 +2471,59 @@ it:
       courseD_multi_bee_nestedLoops2_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        The bee will get all of the nectar.: L'ape raccoglierà tutto il nettare.
+        The bee will get only 2 units of nectar.: L'ape raccoglierà solo 2 dosi di nettare.
+        The bee will move forward and get nectar only one time.: L'ape andrà avanti e raccoglierà il nettare solo una volta.
       courseD_multi_bee_nestedLoops2_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        The bee will get all of the nectar.: L'ape raccoglierà tutto il nettare.
+        The bee will get only 2 units of nectar.: L'ape raccoglierà solo 2 dosi di nettare.
+        The bee will move forward and get nectar only one time.: L'ape andrà avanti e raccoglierà il nettare solo una volta.
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
         '8': '8'
         Correct!: Corretto!
         I don't know.: Non lo so.
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        13: '? Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+        14: ': Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+        15: '? L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+        16: ': L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
       courseD_multi_bee_nestedLoops9_predict2_2018:
         '12': '12'
         '4': '4'
         '8': '8'
         Correct!: Corretto!
         I don't know.: Non lo so.
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        13: '? Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+        14: ': Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+        15: '? L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+        16: ': L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
       courseD_multi_collector_debugging10_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+        Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.: 'Sbagliato. La tua risposta è incompleta: il ciclo non sarebbe comunque ripetuto un numero sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.'
+        Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il percorso a quadrato *inoltre* il ciclo non sarebbe ripetuto un numero sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.
+        Laurel will turn the wrong way when making a square.: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il percorso a quadrato.
+        0: ': ''Guarda molto attentamente il codice presente nell''area di lavoro. Perché, quando cliccherai su "Esegui", Laura non riuscirà a raccogliere tutti i diamanti? Attenzione: Questa è una domanda difficile, leggi bene tutte le opzioni prima di rispondere!'''
+        'The loop does not run long enough for Laurel to get to all of the treasure. ': 'Il ciclo non sarà ripetuto un numero sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti. '
       courseD_multi_collector_debugging10_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+        Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.: 'Sbagliato. La tua risposta è incompleta: il ciclo non sarebbe comunque ripetuto un numero sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.'
+        Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il percorso a quadrato *inoltre* il ciclo non sarebbe ripetuto un numero sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.
+        Laurel will turn the wrong way when making a square.: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il percorso a quadrato.
+        0: ': ''Guarda molto attentamente il codice presente nell''area di lavoro. Perché, quando cliccherai su "Esegui", Laura non riuscirà a raccogliere tutti i diamanti? Attenzione: Questa è una domanda difficile, leggi bene tutte le opzioni prima di rispondere!'''
+        'The loop does not run long enough for Laurel to get to all of the treasure. ': 'Il ciclo non sarà ripetuto un numero sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti. '
       courseD_multi_farmer_condLoops9_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
@@ -2356,8 +2541,12 @@ it:
       courseD_multi_farmer_ramp13:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: '? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
-        1: ': Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+        0: '? Sbagliato. Il blocco `prendi zucca` è all''interno del ciclo, quindi la contadina cerca di prendere le zucche ogni volta che esegue il ciclo, invece di farlo solo alla fine del percorso.'
+        1: ': Sbagliato. Il blocco `prendi zucca` è all''interno del ciclo, quindi la contadina cerca di prendere le zucche ogni volta che esegue il ciclo, invece di farlo solo alla fine del percorso.'
+        The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.: Il blocco `prendi zucca` è all'interno del ciclo, quindi la contadina cerca di prendere le zucche ogni volta che esegue il ciclo, invece di farlo solo alla fine del percorso.
+        The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.: La contadina cercherà di prendere le zucche in ogni casella vuota e non lo farà nell'ultima casella in cui c'è effettivamente la zucca.
+        The farmer will walk four spaces, then try to pick one pumpkin.: La contadina andrà avanti di quattro caselle e poi cercherà di prendere una zucca.
+        The farmer will walk to the end of the path and harvest the pumpkin.: La contadina avanzerà fino alla fine del percorso e raccoglierà la zucca.
       courseD_multi_farmer_ramp14:
         Correct!: Corretto!
         I don't know.: Non lo so.
@@ -2368,41 +2557,86 @@ it:
       courseD_multi_farmer_while10_predict2:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        Incorrect. There is no code to remove dirt from the pile.: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        Nothing.  This code will leave only level ground.: Nulla. Questo programma lascerà il terreno tutto livellato.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà dopo l'esecuzione di questo programma?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Il ciclo `mentre` può essere eseguito tutte le volte che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        This code will leave the holes completely untouched.: Questo programma non livellerà le buche.
+        This code will leave the pile completely untouched.: Questo programma non livellerà i mucchi.
       courseD_multi_farmer_while10_predict2_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        Incorrect. There is no code to remove dirt from the pile.: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        Nothing.  This code will leave only level ground.: Nulla. Questo programma lascerà il terreno tutto livellato.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà dopo l'esecuzione di questo programma?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Il ciclo `mentre` può essere eseguito tutte le volte che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        This code will leave the holes completely untouched.: Questo programma non livellerà le buche.
+        This code will leave the pile completely untouched.: Questo programma non livellerà i mucchi.
       courseD_multi_farmer_while4_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+        Look closely at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+        Nothing will happen.: Non succederà nulla.
+        The farmer will never stop removing dirt.: La contadina non smetterà più di rimuovere palate di terra.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena il mucchio sarà finito.
       courseD_multi_farmer_while4_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+        Look closely at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+        Nothing will happen.: Non succederà nulla.
+        The farmer will never stop removing dirt.: La contadina non smetterà più di rimuovere palate di terra.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena il mucchio sarà finito.
       courseD_multi_maze_until10_predict2:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: '? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.'
-        1: ': Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.'
+        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In questo programma, si cerca una possibile svolta a destra prima di controllare se è possibile andare avanti. Per questo motivo il programma fallisce.
+        0: '? Sbagliato. In questo programma, si cerca una possibile svolta a destra prima di controllare se è possibile andare avanti. Per questo motivo il programma fallisce.'
+        1: ': Sbagliato. In questo programma, si cerca una possibile svolta a destra prima di controllare se è possibile andare avanti. Per questo motivo il programma fallisce.'
         2: '? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'
         3: ': Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'
+        Look carefully at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+        The zombie will make it to the sunflower.: Lo zombie raggiungerà il girasole.
+        The zombie will turn right immediately and get stuck.: Lo zombie girerà immediatamente a destra e poco dopo si bloccherà.
+        The zombie will turn right on the first path and go around in circles forever.: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
       courseD_multi_maze_until10_predict2_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: In questo programma, lo zombie passerà il percorso corretto e finirà per andare avanti e indietro per sempre.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Errato. Lo zombie passerà il percorso corretto e finirà per andare avanti e indietro per sempre.
+        Look carefully at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+        The zombie will make it to the sunflower.: Lo zombie raggiungerà il girasole.
+        The zombie will pass the correct path and end up going back and forth forever.: Lo zombie passerà il percorso corretto e finirà per andare avanti e indietro per sempre.
+        The zombie will turn right on the first path and go around in circles forever.: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
       courseD_multi_maze_until2_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
-        1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
-        2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
-        3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+        0: '? Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        1: ': Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        2: '? Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        3: ': Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"?
         The bird will make it to the pig.: L'uccellino raggiungerà il maialino.
+        The bird will move forward and run into the TNT.: L'uccellino andrà avanti e sbatterà contro alla dinamite (TNT).
+        The bird will not move at all.: L'uccellino non si muoverà.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: Il programma fa andare l'uccellino avanti mentre c'è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maialino!
       courseD_multi_maze_until2_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
-        0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
-        1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
-        2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
-        3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+        0: '? Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        1: ': Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        2: '? Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        3: ': Sbagliato. Il programma fa andare l''uccellino avanti mentre c''è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maiale!'
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà quando cliccherai su "Esegui"?
         The bird will make it to the pig.: L'uccellino raggiungerà il maialino.
+        The bird will move forward and run into the TNT.: L'uccellino andrà avanti e sbatterà contro alla dinamite (TNT).
+        The bird will not move at all.: L'uccellino non si muoverà.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: Il programma fa andare l'uccellino avanti mentre c'è strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge il maialino!
       courseD_multi_scrat_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
@@ -2490,11 +2724,13 @@ it:
       courseE_multi_maze_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Nothing. The bird will not move at all.: Niente. L'uccellino non si muoverà.
         0: '? Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
         1: ': Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
       courseE_multi_maze_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
+        Nothing. The bird will not move at all.: Niente. L'uccellino non si muoverà.
         0: '? Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
         1: ': Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
       courseF_bee_variables_8a_2018:
@@ -2547,21 +2783,37 @@ it:
         I don't know.: Non lo so.
         0: '? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
         1: ': If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare se c'è un fiore sotto alla nuvola.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo se lì sotto troverà un fiore.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere una dose di nettare. '
       courseF_multi_bee_conditionals1_predict1_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
         0: '? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
         1: ': If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il nettare se c'è un fiore sotto alla nuvola.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo se c'è un fiore sotto alla nuvola.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo se lì sotto troverà un fiore.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere una dose di nettare. '
       courseF_multi_bee_conditionals7_predict2:
         Correct!: Corretto!
         I don't know.: Non lo so.
         0: '? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
         1: ': Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+        The bee will try to get honey from both flowers and honeycomb.: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+        The bee will try to get nectar from both flowers and honeycomb.: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
       courseF_multi_bee_conditionals7_predict2_2018:
         Correct!: Corretto!
         I don't know.: Non lo so.
         0: '? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
         1: ': Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+        The bee will try to get honey from both flowers and honeycomb.: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+        The bee will try to get nectar from both flowers and honeycomb.: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
       courseF_multi_bee_for3_predict1:
         Correct!: Corretto!
       courseF_multi_bee_for3_predict1_2018:
@@ -2709,6 +2961,11 @@ it:
       csp_ap_taking_ap_class:
         'No': 'No'
         'Yes': 'Sì'
+      cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
       cspu5_assess1_fivemore_2018:
         "-2": "-2"
         '3': '3'
@@ -2719,12 +2976,20 @@ it:
         '3': '3'
         '5': '5'
         '8': '8'
+      cspu5_assess1_flowchart:
+        '10': '10'
+        '5': '5'
       cspu5_assess1_flowchart_2018:
         '10': '10'
         '5': '5'
       cspu5_assess1_flowchart_exam_prep:
         '10': '10'
         '5': '5'
+      cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
       cspu5_assess1_increase_2018:
         '10': '10'
         '13': '13'
@@ -2735,9 +3000,15 @@ it:
         '13': '13'
         '5': '5'
         '8': '8'
+      cspu5_assess2_addstrings:
+        result: risultato
       cspu5_assess2_addstrings_2018:
         result: risultato
       cspu5_assess2_addstrings_exam_prep:
+        result: risultato
+      cspu5_assess2_combineString:
+        '10': '10'
+        '55': '55'
         result: risultato
       cspu5_assess2_combineString_2018:
         '10': '10'
@@ -2747,6 +3018,10 @@ it:
         '10': '10'
         '55': '55'
         result: risultato
+      cspu5_assess2_oldEnough:
+        '35': '35'
+        'false': 'falso'
+        'true': 'vero'
       cspu5_assess2_oldEnough_2018:
         '35': '35'
         'false': 'falso'
@@ -2773,6 +3048,11 @@ it:
         '30': '30'
         '50': '50'
         '75': '75'
+      cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
       cspu5_assess3_array1_2018:
         '10': '10'
         '4': '4'
@@ -2783,6 +3063,12 @@ it:
         '4': '4'
         '7': '7'
         '9': '9'
+      cspu5_assess3_array2:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
       cspu5_assess3_array2_2018:
         '2': '2'
         '3': '3'
@@ -2795,6 +3081,11 @@ it:
         '4': '4'
         '5': '5'
         '6': '6'
+      cspu5_assess3_array4:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
       cspu5_assess3_array4_2018:
         '0': '0'
         '1': '1'
@@ -2805,6 +3096,12 @@ it:
         '1': '1'
         '2': '2'
         '8': '8'
+      cspu5_assess3_counter:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
       cspu5_assess3_counter_2018:
         '0': '0'
         '1': '1'
@@ -2817,6 +3114,11 @@ it:
         '2': '2'
         '3': '3'
         '4': '4'
+      cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
       cspu5_assess3_listAppend_2018:
         '1': '1'
         '2': '2'
@@ -2827,6 +3129,11 @@ it:
         '2': '2'
         '3': '3'
         '6': '6'
+      cspu5_assess3_loopValue1:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
       cspu5_assess3_loopValue1_2018:
         '2': '2'
         '3': '3'
@@ -2837,12 +3144,22 @@ it:
         '3': '3'
         '4': '4'
         '5': '5'
+      cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
       cspu5_assess3_loopValue2_2018:
         '0': '0'
         '4': '4'
         '5': '5'
         '6': '6'
       cspu5_assess3_loopValue2_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+      cspu5_assess3_loopValue3:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -2857,12 +3174,21 @@ it:
         '4': '4'
         '5': '5'
         '6': '6'
+      cspu5_assess3_mysterySwap:
+        a: a
+        d: d
       cspu5_assess3_mysterySwap_2018:
         a: a
         d: d
       cspu5_assess3_mysterySwap_exam_prep:
         a: a
         d: d
+      cspu5_assess4_dataReturns:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
       cspu5_assess4_dataReturns_2018:
         '10': '10'
         '16': '16'
@@ -2875,6 +3201,11 @@ it:
         '3': '3'
         '4': '4'
         '9': '9'
+      cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
       cspu5_assess4_listOutput_2018:
         '17': '17'
         '3': '3'
@@ -2885,6 +3216,9 @@ it:
         '3': '3'
         '42': '42'
         '9': '9'
+      destroy me test:
+        right answer: risposta giusta
+        wrong answer: risposta sbagliata
       grade2_multi_collector_A_predict1:
         Correct!: Corretto!
         I don't know.: Non lo so.
@@ -2987,6 +3321,10 @@ it:
         Other: Altro
         Prefer not to answer: Preferisco non rispondere
         White: Bianco
+      sarah_test_maggie:
+        Question: Domanda
+        right answer: risposta giusta
+        test: test
       sciPD PreQ 1:
         'No': 'No'
         'Yes': 'Sì'
@@ -3008,3 +3346,6 @@ it:
         right answer: risposta giusta
         title: titolo
         wrong answer: risposta sbagliata
+    text_match:
+      U2L07 Assessment4:
+        '43': '43'
