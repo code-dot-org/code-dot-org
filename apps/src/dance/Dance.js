@@ -369,6 +369,10 @@ Dance.prototype.initInterpreter = function () {
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 };
 
+Dance.prototype.shouldShowSharing = function () {
+  return !!this.level.freePlay;
+};
+
 /**
  * This is called while this.p5 is in the preload phase.
  */
@@ -378,7 +382,7 @@ Dance.prototype.onP5Preload = function () {
   Sounds.getSingleton().register(options);
   const getSelectedSong = () => getStore().getState().selectedSong;
 
-  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this));
+  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this), this.shouldShowSharing());
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
@@ -406,14 +410,12 @@ Dance.prototype.onP5Draw = function () {
  * this.studioApp_.displayFeedback when appropriate
  */
 Dance.prototype.displayFeedback_ = function () {
-  var level = this.level;
-
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
-    level: level,
-    showingSharing: level.freePlay,
+    level: this.level,
+    showingSharing: this.shouldShowSharing(),
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
