@@ -7,7 +7,7 @@ class RegistrationsController < Devise::RegistrationsController
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :create]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
 
   #
   # GET /users/sign_up
