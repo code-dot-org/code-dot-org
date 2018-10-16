@@ -2,7 +2,6 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require 'helpers/asset_bucket'
-require_relative 'spy_newrelic_agent'
 
 class AssetsTest < FilesApiTestBase
   def setup
