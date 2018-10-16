@@ -205,11 +205,6 @@ sr:
         artist: Нацртај нешто
         applab: Направи апликацију
       educate_hoc: Час кода
-    create_button:
-      create: Креирај
-      artist: Уметник
-      playlab: Играоница
-      flappy: Флапи
     user:
       classroom: Почетна страница за учитеље
       district_dashboard: Регионална огласна табла
@@ -219,6 +214,10 @@ sr:
       logout: Одјави се
       signin: Пријави се
       already_registered: Већ си регистрован?
+      create: Креирај
+      artist: Уметник
+      playlab: Играоница
+      flappy: Флапи
     popup:
       progress_for_user: Напредак %{name}
       progress: Напредак
