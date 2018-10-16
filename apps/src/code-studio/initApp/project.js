@@ -497,6 +497,8 @@ var projects = module.exports = {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
+      sourceHandler.setSelectedSong(currentSources.selectedSong);
+
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
       }

@@ -427,6 +427,9 @@ const sourceHandler = {
   getMakerAPIsEnabled() {
     return getAppOptions().level.makerlabEnabled;
   },
+  setSelectedSong(id) {
+    getAppOptions().level.selectedSong = id;
+  },
   setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;
   },
