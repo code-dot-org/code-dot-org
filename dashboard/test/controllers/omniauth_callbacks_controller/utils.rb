@@ -138,6 +138,9 @@ module OmniauthCallbacksControllerTests
       study_records = @firehose_records.select {|e| e[:study] == SignUpTracking::STUDY_NAME}
       study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
       study_events = study_records.map {|e| e[:event]}
+
+      assert study_records.all? {|record| record[:data_string].present?}
+      assert_equal 1, study_records.map {|r| r[:data_string]}.uniq.count
       assert_equal [expected_study_group], study_groups
       assert_equal expected_events, study_events
     end
