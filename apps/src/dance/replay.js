@@ -1,4 +1,6 @@
 const DEBUG = true;
+const FRAME_LIMIT = 30 * 10; // 10 seconds @ 30 fps
+const SPRITE_LIMIT = 25;
 
 const log = [];
 if (DEBUG) {
@@ -7,7 +9,13 @@ if (DEBUG) {
 
 export default {
   logSprites: (p5) => {
-    log.push(p5.allSprites.map((sprite) => ({
+    if (log.length > FRAME_LIMIT) {
+      return;
+    }
+
+    const spritesToLog = p5.allSprites.slice(0, SPRITE_LIMIT);
+
+    log.push(spritesToLog.map((sprite) => ({
       animationFrame: sprite.animation && sprite.animation.getFrame(),
       animationLabel: sprite.getAnimationLabel(),
       mirrorX: sprite.mirrorX(),
