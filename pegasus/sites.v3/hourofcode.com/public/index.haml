@@ -14,8 +14,8 @@ social:
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
--# Spanish(Mexico), Spanish(Spain), and Portuguese(Brazil)
--latam_language_codes = ["la", "es", "pt"]
+-# Spanish and Portuguese
+-latam_language_codes = ["la", "es", "pt", "po"]
 -show_latam_videos = DCDO.get("show_latam_videos", nil)
 
 :ruby
@@ -47,7 +47,7 @@ social:
     position: absolute;
     left: 0;
     top: 0;
-    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -104,8 +104,8 @@ social:
         .col-sm-6.col-xs-12.col-md-4
           #textbacking
             %div.front-header-banner{style: "color: white; margin-top: 0px;"}
-              %h4
-                =hoc_s(:front_join_us_heading)
+              %h4{style: "font-size: 21px"}
+                =hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
               %div.students-served
                 =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
             %div.ctabuttongroup
