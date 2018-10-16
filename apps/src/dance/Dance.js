@@ -11,7 +11,6 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers} from './redux';
-import replayLog from './replay';
 
 //TODO: Remove this during clean-up
 // Songs
@@ -241,7 +240,6 @@ Dance.prototype.runButtonClick = function () {
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  replayLog.reset();
   this.execute();
 
   // Enable the Finish button if is present:
@@ -401,7 +399,6 @@ Dance.prototype.onP5Draw = function () {
     this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
   }
   this.nativeAPI.draw();
-  replayLog.logSprites(this.p5);
 };
 
 /**
