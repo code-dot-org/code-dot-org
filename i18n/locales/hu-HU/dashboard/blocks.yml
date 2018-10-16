@@ -54,12 +54,28 @@ hu:
         options:
           GROUP:
             sprites: összes
+          FORMAT:
+            '"random"': véletlen
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": balra
             "{x: 300, y: 200}": jobbra
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': véletlen
       Dancelab_randomColor:
         text: Véletlen szín
       Dancelab_setDanceSpeed:
@@ -72,6 +88,13 @@ hu:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': méret
+            '"height"': magasság
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: összes
           PROPERTY:
             '"scale"': méret
             '"height"': magasság
@@ -265,3 +288,7 @@ hu:
         text: előrelépni
       craft_placeTorch:
         text: fáklya elhelyezése
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': csirke
