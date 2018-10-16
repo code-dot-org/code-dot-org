@@ -296,14 +296,6 @@ nn:
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
-    create_button:
-      create: 'Opprett'
-      applab: 'App-lab'
-      artist: 'Kunstnar'
-      gamelab: 'Spel-lab'
-      playlab: 'Spel-lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flakse'
     user:
       classroom: 'Side for lærarar'
       district_dashboard: 'Distrikt dashboard'
@@ -317,6 +309,13 @@ nn:
       team: 'Team'
       driver: 'Sjåfør'
       navigator: 'Kartlesar'
+      create: 'Opprett'
+      applab: 'App-lab'
+      artist: 'Kunstnar'
+      gamelab: 'Spel-lab'
+      playlab: 'Spel-lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flakse'
     popup:
       progress_for_user: "Framgangen til %{name}"
       progress: 'Framgangen din'
