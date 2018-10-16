@@ -110,6 +110,7 @@ en:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    microsoft_v2_auth: 'Microsoft Account'
     clever: 'Clever Account'
     powerschool: 'Powerschool Account'
     forgot_password: 'Forgot your password?'
