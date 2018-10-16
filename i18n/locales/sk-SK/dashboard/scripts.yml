@@ -478,7 +478,7 @@ sk:
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
         mc:
-          title: Minecraft Hodina kódu
+          title: Minecraft Hodina Kódu
           description: Použi bloky kódov aby si vzal Steva alebo Alex na dobrodúžstvo skrz tento Minecraft svet
           description_short: Preskúmajte Minecraft svet prostredníctvom kódu
         ScienceP3OLPT3:
@@ -1162,12 +1162,12 @@ sk:
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Cesta Hrdinu Hodiny Kódu'
+              name: 'Minecraft\: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
-              name: Minecraft Hodina kódu
+              name: Minecraft Hodina Kódu
           title: 'Minecraft: Cesta Hrdinu'
-          description_short: Minecraft je naspäť so zbrusu novou aktivitou pre Hodinu Kódu!
-          description: Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou! Prejdite sa po Minecrafte s kódom.
+          description_short: Minecraft je späť s úplne novou aktivitou pre Hodinu Kódu!
+          description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom.
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -1415,7 +1415,7 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Minecraft Hour of Code:
-              name: Minecraft Hodina kódu
+              name: Minecraft Hodina Kódu
             Copyright and Creativity:
               name: Digitálne zdieľanie
         coursef-2018:
