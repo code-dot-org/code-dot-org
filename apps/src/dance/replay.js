@@ -7,24 +7,17 @@ if (DEBUG) {
 
 export default {
   logSprites: (p5) => {
-    log.push(p5.allSprites.map(function (sprite) {
-      const result = {
-        animationLabel: sprite.getAnimationLabel(),
-        mirrorX: sprite.mirrorX(),
-        rotation: sprite.rotation,
-        scale: sprite.scale,
-        style: sprite.style,
-        tint: p5.color(sprite.tint || 0)._getHue(),
-        x: sprite.x,
-        y: sprite.y,
-      };
-
-      if (sprite.animation) {
-        result.animationFrame = sprite.animation.getFrame();
-      }
-
-      return result;
-    }));
+    log.push(p5.allSprites.map((sprite) => ({
+      animationFrame: sprite.animation && sprite.animation.getFrame(),
+      animationLabel: sprite.getAnimationLabel(),
+      mirrorX: sprite.mirrorX(),
+      rotation: sprite.rotation,
+      scale: sprite.scale,
+      style: sprite.style,
+      tint: sprite.tint === undefined ? undefined : p5.color(sprite.tint || 0)._getHue(),
+      x: sprite.x,
+      y: sprite.y,
+    })));
   },
 
   reset: () => {
