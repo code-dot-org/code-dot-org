@@ -1151,8 +1151,14 @@ ar:
               name: إضافة الدوال
         hero:
           stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'ماين كرافت/: رحلة البطل ساعة من البرمجة'
             Minecraft Hour of Code:
               name: ساعة البرمجة ماين كرافت
+          title: 'ماين كرافت: رحلة البطل'
+          description_short: ماين كرافت عادت بنشاط جديد من انشطة ساعة من البرمجة!
+          description: ماين كرافت عادت لساعة من البرمجة بنشاط جديد! رحلة في عالم ماين
+            كرافت مع البرمجة.
         course-e-2018:
           stages:
             Building a Foundation:
