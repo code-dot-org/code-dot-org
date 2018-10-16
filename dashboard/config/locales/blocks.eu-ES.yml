@@ -192,12 +192,28 @@ eu:
             '"PINEAPPLE"': piña giztiak
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
+          FORMAT:
+            '"random"': ausazkoa
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ezkerrera
             "{x: 300, y: 200}": eskuinera
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ausazkoa
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea
       Dancelab_setBackgroundEffect:
@@ -218,6 +234,26 @@ eu:
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Ausazkoa
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': estralurtar guztiak
+            '"BEAR"': hartz guztiak
+            '"CAT"': katu guztiak
+            '"DOG"': txakur guztiak
+            '"DUCK"': ahate guztiak
+            '"FROG"': zapo guztiak
+            '"MOOSE"': altze guztiak
+            '"PINEAPPLE"': piña giztiak
+            '"ROBOT"': robot guztiak
+            '"SHARK"': marrazo guztiak
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
@@ -520,3 +556,7 @@ eu:
         text: mugitu aurrera
       craft_placeTorch:
         text: argi-zuzia kokatu
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': oilaskoa
