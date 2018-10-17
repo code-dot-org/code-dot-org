@@ -30,6 +30,7 @@ class ProjectCardGrid extends Component {
   static propTypes = {
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(projectPropType),
+      spritelab: PropTypes.arrayOf(projectPropType),
       gamelab: PropTypes.arrayOf(projectPropType),
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
@@ -84,6 +85,18 @@ class ProjectCardGrid extends Component {
               labViewMoreString={i18n.projectTypeApplabViewMore()}
               hideViewMoreLink={this.props.limitedGallery}
               projectList={projectLists.applab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
+            <ProjectAppTypeArea
+              labKey="spritelab"
+              labName={i18n.projectTypeSpriteLab()}
+              labViewMoreString={i18n.projectTypeSpriteLabViewMore()}
+              hideViewMoreLink={this.props.limitedGallery}
+              projectList={projectLists.spritelab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
@@ -170,6 +183,19 @@ class ProjectCardGrid extends Component {
                 labViewMoreString={i18n.projectsViewAll()}
                 hideViewMoreLink={this.props.limitedGallery}
                 projectList={projectLists.applab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
+              />
+            }
+            {this.state.showApp === 'spritelab' &&
+              <ProjectAppTypeArea
+                labKey="spritelab"
+                labName={i18n.projectTypeSpriteLab()}
+                labViewMoreString={i18n.projectsViewAll()}
+                hideViewMoreLink={this.props.limitedGallery}
+                projectList={projectLists.spritelab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
