@@ -5,6 +5,7 @@ MAIN_JSON_FILENAME = 'main.json'.freeze unless defined? MAIN_JSON_FILENAME
 
 #
 # SourceBucket
+# Assumes only main.json files will be uploaded to this bucket.
 #
 class SourceBucket < BucketHelper
   def initialize

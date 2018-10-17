@@ -643,38 +643,6 @@ class SourcesTest < FilesApiTestBase
     delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
   end
 
-  def test_remix_not_main
-    # Mock destination
-    @destination_channel = create_channel
-    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
-
-    # Create non-main file
-    src_file_v1 = {
-      "source": "this is not a main.json file"
-    }.stringify_keys
-    @api.put_object('test.json', src_file_v1.to_json, {'CONTENT_TYPE' => 'application/json'})
-
-    # Remix
-    animation_list = AnimationBucket.new.copy_files @channel, @destination_channel
-    SourceBucket.new.remix_source @channel, @destination_channel, animation_list
-
-    # Check that source exists in destination channel
-    # Check that remix-ed file is equal to the original file
-    remixed_source = @destination_api.get_object('test.json')
-    assert successful?
-    assert_equal src_file_v1.to_json, remixed_source
-
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
-    )
-
-    # Clear original and remixed buckets
-    delete_all_source_versions('test.json')
-
-    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/test.json")
-  end
-
   def test_remix_no_animations
     # Mock destination
     @destination_channel = create_channel
