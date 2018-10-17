@@ -581,7 +581,6 @@ class SourcesTest < FilesApiTestBase
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
     )
@@ -634,7 +633,6 @@ class SourcesTest < FilesApiTestBase
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
     )
 
     # Clear original and remixed buckets
@@ -671,7 +669,6 @@ class SourcesTest < FilesApiTestBase
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
     )
 
     # Clear original and remixed buckets
