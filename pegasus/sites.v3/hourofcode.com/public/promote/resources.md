@@ -18,13 +18,7 @@ nav: promote_nav
 
 <a id="posters"></a>
 ## Hang these posters in your school
-[![image](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-
-[![image](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :promote_current_posters %>
 
 Looking for our posters from previous years? <a href="<%= resolve_url('/promote/previous-posters') %>">Find them here</a>! 
 

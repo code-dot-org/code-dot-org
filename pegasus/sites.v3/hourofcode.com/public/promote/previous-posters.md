@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_previous_posters).inspect %>
+title: <%= hoc_s(:title_past_posters).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -15,6 +15,6 @@ nav: promote_nav
 
 <br>
 
-<%= view :promote_posters %>
+<%= view :promote_past_posters %>
 
 <%= view :signup_button %>
