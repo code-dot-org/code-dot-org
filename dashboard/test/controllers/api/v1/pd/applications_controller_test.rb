@@ -673,7 +673,9 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for teachers' do
-      create TEACHER_APPLICATION_FACTORY, course: 'csd'
+      application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
+      application.status = 'accepted_not_notified'
+      application.save!
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success
