@@ -40,24 +40,13 @@ Watch videos and read interviews with inspirational people working in a variety 
 <a id="posters"></a>
 ## 4. Put up these posters
 
-[![image](/images/fit-260/malala.png)](/files/malala-poster.pdf)
-[![image](/images/fit-260/obama-poster-new.png)](/files/obama-poster-new.pdf)
-[![image](/images/fit-260/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
-[![image](/images/fit-260/mark-poster.png)](/files/mark-poster.pdf)
-[![image](/images/fit-260/chris-poster.png)](/files/chris-poster.pdf)
-[![image](/images/fit-260/susan-poster.png)](/files/susan-poster.pdf)
-[![image](/images/fit-260/ashton-poster.png)](/files/ashton-poster.pdf)
-[![image](/images/fit-260/obama-poster.png)](/files/obama-poster.pdf)
+[![image](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
 
-</br>
-</br>
-
-[![image](/images/careers/poster_thumbnail_maddy_maxey.jpg)](/files/careers/maddy-maxey.pdf)
-[![image](/images/careers/poster_thumbnail_nidhi_erin.jpg)](/files/careers/nidhi-and-erin.pdf)
-
-[![image](/images/careers/poster_thumbnail_rory_kieran.jpg)](/files/careers/rory-and-kieran.pdf)
-[![image](/images/careers/poster_thumbnail_javier_aguera.jpg)](/files/careers/javier-aguera.pdf)
-
+[![image](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## 5. Grow participation by women
 
