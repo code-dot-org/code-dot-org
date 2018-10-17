@@ -151,9 +151,16 @@ class ExpiredDeletedAccountPurger
   end
 
   def build_metrics(review_queue_depth)
+    soft_deleted_account_count = begin
+      soft_deleted_accounts.count
+    rescue => e
+      yell "Error while counting soft-deleted accounts: #{e.message}"
+      0
+    end
+
     {
       # Number of soft-deleted accounts in system after this run
-      SoftDeletedAccounts: soft_deleted_accounts.count,
+      SoftDeletedAccounts: soft_deleted_account_count,
       # Number of accounts purged during this run
       AccountsPurged: @num_accounts_purged,
       # Number of accounts queued for manual review during this run
