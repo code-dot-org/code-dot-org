@@ -108,6 +108,10 @@ const PROJECT_INFO = {
   'gumball': {
     label: i18n.projectTypeGumball(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_gumball.png"
+  },
+  'spritelab': {
+    label: i18n.projectTypeSpriteLab(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_spritelab.png"
   }
 };
 
