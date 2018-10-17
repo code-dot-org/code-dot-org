@@ -158,64 +158,6 @@ module Pd::Application
       assert_equal earliest_valid_workshop, application.find_default_workshop
     end
 
-    test 'locking an application with pd_workshop_id automatically enrolls user' do
-      application = create :pd_teacher1920_application
-      workshop = create :pd_workshop
-
-      application.pd_workshop_id = workshop.id
-      application.status = 'accepted_not_notified'
-
-      assert_creates(Pd::Enrollment) do
-        application.lock!
-      end
-      assert_equal Pd::Enrollment.last.workshop, workshop
-      assert_equal Pd::Enrollment.last.id, application.auto_assigned_enrollment_id
-    end
-
-    test 'updating and re-locking an application with an auto-assigned enrollment will delete old enrollment' do
-      application = create :pd_teacher1920_application
-      first_workshop = create :pd_workshop
-      second_workshop = create :pd_workshop
-
-      application.pd_workshop_id = first_workshop.id
-      application.status = 'accepted_not_notified'
-      application.lock!
-
-      first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
-
-      application.unlock!
-      application.pd_workshop_id = second_workshop.id
-      application.lock!
-
-      assert first_enrollment.reload.deleted?
-      assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
-    end
-
-    test 'updating the application to unaccepted will also delete the autoenrollment' do
-      application = create :pd_teacher1920_application
-      workshop = create :pd_workshop
-
-      application.pd_workshop_id = workshop.id
-      application.status = 'accepted_not_notified'
-      application.lock!
-      first_enrollment = Pd::Enrollment.find(application.auto_assigned_enrollment_id)
-
-      application.unlock!
-      application.status = "waitlisted"
-      application.lock!
-
-      assert first_enrollment.reload.deleted?
-
-      application.unlock!
-      application.status = 'accepted_not_notified'
-
-      assert_creates(Pd::Enrollment) do
-        application.lock!
-      end
-
-      assert_not_equal first_enrollment.id, application.auto_assigned_enrollment_id
-    end
-
     test 'school_info_attr for specific school' do
       school = create :school
       form_data_hash = build :pd_teacher1920_application_hash, school: school
@@ -408,7 +350,7 @@ module Pd::Application
       assert_equal workshop.id, application.reload.pd_workshop_id
     end
 
-    test 'can_see_locked_status?' do
+    test 'can_see_locked_status? is always false' do
       teacher = create :teacher
       g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
       g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
@@ -416,12 +358,11 @@ module Pd::Application
 
       refute Teacher1920Application.can_see_locked_status?(teacher)
       refute Teacher1920Application.can_see_locked_status?(g1_program_manager)
-
-      assert Teacher1920Application.can_see_locked_status?(g3_program_manager)
-      assert Teacher1920Application.can_see_locked_status?(workshop_admin)
+      refute Teacher1920Application.can_see_locked_status?(g3_program_manager)
+      refute Teacher1920Application.can_see_locked_status?(workshop_admin)
     end
 
-    test 'locked status appears in csv only when the supplied user can_see_locked_status' do
+    test 'locked status does not appear in csv' do
       application = create :pd_teacher1920_application
       mock_user = mock
 
@@ -431,13 +372,6 @@ module Pd::Application
       row_without_locked = application.to_csv_row(mock_user)
       assert_equal CSV.parse(header_without_locked).length, CSV.parse(row_without_locked).length,
         "Expected header and row to have the same number of columns, excluding Locked"
-
-      Teacher1920Application.stubs(:can_see_locked_status?).returns(true)
-      header_with_locked = Teacher1920Application.csv_header('csf', mock_user)
-      assert header_with_locked.include? 'Locked'
-      row_with_locked = application.to_csv_row(mock_user)
-      assert_equal CSV.parse(header_with_locked).length, CSV.parse(row_with_locked).length,
-        "Expected header and row to have the same number of columns, including Locked"
     end
 
     test 'to_cohort_csv' do
