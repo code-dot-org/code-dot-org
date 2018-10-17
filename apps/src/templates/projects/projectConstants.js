@@ -78,6 +78,7 @@ export const PROJECT_TYPE_MAP = {
   playlab_k1: i18n.projectTypePlaylabPreReader(),
   eval: i18n.projectTypeEval(),
   calc: i18n.projectTypeCalc(),
+  dance: i18n.projectTypeDance()
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
@@ -100,6 +101,7 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   basketball: i18n.projectTypeEvents(),
   artist_k1: i18n.projectTypeK1(),
   playlab_k1: i18n.projectTypeK1(),
+  dance: i18n.projectTypeDance()
 };
 
 // The project table uses the channels API to populate the personal projects
