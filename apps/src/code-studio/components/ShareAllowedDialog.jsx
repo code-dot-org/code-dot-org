@@ -172,8 +172,6 @@ class ShareAllowedDialog extends React.Component {
   };
 
   componentDidMount() {
-    recordShare('open');
-
     if (this.props.canShareSocial) {
       // check if twitter and facebook are actually available
       // and not blocked by network firewall
@@ -185,6 +183,12 @@ class ShareAllowedDialog extends React.Component {
         'https://twitter.com/favicon.ico',
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.isOpen && !prevProps.isOpen) {
+      recordShare('open');
     }
   }
 
