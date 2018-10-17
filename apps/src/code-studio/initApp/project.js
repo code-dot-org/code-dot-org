@@ -943,7 +943,8 @@ var projects = module.exports = {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        callback({source, html, animations, makerAPIsEnabled});
+        const selectedSong = this.sourceHandler.getSelectedSong();
+        callback({source, html, animations, makerAPIsEnabled, selectedSong});
       }));
   },
 

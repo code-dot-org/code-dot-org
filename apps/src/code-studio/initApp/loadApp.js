@@ -430,6 +430,9 @@ const sourceHandler = {
   setSelectedSong(id) {
     getAppOptions().level.selectedSong = id;
   },
+  getSelectedSong() {
+    return getAppOptions().level.selectedSong;
+  },
   setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;
   },
