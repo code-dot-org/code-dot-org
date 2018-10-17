@@ -191,6 +191,7 @@ class FilesApi < Sinatra::Base
     response['Cache-Control'] += ', no-transform'
 
     filename.downcase! if endpoint == 'files'
+    not_found unless buckets.allowed_file_name? filename
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
@@ -304,6 +305,7 @@ class FilesApi < Sinatra::Base
     file_too_large(endpoint) unless body.length < max_file_size
 
     buckets = get_bucket_impl(endpoint).new
+    bad_request unless buckets.allowed_file_name? filename
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -353,6 +355,7 @@ class FilesApi < Sinatra::Base
     not_authorized unless owns_channel?(encrypted_channel_id)
 
     buckets = get_bucket_impl(endpoint).new
+    bad_request unless buckets.allowed_file_name? filename
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
