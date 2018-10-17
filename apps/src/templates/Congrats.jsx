@@ -27,7 +27,7 @@ export default class Congrats extends Component {
     tutorial: PropTypes.string,
     MCShareLink: PropTypes.string,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
-    userAge: PropTypes.number,
+    under13: PropTypes.bool,
     language: PropTypes.string.isRequired,
     randomDonorTwitter: PropTypes.string,
   };
@@ -38,7 +38,7 @@ export default class Congrats extends Component {
       certificateId,
       MCShareLink,
       userType,
-      userAge,
+      under13,
       language,
       randomDonorTwitter
     } = this.props;
@@ -65,7 +65,7 @@ export default class Congrats extends Component {
             tutorial={tutorial}
             certificateId={certificateId}
             randomDonorTwitter={randomDonorTwitter}
-            userAge={userAge}
+            under13={under13}
             isMinecraft={isMinecraft}
           >
             {showKoreanMinecraftLink && (
@@ -87,7 +87,7 @@ export default class Congrats extends Component {
             completedTutorialType={tutorialType}
             MCShareLink={MCShareLink}
             userType={userType}
-            userAge={userAge}
+            under13={under13}
             isEnglish={isEnglish}
           />
           {userType === "signedOut" && isEnglish && (

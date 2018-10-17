@@ -17,7 +17,7 @@ export default class SocialShare extends Component {
     facebook: PropTypes.string.isRequired,
     twitter: PropTypes.string.isRequired,
     print: PropTypes.string.isRequired,
-    userAge: PropTypes.number,
+    under13: PropTypes.bool,
   };
 
   state = {
@@ -37,9 +37,9 @@ export default class SocialShare extends Component {
   }
 
   render() {
+    const { under13 } = this.props;
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${this.props.facebook}`;
     const twitterShareUrl = `https://twitter.com/share?${this.props.twitter}`;
-    const under13 = this.props.userAge < 13;
 
     return (
       <div>

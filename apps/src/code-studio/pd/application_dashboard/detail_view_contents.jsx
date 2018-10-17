@@ -81,8 +81,9 @@ export class DetailViewContents extends React.Component {
       course: PropTypes.oneOf(['csf', 'csd', 'csp']),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
-      locked: PropTypes.bool,
+      regional_partner_emails_sent_by_system: PropTypes.bool,
       regional_partner_id: PropTypes.number,
+      locked: PropTypes.bool,
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
@@ -170,8 +171,21 @@ export class DetailViewContents extends React.Component {
   };
 
   handleStatusChange = (event) => {
+    const workshopAssigned = this.props.applicationData.pd_workshop_id || this.props.applicationData.fit_workshop_id;
+    if (this.props.applicationData.regional_partner_emails_sent_by_system && !workshopAssigned && ['accepted_no_cost_registration', 'registration_sent'].includes(event.target.value)) {
+      this.setState({
+        showCantSaveStatusDialog: true
+      });
+    } else {
+      this.setState({
+        status: event.target.value
+      });
+    }
+  };
+
+  handleCantSaveStatusOk = (event) => {
     this.setState({
-      status: event.target.value
+      showCantSaveStatusDialog: false
     });
   };
 
@@ -433,22 +447,36 @@ export class DetailViewContents extends React.Component {
 
   renderStatusSelect = () => {
     const selectControl = (
-      <FormControl
-        componentClass="select"
-        disabled={this.state.locked || !this.state.editing}
-        title={this.state.locked && "The status of this application has been locked"}
-        value={this.state.status}
-        onChange={this.handleStatusChange}
-        style={styles.statusSelect}
-      >
-        {
-          Object.keys(this.statuses).map((status, i) => (
-            <option value={status} key={i}>
-              {this.statuses[status]}
-            </option>
-          ))
-        }
-      </FormControl>
+      <div>
+        <FormControl
+          componentClass="select"
+          disabled={this.state.locked || !this.state.editing}
+          title={this.state.locked && "The status of this application has been locked"}
+          value={this.state.status}
+          onChange={this.handleStatusChange}
+          style={styles.statusSelect}
+        >
+          {
+            Object.keys(this.statuses).map((status, i) => (
+              <option value={status} key={i}>
+                {this.statuses[status]}
+              </option>
+            ))
+          }
+        </FormControl>
+        <ConfirmationDialog
+          show={this.state.showCantSaveStatusDialog}
+          onOk={this.handleCantSaveStatusOk}
+          headerText="Cannot save applicant status"
+          bodyText={
+            `Please assign a summer workshop to this applicant before setting this
+            applicant's status to "Accepted - No Cost Registration" or "Registration Sent".
+            These statuses will trigger an automated email with a registration link to their
+            assigned workshop.`
+          }
+          okText="OK"
+        />
+      </div>
     );
 
     if (this.props.canLock) {
