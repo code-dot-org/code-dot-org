@@ -662,7 +662,7 @@ module Pd::Application
 
     # @override
     def self.can_see_locked_status?(user)
-      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
+      false
     end
 
     # override
