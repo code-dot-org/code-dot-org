@@ -30,10 +30,11 @@ module Api::V1::Pd
         end
 
         apps.group(:status).each do |group|
-          application_data[role][group.status] = {
-            locked: group.locked,
-            unlocked: group.total - group.locked
-          }
+          application_data[role][group.status] = if ['csd_teachers', 'csp_teachers'].include? role
+                                                   {total: group.total}
+                                                 else
+                                                   {total: group.total, locked: group.locked}
+                                                 end
         end
       end
 
@@ -267,8 +268,8 @@ module Api::V1::Pd
           app_data[role] = {}
           app_type.statuses.each do |status|
             app_data[role][status] = {
-              locked: 0,
-              unlocked: 0
+              total: 0,
+              locked: 0
             }
           end
         end
