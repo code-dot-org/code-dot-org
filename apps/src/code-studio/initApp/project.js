@@ -879,9 +879,7 @@ var projects = module.exports = {
             ...sourceAndHtml,
             selectedSong: id,
           },
-          () => {
-            resolve();
-          }
+          resolve()
         );
       });
     });
