@@ -7,14 +7,14 @@ import Radium from 'radium';
 import _ from 'lodash';
 
 const DEFAULT_PROJECT_TYPES_ADVANCED = [
-  'playlab',
+  'spritelab',
   'artist',
   'applab',
   'gamelab'
 ];
 
 const DEFAULT_PROJECT_TYPES_BASIC = [
-  'playlab',
+  'spritelab',
   'artist',
   'minecraft_designer',
   'flappy'
