@@ -56,7 +56,8 @@ var songs = {
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired
+    selectedSong: PropTypes.string.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired
   };
 
   changeSong = (event) => {
@@ -68,8 +69,10 @@ const SongSelector = Radium(class extends React.Component {
     options['mp3'] = songs[options.id].url;
     Sounds.getSingleton().register(options);
 
-    //Save song to project
-    project.saveSelectedSong(song);
+    if (this.props.isProjectLevel) {
+      //Save song to project
+      project.saveSelectedSong(song);
+    }
   };
 
   render() {
@@ -92,6 +95,7 @@ class DanceVisualizationColumn extends React.Component {
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired
   };
 
   render() {
@@ -106,7 +110,7 @@ class DanceVisualizationColumn extends React.Component {
     return (
       <span>
         {!this.props.isShareView &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} isProjectLevel={this.props.isProjectLevel}/>
         }
         <ProtectedVisualizationDiv>
           <div
@@ -124,6 +128,7 @@ class DanceVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
+  isProjectLevel: state.pageConstants.isProjectLevel,
   isShareView: state.pageConstants.isShareView,
   selectedSong: state.selectedSong,
 }), dispatch => ({
