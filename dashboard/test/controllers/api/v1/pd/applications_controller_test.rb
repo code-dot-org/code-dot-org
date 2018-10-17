@@ -156,7 +156,8 @@ module Api::V1::Pd
       assert_response :success
       data = JSON.parse(response.body)
       assert_equal 3, data['csp_facilitators']['accepted']['locked']
-      assert_equal 2, data['csp_facilitators']['unreviewed']['unlocked']
+      assert_equal 0, data['csp_facilitators']['unreviewed']['locked']
+      assert_equal 2, data['csp_facilitators']['unreviewed']['total']
     end
 
     test "index with applications of different statuses correctly shows locked applications" do
@@ -171,7 +172,9 @@ module Api::V1::Pd
       assert_response :success
       data = JSON.parse(response.body)
       assert_equal 3, data['csp_facilitators']['accepted']['locked']
-      assert_equal 2, data['csp_facilitators']['unreviewed']['unlocked']
+      assert_equal 3, data['csp_facilitators']['accepted']['total']
+      assert_equal 0, data['csp_facilitators']['unreviewed']['locked']
+      assert_equal 2, data['csp_facilitators']['unreviewed']['total']
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -180,7 +183,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 1, data['csf_facilitators']['unreviewed']['unlocked']
+      assert_equal 1, data['csf_facilitators']['unreviewed']['total']
     end
 
     test 'regional partners can only see their applications in index' do
@@ -188,7 +191,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 1, data['csf_facilitators']['unreviewed']['unlocked']
+      assert_equal 1, data['csf_facilitators']['unreviewed']['total']
     end
 
     test 'workshop admins can only see their applications in index' do
@@ -196,7 +199,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 2, data['csf_facilitators']['unreviewed']['unlocked']
+      assert_equal 2, data['csf_facilitators']['unreviewed']['total']
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
