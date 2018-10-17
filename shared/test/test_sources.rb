@@ -34,6 +34,14 @@ class SourcesTest < FilesApiTestBase
     @channel = nil
   end
 
+  def test_rejects_files_besides_main_json
+    filename = 'different.json'
+    file_data = '{"someData":"abc 123"}'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    @api.put_object(filename, file_data, file_headers)
+    assert bad_request?
+  end
+
   def test_source_versions
     # Upload a source file.
     filename = MAIN_JSON
