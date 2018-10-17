@@ -7,7 +7,7 @@ video_player: true
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/css/highlights.css", rel: "stylesheet"}
 
-.tools-banner.responsive-body
+.tools-banner
   .tools-img-box
     %img.tools-img-applab.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png")}
   .tools-info{style: "max-width: 670px;"}
@@ -21,7 +21,7 @@ video_player: true
 
 .clear
 
-#resources.responsive-body
+#resources
   = view :top_hoc_tutorial_applab, image_match_youtube_height: true
 
   .col-50
@@ -34,7 +34,7 @@ video_player: true
 
 .clear
 
-#challenges.responsive-body
+#challenges
   %h2 Starter Projects
   %p Start with a blank project, explore the sample apps and take the challenge to make them even better, or check out projects that other students have built.
   .highlights-content
@@ -148,7 +148,7 @@ video_player: true
 
 
 #videos
-  %h2.responsive-body Video library
+  %h2 Video library
   Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
 
   - cspunit3_videos = []
