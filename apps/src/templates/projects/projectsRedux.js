@@ -125,7 +125,6 @@ const initialProjectListState = {
   gamelab: [],
   playlab: [],
   artist: [],
-  minecraft: []
 };
 
 function projectLists(state = initialProjectListState, action) {
