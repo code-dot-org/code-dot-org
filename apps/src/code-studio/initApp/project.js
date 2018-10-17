@@ -95,7 +95,8 @@ var currentSources = {
   source: null,
   html: null,
   makerAPIsEnabled: false,
-  animations: null
+  animations: null,
+  selectedSong: null,
 };
 
 /**
@@ -479,6 +480,7 @@ var projects = module.exports = {
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
+   * @param {function(): boolean} sourceHandler.setSelectedSong
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -497,7 +499,9 @@ var projects = module.exports = {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
-      sourceHandler.setSelectedSong(currentSources.selectedSong);
+      if (currentSources.selectedSong) {
+        sourceHandler.setSelectedSong(currentSources.selectedSong);
+      }
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
@@ -744,7 +748,7 @@ var projects = module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled} have changed.
+   * makerAPIsEnabled, selectedSong} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -872,17 +876,8 @@ var projects = module.exports = {
   },
 
   saveSelectedSong(id) {
-    return new Promise(resolve => {
-      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.saveSourceAndHtml_(
-          {
-            ...sourceAndHtml,
-            selectedSong: id,
-          },
-          resolve()
-        );
-      });
-    });
+    this.sourceHandler.setSelectedSong(id);
+    return this.save();
   },
 
   /**
