@@ -190,6 +190,38 @@ describe('project.js', () => {
       });
     });
   });
+
+  describe('selectedSong()', () => {
+    let sourceHandler;
+
+    beforeEach(() => {
+      sourceHandler = createStubSourceHandler();
+      replaceOnWindow('appOptions', {
+        level: {
+          isProjectLevel: true,
+        },
+      });
+      sinon.stub(utils, 'reload');
+      sinon.stub(project, 'saveSourceAndHtml_').callsFake((source, callback) => {
+        callback();
+      });
+    });
+
+    afterEach(() => {
+      project.saveSourceAndHtml_.restore();
+      utils.reload.restore();
+      restoreOnWindow('appOptions');
+    });
+
+    it('saves selected song', () => {
+      sourceHandler.getSelectedSong.returns(false);
+      project.init(sourceHandler);
+      return project.saveSelectedSong('peas').then(() => {
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].selectedSong).to.be.true;
+      });
+    });
+  });
 });
 
 describe('project.saveThumbnail', () => {
@@ -270,5 +302,7 @@ function createStubSourceHandler() {
     getAnimationList: sinon.stub().callsFake(cb => cb({})),
     setMakerAPIsEnabled: sinon.stub(),
     getMakerAPIsEnabled: sinon.stub(),
+    setSelectedSong: sinon.stub(),
+    getSelectedSong: sinon.stub()
   };
 }
