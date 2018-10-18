@@ -64,6 +64,8 @@ export class CohortViewTable extends React.Component {
     this.constructColumns();
   }
 
+  showLocked = () => (this.props.viewType === 'facilitator');
+
   constructColumns() {
     if ([UNMATCHED_PARTNER_VALUE, ALL_PARTNERS_VALUE].includes(this.props.regionalPartnerFilter.value)) {
       this.workshopType = WorkshopTypes["both"];
@@ -135,7 +137,7 @@ export class CohortViewTable extends React.Component {
       }
     ];
 
-    if (this.props.viewType === 'facilitator') {
+    if (this.showLocked()) {
       columns.push({
         property: 'locked',
         header: {

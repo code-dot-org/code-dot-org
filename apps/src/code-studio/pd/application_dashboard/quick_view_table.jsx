@@ -67,6 +67,8 @@ export class QuickViewTable extends React.Component {
     };
   }
 
+  showLocked = () => (this.props.viewType === 'facilitator');
+
   handlePrincipalApprovalButtonsChange = (applicationId, principal_approval) => {
     this.setState({
       applicationsDelta: {
@@ -138,7 +140,7 @@ export class QuickViewTable extends React.Component {
       }
     });
 
-    if (this.props.viewType === 'facilitator') {
+    if (this.showLocked()) {
       columns.push({
         property: 'locked',
         cell: {

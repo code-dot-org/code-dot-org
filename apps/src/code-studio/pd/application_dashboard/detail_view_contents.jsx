@@ -500,6 +500,8 @@ export class DetailViewContents extends React.Component {
     }
   };
 
+  showLocked = () => (this.props.viewType === 'facilitator');
+
   renderEditMenu = (textAlign='left') => {
     return (
       <div style={styles.editMenuContainer}>
@@ -508,7 +510,7 @@ export class DetailViewContents extends React.Component {
           {this.renderEditButtons()}
         </div>
         {
-          this.props.viewType === 'facilitator' &&
+          this.showLocked() &&
           <div style={{...styles.lockedStatus, textAlign}}>
             <FontAwesome icon={this.state.locked ? 'lock' : 'unlock'}/>&nbsp;
             Application is&nbsp;
