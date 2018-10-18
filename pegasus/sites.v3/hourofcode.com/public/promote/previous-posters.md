@@ -15,6 +15,6 @@ nav: promote_nav
 
 <br>
 
-<%= view :promote_past_posters %>
+<%= view :promote_posters %>
 
 <%= view :signup_button %>

@@ -18,7 +18,7 @@ nav: promote_nav
 
 <a id="posters"></a>
 ## Hang these posters in your school
-<%= view :promote_current_posters %>
+<%= view :promote_new_posters %>
 
 Looking for our posters from previous years? <a href="<%= resolve_url('/promote/previous-posters') %>">Find them here</a>! 
 
