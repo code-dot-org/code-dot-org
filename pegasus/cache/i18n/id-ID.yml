@@ -2201,9 +2201,11 @@
   csd_name: CS Discoveries
   csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
+  user_header_team: Team
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
+  user_header_dance: Dance Party
   user_header_spritelab: Sprite Lab
   user_header_view_all: View all projects...
   user_header_view_project_gallery: View project gallery

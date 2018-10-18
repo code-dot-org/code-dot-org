@@ -2295,6 +2295,8 @@
   artist_shortcode: art
   csd_name: CS Discoveries
   csd_2018_name: CS Discoveries
+  user_header_team: Team
+  user_header_dance: Dance Party
   user_header_spritelab: Sprite Lab
   user_header_view_project_gallery: View project gallery
   joining_section_overview: If a student has not already joined your section, please
