@@ -75,7 +75,7 @@ export default class StartNewProject extends React.Component {
             />
             <NewProjectButtons
               description={i18n.projectGroupEvents()}
-              projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
+              projectTypes={['spritelab','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
             />
             <NewProjectButtons
               description={i18n.projectGroupArtist()}
