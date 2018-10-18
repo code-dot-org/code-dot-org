@@ -95,7 +95,6 @@ class ProjectCardGrid extends Component {
               labKey="spritelab"
               labName={i18n.projectTypeSpriteLab()}
               labViewMoreString={i18n.projectTypeSpriteLabViewMore()}
-              hideViewMoreLink={this.props.limitedGallery}
               projectList={projectLists.spritelab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -194,7 +193,6 @@ class ProjectCardGrid extends Component {
                 labKey="spritelab"
                 labName={i18n.projectTypeSpriteLab()}
                 labViewMoreString={i18n.projectsViewAll()}
-                hideViewMoreLink={this.props.limitedGallery}
                 projectList={projectLists.spritelab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
