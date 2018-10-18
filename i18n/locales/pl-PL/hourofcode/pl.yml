@@ -11,6 +11,12 @@ pl:
   campaign_date_full: "4-10 grudnia"
   campaign_date_year: "2016"
   campaign_date_full_year: "5-11 grudnia 2016 roku"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
   cookie_banner_message: 'Kontynuując przeglądanie naszej strony lub klikając "Zgadzam się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.'
   cookie_banner_more_information: "Zapoznaj się z polityką prywatności Code.org."
   cookie_banner_accept: 'Zgadzam się'
@@ -279,6 +285,11 @@ pl:
   signup_continue_label: 'Kontynuuj'
   signup_thank_you_header: "Dziękujemy za rejestrację jako organizator Godziny Kodowania."
   signup_thank_you_message: 'Wysłaliśmy do Ciebie e-mail z potwierdzeniem oraz informacjami, które pomogą Ci zacząć.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Mapa Godziny Kodowania"
   map_header: '# wydarzeń Hour of Code na całym świecie'
   map_header_count_year: '%{event_count} wydarzenia zarejestrowane dla Godziny Kodowania %{year}'
