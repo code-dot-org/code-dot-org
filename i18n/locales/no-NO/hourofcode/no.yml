@@ -11,6 +11,12 @@ no:
   campaign_date_full: "4.-10. desember"
   campaign_date_year: "2017"
   campaign_date_full_year: "4.-10. desember 2017"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
@@ -279,6 +285,11 @@ no:
   signup_continue_label: 'Fortsett'
   signup_thank_you_header: "Takk for at du registrerte deg som arrangør av en Kodetime."
   signup_thank_you_message: 'Vi har sendt deg bekreftelse på e-post med informasjon for å hjelpe deg i gang.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Kodetime-kart"
   map_header: 'Antall Kodetime-arrangementer over hele verden'
   map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'

@@ -11,9 +11,15 @@ hu:
   campaign_date_full: "december 7-13"
   campaign_date_year: "2016-ban"
   campaign_date_full_year: "December 5-11, 2016-ban"
-  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
+  cookie_banner_message: 'Az oldal további használatával, valamint az egyetértek gombra kattintással elfogadod a Cookie-k számítógépen történő tárolását.'
+  cookie_banner_more_information: "Itt találod a Code.org adatvédelmi elveit."
+  cookie_banner_accept: 'Elfogadom'
   front_header_banner: 'Csatlakozz minden idők legnagyobb tanulmányi eseményéhez %{campaign_date}'
   front_intro_default: 'A Kódolás Órája egy globális mozgalom, ami tanulók tízmillióit éri el 180+ országban. Bárki bárhol szervezhet Kódolás Órája eseményt. Az egy órás gyakorlatok több, mint 45 nyelven érhetők el. Nincs szükség tapasztalatra. <strong>4-től 104 éves korig.</strong>'
   front_watch_video: 'Nézd meg az új videót'
@@ -21,11 +27,11 @@ hu:
   front_volunteers: 'Műszaki önkénteseket keresünk'
   front_start_learning: 'Kezdd a tanulást'
   gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
-  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-  gdpr_dialog_link_intro: 'For details see our'
-  gdpr_dialog_privacy_policy: 'privacy policy'
-  gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_message: 'A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen az Egyesült Államokban történik.'
+  gdpr_dialog_link_intro: 'Részletekért tekintsd meg'
+  gdpr_dialog_privacy_policy: 'adatvédelmi elvek'
+  gdpr_dialog_logout: 'Kijelentkezés'
+  gdpr_dialog_yes: 'Igen'
   header_menu_resources: 'Segédanyagok'
   header_menu_faq: 'GYIK'
   header_menu_how_to: 'Útmutató'
@@ -37,10 +43,10 @@ hu:
   company_4-H: 4-H Ifjúság fejlesztés
   company_asa: Posztgraduális szövetség
   company_asos: ASOS
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
+  company_bgca: Amerikai fiúk és lányok klubja
+  company_bsusa: Amerikai Cserkészszövetség
+  company_cgcs: '"Great City Schools" tanácsa'
+  company_gsusa: Amerikai Cserkészlányszövetség
   company_khanacademy: Khan Academy
   company_kipp: KIPP
   company_mesa: Mathematics Engineering Science Achievement
@@ -256,7 +262,7 @@ hu:
   signup_match_volunteer: 'Segíts nekem találni egy helyi szoftver mérnököt, hogy inspiráljam a tanulóimat'
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes: 'Igen'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Ha több eseményt szervezel, akkor adj egyedi nevet vagy emailt mindegyikhez. Csak egy eseménynek számolunk egy név és email kombinációt."
@@ -279,6 +285,11 @@ hu:
   signup_continue_label: 'Folytatás'
   signup_thank_you_header: "Köszönjük, hogy jelentkeztél egy Kódolás Órája esemény megtartására."
   signup_thank_you_message: 'Küldtünk egy megerősítő e-mailt, amiben segítséget kapsz az induláshoz is.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Kódolás Órája térkép"
   map_header: '# Kódolás Órája esemény szerte a nagyvilágban'
   map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
@@ -3965,9 +3976,9 @@ hu:
   school_name_error: "School name is required."
   school_city: "School city"
   school_state: "School state"
-  school_zip: "Postal code"
-  school_zip_error: "School postal code is required."
-  census_thanks: 'Thanks for signing up!'
+  school_zip: "Irányítószám"
+  school_zip_error: "Irányítószám megadása kötelező."
+  census_thanks: 'Köszönjük, hogy jelentkezett!'
   census_header: 'Please take a few minutes to tell us about your school (Optional).'
   census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
   census_how_many_hoc: "How many students will do an Hour of Code?"
@@ -3979,16 +3990,16 @@ hu:
   census_pledge: "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all."
   census_followup_heading: "Your school offers a semester or year-long computer science class! What topics does this course include?"
   census_followup_frequency: "How often per week does this class meet?"
-  less_than_one: "< 1 hour per week"
-  one_to_three: "1-3 hours per week"
-  three_plus: "3+ hours per week"
+  less_than_one: "< 1 óra / hét"
+  one_to_three: "1-3 óra / hét"
+  three_plus: "3 + óra / hét"
   census_followup_more: "Please tell us more about this course."
   census_followup_more_placeholder: "For example, name of the class, how often it meets, description of what is taught."
-  census_topics_blocks: "Block-based programming"
+  census_topics_blocks: "Blokkalapú programozás"
   census_topics_text: "  Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)"
   census_topics_robots: "Robotics / Physical Computing"
-  census_topics_internet: "Internet and networking"
-  census_topics_security: "Cybersecurity"
+  census_topics_internet: "Internet és hálózat"
+  census_topics_security: "Kiberbiztonság"
   census_topics_data: "Adatelemzés"
   census_topics_web_design: "Web dizájn HTLM és CSS segítségével"
   census_topics_game_design: "Game design using game layout tools without coding or computer programming"
