@@ -17,10 +17,8 @@ Scenario: Student sign in from code.org
   And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  And I wait until element ".user_icon" is visible
-  And I click selector ".user_icon"
   And I wait until element ".display_name" is visible
-  And element ".display_name" contains text "Bob"
+  And element ".display_name" contains text "Hi Bob"
 
 Scenario: Student sign in from studio.code.org
   Given I am on "http://studio.code.org/"
@@ -36,8 +34,6 @@ Scenario: Student sign in from studio.code.org
   And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  And I wait until element ".user_icon" is visible
-  And I click selector ".user_icon"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Alice"
 
@@ -55,8 +51,6 @@ Scenario: Student sign in from studio.code.org in the eu
   And I click selector "#signin-button"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  And I wait until element ".user_icon" is visible
-  And I click selector ".user_icon"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Alice"
 
@@ -74,8 +68,6 @@ Scenario: Teacher sign in from studio.code.org
   And I click selector "#signin-button" to load a new page
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
-  And I wait until element ".user_icon" is visible
-  And I click selector ".user_icon"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Casey"
 
