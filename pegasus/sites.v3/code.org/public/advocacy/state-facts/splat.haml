@@ -282,6 +282,24 @@ theme: pdf
       = state_info[:state_name_s]
     %ul
       %li
+        In
+        = succeed ',' do
+          = state_info[:state_name_s]
+        Code.org’s curriculum is used in 
+        %ul
+          %li
+            = succeed "%" do
+              = state_info[:es_using_codeorg_i]
+            of elementary schools
+          %li
+            = succeed "%" do
+              = state_info[:ms_using_codeorg_i]
+            of middle schools
+          %li
+            = succeed "%" do
+              = state_info[:hs_using_codeorg_i]
+            of high schools
+      %li
         There are
         = format_integer_with_commas(state_info[:teacher_studio_acct_i])
         teacher accounts and
@@ -289,6 +307,27 @@ theme: pdf
         student accounts on Code.org in
         = succeed '.' do
           = state_info[:state_name_s]
+      %li
+        Of students in
+        = state_info[:state_name_s]
+        using Code.org curriculum last school year,
+        %ul
+          %li
+            = succeed "%" do
+              = state_info[:highneed_codeorg_i]
+            attend high needs schools
+          %li
+            = succeed "%" do
+              = state_info[:rural_codeorg_i]
+            are in rural schools
+          %li
+            = succeed "%" do
+              = state_info[:female_codeorg_i]
+            are female students
+          %li
+            = succeed "%" do
+              = state_info[:urm_codeorg_i]
+            are underrepresented minority students (Black/African American, Hispanic/Latino, American Indian, or Hawaiian)
       %li
         - if state_info[:professional_learning_partners_t] == 'none' && state_info[:num_affiliates_i] == 0
           Code.org has
