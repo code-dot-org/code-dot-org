@@ -2103,6 +2103,7 @@
   csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
   user_header_label: Hi %{username}
+  user_header_team: Team
   user_header_settings: Account settings
   user_header_logout: Sign out
   user_header_signin: Sign in
@@ -2111,6 +2112,7 @@
   user_header_artist: 'Artist '
   user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
+  user_header_dance: Dance Party
   user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
