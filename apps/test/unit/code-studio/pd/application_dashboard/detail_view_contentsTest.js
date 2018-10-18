@@ -86,6 +86,50 @@ describe("DetailViewContents", () => {
     });
   });
 
+  const applicationType = 'Facilitator';
+
+  describe('Edit controls in Facilitator', () => {
+    it(`allows for a subset of statuses to be locked`, () => {
+      const detailView = mountDetailView(applicationType);
+
+      // click edit
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+      // lock button is disabled for all statuses except "finalized"
+      // statuses in the constant are an object {value: label}
+      Object.keys(ApplicationStatuses[applicationType.toLowerCase()]).forEach((status) => {
+        const statusIsFinal = ApplicationFinalStatuses.includes(status);
+        detailView
+          .find('#DetailViewHeader select')
+          .simulate('change', { target: { value: status } });
+        expect(detailView.find('#DetailViewHeader Button').first().prop('disabled')).to.equal(!statusIsFinal);
+      });
+    });
+
+    it(`disables status dropdown when locked`, () => {
+      const detailView = mountDetailView(applicationType);
+
+      // click edit
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+      // change status to approved
+      detailView
+        .find('#DetailViewHeader select')
+        .simulate('change', { target: { value: 'accepted' } });
+
+      // lock status
+      expect(detailView.find('#DetailViewHeader Button').first().text()).to.equal('Lock');
+      detailView.find('#DetailViewHeader Button').first().simulate('click');
+      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be.true;
+      expect(detailView.find('#DetailViewHeader Button').first().text()).to.equal('Unlock');
+
+      // unlock status
+      detailView.find('#DetailViewHeader Button').first().simulate('click');
+      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be.false;
+      expect(detailView.find('#DetailViewHeader Button').first().text()).to.equal('Lock');
+    });
+  });
+
   const expectedTestData = [
     {type: 'Teacher', applicationSpecificQuestions: 6, scoredQuestions: 2},
     {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0}
@@ -195,9 +239,10 @@ describe("DetailViewContents", () => {
       it(`the dropdown is disabled until the Edit button is clicked in ${applicationData.type}`, () => {
         const detailView = mountDetailView(applicationData.type);
 
+        let expectedButtons = applicationData.type === 'Facilitator' ? ['Lock', 'Edit'] : ['Edit'];
         expect(detailView.find('#DetailViewHeader Button').map((button) => {
           return button.text();
-        })).to.deep.equal(['Edit']);
+        })).to.deep.equal(expectedButtons);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
         expect(detailView.find('#Notes').prop('disabled')).to.be.true;
         if (applicationData.scoredQuestions) {
@@ -206,10 +251,11 @@ describe("DetailViewContents", () => {
           })).to.deep.equal([true, true]);
         }
 
+        expectedButtons = applicationData.type === 'Facilitator' ? ['Lock', 'Save', 'Cancel'] : ['Save', 'Cancel'];
         detailView.find('#DetailViewHeader Button').last().simulate('click');
         expect(detailView.find('#DetailViewHeader Button').map((button) => {
           return button.text();
-        })).to.deep.equal(['Save', 'Cancel']);
+        })).to.deep.equal(expectedButtons);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.false;
         expect(detailView.find('#Notes').prop('disabled')).to.be.false;
         if (applicationData.scoredQuestions) {
@@ -229,54 +275,6 @@ describe("DetailViewContents", () => {
             return element.prop('disabled');
           })).to.deep.equal([true, true]);
         }
-      });
-
-      it(`the lock button is present in Facilitator`, () => {
-        const detailView = mountDetailView('Facilitator');
-
-        expect(detailView.find('#DetailViewHeader Button').map((button) => {
-          return button.text();
-        })).to.deep.equal(['Lock', 'Edit']);
-      });
-
-      it(`allows for a subset of statuses to be locked in Facilitator`, () => {
-        const detailView = mountDetailView('Facilitator');
-
-        // click edit
-        detailView.find('#DetailViewHeader Button').last().simulate('click');
-
-        // lock button is disabled for all statuses except "finalized"
-        // statuses in the constant are an object {value: label}
-        Object.keys(ApplicationStatuses[applicationData.type.toLowerCase()]).forEach((status) => {
-          const statusIsFinal = ApplicationFinalStatuses.includes(status);
-          detailView
-            .find('#DetailViewHeader select')
-            .simulate('change', { target: { value: status } });
-          expect(detailView.find('#DetailViewHeader Button').first().prop('disabled')).to.equal(!statusIsFinal);
-        });
-      });
-
-      it(`disables status dropdown when locked in Facilitator`, () => {
-        const detailView = mountDetailView('Facilitator');
-
-        // click edit
-        detailView.find('#DetailViewHeader Button').last().simulate('click');
-
-        // change status to approved
-        detailView
-          .find('#DetailViewHeader select')
-          .simulate('change', { target: { value: 'accepted' } });
-
-        // lock status
-        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
-        detailView.find('#DetailViewHeader Button').first().simulate('click');
-        expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.true;
-        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Unlock');
-
-        // unlock status
-        detailView.find('#DetailViewHeader Button').first().simulate('click');
-        expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.false;
-        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
       });
     });
   }
