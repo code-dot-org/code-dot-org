@@ -1,12 +1,14 @@
 @no_mobile
 Feature: Sign In Button and User Menu in Header
 
+@skip
 Scenario: Signed Out - sign in button shows
   Given I am on "http://code.org/"
   And I set the language cookie
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
+@skip
 Scenario: Teacher Signed In - shows display name with correct links
   Given I create a teacher named "Ms_Frizzle"
   And I wait until element ".display_name" is visible
@@ -26,6 +28,7 @@ Scenario: Teacher Signed In - shows display name with correct links
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
+@skip
 Scenario: Student Signed In - shows display name with correct links
   Given I create a student named "Arnold"
   And I wait until element ".display_name" is visible
@@ -71,8 +74,10 @@ Scenario: Pair Programming
   And I click selector ".student"
   And I wait until element ".addPartners" is visible
   And I click selector ".addPartners"
-  And I wait until element ".display_name" is visible
-  And element ".display_name" contains text "Team"
-  And I click selector ".display_name"
+  And I wait for 5 seconds
+  And I wait until element ".user_menu" is visible
+  And I wait until element ".pairing_name" is visible
+  And element ".pairing_name" contains text "Team"
   And I wait until element ".fa-users" is visible
+  And I click selector ".pairing_name"
   And I wait until element ".pairing_summary" is visible
