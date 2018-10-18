@@ -18,7 +18,7 @@ Scenario: Student sign in from code.org
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".user_menu"
   And I wait until element ".display_name" is visible
-  And element ".display_name" contains text "Hi Bob"
+  And element ".display_name" contains text "Bob"
 
 Scenario: Student sign in from studio.code.org
   Given I am on "http://studio.code.org/"
