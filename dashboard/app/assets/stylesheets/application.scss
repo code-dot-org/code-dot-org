@@ -331,11 +331,6 @@ img.video_thumbnail {
     }
   }
 
-  .user_icon {
-    font-size: 25px;
-    border-width: 0;
-  }
-
   #sign_in_or_user {
     html[dir=rtl] & {
       padding-right: 20px;
@@ -347,7 +342,7 @@ img.video_thumbnail {
     height: 38px;
     user-select: none;
 
-    .create_button {
+    .create_button, .display_name {
       max-width: 120px;
       display: inline-block;
       float: left;
