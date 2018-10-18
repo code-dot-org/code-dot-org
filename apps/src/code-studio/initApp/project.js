@@ -1,4 +1,4 @@
-/* global dashboard, appOptions */
+/* global appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
@@ -566,7 +566,7 @@ var projects = module.exports = {
 
     // Updates the contents of the admin box for admins. We have no knowledge
     // here whether we're an admin, and depend on dashboard getting this right.
-    showProjectAdmin();
+    showProjectAdmin(this);
   },
   projectChanged() {
     hasProjectChanged = true;
@@ -1219,7 +1219,7 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              fetchAbuseScoreAndPrivacyViolations(function () {
+              fetchAbuseScoreAndPrivacyViolations(this, function () {
                 deferred.resolve();
               });
             }, queryParams('version'), this.useSourcesApi());
@@ -1237,7 +1237,7 @@ var projects = module.exports = {
         } else {
           fetchSource(data, () => {
             projects.showHeaderForProjectBacked();
-            fetchAbuseScoreAndPrivacyViolations(function () {
+            fetchAbuseScoreAndPrivacyViolations(this, function () {
               deferred.resolve();
             });
           }, queryParams('version'), this.useSourcesApi());
@@ -1392,14 +1392,14 @@ function fetchPrivacyProfanityViolations(resolve) {
   });
 }
 
-function fetchAbuseScoreAndPrivacyViolations(callback) {
+function fetchAbuseScoreAndPrivacyViolations(project, callback) {
   const deferredCallsToMake = [new Promise(fetchAbuseScore)];
 
-  if (dashboard.project.getStandaloneApp() === 'playlab') {
+  if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
-    (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.isWebLab())) {
+  } else if ((project.getStandaloneApp() === 'applab') ||
+    (project.getStandaloneApp() === 'gamelab') ||
+    (project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
