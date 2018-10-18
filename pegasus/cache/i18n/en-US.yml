@@ -1526,6 +1526,7 @@
   user_header_artist: 'Artist '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
+  user_header_dance: "Dance Party"
   user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
