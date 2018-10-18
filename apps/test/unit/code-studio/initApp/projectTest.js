@@ -201,24 +201,16 @@ describe('project.js', () => {
           isProjectLevel: true,
         },
       });
-      sinon.stub(utils, 'reload');
-      sinon.stub(project, 'saveSourceAndHtml_').callsFake((source, callback) => {
-        callback();
-      });
     });
 
     afterEach(() => {
-      project.saveSourceAndHtml_.restore();
-      utils.reload.restore();
       restoreOnWindow('appOptions');
     });
 
     it('saves selected song', () => {
-      sourceHandler.getSelectedSong.returns(false);
       project.init(sourceHandler);
       return project.saveSelectedSong('peas').then(() => {
-        expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].selectedSong).to.be.true;
+        expect(sourceHandler.setSelectedSong).to.have.been.called;
       });
     });
   });
