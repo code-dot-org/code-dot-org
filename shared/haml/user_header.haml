@@ -27,17 +27,21 @@
         .project_link#view_all_projects
           = I18n.t("#{loc_prefix}view_all")
 - if current_user
-  .header_button.header_user.user_menu.user_icon
+  .header_button.header_user.user_menu
     - if current_user.can_pair? && session_pairings.present?
       %i.fa.fa-users
+      %span= I18n.t("#{loc_prefix}label", username: I18n.t("#{loc_prefix}team"))
     - else
-      %i.fa.fa-user
-    .user_options{style: 'display: none'}
       - short_name = ERB::Util.h(current_user.short_name)
-      .display_name{'data-id': current_user.id, 'data-shortname': short_name}= short_name
+      %span.display_name{'data-id': current_user.id, 'data-shortname': short_name}= I18n.t("#{loc_prefix}label", username: short_name)
+    &nbsp;
+    %i.user_menu_arrow_down{class: "fa fa-caret-down"}
+    %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+    .user_options{style: 'display: none'}
       - if current_user.can_pair?
         - if session_pairings.present?
           = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+            %i.fa.fa-user-plus
             = I18n.t("#{loc_prefix}pair_programming")
             .pairing_summary
               #{I18n.t("#{loc_prefix}driver")}:
