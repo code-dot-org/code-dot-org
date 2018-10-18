@@ -23,7 +23,7 @@ Please complete this form by **November 2nd** to nominate your Champion of Compu
   <div class="col-md-12">
     <br>
     <p class="text-center"><strong>In partnership with:</strong></p> 
-    <img src="/images/avatars/computer_science_teachers_association.jpg" width="50%" style="margin: 0 25%"> 
+    <img src="/images/avatars/csta.png" width="50%" style="margin: 0 25%"> 
   </div>
 </div>
 <br>
