@@ -118,15 +118,15 @@ describe("DetailViewContents", () => {
         .simulate('change', { target: { value: 'accepted' } });
 
       // lock status
-      expect(detailView.find('#DetailViewHeader Button').first().text()).to.equal('Lock');
+      expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
       detailView.find('#DetailViewHeader Button').first().simulate('click');
-      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be.true;
-      expect(detailView.find('#DetailViewHeader Button').first().text()).to.equal('Unlock');
+      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.true;
+      expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Unlock');
 
       // unlock status
       detailView.find('#DetailViewHeader Button').first().simulate('click');
-      expect(detailView.find('#DetailViewHeader select').prop('disabled')).to.be.false;
-      expect(detailView.find('#DetailViewHeader Button').first().text()).to.equal('Lock');
+      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.false;
+      expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
     });
   });
 
