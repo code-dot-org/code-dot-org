@@ -34,17 +34,25 @@ class SourcesTest < FilesApiTestBase
     @channel = nil
   end
 
+  def test_rejects_files_besides_main_json
+    filename = 'different.json'
+    file_data = '{"someData":"abc 123"}'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    @api.put_object(filename, file_data, file_headers)
+    assert bad_request?
+  end
+
   def test_source_versions
     # Upload a source file.
-    filename = 'test.js'
-    file_data = 'abc 123'
+    filename = MAIN_JSON
+    file_data = '{"someData":"abc 123"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
     # Overwrite it.
-    new_file_data = 'def 456'
+    new_file_data = '{"someData":"def 456"}'
     @api.put_object(filename, new_file_data, file_headers)
     assert successful?
 
@@ -79,8 +87,6 @@ class SourcesTest < FilesApiTestBase
     assert_equal file_data, third_version
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
 
@@ -88,8 +94,8 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_404_on_malformed_version_id
-    filename = 'test.js'
-    file_data = 'abc 123'
+    filename = MAIN_JSON
+    file_data = '{"someData":"abc 123"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
 
@@ -103,15 +109,13 @@ class SourcesTest < FilesApiTestBase
     @api.get_object_version(filename, bad_version_id)
     assert_equal 404, last_response.status
 
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-    )
+    assert_newrelic_metrics []
 
     delete_all_source_versions(filename)
   end
 
   def test_404_on_version_not_found
-    filename = 'test.js'
+    filename = MAIN_JSON
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
 
@@ -134,8 +138,7 @@ class SourcesTest < FilesApiTestBase
     assert_equal 404, last_response.status
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
+      Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
     )
 
     delete_all_source_versions(filename)
@@ -143,7 +146,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_get_source_blocks_profanity_violations
     # Given a Play Lab program with a privacy violation
-    filename = 'main.json'
+    filename = MAIN_JSON
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     @api.put_object(filename, file_data, file_headers)
@@ -164,15 +167,13 @@ class SourcesTest < FilesApiTestBase
       assert not_found?
     end
 
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-    )
+    assert_newrelic_metrics []
 
     delete_all_source_versions(filename)
   end
 
   def test_get_source_blocks_privacy_violations
-    filename = 'main.json'
+    filename = MAIN_JSON
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     @api.put_object(filename, file_data, file_headers)
@@ -212,15 +213,13 @@ class SourcesTest < FilesApiTestBase
       FilesApi.any_instance.unstub(:teaches_student?)
     end
 
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-    )
+    assert_newrelic_metrics []
 
     delete_all_source_versions(filename)
   end
 
   def test_policy_channel_api
-    filename = 'main.json'
+    filename = MAIN_JSON
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     @api.put_object(filename, file_data, file_headers)
@@ -231,9 +230,7 @@ class SourcesTest < FilesApiTestBase
     # use assert_equal to check both type and value of response (true vs 'true')
     assert_equal true, JSON.parse(policy_check_response)['has_violation']
 
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-    )
+    assert_newrelic_metrics []
 
     delete_all_source_versions(filename)
   end
@@ -242,8 +239,8 @@ class SourcesTest < FilesApiTestBase
     FirehoseClient.instance.expects(:putRecord).never
 
     # Upload a source file.
-    filename = 'replace_me.js'
-    file_data = 'version 1'
+    filename = MAIN_JSON
+    file_data = '{"src":"version 1"}'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
@@ -251,7 +248,7 @@ class SourcesTest < FilesApiTestBase
     response = JSON.parse(last_response.body)
 
     # Overwrite it, specifying the same version.
-    new_file_data = 'version 2'
+    new_file_data = '{"src":"version 2"}'
     @api.put_object_version(filename, response['versionId'], new_file_data, file_headers)
     assert successful?
 
@@ -261,8 +258,7 @@ class SourcesTest < FilesApiTestBase
     assert_equal 1, versions.count
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
+      Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
 
@@ -307,9 +303,6 @@ class SourcesTest < FilesApiTestBase
     assert conflict?
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
     )
 
@@ -344,8 +337,6 @@ class SourcesTest < FilesApiTestBase
     assert_equal_json v1_data.to_json, restored_data
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
 
@@ -431,9 +422,7 @@ class SourcesTest < FilesApiTestBase
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
@@ -513,9 +502,7 @@ class SourcesTest < FilesApiTestBase
     )
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
@@ -601,9 +588,7 @@ class SourcesTest < FilesApiTestBase
     assert_newrelic_metrics %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
     )
@@ -655,48 +640,13 @@ class SourcesTest < FilesApiTestBase
     assert_equal "1234", props[animation_key]['version']
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
     )
 
     # Clear original and remixed buckets
     delete_all_source_versions(MAIN_JSON)
 
     delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
-  end
-
-  def test_remix_not_main
-    # Mock destination
-    @destination_channel = create_channel
-    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
-
-    # Create non-main file
-    src_file_v1 = {
-      "source": "this is not a main.json file"
-    }.stringify_keys
-    @api.put_object('test.json', src_file_v1.to_json, {'CONTENT_TYPE' => 'application/json'})
-
-    # Remix
-    animation_list = AnimationBucket.new.copy_files @channel, @destination_channel
-    SourceBucket.new.remix_source @channel, @destination_channel, animation_list
-
-    # Check that source exists in destination channel
-    # Check that remix-ed file is equal to the original file
-    remixed_source = @destination_api.get_object('test.json')
-    assert successful?
-    assert_equal src_file_v1.to_json, remixed_source
-
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
-    )
-
-    # Clear original and remixed buckets
-    delete_all_source_versions('test.json')
-
-    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/test.json")
   end
 
   def test_remix_no_animations
@@ -726,9 +676,7 @@ class SourcesTest < FilesApiTestBase
     assert_equal props["orderedKeys"], []
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
-      Custom/ListRequests/SourceBucket/SourceBucket.remix_source
     )
 
     # Clear original and remixed buckets
@@ -787,12 +735,7 @@ class SourcesTest < FilesApiTestBase
       FilesApi.any_instance.unstub(:under_13?)
     end
 
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
-    )
+    assert_newrelic_metrics []
 
     delete_all_source_versions(MAIN_JSON)
   end
@@ -880,9 +823,7 @@ class SourcesTest < FilesApiTestBase
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
-      Custom/ListRequests/SourceBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
