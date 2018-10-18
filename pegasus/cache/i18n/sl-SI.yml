@@ -1375,6 +1375,7 @@
   user_header_settings: Moj račun
   user_header_logout: Izpis
   user_header_signin: Prijava
+  ! '': 
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -2105,11 +2106,14 @@
   csd_name: CS Discoveries
   csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
+  user_header_team: Team
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
   user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
+  user_header_dance: Dance Party
+  user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: View all projects...
@@ -2171,12 +2175,19 @@
   aquatic_name: 'Minecraft: Voyage Aquatic'
   creativity: creativity
   creativity_create: Create
+  creativity_hoc_coming: The Hour of Code is coming…
   creativity_what_will_you_create: What will you create?
+  creativity_homepage: Give flight to imagination and birth to innovation. Start with
+    an Hour of Code and your own brand of creativity, whatever it may be. Watch our
+    video.
   creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
   creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
     Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. I’m in!
-    What will you create?'
+  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will
+    you create?'
+  creativity_courses: Go further with Code.org courses
+  creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
+    courses</a>
   account_sign_up_email_opt_in: Can we email you about updates to our courses, local
     opportunities, or other computer science news? (roughly once a month)
   account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's

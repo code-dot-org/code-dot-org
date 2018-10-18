@@ -7,14 +7,14 @@ import Radium from 'radium';
 import _ from 'lodash';
 
 const DEFAULT_PROJECT_TYPES_ADVANCED = [
-  'playlab',
+  'spritelab',
   'artist',
   'applab',
   'gamelab'
 ];
 
 const DEFAULT_PROJECT_TYPES_BASIC = [
-  'playlab',
+  'spritelab',
   'artist',
   'minecraft_designer',
   'flappy'
@@ -108,6 +108,10 @@ const PROJECT_INFO = {
   'gumball': {
     label: i18n.projectTypeGumball(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_gumball.png"
+  },
+  'spritelab': {
+    label: i18n.projectTypeSpriteLab(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_spritelab.png"
   }
 };
 

@@ -11,6 +11,12 @@ ta:
   campaign_date_full: "டிசம்பர் 4-10"
   campaign_date_year: "2017"
   campaign_date_full_year: "டிசம்பர் 4-10, 2017"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
@@ -279,6 +285,11 @@ ta:
   signup_continue_label: 'தொடர்ந்து'
   signup_thank_you_header: "கையொப்பமிடும் குறியீடு மணி நிகழ்வை நடத்த அப் நன்றி."
   signup_thank_you_message: 'நீங்கள் ஒரு உறுதிப்படுத்தல் மின்னஞ்சலை நீங்கள் தொடங்குவதற்கு தகவல் அனுப்பினோம்.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "மணி குறியீடு வரைபடம்"
   map_header: '# நிகழ்வுகளை பதிவு குறியீடு 2017 மணி'
   map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'

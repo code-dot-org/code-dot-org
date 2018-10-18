@@ -358,6 +358,7 @@ en:
       artist: 'Artist'
       gamelab: 'Game Lab'
       playlab: 'Play Lab'
+      spritelab: 'Sprite Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
       view_all: 'View all projects...'
