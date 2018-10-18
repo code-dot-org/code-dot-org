@@ -170,13 +170,13 @@ class RemixTest < ActionDispatch::IntegrationTest
   # @return [String] encrypted channel id of new project
   private def create_a_new_project(type)
     get "/projects/#{type}/new"
-    assert_response :redirect
+    assert_response :redirect, "Wrong response: #{response.body}"
     project_type, channel_id, action = unpack response.headers['Location']
     assert_equal type, project_type
     refute_nil channel_id
     assert_equal 'edit', action
     follow_redirect!
-    assert_response :success
+    assert_response :success, "Wrong response: #{response.body}"
     channel_id
   end
 
@@ -189,7 +189,7 @@ class RemixTest < ActionDispatch::IntegrationTest
     refute_nil new_channel_id
     assert_equal 'edit', action
     follow_redirect!
-    assert_response :success
+    assert_response :success, "Wrong response: #{response.body}"
     new_channel_id
   end
 
