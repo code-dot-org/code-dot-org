@@ -131,10 +131,6 @@ function checkImageReachability(imageUrl, callback) {
   );
 }
 
-function sharingDisabled(userSharingDisabled, appType) {
-  return userSharingDisabled && (appType === 'applab' || appType === 'gamelab' || appType === 'weblab');
-}
-
 /**
  * Share Dialog used by projects
  */
@@ -190,8 +186,20 @@ class ShareAllowedDialog extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.isOpen && !prevProps.isOpen) {
+      recordShare('open');
+    }
+  }
 
-  close = () => this.props.onClose();
+  sharingDisabled = () =>
+    this.props.userSharingDisabled &&
+    ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
+
+  close = () => {
+    recordShare('close');
+    this.props.onClose();
+  };
 
   showSendToPhone = (event) => {
     this.setState({
@@ -262,7 +270,7 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {canPrint, canPublish, isPublished, userSharingDisabled, appType, getNextFrame} = this.props;
+    const {canPrint, canPublish, isPublished, getNextFrame} = this.props;
     return (
       <div>
         <BaseDialog
@@ -271,7 +279,7 @@ class ShareAllowedDialog extends React.Component {
           handleClose={this.close}
           hideBackdrop={this.props.hideBackdrop}
         >
-          {sharingDisabled(userSharingDisabled, appType) &&
+          {this.sharingDisabled() &&
             <div style={{position: 'relative'}}>
               <div style={{paddingRight: 10}}>
                 <p>{i18n.sharingBlockedByTeacher()}</p>
@@ -287,7 +295,7 @@ class ShareAllowedDialog extends React.Component {
               </div>
             </div>
           }
-          {!sharingDisabled(userSharingDisabled, appType) &&
+          {!this.sharingDisabled() &&
             <div>
               {image}
               <div id="project-share" className={modalClass} style={{position: 'relative'}}>
