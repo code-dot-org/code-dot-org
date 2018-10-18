@@ -81,7 +81,7 @@ function ifDanceIs(sprite, dance, ifStatement, elseStatement) {
 
 function whenKey(key, event) {
   inputEvents.push({
-    type: 'p5.keyWentDown',
+    type: 'this.p5_.keyWentDown',
     event: event,
     param: key
   });

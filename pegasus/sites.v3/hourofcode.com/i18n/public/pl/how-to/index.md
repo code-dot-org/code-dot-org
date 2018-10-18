@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code with your class
+# Jak przeprowadzić Godzinę Kodowania ze swoją klasą
 
 ### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, znajdź [lokalnego wolontariusza](<%= codeorg_url('/volunteer/local') %>) do wsparcia Cię w przeprowadzeniu Godziny Kodowania w Twojej klasie.
 
