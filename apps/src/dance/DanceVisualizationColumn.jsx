@@ -4,7 +4,6 @@ import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import songLibrary from "../code-studio/songLibrary.json";
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
@@ -58,6 +57,10 @@ const SongSelector = Radium(class extends React.Component {
     selectedSong: PropTypes.string.isRequired
   };
 
+  state = {
+    songsData: []
+  };
+
   changeSong = (event) => {
     let song = event.target.value;
     this.props.setSong(song);
@@ -68,13 +71,28 @@ const SongSelector = Radium(class extends React.Component {
     Sounds.getSingleton().register(options);
   };
 
+  componentWillMount() {
+    fetch(`/api/v1/sound-library/hoc_song_meta/songManifest.json`)
+      .then((response) => {return response.json();})
+      .then((data) => {this.parseSongOptions(data);});
+  }
+
+  parseSongOptions(data) {
+    let songs = {};
+    if (data) {
+      data.songs.forEach((song) => (songs[song.id] = song.text));
+    }
+    this.setState({songsData: songs});
+  }
+
+
   render() {
     return (
       <div>
         <label><b>{i18n.selectSong()}</b></label>
         <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(songLibrary).map((option, i) => (
-            <option key={i} value={option}>{songLibrary[option].title}</option>
+          {Object.keys(this.state.songsData).map((option, i) => (
+            <option key={i} value={option}>{this.state.songsData[option]}</option>
           ))}
         </select>
       </div>
