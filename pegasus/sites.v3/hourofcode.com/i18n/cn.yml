@@ -11,6 +11,12 @@ cn:
   campaign_date_full: "12 月 4-10日"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017年12月4日至12月10日"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
   cookie_banner_message: '通过继续浏览我们的网站或单击 "我同意", 您同意在您的计算机或设备上存储 cookie。'
   cookie_banner_more_information: "请参Code.org的隐私政策。"
   cookie_banner_accept: '我同意'
@@ -279,6 +285,11 @@ cn:
   signup_continue_label: '继续'
   signup_thank_you_header: "感谢您注册主办一个编程一小时活动。"
   signup_thank_you_message: '我们发送了一封确认邮件，其中有帮助您开始的信息。'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "编程一小时地图"
   map_header: '世界各地的《编程一小时》活动'
   map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
