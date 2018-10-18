@@ -523,6 +523,19 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
+  def localize_long_instructions?
+    # Don't ever show non-English markdown instructions for Course 1 - 4, the
+    # 20-hour course, or the pre-2017 minecraft courses.
+    !(
+      csf_international? ||
+      twenty_hour? ||
+      [
+        ScriptConstants::MINECRAFT_NAME,
+        ScriptConstants::MINECRAFT_DESIGNER_NAME
+      ].includes?(name)
+    )
+  end
+
   def beta?
     Script.beta? name
   end
