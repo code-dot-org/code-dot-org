@@ -11,6 +11,12 @@ fa:
   campaign_date_full: "۴ تا ۱۰ دسامبر"
   campaign_date_year: "2016"
   campaign_date_full_year: "۴ تا دسامبر ۲۰۱۷"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
   cookie_banner_message: 'درصورت ادامه‌ی استفاده از سایت ما و یا با کلیک بر روی "من موافقم"، شما موافقت خود را با ذخیره‌ی کوکی‌ها بر روی کامپیوتر و یا دستگاه خود اعلام کرده‌اید.'
   cookie_banner_more_information: "سیاست حریم خصوصی Code.org را مشاهده کنید."
   cookie_banner_accept: 'من موافقم'
@@ -279,6 +285,11 @@ fa:
   signup_continue_label: 'ادامه'
   signup_thank_you_header: "با تشکر از شما برای ثبت نام براي برگزاري رويداد يك \"ساعت كد نويسي\"."
   signup_thank_you_message: 'ما يك ايميل تاييد بهمراه اطلاعاتي براي كمك به شروع فعاليت برايتان ارسال كرديم.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "نقشه ساعت کدنویسی"
   map_header: 'رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
   map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
