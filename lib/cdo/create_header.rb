@@ -5,10 +5,10 @@ class CreateHeader
   def self.get_create_dropdown_contents(options)
     everyone_entries = [
       {
-        id: "create_dropdown_playlab",
-        title: "playlab",
-        url: CDO.studio_url('projects/playlab/new'),
-        image: "logo_playlab.png"
+        id: "create_dropdown_spritelab",
+        title: "spritelab",
+        url: CDO.studio_url('projects/spritelab/new'),
+        image: "logo_spritelab.png"
       },
       {
         id: "create_dropdown_artist",
