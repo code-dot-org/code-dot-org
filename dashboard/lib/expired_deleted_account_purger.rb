@@ -131,6 +131,14 @@ class ExpiredDeletedAccountPurger
     User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil)
   end
 
+  # Separate operation using the reporting DB because this can be slow.
+  def soft_deleted_accounts_count
+    DASHBOARD_REPORTING_DB_READER[:users].
+      where(purged_at: nil).
+      exclude(deleted_at: nil).
+      count
+  end
+
   def report_results
     review_queue_depth = manual_review_queue_depth
 
@@ -151,9 +159,16 @@ class ExpiredDeletedAccountPurger
   end
 
   def build_metrics(review_queue_depth)
+    total_soft_deleted_accounts = begin
+      soft_deleted_accounts_count
+    rescue => e
+      yell "Error while counting soft-deleted accounts: #{e.message}"
+      0
+    end
+
     {
       # Number of soft-deleted accounts in system after this run
-      SoftDeletedAccounts: soft_deleted_accounts.count,
+      SoftDeletedAccounts: total_soft_deleted_accounts,
       # Number of accounts purged during this run
       AccountsPurged: @num_accounts_purged,
       # Number of accounts queued for manual review during this run

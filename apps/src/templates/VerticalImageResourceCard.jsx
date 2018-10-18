@@ -10,7 +10,6 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    position: 'relative',
     height: 440,
     width: 308,
     backgroundColor: color.white
@@ -29,7 +28,10 @@ const styles = {
   image: {
     width: 310,
     height: 220,
-    position: 'absolute',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden'
   },
   jumboImage: {
     width: 473,
@@ -124,8 +126,11 @@ class VerticalImageResourceCard extends Component {
 
     return (
       <div style={[cardStyle, localeStyle]}>
-        <div style={imageStyle}/>
-          <img src={imgSrc}/>
+        <div style={imageStyle}>
+          <a href={link}>
+            <img src={imgSrc}/>
+          </a>
+        </div>
         <div>
           <div style={[styles.text, styles.title, localeStyle]}>
             {title}
