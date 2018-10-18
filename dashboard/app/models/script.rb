@@ -532,7 +532,7 @@ class Script < ActiveRecord::Base
       [
         ScriptConstants::MINECRAFT_NAME,
         ScriptConstants::MINECRAFT_DESIGNER_NAME
-      ].includes?(name)
+      ].include?(name)
     )
   end
 
