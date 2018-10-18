@@ -197,7 +197,7 @@ describe("DetailViewContents", () => {
 
         expect(detailView.find('#DetailViewHeader Button').map((button) => {
           return button.text();
-        })).to.deep.equal(['Lock', 'Edit']);
+        })).to.deep.equal(['Edit']);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
         expect(detailView.find('#Notes').prop('disabled')).to.be.true;
         if (applicationData.scoredQuestions) {
@@ -209,7 +209,7 @@ describe("DetailViewContents", () => {
         detailView.find('#DetailViewHeader Button').last().simulate('click');
         expect(detailView.find('#DetailViewHeader Button').map((button) => {
           return button.text();
-        })).to.deep.equal(['Lock', 'Save', 'Cancel']);
+        })).to.deep.equal(['Save', 'Cancel']);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.false;
         expect(detailView.find('#Notes').prop('disabled')).to.be.false;
         if (applicationData.scoredQuestions) {
@@ -231,8 +231,16 @@ describe("DetailViewContents", () => {
         }
       });
 
-      it(`allows for a subset of statuses to be locked in ${applicationData.type}`, () => {
-        const detailView = mountDetailView(applicationData.type);
+      it(`the lock button is present in Facilitator`, () => {
+        const detailView = mountDetailView('Facilitator');
+
+        expect(detailView.find('#DetailViewHeader Button').map((button) => {
+          return button.text();
+        })).to.deep.equal(['Lock', 'Edit']);
+      });
+
+      it(`allows for a subset of statuses to be locked in Facilitator`, () => {
+        const detailView = mountDetailView('Facilitator');
 
         // click edit
         detailView.find('#DetailViewHeader Button').last().simulate('click');
@@ -248,8 +256,8 @@ describe("DetailViewContents", () => {
         });
       });
 
-      it(`disables status dropdown when locked in ${applicationData.type}`, () => {
-        const detailView = mountDetailView(applicationData.type);
+      it(`disables status dropdown when locked in Facilitator`, () => {
+        const detailView = mountDetailView('Facilitator');
 
         // click edit
         detailView.find('#DetailViewHeader Button').last().simulate('click');

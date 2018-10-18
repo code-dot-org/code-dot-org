@@ -356,10 +356,9 @@ module Pd::Application
       g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
       workshop_admin = create :workshop_admin
 
-      refute Teacher1920Application.can_see_locked_status?(teacher)
-      refute Teacher1920Application.can_see_locked_status?(g1_program_manager)
-      refute Teacher1920Application.can_see_locked_status?(g3_program_manager)
-      refute Teacher1920Application.can_see_locked_status?(workshop_admin)
+      [teacher, g1_program_manager, g3_program_manager, workshop_admin].each do |user|
+        refute Teacher1920Application.can_see_locked_status?(user)
+      end
     end
 
     test 'locked status does not appear in csv' do

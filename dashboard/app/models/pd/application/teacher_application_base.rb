@@ -660,11 +660,6 @@ module Pd::Application
       workshops.first
     end
 
-    # @override
-    def self.can_see_locked_status?(user)
-      false
-    end
-
     # override
     def self.prefetch_associated_models(applications)
       super(applications)

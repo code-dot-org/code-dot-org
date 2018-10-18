@@ -299,7 +299,7 @@ module Api::V1::Pd
       assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
     end
 
-    test 'workshop admins can and unlock applications' do
+    test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
       assert_response :success
@@ -674,8 +674,7 @@ module Api::V1::Pd
 
     test 'cohort csv download returns expected columns for teachers' do
       application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
-      application.status = 'accepted_not_notified'
-      application.save!
+      application.update(status: 'accepted_not_notified')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success

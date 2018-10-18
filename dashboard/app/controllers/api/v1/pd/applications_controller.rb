@@ -177,7 +177,7 @@ module Api::V1::Pd
       if current_user.workshop_admin?
         if current_user.workshop_admin? && application_admin_params.key?(:locked)
           # only current facilitator applications can be locked/unlocked
-          if @application.is_a? Pd::Application::Facilitator1819Application
+          if @application.application_type == FACILITATOR_APPLICATION
             application_admin_params[:locked] ? @application.lock! : @application.unlock!
           end
         end
