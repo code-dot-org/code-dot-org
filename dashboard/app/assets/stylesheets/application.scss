@@ -342,13 +342,20 @@ img.video_thumbnail {
     height: 38px;
     user-select: none;
 
-    .create_button, .display_name {
+    .create_button, .display_name, .pairing_name {
       max-width: 120px;
       display: inline-block;
       float: left;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+    }
+
+    .pairing_icon {
+      display: inline-block;
+      float: left;
+      padding-right: 5px;
+      padding-top: 3px;
     }
 
     .user_menu_arrow_down,
