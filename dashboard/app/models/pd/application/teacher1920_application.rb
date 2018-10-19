@@ -126,7 +126,7 @@ module Pd::Application
       principal_approval_email = emails.find_by(email_type: 'principal_approval')
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
-        return "Incomplete - Principal email sent on #{principal_approval_email.sent_at.strftime('%b %-d')}"
+        return "Incomplete - Principal email sent on #{principal_approval_email.sent_at&.strftime('%b %-d')}"
       end
 
       return 'Not required' if principal_approval_not_required
@@ -485,9 +485,9 @@ module Pd::Application
 
       scored_questions =
         if course == 'csd'
-          CRITERIA_SCORE_QUESTIONS_CSD
+          SCOREABLE_QUESTIONS[:criteria_score_questions_csd]
         elsif course == 'csp'
-          CRITERIA_SCORE_QUESTIONS_CSP
+          SCOREABLE_QUESTIONS[:criteria_score_questions_csd]
         end
 
       responses = scored_questions.map {|q| response_scores[q]}
@@ -502,7 +502,7 @@ module Pd::Application
     end
 
     def meets_scholarship_criteria
-      responses = response_scores_hash.slice(*SCHOLARSHIP_QUESTIONS).values
+      responses = response_scores_hash.slice(*SCOREABLE_QUESTIONS[:scholarship_questions]).values
 
       # Edge case for plan to teach
       #
