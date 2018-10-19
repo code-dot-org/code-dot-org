@@ -200,18 +200,14 @@ class BucketHelper
   #
   # Therefore, a project will only ever replace a version that it created, and
   # we can say the client "owns" a particular version if that client created it.
-  def check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, user_id)
-    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
+  def check_current_version(encrypted_channel_id, filename, client_last_version, should_replace, timestamp, tab_id, user_id)
+    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && client_last_version
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
-
-    # This is an Array of ObjectVersions, defined in:
-    # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
-    track_list_operation 'BucketHelper.check_current_version'
-    versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
-
-    target_version_metadata = versions.find {|v| v.version_id == current_version}
+    actual_latest_version = s3.head_object(bucket: @bucket, key: key).version_id
+    # TODO: Also get the client's expected current version for consistency?
+    # Are two HEAD requests cheaper than one LIST request?
 
     error_type =
       if should_replace
@@ -220,7 +216,7 @@ class BucketHelper
         # the target version not being visible yet due to S3's read-after-write
         # eventual consistency though, so allow the target version to either be
         # (absent or (present and latest)).
-        return true unless target_version_metadata && !target_version_metadata.is_latest
+        return true unless actual_latest_version != client_last_version
         'reject-replacing-older-main-json'
       else
         # Since we are not replacing the target version, we can conclude:
@@ -231,29 +227,27 @@ class BucketHelper
         #     client may have already replaced it.
         # Guard against this scenario by requiring that the target version be
         # both present and latest, without worrying about S3 inconsistency.
-        return true if target_version_metadata&.is_latest
+        return true if actual_latest_version == client_last_version
         'reject-comparing-older-main-json'
       end
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v3',
+      study_group: 'v4',
       event: error_type,
 
       project_id: encrypted_channel_id,
       user_id: user_id,
 
       data_json: {
-        currentVersionId: current_version,
+        currentVersionId: client_last_version,
         tabId: tab_id,
         key: key,
 
         # Server timestamp indicating when the first version of main.json was saved by the browser
         # tab making this request. This is for diagnosing problems with writes from multiple browser
         # tabs.
-        firstSaveTimestamp: timestamp,
-
-        versions: versions,
+        firstSaveTimestamp: timestamp
       }.to_json
     )
 
