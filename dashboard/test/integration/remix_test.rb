@@ -116,6 +116,7 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   def assert_only_remixes_sources(project_type)
+    stub_project_level project_type
     original_channel_id = create_a_new_project project_type
 
     SourceBucket.any_instance.expects(:remix_source)
@@ -129,6 +130,7 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   def assert_only_remixes_sources_assets(project_type)
+    stub_project_level project_type
     original_channel_id = create_a_new_project project_type
 
     SourceBucket.any_instance.expects(:remix_source)
@@ -142,6 +144,7 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   def assert_only_remixes_sources_assets_animations(project_type)
+    stub_project_level project_type
     original_channel_id = create_a_new_project project_type
 
     SourceBucket.any_instance.expects(:remix_source)
@@ -155,6 +158,7 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   def assert_only_remixes_sources_files(project_type)
+    stub_project_level project_type
     original_channel_id = create_a_new_project project_type
 
     SourceBucket.any_instance.expects(:remix_source)
@@ -165,6 +169,12 @@ class RemixTest < ActionDispatch::IntegrationTest
 
     new_channel_id = remix_a_project project_type, original_channel_id
     refute_equal original_channel_id, new_channel_id
+  end
+
+  private def stub_project_level(type)
+    game = create :game, name: type, app: type
+    level = create :level, game: game
+    ProjectsController.any_instance.stubs(:get_from_cache).returns(level)
   end
 
   # @return [String] encrypted channel id of new project
