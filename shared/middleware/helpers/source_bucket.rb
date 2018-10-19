@@ -105,6 +105,8 @@ class SourceBucket < BucketHelper
     end
     # Write the updated main.json file back to S3 as the latest version
     s3.put_object(bucket: @bucket, key: dest, body: src_body)
+  rescue Aws::S3::Errors::NoSuchKey
+    # No main.json, nothing to copy
   end
 
   # Special app_size implementation for Sources bucket that assumes the only file in this
