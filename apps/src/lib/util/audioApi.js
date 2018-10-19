@@ -37,11 +37,13 @@ export const commands = {
    * _@param {function} [opts.callback] Called back when the sound starts playing
    *        with an argument of true. If the sound fails to play, called back
    *        with an argument of false.
+   * _@param {function} [opts.onEnded] Called back when the sound stops playing
    */
   playSound(opts) {
     apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
     apiValidateType(opts, 'playSound', 'loop', opts.loop, 'boolean', OPTIONAL);
     apiValidateType(opts, 'playSound', 'callback', opts.callback, 'function', OPTIONAL);
+    apiValidateType(opts, 'playSound', 'onEnded', opts.onEnded, 'function', OPTIONAL);
 
     const url = assetPrefix.fixPath(opts.url);
     if (Sounds.getSingleton().isPlayingURL(url)) {
@@ -81,6 +83,7 @@ export const commands = {
       forceHTML5: forceHTML5,
       allowHTML5Mobile: true,
       callback: opts.callback,
+      onEnded: opts.onEnded,
     });
   },
 
