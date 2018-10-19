@@ -95,7 +95,8 @@ var currentSources = {
   source: null,
   html: null,
   makerAPIsEnabled: false,
-  animations: null
+  animations: null,
+  selectedSong: null,
 };
 
 /**
@@ -117,7 +118,8 @@ function unpackSources(data) {
     source: data.source,
     html: data.html,
     animations: data.animations,
-    makerAPIsEnabled: data.makerAPIsEnabled
+    makerAPIsEnabled: data.makerAPIsEnabled,
+    selectedSong: data.selectedSong,
   };
 }
 
@@ -478,6 +480,7 @@ var projects = module.exports = {
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
+   * @param {function(): boolean} sourceHandler.setSelectedSong
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -494,6 +497,10 @@ var projects = module.exports = {
       setMakerAPIsStatusFromQueryParams();
       if (currentSources.makerAPIsEnabled) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
+      }
+
+      if (currentSources.selectedSong) {
+        sourceHandler.setSelectedSong(currentSources.selectedSong);
       }
 
       if (currentSources.animations) {
@@ -741,7 +748,7 @@ var projects = module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled} have changed.
+   * makerAPIsEnabled, selectedSong} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -868,6 +875,11 @@ var projects = module.exports = {
     }
   },
 
+  saveSelectedSong(id) {
+    this.sourceHandler.setSelectedSong(id);
+    return this.save();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -924,7 +936,8 @@ var projects = module.exports = {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        callback({source, html, animations, makerAPIsEnabled});
+        const selectedSong = this.sourceHandler.getSelectedSong();
+        callback({source, html, animations, makerAPIsEnabled, selectedSong});
       }));
   },
 
