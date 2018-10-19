@@ -41,7 +41,6 @@ const SongSelector = Radium(class extends React.Component {
   static propTypes = {
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
-    is13Plus: PropTypes.bool.isRequired
   };
 
   state = {
@@ -62,9 +61,7 @@ const SongSelector = Radium(class extends React.Component {
     let songs = {};
     if (data) {
       data.songs.forEach((song) => {
-        if ((!this.props.is13Plus && !song.pg13) || this.props.is13Plus) {
-          songs[song.id] = {title: song.text, url: song.url};
-        }
+        songs[song.id] = {title: song.text, url: song.url};
       });
     }
     this.setState({songsData: songs});
@@ -90,7 +87,6 @@ class GameLabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
@@ -207,7 +203,7 @@ class GameLabVisualizationColumn extends React.Component {
     return (
       <span>
         {this.props.danceLab &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} is13Plus={this.props.is13Plus}/>
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
         }
         <ProtectedVisualizationDiv>
           <Pointable
@@ -261,7 +257,6 @@ class GameLabVisualizationColumn extends React.Component {
 export default connect(state => ({
   isResponsive: state.pageConstants.isResponsive,
   isShareView: state.pageConstants.isShareView,
-  is13Plus: state.pageConstants.is13Plus,
   spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
   mobileControlsConfig: state.mobileControlsConfig,
