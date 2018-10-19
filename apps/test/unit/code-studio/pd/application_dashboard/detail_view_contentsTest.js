@@ -3,7 +3,7 @@ import DetailViewResponse from '@cdo/apps/code-studio/pd/application_dashboard/d
 import {ApplicationStatuses, ApplicationFinalStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
 import _ from 'lodash';
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 
