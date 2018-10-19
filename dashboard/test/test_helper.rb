@@ -553,6 +553,14 @@ class StorageApps
   def most_recent(_)
     create(nil, nil)
   end
+
+  def get(_)
+    {
+      'name' => "Stubbed test project name",
+      'hidden' => false,
+      'frozen' => false
+    }
+  end
 end
 
 # Mock storage_id to generate random IDs. Seed with current user so that a user maintains
