@@ -18,6 +18,10 @@ class BucketHelper
     self.s3 ||= AWS::S3.create_client
   end
 
+  def allowed_file_name?(_filename)
+    true
+  end
+
   def allowed_file_type?(extension)
     allowed_file_types.include? extension.downcase
   end
