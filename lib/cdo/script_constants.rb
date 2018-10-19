@@ -51,6 +51,7 @@ module ScriptConstants
       # you must also update the Data_HocTutorials gsheet so the end of script API works
 
       nil,
+      MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
