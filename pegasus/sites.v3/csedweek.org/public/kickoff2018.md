@@ -53,17 +53,19 @@ Those selected will be awarded a trip to Seattle, WA to be recognized on stage a
 <br/>
 <br/>
 
-**The event will be organized by Code.org, thanks to the support of our generous funders**
+**The event will be organized by Code.org, thanks to the support of our generous funders:**
 
 <div class="row" style="display:flex;align-items:flex-end">
   <br/>
+  <div class="col-md-1">
+  </div>
   <div class="col-md-2">
     <img src="/images/avatars/microsoft.jpg" width="100%">
   </div>
   <div class="col-md-2">
     <img src="/images/kickoff2017/facebook_logo.png" width="100%">
   </div>
-  <div class="col-md-2">
+  <div class="col-md-1">
     <img src="/images/avatars/infosys_foundation_usa.png" width="100%">
   </div>
   <div class="col-md-2">
@@ -77,6 +79,27 @@ Those selected will be awarded a trip to Seattle, WA to be recognized on stage a
 
 <br/>
 <br/>
+
+<br/>
+<br/>
+
+**Thanks to the Paul Allen School of Computer Science & Engineering for providing the venue for this event, and to CSTA for co-sponsoring the Champions of Computer Science Awards:**
+<br/>
+<div class="row" style="display:flex;align-items:flex-end">
+  <br/>
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-4">
+    <img src="/images/avatars/allen_school.png" width="100%">
+  </div>
+  <div class="col-md-2">
+    <img src="/images/avatars/csta.png" width="100%">
+  </div>
+</div>
+
+<br/>
+<br/>
+
 [**Back to the top**](#top)
 <br/>
 

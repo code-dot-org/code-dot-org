@@ -10,7 +10,7 @@ import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
-import {reducers} from './redux';
+import {reducers, setSong} from './redux';
 
 /**
  * An instantiable GameLab class
@@ -89,6 +89,12 @@ Dance.prototype.init = function (config) {
     soundConfig[Sounds.getExtensionFromUrl(href)] = href;
     Sounds.getSingleton().register(soundConfig);
   });
+
+  if (this.level.isProjectLevel && config.level.selectedSong) {
+    getStore().dispatch(setSong(config.level.selectedSong));
+  } else if (this.level.defaultSong) {
+    getStore().dispatch(setSong(this.level.defaultSong));
+  }
 
   ReactDOM.render((
     <Provider store={getStore()}>

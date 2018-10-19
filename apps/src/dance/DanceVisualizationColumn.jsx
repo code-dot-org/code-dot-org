@@ -9,6 +9,7 @@ import {connect} from "react-redux";
 import i18n from '@cdo/locale';
 import * as danceRedux from "../dance/redux";
 import Sounds from "../Sounds";
+import project from "../code-studio/initApp/project";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -22,7 +23,8 @@ const styles = {
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired
+    selectedSong: PropTypes.string.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired
   };
 
   state = {
@@ -30,7 +32,7 @@ const SongSelector = Radium(class extends React.Component {
   };
 
   changeSong = (event) => {
-    let song = event.target.value;
+    const song = event.target.value;
     this.props.setSong(song);
     this.loadSong(song);
   };
@@ -40,6 +42,11 @@ const SongSelector = Radium(class extends React.Component {
     let options = {id: song};
     options['mp3'] = `https://curriculum.code.org/media/uploads/${this.state.songsData[options.id].url}.mp3`;
     Sounds.getSingleton().register(options);
+
+    if (this.props.isProjectLevel) {
+      //Save song to project
+      project.saveSelectedSong(song);
+    }
   }
 
   componentDidMount() {
@@ -79,6 +86,8 @@ class DanceVisualizationColumn extends React.Component {
     showFinishButton: PropTypes.bool.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired
   };
 
   render() {
@@ -92,7 +101,9 @@ class DanceVisualizationColumn extends React.Component {
     };
     return (
       <span>
-        <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
+        {!this.props.isShareView &&
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} isProjectLevel={this.props.isProjectLevel}/>
+        }
         <ProtectedVisualizationDiv>
           <div
             id="divDance"
@@ -109,6 +120,8 @@ class DanceVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
+  isProjectLevel: state.pageConstants.isProjectLevel,
+  isShareView: state.pageConstants.isShareView,
   selectedSong: state.selectedSong,
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
