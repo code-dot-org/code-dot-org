@@ -238,13 +238,13 @@ class School < ActiveRecord::Base
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
     CSV.read(filename, options).each do |row|
       parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
       loaded = find_by_id(parsed[:id])
       if loaded.nil?
         School.new(parsed).save!
-      else
+      elsif write_updates == true
         loaded.assign_attributes(parsed)
         loaded.update!(parsed) if loaded.changed?
       end
