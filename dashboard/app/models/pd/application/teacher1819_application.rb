@@ -53,7 +53,6 @@ module Pd::Application
       Pd::Teachercon1819Registration.find_by_pd_application_id(id)
     end
 
-    # @override
     def self.cohort_csv_header(optional_columns)
       columns = [
         'Date Accepted',
@@ -76,7 +75,6 @@ module Pd::Application
       end
     end
 
-    # @override
     def to_cohort_csv_row(optional_columns)
       columns = [
         date_accepted,
