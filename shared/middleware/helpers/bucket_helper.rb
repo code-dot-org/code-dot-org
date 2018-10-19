@@ -200,14 +200,27 @@ class BucketHelper
   #
   # Therefore, a project will only ever replace a version that it created, and
   # we can say the client "owns" a particular version if that client created it.
-  def check_current_version(encrypted_channel_id, filename, client_last_version, should_replace, timestamp, tab_id, user_id)
-    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && client_last_version
+  def check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, user_id)
+    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
-    actual_latest_version = s3.head_object(bucket: @bucket, key: key).version_id
-    # TODO: Also get the client's expected current version for consistency?
-    # Are two HEAD requests cheaper than one LIST request?
+
+    expected_latest_version = begin
+      s3.head_object(bucket: @bucket, key: key, version_id: current_version).version_id
+    rescue Aws::S3::Errors::NoSuchKey, Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument
+      nil # No main.json yet, invalid version id or version not found
+    end
+
+    # This second request can be skipped if we encountered an S3 eventual consistency issue.
+    actual_latest_version = nil
+    if expected_latest_version
+      begin
+        actual_latest_version = s3.head_object(bucket: @bucket, key: key).version_id
+      rescue Aws::S3::Errors::NoSuchKey
+        # No main.json yet
+      end
+    end
 
     error_type =
       if should_replace
@@ -216,7 +229,7 @@ class BucketHelper
         # the target version not being visible yet due to S3's read-after-write
         # eventual consistency though, so allow the target version to either be
         # (absent or (present and latest)).
-        return true unless actual_latest_version != client_last_version
+        return true if (!expected_latest_version) || expected_latest_version == actual_latest_version
         'reject-replacing-older-main-json'
       else
         # Since we are not replacing the target version, we can conclude:
@@ -227,7 +240,7 @@ class BucketHelper
         #     client may have already replaced it.
         # Guard against this scenario by requiring that the target version be
         # both present and latest, without worrying about S3 inconsistency.
-        return true if actual_latest_version == client_last_version
+        return true if expected_latest_version && expected_latest_version == actual_latest_version
         'reject-comparing-older-main-json'
       end
 
@@ -240,7 +253,7 @@ class BucketHelper
       user_id: user_id,
 
       data_json: {
-        currentVersionId: client_last_version,
+        currentVersionId: current_version,
         tabId: tab_id,
         key: key,
 
