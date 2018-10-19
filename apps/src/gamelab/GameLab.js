@@ -239,7 +239,9 @@ GameLab.prototype.init = function (config) {
     }
   }
 
-  if (this.level.defaultSong) {
+  if (this.level.isProjectLevel && config.level.selectedSong) {
+    getStore().dispatch(danceRedux.setSong(config.level.selectedSong));
+  } else if (this.level.defaultSong) {
     getStore().dispatch(danceRedux.setSong(this.level.defaultSong));
   }
 
