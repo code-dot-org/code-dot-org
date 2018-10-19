@@ -1,144 +1,122 @@
 require 'test_helper'
+require 'webmock/minitest'
+require 'cdo/aws/s3'
+
+WebMock.disable_net_connect!
 
 class RemixTest < ActionDispatch::IntegrationTest
   PROJECT_EDIT_REGEX = /#{'/projects/'}(?<project_type>\w+)\/(?<channel_id>[^\\]*)#{'/edit'}$/
 
   def setup
+    AWS::S3.stubs :create_client # Don't actually talk to S3
     sign_in create :student
   end
 
   test 'artist only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'artist'
   end
 
   test 'artist_k1 only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'artist_k1'
   end
 
   test 'frozen only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'frozen'
   end
 
   test 'playlab only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'playlab'
   end
 
   test 'playlab_k1 only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'playlab_k1'
   end
 
   test 'starwars only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'starwars'
   end
 
   test 'starwarsblocks only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'starwarsblocks'
   end
 
   test 'starwarsblocks_hour only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'starwarsblocks_hour'
   end
 
   test 'iceage only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'iceage'
   end
 
   test 'infinity only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'infinity'
   end
 
   test 'gumball only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'gumball'
   end
 
   test 'flappy only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'flappy'
   end
 
   test 'minecraft_codebuilder only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'minecraft_codebuilder'
   end
 
   test 'minecraft_adventurer only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'minecraft_adventurer'
   end
 
   test 'minecraft_designer only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'minecraft_designer'
   end
 
   test 'minecraft_hero only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'minecraft_hero'
   end
 
   test 'applab only remixes Sources and Assets buckets' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources_assets 'applab'
   end
 
   test 'gamelab only remixes Sources, Assets and Animations buckets' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources_assets_animations 'gamelab'
   end
 
   test 'spritelab only remixes Sources, Assets and Animations buckets' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources_assets_animations 'spritelab'
   end
 
   test 'makerlab only remixes Sources and Assets buckets' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources_assets 'makerlab'
   end
 
   test 'weblab only remixes Sources and Files buckets' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources_files 'weblab'
   end
 
   test 'bounce only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'bounce'
   end
 
   test 'sports only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'sports'
   end
 
   test 'basketball only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'basketball'
   end
 
   test 'algebra_game only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'algebra_game'
   end
 
   test 'calc only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'calc'
   end
 
   test 'eval only remixes Sources bucket' do
-    skip 'Temporarily disabled'
     assert_only_remixes_sources 'eval'
   end
 
