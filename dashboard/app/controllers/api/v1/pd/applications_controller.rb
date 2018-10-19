@@ -70,12 +70,7 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          prefetch applications, role: role
-          course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
-          csv_text = [
-            TYPES_BY_ROLE[role].csv_header(course),
-            *applications.map(&:to_csv_row)
-          ].join
+          csv_text = get_csv_text applications, role
           send_csv_attachment csv_text, "#{role}_applications.csv"
         end
       end
@@ -119,19 +114,9 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          prefetch applications, role: role
-          course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
-          csv_text = [
-            TYPES_BY_ROLE[role.to_sym].csv_header(course),
-            *applications.map(&:to_csv_row)
-          ].join
+          csv_text = get_csv_text applications, role
           send_csv_attachment csv_text, "#{role}_applications.csv"
         end
-        # format.csv do
-        #   optional_columns = get_optional_columns(regional_partner_value)
-        #   csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header(optional_columns), applications.map {|app| app.to_cohort_csv_row(optional_columns)}].join
-        #   send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
-        # end
       end
     end
 
@@ -284,9 +269,14 @@ module Api::V1::Pd
       end
     end
 
-    # TODO: remove remaining teachercon references
-    def get_optional_columns(_regional_partner_value)
-      {accepted_teachercon: false, registered_workshop: false}
+    def get_csv_text(applications, role)
+      prefetch applications, role: role
+      course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
+
+      [
+        TYPES_BY_ROLE[role.try(&:to_sym)].csv_header(course),
+        *applications.map(&:to_csv_row)
+      ].join
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
