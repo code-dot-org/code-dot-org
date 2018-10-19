@@ -1022,13 +1022,6 @@ FactoryGirl.define do
       form_data_hash {build :pd_teacher1920_application_hash_common, course.to_sym}
     end
     form_data {form_data_hash.to_json}
-
-    trait :locked do
-      after(:create) do |application|
-        application.update!(status: 'accepted_not_notified')
-        application.lock!
-      end
-    end
   end
 
   factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
