@@ -520,7 +520,7 @@ module Pd::Application
     end
 
     # @override
-    def self.csv_header(course, user)
+    def self.csv_header(course)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
@@ -541,13 +541,12 @@ module Pd::Application
           'Notes',
           'Status'
         )
-        columns.push('Locked') if can_see_locked_status?(user)
         csv << columns
       end
     end
 
     # @override
-    def to_csv_row(user)
+    def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
@@ -568,7 +567,6 @@ module Pd::Application
           notes,
           status
         )
-        row.push locked? if self.class.can_see_locked_status?(user)
         csv << row
       end
     end

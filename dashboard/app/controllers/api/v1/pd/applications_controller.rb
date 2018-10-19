@@ -73,8 +73,8 @@ module Api::V1::Pd
           prefetch applications, role: role
           course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
           csv_text = [
-            TYPES_BY_ROLE[role].csv_header(course, current_user),
-            *applications.map {|a| a.to_csv_row(current_user)}
+            TYPES_BY_ROLE[role].csv_header(course),
+            *applications.map(&:to_csv_row)
           ].join
           send_csv_attachment csv_text, "#{role}_applications.csv"
         end
@@ -118,12 +118,20 @@ module Api::V1::Pd
           )
           render json: serialized_applications
         end
-        prefetch applications, role: role
         format.csv do
-          optional_columns = get_optional_columns(regional_partner_value)
-          csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header(optional_columns), applications.map {|app| app.to_cohort_csv_row(optional_columns)}].join
-          send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
+          prefetch applications, role: role
+          course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
+          csv_text = [
+            TYPES_BY_ROLE[role.to_sym].csv_header(course),
+            *applications.map(&:to_csv_row)
+          ].join
+          send_csv_attachment csv_text, "#{role}_applications.csv"
         end
+        # format.csv do
+        #   optional_columns = get_optional_columns(regional_partner_value)
+        #   csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header(optional_columns), applications.map {|app| app.to_cohort_csv_row(optional_columns)}].join
+        #   send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
+        # end
       end
     end
 
