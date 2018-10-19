@@ -313,7 +313,7 @@ class FilesApi < Sinatra::Base
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
     category = buckets.category_from_file_type(file_type)
 
-    # sources only supports one file (main.json) and we checked max_file_size above, 
+    # sources only supports one file (main.json) and we checked max_file_size above,
     # so there's no need to check if we've exceeded the max total app size for the sources bucket.
     unless 'sources' == endpoint
       app_size = buckets.app_size(encrypted_channel_id)
