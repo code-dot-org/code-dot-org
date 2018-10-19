@@ -23,31 +23,31 @@ Lesen Sie, was andere Ehrenamtliche berichten:
 
 ### Volunteers and speakers in tech:
 
-Do you have a connection to CS or tech? Wenn Sie in der Software-Entwicklung arbeiten, oder in einer Firma der Tech-Branche, egal ob als Ingenieur oder in einer anderen Funktion, oder wenn Sie auch nur Informatik-/Programmier-Kurse besucht haben: Sie können helfen, Schüler für das Fach zu begeistern! Viele Schüler haben noch nie jemanden getroffen, der in der Tech-Branche arbeitet und unsere Lehrer lieben es, eine Verbindung zwischen ihrer Klasse und einem Profi oder Studenten herstellen zu können.
+Haben Sie etwas mit der Software- oder Tech-Branche zu tun? Wenn Sie in der Software-Entwicklung arbeiten, oder in einer Firma der Tech-Branche, egal ob als Ingenieur oder in einer anderen Funktion, oder wenn Sie auch nur Informatik-/Programmier-Kurse besucht haben: Sie können helfen, Schüler für das Fach zu begeistern! Viele Schüler haben noch nie jemanden getroffen, der in der Tech-Branche arbeitet und unsere Lehrer lieben es, eine Verbindung zwischen ihrer Klasse und einem Profi oder Studenten herstellen zu können.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei der Durchführung einer Hour of Code-Veranstaltung unterstützen. Besuchen Sie eine Schule in Ihrer Nähe und begeistern Sie die Kinder dafür, Informatik zu lernen. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Melden Sie sich noch heute als Freiwilliger!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Jeder, der leidenschaftlich daran glaubt, dass man seine Möglichkeiten vermehren sollte:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Helfen Sie in einer Klasse in Ihrer Nähe aus oder organisieren Sie eine Veranstaltung nach der Schule! Sie brauchen keine Erfahrung im Programmieren, um eine "Hour of Code"-Veranstaltung durchzuführen. Und: alleine das Angebot, mitzumachen und auszuhelfen, reicht häufig aus, um den Lehrer Ihres Kindes, einen Freund oder einen Verein zu überzeugen, eine Hour of Code auszuprobieren.
+  Glauben Sie daran, dass das Erlernen der Informatik Türen neuer Möglichkeiten für die Schüler öffnen kann? Helfen Sie in einer Klasse in Ihrer Nähe aus oder organisieren Sie eine Veranstaltung nach der Schule! Sie brauchen keine Erfahrung im Programmieren, um eine "Hour of Code"-Veranstaltung durchzuführen. Und: alleine das Angebot, mitzumachen und auszuhelfen, reicht häufig aus, um den Lehrer Ihres Kindes, einen Freund oder einen Verein zu überzeugen, eine Hour of Code auszuprobieren.
 </p>
 
 <h3>
-  How do you get started?
+  Wie können Sie gleich loslegen?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    Bieten Sie den Lehrern Ihres Kindes an, bei der Durchführung einer Hour of Code mitzuhelfen und senden Sie ihnen <a href="%= resolve_url('/promote/resources#help-schools') %">diese E-Mail</a>.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Bieten Sie einer Schule in Ihrer Nähe an, eine Hour of Code nach dem Unterricht in der Schule durchzuführen. Nutzen Sie diesen <a href="%= resolve_url('/how-to') %">Leitfaden</a>, um Ihre Veranstaltung zu planen.
   </li>
 </ol>
 
@@ -56,7 +56,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Erzählen Sie Ihren Freunden und Kollegen von der Hour of Code. Bitten Sie sie, sich als <a href="https://code.org/volunteer">Freiwillige zu registrieren</a>, denn Tausende von Lehrern suchen nach Helfern. Bitten Sie auch ihren Arbeitgeber, sich zu engagieren. Schicken Sie <a href="%= resolve_url('/promote/resources#sample-email') %">diese E-Mail</a> an Ihren Chef, um alle mit ins Boot zu holen.
 </p>
 
 <h2>
@@ -226,7 +226,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           FAQ für ehrenamtliche "Hour of Code"-Helfer
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Ich bin bisher noch nicht von einem Lehrer kontaktiert worden. Wie kann ich trotzdem mithelfen?
         </h3>
         <p>
           Try searching for local schools and call the principal/teacher/front office and ask how you can help.
