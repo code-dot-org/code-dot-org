@@ -140,7 +140,7 @@ en:
     age: 'Age'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
-    next: 'Next'
+    go_to_account: 'Go to my account'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -361,6 +361,7 @@ en:
       spritelab: 'Sprite Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Dance Party'
       view_all: 'View all projects...'
 
     popup:
