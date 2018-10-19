@@ -32,14 +32,17 @@ const SongSelector = Radium(class extends React.Component {
   changeSong = (event) => {
     let song = event.target.value;
     this.props.setSong(song);
+    this.loadSong(song);
+  };
 
+  loadSong(song) {
     //Load song
     let options = {id: song};
     options['mp3'] = `https://curriculum.code.org/media/uploads/${this.state.songsData[options.id].url}.mp3`;
     Sounds.getSingleton().register(options);
-  };
+  }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch(`/api/v1/sound-library/hoc_song_meta/songManifest.json`)
       .then((response) => {return response.json();})
       .then((data) => {this.parseSongOptions(data);});
@@ -48,11 +51,14 @@ const SongSelector = Radium(class extends React.Component {
   parseSongOptions(data) {
     let songs = {};
     if (data) {
-      data.songs.forEach((song) => {if (!song.pg13) {songs[song.id] = {title: song.text, url: song.url};}});
+      data.songs.forEach((song) => {
+          songs[song.id] = {title: song.text, url: song.url};
+      });
     }
     this.setState({songsData: songs});
-  }
 
+    this.loadSong(this.props.selectedSong);
+  }
 
   render() {
     return (
