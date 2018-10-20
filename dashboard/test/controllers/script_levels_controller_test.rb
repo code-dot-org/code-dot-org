@@ -857,15 +857,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
     User.any_instance.
-        expects(:user_level_for).
-        returns(
-            create(:user_level,
-                   user: @student,
-                   level_source: create(:level_source, data: fake_last_attempt),
-                   submitted: true,
-                   updated_at: DateTime.new(2000, 1, 1)
-            )
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt),
+          submitted: true,
+          updated_at: DateTime.new(2000, 1, 1)
         )
+      )
 
     user_storage_id = storage_id_for_user_id(@student.id)
 
@@ -875,11 +875,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
-        script_id: script_level.script,
-        stage_position: script_level.stage,
-        id: script_level.position,
-        user_id: @student.id,
-        section_id: @section.id
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
     }
 
     assert_includes response.body, "<div>Submitted on:</div>\n<div class='timestamp'>2000-01-01T00:00:00Z</div>"
@@ -890,15 +890,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
     User.any_instance.
-        expects(:user_level_for).
-        returns(
-            create(:user_level,
-                   user: @student,
-                   level_source: create(:level_source, data: fake_last_attempt),
-                   best_result: 1,
-                   updated_at: DateTime.new(2000, 1, 1)
-            )
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt),
+          best_result: 1,
+          updated_at: DateTime.new(2000, 1, 1)
         )
+      )
 
     user_storage_id = storage_id_for_user_id(@student.id)
 
@@ -908,11 +908,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
-        script_id: script_level.script,
-        stage_position: script_level.stage,
-        id: script_level.position,
-        user_id: @student.id,
-        section_id: @section.id
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
     }
 
     assert_includes response.body, "<div>Last updated:</div>\n<div class='timestamp'>2000-01-01T00:00:00Z</div>"
