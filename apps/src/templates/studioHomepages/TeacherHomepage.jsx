@@ -24,6 +24,7 @@ const styles = {
 export default class TeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
+    hocLaunch: PropTypes.string,
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     announcement: shapes.teacherAnnouncement,
@@ -124,13 +125,14 @@ export default class TeacherHomepage extends Component {
   }
 
   render() {
-    const { courses, topCourse, announcement, joinedSections } = this.props;
+    const { hocLaunch, courses, topCourse, announcement, joinedSections } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
     const { canViewAdvancedTools, isEnglish, queryStringOpen } = this.props;
 
     // Show the special announcement for now.
     const showSpecialAnnouncement = true;
+
     // Hide the regular announcement/notification for now.
     const showAnnouncement = false;
 
@@ -147,7 +149,9 @@ export default class TeacherHomepage extends Component {
           ref="teacherReminders"
         />
         {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock/>
+          <SpecialAnnouncementActionBlock
+            hocLaunch={hocLaunch}
+          />
         )}
         {announcement && showAnnouncement && (
           <div>

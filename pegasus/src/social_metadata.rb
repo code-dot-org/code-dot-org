@@ -24,6 +24,20 @@ def get_social_metadata_for_page(request)
         image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
         video: videos[:creativity_is]
       },
+      "soon-hoc-mc" => {
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity_long),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_long),
+        image: {path: "/images/social-media/hourofcode-2018-mc.jpg", width: 846, height: 529},
+        video: videos[:creativity_is]
+      },
+      "soon-hoc-dance" => {
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity_long),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_long),
+        image: {path: "/images/social-media/hourofcode-2018-dance.jpg", width: 846, height: 529},
+        video: videos[:creativity_is]
+      },
       "week-before-hoc" => {
         title: I18n.t(:og_title_soon),
         description: I18n.t(:og_description_celeb),
@@ -33,6 +47,12 @@ def get_social_metadata_for_page(request)
         title: I18n.t(:og_title_here),
         description: I18n.t(:og_description_celeb),
         image: {path: "/images/fit-1220/social-media/celeb-challenge.jpg", width: 1220, height: 640}
+      },
+      "actual-hoc-dance" => {
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_dance_long),
+        image: {path: "/images/social-media/hourofcode-2018-dance.jpg", width: 846, height: 529},
+        video: videos[:creativity_is]
       },
       "default" => {
         title: I18n.t(:og_title),
@@ -83,18 +103,18 @@ def get_social_metadata_for_page(request)
         video: videos[:hour_of_code_worldwide]
       },
       "actual-hoc" => {
-        title: I18n.t(:og_title_here),
-        description: hoc_s(:meta_tag_og_description),
-        description_twitter: hoc_s(:meta_tag_twitter_description),
-        image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
-        video: videos[:hour_of_code_worldwide]
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity_short),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_short),
+        image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
+        video: videos[:creativity_is]
       },
       "default" => {
         title: hoc_s(:meta_tag_og_title),
         description: hoc_s(:meta_tag_og_description),
         description_twitter: hoc_s(:meta_tag_twitter_description),
-        image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
-        video: videos[:hour_of_code_worldwide]
+        image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 1440, height: 900},
+        video: videos[:creativity_is]
       }
     },
     "challenge" => {
@@ -118,11 +138,44 @@ def get_social_metadata_for_page(request)
         description: "Win a celebrity video chat for your class!",
         image: {path: "/images/fit-1220/social-media/celeb-challenge.jpg", width: 1220, height: 640}
       }
+    },
+    "minecraft" => {
+      "soon-hoc" => {
+        title: hoc_s(:tutorial_mchoc_name),
+        description: hoc_s(:social_og_description_hoc2018_mc),
+        image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
+      },
+      "soon-hoc-mc" => {
+        title: hoc_s(:tutorial_mchoc_name),
+        description: hoc_s(:social_og_description_hoc2018_mc),
+        image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
+      },
+      "soon-hoc-dance" => {
+        title: hoc_s(:tutorial_mchoc_name),
+        description: hoc_s(:social_og_description_hoc2018_mc),
+        image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
+      },
+      "default" => {
+        title: hoc_s(:tutorial_mchoc_name),
+        description: hoc_s(:social_og_description_hoc2018_mc),
+        image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
+      }
+    },
+    "dance" => {
+      "default" => {
+        title: hoc_s(:social_og_title_hoc2018_dance),
+        description: hoc_s(:social_og_description_hoc2018_dance),
+        image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529}
+      }
     }
   }
 
   if request.path == "/challenge" && request.site == "code.org"
     page = "challenge"
+  elsif request.path == "/minecraft" && request.site == "code.org"
+    page = "minecraft"
+  elsif request.path == "/dance" && request.site == "code.org"
+    page = "dance"
   elsif request.path == "/" && ["code.org", "csedweek.org", "hourofcode.com"].include?(request.site)
     page = request.site
   else
@@ -136,8 +189,19 @@ def get_social_metadata_for_page(request)
     hoc_mode = "default"
   end
 
+  # Additional hoc variants.
+  hoc_launch = DCDO.get("hoc_launch", nil)
+  if hoc_launch == "mc"
+    extension = "-mc"
+  end
+
+  social_tag_set =
+    social_tags[page][hoc_mode + extension] ||
+    social_tags[page][hoc_mode] ||
+    social_tags[page]["default"]
+
   output = {}
-  social_tags[page][hoc_mode].each do |name, value|
+  social_tag_set.each do |name, value|
     if name == :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
       output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"

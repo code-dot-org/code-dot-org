@@ -1,0 +1,45 @@
+%link{href: "/css/minecraft2018.css", rel: "stylesheet"}
+
+%h1.responsive-padding= I18n.t(:minecraft_tutorials)
+%p.responsive-padding= I18n.t(:minecraft_specs)
+%div{style: "clear:both"}
+.mc-container
+  .mc-tutorials
+    .tutorial-box{style: "margin-bottom: 14px;"}
+      .img-container.img-container-wide
+        %img.mc-img-wide{src: '/images/mc/fit-1940/mc_landing_2017_wide.jpg'}
+        %img.mc-img.mc-img-narrow{src: '/images/mc/mc_landing_2017_narrow.jpg'}
+        .mc-tutorial-info.mc-tutorial-info-wide
+          .mc-tutorial-details
+            %h2.mc-h1-second-box= I18n.t(:minecraft_agent)
+            %p.mc-tutorial-description= I18n.t(:minecraft_agent_description)
+            %a{href: CDO.studio_url('/s/hero/reset'), target: '_self'}
+              %button.primary= I18n.t(:minecraft_agent_button)
+        %img.mc-new-tag{src: '/images/mc/new_tag.png'}
+    .tutorial-box{style: "margin-right: 14px;"}
+      .img-container
+        %img.mc-img{:src => '/images/fill-314x307/mc/mc_landing_2017_narrow.jpg'}
+      .mc-tutorial-info
+        .mc-tutorial-details
+          %h2.mc-h1-second-box= I18n.t(:minecraft_agent)
+          %p.mc-tutorial-description= I18n.t(:minecraft_agent_description)
+          %a{:href => CDO.studio_url('/s/hero/reset'), :target=>'_self'}
+            %button.primary= I18n.t(:minecraft_agent_button)
+    .tutorial-box{style: "margin-right: 14px;"}
+      .img-container
+        %img.mc-img{:src => '/images/fill-314x307/mc/mc_landing_2016.jpg'}
+      .mc-tutorial-info
+        .mc-tutorial-details
+          %h2.mc-h1-second-box= I18n.t(:minecraft_designer)
+          %p.mc-tutorial-description= I18n.t(:minecraft_designer_description)
+          %a{:href => CDO.studio_url('/s/minecraft/reset'), :target=>'_self'}
+            %button.primary= I18n.t(:minecraft_designer_button)
+    .tutorial-box
+      .img-container
+        %img.mc-img{:src => '/images/fill-314x307/mc/mc_landing_2015.png'}
+      .mc-tutorial-info
+        .mc-tutorial-details
+          %h2.mc-h1-second-box= I18n.t(:minecraft_adventurer)
+          %p.mc-tutorial-description= I18n.t(:minecraft_adventurer_description)
+          %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+            %button.primary.padded-button= I18n.t(:minecraft_adventurer_button)

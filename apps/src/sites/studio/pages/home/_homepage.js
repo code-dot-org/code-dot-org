@@ -120,6 +120,7 @@ function showHomepage() {
         {isTeacher && (
           <TeacherHomepage
             announcement={announcement}
+            hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
