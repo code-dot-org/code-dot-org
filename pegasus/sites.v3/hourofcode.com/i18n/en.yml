@@ -20,6 +20,8 @@
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
 
+  hoc2018_tutorial_mchoc_description: 'Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.'
+
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
@@ -308,8 +310,12 @@
   social_og_title_hoc2018_creativity: "What will you create?"
   social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
   social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_og_description_hoc2018_dance_long: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
+  social_og_title_hoc2018_dance: "Hour of Code: Dance Party"
+  social_og_description_hoc2018_dance: "Do a little dance. Make a little code. What will you create?"
+  social_og_description_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
 
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
