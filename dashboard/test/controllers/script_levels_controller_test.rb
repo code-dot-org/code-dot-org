@@ -863,7 +863,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
           user: @student,
           level_source: create(:level_source, data: fake_last_attempt),
           submitted: true,
-          updated_at: DateTime.new(2000, 1, 1)
+          updated_at: DateTime.new(2017, 12, 15, 18, 5, 8)
         )
       )
 
@@ -882,7 +882,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       section_id: @section.id
     }
 
-    assert_includes response.body, "<div>Submitted on:</div>\n<div class='timestamp'>2000-01-01T00:00:00Z</div>"
+    assert_includes response.body, "<div>Submitted on:</div>\n<div class='timestamp'>12/15/2017, 6:05:08 PM</div>"
   end
 
   test 'shows last update time if you are a teacher viewing your student and they have a best result' do
@@ -896,7 +896,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
           user: @student,
           level_source: create(:level_source, data: fake_last_attempt),
           best_result: 1,
-          updated_at: DateTime.new(2000, 1, 1)
+          updated_at: DateTime.new(2000, 1, 5, 8, 30, 45)
         )
       )
 
@@ -915,7 +915,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       section_id: @section.id
     }
 
-    assert_includes response.body, "<div>Last updated:</div>\n<div class='timestamp'>2000-01-01T00:00:00Z</div>"
+    assert_includes response.body, "<div>Last updated:</div>\n<div class='timestamp'>1/5/2000, 8:30:45 AM</div>"
   end
 
   test 'loads applab if you are a project validator viewing a student and they have a channel id' do
