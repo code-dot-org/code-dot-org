@@ -62,9 +62,9 @@ const SongSelector = Radium(class extends React.Component {
           songs[song.id] = {title: song.text, url: song.url};
       });
     }
-    this.setState({songsData: songs});
-
-    this.loadSong(this.props.selectedSong);
+    this.setState({songsData: songs}, () => {
+      this.loadSong(this.props.selectedSong);
+    });
   }
 
   render() {
