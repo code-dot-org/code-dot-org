@@ -21,7 +21,14 @@
   - body = t('upsell.gallery.body')
 
 - elsif id == 'applab'
+  / Goes to the App Lab *page* (/educate/applab)
   - url = CDO.code_org_url('/educate/applab')
+  - title = t('upsell.applab.title')
+  - body = t('upsell.applab.body_short')
+
+- elsif id == 'applab-intro'
+  / Goes to the App Lab *script* (/s/applab-intro/reset)
+  - url = CDO.code_org_url('/s/applab-intro/reset')
   - title = t('upsell.applab.title')
   - body = t('upsell.applab.body_short')
 
