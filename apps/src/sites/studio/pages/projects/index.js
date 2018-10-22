@@ -40,6 +40,7 @@ $(document).ready(() => {
     <Provider store={store}>
       <ProjectHeader
         canViewAdvancedTools={projectsData.canViewAdvancedTools}
+        includeDanceParty={projectsData.includeDanceParty}
       />
     </Provider>,
     document.getElementById('projects-header')
