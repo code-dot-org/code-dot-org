@@ -114,10 +114,10 @@ ur:
     submit: جمع کرائیں
   nav:
     header:
-      courses: کورسز
       educate_hoc: آور-آف-کوڈ
     user:
       classroom: استاد کی ہوم پیج
+      create: بنائیں
   teacher:
     panel:
       student: Talib-e-ilm

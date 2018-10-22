@@ -1,3 +1,4 @@
+---
 kk:
   data:
     blocks:
@@ -7,17 +8,11 @@ kk:
             '"seconds"': секунд
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -28,17 +23,11 @@ kk:
             '"height"': биіктік
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -57,11 +46,30 @@ kk:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': кездейсоқ
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
       Dancelab_setDanceSpeed:
@@ -73,6 +81,16 @@ kk:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': шама
@@ -102,8 +120,8 @@ kk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'дұрыс'
-            'false': 'Жалған'
+            'true': дұрыс
+            'false': Жалған
       gamelab_getProp:
         options:
           PROPERTY:
@@ -223,6 +241,12 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      RyanLab_moveForward:
+        text: алдыға қозғалу
+      RyanLab_turnLeft:
+        text: солға бұрылу
+      RyanLab_turnRight:
+        text: оңға бұрылу
       craft_ifPath:
         options:
           DIR:
@@ -236,3 +260,7 @@ kk:
         text: алдыға қозғалу
       craft_placeTorch:
         text: Шам орнату
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': тауық

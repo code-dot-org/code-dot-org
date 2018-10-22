@@ -1,3 +1,4 @@
+---
 zh-TW:
   data:
     blocks:
@@ -10,8 +11,6 @@ zh-TW:
           GROUP:
             sprites: 全部
           MOVE:
-            '"next"': 下一個
-            '"prev"': 上一個
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -19,8 +18,6 @@ zh-TW:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': 下一個
-            '"prev"': 上一個
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -35,8 +32,6 @@ zh-TW:
           GROUP:
             sprites: 全部
           MOVE:
-            '"next"': 下一個
-            '"prev"': 上一個
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -44,8 +39,6 @@ zh-TW:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': 下一個
-            '"prev"': 上一個
             MOVES.Rest: 無
           DIR:
             '1': "→"
@@ -84,11 +77,28 @@ zh-TW:
         options:
           GROUP:
             sprites: 全部
+          FORMAT:
+            '"random"': 隨機
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": 到左方
             "{x: 300, y: 200}": 到右方
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': 隨機
       Dancelab_randomColor:
         text: 隨機顏色
       Dancelab_setBackgroundEffect:
@@ -108,6 +118,18 @@ zh-TW:
           EFFECT:
             '"none"': 無
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"height"': 高度
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: 全部
+          PROPERTY:
+            '"scale"': 尺寸
+            '"height"': 高度
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -282,6 +304,12 @@ zh-TW:
             '"down"': 向下鍵
             '"left"': 向左鍵
             '"right"': 向右鍵
+      RyanLab_moveForward:
+        text: 移動-向前
+      RyanLab_turnLeft:
+        text: 轉向-左方
+      RyanLab_turnRight:
+        text: 轉向-右方
       craft_ifPath:
         options:
           DIR:
@@ -295,3 +323,7 @@ zh-TW:
         text: 移動-向前
       craft_placeTorch:
         text: 放置火把
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': 雞

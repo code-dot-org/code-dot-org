@@ -111,6 +111,7 @@ ar:
     age: العمر
     user_type: هل أنت طالب أو معلّم؟
     submit: تسجيل
+    next: التالي
     teacher: هل أنت معلم؟
     valid_username: متاح!
     invalid_username: اسم المستخدم يجب ان يكون على الاقل 5 احرف
@@ -226,7 +227,6 @@ ar:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
         applab: اصنع تطبيقا
-      courses: الدروس
       project_gallery: المشاريع
       educate_hoc: ساعة البرمجة
       stats: الإحصائيات
@@ -240,10 +240,15 @@ ar:
       signin: تسجيل الدخول
       signup: إنشاء حساب
       already_registered: هل قمت بالتسجيل من قبل؟
-      pair_programming: البرمجة الزوجية
       team: فريق
       driver: سائق
       navigator: مستكشف
+      create: أنشئ
+      applab: مختبر التطبيق
+      artist: الرسام
+      playlab: مختبر اللعب
+      minecraft: Minecraft
+      flappy: فلابي
     popup:
       progress_for_user: تقدم %{name}
       progress: إنجازاتك
@@ -530,6 +535,8 @@ ar:
       body: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت.
     hero:
       title: Minecraft
+      body: ماين كرافت عادت لساعة من البرمجة بنشاط جديد! رحلة في عالم ماين كرافت مع
+        البرمجة.
     unplugged:
       title: درس غير موصول
       audience: العمر 4+

@@ -130,6 +130,7 @@ nn:
     age: Alder
     user_type: Er du elev eller lærar?
     submit: Meld deg på
+    next: Neste
     teacher: Er du ein lærar?
     valid_username: Tilgjengeleg!
     invalid_username: Brukernamnet må vere minst fem teikn
@@ -304,9 +305,7 @@ nn:
         applab: Lag ein app i Spel-lab
         gamelab: Lag eit prosjekt i Spel-lab
         weblab: Lag eit Nett-lab-prosjekt (beta)
-      home: Heim
       my_dashboard: Kontrollpanel
-      courses: Kurs
       course_catalog: Kurskatalog
       project_gallery: Prosjekt
       sections: Seksjonar
@@ -351,10 +350,16 @@ nn:
       signin: Logg inn
       signup: Opprett ein konto
       already_registered: Alt registrert?
-      pair_programming: Parprogrammering
       team: Team
       driver: Sjåfør
       navigator: Kartlesar
+      create: Opprett
+      applab: App-lab
+      artist: Kunstnar
+      gamelab: Spel-lab
+      playlab: Spel-lab
+      minecraft: Minecraft
+      flappy: Flakse
     popup:
       progress_for_user: Framgangen til %{name}
       progress: Framgangen din

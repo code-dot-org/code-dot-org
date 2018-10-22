@@ -98,15 +98,20 @@
     }
 
     #sign_in_or_user {
-      margin: 5px 0 0 0;
       display: block;
-      float: right;
+      float: left;
+      margin: 11px 0 0 30px;
 
       .button-signin {
-        margin-top: -3px;
+        margin-top: -4px;
         background-color: transparent;
         border: 2px solid $white;
         color: $white;
+      }
+
+      #signin_button {
+        margin-top: -9px;
+        height: 38px;
       }
     }
   }
@@ -115,11 +120,10 @@
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
-    margin-top: -4px;
     height: 38px;
     user-select: none;
 
-    .user_name, .create_button {
+    .pairing_name, .display_name, .create_button {
       font-family: 'Gotham 4r', sans-serif;
       max-width: 120px;
       display: inline-block;
@@ -137,42 +141,38 @@
     }
 
     .user_menu_arrow_down,
-    .user_menu_arrow_up {
+    .user_menu_arrow_up,
+    .create_menu_arrow_up,
+    .create_menu_arrow_down
+    {
       font-size: 25px;
     }
 
     .user_menu_arrow_up,
-    .create_menu_arrow_up, {
+    .user_menu_arrow_down,
+    .create_menu_arrow_up,
+    .create_menu_arrow_down {
       margin-top: -3px;
     }
-
-    .user_menu_arrow_down,
-    .create_menu_arrow_down {
-      margin-top: -2px;
-    }
-  }
-
-  .user_icon { /* copied from dashboard's .user-menu */
-    font-size: 25px;
-    border-width: 0px;
   }
 
   .create_options {
     position: absolute;
     top: 55px;
     right: 55px;
-    font-size: 14px;
     background-color: $white;
-    width: 200px;
+    width: 260px;
+    z-index: 10000;
     a {
       color: $teal;
-      font-weight: 900;
-      height: 70px;
-      width: 198px;
+      font-family: 'Gotham 5r', sans-serif;
+      width: 258px;
+      font-size: 14px;
       float: left;
       border-left: 1px solid $charcoal;
       border-right: 1px solid $charcoal;
       border-top: 1px solid $charcoal;
+      box-sizing: content-box;
     }
     a:hover {
       color: $teal;
@@ -187,7 +187,7 @@
     }
     .project_link {
       padding-left: 10px;
-      line-height: 62px;
+      line-height: 70px;
       float: left;
     }
     #view_all_projects {
@@ -210,5 +210,8 @@
     .create_menu {
       display: none !important;
     }
+    #signin_button {
+     margin-top: -4px !important;
+   }
   }
 }

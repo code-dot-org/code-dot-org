@@ -1,3 +1,4 @@
+---
 bn:
   data:
     blocks:
@@ -7,17 +8,11 @@ bn:
             '"seconds"': সেকেন্ড
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
@@ -28,17 +23,11 @@ bn:
             '"height"': উচ্চতা
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
           DIR:
             '1': "→"
             "-1": "←"
@@ -57,11 +46,30 @@ bn:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': এলোমেলো
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': এলোমেলো
       Dancelab_randomColor:
         text: যেকোনো রঙ
       Dancelab_setDanceSpeed:
@@ -73,6 +81,16 @@ bn:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': আকার
@@ -102,8 +120,8 @@ bn:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'সত্যি'
-            'false': 'মিথ্যা'
+            'true': সত্যি
+            'false': মিথ্যা
       gamelab_getProp:
         options:
           PROPERTY:
@@ -223,6 +241,12 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
+      RyanLab_moveForward:
+        text: সামনে এগিয়ে যান
+      RyanLab_turnLeft:
+        text: বামে যান
+      RyanLab_turnRight:
+        text: ডানে যান
       craft_ifPath:
         options:
           DIR:

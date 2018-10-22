@@ -169,9 +169,9 @@ sk:
         jigsaw_8: Usporiadaj bloky tak, aby sa vytvoril obrázok
         jigsaw_9: Usporiadaj bloky tak, aby sa vytvoril obrázok
         jigsaw_10: Usporiadaj bloky tak, aby sa vytvoril obrázok
-        jigsaw_11: Usporiadaj bloky tak, aby sa vytvoril obrázok
-        jigsaw_12: Usporiadaj bloky tak, aby sa vytvoril obrázok
-        jigsaw_13: Opravte hru!
+        jigsaw_11: Usporiadaj čísla do správneho poradia
+        jigsaw_12: Usporiadaj čísla do správneho poradia
+        jigsaw_13: Oprav túto skladačku!
         mazestep_1: Popis kroku v bludisku sem
         mazestep_2: Popis kroku v bludisku sem
         mazestep_3: Popis kroku v bludisku sem
@@ -312,8 +312,8 @@ sk:
         C2_binary_bracelets: Binárne náramky
         C2_relay_programming: Štafetové programovanie
         C2_paper_airplanes: Papierové lietadielká
-        C2_digital_footprint: Tvoj digitálny otlačok
-        C2_digital_footprint_v2: Tvoj digitálny otlačok
+        C2_digital_footprint: Tvoja digitálna stopa
+        C2_digital_footprint_v2: Tvoja digitálna stopa
         C3_maze_level_4: Slučky v bludisku
         C3_artist_intro: Úvod do Umelca
         C3_artist_functions: Funkcie umelca
@@ -423,13 +423,13 @@ sk:
         applab_hoc_onevent: Aplikačné laboratórium Hodiny Kódu - onEvent
         applab_hoc_designmode: Aplikačné laboratórium Hodiny Kódu - Dizajnovací mód
         applab_hoc_share: Aplikačné laboratórium Hodiny Kódu - Zdieľanie
-        mc_2017_agent_intro: Hodina kódu Minecraft - Agent
-        mc_2017_repeat: Hodina kódu Minecraft - Zopakuj Cykly
-        mc_2017_functions: Hodina kódu Minecraft - Funkcie
+        mc_2017_agent_intro: Minecraft Hodina Kódu - Agent
+        mc_2017_repeat: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
+        mc_2017_functions: Minecraft Hodina Kódu - Funkcie
         mc_2017_congratulations: Hodina kódu Minecraft - Gratulujeme
-        mc_2017_puzzle_1: Hodina kódu Minecraft - Agent
-        mc_2017_puzzle_3: Hodina kódu Minecraft - Zopakuj Cykly
-        mc_2017_puzzle_8: Hodina kódu Minecraft - Funkcie
+        mc_2017_puzzle_1: Minecraft Hodina Kódu - Agent
+        mc_2017_puzzle_3: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
+        mc_2017_puzzle_8: Minecraft Hodina Kódu - Funkcie
         mc_2017_puzzle_12: Hodina kódu Minecraft - Voľná hra
         hint_videos_d_11_3_first: 'Videonápoveda: D.11.3 Prvé'
         hint_videos_d_11_3_last: 'Videonápoveda: D.11.3 Posledné'
@@ -467,6 +467,11 @@ sk:
         CSF_Spritelab_MakeSprite_CDEF: Ako spraviť objekt v Laboratóriu objektov
         CDEF_Video_SpritesInAction: Objekty v akcií
         CSF_SpriteLab_SpritesInAction_CDEF: Objekty v akcií
+        CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
+        mc_2018_intro: 'Minecraft: Voyage Aquatic Úvod'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic Opakuj až do'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic Podmienky'
+        mc_2018_closing: 'Minecraft: Gratulujeme Voyage Aquatic'
     callout:
       text:
         drag_blocks: Presuňte blok "Posunúť" a pripojte ho pod druhý blok
@@ -501,11 +506,11 @@ sk:
         edit_get_nectar: Použite toto tlačidlo pre úpravu funkcie a zmenu smeru, ktorým pôjde včela pre nektár.
         logic_category: Otvorte panel "Logické" pre bloky "if/else".
         length_parameter: Viete aktualizovať túto funkciu, aby sa v nej použil parameter "dĺžka"?
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
         frozen_circle_function_in_circle_turn: Nezabudni sa po vytvorení každej kružnice otočiť.
         frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň veľkost.
-        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
-        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
+        frozen_snowflake_branch: Použi blok "Vytvor rameno vločky"
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
         playlab_drag_say: Presuňte sem blok "Povedz" a napíšte "ahoj"
         playlab_use_twice: Použite tento blok dvakrát a nezabudnte zmeniť počet umelcov
         playlab_move_girl: Použite blok "posuň doprava" pre posunutie Dievčatka tenistky

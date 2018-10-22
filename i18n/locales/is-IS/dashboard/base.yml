@@ -106,6 +106,7 @@ is:
     age: 'Aldur'
     user_type: 'Ert þú nemandi eða kennari?'
     submit: 'Skráning'
+    next: 'Næsta'
     teacher: 'Ertu kennari?'
     valid_username: "Laust!"
     invalid_username: "Notandanafn verður að vera að minnsta kosti 5 stafir"
@@ -291,14 +292,6 @@ is:
       help_us: "Hjálpaðu"
       teach: "Kenndu"
       about: "Um"
-    create_button:
-      create: 'Búa til'
-      applab: 'Appsmiðja'
-      artist: 'Listamaður'
-      gamelab: 'Leikjasmiðjan'
-      playlab: 'Leikjasmiðja'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Heimasíða kennara'
       district_dashboard: 'Stjórnborð umdæmis'
@@ -312,6 +305,13 @@ is:
       team: 'Félagar'
       driver: 'Ökumaður'
       navigator: 'Leiðsögumaður'
+      create: 'Búa til'
+      applab: 'Appsmiðja'
+      artist: 'Listamaður'
+      gamelab: 'Leikjasmiðjan'
+      playlab: 'Leikjasmiðja'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Framvinda %{name}"
       progress: 'Framvinda þín'

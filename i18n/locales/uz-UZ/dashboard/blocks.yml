@@ -1,35 +1,24 @@
+---
 uz:
   data:
     blocks:
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Keyingi
-            '"prev"': Avvalgi
           DIR:
             '1': "→"
             "-1": "←"
@@ -37,6 +26,28 @@ uz:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': tasodifiy
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': tasodifiy
       Dancelab_randomColor:
         text: tasodifiy rang
       Dancelab_setDanceSpeed:
@@ -51,15 +62,11 @@ uz:
         options:
           KEY:
             '"space"': koinot
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': koinot
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'rost'
-            'false': 'yolgʻon'
+            'true': rost
+            'false': yolgʻon
       gamelab_locationDelta:
         options:
           DIR:

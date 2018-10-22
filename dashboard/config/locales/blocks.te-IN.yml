@@ -22,19 +22,18 @@ te:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_setDanceSpeed:
         options:
           SPEED:

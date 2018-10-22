@@ -120,6 +120,7 @@ gl:
     age: Idade
     user_type: Alumno ou profesor?
     submit: Crear conta
+    next: Seguinte
     teacher: É un profesor?
     valid_username: Dispoñíbel!
     invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres
@@ -285,9 +286,7 @@ gl:
         applab: Crea unha aplicación do Laboratorio de Aplicacións
         gamelab: Crea un proxecto de Laboratorio de Xogos
         weblab: Crea un proxecto (beta) de Laboratorio Web
-      home: Inicio
       my_dashboard: O meu panel de control
-      courses: Cursos
       course_catalog: Catálogo de cursos
       project_gallery: Proxectos
       sections: Seccións
@@ -328,7 +327,12 @@ gl:
       signin: Iniciar Sesión
       signup: Crear unha conta
       already_registered: Xa creaches unha conta?
-      pair_programming: Programación por parellas
+      create: Crear
+      applab: Laboratorio de aplicacións
+      artist: Artista
+      playlab: Laboratorio de Xogos
+      minecraft: Minecraft
+      flappy: Flappy bird
     popup:
       progress_for_user: progreso de %{name}'s
       progress: O teu progreso

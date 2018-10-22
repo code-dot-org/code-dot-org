@@ -1,4 +1,4 @@
-- SignUpTracking.log_load_finish_sign_up session
+- SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
 - require 'geocoder'
 - require 'country_codes'
 - location = Geocoder.search(request.ip).try(:first)
@@ -11,15 +11,20 @@
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
     %p
-      = t('activerecord.attributes.user.finish_sign_up_subheader')
-      - if @user.provider.present? && @user.email.present?
-        %span= t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: t("auth.#{@user.provider}"), email: @user.email).html_safe
+      - if @user.provider.present?
+        - provider = t("auth.#{@user.provider}")
+        = t('activerecord.attributes.user.finish_sign_up_subheader_provider', provider: provider, email: @user.email).html_safe
+      - else
+        = t('activerecord.attributes.user.finish_sign_up_subheader', email: @user.email).html_safe
+      %span= link_to 'Cancel', users_cancel_path
 
     = f.hidden_field :locale, value: locale
+    = f.hidden_field :email
+    = f.hidden_field :encrypted_password
 
     .field-row
       .field
-        = f.label :user_type, t('signup_form.create_user_type')
+        = f.label :user_type, t('signup_form.user_type_label')
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
       - if @user.errors[:user_type].present?
         %span.error.padded= t('activerecord.errors.messages.blank')
@@ -27,7 +32,7 @@
     .field-row
       .field
         #teacher-name-label{style: "display: none;"}
-          = f.label :name, t('activerecord.attributes.user.other_name_example').html_safe
+          = f.label :name, t('activerecord.attributes.user.name').html_safe
         #student-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name_example').html_safe
         = f.text_field :name, maxlength: 255
@@ -94,7 +99,7 @@
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
 
     %button#submit
-      = t('signup_form.submit')
+      = t('signup_form.go_to_account')
 
 :ruby
   script_data = {

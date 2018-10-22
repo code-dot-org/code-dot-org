@@ -124,6 +124,7 @@ hu:
     age: Kor
     user_type: Diák vagy tanár vagy?
     submit: Regisztrálás
+    next: Következő
     teacher: Tanár vagy?
     valid_username: Elérhető!
     invalid_username: Felhasználónév minimum 5 karakter hosszú
@@ -245,8 +246,6 @@ hu:
         playlab: Készíts egy Játéklabor applikációt
         artist: Rajzolj valamit
         applab: Készíts egy App Lab applikációt
-      home: Főmenü
-      courses: tanfolyamok
       project_gallery: Projektek
       sections: Csoportok
       help_support: Súgó és támogatás
@@ -289,10 +288,15 @@ hu:
       signin: Bejelentkezés
       signup: Regisztrálj
       already_registered: Már regisztráltál?
-      pair_programming: Páros programozás
       team: Csapat
       driver: Vezető
       navigator: Navigátor
+      create: Létrehoz
+      applab: App Lab
+      artist: Művész
+      playlab: Játéklabor
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: Fejlődése

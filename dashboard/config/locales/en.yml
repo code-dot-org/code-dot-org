@@ -37,7 +37,6 @@ en:
       user:
         name: 'Display Name'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
-        other_name_example: 'Display Name<br/>(e.g. Ms. Smith)'
         email: 'Email'
         parent_email: 'Parent/guardian email'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
@@ -50,8 +49,8 @@ en:
         gender: 'Gender'
         edit_header: 'Edit Account Details'
         finish_sign_up_header: 'Finish creating your account'
-        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account'
-        finish_sign_up_subheader_provider: 'using your <strong>%{provider}</strong> for <strong>%{email}</strong>'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account using your <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: can't be in the future
 
@@ -111,6 +110,7 @@ en:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    microsoft_v2_auth: 'Microsoft Account'
     clever: 'Clever Account'
     powerschool: 'Powerschool Account'
     forgot_password: 'Forgot your password?'
@@ -140,6 +140,7 @@ en:
     age: 'Age'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
+    go_to_account: 'Go to my account'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -167,7 +168,6 @@ en:
     email_preference_yes: "Yes"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
-    create_user_type: 'Create account as a'
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -197,7 +197,7 @@ en:
     remember: 'Remember me'
     submit: 'Sign in'
   signin:
-    try_heading: 'Want to try coding without signing up?'
+    try_heading: 'Want to try coding without signing in?'
     try_hoc: 'Try one Hour of Code first'
     try_20hours: 'Try our 20 hour Intro to Computer Science'
   signinsection:
@@ -339,16 +339,6 @@ en:
       teach: "Teach"
       about: "About"
 
-    create_button:
-      create: 'Create'
-      applab: 'App Lab'
-      artist: 'Artist'
-      gamelab: 'Game Lab'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
-      view_all: 'View all projects...'
-
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -363,6 +353,17 @@ en:
       team: 'Team'
       driver: 'Logged in'
       navigator: 'Partner'
+      create: 'Create'
+      applab: 'App Lab'
+      artist: 'Artist'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      spritelab: 'Sprite Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Dance Party'
+      view_all: 'View all projects...'
+
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'

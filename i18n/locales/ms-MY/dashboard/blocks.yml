@@ -1,19 +1,14 @@
+---
 ms:
   data:
     blocks:
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
@@ -24,17 +19,11 @@ ms:
             '"height"': ketinggian
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Seterusnya
-            '"prev"': Sebelumnya
           DIR:
             '1': "→"
             "-1": "←"
@@ -49,11 +38,30 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': rawak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': rawak
       Dancelab_randomColor:
         text: warna rawak
       Dancelab_setDanceSpeed:
@@ -65,6 +73,16 @@ ms:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': saiz
@@ -87,14 +105,6 @@ ms:
             '"left"': kiri
             '"right"': kanan
             '"space"': angkasa
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': atas
-            '"down"': bawah
-            '"left"': kiri
-            '"right"': kanan
-            '"space"': angkasa
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -102,8 +112,8 @@ ms:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'benar'
-            'false': 'palsu'
+            'true': benar
+            'false': palsu
       gamelab_getProp:
         options:
           PROPERTY:
@@ -174,6 +184,11 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kiri
+            "{x: 300, y: 200}": kanan
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -203,6 +218,12 @@ ms:
           KEY:
             '"w"': W
             '"s"': S
+      RyanLab_moveForward:
+        text: bergerak ke hadapan
+      RyanLab_turnLeft:
+        text: belok kiri
+      RyanLab_turnRight:
+        text: belok kanan
       craft_ifPath:
         options:
           DIR:

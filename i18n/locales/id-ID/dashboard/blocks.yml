@@ -1,3 +1,4 @@
+---
 id:
   data:
     blocks:
@@ -16,8 +17,6 @@ id:
           GROUP:
             sprites: semua
           MOVE:
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -26,8 +25,6 @@ id:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -39,14 +36,11 @@ id:
             '"scale"': ukuran
             '"height"': tinggi
             '"rotation"': Perputaran
-            '"tint"': Mewarnai
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: semua
           MOVE:
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -55,8 +49,6 @@ id:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Selanjutnya
-            '"prev"': Sebelumnya
             '"rand"': Acak
             MOVES.Rest: Tidak ada
           DIR:
@@ -109,13 +101,31 @@ id:
             '"grid"': Kisi
             '"row"': baris
             '"column"': kolom
+            '"random"': acak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"grid"': Kisi
+            '"row"': baris
+            '"column"': kolom
+            '"random"': acak
       Dancelab_randomColor:
         text: warna acak
       Dancelab_setBackgroundEffect:
@@ -143,6 +153,21 @@ id:
             '"height"': tinggi
             '"rotation"': Perputaran
             '"tint"': Mewarnai
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: semua
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"tint"': Mewarnai
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -207,8 +232,8 @@ id:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'Benar'
-            'false': 'Salah'
+            'true': Benar
+            'false': Salah
       gamelab_enableDebug:
         text: mengaktifkan debugging
       gamelab_firstTouched:
@@ -398,6 +423,12 @@ id:
             '"down"': panah kebawah
             '"left"': panah kekiri
             '"right"': panah kekanan
+      RyanLab_moveForward:
+        text: Gerak maju
+      RyanLab_turnLeft:
+        text: belok kiri
+      RyanLab_turnRight:
+        text: belok kanan
       Vector_positionCenter:
         text: Tengah
       Vector_vectorNorth:
@@ -415,3 +446,7 @@ id:
         text: Gerak maju
       craft_placeTorch:
         text: letakkan obor
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': ayam

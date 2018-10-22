@@ -1,3 +1,4 @@
+---
 haw:
   data:
     blocks:
@@ -21,6 +22,18 @@ haw:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_setDanceSpeed:
         options:
           SPEED:

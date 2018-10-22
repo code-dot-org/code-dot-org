@@ -1,20 +1,21 @@
+---
 es:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: después de [TIMESTAMP][0] [UNIT][1]
+        text: después de {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"seconds"': segundos
       Dancelab_changeColorBy:
-        text: cambiar [COLOR][0] [METHOD][1] en [AMOUNT][2]
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
         options:
           METHOD:
             '"hue"': tono
             '"saturation"': saturación
             '"brightness"': brillo
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] hacer [MOVE][1] [DIR][2] para siempre"
+        text: "{GROUP} hacer {MOVE} {DIR} para siempre"
         options:
           GROUP:
             sprites: todo
@@ -30,8 +31,6 @@ es:
             '"SHARK"': todos los tiburones
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -40,8 +39,6 @@ es:
         options:
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -67,8 +64,6 @@ es:
             '"SHARK"': todos los tiburones
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -77,8 +72,6 @@ es:
         options:
           MOVE:
             MOVES.Clown: Payaso
-            '"next"': Siguiente
-            '"prev"': Anterior
             MOVES.Rest: Nada
           DIR:
             '1': "→"
@@ -92,7 +85,7 @@ es:
           UNIT:
             seconds: Segundos
       Dancelab_everyVerseChorus:
-        text: 'cada [UNIT][0] '
+        text: 'cada {UNIT} '
         options:
           UNIT:
             '"verse"': verso
@@ -147,11 +140,28 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+          FORMAT:
+            '"random"': aleatorio
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": izquierda
             "{x: 300, y: 200}": derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': aleatorio
       Dancelab_randomColor:
         text: color aleatorio
       Dancelab_setBackgroundEffect:
@@ -171,6 +181,28 @@ es:
           EFFECT:
             '"none"': Nada
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los alienígenas
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -212,9 +244,9 @@ es:
             '1': medios
             '2': agudos
       gamelab_changeColor:
-        text: cambiar [COLOR][0] [METHOD][1] en [AMOUNT][2]
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
       gamelab_changeColorBy:
-        text: cambiar [COLOR][0] [METHOD][1] en [AMOUNT][2]
+        text: cambiar {COLOR} {METHOD} en {AMOUNT}
         options:
           METHOD:
             '"hue"': tono
@@ -229,8 +261,8 @@ es:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadero'
-            'false': 'falso'
+            'true': verdadero
+            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -368,6 +400,12 @@ es:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+      RyanLab_moveForward:
+        text: avanzar
+      RyanLab_turnLeft:
+        text: girar a la izquierda
+      RyanLab_turnRight:
+        text: girar a la derecha
       craft_ifPath:
         options:
           DIR:
@@ -381,3 +419,7 @@ es:
         text: avanzar
       craft_placeTorch:
         text: colocar antorcha
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': pollo

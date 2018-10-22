@@ -1,3 +1,4 @@
+---
 sk:
   data:
     blocks:
@@ -10,8 +11,6 @@ sk:
           GROUP:
             sprites: všetky
           MOVE:
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -19,8 +18,6 @@ sk:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -35,8 +32,6 @@ sk:
           GROUP:
             sprites: všetky
           MOVE:
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -44,8 +39,6 @@ sk:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
             MOVES.Rest: Žiadne
           DIR:
             '1': "→"
@@ -84,11 +77,28 @@ sk:
         options:
           GROUP:
             sprites: všetky
+          FORMAT:
+            '"random"': náhodný
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": vľavo
             "{x: 300, y: 200}": vpravo
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': náhodný
       Dancelab_randomColor:
         text: náhodná farba
       Dancelab_setBackgroundEffect:
@@ -108,6 +118,18 @@ sk:
           EFFECT:
             '"none"': Žiadne
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"height"': výška
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: všetky
+          PROPERTY:
+            '"scale"': veľkosť
+            '"height"': výška
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -143,8 +165,8 @@ sk:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'pravda'
-            'false': 'nepravda'
+            'true': pravda
+            'false': nepravda
       gamelab_getProp:
         options:
           PROPERTY:
@@ -282,6 +304,12 @@ sk:
             '"down"': šípka nadol
             '"left"': šípka vľavo
             '"right"': šípka vpravo
+      RyanLab_moveForward:
+        text: posunúť dopredu
+      RyanLab_turnLeft:
+        text: otočiť vľavo
+      RyanLab_turnRight:
+        text: otočiť vpravo
       craft_ifPath:
         options:
           DIR:
@@ -295,3 +323,7 @@ sk:
         text: posunúť dopredu
       craft_placeTorch:
         text: umiestni fakľu
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': kurča

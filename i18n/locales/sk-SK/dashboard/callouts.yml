@@ -212,23 +212,23 @@ sk:
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Kliknite na "Spusti" pre začatie pohybu.
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: Pomocou klávesov so šípkami alebo kliknutím sem začnite posúvať hráča.
+        MC_HOC_2017_01_Cole_2: Pomocou klávesov so šípkami alebo kliknutím sem začni posúvať hráča.
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: Váš hráč má odteraz kamaráta. Pre agenta môžete napísať kód, aby vám pomohol dostať sa cez úrovne.
+        MC_HOC_2017_02_Cole_1: Tvoj hráč má odteraz kamaráta. Pre agenta môžeš napísať kód, aby ti pomohol dostať sa cez úrovne.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: Toto je slučka „opakovať“. Pricvaknite ju do pracovného priestoru a pridajte kód, ktorý chcete spúšťať znova a znova.
+        MC_HOC_2017_03_Cole_1: Toto je cyklus`opakuj`. Pripoj ju do pracovného priestoru a pridaj kód, ktorý chceš spúšťať znova a znova.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: Na rozdiel od hráča sa agent môže vznášať nad vodou.
+        MC_HOC_2017_04_Cole_a: Na rozdiel od hráča sa agent môže vznášať nad vodou!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Toto pricvaknite do pracovného priestoru a pridajte kód, ktorý chcete opakovať znova a znova.
+        MC_HOC_2017_04_Kiki_1: Toto pripni do pracovného priestoru a pridaj kód, ktorý sa bude opakovať znova a znova!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: Tieto bloky nemôžete odhodiť, ale môžete ich upraviť.
+        MC_HOC_2017_06_Cole_1: Tieto bloky nemôžeš odhodiť, ale môžeš ich upraviť!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou.  '
+        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou!  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou.  '
+        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou.  '
+        MC_HOC_2017_08_RY_1: 'Na rozdiel od Alexa a Steva sa agent môže vznášať nad lávou!  '
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do Vášho programu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie Vášho programu
@@ -906,9 +906,9 @@ sk:
         repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov na pracovnej ploche"
         repeat_blocks_2: (2) Presuňte sem blok "Zopakovať" a umiestnite šedé bloky do jeho vnútra
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       frozen diamond_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       frozen freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       frozen freeplay_b_callout:
@@ -931,17 +931,17 @@ sk:
       frozen perpendicular_test_callout:
         turn_elsa: 'Použi blok "Otoč sa" aby sa Elsa otočila. '
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
+        frozen_snowflake_branch: Použi blok "Vytvor rameno vločky"
       frozen snowflake branch_b_callout:
         frozen_snowflake_branch: Použi funkciu "Vytvor rameno vločky"
       frozen snowflake branch_test_callout:
-        frozen_snowflake_branch: Použi blok "Vytvor rameno snehovej vločky"
+        frozen_snowflake_branch: Použi blok "Vytvor rameno vločky"
       frozen square iterative_callout:
-        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
       frozen square iterative_b_callout:
-        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
       frozen square iterative_test_callout:
-        frozen_create_square: Pridaj sem viac blokov pre vytvorenie štvorca
+        frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
       frozen square loop 3x_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen square loop 3x_b_callout:
@@ -1002,11 +1002,11 @@ sk:
       grade4_frozen_functions3_callout:
         frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu" a zmeň veľkost.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: Použi blok s opakovaním pre vytvorenie tohto tvaru.
+        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakovať".
       grade4_frozen_square_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       grade4_frozen_square_loop1_callout:

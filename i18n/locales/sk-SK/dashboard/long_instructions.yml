@@ -131,84 +131,83 @@ sk:
       4-5 While Loops 3: "Použite čo možno najmenej blokov pre dokončenie tejto úlohy!  \n\nDostaňte ma ku kope a odstráňte všetku hlinu, potom ma posuňte k jame a celú ju zasypte."
       4-5 While Loops 4: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       Artist Autorun Test: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
-      Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom „vybudovať most“. Je v nej zabudovaný celý kód, ktorý potrebujete na prekročenie rieky. \\r\n \\r\nDvakrát prichyťte malý, zelený blok do pracovného priestoru, aby ste opravili cestu a dostali hráča {currentPlayerName} k ruditovej fakli [redstone_torch]."
+      Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom `vybuduj most`. Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\\r\n \\r\nDvakrát prichyť malý, zelený  <xml> <block type=\"procedures_callnoreturn\" id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> blok do pracovného priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej fakli [redstone_torch]."
       MC Agent Freeplay: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
-      MC_HOC_2017 Agent Test: "Kliknite na oranžové tlačidlo Spustiť, aby ste mohli presúvať hráča pomocou **klávesov so šípkami**. \\r\n\\r\nAk chcete prejsť túto úroveň, musíte prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby ste sa dostali na oranžové políčko vo vnútri."
-      MC_HOC_2017_01: "Kliknite na oranžové tlačidlo Spustiť, aby ste mohli presúvať hráča pomocou **klávesov so šípkami**. \\r\n\\r\nAk chcete prejsť túto úroveň, musíte prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby ste sa dostali na oranžové políčko vo vnútri."
-      MC_HOC_2017_01_Cole: Na tejto ceste musíte pozbierať všetky nástroje. Pohybujte sa po okolí pomocou **klávesov so šípkami** a dostaňte sa počas cesty k truhlici, aby ste vyhrali.
-      MC_HOC_2017_01_Kiki: 'Ak chcete hrať túto úroveň, kliknite na oranžové tlačidlo Spustiť pod herným priestorom. Hráča posúvajte pomocou **klávesov so šípkami**.  '
+      MC_HOC_2017 Agent Test: "Klikni na oranžové tlačidlo \"Spustiť\", aby si mohol presúvať hráča pomocou **klávesov so šípkami**. \\r\n\\r\nAk chceš prejsť túto úroveň, musíš prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby si sa dostal na oranžové políčko vo vnútri."
+      MC_HOC_2017_01: "Klikni na oranžové tlačidlo \"Spustiť\", aby si mohol presúvať hráča pomocou **klávesov so šípkami**. \\r\n\\r\nAk chceš prejsť túto úroveň, musíš prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby si sa dostal na oranžové políčko vo vnútri."
+      MC_HOC_2017_01_Cole: Na tejto ceste musíš pozbierať všetky nástroje. Aby si vyhral, pohybuj sa po okolí pomocou **klávesov so šípkami** a dostaň sa k truhlici
+      MC_HOC_2017_01_Kiki: 'Ak chceš hrať túto úroveň, klikni na oranžové tlačidlo "Spustiť" pod herným priestorom. Hráča posúvaj pomocou **klávesov so šípkami**.  '
       MC_HOC_2017_01_RETRY: |2
-        Hráč {currentPlayerName} je uväznený v dome, ale na pomoc mu prichádza agent. \r
+        Dvere sú zamknuté, ale na pomoc prichádza agent. \r
          \r
-         \r
-        V pracovnom priestore prichyťte blok „posunúť dopredu“ k bloku „po spustení“, aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom stlačte tlačidlo Spustiť a pomocou klávesov so šípkami presuňte hráča {currentPlayerName} mimo domu, aby získal **truhlicu** [chest].  
-      MC_HOC_2017_02: Hráč sa musí dostať do tajného hája. Pomôžte agentovi otvoriť bránu napísaním takého kódu, aby sa dostal na prítlačnú dosku.
-      MC_HOC_2017_02_Cole: "Hráč {currentPlayerName} vyrazil za dobrodružstvom. Pomôžte mu získať **mapu** [map_empty], ktorá je za zamknutými dverami napravo. \\r\n \\r\nPrichytením kódu do pracovného priestoru posuňte agenta na prítlačnú dosku [PressurePlate_Up], aby hráč {currentPlayerName} mohol prejsť. "
-      MC_HOC_2017_02_Kiki: "Hráč vyrazil za dobrodružstvom, ale najprv musí získať fakľu skrytú za zamknutými dverami. \\r\n\\r\nNaprogramujte agenta, aby sa posunul dvakrát dopredu. Takto pôjde po bielej ceste a dostane sa k prítlačnej doske, aby mohol hráčovi otvoriť dvere."
-      MC_HOC_2017_02_Will: "Na dokončenie tejto úrovne sa musí hráč dostať na oranžové políčko vnútri tajného hája, ktorý je za zamknutými dverami. \\r\n\\r\nKód v pracovnom priestore spôsobí, že sa agent posunie dvakrát dopredu, aby sa dostal na prítlačnú dosku a otvorili dvere Alex alebo Stevovi."
-      MC_HOC_2017_03_Cole: "Hráč {currentPlayerName} pokračuje v dobrodružstve a potrebuje **kompas** [compass], aby sa pripravil na výlet. \\r\n \\r\nNaprogramujte agenta, aby otvoril bránu. "
-      MC_HOC_2017_03_Kiki: "Hráčovo dobrodružstvo sa začne za zamknutými dverami v tajnom háji. \\r\n\\r\n\\r\nPomôžte agentovi otvoriť dvere napísaním takého kódu, aby sa dostal na prítlačnú dosku."
-      MC_HOC_2017_04: Zmeňte slučku z posledného hlavolamu, aby ste agentovi pomohli vytvoriť cestu cez širšiu časť tejto rieky.
+        V pracovnom priestore prichyť blok `posuň dopredu` k bloku `pri spustení`, aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom stlač tlačidlo "Spustiť" a pomocou klávesov so šípkami presuň agenta mimo domu, aby získal **truhlicu** [chest].
+      MC_HOC_2017_02: Hráč sa musí dostať do tajného hája. Pomôž agentovi otvoriť bránu napísaním takého kódu, aby sa dostal na prítlačnú dosku.
+      MC_HOC_2017_02_Cole: "Hráč {currentPlayerName} vyrazil za dobrodružstvom. Pomôž mu získať **mapu** [map_empty], ktorá je za zamknutými dverami napravo. \\r\n \\r\nPrichytením kódu do pracovného priestoru posuň agenta na prítlačnú dosku [PressurePlate_Up], aby hráč {currentPlayerName} mohol prejsť. "
+      MC_HOC_2017_02_Kiki: "Hráč vyrazil za dobrodružstvom, ale najprv musí získať fakľu skrytú za zamknutými dverami. \\r\n\\r\nNaprogramuj agenta, aby sa posunul dvakrát dopredu. Takto pôjde po bielej ceste a dostane sa k prítlačnej doske, aby mohol hráčovi otvoriť dvere."
+      MC_HOC_2017_02_Will: "Na dokončenie tejto úrovne sa musí hráč dostať na oranžové políčko vnútri tajného hája, ktorý je za zamknutými dverami. \\r\n\\r\nKód v pracovnom priestore spôsobí, že sa agent posunie dvakrát dopredu, aby sa dostal na prítlačnú dosku a otvoril dvere Alexovi alebo Stevovi."
+      MC_HOC_2017_03_Cole: "Hráč {currentPlayerName} pokračuje v dobrodružstve a potrebuje **kompas** [compass], aby sa pripravil na výlet. \\r\n \\r\nNaprogramuj agenta, aby otvoril bránu. "
+      MC_HOC_2017_03_Kiki: "Hráčovo dobrodružstvo sa začne za zamknutými dverami v tajnom háji. \\r\n\\r\n\\r\nPomôž agentovi otvoriť dvere napísaním takého kódu, aby sa dostal na prítlačnú dosku."
+      MC_HOC_2017_04: Zmeň cyklus posledného hlavolamu, aby si agentovi pomohol vytvoriť cestu cez širšiu časť tejto rieky.
       MC_HOC_2017_04POINT5_Cole: |-
-        Dostali ste sa z močiara. Teraz bezpečne presuňte hráča na oranžové políčko. 
+        Dostal si sa z močiara. Teraz bezpečne presuň hráča na oranžové políčko. 
         
         
-        Pomôžte agentovi uvoľniť cestu nájdením jednoduchého vzoru a pomocou slučiek prejsť po prvých dvoch prítlačných doskách.
-      MC_HOC_2017_04POINT5_RYAN: "Dostali ste sa na druhú stranu. \\r\n\\r\nBezpečne preveďte hráča {currentPlayerName} bludiskom, aby získal **sekeru** [diamond_axe].\\r\n"
-      MC_HOC_2017_04_Cole: "Agent sa môže presúvať ponad vodu. \\r\n \\r\nPomocou slučky „opakovať“ vyriešte tento hlavolam a pomôžte hráčovi {currentPlayerName} dostať sa k **vedru** [bucket_empty] za dverami. "
-      MC_HOC_2017_04_Kiki: "Vstup do tajného hája viedol k tejto krásnej oáze. Ak chce hráč zdolať túto úroveň, musí sa dostať na oranžové políčko v chate. \\r\n\\r\nPomocou slučky „opakovať“ pomôžte agentovi prejsť celú cestu až na prítlačnú dosku, ktorá otvorí dvere chaty."
+        Pomôž agentovi uvoľniť cestu nájdením jednoduchého vzoru a pomocou cyklov prejsť po prvých dvoch prítlačných doskách.
+      MC_HOC_2017_04POINT5_RYAN: "Dostal si sa na druhú stranu! \\r\n\\r\nTeraz bezpečne preveď hráča {currentPlayerName} bludiskom, aby získal **sekeru** [diamond_axe].\\r"
+      MC_HOC_2017_04_Cole: "Agent sa môže presúvať cez vodu. \\r\n \\r\nPomocou cyklu `opakuj` vyrieš tento hlavolam a pomôž hráčovi {currentPlayerName} dostať sa k **vedru** [bucket_empty] za dverami. "
+      MC_HOC_2017_04_Kiki: "Vstup do tajného hája viedol k tejto krásnej oáze. Ak chce hráč zdolať túto úroveň, musí sa dostať na oranžové políčko v chate. \\r\n\\r\nPomocou cyklu`opakuj` pomôž agentovi prejsť celú cestu až na prítlačnú dosku, ktorá otvorí dvere chaty."
       MC_HOC_2017_05: |-
-        Slučky nie sú vždy užitočné. 
+        Cykly nie sú vždy užitočné. 
         
         
-        Tieto kaktusy nerastú v jasne viditeľnom vzore, takže slučka by ich neodstránila správne. Namiesto toho sme vám poskytli funkciu nazývanú „zničiť a posunúť“, ktorá za vás urobí ťažkú prácu, kedykoľvek sa agent dostane k prekážke.
-      MC_HOC_2017_05_Cole: "Ach nie, most je preč! \\r\n\\r\nNaprogramujte agenta, aby znova vybudoval most pomocou bloku „umiestniť“. Vďaka tomu sa {currentPlayerName} dostane k **lopate** [diamond_shovel]."
+        Tieto kaktusy nerastú v jasne viditeľnom vzore, takže cyklus by ich neodstránil správne. Namiesto toho sme ti poskytli funkciu nazývanú `znič a posuň`, ktorá za teba urobí ťažkú prácu, kedykoľvek sa agent dostane k prekážke.
+      MC_HOC_2017_05_Cole: "Ach nie, most je preč! \\r\n\\r\nNaprogramuj agenta, aby znova vybudoval most pomocou  <xml>  <block type=\"craft_placeBlock\">\n<title name=\"TYPE\">       </title>\n</block></xml> bloku. Vďaka tomu sa  hráč {currentPlayerName} dostane k **lopate** [diamond_shovel]."
       MC_HOC_2017_05_Josh: |-
         Ach nie, most je preč! 
         
         
-        Pomôžte agentovi znova vybudovať most, aby sa hráč mohol dostať k **lopate**.
-      MC_HOC_2017_05_Kiki: "Je čas, aby hráč opustil tajný háj a pokračoval v dobrodružstve. Most je však preč! \\r\n\\r\nPomôžte agentovi znova vybudovať most a potom sa presunúť k doske, aby sa hráč mohol dostať na oranžové políčko."
-      MC_HOC_2017_06_Cole: "Ďalšia rieka, ale táto je oveľa širšia. \\r\n \\r\nOpravte tento kód, aby ste agentovi pomohli vybudovať most. Vďaka tomu sa {currentPlayerName} dostane ku **krompáču** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh: "Ďalšia rieka, ale táto je oveľa širšia. \\r\n\\r\nOpravte tento kód, aby ste agentovi pomohli vybudovať most cez rieku."
-      MC_HOC_2017_06_Kiki: "Ďalšia rieka, ale táto je oveľa širšia. \\r\n\\r\nOpravte tento kód, aby ste agentovi pomohli vybudovať most cez vodu."
-      MC_HOC_2017_07_Cole: "Na ceste je ľad! \\r\n \\r\nFunkcia „uvoľniť cestu“ vám môže pomôcť zničiť ľad a dostať hráča {currentPlayerName} do banského vozíka [minecart_normal]. "
-      MC_HOC_2017_07_Kiki: "Slučky nie sú jediným spôsobom, ako opakovať kód. \\r\n\\r\nTu sme vám poskytli funkciu nazývanú „odstrániť kaktusy“, ktorá za vás urobí ťažkú prácu a odstráni tri kaktusy, kedykoľvek ju použijete. Pomocou dvoch blokov „odstrániť kaktusy“ uvoľnite cestu k oranžovému políčku. "
-      MC_HOC_2017_07a_Kiki: Upravte túto slučku, aby ste pomohli agentovi uvoľniť cestu k oranžovému políčku.
-      MC_HOC_2017_08_Cole: "Namiesto zničenia a následného pohybu budete musieť umiestniť blok.  \\r\n\\r\nZmeňte poskytnutú funkciu tak, aby bola vhodná pre púšť."
-      MC_HOC_2017_08_Kiki: "Namiesto ničenia kaktusov budete musieť umiestniť kameň cez lávu a potom zničiť pieskovec.  \\r\n\\r\nZmeňte funkciu tak, aby bola vhodná pre túto úroveň."
+        Pomôž agentovi znova vybudovať most, aby sa hráč mohol dostať k **lopate**.
+      MC_HOC_2017_05_Kiki: "Je čas, aby hráč opustil tajný háj a pokračoval v dobrodružstve. Most je však preč! \\r\n\\r\nPomôž agentovi znova vybudovať most a potom sa presunúť k drevenej doske, aby sa hráč mohol dostať na oranžové políčko."
+      MC_HOC_2017_06_Cole: "Ďalšia rieka, ale táto je oveľa širšia! \\r\n \\r\nOprav tento kód, aby si agentovi pomohol vybudovať most. Vďaka tomu sa {currentPlayerName} dostane ku **krompáču** [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh: "Ďalšia rieka, ale táto je oveľa širšia. \\r\n\\r\nOprav tento kód, aby si agentovi pomohol vybudovať most cez rieku."
+      MC_HOC_2017_06_Kiki: "Ďalšia rieka, ale táto je oveľa širšia. \\r\n\\r\nOprav tento kód, aby si agentovi pomohol vybudovať most cez vodu."
+      MC_HOC_2017_07_Cole: "Na ceste je ľad! \\r\n \\r\nFunkcia `uvoľniť cestu` ti môže pomôcť zničiť ľad a dostať hráča {currentPlayerName} do banského vozíka [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Cykly nie sú jediným spôsobom, ako opakovať kód. \\r\n\\r\nTu sme ti poskytli funkciu nazývanú `odstráň kaktusy`, ktorá za teba urobí ťažkú prácu a odstráni tri kaktusy, kedykoľvek ju použiješ. Pomocou dvoch blokov `odstráň kaktusy` uvoľni cestu k oranžovému políčku. "
+      MC_HOC_2017_07a_Kiki: Teraz uprav tento cyklus, aby si pomohol agentovi uvoľniť cestu k oranžovému políčku.
+      MC_HOC_2017_08_Cole: "Teraz namiesto zničenia a následného pohybu budeš musieť umiestniť blok.  \\r\n\\r\nZmeň poskytnutú funkciu tak, aby bola vhodná pre púšť."
+      MC_HOC_2017_08_Kiki: "Teraz namiesto ničenia kaktusov budeš musieť umiestniť kameň cez lávu a potom zničiť pieskovec.  \\r\n\\r\nZmeň funkciu tak, aby bola vhodná pre túto úroveň."
       MC_HOC_2017_08_RY: |-
-        Môžete si vybrať z **DVOCH** funkcií. 
+        Teraz si môžeš vybrať z **DVOCH** funkcií. 
         
         
-        Pomocou týchto funkcií rýchlo vybudujete most cez lávu pre hráča {currentPlayerName}.
+        Pomocou týchto funkcií rýchlo vybuduješ most cez lávu pre hráča {currentPlayerName}.
       MC_HOC_2017_08_Will: |-
-        Môžete si vybrať z **DVOCH** funkcií. 
+        Teraz si môžeš vybrať z **DVOCH** funkcií. 
         
         
-        Pomocou týchto funkcií rýchlo vybudujete most cez lávu pre hráča.
-      MC_HOC_2017_09_Cole: Pomocou funkcií pomôžte agentovi zničiť obrovské bloky hliny, ktoré blokujú hráčovu cestu k prítlačnej doske.
-      MC_HOC_2017_09_Kiki: "Tento úvodný kód nemožno odstrániť.\\r\n\\r\nPridajte príkazy pre funkciu „vytvoriť cestičku“, aby program v pracovnom priestore dostal agenta na prítlačnú dosku. "
-      MC_HOC_2017_09_RS_CLONE: Opravte túto funkciu tak, aby sa vyplnili diery. Potom sa postavte na prítlačnú dosku, aby sa uvoľnila cesta k fakli.
-      MC_HOC_2017_10_Cole: Pomocou funkcií uvoľnite cestu pre banský vozík a vstúpte do portálu do Netheru.
-      MC_HOC_2017_10_Cole_old: Skúste úplne od začiatku vytvoriť funkciu, ktorá uľahčí agentovi dokončenie tohto banského vozíka a dostane hráča na oranžové políčko.
-      MC_HOC_2017_10_Kiki: Skúste úplne od začiatku vytvoriť funkciu, ktorá uľahčí agentovi dokončenie tohto banského vozíka a dostane hráča na oranžové políčko.
-      MC_HOC_2017_10_RETRY: "Nájdete rozdiel medzi dvoma funkciami v pracovnom priestore? \\r\n \\r\nTieto funkcie použite s iným kódom z panela s nástrojmi na uvoľnenie cesty pre banský vozík. Potom získajte **kresadlo** [flint_and_steel]. \\r\n "
-      MC_HOC_2017_10_RYAN: Skúste úplne od začiatku vytvoriť funkcie, ktoré uľahčia agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
-      MC_HOC_2017_10_RYAN2: Skúste úplne od začiatku vytvoriť funkcie, ktoré uľahčia agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
+        Pomocou týchto funkcií rýchlo vybuduješ pre hráča most cez lávu.
+      MC_HOC_2017_09_Cole: Pomocou funkcií pomôž agentovi zničiť obrovské bloky hliny, ktoré blokujú hráčovu cestu k prítlačnej doske.
+      MC_HOC_2017_09_Kiki: "Tento úvodný kód nemožno odstrániť.\\r\n\\r\nPridaj príkazy pre funkciu `vytvor cestičku`, aby program v pracovnom priestore dostal agenta na prítlačnú dosku. "
+      MC_HOC_2017_09_RS_CLONE: Oprav túto funkciu tak, aby sa vyplnili diery. Potom sa postav na prítlačnú dosku, aby sa uvoľnila cesta k fakli.
+      MC_HOC_2017_10_Cole: Pomocou funkcií uvoľni cestu pre banský vozík a vstúp do Nether portálu.
+      MC_HOC_2017_10_Cole_old: Skús vytvoriť úplne od začiatku funkciu, ktorá uľahčí agentovi dokončenie tohto banského vozíka a dostane hráča na oranžové políčko.
+      MC_HOC_2017_10_Kiki: Skús vytvoriť úplne od začiatku funkciu, ktorá uľahčí agentovi dokončenie tohto banského vozíka a dostane hráča na oranžové políčko.
+      MC_HOC_2017_10_RETRY: "Dokážeš nájsť rozdiel medzi dvoma funkciami v tvojom pracovnom priestore? \\r\n \\r\nTieto funkcie použi s iným kódom z panela nástrojov na uvoľnenie cesty pre banský vozík. Potom získaj **kresadlo** [flint_and_steel]. \n "
+      MC_HOC_2017_10_RYAN: Skús úplne od začiatku vytvoriť funkcie, ktoré uľahčia agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
+      MC_HOC_2017_10_RYAN2: Skús úplne od začiatku vytvoriť funkcie, ktoré uľahčia agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
       MC_HOC_2017_11_Kiki: Teraz je to na tebe! Skús, čo dokážeš vytvoriť okolo tohto zamrznutého jazera.
       MC_HOC_2017_13_Cole: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
       MC_HOC_2017_4.5v2: |-
-        Dostali ste sa z močiara. Teraz bezpečne presuňte hráča na oranžové políčko. 
+        Dostal si sa z močiara. Teraz bezpečne presuň hráča na oranžové políčko. 
         
         
-        Pomôžte agentovi uvoľniť cestu nájdením jednoduchého vzoru a pomocou slučiek prejsť po prvých dvoch prítlačných doskách.
-      MC_HOC_2017_Ali: 'Pozrite sa na funkcie nižšie. Ako sa pomocou nich vyhnete ghastom a pomôžete hráčovi {currentPlayerName} dostať sa bezpečne k **čarovnej knihe** [book_enchanted]?  '
-      MC_HOC_2017_FP10x10: "**Voľná hra:** Teraz je to na vás! Trúfnete si pozbierať všetky diamanty v tejto úrovni? "
-      MC_HOC_2017_FP10x10_RE: "**Voľná hra:** Teraz je to na vás! Trúfnete si pozbierať všetky diamanty v tejto úrovni? "
+        Pomôž agentovi uvoľniť cestu nájdením jednoduchého vzoru a pomocou cyklov prejsť po prvých dvoch prítlačných doskách.
+      MC_HOC_2017_Ali: 'Pozri sa na funkcie nižšie. Ako sa pomocou nich vyhneš Ghastom a pomôžeš hráčovi {currentPlayerName} dostať sa bezpečne k **čarovnej knihe** [book_enchanted]?  '
+      MC_HOC_2017_FP10x10: "**Voľná hra:** Teraz je to na tebe! Trúfneš si pozbierať všetky diamanty v tejto úrovni? "
+      MC_HOC_2017_FP10x10_RE: "**Voľná hra:** Teraz je to na tebe! Trúfneš si pozbierať všetky diamanty v tejto úrovni? "
       MC_HOC_2017_FP20x20: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
-      MC_HOC_2017_Ryan_03: "Vedeli ste, že do slučky môžete vložiť viac ako jeden blok kódu? \\r\n\\r\nPomocou slučky „opakovať“ umiestnite bloky do vody a pomôžte tak agentovi vybudovať most cez rieku."
-      MC_HOC_2017_Ryan_05: "Niekedy musíte odstrániť veci, ktoré stoja hráčovi v ceste. \\r\nPomocou bloku „zničiť“ odstráňte všetky kaktusy medzi agentom a prítlačnou doskou."
+      MC_HOC_2017_Ryan_03: "Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? \\r\n\\r\nPomocou cyklu `opakuj` umiestni bloky do vody a pomôž tak agentovi vybudovať most cez rieku."
+      MC_HOC_2017_Ryan_05: "Niekedy musíš odstrániť veci, ktoré stoja hráčovi v ceste. \\r\nPomocou bloku `znič` odstráň všetky kaktusy medzi agentom a prítlačnou doskou."
       MC_HOC_Kiki_02: Niekto musí byť na prítlačnej doske, aby sa otvorili bočné dvere. Pomôžte agentovi dostať sa na dosku, aby hráč mohol opustiť dom.
       New Minecraft Hero Project: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
       Overworld Move to Sheep: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
@@ -223,13 +222,13 @@ sk:
       frozen circle function in circle: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi každým z nich sa otočíme o 18 stupňov.
       frozen circle function in circle_b: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
       frozen circle function in circle_test: Teraz vytvor **20** prekrývajúcich sa kružníc, skokom o **50** pixelov a pod uhlom **18 stupňov** po každej z nich.
-      frozen circle function with parameter: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+      frozen circle function with parameter: Tu je blok "Vytvor kružnicu", ktorý dokáže kresliť kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       frozen circle function with parameter_b: "Blok \"Vytvor kružnicu\", dokáže kresliť kružnice rôznych veľkostí. \n\nPouži ho na vytvorenie malej kružnice s veľkosťou **5** a väčšej kružnice s veľkosťou **10**."
       frozen circle function with parameter_test: "Blok \"Vytvor kružnicu\", dokáže kresliť kružnice rôznych veľkostí. \n\nPouži ho na vytvorenie malej kružnice s veľkosťou **5** a väčšej kružnice s veľkosťou **10**."
-      frozen circle function: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      frozen circle function: Použi nový blok "Vytvor kružnicu" pre nakreslenie 10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu.
       frozen circle function_b: "Z kódu v predchádzajúcej úlohe sme vytvorili funkciu!\n\nSkús použiť nový blok \"Vytvor kružnicu\" a dokonči kresbu. Nezabudni medzi každou z ** 10 ** kružníc skočiť o **25** pixelov!"
       frozen circle function_test: "Z kódu v predchádzajúcej úlohe sme vytvorili funkciu!\n\nSkús použiť nový blok \"Vytvor kružnicu\" a dokonči kresbu. Nezabudni medzi každou z ** 10 ** kružníc skočiť o **25** pixelov!"
-      frozen circle: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
+      frozen circle: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslila kružnica?
       frozen circle_b: "Kružnica je výnimočny útvar. \n\nVieš zistiť aký príkaz použiť pre nakreslenie kružnice?"
       frozen circle_test: "Kružnica je výnimočny útvar. \n\nVieš zistiť aký príkaz použiť pre nakreslenie kružnice?"
       frozen cross rotate dense: 'Zopakujme to 90-krát! Koľkokrát sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
@@ -310,6 +309,8 @@ sk:
       frozen square loop 3x_b: "Vedel si, že môžeš vložit slučku \"Opakovať\" do inej opakovacej slučky?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
       frozen square loop 3x_test: "Vedel si, že môžeš vložit slučku \"Opakovať\" do inej opakovacej slučky?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
       frozen square loop: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
+      frozen square loop_b: "*Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku \"Opakuj!\"*\n\nKoľkokrát (???) musí blok \"Opakuj\" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?"
+      frozen square loop_test: "*Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku \"Opakuj!\"*\n\nKoľkokrát (???) musí blok \"Opakuj\" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?"
       frozen square snowflake: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
       frozen square snowflake_b: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
       frozen square snowflake_test: "Zmeň kód z predchádzajúcej úlohy tak, aby si vytvoril takúto vločku. \n   \nPomôcka: použili sme ** 10 ** štvorcov a otočky o ** 36 stupňov **."
@@ -373,13 +374,16 @@ sk:
         V opačnom prípade spravte med (keďže tam bude úľ).
       grade4_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov.
       grade4_frozen_freeplay: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
-      grade4_frozen_functions0: Kruh je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
-      grade4_frozen_functions1a: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      grade4_frozen_functions0: Kružnica je zvláštny tvar. Dokážeš zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslila kružnica?
+      grade4_frozen_functions1: Použi novú funkciu "Vytvor kružnicu" pre nakreslenie 10 prekrývajúcich sa kružníc. Nezabudni medzi kružničami "Skočiť" dopredu.
+      grade4_frozen_functions1a: Použi nový blok "Vytvor kružnicu" pre nakreslenie 10 prekrývajúcich sa kružníc. Nezabudni medzi kružnicami skočiť dopredu.
       grade4_frozen_functions2: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi každým z nich sa otočíme o 18 stupňov.
-      grade4_frozen_functions3: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+      grade4_frozen_functions3: Tu je blok "Vytvor kružnicu", ktorý dokáže kresliť kružnice rôznych veľkostí. Dokážeš ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
       grade4_frozen_functions4: Zložité snehové vzory je možné vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
+      grade4_frozen_nested_loop_diamonds1: Použime blok "Opakuj", aby sme vytvorili kosoštvorec. Podobne ako štvorec, kosoštvorec má všetky strany rovnakej dĺžky, ale má odlišné uhly. Tento má uhly 60 a 120 stupňov (namiesto pravých uhlov).
       grade4_frozen_nested_loop_diamonds2: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým rovnobežník zopakujeme 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
       grade4_frozen_nested_loop_diamonds3: Teraz vytvor novú vločku pomocou bloku "Opakuj" tak, že rovnobežník zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36 stupňov.
+      grade4_frozen_nested_loop_rectangle1: Ahoj, som Anna z Arendelle. Použime blok "Opakuj" aby sme vytvorili obdĺžnik. Tento má dĺžku 200 pixelov a výšku 100 pixelov. Všetky rohy majú 90 stupňov.
       grade4_frozen_square: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       grade4_frozen_square_loop1: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       grade4_frozen_square_loop2: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.

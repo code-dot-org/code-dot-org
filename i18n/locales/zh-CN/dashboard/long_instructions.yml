@@ -790,9 +790,9 @@ zh-CN:
         **如何做到：**在代码模式中为您的 "对！" 按钮添加一个新的`onEvent()`（当事件发生时）模块。在其中添加一个`setScreen()`（设置屏幕）块, 将屏幕切换到`"rightScreen"`（右屏幕）。\r
         \r
         **难住了？点这里: ** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
-      Applab AllTheThings ResourcesTab AllResources: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      Applab AllTheThings ResourcesTab MapReference: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      Applab AllTheThings ResourcesTab ReferenceLinks: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Applab AllTheThings ResourcesTab AllResources: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Applab AllTheThings ResourcesTab MapReference: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Applab AllTheThings ResourcesTab ReferenceLinks: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Artist Autorun Test: 现在，将函数放到循环里来画这三个正方形。
       Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！\\r\n\\r\n如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 \n\\r\n\\r\n注意：我们已经用`set alpha`（设置透明度）模块来让花瓣慢慢淡出。"
       Bergeron Robot Maze1: "可以帮我抓住这只顽皮的猪吗？\\r\n\\r\n在“当运行时”模块下放几个“向前移动”的模块，然后点击“运行”。 "
@@ -1059,29 +1059,37 @@ zh-CN:
         
         * 通过添加`<p>`和`</p>`将你刚才写的代码里分成至少两个段落。
         * 与旁边的相比较。与你的文本显示方法相比，有什么变化了？
-      CSD U2 HTML Adding Paragraphs pt 2_2018: |-
+      CSD U2 HTML Adding Paragraphs pt 2_2018: |2
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         
-        <summary>**什么是段落元素？**</summary>
+        <summary>
+        
+        **什么是段落元素？**
+        
+        </summary>
         段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        
         </details>
         <details>
-        <summary>**我该如何创建多个段落呢？**</summary>
+        <summary>
+        
+        **我该如何创建多个段落呢？**
+        
+        </summary>
         这是一行里有多个段落标签的例子。这个代码会放在你的网页的body部分里。
         
-        <pre>
-        `<p>这是一个有两句话的段落</p>`
-        `<p>这是另一个段落。</p>`
-        </pre>
-        
+        ```
+        <p>这是一个有两句话的段落</p>
+        <p>这是另一个段落。</p>
+        ```
         
         </details>
         </div>
         
         # 使用段落标签
         
-        `<p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。
+         `<p>` `</p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。
         
         # 这样做
         
@@ -1148,16 +1156,17 @@ zh-CN:
         * 修复缺失的代码，让网页能够正确的显示
         * 将你修复的问题与旁边的同学进行比较
       CSD U2 HTML Debug Paragraphs_2018: |-
-        <div style="float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
+        
         <summary>
         
         <strong>什么是段落元素？</strong>
         
         </summary>
+        
         段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        
         </details>
         <details>
         <summary>
@@ -1165,7 +1174,9 @@ zh-CN:
         <strong>为什么有时HTML不正确，页面也能显示出来？</strong>
         
         </summary>
-        HTML被你的网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。
+        
+        HTML 被网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。
+        
         </details>
         <details>
         <summary>
@@ -1173,7 +1184,9 @@ zh-CN:
         <strong>为什么代码有时候会变成粉红色？</strong>
         
         </summary>
+        
         网络实验室被开发成能够自动检测一些HTML中的错误。当它注意到一个错误时，就会将代码显示为粉色。这表示粉色的地方或者粉色的代码之前有错误。你需要仔细的调试，来找到错误。
+        
         </details>
         </div>
         
@@ -1232,7 +1245,7 @@ zh-CN:
         \r
         * 请在信息页面的项目中添加一个新的 HTML 文件。\r
         * 添加标题和说明
-      CSD U2 Info Page Final Touches: |
+      CSD U2 Info Page Final Touches: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
         \r
@@ -1286,27 +1299,31 @@ zh-CN:
         
       CSD U2 Info Page Images: "# 添加图片\\r\n\\r\n你有了图片及其署名信息，现在是时候开始装扮你的新网页了。 \\r\n\\r\n# 这样做\\r\n\\r\n把你的图片上传到网站实验室中， 并使用`<img>`标签,把它们添加到需要的地方。 对于每张图片:\\r\n\\r\n* 添加一个描述性的`alt`属性\\r\n* 在图片下添加归属来源，包含\\r\n\\t*\n原创者的名字 (如果有的话)\\r\n    * 图片的标题 (如果有的话)\\r\n    *\n原网站的地址\\r\n    * 原图片发布的版权,可以用文字(如 CC-BY) 或者使用 [Creative Commons website](https://creativecommons.org/about/downloads/) 的标志\\r\n\\r\n例如\\r\n\\r\n![Sad Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\\r\n\\r\nFlickr 用户 Soggydan 的长毛达克斯猎狗画像(ht<span>tps://</span>commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg)\n- CC-BY"
       CSD U2 Inspector Warm Up: |-
-        <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
-        <summary>**<span>
-        如何使用检查器工具？ </span>**</summary>
-        检查器是在网络实验室里学习你不太熟悉的编码的一种有效途径。 要打开检验工具， 请点击<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
-        PM.png" style="width:100px">。你会知道检验工具是否是开着的，因为按钮将变白色并注明"检查器：打开"。 一旦你打开检查器，你可以把鼠标放在任何事物的上面查看预览。网络实验室将突出显示页面上指到部分的代码。 
-        </details>
         
+        <summary>
+        
+        **<span>
+        如何使用检查器工具？ </span>**
+        
+        </summary>
+        
+        检查器是在网络实验室里学习你不太熟悉的编码的一种有效途径。 点击<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        PM.png" style="width:100px">打开检验工具。通过按钮将变白色并注明"检查器：打开"，可以知道检验工具是否是开着的。打开检查器后，就可以把鼠标放在任何元素上查看预览。网络实验室将突出显示页面上指到部分的代码。 
+        
+        
+        </details>
         </div>
         
-        #
-        探索 HTML
+        # 探索 HTML
         
         这是个HTML格式书写的网页，你将学习如何用它，但让我们先探索一下如何使用检查器。 
         
         # 这样做
         
         * 点击右边的"如何使用检查器？"的提示来了解如何使用它。 
-        *
-        参照网页上的指示来探索网页并和合作伙伴讨论如何使用它。
+        * 参照网页上的指示来探索网页并和合作伙伴讨论如何使用它。
       CSD U2 Inspector Warm Up_2018: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
@@ -1529,59 +1546,81 @@ zh-CN:
         <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png"
         style=" max-width:500px">
       CSD U2 add file: |2
-        <div style="float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是样式表?**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS?**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
-        <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        <details>\r
-        <summary>**如何创建新的样式表?**</summary>\r
-        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。\r
-        </details>\r
-        <details>\r
-        <summary>**如何命名我的样式表?**</summary>\r
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        
+        <summary>
+        
+        **什么是样式表?**
+        
+        </summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary>
+        
+        **什么是CSS?**
+        
+        </summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        <details>
+        <summary>
+        
+        **如何创建新的样式表?**
+        
+        </summary>
+        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。
+        </details>
+        <details>
+        <summary>
+        
+        **如何命名我的样式表?**
+        
+        </summary>
         你可以随意命名，但最好选一个相关的名字例如 "style.css"（样式表）
-        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。.\r
-        </details>\r
-        <details>\r
-        <summary>**如何重新命名文件?**</summary>\r
-        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。\r
-        </details>\r
-        <details>\r
-        <summary>**如何在网页里添加样式表?**</summary>\r
-        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。\r
-        </details>\r
-        </div>\r
-        #
-        添加样式表\r
-        \r
-        这是你之前的项目。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。\r
-        \r
-        1.
-        为你的项目创建新的格式表。.\r
-        2. 重新命名格式表文档.\r
-        3.
-        把你的格式表添加到你的HTML网页。\r
-        \r
-        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png"
-        style=" max-width:500px">
+        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。
+        </details>
+        <details>
+        <summary>
+        
+        **如何重新命名文件?**
+        
+        </summary>
+        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。
+        </details>
+        <details>
+        <summary>
+        
+        **如何在网页里添加样式表?**
+        
+        </summary>
+        
+        
+        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。
+        
+        
+        </details>
+        </div>
+        # 添加样式表
+        
+        这是你之前的项目。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。
+        
+        1. 为你的项目创建新的格式表。
+        2. 重新命名格式表文档。
+        3. 把你的格式表添加到你的HTML网页。
+        
+        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png" style=" max-width:500px">
       CSD U2 add file_2018: |2
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -4049,10 +4088,6 @@ zh-CN:
         
         * 点击如果模块下的_加号_按钮来增加一个否则章节。
         * 增加命令来让齿轮往按下空格时的相反方向转动。
-      CSD U3 Entertainment Sample 1 - unembed: |-
-        # 外星人跳跃\r
-        \r
-        按下“运行”按钮来播放左边的游戏。你能用空格键让外星人跳起来，并用方向键让它左右移动。收集星星可以得分，如果得到足够高的分，背景就会改变。
       CSD U3 Entertainment Sample 1: |-
         # 外星人跳跃\r
         \r
@@ -4681,7 +4716,6 @@ zh-CN:
         * 用计数器模式来更新属性。\r
         \r
         _提示：如果你的计数器模式不像你期待那样工作，添加监视器来帮助调试程序。_
-      CSD U3 Plotting Shapes Shape Lab - unembed: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab Open: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
       CSD U3 Plotting Shapes Shape Lab_2018: "#绘制形状 \\r\n\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\r\n\\r\n确保点击 \"运行\" 并尝试打开网格来帮助精确地放置形状。\\r\n\\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png)"
@@ -10404,7 +10438,12 @@ zh-CN:
       Course 4 Artist For Loops 13: 嗯，这些形状每次都变会大一点！准备好用变量来解决这个问题了吗？因为边越来越多，我们应该怎样用计数器变量来让这些边越来越短？别用设置好的变量往前移动，试试移动 (100 除以 计数器）个像素。
       Course 4 Artist For Loops 14: "如果每次都多转或少转一些角度，那么你可以创造出来一个有规律的效果。\n\\r\n\\r\n试着重用上一关的一些代码，但是转89度来创造螺旋的正方形出来。"
       Course 4 Artist For Loops 15: "**自由发挥**：试着用“计数循环”来画自己的画。我们也为你加了一些有用的变量。"
-      Course 4 Artist For Loops 2: "我已经加了一些代码，会在一个从50数到100每次增加10的`计数循环`里画一个三角形。\\r\n\\r\n<br/>\\r\n<strong>注意：</strong>\n在点击“运行”*前*，先检查代码。"
+      Course 4 Artist For Loops 2: |-
+        我已经加了一些代码，会在一个从50数到100每次增加10的`计数循环`里画一个三角形。\r
+        \r
+        <br/>\r
+        <strong>注意：</strong>
+        在点击“运行”*前*，先检查代码。
       Course 4 Artist For Loops 3: 用上一题做为参考来完成这个。最小的三角形的边长是20像素，最大的是200像素，每个三角形的边比上一个大20像素。
       Course 4 Artist For Loops 4: '怎样修改你学会的东西来画这些正方形？它们边长从15像素起，最大边长300像素，每个正方形的边长比上一个大15像素。 '
       Course 4 Artist For Loops 5: "上一关完成的很好！让我们再次用“计数器”变量模块画出这个很酷的图。 \n\\r\n\\r\n"
@@ -10459,7 +10498,11 @@ zh-CN:
       Course 4 Bee Params 2: 修改“收集3个花蜜”函数，来让我向右转，而不是向左转来到达花。
       Course 4 Bee Params 3: "现在，两边都有花了！\\r\n\\r\n现在有两个叫做“左”和“右”的变量，并且给“收集3个花蜜”的函数增加了“方向”参数。\n\\r\n\\r\n**编辑“收集3个花蜜”的函数，当变量“左”或者“右”传递进函数时，让蜜蜂往正确的转向**。"
       Course 4 Bee Params 5: 让我们从头开始，你能创建一个含有方向参数的“拿5罐花蜜”的新函数吗？
-      Course 4 Bee Params 6: "如果你能用一个函数来收集所有花蜜，是否会更好？\\r\n\\r\n<br/>\\r\n试着给你的“花蜜单元”函数加一个新参数来控制收集的花蜜数量。你也许也想重新命名这个函数！"
+      Course 4 Bee Params 6: |-
+        如果你能用一个函数来收集所有花蜜，是否会更好？\r
+        \r
+        <br/>\r
+        试着给你的“花蜜单元”函数加一个新参数来控制收集的花蜜数量。你也许也想重新命名这个函数！
       Course 4 Bee Params 7: |
         试着用新函数来收集所有花蜜。\r
         \r
@@ -10499,7 +10542,19 @@ zh-CN:
       Course 4 Play Lab Params 6: 添加另一个叫做“速度”的参数到“巡逻”函数里。试着在“设置速度”模块中使用新的“速度”参数，来帮助企鹅在别的小动物之前得到所有旗帜。
       Course 4 Play Lab Params 7: "来点好玩的！看看这里的代码，是否你能明白每个模块都做了什么。\\r\n\\r\n看完以后，用方向键来让小狗收集到所有旗帜。\\r\n\\r\n注意：你不必改动代码。"
       Course 4 Play Lab Params 8: 在小狗碰到任何一个演员时，用“当演员碰到”模块来把小狗送回左上角。
-      Course 4 Play Lab Params 9: "这是一个早先的游戏，但是大部分代码都隐藏了。我们加了个新函数叫做“score_points”（得分）。\\r\n<br/>\\r\n<hr>\\r\n<br/>\\r\n<h4>\\r\n编辑这个函数，使得“points”（分数）参数能加到“player_score”（玩家分数）变量上。\\r\n<br/>\\r\n“player_score”（玩家分数）变量会在每次小狗的馅饼碰到小猫时增加，在小猫的三明治碰到小狗时减少。\\r\n</h4>\\r\n<br/>\\r\n<hr>\\r\n*注意：当你完成后，点击“运行”来玩玩。当小狗得到6分时，就可以进入下一关。*"
+      Course 4 Play Lab Params 9: |-
+        这是一个早先的游戏，但是大部分代码都隐藏了。我们加了个新函数叫做“score_points”（得分）。\r
+        <br/>\r
+        <hr>\r
+        <br/>\r
+        <h4>\r
+        编辑这个函数，使得“points”（分数）参数能加到“player_score”（玩家分数）变量上。\r
+        <br/>\r
+        “player_score”（玩家分数）变量会在每次小狗的馅饼碰到小猫时增加，在小猫的三明治碰到小狗时减少。\r
+        </h4>\r
+        <br/>\r
+        <hr>\r
+        *注意：当你完成后，点击“运行”来玩玩。当小狗得到6分时，就可以进入下一关。*
       Course 4 Play Lab Vars 1: |-
         这次你不需要写任何代码，点击“运行”来玩游戏吧！\r
         \r
@@ -10960,7 +11015,7 @@ zh-CN:
         # 每像素更多比特的例子\r
         这是一张每像素9比特的更大的图片。在每像素9比特的情况下，能表现出512种不同的颜色。点击来查看下一张图片，更复杂，但更容易理解。
       Pizza on a Plate: "**项目想法：** 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！"
-      Poorva copy U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Poorva copy U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Practice Create Performance Task_2018: |-
         # 创建表演任务
         
@@ -11629,8 +11684,8 @@ zh-CN:
       U3L08 - randomInput_2018: "# 随机输入\\r\n\\r\n你有一个新的模块，它可以让你生成一个随机数。每次调用函数时, 都可以用它而不必硬编码数值。\\r\n\\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\\r\n\\r\n**请阅读 randomNumber（随机数字） 模块的文档**。\\r\n\\r\n#这样做\\r\n* 使用 randomNumber （随机数字）提供随机输入**给*所有3个*绘图函数。\n只在需要的地方插入`randomNumber()`（随机数字）调用，其它地方还是数字。\\r\n\\r\n就像这样：\\r\n![](https://images.code.org/ad87d7d122ac585a6de9e46a49736228-image-1470146652402.png)\\r\n\\r\n在所有三个绘图函数中调用 randomNumber（随机数字）：\\r\n\\r\n* drawStarfish（画海星）\\r\n* drawSeagrass（画海草）\\r\n* drawFish（画鱼）\\r\n\\r\n这是一个很好的**测试**函数，同时又能得到一些**有趣的图像**的方法。每次运行程序时, 你都可以得到和下面的稍微有点不同的画面。\\r\n\\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)"
       U3L08 how to add comments: "# 现在试试 - 添加注释\\r\n\\r\n初始的代码已经提供了一些注释了。\\r\n\\r\n# 这样做\\r\n\\r\n在调用`drawStarfish()`（画海星）前插入一条注释，`// 画所有的海星`。\\r\n\\r\n* `// Comment`（注释）模块在函数工具箱中\n([Show me](#triggercallout=show_comment))\\r\n* **看看怎么做：**\\r\n![expandable](https://images.code.org/1f97df1d6fc1ca2d5bd371ad7b0f76a3-image-1508960669302.gif)\\r\n\\r\n一旦你添加了注释后，**点击完成**。要接着添加注释！！！"
       U3L08 how to add comments_2018: "# 现在试试 - 添加注释\\r\n\\r\n初始的代码已经提供了一些注释了。\\r\n\\r\n# 这样做\\r\n\\r\n在调用`drawStarfish()`（画海星）前插入一条注释，`// 画所有的海星`。\\r\n\\r\n* `// Comment`（注释）模块在函数工具箱中\n([Show me](#triggercallout=show_comment))\\r\n* **看看怎么做：**\\r\n![expandable](https://images.code.org/1f97df1d6fc1ca2d5bd371ad7b0f76a3-image-1508960669302.gif)\\r\n\\r\n一旦你添加了注释后，**点击完成**。要接着添加注释！！！"
-      U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      U3L2 Using Simple Commands_2018: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      U3L2 Using Simple Commands_2018: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       U4 - CreateRecord - 3_2018: "＃记录是对象\n\n**什么是记录？**\n在数据库术语中，存储在表中的每项条目称为一条**记录**。这就是为什么该模块被称为`createRecord`(创建记录）。在应用实验室中，**一条记录是一个对象**，而数据表本质上是存储在云中的JavaScript对象的集合。\n\n**`createRecord`的第二个参数**是存储在数据库中的对象。\n\n* 正如所看到的，可以使用这样的符号来指定对象：`{name：“Alice”}`（名字：爱丽丝）\n* 但是可以**提供一个对象变量**并且将整个对象存储起来。\n* 应用实验室 **为对象的每个属性创建一个列。**\n\n＃ 这样做：\n\n**初始代码已提供**，用于创建代表歌曲的简单JavaScript对象。\n\n* 拖出`createRecord`模块。\n* **将表格名称**（第一个参数）设置为描述性内容，如“mySongs”。\n* **将第二个参数**设置为要存储的对象的名称，在本例中为“song”(歌曲)。\n* **运行程序。**\n* 在数据浏览器中**验证是否创建了一个新表，并且将`song`对象添加为记录**。\n\n![](https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif)"
       U4 Model App: "# 这是U4模型应用的模板"
       U4 Model App_2018: "# 这是U4模型应用的模板"
@@ -12269,6 +12324,7 @@ zh-CN:
         
         你觉得在按下"▶ 运行"之后点击她会发生什么事？
       Virtual Pet 1 Predict_simple: "**你觉得会怎样？** \n\n这只长颈鹿名字叫杰拉尔丁。  \n\n当你点击她后，她会做什么？"
+      Virtual Pet 1 fix: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 1-validated: 这是杰拉尔丁，你的宠物长颈鹿。你觉得按下运行之后点击她会发生什么事？
       Virtual Pet 1: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 1_simple: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
@@ -12377,7 +12433,7 @@ zh-CN:
         \r
         * 写代码在绿色椭圆后面画一个橙色的椭圆。\r
         * 别担心确切的尺寸，只要整个绿色椭圆在橙色里就行。
-      allthethings_ttscsp: |2+
+      allthethings_ttscsp: |-
         \r
         # 练习试试不同的事件类型\r
         \r
@@ -12856,9 +12912,7 @@ zh-CN:
       courseA_collector_loops2: |2
         得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |2
-        得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r
-          <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops3_2018: "罗瑞尔怎么能只用一个 <xml><block type=\"maze_moveEast\"/></xml>\n模块得到所有五堆宝藏呢？"
       courseA_collector_loops_challenge1: '*"你能帮我找出一些缺陷吗？我知道想走哪条路，但我不确定要走多少步。"*'
@@ -16742,8 +16796,8 @@ zh-CN:
       ramp_artist_loops8_clone: "**挑战：**寻找规律，使用循环使此代码更短！"
       ramp_artist_loops9: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2018: 画一个边长200像素的正方形来通过这关。
-      subgoal U3 L4 introducing subgoal labels: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      subgoal U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      subgoal U3 L4 introducing subgoal labels: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      subgoal U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       subgoal-test-clone: |-
         ### 用目标标签来结构化你的解决方案。\r
         \r

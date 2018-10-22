@@ -12,6 +12,10 @@ zu:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -22,19 +26,22 @@ zu:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
+      Dancelab_getProp:
         options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -43,10 +50,32 @@ zu:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': ubude
       gamelab_setSizes:
         options:
           PROPERTY:
             '"height"': ubude
+      RyanLab_moveForward:
+        text: qubekela phambili
       craft_ifPath:
         options:
           DIR:

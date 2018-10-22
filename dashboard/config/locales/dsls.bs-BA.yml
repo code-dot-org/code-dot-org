@@ -232,6 +232,9 @@ bs:
       CSDU2L01 SFLP:
         description here: opis ovdje
         title: naslov
+      CSP ExploreL02 SFLP:
+        description here: opis ovdje
+        title: naslov
       CSP Journal Entry Placeholder2:
         description here: opis ovdje
         title: naslov

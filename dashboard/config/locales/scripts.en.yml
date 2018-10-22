@@ -2733,6 +2733,8 @@ en:
               name: 'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment'
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
               name: 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
+            RQB Questions test:
+              name: RQB Questions test
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
@@ -3754,6 +3756,10 @@ en:
               name: Processing with Bits
             Auto-Run Binary Artist Puzzles:
               name: Auto-Run Binary Artist Puzzles
+            Course C EOC 2019:
+              name: Course C EOC 2019
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
@@ -8090,7 +8096,7 @@ en:
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
-              name: Debugging with Angry Birds
+              name: Debugging in Maze
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
@@ -9687,3 +9693,13 @@ en:
               name: Dance Party
               description_student: ''
               description_teacher: ''
+        cspplayground:
+          stages:
+            Hannah's Test Stage:
+              name: Hannah's Test Stage
+            Hannah Test Stage:
+              name: Hannah Test Stage
+          title: CSP Playground
+          description_audience: ''
+          description_short: ''
+          description: ''

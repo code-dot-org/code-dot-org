@@ -84,6 +84,7 @@ eu:
     age: 'Adina'
     user_type: 'Ikaslea edo irakaslea zara?'
     submit: 'Eman izena'
+    next: 'Hurrengoa'
     teacher: 'Irakaslea al zara?'
     valid_username: "Erabilgarri!"
     invalid_username: "Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu"
@@ -181,13 +182,6 @@ eu:
         applab: 'Aplikazio bat sortu'
       project_gallery: "Proiektuak"
       educate_hoc: "Kode Ordua"
-    create_button:
-      create: 'Sortu'
-      applab: 'App laborategia'
-      artist: 'Artista'
-      playlab: 'Jolas Laborategia'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Irakasleen sarrera orria'
       district_dashboard: 'Hezkuntza distritua'
@@ -197,6 +191,12 @@ eu:
       logout: 'Amaitu saioa'
       signin: 'Hasi saioa'
       already_registered: 'Dagoeneko izena emanda?'
+      create: 'Sortu'
+      applab: 'App laborategia'
+      artist: 'Artista'
+      playlab: 'Jolas Laborategia'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: 'Zure aurrerapena'

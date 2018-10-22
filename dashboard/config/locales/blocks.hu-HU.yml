@@ -6,215 +6,35 @@ hu:
         options:
           UNIT:
             '"seconds"': másodperc
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
-      Dancelab_changeMoveEach:
-        options:
-          GROUP:
-            sprites: összes
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: összes
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: összes
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Következő
-            '"prev"': Előző
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -223,23 +43,39 @@ hu:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: összes
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': véletlen
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': jobbra
-            '"left"': balra
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': véletlen
       Dancelab_randomColor:
         text: Véletlen szín
       Dancelab_setDanceSpeed:
@@ -254,39 +90,34 @@ hu:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: összes
+          PROPERTY:
+            '"scale"': méret
+            '"height"': magasság
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"height"': magasság
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: összes
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': fel
-            '"down"': le
-            '"left"': balra
-            '"right"': jobbra
-            '"space"': világűr
-      Dancelab_whileKey:
         options:
           KEY:
             '"up"': fel
@@ -385,20 +216,65 @@ hu:
             '"scale"': méret
             '"x"': x pozíció
             '"y"': y-pozíció
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': méret
             '"x"': x pozíció
             '"y"': y-pozíció
+      Mikelab_randomColor:
+        text: Véletlen szín
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': méret
             '"x"': x pozíció
             '"y"': y-pozíció
-      Vanilla_randomColor:
-        text: Véletlen szín
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': jobbra
+            '"left"': balra
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': felfelé nyíl
+            '"down"': lefelé nyíl
+            '"left"': balra nyíl
+            '"right"': jobbra nyíl
+            '"w"': Nyugat
+            '"s"': Dél
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': felfelé nyíl
+            '"down"': lefelé nyíl
+            '"left"': balra nyíl
+            '"right"': jobbra nyíl
+            '"w"': Nyugat
+            '"s"': Dél
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': felfelé nyíl
+            '"down"': lefelé nyíl
+            '"left"': balra nyíl
+            '"right"': jobbra nyíl
+      RyanLab_moveForward:
+        text: előrelépni
+      RyanLab_turnLeft:
+        text: fordulj balra
+      RyanLab_turnRight:
+        text: fordulj jobbra
       craft_ifPath:
         options:
           DIR:
@@ -412,3 +288,7 @@ hu:
         text: előrelépni
       craft_placeTorch:
         text: fáklya elhelyezése
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': csirke

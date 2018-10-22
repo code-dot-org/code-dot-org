@@ -106,6 +106,7 @@ tr:
     age: 'Yaş'
     user_type: 'Bir öğrenci ya da bir öğretmen misiniz?'
     submit: 'Kaydol'
+    next: 'Sonraki'
     teacher: 'Öğretmen misiniz?'
     valid_username: "Mevcut!"
     invalid_username: "Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır"
@@ -294,14 +295,6 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
-    create_button:
-      create: 'Oluştur'
-      applab: 'App Laboratuvarı'
-      artist: 'Sanatçı'
-      gamelab: 'Oyun Laboratuvarı'
-      playlab: 'Oyun Laboratuvarı'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Öğretmen ana sayfa'
       district_dashboard: 'Kontrol Paneli Bölgesi'
@@ -315,6 +308,13 @@ tr:
       team: 'Takım'
       driver: 'Giriş yapılmış'
       navigator: 'Takım Arkadaşı'
+      create: 'Oluştur'
+      applab: 'App Laboratuvarı'
+      artist: 'Sanatçı'
+      gamelab: 'Oyun Laboratuvarı'
+      playlab: 'Oyun Laboratuvarı'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: 'İlerlemeniz'

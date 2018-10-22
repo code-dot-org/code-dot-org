@@ -570,6 +570,17 @@ en:
       CourseF_PlayLab_vars6_callout: {}
       CourseF_PlayLab_vars7_callout: {}
       CourseF_PlayLab_vars8_callout: {}
+      Dance_Party_01_callout: {}
+      Dance_Party_02_callout: {}
+      Dance_Party_04_callout: {}
+      Dance_Party_06_callout: {}
+      Dance_Party_07_callout: {}
+      Dance_Party_1_callout: {}
+      Dance_Party_11_callout: {}
+      Dance_Party_2_callout: {}
+      Dance_Party_4_callout: {}
+      Dance_Party_6_callout: {}
+      Dance_Party_7_callout: {}
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -614,6 +625,17 @@ en:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
       Geometric Sun_2018_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+      HOC Dance 0_draft_callout: {}
+      HOC Dance 1_callout: {}
+      HOC Dance 1_draft_callout: {}
+      HOC Dance 2_draft_callout: {}
+      HOC Dance 3_draft_callout: {}
+      HOC Dance 5_callout: {}
+      HOC Dance 5_draft_callout: {}
+      HOC Dance 6pre_draft_callout: {}
+      HOC Dance 9_callout: {}
+      HOC Dance 9_draft_callout: {}
+      HOC Dance make group_callout: {}
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Play a sound when this event occurs.
       Infinity_move_directions_callout:

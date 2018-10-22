@@ -1,3 +1,4 @@
+---
 tr:
   data:
     blocks:
@@ -10,8 +11,6 @@ tr:
           GROUP:
             sprites: tüm
           MOVE:
-            '"next"': Sonraki
-            '"prev"': Önceki
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -19,8 +18,6 @@ tr:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Sonraki
-            '"prev"': Önceki
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -35,8 +32,6 @@ tr:
           GROUP:
             sprites: tüm
           MOVE:
-            '"next"': Sonraki
-            '"prev"': Önceki
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -44,8 +39,6 @@ tr:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Sonraki
-            '"prev"': Önceki
             MOVES.Rest: Hiçbiri
           DIR:
             '1': "→"
@@ -84,11 +77,28 @@ tr:
         options:
           GROUP:
             sprites: tüm
+          FORMAT:
+            '"random"': gelişigüzel
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": sol
             "{x: 300, y: 200}": sağ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': gelişigüzel
       Dancelab_randomColor:
         text: rastgele renk
       Dancelab_setBackgroundEffect:
@@ -108,6 +118,18 @@ tr:
           EFFECT:
             '"none"': Hiçbiri
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"height"': Yükseklik
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: tüm
+          PROPERTY:
+            '"scale"': boyut
+            '"height"': Yükseklik
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': boyut
@@ -143,7 +165,7 @@ tr:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'doğru'
+            'true': doğru
             'false': 'false'
       gamelab_getProp:
         options:
@@ -282,6 +304,12 @@ tr:
             '"down"': aşağı ok
             '"left"': sol ok
             '"right"': sağ ok
+      RyanLab_moveForward:
+        text: ilerle
+      RyanLab_turnLeft:
+        text: sola dön
+      RyanLab_turnRight:
+        text: sağa dön
       craft_ifPath:
         options:
           DIR:
@@ -295,3 +323,7 @@ tr:
         text: ilerle
       craft_placeTorch:
         text: meşaleyi yerleştir
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': tavuk

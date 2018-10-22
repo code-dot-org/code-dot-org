@@ -120,6 +120,7 @@ et:
     age: Vanus
     user_type: Kas sa oled õpilane või õpetaja?
     submit: Liitu
+    next: Järgmine
     teacher: Kas sa oled õpetaja?
     valid_username: Vaba!
     invalid_username: Kasutajanimi peab olema vähemalt 5 tähemärgi pikkune
@@ -244,9 +245,7 @@ et:
         playlab: Loo Play Lab rakendus
         artist: Joonista midagi
         applab: Loo App Lab rakendus
-      home: Kodu
       my_dashboard: Minu töölaud
-      courses: Kursused
       course_catalog: Kursuste kataloog
       project_gallery: Projektid
       help_support: Abi & Klienditugi
@@ -267,10 +266,16 @@ et:
       signin: Logi sisse
       signup: Loo konto
       already_registered: Oled juba liitunud?
-      pair_programming: Paarisprogrammeerimine
       team: Võistkond
       driver: Sisse logitud
       navigator: Parnter
+      create: Loo
+      applab: App Lab
+      artist: Kunstnik
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress

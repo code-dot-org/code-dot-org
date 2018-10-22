@@ -1,3 +1,4 @@
+---
 pl:
   data:
     blocks:
@@ -10,8 +11,6 @@ pl:
           GROUP:
             sprites: wszystkie
           MOVE:
-            '"next"': Następny
-            '"prev"': Poprzedni
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
@@ -19,8 +18,6 @@ pl:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Następny
-            '"prev"': Poprzedni
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
@@ -35,8 +32,6 @@ pl:
           GROUP:
             sprites: wszystkie
           MOVE:
-            '"next"': Następny
-            '"prev"': Poprzedni
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
@@ -44,8 +39,6 @@ pl:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Następny
-            '"prev"': Poprzedni
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
@@ -84,11 +77,28 @@ pl:
         options:
           GROUP:
             sprites: wszystkie
+          FORMAT:
+            '"random"': losowy
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": w lewo
             "{x: 300, y: 200}": w prawo
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": losowy
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': losowy
       Dancelab_randomColor:
         text: losowy kolor
       Dancelab_setBackgroundEffect:
@@ -108,6 +118,18 @@ pl:
           EFFECT:
             '"none"': Żaden
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"height"': wysokość
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: wszystkie
+          PROPERTY:
+            '"scale"': rozmiar
+            '"height"': wysokość
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': rozmiar
@@ -143,8 +165,8 @@ pl:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'prawda'
-            'false': 'fałsz'
+            'true': prawda
+            'false': fałsz
       gamelab_getProp:
         options:
           PROPERTY:
@@ -282,6 +304,12 @@ pl:
             '"down"': strzałka w dół
             '"left"': strzałka w lewo
             '"right"': strzałka w prawo
+      RyanLab_moveForward:
+        text: idź do przodu
+      RyanLab_turnLeft:
+        text: skręć w lewo
+      RyanLab_turnRight:
+        text: skręć w prawo
       craft_ifPath:
         options:
           DIR:
@@ -295,3 +323,7 @@ pl:
         text: idź do przodu
       craft_placeTorch:
         text: umieść pochodnię
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': kurczak

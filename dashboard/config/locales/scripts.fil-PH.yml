@@ -9106,6 +9106,8 @@ fil:
               name: Relay Programming
             Introduction to Online Puzzles:
               name: Pambungad sa mga Online na mga Palaisipan
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
         coursec-2018:
           assignment_family_title: Kursong C
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops,
@@ -11044,3 +11046,9 @@ fil:
           stages:
             Artist:
               name: Artista
+        sconyers:
+          stages:
+            Digital Design:
+              name: Digital na Disenyo
+            Linking Screens:
+              name: Pag-uugnay sa mga Screen

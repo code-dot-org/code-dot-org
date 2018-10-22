@@ -127,6 +127,7 @@ he:
     age: גיל
     user_type: אתה תלמיד או מורה?
     submit: הירשם
+    next: הבא
     teacher: האם אתה מורה?
     valid_username: זמין!
     invalid_username: שם המשתמש חייב להיות לפחות 5 תווים
@@ -301,9 +302,7 @@ he:
         applab: צור אפליקציה במעבדת המשחקים
         gamelab: צור פרויקט מעבדת משחקים
         weblab: צור פרויקט מעבדת אינטרנט (ביטה)
-      home: בית
       my_dashboard: לוח הבקרה שלי
-      courses: מסלולים
       course_catalog: קטלוג קורסים
       project_gallery: פרויקטים
       sections: קבוצות
@@ -348,10 +347,16 @@ he:
       signin: התחבר
       signup: צור חשבון
       already_registered: כבר נרשמת?
-      pair_programming: תכנות בזוגות
       team: צוות
       driver: מחובר/ת
       navigator: נווט
+      create: צור
+      applab: מעבדת היישומים
+      artist: אמן
+      gamelab: מעבדת המשחקים
+      playlab: מעבדת הצעצועים
+      minecraft: מיינקראפט
+      flappy: פלאפי
     popup:
       progress_for_user: ההתקדמות של %{name}
       progress: ההתקדמות שלך

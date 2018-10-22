@@ -137,6 +137,7 @@ fil:
     age: Edad
     user_type: Ikaw ba ay mag-aaral o guro?
     submit: Sign up
+    next: Susunod
     teacher: Ikaw ba ay isang guro?
     valid_username: Mayroon!
     invalid_username: Ang Username ay dapat naglalaman ng at least 5 characters
@@ -310,9 +311,7 @@ fil:
         applab: Lumikha ng App
         gamelab: Gumawa ng Game Lab na proyekto
         weblab: Gumawa ng Web Lab (beta) na proyekto
-      home: Home
       my_dashboard: Aking Dashboard
-      courses: Mga kurso
       course_catalog: Katalogo ng Kurso
       project_gallery: Mga Proyekto
       sections: Mga Seksyon
@@ -357,10 +356,16 @@ fil:
       signin: Sign in
       signup: Gumawa ng account
       already_registered: Nakarehistro na?
-      pair_programming: Pair programming
       team: Koponan
       driver: Maglog-in
       navigator: Kasama
+      create: I-create
+      applab: App na Lab
+      artist: Artista
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Progreso ni %{name}
       progress: Progreso mo

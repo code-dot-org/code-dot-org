@@ -175,9 +175,9 @@ sk:
       1:
         text: "Ahoj, volám sa Lyndsey. Som modelkou, herečkou a píšem si svoje vlastné aplikácie. Použi kód a pridaj sa k Anne a Else ako objavujú krásu a čaro ľadu."
       2:
-        text: "Korčuľovaním po ľade vytváraš snehové vločky i vzory a vznikne ti tak zimná krajina zázrakov, ktorú potom môžeš zdieľať so svojimi priateľmi."
+        text: "Korčuľovaním po ľade nakreslíš snehové vločky a krásne vzory. Vytvoríš tak magickú zimnú krajinu, ktorú potom môžeš zdieľať so svojimi priateľmi."
       3:
-        text: "Počas nasledujúcej hodiny sa naučíš základy používania kódu. Tradičné programovanie je obvykle v textovej forme, ale my použijeme Blockly, ktorý používa obrázkove bloky, ktoré môžete presúvať pre vytvorenie programu. Takto sa učia základy dokonca aj vysokoškoláci. Avšak pod kapotou stále vytváraš kód."
+        text: "Počas nasledujúcej hodiny sa naučíš základy programovania. Programátori obvykle píšu text, my ale použijeme Blockly - obrázkové bloky, ktorých spájaním vytvoríš program. Týmto spôsobom sa základy učia dokonca aj vysokoškoláci. Avšak pod kapotou stále vytváraš kód."
       4:
         text: "Program je sada inštrukcií, ktorá hovorí počítaču, čo má robiť. Vytvorme kód, alebo program, ktorý pomôže Else vytvoriť jednoduchú čiaru. Toto využijeme neskôr pre vytvorenie zložitejších vzorov."
       5:
@@ -464,37 +464,37 @@ sk:
       6:
         text: "Ak zabudnete, čo máte robiť, inštrukcie pre každý level sú navrchu."
       7:
-        text: "Na začiatok ideme naprogramovať kuriatko. Presuňme príkaz \"posunúť dopredu\" na pracovnú plochu. Keď stlačim \"spustiť\", kuriatko sa posunie o jeden krok dopredu. Pre ďaľší posun presuniem ďaľší blok \"posunúť dopredu\" pod prvý blok \"posunúť dopredu\" až kým sa nezobrazí farebné podsvietenie. Potom pustím blok a oba bloky sa spoja dokopy. Ak znova stlačím \"Spustiť\", kuriatko spraví dva kroky."
+        text: "Na začiatok ideme naprogramovať kuriatko. Presuň príkaz \"posuň dopredu\" na pracovnú plochu. Keď stlačím \"spusti\", kuriatko sa posunie o jeden krok dopredu. Pre ďalší posun presuniem ďalší blok \"posuň dopredu\" pod prvý blok \"posuň dopredu\" až kým sa nezobrazí farebné podsvietenie. Potom pustím blok a oba bloky sa spoja dokopy. Ak znova stlačím \"Spusti\", kuriatko spraví dva kroky."
       8:
         text: "Ak niekedy chcete odstrániť block, tak ho iba odstráňte zo zásobníka a presuňte ho späť do panela nástrojov."
       9:
-        text: "Potom, čo stlačíte \"Spustiť\", môžete vždy stlačiť tlačidlo \"Resetovať\" pre reštartovanie hry a jej začatie odznova. A teraz ste na rade Vy, aby ste si vytvorili Vašu vlastnú verziu Minecraftu. Veľa zábavy!"
+        text: "Potom, čo stlačíš \"Spusti\", môžeš vždy stlačiť tlačidlo \"Resetuj\" pre reštartovanie hry a jej začatie odznova. A teraz si na rade ty, aby si si vytvoril tvoju vlastnú verziu Minecraftu. Veľa zábavy!"
     mc_2016_loops:
       1:
         text: "Ahoj, ja som Lisa. Som softvérový vývojár na Minecrafte a pracujem na niektorých zvieratách a nepriateľoch v hre. Jedno zo zvierat, na ktorých som robila je ocelot. Robila som na časti, kde môžte nakŕmiť ocelota rybou na skrotenie vašej vlastnej mačky."
       2:
-        text: "My ľudia sa začneme veľmi nudiť, ak musíme robiť dookola jednu a tú istú vec. Počítače sú však úžasné aj preto, lebo dokážu robiť tú istú vec dookola milióny až miliardy krát a nikdy sa nebudú nudiť. Toto opakovanie sa volá \"slučka\" a každá postavička v Minecrafte používa slučky."
+        text: "My ľudia sa začneme veľmi nudiť, ak musíme robiť dookola jednu a tú istú vec. Počítače sú však úžasné aj preto, lebo dokážu robiť tú istú vec dookola milióny až miliardy krát a nikdy sa nebudú nudiť. Toto opakovanie sa volá slučka a každá postavička v Minecrafte používa slučky."
       3:
-        text: "Pred chvíľou sme posunuli kuriatko na obrazovke, potom však zastalo. V Minecrafte, kuriatká pobehujú stále dookola. Poďme použiť slučku \"rob dookola\" z nášho nástroja panelov, aby naše kuriatka tiež pobehovali dookola. Vlastnosť slučiek nám ušetrí veľa času a otvorí nám veľa pekných možností popri tom, ako budete skladať Vašu verziu Minecraftu."
+        text: "Pred chvíľou sme posunuli kuriatko na obrazovke, potom však zastalo. V Minecrafte, kuriatká pobehujú stále dookola. Poďme použiť slučku \"rob dookola\" z nášho nástroja panelov, aby naše kuriatka tiež pobehovali dookola. Vlastnosť slučiek nám ušetrí veľa času a otvorí nám veľa pekných možností popri tom, ako budeš skladať svoju verziu Minecraftu."
     mc_2016_events:
       1:
-        text: "V tomto leveli si môžete vybrať, či budete hrať ako Steve alebo ako Alex. Stlačte šípky na klávesnici pre pohyb hore, dole, vľavo a vpravo. Odteraz sa môžete v tomto leveli pohybovať kam len chcete. Pre použitie príšerky sa k nej priblížte, otočte sa k nej tvárou a stlačte medzerník."
+        text: "V tomto leveli si môžeš vybrať, či budeš hrať ako Steve alebo ako Alex. Stlač šípky na klávesnici pre pohyb hore, dole, vľavo a vpravo. Odteraz sa môžeš v tomto leveli pohybovať kam len chceš. Pre použitie príšerky sa k nej priblíž, otoč sa k nej tvárou a stlač medzerník."
       2:
-        text: "Ak používate dotykovú obrazovku, prejdite po nej prstom hore, dole, vľavo a vpravo pre pohyb. Potom ťuknite na obrazovku pre použitie predmetu, ktorý je pred vami."
+        text: "Ak používaš dotykovú obrazovku, prejdi po nej prstom hore, dole, vľavo a vpravo pre pohyb. Potom ťukni na obrazovku pre použitie predmetu, ktorý je pred tebou."
       3:
-        text: "Ale čo sa stane, keď to použijete? V Minecrafte ovečky zanechávajú vlnu, keď ich ostriháte, kravy utekajú preč keď do nich udriete a strašidlá vybuchujú, keď sa k ním priblížite. Tieto reakcie sa dejú vďaka niečomu, čo sa volá udalosti. Udalosti hovoria Vášmu programu, aby počúvali alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia."
+        text: "Ale čo sa stane, keď to použiješ? V Minecrafte ovečky zanechávajú vlnu, keď ich ostriháš, kravy utekajú preč keď do nich udrieš a strašidlá vybuchujú, keď sa k ním priblížiš. Tieto reakcie sa dejú vďaka niečomu, čo sa volá udalosti. Udalosti hovoria tvojmu programu, aby počúvali alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia."
       4:
-        text: "Doteraz ste použili len jednu udalosť. Kód, ktorý ste vložili do poľa \"po vytvorení\" sa spustí, keď sa vytvorí postavička alebo keď začne hra. V ďaľších leveloch budete mať nové polia pre udalosti ako napríklad \"po dotknutí sa\", ktorý sa spustí, keď sa dotknete postavičky, alebo \"po použití\", keď postavičku použijete. Alebo ak chcete, aby zombík pri východe slnka, vložte akciu do poľa \"po východe slnka\""
+        text: "Doteraz si použil len jednu udalosť. Kód, ktorý si vložil do poľa \"po vytvorení\" sa spustí, keď sa vytvorí postavička alebo keď začne hra. V ďaľších leveloch budeš mať nové polia pre udalosti ako napríklad \"po dotknutí sa\", ktorý sa spustí, keď sa dotkneš postavičky, alebo \"po použití\", keď postavičku použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa \"po východe slnka\""
     mc_2016_spawn:
       1:
         text: "V hrách, spraviť znamená to isté ako vytvoriť. V tomto leveli poďme vytvárať zombíkov po západe slnka. Pre dosiahnutie použijeme blok \"keď príde noc\"."
       2:
-        text: "Keďže chceme, aby sa zombíci vytvárali v noci, prídame blok \"vytvoriť zombíka\" pod blok \"keď príde noc\". Akonáhle sa vytvoria, každý zombík spustí kód, ktorý ste vložili do jeho políčka udalosti \"po vytvorení\". Veľa zábavy pri robení zombíkov!"
+        text: "Keďže chceme, aby sa zombíci vytvárali v noci, prídame blok \"vytvor zombíka\" pod blok \"keď príde noc\". Akonáhle sa vytvoria, každý zombík spustí kód, ktorý si vložil do jeho políčka udalostí \"po vytvorení\". Veľa zábavy pri vytváraní zombíkov!"
     mc_2016_congrats:
       1:
         text: "Gratulujeme! Naučili ste sa používať príkazy počítačovej vedy na prinesenie života do Minecraft svetu. Teraz ste vývojárom. Odomkli ste všetky príkazy a všetky stvorenia. Môžete si vybrať, čo sa stane."
       2:
-        text: "Keď ste hotoví s tvorbou Vašej hry, vyberte si zdieľanie odkazu, ktorý môžete zdieľať s Vašimi kamarátmi alebo hrať hru na Vašom mobilnom telefóne. Veľa zábavy! Tešíme sa s Vami na veľa hodín zábavy s Vašou verziou Minecraftu."
+        text: "Keď si hotový s tvorbou svojej hry, vyber si zdieľanie odkazu, ktorý môžeš zdieľať s tvojimi kamarátmi alebo hrať hru na svojom mobilnom telefóne. Veľa zábavy! Tešíme sa s tebou na veľa hodín zábavy s tvojou verziou Minecraftu."
     applab_intro_welcome:
       1:
         image: 'notes/applab_intro_welcome_1.png'

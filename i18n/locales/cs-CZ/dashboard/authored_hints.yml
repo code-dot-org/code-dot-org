@@ -5,9 +5,99 @@ cs:
         2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení o 90° doprava".
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Máš problémy s úhly? Budeš muset obsáhnout 360° v 8 krocích. A kolik je 360/8? '
+        2-3_Artist_11_a: 'Potíže s úhly? Budeš muset obsáhnout 360 stupňů v 8 krocích. Kolik je 360/8? '
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: V kruhu je 360°, takže když se malíř otočí o 1° každou smyčku, bude ji potřebovat zopakovat 360x.
+      2-3 Artist Loops New 11_authored_hint:
+        2-3_Artist_Loops_New_11_a: |-
+          Vzpomeňte si, že kód z předchozí hádanky byl:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">VpravoBok,</title>,
+          ,<title name="VALUE" config="45,60,90,120,180">45,
+          <title name="DIR">,</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward 50</title>
+          <title name="VALUE"></title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">Vlevobok</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">
+          ,<title name="VALUE">50,</title>,
+          , moveForward</title>,</block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+      2-3 Artist Loops New 12_authored_hint:
+        2-3_Artist Loops_New_12_a: Než začne diamant, umělec se potřebuje otočit doleva o 60 stupňů, aby byl správně nasměrován.
+        2-3_Artist Loops_New_12_b: Až se umělec posune dopředu o 100 pixelů, bude se potřebovat otočit doprava o 120 stupňů, aby udělal ostrý roh.
+        2-3_Artist Loops_New_12_c: Umělec se bude muset k vytvoření širokého rohu otočit vpravo jen o 60 stupňů.
+      2-3 Artist Loops New 13_authored_hint:
+        2-3_Artist_Loops_New_13_a: "Na konci každého diamantu stojí již umělec správný směrem, aby mohl začít kreslit další.\n\nProto nepotřebujeme přidávat další blok `otoč vlevo`, než znovu začne."
+        2-3_Artist_Loops_New_13_b: "Pro každý diamant umělec:\n- posun vpřed\n- otočit vpravo o 120 stupňů\n- posun vpřed\n- otočit vpravo o 60 stupňů\n\nA pak celé znovu!"
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a: Umělec se potřebuje otočit o 45 stupňů doprava, než začne kreslit.
+        2-3_Artist_Loops_New_9_b: Tohle V je ve skutečnosti prostě polovina čtverce. Jaký by byl kód k nakreslení půlky čtverce?
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_4A_b: Poslední část programu může být dokončena kódem mimo cyklus.
+        2-3_Bee_Loops_4A_c: Pokud se nedaří najít cykly, zkus nejprve kódování dlouhou cestou (bez cyklů) a až nakonec zkus najít, co by šlo zkombinovat do cyklů `opakuj`.
+      2-3 Bee Loops 5_authored_hint:
+        2-3_Bee_Loops_5_a: Pokud se ti hned nedaří objevit bloky do cyklu `opakuj`, začni kódováním každého posunu a hledej vzor.
+      2-3 Bee Loops 6_authored_hint:
+        2-3_Bee_Loops_6_a: Pokud nevíš, co má přijít do cyklu `opakuj`, zkus posunovat bloky jeden po druhém a zkoušej najít vzor.
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_7_b: 'Pokud tě nenapadá cyklus hned od počátku, zkus vytvořit dlouhý kód (bez cyklů) a pak v něm hledej opakující se vzor.  '
+      2-3 Maze 1_authored_hint:
+        2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
+      2-3 Maze 16_authored_hint:
+        2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      2-3 Maze Loops 17_authored_hint:
+        2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      2-3 Maze Loops 18_authored_hint:
+        2-3_Maze_Loops_18_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      2-3 Maze Loops 19_authored_hint:
+        2-3_Maze_Loops_19_a: Pokud se zaseknete, zkuste nejprve napsat kód bez smyček a hledejte v něm opakující se vzory.
+        2-3_Maze_Loops_19_b: Vložení jednoho cyklu opakování dovnitř jiného může zmenšit počet použitých bloků.
+      2-3 Maze Loops 21_authored_hint:
+        2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt blokované cesty prstem.
+      4-5 Artist 4_authored_hint:
+        4-5_Artist_4_a: "V kruhu je 360 stupňů!\n\nTo je, kolikrát je potřeba kód opakovat (s otočením o 1 stupeň pokaždé), aby se kruh dokončil!"
+      Bergeron Robot Maze1_authored_hint:
+        2-3_Maze_1_a: Chcete-li použití blok `posunout vpřed`, přetáhněte ho z panelu bloků do pracovního prostoru a připojte ho k bloku `při spuštění`.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku.
       MC Agent Freeplay_authored_hint:
@@ -86,6 +176,18 @@ cs:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla Alex nebo Steve projít za kraj mapy.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla Alex nebo Steve projít za kraj mapy.
+      course2_collector_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by tam byl jeden kousek pokladu na každé hromádce!
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      course2_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: Ani nepřemýšlej, že bys to zkoušel bez cyklů!
+      course2_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_a: Přemýšlejte nad touto cestou jako o třech různých úsecích. Každý z nich má vzor, který můžete opakovat.
+        courseC_maze_loops_challenge1_b: Mezi bloky `opakuj` budete potřebovat bloky `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.
+        courseC_maze_loops_challenge1_c: |-
+          Pokud jste se dostali až sem, potřebujete jen `otočit vlevo` a pak párkrát `posunout vpřed`. Nevzdávejte to!
+          
+          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -277,11 +379,105 @@ cs:
           </next>
           </block>
           </xml>
+      courseB_maze_seq6_authored_hint:
+        courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq6_2018_authored_hint:
+        courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_b: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseB_maze_seq9_authored_hint:
+        courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_maze_seq9_2018_authored_hint:
+        courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseC_collector_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_collector_loops_challenge2_2018_authored_hint:
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_maze_loops7_authored_hint:
+        courseC_maze_loops7_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      courseC_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_a: Přemýšlejte nad touto cestou jako o třech různých úsecích. Každý z nich má vzor, který můžete opakovat.
+        courseC_maze_loops_challenge1_b: Mezi bloky `opakuj` budete potřebovat bloky `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.
+      courseC_maze_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by tam byl jeden kousek pokladu na každé hromádce!
+        courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7_authored_hint:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7_2018_authored_hint:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení o 90° doprava".
+      grade2_PuppyLoops_6_authored_hint:
+        2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade2_PuppyLoops_7_authored_hint:
+        2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade2_puppy_loops6_authored_hint:
+        2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade2_puppy_loops7_authored_hint:
+        2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Pokud se ti hned nedaří objevit bloky do cyklu `opakuj`, začni kódováním každého posunu a hledej vzor.
+      grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Pokud nevíš, co má přijít do cyklu `opakuj`, zkus posunovat bloky jeden po druhém a zkoušej najít vzor.
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_7_b: 'Pokud tě nenapadá cyklus hned od počátku, zkus vytvořit dlouhý kód (bez cyklů) a pak v něm hledej opakující se vzor.  '
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_4A_b: Poslední část programu může být dokončena kódem mimo cyklus.
+        2-3_Bee_Loops_4A_c: Pokud se nedaří najít cykly, zkus nejprve kódování dlouhou cestou (bez cyklů) a až nakonec zkus najít, co by šlo zkombinovat do cyklů `opakuj`.
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
+      grade3_maze_loops2_authored_hint:
+        grade3_maze_loops2_b: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade3_maze_loops5_authored_hint:
+        2-3_Maze_Loops_21_a: Pokud se ti nedaří najít schodovitý vzor, zkus si zakrýt blokované cesty prstem.
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Když použiješ příkazový blok, který mě posílají dopředu o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení o 90° doprava".
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
+      level 'grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Pokud se ti hned nedaří objevit bloky do cyklu `opakuj`, začni kódováním každého posunu a hledej vzor.
+      level 'grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Pokud nevíš, co má přijít do cyklu `opakuj`, zkus posunovat bloky jeden po druhém a zkoušej najít vzor.
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_7_b: 'Pokud tě nenapadá cyklus hned od počátku, zkus vytvořit dlouhý kód (bez cyklů) a pak v něm hledej opakující se vzor.  '
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: První akce bude spíše otočení než posun.
+        2-3_Bee_Loops_4A_b: Poslední část programu může být dokončena kódem mimo cyklus.
+        2-3_Bee_Loops_4A_c: Pokud se nedaří najít cykly, zkus nejprve kódování dlouhou cestou (bez cyklů) a až nakonec zkus najít, co by šlo zkombinovat do cyklů `opakuj`.
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.

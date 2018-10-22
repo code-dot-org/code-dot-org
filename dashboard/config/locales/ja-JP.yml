@@ -114,6 +114,7 @@ ja:
     age: 年齢
     user_type: あなたは先生ですか？生徒ですか？
     submit: 入会
+    next: 次へ
     teacher: あなたは先生ですか？
     valid_username: 利用可能 ！
     invalid_username: ユーザー名は 5 文字以上である必要があります。
@@ -276,9 +277,7 @@ ja:
         applab: アプリラボ で作る
         gamelab: ゲームラボで作る
         weblab: Web 研究室 (ベータ版) のプロジェクトを作る
-      home: ホーム
       my_dashboard: マイ ダッシュボード
-      courses: コース
       course_catalog: コース カタログ
       project_gallery: プロジェクト
       sections: セクション
@@ -323,10 +322,16 @@ ja:
       signin: サインイン
       signup: アカウントを作る
       already_registered: 既にアカウントをお持ちですか?
-      pair_programming: ペアプログラミング
       team: チーム
       driver: ドライバー
       navigator: ナビゲーター
+      create: つくる
+      applab: アプリ ラボ
+      artist: アーティスト
+      gamelab: ゲーム ラボ
+      playlab: プレイラボ
+      minecraft: マインクラフト
+      flappy: フラッピー
     popup:
       progress_for_user: "%{name} の進捗状況"
       progress: あなたの進捗状況
@@ -1013,6 +1018,7 @@ ja:
       robotics:
         kodable: Kodable
       workshop_course:
+        csd: コンピューターサイエンス 発展
         csp: コンピューターサイエンス 入門
       email_opt_in:
         opt_in_yes: はい

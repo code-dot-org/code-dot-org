@@ -86,6 +86,7 @@ az:
     age: Yaşınız
     user_type: Siz tələbəsiniz ya müəllim?
     submit: Qeydiyyatdan keçin
+    next: Növbəti
     teacher: Müəllimsiniz?
     valid_username: Olar!
     invalid_username: İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır
@@ -185,8 +186,6 @@ az:
       sign_in_to_save: Nəticələri itirməmək üçün daxil olun
       free_play:
         artist: Nə isə çəkin
-      home: Ev səhifəsi
-      courses: marşrutlar
       project_gallery: Layihə qalereyası
       sections: Bölmələr
       teacher_community: Müəllim icması
@@ -228,6 +227,12 @@ az:
       already_registered: Artıq qeydiyyatdan keçmisiniz?
       team: Komanda
       driver: Sürücü
+      create: Düzəlt
+      applab: Proqram Labı
+      artist: Rəssam
+      playlab: Oyun labı
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: Sizin nəticələriniz

@@ -119,6 +119,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # For some providers, signups can happen without ever having hit the sign_up page, where
     # our tracking data is usually populated, so do it here
     SignUpTracking.begin_sign_up_tracking(session)
+    SignUpTracking.log_oauth_callback provider, session
 
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'

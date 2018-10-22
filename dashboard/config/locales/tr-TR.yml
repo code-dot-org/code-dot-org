@@ -133,6 +133,7 @@ tr:
     age: Yaş
     user_type: Bir öğrenci ya da bir öğretmen misiniz?
     submit: Kaydol
+    next: Sonraki
     teacher: Öğretmen misiniz?
     valid_username: Mevcut!
     invalid_username: Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır
@@ -308,9 +309,7 @@ tr:
         applab: Uygulama oluşturun
         gamelab: Bir Oyun Laboratuvarı projesi yap
         weblab: Bir Web Lab (beta) projesi yap
-      home: Ana Sayfa
       my_dashboard: Kontrol panelim
-      courses: kurslar
       course_catalog: Kurs Kataloğu
       project_gallery: Projeler
       sections: Bölümler
@@ -355,10 +354,16 @@ tr:
       signin: Giriş Yap
       signup: Hesap oluştur
       already_registered: Zaten hesabınız var mı?
-      pair_programming: Eşli Programlama
       team: Takım
       driver: Giriş yapılmış
       navigator: Takım Arkadaşı
+      create: Oluştur
+      applab: App Laboratuvarı
+      artist: Sanatçı
+      gamelab: Oyun Laboratuvarı
+      playlab: Oyun Laboratuvarı
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'ın ilerlemesi"
       progress: İlerlemeniz

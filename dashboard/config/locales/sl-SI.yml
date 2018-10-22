@@ -103,6 +103,7 @@ sl:
     age: Starost
     user_type: Ste učenec ali učitelj?
     submit: Prijava
+    next: Naslednja
     teacher: Ste učitelj/ica?
     valid_username: Na voljo!
     invalid_username: Uporabniško ime mora imeti vsaj 5 znakov
@@ -204,9 +205,7 @@ sl:
         playlab: Ustvari Play Lab app
         artist: Nariši kaj
         applab: Ustvari App Lab app
-      home: Domov
       my_dashboard: Moja nadzorna plošča
-      courses: Predavanja
       course_catalog: Katalog tečajev
       project_gallery: Projekti
       educate_overview: Vzgojiteljev pregled
@@ -243,10 +242,14 @@ sl:
       signin: Prijava
       signup: Ustvari račun
       already_registered: Že registrirani?
-      pair_programming: Programiranje parov
       team: Ekipa
       driver: Voznik
       navigator: Navigator
+      create: Ustvari
+      artist: Umetnik
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Napredek od %{name}
       progress: Tvoj napredek

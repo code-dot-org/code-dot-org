@@ -1,3 +1,4 @@
+---
 ja:
   data:
     blocks:
@@ -14,17 +15,11 @@ ja:
         options:
           GROUP:
             sprites: すべて
-          MOVE:
-            '"next"': 次へ
-            '"prev"': 戻る
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': 次へ
-            '"prev"': 戻る
           DIR:
             '1': "→"
             "-1": "←"
@@ -37,17 +32,11 @@ ja:
         options:
           GROUP:
             sprites: すべて
-          MOVE:
-            '"next"': 次へ
-            '"prev"': 戻る
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': 次へ
-            '"prev"': 戻る
           DIR:
             '1': "→"
             "-1": "←"
@@ -70,11 +59,28 @@ ja:
         options:
           GROUP:
             sprites: すべて
+          FORMAT:
+            '"random"': ランダム に
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": 左 に
             "{x: 300, y: 200}": 右 に
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': ランダム に
       Dancelab_randomColor:
         text: てきとうな色
       Dancelab_setDanceSpeed:
@@ -86,6 +92,18 @@ ja:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"height"': 高さ
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: すべて
+          PROPERTY:
+            '"scale"': おおきさ
+            '"height"': 高さ
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': おおきさ
@@ -265,6 +283,12 @@ ja:
             '"down"': 下矢じるしキーが おされたら
             '"left"': 左矢じるしキーが おされたら
             '"right"': 右矢じるしキーが おされたら
+      RyanLab_moveForward:
+        text: 前に すすむ
+      RyanLab_turnLeft:
+        text: 左に回転
+      RyanLab_turnRight:
+        text: 右に回転
       craft_ifPath:
         options:
           DIR:
@@ -278,3 +302,7 @@ ja:
         text: 前に すすむ
       craft_placeTorch:
         text: 松明を置く
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': ニワトリ

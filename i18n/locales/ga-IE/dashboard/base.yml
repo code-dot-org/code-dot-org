@@ -106,6 +106,7 @@ ga:
     age: 'Aois'
     user_type: 'An dalta nó múinteoir thú?'
     submit: 'Cláraigh'
+    next: 'Ar Aghaidh'
     teacher: 'An múinteoir thú?'
     valid_username: "Ar fáil!"
     invalid_username: "Ní mór ar a laghad 5 charachtar a bheith in ainm úsáideora"
@@ -292,14 +293,6 @@ ga:
       help_us: "Cabhraigh Linn"
       teach: "Múineadh"
       about: "Maidir Linn"
-    create_button:
-      create: 'Cruthaigh'
-      applab: 'Saotharlann Aipeanna'
-      artist: 'Ealaíontóir'
-      gamelab: 'An tSaotharlann Cluichíochta'
-      playlab: 'Spraotharlann'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Leathanach Baile do Mhúinteoirí'
       district_dashboard: 'Painéal an Scoilcheantair'
@@ -313,6 +306,13 @@ ga:
       team: 'Foireann'
       driver: 'Logáilte isteach'
       navigator: 'Comhpháirtí'
+      create: 'Cruthaigh'
+      applab: 'Saotharlann Aipeanna'
+      artist: 'Ealaíontóir'
+      gamelab: 'An tSaotharlann Cluichíochta'
+      playlab: 'Spraotharlann'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Dul chun cinn %{name}"
       progress: 'Do dhul chun cinn'

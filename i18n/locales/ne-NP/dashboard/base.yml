@@ -96,6 +96,7 @@ ne:
     age: 'उमेर'
     user_type: 'Are you a student or teacher?'
     submit: 'साइन अप गर्नुहोस्'
+    next: 'अर्को'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -201,13 +202,6 @@ ne:
       project_gallery: "Projects"
       educate_hoc: "Hour of Code"
       stats: "Stats"
-    create_button:
-      create: 'बनाउनुहोस्'
-      applab: 'App Lab'
-      artist: 'Artist'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -218,10 +212,15 @@ ne:
       signin: 'साइन इन'
       signup: 'खाता खोल्नुहोस्'
       already_registered: 'Already registered?'
-      pair_programming: 'Pair Programming'
       team: 'Team'
       driver: 'Driver'
       navigator: 'Navigator'
+      create: 'बनाउनुहोस्'
+      applab: 'App Lab'
+      artist: 'Artist'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'तपाईँको प्रगति'

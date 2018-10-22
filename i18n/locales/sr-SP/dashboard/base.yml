@@ -91,6 +91,7 @@ sr:
     age: 'Узраст'
     user_type: 'Да ли си ученик или наставник?'
     submit: 'Региструј се'
+    next: 'Следећи'
     teacher: 'Да ли сте наставник?'
     valid_username: "Доступно!"
     invalid_username: "Корисничко име мора имати барем 5 знакова"
@@ -190,11 +191,6 @@ sr:
         artist: 'Нацртај нешто'
         applab: 'Направи апликацију'
       educate_hoc: "Час кода"
-    create_button:
-      create: 'Креирај'
-      artist: 'Уметник'
-      playlab: 'Играоница'
-      flappy: 'Флапи'
     user:
       classroom: 'Почетна страница за учитеље'
       district_dashboard: 'Регионална огласна табла'
@@ -204,6 +200,10 @@ sr:
       logout: 'Одјави се'
       signin: 'Пријави се'
       already_registered: 'Већ си регистрован?'
+      create: 'Креирај'
+      artist: 'Уметник'
+      playlab: 'Играоница'
+      flappy: 'Флапи'
     popup:
       progress_for_user: "Напредак %{name}"
       progress: 'Напредак'

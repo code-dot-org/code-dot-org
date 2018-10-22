@@ -1,3 +1,4 @@
+---
 hi:
   data:
     blocks:
@@ -33,6 +34,28 @@ hi:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': यादृच्छिक
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': यादृच्छिक
       Dancelab_randomColor:
         text: यादृच्छिक रंग
       Dancelab_setDanceSpeed:
@@ -47,6 +70,14 @@ hi:
         options:
           PROPERTY:
             '"height"': ऊँचाई
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -56,10 +87,6 @@ hi:
           PROPERTY:
             '"height"': ऊँचाई
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"space"': अंतरिक्ष
-      Dancelab_whileKey:
         options:
           KEY:
             '"space"': अंतरिक्ष
@@ -107,7 +134,9 @@ hi:
             '"right"': दायाँ तीर
             '"w"': W
             '"a"': अ
-            '"s"': "S\nS"
+            '"s"': |-
+              S
+              S
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -117,7 +146,9 @@ hi:
             '"right"': दायाँ तीर
             '"w"': W
             '"a"': अ
-            '"s"': "S\nS"
+            '"s"': |-
+              S
+              S
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -125,6 +156,12 @@ hi:
             '"down"': नीचे तीर
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
+      RyanLab_moveForward:
+        text: आगे जाएं
+      RyanLab_turnLeft:
+        text: बाएँ मुड़ें
+      RyanLab_turnRight:
+        text: दाएँ मुड़ें
       craft_ifPath:
         options:
           DIR:
@@ -138,3 +175,7 @@ hi:
         text: आगे जाएं
       craft_placeTorch:
         text: टॉर्च रखें
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': murghi

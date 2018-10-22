@@ -232,6 +232,9 @@ lv:
       CSDU2L01 SFLP:
         description here: apraksts šeit
         title: nosaukums
+      CSP ExploreL02 SFLP:
+        description here: apraksts šeit
+        title: nosaukums
       CSP Journal Entry Placeholder2:
         description here: apraksts šeit
         title: nosaukums
@@ -541,6 +544,8 @@ lv:
         title: nosaukums
       PDK5 CS Video:
         Computer Science: Datorzinātne
+      PDK5 Glossary C:
+        Vocabulary: Vārdnīca
       PDK5 Pair Programming 1:
         Pair Programming: Pāru Programmēšana
       PDK5 Teacher Dashboard C:
@@ -1642,6 +1647,10 @@ lv:
       PDAlg Design Recipe Video:
         Definition: Definīcija
       'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
         E: A
       U3L19 - MATCH what are values of abc:
         '10': '10'
@@ -1830,6 +1839,7 @@ lv:
         Maze Multiple Choice: Labirints Vairākas izvēles
         Which blocks solve the puzzle?: Kuri programmas bloki atrisina šo mīklu?
       CB_Question_3:
+        A: A
         Y: true
       CSD U3 Boolean MC:
         title: nosaukums
@@ -2050,6 +2060,10 @@ lv:
         '2': '2'
         '4': '4'
       U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
         E: A
       U1L6 Assessment multiple choice:
         '10': '10'
@@ -2091,6 +2105,10 @@ lv:
           is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
           “distance” between points is depicted by the number of line segments connecting
           any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: A
+        B: B
+        C: C
+        D: D
         E: A
       U2L08 Assessment 1:
         '11': '11'
@@ -2209,6 +2227,12 @@ lv:
         right: pa labi
       U4L05 Multiple Choice:
         right: pa labi
+      U4L06 Assessment 2:
+        column: kolonna
+        row: rinda
+      U4L06 Assessment 3:
+        column: kolonna
+        row: rinda
       U4L06 Multiple Choice:
         right: pa labi
       U4L06 Reflection Q 1:
@@ -2270,6 +2294,28 @@ lv:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseC_multi_starWars_predict1:
+        I don't know: Es nezinu
+      courseC_multi_starWars_predict1_2018:
+        I don't know: Es nezinu
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -2302,6 +2348,34 @@ lv:
         16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
           a loop down.  This is all inside of another loop that happens twice. 4 times
           2 is 8!"
+      courseE_multi_farmer_predict1:
+        I don't know: Es nezinu
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+      courseE_multi_farmer_predict1_2018:
+        I don't know: Es nezinu
+        0: "? Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        1: ": Incorrect. The `if` statement will help the farmer check if there is
+          a path ahead.  If there is, she will move forward.  Else, if there is no
+          path, she will pick as much lettuce as there is and then turn left."
+        2: "? The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
+        3: ": The `if` statement will help the farmer check if there is a path ahead.
+          \ If there is, she will move forward.  Else, if there is no path, she will
+          pick as much lettuce as there is and then turn left."
       csd-post-survey-2018-topic-ai:
         'No': Nē
         'Yes': Jā
@@ -2360,9 +2434,11 @@ lv:
         'No': Nē
         'Yes': Jā
       csp-post-survey-2017-q65:
+        I don't know: Es nezinu
         'No': Nē
         'Yes': Jā
       csp-post-survey-2017-q65_2018:
+        I don't know: Es nezinu
         'No': Nē
         'Yes': Jā
       csp-post-survey-2018-topic-ai:

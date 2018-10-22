@@ -130,6 +130,7 @@ is:
     age: Aldur
     user_type: Ert þú nemandi eða kennari?
     submit: Skráning
+    next: Næsta
     teacher: Ertu kennari?
     valid_username: Laust!
     invalid_username: Notandanafn verður að vera að minnsta kosti 5 stafir
@@ -299,9 +300,7 @@ is:
         applab: Búa til forrit í App Lab
         gamelab: Búa til Leikjasmiðjuverkefni
         weblab: Búa til Vefsmiðju (beta) verkefni
-      home: Forsíða
       my_dashboard: Stjórnborðið mitt
-      courses: Námskeið
       course_catalog: Námskeiðalisti
       project_gallery: Verkefni
       sections: Hópar
@@ -346,10 +345,16 @@ is:
       signin: Innskráning
       signup: Búa til aðgang
       already_registered: Þegar skráð/ur?
-      pair_programming: Félagaforritun
       team: Félagar
       driver: Ökumaður
       navigator: Leiðsögumaður
+      create: Búa til
+      applab: Appsmiðja
+      artist: Listamaður
+      gamelab: Leikjasmiðjan
+      playlab: Leikjasmiðja
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Framvinda %{name}
       progress: Framvinda þín

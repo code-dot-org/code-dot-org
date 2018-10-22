@@ -1,3 +1,4 @@
+---
 fa:
   data:
     blocks:
@@ -7,17 +8,11 @@ fa:
             '"seconds"': ثانیه
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
@@ -28,17 +23,11 @@ fa:
             '"height"': ارتفاع
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': بعدي
-            '"prev"': قبلی
           DIR:
             '1': "→"
             "-1": "←"
@@ -57,11 +46,30 @@ fa:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': در هم
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
       Dancelab_setDanceSpeed:
@@ -73,6 +81,16 @@ fa:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -102,8 +120,8 @@ fa:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'صحیح'
-            'false': 'غلط'
+            'true': صحیح
+            'false': غلط
       gamelab_getProp:
         options:
           PROPERTY:
@@ -227,6 +245,12 @@ fa:
             '"down"': فلش سمت پایین
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
+      RyanLab_moveForward:
+        text: برو جلو
+      RyanLab_turnLeft:
+        text: بپیچ به چپ
+      RyanLab_turnRight:
+        text: بپیچ به راست
       craft_ifPath:
         options:
           DIR:
@@ -240,3 +264,7 @@ fa:
         text: برو جلو
       craft_placeTorch:
         text: مشعل را قرار بده
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': مرغ

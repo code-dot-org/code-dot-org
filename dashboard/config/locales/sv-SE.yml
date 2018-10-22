@@ -112,6 +112,7 @@ sv:
     age: Ålder
     user_type: Är du elev eller lärare?
     submit: Registrera dig
+    next: Nästa
     teacher: Är du en lärare?
     valid_username: Tillgängligt!
     invalid_username: Användarnamnet måste innehålla minst fem tecken
@@ -244,8 +245,6 @@ sv:
         playlab: Skapa en App
         artist: Rita något
         applab: Skapa en App
-      home: Hem
-      courses: kurser
       project_gallery: Projekt
       sections: Avsnitt
       help_support: Hjälp och support
@@ -286,10 +285,15 @@ sv:
       signin: Logga in
       signup: Skapa ett konto
       already_registered: Redan registrerad?
-      pair_programming: Par-programmering
       team: Team
       driver: Förare
       navigator: Navigator
+      create: Skapa
+      applab: App Lab
+      artist: Konstnären
+      playlab: Spel-labb
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg

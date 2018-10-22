@@ -1,4 +1,5 @@
-"no":
+---
+'no':
   data:
     blocks:
       Dancelab_atTimestamp:
@@ -10,8 +11,6 @@
           GROUP:
             sprites: alle
           MOVE:
-            '"next"': Neste
-            '"prev"': Forrige
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -19,8 +18,6 @@
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Neste
-            '"prev"': Forrige
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -35,8 +32,6 @@
           GROUP:
             sprites: alle
           MOVE:
-            '"next"': Neste
-            '"prev"': Forrige
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -44,8 +39,6 @@
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Neste
-            '"prev"': Forrige
             MOVES.Rest: Ingen
           DIR:
             '1': "→"
@@ -84,11 +77,28 @@
         options:
           GROUP:
             sprites: alle
+          FORMAT:
+            '"random"': tilfeldig
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": høyre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfeldig
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': tilfeldig
       Dancelab_randomColor:
         text: tilfeldig farge
       Dancelab_setBackgroundEffect:
@@ -108,6 +118,18 @@
           EFFECT:
             '"none"': Ingen
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': høyde
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': høyde
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -143,8 +165,8 @@
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'sann'
-            'false': 'usann'
+            'true': sann
+            'false': usann
       gamelab_getProp:
         options:
           PROPERTY:
@@ -282,6 +304,12 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+      RyanLab_moveForward:
+        text: gå fremover
+      RyanLab_turnLeft:
+        text: snu mot venstre
+      RyanLab_turnRight:
+        text: snu mot høyre
       craft_ifPath:
         options:
           DIR:
@@ -295,3 +323,7 @@
         text: gå fremover
       craft_placeTorch:
         text: plasser fakkel
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': kylling

@@ -134,6 +134,7 @@ ga:
     age: Aois
     user_type: An dalta nó múinteoir thú?
     submit: Cláraigh
+    next: Ar Aghaidh
     teacher: An múinteoir thú?
     valid_username: Ar fáil!
     invalid_username: Ní mór ar a laghad 5 charachtar a bheith in ainm úsáideora
@@ -306,9 +307,7 @@ ga:
         applab: Déan aip sa tSaotharlann Aipeanna
         gamelab: Déan tionscadal sa tSaotharlann Cluichíochta
         weblab: Tosaigh togra nua i Saotharlann an Ghréasáin (béite)
-      home: Baile
       my_dashboard: Mo Phainéal
-      courses: Cúrsaí
       course_catalog: Cúrsaí
       project_gallery: Tograí
       sections: Rannáin
@@ -353,10 +352,16 @@ ga:
       signin: Logáil isteach
       signup: Cruthaigh cuntas
       already_registered: Cláraithe cheana?
-      pair_programming: Códáil Bheirte
       team: Foireann
       driver: Logáilte isteach
       navigator: Comhpháirtí
+      create: Cruthaigh
+      applab: Saotharlann Aipeanna
+      artist: Ealaíontóir
+      gamelab: An tSaotharlann Cluichíochta
+      playlab: Spraotharlann
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Dul chun cinn %{name}
       progress: Do dhul chun cinn

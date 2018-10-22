@@ -89,6 +89,7 @@ kk:
     age: Жасы
     user_type: Сіз оқушысыз ба немесе оқутышысыз ба?
     submit: Тіркелу
+    next: Келесі
     teacher: Сіз оқутышысыз ба?
     valid_username: Бұл логин бос!
     invalid_username: Логин 5 символдан кем болмауы керек
@@ -189,7 +190,6 @@ kk:
         playlab: Қосымша бағдарлама жасау
         artist: Кез келген нәрсе салу
         applab: Қосымша бағдарлама жасау
-      courses: Курстар
       project_gallery: Жобалар
       educate_hoc: Код жазу Сағаты
     user:
@@ -202,9 +202,14 @@ kk:
       signin: Кіру
       signup: Жеке парақшаны құрыңыз
       already_registered: Тіркелгенсіз бе?
-      pair_programming: Жұптасып Бағдарламалау
       team: Топ
       navigator: Навигатор
+      create: Құру
+      applab: Қосымшалар Лабораториясы
+      artist: Кейіпкер
+      playlab: Ойындар Лабораториясы
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: Сіздің сабақ оқу барысыңыз

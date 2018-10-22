@@ -262,9 +262,7 @@ km:
         applab: បង្កើតកម្មវិធី App Lab​មួយ
         gamelab: បង្កើតគម្រោង Game​ Lab​ មួយ
         weblab: បង្កើតគម្រោង Web Lab មួយ (សាកល្បង)
-      home: ទំព័រដើម
       my_dashboard: ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ
-      courses: វគ្គ​សិក្សា
       course_catalog: មុខវិទ្យាដោយផ្នែក
       project_gallery: គម្រោង
       sections: វគ្គ
@@ -301,6 +299,7 @@ km:
       signup: បង្កើតគណនីថ្មី
       already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
       team: ក្រុម
+      create: បង្កើត
     popup:
       progress_for_user: ដំណើរការរបស់%{name}
       progress: ដំណើរការ​របស់​អ្នក

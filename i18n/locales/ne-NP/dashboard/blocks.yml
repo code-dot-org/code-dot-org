@@ -1,3 +1,4 @@
+---
 ne:
   data:
     blocks:
@@ -7,17 +8,11 @@ ne:
             '"seconds"': seconds
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': अर्को
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': अर्को
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
@@ -28,17 +23,11 @@ ne:
             '"height"': height
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': अर्को
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': अर्को
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
@@ -61,6 +50,18 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_randomColor:
         text: कुनै एक  रङ
       Dancelab_setDanceSpeed:
@@ -76,6 +77,16 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -87,14 +98,6 @@ ne:
             '"scale"': size
             '"height"': height
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-      Dancelab_whileKey:
         options:
           KEY:
             '"up"': माथि
@@ -173,6 +176,11 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -217,6 +225,12 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
+      RyanLab_moveForward:
+        text: move forward
+      RyanLab_turnLeft:
+        text: turn left
+      RyanLab_turnRight:
+        text: turn right
       craft_ifPath:
         options:
           DIR:
@@ -230,3 +244,7 @@ ne:
         text: move forward
       craft_placeTorch:
         text: place torch
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': chicken

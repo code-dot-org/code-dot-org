@@ -85,6 +85,7 @@ ca:
     age: 'Edat'
     user_type: 'Sou alumne o mestre?'
     submit: 'Inscriure''s'
+    next: 'Següent'
     teacher: 'Sou mestre?'
     valid_username: "Disponible!"
     invalid_username: "El nom d'usuari ha de tenir almenys 5 caràcters"
@@ -182,13 +183,6 @@ ca:
         applab: 'Fes un App'
       project_gallery: "Projectes"
       educate_hoc: "Hora del codi"
-    create_button:
-      create: 'Crea'
-      applab: 'Laboratori d''aplicacions'
-      artist: 'Artista'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Pàgina d''inici de mestre'
       label: 'Hola %{username}'
@@ -197,6 +191,12 @@ ca:
       logout: 'Tanca la sessió'
       signin: 'Inicia la sessió'
       already_registered: 'Ja estàs registrat?'
+      create: 'Crea'
+      applab: 'Laboratori d''aplicacions'
+      artist: 'Artista'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progrés de %{name}"
       progress: 'El teu progrés'

@@ -120,6 +120,8 @@ eu:
         title: izenburua
       CSDU2L01 SFLP:
         title: izenburua
+      CSP ExploreL02 SFLP:
+        title: izenburua
       CSP Journal Entry Placeholder2:
         title: izenburua
       CSPPD3-u2 Welcome:
@@ -1024,9 +1026,17 @@ eu:
         Matching: Parekatuz
       PDAlg Design Recipe Video:
         Definition: Definizioa
+      PDAlg Types Video:
+        Image: Irudia
+        Number: Zenbakia
+        String: Testua
       PDK5 What is unplugged:
         Question: Galdera
       'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
         E: E
       U3L19 - MATCH what are values of abc:
         '10': '10'
@@ -1039,6 +1049,7 @@ eu:
         '5': '5'
         '7': '7'
         '8': '8'
+        a: a
         title: izenburua
       U3L19 - MC what are values of abc:
         title: izenburua
@@ -1242,6 +1253,7 @@ eu:
         Maze Multiple Choice: Labirintoa - aukera anitza
         Which blocks solve the puzzle?: Zein blokek ebazten dute puzlea?
       CB_Question_3:
+        A: A
         Y: true
       CSD Prediction Header Size:
         Question: Galdera
@@ -1467,6 +1479,10 @@ eu:
         '2': '2'
         '4': '4'
       U1L07 Assessment 1:
+        A: A
+        B: B
+        C: C
+        D: D
         E: E
       U1L6 Assessment multiple choice:
         '10': '10'
@@ -1508,6 +1524,10 @@ eu:
           is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
           “distance” between points is depicted by the number of line segments connecting
           any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+        A: A
+        B: B
+        C: C
+        D: D
         E: E
       U2L08 Assessment 1:
         '11': '11'
@@ -1646,6 +1666,24 @@ eu:
         '12': '12'
         '15': '15'
         '4': '4'
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        D: D
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -1685,6 +1723,7 @@ eu:
         'No': Ez
         'Yes': Bai
       csd-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Zibersegurtasuna
         'No': Ez
         'Yes': Bai
       csd-post-survey-2018-topic-databases:
@@ -1749,6 +1788,7 @@ eu:
         'No': Ez
         'Yes': Bai
       csp-post-survey-2018-topic-cybersecurity:
+        Cybersecurity: Zibersegurtasuna
         'No': Ez
         'Yes': Bai
       csp-post-survey-2018-topic-databases:
@@ -2002,6 +2042,15 @@ eu:
         '4': '4'
         '5': '5'
         '6': '6'
+      cspu5_assess3_mysterySwap:
+        a: a
+        d: d
+      cspu5_assess3_mysterySwap_2018:
+        a: a
+        d: d
+      cspu5_assess3_mysterySwap_exam_prep:
+        a: a
+        d: d
       cspu5_assess4_dataReturns:
         '10': '10'
         '16': '16'

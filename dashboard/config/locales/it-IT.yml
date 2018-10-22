@@ -141,6 +141,7 @@ it:
     age: Età
     user_type: Sei uno studente o un insegnante?
     submit: Iscriviti
+    next: Seguente
     teacher: Sei un insegnante?
     valid_username: Disponibile!
     invalid_username: Il Nome utente deve essere di almeno 5 caratteri
@@ -322,9 +323,7 @@ it:
         applab: Costruisci una App in Sviluppo App
         gamelab: Crea un progetto in Sviluppo Giochi
         weblab: Crea un progetto in Sviluppo Web (versione provvisoria)
-      home: Home
       my_dashboard: Controllo
-      courses: Corsi
       course_catalog: Corsi
       project_gallery: Progetti
       sections: Classi
@@ -369,10 +368,17 @@ it:
       signin: Accedi
       signup: Crea un account
       already_registered: Sei già iscritto?
-      pair_programming: Programmazione in Coppia
       team: Squadra
       driver: Conducente
       navigator: Navigatore
+      create: Crea
+      applab: Sviluppo App
+      artist: Artista
+      gamelab: Sviluppo Giochi
+      playlab: Laboratorio
+      minecraft: Minecraft
+      flappy: Flappy
+      view_all: Guarda tutti i progetti...
     popup:
       progress_for_user: "%{name} in corso"
       progress: I tuoi progressi

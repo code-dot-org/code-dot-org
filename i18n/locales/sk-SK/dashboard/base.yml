@@ -108,6 +108,7 @@ sk:
     age: 'Vek'
     user_type: 'Ste študent/žiak alebo učiteľ?'
     submit: 'Zaregistrovať sa'
+    next: 'Ďalší'
     teacher: 'Ste učiteľ?'
     valid_username: "Dostupné!"
     invalid_username: "Užívateľské meno musí obsahovať aspoň 5 znakov"
@@ -301,14 +302,6 @@ sk:
       help_us: "Pomôžte nám"
       teach: "Vyučujte"
       about: "O nás"
-    create_button:
-      create: 'Vytvoriť'
-      applab: 'Laboratórium aplikácií'
-      artist: 'Umelec'
-      gamelab: 'Herné laboratórium'
-      playlab: 'Herné laboratórium'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Domovská stránka učiteľa'
       district_dashboard: 'Oblasť Nástenka'
@@ -322,6 +315,13 @@ sk:
       team: 'Tím'
       driver: 'Prihlásený'
       navigator: 'Navigátor'
+      create: 'Vytvoriť'
+      applab: 'Laboratórium aplikácií'
+      artist: 'Umelec'
+      gamelab: 'Herné laboratórium'
+      playlab: 'Herné laboratórium'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Pokrok pre užívateľa %{name}"
       progress: 'Váš pokrok'
@@ -590,6 +590,7 @@ sk:
       audience: "Vek 13+"
       cta: "Nauč sa ako"
     hoc-encryption:
+      title: "Jednoduché šifrovanie"
       body: "Študenti sa naučia metódy na vytvorenie a prelomenie zašifrovaných správ."
     weblab:
       title: "Webové laboratórium (beta)"
@@ -610,7 +611,7 @@ sk:
       body: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
     hero:
       title: "Minecraft"
-      body: "Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou! Prejdite sa po Minecrafte s kódom."
+      body: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
     sports:
       body: "Vytvorte basketbalovú hru alebo pospájajte a pomiešajte viaceré športy."
     text-compression:
@@ -767,10 +768,10 @@ sk:
     save: "Uložiť"
     delete: "Odstrániť"
     import: "Import"
-    share_link_import_bad_link_header: "Prepojenie na zdieľanie sa nerozpoznalo"
-    share_link_import_bad_link_body: "Prepojenie na zdieľanie sa nemohlo importovať. Uistite sa, že používate prepojenie z hlavolamu Minecraft: Agent a že ste skopírovali celé prepojenie."
+    share_link_import_bad_link_header: "Link na zdieľanie nebol nerozpoznaný"
+    share_link_import_bad_link_body: "Link na zdieľanie sa nám nepodarilo importovať. Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý link."
     share_link_import_error_header: "Vyskytla sa chyba."
-    share_link_import_error_body: "Vyskytol sa problém s importom tohto prepojenia na zdieľanie. Skúste to znova."
+    share_link_import_error_body: "Vyskytol sa problém s importom tohto linku na zdieľanie. Skús to znova."
     exit: "Vrátiť sa do kurzu"
     my_projects: "Moje Projekty"
     project_gallery: "Projekty"
@@ -879,6 +880,7 @@ sk:
     csp_ap_3: 'Kapitola 3: AP výtváranie výkonnovej úlohy'
     csp_postap_1: 'Kapitola 1: Práca s a vizualizácia dát'
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
+    csp2_1_2018: 'Lekcia 2: Digitálne informácie'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
     dlp: 'Výzvy na zhodnotenie'
   external_links:
@@ -1040,6 +1042,7 @@ sk:
       more: 'Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku, navštívte <a href="%{pl_overview}">Prehľad Vzdelávacieho programu pre profesionálov</a>.'
     no_teacher_email:
       body: 'Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku s nastaveniami Vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte tento formulár.'
+  courses_category: 'Všetky kurzy'
   cookie_banner:
     message: 'Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s uložením cookies na Vašom počítači alebo zariadení.'
     more_information: "Prečítajte si Zásady ochrany súkromia pre Code.org."

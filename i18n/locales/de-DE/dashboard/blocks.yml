@@ -1,3 +1,4 @@
+---
 de:
   data:
     blocks:
@@ -9,17 +10,11 @@ de:
         options:
           GROUP:
             sprites: Alle
-          MOVE:
-            '"next"': Weiter
-            '"prev"': Zurück
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Weiter
-            '"prev"': Zurück
           DIR:
             '1': "→"
             "-1": "←"
@@ -32,17 +27,11 @@ de:
         options:
           GROUP:
             sprites: Alle
-          MOVE:
-            '"next"': Weiter
-            '"prev"': Zurück
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Weiter
-            '"prev"': Zurück
           DIR:
             '1': "→"
             "-1": "←"
@@ -65,11 +54,28 @@ de:
         options:
           GROUP:
             sprites: Alle
+          FORMAT:
+            '"random"': zufällig
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": links
             "{x: 300, y: 200}": rechts
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': zufällig
       Dancelab_randomColor:
         text: zufällige Farbe
       Dancelab_setDanceSpeed:
@@ -81,6 +87,18 @@ de:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"height"': Höhe
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: Alle
+          PROPERTY:
+            '"scale"': Größe
+            '"height"': Höhe
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': Größe
@@ -116,8 +134,8 @@ de:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'wahr'
-            'false': 'falsch'
+            'true': wahr
+            'false': falsch
       gamelab_getProp:
         options:
           PROPERTY:
@@ -255,6 +273,12 @@ de:
             '"down"': Pfeil-nach-unten
             '"left"': Pfeil-nach-links
             '"right"': Pfeil-nach-rechts
+      RyanLab_moveForward:
+        text: vorwärts bewegen
+      RyanLab_turnLeft:
+        text: nach links drehen
+      RyanLab_turnRight:
+        text: nach rechts drehen
       craft_ifPath:
         options:
           DIR:
@@ -268,3 +292,7 @@ de:
         text: vorwärts bewegen
       craft_placeTorch:
         text: Fackel platzieren
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': Huhn

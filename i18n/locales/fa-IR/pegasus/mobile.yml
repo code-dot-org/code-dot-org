@@ -343,6 +343,7 @@
   volunteer_engineer_submission_field_description: "توضیحات"
   volunteer_engineer_submission_field_email: "نشانی رایانامه"
   volunteer_engineer_submission_field_email_placeholder: "نشانی رایانامه"
+  volunteer_engineer_submission_field_email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
   volunteer_engineer_submission_field_email_preference_yes: 'بله'
   volunteer_engineer_submission_field_email_preference_no: 'نه'
   volunteer_engineer_submission_submit: "ارسال کنید"
@@ -963,3 +964,8 @@
   user_header_settings: "حساب کاربری من"
   user_header_logout: "خروج"
   user_header_signin: "ورود"
+  user_header_gamelab: "کارگاه بازی سازی"
+  user_header_playlab: "آزمایشگاه بازی"
+  user_header_minecraft: "ماینکرفت"
+  user_header_flappy: "فلاپی"
+  creativity_create: "ایجاد"

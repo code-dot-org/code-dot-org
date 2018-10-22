@@ -232,6 +232,9 @@ el:
       CSDU2L01 SFLP:
         description here: περιγραφή εδώ
         title: τίτλος
+      CSP ExploreL02 SFLP:
+        description here: περιγραφή εδώ
+        title: τίτλος
       CSP Journal Entry Placeholder2:
         description here: περιγραφή εδώ
         title: τίτλος

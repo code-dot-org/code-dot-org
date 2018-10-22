@@ -4,38 +4,90 @@ import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import experiments from "@cdo/apps/util/experiments";
-import songLibrary from "../code-studio/songLibrary.json";
-import gamelabMsg from '@cdo/gamelab/locale';
+import Radium from "radium";
+import {connect} from "react-redux";
+import i18n from '@cdo/locale';
+import * as danceRedux from "../dance/redux";
+import Sounds from "../Sounds";
+import project from "../code-studio/initApp/project";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
 
 const styles = {
   selectStyle: {
-    width: GAME_WIDTH,
+    width: '100%',
   }
 };
 
-const SongSelector = class extends React.Component {
+const SongSelector = Radium(class extends React.Component {
+  static propTypes = {
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired
+  };
+
+  state = {
+    songsData: []
+  };
+
+  changeSong = (event) => {
+    const song = event.target.value;
+    this.props.setSong(song);
+    this.loadSong(song);
+  };
+
+  loadSong(song) {
+    //Load song
+    let options = {id: song};
+    options['mp3'] = `https://curriculum.code.org/media/uploads/${this.state.songsData[options.id].url}.mp3`;
+    Sounds.getSingleton().register(options);
+
+    if (this.props.isProjectLevel) {
+      //Save song to project
+      project.saveSelectedSong(song);
+    }
+  }
+
+  componentDidMount() {
+    fetch(`/api/v1/sound-library/hoc_song_meta/songManifest.json`)
+      .then(response => response.json())
+      .then(data => this.parseSongOptions(data));
+  }
+
+  parseSongOptions(data) {
+    let songs = {};
+    if (data) {
+      data.songs.forEach((song) => {
+          songs[song.id] = {title: song.text, url: song.url};
+      });
+    }
+    this.setState({songsData: songs}, () => {
+      this.loadSong(this.props.selectedSong);
+    });
+  }
+
   render() {
     return (
-      <div id="song_selector">
-        <label><b>{gamelabMsg.selectSong()}</b></label>
-        <select style={styles.selectStyle}>
-          {Object.keys(songLibrary).map((option, i) => (
-            <option key={i}>{songLibrary[option].title}</option>
+      <div>
+        <label><b>{i18n.selectSong()}</b></label>
+        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
+          {Object.keys(this.state.songsData).map((option, i) => (
+            <option key={i} value={option}>{this.state.songsData[option].title}</option>
           ))}
         </select>
       </div>
     );
   }
-};
+});
 
-
-export default class DanceVisualizationColumn extends React.Component {
+class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
+    setSong: PropTypes.func.isRequired,
+    selectedSong: PropTypes.string.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired
   };
 
   render() {
@@ -49,8 +101,8 @@ export default class DanceVisualizationColumn extends React.Component {
     };
     return (
       <span>
-        {experiments.isEnabled("songSelector") &&
-          <SongSelector/>
+        {!this.props.isShareView &&
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} isProjectLevel={this.props.isProjectLevel}/>
         }
         <ProtectedVisualizationDiv>
           <div
@@ -66,3 +118,11 @@ export default class DanceVisualizationColumn extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  isProjectLevel: state.pageConstants.isProjectLevel,
+  isShareView: state.pageConstants.isShareView,
+  selectedSong: state.selectedSong,
+}), dispatch => ({
+  setSong: song => dispatch(danceRedux.setSong(song))
+}))(DanceVisualizationColumn);

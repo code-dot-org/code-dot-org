@@ -80,6 +80,7 @@ bn:
     age: 'বয়স'
     user_type: 'আপনি কি একজন ছাত্র বা শিক্ষক?'
     submit: 'সাইন আপ'
+    next: 'পরবর্তী'
     teacher: 'আপনি কি শিক্ষক?'
     valid_username: "লভ্য!"
     invalid_username: "ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে"
@@ -163,13 +164,6 @@ bn:
       project_gallery: "প্রকল্প"
       educate_hoc: "এক ঘন্টার কোড"
       stats: "পরিসংখ্যান"
-    create_button:
-      create: 'তৈরি করুন'
-      applab: 'অ্যাপ ল্যাব'
-      artist: 'শিল্পী'
-      playlab: 'প্লে ল্যাব'
-      minecraft: 'মাইনক্র্যাফট'
-      flappy: 'ফ্লাপি'
     user:
       classroom: 'শিক্ষক হোম পেজ'
       label: 'হ্যালো %{username}'
@@ -177,6 +171,12 @@ bn:
       settings: 'আমার একাউন্ট'
       logout: 'সাইন আউট'
       signin: 'সাইন ইন করুন'
+      create: 'তৈরি করুন'
+      applab: 'অ্যাপ ল্যাব'
+      artist: 'শিল্পী'
+      playlab: 'প্লে ল্যাব'
+      minecraft: 'মাইনক্র্যাফট'
+      flappy: 'ফ্লাপি'
     popup:
       progress: 'আপনার অগ্রগতি'
       close: 'বন্ধ'

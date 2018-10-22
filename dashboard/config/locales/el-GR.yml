@@ -142,6 +142,7 @@ el:
     age: Ηλικία
     user_type: Είστε ένα μαθητής ή δάσκαλος;
     submit: Εγγραφή
+    next: Επόμενο
     teacher: Είσαι δάσκαλος;
     valid_username: Διαθέσιμο!
     invalid_username: Το όνομα χρήστη πρέπει να αποτελείται τουλάχιστον από 5 χαρακτήρες
@@ -281,7 +282,6 @@ el:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
         applab: Δημιουργήστε μια εφαρμογή
-      courses: Τες
       project_gallery: Έργα
       educate_hoc: Η Ώρα του Κώδικα
     user:
@@ -294,10 +294,16 @@ el:
       signin: Σύνδεση
       signup: Δημιουργήστε ένα λογαριασμό
       already_registered: Έχετε εγγραφεί ήδη;
-      pair_programming: Προγραμματισμός κατά ζεύγη
       team: Ομάδα
       driver: Οδηγός-αρχηγός
       navigator: Πλοηγός
+      create: Δημιουργία
+      applab: Εργαστήριο εφαρμογών
+      artist: Καλλιτέχνης
+      gamelab: Game Lab
+      playlab: Εργαστήριο Παιχνιδιού
+      minecraft: Minecraft
+      flappy: Πουλάκι
     popup:
       progress_for_user: πρόοδος του %{name}
       progress: Η πρόοδός σου

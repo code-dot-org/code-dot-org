@@ -1014,6 +1014,8 @@ pt-BR:
               name: Estúdio
             Text Compression:
               name: Compressão de texto
+            Web Lab:
+              name: Laboratório Web
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1863,10 +1865,18 @@ pt-BR:
               name: 'Depuração: Bugs não encontrados'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistência e frustração: Stevie e as bolinhas de gude'
+            Sequence & Algorithms:
+              name: Sequência & Algoritmos
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Programming in Maze:
               name: Programação no labirinto
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            Keep it Private:
+              name: Mantenha-o confidencial
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
             Your Digital Footprint:
@@ -2194,10 +2204,21 @@ pt-BR:
               name: 'Algoritmos da vida real: plante uma semente'
             Learn to Drag and Drop:
               name: Sequenciando com arrastar e soltar
+            Your Digital Footprint:
+              name: 'Cidadania digital: Minha Pegada Digital'
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Programming in Maze:
               name: Programação no labirinto
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+            More Programming in Maze:
+              name: Mais Programação em Labirinto
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
           title: Curso B
           assignment_family_title: Curso B
+          description_audience: 'Idades: 5-8'
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
             No final deste curso, você irá irá seu próprio jogo ou história, que poderá
             ser compartilhada.
@@ -2225,22 +2246,32 @@ pt-BR:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Nested Loops:
               name: Laços aninhados
           title: Curso E
           assignment_family_title: Curso E
         coursef-2017:
           stages:
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
           title: Curso F
           assignment_family_title: Curso F
         express-2017:
           stages:
             Introduction:
               name: Introdução
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Internet:
               name: Internet
             Digital Citizenship:
@@ -2270,8 +2301,14 @@ pt-BR:
               name: 'Algoritmos da vida real: plante uma semente'
             Learn to Drag and Drop:
               name: Sequenciando com arrastar e soltar
+            'Online Safety: Your Digital Footprint':
+              name: 'Cidadania digital: Minha Pegada Digital'
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Programming in Maze:
               name: Programação no labirinto
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Spelling Bee:
               name: Soletrando
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
@@ -2311,8 +2348,12 @@ pt-BR:
               name: Improvizando e Interagindo
         e-f-ramp:
           stages:
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Nested Loops:
               name: Laços aninhados
             Conditionals:
@@ -2343,6 +2384,8 @@ pt-BR:
           stages:
             Introduction:
               name: Introdução
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             'How it Works: The Internet':
               name: 'Como Isto Funciona: A Internet'
             Building a Foundation:
@@ -2351,8 +2394,12 @@ pt-BR:
               name: Laços aninhados
         new-e:
           stages:
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Conditionals:
               name: Condições
             Internet:
@@ -2361,8 +2408,12 @@ pt-BR:
               name: Crowdsourcing
         new-f:
           stages:
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
             Envelope Variables:
@@ -2414,8 +2465,14 @@ pt-BR:
               name: Pesquisa Pós-Curso
         course-e-2018:
           stages:
+            courseB_unplugged_MRF_2018:
+              name: courseB_unplugged_MRF_2018
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Nested Loops:
               name: Laços aninhados
             Introduction:
@@ -2428,8 +2485,12 @@ pt-BR:
               name: Crowdsourcing
         course-f-2018:
           stages:
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Introduction:
               name: Introdução
             Ice Age Play Lab:
@@ -2595,6 +2656,8 @@ pt-BR:
               name: Introdução
             Building a Foundation:
               name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
             Nested Loops:
               name: Laços aninhados
             'How it Works: The Internet':
@@ -2605,6 +2668,8 @@ pt-BR:
               name: Programando com Angry Birds
             'Loops: Getting Loopy':
               name: Repetindo
+            Copyright and Creativity:
+              name: Copyright e Direitos Autorais
             Conditionals with Cards:
               name: Condicionais com cartas
             'Functions: Songwriting':
@@ -2631,6 +2696,9 @@ pt-BR:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet.
             No final deste curso, você irá irá seu próprio jogo ou história, que poderá
             ser compartilhada.
+          description_short: Uma introdução à ciência da computação na alfabetização
+            Semelhante ao curso A, mas com conceitos mais aprofundados.
+          description_audience: 'Idades: 5-8'
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Depuração: Bugs não encontrados'
@@ -2642,12 +2710,26 @@ pt-BR:
               name: Aprenda a arrastar e soltar
             Your Digital Footprint:
               name: Seu rastro digital
+            'Programming: My Robotic Friends':
+              name: Meus Amigos Robôs Jr.
             Programming in Maze:
               name: Programação no labirinto
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
+            'Loops: My Loopy Robotic Friends':
+              name: Meus Amigos Robôs Malucos Jr.
             Loops in Collector:
               name: Repetições com Laurel
+            Loops in Artist:
+              name: Desenho jardins com repetições
+            Events in Play Lab:
+              name: Um Battle Royal com eventos
+            Programming in Ice Age:
+              name: Programação com Scrat
             Loops in Ice Age:
               name: Repetições com Scrat
+            Sequencing with Scrat:
+              name: Sequenciando com Scrat
             Move It, Move It:
               name: Criando caminhos
             Copyright and Creativity:
@@ -2899,18 +2981,32 @@ pt-BR:
               name: 'Algoritmos da vida real: plante uma semente'
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
+            'Programming: My Robotic Friends':
+              name: Meus Amigos Robôs Jr.
             Programming in Maze:
               name: Programação no labirinto
+            'Loops: My Loopy Robotic Friends':
+              name: Meus Amigos Robôs Malucos Jr.
             Loops in Collector:
               name: Repetições com Laurel
+            Loops in Artist:
+              name: Desenho jardins com repetições
+            Events in Play Lab:
+              name: Um Battle Royal com eventos
             Spelling Bee:
               name: Soletrando
             Move It, Move It:
               name: Criando caminhos
+            Sequencing with Scrat:
+              name: Sequenciando com Scrat
             Your Digital Footprint:
               name: Seu rastro digital
+            Programming in Ice Age:
+              name: Programação com Scrat
             Copyright and Creativity:
               name: É Ótimo Criar e Jogar Limpo
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
             Loops in Ice Age:
               name: Repetições com Scrat
             'Persistence & Frustration: Stevie and the Big Project':

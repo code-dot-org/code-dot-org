@@ -108,6 +108,7 @@ lt:
     age: Amžius
     user_type: 'Kas tu: mokinys ar mokytojas?'
     submit: Užsiregistruoti
+    next: Kitas
     teacher: Ar jūs mokytojas?
     valid_username: Galima!
     invalid_username: Naudotojo vardas turi būti ne trumpesnis nei 5 simboliai
@@ -234,9 +235,7 @@ lt:
         playlab: Sukurk programėlę
         artist: Nupiešk ką nors
         applab: Sukurk programėlę
-      home: Pradžia
       my_dashboard: Valdymo skydelis
-      courses: Kursai
       project_gallery: Projektai
       report_bug: Pranešti apie klaidą
       teacher_community: Mokytojų bendruomenė
@@ -259,10 +258,16 @@ lt:
       signin: Prisijungti
       signup: Sukurti paskyrą
       already_registered: Jau užsiregistravote?
-      pair_programming: Programavimas poroje
       team: Komanda
       driver: Tvarkyklė
       navigator: Navigatorius
+      create: Sukurti
+      applab: App Lab
+      artist: Menininkas
+      gamelab: Žaidimų laboratorija
+      playlab: Laboratorija
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} pažanga"
       progress: Jūsų pažanga

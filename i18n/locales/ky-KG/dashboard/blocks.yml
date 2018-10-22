@@ -1,3 +1,4 @@
+---
 ky:
   data:
     blocks:
@@ -76,11 +77,28 @@ ky:
         options:
           GROUP:
             sprites: баары
+          FORMAT:
+            '"random"': туш келди
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": солго
             "{x: 300, y: 200}": оңго
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": туш келди
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': туш келди
       Dancelab_randomColor:
         text: кокус түс
       Dancelab_setBackgroundEffect:
@@ -100,6 +118,18 @@ ky:
           EFFECT:
             '"none"': Жок
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: баары
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': өлчөмү
@@ -126,14 +156,6 @@ ky:
             '"left"': солго
             '"right"': оңго
             '"space"': космос
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': өйдө
-            '"down"': ылдый
-            '"left"': солго
-            '"right"': оңго
-            '"space"': космос
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -143,8 +165,8 @@ ky:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'туура'
-            'false': 'жалган'
+            'true': туура
+            'false': жалган
       gamelab_getProp:
         options:
           PROPERTY:
@@ -225,6 +247,11 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солго
+            "{x: 300, y: 200}": оңго
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -277,6 +304,12 @@ ky:
             '"down"': жебе төмөн
             '"left"': жебе солго
             '"right"': жебе оңго
+      RyanLab_moveForward:
+        text: алдыга жылдыр
+      RyanLab_turnLeft:
+        text: солго бурул
+      RyanLab_turnRight:
+        text: оңго бурул
       craft_ifPath:
         options:
           DIR:
@@ -290,3 +323,7 @@ ky:
         text: алдыга жылдыр
       craft_placeTorch:
         text: чырак орнотуу
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': тоок

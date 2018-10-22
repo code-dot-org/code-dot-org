@@ -99,6 +99,7 @@ sq:
     age: 'Mosha'
     user_type: 'A jeni nxënës apo mësues?'
     submit: 'Rregjistrohu'
+    next: 'Tjetër'
     teacher: 'A jeni një mësues?'
     valid_username: "I disponueshëm!"
     invalid_username: "Emri i përdoruesit duhet të ketë të paktën 5 karaktere"
@@ -203,13 +204,6 @@ sq:
         applab: 'Bëj një Aplikacion App Lab'
       project_gallery: "Projekte"
       educate_hoc: "Ora e Kodimit"
-    create_button:
-      create: 'Krijo'
-      applab: 'Laboratori i Aplikacioneve'
-      artist: 'Artisti'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Faqja Kryesore e Mësuesit'
       district_dashboard: 'Pulti i Qarkut'
@@ -223,6 +217,12 @@ sq:
       team: 'Skuadra'
       driver: 'Përdorues'
       navigator: 'Lundrues'
+      create: 'Krijo'
+      applab: 'Laboratori i Aplikacioneve'
+      artist: 'Artisti'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'

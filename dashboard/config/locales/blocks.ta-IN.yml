@@ -12,6 +12,10 @@ ta:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -22,19 +26,36 @@ ta:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
+      Dancelab_getProp:
         options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Dancelab_setDanceSpeed:
@@ -45,11 +66,27 @@ ta:
             '4': very fast
             '0.5': slow
             '0.25': very slow
-      Dancelab_whenKey:
+      Dancelab_setProp:
         options:
-          KEY:
-            '"space"': வெளி
-      Dancelab_whileKey:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_whenKey:
         options:
           KEY:
             '"space"': வெளி
@@ -82,8 +119,28 @@ ta:
         options:
           KEY:
             '"space"': வெளி
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"w"': மேற்கு
+            '"s"': தெற்கு
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"w"': மேற்கு
+            '"s"': தெற்கு
+      RyanLab_moveForward:
+        text: முன்னோக்கி நகர்த்த
+      RyanLab_turnLeft:
+        text: இடதுபுறம் திரும்பவும்
+      RyanLab_turnRight:
+        text: வலதுபுறம் திரும்பவும்
       craft_ifPath:
         options:
           DIR:
@@ -96,3 +153,7 @@ ta:
         text: முன்னோக்கி நகர்த்த
       craft_placeTorch:
         text: இடம் மின்வளக்கு
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': கோழி

@@ -50,7 +50,7 @@ describe("Quick View", () => {
   });
 
   describe("After receiving applications from server", () => {
-    const data = [{
+    const applicationsData = [{
       id: 8,
       created_at: "2017-10-25T21:26:06.000Z",
       applicant_name: "Clare Constantine",
@@ -66,7 +66,7 @@ describe("Quick View", () => {
         [
           200,
           {"Content-Type": "application/json"},
-          JSON.stringify(data)
+          JSON.stringify(applicationsData)
         ]
       );
 
@@ -93,7 +93,7 @@ describe("Quick View", () => {
     it("Renders 1 table with the returned applications", () => {
       const table = quickView.find(QuickViewTable);
       expect(table).to.have.length(1);
-      expect(table.prop('data')).to.eql(data);
+      expect(table.prop('applications')).to.eql(applicationsData);
     });
     it("Renders the CSV Download button", () => {
       expect(quickView.find("Button").findWhere(b => b.text() === 'Download CSV')).to.have.length(1);

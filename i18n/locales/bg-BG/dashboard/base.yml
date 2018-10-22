@@ -98,6 +98,7 @@ bg:
     age: 'Възраст'
     user_type: 'Вие ученик или преподавател сте?'
     submit: 'Регистрирайте се'
+    next: 'Напред'
     teacher: 'Учител ли сте?'
     valid_username: "Налично!"
     invalid_username: "Потребителското име трябва да бъде най-малко 5 знака"
@@ -270,14 +271,6 @@ bg:
       help_us: "Помогнете ни"
       teach: "Обучи"
       about: "Относно"
-    create_button:
-      create: 'Създай'
-      applab: 'Лаборатория за приложения'
-      artist: 'Художник'
-      gamelab: 'Играта лаборатория'
-      playlab: 'Театрална лаборатория'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Начална страница на учителя'
       district_dashboard: 'Областно табло'
@@ -291,6 +284,13 @@ bg:
       team: 'Екип'
       driver: 'Шофьор'
       navigator: 'Навигатор'
+      create: 'Създай'
+      applab: 'Лаборатория за приложения'
+      artist: 'Художник'
+      gamelab: 'Играта лаборатория'
+      playlab: 'Театрална лаборатория'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "на %{name} в прогрес"
       progress: 'Вашият напредък'

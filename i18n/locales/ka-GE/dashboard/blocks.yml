@@ -1,3 +1,4 @@
+---
 ka:
   data:
     blocks:
@@ -16,8 +17,6 @@ ka:
           GROUP:
             sprites: ყველა
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -26,8 +25,6 @@ ka:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -40,14 +37,11 @@ ka:
             '"width"': სიგრძე
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
-            '"tint"': შეფერადება
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: ყველა
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -56,8 +50,6 @@ ka:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': შემდეგი
-            '"prev"': წინა
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
           DIR:
@@ -115,6 +107,7 @@ ka:
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი
+            '"random"': შემთხვევითი
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -126,6 +119,23 @@ ka:
             "{x: 100, y: 300}": ქვედა მარცხენა
             "{x: 300, y: 300}": ქვედა მარჯვენა
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"grid"': ბადე
+            '"row"': მწკრივი
+            '"column"': სვეტი
+            '"random"': შემთხვევითი
       Dancelab_randomColor:
         text: შემთხვევითი ფერი
       Dancelab_setBackgroundEffect:
@@ -157,6 +167,23 @@ ka:
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
             '"tint"': შეფერადება
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: ყველა
+          PROPERTY:
+            '"scale"': ზომა
+            '"width"': სიგრძე
+            '"height"': სიმაღლე
+            '"rotation"': შებრუნება
+            '"tint"': შეფერადება
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"width"': სიგრძე
+            '"height"': სიმაღლე
+            '"rotation"': შებრუნება
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -227,8 +254,8 @@ ka:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'ჭეშმარიტი'
-            'false': 'მცდარი'
+            'true': ჭეშმარიტი
+            'false': მცდარი
       gamelab_enableDebug:
         text: გამართვის რეჟიმის ჩართვა
       gamelab_firstTouched:
@@ -495,6 +522,12 @@ ka:
             '"down"': ქვედა ისარი
             '"left"': მარცხენა ისარი
             '"right"': მარჯვენა ისარი
+      RyanLab_moveForward:
+        text: წინ გადაადგილება
+      RyanLab_turnLeft:
+        text: მარცხნივ მობრუნება
+      RyanLab_turnRight:
+        text: მარჯვნივ მობრუნება
       Vector_positionCenter:
         text: ცენტრი
       Vector_randomLocation:
@@ -514,3 +547,7 @@ ka:
         text: წინ გადაადგილება
       craft_placeTorch:
         text: ჩირაღდნის დაყენება
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': ქათამი

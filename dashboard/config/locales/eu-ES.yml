@@ -92,6 +92,7 @@ eu:
     age: Adina
     user_type: Ikaslea edo irakaslea zara?
     submit: Eman izena
+    next: Hurrengoa
     teacher: Irakaslea al zara?
     valid_username: Erabilgarri!
     invalid_username: Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu
@@ -190,7 +191,6 @@ eu:
         playlab: Aplikazio bat sortu
         artist: Marraztu zerbait
         applab: Aplikazio bat sortu
-      courses: Mailak
       project_gallery: Proiektuak
       educate_hoc: Kode Ordua
     user:
@@ -202,7 +202,12 @@ eu:
       logout: Amaitu saioa
       signin: Hasi saioa
       already_registered: Dagoeneko izena emanda?
-      pair_programming: Bikoteka programatzen
+      create: Sortu
+      applab: App laborategia
+      artist: Artista
+      playlab: Jolas Laborategia
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena

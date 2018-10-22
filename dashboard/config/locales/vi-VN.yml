@@ -136,6 +136,7 @@ vi:
     age: Tuổi
     user_type: Bạn là học viên hay Giáo viên?
     submit: Đăng ký
+    next: Tiếp
     teacher: Bạn có phải là giáo viên?
     valid_username: Hợp lệ!
     invalid_username: Tên người dùng phải nhiều hơn 5 ký tự
@@ -315,9 +316,7 @@ vi:
         applab: Tạo một ứng dụng
         gamelab: Tạo một dự án trò chơi
         weblab: Tạo một dự án Web thử nghiệm (beta)
-      home: Trang chủ
       my_dashboard: Bảng điều khiển của tôi
-      courses: Các khóa học
       course_catalog: Danh mục khóa học
       project_gallery: chương trình
       sections: Mục
@@ -361,10 +360,16 @@ vi:
       signin: Đăng nhập
       signup: Tạo tài khoản
       already_registered: Bạn đã đăng ký?
-      pair_programming: Lập trình đôi
       team: Nhóm
       driver: Người lái xe
       navigator: Định hướng
+      create: Tạo
+      applab: Phòng thí nghiệm ứng dụng
+      artist: Họa sĩ
+      gamelab: Kho Trò chơi
+      playlab: Phòng trò chơi
+      minecraft: Minecraft
+      flappy: Flappy bird
     popup:
       progress_for_user: sự tiến bộ của %{name}
       progress: Qua trình của bạn

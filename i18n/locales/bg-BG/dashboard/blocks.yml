@@ -1,21 +1,22 @@
+---
 bg:
   data:
     blocks:
       Dancelab_atTimestamp:
-        text: след [TIMESTAMP][0] [UNIT][1]
+        text: след {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': мерки
             '"seconds"': секунди
       Dancelab_changeColorBy:
-        text: промяна на [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: промяна на {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"hue"': оттенък
             '"saturation"': наситеност
             '"brightness"': яркост
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] направи [MOVE][1] [DIR][2] завинаги"
+        text: "{GROUP} направи {MOVE} {DIR} завинаги"
         options:
           GROUP:
             sprites: всички
@@ -38,15 +39,13 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] направи [MOVE][1] [DIR][2] завинаги"
+        text: "{SPRITE} направи {MOVE} {DIR} завинаги"
         options:
           MOVE:
             MOVES.ClapHigh: Пляскай високо
@@ -57,15 +56,13 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -73,9 +70,8 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
-            '"tint"': оттенък
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] направи [MOVE][1] [DIR][2] веднъж"
+        text: "{GROUP} направи {MOVE} {DIR} веднъж"
         options:
           GROUP:
             sprites: всички
@@ -98,15 +94,13 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] направи [MOVE][1] [DIR][2] веднъж"
+        text: "{SPRITE} направи {MOVE} {DIR} веднъж"
         options:
           MOVE:
             MOVES.ClapHigh: Пляскай високо
@@ -117,29 +111,27 @@ bg:
             MOVES.Fresh: Пресен
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
-            '"next"': Напред
-            '"prev"': Предишен
             '"rand"': Случаен
             MOVES.Rest: Без
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
-        text: 'всеки [N][0] [UNIT][1] '
+        text: 'всеки {N} {UNIT} '
         options:
           UNIT:
             '"measures"': мерки
             '"seconds"': секунди
       Dancelab_everySecondsRange:
-        text: 'всеки [N][0] [UNIT][1] от [START],[2] до [STOP][3] '
+        text: 'всеки {N} {UNIT} от [START],[2] до {STOP} '
         options:
           UNIT:
             measures: Измерване
             seconds: Секунди
       Dancelab_everyVerseChorus:
-        text: 'всеки [UNIT][0] '
+        text: 'всеки {UNIT} '
       Dancelab_getEnergy:
-        text: взима [RANGE][0]
+        text: взима {RANGE}
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -189,12 +181,31 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
+          FORMAT:
+            '"random"': случаен
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": наляво
             "{x: 300, y: 200}": надясно
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Случаен
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"ALIEN"': Извънземни
+            '"UNICORN"': Еднорози
+          LAYOUT:
+            '"random"': случаен
       Dancelab_randomColor:
         text: случаен цвят
       Dancelab_setBackgroundEffect:
@@ -216,7 +227,7 @@ bg:
             '"none"': Без
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Случаен
       Dancelab_setProp:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -225,6 +236,35 @@ bg:
             '"x"': хоризонтално положение
             '"y"': вертикално положение
             '"tint"': оттенък
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+            '"tint"': оттенък
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -255,7 +295,7 @@ bg:
             '"direction"': посока на движение
             '"tint"': оттенък
       Dancelab_whenKey:
-        text: когато [KEY][0] е натиснат
+        text: когато {KEY} е натиснат
         options:
           KEY:
             '"up"': нагоре
@@ -268,19 +308,19 @@ bg:
             '"s"': s
             '"d"': d
       gamelab_changeColor:
-        text: промяна на [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: промяна на {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"tint"': оттенък
       gamelab_changeColorBy:
-        text: промяна на [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: промяна на {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"hue"': оттенък
             '"saturation"': наситеност
             '"brightness"': яркост
       gamelab_changePropBy:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -291,8 +331,8 @@ bg:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'вярно'
-            'false': 'грешно'
+            'true': вярно
+            'false': грешно
       gamelab_getProp:
         options:
           PROPERTY:
@@ -320,7 +360,7 @@ bg:
           POSITION:
             '"random"': случаен
       gamelab_setProp:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -356,7 +396,7 @@ bg:
             '"right"': надясно
             '"left"': наляво
       gamelab_whenKey:
-        text: когато [KEY][0] е натиснат
+        text: когато {KEY} е натиснат
         options:
           KEY:
             '"up"': нагоре
@@ -388,7 +428,7 @@ bg:
             '"s"': s
             '"d"': d
       Mikelab_changePropBy:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {PROPERTY} {SPRITE} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -417,7 +457,7 @@ bg:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
       Mikelab_setProp:
-        text: промяна на [SPRITE][0] [PROPERTY][1] с [VAL][2]
+        text: промяна на {PROPERTY} {SPRITE} с {VAL}
         options:
           PROPERTY:
             '"scale"': размер
@@ -431,7 +471,7 @@ bg:
             '"right"': надясно
             '"left"': наляво
       Mikelab_whenKeyPressed:
-        text: когато [KEY][0] е натиснат
+        text: когато {KEY} е натиснат
         options:
           KEY:
             '"up"': стрелка нагоре
@@ -460,6 +500,12 @@ bg:
             '"down"': стрелка надолу
             '"left"': лява стрелка
             '"right"': стрелка надясно
+      RyanLab_moveForward:
+        text: върви напред
+      RyanLab_turnLeft:
+        text: завий наляво
+      RyanLab_turnRight:
+        text: завий надясно
       craft_ifPath:
         options:
           DIR:
@@ -473,3 +519,7 @@ bg:
         text: върви напред
       craft_placeTorch:
         text: постави факел
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': пиле

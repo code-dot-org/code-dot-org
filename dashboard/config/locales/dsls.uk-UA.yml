@@ -232,6 +232,9 @@ uk:
       CSDU2L01 SFLP:
         description here: опис тут
         title: назва
+      CSP ExploreL02 SFLP:
+        description here: опис тут
+        title: назва
       CSP Journal Entry Placeholder2:
         description here: опис тут
         title: назва

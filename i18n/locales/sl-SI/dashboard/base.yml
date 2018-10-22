@@ -96,6 +96,7 @@ sl:
     age: 'Starost'
     user_type: 'Ste učenec ali učitelj?'
     submit: 'Prijava'
+    next: 'Naslednja'
     teacher: 'Ste učitelj/ica?'
     valid_username: "Na voljo!"
     invalid_username: "Uporabniško ime mora imeti vsaj 5 znakov"
@@ -222,12 +223,6 @@ sl:
       help_us: "Pomagaj nam"
       teach: "Predavaj"
       about: "O programu"
-    create_button:
-      create: 'Ustvari'
-      artist: 'Umetnik'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Učiteljeva domača stran'
       district_dashboard: 'Nadzorna plošča za okrožje'
@@ -241,6 +236,11 @@ sl:
       team: 'Ekipa'
       driver: 'Voznik'
       navigator: 'Navigator'
+      create: 'Ustvari'
+      artist: 'Umetnik'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Napredek od %{name}"
       progress: 'Tvoj napredek'

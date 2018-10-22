@@ -1322,6 +1322,8 @@ th:
               name: การเขียนกระดาษกราฟ
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
         coursec-2018:
           assignment_family_title: คอร์ส C
           stages:
@@ -1329,6 +1331,8 @@ th:
               name: สร้างพื้นฐาน
             Programming in Maze:
               name: การเขียนโปรแกรมกับเจ้านกขี้โมโห (Angry Birds)
+            Debugging in Maze:
+              name: การหาจุดบกพร่องกับเขาวงกต
             Programming in Artist:
               name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':

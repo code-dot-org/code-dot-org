@@ -106,6 +106,7 @@ pl:
     age: 'Wiek'
     user_type: 'Czy jesteś uczniem czy nauczycielem?'
     submit: 'Zarejestruj się'
+    next: 'Następny'
     teacher: 'Czy jesteś nauczycielem?'
     valid_username: "Dostępny!"
     invalid_username: "Nazwa użytkownika musi zawierać co najmniej 5 znaków"
@@ -296,14 +297,6 @@ pl:
       help_us: "Pomóż nam"
       teach: "Ucz"
       about: "O programie"
-    create_button:
-      create: 'Utwórz'
-      applab: 'App Lab'
-      artist: 'Artysta'
-      gamelab: 'Laboratorium Gier (Game Lab)'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Domowa strona nauczyciela'
       district_dashboard: 'Panel dzielnicy/okręgu'
@@ -317,6 +310,13 @@ pl:
       team: 'Zespół'
       driver: 'Kierowca'
       navigator: 'Nawigator'
+      create: 'Utwórz'
+      applab: 'App Lab'
+      artist: 'Artysta'
+      gamelab: 'Laboratorium Gier (Game Lab)'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name} w toku"
       progress: 'Twoje postępy'

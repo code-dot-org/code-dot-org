@@ -3281,6 +3281,8 @@ pl:
               name: Kładąc podwaliny (Building a Foundation)
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w pszczole
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
         csp3-a:
           stages:
             new stage:
@@ -3772,12 +3774,16 @@ pl:
               name: Binarne obrazy (Binary Images)
             Artist Binary:
               name: 'Artysta: Binarny'
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
             Graph Paper Programming:
               name: Programowanie na papierze milimetrowym
             Relay Programming:
               name: Sztafeta programowania
             Introduction to Online Puzzles:
               name: Wprowadzenie do puzzli online
+            Nested Loops in Maze:
+              name: Zagnieżdżone pętle w labiryncie
         coursec-2018:
           assignment_family_title: Kurs C
           description_audience: W wieku 6-10
@@ -4166,3 +4172,7 @@ pl:
           stages:
             Artist:
               name: Artysta
+        sconyers:
+          stages:
+            Linking Screens:
+              name: Łączenie ekranów

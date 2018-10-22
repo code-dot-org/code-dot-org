@@ -123,6 +123,7 @@ bg:
     age: Възраст
     user_type: Вие ученик или преподавател сте?
     submit: Регистрирайте се
+    next: Напред
     teacher: Учител ли сте?
     valid_username: Налично!
     invalid_username: Потребителското име трябва да бъде най-малко 5 знака
@@ -283,9 +284,7 @@ bg:
         artist: Начертай нещо
         applab: Направи Play Lab приложение
         gamelab: Направи Game Lab проект
-      home: Начало
       my_dashboard: Моето табло
-      courses: Курсове
       course_catalog: Каталог на курса
       project_gallery: Проекти
       sections: Раздели
@@ -326,10 +325,16 @@ bg:
       signin: Вход
       signup: Създаване на акаунт
       already_registered: Вече сте регистриран?
-      pair_programming: Програмиране по двойки
       team: Екип
       driver: Шофьор
       navigator: Навигатор
+      create: Създай
+      applab: Лаборатория за приложения
+      artist: Художник
+      gamelab: Играта лаборатория
+      playlab: Театрална лаборатория
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: на %{name} в прогрес
       progress: Вашият напредък

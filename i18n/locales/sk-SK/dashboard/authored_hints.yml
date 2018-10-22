@@ -51,89 +51,94 @@ sk:
       Inspirational Artwork_authored_hint:
         double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
       MC Agent Freeplay_authored_hint:
-        MC_HOC_2017_13_Cole_a: Skúste pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
+        MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík, aby si mohol objavovať svet!
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: Pomocou klávesov so šípkami nasmerujte hráča do domu. Skončite na oranžovom štvorci, aby ste vyhrali.
+        MC_HOC_2017_01_Cole_a: Pomocou klávesov so šípkami nasmeruj hráča do domu. Skonči na oranžovom štvorci, aby si vyhral.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuňte jeden blok „posunúť dopredu“ do pracovného priestoru a prichyťte ho na mieste pod blokom „po spustení“.
-        MC_HOC_2017_01_RETRY_b: Nezabudnite kliknúť na tlačidlo Spustiť, aby sa spustil kód pre agenta.
-        MC_HOC_2017_01_RETRY_c: Keď agent spustí všetok kód, môžete posúvať hráča pomocou klávesov so šípkami.
+        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok `posuň sa dopredu` do pracovného priestoru a prichyť ho na mieste pod blokom `pri spustení`.
+        MC_HOC_2017_01_RETRY_b: Nezabudni kliknúť na tlačidlo "Spustiť", aby sa spustil kód pre agenta.
+        MC_HOC_2017_01_RETRY_c: Keď agent spustí všetok kód, môžeš posúvať hráča pomocou klávesov so šípkami!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Posuňte agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. Tým otvorí hráčovi dvere.
+        MC_HOC_2017_02_Cole_a: Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.
         MC_HOC_2017_02_Cole_b: |-
-          Stlačte tlačidlo Spustiť. 
-          Kód môžete spustiť, aj keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte, kde je chyba.
-        MC_HOC_2017_02_Cole_c: Keď agent otvorí dvere, posúvajte hráča po mape pomocou klávesov so šípkami.
-        MC_HOC_2017_02_Cole_d: Uistite sa, že agent ide po ceste vyznačenej na mape!
+          Stlač tlačidlo "Spustiť"!
+          
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_02_Cole_c: Keď agent otvorí dvere, posúvaj hráča po mape pomocou klávesov so šípkami!
+        MC_HOC_2017_02_Cole_d: Uisti sa, že agent ide po ceste vyznačenej na mape!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Posuňte agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. Tým otvorí hráčovi dvere.
+        MC_HOC_2017_02_Cole_a: Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.
         MC_HOC_2017_02_Cole_b: |-
-          Stlačte tlačidlo Spustiť agenta. 
-          Kód môžete spustiť, aj keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte, kde je chyba.
-        MC_HOC_2017_02_Cole_c: Keď agent otvorí dvere, pomocou klávesov so šípkami posuňte hráča na oranžové políčko.
+          Stlač tlačidlo "Spusti agenta"!
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_02_Cole_c: Keď agent otvorí dvere, pomocou klávesov so šípkami posuň hráča na oranžové políčko.
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Keď agenta dostanete k prítlačnej doske, pomocou klávesov so šípkami môžete presunúť hráča ku kompasu.
-        MC_HOC_2017_03_Cole_b: Zdá sa vám kód trochu dlhý? Skúste použiť slučku „opakovať“ a uvidíte, či dokážete zistiť, ako ho skrátiť.
+        MC_HOC_2017_03_Cole_a: Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!
+        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus `opakuj` a uvidíš, či dokážeš zistiť, ako ho skrátiť!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Ak prejdete po týchto dvoch prítlačných doskách, hráčovi sa sprístupní cesta. 
+          Ak prejdeš po týchto dvoch prítlačných doskách, hráčovi sa sprístupní cesta. 
+          
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku „otočiť doprava“ zmeňte smer agenta '
+        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku `otočiť doprava` zmeň smer agenta '
         MC_HOC_2017_04POINT5_RYAN_a: Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: Agent sa musí „posunúť dopredu“ 7-krát. Ako môžete použiť slučku „opakovať“, aby sa to stalo?
+        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz `posuň sa dopredu` 7-krát. Ako môžeš použiť cyklus `opakuj`, aby sa to stalo?
         MC_HOC_2017_04_Cole_c: |-
-          Stlačte tlačidlo Spustiť. 
-          Kód môžete spustiť, aj keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte, kde je chyba.
+          Stlač tlačidlo "Spustiť"!
+          
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
         MC_HOC_2017_04_Cole_b: Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Vedeli ste, že do slučky môžete vložiť viac ako jeden blok kódu? Skúste do slučky „opakovať“ umiestniť dosku **a** posunutie dopredu, aby ste dokončili tento hlavolam.
-        MC_HOC_2017_05_Cole_b: Dostaňte agenta cez rieku postavením mostu počas chôdze.
+        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** do cyklu`opakuj` umiestniť dosku, aby si dokončil tento hlavolam.
+        MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu počas chôdze.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Vedeli ste, že do slučky môžete vložiť viac ako jeden blok kódu? Skúste do slučky „opakovať“ umiestniť dosku **a** posunutie dopredu, aby ste dokončili tento hlavolam.
+        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús do cyklu `opakuj` umiestniť dosku **a** posuň sa dopredu, aby si dokončili tento hlavolam.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: Koľkokrát sa táto slučka spustí? Koľkokrát *by sa mala* spustiť?
-        MC_HOC_2017_06_Cole_b: 'Pomôžte agentovi postaviť most po celej šírke rieky! '
+        MC_HOC_2017_06_Cole_a: Koľkokrát sa tento cyklus spustí? Koľkokrát *by sa mal* spustiť?
+        MC_HOC_2017_06_Cole_b: 'Pomôž agentovi postaviť most po celej šírke rieky! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Skúste vložiť do slučky „opakovať“ viac ako jeden pokyn.
+        MC_HOC_2017_06_Cole_a: Skús vložiť do cyklu`opakuj` viac ako jeden pokyn!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: Všetko, čo musíte spraviť s agentom je vyčistiť chodník k Minecart-e.
-        MC_HOC_2017_07_Cole_a: Ak chcete vyriešiť tento hlavolam, zistite, čo robí funkcia „uvoľniť cestu“. Z panela s nástrojmi ju volajte, koľkokrát potrebujete, pomocou malého zeleného bloku „uvoľniť cestu“.
-        MC_HOC_2017_07_Cole_b: Skúste zmiešať bloky funkcie s ďalšími blokmi z panela s nástrojmi, aby ste vyriešili tento hlavolam.
+        MC_HOC_2017_07_Cole_c: Všetko, čo musíš spraviť s agentom je vyčistiť chodník k Minecart-e.
+        MC_HOC_2017_07_Cole_a: Ak chceš vyriešiť tento hlavolam, zisti, čo robí funkcia `uvoľni cestu`. Z panela s nástrojmi ju použi, koľkokrát potrebuješ, pomocou malého zeleného bloku `uvoľni cestu`.
+        MC_HOC_2017_07_Cole_b: Skús zmiešať bloky funkcie s ďalšími blokmi z panela s nástrojmi, aby si vyriešil tento hlavolam.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Stlačte tlačidlo Spustiť agenta. 
-          Kód môžete spustiť, aj keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte, kde je chyba.
-        MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skúste niektoré z nich.
+          Stlač tlačidlo "Spusti agenta"!
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Stlačte tlačidlo Spustiť agenta. 
-          Kód môžete spustiť, aj keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte, kde je chyba.
-        MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skúste niektoré z nich.
+          Stlač tlačidlo "Spusti agenta"!
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Zjednodušte riešenie tohto hlavolamu pomocou funkcií.
+        MC_HOC_2017_10_Cole_a: Zjednoduš riešenie tohto hlavolamu pomocou funkcií!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Neviete kam ísť? Pozrite sa, či vidíte bodkovanú čiaru!
-        MC_HOC_2017_10_Cole_a: Zjednodušte riešenie tohto hlavolamu pomocou funkcií.
+        MC_HOC_2017_10_Cole_b: Nevieš kam ísť? Pozri sa, či vidíš bodkovanú čiaru!
+        MC_HOC_2017_10_Cole_a: Zjednoduš riešenie tohto hlavolamu pomocou funkcií!
       MC_HOC_2017_13_Cole_authored_hint:
-        MC_HOC_2017_13_Cole_a: Skúste pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
+        MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
       MC_HOC_2017_4.5v2_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
-          Ak prejdete po týchto dvoch prítlačných doskách, hráčovi sa sprístupní cesta. 
+          Ak prejdeš po týchto dvoch prítlačných doskách, hráčovi sa sprístupní cesta. 
+          
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Stlačte tlačidlo Spustiť. 
-          Kód môžete spustiť, aj keď nie je správny. Spúšťajte a resetujte kód znova a znova, až kým nezistíte, kde je chyba.
-        MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skúste niektoré z nich.
-        MC_HOC_2017_08_RY_c: Skúste nasledovať bodkovanú čiaru pre jednoduchú cestu cez lávu.
+          Stlač tlačidlo "Spustiť"!
+          
+          Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
+        MC_HOC_2017_08_RY_b: Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!
+        MC_HOC_2017_08_RY_c: Skús nasledovať bodkovanú čiaru pre jednoduchú cestu cez lávu.
       MC_HOC_2017_FP20x20_authored_hint:
-        MC_HOC_2017_13_Cole_a: Skúste pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
+        MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať cesty pre banský vozík, aby si mohol objavovať svet!
       NEW Course 4 Artist Params inspire_authored_hint:
         double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
       New Minecraft Hero Project_authored_hint:
-        MC_HOC_2017_13_Cole_a: Skúste pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
+        MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:

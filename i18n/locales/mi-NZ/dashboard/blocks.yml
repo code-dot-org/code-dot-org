@@ -1,3 +1,4 @@
+---
 mi:
   data:
     blocks:
@@ -49,6 +50,18 @@ mi:
           LOCATION:
             "{x: 100, y: 200}": whakamauī
             "{x: 300, y: 200}": whakamatau
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_randomColor:
         text: tae matapōkere
       Dancelab_setDanceSpeed:
@@ -60,6 +73,16 @@ mi:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': rahinga
@@ -82,14 +105,6 @@ mi:
             '"left"': whakamauī
             '"right"': whakamatau
             '"space"': tuarangi
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': whakarunga
-            '"down"': whakararo
-            '"left"': whakamauī
-            '"right"': whakamatau
-            '"space"': tuarangi
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -97,8 +112,8 @@ mi:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'pono'
-            'false': 'hē'
+            'true': pono
+            'false': hē
       gamelab_getProp:
         options:
           PROPERTY:
@@ -161,6 +176,11 @@ mi:
         options:
           PROPERTY:
             '"scale"': rahinga
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": whakamauī
+            "{x: 300, y: 200}": whakamatau
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -205,6 +225,12 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
+      RyanLab_moveForward:
+        text: neke ki mua
+      RyanLab_turnLeft:
+        text: huri whakatemauī
+      RyanLab_turnRight:
+        text: huri whakatematau
       craft_ifPath:
         options:
           DIR:
@@ -218,3 +244,7 @@ mi:
         text: neke ki mua
       craft_placeTorch:
         text: hoatu rama
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': heihei

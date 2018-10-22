@@ -130,6 +130,7 @@ pl:
     age: Wiek
     user_type: Czy jesteś uczniem czy nauczycielem?
     submit: Zarejestruj się
+    next: Następny
     teacher: Czy jesteś nauczycielem?
     valid_username: Dostępny!
     invalid_username: Nazwa użytkownika musi zawierać co najmniej 5 znaków
@@ -312,9 +313,7 @@ pl:
         applab: Utwórz aplikację w App Lab
         gamelab: Utwórz projekt w Game Lab
         weblab: Wykonaj projekt Laboratorium Sieci (beta)
-      home: Strona główna
       my_dashboard: Pulpit
-      courses: Kursy
       course_catalog: Katalog Kursów
       project_gallery: Galeria Projektów
       sections: Sekcje
@@ -359,10 +358,16 @@ pl:
       signin: Zaloguj się
       signup: Załóż konto
       already_registered: Czy jesteś Już zarejestrowany?
-      pair_programming: Programowanie w parach
       team: Zespół
       driver: Kierowca
       navigator: Nawigator
+      create: Utwórz
+      applab: App Lab
+      artist: Artysta
+      gamelab: Laboratorium Gier (Game Lab)
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy

@@ -2,10 +2,9 @@
 pt:
   data:
     short_instructions:
-      2-3 Artist 1 new: Oi, eu sou um artista. Você pode escrever códigos
-        para me fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer
-        desenhar sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de
-        100 pixels)
+      2-3 Artist 1 new: Oi, eu sou um artista. Você pode escrever códigos para me
+        fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar
+        sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
       2-3 Artist 11: |-
         Faça uma borda na placa de pare criando um octógono
         com 8 lados, com 100 pixels de comprimento cada. Quantos graus você deve virar? (Dica:
@@ -23,8 +22,8 @@ pt:
       2-3 Artist 3.4: |-
         O bloco pule move o artista sem desenhar.
         Desenhe a linha tracejada usando os bloco pule e desenhe.
-      2-3 Artist 3: Esse chapéu tem 100 pixels de altura. Desenhe um chapéu
-        que tenha 70 pixels a menos.
+      2-3 Artist 3: Esse chapéu tem 100 pixels de altura. Desenhe um chapéu que tenha
+        70 pixels a menos.
       2-3 Artist 3new: |-
         O chapéu vermelho tem 100 pixels de altura. Termine o desenho
         de um chapéu preto que seja 70 pixels menor. A largura do chapéu preto é de 50 pixels.
@@ -32,8 +31,8 @@ pt:
       2-3 Artist 5: |-
         Substitua esse código por um bloco "repita vezes"
         para desenhar a mesma casa usando apenas 3 blocos.
-      2-3 Artist 6: 'Essa casa precisa de um telhado! Desenhe o triângulo.
-        Dica: todos os 3 lados têm o mesmo comprimento.'
+      2-3 Artist 6: 'Essa casa precisa de um telhado! Desenhe o triângulo. Dica: todos
+        os 3 lados têm o mesmo comprimento.'
       2-3 Artist 7: |-
         Termine de desenhar a metade direita da última janela.
         Cada quadrado da janela tem 25 pixels.
@@ -44,19 +43,19 @@ pt:
       2-3 Artist 9 NEW: Terminar este papagaio
       2-3 Artist 9 REPLACEMENT: Termine o desenho destas escadas!
       2-3 Artist 9: Terminar este papagaio
-      2-3 Artist Assessment 1: "Avaliação: Terminar o desenho do último
-        dente, \ntem 25 píxeis de largura e 25 píxels de altura."
-      2-3 Artist Debugging 1: "Este chapéu deveria ter apenas 50 píxeis
-        de largura. \nConsegue corrigir isto?"
-      2-3 Artist Debugging 10: "O controlo de direção no meu controlador\ndo
-        jogo é muito estreito. \r\n\r\nConsegue fazê-lo mais largo, em 10 píxeis?"
-      2-3 Artist Debugging 11: Ajude-me a terminar meu lindo floco de
-        neve. Quantas vezes preciso "repetir" para terminá-lo?
-      2-3 Artist Debugging 12: "É suposto eu adicionar uma onda do mar
-        \nnessa cena. Pode ajudar-me?"
-      2-3 Artist Debugging 2: 'O código para os três bigodes que você
-        vê está errado. Dica: cada bigode tem o comprimento de 75 pixels. Corrija
-        esse código para desenhar os bigodes.'
+      2-3 Artist Assessment 1: "Avaliação: Terminar o desenho do último dente, \ntem
+        25 píxeis de largura e 25 píxels de altura."
+      2-3 Artist Debugging 1: "Este chapéu deveria ter apenas 50 píxeis de largura.
+        \nConsegue corrigir isto?"
+      2-3 Artist Debugging 10: "O controlo de direção no meu controlador\ndo jogo
+        é muito estreito. \r\n\r\nConsegue fazê-lo mais largo, em 10 píxeis?"
+      2-3 Artist Debugging 11: Ajude-me a terminar meu lindo floco de neve. Quantas
+        vezes preciso "repetir" para terminá-lo?
+      2-3 Artist Debugging 12: "É suposto eu adicionar uma onda do mar \nnessa cena.
+        Pode ajudar-me?"
+      2-3 Artist Debugging 2: 'O código para os três bigodes que você vê está errado.
+        Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para
+        desenhar os bigodes.'
       2-3 Artist Debugging 3: |-
         Meu barco tem um buraco! Você consegue corrigi-lo
         alterando o ângulo da linha? Dica: o último ângulo está 15 graus fora de lugar.
@@ -69,8 +68,8 @@ pt:
       2-3 Artist Debugging 6: |-
         Parece que estou sentado em uma cadeira
         sem uma perna. Edite os blocos para desenhar a perna.
-      2-3 Artist Debugging 7: "Parece que o C no código está desenhado
-        ao contrário.\r\n\r\nConsegues voltar a transformá-lo num C?"
+      2-3 Artist Debugging 7: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+        voltar a transformá-lo num C?"
       2-3 Artist Debugging 8: |-
         Meu cata-vento não está pronto. Quantas
         vezes eu preciso repetir para terminá-lo?
@@ -170,10 +169,9 @@ pt:
       2-3 Artist Loops 7: |-
         Podemos usar laços para criar todos os tipos de polígonos. Você
         consegue criar um losango dentro desse hexágono?
-      2-3 Artist Loops 8: Vamos colocar ambos os elementos dentro de um
-        laço.
-      2-3 Artist Loops 9: "Vamos repetir os mesmos elementos, mas \nagora
-        vamos adicionar alguma distância entre eles.\r\nUse o mesmo código usado \nanteriormente,
+      2-3 Artist Loops 8: Vamos colocar ambos os elementos dentro de um laço.
+      2-3 Artist Loops 9: "Vamos repetir os mesmos elementos, mas \nagora vamos adicionar
+        alguma distância entre eles.\r\nUse o mesmo código usado \nanteriormente,
         mas adicione um passo à frente no final do laço externo."
       2-3 Artist Loops New 1: |-
         Vamos desenhar a cabeça do robô! Você pode
@@ -185,8 +183,7 @@ pt:
         Dessa vez, vamos desenhar 24 vezes. Adicione
         uma ação de virar à esquerda em 30 graus ao código e coloque tudo em um bloco repita.
       2-3 Artist Loops New 12: Desenhe um diamante com lados de 100 pixels.
-      2-3 Artist Loops New 13: Agora, desenhe o diamante 3 vezes em um
-        laço.
+      2-3 Artist Loops New 13: Agora, desenhe o diamante 3 vezes em um laço.
       2-3 Artist Loops New 14: |-
         Agora, vamos desenhar o diamante 10 vezes,
         mas vamos rotacionar 90 graus entre cada diamante.
@@ -198,15 +195,12 @@ pt:
         Desenhe um V simples com ambos os lados com 50
         pixels para completar a seta.
       2-3 Artist Match Hex Pic: 'Correspondência: ajude a terminar o hexágono.'
-      2-3 Artist Match Rho Pic: 'Correspondência: termine o código que
-        falta.'
-      2-3 Artist Match Sq Pic: 'Correspondência: complete o código que
-        falta'
-      2-3 Artist Match Tri pic: 'Correspondência: preencha o código que
-        falta.'
-      2-3 Artist Nested Loops 1: "Você usou laços para desenhar formas
-        antes,\nmas você sabia que pode colocar um laço dentro de outro laço?\r\nRepita
-        este bloco\nde código inteiro 3 vezes para desenhar o padrão."
+      2-3 Artist Match Rho Pic: 'Correspondência: termine o código que falta.'
+      2-3 Artist Match Sq Pic: 'Correspondência: complete o código que falta'
+      2-3 Artist Match Tri pic: 'Correspondência: preencha o código que falta.'
+      2-3 Artist Nested Loops 1: "Você usou laços para desenhar formas antes,\nmas
+        você sabia que pode colocar um laço dentro de outro laço?\r\nRepita este bloco\nde
+        código inteiro 3 vezes para desenhar o padrão."
       2-3 Artist Nested Loops 10: |-
         Repita este código 12 vezes para completar
         o padrão.
@@ -252,8 +246,8 @@ pt:
       2-3 Bee Conditionals 1: |-
         Olá! Eu sou uma abelha. Ajude-me a coletar o néctar
         da flor.
-      2-3 Bee Conditionals 10: "As flores roxas podem ter 1 ou 0 néctar.\nTenha
-        cuidado para não coletar néctar de uma flor roxa se ela não\ntiver néctar.\r\n"
+      2-3 Bee Conditionals 10: "As flores roxas podem ter 1 ou 0 néctar.\nTenha cuidado
+        para não coletar néctar de uma flor roxa se ela não\ntiver néctar.\r\n"
       2-3 Bee Conditionals 11: Colete néctar onde as flores têm néctar.
       2-3 Bee Conditionals 12: |-
         Use um laço para verificar e coletar o néctar
@@ -397,15 +391,14 @@ pt:
       2-3 Bee Loops 3: |-
         Colete o néctar de cada flor e produza mel
         em cada colmeia.
-      2-3 Bee Loops 3A: Você consegue usar um laço para coletar todo o
-        néctar?
-      2-3 Bee Loops 3B: Agora, use o novo bloco repita para coletar todo
-        o néctar e produzir todo o mel.
+      2-3 Bee Loops 3A: Você consegue usar um laço para coletar todo o néctar?
+      2-3 Bee Loops 3B: Agora, use o novo bloco repita para coletar todo o néctar
+        e produzir todo o mel.
       2-3 Bee Loops 4: |-
         Use um laço parecido com o do último desafio, mas realize
         uma ação de virar dentro dele.
-      2-3 Bee Loops 4A: O que acontece se você repetir esta sequência
-        3 vezes? Não se esqueça de fazer o mel no final!
+      2-3 Bee Loops 4A: O que acontece se você repetir esta sequência 3 vezes? Não
+        se esqueça de fazer o mel no final!
       2-3 Bee Loops 5: |-
         Use um laço para descer as escadas e coletar o
         néctar.
@@ -426,10 +419,10 @@ pt:
       2-3 Bee Loops Assessment 1: |-
         Avaliação - use um laço enquanto para coletar
         todo o néctar dessa flor.
-      2-3 Maze 1: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha
-        alguns blocos `mover para a frente` por baixo do bloco `quando executar` e
-        depois clica em \"Executar\". "
-      2-3 Maze 10: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze 1: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha alguns
+        blocos `mover para a frente` por baixo do bloco `quando executar` e depois
+        clica em \"Executar\". "
+      2-3 Maze 10: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze 11: |-
         Estou com fome, leve-me até a flor! Quantas vezes
         você precisa repetir um bloco?
@@ -442,9 +435,8 @@ pt:
       2-3 Maze 12 (old): |-
         Leve-me até o porco, agora com o bloco repita
         vezes!
-      2-3 Maze 12 - One Move Block: Vá para o porco! Mas desta vez, você
-        só pode usar um bloco 'Avançar'. Você vê quaisquer outros blocos que poderiam
-        ajudá-lo?
+      2-3 Maze 12 - One Move Block: Vá para o porco! Mas desta vez, você só pode usar
+        um bloco 'Avançar'. Você vê quaisquer outros blocos que poderiam ajudá-lo?
       2-3 Maze 12: |-
         Você pode substituir esses cinco blocos por apenas dois blocos?
         (Dica: crie um laço usando um bloco "repita vezes")
@@ -457,26 +449,24 @@ pt:
         Leve-me até o girassol! (Onde está o bloco "repita
         vezes" quando eu preciso dele?)
       2-3 Maze 15 (old): Leve-me até o porco com o bloco repita até!
-      2-3 Maze 15: Use dois laços para chegar até o porco usando menos
-        blocos.
+      2-3 Maze 15: Use dois laços para chegar até o porco usando menos blocos.
       2-3 Maze 16 (old): Leve-me até o porco com o bloco repita até!
       2-3 Maze 16 before: Leve-me até o porco.
       2-3 Maze 16: Leve-me até o girassol. Repita a sequência!
-      2-3 Maze 2: Esse porco está me irritando. Ajude-me a chegar até
-        ele!
+      2-3 Maze 2: Esse porco está me irritando. Ajude-me a chegar até ele!
       2-3 Maze 3: |-
         Trace o caminho e leve-me até o porco bobalhão. Desvie
         do TNT, ou penas vão voar!
-      2-3 Maze 4: Guia-me até à maldade verde! (Cuidado com a dinamite)
-      2-3 Maze 5: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze 4: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
+      2-3 Maze 5: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze 6: |-
         Fique calmo e ajude-me a chegar até o porco malvado. Senão
         eu vou ficar braco!
-      2-3 Maze 7: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze 7: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze 8: Leve-me até o porco!
-      2-3 Maze 9: Guia-me até à maldade verde! (Cuidado com a dinamite)
-      2-3 Maze Loops 1: Consegues levar-me até ao porquinho com 5 blocos
-        do mesmo género?
+      2-3 Maze 9: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
+      2-3 Maze Loops 1: Consegues levar-me até ao porquinho com 5 blocos do mesmo
+        género?
       2-3 Maze Loops 17: Leve-me até o girassol!
       2-3 Maze Loops 18: Leve-me até o girassol!
       2-3 Maze Loops 19: Leve-me até o girassol!
@@ -492,7 +482,7 @@ pt:
       2-3 Maze sq2: |-
         Trace o caminho e leve-me até o porco bobalhão. Desvie
         do TNT, ou penas vão voar!
-      2-3 Maze sq3: Guia-me até à maldade verde! (Cuidado com a dinamite)
+      2-3 Maze sq3: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
       2-3 Maze sq4: |-
         Fique calmo e ajude-me a chegar até o porco malvado. Senão
         eu vou ficar braco!
@@ -514,79 +504,74 @@ pt:
       2-3 maze sq13: |-
         Querida pessoa. Mim zumbi. Deve... chegar... girassol.
         Crie um laço com o bloco "repita até".
-      2-3 maze sq14: Você pode chegar até o girassol usando apenas quatro
-        blocos?
+      2-3 maze sq14: Você pode chegar até o girassol usando apenas quatro blocos?
       2-3 maze sq15: Você pode chegar até o girassol usando apenas blocos?
       2-3 maze sq16: |-
         Ok, isso é parecido, mas um pouco diferente. Você pode
         fazer isso em apenas cinco blocos?
-      2-3level1: Ajude o pássaro a pegar o porco safado movendo-o para
-        frente
-      20hr_farmer_stage9_1: Olá, eu sou uma agricultora. Quero plantar
-        no terreno da minha quinta e preciso da tua ajuda para conseguir aplaná-lo.
-        Move-me para o monte de terra e usa o bloco "remover" para me ajudares a removê-lo.
-      20hr_farmer_stage9_11: 'Ainda está escuro lá fora. Move-me ao longo
-        do campo. Se houver um monte, remove-o e se houver um buraco, preenche-o.
-        Dica: usa o menu pendente de opções no bloco "se".'
-      20hr_farmer_stage9_2: Em seguida, move-me para o buraco e preenche-o
-        com duas pazadas de terra, usando o bloco de "preenchimento".
-      20hr_farmer_stage9_3: Move-me para o monte de terra e diz-me quantas
-        pazadas para remover usando o mínimo de blocos possível.
-      20hr_farmer_stage9_4: 'Podes ajudar-me a remover todos os quatro
-        montes de terra? Dica: usa um bloco de repetição se possível.'
-      20hr_farmer_stage9_5: 'Ajuda-me a tapar estes buracos com 5 pazadas
-        de terra. Dica: Podes colocar um bloco "repetir" dentro de um bloco "enquanto".'
-      20hr_farmer_stage9_6: Remove todos os montes de terra, usando o
-        mínimo de blocos quanto possível. As novas opções no menu pendente do bloco
-        "enquanto" dizem-me se estou em cima do monte ou do buraco.
-      20hr_farmer_stage9_7: Uau, eu encontrei um buraco muito fundo! Não
-        sei quantas pazadas de terra serão precisas. Podes escrever um programa que
-        o encha até que o chão fique liso?
-      20hr_farmer_stage9_8: Ajuda-me a preencher o buraco no final do
-        campo, usando o menor número de blocos quanto possível.
-      20hr_farmer_stage9_9: 'Faça com que eu remova todos esses montes
-        de terra. Tente usar o menor número de blocos possível. Dica: tente usar um
-        bloco "enquanto".'
-      20hr_maze_stage2_10: Ok, use o novo bloco "repita até" - ele vai
-        se repetir até que eu chegue naquele porco irritante.
-      20hr_maze_stage2_11: Ok, uma última vez para praticar - consegues
-        resolver este um usando apenas 4 blocos?
-      20hr_maze_stage2_13: Ok, isto é semelhante, mas ligeiramente diferente.
-        Consegues fazê-lo com apenas 5 blocos?
-      20hr_maze_stage2_14: 'Usa o novo bloco "se" para me deixar decidir
-        quando virar. Dica: só precisas de mais um bloco, mas aprende como podemos
-        configurá-lo para que possas fazer sozinho na próxima vez.'
-      20hr_maze_stage2_15: Ok, isto é como o último quebra-cabeças, mas
-        precisas de te lembrar de como usaste o bloco "se" e o bloco "repetir" juntos.
-      20hr_maze_stage2_16: Eu querer girassol! Usa um bloco "se" para
-        levar-me lá, com o menor número de blocos.
-      20hr_maze_stage2_17: Ok, vamos fazer novamente para praticar - isso
-        não é muito diferente, mas tem cuidado com os comilões!
-      20hr_maze_stage2_18: Os blocos "se-senão" verificam uma condição,
-        e em seguida, fazem uma coisa OU outra. Para me levar para o girassol tenta
-        usar este novo bloco.
-      20hr_maze_stage2_19: Pratica mais uma vez o bloco "se-senão", consegues
-        à primeira tentativa?
+      2-3level1: Ajude o pássaro a pegar o porco safado movendo-o para frente
+      20hr_farmer_stage9_1: Olá, eu sou uma agricultora. Quero plantar no terreno
+        da minha quinta e preciso da tua ajuda para conseguir aplaná-lo. Move-me para
+        o monte de terra e usa o bloco "remover" para me ajudares a removê-lo.
+      20hr_farmer_stage9_11: 'Ainda está escuro lá fora. Move-me ao longo do campo.
+        Se houver um monte, remove-o e se houver um buraco, preenche-o. Dica: usa
+        o menu pendente de opções no bloco "se".'
+      20hr_farmer_stage9_2: Em seguida, move-me para o buraco e preenche-o com duas
+        pazadas de terra, usando o bloco de "preenchimento".
+      20hr_farmer_stage9_3: Move-me para o monte de terra e diz-me quantas pazadas
+        para remover usando o mínimo de blocos possível.
+      20hr_farmer_stage9_4: 'Podes ajudar-me a remover todos os quatro montes de terra?
+        Dica: usa um bloco de repetição se possível.'
+      20hr_farmer_stage9_5: 'Ajuda-me a tapar estes buracos com 5 pazadas de terra.
+        Dica: Podes colocar um bloco "repetir" dentro de um bloco "enquanto".'
+      20hr_farmer_stage9_6: Remove todos os montes de terra, usando o mínimo de blocos
+        quanto possível. As novas opções no menu pendente do bloco "enquanto" dizem-me
+        se estou em cima do monte ou do buraco.
+      20hr_farmer_stage9_7: Uau, eu encontrei um buraco muito fundo! Não sei quantas
+        pazadas de terra serão precisas. Podes escrever um programa que o encha até
+        que o chão fique liso?
+      20hr_farmer_stage9_8: Ajuda-me a preencher o buraco no final do campo, usando
+        o menor número de blocos quanto possível.
+      20hr_farmer_stage9_9: 'Faça com que eu remova todos esses montes de terra. Tente
+        usar o menor número de blocos possível. Dica: tente usar um bloco "enquanto".'
+      20hr_maze_stage2_10: Ok, use o novo bloco "repita até" - ele vai se repetir
+        até que eu chegue naquele porco irritante.
+      20hr_maze_stage2_11: Ok, uma última vez para praticar - consegues resolver este
+        um usando apenas 4 blocos?
+      20hr_maze_stage2_13: Ok, isto é semelhante, mas ligeiramente diferente. Consegues
+        fazê-lo com apenas 5 blocos?
+      20hr_maze_stage2_14: 'Usa o novo bloco "se" para me deixar decidir quando virar.
+        Dica: só precisas de mais um bloco, mas aprende como podemos configurá-lo
+        para que possas fazer sozinho na próxima vez.'
+      20hr_maze_stage2_15: Ok, isto é como o último quebra-cabeças, mas precisas de
+        te lembrar de como usaste o bloco "se" e o bloco "repetir" juntos.
+      20hr_maze_stage2_16: Eu querer girassol! Usa um bloco "se" para levar-me lá,
+        com o menor número de blocos.
+      20hr_maze_stage2_17: Ok, vamos fazer novamente para praticar - isso não é muito
+        diferente, mas tem cuidado com os comilões!
+      20hr_maze_stage2_18: Os blocos "se-senão" verificam uma condição, e em seguida,
+        fazem uma coisa OU outra. Para me levar para o girassol tenta usar este novo
+        bloco.
+      20hr_maze_stage2_19: Pratica mais uma vez o bloco "se-senão", consegues à primeira
+        tentativa?
       20hr_maze_stage2_2: Este porco está a enervar-me. Ajuda-me a encontrá-lo!
-      20hr_maze_stage2_20: Podes adicionar mais 3 blocos para me ajudares
-        a resolver este complexo labirinto? Se conseguires podes andar em qualquer
-        caminho com curvas qualquer que seja o tamanho.
-      20hr_maze_stage2_3: Traça o caminho e leva-me até ao porquinho tonto.
-        Não choques com as dinamites, se não ficas sem penas!
-      20hr_maze_stage2_4: Leva-me até ao maldito verde! (Tem cuidado com
-        a dinamite)
-      20hr_maze_stage2_5: Fique calmo e ajude-me a encontrar o porco mau.
-        Senão eu vou ficar zangado!
-      20hr_maze_stage2_6: Há uma maneira de chegar ao porco bobalhão usando
-        apenas 2 blocos. Você consegue descobrir como?
-      20hr_maze_stage2_7: Tente me levar até o intruso verde usando apenas
-        três blocos.
-      20hr_maze_stage2_8: Ajude-me a banir esse porquinho mau usando o
-        menor número de blocos possível. Tente usar mais de um bloco "repita".
-      20hr_maze_stage2_9: 'Quando um bloco estiver cinza, significa que
-        você não pode excluí-lo. Resolva esse desafio usando o bloco "repita" que
-        faz 3 repetições. Tente colocar esses 3 blocos dentro do bloco "repita" em
-        cinza: avance, avance, vire.'
+      20hr_maze_stage2_20: Podes adicionar mais 3 blocos para me ajudares a resolver
+        este complexo labirinto? Se conseguires podes andar em qualquer caminho com
+        curvas qualquer que seja o tamanho.
+      20hr_maze_stage2_3: Traça o caminho e leva-me até ao porquinho tonto. Não choques
+        com as dinamites, se não ficas sem penas!
+      20hr_maze_stage2_4: Leva-me até ao maldito verde! (Tem cuidado com a dinamite)
+      20hr_maze_stage2_5: Fique calmo e ajude-me a encontrar o porco mau. Senão eu
+        vou ficar zangado!
+      20hr_maze_stage2_6: Há uma maneira de chegar ao porco bobalhão usando apenas
+        2 blocos. Você consegue descobrir como?
+      20hr_maze_stage2_7: Tente me levar até o intruso verde usando apenas três blocos.
+      20hr_maze_stage2_8: Ajude-me a banir esse porquinho mau usando o menor número
+        de blocos possível. Tente usar mais de um bloco "repita".
+      20hr_maze_stage2_9: 'Quando um bloco estiver cinza, significa que você não pode
+        excluí-lo. Resolva esse desafio usando o bloco "repita" que faz 3 repetições.
+        Tente colocar esses 3 blocos dentro do bloco "repita" em cinza: avance, avance,
+        vire.'
       4-5 Artist 1: |-
         Ajude-me a terminar de desenhar minha caixa. (Cada linha
         tem 300 pixels de comprimento)
@@ -802,9 +787,9 @@ pt:
       4-5 Artist Patterns Free Play: |-
         Atividade livre - experimente criar
         seu próprio padrão!
-      4-5 Bee Conditionals - FC Test: A abelha só quer néctar agora. Nem
-        todos os objetos são flores, portanto procura debaixo de cada nuvem para ver
-        se ela esconde uma. Se estiver, então podes recolher o néctar.
+      4-5 Bee Conditionals - FC Test: A abelha só quer néctar agora. Nem todos os
+        objetos são flores, portanto procura debaixo de cada nuvem para ver se ela
+        esconde uma. Se estiver, então podes recolher o néctar.
       4-5 Bee Conditionals 1: |-
         A abelha não sabe se isso é uma flor ou
         uma colmeia. Colete néctar apenas das flores, mas primeiro verifique se o objeto é
@@ -848,8 +833,7 @@ pt:
         consertá-los?
       4-5 Bee Debugging 10: Encontre os erros e corrija-os.
       4-5 Bee Debugging 11: Isso conta corretamente?
-      4-5 Bee Debugging 2: Ajude a abelha a coletar o néctar e fabricar
-        o mel.
+      4-5 Bee Debugging 2: Ajude a abelha a coletar o néctar e fabricar o mel.
       4-5 Bee Debugging 3: Encontre os erros e corrija-os.
       4-5 Bee Debugging 4: Esses blocos não funcionam. Qual é o padrão?
       4-5 Bee Debugging 5: Algo não está certo aqui...
@@ -898,10 +882,8 @@ pt:
       4-5 Maze 1: |-
         Querida pessoa. Mim zumbi. Precisa... chegar...
         girassol.
-      4-5 Maze 10: Você pode chegar até o girassol usando apenas quatro
-        blocos?
-      4-5 Maze 11: Você pode chegar até o girassol usando apenas seis
-        blocos?
+      4-5 Maze 10: Você pode chegar até o girassol usando apenas quatro blocos?
+      4-5 Maze 11: Você pode chegar até o girassol usando apenas seis blocos?
       4-5 Maze 12: |-
         Ok, isso é um pouco diferente. Você pode fazer isso em
         apenas seis blocos?
@@ -915,8 +897,7 @@ pt:
         da carnívora!
       4-5 Maze 3 (copy 1): Precisa... chegar... girassol.
       4-5 Maze 3: Precisa... chegar... girassol.
-      4-5 Maze 4 (copy 1): Experimente o bloco "repita" para usar menos
-        blocos...
+      4-5 Maze 4 (copy 1): Experimente o bloco "repita" para usar menos blocos...
       4-5 Maze 4: Experimente o bloco "repita" para usar menos blocos...
       4-5 Maze 5 (copy 1): |-
         Você pode resolver esse desafio usando o menor número
@@ -939,9 +920,9 @@ pt:
       4-5 Maze Conditionals 1: |-
         Use o bloco repita até para levar o
         zumbi até o girassol.
-      4-5 Maze Conditionals 10: "Consegues adicionar apenas 3 blocos para
-        ajudar o zombie a completar um labirinto mais complexo? \r\n\r\nSe conseguires,
-        ele pode andar em qualquer caminho curvo independentemente do seu tamanho!"
+      4-5 Maze Conditionals 10: "Consegues adicionar apenas 3 blocos para ajudar o
+        zombie a completar um labirinto mais complexo? \r\n\r\nSe conseguires, ele
+        pode andar em qualquer caminho curvo independentemente do seu tamanho!"
       4-5 Maze Conditionals 2: |-
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -989,10 +970,9 @@ pt:
         Agora, aninhe esse laço dentro de outro laço para desenhar
         10 triângulos. Isso se chama laço aninhado. Dica: todos os 10 triângulos completam
         uma rotação de 360 graus.
-      4-5 Nested Loops 3: "Crie um sol aninhando o código inicial\ndentro
-        de outro laço. Chamamos isso de laço aninhado.\r"
-      4-5 Nested Loops 5: Repita o código dado para criar um moinho de
-        vento.
+      4-5 Nested Loops 3: "Crie um sol aninhando o código inicial\ndentro de outro
+        laço. Chamamos isso de laço aninhado.\r"
+      4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: |-
         Você pode desenhar um hexágono repetindo o
         código do triângulo?
@@ -1050,8 +1030,7 @@ pt:
       Artist - Nested Loops 12: |-
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
-      Artist - Nested Loops 5: Repita o código dado para criar um moinho
-        de vento.
+      Artist - Nested Loops 5: Repita o código dado para criar um moinho de vento.
       Artist - Nested Loops 6: |-
         Você pode desenhar um hexágono repetindo o
         código do triângulo?
@@ -1062,8 +1041,8 @@ pt:
       Artist Autorun Test: |-
         Use o bloco "repita" para desenhar esses
         3 quadrados.
-      Artist Inspiration: "Atividade livre - Inspiração: agora você\naprendeu
-        tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
+      Artist Inspiration: "Atividade livre - Inspiração: agora você\naprendeu tudo
+        o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
         você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
         \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
         para ver a solução."
@@ -1072,9 +1051,9 @@ pt:
         de outras funções! Usando sua função "forma" como base, crie 3 formas
         de casa, cada uma 20 pixels maior que a anterior, começando com um comprimento de 50 pixels. Usar
         um laço com contador pode ser útil.
-      Bergeron Robot Maze1: "Consegues ajudar-me a apanhar o porquinho
-        malvado?\nEmpilha alguns blocos `mover para a frente` por baixo do bloco `quando
-        executar` e depois clica em \"Executar\". "
+      Bergeron Robot Maze1: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha
+        alguns blocos `mover para a frente` por baixo do bloco `quando executar` e
+        depois clica em \"Executar\". "
       Brad Spooky House Copy: |-
         Atividade livre: aqui estão as funções
         que você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
@@ -1085,10 +1064,10 @@ pt:
         Construa uma pirâmide de três níveis.
         Não há outras instruções, então simplesmente brinque com as peças até
         conseguir!
-      Busy Bee 2: Esta abelha tem um muito trabalho para fazer! Reparaste
-        em algum padrão que possas usar para simplificar o teu código?
-      Busy Bee: Esta abelha tem um muito trabalho para fazer! Reparaste
-        em algum padrão que possas usar para simplificar o teu código?
+      Busy Bee 2: Esta abelha tem um muito trabalho para fazer! Reparaste em algum
+        padrão que possas usar para simplificar o teu código?
+      Busy Bee: Esta abelha tem um muito trabalho para fazer! Reparaste em algum padrão
+        que possas usar para simplificar o teu código?
       C3-Farmer While Loops 5: |-
         Uau, agora há dois buracos profundos! Você
         pode escrever um programa que os preencha até o que o solo fique nivelado?
@@ -1104,8 +1083,7 @@ pt:
       Course 2 Bee Loops 1: |-
         Olá, eu sou uma abelha. Você pode me ajudar a coletar
         o néctar dessas flores?
-      Course 2 Maze Loops 1: Consegues levar-me até ao porquinho com 5
-        blocos?
+      Course 2 Maze Loops 1: Consegues levar-me até ao porquinho com 5 blocos?
       Course 4 2: |-
         Agora a abelha só quer néctar. Lembre-se, nem
         todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
@@ -1121,9 +1099,9 @@ pt:
         recriá-lo sem usar qualquer informação extra? Dica: fique à vontade para usar tentativa
         e erro. Não esperamos que você seja perfeito na primeira vez.
       Course 4 Artist 12: "Atividade livre - Inspiração: agora você aprendeu\ntudo
-        o que precisa para criar um padrão como esse! Se essa imagem inspira\nvocê,
-        tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r\n\n\r\nQuer
-        saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105671120/edit\npara
+        o que precisa saber para criar um padrão como esse! Se essa imagem\ninspira
+        você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r\n\n\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit\npara
         ver a solução."
       Course 4 Artist 13: |-
         Ainda jogando?  Temos aqui uma tela em branco
@@ -1217,10 +1195,10 @@ pt:
         e adiciona um lado por vez, até que seja desenhado um decágono (10 lados). Cada lado
         deve ter 100 pixels de comprimento. Dica: 360 dividido pelo número de lados de uma forma
         é o número de graus que você vai precisar virar.
-      Course 4 Artist For Loops 11a: "Vamos juntar tudo!  Usando\nseu
-        conhecimento em \"laços para\" e o \"contador\", crie este desenho no qual\ncada
-        forma tem dois lados a mais que a anterior. Lembre-se de que cada lado é\n10
-        vezes maior que o número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo
+      Course 4 Artist For Loops 11a: "Vamos juntar tudo!  Usando\nseu conhecimento
+        em \"laços para\" e o \"contador\", crie este desenho no qual\ncada forma
+        tem dois lados a mais que a anterior. Lembre-se de que cada lado é\n10 vezes
+        maior que o número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo
         código foi fornecida para você."
       Course 4 Artist For Loops 12: |-
         Isso foi muito legal, mas agora
@@ -1278,11 +1256,11 @@ pt:
         Você consegue descobrir como usar tudo que aprendeu para criar essa imagem?
 
         Precisa de uma dica? Clique aqui.
-      Course 4 Artist For Loops inspire: "Atividade livre - Inspiração:
-        agora você\naprendeu tudo o que precisa saber para criar um padrão como esse!
-        Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie
-        algo\nvocê mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi feito?
-        Acesse\nhttps://studio.code.org/c/106387604 para ver a solução."
+      Course 4 Artist For Loops inspire: "Atividade livre - Inspiração: agora você\naprendeu
+        tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387604
+        para ver a solução."
       Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com 100
         pixels de comprimento usando um laço?
@@ -1292,8 +1270,7 @@ pt:
       Course 4 Artist Functions 11: |-
         Veja esse código para desenhar um
         cubo - você consegue movê-lo para dentro de uma função chamada "desenhe um cubo"?
-      Course 4 Artist Functions 12: Repita a função quadrado para desenhar
-        uma reta
+      Course 4 Artist Functions 12: Repita a função quadrado para desenhar uma reta
       Course 4 Artist Functions 13: |-
         Confira nossa nova função
         "desenhe uma linha de quadrados". Fique à vontade para olhar dentro do bloco da função
@@ -1303,15 +1280,15 @@ pt:
         Excelente! Vamos usar
         sua nova função "desenhe uma linha de quadrados" para desenhar uma forma de quadrado. Lembre-se,
         cada quadrado tem 40 pixels de comprimento.
-      Course 4 Artist Functions 15: 'Vamos acelerar um pouco, você consegue
-        desenhar uma forma de estrela usando a função "desenhe uma linha de quadrados"?
-        Boa sorte! Dica: você terá de virar 144 graus'
+      Course 4 Artist Functions 15: 'Vamos acelerar um pouco, você consegue desenhar
+        uma forma de estrela usando a função "desenhe uma linha de quadrados"? Boa
+        sorte! Dica: você terá de virar 144 graus'
       Course 4 Artist Functions 2: |-
         Você consegue desenhar 3 quadrados com 20 pixels de distância
         entre cada um? Dica: cada quadrado tem 100 pixels de tamanho
-      Course 4 Artist Functions 3: "Usando o bloco de função \"desenhe
-        um quadrado\",\nvocê consegue desenhar esta imagem? Dica: os quadrados estão
-        a 120 pixels de distância um do outro.\r\n"
+      Course 4 Artist Functions 3: "Usando o bloco de função \"desenhe um quadrado\",\nvocê
+        consegue desenhar esta imagem? Dica: os quadrados estão a 120 pixels de distância
+        um do outro.\r\n"
       Course 4 Artist Functions 4: |-
         Você está pronto para criar seu próprio
         "bloco de função"? Clique no bloco "Funções" na caixa de ferramentas, nomeie-o
@@ -1322,9 +1299,9 @@ pt:
       Course 4 Artist Functions 5 OLD: |-
         Vamos tentar usar nossas duas funções
         para desenhar uma casa - o que precisa ser corrigido neste código para desenhar a casa corretamente?
-      Course 4 Artist Functions 5: "Usando o bloco de função \"desenhe
-        um quadrado\",\nvocê consegue desenhar esta imagem? Dica: os quadrados estão
-        a 120 pixels de distância um do outro.\r\n"
+      Course 4 Artist Functions 5: "Usando o bloco de função \"desenhe um quadrado\",\nvocê
+        consegue desenhar esta imagem? Dica: os quadrados estão a 120 pixels de distância
+        um do outro.\r\n"
       Course 4 Artist Functions 6: |-
         Qual bloco você precisa adicionar para
         que o triângulo fique em cima do quadrado?
@@ -1341,16 +1318,16 @@ pt:
         A maior parte do código para
         criar uma função foi dada a você. Contudo, parece que algo está faltando. Você consegue
         completar este bloco de função?
-      Course 4 Artist Functions inspire: "Atividade livre - Inspiração:\nAgora
-        você aprendeu tudo o que precisa saber para criar um padrão como esse!\nSe
-        essa imagem inspira você, tente fazer algo similar. Caso contrário, crie\nalgo
+      Course 4 Artist Functions inspire: "Atividade livre - Inspiração:\nAgora você
+        aprendeu tudo o que precisa saber para criar um padrão como esse!\nSe essa
+        imagem inspira você, tente fazer algo similar. Caso contrário, crie\nalgo
         você mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi\nfeito?
         Visite-nos para ver a solução."
-      Course 4 Artist Inspire: "Atividade livre - Inspiração: agora você
-        aprendeu\ntudo o que precisa saber para criar um padrão como esse! Se essa
-        imagem\ninspira você, tente fazer algo semelhante. Caso contrário, crie algo
-        você mesmo.\r\n\n\r\nQuer saber como nosso padrão de inspiração foi feito?
-        Visite https://studio.code.org/c/105765376/edit\npara ver a solução."
+      Course 4 Artist Inspire: "Atividade livre - Inspiração: agora você aprendeu\ntudo
+        o que precisa saber para criar um padrão como esse! Se essa imagem\ninspira
+        você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r\n\n\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit\npara
+        ver a solução."
       Course 4 Artist Params 1: |-
         Vamos editar uma função que desenha um
         quadrado com lados de 50 pixels
@@ -1521,12 +1498,12 @@ pt:
         chamado de "incremento" e, a cada execução do laço, a variável contador
         é alterada de acordo com o incremento. Tente coletar essas flores usando um incremento
         de 2.
-      Course 4 Bee Loops 5 NEW: Aqui estão três flores. Você consegue
-        encontrar o padrão de instruções que você precisa repetir 3 vezes para coletar
-        o néctar com o menor número de blocos?
-      Course 4 Bee Loops 5a NEW: Agora, use os loops para ajudar a abelha
-        a recolher todo o néctar em seu caminho ao favo de mel com tão poucos blocos
-        quanto possível.  Quando você chegar lá, não se esqueça de fazer mel!
+      Course 4 Bee Loops 5 NEW: Aqui estão três flores. Você consegue encontrar o
+        padrão de instruções que você precisa repetir 3 vezes para coletar o néctar
+        com o menor número de blocos?
+      Course 4 Bee Loops 5a NEW: Agora, use os loops para ajudar a abelha a recolher
+        todo o néctar em seu caminho ao favo de mel com tão poucos blocos quanto possível.  Quando
+        você chegar lá, não se esqueça de fazer mel!
       Course 4 Bee Params 1: |-
         Use a função "obtenha 3 néctares" que
         vira, move-se para coletar o néctar e então retorna à posição original.
@@ -1798,8 +1775,8 @@ pt:
         Adicionamos uma última função para
         que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
         > 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio.
-      Function intro Ryan: Utiliza a função "construir ponte" duas vezes
-        para criar um caminho até à tocha.
+      Function intro Ryan: Utiliza a função "construir ponte" duas vezes para criar
+        um caminho até à tocha.
       Infinity_catch: |-
         Você pode fazer Elsa ("personagem 2") alcançar
         Anna usando as setas do teclado?
@@ -1831,24 +1808,21 @@ pt:
       Infinity_touch_score: |-
         Faça Anna marcar um ponto quando ela tocar
         em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez em cada floco de neve.
-      Inspirational Artwork: "Atividade livre - Inspiração: agora você\naprendeu
-        tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
+      Inspirational Artwork: "Atividade livre - Inspiração: agora você\naprendeu tudo
+        o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
         você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
         \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
         para ver a solução."
       K-1 Artist 1 Assessment 1: |-
         Desenhe uma pequena reta para cima e uma
         grande para a direita!
-      K-1 Artist Loops 1: Desenhe esta reta usando o movimento para o
-        leste 4 vezes.
+      K-1 Artist Loops 1: Desenhe esta reta usando o movimento para o leste 4 vezes.
       K-1 Artist Loops 2: Você pode desenhar a mesma reta usando um laço?
-      K-1 Artist Loops 3: Você pode repetir esses blocos para desenhar
-        6 retas?
+      K-1 Artist Loops 3: Você pode repetir esses blocos para desenhar 6 retas?
       K-1 Artist Loops 4: |-
         Um laço poderia nos ajudar a desenhar o topo desse
         castelo?
-      K-1 Artist Loops 5: O que você pode repetir 4 vezes para desenhar
-        essas escadas?
+      K-1 Artist Loops 5: O que você pode repetir 4 vezes para desenhar essas escadas?
       K-1 Artist Loops 6: |-
         São necessários dois laços: um para subir as
         escadas e outro para descer.
@@ -1864,8 +1838,8 @@ pt:
       K-1 Artist1 3: |-
         Desenhe duas retas para o leste e duas retas para o norte para terminar
         a casa!
-      K-1 Artist1 4: Desenhe retas para cima, sobre e para baixo para
-        completar o castelo!
+      K-1 Artist1 4: Desenhe retas para cima, sobre e para baixo para completar o
+        castelo!
       K-1 Artist1 5.5: |-
         Complete a terceira torre do castelo usando
         retas curtas
@@ -1874,8 +1848,7 @@ pt:
       K-1 Artist1 7: |-
         Use o bloco pule para se mover sem desenhar. Pule
         e desenhe uma reta.
-      K-1 Artist1 8: Desenhe as linhas tracejadas usando os blocos pule
-        e desenhe
+      K-1 Artist1 8: Desenhe as linhas tracejadas usando os blocos pule e desenhe
       K-1 Artist1 9: Desenhe e pule para fazer a reta tracejada
       K-1 Artist1 Assessment 1: Desenhe as retas pequenas e grandes!
       K-1 Artist1 Assessment 2: Desenhe as retas pequenas tracejadas!
@@ -1883,8 +1856,7 @@ pt:
       K-1 Artist2 2: Pule e desenhe um quadrado próximo à casa.
       K-1 Artist2 3: Desenhe um quadrado sobre o outro quadrado
       K-1 Artist2 4: Desenhe um retângulo para completar a ponte.
-      K-1 Artist2 5: Desenhe um retângulo para completar os suportes da
-        ponte
+      K-1 Artist2 5: Desenhe um retângulo para completar os suportes da ponte
       K-1 Artist2 6: Desenhe dois quadrados para criar um retângulo!
       K-1 Artist2 Assessment1: |-
         Avaliação: desenhe um quadrado ao lado do
@@ -1894,44 +1866,31 @@ pt:
       K-1 Bee 1: |-
         Mova-me até a flor, colete o néctar e então mova-me
         até a colmeia e produza mel
-      K-1 Bee 10: Colete quatro néctares e então fabrique duas unidades
-        de mel!
-      K-1 Bee 11.5: Colete quatro néctares para fabricar quatro unidades
-        de mel!
-      K-1 Bee 11: Colete três néctares e então fabrique uma unidade de
-        mel
-      K-1 Bee 12: Colete três néctares e então fabrique duas unidades
-        de mel!
-      K-1 Bee 13: Colete três néctares e então fabrique uma unidade de
-        mel!
+      K-1 Bee 10: Colete quatro néctares e então fabrique duas unidades de mel!
+      K-1 Bee 11.5: Colete quatro néctares para fabricar quatro unidades de mel!
+      K-1 Bee 11: Colete três néctares e então fabrique uma unidade de mel
+      K-1 Bee 12: Colete três néctares e então fabrique duas unidades de mel!
+      K-1 Bee 13: Colete três néctares e então fabrique uma unidade de mel!
       K-1 Bee 14: |-
         Leve-me até o néctar e colete-o, leve-me até o mel
         e produza mel
-      K-1 Bee 15: Colete dois néctares para fabricar duas unidades de
-        mel!
+      K-1 Bee 15: Colete dois néctares para fabricar duas unidades de mel!
       K-1 Bee 2: |-
         Mova-me até a flor, colete o néctar e então mova-me
         até a colmeia e produza mel
       K-1 Bee 3: |-
         Mova-me até a flor, colete o néctar e então mova-me
         até a colmeia e produza mel
-      K-1 Bee 4: Colete dois néctares e então fabrique duas unidades de
-        mel!
-      K-1 Bee 5: Colete três néctares e então fabrique três unidades de
-        mel!
-      K-1 Bee 6: Colete dois néctares e então fabrique duas unidades de
-        mel!
-      K-1 Bee 7: Colete três néctares e então fabrique duas unidades de
-        mel!
-      K-1 Bee 8: Colete dois néctares e então fabrique duas unidades de
-        mel!
-      K-1 Bee 9: Colete dois néctares e então fabrique duas unidades de
-        mel!
+      K-1 Bee 4: Colete dois néctares e então fabrique duas unidades de mel!
+      K-1 Bee 5: Colete três néctares e então fabrique três unidades de mel!
+      K-1 Bee 6: Colete dois néctares e então fabrique duas unidades de mel!
+      K-1 Bee 7: Colete três néctares e então fabrique duas unidades de mel!
+      K-1 Bee 8: Colete dois néctares e então fabrique duas unidades de mel!
+      K-1 Bee 9: Colete dois néctares e então fabrique duas unidades de mel!
       K-1 Bee Assessment 1: Colete néctar para fabricar mel!
       K-1 Bee Assessment 2: Colete néctar para fabricar mel!
       K-1 Bee Loops 1: Colete o néctar para fabricar mel!
-      K-1 Bee Loops 10: Use laços para coletar néctar, fabricar mel e
-        para se mover!
+      K-1 Bee Loops 10: Use laços para coletar néctar, fabricar mel e para se mover!
       K-1 Bee Loops 11: |-
         Avaliação: use laços e obtenha o néctar e o
         mel!
@@ -1946,17 +1905,14 @@ pt:
         Use laços para obter néctar, produzir mel e
         para mover!
       K-1 Bee Loops 5: Use laços para obter néctar e mel!
-      K-1 Bee Loops 6: Use laços para coletar néctar, fabricar mel e para
-        se mover!
+      K-1 Bee Loops 6: Use laços para coletar néctar, fabricar mel e para se mover!
       K-1 Bee Loops 7: Use laços para coletar o néctar e fabricar o mel!
       K-1 Bee Loops 8: Use laços para coletar o néctar e fabricar o mel!
-      K-1 Bee Loops 9: Use laços para coletar néctar, fabricar mel e para
-        se mover!
+      K-1 Bee Loops 9: Use laços para coletar néctar, fabricar mel e para se mover!
       K-1 Bee Loops Assessment 1: |-
         Obtenha néctar para produzir mel e use laços
         para mover!
-      K-1 Bee Loops Assessment 2: Colete néctar para fabricar mel usando
-        laços!
+      K-1 Bee Loops Assessment 2: Colete néctar para fabricar mel usando laços!
       K-1 Building a Foundation Assessment: |-
         Construa uma pirâmide de três níveis.
         Não há outras instruções, então simplesmente brinque com as peças até
@@ -1969,14 +1925,10 @@ pt:
       K-1 Maze 3: Mova-me para o sul para chegar até o porco!
       K-1 Maze 4: Mova-me para o norte para chegar até o porco!
       K-1 Maze 5: Mova-me para o leste para chegar até o porco!
-      K-1 Maze 6: Mova-me por um caminho, e então por outro para me levar
-        até o porco!
-      K-1 Maze 7: Mova-me por um caminho, e então por outro para me levar
-        até o porco!
-      K-1 Maze 8: Mova-me por um caminho, e então por outro para me levar
-        até o porco!
-      K-1 Maze 9: Mova-me por um caminho, e então por outro para me levar
-        até o porco!
+      K-1 Maze 6: Mova-me por um caminho, e então por outro para me levar até o porco!
+      K-1 Maze 7: Mova-me por um caminho, e então por outro para me levar até o porco!
+      K-1 Maze 8: Mova-me por um caminho, e então por outro para me levar até o porco!
+      K-1 Maze 9: Mova-me por um caminho, e então por outro para me levar até o porco!
       K-1 Maze Assessment 1: 'Avaliação: leve-me até o porco!'
       K-1 Maze Assessment 12: Avaliação de nível
       K-1 Maze Assessment 13: Avaliação de nível
@@ -2001,22 +1953,22 @@ pt:
         até o poco!
       K-1 Maze Multi 14: Avaliação de nível
       K-1 Maze Multi 15: Avaliação de nível
-      K-1 Maze Sequence Assessment 1: "Isso é um teste!\r\nMova-me por
-        um caminho e então\npor outro para me levar até o porco"
-      K-1 Maze Sequence Assessment 2: "Isso é um teste!\r\nMova-me por
-        um caminho e então\npor outro para me levar até o porco."
+      K-1 Maze Sequence Assessment 1: "Isso é um teste!\r\nMova-me por um caminho
+        e então\npor outro para me levar até o porco"
+      K-1 Maze Sequence Assessment 2: "Isso é um teste!\r\nMova-me por um caminho
+        e então\npor outro para me levar até o porco."
       K-1 Maze debug Assessment 1: |-
         Avaliação -- depure esse nível
         reorganizando e adicionando blocos para me levar até o porco!
-      K-1 artist 1 level 10: Desenhe as linhas tracejadas usando os blocos
-        pule e desenhe
+      K-1 artist 1 level 10: Desenhe as linhas tracejadas usando os blocos pule e
+        desenhe
       K-1 artist 1 level 9: Faça o desenho usando três retas
       K-1 maze debug 1: Altere o código para me levar até o porco!
       K-1 maze debug 10: |-
         Depure esse nível reorganizando e adicionando blocos
         para me levar até o porco!
-      K-1 maze debug 11: "Isso é um teste!\r\nDepure esse nível reorganizando\ne
-        adicionando blocos para me levar até o porco"
+      K-1 maze debug 11: "Isso é um teste!\r\nDepure esse nível reorganizando\ne adicionando
+        blocos para me levar até o porco"
       K-1 maze debug 2: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
@@ -2043,124 +1995,110 @@ pt:
         para me levar até o porco!
       K2.0 sequence 1: Altere o código para me levar até o porco!
       K2.0 sequence 2: Altere o código para me levar até o porco!
-      K2.0 sequence 5: Mova-me por um caminho, e então por outro para
-        me levar até o porco!
+      K2.0 sequence 5: Mova-me por um caminho, e então por outro para me levar até
+        o porco!
       K2.0 sequence 6: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
       K2.0 sequence 9: 'Desvie do TNT para me levar até o porco! '
-      KTest2: Traça o caminho e leva-me até ao porquinho tonto. Não choques
-        com as dinamites, se não ficas sem penas!
+      KTest2: Traça o caminho e leva-me até ao porquinho tonto. Não choques com as
+        dinamites, se não ficas sem penas!
       Kiki_StarWars_Test_3: texto
       Kiki_StarWars_Test_4: texto
       Kiki_StarWars_Test_5: texto
       Kiki_StarWars_Test_5_Example: texto
       MC Agent Freeplay: "**Jogo livre:**  É hora de explorar sozinho!"
-      MC HOC 2016 Level 10: Está na hora de criares o teu próprio Minecraft!
-        Gera criaturas e depois faz com que elas façam o que tu quiseres. Diverte-te!
-      MC HOC 2016 Level 2-2: A galinha não se mexe. Coloca blocos de "mover"
-        e "virar" na vaga de "quando gerado" para conseguires que ela se mova.
-      MC HOC 2016 Level 3: Excelente, a galinha moveu-se! Mas depois parou.
-        Nos jogos, as galinhas andam para sempre. Utiliza uma ação circular "fazer
-        para sempre" para manteres essas galinhas em movimento.
-      MC HOC 2016 Level 4: Agora as galinhas ficam esquisitas porque se
-        movem todas da mesma maneira. Os jogos utilizam movimentos aleatórios para
-        fazer com que as coisas pareçam reais. Faz com que as galinhas possam "virar
-        aleatoriamente".
-      MC HOC 2016 Level 5: As vacas perderam-se! Leva-as até à relva com
-        um bloco "dar um passo em direção a" numa ação circular "fazer para sempre".
-      MC HOC 2016 Level 6: Agora cria os mortos-vivos. Utiliza o bloco
-        "gerar" para criar 3 mortos-vivos quando a noite cair. Faz com que eles se
-        movam na tua direção. Sobrevive até de manhã.
-      MC HOC 2016 Level 8: O caminho até à tua ovelha está bloqueado por
-        uma parede de pedra. Felizmente, há um Creeper aqui. Os Creepers explodem
-        quando lhes tocas. Faz com que a explosão do Creeper rebente a parede, para
-        que possas alcançar a tua ovelha!
-      MC HOC 2016 New Drop: Em Minecraft, as ovelhas largam lã. Coloca
-        o bloco "largar" em "quando utilizado" e depois caminha até à ovelha e faz
-        com que ela largue um item.
-      MC HOC 2016 New Spawn: Nos jogos, gerar significa adicionar algo
-        ao mundo. Coloca um bloco "gerar" sob "quando executado" para gerar qualquer
-        coisa quando o jogo começar.
-      MC HOC 2016 New Walk: Vamos explorar o nosso mundo! Move-te com
-        as setas e prime a barra de espaços ou toca no painel do jogo para utilizar
-        os itens. Utiliza a porta para entrar na casa.
-      MC HOC 2016 SCORE LEVEL: Alguns jogos permitem-te registar pontuações.
-        Joga à apanhada com estes Golems de Ferro e utiliza o bloco "adicionar 1 à
-        pontuação" para obteres um ponto quando os apanhares. Alcança cinco pontos
-        para ganhar!
-      MC HOC 2016 Village Test: Oh, não! Os Mortos-Vivos aprisionaram-te
-        no interior! Codifica o Golem de Ferro para que ele persiga e ataque os mortos-vivos!
-      MC_HOC_2017_01_Cole: Tens de recolher todas as ferramentas nesta
-        jornada. Desloca-te com as **teclas de seta** e chega ao baú no caminho para
-        vencer
-      MC_HOC_2017_01_RETRY: 'Leva o Agent até à placa de pressão, prime
-        "Executar" e utiliza as teclas de seta para mover o jogador para fora da casa
-        e recolher o baú. '
+      MC HOC 2016 Level 10: Está na hora de criares o teu próprio Minecraft! Gera
+        criaturas e depois faz com que elas façam o que tu quiseres. Diverte-te!
+      MC HOC 2016 Level 2-2: A galinha não se mexe. Coloca blocos de "mover" e "virar"
+        na vaga de "quando gerado" para conseguires que ela se mova.
+      MC HOC 2016 Level 3: Excelente, a galinha moveu-se! Mas depois parou. Nos jogos,
+        as galinhas andam para sempre. Utiliza uma ação circular "fazer para sempre"
+        para manteres essas galinhas em movimento.
+      MC HOC 2016 Level 4: Agora as galinhas ficam esquisitas porque se movem todas
+        da mesma maneira. Os jogos utilizam movimentos aleatórios para fazer com que
+        as coisas pareçam reais. Faz com que as galinhas possam "virar aleatoriamente".
+      MC HOC 2016 Level 5: As vacas perderam-se! Leva-as até à relva com um bloco
+        "dar um passo em direção a" numa ação circular "fazer para sempre".
+      MC HOC 2016 Level 6: Agora cria os mortos-vivos. Utiliza o bloco "gerar" para
+        criar 3 mortos-vivos quando a noite cair. Faz com que eles se movam na tua
+        direção. Sobrevive até de manhã.
+      MC HOC 2016 Level 8: O caminho até à tua ovelha está bloqueado por uma parede
+        de pedra. Felizmente, há um Creeper aqui. Os Creepers explodem quando lhes
+        tocas. Faz com que a explosão do Creeper rebente a parede, para que possas
+        alcançar a tua ovelha!
+      MC HOC 2016 New Drop: Em Minecraft, as ovelhas largam lã. Coloca o bloco "largar"
+        em "quando utilizado" e depois caminha até à ovelha e faz com que ela largue
+        um item.
+      MC HOC 2016 New Spawn: Nos jogos, gerar significa adicionar algo ao mundo. Coloca
+        um bloco "gerar" sob "quando executado" para gerar qualquer coisa quando o
+        jogo começar.
+      MC HOC 2016 New Walk: Vamos explorar o nosso mundo! Move-te com as setas e prime
+        a barra de espaços ou toca no painel do jogo para utilizar os itens. Utiliza
+        a porta para entrar na casa.
+      MC HOC 2016 SCORE LEVEL: Alguns jogos permitem-te registar pontuações. Joga
+        à apanhada com estes Golems de Ferro e utiliza o bloco "adicionar 1 à pontuação"
+        para obteres um ponto quando os apanhares. Alcança cinco pontos para ganhar!
+      MC HOC 2016 Village Test: Oh, não! Os Mortos-Vivos aprisionaram-te no interior!
+        Codifica o Golem de Ferro para que ele persiga e ataque os mortos-vivos!
+      MC_HOC_2017_01_Cole: Tens de recolher todas as ferramentas nesta jornada. Desloca-te
+        com as **teclas de seta** e chega ao baú no caminho para vencer
+      MC_HOC_2017_01_RETRY: 'Leva o Agent até à placa de pressão, prime "Executar"
+        e utiliza as teclas de seta para mover o jogador para fora da casa e recolher
+        o baú. '
       MC_HOC_2017_02: Leva o Agent até à placa de pressão.
-      MC_HOC_2017_02_Cole: 'Move o Agent até à placa de pressão para que
-        {currentPlayerName} chegue ao mapa. '
-      MC_HOC_2017_02_Kiki: Leva o Agent até à placa de pressão e o jogador
-        até ao quadrado cor de laranja.
+      MC_HOC_2017_02_Cole: 'Move o Agent até à placa de pressão para que {currentPlayerName}
+        chegue ao mapa. '
+      MC_HOC_2017_02_Kiki: Leva o Agent até à placa de pressão e o jogador até ao
+        quadrado cor de laranja.
       MC_HOC_2017_02_Will: Leva o Agent até à placa de pressão.
       MC_HOC_2017_03_Cole: 'Programa o Agent para abrir o portão. '
       MC_HOC_2017_03_Kiki: Leva o Agent até à placa de pressão.
-      MC_HOC_2017_04: Muda a ação circular do último quebra-cabeças para
-        ajudar o Agent a criar um caminho sobre a parte mais larga deste rio.
+      MC_HOC_2017_04: Muda a ação circular do último quebra-cabeças para ajudar o
+        Agent a criar um caminho sobre a parte mais larga deste rio.
       MC_HOC_2017_04POINT5_Cole: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04POINT5_RYAN: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Cole: Leva o Agent até à placa de pressão.
       MC_HOC_2017_04_Kiki: Leva o Agent até à placa de pressão.
-      MC_HOC_2017_05: Utiliza uma função para ajudar o Agent a chegar
-        à placa de pressão.
+      MC_HOC_2017_05: Utiliza uma função para ajudar o Agent a chegar à placa de pressão.
       MC_HOC_2017_05_Cole: Leva o jogador até à pá.
       MC_HOC_2017_05_Josh: Leva o jogador até à pá.
       MC_HOC_2017_05_Kiki: Leva o jogador até ao quadrado cor de laranja.
-      MC_HOC_2017_06_Cole: Corrige este código para fazer com que o Agent
-        construa uma ponte sobre este rio.
-      MC_HOC_2017_06_Josh: Corrige este código para ajudar o Agent a construir
+      MC_HOC_2017_06_Cole: Corrige este código para fazer com que o Agent construa
         uma ponte sobre este rio.
-      MC_HOC_2017_06_Kiki: Corrige este código para ajudar o Agent a construir
-        uma ponte sobre este rio.
-      MC_HOC_2017_07_Cole: Destrói o gelo e leva {currentPlayerName} até
-        à Vagoneta.
-      MC_HOC_2017_07_Kiki: Utiliza uma função para abrir caminho até ao
-        quadrado cor de laranja.
+      MC_HOC_2017_06_Josh: Corrige este código para ajudar o Agent a construir uma
+        ponte sobre este rio.
+      MC_HOC_2017_06_Kiki: Corrige este código para ajudar o Agent a construir uma
+        ponte sobre este rio.
+      MC_HOC_2017_07_Cole: Destrói o gelo e leva {currentPlayerName} até à Vagoneta.
+      MC_HOC_2017_07_Kiki: Utiliza uma função para abrir caminho até ao quadrado cor
+        de laranja.
       MC_HOC_2017_07a_Kiki: Abre caminho até ao quadrado cor de laranja.
-      MC_HOC_2017_08_Cole: Muda a função apresentada para que funcione
-        neste bioma.
+      MC_HOC_2017_08_Cole: Muda a função apresentada para que funcione neste bioma.
       MC_HOC_2017_08_Kiki: Muda a função para que funcione neste quebra-cabeças.
       MC_HOC_2017_08_RY: Utiliza as funções para atravessar a lava.
       MC_HOC_2017_08_Will: Utiliza as funções para atravessar a lava.
-      MC_HOC_2017_09_Cole: Programa o Agent para abrir caminho para o
-        jogador.
-      MC_HOC_2017_09_Kiki: Programa o Agent para abrir caminho para o
-        jogador e chegar à placa de pressão.
-      MC_HOC_2017_10_Cole: Cria uma função que te ajude a terminar esta
-        vagoneta.
-      MC_HOC_2017_10_Cole_old: Cria uma função que te ajude a terminar
-        esta vagoneta.
-      MC_HOC_2017_10_Kiki: Cria uma função que te ajude a terminar esta
-        vagoneta.
-      MC_HOC_2017_10_RETRY: Cria uma função que te ajude a terminar esta
-        vagoneta.
-      MC_HOC_2017_10_RYAN: Cria uma função que te ajude a terminar esta
-        vagoneta.
-      MC_HOC_2017_10_RYAN2: Cria uma função que te ajude a terminar esta
-        vagoneta.
+      MC_HOC_2017_09_Cole: Programa o Agent para abrir caminho para o jogador.
+      MC_HOC_2017_09_Kiki: Programa o Agent para abrir caminho para o jogador e chegar
+        à placa de pressão.
+      MC_HOC_2017_10_Cole: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_Cole_old: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_Kiki: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_RETRY: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_RYAN: Cria uma função que te ajude a terminar esta vagoneta.
+      MC_HOC_2017_10_RYAN2: Cria uma função que te ajude a terminar esta vagoneta.
       MC_HOC_2017_13_Cole: "**Jogo livre:**  É hora de explorar sozinho!"
       MC_HOC_2017_4.5v2: Leva o Agent até à placa de pressão.
       MC_HOC_2017_Ali: Utiliza as funções para atravessar a lava.
-      MC_HOC_2017_FP10x10: "**Jogo livre:** És capaz de recolher todos
-        os diamantes neste nível? "
-      MC_HOC_2017_FP10x10_RE: "**Jogo livre:** És capaz de recolher todos
-        os diamantes neste nível? "
+      MC_HOC_2017_FP10x10: "**Jogo livre:** És capaz de recolher todos os diamantes
+        neste nível? "
+      MC_HOC_2017_FP10x10_RE: "**Jogo livre:** És capaz de recolher todos os diamantes
+        neste nível? "
       MC_HOC_2017_FP20x20: "**Jogo livre:**  É hora de explorar sozinho!"
-      MC_HOC_2017_Ryan_03: Agora, utiliza ações circulares para ajudares
-        o Agent a construir uma ponte sobre o rio através da colocação de blocos na
-        água.
-      MC_HOC_2017_Ryan_05: Destrói estes catos para o jogador conseguir
-        atingir o objetivo.
+      MC_HOC_2017_Ryan_03: Agora, utiliza ações circulares para ajudares o Agent a
+        construir uma ponte sobre o rio através da colocação de blocos na água.
+      MC_HOC_2017_Ryan_05: Destrói estes catos para o jogador conseguir atingir o
+        objetivo.
       MC_HOC_Kiki_02: Leva o Agent até à placa de pressão.
       Mike Test Bee Conditionals 1: |-
         A abelha não sabe se isso é uma flor ou
@@ -2201,9 +2139,8 @@ pt:
         Os blocos no editor da função são a definição que
         compõe "desenhe um quadrado". Quando você terminar de analisar, clique em "Salvar
         e Fechar" e então em "Executar".
-      NEW Course 4 Artist Functions 6: "Usando o bloco de função \"desenhe
-        um quadrado\",\nvocê pode desenhar esta imagem? Dica: cada quadrado está separado
-        por 20 pixels.\r\n"
+      NEW Course 4 Artist Functions 6: "Usando o bloco de função \"desenhe um quadrado\",\nvocê
+        pode desenhar esta imagem? Dica: cada quadrado está separado por 20 pixels.\r\n"
       NEW Course 4 Artist Functions 7: |-
         Você está pegando o jeito de como
         usar os blocos de função? Vamos modificar esse quadrado para que ele tenha 200 pixels
@@ -2249,9 +2186,9 @@ pt:
       NEW Course 4 Artist Params 15: |-
         Atividade livre: aqui estão as funções
         que você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
-      NEW Course 4 Artist Params 3: "Agora, vamos usar a função para desenhar\n3
-        triângulos do último desafio em uma linha. Dica: cada triângulo está separado
-        por\n50 pixels.\r\n"
+      NEW Course 4 Artist Params 3: "Agora, vamos usar a função para desenhar\n3 triângulos
+        do último desafio em uma linha. Dica: cada triângulo está separado por\n50
+        pixels.\r\n"
       NEW Course 4 Artist Params 4: |-
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
@@ -2276,11 +2213,11 @@ pt:
         da função "desenhe um quadrado" e adicionar um parâmetro. Ela deve receber um parâmetro
         comprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75
         pixels de comprimento e separados por 100 pixels cada.
-      NEW Course 4 Artist Params inspire: "Atividade livre - Inspiração:
-        agora você\naprendeu tudo o que precisa saber para criar um padrão como esse!
-        Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie
-        algo\nvocê mesmo.\r\n \r\nQuer saber como nosso padrão de inspiração foi feito?
-        Acesse\nhttps://studio.code.org/c/106387530 para ver a solução."
+      NEW Course 4 Artist Params inspire: "Atividade livre - Inspiração: agora você\naprendeu
+        tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
+        \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
+        para ver a solução."
       NEW Course 4 Artist Vars 1.5: |-
         Dê uma olhada no código. Você consegue
         ver como o bloco "defina o comprimento" e o bloco "comprimento" funcionam juntos? Clique
@@ -2312,10 +2249,9 @@ pt:
       NEW Course 4 Bee For Loops 10: |-
         Use a variável "contador" do seu laço "para"
         para controlar a distância do movimento horizontal.
-      NEW Course 4 Bee For Loops 10a: 'Pronto para um desafio?  Pegue
-        o que aprendeu sobre loops e tenta resolver este problema. Lembre-se: Você
-        pode ter que executar sua solução várias vezes antes de conseguir descobrir
-        todas as etapas.'
+      NEW Course 4 Bee For Loops 10a: 'Pronto para um desafio?  Pegue o que aprendeu
+        sobre loops e tenta resolver este problema. Lembre-se: Você pode ter que executar
+        sua solução várias vezes antes de conseguir descobrir todas as etapas.'
       NEW Course 4 Bee For Loops 11: |-
         Você pode usar a variável do laço para
         controlar o movimento e a coleta de néctar?
@@ -2349,9 +2285,9 @@ pt:
         Isso é parecido com o último desafio, mas você precisa coletar 2, 4, 6, 8 e 10 néctares.
         O código inicial foi fornecido, exceto pelos números nos laços contadores.
         Vamos coletar um pouco de néctar!
-      NEW Course 4 Bee For Loops 8: "Se seu laço está contando, o\nincremento
-        é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara
-        coletar 3, 6 e 9 néctares?\r\n"
+      NEW Course 4 Bee For Loops 8: "Se seu laço está contando, o\nincremento é somado
+        à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
+        3, 6 e 9 néctares?\r\n"
       NEW Course 4 Bee For Loops 9: |-
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
@@ -2375,74 +2311,71 @@ pt:
       NEW Course 4 Play Labs For Loops 8 Free Play: |-
         É hora da atividade livre,
         divirta-se com todos os blocos da sua caixa de ferramentas.
-      NEW Course 4 Play Labs For Loops 8a: "Desafio: como você\nusaria
-        o \"laço para\" para fazer cada ator andar e dizer seu número de ator,\ne
-        então sumir da tela? "
+      NEW Course 4 Play Labs For Loops 8a: "Desafio: como você\nusaria o \"laço para\"
+        para fazer cada ator andar e dizer seu número de ator,\ne então sumir da tela? "
       New Artist Project: |-
         Desenhe algo incrível! Seu código é salvo
         como um projeto e você pode retornar a ele a qualquer momento.
-      New Bounce Project: Crie seu próprio jogo de Pingue-pongue. Você
-        pode mudar o visual e todas as regras. Quando terminar, clique em Concluir
-        para que seus amigos possam jogar seu jogo em seus celulares.
+      New Bounce Project: Crie seu próprio jogo de Pingue-pongue. Você pode mudar
+        o visual e todas as regras. Quando terminar, clique em Concluir para que seus
+        amigos possam jogar seu jogo em seus celulares.
       New Course 4 Artist Functions Level 4: |-
         Use a função "desenhe um quadrado"
         para desenhar esse padrão.
       New Gumball Project: Crie o que quiser e compartilhe!
       New Ice Age Project: Crie o que quiser e compartilhe!
       New Infinity Project: Crie o que quiser e compartilhe!
-      New Minecraft Hero Project: "**Jogo livre:**  É hora de explorar
-        sozinho!"
-      Overworld Avoid Monsters: Esbarrar num Creeper é má ideia. Desvia-te
-        cuidadosamente dos Creepers e põe-te em segurança em casa.
-      Overworld Avoid Monsters_2018: Esbarrar num Creeper é má ideia.
-        Desvia-te cuidadosamente dos Creepers e põe-te em segurança em casa.
-      Overworld Chop Tree - allthethings: A madeira é um recurso muito
-        importante. Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza
-        o comando "destruir bloco" para a cortares.
-      Overworld Chop Tree: A madeira é um recurso muito importante. Fazem-se
-        muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir
-        bloco" para a cortares.
-      Overworld Chop Tree_2018: A madeira é um recurso muito importante.
+      New Minecraft Hero Project: "**Jogo livre:**  É hora de explorar sozinho!"
+      Overworld Avoid Monsters: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente
+        dos Creepers e põe-te em segurança em casa.
+      Overworld Avoid Monsters_2018: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente
+        dos Creepers e põe-te em segurança em casa.
+      Overworld Chop Tree - allthethings: A madeira é um recurso muito importante.
         Fazem-se muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando
         "destruir bloco" para a cortares.
-      Overworld Chop Trees: Temos de construir uma casa antes que o sol
-        se ponha. As casas precisam de muita madeira. Abate todas as 3 árvores.
-      Overworld Chop Trees_2018: Temos de construir uma casa antes que
-        o sol se ponha. As casas precisam de muita madeira. Abate todas as 3 árvores.
-      Overworld Free Play 20x20: Parabéns! Completaste todos os nossos
-        quebra-cabeças! Agora escava, constrói e cria algo único, utilizando tudo
-        o que aprendeste até agora.
-      Overworld Free Play 20x20_2018: Parabéns! Completaste todos os nossos
-        quebra-cabeças! Agora escava, constrói e cria algo único, utilizando tudo
-        o que aprendeste até agora.
-      Overworld House Frame Chosen: Construa o resto da casa de qualquer
-        material que goste. O comando "repetir" vai dar jeito.
-      Overworld House Frame Chosen_2018: Construa o resto da casa de qualquer
-        material que goste. O comando "repetir" vai dar jeito.
-      Overworld Move to Sheep: Adiciona um segundo comando "mover para
-        a frente" para chegares às ovelhas.
-      Overworld Move to Sheep_2018: Adiciona um segundo comando "mover
-        para a frente" para chegares às ovelhas.
-      Overworld Place Wall: Cada casa começa com uma parede. Constrói
-        a primeira parte da tua casa encaixando os comandos "colocar" e "mover para
-        a frente" no interior da sequência de repetição.
-      Overworld Place Wall_2018: Cada casa começa com uma parede. Constrói
-        a primeira parte da tua casa encaixando os comandos "colocar" e "mover para
-        a frente" no interior da sequência de repetição.
-      Overworld Plant Crops: É bom fazer planos para o futuro. Planta
-        plantações nos dois lados da água para não teres fome mais tarde.
-      Overworld Plant Crops_2018: É bom fazer planos para o futuro. Planta
-        plantações nos dois lados da água para não teres fome mais tarde.
-      Overworld Powered Minecart: Bom trabalho! Recolheste imensos recursos
-        e construíste uma casa modesta. Agora dispõe carris da orla do mapa até à
-        porta da tua casa.
-      Overworld Powered Minecart_2018: Bom trabalho! Recolheste imensos
-        recursos e construíste uma casa modesta. Agora dispõe carris da orla do mapa
-        até à porta da tua casa.
-      Overworld Shear Sheep: Está na hora de tosquiar ovelhas! Utiliza
-        o comando "tosquiar" para recolheres lã das duas ovelhas.
-      Overworld Shear Sheep_2018: Está na hora de tosquiar ovelhas! Utiliza
-        o comando "tosquiar" para recolheres lã das duas ovelhas.
+      Overworld Chop Tree: A madeira é um recurso muito importante. Fazem-se muitas
+        coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir bloco"
+        para a cortares.
+      Overworld Chop Tree_2018: A madeira é um recurso muito importante. Fazem-se
+        muitas coisas com ela. Aproxima-te de uma árvore e utiliza o comando "destruir
+        bloco" para a cortares.
+      Overworld Chop Trees: Temos de construir uma casa antes que o sol se ponha.
+        As casas precisam de muita madeira. Abate todas as 3 árvores.
+      Overworld Chop Trees_2018: Temos de construir uma casa antes que o sol se ponha.
+        As casas precisam de muita madeira. Abate todas as 3 árvores.
+      Overworld Free Play 20x20: Parabéns! Completaste todos os nossos quebra-cabeças!
+        Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste
+        até agora.
+      Overworld Free Play 20x20_2018: Parabéns! Completaste todos os nossos quebra-cabeças!
+        Agora escava, constrói e cria algo único, utilizando tudo o que aprendeste
+        até agora.
+      Overworld House Frame Chosen: Construa o resto da casa de qualquer material
+        que goste. O comando "repetir" vai dar jeito.
+      Overworld House Frame Chosen_2018: Construa o resto da casa de qualquer material
+        que goste. O comando "repetir" vai dar jeito.
+      Overworld Move to Sheep: Adiciona um segundo comando "mover para a frente" para
+        chegares às ovelhas.
+      Overworld Move to Sheep_2018: Adiciona um segundo comando "mover para a frente"
+        para chegares às ovelhas.
+      Overworld Place Wall: Cada casa começa com uma parede. Constrói a primeira parte
+        da tua casa encaixando os comandos "colocar" e "mover para a frente" no interior
+        da sequência de repetição.
+      Overworld Place Wall_2018: Cada casa começa com uma parede. Constrói a primeira
+        parte da tua casa encaixando os comandos "colocar" e "mover para a frente"
+        no interior da sequência de repetição.
+      Overworld Plant Crops: É bom fazer planos para o futuro. Planta plantações nos
+        dois lados da água para não teres fome mais tarde.
+      Overworld Plant Crops_2018: É bom fazer planos para o futuro. Planta plantações
+        nos dois lados da água para não teres fome mais tarde.
+      Overworld Powered Minecart: Bom trabalho! Recolheste imensos recursos e construíste
+        uma casa modesta. Agora dispõe carris da orla do mapa até à porta da tua casa.
+      Overworld Powered Minecart_2018: Bom trabalho! Recolheste imensos recursos e
+        construíste uma casa modesta. Agora dispõe carris da orla do mapa até à porta
+        da tua casa.
+      Overworld Shear Sheep: Está na hora de tosquiar ovelhas! Utiliza o comando "tosquiar"
+        para recolheres lã das duas ovelhas.
+      Overworld Shear Sheep_2018: Está na hora de tosquiar ovelhas! Utiliza o comando
+        "tosquiar" para recolheres lã das duas ovelhas.
       PDK5 Functions 2: |-
         As funções permitem que você defina novos blocos! Movemos
         os blocos para desenhar um quadrado para dentro de uma função chamada "desenhe um quadrado".
@@ -2453,12 +2386,12 @@ pt:
         néctar, mas você não sabe quanto! Tenha cuidado para não coletar néctar de
         uma flor roxa se ela não tiver néctar. Verifique se o néctar é igual a 1
         usando o bloco se.
-      Ryan - 4-5 Bee Conditionals 2: A abelha só quer néctar agora. Nem
-        todos os objetos são flores, portanto procura debaixo de cada nuvem para ver
-        se ela esconde uma. Se estiver, então podes recolher o néctar.
-      Ryan - Bee Conditionals: A abelha só quer néctar agora. Nem todos
-        os objetos são flores, portanto procura debaixo de cada nuvem para ver se
-        ela esconde uma. Se estiver, então podes recolher o néctar.
+      Ryan - 4-5 Bee Conditionals 2: A abelha só quer néctar agora. Nem todos os objetos
+        são flores, portanto procura debaixo de cada nuvem para ver se ela esconde
+        uma. Se estiver, então podes recolher o néctar.
+      Ryan - Bee Conditionals: A abelha só quer néctar agora. Nem todos os objetos
+        são flores, portanto procura debaixo de cada nuvem para ver se ela esconde
+        uma. Se estiver, então podes recolher o néctar.
       Ryan Test Locked Blocks: |-
         Aqui temos uma função chamada "patrulhe".
         Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
@@ -2523,32 +2456,30 @@ pt:
       U2 frequency random sub: Instruções
       U2 vigenere cipher: Instruções
       U4 vigenere cipher 2: Instruções
-      Underground Avoiding Lava: A lava esconde-se debaixo de alguns destes
-        blocos, e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito
-        um comando "se". Acrescenta um comando "mover para a frente" no lugar correto
-        para escavares estes blocos.
-      Underground Avoiding Lava_2018: A lava esconde-se debaixo de alguns
-        destes blocos, e vais precisar de tapá-la antes de avançares. Aqui vai dar-te
-        jeito um comando "se". Acrescenta um comando "mover para a frente" no lugar
-        correto para escavares estes blocos.
-      Underground If Statements: Agora as coisas começam a ficar difíceis.
-        Escava 3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
+      Underground Avoiding Lava: A lava esconde-se debaixo de alguns destes blocos,
+        e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito um comando
+        "se". Acrescenta um comando "mover para a frente" no lugar correto para escavares
+        estes blocos.
+      Underground Avoiding Lava_2018: A lava esconde-se debaixo de alguns destes blocos,
+        e vais precisar de tapá-la antes de avançares. Aqui vai dar-te jeito um comando
+        "se". Acrescenta um comando "mover para a frente" no lugar correto para escavares
+        estes blocos.
+      Underground If Statements: Agora as coisas começam a ficar difíceis. Escava
+        3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
         empedrado sobre qualquer lava que destapares.
-      Underground If Statements_2018: Agora as coisas começam a ficar
-        difíceis. Escava 3 redstone, mas não caias na lava. Utiliza um comando "se"
-        para colocares empedrado sobre qualquer lava que destapares.
-      Underground Iron: Caminhar sobre lava derretida é má ideia. Coloca
-        empedrado para criares uma ponte, depois escava pelo menos dois dos blocos
-        de ferro.
-      Underground Iron_2018: Caminhar sobre lava derretida é má ideia.
-        Coloca empedrado para criares uma ponte, depois escava pelo menos dois dos
-        blocos de ferro.
-      Underground Mining Coal: Vais encontrar os recursos mais valiosos
-        no subsolo, mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas
-        e escava pelo menos 2 carvões.
-      Underground Mining Coal_2018: Vais encontrar os recursos mais valiosos
-        no subsolo, mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas
-        e escava pelo menos 2 carvões.
+      Underground If Statements_2018: Agora as coisas começam a ficar difíceis. Escava
+        3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
+        empedrado sobre qualquer lava que destapares.
+      Underground Iron: Caminhar sobre lava derretida é má ideia. Coloca empedrado
+        para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
+      Underground Iron_2018: Caminhar sobre lava derretida é má ideia. Coloca empedrado
+        para criares uma ponte, depois escava pelo menos dois dos blocos de ferro.
+      Underground Mining Coal: Vais encontrar os recursos mais valiosos no subsolo,
+        mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
+        menos 2 carvões.
+      Underground Mining Coal_2018: Vais encontrar os recursos mais valiosos no subsolo,
+        mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
+        menos 2 carvões.
       aE7: |-
         Se você copiar esse laço e virar para a esquerda ao invés
         da direita, o que acontece? Você pode repetir isso para desenhar essa onda?
@@ -2561,114 +2492,108 @@ pt:
       birdsDebugVideo1: |-
         Trace o caminho e leve-me até o porco bobalhão. Desvie
         do TNT, ou penas vão voar!
-      bounce_1: Conecte um bloco ao bloco "quando clicar na seta para
-        a esquerda" e clique em "Executar". Mova a raquete usando a seta para a esquerda
-        para alcançar o objetivo final.
-      bounce_10: Agora há um alvo na parte de cima. Conecte os blocos
-        "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a
-        bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um
-        jogo. Veja quantos pontos você consegue marcar antes que seu oponente marque
-        duas vezes.
-      bounce_10_2018: Agora há um alvo na parte de cima. Conecte os blocos
-        "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a
-        bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um
-        jogo. Veja quantos pontos você consegue marcar antes que seu oponente marque
-        duas vezes.
-      bounce_11: Agora você pode conectar blocos ao bloco "quando o jogo
-        começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais de
-        um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete e da
-        bola e veja quantos pontos você pode marcar antes de seu oponente marcar duas
-        vezes.
-      bounce_11_2018: Agora você pode conectar blocos ao bloco "quando
-        o jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em
-        mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete
-        e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar
-        duas vezes.
-      bounce_12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar
-        o visual e todas as regras. Quando terminar, clique em Concluir para que seus
-        amigos possam jogar seu jogo em seus celulares.
-      bounce_12_2018: Crie seu próprio jogo de Pingue-pongue. Você pode
-        mudar o visual e todas as regras. Quando terminar, clique em Concluir para
-        que seus amigos possam jogar seu jogo em seus celulares.
-      bounce_1_2018: Conecte um bloco ao bloco "quando clicar na seta
-        para a esquerda" e clique em "Executar". Mova a raquete usando a seta para
-        a esquerda para alcançar o objetivo final.
-      bounce_2: Conecte um bloco aos blocos "quando clicar na seta para
-        a direita" e "quando clicar na seta para a esquerda". Mova a raquete para
-        alcançar ambos os objetivos finais.
-      bounce_2_2018: Conecte um bloco aos blocos "quando clicar na seta
-        para a direita" e "quando clicar na seta para a esquerda". Mova a raquete
-        para alcançar ambos os objetivos finais.
-      bounce_3: Agora, tente algo semelhante com o bloco "quando clicar
-        na seta para cima". Mova a raquete o objetivo final no topo.
-      bounce_3_2018: Agora, tente algo semelhante com o bloco "quando
-        clicar na seta para cima". Mova a raquete o objetivo final no topo.
-      bounce_4: Desta vez, você precisa adicionar quatro blocos. Mova
-        a raquete para todos os quatro alvos finais para completar este desafio.
-      bounce_4_2018: Desta vez, você precisa adicionar quatro blocos.
-        Mova a raquete para todos os quatro alvos finais para completar este desafio.
-      bounce_5: Vamos lançar uma bola em direção à raquete. Conecte um
-        bloco ao bloco "quando a bola bater na raquete" para garantir que a bola atinja
+      bounce_1: Conecte um bloco ao bloco "quando clicar na seta para a esquerda"
+        e clique em "Executar". Mova a raquete usando a seta para a esquerda para
+        alcançar o objetivo final.
+      bounce_10: Agora há um alvo na parte de cima. Conecte os blocos "marque um ponto"
+        e "marque um ponto para o oponente" aos blocos "quando a bola atingir o alvo"
+        e "quando a bola não acertar a raquete" para fazer um jogo. Veja quantos pontos
+        você consegue marcar antes que seu oponente marque duas vezes.
+      bounce_10_2018: Agora há um alvo na parte de cima. Conecte os blocos "marque
+        um ponto" e "marque um ponto para o oponente" aos blocos "quando a bola atingir
+        o alvo" e "quando a bola não acertar a raquete" para fazer um jogo. Veja quantos
+        pontos você consegue marcar antes que seu oponente marque duas vezes.
+      bounce_11: Agora você pode conectar blocos ao bloco "quando o jogo começa".
+        Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar.
+        Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja
+        quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
+      bounce_11_2018: Agora você pode conectar blocos ao bloco "quando o jogo começa".
+        Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar.
+        Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja
+        quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
+      bounce_12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual
+        e todas as regras. Quando terminar, clique em Concluir para que seus amigos
+        possam jogar seu jogo em seus celulares.
+      bounce_12_2018: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual
+        e todas as regras. Quando terminar, clique em Concluir para que seus amigos
+        possam jogar seu jogo em seus celulares.
+      bounce_1_2018: Conecte um bloco ao bloco "quando clicar na seta para a esquerda"
+        e clique em "Executar". Mova a raquete usando a seta para a esquerda para
+        alcançar o objetivo final.
+      bounce_2: Conecte um bloco aos blocos "quando clicar na seta para a direita"
+        e "quando clicar na seta para a esquerda". Mova a raquete para alcançar ambos
+        os objetivos finais.
+      bounce_2_2018: Conecte um bloco aos blocos "quando clicar na seta para a direita"
+        e "quando clicar na seta para a esquerda". Mova a raquete para alcançar ambos
+        os objetivos finais.
+      bounce_3: Agora, tente algo semelhante com o bloco "quando clicar na seta para
+        cima". Mova a raquete o objetivo final no topo.
+      bounce_3_2018: Agora, tente algo semelhante com o bloco "quando clicar na seta
+        para cima". Mova a raquete o objetivo final no topo.
+      bounce_4: Desta vez, você precisa adicionar quatro blocos. Mova a raquete para
+        todos os quatro alvos finais para completar este desafio.
+      bounce_4_2018: Desta vez, você precisa adicionar quatro blocos. Mova a raquete
+        para todos os quatro alvos finais para completar este desafio.
+      bounce_5: Vamos lançar uma bola em direção à raquete. Conecte um bloco ao bloco
+        "quando a bola bater na raquete" para garantir que a bola atinja o alvo.
+      bounce_5_2018: Vamos lançar uma bola em direção à raquete. Conecte um bloco
+        ao bloco "quando a bola bater na raquete" para garantir que a bola atinja
         o alvo.
-      bounce_5_2018: Vamos lançar uma bola em direção à raquete. Conecte
-        um bloco ao bloco "quando a bola bater na raquete" para garantir que a bola
-        atinja o alvo.
-      bounce_6: Agora o alvo está no topo. Você precisa conectar blocos
-        em ambos os blocos "quando a bola bater" para resolver este desafio.
-      bounce_6_2018: Agora o alvo está no topo. Você precisa conectar
-        blocos em ambos os blocos "quando a bola bater" para resolver este desafio.
-      bounce_7: Conecte os blocos a cada um dos blocos "quando". Faça
-        a bola quicar até que ela atinja o alvo.
-      bounce_7_2018: Conecte os blocos a cada um dos blocos "quando".
-        Faça a bola quicar até que ela atinja o alvo.
-      course2_maze_seq_challenge1: Traça o caminho e leva-me até ao porquinho
-        tonto. Não choques com as dinamites, se não ficas sem penas!
-      course2_playlab_stage17_11: Crie sua própria história. Quando tiver
-        terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
-      course3_playlab_stage16_1: Você consegue fazer esse cachorro dizer
-        "Olá, mundo"?
-      course3_playlab_stage16_2: Você pode fazer o cachorro dizer alguma
-        coisa e, depois, fazer o gato dizer alguma coisa?
-      course3_playlab_stage16_3: Você consegue desenvolver um programa
-        para fazer este cachorro se mover em direção ao gato?
-      course3_playlab_stage16_4: Você consegue desenvolver um programa
-        que faça com que o cachorro se mova em direção ao gato e que faça com que
-        o gato diga "Olá" quando o cachorro o alcançar?
-      course3_playlab_stage16_5: Você pode adicionar um bloco para deixar
-        o polvo feliz?
-      course3_playlab_stage16_6: Crie sua própria história. Quando tiver
-        terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
-      course3_playlab_stage17_1: Você pode escrever um programa para fazer
-        o polvo dizer "olá" quando clicarem nele?
-      course3_playlab_stage17_2: Você pode desenvolver um programa que
-        faça o pinguim se mover usando as teclas com as setas para cima / para baixo
-        / à esquerda / à direita, para atingir todos os alvos?
-      course3_playlab_stage17_3: O bloco "repita infinitamente" possibilita
-        a execução contínua do programa. Consegues usar blocos para mover esse dinossauro
-        para cima e para baixo repetidamente?
-      course3_playlab_stage17_4: Você pode fazer com que o pinguim diga
-        "Ai!" e reproduza um som de "batida" se ele encontrar o dinossauro, e então
-        movê-lo com as setas para fazer isso acontecer?
-      course3_playlab_stage17_5: Você pode adicionar um bloco que some
-        um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que
-        você consiga o ponto?
-      course3_playlab_stage17_6: Você pode adicionar blocos para mudar
-        o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até
-        que você pontue?
-      course3_playlab_stage17_7: Crie sua própria história. Quando tiver
-        terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
-      course4_artist_fwp_challenge1: Tenta executar este programa e faz
-        as alterações para ver o que acontece. Podes descobrir como funciona? (Ou
-        apagá-lo e substituí-lo por algo totalmente diferente)
+      bounce_6: Agora o alvo está no topo. Você precisa conectar blocos em ambos os
+        blocos "quando a bola bater" para resolver este desafio.
+      bounce_6_2018: Agora o alvo está no topo. Você precisa conectar blocos em ambos
+        os blocos "quando a bola bater" para resolver este desafio.
+      bounce_7: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar
+        até que ela atinja o alvo.
+      bounce_7_2018: Conecte os blocos a cada um dos blocos "quando". Faça a bola
+        quicar até que ela atinja o alvo.
+      course2_maze_seq_challenge1: Traça o caminho e leva-me até ao porquinho tonto.
+        Não choques com as dinamites, se não ficas sem penas!
+      course2_playlab_stage17_11: Crie sua própria história. Quando tiver terminado,
+        clique em Concluir para que seus amigos possam vê-la em seus celulares.
+      course3_playlab_stage16_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
+      course3_playlab_stage16_2: Você pode fazer o cachorro dizer alguma coisa e,
+        depois, fazer o gato dizer alguma coisa?
+      course3_playlab_stage16_3: Você consegue desenvolver um programa para fazer
+        este cachorro se mover em direção ao gato?
+      course3_playlab_stage16_4: Você consegue desenvolver um programa que faça com
+        que o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá"
+        quando o cachorro o alcançar?
+      course3_playlab_stage16_5: Você pode adicionar um bloco para deixar o polvo
+        feliz?
+      course3_playlab_stage16_6: Crie sua própria história. Quando tiver terminado,
+        clique em Concluir para que seus amigos possam vê-la em seus celulares.
+      course3_playlab_stage17_1: Você pode escrever um programa para fazer o polvo
+        dizer "olá" quando clicarem nele?
+      course3_playlab_stage17_2: Você pode desenvolver um programa que faça o pinguim
+        se mover usando as teclas com as setas para cima / para baixo / à esquerda
+        / à direita, para atingir todos os alvos?
+      course3_playlab_stage17_3: O bloco "repita infinitamente" possibilita a execução
+        contínua do programa. Consegues usar blocos para mover esse dinossauro para
+        cima e para baixo repetidamente?
+      course3_playlab_stage17_4: Você pode fazer com que o pinguim diga "Ai!" e reproduza
+        um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas
+        para fazer isso acontecer?
+      course3_playlab_stage17_5: Você pode adicionar um bloco que some um ponto quando
+        o pinguim se encontra com o polvo, e então movê-lo até que você consiga o
+        ponto?
+      course3_playlab_stage17_6: Você pode adicionar blocos para mudar o plano de
+        fundo e a velocidade do pinguim, e então movê-lo com as setas até que você
+        pontue?
+      course3_playlab_stage17_7: Crie sua própria história. Quando tiver terminado,
+        clique em Concluir para que seus amigos possam vê-la em seus celulares.
+      course4_artist_fwp_challenge1: Tenta executar este programa e faz as alterações
+        para ver o que acontece. Podes descobrir como funciona? (Ou apagá-lo e substituí-lo
+        por algo totalmente diferente)
       courseA_maze_seq2: Altere o código para me levar até o porco!
       courseA_maze_seq2_2018: Altere o código para me levar até o porco!
-      courseC_artist_prog5: 'Essa casa precisa de um telhado! Desenhe
-        o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
-      courseC_artist_prog5_2018: 'Essa casa precisa de um telhado! Desenhe
-        o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
+      courseC_artist_prog5: 'Essa casa precisa de um telhado! Desenhe o triângulo.
+        Dica: todos os 3 lados têm o mesmo comprimento.'
+      courseC_artist_prog5_2018: 'Essa casa precisa de um telhado! Desenhe o triângulo.
+        Dica: todos os 3 lados têm o mesmo comprimento.'
       courseC_maze_debugging10: |-
-        Depure esse nível reorganizando e adicionando
-        blocos para me levar até o porco!
+        Depure esse nível reorganizando e adicionando blocos
+        para me levar até o porco!
       courseD_artist_binary4: |-
         Você consegue desenhar este padrão usando
         a repetição de uma string binária de 3 dígitos?
@@ -2712,40 +2637,37 @@ pt:
       courseD_bee_nestedLoops8_2018: |-
         Colete todo o néctar de cada flor
         e produza mel em cada colmeia. Use um laço aninhado.
-      courseD_bounce_events10: Agora há um alvo na parte de cima. Conecte
-        os blocos "marque um ponto" e "marque um ponto para o oponente" aos blocos
-        "quando a bola atingir o alvo" e "quando a bola não acertar a raquete" para
-        fazer um jogo. Veja quantos pontos você consegue marcar antes que seu oponente
-        marque duas vezes.
-      courseD_bounce_events11: Agora você pode conectar blocos ao bloco
-        "quando o jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola"
-        em mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da
-        raquete e da bola e veja quantos pontos você pode marcar antes de seu oponente
-        marcar duas vezes.
-      courseD_bounce_events12: Crie seu próprio jogo de Pingue-pongue.
-        Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir
-        para que seus amigos possam jogar seu jogo em seus celulares.
-      courseD_bounce_events2: Conecte um bloco aos blocos "quando clicar
-        na seta para a direita" e "quando clicar na seta para a esquerda". Mova a
-        raquete para alcançar ambos os objetivos finais.
-      courseD_bounce_events3: Agora, tente algo semelhante com o bloco
-        "quando clicar na seta para cima". Mova a raquete o objetivo final no topo.
-      courseD_bounce_events3s: Agora, tente algo semelhante com o bloco
-        "quando clicar na seta para cima". Mova a raquete o objetivo final no topo.
-      courseD_bounce_events4: Desta vez, você precisa adicionar quatro
-        blocos. Mova a raquete para todos os quatro alvos finais para completar este
-        desafio.
-      courseD_bounce_events4s: Desta vez, você precisa adicionar quatro
-        blocos. Mova a raquete para todos os quatro alvos finais para completar este
-        desafio.
-      courseD_bounce_events5: Vamos lançar uma bola em direção à raquete.
-        Conecte um bloco ao bloco "quando a bola bater na raquete" para garantir que
-        a bola atinja o alvo.
-      courseD_bounce_events6: Agora o alvo está no topo. Você precisa
-        conectar blocos em ambos os blocos "quando a bola bater" para resolver este
-        desafio.
-      courseD_bounce_events7: Conecte os blocos a cada um dos blocos "quando".
-        Faça a bola quicar até que ela atinja o alvo.
+      courseD_bounce_events10: Agora há um alvo na parte de cima. Conecte os blocos
+        "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a
+        bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um
+        jogo. Veja quantos pontos você consegue marcar antes que seu oponente marque
+        duas vezes.
+      courseD_bounce_events11: Agora você pode conectar blocos ao bloco "quando o
+        jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais
+        de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete
+        e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar
+        duas vezes.
+      courseD_bounce_events12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar
+        o visual e todas as regras. Quando terminar, clique em Concluir para que seus
+        amigos possam jogar seu jogo em seus celulares.
+      courseD_bounce_events2: Conecte um bloco aos blocos "quando clicar na seta para
+        a direita" e "quando clicar na seta para a esquerda". Mova a raquete para
+        alcançar ambos os objetivos finais.
+      courseD_bounce_events3: Agora, tente algo semelhante com o bloco "quando clicar
+        na seta para cima". Mova a raquete o objetivo final no topo.
+      courseD_bounce_events3s: Agora, tente algo semelhante com o bloco "quando clicar
+        na seta para cima". Mova a raquete o objetivo final no topo.
+      courseD_bounce_events4: Desta vez, você precisa adicionar quatro blocos. Mova
+        a raquete para todos os quatro alvos finais para completar este desafio.
+      courseD_bounce_events4s: Desta vez, você precisa adicionar quatro blocos. Mova
+        a raquete para todos os quatro alvos finais para completar este desafio.
+      courseD_bounce_events5: Vamos lançar uma bola em direção à raquete. Conecte
+        um bloco ao bloco "quando a bola bater na raquete" para garantir que a bola
+        atinja o alvo.
+      courseD_bounce_events6: Agora o alvo está no topo. Você precisa conectar blocos
+        em ambos os blocos "quando a bola bater" para resolver este desafio.
+      courseD_bounce_events7: Conecte os blocos a cada um dos blocos "quando". Faça
+        a bola quicar até que ela atinja o alvo.
       courseD_debugging_3: |-
         Esses blocos estão me incomodando. Conserte o(s)
         erro(s) para coletar todo o néctar e produzir todo o mel.
@@ -2790,12 +2712,12 @@ pt:
         Aninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o
         artista no lugar para desenhar a próxima reta. Qual desses blocos de código você
         pode colocar no final do laço mais externo para desenhar toda a grade?
-      courseF_bee_for8: "Se seu laço está contando, o\nincremento é somado
-        à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
+      courseF_bee_for8: "Se seu laço está contando, o\nincremento é somado à variável
+        contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6
+        e 9 néctares?\r\n"
+      courseF_bee_for8_2018: "Se seu laço está contando, o\nincremento é somado à
+        variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
         3, 6 e 9 néctares?\r\n"
-      courseF_bee_for8_2018: "Se seu laço está contando, o\nincremento
-        é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara
-        coletar 3, 6 e 9 néctares?\r\n"
       courseF_bee_functions4: |-
         A função "mova e obtenha néctar" vira
         a abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use
@@ -2804,62 +2726,57 @@ pt:
         A função "mova e obtenha néctar" vira
         a abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use
         a função para coletar todo o néctar.
-      flappy_1: Liga um bloco ao bloco "quando clicar" e, depois, clica
-        em "Executar". Para moveres o passarinho até ao alvo, clica no ecrã.
-      flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o
-        visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em
-        Concluir para que seus amigos joguem seu jogo em seus celulares.
-      flappy_11_2018: Crie seu próprio jogo Flappy Bird. Você pode mudar
-        o visual e todas as regras, até mesmo a gravidade. Quando terminar, clique
-        em Concluir para que seus amigos joguem seu jogo em seus celulares.
-      flappy_1_2018: Liga um bloco ao bloco "quando clicar" e, depois,
-        clica em "Executar". Para moveres o passarinho até ao alvo, clica no ecrã.
-      flappy_2: Agora passámos a ter chão. Liga um bloco ao bloco "quando
-        bater no chão". O teu código tem de 'TERMINAR O JOGO' quando o passarinho
-        cair ao chão.
-      flappy_2_2018: Agora passámos a ter chão. Liga um bloco ao bloco
-        "quando bater no chão". O teu código tem de 'TERMINAR O JOGO' quando o passarinho
-        cair ao chão.
-      flappy_3: O bloco "quando o jogo começa" permite que você execute
-        o código quando o jogo começa. Defina a velocidade do nível e voe em direção
-        ao alvo.
-      flappy_3_2018: O bloco "quando o jogo começa" permite que você execute
-        o código quando o jogo começa. Defina a velocidade do nível e voe em direção
-        ao alvo.
-      flappy_4: O passarinho vai atravessar os obstáculos, a menos que
-        você programe para fazê-lo bater. Conecte um bloco ao bloco "quando atingir
-        um obstáculo". Seu programa precisa 'TERMINAR O JOGO' quando o passarinho
-        bater nos obstáculos.
-      flappy_4_2018: O passarinho vai atravessar os obstáculos, a menos
-        que você programe para fazê-lo bater. Conecte um bloco ao bloco "quando atingir
-        um obstáculo". Seu programa precisa 'TERMINAR O JOGO' quando o passarinho
-        bater nos obstáculos.
-      flappy_5: Vamos adicionar um painel de pontuação e aumentar os pontos
-        quando o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar
-        um obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
+      flappy_1: Liga um bloco ao bloco "quando clicar" e, depois, clica em "Executar".
+        Para moveres o passarinho até ao alvo, clica no ecrã.
+      flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas
+        as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para
+        que seus amigos joguem seu jogo em seus celulares.
+      flappy_11_2018: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual
+        e todas as regras, até mesmo a gravidade. Quando terminar, clique em Concluir
+        para que seus amigos joguem seu jogo em seus celulares.
+      flappy_1_2018: Liga um bloco ao bloco "quando clicar" e, depois, clica em "Executar".
+        Para moveres o passarinho até ao alvo, clica no ecrã.
+      flappy_2: Agora passámos a ter chão. Liga um bloco ao bloco "quando bater no
+        chão". O teu código tem de 'TERMINAR O JOGO' quando o passarinho cair ao chão.
+      flappy_2_2018: Agora passámos a ter chão. Liga um bloco ao bloco "quando bater
+        no chão". O teu código tem de 'TERMINAR O JOGO' quando o passarinho cair ao
+        chão.
+      flappy_3: O bloco "quando o jogo começa" permite que você execute o código quando
+        o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.
+      flappy_3_2018: O bloco "quando o jogo começa" permite que você execute o código
+        quando o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.
+      flappy_4: O passarinho vai atravessar os obstáculos, a menos que você programe
+        para fazê-lo bater. Conecte um bloco ao bloco "quando atingir um obstáculo".
+        Seu programa precisa 'TERMINAR O JOGO' quando o passarinho bater nos obstáculos.
+      flappy_4_2018: O passarinho vai atravessar os obstáculos, a menos que você programe
+        para fazê-lo bater. Conecte um bloco ao bloco "quando atingir um obstáculo".
+        Seu programa precisa 'TERMINAR O JOGO' quando o passarinho bater nos obstáculos.
+      flappy_5: Vamos adicionar um painel de pontuação e aumentar os pontos quando
+        o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar um
+        obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
         conjunto de obstáculos.
-      flappy_5_2018: Vamos adicionar um painel de pontuação e aumentar
-        os pontos quando o passarinho passar pelos obstáculos. Faça isso no bloco
-        "quando passar um obstáculo", e então marque um ponto quando o passarinho
-        passar pelo primeiro conjunto de obstáculos.
-      flappy_6: Veja se você ainda pode marcar um ponto depois de fazer
-        o passarinho bater as asas mais ou menos.
-      flappy_6_2018: Veja se você ainda pode marcar um ponto depois de
-        fazer o passarinho bater as asas mais ou menos.
-      flappy_7: Em seguida, tente mudar a cena conectando outro bloco
-        ao bloco "quando o jogo começa".
-      flappy_7_2018: Em seguida, tente mudar a cena conectando outro bloco
-        ao bloco "quando o jogo começa".
-      flappy_8: Você pode definir o visual a qualquer momento, não apenas
-        quando o jogo começa. Tente criar um cenário ALEATÓRIO quando outros eventos
-        acontecerem, por exemplo, ao passar um obstáculo.
-      flappy_8_2018: Você pode definir o visual a qualquer momento, não
-        apenas quando o jogo começa. Tente criar um cenário ALEATÓRIO quando outros
-        eventos acontecerem, por exemplo, ao passar um obstáculo.
-      flappy_9: Para misturar as coisas, ao invés de terminar o jogo quando
-        bater em um obstáculo, tente fazer a pontuação voltar a 0.
-      flappy_9_2018: Para misturar as coisas, ao invés de terminar o jogo
-        quando bater em um obstáculo, tente fazer a pontuação voltar a 0.
+      flappy_5_2018: Vamos adicionar um painel de pontuação e aumentar os pontos quando
+        o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar um
+        obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
+        conjunto de obstáculos.
+      flappy_6: Veja se você ainda pode marcar um ponto depois de fazer o passarinho
+        bater as asas mais ou menos.
+      flappy_6_2018: Veja se você ainda pode marcar um ponto depois de fazer o passarinho
+        bater as asas mais ou menos.
+      flappy_7: Em seguida, tente mudar a cena conectando outro bloco ao bloco "quando
+        o jogo começa".
+      flappy_7_2018: Em seguida, tente mudar a cena conectando outro bloco ao bloco
+        "quando o jogo começa".
+      flappy_8: Você pode definir o visual a qualquer momento, não apenas quando o
+        jogo começa. Tente criar um cenário ALEATÓRIO quando outros eventos acontecerem,
+        por exemplo, ao passar um obstáculo.
+      flappy_8_2018: Você pode definir o visual a qualquer momento, não apenas quando
+        o jogo começa. Tente criar um cenário ALEATÓRIO quando outros eventos acontecerem,
+        por exemplo, ao passar um obstáculo.
+      flappy_9: Para misturar as coisas, ao invés de terminar o jogo quando bater
+        em um obstáculo, tente fazer a pontuação voltar a 0.
+      flappy_9_2018: Para misturar as coisas, ao invés de terminar o jogo quando bater
+        em um obstáculo, tente fazer a pontuação voltar a 0.
       frozen circle function in circle: |-
         Agora vamos criar 20 círculos
         sobrepostos, virando 18 graus entre cada círculo.
@@ -2891,14 +2808,13 @@ pt:
         Agora, vamos criar um novo floco de neve
         usando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus
         à direita entre cada um.
-      frozen diamond: Use uma repetição em torno desses blocos para criar
-        um paralelogramo. É como um retângulo mas tem ângulos diferentes. Este tem
-        ângulos de 60 graus e 120 graus em vez de todos os ângulos de 90 graus.
+      frozen diamond: Use uma repetição em torno desses blocos para criar um paralelogramo.
+        É como um retângulo mas tem ângulos diferentes. Este tem ângulos de 60 graus
+        e 120 graus em vez de todos os ângulos de 90 graus.
       frozen freeplay: |-
         Você se tornou oficialmente um artista mestre!
         Crie um país das maravilhas de gelo.
-      frozen line: Olá! Chamo-me Elsa Arendelle. Podes ajudar-me a criar
-        uma reta?
+      frozen line: Olá! Chamo-me Elsa Arendelle. Podes ajudar-me a criar uma reta?
       frozen perpendicular: |-
         Agora, vamos ver se podemos criar duas retas
         que formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco "vire"
@@ -2929,8 +2845,8 @@ pt:
         graus entre cada quadrado?
       grade1_maze_sequence1: Altere o código para me levar até o porco!
       grade1_maze_sequence2: Altere o código para me levar até o porco!
-      grade1_maze_sequence5: Mova-me por um caminho, e então por outro
-        para me levar até o porco!
+      grade1_maze_sequence5: Mova-me por um caminho, e então por outro para me levar
+        até o porco!
       grade1_maze_sequence6: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
@@ -2939,8 +2855,8 @@ pt:
       grade2_CaringForNewPet_5: Leve-me até o porco!
       grade2_MakeDogTag_10: Desenha algo divertido.
       grade2_MakeDogTag_3: Ajude-me a completar a casa para o gato.
-      grade2_MakeDogTag_4: 'Essa casa precisa de um telhado! Desenhe o
-        triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
+      grade2_MakeDogTag_4: 'Essa casa precisa de um telhado! Desenhe o triângulo.
+        Dica: todos os 3 lados têm o mesmo comprimento.'
       grade2_MakeDogTag_6: Atividade livre! Desenhe o que você quiser.
       grade2_MakeDogTag_8: |-
         Agora vamos conectar um monte de V's,
@@ -2948,28 +2864,26 @@ pt:
       grade2_MakeDogTag_9: |-
         Dessa vez, vamos desenhar 24 vezes. Adicione
         uma ação de virar à esquerda em 30 graus ao código e coloque tudo em um bloco repita.
-      grade2_PuppyLoops_1: Consegues levar-me até ao porquinho com 5 blocos
-        do mesmo género?
+      grade2_PuppyLoops_1: Consegues levar-me até ao porquinho com 5 blocos do mesmo
+        género?
       grade2_PuppyLoops_10: |-
         Meu cata-vento não está pronto. Quantas
         vezes eu preciso repetir para terminá-lo?
       grade2_PuppyLoops_2: |-
         Você pode substituir esses cinco blocos por apenas dois blocos?
         (Dica: crie um laço usando um bloco "repita vezes")
-      grade2_PuppyLoops_4: Use dois laços para chegar até o porco usando
-        menos blocos.
+      grade2_PuppyLoops_4: Use dois laços para chegar até o porco usando menos blocos.
       grade2_PuppyLoops_5: Leve-me até o porco.
       grade2_PuppyLoops_7: Leve-me até o girassol!
-      grade2_PuppyLoops_8: 'O código para os três bigodes que você vê
-        está errado. Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse
-        código para desenhar os bigodes.'
-      grade2_PuppyLoops_9: "Parece que o C no código está desenhado ao
-        contrário.\r\n\r\nConsegues voltar a transformá-lo num C?"
+      grade2_PuppyLoops_8: 'O código para os três bigodes que você vê está errado.
+        Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para
+        desenhar os bigodes.'
+      grade2_PuppyLoops_9: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+        voltar a transformá-lo num C?"
       grade2_puppy_loops2: |-
         Você pode substituir esses cinco blocos por apenas dois blocos?
         (Dica: crie um laço usando um bloco "repita vezes")
-      grade2_puppy_loops4: Use dois laços para chegar até o porco usando
-        menos blocos.
+      grade2_puppy_loops4: Use dois laços para chegar até o porco usando menos blocos.
       grade3_ConditionalsElse_1: |-
         A abelha não sabe se isso é uma flor ou
         uma colmeia. Colete néctar apenas das flores, mas primeiro verifique se o objeto é
@@ -3089,13 +3003,13 @@ pt:
         Você consegue realizar a mesma tarefa mais facilmente
         com um laço?
       grade3_Loops_3: Você consegue usar um laço para coletar todo o néctar?
-      grade3_Loops_4: Agora, use o novo bloco repita para coletar todo
-        o néctar e produzir todo o mel.
+      grade3_Loops_4: Agora, use o novo bloco repita para coletar todo o néctar e
+        produzir todo o mel.
       grade3_Loops_5: |-
         Coloque esses blocos em um laço para coletar o néctar
         de cada flor.
-      grade3_Loops_6: O que acontece se você repetir esta sequência 3
-        vezes? Não se esqueça de fazer o mel no final!
+      grade3_Loops_6: O que acontece se você repetir esta sequência 3 vezes? Não se
+        esqueça de fazer o mel no final!
       grade3_Loops_7: |-
         Cada flor contém uma unidade de néctar. Colete
         o néctar de cada uma das flores.
@@ -3118,29 +3032,28 @@ pt:
       grade3_maze_loops3: Leve-me até o girassol!
       grade3_maze_loops4: Leve-me até o girassol!
       grade3_maze_loops5: Leve-me até o girassol!
-      grade3_maze_nestedLoops1: Consegues levar-me até ao porquinho com
-        5 blocos do mesmo género?
+      grade3_maze_nestedLoops1: Consegues levar-me até ao porquinho com 5 blocos do
+        mesmo género?
       grade3_maze_nestedLoops2: |-
         Você pode substituir esses cinco blocos por apenas dois blocos?
         (Dica: crie um laço usando um bloco "repita vezes")
-      grade3_maze_nestedLoops3: Leve-me até o porco usando apenas dois
+      grade3_maze_nestedLoops3: Leve-me até o porco usando apenas dois blocos.
+      grade3_maze_nestedLoops4: Use dois laços para chegar até o porco usando menos
         blocos.
-      grade3_maze_nestedLoops4: Use dois laços para chegar até o porco
-        usando menos blocos.
-      grade3_robotFarmer_ConditionalsIntro_11: 'Ainda está escuro lá fora.
-        Move-me ao longo do campo. Se houver um monte, remove-o e se houver um buraco,
-        preenche-o. Dica: usa o menu pendente de opções no bloco "se".'
-      grade3_robotFarmer_ConditionalsIntro_6: Remove todos os montes de
-        terra, usando o mínimo de blocos quanto possível. As novas opções no menu
-        pendente do bloco "enquanto" dizem-me se estou em cima do monte ou do buraco.
-      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Ajuda-me a tapar
-        estes buracos com 5 pazadas de terra. Dica: Podes colocar um bloco "repetir"
-        dentro de um bloco "enquanto".'
+      grade3_robotFarmer_ConditionalsIntro_11: 'Ainda está escuro lá fora. Move-me
+        ao longo do campo. Se houver um monte, remove-o e se houver um buraco, preenche-o.
+        Dica: usa o menu pendente de opções no bloco "se".'
+      grade3_robotFarmer_ConditionalsIntro_6: Remove todos os montes de terra, usando
+        o mínimo de blocos quanto possível. As novas opções no menu pendente do bloco
+        "enquanto" dizem-me se estou em cima do monte ou do buraco.
+      grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Ajuda-me a tapar estes buracos
+        com 5 pazadas de terra. Dica: Podes colocar um bloco "repetir" dentro de um
+        bloco "enquanto".'
       grade4_arist_nested_loop_circles1: |-
         Use um laço aninhado para completar
         o design.
-      grade4_arist_nested_loop_flags1: Repita o código dado para criar
-        um moinho de vento.
+      grade4_arist_nested_loop_flags1: Repita o código dado para criar um moinho de
+        vento.
       grade4_arist_nested_loop_polygons1: |-
         Repita esse design 10 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
@@ -3157,10 +3070,9 @@ pt:
       grade4_arist_nested_loop_triangles3: |-
         Você pode desenhar um hexágono repetindo o
         código do triângulo?
-      grade4_arist_nested_loop_triangles4: Desenhe o dente na boca do
-        crocodilo!
-      grade4_arist_nested_loop_triangles5: "Crie um sol aninhando o código
-        inicial\ndentro de outro laço. Chamamos isso de laço aninhado.\r"
+      grade4_arist_nested_loop_triangles4: Desenhe o dente na boca do crocodilo!
+      grade4_arist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
+        de outro laço. Chamamos isso de laço aninhado.\r"
       grade4_arist_nested_loop_triangles6: |-
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
@@ -3184,8 +3096,8 @@ pt:
       grade4_artist_nested_loop_circles1: |-
         Use um laço aninhado para completar
         o design.
-      grade4_artist_nested_loop_flags1: Repita o código dado para criar
-        um moinho de vento.
+      grade4_artist_nested_loop_flags1: Repita o código dado para criar um moinho
+        de vento.
       grade4_artist_nested_loop_polygons1: |-
         Repita esse design 10 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
@@ -3195,8 +3107,8 @@ pt:
       grade4_artist_nested_loop_triangles1: |-
         Complete o código para desenhar esses triângulos. O
         primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
-      grade4_artist_nested_loop_triangles5: "Crie um sol aninhando o código
-        inicial\ndentro de outro laço. Chamamos isso de laço aninhado.\r"
+      grade4_artist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
+        de outro laço. Chamamos isso de laço aninhado.\r"
       grade4_artist_nested_loop_triangles6: |-
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
@@ -3265,8 +3177,8 @@ pt:
       grade4_frozen_freeplay: |-
         Você se tornou oficialmente um artista mestre!
         Crie um país das maravilhas de gelo.
-      grade4_frozen_functions0: Consegues descobrir qual o número que
-        substitui os pontos de interrogação para que possas desenhar um círculo?
+      grade4_frozen_functions0: Consegues descobrir qual o número que substitui os
+        pontos de interrogação para que possas desenhar um círculo?
       grade4_frozen_functions1a: |-
         Use o novo bloco "crie um círculo" para
         criar 10 círculos sobrepostos. Não se esqueça de avançar entre os círculos.
@@ -3318,17 +3230,16 @@ pt:
         Aqui temos uma função chamada "pule"
         que faz seu personagem principal pular 100 pixels. Use a função pule
         para coletar todas as bandeiras.
-      grade4_review_artist1: Oi, eu sou um artista. Você pode escrever
-        códigos para me fazer desenhar quase qualquer coisa. Use alguns blocos para
-        me fazer desenhar sobre as linhas cinzas na imagem. (Cada linha tem o comprimento
-        de 100 pixels)
-      grade4_review_artist2: 'Essa casa precisa de um telhado! Desenhe
-        o triângulo. Dica: todos os 3 lados têm o mesmo comprimento.'
+      grade4_review_artist1: Oi, eu sou um artista. Você pode escrever códigos para
+        me fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar
+        sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
+      grade4_review_artist2: 'Essa casa precisa de um telhado! Desenhe o triângulo.
+        Dica: todos os 3 lados têm o mesmo comprimento.'
       grade4_review_artist3: |-
         O bloco pule move o artista sem desenhar.
         Desenhe a linha tracejada usando os bloco pule e desenhe.
-      grade4_review_bee1: Agora, use o novo bloco repita para coletar
-        todo o néctar e produzir todo o mel.
+      grade4_review_bee1: Agora, use o novo bloco repita para coletar todo o néctar
+        e produzir todo o mel.
       grade4_review_bee2: |-
         Colete o néctar de cada flor e produza mel
         em cada colmeia.
@@ -3378,21 +3289,21 @@ pt:
         e adiciona um lado por vez, até que seja desenhado um decágono (10 lados). Cada lado
         deve ter 100 pixels de comprimento. Dica: 360 dividido pelo número de lados de uma forma
         é o número de graus que você vai precisar virar.
-      grade5_artist_for_loops9: "Vamos juntar tudo!  Usando\nseu conhecimento
-        em \"laços para\" e o \"contador\", crie este desenho no qual\ncada forma
-        tem dois lados a mais que a anterior. Lembre-se de que cada lado é\n10 vezes
-        maior que o número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo
-        código foi fornecida para você."
-      grade5_artist_for_loopsfreeplay11: "Atividade livre - Inspiração:
-        agora você\naprendeu tudo o que precisa saber para criar um padrão como esse!
-        Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie
-        algo\nvocê mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi feito?
-        Acesse\nhttps://studio.code.org/c/106387604 para ver a solução."
-      grade5_artist_functionparameters10: "Atividade livre - Inspiração:
-        agora você\naprendeu tudo o que precisa saber para criar um padrão como esse!
-        Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie
-        algo\nvocê mesmo.\r\n \r\nQuer saber como nosso padrão de inspiração foi feito?
-        Acesse\nhttps://studio.code.org/c/106387530 para ver a solução."
+      grade5_artist_for_loops9: "Vamos juntar tudo!  Usando\nseu conhecimento em \"laços
+        para\" e o \"contador\", crie este desenho no qual\ncada forma tem dois lados
+        a mais que a anterior. Lembre-se de que cada lado é\n10 vezes maior que o
+        número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo código foi
+        fornecida para você."
+      grade5_artist_for_loopsfreeplay11: "Atividade livre - Inspiração: agora você\naprendeu
+        tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387604
+        para ver a solução."
+      grade5_artist_functionparameters10: "Atividade livre - Inspiração: agora você\naprendeu
+        tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
+        \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
+        para ver a solução."
       grade5_artist_functionparameters11: |-
         Atividade livre: aqui estão as funções
         que você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
@@ -3430,11 +3341,11 @@ pt:
         Atividade livre: veja, agora seu algoritmo
         está aninhado dentro de mais um laço. Experimente alterar os valores das
         suas duas variáveis para desenhar padrões legais.
-      grade5_artist_variables_freeplay15: "Atividade livre - Inspiração:
-        agora você aprendeu\ntudo o que precisa saber para criar um padrão como esse!
-        Se essa imagem\ninspira você, tente fazer algo semelhante. Caso contrário,
-        crie algo você mesmo.\r\n\n\r\nQuer saber como nosso padrão de inspiração
-        foi feito? Visite https://studio.code.org/c/105765376/edit\npara ver a solução."
+      grade5_artist_variables_freeplay15: "Atividade livre - Inspiração: agora você
+        aprendeu\ntudo o que precisa saber para criar um padrão como esse! Se essa
+        imagem\ninspira você, tente fazer algo semelhante. Caso contrário, crie algo
+        você mesmo.\r\n\n\r\nQuer saber como nosso padrão de inspiração foi feito?
+        Visite https://studio.code.org/c/105765376/edit\npara ver a solução."
       grade5_artist_variables_freeplay16: |-
         Ainda jogando?  Temos aqui uma tela em branco na qual
         você pode criar o que quiser!
@@ -3478,8 +3389,8 @@ pt:
         Arraste um bloco numérico para o bloco "defina o comprimento"
         para desenhar um conjunto de triângulos de 50 pixels.
       grade5_bee_for_loops1: |-
-        Use um laço para coletar o néctar de
-        todas as flores.
+        Use um laço para coletar o néctar
+        de cada flor.
       grade5_bee_for_loops2: |-
         Adicione o código necessário para garantir que
         a abelha colete todo o néctar. Olhe quanto código você precisa para esse desafio!
@@ -3487,9 +3398,9 @@ pt:
       grade5_bee_for_loops6: |-
         Você também pode usar um laço "para" para fazer contagem
         regressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1.
-      grade5_bee_for_loops8: "Se seu laço está contando, o\nincremento
-        é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara
-        coletar 3, 6 e 9 néctares?\r\n"
+      grade5_bee_for_loops8: "Se seu laço está contando, o\nincremento é somado à
+        variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
+        3, 6 e 9 néctares?\r\n"
       grade5_playlab_freeplay: |-
         É hora da atividade livre! Divirta-se
         com todos os blocos da sua caixa de ferramentas.
@@ -3560,15 +3471,14 @@ pt:
       level 'grade3_Loops_2: |-
         Você consegue realizar a mesma tarefa mais facilmente
         com um laço?
-      level 'grade3_Loops_3: Você consegue usar um laço para coletar todo
-        o néctar?
-      level 'grade3_Loops_4: Agora, use o novo bloco repita para coletar
-        todo o néctar e produzir todo o mel.
+      level 'grade3_Loops_3: Você consegue usar um laço para coletar todo o néctar?
+      level 'grade3_Loops_4: Agora, use o novo bloco repita para coletar todo o néctar
+        e produzir todo o mel.
       level 'grade3_Loops_5: |-
         Coloque esses blocos em um laço para coletar o néctar
         de cada flor.
-      level 'grade3_Loops_6: O que acontece se você repetir esta sequência
-        3 vezes? Não se esqueça de fazer o mel no final!
+      level 'grade3_Loops_6: O que acontece se você repetir esta sequência 3 vezes?
+        Não se esqueça de fazer o mel no final!
       level 'grade3_Loops_7: |-
         Cada flor contém uma unidade de néctar. Colete
         o néctar de cada uma das flores.
@@ -3596,12 +3506,9 @@ pt:
       scrat 18: |-
         Os blocos "se-senão" verificam uma condição e, em seguida,
         fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.
-      scrat 19 (copy 1): Pratica mais uma vez o bloco "se-senão", consegues
-        à primeira tentativa?
-      scrat 19: |-
-        Vamos praticar o uso do bloco "se-senão" mais uma vez. Você consegue
-        acertar na primeira tentativa?
-      scrat 20: Podes adicionar mais 3 blocos para me ajudares a resolver
-        um labirinto mais complicado? Se o fizeres bem, eu consigo andar qualquer
-        caminho com curvas, não interessa o comprimento.  Despacha-te! O gelo está
-        a derreter!
+      scrat 19 (copy 1): Pratica mais uma vez o bloco "se-senão", consegues à primeira
+        tentativa?
+      scrat 19: Pratica mais uma vez o bloco "se-senão", consegues à primeira tentativa?
+      scrat 20: Podes adicionar mais 3 blocos para me ajudares a resolver um labirinto
+        mais complicado? Se o fizeres bem, eu consigo andar qualquer caminho com curvas,
+        não interessa o comprimento.  Despacha-te! O gelo está a derreter!

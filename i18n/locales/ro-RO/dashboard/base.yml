@@ -109,6 +109,7 @@ ro:
     age: 'Vârsta'
     user_type: 'Ești student sau profesor?'
     submit: 'Înregistrează-te'
+    next: 'Următor'
     teacher: 'Ești profesor?'
     valid_username: "Disponibil!"
     invalid_username: "Numele de utilizator trebuie să aibe cel puțin 5 caractere"
@@ -297,14 +298,6 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
-    create_button:
-      create: 'Crează'
-      applab: 'Laboratului Aplicației'
-      artist: 'Artist'
-      gamelab: 'Laborator de jocuri'
-      playlab: 'Laborator de Joacă'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'
@@ -318,6 +311,13 @@ ro:
       team: 'Echipa'
       driver: 'Conducătorul'
       navigator: 'Navigator'
+      create: 'Crează'
+      applab: 'Laboratului Aplicației'
+      artist: 'Artist'
+      gamelab: 'Laborator de jocuri'
+      playlab: 'Laborator de Joacă'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'
