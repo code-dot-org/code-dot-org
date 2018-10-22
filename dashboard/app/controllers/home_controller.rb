@@ -93,13 +93,13 @@ class HomeController < ApplicationController
   # GET /home/sign-cookies
   def sign_cookies
     expiration_date = Time.now + 2.hours
-    expiration_sec = expiration_date.tv_sec
+    resource = "/restricted/*"
     policy = {
       "Statement" => [
         {
-          "Resource" => "/restricted/*",
+          "Resource" => resource,
           "Condition" => {
-            "DateLessThan" => {"AWS:EpochTime" => expiration_sec}
+            "DateLessThan" => {"AWS:EpochTime" => expiration_date.tv_sec}
           }
         }
       ]
@@ -111,9 +111,15 @@ class HomeController < ApplicationController
     signature = private_key.sign(OpenSSL::Digest::SHA1.new, policy)
     signature_encoded = Base64.strict_encode64(signature).tr('+=/', '-_~')
 
-    cookies['CloudFront-Policy'] = policy_encoded
-    cookies['CloudFront-Signature'] = signature_encoded
-    cookies['CloudFront-Key-Pair-Id'] = CDO.cloudfront_key_pair_id
+    cloudfront_cookies = {
+      'CloudFront-Policy' => policy_encoded,
+      'CloudFront-Signature' => signature_encoded,
+      'CloudFront-Key-Pair-Id' => CDO.cloudfront_key_pair_id,
+    }
+
+    cloudfront_cookies.each do |k, v|
+      cookies[k] = v
+    end
 
     head :ok
   end
