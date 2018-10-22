@@ -293,6 +293,7 @@
   user_header_settings: Ҳисоби ман
   user_header_logout: Хориҷ шудан
   user_header_signin: Ворид шудан
+  creativity_create: Сохтан
   ! '': 
   'yes': 'Yes'
   'no': 'No'
@@ -2107,11 +2108,13 @@
   csd_name: CS Discoveries
   csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
+  user_header_team: Team
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
   user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
+  user_header_dance: Dance Party
   user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
@@ -2173,7 +2176,6 @@
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
   creativity: creativity
-  creativity_create: Create
   creativity_hoc_coming: The Hour of Code is coming…
   creativity_what_will_you_create: What will you create?
   creativity_homepage: Give flight to imagination and birth to innovation. Start with
