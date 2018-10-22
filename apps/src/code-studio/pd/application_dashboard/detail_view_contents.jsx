@@ -32,6 +32,7 @@ import {
   ApplicationFinalStatuses
 } from './constants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
+import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 
 const styles = {
   notes: {
@@ -323,6 +324,24 @@ export class DetailViewContents extends React.Component {
       >
         {this.state.locked ? "Unlock" : "Lock"}
       </Button>
+    );
+  };
+
+  renderWorkshopAnswer = () => {
+    return (
+      <DetailViewWorkshopAssignmentResponse
+        question="Summer Workshop"
+        courseName={this.props.applicationData.course_name}
+        subjectType="summer"
+        year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
+        assignedWorkshop={{
+          id: this.state.pd_workshop_id,
+          name: this.props.applicationData.pd_workshop_name,
+          url: this.props.applicationData.pd_workshop_url
+        }}
+        editing={!!this.state.editing}
+        onChange={this.handleSummerWorkshopChange}
+      />
     );
   };
 
@@ -773,7 +792,7 @@ export class DetailViewContents extends React.Component {
             Summer Workshop
           </td>
           <td style={styles.answerColumn}>
-            {this.props.applicationData.pd_workshop_name}
+            {this.renderWorkshopAnswer()}
           </td>
           <td style={styles.scoringColumn}/>
         </tr>
