@@ -468,7 +468,7 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v3',
+      study_group: 'v4',
       event: 'version-restored',
 
       # Make it easy to limit our search to restores in the sources bucket for a certain project.
