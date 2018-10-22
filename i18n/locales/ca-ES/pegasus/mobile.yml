@@ -918,3 +918,7 @@
   user_header_settings: "El meu compte"
   user_header_logout: "Tanca la sessió"
   user_header_signin: "Inicia la sessió"
+  user_header_playlab: "Play Lab"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Flappy"
+  creativity_create: "Crea"

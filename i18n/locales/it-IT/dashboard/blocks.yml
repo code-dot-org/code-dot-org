@@ -116,6 +116,7 @@ it:
           FORMAT:
             '"grid"': griglia
             '"column"': colonna
+            '"random"': un oggetto a caso
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -123,6 +124,25 @@ it:
             "{x: 300, y: 200}": a destra
             "{x: 200, y: 200}": centro
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": un oggetto a caso
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"ALIEN"': Alieni
+            '"UNICORN"': Unicorni
+          LAYOUT:
+            '"grid"': griglia
+            '"column"': colonna
+            '"random"': un oggetto a caso
       Dancelab_randomColor:
         text: colore scelto a caso
       Dancelab_setBackgroundEffect:
@@ -149,6 +169,15 @@ it:
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Casuale
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"height"': altezza
+            '"rotation"': rotazione
+            '"tint"': tinta
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: tutto
           PROPERTY:
             '"scale"': dimensione
             '"height"': altezza
@@ -467,3 +496,7 @@ it:
         text: vai avanti
       craft_placeTorch:
         text: metti una torcia
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': pollo

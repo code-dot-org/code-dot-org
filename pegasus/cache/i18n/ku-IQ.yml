@@ -343,6 +343,7 @@
   user_header_settings: هەژمارەکەم
   user_header_logout: دەرچوون
   user_header_signin: چوونەژوورەوە
+  creativity_create: ez
   ! '': 
   'yes': 'Yes'
   'no': 'No'
@@ -2167,7 +2168,6 @@
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
   creativity: creativity
-  creativity_create: Create
   creativity_hoc_coming: The Hour of Code is coming…
   creativity_what_will_you_create: What will you create?
   creativity_homepage: Give flight to imagination and birth to innovation. Start with

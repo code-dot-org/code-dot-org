@@ -230,13 +230,6 @@ ar:
       project_gallery: المشاريع
       educate_hoc: ساعة البرمجة
       stats: الإحصائيات
-    create_button:
-      create: أنشئ
-      applab: مختبر التطبيق
-      artist: الرسام
-      playlab: مختبر اللعب
-      minecraft: Minecraft
-      flappy: فلابي
     user:
       classroom: الصفحة الرئيسية المعلم
       district_dashboard: جزء لوحة المعلومات
@@ -250,6 +243,12 @@ ar:
       team: فريق
       driver: سائق
       navigator: مستكشف
+      create: أنشئ
+      applab: مختبر التطبيق
+      artist: الرسام
+      playlab: مختبر اللعب
+      minecraft: Minecraft
+      flappy: فلابي
     popup:
       progress_for_user: تقدم %{name}
       progress: إنجازاتك
@@ -536,6 +535,8 @@ ar:
       body: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت.
     hero:
       title: Minecraft
+      body: ماين كرافت عادت لساعة من البرمجة بنشاط جديد! رحلة في عالم ماين كرافت مع
+        البرمجة.
     unplugged:
       title: درس غير موصول
       audience: العمر 4+

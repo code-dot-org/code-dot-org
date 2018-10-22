@@ -216,13 +216,6 @@ az:
       help_us: Bizə kömək edin
       teach: Öyrədin
       about: Haqqımızda
-    create_button:
-      create: Düzəlt
-      applab: Proqram Labı
-      artist: Rəssam
-      playlab: Oyun labı
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Müəllimin ev səhifəsi
       label: Salam %{username}
@@ -234,6 +227,12 @@ az:
       already_registered: Artıq qeydiyyatdan keçmisiniz?
       team: Komanda
       driver: Sürücü
+      create: Düzəlt
+      applab: Proqram Labı
+      artist: Rəssam
+      playlab: Oyun labı
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: Sizin nəticələriniz

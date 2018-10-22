@@ -1015,6 +1015,7 @@ pt-BR:
       4-5 While Loops Assessment 1: |-
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
+      AlgPD DR Free Play: Crie uma função baseada em um problema do seu próprio mundo.
       Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       Alien Defender_2018: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       AllTheThings Applab - Turtle move with button: "Arraste um botão para fora da
@@ -1264,8 +1265,15 @@ pt-BR:
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       CDEF_debugging_flappy2: Por que este jogo não funciona?
+      CSD Hackathon Pt 1: "(Clique para ver todas as instruções)"
+      CSD Hackathon Pt 2: "(Clique para ver todas as instruções)"
+      CSD Hackathon Week 1: "(Clique para ver todas as instruções)"
+      CSD Hackathon Week 2: "(Clique para ver todas as instruções)"
       CSD U3 Mouse Input Bee 2: Faça isso
       CSD U3 Mouse Input Bee 2_2018: Faça isso
+      CSD U3 Variables Intro: 'Crie sua própria variável '
+      CSD U3 Variables Reassign pt2: Crie e atribua uma nova variável em uma única
+        linha.
       CSD U5 black white images pixelation 2: Desenhar uma cara de sorriso (clique
         aqui para ver a imagem)
       CSD U5 black white images pixelation 2_2018: Desenhar uma cara de sorriso (clique
@@ -1339,6 +1347,12 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
       CSPU5_U313 Two Buttons with Ids: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -3274,6 +3288,8 @@ pt-BR:
         Variáveis também podem ser usadas para controlar
         a velocidade de jogadores em um jogo. Defina a velocidade do jogador e do inimigo e veja
         como os movimentos mudam. A velocidade pode ficar entre 2 e 12.
+      Middle School Hackathon Pt 1: "(Clique para ver todas as instruções)"
+      Middle School Hackathon Pt 2: "(Clique para ver todas as instruções)"
       Mike Test Bee Conditionals 1: |-
         Esta nuvem está tapando minha visão! Veja
         se há uma flor atrás da nuvem, e só colete néctar se houver
@@ -3901,6 +3917,9 @@ pt-BR:
         Nessa versão do simulador você não pode
         ver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um
         serviço de nome, para ajudar a compartilhar os endereços entre si.
+      U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer
+        ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão
+        errados. (Clique para ver todas as instruções)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - No Fill: Faça isso
@@ -4223,6 +4242,12 @@ pt-BR:
       U4 vigenere cipher 2: Instruções
       U4L02 - Objects - Template1: Modelo
       U4L02 - Objects - Template1_2018: Modelo
+      U5 if-else-if movie example: Adicione uma condição senão-se com o objetivo de
+        dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
+      U5 if-else-if movie example_2018: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
       Underground Avoiding Lava: Há lava escondida sob alguns destes blocos, que você
         precisará cobrir antes de avançar. Um comando "se" será útil aqui. Adicione
         um comando "andar à frente" no local correto para minerar estes blocos.
@@ -5152,8 +5177,22 @@ pt-BR:
       courseD_artist_binary7_2018: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
+      courseD_artist_binary8: Termine o código para criar este desenho.
+      courseD_artist_binary8_2018: Termine o código para criar este desenho.
+      courseD_artist_binary8_predict1: Termine o código para criar este desenho.
+      courseD_artist_binary8_predict1_2018: Termine o código para criar este desenho.
+      courseD_artist_binaryFP: |-
+        Temos aqui uma tela de maior resolução para desenhar - 16 pixels por 16 pixels!
+
+        Veja o que acontece quando começamos ser criativos com os bits!
       courseD_artist_binaryFP8: "**Atividade livre**: desenhe o que você quiser com
         números binários! "
+      courseD_artist_binaryFP_2018: |-
+        Temos aqui uma tela de maior resolução para desenhar - 16 pixels por 16 pixels!
+
+        Veja o que acontece quando começamos ser criativos com os bits!
+      courseD_artist_binary_challenge0: Tente usar laços aninhados para completar
+        este desenho.
       courseD_artist_nestedLoopsPre1: Crie um triângulo para começar esta etapa.
       courseD_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma
         imagem como esta?
@@ -5173,6 +5212,10 @@ pt-BR:
       courseD_autorun_binary7_2019: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
+      courseD_autorun_binary8_2019: Termine o código para criar este desenho.
+      courseD_autorun_binary8_predict1_2019: Termine o código para criar este desenho.
+      courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals_challenge1: Colete todo o néctar e faça todo o mel.
@@ -5411,6 +5454,8 @@ pt-BR:
         50 pixels de comprimento em cada lado.
       courseF_artist_variables7: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2018: 'Desenhar um triângulo com lados de 150 pixels. '
+      courseF_bee_conditionals10: Colete todo o néctar e faça todo o mel.
+      courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos
@@ -5799,6 +5844,7 @@ pt-BR:
         em cada colmeia usando o menor número possível de blocos.
       grade3_Loops_TeacherIDo: "Essas flores parecem deliciosas!\r\n\r\nColete o néctar\nde
         cada uma das flores usando o menor número possível de blocos."
+      grade3_bee_conditionals_new3b: Colete todo o néctar e faça todo o mel.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas
         as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.
         \ \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"

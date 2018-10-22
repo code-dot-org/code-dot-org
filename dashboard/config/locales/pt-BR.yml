@@ -24,6 +24,7 @@ pt-BR:
       user:
         name: Nome para exibição
         name_example: 'Nome de exibição<br/>(ex: João da Silva ou Maria Alves)'
+        other_name_example: 'Nome de Exibição<br/>(ex: Sra. Silva)'
         email: E-mail
         parent_email: E-mail dos responsáveis
         personal_email: E-mail pessoal <a href="%{url}">(clique aqui caso não tenha
@@ -39,6 +40,9 @@ pt-BR:
         finish_sign_up_header: Finalize a criação da sua conta
         finish_sign_up_subheader: Preencha as informações a seguir para concluir a
           criação da sua conta Code.org.
+        finish_sign_up_subheader_provider: Preencha as informações a seguir para concluir
+          a criação de uma conta do Code.org usando seu <strong>%{provider}</strong>
+          <strong>%{email}</strong>.
         error:
           future: não pode estar no futuro
   hello: Olá, mundo
@@ -105,6 +109,8 @@ pt-BR:
     powerschool: Conta Powerschool
     forgot_password: Esqueceu sua senha?
     migration_success: Sucesso! Você atualizou para nossa nova experiência de conta.
+    demigration_success: A experiência de nova conta agora está desativada na sua
+      conta.
     need_confirmation: Não recebeu as instruções de confirmação?
     need_unlock: Não recebeu as instruções de desbloqueio?
     not_linked: Desculpe, sua conta de Code.org não está ligada ao seu %{provider}.
@@ -113,6 +119,8 @@ pt-BR:
       Por favor entre através do seu Portal inteligente.
     unable_to_connect_provider: Não foi possível conecta sua conta do Code.org ao
       seu %{provider}. Por favor tente novamente.
+    already_in_use: Seu %{provider} já está conectado a outra conta do Code.org.
+    already_linked: Seu %{provider} já está conectado a outra conta do Code.org.
   signup_form:
     student_count: "%{count} alunos já se registraram."
     teacher_count: "%{count} professores já se registraram."
@@ -155,6 +163,8 @@ pt-BR:
       Serviço</a> e <a href='http://code.org/privacy'>Política de Privacidade</a>.
     under_13_consent: Caso eu tenha menos de 13 anos de idade, confirmo que tenho
       autorização dos meus pais ou do meu tutor legal para usar os serviços do Code.org.
+    student_consent: Confirmo que tenho autorização dos meus pais ou do tutor legal
+      para usar os serviços do Code.org.
     agree_us_website: Concordo em usar um site situado nos Estados Unidos.
     my_data_to_us: Os dados gerados pelo meu uso deste site podem ser enviados e armazenados
       ou processados nos Estados Unidos.
@@ -184,6 +194,7 @@ pt-BR:
     email_preference_yes: Sim
     email_preference_no: Não
     email_preference_required: Você deve especificar um e-mail de preferência.
+    create_user_type: Criar conta como
   school_info:
     title: Informações da escola (opcional)
     school_country: País da Escola
@@ -265,6 +276,7 @@ pt-BR:
     code_with_teacher: "%{section_code} com %{teacher_name}"
     confirm:
       remove: Tem certeza que quer sair desta turma?
+    default_name: Seção sem título
     remove: "(remove a turma)"
     type:
       picture: Senha com Foto
@@ -364,14 +376,6 @@ pt-BR:
       help_us: Ajude-nos
       teach: Ensinar
       about: Sobre
-    create_button:
-      create: Criar
-      applab: Laboratório de Aplicativo
-      artist: Artista
-      gamelab: Laboratório de Jogos
-      playlab: Laboratório
-      minecraft: Minecraft
-      flappy: Flappy bird
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -382,9 +386,18 @@ pt-BR:
       signin: Entrar
       signup: Criar uma conta
       already_registered: Já se cadastrou?
+      pair_programming: Programação em duplas
       team: Equipe
       driver: Líder
       navigator: Navegador
+      create: Criar
+      applab: Laboratório de Aplicativo
+      artist: Artista
+      gamelab: Laboratório de Jogos
+      playlab: Laboratório
+      minecraft: Minecraft
+      flappy: Flappy bird
+      view_all: Ver todos os projetos...
     popup:
       progress_for_user: progresso de %{name}'s
       progress: Seu progresso

@@ -640,5 +640,10 @@ module Pd::Application
       # also prefetch fit workshops
       prefetch_workshops applications.flat_map {|a| [a.pd_workshop_id, a.fit_workshop_id]}.uniq.compact
     end
+
+    # @override
+    def self.can_see_locked_status?(user)
+      true
+    end
   end
 end

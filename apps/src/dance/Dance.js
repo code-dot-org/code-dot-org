@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -10,39 +11,18 @@ import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
-import {reducers} from './redux';
+import {reducers, setSong} from './redux';
 
-//TODO: Remove this during clean-up
-// Songs
-var songs_data = {
-  macklemore: {
-    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
-    bpm: 146,
-    delay: 0.2, // Seconds to delay before calculating measures
-    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
-    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
-  },
-  macklemore90: {
-    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
-    bpm: 146,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
-    chorus: [65.75] // Array of timestamps in seconds where choruses occur
-  },
-  hammer: {
-    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
-    bpm: 133,
-    delay: 2.32, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  },
-  peas: {
-    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
-    bpm: 128,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  }
+const ButtonState = {
+  UP: 0,
+  DOWN: 1,
+};
+
+const ArrowIds = {
+  LEFT: 'leftButton',
+  UP: 'upButton',
+  RIGHT: 'rightButton',
+  DOWN: 'downButton',
 };
 
 /**
@@ -53,6 +33,7 @@ var songs_data = {
 var Dance = function () {
   this.skin = null;
   this.level = null;
+  this.btnState = {};
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -88,6 +69,8 @@ Dance.prototype.init = function (config) {
 
   this.studioApp_.labUserId = config.labUserId;
 
+  this.level.softButtons = this.level.softButtons || {};
+
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
   }.bind(this);
@@ -109,6 +92,7 @@ Dance.prototype.init = function (config) {
   };
 
   const showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
+  const finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
@@ -123,11 +107,19 @@ Dance.prototype.init = function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
+  if (this.level.isProjectLevel && config.level.selectedSong) {
+    getStore().dispatch(setSong(config.level.selectedSong));
+  } else if (this.level.defaultSong) {
+    getStore().dispatch(setSong(this.level.defaultSong));
+  }
+
   ReactDOM.render((
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={
-          <DanceVisualizationColumn showFinishButton={showFinishButton} />
+          <DanceVisualizationColumn
+            showFinishButton={finishButtonFirstLine && showFinishButton}
+          />
         }
         onMount={onMount}
       />
@@ -141,10 +133,83 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
+function p5KeyCodeFromArrow(idBtn) {
+  switch (idBtn) {
+    case ArrowIds.LEFT:
+      return window.p5.prototype.LEFT_ARROW;
+    case ArrowIds.RIGHT:
+      return window.p5.prototype.RIGHT_ARROW;
+    case ArrowIds.UP:
+      return window.p5.prototype.UP_ARROW;
+    case ArrowIds.DOWN:
+      return window.p5.prototype.DOWN_ARROW;
+  }
+}
+
+Dance.prototype.onArrowButtonDown = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.DOWN;
+  e.preventDefault();  // Stop normal events so we see mouseup later.
+
+  this.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
+};
+
+Dance.prototype.onArrowButtonUp = function (buttonId, e) {
+  // Store the most recent event type per-button
+  this.btnState[buttonId] = ButtonState.UP;
+
+  this.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+};
+
+Dance.prototype.onMouseUp = function (e) {
+  // Reset all arrow buttons on "global mouse up" - this handles the case where
+  // the mouse moved off the arrow button and was released somewhere else
+
+  if (e.touches && e.touches.length > 0) {
+    return;
+  }
+
+  for (const buttonId in this.btnState) {
+    if (this.btnState[buttonId] === ButtonState.DOWN) {
+      this.onArrowButtonUp(buttonId, e);
+    }
+  }
+};
+
+Dance.prototype.notifyKeyCodeDown = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keydown
+  if (this.p5) {
+    this.p5._onkeydown({ which: keyCode });
+  }
+};
+
+Dance.prototype.notifyKeyCodeUp = function (keyCode) {
+  // Synthesize an event and send it to the internal p5 handler for keyup
+  if (this.p5) {
+    this.p5._onkeyup({ which: keyCode });
+  }
+};
+
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
 Dance.prototype.afterInject_ = function () {
+
+  // Connect up arrow button event handlers
+  for (const btn in ArrowIds) {
+    dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonUp.bind(this, ArrowIds[btn]));
+    dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
+        this.onArrowButtonDown.bind(this, ArrowIds[btn]));
+  }
+  // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+  // all touchend events on the page, breaking click events...
+  document.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+  const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+  if (mouseUpTouchEventName) {
+    document.body.addEventListener(mouseUpTouchEventName, this.onMouseUp.bind(this));
+  }
+
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, validation variables.
     Blockly.JavaScript.addReservedWords([
@@ -176,6 +241,15 @@ Dance.prototype.reset = function () {
 
   this.nativeAPI.reset();
   this.p5.noLoop();
+
+  var softButtonCount = 0;
+  for (var i = 0; i < this.level.softButtons.length; i++) {
+    document.getElementById(this.level.softButtons[i]).style.display = 'inline';
+    softButtonCount++;
+  }
+  if (softButtonCount) {
+    $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
+  }
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
@@ -377,9 +451,6 @@ Dance.prototype.shouldShowSharing = function () {
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
-  let options = {id: getStore().getState().selectedSong};
-  options['mp3'] = songs_data[options.id].url;
-  Sounds.getSingleton().register(options);
   const getSelectedSong = () => getStore().getState().selectedSong;
 
   this.nativeAPI = new DanceParty(this.p5, {

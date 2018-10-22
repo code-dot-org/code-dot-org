@@ -1362,3 +1362,8 @@
   user_header_settings: "Мій профіль"
   user_header_logout: "Вийти"
   user_header_signin: "Вхід"
+  user_header_gamelab: "Ігрова лабораторія"
+  user_header_playlab: "Ігрова студія"
+  user_header_minecraft: "Майнкрафт"
+  user_header_flappy: "Пурх"
+  creativity_create: "Створити"

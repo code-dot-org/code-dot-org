@@ -1211,3 +1211,7 @@
   user_header_settings: "Իմ էջը"
   user_header_logout: "Դուրս գալ"
   user_header_signin: "Մուտք գործել"
+  user_header_playlab: "Play Lab"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Flappy"
+  creativity_create: "Ստեղծել"

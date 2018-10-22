@@ -252,13 +252,6 @@ da:
       help_us: "Hjælp os"
       teach: "Undervis"
       about: "Om"
-    create_button:
-      create: 'Opret'
-      applab: 'App Lab'
-      artist: 'Kunstner'
-      playlab: 'Play Lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Lærerens startside'
       district_dashboard: 'Særskilt betjeningspanel'
@@ -269,6 +262,12 @@ da:
       signin: 'Log ind'
       already_registered: 'Allerede registreret?'
       team: 'Hold'
+      create: 'Opret'
+      applab: 'App Lab'
+      artist: 'Kunstner'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: 'Dine fremskridt'

@@ -13,9 +13,9 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.1.6":
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.1.6.tgz#2a94f28f7c584d715032b63c48c51bc3e4b3b6ab"
+"@code-dot-org/blockly@3.1.7":
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.1.7.tgz#096b8034092c1d5234daf6844bd7bc04743f667d"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -54,9 +54,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@0.1.16":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.16.tgz#9832c35bde5efda44ea3da8c68f28b3ccf3cd327"
+"@code-dot-org/craft@0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.18.tgz#6d74bfc1c453bf42d736798767ff2b9eb025b5c1"
 
 "@code-dot-org/dance-party@code-dot-org/dance-party#74a8f1f4eaee43292f8fc0cc568ed17624433fed":
   version "0.0.4"
