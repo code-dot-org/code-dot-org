@@ -146,7 +146,7 @@ export class CourseBlocksHoc extends Component {
         if (this.props.isInternational) {
           return ['#dance', '#aquatic', '#starwars', '#hourofcode'];
         } else {
-          return ['#dance', '#aquatic', '#starwars', '#applab'];
+          return ['#dance', '#aquatic', '#starwars', '#applab-intro'];
         }
       default:
         return ['#hero', '#starwars', '#frozen', '#hourofcode'];
