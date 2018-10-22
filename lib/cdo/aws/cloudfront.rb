@@ -4,6 +4,7 @@ require 'securerandom'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 require 'active_support/core_ext/object/try'
+require 'openssl'
 
 # Manages application-specific configuration of AWS CloudFront distributions.
 module AWS
@@ -239,6 +240,35 @@ module AWS
       }.tap do |behavior|
         behavior[:PathPattern] = path if path
       end
+    end
+
+    # Returns a hash of cookie key/value pairs
+    def self.signed_cookies(resource, expiration_date)
+      raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
+      raise 'missing CDO.cloudfront_private_key_path' unless CDO.cloudfront_private_key_path
+
+      policy = {
+        "Statement" => [
+          {
+            "Resource" => resource,
+            "Condition" => {
+              "DateLessThan" => {"AWS:EpochTime" => expiration_date.tv_sec}
+            }
+          }
+        ]
+      }.to_json.tr(" \t\r\n", '')
+
+      policy_encoded = Base64.strict_encode64(policy).tr('+=/', '-_~')
+
+      private_key = OpenSSL::PKey::RSA.new(File.read(CDO.cloudfront_private_key_path))
+      signature = private_key.sign(OpenSSL::Digest::SHA1.new, policy)
+      signature_encoded = Base64.strict_encode64(signature).tr('+=/', '-_~')
+
+      {
+        'CloudFront-Policy' => policy_encoded,
+        'CloudFront-Signature' => signature_encoded,
+        'CloudFront-Key-Pair-Id' => CDO.cloudfront_key_pair_id,
+      }
     end
   end
 end

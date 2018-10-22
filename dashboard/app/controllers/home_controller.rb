@@ -1,4 +1,4 @@
-require 'openssl'
+require 'cdo/aws/cloudfront'
 
 class HomeController < ApplicationController
   include UsersHelper
@@ -94,28 +94,8 @@ class HomeController < ApplicationController
   def sign_cookies
     expiration_date = Time.now + 2.hours
     resource = "/restricted/*"
-    policy = {
-      "Statement" => [
-        {
-          "Resource" => resource,
-          "Condition" => {
-            "DateLessThan" => {"AWS:EpochTime" => expiration_date.tv_sec}
-          }
-        }
-      ]
-    }.to_json.tr(" \t\r\n", '')
 
-    policy_encoded = Base64.strict_encode64(policy).tr('+=/', '-_~')
-
-    private_key = OpenSSL::PKey::RSA.new(File.read(CDO.cloudfront_private_key_path))
-    signature = private_key.sign(OpenSSL::Digest::SHA1.new, policy)
-    signature_encoded = Base64.strict_encode64(signature).tr('+=/', '-_~')
-
-    cloudfront_cookies = {
-      'CloudFront-Policy' => policy_encoded,
-      'CloudFront-Signature' => signature_encoded,
-      'CloudFront-Key-Pair-Id' => CDO.cloudfront_key_pair_id,
-    }
+    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
 
     cloudfront_cookies.each do |k, v|
       cookies[k] = v
