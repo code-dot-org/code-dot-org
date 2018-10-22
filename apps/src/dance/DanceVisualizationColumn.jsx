@@ -51,8 +51,8 @@ const SongSelector = Radium(class extends React.Component {
 
   componentDidMount() {
     fetch(`/api/v1/sound-library/hoc_song_meta/songManifest.json`)
-      .then((response) => {return response.json();})
-      .then((data) => {this.parseSongOptions(data);});
+      .then(response => response.json())
+      .then(data => this.parseSongOptions(data));
   }
 
   parseSongOptions(data) {
