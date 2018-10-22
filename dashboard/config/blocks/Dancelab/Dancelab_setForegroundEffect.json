@@ -29,7 +29,7 @@
             "\"raining_tacos\""
           ],
           [
-            "Random",
+            "(Random)",
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]"
           ]
         ]

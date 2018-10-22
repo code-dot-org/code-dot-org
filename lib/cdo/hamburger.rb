@@ -337,7 +337,7 @@ class Hamburger
 
     non_en_signed_out_links = [
       {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-projects"}
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-projects"},
     ]
 
     about_intl = [
@@ -358,9 +358,9 @@ class Hamburger
       end
     else
       if options[:language] == "en"
-        en_signed_out_links
+        header_links = en_signed_out_links
       else
-        non_en_signed_out_links.concat(about_intl)
+        header_links.concat(non_en_signed_out_links).concat(about_intl)
       end
     end
     header_links

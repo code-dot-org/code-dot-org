@@ -505,7 +505,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval
+    def principal_approval_state
       principal_approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
 
       if principal_approval
@@ -552,7 +552,7 @@ module Pd::Application
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
-          principal_approval,
+          principal_approval_state,
           principal_approval_url,
           meets_criteria,
           total_score,
@@ -658,11 +658,6 @@ module Pd::Application
 
       # No match? Return the first workshop
       workshops.first
-    end
-
-    # @override
-    def self.can_see_locked_status?(user)
-      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
     end
 
     # override

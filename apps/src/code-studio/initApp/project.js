@@ -1,4 +1,4 @@
-/* global dashboard, appOptions */
+/* global appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
@@ -95,7 +95,8 @@ var currentSources = {
   source: null,
   html: null,
   makerAPIsEnabled: false,
-  animations: null
+  animations: null,
+  selectedSong: null,
 };
 
 /**
@@ -117,7 +118,8 @@ function unpackSources(data) {
     source: data.source,
     html: data.html,
     animations: data.animations,
-    makerAPIsEnabled: data.makerAPIsEnabled
+    makerAPIsEnabled: data.makerAPIsEnabled,
+    selectedSong: data.selectedSong,
   };
 }
 
@@ -478,6 +480,7 @@ var projects = module.exports = {
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
+   * @param {function(): boolean} sourceHandler.setSelectedSong
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -494,6 +497,10 @@ var projects = module.exports = {
       setMakerAPIsStatusFromQueryParams();
       if (currentSources.makerAPIsEnabled) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
+      }
+
+      if (currentSources.selectedSong) {
+        sourceHandler.setSelectedSong(currentSources.selectedSong);
       }
 
       if (currentSources.animations) {
@@ -559,7 +566,7 @@ var projects = module.exports = {
 
     // Updates the contents of the admin box for admins. We have no knowledge
     // here whether we're an admin, and depend on dashboard getting this right.
-    showProjectAdmin();
+    showProjectAdmin(this);
   },
   projectChanged() {
     hasProjectChanged = true;
@@ -634,6 +641,8 @@ var projects = module.exports = {
       case 'gamelab':
         if (appOptions.droplet) {
           return 'gamelab';
+        } else if (appOptions.level.isDanceLab) {
+          return 'dance';
         }
         return 'spritelab';
       case 'turtle':
@@ -739,7 +748,7 @@ var projects = module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled} have changed.
+   * makerAPIsEnabled, selectedSong} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -866,6 +875,11 @@ var projects = module.exports = {
     }
   },
 
+  saveSelectedSong(id) {
+    this.sourceHandler.setSelectedSong(id);
+    return this.save();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -922,7 +936,8 @@ var projects = module.exports = {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        callback({source, html, animations, makerAPIsEnabled});
+        const selectedSong = this.sourceHandler.getSelectedSong();
+        callback({source, html, animations, makerAPIsEnabled, selectedSong});
       }));
   },
 
@@ -1204,7 +1219,7 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              fetchAbuseScoreAndPrivacyViolations(function () {
+              fetchAbuseScoreAndPrivacyViolations(this, function () {
                 deferred.resolve();
               });
             }, queryParams('version'), this.useSourcesApi());
@@ -1222,7 +1237,7 @@ var projects = module.exports = {
         } else {
           fetchSource(data, () => {
             projects.showHeaderForProjectBacked();
-            fetchAbuseScoreAndPrivacyViolations(function () {
+            fetchAbuseScoreAndPrivacyViolations(this, function () {
               deferred.resolve();
             });
           }, queryParams('version'), this.useSourcesApi());
@@ -1377,14 +1392,14 @@ function fetchPrivacyProfanityViolations(resolve) {
   });
 }
 
-function fetchAbuseScoreAndPrivacyViolations(callback) {
+function fetchAbuseScoreAndPrivacyViolations(project, callback) {
   const deferredCallsToMake = [new Promise(fetchAbuseScore)];
 
-  if (dashboard.project.getStandaloneApp() === 'playlab') {
+  if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
-    (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.isWebLab())) {
+  } else if ((project.getStandaloneApp() === 'applab') ||
+    (project.getStandaloneApp() === 'gamelab') ||
+    (project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {

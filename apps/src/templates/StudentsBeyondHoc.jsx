@@ -27,16 +27,14 @@ class StudentsBeyondHoc extends Component {
     MCShareLink: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     userType: PropTypes.oneOf(["signedOut", "teacher", "student"]).isRequired,
-    userAge: PropTypes.number,
+    under13: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, userAge } = this.props;
+    const { responsiveSize, completedTutorialType, userType, isEnglish, MCShareLink, under13 } = this.props;
 
     const signedIn = (userType === "teacher" || userType === "student");
-
-    const under13 = userAge < 13;
 
     const desktop = responsiveSize !== ResponsiveSize.xs;
 
@@ -53,11 +51,11 @@ class StudentsBeyondHoc extends Component {
       case completedTutorialType === 'pre2017Minecraft' && !isEnglish:
           specificCardSet ='nonEnglishPre2017MinecraftCards';
         break;
-      case completedTutorialType === '2017Minecraft' && isEnglish:
-          specificCardSet = 'newMinecraftCards';
-        break;
       case completedTutorialType === '2017Minecraft' && isEnglish && under13:
           specificCardSet = 'youngerThan13NewMinecraftCards';
+        break;
+      case completedTutorialType === '2017Minecraft' && isEnglish:
+          specificCardSet = 'newMinecraftCards';
         break;
       case completedTutorialType === '2017Minecraft' && !isEnglish:
           specificCardSet = 'nonEnglishNewMinecraftCards';

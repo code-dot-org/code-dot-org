@@ -8,7 +8,7 @@ litmus_tracking_id: "5g5lyi1a"
   <% storedotcodedotorg = CDO.canonical_hostname('store.code.org') %>
 
 ### Thanks for signing up to host an Hour of Code!
-Thank you for helping make it possible for students to start learning computer science! Computer Science Education Week and the Hour of Code run from December 3-9, so we’ll be in touch soon with exciting news about new activities and updates. In the meantime, what can you do now?
+Thank you for helping make it possible for students to start learning computer science! Computer Science Education Week and the Hour of Code run from December 3-9, so we’ll be in touch soon with exciting news about new posters, activities, robotics giveaways, and updates. In the meantime, what can you do now?
 
 ### 1. Find a local volunteer to help you with your event.
 [Search our volunteer map](https://<%= codedotorg %>/volunteer/local) to find volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.

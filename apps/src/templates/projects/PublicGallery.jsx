@@ -33,6 +33,7 @@ class PublicGallery extends Component {
     // from redux state
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(publishedProjectPropType),
+      spritelab: PropTypes.arrayOf(publishedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
       playlab: PropTypes.arrayOf(publishedProjectPropType),
       artist: PropTypes.arrayOf(publishedProjectPropType),

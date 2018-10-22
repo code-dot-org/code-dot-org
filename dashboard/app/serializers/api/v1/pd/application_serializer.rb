@@ -1,13 +1,38 @@
 class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
-    :school_name, :district_name, :email, :application_type, :response_scores, :course, :course_name,
-    :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
-    :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
-    :fit_workshop_id, :fit_workshop_name, :fit_workshop_url, :application_guid,
-    :registered_teachercon, :registered_fit_weekend, :attending_teachercon,
-    :principal_approval_state
+  attributes(
+    :regional_partner_name,
+    :regional_partner_id,
+    :regional_partner_emails_sent_by_system,
+    :locked,
+    :notes,
+    :form_data,
+    :status,
+    :school_name,
+    :district_name,
+    :email,
+    :application_year,
+    :application_type,
+    :response_scores,
+    :course,
+    :course_name,
+    :meets_criteria,
+    :bonus_points,
+    :pd_workshop_id,
+    :pd_workshop_name,
+    :fit_workshop_id,
+    :pd_workshop_url,
+    :fit_workshop_name,
+    :fit_workshop_url,
+    :application_guid,
+    :registered_teachercon,
+    :registered_fit_weekend,
+    :attending_teachercon,
+    :principal_approval_state,
+    :meets_scholarship_criteria,
+    :school_stats
+  )
 
   def email
     object.user.email
@@ -73,11 +98,71 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def principal_approval_state
-    approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: object.application_guid)
-    if approval
-      approval.placeholder? ? 'sent' : 'received'
-    else
-      'not_sent'
-    end
+    object.try(:principal_approval)
+  end
+
+  def regional_partner_emails_sent_by_system
+    object&.regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM
+  end
+
+  def meets_scholarship_criteria
+    object.try(:meets_scholarship_criteria)
+  end
+
+  def percent_string(count, total)
+    "#{(100.0 * count / total).round(2)}%"
+  end
+
+  def school_stats
+    return nil unless object.try(:school_id)
+
+    stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
+    return nil unless stats
+
+    urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
+
+    {
+      title_i_status: stats.title_i_status,
+      frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
+      urm_percent: percent_string(urm_total, stats.students_total),
+      students_total: stats.students_total,
+      race_data: [
+        {
+          percent: percent_string(stats.student_am_count, stats.students_total),
+          total: stats.student_am_count,
+          label: "American Indian/Alaska Native Students"
+        },
+        {
+          percent: percent_string(stats.student_as_count, stats.students_total),
+          total: stats.student_as_count,
+          label: "Asian Students"
+        },
+        {
+          percent: percent_string(stats.student_hi_count, stats.students_total),
+          total: stats.student_hi_count,
+          label: "Hispanic Students"
+        },
+        {
+          percent: percent_string(stats.student_bl_count, stats.students_total),
+          total: stats.student_bl_count,
+          label: "Black Students"
+        },
+        {
+          percent: percent_string(stats.student_wh_count, stats.students_total),
+          total: stats.student_wh_count,
+          label: "White Students"
+        },
+        {
+          percent: percent_string(stats.student_hp_count, stats.students_total),
+          total: stats.student_hp_count,
+          label: "Hawaiian Native/Pacific Islander Students"
+        },
+        {
+          percent: percent_string(stats.student_tr_count, stats.students_total),
+          total: stats.student_tr_count,
+          label: "Two or More Races Students"
+        }
+      ]
+    }
   end
 end

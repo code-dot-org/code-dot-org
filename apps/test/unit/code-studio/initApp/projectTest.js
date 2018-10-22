@@ -190,6 +190,30 @@ describe('project.js', () => {
       });
     });
   });
+
+  describe('selectedSong()', () => {
+    let sourceHandler;
+
+    beforeEach(() => {
+      sourceHandler = createStubSourceHandler();
+      replaceOnWindow('appOptions', {
+        level: {
+          isProjectLevel: true,
+        },
+      });
+    });
+
+    afterEach(() => {
+      restoreOnWindow('appOptions');
+    });
+
+    it('saves selected song', () => {
+      project.init(sourceHandler);
+      return project.saveSelectedSong('peas').then(() => {
+        expect(sourceHandler.setSelectedSong).to.have.been.called;
+      });
+    });
+  });
 });
 
 describe('project.saveThumbnail', () => {
@@ -270,5 +294,7 @@ function createStubSourceHandler() {
     getAnimationList: sinon.stub().callsFake(cb => cb({})),
     setMakerAPIsEnabled: sinon.stub(),
     getMakerAPIsEnabled: sinon.stub(),
+    setSelectedSong: sinon.stub(),
+    getSelectedSong: sinon.stub()
   };
 }

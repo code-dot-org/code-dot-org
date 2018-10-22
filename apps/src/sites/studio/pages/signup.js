@@ -150,8 +150,8 @@ window.SignupManager = function (options) {
 
   function trackUserTypeSelected(type) {
     firehoseClient.putRecord({
-      study: 'account-sign-up-v2',
-      study_group: 'control',
+      study: 'account-sign-up-v4',
+      study_group: 'control-v4',
       event: 'select-' + type,
       data_string: self.options.signUpUID,
     });

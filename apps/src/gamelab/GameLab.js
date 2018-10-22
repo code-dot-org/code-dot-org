@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom';
 import {
   changeInterfaceMode,
   viewAnimationJson,
-  setMobileControlsConfig,
-  setSong
+  setMobileControlsConfig
 } from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -72,6 +71,7 @@ import {
   mark,
   measure
 } from '@cdo/apps/util/performance';
+import * as danceRedux from "../dance/redux";
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -169,7 +169,9 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object, logLevel) {
   this.consoleLogger_.log(object);
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  }
 };
 
 /**
@@ -224,6 +226,7 @@ GameLab.prototype.init = function (config) {
 
   this.level.helperLibraries = this.level.helperLibraries || [];
   this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
+  this.level.isDanceLab = this.isDanceLab;
 
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
@@ -236,8 +239,10 @@ GameLab.prototype.init = function (config) {
     }
   }
 
-  if (this.level.defaultSong) {
-    getStore().dispatch(setSong(this.level.defaultSong));
+  if (this.level.isProjectLevel && config.level.selectedSong) {
+    getStore().dispatch(danceRedux.setSong(config.level.selectedSong));
+  } else if (this.level.defaultSong) {
+    getStore().dispatch(danceRedux.setSong(this.level.defaultSong));
   }
 
   config.usesAssets = true;
@@ -328,19 +333,6 @@ GameLab.prototype.init = function (config) {
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
       config.valueTypeTabShapeMap = GameLab.valueTypeTabShapeMap(Blockly);
-
-      this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
-        <div>
-          <p>
-            <strong>Welcome to the Sprite Lab pre-release Beta!</strong>
-          </p>
-          <p>
-            This is a new Code.org project we are still working on. You may
-            notice blocks change or stop working. If a block turns gray, try
-            deleting it and replacing it.
-          </p>
-        </div>, ''
-      );
     }
 
     this.studioApp_.init(config);
@@ -369,8 +361,9 @@ GameLab.prototype.init = function (config) {
   var showDebugButtons = config.level.editCode &&
     (!config.hideSource && !config.level.debuggerDisabled);
   var showDebugConsole = config.level.editCode && !config.hideSource;
+  this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
-  if (showDebugButtons || showDebugConsole) {
+  if (this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.initialize({
       runApp: this.runButtonClick,
     }));
@@ -647,7 +640,9 @@ GameLab.prototype.reset = function () {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  getStore().dispatch(jsDebugger.detach());
+  if (this.debuggerEnabled) {
+    getStore().dispatch(jsDebugger.detach());
+  }
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -794,7 +789,7 @@ GameLab.prototype.runButtonClick = function () {
   this.execute();
 
   //Log song count in Dance Lab
-  if (this.isDanceLab && experiments.isEnabled("songSelector")) {
+  if (this.isDanceLab) {
     const song = getStore().getState().selectedSong;
     trackEvent('HoC_Song', 'Play', song);
   }
@@ -1151,7 +1146,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  if (attachDebugger) {
+  if (attachDebugger && this.debuggerEnabled) {
     getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   }
   let code = '';
@@ -1250,6 +1245,7 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
+      this.gameLabP5.setDanceSong(getStore().getState().selectedSong),
       this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.runPreloadEventHandler_()
   ]).then(() => {

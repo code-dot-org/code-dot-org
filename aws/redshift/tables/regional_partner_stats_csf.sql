@@ -116,6 +116,7 @@ select
          CASE WHEN csfa.trained_by_regional_partner_truth is null then 0 else csfa.trained_by_regional_partner_truth END as trained_by_regional_partner_truth, -- temporary while we figure out how to present to RPs
          d.trained_at as trained_at,
          coalesce(csfa.workshop_date, d.trained_at)  as workshop_date, 
+         csfa.workshop_date_pdw_ended_at as workshop_date_ended_at,
          CASE WHEN rt.first_training != d.trained_at then 1 else 0 end as repeat_training,
          extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) || csfa.workshop_id::varchar(16)  as workshop_id_year,
          csfa.month_workshop,
@@ -126,6 +127,7 @@ select
          csfa.capacity,
          csfa.zip as zip_workshop,
          csfa.state as state_workshop,
+         coalesce(state, state_workshop) as state_coalesced,
          csfa.processed_location as processed_location,
          csfa.facilitator_name, 
          csfa.studio_person_id_facilitator,     

@@ -46,21 +46,8 @@ class HomeController < ApplicationController
   # Signed out: redirect to /courses
   def index
     if current_user
-      if current_user.student? && current_user.assigned_course_or_script? && !account_takeover_in_progress? && current_user.primary_script
-
-        # Send students in course experiments (such as the subgoals experiment)
-        # to the right place when they end up on the wrong version of their script.
-        #
-        # In the future, when primary_script selects the script the student is
-        # assigned to rather then where they last made progress, this check can
-        # be removed.
-        alternate_script = current_user.primary_script.alternate_script(current_user)
-        if alternate_script
-          redirect_to script_path(alternate_script)
-          return
-        end
-
-        redirect_to script_path(current_user.primary_script)
+      if should_redirect_to_script_overview?
+        redirect_to script_path(current_user.most_recently_assigned_script)
       else
         redirect_to '/home'
       end
@@ -102,6 +89,17 @@ class HomeController < ApplicationController
   end
 
   private
+
+  def should_redirect_to_script_overview?
+    current_user.student? &&
+    !account_takeover_in_progress? &&
+    current_user.most_recently_assigned_user_script &&
+    (
+      !current_user.user_script_with_most_recent_progress ||
+      current_user.most_recent_progress_in_recently_assigned_script? ||
+      current_user.last_assignment_after_most_recent_progress?
+    )
+  end
 
   def init_homepage
     @is_english = request.language == 'en'
