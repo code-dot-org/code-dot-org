@@ -125,7 +125,7 @@ describe("DetailViewContents", () => {
 
       // unlock status
       detailView.find('#DetailViewHeader Button').first().simulate('click');
-      expect(detailView.find('#DetailViewHeader select')).prop('disabled ').to.be.false;
+      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.false;
       expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
     });
   });
