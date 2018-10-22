@@ -77,7 +77,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_intl_about],          Hamburger::SHOW_MOBILE
   end
 
   def test_level_student_en
@@ -100,7 +99,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_intl_about],          Hamburger::SHOW_MOBILE
   end
 
   def test_level_nobody_en
@@ -145,7 +143,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_intl_about],          Hamburger::SHOW_MOBILE
   end
 
   def test_nonlevel_student_en
@@ -168,7 +165,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_intl_about],          Hamburger::SHOW_MOBILE
   end
 
   def test_nonlevel_nobody_en
@@ -191,7 +187,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_signed_out_options],  Hamburger::SHOW_MOBILE
     assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_intl_about],          Hamburger::SHOW_MOBILE
   end
 
   # Hamburger content tests.
@@ -256,7 +251,6 @@ class HamburgerTest < Minitest::Test
 
   def test_header_content_nobody_nonen
     contents = Hamburger.get_header_contents({user_type: nil, language: "fr"})
-    assert_includes_id contents, "header-projects"
-    assert_includes_id contents, "header-intl-about"
+    assert_includes_id contents, "header-non-en-projects"
   end
 end
