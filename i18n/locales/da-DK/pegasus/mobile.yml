@@ -1106,3 +1106,8 @@
   user_header_settings: "Min konto"
   user_header_logout: "Log ud"
   user_header_signin: "Log ind"
+  user_header_playlab: "Play Lab"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Flappy"
+  creativity_create: "Opret"
+  account_sign_up_email_opt_in: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"

@@ -77,12 +77,28 @@ ga:
         options:
           GROUP:
             sprites: uile
+          FORMAT:
+            '"random"': randamach
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': randamach
       Dancelab_randomColor:
         text: dath randamach
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ ga:
             '"none"': Dada
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: uile
           PROPERTY:
             '"scale"': méid
             '"height"': airde
@@ -300,3 +323,7 @@ ga:
         text: téigh ar aghaidh
       craft_placeTorch:
         text: cuir tóirse
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': sicín

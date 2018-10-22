@@ -198,12 +198,6 @@ lv:
       educate_hoc: "Programmēšanas stunda"
       about_us: "Par mums"
       about_partners: "Partneri"
-    create_button:
-      create: 'Izveidot'
-      applab: 'Aplikāciju laborotorija'
-      artist: 'Mākslinieks'
-      playlab: 'Spēles laboratorija'
-      flappy: 'Flapijs'
     user:
       classroom: 'Skolotāju mājas lapa'
       label: 'Sveiki, %{username}'
@@ -213,6 +207,11 @@ lv:
       signin: 'Pierakstīties'
       already_registered: 'Jau reģistrējies?'
       team: 'Komanda'
+      create: 'Izveidot'
+      applab: 'Aplikāciju laborotorija'
+      artist: 'Mākslinieks'
+      playlab: 'Spēles laboratorija'
+      flappy: 'Flapijs'
     popup:
       progress_for_user: "%{name} panākumi"
       progress: 'Jūsu progress'

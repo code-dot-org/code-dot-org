@@ -302,14 +302,6 @@ he:
       help_us: "עזור לנו"
       teach: "למד"
       about: "אודות"
-    create_button:
-      create: 'צור'
-      applab: 'מעבדת היישומים'
-      artist: 'אמן'
-      gamelab: 'מעבדת המשחקים'
-      playlab: 'מעבדת הצעצועים'
-      minecraft: 'מיינקראפט'
-      flappy: 'פלאפי'
     user:
       classroom: 'דף הבית של המורה'
       district_dashboard: 'לוח ניהול מחוזי'
@@ -323,6 +315,13 @@ he:
       team: 'צוות'
       driver: 'מחובר/ת'
       navigator: 'נווט'
+      create: 'צור'
+      applab: 'מעבדת היישומים'
+      artist: 'אמן'
+      gamelab: 'מעבדת המשחקים'
+      playlab: 'מעבדת הצעצועים'
+      minecraft: 'מיינקראפט'
+      flappy: 'פלאפי'
     popup:
       progress_for_user: "ההתקדמות של %{name}"
       progress: 'ההתקדמות שלך'

@@ -77,12 +77,28 @@ fi:
         options:
           GROUP:
             sprites: kaikki
+          FORMAT:
+            '"random"': satunnainen
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': satunnainen
       Dancelab_randomColor:
         text: satunnainen väri
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ fi:
             '"none"': Ei mitään
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: kaikki
           PROPERTY:
             '"scale"': koko
             '"height"': korkeus
@@ -296,3 +319,7 @@ fi:
         text: siirry eteenpäin
       craft_placeTorch:
         text: aseta soihtu
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': kana

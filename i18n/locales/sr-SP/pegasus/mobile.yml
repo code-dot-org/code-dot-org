@@ -775,3 +775,6 @@
   user_header_settings: "Мој налог"
   user_header_logout: "Одјави се"
   user_header_signin: "Пријави се"
+  user_header_playlab: "Играоница"
+  user_header_flappy: "Флапи"
+  creativity_create: "Креирај"

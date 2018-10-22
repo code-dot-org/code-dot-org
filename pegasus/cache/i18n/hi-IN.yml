@@ -274,6 +274,7 @@
   sphero_beyond_gradelevel: उम्र 8 +
   flappy_shortcode: फ़ड़फ़ड़ाय
   header_courses: पाठ्यक्रम
+  creativity_create: बनाए
   ! '': 
   hour_of_code: Hour of Code
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
@@ -2188,7 +2189,6 @@
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
   creativity: creativity
-  creativity_create: Create
   creativity_hoc_coming: The Hour of Code is coming…
   creativity_what_will_you_create: What will you create?
   creativity_homepage: Give flight to imagination and birth to innovation. Start with

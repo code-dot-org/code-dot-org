@@ -298,14 +298,6 @@ vi:
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
       about: "Thông tin"
-    create_button:
-      create: 'Tạo'
-      applab: 'Phòng thí nghiệm ứng dụng'
-      artist: 'Họa sĩ'
-      gamelab: 'Kho Trò chơi'
-      playlab: 'Phòng trò chơi'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy bird'
     user:
       classroom: 'Trang chủ giáo viên'
       district_dashboard: 'khu vực điều khiển'
@@ -319,6 +311,13 @@ vi:
       team: 'Nhóm'
       driver: 'Người lái xe'
       navigator: 'Định hướng'
+      create: 'Tạo'
+      applab: 'Phòng thí nghiệm ứng dụng'
+      artist: 'Họa sĩ'
+      gamelab: 'Kho Trò chơi'
+      playlab: 'Phòng trò chơi'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy bird'
     popup:
       progress_for_user: "sự tiến bộ của %{name}"
       progress: 'Qua trình của bạn'

@@ -358,14 +358,6 @@ it:
       help_us: Aiutaci
       teach: Insegna
       about: Informazioni
-    create_button:
-      create: Crea
-      applab: Sviluppo App
-      artist: Artista
-      gamelab: Sviluppo Giochi
-      playlab: Laboratorio
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Cruscotto di Controllo dell'insegnante
       district_dashboard: Dashboard
@@ -379,6 +371,14 @@ it:
       team: Squadra
       driver: Conducente
       navigator: Navigatore
+      create: Crea
+      applab: Sviluppo App
+      artist: Artista
+      gamelab: Sviluppo Giochi
+      playlab: Laboratorio
+      minecraft: Minecraft
+      flappy: Flappy
+      view_all: Guarda tutti i progetti...
     popup:
       progress_for_user: "%{name} in corso"
       progress: I tuoi progressi

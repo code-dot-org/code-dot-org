@@ -3559,6 +3559,18 @@ es-MX:
         courseD_artist_project4a_a: |
           Aquí hay dos longitudes diferentes de copo de nieve, dibujadas una tras otra (con un giro de 30 grados en el medio).
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Comó paso esto nivel?**
+          *Asegurarse una bailarin aparece en la pantalla.
+
+          *Esto nivel termina despues de cuatro medidas.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Comó paso esto nivel?**
+          *Asegurarse una bailarin aparece en la pantalla.
+
+          *Esto nivel termina despues de cuatro medidas.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: Esta es la primera pista. Tiene * algo de * ** basic ** `margen
         second_hint: Esta es la segunda pista . Tiene una imagen . ! [] (https://images.code.org/cab43107265a683a6216e18faab2353f-
@@ -3574,6 +3586,12 @@ es-MX:
           camino por el que viajará...
         Function_intro_Ryan_a: "¡Puedes usar una función varias veces dentro de tu
           programa!  Trata de usarla dos veces para resolver este acertijo."
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Comó paso esto nivel?**
+          *Asegurarse una bailarin aparece en la pantalla.
+
+          *Esto nivel termina despues de cuatro medidas.*
       Harvesting_authored_hint:
         pointer_harvester_test: "¿Qué tipo de bloque puedo usar para verificar algo
           y tomar una decisión?"

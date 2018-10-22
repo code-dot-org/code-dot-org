@@ -34,10 +34,28 @@ en-GB:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': random
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': random
       Dancelab_randomColor:
         text: random colour
       Dancelab_setDanceSpeed:
@@ -49,6 +67,10 @@ en-GB:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"height"': height
@@ -132,3 +154,7 @@ en-GB:
         text: move forward
       craft_placeTorch:
         text: place torch
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': chicken

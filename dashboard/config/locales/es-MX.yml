@@ -368,15 +368,6 @@ es-MX:
       help_us: Ayúdanos
       teach: Enseñar
       about: Acerca de
-    create_button:
-      create: Crear
-      applab: Laboratorio de App
-      artist: Artista
-      gamelab: Laboratorio de juegos
-      playlab: Laboratorio de juegos
-      minecraft: Minecraft
-      flappy: Flappy
-      view_all: Ver todos los proyectos...
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de Distrito
@@ -390,6 +381,14 @@ es-MX:
       team: Equipo
       driver: Conectado
       navigator: Navegador
+      create: Crear
+      applab: Laboratorio de App
+      artist: Artista
+      gamelab: Laboratorio de juegos
+      playlab: Laboratorio de juegos
+      minecraft: Minecraft
+      flappy: Flappy
+      view_all: Ver todos los proyectos...
     popup:
       progress_for_user: progreso de %{name}
       progress: Tu progreso
