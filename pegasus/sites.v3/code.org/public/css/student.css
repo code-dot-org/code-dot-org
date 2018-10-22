@@ -3,6 +3,15 @@
   flex-direction: column;
 }
 
+.full-resource-info {
+  border: 1px solid #949ca2;
+  padding: 30px;
+  min-height: 200px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .description {
   background-color: #00adbc;
   color: #fff;
@@ -12,9 +21,13 @@
 .resource-title {
   padding: 0px;
   margin: 0px;
+  color: #5b6770;
   font-size: 24px;
-  color: #ffffff;
   padding-bottom: 10px;
+}
+
+.white {
+  color: #ffffff;
 }
 
 .orange-button {
