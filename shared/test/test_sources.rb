@@ -263,7 +263,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_main_json_version
-    # FirehoseClient.instance.expects(:put_record).never
     Timecop.freeze
 
     filename = 'main.json'
@@ -299,10 +298,11 @@ class SourcesTest < FilesApiTestBase
     @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
     assert conflict?
 
-    assert_newrelic_metrics []
-
+    assert_newrelic_metrics %w(
+      Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
+    )
+  ensure
     delete_all_source_versions(filename)
-
     Timecop.return
   end
 
