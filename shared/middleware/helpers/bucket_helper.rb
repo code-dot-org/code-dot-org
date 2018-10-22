@@ -206,13 +206,19 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    actual_latest_version = begin
-      s3.head_object(bucket: @bucket, key: key).version_id
+    begin
+      latest = s3.head_object(bucket: @bucket, key: key).version_id
+      return true if current_version == latest
     rescue Aws::S3::Errors::NoSuchKey
-      nil # No main.json yet
+      # No main.json yet; fall through to fallback logic
     end
 
-    return true if current_version == actual_latest_version
+    # This is an Array of ObjectVersions, defined in:
+    # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
+    track_list_operation 'BucketHelper.check_current_version'
+    versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
+
+    target_version_metadata = versions.find {|v| v.version_id == current_version}
 
     error_type =
       if should_replace
@@ -221,13 +227,7 @@ class BucketHelper
         # the target version not being visible yet due to S3's read-after-write
         # eventual consistency though, so allow the target version to either be
         # (absent or (present and latest)).
-        expected_latest_version = begin
-          s3.head_object(bucket: @bucket, key: key, version_id: current_version)
-        rescue Aws::S3::Errors::NoSuchKey, Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument
-          nil # No main.json yet, invalid version id or version not found
-        end
-
-        return true unless expected_latest_version
+        return true unless target_version_metadata && !target_version_metadata.is_latest
         'reject-replacing-older-main-json'
       else
         # Since we are not replacing the target version, we can conclude:
@@ -238,6 +238,7 @@ class BucketHelper
         #     client may have already replaced it.
         # Guard against this scenario by requiring that the target version be
         # both present and latest, without worrying about S3 inconsistency.
+        return true if target_version_metadata&.is_latest
         'reject-comparing-older-main-json'
       end
 
@@ -257,7 +258,9 @@ class BucketHelper
         # Server timestamp indicating when the first version of main.json was saved by the browser
         # tab making this request. This is for diagnosing problems with writes from multiple browser
         # tabs.
-        firstSaveTimestamp: timestamp
+        firstSaveTimestamp: timestamp,
+
+        versions: versions,
       }.to_json
     )
 
