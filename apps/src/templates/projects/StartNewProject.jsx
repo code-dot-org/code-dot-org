@@ -76,7 +76,6 @@ export default class StartNewProject extends React.Component {
         <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
         <NewProjectButtons
           projectTypes={defaultProjectTypes}
-          canViewAdvancedTools={canViewAdvancedTools}
         />
 
         {canViewFullList &&
