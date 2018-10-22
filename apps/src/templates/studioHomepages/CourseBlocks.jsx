@@ -134,15 +134,33 @@ class CourseBlocksCsfLegacy extends Component {
 export class CourseBlocksHoc extends Component {
   static propTypes = {
     rowCount: PropTypes.number.isRequired,
-    displayMinecraftAquatic: PropTypes.bool,
+    isInternational: PropTypes.bool,
+    hocLaunch: PropTypes.string,
+  };
+
+  getFirstRowTiles = () => {
+    switch (this.props.hocLaunch) {
+      case 'mc':
+        return ['#aquatic', '#starwars', '#frozen', '#hourofcode'];
+      case 'dance':
+        if (this.props.isInternational) {
+          return ['#dance', '#aquatic', '#starwars', '#hourofcode'];
+        } else {
+          return ['#dance', '#aquatic', '#starwars', '#applab'];
+        }
+      default:
+        return ['#hero', '#starwars', '#frozen', '#hourofcode'];
+    }
   };
 
   componentDidMount() {
-    const minecraftElement = this.props.displayMinecraftAquatic ? '#aquatic' : '#hero';
-    $(minecraftElement).appendTo(ReactDOM.findDOMNode(this.refs.minecraft)).show();
-    $('#starwars').appendTo(ReactDOM.findDOMNode(this.refs.starwars)).show();
-    $('#frozen').appendTo(ReactDOM.findDOMNode(this.refs.frozen)).show();
-    $('#hourofcode').appendTo(ReactDOM.findDOMNode(this.refs.hourofcode)).show();
+    // First row
+    const tiles = this.getFirstRowTiles();
+    tiles.forEach((tile, index) => {
+      $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
+    });
+
+    // Second row
     $('#flappy').appendTo(ReactDOM.findDOMNode(this.refs.flappy)).show();
     $('#infinity').appendTo(ReactDOM.findDOMNode(this.refs.infinity)).show();
     $('#playlab').appendTo(ReactDOM.findDOMNode(this.refs.playlab)).show();
@@ -153,10 +171,10 @@ export class CourseBlocksHoc extends Component {
     return (
       <div>
         <div className="row">
-          <ProtectedStatefulDiv ref="minecraft"/>
-          <ProtectedStatefulDiv ref="starwars"/>
-          <ProtectedStatefulDiv ref="frozen"/>
-          <ProtectedStatefulDiv ref="hourofcode"/>
+          <ProtectedStatefulDiv ref="0"/>
+          <ProtectedStatefulDiv ref="1"/>
+          <ProtectedStatefulDiv ref="2"/>
+          <ProtectedStatefulDiv ref="3"/>
         </div>
 
         {this.props.rowCount > 1 && (
@@ -180,7 +198,7 @@ export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
     showModernElementaryCourses: PropTypes.bool.isRequired,
-    displayMinecraftAquatic: PropTypes.bool,
+    hocLaunch: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -200,7 +218,8 @@ export class CourseBlocksAll extends Component {
         >
           <CourseBlocksHoc
             rowCount={1}
-            displayMinecraftAquatic={this.props.displayMinecraftAquatic}
+            hocLaunch={this.props.hocLaunch}
+            isInternational={!this.props.isEnglish}
           />
         </ContentContainer>
 

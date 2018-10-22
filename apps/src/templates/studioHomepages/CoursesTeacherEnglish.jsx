@@ -20,7 +20,7 @@ class CoursesTeacherEnglish extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    displayMinecraftAquatic: PropTypes.bool,
+    hocLaunch: PropTypes.string,
   };
 
   componentDidMount() {
@@ -29,7 +29,7 @@ class CoursesTeacherEnglish extends Component {
   }
 
   render() {
-    const { isSignedOut, showInitialTips, userId, displayMinecraftAquatic } = this.props;
+    const { isSignedOut, showInitialTips, userId, hocLaunch } = this.props;
     return (
       <div>
         {(!isSignedOut &&
@@ -72,7 +72,7 @@ class CoursesTeacherEnglish extends Component {
           >
             <CourseBlocksHoc
               rowCount={1}
-              displayMinecraftAquatic={displayMinecraftAquatic}
+              hocLaunch={hocLaunch}
             />
           </ContentContainer>
 
