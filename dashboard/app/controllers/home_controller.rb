@@ -1,3 +1,5 @@
+require 'openssl'
+
 class HomeController < ApplicationController
   include UsersHelper
   before_action :authenticate_user!, only: :gallery_activities
@@ -90,24 +92,28 @@ class HomeController < ApplicationController
 
   # GET /home/sign-cookies
   def sign_cookies
+    expiration_date = Time.now + 2.hours
+    expiration_sec = expiration_date.tv_sec
     policy = {
       "Statement" => [
         {
           "Resource" => "/restricted/*",
           "Condition" => {
-            "DateLessThan" => {"AWS:EpochTime" => (Time.now + 1.hour).tv_sec}
+            "DateLessThan" => {"AWS:EpochTime" => expiration_sec}
           }
         }
       ]
-    }.to_json
+    }.to_json.tr(" \t\r\n", '')
 
-    signer = Aws::CloudFront::CookieSigner.new(
-      key_pair_id: "cf-keypair-id",
-      private_key_path: "./cf_private_key.pem"
-    )
-    expiration_date = Time.now + 1.hour
-    cloudfront_cookies = signer.signed_cookie(policy, expiration_date)
-    cookies.update(cloudfront_cookies)
+    policy_encoded = Base64.strict_encode64(policy).tr('+=/', '-_~')
+
+    private_key = OpenSSL::PKey::RSA.new(File.read(CDO.cloudfront_private_key_path))
+    signature = private_key.sign(OpenSSL::Digest::SHA1.new, policy)
+    signature_encoded = Base64.strict_encode64(signature).tr('+=/', '-_~')
+
+    cookies['CloudFront-Policy'] = policy_encoded
+    cookies['CloudFront-Signature'] = signature_encoded
+    cookies['CloudFront-Key-Pair-Id'] = CDO.cloudfront_key_pair_id
 
     head :ok
   end
