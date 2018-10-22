@@ -483,12 +483,7 @@ module Pd::Application
     def meets_criteria
       response_scores = response_scores_hash
 
-      scored_questions =
-        if course == 'csd'
-          SCOREABLE_QUESTIONS[:criteria_score_questions_csd]
-        elsif course == 'csp'
-          SCOREABLE_QUESTIONS[:criteria_score_questions_csd]
-        end
+      scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
 
       responses = scored_questions.map {|q| response_scores[q]}
 

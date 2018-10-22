@@ -738,7 +738,7 @@ export class DetailViewContents extends React.Component {
           />
         </div>
       );
-    } else { // incomplete
+    } else { // Approval sent but is not complete
       const principalApprovalUrl =
         `${window.location.origin}/pd/application/principal_approval/${this.props.applicationData.application_guid}`;
 
