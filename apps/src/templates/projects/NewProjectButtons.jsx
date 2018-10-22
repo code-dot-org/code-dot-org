@@ -6,20 +6,6 @@ import color from "../../util/color";
 import Radium from 'radium';
 import _ from 'lodash';
 
-const DEFAULT_PROJECT_TYPES_ADVANCED = [
-  'spritelab',
-  'artist',
-  'applab',
-  'gamelab'
-];
-
-const DEFAULT_PROJECT_TYPES_BASIC = [
-  'spritelab',
-  'artist',
-  'minecraft_designer',
-  'flappy'
-];
-
 const PROJECT_INFO = {
   'playlab': {
     label: i18n.projectTypePlaylab(),
@@ -112,6 +98,10 @@ const PROJECT_INFO = {
   'spritelab': {
     label: i18n.projectTypeSpriteLab(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_spritelab.png"
+  },
+  'dance': {
+    label: i18n.projectTypeDance(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_dance.png"
   }
 };
 
@@ -167,19 +157,12 @@ class NewProjectButtons extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isRtl: PropTypes.bool,
     description: PropTypes.string,
-    canViewAdvancedTools: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    canViewAdvancedTools: true
   };
 
   render() {
-    const { canViewAdvancedTools, description, isRtl } = this.props;
+    const { description, isRtl, projectTypes } = this.props;
     const thumbnailStyle = isRtl ? styles.thumbnailRtl : styles.thumbnail;
-    const defaultProjectTypes = canViewAdvancedTools ?
-      DEFAULT_PROJECT_TYPES_ADVANCED: DEFAULT_PROJECT_TYPES_BASIC;
-    const projectTypes = this.props.projectTypes || defaultProjectTypes;
+
     return (
       <div style={styles.fullsize}>
         {description && <div style={styles.description}>{description}</div>}

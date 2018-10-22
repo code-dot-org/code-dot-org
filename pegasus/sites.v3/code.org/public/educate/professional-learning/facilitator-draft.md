@@ -55,6 +55,114 @@ The ideal facilitator believes deeply in Code.org’s equity-focused mission, is
 
 <hr/>
 
+In order to be selected for this program, potential Code.org facilitators must demonstrate the following qualifications:
+
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
+
+<img src="/images/fit-100/infographics/facilitator_champ.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Champion for CS Education</h3>
+ 
+  * Enthusiastic supporter of K-12 CS education
+
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+
+<img src="/images/fit-100/infographics/facilitator_equity.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Equity-Focused</h3>
+
+  * Committed to supporting access to quality CS education for all students
+  * Believes all teachers can teach CS
+
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+
+<img src="/images/fit-100/infographics/facilitator_growth.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Growth-Minded</h3>
+
+  * Demonstrated self-awareness of skills and experiences in which they can improve as a facilitator
+  * Strong desire and commitment to develop as a facilitator and leader within the CS education community
+  * Willingness to give and receive feedback in a collaborative working environment
+
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+
+<img src="/images/fit-100/infographics/facilitator_classroom.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Classroom Experience and Knowledgeable about Content</h3>
+
+  * Prior or current teaching experience
+  * Strong background in curriculum focus area, preferably through past teaching experience with specific course
+  * High level of comfort with technology, including virtual meeting tools and experience with Google suite
+
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+
+<img src="/images/fit-100/infographics/facilitator_leader.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Engaging Leader</h3>
+
+  * Demonstrated empathy for learners with a variety of backgrounds and experience levels
+  * Ability to "think on your feet" and make decisions that are in the best interest of the audience while maintaining fidelity to the program
+  * Motivated self-starter
+
+[/col-80]
+
+<div style="clear:both"></div>
+
+<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+
+<img src="/images/fit-100/infographics/facilitator_additional.png">
+
+</div>
+
+[col-80]
+
+<h3 style="font-family: 'Gotham 5r', sans-serif">Additional Qualities (preferred)</h3>
+
+  * Demonstrated ability to effectively engage and co-lead learning experiences for adults
+  * Prior experience as a Code.org facilitator
+
+[/col-80]
+
+<div style="clear:both"></div>
+
+<hr/>
+
 ## Learn more about the program
 
 Click on the questions below to learn more about the Code.org Facilitator Development Program.
@@ -65,7 +173,7 @@ Click on the questions below to learn more about the Code.org Facilitator Develo
 
   * Join a nationwide community of leaders and facilitators in CS education
   * Participate in in-person, virtual, and independent facilitator development
-  * Collaborate with their local Code.org Regional Partner to deliver professional development workshops to teachers on Code.org's courses, with on-going support from Code.org and the facilitator community
+  * Collaborate with their local Code.org Regional Partner to deliver professional development workshops to teachers on Code.org's courses, with ongoing support from Code.org and the facilitator community
   * Partner with Code.org to shape the future of professional learning for thousands of new CS educators across the US and beyond
 </p>
 </details>
@@ -75,46 +183,6 @@ Click on the questions below to learn more about the Code.org Facilitator Develo
   <p>
   
 The Facilitator Development Program application is open to anyone who is interested in developing as a leader and facilitator for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our desired qualifications below, and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/professional-learning/about-partners) or in areas where we are considering future partnerships.
-</p>
-</details>
-
-<details>
- <summary>**What is Code.org looking for in a facilitator?**</summary>
-  <p>
-  <br>
-In order to be selected for this program, potential Code.org facilitators must demonstrate the following qualifications:
-
-Champion for CS Education
- 
-  * Enthusiastic supporter of K-12 CS education
-
-*Equity-Focused*
-
-  * Committed to supporting access to quality CS education for all students
-  * Believes all teachers can teach CS
-
-*Growth-Minded*
-
-  * Demonstrated self-awareness of skills and experiences in which they can improve as a facilitator
-  * Strong desire and commitment to develop as a facilitator and leader within the CS education community
-  * Willingness to give and receive feedback in a collaborative working environment
-
-*Classroom Experience and Knowledgeable about Content*
-
-  * Prior or current teaching experience
-  * Strong background in curriculum focus area, preferably through past teaching experience with specific course
-  * High level of comfort with technology, including virtual meeting tools and experience with Google suite
-
-*Engaging Leader*
-
-  * Demonstrated empathy for learners with a variety of backgrounds and experience levels
-  * Ability to "think on your feet" and make decisions that are in the best interest of the audience while maintaining fidelity to the program
-  * Motivated self-starter
-
-*Additional Qualities (preferred)*
-
-  * Demonstrated ability to effectively engage and co-lead learning experiences for adults
-  * Prior experience as a Code.org facilitator
 </p>
 </details>
 

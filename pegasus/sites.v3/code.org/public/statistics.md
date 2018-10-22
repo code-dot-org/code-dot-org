@@ -13,8 +13,18 @@ We're on a mission to give every student the opportunity to learn computer scien
 
 ## Help us continue to make an impact! 
 Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share your favorite stats. Click each photo to retweet. 
+
 <br>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1053355643862728706" target="_blank"><img src="/images/statistics/fit-250/csf-over-year.png"></a>
+
 <br>
+
+Just think of how many students these 70,000 teachers will impact! 
+
+</div>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -36,6 +46,10 @@ Millions of students are learning computer science - here's a look at where Code
 
 </div>
 
+<div style="clear: both;"></div>
+
+<br>
+
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/1027955009755828224" target="_blank"><img src="/images/statistics/fit-250/garfield.png"></a>
@@ -45,10 +59,6 @@ Millions of students are learning computer science - here's a look at where Code
 According to Code.org's "fun-o-meter," turns out our students get a case of the Monday's too! 
 
 </div>
-
-<div style="clear: both;"></div>
-
-<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -70,6 +80,10 @@ And over 800,000 of those students are female.
 
 </div>
 
+<div style="clear: both;"></div>
+
+<br>
+
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/964571108627300352" target="_blank"><img src="/images/statistics/fit-250/double-enrollment.png"></a>
@@ -79,10 +93,6 @@ And over 800,000 of those students are female.
 And this double enrollment means more girls and underrepresented minorities are taking AP Computer Science than ever before!
 
 </div>
-
-<div style="clear: both;"></div>
-
-<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
