@@ -298,14 +298,6 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
-    create_button:
-      create: 'Crează'
-      applab: 'Laboratului Aplicației'
-      artist: 'Artist'
-      gamelab: 'Laborator de jocuri'
-      playlab: 'Laborator de Joacă'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'
@@ -319,6 +311,13 @@ ro:
       team: 'Echipa'
       driver: 'Conducătorul'
       navigator: 'Navigator'
+      create: 'Crează'
+      applab: 'Laboratului Aplicației'
+      artist: 'Artist'
+      gamelab: 'Laborator de jocuri'
+      playlab: 'Laborator de Joacă'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'

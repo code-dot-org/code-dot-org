@@ -142,6 +142,11 @@ pt-BR:
       2-3 Artist Loops New 10: |-
         Agora vamos conectar um monte de "V"
         em um laço.
+      2-3 Artist Loops New 11: |-
+        Hora de fazer algo atrativo!
+
+        Reconstrua o código do último desafio, mas dessa vez, adicione uma ação de virar à esquerda em 30 graus dentro do laço. Agora repita
+        a ação 24 vezes, em vez de 8.
       2-3 Artist Loops New 12: 'Desenhe um diamante com lados de 100 pixels.
 
 '
@@ -157,6 +162,12 @@ pt-BR:
       2-3 Artist Loops New 9: |-
         Desenhe um V simples (com ambos os lados com
         50 pixels) para completar a seta.
+      2-3 Artist Nested Loops 1: |
+        Você usou laços para desenhar formas antes, mas agora nós vamos colocar laços dentro de outros laços!
+
+        Ponha um bloco `repetir` ao redor de toda esta pilha de códigos para desenhar o padrão.
+
+        <br/>
       2-3 Artist Nested Loops 10: |-
         Repita este código 12 vezes para completar
         o padrão.
@@ -375,6 +386,9 @@ pt-BR:
       4-5 Bee Conditionals 2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas as nuvens
         para ver se elas escondem alguma flor antes de coletar o néctar.  \r\n\r\nLembre-se:\nNem
         todas as nuvens escondem alguma coisa!"
+      4-5 Bee Conditionals 4: "As vezes esta nuvem esconde uma flor, e outras vezes
+        uma colmeia! \n\nUse o bloco `se/senão` para coletar néctar apenas se for
+        uma flor. \nSenão para produzir mel (porque é uma colmeia)."
       4-5 Bee Conditionals 5: "Deve haver uma flor ou uma colmeia\natrás de cada uma
         dessas nuvens!\r\n\r\nUse o bloco \"se/senão\" para coletar néctar\nse houver
         uma flor.\r\nCaso contrário, produza mel (porque há uma colmeia)."
@@ -1598,6 +1612,11 @@ pt-BR:
       grade2_MakeDogTag_8: |-
         Agora vamos conectar um monte de "V"
         em um laço.
+      grade2_MakeDogTag_9: |-
+        Hora de fazer algo atrativo!
+
+        Reconstrua o código do último desafio, mas dessa vez, adicione uma ação de virar à esquerda em 30 graus dentro do laço. Agora repita
+        a ação 24 vezes, em vez de 8.
       grade2_PuppyLoops_10: "Meu professor diz que eu devo terminar o que\ncomecei!\r\n\r\nAjude-me
         a terminar meu cata-vento. Você consegue descobrir o que há de errado?"
       grade2_PuppyLoops_4: |-
@@ -1622,6 +1641,9 @@ pt-BR:
       grade3_ConditionalsElse_2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas as
         nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \r\n\r\nLembre-se:\nNem
         todas as nuvens escondem alguma coisa!"
+      grade3_ConditionalsElse_4: "As vezes esta nuvem esconde uma flor, e outras vezes
+        uma colmeia! \n\nUse o bloco `se/senão` para coletar néctar apenas se for
+        uma flor. \nSenão para produzir mel (porque é uma colmeia)."
       grade3_ConditionalsElse_5: "Deve haver uma flor ou uma colmeia\natrás de cada
         uma dessas nuvens!\r\n\r\nUse o bloco \"se/senão\" para coletar néctar\nse
         houver uma flor.\r\nCaso contrário, produza mel (porque há uma colmeia)."
@@ -1764,6 +1786,9 @@ pt-BR:
       grade4_bee_conditionals_quantum2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas
         as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.
         \ \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade4_bee_conditionals_quantum4: "As vezes esta nuvem esconde uma flor, e outras
+        vezes uma colmeia! \n\nUse o bloco `se/senão` para coletar néctar apenas se
+        for uma flor. \nSenão para produzir mel (porque é uma colmeia)."
       grade4_bee_conditionals_quantum5: "Deve haver uma flor ou uma colmeia\natrás
         de cada uma dessas nuvens!\r\n\r\nUse o bloco \"se/senão\" para coletar néctar\nse
         houver uma flor.\r\nCaso contrário, produza mel (porque há uma colmeia)."

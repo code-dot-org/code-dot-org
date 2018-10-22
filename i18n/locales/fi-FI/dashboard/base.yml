@@ -280,14 +280,6 @@ fi:
       help_us: "Auta meitä"
       teach: "Opettaa"
       about: "Tietoja"
-    create_button:
-      create: 'Luo'
-      applab: 'Sovelluslabra'
-      artist: 'Taiteilija'
-      gamelab: 'Pelilabra'
-      playlab: 'Pelilabra'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Opettajan kotisivu'
       district_dashboard: 'Koulupiirin hallintapaneeli'
@@ -301,6 +293,13 @@ fi:
       team: 'Tiimi'
       driver: 'Johtaja'
       navigator: 'Neuvonantaja'
+      create: 'Luo'
+      applab: 'Sovelluslabra'
+      artist: 'Taiteilija'
+      gamelab: 'Pelilabra'
+      playlab: 'Pelilabra'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Käyttäjän %{name} edistyminen"
       progress: 'Sinun edistymisesi'

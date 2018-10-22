@@ -212,23 +212,23 @@ sk:
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Kliknite na "Spusti" pre začatie pohybu.
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: Pomocou klávesov so šípkami alebo kliknutím sem začnite posúvať hráča.
+        MC_HOC_2017_01_Cole_2: Pomocou klávesov so šípkami alebo kliknutím sem začni posúvať hráča.
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: Váš hráč má odteraz kamaráta. Pre agenta môžete napísať kód, aby vám pomohol dostať sa cez úrovne.
+        MC_HOC_2017_02_Cole_1: Tvoj hráč má odteraz kamaráta. Pre agenta môžeš napísať kód, aby ti pomohol dostať sa cez úrovne.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: Toto je slučka „opakovať“. Pricvaknite ju do pracovného priestoru a pridajte kód, ktorý chcete spúšťať znova a znova.
+        MC_HOC_2017_03_Cole_1: Toto je cyklus`opakuj`. Pripoj ju do pracovného priestoru a pridaj kód, ktorý chceš spúšťať znova a znova.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: Na rozdiel od hráča sa agent môže vznášať nad vodou.
+        MC_HOC_2017_04_Cole_a: Na rozdiel od hráča sa agent môže vznášať nad vodou!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: Toto pricvaknite do pracovného priestoru a pridajte kód, ktorý chcete opakovať znova a znova.
+        MC_HOC_2017_04_Kiki_1: Toto pripni do pracovného priestoru a pridaj kód, ktorý sa bude opakovať znova a znova!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: Tieto bloky nemôžete odhodiť, ale môžete ich upraviť.
+        MC_HOC_2017_06_Cole_1: Tieto bloky nemôžeš odhodiť, ale môžeš ich upraviť!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou.  '
+        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou!  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou.  '
+        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'Na rozdiel od hráča sa agent môže vznášať nad lávou.  '
+        MC_HOC_2017_08_RY_1: 'Na rozdiel od Alexa a Steva sa agent môže vznášať nad lávou!  '
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie do Vášho programu
         New Play Lab Project_callout2: Kliknite na "Spusti" pre uloženie a spustenie Vášho programu

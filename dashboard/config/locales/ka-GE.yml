@@ -349,14 +349,6 @@ ka:
       help_us: დაგვეხმარე
       teach: ასწავლე
       about: გაიცანით
-    create_button:
-      create: შექმნა
-      applab: App Lab
-      artist: მხატვარი
-      gamelab: თამაშების ლაბი
-      playlab: თამაშების ლაბი
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: მასწავლებლის მთავარი გვერდი
       district_dashboard: განყოფილების მართვის პანელი
@@ -370,6 +362,13 @@ ka:
       team: გუნდი
       driver: შესულია
       navigator: პარტნიორი
+      create: შექმნა
+      applab: App Lab
+      artist: მხატვარი
+      gamelab: თამაშების ლაბი
+      playlab: თამაშების ლაბი
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}-ს პროგრესი"
       progress: თქვენი პროგრესი

@@ -11,6 +11,12 @@ km:
   campaign_date_full: "ខែធ្នូ ថ្ងៃទី ៥ ដល់ ថ្ងៃទី ១១"
   campaign_date_year: "ឆ្នាំ​២០១៦"
   campaign_date_full_year: "ខែធ្នូ ថ្ងៃទី ៥ ដល់ ថ្ងៃទី ១១ ឆ្នាំ ២០១៦"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
@@ -279,6 +285,11 @@ km:
   signup_continue_label: 'Continue'
   signup_thank_you_header: "អរគុណសំរាប់ការចុះឈ្មេាះក្នុងការធ្វើជាម្ចាស់ផ្ទះ ម៉ោងសំរាប់កូដ"
   signup_thank_you_message: 'យើងបញ្ជូនអ៊ីុម៉ែលបញ្ជាក់សំរាប់ពណ៏មានក្នុងការជួយដល់លោកអ្នកដើម្បីចាប់ផ្តើម'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code map"
   map_header: '# ព្រឹត្តិការណ៍ Hour of Code នៅ​ជុំវិញ​ពិភពលោក'
   map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'

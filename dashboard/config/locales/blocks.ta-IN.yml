@@ -34,10 +34,28 @@ ta:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Dancelab_setDanceSpeed:
@@ -49,6 +67,10 @@ ta:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"height"': உயரம்
@@ -131,3 +153,7 @@ ta:
         text: முன்னோக்கி நகர்த்த
       craft_placeTorch:
         text: இடம் மின்வளக்கு
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': கோழி

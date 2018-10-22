@@ -77,12 +77,28 @@ he:
         options:
           GROUP:
             sprites: כל
+          FORMAT:
+            '"random"': אקראי
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": שמאלה
             "{x: 300, y: 200}": ימינה
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": אקראי
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': אקראי
       Dancelab_randomColor:
         text: צבע אקראי
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ he:
             '"none"': כלום
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': גודל
+            '"height"': גובה
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: כל
           PROPERTY:
             '"scale"': גודל
             '"height"': גובה
@@ -300,3 +323,7 @@ he:
         text: לזוז קדימה
       craft_placeTorch:
         text: שים לפיד
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': תרנגולת

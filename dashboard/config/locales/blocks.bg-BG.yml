@@ -181,12 +181,31 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
+          FORMAT:
+            '"random"': случаен
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": наляво
             "{x: 300, y: 200}": надясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"ALIEN"': Извънземни
+            '"UNICORN"': Еднорози
+          LAYOUT:
+            '"random"': случаен
       Dancelab_randomColor:
         text: случаен цвят
       Dancelab_setBackgroundEffect:
@@ -210,6 +229,27 @@ bg:
       Dancelab_setProp:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+            '"tint"': оттенък
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
           PROPERTY:
             '"scale"': размер
             '"height"': височина
@@ -479,3 +519,7 @@ bg:
         text: върви напред
       craft_placeTorch:
         text: постави факел
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': пиле

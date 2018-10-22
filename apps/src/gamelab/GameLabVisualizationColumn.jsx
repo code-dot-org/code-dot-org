@@ -22,8 +22,8 @@ import {
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
 import Radium from "radium";
-import songLibrary from "../code-studio/songLibrary.json";
 import * as danceRedux from "../dance/redux";
+import project from '../code-studio/initApp/project';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -41,20 +41,47 @@ const styles = {
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired
+    selectedSong: PropTypes.string.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired
+  };
+
+  state = {
+    songsData: []
   };
 
   changeSong = (event) => {
-    this.props.setSong(event.target.value);
+    const song = event.target.value;
+    this.props.setSong(song);
+
+    if (this.props.isProjectLevel) {
+      //Save song to project
+      project.saveSelectedSong(song);
+    }
   };
+
+  componentWillMount() {
+    fetch(`/api/v1/sound-library/hoc_song_meta/songManifest.json`)
+      .then((response) => {return response.json();})
+      .then((data) => {this.parseSongOptions(data);});
+  }
+
+  parseSongOptions(data) {
+    let songs = {};
+    if (data) {
+      data.songs.forEach((song) => {
+        songs[song.id] = {title: song.text, url: song.url};
+      });
+    }
+    this.setState({songsData: songs});
+  }
 
   render() {
     return (
       <div>
         <label><b>{i18n.selectSong()}</b></label>
         <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(songLibrary).map((option, i) => (
-            <option key={i} value={option}>{songLibrary[option].title}</option>
+          {Object.keys(this.state.songsData).map((option, i) => (
+            <option key={i} value={option}>{this.state.songsData[option].title}</option>
           ))}
         </select>
       </div>
@@ -68,6 +95,7 @@ class GameLabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
@@ -183,8 +211,8 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
-        {this.props.danceLab &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
+        {this.props.danceLab && !this.props.isShareView &&
+          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} isProjectLevel={this.props.isProjectLevel}/>
         }
         <ProtectedVisualizationDiv>
           <Pointable
@@ -238,6 +266,7 @@ class GameLabVisualizationColumn extends React.Component {
 export default connect(state => ({
   isResponsive: state.pageConstants.isResponsive,
   isShareView: state.pageConstants.isShareView,
+  isProjectLevel: state.pageConstants.isProjectLevel,
   spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
   mobileControlsConfig: state.mobileControlsConfig,

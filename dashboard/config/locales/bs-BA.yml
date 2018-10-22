@@ -227,12 +227,6 @@ bs:
       about_jobs: Poslovi
       help_us: Pomogni nam
       teach: Podučavaj
-    create_button:
-      create: Kreiraj
-      applab: Laboratorij za Aplikacije
-      artist: Umjetnik
-      playlab: Play Lab
-      flappy: Flappy
     user:
       classroom: Početna Stranica za Učitelje
       district_dashboard: Nadzorna ploča za distrikte
@@ -245,6 +239,11 @@ bs:
       already_registered: Jeste li već registrirani?
       team: Tim
       navigator: Partner
+      create: Kreiraj
+      applab: Laboratorij za Aplikacije
+      artist: Umjetnik
+      playlab: Play Lab
+      flappy: Flappy
     popup:
       progress_for_user: Napredak za %{name}
       progress: Tvoj napredak
