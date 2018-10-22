@@ -1,8 +1,10 @@
 require 'test_helper'
-require 'webmock/minitest'
 require 'cdo/aws/s3'
 
-WebMock.disable_net_connect!
+# Uncomment to test locally with similar constraints to what we see in the test environment
+# Don't check in uncommented - this is leaky and affects other tests!
+# require 'webmock/minitest'
+# WebMock.disable_net_connect!
 
 class RemixTest < ActionDispatch::IntegrationTest
   PROJECT_EDIT_REGEX = /#{'/projects/'}(?<project_type>\w+)\/(?<channel_id>[^\\]*)#{'/edit'}$/
