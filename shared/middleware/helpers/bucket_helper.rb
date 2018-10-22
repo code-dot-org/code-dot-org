@@ -209,7 +209,7 @@ class BucketHelper
     begin
       latest = s3.head_object(bucket: @bucket, key: key).version_id
       return true if current_version == latest
-    rescue Aws::S3::Errors::NoSuchKey
+    rescue Aws::S3::Errors::NotFound
       # No main.json yet; fall through to fallback logic
     end
 
