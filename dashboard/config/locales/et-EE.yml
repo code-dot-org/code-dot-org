@@ -256,14 +256,6 @@ et:
       educate_hoc: KoodiTund
       teach: Õpeta
       about: Info
-    create_button:
-      create: Loo
-      applab: App Lab
-      artist: Kunstnik
-      gamelab: Game Lab
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -277,6 +269,13 @@ et:
       team: Võistkond
       driver: Sisse logitud
       navigator: Parnter
+      create: Loo
+      applab: App Lab
+      artist: Kunstnik
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress

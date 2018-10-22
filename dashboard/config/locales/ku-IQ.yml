@@ -85,14 +85,13 @@ ku:
   nav:
     header:
       educate_hoc: كاژێری كۆدنووسی
-    create_button:
-      create: ez
     user:
       classroom: پەڕەی سەرەکی مامۆستا
       settings: هەژمارەکەم
       logout: دەرچوون
       signin: چوونەژوورەوە
       already_registered: پێشوو تۆمارکراویت؟
+      create: ez
     popup:
       close: داخستن
       puzzle_map: قۆناغەکان

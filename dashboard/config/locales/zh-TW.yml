@@ -321,15 +321,6 @@ zh-TW:
       help_us: 幫助我們
       teach: 教育
       about: 關於
-    create_button:
-      create: 建立
-      applab: App Lab
-      artist: 藝術家
-      gamelab: Game Lab
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: 像素鳥
-      view_all: 瀏覽所有專案…
     user:
       classroom: 教師主頁
       district_dashboard: 分區控制台
@@ -343,6 +334,14 @@ zh-TW:
       team: 團隊
       driver: 已登入
       navigator: 夥伴
+      create: 建立
+      applab: App Lab
+      artist: 藝術家
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: 像素鳥
+      view_all: 瀏覽所有專案…
     popup:
       progress_for_user: "%{name} 的進度"
       progress: 你的學習進度

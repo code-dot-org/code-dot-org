@@ -234,14 +234,6 @@ el:
         applab: 'Δημιουργήστε μια εφαρμογή'
       project_gallery: "Έργα"
       educate_hoc: "Η Ώρα του Κώδικα"
-    create_button:
-      create: 'Δημιουργία'
-      applab: 'Εργαστήριο εφαρμογών'
-      artist: 'Καλλιτέχνης'
-      gamelab: 'Game Lab'
-      playlab: 'Εργαστήριο Παιχνιδιού'
-      minecraft: 'Minecraft'
-      flappy: 'Πουλάκι'
     user:
       classroom: 'Αρχική Σελίδα Εκπαιδευτή'
       district_dashboard: 'Περιοχή Ταμπλό'
@@ -255,6 +247,13 @@ el:
       team: 'Ομάδα'
       driver: 'Οδηγός-αρχηγός'
       navigator: 'Πλοηγός'
+      create: 'Δημιουργία'
+      applab: 'Εργαστήριο εφαρμογών'
+      artist: 'Καλλιτέχνης'
+      gamelab: 'Game Lab'
+      playlab: 'Εργαστήριο Παιχνιδιού'
+      minecraft: 'Minecraft'
+      flappy: 'Πουλάκι'
     popup:
       progress_for_user: "πρόοδος του %{name}"
       progress: 'Η πρόοδός σου'

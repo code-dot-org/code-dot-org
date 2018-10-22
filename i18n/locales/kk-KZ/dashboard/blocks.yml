@@ -46,12 +46,30 @@ kk:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': кездейсоқ
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
       Dancelab_setDanceSpeed:
@@ -63,6 +81,11 @@ kk:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': шама
@@ -237,3 +260,7 @@ kk:
         text: алдыға қозғалу
       craft_placeTorch:
         text: Шам орнату
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': тауық

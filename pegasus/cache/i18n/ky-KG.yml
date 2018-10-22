@@ -308,7 +308,10 @@
   header_educate_hoc: Код сааты
   header_about_news: Жаңылыктар
   user_header_signin: Кирүү
+  user_header_gamelab: Оюн лабы
+  user_header_view_my_projects: Долбоорлорумду көрүү
   view_all_sections: Секциялардын баарын көрүү
+  creativity_create: Түзүү
   ! '': 
   hello: Hello world
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
@@ -2098,7 +2101,6 @@
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
-  user_header_gamelab: Game Lab
   user_header_playlab: Play Lab
   user_header_dance: Dance Party
   user_header_spritelab: Sprite Lab
@@ -2106,7 +2108,6 @@
   user_header_flappy: Flappy
   user_header_view_all: View all projects...
   user_header_view_project_gallery: View project gallery
-  user_header_view_my_projects: View my projects
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2161,7 +2162,6 @@
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
   creativity: creativity
-  creativity_create: Create
   creativity_hoc_coming: The Hour of Code is coming…
   creativity_what_will_you_create: What will you create?
   creativity_homepage: Give flight to imagination and birth to innovation. Start with

@@ -171,13 +171,6 @@ bn:
       project_gallery: প্রকল্প
       educate_hoc: এক ঘন্টার কোড
       stats: পরিসংখ্যান
-    create_button:
-      create: তৈরি করুন
-      applab: অ্যাপ ল্যাব
-      artist: শিল্পী
-      playlab: প্লে ল্যাব
-      minecraft: মাইনক্র্যাফট
-      flappy: ফ্লাপি
     user:
       classroom: শিক্ষক হোম পেজ
       label: হ্যালো %{username}
@@ -185,6 +178,12 @@ bn:
       settings: আমার একাউন্ট
       logout: সাইন আউট
       signin: সাইন ইন করুন
+      create: তৈরি করুন
+      applab: অ্যাপ ল্যাব
+      artist: শিল্পী
+      playlab: প্লে ল্যাব
+      minecraft: মাইনক্র্যাফট
+      flappy: ফ্লাপি
     popup:
       progress: আপনার অগ্রগতি
       close: বন্ধ

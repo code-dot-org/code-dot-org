@@ -307,14 +307,6 @@ fr:
       help_us: "Nous aider"
       teach: "Enseigner"
       about: "À propos"
-    create_button:
-      create: 'Créer'
-      applab: 'Labo des applis'
-      artist: 'Artiste'
-      gamelab: 'Game Lab'
-      playlab: 'Labo de jeux'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Page d''accueil de l''enseignant'
       district_dashboard: 'Tableau de bord du district'
@@ -328,6 +320,13 @@ fr:
       team: 'Équipe'
       driver: 'Pilote'
       navigator: 'Navigateur'
+      create: 'Créer'
+      applab: 'Labo des applis'
+      artist: 'Artiste'
+      gamelab: 'Game Lab'
+      playlab: 'Labo de jeux'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "progrès de %{name}"
       progress: 'Ton progrès'

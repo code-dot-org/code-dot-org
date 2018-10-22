@@ -17,11 +17,13 @@ ru:
       messages:
         blank: требуется
         blank_plural: необходимы
+        invalid: недействителен
         invalid_plural: недопустимы
     attributes:
       user:
         name: Отобразить имя
         name_example: Отображаемое имя<br/>(например, Крутой Кодер или Джейн С.)
+        other_name_example: Отображать имя<br/>(например, г-жа Смит)
         email: Электронная почта
         parent_email: Электронная почта родителя/опекуна
         personal_email: Личная электронная почта <a href="%{url}"> (нажмите сюда,
@@ -34,6 +36,7 @@ ru:
         age: Возраст
         gender: Пол
         edit_header: Изменить учетные данные
+        finish_sign_up_header: Завершите создание учетной записи
         error:
           future: не может быть в будущем
   hello: Привет, мир!
@@ -171,6 +174,7 @@ ru:
     email_preference_privacy: "(См. нашу политику конфиденциальности)"
     email_preference_yes: Да
     email_preference_no: Нет
+    create_user_type: Создать аккаунт как
   school_info:
     title: Школьная информация (по желанию)
     school_country: Страна твоей школы
@@ -244,6 +248,7 @@ ru:
     student_associated_subject: Входные данные для Code.org
   teacher_mailer:
     new_teacher_subject: Добро пожаловать на Code.org!
+    delete_teacher_subject: 'Уведомление Code.org: Ваш аккаунт был удален'
   section:
     your_section:
       one: 'Твой раздел:'
@@ -251,6 +256,7 @@ ru:
     code_with_teacher: "%{section_code} с %{teacher_name}"
     confirm:
       remove: Вы хотите выйти из раздела?
+    default_name: Раздел без названия
     remove: "(удалить раздел)"
     type:
       picture: Графический пароль
@@ -348,14 +354,6 @@ ru:
       help_us: Помогите нам
       teach: Учить
       about: О разработчике
-    create_button:
-      create: Создать
-      applab: Лаборатория приложений
-      artist: Художник
-      gamelab: Игровая лаборатория
-      playlab: Лаборатория игр
-      minecraft: Minecraft
-      flappy: Порхающий код
     user:
       classroom: Домашняя страница преподавателя
       district_dashboard: Панель управления области
@@ -366,9 +364,18 @@ ru:
       signin: Вход
       signup: Создать учетную запись
       already_registered: Уже зарегистрированы?
+      pair_programming: Программирование в парах
       team: Команда
       driver: Водитель
       navigator: Штурман
+      create: Создать
+      applab: Лаборатория приложений
+      artist: Художник
+      gamelab: Игровая лаборатория
+      playlab: Лаборатория игр
+      minecraft: Minecraft
+      flappy: Порхающий код
+      view_all: Смотреть все проекты...
     popup:
       progress_for_user: Результаты %{name}
       progress: Ваши результаты
@@ -412,10 +419,15 @@ ru:
       подтвержден:'
     email_confirm_wrong_email: "(Неверный адрес электронной почты?)"
     email_resend_confirm: Повторно выслать инструкции по подтверждению
+    new_email_hint: "(убедитесь, что вы можете получать сообщения на этот адрес электронной
+      почты)"
     new_password_hint: "(оставьте поле пустым, если не хотите ничего менять)"
     current_password_hint: "(нам нужен Ваш текущий пароль для подтверждения изменений)"
     delete: Удалить свою учетную запись
     delete_text: Нажатие на кнопку ниже удалит вашу учетную запись.
+    delete_text_teacher_managed_note: У вас нет прав на удаление этого аккаунта, потому
+      что он управляется вашим учителем. Вашему учителю необходимо исключить вас из
+      своего раздела прежде, чем вы сможете удалить ваш аккаунт.
     delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не
       удалит учетные записи ваших учеников.'
     delete_confirm: Вы действительно хотите удалить свою учетную запись?
@@ -442,9 +454,12 @@ ru:
       по политике конфиденциальности</a> для дальнейшей информации.'
     enter_new_login_info: Введите Вашу новую информацию о профиле
     confirm_secret_words: Подтвердите свою личность, введя свои секретные слова
+    parent_email_label: Электронная почта родителя/опекуна (опционально)
+    parent_email_hint: "(может быть использовано для восстановления пароля)"
     enter_parent_email: Введите адрес электронной почты своих родителей или опекунов
       (для восстановления пароля)
     update: Обновить учетную запись
+    account_successfully_updated: Учетная запись успешно обновлена.
   user_level:
     completed: Завершено
     tried: Пытался
@@ -901,6 +916,8 @@ ru:
       студентов, если не принять обновленные условия.
     review_terms: Просмотр обновленных условий
   school_info_interstitial:
+    message_with_suggestion: Пожалуйста, удостоверьтесь, что следующая информация
+      верна, внесите изменения, если необходимо.
     save: Сохранить
   race_interstitial:
     title: 'Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения
@@ -963,6 +980,8 @@ ru:
       доступа. Можно делиться только с другими учениками в вашей школе.
     embed: Код для вставки
     advanced_share: Показать дополнительные настройки
+    no_projects: В настоящее время у вас нет проектов. Нажмите на одну из кнопок вверху,
+      чтобы начать проект.
     close: Закрыть
     more: Ещё
     name: Имя
@@ -1042,6 +1061,10 @@ ru:
     peer_review: Рецензирование
     main_course: Основной курс
     extra_course_content: Дополнительный материал для курса
+    csd1_2: 'Глава 2: Компьютеры и решение проблем'
+    csd2_1: 'Глава 1: Веб-контент и HTML'
+    csd3_1: 'Глава 1: Изображения и анимации'
+    cspSurvey: Опрос
     csp2_1_2018: 'Урок 2: Цифровая информация'
   external_links:
     disclaimer: Отказ от ответственности
@@ -1119,7 +1142,10 @@ ru:
   return_course_overview: Перейти к обзору темы
   pd:
     form_labels:
+      first_name: Имя
+      last_name: Фамилия
       email: Электронная почта
+      email_alternate: Дополнительный адрес электронной почты
       school_name: Название школы
       school_country: Страна твоей школы
     form_entries:
@@ -1127,23 +1153,45 @@ ru:
         male: Мужской
         female: Женский
         none: Предпочитаю не отвечать
+      school_country:
+        israel: Израиль
+        mexico: Мексика
+        thailand: Таиланд
+      ages:
+        ages_under_6: "< 6 лет"
+        ages_7_8: 7-8 лет
+        ages_9_10: 9-10 лет
+        ages_11_12: 11-12 лет
+        ages_13_14: 13-14 лет
+        ages_15_16: 15-16 лет
+        ages_17_18: 17-18 лет
+        ages_19_over: 19 + лет
       subjects:
         cs: Информатика
         math: Математика
         science: Наука
         la: Язык искусств
+        efl: Английский язык как иностранный
+        music: Музыка
+        art: Искусство
+        other: 'Другое:'
       resources:
         kodable: Kodable
+        other: 'Другое:'
       robotics:
         kodable: Kodable
+        other: 'Другое:'
       workshop_course:
         csp: "«16 - 17» Основы информатики"
       email_opt_in:
         opt_in_yes: Да
         opt_in_no: Нет
   cookie_banner:
+    more_information: Смотрите политику конфиденциальности Code.org.
     accept: Я согласен(на)
   gdpr_dialog:
+    heading: Согласны ли вы использовать веб-сайт, находящийся на территории США?
     message: Данные о вашем использовании настоящего веб-сайта могут направляться
       в США, а также храниться или обрабатываться на территории США.
+    logout: Выйти
     true: Да

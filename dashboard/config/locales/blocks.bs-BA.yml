@@ -46,12 +46,30 @@ bs:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': slučajno odabran
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumična boja
       Dancelab_setDanceSpeed:
@@ -63,6 +81,11 @@ bs:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': veličina
@@ -237,3 +260,7 @@ bs:
         text: idi naprijed
       craft_placeTorch:
         text: postavite baklju
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': pile

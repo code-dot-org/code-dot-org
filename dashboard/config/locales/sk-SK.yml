@@ -356,14 +356,6 @@ sk:
       help_us: Pomôžte nám
       teach: Vyučujte
       about: O nás
-    create_button:
-      create: Vytvoriť
-      applab: Laboratórium aplikácií
-      artist: Umelec
-      gamelab: Herné laboratórium
-      playlab: Herné laboratórium
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Domovská stránka učiteľa
       district_dashboard: Oblasť Nástenka
@@ -377,6 +369,13 @@ sk:
       team: Tím
       driver: Prihlásený
       navigator: Navigátor
+      create: Vytvoriť
+      applab: Laboratórium aplikácií
+      artist: Umelec
+      gamelab: Herné laboratórium
+      playlab: Herné laboratórium
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
       progress: Váš pokrok
@@ -825,8 +824,8 @@ sk:
       body: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
     hero:
       title: Minecraft
-      body: Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou! Prejdite
-        sa po Minecrafte s kódom.
+      body: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po
+        Minecrafte s kódom.
     sports:
       body: Vytvorte basketbalovú hru alebo pospájajte a pomiešajte viaceré športy.
     text-compression:
@@ -1031,13 +1030,13 @@ sk:
     save: Uložiť
     delete: Odstrániť
     import: Import
-    share_link_import_bad_link_header: Prepojenie na zdieľanie sa nerozpoznalo
-    share_link_import_bad_link_body: 'Prepojenie na zdieľanie sa nemohlo importovať.
-      Uistite sa, že používate prepojenie z hlavolamu Minecraft: Agent a že ste skopírovali
-      celé prepojenie.'
+    share_link_import_bad_link_header: Link na zdieľanie nebol nerozpoznaný
+    share_link_import_bad_link_body: 'Link na zdieľanie sa nám nepodarilo importovať.
+      Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý
+      link.'
     share_link_import_error_header: Vyskytla sa chyba.
-    share_link_import_error_body: Vyskytol sa problém s importom tohto prepojenia
-      na zdieľanie. Skúste to znova.
+    share_link_import_error_body: Vyskytol sa problém s importom tohto linku na zdieľanie.
+      Skús to znova.
     exit: Vrátiť sa do kurzu
     my_projects: Moje Projekty
     project_gallery: Projekty

@@ -73,6 +73,7 @@ pt-BR:
         
         <br/>
       2-3 Artist Loops New 10: "Agora vamos conectar um monte de \"V\"\nem um laço."
+      2-3 Artist Loops New 11: "Hora de fazer algo atrativo!\n\nReconstrua o código do último desafio, mas dessa vez, adicione uma ação de virar à esquerda em 30 graus dentro do laço. Agora repita\na ação 24 vezes, em vez de 8."
       2-3 Artist Loops New 12: "Desenhe um diamante com lados de 100 pixels.\n"
       2-3 Artist Loops New 13: "Você vai conhecer alguns códigos\n(em cinza) para fazer um diamante. \\r\n\\r\nRepita o código cinza para criar um padrão\ndivertido!"
       2-3 Artist Loops New 14: "Brinque um pouco com o código do diamante e veja que outros padrões você consegue fazer. \n\nTente mudar quantos graus você vira e o número de repetições."
@@ -86,6 +87,12 @@ pt-BR:
         \r
         Você pode usar um bloco "repita" para resolver este desafio?
       2-3 Artist Loops New 9: "Desenhe um V simples (com ambos os lados com\n50 pixels) para completar a seta."
+      2-3 Artist Nested Loops 1: |+
+        Você usou laços para desenhar formas antes, mas agora nós vamos colocar laços dentro de outros laços!
+        
+        Ponha um bloco `repetir` ao redor de toda esta pilha de códigos para desenhar o padrão.
+        
+        <br/>
       2-3 Artist Nested Loops 10: "Repita este código 12 vezes para completar\no padrão."
       2-3 Artist Nested Loops 11: "Repita este código 4 vezes para completar\no padrão, vire 90 graus após cada círculo."
       2-3 Artist Nested Loops 12: "Repita este código 12 vezes para completar\nas espirais."
@@ -205,6 +212,7 @@ pt-BR:
       4-5 Artist Patterns Free Play: "Atividade livre - experimente criar\nseu próprio padrão!"
       4-5 Bee Conditionals 1: "Esta nuvem está tapando minha visão! \n\nVeja se há uma flor atrás da nuvem, e só colete néctar se houver uma flor. Cuidado, isso pode mudar!"
       4-5 Bee Conditionals 2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      4-5 Bee Conditionals 4: "As vezes esta nuvem esconde uma flor, e outras vezes uma colmeia! \n\nUse o bloco `se/senão` para coletar néctar apenas se for uma flor. \nSenão para produzir mel (porque é uma colmeia)."
       4-5 Bee Conditionals 5: |-
         Deve haver uma flor ou uma colmeia
         atrás de cada uma dessas nuvens!\r
@@ -936,6 +944,7 @@ pt-BR:
       frozen square snowflake: "Você consegue criar um floco de neve usando o bloco\n\"repita\" para criar um quadrado 10 vezes e o bloco \"vire\" para virar 36\ngraus entre cada quadrado?"
       grade2_CaringForNewPet_11: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       grade2_MakeDogTag_8: "Agora vamos conectar um monte de \"V\"\nem um laço."
+      grade2_MakeDogTag_9: "Hora de fazer algo atrativo!\n\nReconstrua o código do último desafio, mas dessa vez, adicione uma ação de virar à esquerda em 30 graus dentro do laço. Agora repita\na ação 24 vezes, em vez de 8."
       grade2_PuppyLoops_10: |-
         Meu professor diz que eu devo terminar o que
         comecei!\r
@@ -957,6 +966,7 @@ pt-BR:
       grade2_puppy_loops4: "Neste desafio, dois laços \"repita\" ajudarão você\na pegar o porco com o menor número possível de blocos!"
       grade3_ConditionalsElse_1: "Esta nuvem está tapando minha visão! \n\nVeja se há uma flor atrás da nuvem, e só colete néctar se houver uma flor. Cuidado, isso pode mudar!"
       grade3_ConditionalsElse_2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade3_ConditionalsElse_4: "As vezes esta nuvem esconde uma flor, e outras vezes uma colmeia! \n\nUse o bloco `se/senão` para coletar néctar apenas se for uma flor. \nSenão para produzir mel (porque é uma colmeia)."
       grade3_ConditionalsElse_5: |-
         Deve haver uma flor ou uma colmeia
         atrás de cada uma dessas nuvens!\r
@@ -1059,6 +1069,7 @@ pt-BR:
       grade4_bee_conditionals_new1: "**Avaliação:** Colete todo o néctar. \nTenha cuidado para não coletar néctar das flores roxas que não o tiverem."
       grade4_bee_conditionals_quantum1: "Esta nuvem está tapando minha visão! \n\nVeja se há uma flor atrás da nuvem, e só colete néctar se houver uma flor. Cuidado, isso pode mudar!"
       grade4_bee_conditionals_quantum2: "Mais nuvens! \\r\n\\r\nProcure atrás\nde todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.  \\r\n\\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
+      grade4_bee_conditionals_quantum4: "As vezes esta nuvem esconde uma flor, e outras vezes uma colmeia! \n\nUse o bloco `se/senão` para coletar néctar apenas se for uma flor. \nSenão para produzir mel (porque é uma colmeia)."
       grade4_bee_conditionals_quantum5: |-
         Deve haver uma flor ou uma colmeia
         atrás de cada uma dessas nuvens!\r

@@ -248,14 +248,6 @@ lt:
       educate_inspire: Įkvėpkite mokinius
       educate_community: Virtuali bendruomenė
       educate_tools: Įrankiai ir vaizdo įrašai
-    create_button:
-      create: Sukurti
-      applab: App Lab
-      artist: Menininkas
-      gamelab: Žaidimų laboratorija
-      playlab: Laboratorija
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Mokytojo namų puslapis
       district_dashboard: Prietaisų skydelis
@@ -269,6 +261,13 @@ lt:
       team: Komanda
       driver: Tvarkyklė
       navigator: Navigatorius
+      create: Sukurti
+      applab: App Lab
+      artist: Menininkas
+      gamelab: Žaidimų laboratorija
+      playlab: Laboratorija
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} pažanga"
       progress: Jūsų pažanga
