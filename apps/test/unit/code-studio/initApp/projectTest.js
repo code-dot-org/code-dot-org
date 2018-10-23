@@ -284,6 +284,106 @@ describe('project.saveThumbnail', () => {
   });
 });
 
+describe('project.copy (client-side remix)', () => {
+  let server, sourceHandler, requests;
+
+  beforeEach(() => {
+    requests = [];
+
+    replaceOnWindow('appOptions', {
+      level: {
+        isProjectLevel: true,
+      },
+    });
+    sinon.stub(project, 'getStandaloneApp').returns('artist');
+    sinon.stub(header, 'showMinimalProjectHeader');
+    sinon.stub(header, 'updateTimestamp');
+    server = sinon.createFakeServer({autoRespond: true});
+
+    sourceHandler = createStubSourceHandler();
+    project.init(sourceHandler);
+  });
+
+  afterEach(() => {
+    server.restore();
+    header.showMinimalProjectHeader.restore();
+    header.updateTimestamp.restore();
+    project.getStandaloneApp.restore();
+    restoreOnWindow('appOptions');
+  });
+
+  it('performs a client-side remix', async () => {
+    server.respondWith('POST', /\/v3\/channels/, xhr => {
+      requests.push(`${xhr.method} ${xhr.url}`);
+      xhr.respond(200, {
+        'Content-Type': 'application/json',
+      }, JSON.stringify({
+        "createdAt":"2018-10-22T21:59:43.000-07:00",
+        "updatedAt":"2018-10-22T21:59:45.000-07:00",
+        "isOwner":true,
+        "publishedAt":null,
+        "level":"/projects/artist",
+        "migratedToS3":true,
+        "name":"Remix: allthethings-artist-project-backed",
+        "id":"kmz3weHzTpZTbRWrHRzMJA",
+        "projectType":"artist"
+      }));
+    });
+
+    server.respondWith('PUT', /\/v3\/sources\/.*\/main\.json/, xhr => {
+      requests.push(`${xhr.method} ${xhr.url}`);
+      xhr.respond(200, {
+        'Content-Type': 'application/json',
+      }, JSON.stringify({
+        filename: 'main.json',
+        category: 'json',
+        size: 0,
+        versionId: 12345,
+        timestamp: Date.now()
+      }));
+    });
+
+    await project.copy('Remixed project');
+  });
+
+  it('does not pass currentVersion and replace params on remix', async () => {
+    server.respondWith('POST', /\/v3\/channels/, xhr => {
+      requests.push(`${xhr.method} ${xhr.url}`);
+      xhr.respond(200, {
+        'Content-Type': 'application/json',
+      }, JSON.stringify({
+        "createdAt":"2018-10-22T21:59:43.000-07:00",
+        "updatedAt":"2018-10-22T21:59:45.000-07:00",
+        "isOwner":true,
+        "publishedAt":null,
+        "level":"/projects/artist",
+        "migratedToS3":true,
+        "name":"Remix: allthethings-artist-project-backed",
+        "id":"kmz3weHzTpZTbRWrHRzMJA",
+        "projectType":"artist"
+      }));
+    });
+
+    server.respondWith('PUT', /\/v3\/sources\/.*\/main\.json/, xhr => {
+      requests.push(`${xhr.method} ${xhr.url}`);
+      xhr.respond(200, {
+        'Content-Type': 'application/json',
+      }, JSON.stringify({
+        filename: 'main.json',
+        category: 'json',
+        size: 0,
+        versionId: 12345,
+        timestamp: Date.now()
+      }));
+    });
+
+    project.__TestInterface.setCurrentSourceVersionId('fakeid');
+    await project.copy('Remixed project');
+    expect(requests[1]).not.to.match(/currentVersion=/);
+    expect(requests[1]).not.to.match(/replace=(true|false)/);
+  });
+});
+
 function createStubSourceHandler() {
   return {
     setInitialLevelHtml: sinon.stub(),
@@ -295,6 +395,7 @@ function createStubSourceHandler() {
     setMakerAPIsEnabled: sinon.stub(),
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),
-    getSelectedSong: sinon.stub()
+    getSelectedSong: sinon.stub(),
+    prepareForRemix: sinon.stub().returns(Promise.resolve()),
   };
 }
