@@ -171,11 +171,11 @@ hi:
           TYPE:
             "'sand'": रेत
             "'planksOak'": शाहबलूत के तख्ते
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": रेत
       craft_moveForward:
         text: आगे जाएं
       craft_placeTorch:
         text: टॉर्च रखें
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': murghi
