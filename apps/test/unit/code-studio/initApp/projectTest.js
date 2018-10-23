@@ -7,6 +7,22 @@ import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
 
 describe('project.js', () => {
+  let sourceHandler;
+
+  beforeEach(() => {
+    sourceHandler = createStubSourceHandler();
+    replaceAppOptions();
+    sinon.stub(utils, 'reload');
+    sinon.stub(header, 'showMinimalProjectHeader');
+    sinon.stub(header, 'updateTimestamp');
+  });
+
+  afterEach(() => {
+    utils.reload.restore();
+    header.showMinimalProjectHeader.restore();
+    header.updateTimestamp.restore();
+    restoreAppOptions();
+  });
 
   describe('project.getProjectUrl', function () {
 
@@ -53,19 +69,19 @@ describe('project.js', () => {
 
     const ORIGINS = [
       {
-        studio:'https://studio.code.org',
+        studio: 'https://studio.code.org',
         codeProjects: 'https://codeprojects.org',
       },
       {
-        studio:'https://test-studio.code.org',
+        studio: 'https://test-studio.code.org',
         codeProjects: 'https://test.codeprojects.org',
       },
       {
-        studio:'https://staging-studio.code.org',
+        studio: 'https://staging-studio.code.org',
         codeProjects: 'https://staging.codeprojects.org',
       },
       {
-        studio:'http://localhost-studio.code.org:3000',
+        studio: 'http://localhost-studio.code.org:3000',
         codeProjects: 'http://localhost.codeprojects.org:3000',
       },
     ];
@@ -143,16 +159,7 @@ describe('project.js', () => {
   });
 
   describe('toggleMakerEnabled()', () => {
-    let sourceHandler;
-
     beforeEach(() => {
-      sourceHandler = createStubSourceHandler();
-      replaceOnWindow('appOptions', {
-        level: {
-          isProjectLevel: true,
-        },
-      });
-      sinon.stub(utils, 'reload');
       sinon.stub(project, 'saveSourceAndHtml_').callsFake((source, callback) => {
         callback();
       });
@@ -160,8 +167,6 @@ describe('project.js', () => {
 
     afterEach(() => {
       project.saveSourceAndHtml_.restore();
-      utils.reload.restore();
-      restoreOnWindow('appOptions');
     });
 
     it('performs a save with maker enabled if it was disabled', () => {
@@ -192,155 +197,141 @@ describe('project.js', () => {
   });
 
   describe('selectedSong()', () => {
-    let sourceHandler;
-
     beforeEach(() => {
-      sourceHandler = createStubSourceHandler();
-      replaceOnWindow('appOptions', {
-        level: {
-          isProjectLevel: true,
-        },
-      });
-    });
-
-    afterEach(() => {
-      restoreOnWindow('appOptions');
+      project.init(sourceHandler);
     });
 
     it('saves selected song', () => {
-      project.init(sourceHandler);
       return project.saveSelectedSong('peas').then(() => {
         expect(sourceHandler.setSelectedSong).to.have.been.called;
       });
     });
   });
+
+  describe('copy() (client-side remix)', () => {
+    let server;
+
+    beforeEach(() => {
+      sinon.stub(project, 'getStandaloneApp').returns('artist');
+      server = sinon.createFakeServer({autoRespond: true});
+      project.init(sourceHandler);
+    });
+
+    afterEach(() => {
+      server.restore();
+      project.getStandaloneApp.restore();
+    });
+
+    it('performs a client-side remix', async () => {
+      stubPostChannels(server);
+      stubPutMainJson(server);
+      await project.copy('Remixed project');
+    });
+
+    it('does not pass currentVersion and replace params on remix', async () => {
+      stubPostChannels(server);
+      stubPutMainJson(server);
+      project.__TestInterface.setCurrentSourceVersionId('fakeid');
+      await project.copy('Remixed project');
+      expect(server.requests[1].url).to.match(/main.json/);
+      expect(server.requests[1].url).not.to.match(/currentVersion=/);
+      expect(server.requests[1].url).not.to.match(/replace=(true|false)/);
+    });
+  });
+
+  describe('project.saveThumbnail', () => {
+    const STUB_CHANNEL_ID = 'STUB-CHANNEL-ID';
+    const STUB_BLOB = 'stub-binary-data';
+
+    beforeEach(() => {
+      sinon.stub(filesApi, 'putFile');
+
+      const projectData = {
+        id: STUB_CHANNEL_ID,
+        isOwner: true
+      };
+      project.updateCurrentData_(null, projectData);
+    });
+
+    afterEach(() => {
+      project.updateCurrentData_(null, undefined);
+
+      filesApi.putFile.restore();
+    });
+
+    it('calls filesApi.putFile with correct parameters', () => {
+      project.saveThumbnail(STUB_BLOB);
+
+      expect(filesApi.putFile).to.have.been.calledOnce;
+      const call = filesApi.putFile.getCall(0);
+      expect(call.args[0]).to.equal('.metadata/thumbnail.png');
+      expect(call.args[1]).to.equal(STUB_BLOB);
+    });
+
+    it('succeeds if filesApi.putFile succeeds', done => {
+      filesApi.putFile.callsFake((path, blob, success, error) => success());
+
+      project.saveThumbnail(STUB_BLOB).then(done);
+    });
+
+    it('fails if project is not initialized', done => {
+      project.__TestInterface.setCurrentData(undefined);
+
+      const promise = project.saveThumbnail(STUB_BLOB);
+      promise.catch(e => {
+        expect(e).to.contain('Project not initialized');
+        expect(filesApi.putFile).not.to.have.been.called;
+        done();
+      });
+    });
+
+    it('fails if project is not owned by the current user', done => {
+      project.__TestInterface.setCurrentData({});
+
+      project.saveThumbnail(STUB_BLOB).catch(e => {
+        expect(e).to.contain('Project not owned by current user');
+        expect(filesApi.putFile).not.to.have.been.called;
+        done();
+      });
+    });
+
+    it('fails if filesApi.putFile fails', done => {
+      filesApi.putFile.callsFake((path, blob, success, error) => error('foo'));
+
+      project.saveThumbnail(STUB_BLOB).catch(e => {
+        expect(e).to.contain('foo');
+        done();
+      });
+    });
+  });
 });
 
-describe('project.saveThumbnail', () => {
-  const STUB_CHANNEL_ID = 'STUB-CHANNEL-ID';
-  const STUB_BLOB = 'stub-binary-data';
-
-  beforeEach(() => {
-    sinon.stub(header, 'updateTimestamp');
-    sinon.stub(filesApi, 'putFile');
-
-    const projectData = {
-      id: STUB_CHANNEL_ID,
-      isOwner: true
-    };
-    project.updateCurrentData_(null, projectData);
+function replaceAppOptions() {
+  replaceOnWindow('appOptions', {
+    level: {
+      isProjectLevel: true,
+    },
   });
+}
 
-  afterEach(() => {
-    project.updateCurrentData_(null, undefined);
-
-    filesApi.putFile.restore();
-    header.updateTimestamp.restore();
-  });
-
-  it('calls filesApi.putFile with correct parameters', () => {
-    project.saveThumbnail(STUB_BLOB);
-
-    expect(filesApi.putFile).to.have.been.calledOnce;
-    const call = filesApi.putFile.getCall(0);
-    expect(call.args[0]).to.equal('.metadata/thumbnail.png');
-    expect(call.args[1]).to.equal(STUB_BLOB);
-  });
-
-  it('succeeds if filesApi.putFile succeeds', done => {
-    filesApi.putFile.callsFake((path, blob, success, error) => success());
-
-    project.saveThumbnail(STUB_BLOB).then(done);
-  });
-
-  it('fails if project is not initialized', done => {
-    project.__TestInterface.setCurrentData(undefined);
-
-    const promise = project.saveThumbnail(STUB_BLOB);
-    promise.catch(e => {
-      expect(e).to.contain('Project not initialized');
-      expect(filesApi.putFile).not.to.have.been.called;
-      done();
-    });
-  });
-
-  it('fails if project is not owned by the current user', done => {
-    project.__TestInterface.setCurrentData({});
-
-    project.saveThumbnail(STUB_BLOB).catch(e => {
-      expect(e).to.contain('Project not owned by current user');
-      expect(filesApi.putFile).not.to.have.been.called;
-      done();
-    });
-  });
-
-  it('fails if filesApi.putFile fails', done => {
-    filesApi.putFile.callsFake((path, blob, success, error) => error('foo'));
-
-    project.saveThumbnail(STUB_BLOB).catch(e => {
-      expect(e).to.contain('foo');
-      done();
-    });
-  });
-});
-
-describe('project.copy (client-side remix)', () => {
-  let server, sourceHandler;
-
-  beforeEach(() => {
-    replaceOnWindow('appOptions', {
-      level: {
-        isProjectLevel: true,
-      },
-    });
-    sinon.stub(project, 'getStandaloneApp').returns('artist');
-    sinon.stub(header, 'showMinimalProjectHeader');
-    sinon.stub(header, 'updateTimestamp');
-    server = sinon.createFakeServer({autoRespond: true});
-
-    sourceHandler = createStubSourceHandler();
-    project.init(sourceHandler);
-  });
-
-  afterEach(() => {
-    server.restore();
-    header.showMinimalProjectHeader.restore();
-    header.updateTimestamp.restore();
-    project.getStandaloneApp.restore();
-    restoreOnWindow('appOptions');
-  });
-
-  it('performs a client-side remix', async () => {
-    stubPostChannels(server);
-    stubPutMainJson(server);
-    await project.copy('Remixed project');
-  });
-
-  it('does not pass currentVersion and replace params on remix', async () => {
-    stubPostChannels(server);
-    stubPutMainJson(server);
-    project.__TestInterface.setCurrentSourceVersionId('fakeid');
-    await project.copy('Remixed project');
-    expect(server.requests[1].url).to.match(/main.json/);
-    expect(server.requests[1].url).not.to.match(/currentVersion=/);
-    expect(server.requests[1].url).not.to.match(/replace=(true|false)/);
-  });
-});
+function restoreAppOptions() {
+  restoreOnWindow('appOptions');
+}
 
 function stubPostChannels(server) {
   server.respondWith('POST', /\/v3\/channels/, xhr => {
     xhr.respond(200, {
       'Content-Type': 'application/json',
     }, JSON.stringify({
-      "createdAt":"2018-10-22T21:59:43.000-07:00",
-      "updatedAt":"2018-10-22T21:59:45.000-07:00",
-      "isOwner":true,
-      "publishedAt":null,
-      "level":"/projects/artist",
-      "migratedToS3":true,
-      "name":"Remix: allthethings-artist-project-backed",
-      "id":"kmz3weHzTpZTbRWrHRzMJA",
-      "projectType":"artist"
+      "createdAt": "2018-10-22T21:59:43.000-07:00",
+      "updatedAt": "2018-10-22T21:59:45.000-07:00",
+      "isOwner": true,
+      "publishedAt": null,
+      "level": "/projects/artist",
+      "migratedToS3": true,
+      "name": "Remix: allthethings-artist-project-backed",
+      "id": "kmz3weHzTpZTbRWrHRzMJA",
+      "projectType": "artist"
     }));
   });
 }
