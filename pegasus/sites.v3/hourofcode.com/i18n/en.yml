@@ -307,15 +307,16 @@
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
-  social_og_title_hoc2018_creativity: "What will you create?"
-  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
-  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
-  social_og_description_hoc2018_dance_long: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
-  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
-  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
-  social_og_title_hoc2018_dance: "Hour of Code: Dance Party"
-  social_og_description_hoc2018_dance: "Do a little dance. Make a little code. What will you create?"
-  social_og_description_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  social_hoc2018_creativity_in_are_you: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_hoc2018_dance_party: "Hour of Code: Dance Party"
+  social_hoc2018_dance_what_create: "Do a little dance. Make a little code. What will you create?"
+  social_hoc2018_every_student: "Every student deserves the opportunity to express their creativity with computer science."
+  social_hoc2018_every_student_try_what_create: "Every student deserves the opportunity to express their creativity with computer science. Try your hand at the new tutorials. What will you create?"
+  social_hoc2018_hoc_coming_create: "The Hour of Code is coming. What will you create?"
+  social_hoc2018_hoc_here: "The Hour of Code is here!"
+  social_hoc2018_join: "Hour of Code: Join the Movement"
+  social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  social_hoc2018_what_create: "What will you create?"
 
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
