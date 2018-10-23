@@ -958,6 +958,16 @@ en:
       unique level name here:
         Question: Dotaz
         title: název
+    multi:
+      2-3 artist debug multi 1:
+        Artist Debugging Multiple Choice 1: 'Umělec: ladění - Vícenásobná volba 1'
+        What would you need to fix to make this a finished circle?: Co je potřeba opravit k dokončení kružnice?
+      2-3 bee conditionals multi 1:
+        Bee Conditionals Multiple Choice 1: 'Včela: podmínky - vícenásobná volba 1'
+      4-5 bee conditionals multi 1:
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        Bee Conditionals Multiple Choice: 'Včela: podmínky - vícenásobná volba'
 0:
 1:
   CB_Question_3:
