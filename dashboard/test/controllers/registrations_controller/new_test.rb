@@ -10,13 +10,22 @@ module RegistrationsControllerTests
     #
     test 'renders old signup form in old flow' do
       SignUpTracking.stubs(:new_sign_up_experience?).returns(false)
-      PartialRegistration.stubs(:in_progress?).returns(true)
-      User.expects(:new_with_session).returns(build(:user))
+      PartialRegistration.stubs(:in_progress?).returns(false)
 
       get '/users/sign_up'
       assert_response :success
       assert_template partial: '_sign_up'
       assert_template partial: '_old_sign_up_form'
+    end
+
+    test 'renders finish signup form in old flow if partial registration is in progress' do
+      SignUpTracking.stubs(:new_sign_up_experience?).returns(false)
+      PartialRegistration.stubs(:in_progress?).returns(true)
+      User.expects(:new_with_session).returns(build(:user))
+
+      get '/users/sign_up'
+      assert_response :success
+      assert_template partial: '_finish_sign_up'
     end
 
     #
