@@ -256,11 +256,11 @@ sr:
           TYPE:
             "'sand'": песак
             "'planksOak'": храстова даска
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": песак
       craft_moveForward:
         text: помери се напред
       craft_placeTorch:
         text: постави бакљу
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': пиле
