@@ -584,15 +584,6 @@
   margin-left:5%;
 }
 
-/* Custom Headers */
-.counter-title {
-  text-align: center;
-}
-
-.counter-title a {
-  color: #00adbc;
-}
-
 #signup-closed {
   font-weight: 900;
   margin-bottom: 25px;
