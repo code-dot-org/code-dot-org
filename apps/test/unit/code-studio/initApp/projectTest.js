@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
@@ -136,6 +137,171 @@ describe('project.js', () => {
     it('default case', () => {
       window.appOptions.app = 'someOtherType';
       expect(project.getNewProjectName()).to.equal(msg.defaultProjectName());
+    });
+  });
+
+  describe('getStandaloneApp()', () => {
+    it('for any level with a predefined project type', () => {
+      window.appOptions.level = {projectType: 'foobar'};
+      expect(project.getStandaloneApp()).to.equal('foobar');
+    });
+
+    it('for applab', () => {
+      window.appOptions.app = 'applab';
+      expect(project.getStandaloneApp()).to.equal('applab');
+    });
+
+    it('for calc', () => {
+      window.appOptions.app = 'calc';
+      expect(project.getStandaloneApp()).to.equal('calc');
+    });
+
+    it('for dance', () => {
+      window.appOptions.app = 'dance';
+      expect(project.getStandaloneApp()).to.equal('dance');
+    });
+
+    it('for eval', () => {
+      window.appOptions.app = 'eval';
+      expect(project.getStandaloneApp()).to.equal('eval');
+    });
+
+    it('for flappy', () => {
+      window.appOptions.app = 'flappy';
+      expect(project.getStandaloneApp()).to.equal('flappy');
+    });
+
+    it('for scratch', () => {
+      window.appOptions.app = 'scratch';
+      expect(project.getStandaloneApp()).to.equal('scratch');
+    });
+
+    it('for weblab', () => {
+      window.appOptions.app = 'weblab';
+      expect(project.getStandaloneApp()).to.equal('weblab');
+    });
+
+    it('for gamelab', () => {
+      window.appOptions.app = 'gamelab';
+      window.appOptions.droplet = true;
+      expect(project.getStandaloneApp()).to.equal('gamelab');
+    });
+
+    it('for spritelab', () => {
+      window.appOptions.app = 'gamelab';
+      window.appOptions.droplet = false;
+      expect(project.getStandaloneApp()).to.equal('spritelab');
+    });
+
+    it('for artist', () => {
+      window.appOptions.app = 'turtle';
+      expect(project.getStandaloneApp()).to.equal('artist');
+    });
+
+    it('for artist_k1', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.level = {isK1: true};
+      expect(project.getStandaloneApp()).to.equal('artist_k1');
+    });
+
+    it('for frozen', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.skinId = _.sample(['anna', 'elsa']);
+      expect(project.getStandaloneApp()).to.equal('frozen');
+    });
+
+    it('for minecraft_adventurer', () => {
+      window.appOptions.app = 'craft';
+      expect(project.getStandaloneApp()).to.equal('minecraft_adventurer');
+    });
+
+    it('for minecraft_hero', () => {
+      window.appOptions.app = 'craft';
+      window.appOptions.level = {isAgentLevel: true};
+      expect(project.getStandaloneApp()).to.equal('minecraft_hero');
+    });
+
+    it('for minecraft_designer', () => {
+      window.appOptions.app = 'craft';
+      window.appOptions.level = {isEventLevel: true};
+      expect(project.getStandaloneApp()).to.equal('minecraft_designer');
+    });
+
+    it('for minecraft_codebuilder', () => {
+      window.appOptions.app = 'craft';
+      window.appOptions.level = {isConnectionLevel: true};
+      expect(project.getStandaloneApp()).to.equal('minecraft_codebuilder');
+    });
+
+    it('for playlab', () => {
+      window.appOptions.app = 'studio';
+      expect(project.getStandaloneApp()).to.equal('playlab');
+    });
+
+    it('for playlab_k1', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.level = {isK1: true};
+      expect(project.getStandaloneApp()).to.equal('playlab_k1');
+    });
+
+    it('for algebra_game', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.level = {useContractEditor: true};
+      expect(project.getStandaloneApp()).to.equal('algebra_game');
+    });
+
+    it('for starwars', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'hoc2015';
+      window.appOptions.droplet = true;
+      expect(project.getStandaloneApp()).to.equal('starwars');
+    });
+
+    it('for starwarsblocks_hour', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'hoc2015';
+      window.appOptions.droplet = false;
+      expect(project.getStandaloneApp()).to.equal('starwarsblocks_hour');
+    });
+
+    it('for iceage', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'iceage';
+      expect(project.getStandaloneApp()).to.equal('iceage');
+    });
+
+    it('for infinity', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'infinity';
+      expect(project.getStandaloneApp()).to.equal('infinity');
+    });
+
+    it('for gumball', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'gumball';
+      expect(project.getStandaloneApp()).to.equal('gumball');
+    });
+
+    it('for bounce', () => {
+      window.appOptions.app = 'bounce';
+      expect(project.getStandaloneApp()).to.equal('bounce');
+    });
+
+    it('for sports', () => {
+      window.appOptions.app = 'bounce';
+      window.appOptions.skinId = 'sports';
+      expect(project.getStandaloneApp()).to.equal('sports');
+    });
+
+    it('for basketball', () => {
+      window.appOptions.app = 'bounce';
+      window.appOptions.skinId = 'basketball';
+      expect(project.getStandaloneApp()).to.equal('basketball');
+    });
+
+    it('default case', () => {
+      window.appOptions.app = 'someothertype';
+      expect(project.getStandaloneApp()).to.be.null;
     });
   });
 
