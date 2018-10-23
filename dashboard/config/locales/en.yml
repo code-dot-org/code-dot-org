@@ -294,7 +294,7 @@ en:
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
       free_play:
         playlab: 'Make a Play Lab app'
