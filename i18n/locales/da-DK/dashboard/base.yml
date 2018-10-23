@@ -75,6 +75,7 @@ da:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
+    microsoft_v2_auth: 'Microsoft-konto'
     forgot_password: 'Glemt din adgangskode?'
     need_confirmation: "Har du ikke modtaget bekræftelsesinstruktioner?"
     need_unlock: "Ikke modtaget lås op instruktioner?"
@@ -91,7 +92,6 @@ da:
     age: 'Alder'
     user_type: 'Er du elev eller lærer?'
     submit: 'Tilmeld'
-    next: 'Næste'
     teacher: 'Er du lærer?'
     valid_username: "Tilgængelig!"
     invalid_username: "Brugernavn skal være mindst 5 tegn"
