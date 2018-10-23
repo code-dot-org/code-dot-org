@@ -1076,6 +1076,7 @@
   header_about: "Info"
   header_documentation: "Dokumentatsioon"
   user_header_label: "Tere, %{username}"
+  user_header_team: "Võistkond"
   user_header_settings: "Minu konto"
   user_header_logout: "Logi välja"
   user_header_signin: "Logi sisse"

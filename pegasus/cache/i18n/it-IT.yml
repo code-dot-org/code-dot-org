@@ -1,4 +1,5 @@
-"it-IT":
+---
+it-IT:
   hour_of_code: Ora del codice
   hello: Ciao a tutti
   'yes': Sì
@@ -562,10 +563,14 @@
   minecraft_download_adventurer: Scarica la versione da usare <i>in locale</i> di
     "Un avventura con Minecraft".
   minecraft_subtitle: L'Ora del Codice con Minecraft
+  minecraft_store_camps: Campi gratuiti per Ora di Codice Minecraft al Microsoft Store
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
   minecraft_leader_guide: Scarica le risorse per aiutarti a pianificare ed organizzare
     un evento.
   minecraft_future: Aiuta tutti i giovani a prepararsi al futuro
+  minecraft_og_designer: Minecraft è tornato con una nuova attività per l'Ora del
+    Codice. Programma animali ed altre creature del mondo di Minecraft nella tua personale
+    versione di Minecraft.
   minecraft_og_agent: Minecraft è tornato per l'Ora del Codice e tu sei l'eroe! Programma
     il tuo viaggio attraverso le creature di Minecraft.
   sports_page_title: L'Ora del Codice con gli sport
@@ -751,6 +756,9 @@
   volunteer_engineer_submission_type_task_mentor: Sto cercando un mentore che mi aiuti
     a prepararmi per poter scrivere il codice con i miei studenti
   petition_age: Età
+  dashboard_announce_hoc_scaling_progress: Accidenti! L'Ora del Codice ha un traffico
+    molto elevato. Purtroppo non siamo in grado di salvare i tuoi progressi di questa
+    settimana, ma quelli delle settimane precedenti sono ancora disponibili.
   dashboard_announce_learn_more_button: Ulteriori informazioni
   dashboard_landing_title: Cruscotto di Controllo dell'insegnante
   dashboard_landing_welcome: Benvenuti al nuovo cruscotto di controllo dell'insegnante.
@@ -1167,6 +1175,8 @@
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   beyond_submission: Desideri inviarci un corso da svolgere "Dopo l'Ora del Codice"?
     Leggi i criteri e il modulo di invio.
+  third_party_submission: Vuoi inviarci un tutorial da pubblicare qui? <a href="%{submission_url}">Vedi
+    i criteri e invio modulo.</a>
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
   teachers_notes_hoc: 'Insegnanti: leggete qui gli avvisi per gli educatori'
@@ -1275,7 +1285,10 @@
   csppostap-2018_name: 'Messaggio AP: Database in Apps'
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
+  csp3-a_name: 'Unità 3: Introduzione alla programmazione (versione A)'
+  csp3-research-mxghyt_name: 'Unità 3: Introduzione alla programmazione (Obiettivi)'
   csppostap_name: 'Messaggio AP: Database in Apps'
+  csp-post-survey_name: Sondaggio per studenti che hanno partecipato al corso
   cspassessment_name: Test completo - 50 domande
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
@@ -1526,6 +1539,12 @@
     più grandi.)
   coursec_shortdescription_congrats: Impara le basi dell'informatica e dai vita a
     creazioni artistiche, storie animate o giochi interattivi.
+  coursed_shortdescription_congrats: Vengono spiegati brevemente i concetti del corso
+    C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
+  coursee_shortdescription_congrats: Vengono spiegati brevemente i concetti dei corsi
+    C e D e poi viene aggiunto il concetto di funzione.
+  coursef_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
+    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
   coursea-2017_shortdescription_congrats: Un'introduzione all'informatica per bambini
     che non leggono ancora.
   courseb-2017_shortdescription_congrats: Introduzione all'informatica per alunni
@@ -1533,6 +1552,12 @@
     bambini leggermente più grandi.)
   coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e dai vita
     a creazioni artistiche, storie animate o giochi interattivi.
+  coursed-2017_shortdescription_congrats: Vengono spiegati brevemente i concetti del
+    corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
+  coursee-2017_shortdescription_congrats: Vengono spiegati brevemente i concetti dei
+    corsi C e D e poi viene aggiunto il concetto di funzione.
+  coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
+    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
   coursea-2018_shortdescription_congrats: Un'introduzione all'informatica per bambini
     che non leggono ancora.
   courseb-2018_shortdescription_congrats: Introduzione all'informatica per alunni
@@ -1540,6 +1565,12 @@
     bambini leggermente più grandi.)
   coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e dai vita
     a creazioni artistiche, storie animate o giochi interattivi.
+  coursed-2018_shortdescription_congrats: Vengono spiegati brevemente i concetti del
+    corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
+  coursee-2018_shortdescription_congrats: Vengono spiegati brevemente i concetti dei
+    corsi C e D e poi viene aggiunto il concetto di funzione.
+  coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di Fondamenti
+    di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -2100,6 +2131,7 @@
   csp_name: CS Principles
   full_course_category_name: Corsi Avanzati
   user_header_label: Ciao %{username}
+  user_header_team: Squadra
   user_header_settings: Il mio account
   user_header_logout: Esci
   user_header_signin: Accedi
@@ -2111,6 +2143,7 @@
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Guarda tutti i progetti...
+  user_header_view_project_gallery: Visualizza galleria progetti
   user_header_view_my_projects: Guarda la Collezione Privata
   view_all_sections: Mostra tutte le classi
   view_section: Mostra Classe
@@ -2135,6 +2168,11 @@
   login_cards: Schede di accesso
   print_login_cards: Stampa le schede di accesso
   joining_section: Iscrizione alla tua classe (una tantum)
+  joining_section_instruct_website: 'Crea un account su Code.org se non ne hanno già
+    uno. Lo possono fare su https://studio.code.org/users/sign_up. Nota: lo possono
+    anche fare con un indirizzo email ed una password o tramite Google, Facebook o
+    Microsoft premendo su uno di questi pulsanti:'
+  joining_section_instruct_account: Accedere al loro account Code.org.
   joining_section_instruct_code: 'Accedere alla pagina %{code_org_url} ed inserire
     il codice classe: %{section_code}.'
   joining_section_instruct_button: Alla pressione del pulsante “Go”, loro dovrebbero
@@ -2148,186 +2186,24 @@
     la password accedendo alla scheda "Gestisci gli studenti" per la classe, e cliccare
     sul pulsante "Reimposta la password" sotto la colonna "Password".
   syncing_students: Sincronizzazione studenti
+  google_sign_in_instruct: 'Da li'', possono scegliere l''opzione "Accedi con account
+    di Google":'
   hero_name: 'Minecraft: Il viaggio dell''eroe'
   applab-intro_name: Introduzione a Sviluppo App
+  creativity: creatività
   creativity_create: Crea
+  creativity_hoc_coming: L'Ora del Codice è in arrivo…
+  creativity_what_will_you_create: Tu cosa creerai?
+  creativity_homepage: Apri le ali della tua immaginazione e dai vita all'innovazione.
+    Inizia con un'Ora del Codice e il tuo personale tocco di creatività, qualunque
+    esso sia. Guarda il nostro video.
+  creativity_hoc_about: 'Quest''anno il tema dell''Ora del Codice è la creatività. '
+  creativity_social_media: Quest'anno il tema dell'Ora del Codice è la creatività.
+    Tu cosa creerai?
+  creativity_social_media_2: Quest'anno il tema dell'Ora del Codice è la creatività.
+    Tu cosa creerai?
+  creativity_courses: Progredisci con i corsi di Code.org
+  creativity_courses_link: Progredisci con i <a href="https://studio.code.org/courses">corsi
+    di Code.org</a>
   account_sign_up_email_opt_in: Possiamo inviarti email sulle novità dei nostri corsi
     o su altre notizie legate all'informatica?
-  ! '': 
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
-    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
-    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
-    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
-    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
-    from the Minecraft team. Get a head start on thinking through what you need to
-    bring Hour of Code to young people during Computer Science Education week (December
-    4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
-    target='_blank'>Sign up today</a>.
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
-    target='_blank'>access the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csp-post-survey_name: Student Post-Course Survey
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: CS Discoveries ('17-'18)
-  csd_2018_category_name: CS Discoveries ('18-'19)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
-    further with algorithms, nested loops, conditionals, and more.
-  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
-    go further with functions.
-  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
-    and create your own art, story or game.
-  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
-    go further with algorithms, nested loops, conditionals, and more.
-  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
-    then go further with functions.
-  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
-    Fundamentals and create your own art, story or game.
-  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
-    go further with algorithms, nested loops, conditionals, and more.
-  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
-    then go further with functions.
-  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
-    Fundamentals and create your own art, story or game.
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  user_header_team: Team
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_project_gallery: View project gallery
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_hoc_coming: The Hour of Code is coming…
-  creativity_what_will_you_create: What will you create?
-  creativity_homepage: Give flight to imagination and birth to innovation. Start with
-    an Hour of Code and your own brand of creativity, whatever it may be. Watch our
-    video.
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will
-    you create?'
-  creativity_courses: Go further with Code.org courses
-  creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.

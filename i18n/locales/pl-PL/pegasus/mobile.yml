@@ -1408,6 +1408,7 @@
   csp_name: "Podstawy Informatyki '16-'17"
   full_course_category_name: "Pełne Kursy"
   user_header_label: "Witaj %{username}"
+  user_header_team: "Zespół"
   user_header_settings: "Moje konto"
   user_header_logout: "Wyloguj się"
   user_header_signin: "Zaloguj się"
@@ -1445,4 +1446,5 @@
   google_sign_in_instruct: 'Z tamtego miejsca powinni wybrać opcję &ldquor;Zaloguj się używając konta Google&rdquo;:'
   hero_name: 'Minecraft: Podróż Bohatera'
   creativity_create: "Utwórz"
+  creativity_hoc_coming: "Zbliża się Godzina Kodowania…"
   account_sign_up_email_opt_in: "Czy wyrażasz zgodę na otrzymywanie od nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi ofertami oraz innymi nowościami informatycznymi?"
