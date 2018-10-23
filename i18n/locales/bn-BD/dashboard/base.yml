@@ -65,6 +65,7 @@ bn:
     twitter: 'টুইটার'
     facebook: 'ফেইসবুক'
     windowslive: 'মাইক্রোসফট অ্যাকাউন্ট'
+    microsoft_v2_auth: 'মাইক্রোসফট অ্যাকাউন্ট'
     forgot_password: 'আপনার পাসওয়ার্ড ভুলে গেছেন?'
     need_confirmation: "নিশ্চিতকরণ নির্দেশনা পাওনি?"
     need_unlock: "আনলক করার নির্দেশাবলী পাওনি?"
@@ -80,7 +81,6 @@ bn:
     age: 'বয়স'
     user_type: 'আপনি কি একজন ছাত্র বা শিক্ষক?'
     submit: 'সাইন আপ'
-    next: 'পরবর্তী'
     teacher: 'আপনি কি শিক্ষক?'
     valid_username: "লভ্য!"
     invalid_username: "ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে"
