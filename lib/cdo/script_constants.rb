@@ -48,7 +48,7 @@ module ScriptConstants
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
-      # you must also update the Data_HocTutorials gsheet so the end of script API works
+      # you must also update the cdo-tutorials gsheet so the end of script API works
 
       nil,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
