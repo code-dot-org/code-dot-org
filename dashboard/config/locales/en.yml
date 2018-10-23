@@ -614,6 +614,8 @@ en:
       body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
       audience: 'Ages 13+'
       cta: 'Learn how'
+    dance:
+      title: 'Dance Party'
     hoc:
       title: 'Classic Maze'
       body: 'Try the basics of computer science. Millions have given it a shot.'
