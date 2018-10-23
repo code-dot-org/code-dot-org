@@ -8,6 +8,7 @@ export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
     includeDanceParty: PropTypes.bool,
+    includeMCAquatic: PropTypes.bool
   };
 
   render() {
@@ -22,6 +23,7 @@ export default class ProjectHeader extends React.Component {
           canViewFullList
           canViewAdvancedTools={this.props.canViewAdvancedTools}
           includeDanceParty={this.props.includeDanceParty}
+          includeMCAquatic={this.props.includeMCAquatic}
         />
       </div>
     );

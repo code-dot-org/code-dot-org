@@ -59,6 +59,10 @@ const PROJECT_INFO = {
     label: i18n.projectTypeMinecraftHero(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft_hero_square.jpg"
   },
+  'minecraft_aquatic': {
+    label: i18n.projectTypeMinecraftAquatic(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft_aquatic_square.jpg"
+  },
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
