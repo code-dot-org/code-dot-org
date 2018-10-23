@@ -187,13 +187,6 @@ kk:
         applab: 'Қосымша бағдарлама жасау'
       project_gallery: "Жобалар"
       educate_hoc: "Код жазу Сағаты"
-    create_button:
-      create: 'Құру'
-      applab: 'Қосымшалар Лабораториясы'
-      artist: 'Кейіпкер'
-      playlab: 'Ойындар Лабораториясы'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Оқытушының жеке парақшасы'
       district_dashboard: 'Ақпарат панелі'
@@ -206,6 +199,12 @@ kk:
       already_registered: 'Тіркелгенсіз бе?'
       team: 'Топ'
       navigator: 'Навигатор'
+      create: 'Құру'
+      applab: 'Қосымшалар Лабораториясы'
+      artist: 'Кейіпкер'
+      playlab: 'Ойындар Лабораториясы'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: 'Сіздің сабақ оқу барысыңыз'

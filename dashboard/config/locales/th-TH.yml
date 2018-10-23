@@ -225,11 +225,6 @@ th:
       educate_hoc: ช่วงเวลาของ Code
       stats: สถิติ
       help_us: ช่วยเรา
-    create_button:
-      create: สร้าง
-      applab: แอ๊ปแล็บ
-      artist: ศิลปิน
-      gamelab: เกมแล๊ป (Game Lab)
     user:
       classroom: หน้าแรกของคุณครู
       label: สวัสดี %{username}
@@ -239,6 +234,10 @@ th:
       signin: เข้าสู่ระบบ
       already_registered: ลงทะเบียนแล้วหรือยัง?
       team: ทีม
+      create: สร้าง
+      applab: แอ๊ปแล็บ
+      artist: ศิลปิน
+      gamelab: เกมแล๊ป (Game Lab)
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ

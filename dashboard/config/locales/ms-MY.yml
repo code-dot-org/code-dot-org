@@ -165,9 +165,6 @@ ms:
       finished_hoc: Saya telah menyelesaikan Hour of Code saya
       sign_in_to_save: Daftar Masuk untuk menyimpan kemajuan
       educate_hoc: Hour of Code
-    create_button:
-      create: Buat
-      flappy: Flappy
     user:
       classroom: Laman Utama Guru
       label: Hi %{username}
@@ -175,6 +172,8 @@ ms:
       settings: Akaun saya
       logout: Daftar keluar
       signin: Log masuk
+      create: Buat
+      flappy: Flappy
     popup:
       progress: Kemajuan anda
       lines: 'Total baris kod: %{lines}'

@@ -344,14 +344,6 @@
       help_us: Hjelp oss
       teach: Undervis
       about: Om
-    create_button:
-      create: Opprett
-      applab: App Lab
-      artist: Kunstner
-      gamelab: Spill-lab
-      playlab: Spill-lab
-      minecraft: Minecraft
-      flappy: Flakse
     user:
       classroom: Hjemmeside for lærere
       district_dashboard: Distrikt skrivebord
@@ -365,6 +357,13 @@
       team: Team
       driver: Logget inn som
       navigator: Kartleser
+      create: Opprett
+      applab: App Lab
+      artist: Kunstner
+      gamelab: Spill-lab
+      playlab: Spill-lab
+      minecraft: Minecraft
+      flappy: Flakse
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift

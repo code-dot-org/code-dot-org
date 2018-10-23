@@ -192,13 +192,6 @@ hy:
       project_gallery: ծրագրեր
       educate_hoc: Կոդի ժամ
       stats: Վիճակագրություն
-    create_button:
-      create: Ստեղծել
-      applab: App Lab
-      artist: Արտիստ
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Ուսուցչի գլխավոր էջը
       district_dashboard: District Dashboard
@@ -208,6 +201,12 @@ hy:
       logout: Դուրս գալ
       signin: Մուտք գործել
       already_registered: Արդեն գրանցված եք
+      create: Ստեղծել
+      applab: App Lab
+      artist: Արտիստ
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: Ձեր առաջընթացը

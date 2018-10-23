@@ -1241,3 +1241,8 @@
   user_header_settings: "Ο λογαριασμός μου"
   user_header_logout: "Αποσύνδεση"
   user_header_signin: "Σύνδεση"
+  user_header_gamelab: "Game Lab"
+  user_header_playlab: "Εργαστήριο Παιχνιδιού"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Πουλάκι"
+  creativity_create: "Δημιουργία"

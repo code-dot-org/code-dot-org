@@ -346,14 +346,6 @@ fil:
       help_us: Tulungan Kami
       teach: Magturo
       about: Tungkol
-    create_button:
-      create: I-create
-      applab: App na Lab
-      artist: Artista
-      gamelab: Game Lab
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Home Page ng Teacher
       district_dashboard: Dashboard ng Distrito
@@ -367,6 +359,13 @@ fil:
       team: Koponan
       driver: Maglog-in
       navigator: Kasama
+      create: I-create
+      applab: App na Lab
+      artist: Artista
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Progreso ni %{name}
       progress: Progreso mo

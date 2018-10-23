@@ -172,7 +172,7 @@ hi:
     created: "%{model} सफलतापूर्वक बनाया गया"
     destroyed: "%{model} सफलतापूर्वक हटा दिया गया था।"
   nav:
-    create_button:
+    user:
       create: बनाए
   teacher:
     panel:

@@ -16,10 +16,26 @@ zh-CN:
             '"saturation"': 饱和度
             '"brightness"': 亮度
       Dancelab_changeMoveEachLR:
+        text: '在 GROUP[0] 中，进行 循环查找   {MOVE} {DIR} '
         options:
           GROUP:
             sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有 玩具熊
+            '"CAT"': 所有 猫
+            '"DOG"': 所有 狗
+            '"DUCK"': 所有 鸭子
+            '"FROG"': 所有 青蛙
+            '"MOOSE"': 所有老鼠
+            '"PINEAPPLE"': 所有 菠萝
+            '"ROBOT"': 所遇机器人
+            '"SHARK"': 所有鲨鱼
           MOVE:
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 小丑
+            MOVES.Fresh: 新鲜
+            '"next"': 下一步
+            '"prev"': 前一步
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -28,6 +44,11 @@ zh-CN:
       Dancelab_changeMoveLR:
         options:
           MOVE:
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 小丑
+            MOVES.Fresh: 新鲜
+            '"next"': 下一步
+            '"prev"': 前一步
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -45,7 +66,22 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有 玩具熊
+            '"CAT"': 所有 猫
+            '"DOG"': 所有 狗
+            '"DUCK"': 所有 鸭子
+            '"FROG"': 所有 青蛙
+            '"MOOSE"': 所有老鼠
+            '"PINEAPPLE"': 所有 菠萝
+            '"ROBOT"': 所遇机器人
+            '"SHARK"': 所有鲨鱼
           MOVE:
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 小丑
+            MOVES.Fresh: 新鲜
+            '"next"': 下一步
+            '"prev"': 前一步
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -54,6 +90,11 @@ zh-CN:
       Dancelab_doMoveLR:
         options:
           MOVE:
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 小丑
+            MOVES.Fresh: 新鲜
+            '"next"': 下一步
+            '"prev"': 前一步
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -104,13 +145,13 @@ zh-CN:
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
+            '0': 用力鼓掌
+            '1': 小丑
             '2': Dab
             '3': Double Jam
             '4': Drop
             '5': Floss
-            '6': Fresh
+            '6': 新鲜
             '7': Kick
             '8': 没有
             '9': Roll
@@ -120,6 +161,8 @@ zh-CN:
         text: "{SPRITE} 跳到 {LOCATION}"
         options:
           LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
             "{x: 100, y: 200}": 向左
             "{x: 300, y: 200}": 向右
             "{x: 200, y: 200}": 中央
@@ -133,14 +176,37 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有 玩具熊
+            '"CAT"': 所有 猫
+            '"DOG"': 所有 狗
+            '"DUCK"': 所有 鸭子
+            '"FROG"': 所有 青蛙
+            '"MOOSE"': 所有老鼠
+            '"PINEAPPLE"': 所有 菠萝
+            '"ROBOT"': 所遇机器人
+            '"SHARK"': 所有鲨鱼
           FORMAT:
             '"grid"': 网格
             '"row"': 行
             '"column"': 列
+            '"random"': 随机
       Dancelab_makeNewDanceSprite:
         text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME}
         options:
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"BEAR"': 玩具熊
+            '"CAT"': 猫
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 老鼠
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
           LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
             "{x: 100, y: 200}": 向左
             "{x: 300, y: 200}": 向右
             "{x: 200, y: 200}": 中央
@@ -149,6 +215,27 @@ zh-CN:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"MOOSE"': 老鼠
+            '"UNICORN"': 独角兽
+          LAYOUT:
+            '"grid"': 网格
+            '"row"': 行
+            '"column"': 列
+            '"random"': 随机
       Dancelab_mixColors:
         text: 混合 {COLOR1} 和 {COLOR2}
       Dancelab_nMeasures:
@@ -190,6 +277,26 @@ zh-CN:
       Dancelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"tint"': 色调
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 所有外星人
+            '"BEAR"': 所有 玩具熊
+            '"CAT"': 所有 猫
+            '"DOG"': 所有 狗
+            '"DUCK"': 所有 鸭子
+            '"FROG"': 所有 青蛙
+            '"MOOSE"': 所有老鼠
+            '"PINEAPPLE"': 所有 菠萝
+            '"ROBOT"': 所遇机器人
+            '"SHARK"': 所有鲨鱼
           PROPERTY:
             '"scale"': 大小
             '"width"': 宽度
@@ -648,6 +755,8 @@ zh-CN:
         text: "制作一个新的精灵 \n 叫做 {COSTUME} \n 服装为 {NAME} \n 位于 {LOCATION}"
         options:
           LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
             "{x: 100, y: 200}": 向左
             "{x: 300, y: 200}": 向右
             "{x: 200, y: 200}": 中央
@@ -789,3 +898,7 @@ zh-CN:
         text: 向前移动
       craft_placeTorch:
         text: 放下火把
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': 鸡
