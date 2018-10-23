@@ -1699,48 +1699,66 @@ zh-CN:
         * 请共同完成页面, 注意格式化。
         * 与另一组对比看看页面是否相同。
       CSD U2 classes modify: |2
-        <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**代码是如何起作用的？**</summary>\r
-        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\r
-        \r
-        样式表中的类是像下面的代码。\r
-        \r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
-        \r
-        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
-        </details>\r
-        <details>\r
-        <summary>**什么样的规则能够加到类的规则组里？**</summary>\r
-        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        <details>\r
-        <summary>**我的RBG值不一样，但也是对的。**</summary>\r
-        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\r
-        \r
-        </details>\r
-        </div>\r
-        # 添加规则\r
-        \r
-        冬天的词语应该用同样的颜色和字体。\r
-        \r
-        *
-        在样式表种找到给冬天的词语的样式组。\r
-        * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。\r
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        
+        <summary>
+        
+        **代码是如何起作用的？**
+        
+        </summary>
+        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。
+        
+        样式表中的类是像下面的代码。
+        
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。
+        
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。
+        </details>
+        <details>
+        <summary>
+        
+        **什么样的规则能够加到类的规则组里？**
+        
+        </summary>
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么选择器前面有个句点？**
+        
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么网页开发人员需要用类？**
+        
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        <details>
+        <summary>
+        
+        **我的RBG值不一样，但也是对的。**
+        
+        </summary>
+        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。
+        
+        </details>
+        </div>
+        # 添加规则
+        
+        冬天的词语应该用同样的颜色和字体。
+        
+        * 在样式表种找到给冬天的词语的样式组。
+        * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。
         * 为冬天词语添加任何你喜欢的规则。
       CSD U2 classes modify_2018: |2
         <div style="float: right;
@@ -1787,143 +1805,170 @@ zh-CN:
         * 在样式表种找到给冬天的词语的样式组。
         * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。
         * 为冬天词语添加任何你喜欢的规则。
-      CSD U2 classes sample: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**代码是如何起作用的？**</summary>\\r\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\\r\n\\r\n样式表中的类是像下面的代码。\\r\n\\r\n<pre>.winter {\\r\n  color: rgb(195,230,255);\\r\n}</pre>\\r\n\\r\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\\r\n\\r\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么选择器前面有个句点？**</summary>\\r\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么网页开发人员需要用类？**</summary>\\r\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\\r\n</details>\\r\n<details>\\r\n<summary>**我的RBG值不一样，但也是对的。**</summary>\\r\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\\r\n\\r\n</details>\\r\n</div>\\r\n# 类(Class)\\r\n\\r\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\\r\n\\r\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\\r\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\\r\n*\n看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \\r\n* 和伙伴讨论一下这些代码是如何起作用的。"
+      CSD U2 classes sample: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n\n**代码是如何起作用的？**\n\n</summary>\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\n\n样式表中的类是像下面的代码。\n\n<pre>.winter {\n  color: rgb(195,230,255);\n}</pre>\n\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\n\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\n</details>\n<details>\n<summary>\n\n**为什么选择器前面有个句点？**\n\n</summary>\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\n</details>\n<details>\n<summary>\n\n**为什么网页开发人员需要用类？**\n\n</summary>\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\n</details>\n<details>\n<summary>\n\n**我的RBG值不一样，但也是对的。**\n\n</summary>\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\n\n</details>\n</div>\n# 类(Class)\n\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\n\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\n* 看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \n* 和伙伴讨论一下这些代码是如何起作用的。"
       CSD U2 classes sample_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>代码是如何起作用的？</strong>\n</summary>\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\n\n样式表中的类是像下面的代码。\n\n<pre>.winter {\n  color: rgb(195,230,255);\n}</pre>\n\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\n\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\n</details>\n<details>\n<summary>\n<strong>为什么选择器前面有个句点？</strong>\n</summary>\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\n</details>\n<details>\n<summary>\n<strong>为什么网页开发人员需要用类？</strong>\n</summary>\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\n</details>\n<details>\n<summary>\n<strong>我的RBG值不一样，但也是对的。</strong>\n</summary>\n\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\n\n</details>\n</div>\n# 类(Class)\n\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\n\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\n* 看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \n* 和伙伴讨论一下这些代码是如何起作用的。"
       CSD U2 classes spring: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
-        For
-        为了让代码起作用，你需要创建一个spring（春天）的类（class），并将元素加到这个类中。r
-        \r
-        spring类已经在样式表中创建好了，但还没有任何规则。\r
-        \r
-        <pre>.spring {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。\r
-        \r
-        你还需要添加一些元素到HTML文件里的spring类中。\r
-        \r
-        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。\r
-        </details>\r
-        <details>\r
-        <summary>***什么样的规则能够加到类的规则组里？**</summary>\r
-        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        </div>\r
-        # 春天类\r
-        \r
-        现在，你的春天类已经准备好了，可以开始其它季节了。\r
-        \r
-        *
-        在样式表中，找到春天词语样式的空的规则集。\r
-        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。\r
+        markdown="1">
+        <details>
+        <summary>
+        
+        **这些代码是如何起作用的？**
+        
+        </summary>
+        为了让代码起作用，你需要创建一个spring（春天）的类（class），并将元素加到这个类中。
+        
+        spring类已经在样式表中创建好了，但还没有任何规则。
+        
+        <pre>.spring {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。
+        
+        你还需要添加一些元素到HTML文件里的spring类中。
+        
+        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。
+        </details>
+        <details>
+        <summary>
+        
+        **什么样的规则能够加到类的规则组里？**
+        
+        </summary>
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么选择器前面有个句点？**
+        
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么网页开发人员需要用类？**
+        
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        </div>
+        # 春天类
+        
+        现在，你的春天类已经准备好了，可以开始其它季节了。
+        
+        * 在样式表中，找到春天词语样式的空的规则集。
+        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。
         * 将spring类增加到HTML页面的春天元素上。
       CSD U2 classes spring_2018: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
+        markdown="1">
+        <details>
+        <summary>**这些代码是如何起作用的？**</summary>
         For
         为了让代码起作用，你需要创建一个spring（春天）的类（class），并将元素加到这个类中。r
-        \r
-        spring类已经在样式表中创建好了，但还没有任何规则。\r
-        \r
-        <pre>.spring {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。\r
-        \r
-        你还需要添加一些元素到HTML文件里的spring类中。\r
-        \r
-        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。\r
-        </details>\r
-        <details>\r
-        <summary>***什么样的规则能够加到类的规则组里？**</summary>\r
-        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        </div>\r
-        # 春天类\r
-        \r
-        现在，你的春天类已经准备好了，可以开始其它季节了。\r
-        \r
-        *
-        在样式表中，找到春天词语样式的空的规则集。\r
-        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。\r
+        
+        spring类已经在样式表中创建好了，但还没有任何规则。
+        
+        <pre>.spring {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。
+        
+        你还需要添加一些元素到HTML文件里的spring类中。
+        
+        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。
+        </details>
+        <details>
+        <summary>***什么样的规则能够加到类的规则组里？**</summary>
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。
+        </details>
+        <details>
+        <summary>**为什么选择器前面有个句点？**</summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>**为什么网页开发人员需要用类？**</summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        </div>
+        # 春天类
+        
+        现在，你的春天类已经准备好了，可以开始其它季节了。
+        
+        * 在样式表中，找到春天词语样式的空的规则集。
+        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。
         * 将spring类增加到HTML页面的春天元素上。
       CSD U2 classes summer: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**代码是如何起作用的？**</summary>\r
-        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。\r
-        \r
-        这个类需要在样式表中用下面的代码来创建。\r
-        \r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
+        markdown="1">
+        <details>
+        <summary>
+        
+        **代码是如何起作用的？**
+        
+        </summary>
+        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。
+        
+        这个类需要在样式表中用下面的代码来创建。
+        
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
         This
-        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
-        \r
-        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
-        </details>\r
-        <details>\r
-        <summary>**如何创建一个新的规则集（rule-set）？**</summary>\r
-        你能按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。\r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        选择器和颜色的值会有所不同，但形式是一样的。\r
-        \r
-        <pre>.classname {\r
-          property1: value1;\r
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。
+        
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。
+        </details>
+        <details>
+        <summary>
+        
+        **如何创建一个新的规则集（rule-set）？**
+        
+        </summary>
+        可以按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        选择器和颜色的值会有所不同，但形式是一样的。
+        
+        <pre>.classname {
+          property1: value1;
           property2:
-        value2;\r
-        }</pre>\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        </div>\r
-        # 夏天和秋天的类\r
-        \r
-        *
-        在样式表里，为"summer"（夏天）类创建一个新的规则集。\r
-        *
-        在夏天类里创建一个规则来使用夏天的RGB颜色。\r
-        *
-        将夏天类添加到HTML的夏天元素里。\r
+        value2;
+        }</pre>
+        </details>
+        <details>
+        <summary>
+        
+        **为什么选择器前面有个句点？**
+        
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么网页开发人员需要用类？**
+        
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        </div>
+        
+        # 夏天和秋天的类
+        
+        * 在样式表里，为"summer"（夏天）类创建一个新的规则集。
+        * 在夏天类里创建一个规则来使用夏天的RGB颜色。
+        * 将夏天类添加到HTML的夏天元素里。
         * 为autumn（秋天）类应用同样的步骤。
       CSD U2 classes summer_2018: |2
         <div style="float: right;
@@ -13266,6 +13311,21 @@ zh-CN:
         **挑战**：收集所有的废旧金属。
       courseB_starWars_prog9: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
       courseB_starWars_prog9_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
+      courseC19_playLab_EOC1: |-
+        你学到的大量知识太令人惊奇了！让我们一步步做个游戏。\r
+        \r
+        用工具箱里的新模块，选择一个新背景，然后捡起一个演员放到游戏中。
+      courseC19_playLab_EOC2: "用事件处理函数和动作这样的模块来让你的玩家根据键盘方向键来移动。\\r\n\\r\n让玩家到达目标来通过这关。"
+      courseC19_playLab_EOC3: |-
+        让我们添加更多的角色到你的游戏里！\r
+        \r
+        用`设置演员`模块来增加更多的角色，然后移动到目标来完成这关。
+      courseC19_playLab_EOC4: |-
+        让好几个角色动起来，是游戏的好的开始，但我们需要增加更多的东西，让它感觉起来是个真游戏。让我们添加分数！\r
+        \r
+        用`当演员碰到`这样的事件模块来改变分数。得到10分来通关。
+      courseC19_playLab_EOC5: 做的好！你有了一个游戏所有基本的部分了。现在花点时间来确保游戏会像你像的那样工作。加入一个胜利或失败的方法，然后玩到触发这些条件。
+      courseC19_playLab_EOC6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
       courseC_PlayLab_events7: |-
         `一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r
         \r
@@ -14090,7 +14150,7 @@ zh-CN:
         
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1a_2018: |-
-        *"这会非常棒！"*
+        _*"这会非常棒！"*_
         
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops2: 这一次, 使用尽可能少的模块帮助蜜蜂收集所有的花蜜。
