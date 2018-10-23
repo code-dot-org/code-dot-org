@@ -117,6 +117,10 @@ ur:
         options:
           TYPE:
             "'sand'": ریت
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ریت
       craft_moveForward:
         text: آگے چلیں
       craft_placeTorch:
