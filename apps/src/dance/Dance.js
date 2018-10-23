@@ -87,7 +87,7 @@ Dance.prototype.init = function (config) {
 
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete());
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(true));
     }
   };
 
