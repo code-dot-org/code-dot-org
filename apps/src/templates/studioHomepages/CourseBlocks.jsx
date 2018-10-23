@@ -154,7 +154,7 @@ export class CourseBlocksHoc extends Component {
   };
 
   componentDidMount() {
-    // First row
+    // First row, dynamically created based on hocLaunch value
     const tiles = this.getFirstRowTiles();
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));

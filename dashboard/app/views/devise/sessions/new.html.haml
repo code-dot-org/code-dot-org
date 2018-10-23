@@ -54,13 +54,17 @@
   .span12
     %h3= t('signin.try_heading')
 .row
-  - if ['mc', 'dance'].include? DCDO.get('hoc_launch', nil)
-    = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_AQUATIC_NAME, showState: false }
+  - if DCDO.get('hoc_launch', nil) == 'mc'
+    - course_blocks = [Script::MINECRAFT_AQUATIC_NAME, Script::STARWARS_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
+  - elsif DCDO.get('hoc_launch', nil) == 'dance'
+    - last_course = @is_english ? Script::APPLAB_INTRO : Script::HOC_NAME
+    / TODO: (madelynkasula) add dance party block
+    - course_blocks = [Script::MINECRAFT_AQUATIC_NAME, Script::STARWARS_NAME, last_course]
   - else
-    = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_HERO_NAME, showState: false }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: false }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
-  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
+    - course_blocks = [Script::MINECRAFT_HERO_NAME, Script::STARWARS_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
+
+  - course_blocks.each do |course|
+    = render partial: 'shared/course_tall_block', locals: { id: course, showState: false }
 
 
 %br/
