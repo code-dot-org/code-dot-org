@@ -87,6 +87,7 @@ ko:
     twitter: Twitter
     facebook: Facebook
     windowslive: 마이크로소프트 계정
+    microsoft_v2_auth: 마이크로소프트 계정
     clever: 영리 계정
     powerschool: 학교 계정
     forgot_password: 비밀번호를 잊으셨나요?
@@ -120,7 +121,6 @@ ko:
     age: 나이
     user_type: 학생 또는 선생님이신가요?
     submit: 가입 신청하기
-    next: 다음
     teacher: 선생님이신가요?
     valid_username: 사용 가능!
     invalid_username: 아이디는 최소 5문자 이상이어야 합니다.
