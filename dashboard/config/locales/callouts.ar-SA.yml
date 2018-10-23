@@ -65,6 +65,9 @@ ar:
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
           الثلج!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: هذه التعليمات القليلاً تقول للكمبيوتر بتشغيل جزء كبير
+          من التعليمات البرمجية مع الاسم نفسه في مساحة العمل.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: تشغيل صوت عند حدوث هذا الحدث.
       Infinity_move_directions_callout:
