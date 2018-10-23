@@ -1,5 +1,3 @@
-require 'cdo/aws/cloudfront'
-
 class HomeController < ApplicationController
   include UsersHelper
   before_action :authenticate_user!, only: :gallery_activities
@@ -88,20 +86,6 @@ class HomeController < ApplicationController
   # This static page contains the teacher announcements for US and non-US visitors.
   def teacher_announcements
     render template: 'api/teacher_announcement', layout: false
-  end
-
-  # GET /home/sign-cookies
-  def sign_cookies
-    expiration_date = Time.now + 2.hours
-    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
-
-    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
-
-    cloudfront_cookies.each do |k, v|
-      cookies[k] = v
-    end
-
-    head :ok
   end
 
   private
