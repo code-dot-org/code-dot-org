@@ -135,8 +135,6 @@ def load_configuration
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
     #raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
-    config['bundler_use_sudo'] = config['chef_managed']
-
     # test environment should use precompiled, minified, digested assets like production,
     # unless it's being used for unit tests. This logic should be kept in sync with
     # the logic for setting config.assets.* under dashboard/config/.
@@ -146,6 +144,7 @@ def load_configuration
     config.merge! global_config
     config.merge! local_config
 
+    config['bundler_use_sudo']    ||= config['chef_managed']
     config['channels_api_secret'] ||= config['poste_secret']
     config['daemon']              ||= [:development, :levelbuilder, :staging, :test].include?(rack_env) || config['name'] == 'production-daemon'
     config['cdn_enabled']         ||= config['chef_managed']
