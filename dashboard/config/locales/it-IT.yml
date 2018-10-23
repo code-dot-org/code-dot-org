@@ -37,6 +37,7 @@ it:
         age: Età
         gender: Sesso
         edit_header: Modifica i dettagli dell'account
+        finish_sign_up_header: Completa la creazione del tuo account
         error:
           future: non può essere in futuro
   hello: Ciao a tutti
@@ -98,6 +99,7 @@ it:
     twitter: Twitter
     facebook: Facebook
     windowslive: Account Microsoft
+    microsoft_v2_auth: Account Microsoft
     clever: Account Clever
     powerschool: Account Powerschool
     forgot_password: Hai dimenticato la tua password?
@@ -141,7 +143,6 @@ it:
     age: Età
     user_type: Sei uno studente o un insegnante?
     submit: Iscriviti
-    next: Seguente
     teacher: Sei un insegnante?
     valid_username: Disponibile!
     invalid_username: Il Nome utente deve essere di almeno 5 caratteri
