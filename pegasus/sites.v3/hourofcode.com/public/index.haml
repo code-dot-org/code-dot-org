@@ -86,43 +86,20 @@ social:
 
     .container
       .row
-        .col-sm-6.col-xs-12.col-md-7
-          %div{style: "height: 380px;"}
-            #leftbox
-              #leftvideo{style: "width: 100%;"}
-                = view :index_video
-                %div{style: "clear: both;"}
-              #leftbutton.visible-xs
-                -# If language Spanish or Brazilian Portuguese, show alternate
-                -# promo video for LATAM Hour of Code.
-                - if latam_language_codes.include?(@language) && show_latam_videos
-                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
-                  %img{src: "/images/play-button.png", width: "60", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
-                - else
-                  %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
-                  %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer;"}
-        .col-sm-6.col-xs-12.col-md-4
+        .col-12
           #textbacking
-            %div.front-header-banner{style: "color: white; margin-top: 0px;"}
-              %h4{style: "font-size: 21px"}
-                =hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
-              %div.students-served
-                =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-            %div.ctabuttongroup
-              %div#tryittext.ctatext
+            .front-header-banner
+              %h4
+                = hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+              .front-header-description
+                = hoc_s(:hourofcode_homepage_hoc2018_header_line1)
+                %br/
+                = hoc_s(:hourofcode_homepage_hoc2018_header_line2)
+            %br/
+            %br/
+            .ctabuttongroup
+              #tryittext.ctatext
                 = view :hoc_action_buttons, hoc_mode: hoc_mode
-
-            #remainder.hidden-xs{style: "text-align: center; margin-top: 15px;"}
-              -# If language Spanish or Brazilian Portuguese, show alternate
-              -# promo video for LATAM Hour of Code.
-              - if latam_language_codes.include?(@language) && show_latam_videos
-                %div.watch-video-small{onclick: "return startLATAMVideo();"}
-                  =hoc_s(:front_watch_regular_video)
-                  %img{src: "/images/play-button.png", width: "25", onclick: "return startLATAMVideo();", style: "cursor: pointer;"}
-              - else
-                %div.watch-video-small{onclick: "return startVideo();"}
-                  =hoc_s(:front_watch_regular_video)
-                  %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer;"}
           %br/
           %br/
 
@@ -139,13 +116,17 @@ social:
   #description.row
     .col-xs-1
       &nbsp;
-    .col-xs-10{style: "text-align: center; font-size: 24px; line-height: 30px; font-weight: 500; color: rgb(26,172,186);"}
-      =hoc_s(:front_intro_default)
+    .col-xs-10.hoc-description
+      .number-served= hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+      %br
+      = hoc_s(:front_intro_default_2)
+      = view :hoc_events_counter
+
+  %br/
+  %br/
 
   -# Map
-
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    = view :hoc_events_counter
     #maparea.full-width
       -# During pre-Hour of Code season, show the embedded gmap.
       -# All other times show a picture of the map.
