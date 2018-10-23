@@ -61,6 +61,7 @@ ms:
     twitter: Twitter
     facebook: Facebook
     windowslive: Akaun Microsoft
+    microsoft_v2_auth: Akaun Microsoft
     forgot_password: Lupa kata laluan anda?
     need_confirmation: Tidak menerima arahan pengesahan?
     need_unlock: Tidak menerima kunci arahan?
@@ -74,7 +75,6 @@ ms:
     age: Umur
     user_type: Adakah anda seorang pelajar atau guru?
     submit: Mendaftar
-    next: Seterusnya
     teacher: Adakah anda seorang guru?
     valid_username: Boleh digunakan!
     invalid_username: Nama pengguna mestilah sekurang-kurangnya 5 aksara
