@@ -55,9 +55,9 @@ sk:
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Pomocou klávesov so šípkami nasmeruj hráča do domu. Skonči na oranžovom štvorci, aby si vyhral.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok `posuň sa dopredu` do pracovného priestoru a prichyť ho na mieste pod blokom `pri spustení`.
+        MC_HOC_2017_01_RETRY_a: Z panela s nástrojmi presuň jeden blok "posuň sa dopredu" do pracovného priestoru a prichyť ho na mieste pod blokom "pri spustení".
         MC_HOC_2017_01_RETRY_b: Nezabudni kliknúť na tlačidlo "Spustiť", aby sa spustil kód pre agenta.
-        MC_HOC_2017_01_RETRY_c: Keď agent spustí všetok kód, môžeš posúvať hráča pomocou klávesov so šípkami!
+        MC_HOC_2017_01_RETRY_c: Keď agent prejde všetok svoj kód, môžeš posúvať hráča pomocou klávesov so šípkami!
       MC_HOC_2017_02_Cole_authored_hint:
         MC_HOC_2017_02_Cole_a: Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.
         MC_HOC_2017_02_Cole_b: |-
@@ -74,36 +74,36 @@ sk:
         MC_HOC_2017_02_Cole_c: Keď agent otvorí dvere, pomocou klávesov so šípkami posuň hráča na oranžové políčko.
       MC_HOC_2017_03_Cole_authored_hint:
         MC_HOC_2017_03_Cole_a: Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!
-        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus `opakuj` a uvidíš, či dokážeš zistiť, ako ho skrátiť!
+        MC_HOC_2017_03_Cole_b: Zdá sa ti kód trochu dlhý? Skús použiť cyklus "opakuj" a uvidíš, či prídeš na to, ako ho skrátiť!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Ak prejdeš po týchto dvoch prítlačných doskách, hráčovi sa sprístupní cesta. 
           
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku `otočiť doprava` zmeň smer agenta '
+        MC_HOC_2017_04POINT5_RYAN_b: 'Pomocou bloku "Otoč sa v pravo" zmeň smer agenta '
         MC_HOC_2017_04POINT5_RYAN_a: Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere.
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz `posuň sa dopredu` 7-krát. Ako môžeš použiť cyklus `opakuj`, aby sa to stalo?
+        MC_HOC_2017_04_Cole_a: Agent musí použiť príkaz "posuň sa dopredu" 7-krát. Ako môžeš použiť cyklus "opakuj", aby sa to stalo?
         MC_HOC_2017_04_Cole_c: |-
           Stlač tlačidlo "Spustiť"!
           
           Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
         MC_HOC_2017_04_Cole_b: Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** do cyklu`opakuj` umiestniť dosku, aby si dokončil tento hlavolam.
-        MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu počas chôdze.
+        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** do cyklu"opakuj" umiestniť dosku, aby si dokončil túto úlohu.
+        MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš.
       MC_HOC_2017_05_Josh_authored_hint:
-        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús do cyklu `opakuj` umiestniť dosku **a** posuň sa dopredu, aby si dokončili tento hlavolam.
+        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús do cyklu "opakuj" pridať príkazy na umiestnenie dosky a pohyb dopredu.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Koľkokrát sa tento cyklus spustí? Koľkokrát *by sa mal* spustiť?
         MC_HOC_2017_06_Cole_b: 'Pomôž agentovi postaviť most po celej šírke rieky! '
       MC_HOC_2017_06_Josh_authored_hint:
-        MC_HOC_2017_06_Cole_a: Skús vložiť do cyklu`opakuj` viac ako jeden pokyn!
+        MC_HOC_2017_06_Cole_a: Skús do cyklu"opakuj" vložiť viac ako jeden pokyn!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: Všetko, čo musíš spraviť s agentom je vyčistiť chodník k Minecart-e.
-        MC_HOC_2017_07_Cole_a: Ak chceš vyriešiť tento hlavolam, zisti, čo robí funkcia `uvoľni cestu`. Z panela s nástrojmi ju použi, koľkokrát potrebuješ, pomocou malého zeleného bloku `uvoľni cestu`.
-        MC_HOC_2017_07_Cole_b: Skús zmiešať bloky funkcie s ďalšími blokmi z panela s nástrojmi, aby si vyriešil tento hlavolam.
+        MC_HOC_2017_07_Cole_c: Všetko, čo musíš spraviť s agentom je vyčistiť chodník k banskému vozíku.
+        MC_HOC_2017_07_Cole_a: Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia "uvoľni cestu". Z panela s nástrojmi vyber malý zelený blok "uvoľni cestu" toľkokrát, koľko potrebuješ.
+        MC_HOC_2017_07_Cole_b: Skús zmiešať bloky funkcie s ďalšími blokmi z panela s nástrojmi, aby si vyriešil túto úlohu.
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Stlač tlačidlo "Spusti agenta"!
@@ -117,7 +117,7 @@ sk:
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Zjednoduš riešenie tohto hlavolamu pomocou funkcií!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Nevieš kam ísť? Pozri sa, či vidíš bodkovanú čiaru!
+        MC_HOC_2017_10_Cole_b: Nevieš kam ísť? Pohľadaj bodkovanú čiaru!
         MC_HOC_2017_10_Cole_a: Zjednoduš riešenie tohto hlavolamu pomocou funkcií!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
@@ -139,6 +139,12 @@ sk:
         double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo Steve mohli prechádzať za okrajmi mapy.
+      Overworld Powered Minecart_authored_hint:
+        mc_13_a: Použi príkaz "Polož koľajnice", ktorým uložíš koľajnice na misto, na ktorom stojíš.
+        mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
+      Overworld Powered Minecart_2018_authored_hint:
+        mc_13_a: Použi príkaz "Polož koľajnice", ktorým uložíš koľajnice na misto, na ktorom stojíš.
+        mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:

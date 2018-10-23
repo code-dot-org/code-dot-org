@@ -479,8 +479,8 @@ sk:
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
         mc:
           title: Minecraft Hodina Kódu
-          description: Použi bloky kódov aby si vzal Steva alebo Alex na dobrodúžstvo skrz tento Minecraft svet
-          description_short: Preskúmajte Minecraft svet prostredníctvom kódu
+          description: Použi bloky kódu, aby si vzal Steva alebo Alexa na dobrodužstvo svetom Minecraftu
+          description_short: Preskúmaj svet Minecraftu prostredníctvom kódu.
         ScienceP3OLPT3:
           stages:
             Wrap-Up:
@@ -551,6 +551,8 @@ sk:
               name: 'Včela: podmienky'
         gradeKinder:
           stages:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb
             Events:
               name: Udalosti
             'Jigsaw: Learn to drag and drop':
@@ -569,6 +571,8 @@ sk:
               name: Písanie pesničiek s parametrami
         grade1:
           stages:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb
             Events:
               name: Udalosti
             'Jigsaw: Learn to drag and drop':
@@ -681,6 +685,8 @@ sk:
               name: Binárne hádanky v kurze Umelec
             Auto-Run Binary Artist Puzzles:
               name: Samospúšťacie binárne hádanky v kurze Umelec
+            Play Lab:
+              name: Herné laboratórium
         csd2-2017:
           stages:
             Peer Review:

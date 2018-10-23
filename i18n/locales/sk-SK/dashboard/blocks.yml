@@ -152,7 +152,7 @@ sk:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -222,7 +222,7 @@ sk:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -230,14 +230,14 @@ sk:
         options:
           DIR:
             "'up'": hore
-            "'down'": nadol
+            "'down'": dole
             "'left'": vľavo
             "'right'": vpravo
       gamelab_whileKey:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -313,17 +313,17 @@ sk:
       craft_ifPath:
         options:
           DIR:
-            "'ahead'": oproti
+            "'ahead'": vpredu
       craft_ifStandingOn:
         options:
           TYPE:
             "'sand'": piesok
             "'planksOak'": dubové dosky
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": piesok
       craft_moveForward:
         text: posunúť dopredu
       craft_placeTorch:
         text: umiestni fakľu
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': kurča
