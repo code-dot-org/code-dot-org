@@ -256,11 +256,11 @@ ca:
           TYPE:
             "'sand'": sorra
             "'planksOak'": tauló de roure
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sorra
       craft_moveForward:
         text: avança
       craft_placeTorch:
         text: posa una torxa
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': gallina
