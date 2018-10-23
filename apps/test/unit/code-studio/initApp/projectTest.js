@@ -285,11 +285,9 @@ describe('project.saveThumbnail', () => {
 });
 
 describe('project.copy (client-side remix)', () => {
-  let server, sourceHandler, requests;
+  let server, sourceHandler;
 
   beforeEach(() => {
-    requests = [];
-
     replaceOnWindow('appOptions', {
       level: {
         isProjectLevel: true,
@@ -313,76 +311,53 @@ describe('project.copy (client-side remix)', () => {
   });
 
   it('performs a client-side remix', async () => {
-    server.respondWith('POST', /\/v3\/channels/, xhr => {
-      requests.push(`${xhr.method} ${xhr.url}`);
-      xhr.respond(200, {
-        'Content-Type': 'application/json',
-      }, JSON.stringify({
-        "createdAt":"2018-10-22T21:59:43.000-07:00",
-        "updatedAt":"2018-10-22T21:59:45.000-07:00",
-        "isOwner":true,
-        "publishedAt":null,
-        "level":"/projects/artist",
-        "migratedToS3":true,
-        "name":"Remix: allthethings-artist-project-backed",
-        "id":"kmz3weHzTpZTbRWrHRzMJA",
-        "projectType":"artist"
-      }));
-    });
-
-    server.respondWith('PUT', /\/v3\/sources\/.*\/main\.json/, xhr => {
-      requests.push(`${xhr.method} ${xhr.url}`);
-      xhr.respond(200, {
-        'Content-Type': 'application/json',
-      }, JSON.stringify({
-        filename: 'main.json',
-        category: 'json',
-        size: 0,
-        versionId: 12345,
-        timestamp: Date.now()
-      }));
-    });
-
+    stubPostChannels(server);
+    stubPutMainJson(server);
     await project.copy('Remixed project');
   });
 
   it('does not pass currentVersion and replace params on remix', async () => {
-    server.respondWith('POST', /\/v3\/channels/, xhr => {
-      requests.push(`${xhr.method} ${xhr.url}`);
-      xhr.respond(200, {
-        'Content-Type': 'application/json',
-      }, JSON.stringify({
-        "createdAt":"2018-10-22T21:59:43.000-07:00",
-        "updatedAt":"2018-10-22T21:59:45.000-07:00",
-        "isOwner":true,
-        "publishedAt":null,
-        "level":"/projects/artist",
-        "migratedToS3":true,
-        "name":"Remix: allthethings-artist-project-backed",
-        "id":"kmz3weHzTpZTbRWrHRzMJA",
-        "projectType":"artist"
-      }));
-    });
-
-    server.respondWith('PUT', /\/v3\/sources\/.*\/main\.json/, xhr => {
-      requests.push(`${xhr.method} ${xhr.url}`);
-      xhr.respond(200, {
-        'Content-Type': 'application/json',
-      }, JSON.stringify({
-        filename: 'main.json',
-        category: 'json',
-        size: 0,
-        versionId: 12345,
-        timestamp: Date.now()
-      }));
-    });
-
+    stubPostChannels(server);
+    stubPutMainJson(server);
     project.__TestInterface.setCurrentSourceVersionId('fakeid');
     await project.copy('Remixed project');
-    expect(requests[1]).not.to.match(/currentVersion=/);
-    expect(requests[1]).not.to.match(/replace=(true|false)/);
+    expect(server.requests[1].url).to.match(/main.json/);
+    expect(server.requests[1].url).not.to.match(/currentVersion=/);
+    expect(server.requests[1].url).not.to.match(/replace=(true|false)/);
   });
 });
+
+function stubPostChannels(server) {
+  server.respondWith('POST', /\/v3\/channels/, xhr => {
+    xhr.respond(200, {
+      'Content-Type': 'application/json',
+    }, JSON.stringify({
+      "createdAt":"2018-10-22T21:59:43.000-07:00",
+      "updatedAt":"2018-10-22T21:59:45.000-07:00",
+      "isOwner":true,
+      "publishedAt":null,
+      "level":"/projects/artist",
+      "migratedToS3":true,
+      "name":"Remix: allthethings-artist-project-backed",
+      "id":"kmz3weHzTpZTbRWrHRzMJA",
+      "projectType":"artist"
+    }));
+  });
+}
+
+function stubPutMainJson(server) {
+  server.respondWith('PUT', /\/v3\/sources\/.*\/main\.json/, xhr => {
+    xhr.respond(200, {
+      'Content-Type': 'application/json',
+    }, JSON.stringify({
+      filename: 'main.json',
+      category: 'json',
+      size: 0,
+      versionId: 12345,
+      timestamp: Date.now()
+    }));
+  });
+}
 
 function createStubSourceHandler() {
   return {
