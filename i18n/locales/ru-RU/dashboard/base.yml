@@ -16,7 +16,6 @@ ru:
       user:
         name: 'Отобразить имя'
         name_example: 'Отображаемое имя<br/>(например, Крутой Кодер или Джейн С.)'
-        other_name_example: 'Отображать имя<br/>(например, г-жа Смит)'
         email: 'Электронная почта'
         parent_email: 'Электронная почта родителя/опекуна'
         personal_email: "Личная электронная почта <a href=\"%{url}\"> (нажмите сюда, если у Вас нет электронной почты)</a>"
@@ -86,6 +85,7 @@ ru:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Учетная запись Майкрософт'
+    microsoft_v2_auth: 'Учетная запись Майкрософт'
     clever: 'Аккаунт Clever'
     forgot_password: 'Забыли Ваш пароль?'
     need_confirmation: "Не получили инструкции по подтверждению?"
@@ -109,7 +109,6 @@ ru:
     age: 'Возраст'
     user_type: 'Вы ученик или учитель?'
     submit: 'Зарегистрироваться'
-    next: 'Вперед'
     teacher: 'Вы учитель?'
     valid_username: "Доступно!"
     invalid_username: "Имя пользователя должно содержать не менее 5 символов"
@@ -134,7 +133,6 @@ ru:
     email_preference_privacy: "(См. нашу политику конфиденциальности)"
     email_preference_yes: "Да"
     email_preference_no: "Нет"
-    create_user_type: 'Создать аккаунт как'
   school_info:
     title: 'Школьная информация (по желанию)'
     school_country: 'Страна твоей школы'
