@@ -319,11 +319,11 @@ vi:
           TYPE:
             "'sand'": cát
             "'planksOak'": ván cây sồi
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": cát
       craft_moveForward:
         text: đi thẳng
       craft_placeTorch:
         text: đặt đuốc
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': con gà
