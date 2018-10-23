@@ -967,7 +967,7 @@ var projects = module.exports = {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v3',
+        study_group: 'v4',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',

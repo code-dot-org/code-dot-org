@@ -1072,3 +1072,6 @@
   user_header_settings: "Moj račun"
   user_header_logout: "Odjava"
   user_header_signin: "Prijava"
+  user_header_playlab: "Play Lab"
+  user_header_flappy: "Flappy"
+  creativity_create: "Kreiraj"

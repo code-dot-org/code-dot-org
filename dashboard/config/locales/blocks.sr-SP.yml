@@ -46,12 +46,30 @@ sr:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': насумичан
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
       Dancelab_setDanceSpeed:
@@ -63,6 +81,11 @@ sr:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': величина
@@ -237,3 +260,7 @@ sr:
         text: помери се напред
       craft_placeTorch:
         text: постави бакљу
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': пиле

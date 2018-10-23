@@ -292,14 +292,6 @@ is:
       help_us: "Hjálpaðu"
       teach: "Kenndu"
       about: "Um"
-    create_button:
-      create: 'Búa til'
-      applab: 'Appsmiðja'
-      artist: 'Listamaður'
-      gamelab: 'Leikjasmiðjan'
-      playlab: 'Leikjasmiðja'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Heimasíða kennara'
       district_dashboard: 'Stjórnborð umdæmis'
@@ -313,6 +305,13 @@ is:
       team: 'Félagar'
       driver: 'Ökumaður'
       navigator: 'Leiðsögumaður'
+      create: 'Búa til'
+      applab: 'Appsmiðja'
+      artist: 'Listamaður'
+      gamelab: 'Leikjasmiðjan'
+      playlab: 'Leikjasmiðja'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Framvinda %{name}"
       progress: 'Framvinda þín'

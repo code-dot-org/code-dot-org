@@ -271,13 +271,6 @@ pt:
       about_contact: Contacte-nos
       about_faqs: Perguntas frequentes
       stats: Estatística
-    create_button:
-      create: Criar
-      applab: Laboratório de aplicações
-      artist: Artista
-      playlab: Laboratório
-      minecraft: Minecraft
-      flappy: Flappy Bird
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -291,6 +284,12 @@ pt:
       team: Equipa
       driver: Controlador
       navigator: Navegador
+      create: Criar
+      applab: Laboratório de aplicações
+      artist: Artista
+      playlab: Laboratório
+      minecraft: Minecraft
+      flappy: Flappy Bird
     popup:
       progress_for_user: progresso de %{name}'s
       progress: O teu progresso

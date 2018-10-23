@@ -289,8 +289,6 @@ km:
       help_us: ជួយពួកយើង
       teach: បង្រៀន
       about: អំពី
-    create_button:
-      create: បង្កើត
     user:
       classroom: ទំព័រដើមគ្រូបង្រៀន
       label: សួស្តី%{username}
@@ -301,6 +299,7 @@ km:
       signup: បង្កើតគណនីថ្មី
       already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
       team: ក្រុម
+      create: បង្កើត
     popup:
       progress_for_user: ដំណើរការរបស់%{name}
       progress: ដំណើរការ​របស់​អ្នក

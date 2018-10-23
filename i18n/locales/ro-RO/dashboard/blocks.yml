@@ -88,6 +88,7 @@ ro:
             '"grid"': rețea
             '"row"': rând
             '"column"': coloană
+            '"random"': aleator
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -99,6 +100,23 @@ ro:
             "{x: 100, y: 300}": stânga jos
             "{x: 300, y: 300}": dreapta jos
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleator
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"grid"': rețea
+            '"row"': rând
+            '"column"': coloană
+            '"random"': aleator
       Dancelab_onPointerDown:
         text: pe indicatorul în jos
       Dancelab_onPointerDrag:
@@ -128,6 +146,16 @@ ro:
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Aleatoriu
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"width"': lăţime
+            '"height"': înălțime
+            '"rotation"': rotație
+            '"tint"': tentă
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: toate
           PROPERTY:
             '"scale"': dimensiune
             '"width"': lăţime
@@ -514,3 +542,7 @@ ro:
         text: mută înainte
       craft_placeTorch:
         text: plaseaza torta
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"chicken"': gaina

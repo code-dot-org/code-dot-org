@@ -214,14 +214,6 @@ fa:
         applab: ایجاد یک برنامه
       project_gallery: پروژه ها
       educate_hoc: ساعت کد نویسی
-    create_button:
-      create: ایجاد
-      applab: آزمایشگاه نرم افزار
-      artist: هنرمند
-      gamelab: کارگاه بازی سازی
-      playlab: آزمایشگاه بازی
-      minecraft: ماینکرفت
-      flappy: فلاپی
     user:
       classroom: صفحه اصلی معلم
       district_dashboard: محدوده ی داشبورد
@@ -231,6 +223,13 @@ fa:
       logout: خروج
       signin: ورود
       already_registered: قبلا ثبت نام کرده اید؟?
+      create: ایجاد
+      applab: آزمایشگاه نرم افزار
+      artist: هنرمند
+      gamelab: کارگاه بازی سازی
+      playlab: آزمایشگاه بازی
+      minecraft: ماینکرفت
+      flappy: فلاپی
     popup:
       progress_for_user: درصد پیشرفت %{name}
       progress: پیشرفت شما

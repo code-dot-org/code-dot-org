@@ -132,20 +132,21 @@ cs:
         na konec vnějšího cyklu."
       2-3 Artist Loops New 1: Nakresleme hlavu tohoto robota! Dokážeš vytvořit čtverec
         o straně 100 pixelů?
-      2-3 Artist Loops New 10: Spojme svazek dohromady kreslením v cyklu.
+      2-3 Artist Loops New 10: Teď spojme v cyklu dohromady několik V.
       2-3 Artist Loops New 11: Tentokrát to nakreslíme 24 krát. Do tohoto kódu přidej
         30 stupňů doleva a dej všechno do bloku opakování.
-      2-3 Artist Loops New 12: 'Nakresli kosodélník se stranou 100 pixelů.
+      2-3 Artist Loops New 12: 'Nakresli diamant se stranou 100 pixelů. '
+      2-3 Artist Loops New 13: |-
+        Připravili jsme pro tebe kód (šedý), který vytvoří jeden diamant.
 
-'
-      2-3 Artist Loops New 13: Nakresli nyní tento kosodélník 3 krát v cyklu.
-      2-3 Artist Loops New 14: Nakresleme nyní kosodélník 10 krát, ale otočené o 90
-        stupňů mezi každým kosodélníkem.
+        Opakuj tento šedý kód, abys vytvořil zábavný vzor!
+      2-3 Artist Loops New 14: Pohraj si s kódem pro diamant a podívej se jaké vzory
+        můžeš udělat. Zkus změnit o kolik stupňů se otočíš a kolikrát opakuješ.
       2-3 Artist Loops New 15: Nakresli něco zábavného.
       2-3 Artist Loops New 2: Zde je část kódu použitého k nakreslení čtverce. Co
         se stane, když použiješ blok opakování pro 4 krát spuštění tohoto kódu?
-      2-3 Artist Loops New 9: Nakresli jednoduché V, kde obě strany jsou 50 pixelů
-        k dokončení šipky.
+      2-3 Artist Loops New 9: K dokončení šipky nakresli jednoduché V (kde obě strany
+        jsou 50 pixelů).
       2-3 Artist Match Hex Pic: 'Porovnání: Pomoz dokončit šestiúhelník.'
       2-3 Artist Match Rho Pic: 'Porovnání: Dokonči chybějící kód.'
       2-3 Artist Match Sq Pic: 'Porovnání: Dokonči chybějící kód'
@@ -244,9 +245,9 @@ cs:
       2-3 Bee Functions 6: Nyní používej stejnou funkci pro sběr nektaru ze tří květin.
       2-3 Bee Functions 7: Květy jsou teď dál. Uprav danou funkci a použij ji sesbírat
         všechen nektar z květů.
-      2-3 Bee Functions 8: Vytvořte si vlastní funkci, která dostane 7 nektaru, pohybuje
-        se vpřed a udělá 7 medů. Použij funkci sesbírat nektar z každého květu a udělat
-        med v každém plástvi.
+      2-3 Bee Functions 8: Vytvořte si vlastní funkci, která sesbírá 7 jednotek nektaru,
+        posune vpřed a udělá 7 medů. Použij funkci k sesbírání nektaru z každého květu
+        a udělání medu v každé plástvi.
       2-3 Bee Functions 9: Vytvoř si vlastní funkci, která jde cestou dolů, dostane
         nektar, udělá med a včelu vrátí na začátek cesty.
       2-3 Bee Functions Assessment 1: 'Hodnocení: Použij zadanou funkci ke sběru nektaru
@@ -262,23 +263,31 @@ cs:
       2-3 Bee Loops 12: |-
         Použij while cykly sesbírat všechen nektar
         z květin v tomto poli.
-      2-3 Bee Loops 13: 'Vyhodnocení: Použij opakovací blok sesbírat všechen nektar.'
-      2-3 Bee Loops 1A: 'Ahoj já jsem včela. Pomůžeš mi sesbírat nektar z těchto květin? '
-      2-3 Bee Loops 2: Použij cyklus pro sběr nektaru a udělat med.
+      2-3 Bee Loops 13: 'Vyhodnocení: Sesbírej všechen nektar s použitím co nejmenšího
+        počtu bloků.'
+      2-3 Bee Loops 1A: 'Ahoj, já jsem včela. Pomůžeš mi sesbírat nektar z těchto
+        květin? '
+      2-3 Bee Loops 2: Posbírej všechen nektar a udělej všechen med pomocí co nejmenšího
+        počtu bloků.
       2-3 Bee Loops 2A: Můžeš udělat stejný úkol s pomocí cyklu?
-      2-3 Bee Loops 3: Sesbírat nektar z každého květu a udělat med v každé plástvi.
-      2-3 Bee Loops 3A: Umíš použít cyklus sesbírat všechen tento nektar?
-      2-3 Bee Loops 3B: Nyní pomocí nového bloku opakování shromáždit všechen nektar
-        a všechen med.
-      2-3 Bee Loops 4: Použij podobný cyklus jako v poslední puzzlu, ale zapracuj
-        do něj otočku.
+      2-3 Bee Loops 3: Sesbírej nektar z každého květu a udělej med v každé plástvi.
+      2-3 Bee Loops 3A: Použij cyklus `opakuj` k sesbírání všeho nektaru.
+      2-3 Bee Loops 3B: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení
+        veškerého medu.
+      2-3 Bee Loops 4: |-
+        Jaká pilná včela!
+
+        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       2-3 Bee Loops 4A: |-
         Kolik smyček potřebuješ v této hádance?
 
         Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
-      2-3 Bee Loops 5: Použijte cyklus projít dolů po krocích a sesbírat nektar.
-      2-3 Bee Loops 6: Použij cyklus ke sběru nektaru z každého květu a výrobě medu
-        v každém plástvi.
+      2-3 Bee Loops 5: |-
+        Tvar této cesty je jiný než těch ostatních.
+
+        Zvládneš sesbírat všechen nektar pomocí co nejmenšího možného počtu bloků?
+      2-3 Bee Loops 6: Najdeš pro včelu nejrychlejší cestu k sesbírání veškerého nektaru
+        a vyrobení všeho medu?
       2-3 Bee Loops 7: Vlož tyto bloky do cyklu ke sběru nektaru z každého květu.
       2-3 Bee Loops 8: Fialové květiny mají neznámé množství nektaru. Použij cyklus
         "while nektar" sesbírat všechen nektar. Tento cyklus bude fungovat tak dlouho,
@@ -306,7 +315,8 @@ cs:
       2-3 Maze 14: Dostaň mne ke slunečnici! (Kde je blok "opakuj několikrát", když
         to potřebuji?)
       2-3 Maze 15 (old): Dostaň mne k prasátku s blokem Opakuj až do!
-      2-3 Maze 15: Použij dva cykly se dostat k prasátku pomocí méně bloků.
+      2-3 Maze 15: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku
+        pomocí co nejméně bloků!
       2-3 Maze 16 (old): Dostaň mne k prasátku s blokem Opakuj až do!
       2-3 Maze 16 before: Dostaň mne k prasátku.
       2-3 Maze 16: Uvnitř smyčky může být více bloků! Dokážeš vykonat tuto posloupnost
@@ -422,10 +432,8 @@ cs:
         Dokonči zelené čáry. Čáry jsou 300 pixelů dlouhé
         a 15 pixelů od sebe vzdálené.
       4-5 Artist 2: Dokážeš opakovat tento kód k dokončení čtverce?
-      4-5 Artist 3.5: |-
-        Ok, zkus přijít na to, co se stane, když spustíš
-        tento kód (nebo to zkus stisknutím "Spustit"). Pak to opakuj tolikrát, aby
-        se kresba dokončila. Barvy budou (pravděpodobně) pokaždé jiné.
+      4-5 Artist 3.5: Ok, zkus přijít na to, co se stane, když spustíš tento kód (nebo
+        to zkus stisknutím "Spustit"). Pak opakuj kód několikrát, aby se kresba dokončila!
       4-5 Artist 3: |-
         Tento obdélníkový záhon má obvod 600.
         Dlouhá strana má délku 200. Nakresli obdélník.
@@ -610,7 +618,7 @@ cs:
         cykly. '
       4-5 Bee Nested Loops 3: Sesbírej všechen nektar vložením počátečního kódu do
         vnořeného cyklu.
-      4-5 Bee Nested Loops 4: 'Sesbírat všechen nektar z každého květu a udělat med
+      4-5 Bee Nested Loops 4: 'Sesbírej všechen nektar z každého květu a udělej med
         na každé plástvi. Použij vnořené cykly. '
       4-5 Bee Nested Loops 5: Sesbírat všechen nektar vytvořením vnořeného cyklu.
       4-5 Bee Nested Loops 6: Sesbírat všechen nektar.
@@ -842,7 +850,7 @@ cs:
       Calc Circles of Eval 7: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 8: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 9: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
-      Course 2 Bee Loops 1: 'Ahoj já jsem včela. Pomůžeš mi sesbírat nektar z těchto
+      Course 2 Bee Loops 1: 'Ahoj, já jsem včela. Pomůžeš mi sesbírat nektar z těchto
         květin? '
       Course 2 Maze Loops 1: Můžeš mě dostat k prasátku pomocí 5 bloků?
       Course 4 2: Včela chce teď právě jen nektar. Pamatuj si, že ne všechny objekty
@@ -2164,7 +2172,7 @@ cs:
         čtverec o stranách dlouhých 320 pixelů!
       artistDebugVideo1: Pomocí cyklu "repeat" přidej do vody vlny.
       artistFunctionsVideo1: Postupujte podle pokynů pro vytvoření vlastní funkce.
-      beeDebugVideo1: Umíš použít cyklus sesbírat všechen tento nektar?
+      beeDebugVideo1: Použij cyklus `opakuj` k sesbírání všeho nektaru.
       birdsDebugVideo1: Sleduj cestu a veď mne k tomu hloupému prasátku. Vyhni se
         TNT nebo bude peří létat!
       bounce_1: Připoj blok k bloku "šipka vlevo" a stiskni tlačítko "Run". Přesuň
@@ -2235,6 +2243,10 @@ cs:
       collector example: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil hádanku.
       collectorDebugVideo2: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil
         hádanku.
+      course2_collector_loops_challenge2: Získejte všechen poklad!
+      course2_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
+      course2_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
+      course2_maze_loops_challenge1: 'Scrat chce teď použít cykly k nalezení žaludu! '
       course2_maze_seq_challenge1: Najdi cestu a veď mě k tomu pošetilému praseti.
         Vyhni se TNT, nebo bude peří létat!
       course2_playlab_stage17_1: Dokážeš zařídit, aby pes Jirka (herec 1) řekl "ahoj"?
@@ -2272,6 +2284,7 @@ cs:
       courseA_artist_loops7: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_artist_loops7_2018: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_artist_loops7_forVideo: Pomocí cyklu "repeat" přidej do vody vlny.
+      courseA_collector_loops_challenge2: 'Získejte všechen poklad! '
       courseA_forVideoTest_artist: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq2_2018: Změň kód, abys mne dostal k prasátku!
@@ -2283,8 +2296,18 @@ cs:
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2018: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
+      courseC_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
+      courseC_harvester_loops_challenge1a: Sesbírej všechnu kukuřici.
+      courseC_harvester_loops_challenge1a_2018: Sesbírej všechnu kukuřici.
+      courseC_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
+      courseC_harvester_loops_challenge2_2018: Sesbírej všechen salát. Ne stromy ani
+        pole!
       courseC_maze_debugging10: Odlaď tuto úroveň uspořádáním a přidáním bloků, abys
         mne dostal mne k prasátku!
+      courseC_maze_loops_challenge1: 'Scrat chce teď použít cykly k nalezení žaludu! '
+      courseC_maze_loops_challenge1a: 'Scrat chce teď použít cykly k nalezení žaludu! '
+      courseC_maze_loops_challenge1a_2018: 'Scrat chce teď použít cykly k nalezení
+        žaludu! '
       courseD_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
         a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\",
@@ -2317,12 +2340,12 @@ cs:
         sesbíral všechen nektar a udělal všechen med.
       courseD_bee_nestedLoops3: Sesbírat všechen nektar z každého květu. Použij vnořené
         cykly.
-      courseD_bee_nestedLoops5: 'Sesbírat všechen nektar z každého květu a udělat
+      courseD_bee_nestedLoops5: 'Sesbírej všechen nektar z každého květu a udělej
         med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops6_2018: Dostaň mě ke slunečnici!
-      courseD_bee_nestedLoops8: 'Sesbírat všechen nektar z každého květu a udělat
+      courseD_bee_nestedLoops8: 'Sesbírej všechen nektar z každého květu a udělej
         med na každé plástvi. Použij vnořené cykly. '
-      courseD_bee_nestedLoops8_2018: 'Sesbírat všechen nektar z každého květu a udělat
+      courseD_bee_nestedLoops8_2018: 'Sesbírej všechen nektar z každého květu a udělej
         med na každé plástvi. Použij vnořené cykly. '
       courseD_bounce_events10: Nyní je cíl na vrcholu. Spoj bloky "skóre" a "skóre
         protihráče" s bloky "když je míč v cíli" a "když míč mine pálku", abys vytvořil
@@ -2529,7 +2552,7 @@ cs:
       grade2_MakeDogTag_4: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
       grade2_MakeDogTag_6: Zahraj si zdarma! Nakresli si něco, co bys chtěl.
-      grade2_MakeDogTag_8: Spojme svazek dohromady kreslením v cyklu.
+      grade2_MakeDogTag_8: Teď spojme v cyklu dohromady několik V.
       grade2_MakeDogTag_9: Tentokrát to nakreslíme 24 krát. Do tohoto kódu přidej
         30 stupňů doleva a dej všechno do bloku opakování.
       grade2_PuppyLoops_1: Můžeš mě dostat k prasátku pomocí 5 bloků?
@@ -2537,7 +2560,8 @@ cs:
         aby se to dokončilo?
       grade2_PuppyLoops_2: 'Můžeš nahradit těchto pět bloků jen dvěma bloky? (Rada:
         vytvoř cyklus pomocí bloku "opakuj několikrát".)'
-      grade2_PuppyLoops_4: Použij dva cykly se dostat k prasátku pomocí méně bloků.
+      grade2_PuppyLoops_4: V této hádance ti dva cykly `opakuj` pomohou dostat se
+        k prasátku pomocí co nejméně bloků!
       grade2_PuppyLoops_5: Dostaň mne k prasátku.
       grade2_PuppyLoops_7: Dostaň mě ke slunečnici!
       grade2_PuppyLoops_8: 'Kód pro tři vousy, které vidíš, je špatný. Rada: každý
@@ -2547,7 +2571,8 @@ cs:
       grade2_collector_3: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil hádanku.
       grade2_puppy_loops2: 'Můžeš nahradit těchto pět bloků jen dvěma bloky? (Rada:
         vytvoř cyklus pomocí bloku "opakuj několikrát".)'
-      grade2_puppy_loops4: Použij dva cykly se dostat k prasátku pomocí méně bloků.
+      grade2_puppy_loops4: V této hádance ti dva cykly `opakuj` pomohou dostat se
+        k prasátku pomocí co nejméně bloků!
       grade3_ConditionalsElse_1: Včele nelze říct, zda je to květina nebo plástev.
         Sbírej nektar z květů, ale nejprve zkontrolujte, zda je to květina nebo plástev.
       grade3_ConditionalsElse_2: Včela chce právě teď jen nektar. Všechny objekty
@@ -2617,15 +2642,20 @@ cs:
         všechen nektar a udělal všechen med.
       grade3_Debugging_TeacherIDo: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby
         se sesbíral všechen nektar a udělal všechen med.
-      grade3_Loops_10: Použij podobný cyklus jako v poslední puzzlu, ale zapracuj
-        do něj otočku.
-      grade3_Loops_11: Použijte cyklus projít dolů po krocích a sesbírat nektar.
-      grade3_Loops_12: Použij cyklus ke sběru nektaru z každého květu a výrobě medu
-        v každém plástvi.
+      grade3_Loops_10: |-
+        Jaká pilná včela!
+
+        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
+      grade3_Loops_11: |-
+        Tvar této cesty je jiný než těch ostatních.
+
+        Zvládneš sesbírat všechen nektar pomocí co nejmenšího možného počtu bloků?
+      grade3_Loops_12: Najdeš pro včelu nejrychlejší cestu k sesbírání veškerého nektaru
+        a vyrobení všeho medu?
       grade3_Loops_2: Můžeš udělat stejný úkol s pomocí cyklu?
-      grade3_Loops_3: Umíš použít cyklus sesbírat všechen tento nektar?
-      grade3_Loops_4: Nyní pomocí nového bloku opakování shromáždit všechen nektar
-        a všechen med.
+      grade3_Loops_3: Použij cyklus `opakuj` k sesbírání všeho nektaru.
+      grade3_Loops_4: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení
+        veškerého medu.
       grade3_Loops_5: Vlož tyto bloky do cyklu ke sběru nektaru z každého květu.
       grade3_Loops_6: |-
         Kolik smyček potřebuješ v této hádance?
@@ -2633,8 +2663,9 @@ cs:
         Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       grade3_Loops_7: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z
         každého květu. '
-      grade3_Loops_8: Použij cyklus pro sběr nektaru a udělat med.
-      grade3_Loops_9: Sesbírat nektar z každého květu a udělat med v každé plástvi.
+      grade3_Loops_8: Posbírej všechen nektar a udělej všechen med pomocí co nejmenšího
+        počtu bloků.
+      grade3_Loops_9: Sesbírej nektar z každého květu a udělej med v každé plástvi.
       grade3_Loops_TeacherIDo: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej
         nektar z každého květu. '
       grade3_bee_conditionals_quantum2: Včela chce právě teď jen nektar. Všechny objekty
@@ -2649,8 +2680,8 @@ cs:
       grade3_maze_nestedLoops2: 'Můžeš nahradit těchto pět bloků jen dvěma bloky?
         (Rada: vytvoř cyklus pomocí bloku "opakuj několikrát".)'
       grade3_maze_nestedLoops3: Dostaň mne k prasátku s pomocí jen dvou bloků.
-      grade3_maze_nestedLoops4: Použij dva cykly se dostat k prasátku pomocí méně
-        bloků.
+      grade3_maze_nestedLoops4: V této hádance ti dva cykly `opakuj` pomohou dostat
+        se k prasátku pomocí co nejméně bloků!
       grade3_robotFarmer_ConditionalsIntro_11: 'Venku je pořád tma. Posouvej mě po
         poli. Pokud narazím na hromádku, odstraň ji a pokud na díru, vyplň ji. Tip:
         použij rozbalovací menu možností bloku "pokud".'
@@ -2752,7 +2783,7 @@ cs:
       grade4_bee_nestedLoops1: Sesbírat všechen nektar z každého květu. Použij vnořené
         cykly.
       grade4_bee_nestedLoops3: Sesbírat všechen nektar vytvořením vnořeného cyklu.
-      grade4_bee_nestedLoops4: 'Sesbírat všechen nektar z každého květu a udělat med
+      grade4_bee_nestedLoops4: 'Sesbírej všechen nektar z každého květu a udělej med
         na každé plástvi. Použij vnořené cykly. '
       grade4_frozen_freeplay: |-
         Oficiálně se stáváš mistrovským umělcem! Vytvoř
@@ -2809,11 +2840,13 @@ cs:
         Tip: všechny tři strany jsou stejně dlouhé.'
       grade4_review_artist3: Blok "skoč" přesune umělce bez toho aby kreslil. Vytvoř
         přerušovanou čáru za použití bloků "skoč" a "posuň".
-      grade4_review_bee1: Nyní pomocí nového bloku opakování shromáždit všechen nektar
-        a všechen med.
-      grade4_review_bee2: Sesbírat nektar z každého květu a udělat med v každé plástvi.
-      grade4_review_bee3: Použij podobný cyklus jako v poslední puzzlu, ale zapracuj
-        do něj otočku.
+      grade4_review_bee1: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení
+        veškerého medu.
+      grade4_review_bee2: Sesbírej nektar z každého květu a udělej med v každé plástvi.
+      grade4_review_bee3: |-
+        Jaká pilná včela!
+
+        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
       grade5_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
         a \"zapnuto\" (představované číslem 1).  \r \r Poskytli jsme mřížku \"pixelů\",
@@ -3009,15 +3042,20 @@ cs:
         prostoru."
       gradek_artist_loops6: Pomocí cyklu "repeat" přidej do vody vlny.
       k-1 maze 1: Dokážeš mne přesunout na západ k prasátku?
-      level 'grade3_Loops_10: Použij podobný cyklus jako v poslední puzzlu, ale zapracuj
-        do něj otočku.
-      level 'grade3_Loops_11: Použijte cyklus projít dolů po krocích a sesbírat nektar.
-      level 'grade3_Loops_12: Použij cyklus ke sběru nektaru z každého květu a výrobě
-        medu v každém plástvi.
+      level 'grade3_Loops_10: |-
+        Jaká pilná včela!
+
+        Pomoc včele sesbírat všechen nektar a vyrobit všechen med s co nejmenším možným počtem bloků.
+      level 'grade3_Loops_11: |-
+        Tvar této cesty je jiný než těch ostatních.
+
+        Zvládneš sesbírat všechen nektar pomocí co nejmenšího možného počtu bloků?
+      level 'grade3_Loops_12: Najdeš pro včelu nejrychlejší cestu k sesbírání veškerého
+        nektaru a vyrobení všeho medu?
       level 'grade3_Loops_2: Můžeš udělat stejný úkol s pomocí cyklu?
-      level 'grade3_Loops_3: Umíš použít cyklus sesbírat všechen tento nektar?
-      level 'grade3_Loops_4: Nyní pomocí nového bloku opakování shromáždit všechen
-        nektar a všechen med.
+      level 'grade3_Loops_3: Použij cyklus `opakuj` k sesbírání všeho nektaru.
+      level 'grade3_Loops_4: Nyní použij blok `opakuj` k sesbírání všeho nektaru a
+        vyrobení veškerého medu.
       level 'grade3_Loops_5: Vlož tyto bloky do cyklu ke sběru nektaru z každého květu.
       level 'grade3_Loops_6: |-
         Kolik smyček potřebuješ v této hádance?
@@ -3025,8 +3063,9 @@ cs:
         Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       level 'grade3_Loops_7: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar
         z každého květu. '
-      level 'grade3_Loops_8: Použij cyklus pro sběr nektaru a udělat med.
-      level 'grade3_Loops_9: Sesbírat nektar z každého květu a udělat med v každé
+      level 'grade3_Loops_8: Posbírej všechen nektar a udělej všechen med pomocí co
+        nejmenšího počtu bloků.
+      level 'grade3_Loops_9: Sesbírej nektar z každého květu a udělej med v každé
         plástvi.
       level grade3_Loops_2: Můžeš udělat stejný úkol s pomocí cyklu?
       scrat 16 (copy 1): |-

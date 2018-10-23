@@ -230,14 +230,6 @@ uk:
       help_us: "Допомога нам"
       teach: "Вчити"
       about: "Про"
-    create_button:
-      create: 'Створити'
-      applab: 'App Lab'
-      artist: 'Художник'
-      gamelab: 'Ігрова лабораторія'
-      playlab: 'Ігрова студія'
-      minecraft: 'Майнкрафт'
-      flappy: 'Пурх'
     user:
       classroom: 'Домашня сторінка вчителя'
       district_dashboard: 'Панель області'
@@ -251,6 +243,13 @@ uk:
       team: 'Команда'
       driver: 'Водій'
       navigator: 'Навігатор'
+      create: 'Створити'
+      applab: 'App Lab'
+      artist: 'Художник'
+      gamelab: 'Ігрова лабораторія'
+      playlab: 'Ігрова студія'
+      minecraft: 'Майнкрафт'
+      flappy: 'Пурх'
     popup:
       progress_for_user: "Прогрес %{name}"
       progress: 'Ваш прогрес'

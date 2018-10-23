@@ -13,39 +13,6 @@ import {TestResults} from '../constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers, setSong} from './redux';
 
-//TODO: Remove this during clean-up
-// Songs
-var songs_data = {
-  macklemore: {
-    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
-    bpm: 146,
-    delay: 0.2, // Seconds to delay before calculating measures
-    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
-    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
-  },
-  macklemore90: {
-    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
-    bpm: 146,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
-    chorus: [65.75] // Array of timestamps in seconds where choruses occur
-  },
-  hammer: {
-    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
-    bpm: 133,
-    delay: 2.32, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  },
-  peas: {
-    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
-    bpm: 128,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  }
-};
-
 const ButtonState = {
   UP: 0,
   DOWN: 1,
@@ -476,16 +443,22 @@ Dance.prototype.initInterpreter = function () {
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 };
 
+Dance.prototype.shouldShowSharing = function () {
+  return !!this.level.freePlay;
+};
+
 /**
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
-  let options = {id: getStore().getState().selectedSong};
-  options['mp3'] = songs_data[options.id].url;
-  Sounds.getSingleton().register(options);
   const getSelectedSong = () => getStore().getState().selectedSong;
 
-  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this));
+  this.nativeAPI = new DanceParty(this.p5, {
+    getSelectedSong,
+    onPuzzleComplete: this.onPuzzleComplete.bind(this),
+    playSound: audioCommands.playSound,
+    recordReplayLog: this.shouldShowSharing(),
+  });
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
@@ -513,14 +486,12 @@ Dance.prototype.onP5Draw = function () {
  * this.studioApp_.displayFeedback when appropriate
  */
 Dance.prototype.displayFeedback_ = function () {
-  var level = this.level;
-
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
-    level: level,
-    showingSharing: level.freePlay,
+    level: this.level,
+    showingSharing: this.shouldShowSharing(),
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
