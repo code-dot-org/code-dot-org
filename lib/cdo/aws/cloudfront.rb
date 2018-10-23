@@ -245,11 +245,11 @@ module AWS
     # Returns a hash of cookie key/value pairs
     def self.signed_cookies(resource, expiration_date)
       raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
-      raise 'missing CDO.cloudfront_private_key_path' unless CDO.cloudfront_private_key_path
+      raise 'missing CDO.cloudfront_private_key' unless CDO.cloudfront_private_key
 
       signer = Aws::CloudFront::CookieSigner.new(
         key_pair_id: CDO.cloudfront_key_pair_id,
-        private_key_path: CDO.cloudfront_private_key_path
+        private_key: CDO.cloudfront_private_key
       )
 
       policy = {
