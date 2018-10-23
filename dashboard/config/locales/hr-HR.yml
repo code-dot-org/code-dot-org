@@ -72,6 +72,7 @@ hr:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft račun
+    microsoft_v2_auth: Microsoft račun
     forgot_password: Zaboravio si lozinku?
     need_confirmation: Nisi primio upute za potvrdu?
     need_unlock: Nisi primio upute za otključavanje?
@@ -87,7 +88,6 @@ hr:
     age: Godine
     user_type: Jeste li učenik ili učitelj?
     submit: Prijava
-    next: Sljedeći
     teacher: Jeste li učitelj?
     valid_username: Dostupno!
     invalid_username: Korisničko ime mora imati barem 5 znakova
