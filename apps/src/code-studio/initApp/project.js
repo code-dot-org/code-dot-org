@@ -627,6 +627,8 @@ var projects = module.exports = {
           return msg.defaultProjectNameBasketball();
         }
         return msg.defaultProjectNameBounce();
+      case 'dance':
+        return msg.defaultProjectNameDance();
     }
     return msg.defaultProjectName();
   },
