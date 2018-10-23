@@ -284,11 +284,11 @@ sv:
           TYPE:
             "'sand'": sand
             "'planksOak'": ekplankor
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: gå framåt
       craft_placeTorch:
         text: placera fackla
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': höna
