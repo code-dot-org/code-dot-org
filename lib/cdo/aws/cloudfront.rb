@@ -235,7 +235,7 @@ module AWS
         MinTTL: 0,
         SmoothStreaming: false,
         TargetOriginId: (s3 ? behavior_config[:proxy] : 'cdo'),
-        TrustedSigners: [],
+        TrustedSigners: behavior_config[:trusted_signer] ? ['self'] : [],
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|
         behavior[:PathPattern] = path if path

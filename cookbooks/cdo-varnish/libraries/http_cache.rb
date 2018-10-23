@@ -143,7 +143,8 @@ class HttpCache
             path: '/restricted/*',
             proxy: 'cdo-restricted',
             headers: [],
-            cookies: 'none'
+            cookies: 'none',
+            trusted_signer: true,
           },
           {
             path: %w(
