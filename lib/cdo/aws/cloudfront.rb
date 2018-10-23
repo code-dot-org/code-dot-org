@@ -247,6 +247,11 @@ module AWS
       raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
       raise 'missing CDO.cloudfront_private_key_path' unless CDO.cloudfront_private_key_path
 
+      signer = Aws::CloudFront::CookieSigner.new(
+        key_pair_id: CDO.cloudfront_key_pair_id,
+        private_key_path: CDO.cloudfront_private_key_path
+      )
+
       policy = {
         "Statement" => [
           {
@@ -256,19 +261,12 @@ module AWS
             }
           }
         ]
-      }.to_json.tr(" \t\r\n", '')
+      }.to_json
 
-      policy_encoded = Base64.strict_encode64(policy).tr('+=/', '-_~')
-
-      private_key = OpenSSL::PKey::RSA.new(File.read(CDO.cloudfront_private_key_path))
-      signature = private_key.sign(OpenSSL::Digest::SHA1.new, policy)
-      signature_encoded = Base64.strict_encode64(signature).tr('+=/', '-_~')
-
-      {
-        'CloudFront-Policy' => policy_encoded,
-        'CloudFront-Signature' => signature_encoded,
-        'CloudFront-Key-Pair-Id' => CDO.cloudfront_key_pair_id,
-      }
+      signer.signed_cookie(
+        resource,
+        policy: policy
+      )
     end
   end
 end

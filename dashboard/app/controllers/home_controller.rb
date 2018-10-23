@@ -93,7 +93,7 @@ class HomeController < ApplicationController
   # GET /home/sign-cookies
   def sign_cookies
     expiration_date = Time.now + 2.hours
-    resource = "/restricted/*"
+    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
 
     cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
 
