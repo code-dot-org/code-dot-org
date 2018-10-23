@@ -207,6 +207,7 @@
     drag it. How about a colour, or an image? Tapping will bring up visual editors
     that let you choose exactly what you want.
   flappy_shortcode: flap
+  creativity_create: Create
   ! '': 
   hour_of_code: Hour of Code
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
@@ -2172,7 +2173,6 @@
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
   creativity: creativity
-  creativity_create: Create
   creativity_hoc_coming: The Hour of Code is coming…
   creativity_what_will_you_create: What will you create?
   creativity_homepage: Give flight to imagination and birth to innovation. Start with

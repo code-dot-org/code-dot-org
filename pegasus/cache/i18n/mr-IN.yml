@@ -28,6 +28,7 @@
   volunteer_engineer_submission_field_name: नाव
   dashboard_students_name: नाव
   dashboard_student: विध्यार्थी
+  creativity_create: बनवा
   ! '': 
   hour_of_code: Hour of Code
   hello: Hello world
@@ -2175,7 +2176,6 @@
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
   creativity: creativity
-  creativity_create: Create
   creativity_hoc_coming: The Hour of Code is coming…
   creativity_what_will_you_create: What will you create?
   creativity_homepage: Give flight to imagination and birth to innovation. Start with
