@@ -284,11 +284,11 @@ hu:
           TYPE:
             "'sand'": homok
             "'planksOak'": tölgyfa deszka
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": homok
       craft_moveForward:
         text: előrelépni
       craft_placeTorch:
         text: fáklya elhelyezése
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': csirke

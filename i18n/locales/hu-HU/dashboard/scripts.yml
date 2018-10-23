@@ -953,6 +953,8 @@ hu:
               name: Bináris képek
             Processing with Bits:
               name: Feldolgozás bitekkel
+            Play Lab:
+              name: Játéklabor
         csd2-2017:
           stages:
             Lists:
