@@ -104,7 +104,6 @@ def load_configuration
     'rack_env'                    => rack_env,
     'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
-    'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
     'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
     'firebase_secret'             => nil,
@@ -136,7 +135,7 @@ def load_configuration
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
     #raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
-    config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
+    config['bundler_use_sudo'] = config['chef_managed']
 
     # test environment should use precompiled, minified, digested assets like production,
     # unless it's being used for unit tests. This logic should be kept in sync with
