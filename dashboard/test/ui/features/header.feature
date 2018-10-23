@@ -40,7 +40,7 @@ Scenario: Teacher in English should see 5 header links
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
 
-Scenario: Signed out user in Spanish should see s header links
+Scenario: Signed out user in Spanish should see 3 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
