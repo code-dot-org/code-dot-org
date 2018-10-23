@@ -8,6 +8,8 @@
 - homepage_data[:topCourse] = @top_course
 - homepage_data[:isEnglish] = @is_english
 - homepage_data[:includeDanceParty] = DCDO.get("dance_projects", false)
+- hoc_launch = DCDO.get("hoc_launch", nil)
+- homepage_data[:includeMCAquatic] = !hoc_launch.nil?
 
 - if current_user
   - homepage_data[:providers] = current_user.providers
