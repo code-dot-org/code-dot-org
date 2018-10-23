@@ -614,6 +614,10 @@ export class DetailViewContents extends React.Component {
   renderScoringSection = (key) => {
     const snakeCaseKey = _.snakeCase(key);
 
+    if (this.props.viewType === 'facilitator') {
+      return false;
+    }
+
     return (
       <td style={styles.scoringColumn}>
         {
