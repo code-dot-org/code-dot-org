@@ -642,12 +642,16 @@ var projects = module.exports = {
     }
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+      case 'calc':
+      case 'dance':
+      case 'eval':
+      case 'flappy':
+      case 'scratch':
+      case 'weblab':
+        return appOptions.app; // Pass through type exactly
       case 'gamelab':
         if (appOptions.droplet) {
           return 'gamelab';
-        } else if (appOptions.level.isDanceLab) {
-          return 'dance';
         }
         return 'spritelab';
       case 'turtle':
@@ -657,8 +661,6 @@ var projects = module.exports = {
           return 'artist_k1';
         }
         return 'artist';
-      case 'calc':
-        return 'calc';
       case 'craft':
         if (appOptions.level.isAgentLevel) {
           return 'minecraft_hero';
@@ -668,8 +670,6 @@ var projects = module.exports = {
           return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
-      case 'eval':
-        return 'eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
@@ -689,12 +689,6 @@ var projects = module.exports = {
           return 'playlab_k1';
         }
         return 'playlab';
-      case 'weblab':
-        return 'weblab';
-      case 'flappy':
-        return 'flappy';
-      case 'scratch':
-        return 'scratch';
       case 'bounce':
         if (appOptions.skinId === 'sports') {
           return 'sports';
