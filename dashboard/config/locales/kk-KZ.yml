@@ -73,6 +73,7 @@ kk:
     twitter: Твиттер
     facebook: Facebook
     windowslive: Microsoft Аккаунт
+    microsoft_v2_auth: Microsoft Аккаунт
     forgot_password: Құпия сөзіңізді ұмыттыңыз ба?
     need_confirmation: Растау жөніндегі нұсқауларды алмадыңыз ба?
     need_unlock: Құлыптан шығару жөніндегі нұсқауларды алмадыңыз ба?
@@ -89,7 +90,6 @@ kk:
     age: Жасы
     user_type: Сіз оқушысыз ба немесе оқутышысыз ба?
     submit: Тіркелу
-    next: Келесі
     teacher: Сіз оқутышысыз ба?
     valid_username: Бұл логин бос!
     invalid_username: Логин 5 символдан кем болмауы керек

@@ -256,11 +256,11 @@ kk:
           TYPE:
             "'sand'": құм
             "'planksOak'": емен тақталар
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": құм
       craft_moveForward:
         text: алдыға қозғалу
       craft_placeTorch:
         text: Шам орнату
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': тауық
