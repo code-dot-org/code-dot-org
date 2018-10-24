@@ -217,7 +217,7 @@ a.category-link {
 
 .video-responsive {
   overflow: hidden;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* Maintains 16:9 aspect ratio */
   position: relative;
   height: 0;
 }
