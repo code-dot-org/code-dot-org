@@ -14,8 +14,8 @@ Feature: Dance Lab
   @no_circle
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
-    Then element "body" does not contain text "placeholder for testing"
+    Then page text does not contain "placeholder for testing"
 
     When I am on "http://studio.code.org/dashboardapi/sign_cookies"
     And I am on "http://studio.code.org/restricted/placeholder.txt"
-    Then element "body" contains text "placeholder for testing"
+    Then page text does contain "placeholder for testing"
