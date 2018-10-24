@@ -15807,6 +15807,45 @@ en:
         right answer2: right answer2
         wrong answer: wrong answer
         wrong answer2: wrong answer2
+      destroy_me_test_CSP_5_4_1:
+        ? "<pre>\nlist[x] &lt;-- temp\nvar temp &lt;-- list[y]    \nlist[y] &lt;-- list[x]\n</pre>"
+        : "<pre>\nlist[x] &lt;-- temp\nvar temp &lt;-- list[y]    \nlist[y] &lt;-- list[x]\n</pre>"
+        ? |-
+          <pre>
+          list[y] &lt;-- list[x]
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          </pre>
+        : |-
+          <pre>
+          list[y] &lt;-- list[x]
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          </pre>
+        ? |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          list[y] &lt;-- list[x]
+          </pre>
+        : |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          list[y] &lt;-- list[x]
+          </pre>
+        ? |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[y] &lt;-- list[x]
+          list[x] &lt;-- temp
+          </pre>
+        : |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[y] &lt;-- list[x]
+          list[x] &lt;-- temp
+          </pre>
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
