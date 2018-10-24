@@ -66,6 +66,10 @@ Dance.prototype.init = function (config) {
 
   this.level = config.level;
   this.skin = config.skin;
+  this.share = config.share;
+  this.p5setupPromise = new Promise(resolve => {
+    this.p5setupPromiseResolve = resolve;
+  });
 
   this.studioApp_.labUserId = config.labUserId;
 
@@ -77,6 +81,7 @@ Dance.prototype.init = function (config) {
 
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
+  config.noHowItWorks = true;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
@@ -241,7 +246,6 @@ Dance.prototype.reset = function () {
   Sounds.getSingleton().stopAllAudio();
 
   this.nativeAPI.reset();
-  this.p5.noLoop();
 
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
@@ -307,10 +311,8 @@ Dance.prototype.onReportComplete = function (response) {
 /**
  * Click the run button.  Start the program.
  */
-Dance.prototype.runButtonClick = function () {
-  if (!this.nativeAPI.metadataLoaded(getStore().getState().selectedSong)) {
-    return;
-  }
+Dance.prototype.runButtonClick = async function () {
+  await this.p5setupPromise;
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
@@ -327,7 +329,7 @@ Dance.prototype.runButtonClick = function () {
   }
 };
 
-Dance.prototype.execute = function () {
+Dance.prototype.execute = async function () {
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
@@ -338,15 +340,16 @@ Dance.prototype.execute = function () {
   }
 
   this.initInterpreter();
-  this.p5.loop();
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
-  this.nativeAPI.play();
 
   const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
   this.nativeAPI.registerValidation(validationCallback);
+
+  const songData = await this.songMetadataPromise;
+  this.nativeAPI.play(songData);
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -453,10 +456,8 @@ Dance.prototype.shouldShowSharing = function () {
  */
 Dance.prototype.onP5Preload = function () {
   this.nativeAPI = new DanceParty(this.p5, {
-    songMetadata: {},
-    onSongPlay: this.playSong,
-    onSongComplete: () => console.log("Song Complete"),
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
+    playSound: audioCommands.playSound,
     recordReplayLog: this.shouldShowSharing(),
   });
   this.updateSongMetadata(getStore().getState().selectedSong);
@@ -466,10 +467,7 @@ Dance.prototype.onP5Preload = function () {
 };
 
 Dance.prototype.updateSongMetadata = function (id) {
-  this.loadSongMetadata(id).then((data) => {
-      this.nativeAPI.updateSongMetadata(data);
-    }
-  );
+  this.songMetadataPromise = this.loadSongMetadata(id);
 };
 
 Dance.prototype.playSong = function (file, callback) {
@@ -486,7 +484,12 @@ Dance.prototype.loadSongMetadata = async function (id) {
  * This is called while this.p5 is in the setup phase.
  */
 Dance.prototype.onP5Setup = function () {
+  this.preloadComplete = true;
   this.nativeAPI.setup();
+  this.p5setupPromiseResolve();
+  if (this.share) {
+    setTimeout(this.studioApp_.runButtonClick, 0);
+  }
 };
 
 /**
