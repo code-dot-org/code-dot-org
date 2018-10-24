@@ -35,7 +35,7 @@ end
 
 require 'cdo/cron'
 
-self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
+self.log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
 
 # Don't provision daemon where manually-provisioned daemon instances already exist.
 # Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
@@ -504,7 +504,7 @@ Resources:
       AllocatedStorage: 64
       StorageType: gp2
       Engine: mysql
-      EngineVersion: 5.6.29
+      EngineVersion: 5.7.23
       DBParameterGroupName: !Ref DatabaseParameters
       VPCSecurityGroups: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
@@ -514,7 +514,7 @@ Resources:
     Type: AWS::RDS::DBParameterGroup
     Properties:
       Description: !Sub "Parameters for ${AWS::StackName}."
-      Family: mysql5.6
+      Family: mysql5.7
       Parameters:
         innodb_autoinc_lock_mode: 2
         innodb_flush_log_at_trx_commit: 0
