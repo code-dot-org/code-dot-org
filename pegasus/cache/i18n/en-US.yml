@@ -1563,15 +1563,18 @@
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
   aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: "creativity"
-  creativity_create: "Create"
-  creativity_hoc_coming: "The Hour of Code is coming…"
-  creativity_what_will_you_create: "What will you create?"
-  creativity_homepage: "Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be. Watch our video."
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in! Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will you create?'
-  creativity_courses: "Go further with Code.org courses"
-  creativity_courses_link: "Go further with <a href=\"https://studio.code.org/courses\">Code.org courses</a>"
+  hoc2018_creativity: "creativity"
+  hoc2018_creativity_create: "Create"
+  hoc2018_creativity_hoc_coming: "The Hour of Code is coming…"
+  hoc2018_creativity_what_will_you_create: "What will you create?"
+  hoc2018_creativity_homepage: "Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be. Watch our video."
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will you create?'
+  hoc2018_creativity_courses: "Go further with Code.org courses"
+  hoc2018_creativity_courses_link: "Go further with <a href=\"https://studio.code.org/courses\">Code.org courses</a>"
+  hoc2018_homepage: "Sign up your class to try one of the over 150 NEW activites for the Hour of Code (Dec 3-9)!"
+  hoc2018_aquatic_title: "Minecraft Voyage Aquatic"
+  hoc2018_aquatic_announcement: "Sign up your class to try one of the over 150 NEW activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today."
   account_sign_up_email_opt_in: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
   account_sign_up_child_accept_terms: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."

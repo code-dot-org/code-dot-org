@@ -1,4 +1,5 @@
-"zh-TW":
+---
+zh-TW:
   hour_of_code: 一小時玩程式
   hello: Hello world
   'yes': 是
@@ -1518,6 +1519,7 @@
   csd_2018_name: 計算機科學探索
   full_course_category_name: 完整課程
   user_header_label: 嗨，%{username}
+  user_header_team: 團隊
   user_header_settings: 帳戶設定
   user_header_logout: 登出
   user_header_signin: 登入
@@ -1560,95 +1562,6 @@
   google_sign_in_instruct: 前提是他們應該要「用 Google 帳戶登入」：
   applab-intro_name: App Lab 介紹
   creativity_create: 建立
+  creativity_hoc_coming: 一小時的程式設計課程活動即將展開…
   account_sign_up_email_opt_in: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
   account_sign_up_child_accept_terms: '我確定我的監護人已允許我使用 Code.org 提供的服務。 '
-  ! '': 
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  express-2018_name: Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  coursec_shortdescription_congrats: Learn the basics of computer science and create
-    your own art, stories, and games.
-  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  user_header_team: Team
-  user_header_create: 'Create '
-  user_header_applab: 'App Lab '
-  user_header_artist: 'Artist '
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_project_gallery: View project gallery
-  hero_name: 'Minecraft: Hero''s Journey'
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_hoc_coming: The Hour of Code is coming…
-  creativity_what_will_you_create: What will you create?
-  creativity_homepage: Give flight to imagination and birth to innovation. Start with
-    an Hour of Code and your own brand of creativity, whatever it may be. Watch our
-    video.
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will
-    you create?'
-  creativity_courses: Go further with Code.org courses
-  creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
