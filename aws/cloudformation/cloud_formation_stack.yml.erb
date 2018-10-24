@@ -184,7 +184,7 @@ Resources:
       MinSize: !GetAtt [ASGCount, MinSize]
       MaxSize: !GetAtt [ASGCount, MaxSize]
       DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
-      HealthCheckType: ELB
+      HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
       MetricsCollection:
