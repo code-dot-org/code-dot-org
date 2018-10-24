@@ -60,6 +60,12 @@ class StudentsBeyondHoc extends Component {
       case completedTutorialType === '2017Minecraft' && !isEnglish:
           specificCardSet = 'nonEnglishNewMinecraftCards';
         break;
+      case completedTutorialType === '2018Minecraft' && isEnglish:
+          specificCardSet = 'newMinecraftCards';
+        break;
+      case completedTutorialType === '2018Minecraft' && !isEnglish:
+          specificCardSet = 'nonEnglishNewMinecraftCards';
+        break;
       case completedTutorialType === 'applab' && signedIn:
           specificCardSet = 'signedInApplabCards';
         break;
