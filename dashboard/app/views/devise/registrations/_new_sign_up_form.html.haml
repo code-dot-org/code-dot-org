@@ -1,3 +1,5 @@
+= render "devise/shared/new_links"
+
 = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
   .field-row
     .field.field-sm
@@ -18,3 +20,10 @@
     %span.error.padded= @user.errors[:password_confirmation]&.first
 
   %button#submit= t('signup_form.submit')
+
+-# More information for students about email storage.
+.student-options
+  %br/
+  %br/
+  *
+  != t('signup_form.student_terms')
