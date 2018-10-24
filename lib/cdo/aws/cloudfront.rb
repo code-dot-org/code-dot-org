@@ -4,7 +4,6 @@ require 'securerandom'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 require 'active_support/core_ext/object/try'
-require 'openssl'
 
 # Manages application-specific configuration of AWS CloudFront distributions.
 module AWS
@@ -242,7 +241,13 @@ module AWS
       end
     end
 
-    # Returns a hash of cookie key/value pairs
+    # Generate cookies granting access to the resource until the expiration_date.
+    # @param [String] resource Url with scheme optionally ending with '/*'.
+    #   See docs for the Resource field in a Custom Policy at
+    #   https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-setting-signed-cookie-custom-policy.html
+    # @param [Time] expiration_date Time at which the permission granted by
+    #   these cookies will expire.
+    # @return [Hash<String>] Cookie key/value pairs.
     def self.signed_cookies(resource, expiration_date)
       raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
       raise 'missing CDO.cloudfront_private_key' unless CDO.cloudfront_private_key
@@ -263,6 +268,7 @@ module AWS
         ]
       }.to_json
 
+      # Generate signed cookies representing a custom policy.
       signer.signed_cookie(
         resource,
         policy: policy
