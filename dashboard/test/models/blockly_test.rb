@@ -216,7 +216,6 @@ XML
       "data" => {
         "blocks" => {
           "DanceLab_atSelectColor" => {
-            "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
                 "first": "red",
@@ -238,15 +237,15 @@ XML
         pool: "SelectColor",
         category: "Events",
         config:
-          {
-            "color" => [140, 1, 0.74],
-            "func" => "atSelectColor",
-            "args" => [
-              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
-            ],
-            "eventBlock" => true
-          },
+        {
+          "color" => [140, 1, 0.74],
+          "func" => "atSelectColor",
+          "args" => [
+            {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+            {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+          ],
+          "eventBlock" => true
+        },
         helperCode: nil
       }]
 
@@ -259,7 +258,6 @@ XML
           {
             "color" => [140, 1, 0.74],
             "func" => "atSelectColor",
-            "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
               {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
@@ -271,7 +269,7 @@ XML
 
     localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
-    assert_not_equal localized_custom_blocks, translated_block
+    assert_equal localized_custom_blocks, translated_block
   end
 
   test 'localizes authored hints' do
