@@ -55,7 +55,11 @@ The ideal facilitator believes deeply in Code.org’s equity-focused mission, is
 
 <hr/>
 
-In order to be selected for this program, potential Code.org facilitators must demonstrate the following qualifications:
+## Qualities of a Code.org Facilitator
+
+The Facilitator Development Program application is open to anyone who is interested in developing as a leader and facilitator for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our desired qualifications (listed below) and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/professional-learning/about-partners) or in areas where we are considering future partnerships.
+
+We're seeking candidates who possess the following qualities:
 
 <div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
@@ -165,45 +169,29 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 ## Learn more about the program
 
-Click on the questions below to learn more about the Code.org Facilitator Development Program.
+### Overview
+Check out the <a href="https://docs.google.com/document/d/1fUsyGKtpqNtopWLOzHf4Jt67H-_ujkw4GGoB-CzVtKw/edit?ts=5b7ed8af#heading=h.psnytlkvnqcd", target=_"blank">Facilitator Development Program Overview</a> for details about what Code.org facilitators do, 
 
-<details>
- <summary>**What does a Code.org Facilitator do?**</summary>
-  <p>
-
-  * Join a nationwide community of leaders and facilitators in CS education
-  * Participate in in-person, virtual, and independent facilitator development
-  * Collaborate with their local Code.org Regional Partner to deliver professional development workshops to teachers on Code.org's courses, with ongoing support from Code.org and the facilitator community
-  * Partner with Code.org to shape the future of professional learning for thousands of new CS educators across the US and beyond
-</p>
-</details>
-
-<details>
- <summary>**Who should apply?**</summary>
-  <p>
-  
-The Facilitator Development Program application is open to anyone who is interested in developing as a leader and facilitator for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our desired qualifications below, and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/professional-learning/about-partners) or in areas where we are considering future partnerships.
-</p>
-</details>
-
-<details>
- <summary>**What are the program-specific commitments?**</summary>
-  <p>
-  
-To learn more about program benefits, qualifications, and commitments by curriculum focus area, select one of the options below:
+### Commitments
+When participants apply to the program, they must select a curriculum focus area. Program commitments, qualifications, and benefits vary by curriculum focus area. Check out the resources below to learn more:
 
 * <a href="https://docs.google.com/document/d/1u9sHuQf_5xidk04LdMBvCj91dw5_x5R6jJ9xflojUGs/edit", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Elementary School
 * <a href="https://docs.google.com/document/d/1_yUxOhcZGjcVw-FK2pmA04ZELI8JJH7CPjhbWTo8Uo0/edit", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Middle School
 * <a href="https://docs.google.com/document/d/1TyfaDBGNdakvX3K-jRgQr-R8VQSO9oK08y5Hhh905Tw/edit", target=_"blank">Computer Science Principles Facilitator Development</a> - High School
-</p>
-</details>
+
+### FAQs
+
+Have questions? We have answers!
+
+Check out our <a href="https://docs.google.com/document/d/1nHWfSscuGpa5684zdK2Kz5pxR0GiIGwAadraZ-ls31k/edit#heading=h.7h1hxnkn8n43", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
+
 
 <br>
 ## Have questions? 
 
 Let us know by writing to facilitators@code.org.
 
-Be sure to check out the <a href="https://docs.google.com/document/d/1fUsyGKtpqNtopWLOzHf4Jt67H-_ujkw4GGoB-CzVtKw/edit?ts=5b7ed8af#heading=h.psnytlkvnqcd", target=_"blank">Facilitator Development Program Overview</a> or our <a href="https://docs.google.com/document/d/1nHWfSscuGpa5684zdK2Kz5pxR0GiIGwAadraZ-ls31k/edit#heading=h.7h1hxnkn8n43", target=_"blank">FAQs</a>.
+Be sure to check out the  or .
 
 ## Ready to apply?
 
