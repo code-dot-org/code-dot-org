@@ -119,6 +119,7 @@ Dance.prototype.init = function (config) {
         visualizationColumn={
           <DanceVisualizationColumn
             showFinishButton={finishButtonFirstLine && showFinishButton}
+            retrieveMetadata={this.updateSongMetadata.bind(this)}
           />
         }
         onMount={onMount}
@@ -307,7 +308,7 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = function () {
-  if (!this.nativeAPI.metadataLoaded()) {
+  if (!this.nativeAPI.metadataLoaded(getStore().getState().selectedSong)) {
     return;
   }
 
@@ -451,17 +452,34 @@ Dance.prototype.shouldShowSharing = function () {
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
-  const getSelectedSong = () => getStore().getState().selectedSong;
-
   this.nativeAPI = new DanceParty(this.p5, {
-    getSelectedSong,
+    songMetadata: {},
+    onSongPlay: this.playSong,
+    onSongComplete: () => console.log("Song Complete"),
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
-    playSound: audioCommands.playSound,
     recordReplayLog: this.shouldShowSharing(),
   });
+  this.updateSongMetadata(getStore().getState().selectedSong);
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
+};
+
+Dance.prototype.updateSongMetadata = function (id) {
+  this.loadSongMetadata(id).then((data) => {
+      this.nativeAPI.updateSongMetadata(data);
+    }
+  );
+};
+
+Dance.prototype.playSong = function (file, callback) {
+  audioCommands.playSound({url: file, callback: callback});
+};
+
+Dance.prototype.loadSongMetadata = async function (id) {
+  let songDataPath = '/api/v1/sound-library/hoc_song_meta';
+  const response = await fetch(`${songDataPath}/${id}.json`);
+  return await response.json();
 };
 
 /**
