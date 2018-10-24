@@ -398,6 +398,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       $(saveButtonSelector).prop('disabled', true).text(msg.addingToProjects());
       project.copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(async () => {
+          const song = getStore().getState().selectedSong;
+          if (song) {
+            await project.saveSelectedSong(song);
+          }
+        })
         .then(() => {
           projectId = project.getCurrentId();
           projectType = project.getStandaloneApp();
