@@ -100,6 +100,7 @@ en:
   prize: 'prize'
   more_info: 'More info'
   auth:
+    continue_with: 'Continue with %{provider}'
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Signed in!'
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
