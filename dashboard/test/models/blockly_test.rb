@@ -167,7 +167,7 @@ XML
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
     custom_block =
-      {
+      [{
         name: "DanceLab_atSelectColor",
         pool: "SelectColor",
         category: "Events",
@@ -183,10 +183,10 @@ XML
           "eventBlock" => true
         },
         helperCode: nil
-      }
+      }]
 
     translated_block =
-      {
+      [{
         name: "DanceLab_atSelectColor",
         pool: "SelectColor",
         category: "Events",
@@ -202,7 +202,7 @@ XML
             "eventBlock" => true
           },
         helperCode: nil
-      }
+      }]
 
     localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
@@ -233,7 +233,7 @@ XML
     level = create(:level, :blockly, level_num: 'level1_2_3')
 
     custom_block =
-      {
+      [{
         name: "DanceLab_atSelectColor",
         pool: "SelectColor",
         category: "Events",
@@ -248,10 +248,10 @@ XML
             "eventBlock" => true
           },
         helperCode: nil
-      }
+      }]
 
     translated_block =
-      {
+      [{
         name: "DanceLab_atSelectColor",
         pool: "SelectColor",
         category: "Events",
@@ -267,7 +267,7 @@ XML
             "eventBlock" => true
           },
         helperCode: nil
-      }
+      }]
 
     localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
