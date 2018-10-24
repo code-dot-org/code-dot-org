@@ -564,14 +564,16 @@ class Blockly < Level
     end.join
   end
 
-  # Display translated custom block text and options
+  # Display translated custom block text
   def localized_shared_blocks(level_objects)
     return level_objects if level_objects.blank?
     level_objects.each do |level_object|
       next if level_object.blank?
-      level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
+      block_text = level_object[:config]["blockText"]
+      if block_text.present?
+        level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
+      end
     end
     return level_objects
   end
 end
-
