@@ -318,6 +318,10 @@ lv:
           TYPE:
             "'sand'": smiltis
             "'planksOak'": ozola dēļi
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": smiltis
       craft_moveForward:
         text: pārvietot uz priekšu
       craft_placeTorch:

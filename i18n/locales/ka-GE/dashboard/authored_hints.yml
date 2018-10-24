@@ -6591,6 +6591,17 @@ ka:
         courseB_starWars_prog9_b: ამ თავსატეხის ამოხსნის ბევრი გზა არსებობს.
         courseB_starWars_prog9_c: |-
           გამოგვადეგებოდა თუ არა აქ`გამეორების` ციკლი?
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: '`მსახიობი 1-ისთვის ??? სურათის დაყენების` ბლოკი შეიძლება გამოყენებული იქნას სცენაზე მსახიობის დასამატებლად.'
+        courseE_playLab_scaffold1_b: ჩასვით `მსახიობის დაყენების` ბლოკი `როდის გაიქცეს` ბლოკის ქვეშ, რათა გამოაჩინოთ თქვენი მსახიობი პროგრამის დასაწყისშივე.
+        courseE_playLab_scaffold1_c: გამოიყენეთ `???-ის ფონად დაყენება` თქვენი სცენისათვის ფონის შესარჩევად.
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_b: უნდა გქონდეთ ოთხი `როდესაც ისარი` მოვლენის ბლოკი ისეთი მიმართულებით, რომ იმოძრაონ თითოეულის ქვეშ.
+        courseE_playLab_scaffold1_c: როდესაც მორჩებით, შეგიძლიათ გადაადგილოთ თქვენი გმირი ისრებიანი ღილაკებით!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: გამოიყენეთ `ქულის დამატება`, ქულის დასამატებლად და `ქულის გამოკლება` - გამოსაკლებად.
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: ამ დონის დასასრულებლად უნდა მოიგოთ, ან წააგოთ. გამოიყენეთ `თამაშის მოგებულად დასრულება` ან `თამაშის წაგებულად დასრულება` ბლოკი დასასრულებლად.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           მიამაგრეთ ეს ბლოკი, ბლოკს `გაშვებისას`:

@@ -83,6 +83,7 @@ fil:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Account sa Microsoft'
+    microsoft_v2_auth: 'Account sa Microsoft'
     clever: 'Clever na Account'
     forgot_password: 'Hindi matandaan ang password?'
     need_confirmation: "Hindi nakatanggap ng kumpirmasyon?"
@@ -106,7 +107,6 @@ fil:
     age: 'Edad'
     user_type: 'Ikaw ba ay mag-aaral o guro?'
     submit: 'Sign up'
-    next: 'Susunod'
     teacher: 'Ikaw ba ay isang guro?'
     valid_username: "Mayroon!"
     invalid_username: "Ang Username ay dapat naglalaman ng at least 5 characters"

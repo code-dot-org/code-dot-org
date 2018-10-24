@@ -288,11 +288,11 @@ da:
           TYPE:
             "'sand'": sand
             "'planksOak'": egetræsplanker
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: flyt fremad
       craft_placeTorch:
         text: placér fakkel
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': kylling

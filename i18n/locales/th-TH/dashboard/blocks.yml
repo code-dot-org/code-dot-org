@@ -298,11 +298,11 @@ th:
           TYPE:
             "'sand'": ทราย
             "'planksOak'": ไม้กระดานต้นโอ๊ค
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ทราย
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeTorch:
         text: วางคบไฟ
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': ไก่

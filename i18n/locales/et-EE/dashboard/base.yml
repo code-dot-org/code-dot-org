@@ -81,6 +81,7 @@ et:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsofti konto'
+    microsoft_v2_auth: 'Microsofti konto'
     clever: 'Tark konto'
     forgot_password: 'Unustasid oma salasõna?'
     need_confirmation: "Ei saanud kinnituse juhiseid?"
@@ -102,7 +103,6 @@ et:
     age: 'Vanus'
     user_type: 'Kas sa oled õpilane või õpetaja?'
     submit: 'Liitu'
-    next: 'Järgmine'
     teacher: 'Kas sa oled õpetaja?'
     valid_username: "Vaba!"
     invalid_username: "Kasutajanimi peab olema vähemalt 5 tähemärgi pikkune"

@@ -95,6 +95,7 @@ nl:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Account
+    microsoft_v2_auth: Microsoft Account
     clever: Slimme Account
     forgot_password: Wachtwoord vergeten?
     need_confirmation: Geen bevestigingsinstructies ontvangen?
@@ -126,7 +127,6 @@ nl:
     age: Leeftijd
     user_type: Bent u een leerling of een leraar?
     submit: Meld je aan
-    next: Volgende
     teacher: Bent u een leraar?
     valid_username: Beschikbaar!
     invalid_username: Gebruikersnaam moet minstens 5 tekens zijn

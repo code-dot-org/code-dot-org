@@ -246,5 +246,4 @@ ne:
         text: place torch
       craft_spawnEntity:
         options:
-          ENTITY:
-            '"chicken"': chicken
+          ENTITY: {}

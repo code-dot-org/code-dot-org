@@ -284,11 +284,11 @@ pt:
           TYPE:
             "'sand'": areia
             "'planksOak'": pranchas de carvalho
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": areia
       craft_moveForward:
         text: segue em frente
       craft_placeTorch:
         text: colocar tocha
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': galinha

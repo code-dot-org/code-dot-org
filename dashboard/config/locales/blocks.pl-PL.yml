@@ -319,11 +319,11 @@ pl:
           TYPE:
             "'sand'": piasek
             "'planksOak'": deski dębowe
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": piasek
       craft_moveForward:
         text: idź do przodu
       craft_placeTorch:
         text: umieść pochodnię
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': kurczak

@@ -1293,64 +1293,504 @@ en:
     '10': '10'
     '5': '5'
     '50': '50'
+  courseA_multi_artist_loops11_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseA_multi_collector_loops11_predict2:
+    I don't know.: Non lo so.
+    0: '? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+    1: ': Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+    2: '? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+    3: ': The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.'
+  courseA_multi_collector_loops3_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseA_multi_maze_seq12_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseA_multi_maze_seq2_predict1:
+    I don't know.: Non lo so.
+  courseB_multi_artist_loops8_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    The artist will draw a single line.: L'artista disegnerà una singola linea.
+  courseB_multi_collector_loops3_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq10_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq10_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq1_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseB_multi_maze_seq1_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_artist_prog6_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The artist draws a square.: Sbagliato. L'artista disegna un quadrato.
+    Look carefully at the code below.  What will happen when you click "Run"?: Guarda molto attentamente il codice riportato nell'area di lavoro. Cosa succede quando si clicca su "Esegui"?
+    The artist draws a square.: L'artista disegna un quadrato.
+    The artist will draw a single line.: L'artista disegnerà una singola linea.
+    The artist will draw a triangle with three equal sides.: L'artista disegnerà un triangolo con tre lati uguali.
+  courseC_multi_artist_prog6_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The artist draws a square.: Sbagliato. L'artista disegna un quadrato.
+    Look carefully at the code below.  What will happen when you click "Run"?: Guarda molto attentamente il codice riportato nell'area di lavoro. Cosa succede quando si clicca su "Esegui"?
+    The artist draws a square.: L'artista disegna un quadrato.
+    The artist will draw a single line.: L'artista disegnerà una singola linea.
+    The artist will draw a square.: L'artista disegnerà un quadrato.
+    The artist will draw a triangle with three equal sides.: L'artista disegnerà un triangolo con tre lati uguali.
   courseC_multi_harvester_loops11_predict1:
     '12': '12'
     '15': '15'
     '4': '4'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
   courseC_multi_harvester_loops11_predict1_2018:
     '12': '12'
     '15': '15'
     '4': '4'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_debugging8_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Scrat goes the wrong way after his final turn.: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
+    Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene dopo che ha già girato nella direzione sbagliata.
+    'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Guarda attentamente il codice riportato di seguito.  Qual è il primo errore che farà fallire l''esecuzione di questo programma? '
+    Scrat takes one too few steps and ends up short of the acorn.: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la ghianda.
+    Scrat will go the wrong way after his final turn.: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
+    'The first error is that Scrat goes the wrong way after his final turn. ': 'Il primo errore è che Scrat va nella direzione sbagliata dopo l''ultima curva. '
+    The program won't fail. Scrat will get to the acorn.: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
+  courseC_multi_maze_debugging8_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Scrat goes the wrong way after his final turn.: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
+    Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene dopo che ha già girato nella direzione sbagliata.
+    'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Guarda attentamente il codice riportato di seguito.  Qual è il primo errore che farà fallire l''esecuzione di questo programma? '
+    Scrat takes one too few steps and ends up short of the acorn.: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la ghianda.
+    Scrat will go the wrong way after his final turn.: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
+    'The first error is that Scrat goes the wrong way after his final turn. ': 'Il primo errore è che Scrat va nella direzione sbagliata dopo l''ultima curva. '
+    The program won't fail. Scrat will get to the acorn.: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
+  courseC_multi_maze_loops10_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_loops2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_programming8_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_maze_programming8_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
   courseC_multi_starWars_predict1:
+    Correct!: Corretto!
     I don't know: Non lo so
   courseC_multi_starWars_predict1_2018:
+    Correct!: Corretto!
     I don't know: Non lo so
+  courseC_multi_starWars_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseC_multi_starWars_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
   courseD_multi_artist_binary8_predict1:
     A: A
     B: B
     C: C
+    Correct!: Corretto!
     D: D
+    Incorrect.: Sbagliato.
+    Take a close look at the code below.  Which image will it create after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Che immagine verrà creata quando cliccherai su "Esegui"?
   courseD_multi_artist_binary8_predict1_2018:
     A: A
     B: B
     C: C
+    Correct!: Corretto!
     D: D
+    Incorrect.: Sbagliato.
+    Take a close look at the code below.  Which image will it create after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Che immagine verrà creata quando cliccherai su "Esegui"?
   courseD_multi_artist_nestedLoops9_predict1:
     A: A
     B: B
     C: C
+    Correct!: Corretto!
+    I don't know.: Non lo so.
   courseD_multi_artist_nestedLoops9_predict1_2018:
     A: A
     B: B
     C: C
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_bee_conditionals1_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseD_multi_bee_conditionals1_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseD_multi_bee_conditionals7_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
+  courseD_multi_bee_conditionals7_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'''
+  courseD_multi_bee_debugging9_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look closely at the code below.  Why won''''t the bee collect all of the nectar when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+  courseD_multi_bee_nestedLoops2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    Look closely at the nested loops below.  What will happen when you click "Run"?: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    The bee will get all of the nectar.: L'ape raccoglierà tutto il nettare.
+    The bee will get only 2 units of nectar.: L'ape raccoglierà solo 2 dosi di nettare.
+    The bee will move forward and get nectar only one time.: L'ape andrà avanti e raccoglierà il nettare solo una volta.
+  courseD_multi_bee_nestedLoops2_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    Look closely at the nested loops below.  What will happen when you click "Run"?: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+    The bee will get all of the nectar.: L'ape raccoglierà tutto il nettare.
+    The bee will get only 2 units of nectar.: L'ape raccoglierà solo 2 dosi di nettare.
+    The bee will move forward and get nectar only one time.: L'ape andrà avanti e raccoglierà il nettare solo una volta.
   courseD_multi_bee_nestedLoops9_predict2:
     '12': '12'
     '4': '4'
     '8': '8'
-    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    13: '? Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    14: ': Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    Look closely at the code below. How much honey will the bee make when you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+    15: '? L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    16: ': L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
   courseD_multi_bee_nestedLoops9_predict2_2018:
     '12': '12'
     '4': '4'
     '8': '8'
-    13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-    14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-    15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-    16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    13: '? Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    14: ': Sbagliato. L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    Look closely at the code below. How much honey will the bee make when you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+    15: '? L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+    16: ': L''ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso. Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4 x 2 = 8!'
+  courseD_multi_collector_debugging10_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+  courseD_multi_collector_debugging10_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'''
+  courseD_multi_farmer_condLoops9_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    1: ': Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    Incorrect. There is no code here for collecting the pumpkin.: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
+    Take a close look at the code below.  What will happen after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    2: '? Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    3: ': Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    The harvester will collect all of the crops, except the pumpkin.: La contadina raccoglierà tutte le colture, eccetto la zucca.
+    The harvester will collect all of the crops.: La contadina raccoglierà tutte le colture.
+    The harvester will not collect any of the crops with the path she is taking.: La contadina non riuscirà a raccogliere nulla seguendo il percorso programmato.
+  courseD_multi_farmer_condLoops9_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    1: ': Sbagliato. Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    Incorrect. There is no code here for picking the pumpkin.: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
+    Take a close look at the code below.  What will happen after you click "Run"?: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    2: '? Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    3: ': Il programma farà in modo che la contadina esegua ripetutamente un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che incontrerà. Ma alla fine non raccoglierà la zucca.'
+    The harvester will collect all of the crops.: La contadina raccoglierà tutte le colture.
+    The harvester will not pick any of the crops with the path she is taking.: La contadina non riuscirà a raccogliere nulla seguendo il percorso programmato.
+    The harvester will pick all of the crops, except the pumpkin.: La contadina raccoglierà tutte le colture, eccetto la zucca.
+  courseD_multi_farmer_ramp13:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+    1: ': Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+  courseD_multi_farmer_ramp14:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+    1: ': Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+    2: '? The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+    3: ': The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.'
+  courseD_multi_farmer_while10_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_farmer_while10_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_farmer_while4_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    Look closely at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    Nothing will happen.: Non succederà nulla.
+    The farmer will never stop removing dirt.: La contadina non smetterà più di rimuovere palate di terra.
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena il mucchio sarà finito.
+  courseD_multi_farmer_while4_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    Look closely at the code below.  What will happen after you click "Run"?: Guarda molto attentamente il codice presente nell'area di lavoro. Cosa succederà quando cliccherai su "Esegui"?
+    Nothing will happen.: Non succederà nulla.
+    The farmer will never stop removing dirt.: La contadina non smetterà più di rimuovere palate di terra.
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La contadina rimuove la terra mentre ce n'è, smettendo appena il mucchio è finito
+    The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena il mucchio sarà finito.
+  courseD_multi_maze_until10_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.'
+    1: ': Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.'
+    2: '? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'
+    3: ': Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.'
+  courseD_multi_maze_until10_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseD_multi_maze_until2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+  courseD_multi_maze_until2_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+  courseD_multi_scrat_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco 'ripeti ... volte', Scrat si muoverà avanti per tre volte.
+    Nothing. Scrat will not move at all.: Niente. Scrat non si muoverà.
+    0: '? Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    1: ': Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat andrà avanti tre volte, girerà, quindi andrà avanti altre tre volte, facendolo arrivare alla ghianda!
+    Scrat will move forward, then turn and crash.: Scrat andrà avanti, quindi girerà e andrà a sbattere.
+    This code uses a new block. What do you think will happen when you press "Run"?: In questo programma c'è un nuovo blocco. Cosa pensi che succederà quando cliccherai su "Esegui"?
+  courseD_multi_scrat_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco 'ripeti ... volte', Scrat si muoverà avanti per tre volte.
+    Nothing. Scrat will not move at all.: Niente. Scrat non si muoverà.
+    0: '? Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    1: ': Visto che il blocco ''vai avanti'' è inserito in un blocco ''ripeti ... volte'', Scrat si muoverà avanti per tre volte. Poi si girerà e andrà avanti altre tre volte, arrivando quindi fino alla ghianda!'
+    Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat andrà avanti tre volte, girerà, quindi andrà avanti altre tre volte, facendolo arrivare alla ghianda!
+    Scrat will move forward, then turn and crash.: Scrat andrà avanti, quindi girerà e andrà a sbattere.
+    This code uses a new block. What do you think will happen when you press "Run"?: In questo programma c'è un nuovo blocco. Cosa pensi che succederà quando cliccherai su "Esegui"?
+  courseE_multi_artist_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseE_multi_artist_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseE_multi_bee_functions_predict1:
+    Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Corretto! Non importa che la quantità di miele sia diversa. La funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
+    0: '? Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    1: ': Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    I don't know.: Non lo so.
+    Incorrect. The function is programmed to handle any amount of honey over 0.: Sbagliato. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The bee will try to collect too much honey from the flowers.: L'ape cercherà di produrre più miele del necessario.
+    The bee won't collect enough honey from the flowers.: L'ape non produrrà la quantità di miele richiesta.
+    The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: Il programma funzionerà anche per risolvere questo esercizio. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The same program will work to solve this puzzle, too.: Lo stesso programma funzionerà anche per risolvere questo esercizio.
+  courseE_multi_bee_functions_predict1_2018:
+    Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Corretto! Non importa che la quantità di miele sia diversa. La funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
+    0: '? Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    1: ': Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    I don't know.: Non lo so.
+    Incorrect. The function is programmed to handle any amount of honey over 0.: Sbagliato. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The bee will try to collect too much honey from the flowers.: L'ape cercherà di produrre più miele del necessario.
+    The bee won't collect enough honey from the flowers.: L'ape non produrrà la quantità di miele richiesta.
+    The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: Il programma funzionerà anche per risolvere questo esercizio. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The same program will work to solve this puzzle, too.: Lo stesso programma funzionerà anche per risolvere questo esercizio.
+  courseE_multi_farmer_functions11_predict:
+    Correct!: Corretto!
+    Look at the functions defined below.  What will the harvester pick?: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
+    The harvester will pick all of the pumpkins.: La contadina raccoglierà tutte le zucche.
+    The harvester will pick the corn.: La contadina raccoglierà la pannocchia.
+    The harvester will pick the lettuce.: La contadina raccoglierà la lattuga.
+    The harvester will pick two pumpkins.: La contadina raccoglierà due zucche.
+  courseE_multi_farmer_functions11_predict_2018:
+    Correct!: Corretto!
+    Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.: Sbagliato. La contadina va avanti fino alla fine del percorso, poi si gira e torna indietro fino a quando raccoglie la lattuga.
+    Look at the functions defined below.  What will the harvester pick?: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
+    The harvester will pick all of the pumpkins.: La contadina raccoglierà tutte le zucche.
+    The harvester will pick the corn.: La contadina raccoglierà la pannocchia.
+    The harvester will pick the lettuce.: La contadina raccoglierà la lattuga.
+    The harvester will pick two pumpkins.: La contadina raccoglierà due zucche.
   courseE_multi_farmer_predict1:
+    Correct!: Corretto!
     I don't know: Non lo so
     0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
     1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
     2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
     3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
   courseE_multi_farmer_predict1_2018:
+    Correct!: Corretto!
     I don't know: Non lo so
     0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
     1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
     2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
     3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+  courseE_multi_farmer_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    1: ': Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    2: '? The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+    3: ': The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+  courseE_multi_farmer_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    1: ': Incorrect. There is a pumpkin and the ''repeat until at pumpkin'' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+    2: '? The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+    3: ': The ''repeat until at pumpkin'' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'
+  courseE_multi_maze_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+    1: ': Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+  courseE_multi_maze_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+    1: ': Putting the ''move forward'' block inside the ''repeat'' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!'
+  courseF_bee_variables_8a_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+    1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+  courseF_multi_artist_for10_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_for10_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_fwp2_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_fwp2_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  courseF_multi_artist_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseF_multi_artist_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    1: ': Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+    2: '? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    3: ': Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+    4: '? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+    5: ': The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'
+  courseF_multi_artist_variables3a_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+    1: ': The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+  courseF_multi_artist_variables3a_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+    1: ': The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.'
+  courseF_multi_bee_conditionals1_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseF_multi_bee_conditionals1_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+    1: ': If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?'
+  courseF_multi_bee_conditionals7_predict2:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+    1: ': Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+  courseF_multi_bee_conditionals7_predict2_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+    1: ': Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there''s not a flower (therefore a honeycomb.).'
+  courseF_multi_bee_for3_predict1:
+    Correct!: Corretto!
+  courseF_multi_bee_for3_predict1_2018:
+    Correct!: Corretto!
+    'I don''t know. ': 'Non lo so. '
+  courseF_multi_bee_functions_predict1:
+    Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Corretto! Non importa che la quantità di miele sia diversa. La funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
+    0: '? Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    1: ': Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
+    I don't know.: Non lo so.
+    Incorrect. The function is programmed to handle any amount of honey over 0.: Sbagliato. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The bee will try to collect too much honey from the flowers.: L'ape cercherà di produrre più miele del necessario.
+    The bee won't collect enough honey from the flowers.: L'ape non produrrà la quantità di miele richiesta.
+    The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: Il programma funzionerà anche per risolvere questo esercizio. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
+    The same program will work to solve this puzzle, too.: Lo stesso programma funzionerà anche per risolvere questo esercizio.
+  courseF_multi_bee_fwp9_predict1:
+    0: '? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    1: ': Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    I don't know.: Non lo so.
+  courseF_multi_bee_fwp9_predict1_2018:
+    0: '? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    1: ': Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+    I don't know.: Non lo so.
+  courseF_multi_playlab_variables4c_predictive1:
+    I don't know.: Non lo so.
+  courseF_multi_playlab_variables4c_predictive1_2018:
+    I don't know.: Non lo so.
+  coursee_prediction_artistfunction2:
+    Correct!: Corretto!
+  coursee_prediction_artistfunction2_2018:
+    Correct!: Corretto!
   csd-post-survey-2018-topic-ai:
     'No': 'No'
     'Yes': 'Sì'
@@ -1705,6 +2145,17 @@ en:
     '3': '3'
     '42': '42'
     '9': '9'
+  grade2_multi_collector_A_predict1:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+    0: '? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
+    1: ': Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
+  grade2_multi_collector_A_predict1_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
+  grade2_multi_collector_A_predict1_copy_2018:
+    Correct!: Corretto!
+    I don't know.: Non lo so.
   msm variables multi 1:
     '15': '15'
     x: x

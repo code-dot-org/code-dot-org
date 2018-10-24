@@ -6648,6 +6648,26 @@ tr:
       courseB_starWars_prog9_2018: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Bunu yapabilirsin!"_
+      courseC19_playLab_EOC1: "Ne kadar öğrendiğin hayret verici! Adım adım bir oyun
+        hazırlayalım.\r\n\r\nAraç kutusunda yeni bloklar kullanarak, yeni bir arka
+        plan seçin, ardından oyununuzda olabilecek bir oyuncu seçin."
+      courseC19_playLab_EOC2: "Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek
+        için olay işleyicileri ve işlemler gibi blokları kullan.\r\n\r\nBu bulmacayı
+        tamamlamak için oyuncuyu hedeflere götürün."
+      courseC19_playLab_EOC3: "Oyununa biraz daha karakter katalım!\r\n\r\nDaha fazla
+        karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı
+        tamamlamak için hedefe ilerleyin."
+      courseC19_playLab_EOC4: "Birden fazla karakter ve aktörlerin hareket ettirilmesi
+        oyun için büyük bir başlangıçtır, ancak bunu gerçek bir oyun gibi hissettirmek
+        için daha fazla şey yapmak zorundayız. Bir puan ekleyelim!\r\n\r\nSkoru değiştirmek
+        için 'aktör dokunursa' gibi etkinlik bloklarını kullanın. Bu bulmacayı tamamlamak
+        için 10 puan topla."
+      courseC19_playLab_EOC5: İyi iş! Çalışan bir oyunun bütün temel bileşenlerine
+        sahipsin. Şimdi oyunu oynamak istediğine emin olmak için biraz vakit geçir.
+        Oyunu kazanmak ya da kaybetmek için bir yol ekle, sonra bu koşullardan birini
+        yerine getirene kadar oyna.
+      courseC19_playLab_EOC6: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla
+        ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       courseC_PlayLab_events_challenge1: "Waddles' ın, dinazorla karşılaştığında ve
         puan aldığında başlangıç konumuna otomatik olarak geri dönmesi için yeni bir
         blok kullan. Bu, oyunu daha zorlu ve eğlenceli hale getirecek!\r\n\r\nOyunu

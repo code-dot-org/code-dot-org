@@ -272,6 +272,10 @@ gl:
           TYPE:
             "'sand'": area
             "'planksOak'": táboas de carballo
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": area
       craft_moveForward:
         text: avance
       craft_placeTorch:

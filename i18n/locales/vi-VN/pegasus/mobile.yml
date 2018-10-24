@@ -782,6 +782,7 @@
   header_tutorials: "Hướng dẫn"
   header_documentation: "Tài liệu"
   user_header_label: "Chào %{username}"
+  user_header_team: "Nhóm"
   user_header_settings: "Tài khoản của bạn"
   user_header_logout: "Đăng xuất"
   user_header_signin: "Đăng nhập"
@@ -793,4 +794,5 @@
   view_all_sections: "Xem tất cả các phần"
   hero_name: 'Minecraft: Hero''s Journey'
   creativity_create: "Tạo"
+  creativity_hoc_coming: "Giờ Lập Trình đã đến…"
   account_sign_up_email_opt_in: "Chúng tôi có thể gửi email cho bạn thông tin cập nhật về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học máy tính khác không?"

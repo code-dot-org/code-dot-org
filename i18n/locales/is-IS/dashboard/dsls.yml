@@ -1,6 +1,54 @@
 ---
 en:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: Stór þríhyrningur
+        Big Triangle|Image|Number|String: stór þríhyrningur | mynd | tala | strengur
+        EXAMPLE 1.solution_blocks, 300: DÆMI 1.solution_blocks, 300
+        Write a contract for a big red triangle that is 100 pixels in size: Skrifaðu samning fyrir stóran rauðan þríhyrning sem er 100 dílar á stærð
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: Dæmi 2.solution_blocks, 300
+        Square Contract: Samningur fyrir "square"
+        Square|Image|Number|String: ferningur | mynd | tala | strengur
+        Write a contract for a purple square that is 15 pixels in size.: Skrifa samning fyrir fjólubláan ferning sem er 15 dílar á stærð.
+      Creating Contracts From Examples 3A:
+        Banner Contract: Samningur fyrir "banner"
+        Banner Function block: Kubbur fallsins "banner" (borði)
+        Examples 3.solution_blocks, 300: Dæmi 3.solution_blocks, 300
+        banner|Image|String: borði | mynd | strengur
+      Creating Contracts From Examples 4:
+        Examples 4.solution_blocks, 300: Dæmi 4.solution_blocks, 300
+        Shrink Contract: Samningur fyrir "shrink" (minnka)
+        Try using the "shrink" function.: Prófaðu að nota fallið "shrink".
+        shrink|Image|Image: minnka | mynd | mynd
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: Samningur um Hönnunaruppskrift 1
+        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+      Eval Contracts 2 B:
+        Rotate Contract: Samningur fyrir "rotate"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate" (snúa)
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
+      Eval Contracts 3 B:
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "text" (texti)
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
+      Eval Contracts D:
+        Rotate Contract: Samningur fyrir "rotate"
+        Write a contract for the rotate function: Skrifaðu samning fyrir fallið "rotate" (snúa)
+        rotate|Image|Number|Image: snúa | mynd | tala | mynd
+      Eval Contracts F:
+        Text Contract: Samningur fyrir "texti"
+        Write a contract for the text function: Skrifaðu samning fyrir fallið "text" (texti)
+        text|Image|String|Number|String: texti | mynd | strengur | tala | strengur
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: Samningur um Hönnunaruppskrift 1
+        0: '? Skrifaðu samning fyrir fallið "wide-rect" sem býr til rétthyrning með tiltekna hæð og í tilteknum lit og með breidd sem er tvöföld hæðin.'
+        1: ': Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+      Rocket Contract 1:
+        - '? Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
+        - ': Eldflaug flýgur af stað á hraðanum 15 metrar á sekúndu. Skrifaðu samning fyrir fallið "hæð-flaugar" sem tekur inn tímann sem flugið hefur staðið talið í sekúndum og skilar hæð eldflaugarinnar á þeim tíma.'
     evaluation_multi:
       U5 evaluation q1:
         'No': 'Nei'

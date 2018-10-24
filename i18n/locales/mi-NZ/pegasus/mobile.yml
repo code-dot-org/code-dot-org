@@ -225,6 +225,7 @@
   header_courses: "Akoranga"
   header_project_gallery: "Ngā Tūmahi"
   user_header_label: "Tēnā koe %{username}"
+  user_header_team: "Tīma"
   user_header_settings: "Taku pūkete"
   user_header_logout: "Takiputa"
   user_header_signin: "Takiuru"
