@@ -396,6 +396,9 @@ var projects = module.exports = {
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
+    },
+    setCurrentSourceVersionId(id) {
+      currentSourceVersionId = id;
     }
   },
 
@@ -787,7 +790,7 @@ var projects = module.exports = {
      */
     const completeAsyncSave = () => new Promise(resolve =>
       this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion)));
+        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion, preparingRemix)));
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
@@ -802,9 +805,11 @@ var projects = module.exports = {
    * @param {object} sourceAndHtml Project source code to save.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @param {boolean} [clientSideRemix] If true this is part of a client-side remix, the initial
+   *   PUT to a new channel ID.
    * @private
    */
-  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
+  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion, clientSideRemix) {
     if (!isEditable()) {
       return;
     }
@@ -839,7 +844,7 @@ var projects = module.exports = {
 
     if (this.useSourcesApi()) {
       let params = '';
-      if (currentSourceVersionId) {
+      if (currentSourceVersionId && !clientSideRemix) {
         params = `?currentVersion=${currentSourceVersionId}` +
           `&replace=${!!replaceCurrentSourceVersion}` +
           `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +

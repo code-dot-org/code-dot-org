@@ -8,16 +8,13 @@
 
 #joindescription
   #calltoaction
-    %h2.join-us-header=hoc_s(:front_join_us_announcements)
-    .category-button.purple-background
-      %b.category-header=hoc_s(:front_join_us_robotics)
-      %span=hoc_s(:front_join_us_robotics_link)
+    %h2.join-us-header=hoc_s(:front_join_us_robotics)
+    =hoc_s(:front_join_us_robotics_link)
     %br
-
+    %br
     .robotics-providers
       - providers.each do |provider|
-        %a.category-link{href: provider[:url], target: "_blank"}
-          .robotics-provider
-            %img{style: "width: 100%; margin-bottom: 20px", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-logo.png"}
-            %img{style: "width: 100%", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-image.png"}
+        %a.category-link.robotics-provider{href: provider[:url], target: "_blank"}
+          %img{style: "width: 100%; margin-bottom: 20px", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-logo.png"}
+          %img{style: "width: 100%", src: "/images/fit-200/robotics/hoc2018/#{provider[:id]}-image.png"}
     .clear
