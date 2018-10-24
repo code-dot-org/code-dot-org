@@ -208,13 +208,21 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.begin_sign_up_tracking(session, split_test: false)
     SignUpTracking.log_oauth_callback AuthenticationOption::CLEVER, session
 
-    user = User.new
-    User.initialize_new_oauth_user user, auth_hash, auth_params
-    user.oauth_token = auth_hash.credentials&.token
-    user.oauth_token_expiration = auth_hash.credentials&.expires_at
-
+    user = User.from_omniauth(auth_hash, auth_params, session)
     prepare_locale_cookie user
-    register_new_user user
+
+    if user.persisted?
+      handle_untrusted_email_signin(user, AuthenticationOption::CLEVER)
+    elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
+      email_already_taken_redirect(
+        provider: AuthenticationOption::CLEVER,
+        found_provider: looked_up_user.provider,
+        email: user.email
+      )
+    else
+      # This is a new registration
+      register_new_user user
+    end
   end
 
   def find_user_by_credential
