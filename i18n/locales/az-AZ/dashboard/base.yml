@@ -68,6 +68,7 @@ az:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
+    microsoft_v2_auth: 'Microsoft Hesabı'
     forgot_password: 'Parolunuzu unutmusunuz?'
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
@@ -83,7 +84,6 @@ az:
     age: 'Yaşınız'
     user_type: 'Siz tələbəsiniz ya müəllim?'
     submit: 'Qeydiyyatdan keçin'
-    next: 'Növbəti'
     teacher: 'Müəllimsiniz?'
     valid_username: "Olar!"
     invalid_username: "İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır"

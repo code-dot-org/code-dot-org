@@ -87,6 +87,7 @@ lt:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft paskyra
+    microsoft_v2_auth: Microsoft paskyra
     forgot_password: Užmiršai savo slaptažodį?
     need_confirmation: Negavai patvirtinimo instrukcijų?
     need_unlock: Negavai atrakinimo instrukcijų?
@@ -108,7 +109,6 @@ lt:
     age: Amžius
     user_type: 'Kas tu: mokinys ar mokytojas?'
     submit: Užsiregistruoti
-    next: Kitas
     teacher: Ar jūs mokytojas?
     valid_username: Galima!
     invalid_username: Naudotojo vardas turi būti ne trumpesnis nei 5 simboliai

@@ -319,11 +319,11 @@ km:
           TYPE:
             "'sand'": ខ្សាច់
             "'planksOak'": ក្តារឈើសែន
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ខ្សាច់
       craft_moveForward:
         text: រំកិល​ទៅមុខ
       craft_placeTorch:
         text: ដាក់ភ្លើងគប់
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': មេមាន់

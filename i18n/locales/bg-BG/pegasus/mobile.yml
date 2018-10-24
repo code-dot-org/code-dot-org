@@ -1315,6 +1315,7 @@
   header_report_bug: "Съобщи за бъгове"
   csp_name: "\"15-\" 16 CS принципи"
   user_header_label: "Здравейте %{username}"
+  user_header_team: "Екип"
   user_header_settings: "Моят акаунт"
   user_header_logout: "Изход"
   user_header_signin: "Вход"
@@ -1326,3 +1327,4 @@
   view_all_sections: "Покажи всички раздели"
   hero_name: 'Minecraft: Пътуването на героя'
   creativity_create: "Създай"
+  creativity_hoc_coming: "Hour of Code идва…"

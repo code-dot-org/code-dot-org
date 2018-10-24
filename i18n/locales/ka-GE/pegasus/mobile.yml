@@ -1339,6 +1339,7 @@
   csp_name: "CS საფუძვლები"
   full_course_category_name: "ყველა კურსი"
   user_header_label: "გამარჯობა %{username}"
+  user_header_team: "გუნდი"
   user_header_settings: "ანგარიშის პარამეტრები"
   user_header_logout: "გასვლა"
   user_header_signin: "შესვლა"

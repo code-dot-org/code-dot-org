@@ -35,8 +35,12 @@ cs:
       2-3 Artist Assessment 1: 'Hodnocení: Dokončete vykreslení posledního zubu, šířka
         425 pixelů a výška 25 pixelů.'
       2-3 Artist Debugging 1: Můžeš udělat tento klobouk s nejvyšší délkou 100?
-      2-3 Artist Debugging 10: 'Směrová podložka na mém herním zařízení je příliš
-        úzká. Pokyn: Udělej to širší o 10 pixelů'
+      2-3 Artist Debugging 10: |-
+        Směrové tlačítka na mém herním ovladači jsou příliš úzká.
+
+        Můžeš je udělat širší od 10 pixelů?
+
+        Zkus nejprve kód spustit, abys viděl(a), co je špatně.
       2-3 Artist Debugging 11: Pomoz mi dokončit mé krásné sněhové vločky. Kolikrát
         musím "opakovat", abych to dokončil?
       2-3 Artist Debugging 12: Mám  přidat vlnu oceánu do této scény.  Můžeš mi pomoci?
@@ -54,8 +58,10 @@ cs:
         to udělat, aby to vypadalo jako C?
       2-3 Artist Debugging 8: Můj Větrník není dokončen. Kolikrát je to třeba opakovat,
         aby se to dokončilo?
-      2-3 Artist Debugging 9: 'Kód pro tento kmen je nesprávný. Rada: Úhel je mimo
-        o 60 stupňů'
+      2-3 Artist Debugging 9: |-
+        Něco nefunguje!
+
+        Kód pro tento stonek je chybný. Zvládneš vymyslet, jak umělce navést na správnou cestu?
       2-3 Artist Debugging Assessment 1: 'Tento tvar je příliš malý. Můžeš jej udělat
         větší? Rada: mělo by to být delší na každé straně o 75 pixelů.'
       2-3 Artist Free Play: Zahraj si zdarma! Nakresli si něco, co bys chtěl.
@@ -196,17 +202,17 @@ cs:
       2-3 Bee Conditionals 3: Pomoz mi sesbírat všechen nektar z květů a udělat med.
         Použij cyklus.
       2-3 Bee Conditionals 4: Pomoz mi sesbírat nektar z květů a udělat všechen med.
-      2-3 Bee Conditionals 5: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale
-        neznáš, který je z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li.
-        Zkontroluj, zda nektar je roven 1 pomocí if blok.
+      2-3 Bee Conditionals 5: |-
+        Buď opatrný a nesbírej nektar z fialové květiny, pokud žádný nemá.
+        Musíš nejprve zkontrolovat, jestli je nektar roven 1, pomocí bloku `pokud nektar`.
       2-3 Bee Conditionals 6: Zkontroluj tento květ s "if" blokem ke zjištění, zda
         je k dispozici nektar.
-      2-3 Bee Conditionals 7: Sbírej nektar z každého květu. když je.
+      2-3 Bee Conditionals 7: Sbírej nektar z každého květu, ale jen když tam je.
       2-3 Bee Conditionals 8: Toto pole má červené a fialové květy. Červené květy
         znají množství nektaru, ale u fialových není známo. Sesbírejte všechen nektar.
       2-3 Bee Conditionals 9: Sesbírejte všechen nektar z každého květu.
-      2-3 Bee Conditionals Assessment 1: 'Hodnocení: Sesbírat všechen nektar. Buď
-        opatrný, abys nesbíral nektar z fialového květu, nemá-li.'
+      2-3 Bee Conditionals Assessment 1: 'Hodnocení: Sesbírej všechen nektar. Buď
+        opatrný, abys nesbíral nektar z fialového květu, pokud ho nemá.'
       2-3 Bee Debugging 1: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral
         všechen nektar a udělal všechen med.
       2-3 Bee Debugging 10: Tyto bloky mě opravdu štvou. Oprav chybu(y), abys sesbíral
@@ -477,7 +483,7 @@ cs:
         Budeš potřebovat pětkrát použít funkci "nakreslit čtverec".
       4-5 Artist For Loops 7: 'Nakresli stejné čtverce, ale použij blok "počítat s"
         ke změně rozměrů. Umístí blok "čítač" do funkce "nakreslit čtverec". Rada:
-        Je to v kategorii proměnných.'
+        Je to v kategorii Proměnné.'
       4-5 Artist For Loops 8: Umíš dokončit program umístěním bloků dovnitř bloku
         "for", které počítá od 10 do 200 po 10? Blok "for" lze najít v kategorii cyklů.
       4-5 Artist For Loops 9: Tyto kružnice jsou velikosti 5, 10, 15, 20, 25, 30 a
@@ -755,8 +761,8 @@ cs:
         "tvar" jako základ, vytvoř 3 tvary domu každý o 20 pixelů větší než poslední,
         začíná se na délce 50 pixelů. Použití čítače cyklu mohlo by být užitečné. '
       Bee Recommended Blocks test: Fialové květiny mohou mít buď 1 nebo 0 nektaru,
-        ale neznáš, který z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li
-        jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
+        ale neznáš kolik! Buď opatrný, nesbírej nektar z fialového květu, pokud tam
+        žádný není. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
       Bergeron Robot Maze1: 'Můžeš mi pomoci chytit zlobivé prase? Slož dohromady
         několik bloků "posunout vpřed" a stiskni tlačítko "Spustit". '
       Brad Spooky House Copy: 'Volná hra: Zde jsou funkce, které jste napsali a ještě
@@ -852,6 +858,8 @@ cs:
       Calc Circles of Eval 9: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Course 2 Bee Loops 1: 'Ahoj, já jsem včela. Pomůžeš mi sesbírat nektar z těchto
         květin? '
+      Course 2 Bee Loops 3: Nyní použij nový blok opakuj k sesbírání všeho nektaru
+        a vyrobení všeho med.
       Course 2 Maze Loops 1: Můžeš mě dostat k prasátku pomocí 5 bloků?
       Course 4 2: Včela chce teď právě jen nektar. Pamatuj si, že ne všechny objekty
         jsou květiny, takže sbírat nektar lze jen na květinách.
@@ -2011,19 +2019,19 @@ cs:
         vlny z obou ovcí.
       Overworld Shear Sheep_2018: Čas stříhání ovcí! Použij povel "ostříhej" k získání
         vlny z obou ovcí.
-      PDK5 Conditionals 1: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš,
-        který z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej.
+      PDK5 Conditionals 1: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš
+        kolik! Buď opatrný, nesbírej nektar z fialového květu, pokud tam žádný není.
         Zkontroluj, zda nektar je roven 1 pomocí if bloku.
       PDK5 Functions 2: Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky
         k nakreslení čtverce do funkce nazvané "nakreslit čtverec". Můžeš použít funkci
         "nakreslit čtverec" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů.
       PS - test - pixelation: Dokonči tvar X vepsáním nul a jedniček
-      PS copy 2-3 Bee Conditionals 5: Fialové květiny mohou mít buď 1 nebo 0 nektaru,
-        ale neznáš, který je z nich! Buď opatrný nesbírej nektar z fialového květu,
-        nemá-li. Zkontroluj, zda nektar je roven 1 pomocí if blok.
+      PS copy 2-3 Bee Conditionals 5: |-
+        Buď opatrný a nesbírej nektar z fialové květiny, pokud žádný nemá.
+        Musíš nejprve zkontrolovat, jestli je nektar roven 1, pomocí bloku `pokud nektar`.
       Prompt Test: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
-      Quantum Bee: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který
-        z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej. Zkontroluj,
+      Quantum Bee: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš kolik!
+        Buď opatrný, nesbírej nektar z fialového květu, pokud tam žádný není. Zkontroluj,
         zda nektar je roven 1 pomocí if bloku.
       Ryan - 4-5 Bee Conditionals 2: Včela chce právě teď jen nektar. Ne všechny objekty
         jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá květ. Pokud
@@ -2243,7 +2251,15 @@ cs:
       collector example: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil hádanku.
       collectorDebugVideo2: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil
         hádanku.
+      course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
+        med.
+      course2_bee_conditionals_challenge2: Sesbírej všechen nektar a vyrob všechen
+        med.
       course2_collector_loops_challenge2: Získejte všechen poklad!
+      course2_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech
+        *10* kousků pokladu?
+      course2_collector_prog_challenge2: Je tu 20 kusů pokladu. Sesbírej alespoň polovinu
+        z nich, abys dokončil tuto výzvu!
       course2_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
       course2_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
       course2_maze_loops_challenge1: 'Scrat chce teď použít cykly k nalezení žaludu! '
@@ -2296,6 +2312,10 @@ cs:
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2018: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
+      courseC_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech
+        **10** kousků pokladu?
+      courseC_collector_prog_challenge1_2018: Podívejte se pozorně! Můžete získat
+        všech **10** kousků pokladu?
       courseC_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a_2018: Sesbírej všechnu kukuřici.
@@ -2336,8 +2356,20 @@ cs:
         nakreslí tento obrázek?
       courseD_autorun_binary7_2019: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
+      courseD_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals10_2018: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals9_2018: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals_challenge2: Sesbírej všechen nektar a vyrob všechen
+        med.
+      courseD_bee_conditionals_challenge2_2018: Sesbírej všechen nektar a vyrob všechen
+        med.
+      courseD_bee_conditionals_challenge3: Sesbírej všechen nektar a vyrob všechen
+        med.
       courseD_bee_debugging3: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se
         sesbíral všechen nektar a udělal všechen med.
+      courseD_bee_debugging6: 'Výzva: Oprav chyby, abys sesbíral všechen nektar a
+        vyrobil všechen med.'
       courseD_bee_nestedLoops3: Sesbírat všechen nektar z každého květu. Použij vnořené
         cykly.
       courseD_bee_nestedLoops5: 'Sesbírej všechen nektar z každého květu a udělej
@@ -2377,6 +2409,8 @@ cs:
         nenarazí do konečného terče.
       courseD_debugging_3: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral
         všechen nektar a udělal všechen med.
+      courseD_debugging_6: 'Výzva: Oprav chyby, abys sesbíral všechen nektar a vyrobil
+        všechen med.'
       courseD_maze_nestedLoops4: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops4_2018: Dostaň mě ke slunečnici!
       courseD_maze_nestedLoops6: Dostaň mě ke slunečnici!
@@ -2419,6 +2453,8 @@ cs:
         pomocí jediného cyklu?
       courseF_artist_for_challenge2_2018: Umíš zjistit, jak znovu vytvořit tuto kresbu
         pomocí jediného cyklu?
+      courseF_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
+      courseF_bee_conditionals10_2018: Sesbírej všechen nektar a vyrob všechen med.
       courseF_bee_for8: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3, 6,
         9, 12, 15? \r\n"
       courseF_bee_for8_2018: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3,
@@ -2612,16 +2648,16 @@ cs:
       grade3_Conditionals_11: Sbírej nektar a udělej med. Buď opatrný, nesbírej nektar
         z fialového květu, když nemá.
       grade3_Conditionals_12: Sbírej nektar ze všech čtyř květů.
-      grade3_Conditionals_13: 'Hodnocení: Sesbírat všechen nektar. Buď opatrný, abys
-        nesbíral nektar z fialového květu, nemá-li.'
+      grade3_Conditionals_13: 'Hodnocení: Sesbírej všechen nektar. Buď opatrný, abys
+        nesbíral nektar z fialového květu, pokud ho nemá.'
       grade3_Conditionals_2: Pomoz mi sesbírat všechen nektar z květů a udělat med.
         Použij cyklus.
-      grade3_Conditionals_3: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš,
-        který je z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li. Zkontroluj,
-        zda nektar je roven 1 pomocí if blok.
+      grade3_Conditionals_3: |-
+        Buď opatrný a nesbírej nektar z fialové květiny, pokud žádný nemá.
+        Musíš nejprve zkontrolovat, jestli je nektar roven 1, pomocí bloku `pokud nektar`.
       grade3_Conditionals_4: Zkontroluj tento květ s "if" blokem ke zjištění, zda
         je k dispozici nektar.
-      grade3_Conditionals_5: Sbírej nektar z každého květu. když je.
+      grade3_Conditionals_5: Sbírej nektar z každého květu, ale jen když tam je.
       grade3_Conditionals_6: Toto pole má červené a fialové květy. Červené květy znají
         množství nektaru, ale u fialových není známo. Sesbírejte všechen nektar.
       grade3_Conditionals_7: Sesbírejte všechen nektar z každého květu.
@@ -2668,6 +2704,10 @@ cs:
       grade3_Loops_9: Sesbírej nektar z každého květu a udělej med v každé plástvi.
       grade3_Loops_TeacherIDo: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej
         nektar z každého květu. '
+      grade3_bee_conditionals_new3a: Sesbírej všechen nektar a vyrob všechen med.
+        Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé
+        místečko, jestli je tam květina nebo plástev.
+      grade3_bee_conditionals_new3b: Sesbírej všechen nektar a vyrob všechen med.
       grade3_bee_conditionals_quantum2: Včela chce právě teď jen nektar. Všechny objekty
         jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud
         ano, můžeš získat nektar.
@@ -2760,6 +2800,9 @@ cs:
       grade4_artist_parameters_trianglesx: 'Umíš dokončit tuto kresbu? Rada: Strany
         každého trojúhelníku jsou větší než ten předcházející o 25 pixelů.  První
         trojúhelník má stranu 25 pixelů.'
+      grade4_bee_conditionals_new3a: Sesbírej všechen nektar a vyrob všechen med.
+        Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé
+        místečko, jestli je tam květina nebo plástev.
       grade4_bee_conditionals_quantum1: Včele nelze říct, zda je to květina nebo plástev.
         Sbírej nektar z květů, ale nejprve zkontrolujte, zda je to květina nebo plástev.
       grade4_bee_conditionals_quantum2: Včela chce právě teď jen nektar. Všechny objekty
@@ -2981,6 +3024,8 @@ cs:
         sesbírat tento nektar odpočítáváním od 5 do 1 po 1.
       grade5_bee_for_loops8: "Máš to! Jak by být tvůj přírůstek ke sběru nektaru 3,
         6, 9, 12, 15? \r\n"
+      grade5_bee_parameters_new8: Vyrobil si skvělou funkci! A teď na vlastní pěst.
+        Sesbírej všechen nektar. Vyrob všechen med.
       grade5_playlab_freeplay: 'Volný čas hraní! Pobab se se všemi bloky v tvém panel
         nástrojů. '
       grade5_playlab_variables1: Tentokrát se není nutné psát jakýkoli kód, stačí

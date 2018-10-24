@@ -989,6 +989,7 @@
   header_stats: "สถิติ"
   header_help_us: "ช่วยเรา"
   user_header_label: "สวัสดี %{username}"
+  user_header_team: "ทีม"
   user_header_settings: "บัญชีของฉัน"
   user_header_logout: "ออกจากระบบ"
   user_header_signin: "เข้าสู่ระบบ"
@@ -997,3 +998,4 @@
   signing_in: "เข้าสู่ระบบ"
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
   creativity_create: "สร้าง"
+  creativity_hoc_coming: "Hour of Code กำลังมา…"

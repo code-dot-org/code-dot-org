@@ -319,11 +319,11 @@ fr:
           TYPE:
             "'sand'": sable
             "'planksOak'": planches en chêne
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sable
       craft_moveForward:
         text: avancer plus
       craft_placeTorch:
         text: placer la torche
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': poulet

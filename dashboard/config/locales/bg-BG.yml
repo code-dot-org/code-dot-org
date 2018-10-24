@@ -85,6 +85,7 @@ bg:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft профил
+    microsoft_v2_auth: Microsoft профил
     clever: Умен профил
     forgot_password: Забравена парола?
     need_confirmation: Не сте получили инструкции за потвърждение ?
@@ -123,7 +124,6 @@ bg:
     age: Възраст
     user_type: Вие ученик или преподавател сте?
     submit: Регистрирайте се
-    next: Напред
     teacher: Учител ли сте?
     valid_username: Налично!
     invalid_username: Потребителското име трябва да бъде най-малко 5 знака

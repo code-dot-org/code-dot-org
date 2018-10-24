@@ -84,6 +84,7 @@ cs:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft účet'
+    microsoft_v2_auth: 'Microsoft účet'
     clever: 'Chytrý účet'
     powerschool: 'PowerSchool účet'
     forgot_password: 'Zapomněl jsi heslo?'
@@ -111,7 +112,6 @@ cs:
     age: 'Věk'
     user_type: 'Jste student nebo učitel?'
     submit: 'Registrace'
-    next: 'Další'
     teacher: 'Jste učitel?'
     valid_username: "K dispozici!"
     invalid_username: "Uživatelské jméno musí mít nejméně 5 znaků"

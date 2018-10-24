@@ -1333,6 +1333,7 @@
   header_documentation: "Документация"
   csp_name: "«16 - 17» Основы информатики"
   user_header_label: "Привет, %{username}"
+  user_header_team: "Команда"
   user_header_settings: "Настройки аккаунта"
   user_header_logout: "Выйти"
   user_header_signin: "Вход"
@@ -1344,4 +1345,5 @@
   user_header_view_my_projects: "Показать мои проекты"
   hero_name: 'Майнкрафт: Путешествие Героя'
   creativity_create: "Создать"
+  creativity_hoc_coming: "Час кода настал…"
   account_sign_up_email_opt_in: "Можем ли мы оповещать вас об обновлениях курсов, локальных возможностях и других новостях из области информатики по средствам электронной почты?"

@@ -1439,6 +1439,7 @@
   csd_2018_name: "計算機科學探索"
   full_course_category_name: "完整課程"
   user_header_label: "嗨，%{username}"
+  user_header_team: "團隊"
   user_header_settings: "帳戶設定"
   user_header_logout: "登出"
   user_header_signin: "登入"
@@ -1477,5 +1478,6 @@
   google_sign_in_instruct: '前提是他們應該要「用 Google 帳戶登入」：'
   applab-intro_name: App Lab 介紹
   creativity_create: "建立"
+  creativity_hoc_coming: "一小時的程式設計課程活動即將展開…"
   account_sign_up_email_opt_in: "我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？"
   account_sign_up_child_accept_terms: "我確定我的監護人已允許我使用 Code.org 提供的服務。 "

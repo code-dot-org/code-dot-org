@@ -85,6 +85,7 @@ ar:
     twitter: تويتر
     facebook: فيس بوك
     windowslive: حساب Microsoft
+    microsoft_v2_auth: حساب Microsoft
     forgot_password: نسيت كلمة المرور؟
     need_confirmation: لم تستلم تعليمات تأكيد الحساب؟
     need_unlock: لم تتلقى تعليمات فتح الحساب؟
@@ -111,7 +112,6 @@ ar:
     age: العمر
     user_type: هل أنت طالب أو معلّم؟
     submit: تسجيل
-    next: التالي
     teacher: هل أنت معلم؟
     valid_username: متاح!
     invalid_username: اسم المستخدم يجب ان يكون على الاقل 5 احرف
@@ -688,6 +688,13 @@ ar:
     rename: إعادة تسمية
     save: حفظ
     delete: حذف
+    import: استيراد
+    share_link_import_bad_link_header: لابط المشاركة هذا غير معررف
+    share_link_import_bad_link_body: 'لا يمكن أن استيراد رابط المشاركة هذا. تأكد من
+      استخدام رابط من Minecraft: Agent puzzle، وأن تقوم بنسخ الرابط بالكامل.'
+    share_link_import_error_header: حدث خطأ ما.
+    share_link_import_error_body: حدثت مشكله في استيراد رابط المشاركة. الرجاء المحاولة
+      مرة اخرى.
     exit: العودة إلى الدورة التدريبية
     my_projects: مشاريعي
     project_gallery: المشاريع

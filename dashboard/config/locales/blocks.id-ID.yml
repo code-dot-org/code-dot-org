@@ -442,11 +442,11 @@ id:
           TYPE:
             "'sand'": pasir
             "'planksOak'": papan kayu pohon ek
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pasir
       craft_moveForward:
         text: Gerak maju
       craft_placeTorch:
         text: letakkan obor
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': ayam

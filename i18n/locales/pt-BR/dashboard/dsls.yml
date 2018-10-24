@@ -547,14 +547,24 @@ en:
         title: título
       OPD-K5 Stage3aGo:
         title: título
+      PDAlg End of P1:
+        End of Phase 1: Fim da Fase 1
       PDAlg Facilitator Test:
         title: título
+      PDAlg Facilitators:
+        Meet Your Facilitators: Conheça Seus Facilitadores
+      PDAlg Scope:
+        Scope and Sequence: Escopo e Sequência
       PDAlg Teacher Dashboard:
         Course Progress: Progresso do curso
       PDAlg Teacher Introduction:
         Introduce yourself: Apresente-se
+      PDK5 Beyond C:
+        Beyond: Além
       PDK5 CS Video:
         Computer Science: Ciência da Computação
+      PDK5 Connections:
+        Connections: Conexões
       PDK5 Glossary C:
         Vocabulary: Vocabulário
       PDK5 Pair Programming 1:
@@ -1071,6 +1081,8 @@ en:
         What to Expect: O que esperar
       sciPD what to expect 16-17:
         What to Expect: O que esperar
+      sciPD2 thanks:
+        Great Job!: Ótimo trabalho!
       sciPD2Part4_S1_L3:
         title: título
       sciPD2Part4_S2_L1:
@@ -1083,12 +1095,21 @@ en:
         title: título
       sciPD2Part4_S3_L3:
         title: título
+      sciPD2b end:
+        Thank You!: Obrigado!
+      sciPD3 end:
+        Thank You!: Obrigado!
       sciPD3 mods2:
         title: título
+      sciPD3 thanks:
+        Great Job!: Ótimo trabalho!
       sciPD33 earth1:
         title: título
       sciPD33 earth2:
         title: título
+      sciPD3pre1 thanks:
+        Thank You: Obrigado
+        Thanks for your time: Obrigado pelo seu tempo
       sciPDpart4_S1_L1:
         title: título
       swipeRightPassThrough:
@@ -1266,12 +1287,75 @@ en:
         '2': '2'
       CSD U3 keyinput match:
         Question: Pergunta
+      CSD U6 LED match:
+        "<img src=\"https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png\">": <img src="https://images.code.org/705a5d0ce82fb28f85f0e148212c43a7-image-1510946591583.21.42 AM.png">
+        Match the Block: Associe os Blocos
       CSDU2 Match RGB Colors:
         Question: Pergunta
+      CSPPD unit matching:
+        Unit 1: Unidade 1
+        Unit 2: Unidade 2
+        Unit 3: Unidade 3
+        Unit 4: Unidade 4
+        Unit 5: Unidade 5
+        data extraction, modeling, and processing: extração de dados, modelagem e processamento
+        foundations in the digital representation of information: princípios básicos da representação digital de informações
+        planning, organizing, and completion of performance tasks: planejamento, organização e realização de tarefas de desempenho
+        programming principles and JavaScript: princípios de programação e JavaScript
+        structure and design of the internet: estrutura e design da internet
       CSPU5_U3L14 - Matching Events to Description:
         click: clicar
       ECSPD Growth Mindset Reflection Q:
         Growth Mindset: Mentalidade de crescimento
+        Not Yet: Ainda não
+      ECSPD Online U1D10 Assessment 1:
+        0: '? Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.'
+        1: ': Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.'
+        2: '? Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.'
+        3: ': Easily converted to a graph or data table. Can easily generate statistics and draw simple conclusions. Can easily compare with similar representations of data.'
+        'Image: Advantages': 'Imagem: Vantagens'
+        'Image: Disadvantages': 'Imagem: Desantagens'
+        'List of objects: Advantages': 'Lista de objetos: Vantagens'
+        'List of objects: Disadvantages': 'Lista de objetos: Desvantagens'
+        4: '? More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.'
+        5: ': More comprehensive set of data. Can be used to generate multiple different data sets. Easy for a person to draw intuitive conclusions.'
+      ECSPD Online U1D17-19 Assessment 2:
+        Artificial Intelligence: Inteligência Artificial
+        Machine Learning: Aprendizado de Máquina
+      ECSPD unit matching:
+        Unit 1: Unidade 1
+        Unit 2: Unidade 2
+        Unit 3: Unidade 3
+        Unit 4: Unidade 4
+        Unit 5: Unidade 5
+        create programs to solve computational problems: crie programas para resolver problemas computacionais
+        introduction to the concepts of computer and computing: introdução aos conceitos de computador e computação
+        use computing to manage and interpret data: use a computação para gerenciar e interpretar dados
+        website development and design: desenvolvimento e design de websites
+      ECSPD1 Matching Unit Descriptions and Numbers:
+        Unit 1: Unidade 1
+        Unit 2: Unidade 2
+        Unit 3: Unidade 3
+        Unit 4: Unidade 4
+        Unit 5: Unidade 5
+        create programs to solve computational problems: crie programas para resolver problemas computacionais
+        introduction to the concepts of computer and computing: introdução aos conceitos de computador e computação
+        use computing to manage and interpret data: use a computação para gerenciar e interpretar dados
+        website development and design: desenvolvimento e design de websites
+      K-1 Artist 2 Match 1:
+        "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
+        "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
+        "/script_assets/k_1_images/artist_images/square_next_ball.png": "/script_assets/k_1_images/artist_images/square_next_ball.png"
+        "<br/><br/>above": "<br/><br/>acima"
+        "<br/><br/>below": "<br/><br/>abaixo"
+      K-1 Artist 2 Match 2:
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        Match the shapes based on type.: Associe as formas com base no tipo.
+      K-1 Artist 2 Match 3:
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        Match the shapes based on type.: Associe as formas com base no tipo.
       K-1 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
@@ -1282,6 +1366,10 @@ en:
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
       K-1 Maze Match 1:
         Instructions: Instruções
+      K-1 Move It Match 1:
+        "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
+      Match math to circles:
+        "(2 + 3 * 5) / 2": "(2 + 3 * 5) / 2"
       PDAlg Design Recipe Video:
         Definition: Definição
       PDAlg Types Video:
@@ -1481,33 +1569,59 @@ en:
     '5': '5'
     '6': '6'
     '7': '7'
+  SG csp_U3_turtle_subgoal_q2_mc:
+    "<img src=\"https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png\">": <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
   Submittable Multi:
     blue: azul
     green: verde
     red: vermelho
+    yellow: amarelo
   Test Contained Multi:
     '0': '0'
     '1': '1'
     '2': '2'
     '4': '4'
+    No, that is 1 * 1.: Não, isso é 1 * 1.
   U1L07 Assessment 1:
     A: A
     B: B
     C: C
     D: D
     E: L
+  U1L2 Multiple Choice Assessment Question:
+    Two questions which share the same answer: Duas questões que compartilham a mesma resposta
+  U1L2 Multiple Choice Assessment Question_2018:
+    Two questions which share the same answer: Duas questões que compartilham a mesma resposta
+  U1L3 Multiple Choice:
+    1 bit: 1 bit
+  U1L3 Multiple Choice_2018:
+    1 bit: 1 bit
+  U1L4 Multiple Choice:
+    AAAA: AAAA
+    AABB: AABB
+    ABAB: ABAB
+    ABBB: ABBB
+    BBBB: BBBB
+  U1L4 Multiple Choice_2018:
+    AAAA: AAAA
+    AABB: AABB
+    ABAB: ABAB
+    ABBB: ABBB
+    BBBB: BBBB
   U1L6 Assessment multiple choice:
     '10': '10'
     '12': '12'
     '4': '4'
     '6': '6'
     '8': '8'
+    'Multiple Choice: Number Systems': 'Múltipla escolha: Sistemas numéricos'
   U1L6 Assessment multiple choice_2018:
     '10': '10'
     '12': '12'
     '4': '4'
     '6': '6'
     '8': '8'
+    'Multiple Choice: Number Systems': 'Múltipla escolha: Sistemas numéricos'
   U1L8 Multiple Choice:
     '10': '10'
     '13': '13'
@@ -1522,6 +1636,16 @@ en:
     '16': '16'
     17: '? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
     18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+  U2L02 Assessment 3:
+    algorithm: algoritmo
+  U2L02 Assessment 3_2018:
+    algorithm: algoritmo
+  U2L02 Assessment 4:
+    From: De
+    To: Para
+  U2L02 Assessment 4_2018:
+    From: De
+    To: Para
   'U2L06 - MC: Which is an MST?':
     0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
     A: A
@@ -1529,19 +1653,39 @@ en:
     C: C
     D: D
     E: L
+  U2L07 Assessment3:
+    Question 3: Questão 3
   U2L08 Assessment 1:
     '11': '11'
     '5': '5'
     '6': '6'
     '8': '8'
     '9': '9'
+  U2L10 Assessment1:
+    A. Redundancy: A. Redundância
+    B. Hierarchy: B. Hierarquia
+  U2L10 Assessment1_2018:
+    A. Redundancy: A. Redundância
+    B. Hierarchy: B. Hierarquia
   U2L13 Assessment4:
     '26': '26'
+    26 x 25: 26 x 25
   U2L13 Assessment4_2018:
     '26': '26'
+    26 x 25: 26 x 25
   U2L14 Assessment3:
     'false': 'falso'
     'true': 'verdadeiro'
+  U2L17 - One Way functions Def MC:
+    Easy to create and easy to solve: Fácil de criar e fácil de solucionar
+    Easy to create and hard to solve: Fácil de criar e difícil de solucionar
+    Hard to create and easy to solve: Difícil de criar e fácil de solucionar
+    Hard to create and hard to solve: Difícil de criar e difícil de solucionar
+  U2L17 Free Responses Assessment 1:
+    Easy to create and easy to solve: Fácil de criar e fácil de solucionar
+    Easy to create and hard to solve: Fácil de criar e difícil de solucionar
+    Hard to create and easy to solve: Difícil de criar e fácil de solucionar
+    Hard to create and hard to solve: Difícil de criar e difícil de solucionar
   U2L19 multichoice 13 MOD 17:
     '0': '0'
     '13': '13'
@@ -1570,6 +1714,16 @@ en:
     '15': '15'
     '20': '20'
     '5': '5'
+  U2L3 Assessment 2:
+    12 users: 12 usuários
+    32 users: 32 usuários
+    6 users: 6 usuários
+    64 users: 64 usuários
+  U2L3 Assessment 2_2018:
+    12 users: 12 usuários
+    32 users: 32 usuários
+    6 users: 6 usuários
+    64 users: 64 usuários
   U3L07 - MC remove line of code loops:
     '1': '1'
     '14': '14'
@@ -1667,6 +1821,16 @@ en:
     '10': '10'
     '5': '5'
     '50': '50'
+  courseA_multi_artist_loops11_predict2:
+    The artist won't move at all.: O artista não se moverá de forma alguma.
+  courseA_multi_collector_loops3_predict1:
+    Laurel won't move at all.: Laurel não se moverá de forma alguma.
+  courseB_multi_collector_loops3_predict1:
+    Laurel won't move at all.: Laurel não se moverá de forma alguma.
+  courseB_multi_maze_seq10_predict1:
+    The bird will not move at all.: O pássaro não se moverá de forma alguma.
+  courseB_multi_maze_seq10_predict1_2018:
+    Scrat will not move at all.: Scrat não se moverá de forma alguma.
   courseC_multi_harvester_loops11_predict1:
     '12': '12'
     '15': '15'
@@ -1675,6 +1839,8 @@ en:
     '12': '12'
     '15': '15'
     '4': '4'
+  courseC_multi_maze_loops2_predict1:
+    The bird will not move.: O pássaro não irá se mover.
   courseC_multi_starWars_predict1:
     I don't know: Eu não sei
   courseC_multi_starWars_predict1_2018:
@@ -1713,6 +1879,18 @@ en:
     14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
     15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
     16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseD_multi_maze_until2_predict1:
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    The bird will not move at all.: O pássaro não se moverá de forma alguma.
+  courseD_multi_maze_until2_predict1_2018:
+    0: '? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    1: ': Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+    2: '? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    3: ': Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+    The bird will not move at all.: O pássaro não se moverá de forma alguma.
   courseE_multi_farmer_predict1:
     I don't know: Eu não sei
     0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
@@ -1833,6 +2011,10 @@ en:
     0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
     1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
     Other: Outros
+  csp_U3_turtle_subgoal_q2_mc:
+    "<img src=\"https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png\">": <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+  csp_U3_turtle_subgoal_q2_mc_2018:
+    "<img src=\"https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png\">": <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
   csp_ap_exam_signup:
     'No': 'Não'
     'Yes': 'Sim'
@@ -1939,16 +2121,19 @@ en:
     '4': '4'
     '7': '7'
     '9': '9'
+    ab: ab
   cspu5_assess3_array1_2018:
     '10': '10'
     '4': '4'
     '7': '7'
     '9': '9'
+    ab: ab
   cspu5_assess3_array1_exam_prep:
     '10': '10'
     '4': '4'
     '7': '7'
     '9': '9'
+    ab: ab
   cspu5_assess3_array2:
     '2': '2'
     '3': '3'
@@ -2069,6 +2254,39 @@ en:
   cspu5_assess3_mysterySwap_exam_prep:
     a: a
     d: d
+  cspu5_assess3_swap:
+    "<img src=\"https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png\">": <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+    "<img src=\"https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png\">": <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+    "<img src=\"https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png\">": <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+    "<img src=\"https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png\">": <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+  cspu5_assess3_swap_2018:
+    "<img src=\"https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png\">": <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+    "<img src=\"https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png\">": <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+    "<img src=\"https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png\">": <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+    "<img src=\"https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png\">": <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+  cspu5_assess3_swap_exam_prep:
+    "<img src=\"https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png\">": <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+    "<img src=\"https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png\">": <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+    "<img src=\"https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png\">": <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+    "<img src=\"https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png\">": <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+  cspu5_assess4_arrayContains:
+    "<img src=\"https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png\">": <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+    "<img src=\"https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png\">": <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+    "<img src=\"https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png\">": <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+    "<img src=\"https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png\">": <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+    "<img src=\"https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png\">": <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+  cspu5_assess4_arrayContains_2018:
+    "<img src=\"https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png\">": <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+    "<img src=\"https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png\">": <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+    "<img src=\"https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png\">": <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+    "<img src=\"https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png\">": <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+    "<img src=\"https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png\">": <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+  cspu5_assess4_arrayContains_exam_prep:
+    "<img src=\"https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png\">": <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+    "<img src=\"https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png\">": <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+    "<img src=\"https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png\">": <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+    "<img src=\"https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png\">": <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+    "<img src=\"https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png\">": <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
   cspu5_assess4_dataReturns:
     '10': '10'
     '16': '16'
@@ -2087,6 +2305,21 @@ en:
     '3': '3'
     '4': '4'
     '9': '9'
+  cspu5_assess4_listContains:
+    "<img src=\"https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png\">": <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+    "<img src=\"https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png\">": <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+    "<img src=\"https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png\">": <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+    "<img src=\"https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png\">": <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+  cspu5_assess4_listContains_2018:
+    "<img src=\"https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png\">": <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+    "<img src=\"https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png\">": <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+    "<img src=\"https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png\">": <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+    "<img src=\"https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png\">": <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+  cspu5_assess4_listContains_exam_prep:
+    "<img src=\"https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png\">": <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+    "<img src=\"https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png\">": <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+    "<img src=\"https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png\">": <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+    "<img src=\"https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png\">": <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
   cspu5_assess4_listOutput:
     '17': '17'
     '3': '3'
@@ -2102,8 +2335,30 @@ en:
     '3': '3'
     '42': '42'
     '9': '9'
+  cspu5_assess4_robot:
+    "<img src=\"https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png\">": <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+    "<img src=\"https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png\">": <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+    "<img src=\"https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png\">": <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+    "<img src=\"https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png\">": <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+    "<img src=\"https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png\">": <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+  cspu5_assess4_robot_2018:
+    "<img src=\"https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png\">": <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+    "<img src=\"https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png\">": <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+    "<img src=\"https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png\">": <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+    "<img src=\"https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png\">": <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+    "<img src=\"https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png\">": <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+  cspu5_assess4_robot_exam_prep:
+    "<img src=\"https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png\">": <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+    "<img src=\"https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png\">": <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+    "<img src=\"https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png\">": <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+    "<img src=\"https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png\">": <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+    "<img src=\"https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png\">": <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+  kiki_multi_test:
+    The bird will not move at all: O pássaro não irá se mover de forma alguma
+    The bird will reach the pig: O pássaro vai alcançar o porco
   msm variables multi 1:
     '15': '15'
+    a function: uma função
     x: x
   msm variables multi 10:
     '17': '17'
@@ -2120,8 +2375,11 @@ en:
     x: x
   msm variables multi 2:
     '8': '8'
+    a function: uma função
+    ab: ab
   msm variables multi 3:
     '5': '5'
+    a function: uma função
     x: x
   msm variables multi 4:
     '15': '15'
@@ -2186,18 +2444,108 @@ en:
   sciPD PreQ 2:
     'No': 'Não'
     'Yes': 'Sim'
+  sciPD agent based 1:
+    agents interact with both their environment and other agents: agentes interagem com seu ambiente e também com outros agentes
+    agents interact with other agents: agentes interagem com outros agentes
+    agents interact with their environment: agentes interagem com seus ambientes
+  sciPD agent based 2:
+    complex adaptive systems: sistemas adaptativos complexos
+    simple mechanical systems: sistemas mecânicos simples
+    systems of mathematical equations: sistemas de equações matemáticas
   sciPD class models 1:
     Using Models in the Classroom: Usando modelos na sala de aula
+    building relationships between old and new knowledge: construir relações entre conhecimentos antigos e novos
+    constructing social relationships: construção de relações sociais
+    creating artifacts of social relevance: criar artefatos de relevância social
+    interacting with others: interação com os outros
+  sciPD class models 2:
+    Constructionism: Construcionismo
+    creation of learning artifacts: criação de artefatos de aprendizagem
+    design of learning artifacts: design de artefatos de aprendizagem
+    discussion of learning artifacts: discussão de artefatos de aprendizagem
+  sciPD complex adaptive 1:
+    generates emergent patterns: gera padrões emergentes
+    has a leader: tem um líder
+    has centralized control: tem controle centralizado
+    is predictable: é previsível
+  sciPD complex adaptive 2:
+    Examples of Complex Adaptive Systems: Exemplos de sistemas adaptativos complexos
+    Which of the following is NOT an example of a complex adaptive system?: Qual dos seguintes exemplos NÃO é um exemplo de um sistema adaptativo complexo?
+    a bee hive: uma colmeia de abelhas
+    a traffic jam: um engarrafamento
+    a wall clock: um relógio de parede
+    the internet: a internet
+  sciPD computer models 1:
+    It can be easily automated: Ele pode ser automatizado facilmente
+    It has fixed percentages of different elements: Ele tem porcentagens fixas de elementos diferentes
+    It includes some randomness: Ele inclui algum tipo de aleatoriedade
+    It is predictable: Ele é previsível
+    Multiple Choice - Stochastic Models: Múltipla escolha - Modelos estocásticos
+    What does it mean for a model to be stochastic?: O que significa para um modelo ser estocástico?
+  sciPD computer models 2:
+    automation of experiments is easy: a automação dos experimentos é fácil
+    changing physical properties like the gravitational constant: altera propriedades físicas, como a constante gravitacional
+  sciPD culture 1:
+    taking a break: fazer uma pausa
+  sciPD culture 2:
+    classroom manager: gerente de sala de aula
+    expert in a computer language: expert em uma linguagem de computador
+  sciPD framework 1:
+    a human thought process: um processo de pensamento humano
+    a process that computers use to think: um processos que os computadores usam para pensar
+    a subfield of computer science: um subcampo da ciência da computação
+  sciPD framework 2:
+    algorithms: algoritmos
+    analysis: análise
+    automation: automação
+  sciPD intro to CS 1:
+    too dangerous to study in the real world: muito perigosos para estudar no mundo real
+    too expensive to study in the real world: muito caros para estudar no mundo real
+    too time consuming to study in the real world: muito demorados para estudar no mundo real
+  sciPD intro to CS 2:
+    nothing at all: absolutamente nada
   test anonymous student survey educational:
     'No': 'Não'
     'Yes': 'Sim'
   test me:
     Question: Pergunta
     title: título
+  test multi 124124:
+    Question 1: Questão 1
   unique level name here:
     Question: Pergunta
     title: título
   text_match:
+    Blocks to Bools 1:
+      4+5 > 9: 4+5 > 9
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Bools 2:
+      "/script_assets/msm/unit6/blockstomath2.png, 500": "/script_assets/msm/unit6/blockstomath2.png, 500"
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Bools 3:
+      "((5 < 10 < 15))": "((5 < 10 < 15))"
+      "((5 < 10) & (10 < 15))": "((5 < 10) & (10 < 15))"
+      "((5 < 10) && (10 < 15))": "((5 < 10) && (10 < 15))"
+      "((5 < 10) AND (10 < 15))": "((5 < 10) E (10 < 15))"
+      "((5 < 10) And (10 < 15))": "((5 < 10) e (10 < 15))"
+      "((5 < 10) and (10 < 15))": "((5 < 10) e (10 < 15))"
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Bools 4:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 1:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 2:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 3:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 4:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 5:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 6:
+      Convert Blocks to Math: Converta Blocos em Matemática
+    Blocks to Math 7:
+      Convert Blocks to Math: Converta Blocos em Matemática
     'CSP U4L04 Assessment 2 ':
       Enter prompt here: Digite a mensagem aqui
       Enter title here: Insira o título aqui

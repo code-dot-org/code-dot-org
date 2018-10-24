@@ -323,6 +323,13 @@ pt-BR:
       4-5 Artist 6: |-
         Esse triângulo equilátero tem ângulos de 60, 60
         e 60 graus. Cada lado tem 200 pixels. Complete o desenho.
+      4-5 Artist 7: "Este triângulo retângulo tem ângulos de 30, 60 e 90 graus. O
+        comprimento do lado inclinado (comprimento da hipotenusa) é de 200 pixels.
+        \n\nComplete o desenho."
+      4-5 Artist 8: "A linha do meio-campo em um campo de futebol é *perpendicular*
+        às linhas laterais.   \nEste retângulo tem um perímetro de 800 pixels no total,
+        e 240 pixels de comprimento. Qual é sua altura?  \n\nDesenhe as bordas e a
+        linha do meio-campo."
       4-5 Artist 9: "Desenhe a metade da direita desta imagem de forma que o desenho
         seja simétrico. \nOs triângulos são equiláteros e têm lados de 50 pixels de
         comprimento."
@@ -506,6 +513,11 @@ pt-BR:
         simples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.
         Clique em "Executar" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que
         você quiser e depois clique em Concluir para seguir em frente.
+      Big Game Animation 4: "Nesse ponto do seu jogo, seu inimigo deve percorrer a
+        tela da direita para a esquerda e seu alvo deve percorrer a tela da esquerda
+        para a direita.\nEles nunca voltam para a tela uma vez que tenham saído, mas
+        cuidaremos disso depois. \n\nAnalise seu jogo para ver se ele está funcionando
+        como você gostaria e então clique em \"Concluir\" para seguir em frente."
       Big Game Booleans 1: |-
         Da última vez que você trabalhou em seu jogo fizemos
         nossos alvo e inimigo voarem pela tela, mas eles nunca
@@ -1877,6 +1889,7 @@ pt-BR:
         variável\n\"comprimento\" em todos os lugares corretos. \r\n\r\nVocê percebeu
         que só precisa\ndefinir o valor de \"comprimento\" uma vez, e o código usa
         o valor correto em todos os lugares?"
+      grade5_bee_for_loops4: Ajude a abelha a coletar todo o nectar.
       grade5_playlab_variables13: |-
         Use o bloco "quando o personagem tocar"
         para enviar o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
@@ -1886,6 +1899,10 @@ pt-BR:
         bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
       grade5_playlab_variables9: "Aqui temos uma função chamada \"patrulhe\".\n\r\n\r\nEdite-a
         para mover o gato 400 pixels para cima, e então 400 pixels para baixo."
+      gradek_artist_loops2: |-
+        Nosso artista está tentando desenhar uma linha cinco vezes, mas não está conseguindo. Você pode ajudar?
+
+        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       level 'grade3_Loops_10: |-
         Que abelha trabalhadora!
 

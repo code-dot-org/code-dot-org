@@ -315,11 +315,11 @@ fil:
           TYPE:
             "'sand'": buhangin
             "'planksOak'": tablang oak
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": buhangin
       craft_moveForward:
         text: umabante
       craft_placeTorch:
         text: lagay ng tanglaw
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': manok

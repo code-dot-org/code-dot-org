@@ -351,13 +351,13 @@ sk:
         text: "Krok po kroku, sa tvoja hra stáva viac interaktívnou."
     mc_intro:
       1:
-        text: "Moje meno je Jens Bergensten, ale som lepšie známy ako Jeb. Som vedúci vývojár Minecraftu, tu v Mojangu v Štokholme. Myslím, že mi bolo jedenásť alebo možno dvanásť, keď som začal programovať, pretože som chcel vyrábať hry. Jeden z mojich otcových kamarátov mi povedal, že v prvom rade sa treba naučiť programovať. A tak som začal. Mám rád navrhovanie a riešenie architektúry hier. To je to, čo mám naozaj rád na Minecrafte."
+        text: "Volám sa Jens Bergensten, ale som lepšie známy ako Jeb. Som vedúci vývojár Minecraftu, tu v Mojangu v Štokholme. Myslím, že som mal jedenásť alebo možno dvanásť rokov, keď som začal programovať, pretože som chcel vyrábať hry. Jeden z kamarátov môjho otca mi povedal, že v prvom rade sa treba naučiť programovať. A tak som začal. Mám rád navrhovanie a riešenie architektúry hier. To je to, čo mám naozaj rád na Minecrafte."
       2:
-        text: "Počas nasledujúcej hodiny sa budeš učiť základy počítačovej vedy programovaním Alex alebo Steva pohybom cez simulovaný kus sveta Minecraftu."
+        text: "Počas nasledujúcej hodiny sa budeš učiť základy informatiky programovaním Alex alebo Steva, ktorých budeš pohybovať po simulovanom kuse sveta Minecraftu."
       3:
-        text: "Tradičné programovanie je zvyčajne v textovej forme, ale dnes budeme používať Blockly. Je to systém, ktorý používa vizuálne bloky a možnosť chytiť a pustiť, aby sme napísali programy. V pozadí podstate vytvárame Javascriptový kód."
+        text: "Tradičné programovanie je zvyčajne v textovej forme, ale dnes budeme používať Blockly. Je to systém, ktorý používa vizuálne bloky a možnosť chytiť a pustiť, aby sme napísali programy. V pozadí podstate vytvárame kód v Javascripte."
       4:
-        text: "Koncepty, ktoré sa budeš učiť sú to, čo počítačoví programátori používajú každý deň a sú to základy počítačovej vedy. Tu v Mojangu používame tieto rovnaké koncepty, aby sme sfunkčnili Minecraft."
+        text: "Naučíš sa koncepty, ktoré počítačoví programátori používajú každý deň a ktoré tvoria základ informatiky. Tu v Mojangu používame tie isté koncepty na to, aby sme sfunkčnili Minecraft."
       5:
         text: "Predtým než začneš, vyberieš si svoju postavu. Ja si vyberiem Alex. Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke."
       6:
@@ -367,55 +367,55 @@ sk:
       8:
         text: "Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program."
       9:
-        text: "Ak potiahneme do nášho pracovného priestoru blok pohybVpred(); a potom klikneme Spustiť, čo sa stane? Alex sa pohne vpred o jedno pole v mriežke."
+        text: "Ak potiahneme do nášho pracovného priestoru blok PosuňSaDopredu(); a potom klikneme Spustiť, čo sa stane? Alexa sa pohne vpred o jedno pole."
       10:
-        text: "A čo ak chceme urobiť niečo, potom čo sa pohla o jedno pole? Môžeme pridať ďalší blok do nášho programu. Vyberiem si blok otočVpravo(); a budem ho ťahať pod môj blok pohybVpred(); až sa nezobrazí táto oranžová čiara. Potom ho pustím a oba bloky sa spoja dohromady. Keď znova stlačím Spustiť, Alex bude vykonávať príkazy odhora nadol v našom pracovnom priestore."
+        text: "A čo ak chceme urobiť niečo potom, čo sa pohla o jedno pole? Môžeme do nášho programu pridať ďalší blok. Vyberiem si blok otočSaVpravo(); a potiahnem ho pod môj blok posuňSaDopredu(); až kým sa nezobrazí táto oranžová čiara. Potom blok pustím a oba bloky sa spoja dohromady. Keď znova stlačím \"Spustiť\", Alex vykoná príkazy z nášho pracovného priestoru v poradí zhora nadol."
       11:
-        text: "Ak chceš odstrániť blok, tak ho len presuň zo zásobníka späť do panela nástrojov."
+        text: "Ak by si niekedy chcel odstrániť blok, tak ho iba presuň z pracovnej plochy späť do panela nástrojov."
       12:
-        text: "Keď chceš vrátiť svoje zmeny a vrátiť sa späť tam, kde začal level, použi tlačidlo Začať znova v pravom hornom rohu pracovného prostredia. Ešte jedna vec: vidíš malý trojuholník na bloku otoč? Kedykoľvek, keď vidíš tieto trojuholníky znamená, že môžeš vybrať inú možnosť. Poďme začať kódovať!"
+        text: "Keď chceš zrušiť svoje zmeny a vrátiť sa späť tam, kde si začal, použi tlačidlo \"Začať znova\" v pravom hornom rohu pracovnej plochy. Ešte jedna vec: vidíš malý trojuholník na bloku \"otoč sa\"? Kedykoľvek, keď vidíš takýto trojuholník, tak si môžeš vybrať inú možnosť. Pustime sa do kódovania!"
     mc_repeat:
       1:
         text: "Som Lydia Winters, riaditeľka firmy Mojang, kde vytvárame drobnú hru nazývanú Minecraft."
       2:
-        text: "Moja obľúbená činnosť v Minecrafte je objavovať. Zbožňujem dobrodružstvo v jaskyniach a veci, ktoré tam môžem objaviť. Ako niekto, kto nie je programátor som veľmi nadšená prejsť si Minecraft kurz a naučiť sa sama trocha kódovať."
+        text: "Moja obľúbená činnosť v Minecrafte je objavovať. Zbožňujem dobrodružstvá v jaskyniach a objavovanie nových vecí. Keďže nie som programátorka, som nadšená, že si tiež môžem prejsť týmto Minecraft kurzom a sama sa naučím trocha kódovať."
       3:
-        text: "Predošlý level využíval množstvo blokov pohybVpred();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz pohybVpred(); štyri alebo päť krát. Našťastie pre nás, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích slučiek."
+        text: "Predošlý level využíval množstvo blokov PosuňSaDopredu();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz PosuňSaDopredu(); štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích cyklov."
       4:
-        text: "Pri stavbe Mincraftu používame opakovacie slučky, aby sme umiestnili všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce blokov. Taktiež používame slučky aj v menších príkladoch, ako napríklad hýbanie Alexinho chodidla vpred a vzad počas toho ako kráča. Opakovacie slučky sú mocná časť programovania."
+        text: "Pri stavbe Mincraftu používame opakovacie cykly, aby sme umiestnili všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce blokov. Taktiež používame cykly aj v menších príkladoch, ako napríklad hýbanie Alexinho chodidla vpred a vzad počas toho ako kráča. Opakovacie cykly sú mocná časť programovania."
       5:
         text: "Prichádza noc, takže v najbližších leveloch si postavíme dom, aby sme zostali v bezpečí. Použijeme blok opakuj, aby sme to urobili veľmi jednoducho."
       6:
-        text: "Aby sme postavili stenu nášho domu, môžeme buď povedať Alex pohybVpred(); a umiestniť dosky štyrikrát, alebo jej môžeme povedať pohybVpred(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým, než príde noc! Bav sa."
+        text: "Aby sme postavili stenu nášho domu, môžeme buď povedať Alex pohybVpred(); a umiestniť dosky štyrikrát, alebo jej môžeme povedať pohybVpred(); a umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania, aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým, než príde noc! Veľa zábavy."
     mc_if_statements:
       1:
-        text: "Teraz sa ideme učiť o rozhodnutiach ak. Rozhodnutia ak sú základnou časťou učenia sa programovať. Pomáhajú robiť počítaču rozhodnutia."
+        text: "Teraz sa naučíme o príkaze \"ak\". Príkazy \"ak\" patria k základným programovacím príkazom. Pomáhajú robiť počítaču rozhodnutia."
       2:
-        text: "Všetky počítače používajú rozhodnutia ak, dokonca aj môj telefón. Napríklad ak odomknem môj telefón, spustí sa kód, ktorý hovorí, že ak vložím správne heslo, tak sa odomkne mobil. Inak sa zjaví chybové hlásenie."
+        text: "Všetky počítače používajú príkazy \"ak\", dokonca aj môj telefón. Napríklad ak odomknem môj telefón, spustí sa kód, ktorý hovorí, že ak vložím správne heslo, tak sa odomkne mobil. Inak mi zobrazí chybu."
       3:
-        text: "Vo svojom kóde môžeš použiť rozhodnutia ak, aby si nechal Steva a Alice reagovať na to, čo vidia vo svete. Napríklad ak je pre nimi kameň, môžu sa otočiť vľavo. Alebo otočiť vpravo ak narazia do stromu."
+        text: "Vo svojom kóde môžeš použiť príkazy \"ak\", aby si nechal Steva a Alice reagovať na to, čo vidia vo svete. Napríklad ak je pred nimi kameň, môžu sa otočiť vľavo. Alebo otočiť vpravo ak narazia do stromu."
       4:
         text: "V tomto prípade nechceme spadnúť do lávy. Je jednoduché pripraviť sa na lávu. Môžeme ju vidieť na obrazovke. Ale čo láva, ktorú nemôžeme vidieť pod kameňom?"
       5:
-        text: "Potom čo vyťažíme tento kameň, budeme potrebovať zistiť či tam je láva skôr, než sa pohneme vpred. Ak tam láva je potrebujeme umiestniť kameň pred našu postavu, než sa pohneme vpred. Týmto spôsobom sa môžeme bezpečne pohnúť vpred. Je čas na ťaženie! A nezabudni použiť rozhodnutie ak, aby si si dal pri pohybe pozor."
+        text: "Potom, čo vyťažíme tento kameň, budeme potrebovať zistiť či tam je láva skôr, než sa posunieme dopredu. Ak tam láva je, potrebujeme umiestniť kameň pred našu postavu skôr, než sa posunieme dopredu. Týmto spôsobom sa môžeme bezpečne posúvať dopredu. Je čas na ťaženie! A nezabudni použiť príkaz \"ak\", aby si si dal pri pohybe pozor."
     mc_congrats_share:
       1:
         text: "Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy."
       2:
-        text: "Teraz môžeš použiť tieto bloky na vytvorenie svojej vlastnej tvorby. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Dostaneš na výber."
+        text: "Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Vyberieš si sám."
       3:
-        text: "[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L z pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!"
+        text: "[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L z faklí. Vytvoril som A z brezovej dosky. Fungovalo to, naozaj to fungovalo. Postavili sme dom z vlny!"
       4:
         text: "Ak si dokončil svoj výtvor, vyber možnosť zdieľať, aby si získal odkaz a ukázal kamarátom svoj výtvor. Zabav sa!"
     mc_congrats_no_share:
       1:
         text: "Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy."
       2:
-        text: "Teraz môžeš použiť tieto bloky na vytvorenie svojej vlastnej tvorby. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Dostaneš na výber."
+        text: "Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru. Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš vytvoriť čokoľvek chceš. Vyberieš si sám."
       3:
-        text: "[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L z pochodne. Vytvoril som A z brezovej dosky. Fungovalo to, fungovalo to. Vytvorili sme dom z vlny!"
+        text: "[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril L z faklí. Vytvoril som A z brezovej dosky. Fungovalo to, naozaj to fungovalo. Postavili sme dom z vlny!"
       4:
-        text: "Teraz dokážeš vytvoriť hocičo čo chceš. Zabav sa!"
+        text: "Teraz dokážeš vytvoriť čo len chceš. Veľa zábavy!"
     gumball_intro:
       1:
         text: "Ak by si chcel vytvoriť svoju vlastnú hru, je to skutočne jednoduché. Všetko čo potrebuješ je vedieť zopár základov programovania a môžeš začať hrať hru ktorú si si vytvoril."
@@ -452,9 +452,9 @@ sk:
       3:
     mc_2016_intro:
       1:
-        text: "Ahoj, moje meno je Jens a som hlavný kreatívny dizajnér Minecraftu. V ďalšej hodine budete vytvárať vašu vlastnú Minecraft hru. Toto vyzerá ako Minecraft ale svet sa zastavil. Ovca sa nehýbe, kurčatá nekladú vajcia a zombie iba stále stoja. Je na vás aby ste pridali kód, ktorý spraví Minecraft svet funkčným."
+        text: "Ahoj, volám sa Jens a som hlavná kreatívna dizajnérka Minecraftu. V ďalšej hodine budeš vytvárať svoju vlastnú hru Minecraft. Toto vyzerá ako Minecraft, ale svet sa zastavil. Ovca sa nehýbe, kurčatá nekladú vajcia a zombíci stoja na mieste. Je na tebe aby si pridal kód, ktorý spraví Minecraft svet funkčným."
       2:
-        text: "Moje meno je Melissa a som objavujúci používateľ Minecraftu. To, o čo sa naozaj zaujímam je ako ľudia myslia a pracujú s technológiami a táto práca je perfektná práca pre mňa na spojenie dokopy počítačového strojárstva s psychológiou: ako ľudia myslia a správajú sa."
+        text: "Volám sa Melissa a som výskumníčkou používateľov Minecraftu. To, o čo sa naozaj zaujímam je, ako ľudia myslia a pracujú s technológiami. Táto práca je pre mňa perfektnou, keďže spája počítačové inžinierstvo so psychológiou: ako ľudia myslia a ako sa správajú."
       3:
         text: "Uvidíš tvoju obrazovku rozdelenú na tri hlavné časti. 1) Naľavo je hra Minecraft. Práve teraz je svet zamrznutý ale ideme ho opraviť kódom."
       4:
@@ -462,39 +462,39 @@ sk:
       5:
         text: "3) Priestor napravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program."
       6:
-        text: "Ak zabudnete, čo máte robiť, inštrukcie pre každý level sú navrchu."
+        text: "Ak zabudneš, čo máš robiť, inštrukcie pre každú úroveň nájdeš v hornej časti stránky."
       7:
-        text: "Na začiatok ideme naprogramovať kuriatko. Presuň príkaz \"posuň dopredu\" na pracovnú plochu. Keď stlačím \"spusti\", kuriatko sa posunie o jeden krok dopredu. Pre ďalší posun presuniem ďalší blok \"posuň dopredu\" pod prvý blok \"posuň dopredu\" až kým sa nezobrazí farebné podsvietenie. Potom pustím blok a oba bloky sa spoja dokopy. Ak znova stlačím \"Spusti\", kuriatko spraví dva kroky."
+        text: "Na začiatok ideme naprogramovať kuriatko. Presuňme príkaz \"posuň sa dopredu\" na pracovnú plochu. Keď stlačím tlačidlo \"Spustiť\", kuriatko sa posunie o jeden krok dopredu. Pre ďalší posun presuniem ďalší blok \"posuň sa dopredu\" pod prvý blok \"posuň sa dopredu\" až kým sa nezobrazí farebné podsvietenie. Potom blok pustím a oba bloky sa spoja dokopy. Ak znova stlačím tlačidlo \"Spustiť\", kuriatko spraví dva kroky."
       8:
-        text: "Ak niekedy chcete odstrániť block, tak ho iba odstráňte zo zásobníka a presuňte ho späť do panela nástrojov."
+        text: "Ak by si niekedy chcel odstrániť blok, tak ho iba odstráň z pracovnej plochy a presuň ho späť do panela nástrojov."
       9:
-        text: "Potom, čo stlačíš \"Spusti\", môžeš vždy stlačiť tlačidlo \"Resetuj\" pre reštartovanie hry a jej začatie odznova. A teraz si na rade ty, aby si si vytvoril tvoju vlastnú verziu Minecraftu. Veľa zábavy!"
+        text: "Potom, čo stlačíš \"Spustiť\", môžeš vždy stlačiť tlačidlo \"Obnoviť\", ktorým hru reštartuješ, aby si mohol začať odznova. Teraz si na rade ty, aby si si vytvoril tvoju vlastnú verziu Minecraftu. Veľa zábavy!"
     mc_2016_loops:
       1:
-        text: "Ahoj, ja som Lisa. Som softvérový vývojár na Minecrafte a pracujem na niektorých zvieratách a nepriateľoch v hre. Jedno zo zvierat, na ktorých som robila je ocelot. Robila som na časti, kde môžte nakŕmiť ocelota rybou na skrotenie vašej vlastnej mačky."
+        text: "Ahoj, volám sa Lisa. Som softvérová vývojárka Minecraftu a vytváram niektoré zvieratá a nepriateľov v hre. Jedno zo zvierat, na ktorých som pracovala, je ocelot. Pracovala som na časti, kde môžeš skrotiť ocelota tým, že mu dáš rybu a vytvoríš si z neho svoju vlastnú mačku."
       2:
-        text: "My ľudia sa začneme veľmi nudiť, ak musíme robiť dookola jednu a tú istú vec. Počítače sú však úžasné aj preto, lebo dokážu robiť tú istú vec dookola milióny až miliardy krát a nikdy sa nebudú nudiť. Toto opakovanie sa volá slučka a každá postavička v Minecrafte používa slučky."
+        text: "My ľudia sa začneme veľmi nudiť, ak musíme robiť dookola jednu a tú istú vec. Počítače sú však úžasné aj preto, lebo dokážu robiť tú istú vec dookola milióny až miliardy krát a nikdy sa nebudú nudiť. Toto opakovanie sa volá cyklus a každá postavička v Minecrafte používa cykly."
       3:
-        text: "Pred chvíľou sme posunuli kuriatko na obrazovke, potom však zastalo. V Minecrafte, kuriatká pobehujú stále dookola. Poďme použiť slučku \"rob dookola\" z nášho nástroja panelov, aby naše kuriatka tiež pobehovali dookola. Vlastnosť slučiek nám ušetrí veľa času a otvorí nám veľa pekných možností popri tom, ako budeš skladať svoju verziu Minecraftu."
+        text: "Pred chvíľou sme posunuli kuriatko na obrazovke, potom však zastalo. V Minecrafte, kuriatká pobehujú stále dookola. Poďme použiť cyklus \"nekonečne opakuj\" z nášho panela nástrojov, aby naše kuriatka tiež pobehovali dookola. Vlastnosť cyklov nám ušetrí veľa času a otvorí nám veľa pekných možností popri tom, ako budeš skladať svoju verziu Minecraftu."
     mc_2016_events:
       1:
         text: "V tomto leveli si môžeš vybrať, či budeš hrať ako Steve alebo ako Alex. Stlač šípky na klávesnici pre pohyb hore, dole, vľavo a vpravo. Odteraz sa môžeš v tomto leveli pohybovať kam len chceš. Pre použitie príšerky sa k nej priblíž, otoč sa k nej tvárou a stlač medzerník."
       2:
         text: "Ak používaš dotykovú obrazovku, prejdi po nej prstom hore, dole, vľavo a vpravo pre pohyb. Potom ťukni na obrazovku pre použitie predmetu, ktorý je pred tebou."
       3:
-        text: "Ale čo sa stane, keď to použiješ? V Minecrafte ovečky zanechávajú vlnu, keď ich ostriháš, kravy utekajú preč keď do nich udrieš a strašidlá vybuchujú, keď sa k ním priblížiš. Tieto reakcie sa dejú vďaka niečomu, čo sa volá udalosti. Udalosti hovoria tvojmu programu, aby počúvali alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia."
+        text: "Ale čo sa stane, keď predmet alebo postavu použiješ? V Minecrafte ovečky zanechávajú vlnu, keď ich ostriháš, kravy utekajú preč keď do nich udrieš a strašidlá vybuchujú, keď sa k ním priblížiš. Tieto reakcie sa dejú vďaka niečomu, čo sa volá udalosti. Udalosti hovoria tvojmu programu, aby počúvali alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia."
       4:
         text: "Doteraz si použil len jednu udalosť. Kód, ktorý si vložil do poľa \"po vytvorení\" sa spustí, keď sa vytvorí postavička alebo keď začne hra. V ďaľších leveloch budeš mať nové polia pre udalosti ako napríklad \"po dotknutí sa\", ktorý sa spustí, keď sa dotkneš postavičky, alebo \"po použití\", keď postavičku použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa \"po východe slnka\""
     mc_2016_spawn:
       1:
-        text: "V hrách, spraviť znamená to isté ako vytvoriť. V tomto leveli poďme vytvárať zombíkov po západe slnka. Pre dosiahnutie použijeme blok \"keď príde noc\"."
+        text: "V hrách, vytvárame postavy príkazom \"vytvor postavu\". V tomto leveli poďme vytvárať zombíkov po západe slnka. Použijeme pre to blok \"keď príde noc\"."
       2:
-        text: "Keďže chceme, aby sa zombíci vytvárali v noci, prídame blok \"vytvor zombíka\" pod blok \"keď príde noc\". Akonáhle sa vytvoria, každý zombík spustí kód, ktorý si vložil do jeho políčka udalostí \"po vytvorení\". Veľa zábavy pri vytváraní zombíkov!"
+        text: "Keďže chceme, aby sa zombíci vytvárali v noci, prídame blok \"vytvor postavu zombík\" pod blok \"keď príde noc\". Akonáhle sa vytvoria, každý zombík spustí kód, ktorý si vložil do jeho políčka udalostí \"po vytvorení\". Veľa zábavy pri vytváraní zombíkov!"
     mc_2016_congrats:
       1:
-        text: "Gratulujeme! Naučili ste sa používať príkazy počítačovej vedy na prinesenie života do Minecraft svetu. Teraz ste vývojárom. Odomkli ste všetky príkazy a všetky stvorenia. Môžete si vybrať, čo sa stane."
+        text: "Gratulujeme! Naučil si sa používať počítačové príkazy na oživenie sveta Minecraftu. Teraz si vývojárom. Odomkol si všetky príkazy a všetky stvorenia. Môžeš si vybrať, čo sa stane."
       2:
-        text: "Keď si hotový s tvorbou svojej hry, vyber si zdieľanie odkazu, ktorý môžeš zdieľať s tvojimi kamarátmi alebo hrať hru na svojom mobilnom telefóne. Veľa zábavy! Tešíme sa s tebou na veľa hodín zábavy s tvojou verziou Minecraftu."
+        text: "Keď si hotový s tvorbou svojej hry, vyber si možnosť \"Zdieľať\" na vytvorenie odkazu, ktorý môžeš zdieľať s kamarátmi alebo si na ňom môžeš zahrať hru na svojom mobile. Veľa zábavy! Už sa teším, že si zahrám tvoju verziu Minecraftu."
     applab_intro_welcome:
       1:
         image: 'notes/applab_intro_welcome_1.png'
@@ -615,66 +615,94 @@ sk:
         text: "Potrebujem ale tvoju pomoc. Začni najprv úvodnou lekciou, nauč sa ako kódovať a o pár levelov neskôr sa stretneme, dobre? Drž mi palce! Myslím si, že toto je správna cesta. Au! Kaktus! Som v poriadku!"
       7:
         image: 'notes/mc_2017_agent_intro_7.png'
+        text: "Aby si dokončil výzvu Hodiny Kódu, budeš musieť napísať kód, ktorý naprogramuje Agenta. Spolupracuj s Agentom, aby si odstránil všetky prekážky, a zozbieraj predmety, ktoré budeš potrebovať na svojej ceste. Len Agent môže umiestniť a rozdeliť bloky, a len ty môžeš zbierať predmety. Obrazovka je rozdelená na tri hlavné časti. Na ľavej strane je hracie pole Minecraftu."
       8:
         image: 'notes/mc_2017_agent_intro_8.png'
+        text: "Stredná oblasť je panel nástrojov s príkazmi, ktorým Agent rozumie."
       9:
         image: 'notes/mc_2017_agent_intro_9.png'
+        text: "N pravej strane je pracovný priestor. Tu môžeš vložiť príkazy na vytvorenie programu a ovládanie Agenta."
       10:
         image: 'notes/mc_2017_agent_intro_10.png'
+        text: "Agent môže chodiť, otáčať sa a aktivovať prítlačné dosky. Môže tiež zničiť a umiestniť bloky. Keď umiestni blok ako napríklad tieto koľajnice, umiestni ho vždy pod seba."
       11:
         image: 'notes/mc_2017_agent_intro_11.png'
-        text: "Ak zabudnete, čo máte robiť, inštrukcie pre každý level sú navrchu."
+        text: "Ak zabudneš, čo máš robiť, inštrukcie pre každú úroveň nájdeš v hornej časti stránky."
       12:
         image: 'notes/mc_2017_agent_intro_12.png'
+        text: "Ak chceš svoj pokus zopakovať, stlač modré tlačidlo \"Reset\" a zresetuj všetko na začiatok. Ak potrebuješ odstrániť blok kódu, presuň ho z pracovného priestoru do panela nástrojov. Nezabudni stlačiť \"Spustiť\", aby sa Agent začal hýbať. Pokračuj a vyskúšaj si prvých pár úrovní. Veľa štastia!"
     mc_2017_repeat:
       1:
         image: 'notes/mc_2017_repeat_1.png'
+        text: "Stampy: Zaujímalo by ma, čo robí Stacy?"
       2:
         image: 'notes/mc_2017_repeat_2.png'
+        text: "Stacy: Wow, myslím, že som na správnom mieste. To je úžasné!"
       3:
         image: 'notes/mc_2017_repeat_3.png'
+        text: "Mám pocit, že som späť v Minecrafte! Ahoj. Ako sa máš? Ahoj?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
+        text: "Oh, tam je creeper. Nič nerobíš, však? Katie: Stacy? Stacy: Ahoj, Katie? Katie: Áno, vitaj v Minecrafte!"
       5:
         image: 'notes/mc_2017_repeat_5.png'
+        text: "Stacy: To je úžasné. Pracuješ tu každý deň ako vývojárka, nie? Katie: Áno, je to celkom úžasné. Som vývojárka v Minecraft tíme. Stacy: Koľko kódovacích jazykov ovládaš? Katie: Počas mojej kariéry som pracovala s viac ako tuctom. Stacy: S tuctom? Katie: Áno. Stacy: Takže teraz vieš všetko o tomto malom golemovi, ktorý sa nazýva Agentom? Katie: Používame agenta na to, aby robil veci, ktoré Steve alebo Alex nemôžu, ako napríklad prejsť cez lávu. Stacy: Chcem sa naučiť programovať a aj oni sa chcú naučiť programovať, takže čo je jedna z prvých vecí, ktorú potrebuješ vedieť, keď sa učíš?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
+        text: "Katie: Nuž, musíš sa naučiť, ako používať cykly. Vývojári píšu cykly, aby dávali počítaču príkazy, ktoré môžu byť znova a znova opakované. Stacy: Rozumiem, a myslím si, že niečo také nás čaká v nasledujúcich úrovniach. Tak poď na to a vyskúšaj si používanie cyklov."
       7:
         image: 'notes/mc_2017_repeat_7.png'
+        text: "V ďalšej úrovni môžeš pomocou cyklov presunúť Agenta popri ceste. Presuň blok \"Opakuj\" do pracovného priestoru a umiestnite blok \"Posuň sa dopredu\" do vnútra bloku \"Opakuj\". Toto informuje počítač, aby opakoval ten istý príkaz veľa krát za sebou, bez toho, aby si musel presunúť celé bloky do pracovného priestoru. Môžeš si vybrať, koľkokrát sa príkaz zopakuje vložením čísla do bloku \"Opakuj\"."
       8:
         image: 'notes/mc_2017_repeat_8.png'
+        text: "Môžeš tiež pridať otočenia a viac príkazov do bloku \"Opakuj\", ale teraz skús použiť príkaz \"Opakuj\" pre posun Agenta dopredu o niekoľko krokov. Nezabúdaj, že ak sa v úlohe zasekneš, môžeš vždy stlačiť modré tlačidlo \"Reset\" a skúsiť to znova."
       9:
         image: 'notes/mc_2017_repeat_9.png'
+        text: "Ak uvažuješ o tom, mať úžasnú prácu, ako má Katie, klikni na tlačidlo \"Zobraziť kód\" po dokončení každej úrovne. To ti ukáže skutočný kód naprogramovaný v JavaScripte, ktorý používa Katie, keď programuje Minecraft. Katie: Áno, veľa šťastia!"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
+        text: "Preston: Nechcem sa chváliť, ale som celkom dobrý v parkoure. Lizzy: Poďme spať, nech je deň, keď sa vráti Stacy."
       2:
         image: 'notes/mc_2017_functions_2.png'
+        text: "Stacy: Vrátila som sa z priestorov Minecraft kancelárií a myslím, že viem, ako vyriešiť problém, ktorý mám v hre. Myslím, že môžem použiť funkciu. Dovoľte mi otvoriť toto."
       3:
         image: 'notes/mc_2017_functions_3.png'
+        text: "Funkcia je špecifická sada inštrukcií na dosiahnutie určitej úlohy, ako napríklad recept. V nasledujúcich úrovniach budeš mať prístup k funkciám, ktoré môžeš použiť na vyriešenie úloh."
       4:
         image: 'notes/mc_2017_functions_4.png'
+        text: "Pozri sa na kód vo funkcii, keď je v pracovnom priestore, aby si videl, čo robí."
       5:
         image: 'notes/mc_2017_functions_5.png'
+        text: "Potom nájdi blok s týmto názvom v paneli nástrojov a presuň ho z panelu nástrojov do bloku \"Pri spustení\"."
       6:
         image: 'notes/mc_2017_functions_6.png'
+        text: "Pamätaj si, že môžeš použiť rovnakú funkciu vždy, keď potrebuješ spustiť rovnaký súbor inštrukcií napríklad na postavenie mosta. Veľa šťastia! Viem, že to dokážeš!"
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
+        text: "Preston: Gratulujem!"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
+        text: "Lizzy: Gratulujem!"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
+        text: "Stampy: Gratulujem, zvládol si to!"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
+        text: "Stacy: Gratulujem, zvládol si to! A teraz, keď si ukončil Hodinu Kódu, môžeš začať programovať v Minecrafte. Naučil si sa vytvárať cykly, funkcie a čo robí softvérový Agent."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
+        text: "Teraz je čas zahrať si voľný level, kde budeš ty vývojárom. Využi svoj voľný čas na napísanie svojich vlastných funkcií a objavuj, doluj a stavaj."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
+        text: "Môžeš si zobrať svoj kód, ktorý si napísal v tomto leveli, do svojho Minecraft sveta do Minecraft: Vzdelávacej edície. Klikni na \"Ukončiť\" a nasleduj inštrukcie, aby si dostal link, ktorý použiješ vo svojom svete, a aby si mohol pokračovať v programovaní so svojim Agentom. Dobrá práca, zabav sa!"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
+        text: "Stacy: Som späť! Okay, toto je Agent! Dovoľte mi ukázať, čo vie robiť. Pozri, čo robí. Povedala som mu, aby postavil schodisko z terakotových blokov. Teraz ho môžeme použiť, aby sme sa odtiaľto dostali. Nie je to obyčajné schodisko. Môžem povedať Agentovi čokoľvek, aby pre mňa spravil a on to spraví."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
+        text: "Stampy: Ako si to urobila? Stacy: Bolo to jednoduché. Iba som použila kód!"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
