@@ -35,7 +35,7 @@ end
 
 require 'cdo/cron'
 
-self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
+self.log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
 
 # Don't provision daemon where manually-provisioned daemon instances already exist.
 # Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
