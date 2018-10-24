@@ -581,7 +581,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.oauth_token_expiration, auth[:credentials][:expires_at]
   end
 
-  test 'clever: directs user to finish sign-up (new_sign_up_experience) ' do
+  test 'clever: directs user to finish sign-up (new_sign_up_experience)' do
     SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
     # Given I do not have a Code.org account
     uid = "nonexistent-clever"
