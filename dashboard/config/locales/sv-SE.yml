@@ -88,6 +88,7 @@ sv:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Account
+    microsoft_v2_auth: Microsoft Account
     forgot_password: Glömt ditt lösenord?
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
@@ -112,7 +113,6 @@ sv:
     age: Ålder
     user_type: Är du elev eller lärare?
     submit: Registrera dig
-    next: Nästa
     teacher: Är du en lärare?
     valid_username: Tillgängligt!
     invalid_username: Användarnamnet måste innehålla minst fem tecken

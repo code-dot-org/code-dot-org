@@ -83,6 +83,7 @@ pl:
     twitter: 'Twitter'
     facebook: 'Facebooka'
     windowslive: 'Konto Microsoft'
+    microsoft_v2_auth: 'Konto Microsoft'
     clever: 'Konto Clever'
     forgot_password: 'Nie pamiętasz hasła?'
     need_confirmation: "Czy nie otrzymałeś instrukcji potwierdzającej?"
@@ -106,7 +107,6 @@ pl:
     age: 'Wiek'
     user_type: 'Czy jesteś uczniem czy nauczycielem?'
     submit: 'Zarejestruj się'
-    next: 'Następny'
     teacher: 'Czy jesteś nauczycielem?'
     valid_username: "Dostępny!"
     invalid_username: "Nazwa użytkownika musi zawierać co najmniej 5 znaków"

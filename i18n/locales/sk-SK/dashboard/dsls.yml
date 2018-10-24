@@ -1736,8 +1736,8 @@ en:
     '6': '6'
     x: x
   post-assessment survey q34:
-    Easy: Jednoduché
-    Hard: Ťažké
+    Easy: Jednoduchý
+    Hard: Ťažký
   pre-assessment survey q24:
     'No': 'Nie'
     'Yes': 'Áno'

@@ -319,11 +319,11 @@ ky:
           TYPE:
             "'sand'": кум
             "'planksOak'": эмен тактайлары
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": кум
       craft_moveForward:
         text: алдыга жылдыр
       craft_placeTorch:
         text: чырак орнотуу
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': тоок

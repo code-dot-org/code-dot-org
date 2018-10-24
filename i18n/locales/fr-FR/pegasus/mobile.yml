@@ -1373,6 +1373,7 @@
   csd_2018_name: "Découvertes de l'informatique"
   full_course_category_name: "Cours complets"
   user_header_label: "Bonjour %{username}"
+  user_header_team: "Équipe"
   user_header_settings: "Mon compte"
   user_header_logout: "Déconnexion"
   user_header_signin: "Connexion"
@@ -1406,4 +1407,5 @@
   hero_name: 'Minecraft: Le voyage du héros'
   applab-intro_name: Introduction pour App Lab
   creativity_create: "Créer"
+  creativity_hoc_coming: "L'heure du code arrive…"
   account_sign_up_email_opt_in: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique?"

@@ -543,11 +543,11 @@ ka:
           TYPE:
             "'sand'": ქვიშა
             "'planksOak'": მუხის ფიცრები
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ქვიშა
       craft_moveForward:
         text: წინ გადაადგილება
       craft_placeTorch:
         text: ჩირაღდნის დაყენება
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': ქათამი

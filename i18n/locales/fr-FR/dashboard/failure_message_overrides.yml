@@ -35,6 +35,7 @@ fr:
       MC HOC 2016 Village Test_failure_message_override: Vous devez faire en sorte que le Golem de fer poursuive et attaque les zombies pour gagner.
       Valentine_playlab_01_failure_message_override: Presque! Essaye encore.
       WhileAdventure_failure_message_override: Félicitations! Tu as collecté X pièces!
+      courseC19_playLab_EOC3_failure_message_override: Tu dois ajouter au moins deux nouveaux acteurs au jeu et les programmer pour bouger.
       courseE_playLab_scaffold3_failure_message_override: Tu dois ajouter au moins deux nouveaux acteurs au jeu et les programmer pour bouger.
       courseE_playLab_scaffold3_2018_failure_message_override: Tu dois ajouter au moins deux nouveaux acteurs au jeu et les programmer pour bouger.
       grade4_scaffolded_project3_failure_message_override: Tu dois ajouter au moins deux nouveaux acteurs qui bougent à ton jeu.

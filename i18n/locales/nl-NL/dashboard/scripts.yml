@@ -1238,6 +1238,8 @@ nl:
               name: Binaire armbanden
             Binary Images:
               name: Binaire afbeeldingen
+            Play Lab:
+              name: Speel Lab
         csd2-2017:
           stages:
             Lists:

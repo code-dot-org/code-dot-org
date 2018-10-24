@@ -72,6 +72,7 @@ hy:
     twitter: 'ծլվլոց'
     facebook: 'Facebook'
     windowslive: 'Microsoft Հաշվի'
+    microsoft_v2_auth: 'Microsoft Հաշվի'
     forgot_password: 'Մոռացել եք Ձեր գաղտնաբառը?'
     need_confirmation: "Չէի ստանալ հաստատում հրահանգներ."
     need_unlock: "Չէի ստանում են բացելու հրահանգներ."
@@ -87,7 +88,6 @@ hy:
     age: 'Տարիք'
     user_type: 'Դուք ուսանող կամ ուսուցիչ:'
     submit: 'Գրանցվել'
-    next: 'Next'
     teacher: 'Դուք ուսուցիչ եք?'
     valid_username: "Դուք փնտրել էք -."
     invalid_username: "Մականուն պետք է լինի առնվազն 5 նիշ"

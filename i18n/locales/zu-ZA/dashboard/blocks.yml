@@ -84,5 +84,9 @@ zu:
         options:
           TYPE:
             "'sand'": isihlabathi
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": isihlabathi
       craft_moveForward:
         text: qubekela phambili

@@ -256,11 +256,11 @@ bs:
           TYPE:
             "'sand'": pijesak
             "'planksOak'": daska hrasta
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pijesak
       craft_moveForward:
         text: idi naprijed
       craft_placeTorch:
         text: postavite baklju
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': pile

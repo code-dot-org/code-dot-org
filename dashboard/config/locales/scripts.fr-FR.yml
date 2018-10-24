@@ -1564,6 +1564,8 @@ fr:
               name: Bracelets binaires
             Binary Images:
               name: Les images binaires
+            Play Lab:
+              name: Labo de jeux
         csd2-2017:
           stages:
             Peer Review:

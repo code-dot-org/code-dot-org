@@ -375,6 +375,7 @@ ja:
         infinity_playlab_events: ゲームラボ - イベント
         infinity_playlab_repeat_forever: プレイラボ - ずっとくりかえす
         csd_concept_computer: '何がコンピュータをコンピュータにするのか。'
+        csd_concept_memory_cpu_input_output: 'コンピューターのしくみ: メモリ、CPU、入出力'
         csd_concept_search: 検索のしくみ
         csd_gamelab_animation_tab: '[アニメーション] タブ'
         csd_gamelab_velocity: 速度

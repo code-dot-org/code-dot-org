@@ -74,6 +74,7 @@ hi:
     twitter: 'ट्विटर'
     facebook: 'फेसबुक'
     windowslive: 'Microsoft खाता'
+    microsoft_v2_auth: 'Microsoft खाता'
     forgot_password: 'अपना पासवर्ड भूल गए?'
     need_confirmation: "पुष्टिकरण निर्देश प्राप्त नहीं हुआ?"
     need_unlock: "खोलने के अनुदेश नही मिले?"

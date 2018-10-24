@@ -945,6 +945,8 @@ it:
               name: Crittografia semplice
             Post-Course Survey:
               name: Sondaggio Post-corso
+            Student Post-Course Survey:
+              name: Sondaggio per studenti che hanno partecipato al corso
         csp5-2017:
           stages:
             Introduction to Arrays:
@@ -1182,6 +1184,8 @@ it:
               name: Braccialetti Binari
             Binary Images:
               name: Immagini binarie
+            Play Lab:
+              name: Laboratorio
         csd2-2017:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
           stages:
@@ -1753,6 +1757,7 @@ it:
           title: Corso D
           assignment_family_title: Corso D
           description_audience: 'Da 7 a 11 anni'
+          description_short: Vengono spiegati brevemente i concetti del corso C e poi vengono aggiunti algoritmi, cicli annidati, condizioni e altro ancora.
           description: In questo corso vengono insegnati nuovi concetti di informatica tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni condizionali ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale ed è possibile creare il proprio gioco o la propria storia che è poi possibile condividere con gli amici.
         coursee-2017:
           stages:
@@ -1847,6 +1852,7 @@ it:
           title: Corso E
           assignment_family_title: Corso E
           description_audience: 'Da 8 a 12 anni'
+          description_short: Vengono spiegati brevemente i concetti dei corsi C e D e poi viene aggiunto il concetto di funzione.
           description: Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari.
         coursef-2017:
           stages:
@@ -1920,6 +1926,7 @@ it:
           title: Corso F
           assignment_family_title: Corso F
           description_audience: 'Da 9 a 13 anni'
+          description_short: Impara tutti i concetti dei corsi di Fondamenti di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
           description: Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull'impatto sociale dell'informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari.
         express-2017:
           stages:
@@ -2883,6 +2890,7 @@ it:
           title: Corso F (2018)
           assignment_family_title: Corso F
           description: Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull'impatto sociale dell'informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari.
+          description_short: Impara tutti i concetti dei corsi di Fondamenti di Informatica e crea una tua opera d'arte, una tua storia o un tuo gioco.
           description_audience: 'Da 9 a 13 anni'
           stages:
             'Programming: My Robotic Friends':

@@ -1,4 +1,5 @@
 "ro-RO":
+  ! '': '[șir gol]'
   hour_of_code: "Hour of Code"
   hello: "Salutare lume"
   'yes': 'Da'
@@ -1421,11 +1422,13 @@
   csd_2018_name: "Descoperiri informatice"
   full_course_category_name: "Toate cursurile"
   user_header_label: "Salut %{username}"
+  user_header_team: "Echipa"
   user_header_settings: "Contul meu"
   user_header_logout: "Deloghează-te"
   user_header_signin: "Loghează-te"
   user_header_gamelab: "Laborator de jocuri"
   user_header_playlab: "Laborator de Joacă"
+  user_header_spritelab: "Laborator Sprite"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   view_all_sections: "Vizualizați toate secțiunile"
@@ -1457,4 +1460,5 @@
   google_sign_in_instruct: 'De acolo, ei ar trebui să aleagă opțiunea "Conectare cu contul Google":'
   applab-intro_name: Introducere Laborator de Aplicații
   creativity_create: "Crează"
+  creativity_hoc_coming: "Hour of Code este aproape…"
   account_sign_up_email_opt_in: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"

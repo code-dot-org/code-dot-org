@@ -95,6 +95,7 @@ id:
     twitter: Twitter
     facebook: Facebook
     windowslive: Akun Microsoft
+    microsoft_v2_auth: Akun Microsoft
     clever: Akun pintar
     forgot_password: Lupa kata sandi?
     need_confirmation: Tidak menerima instruksi konfirmasi?
@@ -133,7 +134,6 @@ id:
     age: Umur
     user_type: Anda Pelajar atau Pengajar?
     submit: Daftar
-    next: Selanjutnya
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
     invalid_username: Nama pengguna harus minimal 5 karakter

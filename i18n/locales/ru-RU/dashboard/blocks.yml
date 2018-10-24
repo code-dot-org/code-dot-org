@@ -319,11 +319,11 @@ ru:
           TYPE:
             "'sand'": песок
             "'planksOak'": дубовые доски
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": песок
       craft_moveForward:
         text: двигаться вперед
       craft_placeTorch:
         text: разместить фонарь
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': курица

@@ -319,11 +319,11 @@ nl:
           TYPE:
             "'sand'": zand
             "'planksOak'": eikenhouten planken
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": zand
       craft_moveForward:
         text: beweeg vooruit
       craft_placeTorch:
         text: plaats toorts
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': kip

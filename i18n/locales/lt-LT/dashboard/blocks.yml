@@ -272,11 +272,11 @@ lt:
           TYPE:
             "'sand'": smėlį
             "'planksOak'": ąžuolo lentas
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": smėlį
       craft_moveForward:
         text: judėk į priekį
       craft_placeTorch:
         text: padėk deglą
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': viščiukas

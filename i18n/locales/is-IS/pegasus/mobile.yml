@@ -1385,6 +1385,7 @@
   csp_name: "Grunnhugtök tölvunarfræði"
   full_course_category_name: "Heil námskeið"
   user_header_label: "Hæ %{username}"
+  user_header_team: "Félagar"
   user_header_settings: "Reikningurinn minn"
   user_header_logout: "Skrá út"
   user_header_signin: "Innskráning"
@@ -1421,3 +1422,4 @@
   syncing_students_instructions: 'Ef upp kemur ósamræmi milli Code.org hópsins þíns og nemendalistans í Google Classroom, getur þú smellt á "Spegla nemendur frá Google Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google aðgangi":'
   creativity_create: "Búa til"
+  creativity_hoc_coming: "Klukkustund kóðunar er á næsta leiti…"

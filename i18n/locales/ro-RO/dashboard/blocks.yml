@@ -538,11 +538,11 @@ ro:
           TYPE:
             "'sand'": nisip
             "'planksOak'": cherestea de stejar
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": nisip
       craft_moveForward:
         text: mută înainte
       craft_placeTorch:
         text: plaseaza torta
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': gaina

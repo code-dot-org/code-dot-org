@@ -303,11 +303,11 @@ az:
           TYPE:
             "'sand'": qum
             "'planksOak'": palıd odunları
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": qum
       craft_moveForward:
         text: irəli get
       craft_placeTorch:
         text: məşəl yerləşdir
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': cücə

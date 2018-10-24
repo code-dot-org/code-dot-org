@@ -1296,6 +1296,7 @@
   header_tutorials: "Tutorial"
   header_documentation: "Dokumentasi"
   user_header_label: "Halo %{username}"
+  user_header_team: "Tim"
   user_header_settings: "Akun saya"
   user_header_logout: "Keluar"
   user_header_signin: "Masuk"
@@ -1309,3 +1310,4 @@
   sign_in_instruct_button: "Tekan tombol \"masuk\"."
   reset_student_password: "Mengatur ulang pelajar kata sandi"
   creativity_create: "Buat"
+  creativity_hoc_coming: "Jam kode akan segera hadir…"

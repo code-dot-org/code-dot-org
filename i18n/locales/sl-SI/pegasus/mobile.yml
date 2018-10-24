@@ -1016,6 +1016,7 @@
   header_help_us: "Pomagaj nam"
   header_about: "O programu"
   user_header_label: "Živjo %{username}"
+  user_header_team: "Ekipa"
   user_header_settings: "Moj račun"
   user_header_logout: "Izpis"
   user_header_signin: "Prijava"

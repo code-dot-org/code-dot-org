@@ -16,7 +16,6 @@ fr:
       user:
         name: 'Nom à afficher'
         name_example: 'Afficher nom <br/> (par ex. SuperCodeur ou Jeanne S.)'
-        other_name_example: 'Afficher nom<br/>(p. ex. Mme Smith)'
         email: 'E-mail'
         parent_email: 'Email du parent/tuteur'
         personal_email: "Email personnel <a href=\"%{url}\">(click here if you don't have an email address)</a>"
@@ -87,6 +86,7 @@ fr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Compte Microsoft'
+    microsoft_v2_auth: 'Compte Microsoft'
     clever: 'Compte Clever'
     powerschool: 'Compte Powerschool'
     forgot_password: 'Mot de passe oublié ?'
@@ -112,7 +112,6 @@ fr:
     age: 'Age'
     user_type: 'Êtes-vous un élève ou un enseignant ?'
     submit: 'S’inscrire'
-    next: 'Suivant'
     teacher: 'Êtes-vous un enseignant?'
     valid_username: "Disponible !"
     invalid_username: "Le nom d'utilisateur doit contenir au moins 5 caractères"

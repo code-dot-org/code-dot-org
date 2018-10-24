@@ -874,6 +874,8 @@ gl:
               name: Pulseiras Binarias
             Binary Images:
               name: Imaxes binárias
+            Play Lab:
+              name: Laboratorio de Xogos
         csd2-2017:
           stages:
             Lists:

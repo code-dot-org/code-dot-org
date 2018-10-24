@@ -1383,6 +1383,7 @@
   csp_name: "Prinsipp i informatikk"
   full_course_category_name: "Alle kurs"
   user_header_label: "Hei %{username}"
+  user_header_team: "Team"
   user_header_settings: "Kontoinnstillingar"
   user_header_logout: "Logg ut"
   user_header_signin: "Logg inn"
@@ -1421,4 +1422,5 @@
   hero_name: 'Minecraft: Helten si reise'
   applab-intro_name: Lab-intro til appen
   creativity_create: "Opprett"
+  creativity_hoc_coming: "Kodetimen kjem…"
   account_sign_up_email_opt_in: "Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?"

@@ -1,4 +1,5 @@
-"tr-TR":
+---
+tr-TR:
   hour_of_code: Saat Kodu
   hello: Merhaba dünya
   'yes': Evet
@@ -1198,10 +1199,13 @@
   cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
   cspexam2-AKwgAh1ac5_name: Test Bölüm 2 / 25 soru
   cspunit3_gradelevel: 9-12. Sınıflar
-  cspunit3_shortdescription_congrats: |-
-    Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r
-    \r
-    Bu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates.
+  cspunit3_shortdescription_congrats: "Bu ünite, zengin içerikli etkileşimli uygulamalar
+    yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını
+    öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama
+    ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar
+    tüm programlama dilleri ve araçları için geçerlidir.\r\n\r\nBu ünite en son 30
+    Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha
+    fazla bilgi için: forum.code.org/c/csp/updates."
   20-hour_name: Hızlandırılmış Kurs
   algebra_name: Bilgisayar biliminde Cebir
   AlgebraA_name: Bilgisayar biliminde Cebir Kurs A
@@ -1959,6 +1963,7 @@
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   full_course_category_name: Tüm Kurslar
   user_header_label: Merhaba %{username}
+  user_header_team: Takım
   user_header_settings: Hesap Ayarları
   user_header_logout: Çıkış Yap
   user_header_signin: Giriş Yap
@@ -2010,170 +2015,6 @@
   google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
   applab-intro_name: Uygulama Laboratuvarı Giriş
   creativity_create: Oluştur
+  creativity_hoc_coming: Kodlama Saati geliyor…
   account_sign_up_email_opt_in: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
     diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
-  ! '': 
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
-    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
-    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
-    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
-    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
-    from the Minecraft team. Get a head start on thinking through what you need to
-    bring Hour of Code to young people during Computer Science Education week (December
-    4-10) and beyond.
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
-    target='_blank'>access the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_steph_curry: Hour of Code with Steph Curry
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  pre-express-2018_name: Pre-reader Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-post-survey_name: Student Post-Course Survey
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
-  csd_category_name: CS Discoveries ('17-'18)
-  csd_2018_category_name: CS Discoveries ('18-'19)
-  csp_2018_category_name: CS Principles ('18-'19)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  user_header_team: Team
-  user_header_create: 'Create '
-  user_header_applab: 'App Lab '
-  user_header_artist: 'Artist '
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_all: View all projects...
-  user_header_view_project_gallery: View project gallery
-  reset_student_password_instructions: You can reset the secret <word/picture> for
-    any of your students by going to the “Manage Students” tab for the section, clicking
-    the “Show secret” button under the “Password” column, and clicking the “Reset
-    secret” button.
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  hero_name: 'Minecraft: Hero''s Journey'
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_hoc_coming: The Hour of Code is coming…
-  creativity_what_will_you_create: What will you create?
-  creativity_homepage: Give flight to imagination and birth to innovation. Start with
-    an Hour of Code and your own brand of creativity, whatever it may be. Watch our
-    video.
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will
-    you create?'
-  creativity_courses: Go further with Code.org courses
-  creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.

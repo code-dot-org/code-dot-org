@@ -1,4 +1,5 @@
-"ja-JP":
+---
+ja-JP:
   hour_of_code: Hour of Code（コーディングを学ぶ時間）
   hello: Hello world
   'yes': はい
@@ -1550,6 +1551,7 @@
   csd_2018_name: コンピューターサイエンス 発展
   full_course_category_name: すべてのコース
   user_header_label: やあ %{username}
+  user_header_team: チーム
   user_header_settings: アカウント
   user_header_logout: サインアウト
   user_header_signin: サインイン
@@ -1590,109 +1592,5 @@
   google_sign_in_instruct: ここでは、「グーグルアカウントでサインイン」のオプションを選ぶことができます。
   applab-intro_name: App Labの紹介
   creativity_create: つくる
+  creativity_hoc_coming: Hour of Code がやってくる…
   account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
-  ! '': 
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
-  sports_title: Code your own sports game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  dashboard_course_csina: Computer Science in Algebra
-  codesters_name: Codesters
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
-  express-2018_name: Express Course (2018)
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  sports_name: Code your own sports game
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  coursec_shortdescription_congrats: Learn the basics of computer science and create
-    your own art, stories, and games.
-  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
-    create your own art, stories, and games.
-  lightbot_beyond_name: LightBot
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodu_beyond_platformtext: Windows, xBox
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  user_header_team: Team
-  user_header_create: 'Create '
-  user_header_applab: 'App Lab '
-  user_header_artist: 'Artist '
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_all: View all projects...
-  user_header_view_project_gallery: View project gallery
-  hero_name: 'Minecraft: Hero''s Journey'
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_hoc_coming: The Hour of Code is coming…
-  creativity_what_will_you_create: What will you create?
-  creativity_homepage: Give flight to imagination and birth to innovation. Start with
-    an Hour of Code and your own brand of creativity, whatever it may be. Watch our
-    video.
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will
-    you create?'
-  creativity_courses: Go further with Code.org courses
-  creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.

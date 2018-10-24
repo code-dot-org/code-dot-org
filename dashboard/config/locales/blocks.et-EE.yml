@@ -315,11 +315,11 @@ et:
           TYPE:
             "'sand'": liiv
             "'planksOak'": tammelauad
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": liiv
       craft_moveForward:
         text: liigu edasi
       craft_placeTorch:
         text: aseta tõrvik
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': kana

@@ -319,11 +319,11 @@ ko:
           TYPE:
             "'sand'": 모래
             "'planksOak'": 참나무 목재
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": 모래
       craft_moveForward:
         text: 앞으로 이동
       craft_placeTorch:
         text: 횃불 놓기
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': 닭

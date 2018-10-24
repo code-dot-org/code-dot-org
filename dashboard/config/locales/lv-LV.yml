@@ -76,6 +76,7 @@ lv:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft konts
+    microsoft_v2_auth: Microsoft konts
     forgot_password: Aizmirsi savu paroli?
     need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
     need_unlock: Nesaņēmi atslēgšanas norādijumus?
@@ -91,7 +92,6 @@ lv:
     age: Vecums
     user_type: Jūs esat skolnieks vai skolotājs?
     submit: Piereģistrēties
-    next: Nākamā
     teacher: Vai jūs esat skolotājs?
     valid_username: Pieejams!
     invalid_username: Lietotājvārdā jābūt vismaz 5 rakstzīmēm

@@ -1098,6 +1098,7 @@
   header_project_gallery: "Projekte"
   header_educate_hoc: "Ora e Kodimit"
   user_header_label: "Përshëndetje %{username}"
+  user_header_team: "Skuadra"
   user_header_settings: "Llogaria ime"
   user_header_logout: "Dil"
   user_header_signin: "Futu"
@@ -1105,3 +1106,4 @@
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   creativity_create: "Krijo"
+  creativity_hoc_coming: "Ora e kodimit po vjen…"
