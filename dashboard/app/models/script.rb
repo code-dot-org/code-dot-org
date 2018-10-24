@@ -478,6 +478,9 @@ class Script < ActiveRecord::Base
   end
 
   def hoc?
+    puts
+    puts "checking .hoc?"
+    puts
     ScriptConstants.script_in_category?(:hoc, name)
   end
 
