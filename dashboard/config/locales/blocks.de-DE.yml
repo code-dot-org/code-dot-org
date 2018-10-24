@@ -288,11 +288,11 @@ de:
           TYPE:
             "'sand'": Sand
             "'planksOak'": Eichenholzbretter
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": Sand
       craft_moveForward:
         text: vorwärts bewegen
       craft_placeTorch:
         text: Fackel platzieren
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': Huhn

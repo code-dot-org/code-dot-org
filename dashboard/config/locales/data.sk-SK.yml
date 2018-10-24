@@ -486,7 +486,7 @@ sk:
     video:
       name:
         maze_intro: Úvod do bludiska
-        artist_intro: Úvod do Umelca
+        artist_intro: Úvod k Umelcovi
         farmer_intro: Úvod k Farmárovi
         flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovať x-krát
@@ -518,7 +518,7 @@ sk:
         C1_maze_intro_sequencing: Úvod do sekvencovania bludiska
         C1_maze_debugging: Ladenie bludiska
         C1_bee_level_intro: Level s včelami - Úvod
-        C1_artist_intro: Úvod do Umelca
+        C1_artist_intro: Úvod k Umelcovi
         C1_spelling_bee_intro: Úvod do hláskovania
         C1_zuck_repeat_loop: Slučky v bludisku
         C1_bee_loops: Slučky s včelami
@@ -528,7 +528,7 @@ sk:
         C1_building_foundation: Stavanie základov
         C1_going_places_safely: Bezpečné premiestňovanie
         C2_maze_intro: Úvod do bludiska
-        C2_artist_intro: Úvod do Umelca
+        C2_artist_intro: Úvod k Umelcovi
         C2_zuck_repeat_loop: Slučky v bludisku
         C2_artist_loops: Slučky s umelcom
         C2_artist_debugging: Ladenie umelca
@@ -544,7 +544,7 @@ sk:
         C2_digital_footprint: Tvoja digitálna stopa
         C2_digital_footprint_v2: Tvoja digitálna stopa
         C3_maze_level_4: Slučky v bludisku
-        C3_artist_intro: Úvod do Umelca
+        C3_artist_intro: Úvod k Umelcovi
         C3_artist_functions: Funkcie umelca
         C3_bee_functions: Funkcie včely
         C3_bee_conditionals: Podmienky s včelou
@@ -585,6 +585,8 @@ sk:
         CSF_collector_repeat_loops: Slučky opakovania zberateľa
         CSF_collector_text_blocks: 'Základy informatiky: Zberateľ'
         CSF_create_functions: Vytvorte funkcie
+        CSF_debugging_k1_blocks: Hľadanie a odstraňovanie chýb
+        CSF_debugging_text_blocks: Hľadanie a odstraňovanie chýb
         CSF_EF_cs_matters: Na informatike záleží
         CSF_maze_intro_k1_blocks: Úvod do Študia kódu
         CSF_maze_intro_text_blocks: Úvod do Študia kódu
@@ -626,13 +628,13 @@ sk:
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Slučky
-        starwars_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
-        starwars_typing: 'Star Wars: Budovanie Galaxie s kódom - JavaScript'
-        starwars_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
-        starwars_congrats: 'Star Wars: Budovanie Galaxie s kódom - Gratulujeme'
-        starwars_blocks_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
-        starwars_blocks_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
-        starwars_blocks_congrats: 'Star Wars: Budovanie Galaxie s kódom - Gratulujeme'
+        starwars_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
+        starwars_typing: 'Star Wars: Budovanie Galaxie pomocou kódu - JavaScript'
+        starwars_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
+        starwars_congrats: 'Star Wars: Budovanie Galaxie pomocou kódu - Gratulujeme'
+        starwars_blocks_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
+        starwars_blocks_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
+        starwars_blocks_congrats: 'Star Wars: Budovanie Galaxie pomocou kódu - Gratulujeme'
         mc_intro: Minecraft - Úvod
         mc_repeat: Minecraft - Opakovanie
         mc_if_statements: Minecraft - Príkazy Ak
@@ -644,11 +646,11 @@ sk:
         iceage_intro: Doba ľadová Hodina Kódu - Úvod
         iceage_events: Hodina Kódu s Dobou ľadovou - Udalosti
         iceage_repeat: Hodina Kódu s Dobou ľadovou - Výrazy s opakovaniami
-        mc_2016_intro: Hodina kódu Minecraft - Úvod
-        mc_2016_loops: Hodina kódu Minecraft - Cykly
-        mc_2016_events: Hodina kódu Minecraft - Udalosti
-        mc_2016_spawn: Hodina kódu Minecraft - Vytváranie postáv
-        mc_2016_congrats: Hodina kódu Minecraft - Gratulujeme
+        mc_2016_intro: Minecraft Hodina Kódu - Úvod
+        mc_2016_loops: Minecraft Hodina Kódu - Cykly
+        mc_2016_events: Minecraft Hodina Kódu - Udalosti
+        mc_2016_spawn: Minecraft Hodina Kódu - Vytváranie postáv
+        mc_2016_congrats: Minecraft Hodina Kódu - Gratulujeme
         applab_hoc_welcome: Aplikačné laboratórium Hodiny Kódu - Vitajte
         applab_hoc_setproperty: Aplikačné laboratórium Hodiny Kódu - setProperty
         applab_hoc_onevent: Aplikačné laboratórium Hodiny Kódu - onEvent
@@ -657,11 +659,11 @@ sk:
         mc_2017_agent_intro: Minecraft Hodina Kódu - Agent
         mc_2017_repeat: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
         mc_2017_functions: Minecraft Hodina Kódu - Funkcie
-        mc_2017_congratulations: Hodina kódu Minecraft - Gratulujeme
+        mc_2017_congratulations: Minecraft Hodina Kódu - Gratulujeme
         mc_2017_puzzle_1: Minecraft Hodina Kódu - Agent
         mc_2017_puzzle_3: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
         mc_2017_puzzle_8: Minecraft Hodina Kódu - Funkcie
-        mc_2017_puzzle_12: Hodina kódu Minecraft - Voľná hra
+        mc_2017_puzzle_12: Minecraft Hodina Kódu - Voľná hra
         hint_videos_d_11_3_first: 'Videonápoveda: D.11.3 Prvé'
         hint_videos_d_11_3_last: 'Videonápoveda: D.11.3 Posledné'
         hint_videos_d_11_4_first: 'Videonápoveda: D.11.4 Prvé'
@@ -699,10 +701,10 @@ sk:
         CDEF_Video_SpritesInAction: Objekty v akcií
         CSF_SpriteLab_SpritesInAction_CDEF: Objekty v akcií
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
-        mc_2018_intro: 'Minecraft: Voyage Aquatic Úvod'
-        MC_2018_loops: 'Minecraft: Voyage Aquatic Opakuj až do'
-        mc_2018_conditionals: 'Minecraft: Voyage Aquatic Podmienky'
-        mc_2018_closing: 'Minecraft: Gratulujeme Voyage Aquatic'
+        mc_2018_intro: 'Minecraft: Voyage Aquatic - Úvod'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic - Opakovania'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic - Podmienky'
+        mc_2018_closing: 'Minecraft: Voyage Aquatic - Gratulujeme'
     callout:
       text:
         drag_blocks: Presuňte blok "Posunúť" a pripojte ho pod druhý blok
@@ -804,9 +806,9 @@ sk:
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
         Infinity_move_collide_callout: Keď nastane táto udalosť prehraj zvuk.
         Infinity_repeat_callout: Sem umiestni bloky Posunúť
-        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
-        craft_drag_block_callout: Potiahni "posunúť vpred()" blok a zapoj ho pod iný
-          blok
+        craft_run_button_callout: Stlačením tlačidla "Spustiť" vyskúšaj svoj program
+        craft_drag_block_callout: Potiahni blok "posuň sa dopredu()" a zapoj ho pod
+          iný blok
         craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
         craft_inside_repeat: Opakuj akcie umiestnením blokov tu
         craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to

@@ -1093,6 +1093,7 @@
   header_tutorials: "Oppaat"
   header_documentation: "Dokumentaatio"
   user_header_label: "Hei %{username}"
+  user_header_team: "Tiimi"
   user_header_settings: "Tilini"
   user_header_logout: "Kirjaudu ulos"
   user_header_signin: "Kirjaudu sisään"

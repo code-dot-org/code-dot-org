@@ -2844,8 +2844,14 @@ pt-BR:
         próximo desafio. "
       Function intro Ryan: Use a função 'construir ponte' duas vezes para criar um
         caminho até a tocha.
+      GLJr_Behavior_2: Agora você tem alguns blocos novos! Tente usá-los e veja como
+        eles funcionam. Em suas anotações, escreva quais você tentou e o que eles
+        fazem.
       GLJr_Behavior_6: Vamos tentar mais alguns comportamentos - faça o cachorro correr
         para cima e o gato correr para a direita.
+      GLJr_Forever_2: Agora você tem alguns blocos novos! Tente usá-los e veja como
+        eles funcionam. Em suas anotações, escreva quais você tentou e o que eles
+        fazem.
       HOC 2018 Level_10: Vá para a entrada do Monumento do Oceano.
       HOC 2018 Level_6: Navegue através do gelo para chegar ao templo.
       HoCAB_labyrinth1: Use os blocos de seta para resolver este labirinto!
@@ -3290,6 +3296,7 @@ pt-BR:
         como os movimentos mudam. A velocidade pode ficar entre 2 e 12.
       Middle School Hackathon Pt 1: "(Clique para ver todas as instruções)"
       Middle School Hackathon Pt 2: "(Clique para ver todas as instruções)"
+      Mike Pair Programming: Veja aqui as instruções
       Mike Test Bee Conditionals 1: |-
         Esta nuvem está tapando minha visão! Veja
         se há uma flor atrás da nuvem, e só colete néctar se houver
@@ -3571,6 +3578,7 @@ pt-BR:
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
         achar que já descobriu como o jogo funciona, clique em "Concluir"
+      October15 ghost 1: Dê olhos ao fantasma, usando a função "desenhar um círculo".
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com
         cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2018: Não é uma boa ideia topar com um Creeper. Passe
@@ -3655,6 +3663,13 @@ pt-BR:
       PS copy 2-3 Bee Conditionals 5: "Tenha cuidado para não coletar néctar das\nflores
         roxas que não o têm. \r\nPrimeiro, veja se o néctar\né igual a 1 usando o
         bloco \"se néctar\"."
+      PS predictive Applab level test: 'Veja aqui algumas instruções. '
+      Pixelation - Lesson 14 - Make your own B and W Image: Agora, crie sua própria
+        imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho
+        que você quiser. Feliz pixelização!
+      Pixelation - Lesson 14 - Make your own B&W Image: Agora, crie sua própria imagem!
+        Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você
+        quiser. Feliz pixelização!
       Play Lab Rocket 1: |-
         Um foguete é lançado, viajando a 15 metros
         por segundo... clique em "Executar" para ver como é esse problema em forma de animação.
@@ -3770,6 +3785,8 @@ pt-BR:
       SG U3L07 - Free Play Loops and Random: |-
         Atividade livre! Use o que você aprendeu
         sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
+      SG U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
+        as instruções)
       SG U3L07 More Subgoals: |-
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
@@ -4088,6 +4105,10 @@ pt-BR:
         a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,\nlinhas
         e cores da tartaruga.  Para começar, siga a série de etapas sugerida na\nplanilha
         de acompanhamento. "
+      U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
+        as instruções)
+      U3L07 - randomSquare_2018: Desenhe a figura usando um laço. (Clique para ver
+        todas as instruções)
       U3L13 - Button with ID: |-
         Arraste um botão para fora da tela e
         defina seu texto como "Vá em frente!".  Execute o programa para ver se você consegue enxergar
@@ -4283,6 +4304,12 @@ pt-BR:
         e, em seguida, arraste-o para limpar a girafa!
       Virtual Pet 4_simple: Adicione um comportamento ao seu sabonete para torná-lo
         arrastável e, em seguida, arraste-o para limpar a girafa!
+      'Widget: Black and White Pixelation': Agora, crie sua própria imagem! Começamos
+        com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
+        Feliz pixelização!
+      'Widget: Black and White Pixelation_2018': Agora, crie sua própria imagem! Começamos
+        com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
+        Feliz pixelização!
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
       aE7: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés
         da direita, o que acontece? \r\n\r\nVocê pode repetir tudo\nisso para desenhar
@@ -5231,6 +5258,10 @@ pt-BR:
         Corrija o(s) erro(s) para coletar todo o néctar
         e produzir todo o mel.
       courseD_bee_debugging4: Corrija o(s) erro(s) para fazer todo o mel.
+      courseD_bee_nestedLoops1: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1_2018: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops3: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseD_bee_nestedLoops5: "Colete todo o néctar de cada flor\ne produza mel
         na colmeia. \r\n\r\nUse um laço aninhado. "
@@ -5465,6 +5496,8 @@ pt-BR:
       courseF_bee_for2: Escrever o código para ajudar a abelha a coletar todo o néctar.
       courseF_bee_for2_2018: Escrever o código para ajudar a abelha a coletar todo
         o néctar.
+      courseF_bee_for4: Ajude a abelha a coletar todo o nectar.
+      courseF_bee_for4_2018: Ajude a abelha a coletar todo o nectar.
       courseF_bee_for5: Usar a variável `contador` duas vezes para resolver este enigma.
       courseF_bee_for5_2018: Usar a variável `contador` duas vezes para resolver este
         enigma.
@@ -6252,6 +6285,7 @@ pt-BR:
         Adicione o código necessário para garantir que
         a abelha colete todo o néctar. Olhe quanto código você precisa para esse desafio!
         (Vamos aprender uma maneira mais simples no próximo desafio).
+      grade5_bee_for_loops4: Ajude a abelha a coletar todo o nectar.
       grade5_bee_for_loops6: |-
         Você também pode usar um laço "para" para fazer contagem
         regressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1.

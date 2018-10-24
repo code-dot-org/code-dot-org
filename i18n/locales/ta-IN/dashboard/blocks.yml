@@ -149,11 +149,11 @@ ta:
         options:
           TYPE:
             "'sand'": மண்
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": மண்
       craft_moveForward:
         text: முன்னோக்கி நகர்த்த
       craft_placeTorch:
         text: இடம் மின்வளக்கு
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': கோழி

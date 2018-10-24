@@ -83,6 +83,7 @@ th:
     twitter: ทวิตเตอร์
     facebook: เฟซบุค
     windowslive: บัญชี Microsoft
+    microsoft_v2_auth: บัญชี Microsoft
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
@@ -108,7 +109,6 @@ th:
     age: อายุ
     user_type: คุณเป็นนักเรียนหรืออาจารย์
     submit: สมัครสมาชิก
-    next: ถัดไป
     teacher: คุณเป็นครูหรือ
     valid_username: อนุญาต
     invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร

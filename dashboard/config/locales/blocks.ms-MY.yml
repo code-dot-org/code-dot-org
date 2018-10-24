@@ -233,6 +233,10 @@ ms:
           TYPE:
             "'sand'": pasir
             "'planksOak'": papan oak
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pasir
       craft_moveForward:
         text: bergerak ke hadapan
       craft_placeTorch:

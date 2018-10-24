@@ -663,11 +663,11 @@ pt-BR:
           TYPE:
             "'sand'": areia
             "'planksOak'": tábuas de carvalho
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": areia
       craft_moveForward:
         text: avance
       craft_placeTorch:
         text: coloque a tocha
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': galinha

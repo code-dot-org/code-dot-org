@@ -24,7 +24,6 @@ es:
       user:
         name: Nombre a mostrar
         name_example: Nombre para mostrar <br/> (codificador fresco o Jane S.)
-        other_name_example: Nombre Mostrado<br/>(por ejemplo, Srta. Smith)
         email: Correo electrónico
         parent_email: Email del padre o guardián
         personal_email: Dirección de email personal <a href="%{url}">(haz click aquí
@@ -99,6 +98,7 @@ es:
     twitter: Twitter
     facebook: Facebook
     windowslive: Cuenta de Microsoft
+    microsoft_v2_auth: Cuenta de Microsoft
     clever: Cuenta inteligente
     powerschool: Cuenta Powerschool
     forgot_password: "¿Olvidaste tu contraseña?"
@@ -143,7 +143,6 @@ es:
     age: Edad
     user_type: "¿Eres estudiante o profesor?"
     submit: Registrarse
-    next: Siguiente
     teacher: "¿Eres profesor/a?"
     valid_username: "¡Disponible!"
     invalid_username: El Nombre de usuario debe tener al menos 5 caracteres
@@ -187,7 +186,6 @@ es:
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Debes especificar una preferencia de email.
-    create_user_type: Crear cuenta como un
   school_info:
     title: Información escolar (opcional)
     school_country: País de escuela

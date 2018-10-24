@@ -1002,6 +1002,8 @@ ko:
               name: 2진 팔찌
             Binary Images:
               name: 2진 이미지
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Peer Review:

@@ -18,7 +18,6 @@ zh-TW:
       user:
         name: 顯示名稱
         name_example: 顯示名稱<br/>（例如 Cool Coder 或是 Jane S）
-        other_name_example: 要顯示的名稱<br/>（例如 Ms. Smith）
         email: 電子信箱
         parent_email: 家長或監護人的電子郵件
         personal_email: 個人電子郵件位址 <a href="%{url}"> (如果您沒有電子郵件位址請按這裡)</a>
@@ -89,6 +88,7 @@ zh-TW:
     twitter: Twitter
     facebook: Facebook
     windowslive: 微軟帳戶
+    microsoft_v2_auth: 微軟帳戶
     clever: Clever 帳號
     powerschool: Powerschool 帳戶
     forgot_password: 忘記了您的密碼嗎？
@@ -121,7 +121,6 @@ zh-TW:
     age: 年齡
     user_type: 你是學生還是教師？
     submit: 註冊
-    next: 下一個
     teacher: 你是一名教師？
     valid_username: 可以使用！
     invalid_username: 用戶名稱至少需 5 字元
@@ -151,7 +150,6 @@ zh-TW:
     email_preference_yes: 是
     email_preference_no: 否
     email_preference_required: 你必須指定一個信箱地址。
-    create_user_type: 創建帳戶，類型為
   school_info:
     title: 學校資訊（非必填）
     school_country: 學校所屬國家

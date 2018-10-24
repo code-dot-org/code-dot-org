@@ -1069,6 +1069,7 @@
   header_help_support: 'Pomoć i podrška '
   header_documentation: "Dokumentacija"
   user_header_label: "Zdravo, %{username}"
+  user_header_team: "Tim"
   user_header_settings: "Moj račun"
   user_header_logout: "Odjava"
   user_header_signin: "Prijava"

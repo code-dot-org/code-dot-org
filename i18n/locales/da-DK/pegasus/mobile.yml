@@ -1103,6 +1103,7 @@
   header_about: "Om"
   header_report_bug: "Rapporter fejl"
   user_header_label: "Hej %{username}"
+  user_header_team: "Hold"
   user_header_settings: "Min konto"
   user_header_logout: "Log ud"
   user_header_signin: "Log ind"

@@ -148,7 +148,7 @@
   "entityTypeIronGolem": "גולם ברזל",
   "entityTypePlayer": "שחקן",
   "entityTypeSheep": "כבשה",
-  "entityTypeZombie": "",
+  "entityTypeZombie": "זומבי",
   "eventTypeWhenAttacked": "כאשר מותקף",
   "eventTypeWhenDay": "אם יום",
   "eventTypeWhenNight": "אם לילה",

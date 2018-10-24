@@ -1359,6 +1359,7 @@
   header_about: "Про"
   csp_name: "'16-'17 принципи інформатики"
   user_header_label: "Привіт %{username}"
+  user_header_team: "Команда"
   user_header_settings: "Мій профіль"
   user_header_logout: "Вийти"
   user_header_signin: "Вхід"
@@ -1367,3 +1368,4 @@
   user_header_minecraft: "Майнкрафт"
   user_header_flappy: "Пурх"
   creativity_create: "Створити"
+  creativity_hoc_coming: "Наближається Година коду…"

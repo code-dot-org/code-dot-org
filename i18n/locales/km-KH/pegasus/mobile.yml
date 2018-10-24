@@ -662,6 +662,7 @@
   header_teacher_community: "សមាគមន៏នៃគ្រូបង្រៀន"
   header_report_bug: "រាយការណ៌អំពីកំហុសរបស់កម្មវិធី"
   user_header_label: "សួស្តី%{username}"
+  user_header_team: "ក្រុម"
   user_header_settings: "គណនី​របស់​ខ្ញុំ"
   user_header_logout: "ចាកចេញ"
   user_header_signin: "ចូល​គណនី"
@@ -669,3 +670,4 @@
   view_all_sections: "មើលផ្នែកទាំងអស់"
   hero_name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
   creativity_create: "បង្កើត"
+  creativity_hoc_coming: "កម្មវិធី Hour of Code នឹងមកដល់ក្នុងពេលឆាប់ៗនេះ…"

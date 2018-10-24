@@ -1358,6 +1358,7 @@
   csp_name: "Princípios da CC - 16-17"
   full_course_category_name: "Cursos Completos"
   user_header_label: "Oi, %{username}"
+  user_header_team: "Equipe"
   user_header_settings: "Minha conta"
   user_header_logout: "Sair"
   user_header_signin: "Entrar"
@@ -1377,5 +1378,6 @@
   sign_in_instruct_button: "Clique no botão \"Login\"."
   hero_name: 'Minecraft: Jornada do Herói'
   creativity_create: "Criar"
+  creativity_hoc_coming: "A Hora do Código está chegando…"
   account_sign_up_email_opt_in: "Podemos te enviar por e-mail atualizações de nossos cursos, oportunidades locais ou outras notícias de ciências da computação?"
   account_sign_up_child_accept_terms: "Confirmo que tenho autorização dos meus pais ou do tutor legal para usar os serviços do Code.org."

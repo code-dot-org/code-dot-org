@@ -94,6 +94,7 @@ sk:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft účet
+    microsoft_v2_auth: Microsoft účet
     clever: Smart konto
     powerschool: Hlavný školský účet
     forgot_password: Zabudli ste heslo?
@@ -135,7 +136,6 @@ sk:
     age: Vek
     user_type: Ste študent/žiak alebo učiteľ?
     submit: Zaregistrovať sa
-    next: Ďalší
     teacher: Ste učiteľ?
     valid_username: Dostupné!
     invalid_username: Užívateľské meno musí obsahovať aspoň 5 znakov
@@ -889,14 +889,14 @@ sk:
     correct_title: Správne
     correct_body: To je správna odpoveď.
   multi-submittable:
-    wrong_title: Ďakujeme
+    wrong_title: Ďakujem
     wrong_body: Ďakujeme za odoslanie odpovede.
-    correct_title: Ďakujeme
+    correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovede.
   level_group:
-    wrong_title: Ďakujeme
+    wrong_title: Ďakujem
     wrong_body: Ďakujeme za odoslanie odpovedí.
-    correct_title: Ďakujeme
+    correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovedí.
     hide_survey_last_answer: Tento prieskum je anonymný. Pre súhrnné informácie o
       výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu
@@ -905,9 +905,9 @@ sk:
       aby sme mohli Vaše odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné
       odpovede za celú triedu, avšak bez konkrétnych mien.
   level_group-submittable:
-    wrong_title: Ďakujeme
+    wrong_title: Ďakujem
     wrong_body: Ďakujeme za odoslanie odpovedí.
-    correct_title: Ďakujeme
+    correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovedí.
     unsubmit-title: Odvolaj tvoje hodnotenie
     unsubmit-body: Odvolanie tvojho hodnotenia obnoví čas a dátum odoslania.  Si si

@@ -515,11 +515,11 @@ bg:
           TYPE:
             "'sand'": пясък
             "'planksOak'": дъбови дъски
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": пясък
       craft_moveForward:
         text: върви напред
       craft_placeTorch:
         text: постави факел
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': пиле
