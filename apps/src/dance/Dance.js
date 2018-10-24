@@ -366,6 +366,9 @@ Dance.prototype.initInterpreter = function () {
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
     },
+    makeNewDanceSpriteGroup: (n, costume, layout) => {
+      nativeAPI.makeNewDanceSpriteGroup(n, costume, layout);
+    },
     getCurrentDance: (spriteIndex) => {
       return nativeAPI.getCurrentDance(sprites[spriteIndex]);
     },
@@ -389,6 +392,9 @@ Dance.prototype.initInterpreter = function () {
     },
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);
+    },
+    setPropEach: (group, property, val) => {
+      nativeAPI.setPropEach(group, property, val);
     },
     setPropRandom: (spriteIndex, property) => {
       nativeAPI.setPropRandom(sprites[spriteIndex], property);
