@@ -115,7 +115,7 @@ body.modal-open .supreme-container{
 #homepage #actions {
   position: relative;
   padding: 20px;
-  margin-bottom: 40px;  /* hoc2018 special */
+  padding-bottom: 60px; /* hoc2018 special */
   text-align: left;     /* hoc2018 special */
 }
 
