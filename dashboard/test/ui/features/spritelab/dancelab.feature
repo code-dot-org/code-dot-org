@@ -9,3 +9,13 @@ Feature: Dance Lab
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     And element "#song_selector" is visible
+
+  # This test requires cloudfront.
+  @no_circle
+  Scenario: Restricted audio content is protected
+    When I am on "http://studio.code.org/restricted/placeholder.txt"
+    Then page text does not contain "placeholder for testing"
+
+    When I am on "http://studio.code.org/dashboardapi/sign_cookies"
+    And I am on "http://studio.code.org/restricted/placeholder.txt"
+    Then page text does contain "placeholder for testing"

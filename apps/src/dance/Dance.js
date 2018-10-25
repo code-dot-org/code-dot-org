@@ -476,10 +476,6 @@ Dance.prototype.updateSongMetadata = function (id) {
   this.songMetadataPromise = this.loadSongMetadata(id);
 };
 
-Dance.prototype.playSong = function (file, callback) {
-  audioCommands.playSound({url: file, callback: callback});
-};
-
 Dance.prototype.loadSongMetadata = async function (id) {
   let songDataPath = '/api/v1/sound-library/hoc_song_meta';
   const response = await fetch(`${songDataPath}/${id}.json`);
@@ -494,7 +490,7 @@ Dance.prototype.onP5Setup = function () {
   this.nativeAPI.setup();
   this.p5setupPromiseResolve();
   if (this.share) {
-    setTimeout(this.studioApp_.runButtonClick, 0);
+    this.studioApp_.runButtonClick();
   }
 };
 
