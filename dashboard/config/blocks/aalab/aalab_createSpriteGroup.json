@@ -1,0 +1,13 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "createSpriteGroup",
+    "blockText": "createSpriteGroup {GROUPNAME}",
+    "args": [
+      {
+        "name": "GROUPNAME",
+        "type": "String"
+      }
+    ]
+  }
+}

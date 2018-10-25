@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Sprites",
   "config": {
     "func": "setColor",
     "blockText": "color {COLOR}",
