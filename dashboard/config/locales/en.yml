@@ -66,6 +66,7 @@ en:
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
   okay: "Okay"
+  or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
