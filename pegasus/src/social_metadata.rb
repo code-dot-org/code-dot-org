@@ -118,17 +118,17 @@ def get_social_metadata_for_page(request)
       },
       "soon-hoc-mc" => {
         title: hoc_s(:tutorial_mchoc_name),
-        description: hoc_s(:social_hoc2018_mc),
+        description: hoc_s(:social_hoc2018_mc_creativity),
         image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
       },
       "soon-hoc-dance" => {
         title: hoc_s(:tutorial_mchoc_name),
-        description: hoc_s(:social_hoc2018_mc),
+        description: hoc_s(:social_hoc2018_mc_creativity),
         image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
       },
       "default" => {
         title: hoc_s(:tutorial_mchoc_name),
-        description: hoc_s(:social_hoc2018_mc),
+        description: hoc_s(:social_hoc2018_mc_creativity),
         image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
       }
     },
