@@ -153,8 +153,8 @@ XML
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "first": "red",
-                "second": "blue",
+                "red": "rood",
+                "blue": "blauw",
               }
             }
           }
@@ -178,7 +178,7 @@ XML
           "blockText" => "cat {TIMESTAMP} {COLOR}",
           "args" => [
             {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-            {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+            {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
           ],
           "eventBlock" => true
         },
@@ -197,7 +197,7 @@ XML
             "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+              {"name" => "COLOR", "options" => [["red", "rood"], ["blue", "blauw"]]}
             ],
             "eventBlock" => true
           },
@@ -216,10 +216,11 @@ XML
       "data" => {
         "blocks" => {
           "DanceLab_atSelectColor" => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "first": "red",
-                "second": "blue",
+                "red": "",
+                "blue": "",
               }
             }
           }
@@ -240,9 +241,10 @@ XML
         {
           "color" => [140, 1, 0.74],
           "func" => "atSelectColor",
+          "blockText" => "cat {TIMESTAMP} {COLOR}",
           "args" => [
             {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-            {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+            {"name" => "COLOR", "options" => [["red", "rood"], ["blue", "blauw"]]}
           ],
           "eventBlock" => true
         },
@@ -258,9 +260,10 @@ XML
           {
             "color" => [140, 1, 0.74],
             "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+              {"name" => "COLOR", "options" => [["red", "rood"], ["blue", "blauw"]]}
             ],
             "eventBlock" => true
           },
@@ -269,7 +272,7 @@ XML
 
     localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
-    assert_equal localized_custom_blocks, translated_block
+    assert_not_equal localized_custom_blocks, translated_block
   end
 
   test 'localizes authored hints' do
