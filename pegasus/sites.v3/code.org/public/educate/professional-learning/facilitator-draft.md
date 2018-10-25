@@ -17,15 +17,13 @@ theme: responsive
 
 Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science (CS) educators. 
 
-Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below.**
+Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
 
 <a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
 
 [/col-50]
 
 <div style="clear: both;"></div>
-
-<hr/>
 
 <link href="/css/educate.css" rel="stylesheet">
 
@@ -53,9 +51,11 @@ The ideal facilitator believes deeply in Code.org’s equity-focused mission, is
 
 <div style="clear:both"></div>
 
-<hr/>
+## Qualities of a Code.org Facilitator
 
-In order to be selected for this program, potential Code.org facilitators must demonstrate the following qualifications:
+The Facilitator Development Program application is open to anyone who is interested in developing as a leader and facilitator for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our qualifications (listed below) and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/professional-learning/about-partners) or in areas where we are considering future partnerships.
+
+We're seeking candidates who demonstrate the following qualities:
 
 <div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
@@ -73,7 +73,7 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div style="clear:both"></div>
 
-<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
 <img src="/images/fit-100/infographics/facilitator_equity.png">
 
@@ -90,7 +90,7 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div style="clear:both"></div>
 
-<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
 <img src="/images/fit-100/infographics/facilitator_growth.png">
 
@@ -108,7 +108,7 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div style="clear:both"></div>
 
-<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
 <img src="/images/fit-100/infographics/facilitator_classroom.png">
 
@@ -126,7 +126,7 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div style="clear:both"></div>
 
-<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
 <img src="/images/fit-100/infographics/facilitator_leader.png">
 
@@ -144,7 +144,7 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div style="clear:both"></div>
 
-<div class="col-20" style="padding: 30px 0 0 20px; margin-bottom: 20px;">
+<div class="col-20" style="padding: 15px 0 0 10px; margin-bottom: 10px;">
 
 <img src="/images/fit-100/infographics/facilitator_additional.png">
 
@@ -161,50 +161,56 @@ In order to be selected for this program, potential Code.org facilitators must d
 
 <div style="clear:both"></div>
 
-<hr/>
-
 ## Learn more about the program
 
-Click on the questions below to learn more about the Code.org Facilitator Development Program.
+### Overview
+Check out the <a href="https://docs.google.com/document/d/1fUsyGKtpqNtopWLOzHf4Jt67H-_ujkw4GGoB-CzVtKw/edit?ts=5b7ed8af#heading=h.psnytlkvnqcd", target=_"blank">Facilitator Development Program Overview</a> for details about the program.
 
-<details>
- <summary>**What does a Code.org Facilitator do?**</summary>
-  <p>
+### Commitments
+When participants apply to the program, they must select a curriculum focus area. Program commitments, qualifications, and benefits vary by focus area. Check out the resources below to learn more:
 
-  * Join a nationwide community of leaders and facilitators in CS education
-  * Participate in in-person, virtual, and independent facilitator development
-  * Collaborate with their local Code.org Regional Partner to deliver professional development workshops to teachers on Code.org's courses, with ongoing support from Code.org and the facilitator community
-  * Partner with Code.org to shape the future of professional learning for thousands of new CS educators across the US and beyond
-</p>
-</details>
+* <a href="https://docs.google.com/document/d/1u9sHuQf_5xidk04LdMBvCj91dw5_x5R6jJ9xflojUGs/edit", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
+* <a href="https://docs.google.com/document/d/1_yUxOhcZGjcVw-FK2pmA04ZELI8JJH7CPjhbWTo8Uo0/edit", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
+* <a href="https://docs.google.com/document/d/1TyfaDBGNdakvX3K-jRgQr-R8VQSO9oK08y5Hhh905Tw/edit", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
 
-<details>
- <summary>**Who should apply?**</summary>
-  <p>
-  
-The Facilitator Development Program application is open to anyone who is interested in developing as a leader and facilitator for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our desired qualifications below, and priority will be given to applicants who live in a region where Code.org has a [Regional Partner](/educate/professional-learning/about-partners) or in areas where we are considering future partnerships.
-</p>
-</details>
+### FAQs
 
-<details>
- <summary>**What are the program-specific commitments?**</summary>
-  <p>
-  
-To learn more about program benefits, qualifications, and commitments by curriculum focus area, select one of the options below:
+Have questions? We have answers!
 
-* <a href="https://docs.google.com/document/d/1u9sHuQf_5xidk04LdMBvCj91dw5_x5R6jJ9xflojUGs/edit", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Elementary School
-* <a href="https://docs.google.com/document/d/1_yUxOhcZGjcVw-FK2pmA04ZELI8JJH7CPjhbWTo8Uo0/edit", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Middle School
-* <a href="https://docs.google.com/document/d/1TyfaDBGNdakvX3K-jRgQr-R8VQSO9oK08y5Hhh905Tw/edit", target=_"blank">Computer Science Principles Facilitator Development</a> - High School
-</p>
-</details>
-
-<br>
-## Have questions? 
-
-Let us know by writing to facilitators@code.org.
-
-Be sure to check out the <a href="https://docs.google.com/document/d/1fUsyGKtpqNtopWLOzHf4Jt67H-_ujkw4GGoB-CzVtKw/edit?ts=5b7ed8af#heading=h.psnytlkvnqcd", target=_"blank">Facilitator Development Program Overview</a> or our <a href="https://docs.google.com/document/d/1nHWfSscuGpa5684zdK2Kz5pxR0GiIGwAadraZ-ls31k/edit#heading=h.7h1hxnkn8n43", target=_"blank">FAQs</a>.
+Check out our <a href="https://docs.google.com/document/d/1nHWfSscuGpa5684zdK2Kz5pxR0GiIGwAadraZ-ls31k/edit#heading=h.7h1hxnkn8n43", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
 
 ## Ready to apply?
 
+Applications for the Code.org Facilitator Development Program will open January 14, 2019. **If you are interested in joining the program in 2019-2020, please sign up below to receive a reminder when applications open.**
+
 <a href="https://goo.gl/forms/IPyERiuLCRG6jF0G3", target=_"blank"><button>Tell me when applications open!</button></a>
+
+
+In the meantime, be sure to visit our curriculum pages for additional information about our three courses.
+
+- [CS Fundamentals (Grades K-5)](/educate/curriculum/elementary-school)
+- [CS Discoveries (Grades 6-10)](/educate/csd)
+- [CS Principles (Grades 9-12)](/educate/csp)
+
+<hr/>
+
+## Apply now!
+
+Ready to apply? Follow these steps:
+
+1. Check out our program specific commitments:
+	* <a href="https://docs.google.com/document/d/1u9sHuQf_5xidk04LdMBvCj91dw5_x5R6jJ9xflojUGs/edit", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
+	* <a href="https://docs.google.com/document/d/1_yUxOhcZGjcVw-FK2pmA04ZELI8JJH7CPjhbWTo8Uo0/edit", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
+	* <a href="https://docs.google.com/document/d/1TyfaDBGNdakvX3K-jRgQr-R8VQSO9oK08y5Hhh905Tw/edit", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
+
+1. Set aside 25-30 minutes to complete the online application. Note that our application is not optimized for mobile devices; we suggest completing it on a laptop or desktop.
+
+<button>Apply now!</button></a>
+
+
+In addition, we recommend that you make sure you're able to receive emails from facilitators@code.org at the email address you will use for your application. If this address is blocked by your district's firewall, please contact the appropriate IT representative at your school district to whitelist the address.
+
+
+<!--
+-->
+
