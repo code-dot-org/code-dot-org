@@ -22,6 +22,7 @@ const styles = {
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
+    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isProjectLevel: PropTypes.bool.isRequired
@@ -42,6 +43,8 @@ const SongSelector = Radium(class extends React.Component {
     let options = {id: song};
     options['mp3'] = `https://curriculum.code.org/media/uploads/${this.state.songsData[options.id].url}.mp3`;
     Sounds.getSingleton().register(options);
+
+    this.props.retrieveMetadata(song);
 
     if (this.props.isProjectLevel) {
       //Save song to project
@@ -84,6 +87,7 @@ const SongSelector = Radium(class extends React.Component {
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
+    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
@@ -102,7 +106,12 @@ class DanceVisualizationColumn extends React.Component {
     return (
       <span>
         {!this.props.isShareView &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} isProjectLevel={this.props.isProjectLevel}/>
+          <SongSelector
+            retrieveMetadata={this.props.retrieveMetadata}
+            setSong={this.props.setSong}
+            selectedSong={this.props.selectedSong}
+            isProjectLevel={this.props.isProjectLevel}
+          />
         }
         <ProtectedVisualizationDiv>
           <div
