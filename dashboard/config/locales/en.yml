@@ -126,6 +126,7 @@ en:
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
   signup_form:
+    email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
