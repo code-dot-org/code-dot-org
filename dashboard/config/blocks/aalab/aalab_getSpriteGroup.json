@@ -1,0 +1,14 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "getSpriteGroup",
+    "returnType": "Group",
+    "blockText": "getSpriteGroup{GROUPNAME}",
+    "args": [
+      {
+        "name": "GROUPNAME",
+        "type": "String"
+      }
+    ]
+  }
+}
