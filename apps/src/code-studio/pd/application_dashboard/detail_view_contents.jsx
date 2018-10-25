@@ -642,28 +642,32 @@ export class DetailViewContents extends React.Component {
           )
         }
         {
-          TeacherValidScores[key] && (
-            <FormControl
-              componentClass="select"
-              value={this.state.response_scores[key]}
-              id={`${key}-score`}
-              onChange={this.handleScoreChange}
-              disabled={!this.state.editing}
-            >
-              <option>--</option>
-              {
-                TeacherValidScores[key].map((score, i) => (
-                  <option value={score} key={i}>
-                    {score}
-                  </option>
-                ))
-              }
-            </FormControl>
-          )
+          
         }
       </td>
     );
   };
+
+  renderScoringDropdown(key, category) {
+    return (
+      <FormControl
+        componentClass="select"
+        value={this.state.response_scores[category][key]}
+        id={`${key}-${category}-score`}
+        onChange={this.handleScoreChange}
+        disabled={!this.state.editing}
+      >
+        <option>--</option>
+        {
+          TeacherValidScores[key].map((score, i) => (
+            <option value={score} key={i}>
+              {score}
+            </option>
+          ))
+        }
+      </FormControl>
+    )
+  }
 
   showPrincipalApprovalTable = () => {
     return (this.props.applicationData.principal_approval_state || '').startsWith('Complete');

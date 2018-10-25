@@ -13,7 +13,7 @@ module Api::V1::Pd::Application
     def on_successful_create
       # Approval application created, now score corresponding teacher application
       teacher_application = TEACHER_APPLICATION_CLASS.find_by!(application_guid: @application.application_guid)
-      principal_response = @application.sanitize_form_data_hash
+      teacher_application.on_successful_principal_approval_create(@applicaiton)
 
       response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
       replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
