@@ -51,7 +51,6 @@ module ScriptConstants
       # you must also update the cdo-tutorials gsheet so the end of script API works
 
       nil,
-      MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
@@ -155,7 +154,6 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME,
       MINECRAFT_HERO_NAME,
-      MINECRAFT_AQUATIC_NAME
     ],
     tts: [
       TTS_NAME = 'allthettsthings'.freeze
