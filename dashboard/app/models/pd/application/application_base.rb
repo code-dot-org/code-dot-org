@@ -340,7 +340,7 @@ module Pd::Application
 
     # Convert responses cores to a hash of underscore_cased symbols
     def response_scores_hash
-      JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
+      JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}.deep_symbolize_keys
     end
 
     def total_score
