@@ -244,7 +244,7 @@ XML
           "blockText" => "cat {TIMESTAMP} {COLOR}",
           "args" => [
             {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-            {"name" => "COLOR", "options" => [["red", "rood"], ["blue", "blauw"]]}
+            {"name" => "COLOR", "options" => [["red", ""], ["blue", ""]]}
           ],
           "eventBlock" => true
         },
@@ -263,7 +263,7 @@ XML
             "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "rood"], ["blue", "blauw"]]}
+              {"name" => "COLOR", "options" => [["red", ""], ["blue", ""]]}
             ],
             "eventBlock" => true
           },
@@ -272,7 +272,7 @@ XML
 
     localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
-    assert_not_equal localized_custom_blocks, translated_block
+    assert_equal localized_custom_blocks, translated_block
   end
 
   test 'localizes authored hints' do
