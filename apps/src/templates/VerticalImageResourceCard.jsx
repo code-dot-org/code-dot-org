@@ -113,9 +113,10 @@ class VerticalImageResourceCard extends Component {
       "create-account": require('@cdo/static/resource_cards/createaccount.png'),
       "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
       "course-catalog": require('@cdo/static/resource_cards/coursecatalog.png'),
-      "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
+      "hero-minecraft": require('@cdo/static/resource_cards/herominecraft.png'),
       "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
       "minecraft-marketing": require('@cdo/static/resource_cards/minecraftmarketing.png'),
+      "aquatic-minecraft": require('@cdo/static/resource_cards/aquaticminecraft.png'),
       "codeorg-teacher":
       require('@cdo/static/resource_cards/codeorgteacher.png'),
       "third-party-teacher":
