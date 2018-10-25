@@ -21,7 +21,7 @@ def get_social_metadata_for_page(request)
         title: hoc_s(:social_og_title_hoc2018_creativity),
         description: hoc_s(:social_og_description_hoc2018_creativity_long),
         description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_long),
-        image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
+        image: {path: "/images/social-media/codeorg-2018-creativity.png", width: 846, height: 529},
         video: videos[:creativity_is]
       },
       "week-before-hoc" => {
