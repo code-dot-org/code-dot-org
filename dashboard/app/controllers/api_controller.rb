@@ -425,7 +425,7 @@ class ApiController < ApplicationController
 
   # GET /dashboardapi/sign_cookies
   def sign_cookies
-    expiration_date = Time.now + 2.hours
+    expiration_date = Time.now + 4.hours
     resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
 
     cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
