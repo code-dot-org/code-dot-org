@@ -102,6 +102,7 @@ Dance.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
+    useRestrictedSongs: !!config.useRestrictedSongs,
   });
 
   // Pre-register all audio preloads with our Sounds API, which will load

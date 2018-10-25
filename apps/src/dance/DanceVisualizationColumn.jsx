@@ -25,7 +25,8 @@ const SongSelector = Radium(class extends React.Component {
     retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
-    isProjectLevel: PropTypes.bool.isRequired
+    isProjectLevel: PropTypes.bool.isRequired,
+    useRestrictedSongs: PropTypes.bool,
   };
 
   state = {
@@ -91,7 +92,8 @@ class DanceVisualizationColumn extends React.Component {
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    isProjectLevel: PropTypes.bool.isRequired
+    isProjectLevel: PropTypes.bool.isRequired,
+    useRestrictedSongs: PropTypes.bool,
   };
 
   render() {
@@ -111,6 +113,7 @@ class DanceVisualizationColumn extends React.Component {
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
             isProjectLevel={this.props.isProjectLevel}
+            useRestrictedSongs={this.props.useRestrictedSongs}
           />
         }
         <ProtectedVisualizationDiv>
@@ -131,6 +134,7 @@ class DanceVisualizationColumn extends React.Component {
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isShareView: state.pageConstants.isShareView,
+  useRestrictedSongs: state.pageConstants.useRestrictedSongs,
   selectedSong: state.selectedSong,
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
