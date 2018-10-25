@@ -422,74 +422,83 @@ module Pd::Application
     def auto_score!
       responses = sanitize_form_data_hash
 
-      scores = {
-        regional_partner_name: regional_partner.presence ? YES : NO,
-      }
-
       options = self.class.options
       principal_options = Pd::Application::PrincipalApproval1920Application.options
 
+      meets_minimum_criteria_scores = {
+        regional_partner_name: regional_partner.presence ? YES : NO
+      }
+      meets_scholarship_criteria_scores = {}
+      bonus_points_scores = {}
+
       # Section 2
       if course == 'csd'
-        scores.merge!(
-          {
-            csd_which_grades: (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO,
-            cs_total_course_hours: responses[:cs_total_course_hours].to_i >= 50 ? YES : NO,
-            previous_yearlong_cdo_pd: (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
-          }
-        )
+        meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+        meets_minimum_criteria_scores[:cs_total_course_hours] = responses[:cs_total_course_hours].to_i >= 50 ? YES : NO
       elsif course == 'csp'
-        scores.merge!(
-          {
-            csp_which_grades: (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO,
-            cs_total_course_hours: (responses[:cs_total_course_hours]&.>= 100) ? YES : NO,
-            previous_yearlong_cdo_pd: responses[:previous_yearlong_cdo_pd] != 'CS Principles' ? YES : NO,
-            csp_how_offer: responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
-          }
-        )
+        meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+        meets_minimum_criteria_scores[:cs_total_course_hours] = (responses[:cs_total_course_hours]&.>= 100) ? YES : NO
+
+        bonus_points_scores[:csp_how_offer] = responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
       end
 
-      scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
-      scores[:replace_existing] = responses[:replace_existing].in?(options[:replace_existing].values_at(1, 2)) ? 5 : 0
+      meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
+      meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
+
+      bonus_points_scores[:replace_existing] = responses[:replace_existing].in?(options[:replace_existing].values_at(1, 2)) ? 5 : 0
 
       # Section 3
-      scores[:have_cs_license] = responses[:have_cs_license].in?(options[:have_cs_license].values_at(0, -1)) ? YES : NO
-      scores[:taught_in_past] = responses[:taught_in_past] == [options[:taught_in_past].last] ? 2 : 0
+      if course == 'csd'
+        meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = (responses[:previous_yearlong_cdo_pd] & ['CS Discoveries', 'Exploring Computer Science']).empty? ? YES : NO
+      elsif course == 'csp'
+        meets_scholarship_criteria_scores[:previous_yearlong_cdo_pd] = responses[:previous_yearlong_cdo_pd].exclude?('CS Principles') ? YES : NO
+      end
+
+      bonus_points_scores[:taught_in_past] = responses[:taught_in_past] == [options[:taught_in_past].last] ? 2 : 0
 
       # Section 4
-      scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
-      scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
+      meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
+      meets_minimum_criteria_scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
 
       # Section 5
-      scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5, 6)) ? 2 : 0
+      bonus_points_scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5)) ? 2 : 0
 
       # Principal Approval
       if responses[:principal_approval]
-        scores.merge!(
+        meets_scholarship_criteria_scores.merge!(
           {
             principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
             principal_plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
             principal_schedule_confirmed: responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0] ? YES : NO,
-            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
-            principal_free_lunch_percent: (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0,
-            principal_underrepresented_minority_percent: (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
+            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
           }
         )
+
+        bonus_points_scores[:principal_free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
+        bonus_points_scores[:principal_underrepresented_minority_percent] = (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
       end
 
-      update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
+      update(
+        response_scores: response_scores_hash.deep_merge(
+          {
+            meets_minimum_criteria_scores: meets_minimum_criteria_scores,
+            meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
+            bonus_points_scores: bonus_points_scores
+          }
+        ) {|_, old_value, _| old_value}.to_json
+      )
     end
 
     def meets_criteria
-      response_scores = response_scores_hash
+      response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
 
-      responses = scored_questions.map {|q| response_scores[q]}
+      scores = scored_questions.map {|q| response_scores[q]}
 
-      if responses.uniq == [YES]
+      if scores.uniq == [YES]
         YES
-      elsif NO.in? responses
+      elsif NO.in? scores
         NO
       else
         'Reviewing incomplete'
@@ -497,17 +506,87 @@ module Pd::Application
     end
 
     def meets_scholarship_criteria
-      responses = response_scores_hash.slice(*SCOREABLE_QUESTIONS[:scholarship_questions]).values
+      scores = (response_scores_hash[:meets_scholarship_criteria_scores] || {}).values
 
-      # Edge case for plan to teach
-      #
-      if responses.uniq == [YES]
+      if scores.uniq == [YES]
         YES
-      elsif NO.in? responses
+      elsif NO.in? scores
         NO
       else
         'Reviewing incomplete'
       end
+    end
+
+    # @override
+    def total_score
+      (response_scores_hash[:bonus_points_scores] || {}).values.map(&:to_i).reduce(:+) || 0
+    end
+
+    # @override
+    def on_successful_create
+      update_user_school_info!
+      queue_email :confirmation, deliver_now: true
+
+      form_data_hash = sanitize_form_data_hash
+
+      update_form_data_hash(
+        {
+          cs_total_course_hours: form_data_hash.slice(
+            :cs_how_many_minutes,
+            :cs_how_many_days_per_week,
+            :cs_how_many_weeks_per_year
+          ).values.map(&:to_i).reduce(:*) / 60
+        }
+      )
+
+      auto_score!
+      save
+
+      unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+        queue_email :principal_approval, deliver_now: true
+      end
+    end
+
+    # @override
+    def on_successful_principal_approval_create(principal_approval)
+      # Approval application created, now score corresponding teacher application
+      principal_response = principal_approval.sanitize_form_data_hash
+
+      response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
+      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
+      # Sub out :: for : because "I don't know:" has a colon on the end
+      replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
+
+      implementation_string = principal_response.values_at("#{course}_implementation".to_sym, "#{course}_implementation_other".to_sym).compact.join(" ")
+
+      update_form_data_hash(
+        {
+          principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
+          principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
+          principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
+          principal_implementation: implementation_string,
+          principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
+          principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
+          principal_underrepresented_minority_percent: format("%0.02f%%", principal_approval.underrepresented_minority_percent),
+          principal_wont_replace_existing_course: replace_course_string,
+          principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
+          principal_send_ap_scores: principal_response[:send_ap_scores],
+          principal_pay_fee: principal_response[:pay_fee]
+        }
+      )
+      save!
+      auto_score!
+      queue_email(:principal_approval_completed, deliver_now: true)
+      queue_email(:principal_approval_completed_partner, deliver_now: true)
+    end
+
+    # @override
+    def default_response_score_hash
+      {
+        meets_minimum_criteria_scores: {},
+        meets_scholarship_criteria_scores: {},
+        bonus_points_scores: {}
+      }
     end
   end
 end
