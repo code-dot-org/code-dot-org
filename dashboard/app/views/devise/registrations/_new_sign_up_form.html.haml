@@ -5,8 +5,7 @@
   = t("or").upcase
   %hr
 
-%h4.signup-header
-  Sign up with your email address
+%h4.signup-header= t('signup_form.email_signup')
 
 = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
   .field-row
