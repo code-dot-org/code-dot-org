@@ -1,5 +1,13 @@
 = render "devise/shared/new_links"
 
+%div.horizontal-or
+  %hr
+  = t("or").upcase
+  %hr
+
+%h4.signup-header
+  Sign up with your email address
+
 = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
   .field-row
     .field.field-sm
@@ -22,8 +30,6 @@
   %button#submit= t('signup_form.submit')
 
 -# More information for students about email storage.
-.student-options
-  %br/
-  %br/
+%div{style: "width: 700px;"}
   *
   != t('signup_form.student_terms')
