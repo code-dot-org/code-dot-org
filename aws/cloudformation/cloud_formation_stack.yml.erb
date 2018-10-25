@@ -25,7 +25,7 @@ ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
 database = @database = ENV['DATABASE']
-load_balancer = @load_balancer = !rack_env?(:adhoc)
+load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
 
 unless dry_run
   update_certs.call unless load_balancer
@@ -68,9 +68,12 @@ Parameters:
   DatabaseUsername:
     Type: String
     Default: master
+    MaxLength: 16
   DatabasePassword:
     Type: String
     NoEcho: true
+    MinLength: 8
+    MaxLength: 41
 <% end -%>
 Resources:
 <% if frontends -%>
@@ -84,6 +87,7 @@ Resources:
         Count: 1
   WebServerAMI:
     Type: AWS::EC2::Instance
+    DependsOn: <%=[daemon].compact.to_json%>
     Properties:
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref InstanceType
@@ -129,6 +133,7 @@ Resources:
   LoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
+<% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
       LoadBalancerName: !Ref AWS::StackName
       CrossZone: true
       SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
