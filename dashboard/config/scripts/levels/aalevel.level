@@ -8,17 +8,13 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
+      "GameLabJr",
       "aalab"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
     "show_type_hints": "true",
     "include_shared_functions": "false",
-    "contained_level_names": null,
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "never_autoplay_video": "false",
@@ -39,12 +35,18 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
     "block_pools": [
+      "GamelabJr",
       "aalab"
+    ],
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
     ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-10-19 21:51:39 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-19 21:52:01 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-19 21:59:04 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-10-19 21:51:39 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"block_pools\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-19 21:52:01 +0000\",\"changed\":[\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-19 21:59:04 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-25 18:59:52 +0000\",\"changed\":[\"helper_libraries\",\"block_pools\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
