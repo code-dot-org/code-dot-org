@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
@@ -5,6 +6,7 @@ import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
+import msg from '@cdo/locale';
 
 describe('project.js', () => {
   let sourceHandler;
@@ -22,6 +24,285 @@ describe('project.js', () => {
     header.showMinimalProjectHeader.restore();
     header.updateTimestamp.restore();
     restoreAppOptions();
+  });
+
+  describe('getNewProjectName()', () => {
+    it('for applab', () => {
+      window.appOptions.app = 'applab';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameAppLab());
+    });
+
+    it('for gamelab', () => {
+      window.appOptions.app = 'gamelab';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameGameLab());
+    });
+
+    it('for weblab', () => {
+      window.appOptions.app = 'weblab';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameWebLab());
+    });
+
+    it('for artist', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.skinId = 'artist';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameArtist());
+    });
+
+    it('for artist_zombie', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.skinId = 'artist_zombie';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameArtist());
+    });
+
+    it('for anna', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.skinId = 'anna';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameFrozen());
+    });
+
+    it('for elsa', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.skinId = 'elsa';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameFrozen());
+    });
+
+    it('for Big Game', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.level = {useContractEditor: true};
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameBigGame());
+    });
+
+    it('for Play Lab', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'studio';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNamePlayLab());
+    });
+
+    it('for infinity', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'infinity';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameInfinity());
+    });
+
+    it('for gumball', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'gumball';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameGumball());
+    });
+
+    it('for iceage', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'iceage';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameIceAge());
+    });
+
+    it('for Star Wars', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'hoc2015';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameStarWars());
+    });
+
+    it('for craft', () => {
+      window.appOptions.app = 'craft';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameMinecraft());
+    });
+
+    it('for flappy', () => {
+      window.appOptions.app = 'flappy';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameFlappy());
+    });
+
+    it('for bounce', () => {
+      window.appOptions.app = 'bounce';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameBounce());
+    });
+
+    it('for sports', () => {
+      window.appOptions.app = 'bounce';
+      window.appOptions.skinId = 'sports';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameSports());
+    });
+
+    it('for basketball', () => {
+      window.appOptions.app = 'bounce';
+      window.appOptions.skinId = 'basketball';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameBasketball());
+    });
+
+    it('for dance', () => {
+      window.appOptions.app = 'dance';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectNameDance());
+    });
+
+    it('default case', () => {
+      window.appOptions.app = 'someOtherType';
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectName());
+    });
+  });
+
+  describe('getStandaloneApp()', () => {
+    it('for any level with a predefined project type', () => {
+      window.appOptions.level = {projectType: 'foobar'};
+      expect(project.getStandaloneApp()).to.equal('foobar');
+    });
+
+    it('for applab', () => {
+      window.appOptions.app = 'applab';
+      expect(project.getStandaloneApp()).to.equal('applab');
+    });
+
+    it('for calc', () => {
+      window.appOptions.app = 'calc';
+      expect(project.getStandaloneApp()).to.equal('calc');
+    });
+
+    it('for dance', () => {
+      window.appOptions.app = 'dance';
+      expect(project.getStandaloneApp()).to.equal('dance');
+    });
+
+    it('for eval', () => {
+      window.appOptions.app = 'eval';
+      expect(project.getStandaloneApp()).to.equal('eval');
+    });
+
+    it('for flappy', () => {
+      window.appOptions.app = 'flappy';
+      expect(project.getStandaloneApp()).to.equal('flappy');
+    });
+
+    it('for scratch', () => {
+      window.appOptions.app = 'scratch';
+      expect(project.getStandaloneApp()).to.equal('scratch');
+    });
+
+    it('for weblab', () => {
+      window.appOptions.app = 'weblab';
+      expect(project.getStandaloneApp()).to.equal('weblab');
+    });
+
+    it('for gamelab', () => {
+      window.appOptions.app = 'gamelab';
+      window.appOptions.droplet = true;
+      expect(project.getStandaloneApp()).to.equal('gamelab');
+    });
+
+    it('for spritelab', () => {
+      window.appOptions.app = 'gamelab';
+      window.appOptions.droplet = false;
+      expect(project.getStandaloneApp()).to.equal('spritelab');
+    });
+
+    it('for artist', () => {
+      window.appOptions.app = 'turtle';
+      expect(project.getStandaloneApp()).to.equal('artist');
+    });
+
+    it('for artist_k1', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.level = {isK1: true};
+      expect(project.getStandaloneApp()).to.equal('artist_k1');
+    });
+
+    it('for frozen', () => {
+      window.appOptions.app = 'turtle';
+      window.appOptions.skinId = _.sample(['anna', 'elsa']);
+      expect(project.getStandaloneApp()).to.equal('frozen');
+    });
+
+    it('for minecraft_adventurer', () => {
+      window.appOptions.app = 'craft';
+      expect(project.getStandaloneApp()).to.equal('minecraft_adventurer');
+    });
+
+    it('for minecraft_hero', () => {
+      window.appOptions.app = 'craft';
+      window.appOptions.level = {isAgentLevel: true};
+      expect(project.getStandaloneApp()).to.equal('minecraft_hero');
+    });
+
+    it('for minecraft_designer', () => {
+      window.appOptions.app = 'craft';
+      window.appOptions.level = {isEventLevel: true};
+      expect(project.getStandaloneApp()).to.equal('minecraft_designer');
+    });
+
+    it('for minecraft_codebuilder', () => {
+      window.appOptions.app = 'craft';
+      window.appOptions.level = {isConnectionLevel: true};
+      expect(project.getStandaloneApp()).to.equal('minecraft_codebuilder');
+    });
+
+    it('for playlab', () => {
+      window.appOptions.app = 'studio';
+      expect(project.getStandaloneApp()).to.equal('playlab');
+    });
+
+    it('for playlab_k1', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.level = {isK1: true};
+      expect(project.getStandaloneApp()).to.equal('playlab_k1');
+    });
+
+    it('for algebra_game', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.level = {useContractEditor: true};
+      expect(project.getStandaloneApp()).to.equal('algebra_game');
+    });
+
+    it('for starwars', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'hoc2015';
+      window.appOptions.droplet = true;
+      expect(project.getStandaloneApp()).to.equal('starwars');
+    });
+
+    it('for starwarsblocks_hour', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'hoc2015';
+      window.appOptions.droplet = false;
+      expect(project.getStandaloneApp()).to.equal('starwarsblocks_hour');
+    });
+
+    it('for iceage', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'iceage';
+      expect(project.getStandaloneApp()).to.equal('iceage');
+    });
+
+    it('for infinity', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'infinity';
+      expect(project.getStandaloneApp()).to.equal('infinity');
+    });
+
+    it('for gumball', () => {
+      window.appOptions.app = 'studio';
+      window.appOptions.skinId = 'gumball';
+      expect(project.getStandaloneApp()).to.equal('gumball');
+    });
+
+    it('for bounce', () => {
+      window.appOptions.app = 'bounce';
+      expect(project.getStandaloneApp()).to.equal('bounce');
+    });
+
+    it('for sports', () => {
+      window.appOptions.app = 'bounce';
+      window.appOptions.skinId = 'sports';
+      expect(project.getStandaloneApp()).to.equal('sports');
+    });
+
+    it('for basketball', () => {
+      window.appOptions.app = 'bounce';
+      window.appOptions.skinId = 'basketball';
+      expect(project.getStandaloneApp()).to.equal('basketball');
+    });
+
+    it('default case', () => {
+      window.appOptions.app = 'someothertype';
+      expect(project.getStandaloneApp()).to.be.null;
+    });
   });
 
   describe('project.getProjectUrl', function () {

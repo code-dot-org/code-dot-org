@@ -18,7 +18,7 @@ class RegistrationsController < Devise::RegistrationsController
     # Used by new signup form
     store_location_for(:user, params[:user_return_to]) if params[:user_return_to]
 
-    if SignUpTracking.new_sign_up_experience?(session) && PartialRegistration.in_progress?(session)
+    if PartialRegistration.in_progress?(session)
       user_params = params[:user] || {}
       @user = User.new_with_session(user_params, session)
     else
@@ -46,6 +46,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  #
   # GET /users/cancel
   #
   # Cancels the in-progress partial user registration and redirects to sign-up page.
