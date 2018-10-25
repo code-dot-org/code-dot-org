@@ -40,9 +40,13 @@ const SongSelector = Radium(class extends React.Component {
   };
 
   loadSong(song) {
+    const songPathPrefix = this.props.useRestrictedSongs ?
+      '/restricted/' :
+      'https://curriculum.code.org/media/uploads/';
+
     //Load song
     let options = {id: song};
-    options['mp3'] = `https://curriculum.code.org/media/uploads/${this.state.songsData[options.id].url}.mp3`;
+    options['mp3'] = `${songPathPrefix}${this.state.songsData[options.id].url}.mp3`;
     Sounds.getSingleton().register(options);
 
     this.props.retrieveMetadata(song);
