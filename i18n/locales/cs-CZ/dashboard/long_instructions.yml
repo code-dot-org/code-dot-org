@@ -6,7 +6,7 @@ cs:
       2-3 Artist 9 NEW: Dokončete tohoto draka
       2-3 Artist 9 REPLACEMENT: Dokresli schody!
       2-3 Artist 9: Dokončete tohoto draka
-      2-3 Artist Debugging 10: "Směrová podložka na mém herním zařízení je příliš úzká. Pokyn: Udělej to širší o 10 pixelů"
+      2-3 Artist Debugging 10: "Směrové tlačítka na mém herním ovladači jsou příliš úzká.\n\nMůžeš je udělat širší od 10 pixelů?\n\nZkus nejprve kód spustit, abys viděl(a), co je špatně."
       2-3 Artist Debugging 11: |-
         Pomoz mi dokončit mé krásné sněhové vločky. Kolikrát musím "opakovat", abych to dokončil?
       2-3 Artist Debugging 2: "Kód pro tři vousy, které vidíš, je špatný. Rada: každý vous je dlouhý 75 pixelů. Oprav kód k nakreslení vousů."
@@ -19,7 +19,9 @@ cs:
       2-3 Artist Debugging 8: |-
         Můj Větrník není dokončen. Kolikrát je to třeba opakovat, aby se to dokončilo?
       2-3 Artist Debugging 9: |-
-        Kód pro tento kmen je nesprávný. Rada: Úhel je mimo o 60 stupňů
+        Něco nefunguje!
+        
+        Kód pro tento stonek je chybný. Zvládneš vymyslet, jak umělce navést na správnou cestu?
       2-3 Artist Free Play: Zahraj si zdarma! Nakresli si něco, co bys chtěl.
       2-3 Artist Functions 11.5: "Tady je to stejné, funkce \"Nakreslit šestiúhelníku\". Co se stane, když se otočí jen o 60 stupňů při každém opakování?"
       2-3 Artist Functions 12 Mike: "Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci \"nakreslit květinu\" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  "
@@ -53,12 +55,17 @@ cs:
         Sbírej nektar a udělej med. Rada: co se stane, když používáš "if nektar" na červený květ? Můžeš to dokončit s cyklem?
       2-3 Bee Conditionals 15: "Sbírej nektar ze všech čtyř květů."
       2-3 Bee Conditionals 3: "Pomoz mi sesbírat všechen nektar z květů a udělat med. Použij cyklus."
+      2-3 Bee Debugging 10: "S téhle hádanky se mi točí hlava!\n\nOprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu."
       2-3 Bee Debugging 3: |-
         Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       2-3 Bee Debugging 6: |-
         Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       2-3 Bee Debugging 9: |-
         Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
+      2-3 Bee Debugging Assessment 1: |-
+        **Hodnocení:** Nyní je čas ukázat, co umíš!
+        
+        Oprav chybu/chyby k sesbírání všeho nektaru a vyrobení veškerého medu.
       2-3 Bee Functions 10: "Fialové květiny mohou mít buď 1 nebo 0 nektaru.  Vytvoř funkci ke sběru nektaru pouze z fialových květy mající nektar."
       2-3 Bee Functions 2: "Funkce jsou bloky kódu, provádějící úkol. Použij funkci \"dostat 5\" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků."
       2-3 Bee Functions 4: "Funkce \"posunout a dostat nektar\" otočí včelu, sbírá nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar."
@@ -252,20 +259,37 @@ cs:
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2018: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Testing Quantum Farmer: "Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus."
+      course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
+      course2_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech **10** kousků pokladu?
       course2_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
       course2_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
       course4_artist_fwp_challenge1: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
       courseC_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
       courseC_harvester_loops_challenge2_2018: Sesbírej všechen salát. Ne stromy ani pole!
+      courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev. Za každým mráčkem bude jen jedna květina nebo jedna plástev.
+      courseD_bee_conditionals9_2018: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev. Za každým mráčkem bude jen jedna květina nebo jedna plástev.
+      courseD_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
+      courseD_bee_conditionals_challenge1_2018: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
+      courseD_bee_debugging3: |-
+        *"Tahle hádanka dá zabrat."*
+        
+        Oprav chybu/chyby k sesbírání veškerého nektaru a výrobě všeho medu.
+      courseD_bee_debugging6: "**Výzva:** Oprav chyby k sesbírání všeho nektaru a vyrobení všeho medu."
       courseD_bee_nestedLoops5: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops8: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops8_2018: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
       courseD_bounce_events1: Dostaňte se k vlajce! Připojte blok k bloku "když vlevo šipka"a stiskněte tlačítko "Spustit", aby se hráč dostal k vlajce.
+      courseD_debugging_3: |-
+        *"Tyhle bloky mě vážně štvou."*
+        
+        Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
+      courseD_debugging_6: "**Výzva:** Oprav chyby k sesbírání všeho nektaru a vyrobení všeho medu."
       courseD_maze_nestedLoops4: 'Dostaň mě ke slunečnici!'
       courseD_maze_nestedLoops4_2018: 'Dostaň mě ke slunečnici!'
       courseE_bee_functions3: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
       courseE_bee_functions3_2018: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
+      courseE_bee_ramp17: 'Pro poslední hádanku v této fázi, použij co si se naučil(a) a sesbírej veškerý nektar a vyrob všechen med.  '
       courseE_farmer_concept4: Teď pojďme hlouběji o jednu úroveň. Vnořili jsme celý blok kódu do jiného cyklu, ale umělec se musí dostat zpět na místo další řádky. Který z těchto bloků kódu můžeš umístit na konec vnějšího cyklu, aby nakreslil celou mřížku?
       courseF_bee_for_challenge2: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       courseF_bee_for_challenge2_2018: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
@@ -310,6 +334,11 @@ cs:
       grade3_Conditionals_12: "Sbírej nektar ze všech čtyř květů."
       grade3_Conditionals_2: "Pomoz mi sesbírat všechen nektar z květů a udělat med. Použij cyklus."
       grade3_Conditionals_8: "Sbírej nektar, kde květy mají nektar."
+      grade3_Debugging_11: "**Výzva:** Oprav chyby k sesbírání všeho nektaru a vyrobení všeho medu."
+      grade3_Debugging_4: |-
+        *"Tyhle bloky mě vážně štvou."*
+        
+        Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
       grade3_Debugging_6: |-
         Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       grade3_Debugging_9: |-

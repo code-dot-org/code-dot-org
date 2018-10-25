@@ -2508,6 +2508,27 @@ it:
         _"Ce la puoi fare!"_'
       courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Ce la puoi fare!"_'
+      courseC19_playLab_EOC1: |-
+        È sorprendente quanto tu abbia imparato! Ora creiamo insieme un vero videogioco.
+
+        Usando i nuovi blocchi che trovi nella cassetta degli attrezzi, scegli un nuovo sfondo e un personaggio per il tuo gioco.
+      courseC19_playLab_EOC2: |-
+        Collega le azioni da svolgere ai blocchi verdi dei gestori di eventi per far muovere il tuo giocatore con le frecce della tastiera (o cliccando su quelle arancioni poste sotto all'area di gioco).
+
+        Per completare l'esercizio, fai in modo che il protagonista raggiunga tutte le bandierine.
+      courseC19_playLab_EOC3: |-
+        Aggiungiamo altri personaggi al tuo gioco!
+
+        Usa il blocco `imposta il personaggio ... come` per aggiungere altri personaggi, poi sposta il personaggio 1 fino alla bandierina.
+      courseC19_playLab_EOC4: |-
+        Usare diversi personaggi e farli muovere è un ottimo inizio, ma dobbiamo fare di più per farlo diventare un vero videogioco. Aggiungiamo un punteggio!
+
+        Usa dei blocchi verdi gestori di eventi come `quando il personaggio ... tocca ...` per modificare il punteggio. Per completare l'esercizio, fai in modo che giocando il punteggio diventi uguale a 10 e vai a toccare la bandierina.
+      courseC19_playLab_EOC5: |-
+        Ottimo lavoro! Hai tutto il necessario per far funzionare bene il gioco.
+        Ora dedica un po' di tempo a controllare che il gioco funzioni proprio come desideravi. Aggiungi un modo per vincere e perdere, quindi gioca fino a raggiungere una di queste due condizioni.
+      courseC19_playLab_EOC6: Hai finito! Ora puoi giocare con il tuo videogioco o
+        condividerlo con i tuoi amici e compagni di classe!
       courseC_PlayLab_events7: |-
         Il blocco `ripeti per sempre` ti permette di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente il dinosauro (personaggio 2) in alto e in basso di 400 pixel.
 

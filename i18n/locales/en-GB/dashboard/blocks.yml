@@ -150,11 +150,11 @@ en-GB:
           TYPE:
             "'sand'": sand
             "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: move forward
       craft_placeTorch:
         text: place torch
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': chicken

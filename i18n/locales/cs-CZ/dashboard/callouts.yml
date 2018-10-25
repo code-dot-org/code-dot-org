@@ -1,6 +1,8 @@
 cs:
   data:
     callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: Umělec nemá tlačítko "Krok". Můžete však potáhnout posuvník rychlosti doleva, abyste mohli pečlivěji sledovat průběh programu.
       Course 4 Artist 4_callout:
         repeat_full_circle: Zadej počet zombie k přemístění, aby vytvořily celý kruh
       Course 4 Artist 7_callout:

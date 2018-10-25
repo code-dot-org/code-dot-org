@@ -1238,6 +1238,7 @@
   header_help_support: 'Βοήθεια και υποστήριξη '
   csp_name: "Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17"
   user_header_label: "Γεια σου %{username}"
+  user_header_team: "Ομάδα"
   user_header_settings: "Ο λογαριασμός μου"
   user_header_logout: "Αποσύνδεση"
   user_header_signin: "Σύνδεση"

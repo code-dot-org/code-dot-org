@@ -315,11 +315,11 @@ is:
           TYPE:
             "'sand'": sand
             "'planksOak'": eikarplanka
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: færa áfram
       craft_placeTorch:
         text: setja kyndil
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': hænsn

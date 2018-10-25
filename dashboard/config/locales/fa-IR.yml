@@ -85,6 +85,7 @@ fa:
     twitter: توییتر
     facebook: فیس‌بوک
     windowslive: حساب مایکروسافت
+    microsoft_v2_auth: حساب مایکروسافت
     forgot_password: کلمه عبور خود را فراموش کرده اید؟
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟
@@ -102,7 +103,6 @@ fa:
     age: سن
     user_type: آیا شما یک دانش آموز یا معلم هستید ؟
     submit: ثبت نام
-    next: بعدي
     teacher: آیا شما یک معلم هستید؟
     valid_username: موجود است!
     invalid_username: نام کاربری باید حداقل 5 حرف باشد
@@ -212,6 +212,7 @@ fa:
         playlab: ایجاد یک برنامه
         artist: چیزی بکش
         applab: ایجاد یک برنامه
+      course_catalog: کاتالوگ دوره‌ها
       project_gallery: پروژه ها
       educate_hoc: ساعت کد نویسی
     user:

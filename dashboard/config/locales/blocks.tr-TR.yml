@@ -319,11 +319,11 @@ tr:
           TYPE:
             "'sand'": kum
             "'planksOak'": meşe kalaslar
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": kum
       craft_moveForward:
         text: ilerle
       craft_placeTorch:
         text: meşaleyi yerleştir
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': tavuk

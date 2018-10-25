@@ -269,10 +269,10 @@ sk:
           posúvať hráča.
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Tvoj hráč má odteraz kamaráta. Pre agenta môžeš napísať
-          kód, aby ti pomohol dostať sa cez úrovne.
+          kód, aby ti pomohol splniť úlohy.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: Toto je cyklus`opakuj`. Pripoj ju do pracovného priestoru
-          a pridaj kód, ktorý chceš spúšťať znova a znova.
+        MC_HOC_2017_03_Cole_1: Toto je cyklus"opakuj". Pripoj blok do pracovného priestoru
+          a vlož do neho kód, ktorý chceš spúšťať opakovane.
       MC_HOC_2017_04_Cole_callout:
         MC_HOC_2017_04_Cole_a: Na rozdiel od hráča sa agent môže vznášať nad vodou!
       MC_HOC_2017_04_Kiki_callout:
@@ -525,17 +525,17 @@ sk:
         courseA_artist_loops7_1: Toto číslo znamená, že len jeden typ blokov môže
           byť použitý v riešení.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Vedeli ste, že môžete kresliť aj naspäť cez čiaru
-          kedykoľvek potrebujete?
+        courseA_artist_loops8_1: Vedel si, že môžeš kedykoľvek po čiare kresliť aj
+          smerom naspäť?
       courseA_artist_loops8_2018_callout:
-        courseA_artist_loops8_1: Vedeli ste, že môžete kresliť aj naspäť cez čiaru
-          kedykoľvek potrebujete?
+        courseA_artist_loops8_1: Vedel si, že môžeš kedykoľvek po čiare kresliť aj
+          smerom naspäť?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Toto číslo znamená počet blokov, ktoré môžete
           použiť v tejto hre.
@@ -543,22 +543,22 @@ sk:
         gradek_adventurer_loops2_1: Toto číslo znamená počet blokov, ktoré môžete
           použiť v tejto hre.
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: Kliknite se pre sledovanie spusteného kódu!
+        courseA_collector_preLoops1_1: Ak chceš sledovať spustený kód klikni sem!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseA_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseA_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky
           pre dokončenie Vaších cvičení.
@@ -573,9 +573,9 @@ sk:
         courseC_maze_programming4_1: Toto je Váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Kliknite na žiarovku ak potrebujete nápovedu!
+        courseA_maze_seq1_1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseA_maze_seq1_2018_callout:
-        courseA_maze_seq1_1: Kliknite na žiarovku ak potrebujete nápovedu!
+        courseA_maze_seq1_1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Použite tlačidlo "Kroky" na prejdenie programom
           krok po kroku. Toto Vám pomôže nájsť chybu!
@@ -615,15 +615,15 @@ sk:
         courseB_artist_loops5_1: Toto číslo znamená, že už nemáte k dispozícií žiaden
           takýto ďaľší blok.
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseB_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseB_collector_loops1_2018_callout:
-        courseB_collector_loops1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseB_collector_loops1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Kliknite na žiarovku ak potrebujete nápovedu!
+        courseB_maze_seq1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseB_maze_seq1_2018_callout:
-        courseB_maze_seq1: Kliknite na žiarovku ak potrebujete nápovedu!
+        courseB_maze_seq1: Ak potrebuješ nápovedu, klikni na žiarovku!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Použite tlačidlo "Kroky" na prejdenie programom
           krok po kroku. Toto Vám pomôže nájsť chybu!
@@ -638,6 +638,9 @@ sk:
         courseB_playlab_events6_a: Použite zelenú šípku pre zmenu smeru.
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Použite zelenú šípku pre zmenu smeru.
+      courseC19_playLab_EOC3_callout:
+        courseE_playLab_scaffold3_1: Dostaňte herca k tejto vlajočke pre postup do
+          ďaľšieho levelu.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Použite tento blok, keď sa Waddles a Tamp
           dotknú!
@@ -657,8 +660,8 @@ sk:
         courseC_artist_loopsPrePre1a_1: Začnite použitím tohto bloku pre premiestnenie
           herca do stredu obrazovky.
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
-          sa, neskôr Vám ukážeme, ako ich používať.
+        courseC_collector_prog1_1: Vidíš nové bloky v paneli nástrojov? Neboj sa,
+          neskôr ti ukážeme, ako ich používať.
       courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Vidíte nejaké nové bloky v paneli nástrojov? Nebojte
           sa, neskôr Vám ukážeme, ako ich používať.
@@ -1445,8 +1448,8 @@ sk:
         artistLoopsK2_1: Toto číslo znamená počet blokov, ktoré môžete použiť v tejto
           hre.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Vedeli ste, že môžete kresliť aj naspäť cez čiaru
-          kedykoľvek potrebujete?
+        gradek_artist_loops7_1: Vedel si, že môžeš kedykoľvek po čiare kresliť aj
+          smerom naspäť?
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: Toto Vám umožní vybrať "náhodný" zvuk, čo znamená,
           že nebudete vedieť, čo sa bude hrať až kým to nespustíte!

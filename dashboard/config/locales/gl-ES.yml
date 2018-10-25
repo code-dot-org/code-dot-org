@@ -95,6 +95,7 @@ gl:
     twitter: Twitter
     facebook: Facebook
     windowslive: Conta da Microsoft
+    microsoft_v2_auth: Conta da Microsoft
     clever: Conta intelixente
     forgot_password: Esqueceu o seu contrasinal?
     need_confirmation: Non recebeu as instrucións de confirmación?
@@ -120,7 +121,6 @@ gl:
     age: Idade
     user_type: Alumno ou profesor?
     submit: Crear conta
-    next: Seguinte
     teacher: É un profesor?
     valid_username: Dispoñíbel!
     invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres

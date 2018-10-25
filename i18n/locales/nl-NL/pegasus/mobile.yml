@@ -1181,6 +1181,7 @@
   csp_name: "CW Principes"
   full_course_category_name: "Volledige Cursussen"
   user_header_label: "Hallo %{username}"
+  user_header_team: "Team"
   user_header_settings: "Mijn account"
   user_header_logout: "Uitloggen"
   user_header_signin: "Aanmelden"

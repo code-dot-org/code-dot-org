@@ -1435,11 +1435,14 @@
   csd_2018_name: "计算机科学发现"
   full_course_category_name: "完整课程"
   user_header_label: "你好%{username}"
+  user_header_team: "团队"
   user_header_settings: "帐户设置"
   user_header_logout: "注销"
   user_header_signin: "登录"
   user_header_gamelab: "游戏实验室"
   user_header_playlab: "游戏实验室"
+  user_header_dance: "舞蹈派对"
+  user_header_spritelab: "精灵实验室"
   user_header_minecraft: "我的世界"
   user_header_flappy: "Flappy Bird"
   user_header_view_my_projects: "查看我的项目"
@@ -1473,4 +1476,5 @@
   hero_name: '《我的世界》: 英雄之旅'
   applab-intro_name: 应用程序实验室简介
   creativity_create: "创建"
+  creativity_hoc_coming: "编程一小时就要来了…"
   account_sign_up_email_opt_in: "我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）"

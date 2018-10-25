@@ -854,6 +854,7 @@
   header_about_partners: "Partneri"
   header_documentation: "Dokumentācija"
   user_header_label: "Sveiki, %{username}"
+  user_header_team: "Komanda"
   user_header_settings: "Mans konts"
   user_header_logout: "Izrakstīties"
   user_header_signin: "Pierakstīties"

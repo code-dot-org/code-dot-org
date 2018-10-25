@@ -3299,6 +3299,8 @@ zh-CN:
               name: RGB 颜色
             Processing with Bits:
               name: 比特位处理
+            Play Lab:
+              name: 游戏实验室
         csd2-2017:
           title: 计算机科学发现单元2 - 网页开发('17-'18)
           description_short: "  了解如何在 Web 实验室中构建自己的网站。"

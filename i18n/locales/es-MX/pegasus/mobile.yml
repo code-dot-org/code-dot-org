@@ -1447,6 +1447,7 @@
   csd_2018_name: "Descubrimientos de la informática"
   full_course_category_name: "Cursos Completos"
   user_header_label: "Hola %{username}"
+  user_header_team: "Equipo"
   user_header_settings: "Mi cuenta"
   user_header_logout: "Cerrar sesión"
   user_header_signin: "Iniciar Sesión"
@@ -1485,5 +1486,8 @@
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una cuenta de Google":'
   applab-intro_name: Introducción al Laboratorio de Aplicaciones
   creativity_create: "Crear"
+  creativity_hoc_coming: "Ya viene la Hora del código…"
+  creativity_what_will_you_create: "¿Qué vas a crear?"
+  creativity_social_media_2: 'Este año #HourOfCode es sobre la creatividad. ¿Qué vas a crear?'
   account_sign_up_email_opt_in: "¿Podemos enviarle por correo electrónico actualizaciones de nuestros cursos, oportunidades en su zona u otras noticias sobre informática?"
   account_sign_up_child_accept_terms: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."

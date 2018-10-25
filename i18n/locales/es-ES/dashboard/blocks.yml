@@ -415,11 +415,11 @@ es:
           TYPE:
             "'sand'": arena
             "'planksOak'": tablones de roble
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": arena
       craft_moveForward:
         text: avanzar
       craft_placeTorch:
         text: colocar antorcha
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': pollo

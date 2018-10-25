@@ -492,11 +492,11 @@ it:
           TYPE:
             "'sand'": sabbia
             "'planksOak'": assi di quercia
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sabbia
       craft_moveForward:
         text: vai avanti
       craft_placeTorch:
         text: metti una torcia
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': pollo

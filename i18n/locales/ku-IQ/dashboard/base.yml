@@ -43,6 +43,7 @@ ku:
     twitter: 'تویتەر'
     facebook: 'فەیسبووک'
     windowslive: 'هەژماری مایکڕۆسۆفت'
+    microsoft_v2_auth: 'هەژماری مایکڕۆسۆفت'
     forgot_password: 'تێپەڕەوشەت لەبیر کردووە؟'
   signup_form:
     age: 'تەمەن'

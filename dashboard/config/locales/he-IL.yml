@@ -90,6 +90,7 @@ he:
     twitter: טוויטר
     facebook: פייסבוק
     windowslive: חשבון מיקרוסופט
+    microsoft_v2_auth: חשבון מיקרוסופט
     clever: חשבון חכם
     powerschool: חשבון בית-ספר חזק
     forgot_password: שכחת את הסיסמא שלך?
@@ -127,7 +128,6 @@ he:
     age: גיל
     user_type: אתה תלמיד או מורה?
     submit: הירשם
-    next: הבא
     teacher: האם אתה מורה?
     valid_username: זמין!
     invalid_username: שם המשתמש חייב להיות לפחות 5 תווים

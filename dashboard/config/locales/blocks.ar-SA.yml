@@ -546,11 +546,11 @@ ar:
           TYPE:
             "'sand'": رمل
             "'planksOak'": ألواح خشب البلوط
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": رمل
       craft_moveForward:
         text: تحريك إلى الأمام
       craft_placeTorch:
         text: ضع المصباح
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': دجاجة

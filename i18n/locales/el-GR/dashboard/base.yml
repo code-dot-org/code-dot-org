@@ -83,6 +83,7 @@ el:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Λογαριασμός Microsoft'
+    microsoft_v2_auth: 'Λογαριασμός Microsoft'
     clever: 'Έξυπνος λογαριασμός'
     powerschool: 'Λογαριασμός Powerschool'
     forgot_password: 'Ξέχασες τον κωδικό σου;'
@@ -108,7 +109,6 @@ el:
     age: 'Ηλικία'
     user_type: 'Είστε ένα μαθητής ή δάσκαλος;'
     submit: 'Εγγραφή'
-    next: 'Επόμενο'
     teacher: 'Είσαι δάσκαλος;'
     valid_username: "Διαθέσιμο!"
     invalid_username: "Το όνομα χρήστη πρέπει να αποτελείται τουλάχιστον από 5 χαρακτήρες"

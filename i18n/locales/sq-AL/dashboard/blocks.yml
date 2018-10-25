@@ -256,11 +256,11 @@ sq:
           TYPE:
             "'sand'": rërë
             "'planksOak'": dru lisi
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": rërë
       craft_moveForward:
         text: lëviz përpara
       craft_placeTorch:
         text: vendos pishtarin
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': pulë

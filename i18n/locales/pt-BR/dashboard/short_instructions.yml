@@ -1170,7 +1170,9 @@ pt-BR:
       Fish Tank 6-validated_simple: Adicione um comportamento o novo amigo do peixe.
       Food Fight!: "Adicionamos uma última função para\nvocê.\\r\n\\r\nUse uma instrução \"se\" para que seu jogo chame a função \"suba de nível\"\nsomente quando \"pontos_jogador\" for maior que um determinado número.\\r\n\\r\nPor\nexemplo: \"pontos_jogador\" > 6\\r\n\\r\nJogue e chegue até o nível 3\npara ir para o próximo desafio. "
       Function intro Ryan: Use a função 'construir ponte' duas vezes para criar um caminho até a tocha.
+      GLJr_Behavior_2: Agora você tem alguns blocos novos! Tente usá-los e veja como eles funcionam. Em suas anotações, escreva quais você tentou e o que eles fazem.
       GLJr_Behavior_6: Vamos tentar mais alguns comportamentos - faça o cachorro correr para cima e o gato correr para a direita.
+      GLJr_Forever_2: Agora você tem alguns blocos novos! Tente usá-los e veja como eles funcionam. Em suas anotações, escreva quais você tentou e o que eles fazem.
       HOC 2018 Level_10: Vá para a entrada do Monumento do Oceano.
       HOC 2018 Level_6: Navegue através do gelo para chegar ao templo.
       HoCAB_labyrinth1: Use os blocos de seta para resolver este labirinto!
@@ -1399,6 +1401,7 @@ pt-BR:
       MSM Play Lab Game 2: "Variáveis também podem ser usadas para controlar\na velocidade de jogadores em um jogo. Defina a velocidade do jogador e do inimigo e veja\ncomo os movimentos mudam. A velocidade pode ficar entre 2 e 12."
       Middle School Hackathon Pt 1: "(Clique para ver todas as instruções)"
       Middle School Hackathon Pt 2: "(Clique para ver todas as instruções)"
+      Mike Pair Programming: Veja aqui as instruções
       Mike Test Bee Conditionals 1: "Esta nuvem está tapando minha visão! Veja\nse há uma flor atrás da nuvem, e só colete néctar se houver\numa flor. Cuidado, isso pode mudar!"
       NEW Course 4 Artist Functions 1: "Você consegue desenhar um quadrado com\n100 pixels de comprimento usando um laço?"
       NEW Course 4 Artist Functions 10.1: "Use as funções dos desafios\nanteriores para desenhar esse padrão."
@@ -1493,6 +1496,7 @@ pt-BR:
       Ninjacat Demo B (copy 1): "\\r\nVamos começar explorando um video game\nsimples e então descobrir como ele funciona. Você pode usar as setas do teclado\npara mover o ninja para a esquerda, para a direita e para pular - tente pegar o unicórnio e\ndesvie do dragão!\\r\n\\r\n\\r\n\\r\n  \\r\n\\r\n"
       Ninjacat Demo B: "Vamos começar explorando um jogo simples\ne então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o\nninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você\nachar que já descobriu como o jogo funciona, clique em \"Concluir\""
       Ninjacat Demo No Animate: "Vamos começar explorando um jogo simples\ne então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o\nninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você\nachar que já descobriu como o jogo funciona, clique em \"Concluir\""
+      October15 ghost 1: Dê olhos ao fantasma, usando a função "desenhar um círculo".
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2018: Não é uma boa ideia topar com um Creeper. Passe com cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Chop Tree - allthethings: Madeira é um recurso muito importante. Muitas coisas são feitas com ela. Ande até a árvore e use o comando "destruir bloco" para derrubá-la.
@@ -1523,6 +1527,9 @@ pt-BR:
       PDK5 Loops 3: "Temos aqui outro desafio para praticar o uso de laços. O que acontece\nse você usar o bloco repita para executar o código fornecido na área de trabalho\n4 vezes?"
       PS Log test - Define and use turnAround: "Escreva a função virar() e\nuse-a para fazer a tartaruga se mover como descrito."
       PS copy 2-3 Bee Conditionals 5: "Tenha cuidado para não coletar néctar das\nflores roxas que não o têm. \\r\nPrimeiro, veja se o néctar\né igual a 1 usando o bloco \"se néctar\"."
+      PS predictive Applab level test: 'Veja aqui algumas instruções. '
+      Pixelation - Lesson 14 - Make your own B and W Image: Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
+      Pixelation - Lesson 14 - Make your own B&W Image: Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
       Play Lab Rocket 1: "Um foguete é lançado, viajando a 15 metros\npor segundo... clique em \"Executar\" para ver como é esse problema em forma de animação."
       Play Lab Rocket 2: "Começamos a receita de design para a altura do foguete\nusando o contrato e os exemplos que você escreveu. Complete a definição da função\npara a altura do foguete e execute sua animação."
       Play Lab Rocket 2B: "Um foguete decola, viajando a 15 metros\npor segundo. Usando a receita de design, escreva uma função chamada altura-foguete\nque recebe o número de segundos passados desde a decolagem do foguete\ne retorna a altura do foguete passado esse tempo."
@@ -1551,6 +1558,7 @@ pt-BR:
       SG U3L06 Challenge 7 smiley face: "Para fazer essa carinha feliz você vai\nprecisar olhar a documentação do comando mova() e então usá-lo com os\noutros que você aprendeu. Você pode fazer suposições razoáveis sobre as cores."
       SG U3L06 Challenge 8 make your own: "Use as ferramentas que você aprendeu\nhoje para criar um desenho próprio. Se você tiver tempo, desafie seus\namigos para ver se eles conseguem duplicar sua imagem. Vamos mostrar para você os\ndesenhos que nós mesmos fizemos. Você pode tentar duplicá-los, se quiser.\nCaso não queira, divirta-se criando o seu próprio desenho!"
       SG U3L07 - Free Play Loops and Random: "Atividade livre! Use o que você aprendeu\nsobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se."
+      SG U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas as instruções)
       SG U3L07 More Subgoals: "Desta vez vamos aprender\num pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar\nlarguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado."
       SG U3L2 Using Simple Commands part 1: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
       SG U3L2 Using Simple Commands: "Desenhe um quadrado usando apenas avance\ne vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição\ninicial da tartaruga."
@@ -1632,6 +1640,8 @@ pt-BR:
       U3L07 - Free Play Loops and Random: "Atividade livre! Use o que você aprendeu\nsobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se."
       U3L07 - Free Play Loops and Random_2018: "Atividade livre! Use o que você aprendeu\nsobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se."
       U3L07 - Starry Night Starter Code: "Você vai usar laços e números\naleatórios para gerar uma imagem do céu em uma noite estrelada parecida com uma\nmostrada aqui. Fornecemos um código inicial para gerar o chão e o céu\n(apenas dois pontos gigantes) e você vai adicionar código a esse projeto para fazer as\nestrelas, a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,\nlinhas e cores da tartaruga.  Para começar, siga a série de etapas sugerida na\nplanilha de acompanhamento. "
+      U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas as instruções)
+      U3L07 - randomSquare_2018: Desenhe a figura usando um laço. (Clique para ver todas as instruções)
       U3L13 - Button with ID: "Arraste um botão para fora da tela e\ndefina seu texto como \"Vá em frente!\".  Execute o programa para ver se você consegue enxergar\no botão."
       U3L13 - Debug Id Problem: "Esse programa tem um problema! Você pode descobrir\nqual? Execute o programa e veja se você pode descobrir a partir das mensagens de erro\nno console qual é o problema. Não há muito código para ver, então você deve ser capaz\nde descobrir o problema simplesmente lendo o código com atenção. Faça uma alteração\nque permita que o programa funcione como esperado."
       U3L13 - Debug Id plus logic problem: |-
@@ -1691,6 +1701,8 @@ pt-BR:
       Virtual Pet 1 Predict_simple: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Virtual Pet 4: Adicione um comportamento ao seu sabonete para torná-lo arrastável e, em seguida, arraste-o para limpar a girafa!
       Virtual Pet 4_simple: Adicione um comportamento ao seu sabonete para torná-lo arrastável e, em seguida, arraste-o para limpar a girafa!
+      'Widget: Black and White Pixelation': Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
+      'Widget: Black and White Pixelation_2018': Agora, crie sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser. Feliz pixelização!
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
       aE7: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés da direita, o que acontece? \\r\n\\r\nVocê pode repetir tudo\nisso para desenhar essa onda?"
       aE8: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \\r\n\\r\nSe repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
@@ -2242,6 +2254,10 @@ pt-BR:
       courseD_bee_debugging2: Corrija o(s) erro(s) para coletar todo o néctar.
       courseD_bee_debugging3: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."
       courseD_bee_debugging4: Corrija o(s) erro(s) para fazer todo o mel.
+      courseD_bee_nestedLoops1: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1_2018: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops3: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseD_bee_nestedLoops5: "Colete todo o néctar de cada flor\ne produza mel na colmeia. \\r\n\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops6_2018: "Vamos subir o nível! \\r\nUse\nlaços para me levar até o girassol com o menor número de laços possível."
@@ -2387,6 +2403,8 @@ pt-BR:
       courseF_bee_for1_2018: Colete o nectar de cada flor usando o menor número de blocos possíveis.
       courseF_bee_for2: Escrever o código para ajudar a abelha a coletar todo o néctar.
       courseF_bee_for2_2018: Escrever o código para ajudar a abelha a coletar todo o néctar.
+      courseF_bee_for4: Ajude a abelha a coletar todo o nectar.
+      courseF_bee_for4_2018: Ajude a abelha a coletar todo o nectar.
       courseF_bee_for5: Usar a variável `contador` duas vezes para resolver este enigma.
       courseF_bee_for5_2018: Usar a variável `contador` duas vezes para resolver este enigma.
       courseF_bee_for8: "Você conseguiu! Qual deve ser seu\nincremento para coletar 3, 6, 9, 12, 15 néctares?"
@@ -2812,6 +2830,7 @@ pt-BR:
       grade5_artist_variables_triangles3: "Arraste um bloco numérico para os blocos \"defina\no comprimento\" e \"repita_vezes\" para desenhar um conjunto de triângulos de 50 pixels.\n"
       grade5_bee_for_loops1: "Use um laço para coletar o néctar de\ntodas as flores."
       grade5_bee_for_loops2: "Adicione o código necessário para garantir que\na abelha colete todo o néctar. Olhe quanto código você precisa para esse desafio!\n(Vamos aprender uma maneira mais simples no próximo desafio)."
+      grade5_bee_for_loops4: Ajude a abelha a coletar todo o nectar.
       grade5_bee_for_loops6: "Você também pode usar um laço \"para\" para fazer contagem\nregressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1."
       grade5_bee_for_loops8: "Você conseguiu! Qual deve ser seu\nincremento para coletar 3, 6, 9, 12, 15 néctares?"
       grade5_playlab_freeplay: "É hora da atividade livre! Divirta-se\ncom todos os blocos da sua caixa de ferramentas. "

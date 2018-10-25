@@ -117,6 +117,8 @@ pt-BR:
       CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Verifique se o jogador ganhou
       Counting_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       Course 4 Artist 4_callout:
@@ -207,6 +209,9 @@ pt-BR:
         Infinity_move_right_runbutton: Adicione um bloco Mova aqui
       Infinity_repeat_callout:
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
+      MC HOC 2016 Level 2-2_callout:
+        craft2_run_button_callout: Quando você estiver pronto, clique em "Executar"
+          para testar seu programa.
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Clique em "Executar" para começar a se mover.
       MC_HOC_2017_01_Cole_callout:
@@ -237,6 +242,8 @@ pt-BR:
         MC_HOC_2017_08_RY_1: 'O Agent pode passar sobre a lava, mas o jogador não
           pode!  '
       Mike Playlab Project_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       NEW Course 4 Artist Functions 3_callout:
@@ -264,12 +271,16 @@ pt-BR:
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de
           "Ação" estão aqui agora.
       New Artist Project_callout:
+        New Artist Project_callout2: Clique em "Executar" para salvar e executar seu
+          programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       New Frozen Project_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
       New Play Lab Project_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       Overworld Chop Trees_callout:
@@ -284,8 +295,12 @@ pt-BR:
           Você consegue terminá-la?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Selecione "Executar" para abrir seu programa
+        craft_drag_block_callout: Arraste um bloco de "mover para frente" e encaixe-o
+          embaixo do outro bloco
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Selecione "Executar" para abrir seu programa
+        craft_drag_block_callout: Arraste um bloco de "mover para frente" e encaixe-o
+          embaixo do outro bloco
       Overworld Place Wall_callout:
         craft_inside_repeat: Repita as ações colocando blocos aqui
       Overworld Place Wall_2018_callout:
@@ -309,6 +324,8 @@ pt-BR:
         4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
           em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       Rock Paper Scissors_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       Ryan - 4-5 Bee Conditionals 2_callout:
@@ -323,6 +340,8 @@ pt-BR:
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edite essa função para evitar que o Sam vá para a direita
       Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       Underground Avoiding Lava_callout:
@@ -628,6 +647,8 @@ pt-BR:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
       courseF_playLab_func2_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       courseF_playlab_brokenText_callout:
@@ -814,7 +835,12 @@ pt-BR:
         replace_questions: Use o menu suspenso para substituir "???" por um número
       grade4_frozen_square_loop3_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
+      grade4_playLab_proj_example1_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
       grade4_playLab_proj_example2_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       grade5_artist_freeplay_callout:
@@ -851,5 +877,7 @@ pt-BR:
         gradek_playlab_events5c_1: Isto permite que você escolha um som "aleatório",
           que significa que você não sabe o que você vai obter até que você o ouça!
       small_actors_playlab_projects_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!

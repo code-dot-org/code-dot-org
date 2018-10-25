@@ -1129,6 +1129,7 @@
   header_tutorials: "Gyakorlatok"
   header_documentation: "Dokumentáció"
   user_header_label: "Üdv %{username}"
+  user_header_team: "Csapat"
   user_header_settings: "Profilom"
   user_header_logout: "Kijelentkezés"
   user_header_signin: "Bejelentkezés"

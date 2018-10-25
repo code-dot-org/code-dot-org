@@ -444,7 +444,7 @@ sk:
       Fish Tank 6-validated_simple: Pridajte správanie k novému rybkinmu kamarátovi.
       FoodFight: Toto je príklad hry, ktorú môžete vytvoriť v hernom laboratóriu.
       FoodFight_2018: Toto je príklad hry, ktorú môžete vytvoriť v hernom laboratóriu.
-      Function intro Ryan: Dvakrát použi funkciu "Vybuduj most" na vytvorenie cesty k fakli.
+      Function intro Ryan: Dvakrát použi funkciu "Postav most" na vytvorenie cesty k fakli.
       GLJ Flappy2: Kliknite pre zamávanie - nedotknite sa zeme!
       HoCAB_labyrinth1: Použite blok so šípkami pre vyriešenie tohto bludiska!
       Infinity_finale: Vytvorte čo len chcete a zdieľajte to!
@@ -474,40 +474,41 @@ sk:
       Kiki_StarWars_Test_5_Example: Text
       MC Agent Freeplay: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       MC HOC 2016 Level 10: Je čas vytvoriť si vlastný Minecraft! Vytváraj postavy a nauč ich robiť čokoľvek. Zabav sa!
-      MC HOC 2016 Level 2-2: Kuracie mäso je zmrazené. Umiestni bloky "Posuň sa" a "Otoč sa" do časti "Pri vytvorení", aby sa pohyb spustil.
-      MC HOC 2016 Level 3: "Skvelé, kurča sa pohlo! Ale potom zastavilo. V hrách kurčatá kráčajú stále. Použi slučku 'nekonečne opakuj', aby si udržal kurčatá v pohybe.\\r\n"
-      MC HOC 2016 Level 4: Teraz sa ale kurčatá hýbu rovnako a vyzerá to čudne. Hry používajú náhodné pohyby, aby vyzerali reálne. Nauč kurčatá 'náhodne otoč'.
-      MC HOC 2016 Level 5: Tieto kravy sú stratené! Priveď ich k tráve pomocou bloku 'urob krok smerom ku' v slučke 'nekonečne opakuj'.
-      MC HOC 2016 Level 6: Teraz vytvoríš zombíkov. Použi blok 'vytvor' pre vytvorenie 3 zombíkov, keď príde noc. Sprav, aby sa hýbali smerom k tebe. Preži do rána.
-      MC HOC 2016 Level 8: Cesta k tvojej ovečke je zatarasená kamennou stenou. Našťastie je tu "Creeper". "Creepers" explodujú po tom, čo sa ich dotkneš. Nechaj ho explodovať a zničiť tak stenu tak, aby si potom mohol prísť k svojej ovečke!
-      MC HOC 2016 New Drop: V Minecrafte ovce produkujú vlnu - púšťajú kocky vlny. Umiestni blok 'pusti' v časti 'pri použití', potom podíď ďalej a použi ovcu na to, aby vyprodukovala vlnu.
-      MC HOC 2016 New Spawn: Teraz môžeš vyplniť svet tak, ako chceš! Použi bloky 'vytvoriť' pod 'pri spustení', aby si vytvoril veci na začiatku hry.
+      MC HOC 2016 Level 2-2: Kurča je zmrazené. Umiestni bloky "posuň sa" a "otoč sa" do časti "pri vytvorení", aby sa pohlo.
+      MC HOC 2016 Level 3: 'Skvelé, kurča sa pohlo! Ale potom zastavilo. V hrách kurčatá kráčajú stále. Použi cyklus "nekonečne opakuj", aby si udržal kurčatá v pohybe.  '
+      MC HOC 2016 Level 4: Teraz sa ale všetky kurčatá hýbu rovnako a vyzerá to čudne. Hry používajú náhodné pohyby, aby vyzerali reálne. Nauč kurčatá vykonať pohyb "náhodne sa otoč".
+      MC HOC 2016 Level 5: Tieto kravy sú stratené! Priveď ich k tráve pomocou bloku "posuň sa o krok dopredu" v cykle "nekonečne opakuj".
+      MC HOC 2016 Level 6: Teraz vytvoríš zombíkov. Použi blok "vytvor" pre vytvorenie 3 zombíkov, keď príde noc. Naprogramuj ich tak, aby sa hýbali smerom k tebe. Preži do rána.
+      MC HOC 2016 Level 8: Cesta k tvojej ovečke je zatarasená kamennou stenou. Našťastie je tu Creeper. Creeper exploduje po tom, čo sa ho dotkneš. Nechaj ho explodovať a zničiť tak stenu tak, aby si potom mohol prísť k svojej ovečke!
+      MC HOC 2016 New Drop: V Minecrafte ovce púšťajú kocky vlny. Umiestni blok "pusti" v časti "pri použití", potom odíď ďalej a použi ovcu na to, aby vyprodukovala vlnu.
+      MC HOC 2016 New Spawn: Teraz môžeš vyplniť svet tak, ako chceš! Použi bloky "vytvoriť" pod "pri spustení", aby si vytvoril predmety na začiatku hry.
       MC HOC 2016 New Walk: Poďme preskúmať náš svet! Pohybuj sa pomocou šípok a stlačením medzerníka alebo kliknutím na herný plán pre použitie predmetov. Použi dvere na vstup do domu.
-      MC HOC 2016 SCORE LEVEL: Niektoré hry ti ponúkajú možnosť zbierať skóre. Zahraj si naháňačku so železnými golemmi a použi blok 'pridaj 1 ku skóre', aby si získal bod po chytení každého golema. Získaj 5 bodov a vyhraj!
-      MC HOC 2016 Village Test: Ach nie! Zombie ťa uväznili vnútri. Naprogramuj oceľového golema, aby prenasledoval a zaútočil na zombie!
+      MC HOC 2016 SCORE LEVEL: Niektoré hry ti ponúkajú možnosť zbierať skóre. Zahraj si naháňačku so železnými golemami a použi blok "pridaj 1 ku skóre", aby si získal bod po chytení každého golema. Získaj 5 bodov a vyhraj!
+      MC HOC 2016 Village Test: Ach nie! Zombíci ťa uväznili vnútri. Naprogramuj oceľového golema, aby prenasledoval a zaútočil na zombíkov!
+      MC_2017_Ryan_02: Pomôž hráčovi dostať sa von. Pomocou príkazu "Opakuj" dostaň agenta ku prítlačnej doske.
       MC_HOC_2017 Agent Test: Klikni na tlačidlo "Spustiť", aby sa hráč dostal na oranžový štvorec vo vnútri domu.
       MC_HOC_2017_01: Klikni na tlačidlo "Spustiť", aby sa hráč dostal na oranžový štvorec vo vnútri domu.
       MC_HOC_2017_01_Cole: Na tejto ceste musíš pozbierať všetky nástroje. Aby si vyhral, pohybuj sa po okolí pomocou **klávesov so šípkami** a dostaň sa k truhlici
       MC_HOC_2017_01_Kiki: Klikni na tlačidlo "Spustiť", aby sa hráč dostal na oranžový štvorec vo vnútri domu.
-      MC_HOC_2017_01_RETRY: 'Dostaň Agenta na prítlačnú dosku. Potom stlač tlačidlo "Spustiť" a pomocou klávesov so šípkami presuň hráča z domu, aby získal truhlicu. '
-      MC_HOC_2017_02: Dostaň Agenta na prítlačnú dosku.
-      MC_HOC_2017_02_Cole: 'Posuň Agenta na prítlačnú dosku, aby sa {currentPlayerName} mohol dostať k mape. '
-      MC_HOC_2017_02_Kiki: Dostaň Agenta na prítlačnú dosku a potom dostaň hráča na oranžové políčko.
-      MC_HOC_2017_02_Will: Dostaň Agenta na prítlačnú dosku.
-      MC_HOC_2017_03_Cole: 'Naprogramuj Agenta tak, aby otvoril bránu. '
-      MC_HOC_2017_03_Kiki: Dostaň Agenta na prítlačnú dosku.
-      MC_HOC_2017_04: Zmeň cyklus posledného hlavolamu, aby si agentovi pomohol vytvoriť cestu cez širšiu časť tejto rieky.
-      MC_HOC_2017_04POINT5_Cole: Dostaň Agenta na prítlačnú dosku.
-      MC_HOC_2017_04POINT5_RYAN: Dostaň Agenta na prítlačnú dosku.
-      MC_HOC_2017_04_Cole: Dostaň Agenta na prítlačnú dosku.
-      MC_HOC_2017_04_Kiki: Dostaň Agenta na prítlačnú dosku.
-      MC_HOC_2017_05: Pomocou funkcie pomôž Agentovi dostať sa k prítlačnej doske.
+      MC_HOC_2017_01_RETRY: 'Dostaň agenta na prítlačnú dosku. Potom stlač tlačidlo "Spustiť" a pomocou klávesov so šípkami presuň hráča z domu, aby získal truhlicu. '
+      MC_HOC_2017_02: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_02_Cole: 'Posuň agenta na prítlačnú dosku, aby sa {currentPlayerName} mohol dostať k mape. '
+      MC_HOC_2017_02_Kiki: Dostaň agenta na prítlačnú dosku a potom dostaň hráča na oranžové políčko.
+      MC_HOC_2017_02_Will: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_03_Cole: 'Naprogramuj agenta tak, aby otvoril bránu. '
+      MC_HOC_2017_03_Kiki: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_04: Zmeň cyklus z poslednej úlohy tak, aby si agentovi pomohol vytvoriť cestu cez širšiu časť tejto rieky.
+      MC_HOC_2017_04POINT5_Cole: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_04POINT5_RYAN: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_04_Cole: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_04_Kiki: Dostaň agenta na prítlačnú dosku.
+      MC_HOC_2017_05: Pomocou funkcie pomôž agentovi dostať sa k prítlačnej doske.
       MC_HOC_2017_05_Cole: Dostaň hráča k lopate.
       MC_HOC_2017_05_Josh: Dostaň hráča k lopate.
       MC_HOC_2017_05_Kiki: Dostaň hráča na oranžové políčko.
-      MC_HOC_2017_06_Cole: Oprav tento kód tak, aby Agent vybudoval most cez rieku.
-      MC_HOC_2017_06_Josh: Oprav tento kód, aby si Agentovi pomohol vybudovať most cez rieku.
-      MC_HOC_2017_06_Kiki: Oprav tento kód, aby si Agentovi pomohol vybudovať most cez rieku.
+      MC_HOC_2017_06_Cole: Oprav tento kód tak, aby agent vybudoval most cez rieku.
+      MC_HOC_2017_06_Josh: Oprav tento kód, aby si agentovi pomohol vybudovať most cez rieku.
+      MC_HOC_2017_06_Kiki: Oprav tento kód, aby si agentovi pomohol vybudovať most cez rieku.
       MC_HOC_2017_07_Cole: Znič ľad a dostaň hráča {currentPlayerName} do banského vozíka.
       MC_HOC_2017_07_Kiki: Pomocou funkcie uvoľni cestu k oranžovému políčku.
       MC_HOC_2017_07a_Kiki: Uvoľni cestu k oranžovému políčku.
@@ -515,8 +516,8 @@ sk:
       MC_HOC_2017_08_Kiki: Zmeň funkciu tak, aby bola vhodná pre tento hlavolam.
       MC_HOC_2017_08_RY: Pomocou funkcií nájdi cestu cez lávu.
       MC_HOC_2017_08_Will: Pomocou funkcií nájdi cestu cez lávu.
-      MC_HOC_2017_09_Cole: Naprogramuj Agenta tak, aby uvoľnil hráčovu cestu.
-      MC_HOC_2017_09_Kiki: Naprogramuj Agenta tak, aby uvoľnil hráčovi cestu a dostal sa k prítlačnej doske.
+      MC_HOC_2017_09_Cole: Naprogramuj agenta tak, aby uvoľnil hráčovu cestu.
+      MC_HOC_2017_09_Kiki: Naprogramuj agenta tak, aby uvoľnil hráčovu cestu a dostal sa k prítlačnej doske.
       MC_HOC_2017_10_Cole: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský vozík.
       MC_HOC_2017_10_Cole_old: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský vozík.
       MC_HOC_2017_10_Kiki: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský vozík.
@@ -524,12 +525,12 @@ sk:
       MC_HOC_2017_10_RYAN: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský vozík.
       MC_HOC_2017_10_RYAN2: Vytvor funkciu, ktorá ti pomôže dokončiť tento banský vozík.
       MC_HOC_2017_13_Cole: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
-      MC_HOC_2017_4.5v2: Dostaň Agenta na prítlačnú dosku.
+      MC_HOC_2017_4.5v2: Dostaň agenta na prítlačnú dosku.
       MC_HOC_2017_Ali: Pomocou funkcií nájdi cestu cez lávu.
       MC_HOC_2017_FP10x10: "**Voľná hra:** Trúfneš si pozbierať všetky diamanty v tejto úrovni? "
       MC_HOC_2017_FP10x10_RE: "**Voľná hra:** Trúfneš si pozbierať všetky diamanty v tejto úrovni? "
       MC_HOC_2017_FP20x20: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
-      MC_HOC_2017_Ryan_03: Teraz použi cykly (opakovacie bloky) na miestnenie blokov do vody a pomôž tak Agentovi vybudovať cez rieku most.
+      MC_HOC_2017_Ryan_03: Teraz použi cykly (opakovacie bloky) na miestnenie blokov do vody a pomôž tak agentovi vybudovať cez rieku most.
       MC_HOC_2017_Ryan_05: Znič tieto kaktusy, aby sa hráč mohol dostať do cieľa.
       MC_HOC_Kiki_02: Dostaňte agenta na prítlačnú dosku.
       Mike Test Bee Conditionals 1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
@@ -539,27 +540,27 @@ sk:
       New Ice Age Project: Vytvorte čo len chcete a zdieľajte to!
       New Infinity Project: Vytvorte čo len chcete a zdieľajte to!
       New Minecraft Hero Project: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
-      Overworld Avoid Monsters: "Bežať ku \"Creeperovi\" nie je dobrý nápad.\nOpatrne prebehnite poza neho a dostante sa do bezpečia svojho domova."
-      Overworld Avoid Monsters_2018: "Bežať ku \"Creeperovi\" nie je dobrý nápad.\nOpatrne prebehnite poza neho a dostante sa do bezpečia svojho domova."
-      Overworld Chop Tree - allthethings: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
-      Overworld Chop Tree: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
-      Overworld Chop Tree_2018: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
+      Overworld Avoid Monsters: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
+      Overworld Avoid Monsters_2018: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
+      Overworld Chop Tree - allthethings: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
+      Overworld Chop Tree: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
+      Overworld Chop Tree_2018: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
       Overworld Chop Trees: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
       Overworld Chop Trees_2018: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
-      Overworld Free Play 20x20: Gratulujeme! Dokončili ste všetky úlohy! Teraz ťaž v bani, stavaj a vytváraj niečo jedinečné použitím všetkých veci, čo si sa doteraz naučil.
-      Overworld Free Play 20x20_2018: Gratulujeme! Dokončili ste všetky úlohy! Teraz ťaž v bani, stavaj a vytváraj niečo jedinečné použitím všetkých veci, čo si sa doteraz naučil.
-      Overworld House Frame Chosen: Vybuduj zvyšok svojho domu z hocijakého materiálu, ktorý sa ti páči. Opakovací príkaz ti veľmi pomôže.
-      Overworld House Frame Chosen_2018: Vybuduj zvyšok svojho domu z hocijakého materiálu, ktorý sa ti páči. Opakovací príkaz ti veľmi pomôže.
-      Overworld Move to Sheep: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
+      Overworld Free Play 20x20: Gratulujeme! Dokončil si všetky úlohy! Teraz ťaž v bani, stavaj a vytvor niečo jedinečné použitím všetkého, čo si sa doteraz naučil.
+      Overworld Free Play 20x20_2018: Gratulujeme! Dokončil si všetky úlohy! Teraz ťaž v bani, stavaj a vytvor niečo jedinečné použitím všetkého, čo si sa doteraz naučil.
+      Overworld House Frame Chosen: Vybuduj zvyšok svojho domu z hocijakého materiálu, ktorý sa ti páči. Príkaz "opakuj" ti pri tom veľmi pomôže.
+      Overworld House Frame Chosen_2018: Vybuduj zvyšok svojho domu z hocijakého materiálu, ktorý sa ti páči. Príkaz "opakuj" ti pri tom veľmi pomôže.
+      Overworld Move to Sheep: Pridaj ešte jeden príkaz "posuň sa dopredu", aby si sa dostal ku ovci.
       Overworld Move to Sheep_2018: Pohni sa ešte o jeden krok dopredu, aby si sa dostal ku ovci.
-      Overworld Place Wall: Každý dom začína so stenou. Postav prvú časť domu tak, že použiješ príkazy položiť a pohyb dopredu v nekonečne opakovanej slučke.
-      Overworld Place Wall_2018: Každý dom začína so stenou. Postav prvú časť domu tak, že použiješ príkazy položiť a pohyb dopredu v nekonečne opakovanej slučke.
+      Overworld Place Wall: Každý dom začína so stenou. Postav prvú časť domu tak, že použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa cyklu.
+      Overworld Place Wall_2018: Každý dom začína so stenou. Postav prvú časť domu tak, že použiješ príkazy "polož" a "posuň sa dopredu" vo vnútri opakujúceho sa cyklu.
       Overworld Plant Crops: Je dobré plánovať veci dopredu. Zasaď plodiny na oboch stranách vody, aby si neskôr nebol hladný.
       Overworld Plant Crops_2018: Je dobré plánovať veci dopredu. Zasaď plodiny na oboch stranách vody, aby si neskôr nebol hladný.
-      Overworld Powered Minecart: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož koľajnice z rohu mapy k dverám tvojho domu.
-      Overworld Powered Minecart_2018: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož koľajnice z rohu mapy k dverám tvojho domu.
-      Overworld Shear Sheep: Je čas na strihanie oviec! Použi príkaz strihať na to, aby si zozbieral vlnu z oviec.
-      Overworld Shear Sheep_2018: Je čas na strihanie oviec! Použi príkaz strihať na to, aby si zozbieral vlnu z oviec.
+      Overworld Powered Minecart: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož koľajnice od rohu mapy až ku dverám tvojho domu.
+      Overworld Powered Minecart_2018: Skvelá práca! Zhromaždil si veľa zdrojov a postavil si skromný dom. Teraz polož koľajnice od rohu mapy až ku dverám tvojho domu.
+      Overworld Shear Sheep: Je čas na strihanie oviec! Použi príkaz “strihaj“ na to, aby si z oviec zozbieral vlnu.
+      Overworld Shear Sheep_2018: Je čas na strihanie oviec! Použi príkaz “strihaj“ na to, aby si z oviec zozbieral vlnu.
       PS - test - pixelation: Dokončite tvar X písaním núl a jednotiek
       PS copy 2-3 Bee Conditionals 5: "Fialové kvety môžu mať buď 1 alebo 0 nektáru, ale nevieš, ktorý z nich! Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú. Skontrolujte, či nektár je rovný 1 pomocou bloku \"if\"."
       SpecialFrozenLevel: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
@@ -582,14 +583,14 @@ sk:
       U2 frequency random sub: Inštrukcie
       U2 vigenere cipher: Inštrukcie
       U4 vigenere cipher 2: Inštrukcie
-      Underground Avoiding Lava: Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa pohneš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posunúť vpred" na správnom mieste, aby si vyťažil tieto bloky.
-      Underground Avoiding Lava_2018: Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa pohneš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posunúť vpred" na správnom mieste, aby si vyťažil tieto bloky.
+      Underground Avoiding Lava: Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posuň sa dopredu" na správne miesto, aby si vyťažil tieto bloky.
+      Underground Avoiding Lava_2018: Láva sa ukrýva pod niektorými z týchto blokov, ktoré budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť príkaz "ak". Pridaj príkaz "posuň sa dopredu" na správne miesto, aby si vyťažil tieto bloky.
       Underground If Statements: Teraz to bude zapeklité. Vyťaž 3 rudity, no nespadni pritom do lávy. Použí príkaz "ak" aby si umiestnil kamene cez všetku lávu, ktorú odkryješ.
       Underground If Statements_2018: Teraz to bude zapeklité. Vyťaž 3 rudity, no nespadni pritom do lávy. Použí príkaz "ak" aby si umiestnil kamene cez všetku lávu, ktorú odkryješ.
       Underground Iron: Vstúpiť do roztavenej lávy je zlý nápad. Pomocou kameňa vytvor most a potom vyťaž aspoň dva bloky železa.
       Underground Iron_2018: Vstúpiť do roztavenej lávy je zlý nápad. Pomocou kameňa vytvor most a potom vyťaž aspoň dva bloky železa.
-      Underground Mining Coal: Najcennejšie zdroje nájdete v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakľe a vyťaž aspoň 2 kusy uhlia.
-      Underground Mining Coal_2018: Najcennejšie zdroje nájdete v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakľe a vyťaž aspoň 2 kusy uhlia.
+      Underground Mining Coal: Najcennejšie zdroje nájdeš v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
+      Underground Mining Coal_2018: Najcennejšie zdroje nájdeš v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
       Virtual Pet 1 Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Virtual Pet 1 Predict_simple: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       aE7: "Ak spravíte ďaľšiu takúto slučku, ale zabočíte doľava namiesto doprava, čo sa stane? \n\nViete to celé zopakovať pre nakreslenie tejto vlny?"

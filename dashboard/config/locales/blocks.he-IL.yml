@@ -319,11 +319,11 @@ he:
           TYPE:
             "'sand'": חול
             "'planksOak'": קרשי אלון
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": חול
       craft_moveForward:
         text: לזוז קדימה
       craft_placeTorch:
         text: שים לפיד
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': תרנגולת

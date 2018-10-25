@@ -99,3 +99,7 @@ ku:
         options:
           TYPE:
             "'sand'": لم/وردە بەرد
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": لم/وردە بەرد

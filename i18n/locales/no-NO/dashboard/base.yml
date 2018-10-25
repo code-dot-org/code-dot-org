@@ -83,6 +83,7 @@
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
+    microsoft_v2_auth: 'Microsoft-konto'
     clever: 'Smartkonto'
     forgot_password: 'Har du glemt passordet ditt?'
     need_confirmation: "Mottok du ikke instruksjoner om hvordan du bekrefter?"
@@ -106,7 +107,6 @@
     age: 'Alder'
     user_type: 'Er du elev eller lærer?'
     submit: 'Meld deg på'
-    next: 'Neste'
     teacher: 'Er du en lærer?'
     valid_username: "Tilgjengelig!"
     invalid_username: "Brukernavnet må bestå av minimum fem tegn"

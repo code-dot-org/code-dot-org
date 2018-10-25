@@ -83,6 +83,7 @@ ja:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft アカウント'
+    microsoft_v2_auth: 'Microsoft アカウント'
     clever: 'Cleverアカウント'
     powerschool: 'Powerschoolアカウント'
     forgot_password: 'パスワードをお忘れですか？'
@@ -107,7 +108,6 @@ ja:
     age: '年齢'
     user_type: 'あなたは先生ですか？生徒ですか？'
     submit: '入会'
-    next: '次へ'
     teacher: 'あなたは先生ですか？'
     valid_username: "利用可能 ！"
     invalid_username: "ユーザー名は 5 文字以上である必要があります。"
