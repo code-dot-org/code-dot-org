@@ -7,6 +7,30 @@
   margin: 5px 0px;
 }
 
+.ctabutton-white {
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 5px 0px;
+  background-color: white;
+  border-color: white;
+  color: #4d575f;
+}
+
+.ctabutton-white-inverse {
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 5px 0px;
+  background-color: initial;
+  border-color: white;
+  color: white;
+}
+
 .ctabuttonatag {
   text-decoration: none;
 }
@@ -42,8 +66,6 @@
 
 a.category-link {
   text-decoration: none;
-  width: 50%;
-  min-width: 182px;
 }
 
 .category-link .category-button:hover {
@@ -52,16 +74,59 @@ a.category-link {
 
 .robotics-providers {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .robotics-provider {
-  width: 90%;
   padding: 20px;
   border: 1px solid #aaa;
   border-radius: 10px;
   margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .robotics-provider {
+    max-width: 45%;
+  }
+
+  .front-header-banner h4 {
+    font-size: 40px;
+  }
+
+  .front-header-description {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .robotics-provider {
+    max-width: 30%;
+  }
+
+  .front-header-banner h4 {
+    font-size: 60px;
+  }
+
+  .front-header-description {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .robotics-provider {
+    max-width: 19%;
+  }
+
+  .front-header-banner h4 {
+    font-size: 80px;
+  }
+
+  .front-header-description {
+    font-size: 24px;
+  }
 }
 
 .purple-background {
@@ -81,11 +146,34 @@ a.category-link {
 }
 
 #textbacking {
-  margin-top: 80px;
   color: white;
   border-radius: 5px;
   padding: 10px;
   text-shadow: 0px 0px 4px rgba(31, 31, 31, 1.0);
+  text-align: center;
+}
+
+.front-header-banner {
+  color: white;
+  margin-top: 0px;
+}
+
+.front-header-description {
+  max-width: 800px;
+  display: inline-block;
+}
+
+.hoc-description {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #00adbc;
+}
+
+.number-served{
+  font-size: 40px;
+  line-height: 35px;
+  margin-bottom: 10px;
 }
 
 .watch-video {
@@ -127,10 +215,18 @@ a.category-link {
   text-decoration: none;
 }
 
-.watch-video-small {
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* Maintains 16:9 aspect ratio */
+  position: relative;
+  height: 0;
+}
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .students-served {
