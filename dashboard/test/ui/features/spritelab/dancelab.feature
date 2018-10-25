@@ -12,6 +12,8 @@ Feature: Dance Lab
 
   # This test requires cloudfront.
   @no_circle
+  @no_firefox
+  @no_safari
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"
