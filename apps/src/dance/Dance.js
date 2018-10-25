@@ -13,6 +13,8 @@ import {TestResults} from '../constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers, setSong} from './redux';
 
+import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+
 const ButtonState = {
   UP: 0,
   DOWN: 1,
@@ -461,15 +463,19 @@ Dance.prototype.shouldShowSharing = function () {
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
+  const recordReplayLog = this.shouldShowSharing();
   this.nativeAPI = new DanceParty(this.p5, {
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
-    recordReplayLog: this.shouldShowSharing(),
+    recordReplayLog
   });
   this.updateSongMetadata(getStore().getState().selectedSong);
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
+  if (recordReplayLog) {
+    getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
+  }
 };
 
 Dance.prototype.updateSongMetadata = function (id) {
