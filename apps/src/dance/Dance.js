@@ -10,7 +10,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
+import {DanceParty} from '@code-dot-org/dance-party';
 import {reducers, setSong} from './redux';
 
 const ButtonState = {
@@ -228,15 +228,18 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
-  new window.p5(p5obj => {
-    p5obj._fixedSpriteAnimationFrameSizes = true;
-
-    p5obj.preload = this.onP5Preload.bind(this);
-    p5obj.setup = this.onP5Setup.bind(this);
-    p5obj.draw = this.onP5Draw.bind(this);
-
-    this.p5 = p5obj;
-  }, 'divDance');
+  this.nativeAPI = new DanceParty({
+    onPuzzleComplete: this.onPuzzleComplete.bind(this),
+    playSound: audioCommands.playSound,
+    recordReplayLog: this.shouldShowSharing(),
+    onInit: () => {
+      this.updateSongMetadata(getStore().getState().selectedSong);
+      const spriteConfig = new Function('World', this.level.customHelperLibrary);
+      this.nativeAPI.init(spriteConfig);
+      this.p5setupPromiseResolve();
+    },
+    container: 'divDance',
+  });
 };
 
 /**
@@ -461,10 +464,11 @@ Dance.prototype.shouldShowSharing = function () {
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
-  this.nativeAPI = new DanceParty(this.p5, {
+  this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
     recordReplayLog: this.shouldShowSharing(),
+    container: 'divDance',
   });
   this.updateSongMetadata(getStore().getState().selectedSong);
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
