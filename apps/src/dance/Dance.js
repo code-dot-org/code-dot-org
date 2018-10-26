@@ -37,8 +37,6 @@ var Dance = function () {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
-
-  this.currentFrameEvents = {};
 };
 
 module.exports = Dance;
@@ -139,16 +137,23 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
-function p5KeyCodeFromArrow(idBtn) {
+const KeyCodes = {
+  LEFT_ARROW: 37,
+  UP_ARROW: 38,
+  RIGHT_ARROW: 39,
+  DOWN_ARROW: 40,
+};
+
+function keyCodeFromArrow(idBtn) {
   switch (idBtn) {
     case ArrowIds.LEFT:
-      return window.p5.prototype.LEFT_ARROW;
+      return KeyCodes.LEFT_ARROW;
     case ArrowIds.RIGHT:
-      return window.p5.prototype.RIGHT_ARROW;
+      return KeyCodes.RIGHT_ARROW;
     case ArrowIds.UP:
-      return window.p5.prototype.UP_ARROW;
+      return KeyCodes.UP_ARROW;
     case ArrowIds.DOWN:
-      return window.p5.prototype.DOWN_ARROW;
+      return KeyCodes.DOWN_ARROW;
   }
 }
 
@@ -157,14 +162,14 @@ Dance.prototype.onArrowButtonDown = function (buttonId, e) {
   this.btnState[buttonId] = ButtonState.DOWN;
   e.preventDefault();  // Stop normal events so we see mouseup later.
 
-  this.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
+  this.nativeAPI.onKeyDown(keyCodeFromArrow(buttonId));
 };
 
 Dance.prototype.onArrowButtonUp = function (buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.UP;
 
-  this.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+  this.nativeAPI.onKeyUp(keyCodeFromArrow(buttonId));
 };
 
 Dance.prototype.onMouseUp = function (e) {
@@ -179,20 +184,6 @@ Dance.prototype.onMouseUp = function (e) {
     if (this.btnState[buttonId] === ButtonState.DOWN) {
       this.onArrowButtonUp(buttonId, e);
     }
-  }
-};
-
-Dance.prototype.notifyKeyCodeDown = function (keyCode) {
-  // Synthesize an event and send it to the internal p5 handler for keydown
-  if (this.p5) {
-    this.p5._onkeydown({ which: keyCode });
-  }
-};
-
-Dance.prototype.notifyKeyCodeUp = function (keyCode) {
-  // Synthesize an event and send it to the internal p5 handler for keyup
-  if (this.p5) {
-    this.p5._onkeyup({ which: keyCode });
   }
 };
 
@@ -232,6 +223,7 @@ Dance.prototype.afterInject_ = function () {
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
     recordReplayLog: this.shouldShowSharing(),
+    onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
       this.updateSongMetadata(getStore().getState().selectedSong);
       const spriteConfig = new Function('World', this.level.customHelperLibrary);
@@ -357,7 +349,6 @@ Dance.prototype.execute = async function () {
 
 Dance.prototype.initInterpreter = function () {
   const nativeAPI = this.nativeAPI;
-  this.currentFrameEvents = nativeAPI.currentFrameEvents;
   const sprites = [];
 
   const api = {
@@ -487,25 +478,10 @@ Dance.prototype.loadSongMetadata = async function (id) {
 };
 
 /**
- * This is called while this.p5 is in the setup phase.
- */
-Dance.prototype.onP5Setup = function () {
-  this.preloadComplete = true;
-  this.nativeAPI.setup();
-  this.p5setupPromiseResolve();
-  if (this.share) {
-    this.studioApp_.runButtonClick();
-  }
-};
-
-/**
  * This is called while this.p5 is in a draw() call.
  */
-Dance.prototype.onP5Draw = function () {
-  if (this.currentFrameEvents.any) {
-    this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
-  }
-  this.nativeAPI.draw();
+Dance.prototype.onHandleEvents = function (currentFrameEvents) {
+  this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
 };
 
 /**
