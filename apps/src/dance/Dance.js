@@ -106,8 +106,8 @@ Dance.prototype.init = async function (config) {
 
   // We must obtain signed cookies before accessing restricted content.
   if (config.useRestrictedSongs) {
-    const signedCookiePromise = fetch('/dashboardapi/signed_cookies');
-    promises.push(signedCookiePromise);
+    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies');
+    promises.push(signedCookiesPromise);
   }
 
   const result = await Promise.all(promises);
