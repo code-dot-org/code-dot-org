@@ -53,12 +53,22 @@ function runUserSetup() {
 }
 
 function runUserEvents(events) {
+  var currentEvents = {};
   for (var i = 0; i < inputEvents.length; i++) {
     var eventType = inputEvents[i].type;
     var event = inputEvents[i].event;
     var param = inputEvents[i].param;
+    var priority = inputEvents[i].priority;
     if (events[eventType] && events[eventType][param]) {
-      event();
+      //If there are multiple cues of the same type, only run the event with the highest priority
+      if (!currentEvents[eventType] || currentEvents[eventType].priority < priority) {
+        currentEvents[eventType] = {event: event, priority: priority};
+      }
+    }
+  }
+  for (var input in currentEvents){
+    if(currentEvents.hasOwnProperty(input)){
+      currentEvents[input].event();
     }
   }
 }
@@ -115,7 +125,8 @@ function everySecondsRange(n, unit, start, stop, event) {
       inputEvents.push({
         type: 'cue-' + unit,
         event: event,
-        param: timestamp
+        param: timestamp,
+        priority: n
       });
       timestamp += n;
     }
