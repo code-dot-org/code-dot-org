@@ -483,9 +483,6 @@ Dance.prototype.onP5Setup = function () {
   this.preloadComplete = true;
   this.nativeAPI.setup();
   this.p5setupPromiseResolve();
-  if (this.share) {
-    this.studioApp_.runButtonClick();
-  }
 };
 
 /**
