@@ -1155,19 +1155,11 @@ var projects = module.exports = {
   },
   serverSideRemix() {
     if (current && !current.name) {
-      var url = projects.appToProjectUrl();
-      if (url === '/projects/algebra_game') {
-        this.setName('Big Game Template');
-      } else if (url === '/projects/applab' ||
-          url === '/projects/makerlab' ||
-          url === '/projects/gamelab' ||
-          url === '/projects/weblab') {
-        this.setName('My Project');
-      }
+      const url = projects.appToProjectUrl();
+      this.setName(url === '/projects/algebra_game' ? 'Big Game Template' : 'My Project');
     }
     function redirectToRemix() {
-      const url = `${projects.getPathName('remix')}`;
-      location.href = url;
+      location.href = `${projects.getPathName('remix')}`;
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
