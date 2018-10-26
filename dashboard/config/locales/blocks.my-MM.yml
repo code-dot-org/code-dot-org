@@ -53,6 +53,18 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_randomColor:
         text: ကျဘန်းအရောင်
       Dancelab_setBackgroundEffect:
@@ -71,6 +83,10 @@ my:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -95,5 +111,9 @@ my:
           TYPE:
             "'sand'": သဲ
             "'planksOak'": ၀က်သစ်ချပင်ကြမ်းခင်းပျဉ်ချပ်များ
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": သဲ
       craft_placeTorch:
         text: မီးတိုင်ကိုထားပါ

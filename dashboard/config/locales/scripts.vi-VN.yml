@@ -2958,6 +2958,8 @@ vi:
               name: Màu RGB
             Processing with Bits:
               name: Xử lý với các bit dữ liệu
+            Play Lab:
+              name: Phòng trò chơi
         csd2-2017:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."

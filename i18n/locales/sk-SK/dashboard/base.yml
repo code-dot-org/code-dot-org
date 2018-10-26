@@ -83,6 +83,7 @@ sk:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft účet'
+    microsoft_v2_auth: 'Microsoft účet'
     clever: 'Smart konto'
     powerschool: 'Hlavný školský účet'
     forgot_password: 'Zabudli ste heslo?'
@@ -108,7 +109,6 @@ sk:
     age: 'Vek'
     user_type: 'Ste študent/žiak alebo učiteľ?'
     submit: 'Zaregistrovať sa'
-    next: 'Ďalší'
     teacher: 'Ste učiteľ?'
     valid_username: "Dostupné!"
     invalid_username: "Užívateľské meno musí obsahovať aspoň 5 znakov"
@@ -302,14 +302,6 @@ sk:
       help_us: "Pomôžte nám"
       teach: "Vyučujte"
       about: "O nás"
-    create_button:
-      create: 'Vytvoriť'
-      applab: 'Laboratórium aplikácií'
-      artist: 'Umelec'
-      gamelab: 'Herné laboratórium'
-      playlab: 'Herné laboratórium'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Domovská stránka učiteľa'
       district_dashboard: 'Oblasť Nástenka'
@@ -323,6 +315,13 @@ sk:
       team: 'Tím'
       driver: 'Prihlásený'
       navigator: 'Navigátor'
+      create: 'Vytvoriť'
+      applab: 'Laboratórium aplikácií'
+      artist: 'Umelec'
+      gamelab: 'Herné laboratórium'
+      playlab: 'Herné laboratórium'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Pokrok pre užívateľa %{name}"
       progress: 'Váš pokrok'
@@ -612,7 +611,7 @@ sk:
       body: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
     hero:
       title: "Minecraft"
-      body: "Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou! Prejdite sa po Minecrafte s kódom."
+      body: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
     sports:
       body: "Vytvorte basketbalovú hru alebo pospájajte a pomiešajte viaceré športy."
     text-compression:
@@ -660,21 +659,21 @@ sk:
     correct_title: "Správne"
     correct_body: "To je správna odpoveď."
   multi-submittable:
-    wrong_title: "Ďakujeme"
+    wrong_title: "Ďakujem"
     wrong_body: "Ďakujeme za odoslanie odpovede."
-    correct_title: "Ďakujeme"
+    correct_title: "Ďakujem"
     correct_body: "Ďakujeme za odoslanie odpovede."
   level_group:
-    wrong_title: "Ďakujeme"
+    wrong_title: "Ďakujem"
     wrong_body: "Ďakujeme za odoslanie odpovedí."
-    correct_title: "Ďakujeme"
+    correct_title: "Ďakujem"
     correct_body: "Ďakujeme za odoslanie odpovedí."
     hide_survey_last_answer: "Tento prieskum je anonymný. Pre súhrnné informácie o výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu budú zobrazené pri účasti minimálne piatich študentov."
     survey_submission_thankyou: "Ďakujeme Vám za vyplnenie ankety! Formulár bol vymazaný, aby sme mohli Vaše odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné odpovede za celú triedu, avšak bez konkrétnych mien."
   level_group-submittable:
-    wrong_title: "Ďakujeme"
+    wrong_title: "Ďakujem"
     wrong_body: "Ďakujeme za odoslanie odpovedí."
-    correct_title: "Ďakujeme"
+    correct_title: "Ďakujem"
     correct_body: "Ďakujeme za odoslanie odpovedí."
     unsubmit-title: "Odvolaj tvoje hodnotenie"
     unsubmit-body: "Odvolanie tvojho hodnotenia obnoví čas a dátum odoslania.  Si si istý?"
@@ -769,10 +768,10 @@ sk:
     save: "Uložiť"
     delete: "Odstrániť"
     import: "Import"
-    share_link_import_bad_link_header: "Prepojenie na zdieľanie sa nerozpoznalo"
-    share_link_import_bad_link_body: "Prepojenie na zdieľanie sa nemohlo importovať. Uistite sa, že používate prepojenie z hlavolamu Minecraft: Agent a že ste skopírovali celé prepojenie."
+    share_link_import_bad_link_header: "Link na zdieľanie nebol nerozpoznaný"
+    share_link_import_bad_link_body: "Link na zdieľanie sa nám nepodarilo importovať. Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý link."
     share_link_import_error_header: "Vyskytla sa chyba."
-    share_link_import_error_body: "Vyskytol sa problém s importom tohto prepojenia na zdieľanie. Skúste to znova."
+    share_link_import_error_body: "Vyskytol sa problém s importom tohto linku na zdieľanie. Skús to znova."
     exit: "Vrátiť sa do kurzu"
     my_projects: "Moje Projekty"
     project_gallery: "Projekty"

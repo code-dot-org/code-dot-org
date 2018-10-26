@@ -364,38 +364,38 @@ theme: pdf
             - else
               teachers
             in CS Fundamentals (K-5)
-        - if state_info[:num_ecs_csd_i] != 0
-          - if state_info[:num_csp_i] == 0
-            %li
-              = format_integer_with_commas(state_info[:num_ecs_csd_i])
-              - if state_info[:num_ecs_csd_i] == 1
-                teacher
-              -else
-                teachers
-              in Exploring Computer Science or Computer Science Discoveries
-          - else
-            %li
-              = format_integer_with_commas(state_info[:num_ecs_csd_i])
-              - if state_info[:num_ecs_csd_i] == 1
-                teacher
-              -else
-                teachers
-              in Exploring Computer Science or Computer Science Discoveries
+          - if state_info[:num_ecs_csd_i] != 0
+            - if state_info[:num_csp_i] == 0
+              %li
+                = format_integer_with_commas(state_info[:num_ecs_csd_i])
+                - if state_info[:num_ecs_csd_i] == 1
+                  teacher
+                - else
+                  teachers
+                in Exploring Computer Science or Computer Science Discoveries
+            - else
+              %li
+                = format_integer_with_commas(state_info[:num_ecs_csd_i])
+                - if state_info[:num_ecs_csd_i] == 1
+                  teacher
+                - else
+                  teachers
+                in Exploring Computer Science or Computer Science Discoveries
+              %li
+                = format_integer_with_commas(state_info[:num_csp_i])
+                - if state_info[:num_csp_i] == 1
+                  teacher
+                - else
+                  teachers
+                in Computer Science Principles
+          - elsif state_info[:num_csp_i] != 0
             %li
               = format_integer_with_commas(state_info[:num_csp_i])
               - if state_info[:num_csp_i] == 1
                 teacher
-              -else
+              - else
                 teachers
               in Computer Science Principles
-        - elsif state_info[:num_csp_i] != 0
-          %li
-            = format_integer_with_commas(state_info[:num_csp_i])
-            - if state_info[:num_csp_i] == 1
-              teacher
-            - else
-              teachers
-            in Computer Science Principles
     %p
       - if state_info[:other_partners_t] != 'none'
         Code.org has a partnership with

@@ -1578,6 +1578,8 @@ bg:
               name: Двоични гривни
             Binary Images:
               name: Бинарни образи(картини)
+            Play Lab:
+              name: Театрална лаборатория
         csd2-2017:
           stages:
             Peer Review:

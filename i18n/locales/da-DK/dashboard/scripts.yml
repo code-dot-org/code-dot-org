@@ -881,6 +881,8 @@ da:
               name: Binære armbånd
             Binary Images:
               name: Binære billeder
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Lists:

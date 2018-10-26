@@ -1076,12 +1076,19 @@
   header_about: "Info"
   header_documentation: "Dokumentatsioon"
   user_header_label: "Tere, %{username}"
+  user_header_team: "Võistkond"
   user_header_settings: "Minu konto"
   user_header_logout: "Logi välja"
   user_header_signin: "Logi sisse"
+  user_header_gamelab: "Game Lab"
+  user_header_playlab: "Play Lab"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Flappy"
+  user_header_view_my_projects: "Vaata minu projekte"
   view_all_sections: "Vaata kõiki jaotisi"
   sign_in_instruct_code: 'Sisesta oma Üksuse kood: %{section_code}.'
   joining_section_instruct_website: 'Loo Code.org konto, kui seda veel olemas ei ole. Nad saavad seda teha https://studio.code.org/users/sign_up. Pange tähele, et registreerida saab meiliaadressi ja parooliga või registreerudes läbi Google''i, Facebooki või Microsofti klõpsates ühte nendest nuppudest:'
   joining_section_instruct_account: "Logi sisse oma Code.org kontole."
   joining_section_instruct_code: 'Liikuge %{code_org_url} ja sisestage oma Üksuse kood: %{section_code}.'
   hero_name: 'Minecraft: Kangelase teekond'
+  creativity_create: "Loo"

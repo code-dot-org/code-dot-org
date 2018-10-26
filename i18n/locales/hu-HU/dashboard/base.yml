@@ -84,6 +84,7 @@ hu:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft fiók'
+    microsoft_v2_auth: 'Microsoft fiók'
     clever: 'Okos fiók'
     powerschool: 'Powerschool fiók'
     forgot_password: 'Elfelejtette jelszavát?'
@@ -107,7 +108,6 @@ hu:
     age: 'Kor'
     user_type: 'Diák vagy tanár vagy?'
     submit: 'Regisztrálás'
-    next: 'Következő'
     teacher: 'Tanár vagy?'
     valid_username: "Elérhető!"
     invalid_username: "Felhasználónév minimum 5 karakter hosszú"
@@ -257,13 +257,6 @@ hu:
       help_us: "Támogass minket"
       teach: "Taníts"
       about: "Rólunk"
-    create_button:
-      create: 'Létrehoz'
-      applab: 'App Lab'
-      artist: 'Művész'
-      playlab: 'Játéklabor'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Tanári kezdőlap'
       district_dashboard: 'Tankerületi munkafelület'
@@ -277,6 +270,12 @@ hu:
       team: 'Csapat'
       driver: 'Vezető'
       navigator: 'Navigátor'
+      create: 'Létrehoz'
+      applab: 'App Lab'
+      artist: 'Művész'
+      playlab: 'Játéklabor'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Fejlődése'

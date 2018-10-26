@@ -77,12 +77,28 @@ sk:
         options:
           GROUP:
             sprites: všetky
+          FORMAT:
+            '"random"': náhodný
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": vľavo
             "{x: 300, y: 200}": vpravo
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': náhodný
       Dancelab_randomColor:
         text: náhodná farba
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ sk:
             '"none"': Žiadne
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"height"': výška
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: všetky
           PROPERTY:
             '"scale"': veľkosť
             '"height"': výška
@@ -129,7 +152,7 @@ sk:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -199,7 +222,7 @@ sk:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -207,14 +230,14 @@ sk:
         options:
           DIR:
             "'up'": hore
-            "'down'": nadol
+            "'down'": dole
             "'left'": vľavo
             "'right'": vpravo
       gamelab_whileKey:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -290,12 +313,16 @@ sk:
       craft_ifPath:
         options:
           DIR:
-            "'ahead'": oproti
+            "'ahead'": vpredu
       craft_ifStandingOn:
         options:
           TYPE:
             "'sand'": piesok
             "'planksOak'": dubové dosky
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": piesok
       craft_moveForward:
         text: posunúť dopredu
       craft_placeTorch:

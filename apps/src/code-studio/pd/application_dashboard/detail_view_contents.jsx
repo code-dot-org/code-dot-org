@@ -79,10 +79,10 @@ const styles = {
     width: '80%'
   },
   questionColumn: {
-    width: '60%'
+    width: '50%'
   },
   answerColumn: {
-    width: '20%'
+    width: '30%'
   },
   scoringColumn: {
     width: '20%'
@@ -629,7 +629,7 @@ export class DetailViewContents extends React.Component {
         {
           ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey) && (
             <div>
-              Meets minimum requirements?
+              Meets course requirements?
               {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
             </div>
           )
