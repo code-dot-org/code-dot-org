@@ -90,15 +90,18 @@ module Pd
         replace_which_course: 'If yes, please describe the course it will be replacing and why:'
       },
       section_3_teaching_background:
-        BASE_PAGE_LABELS[:section_2_your_school].slice(
-          :does_school_require_cs_license,
-          :what_license_required,
-          :have_cs_license,
-          :subjects_licensed_to_teach,
-          :taught_in_past,
-          :cs_offered_at_school,
-          :previous_yearlong_cdo_pd
-        ).merge({subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}),
+        {subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}.merge(
+          BASE_PAGE_LABELS[:section_2_your_school].slice(
+            :does_school_require_cs_license,
+            :what_license_required,
+            :have_cs_license,
+            :subjects_licensed_to_teach,
+            :taught_in_past,
+            :cs_offered_at_school,
+            :cs_opportunities_at_school,
+            :previous_yearlong_cdo_pd
+          )
+        ),
       section_4_professional_learning_program_requirements:
         {
           committed: BASE_PAGE_LABELS[:section_4_summer_workshop][:committed],

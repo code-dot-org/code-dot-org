@@ -197,7 +197,7 @@ en:
     remember: 'Remember me'
     submit: 'Sign in'
   signin:
-    try_heading: 'Want to try coding without signing up?'
+    try_heading: 'Want to try coding without signing in?'
     try_hoc: 'Try one Hour of Code first'
     try_20hours: 'Try our 20 hour Intro to Computer Science'
   signinsection:
@@ -294,7 +294,7 @@ en:
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
       free_play:
         playlab: 'Make a Play Lab app'
@@ -397,6 +397,7 @@ en:
       example: 'Example Solution'
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
+      last_updated: 'Last updated:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
