@@ -28,32 +28,6 @@ style_min: true
   =view :minecraft_2017
 
 .clear
-%h2.mc-header2.responsive-padding
-  =I18n.t(:minecraft_no_internet)
-  %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
-
-.color-block.mc-store
-  %h2.white-text= I18n.t(:minecraft_store_camps)
-  = I18n.t(:minecraft_signup_store_camps).gsub('%{signup_store_camp}', 'https://www.microsoft.com/youthsparkprograms')
-
-.color-block.mc-host-event
-  %h2.white-text= I18n.t(:minecraft_host_event)
-  = I18n.t(:minecraft_join_online_training).gsub('%{minecraft_webinar_url}', 'https://aka.ms/mcheroworkshop')
-  %br
-  %br
-  %span= I18n.t(:minecraft_facilitating_event).gsub('%{minecraft_facilitator_download}', '/minecraft/facilitator')
-
-.clear
-
-.color-block.mc-continue-learning
-  %h2.white-text= I18n.t(:minecraft_continue_learning)
-  = I18n.t(:minecraft_continue_learning_description).gsub('%{minecraft_continue_learning_url}', 'https://www.microsoft.com/en-us/store/locations/events-for-educators')
-
-.color-block.mc-future
-  %h2.white-text= I18n.t(:minecraft_future)
-  = I18n.t(:minecraft_future_description).gsub('%{minecraft_future_url}', 'https://www.microsoft.com/digitalskills')
-
-.clear
 
 .mc-videos{style: "clear: both;"}
   %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
