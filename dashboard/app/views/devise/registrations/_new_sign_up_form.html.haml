@@ -2,7 +2,7 @@
   .field-row
     .field.field-sm
       = f.label :email
-      %span.input-sm= f.text_field :email, maxlength: 255
+      %span.input-sm= f.email_field :email, maxlength: 255
     %span.error.padded= @user.errors[:email]&.first
 
   .field-row
@@ -17,4 +17,4 @@
       %span.input-sm= f.password_field :password_confirmation, maxlength: 255
     %span.error.padded= @user.errors[:password_confirmation]&.first
 
-  %button#submit= t('signup_form.next')
+  %button#submit= t('signup_form.submit')
