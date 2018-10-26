@@ -50,7 +50,7 @@ ________________
 
 See these resources to plan and run CS Fundamentals workshops. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
-- <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#" target=_blank>CS Fundamentals Workshop Process Document</a> 
+- <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#" target=_blank>CS Fundamentals Workshop Process Document</a>
 - <a href="https://docs.google.com/document/d/1E3-0OajPte60A4IFovfmO0W7zRufDwJ7n-SHZCeSK_8/edit" target=_blank>Mimeo Marketplace Guidelines</a> for ordering materials & swag
 
 [**Back to the top**](#top)
@@ -65,7 +65,7 @@ ________________
   <summary>**Teacher Packets and Agendas**</summary>
   <p>
   <br/>
-Please look at the agendas for each academic year workshop - shared with facilitators at the following links.  Pay particular attention to the "Supplies" portion of the agenda that the facilitator will need from regional partners to run a successful workshop. 
+Please look at the agendas for each academic year workshop - shared with facilitators at the following links.  Pay particular attention to the "Supplies" portion of the agenda that the facilitator will need from regional partners to run a successful workshop.
 
 - **[CS Discoveries](https://curriculum.code.org/plcsd/)**: See Workshop Agendas section - **[CS Principles](https://curriculum.code.org/plcsp/)**: See Workshop Agendas section
 </p>
@@ -106,9 +106,8 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
   <summary>**Other**</summary>
   <p>
 
-- **[Local Summer Workshop Surveys Guide](https://docs.google.com/document/d/1YFHuan6wZWwqiN9YMymtzOKrAHMhiM7bOgRS8QPPF6w/edit)** 
-- **[Academic Year Workshop Surveys Guide]()**
-- **Automated Emails**: Teachers attending your workshop will receive automated emails 10 days and 3 days prior to attending the workshop. You can see a copy of these emails in your workshop process documents.
+- **[2018-19 Workshop Surveys Guide](https://docs.google.com/document/d/1YFHuan6wZWwqiN9YMymtzOKrAHMhiM7bOgRS8QPPF6w/edit):** Includes guidance for summer and academic year workshop surveys
+- **Automated Emails:** Teachers attending your workshop will receive automated emails 10 days and 3 days prior to attending the workshop. You can see a copy of these emails in your workshop process documents.
 </p>
 </details>
 
@@ -116,14 +115,16 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 
 ### Local Summer Workshop Specific
 
+Updated guidance for hosting 2019 Local Summer Workshops will be shared in the next few months!
 
-2018 Local Summer Workshop Process Manual is coming soon! Everything you need to know to plan and run a local summer workshop!
+- **[2018 Local Summer Workshop  Manual](https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit)**
+
 
 <a id="academic"></a>
 
 ### Academic Year Workshop Specific
 
-- **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)** 
+- **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)**
 
 <a id="printing"></a>
 
@@ -142,8 +143,8 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 
 <b>Unit 5 Lesson 2</b>
 
-- Print one copy per pair of participants - <a href="https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/edit" target=_blank> Representing Information - Activity Guide </a> 
-- Print one copy per pair of participants - <a href="https://docs.google.com/document/d/1Ljb64Eb31y5HkZayQvI0u0uLSuTkVtkXnh1jBiGCU18/edit" target=_blank> Animal Shapes - Manipulative </a> 
+- Print one copy per pair of participants - <a href="https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/edit" target=_blank> Representing Information - Activity Guide </a>
+- Print one copy per pair of participants - <a href="https://docs.google.com/document/d/1Ljb64Eb31y5HkZayQvI0u0uLSuTkVtkXnh1jBiGCU18/edit" target=_blank> Animal Shapes - Manipulative </a>
 - Make sure to cut up animal shapes before workshop
 
 <b>Unit 5 Lesson 6</b>
@@ -171,7 +172,7 @@ ________________
 <a id="dashboard"></a>
 
 ## **Workshop Dashboard**
-Program Managers should use the workshop dashboard to manage the workshops for all programs they implement. 
+Program Managers should use the workshop dashboard to manage the workshops for all programs they implement.
 
 <a href="https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit" target=_blank>Workshop Dashboard Process Document</a> - This guide covers how to sign-in, navigate the teacher home page, navigate the workshop dashboard, create a new workshop, share your enrollment link & manage sign-ups, start your workshop, take attendance and end your workshop.
 
@@ -183,4 +184,3 @@ Program Managers should use the workshop dashboard to manage the workshops for a
 <br/><br/>
 
 [**Back to the top**](#top)
-
