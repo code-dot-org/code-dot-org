@@ -33,7 +33,8 @@ module ViewOptionsHelper
     :has_contained_levels,
     :next_level_url,
     :responsive_content,
-    :answerdash
+    :answerdash,
+    :signed_replay_log_url,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

@@ -1,4 +1,4 @@
-/* global dashboard */
+/* global dashboard, appOptions */
 
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
@@ -191,8 +191,18 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
+      if (this.props.appType === "dance" && experiments.isEnabled('p5Replay')) {
+        this.createReplayVideo();
+      }
     }
   }
+
+  createReplayVideo = () => {
+    fetch(appOptions.signedReplayLogUrl, {
+      method: "PUT",
+      body: JSON.stringify(this.props.replayLog)
+    });
+  };
 
   sharingDisabled = () =>
     this.props.userSharingDisabled &&
@@ -229,16 +239,6 @@ class ShareAllowedDialog extends React.Component {
 
   unpublish = () => {
     this.props.onUnpublish(this.props.channelId);
-  };
-
-  createReplayVideo = () => {
-    fetch("https://dance-api.code.org/render", {
-      method: "POST",
-      body: JSON.stringify({
-        log: this.props.replayLog,
-        id: this.props.channelId
-      })
-    });
   };
 
   render() {
@@ -404,11 +404,6 @@ class ShareAllowedDialog extends React.Component {
                     </a>}
                   </span>}
                 </div>
-                {experiments.isEnabled('p5Replay') &&
-                  <button onClick={this.createReplayVideo}>
-                    Create Replay Video
-                  </button>
-                }
                 {this.state.showSendToPhone &&
                 <SendToPhone
                   channelId={this.props.channelId}
