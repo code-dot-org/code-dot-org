@@ -26,7 +26,7 @@ const SongSelector = Radium(class extends React.Component {
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isProjectLevel: PropTypes.bool.isRequired,
-    useRestrictedSongs: PropTypes.bool,
+    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   state = {
@@ -40,13 +40,9 @@ const SongSelector = Radium(class extends React.Component {
   };
 
   loadSong(song) {
-    const songPathPrefix = this.props.useRestrictedSongs ?
-      '/restricted/' :
-      'https://curriculum.code.org/media/uploads/';
-
     //Load song
     let options = {id: song};
-    options['mp3'] = `${songPathPrefix}${this.state.songsData[options.id].url}.mp3`;
+    options['mp3'] = this.state.songsData[options.id].url;
     Sounds.getSingleton().register(options);
 
     this.props.retrieveMetadata(song);
@@ -58,15 +54,13 @@ const SongSelector = Radium(class extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/sound-library/hoc_song_meta/songManifest.json`)
-      .then(response => response.json())
-      .then(data => this.parseSongOptions(data));
+    this.parseSongOptions(this.props.songManifest);
   }
 
-  parseSongOptions(data) {
+  parseSongOptions(songManifest) {
     let songs = {};
-    if (data) {
-      data.songs.forEach((song) => {
+    if (songManifest) {
+      songManifest.forEach((song) => {
           songs[song.id] = {title: song.text, url: song.url};
       });
     }
@@ -97,7 +91,7 @@ class DanceVisualizationColumn extends React.Component {
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isProjectLevel: PropTypes.bool.isRequired,
-    useRestrictedSongs: PropTypes.bool,
+    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   render() {
@@ -117,7 +111,7 @@ class DanceVisualizationColumn extends React.Component {
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
             isProjectLevel={this.props.isProjectLevel}
-            useRestrictedSongs={this.props.useRestrictedSongs}
+            songManifest={this.props.songManifest}
           />
         }
         <ProtectedVisualizationDiv>
@@ -138,7 +132,7 @@ class DanceVisualizationColumn extends React.Component {
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isShareView: state.pageConstants.isShareView,
-  useRestrictedSongs: state.pageConstants.useRestrictedSongs,
+  songManifest: state.pageConstants.songManifest,
   selectedSong: state.selectedSong,
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
