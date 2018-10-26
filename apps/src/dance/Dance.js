@@ -59,7 +59,7 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-Dance.prototype.init = function (config) {
+Dance.prototype.init = async function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
   }
@@ -99,10 +99,20 @@ Dance.prototype.init = function (config) {
   const showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
   const finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
+  const manifestFilename = config.useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
+  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
+    .then(response => response.json());
+  const songManifest = (await songManifestPromise).songs;
+
+  const songPathPrefix = config.useRestrictedSongs ?
+    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
+
+  songManifest.forEach(song => {song.url = `${songPathPrefix}${song.url}.mp3`;});
+
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
-    useRestrictedSongs: !!config.useRestrictedSongs,
+    songManifest,
   });
 
   // Pre-register all audio preloads with our Sounds API, which will load
@@ -113,10 +123,17 @@ Dance.prototype.init = function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  if (this.level.isProjectLevel && config.level.selectedSong) {
-    getStore().dispatch(setSong(config.level.selectedSong));
-  } else if (this.level.defaultSong) {
-    getStore().dispatch(setSong(this.level.defaultSong));
+  // The selectedSong and defaultSong might not be present in the songManifest
+  // in development mode, so just select the first song in the list instead.
+  const songIds = songManifest.map(song => song.id);
+  const selectedSong = config.level.selectedSong && songIds.includes(config.level.selectedSong);
+  const defaultSong = config.level.defaultSong && songIds.includes(config.level.defaultSong);
+  if (this.level.isProjectLevel && selectedSong) {
+    getStore().dispatch(setSong(selectedSong));
+  } else if (defaultSong) {
+    getStore().dispatch(setSong(defaultSong));
+  } else if (songManifest[0]) {
+    getStore().dispatch(setSong(songManifest[0].id));
   }
 
   ReactDOM.render((
