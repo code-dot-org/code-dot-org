@@ -125,12 +125,11 @@ Dance.prototype.init = async function (config) {
 
   // The selectedSong and defaultSong might not be present in the songManifest
   // in development mode, so just select the first song in the list instead.
-  const songIds = songManifest.map(song => song.id);
-  const selectedSong = config.level.selectedSong && songIds.includes(config.level.selectedSong);
-  const defaultSong = config.level.defaultSong && songIds.includes(config.level.defaultSong);
-  if (this.level.isProjectLevel && selectedSong) {
+  const songs = songManifest.map(song => song.id);
+  const {selectedSong, defaultSong} = config.level;
+  if (this.level.isProjectLevel && selectedSong && songs.includes(selectedSong)) {
     getStore().dispatch(setSong(selectedSong));
-  } else if (defaultSong) {
+  } else if (defaultSong && songs.includes(defaultSong)) {
     getStore().dispatch(setSong(defaultSong));
   } else if (songManifest[0]) {
     getStore().dispatch(setSong(songManifest[0].id));
