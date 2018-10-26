@@ -184,7 +184,8 @@ module Pd
         :plan_to_teach,
         :have_cs_license,
         :committed,
-        :willing_to_travel
+        :willing_to_travel,
+        :principal_approval
       ],
       criteria_score_questions_csp: [
         :regional_partner_name,
@@ -193,7 +194,8 @@ module Pd
         :plan_to_teach,
         :have_cs_license,
         :committed,
-        :willing_to_travel
+        :willing_to_travel,
+        :principal_approval
       ]
     }
   end
