@@ -157,13 +157,13 @@ async function getSongManifest(useRestrictedSongs) {
   const result = await Promise.all(promises);
   const songManifest = result[0].songs;
 
-
   const songPathPrefix = useRestrictedSongs ?
     '/restricted/' : 'https://curriculum.code.org/media/uploads/';
 
-  songManifest.forEach(song => {song.url = `${songPathPrefix}${song.url}.mp3`;});
-
-  return songManifest;
+  return songManifest.map(song => ({
+    ...song,
+    url: `${songPathPrefix}${song.url}.mp3`,
+  }));
 }
 
 Dance.prototype.loadAudio_ = function () {
