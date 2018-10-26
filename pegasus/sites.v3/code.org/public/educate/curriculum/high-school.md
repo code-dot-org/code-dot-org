@@ -135,7 +135,7 @@ Recommended courses from 3rd parties
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [CodeCombat](https://codecombat.com/) | 11 game-based courses teaching Python and JavaScript. Includes 5 game and web development courses. College Board endorsed provider of curriculum and PD for AP CS Principles. First course and teacher resources are free. School site licenses start at $2500 | Free onboarding call, $500/online PD |
 | [CodeHS](https://codehs.com)             | 4-year high school CS pathway. Intro CS JavaScript, Intro CS Python, AP CS Principles, AP CS in Java, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500 | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CS Principles, 30-40 hour course, $1500/teacher |
-| [Edhesive](https://edhesive.com/)        | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
+| [Edhesive](https://edhesive.com/)        | Year-long AP Computer Science course | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Exploring Computer Science](http://www.exploringcs.org/) | Year-long introductory high school course aimed at broadening participation in CS. 6 units, 6 weeks each | Week-long summer institute and quarterly one-day academic year workshops |
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student       | 3-day, in-person training and ongoing online PD, fee included in student price |
 | [Mobile CSP](http://www.mobile-csp.org/) | Year-long Computer Science Principles course, materials available online, FREE | Online, regional in-person offered in CT, MA, NH and CA (others may be available), FREE, stipends available |
@@ -145,6 +145,7 @@ Recommended courses from 3rd parties
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE                      | In-person educator meet-ups and online MOOC, FREE |
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE       | Program implemented by TEALS volunteers, $5000 |
 | [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, and robotics. Annual subscription/$1000. Software $300/computer lab. Free PDF files. | $150/day for training held at UC Davis campus. Costs vary for on-site training |
+| [Vidcode](https://www.vidcode.com/) | Over 300 hours of creative coding coursework. Can be implemented as a stand-alone course or as cross-disciplinary units in other subject areas. Each course is 40 hours broken up into modular 10 hour units. Site licenses start at $2,500. | Free onboarding webinar. Animated online PD course available. In person PD for $3500/day. |
 
 <br>
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>

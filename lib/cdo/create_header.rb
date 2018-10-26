@@ -42,9 +42,22 @@ class CreateHeader
       },
     ]
 
+    dance_party = [
+      {
+        id: "create_dropdown_dance",
+        title: "dance",
+        url: CDO.studio_url('projects/dance/new'),
+        image: "logo_dance.png"
+      }
+    ]
+
     entries = options[:limit_project_types] == "true" ?
       everyone_entries + minecraft :
       everyone_entries + applab_gamelab
+
+    if DCDO.get("dance_projects", false)
+      entries += dance_party
+    end
 
     entries
   end
