@@ -11,6 +11,7 @@ Translations for the tutorial progression are done on Crowdin and translations f
 
 1. [Click here](https://amara.org/en/auth/login/?next=/) to create an Amara account.
 1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg) on Crowdin.
+1. [Click here to join our Curriculum Builder project](https://crowdin.com/project/curriculumbuilder) on Crowdin (for the unplugged activity).
 1. From the [main project page](https://crowdin.com/project/codeorg), select your language.
 1. Note your language code in the URL, you'll need this for later. If it's a 4 letter code like "zh-TW" note that the code you'll use later will be in the format "zhTW".
 
@@ -27,6 +28,11 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 
 <!-- 1. Strings about Dance Party on Code.org [here](https://crowdin.com/translate/codeorg/56/enus-es#q=minecraft) and [here](https://crowdin.com/translate/codeorg/56/enus-es#q=mc)
 1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2017) -->
+
+## Translating the unplugged activity
+View the [unplugged activity here](https://curriculum.code.org/hoc/unplugged/4/). The following links all lead directly to the Spanish unplugged activity in our Curriculum Builder project on Crowdin. Replace the "es" in the URL with the language code you got earlier.
+
+1. Unplugged lesson strings are [here](https://crowdin.com/translate/curriculumbuilder/all/en-es#q=unplugged%2Fthe-big-event), [here](https://crowdin.com/translate/curriculumbuilder/all/en-es#q=coursea%2Fevents+name), and [here](https://crowdin.com/translate/curriculumbuilder/623/en-es#129005)
 
 ## Translating the video captions
 
