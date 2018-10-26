@@ -11,6 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers, setSong} from './redux';
+import {SignInState} from '../code-studio/progressRedux';
 
 const ButtonState = {
   UP: 0,
@@ -507,12 +508,15 @@ Dance.prototype.onP5Draw = function () {
  * this.studioApp_.displayFeedback when appropriate
  */
 Dance.prototype.displayFeedback_ = function () {
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
     level: this.level,
     showingSharing: this.shouldShowSharing(),
+    saveToProjectGallery: true,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
