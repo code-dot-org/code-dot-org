@@ -19,12 +19,13 @@ Translations for the tutorial progression are done on Crowdin and translations f
 ## Translating the tutorial progression
 The following links all lead directly to the Spanish tutorial. Replace the "es" in the URL with the language code you got earlier. Your translations will be updated on the site at the end of each week. You can watch this [demo video](/files/crowdin.swf) for how to use Crowdin.
 
-1. Minecraft [title](https://crowdin.com/translate/codeorg/63/enus-es#q=aquatic+title) and [description]()
+1. Minecraft [title](https://crowdin.com/translate/codeorg/63/enus-es#q=aquatic+title)
 1. Tutorial instructions [here](https://crowdin.com/translate/codeorg/551/enus-es#q=%22HOC+2018%22) and [here](https://crowdin.com/translate/codeorg/318/enus-es#q=%22HOC+2018%22)
 1. [Tutorial blocks](https://crowdin.com/translate/codeorg/639/enus-es#q=craft_)
 1. [Tutorial hints](https://crowdin.com/translate/codeorg/552/enus-es#q=%22HOC+2018%22)
-1. Strings about Minecraft on Code.org [here]() and [here]()
 1. [Video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2018)
+
+<!-- 1. Strings about Minecraft on Code.org [here]() and [here]() -->
 
 ## Translating the video captions
 
