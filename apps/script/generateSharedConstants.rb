@@ -102,7 +102,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS SCOREABLE_QUESTIONS),
       source_module: Pd::Teacher1920ApplicationConstants,
       transform_keys: true
     ),

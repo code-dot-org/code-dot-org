@@ -134,6 +134,7 @@ function showHomepage() {
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
+            includeDanceParty={homepageData.includeDanceParty}
           />
         )}
         {!isTeacher && (
@@ -143,6 +144,7 @@ function showHomepage() {
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
+            includeDanceParty={homepageData.includeDanceParty}
           />
         )}
       </div>

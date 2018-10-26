@@ -286,9 +286,7 @@ class Blockly < Level
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
       if should_localize?
-        # Don't ever show non-English markdown instructions for Course 1 - 4 or
-        # the 20-hour course. We're prioritizing translation of Course A - F.
-        if script && (script.csf_international? || script.twenty_hour?)
+        if script && !script.localize_long_instructions?
           level_options.delete('markdownInstructions')
         else
           set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
