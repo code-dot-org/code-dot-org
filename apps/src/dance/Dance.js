@@ -111,7 +111,7 @@ Dance.prototype.init = function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  if (this.level.isProjectLevel && config.level.selectedSong) {
+  if ((this.level.isProjectLevel || this.level.freePlay) && config.level.selectedSong) {
     getStore().dispatch(setSong(config.level.selectedSong));
   } else if (this.level.defaultSong) {
     getStore().dispatch(setSong(this.level.defaultSong));
