@@ -172,7 +172,7 @@ class HttpCache
           # that don't match this path will be cached.
           {
             # TODO(suresh): lookup the last puzzle from the database
-            path: "/s/dance/stage/12",
+            path: "/s/dance/stage/1/puzzle/13",
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
