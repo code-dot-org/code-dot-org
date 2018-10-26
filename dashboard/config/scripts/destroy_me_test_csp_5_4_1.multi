@@ -1,0 +1,56 @@
+name 'destroy_me_test_CSP_5_4_1'
+
+type 'multi2'
+right '<pre>
+var temp &lt;-- list[y]
+list[x] &lt;-- temp
+list[y] &lt;-- list[x]
+</pre>'
+wrong '<pre>
+list[x] &lt;-- temp
+var temp &lt;-- list[y]    
+list[y] &lt;-- list[x]
+</pre>'
+wrong '<pre>
+list[y] &lt;-- list[x]
+var temp &lt;-- list[y]
+list[x] &lt;-- temp
+</pre>'
+right '<pre>
+var temp &lt;-- list[y]
+list[y] &lt;-- list[x]
+list[x] &lt;-- temp
+</pre>'
+markdown <<MARKDOWN
+You are writing a function called `swap (list, x, y)` which will exchange the position of the two values at indexes x and y in the list.
+
+Example: before and after a call to `swap (list, 2, 3)` on the list shown below
+
+<img src="https://preview.ibb.co/byCrDa/Screen_Shot_2017_09_11_at_1_59_14_PM.png" alt="Screen_Shot_2017_09_11_at_1_59_14_PM" border="0" style="display: block; margin: auto; width: 600px">
+
+The function header is defined below.  Choose three lines of code that will perform the swap correctly.
+
+    procedure swap (list, x, y) {
+        < MISSING CODE >
+    }
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The data at index `x` is being overwritten by the data in `temp` *before* storing it at index y.  Resulting array: `list[40, 85, 85]`
+<br>
+<hr>
+<br>
+The value of temp is being assigned *before* the variable has been initialized leading to unpredictable results. Resulting array: unpredictable.
+<br>
+<hr>
+<br>
+The data at index `y` is being overwritten by the data in `temp` *before* storing it at index y.  Resulting array: `list[40, 90, 90]`
+<br>
+<hr>
+<br>
+It's important to not that swapping x to y and then y to x will not work.  It is necessary to temporarily store the data of one of the variables to successfully swap the numbers.  To Do the, create a temp variable that holds the data at index `y`. Swap the data at `y` with `x` (move data from index `x` to index `y`), and then set the data at `x` to `temp` which holds the original value of the index `y`.  Resulting array: `list[40, 85, 90]`
+<br>
+<hr>
+<br>
+
+MARKDOWN

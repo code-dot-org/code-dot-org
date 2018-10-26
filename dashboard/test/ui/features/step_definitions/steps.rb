@@ -1606,3 +1606,8 @@ Then /^I open the Manage Assets dialog$/ do
     And I click selector ".pop-up-menu-item"
   STEPS
 end
+
+Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
+  body_text = @browser.execute_script('return document.body.textContent;')
+  expect(body_text.include?(text)).to eq(negation.nil?)
+end
