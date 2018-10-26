@@ -19,6 +19,7 @@ class HttpCache
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
+    aquatic
     starwars
     starwarsblocks
     mc
