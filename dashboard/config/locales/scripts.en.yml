@@ -9693,3 +9693,13 @@ en:
               name: Dance Party
               description_student: ''
               description_teacher: ''
+        cspplayground:
+          stages:
+            Hannah's Test Stage:
+              name: Hannah's Test Stage
+            Hannah Test Stage:
+              name: Hannah Test Stage
+          title: CSP Playground
+          description_audience: ''
+          description_short: ''
+          description: ''

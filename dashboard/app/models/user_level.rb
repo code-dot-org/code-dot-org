@@ -48,6 +48,10 @@ class UserLevel < ActiveRecord::Base
     end
   end
 
+  def attempted?
+    !best_result.nil?
+  end
+
   def perfect?
     ActivityConstants.perfect?(best_result)
   end

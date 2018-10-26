@@ -570,6 +570,8 @@ en:
       CourseF_PlayLab_vars6_callout: {}
       CourseF_PlayLab_vars7_callout: {}
       CourseF_PlayLab_vars8_callout: {}
+      Dance short test 2_callout: {}
+      Dance short test_callout: {}
       Dance_Party_01_callout: {}
       Dance_Party_02_callout: {}
       Dance_Party_04_callout: {}
@@ -1033,6 +1035,8 @@ en:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseC19_playLab_EOC3_callout:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events8_2018_callout:

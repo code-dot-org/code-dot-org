@@ -396,6 +396,9 @@ var projects = module.exports = {
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
+    },
+    setCurrentSourceVersionId(id) {
+      currentSourceVersionId = id;
     }
   },
 
@@ -624,6 +627,8 @@ var projects = module.exports = {
           return msg.defaultProjectNameBasketball();
         }
         return msg.defaultProjectNameBounce();
+      case 'dance':
+        return msg.defaultProjectNameDance();
     }
     return msg.defaultProjectName();
   },
@@ -637,12 +642,16 @@ var projects = module.exports = {
     }
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+      case 'calc':
+      case 'dance':
+      case 'eval':
+      case 'flappy':
+      case 'scratch':
+      case 'weblab':
+        return appOptions.app; // Pass through type exactly
       case 'gamelab':
         if (appOptions.droplet) {
           return 'gamelab';
-        } else if (appOptions.level.isDanceLab) {
-          return 'dance';
         }
         return 'spritelab';
       case 'turtle':
@@ -652,8 +661,6 @@ var projects = module.exports = {
           return 'artist_k1';
         }
         return 'artist';
-      case 'calc':
-        return 'calc';
       case 'craft':
         if (appOptions.level.isAgentLevel) {
           return 'minecraft_hero';
@@ -663,8 +670,6 @@ var projects = module.exports = {
           return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
-      case 'eval':
-        return 'eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
@@ -684,12 +689,6 @@ var projects = module.exports = {
           return 'playlab_k1';
         }
         return 'playlab';
-      case 'weblab':
-        return 'weblab';
-      case 'flappy':
-        return 'flappy';
-      case 'scratch':
-        return 'scratch';
       case 'bounce':
         if (appOptions.skinId === 'sports') {
           return 'sports';
@@ -787,7 +786,7 @@ var projects = module.exports = {
      */
     const completeAsyncSave = () => new Promise(resolve =>
       this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion)));
+        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion, preparingRemix)));
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
@@ -802,9 +801,11 @@ var projects = module.exports = {
    * @param {object} sourceAndHtml Project source code to save.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @param {boolean} [clientSideRemix] If true this is part of a client-side remix, the initial
+   *   PUT to a new channel ID.
    * @private
    */
-  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
+  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion, clientSideRemix) {
     if (!isEditable()) {
       return;
     }
@@ -839,7 +840,7 @@ var projects = module.exports = {
 
     if (this.useSourcesApi()) {
       let params = '';
-      if (currentSourceVersionId) {
+      if (currentSourceVersionId && !clientSideRemix) {
         params = `?currentVersion=${currentSourceVersionId}` +
           `&replace=${!!replaceCurrentSourceVersion}` +
           `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
@@ -967,7 +968,7 @@ var projects = module.exports = {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v3',
+        study_group: 'v4',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
