@@ -1,4 +1,4 @@
-/* global dashboard, appOptions */
+/* global appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
@@ -95,7 +95,8 @@ var currentSources = {
   source: null,
   html: null,
   makerAPIsEnabled: false,
-  animations: null
+  animations: null,
+  selectedSong: null,
 };
 
 /**
@@ -117,7 +118,8 @@ function unpackSources(data) {
     source: data.source,
     html: data.html,
     animations: data.animations,
-    makerAPIsEnabled: data.makerAPIsEnabled
+    makerAPIsEnabled: data.makerAPIsEnabled,
+    selectedSong: data.selectedSong,
   };
 }
 
@@ -394,6 +396,9 @@ var projects = module.exports = {
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
+    },
+    setCurrentSourceVersionId(id) {
+      currentSourceVersionId = id;
     }
   },
 
@@ -478,6 +483,7 @@ var projects = module.exports = {
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
+   * @param {function(): boolean} sourceHandler.setSelectedSong
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -494,6 +500,10 @@ var projects = module.exports = {
       setMakerAPIsStatusFromQueryParams();
       if (currentSources.makerAPIsEnabled) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
+      }
+
+      if (currentSources.selectedSong) {
+        sourceHandler.setSelectedSong(currentSources.selectedSong);
       }
 
       if (currentSources.animations) {
@@ -559,7 +569,7 @@ var projects = module.exports = {
 
     // Updates the contents of the admin box for admins. We have no knowledge
     // here whether we're an admin, and depend on dashboard getting this right.
-    showProjectAdmin();
+    showProjectAdmin(this);
   },
   projectChanged() {
     hasProjectChanged = true;
@@ -617,6 +627,8 @@ var projects = module.exports = {
           return msg.defaultProjectNameBasketball();
         }
         return msg.defaultProjectNameBounce();
+      case 'dance':
+        return msg.defaultProjectNameDance();
     }
     return msg.defaultProjectName();
   },
@@ -630,12 +642,16 @@ var projects = module.exports = {
     }
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+      case 'calc':
+      case 'dance':
+      case 'eval':
+      case 'flappy':
+      case 'scratch':
+      case 'weblab':
+        return appOptions.app; // Pass through type exactly
       case 'gamelab':
         if (appOptions.droplet) {
           return 'gamelab';
-        } else if (appOptions.level.isDanceLab) {
-          return 'dance';
         }
         return 'spritelab';
       case 'turtle':
@@ -645,8 +661,6 @@ var projects = module.exports = {
           return 'artist_k1';
         }
         return 'artist';
-      case 'calc':
-        return 'calc';
       case 'craft':
         if (appOptions.level.isAgentLevel) {
           return 'minecraft_hero';
@@ -656,8 +670,6 @@ var projects = module.exports = {
           return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
-      case 'eval':
-        return 'eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
@@ -677,12 +689,6 @@ var projects = module.exports = {
           return 'playlab_k1';
         }
         return 'playlab';
-      case 'weblab':
-        return 'weblab';
-      case 'flappy':
-        return 'flappy';
-      case 'scratch':
-        return 'scratch';
       case 'bounce':
         if (appOptions.skinId === 'sports') {
           return 'sports';
@@ -741,7 +747,7 @@ var projects = module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled} have changed.
+   * makerAPIsEnabled, selectedSong} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -780,7 +786,7 @@ var projects = module.exports = {
      */
     const completeAsyncSave = () => new Promise(resolve =>
       this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion)));
+        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion, preparingRemix)));
 
     if (preparingRemix) {
       return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
@@ -795,9 +801,11 @@ var projects = module.exports = {
    * @param {object} sourceAndHtml Project source code to save.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @param {boolean} [clientSideRemix] If true this is part of a client-side remix, the initial
+   *   PUT to a new channel ID.
    * @private
    */
-  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
+  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion, clientSideRemix) {
     if (!isEditable()) {
       return;
     }
@@ -832,7 +840,7 @@ var projects = module.exports = {
 
     if (this.useSourcesApi()) {
       let params = '';
-      if (currentSourceVersionId) {
+      if (currentSourceVersionId && !clientSideRemix) {
         params = `?currentVersion=${currentSourceVersionId}` +
           `&replace=${!!replaceCurrentSourceVersion}` +
           `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
@@ -866,6 +874,11 @@ var projects = module.exports = {
     } else {
       this.updateChannels_(callback);
     }
+  },
+
+  saveSelectedSong(id) {
+    this.sourceHandler.setSelectedSong(id);
+    return this.save();
   },
 
   /**
@@ -924,7 +937,8 @@ var projects = module.exports = {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        callback({source, html, animations, makerAPIsEnabled});
+        const selectedSong = this.sourceHandler.getSelectedSong();
+        callback({source, html, animations, makerAPIsEnabled, selectedSong});
       }));
   },
 
@@ -954,7 +968,7 @@ var projects = module.exports = {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v3',
+        study_group: 'v4',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
@@ -1206,7 +1220,7 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              fetchAbuseScoreAndPrivacyViolations(function () {
+              fetchAbuseScoreAndPrivacyViolations(this, function () {
                 deferred.resolve();
               });
             }, queryParams('version'), this.useSourcesApi());
@@ -1224,7 +1238,7 @@ var projects = module.exports = {
         } else {
           fetchSource(data, () => {
             projects.showHeaderForProjectBacked();
-            fetchAbuseScoreAndPrivacyViolations(function () {
+            fetchAbuseScoreAndPrivacyViolations(this, function () {
               deferred.resolve();
             });
           }, queryParams('version'), this.useSourcesApi());
@@ -1379,14 +1393,14 @@ function fetchPrivacyProfanityViolations(resolve) {
   });
 }
 
-function fetchAbuseScoreAndPrivacyViolations(callback) {
+function fetchAbuseScoreAndPrivacyViolations(project, callback) {
   const deferredCallsToMake = [new Promise(fetchAbuseScore)];
 
-  if (dashboard.project.getStandaloneApp() === 'playlab') {
+  if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
-    (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.isWebLab())) {
+  } else if ((project.getStandaloneApp() === 'applab') ||
+    (project.getStandaloneApp() === 'gamelab') ||
+    (project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {

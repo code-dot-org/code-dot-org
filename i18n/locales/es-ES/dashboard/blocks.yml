@@ -140,12 +140,28 @@ es:
             '"PINEAPPLE"': todas las piñas
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
+          FORMAT:
+            '"random"': aleatorio
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": izquierda
             "{x: 300, y: 200}": derecha
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': aleatorio
       Dancelab_randomColor:
         text: color aleatorio
       Dancelab_setBackgroundEffect:
@@ -166,6 +182,23 @@ es:
             '"none"': Nada
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: todo
+            '"ALIEN"': todos los alienígenas
+            '"BEAR"': todos los osos
+            '"CAT"': todos los gatos
+            '"DOG"': todos los perros
+            '"DUCK"': todos los patos
+            '"FROG"': todas las ranas
+            '"MOOSE"': todos los alces
+            '"PINEAPPLE"': todas las piñas
+            '"ROBOT"': todos los robots
+            '"SHARK"': todos los tiburones
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
@@ -382,6 +415,10 @@ es:
           TYPE:
             "'sand'": arena
             "'planksOak'": tablones de roble
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": arena
       craft_moveForward:
         text: avanzar
       craft_placeTorch:

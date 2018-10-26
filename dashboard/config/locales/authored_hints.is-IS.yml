@@ -5045,6 +5045,25 @@ is:
         courseB_starWars_prog9_c: Ekki hræðast að gera mistök! Prófaðu að bæta við
           kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: Kubburinn `stilla leikmann 1 á ??? mynd` er notaður
+          til að bæta leikmanni á sviðið.
+        courseE_playLab_scaffold1_b: Settu `hafa leikmann` kubbinn undir `þegar keyrt`
+          kubbinn til að leikmaðurinn birtist í byrjun forritsins.
+        courseE_playLab_scaffold1_c: Notaðu `hafa bakgrunn` kubb til að búa til bakgrunn
+          sviðsins.
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_b: Þú ættir að hafa fjóra `þegar ör` atburðarkubba
+          með hreyfingu í tiltekna stefnu undir hverjum þeirra.
+        courseE_playLab_scaffold1_c: Þegar þetta er tilbúið ættir þú að geta hreyft
+          hetjuna þína með örvarlyklunum!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: Notaðu `skora stig` til að bæta við stigi og
+          `fjarlægja stig` til að draga stig frá.
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: Til að klára þetta borð verður þú að sigra eða
+          tapa. Notaðu kubbana `ljúka leik með sigri` eða `ljúka leik með tapi` til
+          að klára þetta.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Tengdu þennan kubb við `þegar keyrt` kubbinn:

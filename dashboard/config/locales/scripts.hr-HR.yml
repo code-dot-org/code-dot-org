@@ -856,6 +856,8 @@ hr:
           stages:
             Binary Bracelets:
               name: Binarne narukvice
+            Play Lab:
+              name: Laboratorij igara
         csd2-2017:
           stages:
             Lists:

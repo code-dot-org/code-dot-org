@@ -11,21 +11,27 @@ da:
   campaign_date_full: "7.-13. december"
   campaign_date_year: "2016"
   campaign_date_full_year: "5.-11. december 2016"
-  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
+  cookie_banner_message: 'Ved at fortsætte på websitet, eller ved at klikke "Jeg accepterer", accepterer du at vi gemmer cookies på din computer eller enhed.'
+  cookie_banner_more_information: "Se Code.orgs privatlivspolitik."
+  cookie_banner_accept: 'Jeg accepterer'
   front_header_banner: 'Bliv en del af den største læringsevent nogensinde, den 7.-13. december 2015'
   front_intro_default: 'Hour of Code er en global bevægelse, som når ud til millioner af elever i 180+ lande. Alle, hvor som helst, kan organisere en Hour of Code begivenhed. Én-times introduktioner findes på mere end 40 sprog. Ingen erfaring er nødvendig. <strong>Fra 4 til 104 år.</strong>'
   front_watch_video: 'Se den nye video'
   front_watch_regular_video: 'Se videoen'
   front_volunteers: 'Tekniske frivillige ønskes'
   front_start_learning: 'Start nu'
-  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
-  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-  gdpr_dialog_link_intro: 'For details see our'
-  gdpr_dialog_privacy_policy: 'privacy policy'
-  gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_heading: 'Accepterer du at bruge et website, som er hostet i USA?'
+  gdpr_dialog_message: 'Data fra din brug af dette websted kan sendes til og gemmes eller behandles i USA.'
+  gdpr_dialog_link_intro: 'For nærmere oplysninger se vores'
+  gdpr_dialog_privacy_policy: 'Privatlivspolitik'
+  gdpr_dialog_logout: 'Log af'
+  gdpr_dialog_yes: 'Ja'
   header_menu_resources: 'Ressourcer'
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'Vejledning'
@@ -256,7 +262,7 @@ da:
   signup_match_volunteer: 'Hjælp mig med at finde en lokal programmør til at inspirere mine elever'
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes: 'Ja'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Hvis du er vært for flere begivenheder, bedes du sende et entydigt navn eller en e-mail for hver enkelt. Vi tæller kun én begivenhed pr. kombination af navn og e-mail."
@@ -279,6 +285,11 @@ da:
   signup_continue_label: 'Fortsæt'
   signup_thank_you_header: "Tak fordi du har meldt dig som arrangør af Hour of Code."
   signup_thank_you_message: 'Vi har sendt en bekræftelsesmail med hjælp til hvordan du kommer i gang.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code kort"
   map_header: '# Hour of Code arrangementer verden over'
   map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'

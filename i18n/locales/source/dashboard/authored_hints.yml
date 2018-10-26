@@ -3510,6 +3510,28 @@ en:
           Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      Dance short test 2_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to make the background effect change sometime the seventh measure of the song.
+
+          *This level ends after 10 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.
+      Dance short test_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * You need to make the background effect change sometime the seventh measure of the song.
+
+          *This level ends after 10 measures.*
+        challenges: |-
+          **Optional Challenge**
+
+          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.
       Dance_Party_01_authored_hint:
         validation: |-
           **How do I pass this level?**
@@ -3685,9 +3707,10 @@ en:
         Function_intro_Ryan_a: You can call a function many times inside of your program!  Try calling it twice to solve this puzzle.
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: "See the **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? How can you use a conditional with them to get through the Ocean Monument?\n\n"
+      HOC 2018 Level_7a_authored_hint:
+        aquatic7: You can use the if path block to help you make the right turns.
       HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: What a beautiful coral reef! Blue coral is the **right** way to go, and make sure red coral isn't **left**!
-        voyage_aquatic_9b: How can you use **If standing on** blocks to turn left and right?
+        voyage_aquatic_9a: See the red and blue coral blocks? Use them as guideposts to turn right and left through the reef.
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **How do I pass this level?**
@@ -7519,6 +7542,19 @@ en:
           Could a `repeat` <xml><block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block></xml>loop help out here?
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used to add an actor to the stage.
+        courseE_playLab_scaffold1_b: Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.
+        courseE_playLab_scaffold1_c: Use `set ??? background` to choose a background for your scene.
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.
+        courseE_playLab_scaffold1_b: You should have four `when arrow` event blocks, with a direction to move underneath each.
+        courseE_playLab_scaffold1_c: When you are done, you should be able to move your hero with the arrow keys!
+      courseC19_playLab_EOC3_authored_hint: {}
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove point` to subtract one.
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish.
       courseC_PlayLab_embed_events9_authored_hint: {}
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-

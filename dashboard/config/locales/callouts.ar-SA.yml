@@ -65,6 +65,9 @@ ar:
       Frozen Project Toolbox (Old)_callout:
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
           الثلج!
+      Function intro Ryan_callout:
+        Function_intro_Ryan_1: هذه التعليمات القليلاً تقول للكمبيوتر بتشغيل جزء كبير
+          من التعليمات البرمجية مع الاسم نفسه في مساحة العمل.
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: تشغيل صوت عند حدوث هذا الحدث.
       Infinity_move_directions_callout:
@@ -75,6 +78,27 @@ ar:
         Infinity_move_right_runbutton: إضافة مربع برمجة تنقّل هنا
       Infinity_repeat_callout:
         Infinity_repeat_callout: وضع مربعات برمجة التنقّل هنا
+      MC_HOC_2017_01_Cole_callout:
+        MC_HOC_2017_01_Cole_2: استخدم ازرار الأسهم أو انقر هنا لتحريك للاعب.
+      MC_HOC_2017_02_Will_callout:
+        MC_HOC_2017_02_Cole_1: الان لاعبك لديه صديق! تستطيع ان تكتب اوامر للكائن لمساعدتك
+          خلال  المراحل.
+      MC_HOC_2017_03_Cole_callout:
+        MC_HOC_2017_03_Cole_1: هذا حلقة 'تكرار'!  اسحبه الى مساحة العمل واضع الاوامر
+          البرمجية التي تريد تشغيلها اكثر من مرة.
+      MC_HOC_2017_04_Cole_callout:
+        MC_HOC_2017_04_Cole_a: الكائن يمكنه ان يطوف على الماء, لكن اللاعب لا يستطيع!
+      MC_HOC_2017_04_Kiki_callout:
+        MC_HOC_2017_04_Kiki_1: اسحب هذا الى مساحة العمل واضافة بعض الاوامر لتكرارها
+          مراراً وتكراراً!
+      MC_HOC_2017_06_Cole_callout:
+        MC_HOC_2017_06_Cole_1: لا يمكنك ان ترمي هذه القطع بعيداً, لكن يمكنك تعديلها!
+      MC_HOC_2017_08_RY_callout:
+        MC_HOC_2017_08_RY_1: 'الكائن يمكنه ان يطوف على الماء, لكن اللاعب لا يستطيع!  '
+      MC_HOC_2017_08_Will_callout:
+        MC_HOC_2017_08_RY_1: 'الكائن يمكنه ان يطوف على الماء, لكن اللاعب لا يستطيع!  '
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'الكائن يمكنه ان يطوف على الماء, لكن ستيف واليكس لا يستطيعان!  '
       NEW Course 4 Artist Functions 5_callout:
         edit_function: انقر هنا لتحرير وظيفتك.
         function_editor_draw_square: هذا هو تعريف الدالة الخاصة بك. تشتغل مربعات البرمجة

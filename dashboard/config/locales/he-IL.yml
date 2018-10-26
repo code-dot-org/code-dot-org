@@ -90,6 +90,7 @@ he:
     twitter: טוויטר
     facebook: פייסבוק
     windowslive: חשבון מיקרוסופט
+    microsoft_v2_auth: חשבון מיקרוסופט
     clever: חשבון חכם
     powerschool: חשבון בית-ספר חזק
     forgot_password: שכחת את הסיסמא שלך?
@@ -127,7 +128,6 @@ he:
     age: גיל
     user_type: אתה תלמיד או מורה?
     submit: הירשם
-    next: הבא
     teacher: האם אתה מורה?
     valid_username: זמין!
     invalid_username: שם המשתמש חייב להיות לפחות 5 תווים
@@ -337,14 +337,6 @@ he:
       help_us: עזור לנו
       teach: למד
       about: אודות
-    create_button:
-      create: צור
-      applab: מעבדת היישומים
-      artist: אמן
-      gamelab: מעבדת המשחקים
-      playlab: מעבדת הצעצועים
-      minecraft: מיינקראפט
-      flappy: פלאפי
     user:
       classroom: דף הבית של המורה
       district_dashboard: לוח ניהול מחוזי
@@ -358,6 +350,13 @@ he:
       team: צוות
       driver: מחובר/ת
       navigator: נווט
+      create: צור
+      applab: מעבדת היישומים
+      artist: אמן
+      gamelab: מעבדת המשחקים
+      playlab: מעבדת הצעצועים
+      minecraft: מיינקראפט
+      flappy: פלאפי
     popup:
       progress_for_user: ההתקדמות של %{name}
       progress: ההתקדמות שלך

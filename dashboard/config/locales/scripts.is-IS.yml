@@ -2560,6 +2560,8 @@ is:
               name: Tvíundarmyndir
             RGB Color:
               name: RGB litir
+            Play Lab:
+              name: Leikjasmiðja
         csd2-2017:
           description_short: "  Lærðu að búa til þinn eigin vef í Vefsmiðjunni."
           stages:

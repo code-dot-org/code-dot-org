@@ -18,6 +18,10 @@ class BucketHelper
     self.s3 ||= AWS::S3.create_client
   end
 
+  def allowed_file_name?(_filename)
+    true
+  end
+
   def allowed_file_type?(extension)
     allowed_file_types.include? extension.downcase
   end
@@ -202,6 +206,13 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
+    begin
+      latest = s3.head_object(bucket: @bucket, key: key).version_id
+      return true if current_version == latest
+    rescue Aws::S3::Errors::NotFound
+      # No main.json yet; fall through to fallback logic
+    end
+
     # This is an Array of ObjectVersions, defined in:
     # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
     track_list_operation 'BucketHelper.check_current_version'
@@ -233,7 +244,7 @@ class BucketHelper
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v3',
+      study_group: 'v4',
       event: error_type,
 
       project_id: encrypted_channel_id,
@@ -457,7 +468,7 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v3',
+      study_group: 'v4',
       event: 'version-restored',
 
       # Make it easy to limit our search to restores in the sources bucket for a certain project.
