@@ -1,3 +1,3 @@
 function addToSpriteGroup(sprite, groupName) {
-  sprite.addToGroup(spriteGroups.groupName);
+  sprite.addToGroup(spriteGroups[groupName]);
 }

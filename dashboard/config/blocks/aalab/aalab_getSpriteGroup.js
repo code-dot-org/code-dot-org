@@ -1,3 +1,3 @@
 function getSpriteGroup(groupName) {
-  return spriteGroups.groupName;
+  return spriteGroups[groupName];
 }
