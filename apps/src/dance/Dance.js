@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -92,12 +91,11 @@ Dance.prototype.init = function (config) {
 
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete());
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(true));
     }
   };
 
-  const showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
-  const finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
@@ -123,7 +121,7 @@ Dance.prototype.init = function (config) {
       <AppView
         visualizationColumn={
           <DanceVisualizationColumn
-            showFinishButton={finishButtonFirstLine && showFinishButton}
+            showFinishButton={showFinishButton}
             retrieveMetadata={this.updateSongMetadata.bind(this)}
           />
         }
