@@ -316,13 +316,21 @@ class ProjectsController < ApplicationController
       no_header: sharing,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
-      game_display_name: data_t("game.name", @game.name)
+      game_display_name: data_t("game.name", @game.name),
     )
+
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
     elsif params[:key] == 'dance'
       @project_video = "https://cdo-p5-replay-destination.s3.amazonaws.com/videos/video-#{@view_options['channel']}.mp4"
       @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
+
+      # Provide a presigned URL (to the project owner only, not to the sharing
+      # view) that can upload the video log to S3 for processing into a video
+      unless sharing
+        signed_url = AWS::S3.presigned_upload_url("cdo-p5-replay-source", @view_options['channel'])
+        view_options(signed_replay_log_url: signed_url)
+      end
     end
 
     begin
