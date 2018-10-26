@@ -548,7 +548,9 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    app_options[:useRestrictedSongs] = CDO.cdn_enabled if @game == Game.dance
+    dev_with_s3_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role)
+    use_restricted_songs = CDO.cdn_enabled || dev_with_s3_credentials
+    app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
