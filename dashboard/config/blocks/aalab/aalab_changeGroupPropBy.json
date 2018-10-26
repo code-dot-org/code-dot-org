@@ -6,7 +6,7 @@
     "args": [
       {
         "name": "GROUPNAME",
-        "type": "String"
+        "type": "Sprite"
       },
       {
         "name": "PROPERTY",
