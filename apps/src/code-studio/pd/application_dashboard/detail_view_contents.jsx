@@ -532,7 +532,7 @@ export class DetailViewContents extends React.Component {
             Meets minimum requirements? {this.props.applicationData.meets_criteria}
           </h4>
           <h4>
-            Meets scholarship criteria? {this.props.applicationData.meets_scholarship_criteria}
+            Meets scholarship requirements? {this.props.applicationData.meets_scholarship_criteria}
           </h4>
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
@@ -629,7 +629,7 @@ export class DetailViewContents extends React.Component {
         {
           ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey) && (
             <div>
-              Meets course requirements?
+              Meets minimum requirements?
               {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
             </div>
           )

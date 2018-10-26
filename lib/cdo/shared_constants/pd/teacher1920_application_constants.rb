@@ -24,14 +24,16 @@ module Pd
         :first_name,
         :last_name,
         :account_email,
-        :alternate_email,
-        :address,
-        :city,
-        :state,
-        :zip_code,
+        :alternate_email
       ).merge(
         {
           phone: 'Home or Cell Phone',
+          gender_identity: 'Gender Identity',
+          race: 'Race',
+          address: 'Home Address',
+          city: 'City',
+          state: 'State',
+          zip_code: 'Zip Code',
           school: 'School',
           school_name: 'School name',
           school_district_name: 'School district name',
@@ -41,9 +43,9 @@ module Pd
           school_zip_code: 'Zip code',
           school_type: 'My school is a',
 
+          principal_title: "Principal's title",
           principal_first_name: "Principal's first name",
           principal_last_name: "Principal's last name",
-          principal_title: "Principal's title",
           principal_email: "Principal's email address",
           principal_confirm_email: "Confirm principal's email address",
           principal_phone_number: "Principal's phone number",
