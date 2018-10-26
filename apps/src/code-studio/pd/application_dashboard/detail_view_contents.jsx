@@ -79,10 +79,10 @@ const styles = {
     width: '80%'
   },
   questionColumn: {
-    width: '60%'
+    width: '50%'
   },
   answerColumn: {
-    width: '20%'
+    width: '30%'
   },
   scoringColumn: {
     width: '20%'
