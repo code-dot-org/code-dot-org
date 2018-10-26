@@ -46,12 +46,30 @@ sl:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': naključno
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': naključno
       Dancelab_randomColor:
         text: naključna barva
       Dancelab_setDanceSpeed:
@@ -63,6 +81,11 @@ sl:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': velikost
@@ -249,6 +272,10 @@ sl:
           TYPE:
             "'sand'": pesek
             "'planksOak'": hrastove deske
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pesek
       craft_moveForward:
         text: premakni se naprej
       craft_placeTorch:

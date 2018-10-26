@@ -75,6 +75,7 @@ hy:
     twitter: ծլվլոց
     facebook: Facebook
     windowslive: Microsoft Հաշվի
+    microsoft_v2_auth: Microsoft Հաշվի
     forgot_password: Մոռացել եք Ձեր գաղտնաբառը?
     need_confirmation: Չէի ստանալ հաստատում հրահանգներ.
     need_unlock: Չէի ստանում են բացելու հրահանգներ.
@@ -90,7 +91,6 @@ hy:
     age: Տարիք
     user_type: 'Դուք ուսանող կամ ուսուցիչ:'
     submit: Գրանցվել
-    next: Next
     teacher: Դուք ուսուցիչ եք?
     valid_username: Դուք փնտրել էք -.
     invalid_username: Մականուն պետք է լինի առնվազն 5 նիշ
@@ -192,13 +192,6 @@ hy:
       project_gallery: ծրագրեր
       educate_hoc: Կոդի ժամ
       stats: Վիճակագրություն
-    create_button:
-      create: Ստեղծել
-      applab: App Lab
-      artist: Արտիստ
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Ուսուցչի գլխավոր էջը
       district_dashboard: District Dashboard
@@ -208,6 +201,12 @@ hy:
       logout: Դուրս գալ
       signin: Մուտք գործել
       already_registered: Արդեն գրանցված եք
+      create: Ստեղծել
+      applab: App Lab
+      artist: Արտիստ
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: Ձեր առաջընթացը

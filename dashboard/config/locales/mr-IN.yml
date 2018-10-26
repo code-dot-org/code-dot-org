@@ -3,7 +3,7 @@ mr:
   signup_form:
     user_type_student: विध्यार्थी
   nav:
-    create_button:
+    user:
       create: बनवा
   teacher:
     panel:

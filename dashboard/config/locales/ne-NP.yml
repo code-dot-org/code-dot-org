@@ -236,13 +236,6 @@ ne:
       project_gallery: Projects
       educate_hoc: Hour of Code
       stats: Stats
-    create_button:
-      create: बनाउनुहोस्
-      applab: App Lab
-      artist: Artist
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -256,6 +249,12 @@ ne:
       team: Team
       driver: Driver
       navigator: Navigator
+      create: बनाउनुहोस्
+      applab: App Lab
+      artist: Artist
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'s progress"
       progress: तपाईँको प्रगति
