@@ -37,6 +37,7 @@ export default class TeacherHomepage extends Component {
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
+    includeDanceParty: PropTypes.bool,
   };
 
   state = {
@@ -127,7 +128,7 @@ export default class TeacherHomepage extends Component {
     const { courses, topCourse, announcement, joinedSections } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
-    const { canViewAdvancedTools, isEnglish, queryStringOpen } = this.props;
+    const { canViewAdvancedTools, isEnglish, queryStringOpen, includeDanceParty } = this.props;
 
     // Show the special announcement for now.
     const showSpecialAnnouncement = true;
@@ -201,6 +202,7 @@ export default class TeacherHomepage extends Component {
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
+          includeDanceParty={includeDanceParty}
         />
         <StudentSections
           initialSections={joinedSections}

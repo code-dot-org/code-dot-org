@@ -77,12 +77,28 @@ tr:
         options:
           GROUP:
             sprites: tüm
+          FORMAT:
+            '"random"': gelişigüzel
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": sol
             "{x: 300, y: 200}": sağ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": gelişigüzel
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': gelişigüzel
       Dancelab_randomColor:
         text: rastgele renk
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ tr:
             '"none"': Hiçbiri
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': boyut
+            '"height"': Yükseklik
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: tüm
           PROPERTY:
             '"scale"': boyut
             '"height"': Yükseklik
@@ -296,6 +319,10 @@ tr:
           TYPE:
             "'sand'": kum
             "'planksOak'": meşe kalaslar
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": kum
       craft_moveForward:
         text: ilerle
       craft_placeTorch:

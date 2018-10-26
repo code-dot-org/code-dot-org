@@ -6,7 +6,8 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
-    canViewAdvancedTools: PropTypes.bool
+    canViewAdvancedTools: PropTypes.bool,
+    includeDanceParty: PropTypes.bool,
   };
 
   render() {
@@ -20,6 +21,7 @@ export default class ProjectHeader extends React.Component {
         <StartNewProject
           canViewFullList
           canViewAdvancedTools={this.props.canViewAdvancedTools}
+          includeDanceParty={this.props.includeDanceParty}
         />
       </div>
     );
