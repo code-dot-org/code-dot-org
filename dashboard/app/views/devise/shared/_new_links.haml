@@ -13,13 +13,10 @@
     %br/
 
   - if controller_name == 'sessions'
-    #section_instructions{style: "padding-bottom: 7px;"}
-      = t('add_teacher_form.code.instructions_short')
-    #section_form
-      = form_tag(student_user_new_path, method: 'GET') do
-        = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('add_teacher_form.code.placeholder'), style: 'width: 216px;')
-        %br/
-        = submit_tag 'Go', class: 'btn btn-primary', style: 'width: 230px;'
+    = t('add_teacher_form.code.instructions_short')
+    = form_tag(student_user_new_path, method: :get, class: 'section-sign-in') do
+      = text_field_tag :section_code, params[:section_code], placeholder: t('add_teacher_form.code.placeholder')
+      %button= 'Go'
 
   - if devise_mapping.omniauthable?
     - unless Rails.env.production?
