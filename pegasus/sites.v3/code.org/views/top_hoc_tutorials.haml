@@ -2,21 +2,16 @@
 
 - if ['mc', 'dance'].include? DCDO.get('hoc_launch', nil)
   - minecraft_img_url = CDO.code_org_url("/shared/images/courses/logo_tall_aquatic.jpg")
-  / TODO: (madelynkasula) update with new MC Aquatic copy?
-  - minecraft_title = ""
-  - minecraft_subtitle = ""
 - else
   - minecraft_img_url = CDO.code_org_url("/images/fill-485x260/mc/special-announcement-hoc2017.jpg")
-  - minecraft_title = "Minecraft Hour of Code"
-  - minecraft_subtitle = "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
 
 .col-50
   .tutorial-tile
     %a{href: "/minecraft"}
       %img.tutorial-tile-img{src: minecraft_img_url}
     .tutorial-info
-      %h3{style: "margin-top: 0px;"}= minecraft_title
-      .smalltext= minecraft_subtitle
+      %h3{style: "margin-top: 0px;"} Minecraft Hour of Code
+      .smalltext Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
       %a{href: "/minecraft"}
         %button.tutorial-info-start.tutorial-gray Start tutorial
       .tutorial-info-guide
