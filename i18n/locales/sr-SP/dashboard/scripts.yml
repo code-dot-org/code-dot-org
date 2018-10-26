@@ -804,6 +804,8 @@ sr:
               name: Бинарне наруквице
             Binary Images:
               name: Binarne slike
+            Play Lab:
+              name: Играоница
         csd2-2017:
           stages:
             Lists:

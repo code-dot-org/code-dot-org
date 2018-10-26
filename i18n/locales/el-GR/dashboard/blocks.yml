@@ -54,12 +54,28 @@ el:
         options:
           GROUP:
             sprites: όλα
+          FORMAT:
+            '"random"': τυχαίο
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": αριστερά
             "{x: 300, y: 200}": δεξιά
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': τυχαίο
       Dancelab_randomColor:
         text: τυχαίο χρώμα
       Dancelab_setDanceSpeed:
@@ -72,6 +88,13 @@ el:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"height"': ύψος
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: όλα
           PROPERTY:
             '"scale"': μέγεθος
             '"height"': ύψος
@@ -265,6 +288,10 @@ el:
           TYPE:
             "'sand'": άμμος
             "'planksOak'": σανίδες από βελανιδιά
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": άμμος
       craft_moveForward:
         text: προχώρησε μπροστά
       craft_placeTorch:

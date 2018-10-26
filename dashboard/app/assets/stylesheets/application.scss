@@ -331,11 +331,6 @@ img.video_thumbnail {
     }
   }
 
-  .user_icon {
-    font-size: 25px;
-    border-width: 0;
-  }
-
   #sign_in_or_user {
     html[dir=rtl] & {
       padding-right: 20px;
@@ -347,13 +342,20 @@ img.video_thumbnail {
     height: 38px;
     user-select: none;
 
-    .create_button {
+    .create_button, .display_name, .pairing_name {
       max-width: 120px;
       display: inline-block;
       float: left;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+    }
+
+    .pairing_icon {
+      display: inline-block;
+      float: left;
+      padding-right: 5px;
+      padding-top: 3px;
     }
 
     .user_menu_arrow_down,
@@ -1731,7 +1733,7 @@ a.download-video {
       border: 1px solid $orange;
       color: $white;
       font-weight: bolder;
-      min-width: 400px;
+      padding: 0 20px;
       margin: 5px 0;
     }
   }

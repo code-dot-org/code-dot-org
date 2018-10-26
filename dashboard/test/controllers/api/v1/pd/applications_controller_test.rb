@@ -123,11 +123,11 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
+      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
+      assert_equal 3, data['csp_facilitators']['accepted']['locked']
     end
 
     test "index shows multiple locked applications" do
@@ -135,12 +135,12 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
+      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
       get :index
       assert_response :success
       data = JSON.parse(response.body)
 
-      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
+      assert_equal 3, data['csp_facilitators']['accepted']['locked']
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -149,14 +149,15 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
-      create_list TEACHER_APPLICATION_FACTORY, 2, regional_partner: regional_partner
+      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
+      create_list :pd_facilitator1819_application, 2, regional_partner: regional_partner
 
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
-      assert_equal 2, data['csp_teachers']['unreviewed']['unlocked']
+      assert_equal 3, data['csp_facilitators']['accepted']['locked']
+      assert_equal 0, data['csp_facilitators']['unreviewed']['locked']
+      assert_equal 2, data['csp_facilitators']['unreviewed']['total']
     end
 
     test "index with applications of different statuses correctly shows locked applications" do
@@ -164,14 +165,16 @@ module Api::V1::Pd
       regional_partner = create :regional_partner, program_managers: [program_manager]
       sign_in program_manager
 
-      create_list TEACHER_APPLICATION_FACTORY, 3, :locked, regional_partner: regional_partner
-      create_list TEACHER_APPLICATION_FACTORY, 2, regional_partner: regional_partner
+      create_list :pd_facilitator1819_application, 3, :locked, regional_partner: regional_partner
+      create_list :pd_facilitator1819_application, 2, regional_partner: regional_partner
 
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 3, data['csp_teachers']['accepted_not_notified']['locked']
-      assert_equal 2, data['csp_teachers']['unreviewed']['unlocked']
+      assert_equal 3, data['csp_facilitators']['accepted']['locked']
+      assert_equal 3, data['csp_facilitators']['accepted']['total']
+      assert_equal 0, data['csp_facilitators']['unreviewed']['locked']
+      assert_equal 2, data['csp_facilitators']['unreviewed']['total']
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -180,7 +183,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 1, data['csf_facilitators']['unreviewed']['unlocked']
+      assert_equal 1, data['csf_facilitators']['unreviewed']['total']
     end
 
     test 'regional partners can only see their applications in index' do
@@ -188,7 +191,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 1, data['csf_facilitators']['unreviewed']['unlocked']
+      assert_equal 1, data['csf_facilitators']['unreviewed']['total']
     end
 
     test 'workshop admins can only see their applications in index' do
@@ -196,7 +199,7 @@ module Api::V1::Pd
       get :index
       assert_response :success
       data = JSON.parse(response.body)
-      assert_equal 2, data['csf_facilitators']['unreviewed']['unlocked']
+      assert_equal 2, data['csf_facilitators']['unreviewed']['total']
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -296,7 +299,7 @@ module Api::V1::Pd
       assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
     end
 
-    test 'workshop admins can and unlock applications' do
+    test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
       assert_response :success
@@ -458,7 +461,6 @@ module Api::V1::Pd
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.status = 'accepted_not_notified'
         application.save!
-        application.lock!
 
         sign_in @workshop_organizer
         get :cohort_view, params: {role: 'csp_teachers'}
@@ -495,7 +497,6 @@ module Api::V1::Pd
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.status = 'accepted_not_notified'
         application.save!
-        application.lock!
 
         sign_in @workshop_organizer
         get :cohort_view, params: {role: 'csp_teachers'}
@@ -611,7 +612,6 @@ module Api::V1::Pd
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.status = 'accepted_not_notified'
         application.save!
-        application.lock!
 
         sign_in @program_manager
         get :cohort_view, params: {role: 'csp_teachers'}
@@ -673,7 +673,8 @@ module Api::V1::Pd
     end
 
     test 'cohort csv download returns expected columns for teachers' do
-      create TEACHER_APPLICATION_FACTORY, :locked, course: 'csd'
+      application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
+      application.update(status: 'accepted_not_notified')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success
