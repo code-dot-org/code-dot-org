@@ -5,6 +5,7 @@ require 'cdo/sinatra'
 require 'cdo/aws/s3'
 
 SOUND_LIBRARY_BUCKET = 'cdo-sound-library'.freeze
+RESTRICTED_BUCKET = 'cdo-restricted'.freeze
 
 #
 # Provides limited access to the cdo-sound-library S3 bucket, which contains
@@ -33,6 +34,33 @@ class SoundLibraryApi < Sinatra::Base
         object_versions(prefix: sound_name).
         find {|version| !version.head.delete_marker}.
         get
+      content_type result.content_type
+      cache_for 3600
+      result.body
+    rescue
+      not_found
+    end
+  end
+
+  #
+  # GET /restricted/<filename>
+  #
+  # Retrieve a file from the restricted sound library, but only in development
+  # or CI test environments.
+  #
+  get %r{/restricted/(.+)} do |sound_name|
+    not_found if sound_name.empty?
+
+    unless rack_env?(:development)
+      raise "unexpected access to /restricted/ route in non-dev environment"
+    end
+
+    begin
+      s3 = AWS::S3.create_client
+      result = s3.get_object(
+        bucket: RESTRICTED_BUCKET,
+        key: "restricted/#{sound_name}"
+      )
       content_type result.content_type
       cache_for 3600
       result.body
