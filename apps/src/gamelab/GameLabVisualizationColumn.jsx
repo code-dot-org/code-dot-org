@@ -50,8 +50,6 @@ class GameLabVisualizationColumn extends React.Component {
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
     mobileControlsConfig: PropTypes.object.isRequired,
-    setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
