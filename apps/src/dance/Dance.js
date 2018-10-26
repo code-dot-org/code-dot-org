@@ -102,7 +102,16 @@ Dance.prototype.init = async function (config) {
   const manifestFilename = config.useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
   const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
     .then(response => response.json());
-  const songManifest = (await songManifestPromise).songs;
+  const promises = [songManifestPromise];
+
+  // We must obtain signed cookies before accessing restricted content.
+  if (config.useRestrictedSongs) {
+    const signedCookiePromise = fetch('/dashboardapi/signed_cookies');
+    promises.push(signedCookiePromise);
+  }
+
+  const result = await Promise.all(promises);
+  const songManifest = result[0].songs;
 
   const songPathPrefix = config.useRestrictedSongs ?
     '/restricted/' : 'https://curriculum.code.org/media/uploads/';
