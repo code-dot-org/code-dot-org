@@ -65,8 +65,8 @@ Dance.prototype.init = function (config) {
   this.level = config.level;
   this.skin = config.skin;
   this.share = config.share;
-  this.p5setupPromise = new Promise(resolve => {
-    this.p5setupPromiseResolve = resolve;
+  this.danceReadyPromise = new Promise(resolve => {
+    this.danceReadyPromiseResolve = resolve;
   });
 
   this.studioApp_.labUserId = config.labUserId;
@@ -115,6 +115,8 @@ Dance.prototype.init = function (config) {
   } else if (this.level.defaultSong) {
     getStore().dispatch(setSong(this.level.defaultSong));
   }
+
+  this.updateSongMetadata(getStore().getState().selectedSong);
 
   ReactDOM.render((
     <Provider store={getStore()}>
@@ -225,10 +227,9 @@ Dance.prototype.afterInject_ = function () {
     recordReplayLog: this.shouldShowSharing(),
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
-      this.updateSongMetadata(getStore().getState().selectedSong);
       const spriteConfig = new Function('World', this.level.customHelperLibrary);
       this.nativeAPI.init(spriteConfig);
-      this.p5setupPromiseResolve();
+      this.danceReadyPromiseResolve();
     },
     container: 'divDance',
   });
@@ -307,7 +308,7 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
-  await this.p5setupPromise;
+  await this.danceReadyPromise;
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
@@ -451,22 +452,6 @@ Dance.prototype.shouldShowSharing = function () {
   return !!this.level.freePlay;
 };
 
-/**
- * This is called while this.p5 is in the preload phase.
- */
-Dance.prototype.onP5Preload = function () {
-  this.nativeAPI = new DanceParty({
-    onPuzzleComplete: this.onPuzzleComplete.bind(this),
-    playSound: audioCommands.playSound,
-    recordReplayLog: this.shouldShowSharing(),
-    container: 'divDance',
-  });
-  this.updateSongMetadata(getStore().getState().selectedSong);
-  const spriteConfig = new Function('World', this.level.customHelperLibrary);
-  this.nativeAPI.init(spriteConfig);
-  this.nativeAPI.preload();
-};
-
 Dance.prototype.updateSongMetadata = function (id) {
   this.songMetadataPromise = this.loadSongMetadata(id);
 };
@@ -478,7 +463,7 @@ Dance.prototype.loadSongMetadata = async function (id) {
 };
 
 /**
- * This is called while this.p5 is in a draw() call.
+ * This is called while DanceParty is in a draw() call.
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
