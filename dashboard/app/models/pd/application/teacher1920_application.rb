@@ -431,7 +431,6 @@ module Pd::Application
       meets_scholarship_criteria_scores = {}
       bonus_points_scores = {}
 
-
       # Section 2
       if course == 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
@@ -442,7 +441,6 @@ module Pd::Application
 
         bonus_points_scores[:csp_how_offer] = responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
       end
-
 
       meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
       meets_scholarship_criteria_scores[:plan_to_teach] = responses[:plan_to_teach] == options[:plan_to_teach].first ? YES : NO
@@ -480,13 +478,15 @@ module Pd::Application
         bonus_points_scores[:principal_underrepresented_minority_percent] = (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
       end
 
-      update(response_scores: response_scores_hash.deep_merge(
-        {
-          meets_minimum_criteria_scores: meets_minimum_criteria_scores,
-          meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
-          bonus_points_scores: bonus_points_scores
-        }
-      ) {|_, old_value, _| old_value}.to_json)
+      update(
+        response_scores: response_scores_hash.deep_merge(
+          {
+            meets_minimum_criteria_scores: meets_minimum_criteria_scores,
+            meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
+            bonus_points_scores: bonus_points_scores
+          }
+        ) {|_, old_value, _| old_value}.to_json
+      )
     end
 
     def meets_criteria
@@ -494,11 +494,11 @@ module Pd::Application
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
 
-      responses = scored_questions.map {|q| response_scores[q]}
+      scores = scored_questions.map {|q| response_scores[q]}
 
-      if responses.uniq == [YES]
+      if scores.uniq == [YES]
         YES
-      elsif NO.in? responses
+      elsif NO.in? scores
         NO
       else
         'Reviewing incomplete'
@@ -506,11 +506,11 @@ module Pd::Application
     end
 
     def meets_scholarship_criteria
-      responses = response_scores_hash[:meets_scholarship_criteria_scores] || {}
+      scores = (response_scores_hash[:meets_scholarship_criteria_scores] || {}).values
 
-      if responses.uniq == [YES]
+      if scores.uniq == [YES]
         YES
-      elsif NO.in? responses
+      elsif NO.in? scores
         NO
       else
         'Reviewing incomplete'
@@ -567,7 +567,7 @@ module Pd::Application
           principal_implementation: implementation_string,
           principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
-          principal_underrepresented_minority_percent: format("%0.02f%%", @application.underrepresented_minority_percent),
+          principal_underrepresented_minority_percent: format("%0.02f%%", principal_approval.underrepresented_minority_percent),
           principal_wont_replace_existing_course: replace_course_string,
           principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],
@@ -578,6 +578,15 @@ module Pd::Application
       auto_score!
       queue_email(:principal_approval_completed, deliver_now: true)
       queue_email(:principal_approval_completed_partner, deliver_now: true)
+    end
+
+    # @override
+    def default_response_score_hash
+      {
+        meets_minimum_criteria_scores: {},
+        meets_scholarship_criteria_scores: {},
+        bonus_points_scores: {}
+      }
     end
   end
 end

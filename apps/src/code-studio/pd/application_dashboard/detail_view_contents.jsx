@@ -153,7 +153,7 @@ export class DetailViewContents extends React.Component {
       status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
-      response_scores: this.props.applicationData.response_scores || {},
+      response_scores: this.props.applicationData.response_scores,
       regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
@@ -226,8 +226,14 @@ export class DetailViewContents extends React.Component {
   };
 
   handleScoreChange = (event) => {
+    const keyCategory = event.target.id.split('-');
+    const key = keyCategory[0];
+    const category = keyCategory[1];
+
+    const responseScores = this.state.response_scores;
+    responseScores[category][key] = event.target.value;
     this.setState({
-      response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
+      response_scores: responseScores
     });
   };
 
@@ -624,6 +630,7 @@ export class DetailViewContents extends React.Component {
           ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey) && (
             <div>
               Meets course requirements?
+              {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
             </div>
           )
         }
@@ -631,6 +638,7 @@ export class DetailViewContents extends React.Component {
           ScoreableQuestions['bonusPoints'].includes(snakeCaseKey) && (
             <div>
               Bonus Points?
+              {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
             </div>
           )
         }
@@ -638,11 +646,9 @@ export class DetailViewContents extends React.Component {
           ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey) && (
             <div>
               Meets scholarship requirements?
+              {this.renderScoringDropdown(snakeCaseKey, 'meets_scholarship_criteria_scores')}
             </div>
           )
-        }
-        {
-          
         }
       </td>
     );
@@ -659,14 +665,14 @@ export class DetailViewContents extends React.Component {
       >
         <option>--</option>
         {
-          TeacherValidScores[key].map((score, i) => (
+          TeacherValidScores[_.camelCase(key)].map((score, i) => (
             <option value={score} key={i}>
               {score}
             </option>
           ))
         }
       </FormControl>
-    )
+    );
   }
 
   showPrincipalApprovalTable = () => {
@@ -702,7 +708,7 @@ export class DetailViewContents extends React.Component {
                           {LabelOverrides[key] || PageLabels[header][key]}
                         </td>
                         <td style={styles.answerColumn}>
-                          {this.props.applicationData.form_data[key]}
+                          {this.renderAnswer(this.props.applicationData.form_data[key])}
                         </td>
                         {this.renderScoringSection(key)}
                       </tr>
@@ -716,6 +722,14 @@ export class DetailViewContents extends React.Component {
         }
       </div>
     );
+  };
+
+  renderAnswer = (answer) => {
+    if (Array.isArray(answer)) {
+      return answer.sort().join(', ');
+    } else {
+      return answer;
+    }
   };
 
   renderResendOrUnrequirePrincipalApprovalSection = () => {
