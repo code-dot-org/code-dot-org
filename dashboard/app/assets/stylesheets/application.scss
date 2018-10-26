@@ -1649,7 +1649,7 @@ a.download-video {
 #signup, #school-info-modal {
   // NEW SIGN-UP FORM
   .signup {
-    margin: 20px;
+    margin: 20px 0;
   }
   .finish-signup {
     width: 800px;
@@ -1876,6 +1876,58 @@ a.download-video {
   }
 }
 
+.horizontal-or {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bolder;
+  color: $charcoal;
+
+  hr {
+    width: 40%;
+    border-color: $light_gray;
+  }
+}
+
+.signup-header {
+  width: 400px;
+  text-align: center;
+}
+
+// NEW STYLES FOR devise/shared/_new_links
+.devise-links {
+  margin: 10px 0;
+
+  form {
+    margin: 0;
+  }
+
+  .oauth-sign-in {
+    color: $white;
+    font-weight: bolder;
+    min-width: 400px;
+    margin: 5px 0;
+
+    &.with-google_oauth2 {
+      background-color: $google_red;
+      border: 1px solid $google_red;
+    }
+
+    &.with-facebook {
+      background-color: $facebook_blue;
+      border: 1px solid $facebook_blue;
+    }
+
+    &.with-windowslive {
+      background-color: $microsoft_blue;
+      border: 1px solid $microsoft_blue;
+    }
+  }
+}
+
+// OLD STYLES FOR devise/shared/_old_links
 .devise_link_section {
   display: flex;
   flex-direction: row;
