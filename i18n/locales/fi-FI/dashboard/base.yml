@@ -84,6 +84,7 @@ fi:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-tili'
+    microsoft_v2_auth: 'Microsoft-tili'
     clever: 'Clever-tili'
     powerschool: 'Powerschool-tili'
     forgot_password: 'Unohditko salasanasi?'
@@ -105,7 +106,6 @@ fi:
     age: 'Ikä'
     user_type: 'Oletko opiskelija tai opettaja?'
     submit: 'Rekisteröidy'
-    next: 'Seuraava'
     teacher: 'Oletko opettaja?'
     valid_username: "Vapaa!"
     invalid_username: "Käyttäjätunnuksen tulee olla vähintään 5 merkkiä pitkä"

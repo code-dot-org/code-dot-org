@@ -319,11 +319,11 @@
           TYPE:
             "'sand'": sand
             "'planksOak'": eikeplanker
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: gå fremover
       craft_placeTorch:
         text: plasser fakkel
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': kylling

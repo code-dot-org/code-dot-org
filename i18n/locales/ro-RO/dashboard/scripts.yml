@@ -1795,6 +1795,8 @@ ro:
               name: Brăţări Binare
             Binary Images:
               name: Imagini binare
+            Play Lab:
+              name: Laborator de Joacă
         csd2-2017:
           description_audience: '[șir gol]'
           stages:
@@ -3571,3 +3573,7 @@ ro:
             Dance Party:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+        cspplayground:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

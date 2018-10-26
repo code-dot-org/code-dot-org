@@ -6825,6 +6825,18 @@ es-MX:
         courseB_starWars_prog9_b: Hay muchas formas de resolver este rompecabezas.
         courseB_starWars_prog9_c: |-
           ¿Podría un ciclo de repetición ayudar aquí?
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: El 'set actor 1 ??? imagen 'bloque puede usarse para agregar actor al escenario.
+        courseE_playLab_scaffold1_b: Coloque el bloque de 'actor' de 'debajo del' cuando 'para que su agente aparezca al principio del programa.
+        courseE_playLab_scaffold1_c: Use ` set ´ Fondo para elegir un fondo para tu escena.
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_a: Tirar en el menú desplegable de la 'cuando ___ flecha' evento para cambiar la dirección de los controles de bloqueo.
+        courseE_playLab_scaffold1_b: Debe tener cuatro 'cuando flecha' bloques de eventos, con una dirección para abrir debajo de cada uno.
+        courseE_playLab_scaffold1_c: Cuando hayas terminado, ¡podrás mover a tu héroe con las teclas de flecha!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: Use `score point` para agregar un punto, y` remove point` para restar uno.
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: Para finalizar este nivel, debes ganar o perder. Utilizar un `final del juego como win` o 'final del juego como loss` bloque hasta el final.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Fije este bloque a bloque 'cuando corre':

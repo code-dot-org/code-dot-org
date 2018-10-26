@@ -3604,6 +3604,8 @@ tr:
               name: RGB(Kırmızı Yeşil Mavi) renkler
             Processing with Bits:
               name: Bitlerle işlem
+            Play Lab:
+              name: Oyun Laboratuvarı
         csd2-2017:
           description_short: "  Web Lab'da kendi web siteni oluşturmayı öğren."
           description: " 2. Ünitede, kendi web sayfanızda nasıl içerik oluşturacağınız

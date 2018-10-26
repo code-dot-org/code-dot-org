@@ -79,6 +79,7 @@ ca:
     twitter: Twitter
     facebook: Facebook
     windowslive: Compte de Microsoft
+    microsoft_v2_auth: Compte de Microsoft
     forgot_password: Has oblidat la constrasenya?
     need_confirmation: No has rebut les instruccions de confirmació?
     need_unlock: No has rebut les instruccions de desbloqueig?
@@ -99,7 +100,6 @@ ca:
     age: Edat
     user_type: Sou alumne o mestre?
     submit: Inscriure's
-    next: Següent
     teacher: Sou mestre?
     valid_username: Disponible!
     invalid_username: El nom d'usuari ha de tenir almenys 5 caràcters

@@ -272,11 +272,11 @@ sl:
           TYPE:
             "'sand'": pesek
             "'planksOak'": hrastove deske
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pesek
       craft_moveForward:
         text: premakni se naprej
       craft_placeTorch:
         text: postavi baklo
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': piščanec

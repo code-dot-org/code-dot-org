@@ -260,11 +260,11 @@ fa:
           TYPE:
             "'sand'": شن
             "'planksOak'": چوب بلوط
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": شن
       craft_moveForward:
         text: برو جلو
       craft_placeTorch:
         text: مشعل را قرار بده
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': مرغ

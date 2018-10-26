@@ -21,21 +21,21 @@ zh-CN:
           GROUP:
             sprites: 所有
             '"ALIEN"': 所有外星人
-            '"BEAR"': 所有 玩具熊
-            '"CAT"': 所有 猫
-            '"DOG"': 所有 狗
-            '"DUCK"': 所有 鸭子
-            '"FROG"': 所有 青蛙
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
             '"MOOSE"': 所有老鼠
-            '"PINEAPPLE"': 所有 菠萝
-            '"ROBOT"': 所遇机器人
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
           MOVE:
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Clown: 小丑
             MOVES.Fresh: 新鲜
-            '"next"': 下一步
-            '"prev"': 前一步
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -47,8 +47,8 @@ zh-CN:
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Clown: 小丑
             MOVES.Fresh: 新鲜
-            '"next"': 下一步
-            '"prev"': 前一步
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -67,21 +67,21 @@ zh-CN:
           GROUP:
             sprites: 所有
             '"ALIEN"': 所有外星人
-            '"BEAR"': 所有 玩具熊
-            '"CAT"': 所有 猫
-            '"DOG"': 所有 狗
-            '"DUCK"': 所有 鸭子
-            '"FROG"': 所有 青蛙
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
             '"MOOSE"': 所有老鼠
-            '"PINEAPPLE"': 所有 菠萝
-            '"ROBOT"': 所遇机器人
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
           MOVE:
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Clown: 小丑
             MOVES.Fresh: 新鲜
-            '"next"': 下一步
-            '"prev"': 前一步
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -93,8 +93,8 @@ zh-CN:
             MOVES.ClapHigh: 用力鼓掌
             MOVES.Clown: 小丑
             MOVES.Fresh: 新鲜
-            '"next"': 下一步
-            '"prev"': 前一步
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
             '"rand"': 随机
             MOVES.Rest: 没有
           DIR:
@@ -177,14 +177,14 @@ zh-CN:
           GROUP:
             sprites: 所有
             '"ALIEN"': 所有外星人
-            '"BEAR"': 所有 玩具熊
-            '"CAT"': 所有 猫
-            '"DOG"': 所有 狗
-            '"DUCK"': 所有 鸭子
-            '"FROG"': 所有 青蛙
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
             '"MOOSE"': 所有老鼠
-            '"PINEAPPLE"': 所有 菠萝
-            '"ROBOT"': 所遇机器人
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
           FORMAT:
             '"grid"': 网格
@@ -200,7 +200,7 @@ zh-CN:
             '"CAT"': 猫
             '"DUCK"': 鸭子
             '"FROG"': 青蛙
-            '"MOOSE"': 老鼠
+            '"MOOSE"': 驼鹿
             '"PINEAPPLE"': 菠萝
             '"ROBOT"': 机器人
             '"SHARK"': 鲨鱼
@@ -229,7 +229,7 @@ zh-CN:
             '10': '10'
           COSTUME:
             '"ALIEN"': 外星人
-            '"MOOSE"': 老鼠
+            '"MOOSE"': 驼鹿
             '"UNICORN"': 独角兽
           LAYOUT:
             '"grid"': 网格
@@ -288,14 +288,14 @@ zh-CN:
           GROUP:
             sprites: 所有
             '"ALIEN"': 所有外星人
-            '"BEAR"': 所有 玩具熊
-            '"CAT"': 所有 猫
-            '"DOG"': 所有 狗
-            '"DUCK"': 所有 鸭子
-            '"FROG"': 所有 青蛙
+            '"BEAR"': 所有熊
+            '"CAT"': 所有猫
+            '"DOG"': 所有狗
+            '"DUCK"': 所有鸭子
+            '"FROG"': 所有青蛙
             '"MOOSE"': 所有老鼠
-            '"PINEAPPLE"': 所有 菠萝
-            '"ROBOT"': 所遇机器人
+            '"PINEAPPLE"': 所有菠萝
+            '"ROBOT"': 所有机器人
             '"SHARK"': 所有鲨鱼
           PROPERTY:
             '"scale"': 大小
@@ -892,13 +892,13 @@ zh-CN:
           TYPE:
             "'sand'": 沙子
             "'planksOak'": 橡木板
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": 沙子
       craft_log:
         text: 日志消息 {MESSAGE}
       craft_moveForward:
         text: 向前移动
       craft_placeTorch:
         text: 放下火把
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': 鸡

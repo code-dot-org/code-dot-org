@@ -288,11 +288,11 @@ cs:
           TYPE:
             "'sand'": písek
             "'planksOak'": dubová prkna
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": písek
       craft_moveForward:
         text: posunout vpřed
       craft_placeTorch:
         text: umísti pochodeň
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': slepice

@@ -707,6 +707,8 @@ lv:
               name: Binārās aproces
             Binary Images:
               name: Binārie Attēli
+            Play Lab:
+              name: Spēles laboratorija
         csd2-2017:
           stages:
             Lists:

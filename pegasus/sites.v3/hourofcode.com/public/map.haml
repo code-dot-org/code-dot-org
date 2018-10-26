@@ -7,6 +7,6 @@ layout: wide_index
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 = view :header
-= view :hoc_events_counter
+%h2.center-text= view :hoc_events_counter
 = view :hoc_events_map, max_height_percentage: 1
 .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))

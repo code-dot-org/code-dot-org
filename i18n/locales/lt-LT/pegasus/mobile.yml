@@ -782,6 +782,7 @@
   header_teacher_community: "Mokytojų bendruomenė"
   header_report_bug: "Pranešti apie klaidą"
   user_header_label: "Sveiki, %{username}"
+  user_header_team: "Komanda"
   user_header_settings: "Mano paskyra"
   user_header_logout: "Atsijungti"
   user_header_signin: "Prisijungti"

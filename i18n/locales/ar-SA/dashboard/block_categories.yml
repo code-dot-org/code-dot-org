@@ -12,11 +12,38 @@ ar:
       Number: رقم
       String: نص
       Image: صورة
+      Boolean: قيمة منطقية
       Conditionals: الجمل الشرطية
       Events: الأحداث
+      Games/Score: ألعاب/نقاط
+      Comments: تعليقات
+      Category: قسم
+      Prebuilt: معدّة مسبقاً
       Text: النص
+      Comment: تعليق
+      'Variables ': 'المتغيرات '
+      everythingelse: كل شيء اخر
+      numbers: أرقام
+      Numbers: أرقام
+      Default: الافتراضي
+      World: العالم
+      Behaviors: السلوك
+      Advanced: مُتقدم
       Start: إبدأ
+      Locations: مواقع
+      Dancing: رقص
+      Dancers: راقصين
+      Groups: مجموعات
+      Brush: فرشاة
+      Movement: تحرك
       Booleans: القيم المنطقية
+      Functional: الدوال
+      While Events: التكرار بواسطة (while)
+      Predefined: معرف مسبقاً
       test: اختبار
+      test2: تجربة2
       Name: الاسم
+      NEW BLOCKS: قطع جديدة
+      'Functions ': 'الدوال '
+      Game/Score: لعبة/نقاط
       Function: دالة

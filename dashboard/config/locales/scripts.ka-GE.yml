@@ -2258,6 +2258,8 @@ ka:
               name: RGB ფერი
             Processing with Bits:
               name: დამუშავება ბიტებით
+            Play Lab:
+              name: თამაშების ლაბი
         csd2-2017:
           description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
           stages:

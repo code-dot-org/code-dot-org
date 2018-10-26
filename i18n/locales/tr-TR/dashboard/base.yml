@@ -83,6 +83,7 @@ tr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
+    microsoft_v2_auth: 'Microsoft Hesabı'
     clever: 'Akıllı Hesap'
     forgot_password: 'Şifrenizi mi unuttunuz?'
     need_confirmation: "Onay talimatlarını almadınız mı?"
@@ -106,7 +107,6 @@ tr:
     age: 'Yaş'
     user_type: 'Bir öğrenci ya da bir öğretmen misiniz?'
     submit: 'Kaydol'
-    next: 'Sonraki'
     teacher: 'Öğretmen misiniz?'
     valid_username: "Mevcut!"
     invalid_username: "Kullanıcı adı en az 5 karakter uzunluğunda olmalıdır"

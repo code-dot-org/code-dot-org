@@ -73,6 +73,7 @@ sr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Мајкрософт налог'
+    microsoft_v2_auth: 'Мајкрософт налог'
     forgot_password: 'Заборавили сте лозинку?'
     need_confirmation: "Нисте примили инструкције за потврду?"
     need_unlock: "Нисте примили инструкције за откључавање?"
@@ -91,7 +92,6 @@ sr:
     age: 'Узраст'
     user_type: 'Да ли си ученик или наставник?'
     submit: 'Региструј се'
-    next: 'Следећи'
     teacher: 'Да ли сте наставник?'
     valid_username: "Доступно!"
     invalid_username: "Корисничко име мора имати барем 5 знакова"

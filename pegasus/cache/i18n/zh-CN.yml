@@ -1,4 +1,5 @@
-"zh-CN":
+---
+zh-CN:
   hour_of_code: 编程一小时
   hello: 世界你好
   'yes': 对
@@ -1524,11 +1525,14 @@
   csd_2018_name: 计算机科学发现
   full_course_category_name: 完整课程
   user_header_label: 你好%{username}
+  user_header_team: 团队
   user_header_settings: 帐户设置
   user_header_logout: 注销
   user_header_signin: 登录
   user_header_gamelab: 游戏实验室
   user_header_playlab: 游戏实验室
+  user_header_dance: 舞蹈派对
+  user_header_spritelab: 精灵实验室
   user_header_minecraft: 我的世界
   user_header_flappy: Flappy Bird
   user_header_view_my_projects: 查看我的项目
@@ -1568,106 +1572,5 @@
   hero_name: "《我的世界》: 英雄之旅"
   applab-intro_name: 应用程序实验室简介
   creativity_create: 创建
+  creativity_hoc_coming: 编程一小时就要来了…
   account_sign_up_email_opt_in: 我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）
-  ! '': 
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  dashboard_course_csina: Computer Science in Algebra
-  thinkersmithspanish_name: Mis Amigos Roboticos
-  lightbot_name: Lightbot
-  lightbotintl_name: Lightbot
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
-  touchdevelop_name: TouchDevelop
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
-  codesters_name: Codesters
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  text-compression_name: Text Compression
-  csd_category_name: CS Discoveries ('17-'18)
-  research_studies_category_name: Research Studies
-  thinkersmithspanish_gradelevel: Por todos
-  kodable_platformtext: iPad
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
-  touchdevelop_beyond_name: TouchDevelop
-  udacity_beyond_name: CS 101
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
-  codea_beyond_platformtext: iPad
-  starwars_shortcode: star
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
-  infinity_shortcode: inf
-  playlab_shortcode: lab
-  artist_shortcode: art
-  user_header_team: Team
-  user_header_create: 'Create '
-  user_header_applab: 'App Lab '
-  user_header_artist: 'Artist '
-  user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
-  user_header_view_all: View all projects...
-  user_header_view_project_gallery: View project gallery
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_hoc_coming: The Hour of Code is coming…
-  creativity_what_will_you_create: What will you create?
-  creativity_homepage: Give flight to imagination and birth to innovation. Start with
-    an Hour of Code and your own brand of creativity, whatever it may be. Watch our
-    video.
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will
-    you create?'
-  creativity_courses: Go further with Code.org courses
-  creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
-  account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
-    permission to use the Code.org services.

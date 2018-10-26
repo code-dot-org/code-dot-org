@@ -111,9 +111,9 @@ my:
           TYPE:
             "'sand'": သဲ
             "'planksOak'": ၀က်သစ်ချပင်ကြမ်းခင်းပျဉ်ချပ်များ
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": သဲ
       craft_placeTorch:
         text: မီးတိုင်ကိုထားပါ
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': ကြက်ကလေး

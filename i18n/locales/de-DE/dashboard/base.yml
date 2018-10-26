@@ -80,6 +80,7 @@ de:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-Konto'
+    microsoft_v2_auth: 'Microsoft-Konto'
     forgot_password: 'Passwort vergessen?'
     need_confirmation: "Keine Anmeldebestätigung erhalten?"
     need_unlock: "Keine Anweisungen zum Entsperren erhalten?"
@@ -101,7 +102,6 @@ de:
     age: 'Alter'
     user_type: 'Bist du Schüler oder Lehrer?'
     submit: 'Registrieren'
-    next: 'Weiter'
     teacher: 'Sind Sie ein Lehrer?'
     valid_username: "Verfügbar!"
     invalid_username: "Benutzernamen müssen mindestens 5 Zeichen lang sein"

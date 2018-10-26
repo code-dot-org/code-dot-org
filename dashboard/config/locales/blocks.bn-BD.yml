@@ -256,6 +256,10 @@ bn:
           TYPE:
             "'sand'": বালি
             "'planksOak'": ওকের তক্তা
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": বালি
       craft_moveForward:
         text: সামনে এগিয়ে যান
       craft_placeTorch:

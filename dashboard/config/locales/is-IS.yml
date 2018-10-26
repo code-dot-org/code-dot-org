@@ -93,6 +93,7 @@ is:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft reikning
+    microsoft_v2_auth: Microsoft reikning
     clever: Clever aðgangur
     forgot_password: Gleymdir þú lykilorðinu þínu ?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
@@ -130,7 +131,6 @@ is:
     age: Aldur
     user_type: Ert þú nemandi eða kennari?
     submit: Skráning
-    next: Næsta
     teacher: Ertu kennari?
     valid_username: Laust!
     invalid_username: Notandanafn verður að vera að minnsta kosti 5 stafir

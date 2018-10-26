@@ -59,6 +59,7 @@ ur:
     twitter: 'ٹوئٹر'
     facebook: 'فیس بک'
     windowslive: 'Microsoft اکاؤنٹ'
+    microsoft_v2_auth: 'Microsoft اکاؤنٹ'
     forgot_password: 'password یاد نہیں؟'
     need_confirmation: "کنفرمیشن کی ہدایات موصول نہیں ہویں؟"
     need_unlock: " Unlock کی ہدایات موصول نہیں ہویں؟  "
