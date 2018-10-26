@@ -99,24 +99,7 @@ Dance.prototype.init = async function (config) {
   const showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
   const finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
-  const manifestFilename = config.useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
-  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
-    .then(response => response.json());
-  const promises = [songManifestPromise];
-
-  // We must obtain signed cookies before accessing restricted content.
-  if (config.useRestrictedSongs) {
-    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies');
-    promises.push(signedCookiesPromise);
-  }
-
-  const result = await Promise.all(promises);
-  const songManifest = result[0].songs;
-
-  const songPathPrefix = config.useRestrictedSongs ?
-    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
-
-  songManifest.forEach(song => {song.url = `${songPathPrefix}${song.url}.mp3`;});
+  const songManifest = await getSongManifest(config.useRestrictedSongs);
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
@@ -158,6 +141,30 @@ Dance.prototype.init = async function (config) {
     </Provider>
   ), document.getElementById(config.containerId));
 };
+
+async function getSongManifest(useRestrictedSongs) {
+  const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
+  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
+    .then(response => response.json());
+  const promises = [songManifestPromise];
+
+  // We must obtain signed cookies before accessing restricted content.
+  if (useRestrictedSongs) {
+    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies');
+    promises.push(signedCookiesPromise);
+  }
+
+  const result = await Promise.all(promises);
+  const songManifest = result[0].songs;
+
+
+  const songPathPrefix = useRestrictedSongs ?
+    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
+
+  songManifest.forEach(song => {song.url = `${songPathPrefix}${song.url}.mp3`;});
+
+  return songManifest;
+}
 
 Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
