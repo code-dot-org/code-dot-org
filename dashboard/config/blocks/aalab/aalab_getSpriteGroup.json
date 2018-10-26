@@ -1,8 +1,9 @@
 {
   "category": "Groups",
   "config": {
-    "func": "createSpriteGroup",
-    "blockText": "createSpriteGroup {GROUPNAME}",
+    "func": "getSpriteGroup",
+    "returnType": "Group",
+    "blockText": "getSpriteGroup{GROUPNAME}",
     "args": [
       {
         "name": "GROUPNAME",
