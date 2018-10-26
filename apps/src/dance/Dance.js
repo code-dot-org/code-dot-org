@@ -12,8 +12,8 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import {reducers, setSong} from './redux';
-
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import experiments from '../util/experiments';
 
 const ButtonState = {
   UP: 0,
@@ -463,7 +463,8 @@ Dance.prototype.shouldShowSharing = function () {
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
-  const recordReplayLog = this.shouldShowSharing();
+  //const recordReplayLog = this.shouldShowSharing();
+  const recordReplayLog = experiments.isEnabled('p5Replay');
   this.nativeAPI = new DanceParty(this.p5, {
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
