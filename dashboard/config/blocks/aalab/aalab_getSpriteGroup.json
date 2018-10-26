@@ -1,5 +1,5 @@
 {
-  "category": "Sprites",
+  "category": "Groups",
   "config": {
     "func": "getSpriteGroup",
     "returnType": "Group",
