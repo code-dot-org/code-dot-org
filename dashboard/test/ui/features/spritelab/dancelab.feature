@@ -35,3 +35,15 @@ Feature: Dance Lab
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
+
+  Scenario: Can get to level success in DanceLab
+    Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
+    And I rotate to landscape
+    And I wait for the page to fully load
+    And I wait for 3 seconds
+    And I wait until I don't see selector "#p5_loading"
+    And I close the instructions overlay if it exists
+
+    #Run for two measures until level success
+    Then I click selector "#runButton" once I see it
+    And I wait until element ".congrats" is visible
