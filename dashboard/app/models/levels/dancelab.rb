@@ -24,11 +24,15 @@
 #
 
 class Dancelab < GamelabJr
+  serialized_attrs %w(
+    default_song
+  )
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.gamelab,
+        game: Game.dance,
         level_num: 'custom',
         properties: {
           block_pools: [
