@@ -130,7 +130,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Add 50 pieces of seagrass to the image by writing drawAllSeagrass with a loop. (Click to see full instructions)",
-    "markdown_instructions": "# Add Seagrass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This:\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of seagrass using your updated `drawSeagrass` function.\r\n\r\n",
+    "markdown_instructions": "# Add Seagrass\r\n\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\n\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This:\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of seagrass using your updated `drawSeagrass` function.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -258,10 +258,15 @@
     "makerlab_enabled": "false",
     "parent_level_id": 3240,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 18:19:10 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

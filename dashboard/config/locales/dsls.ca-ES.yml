@@ -232,6 +232,9 @@ ca:
       CSDU2L01 SFLP:
         description here: Descripció aquí
         title: Títol
+      CSP ExploreL02 SFLP:
+        description here: Descripció aquí
+        title: Títol
       CSP Journal Entry Placeholder2:
         description here: Descripció aquí
         title: Títol

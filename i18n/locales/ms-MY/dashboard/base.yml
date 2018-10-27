@@ -59,6 +59,7 @@ ms:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Akaun Microsoft'
+    microsoft_v2_auth: 'Akaun Microsoft'
     forgot_password: 'Lupa kata laluan anda?'
     need_confirmation: "Tidak menerima arahan pengesahan?"
     need_unlock: "Tidak menerima kunci arahan?"
@@ -154,7 +155,6 @@ ms:
     header:
       finished_hoc: "Saya telah menyelesaikan Hour of Code saya"
       sign_in_to_save: 'Daftar Masuk untuk menyimpan kemajuan'
-      courses: "kursus-kursus"
       educate_hoc: "Hour of Code"
     user:
       classroom: 'Laman Utama Guru'
@@ -163,6 +163,8 @@ ms:
       settings: 'Akaun saya'
       logout: 'Daftar keluar'
       signin: 'Log masuk'
+      create: 'Buat'
+      flappy: 'Flappy'
     popup:
       progress: 'Kemajuan anda'
       lines: 'Total baris kod: %{lines}'

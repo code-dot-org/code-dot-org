@@ -42,6 +42,12 @@ module ApplicationHelper
     end
   end
 
+  def age_options
+    User::AGE_DROPDOWN_OPTIONS.map do |age|
+      [age, age]
+    end
+  end
+
   def check_mark_html
     #raw "&#x2714;"
     image_tag(image_url('white-checkmark.png'))

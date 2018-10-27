@@ -2,14 +2,69 @@
 my:
   data:
     blocks:
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: အားလုံး
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': ဘာမှမရှိ
+            '9': Roll
+            '10': This or That
+            '11': Thiller
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_randomColor:
         text: ကျဘန်းအရောင်
       Dancelab_setBackgroundEffect:
@@ -28,37 +83,11 @@ my:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_setVisibleEach:
-        options:
-          THIS:
-            sprites: အားလုံး
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: အားလုံး
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: အားလုံး
-      DancelabAlpha_randomColor:
-        text: ကျဘန်းအရောင်
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': ဘာမှမရှိ
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': ပုံမှန်
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': ဘာမှမရှိ
-      DancelabAlpha_setVisibleEach:
         options:
           THIS:
             sprites: အားလုံး
@@ -71,5 +100,20 @@ my:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: ကျဘန်းအရောင်
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ရှေ့သို့
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": သဲ
+            "'planksOak'": ၀က်သစ်ချပင်ကြမ်းခင်းပျဉ်ချပ်များ
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": သဲ
+      craft_placeTorch:
+        text: မီးတိုင်ကိုထားပါ

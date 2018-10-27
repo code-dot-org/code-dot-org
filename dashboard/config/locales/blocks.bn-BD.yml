@@ -6,37 +6,31 @@ bn:
         options:
           UNIT:
             '"seconds"': সেকেন্ড
-      Dancelab_changeMove:
+      Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      Dancelab_changeMoveEach:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': আকার
-      Dancelab_doMoveOnce:
+            '"height"': উচ্চতা
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -45,15 +39,37 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
-      Dancelab_mappingProp:
+            '"height"': উচ্চতা
+      Dancelab_jumpTo:
         options:
-          PROPERTY:
-            '"scale"': আকার
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_layoutSprites:
         options:
-          DIRECTION:
-            '"right"': ডানে
-            '"left"': বামে
+          FORMAT:
+            '"random"': এলোমেলো
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': এলোমেলো
       Dancelab_randomColor:
         text: যেকোনো রঙ
       Dancelab_setDanceSpeed:
@@ -68,121 +84,28 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
-      Dancelab_spritesWhere:
+            '"height"': উচ্চতা
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': সেকেন্ড
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': পরবর্তী
-            '"prev"': পূর্ববর্তী
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': সেকেন্ড
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ডানে
-            '"left"': বামে
-      DancelabAlpha_randomColor:
-        text: যেকোনো রঙ
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': উপরে
@@ -269,15 +192,75 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': আকার
+      Mikelab_randomColor:
+        text: যেকোনো রঙ
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': আকার
-      Vanilla_randomColor:
-        text: যেকোনো রঙ
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ডানে
+            '"left"': বামে
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"down"': নিচের তীর
+            '"left"': বামের তীর
+            '"right"': ডানমুখী তীর
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"down"': নিচের তীর
+            '"left"': বামের তীর
+            '"right"': ডানমুখী তীর
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"down"': নিচের তীর
+            '"left"': বামের তীর
+            '"right"': ডানমুখী তীর
+      RyanLab_moveForward:
+        text: সামনে এগিয়ে যান
+      RyanLab_turnLeft:
+        text: বামে যান
+      RyanLab_turnRight:
+        text: ডানে যান
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": সামনে
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": বালি
+            "'planksOak'": ওকের তক্তা
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": বালি
       craft_moveForward:
         text: সামনে এগিয়ে যান
+      craft_placeTorch:
+        text: মশাল বসান

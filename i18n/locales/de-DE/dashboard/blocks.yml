@@ -6,41 +6,35 @@ de:
         options:
           UNIT:
             '"seconds"': Sekunden
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Weiter
-            '"prev"': Zurück
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: Alle
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Weiter
-            '"prev"': Zurück
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      Dancelab_doMoveOnce:
+            '"height"': Höhe
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Weiter
-            '"prev"': Zurück
+          GROUP:
+            sprites: Alle
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +43,39 @@ de:
         options:
           PROPERTY:
             '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
+            '"height"': Höhe
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: Alle
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': zufällig
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': rechts
-            '"left"': links
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': zufällig
       Dancelab_randomColor:
         text: zufällige Farbe
       Dancelab_setDanceSpeed:
@@ -80,157 +90,34 @@ de:
         options:
           PROPERTY:
             '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
+            '"height"': Höhe
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: Alle
+          PROPERTY:
+            '"scale"': Größe
+            '"height"': Höhe
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"height"': Höhe
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: Alle
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
+            '"height"': Höhe
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
+            '"height"': Höhe
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': hoch
-            '"down"': runter
-            '"left"': links
-            '"right"': rechts
-            '"space"': Weltall
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': hoch
-            '"down"': runter
-            '"left"': links
-            '"right"': rechts
-            '"space"': Weltall
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': Sekunden
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Weiter
-            '"prev"': Zurück
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: Alle
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Weiter
-            '"prev"': Zurück
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Weiter
-            '"prev"': Zurück
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': Sekunden
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: Alle
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': rechts
-            '"left"': links
-      DancelabAlpha_randomColor:
-        text: zufällige Farbe
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': Normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: Alle
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': Größe
-            '"x"': x-Position
-            '"y"': y-Position
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': hoch
-            '"down"': runter
-            '"left"': links
-            '"right"': rechts
-            '"space"': Weltall
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': hoch
@@ -329,19 +216,83 @@ de:
             '"scale"': Größe
             '"x"': x-Position
             '"y"': y-Position
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': Größe
             '"x"': x-Position
             '"y"': y-Position
+      Mikelab_randomColor:
+        text: zufällige Farbe
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Stadt
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': Größe
             '"x"': x-Position
             '"y"': y-Position
-      Vanilla_randomColor:
-        text: zufällige Farbe
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': rechts
+            '"left"': links
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': Pfeil-nach-oben
+            '"down"': Pfeil-nach-unten
+            '"left"': Pfeil-nach-links
+            '"right"': Pfeil-nach-rechts
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': Pfeil-nach-oben
+            '"down"': Pfeil-nach-unten
+            '"left"': Pfeil-nach-links
+            '"right"': Pfeil-nach-rechts
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': Pfeil-nach-oben
+            '"down"': Pfeil-nach-unten
+            '"left"': Pfeil-nach-links
+            '"right"': Pfeil-nach-rechts
+      RyanLab_moveForward:
+        text: vorwärts bewegen
+      RyanLab_turnLeft:
+        text: nach links drehen
+      RyanLab_turnRight:
+        text: nach rechts drehen
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": voraus
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": Sand
+            "'planksOak'": Eichenholzbretter
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": Sand
       craft_moveForward:
         text: vorwärts bewegen
+      craft_placeTorch:
+        text: Fackel platzieren

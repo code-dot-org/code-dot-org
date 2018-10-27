@@ -3128,6 +3128,8 @@ fil:
               name: Kulay na RGB
             Processing with Bits:
               name: Pagproseso kasama ang Bits
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
           description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
@@ -6504,6 +6506,8 @@ fil:
               name: Relay Programming
             Introduction to Online Puzzles:
               name: Pambungad sa mga Online na mga Palaisipan
+            Nested Loops in Maze:
+              name: Naka-nest na mga Loops sa Maze
         coursec-2018:
           assignment_family_title: Kursong C
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
@@ -7366,3 +7370,9 @@ fil:
           stages:
             Artist:
               name: Artista
+        sconyers:
+          stages:
+            Digital Design:
+              name: Digital na Disenyo
+            Linking Screens:
+              name: Pag-uugnay sa mga Screen

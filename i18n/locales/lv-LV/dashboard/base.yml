@@ -12,6 +12,7 @@ lv:
       user:
         name: 'Vārds ekrānā'
         email: 'E-pasts'
+        parent_email: 'Vecāka/aizbildņa e-pasts'
         username: 'Lietotājvārds'
         password: 'Parole'
         password_confirmation: 'Paroles apstiprinājums'
@@ -69,6 +70,7 @@ lv:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft konts'
+    microsoft_v2_auth: 'Microsoft konts'
     forgot_password: 'Aizmirsi savu paroli?'
     need_confirmation: "Nesaņēmi apstiprinājuma instrukcijas?"
     need_unlock: "Nesaņēmi atslēgšanas norādijumus?"
@@ -92,16 +94,26 @@ lv:
     invalid_password: "Parolē jābūt vismaz 6 rakstzīmēm"
     mismatch_password: "Abas ievadītās paroles nesakrīt"
     additional_information: "Mums nepieciešama papildus informācija, lai turpinātu Tavu pieteikumu."
+    user_type_label: "Konta tips"
     user_type_teacher: "Skolotāja"
     user_type_student: "Students"
     field_is_required: "ir nepieciešams"
+    error: "Radusies kļūda."
     email_preference_yes: "Jā"
     email_preference_no: "Nē"
   school_info:
+    select_school_type: 'Skolas tips'
     other: 'Citi'
+    school: 'Skola'
+    other_school_not_listed: 'Cita skola, kas nav minēta augstāk'
+    school_name: 'Skolas nosaukums'
+    school_zip: 'Skolas pasta indekss'
+    school_address: 'Skolas adrese'
+    school_organization_name: 'Skolas/organizācijas nosaukums'
   signin_form:
     title: 'Jau ir konts? Pieraksties'
     login: 'E-pasts'
+    login_username: 'E-pasts vai lietotājvārds'
     password: 'Parole'
     remember: 'Atcerēties mani'
     submit: 'Pierakstīties'
@@ -137,6 +149,7 @@ lv:
       %{name}
   section:
     type:
+      picture: 'Attēla parole'
       word: 'Slepenais vārds'
       email: 'E-pasts'
   follower:
@@ -179,8 +192,12 @@ lv:
         playlab: 'Izveidot aplikāciju'
         artist: 'Uzzīmēt kaut ko'
         applab: 'Izveidot aplikāciju'
-      courses: "Kursi"
+      course_catalog: "Kursu katalogs"
+      help_support: "Palīdzība un atbalsts"
+      documentation: "Dokumentācija"
       educate_hoc: "Programmēšanas stunda"
+      about_us: "Par mums"
+      about_partners: "Partneri"
     user:
       classroom: 'Skolotāju mājas lapa'
       label: 'Sveiki, %{username}'
@@ -189,7 +206,12 @@ lv:
       logout: 'Izrakstīties'
       signin: 'Pierakstīties'
       already_registered: 'Jau reģistrējies?'
-      pair_programming: 'Pāru Programmēšana'
+      team: 'Komanda'
+      create: 'Izveidot'
+      applab: 'Aplikāciju laborotorija'
+      artist: 'Mākslinieks'
+      playlab: 'Spēles laboratorija'
+      flappy: 'Flapijs'
     popup:
       progress_for_user: "%{name} panākumi"
       progress: 'Jūsu progress'
@@ -234,6 +256,9 @@ lv:
     delete_text: "Nospiežot šo pogu, jūs izdzēsīsiet savu kontu."
     delete_text_teacher_note: "Lūdzu, ņemiet vērā, ka jūsu konta dzēšana neizdzēsīs jūsu skolēnu kontus."
     delete_confirm: 'Vai jūs tiešām vēlaties dzēst savu kontu?'
+    deleted_user: 'dzēsts lietotājs'
+    create_personal_login_under_13_username: "Lietotājvārds (neizmanto savu īsto vārdu!)"
+    create_personal_login_under_13_parent_email: 'Vecāka/aizbildņa e-pasta adrese'
   user_level:
     completed: 'Pabeigts'
     tried: 'Mēģināts'
@@ -355,6 +380,7 @@ lv:
   upsell:
     applab:
       title: 'Aplikāciju laborotorija'
+      audience: 'Vecums 13+'
     hoc:
       body: 'Mēģini datorzinātņu pamatus. Miljoniem ir mēģinājuši.'
     flappy:
@@ -368,12 +394,20 @@ lv:
     gallery:
       title: "Galerija"
       body: "Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji"
+    gamelab:
+      audience: "Vecums 13+"
+    weblab:
+      audience: "Vecums 13+"
     frozen:
       title: "Ledus sirds"
     minecraft:
       body: "Iepazīsti Minecraft pasauli, izmantojot kodu"
+    unplugged:
+      audience: "Vecums 4+"
     unplugged_conditionals:
       title: "Sazarojumi"
+    widgets:
+      audience: "Vecums 14+"
   gallery:
     students_drew_these_with_code: "Skolnieki uzzīmēja šos ar kodu!"
     students_made_these_with_code: "Skolēni izveidoja šos ar kodu!"
@@ -392,6 +426,8 @@ lv:
     report_bug: "Kļūdas ziņojums"
     support: "Saņemt palīdzību"
     support_url: "//support.code.org"
+    help_support: "Palīdzība un atbalsts"
+    documentation: "Dokumentācija"
   multi:
     wrong_title: "Nepareiza atbilde"
     wrong_body: "Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!"
@@ -415,6 +451,8 @@ lv:
     wrong_title: "Nepareiza atbilde"
   text_match:
     placeholder: "Ievadi savu atbildi šeit"
+    open_response_title: "Paldies"
+    open_response_body: "Paldies par Tavu atbildi!"
     correct_title: "Pareizi"
     correct_body: "Tā ir pareizā atbilde."
   dialog:
@@ -453,6 +491,7 @@ lv:
   project:
     save: "Saglabāt"
     delete: "Izdzēst"
+    my_projects: "Mani projekti"
     share: "Ieteikt"
     more: "Vairāk"
     name: "Vārds"
@@ -467,14 +506,29 @@ lv:
           other: 'Citi'
   flex_category:
     required: 'Pārskats'
+    csf_e_2: 'Kursa E saturs'
+    csf_f_2: 'Kursa F saturs'
+  hoc_download:
+    capsule_title: 'Vai Tev ir internets?'
+    instructions_headline: 'Nav interneta?'
   pd:
     form_labels:
+      first_name: 'Vārds'
+      last_name: 'Uzvārds'
       email: 'E-pasts'
+      school_name: 'Skolas nosaukums'
     form_entries:
       gender:
         male: 'Vīrietis'
         female: 'Sieviete'
         none: 'Nēlos atbildēt'
+      school_country:
+        canada: 'Kanāda'
+        chile: 'Čīle'
+        israel: 'Izraēla'
+        malaysia: 'Malaizija'
+        mexico: 'Meksika'
+        thailand: 'Taizeme'
       subjects:
         cs: 'Datorzinātne'
         math: 'Matemātika'

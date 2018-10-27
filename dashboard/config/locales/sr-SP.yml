@@ -82,6 +82,7 @@ sr:
     twitter: Twitter
     facebook: Facebook
     windowslive: Мајкрософт налог
+    microsoft_v2_auth: Мајкрософт налог
     forgot_password: Заборавили сте лозинку?
     need_confirmation: Нисте примили инструкције за потврду?
     need_unlock: Нисте примили инструкције за откључавање?
@@ -203,7 +204,6 @@ sr:
         playlab: Направи апликацију
         artist: Нацртај нешто
         applab: Направи апликацију
-      courses: курсеви
       educate_hoc: Час кода
     user:
       classroom: Почетна страница за учитеље
@@ -214,6 +214,10 @@ sr:
       logout: Одјави се
       signin: Пријави се
       already_registered: Већ си регистрован?
+      create: Креирај
+      artist: Уметник
+      playlab: Играоница
+      flappy: Флапи
     popup:
       progress_for_user: Напредак %{name}
       progress: Напредак

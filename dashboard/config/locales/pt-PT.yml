@@ -90,6 +90,7 @@ pt:
     twitter: Twitter
     facebook: Facebook
     windowslive: Outlook
+    microsoft_v2_auth: Outlook
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
@@ -251,8 +252,6 @@ pt:
         playlab: Criar uma aplicação Play Lab
         artist: Desenhar alguma coisa
         applab: Criar uma aplicação App Lab
-      home: Início
-      courses: Cursos
       project_gallery: Projetos
       sections: Turmas
       help_support: Ajuda e suporte
@@ -282,10 +281,15 @@ pt:
       signin: Iniciar sessão
       signup: Criar uma conta
       already_registered: Já criaste uma conta?
-      pair_programming: Programação em duplas
       team: Equipa
       driver: Controlador
       navigator: Navegador
+      create: Criar
+      applab: Laboratório de aplicações
+      artist: Artista
+      playlab: Laboratório
+      minecraft: Minecraft
+      flappy: Flappy Bird
     popup:
       progress_for_user: progresso de %{name}'s
       progress: O teu progresso

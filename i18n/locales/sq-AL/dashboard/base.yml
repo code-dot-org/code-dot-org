@@ -80,6 +80,7 @@ sq:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
+    microsoft_v2_auth: 'Llogaria e Microsoft'
     forgot_password: 'Keni harruar fjalëkalimin?'
     need_confirmation: "Nuk i keni marr instruksionet e konfirmimit?"
     need_unlock: "Nuk keni marre instruksionet e zhbllokimit?"
@@ -201,7 +202,6 @@ sq:
         playlab: 'Bëj një Aplikacion Play Lab'
         artist: 'Vizato Diçka'
         applab: 'Bëj një Aplikacion App Lab'
-      courses: "Kurset"
       project_gallery: "Projekte"
       educate_hoc: "Ora e Kodimit"
     user:
@@ -214,10 +214,15 @@ sq:
       signin: 'Futu'
       signup: 'Krijo një llogari'
       already_registered: 'Jeni i rregistruar?'
-      pair_programming: 'Programim në çift'
       team: 'Skuadra'
       driver: 'Përdorues'
       navigator: 'Lundrues'
+      create: 'Krijo'
+      applab: 'Laboratori i Aplikacioneve'
+      artist: 'Artisti'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'

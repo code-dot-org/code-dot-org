@@ -1,5 +1,5 @@
 ---
-title: '& lt;% = hoc_s (: title_press_release)% & gt;'
+title: <%= hoc_s(:title_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
@@ -7,9 +7,9 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Ayuda a promover "La Hora del Código"
+# Promueve la "Hora del Código"
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code](<%= resolve_url('/how-to') %>)!
+### Encuentra todos los recursos que necesitas para llamar la atención hacia tu "Hora del Código". ¿No sabes donde empezar? Inicia con nuestra <a href="<%= resolve_url('/how-to') %>guía para ser anfitrión de la "Hora del Código"</a>!
 
 * * *
 
@@ -19,7 +19,11 @@ nav: promote_nav
 
 ## Cuelga estos carteles en tu escuela
 
-<%= view :promote_posters %>
+[![imagen](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+
+[![imagen](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+
+Looking for our posters from previous years? [Find them here](<%= resolve_url('/promote/previous-posters') %>)!
 
 <a id="social"></a>
 
@@ -37,13 +41,13 @@ nav: promote_nav
 
 [![imagen](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Descarga versiones de alta resolución](http://images.code.org/share/hour-of-code-logo.zip)
+[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
-**La "Hora del Código" es una marca registrada. No queremos evitar este uso, pero queremos que quede dentro de unos límites:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Cualquier referencia a "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu propia marca, sino que haga referencia a la "Hora del Código" como un movimiento de base. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
+1. Cualquier referencia a "Hora del Código" debe usarse de tal manera que no sugiera que es el nombre de tu propia marca, sino que haga referencia a la "Hora del Código" como un movimiento de base. **Buen ejemplo**: "Participa en la Hora del Código™ en ACMECorp.com." **Mal ejemplo**: "Intenta participar en la Hora el Código de ACME Corp."
 2. Usa un "TM" en forma de superíndice en los lugares más importantes donde menciones la "Hora del Código," así como en tu sitio web o en las descripciones de apps.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org](%= resolve_url('https://code.org') %) websites, that says the following:
+3. Incluye mensajes en tu página (o en el pie de página), incluyendo vínculos hacia la Semana por la Educación de la Informática y al sitio web de [Code.org](%= resolve_url('https://code.org') %), que digan lo siguiente:
     
     *"La 'Hora del Código ™' es una iniciativa nacional por la Semana de Educación en Ciencias de Computación [csedweek.org] y Code.org [code.org] para introducir las Ciencias de la Computación y la programación a millones de estudiantes."*
 
@@ -53,15 +57,15 @@ nav: promote_nav
 
 ## Imprima estas pegatinas para dar a sus estudiantes
 
-(Las pegatinas son de 2,54cm de diámetro, 63 por hoja)<br />
+(Stickers are 1" diameter, 63 per sheet) <br />
 
 [![imagen](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## Invita a personas de tu comunidad a tu Hora del Código y promueve tu evento vía correo electrónico
 
-### Find [more information and language you can use](<%= resolve_url('/promote/stats') %>) when talking about the Hour of Code.
+### Encuentra <a href="<%= resolve_url('/promote/stats') %>más información y mensajes que puedes utilizar</a> cuando hables sobre la Hora del Código.
 
 * * *
 
@@ -69,17 +73,17 @@ nav: promote_nav
 
 ### Pídele a tu escuela, jefe o amigos que se registren:
 
-**Asunto:** Únete a mí y a más 100 millones de estudiantes para una Hora de Código <br />
+**Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Las computadoras están por todas partes, cambiando todas las industrias en el planeta. Pero menos de la mitad de todas las escuelas enseñan Informática. ¡La buena noticia es que estamos trabajando para cambiar esto! Si has oído hablar de la Hora de Código, podrías saber que hizo historia. Más de 100 millones de estudiantes han probado una Hora del Código.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Con la Hora del Código, la informática ha estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Cada Apple Store en el mundo ha organizado una hora de código, y líderes como el presidente Obama y el primer ministro canadiense Justin Trudeau escribieron sus primeras líneas de código como parte de la campaña.
+Con la Hora del Código, la informática ha estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Este año, hagámoslo aún más grande. Te pido que te unas a la Hora del Código <%= campaign_date('year') %>. Por favor, participa en un evento de la Hora del Código para la Semana de educación en informática, <%= campaign_date('full')%>.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O haz tu mismo la Hora del Código - todos pueden beneficiarse de aprender los conceptos básicos.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Comienza en http://hourofcode.com/<%= @country %> <br />
+Get started at http://hourofcode.com/<%= @country %> <br />
 
 * * *
 
@@ -87,19 +91,19 @@ Comienza en http://hourofcode.com/<%= @country %> <br />
 
 ### Voluntario en una escuela:
 
-#### [Find more resources and information about volunteering in schools here](<%= resolve_url('/how-to/volunteers') %>).
+#### <a href="<%= resolve_url('/how-to/volunteers') %>Encuentra más recursos e información sobre el voluntareado en escuelas en este vínculo</a>.
 
-**Asunto:** ¿Podemos ayudarte a organizar la Hora del código?
+**Subject line:** Can we help you host an Hour of Code?
 
-Entre <%= campaign_date('short') %>, el diez por ciento de los estudiantes de todo el mundo celebrarán La Semana de Educación en Informática haciendo un evento de la Hora del Código evento en sus escuelas. Es una oportunidad para todos los niños de aprender cómo funciona la tecnología que nos rodea.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
 
-[Nuestra organización / Mi nombre] me encantaría ayudar a [nombre de la escuela] a organizar un evento de la Hora del código. Podemos ayudar a los profesores a organizar una hora de código en sus aulas (¡ni siquiera necesitamos computadoras!) O si desea organizar una asamblea escolar, podemos hacer arreglos para que un orador hable sobre cómo funciona la tecnología y cómo es ser un ingeniero de software.
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
-Los estudiantes crearán sus propias aplicaciones o juegos que pueden mostrar a sus padres, y también imprimiremos certificados de Hora del Código que pueden llevar a casa. ¡Y es divertido! Con actividades interactivas y prácticas, los estudiantes aprenderán habilidades de pensamiento computacional de una manera accesible.
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Las computadoras están por todas partes, cambiando todas las industrias en el planeta. Pero menos de la mitad de todas las escuelas enseñan Informática. ¡La buena noticia es que estamos trabajando para cambiar esto! Si ya has oido sobre la Hora del Código, es posible que sepas que hizo historia: más de 100 millones de estudiantes en todo el mundo han probado una Hora de Código. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Puedes leer más sobre el evento en http://hourofcode.com. O infórmenos si desea hacer tiempo para hablar sobre cómo [nombre de la escuela] puede participar.<br />
+You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
 * * *
 
@@ -107,19 +111,19 @@ Puedes leer más sobre el evento en http://hourofcode.com. O infórmenos si dese
 
 ### Háblale a los padres sobre el evento de tu escuela:
 
-**Asunto:** nuestros estudiantes están cambiando el futuro con una Hora de Código
+**Subject line:** Our students are changing the future with an Hour of Code
 
-Estimados padres,
+Dear Parents,
 
-Vivimos en un mundo rodeado de tecnología. Y sabemos que cualquier carrera que nuestros estudiantes elijan de adultos, su capacidad para tener éxito dependerá cada vez más en comprender cómo funciona la tecnología.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Pero sólo una pequeña fracción de nosotros está aprendiendo **cómo** la tecnología funciona. Menos de la mitad de todas las escuelas enseñan Ciencias de la computación.
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
-Por eso toda nuestra escuela se está uniendo el evento de aprendizaje más grande en la historia: la Hora del Código, en la Semana de Educación en Ciencias de la Computación (<%= campaign_date('full') %>). Más de 100 millones de estudiantes de todo el mundo ya han hecho una Hora del Código. Nuestra Hora del Código es una declaración de que [NOMBRE DE LA ESCUELA] está lista para enseñar estas habilidades fundamentales del siglo XXI. Para continuar trayendo actividades de programación a sus estudiantes, queremos hacer nuestro evento de la Hora del Código enorme. Os animo a ser voluntarios, llegar a medios de comunicación locales, compartir las noticias en las redes sociales y considerar realizar eventos adicionales de la Hora del Código en tu comunidad.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-Esta es una oportunidad para cambiar el futuro de la educación en [nombre de la ciudad].
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-Visita http://hourofcode.com/<%= @country %> para consultar detalles, y ayudar a difundir la noticia. <br />
+See http://hourofcode.com/<%= @country %> for details, and help spread the word. <br />
 
 * * *
 
@@ -127,7 +131,7 @@ Visita http://hourofcode.com/<%= @country %> para consultar detalles, y ayudar a
 
 ### Invita a los medios de comunicación a asistir a tu evento:
 
-#### [Check out our press kit for more information on inviting media to your event.](<%= resolve_url('/promote/press-kit') %>)
+#### [Revisa nuestro kit de prensa para más información sobre la invitación de los medios a tu evento.](<%= resolve_url('/promote/press-kit') %>)
 
 **Asunto**: La escuela local se une a la misión de introducir a los estudiantes en las Ciencias de la computación
 
@@ -141,7 +145,7 @@ Le escribo para invitarle a asistir a nuestra Asamblea de comienzo y a ver cómo
 
 La Hora del Código, organizada por la entidad sin ánimo de lucro Code.org y más de otros 100, es un movimiento que cree los estudiantes de hoy están listos para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únete a nosotros.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Contacto: [TU NOMBRE], [TITLE]. Teléfono: (212) 555-5555. Cuándo: [FECHA y HORA del tu evento]. Dónde: [DIRECCIÓN e INDICACIONES PARA LLEGAR]
 
 Estoy deseando estar en contacto.<br />
 
@@ -151,20 +155,20 @@ Estoy deseando estar en contacto.<br />
 
 ### Invitar a un político local al evento de tu escuela:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event](<%= resolve_url('/how-to/public-officials') %>).
+#### <a href="<%= resolve_url('/how-to/public-officials') %>¿Necesitas más información? Hecha un vistazo a nuestros recursos para invitar a politicos a asistir a tu evento</a>.
 
-**Asunto**: Únete a nuestra escuela mientras cambiamos el futuro con una Hora de Código
+**Subject line**: Join our school as we change the future with an Hour of Code
 
-Estimado [Apellido del alcalde/gobernador/representante/senador]:
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-¿Sabía que la informática es la primera fuente de los salarios en los Estados Unidos? Hay más de 500.000 trabajos de informática a escala nacional, pero el año pasado solo 42,969 estudiantes de informática se graduaron.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-La informática es fundamental para cada industria en la actualidad. Sin embargo, la mayoría de las escuelas no lo enseñan. En [NOMBRE DE LA ESCUELA], estamos tratando de cambiar eso.
+Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Por eso toda nuestra escuela se está uniendo el evento de aprendizaje más grande en la historia: la Hora del Código, en la Semana de Educación en Ciencias de la Computación (<%= campaign_date('full') %>). Más de 100 millones de estudiantes de todo el mundo ya han hecho una Hora del Código.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Le escribo para invitarle a participar en nuestro evento de la Hora del Código y hablar en nuestra Asamblea de comienzo. Se llevará a cabo el [fecha, hora, lugar] y hará una declaración firme de que [nombre del estado o ciudad] está preparado para enseñar a nuestros estudiantes habilidades críticas del siglo XXI. Queremos asegurarnos que nuestros estudiantes estén en la vanguardia de la creación de tecnología del futuro, que no sólo la consuman.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Por favor comuníquese conmigo al [número de teléfono o dirección de correo electrónico]. Espero su respuesta.
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 <%= view :signup_button %>

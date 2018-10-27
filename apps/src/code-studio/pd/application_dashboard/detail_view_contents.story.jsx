@@ -16,12 +16,14 @@ export default storybook => {
             applicationId="1"
             applicationData={{
               course_name: 'CS Discoveries',
+              course: 'csd',
               regional_partner_name: 'partner',
               notes: 'notes',
               status: 'unreviewed',
               school_name: 'School Name',
               district_name: 'District Name',
               email: 'email',
+              application_year: '2019-2020',
               application_type: 'Facilitator',
               meets_criteria: 'Yes',
               bonus_points: 15,

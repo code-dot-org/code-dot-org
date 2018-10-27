@@ -68,6 +68,7 @@ bn:
     twitter: টুইটার
     facebook: ফেইসবুক
     windowslive: মাইক্রোসফট অ্যাকাউন্ট
+    microsoft_v2_auth: মাইক্রোসফট অ্যাকাউন্ট
     forgot_password: আপনার পাসওয়ার্ড ভুলে গেছেন?
     need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
     need_unlock: আনলক করার নির্দেশাবলী পাওনি?
@@ -167,7 +168,6 @@ bn:
       free_play:
         playlab: একটি অ্যাপ তৈরি করুন
         applab: একটি অ্যাপ তৈরি করুন
-      courses: পাঠ্যতালিকা
       project_gallery: প্রকল্প
       educate_hoc: এক ঘন্টার কোড
       stats: পরিসংখ্যান
@@ -178,6 +178,12 @@ bn:
       settings: আমার একাউন্ট
       logout: সাইন আউট
       signin: সাইন ইন করুন
+      create: তৈরি করুন
+      applab: অ্যাপ ল্যাব
+      artist: শিল্পী
+      playlab: প্লে ল্যাব
+      minecraft: মাইনক্র্যাফট
+      flappy: ফ্লাপি
     popup:
       progress: আপনার অগ্রগতি
       close: বন্ধ

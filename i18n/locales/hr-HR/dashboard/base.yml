@@ -69,6 +69,7 @@ hr:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft račun'
+    microsoft_v2_auth: 'Microsoft račun'
     forgot_password: 'Zaboravio si lozinku?'
     need_confirmation: "Nisi primio upute za potvrdu?"
     need_unlock: "Nisi primio upute za otključavanje?"
@@ -177,7 +178,6 @@ hr:
         artist: 'Nacrtaj nešto'
         calculate: 'Izračunajte nešto'
         applab: 'Napravi aplikaciju'
-      courses: "Tečajevi"
       project_gallery: "Projekti"
       educate_hoc: "Hour of Code"
     user:
@@ -189,7 +189,12 @@ hr:
       logout: 'Odjava'
       signin: 'Prijava'
       already_registered: 'Jeste li već registrirani?'
-      pair_programming: 'Programiranje u paru'
+      create: 'Stvori'
+      applab: 'Laboratorij aplikacija'
+      artist: 'Umjetnik'
+      playlab: 'Laboratorij igara'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Napredak %{name}"
       progress: 'Tvoj napredak'

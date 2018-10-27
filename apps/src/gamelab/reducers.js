@@ -5,7 +5,7 @@ import {
   VIEW_ANIMATION_JSON,
   HIDE_ANIMATION_JSON,
   TOGGLE_GRID_OVERLAY,
-  SET_MOBILE_CONTROLS_CONFIG,
+  SET_MOBILE_CONTROLS_CONFIG
 } from './actions';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 import animationList from './animationListModule';

@@ -6,41 +6,43 @@ nl:
         options:
           UNIT:
             '"seconds"': seconden
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Volgende
-            '"prev"': Vorige
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: alles
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Volgende
-            '"prev"': Vorige
+            MOVES.Rest: Geen
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Geen
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      Dancelab_doMoveOnce:
+            '"height"': hoogte
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: alles
+          MOVE:
+            MOVES.Rest: Geen
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Volgende
-            '"prev"': Vorige
+            MOVES.Rest: Geen
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +51,54 @@ nl:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
+            '"height"': hoogte
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Geen
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: alles
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': willekeurig
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': rechts
-            '"left"': links
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': willekeurig
       Dancelab_randomColor:
         text: willekeurige kleur
       Dancelab_setBackgroundEffect:
@@ -88,165 +121,34 @@ nl:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
+            '"height"': hoogte
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: alles
+          PROPERTY:
+            '"scale"': grootte
+            '"height"': hoogte
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"height"': hoogte
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: alles
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
+            '"height"': hoogte
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
+            '"height"': hoogte
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': seconden
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Volgende
-            '"prev"': Vorige
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: alles
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Volgende
-            '"prev"': Vorige
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Volgende
-            '"prev"': Vorige
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': seconden
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: alles
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': rechts
-            '"left"': links
-      DancelabAlpha_randomColor:
-        text: willekeurige kleur
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': Geen
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normaal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Geen
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: alles
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"x"': x positie
-            '"y"': y positie
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': omhoog
@@ -345,19 +247,83 @@ nl:
             '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": links
+            "{x: 300, y: 200}": rechts
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
+      Mikelab_randomColor:
+        text: willekeurige kleur
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
-      Vanilla_randomColor:
-        text: willekeurige kleur
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': rechts
+            '"left"': links
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': pijltje naar boven
+            '"down"': pijltje naar beneden
+            '"left"': pijltje naar links
+            '"right"': pijltje naar rechts
+            '"w"': W
+            '"a"': A
+            '"s"': Z
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': pijltje naar boven
+            '"down"': pijltje naar beneden
+            '"left"': pijltje naar links
+            '"right"': pijltje naar rechts
+            '"w"': W
+            '"a"': A
+            '"s"': Z
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': pijltje naar boven
+            '"down"': pijltje naar beneden
+            '"left"': pijltje naar links
+            '"right"': pijltje naar rechts
+      RyanLab_moveForward:
+        text: beweeg vooruit
+      RyanLab_turnLeft:
+        text: Draai linksom
+      RyanLab_turnRight:
+        text: Draai rechtsom
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": voor
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": zand
+            "'planksOak'": eikenhouten planken
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": zand
       craft_moveForward:
         text: beweeg vooruit
+      craft_placeTorch:
+        text: plaats toorts

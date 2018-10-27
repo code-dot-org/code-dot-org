@@ -95,6 +95,7 @@ nl:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Account
+    microsoft_v2_auth: Microsoft Account
     clever: Slimme Account
     forgot_password: Wachtwoord vergeten?
     need_confirmation: Geen bevestigingsinstructies ontvangen?
@@ -282,9 +283,7 @@ nl:
         applab: Maak een App
         gamelab: Maak een Game Lab project
         weblab: Maak een Web Lab (beta) project
-      home: Home
       my_dashboard: Mijn Dashboard
-      courses: Cursussen
       course_catalog: Cursuscatalogus
       project_gallery: Projecten overzicht
       sections: Secties
@@ -326,10 +325,16 @@ nl:
       signin: Aanmelden
       signup: Maak een account aan
       already_registered: Al aangemeld?
-      pair_programming: Programmeren in Tweetallen
       team: Team
       driver: Stuurprogramma
       navigator: Navigator
+      create: Maak
+      applab: App Lab
+      artist: Kunstenaar
+      gamelab: Game Lab
+      playlab: Speel Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: Jouw voortgang

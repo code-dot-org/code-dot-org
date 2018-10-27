@@ -47,7 +47,7 @@ sk:
       move and get 3: posuň sa a zober 3
       draw a tree: nakresli strom
       draw triangle: nakresli trojuholník
-      draw circle: nakresli kruh
+      draw circle: nakresli kružnicu
       draw goal: nakresli cieľ
       graph: graf
       draw waves: nakresli vlny
@@ -84,7 +84,7 @@ sk:
       dropL: pustiĽ
       init: spusti
       grabR: chyťP
-      do something: robenie niečoho
+      do something: urob niečo
       filter_pixel: filtruj_pixel
       draw_image: nakresli_obrázok
       witch ending: koniec_bosorky
@@ -159,7 +159,7 @@ sk:
       draw spiral circle: nakresli špirálu
       draw roof: nakresli strechu
       draw rectangle: nakresli obdĺžnik
-      move: presunúť
+      move: posuň sa
       function 1: funkcia 1
       function 2: funkcia 2
       destroy and move: znič a posuň sa

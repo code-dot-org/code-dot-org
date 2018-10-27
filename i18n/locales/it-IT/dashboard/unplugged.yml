@@ -90,7 +90,7 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       DigitalCitizenship:
         title: Cittadinanza Digitale
         desc: Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no.
@@ -201,7 +201,7 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       courseE_unplugged_songwriting:
         title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
@@ -269,7 +269,7 @@ it:
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.
       courseE_unplugged_CnC_2018:
         title: Condivisione Digitale
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code. org e serve per aiutare gli studenti a capire le sfide e i benefici del rispetto della prprietà e del copyright, in particolare negli ambienti digitali. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come una parte importante dell'essere un cittadino digitale etico.
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       RelayProgramming_2018:
         title: Programmazione a Staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'

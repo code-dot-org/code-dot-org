@@ -28,6 +28,8 @@ zh-CN:
         age: 年龄
         gender: 性别
         edit_header: 编辑用户信息
+        finish_sign_up_header: 完成创建帐户
+        finish_sign_up_subheader: 填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。
         error:
           future: 不能选择将来的时间
   hello: 世界你好
@@ -85,14 +87,19 @@ zh-CN:
     twitter: 推特
     facebook: Facebook
     windowslive: 微软账户
+    microsoft_v2_auth: 微软账户
     clever: Clever 账号
     powerschool: Powerschool 帐户
     forgot_password: 忘记了您的密码吗？
+    migration_success: 成功！已经更新为新的帐户体验。
+    demigration_success: 新帐户体验已禁用。
     need_confirmation: 没有收到确认的说明吗？
     need_unlock: 未收到解锁指令吗？
     not_linked: 对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。
     use_clever: 对不起，您的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。
     unable_to_connect_provider: 无法将您的 Code.org 帐户连接到 %{provider}。请重试。
+    already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
+    already_linked: 你的 %{provider} 已连接到了 Code.org 帐户。
   signup_form:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
@@ -133,9 +140,9 @@ zh-CN:
     user_type_teacher: 老师
     user_type_student: 学生
     field_is_required: 必填
-    accept_terms: 您必须同意创建一个帐户
+    accept_terms: 必须同意创建一个帐户。
     error: 发生错误。
-    email_preference_question: 我们可以通过电子邮件向您发送有关我们课程、本地的机会以及其他计算机科学新闻吗？
+    email_preference_question: 我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）
     email_preference_privacy: "(请参阅我们的隐私政策)"
     email_preference_yes: 对
     email_preference_no: 不
@@ -270,9 +277,7 @@ zh-CN:
         applab: 创建一个游戏实验室应用
         gamelab: 创建一个游戏实验室项目
         weblab: 开始一个网站实验室（测试版）项目
-      home: 首页
       my_dashboard: 我的控制面板
-      courses: 课程
       course_catalog: 课程分类
       project_gallery: 项目
       sections: 小组
@@ -317,10 +322,18 @@ zh-CN:
       signin: 登录
       signup: 创建一个账户
       already_registered: 已经注册了？
-      pair_programming: 结对编程
       team: 团队
       driver: 已登录
       navigator: 搭档
+      create: 创建
+      applab: 应用实验室
+      artist: 小艺术家
+      gamelab: 游戏实验室
+      playlab: 游戏实验室
+      spritelab: 精灵实验室
+      minecraft: 我的世界
+      flappy: Flappy Bird
+      dance: 舞蹈派对
     popup:
       progress_for_user: "%{name}的进度"
       progress: 您的进度

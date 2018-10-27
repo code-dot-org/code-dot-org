@@ -28,6 +28,7 @@ module SharedConstants
       not_tried: "not_tried",
       submitted: "submitted",
       locked: "locked",
+      readonly: "readonly",
       perfect: "perfect",
       passed: "passed",
       attempted: "attempted",
@@ -95,6 +96,8 @@ module SharedConstants
     basketball
     artist_k1
     playlab_k1
+    dance
+    spritelab
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.

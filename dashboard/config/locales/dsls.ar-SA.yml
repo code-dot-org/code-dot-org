@@ -232,6 +232,9 @@ ar:
       CSDU2L01 SFLP:
         description here: الوصف هنا
         title: العنوان
+      CSP ExploreL02 SFLP:
+        description here: الوصف هنا
+        title: العنوان
       CSP Journal Entry Placeholder2:
         description here: الوصف هنا
         title: العنوان

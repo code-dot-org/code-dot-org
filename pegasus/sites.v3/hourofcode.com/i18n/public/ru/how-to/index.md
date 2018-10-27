@@ -1,23 +1,27 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
+title: <%= hoc_s(:title_how_to).inspect %>
 layout: wide
 nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>Как преподавать Час Кода</h1>
+# How to teach one Hour of Code with your class
 
-Присоединяйся к движению и познакомь группу учащихся с их первым часом в информатике с помощью этих шагов. Час Кода легко провести - даже для новичков! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
+### Присоединяйся к движению и познакомь группу учащихся с их первым часом в информатике с помощью этих шагов. Час Кода легко провести - даже для новичков! Если вам понадобится рука помощи, вы можете найти [местных волонтёров](<%= codeorg_url('/volunteer/local') %>), чтобы помочь запустить Час Кода в вашем классе.
 
-## 1. Посмотрите эту видео инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### Take a look at our [participation guide if you still have questions](<%= localized_file('/files/participation-guide.pdf') %>).
+
+---
+
+## 1. Посмотрите эту видео-инструкцию <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Выберите учебное пособие для вашего часа
 
-Мы предоставляем разнообразные веселые [уроки для самостоятельной работы](<%= resolve_url('/learn') %>) для всех возрастных групп и уровней знания. Ученики проходят уроки самостоятельно, так же многие уроки включают план для учителя (вы увидите ссылку когда кликните на урок) как вести обсуждение или как дополнить урок. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
+We provide a variety of fun, [student-guided tutorials](<%= resolve_url('/learn') %>) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](<%=resolve_url('/learn') %>)
 
 ## 3. Продвигайте свой Час Кода
 
-Продвигайте свой Час Кода [с помощью этих инструментов](<%= resolve_url('/promote') %>) и воодушевляйте других проводить свои собственные.
+Promote your Hour of Code [with these tools](<%= resolve_url('/promote/resources') %>) and encourage others to host their own events.
 
 ## 4. Определите вашу потребность в оборудовании - компьютеры не обязательны
 
@@ -38,27 +42,27 @@ nav: how_to_nav
 **Покажите вдохновляющее видео:**
 
 - Оригинальное видео запуска Code.org, с участием Билла Гейтса, Марка Цукерберга, и звезды НБА Криса Боша. ([1 минутная](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 минутная](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутная](https://www.youtube.com/watch?v=dU1xS07N-FA) версии доступны)
-- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Найдите больше вдохновляющих [ресурсов](<%= resolve_url('https://code.org/inspire') %>) и [видео](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Это нормально если вы и ваши ученики новички в компьютерной науке. Вот несколько идей, как начать вашу деятельность в Часе Кода:**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Объясните как технологии влияют на наши жизни, с примерами которые тронут и мальчиков и девочек (расскажите о спасении жизней, помощи людям, объединения людей и т.д.).
 - Расскажите, как код в используется повседневной жизни.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
+- Посмотрите советы как заинтересовать девочек в IT [здесь](<%= codeorg_url('/girls')%>).
 
 ## 6. Программируйте!
 
-**Объясните ученикам как начать**
+**Direct students to the activity**
 
 - Запишите на доске ссылку на урок. Найти ссылку можно в [информации для выбранного урока](<%= resolve_url('/learn') %>) под числом участников.
 
-**Если кто-то столкнулся с трудностями, будет правильно ответить:**
+**When your students come across difficulties it's okay to respond:**
 
 - “Я не знаю. Давай разберемся вместе”
 - “Технология не всегда работает так, как мы хотим”
 - “Изучение программирования - это как изучение нового языка, вы не сразу станете говорить свободно.”
 
-**Что делать, если кто-то справляется раньше всех?**
+**What if a student finishes early?**
 
 - Ученики могут посмотреть все уроки и [ попробовать другой Час Кода](<%= resolve_url('/learn')%>).
 - Или попросите учеников, кто закончил раньше, помочь их товарищам, которые испытывают трудности.
@@ -79,7 +83,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
+- [Распечатайте сертификаты](<%= codeorg_url('/certificates')%>) для своих учеников.
 - [Напечатайте наклейки "Час кода: Я сделал это!"](<%= resolve_url('/promote/resources#stickers') %>) для ваших учеников.
 - [Закажите специальные футболки](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для вашей школы.
 - Поделитесь фотографиями и видео о вашем Часе Кода в социальных медиа. Используйте хештеги #HourOfCode и @codeorg, чтобы мы тоже смогли отметить ваш успех!

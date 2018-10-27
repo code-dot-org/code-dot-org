@@ -17,6 +17,8 @@
 class Pd::RegionalPartnerContact < ActiveRecord::Base
   include Pd::Form
 
+  UNMATCHED_FORM_EMAIL = 'anthonette@code.org'
+
   belongs_to :user
   belongs_to :regional_partner
 
@@ -35,17 +37,17 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
 
       if regional_partner_program_managers.empty?
         matched_but_no_pms = true
-        Pd::RegionalPartnerContactMailer.unmatched(form, 'tawny@code.org', matched_but_no_pms).deliver_now
+        Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL, matched_but_no_pms).deliver_now
       else
         regional_partner_program_managers.each do |rp_pm|
           Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
         end
       end
     else
-      Pd::RegionalPartnerContactMailer.unmatched(form, 'tawny@code.org').deliver_now
+      Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL).deliver_now
     end
 
-    Pd::RegionalPartnerContactMailer.receipt(form).deliver_now
+    Pd::RegionalPartnerContactMailer.receipt(form, regional_partner).deliver_now
   end
 
   def self.required_fields
@@ -54,8 +56,8 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       :last_name,
       :email,
       :role,
-      :job_title,
       :grade_levels,
+      :notes,
       :opt_in
     ]
   end
@@ -63,10 +65,8 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
   def self.options
     super.merge(
       {
-        title: %w(Mr. Mrs. Ms. Dr.),
         role: ['Teacher', 'School Administrator', 'District Administrator'],
-        gradeLevels: ['High School', 'Middle School', 'Elementary School'],
-        program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'],
+        gradeLevels: ['High School (9-12)', 'Middle School (6-8)', 'Elementary School (K-5)'],
         opt_in: ['Yes', 'No']
       }
     )
@@ -102,7 +102,11 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
         add_key_error(:school_district_data) unless hash[:school_district].presence
       end
     else
-      add_key_error(:school_district_data) unless hash[:school_name].presence && hash[:school_zipcode]
+      add_key_error(:school_district_data) unless hash[:school_name].presence
+    end
+
+    if hash[:school_name].presence && !hash[:school_zipcode].presence
+      add_key_error(:school_district_data)
     end
   end
 

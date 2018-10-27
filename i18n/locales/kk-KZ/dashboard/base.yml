@@ -70,6 +70,7 @@ kk:
     twitter: 'Твиттер'
     facebook: 'Facebook'
     windowslive: 'Microsoft Аккаунт'
+    microsoft_v2_auth: 'Microsoft Аккаунт'
     forgot_password: 'Құпия сөзіңізді ұмыттыңыз ба?'
     need_confirmation: "Растау жөніндегі нұсқауларды алмадыңыз ба?"
     need_unlock: "Құлыптан шығару жөніндегі нұсқауларды алмадыңыз ба?"
@@ -184,7 +185,6 @@ kk:
         playlab: 'Қосымша бағдарлама жасау'
         artist: 'Кез келген нәрсе салу'
         applab: 'Қосымша бағдарлама жасау'
-      courses: "Курстар"
       project_gallery: "Жобалар"
       educate_hoc: "Код жазу Сағаты"
     user:
@@ -197,9 +197,14 @@ kk:
       signin: 'Кіру'
       signup: 'Жеке парақшаны құрыңыз'
       already_registered: 'Тіркелгенсіз бе?'
-      pair_programming: 'Жұптасып Бағдарламалау'
       team: 'Топ'
       navigator: 'Навигатор'
+      create: 'Құру'
+      applab: 'Қосымшалар Лабораториясы'
+      artist: 'Кейіпкер'
+      playlab: 'Ойындар Лабораториясы'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: 'Сіздің сабақ оқу барысыңыз'

@@ -6,41 +6,40 @@ ja:
         options:
           UNIT:
             '"seconds"': 秒
-      Dancelab_changeMove:
+      Dancelab_changeColorBy:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
-      Dancelab_changeMoveEach:
+          METHOD:
+            '"saturation"': 彩度
+            '"brightness"': 明るさ
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: すべて
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      Dancelab_doMoveOnce:
+            '"height"': 高さ
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
+          GROUP:
+            sprites: すべて
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +48,39 @@ ja:
         options:
           PROPERTY:
             '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
+            '"height"': 高さ
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: すべて
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': ランダム に
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': 右 に
-            '"left"': 左 に
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': ランダム に
       Dancelab_randomColor:
         text: てきとうな色
       Dancelab_setDanceSpeed:
@@ -80,30 +95,33 @@ ja:
         options:
           PROPERTY:
             '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
+            '"height"': 高さ
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: すべて
+          PROPERTY:
+            '"scale"': おおきさ
+            '"height"': 高さ
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"height"': 高さ
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: すべて
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
+            '"height"': 高さ
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
+            '"height"': 高さ
       Dancelab_whenKey:
         options:
           KEY:
@@ -112,132 +130,11 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
-      Dancelab_whileKey:
+      gamelab_changeColorBy:
         options:
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': 秒
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: すべて
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': 次へ
-            '"prev"': 戻る
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': 秒
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: すべて
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': 右 に
-            '"left"': 左 に
-      DancelabAlpha_randomColor:
-        text: てきとうな色
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': ノーマル
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: すべて
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': おおきさ
-            '"x"': x 位置
-            '"y"': y 位置
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
-      DancelabAlpha_whileKey:
-        options:
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
+          METHOD:
+            '"saturation"': 彩度
+            '"brightness"': 明るさ
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -329,19 +226,83 @@ ja:
             '"scale"': おおきさ
             '"x"': x 位置
             '"y"': y 位置
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': おおきさ
             '"x"': x 位置
             '"y"': y 位置
+      Mikelab_randomColor:
+        text: てきとうな色
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': おおきさ
             '"x"': x 位置
             '"y"': y 位置
-      Vanilla_randomColor:
-        text: てきとうな色
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': 右 に
+            '"left"': 左 に
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': 上矢じるしキーが おされたら
+            '"down"': 下矢じるしキーが おされたら
+            '"left"': 左矢じるしキーが おされたら
+            '"right"': 右矢じるしキーが おされたら
+            '"w"': 西
+            '"a"': A
+            '"s"': 南
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': 上矢じるしキーが おされたら
+            '"down"': 下矢じるしキーが おされたら
+            '"left"': 左矢じるしキーが おされたら
+            '"right"': 右矢じるしキーが おされたら
+            '"w"': 西
+            '"a"': A
+            '"s"': 南
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': 上矢じるしキーが おされたら
+            '"down"': 下矢じるしキーが おされたら
+            '"left"': 左矢じるしキーが おされたら
+            '"right"': 右矢じるしキーが おされたら
+      RyanLab_moveForward:
+        text: 前に すすむ
+      RyanLab_turnLeft:
+        text: 左に回転
+      RyanLab_turnRight:
+        text: 右に回転
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": その前に
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": 砂
+            "'planksOak'": 樫の木の板
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": 砂
       craft_moveForward:
-        text: 前方に移動します。
+        text: 前に すすむ
+      craft_placeTorch:
+        text: 松明を置く

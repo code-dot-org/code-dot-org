@@ -83,6 +83,7 @@ da:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-konto
+    microsoft_v2_auth: Microsoft-konto
     forgot_password: Glemt din adgangskode?
     need_confirmation: Har du ikke modtaget bekræftelsesinstruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
@@ -243,8 +244,6 @@ da:
         playlab: Lav en App
         artist: Tegn noget
         applab: Lav en App
-      home: Hjem
-      courses: kurser
       project_gallery: Projekter
       report_bug: Rapporter fejl
       educate_overview: Oversigt for undervisere
@@ -280,8 +279,13 @@ da:
       logout: Log ud
       signin: Log ind
       already_registered: Allerede registreret?
-      pair_programming: Par programmering
       team: Hold
+      create: Opret
+      applab: App Lab
+      artist: Kunstner
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt

@@ -6,41 +6,35 @@ hu:
         options:
           UNIT:
             '"seconds"': másodperc
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Következő
-            '"prev"': Előző
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: összes
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Következő
-            '"prev"': Előző
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      Dancelab_doMoveOnce:
+            '"height"': magasság
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Következő
-            '"prev"': Előző
+          GROUP:
+            sprites: összes
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +43,39 @@ hu:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: összes
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': véletlen
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": véletlen
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': jobbra
-            '"left"': balra
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': véletlen
       Dancelab_randomColor:
         text: Véletlen szín
       Dancelab_setDanceSpeed:
@@ -80,157 +90,34 @@ hu:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: összes
+          PROPERTY:
+            '"scale"': méret
+            '"height"': magasság
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"height"': magasság
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: összes
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
+            '"height"': magasság
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': fel
-            '"down"': le
-            '"left"': balra
-            '"right"': jobbra
-            '"space"': világűr
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': fel
-            '"down"': le
-            '"left"': balra
-            '"right"': jobbra
-            '"space"': világűr
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': másodperc
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Következő
-            '"prev"': Előző
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: összes
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Következő
-            '"prev"': Előző
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Következő
-            '"prev"': Előző
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': másodperc
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: összes
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': jobbra
-            '"left"': balra
-      DancelabAlpha_randomColor:
-        text: Véletlen szín
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normál
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: összes
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': méret
-            '"x"': x pozíció
-            '"y"': y-pozíció
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': fel
-            '"down"': le
-            '"left"': balra
-            '"right"': jobbra
-            '"space"': világűr
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': fel
@@ -329,19 +216,79 @@ hu:
             '"scale"': méret
             '"x"': x pozíció
             '"y"': y-pozíció
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": balra
+            "{x: 300, y: 200}": jobbra
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': méret
             '"x"': x pozíció
             '"y"': y-pozíció
+      Mikelab_randomColor:
+        text: Véletlen szín
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': méret
             '"x"': x pozíció
             '"y"': y-pozíció
-      Vanilla_randomColor:
-        text: Véletlen szín
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': jobbra
+            '"left"': balra
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': felfelé nyíl
+            '"down"': lefelé nyíl
+            '"left"': balra nyíl
+            '"right"': jobbra nyíl
+            '"w"': Nyugat
+            '"s"': Dél
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': felfelé nyíl
+            '"down"': lefelé nyíl
+            '"left"': balra nyíl
+            '"right"': jobbra nyíl
+            '"w"': Nyugat
+            '"s"': Dél
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': felfelé nyíl
+            '"down"': lefelé nyíl
+            '"left"': balra nyíl
+            '"right"': jobbra nyíl
+      RyanLab_moveForward:
+        text: előrelépni
+      RyanLab_turnLeft:
+        text: fordulj balra
+      RyanLab_turnRight:
+        text: fordulj jobbra
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": eléje
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": homok
+            "'planksOak'": tölgyfa deszka
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": homok
       craft_moveForward:
         text: előrelépni
+      craft_placeTorch:
+        text: fáklya elhelyezése

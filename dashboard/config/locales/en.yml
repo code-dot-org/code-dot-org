@@ -48,6 +48,9 @@ en:
         age: 'Age'
         gender: 'Gender'
         edit_header: 'Edit Account Details'
+        finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: can't be in the future
 
@@ -63,6 +66,7 @@ en:
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
   okay: "Okay"
+  or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -97,27 +101,32 @@ en:
   prize: 'prize'
   more_info: 'More info'
   auth:
+    continue_with: 'Continue with %{provider}'
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Signed in!'
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: 'Already signed up?'
     notyet_signedup: "Haven't joined yet?"
-    google_oauth2: 'Google Account'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'Microsoft Account'
-    clever: 'Clever Account'
-    powerschool: 'Powerschool Account'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
+    clever: 'Clever'
+    powerschool: 'Powerschool'
     forgot_password: 'Forgot your password?'
     migration_success: 'Success! You have updated to our new account experience.'
     demigration_success: 'The new account experience is now disabled on your account.'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
-    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
+    not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
+    already_in_use: "Your %{provider} account is already connected to another Code.org account."
+    already_linked: "Your %{provider} account is already linked to your Code.org account."
   signup_form:
+    email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
@@ -134,6 +143,7 @@ en:
     age: 'Age'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
+    go_to_account: 'Go to my account'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -143,6 +153,7 @@ en:
     mismatch_password: "The two passwords you entered do not match"
     agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
     under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
     agree_us_website: "I agree to using a website based in the United States."
     my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
@@ -153,9 +164,9 @@ en:
     user_type_teacher: "Teacher"
     user_type_student: "Student"
     field_is_required: "is required"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "You must agree to create an account."
     error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "Yes"
     email_preference_no: "No"
@@ -189,7 +200,7 @@ en:
     remember: 'Remember me'
     submit: 'Sign in'
   signin:
-    try_heading: 'Want to try coding without signing up?'
+    try_heading: 'Want to try coding without signing in?'
     try_hoc: 'Try one Hour of Code first'
     try_20hours: 'Try our 20 hour Intro to Computer Science'
   signinsection:
@@ -237,6 +248,7 @@ en:
     code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
+    default_name: 'Untitled Section'
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
@@ -285,7 +297,7 @@ en:
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
       free_play:
         playlab: 'Make a Play Lab app'
@@ -294,9 +306,7 @@ en:
         applab: 'Make an App Lab app'
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
-      home: "Home"
       my_dashboard: "My Dashboard"
-      courses: "Courses"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
       sections: "Sections"
@@ -342,10 +352,21 @@ en:
       signin: 'Sign in'
       signup: 'Create an account'
       already_registered: 'Already registered?'
-      pair_programming: 'Pair Programming'
+      pair_programming: 'Pair programming'
       team: 'Team'
       driver: 'Logged in'
       navigator: 'Partner'
+      create: 'Create'
+      applab: 'App Lab'
+      artist: 'Artist'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      spritelab: 'Sprite Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
+      dance: 'Dance Party'
+      view_all: 'View all projects...'
+
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'Your progress'
@@ -379,6 +400,7 @@ en:
       example: 'Example Solution'
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
+      last_updated: 'Last updated:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'

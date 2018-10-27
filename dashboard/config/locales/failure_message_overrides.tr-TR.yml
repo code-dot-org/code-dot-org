@@ -87,6 +87,8 @@ tr:
       MC HOC 2016 Village Test_failure_message_override: Kazanmak için Demir Golem'in
         zombileri kovalayıp saldırmasını sağlamalısın.
       WhileAdventure_failure_message_override: Tebrikler! X para topladın!
+      courseC19_playLab_EOC3_failure_message_override: İki ya da daha fazla aktör
+        eklemelisin ve onları hareket ettirmek için programlamalısın.
       courseE_playLab_scaffold3_failure_message_override: İki ya da daha fazla aktör
         eklemelisin ve onları hareket ettirmek için programlamalısın.
       courseE_playLab_scaffold3_2018_failure_message_override: İki ya da daha fazla

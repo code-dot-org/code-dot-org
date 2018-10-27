@@ -2258,6 +2258,8 @@ ka:
               name: RGB ფერი
             Processing with Bits:
               name: დამუშავება ბიტებით
+            Play Lab:
+              name: თამაშების ლაბი
         csd2-2017:
           description_short: "  ისწავლეთ თქვენი საკუთარი საიტის აწყობა ვებ ლაბორატორიაში."
           stages:
@@ -4618,6 +4620,8 @@ ka:
               name: პროგრამირება ცვლაში
             Introduction to Online Puzzles:
               name: შესავალი ონლაინ თავსატეხებში
+            Nested Loops in Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
         coursec-2018:
           assignment_family_title: კურსი C
           description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით.
@@ -5103,3 +5107,9 @@ ka:
           stages:
             Artist:
               name: მხატვარი
+        sconyers:
+          stages:
+            Digital Design:
+              name: ციფრული დიზაინი
+            Linking Screens:
+              name: ეკრანების დაკავშირება

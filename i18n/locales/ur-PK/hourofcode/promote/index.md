@@ -1,13 +1,13 @@
 ---
-title: <%= hoc_s(:title_how_to_promote) %>
+title: <%= hoc_s(:title_how_to_promote).inspect %>
 layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-& lt؛٪    فیس بک = {: u => "http: // # {request.host} / us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
-ٹویٹر = {: url => "http://hourofcode.com"،: متعلقہ => 'codeorg'،: hashtags => ''، متن => hoc_s (: twitter_default_text)}    ٹویٹر [: hashtags] = 'HourOfCode' جب تک hoc_s (: twitter_default_text) شامل نہیں? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # قیامت کے دن اپنے کمیونٹی کو شامل کریں
 

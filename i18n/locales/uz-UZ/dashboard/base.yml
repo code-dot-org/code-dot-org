@@ -59,6 +59,7 @@ uz:
     need_confirmation: "Tasdiqlash haqidagi ko'rsatmalarni olmadingizmi?"
   signup_form:
     age: 'Yoshi'
+    next: 'Keyingi'
     user_type_teacher: "O'qituvchi"
     user_type_student: "O‘quvchi"
     field_is_required: "talab etiladi"
@@ -80,10 +81,11 @@ uz:
     confirm: 'Aminmisiz?'
   nav:
     header:
-      courses: "Kurslar"
       educate_hoc: "Dasturlash soati"
     user:
       classroom: 'O‘qituvchining bosh sahifasi'
+      create: 'Yaratmoq'
+      applab: 'Ilova labaratoriyasi'
   teacher:
     panel:
       student: 'O‘quvchi'

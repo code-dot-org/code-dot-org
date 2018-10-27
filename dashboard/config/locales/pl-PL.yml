@@ -92,6 +92,7 @@ pl:
     twitter: Twitter
     facebook: Facebooka
     windowslive: Konto Microsoft
+    microsoft_v2_auth: Konto Microsoft
     clever: Konto Clever
     forgot_password: Nie pamiętasz hasła?
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
@@ -312,9 +313,7 @@ pl:
         applab: Utwórz aplikację w App Lab
         gamelab: Utwórz projekt w Game Lab
         weblab: Wykonaj projekt Laboratorium Sieci (beta)
-      home: Strona główna
       my_dashboard: Pulpit
-      courses: Kursy
       course_catalog: Katalog Kursów
       project_gallery: Galeria Projektów
       sections: Sekcje
@@ -359,10 +358,16 @@ pl:
       signin: Zaloguj się
       signup: Załóż konto
       already_registered: Czy jesteś Już zarejestrowany?
-      pair_programming: Programowanie w parach
       team: Zespół
       driver: Kierowca
       navigator: Nawigator
+      create: Utwórz
+      applab: App Lab
+      artist: Artysta
+      gamelab: Laboratorium Gier (Game Lab)
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy

@@ -29,7 +29,12 @@ class GamelabJr < Gamelab
     custom_blocks
     hide_custom_blocks
     use_default_sprites
+    block_pools
   )
+
+  def shared_blocks
+    Block.for(*block_pools.presence || type)
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -39,6 +44,9 @@ class GamelabJr < Gamelab
         level_num: 'custom',
         properties: {
           show_debug_watch: true,
+          block_pools: [
+            "gamelab",
+          ],
           helper_libraries: [
             "GameLabJr",
           ],

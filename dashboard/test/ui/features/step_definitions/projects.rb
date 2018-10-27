@@ -1,3 +1,29 @@
+require 'dynamic_config/dcdo'
+
+# The "view more" links in the public project gallery for App Lab and Game Lab
+# are controlled by DCDO so we can quickly hide them if there are
+# inappropriate projects. This lets us test "view more" link
+# visibility without updating the tests every time we toggle the flag.
+And(/^I confirm correct visibility of view more links$/) do
+  dcdo_flag = DCDO.get('image_moderation', {})['limited_project_gallery']
+  hidden_view_more_links = dcdo_flag.nil? ? true : dcdo_flag
+  if hidden_view_more_links
+    steps %Q{
+      And the project gallery contains 6 view more links
+      And element ".ui-project-app-type-area:eq(1)" contains text "App Lab"
+      And element ".ui-project-app-type-area:eq(1)" does not contain text "View more"
+      And element ".ui-project-app-type-area:eq(0)" contains text "Game Lab"
+      And element ".ui-project-app-type-area:eq(0)" does not contain text "View more"
+    }
+  else
+    steps %Q{
+      And the project gallery contains 8 view more links
+      And element ".ui-project-app-type-area:eq(1)" contains text "View more App Lab projects"
+      And element ".ui-project-app-type-area:eq(0)" contains text "View more Game Lab projects"
+    }
+  end
+end
+
 And(/^I give user "([^"]*)" project validator permission$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
@@ -8,6 +34,11 @@ end
 Then(/^I remove featured projects from the gallery$/) do
   require_rails_env
   FeaturedProject.delete_all
+end
+
+Then(/^I scroll the Play Lab gallery section into view$/) do
+  wait_short_until {@browser.execute_script('return $(".ui-playlab").length') > 0}
+  @browser.execute_script('$(".ui-playlab")[0].scrollIntoView(true)')
 end
 
 Then(/^I make a playlab project named "([^"]*)"$/) do |name|

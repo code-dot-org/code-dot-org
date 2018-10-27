@@ -406,7 +406,7 @@ it:
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
+          <mutation name="disegna un quadrato 20"></mutation>
           <next>
           <block type="jump_by_constant">
           <title name="DIR">jumpForward</title>
@@ -3496,6 +3496,7 @@ it:
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "*Se mi fai muovere all'indietro, stai particolarmente attento a farmi girare dalla parte giusta!*"
+        courseC_maze_programming_challenge2_b: La soluzione più corta usa solo 5 blocchi, ma usa questo blocco `ripeti ... volte`!
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Prova a contare le caselle con un dito. Ma ricorda di non tenere conto della casella di partenza!
       course2_maze_seq_challenge2_authored_hint:
@@ -3583,7 +3584,7 @@ it:
           </block>
           <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation/>
-          <title name="NAME">move and check</title>
+          <title name="NAME">vai avanti e controlla</title>
           <statement name="STACK">
           <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -5604,6 +5605,18 @@ it:
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
         courseB_starWars_prog9_c: |-
           Un ciclo `ripeti` potrebbe aiutarti qui?
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: Puoi usare il blocco `imposta il personaggio 1 come ...` per aggiungere un personaggio nella scena.
+        courseE_playLab_scaffold1_b: Per fare in modo che il personaggio che hai scelto compaia all'avvio del tuo programma, metti il blocco `imposta il personaggio 1 come ...` sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_playLab_scaffold1_c: Usa il blocco `imposta uno sfondo ...` per scegliere lo sfondo della tua scena.
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa (▼) del blocco evento `quando si preme sulla freccia verso ...`.
+        courseE_playLab_scaffold1_b: Dovresti avere quattro diversi blocchi evento `quando si preme sulla freccia verso ...`, ognuno con uno specifico blocco di movimento agganciato sotto.
+        courseE_playLab_scaffold1_c: Quando hai finito, dovresti essere in grado di spostare il tuo eroe con i tasti freccia!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: Per modificare il punteggio, usa i blocchi `aggiungi un punto` e `togli un punto`.
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: 'Per completare l''esercizio, è necessario vincere o perdere: imposta adeguatamente i blocchi `fine del gioco con una vittoria` e `fine del gioco con una sconfitta`.'
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:
@@ -8289,20 +8302,24 @@ it:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_b: La funzione che hai scritto non deve contenere l'intero programma, ma solo la parte che disegna un quadrato con lati di 100 pixel.
         courseD_artist_functions2_c: |-
-          Per "richiamare" la funzione `draw a square` (*disegna un quadrato*), posiziona il blocco verde  sotto al blocco `quando si clicca su "Esegui"`. In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
+          Per "richiamare" la funzione `disegna un quadrato` usa questo blocco verde:
           
-          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="disegna un quadrato"/></block></xml>
+          
+          In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
         courseD_artist_functions2_a: |-
           Il programma deve:
           - usare la funzione
           - andare avanti di 100 + 75 pixel
           - usare la funzione
       courseE_artist_functions2_2018_authored_hint:
-        courseD_artist_functions2_b: La funzione non dovrebbe contenere l'intero programma, ma solo la parte che disegna un quadrato con lati di 100 pixel.
+        courseD_artist_functions2_b: La funzione non deve contenere l'intero programma, ma solo la parte che disegna un singolo quadrato con i lati di 100 pixel.
         courseD_artist_functions2_c: |-
-          Per "richiamare" la funzione `draw a square` (*disegna un quadrato*) assicurati di usare il blocco verde i In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
+          Per "richiamare" la funzione `disegna un quadrato` usa questo blocco verde:
           
-          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="disegna un quadrato"/></block></xml>
+          
+          In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
         courseD_artist_functions2_a: |-
           Il programma deve:
           - usare la funzione
@@ -8316,20 +8333,20 @@ it:
         courseD_artist_functions3_b: Il ciclo dovrà contenere tutti e 3 i blocchi di partenza.
       courseE_artist_functions4_authored_hint:
         courseD_artist_functions4_a: Prova ad usare una funzione!
-        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `draw a star` (*disegna una stella*) nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
-        courseD_artist_functions4_c: Usa il blocco verde `draw a star` (*disegna una stella*) per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
+        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `disegna una stella` nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
+        courseD_artist_functions4_c: Usa il blocco verde `disegna una stella` per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
       courseE_artist_functions4_2018_authored_hint:
         courseD_artist_functions4_a: Prova ad usare una funzione!
-        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `draw a star` (*disegna una stella*) nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
-        courseD_artist_functions4_c: Usa il blocco verde `draw a star` (*disegna una stella*) per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
+        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `disegna una stella` nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
+        courseD_artist_functions4_c: Usa il blocco verde `disegna una stella` per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
       courseE_artist_functions5_authored_hint:
         courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
         courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
-        courseD_artist_functions5_c: Trascina il codice che disegna la stella nel blocco che definisce la funzione `draw a star` (*disegna una stella*), quindi usa questa funzione per disegnare le tre stelle!
+        courseD_artist_functions5_c: Trascina il codice che disegna la stella nel blocco che definisce la funzione `disegna una stella`, quindi usa questa funzione per disegnare le tre stelle!
       courseE_artist_functions5_2018_authored_hint:
         courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
         courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
-        courseD_artist_functions5_c: Inizia creando la funzione `draw a star` (*disegna una stella*), quindi usa questa funzione per disegnare le tre stelle!
+        courseD_artist_functions5_c: Inizia creando la funzione `disegna una stella`, quindi usa questa funzione per disegnare le tre stelle!
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Per ora concentrati solamente su come realizzare una finestra. Creeremo poi una funzione nel prossimo esercizio.
         grade4_artist_functions_windows0_b: 'Prova ad usare due cicli annidati: quello interno disegnerà il quadrato, mentre quello esterno lo farà ruotare quattro volte.'
@@ -8339,11 +8356,11 @@ it:
         grade4_artist_functions_windows0_b: 'Prova ad usare due cicli annidati: quello interno disegnerà il quadrato, mentre quello esterno lo farà ruotare quattro volte.'
         grade4_artist_functions_windows0_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseE_artist_functions7_authored_hint:
-        courseD_artist_functions7_a: Prova a creare prima la funzione e poi aggiungi le finestre una alla volta.
+        courseD_artist_functions7_a: Prova prima a creare la funzione e poi aggiungi le finestre una alla volta.
         courseD_artist_functions7_b: Non è il caso di aggiungere altri blocchi di ripetizione. Basta che l'artista salti di 100 pixel tra ogni finestra del piano superiore, poi scenda giù di 150 pixel per disegnare le finestre del piano terra.
       courseE_artist_functions7_2018_authored_hint:
-        courseD_artist_functions7_a: Prova a creare prima la funzione e poi aggiungi le finestre una alla volta.
-        courseD_artist_functions7_b: Per andare dalle finestre in alto alle finestre in basso, basta girare l'artista a destra, saltare 150 pixel, quindi girare di nuovo l'artista! Ora l'artista si troverà nella giusta direzione per finire il resto della casa!
+        courseD_artist_functions7_a: Prova prima a creare la funzione e poi aggiungi le finestre una alla volta.
+        courseD_artist_functions7_b: Per passare dalle finestre del piano di sopra a quelle del pian terreno, basta girare l'artista a destra, saltare avanti di 150 pixel e infine girare di nuovo l'artista a destra! Ora si troverà nella giusta direzione per completare il disegno!
       courseE_artist_functions8_authored_hint:
         courseD_artist_functions8_f: Ti basterà un unico blocco `vai avanti`, ma serviranno parecchi blocchi `salta in avanti` e `salta indietro`!
         courseD_artist_functions8_a: |-
@@ -8376,10 +8393,10 @@ it:
           Immagina ogni riga di questo disegno, come una fila di 3 quadrati. Quante file di quadrati ci sono? e dove inizi a disegnare ognuna di esse?
           
           ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
-        courseD_artist_functions8_c: Alla fine di ogni linea di quadrati sfalsati, l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare le successiva fila di quadrati sfalsati.
+        courseD_artist_functions8_c: Alla fine di ogni fila traslata di quadrati, l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare quella successiva.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8b_2018_authored_hint:
-        courseD_artist_functions8_f: Hai solo bisogno di un blocco `vai avanti` se lo stai facendo correttamente!
+        courseD_artist_functions8_f: Hai solo bisogno di un blocco `vai avanti` se stai procedendo nel modo corretto!
         courseD_artist_functions8_a: Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegna una fila di quadrati.
         courseD_artist_functions8_d: |-
           Per disegnare una fila di quadrati,
@@ -8387,9 +8404,9 @@ it:
           - disegna un quadrato
           - salta in avanti di **100 pixel**
       courseE_artist_functions8c_2018_authored_hint:
-        courseD_artist_functions8_f: Questo è più facile di quanto sembri! Non dovresti aver bisogno dei blocchi `vai avanti` o` salta`!
+        courseD_artist_functions8_f: È più facile di quanto sembri! Non dovresti aver bisogno di altri blocchi `vai avanti` o`salta`!
         courseD_artist_functions8_a: La seconda fila di quadrati può essere disegnata proprio come la prima, dopo che l'artista si è girato di 180 gradi!
-        courseD_artist_functions8_c: Alla fine di ogni linea di quadrati, l'artista deve solo ruotare di 180 gradi prima di disegnare la successiva linea di quadrati. Metti il tutto in un ciclo`ripeti ... volte` per iniziare il prossimo esercizio!
+        courseD_artist_functions8_c: Alla fine della prima fila di quadrati, l'artista deve solo ruotare di 180 gradi prima di disegnare la successiva. Metti il tutto in un ciclo`ripeti ... volte` per prepararti al prossimo esercizio!
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: |-
           Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
@@ -8513,7 +8530,7 @@ it:
         courseE_bee_concept2_c: Da che parte deve girare l'ape alla fine di ogni tratto del percorso?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: Qui potrebbe essere utile un ciclo `mentre`?
-        courseE_bee_concept2_d: 'Con questo ciclo ''mentre` puoi controllare gli spazi vuoti per vedere se la quantità di miele è > 0. Questo fa lo stesso del ciclo '' mentre miele esegui`. '
+        courseE_bee_concept2_d: 'Con questo ciclo `mentre` puoi controllare le caselle vuote per vedere se la quantità di miele è > 0, è lo stesso effetto che si avrebbe con un ciclo "mentre c''è del miele". '
         courseE_bee_concept2_b: Puoi usare dei cicli `mentre` per muoverti fino alla fine di ogni tratto del percorso e produrre tutto il miele in ogni favo.
         courseE_bee_concept2_c: Da che parte deve girare l'ape alla fine di ogni tratto del percorso?
       courseE_bee_concept3_authored_hint:
@@ -8564,29 +8581,29 @@ it:
         courseE_bee_functions1_c: Ricorda che le svolte a destra e a sinistra devi considerarle dalla prospettiva dell'ape.
       courseE_bee_functions2_authored_hint:
         courseE_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
-        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> richiama la funzione già preparata.
+        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="prendi 2 dosi di nettare"/></block></xml> richiama la funzione già preparata.
         courseE_bee_functions2_c: Per risolvere questo esercizio, devi - per due volte - andare avanti e prendere 2 dosi di nettare.
       courseE_bee_functions2_2018_authored_hint:
         courseE_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
-        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> richiama la funzione già preparata.
+        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="prendi 2 dosi di nettare"/></block></xml> richiama la funzione già preparata.
         courseE_bee_functions2_c: Per risolvere questo esercizio, devi - per due volte - andare avanti e prendere 2 dosi di nettare.
       courseE_bee_functions3_authored_hint:
         courseE_bee_functions3_a: 'In questo esercizio, la funzione deve solo raccogliere il nettare, non deve contenere alcun blocco `vai avanti` o `gira`.'
-        courseE_bee_functions3_b: Richiama la funzione `get 5` (*prendi 5 dosi di nettare*) subito sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_bee_functions3_b: Richiama la funzione `prendi 5` subito sotto al blocco `quando si clicca su "Esegui"`.
         courseE_bee_functions3_c: Il tuo programma principale dovrà controllare tutti i movimenti, mentre la funzione serve solo per gestire le azioni dell'ape ogni volta che raggiunge un fiore.
         courseE_bee_functions3_d: Prova a seguire questo percorso.
       courseE_bee_functions3_2018_authored_hint:
         courseE_bee_functions3_a: 'In questo esercizio, la funzione deve solo raccogliere il nettare, non deve contenere alcun blocco `vai avanti` o `gira`.'
-        courseE_bee_functions3_b: Richiama la funzione `get 5` (*prendi 5 dosi di nettare*) subito sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_bee_functions3_b: Richiama la funzione `prendi 5` subito sotto al blocco `quando si clicca su "Esegui"`.
         courseE_bee_functions3_c: Il tuo programma principale dovrà controllare tutti i movimenti, mentre la funzione serve solo per gestire le azioni dell'ape ogni volta che raggiunge un fiore.
         courseE_bee_functions3_d: Prova a seguire questo percorso.
       courseE_bee_functions4_authored_hint:
         courseE_bee_functions4_a: Il codice presente nella funzione fa girare l'ape, la fa andare avanti a prendere il nettare e la fa tornare sul percorso principale. Non hai quindi bisogno di aggiungere questa parte di movimenti nel programma principale.
-        courseE_bee_functions4_b: Usa il blocco verde `move and get nectar` per richiamare questa funzione.
+        courseE_bee_functions4_b: Usa il blocco verde `vai a prendere il nettare` per richiamare questa funzione.
         courseE_bee_functions4_c: Non devi modificare nulla nella definizione della funzione, la puoi direttamente usare nel tuo programma principale.
       courseE_bee_functions4_2018_authored_hint:
         courseE_bee_functions4_a: Il codice presente nella funzione fa girare l'ape, la fa andare avanti a prendere il nettare e la fa tornare sul percorso principale. Non hai quindi bisogno di aggiungere questa parte di movimenti nel programma principale.
-        courseE_bee_functions4_b: Usa il blocco verde `move and get nectar` per richiamare questa funzione.
+        courseE_bee_functions4_b: Usa il blocco verde `vai a prendere il nettare` per richiamare questa funzione.
         courseE_bee_functions4_c: Non devi modificare nulla nella definizione della funzione, la puoi direttamente usare nel tuo programma principale.
       courseE_bee_functions5_authored_hint:
         courseE_bee_functions5_a: Inserisci i blocchi nella definizione della funzione in modo da risolvere l'esercizio senza dover modificare nulla nel programma principale.
@@ -8715,7 +8732,7 @@ it:
         courseE_farmer_functions2b_b: Non ci sono pannocchie nel percorso intermedio, lì la contadina deve solo andare avanti e girare.
         courseE_farmer_functions2b_c: Hai bisogno di due differenti blocchi `ripeti fino a che` per raccogliere tutti gli ortaggi.
       courseE_farmer_functions2ba_authored_hint:
-        courseE_farmer_functions2ba_a: Usa il blocco verde `corn and pumpkin`(*pannocchie e zucca*) per richiamare questa funzione.
+        courseE_farmer_functions2ba_a: Usa il blocco verde `pannocchie e zucca` per richiamare questa funzione.
         courseE_farmer_functions2ba_b: Per vedere come funziona questa funzione, aggancia al blocco arancione `quando si clicca su "Esegui"` tutti i blocchi che trovi sparpagliati nell'area di lavoro.
       courseE_farmer_functions2ba_2018_authored_hint:
         courseE_farmer_functions2ba_a: Usa il blocco verde `prendi tutte le zucche` per essere sicuro di raccoglierle tutte!
@@ -8723,16 +8740,16 @@ it:
         courseE_farmer_functions3c_a: Quale sequenza si ripete spesso in questo programma? Riesci a trascinare questi blocchi nella funzione?
         courseE_farmer_functions3c_b: Non dimenticare di richiamare la funzione nel programma principale ovunque hai tolto i blocchi.
       courseE_farmer_functions3c1_2018_authored_hint:
-        coursee_farmer_functions3c1_2018_a: Dovrai usare la funzione `raccogli lungo il percorso` tre volte per risolvere questo esercizio.
-        coursee_farmer_functions3c1_2018_b: Che codice devi aggiungere per aggirare gli angoli?
+        coursee_farmer_functions3c1_2018_a: Per risolvere questo esercizio dovrai usare tre volte la funzione `raccogli lungo il percorso`.
+        coursee_farmer_functions3c1_2018_b: Che codice devi aggiungere per fare le curve?
       courseE_farmer_functions4b_authored_hint:
         courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseE_farmer_functions4b_b: Ricordati di girare dopo ogni tratta del percorso.
-        courseE_farmer_functions4b_c: Il blocco verde `corn and pumpkin` (*pannocchie e zucca*) si trova nella scheda funzioni della casella degli attrezzi.
+        courseE_farmer_functions4b_c: Il blocco verde `pannocchie e zucca` si trova nella scheda funzioni della casella degli attrezzi.
       courseE_farmer_functions4b_2018_authored_hint:
         courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseE_farmer_functions4b_b: Ricordati di girare dopo ogni tratta del percorso.
-        courseE_farmer_functions4b_c: Il blocco verde `corn and pumpkin` (*pannocchie e zucca*) si trova nella scheda funzioni della casella degli attrezzi.
+        courseE_farmer_functions4b_c: Il blocco verde `pannocchie e zucca` si trova nella scheda funzioni della casella degli attrezzi.
       courseE_farmer_functions5c_authored_hint:
         courseE_farmer_functions5c_a: In questo esercizio, ci sono altri schemi ripetuti che puoi ricondurre ad un ciclo?
         courseE_farmer_functions5c_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
@@ -8748,8 +8765,8 @@ it:
         courseE_farmer_functions6c_b: Un blocco `se/altrimenti` aiuterebbe a controllare se ti trovi su una casella in cui c'è una lattuga?
         courseE_farmer_functions6c_c: Non dimenticarti di mantenere il controllo per le pannocchie!
       courseE_farmer_functions7a1_2018_authored_hint:
-        courseE_farmer_functions7a1_2018_a: Crea la funzione sotto la sezione `funzioni` nella cassetta degli attrezzi.
-        courseE_farmer_functions7a1_2018_b: Non dimenticare di usare la funzione quando hai finito di crearla!
+        courseE_farmer_functions7a1_2018_a: Crea la funzione usando l'apposito blocco presente nella sezione "funzioni" nella cassetta degli attrezzi.
+        courseE_farmer_functions7a1_2018_b: Dopo che hai creato la funzione, non dimenticati di usarla!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: In questo caso non sono necessarie delle funzioni, ma se vuoi puoi usarne una!
         courseE_farmer_functions7b_b: Usa un'istruzione condizionale `se/altrimenti` per controllare la presenza delle colture e gira in base a quale coltura hai trovato.
@@ -8759,8 +8776,8 @@ it:
         courseE_farmer_functions7b_b: Usa un'istruzione condizionale `se/altrimenti` per controllare la presenza delle colture e gira in base a quale coltura hai trovato.
         courseE_farmer_functions7b_c: Un ciclo `ripeti fino a che sei su una zucca` può aiutarti a percorrere tutto questo labirinto.
       courseE_farmer_functions8a1_2018_authored_hint:
-        courseE_farmer_functions8a1_2018a: Inizia questo esercizio usando la stessa funzione che hai creato nell'ultimo esercizio.
-        courseE_farmer_functions8a1_2018b: Dopo avere esguito la funzione la prima volta, dovrai usare un altro blocco `gira a ...` per eseguirla di nuovo.
+        courseE_farmer_functions8a1_2018a: Inizia usando la funzione che hai creato nell'esercizio precedente.
+        courseE_farmer_functions8a1_2018b: Dopo aver eseguito la funzione la prima volta, dovrai usare un altro blocco `gira a ...` per poterla eseguire di nuovo.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Prova ad eseguire il codice che trovi già pronto per scoprire cosa fa. Come puoi procedere?
         courseE_farmer_functions8b_b: Trascina nel blocco di definizione di una funzione tutti i blocchi trovati all'inizio, in modo da poterli usare più di una volta.
@@ -8770,9 +8787,9 @@ it:
         courseE_farmer_functions8b_b: Trascina nel blocco di definizione di una funzione tutti i blocchi trovati all'inizio, in modo da poterli usare più di una volta.
         courseE_farmer_functions8b_c: Quante volte è necessario richiamare la funzione?
       courseE_farmer_functions9a1_2018_authored_hint:
-        courseE_farmer_functions9a1_2018a: Userai la stessa funzione che hai creato negli ultimi due esercizi.
-        courseE_farmer_functions9a1_2018b: Usa gli stessi passaggi dell'esrecizio precedente per risolvere la prima metà di questo esercizio.
-        courseE_farmer_functions9a1_2018c: Dovrai `girare` un paio di volte e `andare avanti` per arrivare all'ultima lattuga prima di poter chiamare di nuovo la funzione.
+        courseE_farmer_functions9a1_2018a: Potrai usare la stessa funzione che hai creato negli ultimi due esercizi.
+        courseE_farmer_functions9a1_2018b: Per risolvere la prima metà di questo esercizio, devi seguire gli stessi passaggi dell'esercizio precedente.
+        courseE_farmer_functions9a1_2018c: Prima di poter richiamare di nuovo la funzione, dovrai usare alcuni blocchi `gira a ...` e `vai avanti`per completare la raccolta delle lattughe.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Per muoverti lungo il percorso, potresti usare istruzioni condizionali annidate `se` o `se/altrimenti`?
         courseE_farmer_functions9b_b: Usa il ciclo `ripeti fino a che sei su una zucca` per spostarti lungo il percorso.
@@ -8959,7 +8976,7 @@ it:
         iceage_warn_ice_age_a: 'Devi semplicemente aggiungere due blocchi per risolvere questo esercizio.'
         iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio del programma.
       courseF_artist_for10_authored_hint:
-        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando un contatore per `set alpha`e una variabile`contatore`/10 come dimensione del pennello.
+        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando la variabile `counter` nel blocco `imposta l'opacità` e `counter/10` per impostare la larghezza del pennello.
         courseF_artist_for10_b: L'immagine nel disegno usa un angolo di 61 gradi.
         courseF_artist_for10_c: |-
           Vuoi sapere come è stata creata l'immagine dell'esempio?
@@ -9046,7 +9063,7 @@ it:
           </block>
           </xml>
       courseF_artist_for10_2018_authored_hint:
-        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando un contatore per `set alpha`e una variabile`contatore`/10 come dimensione del pennello.
+        courseF_artist_for10_a: L'immagine nel disegno è stata creata usando la variabile `counter` nel blocco `imposta l'opacità` e `counter/10` per impostare la larghezza del pennello.
         courseF_artist_for10_b: L'immagine nel disegno usa un angolo di 61 gradi.
         courseF_artist_for10_c: |-
           Vuoi sapere come è stata creata l'immagine dell'esempio?
@@ -9234,10 +9251,10 @@ it:
         courseF_artist_for7_c: In questo esercizio, Il ciclo `ripeti con counter` conta da 15 a 300 a passi di 2.
         courseF_artist_for7_d: Questa immagine è realizzata girando solo di 89 gradi.
       courseF_artist_for8_authored_hint:
-        courseF_artist_for8_a: Mantieni ogni altra cosa uguale nel tuo codice, bisogna modificare solo l'angolo.
+        courseF_artist_for8_a: In questo programma, mantieni ogni altra cosa uguale a prima, bisogna modificare solo l'angolo.
         courseF_artist_for8_b: Se vuoi, puoi scegliere un colore diverso per disegnare la tua spirale!
       courseF_artist_for8_2018_authored_hint:
-        courseF_artist_for8_a: Mantieni ogni altra cosa uguale nel tuo codice, bisogna modificare solo l'angolo.
+        courseF_artist_for8_a: In questo programma, mantieni ogni altra cosa uguale a prima, bisogna modificare solo l'angolo.
         courseF_artist_for8_b: Se vuoi, puoi scegliere un colore diverso per disegnare la tua spirale!
       courseF_artist_for9_authored_hint:
         courseF_artist_for9_a: Se metti il blocco `imposta l'opacità`all'interno del ciclo `ripeti con counter` e usi la variabile `counter` (*contatore*) per modificarla, puoi creare un disegno come questo.
@@ -9790,7 +9807,7 @@ it:
         courseF_artist_variables6_a: Grazie all'uso della variabile, devi modificare solo un numero in alto per svolgere questo esercizio.
         courseF_artist_variables6_b: Dovrai modificare solo il blocco numerico con valore 50, nient'altro.
       courseF_artist_variables6a_authored_hint:
-        courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare un numero, ricordati di usare la variabile `length`(*lunghezza*).
+        courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare un numero, ricordati di usare la variabile `length` (*lunghezza*).
         courseF_artist_variables6a_b: Questo codice sarà molto simile a quello dei triangoli, solo che ora vengono disegnati dei quadrati!
         courseF_artist_variables6a_c: Prima scrivi il codice per disegnare un quadrato, poi aggiungi le istruzioni per muoverti da un quadrato all'altro e infine aggiungi un ciclo attorno a tutto ciò!
         courseF_artist_variables6a_d: |-
@@ -9798,7 +9815,7 @@ it:
           
           ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
       courseF_artist_variables6a_2018_authored_hint:
-        courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare un numero, ricordati di usare la variabile `length`(*lunghezza*).
+        courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare un numero, ricordati di usare la variabile `length` (*lunghezza*).
         courseF_artist_variables6a_b: Questo codice sarà molto simile a quello dei triangoli, solo che ora vengono disegnati dei quadrati!
         courseF_artist_variables6a_c: Prima scrivi il codice per disegnare un quadrato, poi aggiungi le istruzioni per muoverti da un quadrato all'altro e infine aggiungi un ciclo attorno a tutto ciò!
         courseF_artist_variables6a_d: |-
@@ -9832,7 +9849,7 @@ it:
       courseF_artist_variables_6_authored_hint:
         courseF_artist_variables_6_a: Grazie all'uso della variabile, devi modificare solo un numero in alto per svolgere questo esercizio.
       courseF_artist_variables_6a_authored_hint:
-        courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare un numero, ricordati di usare la variabile `length`(*lunghezza*).
+        courseF_artist_variables6a_a: Per risolvere questo esercizio, invece di usare un numero, ricordati di usare la variabile `length` (*lunghezza*).
       courseF_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Tutte le linee verticali hanno lunghezza fissa pari a `10`.  Mentre ogni linea orizzontale ha una lunghezza pari alla variabile `length`(*lunghezza*).
         courseF_artist_variables_challenge1_b: All'interno del ciclo, dovrai sommare il valore `10` alla variabile `length` (*lunghezza*) in **due** punti differenti.
@@ -10750,7 +10767,7 @@ it:
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"></mutation>
+          <mutation name="vai avanti e controlla"></mutation>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnRight</title>
@@ -10852,7 +10869,7 @@ it:
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"></mutation>
+          <mutation name="vai avanti e controlla"></mutation>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnRight</title>
@@ -11570,7 +11587,7 @@ it:
         Course_4_Artist_For_Loops_inspire_b: Prova ad usare un <i>ciclo con contatore</i> che va da 3 a 10 con passo di 1.
         Course_4_Artist_For_Loops_inspire_c: All'interno del <i>ciclo con contatore</i> ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta del primo.
       grade5_artist_for_loopsfreeplay12_authored_hint:
-        grade5_artist_for_loopsfreeplay12_a: L'immagine nel disegno è stata creata usando un contatore per `set alpha`e una variabile`contatore`/10 come dimensione del pennello.
+        grade5_artist_for_loopsfreeplay12_a: L'immagine nel disegno è stata creata usando la variabile `counter` nel blocco `imposta l'opacità` e `counter/10` per impostare la larghezza del pennello.
         grade5_artist_for_loopsfreeplay12_b: L'immagine nel disegno usa un angolo di 61 gradi.
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu.

@@ -1,44 +1,49 @@
 require 'test_helper'
 
-class Api::V1::Pd::RegionalPartnerContactsControllerTest < ::ActionController::TestCase
-  SAMPLE_FORM_DATA = {
-    first_name: 'Harry',
-    last_name: 'Potter',
-    title: 'Mr.',
-    email: 'potter@hogwarts.edu',
-    role: 'Teacher',
-    job_title: 'Defense against dark arts',
-    grade_levels: ['High School'],
-    school_type: 'public',
-    school_state: 'NY',
-    school_district_other: true,
-    school_district_name: 'Hogwarts',
-    opt_in: 'Yes'
-  }
-
-  test 'create creates a new regional partner contact' do
-    assert_creates Pd::RegionalPartnerContact do
-      put :create, params: {
-        form_data: SAMPLE_FORM_DATA
-      }
-    end
-
-    assert_response :created
+class Api::V1::Pd::RegionalPartnerContactsControllerTest < ActionDispatch::IntegrationTest
+  test 'can create a new regional partner contact with found district and no school' do
+    assert_valid_form build(:pd_regional_partner_contact_hash, :found_district_only)
   end
 
-  test 'create returns appropriate errors if school district data is missing' do
-    new_form = SAMPLE_FORM_DATA.dup
-    new_form.delete :school_district_name
+  test 'can create a new regional partner contact with found district and school' do
+    assert_valid_form build(:pd_regional_partner_contact_hash, :found_district_and_school)
+  end
 
+  test 'can create a new regional partner contact with found district and other school' do
+    assert_valid_form build(:pd_regional_partner_contact_hash, :found_district_other_school)
+  end
+
+  test 'can create a new regional partner contact with other district and no school' do
+    assert_valid_form build(:pd_regional_partner_contact_hash, :other_district_only)
+  end
+
+  test 'can create a new regional partner contact with other district and school' do
+    assert_valid_form build(:pd_regional_partner_contact_hash, :other_district_and_school)
+  end
+
+  test 'can create a new regional partner contact with private school' do
+    assert_valid_form build(:pd_regional_partner_contact_hash, :private_school)
+  end
+
+  test 'create returns generic error if school or district data is missing' do
+    form_data = build(:pd_regional_partner_contact_hash, :other_district_and_school).
+      merge("school-district-name" => "")
     assert_does_not_create Pd::RegionalPartnerContact do
-      put :create, params: {
-        form_data: new_form
-      }
+      post '/api/v1/pd/regional_partner_contacts',
+        as: :json,
+        params: {form_data: form_data}
     end
-
     assert_response :bad_request
-    response_body = JSON.parse(@response.body)
-
+    response_body = JSON.parse(response.body)
     assert_equal 'Please fill out the fields about your school above', response_body['general_error']
+  end
+
+  private def assert_valid_form(form_data)
+    assert_creates Pd::RegionalPartnerContact do
+      post '/api/v1/pd/regional_partner_contacts',
+        as: :json,
+        params: {form_data: form_data}
+    end
+    assert_response :created
   end
 end

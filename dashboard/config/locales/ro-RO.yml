@@ -96,6 +96,7 @@ ro:
     twitter: Twitter
     facebook: Facebook
     windowslive: Cont Microsoft
+    microsoft_v2_auth: Cont Microsoft
     clever: Cont inteligent
     powerschool: Cont de SuperȘcoală
     forgot_password: Ai uitat parola?
@@ -318,8 +319,6 @@ ro:
         applab: Creează o aplicație
         gamelab: Creați un proiect în Laboratorul de Joc
         weblab: Creați un proiect în Laboratorul Web (beta)
-      home: Acasă
-      courses: cursuri
       course_catalog: Catalog de cursuri
       project_gallery: Proiecte
       sections: Secțiuni
@@ -363,10 +362,17 @@ ro:
       signin: Loghează-te
       signup: Creează un cont
       already_registered: Eşti deja înregistrat?
-      pair_programming: Programare în perechi
       team: Echipa
       driver: Conducătorul
       navigator: Navigator
+      create: Crează
+      applab: Laboratului Aplicației
+      artist: Artist
+      gamelab: Laborator de jocuri
+      playlab: Laborator de Joacă
+      spritelab: Laborator Sprite
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Progresul lui %{name}
       progress: Progresul tău

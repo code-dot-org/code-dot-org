@@ -83,6 +83,7 @@ fil:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Account sa Microsoft'
+    microsoft_v2_auth: 'Account sa Microsoft'
     clever: 'Clever na Account'
     forgot_password: 'Hindi matandaan ang password?'
     need_confirmation: "Hindi nakatanggap ng kumpirmasyon?"
@@ -256,9 +257,7 @@ fil:
         applab: 'Lumikha ng App'
         gamelab: 'Gumawa ng Game Lab na proyekto'
         weblab: 'Gumawa ng Web Lab (beta) na proyekto'
-      home: "Home"
       my_dashboard: "Aking Dashboard"
-      courses: "Mga kurso"
       course_catalog: "Katalogo ng Kurso"
       project_gallery: "Mga Proyekto"
       sections: "Mga Seksyon"
@@ -303,10 +302,16 @@ fil:
       signin: 'Sign in'
       signup: 'Gumawa ng account'
       already_registered: 'Nakarehistro na?'
-      pair_programming: 'Pair programming'
       team: 'Koponan'
       driver: 'Maglog-in'
       navigator: 'Kasama'
+      create: 'I-create'
+      applab: 'App na Lab'
+      artist: 'Artista'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Progreso ni %{name}"
       progress: 'Progreso mo'

@@ -27,6 +27,7 @@ tg:
     facebook: 'Фейсбук'
   signup_form:
     submit: 'Худро ба қайд гиред'
+    next: 'Навбатӣ'
     teacher: 'Шумо муаллим ҳастед?'
     user_type_teacher: "Муаллим"
     user_type_student: "Донишҷӯ"
@@ -75,7 +76,6 @@ tg:
   nav:
     header:
       sign_in_to_save: 'Барои захира кардани муваффақият, ворид шавед'
-      courses: "Дарсҳо"
       project_gallery: "Лоиҳаҳо"
       educate_hoc: "Соати рамз"
       stats: "Омор"
@@ -84,6 +84,7 @@ tg:
       settings: 'Ҳисоби ман'
       logout: 'Хориҷ шудан'
       signin: 'Ворид шудан'
+      create: 'Сохтан'
     popup:
       progress: 'Муваффақияти шумо'
       lines: 'Хатҳои умумии рамз: %{lines}'

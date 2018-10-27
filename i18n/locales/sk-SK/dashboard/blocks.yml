@@ -6,41 +6,43 @@ sk:
         options:
           UNIT:
             '"seconds"': sekundy
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: všetky
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      Dancelab_doMoveOnce:
+            '"height"': výška
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: všetky
+          MOVE:
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
+            MOVES.Rest: Žiadne
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +51,54 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
+            '"height"': výška
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Žiadne
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vľavo
+            "{x: 300, y: 200}": vpravo
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: všetky
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': náhodný
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": vľavo
+            "{x: 300, y: 200}": vpravo
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': vpravo
-            '"left"': vľavo
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': náhodný
       Dancelab_randomColor:
         text: náhodná farba
       Dancelab_setBackgroundEffect:
@@ -88,169 +121,38 @@ sk:
         options:
           PROPERTY:
             '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
+            '"height"': výška
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: všetky
+          PROPERTY:
+            '"scale"': veľkosť
+            '"height"': výška
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"height"': výška
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: všetky
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
+            '"height"': výška
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
+            '"height"': výška
       Dancelab_whenKey:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
-            '"left"': vľavo
-            '"right"': vpravo
-            '"space"': vesmír
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': hore
-            '"down"': nadol
-            '"left"': vľavo
-            '"right"': vpravo
-            '"space"': vesmír
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekundy
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: všetky
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ďalší
-            '"prev"': Predchádzajúci
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekundy
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: všetky
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': vpravo
-            '"left"': vľavo
-      DancelabAlpha_randomColor:
-        text: náhodná farba
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': Žiadne
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normálny
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Žiadne
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: všetky
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': veľkosť
-            '"x"': pozícia x
-            '"y"': pozícia y
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': hore
-            '"down"': nadol
-            '"left"': vľavo
-            '"right"': vpravo
-            '"space"': vesmír
-      DancelabAlpha_whileKey:
-        options:
-          KEY:
-            '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -320,7 +222,7 @@ sk:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -328,14 +230,14 @@ sk:
         options:
           DIR:
             "'up'": hore
-            "'down'": nadol
+            "'down'": dole
             "'left'": vľavo
             "'right'": vpravo
       gamelab_whileKey:
         options:
           KEY:
             '"up"': hore
-            '"down"': nadol
+            '"down"': dole
             '"left"': vľavo
             '"right"': vpravo
             '"space"': vesmír
@@ -345,19 +247,83 @@ sk:
             '"scale"': veľkosť
             '"x"': pozícia x
             '"y"': pozícia y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vľavo
+            "{x: 300, y: 200}": vpravo
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': veľkosť
             '"x"': pozícia x
             '"y"': pozícia y
+      Mikelab_randomColor:
+        text: náhodná farba
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': veľkosť
             '"x"': pozícia x
             '"y"': pozícia y
-      Vanilla_randomColor:
-        text: náhodná farba
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': vpravo
+            '"left"': vľavo
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': šípka hore
+            '"down"': šípka nadol
+            '"left"': šípka vľavo
+            '"right"': šípka vpravo
+            '"w"': Z
+            '"a"': A
+            '"s"': J
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': šípka hore
+            '"down"': šípka nadol
+            '"left"': šípka vľavo
+            '"right"': šípka vpravo
+            '"w"': Z
+            '"a"': A
+            '"s"': J
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': šípka hore
+            '"down"': šípka nadol
+            '"left"': šípka vľavo
+            '"right"': šípka vpravo
+      RyanLab_moveForward:
+        text: posunúť dopredu
+      RyanLab_turnLeft:
+        text: otočiť vľavo
+      RyanLab_turnRight:
+        text: otočiť vpravo
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": vpredu
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": piesok
+            "'planksOak'": dubové dosky
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": piesok
       craft_moveForward:
         text: posunúť dopredu
+      craft_placeTorch:
+        text: umiestni fakľu

@@ -797,6 +797,8 @@ he:
               name: תמונות בינאריות
             Binary Artist Puzzles:
               name: חידות של האמן הבינארי
+            Play Lab:
+              name: מעבדת הצעצועים
         csd2-2017:
           stages:
             Intro to HTML:
@@ -1375,6 +1377,8 @@ he:
               name: הרץ פעולה בשנית
             Introduction to Online Puzzles:
               name: היכרות עם חידות מבוכים
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
         coursec-2018:
           stages:
             Programming in Maze:

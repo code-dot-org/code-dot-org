@@ -6,37 +6,31 @@ ca:
         options:
           UNIT:
             '"seconds"': segons
-      Dancelab_changeMove:
+      Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Següent
-            '"prev"': Anterior
-      Dancelab_changeMoveEach:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Següent
-            '"prev"': Anterior
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': mida
-      Dancelab_doMoveOnce:
+            '"height"': alçcada
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Següent
-            '"prev"': Anterior
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -45,15 +39,37 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
-      Dancelab_mappingProp:
+            '"height"': alçcada
+      Dancelab_jumpTo:
         options:
-          PROPERTY:
-            '"scale"': mida
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
+      Dancelab_layoutSprites:
         options:
-          DIRECTION:
-            '"right"': dret
-            '"left"': esquerra
+          FORMAT:
+            '"random"': atzar
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': atzar
       Dancelab_randomColor:
         text: color aleatori
       Dancelab_setDanceSpeed:
@@ -68,121 +84,28 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
-      Dancelab_spritesWhere:
+            '"height"': alçcada
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': mida
+            '"height"': alçcada
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"height"': alçcada
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': mida
+            '"height"': alçcada
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': mida
+            '"height"': alçcada
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': cap amunt
-            '"down"': avall
-            '"left"': esquerra
-            '"right"': dret
-            '"space"': espai
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': cap amunt
-            '"down"': avall
-            '"left"': esquerra
-            '"right"': dret
-            '"space"': espai
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': segons
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Següent
-            '"prev"': Anterior
-      DancelabAlpha_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Següent
-            '"prev"': Anterior
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': mida
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Següent
-            '"prev"': Anterior
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': segons
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': mida
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': mida
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': dret
-            '"left"': esquerra
-      DancelabAlpha_randomColor:
-        text: color aleatori
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': mida
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': mida
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': mida
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': mida
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': cap amunt
-            '"down"': avall
-            '"left"': esquerra
-            '"right"': dret
-            '"space"': espai
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': cap amunt
@@ -269,15 +192,75 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerra
+            "{x: 300, y: 200}": dret
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': mida
+      Mikelab_randomColor:
+        text: color aleatori
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciutat
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': mida
-      Vanilla_randomColor:
-        text: color aleatori
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': dret
+            '"left"': esquerra
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': fletxa cap amunt
+            '"down"': fletxa cap avall
+            '"left"': fletxa esquerra
+            '"right"': fletxa dreta
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': fletxa cap amunt
+            '"down"': fletxa cap avall
+            '"left"': fletxa esquerra
+            '"right"': fletxa dreta
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': fletxa cap amunt
+            '"down"': fletxa cap avall
+            '"left"': fletxa esquerra
+            '"right"': fletxa dreta
+      RyanLab_moveForward:
+        text: avança
+      RyanLab_turnLeft:
+        text: gira a l'esquerra
+      RyanLab_turnRight:
+        text: gira a la dreta
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": endavant
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": sorra
+            "'planksOak'": tauló de roure
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sorra
       craft_moveForward:
         text: avança
+      craft_placeTorch:
+        text: posa una torxa

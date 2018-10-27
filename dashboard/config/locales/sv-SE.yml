@@ -88,6 +88,7 @@ sv:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Account
+    microsoft_v2_auth: Microsoft Account
     forgot_password: Glömt ditt lösenord?
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
@@ -244,8 +245,6 @@ sv:
         playlab: Skapa en App
         artist: Rita något
         applab: Skapa en App
-      home: Hem
-      courses: kurser
       project_gallery: Projekt
       sections: Avsnitt
       help_support: Hjälp och support
@@ -286,10 +285,15 @@ sv:
       signin: Logga in
       signup: Skapa ett konto
       already_registered: Redan registrerad?
-      pair_programming: Par-programmering
       team: Team
       driver: Förare
       navigator: Navigator
+      create: Skapa
+      applab: App Lab
+      artist: Konstnären
+      playlab: Spel-labb
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg

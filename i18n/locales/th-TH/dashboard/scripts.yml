@@ -93,7 +93,7 @@ th:
             'Artist: Nested Loops':
               name: 'ศิลปิน: ลูปซ้อนลูป'
             'Artist: Patterns':
-              name: 'ศิลปิน: Patterns'
+              name: 'ศิลปิน: รูปแบบ'
             'Bee: Conditionals':
               name: 'ผึ้ง: เงื่อนไข'
             'Bee: Debugging':
@@ -468,7 +468,7 @@ th:
         gradeKinder:
           stages:
             Debugging:
-              name: การดีบั๊ก
+              name: การแก้ไขจุดบกพร่อง
             Events:
               name: เหตุการณ์
             'Jigsaw: Learn to drag and drop':
@@ -486,7 +486,7 @@ th:
         grade1:
           stages:
             Debugging:
-              name: การดีบั๊ก
+              name: การแก้ไขจุดบกพร่อง
             Events:
               name: เหตุการณ์
             'Jigsaw: Learn to drag and drop':
@@ -1244,6 +1244,8 @@ th:
               name: การเขียนกระดาษกราฟ
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
+            Nested Loops in Maze:
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
         coursec-2018:
           assignment_family_title: คอร์ส C
           stages:
@@ -1251,6 +1253,8 @@ th:
               name: สร้างพื้นฐาน
             Programming in Maze:
               name: การเขียนโปรแกรมกับเจ้านกขี้โมโห (Angry Birds)
+            Debugging in Maze:
+              name: การหาจุดบกพร่องกับเขาวงกต
             Programming in Artist:
               name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':

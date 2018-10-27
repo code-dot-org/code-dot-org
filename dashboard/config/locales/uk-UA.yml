@@ -88,6 +88,7 @@ uk:
     twitter: Twitter
     facebook: Facebook
     windowslive: обліковий запис Microsoft
+    microsoft_v2_auth: обліковий запис Microsoft
     forgot_password: Забули пароль?
     need_confirmation: Не отримали вказівок підтвердження?
     need_unlock: Не отримали вказівок розблокування?
@@ -239,8 +240,6 @@ uk:
         playlab: Створити програму
         artist: Намалювати щось
         applab: Створити програму в App Lab
-      home: Головна
-      courses: курси
       project_gallery: Проекти
       educate_overview: Огляд для педагога
       educate_elementary: Початкова школа
@@ -277,10 +276,16 @@ uk:
       signin: Вхід
       signup: Створити обліковий запис
       already_registered: Вже зареєстровані?
-      pair_programming: Парне програмування
       team: Команда
       driver: Водій
       navigator: Навігатор
+      create: Створити
+      applab: App Lab
+      artist: Художник
+      gamelab: Ігрова лабораторія
+      playlab: Ігрова студія
+      minecraft: Майнкрафт
+      flappy: Пурх
     popup:
       progress_for_user: Прогрес %{name}
       progress: Ваш прогрес

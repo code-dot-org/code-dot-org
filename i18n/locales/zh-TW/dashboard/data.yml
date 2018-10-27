@@ -276,7 +276,7 @@ zh-TW:
         Unplug4: 演算法
         Unplug5: 函數類別
         Unplug6: 流程類別
-        Unplug7: 寫歌
+        Unplug7: 歌曲創作
         Unplug8: 抽象概念
         Unplug9: 接力編程
         Unplug10: 網際網路 Internet
@@ -351,9 +351,17 @@ zh-TW:
         C4_unplugged_forloops: 計數迴圈（For Loops）
         C4_unplugged_parameters: 用參數寫歌
         C4_unplugged_binary: 二進制（Binary）
+        CSF_artist_angles: 小藝術家中的角度
+        CSF_collector_k1_blocks: '計算機科學基礎：收集器'
+        CSF_collector_text_blocks: '計算機科學基礎：收集器'
+        CSF_create_functions: 建立函式
         CSF_EF_cs_matters: 計算機科學很重要
+        CSF_maze_intro_k1_blocks: Code Studio 介紹
+        CSF_maze_intro_text_blocks: Code Studio 介紹
         CSF_my_robotic_friends: 我的機器人朋友
+        CSF_Super_Digital_Citizen: 超級數位公民
         CSF_stevie_big_project: Stevie 和 Big Project
+        CSF_unspotted_bugs: 沒被發現的蟲蟲
         CSF_zuck_loops_short: 重複迴圈
         frozen_intro: 一小時玩程式介紹
         frozen_loops: 迴圈（Loops）的介紹
@@ -365,6 +373,16 @@ zh-TW:
         infinity_playlab_intro: Play Lab - 簡介
         infinity_playlab_events: Play Lab - 事件（Evnets）
         infinity_playlab_repeat_forever: Play Lab - 重複無限次
+        csd_concept_how_computers_work: 電腦工作原理：介紹
+        csd_concept_computer: '電腦工作原理：電腦是用什麼做的？是電腦嗎？'
+        csd_concept_binary_data: '電腦工作原理：二進位與資料'
+        csd_concept_circuits_logic: '電腦工作原理：電路與邏輯'
+        csd_concept_memory_cpu_input_output: '電腦工作原理：儲存、CPU、輸入與輸出'
+        csd_concept_hardware_software: '電腦工作原理：硬體與軟體'
+        csd_concept_search: 搜尋的工作原理
+        csd_external_amazon_data: Amazon Recommendation Systems 中的大數據是如何改變我們生活的
+        csd_external_netflix_data: Netflix 是如何製作電視節目和電影建議的？
+        csd_external_waze_data: 為什麼有這麼多人對 Waze 著迷？
         csd_gamelab_animation_tab: 動畫頁籤
         csd_gamelab_sprites_2: 動畫角色
         csd_gamelab_velocity: 速度
@@ -402,8 +420,40 @@ zh-TW:
         mc_2016_events: 一小時玩 Minecraft - 事件 (Events)
         mc_2016_spawn: 一小時玩 Minecraft - 生成 (Spawn)
         mc_2016_congrats: 一小時玩 Minecraft - 恭喜
+        applab_hoc_welcome: 一小時玩 App Lab - 歡迎
+        applab_hoc_setproperty: 一小時玩 App Lab - 屬性設定
+        applab_hoc_onevent: 一小時玩 App Lab - 事件發生
+        applab_hoc_designmode: 一小時玩 App Lab - 設計模式
+        applab_hoc_share: 一小時玩 App Lab - 分享
+        mc_2017_agent_intro: 一小時玩 App Lab - 代理
+        mc_2017_repeat: 一小時玩 App Lab - 重複迴圈
+        mc_2017_functions: 一小時玩 App Lab - 函式
         mc_2017_congratulations: 一小時玩 Minecraft - 恭喜
+        mc_2017_puzzle_1: 一小時玩 App Lab - 代理
+        mc_2017_puzzle_3: 一小時玩 App Lab - 重複迴圈
+        mc_2017_puzzle_8: 一小時玩 App Lab - 函式
+        mc_2017_puzzle_12: 一小時玩 App Lab - 自由發揮
+        applab_intro_welcome: App Lab - 入門
+        applab_intro_events: App Lab - 和它互動
+        applab_intro_sounds: App Lab - 圖像和音效
+        applab_intro_designmode: App Lab - 設計模式
+        applab_intro_share: App Lab - 分享你的程式
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_scrat_loops_K1: 冰河歷險紀中的迴圈
+        CSF_scrat_loops_CF: 冰河歷險紀中的迴圈
+        CSF_if_allskins: 如果積木
+        CSF_ifelse_allskins: 使用如果/否則積木
+        CSF_ifelseifelse_allskins: 使用如果/否則如果/否則積木
         CSF_loops_AB: 迴圈
+        csd_gamelab_booleans: 布林表達式
+        csd_gamelab_conditional_statements: 條件陳述式
+        csd_gamelab_if_else: 如果/否則 陳述式
+        CSF_SpriteLabIntro_CDEF: 這是 Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: 如何在 Sprite Lab 製作角色
+        CDEF_Video_SpritesInAction: 運行中的角色
+        CSF_SpriteLab_SpritesInAction_CDEF: 運行中的角色
+        CSF_StarWars_ProjectIntro: 星際大戰專案介紹
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

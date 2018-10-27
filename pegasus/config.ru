@@ -1,5 +1,16 @@
 require File.expand_path('../router', __FILE__)
 
+unless rack_env?(:development)
+  require 'cdo/app_server_metrics'
+  listener = CDO.pegasus_sock || "0.0.0.0:#{CDO.pegasus_port}"
+  use Cdo::AppServerMetrics,
+    listeners: [listener],
+    dimensions: {
+      Environment: CDO.rack_env,
+      Host: CDO.pegasus_hostname
+    }
+end
+
 require 'rack/csrf'
 use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
 use Rack::Csrf, check_only: ['POST:/v2/poste/send-message']

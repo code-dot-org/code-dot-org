@@ -6,41 +6,43 @@ ga:
         options:
           UNIT:
             '"seconds"': soicind
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: uile
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
+            MOVES.Rest: Dada
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Dada
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      Dancelab_doMoveOnce:
+            '"height"': airde
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: uile
+          MOVE:
+            MOVES.Rest: Dada
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
+            MOVES.Rest: Dada
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +51,54 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
+            '"height"': airde
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Dada
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: uile
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': randamach
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': ar dheis
-            '"left"': ar chlé
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': randamach
       Dancelab_randomColor:
         text: dath randamach
       Dancelab_setBackgroundEffect:
@@ -88,165 +121,34 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
+            '"height"': airde
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: uile
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
+            '"height"': airde
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
+            '"height"': airde
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': ag an mbarr
-            '"down"': ag an mbun
-            '"left"': ar chlé
-            '"right"': ar dheis
-            '"space"': spás
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ag an mbarr
-            '"down"': ag an mbun
-            '"left"': ar chlé
-            '"right"': ar dheis
-            '"space"': spás
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': soicind
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: uile
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': soicind
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: uile
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ar dheis
-            '"left"': ar chlé
-      DancelabAlpha_randomColor:
-        text: dath randamach
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': Dada
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': gnáthmhód
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Dada
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: uile
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': ag an mbarr
-            '"down"': ag an mbun
-            '"left"': ar chlé
-            '"right"': ar dheis
-            '"space"': spás
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': ag an mbarr
@@ -345,19 +247,83 @@ ga:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      Mikelab_randomColor:
+        text: dath randamach
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cathair
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
-      Vanilla_randomColor:
-        text: dath randamach
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ar dheis
+            '"left"': ar chlé
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': a bhrúitear an tsaighead suas
+            '"down"': a bhrúitear an tsaighead síos
+            '"left"': a bhrúitear an tsaighead chlé
+            '"right"': a bhrúitear an tsaighead dheas
+            '"w"': I
+            '"a"': A
+            '"s"': D
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': a bhrúitear an tsaighead suas
+            '"down"': a bhrúitear an tsaighead síos
+            '"left"': a bhrúitear an tsaighead chlé
+            '"right"': a bhrúitear an tsaighead dheas
+            '"w"': I
+            '"a"': A
+            '"s"': D
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': a bhrúitear an tsaighead suas
+            '"down"': a bhrúitear an tsaighead síos
+            '"left"': a bhrúitear an tsaighead chlé
+            '"right"': a bhrúitear an tsaighead dheas
+      RyanLab_moveForward:
+        text: téigh ar aghaidh
+      RyanLab_turnLeft:
+        text: cas ar chlé
+      RyanLab_turnRight:
+        text: cas ar dheis
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ar aghaidh
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": gaineamh
+            "'planksOak'": plainc dharach
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": gaineamh
       craft_moveForward:
         text: téigh ar aghaidh
+      craft_placeTorch:
+        text: cuir tóirse

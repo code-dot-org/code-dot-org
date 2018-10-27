@@ -6,41 +6,37 @@ th:
         options:
           UNIT:
             '"seconds"': วินาที
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: ทั้งหมด
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
-      Dancelab_doMoveOnce:
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
+          GROUP:
+            sprites: ทั้งหมด
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +45,41 @@ th:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ไปทางซ้าย
+            "{x: 300, y: 200}": ไปทางขวา
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: ทั้งหมด
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': สุ่ม
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': อยู่ที่แกน X
-            '"y"': อยู่ที่แกน Y
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": ไปทางซ้าย
+            "{x: 300, y: 200}": ไปทางขวา
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': ไปทางขวา
-            '"left"': ไปทางซ้าย
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': สุ่ม
       Dancelab_randomColor:
         text: สุ่มสี
       Dancelab_setDanceSpeed:
@@ -80,157 +94,44 @@ th:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
+            '"x"': อยู่ที่แกน X
+            '"y"': อยู่ที่แกน Y
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+          PROPERTY:
+            '"scale"': ขนาด
+            '"height"': ความสูง
+            '"x"': อยู่ที่แกน X
+            '"y"': อยู่ที่แกน Y
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: ทั้งหมด
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': อยู่ที่แกน X
-            '"y"': อยู่ที่แกน Y
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': ขนาด
+            '"height"': ความสูง
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ไปทางซ้าย
-            '"right"': ไปทางขวา
-            '"space"': อวกาศ
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ไปทางซ้าย
-            '"right"': ไปทางขวา
-            '"space"': อวกาศ
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': วินาที
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: ทั้งหมด
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': ถัดไป
-            '"prev"': ก่อนหน้า
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': วินาที
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: ทั้งหมด
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ไปทางขวา
-            '"left"': ไปทางซ้าย
-      DancelabAlpha_randomColor:
-        text: สุ่มสี
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': ธรรมดา
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: ทั้งหมด
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': ตามแนวแกนนอน
-            '"y"': ตามแนวแกนตั้ง
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ไปทางซ้าย
-            '"right"': ไปทางขวา
-            '"space"': อวกาศ
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
@@ -329,19 +230,79 @@ th:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ไปทางซ้าย
+            "{x: 300, y: 200}": ไปทางขวา
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
+      Mikelab_randomColor:
+        text: สุ่มสี
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
-      Vanilla_randomColor:
-        text: สุ่มสี
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ไปทางขวา
+            '"left"': ไปทางซ้าย
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': ลูกศรชี้ขึ้น
+            '"down"': ลูกศรชี้ลง
+            '"left"': ลูกศรชี้ทางซ้าย
+            '"right"': ลูกศรชี้ทางขวา
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': ลูกศรชี้ขึ้น
+            '"down"': ลูกศรชี้ลง
+            '"left"': ลูกศรชี้ทางซ้าย
+            '"right"': ลูกศรชี้ทางขวา
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': ลูกศรชี้ขึ้น
+            '"down"': ลูกศรชี้ลง
+            '"left"': ลูกศรชี้ทางซ้าย
+            '"right"': ลูกศรชี้ทางขวา
+      RyanLab_moveForward:
+        text: ไปข้างหน้า
+      RyanLab_turnLeft:
+        text: หันซ้าย
+      RyanLab_turnRight:
+        text: หันขวา
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ข้างหน้า
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": ทราย
+            "'planksOak'": ไม้กระดานต้นโอ๊ค
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ทราย
       craft_moveForward:
         text: ไปข้างหน้า
+      craft_placeTorch:
+        text: วางคบไฟ

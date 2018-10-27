@@ -232,6 +232,9 @@ ko:
       CSDU2L01 SFLP:
         description here: 설명 입력
         title: 제목화면 주제
+      CSP ExploreL02 SFLP:
+        description here: 설명 입력
+        title: 제목화면 주제
       CSP Journal Entry Placeholder2:
         description here: 설명 입력
         title: 제목화면 주제

@@ -6,41 +6,35 @@ da:
         options:
           UNIT:
             '"seconds"': sekunder
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næste
-            '"prev"': Forrige
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: alle
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næste
-            '"prev"': Forrige
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      Dancelab_doMoveOnce:
+            '"height"': højde
+      Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næste
-            '"prev"': Forrige
+          GROUP:
+            sprites: alle
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +43,39 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
+            '"height"': højde
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: alle
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': tilfældig
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': højre
-            '"left"': venstre
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': tilfældig
       Dancelab_randomColor:
         text: tilfældig farve
       Dancelab_setDanceSpeed:
@@ -80,157 +90,34 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
+            '"height"': højde
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: alle
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: alle
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
+            '"height"': højde
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
+            '"height"': højde
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': op
-            '"down"': ned
-            '"left"': venstre
-            '"right"': højre
-            '"space"': rummet
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': op
-            '"down"': ned
-            '"left"': venstre
-            '"right"': højre
-            '"space"': rummet
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekunder
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næste
-            '"prev"': Forrige
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: alle
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næste
-            '"prev"': Forrige
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næste
-            '"prev"': Forrige
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekunder
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: alle
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': højre
-            '"left"': venstre
-      DancelabAlpha_randomColor:
-        text: tilfældig farve
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: alle
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-position
-            '"y"': y-position
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': op
-            '"down"': ned
-            '"left"': venstre
-            '"right"': højre
-            '"space"': rummet
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': op
@@ -329,19 +216,83 @@ da:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": venstre
+            "{x: 300, y: 200}": højre
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      Mikelab_randomColor:
+        text: tilfældig farve
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
-      Vanilla_randomColor:
-        text: tilfældig farve
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': højre
+            '"left"': venstre
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': pil op
+            '"down"': pil ned
+            '"left"': venstre pil
+            '"right"': højre pil
+            '"w"': V
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': pil op
+            '"down"': pil ned
+            '"left"': venstre pil
+            '"right"': højre pil
+            '"w"': V
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': pil op
+            '"down"': pil ned
+            '"left"': venstre pil
+            '"right"': højre pil
+      RyanLab_moveForward:
+        text: flyt fremad
+      RyanLab_turnLeft:
+        text: drej til venstre
+      RyanLab_turnRight:
+        text: drej til højre
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": forude
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": sand
+            "'planksOak'": egetræsplanker
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: flyt fremad
+      craft_placeTorch:
+        text: placér fakkel

@@ -83,6 +83,7 @@ ko:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: '마이크로소프트 계정'
+    microsoft_v2_auth: '마이크로소프트 계정'
     clever: '영리 계정'
     powerschool: '학교 계정'
     forgot_password: '비밀번호를 잊으셨나요?'
@@ -265,9 +266,7 @@ ko:
         applab: 'Play Lab 앱 만들기'
         gamelab: '게임 연구소 프로젝트 만들기'
         weblab: '웹 연구소(베타) 프로젝트 만들기'
-      home: "홈"
       my_dashboard: "대시보드"
-      courses: "courses"
       course_catalog: "강의 목록"
       project_gallery: "프로젝트"
       sections: "섹션"
@@ -312,10 +311,16 @@ ko:
       signin: '로그인'
       signup: '회원가입'
       already_registered: '이미 등록하였나요?'
-      pair_programming: '페어 프로그래밍'
       team: '팀'
       driver: '로그인됨'
       navigator: '파트너'
+      create: '만들기'
+      applab: '앱 연구실'
+      artist: '화가'
+      gamelab: 'Game Lab'
+      playlab: 'Play Lab'
+      minecraft: '마인크래프트'
+      flappy: '플래피'
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: '내 진도'

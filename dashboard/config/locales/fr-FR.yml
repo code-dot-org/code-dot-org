@@ -19,6 +19,7 @@ fr:
       messages:
         blank: est obligatoire
         blank_plural: est requis
+        invalid: n'est pas valide
         invalid_plural: est invalide
     attributes:
       user:
@@ -36,6 +37,9 @@ fr:
         age: Age
         gender: Sexe
         edit_header: Modifier les détails du compte
+        finish_sign_up_header: Terminez la création de votre profil
+        finish_sign_up_subheader: Remplissez les informations suivantes pour finir
+          de créer votre compte Code.org.
         error:
           future: ne peut pas être dans le futur
   hello: Bonjour tout le monde
@@ -96,6 +100,7 @@ fr:
     twitter: Twitter
     facebook: Facebook
     windowslive: Compte Microsoft
+    microsoft_v2_auth: Compte Microsoft
     clever: Compte Clever
     powerschool: Compte Powerschool
     forgot_password: Mot de passe oublié ?
@@ -176,7 +181,7 @@ fr:
     error: Une erreur est apparue.
     email_preference_question: Pouvons-nous vous envoyer des e-mails d’information
       sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
-      le domaine informatique\_?
+      le domaine informatique?
     email_preference_privacy: "(Voir notre politique de protection des données)"
     email_preference_yes: Oui
     email_preference_no: Non
@@ -328,9 +333,7 @@ fr:
         applab: Crée une application
         gamelab: Créer un projet Game Lab
         weblab: Créer un projet Web Lab (bêta)
-      home: Accueil
       my_dashboard: Mon tableau de bord
-      courses: Cours
       course_catalog: Catalogue des cours
       project_gallery: Projets
       sections: Sections
@@ -375,10 +378,16 @@ fr:
       signin: Connexion
       signup: Créer un compte
       already_registered: Déjà enregistré ?
-      pair_programming: Programmation en Binôme
       team: Équipe
       driver: Pilote
       navigator: Navigateur
+      create: Créer
+      applab: Labo des applis
+      artist: Artiste
+      gamelab: Game Lab
+      playlab: Labo de jeux
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: progrès de %{name}
       progress: Ton progrès

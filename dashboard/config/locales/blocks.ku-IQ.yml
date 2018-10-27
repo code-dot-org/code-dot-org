@@ -2,19 +2,55 @@
 ku:
   data:
     blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': هەڕەمەکی
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': هەڕەمەکی
       Dancelab_randomColor:
         text: رەنگێکی هەڕەمەکی
       Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_randomColor:
-        text: رەنگێکی هەڕەمەکی
-      DancelabAlpha_setDanceSpeed:
         options:
           SPEED:
             '1': normal
@@ -39,5 +75,31 @@ ku:
         options:
           POSITION:
             '"random"': هەڕەمەکی
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: رەنگێکی هەڕەمەکی
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"w"': ڕۆژئاوا
+            '"s"': باشور
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"w"': ڕۆژئاوا
+            '"s"': باشور
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": بەرەو پێشەوە
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": لم/وردە بەرد
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": لم/وردە بەرد

@@ -18,64 +18,64 @@
         "name": "MOVE",
         "options": [
           [
-            "Rest",
-            "0"
-          ],
-          [
             "Clap High",
-            "1"
+            "MOVES.ClapHigh"
           ],
           [
             "Clown",
-            "2"
+            "MOVES.Clown"
           ],
           [
             "Dab",
-            "3"
+            "MOVES.Dab"
           ],
           [
             "Double Jam",
-            "4"
+            "MOVES.DoubleJam"
           ],
           [
             "Drop",
-            "5"
+            "MOVES.Drop"
           ],
           [
             "Floss",
-            "6"
+            "MOVES.Floss"
           ],
           [
             "Fresh",
-            "7"
-          ],
-          [
-            "Roll",
-            "8"
-          ],
-          [
-            "This or That",
-            "9"
+            "MOVES.Fresh"
           ],
           [
             "Kick",
-            "10"
+            "MOVES.Kick"
           ],
           [
-            "Thiller",
-            "11"
+            "Roll",
+            "MOVES.Roll"
           ],
           [
-            "Next",
+            "This or That",
+            "MOVES.ThisOrThat"
+          ],
+          [
+            "Thriller",
+            "MOVES.Thriller"
+          ],
+          [
+            "(Next)",
             "\"next\""
           ],
           [
-            "Previous",
+            "(Previous)",
             "\"prev\""
           ],
           [
-            "Random",
+            "(Random)",
             "\"rand\""
+          ],
+          [
+            "None",
+            "MOVES.Rest"
           ]
         ]
       },

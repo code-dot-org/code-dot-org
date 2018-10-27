@@ -1,6 +1,9 @@
 ---
 he:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: משולש גדול
     evaluation_multi:
       U5 evaluation q1:
         'No': לא
@@ -119,6 +122,8 @@ he:
       CSD-U3-SFLP Drawing:
         title: כותרת
       CSDU2L01 SFLP:
+        title: כותרת
+      CSP ExploreL02 SFLP:
         title: כותרת
       CSP Journal Entry Placeholder2:
         title: כותרת

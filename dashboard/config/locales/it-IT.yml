@@ -37,6 +37,7 @@ it:
         age: Età
         gender: Sesso
         edit_header: Modifica i dettagli dell'account
+        finish_sign_up_header: Completa la creazione del tuo account
         error:
           future: non può essere in futuro
   hello: Ciao a tutti
@@ -98,6 +99,7 @@ it:
     twitter: Twitter
     facebook: Facebook
     windowslive: Account Microsoft
+    microsoft_v2_auth: Account Microsoft
     clever: Account Clever
     powerschool: Account Powerschool
     forgot_password: Hai dimenticato la tua password?
@@ -322,9 +324,7 @@ it:
         applab: Costruisci una App in Sviluppo App
         gamelab: Crea un progetto in Sviluppo Giochi
         weblab: Crea un progetto in Sviluppo Web (versione provvisoria)
-      home: Home
       my_dashboard: Controllo
-      courses: Corsi
       course_catalog: Corsi
       project_gallery: Progetti
       sections: Classi
@@ -369,10 +369,17 @@ it:
       signin: Accedi
       signup: Crea un account
       already_registered: Sei già iscritto?
-      pair_programming: Programmazione in Coppia
       team: Squadra
       driver: Conducente
       navigator: Navigatore
+      create: Crea
+      applab: Sviluppo App
+      artist: Artista
+      gamelab: Sviluppo Giochi
+      playlab: Laboratorio
+      minecraft: Minecraft
+      flappy: Flappy
+      view_all: Guarda tutti i progetti...
     popup:
       progress_for_user: "%{name} in corso"
       progress: I tuoi progressi
@@ -1020,18 +1027,18 @@ it:
       corrette e aggiornale se necessario.
     save: Salva
   race_interstitial:
-    title: 'Optionale: Aiutaci a tracciare i vostri progressi per superare le diversità
-      in informatica'
-    message: Si prega di riferirci la gara (controllare che tutti partecipino)
+    title: 'Facoltativo: aiutaci a controllare i nostri progressi nel superamento
+      delle discriminazioni in informatica'
+    message: Quali sono le tue origini (spunta tutte le voci corrette)?
     races:
       white: Bianco
       black: Neri o afroamericani
-      hispanic: Ispano o Latino
+      hispanic: Ispanico o Latino
       asian: Asiatico
-      hawaiian: Nativi hawaiani o altre isole del Pacifico
-      american_indian: Nativo Americano Indiano/Alaska
+      hawaiian: Nativo Hawaiano o altre Isole del Pacifico
+      american_indian: Nativo Indiano d'America o d'Alaska
       other: Altro
-      opt_out: Preferisco non dirlo
+      opt_out: Preferisco non rispondere
     submit: Invia
     decline: Chiudi
   zendesk_too_young_message: Siamo spiacenti, gli utenti più giovani non possono accedere

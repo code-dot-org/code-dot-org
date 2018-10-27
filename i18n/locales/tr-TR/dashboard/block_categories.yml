@@ -30,11 +30,11 @@ tr:
       Sprites: Hareketli Nesneler
       Behaviors: Davranışlar
       Start: Başlayın
+      Groups: Gruplar
       Sprite: Hareketli nesne
       Brush: Fırça
       Make Sprite: Hareketli Nesne Oluştur
       Movement: Hareket
-      Groups: Gruplar
       Booleans: Boolean Değerleri
       Predefined: Önceden Tanımlanmış
       test: dene

@@ -6,41 +6,43 @@ is:
         options:
           UNIT:
             '"seconds"': sekúndur
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næsta
-            '"prev"': Fyrri
-      Dancelab_changeMoveEach:
+      Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: allt
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næsta
-            '"prev"': Fyrri
+            MOVES.Rest: Ekkert
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: Ekkert
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      Dancelab_doMoveOnce:
+            '"height"': hæð
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            sprites: allt
+          MOVE:
+            MOVES.Rest: Ekkert
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
         options:
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næsta
-            '"prev"': Fyrri
+            MOVES.Rest: Ekkert
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,23 +51,54 @@ is:
         options:
           PROPERTY:
             '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
+            '"height"': hæð
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Ekkert
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vinstri
+            "{x: 300, y: 200}": hægri
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": eitthvað
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: allt
-      Dancelab_mappingProp:
+          FORMAT:
+            '"random"': eitthvað
+      Dancelab_makeNewDanceSprite:
         options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      Dancelab_mirrorSprite:
+          LOCATION:
+            "{x: 100, y: 200}": vinstri
+            "{x: 300, y: 200}": hægri
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": eitthvað
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          DIRECTION:
-            '"right"': hægri
-            '"left"': vinstri
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': eitthvað
       Dancelab_randomColor:
         text: einhver litur
       Dancelab_setBackgroundEffect:
@@ -88,165 +121,34 @@ is:
         options:
           PROPERTY:
             '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
+            '"height"': hæð
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: allt
+          PROPERTY:
+            '"scale"': stærð
+            '"height"': hæð
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"height"': hæð
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: allt
-      Dancelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
+            '"height"': hæð
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
+            '"height"': hæð
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"up"': uppi
-            '"down"': niðri
-            '"left"': vinstri
-            '"right"': hægri
-            '"space"': geimur
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': uppi
-            '"down"': niðri
-            '"left"': vinstri
-            '"right"': hægri
-            '"space"': geimur
-      DancelabAlpha_atTimestamp:
-        options:
-          UNIT:
-            '"seconds"': sekúndur
-      DancelabAlpha_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næsta
-            '"prev"': Fyrri
-      DancelabAlpha_changeMoveEach:
-        options:
-          GROUP:
-            sprites: allt
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næsta
-            '"prev"': Fyrri
-      DancelabAlpha_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      DancelabAlpha_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Næsta
-            '"prev"': Fyrri
-      DancelabAlpha_everySeconds:
-        options:
-          UNIT:
-            '"seconds"': sekúndur
-      DancelabAlpha_getProp:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      DancelabAlpha_layoutSprites:
-        options:
-          GROUP:
-            sprites: allt
-      DancelabAlpha_mappingProp:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      DancelabAlpha_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': hægri
-            '"left"': vinstri
-      DancelabAlpha_randomColor:
-        text: einhver litur
-      DancelabAlpha_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"none"': Ekkert
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': venjulegt
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        options:
-          EFFECT:
-            '"none"': Ekkert
-      DancelabAlpha_setProp:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      DancelabAlpha_setVisibleEach:
-        options:
-          THIS:
-            sprites: allt
-      DancelabAlpha_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      DancelabAlpha_startMapping:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      DancelabAlpha_stopMapping:
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"up"': uppi
-            '"down"': niðri
-            '"left"': vinstri
-            '"right"': hægri
-            '"space"': geimur
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': uppi
@@ -345,19 +247,79 @@ is:
             '"scale"': stærð
             '"x"': x staða
             '"y"': y staða
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": vinstri
+            "{x: 300, y: 200}": hægri
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': stærð
             '"x"': x staða
             '"y"': y staða
+      Mikelab_randomColor:
+        text: einhver litur
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': stærð
             '"x"': x staða
             '"y"': y staða
-      Vanilla_randomColor:
-        text: einhver litur
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': hægri
+            '"left"': vinstri
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': upp ör
+            '"down"': niður ör
+            '"left"': vinstri ör
+            '"right"': hægri ör
+            '"w"': V
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': upp ör
+            '"down"': niður ör
+            '"left"': vinstri ör
+            '"right"': hægri ör
+            '"w"': V
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': upp ör
+            '"down"': niður ör
+            '"left"': vinstri ör
+            '"right"': hægri ör
+      RyanLab_moveForward:
+        text: færa áfram
+      RyanLab_turnLeft:
+        text: snúa til vinstri
+      RyanLab_turnRight:
+        text: snúa til hægri
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": framfyrir
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": sand
+            "'planksOak'": eikarplanka
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: færa áfram
+      craft_placeTorch:
+        text: setja kyndil

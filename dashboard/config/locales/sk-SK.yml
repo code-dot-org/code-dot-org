@@ -94,6 +94,7 @@ sk:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft účet
+    microsoft_v2_auth: Microsoft účet
     clever: Smart konto
     powerschool: Hlavný školský účet
     forgot_password: Zabudli ste heslo?
@@ -320,9 +321,7 @@ sk:
         applab: Vytvoriť aplikáciu
         gamelab: Vytvorte projekt v Hernom laboratóriu
         weblab: Vytvorte prjekt vo Webovom laboratóriu (beta verzia)
-      home: Domov
       my_dashboard: Môj hlavný panel
-      courses: Kurzy
       course_catalog: Katalóg kurzov
       project_gallery: Projekty
       sections: Sekcie
@@ -336,7 +335,7 @@ sk:
       educate_elementary: Základná škola
       educate_middle: 2. stupeň základnej školy
       educate_high: Stredná škola
-      educate_hoc: Hodina kódovania
+      educate_hoc: Hodina Kódu
       educate_partner: Staňte sa naším partnerom
       educate_beyond: Nad rámec Code.org
       educate_inspire: Inšpirujte študenta
@@ -367,10 +366,16 @@ sk:
       signin: Prihlásiť sa
       signup: Vytvoriť účet
       already_registered: Ste už zaregistrovaný?
-      pair_programming: Programovanie v páre
       team: Tím
       driver: Prihlásený
       navigator: Navigátor
+      create: Vytvoriť
+      applab: Laboratórium aplikácií
+      artist: Umelec
+      gamelab: Herné laboratórium
+      playlab: Herné laboratórium
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
       progress: Váš pokrok
@@ -784,7 +789,7 @@ sk:
       body_short: Naučte sa základy počítačovej vedy v zrýchlenej verzií kurzov 2-4.
     hoc2014:
       try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
-      try_frozen: Postavy s Annou a Elsou z Frozen
+      try_frozen: Umelec s Annou a Elsou z Frozen
     gallery:
       title: Galéria
       body: Zobraziť galériu aplikácií a obrázkov vytvorených našími užívateľmi
@@ -796,6 +801,7 @@ sk:
       audience: Vek 13+
       cta: Nauč sa ako
     hoc-encryption:
+      title: Jednoduché šifrovanie
       body: Študenti sa naučia metódy na vytvorenie a prelomenie zašifrovaných správ.
     weblab:
       title: Webové laboratórium (beta)
@@ -805,7 +811,7 @@ sk:
       audience: Vek 13+
       cta: Nauč sa ako
     frozen:
-      title: Zamrznutý
+      title: Frozen
     starwars:
       title: Star Wars
     infinity:
@@ -818,8 +824,8 @@ sk:
       body: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
     hero:
       title: Minecraft
-      body: Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou! Prejdite
-        sa po Minecrafte s kódom.
+      body: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po
+        Minecrafte s kódom.
     sports:
       body: Vytvorte basketbalovú hru alebo pospájajte a pomiešajte viaceré športy.
     text-compression:
@@ -883,14 +889,14 @@ sk:
     correct_title: Správne
     correct_body: To je správna odpoveď.
   multi-submittable:
-    wrong_title: Ďakujeme
+    wrong_title: Ďakujem
     wrong_body: Ďakujeme za odoslanie odpovede.
-    correct_title: Ďakujeme
+    correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovede.
   level_group:
-    wrong_title: Ďakujeme
+    wrong_title: Ďakujem
     wrong_body: Ďakujeme za odoslanie odpovedí.
-    correct_title: Ďakujeme
+    correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovedí.
     hide_survey_last_answer: Tento prieskum je anonymný. Pre súhrnné informácie o
       výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu
@@ -899,9 +905,9 @@ sk:
       aby sme mohli Vaše odpovede ponechať anonymné. Učiteľ môže stále vidieť súhrnné
       odpovede za celú triedu, avšak bez konkrétnych mien.
   level_group-submittable:
-    wrong_title: Ďakujeme
+    wrong_title: Ďakujem
     wrong_body: Ďakujeme za odoslanie odpovedí.
-    correct_title: Ďakujeme
+    correct_title: Ďakujem
     correct_body: Ďakujeme za odoslanie odpovedí.
     unsubmit-title: Odvolaj tvoje hodnotenie
     unsubmit-body: Odvolanie tvojho hodnotenia obnoví čas a dátum odoslania.  Si si
@@ -1024,13 +1030,13 @@ sk:
     save: Uložiť
     delete: Odstrániť
     import: Import
-    share_link_import_bad_link_header: Prepojenie na zdieľanie sa nerozpoznalo
-    share_link_import_bad_link_body: 'Prepojenie na zdieľanie sa nemohlo importovať.
-      Uistite sa, že používate prepojenie z hlavolamu Minecraft: Agent a že ste skopírovali
-      celé prepojenie.'
+    share_link_import_bad_link_header: Link na zdieľanie nebol nerozpoznaný
+    share_link_import_bad_link_body: 'Link na zdieľanie sa nám nepodarilo importovať.
+      Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý
+      link.'
     share_link_import_error_header: Vyskytla sa chyba.
-    share_link_import_error_body: Vyskytol sa problém s importom tohto prepojenia
-      na zdieľanie. Skúste to znova.
+    share_link_import_error_body: Vyskytol sa problém s importom tohto linku na zdieľanie.
+      Skús to znova.
     exit: Vrátiť sa do kurzu
     my_projects: Moje Projekty
     project_gallery: Projekty
@@ -1159,6 +1165,7 @@ sk:
     csp_ap_3: 'Kapitola 3: AP výtváranie výkonnovej úlohy'
     csp_postap_1: 'Kapitola 1: Práca s a vizualizácia dát'
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
+    csp2_1_2018: 'Lekcia 2: Digitálne informácie'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
     dlp: Výzvy na zhodnotenie
   external_links:
@@ -1365,6 +1372,7 @@ sk:
       body: Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku
         s nastaveniami Vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte
         tento formulár.
+  courses_category: Všetky kurzy
   cookie_banner:
     message: Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s
       uložením cookies na Vašom počítači alebo zariadení.

@@ -53,7 +53,7 @@ th:
     submit: เพิ่มคำแนะนำ
   appname: Code.org
   stage: ขั้นตอน
-  stage_number: ขั้นตอน %{number}
+  stage_number: บทที่ %{number}
   puzzle: ปริศนา
   trophies: ถ้วยรางวัล
   courses: คอร์ส
@@ -83,6 +83,7 @@ th:
     twitter: ทวิตเตอร์
     facebook: เฟซบุค
     windowslive: บัญชี Microsoft
+    microsoft_v2_auth: บัญชี Microsoft
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
@@ -208,7 +209,7 @@ th:
     destroyed: "%{model} ถูกลบออกแล้ว"
   nav:
     header:
-      finished_hoc: ฉันผ่านชั่วโมงโค้ดของฉันแล้ว
+      finished_hoc: ฉันผ่านชั่วโมงแห่งการเขียนโค้ดของฉันแล้ว
       sign_in_to_save: เข้าสู่ระบบเพื่อบันทึกความก้าวหน้า
       free_play:
         playlab: สร้างแอพห้องทดลองหรรษา
@@ -217,7 +218,7 @@ th:
         gamelab: สร้างโปรเจคเกมแลป
         weblab: สร้างโปรเจคเว็บแลป (เบต้า)
       my_dashboard: แดชบอร์ดของฉัน
-      courses: คอร์ส
+      course_catalog: รายการหลักสูตร
       project_gallery: โปรเจกต์
       help_support: การช่วยเหลือและสนับสนุน
       professional_learning: การเรียนรู้อย่างมืออาชีพ
@@ -233,6 +234,10 @@ th:
       signin: เข้าสู่ระบบ
       already_registered: ลงทะเบียนแล้วหรือยัง?
       team: ทีม
+      create: สร้าง
+      applab: แอ๊ปแล็บ
+      artist: ศิลปิน
+      gamelab: เกมแล๊ป (Game Lab)
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
@@ -398,6 +403,7 @@ th:
     header_artist: ศิลปิน
     report_abuse: รายงานการละเมิด
   landing:
+    support: ขอความช่วยเหลือ
     help_support: การช่วยเหลือและสนับสนุน
   multi:
     wrong_body: คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!
@@ -432,6 +438,8 @@ th:
     races:
       other: อาชีพอื่น ๆ
     submit: ส่ง
+  progress:
+    not_started: ยังไม่เริ่ม
   project:
     projects: โปรเจกต์
     new: สร้างใหม่

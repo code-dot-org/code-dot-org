@@ -30,6 +30,7 @@ class ProjectCardGrid extends Component {
   static propTypes = {
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(projectPropType),
+      spritelab: PropTypes.arrayOf(projectPropType),
       gamelab: PropTypes.arrayOf(projectPropType),
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
@@ -66,6 +67,41 @@ class ProjectCardGrid extends Component {
       <div style={styles.grid}>
         {(this.state.showAll) &&
           <div>
+            <ProjectAppTypeArea
+              labKey="gamelab"
+              labName={i18n.projectTypeGamelab()}
+              labViewMoreString={i18n.projectTypeGamelabViewMore()}
+              hideViewMoreLink={this.props.limitedGallery}
+              projectList={projectLists.gamelab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
+            <ProjectAppTypeArea
+              labKey="applab"
+              labName={i18n.projectTypeApplab()}
+              labViewMoreString={i18n.projectTypeApplabViewMore()}
+              hideViewMoreLink={this.props.limitedGallery}
+              projectList={projectLists.applab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
+            <ProjectAppTypeArea
+              labKey="spritelab"
+              labName={i18n.projectTypeSpriteLab()}
+              labViewMoreString={i18n.projectTypeSpriteLabViewMore()}
+              projectList={projectLists.spritelab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
             <ProjectAppTypeArea
               labKey="playlab"
               labName={i18n.projectGroupPlaylab()}
@@ -111,30 +147,6 @@ class ProjectCardGrid extends Component {
               hideWithoutThumbnails={true}
             />
             <ProjectAppTypeArea
-              labKey="applab"
-              labName={i18n.projectTypeApplab()}
-              labViewMoreString={i18n.projectTypeApplabViewMore()}
-              hideViewMoreLink={this.props.limitedGallery}
-              projectList={projectLists.applab}
-              numProjectsToShow={numProjects}
-              galleryType={this.props.galleryType}
-              navigateFunction={this.onSelectApp}
-              isDetailView={false}
-              hideWithoutThumbnails={true}
-            />
-            <ProjectAppTypeArea
-              labKey="gamelab"
-              labName={i18n.projectTypeGamelab()}
-              labViewMoreString={i18n.projectTypeGamelabViewMore()}
-              hideViewMoreLink={this.props.limitedGallery}
-              projectList={projectLists.gamelab}
-              numProjectsToShow={numProjects}
-              galleryType={this.props.galleryType}
-              navigateFunction={this.onSelectApp}
-              isDetailView={false}
-              hideWithoutThumbnails={true}
-            />
-            <ProjectAppTypeArea
               labKey="k1"
               labName={i18n.projectGroupPreReader()}
               labViewMoreString={i18n.projectGroupPreReaderViewMore()}
@@ -150,6 +162,44 @@ class ProjectCardGrid extends Component {
 
         {(!this.state.showAll) &&
           <div>
+            {this.state.showApp === 'gamelab' &&
+              <ProjectAppTypeArea
+                labKey="gamelab"
+                labName={i18n.projectTypeAllProjectsGamelab()}
+                labViewMoreString={i18n.projectsViewAll()}
+                hideViewMoreLink={this.props.limitedGallery}
+                projectList={projectLists.gamelab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
+              />
+            }
+            {this.state.showApp === 'applab' &&
+              <ProjectAppTypeArea
+                labKey="applab"
+                labName={i18n.projectTypeAllProjectsApplab()}
+                labViewMoreString={i18n.projectsViewAll()}
+                hideViewMoreLink={this.props.limitedGallery}
+                projectList={projectLists.applab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
+              />
+            }
+            {this.state.showApp === 'spritelab' &&
+              <ProjectAppTypeArea
+                labKey="spritelab"
+                labName={i18n.projectTypeSpriteLab()}
+                labViewMoreString={i18n.projectsViewAll()}
+                projectList={projectLists.spritelab}
+                numProjectsToShow={numProjects}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
+              />
+            }
             {this.state.showApp === 'playlab' &&
               <ProjectAppTypeArea
                 labKey="playlab"
@@ -192,32 +242,6 @@ class ProjectCardGrid extends Component {
                 labName={i18n.projectGroupMinecraftAllProjects()}
                 labViewMoreString={i18n.projectsViewAll()}
                 projectList={projectLists.minecraft}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.viewAllProjects}
-                isDetailView={true}
-              />
-            }
-            {this.state.showApp === 'applab' &&
-              <ProjectAppTypeArea
-                labKey="applab"
-                labName={i18n.projectTypeAllProjectsApplab()}
-                labViewMoreString={i18n.projectsViewAll()}
-                hideViewMoreLink={this.props.limitedGallery}
-                projectList={projectLists.applab}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.viewAllProjects}
-                isDetailView={true}
-              />
-            }
-            {this.state.showApp === 'gamelab' &&
-              <ProjectAppTypeArea
-                labKey="gamelab"
-                labName={i18n.projectTypeAllProjectsGamelab()}
-                labViewMoreString={i18n.projectsViewAll()}
-                hideViewMoreLink={this.props.limitedGallery}
-                projectList={projectLists.gamelab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}

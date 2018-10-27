@@ -2,6 +2,22 @@
 pt-BR:
   data:
     callouts:
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: O Artista não tem um botão de "Próximo", mas você
+          pode arrastar a barra para a esquerda para ver seu programa rodar com mais
+          cuidado.
+      2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber
+          até rodar o código!
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: Clique e arraste a "área de texto" para a tela
         screenSelectorCallout3: Escolha a tela que você fez
@@ -10,24 +26,58 @@ pt-BR:
         changePlace1ID: Mude o Id da sua tela aqui.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Clique no título de seu app
+        appLabIntro2_designMenu: Use os menus para mudat o "texto" do seu aplicativo
+        appLabIntro2_textColor: Role para baixo para alterar a "cor do texto"
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Clique no texto da história nesta tela
+        appLabIntro2_editStoryText: Arraste o canto inferior à direita dessa caixa
+          de texto para ter mais espaço. Em seguida, escreva sua história
+        appLabIntro2_textColor: Experimente algumas das propriedades diferentes que
+          você pode alterar abaixo
+      AppLab Intro 2 - add Button_callout:
+        designToolboxCallOut: Arraste um botão para sua tela.
+        changeButtonID: Escolha um "id" óbvio para seu botão. Como por exemplo, "botãoChamarAmigo"
+          ou "botãoSair".
+        screenSelectorCallout3: Vá para sua "telaInício"
+      AppLab Intro 2 - add onEvent_callout:
+        onEventFirstTime: Clicque e arraste um bloco "aoOcorrerEvento" para o seu
+          workspace à direita
+        setScreenFirstTime: Clique e arraste até seu workspace o bloco de "aoAcontecerEvento"
+      AppLab Intro 7 - Change Screen Color_callout:
+        applab_hoc_finish: A tela ficou verde? Em caso afirmativo, clique em 'Concluir'.
+          Se não, clique em 'Reset', altere seu código e cliqur em 'Executar' novamente.
+      AppLab Intro 7 - thisOrThatAddButton_callout:
+        AppLabHoCFinal11: Você está agora no modo de Design.
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Altera o número aqui
+        CSD_U3_variables: Altere o número aqui
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Clique aqui para visualizar a grade.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: Clique aqui para visualizar a grade.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: Clique aqui para visualizar a grade.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: Clique aqui para visualizar a grade.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: Altera o número aqui
+        CSD_U3_variables: Altere o número aqui
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U3 debug_2018_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U3 fill_2018_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Aqui está o código
         CSD_U3_rect_c2: Aqui está o botão "Executar".
@@ -38,8 +88,10 @@ pt-BR:
         CSD_U3_rect_c1: Aqui está o código
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Aqui está o código
+        CSD_U3_rect_c2: Arraste o bloco para a área de código.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Adicione seu código aqui
       CSD U6 colorLeds intensity_2018_callout:
@@ -65,6 +117,8 @@ pt-BR:
       CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Verifique se o jogador ganhou
       Counting_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       Course 4 Artist 4_callout:
@@ -136,6 +190,15 @@ pt-BR:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Esta pequena instrução pede para o computador que executar
           o GRANDE código com o mesmo nome na área de trabalho.
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
       Infinity_move_directions_callout:
@@ -146,6 +209,9 @@ pt-BR:
         Infinity_move_right_runbutton: Adicione um bloco Mova aqui
       Infinity_repeat_callout:
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
+      MC HOC 2016 Level 2-2_callout:
+        craft2_run_button_callout: Quando você estiver pronto, clique em "Executar"
+          para testar seu programa.
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Clique em "Executar" para começar a se mover.
       MC_HOC_2017_01_Cole_callout:
@@ -176,6 +242,8 @@ pt-BR:
         MC_HOC_2017_08_RY_1: 'O Agent pode passar sobre a lava, mas o jogador não
           pode!  '
       Mike Playlab Project_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       NEW Course 4 Artist Functions 3_callout:
@@ -203,12 +271,16 @@ pt-BR:
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de
           "Ação" estão aqui agora.
       New Artist Project_callout:
+        New Artist Project_callout2: Clique em "Executar" para salvar e executar seu
+          programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       New Frozen Project_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
       New Play Lab Project_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       Overworld Chop Trees_callout:
@@ -223,21 +295,53 @@ pt-BR:
           Você consegue terminá-la?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Selecione "Executar" para abrir seu programa
+        craft_drag_block_callout: Arraste um bloco de "mover para frente" e encaixe-o
+          embaixo do outro bloco
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: Selecione "Executar" para abrir seu programa
+        craft_drag_block_callout: Arraste um bloco de "mover para frente" e encaixe-o
+          embaixo do outro bloco
       Overworld Place Wall_callout:
         craft_inside_repeat: Repita as ações colocando blocos aqui
       Overworld Place Wall_2018_callout:
         craft_inside_repeat: Repita as ações colocando blocos aqui
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: Clique aqui para visualizar a grade.
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Clique aqui para visualizar a grade.
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber
+          até rodar o código!
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: Clique aqui para visualizar a grade.
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       Rock Paper Scissors_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
       SGU3L2A Introducing Subgoals_callout:
         goals_palette_show: Aqui está uma lista de submetas
         goals_workspace: Exemplo de código com submetas
       Sam the Butterfly 3_callout:
         Sam the Butterfly 3 1: Edite essa função para evitar que o Sam vá para a direita
       Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       Underground Avoiding Lava_callout:
@@ -413,6 +517,15 @@ pt-BR:
         courseD_artist_ramp11_1: Você pode mudar esse número.
         courseD_artist_ramp11_2: Clique aqui para digitar o número de vezes que o
           código será repetido.
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
+      courseD_bee_conditionals2_test_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para
           executar o programa.
@@ -534,10 +647,18 @@ pt-BR:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
       courseF_playLab_func2_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
       courseF_playlab_brokenText_callout:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
+      courseF_playlab_variables1a_callout:
+        courseF_playlab_variables1a_1: A caixa de ferramentas foi organizada em categorias
+          para tornar mais fácil encontrar os blocos que você precisa.
+      courseF_playlab_variables1a_2018_callout:
+        courseF_playlab_variables1a_1: A caixa de ferramentas foi organizada em categorias
+          para tornar mais fácil encontrar os blocos que você precisa.
       courseF_playlab_variables2_callout:
         course_playlab_variables2_1: Assim é como se insere o valor da variável. Altere
           o texto ligado a esse bloco para alterar o que está sendo levado em conta
@@ -552,6 +673,10 @@ pt-BR:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
       courseF_playlab_variables6c_2018_callout:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
+      courseF_playlab_variables7c_callout:
+        courseF_playlab_variables7c_1: Encontre o bloco `perguntar` aqui!
+      courseF_playlab_variables7c_2018_callout:
+        courseF_playlab_variables7c_1: Encontre o bloco `perguntar` aqui!
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: Você encontrará seu bloco variável aqui.
       courseF_playlab_variablesTemplate_2018_callout:
@@ -668,10 +793,28 @@ pt-BR:
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: Você só tem um desses blocos disponível neste
           quebra-cabeças.
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
+      grade3_Conditionals_3_callout:
+        Bee_Cond_5_1a: Flores roxas podem ter 0 ou 1 néctar... mas você não vai saber
+          até rodar o código!
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
         add_and_drag_parameter: Escreva o nome do seu parâmetro aqui, clique em adicionar
           e, em seguida, arraste-o para sua definição de função
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Lembre-se de olhar se TODA nuvem tem uma FLOR. Você
+          não precisa se preocupar com os favos de mel.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
           neve!
@@ -692,9 +835,17 @@ pt-BR:
         replace_questions: Use o menu suspenso para substituir "???" por um número
       grade4_frozen_square_loop3_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
+      grade4_playLab_proj_example1_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
       grade4_playLab_proj_example2_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: Todos os seus blocos favoritos estão organizados
+          em categorias. Clique nestas palavras para descobrir para onde tudo foi!
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: Clique em editar para adicionar um parâmetro em sua função
         add_and_drag_parameter: Escreva o nome do seu parâmetro aqui, clique em adicionar
@@ -726,5 +877,7 @@ pt-BR:
         gradek_playlab_events5c_1: Isto permite que você escolha um som "aleatório",
           que significa que você não sabe o que você vai obter até que você o ouça!
       small_actors_playlab_projects_callout:
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar
           esse projeto em sua conta!

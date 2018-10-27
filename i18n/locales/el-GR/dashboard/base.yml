@@ -83,6 +83,7 @@ el:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Λογαριασμός Microsoft'
+    microsoft_v2_auth: 'Λογαριασμός Microsoft'
     clever: 'Έξυπνος λογαριασμός'
     powerschool: 'Λογαριασμός Powerschool'
     forgot_password: 'Ξέχασες τον κωδικό σου;'
@@ -231,7 +232,6 @@ el:
         playlab: 'Δημιουργήστε μια εφαρμογή'
         artist: 'Ζωγραφίστε κάτι'
         applab: 'Δημιουργήστε μια εφαρμογή'
-      courses: "Τες"
       project_gallery: "Έργα"
       educate_hoc: "Η Ώρα του Κώδικα"
     user:
@@ -244,10 +244,16 @@ el:
       signin: 'Σύνδεση'
       signup: 'Δημιουργήστε ένα λογαριασμό'
       already_registered: 'Έχετε εγγραφεί ήδη;'
-      pair_programming: 'Προγραμματισμός κατά ζεύγη'
       team: 'Ομάδα'
       driver: 'Οδηγός-αρχηγός'
       navigator: 'Πλοηγός'
+      create: 'Δημιουργία'
+      applab: 'Εργαστήριο εφαρμογών'
+      artist: 'Καλλιτέχνης'
+      gamelab: 'Game Lab'
+      playlab: 'Εργαστήριο Παιχνιδιού'
+      minecraft: 'Minecraft'
+      flappy: 'Πουλάκι'
     popup:
       progress_for_user: "πρόοδος του %{name}"
       progress: 'Η πρόοδός σου'

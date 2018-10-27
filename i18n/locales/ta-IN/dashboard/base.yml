@@ -84,13 +84,13 @@ ta:
     destroy: 'அழிக்கவும்'
   nav:
     header:
-      courses: "பாடங்கள்"
       educate_hoc: "நிரல்வரி நேரம்"
     user:
       label: 'வணக்கம் %{username}'
       settings: 'எனது கணக்கு'
       logout: 'வெளியேறு'
       signin: 'உள்நுழை'
+      create: 'உருவாக்கு'
     popup:
       close: 'மூடு'
   teacher:

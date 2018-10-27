@@ -921,6 +921,8 @@ el:
               name: Δυαδικά Βραχιόλια
             Binary Images:
               name: Δυαδικές Εικόνες
+            Play Lab:
+              name: Εργαστήριο Παιχνιδιού
         csd2-2017:
           stages:
             Lists:

@@ -513,6 +513,8 @@ bn:
           stages:
             Binary Images:
               name: দ্বিমিক ছবি
+            Play Lab:
+              name: প্লে ল্যাব
         csd2-2017:
           stages:
             Lists:

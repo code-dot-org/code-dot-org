@@ -3,10 +3,18 @@ th:
     callouts:
       2-3 Artist Debugging 1_callout:
         2-3_Artist_Debugging_1_a: ศิลปะไม่มีปุ่ม "Step" แต่คุณสามารถเลื่อนแถบไปด้านซ้ายเพื่อดูโปรแกรมที่่ทำงานอย่างละเอียด
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: กด "รัน" เพื่อลองใช้โปรแกรมของคุณ
       Course 4 Maze 4_callout:
         repeat: ใส่บล็อกไว้ข้างในลูปเพื่อทำซ้ำคำสั่งต่าง ๆ
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
       MC_HOC_2017_Ali_callout:
         MC_HOC_2017_08_RY_1: 'เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับอะเล็กซ์ไม่สามารถทำเช่นนั้นได้!  '
       Overworld Chop Trees_callout:
@@ -25,8 +33,14 @@ th:
         craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
       Overworld Place Wall_2018_callout:
         craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " ถ้าติดขัด ไม่รู้ว่าจะทำอย่างไร<br />ให้คลิกที่หลอดไฟเพื่อดูคำบอกใบ้!"
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม
       Underground Avoiding Lava_2018_callout:
@@ -105,6 +119,12 @@ th:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!
       gradek_adventurer_loops2_callout:
         gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       gradek_artist_loops3_callout:

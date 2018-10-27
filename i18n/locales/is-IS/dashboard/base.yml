@@ -83,6 +83,7 @@ is:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft reikning'
+    microsoft_v2_auth: 'Microsoft reikning'
     clever: 'Clever aðgangur'
     forgot_password: 'Gleymdir þú lykilorðinu þínu ?'
     need_confirmation: "Fékkstu ekki sendar leiðbeiningar um staðfestingu?"
@@ -256,9 +257,7 @@ is:
         applab: 'Búa til forrit í App Lab'
         gamelab: 'Búa til Leikjasmiðjuverkefni'
         weblab: 'Búa til Vefsmiðju (beta) verkefni'
-      home: "Forsíða"
       my_dashboard: "Stjórnborðið mitt"
-      courses: "Námskeið"
       course_catalog: "Námskeiðalisti"
       project_gallery: "Verkefni"
       sections: "Hópar"
@@ -303,10 +302,16 @@ is:
       signin: 'Innskráning'
       signup: 'Búa til aðgang'
       already_registered: 'Þegar skráð/ur?'
-      pair_programming: 'Félagaforritun'
       team: 'Félagar'
       driver: 'Ökumaður'
       navigator: 'Leiðsögumaður'
+      create: 'Búa til'
+      applab: 'Appsmiðja'
+      artist: 'Listamaður'
+      gamelab: 'Leikjasmiðjan'
+      playlab: 'Leikjasmiðja'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "Framvinda %{name}"
       progress: 'Framvinda þín'

@@ -2,6 +2,60 @@
 en-GB:
   data:
     blocks:
+      Dancelab_changeMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_doMoveEachLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_doMoveLR:
+        options:
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': random
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': random
       Dancelab_randomColor:
         text: random colour
       Dancelab_setDanceSpeed:
@@ -12,29 +66,27 @@ en-GB:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': height
       Dancelab_whenKey:
-        options:
-          KEY:
-            '"space"': space
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"space"': space
-      DancelabAlpha_randomColor:
-        text: random colour
-      DancelabAlpha_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_whenKey:
-        options:
-          KEY:
-            '"space"': space
-      DancelabAlpha_whileKey:
         options:
           KEY:
             '"space"': space
@@ -67,7 +119,42 @@ en-GB:
         options:
           KEY:
             '"space"': space
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: random colour
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"w"': W
+            '"s"': S
+      RyanLab_moveForward:
+        text: move forward
+      RyanLab_turnLeft:
+        text: turn left
+      RyanLab_turnRight:
+        text: turn right
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": ahead
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": sand
+            "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: move forward
+      craft_placeTorch:
+        text: place torch

@@ -83,6 +83,7 @@ he:
     twitter: 'טוויטר'
     facebook: 'פייסבוק'
     windowslive: 'חשבון מיקרוסופט'
+    microsoft_v2_auth: 'חשבון מיקרוסופט'
     clever: 'חשבון חכם'
     powerschool: 'חשבון בית-ספר חזק'
     forgot_password: 'שכחת את הסיסמא שלך?'
@@ -266,9 +267,7 @@ he:
         applab: 'צור אפליקציה במעבדת המשחקים'
         gamelab: 'צור פרויקט מעבדת משחקים'
         weblab: 'צור פרויקט מעבדת אינטרנט (ביטה)'
-      home: "בית"
       my_dashboard: "לוח הבקרה שלי"
-      courses: "מסלולים"
       course_catalog: "קטלוג קורסים"
       project_gallery: "פרויקטים"
       sections: "קבוצות"
@@ -313,10 +312,16 @@ he:
       signin: 'התחבר'
       signup: 'צור חשבון'
       already_registered: 'כבר נרשמת?'
-      pair_programming: 'תכנות בזוגות'
       team: 'צוות'
       driver: 'מחובר/ת'
       navigator: 'נווט'
+      create: 'צור'
+      applab: 'מעבדת היישומים'
+      artist: 'אמן'
+      gamelab: 'מעבדת המשחקים'
+      playlab: 'מעבדת הצעצועים'
+      minecraft: 'מיינקראפט'
+      flappy: 'פלאפי'
     popup:
       progress_for_user: "ההתקדמות של %{name}"
       progress: 'ההתקדמות שלך'

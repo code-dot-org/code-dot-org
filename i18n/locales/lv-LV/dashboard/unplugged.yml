@@ -118,6 +118,8 @@ lv:
         title: Dizaina recepte
       ConditionalsPiecewiseFunctions:
         title: Nosacījumi un hibrīdfunkcijas
+      courseA_unplugged_loops:
+        desc: Šajā nodarbībā Tu mācīsies par cilpām!
       courseB_unplugged_MRF:
         title: Atvienota aktivitāte
       courseB_unplugged_loopyMRF:
@@ -204,6 +206,8 @@ lv:
       GoingPlacesSafely_2018:
         title: Nokļūst galamērķos droši
         desc: Internets ir iespējām bagāta, bet reizēm bīstama vieta. Skolotāji iepazīstina, kā būt drošiem, kamēr lieto internetu.
+      courseA_unplugged_loops_2018:
+        desc: Šajā nodarbībā Tu mācīsies par cilpām!
       BigEvent_2018:
         title: Lielais notikums
         desc: Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event), kas ir aktivitāte, kam dators visu laiku seko līdzi. Skolotājs spiež pogas uz papīra pults un skolēni reaģē atkarībā no tā, kāda poga ir piespiesta.

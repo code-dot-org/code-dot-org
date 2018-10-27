@@ -83,7 +83,7 @@
       cronjob at:'20 */4 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
-      cronjob at:'0 14 * * 1', do:dashboard_dir('bin','scheduled_pd_application_emails')
+      cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
       cronjob at:'10 */12 * * *', do:dashboard_dir('bin','refresh_pd_workshop_material_orders')
       cronjob at:'*/1 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
       cronjob at:'30 0 * * *', do:dashboard_dir('bin', 'sync_jotforms')
@@ -98,10 +98,6 @@
       cronjob at:'00 17 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
-
-      # 4AM UTC is 8 or 9PM PT, a low traffic time when engineers are still awake to monitor any issues that occur
-      # during the automated restarts.
-      cronjob at:'00 4 * * *', do:deploy_dir('bin', 'cron', 'restart_high_memory_frontend_services')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
@@ -131,7 +127,7 @@
   # report memory and disk space utilization to CloudWatch every minute
   # we do not use the cronjob helper method because this should not execute with
   # bundle.
-  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron --auto-scaling"
+  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron#{node['cdo-apps']['daemon'] ? '' : ' --auto-scaling'}"
 %>
 #
 # node: <%= node.name %>

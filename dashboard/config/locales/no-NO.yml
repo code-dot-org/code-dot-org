@@ -95,6 +95,7 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-konto
+    microsoft_v2_auth: Microsoft-konto
     clever: Smartkonto
     forgot_password: Har du glemt passordet ditt?
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
@@ -308,9 +309,7 @@
         applab: Lag en app
         gamelab: Opprett et Spill-lab prosjekt
         weblab: Opprett et Web-lab (beta) prosjekt
-      home: Hjem
       my_dashboard: Mitt Kontrollpanel
-      courses: kurs
       course_catalog: Kurskatalog
       project_gallery: Prosjekter
       sections: Seksjoner
@@ -355,10 +354,16 @@
       signin: Logg inn
       signup: Opprett en konto
       already_registered: Allerede registrert?
-      pair_programming: Par Programmering
       team: Team
       driver: Logget inn som
       navigator: Kartleser
+      create: Opprett
+      applab: App Lab
+      artist: Kunstner
+      gamelab: Spill-lab
+      playlab: Spill-lab
+      minecraft: Minecraft
+      flappy: Flakse
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift

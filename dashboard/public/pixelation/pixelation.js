@@ -104,6 +104,10 @@ function initProjects() {
       getMakerAPIsEnabled: function () {
         return false;
       },
+      setSelectedSong: function () {},
+      getSelectedSong: function () {
+        return false;
+      },
       setInitialLevelHtml: function (levelHtml) {},
       getLevelHtml: function () {
         return '';

@@ -93,7 +93,7 @@ export default class VersionHistory extends React.Component {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v3',
+        study_group: 'v4',
         event: 'clear-puzzle',
         project_id: project.getCurrentId(),
         data_json: JSON.stringify({

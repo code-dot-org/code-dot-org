@@ -66,6 +66,10 @@ ky:
       about_news: "Жаңылыктар"
     user:
       signin: 'Кирүү'
+      create: 'Түзүү'
+      applab: 'App Lab'
+      artist: 'Сүрөтчү'
+      gamelab: 'Оюн лабы'
   teacher:
     panel:
       section: 'Секция'

@@ -1137,6 +1137,8 @@ ru:
               name: Двоичные образы
             RGB Color:
               name: RGB цвета
+            Play Lab:
+              name: Лаборатория игр
         csd2-2017:
           stages:
             Peer Review:
@@ -1930,6 +1932,8 @@ ru:
               name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
+            Nested Loops in Maze:
+              name: Вложенные циклы в Лабиринте
         coursec-2018:
           assignment_family_title: Курс С
           stages:
