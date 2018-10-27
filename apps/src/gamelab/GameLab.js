@@ -29,7 +29,6 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
-import trackEvent from '../util/trackEvent';
 import {
   initializeSubmitHelper,
   onSubmitComplete
@@ -71,7 +70,6 @@ import {
   mark,
   measure
 } from '@cdo/apps/util/performance';
-import * as danceRedux from "../dance/redux";
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -225,8 +223,6 @@ GameLab.prototype.init = function (config) {
 
 
   this.level.helperLibraries = this.level.helperLibraries || [];
-  this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
-  this.level.isDanceLab = this.isDanceLab;
 
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
@@ -237,12 +233,6 @@ GameLab.prototype.init = function (config) {
     } catch (err) {
       console.error("Unable to parse default animation list", err);
     }
-  }
-
-  if (this.level.isProjectLevel && config.level.selectedSong) {
-    getStore().dispatch(danceRedux.setSong(config.level.selectedSong));
-  } else if (this.level.defaultSong) {
-    getStore().dispatch(danceRedux.setSong(this.level.defaultSong));
   }
 
   config.usesAssets = true;
@@ -414,7 +404,6 @@ GameLab.prototype.init = function (config) {
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
-        danceLab={this.isDanceLab}
       />
     </Provider>
   ), document.getElementById(config.containerId)));
@@ -788,12 +777,6 @@ GameLab.prototype.runButtonClick = function () {
   this.studioApp_.attempts++;
   this.execute();
 
-  //Log song count in Dance Lab
-  if (this.isDanceLab) {
-    const song = getStore().getState().selectedSong;
-    trackEvent('HoC_Song', 'Play', song);
-  }
-
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
   if (shareCell && !this.level.validationCode) {
@@ -1093,7 +1076,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
     return;
   }
 
-  this.gameLabP5.startExecution(this.isDanceLab);
+  this.gameLabP5.startExecution();
   this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
@@ -1245,7 +1228,6 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
-      this.gameLabP5.setDanceSong(getStore().getState().selectedSong),
       this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.runPreloadEventHandler_()
   ]).then(() => {
