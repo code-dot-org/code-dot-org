@@ -163,7 +163,8 @@ module Pd
       replace_existing: [5, 0],
       taught_in_past: [2, 0],
       principal_free_lunch_percent: [5, 0],
-      principal_underrepresented_minority_percent: [5, 0]
+      principal_underrepresented_minority_percent: [5, 0],
+      race: [2, 0]
     }
 
     # Need to explicitly list these for the shared constant generation to work.
@@ -173,7 +174,8 @@ module Pd
         :replace_existing,
         :taught_in_past,
         :principal_free_lunch_percent,
-        :principal_underrepresented_minority_percent
+        :principal_underrepresented_minority_percent,
+        :race
       ],
       scholarship_questions: [
         :previous_yearlong_cdo_pd,

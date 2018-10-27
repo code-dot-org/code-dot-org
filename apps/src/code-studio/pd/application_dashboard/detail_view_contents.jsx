@@ -684,7 +684,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderDetailViewTableLayout = () => {
-    const sectionsToRemove = ['section6Submission'];
+    const sectionsToRemove = ['section5AdditionalDemographicInformation', 'section6Submission'];
 
     if (!this.showPrincipalApprovalTable()) {
       sectionsToRemove.push('detailViewPrincipalApproval');
