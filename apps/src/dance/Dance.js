@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -12,6 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import {reducers, setSong} from './redux';
+import {SignInState} from '../code-studio/progressRedux';
 
 const ButtonState = {
   UP: 0,
@@ -90,12 +90,11 @@ Dance.prototype.init = function (config) {
 
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete());
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(true));
     }
   };
 
-  const showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
-  const finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
@@ -110,7 +109,7 @@ Dance.prototype.init = function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  if (this.level.isProjectLevel && config.level.selectedSong) {
+  if ((this.level.isProjectLevel || this.level.freePlay) && config.level.selectedSong) {
     getStore().dispatch(setSong(config.level.selectedSong));
   } else if (this.level.defaultSong) {
     getStore().dispatch(setSong(this.level.defaultSong));
@@ -123,7 +122,7 @@ Dance.prototype.init = function (config) {
       <AppView
         visualizationColumn={
           <DanceVisualizationColumn
-            showFinishButton={finishButtonFirstLine && showFinishButton}
+            showFinishButton={showFinishButton}
             retrieveMetadata={this.updateSongMetadata.bind(this)}
           />
         }
@@ -474,12 +473,15 @@ Dance.prototype.onHandleEvents = function (currentFrameEvents) {
  * this.studioApp_.displayFeedback when appropriate
  */
 Dance.prototype.displayFeedback_ = function () {
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
     level: this.level,
     showingSharing: this.shouldShowSharing(),
+    saveToProjectGallery: true,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
