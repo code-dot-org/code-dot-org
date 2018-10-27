@@ -109,6 +109,11 @@
     margin-top: 0px;
   }
 
+  .mc-tutorial-details a {
+    position: absolute;
+    bottom: 10px;
+  }
+
   .mc-img-wide {
     width: 970px;
     height: 310px;
@@ -160,6 +165,16 @@
 
   .mc-tutorial-details {
     margin-top: 0px;
+  }
+
+  .img-container-wide .mc-h1-second-box {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+
+  .mc-tutorial-details a {
+    position: absolute;
+    bottom: 10px;
   }
 
   .mc-img-wide {

@@ -64,6 +64,18 @@
 
 %div{style: "clear: both; margin-top: 45px;"}
 
+:css
+  @media screen and (min-width: 0px) and (max-width: 970px) {
+    .starwars-tutorial {
+      height: initial;
+    }
+
+  @media screen and (min-width: 0px) and (max-width: 970px) {
+    .starwars-container .tutorial-box {
+      background-image: url(/images/fill-520x800/mc/minecraft_teacher_background.jpg);
+    }
+  }
+
 .starwars-container
   .img-container
     %img.starwars-img{src:"/images/fill-1940x700/mc/minecraft_teacher_background.jpg"}
@@ -89,7 +101,7 @@
 
 %link{href: "/css/tools.css", rel: "stylesheet"}
 
-.tile-container-responsive
+.tile-container-responsive{style: "padding: 5px"}
   .col-50
     .tutorial-tile
       %a{href: "/minecraft"}
