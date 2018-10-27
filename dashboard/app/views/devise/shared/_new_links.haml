@@ -1,0 +1,34 @@
+.devise-links
+  / Unless we're already on the Sign in page, show a Sign in link
+  - unless ['sessions', 'registrations'].include? controller_name
+    = t('auth.already_signedup')
+    = link_to t('nav.user.signin'), new_session_path(resource_name)
+    %br/
+    %br/
+
+  / TODO: (madelynkasula) delete this code and unlocks/new view
+  - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
+    = link_to t('auth.need_unlock'), new_unlock_path(resource_name)
+    %br/
+    %br/
+
+  - if controller_name == 'sessions'
+    = t('add_teacher_form.code.instructions_short')
+    = form_tag(student_user_new_path, method: :get, class: 'section-sign-in') do
+      = text_field_tag :section_code, params[:section_code], placeholder: t('add_teacher_form.code.placeholder')
+      %button= 'Go'
+
+  - if devise_mapping.omniauthable?
+    - unless Rails.env.production?
+      %strong
+        Hi! If you are having trouble with OAuth features on
+        = Rails.env
+        %a{href: 'http://wiki.code.org/display/PROD/Developer+Oauth+setup'}
+          check the wiki.
+
+    - [:google_oauth2, :facebook, :windowslive].each do |provider|
+      = button_to omniauth_authorize_path(resource_name, provider), class: "oauth-sign-in with-#{provider}" do
+        = t('auth.continue_with', provider: t("auth.#{provider}"))
+
+:javascript
+  $('.oauth_sign_in').click(dashboard.clientState.reset);
