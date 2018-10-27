@@ -95,7 +95,7 @@ nav: plc_regional_partner_nav
 - Support the Regional Partner community.
 
 ### Funding ###
-- Code.org will provide specific funding for each program (K-5 and 6-12) as outlined in the budget <a href="https://docs.google.com/spreadsheets/d/1_1z9fXmEOSsEK1dBXBu0RE7d3ER5OVDI2LjfHtXgAPs/edit#gid=323257234" target=_blank>here</a>.
+- Code.org will provide specific funding for each program (K-5 and 6-12) as outlined in the budget.
 	- For each cohort of 6-12 teachers (CS Discoveries and CS Principles), Code.org will work with you to determine how much funding to provide based on demonstrated need to cover the following: an onsite staffer, facilitator compensation, food, and venue.  Code.org will fund up to 2 cohorts of 32 teachers for CS Discoveries and CS Principles as long as the following requirements are met:
 		- Minimum of 16 teachers in the summer
 		- Teachers meet the qualifications in Code.org’s teacher application rubric

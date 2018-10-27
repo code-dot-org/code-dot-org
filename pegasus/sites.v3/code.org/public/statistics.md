@@ -18,6 +18,16 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <div class="col-33" style="padding-right: 20px;">
 
+<a href="https://twitter.com/codeorg/status/1055581173353594880" target="_blank"><img src="/images/statistics/fit-250/teacher-background.png"></a>
+
+<br>
+
+Teachers from any background can teach computer science.
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
 <a href="https://twitter.com/codeorg/status/1053355643862728706" target="_blank"><img src="/images/statistics/fit-250/csf-over-year.png"></a>
 
 <br>
@@ -36,6 +46,10 @@ Nearly one-third of all U.S. students are learning the curriculum of the future.
 
 </div>
 
+<div style="clear: both;"></div>
+
+<br>
+
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/1031304818630041603" target="_blank"><img src="/images/statistics/fit-250/world.png"></a>
@@ -45,10 +59,6 @@ Nearly one-third of all U.S. students are learning the curriculum of the future.
 Millions of students are learning computer science - here's a look at where Code.org is used the most (outside the US). 
 
 </div>
-
-<div style="clear: both;"></div>
-
-<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -70,6 +80,10 @@ When teachers from underrepresented minority groups lead AP CSP classes, <a href
 
 </div>
 
+<div style="clear: both;"></div>
+
+<br>
+
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/959441286397751299" target="_blank"><img src="/images/statistics/fit-250/student-proficient.png"></a>
@@ -79,10 +93,6 @@ When teachers from underrepresented minority groups lead AP CSP classes, <a href
 And over 800,000 of those students are female.
 
 </div>
-
-<div style="clear: both;"></div>
-
-<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -103,6 +113,12 @@ And this double enrollment means more girls and underrepresented minorities are 
 We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de" target="_blank">change this way before then</a>.
 
 </div>
+
+<br>
+
+<div style="clear: both;"></div>
+
+<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
