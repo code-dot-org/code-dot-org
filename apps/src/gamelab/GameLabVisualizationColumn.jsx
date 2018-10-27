@@ -17,7 +17,7 @@ import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
-  isPickingLocation
+  isPickingLocation,
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
@@ -29,6 +29,9 @@ const MODAL_Z_INDEX = 1050;
 const styles = {
   containedInstructions: {
     marginTop: 10
+  },
+  selectStyle: {
+    width: GAME_WIDTH
   }
 };
 
@@ -37,6 +40,7 @@ class GameLabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
@@ -146,6 +150,7 @@ class GameLabVisualizationColumn extends React.Component {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
     const spriteLab = this.props.spriteLab;
+
     return (
       <span>
         <ProtectedVisualizationDiv>
@@ -200,11 +205,13 @@ class GameLabVisualizationColumn extends React.Component {
 export default connect(state => ({
   isResponsive: state.pageConstants.isResponsive,
   isShareView: state.pageConstants.isShareView,
+  isProjectLevel: state.pageConstants.isProjectLevel,
   spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
   mobileControlsConfig: state.mobileControlsConfig,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
+  selectedSong: state.selectedSong,
 }), dispatch => ({
   toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
   cancelPicker: () => dispatch(cancelLocationSelection()),

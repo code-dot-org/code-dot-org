@@ -1,5 +1,5 @@
 ---
-title: <%= hoc_s(:title_partners) %>
+title: <%= hoc_s(:title_partners).inspect %>
 ---
 Godziną Kodowania kieruje Komitet Doradczo-Odwoławczy inicjatyw Godzina Kodowania i Tydzień Edukacji Informatycznej.
 
@@ -119,31 +119,25 @@ Zarówno praca, jak i zaangażowanie obu komitetów przyczyniły się do sukcesu
 
 ---
 
-# Główni Partnerzy Promocyjni
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
-# Partnerzy Międzynarodowi
+# Partnerzy międzynarodowi
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Partnerzy Aktywności
+# Partnerzy w zakresie programu nauczania i informatora
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Partnerzy Infrastruktury i Narzędzi
+# Partnerzy w zakresie infrastruktury i narzędzia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Pozostali Partnerzy
+# Dodatkowi partnerzy
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

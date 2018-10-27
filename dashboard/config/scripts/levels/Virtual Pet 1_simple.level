@@ -58,9 +58,7 @@
     ],
     "include_shared_functions": "false",
     "name_suffix": "_simple",
-    "encrypted_examples": [
-
-    ]
+    "block_pool": "gamelab"
   },
   "published": true,
   "notes": "",

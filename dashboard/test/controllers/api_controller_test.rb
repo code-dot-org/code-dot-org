@@ -1102,6 +1102,30 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'clever_classrooms queries clever with user uid for unmigrated user' do
+    teacher = create :teacher, :unmigrated_sso, provider: AuthenticationOption::CLEVER
+    sign_in teacher
+
+    expected_uri = "https://api.clever.com/v1.1/teachers/#{teacher.uid}/sections"
+    auth = {authorization: "Bearer #{teacher.oauth_token}"}
+    mock_response = {data: []}.to_json
+    RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
+    get :clever_classrooms
+  end
+
+  test 'clever_classrooms queries clever with clever authentication_id for migrated user' do
+    teacher = create :teacher, :with_migrated_clever_authentication_option
+    auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    sign_in teacher
+    assert_nil teacher.uid
+
+    expected_uri = "https://api.clever.com/v1.1/teachers/#{auth_option.authentication_id}/sections"
+    auth = {authorization: "Bearer #{auth_option.data_hash[:oauth_token]}"}
+    mock_response = {data: []}.to_json
+    RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
+    get :clever_classrooms
+  end
+
   test 'import_clever_classroom is Forbidden when not signed in' do
     sign_out :user
     get :import_clever_classroom
@@ -1170,5 +1194,18 @@ Actual:
 #{actual_results.join("\n")}
 
 MESSAGE
+  end
+
+  test 'sign_cookies' do
+    sign_out :user
+    get :sign_cookies
+    assert_response :success
+
+    refute_nil @response.cookies['CloudFront-Key-Pair-Id']
+    refute_nil @response.cookies['CloudFront-Signature']
+    # indicates a custom policy
+    refute_nil @response.cookies['CloudFront-Policy']
+    # only used for canned policies
+    assert_nil @response.cookies['CloudFront-Expires']
   end
 end

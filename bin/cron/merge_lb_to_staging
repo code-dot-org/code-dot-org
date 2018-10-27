@@ -13,7 +13,7 @@ def slack_permission?
 
   ChatClient.message(
     'staging',
-    'robo-DTS skipped (DTS was no)',
+    "<@#{DevelopersTopic.dotd}> robo-DTS (Levelbuilder > Staging) skipped (DTS was no)",
     color: 'yellow'
   )
   false

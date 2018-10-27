@@ -18,6 +18,10 @@ class BucketHelper
     self.s3 ||= AWS::S3.create_client
   end
 
+  def allowed_file_name?(_filename)
+    true
+  end
+
   def allowed_file_type?(extension)
     allowed_file_types.include? extension.downcase
   end
@@ -47,6 +51,7 @@ class BucketHelper
   def app_size(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
+    track_list_operation 'BucketHelper.app_size'
     s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
   end
 
@@ -64,6 +69,7 @@ class BucketHelper
     app_prefix = s3_path owner_id, channel_id
     target_object_prefix = s3_path owner_id, channel_id, target_object
 
+    track_list_operation 'BucketHelper.object_and_app_size'
     objects = s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
     target_object = objects.find {|x| x.key == target_object_prefix}
 
@@ -76,6 +82,7 @@ class BucketHelper
   def list(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
+    track_list_operation 'BucketHelper.list'
     s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
       category = category_from_file_type(File.extname(filename))
@@ -122,6 +129,7 @@ class BucketHelper
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
     src_prefix = s3_path src_owner_id, src_channel_id
+    track_list_operation 'BucketHelper.copy_files'
     result = s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
       next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
@@ -198,8 +206,16 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
+    begin
+      latest = s3.head_object(bucket: @bucket, key: key).version_id
+      return true if current_version == latest
+    rescue Aws::S3::Errors::NotFound
+      # No main.json yet; fall through to fallback logic
+    end
+
     # This is an Array of ObjectVersions, defined in:
     # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
+    track_list_operation 'BucketHelper.check_current_version'
     versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
 
     target_version_metadata = versions.find {|v| v.version_id == current_version}
@@ -228,7 +244,7 @@ class BucketHelper
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v3',
+      study_group: 'v4',
       event: error_type,
 
       project_id: encrypted_channel_id,
@@ -302,6 +318,7 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     # Find all versions of all objects
     channel_prefix = s3_path owner_id, channel_id
+    track_list_operation 'BucketHelper.hard_delete_channel_content'
     version_list = s3.list_object_versions(bucket: @bucket, prefix: channel_prefix)
     return 0 if version_list.versions.empty? && version_list.delete_markers.empty?
 
@@ -326,6 +343,7 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
+    track_list_operation 'BucketHelper.list_versions'
     s3.list_object_versions(bucket: @bucket, prefix: key).
       versions.
       map do |version|
@@ -342,6 +360,7 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
+    track_list_operation 'BucketHelper.list_delete_markers'
     s3.list_object_versions(bucket: @bucket, prefix: key).
       delete_markers.
       map do |delete_marker|
@@ -449,7 +468,7 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v3',
+      study_group: 'v4',
       event: 'version-restored',
 
       # Make it easy to limit our search to restores in the sources bucket for a certain project.
@@ -481,5 +500,10 @@ class BucketHelper
   # Extracted so we can override with special behavior in AnimationBucket.
   def s3_get_object(key, if_modified_since, version)
     s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
+  end
+
+  def track_list_operation(source_name)
+    return unless CDO.newrelic_logging
+    NewRelic::Agent.record_metric("Custom/ListRequests/#{self.class.name}/#{source_name}", 1)
   end
 end

@@ -2111,9 +2111,15 @@ ga-IE:
   csd_2018_name: Fionnachtana sa Ríomheolaíocht
   full_course_category_name: Cúrsaí Iomlána
   user_header_label: Dia dhuit a %{username}
+  user_header_team: Foireann
   user_header_settings: Mo chuntas
   user_header_logout: Logáil amach
   user_header_signin: Logáil isteach
+  user_header_gamelab: An tSaotharlann Cluichíochta
+  user_header_playlab: Spraotharlann
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy
+  user_header_view_my_projects: Mo chuid tionscadal
   view_all_sections: Féach ar an rannán go léir
   view_section: Féach ar an Rannán
   view_named_section: Féach Rannán %{section_name}
@@ -2166,3 +2172,7 @@ ga-IE:
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google
     Account”:'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
+  creativity_create: Cruthaigh
+  creativity_hoc_coming: Tá an Uair Chódála le teacht…
+  account_sign_up_email_opt_in: An bhfuil cead againn ríomhphost a sheoladh chugat
+    maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?

@@ -52,6 +52,7 @@
     "show_type_hints": "true",
     "validation_code": "if (World.frameCount > 250) {\r\n  var status = 3;\r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      //This needs to be changed in the future, in the long run we do not want to be validating off of the instructions\r\n      //like this.\r\n      //Check to see that the sprite's rotation is different from when it started\r\n       if(rotation > 6){\r\n           status = 0;\r\n          }\r\n    }\r\n  }\r\n  levelSuccess(status);\r\n}",
     "include_shared_functions": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

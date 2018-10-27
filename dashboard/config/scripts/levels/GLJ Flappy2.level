@@ -45,6 +45,7 @@
     "custom_blocks": "[\n  {\n    \"func\": \"jump\",\n    \"color\": [\n      184,\n      1,\n      0.74\n    ],\n    \"blockText\": \"{THIS} jump\",\n    \"args\": [],\n    \"methodCall\": true\n  },\n  {\n    \"func\": \"draggable\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"draggable\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"gravity\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"gravity\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"flowLeft\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"flow left\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"wrapLeft\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"wrap left\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"tossable\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"tossable\",\n    \"returnType\": \"Behavior\"\n  }\n]\n",
     "instructions": "Click to flap - don't touch the ground!",
     "parent_level_id": 11142,
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

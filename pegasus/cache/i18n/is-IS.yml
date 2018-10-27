@@ -1947,9 +1947,15 @@ is-IS:
   csp_name: Grunnhugtök tölvunarfræði
   full_course_category_name: Heil námskeið
   user_header_label: Hæ %{username}
+  user_header_team: Félagar
   user_header_settings: Reikningurinn minn
   user_header_logout: Skrá út
   user_header_signin: Innskráning
+  user_header_gamelab: Leikjasmiðjan
+  user_header_playlab: Leikjasmiðja
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy
+  user_header_view_my_projects: Sjá verkefni mín
   view_all_sections: Sjá alla hópa
   view_section: Sjá hóp
   view_named_section: Sjá %{section_name}
@@ -1999,3 +2005,5 @@ is-IS:
     Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google
     aðgangi":'
+  creativity_create: Búa til
+  creativity_hoc_coming: Klukkustund kóðunar er á næsta leiti…

@@ -236,7 +236,7 @@ sv-SE:
     Adam, lärare
   homepage_hero_text_stat_loc: "#loc rader kod skriven av studenter"
   homepage_hero_text_stat_students: "#student_count student konton i Kod Studio"
-  homepage_hero_text_stat_served: 'Timmen av kod: #serverad serverad'
+  homepage_hero_text_stat_served: 'Timmen av kod: #served serverad'
   homepage_slot_text_hoc: Timme med Kod
   homepage_slot_text_frozen: Frozen med Anna och Elsa
   homepage_slot_text_teacher: Lärare Dashboard
@@ -1532,6 +1532,13 @@ sv-SE:
   header_about: Om
   header_documentation: Dokumentation
   user_header_label: Hej %{username}
+  user_header_team: Team
   user_header_settings: Mitt konto
   user_header_logout: Logga ut
   user_header_signin: Logga in
+  user_header_playlab: Spel-labb
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy
+  creativity_create: Skapa
+  account_sign_up_email_opt_in: Får vi skicka e-post till dig med nyheter om våra
+    kurser, lokala erbjudanden eller andra nyheter i ämnet datavetenskap?

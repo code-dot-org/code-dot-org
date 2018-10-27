@@ -30,10 +30,11 @@ module Api::V1::Pd
         end
 
         apps.group(:status).each do |group|
-          application_data[role][group.status] = {
-            locked: group.locked,
-            unlocked: group.total - group.locked
-          }
+          application_data[role][group.status] = if ['csd_teachers', 'csp_teachers'].include? role
+                                                   {total: group.total}
+                                                 else
+                                                   {total: group.total, locked: group.locked}
+                                                 end
         end
       end
 
@@ -80,11 +81,21 @@ module Api::V1::Pd
       end
     end
 
+    COHORT_VIEW_STATUSES = %w(
+      accepted
+      accepted_not_notified
+      accepted_notified_by_partner
+      accepted_no_cost_registration
+      paid
+      withdrawn
+    )
+
     # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_value=:regional_partner
     def cohort_view
       role = params[:role]
       regional_partner_value = params[:regional_partner_value]
-      applications = get_applications_by_role(role.to_sym).where(status: ['accepted', 'withdrawn'])
+
+      applications = get_applications_by_role(role.to_sym).where(status: COHORT_VIEW_STATUSES)
 
       unless regional_partner_value.nil? || regional_partner_value == REGIONAL_PARTNERS_ALL
         applications = applications.where(regional_partner_id: regional_partner_value == REGIONAL_PARTNERS_NONE ? nil : regional_partner_value)
@@ -146,10 +157,10 @@ module Api::V1::Pd
 
     # PATCH /api/v1/pd/applications/1
     def update
-      application_data = application_params
+      application_data = application_params.to_h
 
       if application_data[:response_scores]
-        JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
+        application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
 
       if application_data[:regional_partner_value] == REGIONAL_PARTNERS_NONE
@@ -165,7 +176,10 @@ module Api::V1::Pd
       # only allow those with full management permission to lock/unlock and edit form data
       if current_user.workshop_admin?
         if current_user.workshop_admin? && application_admin_params.key?(:locked)
-          application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          # only current facilitator applications can be locked/unlocked
+          if @application.application_type == FACILITATOR_APPLICATION
+            application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          end
         end
 
         @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
@@ -202,19 +216,20 @@ module Api::V1::Pd
     def get_applications_by_role(role, include_associations: true)
       applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
       applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
+
       case role
-        when :csf_facilitators
-          return applications_of_type.csf
-        when :csd_facilitators
-          return applications_of_type.csd
-        when :csp_facilitators
-          return applications_of_type.csp
-        when :csd_teachers
-          return applications_of_type.csd
-        when :csp_teachers
-          return applications_of_type.csp
-        else
-          raise ActiveRecord::RecordNotFound
+      when :csf_facilitators
+        return applications_of_type.csf
+      when :csd_facilitators
+        return applications_of_type.csd
+      when :csp_facilitators
+        return applications_of_type.csp
+      when :csd_teachers
+        return applications_of_type.csd.where(application_year: APPLICATION_CURRENT_YEAR)
+      when :csp_teachers
+        return applications_of_type.csp.where(application_year: APPLICATION_CURRENT_YEAR)
+      else
+        raise ActiveRecord::RecordNotFound
       end
     end
 
@@ -251,27 +266,19 @@ module Api::V1::Pd
       {}.tap do |app_data|
         TYPES_BY_ROLE.each do |role, app_type|
           app_data[role] = {}
-          app_type.statuses.keys.each do |status|
+          app_type.statuses.each do |status|
             app_data[role][status] = {
-              locked: 0,
-              unlocked: 0
+              total: 0,
+              locked: 0
             }
           end
         end
       end
     end
 
-    def get_optional_columns(regional_partner_value)
-      show_all_columns = !regional_partner_value || [REGIONAL_PARTNERS_ALL, REGIONAL_PARTNERS_NONE].include?(regional_partner_value)
-      is_teachercon_partner = !show_all_columns && get_matching_teachercon(RegionalPartner.find(regional_partner_value))
-      columns = {accepted_teachercon: false, registered_workshop: false}
-      if show_all_columns || is_teachercon_partner
-        columns[:accepted_teachercon] = true
-      end
-      if show_all_columns || !is_teachercon_partner
-        columns[:registered_workshop] = true
-      end
-      columns
+    # TODO: remove remaining teachercon references
+    def get_optional_columns(_regional_partner_value)
+      {accepted_teachercon: false, registered_workshop: false}
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})

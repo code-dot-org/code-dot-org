@@ -2,10 +2,8 @@
 en:
   data:
     blocks:
-      Dancelab_addBehavior:
-        text: sprite {SPRITE} begins {BEHAVIOR}
       Dancelab_atTimestamp:
-        text: at {TIMESTAMP} {UNIT}
+        text: after {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': measures
@@ -17,61 +15,130 @@ en:
             '"hue"': hue
             '"saturation"': saturation
             '"brightness"': brightness
-      Dancelab_changeMove:
-        text: change {SPRITE} dance move to {MOVE}
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
-      Dancelab_changeMoveEach:
-        text: change {GROUP} dance move to {MOVE}
+      Dancelab_changeMoveEachLR:
+        text: "{GROUP} do {MOVE} {DIR} forever"
         options:
           GROUP:
             sprites: all
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Clown
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Kick
+            MOVES.Roll: Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Thiller
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
+            MOVES.Rest: None
+          DIR:
+            "-1": "←"
+            '1': "→"
+      Dancelab_changeMoveLR:
+        text: "{SPRITE} do {MOVE} {DIR} forever"
+        options:
+          MOVE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Clown
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Kick
+            MOVES.Roll: Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Thiller
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
+            MOVES.Rest: None
+          DIR:
+            "-1": "←"
+            '1': "→"
       Dancelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
           PROPERTY:
             '"scale"': size
+            '"width"': width
+            '"height"': height
             '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
-            '"tint"': tint
-      Dancelab_clickedOn:
-        text: when {SPRITE} clicked
-      Dancelab_distance:
-        text: distance between {LOCATION1} and {LOCATION2}
-      Dancelab_doMoveOnce:
-        text: "{SPRITE} do move {MOVE} once"
+            '"x"': horizontal position
+            '"y"': vertical position
+      Dancelab_doMoveEachLR:
+        text: "{GROUP} do {MOVE} {DIR} once"
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
+          MOVE:
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Clown
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Kick
+            MOVES.Roll: Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Thiller
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
+            MOVES.Rest: None
+          DIR:
+            "-1": "←"
+            '1': "→"
+      Dancelab_doMoveLR:
+        text: "{SPRITE} do {MOVE} {DIR} once"
         options:
           MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Clown
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Kick
+            MOVES.Roll: Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Thiller
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
+            MOVES.Rest: None
+          DIR:
+            "-1": "←"
+            '1': "→"
       Dancelab_eval:
-        text: Run some arbitrary code {CODE}
+        text: eval {CODE}
       Dancelab_everySeconds:
         text: 'every {N} {UNIT} '
         options:
@@ -79,7 +146,7 @@ en:
             '"measures"': measures
             '"seconds"': seconds
       Dancelab_everySecondsRange:
-        text: every {N} {UNIT} from {START} to {STOP}
+        text: 'every {N} {UNIT} from {START} to {STOP} '
         options:
           UNIT:
             measures: Measures
@@ -90,24 +157,23 @@ en:
           UNIT:
             '"verse"': verse
             '"chorus"': chorus
-      Dancelab_frameRate:
-        text: set framerate to {RATE}
       Dancelab_getEnergy:
-        text: get {RANGE} energy
+        text: get {RANGE}
         options:
           RANGE:
-            '"low"': low
+            '"low"': bass
             '"mid"': mid
-            '"high"': high
+            '"high"': treble
       Dancelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': size
+            '"width"': width
+            '"height"': height
             '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
+            '"x"': horizontal position
+            '"y"': vertical position
             '"tint"': tint
       Dancelab_getTime:
         text: "{UNIT} elapsed"
@@ -115,92 +181,122 @@ en:
           UNIT:
             '"measures"': Measures
             '"seconds"': Seconds
-      Dancelab_helloWorld:
-        text: hello world
-      Dancelab_isTouching:
-        text: "{THIS} is touching {TARGET}"
+      Dancelab_ifDanceIs:
+        text: |-
+          if {SPRITE} is doing {DANCE}
+           {DO1} {DO2}
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '9': Roll
+            '10': This or That
+            '11': Thiller
+            '8': None
       Dancelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_layoutSprites:
-        text: layout {GROUP} sprites as a {FORMAT}
+        text: layout {GROUP} as a {FORMAT}
         options:
           GROUP:
             sprites: all
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
           FORMAT:
+            '"circle"': circle
             '"grid"': grid
             '"row"': row
             '"column"': column
-      Dancelab_locationCenter:
-        text: center
-      Dancelab_locationPointer:
-        text: pointer position
-      Dancelab_location_picker:
-        text: "{LOCATION}"
-      Dancelab_log:
-        text: log message {MESSAGE}
+            '"random"': random
       Dancelab_makeNewDanceSprite:
-        text: "make a new {COSTUME} sprite \n called {NAME} at {LOCATION}"
+        text: |-
+          make a new {COSTUME}
+           called {NAME} at {LOCATION}
         options:
           COSTUME:
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
-      Dancelab_makeNewDanceSpriteSync:
-        text: "TEST SYNC \nmake a new {COSTUME} sprite \n called {NAME} at {LOCATION}"
+            '"ALIEN"': Alien
+            '"BEAR"': Bear
+            '"CAT"': Cat
+            '"DOG"': Dog
+            '"DUCK"': Duck
+            '"FROG"': Frog
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': Pineapple
+            '"ROBOT"': Robot
+            '"SHARK"': Shark
+            '"UNICORN"': Unicorn
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          make {N} new {COSTUME}
+           in a {LAYOUT}
         options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
           COSTUME:
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
-      Dancelab_makeNewGroupSprite:
-        text: "make a new {COSTUME} \n {GROUP} dancer called {NAME} at {LOCATION}"
-        options:
-          COSTUME:
-            '"circle"': Circle
-            '"wiggles"': Wiggles
-          GROUP:
-            lead_dancers: Lead
-            backup_dancers: Backup
-      Dancelab_mapper:
-        text: map {VALUE} from {RANGE} to {DOMAIN}
-      Dancelab_mappingProp:
-        text: "{PROPERTY} following {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
-            '"tint"': tint
-          RANGE:
-            '"bass"': bass
-            '"mid"': mid
-            '"treble"': treble
-      Dancelab_mirrorSprite:
-        text: "{SPRITE} face {DIRECTION}"
-        options:
-          DIRECTION:
-            '"right"': right
-            '"left"': left
+            '"ALIEN"': Aliens
+            '"BEAR"': Bears
+            '"CAT"': Cats
+            '"DOG"': Dogs
+            '"DUCK"': Ducks
+            '"FROG"': Frogs
+            '"MOOSE"': Moose
+            '"PINEAPPLE"': Pineapples
+            '"ROBOT"': Robots
+            '"SHARK"': Sharks
+            '"UNICORN"': Unicorns
+          LAYOUT:
+            '"circle"': circle
+            '"grid"': grid
+            '"row"': row
+            '"column"': column
+            '"random"': random
       Dancelab_mixColors:
         text: mix {COLOR1} and {COLOR2}
-      Dancelab_moveDown:
-        text: "{THIS} move down"
-      Dancelab_moveForward:
-        text: move {SPRITE} {DISTANCE} pixels forward
-      Dancelab_moveLeft:
-        text: "{THIS} move left"
-      Dancelab_moveRight:
-        text: "{THIS} move right"
-      Dancelab_moveUp:
-        text: "{THIS} move up"
       Dancelab_nMeasures:
         text: "{N} measures"
       Dancelab_onPointerDown:
@@ -209,28 +305,8 @@ en:
         text: on pointer drag
       Dancelab_onPointerUp:
         text: on pointer up
-      Dancelab_pointInDirection:
-        text: point {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': East
-            '"South"': South
-            '"West"': West
-      Dancelab_pointToward:
-        text: point {SPRITE} toward {LOCATION}
       Dancelab_randomColor:
         text: random color
-      Dancelab_randomLocation:
-        text: random location
-      Dancelab_range:
-        text: "{RANGE} ... {DOMAIN}"
-      Dancelab_removeAllBehaviors:
-        text: "{SPRITE} stops everything"
-      Dancelab_removeBehavior:
-        text: sprite {SPRITE} stops {BEHAVIOR}
-      Dancelab_secondsInMeasure:
-        text: seconds in a measure
       Dancelab_setBackground:
         text: set background color {COLOR}
       Dancelab_setBackgroundEffect:
@@ -238,10 +314,10 @@ en:
         options:
           EFFECT:
             '"none"': None
-            '"disco"': Disco
-            '"rainbow"': Rainbow
+            '"disco"': Squares
+            '"rainbow"': Colors
             '"diamonds"': Diamonds
-            '"strobe"': Strobe
+            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": "(Random)"
       Dancelab_setDanceSpeed:
         text: change {SPRITE} dance speed to {SPEED}
         options:
@@ -256,21 +332,56 @@ en:
         options:
           EFFECT:
             '"none"': None
-            '"disco"': Disco
-            '"rainbow"': Rainbow
-            '"diamonds"': Diamonds
-      Dancelab_setFreq:
-        text: set frequency {FREQ}
+            '"strobe"': Strobe
+            '"rain"': Rain
+            '"raining_tacos"': Tacos
+            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": "(Random)"
       Dancelab_setProp:
-        text: set {SPRITE} {PROPERTY} to {VAL}
+        text: 'set {SPRITE} {PROPERTY} to {VAL} '
         options:
           PROPERTY:
             '"scale"': size
+            '"width"': width
+            '"height"': height
             '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
+            '"x"': horizontal position
+            '"y"': vertical position
             '"tint"': tint
-            '"dance_speed"': dance speed
+      Dancelab_setPropEach:
+        text: set {GROUP} {PROPERTY} to {VAL}
+        options:
+          GROUP:
+            sprites: all
+            '"ALIEN"': all aliens
+            '"BEAR"': all bears
+            '"CAT"': all cats
+            '"DOG"': all dogs
+            '"DUCK"': all ducks
+            '"FROG"': all frogs
+            '"MOOSE"': all moose
+            '"PINEAPPLE"': all pineapples
+            '"ROBOT"': all robots
+            '"SHARK"': all sharks
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
+            '"tint"': tint
+      Dancelab_setPropRandom:
+        text: randomize {SPRITE} {PROPERTY}
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"width"': width
+            '"height"': height
+            '"rotation"': rotation
+            '"x"': horizontal position
+            '"y"': vertical position
+      Dancelab_setTint:
+        text: set {SPRITE} tint to {VAL}
       Dancelab_setVisibleEach:
         text: set {THIS} visibility to {VISIBILITY}
         options:
@@ -283,60 +394,37 @@ en:
           VISIBILITY:
             'true': visible
             'false': invisible
-      Dancelab_setup:
-        text: setup
-      Dancelab_spritesWhere:
-        text: sprites where {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"x"': x position
-            '"y"': y position
-            '"costume"': costume
-            '"direction"': movement direction
-            '"rotation"': rotation or direction
-            '"tint"': tint
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "<"
       Dancelab_startMapping:
         text: "{SPRITE} begins {PROPERTY} following {RANGE}"
         options:
           PROPERTY:
             '"scale"': size
+            '"width"': width
+            '"height"': height
             '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
+            '"x"': horizontal position
+            '"y"': vertical position
             '"tint"': tint
           RANGE:
             '"bass"': bass
             '"mid"': mid
             '"treble"': treble
-      Dancelab_startOscillator:
-        text: start oscillator
-      Dancelab_startSong:
-        text: start song
-      Dancelab_startVisualizer:
-        text: show visualizer
       Dancelab_stopMapping:
         text: "{SPRITE} stops {PROPERTY} following {RANGE}"
         options:
           PROPERTY:
             '"scale"': size
+            '"width"': width
+            '"height"': height
             '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
+            '"x"': horizontal position
+            '"y"': vertial position
             '"direction"': movement direction
             '"tint"': tint
-            '"dance_speed"': dance speed
           RANGE:
             '"bass"': bass
             '"mid"': mid
             '"treble"': treble
-      Dancelab_stopOscillator:
-        text: stop oscillator
       Dancelab_whenKey:
         text: when {KEY} pressed
         options:
@@ -363,403 +451,15 @@ en:
         text: 'setup {SONG} '
         options:
           SONG:
-            '"macklemore"': Macklemore - Can't Hold Us
+            '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
-      Dancelab_whenTouching:
-        text: when {SPRITE1} touches {SPRITE2}
-      Dancelab_whileKey:
-        text: while {KEY} pressed
-        options:
-          KEY:
-            '"up"': up
-            '"down"': down
-            '"left"': left
-            '"right"': right
-            '"space"': space
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      Dancelab_whileTouching:
-        text: while {SPRITE1} is touching {SPRITE2}
-      DancelabAlpha_addBehavior:
-        text: sprite {SPRITE} begins {BEHAVIOR}
-      DancelabAlpha_atTimestamp:
-        text: at {TIMESTAMP} {UNIT}
-        options:
-          UNIT:
-            '"measures"': measures
-            '"seconds"': seconds
-      DancelabAlpha_changeColorBy:
-        text: change {COLOR} {METHOD} by {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': hue
-            '"saturation"': saturation
-            '"brightness"': brightness
-      DancelabAlpha_changeMove:
-        text: change {SPRITE} dance move to {MOVE}
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
-      DancelabAlpha_changeMoveEach:
-        text: change {GROUP} dance move to {MOVE}
-        options:
-          GROUP:
-            sprites: all
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
-      DancelabAlpha_changePropBy:
-        text: change {SPRITE} {PROPERTY} by {VAL}
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
-            '"tint"': tint
-      DancelabAlpha_clickedOn:
-        text: when {SPRITE} clicked
-      DancelabAlpha_distance:
-        text: distance between {LOCATION1} and {LOCATION2}
-      DancelabAlpha_doMoveOnce:
-        text: "{SPRITE} do move {MOVE} once"
-        options:
-          MOVE:
-            '0': Rest
-            '1': Breakdown
-            '2': Floss
-            '3': Fresh
-            '"next"': Next
-            '"prev"': Previous
-            '"rand"': Random
-      DancelabAlpha_eval:
-        text: Run some arbitrary code {CODE}
-      DancelabAlpha_everySeconds:
-        text: 'every {N} {UNIT} '
-        options:
-          UNIT:
-            '"measures"': measures
-            '"seconds"': seconds
-      DancelabAlpha_everySecondsRange:
-        text: every {N} {UNIT} from {START} to {STOP}
-        options:
-          UNIT:
-            measures: Measures
-            seconds: Seconds
-      DancelabAlpha_everyVerseChorus:
-        text: 'every {UNIT} '
-        options:
-          UNIT:
-            '"verse"': verse
-            '"chorus"': chorus
-      DancelabAlpha_frameRate:
-        text: set framerate to {RATE}
-      DancelabAlpha_getEnergy:
-        text: get {RANGE} energy
-        options:
-          RANGE:
-            '"low"': low
-            '"mid"': mid
-            '"high"': high
-      DancelabAlpha_getProp:
-        text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
-            '"tint"': tint
-      DancelabAlpha_getTime:
-        text: "{UNIT} elapsed"
-        options:
-          UNIT:
-            '"measures"': Measures
-            '"seconds"': Seconds
-      DancelabAlpha_helloWorld:
-        text: hello world
-      DancelabAlpha_isTouching:
-        text: "{THIS} is touching {TARGET}"
-      DancelabAlpha_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
-      DancelabAlpha_layoutSprites:
-        text: layout {GROUP} sprites as a {FORMAT}
-        options:
-          GROUP:
-            sprites: all
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
-          FORMAT:
-            '"grid"': grid
-            '"row"': row
-            '"column"': column
-      DancelabAlpha_locationCenter:
-        text: center
-      DancelabAlpha_locationPointer:
-        text: pointer position
-      DancelabAlpha_location_picker:
-        text: "{LOCATION}"
-      DancelabAlpha_log:
-        text: log message {MESSAGE}
-      DancelabAlpha_makeNewDanceSprite:
-        text: "make a new {COSTUME} sprite \n called {NAME} at {LOCATION}"
-        options:
-          COSTUME:
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
-      DancelabAlpha_makeNewDanceSpriteSync:
-        text: "TEST SYNC \nmake a new {COSTUME} sprite \n called {NAME} at {LOCATION}"
-        options:
-          COSTUME:
-            '"alien"': Alien
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizza
-            '"unicorn"': Unicorn
-      DancelabAlpha_makeNewGroupSprite:
-        text: "make a new {COSTUME} \n {GROUP} dancer called {NAME} at {LOCATION}"
-        options:
-          COSTUME:
-            '"circle"': Circle
-            '"wiggles"': Wiggles
-          GROUP:
-            lead_dancers: Lead
-            backup_dancers: Backup
-      DancelabAlpha_mapper:
-        text: map {VALUE} from {RANGE} to {DOMAIN}
-      DancelabAlpha_mappingProp:
-        text: "{PROPERTY} following {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
-            '"tint"': tint
-          RANGE:
-            '"bass"': bass
-            '"mid"': mid
-            '"treble"': treble
-      DancelabAlpha_mirrorSprite:
-        text: "{SPRITE} face {DIRECTION}"
-        options:
-          DIRECTION:
-            '"right"': right
-            '"left"': left
-      DancelabAlpha_mixColors:
-        text: mix {COLOR1} and {COLOR2}
-      DancelabAlpha_moveDown:
-        text: "{THIS} move down"
-      DancelabAlpha_moveForward:
-        text: move {SPRITE} {DISTANCE} pixels forward
-      DancelabAlpha_moveLeft:
-        text: "{THIS} move left"
-      DancelabAlpha_moveRight:
-        text: "{THIS} move right"
-      DancelabAlpha_moveUp:
-        text: "{THIS} move up"
-      DancelabAlpha_nMeasures:
-        text: "{N} measures"
-      DancelabAlpha_onPointerDown:
-        text: on pointer down
-      DancelabAlpha_onPointerDrag:
-        text: on pointer drag
-      DancelabAlpha_onPointerUp:
-        text: on pointer up
-      DancelabAlpha_pointInDirection:
-        text: point {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': East
-            '"South"': South
-            '"West"': West
-      DancelabAlpha_pointToward:
-        text: point {SPRITE} toward {LOCATION}
-      DancelabAlpha_randomColor:
-        text: random color
-      DancelabAlpha_randomLocation:
-        text: random location
-      DancelabAlpha_range:
-        text: "{RANGE} ... {DOMAIN}"
-      DancelabAlpha_removeAllBehaviors:
-        text: "{SPRITE} stops everything"
-      DancelabAlpha_removeBehavior:
-        text: sprite {SPRITE} stops {BEHAVIOR}
-      DancelabAlpha_secondsInMeasure:
-        text: seconds in a measure
-      DancelabAlpha_setBackground:
-        text: set background color {COLOR}
-      DancelabAlpha_setBackgroundEffect:
-        text: set background effect {EFFECT}
-        options:
-          EFFECT:
-            '"none"': None
-            '"disco"': Disco
-            '"rainbow"': Rainbow
-            '"diamonds"': Diamonds
-      DancelabAlpha_setDanceSpeed:
-        text: change {SPRITE} dance speed to {SPEED}
-        options:
-          SPEED:
-            '4': very fast
-            '2': fast
-            '1': normal
-            '0.5': slow
-            '0.25': very slow
-      DancelabAlpha_setForegroundEffect:
-        text: set foreground effect {EFFECT}
-        options:
-          EFFECT:
-            '"none"': None
-            '"disco"': Disco
-            '"rainbow"': Rainbow
-            '"diamonds"': Diamonds
-      DancelabAlpha_setFreq:
-        text: set frequency {FREQ}
-      DancelabAlpha_setProp:
-        text: set {SPRITE} {PROPERTY} to {VAL}
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"tint"': tint
-            '"dance_speed"': dance speed
-      DancelabAlpha_setVisibleEach:
-        text: set {THIS} visibility to {VISIBILITY}
-        options:
-          THIS:
-            sprites: all
-            '"alien"': Aliens
-            '"mrwiggles"': MrWiggles
-            '"pizza"': Pizzas
-            '"unicorn"': Unicorns
-          VISIBILITY:
-            'true': visible
-            'false': invisible
-      DancelabAlpha_setup:
-        text: setup
-      DancelabAlpha_spritesWhere:
-        text: sprites where {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"x"': x position
-            '"y"': y position
-            '"costume"': costume
-            '"direction"': movement direction
-            '"rotation"': rotation or direction
-            '"tint"': tint
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "<"
-      DancelabAlpha_startMapping:
-        text: "{SPRITE} begins {PROPERTY} following {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
-            '"tint"': tint
-          RANGE:
-            '"bass"': bass
-            '"mid"': mid
-            '"treble"': treble
-      DancelabAlpha_startOscillator:
-        text: start oscillator
-      DancelabAlpha_startSong:
-        text: start song
-      DancelabAlpha_startVisualizer:
-        text: show visualizer
-      DancelabAlpha_stopMapping:
-        text: "{SPRITE} stops {PROPERTY} following {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': rotation
-            '"x"': x position
-            '"y"': y position
-            '"direction"': movement direction
-            '"tint"': tint
-            '"dance_speed"': dance speed
-          RANGE:
-            '"bass"': bass
-            '"mid"': mid
-            '"treble"': treble
-      DancelabAlpha_stopOscillator:
-        text: stop oscillator
-      DancelabAlpha_whenKey:
-        text: when {KEY} pressed
-        options:
-          KEY:
-            '"up"': up
-            '"down"': down
-            '"left"': left
-            '"right"': right
-            '"space"': space
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      DancelabAlpha_whenPeak:
-        text: when {RANGE} peak
-        options:
-          RANGE:
-            '0': bass
-            '1': mid
-            '2': treble
-      DancelabAlpha_whenSetup:
-        text: setup
-      DancelabAlpha_whenTouching:
-        text: when {SPRITE1} touches {SPRITE2}
-      DancelabAlpha_whileKey:
-        text: while {KEY} pressed
-        options:
-          KEY:
-            '"up"': up
-            '"down"': down
-            '"left"': left
-            '"right"': right
-            '"space"': space
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      DancelabAlpha_whileTouching:
-        text: while {SPRITE1} is touching {SPRITE2}
       gamelab_add:
         text: add {SPRITE} to group {THIS}
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
+      gamelab_beginBehavior:
+        text: begin {BEHAVIOR}
       gamelab_bounceOff:
         text: "{SPRITE} bounces off of {TARGET}"
       gamelab_bounceOffEdges:
@@ -807,12 +507,20 @@ en:
         text: "{THIS} blocks {SPRITE} from moving"
       gamelab_distance:
         text: distance from {LOCATION1} to {LOCATION2}
+      gamelab_draggable:
+        text: being draggable
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
       gamelab_enableDebug:
         text: enable debugging
+      gamelab_eval:
+        text: eval {CODE}
       gamelab_firstTouched:
         text: first touched sprite
+      gamelab_forEachSpriteWithCostume:
+        text: |-
+          for each {VALUE} sprite
+           do {STATEMENT}
       gamelab_getAnim:
         text: "{SPRITE} {COSTUME}"
         options:
@@ -1042,6 +750,11 @@ en:
         text: last {VALUE}
       gamelab_spritesWhereRandom:
         text: random in group {VALUE}
+      gamelab_thisBeginsBehaviorSimple:
+        text: sprite {SPRITE} begins {BEHAVIOR}
+        options:
+          SPRITE:
+            abc: this sprite
       gamelab_turn:
         text: "{SPRITE} turn {DIRECTION} {N} degrees"
         options:
@@ -1123,9 +836,9 @@ en:
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       Mikelab_changeAnim:
-        text: "change sprite called {NAME} \n to costume {COSTUME}"
+        text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
-        text: change {SPRITE} {PROPERTY} by {VAL}
+        text: change {PROPERTY} of {SPRITE} by {VAL}
         options:
           PROPERTY:
             '"scale"': size
@@ -1135,17 +848,32 @@ en:
             '"direction"': movement direction
       Mikelab_checkAnim:
         text: "{SPRITE} is a {COSTUME}"
-      Mikelab_clickedOn:
-        text: when {SPRITE} clicked
       Mikelab_createNewSprite:
-        text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
-      Mikelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
+        text: "make a new {COSTUME} \n called {NAME} at {LOCATION}"
         options:
-          COSTUME:
-            '"costume"': costume
+          LOCATION:
+            "{x: 200, y: 100}": top
+            "{x: 200, y: 300}": bottom
+            "{x: 100, y: 200}": left
+            "{x: 300, y: 200}": right
+            "{x: 200, y: 200}": center
+            "{x: 100, y: 100}": top left
+            "{x: 300, y: 100}": top right
+            "{x: 100, y: 300}": bottom left
+            "{x: 300, y: 300}": bottom right
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: remove {SPRITE}
+      Mikelab_displace:
+        text: "{TARGET} blocks {SPRITE} from moving"
+      Mikelab_edgesDisplace:
+        text: edges block {SPRITE} from moving
+      Mikelab_eval:
+        text: eval {CODE}
+      Mikelab_getAnim:
+        text: "{SPRITE}'s costume"
       Mikelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "{SPRITE}'s {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': size
@@ -1153,20 +881,47 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
-            '"tint"': tint
       Mikelab_hasBehavior:
         text: "{SPRITE} is currently {BEHAVIOR}"
       Mikelab_isAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': costume
+        text: "{SPRITE}'s costume is {COSTUME}"
+      Mikelab_locationAt:
+        text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_randomColor:
+        text: random color
+      Mikelab_removeAllBehaviors:
+        text: sprite{SPRITE} stops all behaviors
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} stops {BEHAVIOR}
+      Mikelab_removeTint:
+        text: remove color from {SPRITE}
+      Mikelab_setBG:
+        text: set background to {BG}
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
       Mikelab_setProp:
-        text: set {SPRITE} {PROPERTY} to {VAL}
+        text: set {PROPERTY} of {SPRITE} to {VAL}
         options:
           PROPERTY:
             '"scale"': size
@@ -1174,17 +929,87 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
-            '"tint"': tint
+      Mikelab_setTint:
+        text: change color of {SPRITE} to {COLOR}
+      Mikelab_showScoreboard:
+        text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
+        options:
+          CORNER:
+            '"right"': right
+            '"left"': left
+      Mikelab_showText:
+        text: show text {TEXT} {PREPOSITION} {SPRITE}
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
+      Mikelab_whenClickedOn:
+        text: when {SPRITE} clicked
+      Mikelab_whenKeyPressed:
+        text: when {KEY} pressed
+        options:
+          KEY:
+            '"up"': up arrow
+            '"down"': down arrow
+            '"left"': left arrow
+            '"right"': right arrow
+            '"space"': spacebar
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        text: when {KEY} released
+        options:
+          KEY:
+            '"up"': up arrow
+            '"down"': down arrow
+            '"left"': left arrow
+            '"right"': right arrow
+            '"space"': spacebar
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenMouseClicked:
+        text: when mouse clicked
+      Mikelab_whenMouseReleased:
+        text: when mouse released
       Mikelab_whenTouchesAny:
-        text: when{TARGET} touches any sprite
-      Mikelab_whenTouchingAny:
-        text: when {SPRITE} touches any {GROUP}
+        text: when{SPRITE} touches any sprite
+      Mikelab_whileClicked:
+        text: 'while clicking on{SPRITE}
+
+'
+      Mikelab_whileKeyPressed:
+        text: while {KEY} stays pressed
+        options:
+          KEY:
+            '"up"': up arrow
+            '"down"': down arrow
+            '"left"': left arrow
+            '"right"': right arrow
+            '"space"': spacebar
       Mikelab_whileTouchingAny:
         text: |-
-          while{TARGET} is touching any sprite
+          while{SPRITE} is touching any sprite
           {STATEMENT}
-      Vanilla_randomColor:
-        text: random color
+      Mikelab_worldSeconds:
+        text: number of seconds
+      Mikelab_xLocationOf:
+        text: x coordinate of {SPRITE}
+      Mikelab_yLocationOf:
+        text: y coordinate of {SPRITE}
+      RyanLab_moveForward:
+        text: move forward
+      RyanLab_readSound:
+        text: read with sound
+      RyanLab_readToConsole:
+        text: read to console
+      RyanLab_turnLeft:
+        text: turn left
+      RyanLab_turnRight:
+        text: turn right
       Vector_createSpriteWith:
         text: |-
           create sprite
@@ -1210,7 +1035,96 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
+      aalab_setColor:
+        text: color {COLOR}
+      craft_ifPath:
+        text: |-
+          if path {DIR}
+          {STATEMENT}
+        options:
+          DIR:
+            "'ahead'": ahead
+            "'right'": to the right
+            "'left'": to the left
+      craft_ifStandingOn:
+        text: |-
+          if standing on {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": blue coral
+            "'redCoralBlock'": red coral
+            "'sand'": sand
+            "'wool_blue'": deep water
+            "'planksOak'": oak planks
+            "'seaLantern'": sea lantern
+      craft_ifStandingOnLimit:
+        text: |-
+          if standing on {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'sand'": sand
+            "'darkPrismarine'": dark prismarine
+            "'seaLantern'": sea lantern
       craft_log:
         text: log message {MESSAGE}
       craft_moveForward:
         text: move forward
+      craft_placeBlock:
+        text: place {blockType}
+        options:
+          blockType:
+            '"strippedOak"': stripped oak
+            '"strippedDarkOak"': stripped dark oak
+            '"stoneBricks"': stone bricks
+            '"mossyStoneBricks"': mossy stone bricks
+            '"crackedStoneBricks"': cracked stone bricks
+            '"decorativeStoneBricks"': decorative stone bricks
+            '"blueCoralBlock"': blue coral block
+            '"pinkCoralBlock"': pink coral block
+            '"magentaCoralBlock"': magenta coral block
+            '"redCoralBlock"': red coral block
+            '"yellowCoralBlock"': yellow coral block
+            '"blueDeadCoralBlock"': blue dead coral block
+            '"pinkDeadCoralBlock"': pink dead coral block
+            '"magentaDeadCoralBlock"': magenta dead coral block
+            '"readDeadCoralBlock"': read dead coral block
+            '"yellowDeadCoralBlock"': yellow dead coral block
+            '"prismarine"': prismarine
+            '"darkPrismarine"': dark prismarine
+            '"seaLantern"': sea lantern
+            '"packedIce"': packed ice
+            '"blueIce"': blue ice
+            '"blackConcrete"': black concrete
+            '"seaGrass"': sea grass
+            '"kelp"': kelp
+            '"polishedGranite"': polished granite
+      craft_placePrismarine:
+        text: place prismarine
+      craft_placeTorch:
+        text: place torch
+      craft_repeatUntilConduit:
+        text: |-
+          repeat until conduit completed
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          repeat until goal
+          {STATEMENT}
+      craft_spawnEntity:
+        text: spawn {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': cod
+            '"dolphin"': dolphin
+            '"salmon"': salmon
+            '"seaTurtle"': sea turtle
+            '"squid"': squid
+            '"tropicalFish"': tropical fish
+      craft_turn:
+        text: turn {DIR}
+        options:
+          DIR:
+            right: right ↻
+            left: left ↺

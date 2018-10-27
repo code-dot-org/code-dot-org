@@ -45,6 +45,7 @@ const blankCertificates = {
   mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
+  aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png')
 };
 
 class Certificate extends Component {
@@ -60,7 +61,7 @@ class Certificate extends Component {
     certificateId: PropTypes.string,
     randomDonorTwitter: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    userAge: PropTypes.number,
+    under13: PropTypes.bool,
     isMinecraft: PropTypes.bool.isRequired,
     children: PropTypes.node,
   };
@@ -82,7 +83,7 @@ class Certificate extends Component {
   }
 
   render() {
-    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, userAge, isMinecraft, children} = this.props;
+    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, under13, isMinecraft, children} = this.props;
     const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
@@ -156,7 +157,7 @@ class Certificate extends Component {
             facebook={facebook}
             twitter={twitter}
             print={print}
-            userAge={userAge}
+            under13={under13}
           />
         </div>
         {children}

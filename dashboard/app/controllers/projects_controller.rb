@@ -91,6 +91,10 @@ class ProjectsController < ApplicationController
     spritelab: {
       name: 'New Sprite Lab Project',
     },
+    dance: {
+      name: 'New Dance Lab Project',
+      levelbuilder_required: true,
+    },
     makerlab: {
       name: 'New Maker Lab Project',
       login_required: true
@@ -362,18 +366,31 @@ class ProjectsController < ApplicationController
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
+    project_type = params[:key]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
       src: src_channel_id,
-      type: params[:key],
+      type: project_type,
       remix_parent_id: remix_parent_id,
     )
-    AssetBucket.new.copy_files src_channel_id, new_channel_id
-    animation_list = AnimationBucket.new.copy_files src_channel_id, new_channel_id
+    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
+    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
-    FileBucket.new.copy_files src_channel_id, new_channel_id
+    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  private def uses_asset_bucket?(project_type)
+    %w(applab makerlab gamelab spritelab).include? project_type
+  end
+
+  private def uses_animation_bucket?(project_type)
+    %w(gamelab spritelab).include? project_type
+  end
+
+  private def uses_file_bucket?(project_type)
+    %w(weblab).include? project_type
   end
 
   def export_create_channel

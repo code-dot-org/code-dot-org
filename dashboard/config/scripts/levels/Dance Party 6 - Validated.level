@@ -53,6 +53,7 @@
     "instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
     "validation_code": "if (World.frameCount > 250) {\r\n  var status = 3;\r\n  var clickCounter = 0;\r\n  \r\n  // Check through all sprites in case student changed the sprite name\r\n  for (var i=0; i<World.allSprites.length; i++) {\r\n    var sprite = World.allSprites[i];\r\n    // ignore edge sprites\r\n    if (!edges.contains(sprite)) {\r\n      if (sprite.behaviors.length == 0) {\r\n          clickCounter += 1;\r\n      }\r\n    }\r\n  }\r\n  if(clickCounter >= 3){\r\n    status = 0;\r\n  }\r\n  levelSuccess(status);\r\n}",
     "include_shared_functions": "false",
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

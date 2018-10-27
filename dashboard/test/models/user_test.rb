@@ -1,8 +1,10 @@
 require 'test_helper'
 require 'testing/includes_metrics'
+require 'testing/storage_apps_test_utils'
 require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
+  include StorageAppsTestUtils
   self.use_transactional_test_case = true
 
   setup_all do
@@ -674,6 +676,22 @@ class UserTest < ActiveSupport::TestCase
     # wat you can't do that hax0rs
     assert_nil User.find_for_authentication(email: {'$acunetix' => 1})
     # this used to raise a mysql error, now we sanitize it into a nonsense string
+  end
+
+  test "find_for_authentication with very long query" do
+    # Our username and email columns are 255 characters wide.  We should
+    # fail-fast if the query is longer than that.
+    long_query = 'x' * 256
+
+    User.expects(:from).never
+    User.expects(:where).never
+    User.expects(:find_by_hashed_email).never
+
+    result = User.find_for_authentication login: long_query
+    assert_nil result
+
+    result = User.find_for_authentication hashed_email: long_query
+    assert_nil result
   end
 
   test "find_for_authentication finds migrated multi-auth email user first" do
@@ -1471,6 +1489,18 @@ class UserTest < ActiveSupport::TestCase
 
     assert_empty student.authentication_options
     assert student.sponsored?
+  end
+
+  test 'should_disable_user_type? true if user_type present and oauth_provided_user_type' do
+    user = build :user, user_type: User::TYPE_TEACHER
+    user.expects(:oauth_provided_user_type).returns(true)
+    assert user.should_disable_user_type?
+  end
+
+  test 'should_disable_user_type? false if user_type present and not oauth_provided_user_type' do
+    user = build :user, user_type: User::TYPE_TEACHER
+    user.expects(:oauth_provided_user_type).returns(false)
+    refute user.should_disable_user_type?
   end
 
   test 'can_edit_password? is true for user with or without a password' do
@@ -2917,6 +2947,36 @@ class UserTest < ActiveSupport::TestCase
     assert old_section.reload.deleted?
   end
 
+  test 'undestroy restores recently soft-deleted projects' do
+    Timecop.freeze do
+      student = create :student
+      with_channel_for student do |channel_id_a|
+        with_channel_for student do |channel_id_b|
+          # Student deleted channel_id_a a day before they were deleted
+          # so we don't expect it to be restored when we undelete them.
+          storage_apps.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+
+          Timecop.travel 1.day
+
+          # Soft-deleting the student also soft-deletes their projects
+          student.destroy
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'deleted', storage_apps.where(id: channel_id_b).first[:state]
+
+          Timecop.travel 1.day
+
+          # Restoring the student only restores projects that were deleted along
+          # with the student
+          student.undestroy
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+        end
+      end
+    end
+  end
+
   test 'undestroy raises for a purged user' do
     user = create :user
     user.clear_user_and_mark_purged
@@ -3242,6 +3302,27 @@ class UserTest < ActiveSupport::TestCase
     google_auth_option.reload
     assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
+  end
+
+  test 'password_required? is false if user is not creating their own account' do
+    user = build :user
+    user.expects(:managing_own_credentials?).returns(false)
+    refute user.password_required?
+  end
+
+  test 'password_required? is true for new users with no encrypted password' do
+    user = build :user, encrypted_password: nil
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.encrypted_password.nil?
+    assert user.password_required?
+  end
+
+  test 'password_required? is true for user changing their password' do
+    user = create :user
+    user.password = "mypassword"
+    user.password_confirmation = "mypassword"
+    user.expects(:managing_own_credentials?).returns(true)
+    assert user.password_required?
   end
 
   test 'summarize' do
@@ -3815,7 +3896,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_by_email locates a multi-auth teacher by non-primary email' do
     teacher = create :teacher, :with_migrated_email_authentication_option
-    second_option = create :email_authentication_option, user: teacher
+    second_option = create :authentication_option, user: teacher
     assert_equal teacher, User.find_by_email(second_option.email)
   end
 

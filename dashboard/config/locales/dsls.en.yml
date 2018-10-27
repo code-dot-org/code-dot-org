@@ -963,6 +963,9 @@ en:
       CSP Abstraction in Programming 2_2018: {}
       CSP Algorithms Map: {}
       CSP Algorithms Map_2018: {}
+      CSP ExploreL02 SFLP:
+        description here: description here
+        title: title
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -4202,6 +4205,7 @@ en:
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
         Part 2 - CSP Culminating Assessment: {}
+        RQB test levelgroup: {}
         SG csp3_U3_turtle_subgoal_mc_levelgroup: {}
         Sample CSP Assessment: {}
         TeacherCon Self-Assessment: {}
@@ -5621,6 +5625,89 @@ en:
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         Maze Multiple Choice: Maze Multiple Choice
         Which blocks solve the puzzle?: Which blocks solve the puzzle?
+      AP_practice_Qs_rqb_118_CSP_4_2_4:
+        180 minutes: 180 minutes
+        240 minutes: 240 minutes
+        ? '270 minutes
+
+'
+        : '270 minutes
+
+'
+        30 minutes.: 30 minutes.
+      AP_practice_Qs_rqb_119_CSP_4_1_1:
+        ? |-
+          <pre>
+          IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        ? |-
+          <pre>
+          IF  ( (number % 2 != 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF  ( (number % 2 != 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        ? |-
+          <pre>
+          IF  ( (number % 2 = 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF  ( (number % 2 = 0)  AND  (number % 3 = 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        ? |-
+          <pre>
+          IF  ( (number % 2 = 0)  OR  (number % 3 != 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+        : |-
+          <pre>
+          IF  ( (number % 2 = 0)  OR  (number % 3 != 0) )
+          {
+             DISPLAY ("Number is divisible by 6")
+          }
+          </pre>
+      AP_practice_Qs_rqb_1_CSP_6_1_1:
+        bandwidth: bandwidth
+        hierarchy: hierarchy
+        latency: latency
+        redundancy: redundancy
+      AP_practice_Qs_rqb_66_CSP_7_5_1:
+        A student changes the tense of a written piece from first person to second person and submits it as his own work.: A student changes the tense of a written piece from first person to second person and submits it as his own work.
+        ? A student copies and pastes an analysis of a poem from another person's literary review site into her own paper and submits it as her own.
+        : A student copies and pastes an analysis of a poem from another person's literary review site into her own paper and submits it as her own.
+        A student refers to the fact that Washington D.C. is the capitol of the United States, without providing a citation.: A student refers to the fact that Washington D.C. is the capitol of the United States, without providing a citation.
+        A student uses a complicated idea from a source in her paper and gives attribution.: A student uses a complicated idea from a source in her paper and gives attribution.
+      AP_practice_Qs_rqb_86_CSP_4_1_1:
+        <br><img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300"><br>: <br><img src="https://codehs.com/uploads/2ffc72ca9ba682bcd443104de50ac8a5" width="300"><br>
+        <br><img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300"><br>: <br><img src="https://codehs.com/uploads/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300"><br>
+        <br><img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="300"><br>: <br><img src="https://codehs.com/uploads/c7d593125a90ac3c790a78d5b5d098af" width="300"><br>
+        <br><img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="300"><br>: <br><img src="https://codehs.com/uploads/f9506ef1e6ea5e845699feaac9686a5d" width="300"><br>
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: 3 - 7
@@ -10288,8 +10375,8 @@ en:
         : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
         I don't know.: I don't know.
         Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
-        The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
-        The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
+        The bee will try to make too much honey.: The bee will try to make too much honey.
+        The bee won't make enough honey.: The bee won't make enough honey.
         The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
         The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
       courseE_multi_bee_functions_predict1_2018:
@@ -15715,6 +15802,50 @@ en:
         <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
         <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
         <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+      destroy me test:
+        right answer: right answer
+        right answer2: right answer2
+        wrong answer: wrong answer
+        wrong answer2: wrong answer2
+      destroy_me_test_CSP_5_4_1:
+        ? "<pre>\nlist[x] &lt;-- temp\nvar temp &lt;-- list[y]    \nlist[y] &lt;-- list[x]\n</pre>"
+        : "<pre>\nlist[x] &lt;-- temp\nvar temp &lt;-- list[y]    \nlist[y] &lt;-- list[x]\n</pre>"
+        ? |-
+          <pre>
+          list[y] &lt;-- list[x]
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          </pre>
+        : |-
+          <pre>
+          list[y] &lt;-- list[x]
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          </pre>
+        ? |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          list[y] &lt;-- list[x]
+          </pre>
+        : |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[x] &lt;-- temp
+          list[y] &lt;-- list[x]
+          </pre>
+        ? |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[y] &lt;-- list[x]
+          list[x] &lt;-- temp
+          </pre>
+        : |-
+          <pre>
+          var temp &lt;-- list[y]
+          list[y] &lt;-- list[x]
+          list[x] &lt;-- temp
+          </pre>
       grade2_multi_collector_A_predict1:
         Correct!: Correct!
         I don't know.: I don't know.

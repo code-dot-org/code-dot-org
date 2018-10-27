@@ -5,9 +5,9 @@ theme: responsive
 
 # Terms of Service
 
-Date of Last Revision: February 22, 2018
+Date of Last Revision: September 10, 2018
 
-Code.org is a 501(c)(3) nonprofit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the websites located at [https://code.org](https://code.org), [https://studio.code.org](https://studio.code.org), [https://csedweek.org](https://csedweek.org), [https://www.k12cs.org](https://www.k12cs.org), [https://hourofcode.com](https://hourofcode.com), [https://curriculum.code.org](https://curriculum.code.org), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”).
+Code.org is a 501(c)(3) nonprofit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the websites located at [https://code.org](https://code.org), [https://csedweek.org](https://csedweek.org), [https://www.k12cs.org](https://www.k12cs.org), [https://hourofcode.com](https://hourofcode.com), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”).
 
 Please read these Terms of Service (“**Terms**”) carefully before accessing or using the Services. Accessing or using any part of the Services or clicking on an “I Agree” or “Sign Up” button that may be made available to you means that you agree to be bound by these Terms without modification.
 
@@ -37,26 +37,52 @@ Code.org may permit you to register an account for the Services through certain 
 
 ### Privacy
 
-Your privacy is important to us. Code.org’s [Privacy Policy](http://code.org/privacy) explains how we treat your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
+Your privacy is important to us. Code.org’s [Privacy Policy](/privacy) explains how we treat and protect your personal information and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information as well as the administrative, technical and physical safeguards we maintain to protect against unauthorized use, disclosure of or access to personal information. 
 
-If you are a student that uses an account registered for you by a Educator or otherwise connected to an Educator, you agree that Code.org may disclose your information to the Educators associated with your account. If you are a Educator, you agree not to share student information you receive from Code.org with anybody other than authorized agents of the classroom, school district, or other educational establishment you represent.  Code.org does not use student data for any targeted or behavioral advertising, profiling, or onward disclosure.
+In addition, if you are a student or teacher using Code.org in a primary or secondary school then our Data Privacy Addendum may govern the relationship between Code.org and your school with respect to our duties and responsibilities to protect Student Data transmitted to Code.org.
+
+If you are a student that uses an account registered for you by a Educator or otherwise connected to an Educator, you agree that Code.org may disclose your information to the Educators associated with your account. If you are a Educator, you agree not to share Student Data you receive from Code.org with anybody other than authorized agents of the classroom, school district, or other educational establishment you represent. Code.org does not use Student Data for any targeted or behavioral advertising, profiling, or onward disclosure.
 
 ### The Family Educational Rights and Privacy Act (“FERPA”)
 We help schools be compliant with the Family Educational Rights and Privacy Act (FERPA) by facilitating a school’s access to student data in response to a request from a parent. Email us at support@code.org for assistance.
 
 ### User Generated Content - Management; License Grant; Representations and Warranties
 
-Code.org may now or in the future permit you and other users to post computer code (including both source and object code), information, text, graphics, notes, questions, comments, ratings, reviews, images and videos or other communications (collectively, “**User Content**”) to the Services. You should not include any Student’s Personal Information (which are defined in our Privacy Policy) or Student educational records, in any of the User Content you create. If you or a Student in your class accidentally includes any Student’s Personal Information, please contact us at support@code.org. You understand that whether or not such User Content is published, Code.org does not guarantee any confidentiality with respect to any submissions.
+The Services enable Users and Schools to provide, share or post certain content or information, including, but not limited to, computer code (including both source and object code), audio recordings, photographs, videos, documents, online educational resources, or other materials, Student Data (as defined in the [Data Privacy Addendum](/dpa)) and Feedback, (as defined below) (collectively, “User Content”). You should not include any Student’s Personal Information (which are defined in our Privacy Policy) or Student educational records, in any of the User Content you create. If you or a Student in your class accidentally includes any Student’s Personal Information, please contact us at support@code.org. User Content may be used by Code.org in connection with the Services and may be visible to or shared with Code.org, other Schools, and certain other Users. Please visit our [Privacy Policy](/privacy) for additional information on the types of information different Users are able to provide.
+ 
+Teachers may contribute educational content, create answers to assessments, create derivative works (e.g., completion of assignments, projects, etc.), and transmit said data and content within the  School’s systems through the Services (collectively, “Teacher Content”).
 
-Code.org has no obligation to monitor User Content or other materials. You are responsible for evaluating all User Content including for accuracy, completeness and reliability, and you bear all risk of using such User Content. Code.org will not be responsible for any damages that you may incur as a result of the submission or use of any User Content.
+Schools and Users may submit feedback, comments or suggestions for improvements to the Services (in written, oral, or any other form) (“Feedback”).
 
-Code.org may, but is not obligated to, monitor or review any Services where Educators communicate solely with each other, including but not limited to chat rooms, live chats, bulletin boards or other user forums, and the content of any such communications. You assume the risk of such communications, and Code.org has no liability related to the content or use of any such communications.
-
-Users may include links to third party websites in User Content as long as the content of such websites does not violate these Terms. Clicking on such links is at your sole risk. Code.org is not responsible for the availability or the content of linked websites, including the advertising, products or other materials thereon.
+### Ownership
 
 By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and redistribute, adapt, prepare derivative works of, use, make, have made, import, and otherwise exploit your User Content (which should not contain any Student’s Personal Information), under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
 
 In addition, by submitting or distributing User Content through the Services, you hereby grant to each user of the Services a non-exclusive license to access and use your User Content.
+
+### License to User Content
+
+##### User Content
+
+You hereby grant to Code.org a limited, non-exclusive, sublicensable (as necessary to provide the Services, including distributing Teacher Content), worldwide, royalty-free, and transferable (only to a successor) right and license to:
+
+1. use, host, copy, store, distribute, publicly perform and display, publish (in whole or in part), modify, and create derivative works from (such as changes we make so that your content works better with our Service) User Content as necessary to provide, improve and make the Services available to you and other Users, including through any future media in which the Services may be distributed;
+2. use, modify, prepare derivative works, publish, distribute and sublicense Feedback without any compensation to you;
+3. use and disclose metrics and analytics regarding the User Content in an aggregate or other non-personally identifiable manner (including, for use in improving our Service or in marketing and business development purposes);
+4. use any de-identified User Content for any lawful purpose (such as product development, research or other purposes) subject to the [Data Privacy Addendum](/dpa); and
+5. use for other purposes permitted by the [Data Privacy Addendum](/dpa) and the Code.org [Privacy Policy](/privacy).
+
+Code.org  will only share and use your personal information in accordance with Code.org's current Privacy Policy.  When you upload or create User Content, this can be viewed your Teacher and (under your control) by other Users and this means that you are allowing others to access and use that information and to associate it with you. 
+
+By uploading, creating, submitting or distributing User Content through the Services, you hereby grant other Users a non-exclusive, transferable (only to a successor), royalty-free right and license to use, reproduce, create derivative works, publicly display and perform any of your User Content that is incorporated into that User's project, provided that Code.org shall not use or distribute your User Content on a stand alone basis if Code.org’s license grant has been terminated as set forth below. The foregoing license and restrictions does not limit Code.org rights under any third party or open source license in which your User Content may be licensed.
+
+##### Public Content
+
+In addition to the rights, licenses and privileges referred to above, you agree that Code.org may use and refer to your User Content, first name and screenname that are posted publicly on the Code.org Website and not in private areas of our Service (“Public Content”) (including screen shots) in marketing materials, press releases, financial reports, presentations, website materials, customer lists and other media now known or hereafter discovered in connection with the marketing, advertising and promotion of the  Service, and any products, goods, features, capabilities and/or services associated with the Service. This right will continue until your Public Content is deleted; provided however, that any Public Content previously printed in brochures, articles or other marketing materials that Code.org had prepared before any request for deletion was received will continue to be used.
+
+##### License Termination
+
+The license User Content above will terminate when you or your School (i) delete any User Content containing intellectual property rights (like images or videos) or personally identifiable information (such as that in Student Data); or (ii) delete your account, unless your User Content has been shared with others, and they have not deleted it. Such termination may not apply to User Content or Teacher Content, including Student Data or in messages sent through Code.org, that may be deemed an “education record” under the Family Education Rights Act (FERPA) or various other student privacy laws, and which a school controls (“Education Record(s)”). We will delete any Education Record upon receiving a valid request for deletion from your school. Please see our FAQ for more information. Additionally, such termination will not affect the license rights granted to other Users to use your User Content if they previously copied your User Content and they have not deleted it. When you or your School delete User Content it is deleted in a manner similar to emptying the recycle or trash bin on a computer. However, you understand that any removed User Content may persist in backup copies for a reasonable period of time following deletion (but will not be available to others). Additionally, you understand and agree that User Content may continue to appear on Code.org, even after you have terminated your account or these Terms of Service, as portions of your User Content may be been copied by other users and/or incorporated into their coding projects.
 
 ### User Content Representations and Warranties
 
@@ -67,6 +93,12 @@ You are solely responsible for User Content you post to the Services and the con
 We reserve the right at all times (but will not have an obligation) to remove or refuse to distribute any User Content on the Website and to suspend or terminate users, without liability to you. We also reserve the right to access, read, preserve, and disclose any information as we reasonably believe is necessary to (i) satisfy any applicable law, regulation, legal process or governmental request, (ii) enforce the Terms, including investigation of potential violations hereof, (iii) detect, prevent, or otherwise address fraud, security or technical issues, (iv) respond to user support requests, or (v) protect the rights, property or safety of Code.org, its users and the public.
 
 You may not do any of the following while accessing or using the Services: (i) access, tamper with, or use nonpublic areas of the Services, Code.org’s computer systems, or the technical delivery systems of Code.org’s providers; (ii) probe, scan, or test the vulnerability of any system or network or breach or circumvent any security or authentication measures; (iii) access or search or attempt to access or search the Services by any means (automated or otherwise) other than through currently available, published interfaces that are provided by Code.org (and only pursuant to those terms and conditions), unless you have been specifically allowed to do so in a separate agreement with Code.org (NOTE: crawling the Services is permissible if done in accordance with the provisions of the robots.txt file, however, scraping the Services without the prior consent of Code.org is expressly prohibited); (iv) forge any TCP/IP packet header or any part of the header information in any email or posting, or in any way use the Services to send altered, deceptive or false source-identifying information; or (v) interfere with, or disrupt, (or attempt to do so), the access of any user, host or network, including, without limitation, bullying or harassing, sending a virus, overloading, flooding, spamming, mail-bombing the Services, or by scripting the creation of Content in such a manner as to interfere with or create an undue burden on the Services.
+
+Code.org has no obligation to monitor User Content or other materials. You are responsible for evaluating all User Content including for accuracy, completeness and reliability, and you bear all risk of using such User Content. Code.org will not be responsible for any damages that you may incur as a result of the submission or use of any User Content.
+
+Code.org may, but is not obligated to, monitor or review any Services where Educators communicate solely with each other, including but not limited to chat rooms, live chats, bulletin boards or other user forums, and the content of any such communications. You assume the risk of such communications, and Code.org has no liability related to the content or use of any such communications.
+
+Users may include links to third party websites in User Content as long as the content of such websites does not violate these Terms. Clicking on such links is at your sole risk. Code.org is not responsible for the availability or the content of linked websites, including the advertising, products or other materials thereon.
 
 ### Your License to Use Code.org Videos, Tutorials, Data, and APIs
 

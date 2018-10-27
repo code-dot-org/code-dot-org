@@ -522,6 +522,10 @@ class ActionDispatch::IntegrationTest
     https!
     host! CDO.canonical_hostname('studio.code.org')
   end
+
+  def signed_in_user_id
+    session['warden.user.user.key'].try(:first).try(:first)
+  end
 end
 
 # Evaluates the given block temporarily setting the global locale to the specified locale.
@@ -548,6 +552,14 @@ class StorageApps
 
   def most_recent(_)
     create(nil, nil)
+  end
+
+  def get(_)
+    {
+      'name' => "Stubbed test project name",
+      'hidden' => false,
+      'frozen' => false
+    }
   end
 end
 

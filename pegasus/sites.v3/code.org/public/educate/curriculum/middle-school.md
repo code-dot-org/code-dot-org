@@ -30,7 +30,7 @@ Our middle school curriculum focuses on a broad introduction to computer science
 
 Computer Science Discoveries is appropriate for 6-10th grade students and can be taught as a semester or year long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
-[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
+[<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Learn about professional learning</button>](/educate/professional-learning/middle-high)
 
 [/col-60]
 
@@ -117,12 +117,14 @@ Recommended courses from 3rd parties
 | [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. Intro CS JavaScript, Intro CS Python, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500. | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CS Principles, 30-40 hour course, $1500/teacher | Online PD for Teaching Intro CS 1, Teaching Intro CS 2, 30-40 hour course, $1500/teacher |
 | [Codesters](https://www.codesters.com/) |  5-lesson intro and project platform, FREE, 2 40-hr Intro to Python courses and 20-hr Intro to Game Design course, $20/student or a la carte pricing | Half day, 1-day, and 3-day workshops available, $500-$2,000 per teacher depending on length and location. |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
+| [Parallax Inc.](https://www.parallax.com/education/teach/program-options/middle-school) | Line of educational robotics and electronics kits and tutorials. Platforms feature open breadboards for building, prototyping, and customizing with real circuits. Offers the BlocklyProp visual programming tool. Curriculum is FREE. Robot purchase required. | FREE in-person immersive single day trainings. Occasional live webinars. |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
 | [Pythonroom](https://pythonroom.com) | 40-hour Learn Python course, FREE | Online or in-person, $2000/school for all teachers at site|
 | [Scalable Game Design](http://scalablegamedesign.cs.colorado.edu) | Introduction to Game Design, Advanced Game Design (3D), and Introduction to Simulation Design, FREE | In-person summer institute, FREE to schools participating in NSF research. Otherwise, $1900/teacher and travel not included |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 | [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, robotics, and film production. Annual subscription/$800. Software $300/computer lab. Free PDF files.  | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
+| [Vidcode](https://www.vidcode.com/) | Over 300 hours of creative coding coursework. Can be implemented as a stand-alone course or as cross-disciplinary units in other subject areas. Each course is 40 hours broken up into modular 10 hour units. Site licenses start at $2,500. | Free onboarding webinar. Animated online PD course available. In person PD for $3500/day. |
 
 <br>
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>

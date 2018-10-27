@@ -837,13 +837,29 @@ And(/^I set the language cookie$/) do
   debug_cookies(@browser.manage.all_cookies)
 end
 
+And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
+  params = {
+    name: "pm",
+    value: cookie_value
+  }
+
+  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
+      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+    params[:domain] = '.code.org' # top level domain cookie
+  end
+
+  @browser.manage.add_cookie params
+
+  debug_cookies(@browser.manage.all_cookies)
+end
+
 Given(/^I sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
     Then I click selector "#signin_button"
-    And I wait to see ".new_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
     And I wait to see ".header_user"
@@ -857,7 +873,7 @@ Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
     Then I click selector "#signin_button"
-    And I wait to see ".new_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
     And I wait to see ".header_user"
@@ -867,7 +883,7 @@ end
 Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
   steps %Q{
     And check that the url contains "/users/sign_in"
-    And I wait to see ".new_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
     And I wait to see ".header_user"
@@ -1409,6 +1425,11 @@ Then /^I unlock the stage for students$/ do
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
+Then /^I show stage answers for students$/ do
+  @browser.execute_script("$('.modal-body button:contains(Show answers)').click()")
+  @browser.execute_script('$(".modal-body button:contains(Save)").click()')
+end
+
 Then /^I select the first section$/ do
   steps %{
     And I wait to see ".uitest-sectionselect"
@@ -1456,7 +1477,10 @@ When /^I see the section set up box$/ do
 end
 
 When /^I press the new section button$/ do
-  steps 'When I press the first ".uitest-newsection" element'
+  steps <<-STEPS
+    Given I scroll the ".uitest-newsection" element into view
+    When I press the first ".uitest-newsection" element
+  STEPS
 end
 
 Then /^I should see the new section dialog$/ do
@@ -1514,14 +1538,16 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
 end
 
 Then /^I hide unit "([^"]+)"$/ do |unit_name|
-  @browser.execute_script("$('.uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash').click();")
+  selector = ".uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash"
+  @browser.execute_script("$(#{selector.inspect}).click();")
   wait_short_until do
     @browser.execute_script("return window.__TestInterface.toggleHiddenUnitComplete;")
   end
 end
 
 Then /^unit "([^"]+)" is marked as (not )?visible$/ do |unit_name, negation|
-  visibility = @browser.execute_script("return $('.uitest-CourseScript:contains(#{unit_name})').attr('data-visibility');")
+  selector = ".uitest-CourseScript:contains(#{unit_name})"
+  visibility = @browser.execute_script("return $(#{selector.inspect}).attr('data-visibility');")
   expect(visibility).to eq(negation ? 'hidden' : 'visible')
 end
 
@@ -1579,4 +1605,9 @@ Then /^I open the Manage Assets dialog$/ do
     Then I click selector ".settings-cog"
     And I click selector ".pop-up-menu-item"
   STEPS
+end
+
+Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
+  body_text = @browser.execute_script('return document.body.textContent;')
+  expect(body_text.include?(text)).to eq(negation.nil?)
 end

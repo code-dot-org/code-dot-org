@@ -12,30 +12,54 @@
             "sprites"
           ],
           [
-            "all ducks",
-            "\"duck\""
+            "all aliens",
+            "\"ALIEN\""
           ],
           [
-            "all moose",
-            "\"moose\""
-          ],
-          [
-            "all unicorns",
-            "\"unicorn\""
-          ],
-          [
-            "all Mr. Wiggles",
-            "\"mrwiggles\""
+            "all bears",
+            "\"BEAR\""
           ],
           [
             "all cats",
-            "\"cat\""
+            "\"CAT\""
+          ],
+          [
+            "all dogs",
+            "\"DOG\""
+          ],
+          [
+            "all ducks",
+            "\"DUCK\""
+          ],
+          [
+            "all frogs",
+            "\"FROG\""
+          ],
+          [
+            "all moose",
+            "\"MOOSE\""
+          ],
+          [
+            "all pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "all robots",
+            "\"ROBOT\""
+          ],
+          [
+            "all sharks",
+            "\"SHARK\""
           ]
         ]
       },
       {
         "name": "FORMAT",
         "options": [
+          [
+            "circle",
+            "\"circle\""
+          ],
           [
             "grid",
             "\"grid\""
@@ -47,6 +71,10 @@
           [
             "column",
             "\"column\""
+          ],
+          [
+            "random",
+            "\"random\""
           ]
         ]
       }

@@ -131,10 +131,10 @@ body {
 /* styling for the embedded dashboard components... */
 
 a.user-menu-link {
-  color:white;
+  color: white;
   font-family: 'Gotham 4r', sans-serif;
   font-weight: normal;
-  padding-left:10px;
+  padding-left: 10px;
 }
 
 .user_menu a:link,
@@ -145,8 +145,8 @@ a.user-menu-link {
 }
 
 #user_hero #welcome {
-  margin-top:10px;
-  margin-bottom:5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   font-size: 18px;
   font-family: 'Gotham 5r', sans-serif;
   font-weight: normal;

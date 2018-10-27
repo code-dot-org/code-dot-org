@@ -44,6 +44,7 @@
     "custom_helper_library": "function addBehaviorSimple(sprite, name, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction gravity() {\r\n  var behavior = function(sprite) {\r\n    sprite.maxVelocity = 5;\r\n    if (sprite.velocityY < sprite.maxVelocity) {\r\n      sprite.velocityY = sprite.velocityY + 0.1;\r\n    }\r\n  }\r\n  behavior.name=\"gravity\";\r\n  return behavior;\r\n}\r\n\r\nfunction flowLeft() {\r\n  var behavior = function(sprite) {\r\n    sprite.x = sprite.x - 5;\r\n  }\r\n  behavior.name=\"flowLeft\";\r\n  return behavior;\r\n}",
     "custom_blocks": "[\n  {\n    \"func\": \"gravity\",\n    \"color\": [\n      0,\n      0.45,\n      0.65\n    ],\n    \"args\": [],\n    \"blockText\": \"gravity\",\n    \"returnType\": \"Behavior\"\n  },\n  {\n    \"func\": \"setVelocity\",\n    \"color\": [\n      184,\n      1,\n      0.74\n    ],\n    \"args\": [\n      {\n        \"name\": \"X\"\n      },\n      {\n        \"name\": \"Y\"\n      }\n    ],\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\n    \"methodCall\": true\n  }\n]\n",
     "parent_level_id": 11146,
+    "block_pool": "gamelab",
     "contained_level_names": null
   },
   "published": true,

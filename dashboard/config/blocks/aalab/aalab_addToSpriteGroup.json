@@ -1,0 +1,17 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "addToSpriteGroup",
+    "blockText": "add {SPRITE} to {GROUPNAME}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "GROUPNAME",
+        "type": "String"
+      }
+    ]
+  }
+}

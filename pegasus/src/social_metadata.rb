@@ -8,7 +8,8 @@ def get_social_metadata_for_page(request)
   videos = {
     what_most_schools_dont_teach: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
     computer_science_is_changing_everything: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360},
-    hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360}
+    hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360},
+    creativity_is: {youtube_key: "VYqHGIR7a_k", width: 640, height: 640}
   }
 
   # Important:
@@ -17,9 +18,11 @@ def get_social_metadata_for_page(request)
   social_tags = {
     "code.org" => {
       "soon-hoc" => {
-        title: I18n.t(:og_title),
-        description: I18n.t(:og_description),
-        image: {path: "/images/fit-1220/social-media/default-og-image.jpg", width: 1220, height: 640}
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity_long),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_long),
+        image: {path: "/images/social-media/codeorg-2018-creativity.png", width: 846, height: 529},
+        video: videos[:creativity_is]
       },
       "week-before-hoc" => {
         title: I18n.t(:og_title_soon),
@@ -66,11 +69,11 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "soon-hoc" => {
-        title: I18n.t(:og_title_soon),
-        description: hoc_s(:meta_tag_og_description),
-        description_twitter: hoc_s(:meta_tag_twitter_description),
-        image: {path: "/images/social-media/hourofcode-2015-video-thumbnail.jpg", width: 1440, height: 900},
-        video: videos[:hour_of_code_worldwide]
+        title: hoc_s(:social_og_title_hoc2018_creativity),
+        description: hoc_s(:social_og_description_hoc2018_creativity_short),
+        description_twitter: hoc_s(:social_description_twitter_hoc2018_creativity_short),
+        image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
+        video: videos[:creativity_is]
       },
       "week-before-hoc" => {
         title: I18n.t(:og_title_soon),

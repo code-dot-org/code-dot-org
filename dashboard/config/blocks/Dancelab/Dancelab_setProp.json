@@ -2,7 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "setProp",
-    "blockText": "set {SPRITE} {PROPERTY} to {VAL}",
+    "blockText": "set {SPRITE} {PROPERTY} to {VAL} ",
     "args": [
       {
         "name": "SPRITE",
@@ -17,29 +17,34 @@
             "\"scale\""
           ],
           [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
             "rotation",
             "\"rotation\""
           ],
           [
-            "x position",
+            "horizontal position",
             "\"x\""
           ],
           [
-            "y position",
+            "vertical position",
             "\"y\""
           ],
           [
             "tint",
             "\"tint\""
-          ],
-          [
-            "dance speed",
-            "\"dance_speed\""
           ]
         ]
       },
       {
-        "name": "VAL"
+        "name": "VAL",
+        "field": true
       }
     ]
   }

@@ -8,6 +8,8 @@ function getProp(sprite, property) {
    	return sprite.getAnimationLabel();
   } else if (property=="direction") {
    	return getDirection(sprite);
+  } else if (property=="y") {
+   	return 400-sprite.y;
   } else {
   	return sprite[property];
   }
