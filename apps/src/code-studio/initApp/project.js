@@ -1153,19 +1153,19 @@ var projects = module.exports = {
     // TODO: Copy animation assets to new channel
     executeCallback(callback);
   },
-  serverSideRemix() {
+
+  /** @returns {Promise} resolved after remix (for testing) */
+  async serverSideRemix() {
     if (current && !current.name) {
       const url = projects.appToProjectUrl();
       this.setName(url === '/projects/algebra_game' ? 'Big Game Template' : 'My Project');
     }
     function redirectToRemix() {
-      location.href = `${projects.getPathName('remix')}`;
+      utils.navigateToHref(`${projects.getPathName('remix')}`);
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(false, true).then(redirectToRemix);
-    } else if (current.isOwner) {
-      this.sourceHandler.prepareForRemix().then(redirectToRemix);
+      await projects.save(false, true).then(redirectToRemix);
     } else {
       redirectToRemix();
     }
