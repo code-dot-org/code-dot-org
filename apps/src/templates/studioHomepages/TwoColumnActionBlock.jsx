@@ -199,6 +199,10 @@ export class SpecialAnnouncementActionBlock extends Component {
               url: 'https://hourofcode.com/#join',
               text: i18n.signUpButton()
             },
+            {
+              url: pegasus('/minecraft'),
+              text: i18n.tryIt()
+            }
           ]}
         />
       );
@@ -212,11 +216,7 @@ export class SpecialAnnouncementActionBlock extends Component {
             {
               url: 'https://hourofcode.com/#join',
               text: i18n.joinUs()
-            },
-            {
-              url: pegasus('/minecraft'),
-              text: i18n.tryIt()
-            },
+            }
           ]}
         />
       );
