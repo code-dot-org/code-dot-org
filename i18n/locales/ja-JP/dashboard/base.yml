@@ -83,6 +83,7 @@ ja:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft アカウント'
+    microsoft_v2_auth: 'Microsoft アカウント'
     clever: 'Cleverアカウント'
     powerschool: 'Powerschoolアカウント'
     forgot_password: 'パスワードをお忘れですか？'
@@ -107,7 +108,6 @@ ja:
     age: '年齢'
     user_type: 'あなたは先生ですか？生徒ですか？'
     submit: '入会'
-    next: '次へ'
     teacher: 'あなたは先生ですか？'
     valid_username: "利用可能 ！"
     invalid_username: "ユーザー名は 5 文字以上である必要があります。"
@@ -299,14 +299,6 @@ ja:
       help_us: "手を貸して下さい"
       teach: "教える"
       about: "概要"
-    create_button:
-      create: 'つくる'
-      applab: 'アプリ ラボ'
-      artist: 'アーティスト'
-      gamelab: 'ゲーム ラボ'
-      playlab: 'プレイラボ'
-      minecraft: 'マインクラフト'
-      flappy: 'フラッピー'
     user:
       classroom: '先生用ホームページ'
       district_dashboard: '地区のダッシュ ボード'
@@ -320,6 +312,13 @@ ja:
       team: 'チーム'
       driver: 'ドライバー'
       navigator: 'ナビゲーター'
+      create: 'つくる'
+      applab: 'アプリ ラボ'
+      artist: 'アーティスト'
+      gamelab: 'ゲーム ラボ'
+      playlab: 'プレイラボ'
+      minecraft: 'マインクラフト'
+      flappy: 'フラッピー'
     popup:
       progress_for_user: "%{name} の進捗状況"
       progress: 'あなたの進捗状況'

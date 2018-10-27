@@ -101,6 +101,7 @@ id:
             '"grid"': Kisi
             '"row"': baris
             '"column"': kolom
+            '"random"': acak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
@@ -108,6 +109,23 @@ id:
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"grid"': Kisi
+            '"row"': baris
+            '"column"': kolom
+            '"random"': acak
       Dancelab_randomColor:
         text: warna acak
       Dancelab_setBackgroundEffect:
@@ -130,6 +148,15 @@ id:
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Acak
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+            '"rotation"': Perputaran
+            '"tint"': Mewarnai
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: semua
           PROPERTY:
             '"scale"': ukuran
             '"height"': tinggi
@@ -415,6 +442,10 @@ id:
           TYPE:
             "'sand'": pasir
             "'planksOak'": papan kayu pohon ek
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pasir
       craft_moveForward:
         text: Gerak maju
       craft_placeTorch:

@@ -40,6 +40,8 @@ Watch videos and read interviews with inspirational people working in a variety 
 <a id="posters"></a>
 ## 4. Put up these posters
 
+Looking for last year's posters? [Find them all here](/educate/resources/posters)!
+
 [![image](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;

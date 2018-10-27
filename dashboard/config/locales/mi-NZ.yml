@@ -88,6 +88,7 @@ mi:
     twitter: Tīhau
     facebook: Pukamata
     windowslive: Pūkete Microsoft
+    microsoft_v2_auth: Pūkete Microsoft
     forgot_password: Kua wareware i a koe tō kupuhipa?
     need_confirmation: Kāore koe i whiwhi ki ngā tohutohu whakaū?
     need_unlock: Kāore koe i whiwhi ki ngā tohutohu wetemaukati?
@@ -230,13 +231,6 @@ mi:
         artist: Tāngia tētahi mea
         applab: Hangaia tētahi taupānga Taiwhanga Taupānga
       project_gallery: Ngā Tūmahi
-    create_button:
-      create: Waihanga
-      applab: Taiwhanga Taupānga
-      artist: Rehetoi
-      playlab: Taiwhanga Tākaro
-      minecraft: Mahimaina
-      flappy: Flappy
     user:
       district_dashboard: Paemana ā-Rohe
       label: Tēnā koe %{username}
@@ -249,6 +243,12 @@ mi:
       team: Tīma
       driver: Kaiurungi
       navigator: Kaiwhakatere
+      create: Waihanga
+      applab: Taiwhanga Taupānga
+      artist: Rehetoi
+      playlab: Taiwhanga Tākaro
+      minecraft: Mahimaina
+      flappy: Flappy
     popup:
       progress_for_user: Te kauneketanga o %{name}
       progress: Tō kauneketanga

@@ -823,6 +823,8 @@ he:
               name: תמונות בינאריות
             Binary Artist Puzzles:
               name: חידות של האמן הבינארי
+            Play Lab:
+              name: מעבדת הצעצועים
         csd2-2017:
           stages:
             Intro to HTML:

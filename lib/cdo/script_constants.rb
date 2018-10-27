@@ -48,7 +48,7 @@ module ScriptConstants
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
-      # you must also update the Data_HocTutorials gsheet so the end of script API works
+      # you must also update the cdo-tutorials gsheet so the end of script API works
 
       nil,
       DANCE_PARTY_NAME = 'dance'.freeze,
@@ -72,6 +72,7 @@ module ScriptConstants
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
+      DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
@@ -155,6 +156,7 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME,
       MINECRAFT_HERO_NAME,
+      MINECRAFT_AQUATIC_NAME
     ],
     tts: [
       TTS_NAME = 'allthettsthings'.freeze

@@ -3676,6 +3676,12 @@ en:
       courseB_starWars_prog8_2018: "**Challenge:** Help BB-8 gather the glowing scrap metal"
       courseB_starWars_prog9: Help BB-8 gather the glowing scrap metal
       courseB_starWars_prog9_2018: Help BB-8 gather the glowing scrap metal
+      courseC19_playLab_EOC1: Choose a background and map, and pick an actor to be your game's hero.
+      courseC19_playLab_EOC2: Use event handlers and actions to make your hero move.
+      courseC19_playLab_EOC3: Add two or more additional actors to your game and make them move.
+      courseC19_playLab_EOC4: Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.
+      courseC19_playLab_EOC5: Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.
+      courseC19_playLab_EOC6: You've finished! Now you can play your game or share it with your friends and classmates!
       courseC_PlayLab_events1: Make Jorge the Dog (actor 1) say "Hi there."
       courseC_PlayLab_events1_2018: Make Jorge the Dog (actor 1) say "Hi there."
       courseC_PlayLab_events2: Can you make Jorge the Dog (actor 1) say something, then have Olive the Cat (actor 2) say something afterward?

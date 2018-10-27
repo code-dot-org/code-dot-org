@@ -76,6 +76,7 @@ sv:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    microsoft_v2_auth: 'Microsoft Account'
     forgot_password: 'Glömt ditt lösenord?'
     need_confirmation: "Har du inte fått bekräftelseinstruktioner?"
     need_unlock: "Har du inte fått instruktioner för att låsa upp?"
@@ -95,7 +96,6 @@ sv:
     age: 'Ålder'
     user_type: 'Är du elev eller lärare?'
     submit: 'Registrera dig'
-    next: 'Nästa'
     teacher: 'Är du en lärare?'
     valid_username: "Tillgängligt!"
     invalid_username: "Användarnamnet måste innehålla minst fem tecken"
@@ -244,13 +244,6 @@ sv:
       help_us: "Hjälp oss"
       teach: "Undervisa"
       about: "Om"
-    create_button:
-      create: 'Skapa'
-      applab: 'App Lab'
-      artist: 'Konstnären'
-      playlab: 'Spel-labb'
-      minecraft: 'Minecraft'
-      flappy: 'Flappy'
     user:
       classroom: 'Lärare hemsida'
       district_dashboard: 'Distriktets kontrollpanel'
@@ -264,6 +257,12 @@ sv:
       team: 'Team'
       driver: 'Förare'
       navigator: 'Navigator'
+      create: 'Skapa'
+      applab: 'App Lab'
+      artist: 'Konstnären'
+      playlab: 'Spel-labb'
+      minecraft: 'Minecraft'
+      flappy: 'Flappy'
     popup:
       progress_for_user: "%{name}s framsteg"
       progress: 'Dina framsteg'
