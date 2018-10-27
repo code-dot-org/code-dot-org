@@ -137,9 +137,7 @@ class SourcesTest < FilesApiTestBase
     @api.get_object_version(filename, v1)
     assert_equal 404, last_response.status
 
-    assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
-    )
+    assert_newrelic_metrics []
 
     delete_all_source_versions(filename)
   end
@@ -258,7 +256,6 @@ class SourcesTest < FilesApiTestBase
     assert_equal 1, versions.count
 
     assert_newrelic_metrics %w(
-      Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
 
@@ -266,7 +263,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_main_json_version
-    # FirehoseClient.instance.expects(:put_record).never
     Timecop.freeze
 
     filename = 'main.json'
@@ -305,9 +301,8 @@ class SourcesTest < FilesApiTestBase
     assert_newrelic_metrics %w(
       Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
     )
-
+  ensure
     delete_all_source_versions(filename)
-
     Timecop.return
   end
 
