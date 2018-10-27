@@ -168,6 +168,16 @@ algebraPD:
   user_id:
   login_required: true
   properties: '{"professional_learning_course":"CS in Algebra Support"}'
+applab-intro:
+  id: 74
+  name: applab-intro
+  created_at: 2015-10-16 22:39:24.000000000 Z
+  updated_at: 2015-10-16 22:39:24.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
 flappy:
   id: 6
   name: flappy
