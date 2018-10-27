@@ -15,7 +15,7 @@ export default storybook => {
         )
       },
       {
-        name:'SignInOrAgeDialog for Dance Party',
+        name:'SignInOrAgeDialog without sign in',
         story: () => (
           <SignInOrAgeDialog
             signedIn={false}

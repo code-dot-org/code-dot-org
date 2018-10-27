@@ -118,6 +118,23 @@ class SignInOrAgeDialog extends Component {
       return null;
     }
 
+    const provideAge = (
+      <div style={styles.middleCell}>
+        {i18n.provideAge()}
+        <div style={styles.age}>
+          <AgeDropdown
+            style={styles.dropdown}
+            ref={element => this.ageDropdown = element}
+          />
+          <Button
+            onClick={this.onClickAgeOk}
+            text={i18n.ok()}
+            color={Button.ButtonColor.gray}
+          />
+        </div>
+      </div>
+    );
+
     if (this.state.tooYoung) {
       return (
         <BaseDialog
@@ -154,9 +171,12 @@ class SignInOrAgeDialog extends Component {
           <div style={styles.heading}>
             {this.props.noSignIn ? i18n.signinDanceParty() : i18n.signinOrAge()}
           </div>
-          <div style={styles.middle}>
-            {!this.props.noSignIn &&
-              <div>
+          <div>
+            {this.props.noSignIn ?
+              <div style={styles.middle}>
+                {provideAge}
+              </div> :
+              <div style={styles.middle}>
                 <div style={styles.middleCell}>
                   {i18n.signinForProgress()}
                   <div style={styles.button}>
@@ -174,22 +194,10 @@ class SignInOrAgeDialog extends Component {
                   </div>
                   <div style={styles.centerLine}/>
                 </div>
+                {provideAge}
               </div>
             }
-            <div style={styles.middleCell}>
-              {i18n.provideAge()}
-              <div style={styles.age}>
-                <AgeDropdown
-                  style={styles.dropdown}
-                  ref={element => this.ageDropdown = element}
-                />
-                <Button
-                  onClick={this.onClickAgeOk}
-                  text={i18n.ok()}
-                  color={Button.ButtonColor.gray}
-                />
-              </div>
-            </div>
+
           </div>
           <div>
             <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>
