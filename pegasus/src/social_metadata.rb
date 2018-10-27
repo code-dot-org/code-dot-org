@@ -26,7 +26,7 @@ def get_social_metadata_for_page(request)
       "soon-hoc-mc" => {
         title: hoc_s(:social_hoc2018_what_create),
         description: hoc_s(:social_hoc2018_every_student),
-        image: {path: "/images/social-media/hourofcode-2018-mc.jpg", width: 846, height: 529},
+        image: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630},
         video: videos[:creativity_is]
       },
       "soon-hoc-dance" => {
@@ -119,17 +119,17 @@ def get_social_metadata_for_page(request)
       "soon-hoc-mc" => {
         title: hoc_s(:tutorial_mchoc_name),
         description: hoc_s(:social_hoc2018_mc_creativity),
-        image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
+        image: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630}
       },
       "soon-hoc-dance" => {
         title: hoc_s(:tutorial_mchoc_name),
         description: hoc_s(:social_hoc2018_mc_creativity),
-        image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
+        image: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630}
       },
       "default" => {
         title: hoc_s(:tutorial_mchoc_name),
         description: hoc_s(:social_hoc2018_mc_creativity),
-        image: {path: "/images/mc/mc_social_2017.jpg", width: 1200, height: 630}
+        image: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630}
       }
     },
     "dance" => {
