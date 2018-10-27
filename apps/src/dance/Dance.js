@@ -112,17 +112,8 @@ Dance.prototype.init = async function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  // The selectedSong and defaultSong might not be present in the songManifest
-  // in development mode, so just select the first song in the list instead.
-  const songs = songManifest.map(song => song.id);
-  const {selectedSong, defaultSong} = config.level;
-  if ((this.level.isProjectLevel || this.level.freePlay) && selectedSong && songs.includes(selectedSong)) {
-    getStore().dispatch(setSong(selectedSong));
-  } else if (defaultSong && songs.includes(defaultSong)) {
-    getStore().dispatch(setSong(defaultSong));
-  } else if (songManifest[0]) {
-    getStore().dispatch(setSong(songManifest[0].id));
-  }
+  const selectedSong = getSelectedSong(songManifest, config);
+  getStore().dispatch(setSong(selectedSong));
 
   this.updateSongMetadata(getStore().getState().selectedSong);
 
@@ -140,6 +131,20 @@ Dance.prototype.init = async function (config) {
     </Provider>
   ), document.getElementById(config.containerId));
 };
+
+function getSelectedSong(songManifest, config) {
+  // The selectedSong and defaultSong might not be present in the songManifest
+  // in development mode, so just select the first song in the list instead.
+  const songs = songManifest.map(song => song.id);
+  const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
+  if ((isProjectLevel || freePlay) && selectedSong && songs.includes(selectedSong)) {
+    return selectedSong;
+  } else if (defaultSong && songs.includes(defaultSong)) {
+    return defaultSong;
+  } else if (songManifest[0]) {
+    return songManifest[0].id;
+  }
+}
 
 async function getSongManifest(useRestrictedSongs) {
   const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
