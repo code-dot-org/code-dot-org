@@ -1008,7 +1008,7 @@ FactoryGirl.define do
     cs_how_many_days_per_week 5
     cs_how_many_weeks_per_year 20
     cs_terms '1 quarter'
-    replace_existing 'Yes'
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
     pay_fee 'Yes, my school or I will be able to pay the full program fee.'
     what_license_required 'CSTA'
     plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'

@@ -279,6 +279,10 @@ module Pd::Application
           required.concat [:what_license_required]
         end
 
+        if hash[:replace_existing] == YES
+          required.concat [:replace_which_course]
+        end
+
         if hash[:able_to_attend_multiple]
           if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).any?
             required.concat [:travel_to_another_workshop]
