@@ -81,6 +81,7 @@ class SignInOrAgeDialog extends Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
+    noSignIn: PropTypes.bool,
   };
 
   onClickAgeOk = () => {
@@ -151,26 +152,30 @@ class SignInOrAgeDialog extends Component {
       >
         <div style={styles.container}>
           <div style={styles.heading}>
-            {i18n.signinOrAge()}
+            {this.props.noSignIn ? i18n.signinDanceParty() : i18n.signinOrAge()}
           </div>
           <div style={styles.middle}>
-            <div style={styles.middleCell}>
-              {i18n.signinForProgress()}
-              <div style={styles.button}>
-                <Button
-                  href={`/users/sign_in?user_return_to=${location.pathname}`}
-                  text={i18n.signinCodeOrg()}
-                  color={Button.ButtonColor.gray}
-                />
+            {!this.props.noSignIn &&
+              <div>
+                <div style={styles.middleCell}>
+                  {i18n.signinForProgress()}
+                  <div style={styles.button}>
+                    <Button
+                      href={`/users/sign_in?user_return_to=${location.pathname}`}
+                      text={i18n.signinCodeOrg()}
+                      color={Button.ButtonColor.gray}
+                    />
+                  </div>
+                </div>
+                <div style={styles.center}>
+                  <div style={styles.centerLine}/>
+                  <div style={styles.centerText}>
+                    {i18n.or()}
+                  </div>
+                  <div style={styles.centerLine}/>
+                </div>
               </div>
-            </div>
-            <div style={styles.center}>
-              <div style={styles.centerLine}/>
-              <div style={styles.centerText}>
-                {i18n.or()}
-              </div>
-              <div style={styles.centerLine}/>
-            </div>
+            }
             <div style={styles.middleCell}>
               {i18n.provideAge()}
               <div style={styles.age}>
