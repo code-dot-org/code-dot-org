@@ -25,6 +25,9 @@ before_fork do
   PEGASUS_DB.disconnect
   DASHBOARD_DB.disconnect
   Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
+
+  require 'puma_worker_killer'
+  PumaWorkerKiller.enable_rolling_restart(12 * 3600) # 12 hours in seconds
 end
 
 on_worker_boot do |_index|
