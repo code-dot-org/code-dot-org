@@ -120,17 +120,17 @@ module Pd
         ),
       section_6_submission: BASE_PAGE_LABELS[:section_5_submission].slice(:agree),
       detail_view_principal_approval: {
-        principal_approval: 'Principal approves this application',
-        principal_plan_to_teach: 'Applying teacher will teach this course',
-        principal_schedule_confirmed: 'Principal has confirmed that CS will be on the master schedule',
-        principal_implementation: 'How will this course be implemented? (Principal response)',
-        principal_diversity_recruitment: 'Principal has committed to recruiting diverse students',
+        principal_approval: "Do you approve of <Teacher Name> participating in Code.org's 2019-20 Professional Learning Program?",
+        principal_plan_to_teach: 'Is <Teacher Name> planning to teach this course in the 2019-20 school year?',
+        principal_schedule_confirmed: 'Are you committed to including Computer Science <Program> on the master schedule in 2019-20 if <Teacher Name> is accepted into the program?',
+        principal_implementation: 'To participate in Code.org’s Computer Science <Program> Professional Learning Program, we require that this course be offered in one of the following ways. Please select which option will be implemented at your school.',
+        principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
         principal_free_lunch_percent: 'Percent of students that receive free/reduced lunch',
         principal_underrepresented_minority_percent: 'Percent of students that are underrepresented minorities',
         principal_wont_replace_existing_course: 'Will this replace an existing CS course? (Principal response)',
         principal_how_heard: 'How did you hear about Code.org? (Principal response)',
         principal_send_ap_scores: 'Principal authorizes college board to send AP Scores',
-        principal_pay_fee: 'Can the school or teacher pay the summer workshop program fee? (Principal response)'
+        principal_pay_fee: 'Can the school or teacher pay the summer workshop program fee? (Principal response)',
       }
     }.freeze
 
