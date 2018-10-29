@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -40,7 +40,6 @@
     "skip_autosave": true,
     "default_song": "hammer",
     "long_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
-    "is_project_level": false,
     "soft_buttons": [
       "leftButton",
       "rightButton",
