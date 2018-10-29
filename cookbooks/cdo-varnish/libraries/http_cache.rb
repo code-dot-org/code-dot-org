@@ -19,6 +19,7 @@ class HttpCache
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
+    aquatic
     starwars
     starwarsblocks
     mc
@@ -140,6 +141,13 @@ class HttpCache
             cookies: 'none'
           },
           {
+            path: '/restricted/*',
+            proxy: 'cdo-restricted',
+            headers: [],
+            cookies: 'none',
+            trusted_signer: true,
+          },
+          {
             path: %w(
               /v3/assets/*
               /v3/animations/*
@@ -165,7 +173,7 @@ class HttpCache
           # that don't match this path will be cached.
           {
             # TODO(suresh): lookup the last puzzle from the database
-            path: "/s/dance/stage/12",
+            path: "/s/dance/stage/1/puzzle/13",
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
