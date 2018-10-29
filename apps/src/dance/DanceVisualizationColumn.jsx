@@ -25,6 +25,7 @@ const SongSelector = Radium(class extends React.Component {
     retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
+    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired
   };
 
@@ -41,7 +42,7 @@ const SongSelector = Radium(class extends React.Component {
   loadSong(song) {
     //Load song
     let options = {id: song};
-    options['mp3'] = `https://curriculum.code.org/media/uploads/${this.state.songsData[options.id].url}.mp3`;
+    options['mp3'] = this.state.songsData[options.id].url;
     Sounds.getSingleton().register(options);
 
     this.props.retrieveMetadata(song);
@@ -53,15 +54,13 @@ const SongSelector = Radium(class extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/sound-library/hoc_song_meta/songManifest.json`)
-      .then(response => response.json())
-      .then(data => this.parseSongOptions(data));
+    this.parseSongOptions(this.props.songManifest);
   }
 
-  parseSongOptions(data) {
+  parseSongOptions(songManifest) {
     let songs = {};
-    if (data) {
-      data.songs.forEach((song) => {
+    if (songManifest) {
+      songManifest.forEach((song) => {
           songs[song.id] = {title: song.text, url: song.url};
       });
     }
@@ -91,6 +90,7 @@ class DanceVisualizationColumn extends React.Component {
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired
   };
 
@@ -110,6 +110,7 @@ class DanceVisualizationColumn extends React.Component {
             retrieveMetadata={this.props.retrieveMetadata}
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
+            songManifest={this.props.songManifest}
             hasChannel={this.props.hasChannel}
           />
         }
@@ -131,6 +132,7 @@ class DanceVisualizationColumn extends React.Component {
 export default connect(state => ({
   hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
+  songManifest: state.pageConstants.songManifest,
   selectedSong: state.selectedSong,
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
