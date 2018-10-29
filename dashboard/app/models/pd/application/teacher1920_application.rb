@@ -377,37 +377,29 @@ module Pd::Application
 
     # Filter out extraneous answers based on selected program (course)
     def self.columns_to_remove(course)
-      columns = (
-        if course == 'csd'
-          {
-            teacher: [
-              :csp_which_grades,
-              :csp_how_offer,
-            ],
-            principal: [
-              :csp_ap_exam,
-              :replace_which_course_csp,
-              :csp_implementation
-            ]
-          }
-        else
-          {
-            teacher: [
-              :csd_which_grades
-            ],
-            principal: [
-              :replace_which_course_csd,
-              :csd_implementation
-            ]
-          }
-        end
-      )
-
-      # school contains NCES id
-      # the other fields are empty in the form data unless they selected "Other" school,
-      # so we add it when we construct the csv row.]
-      columns[:teacher].push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
-      columns
+      if course == 'csd'
+        {
+          teacher: [
+            :csp_which_grades,
+            :csp_how_offer,
+          ],
+          principal: [
+            :csp_ap_exam,
+            :replace_which_course_csp,
+            :csp_implementation
+          ]
+        }
+      else
+        {
+          teacher: [
+            :csd_which_grades
+          ],
+          principal: [
+            :replace_which_course_csd,
+            :csd_implementation
+          ]
+        }
+      end
     end
 
     def self.csv_filtered_labels(course)
@@ -447,31 +439,29 @@ module Pd::Application
       teacher_answers = full_answers
       principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
+      school_stats = School.find_by_id(school_id).school_stats_by_year.order(school_year: :desc).first
       CSV.generate do |csv|
         row = []
         CSV_COLUMNS[:teacher].each do |k|
           if columns_to_exclude[:teacher]&.include? k.to_sym
             next
           end
-          if teacher_answers.keys.include? k
-            row.push(teacher_answers[k] || "")
-          elsif respond_to? k
-            row.push(send(k) || "")
-          else
-            row.push ""
-          end
+          row.push(teacher_answers[k] || try(k) || "")
         end
         if principal_answers
           CSV_COLUMNS[:principal].each do |k|
             if columns_to_exclude[:principal]&.include? k.to_sym
               next
             end
-            if principal_answers.keys.include? k
-              row.push(principal_answers[k] || "")
-            elsif principal_application.respond_to? k
-              row.push(principal_application.send(k) || "")
+            row.push(principal_answers[k] || principal_application.try(k) || "")
+          end
+        end
+        if school_stats
+          CSV_COLUMNS[:nces].each do |k|
+            if [:title_i_status, :students_total, :urm_percent].include? k
+              row.push(school_stats[k] || school_stats.try(k) || "")
             else
-              row.push ""
+              row.push(school_stats.percent_of_students(school_stats[k]) || "")
             end
           end
         end

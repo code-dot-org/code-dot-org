@@ -142,6 +142,10 @@ module Pd
         total_score: "Total score",
         notes: "Notes",
         alternate_email: "Alternate email",
+        district_name: "School district",
+        school_city: "School city",
+        school_state: "School state",
+        school_zip_code: "School zip code",
         current_role: "Current role",
         program: "Which professional learning program would you like to join for the 2019-20 school year?",
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?",
@@ -191,17 +195,17 @@ module Pd
         share_ap_scores: "Principal authorizes college board to send AP Scores",
       },
       nces: {
-        # "Title I status code (NCES data)",
-        # "Total student enrollment (NCES data)",
-        # "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
-        # "Percentage of underrepresented minority students (NCES data)",
-        # "Percentage of student enrollment by race - White (NCES data)",
-        # "Percentage of student enrollment by race - Black or African American (NCES data)",
-        # "Percentage of student enrollment by race - Hispanic or Latino (NCES data)",
-        # "Percentage of student enrollment by race - Asian (NCES data)",
-        # "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
-        # "Percentage of student enrollment by race - American Indian or Native Alaskan (NCES data)",
-        # "Percentage of student enrollment by race - Two or more races (NCES data)",
+        title_i_status: "Title I status code (NCES data)",
+        students_total: "Total student enrollment (NCES data)",
+        frl_eligible_total: "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
+        urm_percent: "Percentage of underrepresented minority students (NCES data)",
+        student_wh_count: "Percentage of student enrollment by race - White (NCES data)",
+        student_bl_count: "Percentage of student enrollment by race - Black or African American (NCES data)",
+        student_hi_count: "Percentage of student enrollment by race - Hispanic or Latino (NCES data)",
+        student_as_count: "Percentage of student enrollment by race - Asian (NCES data)",
+        student_hp_count: "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
+        student_am_count: "Percentage of student enrollment by race - American Indian or Native Alaskan (NCES data)",
+        student_tr_count: "Percentage of student enrollment by race - Two or more races (NCES data)",
       }
     }
 
@@ -304,13 +308,13 @@ module Pd
         :last_name,
         :account_email,
         :alternate_email,
-        # School Type
-        # School Name
-        # School District
-        # School Address
-        # School City
-        # School State
-        # School zip code
+        :school_type,
+        :school_name,
+        :district_name,
+        :school_address,
+        :school_city,
+        :school_state,
+        :school_zip_code,
         :assigned_workshop,
         :regional_partner_name,
         :phone,
@@ -389,17 +393,17 @@ module Pd
         :share_ap_scores,
       ],
       nces: [
-        # "Title I status code (NCES data)",
-        # "Total student enrollment (NCES data)",
-        # "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
-        # "Percentage of underrepresented minority students (NCES data)",
-        # "Percentage of student enrollment by race - White (NCES data)",
-        # "Percentage of student enrollment by race - Black or African American (NCES data)",
-        # "Percentage of student enrollment by race - Hispanic or Latino (NCES data)",
-        # "Percentage of student enrollment by race - Asian (NCES data)",
-        # "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
-        # "Percentage of student enrollment by race - American Indian or Native Alaskan (NCES data)",
-        # "Percentage of student enrollment by race - Two or more races (NCES data)",
+        :title_i_status,
+        :students_total,
+        :frl_eligible_total,
+        :urm_percent,
+        :student_wh_count,
+        :student_bl_count,
+        :student_hi_count,
+        :student_as_count,
+        :student_hp_count,
+        :student_am_count,
+        :student_tr_count
       ]
     }
   end
