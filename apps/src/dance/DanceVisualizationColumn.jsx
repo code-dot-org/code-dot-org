@@ -22,9 +22,10 @@ const styles = {
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
+    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
-    isProjectLevel: PropTypes.bool.isRequired
+    hasChannel: PropTypes.bool.isRequired
   };
 
   state = {
@@ -43,7 +44,9 @@ const SongSelector = Radium(class extends React.Component {
     options['mp3'] = `https://curriculum.code.org/media/uploads/${this.state.songsData[options.id].url}.mp3`;
     Sounds.getSingleton().register(options);
 
-    if (this.props.isProjectLevel) {
+    this.props.retrieveMetadata(song);
+
+    if (this.props.hasChannel) {
       //Save song to project
       project.saveSelectedSong(song);
     }
@@ -84,10 +87,11 @@ const SongSelector = Radium(class extends React.Component {
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
+    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    isProjectLevel: PropTypes.bool.isRequired
+    hasChannel: PropTypes.bool.isRequired
   };
 
   render() {
@@ -102,7 +106,12 @@ class DanceVisualizationColumn extends React.Component {
     return (
       <span>
         {!this.props.isShareView &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} isProjectLevel={this.props.isProjectLevel}/>
+          <SongSelector
+            retrieveMetadata={this.props.retrieveMetadata}
+            setSong={this.props.setSong}
+            selectedSong={this.props.selectedSong}
+            hasChannel={this.props.hasChannel}
+          />
         }
         <ProtectedVisualizationDiv>
           <div
@@ -120,7 +129,7 @@ class DanceVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
-  isProjectLevel: state.pageConstants.isProjectLevel,
+  hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
   selectedSong: state.selectedSong,
 }), dispatch => ({

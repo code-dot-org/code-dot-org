@@ -11,6 +11,8 @@ import msg from '@cdo/locale';
 describe('project.js', () => {
   let sourceHandler;
 
+  const setData = project.__TestInterface.setCurrentData;
+
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
     replaceAppOptions();
@@ -520,6 +522,78 @@ describe('project.js', () => {
     });
   });
 
+  describe('serverSideRemix()', () => {
+    let server;
+
+    beforeEach(() => {
+      sinon.stub(project, 'getStandaloneApp').returns('dance');
+      sinon.stub(project, 'save').returns(Promise.resolve());
+      sinon.stub(utils, 'navigateToHref');
+      server = sinon.createFakeServer({autoRespond: true});
+      project.init(sourceHandler);
+    });
+
+    afterEach(() => {
+      server.restore();
+      utils.navigateToHref.restore();
+      project.save.restore();
+      project.getStandaloneApp.restore();
+    });
+
+    it('navigates to server-side remix', async () => {
+      project.getStandaloneApp.returns('dance');
+      setData({});
+
+      await project.serverSideRemix();
+
+      expect(utils.navigateToHref).to.have.been.calledOnce;
+      expect(utils.navigateToHref.firstCall.args[0]).to.match(/projects\/dance\/.*\/remix/);
+    });
+
+    it('saves first if you are the project owner', async () => {
+      setData({isOwner: true});
+
+      await project.serverSideRemix();
+
+      expect(project.save).to.have.been.calledOnce;
+      expect(project.save.firstCall.args)
+        .to.deep.equal([false, true]);
+    });
+
+    it('does not save if you are not the project owner', async () => {
+      setData({isOwner: false});
+
+      await project.serverSideRemix();
+
+      expect(project.save).not.to.have.been.called;
+    });
+
+    it("sets a default project name if it doesn't have one", async () => {
+      setData({name: undefined});
+
+      await project.serverSideRemix();
+
+      expect(project.getCurrentName()).to.equal('My Project');
+    });
+
+    it("sets a special default project name for Big Game", async () => {
+      project.getStandaloneApp.returns('algebra_game');
+      setData({name: undefined});
+
+      await project.serverSideRemix();
+
+      expect(project.getCurrentName()).to.equal('Big Game Template');
+    });
+
+    it("does not change the name if the project already has one", async () => {
+      setData({name: 'Existing name'});
+
+      await project.serverSideRemix();
+
+      expect(project.getCurrentName()).to.equal('Existing name');
+    });
+  });
+
   describe('project.saveThumbnail', () => {
     const STUB_CHANNEL_ID = 'STUB-CHANNEL-ID';
     const STUB_BLOB = 'stub-binary-data';
@@ -556,7 +630,7 @@ describe('project.js', () => {
     });
 
     it('fails if project is not initialized', done => {
-      project.__TestInterface.setCurrentData(undefined);
+      setData(undefined);
 
       const promise = project.saveThumbnail(STUB_BLOB);
       promise.catch(e => {
@@ -567,7 +641,7 @@ describe('project.js', () => {
     });
 
     it('fails if project is not owned by the current user', done => {
-      project.__TestInterface.setCurrentData({});
+      setData({});
 
       project.saveThumbnail(STUB_BLOB).catch(e => {
         expect(e).to.contain('Project not owned by current user');
