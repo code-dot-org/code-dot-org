@@ -38,7 +38,7 @@
     "block_pool": "Dancelab",
     "name_suffix": "_draft",
     "skip_autosave": true,
-    "default_song": "hammer",
+    "default_song": "canttouchthis_mchammer",
     "long_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "soft_buttons": [
       "leftButton",
