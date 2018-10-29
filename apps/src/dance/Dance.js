@@ -11,6 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import {reducers, setSong} from './redux';
+import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 
 const ButtonState = {
@@ -57,7 +58,7 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-Dance.prototype.init = function (config) {
+Dance.prototype.init = async function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
   }
@@ -96,9 +97,12 @@ Dance.prototype.init = function (config) {
 
   const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
 
+  const songManifest = await getSongManifest(config.useRestrictedSongs);
+
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
+    songManifest,
   });
 
   // Pre-register all audio preloads with our Sounds API, which will load
@@ -109,11 +113,8 @@ Dance.prototype.init = function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  if ((this.level.isProjectLevel || this.level.freePlay) && config.level.selectedSong) {
-    getStore().dispatch(setSong(config.level.selectedSong));
-  } else if (this.level.defaultSong) {
-    getStore().dispatch(setSong(this.level.defaultSong));
-  }
+  const selectedSong = getSelectedSong(songManifest, config);
+  getStore().dispatch(setSong(selectedSong));
 
   this.updateSongMetadata(getStore().getState().selectedSong);
 
@@ -131,6 +132,44 @@ Dance.prototype.init = function (config) {
     </Provider>
   ), document.getElementById(config.containerId));
 };
+
+function getSelectedSong(songManifest, config) {
+  // The selectedSong and defaultSong might not be present in the songManifest
+  // in development mode, so just select the first song in the list instead.
+  const songs = songManifest.map(song => song.id);
+  const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
+  if ((isProjectLevel || freePlay) && selectedSong && songs.includes(selectedSong)) {
+    return selectedSong;
+  } else if (defaultSong && songs.includes(defaultSong)) {
+    return defaultSong;
+  } else if (songManifest[0]) {
+    return songManifest[0].id;
+  }
+}
+
+async function getSongManifest(useRestrictedSongs) {
+  const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
+  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
+    .then(response => response.json());
+  const promises = [songManifestPromise];
+
+  // We must obtain signed cookies before accessing restricted content.
+  if (useRestrictedSongs) {
+    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies');
+    promises.push(signedCookiesPromise);
+  }
+
+  const result = await Promise.all(promises);
+  const songManifest = result[0].songs;
+
+  const songPathPrefix = useRestrictedSongs ?
+    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
+
+  return songManifest.map(song => ({
+    ...song,
+    url: `${songPathPrefix}${song.url}.mp3`,
+  }));
+}
 
 Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
@@ -308,6 +347,9 @@ Dance.prototype.onReportComplete = function (response) {
  */
 Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
+
+  //Log song count in Dance Lab
+  trackEvent('HoC_Song', 'Play', getStore().getState().selectedSong);
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
