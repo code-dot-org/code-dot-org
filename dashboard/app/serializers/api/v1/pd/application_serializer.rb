@@ -116,13 +116,16 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   def school_stats
     return nil unless object.try(:school_id)
 
-    stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
+    school = School.find_by_id(object.school_id)
+
+    stats = school.school_stats_by_year.order(school_year: :desc).first
     return nil unless stats
 
     urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
 
     {
       title_i_status: stats.title_i_status,
+      school_type: school.school_type.titleize,
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),
       students_total: stats.students_total,
