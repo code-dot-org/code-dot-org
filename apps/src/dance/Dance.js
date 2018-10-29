@@ -266,8 +266,6 @@ Dance.prototype.afterInject_ = function () {
     recordReplayLog: this.shouldShowSharing(),
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
-      const spriteConfig = new Function('World', this.level.customHelperLibrary);
-      this.nativeAPI.init(spriteConfig);
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
@@ -277,6 +275,9 @@ Dance.prototype.afterInject_ = function () {
     },
     container: 'divDance',
   });
+
+  const spriteConfig = new Function('World', this.level.customHelperLibrary);
+  this.nativeAPI.init(spriteConfig);
 };
 
 /**
