@@ -528,6 +528,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
+    app_options[:useRestrictedSongs] = CDO.cdn_enabled if @game == Game.dance
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
