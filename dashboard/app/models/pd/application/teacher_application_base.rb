@@ -520,58 +520,6 @@ module Pd::Application
     end
 
     # @override
-    def self.csv_header(course)
-      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
-      CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
-        columns.push(
-          'Principal Approval',
-          'Principal Approval Form',
-          'Meets Criteria',
-          'Total Score',
-          'Regional Partner',
-          'School District',
-          'School',
-          'School Type',
-          'School Address',
-          'School City',
-          'School State',
-          'School Zip Code',
-          'Date Submitted',
-          'Notes',
-          'Status'
-        )
-        csv << columns
-      end
-    end
-
-    # @override
-    def to_csv_row
-      answers = full_answers
-      CSV.generate do |csv|
-        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
-        row.push(
-          principal_approval_state,
-          principal_approval_url,
-          meets_criteria,
-          total_score,
-          regional_partner_name,
-          district_name,
-          school_name,
-          school_type,
-          school_address,
-          school_city,
-          school_state,
-          school_zip_code,
-          created_at.to_date.iso8601,
-          notes,
-          status
-        )
-        csv << row
-      end
-    end
-
-    # @override
     # Include additional text for all the multi-select fields that have the option
     def additional_text_fields
       [

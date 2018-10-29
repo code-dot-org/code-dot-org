@@ -216,5 +216,24 @@ module Pd::Application
         [:how_heard]
       ]
     end
+
+    # full_answers plus the other fields from form_data
+    def csv_data
+      sanitize_form_data_hash.tap do |hash|
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
+
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
+        end
+      end
+    end
+
+    def underrepresented_minority_percent
+      percentages = sanitize_form_data_hash
+      percentages[:american_indian].to_i + percentages[:hispanic].to_i + percentages[:black].to_i + percentages[:pacific_islander].to_i
+    end
   end
 end
