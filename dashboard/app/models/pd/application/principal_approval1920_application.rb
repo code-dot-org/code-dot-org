@@ -235,5 +235,19 @@ module Pd::Application
       percentages = sanitize_form_data_hash
       percentages[:american_indian].to_i + percentages[:hispanic].to_i + percentages[:black].to_i + percentages[:pacific_islander].to_i
     end
+
+    def school
+      @school ||= School.includes(:school_district).find_by(id: sanitize_form_data_hash[:school])
+    end
+
+    def district_name
+      school ?
+        school.try(:school_district).try(:name).try(:titleize) :
+        sanitize_form_data_hash[:school_district_name]
+    end
+
+    def school_name
+      school ? school.name.try(:titleize) : sanitize_form_data_hash[:school_name]
+    end
   end
 end
