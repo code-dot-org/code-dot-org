@@ -12,6 +12,7 @@ import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import {reducers, setSong} from './redux';
 import {SignInState} from '../code-studio/progressRedux';
+import logToCloud from '../logToCloud';
 
 const ButtonState = {
   UP: 0,
@@ -229,6 +230,11 @@ Dance.prototype.afterInject_ = function () {
       const spriteConfig = new Function('World', this.level.customHelperLibrary);
       this.nativeAPI.init(spriteConfig);
       this.danceReadyPromiseResolve();
+      // Log this so we can learn about how long it is taking for DanceParty to
+      // load of all of its assets in the wild (will use the timeSinceLoad attribute)
+      logToCloud.addPageAction(logToCloud.PageAction.DancePartyOnInit, {
+        share: this.share
+      }, 1 / 20);
     },
     container: 'divDance',
   });
