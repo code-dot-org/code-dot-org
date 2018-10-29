@@ -275,7 +275,7 @@ module Api::V1::Pd
 
       [
         TYPES_BY_ROLE[role.try(&:to_sym)].csv_header(course),
-        *applications.map(&:to_csv_row)
+        *applications.map {|a| a.to_csv_row(course)}
       ].join
     end
 

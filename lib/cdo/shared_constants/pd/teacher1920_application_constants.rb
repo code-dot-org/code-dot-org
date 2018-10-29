@@ -129,6 +129,82 @@ module Pd
       }
     }.freeze
 
+    CSV_LABEL_OVERRIDES = {
+      teacher: {
+        date_applied: "Date Applied",
+        date_accepted: "Date Accepted",
+        status: "Status",
+        meets_criteria: "Meets minimum requirements?",
+        meets_scholarship_criteria: "Meets scholarship requirements?",
+        phone: "Home or cell phone",
+        regional_partner_name: "Regional Partner",
+        assigned_workshop: "Assigned Workshop",
+        total_score: "Total score",
+        notes: "Notes",
+        alternate_email: "Alternate email",
+        current_role: "Current role",
+        program: "Which professional learning program would you like to join for the 2019-20 school year?",
+        csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?",
+        csp_which_grades: "To which grades does your school plan to offer CS Principles in the 2019-20 school year?",
+        cs_how_many_minutes: "How many minutes will your CS Program class last?",
+        cs_total_course_hours: "Total course hours",
+        replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
+        subjects_teaching: "What subjects are you teaching this year (2018-19)?",
+        subjects_licensed_to_teach: "Which subject area(s) are you currently licensed to teach?",
+        taught_in_past: "Have you taught computer science courses or activities in the past?",
+        previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
+        cs_offered_at_school: "What computer science courses or activities are currently offered at your school?",
+        able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
+        willing_to_travel: "How far would you be willing to travel to academic year workshops?",
+        how_heard: "How did you hear about this program? (Teacher's response)",
+        gender_identity: "Gender identity",
+        race: "Race"
+      },
+      principal: {
+        title: "Principal title (provided by principal)",
+        first_name: "Principal first name (provided by principal)",
+        last_name: "Principal last name (provided by principal)",
+        email: "Principal email address (provided by principal)",
+        # "School Name (provided by principal)",
+        # "School District (provided by principal)",
+        do_you_approve: "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
+        plan_to_teach: "Is this teacher planning to teach this course in the 2019-20 school year?",
+        total_student_enrollment: "Total student enrollment",
+        free_lunch_percent: "Percentage of students who are eligible to receive free or reduced lunch (Principal’s response)",
+        underrepresented_minority_percent: "Percentage of underrepresented minority students (Principal’s response)",
+        white: "Percentage of student enrollment by race - White",
+        black: "Percentage of student enrollment by race - Black or African American",
+        hispanic: "Percentage of student enrollment by race - Hispanic or Latino",
+        asian: "Percentage of student enrollment by race - Asian",
+        pacific_islander: "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander",
+        american_indian: "Percentage of student enrollment by race - American Indian or Native Alaskan",
+        other: "Percentage of student enrollment by race - Other",
+        committed_to_master_schedule: "Are you committed to including this course on the master schedule in 2019-20 if this teacher is accepted into the program?",
+        replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal’s response)",
+        replace_which_course_csp: "Which existing course or curriculum will CS Principles replace?",
+        replace_which_course_csd: "Which existing course or curriculum will CS Discoveries replace?",
+        csp_implementation: "How will you implement CS Principles at your school?",
+        csd_implementation: "How will you implement CS Discoveries at your school?",
+        committed_to_diversity: "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
+        pay_fee: "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
+        how_heard: "How did you hear about this program? (Principal’s response)",
+        share_ap_scores: "Principal authorizes college board to send AP Scores",
+      },
+      nces: {
+        # "Title I status code (NCES data)",
+        # "Total student enrollment (NCES data)",
+        # "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
+        # "Percentage of underrepresented minority students (NCES data)",
+        # "Percentage of student enrollment by race - White (NCES data)",
+        # "Percentage of student enrollment by race - Black or African American (NCES data)",
+        # "Percentage of student enrollment by race - Hispanic or Latino (NCES data)",
+        # "Percentage of student enrollment by race - Asian (NCES data)",
+        # "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
+        # "Percentage of student enrollment by race - American Indian or Native Alaskan (NCES data)",
+        # "Percentage of student enrollment by race - Two or more races (NCES data)",
+      }
+    }
+
     LABEL_OVERRIDES = {
       program: 'Which professional learning program would you like to join for the 2019-20 school year?',
       cs_how_many_minutes: 'How many minutes will your class last?'
@@ -194,6 +270,136 @@ module Pd
         :have_cs_license,
         :committed,
         :willing_to_travel
+      ]
+    }
+
+    SCHOLARSHIP_QUESTIONS = [
+      :previous_yearlong_cdo_pd,
+      :principal_approval,
+      :principal_plan_to_teach,
+      :principal_schedule_confirmed,
+      :principal_diversity_recruitment
+    ]
+
+    CRITERIA_SCORE_QUESTIONS_CSP = (
+      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
+        [:csd_which_grades] - SCHOLARSHIP_QUESTIONS
+    ).freeze
+    CRITERIA_SCORE_QUESTIONS_CSD = (
+      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
+        [:csp_how_offer, :csp_which_grades] - SCHOLARSHIP_QUESTIONS
+    ).freeze
+
+    CSV_COLUMNS = {
+      teacher: [
+        :date_applied,
+        :date_accepted,
+        :status,
+        :meets_criteria,
+        :meets_scholarship_criteria,
+        :total_score,
+        :notes,
+        :title,
+        :first_name,
+        :last_name,
+        :account_email,
+        :alternate_email,
+        # School Type
+        # School Name
+        # School District
+        # School Address
+        # School City
+        # School State
+        # School zip code
+        :assigned_workshop,
+        :regional_partner_name,
+        :phone,
+        :address,
+        :city,
+        :state,
+        :zip_code,
+        :country,
+        :principal_first_name,
+        :principal_last_name,
+        :principal_email,
+        :principal_confirm_email,
+        :principal_phone_number,
+        :current_role,
+        :completing_on_behalf_of_someone_else,
+        :completing_on_behalf_of_name,
+        :program,
+        :csd_which_grades,
+        :csp_which_grades,
+        :csp_how_offer,
+        :cs_how_many_minutes,
+        :cs_how_many_days_per_week,
+        :cs_how_many_weeks_per_year,
+        :cs_total_course_hours,
+        :cs_terms,
+        :plan_to_teach,
+        :replace_existing,
+        :replace_which_course,
+        :subjects_teaching,
+        :does_school_require_cs_license,
+        :what_license_required,
+        :have_cs_license,
+        :subjects_licensed_to_teach,
+        :taught_in_past,
+        :previous_yearlong_cdo_pd,
+        :cs_offered_at_school,
+        :committed,
+        :able_to_attend_multiple,
+        :travel_to_another_workshop,
+        :willing_to_travel,
+        :interested_in_online_program,
+        :pay_fee,
+        :scholarship_reasons,
+        :gender_identity,
+        :race,
+        :how_heard
+      ],
+      principal: [
+        :title,
+        :first_name,
+        :last_name,
+        :email,
+        # "School Name (provided by principal)",
+        # "School District (provided by principal)",
+        :do_you_approve,
+        :plan_to_teach,
+        :total_student_enrollment,
+        :free_lunch_percent,
+        :underrepresented_minority_percent,
+        :white,
+        :black,
+        :hispanic,
+        :asian,
+        :pacific_islander,
+        :american_indian,
+        :other,
+        :committed_to_master_schedule,
+        :replace_course,
+        :replace_which_course_csp,
+        :replace_which_course_csd,
+        :csp_implementation,
+        :csd_implementation,
+        :committed_to_diversity,
+        :pay_fee,
+        :how_heard,
+        :share_ap_scores,
+      ],
+      nces: [
+        # "Title I status code (NCES data)",
+        # "Total student enrollment (NCES data)",
+        # "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",
+        # "Percentage of underrepresented minority students (NCES data)",
+        # "Percentage of student enrollment by race - White (NCES data)",
+        # "Percentage of student enrollment by race - Black or African American (NCES data)",
+        # "Percentage of student enrollment by race - Hispanic or Latino (NCES data)",
+        # "Percentage of student enrollment by race - Asian (NCES data)",
+        # "Percentage of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
+        # "Percentage of student enrollment by race - American Indian or Native Alaskan (NCES data)",
+        # "Percentage of student enrollment by race - Two or more races (NCES data)",
       ]
     }
   end

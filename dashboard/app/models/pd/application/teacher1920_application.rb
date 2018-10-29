@@ -332,24 +332,30 @@ module Pd::Application
       Teacher1920Application.find_by(user: user)
     end
 
+    def date_applied
+      created_at.to_date.iso8601
+    end
+
+    def date_accepted
+      accepted_at&.to_date&.iso8601
+    end
+
+    def assigned_workshop
+      Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
+    end
+
     # memoize in a hash, per course
     FILTERED_LABELS = Hash.new do |h, key|
       labels_to_remove = (
       if key == 'csd'
         [
           :csp_which_grades,
-          :csp_course_hours_per_week,
-          :csp_course_hours_per_year,
-          :csp_terms_per_year,
           :csp_how_offer,
-          :csp_ap_exam
+          :csp_ap_exam,
         ]
       else
         [
-          :csd_which_grades,
-          :csd_course_hours_per_week,
-          :csd_course_hours_per_year,
-          :csd_terms_per_year
+          :csd_which_grades
         ]
       end
       )
@@ -367,6 +373,110 @@ module Pd::Application
     def self.filtered_labels(course)
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
+    end
+
+    # Filter out extraneous answers based on selected program (course)
+    def self.columns_to_remove(course)
+      columns = (
+        if course == 'csd'
+          {
+            teacher: [
+              :csp_which_grades,
+              :csp_how_offer,
+            ],
+            principal: [
+              :csp_ap_exam,
+              :replace_which_course_csp,
+              :csp_implementation
+            ]
+          }
+        else
+          {
+            teacher: [
+              :csd_which_grades
+            ],
+            principal: [
+              :replace_which_course_csd,
+              :csd_implementation
+            ]
+          }
+        end
+      )
+
+      # school contains NCES id
+      # the other fields are empty in the form data unless they selected "Other" school,
+      # so we add it when we construct the csv row.]
+      columns[:teacher].push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
+      columns
+    end
+
+    def self.csv_filtered_labels(course)
+      labels = {
+        teacher: {},
+        principal: {},
+        nces: {}
+      }
+      labels_to_remove = columns_to_remove(course)
+
+      CSV_COLUMNS.keys.each do |source|
+        CSV_COLUMNS[source].each do |k|
+          unless labels_to_remove[source]&.include? k.to_sym
+            labels[source][k] = CSV_LABEL_OVERRIDES[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
+          end
+        end
+      end
+      labels
+    end
+
+    def self.csv_header(course)
+      labels = csv_filtered_labels(course)
+      CSV.generate do |csv|
+        columns = []
+        labels.keys.each do |source|
+          labels[source].keys.each do |k|
+            columns.push(labels[source][k])
+          end
+        end
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_csv_row(course)
+      columns_to_exclude = Pd::Application::Teacher1920Application.columns_to_remove(course)
+      teacher_answers = full_answers
+      principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
+      principal_answers = principal_application&.csv_data
+      CSV.generate do |csv|
+        row = []
+        CSV_COLUMNS[:teacher].each do |k|
+          if columns_to_exclude[:teacher]&.include? k.to_sym
+            next
+          end
+          if teacher_answers.keys.include? k
+            row.push(teacher_answers[k] || "")
+          elsif respond_to? k
+            row.push(send(k) || "")
+          else
+            row.push ""
+          end
+        end
+        if principal_answers
+          CSV_COLUMNS[:principal].each do |k|
+            if columns_to_exclude[:principal]&.include? k.to_sym
+              next
+            end
+            if principal_answers.keys.include? k
+              row.push(principal_answers[k] || "")
+            elsif principal_application.respond_to? k
+              row.push(principal_application.send(k) || "")
+            else
+              row.push ""
+            end
+          end
+        end
+        csv << row
+      end
     end
 
     # @override
