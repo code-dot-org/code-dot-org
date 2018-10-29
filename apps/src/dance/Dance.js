@@ -120,7 +120,7 @@ Dance.prototype.init = async function (config) {
   const selectedSong = getSelectedSong(songManifest, config);
   getStore().dispatch(setSong(selectedSong));
 
-  this.updateSongMetadata(getStore().getState().selectedSong);
+  this.updateSongMetadata(getStore().getState().songs.selectedSong);
 
   ReactDOM.render((
     <Provider store={getStore()}>
@@ -366,7 +366,7 @@ Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play', getStore().getState().selectedSong);
+  trackEvent('HoC_Song', 'Play', getStore().getState().songs.selectedSong);
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
