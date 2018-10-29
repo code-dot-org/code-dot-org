@@ -14,7 +14,7 @@ module Pd
       section_4_professional_learning_program_requirements: 'Professional Learning Program Requirements',
       section_5_additional_demographic_information: 'Additional Demographic Information',
       section_6_submission: 'Submission',
-      detail_view_principal_approval: 'Principal Approval'
+      detail_view_principal_approval: 'Principal Approval and School Information'
     }
 
     PAGE_LABELS = {
@@ -24,14 +24,16 @@ module Pd
         :first_name,
         :last_name,
         :account_email,
-        :alternate_email,
-        :address,
-        :city,
-        :state,
-        :zip_code,
+        :alternate_email
       ).merge(
         {
           phone: 'Home or Cell Phone',
+          gender_identity: 'Gender Identity',
+          race: 'Race',
+          address: 'Home Address',
+          city: 'City',
+          state: 'State',
+          zip_code: 'Zip Code',
           school: 'School',
           school_name: 'School name',
           school_district_name: 'School district name',
@@ -41,9 +43,9 @@ module Pd
           school_zip_code: 'Zip code',
           school_type: 'My school is a',
 
+          principal_title: "Principal's title",
           principal_first_name: "Principal's first name",
           principal_last_name: "Principal's last name",
-          principal_title: "Principal's title",
           principal_email: "Principal's email address",
           principal_confirm_email: "Confirm principal's email address",
           principal_phone_number: "Principal's phone number",
@@ -88,15 +90,18 @@ module Pd
         replace_which_course: 'If yes, please describe the course it will be replacing and why:'
       },
       section_3_teaching_background:
-        BASE_PAGE_LABELS[:section_2_your_school].slice(
-          :does_school_require_cs_license,
-          :what_license_required,
-          :have_cs_license,
-          :subjects_licensed_to_teach,
-          :taught_in_past,
-          :cs_offered_at_school,
-          :previous_yearlong_cdo_pd
-        ).merge({subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}),
+        {subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}.merge(
+          BASE_PAGE_LABELS[:section_2_your_school].slice(
+            :does_school_require_cs_license,
+            :what_license_required,
+            :have_cs_license,
+            :subjects_licensed_to_teach,
+            :taught_in_past,
+            :cs_offered_at_school,
+            :cs_opportunities_at_school,
+            :previous_yearlong_cdo_pd
+          )
+        ),
       section_4_professional_learning_program_requirements:
         {
           committed: BASE_PAGE_LABELS[:section_4_summer_workshop][:committed],
@@ -158,7 +163,8 @@ module Pd
       replace_existing: [5, 0],
       taught_in_past: [2, 0],
       principal_free_lunch_percent: [5, 0],
-      principal_underrepresented_minority_percent: [5, 0]
+      principal_underrepresented_minority_percent: [5, 0],
+      race: [2, 0]
     }
 
     # Need to explicitly list these for the shared constant generation to work.
@@ -168,7 +174,8 @@ module Pd
         :replace_existing,
         :taught_in_past,
         :principal_free_lunch_percent,
-        :principal_underrepresented_minority_percent
+        :principal_underrepresented_minority_percent,
+        :race
       ],
       scholarship_questions: [
         :previous_yearlong_cdo_pd,
@@ -184,7 +191,8 @@ module Pd
         :plan_to_teach,
         :have_cs_license,
         :committed,
-        :willing_to_travel
+        :willing_to_travel,
+        :principal_approval
       ],
       criteria_score_questions_csp: [
         :regional_partner_name,
@@ -193,7 +201,8 @@ module Pd
         :plan_to_teach,
         :have_cs_license,
         :committed,
-        :willing_to_travel
+        :willing_to_travel,
+        :principal_approval
       ]
     }
   end

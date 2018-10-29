@@ -11,6 +11,10 @@ $root: '/blockly/media/dance/'; //TODO: Parameterize for asset pipeline
   }
 }
 
+#divDance {
+  background: url("#{$root}spinner-big.gif") no-repeat center center;
+}
+
 /* Sprited icons. */
 .icon21 {
   height: 21px;

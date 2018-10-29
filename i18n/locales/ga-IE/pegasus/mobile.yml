@@ -1433,6 +1433,7 @@
   csd_2018_name: "Fionnachtana sa Ríomheolaíocht"
   full_course_category_name: "Cúrsaí Iomlána"
   user_header_label: "Dia dhuit a %{username}"
+  user_header_team: "Foireann"
   user_header_settings: "Mo chuntas"
   user_header_logout: "Logáil amach"
   user_header_signin: "Logáil isteach"
@@ -1470,4 +1471,5 @@
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google Account”:'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna
   creativity_create: "Cruthaigh"
+  creativity_hoc_coming: "Tá an Uair Chódála le teacht…"
   account_sign_up_email_opt_in: "An bhfuil cead againn ríomhphost a sheoladh chugat maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?"

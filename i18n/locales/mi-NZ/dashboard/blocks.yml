@@ -240,11 +240,11 @@ mi:
           TYPE:
             "'sand'": kirikiri
             "'planksOak'": papa oke
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": kirikiri
       craft_moveForward:
         text: neke ki mua
       craft_placeTorch:
         text: hoatu rama
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': heihei

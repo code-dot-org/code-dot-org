@@ -79,10 +79,10 @@ const styles = {
     width: '80%'
   },
   questionColumn: {
-    width: '60%'
+    width: '50%'
   },
   answerColumn: {
-    width: '20%'
+    width: '30%'
   },
   scoringColumn: {
     width: '20%'
@@ -153,7 +153,7 @@ export class DetailViewContents extends React.Component {
       status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
-      response_scores: this.props.applicationData.response_scores || {},
+      response_scores: this.props.applicationData.response_scores,
       regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
@@ -226,8 +226,14 @@ export class DetailViewContents extends React.Component {
   };
 
   handleScoreChange = (event) => {
+    const keyCategory = event.target.id.split('-');
+    const key = keyCategory[0];
+    const category = keyCategory[1];
+
+    const responseScores = this.state.response_scores;
+    responseScores[category][key] = event.target.value;
     this.setState({
-      response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
+      response_scores: responseScores
     });
   };
 
@@ -526,7 +532,7 @@ export class DetailViewContents extends React.Component {
             Meets minimum requirements? {this.props.applicationData.meets_criteria}
           </h4>
           <h4>
-            Meets scholarship criteria? {this.props.applicationData.meets_scholarship_criteria}
+            Meets scholarship requirements? {this.props.applicationData.meets_scholarship_criteria}
           </h4>
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
@@ -614,12 +620,17 @@ export class DetailViewContents extends React.Component {
   renderScoringSection = (key) => {
     const snakeCaseKey = _.snakeCase(key);
 
+    if (this.props.viewType === 'facilitator') {
+      return false;
+    }
+
     return (
       <td style={styles.scoringColumn}>
         {
           ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey) && (
             <div>
               Meets course requirements?
+              {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
             </div>
           )
         }
@@ -627,6 +638,7 @@ export class DetailViewContents extends React.Component {
           ScoreableQuestions['bonusPoints'].includes(snakeCaseKey) && (
             <div>
               Bonus Points?
+              {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
             </div>
           )
         }
@@ -634,32 +646,34 @@ export class DetailViewContents extends React.Component {
           ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey) && (
             <div>
               Meets scholarship requirements?
+              {this.renderScoringDropdown(snakeCaseKey, 'meets_scholarship_criteria_scores')}
             </div>
-          )
-        }
-        {
-          TeacherValidScores[key] && (
-            <FormControl
-              componentClass="select"
-              value={this.state.response_scores[key]}
-              id={`${key}-score`}
-              onChange={this.handleScoreChange}
-              disabled={!this.state.editing}
-            >
-              <option>--</option>
-              {
-                TeacherValidScores[key].map((score, i) => (
-                  <option value={score} key={i}>
-                    {score}
-                  </option>
-                ))
-              }
-            </FormControl>
           )
         }
       </td>
     );
   };
+
+  renderScoringDropdown(key, category) {
+    return (
+      <FormControl
+        componentClass="select"
+        value={this.state.response_scores[category][key]}
+        id={`${key}-${category}-score`}
+        onChange={this.handleScoreChange}
+        disabled={!this.state.editing}
+      >
+        <option>--</option>
+        {
+          TeacherValidScores[_.camelCase(key)].map((score, i) => (
+            <option value={score} key={i}>
+              {score}
+            </option>
+          ))
+        }
+      </FormControl>
+    );
+  }
 
   showPrincipalApprovalTable = () => {
     return (this.props.applicationData.principal_approval_state || '').startsWith('Complete');
@@ -670,7 +684,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderDetailViewTableLayout = () => {
-    const sectionsToRemove = ['section6Submission'];
+    const sectionsToRemove = ['section5AdditionalDemographicInformation', 'section6Submission'];
 
     if (!this.showPrincipalApprovalTable()) {
       sectionsToRemove.push('detailViewPrincipalApproval');
@@ -694,7 +708,7 @@ export class DetailViewContents extends React.Component {
                           {LabelOverrides[key] || PageLabels[header][key]}
                         </td>
                         <td style={styles.answerColumn}>
-                          {this.props.applicationData.form_data[key]}
+                          {this.renderAnswer(this.props.applicationData.form_data[key])}
                         </td>
                         {this.renderScoringSection(key)}
                       </tr>
@@ -710,10 +724,19 @@ export class DetailViewContents extends React.Component {
     );
   };
 
+  renderAnswer = (answer) => {
+    if (Array.isArray(answer)) {
+      return answer.sort().join(', ');
+    } else {
+      return answer;
+    }
+  };
+
   renderResendOrUnrequirePrincipalApprovalSection = () => {
     if (!this.props.applicationData.principal_approval_state) {
       return (
         <div>
+          <h3>{SectionHeaders['detailViewPrincipalApproval']}</h3>
           <h4>Select option</h4>
           <PrincipalApprovalButtons
             applicationId={this.props.applicationId}
@@ -726,6 +749,7 @@ export class DetailViewContents extends React.Component {
     } else if (this.props.applicationData.principal_approval_state === "Not required") {
       return (
         <div>
+          <h3>{SectionHeaders['detailViewPrincipalApproval']}</h3>
           <h4>Not required</h4>
           <p>
             If you would like to require principal approval for this teacher,
@@ -744,6 +768,7 @@ export class DetailViewContents extends React.Component {
 
       return (
         <div>
+          <h3>{SectionHeaders['detailViewPrincipalApproval']}</h3>
           <h4>{this.state.principalApproval}</h4>
           <p>
             Link to principal approval form:{' '}

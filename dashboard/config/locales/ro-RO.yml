@@ -96,6 +96,7 @@ ro:
     twitter: Twitter
     facebook: Facebook
     windowslive: Cont Microsoft
+    microsoft_v2_auth: Cont Microsoft
     clever: Cont inteligent
     powerschool: Cont de SuperȘcoală
     forgot_password: Ai uitat parola?
@@ -137,7 +138,6 @@ ro:
     age: Vârsta
     user_type: Ești student sau profesor?
     submit: Înregistrează-te
-    next: Următor
     teacher: Ești profesor?
     valid_username: Disponibil!
     invalid_username: Numele de utilizator trebuie să aibe cel puțin 5 caractere
@@ -370,6 +370,7 @@ ro:
       artist: Artist
       gamelab: Laborator de jocuri
       playlab: Laborator de Joacă
+      spritelab: Laborator Sprite
       minecraft: Minecraft
       flappy: Flappy
     popup:

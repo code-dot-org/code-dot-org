@@ -84,6 +84,7 @@ ka:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft  ანგარიში'
+    microsoft_v2_auth: 'Microsoft  ანგარიში'
     clever: 'Clever-ის ანგარიში'
     forgot_password: 'დაგავიწყდათ თქვენი პაროლი?'
     need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
@@ -108,7 +109,6 @@ ka:
     age: 'ასაკი'
     user_type: 'მასწავლებელი ხართ თუ მოსწავლე?'
     submit: 'რეგისტრაცია'
-    next: 'შემდეგი'
     teacher: 'მასწავლებელი ხართ?'
     valid_username: "მისაწვდომია!"
     invalid_username: "მომხმარებლის სახელი მინიმუმ 5 ნიშნისგან უნდა შედგებოდეს"

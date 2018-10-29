@@ -1434,6 +1434,7 @@
   csd_2018_name: "コンピューターサイエンス 発展"
   full_course_category_name: "すべてのコース"
   user_header_label: "やあ %{username}"
+  user_header_team: "チーム"
   user_header_settings: "アカウント"
   user_header_logout: "サインアウト"
   user_header_signin: "サインイン"
@@ -1471,4 +1472,5 @@
   google_sign_in_instruct: 'ここでは、「グーグルアカウントでサインイン」のオプションを選ぶことができます。'
   applab-intro_name: App Labの紹介
   creativity_create: "つくる"
+  creativity_hoc_coming: "Hour of Code がやってくる…"
   account_sign_up_email_opt_in: "当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？"

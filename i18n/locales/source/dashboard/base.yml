@@ -37,7 +37,6 @@ en:
       user:
         name: 'Display Name'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
-        other_name_example: 'Display Name<br/>(e.g. Ms. Smith)'
         email: 'Email'
         parent_email: 'Parent/guardian email'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
@@ -111,6 +110,7 @@ en:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
+    microsoft_v2_auth: 'Microsoft Account'
     clever: 'Clever Account'
     powerschool: 'Powerschool Account'
     forgot_password: 'Forgot your password?'
@@ -140,7 +140,7 @@ en:
     age: 'Age'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
-    next: 'Next'
+    go_to_account: 'Go to my account'
     teacher: 'Are you a teacher?'
     valid_username: "Available!"
     invalid_username: "Username must be at least 5 characters"
@@ -168,7 +168,6 @@ en:
     email_preference_yes: "Yes"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
-    create_user_type: 'Create account as a'
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -359,8 +358,10 @@ en:
       artist: 'Artist'
       gamelab: 'Game Lab'
       playlab: 'Play Lab'
+      spritelab: 'Sprite Lab'
       minecraft: 'Minecraft'
       flappy: 'Flappy'
+      dance: 'Dance Party'
       view_all: 'View all projects...'
 
     popup:

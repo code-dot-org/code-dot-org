@@ -831,6 +831,8 @@ ar:
               name: أساور الثنائية
             Binary Images:
               name: صور ثنائية
+            Play Lab:
+              name: مختبر اللعب
         csd2-2017:
           stages:
             Lists:

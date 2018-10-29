@@ -48,7 +48,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def response_scores
-    JSON.parse(object.response_scores || '{}').transform_keys {|x| x.camelize :lower}
+    object.try(:response_scores_hash) || {}
   end
 
   def meets_criteria

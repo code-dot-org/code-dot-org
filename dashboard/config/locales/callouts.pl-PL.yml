@@ -609,6 +609,9 @@ pl:
         courseB_playlab_events6_a: Użyj zielonej strzałki w dół, by zmieniać kierunki.
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Użyj zielonej strzałki w dół, by zmieniać kierunki.
+      courseC19_playLab_EOC3_callout:
+        courseE_playLab_scaffold3_1: Przesuń aktora do tej flagi, aby przejść do następnego
+          poziomu.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Ten blok pozwala przesuwać aktorów do
           innych części przestrzeni gry.

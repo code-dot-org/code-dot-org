@@ -1046,6 +1046,7 @@
   header_project_gallery: "Жобалар"
   header_educate_hoc: "Код жазу Сағаты"
   user_header_label: "Сәлем %{username}"
+  user_header_team: "Топ"
   user_header_settings: "Менің жеке парақшам"
   user_header_logout: "Шығу"
   user_header_signin: "Кіру"

@@ -298,11 +298,11 @@ ja:
           TYPE:
             "'sand'": 砂
             "'planksOak'": 樫の木の板
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": 砂
       craft_moveForward:
         text: 前に すすむ
       craft_placeTorch:
         text: 松明を置く
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': ニワトリ

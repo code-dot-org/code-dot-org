@@ -319,11 +319,11 @@ ga:
           TYPE:
             "'sand'": gaineamh
             "'planksOak'": plainc dharach
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": gaineamh
       craft_moveForward:
         text: téigh ar aghaidh
       craft_placeTorch:
         text: cuir tóirse
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': sicín

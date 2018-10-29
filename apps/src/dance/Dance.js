@@ -66,6 +66,10 @@ Dance.prototype.init = function (config) {
 
   this.level = config.level;
   this.skin = config.skin;
+  this.share = config.share;
+  this.p5setupPromise = new Promise(resolve => {
+    this.p5setupPromiseResolve = resolve;
+  });
 
   this.studioApp_.labUserId = config.labUserId;
 
@@ -77,6 +81,7 @@ Dance.prototype.init = function (config) {
 
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
+  config.noHowItWorks = true;
 
   const onMount = () => {
     config.loadAudio = this.loadAudio_.bind(this);
@@ -119,6 +124,7 @@ Dance.prototype.init = function (config) {
         visualizationColumn={
           <DanceVisualizationColumn
             showFinishButton={finishButtonFirstLine && showFinishButton}
+            retrieveMetadata={this.updateSongMetadata.bind(this)}
           />
         }
         onMount={onMount}
@@ -240,7 +246,6 @@ Dance.prototype.reset = function () {
   Sounds.getSingleton().stopAllAudio();
 
   this.nativeAPI.reset();
-  this.p5.noLoop();
 
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
@@ -306,10 +311,8 @@ Dance.prototype.onReportComplete = function (response) {
 /**
  * Click the run button.  Start the program.
  */
-Dance.prototype.runButtonClick = function () {
-  if (!this.nativeAPI.metadataLoaded()) {
-    return;
-  }
+Dance.prototype.runButtonClick = async function () {
+  await this.p5setupPromise;
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
@@ -326,7 +329,7 @@ Dance.prototype.runButtonClick = function () {
   }
 };
 
-Dance.prototype.execute = function () {
+Dance.prototype.execute = async function () {
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
@@ -337,15 +340,16 @@ Dance.prototype.execute = function () {
   }
 
   this.initInterpreter();
-  this.p5.loop();
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
-  this.nativeAPI.play();
 
   const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
   this.nativeAPI.registerValidation(validationCallback);
+
+  const songData = await this.songMetadataPromise;
+  this.nativeAPI.play(songData);
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -365,6 +369,9 @@ Dance.prototype.initInterpreter = function () {
     },
     makeNewDanceSprite: (costume, name, location) => {
       return Number(sprites.push(nativeAPI.makeNewDanceSprite(costume, name, location)) - 1);
+    },
+    makeNewDanceSpriteGroup: (n, costume, layout) => {
+      nativeAPI.makeNewDanceSpriteGroup(n, costume, layout);
     },
     getCurrentDance: (spriteIndex) => {
       return nativeAPI.getCurrentDance(sprites[spriteIndex]);
@@ -389,6 +396,9 @@ Dance.prototype.initInterpreter = function () {
     },
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);
+    },
+    setPropEach: (group, property, val) => {
+      nativeAPI.setPropEach(group, property, val);
     },
     setPropRandom: (spriteIndex, property) => {
       nativeAPI.setPropRandom(sprites[spriteIndex], property);
@@ -443,23 +453,45 @@ Dance.prototype.initInterpreter = function () {
   this.hooks = CustomMarshalingInterpreter.evalWithEvents(api, events, code).hooks;
 };
 
+Dance.prototype.shouldShowSharing = function () {
+  return !!this.level.freePlay;
+};
+
 /**
  * This is called while this.p5 is in the preload phase.
  */
 Dance.prototype.onP5Preload = function () {
-  const getSelectedSong = () => getStore().getState().selectedSong;
-
-  this.nativeAPI = new DanceParty(this.p5, getSelectedSong, audioCommands.playSound, this.onPuzzleComplete.bind(this));
+  this.nativeAPI = new DanceParty(this.p5, {
+    onPuzzleComplete: this.onPuzzleComplete.bind(this),
+    playSound: audioCommands.playSound,
+    recordReplayLog: this.shouldShowSharing(),
+  });
+  this.updateSongMetadata(getStore().getState().selectedSong);
   const spriteConfig = new Function('World', this.level.customHelperLibrary);
   this.nativeAPI.init(spriteConfig);
   this.nativeAPI.preload();
+};
+
+Dance.prototype.updateSongMetadata = function (id) {
+  this.songMetadataPromise = this.loadSongMetadata(id);
+};
+
+Dance.prototype.loadSongMetadata = async function (id) {
+  let songDataPath = '/api/v1/sound-library/hoc_song_meta';
+  const response = await fetch(`${songDataPath}/${id}.json`);
+  return await response.json();
 };
 
 /**
  * This is called while this.p5 is in the setup phase.
  */
 Dance.prototype.onP5Setup = function () {
+  this.preloadComplete = true;
   this.nativeAPI.setup();
+  this.p5setupPromiseResolve();
+  if (this.share) {
+    this.studioApp_.runButtonClick();
+  }
 };
 
 /**
@@ -477,14 +509,12 @@ Dance.prototype.onP5Draw = function () {
  * this.studioApp_.displayFeedback when appropriate
  */
 Dance.prototype.displayFeedback_ = function () {
-  var level = this.level;
-
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
-    level: level,
-    showingSharing: level.freePlay,
+    level: this.level,
+    showingSharing: this.shouldShowSharing(),
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },

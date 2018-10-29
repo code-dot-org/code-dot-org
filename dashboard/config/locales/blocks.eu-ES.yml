@@ -552,11 +552,11 @@ eu:
           TYPE:
             "'sand'": hondarra
             "'planksOak'": haritz oholak
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": hondarra
       craft_moveForward:
         text: mugitu aurrera
       craft_placeTorch:
         text: argi-zuzia kokatu
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': oilaskoa

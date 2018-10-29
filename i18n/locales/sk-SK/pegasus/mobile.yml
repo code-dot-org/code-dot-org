@@ -406,12 +406,12 @@
   playlab_gumball_title: "Úžasný svet s Gumball"
   playlab_iceage_title: "Doba ľadová - už čoskoro"
   playlab_iceage_title_live: "Doba ľadová"
-  starwars_subtitle: "Budovánie Galaxie s kódom"
+  starwars_subtitle: "Budovanie Galaxie pomocou kódu"
   starwars_javascript_title: "JavaScript"
-  starwars_javascript_description: "Bloky presúvajte myšou spolu s JavaScript-om."
+  starwars_javascript_description: "Použi bloky \"Ťahaj a pusť\" a JavaScript."
   starwars_javascript_specs: "Iba anglicky | Moderné prehliadače | Od 11 rokov"
   starwars_blocks_title: "Bloky"
-  starwars_blocks_description: "Pre pohyb blokov použite myš."
+  starwars_blocks_description: "Použi bloky \"Ťahaj a pusť\"."
   starwars_blocks_specs: "Mnoho jazykov | Moderné prehliadače, chytré telefóny, tablety | Vek 6-106 rokov"
   starwars_platform_text: "Moderné prehliadače, smartfóny, tablety"
   mc_name: "Minecraft Hodina Kódu"
@@ -438,11 +438,11 @@
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Prihláste sa </a> na semináre Minecraft - Hodina Kódu zadarmo v Microsoft Obchodoch v Austrálií, Kanade, Portoriku alebo v USA. Zistíte, že programovanie je vhodné pre každého, že kombinuje kreativitu so schopnosťou riešiť problémy a že zároveň prináša veľa zábavy."
   minecraft_host_event: "Zorganizujte podujatie Hodiny Kódu s témou Minecraft"
   minecraft_teach_resources: "Materiály pre učiteľov a plány hodín."
-  minecraft_leader_guide: "Stiahnite si materiály, ktoré vám pomôžu naplánovať a viesť vášu akciu."
+  minecraft_leader_guide: "Stiahnite si materiály, ktoré vám pomôžu naplánovať a viesť vašu akciu."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Stiahnite si</a> stručnú príručku pre organizátora a prezentáciu v Powerpointe pre mladších a starších študentov."
   minecraft_join_online_training: "Ste pripravení zorganizovať vlastnú Hodinu Kódu s Minecraftom, ale neviete, kde začať? Pozrite si náš <a href='%{minecraft_webinar_url}', target='_blank'>webinár na požiadanie</a>. Naučíte sa overené postupy, získate prístup k hotovým materiálom pre organizátorov a prejdete si novú vzorovú lekciu Cesta Hrdinu od Minecraft tímu. Získajte už dopredu čas na rozmyslenie a prípravu pre zorganizovanie Hodiny Kódu pre mládež počas Týždňa výuky informatiky (4.-10. december) alebo inokedy."
   minecraft_continue_learning: 'Informatika pre každého: Nad rámec Hodiny Kódu v Microsoft Obchode'
-  minecraft_continue_learning_description: "Nepotrebujete žiadne skúsenosti s informatikou! Pomôžte nám sprostredkovať informatiku všetkým mladýmy. Pridajte sa k nám v Microsoft Obchode a zúčastnite sa bezplatnej série troch jednohodinových seminárov, počas ktorých zažijete kódovanie v bezstresovom prostredí plnom zábavy, osvojíte si základné koncepty informatiky a pripravíte sa na vedenie Hodiny Kódu vo Vašej triede alebo komunite. Máte to vo Vašich rukách! <a href='%{minecraft_continue_learning_url}', target='_blank'>Prihláste sa dnes</a>."
+  minecraft_continue_learning_description: "Nepotrebujete žiadne skúsenosti s informatikou! Pomôžte nám sprostredkovať informatiku všetkým mladým. Pridajte sa k nám v Microsoft Obchode a zúčastnite sa bezplatnej série troch jednohodinových seminárov, počas ktorých zažijete kódovanie v bezstresovom prostredí plnom zábavy, osvojíte si základné koncepty informatiky a pripravíte sa na vedenie Hodiny Kódu vo Vašej triede alebo komunite. Máte to vo Vašich rukách! <a href='%{minecraft_continue_learning_url}', target='_blank'>Prihláste sa dnes</a>."
   minecraft_future: "Pomôžte mládeži pripraviť sa na budúcnosť"
   minecraft_future_description: "Zistite, ako ostatné školy a neziskové organizácie prinášajú digitálne zručnosti - od digitálnej gramotnosti až po výuku informatiky - do ich komunít. Vyberte si z rôznych modelov, získajte tipy a triky a <a href='%{minecraft_future_url}', target='_blank'>získajte prístup k zdrojom</a>, ktoré ostatní považujú za najhodnotnejšie."
   minecraft_og_designer: "Minecraft je späť s novou aktivitou pre Hodinu Kódu. Naprogramuj zvieratá a iné postavy z Minecraftu v tvojej vlastnej verzii Minecraftu."
@@ -857,7 +857,7 @@
   older_systems_subheading: "Tieto by mali fungovať so staršími webovými prehliadačmi. Ak chcete získať prístup ku všetkým kurzom, aktualizujte na <a href=\"http://browsehappy.com/\" target=\"_blank\">moderný webový prehliadač.</a>"
   mobile_devices: "Kurzy pre mobilné zariadenia"
   frozen_name: "Programuj s Annou a Elsou"
-  starwars_name: 'Hviezdne Vojny (angl. Star Wars): Vybudovanie galaxie za pomoci Kódu'
+  starwars_name: 'Star Wars: Budovanie galaxie pomocou kódu'
   codeorg_name: "Klasické bludisko"
   codeintl_name: "Klasické bludisko"
   khan_name: "Úvod do JavaScriptu"
@@ -1386,6 +1386,7 @@
   csd_2018_name: "Objavujeme Informatiku"
   full_course_category_name: "Všetky kurzy"
   user_header_label: "Ahoj %{username}"
+  user_header_team: "Tím"
   user_header_settings: "Môj účet"
   user_header_logout: "Odhlásiť sa"
   user_header_signin: "Prihlásiť sa"
@@ -1423,4 +1424,5 @@
   hero_name: 'Minecraft: Cesta Hrdinu'
   applab-intro_name: Úvod do App Lab
   creativity_create: "Vytvoriť"
+  creativity_hoc_coming: "Každé dieťa si zaslúži príležitosť…"
   account_sign_up_email_opt_in: "Môžeme Vám zasielať emailom aktualizácie o našich školeniach, možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike?"

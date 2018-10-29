@@ -246,111 +246,110 @@ sk:
         hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
       Artist Autorun Test: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
-      Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom `vybuduj
-        most`. Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\r\n
+      Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom \"postav
+        most\". Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\r\n
         \r\nDvakrát prichyť malý, zelený  <xml> <block type=\"procedures_callnoreturn\"
         id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> blok do pracovného
         priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej
         fakli [redstone_torch]."
       MC Agent Freeplay: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte
         tento svet."
-      MC_HOC_2017 Agent Test: "Klikni na oranžové tlačidlo \"Spustiť\", aby si mohol
-        presúvať hráča pomocou **klávesov so šípkami**. \r\n\r\nAk chceš prejsť túto
-        úroveň, musíš prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby
-        si sa dostal na oranžové políčko vo vnútri."
-      MC_HOC_2017_01: "Klikni na oranžové tlačidlo \"Spustiť\", aby si mohol presúvať
-        hráča pomocou **klávesov so šípkami**. \r\n\r\nAk chceš prejsť túto úroveň,
-        musíš prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby si sa dostal
-        na oranžové políčko vo vnútri."
+      MC_HOC_2017 Agent Test: |-
+        Klikni na oranžové tlačidlo "Spustiť", aby si mohol presúvať hráča pomocou **klávesov so šípkami**.
+
+        Ak chceš prejsť túto úroveň, musíš prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby si sa dostal na oranžové políčko vo vnútri.
+      MC_HOC_2017_01: |-
+        Klikni na oranžové tlačidlo "Spustiť", aby si mohol presúvať hráča pomocou **klávesov so šípkami**.
+
+        Ak chceš prejsť túto úroveň, musíš prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby si sa dostal na oranžové políčko vo vnútri.
       MC_HOC_2017_01_Cole: Na tejto ceste musíš pozbierať všetky nástroje. Aby si
         vyhral, pohybuj sa po okolí pomocou **klávesov so šípkami** a dostaň sa k
         truhlici
       MC_HOC_2017_01_Kiki: 'Ak chceš hrať túto úroveň, klikni na oranžové tlačidlo
         "Spustiť" pod herným priestorom. Hráča posúvaj pomocou **klávesov so šípkami**.  '
-      MC_HOC_2017_01_RETRY: "Dvere sú zamknuté, ale na pomoc prichádza agent. \r\n
-        \r\nV pracovnom priestore prichyť blok `posuň dopredu` k bloku `pri spustení`,
+      MC_HOC_2017_01_RETRY: "Dvere sú zamknuté, ale na pomoc prichádza agent. \n \nV
+        pracovnom priestore prichyť blok \"posuň sa dopredu\" k bloku \"pri spustení\",
         aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom stlač tlačidlo
-        \"Spustiť\" a pomocou klávesov so šípkami presuň agenta mimo domu, aby získal
+        \"Spustiť\" a pomocou klávesov so šípkami presuň agenta mimo domu, kde získa
         **truhlicu** [chest].\n"
       MC_HOC_2017_02: Hráč sa musí dostať do tajného hája. Pomôž agentovi otvoriť
         bránu napísaním takého kódu, aby sa dostal na prítlačnú dosku.
-      MC_HOC_2017_02_Cole: "Hráč {currentPlayerName} vyrazil za dobrodružstvom. Pomôž
-        mu získať **mapu** [map_empty], ktorá je za zamknutými dverami napravo. \r\n
-        \r\nPrichytením kódu do pracovného priestoru posuň agenta na prítlačnú dosku
-        [PressurePlate_Up], aby hráč {currentPlayerName} mohol prejsť. "
+      MC_HOC_2017_02_Cole: "{currentPlayerName} vyrazil za dobrodružstvom. Pomôž mu
+        získať **mapu** [map_empty], ktorá je za zamknutými dverami napravo. \n \nPrichytením
+        kódu do pracovného priestoru posuň agenta na prítlačnú dosku [PressurePlate_Up],
+        aby hráč {currentPlayerName} mohol prejsť. "
       MC_HOC_2017_02_Kiki: "Hráč vyrazil za dobrodružstvom, ale najprv musí získať
-        fakľu skrytú za zamknutými dverami. \r\n\r\nNaprogramuj agenta, aby sa posunul
+        fakľu skrytú za zamknutými dverami. \n\nNaprogramuj agenta, aby sa posunul
         dvakrát dopredu. Takto pôjde po bielej ceste a dostane sa k prítlačnej doske,
         aby mohol hráčovi otvoriť dvere."
       MC_HOC_2017_02_Will: "Na dokončenie tejto úrovne sa musí hráč dostať na oranžové
-        políčko vnútri tajného hája, ktorý je za zamknutými dverami. \r\n\r\nKód v
-        pracovnom priestore spôsobí, že sa agent posunie dvakrát dopredu, aby sa dostal
-        na prítlačnú dosku a otvoril dvere Alexovi alebo Stevovi."
-      MC_HOC_2017_03_Cole: "Hráč {currentPlayerName} pokračuje v dobrodružstve a potrebuje
-        **kompas** [compass], aby sa pripravil na výlet. \r\n \r\nNaprogramuj agenta,
+        políčko vnútri tajného hája, ktorý je za zamknutými dverami. \n\nKód v pracovnom
+        priestore spôsobí, že sa agent posunie dvakrát dopredu, aby sa dostal na prítlačnú
+        dosku a otvoril Alexovi alebo Stevovi dvere."
+      MC_HOC_2017_03_Cole: "{currentPlayerName} pokračuje v dobrodružstve a potrebuje
+        **kompas** [compass], aby sa pripravil na výlet. \n \nNaprogramuj agenta,
         aby otvoril bránu. "
       MC_HOC_2017_03_Kiki: "Hráčovo dobrodružstvo sa začne za zamknutými dverami v
-        tajnom háji. \r\n\r\n\r\nPomôž agentovi otvoriť dvere napísaním takého kódu,
-        aby sa dostal na prítlačnú dosku."
-      MC_HOC_2017_04: Zmeň cyklus posledného hlavolamu, aby si agentovi pomohol vytvoriť
+        tajnom háji. \n\n\nPomôž agentovi otvoriť dvere napísaním takého kódu, ktorý
+        ho dostane na prítlačnú dosku."
+      MC_HOC_2017_04: Zmeň cyklus z poslednej úlohy tak, aby si agentovi pomohol vytvoriť
         cestu cez širšiu časť tejto rieky.
-      MC_HOC_2017_04POINT5_Cole: "Dostal si sa z močiara. Teraz bezpečne presuň hráča
+      MC_HOC_2017_04POINT5_Cole: "Dostal si sa z močiara! Teraz bezpečne presuň hráča
         na oranžové políčko. \n\n\nPomôž agentovi uvoľniť cestu nájdením jednoduchého
         vzoru a pomocou cyklov prejsť po prvých dvoch prítlačných doskách."
-      MC_HOC_2017_04POINT5_RYAN: "Dostal si sa na druhú stranu! \r\n\r\nTeraz bezpečne
-        preveď hráča {currentPlayerName} bludiskom, aby získal **sekeru** [diamond_axe].\r"
-      MC_HOC_2017_04_Cole: "Agent sa môže presúvať cez vodu. \r\n \r\nPomocou cyklu
-        `opakuj` vyrieš tento hlavolam a pomôž hráčovi {currentPlayerName} dostať
-        sa k **vedru** [bucket_empty] za dverami. "
+      MC_HOC_2017_04POINT5_RYAN: "Dostal si sa na druhú stranu! \n\nTeraz bezpečne
+        preveď hráča {currentPlayerName} bludiskom, aby získal **sekeru** [diamond_axe]"
+      MC_HOC_2017_04_Cole: "Agent sa môže presúvať cez vodu. \n \nPomocou cyklu \"opakuj\"
+        vyrieš tento hlavolam a pomôž hráčovi {currentPlayerName} dostať sa k **vedru**
+        [bucket_empty] za dverami. "
       MC_HOC_2017_04_Kiki: "Vstup do tajného hája viedol k tejto krásnej oáze. Ak
         chce hráč zdolať túto úroveň, musí sa dostať na oranžové políčko v chate.
-        \r\n\r\nPomocou cyklu`opakuj` pomôž agentovi prejsť celú cestu až na prítlačnú
+        \n\nPomocou cyklu\"opakuj\" pomôž agentovi prejsť celú cestu až na prítlačnú
         dosku, ktorá otvorí dvere chaty."
-      MC_HOC_2017_05: "Cykly nie sú vždy užitočné. \n\n\nTieto kaktusy nerastú v jasne
-        viditeľnom vzore, takže cyklus by ich neodstránil správne. Namiesto toho sme
-        ti poskytli funkciu nazývanú `znič a posuň`, ktorá za teba urobí ťažkú prácu,
-        kedykoľvek sa agent dostane k prekážke."
-      MC_HOC_2017_05_Cole: "Ach nie, most je preč! \r\n\r\nNaprogramuj agenta, aby
-        znova vybudoval most pomocou  <xml>  <block type=\"craft_placeBlock\">\n<title
-        name=\"TYPE\">       </title>\n</block></xml> bloku. Vďaka tomu sa  hráč {currentPlayerName}
+      MC_HOC_2017_05: "Cykly nie sú vždy užitočné. \n\n\nTieto kaktusy nerastú podľa
+        jasného vzoru, takže cyklus by ich neodstránil správne. Namiesto toho sme
+        ti poskytli funkciu nazvanú \"znič a posuň sa\", ktorá za teba urobí ťažkú
+        prácu, kedykoľvek sa agent dostane k prekážke."
+      MC_HOC_2017_05_Cole: "Ach nie, most je preč! \n\nNaprogramuj agenta tak, aby
+        znova postavil most pomocou bloku  <xml>  <block type=\"craft_placeBlock\">\n<title
+        name=\"TYPE\">       </title>\n</block></xml>. Vďaka tomu sa  {currentPlayerName}
         dostane k **lopate** [diamond_shovel]."
-      MC_HOC_2017_05_Josh: "Ach nie, most je preč! \n\n\nPomôž agentovi znova vybudovať
+      MC_HOC_2017_05_Josh: "Ach nie, most je preč! \n\n\nPomôž agentovi znova postaviť
         most, aby sa hráč mohol dostať k **lopate**."
       MC_HOC_2017_05_Kiki: "Je čas, aby hráč opustil tajný háj a pokračoval v dobrodružstve.
-        Most je však preč! \r\n\r\nPomôž agentovi znova vybudovať most a potom sa
-        presunúť k drevenej doske, aby sa hráč mohol dostať na oranžové políčko."
-      MC_HOC_2017_06_Cole: "Ďalšia rieka, ale táto je oveľa širšia! \r\n \r\nOprav
-        tento kód, aby si agentovi pomohol vybudovať most. Vďaka tomu sa {currentPlayerName}
+        Most je však preč! \n\nPomôž agentovi znova postaviť most a presunúť sa k
+        drevenej doske, aby sa hráč mohol dostať na oranžové políčko."
+      MC_HOC_2017_06_Cole: "Ďalšia rieka, ale táto je oveľa širšia! \n \nOprav tento
+        kód tak, aby si agentovi pomohol postaviť most. Vďaka tomu sa {currentPlayerName}
         dostane ku **krompáču** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh: "Ďalšia rieka, ale táto je oveľa širšia. \r\n\r\nOprav
-        tento kód, aby si agentovi pomohol vybudovať most cez rieku."
-      MC_HOC_2017_06_Kiki: "Ďalšia rieka, ale táto je oveľa širšia. \r\n\r\nOprav
-        tento kód, aby si agentovi pomohol vybudovať most cez vodu."
-      MC_HOC_2017_07_Cole: "Na ceste je ľad! \r\n \r\nFunkcia `uvoľniť cestu` ti môže
-        pomôcť zničiť ľad a dostať hráča {currentPlayerName} do banského vozíka [minecart_normal]! "
+      MC_HOC_2017_06_Josh: "Ďalšia rieka, ale táto je oveľa širšia. \n\nOprav tento
+        kód a pomôž agentovi postaviť cez rieku most."
+      MC_HOC_2017_06_Kiki: "Ďalšia rieka, ale táto je oveľa širšia. \n\nOprav tento
+        kód a pomôž agentovi postaviť cez vodu most."
+      MC_HOC_2017_07_Cole: "Na ceste je ľad! \r\n \r\nFunkcia \"uvoľni cestu\" ti
+        môže pomôcť zničiť ľad a dostať hráča {currentPlayerName} do banského vozíka
+        [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Cykly nie sú jediným spôsobom, ako opakovať kód. \r\n\r\nTu
-        sme ti poskytli funkciu nazývanú `odstráň kaktusy`, ktorá za teba urobí ťažkú
-        prácu a odstráni tri kaktusy, kedykoľvek ju použiješ. Pomocou dvoch blokov
-        `odstráň kaktusy` uvoľni cestu k oranžovému políčku. "
+        sme ti poskytli funkciu nazývanú \"odstráň kaktusy\", ktorá za teba urobí
+        ťažkú prácu a odstráni tri kaktusy, kedykoľvek ju použiješ. Pomocou dvoch
+        blokov \"odstráň kaktusy\" uvoľni cestu k oranžovému políčku. "
       MC_HOC_2017_07a_Kiki: Teraz uprav tento cyklus, aby si pomohol agentovi uvoľniť
         cestu k oranžovému políčku.
       MC_HOC_2017_08_Cole: "Teraz namiesto zničenia a následného pohybu budeš musieť
-        umiestniť blok.  \r\n\r\nZmeň poskytnutú funkciu tak, aby bola vhodná pre
-        púšť."
-      MC_HOC_2017_08_Kiki: "Teraz namiesto ničenia kaktusov budeš musieť umiestniť
-        kameň cez lávu a potom zničiť pieskovec.  \r\n\r\nZmeň funkciu tak, aby bola
-        vhodná pre túto úroveň."
+        blok umiestniť. \n\nZmeň poskytnutú funkciu tak, aby bola vhodná pre púšť."
+      MC_HOC_2017_08_Kiki: "Teraz namiesto zničenia kaktusov budeš musieť na lávu
+        položiť kameň a potom zničiť pieskovec.  \n\nZmeň funkciu tak, aby bola vhodná
+        pre túto úroveň."
       MC_HOC_2017_08_RY: "Teraz si môžeš vybrať z **DVOCH** funkcií. \n\n\nPomocou
         týchto funkcií rýchlo vybuduješ most cez lávu pre hráča {currentPlayerName}."
       MC_HOC_2017_08_Will: "Teraz si môžeš vybrať z **DVOCH** funkcií. \n\n\nPomocou
         týchto funkcií rýchlo vybuduješ pre hráča most cez lávu."
       MC_HOC_2017_09_Cole: Pomocou funkcií pomôž agentovi zničiť obrovské bloky hliny,
         ktoré blokujú hráčovu cestu k prítlačnej doske.
-      MC_HOC_2017_09_Kiki: "Tento úvodný kód nemožno odstrániť.\r\n\r\nPridaj príkazy
-        pre funkciu `vytvor cestičku`, aby program v pracovnom priestore dostal agenta
-        na prítlačnú dosku. "
+      MC_HOC_2017_09_Kiki: "Tento úvodný kód nemožno odstrániť.\n\nPridaj príkazy
+        pre funkciu \"vytvor cestičku\", aby program dostal agenta na prítlačnú dosku. "
       MC_HOC_2017_09_RS_CLONE: Oprav túto funkciu tak, aby sa vyplnili diery. Potom
-        sa postav na prítlačnú dosku, aby sa uvoľnila cesta k fakli.
+        sa postav na prítlačnú dosku a uvoľni cestu k fakli.
       MC_HOC_2017_10_Cole: Pomocou funkcií uvoľni cestu pre banský vozík a vstúp do
         Nether portálu.
       MC_HOC_2017_10_Cole_old: Skús vytvoriť úplne od začiatku funkciu, ktorá uľahčí
@@ -358,8 +357,8 @@ sk:
       MC_HOC_2017_10_Kiki: Skús vytvoriť úplne od začiatku funkciu, ktorá uľahčí agentovi
         dokončenie tohto banského vozíka a dostane hráča na oranžové políčko.
       MC_HOC_2017_10_RETRY: "Dokážeš nájsť rozdiel medzi dvoma funkciami v tvojom
-        pracovnom priestore? \r\n \r\nTieto funkcie použi s iným kódom z panela nástrojov
-        na uvoľnenie cesty pre banský vozík. Potom získaj **kresadlo** [flint_and_steel].
+        pracovnom priestore? \n \nTieto funkcie použi spolu s dalšími príkazmi z panela
+        nástrojov na uvoľnenie cesty pre banský vozík. Potom získaj **kresadlo** [flint_and_steel].
         \n "
       MC_HOC_2017_10_RYAN: Skús úplne od začiatku vytvoriť funkcie, ktoré uľahčia
         agentovi dokončenie tohto banského vozíka a dostanú hráča na oranžové políčko.
@@ -369,7 +368,7 @@ sk:
         zamrznutého jazera.
       MC_HOC_2017_13_Cole: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta
         preskúmajte tento svet."
-      MC_HOC_2017_4.5v2: "Dostal si sa z močiara. Teraz bezpečne presuň hráča na oranžové
+      MC_HOC_2017_4.5v2: "Dostal si sa z močiara! Teraz bezpečne presuň hráča na oranžové
         políčko. \n\n\nPomôž agentovi uvoľniť cestu nájdením jednoduchého vzoru a
         pomocou cyklov prejsť po prvých dvoch prítlačných doskách."
       MC_HOC_2017_Ali: 'Pozri sa na funkcie nižšie. Ako sa pomocou nich vyhneš Ghastom
@@ -382,10 +381,10 @@ sk:
       MC_HOC_2017_FP20x20: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta
         preskúmajte tento svet."
       MC_HOC_2017_Ryan_03: "Vedel si, že do cyklu môžeš vložiť viac ako jeden blok
-        kódu? \r\n\r\nPomocou cyklu `opakuj` umiestni bloky do vody a pomôž tak agentovi
+        kódu? \n\nPomocou cyklu \"opakuj\" umiestni bloky do vody a pomôž tak agentovi
         vybudovať most cez rieku."
       MC_HOC_2017_Ryan_05: "Niekedy musíš odstrániť veci, ktoré stoja hráčovi v ceste.
-        \r\nPomocou bloku `znič` odstráň všetky kaktusy medzi agentom a prítlačnou
+        \nPomocou bloku \"znič\" odstráň všetky kaktusy medzi agentom a prítlačnou
         doskou."
       MC_HOC_Kiki_02: Niekto musí byť na prítlačnej doske, aby sa otvorili bočné dvere.
         Pomôžte agentovi dostať sa na dosku, aby hráč mohol opustiť dom.

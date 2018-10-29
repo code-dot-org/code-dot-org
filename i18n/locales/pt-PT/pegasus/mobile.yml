@@ -1120,6 +1120,7 @@
   header_tutorials: "Tutoriais"
   header_documentation: "Documentação"
   user_header_label: "Olá, %{username}"
+  user_header_team: "Equipa"
   user_header_settings: "Minha conta"
   user_header_logout: "Terminar sessão"
   user_header_signin: "Iniciar sessão"

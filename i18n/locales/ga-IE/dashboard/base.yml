@@ -83,6 +83,7 @@ ga:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Cuntas Microsoft'
+    microsoft_v2_auth: 'Cuntas Microsoft'
     clever: 'Cuntas Clever'
     forgot_password: 'Focal faire dearmadta?'
     need_confirmation: "Nach bhfuair tú na treoracha deimhnithe?"
@@ -106,7 +107,6 @@ ga:
     age: 'Aois'
     user_type: 'An dalta nó múinteoir thú?'
     submit: 'Cláraigh'
-    next: 'Ar Aghaidh'
     teacher: 'An múinteoir thú?'
     valid_username: "Ar fáil!"
     invalid_username: "Ní mór ar a laghad 5 charachtar a bheith in ainm úsáideora"

@@ -19,7 +19,6 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    position: 'relative',
     height: 440,
     width: 473,
     marginBottom: 20,
@@ -36,7 +35,10 @@ const styles = {
   jumboImage: {
     width: 473,
     height: 220,
-    position: 'absolute',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden'
   },
   text: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -111,9 +113,10 @@ class VerticalImageResourceCard extends Component {
       "create-account": require('@cdo/static/resource_cards/createaccount.png'),
       "csf-express": require('@cdo/static/resource_cards/csfexpress.png'),
       "course-catalog": require('@cdo/static/resource_cards/coursecatalog.png'),
-      "new-minecraft": require('@cdo/static/resource_cards/newminecraft.png'),
+      "hero-minecraft": require('@cdo/static/resource_cards/herominecraft.png'),
       "old-minecraft": require('@cdo/static/resource_cards/oldminecraft.png'),
       "minecraft-marketing": require('@cdo/static/resource_cards/minecraftmarketing.png'),
+      "aquatic-minecraft": require('@cdo/static/resource_cards/aquaticminecraft.png'),
       "codeorg-teacher":
       require('@cdo/static/resource_cards/codeorgteacher.png'),
       "third-party-teacher":

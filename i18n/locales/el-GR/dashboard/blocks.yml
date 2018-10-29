@@ -288,11 +288,11 @@ el:
           TYPE:
             "'sand'": άμμος
             "'planksOak'": σανίδες από βελανιδιά
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": άμμος
       craft_moveForward:
         text: προχώρησε μπροστά
       craft_placeTorch:
         text: τοποθέτησε πυρσό
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': κοτόπουλο

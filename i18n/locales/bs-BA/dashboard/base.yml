@@ -76,6 +76,7 @@ bs:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft Račun'
+    microsoft_v2_auth: 'Microsoft Račun'
     clever: 'Pametni račun'
     forgot_password: 'Zaboravio/la si šifru?'
     need_confirmation: "Nisi primio/la upute za potvrdu?"
@@ -95,7 +96,6 @@ bs:
     age: 'Starosna dob'
     user_type: 'Jeste li učenik ili učitelj?'
     submit: 'Prijava'
-    next: 'Sljedeći'
     teacher: 'Jeste li učitelj?'
     valid_username: "Dostupno!"
     invalid_username: "Korisničko ime mora imati barem 5 znakova"

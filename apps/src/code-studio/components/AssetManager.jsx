@@ -126,7 +126,7 @@ export default class AssetManager extends React.Component {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v3',
+        study_group: 'v4',
         event: 'asset-upload-error',
         project_id: this.props.projectId,
         data_int: status

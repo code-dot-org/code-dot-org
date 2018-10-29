@@ -1407,6 +1407,7 @@
   csp_name: "Mga Prinsipyo ng CS"
   full_course_category_name: "Buong mga Kurso"
   user_header_label: "Mabuhay %{username}"
+  user_header_team: "Koponan"
   user_header_settings: "Account Ko"
   user_header_logout: "Mag-sign out"
   user_header_signin: "Sign in"

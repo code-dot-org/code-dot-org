@@ -319,11 +319,11 @@ zh-TW:
           TYPE:
             "'sand'": 沙
             "'planksOak'": 橡木厚板
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": 沙
       craft_moveForward:
         text: 移動-向前
       craft_placeTorch:
         text: 放置火把
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': 雞

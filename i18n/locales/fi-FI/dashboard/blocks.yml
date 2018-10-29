@@ -315,11 +315,11 @@ fi:
           TYPE:
             "'sand'": hiekka
             "'planksOak'": tammilankut
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": hiekka
       craft_moveForward:
         text: siirry eteenpäin
       craft_placeTorch:
         text: aseta soihtu
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': kana

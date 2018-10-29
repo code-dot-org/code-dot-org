@@ -256,11 +256,11 @@ hy:
           TYPE:
             "'sand'": ավազ
             "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ավազ
       craft_moveForward:
         text: առաջ ընթանալ
       craft_placeTorch:
         text: Տեղ ջահը
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': ճուտիկ

@@ -284,11 +284,11 @@ uk:
           TYPE:
             "'sand'": пісок
             "'planksOak'": дубові дошки
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": пісок
       craft_moveForward:
         text: рухатись вперед
       craft_placeTorch:
         text: поставити факел
-      craft_spawnEntity:
-        options:
-          ENTITY:
-            '"chicken"': курка

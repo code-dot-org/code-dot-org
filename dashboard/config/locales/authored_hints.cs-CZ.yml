@@ -13,6 +13,38 @@ cs:
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: V kruhu je 360°, takže když se malíř otočí o 1° každou smyčku,
           bude ji potřebovat zopakovat 360x.
+      2-3 Artist Debugging 10_authored_hint:
+        2-3_Artist_Debugging_10_a: Pamatuj, chceš udělat ovládací tlačítka 10 pixelů
+          *širší* ...tak nezapomeň **přidat** 10 k číslu, které se mění.
+        2-3_Artist_Debugging_10_b: |-
+          **Pokus a omyl je zde dobrá cesta!**
+
+          Zkus měnit vždy jedno číslo.
+
+          Které číslo co dělá?
+
+          Pokud se ztratíš, prostě klikni "Začít znovu" a celý kód se vrátí do původního stavu.
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tip: Každý vous je dlouhý 75 pixelů.'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: Jedno z otočení je o 15 stupňů menší.
+        2-3_Artist_Debugging_3_b: Pokud program běží příliš rychle na to, abyste stihli
+          sledovat průběh, zkuste ho zpomalit stáhnutím posuvníku rychlosti.
+      2-3 Artist Debugging 7_authored_hint:
+        2-3_Artist_Debugging_7_a: Co se stane, pokud necháte umělce posunout nebo
+          skočit zpět, poté co nakreslí první čáru?
+      2-3 Artist Debugging 8_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Kolikrát se můj tvar opakuje?
+
+          Kolikrát se *má* opakovat?
+
+          Kde to můžeš v programu změnit?
+      2-3 Artist Debugging 9_authored_hint:
+        2-3_Artist_Debugging_9_a: Umělec se potřebuje otočit o 60 stupňů více doleva,
+          než začne kreslit!
+        2-3_Artist_Debugging_9_b: K úplnému otočení není potřeba přidat další blok.
+          Stačí přidat 60 stupňů do bloku `otočit vlevo`, který už tam je!
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Vzpomeňte si, že kód z předchozí hádanky byl:
@@ -82,6 +114,34 @@ cs:
           než začne kreslit.
         2-3_Artist_Loops_New_9_b: Tohle V je ve skutečnosti prostě polovina čtverce.
           Jaký by byl kód k nakreslení půlky čtverce?
+      2-3 Bee Conditionals 14_authored_hint:
+        2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet
+          s červenou květinou úplně stejně jako s fialovou květinou!
+        2-3_Bee_Conditionals_14_b: Pokud by červená květina byla fialová, našel bys
+          jak použít blok `opakuj` abys zmenšil kód?
+        2-3_Bee_Conditionals_14_c: "Zkus to rozložit na dva samostatné úkoly:\n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
+          Získat nektar 3 krát\n  - Posun vpřed 5 krát\n  - Zkontroluj, jestli je
+          tam nektar: pokud ano, získej ho\n  - Otoč se doleva\n  \n2) Vyrob med\n
+          \ - Posuň se vpřed 2 krát\n  - Vyrob dva medy"
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Pamatuj: Fialová květina může mít 0 nebo 1 nektaru
+          and mohou se změnit pokaždé, když spustíš program.'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a: Kód bude co nejkratší, pokud použiješ smyčku pokaždé,
+          když se budeš pohybovat vpřed, další smyčku pro získání nektaru a další
+          na výrobu medu.
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Pamatuj: Fialové květiny mění nektar mezi 0 a 1,
+          když program spustíš!'
+      2-3 Bee Debugging 1_authored_hint:
+        2-3_Bee_Debugging_1_a: Až najdete a opravíte chybný blok, vidíte nějaké vzory,
+          které se dají zjednodušit pomocí cyklu `opakuj`?
+      2-3 Bee Debugging 2_authored_hint:
+        2-3_Bee_Debugging_2_a: Až najdete a opravíte chybný blok, vidíte nějaké vzory,
+          které se dají zjednodušit pomocí cyklu `opakuj`?
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a: Je místo, kde včela dělá něco, co nedává smysl? Co
+          se stane, pokud ten blok změníš?
       2-3 Bee Loops 3_authored_hint:
         2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
       2-3 Bee Loops 3B_authored_hint:
@@ -235,10 +295,27 @@ cs:
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
+      course2_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
       course2_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by
           tam byl jeden kousek pokladu na každé hromádce!
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      course2_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: Můžeš použít příkaz `sbírat` vícekrát,
+          abys sesbíral další poklad.
+      course2_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: Můžeš použít příkaz `sbírat` vícekrát,
+          abys sesbíral další poklad.
       course2_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Ani nepřemýšlej, že bys to zkoušel bez
           cyklů!
@@ -477,12 +554,53 @@ cs:
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
+      courseD_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge3_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseE_bee_ramp14_authored_hint:
+        courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po
+          cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen
+          med.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po
+          cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen
+          med.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseE_maze_ramp6_2018_authored_hint:
@@ -498,18 +616,54 @@ cs:
           o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení
           o 90° doprava".
+      grade2_PuppyLoops_10_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          Kolikrát se můj tvar opakuje?
+
+          Kolikrát se *má* opakovat?
+
+          Kde to můžeš v programu změnit?
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'Tip: Každý vous je dlouhý 75 pixelů.'
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a: Co se stane, pokud necháte umělce posunout nebo
+          skočit zpět, poté co nakreslí první čáru?
       grade2_puppy_loops6_authored_hint:
         2-3_Maze_16_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
+      grade3_Conditionals_11_authored_hint:
+        2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet
+          s červenou květinou úplně stejně jako s fialovou květinou!
+        2-3_Bee_Conditionals_14_b: Pokud by červená květina byla fialová, našel bys
+          jak použít blok `opakuj` abys zmenšil kód?
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'Pamatuj: Fialová květina může mít 0 nebo 1 nektaru
+          and mohou se změnit pokaždé, když spustíš program.'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a: Kód bude co nejkratší, pokud použiješ smyčku pokaždé,
+          když se budeš pohybovat vpřed, další smyčku pro získání nektaru a další
+          na výrobu medu.
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Pamatuj: Fialové květiny mění nektar mezi 0 a 1,
+          když program spustíš!'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'Pamatuj: Fialové květiny mění nektar mezi 0 a 1,
+          když program spustíš!'
+      grade3_Debugging_1_authored_hint:
+        2-3_Bee_Debugging_1_a: Až najdete a opravíte chybný blok, vidíte nějaké vzory,
+          které se dají zjednodušit pomocí cyklu `opakuj`?
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a: Je místo, kde včela dělá něco, co nedává smysl? Co
+          se stane, pokud ten blok změníš?
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Měl bys skončit s pěti bloky uvnitř své smyčky.
       grade3_Loops_11_authored_hint:

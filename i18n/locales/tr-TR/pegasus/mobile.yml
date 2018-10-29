@@ -1394,6 +1394,7 @@
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   full_course_category_name: "Tüm Kurslar"
   user_header_label: "Merhaba %{username}"
+  user_header_team: "Takım"
   user_header_settings: "Hesap Ayarları"
   user_header_logout: "Çıkış Yap"
   user_header_signin: "Giriş Yap"
@@ -1429,4 +1430,5 @@
   google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
   applab-intro_name: Uygulama Laboratuvarı Giriş
   creativity_create: "Oluştur"
+  creativity_hoc_coming: "Kodlama Saati geliyor…"
   account_sign_up_email_opt_in: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
