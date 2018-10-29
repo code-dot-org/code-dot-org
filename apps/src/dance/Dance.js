@@ -11,6 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import {reducers, setSong} from './redux';
+import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 
 const ButtonState = {
@@ -346,6 +347,9 @@ Dance.prototype.onReportComplete = function (response) {
  */
 Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
+
+  //Log song count in Dance Lab
+  trackEvent('HoC_Song', 'Play', getStore().getState().selectedSong);
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
