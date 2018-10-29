@@ -133,7 +133,7 @@ export default connect(state => ({
   hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
   songManifest: state.pageConstants.songManifest,
-  selectedSong: state.selectedSong,
+  selectedSong: state.songs.selectedSong,
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
 }))(DanceVisualizationColumn);

@@ -16,11 +16,18 @@ export const actions = {
 
 // Reducers
 
-function selectedSong(state, action) {
-  state = state || "macklemore90";
+const initialState = {
+  selectedSong: 'macklemore90'
+};
+
+function songs(state, action) {
+  state = state || initialState;
   switch (action.type) {
     case SET_SONG:
-      return action.value;
+      return {
+        ...state,
+        selectedSong: action.value
+      };
     default:
       return state;
   }
@@ -28,5 +35,5 @@ function selectedSong(state, action) {
 
 
 export const reducers = {
-  selectedSong
+  songs
 };
