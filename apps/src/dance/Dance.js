@@ -483,7 +483,7 @@ Dance.prototype.initInterpreter = function () {
     },
   };
 
-  let code = require('!!raw-loader!./p5.dance.interpreted');
+  let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
   code += this.studioApp_.getCode();
 
   const events = {
