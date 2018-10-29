@@ -39,6 +39,14 @@ module Pd::Application
 
     validates_uniqueness_of :user_id
 
+    PRINCIPAL_APPROVAL_STATE = [
+      NOT_REQUIRED = 'Not required',
+      IN_PROGRESS = 'Incomplete - Principal email sent on ',
+      COMPLETE = 'Complete - '
+    ]
+
+    REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
+
     serialized_attrs %w(
       status_log
       principal_approval_not_required
@@ -121,15 +129,15 @@ module Pd::Application
 
     def principal_approval_state
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
-      return "Complete - #{response.full_answers[:do_you_approve]}" if response
+      return COMPLETE + response.full_answers[:do_you_approve] if response
 
       principal_approval_email = emails.find_by(email_type: 'principal_approval')
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
-        return "Incomplete - Principal email sent on #{principal_approval_email.sent_at&.strftime('%b %-d')}"
+        return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
       end
 
-      return 'Not required' if principal_approval_not_required
+      return NOT_REQUIRED if principal_approval_not_required
 
       nil
     end
@@ -505,19 +513,28 @@ module Pd::Application
       elsif NO.in? scores
         NO
       else
-        'Reviewing incomplete'
+        REVIEWING_INCOMPLETE
       end
     end
 
     def meets_scholarship_criteria
-      scores = (response_scores_hash[:meets_scholarship_criteria_scores] || {}).values
-
-      if scores.uniq == [YES]
-        YES
-      elsif NO.in? scores
-        NO
+      if principal_approval_state == NOT_REQUIRED
+        # If there is no needed principal approval, then criteria is just whether
+        # the one scholarship question is yes
+        response_scores_hash[:meets_scholarship_criteria_scores][:previous_yearlong_cdo_pd] || 'Reviewing Incomplete'
       else
-        'Reviewing incomplete'
+        response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
+        scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
+
+        scores = scored_questions.map {|q| response_scores[q]}
+
+        if scores.uniq == [YES]
+          YES
+        elsif NO.in? scores
+          NO
+        else
+          REVIEWING_INCOMPLETE
+        end
       end
     end
 
