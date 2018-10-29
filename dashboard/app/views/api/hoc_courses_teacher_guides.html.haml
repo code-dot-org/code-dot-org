@@ -1,0 +1,16 @@
+.row{style: "margin: 0;"}
+  = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: false, teacher_guide: "/hourofcode/starwars" }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState:   false, teacher_guide: "/hourofcode/frozen" }
+  = render partial: 'shared/course_tall_block', locals: { id: 'sports', showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::FLAPPY_NAME, showState: false, teacher_guide: "/hourofcode/flappy" }
+
+.row{style: "margin: 0;"}
+  = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false, teacher_guide: "/hourofcode/hourofcode" }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::INFINITY_NAME, showState: false, teacher_guide: "/hourofcode/infinity" }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME, showState: false, teacher_guide: "/hourofcode/playlab" }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME, showState: false, teacher_guide: "/hourofcode/artist" }
+
+.row{style: "margin: 0;"}
+  = render partial: 'shared/course_tall_block', locals: { id: 'text_compression', showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: 'hoc_encryption', showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: 'conditionals', showState: false, teacher_guide: "/hourofcode/unplugged-conditionals-with-cards" }
