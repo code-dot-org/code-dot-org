@@ -103,7 +103,7 @@
     .smalltext= body
     .clear
     - if teacher_guide.present?
-      .teacher-guide= link_to t('view_teacher_guide'), CDO.code_org_url(teacher_guide)
+      .audiencebar.smalltext.teacher-guide= link_to t('view_teacher_guide'), CDO.code_org_url(teacher_guide)
     .clear
     - if audience && current_user && showState
       .audiencebar.smalltext.audience= audience
