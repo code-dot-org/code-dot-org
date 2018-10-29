@@ -113,7 +113,8 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     margin-right: 10px;
 
     a {
-      color: $gray;
+      color: #00adbc;
+      text-decoration: underline;
     }
   }
   div {
@@ -214,9 +215,4 @@ $color_border_invisible: rgba(170, 170, 170, 0);
   background-color: $lightest_gray;
   border-color: $lighter_gray;
   color: $charcoal;
-}
-.right {
-  a {
-    text-decoration: none;
-  }
 }
