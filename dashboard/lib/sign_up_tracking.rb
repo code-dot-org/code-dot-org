@@ -2,7 +2,7 @@ require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 module SignUpTracking
-  STUDY_NAME = 'account-sign-up-v4'
+  STUDY_NAME = 'account-sign-up-v5'
   NOT_IN_STUDY_GROUP = 'not-in-study'
   CONTROL_GROUP = 'control-v4'
   NEW_SIGN_UP_GROUP = 'experiment-v4'
@@ -46,9 +46,6 @@ module SignUpTracking
   end
 
   def self.log_load_sign_up(session)
-    # HOTFIX 10/26/19 by madelynkasula - FirehoseClient calls are failing, temporarily disable in prod
-    return if Rails.env.production?
-
     event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
@@ -59,9 +56,6 @@ module SignUpTracking
   end
 
   def self.log_begin_sign_up(user, session)
-    # HOTFIX 10/26/19 by madelynkasula - FirehoseClient calls are failing, temporarily disable in prod
-    return if Rails.env.production?
-
     return unless user && session
     result = user.errors.empty? ? 'success' : 'error'
     tracking_data = {
@@ -77,9 +71,6 @@ module SignUpTracking
   end
 
   def self.log_load_finish_sign_up(session, provider)
-    # HOTFIX 10/26/19 by madelynkasula - FirehoseClient calls are failing, temporarily disable in prod
-    return if Rails.env.production?
-
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
       study_group: study_group(session),
@@ -89,9 +80,6 @@ module SignUpTracking
   end
 
   def self.log_cancel_finish_sign_up(session, provider)
-    # HOTFIX 10/26/19 by madelynkasula - FirehoseClient calls are failing, temporarily disable in prod
-    return if Rails.env.production?
-
     FirehoseClient.instance.put_record(
       study: STUDY_NAME,
       study_group: study_group(session),
@@ -101,9 +89,6 @@ module SignUpTracking
   end
 
   def self.log_oauth_callback(provider, session)
-    # HOTFIX 10/26/19 by madelynkasula - FirehoseClient calls are failing, temporarily disable in prod
-    return if Rails.env.production?
-
     return unless provider && session
     if session[:sign_up_tracking_expiration]&.future?
       FirehoseClient.instance.put_record(
@@ -116,9 +101,6 @@ module SignUpTracking
   end
 
   def self.log_sign_in(user, session, request)
-    # HOTFIX 10/26/19 by madelynkasula - FirehoseClient calls are failing, temporarily disable in prod
-    return if Rails.env.production?
-
     return unless user && session && request
     provider = request.env['omniauth.auth'].provider.to_s
     if session[:sign_up_tracking_expiration]&.future?
@@ -134,9 +116,6 @@ module SignUpTracking
   end
 
   def self.log_sign_up_result(user, session)
-    # HOTFIX 10/26/19 by madelynkasula - FirehoseClient calls are failing, temporarily disable in prod
-    return if Rails.env.production?
-
     return unless user && session
     sign_up_type = session[:sign_up_type]
     sign_up_type ||= user.email ? 'email' : 'other'

@@ -2,15 +2,15 @@
   "category": "Sprites",
   "config": {
     "func": "addToSpriteGroup",
-    "blockText": "add {SPRITE} to {GROUPNAME}",
+    "blockText": "add sprite {SPRITE} to group {GROUP}",
     "args": [
       {
         "name": "SPRITE",
         "type": "Sprite"
       },
       {
-        "name": "GROUPNAME",
-        "type": "String"
+        "name": "GROUP",
+        "type": "Sprite"
       }
     ]
   }

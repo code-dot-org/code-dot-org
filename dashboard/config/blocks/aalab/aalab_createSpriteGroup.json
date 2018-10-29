@@ -2,11 +2,13 @@
   "category": "Groups",
   "config": {
     "func": "createSpriteGroup",
-    "blockText": "createSpriteGroup {GROUPNAME}",
+    "inline": false,
+    "blockText": "make a new sprite group called {VAR}",
     "args": [
       {
-        "name": "GROUPNAME",
-        "type": "String"
+        "name": "VAR",
+        "assignment": true,
+        "customInput": "spritePicker"
       }
     ]
   }

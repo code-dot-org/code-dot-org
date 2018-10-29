@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -10,8 +9,10 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
+import {DanceParty} from '@code-dot-org/dance-party';
 import {reducers, setSong} from './redux';
+import trackEvent from '../util/trackEvent';
+import {SignInState} from '../code-studio/progressRedux';
 
 const ButtonState = {
   UP: 0,
@@ -37,8 +38,6 @@ var Dance = function () {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
-
-  this.currentFrameEvents = {};
 };
 
 module.exports = Dance;
@@ -59,7 +58,7 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-Dance.prototype.init = function (config) {
+Dance.prototype.init = async function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
   }
@@ -67,8 +66,8 @@ Dance.prototype.init = function (config) {
   this.level = config.level;
   this.skin = config.skin;
   this.share = config.share;
-  this.p5setupPromise = new Promise(resolve => {
-    this.p5setupPromiseResolve = resolve;
+  this.danceReadyPromise = new Promise(resolve => {
+    this.danceReadyPromiseResolve = resolve;
   });
 
   this.studioApp_.labUserId = config.labUserId;
@@ -92,16 +91,18 @@ Dance.prototype.init = function (config) {
 
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete());
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(true));
     }
   };
 
-  const showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
-  const finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
+
+  const songManifest = await getSongManifest(config.useRestrictedSongs);
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
+    songManifest,
   });
 
   // Pre-register all audio preloads with our Sounds API, which will load
@@ -112,18 +113,17 @@ Dance.prototype.init = function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  if (this.level.isProjectLevel && config.level.selectedSong) {
-    getStore().dispatch(setSong(config.level.selectedSong));
-  } else if (this.level.defaultSong) {
-    getStore().dispatch(setSong(this.level.defaultSong));
-  }
+  const selectedSong = getSelectedSong(songManifest, config);
+  getStore().dispatch(setSong(selectedSong));
+
+  this.updateSongMetadata(getStore().getState().selectedSong);
 
   ReactDOM.render((
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={
           <DanceVisualizationColumn
-            showFinishButton={finishButtonFirstLine && showFinishButton}
+            showFinishButton={showFinishButton}
             retrieveMetadata={this.updateSongMetadata.bind(this)}
           />
         }
@@ -133,22 +133,67 @@ Dance.prototype.init = function (config) {
   ), document.getElementById(config.containerId));
 };
 
+function getSelectedSong(songManifest, config) {
+  // The selectedSong and defaultSong might not be present in the songManifest
+  // in development mode, so just select the first song in the list instead.
+  const songs = songManifest.map(song => song.id);
+  const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
+  if ((isProjectLevel || freePlay) && selectedSong && songs.includes(selectedSong)) {
+    return selectedSong;
+  } else if (defaultSong && songs.includes(defaultSong)) {
+    return defaultSong;
+  } else if (songManifest[0]) {
+    return songManifest[0].id;
+  }
+}
+
+async function getSongManifest(useRestrictedSongs) {
+  const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
+  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
+    .then(response => response.json());
+  const promises = [songManifestPromise];
+
+  // We must obtain signed cookies before accessing restricted content.
+  if (useRestrictedSongs) {
+    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies');
+    promises.push(signedCookiesPromise);
+  }
+
+  const result = await Promise.all(promises);
+  const songManifest = result[0].songs;
+
+  const songPathPrefix = useRestrictedSongs ?
+    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
+
+  return songManifest.map(song => ({
+    ...song,
+    url: `${songPathPrefix}${song.url}.mp3`,
+  }));
+}
+
 Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
-function p5KeyCodeFromArrow(idBtn) {
+const KeyCodes = {
+  LEFT_ARROW: 37,
+  UP_ARROW: 38,
+  RIGHT_ARROW: 39,
+  DOWN_ARROW: 40,
+};
+
+function keyCodeFromArrow(idBtn) {
   switch (idBtn) {
     case ArrowIds.LEFT:
-      return window.p5.prototype.LEFT_ARROW;
+      return KeyCodes.LEFT_ARROW;
     case ArrowIds.RIGHT:
-      return window.p5.prototype.RIGHT_ARROW;
+      return KeyCodes.RIGHT_ARROW;
     case ArrowIds.UP:
-      return window.p5.prototype.UP_ARROW;
+      return KeyCodes.UP_ARROW;
     case ArrowIds.DOWN:
-      return window.p5.prototype.DOWN_ARROW;
+      return KeyCodes.DOWN_ARROW;
   }
 }
 
@@ -157,14 +202,14 @@ Dance.prototype.onArrowButtonDown = function (buttonId, e) {
   this.btnState[buttonId] = ButtonState.DOWN;
   e.preventDefault();  // Stop normal events so we see mouseup later.
 
-  this.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
+  this.nativeAPI.onKeyDown(keyCodeFromArrow(buttonId));
 };
 
 Dance.prototype.onArrowButtonUp = function (buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.UP;
 
-  this.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
+  this.nativeAPI.onKeyUp(keyCodeFromArrow(buttonId));
 };
 
 Dance.prototype.onMouseUp = function (e) {
@@ -179,20 +224,6 @@ Dance.prototype.onMouseUp = function (e) {
     if (this.btnState[buttonId] === ButtonState.DOWN) {
       this.onArrowButtonUp(buttonId, e);
     }
-  }
-};
-
-Dance.prototype.notifyKeyCodeDown = function (keyCode) {
-  // Synthesize an event and send it to the internal p5 handler for keydown
-  if (this.p5) {
-    this.p5._onkeydown({ which: keyCode });
-  }
-};
-
-Dance.prototype.notifyKeyCodeUp = function (keyCode) {
-  // Synthesize an event and send it to the internal p5 handler for keyup
-  if (this.p5) {
-    this.p5._onkeyup({ which: keyCode });
   }
 };
 
@@ -228,15 +259,18 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
-  new window.p5(p5obj => {
-    p5obj._fixedSpriteAnimationFrameSizes = true;
-
-    p5obj.preload = this.onP5Preload.bind(this);
-    p5obj.setup = this.onP5Setup.bind(this);
-    p5obj.draw = this.onP5Draw.bind(this);
-
-    this.p5 = p5obj;
-  }, 'divDance');
+  this.nativeAPI = new DanceParty({
+    onPuzzleComplete: this.onPuzzleComplete.bind(this),
+    playSound: audioCommands.playSound,
+    recordReplayLog: this.shouldShowSharing(),
+    onHandleEvents: this.onHandleEvents.bind(this),
+    onInit: () => {
+      const spriteConfig = new Function('World', this.level.customHelperLibrary);
+      this.nativeAPI.init(spriteConfig);
+      this.danceReadyPromiseResolve();
+    },
+    container: 'divDance',
+  });
 };
 
 /**
@@ -312,7 +346,10 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
-  await this.p5setupPromise;
+  await this.danceReadyPromise;
+
+  //Log song count in Dance Lab
+  trackEvent('HoC_Song', 'Play', getStore().getState().selectedSong);
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
@@ -354,7 +391,6 @@ Dance.prototype.execute = async function () {
 
 Dance.prototype.initInterpreter = function () {
   const nativeAPI = this.nativeAPI;
-  this.currentFrameEvents = nativeAPI.currentFrameEvents;
   const sprites = [];
 
   const api = {
@@ -457,21 +493,6 @@ Dance.prototype.shouldShowSharing = function () {
   return !!this.level.freePlay;
 };
 
-/**
- * This is called while this.p5 is in the preload phase.
- */
-Dance.prototype.onP5Preload = function () {
-  this.nativeAPI = new DanceParty(this.p5, {
-    onPuzzleComplete: this.onPuzzleComplete.bind(this),
-    playSound: audioCommands.playSound,
-    recordReplayLog: this.shouldShowSharing(),
-  });
-  this.updateSongMetadata(getStore().getState().selectedSong);
-  const spriteConfig = new Function('World', this.level.customHelperLibrary);
-  this.nativeAPI.init(spriteConfig);
-  this.nativeAPI.preload();
-};
-
 Dance.prototype.updateSongMetadata = function (id) {
   this.songMetadataPromise = this.loadSongMetadata(id);
 };
@@ -483,25 +504,10 @@ Dance.prototype.loadSongMetadata = async function (id) {
 };
 
 /**
- * This is called while this.p5 is in the setup phase.
+ * This is called while DanceParty is in a draw() call.
  */
-Dance.prototype.onP5Setup = function () {
-  this.preloadComplete = true;
-  this.nativeAPI.setup();
-  this.p5setupPromiseResolve();
-  if (this.share) {
-    this.studioApp_.runButtonClick();
-  }
-};
-
-/**
- * This is called while this.p5 is in a draw() call.
- */
-Dance.prototype.onP5Draw = function () {
-  if (this.currentFrameEvents.any) {
-    this.hooks.find(v => v.name === 'runUserEvents').func(this.currentFrameEvents);
-  }
-  this.nativeAPI.draw();
+Dance.prototype.onHandleEvents = function (currentFrameEvents) {
+  this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
 };
 
 /**
@@ -509,12 +515,15 @@ Dance.prototype.onP5Draw = function () {
  * this.studioApp_.displayFeedback when appropriate
  */
 Dance.prototype.displayFeedback_ = function () {
+  const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
     level: this.level,
     showingSharing: this.shouldShowSharing(),
+    saveToProjectGallery: true,
+    disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.',
     },
