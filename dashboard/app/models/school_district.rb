@@ -64,7 +64,7 @@ class SchoolDistrict < ActiveRecord::Base
       end
 
       CDO.log.info "Seeding 2014-2015 school district data"
-      AWS::S3.process_file('cdo-nces', "2014-2015/ccd/ccd_lea_029_1415_w_0216161ar.txt") do |filename|
+      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/ccd_lea_029_1415_w_0216161ar.txt") do |filename|
         SchoolDistrict.merge_from_csv(filename) do |row|
           {
             id:    row['LEAID'].to_i,
@@ -76,18 +76,19 @@ class SchoolDistrict < ActiveRecord::Base
         end
       end
 
-      # CDO.log.info "Seeding 2017-2018 school district data"
-      # AWS::S3.process_file('cdo-nces', "2017-2018/ccd/ccd_lea_029_1718_w_0a_03302018.txt") do |filename|
-      #   SchoolDistrict.merge_from_csv(filename) do |row|
-      #     {
-      #       id:    row['LEAID'].to_i,
-      #       name:  row['LEA_NAME'].upcase,
-      #       city:  row['LCITY'].to_s.upcase.presence,
-      #       state: row['LSTATE'].to_s.upcase.presence,
-      #       zip:   row['LZIP']
-      #     }
-      #   end
-      # end
+      CDO.log.info "Seeding 2017-2018 school district data"
+      import_options_1718 = {col_sep: ",", headers: true, quote_char: "\x00"}
+      AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_lea_029_1718_w_0a_03302018.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_1718) do |row|
+          {
+            id:    row['LEAID'].to_i,
+            name:  row['LEA_NAME'].upcase,
+            city:  row['LCITY'].to_s.upcase.presence,
+            state: row['LSTATE'].to_s.upcase.presence,
+            zip:   row['LZIP']
+          }
+        end
+      end
     end
   end
 
@@ -101,7 +102,7 @@ class SchoolDistrict < ActiveRecord::Base
       loaded = find_by_id(parsed[:id])
       if loaded.nil?
         SchoolDistrict.new(parsed).save!
-      elsif write_updates == true
+      elsif write_updates
         loaded.assign_attributes(parsed)
         loaded.update!(parsed) if loaded.changed?
       end
