@@ -18,6 +18,7 @@ Feature: Dance Lab
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"
 
-    When I am on "http://studio.code.org/dashboardapi/sign_cookies"
+    When I am on "http://studio.code.org/s/dance/stage/1/puzzle/1"
+    And I wait for the page to fully load
     And I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does contain "placeholder for testing"
