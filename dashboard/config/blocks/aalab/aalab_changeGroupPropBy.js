@@ -1,9 +1,9 @@
-function changeGroupPropBy(groupName, property, val) {
-  if (groupName === undefined || val === undefined || !spriteGroups.hasOwnProperty(groupName)) {
+function changeGroupPropBy(group, property, val) {
+  if (group === undefined || val === undefined) {
     return;
   }
-  for(var i = 0; i < spriteGroups[groupName].length; i++) {
-    var sprite = spriteGroups[groupName][i];
+  for(var i = 0; i < group.length; i++) {
+    var sprite = group[i];
     if(property == "scale") {
       sprite.setScale(sprite.getScale() + val / 100);
       if(sprite.scale < 0) {
