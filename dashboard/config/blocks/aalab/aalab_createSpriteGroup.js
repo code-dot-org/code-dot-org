@@ -1,3 +1,3 @@
-function createSpriteGroup(groupName) {
-  spriteGroups[groupName] = new Group();
+function createSpriteGroup() {
+  return new Group();
 }
