@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_2_CSP_6_3_1'
+wrong 'Sharing your email address with those who request it.'
+wrong 'Connecting to secured networks using the provided network name and password when visiting hotels'
+right 'Encrypting your files and sharing your private key to ensure others who you choose to share files with can read them.'
+wrong 'Using cloud storage to ensure access to your files from all your devices.'
+markdown <<MARKDOWN
+You decide you are going to take your internet privacy seriously. Which of the following action poses the greatest risk to your internet privacy?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **6.3.1** and Essential Knowledge statements: **6.3.1C**
+<hr>
+ (A) This option is incorrect. While sharing your email is a privacy concern as it will increase the likelihood of Spam, it is not the greatest privacy infraction of the options.
+
+<hr>
+ (B) This option is incorrect. Given that the network is part of the hotel infrastructure, requires a username and password, it is not a major privacy concern unless the hotel IT structure is compromised.
+
+<hr>
+ (C) This option is correct. When encrypting files using asymmetric methods, one should always share the public key. If a private key is shared, all files encrypted by this user are able to be able to be unencrypted which is a major privacy risk.
+
+<hr>
+ (D) This option is incorrect. Cloud storage itself is not a privacy risk. While one should ensure proper security settings when signing up for any cloud storage, the risk is minimal compared to other options given.
+
+MARKDOWN

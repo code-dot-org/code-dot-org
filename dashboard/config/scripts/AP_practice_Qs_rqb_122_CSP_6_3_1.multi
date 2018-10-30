@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_122_CSP_6_3_1'
+wrong 'The sender\'s public key'
+wrong 'The sender\'s private key'
+right 'the recipient\'s public kiey'
+wrong 'the recipient\'s private key'
+markdown <<MARKDOWN
+In public key cryptography, which of the following is needed by the sender to encrypt the message?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **6.3.1** and Essential Knowledge statements: **6.3.1H, 6.3.1I, 6.3.1L**
+<hr>
+ (A) This option is incorrect.  When sending a message, the recipient\'s keys are used. 
+
+<hr>
+ (B) This option is incorrect.  When sending a message, the recipient\'s keys are used.
+
+<hr>
+ (C) This option is correct.  In public key cryptography, the sender encrypts the message using the recipient\'s public key.  The recipient will decrypt the message using the recipient\'s private key.
+
+<hr>
+ (D) This option is incorrect.  The sender does not know the recipient\'s private key, so this choice cannot be correct.
+
+MARKDOWN

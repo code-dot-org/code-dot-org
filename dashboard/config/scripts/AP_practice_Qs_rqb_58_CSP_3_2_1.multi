@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_58_CSP_3_2_1'
+right 'Voice over IP software such as Skype'
+wrong 'Desktop publishing software such as Microsoft Word '
+wrong 'Cloud based Presentation software such as Google sheets'
+wrong 'Database creation application like SQL server'
+markdown <<MARKDOWN
+You are applying for an internship position at a construction company, and you need to prepare. Your preparation will include research about the company and its business, the background experience of the interviewer, more details about the internship position, and basic interviewing skills. Which of the following applications will be LEAST useful in organizing and analyzing data for this research?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.2.1** and Essential Knowledge statements: **3.2.1F**
+<hr>
+ (A) This is correct. VOIP software will not help with analyzing and organizing data
+
+<hr>
+ (B) This is incorrect. Desktop publishing software such as MS Word help in organizing and analyzing data
+
+<hr>
+ (C) This is incorrect. Cloud  publishing software such as Google sheets help in organizing and analyzing data
+
+<hr>
+ (D) This is incorrect. Database software such as SQL help in organizing and analyzing data
+
+MARKDOWN

@@ -1,0 +1,27 @@
+name 'AP_practice_Qs_rqb_18_CSP_5_5_1'
+wrong '(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)'
+right '(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)'
+wrong '(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)'
+wrong '(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)'
+markdown <<MARKDOWN
+An office building has two floors. A computer program is used to control an elevator that travels between the two floors. Physical sensors are used to set the following Boolean variables.
+
+<br><img src="https://curriculum.code.org/media/uploads/csp/b33d9bda921dbc0021bad72af31e0e2c"><br>
+
+The elevator moves when the door is closed and the elevator is called to the floor that it is not currently on. Which of the following Boolean expressions can be used in a selection statement to cause the elevator to move.
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **5.5.1** and Essential Knowledge statements: **5.5.1G, 5.5.1E, 5.5.1F**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

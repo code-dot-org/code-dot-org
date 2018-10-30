@@ -1,0 +1,26 @@
+name 'AP_practice_Qs_rqb_45_CSP_3_3_1'
+wrong 'I only'
+wrong 'I and II only'
+right 'III only'
+wrong 'II and III only'
+markdown <<MARKDOWN
+Which of the following statements about compression are true?
+I. Compression is only useful when transferring files over a network.
+II. After a file is compressed, it can never be restored to its original state without some loss of information or quality.
+III. In some situations it is more appropriate to use lossy data compression rather than lossless data compression.
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.3.1** and Essential Knowledge statements: **3.3.1C**
+<hr>
+ (A) This option is incorrect. Compression is also useful in other situations, such as when storing large files.
+
+<hr>
+ (B) This option is incorrect. Compression is also useful in other situations, such as when storing large files. And there are "lossless" compression formats that allow files to be restored to their uncompressed state with no loss of information or quality, such as the ZIP file format.
+
+<hr>
+ (C) This option is correct.
+
+<hr>
+ (D) This option is incorrect. There are "lossless" compression formats that allow files to be restored to their uncompressed state with no loss of information or quality, such as the ZIP file format.
+
+MARKDOWN
