@@ -191,17 +191,24 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
-      if (this.props.appType === "dance" && experiments.isEnabled('p5Replay')) {
-        this.createReplayVideo();
-      }
+      this.tryCreateReplayVideo();
     }
   }
 
-  createReplayVideo = () => {
-    fetch(appOptions.signedReplayLogUrl, {
-      method: "PUT",
-      body: JSON.stringify(this.props.replayLog)
-    });
+  shouldCreateReplayVideo = () =>
+    experiments.isEnabled('p5Replay') &&
+    this.props.appType === 'dance' &&
+    appOptions.signedReplayLogUrl &&
+    this.props.replayLog &&
+    this.props.replayLog.length;
+
+  tryCreateReplayVideo = () => {
+    if (this.shouldCreateReplayVideo()) {
+      fetch(appOptions.signedReplayLogUrl, {
+        method: "PUT",
+        body: JSON.stringify(this.props.replayLog)
+      });
+    }
   };
 
   sharingDisabled = () =>
