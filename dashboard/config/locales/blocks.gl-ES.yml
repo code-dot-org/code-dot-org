@@ -263,6 +263,18 @@ gl:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
       craft_ifPath:
         options:
           DIR:
