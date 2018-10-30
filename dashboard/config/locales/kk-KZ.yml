@@ -30,6 +30,7 @@ kk:
   next_resource: Келесі ресурс
   cancel: Болдырмау
   okay: Жақсы
+  or: немесе
   add_teacher_form:
     code:
       label: 'Мұғалімді қосу:'
@@ -480,6 +481,8 @@ kk:
       title: Minecraft
       body: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз
         Minecraft ойынының нұсқасында.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

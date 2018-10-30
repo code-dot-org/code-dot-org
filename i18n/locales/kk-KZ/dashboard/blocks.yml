@@ -247,6 +247,14 @@ kk:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': шама
       craft_ifPath:
         options:
           DIR:
