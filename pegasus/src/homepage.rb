@@ -205,7 +205,7 @@ class Homepage
           text: "homepage_slot_text_blurb_hoc",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/learn",
+          url: "/hourofcode/overview",
           image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
@@ -279,7 +279,7 @@ class Homepage
           text: "homepage_slot_text_blurb_hoc",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/learn",
+          url: "/hourofcode/overview",
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
