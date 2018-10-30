@@ -966,6 +966,7 @@ tr-TR:
   dashboard_express: 'Hızlandırılmış Kurs:'
   dashboard_unplugged: Bilgisayarlarınız yok ise bu <a href='%{unplugged_url}'>bilgisayarsız
     dersleri sınıfınızda</a> kullanın.
+  dashboard_tools: 'Araçlar: '
   dashboard_curriculum: Müfredat
   dashboard_curriculum_overview: K-5 Müfredatı Ana Hatları
   dashboard_overview: Genel Bakış
@@ -983,6 +984,7 @@ tr-TR:
   dashboard_curriculum_csins: 'Fen Bilimlerinde Bilgisayar Bilimi:'
   dashboard_curriculum_csp: 'AP ® Bilgisayar Bilimi İlkeleri:'
   dashboard_curriculum_ecs: 'Bilgisayar Bilimini Keşfet:'
+  dashboard_curriculum_csd: 'Bilgisayar Bilimi Keşifleri: '
   dashboard_grade_k: K
   dashboard_grade_other: Diğer
   dashboard_login_word: Kelime
@@ -1967,6 +1969,7 @@ tr-TR:
   user_header_settings: Hesap Ayarları
   user_header_logout: Çıkış Yap
   user_header_signin: Giriş Yap
+  user_header_create: 'Oluştur '
   user_header_gamelab: Oyun Laboratuvarı
   user_header_playlab: Oyun Laboratuvarı
   user_header_minecraft: Minecraft
@@ -2014,7 +2017,40 @@ tr-TR:
   syncing_students: Öğrencilerinizi senkronize etme
   google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
   applab-intro_name: Uygulama Laboratuvarı Giriş
-  creativity_create: Oluştur
-  creativity_hoc_coming: Kodlama Saati geliyor…
   account_sign_up_email_opt_in: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
     diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+  hoc2018_creativity_create: Oluştur
+  hoc2018_mc_page_title: Minecraft Kodlama Saati Eğitimleri
+  hoc2018_mc_details: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar,
+    tabletler | 2. sınıf ve üstü
+  hoc2018_mc_designer_title: Minecraft Tasarımcısı
+  hoc2018_mc_designer_description: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın
+    sana ait sürümünde programla.
+  hoc2018_mc_adventurer_title: Minecraft Maceracısı
+  hoc2018_mc_adventurer_description: Alex veya Steve'in maceraya katılması için kod
+    kullan.
+  hoc2018_mc_start: Başlayın
+  hoc2018_mc_no_internet: İnternetin yok mu?
+  hoc2018_mc_download_adventurer: Minecraft Maceracı'nın çevrimdışı versiyonunu indir.
+  hoc2018_mc_educators_box2_button: İndir
+  hoc2018_mc_watch_videos: Başlamadan önce ilham veren bu videolardan birini izle
+  hoc2018_mc_videos_more: Ünlülerin ve rol modellerinin bulunduğu ilham verici daha
+    başka <a href='%{inspiring_videos_playlist}'>videolar</a>
+  hoc2018_mc_careers_more: Teknoloji alanında profesyonellerin daha başka <a href='%{careers_url}'
+    target='_blank'>videoları</a> için
+  hoc2018_mc_video_1min: 1 dk
+  hoc2018_mc_video_2min: 2 dk
+  hoc2018_mc_video_5min: 5 dk
+  hoc2018_mc_video_title_sports: Kendini zorla. Herkes öğrenebilir.
+  hoc2018_mc_video_title_inspire_girl: Bir kıza ilham kaynağı ol
+  hoc2018_mc_video_title_cs_intro: Bilgisayar Bilimi Tanıtımı
+  hoc2018_mc_video_title_schools_dont_teach: Çoğu okulların öğretmedikleri
+  hoc2018_mc_video_title_obama: Başkan Obama'nın bilgisayar bilimi hakkında konuşması
+  hoc2018_mc_video_title_hoc_is_here: Kod Saati Burada - Herkes Öğrenebilir
+  hoc2018_mc_video_title_anybody_can_learn: Herkes Öğrenebilir
+  hoc2018_mc_homepage_join_us: Bize katılın
+  hoc2018_mc_homepage_try_it: Deneyin
+  hoc2018_mc_back: Minecraft, Kod Saati için yeni bir etkinlikle geri döndü!
+  hoc2018_mc_minecraft_education: Minecraft eğitim
+  hoc2018_mc_continue_learning: Minecraft'la öğrenin.
+  hoc2018_mc_go_to_mc_education: Minecraft Eğitime gidin

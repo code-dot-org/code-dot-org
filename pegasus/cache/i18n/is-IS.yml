@@ -2005,5 +2005,34 @@ is-IS:
     Classroom" hnappinn undir flipanum "Umsjón nemenda":'
   google_sign_in_instruct: 'Þaðan ættu þeir að nota valkostinn "Skrá inn með Google
     aðgangi":'
-  creativity_create: Búa til
-  creativity_hoc_coming: Klukkustund kóðunar er á næsta leiti…
+  hoc2018_creativity_create: Búa til
+  hoc2018_mc_page_title: Klukkustund kóðunar með Minecraft efni
+  hoc2018_mc_details: Mörg tungumál | Nýlegir vafrar og spjaldtölvur | 2. bekkur+
+  hoc2018_mc_designer_title: Minecraft Hönnuður
+  hoc2018_mc_designer_description: Forritaðu dýr og aðrar Minecraft verur í þinni
+    eigin útgáfu af Minecraft.
+  hoc2018_mc_adventurer_title: Minecraft Könnuður
+  hoc2018_mc_adventurer_description: Notaðu kóða til að láta Alex eða Steve fara í
+    ævintýraferð.
+  hoc2018_mc_start: Byrja
+  hoc2018_mc_no_internet: Ertu án internettengingar?
+  hoc2018_mc_download_adventurer: Hlaða niður ónettengdu útgáfunni af Minecraft Könnuði.
+  hoc2018_mc_educators_box2_button: Hlaða niður
+  hoc2018_mc_watch_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en þú
+    byrjar
+  hoc2018_mc_videos_more: Fleiri <a href='%{inspiring_videos_playlist}'>hvetjandi
+    myndbönd</a> með góðum fyrirmyndum og frægu fólki
+  hoc2018_mc_careers_more: Fleiri <a href='%{careers_url}' target='_blank'>hvetjandi
+    myndbönd</a> með starfsmönnum úr tæknigeiranum
+  hoc2018_mc_video_1min: 1 mín.
+  hoc2018_mc_video_2min: 2 mín.
+  hoc2018_mc_video_5min: 5 mín.
+  hoc2018_mc_video_title_sports: Láttu reyna á þig. Það geta allir lært.
+  hoc2018_mc_video_title_inspire_girl: Veittu stúlku innblástur
+  hoc2018_mc_video_title_cs_intro: Inngangur að tölvunarfræði
+  hoc2018_mc_video_title_schools_dont_teach: Það sem flestir skólar kenna ekki
+  hoc2018_mc_video_title_obama: Obama forseti talar um tölvunarfræði
+  hoc2018_mc_video_title_hoc_is_here: Klukkustund kóðunar er hér - Allir geta lært
+  hoc2018_mc_video_title_anybody_can_learn: Allir geta lært
+  hoc2018_mc_homepage_join_us: Vertu með
+  hoc2018_mc_homepage_try_it: Prófið hana

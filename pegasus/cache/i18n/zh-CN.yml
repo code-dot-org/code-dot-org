@@ -35,7 +35,7 @@ zh-CN:
   og_description: 每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。
   og_description_celeb: 试试这个新的教程，为你或你的班级赢得与名人视频聊天的机会。
   csedweek_og_title: 计算机科学教育周
-  csedweek_og_description: 2018年12月3至9日。计算机科学是每个学生要学习的基础课程。
+  csedweek_og_description: 计算机科学是每个学生要学习的基础课程。
   csedweek_og_description_soon: 编程一小时会在2018年12月3至9日来临。计算机科学是每个学生都要学习的基础课程。
   csedweek_og_description_here: 编程一小时来了。计算机科学是每个学生都要学习的基础课程。
   hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
@@ -1529,12 +1529,17 @@ zh-CN:
   user_header_settings: 帐户设置
   user_header_logout: 注销
   user_header_signin: 登录
+  user_header_create: '创建 '
+  user_header_applab: '程序实验室 '
+  user_header_artist: '小艺术家 '
   user_header_gamelab: 游戏实验室
   user_header_playlab: 游戏实验室
   user_header_dance: 舞蹈派对
   user_header_spritelab: 精灵实验室
   user_header_minecraft: 我的世界
   user_header_flappy: Flappy Bird
+  user_header_view_all: 查看所有项目……
+  user_header_view_project_gallery: 查看项目库
   user_header_view_my_projects: 查看我的项目
   view_all_sections: 查看所有小组
   view_section: 查看小组
@@ -1571,6 +1576,53 @@ zh-CN:
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
   hero_name: "《我的世界》: 英雄之旅"
   applab-intro_name: 应用程序实验室简介
-  creativity_create: 创建
-  creativity_hoc_coming: 编程一小时就要来了…
   account_sign_up_email_opt_in: 我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）
+  account_sign_up_child_accept_terms: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
+  hoc2018_creativity: 创造力
+  hoc2018_creativity_create: 创建
+  hoc2018_creativity_hoc_coming: 编程一小时就要来了…
+  hoc2018_creativity_what_will_you_create: 你将创建什么？
+  hoc2018_creativity_homepage: 放飞想象，孕育创新。从编程一小时和你自己的创意品牌开始，无论它可能是什么。请观看我们的视频。
+  hoc2018_creativity_hoc_about: '今年，编程一小时都与创造力有关。 '
+  hoc2018_creativity_social_media: 今年的#编程一小时#都与创造力有关。我已经参加了！你呢？
+  hoc2018_creativity_social_media_2: 今年的#编程一小时#都与创造力有关。你会创造什么？
+  hoc2018_creativity_courses: 进一步了解 Code.org 课程
+  hoc2018_creativity_courses_link: 进一步了解 <a href="https://studio.code.org/courses">Code.org
+    课程</a>
+  hoc2018_homepage: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！
+  hoc2018_mc_page_title: 编程一小时《我的世界》教程
+  hoc2018_mc_details: 多种语言|最新的浏览器或平板电脑|2年级以上
+  hoc2018_mc_aquatic_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_hero_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_designer_title: "《我的世界》造物主"
+  hoc2018_mc_designer_description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
+  hoc2018_mc_adventurer_title: "《我的世界》大冒险"
+  hoc2018_mc_adventurer_description: 编写代码来带领Alex或Steve开启一段冒险之旅。
+  hoc2018_mc_start: 开始
+  hoc2018_mc_no_internet: 没有互联网吗？
+  hoc2018_mc_download_adventurer: 下载离线版《我的世界》大冒险
+  hoc2018_mc_educators_box2_button: 下载
+  hoc2018_mc_watch_videos: 在开始之前，看一段鼓舞人心的视频
+  hoc2018_mc_videos_more: 更多由榜样人物和明星出演的<a href='%{inspiring_videos_playlist}'>鼓舞人心的视频</a>
+  hoc2018_mc_careers_more: 更多由科技人士拍摄的的<a href='%{careers_url}' target='_blank'>鼓舞人心的视频</a>
+  hoc2018_mc_video_1min: 1 分钟
+  hoc2018_mc_video_2min: 2 分钟
+  hoc2018_mc_video_3min: 3分钟
+  hoc2018_mc_video_5min: 5 分钟
+  hoc2018_mc_video_title_steph_curry: 编程一小时和Steph Curry
+  hoc2018_mc_video_title_sports: 推动自己。任何人都可以学会。
+  hoc2018_mc_video_title_inspire_girl: 鼓励女生参与
+  hoc2018_mc_video_title_cs_intro: 计算机科学简介
+  hoc2018_mc_video_title_schools_dont_teach: 大部分学校没有教的内容
+  hoc2018_mc_video_title_obama: 奥巴马总统和计算机科学
+  hoc2018_mc_video_title_hoc_is_here: 编程一小时来了——任何人都可以学会
+  hoc2018_mc_video_title_anybody_can_learn: 任何人都可以学习
+  hoc2018_mc_video_title_my_name_is_aracely: 我叫阿拉丝莉
+  hoc2018_mc_homepage_what_create: 你将创建什么？
+  hoc2018_mc_homepage_join_us: 加入我们
+  hoc2018_mc_homepage_try_it: 试一试
+  hoc2018_mc_back: "《我的世界》编程一小时的全新的活动回来了！"
+  hoc2018_mc_back_journey: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_minecraft_education: "《我的世界》 教育"
+  hoc2018_mc_continue_learning: 继续在《我的世界》 学习。
+  hoc2018_mc_go_to_mc_education: 去 《我的世界》 教育
