@@ -13,6 +13,7 @@ sl:
       messages:
         blank: se zahtevan(o)
         blank_plural: so potrebni
+        invalid: je nepravilno
         invalid_plural: so nepravilni
     attributes:
       user:
@@ -27,6 +28,7 @@ sl:
         age: Starost
         gender: Spol
         edit_header: Uredi podrobnosti računa
+        finish_sign_up_header: Dokončaj registracijo
         error:
           future: ne more biti v prihodnosti
   hello: Pozdravljen svet
@@ -39,6 +41,7 @@ sl:
   next_resource: Naslednji vir
   cancel: Prekliči
   okay: V redu
+  or: ali
   heading_x_of_y: "%{heading} (stran %{x} od %{y})"
   add_teacher_form:
     code:
@@ -104,6 +107,7 @@ sl:
     age: Starost
     user_type: Ste učenec ali učitelj?
     submit: Prijava
+    go_to_account: Pojdi na moj uporabniški račun
     teacher: Ste učitelj/ica?
     valid_username: Na voljo!
     invalid_username: Uporabniško ime mora imeti vsaj 5 znakov
@@ -116,10 +120,15 @@ sl:
     user_type_student: Učenec
     field_is_required: se zahtevan(o)
     accept_terms: Moraš se strinjati, če želiš ustvariti račun
+    error: Prišlo je do napake.
     email_preference_yes: Da
     email_preference_no: Ne
   school_info:
+    private: zasebna
     other: Drugi
+    school: Šola
+    school_name: Ime šole
+    school_address: Naslov šole
   signin_form:
     title: Že imate račun? Vpišite se
     login: Elektronska pošta
@@ -506,6 +515,8 @@ sl:
       title: Minecraft
       body: Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici
         Minecrafta.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:
@@ -685,6 +696,7 @@ sl:
   pd:
     form_labels:
       email: Elektronska pošta
+      school_name: Ime šole
     form_entries:
       gender:
         male: Moški
