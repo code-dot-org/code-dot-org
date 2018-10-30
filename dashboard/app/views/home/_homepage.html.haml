@@ -32,10 +32,6 @@
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false
-    - if current_user.student?
-      - homepage_data[:canLeave] = false
-    - else
-      - homepage_data[:canLeave] = true
   - homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
 
 - content_for(:head) do

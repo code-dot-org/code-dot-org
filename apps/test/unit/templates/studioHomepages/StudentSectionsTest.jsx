@@ -12,7 +12,6 @@ import SectionsAsStudentTable from "@cdo/apps/templates/studioHomepages/Sections
 describe('StudentSections', () => {
   const defaultProps = {
     initialSections: [],
-    canLeave: false,
   };
 
   it('does not render a SectionsAsStudentTable when not enrolled in any sections', () => {
@@ -54,8 +53,7 @@ describe('StudentSections', () => {
         <JoinSectionNotifications/>
         <SectionsAsStudentTable
           sections={sections}
-          isTeacher={false}
-          canLeave={defaultProps.canLeave}
+          canLeave={false}
           updateSections={instance.updateSections}
           updateSectionsResult={instance.updateSectionsResult}
         />

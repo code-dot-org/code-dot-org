@@ -9,7 +9,6 @@ export default class StudentSections extends Component {
   // isTeacher will be set false for teachers who are seeing this as a student in another teacher's section.
   static propTypes = {
     initialSections: PropTypes.array.isRequired,
-    canLeave: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool
   };
 
@@ -36,7 +35,7 @@ export default class StudentSections extends Component {
   };
 
   render() {
-    const {canLeave, isTeacher} = this.props;
+    const {isTeacher} = this.props;
     const {sections, action, result, resultName, resultId} = this.state;
     const enrolledInASection = sections.length > 0;
     const heading = isTeacher ? i18n.sectionsJoined() : i18n.sectionsTitle();
@@ -56,8 +55,7 @@ export default class StudentSections extends Component {
         {enrolledInASection &&
           <SectionsAsStudentTable
             sections={sections}
-            isTeacher={false}
-            canLeave={canLeave}
+            canLeave={!!isTeacher}
             updateSections={this.updateSections}
             updateSectionsResult={this.updateSectionsResult}
           />
