@@ -1628,8 +1628,6 @@ en:
     1: ': Qui trovi lo stesso programma del precedente esercizio, ma la quantità di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai su "Esegui"?'
     I don't know.: Non lo so.
     Incorrect. The function is programmed to handle any amount of honey over 0.: Sbagliato. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
-    The bee will try to collect too much honey from the flowers.: L'ape cercherà di produrre più miele del necessario.
-    The bee won't collect enough honey from the flowers.: L'ape non produrrà la quantità di miele richiesta.
     The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: Il programma funzionerà anche per risolvere questo esercizio. Il codice presente nella funzione è in grado di gestire qualsiasi quantità di miele.
     The same program will work to solve this puzzle, too.: Lo stesso programma funzionerà anche per risolvere questo esercizio.
   courseE_multi_bee_functions_predict1_2018:

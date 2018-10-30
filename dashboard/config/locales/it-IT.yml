@@ -51,6 +51,7 @@ it:
   next_resource: Risorsa successiva
   cancel: Annulla
   okay: Ok!
+  or: o
   heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
   add_teacher_form:
     code:
@@ -853,6 +854,8 @@ it:
       title: Minecraft
       body: Programma il comportamento degli animali e delle altre creature di Minecraft
         nella tua versione di questo gioco.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft è tornato per l'Ora del Codice con una nuovissima attività!
