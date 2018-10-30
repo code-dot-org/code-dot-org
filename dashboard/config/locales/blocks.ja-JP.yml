@@ -15,11 +15,22 @@ ja:
         options:
           GROUP:
             sprites: すべて
+            '"BEAR"': 全ての熊
+            '"CAT"': 全ての猫
+            '"DOG"': 全ての犬
+            '"PINEAPPLE"': 全てのパイナップル
+            '"ROBOT"': 全てのロボット
+          MOVE:
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -32,11 +43,22 @@ ja:
         options:
           GROUP:
             sprites: すべて
+            '"BEAR"': 全ての熊
+            '"CAT"': 全ての猫
+            '"DOG"': 全ての犬
+            '"PINEAPPLE"': 全てのパイナップル
+            '"ROBOT"': 全てのロボット
+          MOVE:
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -59,10 +81,21 @@ ja:
         options:
           GROUP:
             sprites: すべて
+            '"BEAR"': 全ての熊
+            '"CAT"': 全ての猫
+            '"DOG"': 全ての犬
+            '"PINEAPPLE"': 全てのパイナップル
+            '"ROBOT"': 全てのロボット
           FORMAT:
             '"random"': ランダム に
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 犬
+            '"PINEAPPLE"': パイナップル
+            '"ROBOT"': ロボット
           LOCATION:
             "{x: 100, y: 200}": 左 に
             "{x: 300, y: 200}": 右 に
@@ -100,6 +133,11 @@ ja:
         options:
           GROUP:
             sprites: すべて
+            '"BEAR"': 全ての熊
+            '"CAT"': 全ての猫
+            '"DOG"': 全ての犬
+            '"PINEAPPLE"': 全てのパイナップル
+            '"ROBOT"': 全てのロボット
           PROPERTY:
             '"scale"': おおきさ
             '"height"': 高さ
@@ -289,6 +327,18 @@ ja:
         text: 左に回転
       RyanLab_turnRight:
         text: 右に回転
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
       craft_ifPath:
         options:
           DIR:

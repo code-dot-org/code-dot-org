@@ -42,6 +42,7 @@ ja:
   next_resource: 次のリソース
   cancel: キャンセル
   okay: オッケー
+  or: または
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
   add_teacher_form:
     code:
@@ -174,7 +175,7 @@ ja:
     remember: ログイン情報を保存する
     submit: サインイン
   signin:
-    try_heading: 登録せずにコーディングに挑戦してみたいですか？
+    try_heading: 登録する前に体験してみますか？
     try_hoc: 最初に 1 時間分のHour of Codeを試す
     try_20hours: 20 時間分のコンピュータサイエンス入門編を試す
   signinsection:
@@ -269,7 +270,7 @@ ja:
           とパスワードを使用してアカウントにサインインすることができます。
   nav:
     header:
-      finished_hoc: Hour of Codeを終了
+      finished_hoc: Hour of Code できました
       sign_in_to_save: 進捗状況を保存するためにサインインする
       free_play:
         playlab: プレイラボ で作る
@@ -332,6 +333,7 @@ ja:
       playlab: プレイラボ
       minecraft: マインクラフト
       flappy: フラッピー
+      view_all: すべてのプロジェクトを見る
     popup:
       progress_for_user: "%{name} の進捗状況"
       progress: あなたの進捗状況
@@ -666,6 +668,8 @@ ja:
     minecraft2016:
       title: マインクラフト
       body: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
+    aquatic:
+      title: マインクラフト
     hero:
       title: マインクラフト
     sports:
