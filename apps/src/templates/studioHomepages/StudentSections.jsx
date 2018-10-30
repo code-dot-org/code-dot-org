@@ -56,7 +56,6 @@ export default class StudentSections extends Component {
         {enrolledInASection &&
           <SectionsAsStudentTable
             sections={sections}
-            isTeacher={false}
             canLeave={canLeave}
             updateSections={this.updateSections}
             updateSectionsResult={this.updateSectionsResult}
