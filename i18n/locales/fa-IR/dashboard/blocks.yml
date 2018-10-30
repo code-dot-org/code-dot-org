@@ -251,6 +251,14 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
       craft_ifPath:
         options:
           DIR:
