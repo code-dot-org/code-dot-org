@@ -155,7 +155,7 @@ async function getSongManifest(useRestrictedSongs) {
 
   // We must obtain signed cookies before accessing restricted content.
   if (useRestrictedSongs) {
-    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies');
+    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
     promises.push(signedCookiesPromise);
   }
 
