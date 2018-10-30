@@ -208,7 +208,6 @@ export default class TeacherHomepage extends Component {
         />
         <StudentSections
           initialSections={joinedSections}
-          canLeave={true}
           isTeacher={true}
         />
       </div>

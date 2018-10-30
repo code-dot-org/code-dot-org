@@ -166,13 +166,19 @@ export class QuickViewTable extends React.Component {
       }, {
         property: 'meets_criteria',
         header: {
-          label: 'Meets Criteria',
+          label: 'Meets Minimum Requirements',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'meets_scholarship_criteria',
+        header: {
+          label: 'Meets Scholarship Requirements',
           transforms: [sortable]
         }
       }, {
         property: 'total_score',
         header: {
-          label: 'Total Score',
+          label: 'Bonus Points',
           transforms: [sortable]
         }
       });

@@ -63,7 +63,7 @@ en:
             MOVES.Kick: Kick
             MOVES.Roll: Roll
             MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Thiller
+            MOVES.Thriller: Thriller
             '"next"': "(Next)"
             '"prev"': "(Previous)"
             '"rand"': "(Random)"
@@ -107,7 +107,7 @@ en:
             MOVES.Kick: Kick
             MOVES.Roll: Roll
             MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Thiller
+            MOVES.Thriller: Thriller
             '"next"': "(Next)"
             '"prev"': "(Previous)"
             '"rand"': "(Random)"
@@ -129,7 +129,7 @@ en:
             MOVES.Kick: Kick
             MOVES.Roll: Roll
             MOVES.ThisOrThat: This or That
-            MOVES.Thriller: Thiller
+            MOVES.Thriller: Thriller
             '"next"': "(Next)"
             '"prev"': "(Previous)"
             '"rand"': "(Random)"
@@ -197,7 +197,7 @@ en:
             '7': Kick
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
             '8': None
       Dancelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
@@ -1035,8 +1035,30 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
-      aalab_setColor:
-        text: color {COLOR}
+      aalab_addToSpriteGroup:
+        text: add sprite {SPRITE} to group {GROUP}
+      aalab_changeGroupPropBy:
+        text: change group {GROUP} {PROPERTY} by {VAL}
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+      aalab_createSpriteGroup:
+        text: make a new sprite group called {VAR}
+      aalab_spritesWhere:
+        text: sprites where {PROPERTY} is {VALUE}
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"x"': x position
+            '"y"': y position
+            '"costume"': costume
+            '"direction"': movement direction
+            '"rotation"': rotation or direction
+            '"tint"': tint
       craft_ifPath:
         text: |-
           if path {DIR}
@@ -1089,7 +1111,7 @@ en:
             '"blueDeadCoralBlock"': blue dead coral block
             '"pinkDeadCoralBlock"': pink dead coral block
             '"magentaDeadCoralBlock"': magenta dead coral block
-            '"readDeadCoralBlock"': read dead coral block
+            '"readDeadCoralBlock"': red dead coral block
             '"yellowDeadCoralBlock"': yellow dead coral block
             '"prismarine"': prismarine
             '"darkPrismarine"': dark prismarine
