@@ -25,6 +25,7 @@ uz:
   welcome_back: Qayta tashrifingiz bilan, %{name}
   submit: Taqdim qilmoq
   cancel: Bekor qilish
+  or: yoki
   add_teacher_form:
     code:
       label: 'O`qituvchi qo`shing:'
@@ -57,11 +58,11 @@ uz:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft akkaunti
+    microsoft_v2_auth: Microsoft akkaunti
     forgot_password: Parolni unutdingizmi?
     need_confirmation: Tasdiqlash haqidagi ko'rsatmalarni olmadingizmi?
   signup_form:
     age: Yoshi
-    next: Keyingi
     user_type_teacher: O'qituvchi
     user_type_student: O‘quvchi
     field_is_required: talab etiladi
