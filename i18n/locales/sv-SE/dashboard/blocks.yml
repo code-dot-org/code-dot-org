@@ -275,6 +275,18 @@ sv:
         text: sväng vänster
       RyanLab_turnRight:
         text: sväng höger
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
       craft_ifPath:
         options:
           DIR:
