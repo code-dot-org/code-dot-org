@@ -172,7 +172,7 @@ export class QuickViewTable extends React.Component {
       }, {
         property: 'total_score',
         header: {
-          label: 'Total Score',
+          label: 'Bonus Points',
           transforms: [sortable]
         }
       });
