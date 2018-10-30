@@ -30,6 +30,7 @@ class Courses extends Component {
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
+    displayMinecraftAquatic: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -44,7 +45,8 @@ class Courses extends Component {
       isSignedOut,
       userId,
       showInitialTips,
-      modernElementaryCoursesAvailable
+      modernElementaryCoursesAvailable,
+      displayMinecraftAquatic,
     } = this.props;
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
@@ -84,13 +86,14 @@ class Courses extends Component {
               isSignedOut={isSignedOut}
               showInitialTips={showInitialTips}
               userId={userId}
+              displayMinecraftAquatic={displayMinecraftAquatic}
             />
           </div>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
         {(isEnglish && !isTeacher) && (
-          <CoursesStudentEnglish/>
+          <CoursesStudentEnglish displayMinecraftAquatic={displayMinecraftAquatic}/>
         )}
 
         {/* Non-English */}
@@ -98,6 +101,7 @@ class Courses extends Component {
           <CourseBlocksAll
             isEnglish={false}
             showModernElementaryCourses={modernElementaryCoursesAvailable}
+            displayMinecraftAquatic={displayMinecraftAquatic}
           />
         )}
       </div>
