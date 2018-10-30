@@ -15,6 +15,8 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
+import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+
 const ButtonState = {
   UP: 0,
   DOWN: 1,
@@ -260,10 +262,11 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
+  const recordReplayLog = this.shouldShowSharing();
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
-    recordReplayLog: this.shouldShowSharing(),
+    recordReplayLog,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
       this.danceReadyPromiseResolve();
@@ -276,6 +279,9 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
   });
+  if (recordReplayLog) {
+    getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
+  }
 };
 
 /**
