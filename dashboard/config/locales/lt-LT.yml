@@ -43,6 +43,7 @@ lt:
   next_resource: Sekantis šaltinis
   cancel: Atšaukti
   okay: Gerai
+  or: arba
   heading_x_of_y: "%{heading} (%{x} puslapis iš %{y})"
   add_teacher_form:
     code:
@@ -534,6 +535,8 @@ lt:
       title: Minecraft
       body: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft
         versijoje.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:
