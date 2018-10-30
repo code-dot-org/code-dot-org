@@ -17,7 +17,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
       />
     );
     const headerBanner = wrapper.find(HeaderBanner);
@@ -34,7 +33,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv').exists()).to.be.true;
@@ -47,7 +45,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -65,7 +62,6 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
@@ -78,13 +74,11 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
       />
     );
     const studentSections = wrapper.find(StudentSections);
     assert.deepEqual(studentSections.props(), {
       initialSections: joinedSections,
-      canLeave: false
     });
   });
 
@@ -96,7 +90,6 @@ describe('StudentHomepage', () => {
           topCourse={topCourse}
           sections={joinedSections}
           codeOrgUrlPrefix="http://localhost:3000/"
-          canLeave={false}
         />
     ).find(StudentSections).dive().find(SectionsAsStudentTable).dive({context: {store}}).dive();
     expect(wrapper).to.containMatchingElement(
