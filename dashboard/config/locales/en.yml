@@ -1027,6 +1027,7 @@ en:
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
+  view_teacher_guide: 'View teacher guide'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
