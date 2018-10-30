@@ -26,6 +26,7 @@ ur:
   submit: جمع کرائیں
   next_page: اگلا صفحہ
   cancel: منسوخ کریں
+  or: یا
   add_teacher_form:
     code:
       label: 'ٹیچر شامل کریں:'
