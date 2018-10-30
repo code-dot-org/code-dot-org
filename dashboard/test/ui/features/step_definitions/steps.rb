@@ -859,7 +859,7 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
     Then I click selector "#signin_button"
-    And I wait to see ".new_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
     And I wait to see ".header_user"
@@ -873,7 +873,7 @@ Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
     Then I click selector "#signin_button"
-    And I wait to see ".new_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
     And I wait to see ".header_user"
@@ -883,7 +883,7 @@ end
 Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
   steps %Q{
     And check that the url contains "/users/sign_in"
-    And I wait to see ".new_user"
+    And I wait to see "#signin"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
     And I wait to see ".header_user"
@@ -1335,6 +1335,22 @@ Then /^I save the share URL$/ do
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
 end
 
+When /^I open the share dialog$/ do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
+    steps <<-STEPS
+      When I click selector ".project_share"
+      And I wait to see a dialog titled "Share your project"
+    STEPS
+  end
+end
+
+When /^I navigate to the shared version of my project$/ do
+  steps <<-STEPS
+    When I open the share dialog
+    And I navigate to the share URL
+  STEPS
+end
+
 Then /^I navigate to the share URL$/ do
   steps <<-STEPS
     Then I save the share URL
@@ -1605,4 +1621,9 @@ Then /^I open the Manage Assets dialog$/ do
     Then I click selector ".settings-cog"
     And I click selector ".pop-up-menu-item"
   STEPS
+end
+
+Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
+  body_text = @browser.execute_script('return document.body.textContent;')
+  expect(body_text.include?(text)).to eq(negation.nil?)
 end

@@ -6,31 +6,15 @@
 -if @company
   -company_name = hoc_s("company_" + @company)
   -company_total = format_integer_with_commas(company_count)
-
-  %h2.counter-title
-    %a{href: resolve_url('/events/all')}
-      = events_text + ","
-      = hoc_s(:map_header_company).gsub('#', company_total).gsub('company', company_name)
-    -# Hide signup buttons during Hour of Code
-      &nbsp;
-      %a{onclick: "adjustScroll('join');"}
-        %button.signup-button= hoc_s(:signup_host_an_hour)
+  = succeed "." do
+    = events_text + ","
+    = hoc_s(:map_header_company).gsub('#', company_total).gsub('company', company_name)
 -elsif @country != 'us'
   -country_total = format_integer_with_commas(country_count)
   -country_total = "0" if country_total == ""
-  %h2.counter-title
-    %a{href: resolve_url("/events/all")}
-      = events_text + ","
-      = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
-    -# Hide signup buttons during Hour of Code
-      &nbsp;
-      %a{onclick: "adjustScroll('join');"}
-        %button.signup-button= hoc_s(:signup_host_an_hour)
+  = succeed "." do
+    = events_text + ","
+    = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
 -else
-  %h2.counter-title
-    %a{href: resolve_url("/events/all")}
-      = events_text
-    -# Hide signup buttons during Hour of Code
-      &nbsp;
-      %a{onclick: "adjustScroll('join');"}
-        %button.signup-button= hoc_s(:signup_host_an_hour)
+  = succeed "." do
+    = events_text

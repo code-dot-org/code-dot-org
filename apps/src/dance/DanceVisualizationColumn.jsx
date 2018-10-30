@@ -4,7 +4,6 @@ import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import * as gameLabConstants from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import songLibrary from "../code-studio/songLibrary.json";
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
@@ -21,67 +20,62 @@ const styles = {
   }
 };
 
-//TODO: Remove this during clean-up
-var songs = {
-  macklemore: {
-    url: 'https://curriculum.code.org/media/uploads/chu.mp3',
-    bpm: 146,
-    delay: 0.2, // Seconds to delay before calculating measures
-    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
-    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
-  },
-  macklemore90: {
-    url: 'https://curriculum.code.org/media/uploads/hold.mp3',
-    bpm: 146,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
-    chorus: [65.75] // Array of timestamps in seconds where choruses occur
-  },
-  hammer: {
-    url: 'https://curriculum.code.org/media/uploads/touch.mp3',
-    bpm: 133,
-    delay: 2.32, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  },
-  peas: {
-    url: 'https://curriculum.code.org/media/uploads/feeling.mp3',
-    bpm: 128,
-    delay: 0.0, // Seconds to delay before calculating measures
-    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
-  }
-};
-
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
+    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
-    isProjectLevel: PropTypes.bool.isRequired
+    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
+    hasChannel: PropTypes.bool.isRequired
+  };
+
+  state = {
+    songsData: []
   };
 
   changeSong = (event) => {
     const song = event.target.value;
     this.props.setSong(song);
+    this.loadSong(song);
+  };
 
+  loadSong(song) {
     //Load song
     let options = {id: song};
-    options['mp3'] = songs[options.id].url;
+    options['mp3'] = this.state.songsData[options.id].url;
     Sounds.getSingleton().register(options);
 
-    if (this.props.isProjectLevel) {
+    this.props.retrieveMetadata(song);
+
+    if (this.props.hasChannel) {
       //Save song to project
       project.saveSelectedSong(song);
     }
-  };
+  }
+
+  componentDidMount() {
+    this.parseSongOptions(this.props.songManifest);
+  }
+
+  parseSongOptions(songManifest) {
+    let songs = {};
+    if (songManifest) {
+      songManifest.forEach((song) => {
+          songs[song.id] = {title: song.text, url: song.url};
+      });
+    }
+    this.setState({songsData: songs}, () => {
+      this.loadSong(this.props.selectedSong);
+    });
+  }
 
   render() {
     return (
       <div>
         <label><b>{i18n.selectSong()}</b></label>
         <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(songLibrary).map((option, i) => (
-            <option key={i} value={option}>{songLibrary[option].title}</option>
+          {Object.keys(this.state.songsData).map((option, i) => (
+            <option key={i} value={option}>{this.state.songsData[option].title}</option>
           ))}
         </select>
       </div>
@@ -92,10 +86,12 @@ const SongSelector = Radium(class extends React.Component {
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
+    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    isProjectLevel: PropTypes.bool.isRequired
+    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
+    hasChannel: PropTypes.bool.isRequired
   };
 
   render() {
@@ -110,7 +106,13 @@ class DanceVisualizationColumn extends React.Component {
     return (
       <span>
         {!this.props.isShareView &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong} isProjectLevel={this.props.isProjectLevel}/>
+          <SongSelector
+            retrieveMetadata={this.props.retrieveMetadata}
+            setSong={this.props.setSong}
+            selectedSong={this.props.selectedSong}
+            songManifest={this.props.songManifest}
+            hasChannel={this.props.hasChannel}
+          />
         }
         <ProtectedVisualizationDiv>
           <div
@@ -128,8 +130,9 @@ class DanceVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
-  isProjectLevel: state.pageConstants.isProjectLevel,
+  hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
+  songManifest: state.pageConstants.songManifest,
   selectedSong: state.selectedSong,
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))

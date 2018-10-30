@@ -3756,6 +3756,10 @@ en:
               name: Processing with Bits
             Auto-Run Binary Artist Puzzles:
               name: Auto-Run Binary Artist Puzzles
+            Course C EOC 2019:
+              name: Course C EOC 2019
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
@@ -9653,7 +9657,7 @@ en:
               name: Aquatic
           title: 'Minecraft: Voyage Aquatic'
           description_audience: ''
-          description_short: ''
+          description_short: 'Minecraft is back with a brand new activity for the Hour of Code!'
           description: ''
         sconyers:
           stages:
@@ -9689,3 +9693,13 @@ en:
               name: Dance Party
               description_student: ''
               description_teacher: ''
+        cspplayground:
+          stages:
+            Hannah's Test Stage:
+              name: Hannah's Test Stage
+            Hannah Test Stage:
+              name: Hannah Test Stage
+          title: CSP Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
