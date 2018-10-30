@@ -3,14 +3,29 @@ is:
   data:
     blocks:
       Dancelab_atTimestamp:
+        text: eftir {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"seconds"': sekúndur
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': litblær
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: allt
+            '"ALIEN"': allar geimverur
+            '"BEAR"': allir birnir
+            '"CAT"': allir kettir
+            '"DOG"': allir hundar
+            '"DUCK"': allar endur
+            '"FROG"': allir froskar
+            '"MOOSE"': allir elgir
+            '"ROBOT"': öll vélmenni
+            '"SHARK"': allir hákarlar
           MOVE:
+            MOVES.Clown: Trúður
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -18,6 +33,7 @@ is:
       Dancelab_changeMoveLR:
         options:
           MOVE:
+            MOVES.Clown: Trúður
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -31,7 +47,17 @@ is:
         options:
           GROUP:
             sprites: allt
+            '"ALIEN"': allar geimverur
+            '"BEAR"': allir birnir
+            '"CAT"': allir kettir
+            '"DOG"': allir hundar
+            '"DUCK"': allar endur
+            '"FROG"': allir froskar
+            '"MOOSE"': allir elgir
+            '"ROBOT"': öll vélmenni
+            '"SHARK"': allir hákarlar
           MOVE:
+            MOVES.Clown: Trúður
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -39,6 +65,7 @@ is:
       Dancelab_doMoveLR:
         options:
           MOVE:
+            MOVES.Clown: Trúður
             MOVES.Rest: Ekkert
           DIR:
             '1': "→"
@@ -56,7 +83,7 @@ is:
         options:
           DANCE:
             '0': Clap High
-            '1': Clown
+            '1': Trúður
             '2': Dab
             '3': Double Jam
             '4': Drop
@@ -66,7 +93,7 @@ is:
             '8': Ekkert
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -77,6 +104,15 @@ is:
         options:
           GROUP:
             sprites: allt
+            '"ALIEN"': allar geimverur
+            '"BEAR"': allir birnir
+            '"CAT"': allir kettir
+            '"DOG"': allir hundar
+            '"DUCK"': allar endur
+            '"FROG"': allir froskar
+            '"MOOSE"': allir elgir
+            '"ROBOT"': öll vélmenni
+            '"SHARK"': allir hákarlar
           FORMAT:
             '"random"': eitthvað
       Dancelab_makeNewDanceSprite:
@@ -126,6 +162,15 @@ is:
         options:
           GROUP:
             sprites: allt
+            '"ALIEN"': allar geimverur
+            '"BEAR"': allir birnir
+            '"CAT"': allir kettir
+            '"DOG"': allir hundar
+            '"DUCK"': allar endur
+            '"FROG"': allir froskar
+            '"MOOSE"': allir elgir
+            '"ROBOT"': öll vélmenni
+            '"SHARK"': allir hákarlar
           PROPERTY:
             '"scale"': stærð
             '"height"': hæð
@@ -156,6 +201,10 @@ is:
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
+      gamelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': litblær
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -306,6 +355,18 @@ is:
         text: snúa til vinstri
       RyanLab_turnRight:
         text: snúa til hægri
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
       craft_ifPath:
         options:
           DIR:

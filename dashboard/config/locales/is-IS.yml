@@ -47,6 +47,7 @@ is:
   next_resource: Næstu tilföng
   cancel: Hætta við
   okay: Allt í lagi
+  or: eða
   heading_x_of_y: "%{heading} (síða %{x} af %{y})"
   add_teacher_form:
     code:
@@ -794,6 +795,8 @@ is:
     minecraft2016:
       title: Minecraft
       body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:
