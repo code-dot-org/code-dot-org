@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -54,12 +54,9 @@
     "custom_helper_library": "SPRITE_NAMES = [\"ALIEN\", \"CAT\", \"DUCK\", \"FROG\", \"MOOSE\", \"ROBOT\"];",
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* Two dancers need to have a size other than 100.\\n\\n*This level ends after 6 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/122950741b4e37707ab6b0ca647d6cbe/HOC Dance 6_draft.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Optional Challenge**\\n\\n* Experiment by changing other properties (width, height, rotation, etc.)\",\"hint_id\":\"challenges\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7f66c3e7931ae4ac48f12419dbd4d23a/HOC Dance 6_draft.mp3\"}]",
-    "default_song": "hammer",
+    "default_song": "thunder_imaginedragons",
     "long_instructions": "Every dancer has a set of _properties_ that control what it looks like.\r\n\r\nYou can make it look like a dancer is in the background by making their _size_ smaller. Can you make both backup dancers the same size?",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

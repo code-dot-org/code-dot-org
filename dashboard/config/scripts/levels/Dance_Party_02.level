@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -58,12 +58,9 @@
     "parent_level_id": 14624,
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**How do I pass this level?**\\n* The dancer needs to switch to a new move after 4 measures.\\n\\n*The level ends after 8 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/faa90f18f5e93b922159d6bec70c7e8f/HOC Dance 1_draft.mp3\"}]",
-    "default_song": "hammer",
+    "default_song": "canttouchthis_mchammer",
     "long_instructions": "Let's get this moose dancing!\r\n\r\nDrag out the <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new&#95;dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml> block onto the workspace. Connect it underneath the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> block. Your dancer should start a new move after the fourth measure.\r\n\r\n\r\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

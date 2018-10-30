@@ -1,0 +1,13 @@
+!!! 5
+%html{dir: locale_dir}
+  %head
+    :css
+      video {
+        width:100%;
+        max-width:600px;
+        height:auto;
+      }
+  %body
+    %video{controls: true, loop: true}
+      %source{src: video_src, type: "video/mp4"}
+      Your browser does not support video
