@@ -10,11 +10,15 @@ cs:
         options:
           GROUP:
             sprites: vše
+          MOVE:
+            MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
@@ -27,11 +31,15 @@ cs:
         options:
           GROUP:
             sprites: vše
+          MOVE:
+            MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Žádný
           DIR:
             '1': "→"
             "-1": "←"
@@ -44,6 +52,21 @@ cs:
           PROPERTY:
             '"scale"': velikost
             '"height"': výška
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            '0': Clap High
+            '1': Clown
+            '2': Dab
+            '3': Double Jam
+            '4': Drop
+            '5': Floss
+            '6': Fresh
+            '7': Kick
+            '8': Žádný
+            '9': Roll
+            '10': This or That
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -78,6 +101,10 @@ cs:
             '"random"': náhodně
       Dancelab_randomColor:
         text: náhodná barva
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Žádný
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -86,6 +113,10 @@ cs:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Žádný
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -279,6 +310,18 @@ cs:
         text: otočit vlevo
       RyanLab_turnRight:
         text: otočit vpravo
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       craft_ifPath:
         options:
           DIR:

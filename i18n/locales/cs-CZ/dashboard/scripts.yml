@@ -293,7 +293,7 @@ cs:
         20-hour:
           title: Zrychlený úvodní kurz CS
           description: Tento 20-ti hodinový kurz představuje základní koncepty počítačových věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8), ale jistě bude bavit studenty jakéhokoliv věku.
-          description_short: Tento 20ceti hodinový kurz zahrnuje základní pojmy informatiky a programování v kurzech 2-4.
+          description_short: Tento 20 hodinový kurz zahrnuje základní pojmy informatiky a programování z kurzů 2-4.
           description_audience: Stáří 10-13
           stages:
             Abstraction:
@@ -834,6 +834,7 @@ cs:
             'Farmer: While Loops':
               name: 'Farmář - While cykly'
         csd3-2017:
+          title: CSD Jednotka 3 - Animace and hry ('17-'18)
           description_short: "Programování"
           stages:
             Functions:
@@ -1062,6 +1063,7 @@ cs:
             Functions with Parameters_:
               name: Funkce s Parametry
         csd3-draft:
+          title: 'CSD Jednotka 3 - Programování: Animace and hry'
           stages:
             Variables:
               name: Proměnné
@@ -1254,6 +1256,8 @@ cs:
           stages:
             Minecraft Hour of Code:
               name: Hodina kódu Minecraftu
+          description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu!
+          description: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte Minecraftem s kódem.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1296,8 +1300,10 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+          title: CSD Jednotka 3 - Animace and hry
           description_short: "Programování"
         csd3-2018:
+          title: CSD Jednotka 3 - Animace and hry ('18-'19)
           description_short: "Programování"
           stages:
             Variables:

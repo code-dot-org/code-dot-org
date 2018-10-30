@@ -27,6 +27,9 @@ cs:
         age: 'Věk'
         gender: 'Pohlaví'
         edit_header: 'Upravit Podrobnosti Účtu'
+        finish_sign_up_header: 'Dokončete vytvoření účtu'
+        finish_sign_up_subheader: 'Vyplňte následující informace pro vytvoření účtu Code.org <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Vyplňte následující informace pro vytvoření účtu Code.org prostřednictvím poskytovatele <strong>%{provider}</strong> pro <strong>%{email}</strong>.'
         error:
           future: nemůže být v budoucnosti
   hello: "Ahoj světe"
@@ -40,6 +43,7 @@ cs:
   next_resource: Další zdroj
   cancel: "Storno"
   okay: "Dobře"
+  or: "nebo"
   heading_x_of_y: "%{heading} (stránky %{x} %{y})"
   add_teacher_form:
     code:
@@ -275,8 +279,11 @@ cs:
       course_catalog: "Katalog kurzů"
       project_gallery: "Projekty"
       sections: "Oddíly"
+      help_support: "Pomoc a podpora"
       report_bug: "Nahlásit chybu"
       teacher_community: "Komunita učitelů"
+      documentation: "Dokumentace"
+      tutorials: "Návody"
       educate_overview: "Pedagogův přehled"
       educate_elementary: "Základní škola"
       educate_middle: "2. stupeň ZŠ"
@@ -295,7 +302,10 @@ cs:
       about_news: "Zprávy a média"
       about_evaluation: "Vyzkoušení"
       about_jobs: "Pracovní místa"
+      about_contact: "Napište nám"
       stats: "Statistiky"
+      help_us: "Pomozte nám"
+      about: "O nás"
     user:
       classroom: 'Učitelská domovská stránka'
       district_dashboard: 'Okresní řídicí panel'
@@ -348,6 +358,7 @@ cs:
       example: 'Vzorové řešení'
       example_with_number: 'Vzorové řešení %{solution_number}'
       submitted_on: 'Odesláno na %{date}'
+      last_updated: 'Naposledy aktualizováno:'
       unsubmit: 'Neodesláno'
       worked_with: 'Pracoval s'
       update_lock_settings: 'Aktualizace zámku zde.'
@@ -365,6 +376,12 @@ cs:
     delete_confirm: 'Jste si jisti, že chcete vymazat tento účet?'
     deleted_user: 'odstraněný uživatel'
     no_password_because_oauth: 'Bez hesla, protože se přihlašujete pomocí jiného poskytovatele.'
+    create_personal_login_under_13_parent_email: 'E-mail rodiče/zákonného zástupce'
+    create_personal_login_info: 'Pokud chcete používat svůj účet Code.org i po skončení školního roku, můžete si níže vytvořit své vlastní přihlášení.'
+    enter_new_login_info: 'Zadejte své nové přihlašovací údaje'
+    parent_email_label: "E-mail rodiče/zákonného zástupce (volitelné)"
+    update: "Aktualizovat účet"
+    account_successfully_updated: "Účet úspěšně aktualizován."
   user_level:
     completed: 'Dokončeno'
     tried: 'Vyzkoušeno'
@@ -418,6 +435,7 @@ cs:
     announcement_watch_video_button: "Přehrát Video"
     announcement_petition: "Jako učitel patříte mezi propagátory hnutí za to, aby každý student v každé škole dostal příležitost učit se informatiku. A teď je čas, aby vaši zástupci vyslechli Váš názor. Tento týden se zástupci učitelů, 28 guvernérů a generální ředitelé největších amerických společností spojili v otevřeném dopise, kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní docházky na základních i středních školách."
     announcement_petition_button: "Přidej své jméno"
+    announcement_apply_now: "Přihlaš se nyní"
     announcement_all: "Udržuj krok s novými funkcemi a aktualizacemi na našem blogu učitele. <a href='%{teacher_blog_url}' target='_blank'>Podívej se na minulé oznámení.</a>"
     announcement_hoc_launch: "Tisíce pedagogů ve více než 180 zemích začne vyučovat informatiku během Týdne Hodiny kódu. Spoléháme na vás, aby jste nám pomohli se dostat k ještě více studentům než kdy předtím. <a href='%{signup_url}' target='_blank'> Zaregistrujt vaši Hodinu kódu </a> a upozněte i ostatní pedagogy, že i oni mohou začít vyučovat informatiku."
     announcement_mc_launch: "Jeden z našich nejpopulárnějších kurzů má nyní pokračování! Zcela nová Hodina kódu Minecraft Designer umožňuje studentům ovlivňovat pravidla světu Minecraft. Mohou vytvořit naprosto unikátní verzi Minecraftu a pak ji sdílet s přáteli nebo hrát na svých telefonech. Vytvořte si je ve své třídě na Hodině kódu."
@@ -517,7 +535,7 @@ cs:
   upsell:
     applab:
       title: 'App Lab'
-      body: "App Lab je programovací prostředí, kde můžete vytvořit jednoduché aplikace. Návrhové aplikace, kódoj s bloky nebo s JavaScriptem aby to fungovalo, pak sdílej své aplikace ve chvilce."
+      body: "App Lab je programovací prostředí, kde můžete tvořit jednoduché aplikace. Navrhni aplikaci, rozpohybuj ji kódem s bloky nebo s JavaScriptem a ve vteřině svou aplikaci nasdílej."
       body_short: "Navrhujte aplikace, tvořte funkční kód jako skládačku nebo pomocí JavaScriptu a sdílejte své aplikace během několika sekund."
       audience: 'Věk 13 +'
       cta: 'Jak na to'
@@ -538,11 +556,13 @@ cs:
       title: "Galerie"
       body: "Zobrazit galerii app a uměleckých obrázků vytvořené našimi uživateli"
     gamelab:
+      body: "Game Lab je programovací prostředí, kde můžete tvořit jednoduché animace a hry - s objekty a postavami, které interagují navzájem."
       audience: "Věk 13 +"
       cta: "Jak na to"
     hoc-encryption:
       title: "Jednoduché šifrování"
     weblab:
+      body: "Web Lab je programovací prostředí, kde můžete vytvářej jednoduché webové stránky pomocí HTML a CSS. Navrhněte své webové stránky a sdílejte je ve vteřině dál."
       audience: "Věk 13 +"
       cta: "Jak na to"
     frozen:
@@ -558,8 +578,11 @@ cs:
     minecraft2016:
       title: "Minecraft"
       body: "Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft je zpět se zbrusu novou aktivitou pro Hodinu kódu! Projděte Minecraftem s kódem."
     unplugged:
       title: "Lekce bez počítače"
       audience: "Od 4 let"
@@ -568,6 +591,7 @@ cs:
     unplugged_conditionals:
       title: "Podmínky"
     widgets:
+      audience: "Věk 14+"
       cta: "Jak na to"
   gallery:
     students_drew_these_with_code: "Studenti tyto nakreslili kódem!"
@@ -590,6 +614,9 @@ cs:
     support: "Získat pomoc"
     support_url: "//support.code.org"
     help_resources: "Nápověda a zdroje informací"
+    help_support: "Pomoc a podpora"
+    documentation: "Dokumentace"
+    tutorials: "Návody"
   multi:
     wrong_title: "Nesprávná odpověď"
     wrong_body: "Odpověď, kterou jste zadali, není správné.  Opakujte akci!"
@@ -775,7 +802,24 @@ cs:
     content: 'Obsah'
     practice: 'Výukové postupy'
     peer_review: 'Nezávislý posudek'
+    main_course: 'Hlavní kurs'
+    csd1_1: 'Kapitola 1: Proces řešení problémů'
+    csd1_2: 'Kapitola 2: Počítače a řešení problémů'
+    csd2_1: 'Kapitola 1: Obsah webu a HTML'
+    csd2_2: 'Kapitola 2: Styly a CSS'
+    csd3_1: 'Kapitola 1: Obrázky a animace'
+    csd3_2: 'Kapitola 2: Tvorba her'
+    csd4_2: 'Kapitola 2: Prototypování aplikací'
+    csd5_2: 'Kapitola 2: Řešení datových problémů'
+    csd6_1: 'Kapitola 1: Programování s hardware'
+    csd6_2: 'Kapitola 2: Stavba fyzického prototypu'
+    csp1_1: 'Kapitola 1: Reprezentace a přenos informací'
+    csp1_2: 'Kapitola 2: Objev Internetu'
+    csp2_1: 'Kapitola 1: Kódování a komprese komplexních informací'
+    csp2_2: 'Kapitola 2: Práce s daty a jejich zobrazení'
+    csp3_1: 'Kapitola 1: Programovací jazyky a algoritmy'
     csp2_1_2018: '2. lekce: Digitální informace'
+    csp3_1_2018: 'Jednotka 3: Úvod do programování'
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností Code.org.
@@ -836,7 +880,9 @@ cs:
     mac: 'Mac OS X'
   locked_stage: 'Obsah této úrovně není viditelný, protože tato úroveň je momentálně zamčená. Tvůj učitel odemkne tuto úroveň hned, jakmile se na ní bude pracovat anebo až bude procházet tvoje odpovědi.'
   hidden_stage: "Tvůj učitel nepředpokládal, že bude zrovna tady. Prosím zeptej se ho, na které lekci máš pracovat."
+  return_unit_overview: 'Přejít na přehled jednotky'
   return_course_overview: 'Přejít na přehled'
+  view_all_units: 'Zobrazit všechny jednotky'
   pd:
     form_labels:
       email: 'E-mail'

@@ -5,6 +5,14 @@ cs:
       2-3 Artist Debugging 1_callout:
         2-3_Artist_Debugging_1_a: Umělec nemá tlačítko "Krok". Můžete však potáhnout
           posuvník rychlosti doleva, abyste mohli pečlivěji sledovat průběh programu.
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: K zobrazení mřížky klikněte zde.
       Course 4 Artist 4_callout:
         repeat_full_circle: Zadej počet zombie k přemístění, aby vytvořily celý kruh
       Course 4 Artist 7_callout:
@@ -143,6 +151,12 @@ cs:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       Overworld Place Wall_2018_callout:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
+      PS clone CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: K zobrazení mřížky klikněte zde.
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: K zobrazení mřížky klikněte zde.
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
           k posunu dopředu?
