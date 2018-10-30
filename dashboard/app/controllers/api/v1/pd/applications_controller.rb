@@ -115,7 +115,7 @@ module Api::V1::Pd
         end
         format.csv do
           csv_text = get_csv_text applications, role
-          send_csv_attachment csv_text, "#{role}_applications.csv"
+          send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
         end
       end
     end
