@@ -400,7 +400,6 @@ en:
       example: 'Example Solution'
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
-      last_updated: 'Last updated:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
