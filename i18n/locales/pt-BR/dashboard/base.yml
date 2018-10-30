@@ -44,6 +44,7 @@ pt-BR:
   done_with_module: Concluído com este Módulo de Aprendizagem
   cancel: "Cancelar"
   okay: "Ok"
+  or: "ou"
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
@@ -118,6 +119,7 @@ pt-BR:
     age: 'Idade'
     user_type: 'Você é um aluno ou professor?'
     submit: 'Registrar'
+    go_to_account: 'Ir para minha conta'
     teacher: 'Você é um professor?'
     valid_username: "Disponível!"
     invalid_username: "O nome de usuário deve ter ao menos 5 caracteres"
@@ -271,7 +273,7 @@ pt-BR:
         personal_login_created_username: 'Você criou uma conta pessoal com sucesso. Você agora pode entrar em sua conta com seu nome de usuário (%{username}) e senha'
   nav:
     header:
-      finished_hoc: "Terminei minha Hora do Código"
+      finished_hoc: "Eu terminei a minha Hora de Código"
       sign_in_to_save: 'Entre para salvar o progresso'
       free_play:
         playlab: 'Criar um aplicativo do Play Lab'
@@ -370,6 +372,7 @@ pt-BR:
       example: 'Solução do Exemplo'
       example_with_number: 'Solução do Exemplo %{solution_number}'
       submitted_on: 'Enviado em:'
+      last_updated: 'Última atualização:'
       unsubmit: 'Cancelar envio'
       worked_with: 'Trabalhou com'
       update_lock_settings: 'Atualize as configurações de bloqueio aqui.'
@@ -629,6 +632,8 @@ pt-BR:
     minecraft2016:
       title: "Minecraft"
       body: "Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     sports:
