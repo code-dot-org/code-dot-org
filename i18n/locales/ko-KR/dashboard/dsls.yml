@@ -1,7 +1,79 @@
 ---
 en:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: 큰 삼각형
+        Big Triangle|Image|Number|String: 큰 삼각형/사진/숫자/실
+        EXAMPLE 1.solution_blocks, 300: 예시 1. solution_blocks, 300 
+        Write a contract for a big red triangle that is 100 pixels in size: 크기가 100 픽셀인 빨간 삼각형에 대한 계악을 쓰세요.
+      Creating Contracts From Examples 2:
+        Example 2.solution_blocks, 300: 예시 2. solution_blocks, 300
+        Square Contract: 사각형 계약
+        Square|Image|Number|String: 사각형/사진/숫자/실
+        Write a contract for a purple square that is 15 pixels in size.: 크기가 15 픽셀인 보라색 사각형에 대한 계약을 써 주세요.
+      Creating Contracts From Examples 3A:
+        Banner Contract: 배너와 관련된 계약
+        Banner Function block: 배너 기능 함수 블록
+        Examples 3.solution_blocks, 300: 예시 3.solution_blocks, 300
+        banner|Image|String: 배너/사진/실
+      Creating Contracts From Examples 4:
+        Examples 4.solution_blocks, 300: 예시 4.solution_blocks, 300
+        Shrink Contract: 계약을 줄입니다.
+        Try using the "shrink" function.: '"축소" 기능을 추천합니다.'
+        shrink|Image|Image: 축소/사진/사진
+      Design Recipe 1.contract:
+        Design Recipe 1 Contract: 디자인 방안 첫 번째 계약
+        0: '"넓은 직사각형" 라고 불리는 주어진 크기와 색갈에 높이가 두 배인 직사각형을 만드는 기능과 계약을 해 주시기 바랍니다.'
+        1: '"Wide-rect" 라고 불리는 주어진 크기와 색갈에 높이가 두 배인 직사각형을 만드는 기능과 계약을 해 주시기 바랍니다.'
+        wide-rect|Image|Number|String: 넓은 직사각형/사진/숫자/실
+      Enter name here:
+        Contract Name|Number|Number|String: 계약의 이름/숫자/숫자/실
+        Enter prompt here: 여기에 텍스트 입력
+        Enter title here: 제목을 입력하세요
+      Eval Contracts 1 B:
+        Star Contract: 이름이 "별" 인 계약
+        Write a contract for the star function: 별 기능에 대한 계약을 써 주세요
+        star|Image|String|Number|String: 별/사진/실/숫자/실
+      Eval Contracts 2 B:
+        Rotate Contract: 계약을 돌리세요.
+        Write a contract for the rotate function: 회전 기능에 대한 계약을 써 주세요.
+        rotate|Image|Number|Image: 회전/사진/숫자/사진
+      Eval Contracts 3 B:
+        Text Contract: 텍스트 계약
+        Write a contract for the text function: 텍스트 기능에 대한 계약을 써 주세요
+        text|Image|String|Number|String: 글/사진/실/숫자/실
+      Eval Contracts 4 B:
+        Scale Contract: 이름이 규모인 계약
+        Write a contract for the scale function: 규모 기능에 대한 계약을 써 주세요
+        scale|Image|Number|Image: 스케일/사진/숫자/사진
+      Eval Contracts B:
+        Star Contract: 이름이 "별" 인 계약
+        Write a contract for the star function: 별 기능에 대한 계약을 써 주세요
+        star|Image|Number|String|String: 별/사진/숫자/실/실
+      Eval Contracts D:
+        Rotate Contract: 계약을 돌리세요.
+        Write a contract for the rotate function: 회전 기능에 대한 계약을 써 주세요.
+        rotate|Image|Number|Image: 회전/사진/숫자/사진
+      Eval Contracts F:
+        Text Contract: 텍스트 계약
+        Write a contract for the text function: 텍스트 기능에 대한 계약을 써 주세요
+        text|Image|String|Number|String: 글/사진/실/숫자/실
+      Eval Design Recipe 1.contract:
+        Design Recipe 1 Contract: 디자인 방안 첫 번째 계약
+        0: '"넓은 직사각형" 라고 불리는 주어진 크기와 색갈에 높이가 두 배인 직사각형을 만드는 기능과 계약을 해 주시기 바랍니다.'
+        1: '"Wide-rect" 라고 불리는 주어진 크기와 색갈에 높이가 두 배인 직사각형을 만드는 기능과 계약을 해 주시기 바랍니다.'
+        wide-rect|Image|Number|String: 넓은 직사각형/사진/숫자/실
+      Rocket Contract 1:
+        0: 초속 15미터를 가는 로켓이 발사되었습니다." Altitude"라는 기능은 로켓 이륙 후 경과 한 초 수를 표시 하고, 그 시간 로켓의 높이를 알아내는 기능 입니다. 이 기능과 계약을 해 주세요.
+        1: 초속 15미터를 가는 로켓이 발사되었습니다." Altitude"라는 기능은 로켓 이륙 후 경과 한 초 수를 표시 하고, 그 시간 로켓의 높이를 알아내는 기능 입니다. 이 기능과 계약을 해 주세요.
+        Contract for rocket-height: 로켓에 높이에 대한 계약을 써 주세요.
+        rocket-height|Number|Number: 로켓에 높이|숫자|숫자
     evaluation_multi:
+      CSP PD Example Question 1:
+        The encoding numbers unit: 인코딩이란 숫자 단위
+        The sending binary messages unit: 보내고 있는 이진 메세지에 단위
+        Which unit will you teach first: 어떤 레슨(유닛) 을 문저 가르칠 것입니까?
       U5 evaluation q1:
         'No': '아니요'
         'Yes': '예'
@@ -932,6 +1004,8 @@ en:
         Instructions: 소개
       PDAlg Design Recipe Video:
         Definition: 정의
+      PDAlg Types Video:
+        Number: 번호
       PDK5 What is unplugged:
         Question: 질문
       'U2L06 - Matching: Label the Diagram':
@@ -1788,5 +1862,10 @@ en:
     Question: 질문
     title: 제목화면 주제
   text_match:
+    'CSP U4L04 Assessment 2 ':
+      Enter prompt here: 여기에 텍스트 입력
+      Enter title here: 제목을 입력하세요
+    PS U3 Q1-7:
+      Enter prompt here: 여기에 텍스트 입력
     U2L07 Assessment4:
       '43': '43'

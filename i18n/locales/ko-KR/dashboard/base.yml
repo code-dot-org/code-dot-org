@@ -39,6 +39,7 @@ ko:
   next_resource: 다음 자료
   cancel: "취소"
   okay: "알겠어"
+  or: "이거나"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -580,6 +581,8 @@ ko:
     minecraft2016:
       title: "마인크래프트"
       body: "Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요."
+    aquatic:
+      title: "마인크래프트"
     hero:
       title: "마인크래프트"
     unplugged:
