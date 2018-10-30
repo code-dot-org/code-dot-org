@@ -93,6 +93,7 @@ no-NO:
   congratulations_volunteer: 'Gratulerer: nå har du prøvd ut Kodetimen,<a href="https://code.org/volunteer">
     meld deg på for å hjelpe til i et klasserom</a> og hjelp flere elever med å gjennomføre
     Kodetimen!'
+  congratulations_on_completing_course: Gratulerer med å ha fullført %{course}
   congrats_next_tutorials_title: Prøv disse kursene
   congrats_next_tutorials_desc: Prøv disse kortere, 1-timers-kursene eller prøv et
     kurs fra våre <a href="%{current_path}/next">samarbeidspartenere</a>.
@@ -1943,6 +1944,8 @@ no-NO:
   user_header_settings: Min konto
   user_header_logout: Logg ut
   user_header_signin: Logg inn
+  user_header_create: 'Opprett '
+  user_header_applab: 'App Lab '
   user_header_gamelab: Spill-lab
   user_header_playlab: Spill-lab
   user_header_minecraft: Minecraft
@@ -1998,7 +2001,47 @@ no-NO:
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Heltens reise'
   applab-intro_name: Lab-intro til appen
-  creativity_create: Opprett
-  creativity_hoc_coming: Kodetimen kommer…
   account_sign_up_email_opt_in: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
     eller andre IT-relaterte nyheter?
+  hoc2018_creativity_create: Opprett
+  hoc2018_mc_page_title: Minecraft Kodetime-oppgaver
+  hoc2018_mc_details: Mange språk | Moderne nettlesere og nettbrett | 2. klasse og
+    oppover
+  hoc2018_mc_aquatic_description: Minecraft er tilbake for Kodetimen med en helt ny
+    aktivitet! Reis gjennom Minecraft med kode.
+  hoc2018_mc_hero_description: Minecraft er tilbake for Kodetimen med en helt ny aktivitet!
+    Reis gjennom Minecraft med kode.
+  hoc2018_mc_designer_title: Minecraft-designer
+  hoc2018_mc_designer_description: Programmer dyr og andre Minecraft-vesener i din
+    egen versjon av Minecraft.
+  hoc2018_mc_adventurer_title: Minecraft-eventyrer
+  hoc2018_mc_adventurer_description: Bruk kode for å ta med Alex eller Steve på et
+    eventyr.
+  hoc2018_mc_start: Start
+  hoc2018_mc_no_internet: Har du ikke internett?
+  hoc2018_mc_download_adventurer: Last ned Minecraft-eventyrer for bruk uten internett.
+  hoc2018_mc_educators_box2_button: Last ned
+  hoc2018_mc_watch_videos: Før du begynner, se en av disse videoene og la deg inspirere
+  hoc2018_mc_videos_more: Flere <a href='%{inspiring_videos_playlist}'>inspirerende
+    videoer</a> med rollemodeller og kjendiser
+  hoc2018_mc_careers_more: Flere <a href='%{careers_url}' target='_blank'>inspirerende
+    videoer</a> med profesjonelle innenfor teknologi
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_steph_curry: Kodetimen med Steph Curry
+  hoc2018_mc_video_title_sports: Press deg selv. Alle kan lære.
+  hoc2018_mc_video_title_inspire_girl: Inspirere en jente
+  hoc2018_mc_video_title_cs_intro: informatikk-introduksjon
+  hoc2018_mc_video_title_schools_dont_teach: Det skoler flest ikke underviser
+  hoc2018_mc_video_title_obama: President Obama om informatikk
+  hoc2018_mc_video_title_hoc_is_here: Kodetimen er her - alle kan lære
+  hoc2018_mc_video_title_anybody_can_learn: Alle kan lære
+  hoc2018_mc_homepage_join_us: Bli med oss
+  hoc2018_mc_homepage_try_it: Prøv
+  hoc2018_mc_back: Minecraft er tilbake med en helt ny aktivitet til Kodetimen!
+  hoc2018_mc_back_journey: Minecraft er tilbake for Kodetimen med en helt ny aktivitet!
+    Reis gjennom Minecraft med kode.
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Fortsett å lære med Minecraft.
+  hoc2018_mc_go_to_mc_education: Gå til Minecraft Education

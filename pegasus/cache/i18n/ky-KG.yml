@@ -312,5 +312,40 @@ ky-KG:
   user_header_gamelab: Оюн лабы
   user_header_view_my_projects: Долбоорлорумду көрүү
   view_all_sections: Секциялардын баарын көрүү
-  creativity_create: Түзүү
-  creativity_hoc_coming: Код сааты жакындап келатат…
+  hoc2018_creativity_create: Түзүү
+  hoc2018_mc_page_title: Код сааты, Minecraft жетектемелери
+  hoc2018_mc_details: Көп тилдүү | Заманбап браузерлер жана планшеттер | 2-класс +
+  hoc2018_mc_aquatic_description: Minecraft Код саатына жаңы тапшырма менен кайтып
+    келди! Код жазып Minecraft өткүлө.
+  hoc2018_mc_hero_description: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
+    Код жазып Minecraft өткүлө.
+  hoc2018_mc_designer_title: Minecraft дизайнери
+  hoc2018_mc_adventurer_title: Minecraft тентек
+  hoc2018_mc_adventurer_description: Код жазып Алекс менен Стивди окуяларга кабылткыла.
+  hoc2018_mc_start: Башта
+  hoc2018_mc_no_internet: Интернет жокпу?
+  hoc2018_mc_download_adventurer: Minecraft тентектин орнотмо версиясын жүктөп алгыла.
+  hoc2018_mc_educators_box2_button: Жүктөп ал
+  hoc2018_mc_watch_videos: Баштаардан мурда шыктандыруучу видеолордун бирин көргүлө
+  hoc2018_mc_videos_more: Белгилүү кишилер жана жылдыздар катышкан <a href='%{inspiring_videos_playlist}'>шыктандыруучу
+    видеолор</a>
+  hoc2018_mc_careers_more: Технологиялар жаатындагы адистер катышкан <a href='%{careers_url}'
+    target='_blank'>шыктандыруучу видеолор</a>
+  hoc2018_mc_video_title_steph_curry: Код сааты Стеф Карри менен
+  hoc2018_mc_video_title_sports: Өзүңдү түрткүлө. Ар ким үйрөнө алат.
+  hoc2018_mc_video_title_cs_is_everything: Компүтер илими баарын өзгөртүүдө
+  hoc2018_mc_video_title_inspire_girl: Кызды шыктандыр
+  hoc2018_mc_video_title_cs_intro: Компүтер илимине киришүү
+  hoc2018_mc_video_title_schools_dont_teach: Мектептердин үйрөтпөгөн нерсе
+  hoc2018_mc_video_title_obama: Президент Обама компүтердик илим жөнүндө
+  hoc2018_mc_video_title_hoc_is_here: Код сааты бул жерде - Каалаган киши үйрөнө алат
+  hoc2018_mc_video_title_anybody_can_learn: Ар ким үйрөнө алат
+  hoc2018_mc_video_title_my_name_is_aracely: Менин атым Арасели
+  hoc2018_mc_homepage_join_us: Бизге кошулгула
+  hoc2018_mc_homepage_try_it: Көргүлө
+  hoc2018_mc_back: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
+  hoc2018_mc_back_journey: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
+    Код жазып Minecraft өткүлө.
+  hoc2018_mc_minecraft_education: Minecraft окутуу
+  hoc2018_mc_continue_learning: Minecraft менен үйрөнүүнү уланткыла.
+  hoc2018_mc_go_to_mc_education: Minecraft окутууга өтүү

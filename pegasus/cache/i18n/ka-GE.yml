@@ -1928,6 +1928,37 @@ ka-GE:
     "შესვლის" ღილაკზე დაწკაპებით.
   syncing_students: მიმდინარეობს თქვენი მოსწავლეების სინქრონიზაცია
   google_sign_in_instruct: 'აქ მათ უნდა აირჩიონ "შედი გუგლის ანგარიშის საშუალებით":'
-  creativity_create: შექმნა
   account_sign_up_email_opt_in: შეიძლება, რომ ელფოსტით მოგწეროთ კურსების განახლებები,
     ადგილობრივი შესაძლებლობები და სხვა სიახლეები კომპიუტერული მეცნიერებების შესახებ?
+  hoc2018_creativity_create: შექმნა
+  hoc2018_mc_page_title: 'Minecraft-ის კოდის ერთი საათი: ტუტორიალები'
+  hoc2018_mc_details: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+
+    კლასი
+  hoc2018_mc_designer_title: Minecraft-ის დიზაინერი
+  hoc2018_mc_designer_description: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის
+    საკუთარ სამყაროში.
+  hoc2018_mc_adventurer_title: Minecraft-ის თავაგადასავლები
+  hoc2018_mc_adventurer_description: გამოიყენეთ კოდი და შექმენით ალექსის ან სტივის
+    თავგადასავალი.
+  hoc2018_mc_start: დაწყება
+  hoc2018_mc_no_internet: არ გაქვთ ინტერნეტი?
+  hoc2018_mc_download_adventurer: მაინკრაფთის ოფლაინ–ვერსიის გადმოწერა.
+  hoc2018_mc_educators_box2_button: გადმოწერა
+  hoc2018_mc_watch_videos: სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს
+  hoc2018_mc_videos_more: მეტი <a href='%{inspiring_videos_playlist}'>შთამაგონებელი
+    ვიდეო</a> ცნობადი სახეების მონაწილეობით
+  hoc2018_mc_careers_more: მეტი <a href='%{careers_url}' target='_blank'>შთამაგონებელი
+    ვიდეო</a> პროფესიონალების მონაწილეობით
+  hoc2018_mc_video_1min: 1 წუთი
+  hoc2018_mc_video_2min: 2 წუთი
+  hoc2018_mc_video_5min: 5 წუთი
+  hoc2018_mc_video_title_sports: აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია.
+  hoc2018_mc_video_title_inspire_girl: შთააგონეთ გოგოს
+  hoc2018_mc_video_title_cs_intro: 'კომპიუტერული მეცნიერება: შესავალი'
+  hoc2018_mc_video_title_schools_dont_teach: რას არ ასწავლიან სკოლების უმეტესობაში
+  hoc2018_mc_video_title_obama: პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ
+  hoc2018_mc_video_title_hoc_is_here: კოდის ერთი საათი დაიწყო - სწავლა შეუძლია ყველას
+  hoc2018_mc_video_title_anybody_can_learn: სწავლა შეუძლია ყველას
+  hoc2018_mc_homepage_join_us: შემოგვიერთდით
+  hoc2018_mc_homepage_try_it: სცადეთ
+  hoc2018_mc_minecraft_education: Minecraft Education

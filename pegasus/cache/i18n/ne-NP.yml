@@ -1761,10 +1761,39 @@ ne-NP:
   header_stats: Stats
   csp_name: "'16-'17 CS Principles"
   user_header_label: Hi %{username}
+  user_header_team: Team
   user_header_settings: My account
   user_header_logout: साइन आउट गर्नुहोस्
   user_header_signin: साइन इन
   user_header_playlab: Play Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
-  creativity_create: बनाउनुहोस्
+  hoc2018_creativity_create: बनाउनुहोस्
+  hoc2018_mc_page_title: Minecraft Hour of Code Tutorials
+  hoc2018_mc_details: Many languages | Modern browsers and tablets | Grades 2+
+  hoc2018_mc_designer_title: Minecraft Designer
+  hoc2018_mc_designer_description: Program animals and other Minecraft creatures in
+    your own version of Minecraft.
+  hoc2018_mc_adventurer_title: Minecraft Adventurer
+  hoc2018_mc_adventurer_description: Use code to take Alex or Steve on an adventure.
+  hoc2018_mc_start: Start
+  hoc2018_mc_no_internet: Don't have Internet?
+  hoc2018_mc_download_adventurer: Download the offline version of Minecraft Adventurer.
+  hoc2018_mc_watch_videos: Before you get started, watch one of these inspirational
+    videos
+  hoc2018_mc_videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational
+    videos</a> featuring role models and celebrities
+  hoc2018_mc_careers_more: More <a href='%{careers_url}' target='_blank'>inspirational
+    videos</a> featuring professionals in technology fields
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_sports: Push yourself. Anybody can learn.
+  hoc2018_mc_video_title_inspire_girl: Inspire a girl
+  hoc2018_mc_video_title_cs_intro: Computer Science intro
+  hoc2018_mc_video_title_schools_dont_teach: What Most Schools Don't Teach
+  hoc2018_mc_video_title_obama: President Obama on computer science
+  hoc2018_mc_video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  hoc2018_mc_video_title_anybody_can_learn: Anybody Can Learn
+  hoc2018_mc_homepage_join_us: Join us
+  hoc2018_mc_homepage_try_it: Try it
