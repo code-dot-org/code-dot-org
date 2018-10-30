@@ -27,6 +27,23 @@ module StorageAppsTestUtils
     user_storage_ids.where(id: storage_id).delete if owns_storage_id
   end
 
+  def with_anonymous_channel
+    with_anonymous_storage_id do |storage_id|
+      encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
+      _, id = storage_decrypt_channel_id encrypted_channel_id
+      yield id, storage_id
+    ensure
+      storage_apps.where(id: id).delete if id
+    end
+  end
+
+  def with_anonymous_storage_id
+    storage_id = user_storage_ids.insert(user_id: nil)
+    yield storage_id
+  ensure
+    user_storage_ids.where(id: storage_id).delete if storage_id
+  end
+
   def storage_apps
     PEGASUS_DB[:storage_apps]
   end
