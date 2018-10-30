@@ -130,7 +130,7 @@ class Homepage
       {
         text: "homepage_action_text_try_it",
         type: "cta_button_hollow_white",
-        url: "/learn"
+        url: DCDO.get("hoc_launch", nil) == "mc" ? "/hourofcode/overview" : "/learn"
       },
       {
         text: "homepage_action_text_codevideo",
