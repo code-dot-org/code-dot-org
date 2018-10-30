@@ -48,6 +48,7 @@ id:
   next_resource: Sumber selanjutnya
   cancel: Batal
   okay: Oke
+  or: atau
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   add_teacher_form:
     code:
@@ -828,6 +829,8 @@ id:
       title: Minecraft
       body: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft
         Anda sendiri.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:
