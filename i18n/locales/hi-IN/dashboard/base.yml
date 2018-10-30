@@ -33,6 +33,7 @@ hi:
   next_resource: अगले संसाधन
   cancel: "रद्द करें"
   okay: "ठीक है"
+  or: "या"
   add_teacher_form:
     code:
       label: 'शिक्षक जोड़ें:'
