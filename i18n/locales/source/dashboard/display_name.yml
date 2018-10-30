@@ -533,6 +533,9 @@ en:
       CSDU6 buzzer.stop_2018: Stopping the Music
       CSDU6 challenge play songs: Song Bot
       CSDu2 IP CC Search: Creative Commons Search
+      CSP CreateL01 SFLP: Lesson Overview
+      CSP CreateL02 SFLP_2018: Lesson Overview
+      CSP CreateL03 SFLP: Lesson Overview
       CSP ExploreL01 SFLP: Lesson Overview
       CSP ExploreL02 SFLP_2018: Lesson Overview
       CSP ExploreL03 SFLP: Lesson Overview
@@ -603,6 +606,7 @@ en:
       CSP U5L16 SFLP: Lesson Overview
       CSP U5L17 SFLP: Lesson Overview
       CSP U5L18 SFLP: Lesson Overview
+      CSPU5_U3 - Canvas - freePlay_2018: 'Project: Canvas Painter'
       CSPU5_U3L15 full clicker app: Make Your Own Clicker Game
       CSPU5_U3L15 full clicker app_2018: Make Your Own Clicker Game
       CSS U2 Body Map: The Body Element
