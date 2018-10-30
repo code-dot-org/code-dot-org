@@ -10,6 +10,7 @@ import i18n from '@cdo/locale';
 import * as danceRedux from "../dance/redux";
 import Sounds from "../Sounds";
 import project from "../code-studio/initApp/project";
+import queryString from "query-string";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -33,6 +34,22 @@ const SongSelector = Radium(class extends React.Component {
   state = {
     songsData: []
   };
+
+  // Returns whether a song can be displayed
+  // Teacher flag - filter off - all songs allowed
+  // Teacher flag - filter on - no pg13 songs
+  // No teacher flag - pg13 songs only displayed for 13+ students
+  songPermitted(song) {
+    let filterStatus = queryString.parse(window.location.search).songfilter;
+    // Teacher flags override age defaults
+    if (filterStatus === 'off') {
+      return true;
+    } else if (filterStatus === 'on') {
+      return !song.pg13;
+    } else {
+      return (this.props.is13Plus && song.pg13) || !song.pg13;
+    }
+  }
 
   changeSong = (event) => {
     const song = event.target.value;
@@ -62,7 +79,7 @@ const SongSelector = Radium(class extends React.Component {
     let songs = {};
     if (songManifest) {
       songManifest.forEach((song) => {
-        if ((this.props.is13Plus && song.pg13) || !song.pg13) {
+        if (this.songPermitted(song)) {
           songs[song.id] = {title: song.text, url: song.url};
         }
       });
