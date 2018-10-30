@@ -668,6 +668,8 @@ var projects = module.exports = {
           return 'minecraft_designer';
         } else if (appOptions.level.isConnectionLevel) {
           return 'minecraft_codebuilder';
+        } else if (appOptions.level.isAquaticLevel) {
+          return 'minecraft_aquatic';
         }
         return 'minecraft_adventurer';
       case 'studio':
