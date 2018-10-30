@@ -28,6 +28,7 @@ module Api::V1::Pd
       end
       @happy_teacher_question_responses['who_facilitated_ss'] = TEST_FACILITATORS
       @happy_teacher_question_responses['workshop_id_i'] = @workshop.id
+      @happy_teacher_question_responses['consent_b'] = '1'
 
       OVERALL_SUCCESS_QUESTIONS.each do |question|
         @happy_teacher_question_responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
@@ -52,6 +53,7 @@ module Api::V1::Pd
       end
       @angry_teacher_question_responses['who_facilitated_ss'] = TEST_FACILITATORS
       @angry_teacher_question_responses['workshop_id_i'] = @workshop.id
+      @angry_teacher_question_responses['consent_b'] = '1'
 
       OVERALL_SUCCESS_QUESTIONS.each do |question|
         @angry_teacher_question_responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.first
