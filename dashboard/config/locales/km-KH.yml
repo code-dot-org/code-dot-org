@@ -39,6 +39,7 @@ km:
   next_resource: ឯកសារបន្ទាប់
   cancel: បោះបង់
   okay: អូខេ
+  or: ឬ
   heading_x_of_y: "%{heading}​ (ទំព័រទី %{x} នៃ %{y})"
   add_teacher_form:
     code:
