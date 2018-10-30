@@ -66,7 +66,7 @@ pl:
             '8': Żaden
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -310,6 +310,18 @@ pl:
         text: skręć w lewo
       RyanLab_turnRight:
         text: skręć w prawo
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
       craft_ifPath:
         options:
           DIR:
