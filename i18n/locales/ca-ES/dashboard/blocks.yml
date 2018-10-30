@@ -247,6 +247,14 @@ ca:
         text: gira a l'esquerra
       RyanLab_turnRight:
         text: gira a la dreta
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': mida
       craft_ifPath:
         options:
           DIR:
