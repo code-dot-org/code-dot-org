@@ -50,3 +50,17 @@ Feature: Dance Lab
     #Run for two measures until level success
     Then I click selector "#runButton" once I see it
     And I wait until element ".congrats" is visible
+
+  @as_student
+  Scenario: Dance Party Share
+    Given I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
+    And I rotate to landscape
+    And I wait for the page to fully load
+    And I close the instructions overlay if it exists
+
+    When I navigate to the shared version of my project
+    Then I click selector "#runButton" once I see it
+    Then I wait until element "#runButton" is not visible
+    Then I click selector "#resetButton" once I see it
+    Then element "#runButton" is visible
+    And element "#resetButton" is hidden
