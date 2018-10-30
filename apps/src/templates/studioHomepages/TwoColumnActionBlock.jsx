@@ -177,7 +177,7 @@ export class SpecialAnnouncementActionBlock extends Component {
     if (this.props.hocLaunch === "dance") {
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018.jpg')}
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-dance.jpg')}
           subHeading={i18n.specialAnnouncementHeadingHoc2018()}
           description={i18n.specialAnnouncementDescriptionHoc2018()}
           buttons={[
@@ -191,13 +191,13 @@ export class SpecialAnnouncementActionBlock extends Component {
     } else if (this.props.hocLaunch === "mc") {
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018.jpg')}
+          imageUrl={pegasus('/shared/images/fill-540x289/teacher-announcement/hoc2018-mc.jpg')}
           subHeading={i18n.specialAnnouncementHeadingHoc2018Mc()}
           description={i18n.specialAnnouncementDescriptionHoc2018Mc()}
           buttons={[
             {
               url: 'https://hourofcode.com/#join',
-              text: i18n.signUpButton()
+              text: i18n.joinUs()
             },
             {
               url: pegasus('/minecraft'),
