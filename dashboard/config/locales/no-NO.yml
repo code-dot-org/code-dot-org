@@ -48,6 +48,7 @@
   next_resource: Neste ressurs
   cancel: Avbryt
   okay: OK
+  or: eller
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
   add_teacher_form:
     code:
@@ -778,6 +779,8 @@
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom
