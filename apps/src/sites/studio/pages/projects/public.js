@@ -38,6 +38,7 @@ $(document).ready(() => {
           />
           <PublicGallery
             limitedGallery={projectsData.limitedGallery}
+            includeDanceParty={projectsData.includeDanceParty}
           />
         </div>
       </Provider>,
