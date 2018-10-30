@@ -77,12 +77,28 @@ vi:
         options:
           GROUP:
             sprites: tất cả
+          FORMAT:
+            '"random"': ngẫu nhiên
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': ngẫu nhiên
       Dancelab_randomColor:
         text: màu ngẫu nhiên
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ vi:
             '"none"': Rỗng
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"height"': chiều cao
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: tất cả
           PROPERTY:
             '"scale"': kích thước
             '"height"': chiều cao
@@ -296,6 +319,10 @@ vi:
           TYPE:
             "'sand'": cát
             "'planksOak'": ván cây sồi
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": cát
       craft_moveForward:
         text: đi thẳng
       craft_placeTorch:

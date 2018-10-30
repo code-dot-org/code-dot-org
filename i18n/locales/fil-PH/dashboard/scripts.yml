@@ -3128,6 +3128,8 @@ fil:
               name: Kulay na RGB
             Processing with Bits:
               name: Pagproseso kasama ang Bits
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
           description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."

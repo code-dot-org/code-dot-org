@@ -706,6 +706,8 @@ ca:
               name: Polseres binàries
             Binary Images:
               name: Imatges binàries
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Lists:

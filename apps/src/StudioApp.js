@@ -1,4 +1,4 @@
-/* global Blockly, droplet, addToHome */
+/* global Blockly, droplet */
 
 import $ from 'jquery';
 import React from 'react';
@@ -269,9 +269,6 @@ StudioApp.prototype.init = function (config) {
     if (dom.isMobile()) {
       $("body").addClass("legacy-share-view-mobile");
       $('#main-logo').hide();
-    }
-    if (dom.isIOS() && !window.navigator.standalone) {
-      addToHome.show(true);
     }
   }
 
@@ -615,13 +612,20 @@ StudioApp.prototype.scaleLegacyShare = function () {
   var phoneFrameScreen = document.getElementById('phoneFrameScreen');
   var vizWidth = $(vizContainer).width();
 
-  // On mobile, scale phone frame to full screen (portrait). Otherwise use given dimensions from css.
+  // On mobile, scale up phone frame to full screen (portrait) as needed.
+  // Otherwise use given dimensions from css.
   if (dom.isMobile()) {
-    var screenWidth = Math.min(window.innerWidth, window.innerHeight);
-    var screenHeight = Math.max(window.innerWidth, window.innerHeight);
-    $(phoneFrameScreen).width(screenWidth);
-    $(phoneFrameScreen).height(screenHeight);
-    $(vizColumn).width(screenWidth);
+    const { clientHeight, clientWidth } = document.documentElement;
+    const screenWidth = Math.min(clientHeight, clientWidth);
+    const screenHeight = Math.max(clientWidth, clientHeight);
+    // Choose the larger of the document client size and the existing
+    // phoneFrameScreen size:
+    const newWidth = Math.max(screenWidth, $(phoneFrameScreen).width());
+    const newHeight = Math.max(screenHeight, $(phoneFrameScreen).height());
+
+    $(phoneFrameScreen).width(newWidth);
+    $(phoneFrameScreen).height(newHeight);
+    $(vizColumn).width(newWidth);
   }
 
   var frameWidth = $(phoneFrameScreen).width();

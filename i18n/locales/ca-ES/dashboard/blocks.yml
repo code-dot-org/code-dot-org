@@ -46,12 +46,30 @@ ca:
             "{x: 100, y: 200}": esquerra
             "{x: 300, y: 200}": dret
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': atzar
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": esquerra
             "{x: 300, y: 200}": dret
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': atzar
       Dancelab_randomColor:
         text: color aleatori
       Dancelab_setDanceSpeed:
@@ -63,6 +81,11 @@ ca:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"height"': alçcada
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': mida
@@ -233,6 +256,10 @@ ca:
           TYPE:
             "'sand'": sorra
             "'planksOak'": tauló de roure
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sorra
       craft_moveForward:
         text: avança
       craft_placeTorch:

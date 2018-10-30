@@ -1,9 +1,8 @@
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
-import DetailViewResponse from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_response';
 import {ApplicationStatuses, ApplicationFinalStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import React from 'react';
 import _ from 'lodash';
-import {expect} from 'chai';
+import {expect} from '../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 
@@ -24,7 +23,8 @@ describe("DetailViewContents", () => {
       email: 'email',
       application_year: '2019-2020',
       application_type: applicationType,
-      course_name: 'CS Fundamentals',
+      course_name: 'CS Discoveries',
+      course: 'csd',
       registered_fit_weekend: false,
       registered_teachercon: false,
       form_data: {
@@ -86,64 +86,67 @@ describe("DetailViewContents", () => {
     });
   });
 
-  const expectedTestData = [
-    {type: 'Teacher', applicationSpecificQuestions: 6, scoredQuestions: 2},
-    {type: 'Facilitator', applicationSpecificQuestions: 7, scoredQuestions: 0}
-  ];
+  const applicationType = 'Facilitator';
 
-  for (const applicationData of expectedTestData) {
-    const responseCount = applicationData.type === "Teacher" ? 4 : 5;
+  describe('Edit controls in Facilitator', () => {
+    it(`allows for a subset of statuses to be locked`, () => {
+      const detailView = mountDetailView(applicationType);
 
-    it(`Renders full contents for ${applicationData.type} initially`, () => {
-      const detailView = mountDetailView(applicationData.type);
+      // click edit
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
 
-      expect(detailView.find('#TopSection DetailViewResponse')).to.have.length(responseCount);
-      expect(detailView.find('DetailViewApplicationSpecificQuestions')).to.have.length(1);
-      expect(detailView.find('DetailViewApplicationSpecificQuestions h3')).to.have.length(
-        applicationData.applicationSpecificQuestions
-      );
-      expect(detailView.find('DetailViewApplicationSpecificQuestions FormControl')).to.have.length(
-        applicationData.scoredQuestions
-      );
-    });
-
-    describe("Regional Partner Panel", () => {
-      let regionalPartnerPanel;
-      before(() => {
-        regionalPartnerPanel = (
-          <DetailViewResponse
-            question="Regional Partner"
-            layout="panel"
-          />
-        );
-      });
-
-      it("Does not render for regional partners", () => {
-        const regionalPartnerDetailView = mountDetailView(applicationData.type, {isWorkshopAdmin: false});
-        expect(regionalPartnerDetailView.find('#TopSection DetailViewResponse')).to.have.length(responseCount);
-        expect(regionalPartnerDetailView).to.not.containMatchingElement(regionalPartnerPanel);
-      });
-
-      it("Does render for admins", () => {
-        const workshopAdminDetailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
-        expect(workshopAdminDetailView.find('#TopSection DetailViewResponse')).to.have.length(responseCount + 1);
-        expect(workshopAdminDetailView).to.containMatchingElement(regionalPartnerPanel);
+      // lock button is disabled for all statuses except "finalized"
+      // statuses in the constant are an object {value: label}
+      Object.keys(ApplicationStatuses[applicationType.toLowerCase()]).forEach((status) => {
+        const statusIsFinal = ApplicationFinalStatuses.includes(status);
+        detailView
+          .find('#DetailViewHeader select')
+          .simulate('change', { target: { value: status } });
+        expect(detailView.find('#DetailViewHeader Button').first().prop('disabled')).to.equal(!statusIsFinal);
       });
     });
+
+    it(`disables status dropdown when locked`, () => {
+      const detailView = mountDetailView(applicationType);
+
+      // click edit
+      detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+      // change status to approved
+      detailView
+        .find('#DetailViewHeader select')
+        .simulate('change', { target: { value: 'accepted' } });
+
+      // lock status
+      expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
+      detailView.find('#DetailViewHeader Button').first().simulate('click');
+      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.true;
+      expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Unlock');
+
+      // unlock status
+      detailView.find('#DetailViewHeader Button').first().simulate('click');
+      expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.false;
+      expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
+    });
+  });
+
+  const expectedTestData = ['Teacher', 'Facilitator'];
+
+  for (const applicationType of expectedTestData) {
 
     describe("Admin edit dropdown", () => {
       it("Is not visible to regional partners", () => {
-        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: false});
+        const detailView = mountDetailView(applicationType, {isWorkshopAdmin: false});
         expect(detailView.find("#admin-edit")).to.have.length(0);
       });
 
       it("Is visible to admins", () => {
-        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        const detailView = mountDetailView(applicationType, {isWorkshopAdmin: true});
         expect(detailView.find("#admin-edit")).to.have.length(2);
       });
 
       it("Edit redirects to edit page", () => {
-        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        const detailView = mountDetailView(applicationType, {isWorkshopAdmin: true});
         const mockRouter = sinon.mock(context.router);
 
         detailView.find("#admin-edit").first().simulate("click");
@@ -155,25 +158,16 @@ describe("DetailViewContents", () => {
       });
 
       it("Has Delete Application menu item", () =>{
-        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        const detailView = mountDetailView(applicationType, {isWorkshopAdmin: true});
         detailView.find("#admin-edit").first().simulate("click");
         const deleteApplicationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete Application");
 
         expect(deleteApplicationMenuitem).to.have.length(1);
       });
 
-      it("Has Delete Teachercon Registration menu item if there is a teachercon registration", () =>{
-        const overrides = {isWorkshopAdmin: true, applicationData: {registered_teachercon: true}};
-        const detailView = mountDetailView(applicationData.type, overrides);
-        detailView.find("#admin-edit").first().simulate("click");
-        const deleteTeacherconRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete Teachercon Registration");
-
-        expect(deleteTeacherconRegistrationMenuitem).to.have.length(1);
-      });
-
       it("Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration", () =>{
         const overrides = {isWorkshopAdmin: true, applicationData: {registered_fit_weekend: true}};
-        const detailView = mountDetailView(applicationData.type, overrides);
+        const detailView = mountDetailView(applicationType, overrides);
         detailView.find("#admin-edit").first().simulate("click");
         const deleteFitWeekendRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete FiT Weekend Registration");
 
@@ -181,7 +175,7 @@ describe("DetailViewContents", () => {
       });
 
       it("Does not have delete registration menu items if there are not registrations", () =>{
-        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        const detailView = mountDetailView(applicationType, {isWorkshopAdmin: true});
         detailView.find("#admin-edit").first().simulate("click");
         const deleteTeacherconRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete Teachercon Registration");
         const deleteFitWeekendRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete FiT Weekend Registration");
@@ -192,83 +186,27 @@ describe("DetailViewContents", () => {
     });
 
     describe("Edit controls behavior", () => {
-      it(`the dropdown is disabled until the Edit button is clicked in ${applicationData.type}`, () => {
-        const detailView = mountDetailView(applicationData.type);
+      it(`the dropdown is disabled until the Edit button is clicked in ${applicationType}`, () => {
+        const detailView = mountDetailView(applicationType);
 
+        let expectedButtons = applicationType === 'Facilitator' ? ['Lock', 'Edit'] : ['Edit'];
         expect(detailView.find('#DetailViewHeader Button').map((button) => {
           return button.text();
-        })).to.deep.equal(['Lock', 'Edit']);
+        })).to.deep.equal(expectedButtons);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
         expect(detailView.find('#Notes').prop('disabled')).to.be.true;
-        if (applicationData.scoredQuestions) {
-          expect(detailView.find('DetailViewApplicationSpecificQuestions FormControl').map((element) => {
-            return element.prop('disabled');
-          })).to.deep.equal([true, true]);
-        }
 
+        expectedButtons = applicationType === 'Facilitator' ? ['Lock', 'Save', 'Cancel'] : ['Save', 'Cancel'];
         detailView.find('#DetailViewHeader Button').last().simulate('click');
         expect(detailView.find('#DetailViewHeader Button').map((button) => {
           return button.text();
-        })).to.deep.equal(['Lock', 'Save', 'Cancel']);
+        })).to.deep.equal(expectedButtons);
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.false;
         expect(detailView.find('#Notes').prop('disabled')).to.be.false;
-        if (applicationData.scoredQuestions) {
-          expect(detailView.find('DetailViewApplicationSpecificQuestions FormControl').map((element) => {
-            return element.prop('disabled');
-          })).to.deep.equal([false, false]);
-
-          detailView.find('#committed-score').simulate('change', {target: {value: 'Yes', id: 'committed-score'}});
-          expect(detailView.state('response_scores')).to.deep.equal({committed: 'Yes'});
-        }
 
         detailView.find('#DetailViewHeader Button').last().simulate('click');
         expect(detailView.find('#DetailViewHeader FormControl').prop('disabled')).to.be.true;
         expect(detailView.find('#Notes').prop('disabled')).to.be.true;
-        if (applicationData.scoredQuestions) {
-          expect(detailView.find('DetailViewApplicationSpecificQuestions FormControl').map((element) => {
-            return element.prop('disabled');
-          })).to.deep.equal([true, true]);
-        }
-      });
-
-      it(`allows for a subset of statuses to be locked in ${applicationData.type}`, () => {
-        const detailView = mountDetailView(applicationData.type);
-
-        // click edit
-        detailView.find('#DetailViewHeader Button').last().simulate('click');
-
-        // lock button is disabled for all statuses except "finalized"
-        // statuses in the constant are an object {value: label}
-        Object.keys(ApplicationStatuses[applicationData.type.toLowerCase()]).forEach((status) => {
-          const statusIsFinal = ApplicationFinalStatuses.includes(status);
-          detailView
-            .find('#DetailViewHeader select')
-            .simulate('change', { target: { value: status } });
-          expect(detailView.find('#DetailViewHeader Button').first().prop('disabled')).to.equal(!statusIsFinal);
-        });
-      });
-
-      it(`disables status dropdown when locked in ${applicationData.type}`, () => {
-        const detailView = mountDetailView(applicationData.type);
-
-        // click edit
-        detailView.find('#DetailViewHeader Button').last().simulate('click');
-
-        // change status to approved
-        detailView
-          .find('#DetailViewHeader select')
-          .simulate('change', { target: { value: 'accepted' } });
-
-        // lock status
-        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
-        detailView.find('#DetailViewHeader Button').first().simulate('click');
-        expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.true;
-        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Unlock');
-
-        // unlock status
-        detailView.find('#DetailViewHeader Button').first().simulate('click');
-        expect(detailView.find('#DetailViewHeader select')).prop('disabled').to.be.false;
-        expect(detailView.find('#DetailViewHeader Button').first()).text().to.equal('Lock');
       });
     });
   }

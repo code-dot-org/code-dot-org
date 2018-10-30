@@ -1,16 +1,24 @@
 ---
-title: 2018 Champions for Computer Science Awards
+title: 2018 Champions of Computer Science Awards
 nav: about_nav
 theme: responsive
 ---
 
 <a id="top"></a>
 
-# 2018 Champions for Computer Science Awards
+# 2018 Champions of Computer Science Awards
 
 In celebration of the 2018 [Computer Science Education Week](https://csedweek.org/) (CSEdWeek), the [Computer Science Teachers Association](http://www.csteachers.org/) (CSTA) and [Code.org](https://code.org/) are pleased to present the 2nd annual Champions of Computer Science Awards.
 
 Know of someone who’s achieved something outstanding in computer science education this past year? Tell us about it! Nominate a student, teacher, school, district, after-school club, organization, etc., to be recognized as a **2018 Champion of Computer Science**.
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <img src="/images/kickoff2018/awards-winners.jpg" width="100%" alt="Awards Winners"> 
+  </div>
+</div>
+<br>
 
 Those selected will be awarded a trip to Seattle, WA to be recognized on stage at the kickoff of CSEdWeek. This opportunity is only available for US submissions.
 

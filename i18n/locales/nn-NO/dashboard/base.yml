@@ -83,6 +83,7 @@ nn:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
+    microsoft_v2_auth: 'Microsoft-konto'
     clever: 'Smartkonto'
     forgot_password: 'Har du gløymt passordet ditt?'
     need_confirmation: "Har du ikkje motteke instruksjonar om korleis du stadfester?"
@@ -106,7 +107,6 @@ nn:
     age: 'Alder'
     user_type: 'Er du elev eller lærar?'
     submit: 'Meld deg på'
-    next: 'Neste'
     teacher: 'Er du ein lærar?'
     valid_username: "Tilgjengeleg!"
     invalid_username: "Brukernamnet må vere minst fem teikn"
@@ -296,14 +296,6 @@ nn:
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
-    create_button:
-      create: 'Opprett'
-      applab: 'App-lab'
-      artist: 'Kunstnar'
-      gamelab: 'Spel-lab'
-      playlab: 'Spel-lab'
-      minecraft: 'Minecraft'
-      flappy: 'Flakse'
     user:
       classroom: 'Side for lærarar'
       district_dashboard: 'Distrikt dashboard'
@@ -317,6 +309,13 @@ nn:
       team: 'Team'
       driver: 'Sjåfør'
       navigator: 'Kartlesar'
+      create: 'Opprett'
+      applab: 'App-lab'
+      artist: 'Kunstnar'
+      gamelab: 'Spel-lab'
+      playlab: 'Spel-lab'
+      minecraft: 'Minecraft'
+      flappy: 'Flakse'
     popup:
       progress_for_user: "Framgangen til %{name}"
       progress: 'Framgangen din'

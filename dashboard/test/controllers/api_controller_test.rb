@@ -1195,4 +1195,17 @@ Actual:
 
 MESSAGE
   end
+
+  test 'sign_cookies' do
+    sign_out :user
+    get :sign_cookies
+    assert_response :success
+
+    refute_nil @response.cookies['CloudFront-Key-Pair-Id']
+    refute_nil @response.cookies['CloudFront-Signature']
+    # indicates a custom policy
+    refute_nil @response.cookies['CloudFront-Policy']
+    # only used for canned policies
+    assert_nil @response.cookies['CloudFront-Expires']
+  end
 end

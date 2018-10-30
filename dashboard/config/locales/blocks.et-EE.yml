@@ -77,12 +77,28 @@ et:
         options:
           GROUP:
             sprites: kõik
+          FORMAT:
+            '"random"': juhuslik
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": vasakule
             "{x: 300, y: 200}": paremale
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": juhuslik
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': juhuslik
       Dancelab_randomColor:
         text: juhuslik värv
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ et:
             '"none"': Pole
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': suurus
+            '"height"': kõrgus
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: kõik
           PROPERTY:
             '"scale"': suurus
             '"height"': kõrgus
@@ -292,6 +315,10 @@ et:
           TYPE:
             "'sand'": liiv
             "'planksOak'": tammelauad
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": liiv
       craft_moveForward:
         text: liigu edasi
       craft_placeTorch:
