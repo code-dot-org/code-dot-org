@@ -39,6 +39,7 @@ nn:
   next_resource: Neste ressurs
   cancel: "Avbryt"
   okay: "OK"
+  or: "eller"
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
   add_teacher_form:
     code:
@@ -596,6 +597,8 @@ nn:
     minecraft2016:
       title: "Minecraft"
       body: "Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode."
