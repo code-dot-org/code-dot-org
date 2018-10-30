@@ -4096,4 +4096,8 @@ class UserTest < ActiveSupport::TestCase
       assert_nil result
     end
   end
+
+  test 'find_channel_owner returns nil for a malformed channel id' do
+    assert_nil User.find_channel_owner 'not-a-channel-id'
+  end
 end
