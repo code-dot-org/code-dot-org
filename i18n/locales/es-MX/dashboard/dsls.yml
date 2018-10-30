@@ -1,6 +1,10 @@
 ---
 en:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: Triángulo grande
+        Big Triangle|Image|Number|String: Triángulo grande|Imagen|Número|Cadena
     evaluation_multi:
       U5 evaluation q1:
         'No': 'No'
@@ -1017,6 +1021,8 @@ en:
         Question: Pregunta
       CSDU2 Match RGB Colors:
         Question: Pregunta
+      Coordinate Matching:
+        Dog: Perro
       ECSPD Growth Mindset Reflection Q:
         Growth Mindset: Mentalidad de crecimiento
       K-1 Maze Match 1:
@@ -1027,6 +1033,8 @@ en:
         Image: Imagen
         Number: Número
         String: Hilo
+      PDK5 Pair programming match:
+        Pair programming: Programación en Parejas
       PDK5 What is unplugged:
         Question: Pregunta
       'U2L06 - Matching: Label the Diagram':
@@ -1046,6 +1054,7 @@ en:
         '5': '5'
         '7': '7'
         '8': '8'
+        a: a
         title: Título
       U3L19 - MC what are values of abc:
         title: Título
@@ -1079,6 +1088,12 @@ en:
   CSDU4 Screens Predict Multi:
     About: Acerca de
     Contact Us: Contáctanos
+  CSDU6 - timed loop predict counter multi:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
   'CSP U4L04 Assessment 1 ':
     Question: Pregunta
   CSP Unit 1 Ch 1 MC binary to dec simple:
@@ -1334,6 +1349,12 @@ en:
     right: derecha
   U4L05 Multiple Choice:
     right: derecha
+  U4L06 Assessment 2:
+    column: columna
+    row: renglón
+  U4L06 Assessment 3:
+    column: columna
+    row: renglón
   U4L06 Multiple Choice:
     right: derecha
   U4L06 Reflection Q 1:
@@ -1557,6 +1578,11 @@ en:
   csp_ap_exam_signup:
     'No': 'No'
     'Yes': 'Sí'
+  csp_ap_number_exams:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
   csp_ap_previous_years:
     'No': 'No'
     'Yes': 'Sí'
@@ -1698,6 +1724,24 @@ en:
     '1': '1'
     '2': '2'
     '8': '8'
+  cspu5_assess3_counter:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  cspu5_assess3_counter_2018:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+  cspu5_assess3_counter_exam_prep:
+    '0': '0'
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
   cspu5_assess3_listAppend:
     '1': '1'
     '2': '2'
@@ -1758,6 +1802,15 @@ en:
     '4': '4'
     '5': '5'
     '6': '6'
+  cspu5_assess3_mysterySwap:
+    a: a
+    d: d
+  cspu5_assess3_mysterySwap_2018:
+    a: a
+    d: d
+  cspu5_assess3_mysterySwap_exam_prep:
+    a: a
+    d: d
   cspu5_assess4_dataReturns:
     '10': '10'
     '16': '16'

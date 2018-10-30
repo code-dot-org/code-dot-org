@@ -3,16 +3,22 @@ es-MX:
     function_names:
       x: x
       details: detalles
-      draw eyebrow: dibujar la ceja
-      draw pupil: dibujar la pupila
+      draw eyebrow: dibujar ceja
+      draw pupil: dibujar pupila
       draw a circle: dibujar un círculo
-      draw a car: dibuja un carro
+      draw a car: dibujar carro
       draw_rect: dibuja_rectangulo
-      draw square: dibuja cuadro
+      draw square: dibujar cuadrado
       jump to controller top left: salta sobre el controlador izquierdo
       jump to middle: salta al medio
-      draw a button: dibuja un boton
-      draw cord: dibuja cuerda
+      draw a button: dibuja un botón
+      draw cord: dibujar una cuerda
+      draw left leg: dibujar pierna izquierda
+      draw right leg: dibujar pierna derecha
+      draw body and arms: dibujar cuerpo y brazos
+      draw a head: dibuja una cabeza
+      draw head: dibujar cabeza
+      draw arms: dibujar brazos
       draw a hexagon: dibujar un hexágono
       draw a flower: dibujar una flor
       draw a square: Dibuje un cuadrado
