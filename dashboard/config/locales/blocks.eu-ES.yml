@@ -172,7 +172,7 @@ eu:
             '8': None
             '9': Biratu
             '10': Hau edo Hori
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -543,6 +543,22 @@ eu:
         text: ezkerrera biratu
       RyanLab_turnRight:
         text: eskuinera biratu
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"rotation"': itzulikapena
+            '"x"': x posizioa
+            '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+            '"tint"': tinta
       craft_ifPath:
         options:
           DIR:
