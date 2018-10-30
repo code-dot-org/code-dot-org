@@ -231,6 +231,32 @@ class School < ActiveRecord::Base
           }
         end
       end
+
+      CDO.log.info "Seeding 2017-2018 PRELIMINARY public and charter school data."
+      # Originally from https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_1718_w_0a_03302018_csv.zip
+      AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_sch_029_1718_w_0a_03302018.csv") do |filename|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, false) do |row|
+          {
+            id:                 row['NCESSCH'].to_i.to_s,
+            name:               row['SCH_NAME'].upcase,
+            address_line1:      row['LSTREET1'].to_s.upcase.presence,
+            address_line2:      row['LSTREET2'].to_s.upcase.presence,
+            address_line3:      row['LSTREET3'].to_s.upcase.presence,
+            city:               row['LCITY'].to_s.upcase.presence,
+            state:              row['LSTATE'].to_s.upcase.presence,
+            zip:                row['LZIP'],
+            latitude:           nil,
+            longitude:          nil,
+            school_type:        row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public',
+            school_district_id: row['LEAID'].to_i,
+            # in the 2017-2018 data, the field ST_SCHID already
+            # combines fields that were previously combined in
+            # the construct_state_school_id method
+            # they look like this: AL-101-0200
+            state_school_id:    row['ST_SCHID'],
+          }
+        end
+      end
     end
   end
 
@@ -243,7 +269,11 @@ class School < ActiveRecord::Base
       parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
       loaded = find_by_id(parsed[:id])
       if loaded.nil?
-        School.new(parsed).save!
+        begin
+          School.new(parsed).save!
+        rescue ActiveRecord::RecordNotUnique
+          CDO.log.info "Record with NCES ID #{parsed[:id]} and state school ID #{parsed[:state_school_id]} not unique, not added"
+        end
       elsif write_updates == true
         loaded.assign_attributes(parsed)
         loaded.update!(parsed) if loaded.changed?
