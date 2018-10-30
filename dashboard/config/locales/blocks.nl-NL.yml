@@ -66,7 +66,7 @@ nl:
             '8': Geen
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -310,6 +310,18 @@ nl:
         text: Draai linksom
       RyanLab_turnRight:
         text: Draai rechtsom
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
       craft_ifPath:
         options:
           DIR:

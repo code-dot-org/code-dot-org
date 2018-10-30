@@ -10,6 +10,7 @@ nl:
       messages:
         blank: "is vereist"
         blank_plural: "is vereist"
+        invalid: "is ongeldig"
         invalid_plural: "zijn ongeldig"
     attributes:
       user:
@@ -26,6 +27,7 @@ nl:
         age: 'Leeftijd'
         gender: 'Geslacht'
         edit_header: 'Accountdetails bewerken'
+        finish_sign_up_header: 'Voltooi het maken van je account'
         error:
           future: kan niet in de toekomst
   hello: "Hallo wereld"
@@ -39,6 +41,7 @@ nl:
   next_resource: Volgende hulpbron
   cancel: "Annuleren"
   okay: "Oké"
+  or: "of"
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
   add_teacher_form:
     code:
@@ -553,6 +556,8 @@ nl:
     minecraft2016:
       title: "Minecraft"
       body: "Ga dieren en andere Minecraft wezens programmeren in je eigen Minecraft omgeving."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged:
