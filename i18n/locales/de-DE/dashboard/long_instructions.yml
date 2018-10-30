@@ -33,12 +33,17 @@ de:
         Mein Windrad ist noch nicht fertig. Wie oft muss ich es „wiederholen“, um es zu beenden?
       2-3 Artist Debugging 9: |-
         Der Code für diesen Stiel ist falsch. Hinweis:  Der Winkel weicht um 60 Grad ab.
+      2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein geraten?\\r\n\\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
+      2-3 Artist Functions 1 a: "Ich Zombie-Künstler. Ich zeichnen liebe!\n\nHilf mir, eine quadratische Brille zu zeichnen.\n\nHinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.\n\n"
+      2-3 Artist Functions 1: "Ich Zombie-Künstler. Ich zeichnen liebe!\n\nHilf mir, eine quadratische Brille zu zeichnen.\n\nHinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.\n\n"
       2-3 Artist Functions 11.5: "Hier ist die gleiche „Zeichne ein Sechseck“-Funktion. Was passiert, wenn du bei jeder Wiederholung nur um 60 Grad drehst?"
       2-3 Artist Functions 12 Mike: "Funktionen sind für das mehrfache Zeichnen von komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben alle 100 Pixel Abstand zueinander.)  "
       2-3 Artist Functions 12 a: "Funktionen sind für das mehrfache Zeichnen von komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben alle 100 Pixel Abstand zueinander.)  "
       2-3 Artist Functions 12: "Funktionen sind für das mehrfache Zeichnen von komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben alle 100 Pixel Abstand zueinander.)  "
+      2-3 Artist Functions 2 a: "Funktionen erlauben dir neue Blöcke zu definieren! \n\nWir haben die Blöcke die du brauchst um ein Quadrat zu zeichnen in eine Funktion namens „zeichne ein Quadrat“ verschoben. Versuche die Funktion „zeichne ein Quadrat“ zu benutzen um die Brille zu erstellen!\n Die Quadrate haben einen Abstand von 75 Pixel."
       2-3 Artist Functions 2: "Funktionen erlauben dir, neue Blöcke zu definieren! Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel."
+      2-3 Artist Functions 3 a: "Ändere die Funktion \"zeichne ein Quadrat\" um die Brillengläser mit Rahmen zu zeichnen, die eine Seitenlänge von 115px haben. \n\nDie Quadrate sind jetzt 45 Pixel auseinander."
       2-3 Artist Functions 3: "Bearbeite die Funktion, um ein Quadrat mit einer Seitenlänge von 115 und zeichne die größeren Gläser. Die Quadrate sind jetzt 45 Pixel auseinander."
       2-3 Artist Functions 4: Verwende den „Wiederholen"-Block, um diese 3 Quadrate zu zeichnen.
       2-3 Artist Loops 1: Kannst du ein Sechseck mit Seiten, die 100 Pixel lang sind, zeichnen, um die Zelle zu beenden? Bedenke, das du nur 60 Grad drehen musst!

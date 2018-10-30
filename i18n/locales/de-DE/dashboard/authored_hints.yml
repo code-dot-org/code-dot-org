@@ -2,6 +2,7 @@ de:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a: Wenn du den Codeblock "Gehe vorwärts um 100 Pixel" benutzt, werde ich automatisch eine Linie zeichnen.
         2-3_Artist_1_new_b: Hast du Probleme um die Ecke zu gehen? Benutze den `nach rechts drehen um 90 Grad`-Baustein.
       2-3 Artist 11_authored_hint:
         2-3_Artist_11_a: 'Hast du Probleme mit den Winkeln? Du musst 360 Grad in 8 Drehungen machen. Wie viel ist 360/8? '
@@ -376,6 +377,7 @@ de:
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
       grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a: Wenn du den Codeblock "Gehe vorwärts um 100 Pixel" benutzt, werde ich automatisch eine Linie zeichnen.
         2-3_Artist_1_new_b: Hast du Probleme um die Ecke zu gehen? Benutze den `nach rechts drehen um 90 Grad`-Baustein.
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Tipp: Jedes Schnurrhaar ist 75 Pixel lang.'
@@ -402,6 +404,7 @@ de:
       grade4_artist_functions_challenge2_authored_hint:
         Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
       grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a: Wenn du den Codeblock "Gehe vorwärts um 100 Pixel" benutzt, werde ich automatisch eine Linie zeichnen.
         2-3_Artist_1_new_b: Hast du Probleme um die Ecke zu gehen? Benutze den `nach rechts drehen um 90 Grad`-Baustein.
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_b: Weil ich schon nach rechts zeige, ist es wohl am einfachsten mit Vorwärtsbewegen anzufangen und dann Linksdrehungen zu machen um das Dreieck zu erstellen.

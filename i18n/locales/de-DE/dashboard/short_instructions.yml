@@ -52,6 +52,7 @@ de:
       2-3 Artist Functions 12: "Funktionen sind für das mehrfache Zeichnen von komplexen Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen, um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben alle 100 Pixel Abstand zueinander.)  "
       2-3 Artist Functions 13: Wir haben dir vier Funktionen zur Verfügung gestellt. Verwende sie beliebig innerhalb von einer oder mehreren Schleifen, um Bilder zu zeichnen, die du mit deinen Freunden teilen kannst. Klicke ausführen, um ein Beispiel zu sehen.
       2-3 Artist Functions 2: "Funktionen erlauben dir, neue Blöcke zu definieren! Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel."
+      2-3 Artist Functions 3 a: "Ändere die Funktion \"zeichne ein Quadrat\" um die Brillengläser mit Rahmen zu zeichnen, die eine Seitenlänge von 115px haben. \n\nDie Quadrate sind jetzt 45 Pixel auseinander."
       2-3 Artist Functions 3: "Bearbeite die Funktion, um ein Quadrat mit einer Seitenlänge von 115 und zeichne die größeren Gläser. Die Quadrate sind jetzt 45 Pixel auseinander."
       2-3 Artist Functions 4: Verwende den „Wiederholen"-Block, um diese 3 Quadrate zu zeichnen.
       2-3 Artist Functions 7: 'Benutze die „Zeichne ein Haus“- Funktion, um zwei Häuser mit zwei verschiedenen Parametern zu zeichnen. (Hinweis: Das erste Haus hat 100 Pixel.)'

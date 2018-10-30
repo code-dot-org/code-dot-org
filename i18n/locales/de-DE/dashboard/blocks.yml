@@ -279,6 +279,18 @@ de:
         text: nach links drehen
       RyanLab_turnRight:
         text: nach rechts drehen
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"x"': x-Position
+            '"y"': y-Position
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"x"': x-Position
+            '"y"': y-Position
       craft_ifPath:
         options:
           DIR:
