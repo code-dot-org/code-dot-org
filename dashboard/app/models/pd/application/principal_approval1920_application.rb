@@ -231,11 +231,6 @@ module Pd::Application
       end
     end
 
-    def underrepresented_minority_percent
-      percentages = sanitize_form_data_hash
-      percentages[:american_indian].to_i + percentages[:hispanic].to_i + percentages[:black].to_i + percentages[:pacific_islander].to_i
-    end
-
     def school
       @school ||= School.includes(:school_district).find_by(id: sanitize_form_data_hash[:school])
     end

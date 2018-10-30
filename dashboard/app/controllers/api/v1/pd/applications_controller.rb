@@ -271,7 +271,7 @@ module Api::V1::Pd
 
     def get_csv_text(applications, role)
       prefetch applications, role: role
-      course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
+      course = role.to_s.split('_').first # course is the first part of role, e.g. 'csf'
 
       [
         TYPES_BY_ROLE[role.try(&:to_sym)].csv_header(course),
