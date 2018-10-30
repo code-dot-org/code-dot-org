@@ -10,6 +10,7 @@ import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
+import danceMsg from './locale';
 import {reducers, setSong} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
@@ -302,10 +303,10 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
 
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
-    this.message = message;
+    this.message = danceMsg[message]();
   } else if (result === false) {
     this.testResults = TestResults.APP_SPECIFIC_FAIL;
-    this.message = message;
+    this.message = danceMsg[message]();
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
