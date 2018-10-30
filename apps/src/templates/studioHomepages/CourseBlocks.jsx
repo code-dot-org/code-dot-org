@@ -144,9 +144,9 @@ export class CourseBlocksHoc extends Component {
         return ['#aquatic', '#starwars', '#frozen', '#hourofcode'];
       case 'dance':
         if (this.props.isInternational) {
-          return ['#dance', '#aquatic', '#starwars', '#hourofcode'];
+          return ['#dance', '#aquatic', '#frozen', '#hourofcode'];
         } else {
-          return ['#dance', '#aquatic', '#starwars', '#applab-intro'];
+          return ['#dance', '#aquatic', '#applab-intro', '#flappy'];
         }
       default:
         return ['#hero', '#starwars', '#frozen', '#hourofcode'];
@@ -182,6 +182,8 @@ export class CourseBlocksHoc extends Component {
             <br/>
             <br/>
             <div className="row">
+              {/* TODO: (madelynkasula) If Flappy is in 1st row, what should replace Flappy on line below? */}
+              {/* Can we remove 2nd row? It's never used... */}
               <ProtectedStatefulDiv ref="flappy"/>
               <ProtectedStatefulDiv ref="infinity"/>
               <ProtectedStatefulDiv ref="playlab"/>
