@@ -30,7 +30,7 @@
           ],
           [
             "(Random)",
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]"
+            "['disco', 'rainbow', 'diamonds'][randomInt(0,2)]"
           ]
         ]
       }
