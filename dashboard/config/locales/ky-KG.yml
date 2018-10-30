@@ -24,6 +24,7 @@ ky:
   submit: Кошуу
   cancel: Жок кыл
   okay: Окай
+  or: же
   already_started: 'Баштап койдуңар беле? Мындан уланткыла >> '
   continue: Улантуу
   auth:
