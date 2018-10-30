@@ -247,6 +247,14 @@ si:
         text: වමට හැරෙන්න
       RyanLab_turnRight:
         text: දකුණට හැරෙන්න
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
       craft_ifPath:
         options:
           DIR:
@@ -256,6 +264,10 @@ si:
           TYPE:
             "'sand'": වැලි
             "'planksOak'": ඕක් ලෑලි
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": වැලි
       craft_moveForward:
         text: ඉදිරියට යන්න
       craft_placeTorch:
