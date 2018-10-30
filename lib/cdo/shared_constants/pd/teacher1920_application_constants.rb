@@ -139,7 +139,7 @@ module Pd
         phone: "Home or cell phone",
         regional_partner_name: "Regional Partner",
         assigned_workshop: "Assigned Workshop",
-        total_score: "Total score",
+        total_score: "Bonus Points",
         notes: "Notes",
         alternate_email: "Alternate email",
         district_name: "School district",
