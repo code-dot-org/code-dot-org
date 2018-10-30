@@ -79,7 +79,7 @@ class SchoolDistrict < ActiveRecord::Base
       CDO.log.info "Seeding 2017-2018 school district data"
       import_options_1718 = {col_sep: ",", headers: true, quote_char: "\x00"}
       AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_lea_029_1718_w_0a_03302018.csv") do |filename|
-        SchoolDistrict.merge_from_csv(filename, import_options_1718) do |row|
+        SchoolDistrict.merge_from_csv(filename, import_options_1718, false) do |row|
           {
             id:    row['LEAID'].to_i,
             name:  row['LEA_NAME'].upcase,
