@@ -47,7 +47,7 @@ def get_social_metadata_for_page(request)
         video: videos[:creativity_is]
       },
       "default" => {
-        title: I18n.t(:og_title),
+        title: hoc_s(:social_hoc2018_code_org_what_create),
         description: I18n.t(:og_description),
         image: {path: "/images/fit-1220/social-media/default-og-image.jpg", width: 1220, height: 640},
         video: videos[:what_most_schools_dont_teach]
