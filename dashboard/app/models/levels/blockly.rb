@@ -566,9 +566,8 @@ class Blockly < Level
 
   # Display translated custom block text
   def localized_shared_blocks(level_objects)
+    return nil if level_objects.blank?
     level_objects_copy = level_objects.deep_dup
-
-    return nil if level_objects_copy.blank?
     level_objects_copy.each do |level_object|
       next if level_object.blank?
       block_text = level_object[:config]["blockText"]

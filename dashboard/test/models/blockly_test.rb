@@ -211,7 +211,38 @@ XML
     assert_not_equal localized_custom_blocks, custom_block
   end
 
-  test 'localized share blocks handles bad data' do
+  test 'nil is returned if level_objects is blank' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectColor" => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "first": "red",
+                "second": "blue",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block = []
+
+    custom_block_copy = custom_block
+    localized_custom_blocks = level.localized_shared_blocks(custom_block_copy)
+
+    assert_nil localized_custom_blocks
+  end
+
+  test 'does not return a translated string if block text is not present' do
     test_locale = :"te-ST"
     I18n.locale = test_locale
     custom_i18n = {
