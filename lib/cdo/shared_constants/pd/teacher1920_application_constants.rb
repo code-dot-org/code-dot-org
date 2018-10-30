@@ -139,6 +139,10 @@ module Pd
       cs_how_many_minutes: 'How many minutes will your class last?'
     }.freeze
 
+    TWO_ANSWER_QUESTIONS = {
+      plan_to_teach: [:plan_to_teach, :principal_plan_to_teach]
+    }
+
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
 

@@ -24,6 +24,7 @@ import {
   PageLabels,
   SectionHeaders,
   ScoreableQuestions,
+  TwoAnswerQuestions,
   ValidScores as TeacherValidScores
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
@@ -570,16 +571,6 @@ export class DetailViewContents extends React.Component {
     );
 
     if (this.props.isWorkshopAdmin && this.props.applicationData.status === 'accepted' && this.props.applicationData.locked) {
-      if (this.props.applicationData.attending_teachercon) {
-        registrationLinks.push((
-          <DetailViewResponse
-            question="TeacherCon Registration Link"
-            layout="lineItem"
-            answer={buildRegistrationLink('teachercon_registration')}
-          />
-        ));
-      }
-
       if (this.props.applicationData.fit_workshop_id) {
         registrationLinks.push((
           <DetailViewResponse
@@ -619,6 +610,11 @@ export class DetailViewContents extends React.Component {
 
   renderScoringSection = (key) => {
     const snakeCaseKey = _.snakeCase(key);
+    const allKeys = [snakeCaseKey]
+
+    if (TwoAnswerQuestions[snakeCaseKey]) {
+      allKeys.shift(TwoAnswerQuestions[snakeCaseKey][1]);
+    }
 
     if (this.props.viewType === 'facilitator') {
       return false;
@@ -708,7 +704,7 @@ export class DetailViewContents extends React.Component {
                           {LabelOverrides[key] || PageLabels[header][key]}
                         </td>
                         <td style={styles.answerColumn}>
-                          {this.renderAnswer(this.props.applicationData.form_data[key])}
+                          {this.renderAnswer(key, this.props.applicationData.form_data[key])}
                         </td>
                         {this.renderScoringSection(key)}
                       </tr>
@@ -724,7 +720,15 @@ export class DetailViewContents extends React.Component {
     );
   };
 
-  renderAnswer = (answer) => {
+  renderAnswer = (key, answer) => {
+    if (TwoAnswerQuestions[key]) {
+      return (
+        <div>
+          <p>Teacher Response: {this.props.applicationData.form_data[TwoAnswerQuestions[key][0]]}</p>
+          <p>Principal Response: {this.props.applicationData.form_data[TwoAnswerQuestions[key][1]]}</p>
+        </div>
+      )
+    }
     if (Array.isArray(answer)) {
       return answer.sort().join(', ');
     } else {
