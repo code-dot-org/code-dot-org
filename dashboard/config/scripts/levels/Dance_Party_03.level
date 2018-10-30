@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -50,12 +50,9 @@
     "custom_helper_library": "SPRITE_NAMES = [\"CAT\", \"DUCK\", \"MOOSE\"];\r\n\r\nMOVE_NAMES = [\r\n  {\r\n    name: \"Rest\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"ClapHigh\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Clown\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Dab\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"DoubleJam\",\r\n    mirror: false\r\n  },\r\n  {\r\n    name: \"Drop\",\r\n    mirror: true\r\n  },\r\n  {\r\n    name: \"Floss\",\r\n    mirror: true\r\n  }\r\n  ];",
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.\\n\\n*The level ends after 12 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3687dbd3d1ccf3521eb8337a48d39df5/HOC Dance 2_draft.mp3\"}]",
-    "default_song": "hammer",
+    "default_song": "cantholdus_macklemore",
     "long_instructions": "*Now we're grooving!* \r\n\r\nAdd a <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml> block to your workspace. Make the dancer start a new move after 6 measures.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

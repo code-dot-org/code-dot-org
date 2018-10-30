@@ -21,12 +21,9 @@
   %link{href: asset_path('css/tooltipster/tooltipster.min.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# Gamelab script dependencies
-- if use_gamelab || use_dance
+- if use_gamelab
   %script{src: minifiable_asset_path('js/p5play/p5.js')}
   %script{src: minifiable_asset_path('js/p5play/p5.play.js')}
-
-- if use_dance
-  %script{src: asset_path('js/p5play/p5.sound.min.js')}
 
 -# Droplet script dependencies (only when editor present)
 - if use_droplet && !hide_source
