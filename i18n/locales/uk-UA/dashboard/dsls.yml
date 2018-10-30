@@ -916,6 +916,8 @@ en:
         Question: Питання
       CSDU2 Match RGB Colors:
         Question: Питання
+      Coordinate Matching:
+        Dog: Собака
       K-1 Maze Match 1:
         Instructions: Інструкції
       PDAlg Design Recipe Video:
@@ -1212,6 +1214,12 @@ en:
     right: праворуч
   U4L05 Multiple Choice:
     right: праворуч
+  U4L06 Assessment 2:
+    column: колона
+    row: ряд
+  U4L06 Assessment 3:
+    column: колона
+    row: ряд
   U4L06 Multiple Choice:
     right: праворуч
   U4L06 Reflection Q 1:
