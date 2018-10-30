@@ -53,9 +53,10 @@ export default class StartNewProject extends React.Component {
       ['spritelab', 'dance','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'] :
       ['spritelab','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'];
 
-    const MINECRAFT = includeMCAquatic ?
-      ['minecraft_aquatic', 'minecraft_hero', 'minecraft_designer', 'minecraft_adventurer'] :
-      ['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer'];
+    let minecraft_buttons = ['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer'];
+    if (includeMCAquatic) {
+      minecraft_buttons.unshift('minecraft_aquatic');
+    }
 
     const FOURTH_BASIC_DEFAULT_PROJECT_TYPE =
       includeDanceParty ? 'dance' : 'flappy';
@@ -113,7 +114,7 @@ export default class StartNewProject extends React.Component {
             />
             <NewProjectButtons
               description={i18n.projectGroupMinecraft()}
-              projectTypes={MINECRAFT}
+              projectTypes={minecraft_buttons}
             />
             {canViewAdvancedTools &&
               <NewProjectButtons
