@@ -188,11 +188,11 @@ sk:
       draw eye: nakresli oko
       Make a Dot: Sprav bodku
       bubble sort: Bubble Sort
-      move right: posunúť doprava
+      move right: posuň doprava
       say number: povedz číslo
       move up: posunúť nahor
       move down: posunúť nadol
-      move left: posunúť doľava
+      move left: posuň doľava
       kill alien: zabi mimozemšťana
       click: klikni
       Send Actor 1 to opposite: Pošli Postavu 1 naproti
@@ -290,9 +290,9 @@ sk:
       Make Actor 1 Jump: Nechaj Postavu 1 Vyskočiť
       Choose Number: Vyber Číslo
       Move Bird: Posuň Vtáčika
-      turn left: otočiť vľavo
-      move forward: posunúť dopredu
-      turn right: otočiť vpravo
+      turn left: otoč sa vľavo
+      move forward: posuň sa dopredu
+      turn right: otoč sa vpravo
       drawDot: nakresliBodku
       draw a rectangle: nakresli obdĺžnik
       Which Course for My Students?: Ktorý Kurz pre Mojich Študentov?

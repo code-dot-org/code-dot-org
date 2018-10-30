@@ -18,16 +18,16 @@ sk:
       name:
         course1:
           title: Kurz 1
-          description: Na úvod začni s kurzom 1. Študent tu vytvára počítačové programy, ktoré pomáhajú učiť sa spolupracovať s ostatnými, rozvíjať schopnosť riešiť problémy a vytrvať pri ťažkých úlohách. Na konci tohoto kurzu je študent schopný tvoriť vlastné hry alebo príbehy, ktoré môže zdielať. Odporúčné pre triedy k-1.
-          description_short: Začnite Kurzom 1 pre čitateľa začiatočníka.
+          description: Na úvod začni Kurzom 1. Študenti vytvoria svoje prvé programy, ktoré ich naučia spolupracovať s ostatnými a rozvinú ich schopnosť riešiť problémy a vytrvať pri ťažkých úlohách. Na konci tohoto kurzu je študent schopný tvoriť vlastné hry alebo príbehy, ktoré môže zdielať. Odporúčné pre predškolákov a prvý ročník.
+          description_short: Predstavenie informatiky pre predškolákov.
           description_audience: Vek 4-6
           stages:
             'Artist: Loops':
-              name: 'Kreslič: cykly'
+              name: 'Umelec: Cykly'
             'Artist: Sequence':
-              name: 'Umelec: postupnosť'
+              name: 'Umelec: Postupnosť'
             'Artist: Shapes':
-              name: 'Umelec: tvary'
+              name: 'Umelec: Tvary'
             'Bee: Loops':
               name: 'Včela: slučky'
             'Bee: Sequence':
@@ -55,23 +55,23 @@ sk:
             Spelling Bee:
               name: Hláskovanie
             'Studio: Create a Story':
-              name: 'Hravé laboratórium: Vytvor príbeh'
+              name: 'Play Lab: Vytvor príbeh'
             The Big Event:
               name: Veľká udalosť
         course2:
           title: Kurz 2
           description: Začni kurz 2, je pre študentov, ktorí nemajú predchádzajúce skúseností s programovaním. V tomto kurze študent vytvorí program na riešenie problémov, a vývinie interaktívne hry alebo príbehy, ktoré vie zdieľať. Doporučené pre triedy 2 až 5. ročníka.
-          description_short: Úvod do vedy o počítačoch pre študentov.
+          description_short: Predstavenie informatiky pre žiakov, ktorí už vedia čítať.
           description_audience: Vek 6 + (vyžaduje čítanie)
           stages:
             'Artist: Debugging':
-              name: 'Umelec: ladenie'
+              name: 'Umelec: Hľadanie a odstraňovanie chýb'
             'Artist: Loops':
-              name: 'Kreslič: cykly'
+              name: 'Umelec: Cykly'
             'Artist: Nested Loops':
               name: 'Umelec: Vnorené cykly'
             'Artist: Sequence':
-              name: 'Umelec: postupnosť'
+              name: 'Umelec: Postupnosť'
             'Bee: Conditionals':
               name: 'Včela: podmienky'
             'Bee: Debugging':
@@ -97,7 +97,7 @@ sk:
             Relay programming:
               name: Štafetové programovanie
             'Studio: Create a Story':
-              name: 'Hravé laboratórium: Vytvor príbeh'
+              name: 'Play Lab: Vytvor príbeh'
             The Big Event:
               name: Veľká udalosť
             Your Digital Footprint:
@@ -105,17 +105,17 @@ sk:
         course3:
           title: Kurz 3
           description: Kurz 3 je určený pre študentov, ktorí pred tým absolvovali kurz 2. Študenti hlbšie preniknú do témy programovania predstavenej v predchádzajúcich kurzoch, s cieľom vytvoriť flexibilné riešenie komplexnejších problémov. Absolvovaním tohoto kurzu je študent schopný vytvoriť interaktívne príbehy a hry, ktoré môže zdieľať s kýmkoľvek. Kurz je odporúčaný pre žiakov 4. a 5. ročníka. 
-          description_short: Kurz 3 nadväzuje na kurz 2.
+          description_short: Ponor sa hlbšie do programovania a vybuduj hry a interaktívne príbehy. Toto je pokračovanie Kurzu 2.
           description_audience: Vek 8-18
           stages:
             Artist:
               name: Umelec
             'Artist: Functions':
-              name: 'Umelec: funkcie'
+              name: 'Umelec: Funkcie'
             'Artist: Nested Loops':
               name: 'Umelec: Vnorené cykly'
             'Artist: Patterns':
-              name: 'Umelec: vzory'
+              name: 'Umelec: Vzory'
             'Bee: Conditionals':
               name: 'Včela: podmienky'
             'Bee: Debugging':
@@ -147,20 +147,20 @@ sk:
             Songwriting:
               name: Písanie pesničiek s parametrami
             'Studio: Create a Game':
-              name: 'Herné laboratórium - Vytvor hru'
+              name: 'Play Lab: Vytvor hru'
             'Studio: Create a Story':
-              name: 'Hravé laboratórium: Vytvor príbeh'
+              name: 'Play Lab: Vytvor príbeh'
         playlab:
-          title: Herné laboratórium
-          description: Vytvor príbeh alebo hru s Herným Laboratóriom!
-          description_short: Vytvor príbeh alebo hru s Herným Laboratóriom!
+          title: Play Lab
+          description: Vytvor príbeh alebo hru s Play Labom!
+          description_short: Vytvor príbeh alebo hru s Play Labom!
           stages:
             Play Lab:
-              name: Herné laboratórium
+              name: Play Lab
         artist:
           title: Umelec
-          description: Nakresli skvelé obrázky a vzory v časti nazvanej "Umelec"!
-          description_short: Nakresli skvelé obrázky a vzory v časti nazvanej "Umelec"!
+          description: Nakresli skvelé obrázky a vzory s Umelcom!
+          description_short: Nakresli skvelé obrázky a vzory s Umelcom!
           stages:
             Artist:
               name: Umelec
@@ -181,21 +181,19 @@ sk:
         course4:
           title: Kurz 4
           description: Kurz 4 je určený pre študentov, ktorí majú za sebou kurz 2 a 3. Prechádzaním jednotlivých úrovní, sa študent  učí riešiť úlohy so zvýšenou zložitosťou. Dokončením tohoto kurzu vie študent vytvárať programy, ktoré mu umožnia demonštrovať viac zručnosti, vrátane slučky a funkcie s parametrami. Doporučené pre ročník 4 až 8. -8.
-          description_short: Pokračovaním kurzu 3 je budovanie zložitejších programov s pojmami ako slučky a funkcie s parametrami. 
+          description_short: Vybuduj komplexnejšie programy s konceptami ako opakovacie cykly či funkcie s parametrami. Tento kurz nadväzuje na Kurz 3.
           description_audience: 9-18 rokov
           stages:
             Artist:
               name: Umelec
             Artist Binary:
-              name: Binárne v kurze Umelec
-            'Artist: For Loops':
-              name: 'časť Umelec: slučky'
+              name: Binárny Umelec
             'Artist: Functions':
-              name: 'Umelec: funkcie'
+              name: 'Umelec: Funkcie'
             'Artist: Functions with Parameters':
-              name: 'časť Umelec: Funkcie s parametrami'
+              name: 'Umelec: Funkcie s parametrami'
             'Artist: Variables':
-              name: 'Umelec: premenné'
+              name: 'Umelec: Premenné'
             'Bee: For Loops':
               name: 'časť Včela: slučky'
             Maze and Bee:
@@ -203,13 +201,13 @@ sk:
         Course4pre:
           stages:
             'Artist: Functions':
-              name: 'Umelec: funkcie'
+              name: 'Umelec: Funkcie'
             'Artist: Loops':
-              name: 'Kreslič: cykly'
+              name: 'Umelec: Cykly'
             'Artist: Nested Loops':
               name: 'Umelec: Vnorené cykly'
             'Artist: Sequence':
-              name: 'Umelec: postupnosť'
+              name: 'Umelec: Postupnosť'
             'Bee: Conditionals':
               name: 'Včela: podmienky'
             'Bee: Debugging':
@@ -268,15 +266,15 @@ sk:
             Song Writing:
               name: Napísanie piesne
             The Artist:
-              name: Postava
+              name: Umelec
             The Artist 2:
-              name: Postava 2
+              name: Umelec 2
             The Artist 3:
-              name: Postava 3
+              name: Umelec 3
             The Artist 4:
-              name: Postava 4
+              name: Umelec 4
             The Artist 5:
-              name: Postava 5
+              name: Umelec 5
             The Farmer:
               name: Farmár
             The Farmer 2:
@@ -294,10 +292,12 @@ sk:
           description: Upraviť kód
           description_short: Upraviť kód
           stages:
+            Applab:
+              name: App Lab
             Play Lab:
-              name: Herné laboratórium
+              name: Play Lab
             The Artist:
-              name: Postava
+              name: Umelec
             The Maze:
               name: Bludisko
         events:
@@ -309,7 +309,7 @@ sk:
               name: Odraziť
         flappy:
           title: Flappy kód
-          description: Chcete napísať svoju vlastnú hru za menej než 10 minút? Skúste náš Flappy Code tutoriál!
+          description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj náš Flappy kód!
           stages:
             Flappy Code:
               name: Flappy kód
@@ -369,12 +369,16 @@ sk:
               name: Vytvor recept
         allthethings:
           stages:
+            AppLab:
+              name: App Lab
             Artist:
               name: Umelec
             Bounce:
               name: Odraziť
             Flappy:
               name: Flappy
+            Gamelab:
+              name: Game Lab
             Jigsaw:
               name: Skladačka
             Maze:
@@ -382,7 +386,7 @@ sk:
             Minecraft:
               name: Minecraft
             Web Lab:
-              name: Webové laboratórium
+              name: Web Lab
         algebraPD2b:
           stages:
             Teacher Dashboard:
@@ -390,7 +394,7 @@ sk:
         cspfacilitator:
           stages:
             App Lab:
-              name: Laboratórium aplikácií
+              name: App Lab
             Internet Simulator:
               name: Simulátor Internetu
         ECSPD2:
@@ -534,7 +538,7 @@ sk:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Herné laboratórium
+              name: Game Lab
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -542,7 +546,7 @@ sk:
         MikeTest:
           stages:
             Artist Functions:
-              name: Funkcie umelca
+              name: Umelec - Funkcie
         artistExemplar:
           description_audience: Vek 8-18
         kinderTest:
@@ -566,7 +570,7 @@ sk:
             Digital Citizenship:
               name: Digitálne Občianstvo
             'New Artist: Functions':
-              name: 'Funkcie v Artist'
+              name: 'Nový Umelec: Funkcie'
             Songwriting:
               name: Písanie pesničiek s parametrami
         grade1:
@@ -583,12 +587,10 @@ sk:
               name: Nenájdené chyby
         grade5:
           stages:
-            'Artist: For Loops':
-              name: 'časť Umelec: slučky'
             'Artist: Functions with Parameters':
-              name: 'časť Umelec: Funkcie s parametrami'
+              name: 'Umelec: Funkcie s parametrami'
             'Artist: Variables':
-              name: 'Umelec: premenné'
+              name: 'Umelec: Premenné'
             'Bee: For Loops':
               name: 'časť Včela: slučky'
             Digital Citizenship:
@@ -615,6 +617,8 @@ sk:
               name: 'Farmár: cykly typu "Zatiaľ čo"'
         csd3-2017:
           stages:
+            Drawing in Game Lab:
+              name: Kreslenie v Game Labe
             Velocity:
               name: Rýchlosť
             Functions:
@@ -682,11 +686,11 @@ sk:
             Binary Images:
               name: Binárne obrázky
             Binary Artist Puzzles:
-              name: Binárne hádanky v kurze Umelec
+              name: Binárne úlohy pre Umelca
             Auto-Run Binary Artist Puzzles:
               name: Samospúšťacie binárne hádanky v kurze Umelec
             Play Lab:
-              name: Herné laboratórium
+              name: Play Lab
         csd2-2017:
           stages:
             Peer Review:
@@ -721,7 +725,7 @@ sk:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmus z reálneho života: Papierové lietadielka'
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Binary Bracelets:
               name: Binárne náramky
             Your Digital Footprint:
@@ -731,25 +735,27 @@ sk:
         coursed-draft:
           stages:
             Nested Loops in Artist:
-              name: Vnorené slučky v kurze Umelec
+              name: Vnorené cykly s Umelcom
             Conditionals with Cards:
               name: Podmienky s kartami
             Digital Citizenship:
               name: Digitálne Občianstvo
             Artist Binary:
-              name: Binárne v kurze Umelec
+              name: Binárny Umelec
             Nested Loops:
               name: Vnorené slučky
             Introduction:
               name: Úvod
             Nested Loops Project in Artist:
-              name: Projekt s vnorenými slučkami v kurze Umelec
+              name: Projekt s vnorenými cyklami s Umelcom
         coursee-draft:
           stages:
             Digital Citizenship:
               name: Digitálne Občianstvo
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelcom
+            Build a Play Lab Game:
+              name: Vytvor hru v Play Labe
             Internet:
               name: Internet
             Crowdsourcing:
@@ -765,13 +771,11 @@ sk:
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
             For Loop Fun:
               name: Zábavné opakovanie
-            For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Introduction:
@@ -805,7 +809,7 @@ sk:
         csf2harvey:
           stages:
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelcom
             Binary:
               name: Binárny
         sciencepd5:
@@ -825,6 +829,7 @@ sk:
             Functions with Parameters:
               name: Funkcie s parametrami
         workshop-gamelab:
+          title: Game Lab Workshop
           stages:
             Introduction:
               name: Úvod
@@ -893,9 +898,9 @@ sk:
         artist-and-bb8:
           stages:
             C9 Artist Loops:
-              name: C9 slučky v kurze Umelec
+              name: C9 cykly s Umelcom
             D6 Frozen Artist:
-              name: Umelec Frozen D6
+              name: D6 Umelec Frozen
             Bounce:
               name: Odraziť
         coursea-2017:
@@ -919,7 +924,7 @@ sk:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmus z reálneho života: Papierové lietadielka'
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
           title: Kurz C
           assignment_family_title: Kurz C
         coursed-2017:
@@ -929,11 +934,11 @@ sk:
             Nested Loops:
               name: Vnorené slučky
             Nested Loops in Artist:
-              name: Vnorené slučky v kurze Umelec
+              name: Vnorené cykly s Umelcom
               description_student: Tuto používame vnorené slučky a kreslíme pôsobivé kresby, ktorými sa môžeš poschváliť blízkym a rodine.
               description_teacher: Tak a teraz, keď študenti vedia naskladať vlastné slučky, tvoria množstvo krásnych vecí. V tejto lekcii študenti uvidia sériu cvičení ako si vytvoriť vlastné portfólio útvarov.
             Artist Binary:
-              name: Binárne v kurze Umelec
+              name: Binárny umelec
               description_student: Naviguj svojho umelca tak, aby vytvoril binárny obraz len s použitím príkazu zapnúť a vypnúť pixely.
               description_teacher: Binárna forma je vo svete počítačov dôležitá. Väčšina počítačov dnes ukladá všetky informácie v binárnej sústave. Táto lekcia ukazuje ako je možné preniesť niečo z bežného života do série zapnutí a vypnutí. Študenti skladajú binárne útvary v Umelcovi prenesením núl a jednotiek do zapnutí a vypnutí (alebo čiernych a bielych).
             Nested Loops Project in Artist:
@@ -950,15 +955,13 @@ sk:
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
             For Loop Fun:
               name: Zábavné opakovanie
-            For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
             Explore Project Ideas:
               description_teacher: "V záverečnom projekte, nasledujúce štyri lekcie, dostávajú študenti možnosť overiť svoje kódovacie zručnosti v praxi. Projekt umožní jednotlivcom získať skúsenosť s kódovaním tak, že vytvoria exemplár, ktorý môžu zdielať s rovesníkmi a blízkymi. \n\nVo fáze prieskumu môžu študenti vidieť pre-postavené príklady projektov v Umelcovi a aj v Play Labe. Ďalej sa študenti oboznámia s procesom dizajnu a ako ho implementovať do vlastných projektov. Dostanú priestor tvoriť vlastné projekty buď v Umelcovi alebo v Play Labe (toto je pravdepodobne najdlhšia časť projektu). Nakoniec, budú študenti schopní prezentovať svoje projekty rovesníkom.\n"
             The Design Process:
@@ -966,7 +969,7 @@ sk:
             Build Your Project:
               description_teacher: "V priebehu štyroch hodín budú študenti pracovať na programovaní dizajnu vlastného projektu v kurze Play Lab alebo Umelec. \n\nŠtudenosti dostanú priestor vytvoriť vlastný projekt v kurzoch Umelec či Play Lab. Toto bude pravdepodovne najdlhšia časť kurzu. Príručku kurzu pre všetky štyri úrovne procesu nájdeme v prvom [here](https://curriculum.code.org/csf/coursee/12/)."
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelcom
               description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
               description_teacher: Študenti sa oboznámia s používaním funkcií na stránke Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky. Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
             Functions in Farmer:
@@ -976,7 +979,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Nested Loops:
@@ -987,15 +990,14 @@ sk:
         coursef-2017:
           stages:
             Variables in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
               description_student: Kreatívne v triede! V týchto úlohách robíš fantastické kresby použitím premenných.
               description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
             For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
               description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" slučky. Všetkým padne sánka dolu z tých obrázkov.
               description_teacher: V tejto lekcii, použitím Umelca, študenti pokračujú v precvičovaní slučiek. Študenti dokončujú úlohy spájaním možností premenných i slučiek, a v slučkách aj pre tvorbu zložitejších dizajnov. Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
               description_student: Priprav si svoje programovacie prsty. V tejto hre použiješ funkcie a parametre na vytvorenie pôsobivých krezieb v Umelcovi.
               description_teacher: Tu študenti pokračujú vo funkciach s či bez premenných. Predtým ako sa pustia do úprav funcií vo voľných hrách, dostanú priestor si s nimi tvoriť vlastné kresby.
             Functions with Parameters in Bee:
@@ -1013,18 +1015,18 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
           title: Kurz F
           assignment_family_title: Kurz F
-          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme si vlastné umenie, príbeh alebo hru.
+          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme si vlastné umenelecké diela, príbeh alebo hru.
         express-2017:
           stages:
             Introduction:
               name: Úvod
             Nested Loops Project in Artist:
-              name: Projekt s vnorenými slučkami v kurze Umelec
+              name: Projekt s vnorenými cyklami s Umelcom
             Internet:
               name: Internet
             Digital Citizenship:
@@ -1034,15 +1036,13 @@ sk:
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
             For Loop Fun:
               name: Zábavné opakovanie
-            For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
             Nested Loops Project in Frozen:
               name: Vnorené cykly vo Frozen
             Building a Foundation:
@@ -1070,7 +1070,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Nested Loops:
               name: Vnorené slučky
             Nested Loops with Frozen:
@@ -1078,7 +1078,7 @@ sk:
             Conditionals:
               name: Podmienky
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelcom
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1090,15 +1090,15 @@ sk:
             Nested Loops:
               name: Vnorené slučky
             Nested Loops in Artist:
-              name: Vnorené slučky v kurze Umelec
+              name: Vnorené cykly s Umelcom
             Nested Loops Project in Artist:
-              name: Projekt s vnorenými slučkami v kurze Umelec
+              name: Projekt s vnorenými cyklami s Umelcom
             Conditionals with Cards:
               name: Podmienky s kartami
             Digital Citizenship:
               name: Digitálne Občianstvo
             Artist Binary:
-              name: Binárne v kurze Umelec
+              name: Binárny Umelec
             Building a Foundation:
               name: Stavanie základov
             Loops in Ice Age:
@@ -1110,29 +1110,27 @@ sk:
             Nested Loops Project in Frozen:
               name: Projekt s vnorenými cyklami vo Frozen
             Variables in Artist:
-              name: Premenné v kurze Umelec
-            For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
+              name: Premenné s Umelcom
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
             Building a Foundation:
               name: Stavanie základov
             Nested Loops:
               name: Vnorené slučky
             Loops in Artist (UPDATED!):
-              name: Slučky v kurze Umelec (AKTUALIZOVANÉ!)
+              name: Cykly s Umelcom (AKTUALIZOVANÉ!)
         new-e:
           stages:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Conditionals:
               name: Podmienky
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelcom
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1142,21 +1140,19 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
             For Loop Fun:
               name: Zábavné opakovanie
-            For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
         csp3-staging:
           stages:
             Creating Functions:
@@ -1185,13 +1181,13 @@ sk:
         halloween:
           stages:
             Halloween Artist:
-              name: Halloween v kurze Umelec
+              name: Halloween s Umelcom
         course-e-2018:
           stages:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Nested Loops:
               name: Vnorené slučky
             Nested Loops with Frozen:
@@ -1201,7 +1197,7 @@ sk:
             Conditionals:
               name: Podmienky
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelcom
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1211,7 +1207,7 @@ sk:
             Building a Foundation:
               name: Stavanie základov
             Programming in Artist:
-              name: Programovanie v kurze Umelec
+              name: Programovanie s Umelecom
             Nested Loops with Frozen:
               name: Vnorené cykly s Frozen
             Introduction:
@@ -1219,15 +1215,13 @@ sk:
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
             For Loop Fun:
               name: Zábavné opakovanie
-            For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
         csd6-old:
           stages:
             Lists:
@@ -1292,11 +1286,9 @@ sk:
             'Events: The Big Event':
               name: Veľká udalosť
             Variables in Artist:
-              name: Premenné v kurze Umelec
-            For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
+              name: Premenné s Umelcom
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
             Programming in Artist:
               name: Kódovať Umenie
             'Loops: Getting Loopy':
@@ -1308,13 +1300,13 @@ sk:
             'Functions: Songwriting':
               name: Písanie pesničiek s parametrami
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelcom
             Envelope Variables:
               name: Obálkové premenné
             Variables as Constant in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
             Variables that Change in Artist:
-              name: Meniace sa premenné v kurze Umelec
+              name: Meniace sa premenné s Umelcom
             For Loop Fun:
               name: Zábavné opakovanie
             Binary Bracelets:
@@ -1322,7 +1314,7 @@ sk:
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
-              name: Binárne obrázky s kurzom Umelec
+              name: Binárne obrázky s Umelecom
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1358,7 +1350,7 @@ sk:
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
-              name: Binárne obrázky s kurzom Umelec
+              name: Binárne obrázky s Umelecom
             Loops in Ice Age:
               name: Slučky v Dobe Ľadovej
             Nested Loops in Frozen:
@@ -1403,7 +1395,7 @@ sk:
             'Functions: Songwriting':
               name: Písanie pesničiek s parametrami
             Functions in Artist:
-              name: Funkcie v kurze Umelec
+              name: Funkcie s Umelecom
               description_student: Jednoducho s funkciami vytvor zložitejšie kresby!
               description_teacher: Študenti sa oboznámia s používaním funkcií na stránke Code.org. V Umelcovi budeme tvoriť a upravovať veľkolepé obrázky. Študenti sa naučia viac o vnorených funkciach, čo je vlastne zvolanie jednej funkcie z vnútra inéj, ktoré sú na tvorbu komplexnejších vzorov.
             Explore Project Ideas:
@@ -1426,7 +1418,7 @@ sk:
               name: Digitálne zdieľanie
         coursef-2018:
           assignment_family_title: Kurz F
-          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme si vlastné umenie, príbeh alebo hru.
+          description_short: Naučme sa všetky pojmy zo základov informatiky a vytvorme si vlastné umenelecké diela, príbeh alebo hru.
           stages:
             'Programming: My Robotic Friends':
               name: Moji robotickí priatelia
@@ -1441,19 +1433,18 @@ sk:
             Envelope Variables:
               name: Obálkové premenné
             Variables in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
               description_student: Kreatívne v triede! V týchto úlohách robíš fantastické kresby použitím premenných.
               description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
             For Loop Fun:
               name: Zábavné opakovanie
             For Loops in Artist:
-              name: Venované slučkám v kurze Umelec
               description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" slučky. Všetkým padne sánka dolu z tých obrázkov.
               description_teacher: V tejto lekcii, použitím Umelca, študenti pokračujú v precvičovaní slučiek. Študenti dokončujú úlohy spájaním možností premenných i slučiek, a v slučkách aj pre tvorbu zložitejších dizajnov. Na koniec, vo volnej hre, budú mať možnosť vytvoriť vlastné diela.
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions with Parameters in Artist:
-              name: Funkcie s parametrami v kurze Umelec
+              name: Funkcie s parametrami s Umelcom
               description_student: Priprav si svoje programovacie prsty. V tejto hre použiješ funkcie a parametre na vytvorenie pôsobivých krezieb v Umelcovi.
               description_teacher: Tu študenti pokračujú vo funkciach s či bez premenných. Predtým ako sa pustia do úprav funcií vo voľných hrách, dostanú priestor si s nimi tvoriť vlastné kresby.
             Functions with Parameters in Bee:
@@ -1471,9 +1462,9 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Variables as Constant in Artist:
-              name: Premenné v kurze Umelec
+              name: Premenné s Umelcom
             Variables that Change in Artist:
-              name: Meniace sa premenné v kurze Umelec
+              name: Meniace sa premenné s Umelcom
         csp1-2018:
           stages:
             The Internet:

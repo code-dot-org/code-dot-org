@@ -2,7 +2,7 @@ sk:
   data:
     callouts:
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: V Umelcovi nie je tlačidlo "Krok", ale môžete posunúť posuvník doľava a sledovať Váš program detailnejšie.
+        2-3_Artist_Debugging_1_a: V Umelcovi nenájdeš tlačidlo "Krok", ale môžeš posunúť posuvník doľava a sledovať tvoj program ako beží pomalšie.
       2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Fialové kvety môžu mať 1 alebo 0 nektárov... dozvieš sa to, až keď spustíš kód!
       4-5 Artist Patterns Free Play_callout:
@@ -158,7 +158,7 @@ sk:
         Course 4 Maze 1_callout1: Stlačte "Spustiť" pre vyskúšanie programu
         Course 4 Maze 1_callout2: Presuňte blok "pohnúť" a pripojte ho pod ostatné bloky na pracovnej ploche
       Course 4 Maze 4_callout:
-        repeat: Pre opakovanie príkazov, vlož bloky do cyklu
+        repeat: Pre opakovanie príkazov, vlož bloky do cyklu "opakuj"
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: Kliknite na "Upraviť" pre úpravu tejto funkcie tak, aby v nej bol použitý parameter výška.
       Course 4 Play Lab Params 3_callout:
@@ -216,7 +216,7 @@ sk:
       MC_HOC_2017_02_Will_callout:
         MC_HOC_2017_02_Cole_1: Tvoj hráč má odteraz kamaráta. Pre agenta môžeš napísať kód, aby ti pomohol splniť úlohy.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: Toto je cyklus"opakuj". Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane.
+        MC_HOC_2017_03_Cole_1: Toto je cyklus "opakuj". Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane.
       MC_HOC_2017_04_Cole_callout:
         MC_HOC_2017_04_Cole_a: Na rozdiel od hráča sa agent môže vznášať nad vodou!
       MC_HOC_2017_04_Kiki_callout:

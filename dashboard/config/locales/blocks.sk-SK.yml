@@ -66,7 +66,7 @@ sk:
             '8': Žiadne
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -279,7 +279,7 @@ sk:
         options:
           KEY:
             '"up"': šípka hore
-            '"down"': šípka nadol
+            '"down"': šípka dole
             '"left"': šípka vľavo
             '"right"': šípka vpravo
             '"w"': Z
@@ -290,7 +290,7 @@ sk:
         options:
           KEY:
             '"up"': šípka hore
-            '"down"': šípka nadol
+            '"down"': šípka dole
             '"left"': šípka vľavo
             '"right"': šípka vpravo
             '"w"': Z
@@ -301,15 +301,27 @@ sk:
         options:
           KEY:
             '"up"': šípka hore
-            '"down"': šípka nadol
+            '"down"': šípka dole
             '"left"': šípka vľavo
             '"right"': šípka vpravo
       RyanLab_moveForward:
-        text: posunúť dopredu
+        text: posuň sa dopredu
       RyanLab_turnLeft:
-        text: otočiť vľavo
+        text: otoč sa vľavo
       RyanLab_turnRight:
-        text: otočiť vpravo
+        text: otoč sa vpravo
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
       craft_ifPath:
         options:
           DIR:
@@ -324,6 +336,6 @@ sk:
           TYPE:
             "'sand'": piesok
       craft_moveForward:
-        text: posunúť dopredu
+        text: posuň sa dopredu
       craft_placeTorch:
         text: umiestni fakľu
