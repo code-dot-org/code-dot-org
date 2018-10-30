@@ -103,11 +103,11 @@
     .smalltext= body
     .clear
     - if teacher_guide.present?
-      .audiencebar.smalltext.teacher-guide= link_to t('view_teacher_guide'), CDO.code_org_url(teacher_guide)
+      .bar.teacher-guide= link_to t('view_teacher_guide'), CDO.code_org_url(teacher_guide)
     .clear
     - if audience && current_user && showState
-      .audiencebar.smalltext.audience= audience
+      .bar.audiencebar.audience= audience
     - elsif audience
-      .bottombar.smalltext.audience= audience
+      .bar.audience= audience
 
     = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
