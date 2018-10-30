@@ -166,7 +166,7 @@ export class QuickViewTable extends React.Component {
       }, {
         property: 'meets_criteria',
         header: {
-          label: 'Meets Criteria',
+          label: 'Meets Minimum Requirements',
           transforms: [sortable]
         }
       }, {
