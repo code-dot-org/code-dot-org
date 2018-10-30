@@ -1,0 +1,28 @@
+name 'AP_practice_Qs_rqb_64_CSP_7_1_1'
+right 'I, II, and III'
+wrong 'I and IV'
+wrong 'II and III'
+wrong 'I only'
+markdown <<MARKDOWN
+Which of the following correctly describes the processes used by modern search engines to provide results to users?
+I. Search engines work by searching their index of the web.
+II. Search engines use algorithms to rank the results of the search.
+III. Search engines use software programs called spiders to index the web.
+IV. Search engines index the content of all webpages on the internet each day.  
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **7.1.1** and Essential Knowledge statements: **7.1.1A**
+<hr>
+ (A) This answer is correct. Search engines index all Internet content regularly, but not every day.
+
+<hr>
+ (B) This answer is incorrect. Search engines use an algorithm to control which web pages appear toward the top in a web search for a given user. Search engines also use automated algorithms to index web pages called a spider.
+
+<hr>
+ (C) This answer is incorrect. Search engines maintain a database of indexed web pages which is faster to search than the web itself. Search engines do index all Internet content regularly, but not every day.
+
+<hr>
+ (D) This answer is incorrect. Search engines use an algorithm to control which web pages appear toward the top in a web search for a given user. Search engines also use automated algorithms to index web pages called a spider. Search engines do index all Internet content regularly, but not every day.
+
+MARKDOWN

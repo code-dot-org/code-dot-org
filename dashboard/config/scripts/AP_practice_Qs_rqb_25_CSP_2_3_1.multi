@@ -1,0 +1,27 @@
+name 'AP_practice_Qs_rqb_25_CSP_2_3_1'
+wrong 'I only'
+wrong 'II only'
+right 'I and II only'
+wrong 'I, II, and III'
+markdown <<MARKDOWN
+What are some of the advantages of using models and simulations to mimic a real-world process or system under study?
+I. Models and simulations mimic real-world events without the cost or danger of real world prototypes or testing.
+II. The results of models and simulations may generate new knowledge and new hypotheses related to the phenomena being modeled. 
+III. We cannot change the model or simulation as rapidly as we can change the real-world process or system under study, therefore, it allows us to minimize iterations in a model or simulation.
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.3.1** and Essential Knowledge statements: **2.3.1D**
+<hr>
+ (A) This option is incorrect. While this option is one of the reasons we generate models and simulations, it is not the only valid reason among the choices given.
+
+<hr>
+ (B) This option is incorrect. While this option is one of the reasons we generate models and simulations, it is not the only valid reason among the choices given.
+
+<hr>
+ (C) This option is correct. Both choices I and II are valid reasons for generating a model or simulation but choice III is not valid.
+
+<hr>
+ (D) This option is incorrect. Though options I and II are valid reasons, option III is not valid. Generally, it is harder to change a real world system than it is to change a model or simulation.  This means that more iterations could be executed using a simulation or model, not less.
+
+MARKDOWN

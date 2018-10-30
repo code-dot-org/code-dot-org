@@ -1,0 +1,28 @@
+name 'AP_practice_Qs_rqb_26_CSP_2_1_1'
+wrong 'Decimal 14, Binary 1101, Hexadecimal F'
+wrong 'Hexadecimal F, Decimal 14, Binary 1101'
+right 'Binary 1101, Decimal 14, Hexadecimal F'
+wrong 'Decimal 14, Hexadecimal F, Binary 1101'
+markdown <<MARKDOWN
+Consider the following numbers.
+    Binary 1101
+    Decimal 14
+    Hexadecimal F
+Which of the following lists them from least to greatest?
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1D**
+<hr>
+ (A) This option is incorrect because when converted to decimal; hexadecimal F equals 15, and binary 1101 equals 13.  Therefore, the order 14, 13, 15 is not in order from least to greatest.
+
+<hr>
+ (B) This option is incorrect because when converted to decimal; hexadecimal F equals 15, and binary 1101 equals 13.  Therefore, the order 15, 14, 13 is not in order from least to greatest.
+
+<hr>
+ (C) This option is correct because when converted to decimal; hexadecimal F equals 15, and binary 1101 equals 13.  Therefore, the order 13, 14, 15 is in the correct order.
+
+<hr>
+ (D) This option is incorrect because when converted to decimal; hexadecimal F equals 15, and binary 1101 equals 13.  Therefore, the order 14, 15, 13 is not in order from least to greatest.
+
+MARKDOWN

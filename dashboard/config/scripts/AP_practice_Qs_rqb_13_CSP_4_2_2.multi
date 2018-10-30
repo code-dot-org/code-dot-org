@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_13_CSP_4_2_2'
+wrong 'When the problem can be solved in a reasonable time and an approximate solution is acceptable'
+wrong 'When the problem can be solved in a reasonable time and an exact solution is needed'
+right 'When the problem cannot be solved in a reasonable time and an approximate solution is acceptable'
+wrong 'When the problem cannot be solved in a reasonable time and an exact solution is needed'
+markdown <<MARKDOWN
+Under which of the following conditions is it most beneficial to use a heuristic approach to solve a problem?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.2.2** and Essential Knowledge statements: **4.2.2A, 4.2.2B, 4.2.2C**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN
