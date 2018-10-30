@@ -15,6 +15,8 @@ import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
+import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+
 const ButtonState = {
   UP: 0,
   DOWN: 1,
@@ -156,7 +158,7 @@ async function getSongManifest(useRestrictedSongs) {
 
   // We must obtain signed cookies before accessing restricted content.
   if (useRestrictedSongs) {
-    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies');
+    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
     promises.push(signedCookiesPromise);
   }
 
@@ -260,14 +262,13 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
+  const recordReplayLog = this.shouldShowSharing();
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
-    recordReplayLog: this.shouldShowSharing(),
+    recordReplayLog,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
-      const spriteConfig = new Function('World', this.level.customHelperLibrary);
-      this.nativeAPI.init(spriteConfig);
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
@@ -275,8 +276,12 @@ Dance.prototype.afterInject_ = function () {
         share: this.share
       }, 1 / 20);
     },
+    spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
   });
+  if (recordReplayLog) {
+    getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
+  }
 };
 
 /**
