@@ -45,6 +45,7 @@ const blankCertificates = {
   mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
+  aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png')
 };
 
 class Certificate extends Component {

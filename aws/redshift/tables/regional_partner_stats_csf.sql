@@ -127,7 +127,7 @@ select
          csfa.capacity,
          csfa.zip as zip_workshop,
          csfa.state as state_workshop,
-         coalesce(state, state_workshop) as state_coalesced,
+         coalesce(ss_user.state, csfa.state) as state_coalesced,
          csfa.processed_location as processed_location,
          csfa.facilitator_name, 
          csfa.studio_person_id_facilitator,     

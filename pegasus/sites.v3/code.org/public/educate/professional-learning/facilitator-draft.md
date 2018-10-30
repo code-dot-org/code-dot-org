@@ -136,7 +136,7 @@ We're seeking candidates who demonstrate the following qualities:
 
 <h3 style="font-family: 'Gotham 5r', sans-serif">Engaging Leader</h3>
 
-  * Demonstrated empathy for learners with a variety of backgrounds and experience levels
+  * Demonstrated empathy for learners with a variety of backgrounds and levels of experience
   * Ability to "think on your feet" and make decisions that are in the best interest of the audience while maintaining fidelity to the program
   * Motivated self-starter
 
