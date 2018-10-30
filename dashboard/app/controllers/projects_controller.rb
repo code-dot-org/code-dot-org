@@ -325,13 +325,22 @@ class ProjectsController < ApplicationController
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
     elsif params[:key] == 'dance'
-      @project_video = "https://cdo-p5-replay-destination.s3.amazonaws.com/videos/video-#{@view_options['channel']}.mp4"
+      # TODO: elijah set up test subdomains for dance-api, and situationally
+      # point to those here
+      @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
       @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
 
       # Provide a presigned URL (to the project owner only, not to the sharing
-      # view) that can upload the video log to S3 for processing into a video
+      # view) that can upload the video log to S3 for processing into a video.
+      # Make sure we point to our custom CloudFront domain so we don't have to
+      # worry about whitelists. Also manually force https since the SDK assumes
+      # all virtual hosts are http-only.
       unless sharing
-        signed_url = AWS::S3.presigned_upload_url("cdo-p5-replay-source", @view_options['channel'])
+        signed_url = AWS::S3.presigned_upload_url(
+          "dance-api.code.org",
+          "source/#{@view_options['channel']}",
+          virtual_host: true
+        ).sub('http://', 'https://')
         view_options(signed_replay_log_url: signed_url)
       end
     end
