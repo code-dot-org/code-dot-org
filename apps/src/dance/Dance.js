@@ -261,7 +261,9 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
-  const recordReplayLog = this.shouldShowSharing();
+  // record a replay log (and generate a vdieo) for both project levels and any
+  // course levels that have sharing enabled
+  const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
