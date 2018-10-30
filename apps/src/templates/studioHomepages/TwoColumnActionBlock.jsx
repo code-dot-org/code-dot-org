@@ -215,7 +215,7 @@ export class SpecialAnnouncementActionBlock extends Component {
           buttons={[
             {
               url: 'https://hourofcode.com/#join',
-              text: i18n.joinUs()
+              text: i18n.signUpButton()
             }
           ]}
         />
