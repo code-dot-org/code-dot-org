@@ -309,6 +309,14 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
       craft_ifPath:
         options:
           DIR:

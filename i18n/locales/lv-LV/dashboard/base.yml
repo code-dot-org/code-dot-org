@@ -29,6 +29,7 @@ lv:
   unsubmit: Atcelt iesniegšanu
   cancel: "Atcelt"
   okay: "Labi"
+  or: "vai"
   add_teacher_form:
     code:
       label: 'Pievienot skolotāju:'
@@ -186,7 +187,7 @@ lv:
     access_denied: 'Tev nav pieejas šim %{model}.'
   nav:
     header:
-      finished_hoc: "Esmu pabeidzis savu Programmēšanas Stundu"
+      finished_hoc: "Esmu pabeidzis savu \"Programmēšanas Stundu\""
       sign_in_to_save: 'Pierakstieties, lai saglabātu savus panākumus'
       free_play:
         playlab: 'Izveidot aplikāciju'
