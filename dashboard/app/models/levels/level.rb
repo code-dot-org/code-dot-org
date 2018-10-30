@@ -415,7 +415,8 @@ class Level < ActiveRecord::Base
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    project_template_level || free_response_upload || game.channel_backed?
+    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 
   def key
