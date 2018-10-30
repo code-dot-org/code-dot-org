@@ -247,6 +247,14 @@ bn:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': আকার
       craft_ifPath:
         options:
           DIR:

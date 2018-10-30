@@ -28,6 +28,7 @@ bn:
   next_page: পরের পাতা
   cancel: "বাতিল করুন"
   okay: "ঠিক আছে"
+  or: "অথবা"
   add_teacher_form:
     code:
       label: 'শিক্ষক যুক্ত করুন:'
@@ -277,6 +278,8 @@ bn:
     minecraft:
       title: "মাইনক্র্যাফট"
     minecraft2016:
+      title: "মাইনক্র্যাফট"
+    aquatic:
       title: "মাইনক্র্যাফট"
     hero:
       title: "মাইনক্র্যাফট"
