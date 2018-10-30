@@ -42,6 +42,7 @@ fr:
   next_resource: Ressource suivante
   cancel: "Annuler"
   okay: "OK"
+  or: "ou"
   heading_x_of_y: "%{heading} (page %{x} sur %{y})"
   add_teacher_form:
     code:
@@ -167,7 +168,7 @@ fr:
     remember: 'Se souvenir de moi'
     submit: 'Connexion'
   signin:
-    try_heading: 'Tu souhaites essayer de coder sans t’inscrire?'
+    try_heading: 'Vous souhaitez essayer de coder sans vous inscrire ?'
     try_hoc: 'Essaie d''abord une Heure de Code'
     try_20hours: 'Essaie notre Introduction de 20 heures à l''informatique'
   signinsection:
@@ -262,7 +263,7 @@ fr:
         personal_login_created_username: 'Vous avez créé vos informations de connexion avec succès. Vous pouvez désormais vous connecter avec votre nom d''utilisateur (%{username}) et votre mot de passe'
   nav:
     header:
-      finished_hoc: "J'ai fini mon Heure de Code."
+      finished_hoc: "J'ai fini mon Heure de Code"
       sign_in_to_save: 'Connecte-toi pour enregistrer tes progrès.'
       free_play:
         playlab: 'Crée une application'
@@ -316,6 +317,7 @@ fr:
       signin: 'Connexion'
       signup: 'Créer un compte'
       already_registered: 'Déjà enregistré ?'
+      pair_programming: 'Programmation en binôme'
       team: 'Équipe'
       driver: 'Pilote'
       navigator: 'Navigateur'
@@ -613,6 +615,8 @@ fr:
     minecraft2016:
       title: "Minecraft"
       body: "Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons, des creepers, des zombies et bien d'autres encore."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité! Le voyage dans Minecraft avec du code."
