@@ -34,6 +34,7 @@ bs:
   next_resource: Sljedeći resurs
   cancel: "Poništi"
   okay: "U redu"
+  or: "ili"
   heading_x_of_y: "%{heading} (strana %{x} od %{y})"
   add_teacher_form:
     code:

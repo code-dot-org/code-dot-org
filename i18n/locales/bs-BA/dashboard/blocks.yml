@@ -247,6 +247,14 @@ bs:
         text: okreni lijevo
       RyanLab_turnRight:
         text: okreni desno
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veličina
       craft_ifPath:
         options:
           DIR:
