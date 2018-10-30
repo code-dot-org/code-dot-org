@@ -247,6 +247,14 @@ hy:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': չափ
       craft_ifPath:
         options:
           DIR:

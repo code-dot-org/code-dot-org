@@ -31,6 +31,7 @@ hy:
   next_page: Հաջորդ էջ
   cancel: վերացնել
   okay: Լավ
+  or: կամ
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -492,6 +493,8 @@ hy:
       title: Minecraft
       body: Explore a Minecraft world through code
     minecraft2016:
+      title: Minecraft
+    aquatic:
       title: Minecraft
     hero:
       title: Minecraft
