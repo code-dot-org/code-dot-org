@@ -1,0 +1,42 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "changeGroupPropBy",
+    "blockText": "change group {GROUP} {PROPERTY} by {VAL}",
+    "args": [
+      {
+        "name": "GROUP",
+        "type": "Sprite"
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "x position",
+            "\"x\""
+          ],
+          [
+            "y position",
+            "\"y\""
+          ],
+          [
+            "movement direction",
+            "\"direction\""
+          ]
+        ]
+      },
+      {
+        "name": "VAL",
+        "type": "Number"
+      }
+    ]
+  }
+}
