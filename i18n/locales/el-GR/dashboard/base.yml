@@ -39,6 +39,7 @@ el:
   next_resource: Επόμενος πόρος
   cancel: "Άκυρο"
   okay: "Εντάξει"
+  or: "ή"
   heading_x_of_y: "%{heading} (σελίδα %{x} του %{y})"
   add_teacher_form:
     code:
@@ -487,6 +488,8 @@ el:
     minecraft2016:
       title: "Minecraft"
       body: "Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged:
