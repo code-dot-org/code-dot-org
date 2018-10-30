@@ -200,6 +200,7 @@ th:
         C1_moveitmoveit_unplugged: ขยับหน่อยสิ ขยับหน่อย
         C1_bigevent_unplugged: เหตุการณ์ใหญ่
         C1_getting_loopy: มาวนลูปกัน
+        C1_pair_programming: การจับคู่เพื่อเขียนโปรแกรม
         C1_maze_intro_sequencing: การจัดลำดับเบื้องต้นในเขาวงกต
         C1_maze_debugging: การดีบั๊กเขาวงกต
         C1_artist_intro: แนะนำศิลปิน
@@ -222,12 +223,15 @@ th:
         C2_graph_paper: การเขียนกระดาษกราฟ
         C2_conditionals_with_cards: เงื่อนไข
         C2_relay_programming: โปรแกรมการถ่ายทอดข้อมูล
+        C2_paper_airplanes: เครื่องบินกระดาษ
         C3_maze_level_4: ลูปเขาวงกต
         C3_artist_intro: แนะนำศิลปิน
         C3_artist_functions: ฟังก์ชั่น ศิลปิน
         C3_bee_functions: ฟังก์ชั่น ผึ้ง
         C3_bee_conditionals: ผึ้ง Conditionals
         C3_maze_conditionals: เขาวงกต Conditionals
+        C3_artist_nested_loops: ลูปซ้อนลูป
+        C3_bee_nested_loops: ลูปซ้อนลูป
         C3_bee_debugging: การดีบั๊ก (Debugging) ผึ้ง
         C3_bounce: กระเด้ง
         C3_playlab_create_game: เพลย์แลป - สร้างเกม
@@ -292,8 +296,11 @@ th:
         mc_2017_congratulations: ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย
         mc_2017_puzzle_1: ชั่วโมงแห่งการเขียนโค้ด ไมน์คราฟท์ - พบกับเอเจนท์
         mc_2017_puzzle_8: ไมน์คราฟท์ ชั่วโมงของการเขียนโค้ด - ฟังก์ชั่น
+        CSF_skinOverview_Harvester: เกษตรกรผู้เก็บเกี่ยว
         CSF_bb8_skinOverview_C-F: บีบี-8
         CSF_bb8_skinOverview_K-1: บีบี-8
+        CSF_harvester_skinOverview_K-1: เกษตรกรผู้เก็บเกี่ยว
+        CSF_harvester_loops_K1: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
         CSF_scrat_loops_K1: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_scrat_loops_CF: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_loops_AB: ลูป

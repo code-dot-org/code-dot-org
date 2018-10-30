@@ -578,6 +578,8 @@ th:
               name: ฟังก์ชันกับพารามิเตอร์
             Loops:
               name: ลูป
+            Nested Loops:
+              name: ลูปซ้อนลูป
             Variables:
               name: ตัวแปร
         algebrapdnext:
@@ -641,6 +643,8 @@ th:
               name: สร้างพื้นฐาน
             Debugging in Maze:
               name: การหาจุดบกพร่องกับเขาวงกต
+            Loops in Harvester:
+              name: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
         coursed-draft:
           stages:
             Nested Loops in Maze:
@@ -653,12 +657,16 @@ th:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
             Conditionals with Cards:
               name: เงื่อนไข
+            Conditionals & Loops in Farmer:
+              name: เงื่อนไขและลูปกับเรื่องเกษตรกร
             Digital Citizenship:
               name: พลเมืองดิจิทัล
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
             Nested Loops in Bee:
               name: ลูปซ้อนลูป ในเรื่องผึ้ง
+            Nested Loops:
+              name: ลูปซ้อนลูป
             Introduction:
               name: บทเกริ่นนำ
             Nested Loops Project in Artist:
@@ -869,6 +877,8 @@ th:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Loops in Harvester:
+              name: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
             Loops in Artist:
@@ -877,12 +887,16 @@ th:
           assignment_family_title: คอร์ส C
         coursed-2017:
           stages:
+            Nested Loops:
+              name: ลูปซ้อนลูป
             Nested Loops in Artist:
               name: ลูปซ้อนลูป ในเกมศิลปิน
             Debugging in Bee:
               name: 'การดีบั๊ก: กับเรื่องผึ้ง'
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
+            Conditionals & Loops in Farmer:
+              name: เงื่อนไขและลูปกับเรื่องเกษตรกร
             Build a Play Lab Game:
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์หรือเหตุการณ์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว
                 ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างเป็นเกมในเพลย์แลป!
@@ -910,6 +924,10 @@ th:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            Nested Loops:
+              name: ลูปซ้อนลูป
+            Functions in Harvester:
+              name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
           title: คอร์ส E
           assignment_family_title: คอร์ส E
         coursef-2017:
@@ -958,6 +976,10 @@ th:
               name: 'พลเมืองดิจิทัล: กลั่นกรองค่าเฉลี่ย'
             Building a Foundation:
               name: สร้างพื้นฐาน
+            Nested Loops:
+              name: ลูปซ้อนลูป
+            Conditionals & Loops in Harvester:
+              name: เงื่อนไขและลูปกับเรื่องเกษตรกร
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         pre-express-2017:
@@ -984,6 +1006,8 @@ th:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Nested Loops:
+              name: ลูปซ้อนลูป
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
             Conditionals:
@@ -1000,6 +1024,8 @@ th:
           stages:
             Introduction:
               name: บทเกริ่นนำ
+            Nested Loops:
+              name: ลูปซ้อนลูป
             Nested Loops in Artist:
               name: ลูปซ้อนลูป ในเกมศิลปิน
             Nested Loops Project in Artist:
@@ -1036,6 +1062,8 @@ th:
               name: ลูป For ในเรื่องผึ้ง
             Building a Foundation:
               name: สร้างพื้นฐาน
+            Nested Loops:
+              name: ลูปซ้อนลูป
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -1095,6 +1123,8 @@ th:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Nested Loops:
+              name: ลูปซ้อนลูป
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
             Introduction:
@@ -1103,6 +1133,8 @@ th:
               name: เงื่อนไข
             Internet:
               name: อินเทอร์เน็ต
+            Functions in Harvester:
+              name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
         course-f-2018:
           stages:
             Sequence in Maze:
@@ -1184,7 +1216,7 @@ th:
                 อาจใก้ลเคียงมากๆ ถ้านักเรียนเข้าใจความแตกต่างระหว่างการวางแผนว่าอะไรมาก่อนอะไรมาหลัง
                 และการเขียนโค้ดตามลำดับด้วยภาษาที่เหมาะสม กิจกรรมนี้จะช่วยให้นักเรียนได้รับประสบการณ์การอ่านและการเขียนโค้ดอย่างย่อๆ\n\n"
             Programming in Maze:
-              name: การเขียนโปรแกรมกับเจ้านกขี้โมโห (Angry Birds)
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
               description_teacher: สำหรับปริศนาออนไลน์ชุดนี้ นักเรียนจะสร้างความเข้าใจเกี่ยวกับอัลกอริทีม
                 การตรวจแก้จุดบกพร่องหรือการดีบั๊ก รวมทั้งความสามารถในการใช้คอมพิวเตอร์ทั่วไป
                 โดยมีตัวละครจากเกม Angry Birds ซึ่งนักเรียนจะพัฒนาอัลกอริทึมที่เป็นขั้นเป็นตอนตามลำดับเพื่อที่จะพาเจ้านกไปจัดการเจ้าหมูนั่นโดยไม่ต้องชนกำแพงหรือลูกระเบิด
@@ -1220,7 +1252,7 @@ th:
             Loops in Harvester:
               name: ลูปไปกับเกษตรกรผู้เก็บเกี่ยว
             Sequencing in Maze:
-              name: การจัดลำดับไปกับเจ้านกขี้โมโห (Angry Birds)
+              name: การจัดลำดับ กับเจ้านกขี้โมโห (Angry Birds)
             'Persistence & Frustration: Stevie and the Big Project':
               name: สตีวี่และโครงการใหญ่
         express-2018:
@@ -1235,6 +1267,8 @@ th:
               name: สร้างพื้นฐาน
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            Nested Loops:
+              name: ลูปซ้อนลูป
             'Events: The Big Event':
               name: เหตุการณ์ใหญ่
             While Loops in Farmer:
@@ -1259,6 +1293,8 @@ th:
               name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
             Functions in Minecraft:
               name: ฟังก์ชั่นกับไมน์คราฟท์
+            Functions in Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
             For Loop Fun:
               name: สนุกกับ For ลูป
             Artist Binary:
@@ -1330,13 +1366,15 @@ th:
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Maze:
-              name: การเขียนโปรแกรมกับเจ้านกขี้โมโห (Angry Birds)
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Debugging in Maze:
               name: การหาจุดบกพร่องกับเขาวงกต
             Programming in Artist:
               name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':
               name: มาวนลูปกัน
+            Loops in Harvester:
+              name: เก็บเกี่ยวพืชผลต่างๆ ด้วยการใช้ลูป
             'Events: The Big Event':
               name: เหตุการณ์ใหญ่
         csd6-2018:
@@ -1362,6 +1400,8 @@ th:
               name: ลูปซ้อนลูป กับเกม Frozen
             Introduction:
               name: บทเกริ่นนำ
+            Functions in Harvester:
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
             Internet:
               name: อินเทอร์เน็ต
             Conditionals with Cards:

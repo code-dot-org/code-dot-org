@@ -407,6 +407,7 @@ th:
         - จะเป็นอย่างไรถ้ารวาดเกล็ดหิมะสองเกล็ดทับซ้อนกัน?
       Food Fight!: "We've added one last function for\nyou to use. Program your game to call the \"level_up\" function if \"player_points\"\n> 10. Play the game, and make it past level 4 to move to the next puzzle."
       Function intro Ryan: ใช้ฟังก์ชัน` สร้างสะพาน ` สองครั้งเพื่อทำเส้นทางไปยังคบเพลิงศิลาแดง
+      Harvester Test: ได้เวลาเก็บเกี่ยวแล้ว! แต่ฉันลืมไปว่าพืชผลใดที่ฉันได้หว่านไว้ที่แปลงไหน โปรดช่วยฉันเก็บเกี่ยวพืชผลทั้งหมดของฉัน ไม่ว่าพืชผลเหล่านั้นจะถูกปลูกไว้ในตอนแรกแบบไหนก็ตาม
       K-1 Artist Loops 1: วาดเส้นนี้ โดยวาดไปทางทิศตะวันออก 4 ครั้ง
       K-1 Artist Loops Free Play: เล่นตามใจชอบ วาดบางอย่างที่สนุกสนาน!
       K-1 Artist1 1: ให้วาดเท้าคนด้วยเส้นหนึ่งเส้น
@@ -547,6 +548,7 @@ th:
       MC_HOC_2017_Ali: ใช้ฟังก์ชั่นเพื่อหาทางข้ามลาวาไปให้ได้
       MC_HOC_2017_FP20x20: "**เล่นตามใจชอบ**  ถึงเวลาให้คุณเริ่มเขียนโค้ดสร้างโลกไมน์คราฟท์ในแบบฉบับของตัวคุณเองได้เลย"
       MC_HOC_Kiki_02: พาเอเจนท์ไปที่แป้นกด
+      Mike Pair Programming: ต่อไปนี้คือคำสั่งให้ปฏิบัติงาน
       Mike Test Bee Conditionals 1: เมฆก้อนนี้กำลังบังมุมมองของฉัน! ตรวจสอบดูว่ามีดอกไม้ที่อยู่ภายใต้เมฆ และเก็บน้ำหวานเพียงอย่างเดียวถ้ามีดอกไม้อยู่ ระวังให้ดี เพราะมันสามารถเปลี่ยนแปลงได้ตลอด!
       NEW Course 4 Artist Functions 3: "Here is a new type of Block.\nIt is called a \"Function block.\" Click \"Run\" to see what it can do."
       NEW Course 4 Artist Functions 7: "Are you getting the hang of how\nto use function blocks? Let's modify this square so that it is 200 pixels\nin size. Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction editor. Remember to click on \"save and close\" to get out of the\nfunction editor."
@@ -694,8 +696,8 @@ th:
       courseA_artist_loops9: 'การท้าทาย: แก้ไขบันได'
       courseA_artist_loops9_2018: 'การท้าทาย: แก้ไขบันได'
       courseA_artist_loops_challenge3: น้องๆ มาเล่นเกมกัน! ให้น้องๆ วาดรูปตัว X ให้ได้มากที่สุดเท่าที่น้องๆ จะทำได้! น้องๆ สามารถวาด X สามตัวเรียงกันได้ไหมครับ?
-      courseA_bee_seq4: คราวนี้คุณลองทำดูเองบ้าง
-      courseA_bee_seq5: คราวนี้คุณลองทำดูเองบ้าง
+      courseA_bee_seq4: คราวนี้คุณลองทำดู
+      courseA_bee_seq5: คราวนี้คุณลองทำดู
       courseA_bee_seq7: ต่อบล็อกเพิ่มอีกสองบล็อกเพื่อทำให้ปริศนานี้เสร็จสมบูรณ์
       courseA_collector_loops1: พาลอเรลไปรอบๆและเก็บสมบัติให้มากเท่าที่คุณสามารถทำได้!
       courseA_collector_loops10: ช่วยลอเรลเก็บสมบัติทั้งหมดตามเส้นทาง
@@ -726,13 +728,16 @@ th:
       courseA_harvester_loops10: ช่วยเกษตรกรเก็บข้าวโพดทั้งห้าฝัก!
       courseA_harvester_loops11: 'ลองทำอีกด่านหนึ่งด้วยตัวของคุณเอง '
       courseA_harvester_loops3: คุณสามารถเก็บข้าวโพดทั้งหมด โดยใช้้บล็อกเพื่อเคลื่อนไหวเพียง**หนึ่ง**บล็อกเท่านั้น ได้หรือไม่?
+      courseA_harvester_loops4: คุณช่วยเกษตรกรหาข้อผิดพลาดในโค้ดหน่อยได่ไหม?
       courseA_harvester_loops5: ลองเขียนโค้ดด้วยตัวคุณเอง! คุณสามารถเก็บข้าวโพด ที่อยู่ฝักสุดท้ายด้วย ได้ไหม?
       courseA_harvester_loops5b: คุณเปลี่ยนแก้ไขโค้ดของคุณเพื่อทำให้เกษตรกรเก็บข้าวโพดให้หมด ได้หรือไม่?
       courseA_harvester_loops7: 'ให้คุณลองทำดูเองบ้าง! '
+      courseA_harvester_loops9: คุณหาวิธีที่จะเก็บข้าวโพดให้ได้ทั้งหมดได้ไหม?
       courseA_harvester_seq11: "ลองทำดูเองไหม!\n\nเก็บข้าวโพดทั้งหมด"
+      courseA_harvester_seq12: เก็บข้าวโพดให้หมด
       courseA_harvester_seq4: ต่อบล็อกเพิ่มอีกหนึ่งบล็อกเพื่อช่วยเกษตรกรเก็บข้าวโพด
-      courseA_harvester_seq6: คราวนี้คุณลองทำดูเองบ้าง
-      courseA_harvester_seq7: คราวนี้คุณลองทำดูเองบ้าง
+      courseA_harvester_seq6: คราวนี้คุณลองทำดู
+      courseA_harvester_seq7: คราวนี้คุณลองทำดู
       courseA_harvester_seq8: ตอนนี้ เกษตรกรต้องเก็บข้าวโพดสองครั้ง!
       courseA_harvester_seq9: ต่อบล็อกเพิ่มอีกสองบล็อกเพื่อทำให้ปริศนานี้เสร็จสมบูรณ์
       courseA_maze_ramp3_2018: มีบล็อกเกินมาบล็อกหนึ่ง ที่จะทำให้เจ้านกวิ่งไปชนสิ่งกีดขวาง ลากมันไปทิ้งเสีย โดยลากมันกลับไปที่กล่องเครื่องมือ
@@ -745,7 +750,7 @@ th:
       courseA_maze_seq12_2018: 'จัดการเจ้าหมูนั่นเลย! '
       courseA_maze_seq13: คุณข่วยฉันจัดการเจ้าหมูนั่น ยังไงก็ได้!
       courseA_maze_seq13_2018: คุณข่วยฉันจัดการเจ้าหมูนั่น ยังไงก็ได้!
-      courseA_maze_seq5_2018: มาลองแก้ปัญหา ด่านนี้ดู
+      courseA_maze_seq5_2018: มาลองแก้ปัญหาในด่านนี้ดู
       courseA_maze_seq6: ขยับไปทางนี้ที ขยับไปทางนั้นที เพื่อพาเจ้านกไปให้ถึงเจ้าหมูนั่น!
       courseA_maze_seq6_2018: ขยับไปทางนี้ที ขยับไปทางนั้นที เพื่อพาเจ้านกไปให้ถึงเจ้าหมูนั่น!
       courseA_maze_seq8: แก้ปัญหาด่านนี้ให้ได้ และพาเจ้านกไปให้ถึงเจ้าหมูนั่น!

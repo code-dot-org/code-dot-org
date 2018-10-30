@@ -289,6 +289,18 @@ th:
         text: หันซ้าย
       RyanLab_turnRight:
         text: หันขวา
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
       craft_ifPath:
         options:
           DIR:
