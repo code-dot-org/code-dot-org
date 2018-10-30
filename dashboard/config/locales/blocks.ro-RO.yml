@@ -529,6 +529,24 @@ ro:
         text: locație aleatorie
       Vector_vectorNorth:
         text: nord
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"costume"': costum
+            '"direction"': direcţie de mişcare
+            '"rotation"': rotire sau direcţie
+            '"tint"': tentă
       craft_ifPath:
         options:
           DIR:
