@@ -240,7 +240,9 @@ hr:
             '"left"': strelica lijevo
             '"right"': strelica desno
             '"w"': Zapad
+            '"a"': A
             '"s"': Jug
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -249,7 +251,9 @@ hr:
             '"left"': strelica lijevo
             '"right"': strelica desno
             '"w"': Zapad
+            '"a"': A
             '"s"': Jug
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -263,6 +267,18 @@ hr:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
       craft_ifPath:
         options:
           DIR:

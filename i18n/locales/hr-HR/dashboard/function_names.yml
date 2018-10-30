@@ -15,14 +15,14 @@ hr:
       jump: skoči
       set score: postavi rezultat
       get nectar: pokupi nektar
-      test: uvjet
+      test: provjera
       diamond: dijamant
       move: pomakni
       move right: pomakni desno
       move up: pomakni gore
       move down: pomakni dolje
       move left: pomakni lijevo
-      collect: prikupiti
+      collect: prikupi
       turn left: okreni ulijevo
       move forward: idi naprijed
       turn right: okreni udesno

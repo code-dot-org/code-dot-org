@@ -31,6 +31,7 @@ hr:
   next_page: Sljedeća stranica
   cancel: Odustani
   okay: U redu
+  or: ili
   add_teacher_form:
     code:
       label: 'Dodajte učitelja:'
@@ -444,6 +445,8 @@ hr:
       body: Istraži Minecraft svijet pomoću koda
     minecraft2016:
       title: Minecraft
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged_conditionals:
@@ -535,7 +538,7 @@ hr:
   terms_interstitial:
     tos: Uvjeti
     privacy: Pravila privatnosti
-    print: Piši
+    print: Ispiši
   school_info_interstitial:
     save: Spremi
   race_interstitial:

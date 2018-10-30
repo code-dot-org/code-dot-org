@@ -921,6 +921,10 @@ en:
       PDK5 What is unplugged:
         Question: Pitanje
       'U2L06 - Matching: Label the Diagram':
+        A: A
+        B: B
+        C: C
+        D: D
         E: Istok
       U3L19 - MATCH what are values of abc:
         '10': '10'
@@ -943,6 +947,8 @@ en:
         '4': '4'
         '5': '5'
         '6': '6'
+      parts of contract:
+        image: slika
       test matching image:
         Instructions: Upute
       test matching text:
@@ -953,6 +959,7 @@ en:
 0:
 1:
   CB_Question_3:
+    A: A
     Y: true
   CSD Prediction Header Size:
     Question: Pitanje
@@ -1044,7 +1051,7 @@ en:
   PDAlg Blocks Video:
     Toolbox: Alati
   PDAlg DR Multi 1:
-    Domain: Domen
+    Domain: Domena
     Name: Ime
     Range: Raspon
     0: '? The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?'
@@ -1099,6 +1106,10 @@ en:
     '2': '2'
     '4': '4'
   U1L07 Assessment 1:
+    A: A
+    B: B
+    C: C
+    D: D
     E: Istok
   U1L6 Assessment multiple choice:
     '10': '10'
@@ -1128,6 +1139,10 @@ en:
     18: ': You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
   'U2L06 - MC: Which is an MST?':
     0: ': "<p>The images below all show the same map (or graph) but have different paths between the points highlighted.</p>\n<p>Please choose the image that is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
+    A: A
+    B: B
+    C: C
+    D: D
     E: Istok
   U2L08 Assessment 1:
     '11': '11'
@@ -1266,6 +1281,24 @@ en:
     '12': '12'
     '15': '15'
     '4': '4'
+  courseD_multi_artist_binary8_predict1:
+    A: A
+    B: B
+    C: C
+    D: D
+  courseD_multi_artist_binary8_predict1_2018:
+    A: A
+    B: B
+    C: C
+    D: D
+  courseD_multi_artist_nestedLoops9_predict1:
+    A: A
+    B: B
+    C: C
+  courseD_multi_artist_nestedLoops9_predict1_2018:
+    A: A
+    B: B
+    C: C
   courseD_multi_bee_nestedLoops9_predict2:
     '12': '12'
     '4': '4'
@@ -1697,7 +1730,7 @@ en:
     Prefer not to answer: Radije ne bih odgovorio
   sarah_test_maggie:
     Question: Pitanje
-    test: uvjet
+    test: provjera
   sciPD PreQ 1:
     'No': 'Ne'
     'Yes': 'Da'
