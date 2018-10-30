@@ -537,6 +537,22 @@ ar:
         text: اتجه إلى اليسار
       RyanLab_turnRight:
         text: اتجه إلى اليمين
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"rotation"': دوران
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+            '"direction"': اتجاه الحركة
+            '"tint"': لون
       craft_ifPath:
         options:
           DIR:

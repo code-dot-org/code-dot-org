@@ -40,6 +40,7 @@ ar:
   next_resource: المصدر التالي
   cancel: إلغاء
   okay: حسناً
+  or: أو
   heading_x_of_y: "%{heading} (صفحة %{x} من %{y})"
   add_teacher_form:
     code:
@@ -533,6 +534,8 @@ ar:
     minecraft2016:
       title: Minecraft
       body: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: ماين كرافت عادت لساعة من البرمجة بنشاط جديد! رحلة في عالم ماين كرافت مع
