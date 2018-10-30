@@ -47,13 +47,9 @@
               - if @user_level.submitted?
                 #submitted
                   %div= t('teacher.panel.submitted_on')
-                  .timestamp= @user_level.updated_at.strftime('%-m/%-d/%Y, %-l:%M:%S %p')
+                  .timestamp= @user_level.updated_at.iso8601
                   %button.btn.btn-info#unsubmit{"data-user-level-url" => url_for(@user_level)}
                     = t('teacher.panel.unsubmit')
-              - elsif @user_level.attempted?
-                #last_updated
-                  %div= t('teacher.panel.last_updated')
-                  .timestamp= @user_level.updated_at.strftime('%-m/%-d/%Y, %-l:%M:%S %p')
         - if @level && @level.contained_levels.any?
           - contained_level = @level.contained_levels.first
           -# if we have a student user, show their level. otherwise show teacher's
