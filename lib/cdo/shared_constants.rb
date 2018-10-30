@@ -87,6 +87,7 @@ module SharedConstants
     minecraft_adventurer
     minecraft_designer
     minecraft_hero
+    minecraft_aquatic
     starwars
     starwarsblocks
     starwarsblocks_hour
