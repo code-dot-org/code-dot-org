@@ -57,8 +57,10 @@
   - if DCDO.get('hoc_launch', nil) == 'mc'
     - course_blocks = [Script::MINECRAFT_AQUATIC_NAME, Script::STARWARS_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
   - elsif DCDO.get('hoc_launch', nil) == 'dance'
-    - last_course = @is_english ? Script::APPLAB_INTRO : Script::HOC_NAME
-    - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::STARWARS_NAME, last_course]
+    - if @is_english
+      - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::APPLAB_INTRO, Script::FLAPPY_NAME]
+    - else
+      - course_blocks = [Script::DANCE_PARTY_NAME, Script::MINECRAFT_AQUATIC_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
   - else
     - course_blocks = [Script::MINECRAFT_HERO_NAME, Script::STARWARS_NAME, Script::FROZEN_NAME, Script::HOC_NAME]
 
