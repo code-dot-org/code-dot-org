@@ -44,6 +44,7 @@ pt:
   next_resource: Recurso seguinte
   cancel: Cancelar
   okay: Ok
+  or: ou
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
@@ -89,8 +90,8 @@ pt:
     google_oauth2: Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Outlook
-    microsoft_v2_auth: Outlook
+    windowslive: Conta da Microsoft
+    microsoft_v2_auth: Conta da Microsoft
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
@@ -246,7 +247,7 @@ pt:
     access_denied: Você não tem acesso a este %{model}.
   nav:
     header:
-      finished_hoc: Terminei a minha Hora de Código
+      finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Inicia sessão para guardares o teu progresso
       free_play:
         playlab: Criar uma aplicação Play Lab
@@ -608,6 +609,8 @@ pt:
       title: Minecraft
       body: Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas,
         ovelhas, Creepers, mortos-vivos e muito mais.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:

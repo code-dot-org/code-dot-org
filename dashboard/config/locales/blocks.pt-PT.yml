@@ -275,6 +275,18 @@ pt:
         text: virar à esquerda
       RyanLab_turnRight:
         text: virar à direita
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
       craft_ifPath:
         options:
           DIR:
