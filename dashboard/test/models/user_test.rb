@@ -4079,4 +4079,25 @@ class UserTest < ActiveSupport::TestCase
     section3.delete
     assert_equal section1.id, teacher.last_section_id
   end
+
+  test 'find_channel_owner finds channel owner' do
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, channel_id
+      result = User.find_channel_owner encrypted_channel_id
+      assert_equal student, result
+    end
+  end
+
+  test 'find_channel_owner returns nil for channel with no owner' do
+    with_anonymous_channel do |channel_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, channel_id
+      result = User.find_channel_owner encrypted_channel_id
+      assert_nil result
+    end
+  end
+
+  test 'find_channel_owner returns nil for a malformed channel id' do
+    assert_nil User.find_channel_owner 'not-a-channel-id'
+  end
 end
