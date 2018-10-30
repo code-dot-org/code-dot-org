@@ -14,7 +14,6 @@ describe('SectionsAsStudentTable', () => {
     const wrapper = shallow(
       <SectionsAsStudentTable
         sections={joinedSections}
-        isTeacher={false}
         canLeave={false}
       />, {context: {store}},
     ).dive();
@@ -34,35 +33,10 @@ describe('SectionsAsStudentTable', () => {
     });
   });
 
-  it('shows column headers for teachers', () => {
-    const wrapper = shallow(
-      <SectionsAsStudentTable
-        sections={joinedSections}
-        isTeacher={true}
-        canLeave={false}
-      />, {context: {store}},
-    ).dive();
-    [
-      i18n.section(),
-      i18n.course(),
-      i18n.students(),
-      i18n.sectionCode(),
-    ].forEach((headerText) => {
-      expect(wrapper).to.containMatchingElement(
-        <td>
-          <div>
-            {headerText}
-          </div>
-        </td>
-      );
-    });
-  });
-
   it('does not show a leave section button for teacher-managed student accounts', () => {
     const wrapper = shallow(
       <SectionsAsStudentTable
         sections={joinedSections}
-        isTeacher={false}
         canLeave={false}
       />, {context: {store}},
     ).dive();
@@ -73,29 +47,16 @@ describe('SectionsAsStudentTable', () => {
     const wrapper = shallow(
       <SectionsAsStudentTable
         sections={joinedSections}
-        isTeacher={false}
         canLeave={true}
       />, {context: {store}},
     ).dive();
     expect(wrapper.find('Button').exists()).to.be.true;
   });
 
-  it('does not show a leave section button for teacher accounts', () => {
-    const wrapper = shallow(
-      <SectionsAsStudentTable
-        sections={joinedSections}
-        isTeacher={true}
-        canLeave={false}
-      />, {context: {store}},
-    ).dive();
-    expect(wrapper.find('Button').exists()).to.be.false;
-  });
-
   it('renders a row for each joined section', () => {
     const wrapper = shallow(
       <SectionsAsStudentTable
         sections={joinedSections}
-        isTeacher={false}
         canLeave={false}
       />, {context: {store}},
     ).dive();
