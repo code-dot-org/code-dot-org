@@ -413,7 +413,7 @@ module Pd::Application
       CSV_COLUMNS.keys.each do |source|
         CSV_COLUMNS[source].each do |k|
           unless labels_to_remove[source]&.include? k.to_sym
-            labels[source][k] = CSV_LABEL_OVERRIDES[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
+            labels[source][k] = CSV_LABELS[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
           end
         end
       end

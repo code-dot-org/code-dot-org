@@ -31,10 +31,10 @@ module Pd
         :zip_code,
       ).merge(
         {
-          phone: 'Home or Cell Phone',
+          phone: 'Home or cell phone',
           school: 'School',
           school_name: 'School name',
-          school_district_name: 'School district name',
+          school_district_name: 'School district',
           school_address: 'School address',
           school_city: 'City',
           school_state: 'State',
@@ -129,25 +129,25 @@ module Pd
       }
     }.freeze
 
-    CSV_LABEL_OVERRIDES = {
+    CSV_LABELS = {
       teacher: {
         date_applied: "Date Applied",
         date_accepted: "Date Accepted",
         status: "Status",
         meets_criteria: "Meets minimum requirements?",
         meets_scholarship_criteria: "Meets scholarship requirements?",
-        phone: "Home or cell phone",
         regional_partner_name: "Regional Partner",
         assigned_workshop: "Assigned Workshop",
         total_score: "Bonus Points",
         notes: "Notes",
         alternate_email: "Alternate email",
-        district_name: "School district",
+        school_type: "School type",
+        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name],
         school_city: "School city",
         school_state: "School state",
         school_zip_code: "School zip code",
         current_role: "Current role",
-        program: "Which professional learning program would you like to join for the 2019-20 school year?",
+        program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the 2019-20 school year?",
         cs_how_many_minutes: "How many minutes will your CS Program class last?",
@@ -160,17 +160,17 @@ module Pd
         cs_offered_at_school: "What computer science courses or activities are currently offered at your school?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         willing_to_travel: "How far would you be willing to travel to academic year workshops?",
-        how_heard: "How did you hear about this program? (Teacher's response)",
-        gender_identity: "Gender identity",
-        race: "Race"
+        how_heard: PAGE_LABELS[:section_5_additional_demographic_information][:how_heard] + " (Teacher's response)",
+        gender_identity: "Teacher's gender identity",
+        race: "Teacher's race"
       },
       principal: {
-        title: "Principal title (provided by principal)",
-        first_name: "Principal first name (provided by principal)",
-        last_name: "Principal last name (provided by principal)",
-        email: "Principal email address (provided by principal)",
-        school_name: "School Name (provided by principal)",
-        district_name: "School District (provided by principal)",
+        title: PAGE_LABELS[:section_1_about_you][:principal_title] + " (provided by principal)",
+        first_name: PAGE_LABELS[:section_1_about_you][:principal_first_name] + " (provided by principal)",
+        last_name: PAGE_LABELS[:section_1_about_you][:principal_last_name] + " (provided by principal)",
+        email: PAGE_LABELS[:section_1_about_you][:principal_email] + " (provided by principal)",
+        school_name: PAGE_LABELS[:section_1_about_you][:school_name] + " (provided by principal)",
+        district_name: PAGE_LABELS[:section_1_about_you][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's 2019-20 Professional Learning Program?",
         plan_to_teach: "Is this teacher planning to teach this course in the 2019-20 school year?",
         total_student_enrollment: "Total student enrollment",
