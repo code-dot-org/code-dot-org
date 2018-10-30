@@ -193,6 +193,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+        get "/#{key}/:channel_id/embed_video", to: 'projects#embed_video', key: key.to_s, as: "#{key}_project_embed_video"
       end
       get '/angular', to: 'projects#angular'
     end
