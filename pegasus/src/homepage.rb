@@ -251,6 +251,25 @@ class Homepage
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
+      last_block =
+        if DCDO.get('hoc_launch', nil) == 'dance'
+          {
+            id: 'dance-nonen',
+            title: 'studiobar_dance_title',
+            text: 'studiobar_dance_body',
+            url: '/dance',
+            image: '/shared/images/courses/logo_tall_dance.jpg'
+          }
+        else
+          {
+            id: 'flappy-nonen',
+            title: 'studiobar_flappy_title',
+            text: 'studiobar_flappy_body',
+            url: '/s/flappy/reset',
+            image: '/shared/images/courses/logo_tall_flappy.jpg'
+          }
+        end
+
       @non_en_blocks_entries ||= [
         {
           id: "students-nonen",
@@ -283,14 +302,14 @@ class Homepage
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
-          id: "dance-nonen",
+          id: last_block[:id],
           type: "blockshort",
-          title: "studiobar_dance_title",
-          text: "studiobar_dance_body",
+          title: last_block[:title],
+          text: last_block[:text],
           color1: "185, 191, 21",
           color2: "209, 213, 103",
-          url: CDO.studio_url("/dance"),
-          image: "/shared/images/courses/logo_tall_dance.jpg"
+          url: CDO.studio_url(last_block[:url]),
+          image: last_block[:image]
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
