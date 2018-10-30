@@ -17,7 +17,7 @@ import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DownloadAsGif from "./DownloadAsGif";
-import experiments from '../..//util/experiments';
+import experiments from '../../util/experiments';
 
 function recordShare(type) {
   if (!window.dashboard) {
