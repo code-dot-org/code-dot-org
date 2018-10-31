@@ -68,25 +68,11 @@ export default storybook => {
     .withReduxStore()
     .addStoryTable([
       {
-        name: 'Section Table - three sections for Teacher',
-        description: 'This is an example of a basic Section Table when the teacher has three sections',
-        story: () => (
-          <SectionsAsStudentTable
-            sections={sections}
-            isTeacher={true}
-            canLeave={false}
-            updateSections={action('updateSections')}
-            updateSectionsResult={action('updateSectionsResult')}
-          />
-        )
-      },
-      {
         name: 'Section Table - three sections for students, can NOT leave',
         description: 'This is an example of a basic Section Table when a student has three sections and does not have permission to leave those sections',
         story: () => (
           <SectionsAsStudentTable
             sections={sections}
-            isTeacher={false}
             canLeave={false}
             updateSections={action('updateSections')}
             updateSectionsResult={action('updateSectionsResult')}
@@ -99,7 +85,6 @@ export default storybook => {
         story: () => (
           <SectionsAsStudentTable
             sections={sections}
-            isTeacher={false}
             canLeave={true}
             updateSections={action('updateSections')}
             updateSectionsResult={action('updateSectionsResult')}

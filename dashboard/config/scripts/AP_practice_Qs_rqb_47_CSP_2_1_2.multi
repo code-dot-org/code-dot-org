@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_47_CSP_2_1_2'
+wrong '2'
+wrong '3'
+right '4'
+wrong '5'
+markdown <<MARKDOWN
+How many binary place values are required for the sum of decimal numbers 2 and 6?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.2** and Essential Knowledge statements: **2.1.2B**
+<hr>
+ (A) This is incorrect because you can only represent up to the decimal number 3 with 2 binary digits.
+
+<hr>
+ (B) This is incorrect because you can only represent up to the decimal number 7 with 3 binary digits.
+
+<hr>
+ (C) This is correct because the number 8 in decimal is represented by 1000 in binary.
+
+<hr>
+ (D) This is incorrect because it is unnecessary to use 5 bits when you can use 4.
+
+MARKDOWN
