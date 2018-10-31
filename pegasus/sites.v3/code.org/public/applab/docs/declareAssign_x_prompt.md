@@ -95,7 +95,7 @@ No return value. Variable created in memory and value assigned.
 
 ### Tips
 - Whatever the user types in the pop-up window is stored as a string in the variable. However, Javascript will convert a string of a number to a number if you use it in an aritmetic equation. See the change counting example above.
-- The block of code where you declare the variable defines the variable's scope. Scope refers to which blocks of code can access that variable by name. For instance, if you declare a variable inside a function, that variable name can only be accessed inside that function. Variables decalred at the top of your program are global and can be accessed anywhere in your program.
+- The block of code where you declare the variable defines the variable's scope. Scope refers to which blocks of code can access that variable by name. For instance, if you declare a variable inside a function, that variable name can only be accessed inside that function. Variables declared at the top of your program are global and can be accessed anywhere in your program.
 - Excessive use of prompt() can get annoying, use this sparingly.
 
 [/tips]

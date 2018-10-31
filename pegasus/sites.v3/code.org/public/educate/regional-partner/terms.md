@@ -22,7 +22,7 @@ nav: plc_regional_partner_nav
 ### Workshops ###
 - Organize and host quality, local workshops for teachers implementing Code.org’s K-12 program, with Code.org-accredited facilitators. 
 	- Summer 2019: Host or support local summer workshops for CS Discoveries and CS Principles professional leanring program for your region's teachers.
-	- Fall 2019: Host worshops for administrators and couselors workshops of teachers interested (or participating) in Code.org's professional learning programs. 
+	- Fall 2019: Host workshops for administrators and counselors workshops of teachers interested (or participating) in Code.org's professional learning programs. 
 	- Fall 2019 - Spring 2020: Host one-day CS Fundamentals workshops, CS Discoveries and CS Principles academic year workshops.
 	- Organizing workshops includes, but is not limited to: creating workshops and taking attendance in Code.org’s workshop dashboard, recruiting teachers using Code.org’s teacher application system, securing a venue, ordering food, and ordering supplies.
 	- **CS Fundamentals**: Code.org recommends organizing CS Fundamentals workshops by grade band (grades K-1, 2-3, 4-5) and will have distinct agendas for each grade band.  As much as possible, Code.org recommends filling workshops with teachers from the same grade band. 
@@ -42,13 +42,13 @@ nav: plc_regional_partner_nav
 
 ### Community ###
 - Build, grow and sustain a local community of computer science educators (or join an existing community)
-		- Promote the December Hour of Code campaign locally.
-		- Organize and host a minimum of 4 community meet ups for CS educators, tech industry employees, and CS faculty from local universities. All K-12 teachers attending CS Fundamentals, CS Discoveries and CS Principles workshops should be invited.
+- Promote the December Hour of Code campaign locally.
+- Organize and host a minimum of 4 community meet ups for CS educators, tech industry employees, and CS faculty from local universities. All K-12 teachers attending CS Fundamentals, CS Discoveries and CS Principles workshops should be invited.
 	
 ### Funding ###
 - Use existing funding and finance infrastructure to cover up-front workshop costs and pay facilitators and teachers prior to Code.org reimbursement.
-- Establish and implement an annual fundraising plan and goals to ensure Code.org prograssional learning program is fully funded locally by June of 2020 through any combination of state or federal funding, district cost recovery (i.e, fee-for-service), and corporate or foundation grants or sponsorships. 
-- Collaborate with Code.org to mutually determine the appropriate level of Code.org funding needed for the following year by evaluating funding needs and funding opportunities,including fee-for-service, in the region that can support and sustain this work. 
+- Establish and implement an annual fundraising plan and goals to ensure Code.org professional learning program is fully funded locally by June of 2020 through any combination of state or federal funding, district cost recovery (i.e, fee-for-service), and corporate or foundation grants or sponsorships. 
+- Collaborate with Code.org to mutually determine the appropriate level of Code.org funding needed for the following year by evaluating funding needs and funding opportunities, including fee-for-service, in the region that can support and sustain this work. 
 
 ### Metrics/Evaluation ###
 - Establish and meet detailed metrics on growth of number of participating teachers and students in the region, implementation of courses, diversity, and quality of workshops.
