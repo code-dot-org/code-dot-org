@@ -2956,6 +2956,10 @@ it:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Se usi le funzioni in modo corretto, questo è il percorso che seguirai...
         Function_intro_Ryan_a: Puoi richiamare una funzione più volte in un programma!  Prova a richiamarla due volte per risolvere questo esercizio.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Guarda le **Lanterne marine** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Come puoi usare un condizionale per arrivare al Monumento oceanico?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Che bella barriera corallina! Con il corallo blu vai a **destra**, e attento al corallo rosso sulla **sinistra**!
       Harvesting_authored_hint:
         pointer_harvester_test: Che tipo di blocco è possibile utilizzare per controllare qualcosa e prendere una decisione?
       Inspirational Artwork_authored_hint:
