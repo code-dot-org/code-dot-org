@@ -579,9 +579,14 @@ module Pd::Application
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
       implementation_string = principal_response.values_at("#{course}_implementation".to_sym, "#{course}_implementation_other".to_sym).compact.join(" ")
-
+      principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
+          principal_response_first_name: principal_response[:first_name],
+          principal_response_last_name: principal_response[:last_name],
+          principal_response_email: principal_response[:email],
+          principal_school: principal_school.try(:name) || principal_response[:school_name],
+          principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
           principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
           principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
@@ -589,6 +594,13 @@ module Pd::Application
           principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
           principal_underrepresented_minority_percent: format("%0.02f%%", principal_approval.underrepresented_minority_percent),
+          principal_american_indian_percent: format("0.02f%%", principal_response[:]),
+          principal_asian_percent: format("0.02f%%", principal_response[:]),
+          principal_black_percent: format("0.02f%%", principal_response[:]),
+          principal_hispanic_percent: format("0.02f%%", principal_response[:]),
+          principal_native_hawaiian_percent: format("0.02f%%", principal_response[:]),
+          principal_white_percent: format("0.02f%%", principal_response[:]),
+          principal_two_or_more_percent: format("0.02f%%", principal_response[:]),
           principal_wont_replace_existing_course: replace_course_string,
           principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],

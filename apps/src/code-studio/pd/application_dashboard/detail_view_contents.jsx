@@ -24,7 +24,7 @@ import {
   PageLabels,
   SectionHeaders,
   ScoreableQuestions,
-  TwoAnswerQuestions,
+  MultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
@@ -610,11 +610,6 @@ export class DetailViewContents extends React.Component {
 
   renderScoringSection = (key) => {
     const snakeCaseKey = _.snakeCase(key);
-    const allKeys = [snakeCaseKey]
-
-    if (TwoAnswerQuestions[snakeCaseKey]) {
-      allKeys.shift(TwoAnswerQuestions[snakeCaseKey][1]);
-    }
 
     if (this.props.viewType === 'facilitator') {
       return false;
@@ -721,15 +716,15 @@ export class DetailViewContents extends React.Component {
   };
 
   renderAnswer = (key, answer) => {
-    if (TwoAnswerQuestions[key]) {
+    if (MultiAnswerQuestionFields[key]) {
       return (
         <div>
-          <p>Teacher Response: {this.props.applicationData.form_data[TwoAnswerQuestions[key][0]]}</p>
-          <p>Principal Response: {this.props.applicationData.form_data[TwoAnswerQuestions[key][1]]}</p>
+          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])]}</p>)}
+          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])]}</p>)}
+          {MultiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[MultiAnswerQuestionFields[key]['stats']]}</p>)}
         </div>
-      )
-    }
-    if (Array.isArray(answer)) {
+      );
+    } else if (Array.isArray(answer)) {
       return answer.sort().join(', ');
     } else {
       return answer;
@@ -857,7 +852,7 @@ export class DetailViewContents extends React.Component {
               School Name
             </td>
             <td style={styles.answerColumn}>
-              {this.props.applicationData.school_name}
+              {this.renderSchoolTrait(this.props.applicationData.school_name, this.props.applicationData.form_data['principal_school_name'])}
             </td>
             <td style={styles.scoringColumn}/>
           </tr>
@@ -866,7 +861,7 @@ export class DetailViewContents extends React.Component {
             School District
           </td>
           <td style={styles.answerColumn}>
-            {this.props.applicationData.district_name}
+            {this.renderSchoolTrait(this.props.applicationData.district_name, this.props.applicationData.form_data['principal_school_district'])}
           </td>
           <td style={styles.scoringColumn}/>
         </tr>
@@ -891,6 +886,23 @@ export class DetailViewContents extends React.Component {
         </tbody>
       </Table>
     );
+  };
+
+  renderSchoolTrait = (teacher_response, principal_response) => {
+    if (principal_response && principal_response !== teacher_response) {
+      return (
+        <div>
+          <p>
+            Teacher Response: {teacher_response}
+          </p>
+          <p>
+            Principal Presponse: {principal_response}
+          </p>
+        </div>
+      );
+    } else {
+      return teacher_response;
+    }
   };
 
   render() {
