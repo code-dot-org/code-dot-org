@@ -1,17 +1,17 @@
 // Actions
 
 /** @enum {string} */
-export const SET_SONG = 'dance/SET_SONG';
+export const SET_SELECTED_SONG = 'dance/SET_SELECTED_SONG';
 
-export function setSong(song) {
+export function setSelectedSong(song) {
   return {
-    type: SET_SONG,
+    type: SET_SELECTED_SONG,
     value: song,
   };
 }
 
 export const actions = {
-  setSong
+  setSelectedSong: setSelectedSong
 };
 
 // Reducers
@@ -23,7 +23,7 @@ const initialState = {
 function songs(state, action) {
   state = state || initialState;
   switch (action.type) {
-    case SET_SONG:
+    case SET_SELECTED_SONG:
       return {
         ...state,
         selectedSong: action.value

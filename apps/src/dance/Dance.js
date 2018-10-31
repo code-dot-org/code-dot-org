@@ -11,7 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
-import {reducers, setSong} from './redux';
+import {reducers, setSelectedSong} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
@@ -118,7 +118,7 @@ Dance.prototype.init = async function (config) {
   });
 
   const selectedSong = getSelectedSong(songManifest, config);
-  getStore().dispatch(setSong(selectedSong));
+  getStore().dispatch(setSelectedSong(selectedSong));
 
   this.updateSongMetadata(getStore().getState().songs.selectedSong);
 
