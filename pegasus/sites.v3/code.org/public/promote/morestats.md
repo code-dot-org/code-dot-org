@@ -85,7 +85,7 @@ We are interested in seeing what's happening in computer science education inter
 - On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.
 - 91% of open software jobs are [outside Silicon Valley](http://www.inc.com/salvador-rodriguez/act-software-developers-map.html), and [mid-tech jobs are increasing](https://qz.com/1212875/the-american-midwest-is-quickly-becoming-a-blue-collar-version-of-silicon-valley/) in the midwest.  
 - BSA released a report on the [economic impact of software](http://softwareimpact.bsa.org/). 
-- Change the Equation has a [summary](https://pbs.twimg.com/media/DKB2iIHWAAAQlA7.jpg:large) of untapped minority talent in computing.
+- Change the Equation has a [summary](http://ecs.force.com/studies/rstempg?id=a0r0g000009U7Uo) of untapped minority talent in computing.
 - For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 - A [comprehensive framework](https://www.kaporcenter.org/wp-content/uploads/2018/02/KC18001_report_v6-1.pdf) for understanding and addressing the lack of diversity across the tech ecosystem, including the benefits of a diverse workforce. 
 

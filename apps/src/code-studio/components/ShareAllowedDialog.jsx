@@ -17,6 +17,7 @@ import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DownloadAsGif from "./DownloadAsGif";
+import experiments from '../..//util/experiments';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -160,6 +161,7 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     getNextFrame: PropTypes.func,
+    replayLog: PropTypes.array,
   };
 
   state = {
@@ -227,6 +229,16 @@ class ShareAllowedDialog extends React.Component {
 
   unpublish = () => {
     this.props.onUnpublish(this.props.channelId);
+  };
+
+  createReplayVideo = () => {
+    fetch("https://dance-api.code.org/render", {
+      method: "POST",
+      body: JSON.stringify({
+        log: this.props.replayLog,
+        id: this.props.channelId
+      })
+    });
   };
 
   render() {
@@ -392,6 +404,11 @@ class ShareAllowedDialog extends React.Component {
                     </a>}
                   </span>}
                 </div>
+                {experiments.isEnabled('p5Replay') &&
+                  <button onClick={this.createReplayVideo}>
+                    Create Replay Video
+                  </button>
+                }
                 {this.state.showSendToPhone &&
                 <SendToPhone
                   channelId={this.props.channelId}
@@ -435,6 +452,7 @@ export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
   getNextFrame: state.shareDialog.getNextFrame,
+  replayLog: state.shareDialog.replayLog,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {
