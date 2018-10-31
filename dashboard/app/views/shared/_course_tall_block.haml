@@ -1,4 +1,5 @@
 - showState ||= false
+- teacher_guide ||= nil
 
 - if id == Script::HOC_NAME
   - url = hoc_reset_url
@@ -50,7 +51,7 @@
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME, Script::MINECRAFT_HERO_NAME].include? id
+- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME, Script::MINECRAFT_HERO_NAME, Script::MINECRAFT_AQUATIC_NAME].include? id
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
@@ -65,6 +66,9 @@
     - url = CDO.code_org_url('/api/hour/begin/mc')
   - elsif id == 'hero'
     - title = t('upsell.hero.title')
+    - url = CDO.code_org_url('/api/hour/begin/mc')
+  - elsif id == 'aquatic'
+    - title = t('upsell.aquatic.title')
     - url = CDO.code_org_url('/api/hour/begin/mc')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')
@@ -101,9 +105,12 @@
     .clear
     .smalltext= body
     .clear
+    - if teacher_guide.present?
+      .bar.teacher-guide= link_to t('view_teacher_guide'), CDO.code_org_url(teacher_guide)
+    .clear
     - if audience && current_user && showState
-      .audiencebar.smalltext.audience= audience
+      .bar.audiencebar.audience= audience
     - elsif audience
-      .bottombar.smalltext.audience= audience
+      .bar.audience= audience
 
     = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }

@@ -143,5 +143,10 @@ module Pd::Application
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
     end
+
+    # @override
+    def self.can_see_locked_status?(user)
+      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
+    end
   end
 end

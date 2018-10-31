@@ -487,6 +487,29 @@ module HttpCacheTest
           assert_equal 'bytes 0-99999/100000', range && range.chomp
         end
       end
+
+      it 'Strips cookies from the penultimate dance level' do
+        assert strips_session_specific_cookies_from_request? '/s/dance/stage/1/puzzle/12'
+      end
+
+      it 'Does not strip cookies from the last dance level' do
+        refute strips_session_specific_cookies_from_request? '/s/dance/stage/1/puzzle/13'
+      end
+
+      it 'Strips cookies from an aquatic level' do
+        assert strips_session_specific_cookies_from_request? '/s/aquatic/stage/1/puzzle/5'
+      end
+
+      # rubocop:disable Lint/NestedMethodDefinition
+      def strips_session_specific_cookies_from_request?(url)
+        cookie = 'hour_of_code' # this is a session-specific cookie
+        text_cookie = 'Hello Cookie!'
+        mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
+
+        response = proxy_request url, {}, {cookie => 'cookie_value'}
+        text_cookie != last_line(response)
+      end
+      # rubocop:enable Lint/NestedMethodDefinition
     end
   end
 end

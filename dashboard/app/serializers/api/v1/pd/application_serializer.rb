@@ -98,7 +98,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def principal_approval_state
-    object.try(:principal_approval)
+    object.try(:principal_approval_state)
   end
 
   def regional_partner_emails_sent_by_system

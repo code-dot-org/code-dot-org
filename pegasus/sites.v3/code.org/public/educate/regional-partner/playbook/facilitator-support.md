@@ -13,7 +13,7 @@ nav: regional_partner_playbook_nav
 
 ## Table of Contents
 - [Announcements](#announce)
-- [Example Facilitator One Pager](#page)
+- [Example Facilitator One-Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Recruitment Resources](#recruitment)
 - [Facilitator Support Documents](#docs)
@@ -33,10 +33,10 @@ A new, streamlined process for securing a substitute CS Discoveries/CS Principle
 [**Back to the top**](#top)
 ________________
 <a id="page"></a>
-## Example Facilitator One Pager for 6-12 Programs
-The facilitator one pager should be sent to facilitators at least 10 days prior to the academic year workshops. It provides facilitators with the logistical information needed to run their workshop.
+## Example Facilitator One-Pager for 6-12 Programs
+The facilitator one-pager should be sent to facilitators at least 10 days prior to the academic year workshops. It provides facilitators with the logistical information needed to run their workshop.
 
-Use <a href="https://docs.google.com/document/d/1FobsNOHi91ioe5ZoCeiWNgDslQkTPF4w31j2ii8q4Bk/edit" target=_blank>this one pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
+Use <a href="https://docs.google.com/document/d/1FobsNOHi91ioe5ZoCeiWNgDslQkTPF4w31j2ii8q4Bk/edit" target=_blank>this one-pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
 
 
 [**Back to the top**](#top)
@@ -65,13 +65,14 @@ ________________
 <a id="docs"></a>
 ## Facilitator Support Documents
 
-- [Important Resources for CS Fundamentals Facilitators](https://curriculum.code.org/plcsf/) - See full list of resources and agendas for CS Fundamentals Facilitators
-- [6-12 Facilitator Playbook](https://docs.google.com/document/d/1xTZkAfmjsOttqNB7uFT-Sp5yH0fVDGbQ0PPhhcU70Zk/edit) - Toolkit for CS Discoveries and CS Principles facilitators
-- [6-12 Facilitation Guide](https://docs.google.com/document/d/1xvBjf74VL0YfVswqLwoCdau5NN3D-QRyqQHGYl20034/edit)
-- [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators
-- [Important Resources for CS Discoveries Facilitators](https://curriculum.code.org/plcsd/) - See full list of resources and agendas for CS Discoveries Facilitators
+- [CS Fundamentals Facilitator Playbook](https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5) - Toolkit for CS Fundamentals Facilitators
+- [CS Fundamentals Workshop Process Document](https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit) - Guide for CS Fundamentals Facilitators and Regional Partners to manage K-5 workshops
+- [CS Fundamentals Facilitator Landing Page](https://curriculum.code.org/plcsf/) - See full list of resources and agendas for CS Fundamentals Facilitators
+- [6-12 Facilitator Handbook](https://docs.google.com/document/d/1DBP4mPMlW2b5dWjnkDZdGtX5hgLW3L1uREvi_JrNNoI/edit?usp=sharing) - Toolkit for CS Discoveries and CS Principles facilitators
+- [CS Discoveries Facilitator Landing Page](https://curriculum.code.org/plcsd/) - See full list of important resources and agendas for CS Discoveries Facilitators
+- [CS Principles Facilitator Landing Page](https://curriculum.code.org/plcsp/) - See full list of important resources and agendas for CS Principles Facilitators
+- <a href="/educate/regional-partner/playbook/payments#csftravel" target=_blank> K-5 Fundamentals Facilitator Travel Policy</a>
 - <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated August 2018]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
-- <a href="/educate/regional-partner/playbook/payments#csftravel" target=_blank>K-5 Fundamentals Facilitator Travel Policy</a>
 
 [**Back to the top**](#top)
 

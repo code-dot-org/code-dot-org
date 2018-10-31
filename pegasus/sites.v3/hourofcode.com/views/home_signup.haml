@@ -6,13 +6,17 @@
     #signup-closed
       =hoc_s(:signup_registration_not_required).gsub(/%{hoc_activities_url}/, resolve_url('/learn')).gsub(/%{howto_guide_url}/, resolve_url('/how-to'))
       =hoc_s(:signup_registration_closed)
+    =view :index_video
   -else
     %h1#thanks-header{style: "display:none;"}=hoc_s(:census_thanks)
     %div
       .row
         .col-md-6
           =view :signup_form
-        .col-md-5
-          -unless hoc_mode == "pre-hoc"
-            =view :announcements
-        .col-md-1
+        .col-md-6
+          %br
+          =view :index_video
+          %br
+    %br
+    -unless hoc_mode == "pre-hoc"
+      =view :announcements

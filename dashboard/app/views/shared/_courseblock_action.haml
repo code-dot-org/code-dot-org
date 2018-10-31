@@ -5,13 +5,13 @@
 
   - if current_user.completed? (script)
     = link_to script_certificate_image_url(current_user, script), class: 'whitelink' do
-      .bottombar.smalltext.printcertificate
+      .bar.printcertificate
         = t('home.print_certificate')
   - elsif current_user.working_on? (script)
     %a.whitelink{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
-      .bottombar.smalltext.continue
+      .bar.continue
         = t('continue')
   - else
     = link_to url, class: 'whitelink' do
-      .bottombar.smalltext.trynow
+      .bar.trynow
         = t('home.trynow')

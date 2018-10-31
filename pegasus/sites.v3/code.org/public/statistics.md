@@ -13,8 +13,28 @@ We're on a mission to give every student the opportunity to learn computer scien
 
 ## Help us continue to make an impact! 
 Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share your favorite stats. Click each photo to retweet. 
+
 <br>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1055581173353594880" target="_blank"><img src="/images/statistics/fit-250/teacher-background.png"></a>
+
 <br>
+
+Teachers from any background can teach computer science.
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<a href="https://twitter.com/codeorg/status/1053355643862728706" target="_blank"><img src="/images/statistics/fit-250/csf-over-year.png"></a>
+
+<br>
+
+Just think of how many students these 70,000 teachers will impact! 
+
+</div>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -25,6 +45,10 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 Nearly one-third of all U.S. students are learning the curriculum of the future. 
 
 </div>
+
+<div style="clear: both;"></div>
+
+<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -46,10 +70,6 @@ According to Code.org's "fun-o-meter," turns out our students get a case of the 
 
 </div>
 
-<div style="clear: both;"></div>
-
-<br>
-
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/1029080205262868482" target="_blank"><img src="/images/statistics/fit-250/increase-diversity.png"></a>
@@ -59,6 +79,10 @@ According to Code.org's "fun-o-meter," turns out our students get a case of the 
 When teachers from underrepresented minority groups lead AP CSP classes, <a href="https://medium.com/@codeorg/one-way-to-increase-diversity-in-your-schools-computer-science-classes-2aa36ecaa5f7" target="_blank">their classrooms become more diverse</a>. 
 
 </div>
+
+<div style="clear: both;"></div>
+
+<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -80,10 +104,6 @@ And this double enrollment means more girls and underrepresented minorities are 
 
 </div>
 
-<div style="clear: both;"></div>
-
-<br>
-
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/983763631711154177" target="_blank"><img src="/images/statistics/fit-250/balance.png"></a>
@@ -93,6 +113,12 @@ And this double enrollment means more girls and underrepresented minorities are 
 We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de" target="_blank">change this way before then</a>.
 
 </div>
+
+<br>
+
+<div style="clear: both;"></div>
+
+<br>
 
 <div class="col-33" style="padding-right: 20px;">
 

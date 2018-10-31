@@ -98,19 +98,21 @@
     }
 
     #sign_in_or_user {
-      margin: 5px 0 0 0;
       display: block;
-      float: right;
+      float: left;
+      margin: 11px 0 0 30px;
 
       .button-signin {
         margin-top: -4px;
         background-color: transparent;
         border: 2px solid $white;
         color: $white;
+        float: right;
+        margin-left: 5px;
       }
 
       #signin_button {
-        margin-top: -9px;
+        margin-top: -6px;
         height: 38px;
       }
     }
@@ -120,11 +122,10 @@
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
-    margin-top: -4px;
     height: 38px;
     user-select: none;
 
-    .create_button {
+    .pairing_name, .display_name, .create_button {
       font-family: 'Gotham 4r', sans-serif;
       max-width: 120px;
       display: inline-block;
@@ -150,20 +151,11 @@
     }
 
     .user_menu_arrow_up,
+    .user_menu_arrow_down,
     .create_menu_arrow_up,
     .create_menu_arrow_down {
       margin-top: -3px;
     }
-
-    .user_menu_arrow_down,
-    {
-      margin-top: -2px;
-    }
-  }
-
-  .user_icon { /* copied from dashboard's .user-menu */
-    font-size: 25px;
-    border-width: 0px;
   }
 
   .create_options {
