@@ -515,6 +515,9 @@ en:
       Begin planning your project_2018:
         Begin planning your project: Begin planning your project
         description here: description here
+      Begin planning your project_2018_2019:
+        Begin planning your project: Begin planning your project
+        description here: description here
       Big Data in the CSP Framework: {}
       'Big Picture: If-statements':
         description here: description here
@@ -2234,6 +2237,8 @@ en:
         title: title
       Prepare for your presentation_2018:
         Prepare for yur presentation: Prepare for yur presentation
+      Prepare for your presentation_2018_2019:
+        Prepare for yur presentation: Prepare for yur presentation
       Processing Arrays: {}
       'Project Breakdown: Building a Canvas Painter': {}
       'Project Breakdown: Clicker Game': {}
@@ -3281,20 +3286,33 @@ en:
       courseF_external_ramp14: {}
       courseF_external_variableConstant: {}
       courseF_external_variableConstant_2018: {}
+      courseF_external_variableConstant_2018_2019: {}
       courseF_firstFunctions_map:
         description here: description here
         title: title
       courseF_markdown_algorithms_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_algorithms_end_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_algorithms_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_algorithms_intro_2019:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_conditionals_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_conditionals_end_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_conditionals_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_conditionals_intro_2019:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_debugging_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_end_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_debugging_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_intro_2019:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_events_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
@@ -3302,7 +3320,11 @@ en:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_forloops_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_forloops_end_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_forloops_intro_2019:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_functions_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
@@ -3314,15 +3336,27 @@ en:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_loops_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_end_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_loops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_intro_2019:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_nestedloops_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_end_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_intro_2019:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_variables_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_variables_end_2019:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_variables_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_variables_intro_2019:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       coursee-privateandpersonalinformation: {}
       coursef_functionsSummary_map:
@@ -11102,6 +11136,15 @@ en:
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a square.: The artist will draw a square.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
+        Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
+        The artist draws a square.: The artist draws a square.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a square.: The artist will draw a square.
+        The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
@@ -11131,6 +11174,16 @@ en:
         'The first error is that Scrat goes the wrong way after his final turn. ': 'The first error is that Scrat goes the wrong way after his final turn. '
         The program won't fail. Scrat will get to the acorn.: The program won't fail. Scrat will get to the acorn.
       courseC_multi_maze_debugging8_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Scrat goes the wrong way after his final turn.: Incorrect. Scrat goes the wrong way after his final turn.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat takes one too few steps and ends up short of the acorn.
+        Scrat will go the wrong way after his final turn.: Scrat will go the wrong way after his final turn.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'The first error is that Scrat goes the wrong way after his final turn. '
+        The program won't fail. Scrat will get to the acorn.: The program won't fail. Scrat will get to the acorn.
+      courseC_multi_maze_debugging8_predict1_2018_2019:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Scrat goes the wrong way after his final turn.: Incorrect. Scrat goes the wrong way after his final turn.
@@ -11318,6 +11371,15 @@ en:
         The bee will get all of the nectar.: The bee will get all of the nectar.
         The bee will get only 2 units of nectar.: The bee will get only 2 units of nectar.
         The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will get only 2 units of nectar.: The bee will get only 2 units of nectar.
+        The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
@@ -11330,6 +11392,17 @@ en:
         ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
         : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Look closely at the code below. How much honey will the bee make when you click "Run"?
+        ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         '12': '12'
         '4': '4'
         '8': '8'
@@ -11672,6 +11745,18 @@ en:
         The bee won't collect any nectar because the variable isn't called "gather".: The bee won't collect any nectar because the variable isn't called "gather".
         ? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
         : The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
+      courseF_bee_variables_8a_2018_2019:
+        Bee Variables Multi: Bee Variables Multi
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The variable gets set back to 0 before the last two function calls.: Incorrect.  The variable gets set back to 0 before the last two function calls.
+        Incorrect.  Your variable's name does not affect its value.: Incorrect.  Your variable's name does not affect its value.
+        Look at the code below.  How many units of nectar will the bee collect at the end?: Look at the code below.  How many units of nectar will the bee collect at the end?
+        The bee will collect all of the nectar.: The bee will collect all of the nectar.
+        The bee will only collect 2 nectar.: The bee will only collect 2 nectar.
+        The bee won't collect any nectar because the variable isn't called "gather".: The bee won't collect any nectar because the variable isn't called "gather".
+        ? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
+        : The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
       courseF_multi_artist_for10_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -11682,6 +11767,15 @@ en:
         The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
         What will happen when you click "Run"?: What will happen when you click "Run"?
       courseF_multi_artist_for10_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrect. The artist turns between iterations of the `for` loop.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_artist_for10_predict1_2018_2019:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
@@ -11756,6 +11850,17 @@ en:
         The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
         The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
         We have set the variable "length" to 50.  What will happen when you click "Run"?: We have set the variable "length" to 50.  What will happen when you click "Run"?
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        ? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        : The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
+        The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
+        The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: We have set the variable "length" to 50.  What will happen when you click "Run"?
       courseF_multi_bee_conditionals1_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -11809,6 +11914,15 @@ en:
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
         'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
       courseF_multi_bee_for3_predict1_2018:
+        Correct!: Correct!
+        'I don''t know. ': 'I don''t know. '
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
+        'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
+      courseF_multi_bee_for3_predict1_2018_2019:
         Correct!: Correct!
         'I don''t know. ': 'I don''t know. '
         Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
