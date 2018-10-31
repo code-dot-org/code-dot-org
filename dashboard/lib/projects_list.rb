@@ -15,6 +15,7 @@ module ProjectsList
     minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
+    dance: ['dance']
   }.freeze
 
   class << self

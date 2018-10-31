@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -66,12 +66,9 @@
     "custom_helper_library": "SPRITE_NAMES = [\"ALIEN\", \"BEAR\", \"CAT\", \"DUCK\", \"FROG\", \"MOOSE\", \"ROBOT\", \"UNICORN\"];",
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* Change the tint of at least one dancer.\\n\\n*This level ends after 8 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7dad007778a2e0b493248a5fd057cd41/HOC Dance 7_draft.mp3\"}]",
-    "default_song": "hammer",
+    "default_song": "canttouchthis_mchammer",
     "long_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.\r\n* Tints will mix the color you choose with the colors of the dancer.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

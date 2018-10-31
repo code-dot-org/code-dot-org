@@ -141,7 +141,6 @@ function showHomepage() {
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
             sections={homepageData.sections}
-            canLeave={homepageData.canLeave}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             includeDanceParty={homepageData.includeDanceParty}
           />
