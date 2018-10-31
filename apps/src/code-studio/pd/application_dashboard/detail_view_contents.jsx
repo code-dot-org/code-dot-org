@@ -40,7 +40,6 @@ const styles = {
   },
   statusSelect: {
     width: 250, // wide enough for the widest status
-    marginRight: '5px'
   },
   editMenuContainer: {
     display: 'inline-block' // fit contents
@@ -64,7 +63,6 @@ const styles = {
     marginRight: '5px'
   },
   statusSelectGroup: {
-    maxWidth: 200,
     marginRight: 5,
     marginLeft: 5,
   },
@@ -718,6 +716,7 @@ export class DetailViewContents extends React.Component {
     if (!this.props.applicationData.principal_approval_state) {
       return (
         <div>
+          <h3>Principal Approval</h3>
           <h4>Select option</h4>
           <PrincipalApprovalButtons
             applicationId={this.props.applicationId}
@@ -730,6 +729,7 @@ export class DetailViewContents extends React.Component {
     } else if (this.props.applicationData.principal_approval_state === "Not required") {
       return (
         <div>
+          <h3>Principal Approval</h3>
           <h4>Not required</h4>
           <p>
             If you would like to require principal approval for this teacher,
@@ -748,7 +748,8 @@ export class DetailViewContents extends React.Component {
 
       return (
         <div>
-          <h4>{this.state.principalApproval}</h4>
+          <h3>Principal Approval</h3>
+          <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p>
             Link to principal approval form:{' '}
             <a href={principalApprovalUrl} target="_blank">

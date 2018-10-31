@@ -284,6 +284,7 @@ class Blockly < Level
       # migrate to the new keys
       set_unless_nil(level_options, 'instructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
+      set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
       if should_localize?
         if script && !script.localize_long_instructions?
@@ -561,5 +562,19 @@ class Blockly < Level
     Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
+  end
+
+  # Display translated custom block text
+  def localized_shared_blocks(level_objects)
+    return nil if level_objects.blank?
+    level_objects_copy = level_objects.deep_dup
+    level_objects_copy.each do |level_object|
+      next if level_object.blank?
+      block_text = level_object[:config]["blockText"]
+      if block_text.present?
+        level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
+      end
+    end
+    level_objects_copy
   end
 end

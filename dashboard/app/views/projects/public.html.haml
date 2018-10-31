@@ -2,6 +2,8 @@
 - projects_data = {}
 - projects_data[:limitedGallery] = limited_gallery
 - projects_data[:includeDanceParty] = DCDO.get("dance_projects", false)
+- hoc_launch = DCDO.get("hoc_launch", nil)
+- projects_data[:includeMCAquatic] = ['mc', 'dance'].include? hoc_launch
 
 %script{src: asset_path("js/#{js_locale}/common_locale.js"), data: {projects: projects_data.to_json}}
 %script{src: minifiable_asset_path('js/projects/public.js')}
