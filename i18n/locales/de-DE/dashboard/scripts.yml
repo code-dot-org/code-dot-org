@@ -1079,6 +1079,8 @@ de:
               name: Binäre Armbänder
             Binary Images:
               name: Binärbilder
+            Play Lab:
+              name: Spielelabor
         csd2-2017:
           stages:
             Peer Review:

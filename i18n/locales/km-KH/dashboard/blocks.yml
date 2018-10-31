@@ -77,12 +77,28 @@ km:
         options:
           GROUP:
             sprites: ទាំងអស់
+          FORMAT:
+            '"random"': ព្រាវ
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': ព្រាវ
       Dancelab_randomColor:
         text: ពណ៌​ព្រាវ
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ km:
             '"none"': គ្មាន
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
@@ -296,6 +319,10 @@ km:
           TYPE:
             "'sand'": ខ្សាច់
             "'planksOak'": ក្តារឈើសែន
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ខ្សាច់
       craft_moveForward:
         text: រំកិល​ទៅមុខ
       craft_placeTorch:

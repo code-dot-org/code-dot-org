@@ -1100,6 +1100,8 @@ et:
               name: Binaarsed käevõrud
             Binary Images:
               name: Binaarsed pildid
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Peer Review:

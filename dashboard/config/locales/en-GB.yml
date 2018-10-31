@@ -35,7 +35,7 @@ en-GB:
   crud:
     submit: Submit
   nav:
-    create_button:
+    user:
       create: Create
   teacher:
     panel:

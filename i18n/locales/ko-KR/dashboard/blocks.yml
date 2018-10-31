@@ -77,12 +77,28 @@ ko:
         options:
           GROUP:
             sprites: 모두
+          FORMAT:
+            '"random"': random(랜덤)
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": 왼쪽으로
             "{x: 300, y: 200}": 오른쪽으로
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random(랜덤)
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': random(랜덤)
       Dancelab_randomColor:
         text: 랜덤 색
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ ko:
             '"none"': 없음
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': 크기
+            '"height"': '높이:'
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: 모두
           PROPERTY:
             '"scale"': 크기
             '"height"': '높이:'
@@ -296,6 +319,10 @@ ko:
           TYPE:
             "'sand'": 모래
             "'planksOak'": 참나무 목재
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": 모래
       craft_moveForward:
         text: 앞으로 이동
       craft_placeTorch:

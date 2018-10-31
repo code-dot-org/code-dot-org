@@ -6795,6 +6795,18 @@ zh-CN:
         courseB_starWars_prog9_b: 解决这个难题有很多方法。
         courseB_starWars_prog9_c: |-
           使用`重复`循环有帮助吗？
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: '`设置演员1为？？？图像`块可用于将演员添加到舞台。'
+        courseE_playLab_scaffold1_b: 将`设置演员`模块置于`当运行时`下, 使您的演员出现在程序的开头。
+        courseE_playLab_scaffold1_c: 使用`设置？？？背景`为您的场景选择背景。
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_a: 打开`当按____方向键时` 事件的下拉菜单来更改模块控制的方向。
+        courseE_playLab_scaffold1_b: 您应该有四个`当按下方向键`事件模块，它们在每个之下朝着一个方向向前移动。
+        courseE_playLab_scaffold1_c: 当你完成后，你应该能够用方向键来移动你的英雄!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: 使用`得分`添加一分, 并用`扣分`减去一分。
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: 要完成这个关卡, 你需要赢或输。使用`胜利结束游戏`或`失败结束游戏`模块完成。
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           将此块附加到 "当运行时" 模块：

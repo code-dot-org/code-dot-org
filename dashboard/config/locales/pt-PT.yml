@@ -90,6 +90,7 @@ pt:
     twitter: Twitter
     facebook: Facebook
     windowslive: Outlook
+    microsoft_v2_auth: Outlook
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
@@ -118,7 +119,6 @@ pt:
     age: Idade
     user_type: Aluno ou professor?
     submit: Criar conta
-    next: Seguinte
     teacher: É um professor?
     valid_username: Disponível!
     invalid_username: O nome de utilizador tem de ter, pelo menos, 5 caracteres
@@ -271,13 +271,6 @@ pt:
       about_contact: Contacte-nos
       about_faqs: Perguntas frequentes
       stats: Estatística
-    create_button:
-      create: Criar
-      applab: Laboratório de aplicações
-      artist: Artista
-      playlab: Laboratório
-      minecraft: Minecraft
-      flappy: Flappy Bird
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -291,6 +284,12 @@ pt:
       team: Equipa
       driver: Controlador
       navigator: Navegador
+      create: Criar
+      applab: Laboratório de aplicações
+      artist: Artista
+      playlab: Laboratório
+      minecraft: Minecraft
+      flappy: Flappy Bird
     popup:
       progress_for_user: progresso de %{name}'s
       progress: O teu progresso

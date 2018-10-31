@@ -84,11 +84,10 @@ uz:
   nav:
     header:
       educate_hoc: Dasturlash soati
-    create_button:
-      create: Yaratmoq
-      applab: Ilova labaratoriyasi
     user:
       classroom: O‘qituvchining bosh sahifasi
+      create: Yaratmoq
+      applab: Ilova labaratoriyasi
   teacher:
     panel:
       student: O‘quvchi

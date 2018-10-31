@@ -1997,6 +1997,8 @@ zh-TW:
               name: 二進制手環
             Binary Images:
               name: 二進制圖像
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             new stage:

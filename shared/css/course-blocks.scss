@@ -58,7 +58,7 @@
 
 .courseblock-tall {
   background-color: white;
-  height: 280px;
+  height: 300px;
   border: solid 1px #bbb;
   border-radius: 5px;
   overflow: hidden;
@@ -152,22 +152,24 @@
     }
   }
 
-  .audiencebar {
+  .bar {
     width: 100%;
-    padding: 4px 10px;
-    margin: 0;
-    bottom: 25px;
-    float: left;
-    position: absolute;
-  }
-
-  .bottombar {
-    width: 100%;
+    font-size: 13px;
+    line-height: 13px;
     padding: 4px 10px;
     margin: 0;
     bottom: 0;
     float: left;
     position: absolute;
+  }
+
+  .teacher-guide {
+    bottom: 40px;
+    text-align: right;
+  }
+
+  .audiencebar {
+    bottom: 20px;
   }
 
   .audience {

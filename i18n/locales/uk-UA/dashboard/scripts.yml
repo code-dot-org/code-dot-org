@@ -1012,6 +1012,8 @@ uk:
               name: Двійкові браслети
             Binary Images:
               name: Двійкові зображення
+            Play Lab:
+              name: Ігрова студія
         csd2-2017:
           stages:
             Peer Review:

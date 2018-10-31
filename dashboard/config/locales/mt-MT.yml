@@ -66,6 +66,7 @@ mt:
     twitter: Twitter
     facebook: Facebook
     windowslive: Account tal-Microsoft
+    microsoft_v2_auth: Account tal-Microsoft
     forgot_password: Insejt il-Password?
     need_confirmation: Ma rcevejtx istruzzjonijiet tal-konferma?
     need_unlock: Ma rcevejtx istruxzzjonijiet biex tanlokkja?

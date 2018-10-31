@@ -159,7 +159,7 @@ sk:
       draw spiral circle: nakresli špirálu
       draw roof: nakresli strechu
       draw rectangle: nakresli obdĺžnik
-      move: presunúť
+      move: posuň sa
       function 1: funkcia 1
       function 2: funkcia 2
       destroy and move: znič a posuň sa

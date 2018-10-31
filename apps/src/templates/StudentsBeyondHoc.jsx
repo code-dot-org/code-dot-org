@@ -43,7 +43,7 @@ class StudentsBeyondHoc extends Component {
     var specificCardSet;
     switch (true) {
       case completedTutorialType === 'pre2017Minecraft' && isEnglish && under13:
-          specificCardSet = 'youngerThan13pre2017MinecraftCards';
+          specificCardSet = 'youngerThan13Pre2017MinecraftCards';
         break;
       case completedTutorialType === 'pre2017Minecraft' && isEnglish:
           specificCardSet = 'pre2017MinecraftCards';
@@ -51,14 +51,23 @@ class StudentsBeyondHoc extends Component {
       case completedTutorialType === 'pre2017Minecraft' && !isEnglish:
           specificCardSet ='nonEnglishPre2017MinecraftCards';
         break;
-      case completedTutorialType === '2017Minecraft' && isEnglish:
-          specificCardSet = 'newMinecraftCards';
-        break;
       case completedTutorialType === '2017Minecraft' && isEnglish && under13:
-          specificCardSet = 'youngerThan13NewMinecraftCards';
+          specificCardSet = 'youngerThan13HeroMinecraftCards';
+        break;
+      case completedTutorialType === '2017Minecraft' && isEnglish:
+          specificCardSet = 'heroMinecraftCards';
         break;
       case completedTutorialType === '2017Minecraft' && !isEnglish:
-          specificCardSet = 'nonEnglishNewMinecraftCards';
+          specificCardSet = 'nonEnglishHeroMinecraftCards';
+        break;
+      case completedTutorialType === '2018Minecraft' && isEnglish && under13:
+          specificCardSet = 'youngerThan13AquaticMinecraftCards';
+        break;
+      case completedTutorialType === '2018Minecraft' && isEnglish:
+          specificCardSet = 'aquaticMinecraftCards';
+        break;
+      case completedTutorialType === '2018Minecraft' && !isEnglish:
+          specificCardSet = 'nonEnglishAquaticMinecraftCards';
         break;
       case completedTutorialType === 'applab' && signedIn:
           specificCardSet = 'signedInApplabCards';

@@ -47,12 +47,13 @@ export default class Congrats extends Component {
 
     const tutorialType = {
       'applab-intro': 'applab',
+      aquatic: '2018Minecraft',
       hero: '2017Minecraft',
       minecraft: 'pre2017Minecraft',
       mc: 'pre2017Minecraft',
     }[tutorial] || 'other';
 
-    const isMinecraft = /mc|minecraft|hero/.test(tutorial);
+    const isMinecraft = /mc|minecraft|hero|aquatic/.test(tutorial);
 
     // Show a special link to a customizable certificate for users who complete
     // a Minecraft tutorial and are viewing the site in Korean.  The link

@@ -30,7 +30,9 @@ export default class PrincipalApprovalButtons extends React.Component {
 
     this.state = {
       sendEmailRequest: null,
-      notRequiredRequest: null
+      notRequiredRequest: null,
+      showSendEmailButton: this.props.showSendEmailButton,
+      showNotRequiredButton: this.props.showNotRequiredButton
     };
   }
 
@@ -52,6 +54,10 @@ export default class PrincipalApprovalButtons extends React.Component {
         this.props.applicationId,
         data.principal_approval
       );
+      this.setState({
+        sendEmailRequest: null,
+        showSendEmailButton: false
+      });
     });
 
     this.setState({sendEmailRequest});
@@ -66,6 +72,11 @@ export default class PrincipalApprovalButtons extends React.Component {
         this.props.applicationId,
         data.principal_approval
       );
+
+      this.setState({
+        notRequiredRequest: null,
+        showNotRequiredButton: false
+      });
     });
 
     this.setState({notRequiredRequest});
@@ -114,8 +125,8 @@ export default class PrincipalApprovalButtons extends React.Component {
   render() {
     return (
       <div>
-        {this.props.showSendEmailButton && this.renderSendEmailButton()}
-        {this.props.showNotRequiredButton && this.renderNotRequiredButton()}
+        {this.state.showSendEmailButton && this.renderSendEmailButton()}
+        {this.state.showNotRequiredButton && this.renderNotRequiredButton()}
       </div>
     );
   }

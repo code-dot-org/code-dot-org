@@ -1,3 +1,4 @@
+require 'cdo/aws/cloudfront'
 require 'google/apis/classroom_v1'
 require 'honeybadger'
 
@@ -420,6 +421,20 @@ class ApiController < ApplicationController
     end.flatten
 
     render json: data
+  end
+
+  # GET /dashboardapi/sign_cookies
+  def sign_cookies
+    expiration_date = Time.now + 4.hours
+    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
+
+    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
+
+    cloudfront_cookies.each do |k, v|
+      cookies[k] = v
+    end
+
+    head :ok
   end
 
   private

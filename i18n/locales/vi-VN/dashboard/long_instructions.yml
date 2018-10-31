@@ -43,6 +43,7 @@ vi:
       2-3 Artist Functions 1: "\"Ta thấy ma là họa sĩ. Ta thích vẽ!\"\n\\r\n\\r\nHãy giúp chàng thây ma vẽ cặp mắt kính hình vuông. \\r\n\\r\nĐường thẳng nối giữa cặp kính dài 25 pixel, ngắn hơn chiều rộng hình vuông dài 100 pixel. \\r\n\\r\n"
       2-3 Artist Functions 10: "**Tự do sáng tạo:** Đây là hai hàm, dùng để vẽ bánh răng to và bánh răng nhỏ. \\r\n\\r\nHãy dùng chúng để vẽ phần bên trong của cỗ máy!"
       2-3 Artist Functions 11 a: "Chúng ta đã đổi tên hàm \"vẽ hình vuông\" thành \"vẽ hình lục giác\", nhưng nó vẫn vẽ hình vuông! \\r\n\\r\nBạn \ncó thể sửa hàm \"vẽ hình lục giác\" sao cho nó vẽ ra lục giác với cạnh là 50 pixel không?\n\\r\n\\r\nHãy dùng hàm mới này để vẽ!"
+      2-3 Artist Functions 11.5 a: "Đây giống như hàm 'vẽ một hình lục giác'.\n\nChuyện gì xảy ra nếu bạn vòng lặp **6** lần chương trình chính, xoay **60** độ mỗi lần bạn dùng vòng lặp?"
       2-3 Artist Functions 11.5: "Đây là hàm vẽ hình lục giác. \\r\n\\r\nChuyện ì sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
       2-3 Artist Functions 11: "Chúng ta đã đổi tên hàm \"vẽ hình vuông\" thành \"vẽ hình lục giác\", nhưng nó vẫn vẽ hình vuông! \\r\n\\r\nBạn \ncó thể sửa hàm \"vẽ hình lục giác\" sao cho nó vẽ ra lục giác với cạnh là 50 pixel không?\n\\r\n\\r\nHãy dùng hàm mới này để vẽ!"
       2-3 Artist Functions 12 Mike: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách tiện lợi. \\r\n\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây còn lại trong chậu không? \\r\nCác bông hoa cách nhau 100 pixel."

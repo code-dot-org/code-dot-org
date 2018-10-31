@@ -30,10 +30,11 @@ module Api::V1::Pd
         end
 
         apps.group(:status).each do |group|
-          application_data[role][group.status] = {
-            locked: group.locked,
-            unlocked: group.total - group.locked
-          }
+          application_data[role][group.status] = if ['csd_teachers', 'csp_teachers'].include? role
+                                                   {total: group.total}
+                                                 else
+                                                   {total: group.total, locked: group.locked}
+                                                 end
         end
       end
 
@@ -156,10 +157,10 @@ module Api::V1::Pd
 
     # PATCH /api/v1/pd/applications/1
     def update
-      application_data = application_params
+      application_data = application_params.to_h
 
       if application_data[:response_scores]
-        JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
+        application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
 
       if application_data[:regional_partner_value] == REGIONAL_PARTNERS_NONE
@@ -175,7 +176,10 @@ module Api::V1::Pd
       # only allow those with full management permission to lock/unlock and edit form data
       if current_user.workshop_admin?
         if current_user.workshop_admin? && application_admin_params.key?(:locked)
-          application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          # only current facilitator applications can be locked/unlocked
+          if @application.application_type == FACILITATOR_APPLICATION
+            application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          end
         end
 
         @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
@@ -264,8 +268,8 @@ module Api::V1::Pd
           app_data[role] = {}
           app_type.statuses.each do |status|
             app_data[role][status] = {
-              locked: 0,
-              unlocked: 0
+              total: 0,
+              locked: 0
             }
           end
         end

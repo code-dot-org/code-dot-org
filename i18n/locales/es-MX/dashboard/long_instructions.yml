@@ -1687,6 +1687,21 @@ es-MX:
         **Desafío**: Reúne toda la chatarra.
       courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
       courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_'
+      courseC19_playLab_EOC1: |-
+        ¡Es sorprendente cuánto has aprendido! Vamos a hacer un juego paso a paso.\r
+        \r
+        Usando nuevos bloques de la caja de herramientas, escoge un nuevo fondo, luego escoge un actor para que esté en tu juego.
+      courseC19_playLab_EOC2: "Usa bloques como manejadores de eventos y acciones para hacer que tu jugador se mueva de acuerdo a las felchas de tu teclado.  \\r\n\\r\nLleva al jugador hasta los blancos para completar este rompecabezas."
+      courseC19_playLab_EOC3: |-
+        ¡Agreguemos más personajes a tu juego!\r
+        \r
+        Usa el bloque 'establecer actor' para agregar más persobajes luego mueve el objetvo para compeltar el rompecabezas.
+      courseC19_playLab_EOC4: |-
+        Personajes múltiples y hacer que los actores se muevan es un gran comienzo para un juego, pero necesitamos hacer más para hacer que se sienta como un uego real. ¡Agreguemos un puntaje!\r
+        \r
+        Usa bloques de eventos como el 'cuando actores tocan' para cambiar el puntaje. Marca 10 puntos para compeltar el rompecabezas.
+      courseC19_playLab_EOC5: '¡Gran trabajo! Tienes todos los componentes básicos de un juego funcionando. Ahora gasta algún tiemp asegurándote que el juego funciones de la forma que quieres. Incluye una forma de ganar o perder tu juego, luego juega hasta que necesites una de esa condiciones.'
+      courseC19_playLab_EOC6: '¡Has terminado! Ahora puedes jugar tu juego o compartirlo con tus amigos o compañeros!'
       courseC_PlayLab_events7: |-
         El botón `repetir siempre` te permite ejecutar el código una y otra vez por siempre.  Usa este bloque para mover a Chomp el Dino (actor 2) hacia arriba y hacia abajo por 400 pixeles por siempre.\r
         \r

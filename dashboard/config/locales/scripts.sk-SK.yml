@@ -508,10 +508,10 @@ sk:
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star
             Wars v ďalekej galaxii.
         mc:
-          title: Minecraft Hodina kódu
-          description: Použi bloky kódov aby si vzal Steva alebo Alex na dobrodúžstvo
-            skrz tento Minecraft svet
-          description_short: Preskúmajte Minecraft svet prostredníctvom kódu
+          title: Minecraft Hodina Kódu
+          description: Použi bloky kódu, aby si vzal Steva alebo Alexa na dobrodužstvo
+            svetom Minecraftu
+          description_short: Preskúmaj svet Minecraftu prostredníctvom kódu.
         ScienceP3OLPT3:
           stages:
             Wrap-Up:
@@ -582,6 +582,8 @@ sk:
               name: 'Včela: podmienky'
         gradeKinder:
           stages:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb
             Events:
               name: Udalosti
             'Jigsaw: Learn to drag and drop':
@@ -600,6 +602,8 @@ sk:
               name: Písanie pesničiek s parametrami
         grade1:
           stages:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb
             Events:
               name: Udalosti
             'Jigsaw: Learn to drag and drop':
@@ -712,6 +716,8 @@ sk:
               name: Binárne hádanky v kurze Umelec
             Auto-Run Binary Artist Puzzles:
               name: Samospúšťacie binárne hádanky v kurze Umelec
+            Play Lab:
+              name: Herné laboratórium
         csd2-2017:
           stages:
             Peer Review:
@@ -1288,14 +1294,14 @@ sk:
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Cesta Hrdinu Hodiny Kódu'
+              name: 'Minecraft\: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
-              name: Minecraft Hodina kódu
+              name: Minecraft Hodina Kódu
           title: 'Minecraft: Cesta Hrdinu'
-          description_short: Minecraft je naspäť so zbrusu novou aktivitou pre Hodinu
+          description_short: Minecraft je späť s úplne novou aktivitou pre Hodinu
             Kódu!
-          description: Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou!
-            Prejdite sa po Minecrafte s kódom.
+          description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi
+            sa po Minecrafte s kódom.
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -1576,7 +1582,7 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Minecraft Hour of Code:
-              name: Minecraft Hodina kódu
+              name: Minecraft Hodina Kódu
             Copyright and Creativity:
               name: Digitálne zdieľanie
         coursef-2018:

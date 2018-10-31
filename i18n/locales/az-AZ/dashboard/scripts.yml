@@ -479,6 +479,8 @@ az:
           stages:
             Binary Images:
               name: İkilik təsvirlər
+            Play Lab:
+              name: Oyun labı
         csd2-2017:
           stages:
             Lists:

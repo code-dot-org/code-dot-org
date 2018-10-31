@@ -6896,6 +6896,29 @@ it:
           vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
         courseB_starWars_prog9_c: Un ciclo `ripeti` potrebbe aiutarti qui?
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: Puoi usare il blocco `imposta il personaggio
+          1 come ...` per aggiungere un personaggio nella scena.
+        courseE_playLab_scaffold1_b: Per fare in modo che il personaggio che hai scelto
+          compaia all'avvio del tuo programma, metti il blocco `imposta il personaggio
+          1 come ...` sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_playLab_scaffold1_c: Usa il blocco `imposta uno sfondo ...` per scegliere
+          lo sfondo della tua scena.
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa
+          (▼) del blocco evento `quando si preme sulla freccia verso ...`.
+        courseE_playLab_scaffold1_b: Dovresti avere quattro diversi blocchi evento
+          `quando si preme sulla freccia verso ...`, ognuno con uno specifico blocco
+          di movimento agganciato sotto.
+        courseE_playLab_scaffold1_c: Quando hai finito, dovresti essere in grado di
+          spostare il tuo eroe con i tasti freccia!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: Per modificare il punteggio, usa i blocchi `aggiungi
+          un punto` e `togli un punto`.
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: 'Per completare l''esercizio, è necessario vincere
+          o perdere: imposta adeguatamente i blocchi `fine del gioco con una vittoria`
+          e `fine del gioco con una sconfitta`.'
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:

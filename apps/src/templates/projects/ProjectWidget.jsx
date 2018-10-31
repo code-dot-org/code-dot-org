@@ -13,6 +13,7 @@ class ProjectWidget extends React.Component {
     isLoading: PropTypes.bool,
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool, // Default: true
+    includeDanceParty: PropTypes.bool
   };
 
   state = {
@@ -25,7 +26,7 @@ class ProjectWidget extends React.Component {
 
   render() {
     const convertedProjects = convertChannelsToProjectData(this.props.projectList);
-    const { canViewAdvancedTools, canViewFullList } = this.props;
+    const { canViewAdvancedTools, canViewFullList, includeDanceParty } = this.props;
 
     return (
       <ContentContainer
@@ -47,6 +48,7 @@ class ProjectWidget extends React.Component {
           projectTypes={this.props.projectTypes}
           canViewFullList={canViewFullList}
           canViewAdvancedTools={canViewAdvancedTools}
+          includeDanceParty={includeDanceParty}
         />
       </ContentContainer>
     );

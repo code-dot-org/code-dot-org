@@ -91,6 +91,7 @@ de:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-Konto
+    microsoft_v2_auth: Microsoft-Konto
     forgot_password: Passwort vergessen?
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
@@ -128,7 +129,6 @@ de:
     age: Alter
     user_type: Bist du Schüler oder Lehrer?
     submit: Registrieren
-    next: Weiter
     teacher: Sind Sie ein Lehrer?
     valid_username: Verfügbar!
     invalid_username: Benutzernamen müssen mindestens 5 Zeichen lang sein
@@ -325,14 +325,6 @@ de:
       help_us: Helfen Sie uns
       teach: Unterrichten
       about: Über
-    create_button:
-      create: Erstellen
-      applab: App-Labor
-      artist: Künstler
-      gamelab: Spielelabor
-      playlab: Spielelabor
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Landkreis-Dashboard
@@ -346,6 +338,13 @@ de:
       team: Team
       driver: Bediener
       navigator: Navigator
+      create: Erstellen
+      applab: App-Labor
+      artist: Künstler
+      gamelab: Spielelabor
+      playlab: Spielelabor
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: Dein Fortschritt

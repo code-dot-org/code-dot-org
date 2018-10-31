@@ -269,7 +269,7 @@ module Pd::Application
     end
 
     def self.can_see_locked_status?(user)
-      true
+      false
     end
 
     # Include additional text for all the multi-select fields that have the option

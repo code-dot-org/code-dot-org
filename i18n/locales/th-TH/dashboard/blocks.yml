@@ -58,12 +58,28 @@ th:
         options:
           GROUP:
             sprites: ทั้งหมด
+          FORMAT:
+            '"random"': สุ่ม
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ไปทางซ้าย
             "{x: 300, y: 200}": ไปทางขวา
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': สุ่ม
       Dancelab_randomColor:
         text: สุ่มสี
       Dancelab_setDanceSpeed:
@@ -76,6 +92,15 @@ th:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"height"': ความสูง
+            '"x"': อยู่ที่แกน X
+            '"y"': อยู่ที่แกน Y
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
           PROPERTY:
             '"scale"': ขนาด
             '"height"': ความสูง
@@ -273,6 +298,10 @@ th:
           TYPE:
             "'sand'": ทราย
             "'planksOak'": ไม้กระดานต้นโอ๊ค
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ทราย
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeTorch:

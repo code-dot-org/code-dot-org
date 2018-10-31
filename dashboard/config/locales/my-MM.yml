@@ -25,7 +25,7 @@ my:
     header:
       my_dashboard: ကျွန်ုပ်ကျောက်သင်ပုံး
       professional_learning: Professional Learning
-    create_button:
+    user:
       create: ဖန်တီးပါ
   teacher:
     panel:

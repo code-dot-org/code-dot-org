@@ -292,7 +292,7 @@ Teachers in our professional learning program will automatically be approved to 
 <br />
 
 ### How can I communicate with other teachers who are using the curriculum?
-Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
+Check out our forum at <a href="https://forum.code.org" target=_blank>https://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
 
 <br />
 ### Can I give feedback on the lessons?

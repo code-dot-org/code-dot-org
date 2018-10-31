@@ -4133,6 +4133,25 @@ tr:
         courseB_starWars_prog9_b: Bu bulmacayı çözmek için bir çok yol vardır!
         courseB_starWars_prog9_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: "'ayarla aktör 1 ??? görünümüne' bloku sahneye
+          aktör eklemek için kullanılabilir."
+        courseE_playLab_scaffold1_b: Aktörünüzün programınız başladığında görünmesi
+          için 'çalıştığı zaman' bloğunun altına 'aktörü ayarla' bloğu ekleyin.
+        courseE_playLab_scaffold1_c: Sahnenizin arka planını seçmek için '??? arka
+          planı ayarla' bloğunu kullanın.
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_b: Her birinin altında bir yöne taşıyacak şekilde
+          4 adet 'ne zaman ok' olay blokuna sahip olmalısın.
+        courseE_playLab_scaffold1_c: Yaptığında kahramanını yön ok tuşlarıyla hareket
+          ettirebilmelisin!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: Bir puan eklemek için 'skor puanı' ve bir puan
+          çıkarmak için 'puanı sil' kullanın.
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: Bu seviyeyi bitirmek için, kazanman veya kaybetmen
+          gerekir. Bitirmek için bir adet 'kazanarak oyunu bitir' veya 'kaybederek
+          oyunu bitir' kullanın.
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Bu blokları 'Çalıştığı zaman'(when run) bloğuna ekleyin:

@@ -575,7 +575,7 @@ module Pd
 
     def assert_not_enrolled
       assert_select 'h1', text: 'Not Enrolled'
-      assert_select 'p', text: 'You need to be enrolled in a 5-day summer workshop before completing this survey.'
+      assert_select 'p', text: 'You need to be enrolled in a workshop before completing this survey.'
     end
 
     def assert_closed

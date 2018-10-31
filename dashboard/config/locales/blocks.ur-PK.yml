@@ -26,10 +26,28 @@ ur:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': بےترتیب
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': بےترتیب
       Dancelab_randomColor:
         text: بے ترتیب رنگ
       Dancelab_setDanceSpeed:
@@ -96,6 +114,10 @@ ur:
           DIR:
             "'ahead'": آگے
       craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": ریت
+      craft_ifStandingOnLimit:
         options:
           TYPE:
             "'sand'": ریت
