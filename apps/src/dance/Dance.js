@@ -279,6 +279,9 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
   });
+  /** Expose for testing **/
+  window.__DanceTestInterface = this.nativeAPI.getTestInterface();
+
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
   }
