@@ -25,12 +25,8 @@ const SongSelector = Radium(class extends React.Component {
     retrieveMetadata: PropTypes.func.isRequired,
     setSelectedSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
-    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired
-  };
-
-  state = {
-    songsData: []
   };
 
   changeSong = (event) => {
@@ -42,7 +38,7 @@ const SongSelector = Radium(class extends React.Component {
   loadSong(song) {
     //Load song
     let options = {id: song};
-    options['mp3'] = this.state.songsData[options.id].url;
+    options['mp3'] = this.props.songData[options.id].url;
     Sounds.getSingleton().register(options);
 
     this.props.retrieveMetadata(song);
@@ -54,19 +50,7 @@ const SongSelector = Radium(class extends React.Component {
   }
 
   componentDidMount() {
-    this.parseSongOptions(this.props.songManifest);
-  }
-
-  parseSongOptions(songManifest) {
-    let songs = {};
-    if (songManifest) {
-      songManifest.forEach((song) => {
-          songs[song.id] = {title: song.text, url: song.url};
-      });
-    }
-    this.setState({songsData: songs}, () => {
-      this.loadSong(this.props.selectedSong);
-    });
+    this.loadSong(this.props.selectedSong);
   }
 
   render() {
@@ -74,8 +58,8 @@ const SongSelector = Radium(class extends React.Component {
       <div>
         <label><b>{i18n.selectSong()}</b></label>
         <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(this.state.songsData).map((option, i) => (
-            <option key={i} value={option}>{this.state.songsData[option].title}</option>
+          {Object.keys(this.props.songData).map((option, i) => (
+            <option key={i} value={option}>{this.props.songData[option].title}</option>
           ))}
         </select>
       </div>
@@ -90,7 +74,7 @@ class DanceVisualizationColumn extends React.Component {
     setSelectedSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired
   };
 
@@ -110,7 +94,7 @@ class DanceVisualizationColumn extends React.Component {
             retrieveMetadata={this.props.retrieveMetadata}
             setSelectedSong={this.props.setSelectedSong}
             selectedSong={this.props.selectedSong}
-            songManifest={this.props.songManifest}
+            songData={this.props.songData}
             hasChannel={this.props.hasChannel}
           />
         }
@@ -132,7 +116,7 @@ class DanceVisualizationColumn extends React.Component {
 export default connect(state => ({
   hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
-  songManifest: state.pageConstants.songManifest,
+  songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
 }), dispatch => ({
   setSelectedSong: song => dispatch(danceRedux.setSelectedSong(song))
