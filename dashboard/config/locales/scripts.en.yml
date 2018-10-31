@@ -9711,3 +9711,121 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        coursef-2019:
+          title: Course F (2019)
+          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_audience: 'Ages: 9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Sequence in Maze
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Building a Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Debugging with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Farmer:
+              name: Conditionals in Farmer
+              description_student: ''
+              description_teacher: ''
+            Functions in Minecraft:
+              name: Functions in Minecraft
+              description_student: ''
+              description_teacher: ''
+            The Power of Words:
+              name: The Power of Words
+              description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
+              description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
+            Envelope Variables:
+              name: Envelope Variables
+              description_student: 'Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.'
+              description_teacher: Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+              description_student: ''
+              description_teacher: ''
+            For Loop Fun:
+              name: For Loop Fun
+              description_student: You're going to have loads of fun learning about `for` loops!
+              description_teacher: 'We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. '
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
+              description_teacher: Featuring Bee, this lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then walked through using for loops to more effectively solve complicated problems.
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
+              description_teacher: In this lesson, students continue to practice for loops, this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and for loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: Time to get some inspiration! These puzzles will show you a handful of pre-built games and illustrations to help develop your plan for your BIG project.
+              description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \n\nIn the explore stage, students will be able to view examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is most likely the longest stage of the project). Students will then revise their projects, after testing and extra thought. Finally, students will be able to present their finished work to their peers."
+            The Design Process:
+              name: The Design Process
+              description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Build Your Project
+              description_student: Finally you can start building your project!
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: Rome wasn't built in a day and your project shouldn't be, either. Take time to edit and revise your project to make it the best it can be.
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              name: Present Your Project
+              description_student: Time to show your work! Here you will be presenting your awesome project to your peers.
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).

@@ -356,3 +356,24 @@ en:
       RelayProgramming_2018:
         title: Relay Programming
         desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+      courseB_unplugged_MRF_2019:
+        title: My Robotic Friends
+        desc: Learn to program by writing code for your friends!
+      BuildingAFoundation_2019:
+        title: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
+      Conditionals_2019:
+        title: Conditionals
+        desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.ForLoopFun_2018.desc'
