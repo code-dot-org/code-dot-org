@@ -605,6 +605,7 @@ def cucumber_arguments_for_browser(browser, options)
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@chrome_before_62') if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
+  arguments += skip_tag('@no_older_chrome') if browser['browserName'] == 'chrome' && (browser['version'].to_i != 0 && browser['version'].to_i <= 67)
   arguments += skip_tag('@no_safari') if browser['browserName'] == 'Safari'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
