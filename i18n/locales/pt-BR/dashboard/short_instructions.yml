@@ -483,6 +483,11 @@ pt-BR:
       4-5 While Loops 7: "Uau, agora há três grandes montes de terra!\nVocê pode escrever um programa que remova cada um deles até que o solo fique nivelado?"
       4-5 While Loops 8: " Há um buraco realmente fundo e um monte de terra\nrealmente grande. Quantas pás cheias de terra são necessárias para\ntornar o solo plano?"
       4-5 While Loops Assessment 1: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
+      AB_Debug_PlayLab2: |-
+        Por que este jogo não faz nada?
+        
+        Você consegue descobrir algum erro "escondido"? Alguns são mais fáceis que outros.
+      AB_Debug_PlayLab3: Mova o cavaleiro para cada uma das bandeiras. Se algo der errado, procure por erros!
       AlgPD DR Free Play: Crie uma função baseada em um problema do seu próprio mundo.
       Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       Alien Defender_2018: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
