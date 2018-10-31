@@ -129,6 +129,7 @@ class SignInOrAgeDialog extends Component {
             ref={element => this.ageDropdown = element}
           />
           <Button
+            id="uitest-submit-age"
             onClick={this.onClickAgeOk}
             text={i18n.ok()}
             color={Button.ButtonColor.gray}
@@ -169,7 +170,7 @@ class SignInOrAgeDialog extends Component {
         isOpen={this.state.open}
         uncloseable
       >
-        <div style={styles.container}>
+        <div style={styles.container} className="signInOrAgeDialog">
           <div style={styles.heading}>
             {this.props.ageOnly ? i18n.signinDanceParty() : i18n.signinOrAge()}
           </div>
