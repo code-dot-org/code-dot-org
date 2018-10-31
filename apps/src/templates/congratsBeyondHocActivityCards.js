@@ -106,6 +106,14 @@ const MinecraftMarketing = {
   buttonText: i18n.minecraftMarketingButton(),
 };
 
+const DanceParty = {
+  title: "Dance After Party",
+  description: "Keep grooving and programming with a follow up Dance Party tutorial.",
+  link: pegasus('/dance'),
+  image: "dance-party",
+  buttonText: "Start",
+};
+
 export const cardSets = {
   'pre2017MinecraftCards' : [
     CSFExpress,
@@ -179,7 +187,7 @@ export const cardSets = {
   ],
   'signedOutDefaultCards' : [
     CSFExpress,
-    ApplabTutorial,
+    DanceParty,
     CreateAccount
   ],
   'signedOutNonEnglishDefaultCards' : [
