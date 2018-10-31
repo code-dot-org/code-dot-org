@@ -50,7 +50,7 @@ en:
         edit_header: 'Edit Account Details'
         finish_sign_up_header: 'Finish creating your account'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account using your <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: can't be in the future
 
@@ -66,6 +66,7 @@ en:
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
   okay: "Okay"
+  or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -100,30 +101,32 @@ en:
   prize: 'prize'
   more_info: 'More info'
   auth:
+    continue_with: 'Continue with %{provider}'
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Signed in!'
     signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
     sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
     already_signedup: 'Already signed up?'
     notyet_signedup: "Haven't joined yet?"
-    google_oauth2: 'Google Account'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'Microsoft Account'
-    microsoft_v2_auth: 'Microsoft Account'
-    clever: 'Clever Account'
-    powerschool: 'Powerschool Account'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
+    clever: 'Clever'
+    powerschool: 'Powerschool'
     forgot_password: 'Forgot your password?'
     migration_success: 'Success! You have updated to our new account experience.'
     demigration_success: 'The new account experience is now disabled on your account.'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
-    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
-    already_in_use: "Your %{provider} is already connected to another Code.org account."
-    already_linked: "Your %{provider} is already linked to your Code.org account."
+    not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
+    already_in_use: "Your %{provider} account is already connected to another Code.org account."
+    already_linked: "Your %{provider} account is already linked to your Code.org account."
   signup_form:
+    email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
@@ -197,7 +200,7 @@ en:
     remember: 'Remember me'
     submit: 'Sign in'
   signin:
-    try_heading: 'Want to try coding without signing up?'
+    try_heading: 'Want to try coding without signing in?'
     try_hoc: 'Try one Hour of Code first'
     try_20hours: 'Try our 20 hour Intro to Computer Science'
   signinsection:
@@ -294,7 +297,7 @@ en:
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
       free_play:
         playlab: 'Make a Play Lab app'
@@ -397,6 +400,7 @@ en:
       example: 'Example Solution'
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
+      last_updated: 'Last updated:'
       unsubmit: 'Unsubmit'
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
@@ -656,6 +660,8 @@ en:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
@@ -1021,6 +1027,7 @@ en:
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
+  view_teacher_guide: 'View teacher guide'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

@@ -35,6 +35,17 @@
       = tag 'meta', attr => "#{namespace}:image:width", content: meta_image_width
       = tag 'meta', attr => "#{namespace}:image:height", content: meta_image_height
 
+    -# video is only supported for twitter cards, since og:video tags no longer
+    -# actually work (as of October 2018)
+    - if @project_video
+      = tag 'meta', name: "twitter:card", content: "player"
+      = tag 'meta', name: "twitter:player", content: @project_video
+      = tag 'meta', name: "twitter:player:stream", content: @project_video_stream
+      - ["player", "player:stream"].each do |player|
+        = tag 'meta', name: "twitter:#{player}:width", content: 400
+        = tag 'meta', name: "twitter:#{player}:height", content: 400
+        = tag 'meta', name: "twitter:#{player}:content_type", content: 400
+
     = tag :meta, name: 'mobile-web-app-capable', content: 'yes'
     = tag :meta, name: 'apple-mobile-web-app-capable', content: 'yes'
     = tag :meta, name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'

@@ -130,7 +130,7 @@ class Homepage
       {
         text: "homepage_action_text_try_it",
         type: "cta_button_hollow_white",
-        url: "/learn"
+        url: DCDO.get("hoc_launch", nil) == "mc" ? "/hourofcode/overview" : "/learn"
       },
       {
         text: "homepage_action_text_codevideo",
@@ -205,7 +205,7 @@ class Homepage
           text: "homepage_slot_text_blurb_hoc",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/learn",
+          url: "/hourofcode/overview",
           image: "/images/mc/2016_homepage_hocblock.jpg",
           links:
             [
@@ -279,7 +279,7 @@ class Homepage
           text: "homepage_slot_text_blurb_hoc",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/learn",
+          url: "/hourofcode/overview",
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
@@ -308,7 +308,14 @@ class Homepage
   end
 
   def self.show_single_hero
-    "hoc2018"
+    hoc_launch = DCDO.get("hoc_launch", nil)
+    if hoc_launch == "mc"
+      "mc"
+    elsif hoc_launch == "dance"
+      "dance"
+    else
+      "hoc2018"
+    end
   end
 
   def self.show_single_hero_mobile_gap
@@ -317,6 +324,8 @@ class Homepage
 
   def self.get_heroes_arranged(request)
     hoc2018_hero = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2018.jpg"}]
+    hoc2018_hero_mc = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2018_mc.jpg"}]
+    hoc2018_hero_dance = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2018_dance.jpg"}]
 
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
@@ -330,7 +339,14 @@ class Homepage
       # For UI tests just lock to the first hero image
       heroes_arranged = heroes[0, 1]
     elsif show_single_hero
-      heroes_arranged = hoc2018_hero
+      hoc_marketing_mode = DCDO.get("hoc_launch", nil)
+      heroes_arranged = if hoc_marketing_mode == "mc"
+                          hoc2018_hero_mc
+                        elsif hoc_marketing_mode == "dance"
+                          hoc2018_hero_dance
+                        else
+                          hoc2018_hero
+                        end
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,

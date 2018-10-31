@@ -1,0 +1,27 @@
+name 'AP_practice_Qs_rqb_32_CSP_2_1_1'
+wrong 'IV, II, III, I'
+right 'IV, III, II, I'
+wrong 'II, IV, III, I'
+wrong 'I, II, III, IV'
+markdown <<MARKDOWN
+Arrange the following four values from smallest to largest.
+I.    Decimal 200
+II.    Binary 11000011
+III.    Hexadecimal C0
+IV.    Decimal 100
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1G**
+<hr>
+ (A) This option is incorrect. This option has the correct first and last value, but has the values switched in the middle. This may be due to students incorrectly converting from binary to decimal in (II) or from hexadecimal to decimal in (III).
+
+<hr>
+ (B) This option is correct. After converting all values to decimal, (I) is equal to 200, (II) is equal to 195, (III) is equal to 192 and (IV) is equal to 100, we can then rank them in order from smallest to largest according to normal mathematical principles. The smallest is (IV), followed by (III), then (II) and finally (I).
+
+<hr>
+ (C) This option is incorrect. This option flips the first and last values and also the middle two values. Students may have mistaken the directions in the question to be to arrange the values from largest to smallest and potentially converted incorrectly from binary to decimal in (II) and hexadecimal to decimal in (III).
+
+<hr>
+ (D) This option is incorrect. This option arranges the values in the opposite order than what the question is asking (largest to smallest).
+
+MARKDOWN
