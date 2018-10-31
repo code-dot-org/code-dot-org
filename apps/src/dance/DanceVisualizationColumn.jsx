@@ -7,7 +7,6 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import * as danceRedux from "../dance/redux";
 import Sounds from "../Sounds";
 import project from "../code-studio/initApp/project";
 
@@ -23,7 +22,7 @@ const styles = {
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
     retrieveMetadata: PropTypes.func.isRequired,
-    setSelectedSong: PropTypes.func.isRequired,
+    setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired
@@ -31,7 +30,7 @@ const SongSelector = Radium(class extends React.Component {
 
   changeSong = (event) => {
     const song = event.target.value;
-    this.props.setSelectedSong(song);
+    this.props.setSong(song);
     this.loadSong(song);
   };
 
@@ -71,7 +70,7 @@ class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
     retrieveMetadata: PropTypes.func.isRequired,
-    setSelectedSong: PropTypes.func.isRequired,
+    setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -92,7 +91,7 @@ class DanceVisualizationColumn extends React.Component {
         {!this.props.isShareView &&
           <SongSelector
             retrieveMetadata={this.props.retrieveMetadata}
-            setSelectedSong={this.props.setSelectedSong}
+            setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
             songData={this.props.songData}
             hasChannel={this.props.hasChannel}
@@ -118,6 +117,4 @@ export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
-}), dispatch => ({
-  setSelectedSong: song => dispatch(danceRedux.setSelectedSong(song))
 }))(DanceVisualizationColumn);

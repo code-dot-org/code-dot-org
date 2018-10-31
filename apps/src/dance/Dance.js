@@ -119,7 +119,7 @@ Dance.prototype.init = async function (config) {
   });
 
   const selectedSong = getSelectedSong(songManifest, config);
-  getStore().dispatch(setSelectedSong(selectedSong));
+  this.setSong(selectedSong);
 
   this.updateSongMetadata(getStore().getState().songs.selectedSong);
 
@@ -136,6 +136,10 @@ Dance.prototype.init = async function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
+};
+
+Dance.prototype.setSong = function (songName) {
+  getStore().dispatch(setSelectedSong(songName));
 };
 
 function getSelectedSong(songManifest, config) {
