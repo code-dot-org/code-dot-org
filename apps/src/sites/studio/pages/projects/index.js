@@ -41,6 +41,7 @@ $(document).ready(() => {
       <ProjectHeader
         canViewAdvancedTools={projectsData.canViewAdvancedTools}
         includeDanceParty={projectsData.includeDanceParty}
+        includeMCAquatic={projectsData.includeMCAquatic}
       />
     </Provider>,
     document.getElementById('projects-header')
@@ -62,6 +63,7 @@ $(document).ready(() => {
       <Provider store={store}>
         <PublicGallery
           limitedGallery={projectsData.limitedGallery}
+          includeDanceParty={projectsData.includeDanceParty}
         />
       </Provider>,
       publicGallery);
