@@ -11,7 +11,7 @@ import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
-import {reducers, setSelectedSong} from './redux';
+import {reducers, setSelectedSong, setSongData} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
@@ -102,11 +102,12 @@ Dance.prototype.init = async function (config) {
   const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
 
   const songManifest = await getSongManifest(config.useRestrictedSongs);
+  const songData = parseSongOptions(songManifest);
+  getStore().dispatch(setSongData(songData));
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
-    songManifest,
   });
 
   // Pre-register all audio preloads with our Sounds API, which will load
@@ -173,6 +174,14 @@ async function getSongManifest(useRestrictedSongs) {
     ...song,
     url: `${songPathPrefix}${song.url}.mp3`,
   }));
+}
+
+function parseSongOptions(songManifest) {
+  let songs = {};
+  songManifest.forEach((song) => {
+    songs[song.id] = {title: song.text, url: song.url};
+  });
+  return songs;
 }
 
 Dance.prototype.loadAudio_ = function () {
@@ -402,8 +411,8 @@ Dance.prototype.execute = async function () {
   const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
   this.nativeAPI.registerValidation(validationCallback);
 
-  const songData = await this.songMetadataPromise;
-  this.nativeAPI.play(songData);
+  const songMetadata = await this.songMetadataPromise;
+  this.nativeAPI.play(songMetadata);
 };
 
 Dance.prototype.initInterpreter = function () {
