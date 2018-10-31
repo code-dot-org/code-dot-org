@@ -7,8 +7,6 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import Sounds from "../Sounds";
-import project from "../code-studio/initApp/project";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -21,36 +19,15 @@ const styles = {
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
-    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
-    hasChannel: PropTypes.bool.isRequired
   };
 
   changeSong = (event) => {
-    const song = event.target.value;
-    this.props.setSong(song);
-    this.loadSong(song);
+    const songId = event.target.value;
+    this.props.setSong(songId);
   };
-
-  loadSong(song) {
-    //Load song
-    let options = {id: song};
-    options['mp3'] = this.props.songData[options.id].url;
-    Sounds.getSingleton().register(options);
-
-    this.props.retrieveMetadata(song);
-
-    if (this.props.hasChannel) {
-      //Save song to project
-      project.saveSelectedSong(song);
-    }
-  }
-
-  componentDidMount() {
-    this.loadSong(this.props.selectedSong);
-  }
 
   render() {
     return (
@@ -69,12 +46,10 @@ const SongSelector = Radium(class extends React.Component {
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
-    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
-    hasChannel: PropTypes.bool.isRequired
   };
 
   render() {
@@ -90,11 +65,9 @@ class DanceVisualizationColumn extends React.Component {
       <span>
         {!this.props.isShareView &&
           <SongSelector
-            retrieveMetadata={this.props.retrieveMetadata}
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
             songData={this.props.songData}
-            hasChannel={this.props.hasChannel}
           />
         }
         <ProtectedVisualizationDiv>
@@ -113,7 +86,6 @@ class DanceVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
-  hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,

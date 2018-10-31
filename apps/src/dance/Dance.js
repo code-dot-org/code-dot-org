@@ -17,6 +17,7 @@ import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import project from "../code-studio/initApp/project";
 
 const ButtonState = {
   UP: 0,
@@ -119,9 +120,7 @@ Dance.prototype.init = async function (config) {
   });
 
   const selectedSong = getSelectedSong(songManifest, config);
-  this.setSong(selectedSong);
-
-  this.updateSongMetadata(getStore().getState().songs.selectedSong);
+  this.setSong(selectedSong, true);
 
   ReactDOM.render((
     <Provider store={getStore()}>
@@ -129,7 +128,7 @@ Dance.prototype.init = async function (config) {
         visualizationColumn={
           <DanceVisualizationColumn
             showFinishButton={showFinishButton}
-            retrieveMetadata={this.updateSongMetadata.bind(this)}
+            setSong={this.setSong.bind(this)}
           />
         }
         onMount={onMount}
@@ -138,8 +137,25 @@ Dance.prototype.init = async function (config) {
   ), document.getElementById(config.containerId));
 };
 
-Dance.prototype.setSong = function (songName) {
-  getStore().dispatch(setSelectedSong(songName));
+Dance.prototype.setSong = function (songId, skipSave = false) {
+  getStore().dispatch(setSelectedSong(songId));
+
+  const songData = getStore().getState().songs.songData;
+  const hasChannel = !!getStore().getState().pageConstants.channelId;
+
+  // Load the song.
+  const options = {
+    id: songId,
+    mp3: songData[songId].url,
+  };
+  Sounds.getSingleton().register(options);
+
+  this.updateSongMetadata(songId);
+
+  if (!skipSave && hasChannel) {
+    //Save song to project
+    project.saveSelectedSong(songId);
+  }
 };
 
 function getSelectedSong(songManifest, config) {
