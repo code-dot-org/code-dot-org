@@ -16,6 +16,7 @@ import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
 
 const ButtonState = {
   UP: 0,
@@ -123,15 +124,18 @@ Dance.prototype.init = async function (config) {
 
   ReactDOM.render((
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <DanceVisualizationColumn
-            showFinishButton={showFinishButton}
-            retrieveMetadata={this.updateSongMetadata.bind(this)}
-          />
-        }
-        onMount={onMount}
-      />
+      <div>
+        <SignInOrAgeDialog ageOnly={true}/>
+        <AppView
+          visualizationColumn={
+            <DanceVisualizationColumn
+              showFinishButton={showFinishButton}
+              retrieveMetadata={this.updateSongMetadata.bind(this)}
+            />
+          }
+          onMount={onMount}
+        />
+      </div>
     </Provider>
   ), document.getElementById(config.containerId));
 };

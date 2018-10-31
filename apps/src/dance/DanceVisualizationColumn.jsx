@@ -31,7 +31,8 @@ const SongSelector = Radium(class extends React.Component {
   };
 
   state = {
-    songsData: []
+    songsData: [],
+    filterOn: !(sessionStorage.getItem('anon_over13') || (this.props.is13Plus ? this.props.is13Plus : false))
   };
 
   changeSong = (event) => {
@@ -62,7 +63,7 @@ const SongSelector = Radium(class extends React.Component {
     let songs = {};
     if (songManifest) {
       songManifest.forEach((song) => {
-        if ((this.props.is13Plus && song.pg13) || !song.pg13) {
+        if ((!this.state.filterOn && song.pg13) || !song.pg13) {
           songs[song.id] = {title: song.text, url: song.url};
         }
       });
