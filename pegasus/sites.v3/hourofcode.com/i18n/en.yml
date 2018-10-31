@@ -946,7 +946,7 @@
   tutorial_ifly_name: "iFly"
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
-  tutorial_rmedr_name: "Program VEX EDR Robots with Blockly"
+  tutorial_rmedr_name: "Program a simulated VEX EDR V5 robot using Google Blockly"
   tutorial_dksky_name: "DevKit: Build the Sky Fall App"
   tutorial_dkcurrency_name: "DevKit: Build the Currency King App"
   tutorial_dkriver_name: "DevKit: Build the River Monsters App"
