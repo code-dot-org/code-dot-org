@@ -493,6 +493,13 @@ ru:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Вы можете вызвать функцию в своей программе много раз!  Попробуйте
           дважды вызвать функцию, чтобы решить эту задачу.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Видите **морские фонари** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Окажется ли блок условия в связке с ними полезным для того, чтобы пробраться
+          через океанский памятник?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Какой чудесный коралловый риф! Здесь вам на помощь придут
+          **синие** кораллы, однако не забывайте и о **красных**!
       Inspirational Artwork_authored_hint:
         brush_width: Мы установили ширину кисти на 1, а цвет - на синий, прежде чем
           начать делать что-то.
