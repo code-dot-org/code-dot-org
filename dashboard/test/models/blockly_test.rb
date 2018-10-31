@@ -153,8 +153,8 @@ XML
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "first": "red",
-                "second": "blue",
+                "red": "red",
+                "blue": "blue",
               }
             }
           }
@@ -178,7 +178,7 @@ XML
           "blockText" => "cat {TIMESTAMP} {COLOR}",
           "args" => [
             {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-            {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+            {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
           ],
           "eventBlock" => true
         },
@@ -197,15 +197,14 @@ XML
             "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+              {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
             ],
             "eventBlock" => true
           },
         helperCode: nil
       }]
 
-    custom_block_copy = custom_block
-    localized_custom_blocks = level.localized_shared_blocks(custom_block_copy)
+    localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
     assert_equal localized_custom_blocks, translated_block
     assert_not_equal localized_custom_blocks, custom_block
@@ -221,8 +220,8 @@ XML
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "first": "red",
-                "second": "blue",
+                "red": "red",
+                "blue": "blue",
               }
             }
           }
@@ -236,23 +235,23 @@ XML
 
     custom_block = []
 
-    custom_block_copy = custom_block
-    localized_custom_blocks = level.localized_shared_blocks(custom_block_copy)
+    localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
     assert_nil localized_custom_blocks
   end
 
-  test 'does not return a translated string if block text is not present' do
+  test 'does not return a translated string if block text does not exist' do
     test_locale = :"te-ST"
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
         "blocks" => {
           "DanceLab_atSelectColor" => {
+            "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "first": "red",
-                "second": "blue",
+                "red": "red",
+                "blue": "blue",
               }
             }
           }
@@ -270,15 +269,15 @@ XML
         pool: "SelectColor",
         category: "Events",
         config:
-        {
-          "color" => [140, 1, 0.74],
-          "func" => "atSelectColor",
-          "args" => [
-            {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-            {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
-          ],
-          "eventBlock" => true
-        },
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+            ],
+            "eventBlock" => true
+          },
         helperCode: nil
       }]
 
@@ -291,19 +290,85 @@ XML
           {
             "color" => [140, 1, 0.74],
             "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "\"red\""], ["blue", "\"blue\""]]}
+              {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
             ],
             "eventBlock" => true
           },
         helperCode: nil
       }]
 
-    custom_block_copy = custom_block
-    localized_custom_blocks = level.localized_shared_blocks(custom_block_copy)
+    localized_custom_blocks = level.localized_shared_blocks(custom_block)
 
-    assert_equal localized_custom_blocks, translated_block
+    assert_not_equal localized_custom_blocks, translated_block
+  end
+
+  test 'does not return translated strings when I18n translation does not exist' do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "blocks" => {
+          "DanceLab_atSelectColor" => {
+            "text" => "cat {TIMESTAMP} {COLOR}",
+            "options" => {
+              "COLOR" => {
+                "red": "",
+                "blue": "",
+              }
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(:level, :blockly, level_num: 'level1_2_3')
+
+    custom_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "{TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["red", "red"], ["blue", "blue"]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    translated_block =
+      [{
+        name: "DanceLab_atSelectColor",
+        pool: "SelectColor",
+        category: "Events",
+        config:
+          {
+            "color" => [140, 1, 0.74],
+            "func" => "atSelectColor",
+            "blockText" => "kat {TIMESTAMP} {COLOR}",
+            "args" => [
+              {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
+              {"name" => "COLOR", "options" => [["red", ""], ["blue", ""]]}
+            ],
+            "eventBlock" => true
+          },
+        helperCode: nil
+      }]
+
+    localized_custom_blocks = level.localized_shared_blocks(custom_block)
+
+    assert_not_equal localized_custom_blocks, translated_block
   end
 
   test 'localizes authored hints' do
