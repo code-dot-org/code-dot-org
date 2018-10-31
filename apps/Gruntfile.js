@@ -561,6 +561,7 @@ describe('entry tests', () => {
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
     'regionalPartnerSearch': './src/regionalPartnerSearch/regionalPartnerSearch',
+    'code.org/public/dance-landing': './src/sites/code.org/pages/public/dance-landing.js',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
   };
