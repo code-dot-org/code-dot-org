@@ -100,7 +100,7 @@
 @media screen and (min-width: 971px) {
   .mc-tutorial-info {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 0;
     bottom: 0;
   }
@@ -179,6 +179,10 @@
 
   .mc-img-wide {
     display: none;
+  }
+
+  .mc-new-tag {
+    width: 65px;
   }
 
   .mc-img-narrow {
