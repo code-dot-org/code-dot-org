@@ -258,6 +258,10 @@ ja:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: 関数を正しく呼び出すと、あなたはこの道を行くことになります...
         Function_intro_Ryan_a: 関数はプログラム内で繰り返し呼び出すことができます!  関数を 2 回呼び出して、このパズルをクリアしましょう。
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**海のランタン** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) が見えますか?海のランタンと条件をどう組み合わせれば、海底遺跡を通りぬけられるでしょうか?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: きれいなサンゴ礁ですね!青いサンゴでは **右** にまがり、赤いサンゴでは **左** にまがりましょう!
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: '「実行したとき」のしたに、ブロックを くっつけてね。'
       MC Agent Freeplay_authored_hint:
