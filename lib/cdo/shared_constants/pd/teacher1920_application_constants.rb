@@ -164,7 +164,7 @@ module Pd
         how_heard: PAGE_LABELS[:section_5_additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
-        principal_approval_url: "Principal Approval Form"
+        principal_approval_url: "Principal Approval Form URL"
       },
       principal: {
         title: PAGE_LABELS[:section_1_about_you][:principal_title] + " (provided by principal)",
