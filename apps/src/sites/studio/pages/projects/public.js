@@ -35,7 +35,6 @@ $(document).ready(() => {
             canViewFullList
             canViewAdvancedTools
             includeDanceParty={projectsData.includeDanceParty}
-            includeMCAquatic={projectsData.includeMCAquatic}
           />
           <PublicGallery
             limitedGallery={projectsData.limitedGallery}
