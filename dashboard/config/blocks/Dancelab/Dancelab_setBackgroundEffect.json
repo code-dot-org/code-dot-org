@@ -29,8 +29,20 @@
             "\"diamonds\""
           ],
           [
+            "Bubbles",
+            "\"splatter\""
+          ],
+          [
+            "Hypno",
+            "\"swirl\""
+          ],
+          [
+            "Spiral",
+            "\"spiral\""
+          ],
+          [
             "(Random)",
-            "['disco', 'rainbow', 'diamonds'][randomInt(0,2)]"
+            "['disco', 'rainbow', 'diamonds','splatter','swirl','spiral'][randomInt(0,5)]"
           ]
         ]
       }

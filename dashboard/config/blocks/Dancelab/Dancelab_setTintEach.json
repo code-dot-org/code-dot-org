@@ -1,8 +1,8 @@
 {
   "category": "Groups",
   "config": {
-    "func": "setVisibleEach",
-    "blockText": "set {THIS} visibility to {VISIBILITY}",
+    "func": "setTintEach",
+    "blockText": "set {THIS} tint to {VAL}",
     "args": [
       {
         "name": "THIS",
@@ -54,17 +54,8 @@
         ]
       },
       {
-        "name": "VISIBILITY",
-        "options": [
-          [
-            "visible",
-            "true"
-          ],
-          [
-            "invisible",
-            "false"
-          ]
-        ]
+        "name": "VAL",
+        "type": "Colour"
       }
     ]
   }
