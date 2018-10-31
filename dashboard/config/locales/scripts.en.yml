@@ -9657,8 +9657,8 @@ en:
               name: Aquatic
           title: 'Minecraft: Voyage Aquatic'
           description_audience: ''
-          description_short: Minecraft is back with a brand new activity for the Hour of Code!
-          description: ''
+          description_short: Use your creativity and problem solving skills to explore and build underwater worlds with code!
+          description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
         sconyers:
           stages:
             Lesson the first:
@@ -9684,7 +9684,7 @@ en:
               description_student: ''
               description_teacher: ''
         dance-draft:
-          title: ''
+          title: DO NOT USE
           description: ''
           description_short: ''
           description_audience: ''
