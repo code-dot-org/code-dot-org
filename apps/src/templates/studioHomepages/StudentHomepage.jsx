@@ -15,7 +15,8 @@ export default class StudentHomepage extends Component {
     topCourse: shapes.topCourse,
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
-    includeDanceParty: PropTypes.bool
+    includeDanceParty: PropTypes.bool,
+    includeMCAquatic: PropTypes.bool
   };
 
   componentDidMount() {
@@ -25,7 +26,7 @@ export default class StudentHomepage extends Component {
 
   render() {
     const { courses, sections, topCourse } = this.props;
-    const { canViewAdvancedTools, includeDanceParty } = this.props;
+    const { canViewAdvancedTools, includeDanceParty, includeMCAquatic } = this.props;
 
     return (
       <div>
@@ -45,6 +46,7 @@ export default class StudentHomepage extends Component {
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
           includeDanceParty={includeDanceParty}
+          includeMCAquatic={includeMCAquatic}
         />
         <StudentSections
           initialSections={sections}
