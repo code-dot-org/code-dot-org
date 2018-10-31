@@ -38,7 +38,6 @@ export default class TeacherHomepage extends Component {
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number,
     includeDanceParty: PropTypes.bool,
-    includeMCAquatic: PropTypes.bool
   };
 
   state = {
@@ -129,7 +128,7 @@ export default class TeacherHomepage extends Component {
     const { courses, topCourse, announcement, joinedSections } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
-    const { canViewAdvancedTools, isEnglish, queryStringOpen, includeDanceParty, includeMCAquatic } = this.props;
+    const { canViewAdvancedTools, isEnglish, queryStringOpen, includeDanceParty } = this.props;
 
     // Show the special announcement for now.
     const showSpecialAnnouncement = true;
@@ -204,7 +203,6 @@ export default class TeacherHomepage extends Component {
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
           includeDanceParty={includeDanceParty}
-          includeMCAquatic={includeMCAquatic}
         />
         <StudentSections
           initialSections={joinedSections}
