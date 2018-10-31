@@ -41,6 +41,7 @@ $(document).ready(() => {
       <ProjectHeader
         canViewAdvancedTools={projectsData.canViewAdvancedTools}
         includeDanceParty={projectsData.includeDanceParty}
+        includeMCAquatic={projectsData.includeMCAquatic}
       />
     </Provider>,
     document.getElementById('projects-header')
