@@ -679,6 +679,11 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
 end
 
+And (/^I see (\d*) options in the dropdown "([^"]*)"/) do |option_num, selector|
+  select_options = @browser.execute_script("return $('#{selector} option')")
+  expect(select_options.length === option_num.to_i).to eq(true)
+end
+
 def has_class?(selector, class_name)
   @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
