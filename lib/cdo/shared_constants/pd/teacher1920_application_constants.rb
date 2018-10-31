@@ -139,8 +139,17 @@ module Pd
       cs_how_many_minutes: 'How many minutes will your class last?'
     }.freeze
 
-    TWO_ANSWER_QUESTIONS = {
-      plan_to_teach: [:plan_to_teach, :principal_plan_to_teach]
+    MULTI_ANSWER_QUESTION_FIELDS = {
+      plan_to_teach: {teacher: :plan_to_teach, principal: :principal_plan_to_teach},
+      cs_terms: {teacher: :cs_terms, principal: :principal_implementation},
+      replace_existing: {teacher: :replace_existing, principal: :principal_wont_replace_existing_course},
+      principal_free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
+      principal_underrepresented_minority_percent: {principal: :principal_underrepresented_minority_percent, stats: :urm_percent},
+      how_heard: {teacher: :how_heard, principal: :principal_how_heard},
+      principal_first_name: {teacher: :principal_first_name, principal: :principal_response_first_name},
+      principal_last_name: {teacher: :principal_last_name, principal: :principal_response_last_name},
+      principal_email: {teacher: :principal_email, principal: :principal_response_email},
+      pay_fee: {teacher: :pay_fee, principal: :principal_pay_fee}
     }
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
@@ -157,7 +166,6 @@ module Pd
       committed: YES_NO,
       willing_to_travel: YES_NO,
       principal_approval: YES_NO,
-      principal_plan_to_teach: YES_NO,
       principal_schedule_confirmed: YES_NO,
       principal_diversity_recruitment: YES_NO,
       # Scholarship requirements
@@ -182,9 +190,9 @@ module Pd
         :race
       ],
       scholarship_questions: [
+        :plan_to_teach,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_plan_to_teach,
         :principal_schedule_confirmed,
         :principal_diversity_recruitment
       ],
@@ -195,8 +203,7 @@ module Pd
         :plan_to_teach,
         :have_cs_license,
         :committed,
-        :willing_to_travel,
-        :principal_approval
+        :willing_to_travel
       ],
       criteria_score_questions_csp: [
         :regional_partner_name,
@@ -205,8 +212,7 @@ module Pd
         :plan_to_teach,
         :have_cs_license,
         :committed,
-        :willing_to_travel,
-        :principal_approval
+        :willing_to_travel
       ]
     }
   end
