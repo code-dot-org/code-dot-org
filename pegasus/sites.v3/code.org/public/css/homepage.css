@@ -115,7 +115,7 @@ body.modal-open .supreme-container{
 #homepage #actions {
   position: relative;
   padding: 20px;
-  margin-bottom: 40px;  /* hoc2018 special */
+  padding-bottom: 60px; /* hoc2018 special */
   text-align: left;     /* hoc2018 special */
 }
 
@@ -223,10 +223,10 @@ body.modal-open .supreme-container{
 
 .hoc2018-curriculum-banner {
   width: 100%;
-  padding: 5px;
   background-color: rgb(118,101,160);;
   text-align: center;
-  color: white; padding: 20px;
+  color: white;
+  padding: 14px;
   font-size: 15px;
 }
 

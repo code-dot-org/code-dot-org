@@ -45,7 +45,8 @@ Check out **<a href="https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTp
 
 Teacher data from your 2018-19 CS Principles and CS Discoveries local summer workshop or TeacherCon cohorts is now available in Tableau. We need your help to identify errors to be fixed so this data will be more useful to you long term. This is a one-time clean-up process that will give you a more accurate view into important metrics like implementation rate, URM student numbers, and overall program health. Changes that you’ve requested will be implemented by the Code.org data team and visible in your Tableau data dashboard by the end of November. As such, **we need your input by November 2nd**. 
 
-Please navigate to the <a href="https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharinginternal/internalTeacherRoster?:iid=3" target=_blank>Teacher Roster tab</a> of your data dashboard and filter to this school year.
+Please navigate to the <a href="https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharing/TeacherRoster
+" target=_blank>Teacher Roster tab</a> of your data dashboard and filter to this school year.
 
 Note that there is a filter for each course, CS Discoveries and CS Principles, so you will need to repeat the following steps for each course. Please look for the following inaccuracies:
 

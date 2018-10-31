@@ -1,0 +1,25 @@
+name 'AP_practice_Qs_rqb_109_CSP_5_5_1'
+wrong 'If statement'
+right 'For loop, While loop, and Until loops'
+wrong 'Code will be run with a start at line 1, then execute line 2 then line 3 and so on until it reaches the last line of the program.'
+wrong 'Retrieves data from a list'
+markdown <<MARKDOWN
+Which of the following is associated with or an example of iteration?
+
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **5.5.1** and Essential Knowledge statements: **5.5.1E**
+<hr>
+ (A) Selection is a logic structure in which a question is asked and, depending on the answer, the program takes one of two courses of action, after which the program moves on to the next command.  Option A lists an If Statement which implements selection, not iteration. 
+
+<hr>
+ (B) Iteration is a process of identifying a block of commands to be repeated until a condition is met.  Each time through the block is called an iteration. The programming construct used to implement iteration is a loop.  Option B lists 3 types of loops which facilitate iteration.
+
+<hr>
+ (C) Sequencing is the specific order in which instructions are performed in an algorithm. Option C refers to the order of the lines of code.
+
+<hr>
+ (D) Searching is to retrieve information stored in a data structure, most commonly a list (also known as an array). Option D refers to retrieving data from a list.
+
+MARKDOWN
