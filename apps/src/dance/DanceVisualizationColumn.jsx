@@ -23,7 +23,7 @@ const styles = {
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
     retrieveMetadata: PropTypes.func.isRequired,
-    setSong: PropTypes.func.isRequired,
+    setSelectedSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired
@@ -35,7 +35,7 @@ const SongSelector = Radium(class extends React.Component {
 
   changeSong = (event) => {
     const song = event.target.value;
-    this.props.setSong(song);
+    this.props.setSelectedSong(song);
     this.loadSong(song);
   };
 
@@ -87,7 +87,7 @@ class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
     retrieveMetadata: PropTypes.func.isRequired,
-    setSong: PropTypes.func.isRequired,
+    setSelectedSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string.isRequired,
     isShareView: PropTypes.bool.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -108,7 +108,7 @@ class DanceVisualizationColumn extends React.Component {
         {!this.props.isShareView &&
           <SongSelector
             retrieveMetadata={this.props.retrieveMetadata}
-            setSong={this.props.setSong}
+            setSelectedSong={this.props.setSelectedSong}
             selectedSong={this.props.selectedSong}
             songManifest={this.props.songManifest}
             hasChannel={this.props.hasChannel}
@@ -135,5 +135,5 @@ export default connect(state => ({
   songManifest: state.pageConstants.songManifest,
   selectedSong: state.songs.selectedSong,
 }), dispatch => ({
-  setSong: song => dispatch(danceRedux.setSong(song))
+  setSelectedSong: song => dispatch(danceRedux.setSelectedSong(song))
 }))(DanceVisualizationColumn);

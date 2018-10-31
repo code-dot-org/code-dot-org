@@ -1,6 +1,6 @@
 var createStore = require('../../util/redux').createStore;
 import {expect} from '../../util/configuredChai';
-import {reducers, setSong} from '../../../src/dance/redux';
+import {reducers, setSelectedSong} from '../../../src/dance/redux';
 var testUtils = require('../../util/testUtils');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
 var combineReducers = require('redux').combineReducers;
@@ -24,13 +24,13 @@ describe('danceReducer', function () {
   describe('action: selectedSong', function () {
     it('sets selection to given string', function () {
       expect(store.getState().selectedSong).to.equal("macklemore90");
-      store.dispatch(setSong("Alpha"));
+      store.dispatch(setSelectedSong("Alpha"));
       expect(store.getState().selectedSong).to.equal("Alpha");
     });
 
     it('selection sets to most recent string', function () {
-      store.dispatch(setSong("Beta"));
-      store.dispatch(setSong("Gamma"));
+      store.dispatch(setSelectedSong("Beta"));
+      store.dispatch(setSelectedSong("Gamma"));
       expect(store.getState().selectedSong).to.equal("Gamma");
     });
   });
