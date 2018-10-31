@@ -54,13 +54,13 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.18.tgz#6d74bfc1c453bf42d736798767ff2b9eb025b5c1"
+"@code-dot-org/craft@0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.1.23.tgz#399b9c740c42bb09f9e72fd333a5708d0e45a7dd"
 
-"@code-dot-org/dance-party@code-dot-org/dance-party#38dd2f9f8285bf6a87454a59a39a3aab14a68931":
-  version "0.0.4"
-  resolved "https://codeload.github.com/code-dot-org/dance-party/tar.gz/38dd2f9f8285bf6a87454a59a39a3aab14a68931"
+"@code-dot-org/dance-party@0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-0.0.13.tgz#9feac2852f391c82111785507ed582d52db6b761"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"

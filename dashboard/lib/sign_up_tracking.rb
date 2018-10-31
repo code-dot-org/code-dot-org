@@ -2,7 +2,7 @@ require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 module SignUpTracking
-  STUDY_NAME = 'account-sign-up-v4'
+  STUDY_NAME = 'account-sign-up-v5'
   NOT_IN_STUDY_GROUP = 'not-in-study'
   CONTROL_GROUP = 'control-v4'
   NEW_SIGN_UP_GROUP = 'experiment-v4'

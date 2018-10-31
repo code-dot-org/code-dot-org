@@ -260,7 +260,7 @@ describe('VersionHistory', () => {
         expect(firehoseClient.putRecord).to.have.been.calledOnce.and.calledWith(
           {
             study: 'project-data-integrity',
-            study_group: 'v3',
+            study_group: 'v4',
             event: 'clear-puzzle',
             project_id: 'fake-project-id',
             data_json: JSON.stringify({
