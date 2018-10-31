@@ -1,0 +1,27 @@
+name 'AP_practice_Qs_rqb_115_CSP_2_2_3'
+wrong 'Logic Gates
+'
+wrong 'Transistors
+'
+wrong 'Processor
+'
+right 'Video Card
+'
+markdown <<MARKDOWN
+Which hardware component offers the highest level of abstraction? 
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.2.3** and Essential Knowledge statements: **2.2.3H**
+<hr>
+ (A) This is not correct because this is the lowest level of abstraction from these options.  Logic gates implement Boolean functions of 1\'s and 0\'s at the hardware level.
+
+<hr>
+ (B) This is not correct because while a set of transistors act as logic gate, adding one level of abstraction, it is not the highest level of abstraction of these options.
+
+<hr>
+ (C) This is not correct because while a procesor is a set of logic gates, adding a level of abstraction, it is not the highest level of abstraction of these options.
+
+<hr>
+ (D) This is correct because a set of transistors act as a logic gate; a set of logic gates put together forms a a processor and a set of processors put together forms a Video card. So the video card will be at the highest level of abstraction since it contains all of the rest, but it hides all that information form the end user. 
+
+MARKDOWN
