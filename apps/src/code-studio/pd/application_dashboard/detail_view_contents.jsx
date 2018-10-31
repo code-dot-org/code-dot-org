@@ -40,7 +40,6 @@ const styles = {
   },
   statusSelect: {
     width: 250, // wide enough for the widest status
-    marginRight: '5px'
   },
   editMenuContainer: {
     display: 'inline-block' // fit contents
@@ -64,7 +63,6 @@ const styles = {
     marginRight: '5px'
   },
   statusSelectGroup: {
-    maxWidth: 200,
     marginRight: 5,
     marginLeft: 5,
   },
