@@ -9,9 +9,14 @@
   .hoc2018
     .hero-message-line1= hoc_s(:codeorg_homepage_hoc2018_header_line1)
     .hero-message-line2
-      .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_desktop)
+      - if show_single_hero == "mc"
+        -# Don't tint the word "create"
+        .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+      - else
+        .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_desktop)
       .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
-    .hero-message-gap.mobile-feature &nbsp;
+    - if show_single_hero != "mc"
+      .hero-message-gap.mobile-feature &nbsp;
     .hero-message-line3
       = hoc_s(:codeorg_homepage_hoc2018_header_line3)
       %span.hero_video_link{onclick: "return showVideo_mainvideo()"}= hoc_s(:codeorg_homepage_hoc2018_video)
@@ -32,7 +37,7 @@
 
 #hero{style: "position:relative"}
 
-  - if show_single_hero
+  - if show_single_hero == "hoc2018"
     .hoc2018
       #blackbackground.desktop-feature
         #blackbox
@@ -77,6 +82,13 @@
       - actions_id = show_single_hero_mobile_gap ? "actions-mobile-gap" : "actions"
       %div{id: actions_id}
         = main_actions
+        - if show_single_hero == "mc"
+          %img{src: "/images/fit-400/mc/MC_Logo_Large.png", style: "width: 320px; height: 125px; padding-top: 25px; margin-left: -37px;"}
+
+    -# Temporary for hoc2018 mc launch
+    - if show_single_hero == "mc"
+      .desktop-feature
+        %img{src: "/images/fit-450/homepage/hoc2018_mc_characters.png", style: "position: absolute; width: 450px; right: 20px; bottom: 0px;"}
 
   #caption_container.container_responsive
 
