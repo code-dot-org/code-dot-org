@@ -606,6 +606,10 @@ module Pd::Application
       workshops.first
     end
 
+    def friendly_registered_workshop
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
+    end
+
     # override
     def self.prefetch_associated_models(applications)
       super(applications)
