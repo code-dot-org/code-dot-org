@@ -1389,6 +1389,8 @@ nn:
               name: Binær armbånd
             Binary Images:
               name: Binære bilete
+            Play Lab:
+              name: Spel-lab
         csd2-2017:
           stages:
             Peer Review:

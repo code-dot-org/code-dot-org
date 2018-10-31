@@ -92,6 +92,8 @@
       MC HOC 2016 Village Test_failure_message_override: Du må få Iron Golemen til
         jakte på og angripe zombiene for å vinne.
       WhileAdventure_failure_message_override: Gratulerer! Du samlet X mynter!
+      courseC19_playLab_EOC3_failure_message_override: Du må legge til to eller flere
+        nye spillere og programmere dem til å bevege seg.
       courseE_playLab_scaffold3_failure_message_override: Du må legge til to eller
         flere nye spillere og programmere dem til å bevege seg.
       courseE_playLab_scaffold3_2018_failure_message_override: Du må legge til to

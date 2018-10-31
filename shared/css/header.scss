@@ -107,10 +107,12 @@
         background-color: transparent;
         border: 2px solid $white;
         color: $white;
+        float: right;
+        margin-left: 5px;
       }
 
       #signin_button {
-        margin-top: -9px;
+        margin-top: -6px;
         height: 38px;
       }
     }

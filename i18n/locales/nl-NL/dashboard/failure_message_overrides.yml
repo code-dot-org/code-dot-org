@@ -35,6 +35,7 @@ nl:
       MC HOC 2016 SCORE LEVEL_failure_message_override: Als je moeite hebt om 5 Golems te tikken, probeer dan de code te veranderen naar 2 punten per tik.
       MC HOC 2016 Village Test_failure_message_override: Je moet de Ijzeren Golem op de zombies laten jagen en aanvallen om te winnen.
       WhileAdventure_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!
+      courseC19_playLab_EOC3_failure_message_override: Je moet twee of meer nieuwe actoren aan het spel toevoegen en ze programmeren om te bewegen.
       courseE_playLab_scaffold3_failure_message_override: Je moet twee of meer nieuwe actoren aan het spel toevoegen en ze programmeren om te bewegen.
       courseE_playLab_scaffold3_2018_failure_message_override: Je moet twee of meer nieuwe actoren aan het spel toevoegen en ze programmeren om te bewegen.
       grade4_scaffolded_project3_failure_message_override: Je moet 2 of meer nieuwe personages toevoegen die je spel vooruit brengen.

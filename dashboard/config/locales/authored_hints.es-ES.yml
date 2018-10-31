@@ -3680,6 +3680,18 @@ es:
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.
+      Dance_Party_01_authored_hint:
+        validation: |-
+          **Comó paso esto nivel?**
+          *Asegurarse una bailarin aparece en la pantalla.
+
+          *Esto nivel termina despues de cuatro medidas.*
+      Dance_Party_1_authored_hint:
+        validation: |-
+          **Comó paso esto nivel?**
+          *Asegurarse una bailarin aparece en la pantalla.
+
+          *Esto nivel termina despues de cuatro medidas.*
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           Esta es la primera pista.
@@ -3705,6 +3717,12 @@ es:
           camino por el que ira...
         Function_intro_Ryan_a: "¡Puedes invocar una función muchas veces dentro de
           tu programa! Intenta invocarla dos veces para resolver este rompecabezas."
+      HOC Dance 0_draft_authored_hint:
+        validation: |-
+          **Comó paso esto nivel?**
+          *Asegurarse una bailarin aparece en la pantalla.
+
+          *Esto nivel termina despues de cuatro medidas.*
       Harvesting_authored_hint:
         pointer_harvester_test: "¿Qué tipo de bloque puedo usar para verificar algo
           y tomar una decisión?"

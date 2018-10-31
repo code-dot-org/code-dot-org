@@ -2121,6 +2121,9 @@ pt-BR:
           </xml>
       Course 4 SCFL 7_authored_hint:
         Course_4_SCFL_7_a: A mudança de cor acontece usando o bloco `defina a cor com vermelho, verde, azul`. Vermelho é definido no`contador`. Verde é `255 - contador`, e azul é definido constante em 255.
+        Course_4_SCFL_7_b: 'Este desenho é feito usando dois ''for loops'' similares. Um vai de 5 a 200 por 2, o outro vai de 200 a 5 por 2. '
+        Course_4_SCFL_7_c: Dentro de cada 'for loop' você avança 5 pixels antes de virar por '360/counter'. Não esqueça de configurar seu pincel para a largura 'counter' antes de fazer!
+        Course_4_SCFL_7_d: Você precisará virar a esquerda por 225 graus entre dois 'for loops'.
         Course_4_SCFL_7_e: |-
           **Solução:**
           
@@ -2332,6 +2335,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 1_authored_hint:
+        Course_4_SCV_1_a: 'Variáveis são úteis porque você pode adicionar à elas cada vez por um laço. '
+        Course_4_SCV_1_b: Este enigma contém um laço que cria o polígono, um laço que repete o polígono 'sides' vezes, então outro laço que faz tudo isto de novo após adicionar 5 à 'sides'.
+        Course_4_SCV_1_c: Usando uma variável para 'sides' e uma para 'length' torna o código mais limpo porque você pode repetir o mesmo código múltiplas vezes, ao invés de criar uma nova cópia para cada conjunto de números.
         Course_4_SCV_1_d: |-
           **Solução:**
           
@@ -2483,6 +2489,10 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 2_authored_hint:
+        Course_4_SCV_2_a: "A imagem completa é feita de 10 destas \"flores\": \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n...que são feitas de 10 destes decágonos:  \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
+        Course_4_SCV_2_b: 'Este projeto usa laços aninhados (três profundos). Todos os laços percorrem ''sides'' vezes. '
+        Course_4_SCV_2_c: O artista vira à esquerda quando cria cada decágono, mas vira a direita em todos os outros laços.
+        Course_4_SCV_2_d: Para prevenir que todas as suas "flores" de 10 pétalas sejam desenhadas no mesmo lugar, assegure-se de pular pra frente por 'length' / 'sides' antes de de virar 360/'sides' graus como parte do seu laço mais externo.
         Course_4_SCV_2_e: |-
           **Solução:**
           
@@ -2656,6 +2666,8 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 3_authored_hint:
+        Course_4_SCV_3_a: 'Use seu bloco de matemática para adicionar e subtrair pontos da variável ''point'' quando os desenhos colidem. '
+        Course_4_SCV_3_b: Você pode mudar o parâmetro para quão longe você move seu desenho toda vez que uma das teclas de seta forem pressionadas.
         Course_4_SCV_3_c: |-
           **Solução:**
           
@@ -2686,6 +2698,9 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 4_authored_hint:
+        Course_4_SCV_4_a: Três variáveis irão ajudá-lo. Uma para unidades de néctar, uma para unidades de mel, e uma para quão longe a abelha deve mover em cada iteração.
+        Course_4_SCV_4_b: 'Será bastante útil usar três laços dentro de seu laço principal. Um para mover para frente, um para coletar o néctar e um para fazer mel. '
+        Course_4_SCV_4_c: "Veja esta opção para movimento: \n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
         Course_4_SCV_4_d: |-
           **Solução:**
           
@@ -2822,6 +2837,12 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 5_authored_hint:
+        Course_4_SCV_5_a: |-
+          Veja esta opção para movimento: 
+          
+          ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
+        Course_4_SCV_5_b: Toda vez dentro do laço, as flores terão duas vezes menos néctar e a abelha precisará fazer mais um mel.
+        Course_4_SCV_5_c: Veja que no começo do laço externo a abelha se move tantas vezes quanto há de néctar na próxima flor.
         Course_4_SCV_5_d: |-
           **Solução:**
           
@@ -2947,6 +2968,13 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 6_authored_hint:
+        Course_4_SCV_6_a: |-
+          Veja como uma forma completa se parece
+          
+          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
+        Course_4_SCV_6_b: 'Você se beneficiará criando 8 variáveis: red1, green1, blue1, red2, green2, blue2, length e sides.'
+        Course_4_SCV_6_c: Cada uma das formas de 5 lados está dividida em peças de 'length' / 'sides onde o zigue é verde-azulado (rgb = 0,175,200) e o zague é roxo (rgb = 100,50,150).
+        Course_4_SCV_6_d: 'Para o zigue, vire a esquerda por ''360'' / ''sides''. Para o zague, vire a direita por  ''360'' / ''sides''. '
         Course_4_SCV_6_f: |-
           **Solução:**
           
@@ -3857,6 +3885,9 @@ pt-BR:
           </block>
           </xml>
       course4_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_a: 'Variáveis são úteis porque você pode adicionar à elas cada vez por um laço. '
+        courseF_artist_variables_challenge2_b: Este enigma contém um laço que cria o polígono, um laço que repete o polígono 'sides' vezes, então outro laço que faz tudo isto de novo após adicionar 5 à 'sides'.
+        courseF_artist_variables_challenge2_c: Usando uma variável para 'sides' e uma para 'length' torna o código mais limpo porque você pode repetir o mesmo código múltiplas vezes, ao invés de criar uma nova cópia para cada conjunto de números.
         courseF_artist_variables_challenge2_d: |-
           **Solução:**
           
@@ -6017,6 +6048,9 @@ pt-BR:
           </block>
           </xml>
       courseF_artist_variables_challenge1a_authored_hint:
+        courseF_artist_variables_challenge1_a: 'Variáveis são úteis porque você pode adicionar à elas cada vez por um laço. '
+        courseF_artist_variables_challenge1_b: Este enigma contém um laço que cria o polígono, um laço que repete o polígono 'sides' vezes, então outro laço que faz tudo isto de novo após adicionar 5 à 'sides'.
+        courseF_artist_variables_challenge1_c: Usando uma variável para 'sides' e uma para 'length' torna o código mais limpo porque você pode repetir o mesmo código múltiplas vezes, ao invés de criar uma nova cópia para cada conjunto de números.
         courseF_artist_variables_challenge1_d: |-
           **Solução:**
           

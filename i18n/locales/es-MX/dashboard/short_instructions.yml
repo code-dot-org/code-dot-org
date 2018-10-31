@@ -1532,6 +1532,12 @@ es-MX:
       courseB_starWars_prog8_2018: "** Desafío: ** Ayuda BB-8 a recoger la chatarra que brilla intensamente"
       courseB_starWars_prog9: Ayuda a BB-8 a recoger la chatarra brillante
       courseB_starWars_prog9_2018: Ayuda a BB-8 a recoger la chatarra brillante
+      courseC19_playLab_EOC1: Escoge un fondo y un mapa, y escoge un actor para ser el héroe de tu juego.
+      courseC19_playLab_EOC2: Usa el manjador de eventos y acciones para hacer que tu héroe se mueva.
+      courseC19_playLab_EOC3: Agrega dos o más actores adicionales a tu juego y hazlos moverse.
+      courseC19_playLab_EOC4: Encuentra algunas formas interesantes de cambiar el puntaje en tu juego. Obtén el puntaje para mostrar al más que 0 para continuar.
+      courseC19_playLab_EOC5: Ahora pasa algo de tiempo aegurándote que el juego funcione d ela manera que quiers. Incluye una manera para ganar o perder tu juego, luego juega hasta que encuentres esas condiciones.
+      courseC19_playLab_EOC6: '¡Has terminado! Ahora puedes jugar tu juego o compartirlo con tus amigos o compañeros!'
       courseC_PlayLab_events1: Hacer que Jorge el perro (actor 1) diga "Hola."
       courseC_PlayLab_events1_2018: Hacer que Jorge el perro (actor 1) diga "Hola."
       courseC_PlayLab_events2: '¿Puedes hacer que Jorge el Perro (actor 1) diga algo y que Olive el Gato (actor 2) diga algo después?'

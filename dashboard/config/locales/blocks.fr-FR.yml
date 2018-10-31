@@ -77,12 +77,28 @@ fr:
         options:
           GROUP:
             sprites: tout
+          FORMAT:
+            '"random"': aléatoire
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": vers la gauche
             "{x: 300, y: 200}": vers la droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': aléatoire
       Dancelab_randomColor:
         text: couleur aléatoire
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ fr:
             '"none"': Aucun
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': taille
+            '"height"': hauteur
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: tout
           PROPERTY:
             '"scale"': taille
             '"height"': hauteur
@@ -296,6 +319,10 @@ fr:
           TYPE:
             "'sand'": sable
             "'planksOak'": planches en chêne
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sable
       craft_moveForward:
         text: avancer plus
       craft_placeTorch:

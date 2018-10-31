@@ -114,7 +114,7 @@ cs:
         turtle_2_5: Nakresli čtverce o stranách 50, 60, 70, 80 a 90 pixelů. Budeš potřebovat použít funkci "nakreslit čtverec" pětkrát.
         turtle_2_6: 'Dobře, tento program použije čítač, aby nakreslil stejné čtverce jako minule. Chceš, aby měl čtverec tu samou velikost jako čítač, takže použij blok "čítač". Tip: Je v kategorii Proměnné.'
         turtle_2_7: Zde je program k nakreslení spirály, ale bloky jsou neaktivní, takže se neprovedou. Udělej nový program za použití bloku "počítat s" (v kategorii Cykly) a bloku "čítač" (v kategorii Proměnné) k nakreslení té samé spirály.
-        turtle_2_7_5: Upravit Kód
+        turtle_2_7_5: Máme novou funkci "nakreslit sněhuláka" (v kategorii Funkce). Nakresli dva sněhuláky s výškou 250 a 100.
         turtle_2_8: Tohle bude záludné. Použij funkci "nakreslit sněhuláka" a nový blok "skočit vpřed" (v kategorii Akce). Nakresli 3 sněhuláky v různých barvách, 100 pixelů od sebe.
         turtle_2_9: Použij cyklus "počítat s" k nakreslení rodinky sněhuláků o výšce 110, 100, 90, 80 a 70. Všichni sněhuláci by měli být 60 pixelů od sebe.
         turtle_2_10: V tomto kódu můžeš experimentovat s různými spirálami. Co se stane, když změníš hodnotu otočení? Nebo nastavíš náhodnou barvu v cyklu? Nakresli cokoliv chceš.

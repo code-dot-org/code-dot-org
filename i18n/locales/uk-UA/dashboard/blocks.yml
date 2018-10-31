@@ -54,12 +54,28 @@ uk:
         options:
           GROUP:
             sprites: усі
+          FORMAT:
+            '"random"': випадковий
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ліворуч
             "{x: 300, y: 200}": праворуч
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": випадковий
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': випадковий
       Dancelab_randomColor:
         text: випадковий колір
       Dancelab_setDanceSpeed:
@@ -72,6 +88,13 @@ uk:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': розмір
+            '"height"': висота
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: усі
           PROPERTY:
             '"scale"': розмір
             '"height"': висота
@@ -261,6 +284,10 @@ uk:
           TYPE:
             "'sand'": пісок
             "'planksOak'": дубові дошки
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": пісок
       craft_moveForward:
         text: рухатись вперед
       craft_placeTorch:

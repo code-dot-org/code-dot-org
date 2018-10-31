@@ -38,12 +38,30 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': rawak
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': rawak
       Dancelab_randomColor:
         text: warna rawak
       Dancelab_setDanceSpeed:
@@ -55,6 +73,11 @@ ms:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': saiz
@@ -210,6 +233,10 @@ ms:
           TYPE:
             "'sand'": pasir
             "'planksOak'": papan oak
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": pasir
       craft_moveForward:
         text: bergerak ke hadapan
       craft_placeTorch:

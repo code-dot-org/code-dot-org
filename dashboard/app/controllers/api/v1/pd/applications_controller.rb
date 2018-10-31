@@ -157,10 +157,10 @@ module Api::V1::Pd
 
     # PATCH /api/v1/pd/applications/1
     def update
-      application_data = application_params
+      application_data = application_params.to_h
 
       if application_data[:response_scores]
-        JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
+        application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
 
       if application_data[:regional_partner_value] == REGIONAL_PARTNERS_NONE

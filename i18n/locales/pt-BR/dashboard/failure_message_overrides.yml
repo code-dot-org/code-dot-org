@@ -36,6 +36,7 @@ pt-BR:
       MC HOC 2016 Village Test_failure_message_override: Você precisa fazer a perseguição do Iron Golem e atacar os zumbis para ganhar.
       Valentine_playlab_01_failure_message_override: Quase! tente novamente.
       WhileAdventure_failure_message_override: Parabéns! Você coletou X moedas!
+      courseC19_playLab_EOC3_failure_message_override: Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.
       courseE_playLab_scaffold3_failure_message_override: Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.
       courseE_playLab_scaffold3_2018_failure_message_override: Você deve adicionar dois ou mais atores ao seu jogo e programá-los para se mexerem.
       grade4_scaffolded_project3_failure_message_override: Você deve adicionar ao jogo dois ou mais novos atores que se mexem.

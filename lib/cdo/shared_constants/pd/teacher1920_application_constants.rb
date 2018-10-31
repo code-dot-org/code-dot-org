@@ -161,21 +161,40 @@ module Pd
       principal_underrepresented_minority_percent: [5, 0]
     }
 
-    SCHOLARSHIP_QUESTIONS = [
-      :previous_yearlong_cdo_pd,
-      :principal_approval,
-      :principal_plan_to_teach,
-      :principal_schedule_confirmed,
-      :principal_diversity_recruitment
-    ]
-
-    CRITERIA_SCORE_QUESTIONS_CSP = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csd_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
-    CRITERIA_SCORE_QUESTIONS_CSD = (
-      VALID_SCORES.select {|_, v| v == YES_NO}.keys -
-        [:csp_how_offer, :csp_which_grades] - SCHOLARSHIP_QUESTIONS
-    ).freeze
+    # Need to explicitly list these for the shared constant generation to work.
+    SCOREABLE_QUESTIONS = {
+      bonus_points: [
+        :csp_how_offer,
+        :replace_existing,
+        :taught_in_past,
+        :principal_free_lunch_percent,
+        :principal_underrepresented_minority_percent
+      ],
+      scholarship_questions: [
+        :previous_yearlong_cdo_pd,
+        :principal_approval,
+        :principal_plan_to_teach,
+        :principal_schedule_confirmed,
+        :principal_diversity_recruitment
+      ],
+      criteria_score_questions_csd: [
+        :regional_partner_name,
+        :csd_which_grades,
+        :cs_total_course_hours,
+        :plan_to_teach,
+        :have_cs_license,
+        :committed,
+        :willing_to_travel
+      ],
+      criteria_score_questions_csp: [
+        :regional_partner_name,
+        :csp_which_grades,
+        :cs_total_course_hours,
+        :plan_to_teach,
+        :have_cs_license,
+        :committed,
+        :willing_to_travel
+      ]
+    }
   end
 end

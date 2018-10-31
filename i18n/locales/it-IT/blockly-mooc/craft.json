@@ -11,7 +11,7 @@
   "blockActionCollect": "raccogli",
   "blockActionCollectAll": "raccogli tutto",
   "blockActionDestroyEntity": "sparisci",
-  "blockActionDetect": "rileva",
+  "blockActionDetect": "trova",
   "blockActionDetectRedstone": "rileva pietrarossa",
   "blockActionDrop": "produci",
   "blockActionDropAll": "rilascia tutto",

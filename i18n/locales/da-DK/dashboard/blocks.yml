@@ -54,12 +54,28 @@ da:
         options:
           GROUP:
             sprites: alle
+          FORMAT:
+            '"random"': tilfældig
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": venstre
             "{x: 300, y: 200}": højre
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tilfældig
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': tilfældig
       Dancelab_randomColor:
         text: tilfældig farve
       Dancelab_setDanceSpeed:
@@ -72,6 +88,13 @@ da:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: alle
           PROPERTY:
             '"scale"': størrelse
             '"height"': højde
@@ -229,7 +252,9 @@ da:
             '"left"': venstre pil
             '"right"': højre pil
             '"w"': V
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -238,7 +263,9 @@ da:
             '"left"': venstre pil
             '"right"': højre pil
             '"w"': V
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -261,6 +288,10 @@ da:
           TYPE:
             "'sand'": sand
             "'planksOak'": egetræsplanker
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: flyt fremad
       craft_placeTorch:

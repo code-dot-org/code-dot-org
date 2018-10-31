@@ -1259,6 +1259,8 @@ bs:
           stages:
             Binary Bracelets:
               name: Binarne narukvice
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Classes:

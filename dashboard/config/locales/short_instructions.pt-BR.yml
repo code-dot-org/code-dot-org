@@ -1015,6 +1015,7 @@ pt-BR:
       4-5 While Loops Assessment 1: |-
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
+      AlgPD DR Free Play: Crie uma função baseada em um problema do seu próprio mundo.
       Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       Alien Defender_2018: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       AllTheThings Applab - Turtle move with button: "Arraste um botão para fora da
@@ -1264,8 +1265,15 @@ pt-BR:
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       CDEF_debugging_flappy2: Por que este jogo não funciona?
+      CSD Hackathon Pt 1: "(Clique para ver todas as instruções)"
+      CSD Hackathon Pt 2: "(Clique para ver todas as instruções)"
+      CSD Hackathon Week 1: "(Clique para ver todas as instruções)"
+      CSD Hackathon Week 2: "(Clique para ver todas as instruções)"
       CSD U3 Mouse Input Bee 2: Faça isso
       CSD U3 Mouse Input Bee 2_2018: Faça isso
+      CSD U3 Variables Intro: 'Crie sua própria variável '
+      CSD U3 Variables Reassign pt2: Crie e atribua uma nova variável em uma única
+        linha.
       CSD U5 black white images pixelation 2: Desenhar uma cara de sorriso (clique
         aqui para ver a imagem)
       CSD U5 black white images pixelation 2_2018: Desenhar uma cara de sorriso (clique
@@ -1339,6 +1347,12 @@ pt-BR:
         Introdução do comando setPosition!
         Substitua o moveTo no manipulador de eventos de clique do botão para usar setPosition
         para mover o botão para uma posição aleatória quando ele for clicado.
+      CSPU5_U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
+      CSPU5_U3 - High Low - Else if_2018: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
       CSPU5_U313 Two Buttons with Ids: |-
         Sua vez de tentar! Fornecemos a você um
         código inicial com dois botões e dois manipuladores de evento na tela, mas deixamos
@@ -2830,8 +2844,14 @@ pt-BR:
         próximo desafio. "
       Function intro Ryan: Use a função 'construir ponte' duas vezes para criar um
         caminho até a tocha.
+      GLJr_Behavior_2: Agora você tem alguns blocos novos! Tente usá-los e veja como
+        eles funcionam. Em suas anotações, escreva quais você tentou e o que eles
+        fazem.
       GLJr_Behavior_6: Vamos tentar mais alguns comportamentos - faça o cachorro correr
         para cima e o gato correr para a direita.
+      GLJr_Forever_2: Agora você tem alguns blocos novos! Tente usá-los e veja como
+        eles funcionam. Em suas anotações, escreva quais você tentou e o que eles
+        fazem.
       HOC 2018 Level_10: Vá para a entrada do Monumento do Oceano.
       HOC 2018 Level_6: Navegue através do gelo para chegar ao templo.
       HoCAB_labyrinth1: Use os blocos de seta para resolver este labirinto!
@@ -3274,6 +3294,9 @@ pt-BR:
         Variáveis também podem ser usadas para controlar
         a velocidade de jogadores em um jogo. Defina a velocidade do jogador e do inimigo e veja
         como os movimentos mudam. A velocidade pode ficar entre 2 e 12.
+      Middle School Hackathon Pt 1: "(Clique para ver todas as instruções)"
+      Middle School Hackathon Pt 2: "(Clique para ver todas as instruções)"
+      Mike Pair Programming: Veja aqui as instruções
       Mike Test Bee Conditionals 1: |-
         Esta nuvem está tapando minha visão! Veja
         se há uma flor atrás da nuvem, e só colete néctar se houver
@@ -3555,6 +3578,7 @@ pt-BR:
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
         achar que já descobriu como o jogo funciona, clique em "Concluir"
+      October15 ghost 1: Dê olhos ao fantasma, usando a função "desenhar um círculo".
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com
         cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2018: Não é uma boa ideia topar com um Creeper. Passe
@@ -3639,6 +3663,13 @@ pt-BR:
       PS copy 2-3 Bee Conditionals 5: "Tenha cuidado para não coletar néctar das\nflores
         roxas que não o têm. \r\nPrimeiro, veja se o néctar\né igual a 1 usando o
         bloco \"se néctar\"."
+      PS predictive Applab level test: 'Veja aqui algumas instruções. '
+      Pixelation - Lesson 14 - Make your own B and W Image: Agora, crie sua própria
+        imagem! Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho
+        que você quiser. Feliz pixelização!
+      Pixelation - Lesson 14 - Make your own B&W Image: Agora, crie sua própria imagem!
+        Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você
+        quiser. Feliz pixelização!
       Play Lab Rocket 1: |-
         Um foguete é lançado, viajando a 15 metros
         por segundo... clique em "Executar" para ver como é esse problema em forma de animação.
@@ -3754,6 +3785,8 @@ pt-BR:
       SG U3L07 - Free Play Loops and Random: |-
         Atividade livre! Use o que você aprendeu
         sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
+      SG U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
+        as instruções)
       SG U3L07 More Subgoals: |-
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
@@ -3901,6 +3934,9 @@ pt-BR:
         Nessa versão do simulador você não pode
         ver o endereço de outros alunos. Ao invés disso, um de vocês deve agir como um
         serviço de nome, para ajudar a compartilhar os endereços entre si.
+      U3 - High Low - Else if: Adicione uma condição senão-se com o objetivo de dizer
+        ao usuário se seus chutes são altos ou baixos em vez de apenas dizer que estão
+        errados. (Clique para ver todas as instruções)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - No Fill: Faça isso
@@ -4069,6 +4105,10 @@ pt-BR:
         a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,\nlinhas
         e cores da tartaruga.  Para começar, siga a série de etapas sugerida na\nplanilha
         de acompanhamento. "
+      U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
+        as instruções)
+      U3L07 - randomSquare_2018: Desenhe a figura usando um laço. (Clique para ver
+        todas as instruções)
       U3L13 - Button with ID: |-
         Arraste um botão para fora da tela e
         defina seu texto como "Vá em frente!".  Execute o programa para ver se você consegue enxergar
@@ -4223,6 +4263,12 @@ pt-BR:
       U4 vigenere cipher 2: Instruções
       U4L02 - Objects - Template1: Modelo
       U4L02 - Objects - Template1_2018: Modelo
+      U5 if-else-if movie example: Adicione uma condição senão-se com o objetivo de
+        dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
+      U5 if-else-if movie example_2018: Adicione uma condição senão-se com o objetivo
+        de dizer ao usuário se seus chutes são altos ou baixos em vez de apenas dizer
+        que estão errados. (Clique para ver todas as instruções)
       Underground Avoiding Lava: Há lava escondida sob alguns destes blocos, que você
         precisará cobrir antes de avançar. Um comando "se" será útil aqui. Adicione
         um comando "andar à frente" no local correto para minerar estes blocos.
@@ -4258,6 +4304,12 @@ pt-BR:
         e, em seguida, arraste-o para limpar a girafa!
       Virtual Pet 4_simple: Adicione um comportamento ao seu sabonete para torná-lo
         arrastável e, em seguida, arraste-o para limpar a girafa!
+      'Widget: Black and White Pixelation': Agora, crie sua própria imagem! Começamos
+        com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
+        Feliz pixelização!
+      'Widget: Black and White Pixelation_2018': Agora, crie sua própria imagem! Começamos
+        com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
+        Feliz pixelização!
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
       aE7: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés
         da direita, o que acontece? \r\n\r\nVocê pode repetir tudo\nisso para desenhar
@@ -5152,8 +5204,22 @@ pt-BR:
       courseD_artist_binary7_2018: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
+      courseD_artist_binary8: Termine o código para criar este desenho.
+      courseD_artist_binary8_2018: Termine o código para criar este desenho.
+      courseD_artist_binary8_predict1: Termine o código para criar este desenho.
+      courseD_artist_binary8_predict1_2018: Termine o código para criar este desenho.
+      courseD_artist_binaryFP: |-
+        Temos aqui uma tela de maior resolução para desenhar - 16 pixels por 16 pixels!
+
+        Veja o que acontece quando começamos ser criativos com os bits!
       courseD_artist_binaryFP8: "**Atividade livre**: desenhe o que você quiser com
         números binários! "
+      courseD_artist_binaryFP_2018: |-
+        Temos aqui uma tela de maior resolução para desenhar - 16 pixels por 16 pixels!
+
+        Veja o que acontece quando começamos ser criativos com os bits!
+      courseD_artist_binary_challenge0: Tente usar laços aninhados para completar
+        este desenho.
       courseD_artist_nestedLoopsPre1: Crie um triângulo para começar esta etapa.
       courseD_artist_nestedLoops_challenge1: Você consegue descobrir como fazer uma
         imagem como esta?
@@ -5173,6 +5239,10 @@ pt-BR:
       courseD_autorun_binary7_2019: |-
         Qual é a menor string binária que você
         pode repetir para desenhar esta imagem?
+      courseD_autorun_binary8_2019: Termine o código para criar este desenho.
+      courseD_autorun_binary8_predict1_2019: Termine o código para criar este desenho.
+      courseD_bee_conditionals10: Colete todo o néctar e faça todo o mel.
+      courseD_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel.
       courseD_bee_conditionals_challenge1: Colete todo o néctar e faça todo o mel.
@@ -5188,6 +5258,10 @@ pt-BR:
         Corrija o(s) erro(s) para coletar todo o néctar
         e produzir todo o mel.
       courseD_bee_debugging4: Corrija o(s) erro(s) para fazer todo o mel.
+      courseD_bee_nestedLoops1: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1_2018: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops3: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseD_bee_nestedLoops5: "Colete todo o néctar de cada flor\ne produza mel
         na colmeia. \r\n\r\nUse um laço aninhado. "
@@ -5411,6 +5485,8 @@ pt-BR:
         50 pixels de comprimento em cada lado.
       courseF_artist_variables7: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2018: 'Desenhar um triângulo com lados de 150 pixels. '
+      courseF_bee_conditionals10: Colete todo o néctar e faça todo o mel.
+      courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos
@@ -5420,6 +5496,8 @@ pt-BR:
       courseF_bee_for2: Escrever o código para ajudar a abelha a coletar todo o néctar.
       courseF_bee_for2_2018: Escrever o código para ajudar a abelha a coletar todo
         o néctar.
+      courseF_bee_for4: Ajude a abelha a coletar todo o nectar.
+      courseF_bee_for4_2018: Ajude a abelha a coletar todo o nectar.
       courseF_bee_for5: Usar a variável `contador` duas vezes para resolver este enigma.
       courseF_bee_for5_2018: Usar a variável `contador` duas vezes para resolver este
         enigma.
@@ -5799,6 +5877,7 @@ pt-BR:
         em cada colmeia usando o menor número possível de blocos.
       grade3_Loops_TeacherIDo: "Essas flores parecem deliciosas!\r\n\r\nColete o néctar\nde
         cada uma das flores usando o menor número possível de blocos."
+      grade3_bee_conditionals_new3b: Colete todo o néctar e faça todo o mel.
       grade3_bee_conditionals_quantum2: "Mais nuvens! \r\n\r\nProcure atrás\nde todas
         as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.
         \ \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
@@ -6206,6 +6285,7 @@ pt-BR:
         Adicione o código necessário para garantir que
         a abelha colete todo o néctar. Olhe quanto código você precisa para esse desafio!
         (Vamos aprender uma maneira mais simples no próximo desafio).
+      grade5_bee_for_loops4: Ajude a abelha a coletar todo o nectar.
       grade5_bee_for_loops6: |-
         Você também pode usar um laço "para" para fazer contagem
         regressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1.

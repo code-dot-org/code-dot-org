@@ -8,7 +8,6 @@ import {
   SET_MOBILE_CONTROLS_CONFIG
 } from './actions';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
-import {reducers as danceReducers} from '../dance/redux';
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
@@ -71,7 +70,6 @@ function mobileControlsConfig(state, action) {
 
 module.exports = {
   ...jsDebuggerReducers,
-  ...danceReducers,
   animationPicker,
   animationTab,
   animationList,

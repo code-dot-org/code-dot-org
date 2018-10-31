@@ -54,12 +54,28 @@ pt:
         options:
           GROUP:
             sprites: tudo
+          FORMAT:
+            '"random"': aleatório
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": para a esquerda
             "{x: 300, y: 200}": para a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': aleatório
       Dancelab_randomColor:
         text: cor aleatória
       Dancelab_setDanceSpeed:
@@ -72,6 +88,13 @@ pt:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"height"': altura
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: tudo
           PROPERTY:
             '"scale"': tamanho
             '"height"': altura
@@ -261,6 +284,10 @@ pt:
           TYPE:
             "'sand'": areia
             "'planksOak'": pranchas de carvalho
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": areia
       craft_moveForward:
         text: segue em frente
       craft_placeTorch:

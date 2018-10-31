@@ -730,6 +730,8 @@ ja:
               name: バイナリブレスレット
             Binary Images:
               name: バイナリ画像
+            Play Lab:
+              name: プレイラボ
         csd2-2017:
           stages:
             Peer Review:

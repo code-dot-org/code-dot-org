@@ -142,6 +142,7 @@ pt-BR:
             '"grid"': grade
             '"row"': linha
             '"column"': coluna
+            '"random"': aleatório
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
@@ -161,6 +162,26 @@ pt-BR:
             "{x: 100, y: 300}": inferior esquerdo
             "{x: 300, y: 300}": inferior direito
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"ALIEN"': Alienígenas
+            '"UNICORN"': Unicórnios
+          LAYOUT:
+            '"grid"': grade
+            '"row"': linha
+            '"column"': coluna
+            '"random"': aleatório
       Dancelab_randomColor:
         text: cor aleatória
       Dancelab_setBackgroundEffect:
@@ -188,6 +209,23 @@ pt-BR:
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Aleatório
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"width"': largura
+            '"height"': altura
+            '"rotation"': rotação
+            '"x"': posição horizontal
+            '"y"': posição vertical
+            '"tint"': tinta
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: todos
+            '"CAT"': todos os gatos
+            '"DUCK"': todos os patos
+            '"FROG"': todos os sapos
+            '"PINEAPPLE"': todos os abacaxis
+            '"ROBOT"': todos os robôs
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
@@ -625,6 +663,10 @@ pt-BR:
           TYPE:
             "'sand'": areia
             "'planksOak'": tábuas de carvalho
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": areia
       craft_moveForward:
         text: avance
       craft_placeTorch:
