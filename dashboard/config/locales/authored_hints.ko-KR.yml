@@ -3579,6 +3579,12 @@ ko:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: 함수를 올바르게 호출할 경우 이동 경로입니다.
         Function_intro_Ryan_a: 프로그램 내에서 같은 함수를 여러 번 호출할 수 있습니다. 함수를 두 번 호출해 퍼즐을 해결해보세요.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)을
+          볼까요? 어떻게 조건부를 사용해서 바다 유적을 통과할 수 있나요?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 정말 아름다운 산호초네요! 파란색 산호가 **올바른** 길이며, 빨간색 산호가 **왼쪽**이 아님을
+          확인하세요!
       HOC Dance 0_draft_authored_hint:
         validation: "내가 어떻게 이 레벨을 통과할 수 있음니까? \n\n춤을 추는 사람이 화면에 나타나게 하세요."
         challenges: |-
