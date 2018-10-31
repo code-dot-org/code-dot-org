@@ -2318,13 +2318,17 @@ zh-CN:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary>**我能在CSS里使用什么颜色？**</summary>
+        
+        <summary>
+        <strong>**我能在CSS里使用什么颜色？**</strong></summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
         - CSS正确的颜色值</a>查看更多信息。
         </details>
         <details>
-        <summary>**这些代码是如何起作用的？**</summary>
+        <summary>
+        <strong>**这些代码是如何起作用的？**</strong>
+        </summary>
         这是实现图片边框的代码：
         
         <pre>img {
@@ -2339,16 +2343,22 @@ zh-CN:
         saddlebrown;`,`border-width: 4px;`,`border-style: solid;`，和`border-radius: 10px;`是制作边框的规则。
         </details>
         <details>
-        <summary>**`border-style`（边框-样式）属性有什么用？**</summary>
+        <summary>
+        <strong>**`border-style`（边框-样式）属性有什么用？**</strong>
+        </summary>
         `border-style`属性决定了元素使用什么种类的边框（实线、点线，等等）。可以阅读<a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style属性</a>了解更多。
         </details>
         <details>\
-        <summary>**`border-radius`属性有什么用？**</summary>
+        <summary>
+        <strong>**`border-radius`属性有什么用？**</strong>
+        </summary>
         `border-radius`属性决定了元素角上的圆弧的半径。大一点的半径会形成大一点的，软一点的曲线。零半径意味着正常的直角。可以阅读<a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
         - CSS3 border-radius属性</a>了解更多。
         </details>
         <details>
-        <summary>**`float`属性有什么用？**</summary>
+        <summary>
+        <strong>**`float`属性有什么用？**</strong>
+        </summary>
         `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>了解更多。
         </details>
         </div>
@@ -10833,6 +10843,18 @@ zh-CN:
       Geometric Pattern: "** 项目理念: ** 使用形状几何概念创建图案。这需要坚持和规划！"
       Geometric Sun: "** 项目理念: ** 使用形状几何概念创建图案。这需要坚持和规划！"
       Geometric Sun_2018: "** 项目理念: ** 使用形状几何概念创建图案。这需要坚持和规划！"
+      HOC 2018 Level_1: "您需要补给以进行航行。从**箱子**![]（https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png）中收集一艘**船**![]（https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png）。\n\n"
+      HOC 2018 Level_10: "这个海底遗迹的某个地方藏着一条**鱿鱼**![]（https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png）？\n\n"
+      HOC 2018 Level_11: 在黑色混凝土附近建造一堵**海晶石**墙[]（https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png）。此操作可激活**导管**![]（https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png），完成您的挑战！
+      HOC 2018 Level_12: 恭喜！开放的水底世界等着您。建造一个珊瑚礁！一座火山！一艘沉船！想怎么玩自己随意。
+      HOC 2018 Level_2: 在开阔水面，船比游泳要好用！前往船坞登船。
+      HOC 2018 Level_3: 拿起船桨，划到开阔水域抓**鳕鱼**![]（https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png）。
+      HOC 2018 Level_4: 用鳕鱼喂**海豚**![]（https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png）。使用重复区块更快地穿过海洋。
+      HOC 2018 Level_5: 海底某个地方藏着一个**鹦鹉螺壳**![]（https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png）！探索沉船，找到**箱子**![]（https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png）。
+      HOC 2018 Level_6: 外边好冷啊！前往水底废墟的路上抓一条**鲑鱼**![]（https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png）。
+      HOC 2018 Level_7a: "您找到了水下废墟。在沙石红搜寻包含**海晶石**![]（https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png）宝藏的**箱子**![]（https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png）。\n\n"
+      HOC 2018 Level_8: "先是冰山，现在又是岩浆？穿过火山岛，在珊瑚礁上寻找**热带鱼**![]（https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png）。\n\n"
+      HOC 2018 Level_9b: "您成功抵达珊瑚礁，赶快搜寻**海洋之心**吧![]（https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png）！使用蓝色和红色珊瑚找到**宝箱**![]（https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png）。\n\n"
       Harvesting: "哦，不，我的地图丢了，我不记得我中了什么了！每一个新芽都有可能长成**玉米** ![玉米的图片](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **豆子** ![豆子的图片](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n, 或者**南瓜** ![南瓜的图片](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)。你能写一些代码来捡起所有的庄稼吗？不管他们是什么。"
       HoCAB_labyrinth1: |-
         用这些模块通过迷宫！

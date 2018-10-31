@@ -5,7 +5,7 @@ en:
       CREATING CONTRACTS FROM EXAMPLES 1:
         Big Triangle: 大三角形
         Big Triangle|Image|Number|String: 大三角形|图像|数字|字符串
-        EXAMPLE 1.solution_blocks, 300: 例1.解决模块300
+        EXAMPLE 1.solution_blocks, 300: 例1. solution_blocks, 300
     evaluation_multi:
       U5 evaluation q1:
         'No': '不'
