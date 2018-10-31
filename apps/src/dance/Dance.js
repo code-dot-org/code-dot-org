@@ -10,8 +10,13 @@ import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
+import danceMsg from './locale';
 import {reducers, setSong} from './redux';
+import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
+import logToCloud from '../logToCloud';
+
+import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 
 const ButtonState = {
   UP: 0,
@@ -57,7 +62,7 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-Dance.prototype.init = function (config) {
+Dance.prototype.init = async function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
   }
@@ -96,9 +101,12 @@ Dance.prototype.init = function (config) {
 
   const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
 
+  const songManifest = await getSongManifest(config.useRestrictedSongs);
+
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
+    songManifest,
   });
 
   // Pre-register all audio preloads with our Sounds API, which will load
@@ -109,11 +117,8 @@ Dance.prototype.init = function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  if ((this.level.isProjectLevel || this.level.freePlay) && config.level.selectedSong) {
-    getStore().dispatch(setSong(config.level.selectedSong));
-  } else if (this.level.defaultSong) {
-    getStore().dispatch(setSong(this.level.defaultSong));
-  }
+  const selectedSong = getSelectedSong(songManifest, config);
+  getStore().dispatch(setSong(selectedSong));
 
   this.updateSongMetadata(getStore().getState().selectedSong);
 
@@ -131,6 +136,44 @@ Dance.prototype.init = function (config) {
     </Provider>
   ), document.getElementById(config.containerId));
 };
+
+function getSelectedSong(songManifest, config) {
+  // The selectedSong and defaultSong might not be present in the songManifest
+  // in development mode, so just select the first song in the list instead.
+  const songs = songManifest.map(song => song.id);
+  const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
+  if ((isProjectLevel || freePlay) && selectedSong && songs.includes(selectedSong)) {
+    return selectedSong;
+  } else if (defaultSong && songs.includes(defaultSong)) {
+    return defaultSong;
+  } else if (songManifest[0]) {
+    return songManifest[0].id;
+  }
+}
+
+async function getSongManifest(useRestrictedSongs) {
+  const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
+  const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
+    .then(response => response.json());
+  const promises = [songManifestPromise];
+
+  // We must obtain signed cookies before accessing restricted content.
+  if (useRestrictedSongs) {
+    const signedCookiesPromise = fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+    promises.push(signedCookiesPromise);
+  }
+
+  const result = await Promise.all(promises);
+  const songManifest = result[0].songs;
+
+  const songPathPrefix = useRestrictedSongs ?
+    '/restricted/' : 'https://curriculum.code.org/media/uploads/';
+
+  return songManifest.map(song => ({
+    ...song,
+    url: `${songPathPrefix}${song.url}.mp3`,
+  }));
+}
 
 Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
@@ -220,18 +263,29 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
+  const recordReplayLog = this.shouldShowSharing();
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
-    recordReplayLog: this.shouldShowSharing(),
+    recordReplayLog,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
-      const spriteConfig = new Function('World', this.level.customHelperLibrary);
-      this.nativeAPI.init(spriteConfig);
       this.danceReadyPromiseResolve();
+      // Log this so we can learn about how long it is taking for DanceParty to
+      // load of all of its assets in the wild (will use the timeSinceLoad attribute)
+      logToCloud.addPageAction(logToCloud.PageAction.DancePartyOnInit, {
+        share: this.share
+      }, 1 / 20);
     },
+    spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
   });
+  /** Expose for testing **/
+  window.__DanceTestInterface = this.nativeAPI.getTestInterface();
+
+  if (recordReplayLog) {
+    getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
+  }
 };
 
 /**
@@ -256,12 +310,14 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
+  const danceMessage = message ? danceMsg[message]() : '';
+
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
-    this.message = message;
+    this.message = danceMessage;
   } else if (result === false) {
     this.testResults = TestResults.APP_SPECIFIC_FAIL;
-    this.message = message;
+    this.message = danceMessage;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -308,6 +364,9 @@ Dance.prototype.onReportComplete = function (response) {
  */
 Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
+
+  //Log song count in Dance Lab
+  trackEvent('HoC_Song', 'Play', getStore().getState().selectedSong);
 
   this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
@@ -388,6 +447,15 @@ Dance.prototype.initInterpreter = function () {
     setTint: (spriteIndex, val) => {
       nativeAPI.setTint(sprites[spriteIndex], val);
     },
+    setTintEach: (group, val) => {
+      nativeAPI.setTintEach(group, val);
+    },
+    setVisible: (spriteIndex, val) => {
+      nativeAPI.setVisible(sprites[spriteIndex], val);
+    },
+    setVisibleEach: (group, val) => {
+      nativeAPI.setVisibleEach(group, val);
+    },
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);
     },
@@ -435,7 +503,7 @@ Dance.prototype.initInterpreter = function () {
     },
   };
 
-  let code = require('!!raw-loader!./p5.dance.interpreted');
+  let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
   code += this.studioApp_.getCode();
 
   const events = {

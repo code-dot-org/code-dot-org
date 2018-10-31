@@ -47,7 +47,10 @@
   .span12
     %h3= t('signin.try_heading')
 .row
-  = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_HERO_NAME, showState: false }
+  - if ['mc', 'dance'].include? DCDO.get('hoc_launch', nil)
+    = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_AQUATIC_NAME, showState: false }
+  - else
+    = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_HERO_NAME, showState: false }
   = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: false }
   = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
   = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }

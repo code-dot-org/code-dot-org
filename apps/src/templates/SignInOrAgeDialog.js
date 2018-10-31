@@ -81,6 +81,7 @@ class SignInOrAgeDialog extends Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
+    noSignIn: PropTypes.bool,
   };
 
   onClickAgeOk = () => {
@@ -117,6 +118,23 @@ class SignInOrAgeDialog extends Component {
       return null;
     }
 
+    const provideAge = (
+      <div style={styles.middleCell}>
+        {i18n.provideAge()}
+        <div style={styles.age}>
+          <AgeDropdown
+            style={styles.dropdown}
+            ref={element => this.ageDropdown = element}
+          />
+          <Button
+            onClick={this.onClickAgeOk}
+            text={i18n.ok()}
+            color={Button.ButtonColor.gray}
+          />
+        </div>
+      </div>
+    );
+
     if (this.state.tooYoung) {
       return (
         <BaseDialog
@@ -151,40 +169,35 @@ class SignInOrAgeDialog extends Component {
       >
         <div style={styles.container}>
           <div style={styles.heading}>
-            {i18n.signinOrAge()}
+            {this.props.noSignIn ? i18n.signinDanceParty() : i18n.signinOrAge()}
           </div>
-          <div style={styles.middle}>
-            <div style={styles.middleCell}>
-              {i18n.signinForProgress()}
-              <div style={styles.button}>
-                <Button
-                  href={`/users/sign_in?user_return_to=${location.pathname}`}
-                  text={i18n.signinCodeOrg()}
-                  color={Button.ButtonColor.gray}
-                />
+          <div>
+            {this.props.noSignIn ?
+              <div style={styles.middle}>
+                {provideAge}
+              </div> :
+              <div style={styles.middle}>
+                <div style={styles.middleCell}>
+                  {i18n.signinForProgress()}
+                  <div style={styles.button}>
+                    <Button
+                      href={`/users/sign_in?user_return_to=${location.pathname}`}
+                      text={i18n.signinCodeOrg()}
+                      color={Button.ButtonColor.gray}
+                    />
+                  </div>
+                </div>
+                <div style={styles.center}>
+                  <div style={styles.centerLine}/>
+                  <div style={styles.centerText}>
+                    {i18n.or()}
+                  </div>
+                  <div style={styles.centerLine}/>
+                </div>
+                {provideAge}
               </div>
-            </div>
-            <div style={styles.center}>
-              <div style={styles.centerLine}/>
-              <div style={styles.centerText}>
-                {i18n.or()}
-              </div>
-              <div style={styles.centerLine}/>
-            </div>
-            <div style={styles.middleCell}>
-              {i18n.provideAge()}
-              <div style={styles.age}>
-                <AgeDropdown
-                  style={styles.dropdown}
-                  ref={element => this.ageDropdown = element}
-                />
-                <Button
-                  onClick={this.onClickAgeOk}
-                  text={i18n.ok()}
-                  color={Button.ButtonColor.gray}
-                />
-              </div>
-            </div>
+            }
+
           </div>
           <div>
             <a href="https://code.org/privacy">{i18n.privacyPolicy()}</a>

@@ -3622,11 +3622,25 @@ en:
           * Properties for two or more dancers must change.
 
           *This level ends after 8 measures.*
+      Dance_Party_11.5_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Just be creative!
+
+          *This level ends after 8 measures.*
       Dance_Party_11_authored_hint:
         validation: |-
           **How do I pass this level?**
 
           * Just be creative!
+
+          *This level ends after 8 measures.*
+      Dance_Party_11b_authored_hint:
+        validation: |-
+          **How do I pass this level?**
+
+          * Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.
 
           *This level ends after 8 measures.*
       Dance_Party_2_authored_hint:
