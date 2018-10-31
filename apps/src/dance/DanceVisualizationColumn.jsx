@@ -27,7 +27,7 @@ const SongSelector = Radium(class extends React.Component {
     selectedSong: PropTypes.string.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool.isRequired
+    is13Plus: PropTypes.bool
   };
 
   state = {
@@ -95,7 +95,7 @@ class DanceVisualizationColumn extends React.Component {
     isShareView: PropTypes.bool.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool.isRequired
+    is13Plus: PropTypes.bool
   };
 
   render() {
