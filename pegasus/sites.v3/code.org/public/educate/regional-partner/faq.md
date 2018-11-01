@@ -14,7 +14,7 @@ Still have questions? See below for answers to commonly asked questions or email
 - [My region is already served by another organization, can we still apply to be a Regional Partner?](#map)
 - [Where do you still need Regional Partners?](#need)
 - [Do you have an example job description for the Regional Partner Program Manager?](#pm)
-- [Where can we find more information about Code.org's K-12 curricula?](#progs)
+- [Where can we find more information about Code.org's K-12 curricula and facilitator development program?](#progs)
 - [What would our implementation timeline look like as a Regional Partner?](#imp)
 - [If we are selected as the Code.org Regional Partner in our region, can we publish a press release?](#press)
 - [If we become a Regional Partner can we run other CS education workshops in addition to the Code.org programs?](#cs)
@@ -26,7 +26,8 @@ Still have questions? See below for answers to commonly asked questions or email
 
 - [Does my organization need to provide facilitators for the programs?](#facilitators)
 - [Can I recruit middle & high school teachers from local districts to become a part of the 2019-20 professional learning programs in my area?](#recruit)
-
+- [Can I recruit elementary school teachers?](#k5)
+- [What is counselor/administrator professional development?](#ca)
 
 
 <br/>
@@ -47,14 +48,19 @@ ________________
 <br/>
 <br/>
 
-### **Where do you still need Regional Partners?**
+### **Where do you still need Regional Partners??**
 
 We are particularly looking for new Regional Partners in:
 
-- Arizona
-- Montana
-- North Dakota
-- Wyoming
+- Alaska
+- Central East Florida
+- Connecticut
+- District of Columbia
+- Florida Panhandle
+- Louisiana
+- North California (Humboldt or Shasta County preferred)
+- Oregon
+- Vermont
 
 
 [**Back to the top**](#top)
@@ -66,7 +72,7 @@ ________________
 
 ### **Do you have an example job description for the Regional Partner Program Manager?**
 
-See <a href="https://docs.google.com/document/d/1zwP4eFbaqzPpTH7IhMBXbR73h8yODIJKJ5D8noNNP-s/edithttps://drive.google.com/open?id=1slXdNqoMhBfIvD1oomxT1vX5_Hu8WpvnLmJhW9dn0sw" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require at least 0.65 of an FTE’s time - this can be shared across one or more staff members of your organization.
+See <a href="https://docs.google.com/document/d/1zwP4eFbaqzPpTH7IhMBXbR73h8yODIJKJ5D8noNNP-s/edit" target=_blank>this document</a> for an example Regional Partner program manager job description. This position will require at least 0.65 of an FTE’s time - this can be shared across one or more staff members of your organization.
 
 [**Back to the top**](#top)
 <br/>
@@ -76,12 +82,12 @@ ________________
 <br/>
 <br/>
 
-### **Where can we find more information about Code.org's K-12 curricula?**
+### **Where can we find more information about Code.org's K-12 curricula and facilitator development program?**
 
 - CS Fundamentals (K-5) [curriculum](https://code.org/educate/curriculum/elementary-school)
 - CS Discoveries (6-10) [curriculum](https://code.org/educate/csd)
 - CS Principles (9-12) [curriculum](https://code.org/educate/csp)
-
+- Facilitator Development Program [Overview](http://bit.ly/facilitatorprogram)
 
 
 
@@ -95,7 +101,7 @@ ________________
 
 ### **What would our implementation timeline look like as a Regional Partner?**
 
-See implementation timeline [here](https://drive.google.com/open?id=1DhIYbDnA6tZDGyk-hAs0SPjZkTyeV0o3WOb6D8rx_Tw).
+See implementation timeline [here](http://bit.ly/implementationtimeline18).
 
 
 
@@ -181,7 +187,7 @@ ______________________________
 
 ### **Can I recruit elementary school teachers?**
 
-Yes, Regional Partners can begin running CS Fundamentals workshops in Fall 2019 for K-5 teachers.
+Yes, Regional Partners can begin running CS Fundamentals workshops in Fall 2018 for K-5 teachers.
 
 [**Back to the top**](#top)
 <br/>
@@ -190,5 +196,12 @@ ______________________________
 <br/>
 <br/>
 
+### **What is counselor/administrator professional development?**
 
+Code.org has computer science workshops designed for Counselors and Administrators to provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. <a href="https://docs.google.com/document/d/1cRCVJSqDT3VLA5u17osE914WYTtIijxyKx5Z_uSYe3Y/edit?usp=sharing" target=_blank>Click here</a> for an overview of this professional development session.
 
+[**Back to the top**](#top)
+<br/>
+
+___________________
+<br/>
