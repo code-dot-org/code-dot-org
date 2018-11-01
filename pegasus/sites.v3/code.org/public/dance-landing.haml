@@ -10,7 +10,6 @@
 
 .starwars-container
   .img-container
-    -# %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
   %h1.starwars-heading= I18n.t(:starwars_subtitle)
 
   .col-25.starwars-tutorial.starwars-js-tutorial
@@ -26,8 +25,8 @@
     .tutorial-box
       %h2.sw-h2= I18n.t(:dance_try_a_second_hour_title)
       .sw-tutorial-info
-        %p.sw-tutorial-description= I18n.t(:dance_try_a_second_hour_description)
-        %p.sw-tutorial-specs= I18n.t(:dance_try_a_second_hour_specs)
+        %p.sw-tutorial-description Try Another Hour
+        %p.sw-tutorial-specs= I18n.t(:dance_try_a_second_hour_blocks_specs)
       %a{:href => '/api/hour/begin/starwarsblocks', :target=>'_self'}
         %button.sw-try-button= I18n.t(:try_now)
 
