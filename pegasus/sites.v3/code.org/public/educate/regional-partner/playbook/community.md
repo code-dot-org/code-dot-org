@@ -10,6 +10,7 @@ nav: regional_partner_playbook_nav
 As a Code.org Partner, you’ve agreed to:
 
 - Be the regional hub of a nationwide CS education movement
+- Plan and host an event for your teachers at TeacherCon in Year 1 of the partnership ([details](#teachercon))
 - Organize at least 4 community meetups per year ([details](#comm))
 - Host a computer science fair in Year 2 of the partnership ([details](#csfair))
 
@@ -23,12 +24,16 @@ As a Code.org Partner, you’ve agreed to:
 The following are a list of resources and ideas you can use to build your local community. Feel free to share more community ideas in the Google+ community!
 
 - Start a virtual community using Facebook, LinkedIn, Google+, Edmodo, etc
+- Have classrooms participate in the [Congressional App Challenge](http://www.congressionalappchallenge.us/compete-2016/)
 - Create a regional competition alongside the [Hour of Code](https://hourofcode.com/us) in December
 - Plan monthly school visits to support the teachers in your programs
 - Join other tech meetups in your area. Check out [Meetup](http://www.meetup.com/) to locate Tech or Education events near you!
 - Go to a local [Computer Science Teacher Association (CSTA)](https://csta.acm.org/) chapter meeting
 - Have an open house for parents and other community members to participate in an Hour of Code and find out more about computer science learning opportunities
 
+<a name="teachercon"></a>
+## TeacherCon Community Event
+See <a href="https://docs.google.com/document/d/1EZW13Z4LU60emIEsoygIo5y4eqqf_QzoaiiukOTGhLU/edit" target=_blank>these guidelines</a> for planning a successful event at TeacherCon 2018!
 
 <a name="comm"></a>
 ## Community Events for Teachers
