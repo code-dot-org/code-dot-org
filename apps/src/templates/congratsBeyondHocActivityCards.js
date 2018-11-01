@@ -107,11 +107,11 @@ const MinecraftMarketing = {
 };
 
 const DancePartyFollowUp = {
-  title: "Dance After Party",
-  description: "Keep grooving and programming with a follow up Dance Party tutorial.",
+  title: i18n.dancePartyTitle(),
+  description: i18n.dancePartyDesc(),
   link: "/s/dance-extras",
   image: "dance-party",
-  buttonText: "Start",
+  buttonText: i18n.dancePartyButton(),
 };
 
 export const cardSets = {
