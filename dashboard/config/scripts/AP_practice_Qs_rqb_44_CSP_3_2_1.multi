@@ -1,0 +1,24 @@
+name 'AP_practice_Qs_rqb_44_CSP_3_2_1'
+wrong 'Storage, processing, or curation often present significant challenge when processing large datasets.'
+wrong 'Data scientists typically combine multiple data sources as more can be learned when each data source is analyzed independently.
+'
+wrong 'Information cleansing and classification are often employed in the processing of data by which patterns can emerge.'
+right 'Metadata is only useful for datasets that are small enough to be analyzed by hand, so it is often not considered in modern data analysis.'
+markdown <<MARKDOWN
+Which of the following statements about data analysis and processing is NOT true given modern computing technology?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.2.1** and Essential Knowledge statements: **3.2.1I**
+<hr>
+ (A) This option is incorrect. Many times all of these are an issue in big data analysis.  One of these are almost certainly going to present as a problem in a large data analysis problem.
+
+<hr>
+ (B) This option is incorrect. Data scientists often combine data sets to find new insights that could not be found in the individual datasets.
+
+<hr>
+ (C) This option is incorrect. Both processes (cleaning and classification) are valid techniques employed by data scientists.
+
+<hr>
+ (D) This option is correct, because the statement is incorrect. Metadata has lots of useful information about data, and is often considered in analysis of datasets of all sizes.
+
+MARKDOWN

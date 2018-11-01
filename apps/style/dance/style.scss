@@ -5,12 +5,6 @@ $root: '/blockly/media/dance/'; //TODO: Parameterize for asset pipeline
 @import 'mixins';
 @import '../VisualizationOverlay.scss';
 
-.legacy-share-view {
-  #runButton, #resetButton {
-    display:none !important;
-  }
-}
-
 #divDance {
   background: url("#{$root}spinner-big.gif") no-repeat center center;
 }
