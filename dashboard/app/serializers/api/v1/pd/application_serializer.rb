@@ -110,6 +110,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
+    count ||= 0
+    total ||= 0
     "#{(100.0 * count / total).round(2)}%"
   end
 
