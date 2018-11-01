@@ -2190,20 +2190,67 @@ it-IT:
     di Google":'
   hero_name: 'Minecraft: Il viaggio dell''eroe'
   applab-intro_name: Introduzione a Sviluppo App
-  creativity: creatività
-  creativity_create: Crea
-  creativity_hoc_coming: L'Ora del Codice è in arrivo…
-  creativity_what_will_you_create: Tu cosa creerai?
-  creativity_homepage: Apri le ali della tua immaginazione e dai vita all'innovazione.
-    Inizia con un'Ora del Codice e il tuo personale tocco di creatività, qualunque
-    esso sia. Guarda il nostro video.
-  creativity_hoc_about: 'Quest''anno il tema dell''Ora del Codice è la creatività. '
-  creativity_social_media: Quest'anno il tema dell'Ora del Codice è la creatività.
-    Tu cosa creerai?
-  creativity_social_media_2: Quest'anno il tema dell'Ora del Codice è la creatività.
-    Tu cosa creerai?
-  creativity_courses: Progredisci con i corsi di Code.org
-  creativity_courses_link: Progredisci con i <a href="https://studio.code.org/courses">corsi
-    di Code.org</a>
   account_sign_up_email_opt_in: Possiamo inviarti email sulle novità dei nostri corsi
     o su altre notizie legate all'informatica?
+  hoc2018_creativity: creatività
+  hoc2018_creativity_create: Crea
+  hoc2018_creativity_hoc_coming: L'ora della programmazione informatica sta arrivando…
+  hoc2018_creativity_what_will_you_create: Tu cosa creerai?
+  hoc2018_creativity_homepage: Apri l'ali dell'immaginazione e metti alla luce l'innovazione.
+    Comincia con L'ora della programmazione informatica realizzare la propria creatività
+    qualunque sia. Guarda il nostro video.
+  hoc2018_creativity_hoc_about: 'Questo anno L''ora della programmazione informatica
+    è tutto sulla creatività. '
+  hoc2018_creativity_social_media: 'Questo anno L''ora della programmazione informatica
+    #HourOfCode è tutto sulla creatività. Io ci sono? E tu?'
+  hoc2018_creativity_social_media_2: Questo anno L'ora della programmazione informatica#HourOfCode
+    è tutto sulla creatività. E tu, che cosa vuoi creare?
+  hoc2018_creativity_courses: Cerca con i corsi L'ora della programmazione informatica
+  hoc2018_creativity_courses_link: Cerca sul sito <a href="https://studio.code.org/courses">L'ora
+    della programmazione informatica corsi</a>
+  hoc2018_mc_page_title: I corsi di Minecraft per l'Ora del Codice
+  hoc2018_mc_details: Molte lingue | Browser e tablet moderni | Da 7 anni in su
+  hoc2018_mc_aquatic_description: Minecraft è tornato per l'Ora del Codice con una
+    nuovissima attività! Viaggia attraverso Minecraft grazie al coding.
+  hoc2018_mc_hero_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
+    attività! Viaggia attraverso Minecraft grazie al coding.
+  hoc2018_mc_designer_title: Programma il tuo Minecraft
+  hoc2018_mc_designer_description: Programma il comportamento degli animali e delle
+    altre creature di Minecraft nella tua versione di questo gioco.
+  hoc2018_mc_adventurer_title: Un'avventura con Minecraft
+  hoc2018_mc_adventurer_description: Usa il codice per far vivere un'avventura ad
+    Alex o Steve.
+  hoc2018_mc_start: Inizia
+  hoc2018_mc_no_internet: Non hai Internet?
+  hoc2018_mc_download_adventurer: Scarica la versione da usare <i>in locale</i> di
+    "Un avventura con Minecraft".
+  hoc2018_mc_educators_box2_button: Scarica
+  hoc2018_mc_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
+  hoc2018_mc_videos_more: Ulteriori<a href='%{inspiring_videos_playlist}'> video stimolanti</a>
+    con modelli di ruolo e celebrità e <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro"
+    target="_blank">un video in italiano di Programma il Futuro</a>
+  hoc2018_mc_careers_more: Ulteriori <a href='%{careers_url}' target='_blank'> video
+    stimolanti</a> con professionisti in settori tecnologici
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_3min: 3 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_steph_curry: L'Ora del Codice con Steph Curry
+  hoc2018_mc_video_title_sports: Forza! Chiunque può imparare...
+  hoc2018_mc_video_title_cs_is_everything: L'informatica sta cambiando ogni cosa
+  hoc2018_mc_video_title_inspire_girl: Convinci una ragazza a partecipare
+  hoc2018_mc_video_title_cs_intro: Introduzione all'Informatica
+  hoc2018_mc_video_title_schools_dont_teach: Cosa NON Insegnano nella maggior parte
+    delle Scuole
+  hoc2018_mc_video_title_obama: Il Presidente Obama a proposito dell'informatica
+  hoc2018_mc_video_title_hoc_is_here: L'Ora del Codice è Qui - Chiunque Può Imparare
+  hoc2018_mc_video_title_anybody_can_learn: Chiunque Può Imparare
+  hoc2018_mc_video_title_my_name_is_aracely: Mi chiamo Aracely
+  hoc2018_mc_homepage_what_create: Tu cosa creerai?
+  hoc2018_mc_homepage_join_us: Unisciti a noi
+  hoc2018_mc_homepage_try_it: Prova
+  hoc2018_mc_back_journey: Minecraft è tornato per l'Ora del Codice con una nuovissima
+    attività! Viaggia attraverso Minecraft grazie al coding.
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Continua ad imparare con Minecraft.
+  hoc2018_mc_go_to_mc_education: Via su Minecraft Education

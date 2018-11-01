@@ -78,6 +78,8 @@ en:
         rocket-height|Number|Number: altura-foguete|Número|Número
     evaluation_multi:
       CSP PD Example Question 1:
+        The encoding numbers unit: Unidade codificação de números
+        The sending binary messages unit: Unidade enviando mensagens binárias
         Which unit will you teach first: Qual unidade você irá ensinar primeiro
       CSP PD Example Question 2:
         How will you teach students?: Como você irá ensinar os estudantes?
@@ -89,13 +91,17 @@ en:
         I will make them write: Eu vou fazê-los escrever
       TeacherCon Eval Q1:
         '1.10: Routing and Redundancy': '1.10: Roteamento e Redundância'
+        '1.11: Packets and Making a Reliable Internet': '1.11: Pacotes e Fazendo uma Internet Confiável'
         '1.4: Number Systems - Circle Triangle Square': '1.4: Sistemas Numéricos - Círculo Triângulo Quadrado'
         '1.6: Sending Numbers': '1.6: Enviando Números'
         '1.9: Internet Addressing (Battleship)': '1.9: Endereçamento de Internet (Navio de guerra)'
+        '2.10: Good and Bad Data Visualization': '2.10: Visualização de Dados Bons e Ruins'
+        '2.2: Text Compression': '2.2: Compressão de Texto'
         '2.3: Black and White Pixelation': '2.3: Pixelização Preta e Branca'
         What lesson are you planning and teaching at TeacherCon?: Que lições você está planejando e ensinando na TeacherCon?
       TeacherCon Eval Q2:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       TeacherCon Eval Q3:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -104,18 +110,35 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       TeacherCon Eval Q5:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      TeacherCon Eval Q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       TeacherCon Eval Q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       TeacherCon Evaluation Q4:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U1 Eval q10:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U1 Eval q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U1 Eval q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U1 Eval q7:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U1 Eval q8:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -124,43 +147,75 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U1 Eval q9:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U1 eval q1:
         Brand new!: Novo em folha!
+        How experienced would you say you are with computer science?: Quão experiente você diria que você é com ciência da computação?
+        Somewhat Experienced: Um pouco experiente
         Very Experienced: Muito Experiente
       U1 eval q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Você está confortável com os conceitos subjacentes sobre como sistemas numéricos não-decimais funcionam?
         I have no idea what you're talking about!: Eu não faço ideia do que você está falando!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: Eu sei como converter entre sistemas numéricos, mas eu não sei sobre as regras subjacentes sobre como eles funcionam
         Yes!: Sim!
       U1 eval q3:
+        Are you comfortable with HTML or Markdown?: Você é confortável com HTML ou Markdown?
+        Nope!: Não!
         Yes!: Sim!
       U1 eval q4:
         Do you know how IP addresses work?: Você sabe como endereços de IP funcionam?
+        Nope!: Não!
         Yes!: Sim!
       U1 eval q5:
+        Do you know how messages are broken down and routed on the internet?: Você sabe como mensagens são quebradas e roteadas na internet?
+        Nope!: Não!
         Yes!: Sim!
       U1 eval q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Você já olhou o tráfego no seu navegador web quando você faz uma requisição para um website?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q1:
         Brand new!: Novo em folha!
+        How experienced would you say you are with computer science?: Quão experiente você diria que você é com ciência da computação?
+        Somewhat Experienced: Um pouco experiente
         Very Experienced: Muito Experiente
       U1 evaluation q10:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U1 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U1 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U1 evaluation q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Você está confortável com os conceitos subjacentes sobre como sistemas numéricos não-decimais funcionam?
         I have no idea what you're talking about!: Eu não faço ideia do que você está falando!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: Eu sei como converter entre sistemas numéricos, mas eu não sei sobre as regras subjacentes sobre como eles funcionam
         Yes!: Sim!
       U1 evaluation q3:
+        Are you comfortable with HTML or Markdown?: Você é confortável com HTML ou Markdown?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q4:
         Do you know how IP addresses work?: Você sabe como endereços de IP funcionam?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q5:
+        Do you know how messages are broken down and routed on the internet?: Você sabe como mensagens são quebradas e roteadas na internet?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Você já olhou o tráfego no seu navegador web quando você faz uma requisição para um website?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q7:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U1 evaluation q8:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -169,10 +224,20 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U1 evaluation q9:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U2 evaluation q0:
+        Creating visualizations in order to communicate about a topic: Criação de visualizações para comunicar sobre um tópico
+        Digitally representing images: Representando imagens digitalmente
+        In general, which topic sounds most like something you do not already have experience with?: De forma geral, qual tópico mais soa como algo que você ainda não tem experiência?
+        Interpreting visual data to better understand a topic: Interpretando dados visuais para entender melhor um tópico
+        The pros and cons of different file types, as well at the types of compression found in common applications: Os prós e contras de diferentes tipos de arquivo, bem como os tipos de compressão encontrados em aplicações comuns
+        Understanding why different file types are often different sizes and looking at the units of measure common to file types: Entendendo porque tipos diferentes de arquivos frequentemente têm tamanhos diferentes e olhando para as unidades de medidas comuns para tipos de arquivos
       U2 evaluation q1:
         Very comfortable!: Muito confortável!
       U2 evaluation q10:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U2 evaluation q11:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -181,9 +246,18 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U2 evaluation q12:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U2 evaluation q13:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U2 evaluation q14:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U2 evaluation q15:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U2 evaluation q4:
@@ -192,14 +266,24 @@ en:
         Do you have experience using Google Trends?: Você tem experiência usando o Google Trends?
       U3 evaluation q10:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U3 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U3 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U3 evaluation q2:
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
+      U3 evaluation q6:
+        In general, which topic sounds most like something you do not already have experience with?: De forma geral, qual tópico mais soa como algo que você ainda não tem experiência?
       U3 evaluation q7:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U3 evaluation q8:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -208,11 +292,19 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U3 evaluation q9:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U4 evaluation q10:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U4 evaluation q11:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U4 evaluation q6:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U4 evaluation q7:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -221,8 +313,12 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U4 evaluation q8:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U4 evaluation q9:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
       U5 evaluation q1:
         'No': 'Não'
         'Yes': 'Sim'
@@ -237,9 +333,18 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U5 evaluation q4:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U5 evaluation q5:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U5 evaluation q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U5 evaluation q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
     external:
@@ -2098,6 +2203,33 @@ en:
     '35': '35'
     'false': 'falso'
     'true': 'verdadeiro'
+  cspu5_assess2_pseudoCode:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_pseudoCode_2018:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_pseudoCode_exam_prep:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_setAlarm:
+    "(day == “Saturday”) && (day == “Sunday”)": "(dia == ”Sábado”) && (dia == ”Domingo”)"
+    "(day == “Saturday”) || (day == “Sunday”)": "(dia == ”Sábado”) || (dia == ”Domingo”)"
+    day != “Monday”: dia != "Segunda-feira"
+    day == “Saturday”: dia == "Sábado"
+    day == “Sunday”: dia == "Domingo"
+  cspu5_assess2_setAlarm_2018:
+    (day == "Saturday") && (day == "Sunday"): (dia == "Sábado") && (dia == "Domingo")
+    (day == "Saturday") || (day == "Sunday"): (dia == "Sábado") || (dia == "Domingo")
+    day != "Monday": dia != "Segunda-feira"
+    day == "Saturday": dia == "Sábado"
+    day == "Sunday": dia == "Domingo"
+  cspu5_assess2_setAlarm_exam_prep:
+    (day == "Saturday") && (day == "Sunday"): (dia == "Sábado") && (dia == "Domingo")
+    (day == "Saturday") || (day == "Sunday"): (dia == "Sábado") || (dia == "Domingo")
+    day != "Monday": dia != "Segunda-feira"
+    day == "Saturday": dia == "Sábado"
+    day == "Sunday": dia == "Domingo"
   cspu5_assess2_weight:
     '125': '125'
     '200': '200'
@@ -2152,6 +2284,24 @@ en:
     '4': '4'
     '5': '5'
     '6': '6'
+  cspu5_assess3_array3:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+  cspu5_assess3_array3_2018:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+  cspu5_assess3_array3_exam_prep:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
   cspu5_assess3_array4:
     '0': '0'
     '1': '1'
@@ -2167,6 +2317,24 @@ en:
     '1': '1'
     '2': '2'
     '8': '8'
+  cspu5_assess3_array5:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+  cspu5_assess3_array5_2018:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+  cspu5_assess3_array5_exam_prep:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
   cspu5_assess3_counter:
     '0': '0'
     '1': '1'
@@ -2416,6 +2584,7 @@ en:
   pre-assessment survey q27:
     0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
     1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    N/A: N/A
     Other: Outros
   pre-assessment survey q28:
     '10': '10'
@@ -2424,14 +2593,19 @@ en:
     '8': '8'
     '9': '9'
     Other: Outros
+    What grade are you in?: Em que série você está?
   pre-assessment survey q29:
     Female: Feminino
+    'I identify my gender as:': 'Eu identifico meu gênero como:'
     Male: Masculino
     Other: Outros
     Prefer not to answer: Prefiro não responder
   pre-assessment survey q30:
+    American Indian or Alaska Native: Índio Americano ou Nativo do Alaska
     Asian: Asiático
     Black or African American: Negro ou Afro-americano
+    Hispanic or Latino/Latina: Hispânico ou Latino/Latina
+    Native Hawaiian or Other Pacific Islander: Nativo do Havaí ou de outra ilha do Pacífico
     Other: Outros
     Prefer not to answer: Prefiro não responder
     White: Branco
@@ -2483,17 +2657,28 @@ en:
     Multiple Choice - Stochastic Models: Múltipla escolha - Modelos estocásticos
     What does it mean for a model to be stochastic?: O que significa para um modelo ser estocástico?
   sciPD computer models 2:
+    Which of the following are common to both lab experiments and computational science experiments?: Quais das seguintes características são comuns tanto aos experimentos de laboratório quanto aos experimentos de ciência computacional?
     automation of experiments is easy: a automação dos experimentos é fácil
     changing physical properties like the gravitational constant: altera propriedades físicas, como a constante gravitacional
+    sweeping a set of variables: varre um conjunto de variáveis
+    the need for controlled experiments: a necessidade de experimentos controlados
   sciPD culture 1:
+    Multiple Choice - Getting Unstuck: Múltipla escolha - Desempacando
+    Which of the following was NOT suggested as a way to get unstuck?: Qual das seguintes opções NÃO foi sugerida como uma forma de desempacar?
+    looking at other similar pieces of code: olhar para outros trechos de código que sejam similares
+    meditating: meditar
+    reading through your code line by line: ler o código linha por linha
     taking a break: fazer uma pausa
   sciPD culture 2:
+    Multiple Choice - Role Of Teacher: Múltipla escolha - O papel do professor
+    What role for a teacher incorporating models and simulations into the classroom was proposed?: Qual papel foi proposto para um professor incorporar modelos e simulações na sala de aula?
     classroom manager: gerente de sala de aula
     expert in a computer language: expert em uma linguagem de computador
   sciPD framework 1:
     a human thought process: um processo de pensamento humano
     a process that computers use to think: um processos que os computadores usam para pensar
     a subfield of computer science: um subcampo da ciência da computação
+    a way of communicating with a computer: uma forma de se comunicar com um computador
   sciPD framework 2:
     algorithms: algoritmos
     analysis: análise
@@ -2503,6 +2688,10 @@ en:
     too expensive to study in the real world: muito caros para estudar no mundo real
     too time consuming to study in the real world: muito demorados para estudar no mundo real
   sciPD intro to CS 2:
+    What is computational science good for?: Para que a ciência computacional é boa?
+    'it complements lab and theoretical science ': 'ela complementa a ciência teórica e de laboratório '
+    it replaces traditional science labs: ela substitui os laboratórios de ciência tradicionais
+    it slows the process of discovery: ela retarda o processo de descoberta
     nothing at all: absolutamente nada
   test anonymous student survey educational:
     'No': 'Não'
@@ -2520,6 +2709,9 @@ en:
       4+5 > 9: 4+5 > 9
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Bools 2:
+      "(10 > 11) OR (7 <= 9)": "(10 > 11) OU (7 <= 9)"
+      "(10 > 11) or (7 <= 9)": "(10 > 11) Ou (7 <= 9)"
+      "(10 > 11) || (7 <= 9)": "(10 > 11) || (7 <= 9)"
       "/script_assets/msm/unit6/blockstomath2.png, 500": "/script_assets/msm/unit6/blockstomath2.png, 500"
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Bools 3:
@@ -2529,8 +2721,47 @@ en:
       "((5 < 10) AND (10 < 15))": "((5 < 10) E (10 < 15))"
       "((5 < 10) And (10 < 15))": "((5 < 10) e (10 < 15))"
       "((5 < 10) and (10 < 15))": "((5 < 10) e (10 < 15))"
+      "(5 < 10 < 15)": "(5 < 10 < 15)"
+      "(5 < 10) & (10 < 15)": "(5 < 10) & (10 < 15)"
+      "(5 < 10) && (10 < 15)": "(5 < 10) && (10 < 15)"
+      "(5 < 10) AND (10 < 15)": "(5 < 10) E (10 < 15)"
+      "(5 < 10) And (10 < 15)": "(5 < 10) e (10 < 15)"
+      "(5 < 10) and (10 < 15)": "(5 < 10) E (10 < 15)"
+      "/script_assets/msm/unit6/blockstomath3.png, 500": "/script_assets/msm/unit6/blockstomath3.png, 500"
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Bools 4:
+      "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))": "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))"
+      "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))": "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))"
+      "(((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))": "(((1 < X) E (X < 5)) OU ((8 < X) E (X < 10)))"
+      "(((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))": "(((1 < X) e (X < 5)) ou ((8 < X) e (X < 10)))"
+      "(((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))": "(((1 < X) e (X < 5)) ou ((8 < X) e (X < 10)))"
+      "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))": "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))"
+      "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))": "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))"
+      "(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))": "(((1 < x) E (x < 5)) OU ((8 < x) E (x < 10)))"
+      "(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))": "(((1 < x) e (x < 5)) ou ((8 < x) e (x < 10)))"
+      "(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))": "(((1 < x) e (x < 5)) ou ((8 < x) e (x < 10)))"
+      "((1 < X) & (X < 5) || (8 < X) & (X < 10))": "((1 < X) & (X < 5) || (8 < X) & (X < 10))"
+      "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))": "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))"
+      "((1 < X) && (X < 5) || (8 < X) && (X < 10))": "((1 < X) && (X < 5) || (8 < X) && (X < 10))"
+      "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))": "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))"
+      "((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))": "((1 < X) E (X < 5) OU (8 < X) E (X < 10))"
+      "((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))": "((1 < X) E (X < 5)) OU ((8 < X) E (X < 10))"
+      "((1 < X) And (X < 5) Or (8 < X) And (X < 10))": "((1 < X) e (X < 5) ou (8 < X) e (X < 10))"
+      "((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))": "((1 < X) e (X < 5)) ou ((8 < X) e (X < 10))"
+      "((1 < X) and (X < 5) or (8 < X) and (X < 10))": "((1 < X) e (X < 5) ou (8 < X) e (X < 10))"
+      "((1 < X) and (X < 5)) or ((8 < X) and (X < 10))": "((1 < X) e (X < 5)) ou ((8 < X) e (X < 10))"
+      "((1 < x) & (x < 5) || (8 < x) & (x < 10))": "((1 < x) & (x < 5) || (8 < x) & (x < 10))"
+      "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))": "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))"
+      "((1 < x) && (x < 5) || (8 < x) && (x < 10))": "((1 < x) && (x < 5) || (8 < x) && (x < 10))"
+      "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))": "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))"
+      "((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))": "((1 < x) E (x < 5) OU (8 < x) E (x < 10))"
+      "((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "((1 < x) And (x < 5) Or (8 < x) And (x < 10))": "((1 < x) e (x < 5) ou (8 < x) e (x < 10))"
+      "((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "((1 < x) and (x < 5) or (8 < x) and (x < 10))": "((1 < x) e (x < 5) ou (8 < x) e (x < 10))"
+      "((1 < x) and (x < 5)) or ((8 < x) and (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "(1 < X < 5) OR (8 < X < 10)": "(1 < X < 5) OU (8 < X < 10)"
+      "(1 < X < 5) Or (8 < X < 10)": "(1 < X < 5) ou (8 < X < 10)"
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Math 1:
       Convert Blocks to Math: Converta Blocos em Matemática
@@ -2545,11 +2776,26 @@ en:
     Blocks to Math 6:
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Math 7:
+      "(10 / (2 * (3 + 1))": "(10 / (2 * (3 + 1))"
+      10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
       Convert Blocks to Math: Converta Blocos em Matemática
     'CSP U4L04 Assessment 2 ':
+      Enter answer here: Insira a resposta aqui
       Enter prompt here: Digite a mensagem aqui
       Enter title here: Insira o título aqui
     PS U3 Q1-7:
+      Enter answer here: Insira a resposta aqui
       Enter prompt here: Digite a mensagem aqui
+    U1L13 - Assess Text Compression reverse process:
+      Act as the computer!: Aja como o computador!
+    U1L13 - Assess Text Compression reverse process_2018:
+      Act as the computer!: Aja como o computador!
     U2L07 Assessment4:
       '43': '43'
+      Question 4: Questão 4
+    text match test:
+      "(9-3)+(4*7)": "(9-3)+(4*7)"
+      "(9-3)+4*7": "(9-3)+4*7"
+      9-3+4: null
+      Mathematical Expression Assessment: Avaliação de Expressão Matemática
+      Type out the arithmetic expression that this circle of evaluation evaluates to: Insira a expressão aritmética avaliada por este círculo de avaliação

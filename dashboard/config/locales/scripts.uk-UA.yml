@@ -1657,7 +1657,21 @@ uk:
           stages:
             Artist:
               name: Художник
+        dance:
+          stages:
+            Dance Party:
+              name: Танцювальна вечірка
         frozen-2018-test-b:
           stages:
             Artist:
               name: Художник
+        aquatic:
+          title: 'Minecraft: Водна подорож'
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Танцювальна вечірка
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Танцювальна вечірка
