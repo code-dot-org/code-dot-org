@@ -76,6 +76,9 @@ class ProjectsController < ApplicationController
     minecraft_hero: {
       name: 'New Minecraft Hero Project'
     },
+    minecraft_aquatic: {
+      name: 'New Minecraft Aquatic Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true
@@ -94,6 +97,7 @@ class ProjectsController < ApplicationController
     dance: {
       name: 'New Dance Lab Project',
       levelbuilder_required: true,
+      default_image_url: '',
     },
     makerlab: {
       name: 'New Maker Lab Project',

@@ -1,0 +1,24 @@
+name 'AP_practice_Qs_rqb_95_CSP_5_2_1'
+right 'Redundancy'
+wrong 'Bandwidth'
+wrong 'Latency'
+wrong 'Storage Size 
+'
+markdown <<MARKDOWN
+What is the advantage to using multiple CPUs (Computer processing units)?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **5.2.1** and Essential Knowledge statements: **5.2.1H**
+<hr>
+ (A) This option is correct. If one of the CPUs is down (not working) the other CPUs are used to accomplish the task. 
+
+<hr>
+ (B) This option is incorrect. Number of CPUs improve the speed of the computer by distributing the work over the CPUs. Number of CPUs does not affect the bandwidth. Bandwidth usually refers to the network capacity and depends on the routers used for network connectivity.
+
+<hr>
+ (C) This option is incorrect. Number of CPUs improve the speed of the computer by distributing the work over the CPUs. Number of CPUs does not affect the latency. Latency refers to the delay in data transfer and depends on the routers used for network connectivity.
+
+<hr>
+ (D) This option is incorrect. CPUs are used for processing information and not storing data. 
+
+MARKDOWN
