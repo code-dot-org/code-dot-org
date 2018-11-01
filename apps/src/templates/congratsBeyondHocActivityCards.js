@@ -106,10 +106,10 @@ const MinecraftMarketing = {
   buttonText: i18n.minecraftMarketingButton(),
 };
 
-const DanceParty = {
+const DancePartyFollowUp = {
   title: "Dance After Party",
   description: "Keep grooving and programming with a follow up Dance Party tutorial.",
-  link: pegasus('/dance'),
+  link: "/s/dance-extras",
   image: "dance-party",
   buttonText: "Start",
 };
@@ -187,12 +187,32 @@ export const cardSets = {
   ],
   'signedOutDefaultCards' : [
     CSFExpress,
-    DanceParty,
+    ApplabTutorial,
     CreateAccount
   ],
   'signedOutNonEnglishDefaultCards' : [
     CSFAccelerated,
     CourseCatalog,
+    CreateAccount
+  ],
+  'signedInEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFExpress,
+    AnotherHoC
+  ],
+  'signedInNonEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFAccelerated,
+    AnotherHoC
+  ],
+  'signedOutEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFExpress,
+    CreateAccount
+  ],
+  'signedOutNonEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFAccelerated,
     CreateAccount
   ],
 };
