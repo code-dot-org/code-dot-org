@@ -1,0 +1,82 @@
+.dance-container {
+  width: 100%;
+  padding-left: 5px;
+  position: relative;
+  background-color: black;
+}
+
+.dance-subheading {
+  float: right;
+}
+
+.dance-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.dance-heading {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 470px;
+}
+
+.dance-tutorial {
+  position: absolute;
+  height: 330px;
+  padding: 5px;
+  top: 70px;
+}
+
+.dance-js-tutorial {
+  right: 20px;
+}
+
+.dance-blocks-tutorial {
+  right: 270px;
+}
+
+.dance-container .tutorial-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  color:white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.dance-h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.dance-header2 {
+  padding: 10px;
+}
+
+.dance-disabled {
+  font-size: 18px;
+  height: 40px;
+  background-color: #c6cacd;
+  border-color: #c6cacd;
+}
+
+.dance-tutorial-info {
+  height: 100px;
+}
+
+.dance-tutorial-specs {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.dance-try-button {
+  font-size:18px;
+  height:40px;
+}
+
+.header-banner {
+  border-radius: 5px;
+  width: 100%
+}
