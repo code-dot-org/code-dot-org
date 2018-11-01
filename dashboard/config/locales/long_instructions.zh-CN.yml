@@ -2319,14 +2319,68 @@ zh-CN:
         * 在夏天类里创建一个规则来使用夏天的RGB颜色。
         * 将夏天类添加到HTML的夏天元素里。
         * 为autumn（秋天）类应用同样的步骤。
-      CSD U2 classes summer_2018: "<div style=\"float: right;\nheight: 250px; width:
-        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\r\n<details>\r\n<summary>**代码是如何起作用的？**</summary>\r\n为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。\r\n\r\n这个类需要在样式表中用下面的代码来创建。\r\n\r\n<pre>.winter
-        {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\nThis\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r\n\r\n将winter类加到一个`h5`元素的代码是`<h5
-        class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r\n</details>\r\n<details>\r\n<summary>**如何创建一个新的规则集（rule-set）？**</summary>\r\n你能按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。\r\n<pre>.winter
-        {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\n选择器和颜色的值会有所不同，但形式是一样的。\r\n\r\n<pre>.classname
-        {\r\n  property1: value1;\r\n  property2:\nvalue2;\r\n}</pre>\r\n</details>\r\n<details>\r\n<summary>**为什么选择器前面有个句点？**</summary>\r\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r\n</details>\r\n<details>\r\n<summary>**为什么网页开发人员需要用类？**</summary>\r\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r\n</details>\r\n</div>\r\n#
-        夏天和秋天的类\r\n\r\n*\n在样式表里，为\"summer\"（夏天）类创建一个新的规则集。\r\n*\n在夏天类里创建一个规则来使用夏天的RGB颜色。\r\n*\n将夏天类添加到HTML的夏天元素里。\r\n*
-        为autumn（秋天）类应用同样的步骤。\n"
+      CSD U2 classes summer_2018: |
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>**代码是如何起作用的？**</strong>
+        </summary>
+        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。
+
+        这个类需要在样式表中用下面的代码来创建。
+
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+
+        This
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。
+
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。
+        </details>
+        <details>
+        <summary>
+
+        <strong>**如何创建一个新的规则集（rule-set）？**</strong>
+
+        </summary>
+        你能按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+
+        选择器和颜色的值会有所不同，但形式是一样的。
+
+        <pre>.classname {
+          property1: value1;
+          property2:
+        value2;
+        }</pre>
+        </details>
+        <details>
+        <summary>
+
+        **为什么选择器前面有个句点？**
+
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        <strong>**为什么网页开发人员需要用类？**</strong>
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+
+        </details>
+        </div>
+
+        # 夏天和秋天的类
+
+        * 在样式表里，为"summer"（夏天）类创建一个新的规则集。
+        * 在夏天类里创建一个规则来使用夏天的RGB颜色。
+        * 将夏天类添加到HTML的夏天元素里。
+        * 为autumn（秋天）类应用同样的步骤。
       CSD U2 commenting: "# 注释\n<div style=\"float:\nright; height: 250px; width:
         40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>**什么是空白符?**\n</summary>\n空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。\n</details>\n<details>\n<summary>**什么是缩进？**</summary>\n缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：\n<pre>\n&lt;body&gt;\n&lt;p&gt;这个段落在\"body\"元素中。&lt;/p&gt;\n&lt;/body&gt;\n</pre>\n\n</details>\n<details>
         \ \n<summary> ** 什么是格式化？ ** </summary>  \n格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：\n<pre>
@@ -2400,11 +2454,12 @@ zh-CN:
         * 确保你的你的伙伴对图片的标签是如何起作用的达成共识。
         * 试着将图片挪到页面的顶上。
       CSD U2 layout style bgcolor_2018: |
-        <div style="float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
-        <summary>**代码如何起作用？**</summary>
+
+        <summary>
+        <strong>**代码如何起作用？**</strong>
+        </summary>
         这是让页面背景变成蓝色的代码：
 
         <pre>body
@@ -2418,28 +2473,35 @@ zh-CN:
          * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。
         </details>
         <details>
-        <summary>**我能在CSS中使用什么颜色？**</summary>
+        <summary>
+        <strong>**我能在CSS中使用什么颜色？**</strong>
+        </summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
         - CSS正确的颜色值</a>查看更多信息。
         </details>
         <details>
-        <summary>**`background-color`属性做了什么？**</summary>
+        <summary>
+        <strong>**`background-color`属性做了什么？**</strong></summary>
         `background-color`属性决定了一个元素的背景颜色。可以在<a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools
         - CSS background-color 属性</a>查看关于这个属性的更多信息。
         </details>
         <details>
-        <summary>**如果页面里的元素有着与body不同的背景颜色会怎样？**</summary>
+        <summary>
+        <strong>**如果页面里的元素有着与body不同的背景颜色会怎样？**</strong></summary>
         你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。
         </details>
         <details>
-        <summary>**什么是样式表？**</summary>
+        <summary>
+        <strong>**什么是样式表？**</strong>
+        </summary>
         样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。
         </details>
         <details>
-        <summary>**CSS是什么？**</summary>
+        <summary>
+        <strong>**CSS是什么？**</strong>
+        </summary>
         CSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。
-
 
         这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：
 
@@ -2450,6 +2512,7 @@ zh-CN:
         </pre>
 
         在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。
+
         </details>
         </div>
 
@@ -2463,64 +2526,48 @@ zh-CN:
         <details>
 
         <summary>
-
-        **`body`选择器做什么？**
-
+        <strong>**`body`选择器做什么？**</strong>
         </summary>
         由于网站的内容全都包含在`body` 标签中, body选择器给出网页上所有内容的样式。</details>
         <details>
         <summary>
-
-        **`color`属性做什么？**
-
+        <strong>**`color`属性做什么？**</strong>
         </summary>
         `color`属性决定文本的颜色。如果那里没有文本，那么看起来就像无事发生。了解更多在<a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>，中文教程请搜索菜鸟教程。
         </details>
         <details>
         <summary>
-
-        **`text-align`属性做什么？**
-
+        <strong>**`text-align`属性做什么？**</strong>
         </summary>
         `text-align`属性使文本左对齐，右对齐，或居中.了解更多在<a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>
-
-        **`text-decoration`属性做什么？**
-
+        <strong>**`text-decoration`属性做什么？**</strong>
         </summary>
         `text-decoration`属性会在文本的上面，下面，或中间划一道线.  了解更多在<a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>
-
-        **`font-family`属性做什么？**
-
+        <strong>**`font-family`属性做什么？**</strong>
         </summary>
         `font-family`属性改变文本的字体。这给出了对应使用字体的大致描述， 但在不同的浏览器中识别可能有差异。了解更多在<a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
         </details>
         <details>
         <summary>
-
-        **`font-size`属性做什么？**
-
+        <strong>**`font-size`属性做什么？**</strong>
         </summary>
         `font-size` 属性改变文本的大小。您可以使用通用术语，如“小”、“中”和“大”，也可以指定精确的大小(以像素为单位)，如“20px”。 了解更多在<a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
         </details>
         <details>
         <summary>
-
-        **样式表是什么？**
-
+        <strong>**样式表是什么？**</strong>
         </summary>
         样式表是控制网页如何显示的文档。外部样式表是链接到HTML页面的独立文件。
         </details>
         <details>
         <summary>
-
-        **CSS是什么？**
-
+        <strong>**CSS是什么？**</strong>
         </summary>
 
         CSS是一种决定网站上的内容如何显示的语言。它使用规则集来改变页面的样子。每个规则集都有一个选择器，他决定了页面上的哪些元素会受到影响，规则解释如何显示元素。每条规则都由一个属性和该属性的值组成。
@@ -2532,7 +2579,8 @@ zh-CN:
         font-family: cursive;
         </pre>
 
-        本例中，`h2`是选择器，`color`和`font-family`是属性，`blue`和`cursive`是这些属性的值。</details>
+        本例中，`h2`是选择器，`color`和`font-family`是属性，`blue`和`cursive`是这些属性的值。
+        </details>
         </div>
 
         #Body 元素
@@ -6447,7 +6495,7 @@ zh-CN:
         书写答复\r\n\r\n<img src=\"https://images.code.org/e841e427e8020f075c8718631bf0cfb3-image-1516228295228.31.22\nPM.png\"
         style=\"float:right\">\r\n\r\n此代码是从你刚完成的颜色侦探活动中拿来的，在创建表演任务上**将被算为一个算法**。\r\n\r\n**书写响应
         2c 来描述以上的算法.\n使用书写提示和计分指南作为指南。** 这里你务必要涵括的主要几点。\r\n\r\n* 命名主算法以及2 个子-算法的每一个\r\n*
-        解释每个子-算法是做*什么 *以及每个代码实际上是*如何*运作的\r\n* 解释主算法是如何运作的，以及它是如何达成程序目的的。"
+        解释每个子-算法是做*什么 *以及每个代码实际上是*如何*运作的\r\n* 解释主算法是如何运作的，以及它是如何达成程序目的的。\n"
       U5 AP Practice Create Algorithm How vs What: "# AP 练习 - 创建表演任务 - 过程\r\n\r\n
         **AP 创建表演任务** 的一个部分就是描述程序的开发过程。\r\n\r\n<div\nstyle=\"width: 80%; margin: auto;
         background-color: #EEEEEE; padding: 10px;\nfont-family: serif; font-size:
@@ -6469,7 +6517,7 @@ zh-CN:
         行\r\n\r\n<div style=\"magin:auto\">\r\n\\t<img\nsrc=\"https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32\nAM.png\">\r\n</div>\r\n\r\n#
         对响应评分\r\r\n一个学生编写了以下响应。 \r\r\n*\"在我开发我的程序过程中，我遇到两大主要问题。第一个问题是在程序的早期，有时候苹果会从我的屏幕中消失。在解决此程序缺陷后，
         我意识到随机数X 值得范围被设为0-3200，而非0-320。我很容易地纠正了代码中的这个问题。第二个问题发生在当我意识到使用此游戏的同学们不知道如何开始此游戏。为了解决此问题，我把按钮做得足够大，并和背景颜色不同。随后我再也没有看到此问题\"*\r\n
-        \r\n\r\n每行值一分，既可以也可以不给分。** 解释为什么你会或不会授予第2行和3行得分 **。\r\n\r\n提示：特别注意评分指南的最后一栏和定名为\"不授予得分，如果...”的检查表。"
+        \r\n\r\n每行值一分，既可以也可以不给分。** 解释为什么你会或不会授予第2行和3行得分 **。\r\n\r\n提示：特别注意评分指南的最后一栏和定名为\"不授予得分，如果...”的检查表。\n"
       U5 ColorSleuth implement end game: "# 挑战 - 找个方法让游戏结束并实现它。\r\n\r\n现在你的挑战是加上一些代码来完成自己的程序。用你已经学到的东西，以及阿历克斯和迈克尔的讨论来获得灵感。\r\n\r\n**这是最后一个编程关卡**\r\n\r\n*
         按照自己的想法来改动或添加程序\r\n* 完成后，点击**提交**\r\n\r\n**目标** 添加代码来让游戏能够结束，比如：\r\n* 切换到`gameOver_screen`（游戏结束_屏幕）\r\n*\n通过显示`player1Win_label`（玩家1胜利_标签）或`player2Win_label`（玩家2胜利_标签）来显示哪个玩家赢得了游戏。\r\n\r\n*我们为这个项目提供了`gameOver_screen`（
         游戏结束_屏幕）模板 - 切换到设计模式来看看那里有什么。*\r\n\r\n**建议**\r\n*\n如果你还是没有主意，试着实现\"first\nto

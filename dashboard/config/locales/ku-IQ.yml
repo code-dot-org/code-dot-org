@@ -26,6 +26,7 @@ ku:
   submit: بنێرە
   previous_page: لاپەرەی پێشوو
   next_page: لاپەرەی دواتر
+  or: یان
   add_teacher_form:
     code:
       label: 'زیادکردنی مامۆستایەک:'

@@ -45,6 +45,7 @@ sq:
   next_resource: Burimi tjetër
   cancel: Anulo
   okay: Në rregull
+  or: ose
   heading_x_of_y: "%{heading} (faqja %{x} nga %{y})"
   add_teacher_form:
     code:
@@ -555,6 +556,8 @@ sq:
       title: Minecraft
       body: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të
         Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:

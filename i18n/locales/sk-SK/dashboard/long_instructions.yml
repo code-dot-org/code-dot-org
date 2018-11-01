@@ -44,18 +44,20 @@ sk:
       2-3 Artist Loops New 12: "Nakresli kosoštvorec so stranami dlhými 100 pixelov.\n"
       2-3 Artist Loops New 13: "Začneme s nejakým kódom (v šedom) pre vytvorenie jedného diamantu. \n\nZopakujte šedý kód slučkou pre vytvorenie veselého vzoru!"
       2-3 Artist Loops New 2: |-
-        Tu je kúsok kódu, ktorý si použil pri kreslení štvorca. Čo sa stane, ak použiješ blok opakovania pre spustenie tohto kódu 4 krát?
-      2-3 Artist Loops New 9: Nakresli jednoduchý tvar V, kde obe strany sú dlhé 50 pixelov aby si dokončil šípku.
+        Tu je rovnaká úloha ako sme práve vyriešili. Tento krát však môžeš použiť len jeden blok "posuň sa dopredu" a jeden blok "otoč sa".
+        
+        Pre vyriešenie úlohy použi aj blok "opakuj".
+      2-3 Artist Loops New 9: Nakresli jednoduchý tvar V, ktorý má obe strany dlhé 50 pixelov a dokonči šípku.
       2-3 Artist Nested Loops 10: Opakuj tento kód 12 krát na dokončenie vzoru.
       2-3 Artist Nested Loops 11: Opakuj tento kód 4 krát na dokončenie vzoru, otoč o 90 stupňov po každom kruhu.
       2-3 Artist Nested Loops 12: Opakuj tento kód 12 krát na dokončenie kučery.
       2-3 Artist Nested Loops 2: "Teraz opakuj trojuholník 6 krát. Po každom trojuholníku sa musíš otočiť o 60 stupňov aby si mohol nakresliť ďalší."
       2-3 Artist Nested Loops 4: "Opakuj tento kosoštvorec 12 krát a nakreslíš kvetinu. Tip: 12 kosoštvorcov je ako 12 trojuholníkov ktoré si urobil - o koľko sa musíš otočiť po každom tvare?"
-      2-3 Artist Nested Loops 5: "Vyplň okná tejto budovy vnorenými slučkami. Okná sú dlhé 20 pixelov a 20 pixelov od seba."
-      2-3 Artist Nested Loops 7: "Opakuj tento trojuholník 10 krát aby si nakreslil slnko. Budeš sa musieť presunúť a otočiť po každom trojuholníku. Môžeš zistiť o koľko sa musíš otočiť vydelením počtu stupňov v kruhu počtom tvarov, ktoré ho tvoria."
-      2-3 Artist Nested Loops 8: "Teraz poďme pridať nejakú trávu do nášho obrazu. Každý zväzok trávy je 50 pixelov od ostatných."
-      2-3 Artist Nested Loops 9: "Dokončime tento obrázok pridaním kvetu. Opakuj kosoštvorec 12 krát aby si nakreslil svoj kvet."
-      2-3 Artist Nested Loops Free Play: Máš voľné ruky, nakresli niečo zaujímavé s vnorenými slučkami.
+      2-3 Artist Nested Loops 5: "Vyplň okná tejto budovy vnorenými cyklami. \n\nOkná sú dlhé 20 pixelov a umiestnené 20 pixelov od seba."
+      2-3 Artist Nested Loops 7: "Opakuj tento trojuholník 10 krát aby si nakreslil slnko. \n\nBudeš sa musieť presunúť a otočiť po každom trojuholníku. \n\nO koľko sa musíš otočiť zistíš vydelením počtu stupňov v kruhu počtom tvarov, ktoré ho tvoria."
+      2-3 Artist Nested Loops 8: "Teraz do nášho obrazu pridajme nejakú trávu. \n\nZväzky trávy sú umiestnené 50 pixelov od seba."
+      2-3 Artist Nested Loops 9: "Dokončime tento obrázok pridaním kvetu. \n\nOpakuj kosoštvorec 12 krát aby si nakreslil svoj kvet."
+      2-3 Artist Nested Loops Free Play: Máš voľné ruky, nakresli niečo zaujímavé s vnorenými cyklami.
       2-3 Bee Conditionals 11: "Zbieraj nektár, kde kvety majú nektár."
       2-3 Bee Conditionals 13: |-
         Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?
@@ -130,6 +132,12 @@ sk:
       4-5 While Loops 2: Dostaňte ma ku kope hliny a odstráňte ju pomocou 5 plných lopát použitím bloku "odstrániť 1".
       4-5 While Loops 3: "Použite čo možno najmenej blokov pre dokončenie tejto úlohy!  \n\nDostaňte ma ku kope a odstráňte všetku hlinu, potom ma posuňte k jame a celú ju zasypte."
       4-5 While Loops 4: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
+      AppLab Intro 1 - Build Your Adventure: |-
+        # Vystavaj Svoje Vlastné Dobrodružstvo
+        
+        Použi tento prázdny priestor na vytvorenie vlastného projektu. Na začiatok ti dávame úvodnú obrazovku s niekoľkými tlačidlami. Ak chceš, môžeš jednoducho **vytvoriť kópie obrazoviek**, aby si si vystaval tvoj vlastný svet. Čo vytvoríš?
+        
+        Keď skončíš, môžeš "Zdieľať" tvoju prácu s kamarátmi cez telefón, alebo s linkom. Vytvor si vlastný účet, s ktorým budeš pokračovať v budovaní v App Labe!
       Artist Autorun Test: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
       Function intro Ryan: "V pracovnom priestore je **funkcia** s názvom \"postav most\". Je v nej zabudovaný celý kód, ktorý potrebuješ na prekročenie rieky!\\r\n \\r\nDvakrát prichyť malý, zelený  <xml> <block type=\"procedures_callnoreturn\" id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> blok do pracovného priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej fakli [redstone_torch]."
       MC Agent Freeplay: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
@@ -306,8 +314,8 @@ sk:
       frozen square iterative_b: "*\"Už sme na polceste k vytvoreniu štvorca!\"* \n\n&nbsp;\n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
       frozen square iterative_test: "*\"Už sme na polceste k vytvoreniu štvorca!\"* \n\n&nbsp;\n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
       frozen square loop 3x: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
-      frozen square loop 3x_b: "Vedel si, že môžeš vložit slučku \"Opakovať\" do inej opakovacej slučky?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
-      frozen square loop 3x_test: "Vedel si, že môžeš vložit slučku \"Opakovať\" do inej opakovacej slučky?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
+      frozen square loop 3x_b: "Vedel si, že môžeš vložit cyklus \"Opakovať\" do iného opakovacieho cyklu?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
+      frozen square loop 3x_test: "Vedel si, že môžeš vložit cyklus \"Opakovať\" do iného opakovacieho cyklu?  \n  \nPomôž Anne nakresliť tri štvorce a otoč sa po každom o ** 120 stupňov **. "
       frozen square loop: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       frozen square loop_b: "*Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku \"Opakuj!\"*\n\nKoľkokrát (???) musí blok \"Opakuj\" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?"
       frozen square loop_test: "*Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku \"Opakuj!\"*\n\nKoľkokrát (???) musí blok \"Opakuj\" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?"

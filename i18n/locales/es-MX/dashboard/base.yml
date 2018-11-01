@@ -28,7 +28,8 @@ es-MX:
         gender: 'Sexo'
         edit_header: 'Editar información de la cuenta'
         finish_sign_up_header: 'Termina la creación de tu cuenta'
-        finish_sign_up_subheader: 'Llena la siguiente información para completar la creación de tu cuenta en Code.org.'
+        finish_sign_up_subheader: 'Llene la siguiente información a fin de crear su cuenta en Code.org <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Llene la siguiente información para finalizar la creación de su cuenta en Code.org <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: No puede ser en el futuro
   hello: "Hola mundo"
@@ -42,6 +43,7 @@ es-MX:
   next_resource: Siguiente recurso
   cancel: "Cancelar"
   okay: "De acuerdo"
+  or: "o"
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
@@ -90,7 +92,7 @@ es-MX:
     clever: 'Cuenta inteligente'
     powerschool: 'Cuenta Powerschool'
     forgot_password: '¿Olvidaste tu contraseña?'
-    migration_success: 'Logrado! Te haz actualizado a la nueva experiencia de cuentas.'
+    migration_success: 'Logrado! Te haz actualizado en la nueva experiencia de cuentas.'
     demigration_success: 'La nueva experiencia de cuentas está desactivada en tu cuenta.'
     need_confirmation: "¿No recibiste las instrucciones de confirmación?"
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
@@ -98,7 +100,7 @@ es-MX:
     use_clever: "Lo sentimos, tu cuenta de Code.org no está conectada a tu %{provider}. Por favor inicia sesión a través de tu Portal Clever."
     unable_to_connect_provider: "No se pudo conectar su cuenta Code.org su %{provider}. Por favor, inténtelo de nuevo."
     already_in_use: "Tu %{provider} ya está conectado a otra cuenta de Code.org."
-    already_linked: "Tu %{provider} ya está vinculado a otra cuenta de Code.org."
+    already_linked: "El %{provider} ya está vinculada a tu cuenta Code.org."
   signup_form:
     student_count: '%{count} estudiantes ya se han registrado.'
     teacher_count: '%{count} maestros ya se han registrado.'
@@ -116,6 +118,7 @@ es-MX:
     age: 'Edad'
     user_type: '¿Eres estudiante o profesor?'
     submit: 'Registrarse'
+    go_to_account: 'Ve a mi cuenta'
     teacher: '¿Eres un maestro/a?'
     valid_username: "¡Disponible!"
     invalid_username: "El Nombre de usuario debe tener al menos 5 caracteres"
@@ -214,6 +217,7 @@ es-MX:
     code_with_teacher: '%{section_code} con %{teacher_name}'
     confirm:
       remove: '¿Estás seguro que quieres abandonar esta sección?'
+    default_name: 'Sección sin título'
     remove: '(quitar la sección)'
     type:
       picture: 'Contraseña visual'
@@ -315,9 +319,10 @@ es-MX:
       signin: 'Iniciar Sesión'
       signup: 'Crear una cuenta'
       already_registered: '¿Ya estás registrado?'
+      pair_programming: 'Programación en Parejas'
       team: 'Equipo'
       driver: 'Conectado'
-      navigator: 'Navegador'
+      navigator: 'Socio'
       create: 'Crear'
       applab: 'Laboratorio de App'
       artist: 'Artista'
@@ -359,6 +364,7 @@ es-MX:
       example: 'Solución de ejemplo'
       example_with_number: 'Ejemplo de solución %{solution_number}'
       submitted_on: 'Enviado el %{date}'
+      last_updated: 'Última actualización:'
       unsubmit: 'NO enviado'
       worked_with: 'Trabajado con'
       update_lock_settings: 'Actualizar los ajustes de bloqueo aquí.'
@@ -368,12 +374,12 @@ es-MX:
     email_confirm_needed_required: 'Tu dirección de correo electrónico %{email} no ha sido confirmada:'
     email_confirm_wrong_email: '(¿Dirección de correo electrónico equivocada?)'
     email_resend_confirm: 'Reenviar las instrucciones de confirmación'
-    new_email_hint: '(asegúrate de que puedes recibir mensajes a esta dirección de correo electrónico)'
+    new_email_hint: '(asegúrate de que puedes recibir mensajes en esta dirección de correo electrónico)'
     new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
     current_password_hint: '(necesitamos tu contraseña actual para confirmar los cambios)'
     delete: 'Eliminar tu cuenta'
     delete_text: "Si haces clic en el botón de abajo, eliminará tu cuenta."
-    delete_text_teacher_managed_note: "No tienes permiso para borrar esta cuenta por que es administrada por tu profesor. necesitas que tu profesor(es) lo remueva desde su cuenta antes de que puedas borrarla tu."
+    delete_text_teacher_managed_note: "No tienes permiso para borrar esta cuenta por que es administrada por tu profesor. necesitas que tu profesor(es) la remueva desde su cuenta antes de que puedas borrarla."
     delete_text_teacher_note: "Nota: Al eliminar tu cuenta no eliminarás la cuenta de tus alumnos."
     delete_confirm: '¿Está seguro de que desea eliminar su cuenta?'
     deleted_user: 'usuario eliminado'
@@ -384,13 +390,13 @@ es-MX:
     create_personal_login_under_13_username: "Nombre de usuario (no uses tu nombre real)"
     create_personal_login_under_13_parent_email: 'Dirección de correo electrónico del padre o tutor'
     create_personal_login_info: 'Si quieres seguir usando tu cuenta Code.org incluso después del final del año escolar, pide ayuda a tus padres para crear una cuenta personal.'
-    create_personal_login_link_account: 'Si quieres puedes escoger conectar una cuenta personal en la sección "administrar cuentas personales".'
+    create_personal_login_link_account: 'Si quieres puedes escoger conectarme a cuenta personal en la sección "administrar cuentas personales".'
     create_personal_login_terms: "Al crear un inicio de sesión personal, estoy de acuerdo a verme obligado a cumplir los <a href='%{terms_of_service_url}', target='_blank'>términos y servicios</a> de Code.org. Si soy menor de 13 años de edad, confirmo que tengo el permiso de mi padre o tutor legal para usar los servicios de Code.org incluso sin un profesor."
     create_personal_login_email_note: "Nota: las direcciones email no son guardadas en una forma que nos permita contactar a los estudiantes. Los estudiantes nunca recibirán emails de Code.org excepto para recuperar su contraseña- Mira nuestra <a href='%{privacy_policy_url}', target='_blank'>política de privacidad</a> para más información."
     enter_new_login_info: 'Ingresa tu nueva información de inicio de sesión'
     confirm_secret_words: 'Confirma que eres tú al ingresar tus palabras secretas actuales'
-    parent_email_label: "Correo de representante legal"
-    parent_email_hint: "(puede usarse para recuperar tu contraseña)"
+    parent_email_label: "Correo electrónico del padre o tutor (opcional)"
+    parent_email_hint: "(este puede usarse para la recuperación de la contraseña)"
     enter_parent_email: "Ingresa el email de tu padre o tutor (para recuperar la contraseña)"
     update: "Actualizar cuenta de usuario"
     account_successfully_updated: "Cuenta actualizada exitosamente."
@@ -475,7 +481,7 @@ es-MX:
     student_not_found: "No se encontró uno o más estudiantes."
     all_students_must_be_in_current_section: "Todos los estudiantes deben estar matriculados actualmente en su sección."
     already_enrolled_in_new_section: "No puedes mover estos estudiantes porque este profesor ya los tiene en otra sección."
-    third_party_login: "No puedes mover estudiantes a un grupo que se sincroniza con una herramienta de terceros."
+    third_party_login: "No puedes mover estudiantes a un grupo sincronizado con una herramienta de terceros."
   share:
     title: "Aprender en Code Studio"
     description: "Cualquier persona puede aprender informática. Crear juegos, aplicaciones y arte con código."
@@ -483,8 +489,8 @@ es-MX:
   gender:
     male: 'Varón'
     female: 'Mujer'
-    non_binary: 'No binario'
-    not_listed: 'Término preferido no listado'
+    non_binary: 'No-binario'
+    not_listed: 'Término preferido no enlistado'
     none: 'Prefiero no contestar'
   user_type:
     student: 'estudiante'
@@ -618,6 +624,8 @@ es-MX:
     minecraft2016:
       title: "Minecraft"
       body: "Diseña un juego Minecraft. Crea tus propias versiones de gallinas, ovejas, Creepers, zombis y muchos más personajes."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     sports:
@@ -951,7 +959,7 @@ es-MX:
     download_in_Vietnamese: 'Descargar en vietnamita:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
-  stage_extras_teacher_message: "Tienes lecciones extras des-habilitadas para algunas de tus secciones. tus estudiantes no pueden verlas amenos que las habilites. puedes habilitarlas visitando tu<a href='http://code.org/teacher-dashboard'> panel de profesor</a>."
+  stage_extras_teacher_message: "Tienes lecciones extras deshabilitadas en algunas de tus secciones. tus estudiantes no pueden verlas a menos que las habilites. puedes hacerlo visitando tu<a href='http://code.org/teacher-dashboard'> panel de profesor</a>."
   locked_stage: 'Los contenidos de esta etapa no son visibles ya que se encuentra actualmente bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar en ella o para revisar tus respuestas.'
   hidden_stage: "Tu instructor no esperaba que estuvieras aquí. Por favor pregunta a tu instructor en qué lección deberías estar."
   hidden_script: "Tu maestro no esparaba que estuvieras aquí. Por favor pregúntale a tu maestro en cual unidad deberías estar."
@@ -960,37 +968,37 @@ es-MX:
   view_all_units: 'Ver todas las unidades'
   pd:
     form_labels:
-      first_name: 'Primer nombre'
-      first_name_preferred: 'Nombre para mostrar'
+      first_name: 'Nombre'
+      first_name_preferred: 'Nombre elegido'
       last_name: 'Apellido'
       email: 'Correo electrónico'
-      email_alternate: 'Correo alternativo'
+      email_alternate: 'Correo electrónico alternativo'
       gender: 'Identidad de genero'
       school_name: 'Nombre de la escuela'
       school_city: 'Ciudad de la escuela'
       school_country: 'País de la escuela'
-      ages: '¿A cuales edades enseñaste este año?'
-      subjects: '¿cual(es) tema(s) enseñas este año?'
-      resources: '¿cuales de los siguientes recursos educacionales de ciencias de la computación usas?'
-      robotics: '¿cuales de los siguientes recursos de rebotica usas?'
+      ages: '¿A que grupo(s) de edades enseñaste este año?'
+      subjects: '¿Cuál(es) materia(s) enseñas este año?'
+      resources: '¿Cuáles de los siguientes recursos educacionales de ciencias de la computación utilizas?'
+      robotics: '¿Cuáles de los siguientes recursos de rebotica utilizas?'
       workshop_organizer: 'Organizador de taller'
       workshop_facilitator: 'Facilitador del taller'
-      workshop_course: 'Curso'
-      email_opt_in: 'Podemos mandarte e-mails sobre el programa internacional de Code.Org, actualizaciones de nuestros cursos, o otras noticias sobre ciencias de la computacion?'
-      legal_opt_in: 'Al enviar este formulario, estas de acuerdo en que Code.org conparta informacion sobre como usas Code.org y los recursos de aprendizje profesionales de socios en tu pais, distrito escolar y facilitadores. compartiremos tu informacion de contacto, cuales cursos estas participando y demas datos sobre tus clases con estos socios. esto incluye el numero de estudiantes en tus clases, la demografia de tu clase, y el nombre de tu escuela y distrito. no compartiremos informacion sobre un estudiante en esspecifico con nuestros socios: toda la informacion de nuestros alumnos sera desidentificada y agregada. Nuestros socios internacionales estan obligados a tratar esta informacion con el mismo nivel de confidencialidad que Code.org.'
+      workshop_course: 'Curso taller'
+      email_opt_in: 'Podemos mandarte e-mails sobre el programa internacional de Code.Org, actualizaciones de nuestros cursos, u otras noticias sobre ciencias de la computación?'
+      legal_opt_in: 'Al enviar este formulario, estas de acuerdo en que Code.org comparta información sobre como usas Code.org y los recursos de aprendizaje profesionales de socios de Code.org en tu país, distrito escolar y facilitadores. Se compartirá tu información de contacto, en cuales cursos estas participando y demás datos sobre tus clases con nuestros socios. Esto incluye el número de estudiantes en tus clases, la demografía de tu clase, y el nombre de tu escuela y distrito. no compartiremos información sobre un estudiante en especifico: toda la información de nuestros alumnos sera anónima y agregada. Nuestros socios internacionales están obligados a tratar esta información con el mismo nivel de confidencialidad que Code.org.'
     form_entries:
       gender:
         male: 'Varón'
         female: 'Mujer'
-        non_binary: 'No binario'
-        not_listed: 'Término preferido no listado'
+        non_binary: 'No-binario'
+        not_listed: 'Término preferido no enlistado'
         none: 'Prefiero no contestar'
       school_country:
-        canada: 'Canada'
+        canada: 'Canadá'
         chile: 'Chile'
         israel: 'Israel'
         malaysia: 'Malasia'
-        mexico: 'Mexico'
+        mexico: 'México'
         thailand: 'Tailandia'
       ages:
         ages_under_6: '< a 6 años'
