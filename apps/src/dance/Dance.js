@@ -125,7 +125,6 @@ Dance.prototype.init = async function (config) {
   ReactDOM.render((
     <Provider store={getStore()}>
       <div>
-        <SignInOrAgeDialog ageOnly={true}/>
         <AppView
           visualizationColumn={
             <DanceVisualizationColumn

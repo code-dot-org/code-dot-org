@@ -28,7 +28,7 @@ const SongSelector = Radium(class extends React.Component {
     selectedSong: PropTypes.string.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool
+    is13Plus: PropTypes.bool.isRequired
   };
 
   // filterOn indicates whether to display age restricted songs, depending on signed-in user age,
@@ -100,7 +100,7 @@ class DanceVisualizationColumn extends React.Component {
     isShareView: PropTypes.bool.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool
+    is13Plus: PropTypes.bool.isRequired
   };
 
   render() {
