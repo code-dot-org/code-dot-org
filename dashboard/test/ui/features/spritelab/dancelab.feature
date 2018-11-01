@@ -1,3 +1,4 @@
+@no_older_chrome
 Feature: Dance Lab
   Scenario: Song selector is visible
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
@@ -61,6 +62,9 @@ Feature: Dance Lab
     When I navigate to the shared version of my project
     Then I click selector "#runButton" once I see it
     Then I wait until element "#runButton" is not visible
+
+    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 3"
+    
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
