@@ -1,8 +1,8 @@
 he:
   errors:
     messages:
-      not_saved: 'נא תקן את השגיאות הבאות:'
-      too_young: 'התוכן מכיל הגבלות גיל במקום ולא זמין לתלמידים צעירים.'
+      not_saved: 'אנא תקן את השגיאות הבאות:'
+      too_young: 'התוכן מכיל הגבלות גיל ואינו זמין לתלמידים צעירים.'
       teacher_must_accept_terms: 'בתוכן זה יש מגבלת גיל במקום והוא אינו זמין לתלמידים הצעירים. בקש מהמורה שלך לעדכן את תנאי השירות כדי לתת לך גישה לתוכן זה. המורה שלך יכול לעשות זאת על ידי התחברות לקוד סטודיו ולחיצה על כפתור ''סקירת עדכון תנאים'' בסמוך לחלקו העליון של דף הבית של קוד סטודיו.'
       pair_programmer: 'אתה כרגע נמצא במצב תכנות משותף עם תלמיד אחר אשר אין לו הרשאות לתוכן זה. כדי לגשת לתוכן זה, הפסק את מצב התכנות המשותף ונסה שוב.'
   activerecord:
@@ -10,6 +10,7 @@ he:
       messages:
         blank: "נדרש"
         blank_plural: "הנם נדרשים"
+        invalid: "לא חוקי"
         invalid_plural: "אינם חוקיים"
     attributes:
       user:
@@ -26,6 +27,8 @@ he:
         age: 'גיל'
         gender: 'מין'
         edit_header: 'שינוי פרטי החשבון'
+        finish_sign_up_header: 'סיים ליצור את החשבון שלך'
+        finish_sign_up_subheader: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור <strong>%{email}</strong>.'
         error:
           future: לא יכול להיות בעתיד
   hello: "הי עולם"
@@ -39,6 +42,7 @@ he:
   next_resource: המשאב הבא
   cancel: "בטל"
   okay: "בסדר"
+  or: "או"
   heading_x_of_y: "%{heading} (עמוד %{x} מתוך %{y})"
   add_teacher_form:
     code:
@@ -104,11 +108,12 @@ he:
     school_name: 'שם בית הספר (אופציונלי)'
     school_address: 'כתובת בית הספר (אופציונלי)'
     address_placeholder: 'כתובת, עיר, מדינה, מיקוד'
-    gender: 'מין (אופציונלי)'
+    gender: 'מגדר (אופציונלי)'
     birthday: 'יום הולדת (אופציונלי)'
     age: 'גיל'
-    user_type: 'אתה תלמיד או מורה?'
+    user_type: 'האם אתה תלמיד או מורה?'
     submit: 'הירשם'
+    go_to_account: 'עבור לחשבון שלי'
     teacher: 'האם אתה מורה?'
     valid_username: "זמין!"
     invalid_username: "שם המשתמש חייב להיות לפחות 5 תווים"
@@ -118,6 +123,7 @@ he:
     mismatch_password: "שתי הסיסמאות שהזנת אינן תואמות"
     agree_tos_privacy: "אני מסכים ל-<a href='http://code.org/tos'>תנאי השימוש</a> ו-<a href='http://code.org/privacy'>תנאי הפרטיות</a>."
     under_13_consent: "אני תחת גיל 13, אני מאשר שהורי או האפוטרופוסים החוקיים שלי מאשרים לי להשתמש בשירותי Code.org."
+    student_consent: "אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org."
     agree_us_website: "אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית."
     my_data_to_us: "יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית."
     student_terms: "כתובות דוא\"ל אינם נשמרים בצורה המאפשרת לנו ליצור קשר עם תלמידים. תלמידים לעולם לא יקבלו דוא\"ל מCode.org למעט עבור שחזור סיסמא. צפה ב<a href='http://code.org/privacy'>מדיניות הפרטיות</a> לפרטים נוספים."
@@ -205,6 +211,7 @@ he:
     student_associated_subject: 'פרטי החיבור עבור Code.org'
   teacher_mailer:
     new_teacher_subject: 'ברוך הבא לCode.org!'
+    delete_teacher_subject: 'הודעת Code.org: החשבון שלך נמחק'
   section:
     your_section:
       one: 'הקבוצה שלך:'
@@ -212,6 +219,7 @@ he:
     code_with_teacher: '%{section_code} יחד עם %{teacher_name}'
     confirm:
       remove: 'האם אתה בטוח שברצונך לצאת מקבוצה זו?'
+    default_name: 'סעיף ללא כותרת'
     remove: '(הסר קבוצה)'
     type:
       picture: 'תמונת סיסמה'
@@ -322,6 +330,7 @@ he:
       playlab: 'מעבדת הצעצועים'
       minecraft: 'מיינקראפט'
       flappy: 'פלאפי'
+      dance: 'מסיבת ריקודים'
     popup:
       progress_for_user: "ההתקדמות של %{name}"
       progress: 'ההתקדמות שלך'
@@ -355,6 +364,7 @@ he:
       example: 'דוגמא לפתרון'
       example_with_number: 'דוגמה לפתרון %{solution_number}'
       submitted_on: 'הוגש ב-'
+      last_updated: 'עודכן לאחרונה:'
       unsubmit: 'בטל הגשה'
       worked_with: 'עובד יחד עם'
       update_lock_settings: 'עדכן את הגדרות הנעילה כאן.'
@@ -384,6 +394,8 @@ he:
     create_personal_login_email_note: "שים לב: כתובות דוא\"ל אינם נשמרים בצורה המאפשרת לנו ליצור קשר עם תלמידים. תלמידים לעולם לא יקבלו דוא\"ל מCode.org למעט עבור שחזור סיסמה. צפה ב<a href='%{privacy_policy_url}', target='_blank'>מדיניות הפרטיות</a> לפרטים נוספים."
     enter_new_login_info: 'הזן את פרטי ההתחברות החדשים שלך'
     confirm_secret_words: 'אשר שזה אתה על-ידי הזנת המילים הסודיות הנוכחיות שלך'
+    parent_email_label: "כתובת אימייל של הורה/אפוטרופוס (אופציונלי)"
+    parent_email_hint: "(ישמש לטובת שחזור סיסמה)"
     enter_parent_email: "הזן את כתובת הדוא\"ל של ההורה או האופוטרופוס החוקי (לצורך שחזור סיסמה)"
     update: "עדכן חשבון"
     account_successfully_updated: "חשבון עודכן בהצלחה."
@@ -595,6 +607,8 @@ he:
     minecraft2016:
       title: "מיינקראפט"
       body: "תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך."
+    aquatic:
+      title: "מיינקראפט"
     hero:
       title: "מיינקראפט"
     text-compression:
@@ -684,6 +698,7 @@ he:
   dialog:
     ok: "אישור"
     startover_title: "האם אתה בטוח שאתה רוצה להתחיל מחדש?"
+    startover_body: "פעולה זו תחזיר את החידה למצב ההתחלתי שלה ותמחוק את כל השינויים שלך."
     startover_ok: "התחל מחדש"
     startover_cancel: "בטל"
   time:
@@ -693,6 +708,7 @@ he:
   age_interstitial:
     age: הגיל שלך
     header: פרטי החשבון עודכנו
+    sign_out: 'אם אינך מעוניין לציין את הגיל שלך, ניתן <a href="%{url}">להתנתק מהמשתמש</a>.'
   terms_interstitial:
     title: "תנאי השירות ותנאי הפרטיות עודכנו"
     intro_desc: "עדכנו את תנאי השירות ותנאי הפרטיות שלנו כפי שמופיע מטה. השינויים יחלו ב-24 לאוגוסט 2016. השינויים המשמעותיים הם: אנחנו <i>לא שומרים יותר כתובות דוא\"ל של תלמידים במעבדת הקוד.</i> זה משהו משמעותי עבורנו ואנחנו מקוויים שזה יציב סטנדרט חדש לשמירת פרטיות התלמיד בטכנולוגיות למידה. שלחנו לך סיכום של שינויים נוספים שבוצעו בדוא\"ל."
@@ -836,6 +852,9 @@ he:
     csd6_1: 'פרק 1: תכנות עם חומרה'
     csd6_2: 'פרק 2: יצור אב טיפוס פיזי'
     csd_survey: 'סקר שלאחר הקורס'
+    csp1_1: 'פרק 1: ייצוג ושליחת מידע'
+    csp1_2: 'פרק 2: המצאת האינטרנט'
+    csp2_1: 'פרק 1: קידוד וכיווץ מידע מורכב'
     csp3_1: 'פרק 1: שפות תכנות ואלגוריתמים'
     cspSurvey: 'סקר'
     cspAssessment: 'הערכה לפרק'

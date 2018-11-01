@@ -45,6 +45,7 @@ et:
   next_resource: Järgmised materjalid
   cancel: Tühista
   okay: Olgu
+  or: või
   heading_x_of_y: "%{heading} (leht %{x} of %{y})"
   add_teacher_form:
     code:
@@ -589,6 +590,8 @@ et:
     minecraft2016:
       title: Minecraft
       body: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti

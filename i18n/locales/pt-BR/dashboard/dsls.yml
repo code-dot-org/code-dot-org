@@ -78,6 +78,8 @@ en:
         rocket-height|Number|Number: altura-foguete|Número|Número
     evaluation_multi:
       CSP PD Example Question 1:
+        The encoding numbers unit: Unidade codificação de números
+        The sending binary messages unit: Unidade enviando mensagens binárias
         Which unit will you teach first: Qual unidade você irá ensinar primeiro
       CSP PD Example Question 2:
         How will you teach students?: Como você irá ensinar os estudantes?
@@ -89,13 +91,17 @@ en:
         I will make them write: Eu vou fazê-los escrever
       TeacherCon Eval Q1:
         '1.10: Routing and Redundancy': '1.10: Roteamento e Redundância'
+        '1.11: Packets and Making a Reliable Internet': '1.11: Pacotes e Fazendo uma Internet Confiável'
         '1.4: Number Systems - Circle Triangle Square': '1.4: Sistemas Numéricos - Círculo Triângulo Quadrado'
         '1.6: Sending Numbers': '1.6: Enviando Números'
         '1.9: Internet Addressing (Battleship)': '1.9: Endereçamento de Internet (Navio de guerra)'
+        '2.10: Good and Bad Data Visualization': '2.10: Visualização de Dados Bons e Ruins'
+        '2.2: Text Compression': '2.2: Compressão de Texto'
         '2.3: Black and White Pixelation': '2.3: Pixelização Preta e Branca'
         What lesson are you planning and teaching at TeacherCon?: Que lições você está planejando e ensinando na TeacherCon?
       TeacherCon Eval Q2:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       TeacherCon Eval Q3:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -104,18 +110,35 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       TeacherCon Eval Q5:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      TeacherCon Eval Q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       TeacherCon Eval Q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       TeacherCon Evaluation Q4:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U1 Eval q10:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U1 Eval q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U1 Eval q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U1 Eval q7:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U1 Eval q8:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -124,43 +147,75 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U1 Eval q9:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U1 eval q1:
         Brand new!: Novo em folha!
+        How experienced would you say you are with computer science?: Quão experiente você diria que você é com ciência da computação?
+        Somewhat Experienced: Um pouco experiente
         Very Experienced: Muito Experiente
       U1 eval q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Você está confortável com os conceitos subjacentes sobre como sistemas numéricos não-decimais funcionam?
         I have no idea what you're talking about!: Eu não faço ideia do que você está falando!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: Eu sei como converter entre sistemas numéricos, mas eu não sei sobre as regras subjacentes sobre como eles funcionam
         Yes!: Sim!
       U1 eval q3:
+        Are you comfortable with HTML or Markdown?: Você é confortável com HTML ou Markdown?
+        Nope!: Não!
         Yes!: Sim!
       U1 eval q4:
         Do you know how IP addresses work?: Você sabe como endereços de IP funcionam?
+        Nope!: Não!
         Yes!: Sim!
       U1 eval q5:
+        Do you know how messages are broken down and routed on the internet?: Você sabe como mensagens são quebradas e roteadas na internet?
+        Nope!: Não!
         Yes!: Sim!
       U1 eval q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Você já olhou o tráfego no seu navegador web quando você faz uma requisição para um website?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q1:
         Brand new!: Novo em folha!
+        How experienced would you say you are with computer science?: Quão experiente você diria que você é com ciência da computação?
+        Somewhat Experienced: Um pouco experiente
         Very Experienced: Muito Experiente
       U1 evaluation q10:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U1 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U1 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U1 evaluation q2:
+        Are you comfortable with the underlying concepts behind how non-decimal number systems work?: Você está confortável com os conceitos subjacentes sobre como sistemas numéricos não-decimais funcionam?
         I have no idea what you're talking about!: Eu não faço ideia do que você está falando!
+        I know how to convert between number systems, but I don't know about the underlying rules of how they work: Eu sei como converter entre sistemas numéricos, mas eu não sei sobre as regras subjacentes sobre como eles funcionam
         Yes!: Sim!
       U1 evaluation q3:
+        Are you comfortable with HTML or Markdown?: Você é confortável com HTML ou Markdown?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q4:
         Do you know how IP addresses work?: Você sabe como endereços de IP funcionam?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q5:
+        Do you know how messages are broken down and routed on the internet?: Você sabe como mensagens são quebradas e roteadas na internet?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q6:
+        Have you ever looked at the traffic in your web browser when you request a website?: Você já olhou o tráfego no seu navegador web quando você faz uma requisição para um website?
+        Nope!: Não!
         Yes!: Sim!
       U1 evaluation q7:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U1 evaluation q8:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -169,10 +224,20 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U1 evaluation q9:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U2 evaluation q0:
+        Creating visualizations in order to communicate about a topic: Criação de visualizações para comunicar sobre um tópico
+        Digitally representing images: Representando imagens digitalmente
+        In general, which topic sounds most like something you do not already have experience with?: De forma geral, qual tópico mais soa como algo que você ainda não tem experiência?
+        Interpreting visual data to better understand a topic: Interpretando dados visuais para entender melhor um tópico
+        The pros and cons of different file types, as well at the types of compression found in common applications: Os prós e contras de diferentes tipos de arquivo, bem como os tipos de compressão encontrados em aplicações comuns
+        Understanding why different file types are often different sizes and looking at the units of measure common to file types: Entendendo porque tipos diferentes de arquivos frequentemente têm tamanhos diferentes e olhando para as unidades de medidas comuns para tipos de arquivos
       U2 evaluation q1:
         Very comfortable!: Muito confortável!
       U2 evaluation q10:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U2 evaluation q11:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -181,9 +246,18 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U2 evaluation q12:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U2 evaluation q13:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U2 evaluation q14:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U2 evaluation q15:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U2 evaluation q4:
@@ -192,14 +266,24 @@ en:
         Do you have experience using Google Trends?: Você tem experiência usando o Google Trends?
       U3 evaluation q10:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U3 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U3 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U3 evaluation q2:
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
+      U3 evaluation q6:
+        In general, which topic sounds most like something you do not already have experience with?: De forma geral, qual tópico mais soa como algo que você ainda não tem experiência?
       U3 evaluation q7:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U3 evaluation q8:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -208,11 +292,19 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U3 evaluation q9:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
+      U4 evaluation q10:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U4 evaluation q11:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
       U4 evaluation q6:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: Quão confortável você está em ensinar lições onde os alunos fazem a maioria das atividades em computadores?
+        Not Comfortable: Nada Confortável
         Very Comfortable: Muito Confortável
       U4 evaluation q7:
         Students working in small groups to build knowledge: Alunos trabalhando em grupos pequenos para gerar conhecimento
@@ -221,8 +313,12 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U4 evaluation q8:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U4 evaluation q9:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
       U5 evaluation q1:
         'No': 'Não'
         'Yes': 'Sim'
@@ -237,9 +333,18 @@ en:
         Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Qual das seguintes situações é mais similar aos tipos de atividades que você comumente executa em suas aulas?
       U5 evaluation q4:
         Answer it yourself: Responda você mesmo
+        Put the question to the other students in the classroom: Colocar a questão para outros estudantes na sala de aula
+        When students have questions in class, what strategy do you generally use to answer it?: Quando os alunos têm perguntas na aula, que estratégia você normalmente usa para respondê-las?
       U5 evaluation q5:
         How do you typically organize students in your classes?: Como você normalmente organiza os alunos em suas aulas?
+        Students usually work in small groups: Estudantes normalmente trabalham em grupos pequenos
+        Students usually work independently: Estudantes normalmente trabalham de forma independente
+      U5 evaluation q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Tendo os estudantes fazendo atividades com as próprias mãos para construir conhecimento e entender os conceitos-chave
+        'Having students work in small groups ': 'Tendo os estudantes trabalhando em grupos pequenos '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: Que tipo de agrupamento de estudantes ou atividades você está mais confortável em atuar como um facilitador em sua sala de aula?
       U5 evaluation q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: Quão confortável você diria que você está em relação a aferir quando ensinar algum material novamente com seus alunos?
         Not comfortable: Nada confortável
         Very comfortable: Muito confortável
     external:

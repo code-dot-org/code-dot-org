@@ -1604,7 +1604,19 @@ he:
           stages:
             Artist:
               name: אמן
+        dance:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים
         frozen-2018-test-b:
           stages:
             Artist:
               name: אמן
+        dance--draft:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים
+        dance-draft:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים

@@ -30,7 +30,6 @@ export default class StartNewProject extends React.Component {
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
     includeDanceParty: PropTypes.bool,
-    includeMCAquatic: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -47,16 +46,11 @@ export default class StartNewProject extends React.Component {
 
   render() {
     const { canViewAdvancedTools, canViewFullList } = this.props;
-    const { includeDanceParty, includeMCAquatic } = this.props;
+    const { includeDanceParty } = this.props;
     const { showFullList } = this.state;
     const GAMES_AND_EVENTS =  includeDanceParty ?
       ['spritelab', 'dance','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'] :
       ['spritelab','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'];
-
-    let minecraft_buttons = ['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer'];
-    if (includeMCAquatic) {
-      minecraft_buttons.unshift('minecraft_aquatic');
-    }
 
     const FOURTH_BASIC_DEFAULT_PROJECT_TYPE =
       includeDanceParty ? 'dance' : 'flappy';
@@ -114,7 +108,7 @@ export default class StartNewProject extends React.Component {
             />
             <NewProjectButtons
               description={i18n.projectGroupMinecraft()}
-              projectTypes={minecraft_buttons}
+              projectTypes={['minecraft_aquatic', 'minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
             />
             {canViewAdvancedTools &&
               <NewProjectButtons

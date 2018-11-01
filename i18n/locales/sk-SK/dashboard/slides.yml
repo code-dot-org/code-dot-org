@@ -194,9 +194,9 @@ sk:
         text: "Zapamätaj si, že môžeš meniť počet pixelov a stupňov kliknutím na šípku vedľa nich."
     frozen_loops:
       1:
-        text: "Ahoj, volám sa Paola! Počítače sú skutočne dobré v opakovaní akcií. Ty dokážeš napočítať do 10, 20, alebo do 100. Lenže počítač dokáže počítať do miliardy, alebo do triliónu. Nezačne sa nudiť a potvrá mu to len pár sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače dokážu opakovať veci stovky, alebo dokonca miliardy krát."
+        text: "Ahoj, volám sa Paola! Počítače sú skutočne dobré v opakovaní akcií. Ty dokážeš napočítať do 10, 20, alebo do 100. Lenže počítač dokáže počítať do miliardy, alebo do triliónu. Nezačne sa nudiť a potrvá mu to len pár sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače dokážu opakovať veci stovky, alebo dokonca miliardy krát."
       2:
-        text: "V programovaní toto voláme slučka. Slučka znamená, že Tvoj kód sa zopakuje znova a znova. V ďaľšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec pomocou bloku \"Opakuj\"."
+        text: "V programovaní toto voláme cyklus. Cyklus znamená, že Tvoj kód sa zopakuje znova a znova. V ďaľšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec pomocou bloku \"Opakuj\"."
       3:
         text: "Akýkoľvek blok kódu, ktorý vložíš do bloku \"Opakuj\", sa bude opakovať v sekvencii toľkokrát, koľko len budeš chcieť."
       4:
@@ -380,7 +380,7 @@ sk:
       2:
         text: "Moja obľúbená činnosť v Minecrafte je objavovať. Zbožňujem dobrodružstvá v jaskyniach a objavovanie nových vecí. Keďže nie som programátorka, som nadšená, že si tiež môžem prejsť týmto Minecraft kurzom a sama sa naučím trocha kódovať."
       3:
-        text: "Predošlý level využíval množstvo blokov PosuňSaDopredu();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz PosuňSaDopredu(); štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích cyklov."
+        text: "Predošlý level využíval množstvo blokov moveForward();. Bolo by to jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz moveForward(); štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov pomocou opakovacích cyklov."
       4:
         text: "Pri stavbe Mincraftu používame opakovacie cykly, aby sme umiestnili všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce blokov. Taktiež používame cykly aj v menších príkladoch, ako napríklad hýbanie Alexinho chodidla vpred a vzad počas toho ako kráča. Opakovacie cykly sú mocná časť programovania."
       5:

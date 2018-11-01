@@ -39,6 +39,7 @@ ga:
   next_resource: An chéad acmhainn eile
   cancel: "Cealaigh"
   okay: "Ceart go leor"
+  or: "nó"
   heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
   add_teacher_form:
     code:
@@ -595,6 +596,8 @@ ga:
     minecraft2016:
       title: "Minecraft"
       body: "Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     sports:

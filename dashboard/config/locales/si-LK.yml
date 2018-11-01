@@ -46,6 +46,7 @@ si:
   next_resource: ඊළඟ සම්පත
   cancel: අවලංගු කරන්න
   okay: හරි
+  or: හෝ
   heading_x_of_y: "%{heading} (පිටුව %{y} න් %{x})"
   add_teacher_form:
     code:
@@ -90,6 +91,7 @@ si:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft ගිණුම
+    microsoft_v2_auth: Microsoft ගිණුම
     clever: දක්ෂ ගිණුම
     forgot_password: ඔබගේ මුරපදය අමතකද?
     need_confirmation: තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?
@@ -119,7 +121,6 @@ si:
     age: වයස
     user_type: ඔබ සිසුවෙක් හෝ ගුරුවරයෙක් ද?
     submit: Sign up
-    next: ඊළඟ
     teacher: ඔබ ගුරුවරයෙක් ද?
     valid_username: තිබේ!
     invalid_username: පරිශීලක නාමය අඩු තරමින් අකුරු 5ක් විය යුතුයි
@@ -565,6 +566,8 @@ si:
       title: Minecraft
       body: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
     minecraft2016:
+      title: Minecraft
+    aquatic:
       title: Minecraft
     hero:
       title: Minecraft

@@ -119,7 +119,7 @@ es:
             '8': Nada
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -406,6 +406,18 @@ es:
         text: girar a la izquierda
       RyanLab_turnRight:
         text: girar a la derecha
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
       craft_ifPath:
         options:
           DIR:

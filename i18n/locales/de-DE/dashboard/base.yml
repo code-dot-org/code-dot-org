@@ -38,6 +38,7 @@ de:
   next_resource: Nächste Ressource
   cancel: "Abbrechen"
   okay: "Okay"
+  or: "oder"
   heading_x_of_y: "%{heading} (page %{x} von %{y})"
   add_teacher_form:
     code:
@@ -81,6 +82,7 @@ de:
     facebook: 'Facebook'
     windowslive: 'Microsoft-Konto'
     microsoft_v2_auth: 'Microsoft-Konto'
+    clever: 'Schlau'
     forgot_password: 'Passwort vergessen?'
     need_confirmation: "Keine Anmeldebestätigung erhalten?"
     need_unlock: "Keine Anweisungen zum Entsperren erhalten?"
@@ -565,6 +567,8 @@ de:
     minecraft2016:
       title: "Minecraft"
       body: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged:
@@ -852,6 +856,7 @@ de:
     form_labels:
       email: 'E-Mail'
       school_name: 'Schulname'
+      school_city: 'Stadt der Schule'
       school_country: 'Land der Schule'
     form_entries:
       gender:
