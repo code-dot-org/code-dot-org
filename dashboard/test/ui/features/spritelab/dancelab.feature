@@ -1,3 +1,4 @@
+@no_older_chrome
 Feature: Dance Lab
   Scenario: Song selector is visible
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
