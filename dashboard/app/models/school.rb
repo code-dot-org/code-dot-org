@@ -235,6 +235,7 @@ class School < ActiveRecord::Base
       CDO.log.info "Seeding 2017-2018 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_1718_w_0a_03302018_csv.zip
       AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_sch_029_1718_w_0a_03302018.csv") do |filename|
+        # Set write_updates argument to false as a data import precaution.  We are only inserting new schools, initially, from this NCES dataset.
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, false) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
@@ -264,6 +265,7 @@ class School < ActiveRecord::Base
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
+  # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
     CSV.read(filename, options).each do |row|
       parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys

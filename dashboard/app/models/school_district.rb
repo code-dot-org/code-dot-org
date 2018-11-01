@@ -96,6 +96,7 @@ class SchoolDistrict < ActiveRecord::Base
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
+  # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
     CSV.read(filename, options).each do |row|
       parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
