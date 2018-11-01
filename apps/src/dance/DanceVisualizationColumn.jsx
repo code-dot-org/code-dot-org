@@ -31,26 +31,13 @@ const SongSelector = Radium(class extends React.Component {
     is13Plus: PropTypes.bool
   };
 
+  // filterOn indicates whether to display age restricted songs, depending on signed-in user age,
+  // session cookie, or query string
   state = {
     songsData: [],
-    filterOn: !(sessionStorage.getItem('anon_over13') || (this.props.is13Plus ? this.props.is13Plus : false))
+    filterOn: !(sessionStorage.getItem('anon_over13') || (this.props.is13Plus ? this.props.is13Plus : false)) ||
+      queryString.parse(window.location.search).songfilter === 'on'
   };
-
-  // Returns whether a song can be displayed
-  // Teacher flag - filter off - all songs allowed
-  // Teacher flag - filter on - no pg13 songs
-  // No teacher flag - pg13 songs only displayed for 13+ students
-  songPermitted(song) {
-    let filterStatus = queryString.parse(window.location.search).songfilter;
-    // Teacher flags override age defaults
-    if (filterStatus === 'off') {
-      return true;
-    } else if (filterStatus === 'on') {
-      return !song.pg13;
-    } else {
-      return (!this.state.filterOn && song.pg13) || !song.pg13;
-    }
-  }
 
   changeSong = (event) => {
     const song = event.target.value;
@@ -80,7 +67,7 @@ const SongSelector = Radium(class extends React.Component {
     let songs = {};
     if (songManifest) {
       songManifest.forEach((song) => {
-        if (this.songPermitted(song)) {
+        if ((!this.state.filterOn && song.pg13) || !song.pg13) {
           songs[song.id] = {title: song.text, url: song.url};
         }
       });
