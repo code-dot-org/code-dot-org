@@ -1,0 +1,29 @@
+name 'AP_practice_Qs_rqb_77_CSP_2_1_1'
+wrong 'I'
+wrong 'II'
+wrong 'III'
+right 'II and III'
+markdown <<MARKDOWN
+Which of the following about bits is NOT true?
+  I. A bit is a single unit of information
+  II. A bit is used less often to represent numbers than binary digits
+  III. A byte is another word for bit
+
+
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1C**
+<hr>
+ (A) A bit is a single unit of information because it is one digit of \'0\' or \'1\'.
+
+<hr>
+ (B) Bits are made up of binary numbers, 0 and 1, therefore, this cannot be correct.  However, it is not the only incorrect option.
+
+<hr>
+ (C) A byte is represented by 8 bits.  Therefore, it is not correct.  However, it is not the only incorrect option.
+
+<hr>
+ (D) Both II and III are incorrect answers.  Bits are made up of binary numbers, 0 and 1, therefore, this cannot be correct.  A byte is represented by 8 bits.  Therefore, it is not correct
+
+MARKDOWN
