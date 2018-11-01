@@ -26,10 +26,11 @@ before_fork do
   DASHBOARD_DB.disconnect
   Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
-  puts "About to require puma worker killer and enable rolling restart."
-  require_relative '../../puma_worker_killer'
+  puts "About to require puma worker killer."
+  require 'puma_worker_killer'
+  puts "Done requiring puma worker killer.  About to enable rolling restart"
   PumaWorkerKiller.enable_rolling_restart(12 * 3600) # 12 hours in seconds
-  puts "Done requiring puma worker killer and enabling rolling restart."
+  puts "Done enabling rolling restart."
 rescue StandardError => error
   puts error
 end
