@@ -131,7 +131,7 @@ ________________
 <a id="community"></a>
 
 ## Community Events
-Code.org reimburses up to $500 per event that serves a minimum of 10 teacher attendees. To receive reimbursement for venue or catering costs associated with a community event, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+To receive reimbursement for a community event, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).  
 See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
