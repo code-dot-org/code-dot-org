@@ -19,7 +19,7 @@ export function setSongData(songData) {
 }
 
 export const actions = {
-  setSelectedSong: setSelectedSong
+  setSelectedSong
 };
 
 // Reducers
