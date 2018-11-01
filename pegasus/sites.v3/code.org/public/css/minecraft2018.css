@@ -100,7 +100,7 @@
 @media screen and (min-width: 971px) {
   .mc-tutorial-info {
     position: absolute;
-    right: 5px;
+    right: 0;
     top: 0;
     bottom: 0;
   }
@@ -154,7 +154,7 @@
 @media screen and (min-width: 513px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 0;
     bottom: 0;
   }
