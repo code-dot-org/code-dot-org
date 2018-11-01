@@ -117,7 +117,7 @@ pt-BR:
             '8': Nenhum
             '9': Roll
             '10': Isso ou Aquilo
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -126,8 +126,8 @@ pt-BR:
             "{x: 200, y: 200}": centro
             "{x: 100, y: 100}": superior esquerdo
             "{x: 300, y: 100}": superior direito
-            "{x: 100, y: 300}": inferior esquerdo
-            "{x: 300, y: 300}": inferior direito
+            "{x: 100, y: 300}": inferior a esquerda
+            "{x: 300, y: 300}": inferior a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_layoutSprites:
         options:
@@ -159,8 +159,8 @@ pt-BR:
             "{x: 200, y: 200}": centro
             "{x: 100, y: 100}": superior esquerdo
             "{x: 300, y: 100}": superior direito
-            "{x: 100, y: 300}": inferior esquerdo
-            "{x: 300, y: 300}": inferior direito
+            "{x: 100, y: 300}": inferior a esquerda
+            "{x: 300, y: 300}": inferior a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_makeNewDanceSpriteGroup:
         options:
@@ -346,7 +346,7 @@ pt-BR:
       gamelab_enableDebug:
         text: habilitar a depuração
       gamelab_firstTouched:
-        text: primeira fada a ser tocada
+        text: primeiro sprite tocado
       gamelab_getAnim:
         options:
           COSTUME:
@@ -361,7 +361,7 @@ pt-BR:
             '"direction"': direção do movimento
             '"tint"': tinta
       gamelab_hideTitleScreen:
-        text: esconder título
+        text: esconder a tela do título
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando as bordas"
       gamelab_joystickDirection:
@@ -439,9 +439,9 @@ pt-BR:
             "{x: 50, y: 200}": centro a esquerda
             "{x: 200, y: 200}": centro
             "{x: 350, y: 200}": centro a direita
-            "{x: 50, y: 350}": inferior esquerdo
+            "{x: 50, y: 350}": inferior a esquerda
             "{x: 200, y: 350}": inferior central
-            "{x: 350, y: 350}": inferior direito
+            "{x: 350, y: 350}": inferior a direita
             '"random"': aleatório
       gamelab_setProp:
         options:
@@ -532,9 +532,9 @@ pt-BR:
       gamelab_whileDownArrow:
         text: enquanto a seta para baixo estiver pressionada
       gamelab_whileJoystick:
-        text: quando for o joystick
+        text: enquanto o joystick
       gamelab_whileKey:
-        text: quando {KEY} estiver pressionado
+        text: enquanto pressionado {KEY}
         options:
           KEY:
             '"up"': para cima
@@ -555,7 +555,7 @@ pt-BR:
       gamelab_whileUpArrow:
         text: enquanto a seta para cima estiver pressionada
       gamelab_xLocationOf:
-        text: coordenada x de {SPRITE}
+        text: coordenada x do {SPRITE}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -572,8 +572,8 @@ pt-BR:
             "{x: 200, y: 200}": centro
             "{x: 100, y: 100}": superior esquerdo
             "{x: 300, y: 100}": superior direito
-            "{x: 100, y: 300}": inferior esquerdo
-            "{x: 300, y: 300}": inferior direito
+            "{x: 100, y: 300}": inferior a esquerda
+            "{x: 300, y: 300}": inferior a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
       Mikelab_destroy:
         text: remover {SPRITE}
@@ -641,7 +641,7 @@ pt-BR:
             '"left"': seta para a esquerda
             '"right"': seta para a direita
       Mikelab_xLocationOf:
-        text: coordenada x de {SPRITE}
+        text: coordenada x do {SPRITE}
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:
@@ -654,6 +654,24 @@ pt-BR:
         text: posição aleatória
       Vector_vectorNorth:
         text: norte
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+            '"costume"': fantasia
+            '"direction"': direção do movimento
+            '"rotation"': rotação ou direção
+            '"tint"': tinta
       craft_ifPath:
         options:
           DIR:

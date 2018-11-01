@@ -240,7 +240,9 @@ sl:
             '"left"': puščica levo
             '"right"': puščica desno
             '"w"': Z
+            '"a"': A
             '"s"': J
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -249,7 +251,9 @@ sl:
             '"left"': puščica levo
             '"right"': puščica desno
             '"w"': Z
+            '"a"': A
             '"s"': J
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -263,6 +267,18 @@ sl:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
       craft_ifPath:
         options:
           DIR:

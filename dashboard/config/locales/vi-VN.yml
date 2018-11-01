@@ -48,6 +48,7 @@ vi:
   next_resource: Tài nguyên tiếp theo
   cancel: Huỷ
   okay: Đồng ý
+  or: hoặc
   heading_x_of_y: "%{heading} (trang %{x} của %{y})"
   add_teacher_form:
     code:
@@ -806,6 +807,8 @@ vi:
       title: Minecraft
       body: Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft
         của riêng bạn.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt

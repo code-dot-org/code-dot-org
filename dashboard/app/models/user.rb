@@ -641,7 +641,7 @@ class User < ActiveRecord::Base
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
     User.find(user_id)
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
   end
 

@@ -24,6 +24,7 @@ mt:
   hello: Haw Lilly
   welcome_back: Merħba lura, %{name}
   unsubmit: Unsubmit
+  or: jew
   add_teacher_form:
     code:
       label: 'Żid Għalliem:'

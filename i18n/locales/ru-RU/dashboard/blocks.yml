@@ -66,7 +66,7 @@ ru:
             '8': Отсутствует
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -310,6 +310,18 @@ ru:
         text: повернуть налево
       RyanLab_turnRight:
         text: повернуть направо
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
       craft_ifPath:
         options:
           DIR:

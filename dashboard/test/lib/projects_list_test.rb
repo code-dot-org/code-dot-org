@@ -125,7 +125,8 @@ class ProjectsListTest < ActionController::TestCase
       minecraft: [],
       events: [],
       k1: [],
-      spritelab: []
+      spritelab: [],
+      dance: []
     }
     fake_recent_projects = {
       applab: [
@@ -139,7 +140,8 @@ class ProjectsListTest < ActionController::TestCase
       minecraft: [],
       events: [],
       k1: [],
-      spritelab: []
+      spritelab: [],
+      dance: []
     }
     ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
     ProjectsList.stubs(:fetch_published_project_types).returns(fake_recent_projects)
