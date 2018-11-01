@@ -1,3 +1,4 @@
+@no_older_chrome
 Feature: Dance Lab
   Scenario: Song selector is visible and doesn't display pg13 songs for age < 13
     Given I create a young student named "Harry"
