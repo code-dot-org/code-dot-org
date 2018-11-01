@@ -730,6 +730,18 @@ module Pd::Application
       update(response_scores: response_scores_hash.merge(scores) {|_, old_value, _| old_value}.to_json)
     end
 
+    # Called after the application is created. Do any manipulation needed for the form data
+    # hash here, as well as wend emails
+    def on_successful_create
+      # no-op for the base class
+    end
+
+    # Called after principal approval has been created. Do any manipulation needed for the
+    # form data has here, as well as send emails
+    def on_successful_principal_approval_create
+
+    end
+
     protected
 
     def yes_no_response_to_yes_no_score(response)
