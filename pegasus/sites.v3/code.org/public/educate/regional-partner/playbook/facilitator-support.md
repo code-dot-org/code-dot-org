@@ -16,8 +16,7 @@ nav: regional_partner_playbook_nav
 - [Example Facilitator One-Pager](#page)
 - [Example Contract](#contract)
 - [Facilitator Recruitment Resources](#recruitment)
-- [CS Fundamentals Facilitator Support Documents](#k-5docs)
-- [CS Discoveries and CS Principles Facilitator Support Documents](#6-12docs)
+- [Facilitator Support Documents](#docs)
 - [Facilitator Payments](#pay)
 
 ________________
@@ -63,23 +62,17 @@ ________________
 
 [**Back to the top**](#top)
 ________________
-<a id="k-5docs"></a>
-## CS Fundamentals Facilitator Support Documents
+<a id="docs"></a>
+## Facilitator Support Documents
 
 - [CS Fundamentals Facilitator Playbook](https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5) - Toolkit for CS Fundamentals Facilitators
 - [CS Fundamentals Workshop Process Document](https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit) - Guide for CS Fundamentals Facilitators and Regional Partners to manage K-5 workshops
 - [CS Fundamentals Facilitator Landing Page](https://curriculum.code.org/plcsf/) - See full list of resources and agendas for CS Fundamentals Facilitators
-- <a href="/educate/regional-partner/playbook/payments#csftravel">CS Fundamentals Facilitator Travel Policy</a>
-
-
-<a id="6-12docs"></a>
-
-## CS Discoveries and CS Principles Facilitator Support Documents
-
 - [6-12 Facilitator Handbook](https://docs.google.com/document/d/1DBP4mPMlW2b5dWjnkDZdGtX5hgLW3L1uREvi_JrNNoI/edit?usp=sharing) - Toolkit for CS Discoveries and CS Principles facilitators
 - [CS Discoveries Facilitator Landing Page](https://curriculum.code.org/plcsd/) - See full list of important resources and agendas for CS Discoveries Facilitators
 - [CS Principles Facilitator Landing Page](https://curriculum.code.org/plcsp/) - See full list of important resources and agendas for CS Principles Facilitators
-- <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit">6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated August 2018]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
+- <a href="/educate/regional-partner/playbook/payments#csftravel" target=_blank> K-5 Fundamentals Facilitator Travel Policy</a>
+- <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated August 2018]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
 
 [**Back to the top**](#top)
 

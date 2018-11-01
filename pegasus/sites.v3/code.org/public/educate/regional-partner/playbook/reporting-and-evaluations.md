@@ -19,7 +19,7 @@ ________________
 <a id="requirements"></a>
 <br/>
 
-### **2018 Annual Report Requirements**
+### **2017 Annual Report Requirements**
 
 Each Partner will produce an annual report that includes the following:<br/>
 
@@ -30,6 +30,8 @@ Each Partner will produce an annual report that includes the following:<br/>
 - Summary of survey data provided by Code.org through the Dashboard, and how that data influenced decision making.<br/>
 
 **Please ask your Regional Manager for a copy of the annual report template specific to your group.** It is important that you use this template to complete your report.
+
+(2018 Annual Report Requirements to come)
 
 
 [**Back to the top**](#top)
@@ -54,11 +56,11 @@ ________________
 ### **2016-2017 Data Collection Information**
 Code.org will be collecting data on how teachers felt about workshops and implementation in three ways:
 
-- Automatic surveys at the end of each workshop.
-- Surveys we will send out to all teachers sometime in the fall.
-- Direct look up on Code Studio.
+- Automatic surveys at the end of each workshop. 
+- Surveys we will send out to all teachers sometime in the fall. 
+- Direct look up on Code Studio. 
 
-[This document](https://docs.google.com/document/d/1881ECNGv4tyIzatqHj1bWKm73e16Zq7uVEoPItqXmiY/edit?usp=sharing) describes the details on those three approaches. We’re committed to making our evaluation public, and will post the results to our website once completed and published. You can see our previous reports [here](https://code.org/about/evaluation).
+[This document](https://docs.google.com/document/d/1881ECNGv4tyIzatqHj1bWKm73e16Zq7uVEoPItqXmiY/edit?usp=sharing) describes the details on those three approaches. We’re committed to making our evaluation public, and will post the results to our website once completed and published. You can see our previous reports [here](https://code.org/about/evaluation). 
 
 
 [**Back to the top**](#top)

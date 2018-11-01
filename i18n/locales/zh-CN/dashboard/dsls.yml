@@ -1,6 +1,11 @@
 ---
 en:
   data:
+    contract_match:
+      CREATING CONTRACTS FROM EXAMPLES 1:
+        Big Triangle: 大三角形
+        Big Triangle|Image|Number|String: 大三角形|图像|数字|字符串
+        EXAMPLE 1.solution_blocks, 300: 例1.解决模块300
     evaluation_multi:
       U5 evaluation q1:
         'No': '不'
@@ -1061,6 +1066,8 @@ en:
         Image: 图像
         Number: 数字
         String: 字符串
+      PDK5 Pair programming match:
+        Pair programming: 结对编程
       PDK5 What is unplugged:
         Question: 问题
       'U2L06 - Matching: Label the Diagram':
