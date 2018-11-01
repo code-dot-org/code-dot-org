@@ -17,6 +17,7 @@ import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import {captureThumbnailFromCanvas} from '../util/thumbnail';
 
 const ButtonState = {
   UP: 0,
@@ -296,6 +297,8 @@ Dance.prototype.reset = function () {
 
   this.nativeAPI.reset();
 
+  this.initialCaptureComplete = false;
+
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
     document.getElementById(this.level.softButtons[i]).style.display = 'inline';
@@ -534,6 +537,7 @@ Dance.prototype.loadSongMetadata = async function (id) {
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
+  this.captureInitialImage();
 };
 
 /**
@@ -558,4 +562,19 @@ Dance.prototype.displayFeedback_ = function () {
 
 Dance.prototype.getAppReducers = function () {
   return reducers;
+};
+
+// Number of ticks after which to capture a thumbnail image of the play space.
+const CAPTURE_TICK_COUNT = 250;
+
+/**
+ * Capture a thumbnail image of the play space if the app has been running
+ * for long enough and we have not done so already.
+ */
+Dance.prototype.captureInitialImage = function () {
+  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
+    return;
+  }
+  this.initialCaptureComplete = true;
+  captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
 };
