@@ -287,10 +287,6 @@ module Pd::Application
           required.concat [:what_license_required]
         end
 
-        if hash[:replace_existing] == YES
-          required.concat [:replace_which_course]
-        end
-
         if hash[:able_to_attend_multiple]
           if ([TEXT_FIELDS[:not_sure_explain], TEXT_FIELDS[:unable_to_attend_1920]] & hash[:able_to_attend_multiple]).any?
             required.concat [:travel_to_another_workshop]
@@ -493,16 +489,14 @@ module Pd::Application
         )
 
         if course == 'csd'
-          meets_minimum_criteria_scores[:principal_implementation] = responses[:bonus_points_scores].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
         elsif course == 'csp'
-          meets_minimum_criteria_scores[:principal_implementation] = responses[:bonus_points_scores] == principal_options[:csp_implementation].first ? YES : NO
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
         end
 
         bonus_points_scores[:free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
         bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
       end
-
-      puts bonus_points_scores
 
       update(
         response_scores: response_scores_hash.deep_merge(
