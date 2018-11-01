@@ -621,7 +621,7 @@ export class DetailViewContents extends React.Component {
         {
           ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey) && (
             <div>
-              Meets course requirements?
+              Meets minimum requirements?
               {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
             </div>
           )
@@ -650,7 +650,7 @@ export class DetailViewContents extends React.Component {
     return (
       <FormControl
         componentClass="select"
-        value={this.state.response_scores[category][key]}
+        value={this.state.response_scores[key]}
         id={`${key}-${category}-score`}
         onChange={this.handleScoreChange}
         disabled={!this.state.editing}
