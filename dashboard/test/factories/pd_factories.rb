@@ -1007,6 +1007,7 @@ FactoryGirl.define do
     cs_how_many_minutes 45
     cs_how_many_days_per_week 5
     cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
     cs_terms '1 quarter'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
     pay_fee 'Yes, my school or I will be able to pay the full program fee.'
