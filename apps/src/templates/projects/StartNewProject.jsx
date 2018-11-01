@@ -45,7 +45,8 @@ export default class StartNewProject extends React.Component {
   };
 
   render() {
-    const { canViewAdvancedTools, canViewFullList, includeDanceParty } = this.props;
+    const { canViewAdvancedTools, canViewFullList } = this.props;
+    const { includeDanceParty } = this.props;
     const { showFullList } = this.state;
     const GAMES_AND_EVENTS =  includeDanceParty ?
       ['spritelab', 'dance','flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball'] :
@@ -107,7 +108,7 @@ export default class StartNewProject extends React.Component {
             />
             <NewProjectButtons
               description={i18n.projectGroupMinecraft()}
-              projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
+              projectTypes={['minecraft_aquatic', 'minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
             />
             {canViewAdvancedTools &&
               <NewProjectButtons
