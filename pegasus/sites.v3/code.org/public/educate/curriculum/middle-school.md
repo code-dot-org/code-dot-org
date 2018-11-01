@@ -124,7 +124,7 @@ Recommended courses from 3rd parties
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 | [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, robotics, and film production. Annual subscription/$800. Software $300/computer lab. Free PDF files.  | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
-| [Vidcode](https://www.vidcode.com/) | Over 300 hours of creative coding coursework. Can be implemented as a stand-alone course or as cross-disciplinary units in other subject areas. Each course is 40 hours broken up into modular 10 hour units. Site licenses start at $2,500. | Free onboarding webinar. Animated online PD course available. In person PD for $3500/day. |
+| [Vidcode](https://www.vidcode.com/) | First course and teacher resources are free. Over 12 creative coding courses, 10 hours each, that teach JavaScript and computational thinking. Includes cross-disciplinary, interaction design, and game design courses. School site licenses $2500, a la carte $30/student. Group discounts available. | Free onboarding call, animated online PD course, $250/webinar, $3500/onsite PD |
 
 <br>
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>

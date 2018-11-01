@@ -55,12 +55,12 @@ class FirehoseClient
         record: {data: data_with_common_values.to_json}
       }
     )
-  rescue Aws::Firehose::Errors::ServiceError => e
-    # TODO(asher): Determine what action is appropriate here. In particular,
-    # if the exception is ServiceUnavailableException, we should consider
+  # Swallow and log all errors because an issue sending analytics should not prevent the caller from continuing.
+  rescue StandardError => error
+    # TODO(suresh): if the exception is Firehose ServiceUnavailableException, we should consider
     # backing off and retrying.
     # See http://docs.aws.amazon.com/sdkforruby/api/Aws/Firehose/Client.html#put_record-instance_method.
-    Honeybadger.notify(e)
+    Honeybadger.notify(error)
   end
 
   private

@@ -668,6 +668,8 @@ var projects = module.exports = {
           return 'minecraft_designer';
         } else if (appOptions.level.isConnectionLevel) {
           return 'minecraft_codebuilder';
+        } else if (appOptions.level.isAquaticLevel) {
+          return 'minecraft_aquatic';
         }
         return 'minecraft_adventurer';
       case 'studio':
@@ -1153,27 +1155,19 @@ var projects = module.exports = {
     // TODO: Copy animation assets to new channel
     executeCallback(callback);
   },
-  serverSideRemix() {
+
+  /** @returns {Promise} resolved after remix (for testing) */
+  async serverSideRemix() {
     if (current && !current.name) {
-      var url = projects.appToProjectUrl();
-      if (url === '/projects/algebra_game') {
-        this.setName('Big Game Template');
-      } else if (url === '/projects/applab' ||
-          url === '/projects/makerlab' ||
-          url === '/projects/gamelab' ||
-          url === '/projects/weblab') {
-        this.setName('My Project');
-      }
+      const url = projects.appToProjectUrl();
+      this.setName(url === '/projects/algebra_game' ? 'Big Game Template' : 'My Project');
     }
     function redirectToRemix() {
-      const url = `${projects.getPathName('remix')}`;
-      location.href = url;
+      utils.navigateToHref(`${projects.getPathName('remix')}`);
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(false, true).then(redirectToRemix);
-    } else if (current.isOwner) {
-      this.sourceHandler.prepareForRemix().then(redirectToRemix);
+      await projects.save(false, true).then(redirectToRemix);
     } else {
       redirectToRemix();
     }

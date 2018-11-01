@@ -23,6 +23,7 @@ function showCourses() {
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
   const modernElementaryCoursesAvailable = coursesData.modernelementarycoursesavailable;
+  const displayMinecraftAquatic = coursesData.displayMinecraftAquatic;
 
   ReactDOM.render (
     <Provider store={getStore()}>
@@ -36,6 +37,7 @@ function showCourses() {
         showInitialTips={showInitialTips}
         userId={userId}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
+        displayMinecraftAquatic={displayMinecraftAquatic}
       />
     </Provider>,
     document.getElementById('courses-container')
