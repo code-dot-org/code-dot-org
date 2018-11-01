@@ -279,6 +279,18 @@ el:
         text: στρίψε αριστερά
       RyanLab_turnRight:
         text: στρίψε δεξιά
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
       craft_ifPath:
         options:
           DIR:

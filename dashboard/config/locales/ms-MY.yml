@@ -22,6 +22,7 @@ ms:
   welcome_back: Selamat datang kembali, % {nama}
   submit: Hantar
   cancel: Batal
+  or: atau
   add_teacher_form:
     code:
       label: 'Tambahkan guru:'

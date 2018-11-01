@@ -279,6 +279,18 @@ da:
         text: drej til venstre
       RyanLab_turnRight:
         text: drej til højre
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
       craft_ifPath:
         options:
           DIR:

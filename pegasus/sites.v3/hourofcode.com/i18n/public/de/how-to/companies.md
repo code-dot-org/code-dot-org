@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org bietet die Möglichkeit, [Kontakt](<%= codeorg_url('/volunteer') %>) zwischen Ihren Mitarbeitern und örtlichen Klassen, in denen "Hour of Code"-Veranstaltungen stattfinden, herzustellen. So können Ihre Mitarbeiter ihre beruflichen Erfahrungen einbringen und die Schüler für das Studium der Informatik begeistern.
 
-<button>Melden Sie sich als Freiwilliger!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
 Um mehr darüber zu erfahren, wie Sie Ihre Mitarbeiter ermutigen können und wie der Kontakt zwischen Ihren Mitarbeitern und den örtlichen Klassen hergestellt werden kann, schauen Sie sich unseren [Leitfaden für Firmenpartner](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>) an.
 

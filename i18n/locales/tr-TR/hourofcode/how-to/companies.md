@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org, çalışanlarınıza, Kod-Saati çalışan yerel sınıflara [bağlanma](%= codeorg_url('/volunteer') %) ve burada teknik deneyimlerini paylaşma ve öğrencilere bilgisayar öğrenmeleri için ilham olma fırsatı sunar.
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
