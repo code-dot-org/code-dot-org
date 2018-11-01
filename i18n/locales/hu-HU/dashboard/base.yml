@@ -27,6 +27,7 @@ hu:
         age: 'Kor'
         gender: 'Nem'
         edit_header: 'Felhasználói Adatok Szerkesztése'
+        finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
         error:
           future: nem lehet a jövőben
   hello: "Helló világ"
@@ -40,6 +41,7 @@ hu:
   next_resource: Következő erőforrás
   cancel: "Mégsem"
   okay: "Oké"
+  or: "vagy"
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
   add_teacher_form:
     code:
@@ -115,12 +117,14 @@ hu:
     valid_password: "Érvényes jelszó!"
     invalid_password: "A jelszónak legalább 6 karakter hosszúnak kell lennie"
     mismatch_password: "A megadott két jelszó nem egyezik"
+    student_consent: "Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
     additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_label: "Fióktípus"
     user_type_teacher: "Tanár"
     user_type_student: "Diák"
     field_is_required: "szükséges"
     accept_terms: "El kell fogadnia, hogy létre hozzon egy fiókot"
+    email_preference_question: "Küldhetünk neked email üzeneteket az új tanfolyamjainkról, helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)"
     email_preference_yes: "Igen"
     email_preference_no: "Nem"
   school_info:
@@ -500,6 +504,8 @@ hu:
     minecraft2016:
       title: "Minecraft"
       body: "Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
     unplugged:

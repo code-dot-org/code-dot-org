@@ -1010,6 +1010,8 @@ zh-CN:
               name: 教案参考
             Sprite Lab:
               name: 精灵实验室
+            Dance Lab:
+              name: 舞蹈实验室
         algebraPD2b:
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
@@ -3299,6 +3301,10 @@ zh-CN:
               name: RGB 颜色
             Processing with Bits:
               name: 比特位处理
+            Auto-Run Binary Artist Puzzles:
+              name: 自动运行二进制艺术家拼图
+            Course C EOC 2019:
+              name: 课程 C EOC 2019
             Play Lab:
               name: 游戏实验室
         csd2-2017:

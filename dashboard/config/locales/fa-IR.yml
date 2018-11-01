@@ -41,6 +41,7 @@ fa:
   next_resource: منبع بعدی
   cancel: لغو
   okay: باشه
+  or: یا
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
   add_teacher_form:
     code:
@@ -487,6 +488,8 @@ fa:
       title: ماینکرفت
       body: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
     minecraft2016:
+      title: ماینکرفت
+    aquatic:
       title: ماینکرفت
     hero:
       title: ماینکرفت
