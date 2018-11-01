@@ -20,6 +20,7 @@ class CoursesTeacherEnglish extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
+    displayMinecraftAquatic: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -28,7 +29,7 @@ class CoursesTeacherEnglish extends Component {
   }
 
   render() {
-    const { isSignedOut, showInitialTips, userId } = this.props;
+    const { isSignedOut, showInitialTips, userId, displayMinecraftAquatic } = this.props;
     return (
       <div>
         {(!isSignedOut &&
@@ -69,7 +70,10 @@ class CoursesTeacherEnglish extends Component {
             link={pegasus('/hourofcode/overview')}
             showLink={true}
           >
-            <CourseBlocksHoc rowCount={1}/>
+            <CourseBlocksHoc
+              rowCount={1}
+              displayMinecraftAquatic={displayMinecraftAquatic}
+            />
           </ContentContainer>
 
           <CourseBlocksTools

@@ -20,11 +20,11 @@ class CoursesControllerTest < ActionController::TestCase
 
   # Tests for index
 
-  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 26
+  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 27
 
-  test_user_gets_response_for :index, response: :success, user: :admin, queries: 26
+  test_user_gets_response_for :index, response: :success, user: :admin, queries: 27
 
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 25
+  test_user_gets_response_for :index, response: :success, user: :user, queries: 26
 
   # Tests for show
 

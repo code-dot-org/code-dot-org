@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_48_CSP_2_2_1'
+right 'Complexity made simple'
+wrong 'Step by step instructions'
+wrong 'Mathematical operations'
+wrong 'Breaking data'
+markdown <<MARKDOWN
+What is Abstraction?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.2.1** and Essential Knowledge statements: **2.2.1B**
+<hr>
+ (A) This option is correct. Abstraction involves the simplification of something more complex.
+
+<hr>
+ (B) This option is incorrect. Abstractions are not instructions.
+
+<hr>
+ (C) This option is incorrect. Abstraction does not perform mathematical operations.
+
+<hr>
+ (D) This option is correct. Abstraction does not break data.
+
+MARKDOWN

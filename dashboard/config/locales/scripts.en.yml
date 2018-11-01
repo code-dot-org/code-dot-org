@@ -9657,8 +9657,8 @@ en:
               name: Aquatic
           title: 'Minecraft: Voyage Aquatic'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Use your creativity and problem solving skills to explore and build underwater worlds with code!
+          description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
         sconyers:
           stages:
             Lesson the first:
@@ -9684,7 +9684,7 @@ en:
               description_student: ''
               description_teacher: ''
         dance-draft:
-          title: ''
+          title: DO NOT USE
           description: ''
           description_short: ''
           description_audience: ''
@@ -9700,6 +9700,14 @@ en:
             Hannah Test Stage:
               name: Hannah Test Stage
           title: CSP Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dance-extras:
+          stages:
+            Dance Party - Go Further:
+              name: Dance Party - Go Further
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

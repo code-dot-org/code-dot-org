@@ -3,7 +3,7 @@
 
 {
   server_access_key: node['cdo-servers']['ssh-private-key'],
-  'server_access_key.pub': node['cdo-servers']['ssh-key'],
+  'server_access_key.pub' => node['cdo-servers']['ssh-key'],
 }.each_pair do |file, text|
   file "#{node[:home]}/.ssh/#{file}" do
     content text
