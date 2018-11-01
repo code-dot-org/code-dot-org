@@ -88,6 +88,8 @@ const styles = {
   }
 };
 
+const NA = "N/A";
+
 const DEFAULT_NOTES = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:";
 
 export class DetailViewContents extends React.Component {
@@ -354,7 +356,6 @@ export class DetailViewContents extends React.Component {
   };
 
   renderRegionalPartnerAnswer = () => {
-
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
         <RegionalPartnerDropdown
@@ -716,15 +717,15 @@ export class DetailViewContents extends React.Component {
     if (MultiAnswerQuestionFields[key]) {
       return (
         <div>
-          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])]}</p>)}
-          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])]}</p>)}
-          {MultiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[MultiAnswerQuestionFields[key]['stats']]}</p>)}
+          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])] || NA}</p>)}
+          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])] || NA}</p>)}
+          {MultiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[MultiAnswerQuestionFields[key]['stats']] || NA}</p>)}
         </div>
       );
     } else if (Array.isArray(answer)) {
       return answer.sort().join(', ');
     } else {
-      return answer;
+      return answer || NA;
     }
   };
 
