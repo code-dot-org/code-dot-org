@@ -426,6 +426,12 @@ module Pd::Application
     end
 
     # @override
+    # Additional labels to include in the form data hash
+    def self.additional_labels
+      ADDITIONAL_KEYS_IN_ANSWERS
+    end
+
+    # @override
     # Called once after the application is submitted. Called again after principal
     # approval is done. Generates scores for responses, is idempotent and does not
     # override existing scores
@@ -486,9 +492,11 @@ module Pd::Application
           }
         )
 
-        bonus_points_scores[:principal_free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
-        bonus_points_scores[:principal_underrepresented_minority_percent] = (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
+        bonus_points_scores[:free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
+        bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
       end
+
+      puts bonus_points_scores
 
       update(
         response_scores: response_scores_hash.deep_merge(
@@ -579,16 +587,30 @@ module Pd::Application
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
       implementation_string = principal_response.values_at("#{course}_implementation".to_sym, "#{course}_implementation_other".to_sym).compact.join(" ")
-
+      principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
+          principal_response_first_name: principal_response[:first_name],
+          principal_response_last_name: principal_response[:last_name],
+          principal_response_email: principal_response[:email],
+          principal_school: principal_school.try(:name) || principal_response[:school_name],
+          principal_school_type: principal_school.try(:school_type),
+          principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
           principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
           principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_implementation: implementation_string,
+          principal_total_enrollment: principal_response[:total_student_enrollment],
           principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
           principal_underrepresented_minority_percent: format("%0.02f%%", principal_approval.underrepresented_minority_percent),
+          principal_american_indian_or_native_alaskan_percent: format("%0.02f%%", principal_response[:american_indian]),
+          principal_asian_percent: format("%0.02f%%", principal_response[:asian]),
+          principal_black_or_african_american_percent: format("%0.02f%%", principal_response[:black]),
+          principal_hispanic_or_latino_percent: format("%0.02f%%", principal_response[:hispanic]),
+          principal_native_hawaiian_or_pacific_islander_percent: format("%0.02f%%", principal_response[:pacific_islander]),
+          principal_white_percent: format("%0.02f%%", principal_response[:white]),
+          principal_other_percent: format("%0.02f%%", principal_response[:other]),
           principal_wont_replace_existing_course: replace_course_string,
           principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],
