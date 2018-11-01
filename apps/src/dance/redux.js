@@ -25,7 +25,8 @@ export const actions = {
 // Reducers
 
 const initialState = {
-  selectedSong: 'macklemore90'
+  selectedSong: 'macklemore90',
+  songData: {},
 };
 
 function songs(state, action) {
