@@ -156,7 +156,7 @@ We're seeking candidates who demonstrate the following qualities:
 <h3 style="font-family: 'Gotham 5r', sans-serif">Additional Qualities (preferred)</h3>
 
   * Demonstrated ability to effectively engage and co-lead learning experiences for adults
-  * Prior experience as a Code.org facilitator
+  * Prior experience as a Code.org facilitator for a different Code.org course
 
 [/col-80]
 
