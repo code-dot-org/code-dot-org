@@ -479,7 +479,7 @@ module Pd::Application
       meets_minimum_criteria_scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
 
       # Section 5
-      bonus_points_scores[:race] = (responses[:race] & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0
+      bonus_points_scores[:race] = ((responses[:race] || []) & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0
 
       # Principal Approval
       if responses[:principal_approval]

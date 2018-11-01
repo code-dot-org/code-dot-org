@@ -639,7 +639,7 @@ module Pd::Application
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
-        race: options[:race].second,
+        race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_plan_to_teach: principal_options[:plan_to_teach].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
@@ -698,7 +698,7 @@ module Pd::Application
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
-        race: options[:race].second,
+        race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_plan_to_teach: principal_options[:plan_to_teach].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
@@ -756,7 +756,7 @@ module Pd::Application
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
-        race: options[:race].second
+        race: [options[:race].second]
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -803,7 +803,7 @@ module Pd::Application
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
-        race: options[:race].first,
+        race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_plan_to_teach: principal_options[:plan_to_teach].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].last,
