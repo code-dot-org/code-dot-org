@@ -109,14 +109,14 @@ Dance.prototype.init = async function (config) {
 
   const showFinishButton = this.level.freePlay || (!this.level.isProjectLevel && !this.level.validationCode);
 
-  const songManifest = await getSongManifest(config.useRestrictedSongs);
-  const songData = parseSongOptions(songManifest);
-  getStore().dispatch(setSongData(songData));
-
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
   });
+
+  const songManifest = await getSongManifest(config.useRestrictedSongs);
+  const songData = parseSongOptions(songManifest);
+  getStore().dispatch(setSongData(songData));
 
   // Pre-register all audio preloads with our Sounds API, which will load
   // them into memory so they can play immediately:
