@@ -13,11 +13,10 @@
       %img.tutorial-tile-img{src: CDO.code_org_url(image_url)}
     .tutorial-info
       %span
-        %h3.tutorial-info-h Intro to App Lab (Ages 13+)
-        .smalltext Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming. (English Only)
+        %h3.tutorial-info-h= I18n.t(:applab_tile_title)
+        .smalltext= I18n.t(:applab_tile_subtitle)
       %span
         %a{href: CDO.studio_url("/s/applab-intro/reset")}
-          %button.tutorial-info-start.tutorial-gray Start tutorial
+          %button.tutorial-info-start.tutorial-gray= I18n.t(:applab_tile_start_tutorial)
         .tutorial-info-guide
-          %a{href: "https://curriculum.code.org/hoc/plugged/7/"}
-            View teacher guide
+          %a{href: "https://curriculum.code.org/hoc/plugged/7/"}= I18n.t(:applab_tile_teacher_guide)
