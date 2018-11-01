@@ -617,32 +617,41 @@ export class DetailViewContents extends React.Component {
       return false;
     }
 
+    let scoringDropdowns = [];
+    if (ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey)) {
+      scoringDropdowns.push(
+        <div key="meets_minimum_criteria_scores">
+          Meets minimum requirements?
+          {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
+        </div>
+      );
+    }
+    if (ScoreableQuestions['bonusPoints'].includes(snakeCaseKey)) {
+      if (scoringDropdowns.length) {
+        scoringDropdowns.push(<br key="bonus_points_br"/>);
+      }
+      scoringDropdowns.push(
+        <div key="bonus_points_scores">
+          Bonus Points?
+          {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
+        </div>
+      );
+    }
+    if (ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)) {
+      if (scoringDropdowns.length) {
+        scoringDropdowns.push(<br key="meets_scholarship_criteria_br"/>);
+      }
+      scoringDropdowns.push(
+        <div key="meets_scholarship_criteria_scores">
+          Meets scholarship requirements?
+          {this.renderScoringDropdown(snakeCaseKey, 'meets_scholarship_criteria_scores')}
+        </div>
+      );
+    }
+
     return (
       <td style={styles.scoringColumn}>
-        {
-          ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey) && (
-            <div>
-              Meets minimum requirements?
-              {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
-            </div>
-          )
-        }
-        {
-          ScoreableQuestions['bonusPoints'].includes(snakeCaseKey) && (
-            <div>
-              Bonus Points?
-              {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
-            </div>
-          )
-        }
-        {
-          ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey) && (
-            <div>
-              Meets scholarship requirements?
-              {this.renderScoringDropdown(snakeCaseKey, 'meets_scholarship_criteria_scores')}
-            </div>
-          )
-        }
+        {scoringDropdowns}
       </td>
     );
   };
