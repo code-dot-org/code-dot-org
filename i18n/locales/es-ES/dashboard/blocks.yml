@@ -419,19 +419,81 @@ es:
             '"x"': posición x
             '"y"': posición y
       craft_ifPath:
+        text: |-
+          si en ruta {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": delante
+            "'right'": hacia la derecha
+            "'left'": hacia la izquierda
       craft_ifStandingOn:
+        text: |-
+          si de pie en {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": coral azul
+            "'redCoralBlock'": coral rojo
             "'sand'": arena
+            "'wool_blue'": aguas profundas
             "'planksOak'": tablones de roble
+            "'seaLantern'": linterna del mar
       craft_ifStandingOnLimit:
+        text: |-
+          si de pie en {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": arena
+            "'darkPrismarine'": prismarina oscura
+            "'seaLantern'": linterna del mar
       craft_moveForward:
         text: avanzar
+      craft_placeBlock:
+        text: colocar {blockType}
+        options:
+          blockType:
+            '"strippedOak"': tronco de roble sin corteza
+            '"strippedDarkOak"': tronco de roble oscuro sin corteza
+            '"stoneBricks"': ladrillos de piedra
+            '"mossyStoneBricks"': ladrillos de piedra musgosa
+            '"crackedStoneBricks"': ladrillos de piedra agrietados
+            '"decorativeStoneBricks"': ladrillos de piedra decorativa
+            '"blueCoralBlock"': bloque de coral azul
+            '"pinkCoralBlock"': bloque de coral rosa
+            '"magentaCoralBlock"': bloque de coral magenta
+            '"redCoralBlock"': bloque de coral rojo
+            '"yellowCoralBlock"': bloque de coral amarillo
+            '"blueDeadCoralBlock"': bloque de coral azul muerto
+            '"pinkDeadCoralBlock"': bloque de coral rosa muerto
+            '"magentaDeadCoralBlock"': bloque de coral magenta muerto
+            '"readDeadCoralBlock"': bloque de coral rojo muerto
+            '"yellowDeadCoralBlock"': bloque de coral amarillo muerto
+            '"prismarine"': prismarina
+            '"darkPrismarine"': prismarina oscura
+            '"seaLantern"': linterna del mar
+            '"packedIce"': hielo compacto
+            '"blueIce"': hielo azul
+            '"blackConcrete"': hormigón negro
+            '"seaGrass"': pradera marina
+            '"kelp"': alga marina
+            '"polishedGranite"': granito pulido
       craft_placeTorch:
         text: colocar antorcha
+      craft_repeatUntilConduit:
+        text: |-
+          repetir hasta completar conducto
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          repetir hasta meta
+          {STATEMENT}
+      craft_spawnEntity:
+        text: generar {ENTITY}
+      craft_turn:
+        text: girar {DIR}
+        options:
+          DIR:
+            right: derecha ↻
+            left: izquierda ↺

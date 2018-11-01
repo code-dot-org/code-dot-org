@@ -903,21 +903,83 @@ zh-CN:
             '"rotation"': 旋转或方向
             '"tint"': 色调
       craft_ifPath:
+        text: |-
+          一直{DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": 前面
+            "'right'": 向右转
+            "'left'": 向左转
       craft_ifStandingOn:
+        text: |-
+          站在{TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": 蓝色珊瑚
+            "'redCoralBlock'": 红色珊瑚
             "'sand'": 沙子
+            "'wool_blue'": 深水
             "'planksOak'": 橡木板
+            "'seaLantern'": 海晶灯
       craft_ifStandingOnLimit:
+        text: |-
+          站在{TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 沙子
+            "'darkPrismarine'": 暗海晶石
+            "'seaLantern'": 海晶灯
       craft_log:
         text: 日志消息 {MESSAGE}
       craft_moveForward:
         text: 向前移动
+      craft_placeBlock:
+        text: 放下{blockType}
+        options:
+          blockType:
+            '"strippedOak"': 去皮橡树
+            '"strippedDarkOak"': 去皮深色橡树
+            '"stoneBricks"': 石砖
+            '"mossyStoneBricks"': 苔石砖
+            '"crackedStoneBricks"': 裂石砖
+            '"decorativeStoneBricks"': 装饰性石砖
+            '"blueCoralBlock"': 蓝色珊瑚区块
+            '"pinkCoralBlock"': 粉色珊瑚区块
+            '"magentaCoralBlock"': 品红色珊瑚区块
+            '"redCoralBlock"': 红色珊瑚区块
+            '"yellowCoralBlock"': 黄色珊瑚区块
+            '"blueDeadCoralBlock"': 蓝色死亡珊瑚区块
+            '"pinkDeadCoralBlock"': 粉色死亡珊瑚区块
+            '"magentaDeadCoralBlock"': 品红色死亡珊瑚区块
+            '"readDeadCoralBlock"': 红色死亡珊瑚区块
+            '"yellowDeadCoralBlock"': 黄色死亡珊瑚区块
+            '"prismarine"': 海晶石
+            '"darkPrismarine"': 暗海晶石
+            '"seaLantern"': 海晶灯
+            '"packedIce"': 浮冰
+            '"blueIce"': 蓝色冰
+            '"blackConcrete"': 黑色混凝土
+            '"seaGrass"': 海草
+            '"kelp"': 海带
+            '"polishedGranite"': 磨制花岗岩
       craft_placeTorch:
         text: 放下火把
+      craft_repeatUntilConduit:
+        text: |-
+          重复，直至导管完成
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          重复，直至目标达成
+          {STATEMENT}
+      craft_spawnEntity:
+        text: 生成{ENTITY}
+      craft_turn:
+        text: 转向{DIR}
+        options:
+          DIR:
+            right: 右 ↻
+            left: 左 ↺

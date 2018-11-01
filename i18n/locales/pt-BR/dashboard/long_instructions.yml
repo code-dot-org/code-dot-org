@@ -286,7 +286,26 @@ pt-BR:
       Big Game Booleans 1: "Da última vez que você trabalhou em seu jogo fizemos\nnossos alvo e inimigo voarem pela tela, mas eles nunca\nvoltaram. Clique em \"Executar\" para ver como seu jogo está funcionando agora e depois clique\nem concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem\nsaído."
       Big Game Booleans 5: "Nesse ponto do seu jogo, seu inimigo deve percorrer\na tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para\na direita e eles devem retornar para o lado oposto, repetidamente. Veja\nse seu jogo está funcionando como você gostaria e então clique em\nConcluir para seguir em frente."
       Big Game Collision 1: "Até agora você programou um jogo\ncom um alvo e um inimigo que se movem, sendo que ambos retornam à tela quando\nsaem, e um jogador que responde à entrada do teclado. Clique em Executar para\nver como seu jogo está funcionando e então vamos para o que\nestá faltando - a detecção de colisão!"
+      Big Game Final: |-
+        Você conseguiu!
+        
+        Agora seu jogo deve estar funcionando completamente. Aproveite seu novo jogo e faça alguns ajustes finais.
+        
+        Quando você estiver feliz com o produto final, clique em Concluir e você terá a oportunidade de compartilhar um link para o seu jogo. 
+        
+        Bom trabalho!
+      Big Game Player 1: |-
+        Estamos quase terminando o jogo!
+        
+        Da última vez que você trabalhou no seu jogo, você usou booleanos para fazer seu alvo e seu inimigo retornarem à tela quando saírem. Clique em Executar para ver como seu jogo está agora e então vamos fazer seu jogador se mover para cima e para baixo.
+      Big Game Player 2: |-
+        Para mover o jogador para cima e para baixo, vamos precisar usar um bloco condicional para descobrir qual tecla está pressionada e responder de acordo.
+        
+        Os computadores leem teclas pressionadas como códigos numéricos - a seta para cima é **38** e a seta para baixo é **40**. Você pode consultar outros códigos de teclas em seu material. 
+        
+        Edite a função `atualizar-jogador` para que ela mova o jogador para cima quando a seta para cima (código 38) estiver pressionada e para baixo quando a seta para baixo (código 40) estiver pressionada.
       Big Game Vars 1: "Vamos começar o seu Grande Jogo! Aqui você vai\nver um monte de trechos de código para reservar espaço que você eventualmente vai substituir\npelo seu próprio código, mas por enquanto vamos nos preocupar somente em definir as variáveis.\nClique em \"Executar\" para ver como é o jogo com os valores-padrão."
+      Big Game Vars 3: Agora, vamos definir o pano de fundo para seu novo jogo. Edite a variável `bg` e selecione uma nova imagem de pano de fundo no menu.
       Big Game Vars 4: "Incrível! Agora você pode atualizar as variáveis para\no jogador, o alvo e o inimigo. Fique à vontade para brincar com todas as variáveis\ne assim deixar seu jogo do jeito que você quer. Clique em \"Concluir\"\nquando você terminar."
       CSD U3 - images - Embed Project: Exemplo do Projeto Final
       CSD U5 Waze Data Video: Assista este vídeo para aprender como esse problema é resolvido pelo Waze. Enquanto assiste, pense em quais dados estão sendo coletados e de onde eles estão vindo.
@@ -334,6 +353,18 @@ pt-BR:
       Eval Strings Images Free Play: "Atividade livre: explore os blocos disponíveis\npara criar algo interessante. Lembre-se de compartilhar suas criações favoritas."
       Fish Tank 5-validated_simple: O peixe quer um amigo.   Adicione um novo sprite.
       Function intro Ryan: "A **função** chamada 'construir ponte' está em sua área de trabalho. Todos os códigos de que você precisa para atravessar o rio estão corretos! \\r\n \\r\nFixe o bloco verde pequeno duas vezes em sua área de trabalho para corrigir o caminho e levar o jogador {currentPlayerName} até a Tocha de Redstone [redstone_torch]."
+      HOC 2018 Level_1: "Você precisa de suprimentos para a viagem adiante. Colete um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) escondida em algum lugar deste Monumento Oceânico. Você consegue encontrá-la?\n\n"
+      HOC 2018 Level_11: Construa uma parede de **prismarinho** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) em volta do concreto preto. Isso ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) e concluirá seu desafio.
+      HOC 2018 Level_12: Parabéns! O mundo aquático aberto aguarda você. Construa um recife de coral. Um vulcão. Um naufrágio. Você decide.
+      HOC 2018 Level_2: Usar um barco é bem melhor do que nadar no mar aberto. Vá até o final do cais e suba a bordo.
+      HOC 2018 Level_3: Pegue os remos e controle o barco pelo mar aberto para pegar o **bacalhau** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Use o bacalhau para alimentar o **golfinho** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Use um bloco de repetição para atravessar o oceano mais rápido.
+      HOC 2018 Level_5: Há uma **concha de náutilo** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) escondida em algum lugar. Explore o naufrágio para encontrar o **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Aqui está congelando! Pegue um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) no caminho até as ruínas subaquáticas.
+      HOC 2018 Level_7a: "Você encontrou as ruínas subaquáticas. No arenito, procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) que contém tesouro de **prismarinho** (https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "Primeiro icebergs, e agora lava? Sobreviva nesta ilha vulcânica e encontre o **salmão** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) no recife de coral.\n\n"
+      HOC 2018 Level_9b: "Você conseguiu chegar ao recife de corais. Agora, procure o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png). Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) do tesouro.\n\n"
       K-1 Bee Loops 2: "Use um laço \"repita\" para mover e então coletar o néctar e\nproduzir mel!"
       K-1 Bee Loops 3: "Use três laços \"repita\" para coletar o néctar\ne\nfabricar o mel!"
       K-1 Bee Loops 4: "Use laços \"repita\" para obter néctar, produzir\nmel e\npara mover!"
