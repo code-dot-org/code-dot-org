@@ -17,11 +17,14 @@ cs:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Připojte se k největší vzdělávací akce v dějinách, Prosinec 7-13, 2015'
   front_intro_default: 'Hodina kódu je celosvětová akce, které se účastní desítky milionů žáků z více než 180 zemí světa. Kdokoliv může zorganizovat svoji akci v rámci Hodiny kódu. Jsou k dispozici jednohodinové výukové programy. Nejsou požadované žádné předchozí zkušenosti. <strong>Určeno pro věk od 4 do 104.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Podívejte se na nové video'
   front_watch_regular_video: 'Podívejte se na video'
   front_volunteers: 'Hledáme technické dobrovolníky'
@@ -292,7 +295,7 @@ cs:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Mapa Hodiny kódu"
   map_header: '# akcí Hodiny kódu na celém světě'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Zobrazit všechny události'
   map_header_company: '# od firemních organizátorů'
   map_header_country: '# v České republice (%{country})'
@@ -420,6 +423,7 @@ cs:
   title_stats: Popisky a statistiky
   title_partners: Partneři
   title_resources: Zdroje
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Děkujeme za přihlášení k hostování akce Hodina kódu!
   title_tutorial_guidelines: Pokyny k výukovým programům
   title_whole_school: Účast celé školy
