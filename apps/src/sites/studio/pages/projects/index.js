@@ -62,6 +62,7 @@ $(document).ready(() => {
       <Provider store={store}>
         <PublicGallery
           limitedGallery={projectsData.limitedGallery}
+          includeDanceParty={projectsData.includeDanceParty}
         />
       </Provider>,
       publicGallery);

@@ -1770,11 +1770,25 @@ si-LK:
   header_stats: සංඛ්‍යාන
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   user_header_label: ආයුබෝවන් %{username}
+  user_header_team: කණ්ඩායම
   user_header_settings: මගේ ගිණුම
   user_header_logout: නික්මෙන්න
   user_header_signin: පුරන්න
   user_header_playlab: ක්‍රීඩා පරීක්ෂණාගාරය
   user_header_minecraft: Minecraft
   user_header_flappy: ෆ්ලැපි
-  creativity_create: තනන්න
-  creativity_hoc_coming: Hour of Code ළඟදීම…
+  hoc2018_creativity_create: තනන්න
+  hoc2018_mc_page_title: Minecraft Hour of Code නිබන්ධන
+  hoc2018_mc_designer_title: Minecraft Designer
+  hoc2018_mc_adventurer_title: Minecraft Adventurer
+  hoc2018_mc_start: ආරම්භ කරන්න
+  hoc2018_mc_no_internet: අන්තර්ජාල පහසුකම් නොමැති ද?
+  hoc2018_mc_download_adventurer: Minecraft Adventurer නොබැඳි අනුවාදය බාගන්න.
+  hoc2018_mc_watch_videos: ඔබ ආරම්භ කිරීමට පෙර, මෙම ප්‍රබෝධමත් කරවන වීඩියෝ එකක් බලන්න
+  hoc2018_mc_videos_more: ප්‍රසිද්ධ චරිත සහ කලාකරුවන්ගෙන් තවත් <a href='%{inspiring_videos_playlist}'>ආදර්ශමත්
+    වීඩියෝ</a> රැසක්
+  hoc2018_mc_careers_more: තාක්ෂණික ක්ෂේත්‍ර වල ප්‍රවීණයන් ගෙන් තවත් <a href='%{careers_url}'
+    target='_blank'>ආදර්ශමත් වීඩියෝ</a> රැසක්
+  hoc2018_mc_video_title_inspire_girl: ගැහැණු ළමයෙකු උනන්දු කරවන්න
+  hoc2018_mc_homepage_join_us: අප හා එක් වන්න
+  hoc2018_mc_homepage_try_it: එය උත්සහ කරන්න

@@ -30,6 +30,8 @@ zh-CN:
         edit_header: 编辑用户信息
         finish_sign_up_header: 完成创建帐户
         finish_sign_up_subheader: 填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。
+        finish_sign_up_subheader_provider: 填写信息，来使用<strong>%{provider}</strong> 的
+          <strong>%{email}</strong> 创建Code.org 账户。
         error:
           future: 不能选择将来的时间
   hello: 世界你好
@@ -43,6 +45,7 @@ zh-CN:
   next_resource: 下一个资源
   cancel: 取消
   okay: 好吧
+  or: 或
   heading_x_of_y: "%{heading} (第%{x} 页 共%{y} 页)"
   add_teacher_form:
     code:
@@ -83,20 +86,20 @@ zh-CN:
     sign_out_of: '%{provider} 用于登录 <a href="%{url}"> 点击这里</a> 来注销 %{provider}.'
     already_signedup: 已经注册了吗？
     notyet_signedup: 还未注册吗？
-    google_oauth2: 谷歌帐户
+    google_oauth2: 谷歌
     twitter: 推特
     facebook: Facebook
-    windowslive: 微软账户
-    microsoft_v2_auth: 微软账户
+    windowslive: 微软
+    microsoft_v2_auth: 微软
     clever: Clever 账号
-    powerschool: Powerschool 帐户
+    powerschool: Powerschool
     forgot_password: 忘记了您的密码吗？
     migration_success: 成功！已经更新为新的帐户体验。
     demigration_success: 新帐户体验已禁用。
     need_confirmation: 没有收到确认的说明吗？
     need_unlock: 未收到解锁指令吗？
-    not_linked: 对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。
-    use_clever: 对不起，您的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。
+    not_linked: 对不起，你的编程一小时账户没有连接到 %{provider}。需要通过输入密码来登录。
+    use_clever: 对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。
     unable_to_connect_provider: 无法将您的 Code.org 帐户连接到 %{provider}。请重试。
     already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
     already_linked: 你的 %{provider} 已连接到了 Code.org 帐户。
@@ -120,6 +123,7 @@ zh-CN:
     age: 年龄
     user_type: 你是学生还是老师？
     submit: 注册
+    go_to_account: 转到我的帐户
     teacher: 你是老师吗？
     valid_username: 可用 ！
     invalid_username: 用户名必须至少 5 个字符
@@ -129,6 +133,7 @@ zh-CN:
     mismatch_password: 您输入的两个密码不匹配
     agree_tos_privacy: 我同意 <a href='http://code.org/tos'>服务条款</a> 和 <a href='http://code.org/privacy'>隐私策略</a>。
     under_13_consent: 如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。
+    student_consent: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
     agree_us_website: 我同意使用美国的网站。
     my_data_to_us: 我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
     student_terms: 电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='http://code.org/privacy'>隐私政策</a>。
@@ -176,7 +181,7 @@ zh-CN:
     remember: 记住我
     submit: 登录
   signin:
-    try_heading: 想不用注册就尝试编码吗？
+    try_heading: 想要匿名尝试编程？
     try_hoc: 先试试编程一小时
     try_20hours: 请尝试我们 20 小时计算机科学简介课程
   signinsection:
@@ -221,6 +226,7 @@ zh-CN:
     code_with_teacher: "%{teacher_name} 的%{section_code}"
     confirm:
       remove: 您确定要离开这个小组吗？
+    default_name: 未命名的小组
     remove: "（删除小组）"
     type:
       picture: 图片密码
@@ -269,7 +275,7 @@ zh-CN:
         personal_login_created_username: 您已成功创建了个人账号。您现在可以使用用户名(%{username}) 和密码登录。
   nav:
     header:
-      finished_hoc: 我已经完成了我的编程一小时项目。
+      finished_hoc: 完成了！
       sign_in_to_save: 登录以保存进度
       free_play:
         playlab: 创建一个游戏实验室应用
@@ -322,6 +328,7 @@ zh-CN:
       signin: 登录
       signup: 创建一个账户
       already_registered: 已经注册了？
+      pair_programming: 结对编程
       team: 团队
       driver: 已登录
       navigator: 搭档
@@ -334,6 +341,7 @@ zh-CN:
       minecraft: 我的世界
       flappy: Flappy Bird
       dance: 舞蹈派对
+      view_all: 查看所有项目……
     popup:
       progress_for_user: "%{name}的进度"
       progress: 您的进度
@@ -367,6 +375,7 @@ zh-CN:
       example: 示例解决方案
       example_with_number: 示例解决方案 %{solution_number}
       submitted_on: 已提交于：
+      last_updated: 最近更新：
       unsubmit: 未提交
       worked_with: 共事
       update_lock_settings: 在这里更新锁设置。
@@ -655,6 +664,8 @@ zh-CN:
     minecraft2016:
       title: 我的世界
       body: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
+    aquatic:
+      title: 我的世界
     hero:
       title: 我的世界
       body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"

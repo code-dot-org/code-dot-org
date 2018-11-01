@@ -39,6 +39,7 @@ gl:
   next_resource: Recurso seguinte
   cancel: "Cancelar"
   okay: "De acordo"
+  or: "ou"
   heading_x_of_y: "%{heading} (páxina %{x} de %{y})"
   add_teacher_form:
     code:
@@ -511,6 +512,8 @@ gl:
       title: "Minecraft"
       body: "Explora o mundo de Minecraft a través do código"
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"

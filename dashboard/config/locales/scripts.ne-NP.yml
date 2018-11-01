@@ -759,6 +759,8 @@ ne:
               name: Binary Bracelets
             Binary Images:
               name: Binary Images
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Peer Review:

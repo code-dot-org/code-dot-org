@@ -257,6 +257,12 @@ fr:
         Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction
           autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour
           résoudre ce casse-tête.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vous voyez les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ?
+          Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Quel manifique récif de corail ! Si le corail bleu est
+          dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Essayez de faire construire des ponts à l'Agent afin
           qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte.

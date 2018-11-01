@@ -1674,6 +1674,34 @@ nl-NL:
   signing_in: Aan Het Inloggen
   reset_student_password: Studenten paswoorden aan het resetten
   syncing_students: Studenten aan het synchroniseren
-  creativity_create: Maak
   account_sign_up_email_opt_in: Mogen wij u e-mailen met updates over onze cursussen,
     lokale aanbiedingen of ander nieuws op het gebied van informatica?
+  hoc2018_creativity: creativiteit
+  hoc2018_creativity_create: Maak
+  hoc2018_creativity_hoc_coming: De 'Hour of Code' komt eraan…
+  hoc2018_creativity_hoc_about: 'Dit jaar, het Uur Code gaat helemaal over creativiteit. '
+  hoc2018_creativity_social_media: 'Het #UurCode van dit jaar gaat over creativiteit.
+    Ik doe mee. Jij ook?'
+  hoc2018_creativity_social_media_2: 'Het #UurCode gaat dit jaar over creativiteit.
+    Wat ga jij maken?'
+  hoc2018_creativity_courses: Ga verder met de cursussen van code.org
+  hoc2018_creativity_courses_link: Ga verder met de <a href="https://studio.code.org/courses">Code.org
+    lessen</a>
+  hoc2018_mc_page_title: Minecraft Code Uur handleidingen
+  hoc2018_mc_details: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
+  hoc2018_mc_designer_title: Minecraft Ontwerper
+  hoc2018_mc_designer_description: Ga dieren en andere Minecraft wezens programmeren
+    in je eigen Minecraft omgeving.
+  hoc2018_mc_adventurer_title: Minecraft avonturier
+  hoc2018_mc_adventurer_description: Gebruik code om Alex of Steve op avontuur te
+    laten gaan.
+  hoc2018_mc_start: Start
+  hoc2018_mc_no_internet: Heeft u geen Internet?
+  hoc2018_mc_download_adventurer: Download de offline versie van Minecraft avonturier.
+  hoc2018_mc_educators_box2_button: Downloaden
+  hoc2018_mc_video_title_inspire_girl: Inspireer een meisje
+  hoc2018_mc_homepage_join_us: Doe mee
+  hoc2018_mc_homepage_try_it: Probeer het
+  hoc2018_mc_minecraft_education: Minecraft Opleiding
+  hoc2018_mc_continue_learning: Blijf leren met Minecraft.
+  hoc2018_mc_go_to_mc_education: Ga naar de Minecraft Opleiding

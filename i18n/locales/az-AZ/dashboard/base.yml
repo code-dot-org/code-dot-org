@@ -32,6 +32,7 @@ az:
   next_resource: Növbəti resurs
   cancel: "İmtina et"
   okay: "Oldu"
+  or: "və ya"
   add_teacher_form:
     code:
       label: 'Müəllim əlavə edin:'
@@ -371,6 +372,8 @@ az:
       title: "Minecraft"
       body: "Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin"
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"

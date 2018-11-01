@@ -75,29 +75,32 @@ sk:
       2-3 Artist Loops New 11: Prerobte kód z poslednej úlohy, ale tentokrát pridajte otočku o 30 stupňov dovnútra slučky. A teraz to zopakujte 24krát namiesto 8.
       2-3 Artist Loops New 12: "Nakresli kosoštvorec so stranami dlhými 100 pixelov.\n"
       2-3 Artist Loops New 13: "Začneme s nejakým kódom (v šedom) pre vytvorenie jedného diamantu. \n\nZopakujte šedý kód slučkou pre vytvorenie veselého vzoru!"
-      2-3 Artist Loops New 14: Teraz nakresli kosoštvorec 10 krát, ale každý otoč o 90 stupňov.
+      2-3 Artist Loops New 14: Pohraj sa trochu s kódom, ktorým si nakreslil diamant. Vieš nakresliť aj iné vzory? Skús zmeniť počet stupňov o ktoré sa otočíš aj počty opakovaní.
       2-3 Artist Loops New 15: Nakresli niečo zábavné.
       2-3 Artist Loops New 2: |-
-        Tu je kúsok kódu, ktorý si použil pri kreslení štvorca. Čo sa stane, ak použiješ blok opakovania pre spustenie tohto kódu 4 krát?
-      2-3 Artist Loops New 9: Nakresli jednoduchý tvar V, kde obe strany sú dlhé 50 pixelov aby si dokončil šípku.
+        Tu je rovnaká úloha ako sme práve vyriešili. Tento krát však môžeš použiť len jeden blok "posuň sa dopredu" a jeden blok "otoč sa".
+        
+        Pre vyriešenie úlohy použi aj blok "opakuj".
+      2-3 Artist Loops New 9: Nakresli jednoduchý tvar V, ktorý má obe strany dlhé 50 pixelov a dokonči šípku.
       2-3 Artist Match Hex Pic: 'Úloha: Pomôž dokončiť Osemuholník.'
       2-3 Artist Match Rho Pic: 'Úloha: Doplň chýbajúci kód.'
       2-3 Artist Match Sq Pic: 'Úloha: Doplň chýbajúci kód'
       2-3 Artist Match Tri pic: 'Párovanie: Doplň chýbajúci kód.'
-      2-3 Artist Nested Loops 1: Už si použil si slučky na kreslenie tvarov, ale vedel si, že môžeš dať slučku dovnútra inej slučky? \r Opakuj tento celý blok kódu 3 krát a nakreslíš vzor.
+      2-3 Artist Nested Loops 1: Umiestni blok "opakuj" okolo tohoto celého kódu, aby si vytvoril zadaný vzor.
       2-3 Artist Nested Loops 10: Opakuj tento kód 12 krát na dokončenie vzoru.
       2-3 Artist Nested Loops 11: Opakuj tento kód 4 krát na dokončenie vzoru, otoč o 90 stupňov po každom kruhu.
       2-3 Artist Nested Loops 12: Opakuj tento kód 12 krát na dokončenie kučery.
       2-3 Artist Nested Loops 2: "Teraz opakuj trojuholník 6 krát. Po každom trojuholníku sa musíš otočiť o 60 stupňov aby si mohol nakresliť ďalší."
-      2-3 Artist Nested Loops 3: "Musíš opakovať trojuholník 12 krát aby si získal tento vzor. Vydeľ počet stupňov v kruhu (360) počtom tvarov ktoré kreslíš (12) aby si zistil, koľko sa otočiť po každom tvare."
+      2-3 Artist Nested Loops 3: "Musíš opakovať trojuholník 12 krát aby si získal tento vzor. \n\nVydeľ počet stupňov v kruhu (360) počtom tvarov ktoré kreslíš (12) aby si zistil, o koľko stupňov sa po každom tvare musíš otočiť."
       2-3 Artist Nested Loops 4: "Opakuj tento kosoštvorec 12 krát a nakreslíš kvetinu. Tip: 12 kosoštvorcov je ako 12 trojuholníkov ktoré si urobil - o koľko sa musíš otočiť po každom tvare?"
-      2-3 Artist Nested Loops 5: "Vyplň okná tejto budovy vnorenými slučkami. Okná sú dlhé 20 pixelov a 20 pixelov od seba."
+      2-3 Artist Nested Loops 5: "Vyplň okná tejto budovy vnorenými cyklami. \n\nOkná sú dlhé 20 pixelov a umiestnené 20 pixelov od seba."
       2-3 Artist Nested Loops 6: |-
-        Tento dinosaurus má na svojom chvoste 8 hrotov; každý hrot je dlhý 30 pixelov. Opakuj trojuholník 8 krát, ale uisti sa, že sa pohneš vpred po každom z nich.
-      2-3 Artist Nested Loops 7: "Opakuj tento trojuholník 10 krát aby si nakreslil slnko. Budeš sa musieť presunúť a otočiť po každom trojuholníku. Môžeš zistiť o koľko sa musíš otočiť vydelením počtu stupňov v kruhu počtom tvarov, ktoré ho tvoria."
-      2-3 Artist Nested Loops 8: "Teraz poďme pridať nejakú trávu do nášho obrazu. Každý zväzok trávy je 50 pixelov od ostatných."
-      2-3 Artist Nested Loops 9: "Dokončime tento obrázok pridaním kvetu. Opakuj kosoštvorec 12 krát aby si nakreslil svoj kvet."
-      2-3 Artist Nested Loops Free Play: Máš voľné ruky, nakresli niečo zaujímavé s vnorenými slučkami.
+        Tento dinosaurus má na svojom chvoste 8 hrotov. 
+        Každý hrot je dlhý 30 pixelov. Zopakuj trojuholník 8 krát, ale uisti sa, že sa po každom pohneš vpred!
+      2-3 Artist Nested Loops 7: "Opakuj tento trojuholník 10 krát aby si nakreslil slnko. \n\nBudeš sa musieť presunúť a otočiť po každom trojuholníku. \n\nO koľko sa musíš otočiť zistíš vydelením počtu stupňov v kruhu počtom tvarov, ktoré ho tvoria."
+      2-3 Artist Nested Loops 8: "Teraz do nášho obrazu pridajme nejakú trávu. \n\nZväzky trávy sú umiestnené 50 pixelov od seba."
+      2-3 Artist Nested Loops 9: "Dokončime tento obrázok pridaním kvetu. \n\nOpakuj kosoštvorec 12 krát aby si nakreslil svoj kvet."
+      2-3 Artist Nested Loops Free Play: Máš voľné ruky, nakresli niečo zaujímavé s vnorenými cyklami.
       2-3 Bee Conditionals 1: Ahoj! Ja som včela. Pomôž mi získať nektár z kvetu.
       2-3 Bee Conditionals 10: "Fialové kvety môžu mať buď 1 alebo 0 nektáru. Buď opatrní a nezbieraj nektár z kvetov, ak žiaden nemajú.\\r\n"
       2-3 Bee Conditionals 11: "Zbieraj nektár, kde kvety majú nektár."
@@ -117,7 +120,7 @@ sk:
       2-3 Bee Conditionals 9: Zozbieraj všetok nektár z každého kvetu.
       2-3 Bee Conditionals Assessment 1: 'Hodnotenie: Zozbieraj všetok nektár. Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú.'
       2-3 Bee Debugging 1: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
-      2-3 Bee Debugging 10: "Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med."
+      2-3 Bee Debugging 10: "Tieto bloky ma naozaj štvú. \nOprav chyby aby si získal všetok nektár a vyrobil všetok med."
       2-3 Bee Debugging 2: |-
         Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       2-3 Bee Debugging 3: |-
@@ -165,7 +168,7 @@ sk:
         Pomôžte včielke pozbierať všetok nektár a spraviť všetok med s čo najmenším počtom blokov.
       2-3 Bee Loops 4A: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo najmenším počtom blokov."
       2-3 Bee Loops 5: "Tvar tohto chodníka je iný ako tvar ostatných. \n\nViete pozbierať všetok nektár použitím čo najmenšieho možného počtu blokov?"
-      2-3 Bee Loops 6: Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť med?
+      2-3 Bee Loops 6: Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť všetok med?
       2-3 Bee Loops 7: Aká krásna kvetinová lúka! Pomôž včielke navštíviť každý kvietok. Dokážeš to spraviť s menej ako 7 blokmi?
       2-3 Bee Loops 8: "Tieto fialové kvetinky majú pri každom spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\"."
       2-3 Bee Loops Assessment 1: 'Hodnotenie: Použite slučku "pokiaľ" pre pozbieranie všetkého nektáru z týchto kvetín.'
@@ -356,8 +359,8 @@ sk:
       4-5 While Loops 3: "Použite čo možno najmenej blokov pre dokončenie tejto úlohy!  \n\nDostaňte ma ku kope a odstráňte všetku hlinu, potom ma posuňte k jame a celú ju zasypte."
       4-5 While Loops 4: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       4-5 While Loops 8: " Toto je veľmi hlboká jama a veľmi veľká kopa hliny. Koľko lopát plných hliny musíte presunúť, aby ste zem zarovnali?"
-      Alien Defender: 'Nápad na projekt: Spravte obrannú hru v Hernom laboratóriu!'
-      Alien Defender_2018: 'Nápad na projekt: Spravte obrannú hru v Hernom laboratóriu!'
+      Alien Defender: 'Nápad na projekt: Vytvor obrannú hru v Play Labe!'
+      Alien Defender_2018: 'Nápad na projekt: Vytvor obrannú hru v Play Labe!'
       App Lab test: test
       Artist - Nested Loops Assessment 1: Použite vnorené slučky pre dokončenie dizajnu.
       Artist Autorun Test: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
@@ -442,8 +445,8 @@ sk:
       Fish Tank 2-validated_simple: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 6-validated: Pridajte správanie k novému rybkinmu kamarátovi.
       Fish Tank 6-validated_simple: Pridajte správanie k novému rybkinmu kamarátovi.
-      FoodFight: Toto je príklad hry, ktorú môžete vytvoriť v hernom laboratóriu.
-      FoodFight_2018: Toto je príklad hry, ktorú môžete vytvoriť v hernom laboratóriu.
+      FoodFight: Toto je príklad hry, ktorú môžeš vytvoriť v Play Labe.
+      FoodFight_2018: Toto je príklad hry, ktorú môžeš vytvoriť v Play Labe.
       Function intro Ryan: Dvakrát použi funkciu "Postav most" na vytvorenie cesty k fakli.
       GLJ Flappy2: Kliknite pre zamávanie - nedotknite sa zeme!
       HoCAB_labyrinth1: Použite blok so šípkami pre vyriešenie tohto bludiska!
@@ -475,7 +478,7 @@ sk:
       MC Agent Freeplay: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       MC HOC 2016 Level 10: Je čas vytvoriť si vlastný Minecraft! Vytváraj postavy a nauč ich robiť čokoľvek. Zabav sa!
       MC HOC 2016 Level 2-2: Kurča je zmrazené. Umiestni bloky "posuň sa" a "otoč sa" do časti "pri vytvorení", aby sa pohlo.
-      MC HOC 2016 Level 3: 'Skvelé, kurča sa pohlo! Ale potom zastavilo. V hrách kurčatá kráčajú stále. Použi cyklus "nekonečne opakuj", aby si udržal kurčatá v pohybe.  '
+      MC HOC 2016 Level 3: 'Skvelé, kurča sa pohlo! Ale potom sa zastavilo. V hrách kurčatá kráčajú stále. Použi cyklus "nekonečne opakuj", aby si udržal kurčatá v pohybe.  '
       MC HOC 2016 Level 4: Teraz sa ale všetky kurčatá hýbu rovnako a vyzerá to čudne. Hry používajú náhodné pohyby, aby vyzerali reálne. Nauč kurčatá vykonať pohyb "náhodne sa otoč".
       MC HOC 2016 Level 5: Tieto kravy sú stratené! Priveď ich k tráve pomocou bloku "posuň sa o krok dopredu" v cykle "nekonečne opakuj".
       MC HOC 2016 Level 6: Teraz vytvoríš zombíkov. Použi blok "vytvor" pre vytvorenie 3 zombíkov, keď príde noc. Naprogramuj ich tak, aby sa hýbali smerom k tebe. Preži do rána.
@@ -619,6 +622,8 @@ sk:
       course3_playlab_stage17_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
       course3_playlab_stage17_7: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim úplne iným)
+      courseC_flappy_events10: 'Vytvor vlastnú hru Flappy! '
+      courseC_flappy_events10_2018: 'Vytvor vlastnú hru Flappy! '
       courseD_Frozen_nested5: Zahraj sa so snehovými vločkami!
       courseD_artist_5_2018: Zahraj sa so snehovými vločkami!
       courseD_artist_binary1: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
@@ -774,7 +779,7 @@ sk:
         
         Pomôžte včielke pozbierať všetok nektár a spraviť všetok med s čo najmenším počtom blokov.
       grade3_Loops_11: "Tvar tohto chodníka je iný ako tvar ostatných. \n\nViete pozbierať všetok nektár použitím čo najmenšieho možného počtu blokov?"
-      grade3_Loops_12: Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť med?
+      grade3_Loops_12: Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť všetok med?
       grade3_Loops_2: Tentokrát použite slučku pre pozbieranie všetkého nektáru.
       grade3_Loops_3: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
       grade3_Loops_4: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
@@ -856,7 +861,7 @@ sk:
         
         Pomôžte včielke pozbierať všetok nektár a spraviť všetok med s čo najmenším počtom blokov.
       level 'grade3_Loops_11: "Tvar tohto chodníka je iný ako tvar ostatných. \n\nViete pozbierať všetok nektár použitím čo najmenšieho možného počtu blokov?"
-      level 'grade3_Loops_12: Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť med?
+      level 'grade3_Loops_12: Dokážeš nájsť najrýchlejšiu cestu pre včielku, aby mohla nazbierať všetok nektár a vyrobiť všetok med?
       level 'grade3_Loops_2: Tentokrát použite slučku pre pozbieranie všetkého nektáru.
       level 'grade3_Loops_3: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
       level 'grade3_Loops_4: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
