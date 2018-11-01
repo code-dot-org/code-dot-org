@@ -1,0 +1,25 @@
+name 'AP_practice_Qs_rqb_76_CSP_4_1_1'
+wrong '24'
+wrong '47'
+wrong '55'
+right '79'
+markdown <<MARKDOWN
+Which of the following cannot be a possible value for B when the code finishes?
+<br><img src="https://curriculum.code.org/media/uploads/csp/b21c6b38c015e5e10a9da9940f4c4cad" width="300"><br>
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1A**
+<hr>
+ (A) <strong>This option is incorrect</strong> A is assigned a value of 6, causing the loop to repeat six times. B is initially assigned a value of 6, and is then increased each of six times by a random integer between 3 and 12.  Hence the minimum possible value is 6 + 6*3 = 24.
+
+<hr>
+ (B) <strong>This option is incorrect</strong>.  See the explanation for D. In this case six random numbers that would yield 41 are 7, 7, 7, 7, 7, and 6.  When added to the initial value of B, we get 47.
+
+<hr>
+ (C) <strong>This option is incorrect</strong>.  See the explanation for D. In this case six random numbers that would yield 49 are 8, 8, 8, 8, 8, and 9.  When added to the initial value of B, we get 55.
+
+<hr>
+ (D) This option is correct. A is assigned a value of 6, causing the loop to repeat six times. B is initially assigned a value of 6, and is then increased each of six times by a random integer between 3 and 12.  Hence the maximum possible value is 6 + 12*6 = 78.
+
+MARKDOWN

@@ -1,0 +1,37 @@
+name 'AP_practice_Qs_rqb_37_CSP_4_1_2'
+right '0, 44, 16, 32'
+wrong '44,  16,  32'
+wrong '0,  27,  44,  13,  16,  29,  32,  55'
+wrong '27,  44,  13,  16,  29,  32,  55'
+markdown <<MARKDOWN
+Predict the output of the following code block.
+<pre>
+list <- [27, 44, 13, 16, 29, 32, 55]
+list1 <- [0]
+FOR EACH item IN list
+    {
+       IF (item MOD 2 = 0)
+           {
+             APPEND( list1, item)
+           }
+      }
+DISPLAY(item1)
+</pre>
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.1.2** and Essential Knowledge statements: **4.1.2A**
+<hr>
+ (A) <strong>This answer choice is correct.</strong> The programming code block checks for even items in list and adds the item to list1. The Append command puts the item after the existing value in list1 so the items are added after 0. 
+
+<hr>
+ (B) <strong>This answer choice is incorrect.</strong>  The Append command adds the item to list1, after the existing value in list1. So 0 is a part of list1, you cannot skip it.
+
+
+<hr>
+ (C) <strong>This answer choice is incorrect.</strong>  The programming block checks for even items in list and adds the item to list1. The Append command puts the item after the existing value in list1. The display should not include all items of list appended to list1.
+
+
+<hr>
+ (D) <strong>This answer choice is incorrect.</strong>  The programming block checks for even items in list and adds the item to list1. The Append command puts the item after the existing value in list1. The display should not include all items of list.
+
+MARKDOWN
