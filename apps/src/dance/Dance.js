@@ -120,7 +120,9 @@ Dance.prototype.init = async function (config) {
   });
 
   const selectedSong = getSelectedSong(songManifest, config);
-  this.setSong(selectedSong, true);
+  getStore().dispatch(setSelectedSong(selectedSong));
+  loadSong(selectedSong, songData);
+  this.updateSongMetadata(selectedSong);
 
   ReactDOM.render((
     <Provider store={getStore()}>
@@ -128,7 +130,7 @@ Dance.prototype.init = async function (config) {
         visualizationColumn={
           <DanceVisualizationColumn
             showFinishButton={showFinishButton}
-            setSong={this.setSong.bind(this)}
+            setSong={this.setSongCallback.bind(this)}
           />
         }
         onMount={onMount}
@@ -137,26 +139,33 @@ Dance.prototype.init = async function (config) {
   ), document.getElementById(config.containerId));
 };
 
-Dance.prototype.setSong = function (songId, skipSave = false) {
+Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(setSelectedSong(songId));
 
   const songData = getStore().getState().songs.songData;
-  const hasChannel = !!getStore().getState().pageConstants.channelId;
+  loadSong(songId, songData);
 
-  // Load the song.
+  this.updateSongMetadata(songId);
+
+  const hasChannel = !!getStore().getState().pageConstants.channelId;
+  if (hasChannel) {
+    //Save song to project
+    project.saveSelectedSong(songId);
+  }
+};
+
+/**
+ * Load the specified song sound file.
+ * @param songId {string} Song to load.
+ * @param songData {Object<Object>} Song data containing urls of songs.
+ */
+function loadSong(songId, songData) {
   const options = {
     id: songId,
     mp3: songData[songId].url,
   };
   Sounds.getSingleton().register(options);
-
-  this.updateSongMetadata(songId);
-
-  if (!skipSave && hasChannel) {
-    //Save song to project
-    project.saveSelectedSong(songId);
-  }
-};
+}
 
 function getSelectedSong(songManifest, config) {
   // The selectedSong and defaultSong might not be present in the songManifest
