@@ -75,7 +75,7 @@ module Pd::Application
           committed: 'Yes'
         }
       }.to_json
-      assert_equal 'Reviewing incomplete', teacher_application.meets_criteria
+      assert_equal 'Reviewing Incomplete', teacher_application.meets_criteria
     end
 
     test 'total score calculates the sum of all response scores' do
@@ -645,7 +645,8 @@ module Pd::Application
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 50
+        principal_underrepresented_minority_percent: 50,
+        principal_implementation: principal_options[:csd_implementation].first
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -659,7 +660,7 @@ module Pd::Application
             plan_to_teach: YES,
             committed: YES,
             willing_to_travel: YES,
-
+            principal_implementation: YES
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -673,8 +674,8 @@ module Pd::Application
             replace_existing: 5,
             taught_in_past: 2,
             race: 2,
-            principal_free_lunch_percent: 5,
-            principal_underrepresented_minority_percent: 5
+            free_lunch_percent: 5,
+            underrepresented_minority_percent: 5
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -704,7 +705,8 @@ module Pd::Application
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
-        principal_underrepresented_minority_percent: 50
+        principal_underrepresented_minority_percent: 50,
+        principal_implementation: principal_options[:csp_implementation].first
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
       application.auto_score!
@@ -717,7 +719,8 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
-            willing_to_travel: YES
+            willing_to_travel: YES,
+            principal_implementation: YES
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -732,8 +735,8 @@ module Pd::Application
             replace_existing: 5,
             taught_in_past: 2,
             race: 2,
-            principal_free_lunch_percent: 5,
-            principal_underrepresented_minority_percent: 5
+            free_lunch_percent: 5,
+            underrepresented_minority_percent: 5
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -823,7 +826,7 @@ module Pd::Application
             plan_to_teach: NO,
             committed: NO,
             willing_to_travel: NO,
-
+            principal_implementation: NO
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: NO,
@@ -837,8 +840,8 @@ module Pd::Application
             replace_existing: 0,
             taught_in_past: 0,
             race: 0,
-            principal_free_lunch_percent: 0,
-            principal_underrepresented_minority_percent: 0
+            free_lunch_percent: 0,
+            underrepresented_minority_percent: 0
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -862,7 +865,7 @@ module Pd::Application
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
-        race: options[:race].first,
+        race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_plan_to_teach: principal_options[:plan_to_teach].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].last,
@@ -881,7 +884,8 @@ module Pd::Application
             cs_total_course_hours: NO,
             plan_to_teach: NO,
             committed: NO,
-            willing_to_travel: NO
+            willing_to_travel: NO,
+            principal_implementation: NO
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: NO,
@@ -896,8 +900,8 @@ module Pd::Application
             replace_existing: 0,
             taught_in_past: 0,
             race: 0,
-            principal_free_lunch_percent: 0,
-            principal_underrepresented_minority_percent: 0
+            free_lunch_percent: 0,
+            underrepresented_minority_percent: 0
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
