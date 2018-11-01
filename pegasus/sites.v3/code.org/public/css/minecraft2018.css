@@ -151,7 +151,7 @@
   }
 }
 
-@media screen and (min-width: 513px) and (max-width: 970px) {
+@media screen and (min-width: 0px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
     right: 0;
@@ -183,38 +183,5 @@
 
   .mc-img-narrow {
     display: block;
-  }
-}
-
-@media screen and (min-width: 0px) and (max-width: 512px) {
-  .mc-tutorial-info {
-    background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    position: relative;
-    float: left;
-  }
-
-  .mc-h1-second-box {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .tutorial-box {
-    width: 100%;
-    background-image: url(/images/mc/MC_Wide_Blank_V2.jpg);
-    background-size: 605px 100px;
-  }
-
-  .mc-img, .mc-img-wide {
-    display: none;
-  }
-
-  .mc-new-tag {
-    margin-bottom: 10px;
-    width: 60px;
-  }
-
-  .padded-button {
-    margin-top: 0px;
   }
 }
