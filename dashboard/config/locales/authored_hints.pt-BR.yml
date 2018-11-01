@@ -3611,6 +3611,13 @@ pt-BR:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de
           seu programa! Tente executá-la duas vezes para resolver este enigma.
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "Vê as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Como você pode usar uma condicional nos itens para chegar ao Monumento Oceânico?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: Que recife de corais bonito! O coral azul parece ser o
+          caminho **direito**, e lembre-se também de deixar o coral vermelho no caminho
+          **esquerdo**.
       Inspirational Artwork_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
           antes de fazer qualquer outra coisa.

@@ -340,19 +340,43 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
       craft_ifPath:
+        text: |-
+          {DIR}に道がある時
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": その前に
+            "'right'": 右
+            "'left'": 左
       craft_ifStandingOn:
+        text: |-
+          {TYPE}の上にいる時
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": 青いサンゴ
+            "'redCoralBlock'": 赤いサンゴ
             "'sand'": 砂
+            "'wool_blue'": 水の深い所
             "'planksOak'": 樫の木の板
+            "'seaLantern'": 海のランタン
       craft_ifStandingOnLimit:
+        text: |-
+          {TYPE}の上にいる時
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 砂
+            "'seaLantern'": 海のランタン
       craft_moveForward:
         text: 前に すすむ
+      craft_placeBlock:
+        options:
+          blockType:
+            '"seaLantern"': 海のランタン
       craft_placeTorch:
         text: 松明を置く
+      craft_repeatUntilGoal:
+        text: |-
+          ゴールまでリピート
+          {STATEMENT}

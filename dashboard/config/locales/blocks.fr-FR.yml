@@ -425,19 +425,80 @@ fr:
             '"x"': position x
             '"y"': position y
       craft_ifPath:
+        text: |-
+          si chemin {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": devant
+            "'right'": à droite
+            "'left'": à gauche
       craft_ifStandingOn:
+        text: |-
+          si debout sur {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": corail bleu
+            "'redCoralBlock'": corail rouge
             "'sand'": sable
+            "'wool_blue'": eaux profondes
             "'planksOak'": planches en chêne
+            "'seaLantern'": lanterne aquatique
       craft_ifStandingOnLimit:
+        text: |-
+          si debout sur {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": sable
+            "'darkPrismarine'": prismarine sombre
+            "'seaLantern'": lanterne aquatique
       craft_moveForward:
         text: avancer plus
+      craft_placeBlock:
+        text: placer {blockType}
+        options:
+          blockType:
+            '"strippedOak"': chêne écorcé
+            '"strippedDarkOak"': chêne noir écorcé
+            '"stoneBricks"': briques de pierre
+            '"mossyStoneBricks"': briques de pierre moussues
+            '"crackedStoneBricks"': briques de pierre craquelées
+            '"decorativeStoneBricks"': briques de pierre décoratives
+            '"blueCoralBlock"': bloc de corail bleu
+            '"pinkCoralBlock"': bloc de corail rose
+            '"magentaCoralBlock"': bloc de corail magenta
+            '"redCoralBlock"': bloc de corail rouge
+            '"yellowCoralBlock"': bloc de corail jaune
+            '"blueDeadCoralBlock"': bloc de corail bleu mort
+            '"pinkDeadCoralBlock"': bloc de corail rose mort
+            '"magentaDeadCoralBlock"': bloc de corail magenta mort
+            '"readDeadCoralBlock"': bloc de corail rouge mort
+            '"yellowDeadCoralBlock"': bloc de corail jaune mort
+            '"darkPrismarine"': prismarine sombre
+            '"seaLantern"': lanterne aquatique
+            '"packedIce"': glace compactée
+            '"blueIce"': glace bleue
+            '"blackConcrete"': béton noir
+            '"seaGrass"': herbe marine
+            '"kelp"': varech
+            '"polishedGranite"': granite poli
       craft_placeTorch:
         text: placer la torche
+      craft_repeatUntilConduit:
+        text: |-
+          répéter jusqu'à ce que le conduit soit terminé
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          répéter jusqu'au bout
+          {STATEMENT}
+      craft_spawnEntity:
+        text: œuf {ENTITY}
+      craft_turn:
+        text: tourner {DIR}
+        options:
+          DIR:
+            right: droite ↻
+            left: gauche ↺

@@ -2203,6 +2203,33 @@ en:
     '35': '35'
     'false': 'falso'
     'true': 'verdadeiro'
+  cspu5_assess2_pseudoCode:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_pseudoCode_2018:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_pseudoCode_exam_prep:
+    "<code>Time to start studying again!</code>": "<code>Hora de começar a estudar de novo!</code>"
+    "<code>You passed!</code>": "<code>Você passou!</code>"
+  cspu5_assess2_setAlarm:
+    "(day == “Saturday”) && (day == “Sunday”)": "(dia == ”Sábado”) && (dia == ”Domingo”)"
+    "(day == “Saturday”) || (day == “Sunday”)": "(dia == ”Sábado”) || (dia == ”Domingo”)"
+    day != “Monday”: dia != "Segunda-feira"
+    day == “Saturday”: dia == "Sábado"
+    day == “Sunday”: dia == "Domingo"
+  cspu5_assess2_setAlarm_2018:
+    (day == "Saturday") && (day == "Sunday"): (dia == "Sábado") && (dia == "Domingo")
+    (day == "Saturday") || (day == "Sunday"): (dia == "Sábado") || (dia == "Domingo")
+    day != "Monday": dia != "Segunda-feira"
+    day == "Saturday": dia == "Sábado"
+    day == "Sunday": dia == "Domingo"
+  cspu5_assess2_setAlarm_exam_prep:
+    (day == "Saturday") && (day == "Sunday"): (dia == "Sábado") && (dia == "Domingo")
+    (day == "Saturday") || (day == "Sunday"): (dia == "Sábado") || (dia == "Domingo")
+    day != "Monday": dia != "Segunda-feira"
+    day == "Saturday": dia == "Sábado"
+    day == "Sunday": dia == "Domingo"
   cspu5_assess2_weight:
     '125': '125'
     '200': '200'
@@ -2257,6 +2284,24 @@ en:
     '4': '4'
     '5': '5'
     '6': '6'
+  cspu5_assess3_array3:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+  cspu5_assess3_array3_2018:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+  cspu5_assess3_array3_exam_prep:
+    "<img src=\"https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png\">": <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+    "<img src=\"https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png\">": <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+    "<img src=\"https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png\">": <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+    "<img src=\"https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png\">": <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+    "<img src=\"https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png\">": <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
   cspu5_assess3_array4:
     '0': '0'
     '1': '1'
@@ -2272,6 +2317,24 @@ en:
     '1': '1'
     '2': '2'
     '8': '8'
+  cspu5_assess3_array5:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+  cspu5_assess3_array5_2018:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+  cspu5_assess3_array5_exam_prep:
+    "<img src=\"https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png\">": <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+    "<img src=\"https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png\">": <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+    "<img src=\"https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png\">": <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+    "<img src=\"https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png\">": <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+    "<img src=\"https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png\">": <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
   cspu5_assess3_counter:
     '0': '0'
     '1': '1'
@@ -2521,6 +2584,7 @@ en:
   pre-assessment survey q27:
     0: '? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
     1: ': If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.'
+    N/A: N/A
     Other: Outros
   pre-assessment survey q28:
     '10': '10'
@@ -2529,14 +2593,19 @@ en:
     '8': '8'
     '9': '9'
     Other: Outros
+    What grade are you in?: Em que série você está?
   pre-assessment survey q29:
     Female: Feminino
+    'I identify my gender as:': 'Eu identifico meu gênero como:'
     Male: Masculino
     Other: Outros
     Prefer not to answer: Prefiro não responder
   pre-assessment survey q30:
+    American Indian or Alaska Native: Índio Americano ou Nativo do Alaska
     Asian: Asiático
     Black or African American: Negro ou Afro-americano
+    Hispanic or Latino/Latina: Hispânico ou Latino/Latina
+    Native Hawaiian or Other Pacific Islander: Nativo do Havaí ou de outra ilha do Pacífico
     Other: Outros
     Prefer not to answer: Prefiro não responder
     White: Branco
@@ -2588,17 +2657,28 @@ en:
     Multiple Choice - Stochastic Models: Múltipla escolha - Modelos estocásticos
     What does it mean for a model to be stochastic?: O que significa para um modelo ser estocástico?
   sciPD computer models 2:
+    Which of the following are common to both lab experiments and computational science experiments?: Quais das seguintes características são comuns tanto aos experimentos de laboratório quanto aos experimentos de ciência computacional?
     automation of experiments is easy: a automação dos experimentos é fácil
     changing physical properties like the gravitational constant: altera propriedades físicas, como a constante gravitacional
+    sweeping a set of variables: varre um conjunto de variáveis
+    the need for controlled experiments: a necessidade de experimentos controlados
   sciPD culture 1:
+    Multiple Choice - Getting Unstuck: Múltipla escolha - Desempacando
+    Which of the following was NOT suggested as a way to get unstuck?: Qual das seguintes opções NÃO foi sugerida como uma forma de desempacar?
+    looking at other similar pieces of code: olhar para outros trechos de código que sejam similares
+    meditating: meditar
+    reading through your code line by line: ler o código linha por linha
     taking a break: fazer uma pausa
   sciPD culture 2:
+    Multiple Choice - Role Of Teacher: Múltipla escolha - O papel do professor
+    What role for a teacher incorporating models and simulations into the classroom was proposed?: Qual papel foi proposto para um professor incorporar modelos e simulações na sala de aula?
     classroom manager: gerente de sala de aula
     expert in a computer language: expert em uma linguagem de computador
   sciPD framework 1:
     a human thought process: um processo de pensamento humano
     a process that computers use to think: um processos que os computadores usam para pensar
     a subfield of computer science: um subcampo da ciência da computação
+    a way of communicating with a computer: uma forma de se comunicar com um computador
   sciPD framework 2:
     algorithms: algoritmos
     analysis: análise
@@ -2608,6 +2688,10 @@ en:
     too expensive to study in the real world: muito caros para estudar no mundo real
     too time consuming to study in the real world: muito demorados para estudar no mundo real
   sciPD intro to CS 2:
+    What is computational science good for?: Para que a ciência computacional é boa?
+    'it complements lab and theoretical science ': 'ela complementa a ciência teórica e de laboratório '
+    it replaces traditional science labs: ela substitui os laboratórios de ciência tradicionais
+    it slows the process of discovery: ela retarda o processo de descoberta
     nothing at all: absolutamente nada
   test anonymous student survey educational:
     'No': 'Não'
@@ -2625,6 +2709,9 @@ en:
       4+5 > 9: 4+5 > 9
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Bools 2:
+      "(10 > 11) OR (7 <= 9)": "(10 > 11) OU (7 <= 9)"
+      "(10 > 11) or (7 <= 9)": "(10 > 11) Ou (7 <= 9)"
+      "(10 > 11) || (7 <= 9)": "(10 > 11) || (7 <= 9)"
       "/script_assets/msm/unit6/blockstomath2.png, 500": "/script_assets/msm/unit6/blockstomath2.png, 500"
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Bools 3:
@@ -2634,8 +2721,47 @@ en:
       "((5 < 10) AND (10 < 15))": "((5 < 10) E (10 < 15))"
       "((5 < 10) And (10 < 15))": "((5 < 10) e (10 < 15))"
       "((5 < 10) and (10 < 15))": "((5 < 10) e (10 < 15))"
+      "(5 < 10 < 15)": "(5 < 10 < 15)"
+      "(5 < 10) & (10 < 15)": "(5 < 10) & (10 < 15)"
+      "(5 < 10) && (10 < 15)": "(5 < 10) && (10 < 15)"
+      "(5 < 10) AND (10 < 15)": "(5 < 10) E (10 < 15)"
+      "(5 < 10) And (10 < 15)": "(5 < 10) e (10 < 15)"
+      "(5 < 10) and (10 < 15)": "(5 < 10) E (10 < 15)"
+      "/script_assets/msm/unit6/blockstomath3.png, 500": "/script_assets/msm/unit6/blockstomath3.png, 500"
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Bools 4:
+      "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))": "(((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))"
+      "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))": "(((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))"
+      "(((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))": "(((1 < X) E (X < 5)) OU ((8 < X) E (X < 10)))"
+      "(((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))": "(((1 < X) e (X < 5)) ou ((8 < X) e (X < 10)))"
+      "(((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))": "(((1 < X) e (X < 5)) ou ((8 < X) e (X < 10)))"
+      "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))": "(((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))"
+      "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))": "(((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))"
+      "(((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))": "(((1 < x) E (x < 5)) OU ((8 < x) E (x < 10)))"
+      "(((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))": "(((1 < x) e (x < 5)) ou ((8 < x) e (x < 10)))"
+      "(((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))": "(((1 < x) e (x < 5)) ou ((8 < x) e (x < 10)))"
+      "((1 < X) & (X < 5) || (8 < X) & (X < 10))": "((1 < X) & (X < 5) || (8 < X) & (X < 10))"
+      "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))": "((1 < X) & (X < 5)) || ((8 < X) & (X < 10))"
+      "((1 < X) && (X < 5) || (8 < X) && (X < 10))": "((1 < X) && (X < 5) || (8 < X) && (X < 10))"
+      "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))": "((1 < X) && (X < 5)) || ((8 < X) && (X < 10))"
+      "((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))": "((1 < X) E (X < 5) OU (8 < X) E (X < 10))"
+      "((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))": "((1 < X) E (X < 5)) OU ((8 < X) E (X < 10))"
+      "((1 < X) And (X < 5) Or (8 < X) And (X < 10))": "((1 < X) e (X < 5) ou (8 < X) e (X < 10))"
+      "((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))": "((1 < X) e (X < 5)) ou ((8 < X) e (X < 10))"
+      "((1 < X) and (X < 5) or (8 < X) and (X < 10))": "((1 < X) e (X < 5) ou (8 < X) e (X < 10))"
+      "((1 < X) and (X < 5)) or ((8 < X) and (X < 10))": "((1 < X) e (X < 5)) ou ((8 < X) e (X < 10))"
+      "((1 < x) & (x < 5) || (8 < x) & (x < 10))": "((1 < x) & (x < 5) || (8 < x) & (x < 10))"
+      "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))": "((1 < x) & (x < 5)) || ((8 < x) & (x < 10))"
+      "((1 < x) && (x < 5) || (8 < x) && (x < 10))": "((1 < x) && (x < 5) || (8 < x) && (x < 10))"
+      "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))": "((1 < x) && (x < 5)) || ((8 < x) && (x < 10))"
+      "((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))": "((1 < x) E (x < 5) OU (8 < x) E (x < 10))"
+      "((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "((1 < x) And (x < 5) Or (8 < x) And (x < 10))": "((1 < x) e (x < 5) ou (8 < x) e (x < 10))"
+      "((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "((1 < x) and (x < 5) or (8 < x) and (x < 10))": "((1 < x) e (x < 5) ou (8 < x) e (x < 10))"
+      "((1 < x) and (x < 5)) or ((8 < x) and (x < 10))": "((1 < x) e (x < 5)) ou ((8 < x) e (x < 10))"
+      "(1 < X < 5) OR (8 < X < 10)": "(1 < X < 5) OU (8 < X < 10)"
+      "(1 < X < 5) Or (8 < X < 10)": "(1 < X < 5) ou (8 < X < 10)"
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Math 1:
       Convert Blocks to Math: Converta Blocos em Matemática
@@ -2650,11 +2776,26 @@ en:
     Blocks to Math 6:
       Convert Blocks to Math: Converta Blocos em Matemática
     Blocks to Math 7:
+      "(10 / (2 * (3 + 1))": "(10 / (2 * (3 + 1))"
+      10 / (2 * (3 + 1)): 10 / (2 * (3 + 1))
       Convert Blocks to Math: Converta Blocos em Matemática
     'CSP U4L04 Assessment 2 ':
+      Enter answer here: Insira a resposta aqui
       Enter prompt here: Digite a mensagem aqui
       Enter title here: Insira o título aqui
     PS U3 Q1-7:
+      Enter answer here: Insira a resposta aqui
       Enter prompt here: Digite a mensagem aqui
+    U1L13 - Assess Text Compression reverse process:
+      Act as the computer!: Aja como o computador!
+    U1L13 - Assess Text Compression reverse process_2018:
+      Act as the computer!: Aja como o computador!
     U2L07 Assessment4:
       '43': '43'
+      Question 4: Questão 4
+    text match test:
+      "(9-3)+(4*7)": "(9-3)+(4*7)"
+      "(9-3)+4*7": "(9-3)+4*7"
+      9-3+4: null
+      Mathematical Expression Assessment: Avaliação de Expressão Matemática
+      Type out the arithmetic expression that this circle of evaluation evaluates to: Insira a expressão aritmética avaliada por este círculo de avaliação

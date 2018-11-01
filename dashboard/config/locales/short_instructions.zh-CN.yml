@@ -453,8 +453,8 @@ zh-CN:
       CSD U3 Keypress Watchers_2018: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 L5 Freeplay: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 L5 Freeplay_2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
-      CSD U3 Mouse Input Bee 2: 做这个
-      CSD U3 Mouse Input Bee 2_2018: 做这个
+      CSD U3 Mouse Input Bee 2: 这样做
+      CSD U3 Mouse Input Bee 2_2018: 这样做
       CSD U3 Random Animation: 使用 randomNumber() 随机数函数来激活盖瑞的嘴巴。
       CSD U3 Random Choice: 使用 randomNumber() 随机数模块生成0或1
       CSD U3 Random Color: 你可以使用 randomNumber() 随机数函数来挑选随机颜色吗？ 尝试使用随机数设置 rgb 模块中的一个或多个通道。
@@ -1306,11 +1306,11 @@ zh-CN:
       U3 - Canvas - freePlay: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
       U3 - Design Mode 1: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       U3 - Keys - Final Image Scroller: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
-      U3 - Simple Drawing - Comments: 做这个
-      U3 - Simple Drawing - Ellipse and No Fill: 做这个
+      U3 - Simple Drawing - Comments: 这样做
+      U3 - Simple Drawing - Ellipse and No Fill: 这样做
       U3 - Simple Drawing - Fill: 做这个
-      U3 - Simple Drawing - No Fill: 做这个
-      U3 - Simple Drawing - Order of Blocks: 做这个
+      U3 - Simple Drawing - No Fill: 这样做
+      U3 - Simple Drawing - Order of Blocks: 这样做
       U3 - Simple Drawing - Oval: 做这个
       U3 - Simple Drawing - Personal Drawing: 做这个
       U3 - Simple Drawing - Rectangle Width and Height: 做这个
@@ -1318,21 +1318,21 @@ zh-CN:
       U3 - Simple Drawing - Road Ellipse: 做这个
       U3 - Simple Drawing - Road Rects and Color: 做这个
       U3 - Simple Drawing - Simple Shape Drawing: 做这个
-      U3 - Simple Drawing - Stroke and Stroke Weight: 做这个
+      U3 - Simple Drawing - Stroke and Stroke Weight: 这样做
       U3 - Simple Drawing - X and Y values: 做这个
-      U3 - Simple Drawing - regular polygon: 做这个
+      U3 - Simple Drawing - regular polygon: 这样做
       U3 - Simple Drawing - text: 做这个
       U3 - Sprites - Intro Sprites: 做这个
       U3 - Sprites and Mod - Create  and Draw Sprite: 做这个
-      U3 - Sprites and Mod - Mouse Width and Height: 做这个
-      U3 - Sprites and Mod - Mouse X and Y: 做这个
-      U3 - Sprites and Mod - Rand Around Mouse: 做这个
+      U3 - Sprites and Mod - Mouse Width and Height: 这样做
+      U3 - Sprites and Mod - Mouse X and Y: 这样做
+      U3 - Sprites and Mod - Rand Around Mouse: 这样做
       U3 - Sprites and Mod - Rand Shape Color: 做这个
       U3 - Sprites and Mod - Shape Color: 做这个
       U3 - Sprites and Mod - Wrap Many Squares: 做这个
       U3 - Sprites and Mod - X and Y Prop: 做这个
       U3 - Sprites and Mod - two sprites: 做这个
-      U3 - images - bee free play: 做这个
+      U3 - images - bee free play: 这样做
       U3 Variables flower example: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3 Variables gray square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3 Variables randomize your square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
