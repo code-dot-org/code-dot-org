@@ -479,7 +479,7 @@ module Pd::Application
       meets_minimum_criteria_scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
 
       # Section 5
-      bonus_points_scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5)) ? 2 : 0
+      bonus_points_scores[:race] = (responses[:race] & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0
 
       # Principal Approval
       if responses[:principal_approval]
@@ -488,9 +488,15 @@ module Pd::Application
             principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
             principal_plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
             principal_schedule_confirmed: responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0] ? YES : NO,
-            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
+            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
           }
         )
+
+        if course == 'csd'
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:bonus_points_scores].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
+        elsif course == 'csp'
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:bonus_points_scores] == principal_options[:csp_implementation].first ? YES : NO
+        end
 
         bonus_points_scores[:free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
         bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
@@ -593,7 +599,7 @@ module Pd::Application
           principal_response_first_name: principal_response[:first_name],
           principal_response_last_name: principal_response[:last_name],
           principal_response_email: principal_response[:email],
-          principal_school: principal_school.try(:name) || principal_response[:school_name],
+          principal_school_name: principal_school.try(:name) || principal_response[:school_name],
           principal_school_type: principal_school.try(:school_type),
           principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
