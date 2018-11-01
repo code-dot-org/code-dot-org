@@ -225,6 +225,9 @@ export class DetailViewContents extends React.Component {
   };
 
   handleScoreChange = (event) => {
+    // The format of the id is key-category. The format of the response scores is a hash
+    // with keys like bonus points, scholarship criteria, etc. The category says which
+    // section of the response scores to put the key in.
     const keyCategory = event.target.id.split('-');
     const key = keyCategory[0];
     const category = keyCategory[1];
