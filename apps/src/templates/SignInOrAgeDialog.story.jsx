@@ -20,7 +20,7 @@ export default storybook => {
           <SignInOrAgeDialog
             signedIn={false}
             age13Required={true}
-            noSignIn={true}
+            ageOnly={true}
           />
         )
       }
