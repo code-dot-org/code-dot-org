@@ -18,20 +18,20 @@ describe('danceReducer', function () {
   });
 
   it('has expected default state', function () {
-    expect(initialState.selectedSong).to.equal("macklemore90");
+    expect(initialState.songs.selectedSong).to.equal("macklemore90");
   });
 
   describe('action: selectedSong', function () {
     it('sets selection to given string', function () {
-      expect(store.getState().selectedSong).to.equal("macklemore90");
+      expect(store.getState().songs.selectedSong).to.equal("macklemore90");
       store.dispatch(setSelectedSong("Alpha"));
-      expect(store.getState().selectedSong).to.equal("Alpha");
+      expect(store.getState().songs.selectedSong).to.equal("Alpha");
     });
 
     it('selection sets to most recent string', function () {
       store.dispatch(setSelectedSong("Beta"));
       store.dispatch(setSelectedSong("Gamma"));
-      expect(store.getState().selectedSong).to.equal("Gamma");
+      expect(store.getState().songs.selectedSong).to.equal("Gamma");
     });
   });
 });
