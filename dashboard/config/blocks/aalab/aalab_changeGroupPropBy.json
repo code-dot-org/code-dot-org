@@ -2,11 +2,11 @@
   "category": "Groups",
   "config": {
     "func": "changeGroupPropBy",
-    "blockText": "change group {GROUPNAME} {PROPERTY} by {VAL}",
+    "blockText": "change group {GROUP} {PROPERTY} by {VAL}",
     "args": [
       {
-        "name": "GROUPNAME",
-        "type": "String"
+        "name": "GROUP",
+        "type": "Sprite"
       },
       {
         "name": "PROPERTY",

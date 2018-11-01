@@ -110,16 +110,18 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
+    count ||= 0
+    total ||= 0
     "#{(100.0 * count / total).round(2)}%"
   end
 
   def school_stats
-    return nil unless object.try(:school_id)
+    return {} unless object.try(:school_id)
 
     school = School.find_by_id(object.school_id)
-
     stats = school.school_stats_by_year.order(school_year: :desc).first
-    return nil unless stats
+
+    return {} unless stats
 
     urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
 

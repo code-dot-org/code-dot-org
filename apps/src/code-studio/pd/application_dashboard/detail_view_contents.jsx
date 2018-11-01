@@ -41,7 +41,6 @@ const styles = {
   },
   statusSelect: {
     width: 250, // wide enough for the widest status
-    marginRight: '5px'
   },
   editMenuContainer: {
     display: 'inline-block' // fit contents
@@ -65,7 +64,6 @@ const styles = {
     marginRight: '5px'
   },
   statusSelectGroup: {
-    maxWidth: 200,
     marginRight: 5,
     marginLeft: 5,
   },
@@ -764,7 +762,7 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <h3>{SectionHeaders['detailViewPrincipalApproval']}</h3>
-          <h4>{this.state.principalApproval}</h4>
+          <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p>
             Link to principal approval form:{' '}
             <a href={principalApprovalUrl} target="_blank">
