@@ -795,7 +795,7 @@ export class DetailViewContents extends React.Component {
               School Name
             </td>
             <td style={styles.answerColumn}>
-              {this.renderSchoolTrait(this.props.applicationData.school_name, this.props.applicationData.form_data['principal_school_name'])}
+              {this.renderSchoolTrait(this.props.applicationData.school_name, this.props.applicationData.form_data['principal_school'])}
             </td>
             <td style={styles.scoringColumn}/>
           </tr>

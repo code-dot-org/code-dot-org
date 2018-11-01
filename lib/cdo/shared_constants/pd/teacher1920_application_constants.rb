@@ -147,6 +147,8 @@ module Pd
     }.freeze
 
     MULTI_ANSWER_QUESTION_FIELDS = {
+      school_name: {principal: :principal_school_name},
+      district_name: {principal: :principal_school_district},
       principal_first_name: {teacher: :principal_first_name, principal: :principal_response_first_name},
       principal_last_name: {teacher: :principal_last_name, principal: :principal_response_last_name},
       principal_email: {teacher: :principal_email, principal: :principal_response_email},
@@ -159,7 +161,7 @@ module Pd
       how_heard: {teacher: :how_heard, principal: :principal_how_heard},
 
       title_i_status: {stats: :title_i_status},
-      school_type: {stats: :school_type},
+      school_type: {teacher: :school_type, stats: :school_type},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
       underrepresented_minority_percent: {principal: :principal_underrepresented_minority_percent, stats: :urm_percent},
@@ -184,7 +186,6 @@ module Pd
       csp_which_grades: YES_NO,
       cs_total_course_hours: YES_NO,
       plan_to_teach: YES_NO,
-      have_cs_license: YES_NO,
       committed: YES_NO,
       willing_to_travel: YES_NO,
       principal_approval: YES_NO,
@@ -198,7 +199,8 @@ module Pd
       taught_in_past: [2, 0],
       free_lunch_percent: [5, 0],
       underrepresented_minority_percent: [5, 0],
-      race: [2, 0]
+      race: [2, 0],
+      principal_implementation: [2, 0]
     }
 
     # Need to explicitly list these for the shared constant generation to work.
@@ -223,18 +225,18 @@ module Pd
         :csd_which_grades,
         :cs_total_course_hours,
         :plan_to_teach,
-        :have_cs_license,
         :committed,
-        :willing_to_travel
+        :willing_to_travel,
+        :principal_implementation
       ],
       criteria_score_questions_csp: [
         :regional_partner_name,
         :csp_which_grades,
         :cs_total_course_hours,
         :plan_to_teach,
-        :have_cs_license,
         :committed,
-        :willing_to_travel
+        :willing_to_travel,
+        :principal_implementation
       ]
     }
   end
