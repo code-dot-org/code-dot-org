@@ -1,0 +1,33 @@
+%h1 Dance Party
+
+.sw-subheading
+  %h4 Help Translate Dance Party
+
+%link{href: "/css/starwars.css", rel: "stylesheet"}
+
+%div{style: "clear:both"}
+
+.starwars-container
+  .img-container
+    -# %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
+  %h1.starwars-heading= I18n.t(:starwars_subtitle)
+
+  .col-25.starwars-tutorial.starwars-js-tutorial
+    .tutorial-box
+      %h2.sw-h2= I18n.t(:starwars_javascript_title)
+      .sw-tutorial-info
+        %p.sw-tutorial-description= I18n.t(:starwars_javascript_description)
+        %p.sw-tutorial-specs= I18n.t(:starwars_javascript_specs)
+      %a{:href => '/api/hour/begin/starwars', :target=>'_self'}
+        %button.sw-try-button= I18n.t(:try_now)
+
+  .col-25.starwars-tutorial.starwars-blocks-tutorial
+    .tutorial-box
+      %h2.sw-h2= I18n.t(:starwars_blocks_title)
+      .sw-tutorial-info
+        %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
+        %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
+      %a{:href => '/api/hour/begin/starwarsblocks', :target=>'_self'}
+        %button.sw-try-button= I18n.t(:try_now)
+
+%div{style: "clear:both"}
