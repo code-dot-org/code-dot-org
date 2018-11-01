@@ -77,6 +77,10 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
+  .starwars-container .tutorial-box h2 {
+    font-size: 17px;
+  }
+
   .starwars-tutorial {
     width: 50%;
     float: left;
@@ -97,6 +101,12 @@
 
   .img-container {
     padding: 0px 5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .starwars-container .tutorial-box h2 {
+    font-size: 14px;
   }
 }
 
