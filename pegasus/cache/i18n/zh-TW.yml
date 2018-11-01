@@ -1561,7 +1561,39 @@ zh-TW:
     Google Classrrom 上同步學生資料」按鈕：
   google_sign_in_instruct: 前提是他們應該要「用 Google 帳戶登入」：
   applab-intro_name: App Lab 介紹
-  creativity_create: 建立
-  creativity_hoc_coming: 一小時的程式設計課程活動即將展開…
   account_sign_up_email_opt_in: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
   account_sign_up_child_accept_terms: '我確定我的監護人已允許我使用 Code.org 提供的服務。 '
+  hoc2018_creativity_create: 建立
+  hoc2018_mc_page_title: 一小時玩 Minecraft 教程
+  hoc2018_mc_details: 多種語言 | 最新瀏覽器或平板電腦 | 年級 2+
+  hoc2018_mc_aquatic_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+  hoc2018_mc_hero_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+  hoc2018_mc_designer_title: Minecraft 設計師
+  hoc2018_mc_designer_description: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
+  hoc2018_mc_adventurer_title: Minecraft 探險家
+  hoc2018_mc_adventurer_description: 使用程式積木與 Steve 或 Alex 一起完成冒險。
+  hoc2018_mc_start: 開始
+  hoc2018_mc_no_internet: 沒有網路嗎？
+  hoc2018_mc_download_adventurer: 下載離線版的 Minecraft 探險家。
+  hoc2018_mc_educators_box2_button: 下載
+  hoc2018_mc_watch_videos: 在你開始之前，不妨先看一支鼓舞人心的影片
+  hoc2018_mc_videos_more: 更多來自模特兒及知名人士的<a href='%{inspiring_videos_playlist}'>啟發影片</a>
+  hoc2018_mc_careers_more: 更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>
+  hoc2018_mc_video_1min: 1 分鐘
+  hoc2018_mc_video_2min: 2 分鐘
+  hoc2018_mc_video_3min: 3 分鐘
+  hoc2018_mc_video_5min: 5 分鐘
+  hoc2018_mc_video_title_steph_curry: 和 Steph Curry 一起玩一小時的程式
+  hoc2018_mc_video_title_sports: 只要不斷鞭策自己，你一定學得會。
+  hoc2018_mc_video_title_cs_is_everything: 計算機科學改變了一切
+  hoc2018_mc_video_title_inspire_girl: 鼓勵女生參與
+  hoc2018_mc_video_title_cs_intro: 計算機科學介紹
+  hoc2018_mc_video_title_schools_dont_teach: 大部分學校沒有教的內容
+  hoc2018_mc_video_title_obama: 美國總統 Obama 談計算機科學
+  hoc2018_mc_video_title_hoc_is_here: 任何人都可以學得會的一小時玩程式（Hour of Code）來了
+  hoc2018_mc_video_title_anybody_can_learn: 任何人都可以學習
+  hoc2018_mc_video_title_my_name_is_aracely: 我是 Aracely
+  hoc2018_mc_homepage_join_us: 加入我們
+  hoc2018_mc_homepage_try_it: 試一試
+  hoc2018_mc_back_journey: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+  hoc2018_mc_go_to_mc_education: 連結到 Minecraft Education
