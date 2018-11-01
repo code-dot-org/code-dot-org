@@ -739,7 +739,7 @@ module Pd::Application
     # Called after principal approval has been created. Do any manipulation needed for the
     # form data has here, as well as send emails
     def on_successful_principal_approval_create
-
+      # no-op for the base class
     end
 
     protected
