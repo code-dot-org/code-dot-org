@@ -447,6 +447,15 @@ Dance.prototype.initInterpreter = function () {
     setTint: (spriteIndex, val) => {
       nativeAPI.setTint(sprites[spriteIndex], val);
     },
+    setTintEach: (group, val) => {
+      nativeAPI.setTintEach(group, val);
+    },
+    setVisible: (spriteIndex, val) => {
+      nativeAPI.setVisible(sprites[spriteIndex], val);
+    },
+    setVisibleEach: (group, val) => {
+      nativeAPI.setVisibleEach(group, val);
+    },
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);
     },
