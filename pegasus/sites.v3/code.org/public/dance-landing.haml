@@ -1,9 +1,10 @@
-%h1 Dance Party
+%h1= I18n.t(:dance_main_heading)
 
-.sw-subheading
-  %h4 Help Translate Dance Party
+.dance-subheading
+  %h4= I18n.t(:dance_subheading)
 
 %link{href: "/css/starwars.css", rel: "stylesheet"}
+%link{href: "/css/dance-landing.css", rel: "stylesheet"}
 
 %div{style: "clear:both"}
 
@@ -14,19 +15,19 @@
 
   .col-25.starwars-tutorial.starwars-js-tutorial
     .tutorial-box
-      %h2.sw-h2= I18n.t(:starwars_javascript_title)
+      %h2.sw-h2= I18n.t(:dance_party_title)
       .sw-tutorial-info
-        %p.sw-tutorial-description= I18n.t(:starwars_javascript_description)
-        %p.sw-tutorial-specs= I18n.t(:starwars_javascript_specs)
+        %p.sw-tutorial-description= I18n.t(:dance_party_description)
+        %p.sw-tutorial-specs= I18n.t(:dance_party_specs)
       %a{:href => '/api/hour/begin/starwars', :target=>'_self'}
         %button.sw-try-button= I18n.t(:try_now)
 
   .col-25.starwars-tutorial.starwars-blocks-tutorial
     .tutorial-box
-      %h2.sw-h2= I18n.t(:starwars_blocks_title)
+      %h2.sw-h2= I18n.t(:dance_try_a_second_hour_title)
       .sw-tutorial-info
-        %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
-        %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
+        %p.sw-tutorial-description= I18n.t(:dance_try_a_second_hour_description)
+        %p.sw-tutorial-specs= I18n.t(:dance_try_a_second_hour_specs)
       %a{:href => '/api/hour/begin/starwarsblocks', :target=>'_self'}
         %button.sw-try-button= I18n.t(:try_now)
 
