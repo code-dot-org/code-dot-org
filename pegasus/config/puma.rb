@@ -29,7 +29,7 @@ before_fork do
   puts "About to require puma worker killer."
   require 'puma_worker_killer'
   puts "Done requiring puma worker killer.  About to enable rolling restart"
-  PumaWorkerKiller.enable_rolling_restart(12 * 3600) # 12 hours in seconds
+  PumaWorkerKiller.enable_rolling_restart(120) # 120 seconds
   puts "Done enabling rolling restart."
 rescue StandardError => error
   puts error
