@@ -32,7 +32,8 @@ const SongSelector = Radium(class extends React.Component {
   };
 
   state = {
-    songsData: []
+    songsData: [],
+    filterOn: !(sessionStorage.getItem('anon_over13') || (this.props.is13Plus ? this.props.is13Plus : false))
   };
 
   // Returns whether a song can be displayed
@@ -47,7 +48,7 @@ const SongSelector = Radium(class extends React.Component {
     } else if (filterStatus === 'on') {
       return !song.pg13;
     } else {
-      return (this.props.is13Plus && song.pg13) || !song.pg13;
+      return (!this.state.filterOn && song.pg13) || !song.pg13;
     }
   }
 
