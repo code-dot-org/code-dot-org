@@ -116,10 +116,10 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def school_stats
-    return nil unless object.try(:school_id)
+    return {} unless object.try(:school_id)
 
     stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
-    return nil unless stats
+    return {} unless stats
 
     urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
 
