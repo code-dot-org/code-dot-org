@@ -660,7 +660,7 @@ export class DetailViewContents extends React.Component {
     return (
       <FormControl
         componentClass="select"
-        value={this.state.response_scores[key]}
+        value={this.state.response_scores[category][key]}
         id={`${key}-${category}-score`}
         onChange={this.handleScoreChange}
         disabled={!this.state.editing}
