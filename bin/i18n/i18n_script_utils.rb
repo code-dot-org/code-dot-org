@@ -68,6 +68,9 @@ def redact(source, dest, *plugins)
 end
 
 def restore(source, redacted, dest, *plugins)
+  return unless File.exist?(source)
+  return unless File.exist?(redacted)
+
   plugins = plugins_to_arg(plugins)
   source_data = YAML.load_file(source)
   redacted_data = YAML.load_file(redacted)
