@@ -529,7 +529,7 @@ module Pd::Application
       if principal_approval_state == NOT_REQUIRED
         # If there is no needed principal approval, then criteria is just whether
         # the one scholarship question is yes
-        response_scores_hash[:meets_scholarship_criteria_scores][:previous_yearlong_cdo_pd] || 'Reviewing Incomplete'
+        response_scores_hash[:meets_scholarship_criteria_scores][:previous_yearlong_cdo_pd] || REVIEWING_INCOMPLETE
       else
         response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
         scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
