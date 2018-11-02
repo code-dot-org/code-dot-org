@@ -1,49 +1,49 @@
 %h1= t('signin_form.title')
 
-#signin
-  = form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "signin"}) do |f|
+.flex-container
+  #signin
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      = show_flashes.html_safe
+      = f.hidden_field :hashed_email
 
-    = show_flashes.html_safe
-
-    = f.hidden_field :hashed_email
-
-    / Email
-    .field-row
+      / Email
       .field
-        = t('signin_form.login_username')
+        = label_tag t('signin_form.login_username')
         - email = @email || ''
         = f.text_field :login, value: email, autofocus: email == ''
 
-    / Password
-    .field-row
+      / Password
       .field
         = f.label :password
         = f.password_field :password, autofocus: email != ''
 
-    .submit-section
       / Forgot password?
       - if devise_mapping.recoverable?
-        .align-center.italic= link_to t('auth.forgot_password'), new_password_path(resource_name)
+        %div.field-aligned
+          = link_to t('auth.forgot_password'), new_password_path(resource_name), id: 'forgot-password'
 
       / Sign in button
-      %button.submit#signin-button= t('signin_form.submit')
+      %button#signin-button= t('signin_form.submit')
+
+      %br
 
       / Not yet signed up? Sign up
       - if devise_mapping.registerable?
-        %strong.align-center= t('auth.notyet_signedup')
-        %button.submit= link_to t('nav.user.signup'), new_user_registration_path
+        %div.field-aligned
+          %strong= t('auth.notyet_signedup')
+        %button.blue= link_to t('nav.user.signup'), new_user_registration_path
 
-%div.vertical-or
-  %hr
-  = t("or").upcase
-  %hr
+  %div.vertical-or
+    %hr
+    = t("or").upcase
+    %hr
 
-= render "devise/shared/new_links"
+  = render "devise/shared/new_links"
 
-.row
-  .span12
-    %h3= t('signin.try_heading')
-.row
+%h3= t('signin.try_heading')
+
+/ TODO: FIX THESE
+.row{style: "margin: 0;"}
   - if ['mc', 'dance'].include? DCDO.get('hoc_launch', nil)
     = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_AQUATIC_NAME, showState: false }
   - else
@@ -70,9 +70,4 @@
     });
 
     dashboard.clientState.reset();
-  });
-
-  $("#signup-button").click(function (e) {
-    window.location.href = "#{new_user_registration_path}";
-    return false;
   });

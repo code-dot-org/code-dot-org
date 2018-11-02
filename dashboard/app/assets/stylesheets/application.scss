@@ -1599,6 +1599,67 @@ a.download-video {
   }
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#signin {
+  $field-width: 310px;
+  $button-width: 324px;
+
+  min-width: 450px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input[type=text], input[type=password] {
+      width: $field-width;
+      height: 40px;
+      padding: 0 6px;
+    }
+  }
+
+  .field-aligned {
+    width: $button-width;
+    align-self: flex-end;
+  }
+
+  #forgot-password {
+    font-family: $gotham-extra-bold-italics;
+  }
+
+  button {
+    align-self: flex-end;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    font-family: $gotham-extra-bold;
+    margin: 5px 0;
+    width: $button-width;
+
+    > a {
+      color: $white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .blue {
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+}
+
 #signup, #school-info-modal {
   // NEW SIGN-UP FORM
   .signup {
@@ -1918,7 +1979,7 @@ a.download-video {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
-      font-weight: bolder;
+      font-family: $gotham-extra-bold;
       padding: 10px 20px;
       margin-right: 0;
     }
@@ -1926,7 +1987,7 @@ a.download-video {
 
   .oauth-sign-in {
     color: $white;
-    font-weight: bolder;
+    font-family: $gotham-extra-bold;
     width: 100%;
     margin: 5px 0;
 
