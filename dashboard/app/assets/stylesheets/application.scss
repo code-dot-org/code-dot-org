@@ -1599,25 +1599,17 @@ a.download-video {
   }
 }
 
-#signin {
-  display: flex;
-}
-
-#signin, #signup, #school-info-modal {
-  // NEW SIGN-UP & SIGN-IN FORMS
-  .signin, .signup {
+#signup, #school-info-modal {
+  // NEW SIGN-UP FORM
+  .signup {
     margin: 20px 0;
-  }
-
-  .signin {
-    width: 550px;
   }
 
   .finish-signup {
     width: 800px;
   }
 
-  .signin, .signup, .finish-signup {
+  .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
 
@@ -1927,15 +1919,15 @@ a.download-video {
       border: 1px solid $orange;
       color: $white;
       font-weight: bolder;
-      padding: 0 20px;
-      margin: 5px;
+      padding: 10px 20px;
+      margin-right: 0;
     }
   }
 
   .oauth-sign-in {
     color: $white;
     font-weight: bolder;
-    min-width: 400px;
+    width: 100%;
     margin: 5px 0;
 
     &.with-google_oauth2 {
