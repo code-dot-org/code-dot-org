@@ -17,11 +17,14 @@
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Delta i det största utbildningsevenemanget någonsin, 5-11 december 2016'
   front_intro_default: 'Hour of Code är en global rörelse som når tiotals miljoner elever i över 180 länder. Vem som helst kan arrangera en Hour of Code var som helst. Det finns en-timmes-övningar på över 45 språk. Inga förkunskaper behövs. <strong>Från 4 till 104 år.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Se den nya filmen'
   front_watch_regular_video: 'Se filmen'
   front_volunteers: 'Frivilliga med teknisk kunskap sökes'
@@ -292,7 +295,7 @@
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code kartan"
   map_header: '# Hour of Code evenemang runt om i världen'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Se alla evenemang'
   map_header_company: '# by company organizers'
   map_header_country: '# i %{country}'
@@ -420,6 +423,7 @@
   title_stats: Puffar och statistik
   title_partners: Partners
   title_resources: Resurser
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Tack för att du anmält dig att hålla ett Hour of Code-evenemang!
   title_tutorial_guidelines: Riktlinjer för övningar
   title_whole_school: Hela skolans medverkan
