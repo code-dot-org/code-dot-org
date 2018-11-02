@@ -27,11 +27,11 @@ before_fork do
   Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
   require 'puma_worker_killer'
-  PumaWorkerKiller.config do |config|
-    config.rolling_restart_frequency = 120 # restart processes every 120 seconds
-    config.pre_term = ->(worker) {puts "Worker #{worker.pid} being killed"}
-  end
-  PumaWorkerKiller.start
+  PumaWorkerKiller.enable_rolling_restart(120) # 120 seconds for testing purposes
+end
+
+on_worker_shutdown do
+  puts "Worker about to shut down"
 end
 
 on_worker_boot do |_index|
