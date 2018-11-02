@@ -10,11 +10,14 @@ Feature: Dance Lab
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
-    And I see 1 options in the dropdown "#song_selector"
+    #Local PG-13 option should not be visible after filter in any environment
+    And I do not see "synthesize" option in the dropdown "#song_selector"
+    #Test PG-13 option should not be visible after filter in any environment
+    And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
 
   Scenario: Song selector is visible and displays all songs for age > 13
-    Given I create a student named "Harry"
-    Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
+    Given I create a student named "Ron"
+    And I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
@@ -22,7 +25,8 @@ Feature: Dance Lab
     And I close the instructions overlay if it exists
     Then element "#runButton" is visible
     And element "#song_selector" is visible
-    And I see 2 options in the dropdown "#song_selector"
+    #Jazzy_beats is available on local and isawthesign is available on test
+    And I see option "jazzy_beats" or "isawthesign_aceofbase" in the dropdown "#song_selector"
 
   # This test requires cloudfront.
   @no_circle
