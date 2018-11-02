@@ -106,6 +106,14 @@ const MinecraftMarketing = {
   buttonText: i18n.minecraftMarketingButton(),
 };
 
+const DancePartyFollowUp = {
+  title: i18n.dancePartyTitle(),
+  description: i18n.dancePartyDesc(),
+  link: "/s/dance-extras",
+  image: "dance-party",
+  buttonText: i18n.dancePartyButton(),
+};
+
 export const cardSets = {
   'pre2017MinecraftCards' : [
     CSFExpress,
@@ -185,6 +193,26 @@ export const cardSets = {
   'signedOutNonEnglishDefaultCards' : [
     CSFAccelerated,
     CourseCatalog,
+    CreateAccount
+  ],
+  'signedInEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFExpress,
+    AnotherHoC
+  ],
+  'signedInNonEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFAccelerated,
+    AnotherHoC
+  ],
+  'signedOutEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFExpress,
+    CreateAccount
+  ],
+  'signedOutNonEnglishDancePartyCards' : [
+    DancePartyFollowUp,
+    CSFAccelerated,
     CreateAccount
   ],
 };

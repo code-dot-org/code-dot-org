@@ -48,7 +48,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def response_scores
-    JSON.parse(object.response_scores || '{}').transform_keys {|x| x.camelize :lower}
+    object.try(:response_scores_hash) || {}
   end
 
   def meets_criteria
@@ -116,7 +116,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   def school_stats
     return nil unless object.try(:school_id)
 
-    stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
+    stats = School.find_by_id(object.school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
     return nil unless stats
 
     urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
