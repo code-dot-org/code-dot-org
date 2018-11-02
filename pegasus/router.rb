@@ -143,6 +143,10 @@ class Documents < Sinatra::Base
       @dirs << [File.join(request.site, 'i18n')]
     end
 
+    if request.site == 'code.org'
+      @dirs << File.join(request.site, 'i18n')
+    end
+
     @dirs << request.site
 
     # Implement recursive site-inheritance feature.
@@ -410,7 +414,7 @@ class Documents < Sinatra::Base
     end
 
     def resolve_document(uri)
-      extnames = settings.non_static_extnames
+      extnames = settings.non_static_extnames + [".#{request.locale}.md"]
 
       path = resolve_template('public', extnames, uri, true)
       return path if path
