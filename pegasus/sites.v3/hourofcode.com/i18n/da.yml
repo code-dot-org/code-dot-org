@@ -12,16 +12,19 @@ da:
   campaign_date_year: "2016"
   campaign_date_full_year: "5.-11. december 2016"
   codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
-  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
-  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line1: 'Hour of Code nærmer sig...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'Hvad vil du <span class="hoc2018-highlight-word">skabe?</span>'
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
-  codeorg_homepage_hoc2018_video: 'Watch our video'
+  codeorg_homepage_hoc2018_video: 'Se vores video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'Ved at fortsætte på websitet, eller ved at klikke "Jeg accepterer", accepterer du at vi gemmer cookies på din computer eller enhed.'
   cookie_banner_more_information: "Se Code.orgs privatlivspolitik."
   cookie_banner_accept: 'Jeg accepterer'
   front_header_banner: 'Bliv en del af den største læringsevent nogensinde, den 7.-13. december 2015'
   front_intro_default: 'Hour of Code er en global bevægelse, som når ud til millioner af elever i 180+ lande. Alle, hvor som helst, kan organisere en Hour of Code begivenhed. Én-times introduktioner findes på mere end 40 sprog. Ingen erfaring er nødvendig. <strong>Fra 4 til 104 år.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Se den nye video'
   front_watch_regular_video: 'Se videoen'
   front_volunteers: 'Tekniske frivillige ønskes'
@@ -99,7 +102,7 @@ da:
   company_fcschools: Franklin County School
   company_fpschools: Franklin Pierce School District
   company_frederickcountypublicschools: Frederick County Public Schools
-  company_fultonschools: Fulton County Schools
+  company_fultonschools: Fulton County skoler
   company_vadoe: Governor's School Programs
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
@@ -235,7 +238,7 @@ da:
   front_join_us_code_info: "For mere information, besøg code.org"
   front_join_us_n_students_served: "# har prøvet"
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
-  front_join_us_learn_more: "Learn more"
+  front_join_us_learn_more: "Læs mere"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
   signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
@@ -263,7 +266,7 @@ da:
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
   signup_email_preference_yes: 'Ja'
-  signup_email_preference_no: 'No'
+  signup_email_preference_no: 'Nej'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Hvis du er vært for flere begivenheder, bedes du sende et entydigt navn eller en e-mail for hver enkelt. Vi tæller kun én begivenhed pr. kombination af navn og e-mail."
   signup_registration_deadline: "Tilmelding til Hour of Code lukker den 11. december."
@@ -292,7 +295,7 @@ da:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code kort"
   map_header: '# Hour of Code arrangementer verden over'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Se alle arrangementer'
   map_header_company: '# arrangeret i samarbejde med'
   map_header_country: '# i %{country}'
@@ -412,7 +415,7 @@ da:
   title_how_to_volunteers: Vejledning til Hour of Code frivillige
   title_how_to_parents: How-to guide for forældre
   title_how_to: Vejledning
-  title_international_partners: Contact International Partners
+  title_international_partners: Internationale partnere
   title_press_release: Hour of Code pressemeddelelse til politikere
   title_op_ed: Eksempel på klumme/artikel til støtte for Computer Sceince Education Week og Hour of Code
   title_press_kit: Presse-kit
@@ -420,6 +423,7 @@ da:
   title_stats: Info og Statistik
   title_partners: Partnere
   title_resources: Ressourcer
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Tak fordi du vil arrangere Hour of Code!
   title_tutorial_guidelines: Guidelines for Øvelser
   title_whole_school: Deltagelse - hele skoler
@@ -512,12 +516,12 @@ da:
   tutorial_hopgeo_name: "Geometry Jumper"
   tutorial_tynkermult_name: "Multiplication Escape STEM Kit"
   tutorial_monster_name: "Mystery Island Coding Quest"
-  tutorial_tynkerapp_name: "Build an App"
+  tutorial_tynkerapp_name: "Byg en App"
   tutorial_tynkerpup_name: "Puppy Adventure"
   tutorial_livecode_name: "LiveCode Sound Boards"
   tutorial_cocomgame_name: "CodeCombat: Byg dit eget spil!"
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
-  tutorial_code-avengers_name: "Build a Game with JavaScript"
+  tutorial_code-avengers_name: "Byg et spil med JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
   tutorial_makeschool_name: "Build an iPhone game in your browser!"
   tutorial_cmgame_name: "CodeMonkey's Game Builder"
@@ -587,7 +591,7 @@ da:
   tutorial_fufafrenz_name: "fuzzFamily Frenzy"
   tutorial_bbcgeo_name: "Bitsbox Coding + Geometry"
   tutorial_chspixel_name: "CodeHS Pixel Art"
-  tutorial_hummingbird_name: "Creating a Game with Hummingbird"
+  tutorial_hummingbird_name: "Lav et spil med Hummingbird"
   tutorial_recoloring_name: "Recoloring the Universe"
   tutorial_bbcchem_name: "Bitsbox Coding + Chemistry"
   tutorial_floalgo_name: "Coding: Algorithms Lesson Plan"

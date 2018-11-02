@@ -279,20 +279,56 @@ de:
         text: nach links drehen
       RyanLab_turnRight:
         text: nach rechts drehen
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"x"': x-Position
+            '"y"': y-Position
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"x"': x-Position
+            '"y"': y-Position
       craft_ifPath:
+        text: |-
+          wenn Weg {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": voraus
+            "'right'": nach rechts
+            "'left'": nach links
       craft_ifStandingOn:
+        text: |-
+          wenn auf {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": blaue Koralle
+            "'redCoralBlock'": rote Koralle
             "'sand'": Sand
+            "'wool_blue'": tiefes Wasser
             "'planksOak'": Eichenholzbretter
+            "'seaLantern'": Seelaterne
       craft_ifStandingOnLimit:
+        text: |-
+          wenn auf {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": Sand
+            "'seaLantern'": Seelaterne
       craft_moveForward:
         text: vorwärts bewegen
+      craft_placeBlock:
+        options:
+          blockType:
+            '"seaLantern"': Seelaterne
       craft_placeTorch:
         text: Fackel platzieren
+      craft_repeatUntilGoal:
+        text: |-
+          bis Ziel wiederholen
+          {STATEMENT}

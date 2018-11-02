@@ -17,11 +17,14 @@ ph:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Sumali sa pinakamalaking kaganapan ng pag-aaral sa kasaysayan, %{campaign_date}'
   front_intro_default: 'Ang Hour of Code ay isang pandaigdigang kilusan para maabot ang milyung-milyong mga estudyante sa 180+ na mga bansa. Kahit sino, kahit saan ay maaaring mag-organisa ng kaganapan ng Hour of Code. Isang oras na pagtuturo ay pwede sa mahigit 45 na wika. Hindi kailangan ng karanasan. <strong>Mga 4 hanggang 104 na gulang.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Panoorin ang bagong video'
   front_watch_regular_video: 'Panoorin ang video'
   front_volunteers: 'Nais ng mga teknikal na mga boluntaryo'
@@ -292,7 +295,7 @@ ph:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Mapa ng Hour of Code"
   map_header: '# Hour of Code events sa buong mundo'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Tignan ang lahat ng mga kaganapan'
   map_header_company: '# ng mga organizer ng kumpanya'
   map_header_country: '# sa %{country}'
@@ -420,6 +423,7 @@ ph:
   title_stats: Mga blurb at Stats
   title_partners: Partners
   title_resources: Mga pwedeng makatulong
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Maraming salamat sa pagsama bilang host ng Hour of Code!
   title_tutorial_guidelines: Mga gabay sa aktibidad
   title_whole_school: Buong Paaralang Partisipasyon

@@ -61,7 +61,23 @@ de:
         es „wiederholen“, um es zu beenden?
       2-3 Artist Debugging 9: 'Der Code für diesen Stiel ist falsch. Hinweis:  Der
         Winkel weicht um 60 Grad ab.'
+      2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein
+        geraten?\r\n\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
+      2-3 Artist Functions 1 a: |+
+        Ich Zombie-Künstler. Ich zeichnen liebe!
+
+        Hilf mir, eine quadratische Brille zu zeichnen.
+
+        Hinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.
+
+      2-3 Artist Functions 1: |+
+        Ich Zombie-Künstler. Ich zeichnen liebe!
+
+        Hilf mir, eine quadratische Brille zu zeichnen.
+
+        Hinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.
+
       2-3 Artist Functions 11.5: Hier ist die gleiche „Zeichne ein Sechseck“-Funktion.
         Was passiert, wenn du bei jeder Wiederholung nur um 60 Grad drehst?
       2-3 Artist Functions 12 Mike: 'Funktionen sind für das mehrfache Zeichnen von
@@ -76,10 +92,18 @@ de:
         Dingen wirklich toll. Kannst du die Funktion „zeichne eine Blume“ benutzen,
         um das restliche Feld mit Pflanzen zu füllen? (Hinweis: Die Pflanzen haben
         alle 100 Pixel Abstand zueinander.)  '
+      2-3 Artist Functions 2 a: "Funktionen erlauben dir neue Blöcke zu definieren!
+        \n\nWir haben die Blöcke die du brauchst um ein Quadrat zu zeichnen in eine
+        Funktion namens „zeichne ein Quadrat“ verschoben. Versuche die Funktion „zeichne
+        ein Quadrat“ zu benutzen um die Brille zu erstellen!\n Die Quadrate haben
+        einen Abstand von 75 Pixel."
       2-3 Artist Functions 2: Funktionen erlauben dir, neue Blöcke zu definieren!
         Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben,
         um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen,
         um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel.
+      2-3 Artist Functions 3 a: "Ändere die Funktion \"zeichne ein Quadrat\" um die
+        Brillengläser mit Rahmen zu zeichnen, die eine Seitenlänge von 115px haben.
+        \n\nDie Quadrate sind jetzt 45 Pixel auseinander."
       2-3 Artist Functions 3: Bearbeite die Funktion, um ein Quadrat mit einer Seitenlänge
         von 115 und zeichne die größeren Gläser. Die Quadrate sind jetzt 45 Pixel
         auseinander.
@@ -365,6 +389,36 @@ de:
         des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
         deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
         zur Redstone-Fackel [redstone_torch] zu bringen."
+      HOC 2018 Level_1: "Du benötigst für deine Reise Vorräte. Sammle ein **Boot**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
+      HOC 2018 Level_10: "Irgendwo in diesem Ozeanmonument versteckt sich ein **Tintenfisch**
+        ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
+        Findest du ihn?\n\n"
+      HOC 2018 Level_11: Baue eine Mauer aus **Prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        um den schwarzen Beton. Dies aktiviert den **Aquisator** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        und schließt die Herausforderung ab!
+      HOC 2018 Level_12: Glückwunsch! Die offene Meereswelt erwartet dich. Baue ein
+        Korallenriff! Einen Vulkan! Ein Schiffswrack! Du hast die Wahl.
+      HOC 2018 Level_2: Boote sind viel bequemer, als im offenen Wasser zu schwimmen!
+        Begib dich zum Ende des Anlegestegs, um an Bord zu gehen.
+      HOC 2018 Level_3: Schnapp dir die Ruder und fahre auf das offene Meer, um den
+        **Kabeljau** zu fangen![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Füttere den **dolphin** mit dem Kabeljau![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Verwende einen "Wiederholen"-Block, um den Ozean schneller zu überqueren.
+      HOC 2018 Level_5: Irgendwo ist eine **Nautilusmuschel** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        versteckt! Erkunde das Schiffswrack, um die **Truhe** zu erreichen![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Sieht kalt aus! Fange auf dem Weg zu den Unterwasserruinen
+        einen **Lachs** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      HOC 2018 Level_7a: "Du hast die Unterwasserruine gefunden. Suche im Sandstein
+        nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      HOC 2018 Level_8: "Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel, und
+        finde die **Tropenfische** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        im Korallenriff.\n\n"
+      HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem **Herz des
+        Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
       K-1 Bee Loops 2: Verwende eine „Wiederhole“-Schleife zum Bewegen, dann den Nektar
         einzusammeln und Honig herzustellen.
       K-1 Bee Loops 3: Verwende drei „Wiederhole"-Schleifen, um Nektar zu holen und

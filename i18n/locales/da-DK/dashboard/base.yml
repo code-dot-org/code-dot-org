@@ -32,6 +32,7 @@ da:
   next_page: Næste side
   cancel: "Annuller"
   okay: "Okay"
+  or: "eller"
   heading_x_of_y: "%{heading} (side %{x} af %{y})"
   add_teacher_form:
     code:
@@ -485,6 +486,8 @@ da:
       title: "Minecraft"
       body: "Udforsk en Minecraft-verden gennem kode"
     minecraft2016:
+      title: "Minecraft"
+    aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"

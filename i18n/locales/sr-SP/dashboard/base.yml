@@ -32,6 +32,7 @@ sr:
   next_page: Следећа страница
   cancel: "Откажи"
   okay: "У реду"
+  or: "или"
   add_teacher_form:
     code:
       label: 'Додај наставника:'

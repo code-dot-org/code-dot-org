@@ -17,11 +17,14 @@ ja:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: '%{campaign_date} は、史上最大の学習イベントに参加しよう'
   front_intro_default: 'Hour of Code は、180カ国以上から数千万人の生徒が参加する世界的なムーブメントです。誰でも、どこでもHour of Codeのイベントを開催できます。1時間のチュートリアルは45ヵ国の言語に翻訳されています。<strong>4歳から104歳まで</strong>、経験は必要ありません。'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: '新しいビデオを見る'
   front_watch_regular_video: 'ビデオを見る'
   front_volunteers: 'エンジニアボランティアを募集しています'
@@ -292,7 +295,7 @@ ja:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code の地図"
   map_header: '世界中でHour of Code 2017に登録された#個のイベント'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'すべてのイベントを見る'
   map_header_company: '# 会社主催'
   map_header_country: 'そのうち # 個は%{country} で行われています。'
@@ -420,6 +423,7 @@ ja:
   title_stats: 推薦と統計
   title_partners: パートナー
   title_resources: 資料
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
   title_tutorial_guidelines: 活動のガイドライン
   title_whole_school: 全校での参加
