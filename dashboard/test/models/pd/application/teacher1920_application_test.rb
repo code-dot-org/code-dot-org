@@ -392,22 +392,6 @@ module Pd::Application
       assert_equal 103, csv_header_csp.length
     end
 
-    test 'csv_row' do
-    end
-
-    test 'csv header and row have same number of columns' do
-      csd_application = create :pd_teacher1920_application, course: 'csd'
-      csp_application = create :pd_teacher1920_application, course: 'csp'
-
-      csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
-      csv_row_csd = CSV.parse(csd_application.to_csv_row('csd'))[0]
-      assert_equal csv_header_csd.length, csv_row_csd.length
-
-      csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
-      csv_row_csp = CSV.parse(csp_application.to_csv_row('csp'))[0]
-      assert_equal csv_header_csp.length, csv_row_csp.length
-    end
-
     test 'school cache' do
       school = create :school
       form_data_hash = build :pd_teacher1920_application_hash, school: school
