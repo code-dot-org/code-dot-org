@@ -1,12 +1,19 @@
 import Sounds from "../Sounds";
 
+/**
+ * Requests the song manifest in parallel with signed cloudfront cookies. These cookies
+ * are needed before accessing restricted song files.
+ * @param useRestrictedSongs {boolean} if true, request signed cloudfront
+ * cookies in parallel with the request for the manifest, and use /restricted/
+ * urls instead of curriculum.code.org urls for music files.
+ * @returns {Promise<*>} The song manifest.
+ */
 export async function getSongManifest(useRestrictedSongs) {
   const manifestFilename = useRestrictedSongs ? 'songManifest.json' : 'testManifest.json';
   const songManifestPromise = fetch(`/api/v1/sound-library/hoc_song_meta/${manifestFilename}`)
     .then(response => response.json());
   const promises = [songManifestPromise];
 
-  // We must obtain signed cookies before accessing restricted content.
   if (useRestrictedSongs) {
     const signedCookiesPromise = fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
     promises.push(signedCookiesPromise);
