@@ -340,48 +340,16 @@ module Pd::Application
       Teacher1920Application.find_by(user: user)
     end
 
-    # @override
-    def self.cohort_csv_header(optional_columns)
-      columns = [
-        'Date Accepted',
-        'Applicant Name',
-        'District Name',
-        'School Name',
-        'Email',
-        'Status',
-        'Assigned Workshop'
-      ]
-      if optional_columns[:registered_workshop]
-        columns.push 'Registered Workshop'
-      end
-
-      CSV.generate do |csv|
-        csv << columns
-      end
+    def date_applied
+      created_at.to_date.iso8601
     end
 
-    # @override
-    def to_cohort_csv_row(optional_columns)
-      columns = [
-        date_accepted,
-        applicant_name,
-        district_name,
-        school_name,
-        user.email,
-        status,
-        workshop_date_and_location
-      ]
-      if optional_columns[:registered_workshop]
-        if workshop.try(:local_summer?)
-          columns.push(registered_workshop? ? 'Yes' : 'No')
-        else
-          columns.push nil
-        end
-      end
+    def date_accepted
+      accepted_at&.to_date&.iso8601
+    end
 
-      CSV.generate do |csv|
-        csv << columns
-      end
+    def assigned_workshop
+      Pd::Workshop.find_by(id: pd_workshop_id)&.date_and_location_name
     end
 
     # memoize in a hash, per course
@@ -390,18 +358,12 @@ module Pd::Application
       if key == 'csd'
         [
           :csp_which_grades,
-          :csp_course_hours_per_week,
-          :csp_course_hours_per_year,
-          :csp_terms_per_year,
           :csp_how_offer,
-          :csp_ap_exam
+          :csp_ap_exam,
         ]
       else
         [
-          :csd_which_grades,
-          :csd_course_hours_per_week,
-          :csd_course_hours_per_year,
-          :csd_terms_per_year
+          :csd_which_grades
         ]
       end
       )
@@ -419,6 +381,104 @@ module Pd::Application
     def self.filtered_labels(course)
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
+    end
+
+    # Filter out extraneous answers based on selected program (course)
+    def self.columns_to_remove(course)
+      if course == 'csd'
+        {
+          teacher: [
+            :csp_which_grades,
+            :csp_how_offer,
+          ],
+          principal: [
+            :csp_ap_exam,
+            :replace_which_course_csp,
+            :csp_implementation
+          ]
+        }
+      else
+        {
+          teacher: [
+            :csd_which_grades
+          ],
+          principal: [
+            :replace_which_course_csd,
+            :csd_implementation
+          ]
+        }
+      end
+    end
+
+    def self.csv_filtered_labels(course)
+      labels = {
+        teacher: {},
+        principal: {},
+        nces: {}
+      }
+      labels_to_remove = columns_to_remove(course)
+
+      CSV_COLUMNS.keys.each do |source|
+        CSV_COLUMNS[source].each do |k|
+          unless labels_to_remove[source]&.include? k.to_sym
+            labels[source][k] = CSV_LABELS[source][k] || ALL_LABELS_WITH_OVERRIDES[k]
+          end
+        end
+      end
+      labels
+    end
+
+    def self.csv_header(course)
+      labels = csv_filtered_labels(course)
+      CSV.generate do |csv|
+        columns = []
+        labels.keys.each do |source|
+          labels[source].keys.each do |k|
+            columns.push(labels[source][k])
+          end
+        end
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_csv_row(course)
+      columns_to_exclude = Pd::Application::Teacher1920Application.columns_to_remove(course)
+      teacher_answers = full_answers
+      principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
+      principal_answers = principal_application&.csv_data
+      school_stats = School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
+      CSV.generate do |csv|
+        row = []
+        CSV_COLUMNS[:teacher].each do |k|
+          if columns_to_exclude[:teacher]&.include? k.to_sym
+            next
+          end
+          row.push(teacher_answers[k] || try(k) || "")
+        end
+        CSV_COLUMNS[:principal].each do |k|
+          if principal_answers
+            if columns_to_exclude[:principal]&.include? k.to_sym
+              next
+            end
+            row.push(principal_answers[k] || principal_application.try(k) || "")
+          else
+            row.push("")
+          end
+        end
+        CSV_COLUMNS[:nces].each do |k|
+          if school_stats
+            if [:title_i_status, :students_total, :urm_percent].include? k
+              row.push(school_stats[k] || school_stats.try(k) || "")
+            else
+              row.push(school_stats.percent_of_students(school_stats[k]) || "")
+            end
+          else
+            row.push("")
+          end
+        end
+        csv << row
+      end
     end
 
     # @override

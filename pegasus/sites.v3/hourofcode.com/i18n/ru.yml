@@ -17,11 +17,14 @@ ru:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Присоединяетесь к самому масштабному образовательному событию 7-13 декабря 2015'
   front_intro_default: 'Час Программирования - это глобальное движение, которое охватывает десятки миллионов студентов и учеников в более 180 стран. Каждый, в любой стране, может стать организатором Часа Кода. Одночасовые уроки доступны более чем на 30 языках. Не требуется никаких предварительных знаний.<strong>Возраст от 4 от 104 лет.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Смотрите новое видео'
   front_watch_regular_video: 'Посмотреть видео'
   front_volunteers: 'Ищем технических волонтеров'
@@ -292,7 +295,7 @@ ru:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Карта Часа кода"
   map_header: '# Час Программирования по всему миру'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Посмотреть все события'
   map_header_company: '# с помощью организаторов компании'
   map_header_country: '# в %{country}'
@@ -420,6 +423,7 @@ ru:
   title_stats: Реклама и статистика
   title_partners: Партнеры
   title_resources: Ресурсы
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Спасибо за регистрацию на проведение Часа Кода!
   title_tutorial_guidelines: Дополнительная информация по урокам
   title_whole_school: Участие всей школы

@@ -17,11 +17,14 @@ he:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'הצטרף לאירוע הלמידה הגדול בהסטוריה %{campaign_date}'
   front_intro_default: 'שעת תכנות הוא מייזם עולמי הנגיש למליוני תלמידים במעל ל 180 מדינות. כל אחד, בכל מקים יכול לארגן אירוע שעת תכנות. לרשותכם מערכי שיעור בין 45 דקות במעל ל 45 שפות. לא נדרש כל ניסיון מוקדם. <strong>מתאים לבני גיל 4 עד 104.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'צפה בסרטון החדש'
   front_watch_regular_video: 'צפה בוידאו'
   front_volunteers: 'דרושים מתנדבים לסיוע טכני'
@@ -233,7 +236,7 @@ he:
   front_join_us_support: "תתמוך בו"
   front_join_us_more_info: "למידע נוסף, אנא בקרו ב<a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "לקבלת מידע נוסף, אנא בקרו בcode.org"
-  front_join_us_n_students_served: "# served"
+  front_join_us_n_students_served: "# served."
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
@@ -292,7 +295,7 @@ he:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "מפת \"שעה של קוד\""
   map_header: '# אירועים של Hour of Code ברחבי העולם'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'לרשימת כל האירועים'
   map_header_company: '# לפי החברה המארגנת'
   map_header_country: '# ב %{country}'
@@ -420,6 +423,7 @@ he:
   title_stats: סטטיסטיקות ותקצירים
   title_partners: שותפים
   title_resources: מקורות
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
   title_tutorial_guidelines: קווים מנחים לפעילות
   title_whole_school: השתתפות כל בית הספר
