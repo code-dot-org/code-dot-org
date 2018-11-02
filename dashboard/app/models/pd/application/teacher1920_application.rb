@@ -448,21 +448,25 @@ module Pd::Application
           end
           row.push(teacher_answers[k] || try(k) || "")
         end
-        if principal_answers
-          CSV_COLUMNS[:principal].each do |k|
+        CSV_COLUMNS[:principal].each do |k|
+          if principal_answers
             if columns_to_exclude[:principal]&.include? k.to_sym
               next
             end
             row.push(principal_answers[k] || principal_application.try(k) || "")
+          else
+            row.push("")
           end
         end
-        if school_stats
-          CSV_COLUMNS[:nces].each do |k|
+        CSV_COLUMNS[:nces].each do |k|
+          if school_stats
             if [:title_i_status, :students_total, :urm_percent].include? k
               row.push(school_stats[k] || school_stats.try(k) || "")
             else
               row.push(school_stats.percent_of_students(school_stats[k]) || "")
             end
+          else
+            row.push("")
           end
         end
         csv << row
