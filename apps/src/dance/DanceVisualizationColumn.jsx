@@ -27,12 +27,11 @@ const SongSelector = Radium(class extends React.Component {
     selectedSong: PropTypes.string.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    userType: PropTypes.string.isRequired
+    filterOff: PropTypes.bool.isRequired
   };
 
   state = {
     songsData: [],
-    filterOff: this.props.userType !== 'student_y'
   };
 
   changeSong = (event) => {
@@ -117,7 +116,7 @@ class DanceVisualizationColumn extends React.Component {
             selectedSong={this.props.selectedSong}
             songManifest={this.props.songManifest}
             hasChannel={this.props.hasChannel}
-            userType={this.props.userType}
+            filterOff={this.props.userType === 'teacher' || this.props.userType === 'student'}
           />
         }
         <ProtectedVisualizationDiv>
