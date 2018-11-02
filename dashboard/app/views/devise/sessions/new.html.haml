@@ -42,8 +42,7 @@
 
 %h3= t('signin.try_heading')
 
-/ TODO: FIX THESE
-.row{style: "margin: 0;"}
+.row
   - if ['mc', 'dance'].include? DCDO.get('hoc_launch', nil)
     = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_AQUATIC_NAME, showState: false }
   - else
