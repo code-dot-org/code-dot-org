@@ -38,7 +38,8 @@ export default storybook => {
                 program: 'program',
                 planOnTeaching: ['Yes'],
                 abilityToMeetRequirements: '10'
-              }
+              },
+              school_stats: {}
             }}
             viewType="facilitator"
           />
