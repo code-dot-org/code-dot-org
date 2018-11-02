@@ -29,7 +29,7 @@ before_fork do
   require 'puma_worker_killer'
   PumaWorkerKiller.config do |config|
     config.rolling_restart_frequency = 120 # restart processes every 120 seconds
-    config.pre_term = ->(worker) {puts "Worker #{worker.inspect} being killed"}
+    config.pre_term = ->(worker) {puts "Worker #{worker.pid} being killed"}
   end
   PumaWorkerKiller.start
 end
