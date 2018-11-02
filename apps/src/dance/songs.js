@@ -77,5 +77,3 @@ export function parseSongOptions(songManifest) {
   });
   return songs;
 }
-
-
