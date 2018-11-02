@@ -20,6 +20,11 @@ const styles = {
     fontSize: 16,
     fontFamily: "'Gotham 5r', sans-serif",
   },
+  dancePartyHeading: {
+    fontSize: 32,
+    fontWeight:'bold',
+    fontFamily: "'Gotham 5r', sans-serif",
+  },
   middle: {
     marginTop: 20,
     marginBottom: 20,
@@ -81,7 +86,7 @@ class SignInOrAgeDialog extends Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
-    ageOnly: PropTypes.bool,
+    danceStyle: PropTypes.bool,
   };
 
   onClickAgeOk = () => {
@@ -91,7 +96,7 @@ class SignInOrAgeDialog extends Component {
       return;
     }
 
-    if (!this.props.ageOnly && parseInt(value, 10) < 13) {
+    if (!this.props.danceStyle && parseInt(value, 10) < 13) {
       this.setState({tooYoung: true});
       return;
     }
@@ -113,7 +118,7 @@ class SignInOrAgeDialog extends Component {
 
   render() {
     const { signedIn, age13Required } = this.props;
-    let ageRequired = age13Required || this.props.ageOnly;
+    let ageRequired = age13Required || this.props.danceStyle;
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
     if (!ageRequired || signedIn || sessionStorage.getItem(sessionStorageKey)) {
@@ -171,11 +176,11 @@ class SignInOrAgeDialog extends Component {
         uncloseable
       >
         <div style={styles.container} className="signInOrAgeDialog">
-          <div style={styles.heading}>
-            {this.props.ageOnly ? i18n.signinDanceParty() : i18n.signinOrAge()}
+          <div style={this.props.danceStyle ? styles.dancePartyHeading : styles.heading}>
+            {this.props.danceStyle ? i18n.welcomeToDanceParty() : i18n.signinOrAge()}
           </div>
           <div>
-            {this.props.ageOnly ?
+            {this.props.danceStyle ?
               <div style={styles.middle}>
                 {provideAge}
               </div> :

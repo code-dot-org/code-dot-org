@@ -10,6 +10,7 @@ import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
+import danceMsg from './locale';
 import {reducers, setSong} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
@@ -125,6 +126,7 @@ Dance.prototype.init = async function (config) {
   ReactDOM.render((
     <Provider store={getStore()}>
       <div>
+        <SignInOrAgeDialog danceStyle={true}/>
         <AppView
           visualizationColumn={
             <DanceVisualizationColumn
@@ -270,18 +272,24 @@ Dance.prototype.afterInject_ = function () {
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
     recordReplayLog,
+    showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
+      const logSampleRate = 1;
       logToCloud.addPageAction(logToCloud.PageAction.DancePartyOnInit, {
+        logSampleRate,
         share: this.share
-      }, 1 / 20);
+      }, logSampleRate);
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
   });
+  /** Expose for testing **/
+  window.__DanceTestInterface = this.nativeAPI.getTestInterface();
+
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
   }
@@ -309,12 +317,14 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
+  const danceMessage = message ? danceMsg[message]() : '';
+
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
-    this.message = message;
+    this.message = danceMessage;
   } else if (result === false) {
     this.testResults = TestResults.APP_SPECIFIC_FAIL;
-    this.message = message;
+    this.message = danceMessage;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -360,15 +370,31 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  // Block re-entrancy since starting a run is async
+  // (not strictly needed since we disable the run button,
+  // but better to be safe)
+  if (this.runIsStarting) {
+    return;
+  }
+  // Disable the run button now to give some visual feedback
+  // that the button was pressed. toggleRunReset() will
+  // eventually execute down below, but there are some long-running
+  // tasks that need to complete first
+  const runButton = document.getElementById('runButton');
+  runButton.disabled = true;
+  this.runIsStarting = true;
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
   trackEvent('HoC_Song', 'Play', getStore().getState().selectedSong);
 
-  this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  this.execute();
+  await this.execute();
+
+  this.studioApp_.toggleRunReset('reset');
+  // Safe to allow normal run/reset behavior now
+  this.runIsStarting = false;
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -400,7 +426,11 @@ Dance.prototype.execute = async function () {
   this.nativeAPI.registerValidation(validationCallback);
 
   const songData = await this.songMetadataPromise;
-  this.nativeAPI.play(songData);
+  return new Promise(resolve => {
+    this.nativeAPI.play(songData, () => {
+      resolve();
+    });
+  });
 };
 
 Dance.prototype.initInterpreter = function () {
@@ -443,6 +473,15 @@ Dance.prototype.initInterpreter = function () {
     },
     setTint: (spriteIndex, val) => {
       nativeAPI.setTint(sprites[spriteIndex], val);
+    },
+    setTintEach: (group, val) => {
+      nativeAPI.setTintEach(group, val);
+    },
+    setVisible: (spriteIndex, val) => {
+      nativeAPI.setVisible(sprites[spriteIndex], val);
+    },
+    setVisibleEach: (group, val) => {
+      nativeAPI.setVisibleEach(group, val);
     },
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);

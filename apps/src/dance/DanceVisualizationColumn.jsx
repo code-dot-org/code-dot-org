@@ -10,7 +10,6 @@ import i18n from '@cdo/locale';
 import * as danceRedux from "../dance/redux";
 import Sounds from "../Sounds";
 import project from "../code-studio/initApp/project";
-import queryString from "query-string";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -28,15 +27,13 @@ const SongSelector = Radium(class extends React.Component {
     selectedSong: PropTypes.string.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool.isRequired
+    filterOff: PropTypes.bool.isRequired
   };
 
   // filterOn indicates whether to display age restricted songs, depending on signed-in user age,
   // session cookie, or query string
   state = {
-    songsData: [],
-    filterOn: !(sessionStorage.getItem('anon_over13') || (this.props.is13Plus ? this.props.is13Plus : false)) ||
-      queryString.parse(window.location.search).songfilter === 'on'
+    songsData: []
   };
 
   changeSong = (event) => {
@@ -67,7 +64,7 @@ const SongSelector = Radium(class extends React.Component {
     let songs = {};
     if (songManifest) {
       songManifest.forEach((song) => {
-        if ((!this.state.filterOn && song.pg13) || !song.pg13) {
+        if ((this.state.filterOff && song.pg13) || !song.pg13) {
           songs[song.id] = {title: song.text, url: song.url};
         }
       });
@@ -100,7 +97,7 @@ class DanceVisualizationColumn extends React.Component {
     isShareView: PropTypes.bool.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool.isRequired
+    userType: PropTypes.string.isRequired
   };
 
   render() {
@@ -112,6 +109,10 @@ class DanceVisualizationColumn extends React.Component {
       position: 'relative',
       overflow: 'hidden',
     };
+
+    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
+    const filterOff = signedInOver13 || sessionStorage.getItem('anon_over13');
+
     return (
       <span>
         {!this.props.isShareView &&
@@ -121,7 +122,7 @@ class DanceVisualizationColumn extends React.Component {
             selectedSong={this.props.selectedSong}
             songManifest={this.props.songManifest}
             hasChannel={this.props.hasChannel}
-            is13Plus={this.props.is13Plus}
+            filterOff={filterOff}
           />
         }
         <ProtectedVisualizationDiv>
@@ -144,7 +145,7 @@ export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   songManifest: state.pageConstants.songManifest,
   selectedSong: state.selectedSong,
-  is13Plus: state.pageConstants.is13Plus,
+  userType: state.progress.userType
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
 }))(DanceVisualizationColumn);
