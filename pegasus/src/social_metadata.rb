@@ -163,7 +163,7 @@ def get_social_metadata_for_page(request)
 
   # Additional hoc variants.
   extension = ""
-  hoc_launch = DCDO.get("hoc_launch", nil)
+  hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
   if hoc_launch == "mc"
     extension = "-mc"
   elsif hoc_launch == "dance"
