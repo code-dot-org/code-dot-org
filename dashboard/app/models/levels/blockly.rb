@@ -564,26 +564,16 @@ class Blockly < Level
     end.join
   end
 
-  # Display translated custom block text and options
+  # Display translated custom block text
   def localized_shared_blocks(level_objects)
     return nil if level_objects.blank?
-
     level_objects_copy = level_objects.deep_dup
     level_objects_copy.each do |level_object|
       next if level_object.blank?
       block_text = level_object[:config]["blockText"]
-      next if block_text.blank?
-      level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
-      options_keys = block_text.scan(/\{(.*?)\}/).flatten
-      options = level_object[:config]["args"]
-      next if options.blank?
-      options.each do |option|
-        next if option["options"].blank? && !options_keys.include?(option["name"])
-        option["options"]&.each_with_index do |name, i|
-          option["options"][i][1] = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[0]}")
-        end
+      if block_text.present?
+        level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
       end
-      level_object[:config]["args"] = options
     end
     level_objects_copy
   end
