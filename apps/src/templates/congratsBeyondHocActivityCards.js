@@ -111,7 +111,7 @@ const DancePartyFollowUp = {
   description: i18n.danceAfterPartyDesc(),
   link: "/s/dance-extras",
   image: "dance-party",
-  buttonText: i18n.dancePartyButton(),
+  buttonText: i18n.danceAfterPartyButton(),
 };
 
 export const cardSets = {
