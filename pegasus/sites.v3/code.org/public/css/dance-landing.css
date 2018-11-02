@@ -50,6 +50,7 @@
   margin-top: 0px;
   margin-bottom: 10px;
   color: white;
+  font-size: 20px;
 }
 
 .dance-header2 {
@@ -80,4 +81,8 @@
 .header-banner {
   border-radius: 5px;
   width: 100%
+}
+
+.img-background {
+  background-color: grey;
 }
