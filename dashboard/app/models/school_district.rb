@@ -43,8 +43,11 @@ class SchoolDistrict < ActiveRecord::Base
       SchoolDistrict.transaction do
         merge_from_csv(school_districts_tsv)
       end
-    else
-      SchoolDistrict.seed_from_s3
+      # Temporarily commenting out the case where we run the full seed_from_s3
+      # (i.e., in production) in order to separately run seed_from_s3
+      # manually so as not to slow down the production deploy.
+      # else
+      #   SchoolDistrict.seed_from_s3
     end
   end
 
@@ -52,7 +55,7 @@ class SchoolDistrict < ActiveRecord::Base
     SchoolDistrict.transaction do
       CDO.log.info "Seeding 2013-2014 school district data"
       AWS::S3.seed_from_file('cdo-nces', "2013-2014/ccd/ag131a_supp.txt") do |filename|
-        SchoolDistrict.merge_from_csv(filename) do |row|
+        SchoolDistrict.merge_from_csv(filename, CSV_IMPORT_OPTIONS, false) do |row|
           {
             id:    row['LEAID'].to_i,
             name:  row['NAME'].upcase,
@@ -65,7 +68,7 @@ class SchoolDistrict < ActiveRecord::Base
 
       CDO.log.info "Seeding 2014-2015 school district data"
       AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/ccd_lea_029_1415_w_0216161ar.txt") do |filename|
-        SchoolDistrict.merge_from_csv(filename) do |row|
+        SchoolDistrict.merge_from_csv(filename, CSV_IMPORT_OPTIONS, false) do |row|
           {
             id:    row['LEAID'].to_i,
             name:  row['LEA_NAME'].upcase,
