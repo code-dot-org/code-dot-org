@@ -1015,6 +1015,12 @@ pt-BR:
       4-5 While Loops Assessment 1: |-
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
+      AB_Debug_PlayLab2: |-
+        Por que este jogo não faz nada?
+
+        Você consegue descobrir algum erro "escondido"? Alguns são mais fáceis que outros.
+      AB_Debug_PlayLab3: Mova o cavaleiro para cada uma das bandeiras. Se algo der
+        errado, procure por erros!
       AlgPD DR Free Play: Crie uma função baseada em um problema do seu próprio mundo.
       Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       Alien Defender_2018: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'

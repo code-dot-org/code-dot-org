@@ -336,19 +336,43 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
       craft_ifPath:
+        text: |-
+          {DIR}에 길이 있을 경우
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": 정면
+            "'right'": 오른쪽
+            "'left'": 왼쪽
       craft_ifStandingOn:
+        text: |-
+          {TYPE} 위에 서 있을 경우
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": 파란색 산호
+            "'redCoralBlock'": 빨간색 산호
             "'sand'": 모래
+            "'wool_blue'": 깊은 물
             "'planksOak'": 참나무 목재
+            "'seaLantern'": 바다 랜턴
       craft_ifStandingOnLimit:
+        text: |-
+          {TYPE} 위에 서 있을 경우
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 모래
+            "'seaLantern'": 바다 랜턴
       craft_moveForward:
         text: 앞으로 이동
+      craft_placeBlock:
+        options:
+          blockType:
+            '"seaLantern"': 바다 랜턴
       craft_placeTorch:
         text: 횃불 놓기
+      craft_repeatUntilGoal:
+        text: |-
+          목표까지 반복하기
+          {STATEMENT}
