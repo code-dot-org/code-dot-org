@@ -19,9 +19,7 @@ nav: promote_nav
 
 ## Cuelga estos carteles en tu escuela
 
-[![imagen](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-
-[![imagen](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp; [![imagen](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :promote_new_posters %>
 
 Looking for our posters from previous years? [Find them here](<%= resolve_url('/promote/previous-posters') %>)!
 
@@ -55,7 +53,7 @@ Looking for our posters from previous years? [Find them here](<%= resolve_url('/
 
 <a id="stickers"></a>
 
-## Imprima estas pegatinas para dar a sus estudiantes
+## Imprima estas etiquetas para darlas a sus estudiantes
 
 (Stickers are 1" diameter, 63 per sheet) <br />
 

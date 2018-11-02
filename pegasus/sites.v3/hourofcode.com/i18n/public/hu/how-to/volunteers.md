@@ -7,30 +7,30 @@ nav: how_to_nav
 
 # Az önkéntesek útmutatója
 
-### Make a difference in a classroom today!
+### Csinálj különlegességet egy osztályteremben!
 
 ---
 
 ## Miért legyél önkéntes?
 
-Check out some testimony from past volunteers:
+Nézd meg néhány korábbi önkéntesünk vallomását:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "A legjobb élmény számomra az volt, mikor az egész osztály nőből és színes egyéniségekből állt. Jól felszólítja iparunk jövőjét, hogy legyen esélye elérni ezen gyerekeket és felkelteni érdeklődésüket."
+- "Különösen tetszett, hogy ösztönözhettem a fiatal lányokat a technológia megismerésére. Úgy érzem, hogy én is segítettem a környezetemben élő következő generációnak."
+- "Imádtam nézni, milyen izgatottak lettek a gyerekek. Egy csodálatos dolog volt, hogy a tanárok felfedezték az, hogy néhány diák, aki nem tudományokban volt nagy jártassággal, elkezdtek úgy gondolkodni, mint egy fejlesztő és segítettek másoknak a tanulásban. Ez lehetőséget az arra, hogy magabiztosabbnak érezzék magukat."
 
-## Anyone can volunteer
+## Bárki lehet önkéntes
 
-### Volunteers and speakers in tech:
+### Önkéntesek és előadók jelenléte a technológiában:
 
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+Van kötődésed a számítástechnikához vagy a technológiához? Ha programozóként dolgozol egy informatikai vállalatnál bármilyen posztban, vagy esetleg már részt vettél számítástechnikai képzésen, akkor készen állsz arra, hogy inspiráld a tanulókat! Sok tanuló nem találkozott még olyannal, aki az informatikai szférában végez munkát, de a tanáraink örömest keresnének szakértőket, egyetemi hallgatókat.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+A vendég előadó lehetsz egy tanteremben, vagy segíthetsz a tanítóknak egy esemény alkalmával. Látogass el egy helyi iskolába, hogy inspiráld a diákokat, hogy igenis tanuljanak számítástechnikát. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Jelentkezz önkéntesnek!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Bárki, aki szenvedélyes a lehetőségek iránt:
 </h3>
 
 <p>
@@ -109,7 +109,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </th>
     
     <th>
-      Agenda item
+      Napirend
     </th>
   </tr>
   
@@ -180,7 +180,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
         
         <tr>
           <td>
-            After
+            Ezt követően
           </td>
           
           <td>
@@ -223,7 +223,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           </li>
         </ul>
         <h2>
-          Volunteering during the Hour of Code FAQ
+          Önkéntesség az "Hour of Code" alatt GYIK
         </h2>
         <h3>
           I haven't been contacted by a teacher yet. How can I still volunteer?
