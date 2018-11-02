@@ -44,6 +44,7 @@ sv:
   next_resource: Nästa resurs
   cancel: Avbryt
   okay: Okej
+  or: eller
   heading_x_of_y: "%{heading} (sida %{x} av %{y})"
   add_teacher_form:
     code:
@@ -598,6 +599,8 @@ sv:
     minecraft2016:
       title: Minecraft
       body: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

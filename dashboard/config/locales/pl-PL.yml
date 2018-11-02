@@ -46,6 +46,7 @@ pl:
   next_resource: Kolejne zasoby
   cancel: Anuluj
   okay: OK
+  or: lub
   heading_x_of_y: "%{heading} (strona %{x} z%{y})"
   add_teacher_form:
     code:
@@ -304,7 +305,7 @@ pl:
           (%{username}) i hasła
   nav:
     header:
-      finished_hoc: Ukończyłem moją Godzinę Kodowania (Hour of Code)
+      finished_hoc: Skończyłem moją Godzinę Kodowania (Hour of Code)
       sign_in_to_save: Zaloguj się, by zapisać postępy
       free_play:
         playlab: Utwórz aplikację w Play Lab
@@ -822,6 +823,8 @@ pl:
       title: Minecraft
       body: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry
         Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj

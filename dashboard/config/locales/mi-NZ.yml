@@ -43,6 +43,7 @@ mi:
   next_resource: Rauemi tōmuri
   cancel: Whakakore
   okay: Āe
+  or: rānei
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
   add_teacher_form:
     code:
@@ -569,6 +570,8 @@ mi:
       title: Mahimaina
       body: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga
         Mahimaina.
+    aquatic:
+      title: Mahimaina
     hero:
       title: Mahimaina
     sports:

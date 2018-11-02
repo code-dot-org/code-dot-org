@@ -619,7 +619,11 @@
   user_header_playlab: Oyun labı
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
-  creativity_create: Düzəlt
+  hoc2018_creativity_create: Düzəlt
+  hoc2018_mc_start: Başlayın
+  hoc2018_mc_video_title_inspire_girl: Bir qızı həvəsləndirin
+  hoc2018_mc_homepage_join_us: Bizə qoşulun
+  hoc2018_mc_homepage_try_it: Sınaqdan keçirin
   ! '': 
   og_title_soon: The Hour of Code is coming
   csedweek_og_description: Computer science is foundational for every student to learn.
@@ -2200,7 +2204,6 @@
     partners.
   hoc_overview_partner_activities_link: View Activities
   hoc2018_creativity: creativity
-  hoc2018_creativity_create: Create
   hoc2018_creativity_hoc_coming: The Hour of Code is coming…
   hoc2018_creativity_what_will_you_create: What will you create?
   hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
@@ -2232,7 +2235,6 @@
     your own version of Minecraft.
   hoc2018_mc_adventurer_title: Minecraft Adventurer
   hoc2018_mc_adventurer_description: Use code to take Alex or Steve on an adventure.
-  hoc2018_mc_start: Start
   hoc2018_mc_no_internet: Don't have Internet?
   hoc2018_mc_download_adventurer: Download the offline version of Minecraft Adventurer.
   hoc2018_mc_educators: For Educators
@@ -2265,7 +2267,6 @@
   hoc2018_mc_video_title_steph_curry: Hour of Code with Steph Curry
   hoc2018_mc_video_title_sports: Push yourself. Anybody can learn.
   hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
-  hoc2018_mc_video_title_inspire_girl: Inspire a girl
   hoc2018_mc_video_title_cs_intro: Computer Science intro
   hoc2018_mc_video_title_schools_dont_teach: What Most Schools Don't Teach
   hoc2018_mc_video_title_obama: President Obama on computer science
@@ -2277,8 +2278,6 @@
   hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
     Start with an Hour of Code and your own brand of creativity, whatever it may be.
   hoc2018_mc_homepage_watch_video: Watch our video
-  hoc2018_mc_homepage_join_us: Join us
-  hoc2018_mc_homepage_try_it: Try it
   hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
   hoc2018_mc_back_journey: Minecraft is back for the Hour of Code with a brand new
     activity! Journey through Minecraft with code.
@@ -2291,12 +2290,28 @@
   hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
     to explore and build underwater worlds with code.
   hoc2018_mc_journey: Journey through Minecraft with code.
-  dance_main_heading: Dance Party
-  dance_subheading: Help Translate Dance Party
-  dance_subtitle: Create Your Own Dance Party
-  dance_party_title: Dance Party
-  dance_party_description: 'Here is a description for dance party. '
-  dance_party_specs: Language | Format | Age 6-106
-  dance_try_a_second_hour_title: Try a Second Hour
-  dance_try_a_second_hour_description: Here is the description for dance party.
-  dance_try_a_second_hour_specs: Language | Format | Age 13+
+  hoc2018_dance_party_main_heading: Dance Party
+  hoc2018_dance_party_subheading: Help Translate Dance Party
+  hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
+  hoc2018_dance_party_box_title: Dance Party
+  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
+  hoc2018_dance_party_specs: Language | Format | Age 6-106
+  hoc2018_dance_party_button: Start
+  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
+  hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
+    project ideas.
+  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
+  hoc2018_dance_keep_on_dancing_button: Go Beyond
+  hoc2018_dance_teacher_resources: Teacher Resources
+  hoc2018_dance_teacher_resources_desc: Lesson plans, certificates, social media kits,
+    and music filtering
+  hoc2018_dance_measure: Measure
+  hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
+  hoc2018_dance_video1: Dance Party - Introduction
+  hoc2018_dance_video2: Dance Party - Events
+  hoc2018_dance_video3: Dance Party - Properties
+  hoc2018_dance_video4: Dance Party - Congratulations

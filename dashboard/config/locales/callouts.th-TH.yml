@@ -146,6 +146,9 @@ th:
       courseF_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม
           " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด " เริ่ม
+          " เพื่อให้โปรแกรมของคุณเริ่มทำงาน
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม
           " เพื่อให้โปรแรมของคุณเริ่มทำงาน

@@ -17,11 +17,14 @@ gl:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Participa no maior evento de aprendizaxe da historia, %{campaign_date}, 2015'
   front_intro_default: 'A Hora do Código (Hour of Code) é un movemento mundial que chega a decenas de millóns de estudantes en mais de 180 países. Calquera pode organizar un evento dunha Hora do Código desde calquera lugar. Hai dispoñíbeis titoriais dunha hora de duración en máis de 40 linguaxes. Non se precisa experiencia. <strong>Desde os 4 anos até os 104.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Mira o novo vídeo'
   front_watch_regular_video: 'Mira o vídeo'
   front_volunteers: 'Precísanse voluntarios técnicos'
@@ -292,7 +295,7 @@ gl:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code map"
   map_header: '# eventos da Hora do Código ao redor do mundo'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Ver tódolos eventos'
   map_header_company: '# by company organizers'
   map_header_country: '# na Galiza / %{country}'
@@ -420,6 +423,7 @@ gl:
   title_stats: Publicidade e estatísticas
   title_partners: Socios
   title_resources: Recursos
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Grazas por rexistrarte para realizar unha Hora do Código!
   title_tutorial_guidelines: Orientacións sobre os titoriais
   title_whole_school: Participación de toda a Escola

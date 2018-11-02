@@ -237,13 +237,6 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
-    # Override in derived class to provide csv data for cohort view
-    # @return [String] csv text row of values for cohort view ending in newline
-    #         The order of fields must be consistent between this and #self.cohort_csv_header
-    def to_cohort_csv_row
-      raise 'Abstract method must be overridden by inheriting class'
-    end
-
     # Get the answers from form_data with additional text appended
     # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
@@ -338,11 +331,6 @@ module Pd::Application
       "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
     end
 
-    # Convert responses cores to a hash of underscore_cased symbols
-    def response_scores_hash
-      JSON.parse(response_scores || '{}').transform_keys {|key| key.underscore.to_sym}
-    end
-
     def total_score
       numeric_scores = response_scores_hash.values.select do |score|
         score.is_a?(Numeric) || score =~ /^\d+$/
@@ -357,6 +345,16 @@ module Pd::Application
     # displays the iso8601 date (yyyy-mm-dd)
     def date_accepted
       accepted_at.try {|datetime| datetime.to_date.iso8601}
+    end
+
+    # Convert responses cores to a hash of underscore_cased symbols
+    def response_scores_hash
+      (response_scores ? JSON.parse(response_scores) : default_response_score_hash).transform_keys {|key| key.to_s.underscore.to_sym}.deep_symbolize_keys
+    end
+
+    # Default response score hash
+    def default_response_score_hash
+      {}
     end
   end
 end

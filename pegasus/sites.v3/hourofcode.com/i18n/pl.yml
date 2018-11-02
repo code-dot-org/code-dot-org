@@ -17,11 +17,14 @@ pl:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'Kontynuując przeglądanie naszej strony lub klikając "Zgadzam się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.'
   cookie_banner_more_information: "Zapoznaj się z polityką prywatności Code.org."
   cookie_banner_accept: 'Zgadzam się'
   front_header_banner: 'Dołącz do największej inicjatywy w historii, %{campaign_date}'
   front_intro_default: 'Godzina Kodowania jest globalną akcją, w której udział biorą dziesiątki milionów uczniów z ponad 180 krajów. Nieważne kim jesteś ani skąd pochodzisz, każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są dostępne w ponad 40 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Obejrzyj nowy film'
   front_watch_regular_video: 'Obejrzyj wideo'
   front_volunteers: 'Potrzebni są wolontariusze techniczni'
@@ -420,6 +423,7 @@ pl:
   title_stats: Notki i statystyki
   title_partners: Partnerzy
   title_resources: Materiały
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Dziękujemy za rejestrację jako organizator Godziny Kodowania!
   title_tutorial_guidelines: Wytyczne dla samouczków
   title_whole_school: Uczestnictwo całej szkoły

@@ -66,7 +66,7 @@ fil:
             '8': Wala
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -306,6 +306,18 @@ fil:
         text: kumaliwa
       RyanLab_turnRight:
         text: kumanan
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
       craft_ifPath:
         options:
           DIR:

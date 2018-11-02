@@ -13,8 +13,6 @@ nav: regional_partner_playbook_nav
 - [Regional Partner Summit - Mar 2018](#mar18)
 - [Regional Partner Summit - Sept 2017](#sept17)
 - [Regional Partner Summit - Feb 2017] (#feb17)
-- [TeacherCon - Summer 2016](#teachercon16)
-- [Facilitation Summit - May 2016](#fac16)
 - [Regional Partner Summit - Sept 2016](#sept16)
 
 
@@ -23,6 +21,11 @@ ________________
 <a id="virtual"></a>
 <br/>
 ## Virtual Trainings
+
+November 2018
+
+- November 14 Facilitator Application Process Webinar
+- November 16 Facilitator Application Process Webinar
 
 October 2018
 
@@ -107,9 +110,9 @@ January 2017:
 </p>
 </details>
 
-  <details>
-    <summary>**2016 Virtual Trainings**</summary>
-    <p>
+<details>
+	<summary>**2016 Virtual Trainings**</summary>
+	<p>
 
   December 2016:
 
@@ -161,9 +164,8 @@ ________________
 
 ## Regional Partner Summit (September 2018)
 
-- **[Regional Partner Summit Resources](https://bit.ly/dallasdigest)**
-- **[International Partner Summit Resources](https://bit.ly/internationaldigest)**
-- **<a href="https://drive.google.com/file/d/1tESjpvPuryIMeCidrjrWNGOdYSiND0qn/view">Session Teasers</a>**
+- [Regional Partner Summit Resources](https://bit.ly/dallasdigest)
+- <a href="https://drive.google.com/file/d/1tESjpvPuryIMeCidrjrWNGOdYSiND0qn/view">Session Teasers</a>
 
 
 
@@ -171,9 +173,9 @@ ________________
 <br/>
 
 ## Regional Partner Summit (March 2018)
-Please review the following resources for the March 2018 Regional Partner Summit.
 
-- **See all March Summit Resources here: <a href="http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit</a>**
+
+- [Regional Partner Summit Resources](http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit)
 - [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
 
 [**Back to the top**](#top)
@@ -184,7 +186,6 @@ ________________
 <br/>
 
 ## Regional Partner Summit (September 2017)
-The following resources were discussed and distributed at the Program Manager Summit in September 2017. Click on the links to view them.
 
 - [All Shared Materials](https://docs.google.com/document/d/13dRhROZgL_tZBoKXUU9Swm4sh6nWDpGeSTl9E6QuxHo/edit#heading=h.c2i0yyvtpfgx)
 - [Roadmap Resources](https://docs.google.com/document/d/13dRhROZgL_tZBoKXUU9Swm4sh6nWDpGeSTl9E6QuxHo/edit#heading=h.riwa5i71x8ry)
@@ -194,8 +195,6 @@ The following resources were discussed and distributed at the Program Manager Su
 - [Community Building Resources](https://docs.google.com/document/d/1zdolbbIN8hQzfdivqHWTzNR-WdYQ8U3U19UTpYb20Wk/edit?ts=59c53f15)
 - [Advocacy Resources](https://docs.google.com/document/d/13dRhROZgL_tZBoKXUU9Swm4sh6nWDpGeSTl9E6QuxHo/edit#heading=h.c2i0yyvtpfgx)
 
-*For administrator and counselor PD materials and slide decks see the counselor and administrator professional development tile.
-
 [**Back to the top**](#top)
 <br/>
 ________________
@@ -203,7 +202,6 @@ ________________
 <br/>
 
 ## Regional Partner Summit (February 2017)
-The following resources were discussed and distributed at the Regional Partner Summit in February 2017. Click on the links to view them.
 
 Advocacy
 
@@ -221,94 +219,6 @@ Other Sessions
 [**Back to the top**](#top)
 <br/>
 ________________
-<a id="teachercon16"></a>
-<br/>
-## TeacherCon (Summer 2016)
-Click on the following links to view the resources from TeacherCon 2016.<br>
-
-- [Worksheets and Agenda TeacherCon SLC (including faciitator selection rubric)](https://docs.google.com/document/d/1qa_NKPiaGGCWfEexrwwk7GSO8vMQbyYGJE1lDmyt714/edit?usp=sharing)
-- [Overview of the Roadmap (Slides)](https://docs.google.com/presentation/d/1XzZm6Z10bHq2jtMrDyOzY0A21j8so0hLnyUcfPO6MZ8/edit?usp=sharing)<br/>
-
-<details>
-  <summary>Fundraising</summary>
-  <p>
-
-- [Exploring the Fundraising Playbook (Slides)](https://docs.google.com/presentation/d/1QDzxylUW_Nbp0nzvnSsa8lSVI-63fFoCD0CMF48zpd8/edit?usp=sharing)
-- [Fundraising Examples from the Field - CodeVA (Slides) Slides](https://docs.google.com/presentation/d/1k6c-v6HhexjJ5u0Rqknc3X1JrHK62Aqk_6kK33UFQ6c/edit?usp=sharing)
-- [Fundraising Examples from the Field - SFAZ and GCU (Slides)](https://docs.google.com/presentation/d/1iPT_iiAIFD1t73dcRFtuI-VIze7aYLXso563M8vLvxM/edit?usp=sharing)
-- [Building Your Funding Roadmap (Slides)](https://docs.google.com/presentation/d/10wfV9wzbO1TM_E80TKYNAE-hsTy_RmZavbDrica0KXE/edit?usp=sharing)
-<br/>
-</p>
-</details>
-
-<details>
-  <summary>Teacher Implementation</summary>
-  <p>
-
-- [How to Keep Teachers Implementing - Broward (Slides)](https://docs.google.com/presentation/d/1NuUhD0m0_dIaynB34ePqFJYZUf1t-b1C-wyMcAixsns/edit?usp=sharing)
-- [Power of 21 Activity Responses from Atlanta - How can we keep teachers implementing?](https://docs.google.com/document/d/1eE-zj_NDiIITbM1c4jElFo4_XV8EfI8lhQQH3a9KFiQ/edit?usp=sharing)
-- [How to Keep Teachers Implementing - IDLA (Slides)](https://docs.google.com/presentation/d/1f097R6E4Qsx_hycKWlbNvNXahDTOk0WD0-dsqQA-75w/edit?usp=sharing)
-- [IDLA Exemplar - CS Pathways](https://drive.google.com/open?id=0B_RYFwL0skolbzR4NFFEWnpGMXNBd1Q3X2M4aDlMdUU0X0Rr)
-- [IDLA Exemplar - What We've Accomplish](https://drive.google.com/file/d/0B_RYFwL0skoldmpFelpJcHo0RUJxcndzSUo5OXpKQWQ2NHR3/view?usp=sharing)
-- [Building Your Teacher Implementation Roadmap (Slides)](https://docs.google.com/presentation/d/1OrcEOWndHgfYlCItbfgDB4LILAmG8PT29fq0ARO-JgQ/edit?usp=sharing)
-<br/>
-</p>
-</details>
-
-<details>
-  <summary>Facilitator Capacity</summary>
-  <p>
-
-- [How Code.org Works With Facilitators (Slides)](https://docs.google.com/presentation/d/1mbFc3tnLzjTdQBgAokTtfuCGoe0zGGAiyWP6CsKsvbI/edit?usp=sharing)
-- [Building Your Facilitator Capacity Roadmap (Slides)](https://docs.google.com/presentation/d/1NfId_1wNwR7AnLbzG38saPbkBb5vwm1GPmBZ1HxIWzA/edit?usp=sharing)
-<br/>
-</p>
-</details>
-
-<details>
-  <summary>Community Building</summary>
-  <p>
-
-- [Examples of Community Building - Code Interactive (Slides)](https://docs.google.com/presentation/d/1XIb124xm3UX-NYwNnCiofpU_ZZCtsnHvvbL0IadJ4hM/edit?usp=sharing)
-- [Examples of Community Building - 9 Dots, Nextech and RUSMP (Slides)](https://docs.google.com/presentation/d/1YzXn87OOJbxOxamUZccubnMiT1vkwIrINGQ68bNhNN4/edit?usp=sharing)
-- [Building your Community Roadmap (Slides)](https://docs.google.com/presentation/d/1xfvG8scD4jVRlaNAcpOhctIAHra-9VctpyoLx9PbcKE/edit?usp=sharing)
-<br/>
-</p>
-</details>
-
-<details>
-  <summary>CS Expansion</summary>
-  <p>
-
-- [Overview of how Code.org recruited districts (Slides)](https://docs.google.com/presentation/d/1q7WUYBxrVEOd02r-1ybTsrcA7Tq2j4RtwH13Ej3rnIY/edit?usp=sharing)
-- [Examples: Partnering with School Districts - Orlando Science Center (Slides)](https://docs.google.com/presentation/d/1UgEjboAy_T0ajXcUmhW-BY-jtIDW1XsbScQN3xGWLJQ/edit?usp=sharing)
-- [Example: Partnering with School Districts - Utah (Slides)](https://docs.google.com/presentation/d/1jfFVYLy7oJoeCwhEmv86p5E9CoPmSb8FziwiE6lHZrw/edit?usp=sharing)
-- [Building your CS Expansion Roadmap (Slides)](https://docs.google.com/presentation/d/1HMLVhOU7R5B0M6w-xVA68g2isXo07PHuay6UnNsRT0M/edit?usp=sharing)
-- [Administrator and Counselor PD Overview (Slides)](https://docs.google.com/presentation/d/1rgA370lNX2L88S5sew5ZWThbBwXOlzSUVjb2Dcx-I84/edit?usp=sharing)
-</p>
-</details>
-
-[**Back to the top**](#top)
-<br/>
-
-________________
-<a id="fac16"></a>
-<br/>
-
-## Facilitation Summit (May 2016)
-The following resources were discussed and distributed at Facilitation Summit in May 2016. Click on the links to view them.
-
-- [Worksheets and Agendas](https://www.dropbox.com/s/vc587goy08xkdun/PLP%20Facilitation%20Summit%20Packet.pdf?dl=0)
-- [The Need for CS and More About Code.org (Slides)](https://docs.google.com/a/code.org/presentation/d/1v8gw4ooS3nH_e-eNnZqxnvQiopl0QJKRWdXhWoWzou4/edit?usp=sharing)<br/>
-- [The Regional Partner Program: Vision and History (Slides)](https://docs.google.com/a/code.org/presentation/d/14dSjRdXpYsWHL6YJAPFPbcp4VHnDIpGj8ICiZisYaJQ/edit?usp=sharing)<br/>
-- [The Playbook and Diving into Select Topics (Slides)](https://docs.google.com/a/code.org/presentation/d/1RNAyMXVJkg8Fov9j7P5Nv_uUyrM8tYWskdOEpo-HAAc/edit?usp=sharing)<br/>
-- [Adult Learning and Overview of Core Facilitation Practices (Slides)](https://docs.google.com/a/code.org/presentation/d/1Po-HfQyBISRv5RI5Yn57Xvc-RrWh5rbRi4RL1HbgthA/edit?usp=sharing)
-- [Running an Effective Professional Learning Event (Slides)](https://docs.google.com/a/code.org/presentation/d/148wkzac1rwnK-O6q3PqIYer87MjwlVHLDBENOdbfBmA/edit?usp=sharing)</br>
-- [Being a Successful Program Manager (Slides)](https://docs.google.com/a/code.org/presentation/d/1Q8m-DquU2ZtCpIFC4-Oxc1MrSViOvFq4quc9qeTYZGc/edit?usp=sharing)<br/>
-
-[**Back to the top**](#top)
-<br/>
-________________
 <a id="sept16"></a>
 <br/>
 ## Regional Partner Summit (September 2016)
@@ -319,8 +229,6 @@ ________________
 - [Administrator & Counselor PD Implementation Plan Template](https://docs.google.com/document/d/19dnV7dIDPp6354ynLFWZJy8H2vXiricFB_8LzTKQIg0/edit)
 - [District Terms Sheet Example with Errors](https://docs.google.com/document/d/1Gk3dpHgiH2D3tFS9nL-1k6ZwcfAfP6Op54shq-KWWBM/edit)
 - [Federal Funding Presentation](https://docs.google.com/presentation/d/1vwYnMdc9pGWBZp6KBcObz7aq4rq6UBlP_TNlR8TIyyU/edit?usp=sharing)
-
-*For administrator and counselor PD materials and slide decks, please see the counselor and administrator professional development tile.
 
 [**Back to the top**](#top)
 <br/>
