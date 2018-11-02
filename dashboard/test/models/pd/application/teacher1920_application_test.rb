@@ -75,7 +75,7 @@ module Pd::Application
           committed: 'Yes'
         }
       }.to_json
-      assert_equal 'Reviewing Incomplete', teacher_application.meets_criteria
+      assert_equal REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
     test 'total score calculates the sum of all response scores' do
