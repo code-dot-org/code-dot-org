@@ -11,11 +11,10 @@
       %img.tutorial-tile-img{src: minecraft_img_url}
     .tutorial-info
       %span
-        %h3.tutorial-info-h Minecraft Hour of Code
-        .smalltext Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+        %h3.tutorial-info-h= I18n.t(:minecraft_subtitle)
+        .smalltext= I18n.t(:minecraft_agent_description)
       %span
         %a{href: "/minecraft"}
-          %button.tutorial-info-start.tutorial-gray Start tutorial
+          %button.tutorial-info-start.tutorial-gray= I18n.t(:minecraft_start_tutorial)
         .tutorial-info-guide
-          %a{href: "/hourofcode/mc"}
-            View teacher guide
+          %a{href: "/hourofcode/mc"}= I18n.t(:hoc2018_mc_teacher_guide)

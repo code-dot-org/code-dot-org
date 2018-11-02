@@ -12,7 +12,7 @@ uk-UA:
   upgrade_ie_link: Дізнайтеся більше
   en: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
-  csedweek_dates: 8-14 грудня 2014 року
+  csedweek_dates: 3-9 грудня 2018 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо
     усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white;
@@ -1906,9 +1906,56 @@ uk-UA:
   user_header_settings: Мій профіль
   user_header_logout: Вийти
   user_header_signin: Вхід
+  user_header_create: 'Творіть '
   user_header_gamelab: Ігрова лабораторія
   user_header_playlab: Ігрова студія
+  user_header_dance: Танцювальна вечірка
   user_header_minecraft: Майнкрафт
   user_header_flappy: Пурх
-  creativity_create: Створити
-  creativity_hoc_coming: Наближається Година коду…
+  aquatic_name: 'Minecraft: Водна подорож'
+  hoc2018_creativity: творчість
+  hoc2018_creativity_create: Створити
+  hoc2018_creativity_hoc_coming: Наближається Година коду…
+  hoc2018_creativity_what_will_you_create: А що створите Ви?
+  hoc2018_creativity_homepage: Розпочніть свій політ фантазії та народження інновацій.
+    Розпочніть з Години коду та створіть власний бренд креативності у чому завгодно.
+    Перегляньте відео.
+  hoc2018_creativity_hoc_about: 'Цього року Година коду стосується креативності. '
+  hoc2018_creativity_social_media: 'Цього року #HourOfCode стосується креативності.
+    Я в команді! А Ви?'
+  hoc2018_creativity_social_media_2: 'Цього року #HourOfCode стосується креативності.
+    А що створите Ви?'
+  hoc2018_creativity_courses: Навчайтесь далі з курсами Code.org
+  hoc2018_creativity_courses_link: Навчайтесь далі з <a href="https://studio.code.org/courses">курсами
+    Code.org</a>
+  hoc2018_mc_page_title: Підручники Години коду від Майнкрафт
+  hoc2018_mc_details: Багато мов | Сучасні браузери та планшети | Класи 2+
+  hoc2018_mc_designer_title: Майнкрафт - Розробник
+  hoc2018_mc_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
+    версії цієї гри.
+  hoc2018_mc_adventurer_title: Майнкрафт - Пригоди
+  hoc2018_mc_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
+    на пригоду.
+  hoc2018_mc_start: Початок
+  hoc2018_mc_no_internet: Немає Інтернету?
+  hoc2018_mc_download_adventurer: Завантажуйте оффлайнову версію Майнкрафт - Пригод.
+  hoc2018_mc_educators_box2_button: Завантажити
+  hoc2018_mc_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
+  hoc2018_mc_videos_more: Більше <a href='%{inspiring_videos_playlist}'>надихаючих
+    відео</a> з рольовими моделями та знаменитостями
+  hoc2018_mc_careers_more: Більше <a href='%{careers_url}' target='_blank'>надихаючих
+    відео</a> з фахівцями зі сфери технологій
+  hoc2018_mc_video_1min: 1 хв
+  hoc2018_mc_video_2min: 2 хв
+  hoc2018_mc_video_5min: 5 хв
+  hoc2018_mc_video_title_steph_curry: Година коду зі Стефом Каррі
+  hoc2018_mc_video_title_sports: Постарайся! Навчитись може кожен.
+  hoc2018_mc_video_title_inspire_girl: Залучайте дівчат
+  hoc2018_mc_video_title_cs_intro: Вступ до інформатики
+  hoc2018_mc_video_title_schools_dont_teach: Те, чого не навчають у більшості шкіл
+  hoc2018_mc_video_title_obama: Президент Обама про інформатику
+  hoc2018_mc_video_title_hoc_is_here: Година коду вже тут - навчитись може кожен
+  hoc2018_mc_video_title_anybody_can_learn: Навчитись може кожен
+  hoc2018_mc_homepage_what_create: А що створите Ви?
+  hoc2018_mc_homepage_join_us: Приєднуйтесь
+  hoc2018_mc_homepage_try_it: Спробувати

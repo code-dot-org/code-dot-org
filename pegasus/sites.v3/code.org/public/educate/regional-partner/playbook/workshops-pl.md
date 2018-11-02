@@ -12,24 +12,13 @@ Workshops are the core of Code.org's Teacher [Professional Learning Program](htt
 
 ## Quick Links
 
-<img style="float: right; margin-left: 10px; width: 400px" src="/images/pd-2014-15.png"/>
-
 - **[Announcements](#announce)**
+- **[K-5 Workshops](#csf)**
+- **[6-12 Workshops](#csp)**
 - **[Local Summer Workshop Specific](#local)**
 - **[Academic Year Workshop Specific](#academic)**
 - **[Workshop Dashboard](#dashboard)**
-- Professional Learning Program [One-Pager](https://code.org/files/PLProgramsOverview_1-Pager.pdf)
-
-## Workshop Requirements and Preparation:
-
-- **[K-5: CS Fundamentals](#csf)**<br/>
-- **[6-12: CS Discoveries & CS Principles](#csp)**<br/>
-
-
-
-
-<br/>
-
+- **[Professional Learning Program One-Pager](https://code.org/files/PLProgramsOverview_1-Pager.pdf)**
 
 
 ________________
@@ -37,7 +26,7 @@ ________________
 
 ## Announcements
 
-- *Printing instructions and materials are now available for Academic Year Workshop 3 [here](#printing)!*
+- Printing instructions and materials are now available for Academic Year Workshop 3 [here](#printing)!
 
 
 [**Back to the top**](#top)
@@ -46,7 +35,7 @@ ________________
 ________________
 <a id="csf"></a>
 
-## **K-5: Computer Science Fundamentals Workshops**
+## **K-5 Workshops**
 
 See these resources to plan and run CS Fundamentals workshops. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
@@ -59,7 +48,7 @@ See these resources to plan and run CS Fundamentals workshops. Partners should w
 ________________
 <a id="csp"></a>
 
-## **6-12: CS Discoveries & CS Principles Workshops**
+## **6-12 Workshops**
 
 <details>
   <summary>**Teacher Packets and Agendas**</summary>
@@ -67,7 +56,8 @@ ________________
   <br/>
 Please look at the agendas for each academic year workshop - shared with facilitators at the following links.  Pay particular attention to the "Supplies" portion of the agenda that the facilitator will need from regional partners to run a successful workshop.
 
-- **[CS Discoveries](https://curriculum.code.org/plcsd/)**: See Workshop Agendas section - **[CS Principles](https://curriculum.code.org/plcsp/)**: See Workshop Agendas section
+- **[CS Discoveries](https://curriculum.code.org/plcsd/)**: See Workshop Agendas section 
+- **[CS Principles](https://curriculum.code.org/plcsp/)**: See Workshop Agendas section
 </p>
 </details>
 
@@ -91,9 +81,13 @@ These guidelines explain the type of space your facilitators need to run a succe
   <p>
   <br/>
 **Ordering Supplies**<br/>
-Supplies for your Local Summer Workshop should be ordered through Mimeo at least 3 weeks prior to your workshop.
+The only supplies available through Mimeo for the 2018-19 academic year is swag for Administrator & Counselor PD.
 
-For the academic year workshops, you will place one order 3 weeks prior to your first workshop. This shipment will include a full year's worth of supplies to cover all the workshops during the academic year.
+Regional Partners were issued lump sump supplies payments for the 2018-19 academic year based on the number of Code.org-funded cohorts per program.
+
+More information about ordering supplies for your 2019 Local Summer Workshop is coming soon!
+
+Vist the [Ordering Supplies](https://code.org/educate/regional-partner/playbook/ordering-supplies) tile for more information. 
 
 **Catering** <br/>
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
@@ -179,8 +173,5 @@ Program Managers should use the workshop dashboard to manage the workshops for a
 [Recording: How to Use the Workshop Dashboard](http://videos.code.org/plp/workshop-dashboard.mp4)
 
 <a href="https://studio.code.org/pd/workshop_dashboard/workshops"target=_blank>Workshop Dashboard</a> - Use this link to navigate to the workshop dashboard.
-<br/><br/>
-
-<br/><br/>
 
 [**Back to the top**](#top)
