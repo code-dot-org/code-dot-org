@@ -330,20 +330,7 @@ class ProjectsController < ApplicationController
       # point to those here
       @project_video = "https://dance-api.code.org/videos/video-#{@view_options['channel']}.mp4"
       @project_video_stream = dance_project_embed_video_projects_url(key: params[:key], channel_id: params[:channel_id])
-
-      # Provide a presigned URL (to the project owner only, not to the sharing
-      # view) that can upload the video log to S3 for processing into a video.
-      # Make sure we point to our custom CloudFront domain so we don't have to
-      # worry about whitelists. Also manually force https since the SDK assumes
-      # all virtual hosts are http-only.
-      unless sharing
-        signed_url = AWS::S3.presigned_upload_url(
-          "dance-api.code.org",
-          "source/#{@view_options['channel']}",
-          virtual_host: true
-        ).sub('http://', 'https://')
-        view_options(signed_replay_log_url: signed_url)
-      end
+      replay_video_view_options unless sharing || readonly
     end
 
     begin
