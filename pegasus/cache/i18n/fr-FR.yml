@@ -2140,8 +2140,54 @@ fr-FR:
     avec mon compte Google »:'
   hero_name: 'Minecraft: Le voyage du héros'
   applab-intro_name: Introduction pour App Lab
-  creativity_create: Créer
-  creativity_hoc_coming: L'heure du code arrive…
   account_sign_up_email_opt_in: Pouvons-nous vous envoyer des e-mails d’information
     sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
     le domaine informatique?
+  hoc2018_creativity_create: Créer
+  hoc2018_creativity_what_will_you_create: Que vas-tu créer?
+  hoc2018_mc_page_title: Minecraft heure de Code tutoriels
+  hoc2018_mc_details: Beaucoup de langues | Les navigateurs modernes et comprimés
+    | Grades 2 +
+  hoc2018_mc_aquatic_description: Minecraft est de retour dans l'Heure de Code avec
+    une toute nouvelle activité! Le voyage dans Minecraft avec du code.
+  hoc2018_mc_hero_description: Minecraft est de retour dans l'Heure de Code avec une
+    toute nouvelle activité! Le voyage dans Minecraft avec du code.
+  hoc2018_mc_designer_title: Concepteur de Minecraft
+  hoc2018_mc_designer_description: Créez un jeu Minecraft. Créez vos propres versions
+    des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
+  hoc2018_mc_adventurer_title: Aventurier de Minecraft
+  hoc2018_mc_adventurer_description: Utiliser le code pour prendre Alex ou Steve dans
+    une aventure.
+  hoc2018_mc_start: Commencer
+  hoc2018_mc_no_internet: Pas d'internet ?
+  hoc2018_mc_download_adventurer: Télécharger la version offline de Minecraft aventurier.
+  hoc2018_mc_educators_box2_button: Télécharger
+  hoc2018_mc_watch_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
+  hoc2018_mc_videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos inspirantes</a>
+    qui comprennent des modèles et de célébrités
+  hoc2018_mc_careers_more: Plus de <a href='%{careers_url}' target='_blank'> vidéos
+    inspirational</a> mettant en vedette les professionnels dans les domaines de la
+    technologie
+  hoc2018_mc_video_1min: 1 minutes
+  hoc2018_mc_video_2min: 2 minutes
+  hoc2018_mc_video_5min: 5 minutes
+  hoc2018_mc_video_title_steph_curry: Heure de Code avec Steph Curry
+  hoc2018_mc_video_title_sports: Persévère. Tout le monde peut apprendre.
+  hoc2018_mc_video_title_inspire_girl: Encourager une fille
+  hoc2018_mc_video_title_cs_intro: Introduction à la science de l'informatique
+  hoc2018_mc_video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent
+    pas
+  hoc2018_mc_video_title_obama: Le président Obama à propos de l'informatique
+  hoc2018_mc_video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut
+    apprendre
+  hoc2018_mc_video_title_anybody_can_learn: Tout le monde peut apprendre
+  hoc2018_mc_homepage_what_create: Que vas-tu créer?
+  hoc2018_mc_homepage_join_us: Rejoignez-nous
+  hoc2018_mc_homepage_try_it: Participez
+  hoc2018_mc_back: Minecraft est de retour pour une toute nouvelle activité de l'Heure
+    de Code!
+  hoc2018_mc_back_journey: Minecraft est de retour dans l'Heure de Code avec une toute
+    nouvelle activité! Le voyage dans Minecraft avec du code.
+  hoc2018_mc_minecraft_education: Minecraft version éducation
+  hoc2018_mc_continue_learning: Continuer à apprendre avec Minecraft.
+  hoc2018_mc_go_to_mc_education: Allez sur Minecraft version éducation

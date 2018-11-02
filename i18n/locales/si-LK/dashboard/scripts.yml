@@ -880,6 +880,8 @@ si:
               name: ද්විමය වළලු
             Binary Images:
               name: ද්විමය පින්තූර
+            Play Lab:
+              name: ක්‍රීඩා පරීක්ෂණාගාරය
         csd2-2017:
           stages:
             Peer Review:

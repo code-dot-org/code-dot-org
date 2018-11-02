@@ -66,7 +66,7 @@ he:
             '8': כלום
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -310,6 +310,18 @@ he:
         text: פנה שמאלה
       RyanLab_turnRight:
         text: פנה ימינה
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
       craft_ifPath:
         options:
           DIR:

@@ -91,7 +91,7 @@ sk:
           Kód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.
         MC_HOC_2017_04_Cole_b: Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** do cyklu"opakuj" umiestniť dosku, aby si dokončil túto úlohu.
+        MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu "opakuj", aby si dokončil túto úlohu.
         MC_HOC_2017_05_Cole_b: Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús do cyklu "opakuj" pridať príkazy na umiestnenie dosky a pohyb dopredu.

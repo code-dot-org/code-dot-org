@@ -165,20 +165,20 @@ We're seeking candidates who demonstrate the following qualities:
 ## Learn more about the program
 
 ### Overview
-Check out the <a href="https://docs.google.com/document/d/1fUsyGKtpqNtopWLOzHf4Jt67H-_ujkw4GGoB-CzVtKw/edit?ts=5b7ed8af#heading=h.psnytlkvnqcd", target=_"blank">Facilitator Development Program Overview</a> for details about the program.
+Check out the <a href="https://code.org/files/facilitator/overview-2019-20.pdf", target=_"blank">Facilitator Development Program Overview</a> for details about the program.
 
 ### Commitments
 When participants apply to the program, they must select a curriculum focus area. Program commitments, qualifications, and benefits vary by focus area. Check out the resources below to learn more:
 
-* <a href="https://docs.google.com/document/d/1u9sHuQf_5xidk04LdMBvCj91dw5_x5R6jJ9xflojUGs/edit", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
-* <a href="https://docs.google.com/document/d/1_yUxOhcZGjcVw-FK2pmA04ZELI8JJH7CPjhbWTo8Uo0/edit", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
-* <a href="https://docs.google.com/document/d/1TyfaDBGNdakvX3K-jRgQr-R8VQSO9oK08y5Hhh905Tw/edit", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
+* <a href="https://code.org/files/facilitator/csf-commitments.pdf", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
+* <a href="code.org/files/facilitator/csd-commitments.pdf", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
+* <a href="https://code.org/files/facilitator/csp-commitments.pdf", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
 
 ### FAQs
 
 Have questions? We have answers!
 
-Check out our <a href="https://docs.google.com/document/d/1nHWfSscuGpa5684zdK2Kz5pxR0GiIGwAadraZ-ls31k/edit#heading=h.7h1hxnkn8n43", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
+Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub#h.1eght0mc8xrx", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
 
 ## Interested in applying?
 
@@ -200,9 +200,9 @@ In the meantime, be sure to visit our curriculum pages for additional informatio
 Ready to apply? Follow these steps:
 
 1. Check out our program specific commitments:
-	* <a href="https://docs.google.com/document/d/1u9sHuQf_5xidk04LdMBvCj91dw5_x5R6jJ9xflojUGs/edit", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
-	* <a href="https://docs.google.com/document/d/1_yUxOhcZGjcVw-FK2pmA04ZELI8JJH7CPjhbWTo8Uo0/edit", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
-	* <a href="https://docs.google.com/document/d/1TyfaDBGNdakvX3K-jRgQr-R8VQSO9oK08y5Hhh905Tw/edit", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
+	* <a href="https://code.org/files/facilitator/csf-commitments.pdf", target=_"blank">Computer Science Fundamentals Facilitator Development</a> - Grades K-5
+	* <a href="code.org/files/facilitator/csd-commitments.pdf", target=_"blank">Computer Science Discoveries Facilitator Development</a> - Grades 6-10
+	* <a href="https://code.org/files/facilitator/csp-commitments.pdf", target=_"blank">Computer Science Principles Facilitator Development</a> - Grades 9-12
 
 1. Set aside 25-30 minutes to complete the online application. Note that our application is not optimized for mobile devices; we suggest completing it on a laptop or desktop.
 

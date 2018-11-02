@@ -3408,6 +3408,10 @@ es-MX:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Si llama a las funciones correctamente, este es el camino por el que viajará...
         Function_intro_Ryan_a: '¡Puedes usar una función varias veces dentro de tu programa!  Trata de usarla dos veces para resolver este acertijo.'
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "¿Ves las **linternas marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Qué condicional usarías con ellas para atravesar el monumento oceánico?\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: '¡Qué hermoso arrecife de coral! El coral azul será tu mano **derecha** en este viaje. ¡No te fíes de la **siniestra** presencia del coral rojo!'
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Comó paso esto nivel?**

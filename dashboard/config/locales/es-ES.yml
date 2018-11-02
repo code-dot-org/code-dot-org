@@ -52,6 +52,7 @@ es:
   next_resource: Siguiente recurso
   cancel: Cancelar
   okay: De acuerdo
+  or: o
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
@@ -215,7 +216,7 @@ es:
     remember: Recordarme
     submit: Iniciar Sesión
   signin:
-    try_heading: "¿Deseas intentar codificar sin registrarse?"
+    try_heading: "¿Desea intentar codificar sin registrarse?"
     try_hoc: Prueba primero una Hora de Code
     try_20hours: Prueba ahora Introducción a la Informática en 20 horas
   signinsection:
@@ -267,6 +268,7 @@ es:
     code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
       remove: "¿Estás seguro que quieres abandonar esta sección?"
+    default_name: Sección sin título
     remove: "(remover sección)"
     type:
       picture: Foro contraseña
@@ -324,7 +326,7 @@ es:
           y contraseña
   nav:
     header:
-      finished_hoc: He terminado mi Hora de Code
+      finished_hoc: He terminado mi Hora de Código
       sign_in_to_save: Inicia sesión para guardar tu progreso
       free_play:
         playlab: Hacer una aplicación para el laboratorio de juegos
@@ -377,6 +379,7 @@ es:
       signin: Iniciar Sesión
       signup: Crea una cuenta
       already_registered: "¿Ya estás registrado?"
+      pair_programming: Programación de pares
       team: Equipo
       driver: Conductor
       navigator: Navegador
@@ -421,6 +424,7 @@ es:
       example: Solución de ejemplo
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
+      last_updated: 'Última actualización:'
       unsubmit: NO enviado
       worked_with: Trabajado con
       update_lock_settings: Actualiza las opciones de bloqueo aquí.
@@ -859,6 +863,8 @@ es:
       title: Minecraft
       body: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas,
         ovejas, Creepers, zombis y más.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:
