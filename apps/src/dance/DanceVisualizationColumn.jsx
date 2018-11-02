@@ -22,6 +22,7 @@ const SongSelector = Radium(class extends React.Component {
     setSong: PropTypes.func.isRequired,
     selectedSong: PropTypes.string,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
+    filterOff: PropTypes.bool.isRequired
   };
 
   changeSong = (event) => {
@@ -50,6 +51,7 @@ class DanceVisualizationColumn extends React.Component {
     selectedSong: PropTypes.string,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
+    userType: PropTypes.string.isRequired
   };
 
   render() {
@@ -68,6 +70,7 @@ class DanceVisualizationColumn extends React.Component {
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
             songData={this.props.songData}
+            filterOff={this.props.userType === 'teacher' || this.props.userType === 'student'}
           />
         }
         <ProtectedVisualizationDiv>
@@ -89,4 +92,5 @@ export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
+  userType: state.progress.userType
 }))(DanceVisualizationColumn);

@@ -251,14 +251,17 @@ Dance.prototype.afterInject_ = function () {
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
     recordReplayLog,
+    showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
       this.danceReadyPromiseResolve();
       // Log this so we can learn about how long it is taking for DanceParty to
       // load of all of its assets in the wild (will use the timeSinceLoad attribute)
+      const logSampleRate = 1;
       logToCloud.addPageAction(logToCloud.PageAction.DancePartyOnInit, {
+        logSampleRate,
         share: this.share
-      }, 1 / 20);
+      }, logSampleRate);
     },
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
@@ -346,15 +349,31 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  // Block re-entrancy since starting a run is async
+  // (not strictly needed since we disable the run button,
+  // but better to be safe)
+  if (this.runIsStarting) {
+    return;
+  }
+  // Disable the run button now to give some visual feedback
+  // that the button was pressed. toggleRunReset() will
+  // eventually execute down below, but there are some long-running
+  // tasks that need to complete first
+  const runButton = document.getElementById('runButton');
+  runButton.disabled = true;
+  this.runIsStarting = true;
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
   trackEvent('HoC_Song', 'Play', getStore().getState().songs.selectedSong);
 
-  this.studioApp_.toggleRunReset('reset');
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
-  this.execute();
+  await this.execute();
+
+  this.studioApp_.toggleRunReset('reset');
+  // Safe to allow normal run/reset behavior now
+  this.runIsStarting = false;
 
   // Enable the Finish button if is present:
   const shareCell = document.getElementById('share-cell');
@@ -391,7 +410,11 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
-  this.nativeAPI.play(songMetadata);
+  return new Promise(resolve => {
+    this.nativeAPI.play(songMetadata, () => {
+      resolve();
+    });
+  });
 };
 
 Dance.prototype.initInterpreter = function () {
