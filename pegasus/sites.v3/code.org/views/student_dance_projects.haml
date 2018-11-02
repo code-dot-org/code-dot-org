@@ -1,0 +1,42 @@
+:ruby
+  dance_projects = [
+    {
+      title: "Dance Party 1",
+      name: "Hadi",
+      age: "13+",
+    },
+    {
+      title: "Dance Party 2",
+      name: "Hadi Again",
+      age: "13+",
+    },
+    {
+      title: "Dance Party 3",
+      name: "Still Hadi",
+      age: "13+",
+    },
+    {
+      title: "Dance Party 4",
+      name: "Guess who",
+      age: "13+",
+    },
+  ]
+
+.student_dance_projects
+  - dance_projects.each do |project|
+    .project-card{style: "height: 240px; width: 216px; border: 1px solid gray; display: inline-block; margin: 10px;"}
+      .project-video
+        %img{src:"/shared/images/fit-150/hadi_partovi.jpg", style: "height: 150px; width:100%"}
+      .project-details{style: "padding: 10px;"}
+        .project-title{style: "font-size: 18px; font-weight: bold;"}
+          = project[:title]
+        .project-author
+          .span{style: "font-size: 14px; font-weight: bold; display: inline-block;"}
+            By:
+          .span{style: "font-size: 14px; display: inline-block;"}
+            = project[:name]
+        .project-age
+          .span{style: "font-size: 14px; font-weight: bold; display: inline-block;"}
+            Age:
+          .span{style: "font-size: 14px; display: inline-block;"}
+            = project[:age]
