@@ -20,7 +20,7 @@ const styles = {
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
+    selectedSong: PropTypes.string,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
   };
 
@@ -47,7 +47,7 @@ class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
+    selectedSong: PropTypes.string,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
   };
