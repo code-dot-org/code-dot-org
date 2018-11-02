@@ -104,6 +104,7 @@ class SchoolStatsByYear < ActiveRecord::Base
 
   # returns what percent "count" is of the total student enrollment
   def percent_of_students(count)
+    return nil unless count && students_total
     (100.0 * count / students_total).round(2)
   end
 end
