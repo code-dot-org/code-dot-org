@@ -35,6 +35,7 @@ on_worker_shutdown do
 end
 
 on_worker_boot do |_index|
+  puts "Worker starting up"
   require 'dynamic_config/gatekeeper'
   require 'dynamic_config/dcdo'
   Gatekeeper.after_fork
