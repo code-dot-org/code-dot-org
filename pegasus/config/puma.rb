@@ -26,8 +26,10 @@ before_fork do
   DASHBOARD_DB.disconnect
   Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
-  require 'puma_worker_killer'
-  PumaWorkerKiller.enable_rolling_restart(120) # 120 seconds for testing purposes
+  if Gatekeeper.allows('enableWebApplicationServerRollingProcessRestart')
+    require 'puma_worker_killer'
+    PumaWorkerKiller.enable_rolling_restart(120) # 120 seconds for testing purposes
+  end
 end
 
 on_worker_shutdown do
