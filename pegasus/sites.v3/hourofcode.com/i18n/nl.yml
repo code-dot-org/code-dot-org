@@ -17,11 +17,14 @@ nl:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Doe mee met het grootste onderwijsproject in de geschiedenis, 7-13 december, 2015'
   front_intro_default: '''Hour of Code'' is een wereldwijde beweging die tientallen miljoenen studenten in meer dan 180 landen bereikt. Iedereen kan waar dan ook een ''Hour of Code'' organiseren. Tutorials van een uur zijn in meer dan 40 talen beschikbaar. Er is geen ervaring nodig. <strong>Leeftijd 4-104</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Bekijk de nieuwe video'
   front_watch_regular_video: 'Bekijk de video'
   front_volunteers: 'Technische vrijwilligers gezocht'
@@ -292,7 +295,7 @@ nl:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Uur code kaart"
   map_header: '# geregistreerde ''Hour of Code''-activiteiten over de hele de wereld in 2017'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Bekijk alle evenementen'
   map_header_company: '# door bedijfsorganisatoren'
   map_header_country: '# in %{country}'
@@ -420,6 +423,7 @@ nl:
   title_stats: Teksten en Statistieken
   title_partners: Partners
   title_resources: Middelen
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Bedankt dat je je hebt opgegeven om een 'Hour of Code' te organiseren!
   title_tutorial_guidelines: Richtlijnen voor de tutorials
   title_whole_school: Doe mee met de hele School

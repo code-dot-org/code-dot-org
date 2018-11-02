@@ -17,11 +17,14 @@ fr:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Rejoignez le plus grand cours en ligne de l''Histoire, du 7 au 13 décembre 2015'
   front_intro_default: 'Une Heure de Code est un mouvement mondial qui touche plusieurs dizaines de millions d''élèves dans plus de 180 pays. Tout le monde peut organiser un événement Une Heure de Code. Les tutoriels d''une heure sont disponibles dans plus de 40 langues. Que vous ayez ou non de l''expérience. <strong>Pour tous, de 4 à 104 ans.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Regardez la nouvelle vidéo'
   front_watch_regular_video: 'Regardez la vidéo'
   front_volunteers: 'Bénévoles techniques recherchés'
@@ -292,7 +295,7 @@ fr:
   social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Mappe de l'Heure du Code"
   map_header: '# évènements Une Heure de Code dans le monde'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Voir tous les évènements'
   map_header_company: '# par les organisateurs de la société'
   map_header_country: '# en %{country}'
@@ -420,6 +423,7 @@ fr:
   title_stats: Présentation et statistiques
   title_partners: Partenaires
   title_resources: Ressources
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Merci de vous être inscrit(e) pour organiser une Heure de Code !
   title_tutorial_guidelines: Tutoriel
   title_whole_school: Participation de l'ensemble de l'école

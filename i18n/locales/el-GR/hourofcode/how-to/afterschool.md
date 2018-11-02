@@ -11,23 +11,23 @@ nav: how_to_nav
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Παρακολουθήστε το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. Επιλέξτε έναν οδηγό εκμάθησης
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Δοκιμάστε τους!](%= resolve_url('/learn') %)
+Παρέχουμε ποικιλία διασκεδαστικών οδηγών εκμάθησης, διάρκειας μιας ώρας για συμμετέχοντες όλων των ηλικιών, που δημιουργήθηκαν από διάφορους συνεργάτες μας. [Δοκιμάστε τους!](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Χρειάζεστε ένα σχέδιο μαθήματος για την Ώρα του Κώδικα;** Ρίξτε μια ματιά σε αυτό το [ πρότυπο](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Προωθήστε τη δική σας Ώρα του Κώδικα
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+Προωθείστε τη δική σας ώρα του κώδικα [με αυτά τα εργαλεία](%= resolve_url('/promote') %) και ενθαρρύνεται και άλλους να φιλοξενήσουν τις δικές τους εκδηλώσεις.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Σχεδιάστε τις ανάγκες σας όσον αφορά τα τεχνολογικά μέσα που θα χρειαστείτε - η χρήση των υπολογιστών είναι προαιρετική
 
 Για την καλύτερη εμπειρία στην Ώρα του Κώδικα απαιτούνται υπολογιστές που συνδέονται στο διαδίκτυο. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
@@ -37,7 +37,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 **Δεν έχετε αρκετές συσκευές;** Χρησιμοποιήστε την τεχνική του [προγραμματισμού σε ζεύγη](https://www.youtube.com/watch?v=vgkahOzFH2Q). Όταν οι μαθητές συνεργάζονται, βοηθούν ο ένας τον άλλο και να βασίζονται λιγότερο στον εκπαιδευτικό. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Ξεκινήστε την δική σας Ώρα του Κώδικα με ένα εμπνευσμένο βίντεο
 
 Ξεκινήστε την Ώρα του Κώδικα δίνοντας έμπνευση στους συμμετέχοντες και συζητώντας μαζί τους τον τρόπο με τον οποίο η επιστήμη των υπολογιστών επηρεάζει κάθε μέρος της ζωής μας.
 

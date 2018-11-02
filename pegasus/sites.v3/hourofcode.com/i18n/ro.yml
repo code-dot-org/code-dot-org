@@ -17,11 +17,14 @@ ro:
   codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul dumneavoastră.'
   cookie_banner_more_information: "Consultaţi Politica de confidenţialitate a Code.org."
   cookie_banner_accept: 'Sunt de acord'
   front_header_banner: 'Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}'
   front_intro_default: 'Hour of Code (Ora de Programare) este o mişcare globală ce a atins zeci de milioane de elevi si studenţi din peste 180+ de ţări. Oricine, oriunde poate organiza un eveniment Hour of Code. Tutoriale de o ora sunt traduse în peste 40 de limbi. Nu ai nevoie de cunostinte speciale. <strong>Vârsta: de la 4 la 104 ani.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Urmăriţi noul clip video'
   front_watch_regular_video: 'Urmăriţi clipul video'
   front_volunteers: 'Cautam voluntari tehnici'
@@ -420,6 +423,7 @@ ro:
   title_stats: Materiale si statistici
   title_partners: Parteneri
   title_resources: Resurse
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
   title_tutorial_guidelines: Ghiduri de activitate
   title_whole_school: Participarea intregii scoli
