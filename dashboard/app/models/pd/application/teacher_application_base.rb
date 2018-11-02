@@ -598,7 +598,7 @@ module Pd::Application
 
     # @override
     # Add account_email (based on the associated user's email) to the sanitized form data hash
-    def sanitize_form_data_hagish
+    def sanitize_form_data_hash
       super.merge(account_email: user.email)
     end
 
