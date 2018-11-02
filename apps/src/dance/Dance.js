@@ -70,7 +70,7 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-Dance.prototype.init = async function (config) {
+Dance.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error("GameLab requires a StudioApp");
   }
@@ -114,7 +114,7 @@ Dance.prototype.init = async function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
-  await this.initSongs(config);
+  this.initSongsPromise = this.initSongs(config);
 
   ReactDOM.render((
     <Provider store={getStore()}>
@@ -134,6 +134,10 @@ Dance.prototype.init = async function (config) {
 Dance.prototype.initSongs = async function (config) {
   const songManifest = await getSongManifest(config.useRestrictedSongs);
   const songData = parseSongOptions(songManifest);
+  const selectedSong = getSelectedSong(songManifest, config);
+
+  // Set selectedSong first, so we don't initially show the wrong song.
+  getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
   // Pre-register all audio preloads with our Sounds API, which will load
@@ -144,8 +148,6 @@ Dance.prototype.initSongs = async function (config) {
     Sounds.getSingleton().register(soundConfig);
   });
 
-  const selectedSong = getSelectedSong(songManifest, config);
-  getStore().dispatch(setSelectedSong(selectedSong));
   loadSong(selectedSong, songData);
   this.updateSongMetadata(selectedSong);
 };
@@ -390,6 +392,11 @@ Dance.prototype.execute = async function () {
 
   const validationCallback = new Function('World', 'nativeAPI', 'sprites', this.level.validationCode);
   this.nativeAPI.registerValidation(validationCallback);
+
+  // songMetadataPromise will resolve immediately if the request which populates
+  // it has not yet been initiated. Therefore we must first wait for song init
+  // to complete before awaiting songMetadataPromise.
+  await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
   this.nativeAPI.play(songMetadata);
