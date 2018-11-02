@@ -110,8 +110,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
-    count ||= 0
-    total ||= 0
+    return 'No data' unless count && total
+
     "#{(100.0 * count / total).round(2)}%"
   end
 
@@ -120,14 +120,13 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
     school = School.find_by_id(object.school_id)
     stats = school.school_stats_by_year.order(school_year: :desc).first
-
     return {} unless stats
 
-    urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
+    urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).reduce(:+) || 0
 
     {
       title_i_status: stats.title_i_status,
-      school_type: school.school_type.titleize,
+      school_type: school.school_type.try(:titleize),
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),
       students_total: stats.students_total,
