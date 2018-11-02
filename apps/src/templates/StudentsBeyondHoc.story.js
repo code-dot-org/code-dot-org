@@ -155,5 +155,49 @@ export default storybook => {
             />
         )
       },
+      {
+        name: 'Dance, signed in, English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="student"
+              isEnglish={true}
+            />
+        )
+      },
+      {
+        name: 'Dance, signed in, non-English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="student"
+              isEnglish={false}
+            />
+        )
+      },
+      {
+        name: 'Dance, signed out, English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="signedOut"
+              isEnglish={true}
+            />
+        )
+      },
+      {
+        name: 'Dance, signed out, non-English',
+        description: `Same for young student, older student and teacher`,
+        story: () => (
+            <StudentsBeyondHoc
+              completedTutorialType="dance"
+              userType="signedOut"
+              isEnglish={false}
+            />
+        )
+      },
     ]);
 };
