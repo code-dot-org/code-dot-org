@@ -574,13 +574,12 @@ class Blockly < Level
       block_text = level_object[:config]["blockText"]
       next if block_text.blank?
       level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
-      options_keys = block_text.scan(/\{(.*?)\}/).flatten
       options = level_object[:config]["args"]
       next if options.blank?
       options.each do |option|
-        next if option["options"].blank? && !options_keys.include?(option["name"])
+        next if option["options"].blank?
         option["options"]&.each_with_index do |name, i|
-          option["options"][i][1] = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[0]}")
+          option["options"][i][0] = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[1]}")
         end
       end
       level_object[:config]["args"] = options
