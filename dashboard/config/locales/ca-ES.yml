@@ -35,6 +35,7 @@ ca:
   submit: Envia
   cancel: Cancel·lar
   okay: D'acord
+  or: o
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -123,7 +124,7 @@ ca:
     remember: Recorda'm
     submit: Inicia la sessió
   signin:
-    try_heading: Voleu provar a programar sense registrar-vos?
+    try_heading: Vols provar a programar sense donar-te d'alta?
     try_hoc: Proveu una Hora de Codi primer
     try_20hours: Proveu la nostra introducció a la Informàtica de 20 hores
   signinsection:
@@ -445,6 +446,8 @@ ca:
       title: Minecraft
       body: Explora el món de Minecraft a través del codi
     minecraft2016:
+      title: Minecraft
+    aquatic:
       title: Minecraft
     hero:
       title: Minecraft

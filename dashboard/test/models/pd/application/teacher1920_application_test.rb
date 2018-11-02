@@ -48,34 +48,44 @@ module Pd::Application
 
     test 'meets criteria says an application meets critera when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher1920_application, course: 'csd',
-        response_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].map {|x| [x, 'Yes']}.to_h.to_json
+        response_scores: {
+          meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].map {|x| [x, 'Yes']}.to_h
+        }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher1920_application, course: 'csp',
-        response_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].map {|x| [x, 'Yes']}.to_h.to_json
+        response_scores: {
+          meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].map {|x| [x, 'Yes']}.to_h
+        }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
     end
 
     test 'meets criteria says an application does not meet criteria when any YES_NO fields are marked NO' do
       teacher_application = build :pd_teacher1920_application, response_scores: {
-        committed: 'No'
+        meets_minimum_criteria_scores: {
+          committed: 'No'
+        }
       }.to_json
       assert_equal 'No', teacher_application.meets_criteria
     end
 
     test 'meets criteria returns incomplete when an application does not have YES on all YES_NO fields but has no NOs' do
       teacher_application = build :pd_teacher1920_application, response_scores: {
-        committed: 'Yes'
+        meets_minimum_criteria_scores: {
+          committed: 'Yes'
+        }
       }.to_json
       assert_equal 'Reviewing incomplete', teacher_application.meets_criteria
     end
 
     test 'total score calculates the sum of all response scores' do
       teacher_application = build :pd_teacher1920_application, response_scores: {
-        free_lunch_percent: '5',
-        underrepresented_minority_percent: '5',
-        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
-        csp_which_grades: nil
+        bonus_points_scores: {
+          free_lunch_percent: '5',
+          underrepresented_minority_percent: '5',
+          able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
+          csp_which_grades: nil
+        }
       }.to_json
 
       assert_equal 10, teacher_application.total_score
@@ -361,26 +371,35 @@ module Pd::Application
       end
     end
 
-    test 'locked status does not appear in csv' do
-      application = create :pd_teacher1920_application
-      mock_user = mock
-
-      Teacher1920Application.stubs(:can_see_locked_status?).returns(false)
-      header_without_locked = Teacher1920Application.csv_header('csf', mock_user)
-      refute header_without_locked.include? 'Locked'
-      row_without_locked = application.to_csv_row(mock_user)
-      assert_equal CSV.parse(header_without_locked).length, CSV.parse(row_without_locked).length,
-        "Expected header and row to have the same number of columns, excluding Locked"
+    test 'columns_to_remove' do
+      ['csp', 'csd'].each do |course|
+        columns = Teacher1920Application.columns_to_remove(course)
+        columns.keys.each do |k|
+          columns[k].each {|c| refute c.to_s.include?(course)}
+        end
+      end
     end
 
-    test 'to_cohort_csv' do
-      application = build :pd_teacher1920_application
-      optional_columns = {registered_workshop: false, accepted_teachercon: true}
+    test 'csv_filtered_labels' do
+      csv_filtered_labels_csd = Teacher1920Application.csv_filtered_labels('csd')
+      assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
+      refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
 
-      assert (header = Teacher1920Application.cohort_csv_header(optional_columns))
-      assert (row = application.to_cohort_csv_row(optional_columns))
-      assert_equal CSV.parse(header).length, CSV.parse(row).length,
-        "Expected header and row to have the same number of columns"
+      csv_filtered_labels_csp = Teacher1920Application.csv_filtered_labels('csp')
+      refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
+      assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
+    end
+
+    test 'csv_header' do
+      csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
+      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
+      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
+      assert_equal 102, csv_header_csd.length
+
+      csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
+      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
+      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
+      assert_equal 103, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -642,24 +661,31 @@ module Pd::Application
 
       assert_equal(
         {
-          regional_partner_name: YES,
-          csd_which_grades: YES,
-          cs_total_course_hours: YES,
-          previous_yearlong_cdo_pd: YES,
-          plan_to_teach: YES,
-          replace_existing: 5,
-          have_cs_license: YES,
-          taught_in_past: 2,
-          committed: YES,
-          willing_to_travel: YES,
-          race: 2,
-          principal_approval: YES,
-          principal_plan_to_teach: YES,
-          principal_schedule_confirmed: YES,
-          principal_diversity_recruitment: YES,
-          principal_free_lunch_percent: 5,
-          principal_underrepresented_minority_percent: 5
-        }.stringify_keys,
+          meets_minimum_criteria_scores: {
+            regional_partner_name: YES,
+            csd_which_grades: YES,
+            cs_total_course_hours: YES,
+            plan_to_teach: YES,
+            committed: YES,
+            willing_to_travel: YES,
+
+          },
+          meets_scholarship_criteria_scores: {
+            plan_to_teach: YES,
+            previous_yearlong_cdo_pd: YES,
+            principal_approval: YES,
+            principal_plan_to_teach: YES,
+            principal_schedule_confirmed: YES,
+            principal_diversity_recruitment: YES,
+          },
+          bonus_points_scores: {
+            replace_existing: 5,
+            taught_in_past: 2,
+            race: 2,
+            principal_free_lunch_percent: 5,
+            principal_underrepresented_minority_percent: 5
+          },
+        }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
     end
@@ -694,25 +720,31 @@ module Pd::Application
 
       assert_equal(
         {
-          regional_partner_name: YES,
-          csp_which_grades: YES,
-          cs_total_course_hours: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          plan_to_teach: YES,
-          replace_existing: 5,
-          have_cs_license: YES,
-          taught_in_past: 2,
-          committed: YES,
-          willing_to_travel: YES,
-          race: 2,
-          principal_approval: YES,
-          principal_plan_to_teach: YES,
-          principal_schedule_confirmed: YES,
-          principal_diversity_recruitment: YES,
-          principal_free_lunch_percent: 5,
-          principal_underrepresented_minority_percent: 5
-        }.stringify_keys,
+          meets_minimum_criteria_scores: {
+            regional_partner_name: YES,
+            csp_which_grades: YES,
+            cs_total_course_hours: YES,
+            plan_to_teach: YES,
+            committed: YES,
+            willing_to_travel: YES
+          },
+          meets_scholarship_criteria_scores: {
+            plan_to_teach: YES,
+            previous_yearlong_cdo_pd: YES,
+            principal_approval: YES,
+            principal_plan_to_teach: YES,
+            principal_schedule_confirmed: YES,
+            principal_diversity_recruitment: YES
+          },
+          bonus_points_scores: {
+            csp_how_offer: 2,
+            replace_existing: 5,
+            taught_in_past: 2,
+            race: 2,
+            principal_free_lunch_percent: 5,
+            principal_underrepresented_minority_percent: 5
+          },
+        }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
     end
@@ -740,19 +772,26 @@ module Pd::Application
 
       assert_equal(
         {
-          regional_partner_name: YES,
-          csp_which_grades: YES,
-          cs_total_course_hours: YES,
-          previous_yearlong_cdo_pd: YES,
-          csp_how_offer: 2,
-          plan_to_teach: YES,
-          replace_existing: 5,
-          have_cs_license: YES,
-          taught_in_past: 2,
-          committed: YES,
-          willing_to_travel: YES,
-          race: 2
-        }.stringify_keys,
+          meets_minimum_criteria_scores: {
+            regional_partner_name: YES,
+            csp_which_grades: YES,
+            cs_total_course_hours: YES,
+            plan_to_teach: YES,
+            committed: YES,
+            willing_to_travel: YES,
+
+          },
+          meets_scholarship_criteria_scores: {
+            plan_to_teach: YES,
+            previous_yearlong_cdo_pd: YES
+          },
+          bonus_points_scores: {
+            csp_how_offer: 2,
+            replace_existing: 5,
+            taught_in_past: 2,
+            race: 2
+          },
+        }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
     end
@@ -786,24 +825,31 @@ module Pd::Application
 
       assert_equal(
         {
-          regional_partner_name: NO,
-          csd_which_grades: NO,
-          cs_total_course_hours: NO,
-          previous_yearlong_cdo_pd: NO,
-          plan_to_teach: NO,
-          replace_existing: 0,
-          have_cs_license: NO,
-          taught_in_past: 0,
-          committed: NO,
-          willing_to_travel: NO,
-          race: 0,
-          principal_approval: NO,
-          principal_plan_to_teach: NO,
-          principal_schedule_confirmed: NO,
-          principal_diversity_recruitment: NO,
-          principal_free_lunch_percent: 0,
-          principal_underrepresented_minority_percent: 0
-        }.stringify_keys,
+          meets_minimum_criteria_scores: {
+            regional_partner_name: NO,
+            csd_which_grades: NO,
+            cs_total_course_hours: NO,
+            plan_to_teach: NO,
+            committed: NO,
+            willing_to_travel: NO,
+
+          },
+          meets_scholarship_criteria_scores: {
+            plan_to_teach: NO,
+            previous_yearlong_cdo_pd: NO,
+            principal_approval: NO,
+            principal_plan_to_teach: NO,
+            principal_schedule_confirmed: NO,
+            principal_diversity_recruitment: NO,
+          },
+          bonus_points_scores: {
+            replace_existing: 0,
+            taught_in_past: 0,
+            race: 0,
+            principal_free_lunch_percent: 0,
+            principal_underrepresented_minority_percent: 0
+          },
+        }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
     end
@@ -838,25 +884,31 @@ module Pd::Application
 
       assert_equal(
         {
-          regional_partner_name: NO,
-          csp_which_grades: NO,
-          cs_total_course_hours: NO,
-          previous_yearlong_cdo_pd: NO,
-          csp_how_offer: 0,
-          plan_to_teach: NO,
-          replace_existing: 0,
-          have_cs_license: NO,
-          taught_in_past: 0,
-          committed: NO,
-          willing_to_travel: NO,
-          race: 0,
-          principal_approval: NO,
-          principal_plan_to_teach: NO,
-          principal_schedule_confirmed: NO,
-          principal_diversity_recruitment: NO,
-          principal_free_lunch_percent: 0,
-          principal_underrepresented_minority_percent: 0
-        }.stringify_keys,
+          meets_minimum_criteria_scores: {
+            regional_partner_name: NO,
+            csp_which_grades: NO,
+            cs_total_course_hours: NO,
+            plan_to_teach: NO,
+            committed: NO,
+            willing_to_travel: NO
+          },
+          meets_scholarship_criteria_scores: {
+            plan_to_teach: NO,
+            previous_yearlong_cdo_pd: NO,
+            principal_approval: NO,
+            principal_plan_to_teach: NO,
+            principal_schedule_confirmed: NO,
+            principal_diversity_recruitment: NO
+          },
+          bonus_points_scores: {
+            csp_how_offer: 0,
+            replace_existing: 0,
+            taught_in_past: 0,
+            race: 0,
+            principal_free_lunch_percent: 0,
+            principal_underrepresented_minority_percent: 0
+          },
+        }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
     end

@@ -44,6 +44,7 @@ zh-TW:
   next_resource: 下一個資源
   cancel: 取消
   okay: OK！
+  or: 或
   heading_x_of_y: "%{heading} （%{x} / %{y} 頁）"
   add_teacher_form:
     code:
@@ -84,7 +85,7 @@ zh-TW:
     sign_out_of: 您正在使用 %{provider} 登入。<a href="%{url}">點這裡</a>登出 %{provider}。
     already_signedup: 已經註冊了？
     notyet_signedup: 還沒加入？
-    google_oauth2: Google 帳戶
+    google_oauth2: Google帳戶
     twitter: Twitter
     facebook: Facebook
     windowslive: 微軟帳戶
@@ -179,7 +180,7 @@ zh-TW:
     remember: 記住我
     submit: 登入
   signin:
-    try_heading: 還沒註冊嗎？先試試再說
+    try_heading: 想要在還沒註冊之前就先試試寫程式嗎？
     try_hoc: 先來試試一小時玩程式
     try_20hours: 試試我們的 20 小時介紹計算機科學
   signinsection:
@@ -665,6 +666,8 @@ zh-TW:
     minecraft2016:
       title: Minecraft
       body: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。

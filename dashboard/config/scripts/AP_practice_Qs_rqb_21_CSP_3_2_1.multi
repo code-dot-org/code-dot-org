@@ -1,0 +1,24 @@
+name 'AP_practice_Qs_rqb_21_CSP_3_2_1'
+right 'metadata'
+wrong 'recycling'
+wrong 'plotting'
+wrong 'grouping'
+markdown <<MARKDOWN
+A team of students are working on a project for science class.  For the project, the students keep track of the weather forecast for 30 days.  Each day they record the date, the weather forecast for that day, and whether the forecast was essentially correct for that day.  The information collected would be an example of:
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.2.1** and Essential Knowledge statements: **3.2.1G**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

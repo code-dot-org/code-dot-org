@@ -49,6 +49,7 @@ ka:
   next_resource: შემდეგი რესურსი
   cancel: გაუქმება
   okay: კარგი
+  or: ან
   heading_x_of_y: "%{heading} (გვერდი %{x} %{y}-ის)"
   add_teacher_form:
     code:
@@ -306,7 +307,7 @@ ka:
           ახლა თქვენ შეგიძლიათ ანგარიშში შესვლა სახელით (%{username}) და პაროლით
   nav:
     header:
-      finished_hoc: მე დავასრულე ჩემი "კოდის ერთი საათი"
+      finished_hoc: დავასრულე "კოდის წერის 1 საათი"
       sign_in_to_save: დარეგისტრირება და პროგრესის შენახვა
       free_play:
         playlab: აპლიკაციის შექმნა თამაშების ლაბორატორიაში
@@ -829,6 +830,8 @@ ka:
     minecraft2016:
       title: Minecraft
       body: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის საკუთარ სამყაროში.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

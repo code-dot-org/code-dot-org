@@ -308,6 +308,8 @@ en:
         title: ชื่อเรื่อง
       PDK5 CS Video:
         Computer Science: วิทยาการคอมพิวเตอร์
+      PDK5 Pair Programming 1:
+        Pair Programming: การจับคู่เพื่อเขียนโปรแกรม
       PS - Responding to User Input:
         title: ชื่อเรื่อง
       PS - draft - Longitudinal study description:
@@ -908,6 +910,15 @@ en:
         Instructions: คำแนะนำ
       PDAlg Design Recipe Video:
         Definition: คำจำกัดความ
+      PDK5 Pair programming match:
+        Driver: ไดร์ฟเวอร์
+        Match the definitions to the words you were introduced to in the last video.: ให้จับคู่ความหมายกับคำต่างๆที่ได้มีการนำเสนอให้กับท่านในวิดิโอล่าสุด
+        Navigator: ผู้นำทาง
+        Pair programming: การจับคู่เพื่อเขียนโปรแกรม
+        Pair programming match: การแข่งขัน โดยมีการจับคู่เพื่อเขียนโปรแกรม
+        The student who controls the keyboard, mouse, or touch screen: นักเรียนผู้ทำการควบคุมคีย์บอร์ด เมาส์ และหน้าจอแบบสัมผัส
+        The student who thinks about the big-picture and looks for potential mistakes or misunderstandings: นักเรียนผู้ที่คิดในภาพรวม และมองหาข้อผิดพลาดหรือการเข้าใจผิดที่อาจเกิดขึ้นได้
+        When two students work at one computer to write a program together: เมื่อนักเรียนสองคนใช้คอมพิวเตอร์เพียงเครื่องเดียวในการเขียนโปรแกรมด้วยกัน
       PDK5 What is unplugged:
         Question: คำถาม
       'U2L06 - Matching: Label the Diagram':
@@ -1252,10 +1263,14 @@ en:
     '12': '12'
     '15': '15'
     '4': '4'
+    Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: ไม่ถูกต้อง เกษตรกรจะเก็บฟักทองขำนวน 4 ผลเมื่อลูปในแต่ละรอบ 4 คุณ 3 ได้ 12!
+    Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: ดูที่โค้ดด้านล่างให้ดี ถามว่าเกษตรกรจะเก็บฟักทองได้กี่ผล หลีงจากที่คุณคลิกปุ่ม " เริ่ม " แล้ว?
   courseC_multi_harvester_loops11_predict1_2018:
     '12': '12'
     '15': '15'
     '4': '4'
+    Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: ไม่ถูกต้อง เกษตรกรจะเก็บฟักทองขำนวน 4 ผลเมื่อลูปในแต่ละรอบ 4 คุณ 3 ได้ 12!
+    Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: ดูที่โค้ดด้านล่างให้ดี ถามว่าเกษตรกรจะเก็บฟักทองได้กี่ผล หลีงจากที่คุณคลิกปุ่ม " เริ่ม " แล้ว?
   courseD_multi_bee_nestedLoops9_predict2:
     '12': '12'
     '4': '4'
@@ -1272,6 +1287,33 @@ en:
     14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
     15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
     16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+  courseD_multi_farmer_condLoops9_predict1:
+    0: '? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    1: ': Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    2: '? The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    3: ': The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    The harvester will collect all of the crops, except the pumpkin.: เกษตรกรจะเก็บเกี่ยวพืชไร่ทั้งหมด ยกเว้นฟักทอง
+    The harvester will collect all of the crops.: เกษตรกรจะเก็บเกี่ยวพืชไร่ทั้งหมด
+    The harvester will not collect any of the crops with the path she is taking.: เกษตรกรจะไม่เก็บเกี่ยวพืชไร่ใดๆ บนเส้นทางที่เธอใช้
+  courseD_multi_farmer_condLoops9_predict1_2018:
+    0: '? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    1: ': Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    2: '? The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    3: ': The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
+    The harvester will collect all of the crops.: เกษตรกรจะเก็บเกี่ยวพืชไร่ทั้งหมด
+    The harvester will not pick any of the crops with the path she is taking.: เกษตรกรจะไม่เก็บพืชไร่ใดๆ บนเส้นทางที่เธอใช้
+    The harvester will pick all of the crops, except the pumpkin.: เกษตรกรจะเก็บเกี่ยวพืชไร่ทั้งหมด ยกเว้นฟักทอง
+  courseE_multi_farmer_functions11_predict:
+    Incorrect. The harvester only makes one turn, and ends at the corn.: ไม่ถูกต้อง เกษตรกรเลี้ยวเพียงครั้งเดียว และไปหยุดอยู่ที่ต้นข้าวโพด
+    The harvester will pick all of the pumpkins.: เกษตรกรจะเก็บฟักทองทั้งหมด
+    The harvester will pick the corn.: เกษตรกรจะเก็บข้าวโพด
+    The harvester will pick the lettuce.: เกษตรกรจะเก็บกล่ำปลี
+    The harvester will pick two pumpkins.: เกษตรกรจะเก็บฟักทองสองผล
+  courseE_multi_farmer_functions11_predict_2018:
+    The harvester will pick all of the pumpkins.: เกษตรกรจะเก็บฟักทองทั้งหมด
+    The harvester will pick the corn.: เกษตรกรจะเก็บข้าวโพด
+    The harvester will pick the lettuce.: เกษตรกรจะเก็บกล่ำปลี
+    The harvester will pick two pumpkins.: เกษตรกรจะเก็บฟักทองสองผล
   csd-post-survey-2018-topic-ai:
     'No': 'ไม่ใช่'
     'Yes': 'ใช่'

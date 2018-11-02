@@ -37,6 +37,7 @@ bg:
   next_resource: Следващ ресурс
   cancel: "Отмяна"
   okay: "Добре"
+  or: "или"
   heading_x_of_y: "%{heading} (page %{x} на %{y})"
   add_teacher_form:
     code:
@@ -549,6 +550,8 @@ bg:
     minecraft2016:
       title: "Minecraft"
       body: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код."

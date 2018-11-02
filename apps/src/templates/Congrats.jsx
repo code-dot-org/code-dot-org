@@ -46,6 +46,7 @@ export default class Congrats extends Component {
     const isEnglish = language === 'en';
 
     const tutorialType = {
+      'dance': 'dance',
       'applab-intro': 'applab',
       aquatic: '2018Minecraft',
       hero: '2017Minecraft',
