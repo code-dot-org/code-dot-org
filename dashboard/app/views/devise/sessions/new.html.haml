@@ -1,12 +1,5 @@
 %h1= t('signin_form.title')
 
-/ Not yet signed up?  Sign up
-- if devise_mapping.registerable?
-  %strong
-    = t('auth.notyet_signedup')
-    = link_to t('nav.user.signup'), new_user_registration_path
-%br/
-
 #signin
   = form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "signin"}) do |f|
 
@@ -30,18 +23,22 @@
     .submit-section
       / Forgot password?
       - if devise_mapping.recoverable?
-        #forgot-password
-          = link_to t('auth.forgot_password'), new_password_path(resource_name)
+        .align-center.italic= link_to t('auth.forgot_password'), new_password_path(resource_name)
 
       / Sign in button
       %button.submit#signin-button= t('signin_form.submit')
 
-  %div.vertical-or
-    %hr
-    = t("or").upcase
-    %hr
+      / Not yet signed up? Sign up
+      - if devise_mapping.registerable?
+        %strong.align-center= t('auth.notyet_signedup')
+        %button.submit= link_to t('nav.user.signup'), new_user_registration_path
 
-  = render "devise/shared/new_links"
+%div.vertical-or
+  %hr
+  = t("or").upcase
+  %hr
+
+= render "devise/shared/new_links"
 
 .row
   .span12
