@@ -114,6 +114,24 @@ Dance.prototype.init = async function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
+  await this.initSongs(config);
+
+  ReactDOM.render((
+    <Provider store={getStore()}>
+      <AppView
+        visualizationColumn={
+          <DanceVisualizationColumn
+            showFinishButton={showFinishButton}
+            setSong={this.setSongCallback.bind(this)}
+          />
+        }
+        onMount={onMount}
+      />
+    </Provider>
+  ), document.getElementById(config.containerId));
+};
+
+Dance.prototype.initSongs = async function (config) {
   const songManifest = await getSongManifest(config.useRestrictedSongs);
   const songData = parseSongOptions(songManifest);
   getStore().dispatch(setSongData(songData));
@@ -130,20 +148,6 @@ Dance.prototype.init = async function (config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   loadSong(selectedSong, songData);
   this.updateSongMetadata(selectedSong);
-
-  ReactDOM.render((
-    <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <DanceVisualizationColumn
-            showFinishButton={showFinishButton}
-            setSong={this.setSongCallback.bind(this)}
-          />
-        }
-        onMount={onMount}
-      />
-    </Provider>
-  ), document.getElementById(config.containerId));
 };
 
 Dance.prototype.setSongCallback = function (songId) {
