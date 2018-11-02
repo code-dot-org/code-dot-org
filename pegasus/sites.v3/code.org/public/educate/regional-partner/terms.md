@@ -21,7 +21,7 @@ nav: plc_regional_partner_nav
 
 ### Workshops ###
 - Organize and host quality, local workshops for teachers implementing Code.org’s K-12 program, with Code.org-accredited facilitators. 
-	- Summer 2019: Host or support local summer workshops for CS Discoveries and CS Principles professional leanring program for your region's teachers.
+	- Summer 2019: Host or support local summer workshops for CS Discoveries and CS Principles professional learning program for your region's teachers.
 	- Fall 2019: Host workshops for administrators and counselors workshops of teachers interested (or participating) in Code.org's professional learning programs. 
 	- Fall 2019 - Spring 2020: Host one-day CS Fundamentals workshops, CS Discoveries and CS Principles academic year workshops.
 	- Organizing workshops includes, but is not limited to: creating workshops and taking attendance in Code.org’s workshop dashboard, recruiting teachers using Code.org’s teacher application system, securing a venue, ordering food, and ordering supplies.
@@ -102,7 +102,7 @@ nav: plc_regional_partner_nav
 - Evaluate Regional Partner success based on shared metrics such as growth of teachers and students in the region, implementation of courses, diversity, workshop surveys, teacher participant data, and quality of workshop.
 
 ### Program and Curricula Content ###
-- Code.org commits to providing K-12 computer sciece curricula at no cost and continue updating content as necessary.
+- Code.org commits to providing K-12 computer science curricula at no cost and continue updating content as necessary.
 - Code.org will continue to provide high quality content for the professional learning programs at no cost to Regional Partners.
 
 ## Joint Commitment
