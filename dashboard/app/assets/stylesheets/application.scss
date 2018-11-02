@@ -1609,6 +1609,8 @@ a.download-video {
   $button-width: 324px;
 
   min-width: 450px;
+  display: flex;
+  flex-direction: column;
 
   form {
     display: flex;
@@ -1644,14 +1646,6 @@ a.download-video {
     font-family: $gotham-extra-bold;
     margin: 5px 0;
     width: $button-width;
-
-    > a {
-      color: $white;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
   }
 
   .blue-button {
