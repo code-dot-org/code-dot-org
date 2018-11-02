@@ -10,6 +10,7 @@ import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DanceParty} from '@code-dot-org/dance-party';
+import danceMsg from './locale';
 import {reducers, setSong} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
@@ -283,6 +284,9 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
   });
+  /** Expose for testing **/
+  window.__DanceTestInterface = this.nativeAPI.getTestInterface();
+
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
   }
@@ -310,12 +314,14 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
   this.reset();
 
+  const danceMessage = message ? danceMsg[message]() : '';
+
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
-    this.message = message;
+    this.message = danceMessage;
   } else if (result === false) {
     this.testResults = TestResults.APP_SPECIFIC_FAIL;
-    this.message = message;
+    this.message = danceMessage;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -444,6 +450,15 @@ Dance.prototype.initInterpreter = function () {
     },
     setTint: (spriteIndex, val) => {
       nativeAPI.setTint(sprites[spriteIndex], val);
+    },
+    setTintEach: (group, val) => {
+      nativeAPI.setTintEach(group, val);
+    },
+    setVisible: (spriteIndex, val) => {
+      nativeAPI.setVisible(sprites[spriteIndex], val);
+    },
+    setVisibleEach: (group, val) => {
+      nativeAPI.setVisibleEach(group, val);
     },
     setProp: (spriteIndex, property, val) => {
       nativeAPI.setProp(sprites[spriteIndex], property, val);

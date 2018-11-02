@@ -125,6 +125,7 @@ const initialProjectListState = {
   gamelab: [],
   playlab: [],
   artist: [],
+  dance: [],
 };
 
 function projectLists(state = initialProjectListState, action) {
@@ -156,6 +157,7 @@ function projectLists(state = initialProjectListState, action) {
 // Whether there are more projects of each type on the server which are
 // older than the ones we have on the client.
 const initialHasOlderProjects = {
+  dance: true,
   applab: true,
   spritelab: true,
   gamelab: true,
