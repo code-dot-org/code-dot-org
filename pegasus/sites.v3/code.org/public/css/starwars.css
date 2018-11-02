@@ -33,7 +33,7 @@
   right: 270px;
 }
 
-.tutorial-box {
+.starwars-container .tutorial-box {
   background-color: rgba(0, 0, 0, 0.4);
   color:white;
   padding: 20px;
@@ -86,7 +86,7 @@
     position: static;
   }
 
-  .tutorial-box {
+  .starwars-container .tutorial-box {
     background-image: url(/images/fit-520/starwars_carousel_background.jpg);
   }
 
@@ -118,7 +118,7 @@
     width: 100%;
   }
 
-  .tutorial-box {
+  .starwars-container .tutorial-box {
     /* Ensure background doesn't repeat in the wider box */
     background-size: cover;
   }
