@@ -68,7 +68,7 @@
   "tapToPlay": "แตะเพื่อเล่น",
   "swipeToMove": "ปัดหน้าจอเพื่อสั่งให้เคลื่อนที่",
   "collidesWithAnySpriteName": "ชนกับ {spriteName} ใดๆ",
-  "continue": "ไปต่อ",
+  "continue": "\nไปต่อ",
   "decrementPlayerScore": "เสียแต้ม",
   "defaultSayText": "พิมพ์ที่นี่",
   "dinosaur": "ไดโนเสาร์",

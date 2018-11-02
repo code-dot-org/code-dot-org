@@ -272,11 +272,11 @@ sk:
       1:
         text: Ahoj, volám sa Paola! Počítače sú skutočne dobré v opakovaní akcií.
           Ty dokážeš napočítať do 10, 20, alebo do 100. Lenže počítač dokáže počítať
-          do miliardy, alebo do triliónu. Nezačne sa nudiť a potvrá mu to len pár
+          do miliardy, alebo do triliónu. Nezačne sa nudiť a potrvá mu to len pár
           sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače
           dokážu opakovať veci stovky, alebo dokonca miliardy krát.
       2:
-        text: V programovaní toto voláme slučka. Slučka znamená, že Tvoj kód sa zopakuje
+        text: V programovaní toto voláme cyklus. Cyklus znamená, že Tvoj kód sa zopakuje
           znova a znova. V ďaľšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec
           pomocou bloku "Opakuj".
       3:
@@ -555,9 +555,9 @@ sk:
           nadšená, že si tiež môžem prejsť týmto Minecraft kurzom a sama sa naučím
           trocha kódovať.
       3:
-        text: Predošlý level využíval množstvo blokov PosuňSaDopredu();. Bolo by to
-          jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz PosuňSaDopredu();
-          štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov
+        text: Predošlý level využíval množstvo blokov moveForward();. Bolo by to jednoduchšie,
+          ak by sme dokázali počítaču povedať, aby vykonal príkaz moveForward(); štyri
+          alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov
           pomocou opakovacích cyklov.
       4:
         text: Pri stavbe Mincraftu používame opakovacie cykly, aby sme umiestnili

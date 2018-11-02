@@ -231,6 +231,14 @@ mi:
         text: huri whakatemauī
       RyanLab_turnRight:
         text: huri whakatematau
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
       craft_ifPath:
         options:
           DIR:

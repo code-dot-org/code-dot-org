@@ -224,6 +224,14 @@ ms:
         text: belok kiri
       RyanLab_turnRight:
         text: belok kanan
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': saiz
       craft_ifPath:
         options:
           DIR:

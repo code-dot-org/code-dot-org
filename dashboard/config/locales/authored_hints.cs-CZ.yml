@@ -13,6 +13,33 @@ cs:
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: V kruhu je 360°, takže když se malíř otočí o 1° každou smyčku,
           bude ji potřebovat zopakovat 360x.
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a: Zdá se že umělec není otočen správným směrem. Zkusíš ho
+          nejprve otočit a poté nakreslit čáru?
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a: Kolik je 100-70? Podle příběhu by měl právě tak být být
+          vysoký klobouk!
+        2-3_Artist_3new_b: Zdá se že umělec není otočen správným směrem. Zkusíš ho
+          nejprve otočit a poté nakreslit čáru?
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: Vše co je třeba pro dokončení domu je nakreslit čtverec!
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku
+          jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
+        2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana
+          čtverce... 100 pixelů!
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a: Nejsnazší způsob jak dokončit tuto hádanku je nakreslit první
+          čtverec a zakončit umělcem směřujícím dolů a až poté začít s druhým čtvercem.
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a: Pokud rozdělíš 200 na polovinu, kolik pixelů na šířku musí
+          mít každý čtverec?
+      2-3 Artist 9 NEW_authored_hint:
+        2-3_Artist_9_a: Tvar diamantu je jen pootočený čtverec
+      2-3 Artist 9_authored_hint:
+        2-3_Artist_9_a: Tento diamant je jen čtverec pootočený o 45 stupňů.
+        2-3_Artist_9_b: Předtím než začneš kreslit svůj čtverec, nezapomeň umělce
+          pootočit o 45 stupňů doleva!
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Pamatuj, chceš udělat ovládací tlačítka 10 pixelů
           *širší* ...tak nezapomeň **přidat** 10 k číslu, které se mění.
@@ -697,6 +724,11 @@ cs:
           o 100 pixelů, nakreslím automaticky cestou čáru.
         2-3_Artist_1_new_b: Máš problém s otáčením v rohu? Použij příkaz "otočení
           o 90° doprava".
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku
+          jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
+        2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana
+          čtverce... 100 pixelů!
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: Budeš potřebovat dva různé cykly `opakuj` za sebou.
       grade4_review_bee2_authored_hint:

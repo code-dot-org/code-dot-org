@@ -2211,12 +2211,61 @@ es-MX:
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una
     cuenta de Google":'
   applab-intro_name: Introducción al Laboratorio de Aplicaciones
-  creativity_create: Crear
-  creativity_hoc_coming: Ya viene la Hora del código…
-  creativity_what_will_you_create: "¿Qué vas a crear?"
-  creativity_social_media_2: 'Este año #HourOfCode es sobre la creatividad. ¿Qué vas
-    a crear?'
   account_sign_up_email_opt_in: "¿Podemos enviarle por correo electrónico actualizaciones
     de nuestros cursos, oportunidades en su zona u otras noticias sobre informática?"
   account_sign_up_child_accept_terms: Confirmo que tengo la autorización de mis padres
     o guardianes legales para utilizar los servicios de Code.org.
+  hoc2018_creativity: creatività
+  hoc2018_creativity_create: Crear
+  hoc2018_creativity_hoc_coming: L'ora del Codice sta arrivando…
+  hoc2018_creativity_what_will_you_create: "¿Qué vas a crear?"
+  hoc2018_creativity_homepage: Hayallerine dogru uc ve yeniliklerini ortaya cikar.
+    Kod Saati ve kendine has yaraticilikla basla, ne olursa olsun. Videomuzu izle.
+  hoc2018_creativity_hoc_about: 'Bu sene, Kod Saati yaraticilik hakkinda olacaktir. '
+  hoc2018_creativity_social_media: 'Bu sene, #HourofCode yaraticilik hakkindadir.
+    Ben varim! Ya sen?'
+  hoc2018_creativity_social_media_2: 'Bu sene, #HourofCode yaraticilik hakkindadir.
+    Ne olusturacaksin?'
+  hoc2018_creativity_courses: Code.or kurslari ile ilerle
+  hoc2018_creativity_courses_link: Code.org <a href="https://studio.code.org/courses">
+    Code.org kurslari </a> ile ilerle
+  hoc2018_mc_page_title: Tutoriales de Minecraft Hora del Código
+  hoc2018_mc_details: Muchos idiomas| Navegadores y tabletas modernos | Grados 2+
+  hoc2018_mc_designer_title: Diseñador de Minecraft
+  hoc2018_mc_designer_description: Diseña un juego Minecraft. Crea tus propias versiones
+    de gallinas, ovejas, Creepers, zombis y muchos más personajes.
+  hoc2018_mc_adventurer_title: Aventurero de Minecraft
+  hoc2018_mc_adventurer_description: Utiliza código para guiar a Alex o a Steve en
+    una aventura.
+  hoc2018_mc_start: Inicio
+  hoc2018_mc_no_internet: "¿No tienes Internet?"
+  hoc2018_mc_download_adventurer: Descarga la versión offline del Aventurero de Minecraft.
+  hoc2018_mc_educators_box2_button: Descarga
+  hoc2018_mc_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
+  hoc2018_mc_videos_more: Más <a href='%{inspiring_videos_playlist}'>videos inspiradores</a>
+    con la participación de celebridades
+  hoc2018_mc_careers_more: Más <a href='%{careers_url}' target='_blank'>videos inspiradores</a>
+    con la participación de profesionales en el campo de la tecnología
+  hoc2018_mc_video_1min: 1 minuto
+  hoc2018_mc_video_2min: 2 minutos
+  hoc2018_mc_video_3min: 3 minutos
+  hoc2018_mc_video_5min: 5 minutos
+  hoc2018_mc_video_title_steph_curry: Hora del Código con Steph Curry
+  hoc2018_mc_video_title_sports: Esfuérzate. Todo el mundo puede aprender.
+  hoc2018_mc_video_title_cs_is_everything: Las Ciencias de la Computación están cambiando
+    todo
+  hoc2018_mc_video_title_inspire_girl: Inspira a una chica
+  hoc2018_mc_video_title_cs_intro: Introducción a las Ciencias de la Computación
+  hoc2018_mc_video_title_schools_dont_teach: "¿Qué no se aprende en colegios e institutos?
+    (5min)"
+  hoc2018_mc_video_title_obama: El presidente Obama sobre las Ciencias de la Computación
+  hoc2018_mc_video_title_hoc_is_here: La Hora del Código ha llegado - Todo el mundo
+    puede aprender
+  hoc2018_mc_video_title_anybody_can_learn: Cualquiera puede aprender
+  hoc2018_mc_video_title_my_name_is_aracely: Mi nombre es Aracely
+  hoc2018_mc_homepage_what_create: "¿Qué vas a crear?"
+  hoc2018_mc_homepage_join_us: Únete
+  hoc2018_mc_homepage_try_it: Pruébalo
+  hoc2018_mc_minecraft_education: Educacion Minecraft
+  hoc2018_mc_continue_learning: Continúe aprendiendo con minecraft.
+  hoc2018_mc_go_to_mc_education: Ir a Minecraft Education

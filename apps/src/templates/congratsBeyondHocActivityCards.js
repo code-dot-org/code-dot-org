@@ -93,7 +93,7 @@ const HeroMinecraft = {
 const AquaticMinecraft = {
   title: i18n.minecraftAquaticTitle(),
   description: i18n.minecraftAquaticDesc(),
-  link: "https://education.minecraft.net/hour-of-code",
+  link: "http://aka.ms/hoc2018",
   image: "aquatic-minecraft",
   buttonText: i18n.minecraftAquaticButton(),
 };

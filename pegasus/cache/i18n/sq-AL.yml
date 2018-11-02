@@ -1563,5 +1563,23 @@ sq-AL:
   user_header_playlab: Play Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
-  creativity_create: Krijo
-  creativity_hoc_coming: Ora e kodimit po vjen…
+  hoc2018_creativity_create: Krijo
+  hoc2018_mc_page_title: Tutorialet e Orës së Kodimit Minecraft
+  hoc2018_mc_details: Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+
+  hoc2018_mc_designer_title: Dizenjuesi i Minecraft
+  hoc2018_mc_designer_description: Kafshët e programit dhe krijesa të tjera Minecraft
+    në versionin tuaj të Minecraft.
+  hoc2018_mc_adventurer_title: Aventurieri Minecraft
+  hoc2018_mc_adventurer_description: Përdorni kodin për të marrë Alex apo Steve në
+    një aventurë.
+  hoc2018_mc_start: Fillo
+  hoc2018_mc_download_adventurer: 'Shkarko versionin offline të Aventurave Minecraft '
+  hoc2018_mc_videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
+    shfaqur modele dhe të famshëm
+  hoc2018_mc_careers_more: Më shumë <a href='%{careers_url}' target='_blank'>video
+    inspiruese</a>duke shfaqur profesionist në fushat teknologjike
+  hoc2018_mc_video_1min: 1 minutë
+  hoc2018_mc_video_title_sports: Nxit vetveten. Çdokush mund të mësoj.
+  hoc2018_mc_video_title_inspire_girl: Frymëzo një vajzë
+  hoc2018_mc_homepage_join_us: Na u bashko!
+  hoc2018_mc_homepage_try_it: Provoje
