@@ -22,8 +22,7 @@ const styles = {
   },
   dancePartyHeading: {
     fontSize: 32,
-    fontWeight:'bold',
-    fontFamily: "'Gotham 5r', sans-serif",
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   middle: {
     marginTop: 20,
@@ -86,7 +85,7 @@ class SignInOrAgeDialog extends Component {
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
     age13Required: PropTypes.bool.isRequired,
-    danceStyle: PropTypes.bool,
+    useDancePartyStyle: PropTypes.bool,
   };
 
   onClickAgeOk = () => {
@@ -96,7 +95,7 @@ class SignInOrAgeDialog extends Component {
       return;
     }
 
-    if (!this.props.danceStyle && parseInt(value, 10) < 13) {
+    if (!this.props.useDancePartyStyle && parseInt(value, 10) < 13) {
       this.setState({tooYoung: true});
       return;
     }
@@ -118,7 +117,7 @@ class SignInOrAgeDialog extends Component {
 
   render() {
     const { signedIn, age13Required } = this.props;
-    let ageRequired = age13Required || this.props.danceStyle;
+    let ageRequired = age13Required || this.props.useDancePartyStyle;
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
     if (!ageRequired || signedIn || sessionStorage.getItem(sessionStorageKey)) {
@@ -176,11 +175,11 @@ class SignInOrAgeDialog extends Component {
         uncloseable
       >
         <div style={styles.container} className="signInOrAgeDialog">
-          <div style={this.props.danceStyle ? styles.dancePartyHeading : styles.heading}>
-            {this.props.danceStyle ? i18n.welcomeToDanceParty() : i18n.signinOrAge()}
+          <div style={this.props.useDancePartyStyle ? styles.dancePartyHeading : styles.heading}>
+            {this.props.useDancePartyStyle ? i18n.welcomeToDanceParty() : i18n.signinOrAge()}
           </div>
           <div>
-            {this.props.danceStyle ?
+            {this.props.useDancePartyStyle ?
               <div style={styles.middle}>
                 {provideAge}
               </div> :
