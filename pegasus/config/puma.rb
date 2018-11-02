@@ -26,13 +26,11 @@ before_fork do
   DASHBOARD_DB.disconnect
   Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
-  puts "About to require puma worker killer."
   require 'puma_worker_killer'
-  puts "Done requiring puma worker killer.  About to enable rolling restart"
+  PumaWorkerKiller.config do |config|
+    config.pre_term = ->(worker) {puts "Worker #{worker.inspect} being killed"}
+  end
   PumaWorkerKiller.enable_rolling_restart(120) # 120 seconds
-  puts "Done enabling rolling restart."
-rescue StandardError => error
-  puts error
 end
 
 on_worker_boot do |_index|
