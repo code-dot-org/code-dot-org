@@ -20,37 +20,38 @@ def get_social_metadata_for_page(request)
       "soon-hoc" => {
         title: hoc_s(:social_hoc2018_what_create),
         description: hoc_s(:social_hoc2018_every_student),
-        image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
+        image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
         video: videos[:creativity_is]
       },
       "soon-hoc-mc" => {
         title: hoc_s(:social_hoc2018_what_create),
         description: hoc_s(:social_hoc2018_every_student),
-        image: {path: "/images/social-media/mc-social-2018.jpg", width: 1200, height: 630},
+        image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
         video: videos[:creativity_is]
       },
       "soon-hoc-dance" => {
         title: hoc_s(:social_hoc2018_what_create),
         description: hoc_s(:social_hoc2018_every_student),
-        image: {path: "/images/social-media/hourofcode-2018-dance.jpg", width: 846, height: 529},
+        image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
         video: videos[:creativity_is]
       },
       "actual-hoc" => {
         title: I18n.t(:og_title_here),
-        description: I18n.t(:og_description_celeb),
-        image: {path: "/images/fit-1220/social-media/celeb-challenge.jpg", width: 1220, height: 640}
+        description: hoc_s(:social_hoc2018_every_student_try_what_create),
+        image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
+        video: videos[:creativity_is]
       },
       "actual-hoc-dance" => {
-        title: hoc_s(:social_hoc2018_what_create),
+        title: I18n.t(:og_title_here),
         description: hoc_s(:social_hoc2018_every_student_try_what_create),
-        image: {path: "/images/social-media/hourofcode-2018-dance.jpg", width: 846, height: 529},
+        image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
         video: videos[:creativity_is]
       },
       "default" => {
         title: hoc_s(:social_hoc2018_code_org_what_create),
-        description: I18n.t(:og_description),
-        image: {path: "/images/fit-1220/social-media/default-og-image.jpg", width: 1220, height: 640},
-        video: videos[:what_most_schools_dont_teach]
+        description: hoc_s(:social_hoc2018_every_student),
+        image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
+        video: videos[:creativity_is]
       }
     },
     "csedweek.org" => {
