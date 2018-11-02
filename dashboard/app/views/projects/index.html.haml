@@ -7,6 +7,8 @@
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
   - projects_data[:canShare] = !current_user.sharing_disabled?
 - projects_data[:includeDanceParty] = DCDO.get("dance_projects", false)
+- hoc_launch = DCDO.get("hoc_launch", nil)
+- projects_data[:includeMCAquatic] = ['mc', 'dance'].include? hoc_launch
 
 = render partial: 'shared/angular'
 

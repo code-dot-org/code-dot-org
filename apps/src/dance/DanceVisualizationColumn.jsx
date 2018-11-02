@@ -27,12 +27,12 @@ const SongSelector = Radium(class extends React.Component {
     selectedSong: PropTypes.string.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool
+    userType: PropTypes.string.isRequired
   };
 
   state = {
     songsData: [],
-    filterOn: !(sessionStorage.getItem('anon_over13') || (this.props.is13Plus ? this.props.is13Plus : false))
+    filterOff: (sessionStorage.getItem('anon_over13') || this.props.userType !== 'student_y')
   };
 
   changeSong = (event) => {
@@ -63,7 +63,7 @@ const SongSelector = Radium(class extends React.Component {
     let songs = {};
     if (songManifest) {
       songManifest.forEach((song) => {
-        if ((!this.state.filterOn && song.pg13) || !song.pg13) {
+        if ((this.state.filterOff && song.pg13) || !song.pg13) {
           songs[song.id] = {title: song.text, url: song.url};
         }
       });
@@ -96,7 +96,7 @@ class DanceVisualizationColumn extends React.Component {
     isShareView: PropTypes.bool.isRequired,
     songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasChannel: PropTypes.bool.isRequired,
-    is13Plus: PropTypes.bool
+    userType: PropTypes.string.isRequired
   };
 
   render() {
@@ -117,7 +117,7 @@ class DanceVisualizationColumn extends React.Component {
             selectedSong={this.props.selectedSong}
             songManifest={this.props.songManifest}
             hasChannel={this.props.hasChannel}
-            is13Plus={this.props.is13Plus}
+            userType={this.props.userType}
           />
         }
         <ProtectedVisualizationDiv>
@@ -140,7 +140,7 @@ export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   songManifest: state.pageConstants.songManifest,
   selectedSong: state.selectedSong,
-  is13Plus: state.pageConstants.is13Plus,
+  userType: state.progress.userType
 }), dispatch => ({
   setSong: song => dispatch(danceRedux.setSong(song))
 }))(DanceVisualizationColumn);
