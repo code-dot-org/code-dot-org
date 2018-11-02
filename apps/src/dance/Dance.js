@@ -140,14 +140,6 @@ Dance.prototype.initSongs = async function (config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
-  // Pre-register all audio preloads with our Sounds API, which will load
-  // them into memory so they can play immediately:
-  $("link[as=fetch][rel=preload]").each((i, { href }) => {
-    const soundConfig = { id: href };
-    soundConfig[Sounds.getExtensionFromUrl(href)] = href;
-    Sounds.getSingleton().register(soundConfig);
-  });
-
   loadSong(selectedSong, songData);
   this.updateSongMetadata(selectedSong);
 };
