@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org 提供了讓你的僱員與本地學校[交流](<%= codeorg_url('/volunteer') %>)的機會，使他們能分享自身的工作經驗，繼而啟發學生學習計算機科學。
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
