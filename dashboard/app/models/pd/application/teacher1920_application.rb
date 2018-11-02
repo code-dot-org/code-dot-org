@@ -39,6 +39,14 @@ module Pd::Application
 
     validates_uniqueness_of :user_id
 
+    PRINCIPAL_APPROVAL_STATE = [
+      NOT_REQUIRED = 'Not required',
+      IN_PROGRESS = 'Incomplete - Principal email sent on ',
+      COMPLETE = 'Complete - '
+    ]
+
+    REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
+
     serialized_attrs %w(
       status_log
       principal_approval_not_required
@@ -121,15 +129,15 @@ module Pd::Application
 
     def principal_approval_state
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
-      return "Complete - #{response.full_answers[:do_you_approve]}" if response
+      return COMPLETE + response.full_answers[:do_you_approve] if response
 
       principal_approval_email = emails.find_by(email_type: 'principal_approval')
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
-        return "Incomplete - Principal email sent on #{principal_approval_email.sent_at&.strftime('%b %-d')}"
+        return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
       end
 
-      return 'Not required' if principal_approval_not_required
+      return NOT_REQUIRED if principal_approval_not_required
 
       nil
     end
@@ -474,6 +482,12 @@ module Pd::Application
     end
 
     # @override
+    # Additional labels to include in the form data hash
+    def self.additional_labels
+      ADDITIONAL_KEYS_IN_ANSWERS
+    end
+
+    # @override
     # Called once after the application is submitted. Called again after principal
     # approval is done. Generates scores for responses, is idempotent and does not
     # override existing scores
@@ -521,7 +535,7 @@ module Pd::Application
       meets_minimum_criteria_scores[:willing_to_travel] = responses[:willing_to_travel] != options[:willing_to_travel].last ? YES : NO
 
       # Section 5
-      bonus_points_scores[:race] = responses[:race].in?(options[:race].values_at(1, 2, 4, 5)) ? 2 : 0
+      bonus_points_scores[:race] = ((responses[:race] || []) & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0
 
       # Principal Approval
       if responses[:principal_approval]
@@ -530,12 +544,18 @@ module Pd::Application
             principal_approval: responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO,
             principal_plan_to_teach: responses[:principal_plan_to_teach] == principal_options[:plan_to_teach][0] ? YES : NO,
             principal_schedule_confirmed: responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][0] ? YES : NO,
-            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO
+            principal_diversity_recruitment: responses[:principal_diversity_recruitment] == principal_options[:committed_to_diversity].first ? YES : NO,
           }
         )
 
-        bonus_points_scores[:principal_free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
-        bonus_points_scores[:principal_underrepresented_minority_percent] = (responses[:principal_underrepresented_minority_percent].to_i >= 50) ? 5 : 0
+        if course == 'csd'
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation].in?(principal_options[:csd_implementation].first(2)) ? YES : NO
+        elsif course == 'csp'
+          meets_minimum_criteria_scores[:principal_implementation] = responses[:principal_implementation] == principal_options[:csp_implementation].first ? YES : NO
+        end
+
+        bonus_points_scores[:free_lunch_percent] = (responses[:principal_free_lunch_percent]&.to_i&.>= 50) ? 5 : 0
+        bonus_points_scores[:underrepresented_minority_percent] = ((responses[:principal_underrepresented_minority_percent]).to_i >= 50) ? 5 : 0
       end
 
       update(
@@ -561,19 +581,28 @@ module Pd::Application
       elsif NO.in? scores
         NO
       else
-        'Reviewing incomplete'
+        REVIEWING_INCOMPLETE
       end
     end
 
     def meets_scholarship_criteria
-      scores = (response_scores_hash[:meets_scholarship_criteria_scores] || {}).values
-
-      if scores.uniq == [YES]
-        YES
-      elsif NO.in? scores
-        NO
+      if principal_approval_state == NOT_REQUIRED
+        # If there is no needed principal approval, then criteria is just whether
+        # the one scholarship question is yes
+        response_scores_hash[:meets_scholarship_criteria_scores][:previous_yearlong_cdo_pd] || REVIEWING_INCOMPLETE
       else
-        'Reviewing incomplete'
+        response_scores = response_scores_hash[:meets_scholarship_criteria_scores] || {}
+        scored_questions = SCOREABLE_QUESTIONS[:scholarship_questions]
+
+        scores = scored_questions.map {|q| response_scores[q]}
+
+        if scores.uniq == [YES]
+          YES
+        elsif NO.in? scores
+          NO
+        else
+          REVIEWING_INCOMPLETE
+        end
       end
     end
 
@@ -618,16 +647,30 @@ module Pd::Application
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
       implementation_string = principal_response.values_at("#{course}_implementation".to_sym, "#{course}_implementation_other".to_sym).compact.join(" ")
-
+      principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
+          principal_response_first_name: principal_response[:first_name],
+          principal_response_last_name: principal_response[:last_name],
+          principal_response_email: principal_response[:email],
+          principal_school_name: principal_school.try(:name) || principal_response[:school_name],
+          principal_school_type: principal_school.try(:school_type),
+          principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
           principal_plan_to_teach: principal_response.values_at(:plan_to_teach, :plan_to_teach_other).compact.join(" "),
           principal_schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_implementation: implementation_string,
+          principal_total_enrollment: principal_response[:total_student_enrollment],
           principal_diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent: format("%0.02f%%", principal_response[:free_lunch_percent]),
           principal_underrepresented_minority_percent: format("%0.02f%%", principal_approval.underrepresented_minority_percent),
+          principal_american_indian_or_native_alaskan_percent: format("%0.02f%%", principal_response[:american_indian]),
+          principal_asian_percent: format("%0.02f%%", principal_response[:asian]),
+          principal_black_or_african_american_percent: format("%0.02f%%", principal_response[:black]),
+          principal_hispanic_or_latino_percent: format("%0.02f%%", principal_response[:hispanic]),
+          principal_native_hawaiian_or_pacific_islander_percent: format("%0.02f%%", principal_response[:pacific_islander]),
+          principal_white_percent: format("%0.02f%%", principal_response[:white]),
+          principal_other_percent: format("%0.02f%%", principal_response[:other]),
           principal_wont_replace_existing_course: replace_course_string,
           principal_how_heard: principal_response.values_at(:how_heard, :how_heard_other).compact.join(" "),
           principal_send_ap_scores: principal_response[:send_ap_scores],
