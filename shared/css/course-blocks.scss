@@ -67,6 +67,14 @@
   box-sizing: border-box;
   margin-top: 20px;
 
+  &:hover {
+    border-color: $dark_charcoal;
+
+    h3, .smalltext {
+      color: $dark_charcoal;
+    }
+  }
+
   .heading {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -166,6 +174,10 @@
   .teacher-guide {
     bottom: 40px;
     text-align: right;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .audiencebar {
