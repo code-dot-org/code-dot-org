@@ -34,7 +34,7 @@ Feature: Dance Lab
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     Then I click selector "#runButton" once I see it
-    And element "#runButton" is hidden
+    Then I wait until element "#runButton" is not visible
     And element "#resetButton" is visible
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
