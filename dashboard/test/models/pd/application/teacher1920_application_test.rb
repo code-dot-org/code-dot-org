@@ -361,26 +361,51 @@ module Pd::Application
       end
     end
 
-    test 'locked status does not appear in csv' do
-      application = create :pd_teacher1920_application
-      mock_user = mock
-
-      Teacher1920Application.stubs(:can_see_locked_status?).returns(false)
-      header_without_locked = Teacher1920Application.csv_header('csf', mock_user)
-      refute header_without_locked.include? 'Locked'
-      row_without_locked = application.to_csv_row(mock_user)
-      assert_equal CSV.parse(header_without_locked).length, CSV.parse(row_without_locked).length,
-        "Expected header and row to have the same number of columns, excluding Locked"
+    test 'columns_to_remove' do
+      ['csp', 'csd'].each do |course|
+        columns = Teacher1920Application.columns_to_remove(course)
+        columns.keys.each do |k|
+          columns[k].each {|c| refute c.to_s.include?(course)}
+        end
+      end
     end
 
-    test 'to_cohort_csv' do
-      application = build :pd_teacher1920_application
-      optional_columns = {registered_workshop: false, accepted_teachercon: true}
+    test 'csv_filtered_labels' do
+      csv_filtered_labels_csd = Teacher1920Application.csv_filtered_labels('csd')
+      assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
+      refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
 
-      assert (header = Teacher1920Application.cohort_csv_header(optional_columns))
-      assert (row = application.to_cohort_csv_row(optional_columns))
-      assert_equal CSV.parse(header).length, CSV.parse(row).length,
-        "Expected header and row to have the same number of columns"
+      csv_filtered_labels_csp = Teacher1920Application.csv_filtered_labels('csp')
+      refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
+      assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
+    end
+
+    test 'csv_header' do
+      csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
+      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
+      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
+      assert_equal 102, csv_header_csd.length
+
+      csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
+      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
+      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
+      assert_equal 103, csv_header_csp.length
+    end
+
+    test 'csv_row' do
+    end
+
+    test 'csv header and row have same number of columns' do
+      csd_application = create :pd_teacher1920_application, course: 'csd'
+      csp_application = create :pd_teacher1920_application, course: 'csp'
+
+      csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
+      csv_row_csd = CSV.parse(csd_application.to_csv_row('csd'))[0]
+      assert_equal csv_header_csd.length, csv_row_csd.length
+
+      csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
+      csv_row_csp = CSV.parse(csp_application.to_csv_row('csp'))[0]
+      assert_equal csv_header_csp.length, csv_row_csp.length
     end
 
     test 'school cache' do

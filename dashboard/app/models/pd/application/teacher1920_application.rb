@@ -439,7 +439,7 @@ module Pd::Application
       teacher_answers = full_answers
       principal_application = Pd::Application::PrincipalApproval1920Application.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
-      school_stats = School.find_by_id(school_id).school_stats_by_year.order(school_year: :desc).first
+      school_stats = School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
       CSV.generate do |csv|
         row = []
         CSV_COLUMNS[:teacher].each do |k|
