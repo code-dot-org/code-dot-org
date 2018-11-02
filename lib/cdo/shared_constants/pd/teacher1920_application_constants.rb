@@ -42,7 +42,6 @@ module Pd
           school_state: 'State',
           school_zip_code: 'Zip code',
           school_type: 'My school is a',
-
           principal_title: "Principal's title",
           principal_first_name: "Principal's first name",
           principal_last_name: "Principal's last name",
@@ -51,7 +50,8 @@ module Pd
           principal_phone_number: "Principal's phone number",
           current_role: 'What is your current role at your school?',
           completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
-          completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.'
+          completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
+          how_heard: 'How did you hear about this program?'
         }
       ),
       section_2_choose_your_program: {
