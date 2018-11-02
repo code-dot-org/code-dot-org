@@ -10,6 +10,7 @@ import i18n from '@cdo/locale';
 import * as danceRedux from "../dance/redux";
 import Sounds from "../Sounds";
 import project from "../code-studio/initApp/project";
+import queryString from "query-string";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -64,7 +65,7 @@ const SongSelector = Radium(class extends React.Component {
     let songs = {};
     if (songManifest) {
       songManifest.forEach((song) => {
-        if ((this.state.filterOff && song.pg13) || !song.pg13) {
+        if ((this.props.filterOff && song.pg13) || !song.pg13) {
           songs[song.id] = {title: song.text, url: song.url};
         }
       });
@@ -111,7 +112,8 @@ class DanceVisualizationColumn extends React.Component {
     };
 
     const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
-    const filterOff = signedInOver13 || sessionStorage.getItem('anon_over13');
+    const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
+    const filterOff = (signedInOver13 || sessionStorage.getItem('anon_over13')) && !teacherOverride;
 
     return (
       <span>
