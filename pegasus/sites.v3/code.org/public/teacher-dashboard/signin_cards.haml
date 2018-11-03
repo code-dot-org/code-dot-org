@@ -39,11 +39,11 @@ content-type: text/ng-template
         %dd{:style=>'margin:0px'}
           https:#{CDO.studio_url('/sections/{{section.code}}')}
       %dl
-        %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_sections_name')
-        %dd{:style=>'margin:0px'} {{section.name}}
+        %dt{:style=>'font-weight:bold; display: inline-block;'}= I18n.t('dashboard_sections_name')
+        %dd{:style=>'margin:0px; display: inline-block;'} {{section.name}}
       %dl
-        %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_name')
-        %dd{:style=>'margin:0px'} {{student.name}}
+        %dt{:style=>'font-weight:bold; display: inline-block;'}= I18n.t('dashboard_students_name')
+        %dd{:style=>'margin:0px; display: inline-block;'} {{student.name}}
       %dl{"ng-if" => "section.login_type === 'picture'"}
         %dt{:style=>'font-weight:bold'}= I18n.t('dashboard_students_secret_picture_title')
         %dd{:style=>'margin:0px'}
