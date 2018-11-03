@@ -26,9 +26,15 @@ before_fork do
   DASHBOARD_DB.disconnect
   Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
-  if Gatekeeper.allows('enableWebApplicationServerRollingProcessRestart')
+  # Control automated restarts of web application server processes via Gatekeeper.
+  # NOTE: before_fork runs on the parent puma process, so complete restart of the web application services on all
+  # front end instances is required for a change of this Gatekeeper flag to take effect:
+  #   sudo service dashboard upgrade && sudo service pegasus upgrade
+  if Gatekeeper.allows('enableWebServiceProcessRollingRestart')
     require 'puma_worker_killer'
-    PumaWorkerKiller.enable_rolling_restart(120) # 120 seconds for testing purposes
+
+    restart_period = DCDO.get("web_service_process_restart_period", 12 * 3600) # default to 12 hours
+    PumaWorkerKiller.enable_rolling_restart(restart_period) # 120 seconds for testing purposes
   end
 end
 
