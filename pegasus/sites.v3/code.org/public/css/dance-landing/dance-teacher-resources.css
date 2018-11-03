@@ -1,0 +1,43 @@
+.resource-card {
+  height: 234px;
+  width: 468px;
+  border: 1px solid gray;
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.resource-gif {
+  position: absolute;
+  margin-left: 234px;
+  width: 234px;
+}
+
+.resource-text-box {
+  width: 234px;
+  height: 234px;
+  background-color: #00adbc;
+  position: absolute;
+  float: left;
+  padding: 20px;
+}
+
+.resource-title {
+  font-size: 27px;
+  color: white;
+  font-family: 'Gotham 7r', sans-serif;
+  margin-bottom: 20px;
+}
+
+.resource-description {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.gray-button {
+  background-color: #e7e8ea;
+  border-color: #e7e8ea;
+  color: #5b6770;
+}
