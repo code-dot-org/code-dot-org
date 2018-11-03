@@ -1,13 +1,13 @@
 .dance-subheading {
   float: right;
 }
+
 .dance-party-h2 {
   font-size: 20px;
 }
 
-
-.img-dance-placeholder {
+.dance-img-placeholder {
   border-radius: 5px;
-  background-color: teal;
+  background-color: grey;
+  opacity: 0.2;
 }
-
