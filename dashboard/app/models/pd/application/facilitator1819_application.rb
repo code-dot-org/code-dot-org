@@ -483,7 +483,6 @@ module Pd::Application
       end
     end
 
-    # @override
     def self.cohort_csv_header(optional_columns)
       columns = [
         'Date Accepted',
@@ -516,7 +515,6 @@ module Pd::Application
       end
     end
 
-    # @override
     def to_cohort_csv_row(optional_columns)
       columns = [
         date_accepted,
@@ -639,6 +637,11 @@ module Pd::Application
     def self.prefetch_associated_models(applications)
       # also prefetch fit workshops
       prefetch_workshops applications.flat_map {|a| [a.pd_workshop_id, a.fit_workshop_id]}.uniq.compact
+    end
+
+    # @override
+    def self.can_see_locked_status?(user)
+      true
     end
   end
 end

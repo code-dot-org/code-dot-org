@@ -11,7 +11,6 @@ import {
   Table
 } from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import {
@@ -19,14 +18,22 @@ import {
   UNMATCHED_PARTNER_VALUE,
   UNMATCHED_PARTNER_LABEL
 } from '../components/regional_partner_dropdown';
-import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+import {
+  LabelOverrides,
+  PageLabels,
+  SectionHeaders,
+  ScoreableQuestions,
+  MultiAnswerQuestionFields,
+  ValidScores as TeacherValidScores
+} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses
 } from './constants';
+import PrincipalApprovalButtons from './principal_approval_buttons';
+import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 
 const styles = {
   notes: {
@@ -34,7 +41,6 @@ const styles = {
   },
   statusSelect: {
     width: 250, // wide enough for the widest status
-    marginRight: '5px'
   },
   editMenuContainer: {
     display: 'inline-block' // fit contents
@@ -58,7 +64,6 @@ const styles = {
     marginRight: '5px'
   },
   statusSelectGroup: {
-    maxWidth: 200,
     marginRight: 5,
     marginLeft: 5,
   },
@@ -68,8 +73,22 @@ const styles = {
   },
   caption: {
     color: "black"
+  },
+  detailViewTable: {
+    width: '80%'
+  },
+  questionColumn: {
+    width: '50%'
+  },
+  answerColumn: {
+    width: '30%'
+  },
+  scoringColumn: {
+    width: '20%'
   }
 };
+
+const NA = "N/A";
 
 const DEFAULT_NOTES = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:";
 
@@ -107,7 +126,7 @@ export class DetailViewContents extends React.Component {
       registered_fit_weekend: PropTypes.bool,
       attending_teachercon: PropTypes.bool,
       school_stats: PropTypes.object,
-      principal_approval: PropTypes.string
+      principal_approval_state: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
@@ -135,7 +154,7 @@ export class DetailViewContents extends React.Component {
       status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
-      response_scores: this.props.applicationData.response_scores || {},
+      response_scores: this.props.applicationData.response_scores,
       regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
@@ -208,8 +227,17 @@ export class DetailViewContents extends React.Component {
   };
 
   handleScoreChange = (event) => {
+    // The format of the id is key-category. The format of the response scores is a hash
+    // with keys like bonus points, scholarship criteria, etc. The category says which
+    // section of the response scores to put the key in.
+    const keyCategory = event.target.id.split('-');
+    const key = keyCategory[0];
+    const category = keyCategory[1];
+
+    const responseScores = this.state.response_scores;
+    responseScores[category][key] = event.target.value;
     this.setState({
-      response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
+      response_scores: responseScores
     });
   };
 
@@ -274,28 +302,6 @@ export class DetailViewContents extends React.Component {
     });
   };
 
-  handleDeleteTeacherconRegistrationClick = () => {
-    this.setState({showDeleteTeacherconRegistrationConfirmation: true});
-  };
-
-  handleDeleteTeacherconRegistrationCancel = () => {
-    this.setState({showDeleteTeacherconRegistrationConfirmation: false});
-  };
-
-  handleDeleteTeacherconRegistrationConfirmed = () => {
-    $.ajax({
-      method: "DELETE",
-      url: `/pd/teachercon_registration/${this.props.applicationData.application_guid}`
-    }).done(() => {
-      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
-      if (this.props.onUpdate) {
-        this.props.onUpdate({ ...this.props.applicationData, registered_teachercon: false });
-      }
-    }).fail(() => {
-      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
-    });
-  };
-
   handleDeleteFitWeekendRegistrationClick = () => {
     this.setState({showDeleteFitWeekendRegistrationConfirmation: true});
   };
@@ -331,8 +337,25 @@ export class DetailViewContents extends React.Component {
     );
   };
 
-  renderRegionalPartnerAnswer = () => {
+  renderWorkshopAnswer = () => {
+    return (
+      <DetailViewWorkshopAssignmentResponse
+        question="Summer Workshop"
+        courseName={this.props.applicationData.course_name}
+        subjectType="summer"
+        year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
+        assignedWorkshop={{
+          id: this.state.pd_workshop_id,
+          name: this.props.applicationData.pd_workshop_name,
+          url: this.props.applicationData.pd_workshop_url
+        }}
+        editing={!!this.state.editing}
+        onChange={this.handleSummerWorkshopChange}
+      />
+    );
+  };
 
+  renderRegionalPartnerAnswer = () => {
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
         <RegionalPartnerDropdown
@@ -393,26 +416,6 @@ export class DetailViewContents extends React.Component {
               bodyText="Are you sure you want to delete this application? You will not be able to undo this."
               okText="Delete"
             />
-            {
-              this.props.applicationData.registered_teachercon &&
-              <MenuItem
-                style={styles.delete}
-                onSelect={this.handleDeleteTeacherconRegistrationClick}
-              >
-                Delete Teachercon Registration
-              </MenuItem>
-            }
-            {
-              this.props.applicationData.registered_teachercon &&
-              <ConfirmationDialog
-                show={this.state.showDeleteTeacherconRegistrationConfirmation}
-                onOk={this.handleDeleteTeacherconRegistrationConfirmed}
-                onCancel={this.handleDeleteTeacherconRegistrationCancel}
-                headerText="Delete Teachercon Registration"
-                bodyText="Are you sure you want to delete this Teachercon registration? You will not be able to undo this."
-                okText="Delete"
-              />
-            }
             {
               this.props.applicationData.registered_fit_weekend &&
               <MenuItem
@@ -479,7 +482,7 @@ export class DetailViewContents extends React.Component {
       </div>
     );
 
-    if (this.props.canLock) {
+    if (this.props.canLock && this.props.applicationData.application_type === 'Facilitator') {
       // Render the select with the lock button in a fancy InputGroup
       return (
         <InputGroup style={styles.statusSelectGroup}>
@@ -500,11 +503,7 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  showLocked = () => (
-    this.props.isWorkshopAdmin
-    || this.props.viewType === 'facilitator'
-    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
-  );
+  showLocked = () => (this.props.viewType === 'facilitator');
 
   renderEditMenu = (textAlign='left') => {
     return (
@@ -536,7 +535,7 @@ export class DetailViewContents extends React.Component {
             Meets minimum requirements? {this.props.applicationData.meets_criteria}
           </h4>
           <h4>
-            Meets scholarship criteria? {this.props.applicationData.meets_scholarship_criteria}
+            Meets scholarship requirements? {this.props.applicationData.meets_scholarship_criteria}
           </h4>
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
@@ -574,16 +573,6 @@ export class DetailViewContents extends React.Component {
     );
 
     if (this.props.isWorkshopAdmin && this.props.applicationData.status === 'accepted' && this.props.applicationData.locked) {
-      if (this.props.applicationData.attending_teachercon) {
-        registrationLinks.push((
-          <DetailViewResponse
-            question="TeacherCon Registration Link"
-            layout="lineItem"
-            answer={buildRegistrationLink('teachercon_registration')}
-          />
-        ));
-      }
-
       if (this.props.applicationData.fit_workshop_id) {
         registrationLinks.push((
           <DetailViewResponse
@@ -596,148 +585,6 @@ export class DetailViewContents extends React.Component {
     }
 
     return registrationLinks;
-  };
-
-  renderRegionalPartnerPanel = () => {
-    if (this.props.applicationData.application_type === 'Teacher') {
-      return (
-        <DetailViewResponse
-          question="Regional Partner"
-          questionId="regionalPartnerName"
-          answer={this.renderRegionalPartnerAnswer()}
-          layout="panel"
-          score={this.state.response_scores['regionalPartnerName']}
-          possibleScores={TeacherValidScores['regionalPartnerName']}
-          editing={this.state.editing}
-          handleScoreChange={this.handleScoreChange}
-        />
-      );
-    } else {
-      return (
-        <DetailViewResponse
-          question="Regional Partner"
-          answer={this.renderRegionalPartnerAnswer()}
-          layout="panel"
-        />
-      );
-    }
-  };
-
-  renderTopSection = () => (
-    <div id="TopSection">
-      <DetailViewResponse
-        question="Email"
-        answer={this.props.applicationData.email}
-        layout="lineItem"
-      />
-      <DetailViewResponse
-        question="School Name"
-        answer={this.props.applicationData.school_name}
-        layout="lineItem"
-      />
-      <DetailViewResponse
-        question="District Name"
-        answer={this.props.applicationData.district_name}
-        layout="lineItem"
-      />
-
-      <DetailViewWorkshopAssignmentResponse
-        question="Summer Workshop"
-        courseName={this.props.applicationData.course_name}
-        subjectType="summer"
-        year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
-        assignedWorkshop={{
-          id: this.state.pd_workshop_id,
-          name: this.props.applicationData.pd_workshop_name,
-          url: this.props.applicationData.pd_workshop_url
-        }}
-        editing={!!this.state.editing}
-        onChange={this.handleSummerWorkshopChange}
-      />
-
-      {this.props.applicationData.application_type === 'Facilitator' &&
-        <DetailViewWorkshopAssignmentResponse
-          question="FIT Workshop"
-          courseName={this.props.applicationData.course_name}
-          subjectType="fit"
-          year={parseInt(this.props.applicationData.application_year.split('-')[0], 10)}
-          assignedWorkshop={{
-            id: this.state.fit_workshop_id,
-            name: this.props.applicationData.fit_workshop_name,
-            url: this.props.applicationData.fit_workshop_url
-          }}
-          editing={!!(this.state.editing && this.props.isWorkshopAdmin)}
-          onChange={this.handleFitWorkshopChange}
-        />
-      }
-      {this.props.isWorkshopAdmin && this.renderRegistrationLinks()}
-      {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
-    </div>
-  );
-
-  renderQuestions = () => {
-    return (
-      <DetailViewApplicationSpecificQuestions
-        id={this.props.applicationId}
-        formResponses={this.props.applicationData.form_data}
-        applicationType={this.props.applicationData.application_type}
-        editing={this.state.editing}
-        scores={this.state.response_scores}
-        handleScoreChange={this.handleScoreChange}
-        applicationGuid={this.props.applicationData.application_guid}
-        schoolStats={this.props.applicationData.school_stats}
-        initialPrincipalApproval={this.props.applicationData.principal_approval}
-      />
-    );
-  };
-
-  renderAboutTheSchool = () => {
-    if (this.props.applicationData.school_stats) {
-      return (
-        <Row>
-          <Col md={4}>
-            <h3>About the School</h3>
-            <DetailViewResponse
-              question="Title I status (code)"
-              answer={`${this.props.applicationData.school_stats.title_i_status}`}
-              layout="lineItem"
-            />
-            <DetailViewResponse
-              question="Free and reduced-price lunch eligible"
-              answer={this.props.applicationData.school_stats.frl_eligible_percent}
-              layout="lineItem"
-            />
-            <DetailViewResponse
-              question="Underrepresented minority students"
-              answer={this.props.applicationData.school_stats.urm_percent}
-              layout="lineItem"
-            />
-            <Table condensed>
-              <caption style={styles.caption}>
-                There are {this.props.applicationData.school_stats.students_total} total students at this school.
-              </caption>
-              <tbody>
-                {this.props.applicationData.school_stats.race_data.map(
-                  (race, i) => (
-                    <tr key={i}>
-                      <td>
-                        {race.percent}
-                      </td>
-                      <td>
-                        {race.total}
-                      </td>
-                      <td>
-                        {race.label}
-                      </td>
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
-      );
-    }
   };
 
   renderNotes = () => {
@@ -763,6 +610,254 @@ export class DetailViewContents extends React.Component {
     );
   };
 
+  renderScoringSection = (key) => {
+    const snakeCaseKey = _.snakeCase(key);
+
+    if (this.props.viewType === 'facilitator') {
+      return false;
+    }
+
+    let scoringDropdowns = [];
+    if (ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey)) {
+      scoringDropdowns.push(
+        <div key="meets_minimum_criteria_scores">
+          Meets minimum requirements?
+          {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
+        </div>
+      );
+    }
+    if (ScoreableQuestions['bonusPoints'].includes(snakeCaseKey)) {
+      if (scoringDropdowns.length) {
+        scoringDropdowns.push(<br key="bonus_points_br"/>);
+      }
+      scoringDropdowns.push(
+        <div key="bonus_points_scores">
+          Bonus Points?
+          {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
+        </div>
+      );
+    }
+    if (ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)) {
+      if (scoringDropdowns.length) {
+        scoringDropdowns.push(<br key="meets_scholarship_criteria_br"/>);
+      }
+      scoringDropdowns.push(
+        <div key="meets_scholarship_criteria_scores">
+          Meets scholarship requirements?
+          {this.renderScoringDropdown(snakeCaseKey, 'meets_scholarship_criteria_scores')}
+        </div>
+      );
+    }
+
+    return (
+      <td style={styles.scoringColumn}>
+        {scoringDropdowns}
+      </td>
+    );
+  };
+
+  renderScoringDropdown(key, category) {
+    return (
+      <FormControl
+        componentClass="select"
+        value={this.state.response_scores[category][key]}
+        id={`${key}-${category}-score`}
+        onChange={this.handleScoreChange}
+        disabled={!this.state.editing}
+      >
+        <option>--</option>
+        {
+          TeacherValidScores[_.camelCase(key)].map((score, i) => (
+            <option value={score} key={i}>
+              {score}
+            </option>
+          ))
+        }
+      </FormControl>
+    );
+  }
+
+  showPrincipalApprovalTable = () => {
+    return (this.props.applicationData.principal_approval_state || '').startsWith('Complete');
+  };
+
+  handlePrincipalApprovalChange = (_id, principalApproval) => {
+    this.setState({principalApproval});
+  };
+
+  renderDetailViewTableLayout = () => {
+    const sectionsToRemove = ['section5AdditionalDemographicInformation', 'section6Submission'];
+
+    return (
+      <div>
+        {
+          _.pull(Object.keys(SectionHeaders), ...sectionsToRemove).map((header, i) => (
+            <div key={i}>
+              <h3>
+                {SectionHeaders[header]}
+              </h3>
+              <Table style={styles.detailViewTable} striped bordered>
+                <tbody>
+                {
+                  Object.keys(PageLabels[header]).map((key, j) => {
+                    return (this.props.applicationData.form_data[key] || header === 'schoolStatsAndPrincipalApprovalSection') && (
+                      <tr key={j}>
+                        <td style={styles.questionColumn}>
+                          {LabelOverrides[key] || PageLabels[header][key]}
+                        </td>
+                        <td style={styles.answerColumn}>
+                          {this.renderAnswer(key, this.props.applicationData.form_data[key])}
+                        </td>
+                        {this.renderScoringSection(key)}
+                      </tr>
+                    );
+                  })
+                }
+                </tbody>
+              </Table>
+            </div>
+          ))
+        }
+      </div>
+    );
+  };
+
+  renderAnswer = (key, answer) => {
+    if (MultiAnswerQuestionFields[key]) {
+      return (
+        <div>
+          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])] || NA}</p>)}
+          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])] || NA}</p>)}
+          {MultiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[MultiAnswerQuestionFields[key]['stats']] || NA}</p>)}
+        </div>
+      );
+    } else if (Array.isArray(answer)) {
+      return answer.sort().join(', ');
+    } else {
+      return answer || NA;
+    }
+  };
+
+  renderResendOrUnrequirePrincipalApprovalSection = () => {
+    if (!this.props.applicationData.principal_approval_state) {
+      return (
+        <div>
+          <h3>Principal Approval</h3>
+          <h4>Select option</h4>
+          <PrincipalApprovalButtons
+            applicationId={this.props.applicationId}
+            showSendEmailButton={true}
+            showNotRequiredButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+          />
+        </div>
+      );
+    } else if (this.props.applicationData.principal_approval_state === "Not required") {
+      return (
+        <div>
+          <h3>Principal Approval</h3>
+          <h4>Not required</h4>
+          <p>
+            If you would like to require principal approval for this teacher,
+            please click “Send email” to the principal asking for approval.
+          </p>
+          <PrincipalApprovalButtons
+            applicationId={this.props.applicationId}
+            showSendEmailButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+          />
+        </div>
+      );
+    } else { // Approval sent but is not complete
+      const principalApprovalUrl =
+        `${window.location.origin}/pd/application/principal_approval/${this.props.applicationData.application_guid}`;
+
+      return (
+        <div>
+          <h3>Principal Approval</h3>
+          <h4>{this.props.applicationData.principal_approval_state}</h4>
+          <p>
+            Link to principal approval form:{' '}
+            <a href={principalApprovalUrl} target="_blank">
+              {principalApprovalUrl}
+            </a>
+          </p>
+        </div>
+      );
+    }
+  };
+
+  renderTopTableLayout = () => {
+    return (
+      <Table style={styles.detailViewTable} striped bordered>
+        <tbody>
+          <tr>
+            <td style={styles.questionColumn}>
+              Email
+            </td>
+            <td style={styles.answerColumn}>
+              {this.props.applicationData.email}
+            </td>
+            <td style={styles.scoringColumn}/>
+          </tr>
+          <tr>
+            <td style={styles.questionColumn}>
+              School Name
+            </td>
+            <td style={styles.answerColumn}>
+              {this.renderSchoolTrait(this.props.applicationData.school_name, this.props.applicationData.form_data['principal_school'])}
+            </td>
+            <td style={styles.scoringColumn}/>
+          </tr>
+        <tr>
+          <td style={styles.questionColumn}>
+            School District
+          </td>
+          <td style={styles.answerColumn}>
+            {this.renderSchoolTrait(this.props.applicationData.district_name, this.props.applicationData.form_data['principal_school_district'])}
+          </td>
+          <td style={styles.scoringColumn}/>
+        </tr>
+        <tr>
+          <td style={styles.questionColumn}>
+            Summer Workshop
+          </td>
+          <td style={styles.answerColumn}>
+            {this.renderWorkshopAnswer()}
+          </td>
+          <td style={styles.scoringColumn}/>
+        </tr>
+        <tr>
+          <td style={styles.questionColumn}>
+            Regional Partner
+          </td>
+          <td style={styles.answerColumn}>
+            {this.renderRegionalPartnerAnswer()}
+          </td>
+          {this.renderScoringSection('regionalPartnerName')}
+        </tr>
+        </tbody>
+      </Table>
+    );
+  };
+
+  renderSchoolTrait = (teacher_response, principal_response) => {
+    if (principal_response && principal_response !== teacher_response) {
+      return (
+        <div>
+          <p>
+            Teacher Response: {teacher_response}
+          </p>
+          <p>
+            Principal Presponse: {principal_response}
+          </p>
+        </div>
+      );
+    } else {
+      return teacher_response;
+    }
+  };
+
   render() {
     if (this.state.hasOwnProperty('deleted')) {
       const message = this.state.deleted ? "This application has been deleted." : "This application could not be deleted.";
@@ -774,9 +869,9 @@ export class DetailViewContents extends React.Component {
       <div id="detail-view">
         {this.renderHeader()}
         <br/>
-        {this.renderTopSection()}
-        {this.renderQuestions()}
-        {this.renderAboutTheSchool()}
+        {this.renderTopTableLayout()}
+        {this.renderDetailViewTableLayout()}
+        {!this.showPrincipalApprovalTable() && this.renderResendOrUnrequirePrincipalApprovalSection()}
         {this.renderNotes()}
         {this.renderEditMenu()}
       </div>

@@ -22,13 +22,13 @@ const styles = {
 };
 
 const ApplicationDataPropType = PropTypes.shape({
-  locked: PropTypes.number.isRequired,
-  unlocked: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  locked: PropTypes.number
 });
 
 export class SummaryTable extends React.Component {
   static propTypes = {
-    showLocked: PropTypes.bool,
+    canSeeLocked: PropTypes.bool,
     caption: PropTypes.string.isRequired,
 
     // keys are available statuses: {status: ApplicationDataPropType}
@@ -42,18 +42,19 @@ export class SummaryTable extends React.Component {
     router: PropTypes.object.isRequired
   };
 
+  showLocked = this.props.canSeeLocked && this.props.applicationType === 'facilitator';
+
   tableBody() {
     return Object.keys(this.props.data).map((status, i) => {
       const statusData = this.props.data[status];
-      const total = statusData.locked + statusData.unlocked;
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
             {ApplicationStatuses[this.props.applicationType][status] || _.upperFirst(status)}
           </td>
-          {this.props.showLocked && <td>{statusData.locked}</td>}
-          {this.props.showLocked && <td>{statusData.unlocked}</td>}
-          <td>{total}</td>
+          {this.showLocked && <td>{statusData.locked}</td>}
+          {this.showLocked && <td>{statusData.total - statusData.locked}</td>}
+          <td>{statusData.total}</td>
         </tr>
       );
     });
@@ -82,8 +83,8 @@ export class SummaryTable extends React.Component {
           <thead>
             <tr>
               <th>Status</th>
-              {this.props.showLocked && <th>Locked</th>}
-              {this.props.showLocked && <th>Unlocked</th>}
+              {this.showLocked && <th>Locked</th>}
+              {this.showLocked && <th>Unlocked</th>}
               <th>Total</th>
             </tr>
           </thead>
@@ -110,5 +111,5 @@ export class SummaryTable extends React.Component {
 }
 
 export default connect(state => ({
-  showLocked: state.applicationDashboard.permissions.lockApplication,
+  canSeeLocked: state.applicationDashboard.permissions.lockApplication,
 }))(SummaryTable);

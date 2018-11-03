@@ -33,13 +33,16 @@ class PublicGallery extends Component {
     // from redux state
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(publishedProjectPropType),
+      spritelab: PropTypes.arrayOf(publishedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
       playlab: PropTypes.arrayOf(publishedProjectPropType),
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
+      dance: PropTypes.arrayOf(publishedProjectPropType),
     }),
     // Controls hiding/showing view more links for App Lab and Game Lab.
-    limitedGallery: PropTypes.bool
+    limitedGallery: PropTypes.bool,
+    includeDanceParty: PropTypes.bool
   };
 
   /**
@@ -63,7 +66,7 @@ class PublicGallery extends Component {
   }
 
   render() {
-    const {projectLists, limitedGallery} = this.props;
+    const {projectLists, limitedGallery, includeDanceParty} = this.props;
 
     return (
       <div>
@@ -71,6 +74,7 @@ class PublicGallery extends Component {
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
           limitedGallery={limitedGallery}
+          includeDanceParty={includeDanceParty}
         />
         <div style={styles.clear}/>
         <div style={styles.linkBox}>

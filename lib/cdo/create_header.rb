@@ -5,10 +5,10 @@ class CreateHeader
   def self.get_create_dropdown_contents(options)
     everyone_entries = [
       {
-        id: "create_dropdown_playlab",
-        title: "playlab",
-        url: CDO.studio_url('projects/playlab/new'),
-        image: "logo_playlab.png"
+        id: "create_dropdown_spritelab",
+        title: "spritelab",
+        url: CDO.studio_url('projects/spritelab/new'),
+        image: "logo_spritelab.png"
       },
       {
         id: "create_dropdown_artist",
@@ -42,9 +42,22 @@ class CreateHeader
       },
     ]
 
+    dance_party = [
+      {
+        id: "create_dropdown_dance",
+        title: "dance",
+        url: CDO.studio_url('projects/dance/new'),
+        image: "logo_dance.png"
+      }
+    ]
+
     entries = options[:limit_project_types] == "true" ?
       everyone_entries + minecraft :
       everyone_entries + applab_gamelab
+
+    if DCDO.get("dance_projects", false)
+      entries += dance_party
+    end
 
     entries
   end

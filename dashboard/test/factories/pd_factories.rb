@@ -1007,8 +1007,9 @@ FactoryGirl.define do
     cs_how_many_minutes 45
     cs_how_many_days_per_week 5
     cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
     cs_terms '1 quarter'
-    replace_existing 'Yes'
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
     pay_fee 'Yes, my school or I will be able to pay the full program fee.'
     what_license_required 'CSTA'
     plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'
@@ -1022,13 +1023,6 @@ FactoryGirl.define do
       form_data_hash {build :pd_teacher1920_application_hash_common, course.to_sym}
     end
     form_data {form_data_hash.to_json}
-
-    trait :locked do
-      after(:create) do |application|
-        application.update!(status: 'accepted_not_notified')
-        application.lock!
-      end
-    end
   end
 
   factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application

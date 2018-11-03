@@ -242,20 +242,15 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 * Couple Decks of Cards
 * Aluminum Foil
 * Containers that can hold water
-* [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.***
+* [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.
 
-\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 40%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+Participants in our 2018-19 Professional Learning Program who are teaching in schools with 40%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)
 
 ### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
 
 CS Discoveries is designed to fit naturally between our [CS Fundamentals](/educate/curriculum/elementary-school) courses and our [CS Principles](/educate/csp) course. While each of these courses is designed to be an age-appropriate entry point to computer science, students with previous experience will find many new topics to explore, and they will revisit familiar topics in novel and more challenging contexts.
 
 <!--
-#### Can I pilot the new course?
-
-We will be formally piloting the course with select groups in the Spring of the 16/17 school year - if you are interested in participating in this pilot please complete the application form here.
-
-As lessons are completed we will also be publishing them on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the forum.
 
 #### How/Where can I get professional development for this course?
 

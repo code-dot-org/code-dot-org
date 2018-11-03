@@ -9,11 +9,13 @@ module ProjectsList
   PUBLISHED_PROJECT_TYPE_GROUPS = {
     applab: ['applab'],
     gamelab: ['gamelab'],
+    spritelab: ['spritelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
     minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
+    dance: ['dance']
   }.freeze
 
   class << self

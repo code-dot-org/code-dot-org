@@ -127,7 +127,7 @@
   # report memory and disk space utilization to CloudWatch every minute
   # we do not use the cronjob helper method because this should not execute with
   # bundle.
-  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron --auto-scaling"
+  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron#{node['cdo-apps']['daemon'] ? '' : ' --auto-scaling'}"
 %>
 #
 # node: <%= node.name %>

@@ -120,6 +120,7 @@ function showHomepage() {
         {isTeacher && (
           <TeacherHomepage
             announcement={announcement}
+            hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
@@ -133,6 +134,7 @@ function showHomepage() {
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
+            includeDanceParty={homepageData.includeDanceParty}
           />
         )}
         {!isTeacher && (
@@ -140,8 +142,8 @@ function showHomepage() {
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
             sections={homepageData.sections}
-            canLeave={homepageData.canLeave}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
+            includeDanceParty={homepageData.includeDanceParty}
           />
         )}
       </div>

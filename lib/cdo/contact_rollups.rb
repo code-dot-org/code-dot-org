@@ -6,23 +6,45 @@ require 'cdo/properties'
 require 'json'
 
 class ContactRollups
-  # Connection to read from Pegasus production database.
-  PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader)
   # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
   # to override the timeout for a specific session or query.
   MAX_EXECUTION_TIME = 1_200_000
+  MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
+
+  # Connection to read from Pegasus production database.
+  PEGASUS_DB_READER = sequel_connect(
+    CDO.pegasus_db_reader,
+    CDO.pegasus_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to write to Pegasus production database.
-  PEGASUS_DB_WRITER = sequel_connect(CDO.pegasus_db_writer, CDO.pegasus_db_reader)
+  PEGASUS_DB_WRITER = sequel_connect(
+    CDO.pegasus_db_writer,
+    CDO.pegasus_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to read from Pegasus reporting database.
-  PEGASUS_REPORTING_DB_READER = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
+  PEGASUS_REPORTING_DB_READER = sequel_connect(
+    CDO.pegasus_reporting_db_reader,
+    CDO.pegasus_reporting_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to write to Pegasus reporting database.
-  PEGASUS_REPORTING_DB_WRITER = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
+  PEGASUS_REPORTING_DB_WRITER = sequel_connect(
+    CDO.pegasus_reporting_db_writer,
+    CDO.pegasus_reporting_db_writer,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Connection to read from Dashboard reporting database.
-  DASHBOARD_REPORTING_DB_READER = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+  DASHBOARD_REPORTING_DB_READER = sequel_connect(
+    CDO.dashboard_reporting_db_reader,
+    CDO.dashboard_reporting_db_reader,
+    query_timeout: MAX_EXECUTION_TIME_SEC
+  )
 
   # Columns to disregard
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze

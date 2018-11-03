@@ -13,7 +13,7 @@ Scenario: Signed Out - Correct Create Links
   Given I am on "http://code.org"
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
@@ -25,7 +25,7 @@ Scenario: Teacher - Correct Create Links
   Given I am a teacher
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
@@ -37,7 +37,7 @@ Scenario: Student, Age 13+ - Correct Create Links
   Given I create a student named "16 Year Old"
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
@@ -49,7 +49,7 @@ Scenario: Young Student, Not in Section - Correct Create Links
   Given I create a young student named "10 Year Old"
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_minecraft" is visible
   And I wait until element "#create_dropdown_applab" is not visible
@@ -66,7 +66,7 @@ Scenario: Young Student, In Section - Correct Create Links
   And I navigate to the section url
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
-  And I wait until element "#create_dropdown_playlab" is visible
+  And I wait until element "#create_dropdown_spritelab" is visible
   And I wait until element "#create_dropdown_artist" is visible
   And I wait until element "#create_dropdown_applab" is visible
   And I wait until element "#create_dropdown_gamelab" is visible
