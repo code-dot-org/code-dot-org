@@ -381,4 +381,16 @@ class Homepage
       link_text: "homepage_below_hero_announcement_link_text"
     }
   end
+
+  def self.get_dance_stars
+    [
+      "Katy Perry", "Madonna", "Keith Urban", "Sia", "Carly Rae Jepsen",
+      "Ciara", "Macklemore & Ryan Lewis", "Yolanda Be Cool, DCup",
+      "J Balvin, Willy William", "Bruce Springsteen", "a-ha", "Imagine Dragons",
+      "Ariana Grande", "Justin Bieber", "Selena Gomez", "Lady Antebellum",
+      "Los Del Rio", "Bruno Mars", "Calvin Harris", "Luke Bryan", "Coldplay",
+      "Ace of Base", "The Weekend", "Avicii", "Mc Hammer", "Village People",
+      "OutKast", "will.i.am", "Ed Sheeran", "and more!"
+    ]
+  end
 end
