@@ -161,7 +161,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage .action.hoc2018 {
-  float: left;
+  display: inline-block;
   margin-right: 20px;
 }
 
