@@ -21,37 +21,37 @@ def get_social_metadata_for_page(request)
         title: hoc_s(:social_hoc2018_what_create),
         description: hoc_s(:social_hoc2018_every_student),
         image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:hour_of_code_worldwide]
+        video: videos[:creativity_is]
       },
       "soon-hoc-mc" => {
         title: hoc_s(:social_hoc2018_what_create),
         description: hoc_s(:social_hoc2018_every_student),
         image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:hour_of_code_worldwide]
+        video: videos[:creativity_is]
       },
       "soon-hoc-dance" => {
         title: hoc_s(:social_hoc2018_what_create),
         description: hoc_s(:social_hoc2018_every_student),
         image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:hour_of_code_worldwide]
+        video: videos[:creativity_is]
       },
       "actual-hoc" => {
         title: I18n.t(:og_title_here),
         description: hoc_s(:social_hoc2018_every_student_try_what_create),
         image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:hour_of_code_worldwide]
+        video: videos[:creativity_is]
       },
       "actual-hoc-dance" => {
         title: I18n.t(:og_title_here),
         description: hoc_s(:social_hoc2018_every_student_try_what_create),
         image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:hour_of_code_worldwide]
+        video: videos[:creativity_is]
       },
       "default" => {
         title: hoc_s(:social_hoc2018_code_org_what_create),
         description: hoc_s(:social_hoc2018_every_student),
         image: {path: "/images/social-media/codeorg-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:hour_of_code_worldwide]
+        video: videos[:creativity_is]
       }
     },
     "csedweek.org" => {
@@ -79,19 +79,19 @@ def get_social_metadata_for_page(request)
         title: hoc_s(:social_hoc2018_hoc_coming_create),
         description: hoc_s(:social_hoc2018_creativity_in_are_you),
         image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:creativity_is]
+        video: videos[:hour_of_code_worldwide]
       },
       "actual-hoc" => {
         title: hoc_s(:social_hoc2018_hoc_here),
         description: hoc_s(:social_hoc2018_creativity_in_are_you),
         image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 846, height: 529},
-        video: videos[:creativity_is]
+        video: videos[:hour_of_code_worldwide]
       },
       "default" => {
         title: hoc_s(:social_hoc2018_join),
         description: hoc_s(:social_hoc2018_creativity_in_are_you),
         image: {path: "/images/social-media/hourofcode-2018-creativity.jpg", width: 1440, height: 900},
-        video: videos[:creativity_is]
+        video: videos[:hour_of_code_worldwide]
       }
     },
     "challenge" => {
