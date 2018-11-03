@@ -392,7 +392,7 @@ module Pd::Application
             :csp_how_offer,
           ],
           principal: [
-            :csp_ap_exam,
+            :share_ap_scores,
             :replace_which_course_csp,
             :csp_implementation
           ]
