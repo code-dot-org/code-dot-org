@@ -682,7 +682,7 @@
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Students"
   dashboard_sections_table_code: "Section Code"
-  dashboard_sections_name: "Section Name"
+  dashboard_sections_name: 'Section Name:'
   dashboard_sections_choose_secret: "If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section."
   dashboard_sections_secret_word: "A <b>word</b> allows you to set a secret word for each student."
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
@@ -708,7 +708,7 @@
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_name: "Name"
+  dashboard_students_name: 'Name: '
   dashboard_students_progress: "Progress"
   dashboard_students_male: "Male"
   dashboard_students_female: "Female"
@@ -1572,7 +1572,7 @@
   aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
   account_sign_up_child_accept_terms: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-  hoc_overview_title: "Hour of Code for all ages"
+  hoc_overview_title: "Hour of Code Activities from Code.org"
   hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 200+ one-hour tutorials, available in over 45 languages."
   hoc_overview_partner_activities_title: "More activities from partners"
   hoc_overview_partner_activities_body: "The Hour of Code website has over 100 computer science activities for all ages and experience levels, developed by Code.org and partners."
