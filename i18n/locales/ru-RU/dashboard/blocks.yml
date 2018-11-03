@@ -66,7 +66,7 @@ ru:
             '8': Отсутствует
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -77,12 +77,28 @@ ru:
         options:
           GROUP:
             sprites: все
+          FORMAT:
+            '"random"': случайный
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": влево
             "{x: 300, y: 200}": вправо
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случайный
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': случайный
       Dancelab_randomColor:
         text: случайный цвет
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ ru:
             '"none"': Отсутствует
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': высота
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: все
           PROPERTY:
             '"scale"': размер
             '"height"': высота
@@ -287,16 +310,94 @@ ru:
         text: повернуть налево
       RyanLab_turnRight:
         text: повернуть направо
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
       craft_ifPath:
+        text: |-
+          если путь {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": вперед
+            "'right'": справа
+            "'left'": слева
       craft_ifStandingOn:
+        text: |-
+          стоя на {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": синем коралле
+            "'redCoralBlock'": красном коралле
+            "'sand'": песок
+            "'wool_blue'": глубоководье
+            "'planksOak'": дубовые доски
+            "'seaLantern'": морском фонаре
+      craft_ifStandingOnLimit:
+        text: |-
+          стоя на {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": песок
-            "'planksOak'": дубовые доски
+            "'darkPrismarine'": темный призмарин
+            "'seaLantern'": морском фонаре
       craft_moveForward:
         text: двигаться вперед
+      craft_placeBlock:
+        text: разместить {blockType}
+        options:
+          blockType:
+            '"strippedOak"': очищенный дуб
+            '"strippedDarkOak"': очищенный темный дуб
+            '"stoneBricks"': каменные кирпичи
+            '"mossyStoneBricks"': замшелые каменные кирпичи
+            '"crackedStoneBricks"': потрескавшиеся каменные кирпичи
+            '"decorativeStoneBricks"': декоративные каменные кирпичи
+            '"blueCoralBlock"': блок синих кораллов
+            '"pinkCoralBlock"': блок розовых кораллов
+            '"magentaCoralBlock"': блок пурпурных кораллов
+            '"redCoralBlock"': блок красных кораллов
+            '"yellowCoralBlock"': блок желтых кораллов
+            '"blueDeadCoralBlock"': блок мертвых синих кораллов
+            '"pinkDeadCoralBlock"': блок мертвых розовых кораллов
+            '"magentaDeadCoralBlock"': блок мертвых пурпурных кораллов
+            '"readDeadCoralBlock"': блок мертвых красных кораллов
+            '"yellowDeadCoralBlock"': блок мертвых желтых кораллов
+            '"prismarine"': призмарин
+            '"darkPrismarine"': темный призмарин
+            '"seaLantern"': морском фонаре
+            '"packedIce"': плотный лед
+            '"blueIce"': синий лед
+            '"blackConcrete"': черный бетон
+            '"seaGrass"': морскую траву
+            '"kelp"': водоросли
+            '"polishedGranite"': полированный гранит
       craft_placeTorch:
         text: разместить фонарь
+      craft_repeatUntilConduit:
+        text: |-
+          повторить до завершения проводника
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          повторить до достижения цели
+          {STATEMENT}
+      craft_spawnEntity:
+        text: создать {ENTITY}
+      craft_turn:
+        text: повернуть {DIR}
+        options:
+          DIR:
+            right: направо ↻
+            left: налево ↺

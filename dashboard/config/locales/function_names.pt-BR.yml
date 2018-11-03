@@ -74,7 +74,7 @@ pt-BR:
       draw a pinwheel: desenhar_um_catavento
       drawTree: desnharArvore
       drawHouse: desenharCasa
-      drawBranch: desenharTronco
+      drawBranch: desenharGalho
       drawSky: desenharCeu
       fillScreen: preencherTela
       drawHouseLayer: desenharCamadaDaCasa
@@ -129,15 +129,15 @@ pt-BR:
       score_points: marcar_pontos
       set score: defina a pontuação
       draw a line of hexagons: desenhar fila de hexágonos
-      shift down/forward: deslocar para baixo/frente
-      shift down/backward: deslocar para baixo/para trás
+      shift down/forward: mudar para baixo/frente
+      shift down/backward: mudar para baixo/para trás
       get nectar: obtenha néctar
-      make honey up and over: fazer mel para e avançar
-      setActors: posicionarAtores
-      popCharacter: personagemPopular
+      make honey up and over: fazer mel e em cima
+      setActors: posicionarPersonagens
+      popCharacter: removerCaractere
       patrol left right: patrulhar de esquerda para a direita
       empty function: função vazia
-      check guess: testarPalpite
+      check guess: checar palpite
       Jump: Pular
       test: teste
       build bridge: construir ponte
@@ -155,7 +155,7 @@ pt-BR:
       n-sided shape: forma de n lados
       draw a loop: desenhar uma repetição
       draw spiral circle: desenhar círculo espiral
-      draw roof: desenhar telhado
+      draw roof: desenhar teto
       draw rectangle: desenhar retângulo
       move: mova
       function 1: função 1
@@ -164,13 +164,13 @@ pt-BR:
       clear path: limpar o caminho
       clear cacti: retirar cactos
       place and move: colocar e mover
-      cover lava: cobrir ava
+      cover lava: cobrir lava
       build short bridge: construir ponte pequena
       build long bridge: construir ponte longa
       create trail: criar trilha
       move and fill: mover e preencher
-      fix right corner: consertar canto superior direito
-      fix left corner: consertar canto superior esquerdo
+      fix right corner: consertar canto direito
+      fix left corner: consertar canto esquerdo
       make segment: fazer segmento
       turn corner: virar esquina
       fix long path: consertar caminho longo
@@ -225,6 +225,7 @@ pt-BR:
       draw line of triangles: desenhar fila de triângulos
       draw a window: desenhar uma janela
       stop_everything: parar_tudo
+      lose: perder
       draw a plane of squares: desenhar um plano de quadrados
       draw hexagon: desenhar um hexágono
       draw line of hexagons: desenhar fila de hexágonos

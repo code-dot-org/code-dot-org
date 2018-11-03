@@ -54,12 +54,28 @@ de:
         options:
           GROUP:
             sprites: Alle
+          FORMAT:
+            '"random"': zufällig
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": links
             "{x: 300, y: 200}": rechts
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zufällig
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': zufällig
       Dancelab_randomColor:
         text: zufällige Farbe
       Dancelab_setDanceSpeed:
@@ -72,6 +88,13 @@ de:
             '0.25': very slow
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': Größe
+            '"height"': Höhe
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: Alle
           PROPERTY:
             '"scale"': Größe
             '"height"': Höhe
@@ -256,16 +279,56 @@ de:
         text: nach links drehen
       RyanLab_turnRight:
         text: nach rechts drehen
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"x"': x-Position
+            '"y"': y-Position
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': Größe
+            '"x"': x-Position
+            '"y"': y-Position
       craft_ifPath:
+        text: |-
+          wenn Weg {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": voraus
+            "'right'": nach rechts
+            "'left'": nach links
       craft_ifStandingOn:
+        text: |-
+          wenn auf {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": blaue Koralle
+            "'redCoralBlock'": rote Koralle
+            "'sand'": Sand
+            "'wool_blue'": tiefes Wasser
+            "'planksOak'": Eichenholzbretter
+            "'seaLantern'": Seelaterne
+      craft_ifStandingOnLimit:
+        text: |-
+          wenn auf {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": Sand
-            "'planksOak'": Eichenholzbretter
+            "'seaLantern'": Seelaterne
       craft_moveForward:
         text: vorwärts bewegen
+      craft_placeBlock:
+        options:
+          blockType:
+            '"seaLantern"': Seelaterne
       craft_placeTorch:
         text: Fackel platzieren
+      craft_repeatUntilGoal:
+        text: |-
+          bis Ziel wiederholen
+          {STATEMENT}

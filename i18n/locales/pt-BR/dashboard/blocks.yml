@@ -117,7 +117,7 @@ pt-BR:
             '8': Nenhum
             '9': Roll
             '10': Isso ou Aquilo
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -126,8 +126,8 @@ pt-BR:
             "{x: 200, y: 200}": centro
             "{x: 100, y: 100}": superior esquerdo
             "{x: 300, y: 100}": superior direito
-            "{x: 100, y: 300}": inferior esquerdo
-            "{x: 300, y: 300}": inferior direito
+            "{x: 100, y: 300}": inferior a esquerda
+            "{x: 300, y: 300}": inferior a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
       Dancelab_layoutSprites:
         options:
@@ -142,6 +142,7 @@ pt-BR:
             '"grid"': grade
             '"row"': linha
             '"column"': coluna
+            '"random"': aleatório
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
@@ -158,9 +159,29 @@ pt-BR:
             "{x: 200, y: 200}": centro
             "{x: 100, y: 100}": superior esquerdo
             "{x: 300, y: 100}": superior direito
-            "{x: 100, y: 300}": inferior esquerdo
-            "{x: 300, y: 300}": inferior direito
+            "{x: 100, y: 300}": inferior a esquerda
+            "{x: 300, y: 300}": inferior a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatório
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"ALIEN"': Alienígenas
+            '"UNICORN"': Unicórnios
+          LAYOUT:
+            '"grid"': grade
+            '"row"': linha
+            '"column"': coluna
+            '"random"': aleatório
       Dancelab_randomColor:
         text: cor aleatória
       Dancelab_setBackgroundEffect:
@@ -188,6 +209,23 @@ pt-BR:
             "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": Aleatório
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"width"': largura
+            '"height"': altura
+            '"rotation"': rotação
+            '"x"': posição horizontal
+            '"y"': posição vertical
+            '"tint"': tinta
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: todos
+            '"CAT"': todos os gatos
+            '"DUCK"': todos os patos
+            '"FROG"': todos os sapos
+            '"PINEAPPLE"': todos os abacaxis
+            '"ROBOT"': todos os robôs
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
@@ -308,7 +346,7 @@ pt-BR:
       gamelab_enableDebug:
         text: habilitar a depuração
       gamelab_firstTouched:
-        text: primeira fada a ser tocada
+        text: primeiro sprite tocado
       gamelab_getAnim:
         options:
           COSTUME:
@@ -323,7 +361,7 @@ pt-BR:
             '"direction"': direção do movimento
             '"tint"': tinta
       gamelab_hideTitleScreen:
-        text: esconder título
+        text: esconder a tela do título
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando as bordas"
       gamelab_joystickDirection:
@@ -401,9 +439,9 @@ pt-BR:
             "{x: 50, y: 200}": centro a esquerda
             "{x: 200, y: 200}": centro
             "{x: 350, y: 200}": centro a direita
-            "{x: 50, y: 350}": inferior esquerdo
+            "{x: 50, y: 350}": inferior a esquerda
             "{x: 200, y: 350}": inferior central
-            "{x: 350, y: 350}": inferior direito
+            "{x: 350, y: 350}": inferior a direita
             '"random"': aleatório
       gamelab_setProp:
         options:
@@ -494,9 +532,9 @@ pt-BR:
       gamelab_whileDownArrow:
         text: enquanto a seta para baixo estiver pressionada
       gamelab_whileJoystick:
-        text: quando for o joystick
+        text: enquanto o joystick
       gamelab_whileKey:
-        text: quando {KEY} estiver pressionado
+        text: enquanto pressionado {KEY}
         options:
           KEY:
             '"up"': para cima
@@ -517,7 +555,7 @@ pt-BR:
       gamelab_whileUpArrow:
         text: enquanto a seta para cima estiver pressionada
       gamelab_xLocationOf:
-        text: coordenada x de {SPRITE}
+        text: coordenada x do {SPRITE}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -534,8 +572,8 @@ pt-BR:
             "{x: 200, y: 200}": centro
             "{x: 100, y: 100}": superior esquerdo
             "{x: 300, y: 100}": superior direito
-            "{x: 100, y: 300}": inferior esquerdo
-            "{x: 300, y: 300}": inferior direito
+            "{x: 100, y: 300}": inferior a esquerda
+            "{x: 300, y: 300}": inferior a direita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
       Mikelab_destroy:
         text: remover {SPRITE}
@@ -603,7 +641,7 @@ pt-BR:
             '"left"': seta para a esquerda
             '"right"': seta para a direita
       Mikelab_xLocationOf:
-        text: coordenada x de {SPRITE}
+        text: coordenada x do {SPRITE}
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:
@@ -616,16 +654,100 @@ pt-BR:
         text: posição aleatória
       Vector_vectorNorth:
         text: norte
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+            '"costume"': fantasia
+            '"direction"': direção do movimento
+            '"rotation"': rotação ou direção
+            '"tint"': tinta
       craft_ifPath:
+        text: |-
+          se o caminho estiver {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": adiante
+            "'right'": à direita
+            "'left'": à esquerda
       craft_ifStandingOn:
+        text: |-
+          se estiver em cima de {TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": coral azul
+            "'redCoralBlock'": coral vermelho
+            "'sand'": areia
+            "'wool_blue'": água profunda
+            "'planksOak'": tábuas de carvalho
+            "'seaLantern'": lanterna do mar
+      craft_ifStandingOnLimit:
+        text: |-
+          se estiver em cima de {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": areia
-            "'planksOak'": tábuas de carvalho
+            "'darkPrismarine'": prismarinho escuro
+            "'seaLantern'": lanterna do mar
       craft_moveForward:
         text: avance
+      craft_placeBlock:
+        text: colocar {blockType}
+        options:
+          blockType:
+            '"strippedOak"': carvalho descascado
+            '"strippedDarkOak"': carvalho escuro descascado
+            '"stoneBricks"': tijolos de pedra
+            '"mossyStoneBricks"': tijolos de pedra com musgo
+            '"crackedStoneBricks"': tijolos de pedra rachados
+            '"decorativeStoneBricks"': tijolos de pedra decorativos
+            '"blueCoralBlock"': bloco de coral azul
+            '"pinkCoralBlock"': bloco de coral rosa
+            '"magentaCoralBlock"': bloco de coral magenta
+            '"redCoralBlock"': bloco de coral vermelho
+            '"yellowCoralBlock"': bloco de coral amarelo
+            '"blueDeadCoralBlock"': bloco de coral azul morto
+            '"pinkDeadCoralBlock"': bloco de coral rosa morto
+            '"magentaDeadCoralBlock"': bloco de coral magenta morto
+            '"readDeadCoralBlock"': bloco de coral vermelho morto
+            '"yellowDeadCoralBlock"': bloco de coral amarelo morto
+            '"prismarine"': prismarinho
+            '"darkPrismarine"': prismarinho escuro
+            '"seaLantern"': lanterna do mar
+            '"packedIce"': gelo compactado
+            '"blueIce"': gelo azul
+            '"blackConcrete"': concreto preto
+            '"seaGrass"': erva marinha
+            '"kelp"': alga
+            '"polishedGranite"': granito polido
       craft_placeTorch:
         text: coloque a tocha
+      craft_repeatUntilConduit:
+        text: |-
+          repetir até concluir o canal
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          repetir até o objetivo
+          {STATEMENT}
+      craft_spawnEntity:
+        text: invocar {ENTITY}
+      craft_turn:
+        text: virar {DIR}
+        options:
+          DIR:
+            right: à direita ↻
+            left: à esquerda ↺

@@ -76,6 +76,10 @@ vi:
         \"vẽ hình lục giác\", nhưng nó vẫn vẽ hình vuông! \r\n\r\nBạn \ncó thể sửa
         hàm \"vẽ hình lục giác\" sao cho nó vẽ ra lục giác với cạnh là 50 pixel không?\n\r\n\r\nHãy
         dùng hàm mới này để vẽ!"
+      2-3 Artist Functions 11.5 a: |-
+        Đây giống như hàm 'vẽ một hình lục giác'.
+
+        Chuyện gì xảy ra nếu bạn vòng lặp **6** lần chương trình chính, xoay **60** độ mỗi lần bạn dùng vòng lặp?
       2-3 Artist Functions 11.5: "Đây là hàm vẽ hình lục giác. \r\n\r\nChuyện ì sẽ
         xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
       2-3 Artist Functions 11: "Chúng ta đã đổi tên hàm \"vẽ hình vuông\" thành \"vẽ

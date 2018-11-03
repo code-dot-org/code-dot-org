@@ -2093,6 +2093,8 @@ es:
               name: Pulseras Binarias
             Binary Images:
               name: Imágenes binarias
+            Play Lab:
+              name: Laboratorio de juegos
         csd2-2017:
           stages:
             Peer Review:

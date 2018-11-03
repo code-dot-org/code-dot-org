@@ -47,6 +47,7 @@ de:
   next_resource: Nächste Ressource
   cancel: Abbrechen
   okay: Okay
+  or: oder
   heading_x_of_y: "%{heading} (page %{x} von %{y})"
   add_teacher_form:
     code:
@@ -91,6 +92,8 @@ de:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-Konto
+    microsoft_v2_auth: Microsoft-Konto
+    clever: Schlau
     forgot_password: Passwort vergessen?
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
@@ -128,7 +131,6 @@ de:
     age: Alter
     user_type: Bist du Schüler oder Lehrer?
     submit: Registrieren
-    next: Weiter
     teacher: Sind Sie ein Lehrer?
     valid_username: Verfügbar!
     invalid_username: Benutzernamen müssen mindestens 5 Zeichen lang sein
@@ -325,14 +327,6 @@ de:
       help_us: Helfen Sie uns
       teach: Unterrichten
       about: Über
-    create_button:
-      create: Erstellen
-      applab: App-Labor
-      artist: Künstler
-      gamelab: Spielelabor
-      playlab: Spielelabor
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Landkreis-Dashboard
@@ -346,6 +340,13 @@ de:
       team: Team
       driver: Bediener
       navigator: Navigator
+      create: Erstellen
+      applab: App-Labor
+      artist: Künstler
+      gamelab: Spielelabor
+      playlab: Spielelabor
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'s Fortschritt"
       progress: Dein Fortschritt
@@ -763,6 +764,8 @@ de:
       title: Minecraft
       body: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern,
         Schafen, Creepern, Zombies und mehr.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:
@@ -1137,6 +1140,7 @@ de:
     form_labels:
       email: E-Mail
       school_name: Schulname
+      school_city: Stadt der Schule
       school_country: Land der Schule
     form_entries:
       gender:

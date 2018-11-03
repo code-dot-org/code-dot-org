@@ -50,6 +50,18 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       Dancelab_randomColor:
         text: कुनै एक  रङ
       Dancelab_setDanceSpeed:
@@ -61,6 +73,11 @@ ne:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': size
@@ -214,6 +231,14 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': size
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': size
       craft_ifPath:
         options:
           DIR:
@@ -223,6 +248,10 @@ ne:
           TYPE:
             "'sand'": sand
             "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: move forward
       craft_placeTorch:

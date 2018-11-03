@@ -11,11 +11,20 @@ sl:
   campaign_date_full: "4. do 10. december"
   campaign_date_year: "2017"
   campaign_date_full_year: "4. do 10. december 2017"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Pridružite se največjemu izobraževalnemu dogodku v zgodovini, %{campaign_date}'
   front_intro_default: 'Ura za kodo je globalno gibanje, ki dosega desetine milijonov učencev, dijakov in študentov v več kot 180 državah. Kdorkoli in kjerkoli lahko organizira svoj dogodek Ure za kodo. Enourni tečaji so na voljo v več kot 30 jezikih. Brez obveznega predznanja. <strong>Za vse med 4 in 104 leti.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Oglejte si novi video'
   front_watch_regular_video: 'Oglejte si video'
   front_volunteers: 'Iščemo tehnične prostovoljce in prostovoljke'
@@ -227,7 +236,7 @@ sl:
   front_join_us_support: "Podprite"
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "For more information, please visit code.org"
-  front_join_us_n_students_served: "# served"
+  front_join_us_n_students_served: "# served."
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Več o tem"
   signup_closed: 'Prijave na Uro Za Kodo so sedaj zaključene. Prosim preverite ponovno v oktobru in se prijavite na naslednje Ure Za Kode.'
@@ -279,9 +288,14 @@ sl:
   signup_continue_label: 'Nadaljuj'
   signup_thank_you_header: "Hvala za prijavo vašega dogodka Ura za kodo."
   signup_thank_you_message: 'Poslali smo potrditveno e-pošto z informacijami, ki vam bodo pomagale začeti.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code map"
   map_header: '# dogodkov Ura za kodo po svetu'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Prikaži vse dogodke'
   map_header_company: '# od organizatorjev podjetja'
   map_header_country: '# v %{country}'
@@ -409,6 +423,7 @@ sl:
   title_stats: Blurbs and Stats
   title_partners: Partnerji
   title_resources: Viri
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Hvala, ker ste se prijavili kot gostitelj Ure za kodo!
   title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation

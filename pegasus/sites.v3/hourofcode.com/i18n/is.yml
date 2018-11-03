@@ -11,11 +11,20 @@ is:
   campaign_date_full: "5. - 11. desember"
   campaign_date_year: "2016"
   campaign_date_full_year: "5.-11. desember 2016"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Taktu þátt í stærsta námsviðburði sögunnar %{campaign_date}'
   front_intro_default: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í 180+ löndum. Hver sem er, hvar sem er getur skipulagt Klukkustund kóðunar viðburð. Klukkustundar kennsluefni er tiltækt á yfir 45 tungumálum. Engin forkunnátta er nauðsynleg. <strong>Fyrir 4 til 104 ára.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Horfa á nýja myndbandið'
   front_watch_regular_video: 'Horfa á myndbandið'
   front_volunteers: 'Sjálfboðaliðar með tæknikunnáttu óskast'
@@ -279,9 +288,14 @@ is:
   signup_continue_label: 'Continue'
   signup_thank_you_header: "Takk fyrir að skrá viðburð tengdan Klukkustund kóðunar."
   signup_thank_you_message: 'Við höfum sent þér tölvupóst til staðfestingar ásamt upplýsingum til að hjálpa þér að byrja.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Kort fyrir Klukkustund kóðunar"
   map_header: '# Klukkustundir kóðunar um allan heim'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Sjá alla atburði'
   map_header_company: '# af skipuleggjendum fyrirtækja'
   map_header_country: '# á %{country}'
@@ -409,6 +423,7 @@ is:
   title_stats: Kynningartextar og tölfræði
   title_partners: Samstarfsaðilar
   title_resources: Tilföng
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Leiðarvísar kennsluefnis
   title_whole_school: Þátttaka alls skólans

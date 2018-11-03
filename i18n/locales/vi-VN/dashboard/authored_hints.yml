@@ -194,6 +194,12 @@ vi:
       2-3 Bee Loops 4A_authored_hint:
         2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.
+        2-3_Bee_Loops_4A_c: Nếu bạn không thể nhận ra những vòng lặp, hãy thử viết mã theo cách dài trước, sau đó xem bạn có thể kết hợp mã lại thành một vòng lặp 'lặp lại' ở cuối.
+      2-3 Bee Loops 5_authored_hint:
+        2-3_Bee_Loops_5_a: Nếu bạn không thể nhận ra các khối để bỏ vào 'lặp lại' ngay lập tức, hãy bắt đầu bằng cách viết ra mã của mỗi bước và tìm một mô hình chung.
+      2-3 Bee Loops 6_authored_hint:
+        2-3_Bee_Loops_6_a: Nếu bạn không biết cái gì cần đi vào vòng lặp 'lặp lại', hãy thử kéo từng khối mội ra và xem nếu bạn có thể tìm ra một mô hình chung.
+        2-3_Bee_Loops_6_b: Phải có 6 khối bên trong vòng lặp 'lặp lại' của bạn khi bạn kết thúc.
       2-3 Bee Loops 7_authored_hint:
         2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
       2-3 Maze 6_authored_hint:
@@ -513,6 +519,8 @@ vi:
           </xml>
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Có hai cách để giải câu đố này!
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_c: Khi bạn hoàn thành, bạn có thể di chuyển nhân vật anh hùng của bạn bằng các phím mũi tên!
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseC_maze_programming6_2018_authored_hint:
@@ -632,6 +640,11 @@ vi:
         2-3_Bee_Debugging_4_a: Có chỗ nào mà con ong làm điều gì đó vô lý không? Điều gì xảy ra khi bạn đổi khối đó?
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Bạn cần có năm khối bên trong vòng lặp của bạn.
+      grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Nếu bạn không thể nhận ra các khối để bỏ vào 'lặp lại' ngay lập tức, hãy bắt đầu bằng cách viết ra mã của mỗi bước và tìm một mô hình chung.
+      grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Nếu bạn không biết cái gì cần đi vào vòng lặp 'lặp lại', hãy thử kéo từng khối mội ra và xem nếu bạn có thể tìm ra một mô hình chung.
+        2-3_Bee_Loops_6_b: Phải có 6 khối bên trong vòng lặp 'lặp lại' của bạn khi bạn kết thúc.
       grade3_Loops_4_authored_hint:
         2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn lại.
       grade3_Loops_5_authored_hint:
@@ -639,6 +652,7 @@ vi:
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.
+        2-3_Bee_Loops_4A_c: Nếu bạn không thể nhận ra những vòng lặp, hãy thử viết mã theo cách dài trước, sau đó xem bạn có thể kết hợp mã lại thành một vòng lặp 'lặp lại' ở cuối.
       grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: Bạn cần có bốn khối bên trong vòng lặp của bạn.
       grade3_Loops_9_authored_hint:
@@ -675,6 +689,11 @@ vi:
         2-3_Bee_Loops_4_a: Bạn cần có năm khối bên trong vòng lặp của bạn.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Bạn cần có năm khối bên trong vòng lặp của bạn.
+      level 'grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a: Nếu bạn không thể nhận ra các khối để bỏ vào 'lặp lại' ngay lập tức, hãy bắt đầu bằng cách viết ra mã của mỗi bước và tìm một mô hình chung.
+      level 'grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a: Nếu bạn không biết cái gì cần đi vào vòng lặp 'lặp lại', hãy thử kéo từng khối mội ra và xem nếu bạn có thể tìm ra một mô hình chung.
+        2-3_Bee_Loops_6_b: Phải có 6 khối bên trong vòng lặp 'lặp lại' của bạn khi bạn kết thúc.
       level 'grade3_Loops_4_authored_hint:
         2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn lại.
       level 'grade3_Loops_5_authored_hint:
@@ -682,6 +701,7 @@ vi:
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.
+        2-3_Bee_Loops_4A_c: Nếu bạn không thể nhận ra những vòng lặp, hãy thử viết mã theo cách dài trước, sau đó xem bạn có thể kết hợp mã lại thành một vòng lặp 'lặp lại' ở cuối.
       level 'grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: Bạn cần có bốn khối bên trong vòng lặp của bạn.
       level 'grade3_Loops_9_authored_hint:

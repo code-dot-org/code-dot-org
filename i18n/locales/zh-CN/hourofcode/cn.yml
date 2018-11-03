@@ -11,21 +11,30 @@ cn:
   campaign_date_full: "12 月 4-10日"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017年12月4日至12月10日"
+  codeorg_homepage_hoc2018_curriculum: '继续更深入的使用 <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org 课程</a>'
+  codeorg_homepage_hoc2018_header_line1: '编程一小时活动即将开始'
+  codeorg_homepage_hoc2018_header_line2_desktop: '<span class="hoc2018-highlight-word">你将创建什么？</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: '观看视频'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: '通过继续浏览我们的网站或单击 "我同意", 您同意在您的计算机或设备上存储 cookie。'
   cookie_banner_more_information: "请参Code.org的隐私政策。"
   cookie_banner_accept: '我同意'
   front_header_banner: '%{campaign_date}，加入有史以来最大的学习活动'
   front_intro_default: '编程一小时活动是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动。编程一小时活动的课程已经支持超过40种语言。不需要经验。<strong>4岁以上即可参与。</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: '观看新的视频'
   front_watch_regular_video: '观看视频'
   front_volunteers: '需要技术志愿者'
   front_start_learning: '开始学习'
-  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
-  gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-  gdpr_dialog_link_intro: 'For details see our'
-  gdpr_dialog_privacy_policy: 'privacy policy'
-  gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_heading: '您是否同意使用来自美国的网站？'
+  gdpr_dialog_message: '您使用本网站的数据可能会在美国发送和存储或处理。'
+  gdpr_dialog_link_intro: '有关详细信息, 请参阅我们'
+  gdpr_dialog_privacy_policy: '隐私政策'
+  gdpr_dialog_logout: '退出登录'
+  gdpr_dialog_yes: '是的'
   header_menu_resources: '资源'
   header_menu_faq: '常见问题'
   header_menu_how_to: '操作方法'
@@ -231,8 +240,8 @@ cn:
   front_join_us_challenge: "为你的班级赢得一次与名人的视频聊天！"
   front_join_us_learn_more: "了解更多"
   signup_closed: '编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。'
-  signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
-  signup_registration_closed: "And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October."
+  signup_registration_not_required: "您无需注册，即可参加全年的编程一小时各项活动！ <a href='%{hoc_activities_url}'>尝试活动</a> 或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。"
+  signup_registration_closed: "每年的 12月, 你的班级都可以加入世界各地数以百万计的学生, 一起庆祝计算机科学教育周。我们将在10月开始登记年度庆典活动。"
   signup_header: '在%{campaign_date} 期间主持编程一小时，并在这里登记。'
   signup_name_label: '您的姓名'
   signup_name_error: '名称是必填的。'
@@ -254,10 +263,10 @@ cn:
   signup_your_event: '登记您的活动'
   signup_host_an_hour: '主办一小时'
   signup_match_volunteer: '帮我找一个本地的软件工程师来激励我的学生'
-  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
-  signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
-  signup_email_preference_no: 'No'
+  signup_email_preference_opt_in: '我们能向您推送Code.org课程更新，本地机会，或者其他计算机科学的新闻吗？'
+  signup_email_preference_privacy: '(请参阅我们的隐私政策)'
+  signup_email_preference_yes: '是的'
+  signup_email_preference_no: '不是'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。"
   signup_registration_deadline: "Hour of Code 的注册会在12月11日关闭"
@@ -279,9 +288,14 @@ cn:
   signup_continue_label: '继续'
   signup_thank_you_header: "感谢您注册主办一个编程一小时活动。"
   signup_thank_you_message: '我们发送了一封确认邮件，其中有帮助您开始的信息。'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "每个孩子都值得拥有，在计算机科学领域表达他们创造力的机会。"
+  social_og_description_hoc2018_creativity_short: "#HourOfCode 充满创造力。我已加入! 你呢？"
+  social_description_twitter_hoc2018_creativity_long: "每个学生都应该有机会用计算机科学来表达他们的创造力。你会创造什么？"
+  social_description_twitter_hoc2018_creativity_short: "#HourOfCode 充满创造力。我已加入! 你呢？"
   map_title: "编程一小时地图"
   map_header: '世界各地的《编程一小时》活动'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} 已注册的编程一小时活动 %{year}'
   see_all_events: '查看所有事件'
   map_header_company: '#公司组织'
   map_header_country: '#次在%{country}'
@@ -297,7 +311,7 @@ cn:
   meta_tag_twitter_title: '编程一小时活动即将开始'
   meta_tag_twitter_description: '编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。'
   twitter_default_text: "我正在参加今年的 #HourOfCode，你呢？@codeorg"
-  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text: "今年的 #HourOfCode 是关于创造力的。我已加入! 你呢？(感谢 %{random_donor} 支持 @codeorg)"
   hoc_faq_title: '常见问题'
   hoc_faq_what_is_hoc_q: '编程一小时是什么？'
   hoc_faq_what_is_hoc_a: "编程一小时是一个介绍计算机科学一小时的活动，旨在揭秘编程并说明它是任何人都可以学习的基础知识。<a href='http://code.org/learn'>查看教程</a>。"
@@ -392,7 +406,7 @@ cn:
   videos_obama_cs: 奥巴马总统在计算机科学
   videos_anybody_can_learn: 任何人都可以学习 (1分钟)
   title_country_resources: 不同国家的特殊资源
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_hoc_advisory_committee: 编程一小时和 CSEdWeek 咨询委员会
   title_how_to_districts: 地区如何主办编程一小时
   title_how_to_events: 编程一小时操作指南
   title_how_to_organizations: 如何主办编程一小时 —— 组织
@@ -401,7 +415,7 @@ cn:
   title_how_to_volunteers: 如何主办编程一小时 —— 志愿者
   title_how_to_parents: 家长操作指南
   title_how_to: 操作方法指南
-  title_international_partners: Contact International Partners
+  title_international_partners: 联系国际合作伙伴
   title_press_release: 当地官员使用的编程一小时新闻稿
   title_op_ed: 支持计算机科学教育周和编程一小时的专栏样例
   title_press_kit: 新闻资料袋
@@ -409,6 +423,7 @@ cn:
   title_stats: 导语和统计
   title_partners: 合作伙伴
   title_resources: 资源
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: 感谢注册并组织编程一小时活动！
   title_tutorial_guidelines: 教程指南
   title_whole_school: 全校参与

@@ -11,9 +11,9 @@ nav: how_to_nav
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Necə edilir videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Bir təlimat seçin
+## 2. Bir dərslik seçin
 
 We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
@@ -80,6 +80,6 @@ Sənin sinfiniz üçün qulaqlıq təmin edin və ya seçdiyiniz təlimçi səs 
 
 ## Kod Saatından sonra nə gəlir?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+Kod Saatı sadəcə texnologiyanın necə işlədiyi və proqram təminatının necə hazırlandığını haqqında daha çox öyrənmə səyahətində atılan birinci addımdır. Tələbələrə səyahətlərinə davam etməyə kömək edir və onları [daha çox onlayn öyrənməyə](%= codeorg_url('/learn/beyond') %) cəsarətləndirir!
 
 <%= view :signup_button %>

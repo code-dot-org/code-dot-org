@@ -586,6 +586,8 @@ sl:
           stages:
             Binary Images:
               name: Binarne slike
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Lists:

@@ -11,11 +11,20 @@ az:
   campaign_date_full: "4-10 dekabr"
   campaign_date_year: "2017"
   campaign_date_full_year: "4-10 dekabr 2017"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "\"Code.org\"un məxfilik siyasətini nəzərdən keçirin."
   cookie_banner_accept: 'Razıyam'
   front_header_banner: 'Tarixin ən böyük təhsil hadisəsinə qoşulun, %{campaign_date}'
   front_intro_default: 'Kod Saatı 180-dən çox ölkədə on milyonlarla şagirdi əhatə edən qlobal bir hərəkatdır. Hər kəs, istədiyi hər yerdə bir Kod Saatı tədbiri təşkil edə bilər. Bir saatlıq dərsliklər 45-dən çox dildə mövcuddur. Heç bir ilkin təcrübə tələb olunmur. <strong>4 yaşdan tutmuş 104 yaşa qədər.</strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Yeni videoya baxın'
   front_watch_regular_video: 'Videoya baxın'
   front_volunteers: 'Texniki biliyi olan könüllülər axtarılır'
@@ -279,9 +288,14 @@ az:
   signup_continue_label: 'Davam et'
   signup_thank_you_header: "Kod Saatı tədbiri təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür edirik."
   signup_thank_you_message: 'İşə başlamağa kömək etmək üçün sizə təsdiq məktubu göndərildi.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Kod Saatı xəritəsi"
   map_header: 'Bütün dünyada # Kod Saatı tədbiri'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Bütün tədbirləri nəzərdən keçirin'
   map_header_company: '# şirkətlər tərəfindən'
   map_header_country: 'ölkənizdə (%{country}) # tədbir'
@@ -409,6 +423,7 @@ az:
   title_stats: Rəylər və Statistikalar
   title_partners: Tərəfdaşlar
   title_resources: Resurslar
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Kod Saatı təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür!
   title_tutorial_guidelines: Dərsliklər üzrə təlimatlar
   title_whole_school: Whole School Participation

@@ -997,6 +997,8 @@ lt:
               name: Dvejetainės apyrankės
             Binary Images:
               name: Dvejetainiai vaizdai
+            Play Lab:
+              name: Laboratorija
         csd2-2017:
           stages:
             Peer Review:

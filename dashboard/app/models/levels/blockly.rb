@@ -284,11 +284,10 @@ class Blockly < Level
       # migrate to the new keys
       set_unless_nil(level_options, 'instructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
+      set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
       if should_localize?
-        # Don't ever show non-English markdown instructions for Course 1 - 4 or
-        # the 20-hour course. We're prioritizing translation of Course A - F.
-        if script && (script.csf_international? || script.twenty_hour?)
+        if script && !script.localize_long_instructions?
           level_options.delete('markdownInstructions')
         else
           set_unless_nil(level_options, 'markdownInstructions', localized_long_instructions)
@@ -563,5 +562,28 @@ class Blockly < Level
     Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
+  end
+
+  # Display translated custom block text and options
+  def localized_shared_blocks(level_objects)
+    return nil if level_objects.blank?
+
+    level_objects_copy = level_objects.deep_dup
+    level_objects_copy.each do |level_object|
+      next if level_object.blank?
+      block_text = level_object[:config]["blockText"]
+      next if block_text.blank?
+      level_object[:config]["blockText"] = I18n.t("data.blocks.#{level_object[:name]}.text")
+      options = level_object[:config]["args"]
+      next if options.blank?
+      options.each do |option|
+        next if option["options"].blank?
+        option["options"]&.each_with_index do |name, i|
+          option["options"][i][0] = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[1]}")
+        end
+      end
+      level_object[:config]["args"] = options
+    end
+    level_objects_copy
   end
 end

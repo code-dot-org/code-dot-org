@@ -66,7 +66,7 @@ zh-TW:
             '8': 無
             '9': Roll
             '10': This or That
-            '11': Thiller
+            '11': Thriller
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -77,12 +77,28 @@ zh-TW:
         options:
           GROUP:
             sprites: 全部
+          FORMAT:
+            '"random"': 隨機
       Dancelab_makeNewDanceSprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": 到左方
             "{x: 300, y: 200}": 到右方
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 隨機
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          LAYOUT:
+            '"random"': 隨機
       Dancelab_randomColor:
         text: 隨機顏色
       Dancelab_setBackgroundEffect:
@@ -103,6 +119,13 @@ zh-TW:
             '"none"': 無
       Dancelab_setProp:
         options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"height"': 高度
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: 全部
           PROPERTY:
             '"scale"': 尺寸
             '"height"': 高度
@@ -287,16 +310,94 @@ zh-TW:
         text: 轉向-左方
       RyanLab_turnRight:
         text: 轉向-右方
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
       craft_ifPath:
+        text: |-
+          如果路徑{DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": 到前方
+            "'right'": 往右
+            "'left'": 往左
       craft_ifStandingOn:
+        text: |-
+          如果站在{TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": 藍色珊瑚
+            "'redCoralBlock'": 紅色珊瑚
+            "'sand'": 沙
+            "'wool_blue'": 深水
+            "'planksOak'": 橡木厚板
+            "'seaLantern'": 海燈籠
+      craft_ifStandingOnLimit:
+        text: |-
+          如果站在{TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 沙
-            "'planksOak'": 橡木厚板
+            "'darkPrismarine'": 暗海磷石
+            "'seaLantern'": 海燈籠
       craft_moveForward:
         text: 移動-向前
+      craft_placeBlock:
+        text: 放置{blockType}
+        options:
+          blockType:
+            '"strippedOak"': 條紋橡樹
+            '"strippedDarkOak"': 條紋黑橡樹
+            '"stoneBricks"': 石磚塊
+            '"mossyStoneBricks"': 青苔石磚
+            '"crackedStoneBricks"': 裂開的石磚塊
+            '"decorativeStoneBricks"': 裝飾用石磚塊
+            '"blueCoralBlock"': 藍色珊瑚方塊
+            '"pinkCoralBlock"': 粉紅色珊瑚方塊
+            '"magentaCoralBlock"': 洋紅色珊瑚方塊
+            '"redCoralBlock"': 紅色珊瑚方塊
+            '"yellowCoralBlock"': 黃色珊瑚方塊
+            '"blueDeadCoralBlock"': 藍色死亡珊瑚方塊
+            '"pinkDeadCoralBlock"': 粉紅色死亡珊瑚方塊
+            '"magentaDeadCoralBlock"': 洋紅色死亡珊瑚方塊
+            '"readDeadCoralBlock"': 紅色死亡珊瑚方塊
+            '"yellowDeadCoralBlock"': 黃色死亡珊瑚方塊
+            '"prismarine"': 海磷石
+            '"darkPrismarine"': 暗海磷石
+            '"seaLantern"': 海燈籠
+            '"packedIce"': 冰磚
+            '"blueIce"': 藍冰
+            '"blackConcrete"': 黑色混凝土
+            '"seaGrass"': 海草
+            '"kelp"': 大海帶
+            '"polishedGranite"': 平滑花崗岩
       craft_placeTorch:
         text: 放置火把
+      craft_repeatUntilConduit:
+        text: |-
+          重複直到導管完成
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          重複直到抵達目的地
+          {STATEMENT}
+      craft_spawnEntity:
+        text: 增生{ENTITY}
+      craft_turn:
+        text: 轉向{DIR}
+        options:
+          DIR:
+            right: 右 ↻
+            left: 左 ↺

@@ -49,6 +49,7 @@ fi:
   next_resource: Seuraava resurssi
   cancel: Peru
   okay: Selvä
+  or: tai
   heading_x_of_y: "%{heading} (sivu %{x} %{y}) sivusta"
   add_teacher_form:
     code:
@@ -95,6 +96,7 @@ fi:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft-tili
+    microsoft_v2_auth: Microsoft-tili
     clever: Clever-tili
     powerschool: Powerschool-tili
     forgot_password: Unohditko salasanasi?
@@ -119,7 +121,6 @@ fi:
     age: Ikä
     user_type: Oletko opiskelija tai opettaja?
     submit: Rekisteröidy
-    next: Seuraava
     teacher: Oletko opettaja?
     valid_username: Vapaa!
     invalid_username: Käyttäjätunnuksen tulee olla vähintään 5 merkkiä pitkä
@@ -264,7 +265,7 @@ fi:
     access_denied: Sinulla ei ole pääsyä tähän %{model}.
   nav:
     header:
-      finished_hoc: Olen suorittanut Koodaustuntini
+      finished_hoc: Olen suorittanut Koodituntini
       sign_in_to_save: Kirjaudu, jos haluat tallentaa edistymisesi
       free_play:
         playlab: Tee sovellus
@@ -306,14 +307,6 @@ fi:
       help_us: Auta meitä
       teach: Opettaa
       about: Tietoja
-    create_button:
-      create: Luo
-      applab: Sovelluslabra
-      artist: Taiteilija
-      gamelab: Pelilabra
-      playlab: Pelilabra
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Opettajan kotisivu
       district_dashboard: Koulupiirin hallintapaneeli
@@ -327,6 +320,13 @@ fi:
       team: Tiimi
       driver: Johtaja
       navigator: Neuvonantaja
+      create: Luo
+      applab: Sovelluslabra
+      artist: Taiteilija
+      gamelab: Pelilabra
+      playlab: Pelilabra
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Käyttäjän %{name} edistyminen
       progress: Sinun edistymisesi
@@ -601,6 +601,8 @@ fi:
     minecraft2016:
       title: Minecraft
       body: Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:

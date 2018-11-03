@@ -1142,6 +1142,8 @@ sv:
               name: Binära armband
             Binary Images:
               name: Binära bilder
+            Play Lab:
+              name: Spel-labb
         csd2-2017:
           stages:
             Peer Review:

@@ -53,7 +53,6 @@ module Pd::Application
       Pd::Teachercon1819Registration.find_by_pd_application_id(id)
     end
 
-    # @override
     def self.cohort_csv_header(optional_columns)
       columns = [
         'Date Accepted',
@@ -77,6 +76,59 @@ module Pd::Application
     end
 
     # @override
+    def self.csv_header(course, user)
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+      CSV.generate do |csv|
+        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
+        columns.push(
+          'Principal Approval',
+          'Principal Approval Form',
+          'Meets Criteria',
+          'Total Score',
+          'Regional Partner',
+          'School District',
+          'School',
+          'School Type',
+          'School Address',
+          'School City',
+          'School State',
+          'School Zip Code',
+          'Date Submitted',
+          'Notes',
+          'Status'
+        )
+        columns.push('Locked') if can_see_locked_status?(user)
+        csv << columns
+      end
+    end
+
+    # @override
+    def to_csv_row(user)
+      answers = full_answers
+      CSV.generate do |csv|
+        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row.push(
+          principal_approval_state,
+          principal_approval_url,
+          meets_criteria,
+          total_score,
+          regional_partner_name,
+          district_name,
+          school_name,
+          school_type,
+          school_address,
+          school_city,
+          school_state,
+          school_zip_code,
+          created_at.to_date.iso8601,
+          notes,
+          status
+        )
+        row.push locked? if self.class.can_see_locked_status?(user)
+        csv << row
+      end
+    end
+
     def to_cohort_csv_row(optional_columns)
       columns = [
         date_accepted,
@@ -142,6 +194,11 @@ module Pd::Application
     def self.filtered_labels(course)
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
+    end
+
+    # @override
+    def self.can_see_locked_status?(user)
+      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
     end
   end
 end

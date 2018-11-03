@@ -3343,6 +3343,10 @@ zh-CN:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: 如果您调用的函数正确, 这将是您要旅行的路径。
         Function_intro_Ryan_a: 您可以在程序中多次调用某一函数！尝试调用两次以解决该难题。
+      HOC 2018 Level_10_authored_hint:
+        voyage_aquatic_10a: "看到**海晶灯**![]（https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png）了吗？您怎样可以有条件地使用他们，穿过海底遗迹？\n\n"
+      HOC 2018 Level_9b_authored_hint:
+        voyage_aquatic_9a: 多漂亮的珊瑚礁啊！蓝色珊瑚在**右**边，红色珊瑚在**左**边，不要漏掉了！
       Harvesting_authored_hint:
         pointer_harvester_test: 我可以用什么样的模块来检查并做出决定？
       Inspirational Artwork_authored_hint:
@@ -7069,6 +7073,18 @@ zh-CN:
         courseB_starWars_prog9_a: 不要害怕犯错误! 即使你还没有解决这个关卡，运行代码, 看看会发生什么。
         courseB_starWars_prog9_b: 解决这个难题有很多方法。
         courseB_starWars_prog9_c: 使用`重复`循环有帮助吗？
+      courseC19_playLab_EOC1_authored_hint:
+        courseE_playLab_scaffold1_a: "`设置演员1为？？？图像`块可用于将演员添加到舞台。"
+        courseE_playLab_scaffold1_b: 将`设置演员`模块置于`当运行时`下, 使您的演员出现在程序的开头。
+        courseE_playLab_scaffold1_c: 使用`设置？？？背景`为您的场景选择背景。
+      courseC19_playLab_EOC2_authored_hint:
+        courseE_playLab_scaffold1_a: 打开`当按____方向键时` 事件的下拉菜单来更改模块控制的方向。
+        courseE_playLab_scaffold1_b: 您应该有四个`当按下方向键`事件模块，它们在每个之下朝着一个方向向前移动。
+        courseE_playLab_scaffold1_c: 当你完成后，你应该能够用方向键来移动你的英雄!
+      courseC19_playLab_EOC4_authored_hint:
+        courseE_playLab_scaffold4_a: 使用`得分`添加一分, 并用`扣分`减去一分。
+      courseC19_playLab_EOC5_authored_hint:
+        courseE_playLab_scaffold5_a: 要完成这个关卡, 你需要赢或输。使用`胜利结束游戏`或`失败结束游戏`模块完成。
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           将此块附加到 "当运行时" 模块：

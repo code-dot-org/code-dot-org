@@ -21,9 +21,6 @@ import {
 } from './locationPickerModule';
 import { calculateOffsetCoordinates } from '../utils';
 import dom from '../dom';
-import Radium from "radium";
-import songLibrary from "../code-studio/songLibrary.json";
-import * as danceRedux from "../dance/redux";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -38,36 +35,12 @@ const styles = {
   }
 };
 
-const SongSelector = Radium(class extends React.Component {
-  static propTypes = {
-    setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired
-  };
-
-  changeSong = (event) => {
-    this.props.setSong(event.target.value);
-  };
-
-  render() {
-    return (
-      <div>
-        <label><b>{i18n.selectSong()}</b></label>
-        <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(songLibrary).map((option, i) => (
-            <option key={i} value={option}>{songLibrary[option].title}</option>
-          ))}
-        </select>
-      </div>
-    );
-  }
-});
-
-
 class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    isProjectLevel: PropTypes.bool.isRequired,
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
@@ -77,9 +50,6 @@ class GameLabVisualizationColumn extends React.Component {
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
     mobileControlsConfig: PropTypes.object.isRequired,
-    danceLab: PropTypes.bool,
-    setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -183,9 +153,6 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
-        {this.props.danceLab &&
-          <SongSelector setSong={this.props.setSong} selectedSong={this.props.selectedSong}/>
-        }
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
@@ -238,16 +205,15 @@ class GameLabVisualizationColumn extends React.Component {
 export default connect(state => ({
   isResponsive: state.pageConstants.isResponsive,
   isShareView: state.pageConstants.isShareView,
+  isProjectLevel: state.pageConstants.isProjectLevel,
   spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
   mobileControlsConfig: state.mobileControlsConfig,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
-  selectedSong: state.selectedSong,
 }), dispatch => ({
   toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
   cancelPicker: () => dispatch(cancelLocationSelection()),
   updatePicker: loc => dispatch(updateLocation(loc)),
   selectPicker: loc => dispatch(selectLocation(loc)),
-  setSong: song => dispatch(danceRedux.setSong(song))
 }))(GameLabVisualizationColumn);

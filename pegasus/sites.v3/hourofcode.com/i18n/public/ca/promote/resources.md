@@ -19,7 +19,9 @@ nav: promote_nav
 
 ## Hang these posters in your school
 
-<%= view :promote_posters %>
+<%= view :promote_new_posters %>
+
+Looking for our posters from previous years? [Find them here](<%= resolve_url('/promote/previous-posters') %>)!
 
 <a id="social"></a>
 

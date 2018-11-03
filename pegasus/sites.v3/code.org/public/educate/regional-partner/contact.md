@@ -10,75 +10,69 @@ Code.org works with many organizations around the country to bring computer scie
 
 | Organization Name | Contact Name | Contact Email |
 |-------------------|--------------|---------------|
-| 9 Dots Community Learning Center | First Last | name@org.com |
-| A+ College Ready | N/A | N/A |
-| Alameda County Office of Education | First Last | name@org.com |
-| Alaska Staff Development Network | First Last | name@org.com |
-| Allegheny Intermediate Unit 3 | First Last | name@org.com |
-| BATEC | First Last | name@org.com |
-| Battelle Education | First Last | name@org.com |
-| Broward County Public Schools | First Last | name@org.com |
-| Center for STEM Education, The University of Texas at Austin | First Last | name@org.com |
-| Charles County Public Schools | First Last | name@org.com |
-| Code/Interactive | First Last | name@org.com |
-| CodeVA | First Last | name@org.com |
-| Contra Costa County Office of Education | First Last | name@org.com |
-| Delaware County Intermediate Unit | First Last | name@org.com |
-| DePaul University | First Last | name@org.com |
-| Educate Maine and the Maine Mathematics and Science Alliance | First Last | name@org.com |
-| Elementary Institute of Science | First Last | name@org.com |
-| Explora - Science Center and Children's Museum | First Last | name@org.com |
-| Florida International University | First Last | name@org.com |
-| Florida State College Jacksonville | First Last | name@org.com |
-| Fresno County Superintendent of Schools | First Last | name@org.com |
-| George Fox University | First Last | name@org.com |
-| Georgia Tech Center for Education Integrating Science, Mathematics, and Computing | First Last | name@org.com |
-| Grand Canyon University & Science Foundation Arizona | First Last | name@org.com |
-| Idaho Digital Learning Academy | First Last | name@org.com |
-| Illinois Math and Science Academy | First Last | name@org.com |
-| Institute for School Partnership Washington University in St. Louis | First Last | name@org.com |
-| Kentucky Science and Technology Corporation | First Last | name@org.com |
-| KIPP | First Last | name@org.com |
-| Los Angeles Unified School District | First Last | name@org.com |
-| Lumity | First Last | name@org.com |
-| Marquette University | First Last | name@org.com |
-| Maryland Codes | First Last | name@org.com |
-| Mason-Lake Oceana Mathematics and Science Center at West Shore | First Last | name@org.com |
-| McNeese State University | First Last | name@org.com |
-| Michigan Mathematics and Science Centers Network | First Last | name@org.com |
-| mindSpark Learning | First Last | name@org.com |
-| Mississippi State University | First Last | name@org.com |
-| New Bohemian Innovation Collaborative (NewBoCo) | First Last | name@org.com |
-| Nextech | First Last | name@org.com |
-| NorthEast Washington Educational Service District 101 | First Last | name@org.com |
-| Oklahoma Public School Resource Center (OPSRC) | First Last | name@org.com |
-| Orlando Science Center | First Last | name@org.com |
-| Puget Sound Educational Service District | First Last | name@org.com |
-| Rice University | First Last | name@org.com |
-| Riverside County Office of Education | First Last | name@org.com |
-| Sacramento County Office of Education | First Last | name@org.com |
-| Sacred Heart University | First Last | name@org.com |
-| Silicon Valley Education Foundation | First Last | name@org.com |
-| Southern Nevada Regional Professional Development Program | First Last | name@org.com |
-| Tampa Bay STEM Network | First Last | name@org.com |
-| TCNJ Center for Excellence in STEM Education | First Last | name@org.com |
-| Teachers Teaching Tech (MT) | First Last | name@org.com |
-| Teachers Teaching Tech (ND, SD, WY) | First Last | name@org.com |
-| Tennessee Department of Education | First Last | name@org.com |
-| The Friday Institute | First Last | name@org.com |
-| The STEM Center of Excellence at the The Citadel | First Last | name@org.com |
-| Twin Cities Public Television | First Last | name@org.com |
-| UNH STEM Teachers' Collaborative | First Last | name@org.com |
-| Union Station | First Last | name@org.com |
-| University of Nebraska | First Last | name@org.com |
-| University of Rhode Island | First Last | name@org.com |
-| University of Texas at Dallas | First Last | name@org.com |
-| USC Viterbi VAST | First Last | name@org.com |
-| Utah STEM Action Center | First Last | name@org.com |
-| Vermont Computer Science Alliance | First Last | name@org.com |
-| West Virginia University | First Last | name@org.com |
-| WNY STEM Hub | First Last | name@org.com |
-| Women in Technology | First Last | name@org.com |
+| A+ College Ready | Carol Yarbrough | carol@aplusala.org |
+| Alameda County Office of Education | Francisco Nieto| fnieto@acoe.org |
+| Alaska Staff Development Network | Cheryl Bobo | cbobo@alaskaacsa.org |
+| Allegheny Intermediate Unit 3 | Tyler Samstag | tyler.samstag@aiu3.net |
+| Arizona (no partner) | Sung Kim | sung@code.org |
+| BATEC | Deborah Boisvert | Deborah.Boisvert@umb.edu |
+| Battelle Education | Kelly Gaier Evans | gaierk@battelle.org |
+| Broward County Public Schools | Lisa Milenkovic | browardcodes@gmail.com |
+| Center for STEM Education, The University of Texas at Austin | Ellie Goldberg | ellie.goldberg@utexas.edu |
+| CodeVA | Jon Vandeventer | jonvandeventer@codevirginia.org |
+| Contra Costa County Office of Education | Hilary Dito | hdito@cccoe.k12.ca.us|
+| Delaware County Intermediate Unit | Sara Frey | sfrey@dciu.org |
+| Educate Maine and the Maine Mathematics and Science Alliance | Jason Judd | jason@educatemaine.org |
+| Elementary Institute of Science | Jim Stone | jstone@eisca.org |
+| Explora - Science Center and Children's Museum | Kevin Dilley| kdilley@explora.us |
+| Florida International University | Giri Narasimhan | academy-admin@cis.fiu.edu|
+| Fresno County Superintendent of Schools | Marlena Hebern| mhebern@fcoe.org |
+| George Fox University | Yune Tran | ytran@georgefox.edu |
+| Georgia Tech Center for Education Integrating Science, Mathematics, and Computing | Chris Thompson | chris.thompson@ceismc.gatech.edu |
+| Idaho Digital Learning Academy | Jennifer Caprile | jennifer.caprile@idla.k12.id.us|
+| Illinois Math and Science Academy | Angela Rowley | arowley@imsa.edu |
+| Institute for School Partnership Washington University in St. Louis | Jaime Gilligan | gilliganj@wustl.edu |
+| Kentucky Science and Technology Corporation | Monique M. Rice| mrice@kstc.com |
+| Los Angeles Unified School District | Dawn Guest-Johnson | dmg0923@lausd.net |
+| Lumity | Jeanette Simenson | jeanette@coeusscholars.space |
+| Marquette University | Dennis Brylow | brylow@pd.code.org |
+| Maryland Codes | Heather Lageman | heather.lageman@gmail.com |
+| McNeese State University | Cate Anderson | canderson@mcneese.edu |
+| mindSpark Learning | Tina Granato| ntina@mymindsparklearning.org|
+| Mississippi State University | Sandra Gibson| sandra.gibson@rcu.msstate.edu |
+| Montana (no partner)| Alana Aaron | alana@code.org |
+| Mouse| Carlos Leon | educators@mouse.org |
+| New Bohemian Innovation Collaborative (NewBoCo) | Samantha Dahlby | samantha@newbo.co |
+| Nextech | Stephanie Zircher | teachers@nextech.org |
+| NorthEast Washington Educational Service District 101 | Tammie Schrader | tschrader@esd101.net |
+| Oklahoma Public School Resource Center (OPSRC) | McKalyn Danner | mckalyn.danner@opsrc.net |
+| Orlando Science Center | Emily Duguid| classes@osc.org|
+| Puget Sound Educational Service District | Greta Bornemann | gbornemann@psesd.org |
+| Rice University | Susan Troutman| rusmpcoding@rice.edu |
+| Riverside County Office of Education | Mike Leffin | mleffin@rcoe.us |
+| Sacramento County Office of Education | Dave Chun | dchun@scoe.net |
+| Sacred Heart University | Cenk Erdil | erdild@sacredheart.edu |
+| Science City at Union Station | Emily Meyer| code@unionstation.org |
+| Silicon Valley Education Foundation | Justin Sewell | ihub@svefoundation.org |
+| Southern Nevada Regional Professional Development Program | Frank Mathews| frankm@rpdp.net |
+| STEMworks | Manda Tong | manda.tong@medb.org |
+| Tampa Bay STEM Network | Larry Plank | larry.plank@sdhc.k12.fl.us |
+| TCNJ Center for Excellence in STEM Education | Henry Harms| Harms@tcnj.edu |
+| Techonology & Innovation in Education (ND, SD, WY)| Kimberly Clark | kclark@tie.net|
+| Tennessee Department of Education | Tandra Martin | Tandra.Martin@tn.gov|
+| The Friday Institute | Sam Morris | srmorri3@ncsu.edu |
+| The STEM Center of Excellence at the The Citadel | Jennifer Albert | jalbert@citadel.edu |
+| Twin Cities Public Television | Alex Dexheimer | adexheimer@tpt.org |
+| UNH STEM Teachers' Collaborative | Laura Nickerson | laura.nickerson@unh.edu |
+| University of Nebraska | Koichi Sato | ksato2@unl.edu |
+| University of Rhode Island | Jessica Barrett| jwbarrett@uri.edu |
+| USC Viterbi VAST | Katie Mills | vast@usc.edu |
+| Utah STEM Action Center | Erin Paulsen |erinpaulsen@utah.gov |
+| Vermont Computer Science Alliance | Jennifer Fribush | jfribush@neoti.org |
+| West Shore ESD | Kathy Surd | ksurd@wsesd.org|
+| West Virginia University | Amanda Jelsema | codewv@mail.wvu.edu|
+| WNY STEM Hub | Kaci Nowadly| wnystemhub.code@gmail.com |
+
 
 
 

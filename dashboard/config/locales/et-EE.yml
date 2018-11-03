@@ -45,6 +45,7 @@ et:
   next_resource: Järgmised materjalid
   cancel: Tühista
   okay: Olgu
+  or: või
   heading_x_of_y: "%{heading} (leht %{x} of %{y})"
   add_teacher_form:
     code:
@@ -91,6 +92,7 @@ et:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsofti konto
+    microsoft_v2_auth: Microsofti konto
     clever: Tark konto
     forgot_password: Unustasid oma salasõna?
     need_confirmation: Ei saanud kinnituse juhiseid?
@@ -120,7 +122,6 @@ et:
     age: Vanus
     user_type: Kas sa oled õpilane või õpetaja?
     submit: Liitu
-    next: Järgmine
     teacher: Kas sa oled õpetaja?
     valid_username: Vaba!
     invalid_username: Kasutajanimi peab olema vähemalt 5 tähemärgi pikkune
@@ -256,14 +257,6 @@ et:
       educate_hoc: KoodiTund
       teach: Õpeta
       about: Info
-    create_button:
-      create: Loo
-      applab: App Lab
-      artist: Kunstnik
-      gamelab: Game Lab
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -277,6 +270,13 @@ et:
       team: Võistkond
       driver: Sisse logitud
       navigator: Parnter
+      create: Loo
+      applab: App Lab
+      artist: Kunstnik
+      gamelab: Game Lab
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
@@ -590,6 +590,8 @@ et:
     minecraft2016:
       title: Minecraft
       body: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
       body: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti

@@ -122,7 +122,7 @@
   "setTeam": "Vælg hold",
   "setTeamRandom": "Vælg tilfældigt hold",
   "shareBounceTwitter": "Se det hoppe-spil jeg lavede. Jeg skrev det selv med @codeorg",
-  "shareBounceTwitterDonor": "",
+  "shareBounceTwitterDonor": "Se det hoppe-spil, som jeg lavede. (Tak til {donor} for støtten til @codeorg)",
   "shareGame": "Del dit spil:",
   "turnLeft": "drej til venstre",
   "turnRight": "drej til højre",

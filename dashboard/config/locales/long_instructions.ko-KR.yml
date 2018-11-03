@@ -318,6 +318,34 @@ ko:
       Function intro Ryan: "작업 공간에 있는 '다리 짓기' **함수가** 보이죠?  강을 건너는 해결 방법은 이미 주어졌어요!
         \r\n \r\n녹색의 작은 블록을 작업 공간으로 두 번 가져와 길을 만들고 {currentPlayerName}이(가) 레드스톤 횃불
         [redstone_torch] 쪽으로 갈 수 있게 도와주세요."
+      HOC 2018 Level_1: "항해를 앞둔 여러분에게는 보급품이 필요합니다. **상자**![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)에서
+        **보트**![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)를
+        얻으세요.\n\n"
+      HOC 2018 Level_10: "이것은 바다 유적 어딘가에 숨어 있는 **오징어**![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)입니다.
+        여러분은 발견할 수 있을까요?\n\n"
+      HOC 2018 Level_11: 검은색 콘크리트 주변에 **프리즈머린** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        벽을 만듭니다. 이것은 **도관**![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)을
+        활성화하여 챌린지를 완료합니다!
+      HOC 2018 Level_12: 축하합니다! 활짝 열린 수중 월드가 여러분을 기다립니다. 산호초를 만드세요! 화산을 만드세요! 난파선을
+        만드세요! 모든 것은 여러분에게 달렸습니다.
+      HOC 2018 Level_2: 넓은 바다에서는 헤엄치는 것보다 보트를 타는 것이 훨씬 쉽습니다! 부두 끝으로 가서 탑승하세요.
+      HOC 2018 Level_3: 노를 쥐고 보트를 조종하여 바다를 건너 **대구**![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png)를
+        잡으세요.
+      HOC 2018 Level_4: 대구를 **돌고래**![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png)에게
+        먹여 봅시다. 반복 블록을 사용해서 바다를 빠르게 건너세요.
+      HOC 2018 Level_5: 어딘가에 **앵무조개**![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)가
+        숨어 있어요! 난파선을 탐험하고 **상자**![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)에
+        도달하세요.
+      HOC 2018 Level_6: 밖은 추워 보이네요! 수중 유적으로 가는 길에 **연어**![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)를
+        잡으세요.
+      HOC 2018 Level_7a: "수중 유적을 발견했습니다. 사암에서 **프리즈머린**![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        보물이 들어 있는 **상자**![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)를
+        찾으세요.\n\n"
+      HOC 2018 Level_8: "처음에는 빙산이더니 이제는 용암인가요? 이 화산 섬을 지나 산호초에서 **열대어**![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)를
+        찾으세요.\n\n"
+      HOC 2018 Level_9b: "산호초에 도달했습니다. 이제 **바다의 심장**![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)을
+        찾을 시간이에요! 파란색과 빨간색 산호를 사용해서 보물 **상자**![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)에
+        도달하세요.\n\n"
       K-1 Bee Loops 2: 1개의 반복 구조를 사용해서 이동한 후, 꽃꿀을 모으고, 꿀을 만드세요!
       K-1 Bee Loops 3: 3개의 반복(횟수) 구조를 사용해서, 꽃꿀을 모으고 꿀을 만들어보세요!
       K-1 Bee Loops 4: 반복(횟수) 구조를 사용해서, 꽃꿀을 모으고 꿀을 만들고, 이동해 보세요!

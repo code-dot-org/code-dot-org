@@ -823,6 +823,8 @@ he:
               name: תמונות בינאריות
             Binary Artist Puzzles:
               name: חידות של האמן הבינארי
+            Play Lab:
+              name: מעבדת הצעצועים
         csd2-2017:
           stages:
             Intro to HTML:
@@ -1602,7 +1604,19 @@ he:
           stages:
             Artist:
               name: אמן
+        dance:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים
         frozen-2018-test-b:
           stages:
             Artist:
               name: אמן
+        dance--draft:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים
+        dance-draft:
+          stages:
+            Dance Party:
+              name: מסיבת ריקודים

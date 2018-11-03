@@ -1002,6 +1002,8 @@ fi:
               name: Binäärikorut
             Binary Images:
               name: Binäärikuvat
+            Play Lab:
+              name: Pelilabra
         csd2-2017:
           stages:
             Lists:

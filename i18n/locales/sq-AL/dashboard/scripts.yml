@@ -999,6 +999,8 @@ sq:
               name: Byzylykët Binarë
             Binary Images:
               name: Imazhet Binare
+            Play Lab:
+              name: Play Lab
         csd2-2017:
           stages:
             Peer Review:

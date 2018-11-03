@@ -790,9 +790,9 @@ zh-CN:
         **如何做到：**在代码模式中为您的 "对！" 按钮添加一个新的`onEvent()`（当事件发生时）模块。在其中添加一个`setScreen()`（设置屏幕）块, 将屏幕切换到`"rightScreen"`（右屏幕）。\r
         \r
         **难住了？点这里: ** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
-      Applab AllTheThings ResourcesTab AllResources: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      Applab AllTheThings ResourcesTab MapReference: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      Applab AllTheThings ResourcesTab ReferenceLinks: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Applab AllTheThings ResourcesTab AllResources: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Applab AllTheThings ResourcesTab MapReference: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Applab AllTheThings ResourcesTab ReferenceLinks: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Artist Autorun Test: 现在，将函数放到循环里来画这三个正方形。
       Artist Inspiration: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！\\r\n\\r\n如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 \n\\r\n\\r\n注意：我们已经用`set alpha`（设置透明度）模块来让花瓣慢慢淡出。"
       Bergeron Robot Maze1: "可以帮我抓住这只顽皮的猪吗？\\r\n\\r\n在“当运行时”模块下放几个“向前移动”的模块，然后点击“运行”。 "
@@ -1059,29 +1059,37 @@ zh-CN:
         
         * 通过添加`<p>`和`</p>`将你刚才写的代码里分成至少两个段落。
         * 与旁边的相比较。与你的文本显示方法相比，有什么变化了？
-      CSD U2 HTML Adding Paragraphs pt 2_2018: |-
+      CSD U2 HTML Adding Paragraphs pt 2_2018: |2
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         
-        <summary>**什么是段落元素？**</summary>
+        <summary>
+        
+        **什么是段落元素？**
+        
+        </summary>
         段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        
         </details>
         <details>
-        <summary>**我该如何创建多个段落呢？**</summary>
+        <summary>
+        
+        **我该如何创建多个段落呢？**
+        
+        </summary>
         这是一行里有多个段落标签的例子。这个代码会放在你的网页的body部分里。
         
-        <pre>
-        `<p>这是一个有两句话的段落</p>`
-        `<p>这是另一个段落。</p>`
-        </pre>
-        
+        ```
+        <p>这是一个有两句话的段落</p>
+        <p>这是另一个段落。</p>
+        ```
         
         </details>
         </div>
         
         # 使用段落标签
         
-        `<p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。
+         `<p>` `</p>`标签或者叫"段落"标签会将一段文本包围起来，这表示这段文本是一个段落。在段落标签里加入文本让计算机知道应该显示时有点不同。通常是在其它文本间增加空间。
         
         # 这样做
         
@@ -1148,16 +1156,17 @@ zh-CN:
         * 修复缺失的代码，让网页能够正确的显示
         * 将你修复的问题与旁边的同学进行比较
       CSD U2 HTML Debug Paragraphs_2018: |-
-        <div style="float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
+        
         <summary>
         
         <strong>什么是段落元素？</strong>
         
         </summary>
+        
         段落是通过开始的(`<p>`)和关闭的(`</p>`)标签来表示的。在HTML里的段落可以是从一个单词到一大堆句子，任何长度的文本。段落能将句子分组，在不同组之间加上一些空间。
+        
         </details>
         <details>
         <summary>
@@ -1165,7 +1174,9 @@ zh-CN:
         <strong>为什么有时HTML不正确，页面也能显示出来？</strong>
         
         </summary>
-        HTML被你的网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。
+        
+        HTML 被网络浏览器所读取，来生成网页。因为人们经常会犯一些小错误，浏览器被开发成可以猜测网页代码的行为。有时，不同的浏览器会作出不同的猜测！让代码行为一致的唯一办法，是总是正确的使用标签。
+        
         </details>
         <details>
         <summary>
@@ -1173,7 +1184,9 @@ zh-CN:
         <strong>为什么代码有时候会变成粉红色？</strong>
         
         </summary>
+        
         网络实验室被开发成能够自动检测一些HTML中的错误。当它注意到一个错误时，就会将代码显示为粉色。这表示粉色的地方或者粉色的代码之前有错误。你需要仔细的调试，来找到错误。
+        
         </details>
         </div>
         
@@ -1286,27 +1299,31 @@ zh-CN:
         
       CSD U2 Info Page Images: "# 添加图片\\r\n\\r\n你有了图片及其署名信息，现在是时候开始装扮你的新网页了。 \\r\n\\r\n# 这样做\\r\n\\r\n把你的图片上传到网站实验室中， 并使用`<img>`标签,把它们添加到需要的地方。 对于每张图片:\\r\n\\r\n* 添加一个描述性的`alt`属性\\r\n* 在图片下添加归属来源，包含\\r\n\\t*\n原创者的名字 (如果有的话)\\r\n    * 图片的标题 (如果有的话)\\r\n    *\n原网站的地址\\r\n    * 原图片发布的版权,可以用文字(如 CC-BY) 或者使用 [Creative Commons website](https://creativecommons.org/about/downloads/) 的标志\\r\n\\r\n例如\\r\n\\r\n![Sad Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\\r\n\\r\nFlickr 用户 Soggydan 的长毛达克斯猎狗画像(ht<span>tps://</span>commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg)\n- CC-BY"
       CSD U2 Inspector Warm Up: |-
-        <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
-        <summary>**<span>
-        如何使用检查器工具？ </span>**</summary>
-        检查器是在网络实验室里学习你不太熟悉的编码的一种有效途径。 要打开检验工具， 请点击<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
-        PM.png" style="width:100px">。你会知道检验工具是否是开着的，因为按钮将变白色并注明"检查器：打开"。 一旦你打开检查器，你可以把鼠标放在任何事物的上面查看预览。网络实验室将突出显示页面上指到部分的代码。 
-        </details>
         
+        <summary>
+        
+        **<span>
+        如何使用检查器工具？ </span>**
+        
+        </summary>
+        
+        检查器是在网络实验室里学习你不太熟悉的编码的一种有效途径。 点击<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        PM.png" style="width:100px">打开检验工具。通过按钮将变白色并注明"检查器：打开"，可以知道检验工具是否是开着的。打开检查器后，就可以把鼠标放在任何元素上查看预览。网络实验室将突出显示页面上指到部分的代码。 
+        
+        
+        </details>
         </div>
         
-        #
-        探索 HTML
+        # 探索 HTML
         
         这是个HTML格式书写的网页，你将学习如何用它，但让我们先探索一下如何使用检查器。 
         
         # 这样做
         
         * 点击右边的"如何使用检查器？"的提示来了解如何使用它。 
-        *
-        参照网页上的指示来探索网页并和合作伙伴讨论如何使用它。
+        * 参照网页上的指示来探索网页并和合作伙伴讨论如何使用它。
       CSD U2 Inspector Warm Up_2018: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
@@ -1529,59 +1546,81 @@ zh-CN:
         <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png"
         style=" max-width:500px">
       CSD U2 add file: |2
-        <div style="float: right; height:
-        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**什么是样式表?**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS?**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
-        <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        <details>\r
-        <summary>**如何创建新的样式表?**</summary>\r
-        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。\r
-        </details>\r
-        <details>\r
-        <summary>**如何命名我的样式表?**</summary>\r
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        
+        <summary>
+        
+        **什么是样式表?**
+        
+        </summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary>
+        
+        **什么是CSS?**
+        
+        </summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        <details>
+        <summary>
+        
+        **如何创建新的样式表?**
+        
+        </summary>
+        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。
+        </details>
+        <details>
+        <summary>
+        
+        **如何命名我的样式表?**
+        
+        </summary>
         你可以随意命名，但最好选一个相关的名字例如 "style.css"（样式表）
-        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。.\r
-        </details>\r
-        <details>\r
-        <summary>**如何重新命名文件?**</summary>\r
-        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。\r
-        </details>\r
-        <details>\r
-        <summary>**如何在网页里添加样式表?**</summary>\r
-        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。\r
-        </details>\r
-        </div>\r
-        #
-        添加样式表\r
-        \r
-        这是你之前的项目。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。\r
-        \r
-        1.
-        为你的项目创建新的格式表。.\r
-        2. 重新命名格式表文档.\r
-        3.
-        把你的格式表添加到你的HTML网页。\r
-        \r
-        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png"
-        style=" max-width:500px">
+        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。
+        </details>
+        <details>
+        <summary>
+        
+        **如何重新命名文件?**
+        
+        </summary>
+        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。
+        </details>
+        <details>
+        <summary>
+        
+        **如何在网页里添加样式表?**
+        
+        </summary>
+        
+        
+        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。
+        
+        
+        </details>
+        </div>
+        # 添加样式表
+        
+        这是你之前的项目。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。
+        
+        1. 为你的项目创建新的格式表。
+        2. 重新命名格式表文档。
+        3. 把你的格式表添加到你的HTML网页。
+        
+        <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png" style=" max-width:500px">
       CSD U2 add file_2018: |2
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -1660,48 +1699,66 @@ zh-CN:
         * 请共同完成页面, 注意格式化。
         * 与另一组对比看看页面是否相同。
       CSD U2 classes modify: |2
-        <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**代码是如何起作用的？**</summary>\r
-        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\r
-        \r
-        样式表中的类是像下面的代码。\r
-        \r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
-        \r
-        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
-        </details>\r
-        <details>\r
-        <summary>**什么样的规则能够加到类的规则组里？**</summary>\r
-        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        <details>\r
-        <summary>**我的RBG值不一样，但也是对的。**</summary>\r
-        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\r
-        \r
-        </details>\r
-        </div>\r
-        # 添加规则\r
-        \r
-        冬天的词语应该用同样的颜色和字体。\r
-        \r
-        *
-        在样式表种找到给冬天的词语的样式组。\r
-        * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。\r
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        
+        <summary>
+        
+        **代码是如何起作用的？**
+        
+        </summary>
+        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。
+        
+        样式表中的类是像下面的代码。
+        
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。
+        
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。
+        </details>
+        <details>
+        <summary>
+        
+        **什么样的规则能够加到类的规则组里？**
+        
+        </summary>
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么选择器前面有个句点？**
+        
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么网页开发人员需要用类？**
+        
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        <details>
+        <summary>
+        
+        **我的RBG值不一样，但也是对的。**
+        
+        </summary>
+        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。
+        
+        </details>
+        </div>
+        # 添加规则
+        
+        冬天的词语应该用同样的颜色和字体。
+        
+        * 在样式表种找到给冬天的词语的样式组。
+        * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。
         * 为冬天词语添加任何你喜欢的规则。
       CSD U2 classes modify_2018: |2
         <div style="float: right;
@@ -1748,195 +1805,232 @@ zh-CN:
         * 在样式表种找到给冬天的词语的样式组。
         * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。
         * 为冬天词语添加任何你喜欢的规则。
-      CSD U2 classes sample: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**代码是如何起作用的？**</summary>\\r\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\\r\n\\r\n样式表中的类是像下面的代码。\\r\n\\r\n<pre>.winter {\\r\n  color: rgb(195,230,255);\\r\n}</pre>\\r\n\\r\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\\r\n\\r\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么选择器前面有个句点？**</summary>\\r\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\\r\n</details>\\r\n<details>\\r\n<summary>**为什么网页开发人员需要用类？**</summary>\\r\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\\r\n</details>\\r\n<details>\\r\n<summary>**我的RBG值不一样，但也是对的。**</summary>\\r\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\\r\n\\r\n</details>\\r\n</div>\\r\n# 类(Class)\\r\n\\r\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\\r\n\\r\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\\r\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\\r\n*\n看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \\r\n* 和伙伴讨论一下这些代码是如何起作用的。"
+      CSD U2 classes sample: "<div style=\"float: right;\nheight: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n\n**代码是如何起作用的？**\n\n</summary>\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\n\n样式表中的类是像下面的代码。\n\n<pre>.winter {\n  color: rgb(195,230,255);\n}</pre>\n\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\n\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\n</details>\n<details>\n<summary>\n\n**为什么选择器前面有个句点？**\n\n</summary>\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\n</details>\n<details>\n<summary>\n\n**为什么网页开发人员需要用类？**\n\n</summary>\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\n</details>\n<details>\n<summary>\n\n**我的RBG值不一样，但也是对的。**\n\n</summary>\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\n\n</details>\n</div>\n# 类(Class)\n\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\n\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\n* 看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \n* 和伙伴讨论一下这些代码是如何起作用的。"
       CSD U2 classes sample_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>代码是如何起作用的？</strong>\n</summary>\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\n\n样式表中的类是像下面的代码。\n\n<pre>.winter {\n  color: rgb(195,230,255);\n}</pre>\n\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\n\n将winter类加到一个`h5`元素的代码是`<h5 class=\"winter\">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\n</details>\n<details>\n<summary>\n<strong>为什么选择器前面有个句点？</strong>\n</summary>\n在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\n</details>\n<details>\n<summary>\n<strong>为什么网页开发人员需要用类？</strong>\n</summary>\n即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\n</details>\n<details>\n<summary>\n<strong>我的RBG值不一样，但也是对的。</strong>\n</summary>\n\n因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\n\n</details>\n</div>\n# 类(Class)\n\n在这个页面中，网页开发人员用类来给冬天颜色一些词语。\n\n* 看一看冬天词语的HTML代码。为什么\"snowy\"（下雪的）是唯一一个没有冬天颜色的词语？\n* 添加HTML代码，来让\"snowy\"和其它词语一样用上同样的冬天的蓝色。\n* 看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \n* 和伙伴讨论一下这些代码是如何起作用的。"
       CSD U2 classes spring: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
-        For
-        为了让代码起作用，你需要创建一个spring（春天）的类（class），并将元素加到这个类中。r
-        \r
-        spring类已经在样式表中创建好了，但还没有任何规则。\r
-        \r
-        <pre>.spring {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。\r
-        \r
-        你还需要添加一些元素到HTML文件里的spring类中。\r
-        \r
-        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。\r
-        </details>\r
-        <details>\r
-        <summary>***什么样的规则能够加到类的规则组里？**</summary>\r
-        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        </div>\r
-        # 春天类\r
-        \r
-        现在，你的春天类已经准备好了，可以开始其它季节了。\r
-        \r
-        *
-        在样式表中，找到春天词语样式的空的规则集。\r
-        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。\r
+        markdown="1">
+        <details>
+        <summary>
+        
+        **这些代码是如何起作用的？**
+        
+        </summary>
+        为了让代码起作用，你需要创建一个spring（春天）的类（class），并将元素加到这个类中。
+        
+        spring类已经在样式表中创建好了，但还没有任何规则。
+        
+        <pre>.spring {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。
+        
+        你还需要添加一些元素到HTML文件里的spring类中。
+        
+        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。
+        </details>
+        <details>
+        <summary>
+        
+        **什么样的规则能够加到类的规则组里？**
+        
+        </summary>
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么选择器前面有个句点？**
+        
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么网页开发人员需要用类？**
+        
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        </div>
+        # 春天类
+        
+        现在，你的春天类已经准备好了，可以开始其它季节了。
+        
+        * 在样式表中，找到春天词语样式的空的规则集。
+        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。
         * 将spring类增加到HTML页面的春天元素上。
       CSD U2 classes spring_2018: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
+        markdown="1">
+        <details>
+        <summary>**这些代码是如何起作用的？**</summary>
         For
         为了让代码起作用，你需要创建一个spring（春天）的类（class），并将元素加到这个类中。r
-        \r
-        spring类已经在样式表中创建好了，但还没有任何规则。\r
-        \r
-        <pre>.spring {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。\r
-        \r
-        你还需要添加一些元素到HTML文件里的spring类中。\r
-        \r
-        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。\r
-        </details>\r
-        <details>\r
-        <summary>***什么样的规则能够加到类的规则组里？**</summary>\r
-        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        </div>\r
-        # 春天类\r
-        \r
-        现在，你的春天类已经准备好了，可以开始其它季节了。\r
-        \r
-        *
-        在样式表中，找到春天词语样式的空的规则集。\r
-        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。\r
+        
+        spring类已经在样式表中创建好了，但还没有任何规则。
+        
+        <pre>.spring {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。
+        
+        你还需要添加一些元素到HTML文件里的spring类中。
+        
+        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。
+        </details>
+        <details>
+        <summary>***什么样的规则能够加到类的规则组里？**</summary>
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。
+        </details>
+        <details>
+        <summary>**为什么选择器前面有个句点？**</summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>**为什么网页开发人员需要用类？**</summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        </div>
+        # 春天类
+        
+        现在，你的春天类已经准备好了，可以开始其它季节了。
+        
+        * 在样式表中，找到春天词语样式的空的规则集。
+        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。
         * 将spring类增加到HTML页面的春天元素上。
       CSD U2 classes summer: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**代码是如何起作用的？**</summary>\r
-        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。\r
-        \r
-        这个类需要在样式表中用下面的代码来创建。\r
-        \r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
+        markdown="1">
+        <details>
+        <summary>
+        
+        **代码是如何起作用的？**
+        
+        </summary>
+        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。
+        
+        这个类需要在样式表中用下面的代码来创建。
+        
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
         This
-        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
-        \r
-        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
-        </details>\r
-        <details>\r
-        <summary>**如何创建一个新的规则集（rule-set）？**</summary>\r
-        你能按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。\r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        选择器和颜色的值会有所不同，但形式是一样的。\r
-        \r
-        <pre>.classname {\r
-          property1: value1;\r
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。
+        
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。
+        </details>
+        <details>
+        <summary>
+        
+        **如何创建一个新的规则集（rule-set）？**
+        
+        </summary>
+        可以按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        选择器和颜色的值会有所不同，但形式是一样的。
+        
+        <pre>.classname {
+          property1: value1;
           property2:
-        value2;\r
-        }</pre>\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        </div>\r
-        # 夏天和秋天的类\r
-        \r
-        *
-        在样式表里，为"summer"（夏天）类创建一个新的规则集。\r
-        *
-        在夏天类里创建一个规则来使用夏天的RGB颜色。\r
-        *
-        将夏天类添加到HTML的夏天元素里。\r
+        value2;
+        }</pre>
+        </details>
+        <details>
+        <summary>
+        
+        **为什么选择器前面有个句点？**
+        
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        
+        **为什么网页开发人员需要用类？**
+        
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        </details>
+        </div>
+        
+        # 夏天和秋天的类
+        
+        * 在样式表里，为"summer"（夏天）类创建一个新的规则集。
+        * 在夏天类里创建一个规则来使用夏天的RGB颜色。
+        * 将夏天类添加到HTML的夏天元素里。
         * 为autumn（秋天）类应用同样的步骤。
       CSD U2 classes summer_2018: |2
-        <div style="float: right;
-        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**代码是如何起作用的？**</summary>\r
-        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。\r
-        \r
-        这个类需要在样式表中用下面的代码来创建。\r
-        \r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+        
+        <summary>
+        <strong>**代码是如何起作用的？**</strong>
+        </summary>
+        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。
+        
+        这个类需要在样式表中用下面的代码来创建。
+        
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
         This
-        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
-        \r
-        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
-        </details>\r
-        <details>\r
-        <summary>**如何创建一个新的规则集（rule-set）？**</summary>\r
-        你能按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。\r
-        <pre>.winter {\r
-          color: rgb(195,230,255);\r
-        }</pre>\r
-        \r
-        选择器和颜色的值会有所不同，但形式是一样的。\r
-        \r
-        <pre>.classname {\r
-          property1: value1;\r
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。
+        
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。
+        </details>
+        <details>
+        <summary>
+        
+        <strong>**如何创建一个新的规则集（rule-set）？**</strong>
+        
+        </summary>
+        你能按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。
+        <pre>.winter {
+          color: rgb(195,230,255);
+        }</pre>
+        
+        选择器和颜色的值会有所不同，但形式是一样的。
+        
+        <pre>.classname {
+          property1: value1;
           property2:
-        value2;\r
-        }</pre>\r
-        </details>\r
-        <details>\r
-        <summary>**为什么选择器前面有个句点？**</summary>\r
-        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么网页开发人员需要用类？**</summary>\r
-        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
-        </details>\r
-        </div>\r
-        # 夏天和秋天的类\r
-        \r
-        *
-        在样式表里，为"summer"（夏天）类创建一个新的规则集。\r
-        *
-        在夏天类里创建一个规则来使用夏天的RGB颜色。\r
-        *
-        将夏天类添加到HTML的夏天元素里。\r
+        value2;
+        }</pre>
+        </details>
+        <details>
+        <summary>
+        
+        **为什么选择器前面有个句点？**
+        
+        </summary>
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。
+        </details>
+        <details>
+        <summary>
+        <strong>**为什么网页开发人员需要用类？**</strong>
+        </summary>
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。
+        
+        </details>
+        </div>
+        
+        # 夏天和秋天的类
+        
+        * 在样式表里，为"summer"（夏天）类创建一个新的规则集。
+        * 在夏天类里创建一个规则来使用夏天的RGB颜色。
+        * 将夏天类添加到HTML的夏天元素里。
         * 为autumn（秋天）类应用同样的步骤。
       CSD U2 commenting: |-
         # 注释
@@ -2085,11 +2179,12 @@ zh-CN:
         (浏览<a href="https://creativecommons.org/choose/" target="_new">知识共享</a> 获得创建这个HTMl的帮助。)
       CSD U2 images intro: "# 图片\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n<summary>**如何添加图片？**</summary>\n`<img>`让你在网页中能够加入图片。<br><br>\n\n例如：\n<pre>&lt;img\nsrc=\"dog.png\" alt=\"跳跃的狗\"/&gt;</pre><br><br>\n\n为了让浏览器知道应该用哪个文件，这里有些额外的信息，叫做 **attribute**（属性），它被加到了&lt;img&gt;标签的括号里属性`src`是**s**ou**rc**e（来源）的缩写，里面写了图片的名字。图片文件名包括了它的扩展名，即这个图片的编码类型。常见的图片扩展名有：.jpg, .jpeg, .png。<br><br>\n\n除了src属性，图片还可以有`alt`（替换文本）属性来描述图片。这个属性对于图片不能正确加载时，和有视觉障碍的人特别重要。<br><br>\n\n因为`<img>`的开始和关闭都在同一个标签里，所以它是一个**自闭和标签**。通常，我们会在图片标签结束前加入`/`来表示这个标签关闭了。\n\n</details>\n<details>\n<summary>**什么是空元素？**</summary>\n`<img>` 标签是一个**空元素**的例子，因为它的开始、关闭都在同一个标签里。为了标记它，我们将通常放在结束标签里的`/`放到了图片标签的结尾处。空元素不需要关闭标签，因为它不需要再标签之间插入文本内容。影响内容显示的都在属性中进行了设置。\n</details>\n<details>\n<summary>**为什么图片标签没有结束元素？**</summary>\n图片标签是一个空标签，而空标签不需要结束标签。因为它里面不需要有文本内容。影响显示的数据都设置到了标签的属性里。\n</details>\n<details>\n<summary>**什么是attribute（属性）？**</summary>\n属性是包含在标签里的额外信息。属性有名字和值两个部分。名字说明了属性信息的类型，值是对于这个标签的实际信息。\n\n例如&lt;img&gt;标签有两个属性，src和alt。\nsrc表明了图片文件的名字，而alt表明了图片所表达的文字含义。\n</details>\n</div>\n\n如果这个配方页面有一张图片，那会看起来更好。图片能让这个页面看起来更好。\n\n# 这样做\n* 看看你左边的工作区，并找出名为\"scotcheroos.jpeg\"的文件\n* 用检查器工具来找到让这张图片显示出来的代码。\n* 确保你的你的伙伴对图片的标签是如何起作用的达成共识。\n* 试着将图片挪到页面的顶上。"
       CSD U2 layout style bgcolor_2018: |2
-        <div style="float:
-        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
-        <summary>**代码如何起作用？**</summary>
+        
+        <summary>
+        <strong>**代码如何起作用？**</strong>
+        </summary>
         这是让页面背景变成蓝色的代码：
         
         <pre>body
@@ -2103,28 +2198,35 @@ zh-CN:
          * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。
         </details>
         <details>
-        <summary>**我能在CSS中使用什么颜色？**</summary>
+        <summary>
+        <strong>**我能在CSS中使用什么颜色？**</strong>
+        </summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
         - CSS正确的颜色值</a>查看更多信息。
         </details>
         <details>
-        <summary>**`background-color`属性做了什么？**</summary>
+        <summary>
+        <strong>**`background-color`属性做了什么？**</strong></summary>
         `background-color`属性决定了一个元素的背景颜色。可以在<a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools
         - CSS background-color 属性</a>查看关于这个属性的更多信息。
         </details>
         <details>
-        <summary>**如果页面里的元素有着与body不同的背景颜色会怎样？**</summary>
+        <summary>
+        <strong>**如果页面里的元素有着与body不同的背景颜色会怎样？**</strong></summary>
         你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。
         </details>
         <details>
-        <summary>**什么是样式表？**</summary>
+        <summary>
+        <strong>**什么是样式表？**</strong>
+        </summary>
         样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。
         </details>
         <details>
-        <summary>**CSS是什么？**</summary>
+        <summary>
+        <strong>**CSS是什么？**</strong>
+        </summary>
         CSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。
-        
         
         这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：
         
@@ -2135,6 +2237,7 @@ zh-CN:
         </pre>
         
         在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。
+        
         </details>
         </div>
         
@@ -2148,64 +2251,48 @@ zh-CN:
         <details>
         
         <summary>
-        
-        **`body`选择器做什么？**
-        
+        <strong>**`body`选择器做什么？**</strong>
         </summary>
         由于网站的内容全都包含在`body` 标签中, body选择器给出网页上所有内容的样式。</details>
         <details>
         <summary>
-        
-        **`color`属性做什么？**
-        
+        <strong>**`color`属性做什么？**</strong>
         </summary>
         `color`属性决定文本的颜色。如果那里没有文本，那么看起来就像无事发生。了解更多在<a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>，中文教程请搜索菜鸟教程。
         </details>
         <details>
         <summary>
-        
-        **`text-align`属性做什么？**
-        
+        <strong>**`text-align`属性做什么？**</strong>
         </summary>
         `text-align`属性使文本左对齐，右对齐，或居中.了解更多在<a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>
-        
-        **`text-decoration`属性做什么？**
-        
+        <strong>**`text-decoration`属性做什么？**</strong>
         </summary>
         `text-decoration`属性会在文本的上面，下面，或中间划一道线.  了解更多在<a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>
-        
-        **`font-family`属性做什么？**
-        
+        <strong>**`font-family`属性做什么？**</strong>
         </summary>
         `font-family`属性改变文本的字体。这给出了对应使用字体的大致描述， 但在不同的浏览器中识别可能有差异。了解更多在<a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
         </details>
         <details>
         <summary>
-        
-        **`font-size`属性做什么？**
-        
+        <strong>**`font-size`属性做什么？**</strong>
         </summary>
         `font-size` 属性改变文本的大小。您可以使用通用术语，如“小”、“中”和“大”，也可以指定精确的大小(以像素为单位)，如“20px”。 了解更多在<a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
         </details>
         <details>
         <summary>
-        
-        **样式表是什么？**
-        
+        <strong>**样式表是什么？**</strong>
         </summary>
         样式表是控制网页如何显示的文档。外部样式表是链接到HTML页面的独立文件。
         </details>
         <details>
         <summary>
-        
-        **CSS是什么？**
-        
+        <strong>**CSS是什么？**</strong>
         </summary>
         
         CSS是一种决定网站上的内容如何显示的语言。它使用规则集来改变页面的样子。每个规则集都有一个选择器，他决定了页面上的哪些元素会受到影响，规则解释如何显示元素。每条规则都由一个属性和该属性的值组成。
@@ -2217,7 +2304,8 @@ zh-CN:
         font-family: cursive;
         </pre>
         
-        本例中，`h2`是选择器，`color`和`font-family`是属性，`blue`和`cursive`是这些属性的值。</details>
+        本例中，`h2`是选择器，`color`和`font-family`是属性，`blue`和`cursive`是这些属性的值。
+        </details>
         </div>
         
         #Body 元素
@@ -2230,13 +2318,17 @@ zh-CN:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">
         <details>
-        <summary>**我能在CSS里使用什么颜色？**</summary>
+        
+        <summary>
+        <strong>**我能在CSS里使用什么颜色？**</strong></summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
         - CSS正确的颜色值</a>查看更多信息。
         </details>
         <details>
-        <summary>**这些代码是如何起作用的？**</summary>
+        <summary>
+        <strong>**这些代码是如何起作用的？**</strong>
+        </summary>
         这是实现图片边框的代码：
         
         <pre>img {
@@ -2251,16 +2343,22 @@ zh-CN:
         saddlebrown;`,`border-width: 4px;`,`border-style: solid;`，和`border-radius: 10px;`是制作边框的规则。
         </details>
         <details>
-        <summary>**`border-style`（边框-样式）属性有什么用？**</summary>
+        <summary>
+        <strong>**`border-style`（边框-样式）属性有什么用？**</strong>
+        </summary>
         `border-style`属性决定了元素使用什么种类的边框（实线、点线，等等）。可以阅读<a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style属性</a>了解更多。
         </details>
         <details>\
-        <summary>**`border-radius`属性有什么用？**</summary>
+        <summary>
+        <strong>**`border-radius`属性有什么用？**</strong>
+        </summary>
         `border-radius`属性决定了元素角上的圆弧的半径。大一点的半径会形成大一点的，软一点的曲线。零半径意味着正常的直角。可以阅读<a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
         - CSS3 border-radius属性</a>了解更多。
         </details>
         <details>
-        <summary>**`float`属性有什么用？**</summary>
+        <summary>
+        <strong>**`float`属性有什么用？**</strong>
+        </summary>
         `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>了解更多。
         </details>
         </div>
@@ -10745,6 +10843,18 @@ zh-CN:
       Geometric Pattern: "** 项目理念: ** 使用形状几何概念创建图案。这需要坚持和规划！"
       Geometric Sun: "** 项目理念: ** 使用形状几何概念创建图案。这需要坚持和规划！"
       Geometric Sun_2018: "** 项目理念: ** 使用形状几何概念创建图案。这需要坚持和规划！"
+      HOC 2018 Level_1: "您需要补给以进行航行。从**箱子**![]（https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png）中收集一艘**船**![]（https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png）。\n\n"
+      HOC 2018 Level_10: "这个海底遗迹的某个地方藏着一条**鱿鱼**![]（https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png）？\n\n"
+      HOC 2018 Level_11: 在黑色混凝土附近建造一堵**海晶石**墙[]（https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png）。此操作可激活**导管**![]（https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png），完成您的挑战！
+      HOC 2018 Level_12: 恭喜！开放的水底世界等着您。建造一个珊瑚礁！一座火山！一艘沉船！想怎么玩自己随意。
+      HOC 2018 Level_2: 在开阔水面，船比游泳要好用！前往船坞登船。
+      HOC 2018 Level_3: 拿起船桨，划到开阔水域抓**鳕鱼**![]（https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png）。
+      HOC 2018 Level_4: 用鳕鱼喂**海豚**![]（https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png）。使用重复区块更快地穿过海洋。
+      HOC 2018 Level_5: 海底某个地方藏着一个**鹦鹉螺壳**![]（https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png）！探索沉船，找到**箱子**![]（https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png）。
+      HOC 2018 Level_6: 外边好冷啊！前往水底废墟的路上抓一条**鲑鱼**![]（https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png）。
+      HOC 2018 Level_7a: "您找到了水下废墟。在沙石红搜寻包含**海晶石**![]（https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png）宝藏的**箱子**![]（https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png）。\n\n"
+      HOC 2018 Level_8: "先是冰山，现在又是岩浆？穿过火山岛，在珊瑚礁上寻找**热带鱼**![]（https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png）。\n\n"
+      HOC 2018 Level_9b: "您成功抵达珊瑚礁，赶快搜寻**海洋之心**吧![]（https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png）！使用蓝色和红色珊瑚找到**宝箱**![]（https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png）。\n\n"
       Harvesting: "哦，不，我的地图丢了，我不记得我中了什么了！每一个新芽都有可能长成**玉米** ![玉米的图片](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **豆子** ![豆子的图片](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n, 或者**南瓜** ![南瓜的图片](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)。你能写一些代码来捡起所有的庄稼吗？不管他们是什么。"
       HoCAB_labyrinth1: |-
         用这些模块通过迷宫！
@@ -10976,7 +11086,7 @@ zh-CN:
         # 每像素更多比特的例子\r
         这是一张每像素9比特的更大的图片。在每像素9比特的情况下，能表现出512种不同的颜色。点击来查看下一张图片，更复杂，但更容易理解。
       Pizza on a Plate: "**项目想法：** 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！"
-      Poorva copy U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Poorva copy U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Practice Create Performance Task_2018: |-
         # 创建表演任务
         
@@ -11645,8 +11755,8 @@ zh-CN:
       U3L08 - randomInput_2018: "# 随机输入\\r\n\\r\n你有一个新的模块，它可以让你生成一个随机数。每次调用函数时, 都可以用它而不必硬编码数值。\\r\n\\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\\r\n\\r\n**请阅读 randomNumber（随机数字） 模块的文档**。\\r\n\\r\n#这样做\\r\n* 使用 randomNumber （随机数字）提供随机输入**给*所有3个*绘图函数。\n只在需要的地方插入`randomNumber()`（随机数字）调用，其它地方还是数字。\\r\n\\r\n就像这样：\\r\n![](https://images.code.org/ad87d7d122ac585a6de9e46a49736228-image-1470146652402.png)\\r\n\\r\n在所有三个绘图函数中调用 randomNumber（随机数字）：\\r\n\\r\n* drawStarfish（画海星）\\r\n* drawSeagrass（画海草）\\r\n* drawFish（画鱼）\\r\n\\r\n这是一个很好的**测试**函数，同时又能得到一些**有趣的图像**的方法。每次运行程序时, 你都可以得到和下面的稍微有点不同的画面。\\r\n\\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)"
       U3L08 how to add comments: "# 现在试试 - 添加注释\\r\n\\r\n初始的代码已经提供了一些注释了。\\r\n\\r\n# 这样做\\r\n\\r\n在调用`drawStarfish()`（画海星）前插入一条注释，`// 画所有的海星`。\\r\n\\r\n* `// Comment`（注释）模块在函数工具箱中\n([Show me](#triggercallout=show_comment))\\r\n* **看看怎么做：**\\r\n![expandable](https://images.code.org/1f97df1d6fc1ca2d5bd371ad7b0f76a3-image-1508960669302.gif)\\r\n\\r\n一旦你添加了注释后，**点击完成**。要接着添加注释！！！"
       U3L08 how to add comments_2018: "# 现在试试 - 添加注释\\r\n\\r\n初始的代码已经提供了一些注释了。\\r\n\\r\n# 这样做\\r\n\\r\n在调用`drawStarfish()`（画海星）前插入一条注释，`// 画所有的海星`。\\r\n\\r\n* `// Comment`（注释）模块在函数工具箱中\n([Show me](#triggercallout=show_comment))\\r\n* **看看怎么做：**\\r\n![expandable](https://images.code.org/1f97df1d6fc1ca2d5bd371ad7b0f76a3-image-1508960669302.gif)\\r\n\\r\n一旦你添加了注释后，**点击完成**。要接着添加注释！！！"
-      U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      U3L2 Using Simple Commands_2018: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      U3L2 Using Simple Commands_2018: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       U4 - CreateRecord - 3_2018: "＃记录是对象\n\n**什么是记录？**\n在数据库术语中，存储在表中的每项条目称为一条**记录**。这就是为什么该模块被称为`createRecord`(创建记录）。在应用实验室中，**一条记录是一个对象**，而数据表本质上是存储在云中的JavaScript对象的集合。\n\n**`createRecord`的第二个参数**是存储在数据库中的对象。\n\n* 正如所看到的，可以使用这样的符号来指定对象：`{name：“Alice”}`（名字：爱丽丝）\n* 但是可以**提供一个对象变量**并且将整个对象存储起来。\n* 应用实验室 **为对象的每个属性创建一个列。**\n\n＃ 这样做：\n\n**初始代码已提供**，用于创建代表歌曲的简单JavaScript对象。\n\n* 拖出`createRecord`模块。\n* **将表格名称**（第一个参数）设置为描述性内容，如“mySongs”。\n* **将第二个参数**设置为要存储的对象的名称，在本例中为“song”(歌曲)。\n* **运行程序。**\n* 在数据浏览器中**验证是否创建了一个新表，并且将`song`对象添加为记录**。\n\n![](https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif)"
       U4 Model App: "# 这是U4模型应用的模板"
       U4 Model App_2018: "# 这是U4模型应用的模板"
@@ -12241,10 +12351,76 @@ zh-CN:
       U5 AP Practice Create Abstraction Color Sleuth: "# AP 练习- 创建表演任务 - 抽象 \\r\n\\r\n**AP 创建表演任务**的一个部分就是在你的程序中描述抽象。\\r\n\\r\n<div\nstyle=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;\nfont-family: serif; font-size: 12pt\">\\r\n\\r\n<b>2.书写响应</b>\\r\n<ul>\\r \n2d. 采集并粘贴一个程序代码段，其中包含你独立开发的抽象（用<b>长方形</b> 在 <b>章节3</b>下）。此抽象必须集成数学和逻辑概念。解释抽象如何帮助管理程序的复杂性。\\r\n<i>（不能超过200字）</i></ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这里是一行此问题的评分指南\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/d994f69c99550a352de5565ee4d74f54-image-1516226857132.04.40\nPM.png\">\\r\n</div>\\r\n\\r\n# 写下答复\\r\n\\r\n![](https://images.code.org/33f44fc55155b5e75afd37475640bc16-image-1515653209087.46.40\nPM.png)\\r\n\\r\n<div style=\"clear:both\"></div>\\r\n\\r\n<br>\\r\n\\r\n上面选择的代码是从你完成的颜色侦探活动中选出来的。在创建表演任务中，这些选择的代码**将会被算成抽象**，但为了获得第8行的分数**你需要描述这个抽象如何管理了复杂度**。\\r\n\\r\n\\r\n** 写下2d的答复，描述上面的抽象。用写作提示和评分向导作为指南。**"
       U5 AP Practice Create Abstraction Color Sleuth_2018: "# AP 练习- 创建表演任务 - 抽象 \\r\n\\r\n**AP 创建表演任务**的一个部分就是在你的程序中描述抽象。\\r\n\\r\n<div\nstyle=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;\nfont-family: serif; font-size: 12pt\">\\r\n\\r\n<b>2.书写响应</b>\\r\n<ul>\\r \n2d. 采集并粘贴一个程序代码段，其中包含你独立开发的抽象（用<b>长方形</b> 在 <b>章节3</b>下）。此抽象必须集成数学和逻辑概念。解释抽象如何帮助管理程序的复杂性。\\r\n<i>（不能超过200字）</i></ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这里是一行此问题的评分指南\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/d994f69c99550a352de5565ee4d74f54-image-1516226857132.04.40\nPM.png\">\\r\n</div>\\r\n\\r\n# 写下答复\\r\n\\r\n![](https://images.code.org/33f44fc55155b5e75afd37475640bc16-image-1515653209087.46.40\nPM.png)\\r\n\\r\n<div style=\"clear:both\"></div>\\r\n\\r\n<br>\\r\n\\r\n上面选择的代码是从你完成的颜色侦探活动中选出来的。在创建表演任务中，这些选择的代码**将会被算成抽象**，但为了获得第8行的分数**你需要描述这个抽象如何管理了复杂度**。\\r\n\\r\n\\r\n** 写下2d的答复，描述上面的抽象。用写作提示和评分向导作为指南。**"
       U5 AP Practice Create Algorithm Color Sleuth: "# AP 练习 - 创建表演任务 - 算法\\r\n\\r\n **AP 创建表演任务**的一个组成部分是在你的程序里描述算法。\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>2. 书写答复</b>\\r\n<ul>\\r\n2c.\n采集并粘贴实现算法的代码片段（在<b>章节3</b>下用 <b>oval</b> ），它是你程序要取得设定目的的基础。此代码段必须是你自己独立开发的一个算法，必须包含两个或多个算法，而且必须和数学和/或逻辑概念集成。描述每个算法在你选择的算法里是如何独立作用的。以及它是如何与其他算法合并的，并组成一个新算法来帮助取得程序设定的目的。 <i>(不得超过200 字)</i>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这是此问题计分指南的两行\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/febdb2c140b9a4f34f2d4a93370c8b53-image-1515518259767.17.31\nAM.png\">\\r\n</div>\\r\n\\r\n# 书写答复\\r\n\\r\n<img src=\"https://images.code.org/e841e427e8020f075c8718631bf0cfb3-image-1516228295228.31.22\nPM.png\" style=\"float:right\">\\r\n\\r\n此代码是从你刚完成的颜色侦探活动中拿来的，在创建表演任务上**将被算为一个算法**。\\r\n\\r\n**书写响应 2c 来描述以上的算法.\n使用书写提示和计分指南作为指南。** 这里你务必要涵括的主要几点。\\r\n\\r\n* 命名主算法以及2 个子-算法的每一个\\r\n* 解释每个子-算法是做*什么 *以及每个代码实际上是*如何*运作的\\r\n* 解释主算法是如何运作的，以及它是如何达成程序目的的。"
-      U5 AP Practice Create Algorithm Color Sleuth_2018: "# AP 练习 - 创建表演任务 - 算法\\r\n\\r\n **AP 创建表演任务**的一个组成部分是在你的程序里描述算法。\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>2. 书写答复</b>\\r\n<ul>\\r\n2c.\n采集并粘贴实现算法的代码片段（在<b>章节3</b>下用 <b>oval</b> ），它是你程序要取得设定目的的基础。此代码段必须是你自己独立开发的一个算法，必须包含两个或多个算法，而且必须和数学和/或逻辑概念集成。描述每个算法在你选择的算法里是如何独立作用的。以及它是如何与其他算法合并的，并组成一个新算法来帮助取得程序设定的目的。 <i>(不得超过200 字)</i>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这是此问题计分指南的两行\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/febdb2c140b9a4f34f2d4a93370c8b53-image-1515518259767.17.31\nAM.png\">\\r\n</div>\\r\n\\r\n# 书写答复\\r\n\\r\n<img src=\"https://images.code.org/e841e427e8020f075c8718631bf0cfb3-image-1516228295228.31.22\nPM.png\" style=\"float:right\">\\r\n\\r\n此代码是从你刚完成的颜色侦探活动中拿来的，在创建表演任务上**将被算为一个算法**。\\r\n\\r\n**书写响应 2c 来描述以上的算法.\n使用书写提示和计分指南作为指南。** 这里你务必要涵括的主要几点。\\r\n\\r\n* 命名主算法以及2 个子-算法的每一个\\r\n* 解释每个子-算法是做*什么 *以及每个代码实际上是*如何*运作的\\r\n* 解释主算法是如何运作的，以及它是如何达成程序目的的。"
+      U5 AP Practice Create Algorithm Color Sleuth_2018: |2
+        # AP 练习 - 创建表演任务 - 算法\r
+        \r
+         **AP 创建表演任务**的一个组成部分是在你的程序里描述算法。\r
+        \r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">\r
+        \r
+        <b>2. 书写答复</b>\r
+        <ul>\r
+        2c.
+        采集并粘贴实现算法的代码片段（在<b>章节3</b>下用 <b>oval</b> ），它是你程序要取得设定目的的基础。此代码段必须是你自己独立开发的一个算法，必须包含两个或多个算法，而且必须和数学和/或逻辑概念集成。描述每个算法在你选择的算法里是如何独立作用的。以及它是如何与其他算法合并的，并组成一个新算法来帮助取得程序设定的目的。 <i>(不得超过200 字)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        这是此问题计分指南的两行\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/febdb2c140b9a4f34f2d4a93370c8b53-image-1515518259767.17.31
+        AM.png">\r
+        </div>\r
+        \r
+        # 书写答复\r
+        \r
+        <img src="https://images.code.org/e841e427e8020f075c8718631bf0cfb3-image-1516228295228.31.22
+        PM.png" style="float:right">\r
+        \r
+        此代码是从你刚完成的颜色侦探活动中拿来的，在创建表演任务上**将被算为一个算法**。\r
+        \r
+        **书写响应 2c 来描述以上的算法.
+        使用书写提示和计分指南作为指南。** 这里你务必要涵括的主要几点。\r
+        \r
+        * 命名主算法以及2 个子-算法的每一个\r
+        * 解释每个子-算法是做*什么 *以及每个代码实际上是*如何*运作的\r
+        * 解释主算法是如何运作的，以及它是如何达成程序目的的。
       U5 AP Practice Create Algorithm How vs What: "# AP 练习 - 创建表演任务 - 过程\\r\n\\r\n **AP 创建表演任务** 的一个部分就是描述程序的开发过程。\\r\n\\r\n<div\nstyle=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px;\nfont-family: serif; font-size: 12pt\">\\r\n\\r\n<b>2. 书写答复</b>\\r\n<ul>\\r\n2b.\n描述程序开发过程的进展和迭代，专注在该程序的两大主要特点上。描述你遇到的困难和/或机会，以及它们是如何被解决或利用的。在你的描述里清楚地指明开发是协作或独立完成。至少有一点必须引用独立的程序开发。<i>(不能超出200字)</i>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这是该问题计分指南中的2行\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32\nAM.png\">\\r\n</div>\\r\n\\r\n# 对答复评分\\r\n\\r\n一位学生书写以下答复。\\r\n\\r\n*\"在我开发我的程序过程中，我遇到两大主要问题。第一个问题是在程序的早期，有时候苹果会从我的屏幕中消失。在解决此程序缺陷后， 我意识到随机数X 值得范围被设为0-3200，而非0-320。我很容易地纠正了代码中的这个问题。第二个问题发生在当我意识到使用此游戏的同学们不知道如何开始此游戏。为了解决此问题，我把按钮做得足够大，并和背景颜色不同。随后我再也没有看到此问题\"*\\r\n\\r\n\\r\n每行值一分，既可以也可以不给分。**参照以上所给的标准，解释为什么你对第2 行和第3 行会或不会授予分数。**"
       U5 AP Practice Create Process: "# AP 练习 - 创建表演任务 - 过程\\r\n\\r\n**AP 创建性能任务**的一个部分是描述用于程序的开发过程。\\r\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\n<b>2.书写答复</b>\n<ul>\\r\n2b. 描述程序开发过程的进展和迭代，专注在该程序的两大主要特点上。描述你遇到的困难和/或机会，以及它们是如何被解决或利用的。在你的描述里清楚地指明开发是协作或独立完成。至少有一点必须引用独立的程序开发。<i>(不能超出200字)</i>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这是该问题计分指南中的第2 行\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32\nAM.png\">\\r\n</div>\\r\n\\r\n# 对响应评分\\r\\r\n一个学生编写了以下响应。 \\r\\r\n*\"在我开发我的程序过程中，我遇到两大主要问题。第一个问题是在程序的早期，有时候苹果会从我的屏幕中消失。在解决此程序缺陷后， 我意识到随机数X 值得范围被设为0-3200，而非0-320。我很容易地纠正了代码中的这个问题。第二个问题发生在当我意识到使用此游戏的同学们不知道如何开始此游戏。为了解决此问题，我把按钮做得足够大，并和背景颜色不同。随后我再也没有看到此问题\"*\\r\n \\r\n\\r\n每行值一分，既可以也可以不给分。** 解释为什么你会或不会授予第2行和3行得分 **。\\r\n\\r\n提示：特别注意评分指南的最后一栏和定名为\"不授予得分，如果...”的检查表。"
-      U5 AP Practice Create Process_2018: "# AP 练习 - 创建表演任务 - 过程\\r\n\\r\n**AP 创建性能任务**的一个部分是描述用于程序的开发过程。\\r\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\n<b>2.书写答复</b>\n<ul>\\r\n2b. 描述程序开发过程的进展和迭代，专注在该程序的两大主要特点上。描述你遇到的困难和/或机会，以及它们是如何被解决或利用的。在你的描述里清楚地指明开发是协作或独立完成。至少有一点必须引用独立的程序开发。<i>(不能超出200字)</i>\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这是该问题计分指南中的第2 行\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32\nAM.png\">\\r\n</div>\\r\n\\r\n# 对响应评分\\r\\r\n一个学生编写了以下响应。 \\r\\r\n*\"在我开发我的程序过程中，我遇到两大主要问题。第一个问题是在程序的早期，有时候苹果会从我的屏幕中消失。在解决此程序缺陷后， 我意识到随机数X 值得范围被设为0-3200，而非0-320。我很容易地纠正了代码中的这个问题。第二个问题发生在当我意识到使用此游戏的同学们不知道如何开始此游戏。为了解决此问题，我把按钮做得足够大，并和背景颜色不同。随后我再也没有看到此问题\"*\\r\n \\r\n\\r\n每行值一分，既可以也可以不给分。** 解释为什么你会或不会授予第2行和3行得分 **。\\r\n\\r\n提示：特别注意评分指南的最后一栏和定名为\"不授予得分，如果...”的检查表。"
+      U5 AP Practice Create Process_2018: |2
+        # AP 练习 - 创建表演任务 - 过程\r
+        \r
+        **AP 创建性能任务**的一个部分是描述用于程序的开发过程。\r\r
+        <div style="width:
+        80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:
+        serif; font-size: 12pt">
+        <b>2.书写答复</b>
+        <ul>\r
+        2b. 描述程序开发过程的进展和迭代，专注在该程序的两大主要特点上。描述你遇到的困难和/或机会，以及它们是如何被解决或利用的。在你的描述里清楚地指明开发是协作或独立完成。至少有一点必须引用独立的程序开发。<i>(不能超出200字)</i>\r
+        </ul>\r
+        </div>\r
+        <br>\r
+        \r
+        这是该问题计分指南中的第2 行\r
+        \r
+        <div style="magin:auto">\r
+        \t<img
+        src="https://images.code.org/18480a117da79e3c5599edfe0b98836a-image-1515438403469.06.32
+        AM.png">\r
+        </div>\r
+        \r
+        # 对响应评分\r\r
+        一个学生编写了以下响应。 \r\r
+        *"在我开发我的程序过程中，我遇到两大主要问题。第一个问题是在程序的早期，有时候苹果会从我的屏幕中消失。在解决此程序缺陷后， 我意识到随机数X 值得范围被设为0-3200，而非0-320。我很容易地纠正了代码中的这个问题。第二个问题发生在当我意识到使用此游戏的同学们不知道如何开始此游戏。为了解决此问题，我把按钮做得足够大，并和背景颜色不同。随后我再也没有看到此问题"*\r
+         \r
+        \r
+        每行值一分，既可以也可以不给分。** 解释为什么你会或不会授予第2行和3行得分 **。\r
+        \r
+        提示：特别注意评分指南的最后一栏和定名为"不授予得分，如果...”的检查表。
       U5 ColorSleuth implement end game: "# 挑战 - 找个方法让游戏结束并实现它。\\r\n\\r\n现在你的挑战是加上一些代码来完成自己的程序。用你已经学到的东西，以及阿历克斯和迈克尔的讨论来获得灵感。\\r\n\\r\n**这是最后一个编程关卡**\\r\n\\r\n* 按照自己的想法来改动或添加程序\\r\n* 完成后，点击**提交**\\r\n\\r\n**目标** 添加代码来让游戏能够结束，比如：\\r\n* 切换到`gameOver_screen`（游戏结束_屏幕）\\r\n*\n通过显示`player1Win_label`（玩家1胜利_标签）或`player2Win_label`（玩家2胜利_标签）来显示哪个玩家赢得了游戏。\\r\n\\r\n*我们为这个项目提供了`gameOver_screen`（ 游戏结束_屏幕）模板 - 切换到设计模式来看看那里有什么。*\\r\n\\r\n**建议**\\r\n*\n如果你还是没有主意，试着实现\"first\nto 10\"（谁先到10分） - 第一个到达10分的玩家赢得游戏。\\r\n* 你应该通过讨论来添加一个类似于`checkGameOver()`（检查游戏是否结束）的函数，并从`checkCorrect`（检查正确）函数里调用它。\\r\n\\r\n<details><summary><strong>超越：\n可选的额外选项 [点击展开]</strong></summary>\\r\n\\r\n<p>\\r\n这里有一大堆方法来添加或扩展到项目里：\\r\n\\r\n</p>\\r\n<ul>\\r\n\\r\n\\r\n<li>在最后一个屏幕添加\"重新开始\"按钮，让它重置所有东西，并返回到游戏的开始屏幕。\\r\n</li>\\r\n<li>添加一个欢迎屏幕来解释规则，并且邀请玩家开始游戏（让它成为默认屏幕）\\r\n</li>\\r\n<li>让游戏更难一点：</li>\\r\n<uL>\\r\n<li>让颜色更相似一些（我们给每个RGB值增加了20，试试15或者10）。</li>\\r\n<li>或者制作一个难度变量 - 你可以生成一个在5到20间的随机数，加到RGB值上。</li>\\r\n<li>或者让过程更复杂 - 用一个变量来跟踪加到每个RGB值上的数，并随着时间慢慢减少它。</li>\\r\n\\t<li>或者在欢迎屏幕上问问玩家想要玩简单、正常、或困难的哪个难度。</li>\\r\n</uL>\\r\n\\r\n<li>添加计时 - 在文档中寻找setTimeout（设置超时时间）函数，它会在过了一段时间后调用函数。（注意：你需要将项目在自由应用实验室中合成后，才能这样做 ）。\\r\n</li>\\r\n<li>你也可以在代码开始和结束时用\n<code>getTime()</code>函数来计算游戏用了多长时间，然后通过这个时间来判断分数。</li>\\r\n</ul>\\r\n</details>\\r\n"
       U5-AP-Algorithm-Does-It-Count: "# AP 练习 - 算法 - 给答复打分\\r\n\\r\n **AP表演任务**的一个部分是选择和描述你已开发的算法。\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>2. 书写答复</b>\\r\n<ul>\\r\n2c.\n采集并粘贴实现算法的代码片段（在<b>章节3</b>下用 <b>oval</b> ），它是你程序要取得设定目的的基础。此代码段必须是你自己独立开发的一个算法，必须包含两个或多个算法，而且必须和数学和/或逻辑概念集成。描述每个算法在你选择的算法里是如何独立作用的。以及它是如何与其他算法合并的，并组成一个新算法来帮助取得程序设定的目的。(不得超过200 字)\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这是此问题的计分指南\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/73352bdcc7c3b46ee949f534a0de9dd4-image-1515191914293.38.22\nPM.png\">\\r\n</div>\\r\n\\r\n# 给答复打分\\r\n\\r\n**书写答复：**\n*\"我的算法控制着此应用程序的登录。这部分对我的程序很重要因为在应用程序里的数据需要安全。此算法保证只有有正确密码的用户可以进入此应用程序来使用它。\"*\\r\n\\r\n**编写代码：** \\r\n\\r\n<img src=\"https://images.code.org/e1929ddfdc31d0a96c9111a6e76f43d0-image-1517465128952.png\"\nstyle=\"height:300px\">\\r\n\\r\n**解释基于以上给出的标准你会或不会对第5行给分**\\r\n"
       U5-AP-Algorithm-Does-It-Count_2018: "# AP 练习 - 算法 - 给答复打分\\r\n\\r\n **AP表演任务**的一个部分是选择和描述你已开发的算法。\\r\n\\r\n<div style=\"width:\n80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family:\nserif; font-size: 12pt\">\\r\n\\r\n<b>2. 书写答复</b>\\r\n<ul>\\r\n2c.\n采集并粘贴实现算法的代码片段（在<b>章节3</b>下用 <b>oval</b> ），它是你程序要取得设定目的的基础。此代码段必须是你自己独立开发的一个算法，必须包含两个或多个算法，而且必须和数学和/或逻辑概念集成。描述每个算法在你选择的算法里是如何独立作用的。以及它是如何与其他算法合并的，并组成一个新算法来帮助取得程序设定的目的。(不得超过200 字)\\r\n</ul>\\r\n</div>\\r\n<br>\\r\n\\r\n这是此问题的计分指南\\r\n\\r\n<div style=\"magin:auto\">\\r\n\\t<img\nsrc=\"https://images.code.org/73352bdcc7c3b46ee949f534a0de9dd4-image-1515191914293.38.22\nPM.png\">\\r\n</div>\\r\n\\r\n# 给答复打分\\r\n\\r\n**书写答复：**\n*\"我的算法控制着此应用程序的登录。这部分对我的程序很重要因为在应用程序里的数据需要安全。此算法保证只有有正确密码的用户可以进入此应用程序来使用它。\"*\\r\n\\r\n**编写代码：** \\r\n\\r\n<img src=\"https://images.code.org/e1929ddfdc31d0a96c9111a6e76f43d0-image-1517465128952.png\"\nstyle=\"height:300px\">\\r\n\\r\n**解释基于以上给出的标准你会或不会对第5行给分**\\r\n"
@@ -13227,6 +13403,21 @@ zh-CN:
         **挑战**：收集所有的废旧金属。
       courseB_starWars_prog9: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
       courseB_starWars_prog9_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"你能做到！\"_"
+      courseC19_playLab_EOC1: |-
+        你学到的大量知识太令人惊奇了！让我们一步步做个游戏。\r
+        \r
+        用工具箱里的新模块，选择一个新背景，然后捡起一个演员放到游戏中。
+      courseC19_playLab_EOC2: "用事件处理函数和动作这样的模块来让你的玩家根据键盘方向键来移动。\\r\n\\r\n让玩家到达目标来通过这关。"
+      courseC19_playLab_EOC3: |-
+        让我们添加更多的角色到你的游戏里！\r
+        \r
+        用`设置演员`模块来增加更多的角色，然后移动到目标来完成这关。
+      courseC19_playLab_EOC4: |-
+        让好几个角色动起来，是游戏的好的开始，但我们需要增加更多的东西，让它感觉起来是个真游戏。让我们添加分数！\r
+        \r
+        用`当演员碰到`这样的事件模块来改变分数。得到10分来通关。
+      courseC19_playLab_EOC5: 做的好！你有了一个游戏所有基本的部分了。现在花点时间来确保游戏会像你像的那样工作。加入一个胜利或失败的方法，然后玩到触发这些条件。
+      courseC19_playLab_EOC6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
       courseC_PlayLab_events7: |-
         `一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r
         \r
@@ -14051,7 +14242,7 @@ zh-CN:
         
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1a_2018: |-
-        *"这会非常棒！"*
+        _*"这会非常棒！"*_
         
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops2: 这一次, 使用尽可能少的模块帮助蜜蜂收集所有的花蜜。
@@ -16757,8 +16948,8 @@ zh-CN:
       ramp_artist_loops8_clone: "**挑战：**寻找规律，使用循环使此代码更短！"
       ramp_artist_loops9: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2018: 画一个边长200像素的正方形来通过这关。
-      subgoal U3 L4 introducing subgoal labels: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
-      subgoal U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      subgoal U3 L4 introducing subgoal labels: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      subgoal U3L2 Using Simple Commands: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\n\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\n\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\n\n# 这样做：\n用尽可能高效的办法在乌龟的左前方画一个 1x1 的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\n\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       subgoal-test-clone: |-
         ### 用目标标签来结构化你的解决方案。\r
         \r

@@ -51,6 +51,7 @@ lv:
           FORMAT:
             '"row"': rinda
             '"column"': kolonna
+            '"random"': nejaušs
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
@@ -66,6 +67,24 @@ lv:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+          COSTUME:
+            '"UNICORN"': Vienradži
+          LAYOUT:
+            '"row"': rinda
+            '"column"': kolonna
+            '"random"': nejaušs
       Dancelab_randomColor:
         text: nejauša krāsa
       Dancelab_setBackgroundEffect:
@@ -82,6 +101,11 @@ lv:
             '0.5': slow
             '0.25': very slow
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+            '"height"': augstums
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': izmērs
@@ -285,6 +309,14 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
       craft_ifPath:
         options:
           DIR:
@@ -294,6 +326,10 @@ lv:
           TYPE:
             "'sand'": smiltis
             "'planksOak'": ozola dēļi
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": smiltis
       craft_moveForward:
         text: pārvietot uz priekšu
       craft_placeTorch:

@@ -1137,6 +1137,8 @@ ru:
               name: Двоичные образы
             RGB Color:
               name: RGB цвета
+            Play Lab:
+              name: Лаборатория игр
         csd2-2017:
           stages:
             Peer Review:

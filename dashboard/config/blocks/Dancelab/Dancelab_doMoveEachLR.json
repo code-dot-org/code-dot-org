@@ -55,6 +55,10 @@
           [
             "all sharks",
             "\"SHARK\""
+          ],
+          [
+            "all unicorns",
+            "\"UNICORN\""
           ]
         ]
       },
@@ -90,19 +94,19 @@
             "MOVES.Fresh"
           ],
           [
-            "Kick",
-            "MOVES.Kick"
-          ],
-          [
             "Roll",
             "MOVES.Roll"
+          ],
+          [
+            "Star",
+            "MOVES.Kick"
           ],
           [
             "This or That",
             "MOVES.ThisOrThat"
           ],
           [
-            "Thiller",
+            "Thriller",
             "MOVES.Thriller"
           ],
           [

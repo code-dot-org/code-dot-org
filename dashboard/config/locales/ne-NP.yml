@@ -42,6 +42,7 @@ ne:
   next_resource: Next resource
   cancel: रद्द गर्नुहोस्
   okay: 'ओके '
+  or: या
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -86,6 +87,7 @@ ne:
     twitter: ट्विटर
     facebook: फेसबुक
     windowslive: Microsoft Account
+    microsoft_v2_auth: Microsoft Account
     forgot_password: तपाईँको पासवर्ड विर्सनु भयो?
     need_confirmation: Didn't receive confirmation instructions?
     need_unlock: Didn't receive unlock instructions?
@@ -119,7 +121,6 @@ ne:
     age: उमेर
     user_type: Are you a student or teacher?
     submit: साइन अप गर्नुहोस्
-    next: अर्को
     teacher: Are you a teacher?
     valid_username: Available!
     invalid_username: Username must be at least 5 characters
@@ -236,13 +237,6 @@ ne:
       project_gallery: Projects
       educate_hoc: Hour of Code
       stats: Stats
-    create_button:
-      create: बनाउनुहोस्
-      applab: App Lab
-      artist: Artist
-      playlab: Play Lab
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -256,6 +250,12 @@ ne:
       team: Team
       driver: Driver
       navigator: Navigator
+      create: बनाउनुहोस्
+      applab: App Lab
+      artist: Artist
+      playlab: Play Lab
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name}'s progress"
       progress: तपाईँको प्रगति
@@ -579,6 +579,8 @@ ne:
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:

@@ -30,10 +30,11 @@ module Api::V1::Pd
         end
 
         apps.group(:status).each do |group|
-          application_data[role][group.status] = {
-            locked: group.locked,
-            unlocked: group.total - group.locked
-          }
+          application_data[role][group.status] = if ['csd_teachers', 'csp_teachers'].include? role
+                                                   {total: group.total}
+                                                 else
+                                                   {total: group.total, locked: group.locked}
+                                                 end
         end
       end
 
@@ -69,12 +70,7 @@ module Api::V1::Pd
           render json: serialized_applications
         end
         format.csv do
-          prefetch applications, role: role
-          course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
-          csv_text = [
-            TYPES_BY_ROLE[role].csv_header(course, current_user),
-            *applications.map {|a| a.to_csv_row(current_user)}
-          ].join
+          csv_text = get_csv_text applications, role
           send_csv_attachment csv_text, "#{role}_applications.csv"
         end
       end
@@ -117,10 +113,8 @@ module Api::V1::Pd
           )
           render json: serialized_applications
         end
-        prefetch applications, role: role
         format.csv do
-          optional_columns = get_optional_columns(regional_partner_value)
-          csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header(optional_columns), applications.map {|app| app.to_cohort_csv_row(optional_columns)}].join
+          csv_text = get_csv_text applications, role
           send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
         end
       end
@@ -156,10 +150,10 @@ module Api::V1::Pd
 
     # PATCH /api/v1/pd/applications/1
     def update
-      application_data = application_params
+      application_data = application_params.to_h
 
       if application_data[:response_scores]
-        JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
+        application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
 
       if application_data[:regional_partner_value] == REGIONAL_PARTNERS_NONE
@@ -175,7 +169,10 @@ module Api::V1::Pd
       # only allow those with full management permission to lock/unlock and edit form data
       if current_user.workshop_admin?
         if current_user.workshop_admin? && application_admin_params.key?(:locked)
-          application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          # only current facilitator applications can be locked/unlocked
+          if @application.application_type == FACILITATOR_APPLICATION
+            application_admin_params[:locked] ? @application.lock! : @application.unlock!
+          end
         end
 
         @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
@@ -264,17 +261,22 @@ module Api::V1::Pd
           app_data[role] = {}
           app_type.statuses.each do |status|
             app_data[role][status] = {
-              locked: 0,
-              unlocked: 0
+              total: 0,
+              locked: 0
             }
           end
         end
       end
     end
 
-    # TODO: remove remaining teachercon references
-    def get_optional_columns(_regional_partner_value)
-      {accepted_teachercon: false, registered_workshop: false}
+    def get_csv_text(applications, role)
+      prefetch applications, role: role
+      course = role.to_s.split('_').first # course is the first part of role, e.g. 'csf'
+
+      [
+        TYPES_BY_ROLE[role.try(&:to_sym)].csv_header(course),
+        *applications.map {|a| a.to_csv_row(course)}
+      ].join
     end
 
     def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})

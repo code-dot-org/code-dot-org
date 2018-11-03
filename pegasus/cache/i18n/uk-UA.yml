@@ -11,7 +11,7 @@
   upgrade_ie_link: Дізнайтеся більше
   en: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
-  csedweek_dates: 8-14 грудня 2014 року
+  csedweek_dates: 3-9 грудня 2018 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо
     усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white;
@@ -1901,15 +1901,73 @@
   header_about: Про
   csp_name: "'16-'17 принципи інформатики"
   user_header_label: Привіт %{username}
+  user_header_team: Команда
   user_header_settings: Мій профіль
   user_header_logout: Вийти
   user_header_signin: Вхід
+  user_header_create: 'Творіть '
+  user_header_gamelab: Ігрова лабораторія
+  user_header_playlab: Ігрова студія
+  user_header_dance: Танцювальна вечірка
+  user_header_minecraft: Майнкрафт
+  user_header_flappy: Пурх
+  aquatic_name: 'Minecraft: Водна подорож'
+  hoc2018_creativity: творчість
+  hoc2018_creativity_create: Створити
+  hoc2018_creativity_hoc_coming: Наближається Година коду…
+  hoc2018_creativity_what_will_you_create: А що створите Ви?
+  hoc2018_creativity_homepage: Розпочніть свій політ фантазії та народження інновацій.
+    Розпочніть з Години коду та створіть власний бренд креативності у чому завгодно.
+    Перегляньте відео.
+  hoc2018_creativity_hoc_about: 'Цього року Година коду стосується креативності. '
+  hoc2018_creativity_social_media: 'Цього року #HourOfCode стосується креативності.
+    Я в команді! А Ви?'
+  hoc2018_creativity_social_media_2: 'Цього року #HourOfCode стосується креативності.
+    А що створите Ви?'
+  hoc2018_creativity_courses: Навчайтесь далі з курсами Code.org
+  hoc2018_creativity_courses_link: Навчайтесь далі з <a href="https://studio.code.org/courses">курсами
+    Code.org</a>
+  hoc2018_mc_page_title: Підручники Години коду від Майнкрафт
+  hoc2018_mc_details: Багато мов | Сучасні браузери та планшети | Класи 2+
+  hoc2018_mc_designer_title: Майнкрафт - Розробник
+  hoc2018_mc_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
+    версії цієї гри.
+  hoc2018_mc_adventurer_title: Майнкрафт - Пригоди
+  hoc2018_mc_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
+    на пригоду.
+  hoc2018_mc_start: Початок
+  hoc2018_mc_no_internet: Немає Інтернету?
+  hoc2018_mc_download_adventurer: Завантажуйте оффлайнову версію Майнкрафт - Пригод.
+  hoc2018_mc_educators_box2_button: Завантажити
+  hoc2018_mc_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
+  hoc2018_mc_videos_more: Більше <a href='%{inspiring_videos_playlist}'>надихаючих
+    відео</a> з рольовими моделями та знаменитостями
+  hoc2018_mc_careers_more: Більше <a href='%{careers_url}' target='_blank'>надихаючих
+    відео</a> з фахівцями зі сфери технологій
+  hoc2018_mc_video_1min: 1 хв
+  hoc2018_mc_video_2min: 2 хв
+  hoc2018_mc_video_5min: 5 хв
+  hoc2018_mc_video_title_steph_curry: Година коду зі Стефом Каррі
+  hoc2018_mc_video_title_sports: Постарайся! Навчитись може кожен.
+  hoc2018_mc_video_title_inspire_girl: Залучайте дівчат
+  hoc2018_mc_video_title_cs_intro: Вступ до інформатики
+  hoc2018_mc_video_title_schools_dont_teach: Те, чого не навчають у більшості шкіл
+  hoc2018_mc_video_title_obama: Президент Обама про інформатику
+  hoc2018_mc_video_title_hoc_is_here: Година коду вже тут - навчитись може кожен
+  hoc2018_mc_video_title_anybody_can_learn: Навчитись може кожен
+  hoc2018_mc_homepage_what_create: А що створите Ви?
+  hoc2018_mc_homepage_join_us: Приєднуйтесь
+  hoc2018_mc_homepage_try_it: Спробувати
+  ! '': 
+  studiobar_dance_title: Dance Party
+  studiobar_dance_body: Create and share your own Dance Party
   homepage_stats_policy: states changed policy to support computer science
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_below_hero_announcement_text: We care about your privacy and are making
     some updates to our privacy policy, effective May 25.
+  minecraft_start_tutorial: Start tutorial
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
@@ -2108,13 +2166,9 @@
   csd_name: CS Discoveries
   csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
-  user_header_gamelab: Game Lab
-  user_header_playlab: Play Lab
-  user_header_minecraft: Minecraft
-  user_header_flappy: Flappy
+  user_header_spritelab: Sprite Lab
   user_header_view_all: View all projects...
   user_header_view_project_gallery: View project gallery
   user_header_view_my_projects: View my projects
@@ -2171,16 +2225,93 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  aquatic_name: 'Minecraft: Voyage Aquatic'
-  creativity: creativity
-  creativity_create: Create
-  creativity_what_will_you_create: What will you create?
-  creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in!
-    Are you?'
-  creativity_social_media_2: 'This year''s #HourOfCode is about creativity. I’m in!
-    What will you create?'
+  applab_tile_title: Intro to App Lab (Ages 13+)
+  applab_tile_subtitle: Create your own app in JavaScript using block based programming.
+    Or take your skills to the next level with text-based programming. (English Only)
+  applab_tile_start_tutorial: Start tutorial
+  applab_tile_teacher_guide: View teacher guide
   account_sign_up_email_opt_in: Can we email you about updates to our courses, local
     opportunities, or other computer science news? (roughly once a month)
   account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
     permission to use the Code.org services.
+  hoc_overview_title: Hour of Code for all ages
+  hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
+    a global movement reaching tens of millions of students in 180+ countries. Anyone,
+    anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
+    tutorials, available in over 45 languages.
+  hoc_overview_partner_activities_title: More activities from partners
+  hoc_overview_partner_activities_body: The Hour of Code website has over 100 computer
+    science activities for all ages and experience levels, developed by Code.org and
+    partners.
+  hoc_overview_partner_activities_link: View Activities
+  hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
+    the Hour of Code (Dec 3-9)!
+  hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
+    activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
+    Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
+  hoc2018_mc_aquatic_title: Minecraft Voyage Aquatic
+  hoc2018_mc_aquatic_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  hoc2018_mc_hero_title: Minecraft Hero’s Journey
+  hoc2018_mc_hero_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  hoc2018_mc_educators: For Educators
+  hoc2018_mc_educators_box1_title: Code with Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
+    curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_button: Get started
+  hoc2018_mc_educators_box2_title: Download Facilitator Guide
+  hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
+    and engage your students in computer science.
+  hoc2018_mc_educators_box3_title: Attend a free student workshop
+  hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
+    Hour of Code workshop. For participants of all skill levels, ages six and up.
+  hoc2018_mc_educators_box3_button: Find a workshop
+  hoc2018_mc_educators_box4_title: Access more computer science resources
+  hoc2018_mc_educators_box4_desc: Create change in your community with digital skills
+    and computer science education resources from Microsoft.
+  hoc2018_mc_educators_box4_button: Explore resources
+  hoc2018_mc_video_3min: 3 min
+  hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
+  hoc2018_mc_video_title_my_name_is_aracely: My Name is Aracely
+  hoc2018_mc_homepage_hoc_coming: The Hour of Code is coming...
+  hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
+    Start with an Hour of Code and your own brand of creativity, whatever it may be.
+  hoc2018_mc_homepage_watch_video: Watch our video
+  hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
+  hoc2018_mc_back_journey: Minecraft is back for the Hour of Code with a brand new
+    activity! Journey through Minecraft with code.
+  hoc2018_mc_teacher_guide: View teacher guide
+  hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Continue learning with Minecraft.
+  hoc2018_mc_go_to_mc_education: Go to Minecraft Education
+  hoc2018_mc_short_description: Use your creativity and problem solving skills to
+    find treasure and explore under water worlds with the power of code.
+  hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
+    to explore and build underwater worlds with code.
+  hoc2018_mc_journey: Journey through Minecraft with code.
+  hoc2018_dance_party_main_heading: Dance Party
+  hoc2018_dance_party_subheading: Help Translate Dance Party
+  hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
+  hoc2018_dance_party_box_title: Dance Party
+  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
+  hoc2018_dance_party_specs: Language | Format | Age 6-106
+  hoc2018_dance_party_button: Start
+  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
+  hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
+    project ideas.
+  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
+  hoc2018_dance_keep_on_dancing_button: Go Beyond
+  hoc2018_dance_teacher_resources: Teacher Resources
+  hoc2018_dance_teacher_resources_desc: Lesson plans, certificates, social media kits,
+    and music filtering
+  hoc2018_dance_measure: Measure
+  hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
+  hoc2018_dance_video1: Dance Party - Introduction
+  hoc2018_dance_video2: Dance Party - Events
+  hoc2018_dance_video3: Dance Party - Properties
+  hoc2018_dance_video4: Dance Party - Congratulations

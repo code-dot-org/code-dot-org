@@ -11,11 +11,20 @@ zh:
   campaign_date_full: "12月4日-10日"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017 年 12 月的 4-10 日"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: '加入史上最大的學習活動， %{campaign_date}'
   front_intro_default: '一小時玩程式（Hour of Code）是個全球性的運動，觸及了來自 180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有<strong>適用於 4 到 104 歲</strong>的教程，支援超過 45 種語言。'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: '觀看新的影片'
   front_watch_regular_video: '觀賞影片'
   front_volunteers: '徵求專門技術志願者'
@@ -279,9 +288,14 @@ zh:
   signup_continue_label: '繼續'
   signup_thank_you_header: "感謝你報名舉辦一小時玩程式的活動。"
   signup_thank_you_message: '我們已經寄給您確認的電子郵件，內容包含了可以幫助您入門的相關資訊。'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "一小時玩程式的地圖"
   map_header: '# 個一小時玩程式活動遍佈世界各地'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: '查看所有事件'
   map_header_company: '# 由公司主辦'
   map_header_country: '在 %{country} 有 # 場'
@@ -409,6 +423,7 @@ zh:
   title_stats: 導語和統計
   title_partners: 夥伴
   title_resources: 資源
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: 謝謝您報名舉辦一小時玩程式活動！
   title_tutorial_guidelines: 活動指南
   title_whole_school: 全校的參與

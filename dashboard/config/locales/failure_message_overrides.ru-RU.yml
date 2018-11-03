@@ -89,6 +89,8 @@ ru:
       MC HOC 2016 Village Test_failure_message_override: Вам нужно сделать Железного
         Голема, преследующий и атакующий зомби, чтобы выиграть.
       WhileAdventure_failure_message_override: Поздравляю! Ты собрал X монет!
+      courseC19_playLab_EOC3_failure_message_override: Вы должны добавить двух или
+        больше новых персонажей в вашу игру, а также запрограммировать их на ходьбу.
       courseE_playLab_scaffold3_failure_message_override: Вы должны добавить двух
         или больше новых персонажей в вашу игру, а также запрограммировать их на ходьбу.
       courseE_playLab_scaffold3_2018_failure_message_override: Вы должны добавить

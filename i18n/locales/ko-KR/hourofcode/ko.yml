@@ -11,11 +11,20 @@ ko:
   campaign_date_full: "12월 7일-13일"
   campaign_date_year: "2016년"
   campaign_date_full_year: "2016년 12월 5일부터 11일"
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Watch our video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: '2015년 12월 7일- 12월 13일, 역사상 가장 큰 학습 이벤트에 참여하세요.'
   front_intro_default: 'Hour of Code는 전세계 180개 이상의 국가에서 이루어지는 국제적 운동입니다. 어느 누구나 어디에서든지 Hour of Code 행사를 운영할 수 있습니다. 한 시간 분량의 튜토리얼은 40여개 이상의 언어로 준비되어 있습니다. <strong>4살에서 104세</strong>까지 누구든 참여할 수 있습니다.'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: '새로운 동영상 보기'
   front_watch_regular_video: '동영상 보기'
   front_volunteers: '전공 자원봉사자 모집합니다.'
@@ -279,9 +288,14 @@ ko:
   signup_continue_label: 'Continue'
   signup_thank_you_header: "Hour of Code 행사 운영을 등록해 주셔서 감사합니다."
   signup_thank_you_message: '이벤트를 시작하는데 도움이되는 정보와 확인 메일을 발송하였습니다.'
+  social_og_title_hoc2018_creativity: "What will you create?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "Hour of Code 참여지역"
   map_header: '# 전세계적으로 운영되는 Hour of Code 이벤트들'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: '모든 이벤트 살펴보기'
   map_header_company: '# 개의 회사들이 행사를 조직/운영하고 있습니다.'
   map_header_country: '# %{country}에서'
@@ -409,6 +423,7 @@ ko:
   title_stats: 추천 의견들과 통계
   title_partners: 파트너
   title_resources: 각종 자료
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Hour of Code! 행사를 운영하는데 가입해 주셔서 감사합니다.
   title_tutorial_guidelines: 튜토리얼 가이드라인
   title_whole_school: 학교 전체 참여

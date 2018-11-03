@@ -1,0 +1,52 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-10-19T22:27:19.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "setProperty": null,
+      "getProperty": null,
+      "console.log": null
+    },
+    "contained_level_names": null,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "display_name": "Welcome to Applab!",
+    "submittable": "false",
+    "start_blocks": "console.log(\"Hello planet!\");",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "true",
+    "debugger_disabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "long_instructions": "Hello, this is where you're going to do App Lab! Are you excited to app it up? We are too? Who are we? Don't worry about it!\r\n\r\n- Hannah and GT\r\n\r\n![](https://images.code.org/43fb83b883fcb8cff16c722dc8ae560a-image-1539988187959.png)"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-10-19 22:32:29 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

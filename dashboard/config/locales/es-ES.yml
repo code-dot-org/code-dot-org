@@ -24,7 +24,6 @@ es:
       user:
         name: Nombre a mostrar
         name_example: Nombre para mostrar <br/> (codificador fresco o Jane S.)
-        other_name_example: Nombre Mostrado<br/>(por ejemplo, Srta. Smith)
         email: Correo electrónico
         parent_email: Email del padre o guardián
         personal_email: Dirección de email personal <a href="%{url}">(haz click aquí
@@ -53,6 +52,7 @@ es:
   next_resource: Siguiente recurso
   cancel: Cancelar
   okay: De acuerdo
+  or: o
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
   add_teacher_form:
     code:
@@ -99,6 +99,7 @@ es:
     twitter: Twitter
     facebook: Facebook
     windowslive: Cuenta de Microsoft
+    microsoft_v2_auth: Cuenta de Microsoft
     clever: Cuenta inteligente
     powerschool: Cuenta Powerschool
     forgot_password: "¿Olvidaste tu contraseña?"
@@ -143,7 +144,6 @@ es:
     age: Edad
     user_type: "¿Eres estudiante o profesor?"
     submit: Registrarse
-    next: Siguiente
     teacher: "¿Eres profesor/a?"
     valid_username: "¡Disponible!"
     invalid_username: El Nombre de usuario debe tener al menos 5 caracteres
@@ -187,7 +187,6 @@ es:
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Debes especificar una preferencia de email.
-    create_user_type: Crear cuenta como un
   school_info:
     title: Información escolar (opcional)
     school_country: País de escuela
@@ -217,7 +216,7 @@ es:
     remember: Recordarme
     submit: Iniciar Sesión
   signin:
-    try_heading: "¿Deseas intentar codificar sin registrarse?"
+    try_heading: "¿Desea intentar codificar sin registrarse?"
     try_hoc: Prueba primero una Hora de Code
     try_20hours: Prueba ahora Introducción a la Informática en 20 horas
   signinsection:
@@ -269,6 +268,7 @@ es:
     code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
       remove: "¿Estás seguro que quieres abandonar esta sección?"
+    default_name: Sección sin título
     remove: "(remover sección)"
     type:
       picture: Foro contraseña
@@ -326,7 +326,7 @@ es:
           y contraseña
   nav:
     header:
-      finished_hoc: He terminado mi Hora de Code
+      finished_hoc: He terminado mi Hora de Código
       sign_in_to_save: Inicia sesión para guardar tu progreso
       free_play:
         playlab: Hacer una aplicación para el laboratorio de juegos
@@ -369,15 +369,6 @@ es:
       help_us: Ayudenos
       teach: Enseñar
       about: Acerca de
-    create_button:
-      create: Crear
-      applab: Laboratorio de Aplicaciones
-      artist: Artista
-      gamelab: Laboratorio de juego
-      playlab: Laboratorio de juegos
-      minecraft: Minecraft
-      flappy: Flappy
-      view_all: Ver todos los proyectos...
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de distrito
@@ -388,9 +379,18 @@ es:
       signin: Iniciar Sesión
       signup: Crea una cuenta
       already_registered: "¿Ya estás registrado?"
+      pair_programming: Programación de pares
       team: Equipo
       driver: Conductor
       navigator: Navegador
+      create: Crear
+      applab: Laboratorio de Aplicaciones
+      artist: Artista
+      gamelab: Laboratorio de juego
+      playlab: Laboratorio de juegos
+      minecraft: Minecraft
+      flappy: Flappy
+      view_all: Ver todos los proyectos...
     popup:
       progress_for_user: progreso de %{name}
       progress: Tu progreso
@@ -424,6 +424,7 @@ es:
       example: Solución de ejemplo
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
+      last_updated: 'Última actualización:'
       unsubmit: NO enviado
       worked_with: Trabajado con
       update_lock_settings: Actualiza las opciones de bloqueo aquí.
@@ -862,6 +863,8 @@ es:
       title: Minecraft
       body: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas,
         ovejas, Creepers, zombis y más.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

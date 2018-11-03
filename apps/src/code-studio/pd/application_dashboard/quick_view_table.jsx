@@ -67,11 +67,7 @@ export class QuickViewTable extends React.Component {
     };
   }
 
-  showLocked = () => (
-    this.props.isWorkshopAdmin
-    || this.props.viewType === 'facilitator'
-    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
-  );
+  showLocked = () => (this.props.viewType === 'facilitator');
 
   handlePrincipalApprovalButtonsChange = (applicationId, principal_approval) => {
     this.setState({
@@ -159,7 +155,7 @@ export class QuickViewTable extends React.Component {
 
     if (this.props.viewType === 'teacher') {
       columns.push({
-        property: 'principal_approval',
+        property: 'principal_approval_state',
         header: {
           label: 'Principal Approval',
           transforms: [sortable]
@@ -170,13 +166,19 @@ export class QuickViewTable extends React.Component {
       }, {
         property: 'meets_criteria',
         header: {
-          label: 'Meets Criteria',
+          label: 'Meets Minimum Requirements',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'meets_scholarship_criteria',
+        header: {
+          label: 'Meets Scholarship Requirements',
           transforms: [sortable]
         }
       }, {
         property: 'total_score',
         header: {
-          label: 'Total Score',
+          label: 'Bonus Points',
           transforms: [sortable]
         }
       });
@@ -273,11 +275,11 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatPrincipalApprovalCell = (principal_approval, props) => {
-    if (principal_approval) {
+  formatPrincipalApprovalCell = (principal_approval_state, props) => {
+    if (principal_approval_state) {
       return (
         <span>
-          {principal_approval}
+          {principal_approval_state}
         </span>
       );
     }

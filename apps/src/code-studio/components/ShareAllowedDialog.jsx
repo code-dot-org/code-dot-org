@@ -17,6 +17,7 @@ import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DownloadAsGif from "./DownloadAsGif";
+import experiments from '../..//util/experiments';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -131,10 +132,6 @@ function checkImageReachability(imageUrl, callback) {
   );
 }
 
-function sharingDisabled(userSharingDisabled, appType) {
-  return userSharingDisabled && (appType === 'applab' || appType === 'gamelab' || appType === 'weblab');
-}
-
 /**
  * Share Dialog used by projects
  */
@@ -164,6 +161,7 @@ class ShareAllowedDialog extends React.Component {
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
     getNextFrame: PropTypes.func,
+    replayLog: PropTypes.array,
   };
 
   state = {
@@ -190,8 +188,20 @@ class ShareAllowedDialog extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.isOpen && !prevProps.isOpen) {
+      recordShare('open');
+    }
+  }
 
-  close = () => this.props.onClose();
+  sharingDisabled = () =>
+    this.props.userSharingDisabled &&
+    ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
+
+  close = () => {
+    recordShare('close');
+    this.props.onClose();
+  };
 
   showSendToPhone = (event) => {
     this.setState({
@@ -219,6 +229,16 @@ class ShareAllowedDialog extends React.Component {
 
   unpublish = () => {
     this.props.onUnpublish(this.props.channelId);
+  };
+
+  createReplayVideo = () => {
+    fetch("https://dance-api.code.org/render", {
+      method: "POST",
+      body: JSON.stringify({
+        log: this.props.replayLog,
+        id: this.props.channelId
+      })
+    });
   };
 
   render() {
@@ -262,7 +282,7 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {canPrint, canPublish, isPublished, userSharingDisabled, appType, getNextFrame} = this.props;
+    const {canPrint, canPublish, isPublished, getNextFrame} = this.props;
     return (
       <div>
         <BaseDialog
@@ -271,7 +291,7 @@ class ShareAllowedDialog extends React.Component {
           handleClose={this.close}
           hideBackdrop={this.props.hideBackdrop}
         >
-          {sharingDisabled(userSharingDisabled, appType) &&
+          {this.sharingDisabled() &&
             <div style={{position: 'relative'}}>
               <div style={{paddingRight: 10}}>
                 <p>{i18n.sharingBlockedByTeacher()}</p>
@@ -287,7 +307,7 @@ class ShareAllowedDialog extends React.Component {
               </div>
             </div>
           }
-          {!sharingDisabled(userSharingDisabled, appType) &&
+          {!this.sharingDisabled() &&
             <div>
               {image}
               <div id="project-share" className={modalClass} style={{position: 'relative'}}>
@@ -384,6 +404,11 @@ class ShareAllowedDialog extends React.Component {
                     </a>}
                   </span>}
                 </div>
+                {experiments.isEnabled('p5Replay') &&
+                  <button onClick={this.createReplayVideo}>
+                    Create Replay Video
+                  </button>
+                }
                 {this.state.showSendToPhone &&
                 <SendToPhone
                   channelId={this.props.channelId}
@@ -427,6 +452,7 @@ export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
   getNextFrame: state.shareDialog.getNextFrame,
+  replayLog: state.shareDialog.replayLog,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {

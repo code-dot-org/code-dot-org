@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Como ensinar a Hora do Código em aulas extracurriculares e em clubes
 
-### Junte-se ao movimento e apresente para um grupo de estudantes a sua primeira hora de informática com estas etapas. É fácil executar a Hora do Código - mesmo para principiantes! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+### Junte-se ao movimento e apresente para um grupo de estudantes a sua primeira hora de informática com estas etapas. É fácil executar a Hora do Código - mesmo para principiantes! Se você gostaria de um par extra de mãos para ajudar, você pode encontrar um [voluntário local](%= codeorg_url('/volunteer/local') %) para ajudar a executar a Hora do Código em sua classe.
 
 * * *
 

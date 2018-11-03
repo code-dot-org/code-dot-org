@@ -47,6 +47,7 @@ is:
   next_resource: Næstu tilföng
   cancel: Hætta við
   okay: Allt í lagi
+  or: eða
   heading_x_of_y: "%{heading} (síða %{x} af %{y})"
   add_teacher_form:
     code:
@@ -93,6 +94,7 @@ is:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft reikning
+    microsoft_v2_auth: Microsoft reikning
     clever: Clever aðgangur
     forgot_password: Gleymdir þú lykilorðinu þínu ?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
@@ -130,7 +132,6 @@ is:
     age: Aldur
     user_type: Ert þú nemandi eða kennari?
     submit: Skráning
-    next: Næsta
     teacher: Ertu kennari?
     valid_username: Laust!
     invalid_username: Notandanafn verður að vera að minnsta kosti 5 stafir
@@ -335,14 +336,6 @@ is:
       help_us: Hjálpaðu
       teach: Kenndu
       about: Um
-    create_button:
-      create: Búa til
-      applab: Appsmiðja
-      artist: Listamaður
-      gamelab: Leikjasmiðjan
-      playlab: Leikjasmiðja
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis
@@ -356,6 +349,13 @@ is:
       team: Félagar
       driver: Ökumaður
       navigator: Leiðsögumaður
+      create: Búa til
+      applab: Appsmiðja
+      artist: Listamaður
+      gamelab: Leikjasmiðjan
+      playlab: Leikjasmiðja
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: Framvinda %{name}
       progress: Framvinda þín
@@ -795,6 +795,8 @@ is:
     minecraft2016:
       title: Minecraft
       body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

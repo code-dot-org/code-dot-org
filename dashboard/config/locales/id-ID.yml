@@ -48,6 +48,7 @@ id:
   next_resource: Sumber selanjutnya
   cancel: Batal
   okay: Oke
+  or: atau
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   add_teacher_form:
     code:
@@ -95,6 +96,7 @@ id:
     twitter: Twitter
     facebook: Facebook
     windowslive: Akun Microsoft
+    microsoft_v2_auth: Akun Microsoft
     clever: Akun pintar
     forgot_password: Lupa kata sandi?
     need_confirmation: Tidak menerima instruksi konfirmasi?
@@ -133,7 +135,6 @@ id:
     age: Umur
     user_type: Anda Pelajar atau Pengajar?
     submit: Daftar
-    next: Selanjutnya
     teacher: Apakah anda seorang guru?
     valid_username: Tersedia!
     invalid_username: Nama pengguna harus minimal 5 karakter
@@ -339,14 +340,6 @@ id:
       help_us: Bantu Kami
       teach: Mengajar
       about: Tentang
-    create_button:
-      create: Buat
-      applab: Laboratorium Aplikasi
-      artist: Artis
-      gamelab: Laboratorium Game
-      playlab: Play Lab/Lab Permainan
-      minecraft: Minecraft
-      flappy: Flappy
     user:
       classroom: Beranda guru
       district_dashboard: Wilayah Dashboard
@@ -360,6 +353,13 @@ id:
       team: Tim
       driver: Masuk
       navigator: Mitra
+      create: Buat
+      applab: Laboratorium Aplikasi
+      artist: Artis
+      gamelab: Laboratorium Game
+      playlab: Play Lab/Lab Permainan
+      minecraft: Minecraft
+      flappy: Flappy
     popup:
       progress_for_user: "%{name} kemajuan"
       progress: Kemajuan Anda
@@ -829,6 +829,8 @@ id:
       title: Minecraft
       body: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft
         Anda sendiri.
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     sports:

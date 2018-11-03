@@ -896,6 +896,8 @@ eu:
               name: Eskumuturreko bitarrak
             Binary Images:
               name: Irudi bitarrak
+            Play Lab:
+              name: Jolas Laborategia
         csd2-2017:
           stages:
             Lists:

@@ -2,11 +2,44 @@ is:
   data:
     function_names:
       x: x
+      details: nánar
+      draw eyebrow: teikna augabrún
+      draw pupil: teikna sjáaldur
       draw a circle: teikna hring
+      draw a car: teikna bíl
+      draw_rect: teikna_rétth
+      draw square: teikna ferning
+      jump to middle: hoppa að miðju
+      draw a button: teikna hnapp
+      draw cord: teikna snúru
+      draw left leg: teikna vinstri fót
+      draw right leg: teikna hægri fót
+      draw body and arms: teikna búk og handleggi
+      draw a head: teikna höfuð
+      draw sitting stick figure: teikna sitjandi Óla prik
+      draw head: teikna höfuð
+      draw arms: teikna handleggi
+      jump to neck: hoppa að hálsi
+      draw O: teikna O
+      draw D: teikna D
+      draw E: teikna E
+      big gear: stórt tannhjól
+      small gear: lítið tannhjól
       draw a hexagon: teikna sexkant
       draw a flower: teikna blóm
       draw a square: teikna ferning
       draw a snowflake: teikna snjókorn
+      draw 3 hexagons: teikna 3 sexkanta
+      draw 4 hexagons: teikna 4 sexkanta
+      draw 5 hexagons: teikna 5 sexkanta
+      get 2 nectar: sækja 2 blómasafa
+      collect purple nectar: safna fjólubláum safa
+      get 5: sækja 5
+      move and get nectar: færa og sækja safa
+      move and get 4: færa og sækja 4
+      get 7 nectar make 7 honey: sækja 7 safa búa til 7 hunang
+      get 7 make 7: sækja 7 búa til 7
+      get 7: sækja 7
       draw a tree: teikna tré
       draw a triangle: teikna þríhyrning
       draw a house: teikna hús

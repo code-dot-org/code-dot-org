@@ -14,10 +14,39 @@ mysql_defaults: &mysql_defaults
   pool_adapter: mysql2
   encoding: utf8
   collation: utf8_unicode_ci
-  pool: 5
-  connect_timeout: 2
-  reconnect: true
   default_group: 'cdo'
+
+  # ActiveRecord connection-pool settings:
+  # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html
+  # maximum number of connections the pool may manage (default 5).
+  pool: 5
+  # number of seconds to wait for a connection to become available before giving up and raising a timeout error (default 5 seconds).
+  checkout_timeout: 3
+
+  # `mysql_options` client options forwarded through the mysql2 adapter:
+  # See: https://dev.mysql.com/doc/refman/5.7/en/mysql-options.html
+
+  # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
+  connect_timeout: 2
+
+  # `MYSQL_OPT_RECONNECT`: Enable or disable automatic reconnection to the server if the connection is found to have
+  # been lost. Reconnect is off by default; this option provides a way to set reconnection behavior explicitly.
+  # See https://dev.mysql.com/doc/refman/5.7/en/c-api-auto-reconnect.html
+  reconnect: true
+
+  # `MYSQL_OPT_READ_TIMEOUT`: The timeout in seconds for each attempt to read from the server.
+  # There are retries if necessary, so the total effective timeout value is three times the option value.
+  # You can set the value so that a lost connection can be detected earlier than the TCP/IP Close_Wait_Timeout value of 10 minutes.
+  #
+  # NOTE: mysql2 reuses this variable as a query timeout without retry, so set it to the maximum query execution time.
+  read_timeout: 30
+
+  # `MYSQL_OPT_WRITE_TIMEOUT`: The timeout in seconds for each attempt to write to the server.
+  # There is a retry if necessary, so the total effective timeout value is two times the option value.
+  write_timeout: 5
+
+  # Seamless Database Pool settings:
+  # See: https://github.com/bdurand/seamless_database_pool#configuration
   master:
     username: <%= writer.user || 'root' %>
     password: <%= writer.password || '' %>

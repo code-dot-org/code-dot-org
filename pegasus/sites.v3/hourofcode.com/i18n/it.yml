@@ -11,21 +11,30 @@ it:
   campaign_date_full: "dal 4 al 10 dicembre"
   campaign_date_year: "2017"
   campaign_date_full_year: "dal 4 al 10 dicembre 2017"
-  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-  cookie_banner_more_information: "See Code.org's Privacy Policy."
-  cookie_banner_accept: 'I agree'
+  codeorg_homepage_hoc2018_curriculum: 'Go further with <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org courses</a>'
+  codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
+  codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'Cosa creerai?'
+  codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
+  codeorg_homepage_hoc2018_video: 'Guarda il nostro video'
+  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
+  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
+  cookie_banner_message: 'Cliccando "Accetto." accetti la memorizzazione dei cookie sul tuo computer o dispositivo.'
+  cookie_banner_more_information: "Vedi la Privacy Policy di Code.org."
+  cookie_banner_accept: 'Accetto'
   front_header_banner: 'Partecipa all''evento didattico più popolare del mondo, %{campaign_date}'
   front_intro_default: 'L''Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni. Chiunque, in ogni parte del mondo, può organizzare un''Ora del Codice. Esercitazioni di un''ora sono disponibili in oltre 45 lingue diverse. Non è necessaria alcuna esperienza. <strong> Da 4 a 104 anni. </strong>'
+  front_intro_default_2: 'A global movement in 180+ countries.'
   front_watch_video: 'Guarda il nuovo video'
   front_watch_regular_video: 'Guarda il video'
   front_volunteers: 'Siamo alla ricerca di volontari tecnici (solo per gli USA)'
   front_start_learning: 'Inizia a imparare'
-  gdpr_dialog_heading: 'Do you agree to using a web site based in the United States?'
+  gdpr_dialog_heading: 'Accetti di utilizzare di un sito web basato negli Stati Uniti?'
   gdpr_dialog_message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-  gdpr_dialog_link_intro: 'For details see our'
+  gdpr_dialog_link_intro: 'Per ulteriori informazioni vedere la nostra'
   gdpr_dialog_privacy_policy: 'privacy policy'
-  gdpr_dialog_logout: 'Logout'
-  gdpr_dialog_yes: 'Yes'
+  gdpr_dialog_logout: 'Esci'
+  gdpr_dialog_yes: 'Sì'
   header_menu_resources: 'Risorse'
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'Come'
@@ -38,9 +47,9 @@ it:
   company_asa: Afterschool Alliance
   company_asos: ASOS
   company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
+  company_bsusa: Boy Scouts in America
   company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
+  company_gsusa: Girl Scouts in America
   company_khanacademy: Khan Academy
   company_kipp: KIPP
   company_mesa: Mathematics Engineering Science Achievement
@@ -256,7 +265,7 @@ it:
   signup_match_volunteer: 'Aiutami a trovare un Ingegnere Informatico per stimolare i miei studenti (solo per gli USA)'
   signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
   signup_email_preference_privacy: '(See our privacy policy)'
-  signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes: 'Sì'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
   signup_multiple_event_warning: "Se stai organizzando più eventi dell'Ora del Codice, per favore indica un differente nome o indirizzo di posta elettronica per ognuno di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo di posta elettronica."
@@ -279,9 +288,14 @@ it:
   signup_continue_label: 'Continua'
   signup_thank_you_header: "Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice."
   signup_thank_you_message: 'Ti abbiamo inviato un messaggio di conferma per posta elettronica con le informazioni per aiutarti a iniziare.'
+  social_og_title_hoc2018_creativity: "Cosa creerai?"
+  social_og_description_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science."
+  social_og_description_hoc2018_creativity_short: "The #HourOfCode is about creativity. I’m in! Are you?"
+  social_description_twitter_hoc2018_creativity_long: "Every student deserves the opportunity to express their creativity with computer science. What will you create?"
+  social_description_twitter_hoc2018_creativity_short: "The #HourOfCode is about creativity. What will you create?"
   map_title: "La mappa degli eventi dell'Ora del Codice"
   map_header: '# eventi dell''Ora del Codice in tutto il mondo'
-  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
+  map_header_count_year: '%{event_count} events registered in %{year}'
   see_all_events: 'Vedi tutti gli eventi'
   map_header_company: '# gli organizzatori'
   map_header_country: '# in %{country}'
@@ -409,6 +423,7 @@ it:
   title_stats: Statistiche utili
   title_partners: Partner
   title_resources: Risorse
+  title_past_posters: Ultima Ora del Codice
   title_signup_thanks: Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!
   title_tutorial_guidelines: Linee Guida per i Corsi
   title_whole_school: Partecipazione di Tutta la Scuola

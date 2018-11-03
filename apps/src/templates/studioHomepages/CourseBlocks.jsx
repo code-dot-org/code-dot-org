@@ -133,11 +133,13 @@ class CourseBlocksCsfLegacy extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    rowCount: PropTypes.number.isRequired
+    rowCount: PropTypes.number.isRequired,
+    displayMinecraftAquatic: PropTypes.bool,
   };
 
   componentDidMount() {
-    $('#hero').appendTo(ReactDOM.findDOMNode(this.refs.hero)).show();
+    const minecraftElement = this.props.displayMinecraftAquatic ? '#aquatic' : '#hero';
+    $(minecraftElement).appendTo(ReactDOM.findDOMNode(this.refs.minecraft)).show();
     $('#starwars').appendTo(ReactDOM.findDOMNode(this.refs.starwars)).show();
     $('#frozen').appendTo(ReactDOM.findDOMNode(this.refs.frozen)).show();
     $('#hourofcode').appendTo(ReactDOM.findDOMNode(this.refs.hourofcode)).show();
@@ -151,7 +153,7 @@ export class CourseBlocksHoc extends Component {
     return (
       <div>
         <div className="row">
-          <ProtectedStatefulDiv ref="hero"/>
+          <ProtectedStatefulDiv ref="minecraft"/>
           <ProtectedStatefulDiv ref="starwars"/>
           <ProtectedStatefulDiv ref="frozen"/>
           <ProtectedStatefulDiv ref="hourofcode"/>
@@ -178,6 +180,7 @@ export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
     showModernElementaryCourses: PropTypes.bool.isRequired,
+    displayMinecraftAquatic: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -195,7 +198,10 @@ export class CourseBlocksAll extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc rowCount={1}/>
+          <CourseBlocksHoc
+            rowCount={1}
+            displayMinecraftAquatic={this.props.displayMinecraftAquatic}
+          />
         </ContentContainer>
 
         {!this.props.isEnglish && (

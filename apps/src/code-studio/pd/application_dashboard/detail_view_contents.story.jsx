@@ -16,6 +16,7 @@ export default storybook => {
             applicationId="1"
             applicationData={{
               course_name: 'CS Discoveries',
+              course: 'csd',
               regional_partner_name: 'partner',
               notes: 'notes',
               status: 'unreviewed',
@@ -37,7 +38,8 @@ export default storybook => {
                 program: 'program',
                 planOnTeaching: ['Yes'],
                 abilityToMeetRequirements: '10'
-              }
+              },
+              school_stats: {}
             }}
             viewType="facilitator"
           />

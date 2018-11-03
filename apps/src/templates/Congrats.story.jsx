@@ -84,6 +84,17 @@ export default storybook => {
         )
       },
       {
+        name: 'Congrats - 2018 Minecraft, signed out',
+        description: `Congrats component if 2018 Minecraft Aquatic tutorial completed`,
+        story: () => (
+            <Congrats
+              tutorial="aquatic"
+              userType="signedOut"
+              language="en"
+            />
+        )
+      },
+      {
         name: 'Congrats - other, signed out',
         description: `Congrats component if any other Code.org tutorial completed`,
         story: () => (

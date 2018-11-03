@@ -27,32 +27,32 @@ social:
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora del Código!
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **La Hora de Código se celebra durante <%= campaign_date('full')%>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
 
 ## 1. Corre la voz en tu escuela y comunidad
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Te acabas de unir al movimiento de la Hora de Código. ¡Díselo a tus amigos utilizando **#HoraDeCódigo**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. No tienes que estar en la escuela para aprender nuevas habilidades. Invite a local politician or policy maker to visit your school for the Hour of Code. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Anima a otros a participar [con nuestros correos electrónicos de muestra.](<%= resolve_url('/promote/resources#sample-emails') %>) Ponte en contacto con tu director y desafía a todas las aulas de tu escuela para que se registren. Recluta un grupo local - club de scouts, iglesia, universidad, grupo de veteranos, sindicato o incluso algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Invita a un político local o autoridad a visitar tu escuela durante la Hora de Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
 
 Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](<%= resolve_url('/promote/resources') %>) para su propio evento.
 
-## 2. Encuentre un voluntario local que te ayude con tu evento.
+## 2. Encuentra un voluntario local para ayudarte con tu evento.
 
-[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Busca en nuestro mapa de voluntarios](<%= codeorg_url('/volunteer/local') %>) a alguien que pueda visitar tu clase o chatear por video remoto para inspirar a tus estudiantes sobre la amplitud de posibilidades de la informática.
 
-## 3. Planifique su Hora del Código
+## 3. Planifica tu Hora del Código
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Elije una [actividad de la Hora de Código](https://hourofcode.com/learn) para tu clase y [revisa esta guía práctica](<%= resolve_url('/how-to') %>).
 
 # Ve más allá de una Hora de Código
 
-<% if @country == 'us' %> Una Hora de Código es sólo el comienzo. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> Una Hora de Código es sólo el comienzo. Seas administrador, maestro o aliado, tenemos [desarrollo profesional, plan de estudios y recursos para ayudarte a llevar clases de informática a tu escuela o ampliar tus ofertas.](https://code.org/yourschool) Si ya enseñas informática, usa estos recursos durante la semana de educación de ciencias computacionales para obtener el apoyo de la administración, padres y comunidad.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+Tienes muchas opciones para adaptarse a las necesidades de tu escuela. La mayoría de las organizaciones que ofrecen tutoriales de la Hora de Código también tienen disponible planes de estudios y desarrollo profesional. Si encuentras una lección que te gusta, pregunta para ir más allá. Para ayudarte a comenzar, hemos resaltado un número de [proveedores de planes de estudios que te ayudarán a ti o a tus alumnos a ir más allá de una hora.](https://hourofcode.com/beyond)
 
-<% else %> Una Hora de Código es sólo el comienzo. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> Una Hora de Código es sólo el comienzo. La mayoría de las organizaciones que ofrecen lecciones de Hora de Código también tienen planes de estudios disponibles para ir más allá. Para ayudarte a comenzar, hemos resaltado un número de [proveedores de planes de estudios que te ayudarán a ti o a tus alumnos a ir más allá de una hora.](https://hourofcode.com/beyond)
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org también ofrece cursos completos de [introducción a la informática](https://code.org/educate/curriculum/cs-fundamentals-international) traducidos a más de 25 idiomas sin ningún costo para ti o tu escuela. <% end %>
 
 <%= view 'popup_window.js' %>

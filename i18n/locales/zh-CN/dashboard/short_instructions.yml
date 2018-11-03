@@ -473,9 +473,14 @@ zh-CN:
       Building a Foundation Assessment: 修建一个三层的金字塔。这里没有其它方向，所以用这些模块，直到画出它！
       Busy Bee 2: 这只蜜蜂有好多工作要做！你注意到有什么模式能让代码更简单吗?
       Busy Bee: 这只蜜蜂有好多工作要做！你注意到有什么模式能让代码更简单吗?
+      C3-Farmer While Loops 1: 将我移到坑旁边，并且使用“填满”模块来用两铲土填满它。
+      C3-Farmer While Loops 2: 将我移到土堆那里，然后用“移除”模块来移除五铲土。
+      C3-Farmer While Loops 3: '将我移到土堆，并将所有土移除。然后将我移动坑旁边，然后完全填满它。提示：用尽可能少的模块来完成这道题。'
+      C3-Farmer While Loops 4: '哇，我发现一个很深的坑！我不知道要多少铲土才能填满它。你能写一个程序填充它，直到它和地面一样平吗？提示：这次应该用当循环。'
       C3-Farmer While Loops 5: 哇，现在有两个很深的坑！你能写一个程序填充它们，直到和地面一样平吗？
       C3-Farmer While Loops 6: 哇，现在这里有一大堆土！你能写个程序来移除土，直到它和地面一样平吗？
       C3-Farmer While Loops 7: 哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？
+      C3-Farmer While Loops 8: " 这里有一个很深的坑，和一个很大的土堆。需要移动多少土才能将地面弄平整呢？提示：两个都要用“当”循环。"
       C3-Farmer While Loops Assessment 1: 这里有好多坑和土堆。帮我填满或移除它们来让地面平整。
       CDEF_debugging_flappy2: 为什么这个游戏不能玩？
       CSD Hackathon Pt 1: "（点击以查看完整的说明）"
@@ -489,6 +494,9 @@ zh-CN:
       CSD U3 Boolean Predict: 你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
       CSD U3 Boolean Predict_2018: 你认为这个代码在执行时会做什么？预测一下每个console.log() （控制台.日志）命令会打印什么，然后运行程序来检查一下你的预测。
       CSD U3 Draw Loop Discuss: "这里有一个看起来与你之前写的非常类似的但实际上却完全不同的程序。\n你可能需要停下来并与同学们讨论一下再继续。"
+      CSD U3 Draw Loop Experiment: 尝试使用在绘制循环中学到的一些其他形状函数。 使用randomNumber()随机数函数生成一些输入时会发生什么？在继续之前，你需要停止并与班级讨论。
+      CSD U3 Expressions calculator: 将数字1到10相加，然后相乘。与旁边的同学互相检查答案。
+      CSD U3 Frame Rate: 使用 frameRate() 帧率函数来使盖瑞的动作慢下来。
       CSD U3 Keypress Boolean-2018: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Boolean: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Keypress Boolean_2018: 修改代码，以便使所有的console.log命令打印“真”。
@@ -496,6 +504,14 @@ zh-CN:
       CSD U3 Keypress Watchers_2018: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 L5 Freeplay: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       CSD U3 L5 Freeplay_2018: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
+      CSD U3 Mouse Input Bee 2: 这样做
+      CSD U3 Mouse Input Bee 2_2018: 这样做
+      CSD U3 Random Animation: 使用 randomNumber() 随机数函数来激活盖瑞的嘴巴。
+      CSD U3 Random Choice: 使用 randomNumber() 随机数模块生成0或1
+      CSD U3 Random Color: 你可以使用 randomNumber() 随机数函数来挑选随机颜色吗？ 尝试使用随机数设置 rgb 模块中的一个或多个通道。 最大值应该是多少？
+      CSD U3 Random Intro: 当它运行时，你认为这个代码会做什么？进行预测，然后运行该代码 5-10 次并记录每次的输出。与旁边的同学分享你的结果。
+      CSD U3 Random Min Max: 使用 console.log () 函数编写一个程序，在定义的范围内随机返回一个数字。
+      CSD U3 Random Width Height: 选取形状块并使用调用 randomNumber () 随机数函数代替一个或多个参数。确定你多次运行了它，以便看到随机化的效果。
       CSD U3 Simple Drawing - Personal Animation: 做这个
       CSD U3 Sprites intro sprites: 做这个
       CSD U3 Sprites intro sprites_2018 - Validation Test: 做这个
@@ -944,6 +960,8 @@ zh-CN:
       Dance Party Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
       Eval Free Play: '自由发挥： 用代码来创造艺术吧！'
       Eval Strings Images .1: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、 数字或其他用引号引起来的字符的任意组合。运行字符串"你好, 世界！"，看看会发生什么。
+      Farmer for Authored Hint testing: '哇，我发现一个很深的坑！我不知道要多少铲土才能填满它。你能写一个程序填充它，直到它和地面一样平吗？提示：这次应该用当循环。'
+      Farmer for TTS testing: '哇，我发现一个很深的坑！我不知道要多少铲土才能填满它。你能写一个程序填充它，直到它和地面一样平吗？提示：这次应该用当循环。'
       Find the Wizard: 随便创造一个东西。这是一个猜数游戏的例子！
       Find the Wizard_2018: 随便创造一个东西。这是一个猜数游戏的例子！
       Fish Tank 2-validated: 改变达斯汀（风滚草）为鱼。
@@ -973,6 +991,7 @@ zh-CN:
       GLJr_Forever_1: 在你的工作表上，写下当你点击"运行"时，你认为小狗会做什么。
       GLJr_Forever_2: 现在，你有了些新模块！试一试，看看它们有什么用。在你的工作表上，写下你试过哪些，以及它们能做什么。
       GLJr_Forever_5: 现在，我们有了两个精灵！用循环来让小狗紧张，并让小猫漫步。
+      'Game Lab Workshop: Random': 选取形状块并使用调用 randomNumber () 随机数函数代替一个或多个参数。确定你多次运行了它，以便看到随机化的效果。
       Geometric Pattern: '项目创意：使用例如形状的几何概念来创建图案。这需要坚持和计划！'
       Geometric Sun: '项目创意：使用例如形状的几何概念来创建图案。这需要坚持和计划！'
       Geometric Sun_2018: '项目创意：使用例如形状的几何概念来创建图案。这需要坚持和计划！'
@@ -1395,7 +1414,11 @@ zh-CN:
       U3 - Canvas - freePlay: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
       U3 - Design Mode 1: 使用设计模式在屏幕上添加一个大的红色按钮。(单击以获取完整说明。）
       U3 - Keys - Final Image Scroller: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
+      U3 - Simple Drawing - Comments: 这样做
+      U3 - Simple Drawing - Ellipse and No Fill: 这样做
       U3 - Simple Drawing - Fill: 做这个
+      U3 - Simple Drawing - No Fill: 这样做
+      U3 - Simple Drawing - Order of Blocks: 这样做
       U3 - Simple Drawing - Oval: 做这个
       U3 - Simple Drawing - Personal Drawing: 做这个
       U3 - Simple Drawing - Rectangle Width and Height: 做这个
@@ -1403,15 +1426,21 @@ zh-CN:
       U3 - Simple Drawing - Road Ellipse: 做这个
       U3 - Simple Drawing - Road Rects and Color: 做这个
       U3 - Simple Drawing - Simple Shape Drawing: 做这个
+      U3 - Simple Drawing - Stroke and Stroke Weight: 这样做
       U3 - Simple Drawing - X and Y values: 做这个
+      U3 - Simple Drawing - regular polygon: 这样做
       U3 - Simple Drawing - text: 做这个
       U3 - Sprites - Intro Sprites: 做这个
       U3 - Sprites and Mod - Create  and Draw Sprite: 做这个
+      U3 - Sprites and Mod - Mouse Width and Height: 这样做
+      U3 - Sprites and Mod - Mouse X and Y: 这样做
+      U3 - Sprites and Mod - Rand Around Mouse: 这样做
       U3 - Sprites and Mod - Rand Shape Color: 做这个
       U3 - Sprites and Mod - Shape Color: 做这个
       U3 - Sprites and Mod - Wrap Many Squares: 做这个
       U3 - Sprites and Mod - X and Y Prop: 做这个
       U3 - Sprites and Mod - two sprites: 做这个
+      U3 - images - bee free play: 这样做
       U3 Variables flower example: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3 Variables gray square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
       U3 Variables randomize your square: 试着调整petalSize（花瓣尺寸）的值几次，绘制的图形会如何变化呢？
@@ -2009,6 +2038,12 @@ zh-CN:
       courseB_starWars_prog8_2018: "** 挑战: ** 帮助 BB-8 收集发光的废旧金属"
       courseB_starWars_prog9: 帮助 BB-8 收集发光的废旧金属
       courseB_starWars_prog9_2018: 帮助 BB-8 收集发光的废旧金属
+      courseC19_playLab_EOC1: 选择一个背景和地图，然后选择一个演员来作为你的游戏里的英雄。
+      courseC19_playLab_EOC2: 用事件处理函数和行动来帮助你的英雄移动。
+      courseC19_playLab_EOC3: 添加两个或更多的演员到你的游戏中，并让它们移动。
+      courseC19_playLab_EOC4: 找一些有趣的方法来改变游戏的分数。让分数不为零，然后再继续。
+      courseC19_playLab_EOC5: 现在，花一些时间来让游戏按照你想的方式运行。包括游戏失败或胜利的方法，然后玩游戏，直到某个条件达成。
+      courseC19_playLab_EOC6: 完成了！现在你可以玩自己的游戏，或者分享给你的朋友或同学了！
       courseC_PlayLab_events1: 让乔治狗 (演员 1) 说 "大家好。“
       courseC_PlayLab_events1_2018: 让乔治狗 (演员 1) 说 "大家好。“
       courseC_PlayLab_events2: 你能让乔治狗 (演员 1) 说点什么, 然后让奥丽芙 (演员 2) 接着说些什么吗？
