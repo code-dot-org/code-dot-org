@@ -1,0 +1,34 @@
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/dance-landing/dance-teacher-resources.css'}
+
+:ruby
+  resources = [
+    {
+      title: "Dance Party",
+      description: "Code a Dance Party to share with your friends!",
+      image: "/images/animated-examples/cutesprite.gif",
+      button_text: "Start",
+      link: CDO.studio_url('/s/dance')
+    },
+    {
+      title: "Keep Dancing",
+      description: "Go beyond the first hour with extended Dance Party project ideas.",
+      image: "/images/animated-examples/cutesprite.gif",
+      button_text: "Go Beyond",
+      link: CDO.studio_url('/s/dance-extras')
+    },
+  ]
+
+.resources
+  -resources.each do |resource|
+    .col-50
+      .resource-card
+        .resource-gif
+          %img{src: resource[:image]}
+        .resource-text-box
+          .resource-title
+            = resource[:title]
+          .resource-description
+            = resource[:description]
+          %a{href: resource[:link]}
+            %button.gray-button
+              = resource[:button_text]

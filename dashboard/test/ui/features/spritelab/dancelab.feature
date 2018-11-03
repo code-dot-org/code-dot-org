@@ -14,6 +14,7 @@ Feature: Dance Lab
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
     And I do not see "shapeofyou_edsheeran" option in the dropdown "#song_selector"
+    And I sign out
 
   Scenario: Song selector is visible and displays all songs for age > 13
     Given I create a student named "Ron"
@@ -27,6 +28,7 @@ Feature: Dance Lab
     And element "#song_selector" is visible
     #Jazzy_beats is available on local and isawthesign is available on test
     And I see option "jazzy_beats" or "isawthesign_aceofbase" in the dropdown "#song_selector"
+    And I sign out
 
   Scenario: Selecting <13 in age dialog turns filter on
     Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true"
