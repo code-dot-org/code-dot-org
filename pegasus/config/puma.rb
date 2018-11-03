@@ -34,7 +34,7 @@ before_fork do
     require 'puma_worker_killer'
 
     restart_period = DCDO.get("web_service_process_restart_period", 12 * 3600) # default to 12 hours
-    PumaWorkerKiller.enable_rolling_restart(restart_period) # 120 seconds for testing purposes
+    PumaWorkerKiller.enable_rolling_restart(restart_period)
   end
 end
 
