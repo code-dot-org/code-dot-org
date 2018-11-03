@@ -573,14 +573,14 @@ class Blockly < Level
       next if level_object.blank?
       block_text = level_object[:config]["blockText"]
       next if block_text.blank?
-      block_text_translation = I18n.t("data.blocks.#{level_object[:name]}.text", nil)
+      block_text_translation = I18n.t("data.blocks.#{level_object[:name]}.text", default: nil)
       level_object[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
       options = level_object[:config]["args"]
       next if options.blank?
       options.each do |option|
         next if option["options"].blank?
         option["options"]&.each_with_index do |name, i|
-          options_translation = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[1]}", nil)
+          options_translation = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[1]}", default: nil)
           option["options"][i][0] = options_translation unless options_translation.nil?
         end
       end
