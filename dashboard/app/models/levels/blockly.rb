@@ -575,16 +575,24 @@ class Blockly < Level
       next if block_text.blank?
       block_text_translation = I18n.t("data.blocks.#{level_object[:name]}.text", default: nil)
       level_object[:config]["blockText"] = block_text_translation unless block_text_translation.nil?
-      options = level_object[:config]["args"]
-      next if options.blank?
-      options.each do |option|
-        next if option["options"].blank?
-        option["options"]&.each_with_index do |name, i|
-          options_translation = I18n.t("data.blocks.#{level_object[:name]}.options.#{option['name']}.#{name[1]}", default: nil)
-          option["options"][i][0] = options_translation unless options_translation.nil?
+      arguments = level_object[:config]["args"]
+      next if arguments.blank?
+      arguments.each do |argument|
+        next if argument["options"].blank?
+        argument["options"]&.each_with_index do |option, i|
+          # Options come in arrays representing key,value pairs, which will
+          # ultimately determine the display of the dropdown.
+          # When only one element is in the array, it represents both the key
+          # and the value.
+          option_value = option.length > 1 ? option[1] : option[0]
+
+          # Get the translation from the value
+          option_translation = I18n.t("data.blocks.#{level_object[:name]}.options.#{argument['name']}.#{option_value}", default: nil)
+          # Update the key (the first element) with the new translated value
+          argument["options"][i][0] = option_translation unless option_translation.nil?
         end
       end
-      level_object[:config]["args"] = options
+      level_object[:config]["args"] = arguments
     end
     level_objects_copy
   end
