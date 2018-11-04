@@ -42,7 +42,8 @@ describe("DetailViewContents", () => {
       },
       response_scores: {
         committed: 'Yes'
-      }
+      },
+      school_stats: {}
     };
 
     const defaultProps = {

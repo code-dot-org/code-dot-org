@@ -2301,7 +2301,7 @@
     opportunities, or other computer science news? (roughly once a month)
   account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
     permission to use the Code.org services.
-  hoc_overview_title: Hour of Code for all ages
+  hoc_overview_title: Hour of Code Activities from Code.org
   hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
     a global movement reaching tens of millions of students in 180+ countries. Anyone,
     anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
@@ -2385,9 +2385,53 @@
     project ideas.
   hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
   hoc2018_dance_keep_on_dancing_button: Go Beyond
-  hoc2018_dance_teacher_resources: Teacher Resources
-  hoc2018_dance_teacher_resources_desc: Lesson plans, certificates, social media kits,
-    and music filtering
+  hoc2018_dance_teacher_resources_title: Teacher Resources
+  hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
+    music filtering.
+  hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
+  hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
+  hoc2018_dance_teacher_resources_tile2_description: No computers needed! Your class
+    will learn about coding concepts to choreograph a dance party together.
+  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
+  hoc2018_dance_featured_student_creations_title: Featured Student Creations
+  hoc2018_dance_videos_section_heading: Get Inspired
+  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
+  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
+  hoc2018_dance_amazon_section_title_with_logo: 'In partnership with '
+  hoc2018_dance_amazon_future_engineer_program_description: Amazon Future Engineer
+    is a comprehensive childhood-to-career program to inspire, educate, and train
+    low-income and other disadvantaged children and young people to pursue careers
+    in computer science.
+  hoc2018_dance_amazon_learn_more_link: Learn more
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_box1_title: About Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_box1_description: Learn about Amazon’s
+    kindergarten to career program to increase access to computer science education.
+    Find information on how to get involved in our summer camps, high school CS classes,
+    scholarships, and internships.
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: Learn more
+  hoc2018_dance_amazon_try_coding_this_summer_box2_long_title: Try coding this summer
+  hoc2018_dance_amazon_K-8_programs_box2_short_title: K-8 programs
+  hoc2018_dance_amazon_try_coding_box2_description: Get involved in Amazon Future
+    Engineer’s free, fun, and inclusive computer science camps! Summer camps are available
+    for students from kindergarten through 8th grade in multiple locations in the
+    US for summer 2019.
+  hoc2018_dance_amazon_apply_now_button_text: Apply now
+  hoc2018_dance_amazon_scholarship_programs_box3_short_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_box3_long_title: Get funding for your
+    CS degree
+  hoc2018_dance_amazon_scholarship_programs_box3_description: Amazon is offering $10,000
+    4-year scholarships for underserved students who are studying CS. Applicants must
+    have successfully completed or currently be enrolled in an AP computer science
+    course. Scholarship recipients will also receive paid summer internships at Amazon
+    in the summer of 2020!
+  hoc2018_dance_amazon_internships_box4_long_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_box4_short_title: Internships
+  hoc2018_dance_amazon_internships_box4_description: Applications are now open for
+    summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical
+    mentor and manager, as well as with other interns, to innovate and create new
+    features and services on behalf of Amazon customers.
   hoc2018_dance_measure: Measure
   hoc2018_dance_measure_colon: 'Measure:'
   hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
