@@ -237,13 +237,6 @@ module Pd::Application
       raise 'Abstract method must be overridden by inheriting class'
     end
 
-    # Override in derived class to provide csv data for cohort view
-    # @return [String] csv text row of values for cohort view ending in newline
-    #         The order of fields must be consistent between this and #self.cohort_csv_header
-    def to_cohort_csv_row
-      raise 'Abstract method must be overridden by inheriting class'
-    end
-
     # Get the answers from form_data with additional text appended
     # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
@@ -268,6 +261,12 @@ module Pd::Application
       raise 'Abstract method must be overridden in inheriting class'
     end
 
+    # Additional labels that we need in the form data hash, but aren't necessarily
+    # single answers to questions
+    def self.additional_labels
+      []
+    end
+
     def self.can_see_locked_status?(user)
       false
     end
@@ -284,7 +283,7 @@ module Pd::Application
             hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
             hash.delete additional_text_field_name
           end
-        end.slice(*self.class.filtered_labels(course).keys)
+        end.slice(*(self.class.filtered_labels(course).keys + self.class.additional_labels).uniq)
       end
     end
 
