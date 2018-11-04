@@ -75,6 +75,7 @@ class DanceVisualizationColumn extends React.Component {
           <SongSelector
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
+            songData={this.props.songData}
             filterOff={filterOff}
           />
         }
