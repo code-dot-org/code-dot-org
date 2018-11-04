@@ -7,9 +7,6 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
-import * as danceRedux from "../dance/redux";
-import Sounds from "../Sounds";
-import project from "../code-studio/initApp/project";
 import queryString from "query-string";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
@@ -23,65 +20,24 @@ const styles = {
 
 const SongSelector = Radium(class extends React.Component {
   static propTypes = {
-    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
-    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
-    hasChannel: PropTypes.bool.isRequired,
+    selectedSong: PropTypes.string,
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
     filterOff: PropTypes.bool.isRequired
   };
 
-  // filterOn indicates whether to display age restricted songs, depending on signed-in user age,
-  // session cookie, or query string
-  state = {
-    songsData: []
-  };
-
   changeSong = (event) => {
-    const song = event.target.value;
-    this.props.setSong(song);
-    this.loadSong(song);
+    const songId = event.target.value;
+    this.props.setSong(songId);
   };
-
-  loadSong(song) {
-    //Load song
-    let options = {id: song};
-    options['mp3'] = this.state.songsData[options.id].url;
-    Sounds.getSingleton().register(options);
-
-    this.props.retrieveMetadata(song);
-
-    if (this.props.hasChannel) {
-      //Save song to project
-      project.saveSelectedSong(song);
-    }
-  }
-
-  componentDidMount() {
-    this.parseSongOptions(this.props.songManifest);
-  }
-
-  parseSongOptions(songManifest) {
-    let songs = {};
-    if (songManifest) {
-      songManifest.forEach((song) => {
-        if ((this.props.filterOff && song.pg13) || !song.pg13) {
-          songs[song.id] = {title: song.text, url: song.url};
-        }
-      });
-    }
-    this.setState({songsData: songs}, () => {
-      this.loadSong(this.props.selectedSong);
-    });
-  }
 
   render() {
     return (
       <div>
         <label><b>{i18n.selectSong()}</b></label>
         <select id="song_selector" style={styles.selectStyle} onChange={this.changeSong} value={this.props.selectedSong}>
-          {Object.keys(this.state.songsData).map((option, i) => (
-            <option key={i} value={option}>{this.state.songsData[option].title}</option>
+          {Object.keys(this.props.songData).map((option, i) => (
+            <option key={i} value={option}>{this.props.songData[option].title}</option>
           ))}
         </select>
       </div>
@@ -92,12 +48,10 @@ const SongSelector = Radium(class extends React.Component {
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
-    retrieveMetadata: PropTypes.func.isRequired,
     setSong: PropTypes.func.isRequired,
-    selectedSong: PropTypes.string.isRequired,
+    selectedSong: PropTypes.string,
     isShareView: PropTypes.bool.isRequired,
-    songManifest: PropTypes.arrayOf(PropTypes.object).isRequired,
-    hasChannel: PropTypes.bool.isRequired,
+    songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired
   };
 
@@ -111,6 +65,8 @@ class DanceVisualizationColumn extends React.Component {
       overflow: 'hidden',
     };
 
+    // userType - 'teacher', assumed age > 13. 'student', age > 13.
+    //            'student_y', age < 13. 'unknown', signed out users
     const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
     const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
     const filterOff = (signedInOver13 || sessionStorage.getItem('anon_over13')) && !teacherOverride;
@@ -119,11 +75,9 @@ class DanceVisualizationColumn extends React.Component {
       <span>
         {!this.props.isShareView &&
           <SongSelector
-            retrieveMetadata={this.props.retrieveMetadata}
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
-            songManifest={this.props.songManifest}
-            hasChannel={this.props.hasChannel}
+            songData={this.props.songData}
             filterOff={filterOff}
           />
         }
@@ -143,11 +97,8 @@ class DanceVisualizationColumn extends React.Component {
 }
 
 export default connect(state => ({
-  hasChannel: !!state.pageConstants.channelId,
   isShareView: state.pageConstants.isShareView,
-  songManifest: state.pageConstants.songManifest,
-  selectedSong: state.selectedSong,
+  songData: state.songs.songData,
+  selectedSong: state.songs.selectedSong,
   userType: state.progress.userType
-}), dispatch => ({
-  setSong: song => dispatch(danceRedux.setSong(song))
 }))(DanceVisualizationColumn);
