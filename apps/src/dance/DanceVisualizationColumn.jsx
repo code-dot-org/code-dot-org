@@ -63,6 +63,12 @@ class DanceVisualizationColumn extends React.Component {
       position: 'relative',
       overflow: 'hidden',
     };
+
+    // userType - 'teacher', assumed age > 13. 'student', age > 13.
+    //            'student_y', age < 13. 'unknown', signed out users
+    const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
+    const filterOff = signedInOver13 || sessionStorage.getItem('anon_over13');
+
     return (
       <span>
         {!this.props.isShareView &&
@@ -70,7 +76,7 @@ class DanceVisualizationColumn extends React.Component {
             setSong={this.props.setSong}
             selectedSong={this.props.selectedSong}
             songData={this.props.songData}
-            filterOff={this.props.userType === 'teacher' || this.props.userType === 'student'}
+            filterOff={filterOff}
           />
         }
         <ProtectedVisualizationDiv>

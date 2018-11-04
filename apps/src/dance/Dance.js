@@ -17,6 +17,7 @@ import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
 
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
 import project from "../code-studio/initApp/project";
 import {
   getSongManifest,
@@ -118,15 +119,18 @@ Dance.prototype.init = function (config) {
 
   ReactDOM.render((
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <DanceVisualizationColumn
-            showFinishButton={showFinishButton}
-            setSong={this.setSongCallback.bind(this)}
-          />
-        }
-        onMount={onMount}
-      />
+      <div>
+        <SignInOrAgeDialog useDancePartyStyle={true}/>
+        <AppView
+          visualizationColumn={
+            <DanceVisualizationColumn
+              showFinishButton={showFinishButton}
+              setSong={this.setSongCallback.bind(this)}
+            />
+          }
+          onMount={onMount}
+        />
+      </div>
     </Provider>
   ), document.getElementById(config.containerId));
 };
