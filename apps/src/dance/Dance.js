@@ -266,7 +266,7 @@ Dance.prototype.afterInject_ = function () {
   const recordReplayLog = this.shouldShowSharing();
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
-    playSound: audioCommands.playSound,
+    playSound: this.playSong.bind(this),
     recordReplayLog,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: () => {
@@ -286,6 +286,13 @@ Dance.prototype.afterInject_ = function () {
   if (recordReplayLog) {
     getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
   }
+};
+
+Dance.prototype.playSong = function (url, callback, onEnded) {
+  audioCommands.playSound({url: url, callback: callback, onEnded: () => {
+    onEnded();
+    this.studioApp_.toggleRunReset('run');
+  }});
 };
 
 /**
