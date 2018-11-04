@@ -9,6 +9,7 @@
 
 %div{style: "clear:both"}
 
+
 .starwars-container
   .img-container.dance-img-placeholder
   %h1.starwars-heading= I18n.t(:hoc2018_dance_create_your_own_dance_title)
@@ -31,3 +32,6 @@
 
 %div{style: "clear:both"}
 
+%h1= I18n.t(:hoc2018_dance_featured_student_creations_title)
+
+= view :student_dance_projects
