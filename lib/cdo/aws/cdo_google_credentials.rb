@@ -32,12 +32,12 @@ if (retries = Aws.shared_config.
   instance_variable_get(:@parsed_config)&.
   dig(Aws.shared_config.profile_name, 'metadata_service_num_attempts'))
 
-  Aws.config.update(instance_profile_credentials_retries: retries)
+  Aws.config.update(instance_profile_credentials_retries: retries.to_i)
 end
 
 if (timeout = Aws.shared_config.
     instance_variable_get(:@parsed_config)&.
     dig(Aws.shared_config.profile_name, 'metadata_service_timeout'))
 
-  Aws.config.update(instance_profile_credentials_timeout: timeout)
+  Aws.config.update(instance_profile_credentials_timeout: timeout.to_i)
 end
