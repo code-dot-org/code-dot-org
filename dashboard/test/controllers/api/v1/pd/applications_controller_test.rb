@@ -7,6 +7,8 @@ module Api::V1::Pd
     # include Pd::Teacher1819ApplicationConstants
     include Pd::Facilitator1819ApplicationConstants
 
+    freeze_time
+
     setup_all do
       csf_facilitator_application_hash = build :pd_facilitator1819_application_hash,
         program: Pd::Application::Facilitator1819Application::PROGRAMS[:csf]
@@ -297,6 +299,37 @@ module Api::V1::Pd
       assert_response :success
       application.reload
       assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
+    end
+
+    test 'update appends to the status changed log if status is changed' do
+      sign_in @program_manager
+
+      assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {status: 'pending'}}
+      @csd_teacher_application_with_partner.reload
+
+      assert_equal [
+        {
+          title: 'pending',
+          changing_user_id: @program_manager.id,
+          changing_user_name: @program_manager.name,
+          time: Time.zone.now
+        }
+      ], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+    end
+
+    test 'update does not append to the status changed log if status is unchanged' do
+      sign_in @program_manager
+      @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
+      @csd_teacher_application_with_partner.reload
+
+      assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
+
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {status: @csd_teacher_application_with_partner.status}}
+      @csd_teacher_application_with_partner.reload
+
+      assert_equal [], @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
     end
 
     test 'workshop admins can lock and unlock applications' do
