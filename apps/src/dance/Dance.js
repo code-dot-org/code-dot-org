@@ -401,6 +401,8 @@ Dance.prototype.execute = async function () {
 
   this.initInterpreter();
 
+  await this.nativeAPI.ensureSpritesAreLoaded(this.charactersReferenced);
+
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
@@ -518,8 +520,22 @@ Dance.prototype.initInterpreter = function () {
     },
   };
 
+  const studentCode = this.studioApp_.getCode();
+
+  // Process studentCode to determine which characters are referenced and update
+  // this.charactersReferenced array with the results:
+  this.charactersReferenced = [];
+  const charactersRegExp = new RegExp(/^.*makeNewDanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/, 'gm');
+  let match;
+  while ((match = charactersRegExp.exec(studentCode))) {
+    const characterName = match[1];
+    if (!this.charactersReferenced.includes(characterName)) {
+      this.charactersReferenced.push(characterName);
+    }
+  }
+
   let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
-  code += this.studioApp_.getCode();
+  code += studentCode;
 
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
