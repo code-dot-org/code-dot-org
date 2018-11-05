@@ -392,7 +392,7 @@ module Pd::Application
             :csp_how_offer,
           ],
           principal: [
-            :csp_ap_exam,
+            :share_ap_scores,
             :replace_which_course_csp,
             :csp_implementation
           ]
@@ -457,10 +457,10 @@ module Pd::Application
           row.push(teacher_answers[k] || try(k) || "")
         end
         CSV_COLUMNS[:principal].each do |k|
+          if columns_to_exclude[:principal]&.include? k.to_sym
+            next
+          end
           if principal_answers
-            if columns_to_exclude[:principal]&.include? k.to_sym
-              next
-            end
             row.push(principal_answers[k] || principal_application.try(k) || "")
           else
             row.push("")
