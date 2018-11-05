@@ -1,11 +1,15 @@
 ---
 ## CloudFormation temaplate based off AWS sample that includes follwoing modifications for Code.org:
+##    configure default tag to be aws-waf
 ##    congfigure stackScope to global
 ##    congfigure ruleAction to COUNT by default
 ##    change to language for allow and deny list
 ##    added new rule for supporting rateLimit and override based on allowed IP list
 ##
-##    Last Updated on 10-31-2018
+##    ref: https://d0.awsstatic.com/whitepapers/Security/aws-waf-owasp.pdf
+##    ref: https://github.com/aws-samples/aws-waf-sample/blob/master/waf-owasp-top-10/owasp_10_base.yml
+##
+##    Last Updated on 11-04-2018
 ##
 ##
 ## Example AWS WAF rule set covering generic OWASP Top 10 vulnerability
