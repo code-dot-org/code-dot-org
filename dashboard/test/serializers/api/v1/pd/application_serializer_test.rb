@@ -20,10 +20,10 @@ class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
         american_indian_alaskan_native_percent: '10.0%',
         asian_percent: '11.0%',
         black_or_african_american_percent: '12.0%',
-        hispanic_or_latino_percent: 'No data',
-        native_hawaiian_or_pacific_islander_percent: 'No data',
-        white_percent: 'No data',
-        two_or_more_races_percent: 'No data'
+        hispanic_or_latino_percent: 'N/A',
+        native_hawaiian_or_pacific_islander_percent: 'N/A',
+        white_percent: 'N/A',
+        two_or_more_races_percent: 'N/A'
       }, serialized[:school_stats].slice(
         :urm_percent,
         :american_indian_alaskan_native_percent,
