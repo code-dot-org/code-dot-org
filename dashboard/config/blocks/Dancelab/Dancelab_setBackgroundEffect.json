@@ -17,11 +17,15 @@
             "\"none\""
           ],
           [
+            "Colors",
+            "\"color_cycle\""
+          ],
+          [
             "Squares",
             "\"disco\""
           ],
           [
-            "Colors",
+            "Rainbow",
             "\"rainbow\""
           ],
           [
@@ -39,6 +43,10 @@
           [
             "Spiral",
             "\"spiral\""
+          ],
+          [
+            "Song Title",
+            "\"text\""
           ],
           [
             "(Random)",
