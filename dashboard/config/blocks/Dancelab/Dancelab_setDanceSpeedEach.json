@@ -1,8 +1,8 @@
 {
   "category": "Groups",
   "config": {
-    "func": "layoutSprites",
-    "blockText": "layout {GROUP} as a {FORMAT}",
+    "func": "setDanceSpeedEach",
+    "blockText": "set {GROUP} dance speed to {SPEED}",
     "args": [
       {
         "name": "GROUP",
@@ -54,43 +54,27 @@
         ]
       },
       {
-        "name": "FORMAT",
+        "name": "SPEED",
         "options": [
           [
-            "border",
-            "\"border\""
+            "very fast",
+            "4"
           ],
           [
-            "inside square",
-            "\"inner\""
+            "fast",
+            "2"
           ],
           [
-            "circle",
-            "\"circle\""
+            "normal",
+            "1"
           ],
           [
-            "grid",
-            "\"grid\""
+            "slow",
+            "0.5"
           ],
           [
-            "row",
-            "\"row\""
-          ],
-          [
-            "column",
-            "\"column\""
-          ],
-          [
-            "criss-cross",
-            "\"x\""
-          ],
-          [
-            "plus",
-            "\"plus\""
-          ],
-          [
-            "random",
-            "\"random\""
+            "very slow",
+            "0.25"
           ]
         ]
       }
