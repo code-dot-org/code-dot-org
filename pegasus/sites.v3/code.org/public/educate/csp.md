@@ -290,6 +290,12 @@ With an approved teacher account you can find answer keys in a blue "Teacher Onl
 Teachers in our professional learning program will automatically be approved to view answer keys.  If you need an approved teacher account, any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
 
 <br />
+	
+### <a name="standards"></a>Is CS Principles mapped to standards?
+
+CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The course has also been aligned to the newly revised 2017 CSTA standards. A summary of standards mappings can be found at [curriculum.code.org/csp/standards](https://curriculum.code.org/csp/standards)
+	
+<br>
 
 ### How can I communicate with other teachers who are using the curriculum?
 Check out our forum at <a href="https://forum.code.org" target=_blank>https://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
