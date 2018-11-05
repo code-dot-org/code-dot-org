@@ -130,7 +130,7 @@ class Homepage
       {
         text: "homepage_action_text_try_it",
         type: "cta_button_hollow_white",
-        url: DCDO.get("hoc_launch", nil) == "mc" ? "/hourofcode/overview" : "/learn"
+        url: DCDO.get("hoc_launch", CDO.default_hoc_launch) == "mc" ? "/hourofcode/overview" : "/learn"
       },
       {
         text: "homepage_action_text_codevideo",
@@ -308,7 +308,7 @@ class Homepage
   end
 
   def self.show_single_hero
-    hoc_launch = DCDO.get("hoc_launch", nil)
+    hoc_launch = DCDO.get("hoc_launch", CDO.default_hoc_launch)
     if hoc_launch == "mc"
       "mc"
     elsif hoc_launch == "dance"
@@ -339,7 +339,7 @@ class Homepage
       # For UI tests just lock to the first hero image
       heroes_arranged = heroes[0, 1]
     elsif show_single_hero
-      hoc_marketing_mode = DCDO.get("hoc_launch", nil)
+      hoc_marketing_mode = DCDO.get("hoc_launch", CDO.default_hoc_launch)
       heroes_arranged = if hoc_marketing_mode == "mc"
                           hoc2018_hero_mc
                         elsif hoc_marketing_mode == "dance"
