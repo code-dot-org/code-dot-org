@@ -24,6 +24,7 @@ import {
   loadSong,
   loadSongMetadata,
   parseSongOptions,
+  unloadSong,
 } from './songs';
 
 const ButtonState = {
@@ -148,9 +149,16 @@ Dance.prototype.initSongs = async function (config) {
 };
 
 Dance.prototype.setSongCallback = function (songId) {
+  const lastSongId = getStore().getState().songs.selectedSong;
+  const songData = getStore().getState().songs.songData;
+
+  if (lastSongId === songId) {
+    return;
+  }
+
   getStore().dispatch(setSelectedSong(songId));
 
-  const songData = getStore().getState().songs.songData;
+  unloadSong(lastSongId, songData);
   loadSong(songId, songData);
 
   this.updateSongMetadata(songId);
