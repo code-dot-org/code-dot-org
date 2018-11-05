@@ -15,7 +15,6 @@ import {reducers, setSelectedSong, setSongData} from './redux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '../code-studio/progressRedux';
 import logToCloud from '../logToCloud';
-
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import SignInOrAgeDialog from "../templates/SignInOrAgeDialog";
 import project from "../code-studio/initApp/project";
@@ -250,7 +249,9 @@ Dance.prototype.afterInject_ = function () {
     ].join(','));
   }
 
-  const recordReplayLog = this.shouldShowSharing();
+  // record a replay log (and generate a video) for both project levels and any
+  // course levels that have sharing enabled
+  const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: audioCommands.playSound,
