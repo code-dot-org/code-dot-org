@@ -400,6 +400,11 @@ class ScriptLevelsController < ApplicationController
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 
+    # Add video generation URL for only the last level of Dance
+    # If we eventually want to add video generation for other levels or level
+    # types, this is the condition that should be extended.
+    replay_video_view_options if @level.channel_backed? && @level.is_a?(Dancelab)
+
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, level: @level, solved?: true),
