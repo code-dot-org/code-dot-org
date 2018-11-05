@@ -4,6 +4,7 @@ require_relative 'files_api_test_base'
 
 class SoundLibraryTest < FilesApiTestBase
   SOUND_LIBRARY_TEST_KEY = 'test_sound.mp3'.freeze
+  RESTRICTED_SOUND_TEST_FILENAME = 'test.mp3'.freeze
 
   def build_rack_mock_session
     @session = Rack::MockSession.new(SoundLibraryApi, 'studio.code.org')
@@ -49,6 +50,39 @@ class SoundLibraryTest < FilesApiTestBase
     assert_equal content, last_response.body
   ensure
     delete_all_versions(SOUND_LIBRARY_BUCKET, SOUND_LIBRARY_TEST_KEY, 10)
+  end
+
+  def test_get_restricted_sound
+    s3_key = "restricted/#{RESTRICTED_SOUND_TEST_FILENAME}"
+    assert_empty RESTRICTED_BUCKET, s3_key
+    content = 'RESTRICTED_CONTENT'
+
+    s3 = AWS::S3.create_client
+    s3.put_object(
+      bucket: RESTRICTED_BUCKET,
+      key: s3_key,
+      body: content,
+      content_type: 'audio/mp3'
+    )
+
+    url = "/restricted/#{RESTRICTED_SOUND_TEST_FILENAME}"
+
+    CDO.stub(:rack_env, :development) do
+      get url
+      assert last_response.ok?
+      assert_equal content, last_response.body
+    end
+
+    CDO.stub(:rack_env, :production) do
+      assert_raises do
+        get url
+      end
+    end
+
+    s3.delete_object(
+      bucket: RESTRICTED_BUCKET,
+      key: s3_key,
+    )
   end
 
   # Ensure no versions of the specified object currently exist.
