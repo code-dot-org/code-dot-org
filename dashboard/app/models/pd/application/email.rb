@@ -24,6 +24,8 @@ module Pd::Application
 
     def send!
       application.deliver_email self
+      application.log_sent_email self
+
       mark_sent!
     end
 
