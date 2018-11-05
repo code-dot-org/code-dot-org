@@ -1611,6 +1611,7 @@ a.download-video {
   min-width: 450px;
   display: flex;
   flex-direction: column;
+  flex-grow: 2;
 
   form {
     display: flex;
@@ -1907,10 +1908,6 @@ a.download-video {
   #user_type-block {
     margin-bottom: 20px;
   }
-  .devise_links {
-    padding-left: 20px;
-    margin-top: 20px;
-  }
 }
 
 .vertical-or {
@@ -1951,6 +1948,8 @@ a.download-video {
 
 // NEW STYLES FOR devise/shared/_new_links
 .devise-links {
+  flex-grow: 2;
+
   form {
     margin: 0;
   }
