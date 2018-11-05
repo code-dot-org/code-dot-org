@@ -1,20 +1,20 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: Fullfør Kodetimen med assisterande teknologi
 ---
-# Completing an Hour of Code with Assistive Technology
+# Fullfør Kodetimen med assisterande teknologi
 
-Anyone can try an Hour of Code during Computer Science Education Week.
+Alle kan prøve Kodetimen i løpet av Kodeveka.
 
-## Using Screen Readers
+## Bruk skjermlesarar
 
-If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Om du bryjer ein skjermlesar er [Quorum-øvinga for nybyrjarar](https://quorumlanguage.com/hourofcode/astro1.html) eller [Quorum-øvinga for komfortable elevar](https://quorumlanguage.com/hourofcode/part1.html) ein bra stad å starte ein Kodetime. Quorum starta som eit tolkespråk, opprinneleg designa for å være tilgjengeleg gjennom skjermlesarar. Det har blitt eit generelt programmeringsspråk designa for alle brukarar. Og dersom du ønsker å gå vidare etter ein kodetime, har teamet hos Quorum tilleggsverkty og pensum.
 
-[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+[![Øvingar for nybyrjarar](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Øvingar for komfortable elevar](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
-## Code.org Tutorials Without Audio
+## Code.org-øvingar utan lyd
 
-The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
+[Code.org-øvingar](https://studio.code.org/courses) kan alle nyttast med eller utan lyd. Alle videoane er teksta.
 
-## Pair Programming
+## Parprogrammering
 
-Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.
+Parprogrammering er eit verktøy dei som jobber med programmerarar nyttar til å løyse problem i par eller i team. Prøv å gjere Kodetimen med ein venn eller ein klassekamerat. Ikkje gløym å [sjekke ut denne videoen](https://www.youtube.com/watch?v=vgkahOzFH2Q) for å lære dei beste teknikkane for parprogrammering.
