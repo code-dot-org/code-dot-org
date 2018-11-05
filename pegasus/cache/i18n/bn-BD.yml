@@ -2308,11 +2308,16 @@
   hoc2018_dance_videos_section_heading: Get Inspired
   hoc2018_dance_video_title_what_is_creativity: What is Creativity?
   hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
-  hoc2018_dance_amazon_section_title_with_logo: 'In partnership with '
-  hoc2018_dance_amazon_future_engineer_program_description: Amazon Future Engineer
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'In partnership with: '
+  hoc2018_dance_amazon_sponsor_section_with_logo_description: Amazon Future Engineer
     is a comprehensive childhood-to-career program to inspire, educate, and train
     low-income and other disadvantaged children and young people to pursue careers
     in computer science.
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer is a comprehensive childhood-to-career program to inspire, educate, and
+    train low-income and other disadvantaged children and young people to pursue careers
+    in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
+    more</a>
   hoc2018_dance_amazon_learn_more_link: Learn more
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
     Amazon Future Engineer
