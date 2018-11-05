@@ -1,3 +1,5 @@
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/dance-landing/student-dance-projects.css'}
+
 :ruby
   dance_projects = [
     {
@@ -32,20 +34,18 @@
 
 .student_dance_projects
   - dance_projects.each do |project|
-    %a{href: project[:link], style: "color: #696969;"}
-      .project-card{style: "height: 240px; width: 216px; border: 1px solid gray; display: inline-block; margin: 10px;"}
-        .project-video
-          %img{src:"/images/animated-examples/student-dance-projects/#{project[:image]}.gif", style: "height: 150px; width:100%"}
-        .project-details{style: "padding: 10px;"}
-          .project-title{style: "font-size: 18px; font-family: 'Gotham 7r', sans-serif;"}
-            = project[:title]
-          .project-author
-            .span{style: "font-size: 14px; font-family: 'Gotham 7r', sans-serif; display: inline-block;"}
-              By:
-            .span{style: "font-size: 14px; display: inline-block; font-family: 'Gotham 4r', sans-serif;"}
-              = project[:name]
-          .project-age
-            .span{style: "font-size: 14px; font-family: 'Gotham 7r', sans-serif; display: inline-block;"}
-              Age:
-            .span{style: "font-size: 14px; display: inline-block; font-family: 'Gotham 4r', sans-serif;"}
-              = project[:age]
+    %a.project-card{href: project[:link], style: "color: #696969; text-decoration: none"}
+      %img.project-video{src:"/images/animated-examples/student-dance-projects/#{project[:image]}.gif"}
+      .project-details
+        .project-title
+          = project[:title]
+        .project-author
+          .span.student-label
+            By:
+          .span.student-name
+            = project[:name]
+        .project-age
+          .span.age-label
+            Age:
+          .span.student-age
+            = project[:age]
