@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181001195320) do
+ActiveRecord::Schema.define(version: 20181104231808) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -523,7 +523,7 @@ ActiveRecord::Schema.define(version: 20181001195320) do
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
   end
 
-  create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "name",                     null: false
     t.text     "content",    limit: 65535
     t.datetime "created_at",               null: false
@@ -572,7 +572,7 @@ ActiveRecord::Schema.define(version: 20181001195320) do
     t.integer  "teacher_application_id"
   end
 
-  create_table "pd_application_emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "pd_application_emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "pd_application_id",  null: false
     t.string   "application_status", null: false
     t.string   "email_type",         null: false
@@ -584,22 +584,23 @@ ActiveRecord::Schema.define(version: 20181001195320) do
 
   create_table "pd_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
-    t.string   "type",                              null: false
-    t.string   "application_year",                  null: false
-    t.string   "application_type",                  null: false
+    t.string   "type",                                      null: false
+    t.string   "application_year",                          null: false
+    t.string   "application_type",                          null: false
     t.integer  "regional_partner_id"
     t.string   "status"
     t.datetime "locked_at"
-    t.text     "notes",               limit: 65535
-    t.text     "form_data",           limit: 65535, null: false
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.text     "notes",                       limit: 65535
+    t.text     "form_data",                   limit: 65535, null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.string   "course"
-    t.text     "response_scores",     limit: 65535,              comment: "Scores given to certain responses"
+    t.text     "response_scores",             limit: 65535,              comment: "Scores given to certain responses"
     t.string   "application_guid"
     t.datetime "accepted_at"
-    t.text     "properties",          limit: 65535
+    t.text     "properties",                  limit: 65535
     t.datetime "deleted_at"
+    t.text     "status_timestamp_change_log", limit: 65535
     t.index ["application_guid"], name: "index_pd_applications_on_application_guid", using: :btree
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
@@ -1066,7 +1067,7 @@ ActiveRecord::Schema.define(version: 20181001195320) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
-  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer  "user_id",                         null: false
     t.text     "reason_for_review", limit: 65535
     t.datetime "created_at",                      null: false

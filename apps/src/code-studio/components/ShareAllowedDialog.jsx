@@ -1,4 +1,4 @@
-/* global dashboard */
+/* global dashboard, appOptions */
 
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
@@ -17,7 +17,7 @@ import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DownloadAsGif from "./DownloadAsGif";
-import experiments from '../..//util/experiments';
+import experiments from '../../util/experiments';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -191,8 +191,25 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
+      this.tryCreateReplayVideo();
     }
   }
+
+  shouldCreateReplayVideo = () =>
+    experiments.isEnabled('p5Replay') &&
+    this.props.appType === 'dance' &&
+    appOptions.signedReplayLogUrl &&
+    this.props.replayLog &&
+    this.props.replayLog.length;
+
+  tryCreateReplayVideo = () => {
+    if (this.shouldCreateReplayVideo()) {
+      fetch(appOptions.signedReplayLogUrl, {
+        method: "PUT",
+        body: JSON.stringify(this.props.replayLog)
+      });
+    }
+  };
 
   sharingDisabled = () =>
     this.props.userSharingDisabled &&
@@ -229,16 +246,6 @@ class ShareAllowedDialog extends React.Component {
 
   unpublish = () => {
     this.props.onUnpublish(this.props.channelId);
-  };
-
-  createReplayVideo = () => {
-    fetch("https://dance-api.code.org/render", {
-      method: "POST",
-      body: JSON.stringify({
-        log: this.props.replayLog,
-        id: this.props.channelId
-      })
-    });
   };
 
   render() {
@@ -404,11 +411,6 @@ class ShareAllowedDialog extends React.Component {
                     </a>}
                   </span>}
                 </div>
-                {experiments.isEnabled('p5Replay') &&
-                  <button onClick={this.createReplayVideo}>
-                    Create Replay Video
-                  </button>
-                }
                 {this.state.showSendToPhone &&
                 <SendToPhone
                   channelId={this.props.channelId}

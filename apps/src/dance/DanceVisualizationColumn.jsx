@@ -7,6 +7,7 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import Radium from "radium";
 import {connect} from "react-redux";
 import i18n from '@cdo/locale';
+import queryString from "query-string";
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -67,7 +68,9 @@ class DanceVisualizationColumn extends React.Component {
     // userType - 'teacher', assumed age > 13. 'student', age > 13.
     //            'student_y', age < 13. 'unknown', signed out users
     const signedInOver13 = this.props.userType === 'teacher' || this.props.userType === 'student';
-    const filterOff = signedInOver13 || sessionStorage.getItem('anon_over13');
+    const teacherOverride = queryString.parse(window.location.search).songfilter === 'on';
+    const signedOutAge = sessionStorage.getItem('anon_over13') ? sessionStorage.getItem('anon_over13') : false;
+    const filterOff = (signedInOver13 || signedOutAge) && !teacherOverride;
 
     return (
       <span>
