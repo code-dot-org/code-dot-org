@@ -15,7 +15,7 @@ nav: how_to_nav
 
 Code.org ponúka zamestnancom spoločnosti možnosť [spojiť](<%= resolve_url('/volunteer') %>) sa s miestnymi triedami práve prostredníctvom usporiadania Hodiny Kódu za účelom zdieľania ich skúseností zo zamestnania a inšpirovaniia študentov k štúdiu informatiky.
 
-<button>Sign up to volunteer!</button> <br /> <br /></p> 
+[<button>Sign up to volunteer!</button>](<%= codeorg_url('/volunteer') %>) <br /> <br />
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
