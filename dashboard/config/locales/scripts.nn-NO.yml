@@ -2151,3 +2151,15 @@ nn:
           stages:
             Artist:
               name: Kunstnar
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Bygge eit fundament
+            Nested Loops in Bee/Zombie:
+              name: Løkker i løkker i Bie/Zombie
+            Conditionals with Cards:
+              name: Vilkår med kort
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker
