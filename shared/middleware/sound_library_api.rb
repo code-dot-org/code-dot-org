@@ -51,8 +51,8 @@ class SoundLibraryApi < Sinatra::Base
   get %r{/restricted/(.+)} do |sound_name|
     not_found if sound_name.empty?
 
-    unless rack_env?(:development)
-      raise "unexpected access to /restricted/ route in non-dev environment"
+    unless rack_env?(:development) || ENV['CI']
+      raise "unexpected access to /restricted/ route in non-dev, non-CI environment"
     end
 
     forbidden unless has_signed_cookie?
