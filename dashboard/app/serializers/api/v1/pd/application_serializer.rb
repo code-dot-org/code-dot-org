@@ -48,7 +48,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def response_scores
-    JSON.parse(object.response_scores || '{}').transform_keys {|x| x.camelize :lower}
+    object.try(:response_scores_hash) || {}
   end
 
   def meets_criteria
@@ -110,59 +110,33 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   end
 
   def percent_string(count, total)
+    return 'No data' unless count && total
+
     "#{(100.0 * count / total).round(2)}%"
   end
 
   def school_stats
-    return nil unless object.try(:school_id)
+    return {} unless object.try(:school_id)
 
-    stats = School.find_by_id(object.school_id).school_stats_by_year.order(school_year: :desc).first
-    return nil unless stats
+    school = School.find_by_id(object.school_id)
+    stats = school.school_stats_by_year.order(school_year: :desc).first
+    return {} unless stats
 
-    urm_total = stats.student_am_count + stats.student_hi_count + stats.student_bl_count + stats.student_hp_count
+    urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).reduce(:+) || 0
 
     {
       title_i_status: stats.title_i_status,
+      school_type: school.school_type.try(:titleize),
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),
       students_total: stats.students_total,
-      race_data: [
-        {
-          percent: percent_string(stats.student_am_count, stats.students_total),
-          total: stats.student_am_count,
-          label: "American Indian/Alaska Native Students"
-        },
-        {
-          percent: percent_string(stats.student_as_count, stats.students_total),
-          total: stats.student_as_count,
-          label: "Asian Students"
-        },
-        {
-          percent: percent_string(stats.student_hi_count, stats.students_total),
-          total: stats.student_hi_count,
-          label: "Hispanic Students"
-        },
-        {
-          percent: percent_string(stats.student_bl_count, stats.students_total),
-          total: stats.student_bl_count,
-          label: "Black Students"
-        },
-        {
-          percent: percent_string(stats.student_wh_count, stats.students_total),
-          total: stats.student_wh_count,
-          label: "White Students"
-        },
-        {
-          percent: percent_string(stats.student_hp_count, stats.students_total),
-          total: stats.student_hp_count,
-          label: "Hawaiian Native/Pacific Islander Students"
-        },
-        {
-          percent: percent_string(stats.student_tr_count, stats.students_total),
-          total: stats.student_tr_count,
-          label: "Two or More Races Students"
-        }
-      ]
+      american_indian_alaskan_native_percent: percent_string(stats.student_am_count, stats.students_total),
+      asian_percent: percent_string(stats.student_as_count, stats.students_total),
+      black_or_african_american_percent: percent_string(stats.student_bl_count, stats.students_total),
+      hispanic_or_latino_percent: percent_string(stats.student_hi_count, stats.students_total),
+      native_hawaiian_or_pacific_islander_percent: percent_string(stats.student_hp_count, stats.students_total),
+      white_percent: percent_string(stats.student_wh_count, stats.students_total),
+      two_or_more_races_percent: percent_string(stats.student_tr_count, stats.students_total)
     }
   end
 end

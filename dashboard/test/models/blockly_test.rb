@@ -197,7 +197,7 @@ XML
             "blockText" => "kat {TIMESTAMP} {COLOR}",
             "args" => [
               {"name" => "TIMESTAMP", "type" => "Number", "field" => true},
-              {"name" => "COLOR", "options" => [["red", "rood"], ["blue", "blauw"]]}
+              {"name" => "COLOR", "options" => [["rood", "red"], ["blauw", "blue"]]}
             ],
             "eventBlock" => true
           },
@@ -295,8 +295,8 @@ XML
             "text" => "kat {TIMESTAMP} {COLOR}",
             "options" => {
               "COLOR" => {
-                "red": "red",
-                "blue": "blue",
+                "red": "rood",
+                "blue": "blauw",
               }
             }
           }

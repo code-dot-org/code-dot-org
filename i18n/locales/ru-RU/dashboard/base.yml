@@ -41,6 +41,7 @@ ru:
   next_resource: Следующий ресурс
   cancel: "Отменить"
   okay: "Хорошо"
+  or: "или"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -81,7 +82,7 @@ ru:
     sign_out_of: 'Вы использовали %{provider}, чтобы войти. <a href="%{url}">Нажмите здесь</a>, чтобы выйти из %{provider}.'
     already_signedup: 'Уже зарегистрировались?'
     notyet_signedup: "Еще не присоединились?"
-    google_oauth2: 'Учетная запись Google'
+    google_oauth2: 'Аккаунт Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Учетная запись Майкрософт'
@@ -593,6 +594,8 @@ ru:
     minecraft2016:
       title: "Minecraft"
       body: "Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ."
+    aquatic:
+      title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Майнкрафт возвращается с новыми заданиями для Часа Кода! Путешествуй и программируй с Майнкрафт."

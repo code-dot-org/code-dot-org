@@ -231,6 +231,14 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      aalab_changeGroupPropBy:
+        options:
+          PROPERTY:
+            '"scale"': size
+      aalab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': size
       craft_ifPath:
         options:
           DIR:
@@ -240,10 +248,11 @@ ne:
           TYPE:
             "'sand'": sand
             "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: move forward
       craft_placeTorch:
         text: place torch
-      craft_spawnEntity:
-        options:
-          ENTITY: {}

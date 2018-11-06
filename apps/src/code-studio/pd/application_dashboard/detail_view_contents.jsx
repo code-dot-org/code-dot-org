@@ -24,6 +24,7 @@ import {
   PageLabels,
   SectionHeaders,
   ScoreableQuestions,
+  MultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
@@ -86,6 +87,8 @@ const styles = {
     width: '20%'
   }
 };
+
+const NA = "N/A";
 
 const DEFAULT_NOTES = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:";
 
@@ -151,7 +154,7 @@ export class DetailViewContents extends React.Component {
       status: this.props.applicationData.status,
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
-      response_scores: this.props.applicationData.response_scores || {},
+      response_scores: this.props.applicationData.response_scores,
       regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
       regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
@@ -224,8 +227,17 @@ export class DetailViewContents extends React.Component {
   };
 
   handleScoreChange = (event) => {
+    // The format of the id is key-category. The format of the response scores is a hash
+    // with keys like bonus points, scholarship criteria, etc. The category says which
+    // section of the response scores to put the key in.
+    const keyCategory = event.target.id.split('-');
+    const key = keyCategory[0];
+    const category = keyCategory[1];
+
+    const responseScores = this.state.response_scores;
+    responseScores[category][key] = event.target.value;
     this.setState({
-      response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
+      response_scores: responseScores
     });
   };
 
@@ -344,7 +356,6 @@ export class DetailViewContents extends React.Component {
   };
 
   renderRegionalPartnerAnswer = () => {
-
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
         <RegionalPartnerDropdown
@@ -524,7 +535,7 @@ export class DetailViewContents extends React.Component {
             Meets minimum requirements? {this.props.applicationData.meets_criteria}
           </h4>
           <h4>
-            Meets scholarship criteria? {this.props.applicationData.meets_scholarship_criteria}
+            Meets scholarship requirements? {this.props.applicationData.meets_scholarship_criteria}
           </h4>
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
@@ -562,16 +573,6 @@ export class DetailViewContents extends React.Component {
     );
 
     if (this.props.isWorkshopAdmin && this.props.applicationData.status === 'accepted' && this.props.applicationData.locked) {
-      if (this.props.applicationData.attending_teachercon) {
-        registrationLinks.push((
-          <DetailViewResponse
-            question="TeacherCon Registration Link"
-            layout="lineItem"
-            answer={buildRegistrationLink('teachercon_registration')}
-          />
-        ));
-      }
-
       if (this.props.applicationData.fit_workshop_id) {
         registrationLinks.push((
           <DetailViewResponse
@@ -616,52 +617,65 @@ export class DetailViewContents extends React.Component {
       return false;
     }
 
+    let scoringDropdowns = [];
+    if (ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey)) {
+      scoringDropdowns.push(
+        <div key="meets_minimum_criteria_scores">
+          Meets minimum requirements?
+          {this.renderScoringDropdown(snakeCaseKey, 'meets_minimum_criteria_scores')}
+        </div>
+      );
+    }
+    if (ScoreableQuestions['bonusPoints'].includes(snakeCaseKey)) {
+      if (scoringDropdowns.length) {
+        scoringDropdowns.push(<br key="bonus_points_br"/>);
+      }
+      scoringDropdowns.push(
+        <div key="bonus_points_scores">
+          Bonus Points?
+          {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
+        </div>
+      );
+    }
+    if (ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey)) {
+      if (scoringDropdowns.length) {
+        scoringDropdowns.push(<br key="meets_scholarship_criteria_br"/>);
+      }
+      scoringDropdowns.push(
+        <div key="meets_scholarship_criteria_scores">
+          Meets scholarship requirements?
+          {this.renderScoringDropdown(snakeCaseKey, 'meets_scholarship_criteria_scores')}
+        </div>
+      );
+    }
+
     return (
       <td style={styles.scoringColumn}>
-        {
-          ScoreableQuestions[`criteriaScoreQuestions${_.startCase(this.props.applicationData.course)}`].includes(snakeCaseKey) && (
-            <div>
-              Meets course requirements?
-            </div>
-          )
-        }
-        {
-          ScoreableQuestions['bonusPoints'].includes(snakeCaseKey) && (
-            <div>
-              Bonus Points?
-            </div>
-          )
-        }
-        {
-          ScoreableQuestions['scholarshipQuestions'].includes(snakeCaseKey) && (
-            <div>
-              Meets scholarship requirements?
-            </div>
-          )
-        }
-        {
-          TeacherValidScores[key] && (
-            <FormControl
-              componentClass="select"
-              value={this.state.response_scores[key]}
-              id={`${key}-score`}
-              onChange={this.handleScoreChange}
-              disabled={!this.state.editing}
-            >
-              <option>--</option>
-              {
-                TeacherValidScores[key].map((score, i) => (
-                  <option value={score} key={i}>
-                    {score}
-                  </option>
-                ))
-              }
-            </FormControl>
-          )
-        }
+        {scoringDropdowns}
       </td>
     );
   };
+
+  renderScoringDropdown(key, category) {
+    return (
+      <FormControl
+        componentClass="select"
+        value={this.state.response_scores[category][key]}
+        id={`${key}-${category}-score`}
+        onChange={this.handleScoreChange}
+        disabled={!this.state.editing}
+      >
+        <option>--</option>
+        {
+          TeacherValidScores[_.camelCase(key)].map((score, i) => (
+            <option value={score} key={i}>
+              {score}
+            </option>
+          ))
+        }
+      </FormControl>
+    );
+  }
 
   showPrincipalApprovalTable = () => {
     return (this.props.applicationData.principal_approval_state || '').startsWith('Complete');
@@ -672,11 +686,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderDetailViewTableLayout = () => {
-    const sectionsToRemove = ['section6Submission'];
-
-    if (!this.showPrincipalApprovalTable()) {
-      sectionsToRemove.push('detailViewPrincipalApproval');
-    }
+    const sectionsToRemove = ['section5AdditionalDemographicInformation', 'section6Submission'];
 
     return (
       <div>
@@ -690,13 +700,13 @@ export class DetailViewContents extends React.Component {
                 <tbody>
                 {
                   Object.keys(PageLabels[header]).map((key, j) => {
-                    return this.props.applicationData.form_data[key] && (
+                    return (this.props.applicationData.form_data[key] || header === 'schoolStatsAndPrincipalApprovalSection') && (
                       <tr key={j}>
                         <td style={styles.questionColumn}>
                           {LabelOverrides[key] || PageLabels[header][key]}
                         </td>
                         <td style={styles.answerColumn}>
-                          {this.props.applicationData.form_data[key]}
+                          {this.renderAnswer(key, this.props.applicationData.form_data[key])}
                         </td>
                         {this.renderScoringSection(key)}
                       </tr>
@@ -710,6 +720,22 @@ export class DetailViewContents extends React.Component {
         }
       </div>
     );
+  };
+
+  renderAnswer = (key, answer) => {
+    if (MultiAnswerQuestionFields[key]) {
+      return (
+        <div>
+          {MultiAnswerQuestionFields[key]['teacher'] && (<p>Teacher Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['teacher'])] || NA}</p>)}
+          {MultiAnswerQuestionFields[key]['principal'] && (<p>Principal Response: {this.props.applicationData.form_data[_.camelCase(MultiAnswerQuestionFields[key]['principal'])] || NA}</p>)}
+          {MultiAnswerQuestionFields[key]['stats'] && (<p>Data from NCES: {this.props.applicationData.school_stats[MultiAnswerQuestionFields[key]['stats']] || NA}</p>)}
+        </div>
+      );
+    } else if (Array.isArray(answer)) {
+      return answer.sort().join(', ');
+    } else {
+      return answer || NA;
+    }
   };
 
   renderResendOrUnrequirePrincipalApprovalSection = () => {
@@ -779,7 +805,7 @@ export class DetailViewContents extends React.Component {
               School Name
             </td>
             <td style={styles.answerColumn}>
-              {this.props.applicationData.school_name}
+              {this.renderSchoolTrait(this.props.applicationData.school_name, this.props.applicationData.form_data['principal_school'])}
             </td>
             <td style={styles.scoringColumn}/>
           </tr>
@@ -788,7 +814,7 @@ export class DetailViewContents extends React.Component {
             School District
           </td>
           <td style={styles.answerColumn}>
-            {this.props.applicationData.district_name}
+            {this.renderSchoolTrait(this.props.applicationData.district_name, this.props.applicationData.form_data['principal_school_district'])}
           </td>
           <td style={styles.scoringColumn}/>
         </tr>
@@ -813,6 +839,23 @@ export class DetailViewContents extends React.Component {
         </tbody>
       </Table>
     );
+  };
+
+  renderSchoolTrait = (teacher_response, principal_response) => {
+    if (principal_response && principal_response !== teacher_response) {
+      return (
+        <div>
+          <p>
+            Teacher Response: {teacher_response}
+          </p>
+          <p>
+            Principal Presponse: {principal_response}
+          </p>
+        </div>
+      );
+    } else {
+      return teacher_response;
+    }
   };
 
   render() {

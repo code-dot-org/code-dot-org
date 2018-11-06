@@ -24,6 +24,10 @@ INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
 
+# Increase EC2 instance metadata service retries/timeouts.
+export AWS_METADATA_SERVICE_TIMEOUT=30
+export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
+
 <% if environment == 'adhoc' -%>
 # Redirect copy of stdout/stderr to a log file for later auditing.
 LOG=<%=log_name%>

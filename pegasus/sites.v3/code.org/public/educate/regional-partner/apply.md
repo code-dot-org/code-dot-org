@@ -5,7 +5,7 @@ nav: plc_regional_partner_nav
 
 # Regional Partner Application #
 
-We're so excited that you are interested in becoming a Code.org Regional Partner and look forward to starting to work with you this summer!
+We're so excited that you are interested in becoming a Code.org Regional Partner!
 
 We are particularly looking for new Regional Partners in:
 
@@ -24,7 +24,7 @@ Step 2: Virtual or in-person interview
 Step 3: Reference check
 
 
-Visit our <a href="/educate/regional-partner/faq"target=_blank>FAQ</a> for answers to common questions. Any additional questions can be emailed to partner@code.org. We recommend making a copy of the <a href="https://drive.google.com/open?id=1R1mJzs44FOFV9xSTGUlQMLFGllU5rzuHHkGYlzz9_us" target=_blank>static version of the application</a> and writing out your responses prior to completing the application below.
+Visit our <a href="/educate/regional-partner/faq"target=_blank>FAQ</a> for answers to common questions. Any additional questions can be emailed to partner@code.org. We recommend making a copy of the <a href="https://docs.google.com/document/d/1l3W7O67bWSa_YSUvSoNQVtXjXCLFzwgSCfZ5JhUYQ0c/edit?usp=sharing" target=_blank>static version of the application</a> and writing out your responses prior to completing the application below.
 
 
 ## Application ##

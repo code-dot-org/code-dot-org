@@ -3549,7 +3549,6 @@ ro:
               description_teacher: '[șir gol]'
         aquatic:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
           description: '[șir gol]'
         sconyers:
           description_audience: '[șir gol]'

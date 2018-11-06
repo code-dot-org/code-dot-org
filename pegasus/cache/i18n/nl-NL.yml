@@ -1673,9 +1673,37 @@
   signing_in: Aan Het Inloggen
   reset_student_password: Studenten paswoorden aan het resetten
   syncing_students: Studenten aan het synchroniseren
-  creativity_create: Maak
   account_sign_up_email_opt_in: Mogen wij u e-mailen met updates over onze cursussen,
     lokale aanbiedingen of ander nieuws op het gebied van informatica?
+  hoc2018_creativity: creativiteit
+  hoc2018_creativity_create: Maak
+  hoc2018_creativity_hoc_coming: De 'Hour of Code' komt eraan…
+  hoc2018_creativity_hoc_about: 'Dit jaar, het Uur Code gaat helemaal over creativiteit. '
+  hoc2018_creativity_social_media: 'Het #UurCode van dit jaar gaat over creativiteit.
+    Ik doe mee. Jij ook?'
+  hoc2018_creativity_social_media_2: 'Het #UurCode gaat dit jaar over creativiteit.
+    Wat ga jij maken?'
+  hoc2018_creativity_courses: Ga verder met de cursussen van code.org
+  hoc2018_creativity_courses_link: Ga verder met de <a href="https://studio.code.org/courses">Code.org
+    lessen</a>
+  hoc2018_mc_page_title: Minecraft Code Uur handleidingen
+  hoc2018_mc_details: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
+  hoc2018_mc_designer_title: Minecraft Ontwerper
+  hoc2018_mc_designer_description: Ga dieren en andere Minecraft wezens programmeren
+    in je eigen Minecraft omgeving.
+  hoc2018_mc_adventurer_title: Minecraft avonturier
+  hoc2018_mc_adventurer_description: Gebruik code om Alex of Steve op avontuur te
+    laten gaan.
+  hoc2018_mc_start: Start
+  hoc2018_mc_no_internet: Heeft u geen Internet?
+  hoc2018_mc_download_adventurer: Download de offline versie van Minecraft avonturier.
+  hoc2018_mc_educators_box2_button: Downloaden
+  hoc2018_mc_video_title_inspire_girl: Inspireer een meisje
+  hoc2018_mc_homepage_join_us: Doe mee
+  hoc2018_mc_homepage_try_it: Probeer het
+  hoc2018_mc_minecraft_education: Minecraft Opleiding
+  hoc2018_mc_continue_learning: Blijf leren met Minecraft.
+  hoc2018_mc_go_to_mc_education: Ga naar de Minecraft Opleiding
   ! '': 
   og_title_soon: The Hour of Code is coming
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -2228,7 +2256,7 @@
   aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_child_accept_terms: I confirm that I have my parent or legal guardian's
     permission to use the Code.org services.
-  hoc_overview_title: Hour of Code for all ages
+  hoc_overview_title: Hour of Code Activities from Code.org
   hoc_overview_subtitle: The <a href="https://hourofcode.com">Hour of Code</a> is
     a global movement reaching tens of millions of students in 180+ countries. Anyone,
     anywhere can organize an Hour of Code event or try any of the over 200+ one-hour
@@ -2238,25 +2266,12 @@
     science activities for all ages and experience levels, developed by Code.org and
     partners.
   hoc_overview_partner_activities_link: View Activities
-  hoc2018_creativity: creativity
-  hoc2018_creativity_create: Create
-  hoc2018_creativity_hoc_coming: The Hour of Code is coming…
   hoc2018_creativity_what_will_you_create: What will you create?
   hoc2018_creativity_homepage: Give flight to imagination and birth to innovation.
     Start with an Hour of Code and your own brand of creativity, whatever it may be.
     Watch our video.
-  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
-  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity.
-    I’m in! Are you?'
-  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity.
-    What will you create?'
-  hoc2018_creativity_courses: Go further with Code.org courses
-  hoc2018_creativity_courses_link: Go further with <a href="https://studio.code.org/courses">Code.org
-    courses</a>
   hoc2018_homepage: Sign up your class to try one of the over 150 NEW activites for
     the Hour of Code (Dec 3-9)!
-  hoc2018_mc_page_title: Minecraft Hour of Code Tutorials
-  hoc2018_mc_details: Many languages | Modern browsers and tablets | Grades 2+
   hoc2018_mc_aquatic_announcement: Sign up your class to try one of the over 150 NEW
     activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new
     Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today.
@@ -2266,14 +2281,6 @@
   hoc2018_mc_hero_title: Minecraft Hero’s Journey
   hoc2018_mc_hero_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
-  hoc2018_mc_designer_title: Minecraft Designer
-  hoc2018_mc_designer_description: Program animals and other Minecraft creatures in
-    your own version of Minecraft.
-  hoc2018_mc_adventurer_title: Minecraft Adventurer
-  hoc2018_mc_adventurer_description: Use code to take Alex or Steve on an adventure.
-  hoc2018_mc_start: Start
-  hoc2018_mc_no_internet: Don't have Internet?
-  hoc2018_mc_download_adventurer: Download the offline version of Minecraft Adventurer.
   hoc2018_mc_educators: For Educators
   hoc2018_mc_educators_box1_title: Code with Minecraft
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned
@@ -2282,7 +2289,6 @@
   hoc2018_mc_educators_box2_title: Download Facilitator Guide
   hoc2018_mc_educators_box2_desc: This toolkit will help you host an Hour of Code
     and engage your students in computer science.
-  hoc2018_mc_educators_box2_button: Download
   hoc2018_mc_educators_box3_title: Attend a free student workshop
   hoc2018_mc_educators_box3_desc: Visit a Microsoft Store in your area for a free
     Hour of Code workshop. For participants of all skill levels, ages six and up.
@@ -2304,7 +2310,6 @@
   hoc2018_mc_video_title_steph_curry: Hour of Code with Steph Curry
   hoc2018_mc_video_title_sports: Push yourself. Anybody can learn.
   hoc2018_mc_video_title_cs_is_everything: Computer Science is Changing Everything
-  hoc2018_mc_video_title_inspire_girl: Inspire a girl
   hoc2018_mc_video_title_cs_intro: Computer Science intro
   hoc2018_mc_video_title_schools_dont_teach: What Most Schools Don't Teach
   hoc2018_mc_video_title_obama: President Obama on computer science
@@ -2316,26 +2321,86 @@
   hoc2018_mc_homepage_give_flight: Give flight to imagination and birth to innovation.
     Start with an Hour of Code and your own brand of creativity, whatever it may be.
   hoc2018_mc_homepage_watch_video: Watch our video
-  hoc2018_mc_homepage_join_us: Join us
-  hoc2018_mc_homepage_try_it: Try it
   hoc2018_mc_back: Minecraft is back with a brand new activity for Hour of Code!
   hoc2018_mc_back_journey: Minecraft is back for the Hour of Code with a brand new
     activity! Journey through Minecraft with code.
   hoc2018_mc_teacher_guide: View teacher guide
-  hoc2018_mc_minecraft_education: Minecraft Education
-  hoc2018_mc_continue_learning: Continue learning with Minecraft.
-  hoc2018_mc_go_to_mc_education: Go to Minecraft Education
   hoc2018_mc_short_description: Use your creativity and problem solving skills to
     find treasure and explore under water worlds with the power of code.
   hoc2018_mc_short_description_shorter: Use your creativity and problem solving skills
     to explore and build underwater worlds with code.
   hoc2018_mc_journey: Journey through Minecraft with code.
-  dance_main_heading: Dance Party
-  dance_subheading: Help Translate Dance Party
-  dance_subtitle: Create Your Own Dance Party
-  dance_party_title: Dance Party
-  dance_party_description: 'Here is a description for dance party. '
-  dance_party_specs: Language | Format | Age 6-106
-  dance_try_a_second_hour_title: Try a Second Hour
-  dance_try_a_second_hour_description: Here is the description for dance party.
-  dance_try_a_second_hour_specs: Language | Format | Age 13+
+  hoc2018_dance_party_main_heading: Dance Party
+  hoc2018_dance_party_subheading: Help Translate Dance Party
+  hoc2018_dance_create_your_own_dance_title: Create Your Own Dance Party
+  hoc2018_dance_party_box_title: Dance Party
+  hoc2018_dance_party_box_description: Code a Dance Party to share with your friends!
+  hoc2018_dance_party_specs: Language | Format | Age 6-106
+  hoc2018_dance_party_button: Start
+  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
+  hoc2018_dance_keep_on_dancing_description: Go beyond the first hour with extended
+    project ideas.
+  hoc2018_dance_keep_on_dancing_specs: Language | Format | Age 13+
+  hoc2018_dance_keep_on_dancing_button: Go Beyond
+  hoc2018_dance_teacher_resources_title: Teacher Resources
+  hoc2018_dance_teacher_resources_tile1_description: Lesson plans, certificates, and
+    music filtering.
+  hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
+  hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
+  hoc2018_dance_teacher_resources_tile2_description: No computers needed! Your class
+    will learn about coding concepts to choreograph a dance party together.
+  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
+  hoc2018_dance_featured_student_creations_title: Featured Student Creations
+  hoc2018_dance_videos_section_heading: Get Inspired
+  hoc2018_dance_video_title_what_is_creativity: What is Creativity?
+  hoc2018_dance_view_creativity_video_playlist: What is Creativity? View Full Series
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: 'In partnership with: '
+  hoc2018_dance_amazon_sponsor_section_with_logo_description: Amazon Future Engineer
+    is a comprehensive childhood-to-career program to inspire, educate, and train
+    low-income and other disadvantaged children and young people to pursue careers
+    in computer science.
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer is a comprehensive childhood-to-career program to inspire, educate, and
+    train low-income and other disadvantaged children and young people to pursue careers
+    in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn
+    more</a>
+  hoc2018_dance_amazon_learn_more_link: Learn more
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Learn more about
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_box1_title: About Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_box1_description: Learn about Amazon’s
+    kindergarten to career program to increase access to computer science education.
+    Find information on how to get involved in our summer camps, high school CS classes,
+    scholarships, and internships.
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: Learn more
+  hoc2018_dance_amazon_try_coding_this_summer_box2_long_title: Try coding this summer
+  hoc2018_dance_amazon_K-8_programs_box2_short_title: K-8 programs
+  hoc2018_dance_amazon_try_coding_box2_description: Get involved in Amazon Future
+    Engineer’s free, fun, and inclusive computer science camps! Summer camps are available
+    for students from kindergarten through 8th grade in multiple locations in the
+    US for summer 2019.
+  hoc2018_dance_amazon_apply_now_button_text: Apply now
+  hoc2018_dance_amazon_scholarship_programs_box3_short_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_box3_long_title: Get funding for your
+    CS degree
+  hoc2018_dance_amazon_scholarship_programs_box3_description: Amazon is offering $10,000
+    4-year scholarships for underserved students who are studying CS. Applicants must
+    have successfully completed or currently be enrolled in an AP computer science
+    course. Scholarship recipients will also receive paid summer internships at Amazon
+    in the summer of 2020!
+  hoc2018_dance_amazon_internships_box4_long_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_box4_short_title: Internships
+  hoc2018_dance_amazon_internships_box4_description: Applications are now open for
+    summer 2019 Amazon Future Engineer internships.  Interns will partner with a technical
+    mentor and manager, as well as with other interns, to innovate and create new
+    features and services on behalf of Amazon customers.
+  hoc2018_dance_measure: Measure
+  hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introduction
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Conditionals
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Congratulations
+  hoc2018_dance_video1: Dance Party - Introduction
+  hoc2018_dance_video2: Dance Party - Events
+  hoc2018_dance_video3: Dance Party - Properties
+  hoc2018_dance_video4: Dance Party - Congratulations
