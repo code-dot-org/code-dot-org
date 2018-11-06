@@ -251,14 +251,14 @@ km:
         \ *\n(Hint: you will use almost all the same code as the `moveCloud0` function)\\\r\n*\nCall
         your new `moveCloud(name)` function inside the event block, once for\neach
         cloud name.\\\r\n * (Hint: this is similar to how the `loopCloud(name)`\nfunction
-        is called many times.\n"
+        is called many times."
       CSD U6 params modify clouds_2018: "# Clouds\\\r\n\\\r\nThis program makes\nthe
         clouds move when you blow on the sound sensor, but it's not finished.\\\r\n\\\r\n#\nDo
         This\\\r\n* Create a new function `moveCloud(name)` that will move any cloud.\\\r\n
         \ *\n(Hint: you will use almost all the same code as the `moveCloud0` function)\\\r\n*\nCall
         your new `moveCloud(name)` function inside the event block, once for\neach
         cloud name.\\\r\n * (Hint: this is similar to how the `loopCloud(name)`\nfunction
-        is called many times.\n"
+        is called many times."
       CSD U6 params modify planes: "# Multi-plane Controller\\\r\n\\\r\nThis\nprogram
         moves the three planes using the board accelerometer and the on-screen\ncheck
         boxes.  Right now, only the red plane works.\\\r\n\\\r\n# Do This\\\r\n* Create\na
@@ -428,6 +428,7 @@ km:
         \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3\nto move
         to the next puzzle. "
       Function intro Ryan: ប្រើប្រាស់មុខងារ `build bridge`២ដងដើម្បីបង្កើតផ្លូវទៅកាន់ភ្លើងគប់។
+      Function intro Ryan_2019: ប្រើប្រាស់មុខងារ `build bridge`២ដងដើម្បីបង្កើតផ្លូវទៅកាន់ភ្លើងគប់។
       Inspirational Artwork: "Free Play Inspiration: You've\nnow learned everything
         you need to know to make a pattern like this! If this\npicture inspires you,
         try to make something similar. Otherwise, create something\nall your own.\r\n
@@ -454,26 +455,36 @@ km:
       MC_HOC_2017_01_Kiki: ចុចប៊ូតុង "Run" ដើម្បីរំកិលតួអង្គទៅរកការេពណ៏ទឹកក្រូចនៅក្នុងផ្ទះ។
       MC_HOC_2017_01_RETRY: 'សរសេរកូដដើម្បីអោយជំនួយការទៅសង្កត់បន្ទះក្តារ រួចចុចប៊ូតុង
         "Run" ហើយប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គធ្វើចលនាចេញពីផ្ទះដើម្បីប្រមូលប្រអប់។ '
+      MC_HOC_2017_01_RETRY_2019: 'សរសេរកូដដើម្បីអោយជំនួយការទៅសង្កត់បន្ទះក្តារ រួចចុចប៊ូតុង
+        "Run" ហើយប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីអោយតួអង្គធ្វើចលនាចេញពីផ្ទះដើម្បីប្រមូលប្រអប់។ '
       MC_HOC_2017_02: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_02_Cole: "រំកិលជំនួយការដើម្បីសង្កត់បន្ទះក្តារ ដូច្នេះ​ \n{currentPlayerName}
+        អាចទៅតាមផែនទីបាន។ "
+      MC_HOC_2017_02_Cole_2019: "រំកិលជំនួយការដើម្បីសង្កត់បន្ទះក្តារ ដូច្នេះ​ \n{currentPlayerName}
         អាចទៅតាមផែនទីបាន។ "
       MC_HOC_2017_02_Kiki: អោយជំនួយការសង្កត់បន្ទះក្តារ ហើយអោយតួអង្គទៅរកការេពណ៏ទឹកក្រូច។
       MC_HOC_2017_02_Will: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_03_Cole: 'សរសេរកូដដើម្បីអោយជំនួយការបើករបង។ '
+      MC_HOC_2017_03_Cole_2019: 'សរសេរកូដដើម្បីអោយជំនួយការបើករបង។ '
       MC_HOC_2017_03_Kiki: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_04: ប្តូររង្វិលជុំរបស់រូបផ្គុំចុងក្រោយដើម្បីជាជំនួយដល់ជំនួយការក្នុងការបង្កើតផ្លូវឆ្លងទន្លេ។
       MC_HOC_2017_04POINT5_Cole: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_04POINT5_RYAN: អោយជំនួយការសង្កត់បន្ទះក្តារ។
+      MC_HOC_2017_04POINT5_RYAN_2019: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_04_Cole: អោយជំនួយការសង្កត់បន្ទះក្តារ។
+      MC_HOC_2017_04_Cole_2019: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_04_Kiki: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_05: ប្រើមុខងារមួយដើម្បីជួយដល់ជំនួយការក្នុងសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_05_Cole: អោយតួអង្គទៅរកចបជីក។
+      MC_HOC_2017_05_Cole_2019: អោយតួអង្គទៅរកចបជីក។
       MC_HOC_2017_05_Josh: អោយតួអង្គទៅរកចបជីក។
       MC_HOC_2017_05_Kiki: អោយតួអង្គទៅរកការេពណ៏ទឹកក្រូច។
       MC_HOC_2017_06_Cole: កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។
+      MC_HOC_2017_06_Cole_2019: កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។
       MC_HOC_2017_06_Josh: កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។
       MC_HOC_2017_06_Kiki: កែតម្រូវកូដដើម្បីអោយជំនួយការសាងសង់ស្ពានដើម្បីឆ្លងទន្លេ។
       MC_HOC_2017_07_Cole: បំបែកដុំទឹកកកដើម្បីអោយ{currentPlayerName} ទៅរកឧបករណ៏ដឹកជញ្ជូនតាមផ្លូវដែក។
+      MC_HOC_2017_07_Cole_2019: បំបែកដុំទឹកកកដើម្បីអោយ{currentPlayerName} ទៅរកឧបករណ៏ដឹកជញ្ជូនតាមផ្លូវដែក។
       MC_HOC_2017_07_Kiki: ប្រើមុខងារមួយដើម្បីសំអាតផ្លូវទៅកាន់ការ៉េពណ៏ទឹកក្រូច។
       MC_HOC_2017_07a_Kiki: សំអាតផ្លូវទៅកាន់ការ៉េពណ៏ទឹកក្រូច។
       MC_HOC_2017_08_Cole: ផ្លាស់ប្តូរមុខងារដែលអោយដើម្បីវាអោយដំណើរការសំរាប់តំបន់ជីវចំរុះ។
@@ -487,14 +498,17 @@ km:
       MC_HOC_2017_10_Cole_old: បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។
       MC_HOC_2017_10_Kiki: បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។
       MC_HOC_2017_10_RETRY: ប្រើប្រាស់មុខងារដើម្បីបញ្ចប់ការធ្វើផ្លូវដែក។
+      MC_HOC_2017_10_RETRY_2019: ប្រើប្រាស់មុខងារដើម្បីបញ្ចប់ការធ្វើផ្លូវដែក។
       MC_HOC_2017_10_RYAN: បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។
       MC_HOC_2017_10_RYAN2: បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។
       MC_HOC_2017_13_Cole: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
       MC_HOC_2017_4.5v2: អោយជំនួយការសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_Ali: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។
+      MC_HOC_2017_Ali_2019: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។
       MC_HOC_2017_FP10x10: "**លេងដោយសេរី** តើអ្នកអាចប្រកួតជាមួយខ្លួនឯងក្នុងការប្រមូលគ្រាប់ពេជ្រទាំងអស់នៅក្នុងវគ្គនេះទេ? "
       MC_HOC_2017_FP10x10_RE: "**លេងដោយសេរី** តើអ្នកអាចប្រកួតជាមួយខ្លួនឯងក្នុងការប្រមូលគ្រាប់ពេជ្រទាំងអស់នៅក្នុងវគ្គនេះទេ? "
       MC_HOC_2017_FP20x20: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
+      MC_HOC_2017_FP20x20_2019: "**លេងដោយសេរី** វាជាពេលដែលអ្នកស្រាវជ្រាវដោយខ្លួនឯង!"
       MC_HOC_2017_Ryan_03: ឥលូវនេះចូលប្រើការរង្វិលជុំដើម្បីជួយជំនួយការក្នុងការសាងសង់ស្ពានឆ្លងទន្លេដោយដាក់ប្លុកទៅក្នុងទឹក។
       MC_HOC_2017_Ryan_05: កំទេចដើមដំបងយក្សទាំងនេះដើម្បីអោយតួអង្គទៅដល់គោលដៅ។
       NEW Course 4 Artist Functions 3: "Here is a new type of Block.\nIt is called
@@ -613,9 +627,14 @@ km:
       courseC_artist_prog5_2018: "Finish this tag by drawing a rectangle around\nthe
         outside.\\\r\n(The long sides are 200 pixels each and the short sides are\neach
         100 pixels)"
+      courseC_artist_prog5_2019: "Finish this tag by drawing a rectangle around\nthe
+        outside.\\\r\n(The long sides are 200 pixels each and the short sides are\neach
+        100 pixels)"
       courseC_artist_prog8: "One more tag.  This is a triangle for Pi.\\\r\n(Each\nside
         is 150 pixels)"
       courseC_artist_prog8_2018: "One more tag.  This is a triangle for Pi.\\\r\n(Each\nside
+        is 150 pixels)"
+      courseC_artist_prog8_2019: "One more tag.  This is a triangle for Pi.\\\r\n(Each\nside
         is 150 pixels)"
       courseC_playLab_embedded: "Here's a game for you to play! To win,\nuse your
         arrow keys to get the penguin to run into the octopus.\\\r\n\\\r\nOnce\nyou
@@ -662,6 +681,11 @@ km:
         longer or shorter?\\\r\n- What does it look like to draw two snowflakes\non
         top of one another?"
       courseD_artist_project4a_2018: "Try playing around with what you've\ncreated.
+        Draw whatever you like!\\\r\n- What happens if you use two different\nangles
+        in your stair step pattern?\\\r\n- What happens if you make your diamond\npattern
+        longer or shorter?\\\r\n- What does it look like to draw two snowflakes\non
+        top of one another?"
+      courseD_artist_project4a_2019: "Try playing around with what you've\ncreated.
         Draw whatever you like!\\\r\n- What happens if you use two different\nangles
         in your stair step pattern?\\\r\n- What happens if you make your diamond\npattern
         longer or shorter?\\\r\n- What does it look like to draw two snowflakes\non
