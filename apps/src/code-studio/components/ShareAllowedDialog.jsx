@@ -17,7 +17,6 @@ import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DownloadAsGif from "./DownloadAsGif";
-import experiments from '../../util/experiments';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -196,7 +195,6 @@ class ShareAllowedDialog extends React.Component {
   }
 
   shouldCreateReplayVideo = () =>
-    experiments.isEnabled('p5Replay') &&
     this.props.appType === 'dance' &&
     appOptions.signedReplayLogUrl &&
     this.props.replayLog &&
