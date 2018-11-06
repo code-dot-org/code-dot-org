@@ -83,10 +83,9 @@ Dance.prototype.init = function (config) {
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = resolve;
   });
-
   this.studioApp_.labUserId = config.labUserId;
-
   this.level.softButtons = this.level.softButtons || {};
+  this.tickCount = 0;
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
@@ -555,6 +554,7 @@ Dance.prototype.updateSongMetadata = function (id) {
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
   this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
+  this.tickCount += 1;
   this.captureInitialImage();
 };
 
@@ -583,14 +583,26 @@ Dance.prototype.getAppReducers = function () {
 };
 
 // Number of ticks after which to capture a thumbnail image of the play space.
-const CAPTURE_TICK_COUNT = 250;
+const CAPTURE_TICK_COUNT = 5;
 
 /**
- * Capture a thumbnail image of the play space if the app has been running
- * for long enough and we have not done so already.
+ * Determines whether we should capture a thumbnail image of the current play scene.
+ * We _should_ capture a thumbnail image if:
+ * 1. The current level is a free play or project-backed level.
+ * 2. We haven't captured an image for this scene yet.
+ * 3. We have met or surpassed the minimum CAPTURE_TICK_COUNT.
+ */
+Dance.prototype.shouldCaptureImage = function () {
+  return (this.level.freePlay || this.level.isProjectLevel) &&
+    !this.initialCaptureComplete &&
+    this.tickCount >= CAPTURE_TICK_COUNT;
+};
+
+/**
+ * Capture a thumbnail image of the play space if shouldCaptureImage() is true.
  */
 Dance.prototype.captureInitialImage = function () {
-  if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
+  if (!this.shouldCaptureImage()) {
     return;
   }
   this.initialCaptureComplete = true;
