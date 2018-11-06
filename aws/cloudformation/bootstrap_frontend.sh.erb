@@ -21,17 +21,8 @@ pushd $CHEF_CACHE
 popd
 
 # Increase EC2 instance metadata service retries/timeouts.
-export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 export AWS_METADATA_SERVICE_TIMEOUT=30
-
-# Wait in an endless loop until AWS IAM role is available.
-config_exists=$(aws configure list | grep access_key | grep iam-role)
-until [ ! -z "$config_exists" ]
-do
-  echo 'Waiting for AWS IAM Role to initialize...'
-  sleep 2
-  config_exists=$(aws configure list | grep access_key | grep iam-role)
-done
+export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
 # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
 LIFECYCLE_HOOK=<%=hook%>
