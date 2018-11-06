@@ -1,7 +1,6 @@
 require_relative 'test_helper'
 require 'sound_library_api'
 require_relative 'files_api_test_base'
-require 'cdo/aws/cloudfront'
 require 'timecop'
 
 class SoundLibraryTest < FilesApiTestBase
@@ -103,6 +102,8 @@ class SoundLibraryTest < FilesApiTestBase
       bucket: RESTRICTED_BUCKET,
       key: s3_key,
     )
+
+    Timecop.return
   end
 
   # Ensure no versions of the specified object currently exist.

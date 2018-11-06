@@ -46,7 +46,7 @@ class SoundLibraryApi < Sinatra::Base
   # GET /restricted/<filename>
   #
   # Retrieve a file from the restricted sound library, but only in development
-  # or CI test environments.
+  # or CI test environments. Requester must have a signed cloudfront cookie.
   #
   get %r{/restricted/(.+)} do |sound_name|
     not_found if sound_name.empty?
@@ -72,6 +72,8 @@ class SoundLibraryApi < Sinatra::Base
   end
 
   # Return whether cloudfront policy cookie is present and has not yet expired.
+  # This cookie is set in api_controller#sign_cookies. For more background, see:
+  # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-setting-signed-cookie-custom-policy.html
   def has_signed_cookie?
     encoded_policy = request.cookies['CloudFront-Policy'].to_s
     return false unless encoded_policy && !encoded_policy.empty?
