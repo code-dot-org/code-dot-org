@@ -1,7 +1,7 @@
 @no_older_chrome
 Feature: Dance Lab
-  # This test relies on CloudFront signed cookies on the test machine, and
-  # relies on SoundLibraryApi in CircleCI.
+  # This test relies on CloudFront signed cookies to access /restricted/ on the
+  # test machine, but uses SoundLibraryApi for access in CircleCI.
   @no_firefox
   @no_safari
   Scenario: Restricted audio content is protected
