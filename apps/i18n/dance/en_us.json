@@ -9,5 +9,6 @@
   "danceFeedbackStartNewMove": "Your dancer wasn't doing a new move after the fourth measure.",
   "danceFeedbackNeedDifferentDance": "You need to use a different dance.",
   "danceFeedbackNeedEveryTwoMeasures": "Make sure you are using the `every 2 measures` block",
-  "danceFeedbackNeedMakeANewDancer": "Use the `make a new` block to create a second dancer."
+  "danceFeedbackNeedMakeANewDancer": "Use the `make a new` block to create a second dancer.",
+  "measure": "Measure:"
 }
