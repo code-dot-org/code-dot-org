@@ -35,6 +35,14 @@ Code.org pays Regional Partners for program expenses related to hosting workshop
 - After the review period, Code.org initates remittance via ACH direct deposit and you will receive an email confirming the amount that has been deposited.
 - If you hosted both K-5 and 6-12 workshops during a given payment cycle, you will receive two deposits in the amount due per batch of workshops. 
 
+**Paying Facilitators**
+
+- When you arrange for a facilitator to lead an upcoming workshop, please be upfront with them about the process and timeline for payments so they know:
+	- how much they will be paid, 
+	- any steps they need to take to request payment (e.g., signing an invoice, submitting a timesheet, etc.), and 
+	- how many weeks after the workshop they can expect to receive payment. 
+
+
 [**Back to the top**](#top)
 ________________
 
