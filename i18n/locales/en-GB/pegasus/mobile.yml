@@ -151,7 +151,7 @@
   dashboard_action_cancel: "Cancel"
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
-  dashboard_students_name: "Name"
+  dashboard_students_name: 'Name'
   dashboard_login_none: "Email"
   learn_more: "Try now"
   learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\">Learn more</a> about the prizes for every educator."

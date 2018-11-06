@@ -612,7 +612,7 @@
   dashboard_sections_table_stage_extras: "추가 단계"
   dashboard_sections_table_students: "학생들"
   dashboard_sections_table_code: "섹션 코드"
-  dashboard_sections_name: "섹션 이름"
+  dashboard_sections_name: '섹션 이름'
   dashboard_sections_choose_secret: "학생들에게 계정을 만들어주고 싶은 경우에는, 비밀단어/그림을 섹션에 설정해 주세요."
   dashboard_sections_secret_word: "비밀단어를 각 학생들에게 따로 부여할 수 있습니다."
   dashboard_sections_secret_picture: "비밀그림을 각 학생들에게 따로 부여할 수 있습니다."
@@ -637,7 +637,7 @@
   dashboard_error_other_section: "만약 여러분의 섹션으로 학생들을 이동시킬 것이라면, 드롭다운 목록에서 섹션을 선택하세요. 학생들을 다른 선생님의 섹션으로 이동시키려면 '다른 섹션'을 선택합니다."
   dashboard_students_add_multiple: '학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요.'
   dashboard_students_new_section: "새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을 눌러 학생들을 추가하세요."
-  dashboard_students_name: "이름"
+  dashboard_students_name: '이름'
   dashboard_students_progress: "진행도"
   dashboard_students_male: "남"
   dashboard_students_female: "여"
@@ -1339,3 +1339,8 @@
   hoc2018_mc_video_title_anybody_can_learn: "누구나 배울 수 있습니다"
   hoc2018_mc_homepage_join_us: "함께 참여하기"
   hoc2018_mc_homepage_try_it: "해보기"
+  hoc2018_dance_party_button: "시작:"
+  hoc2018_dance_teacher_resources_tile1_button: "수업 계획"
+  hoc2018_dance_teacher_resources_tile2_button: "언플러그드 활동"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "더 알아보기"
+  hoc2018_dance_amazon_apply_now_button_text: "지금 신청하기"

@@ -228,6 +228,7 @@
   studiobar_title_nolink: "探索Code.org的课程"
   studiobar_elementary_title: "初级课程"
   studiobar_elementary_body: "为 K&#8209;5 所制的三个新课程"
+  studiobar_dance_title: "舞蹈派对"
   studiobar_hoc_title: "编程一小时"
   studiobar_hoc_body: "和愤怒的小鸟一起学习代码知识"
   studiobar_flappy_title: "飞扬的代码"
@@ -411,7 +412,7 @@
   mc_gradelevel: "6岁以上"
   mc_platformtext: "最新的浏览器，智能手机，平板电脑"
   mc_specs: "多语言 | 最新浏览器和平板电脑 | 适用年龄6岁以上"
-  minecraft_agent: '《我的世界》: 英雄之旅'
+  minecraft_agent: "《我的世界》: 英雄之旅"
   minecraft_designer: "《我的世界》造物主"
   minecraft_adventurer: "《我的世界》大冒险"
   minecraft_tutorials: "编程一小时《我的世界》教程"
@@ -664,7 +665,7 @@
   dashboard_sections_table_stage_extras: "此阶段的额外资源"
   dashboard_sections_table_students: "学生"
   dashboard_sections_table_code: "小组代码"
-  dashboard_sections_name: "学习小组名称"
+  dashboard_sections_name: '学习小组名称'
   dashboard_sections_choose_secret: "如果您想要给您的学生提供帐户，请为那个学习小组选择一种 <b>单词</b> 或 <b>图片</b> 的密码类型。"
   dashboard_sections_secret_word: "<b>单词</b>允许您为每位学生设置一个单词密语。"
   dashboard_sections_secret_picture: "<b>图片</b> 允许您为每位学生设置一幅秘密图片，适用于年幼的还无法使用键盘输入密码的学生。"
@@ -690,7 +691,7 @@
   dashboard_students_add_multiple: '输入或粘贴学生的名字，每行一个：'
   dashboard_students_new_google_classroom_section: "如果要添加学生，请转到<a href='http://classroom.google.com' target='_blank'>谷歌课堂</a>然后点击<b>Sync students from Google Classroom</b>。"
   dashboard_students_new_section: "您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。"
-  dashboard_students_name: "姓名"
+  dashboard_students_name: '姓名'
   dashboard_students_progress: "进度"
   dashboard_students_male: "男性"
   dashboard_students_female: "女性"
@@ -1496,6 +1497,7 @@
   hoc2018_mc_page_title: "编程一小时《我的世界》教程"
   hoc2018_mc_details: "多种语言|最新的浏览器或平板电脑|2年级以上"
   hoc2018_mc_aquatic_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2018_mc_hero_title: "《我的世界》: 英雄之旅"
   hoc2018_mc_hero_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   hoc2018_mc_designer_title: "《我的世界》造物主"
   hoc2018_mc_designer_description: "建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。"
@@ -1529,3 +1531,10 @@
   hoc2018_mc_minecraft_education: "《我的世界》 教育"
   hoc2018_mc_continue_learning: "继续在《我的世界》 学习。"
   hoc2018_mc_go_to_mc_education: "去 《我的世界》 教育"
+  hoc2018_dance_party_main_heading: "舞蹈派对"
+  hoc2018_dance_party_box_title: "舞蹈派对"
+  hoc2018_dance_party_button: "开始"
+  hoc2018_dance_teacher_resources_tile1_button: "课程计划"
+  hoc2018_dance_teacher_resources_tile2_button: "线下的活动"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "了解详情"
+  hoc2018_dance_amazon_apply_now_button_text: "立即申请"

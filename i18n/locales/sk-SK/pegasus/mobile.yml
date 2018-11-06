@@ -420,7 +420,7 @@
   mc_gradelevel: "Vek 4-104"
   mc_platformtext: "Moderné prehliadače, smartfóny, tablety"
   mc_specs: "Mnoho jazykov| Moderné prehliadače a tablety | Vek 6-106 rokov"
-  minecraft_agent: 'Minecraft: Cesta Hrdinu'
+  minecraft_agent: "Minecraft: Cesta Hrdinu"
   minecraft_designer: "Minecraft Dizajnér"
   minecraft_adventurer: "Minecraft Objavovateľ"
   minecraft_tutorials: "Kurz Minecraft Hodina Kódu"
@@ -671,7 +671,7 @@
   dashboard_sections_table_stage_extras: "Extra úlohy"
   dashboard_sections_table_students: "Študenti"
   dashboard_sections_table_code: "Kód Triedy"
-  dashboard_sections_name: "Názov Triedy"
+  dashboard_sections_name: 'Názov Triedy'
   dashboard_sections_choose_secret: "Ak chcete pre svojich študentov vytvoriť účty, vyberte, či pre túto triedu budete používať tajné <b>slovo</b> alebo <b>obrázok</b>."
   dashboard_sections_secret_word: "<b>Slovo</b> vám umožňuje nastaviť pre každého študenta tajné slovo."
   dashboard_sections_secret_picture: "<b>Obrázok</b> vám umožňuje pre každého študenta nastaviť tajný obrázok -  ideálne pre mladších študentov, ktorí zatiaľ nevedia písať na klávesnici."
@@ -697,7 +697,7 @@
   dashboard_students_add_multiple: 'Zadajte nebo vložte mená vašich študentov, jedno na každý riadok:'
   dashboard_students_new_google_classroom_section: "Na pridanie študentov, môžete použiť <a href='http://classroom.google.com' target='_blank'>Učebňa Google</a> a kliknúť vyššie na tlačidlo <b>synchronizácia študentov v Učebni Google</b>."
   dashboard_students_new_section: "Vytvorili ste novú triedu! Teraz pridajte vašich študentov pomocou tlačidla <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b>."
-  dashboard_students_name: "Meno"
+  dashboard_students_name: 'Meno'
   dashboard_students_progress: "Pokrok"
   dashboard_students_male: "Muž"
   dashboard_students_female: "Žena"
@@ -1435,6 +1435,7 @@
   hoc2018_mc_page_title: "Kurz Minecraft Hodina Kódu"
   hoc2018_mc_details: "Veľa jazykov | Moderné prehliadače a tablety | Ročník 2+"
   hoc2018_mc_aquatic_description: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
+  hoc2018_mc_hero_title: "Minecraft: Cesta Hrdinu"
   hoc2018_mc_hero_description: "Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom."
   hoc2018_mc_designer_title: "Minecraft Dizajnér"
   hoc2018_mc_designer_description: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
@@ -1468,3 +1469,8 @@
   hoc2018_mc_minecraft_education: "Výuka s Minecraftom"
   hoc2018_mc_continue_learning: "Pokračujte v učení sa s Minecraftom."
   hoc2018_mc_go_to_mc_education: "Prejsť na výučbu Minecraftom"
+  hoc2018_dance_party_button: "Spustiť"
+  hoc2018_dance_teacher_resources_tile1_button: "Plán lekcie"
+  hoc2018_dance_teacher_resources_tile2_button: "Aktivity bez počítača"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Zistiť viac"
+  hoc2018_dance_amazon_apply_now_button_text: "Použiť teraz"

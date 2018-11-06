@@ -539,7 +539,7 @@
   dashboard_sections_table_pairing_allowed: "Programmeren in Tweetallen"
   dashboard_sections_table_students: "Leerlingen"
   dashboard_sections_table_code: "Groepscode"
-  dashboard_sections_name: "Groepsnaam"
+  dashboard_sections_name: 'Groepsnaam'
   dashboard_sections_choose_secret: "Als je je studenten accounts wilt geven, kies dan een geheim <b>woord</b> of <b>afbeelding</b> voor die groep."
   dashboard_sections_secret_word: "Een <b>woord</b> maakt het mogelijk om een wachtwoord in te stellen voor elke student."
   dashboard_sections_secret_picture: "Een <b>afbeelding</b> maakt het mogelijk om een geheime afbeelding in te stellen voor elke leerling, ideaal voor jongere studenten die nog niet kunnen typen."
@@ -554,7 +554,7 @@
   dashboard_sections_assign_activity: "Cursus Toewijzen"
   dashboard_students_add_multiple: 'Typ of plak hier de namen van uw studenten, één per regel:'
   dashboard_students_new_section: "U hebt een nieuwe groep gemaakt! Voeg nu uw leerlingen toe met behulp van de knoppen <b>leerling toevoegen</b> en <b>meerdere leerlingen</b> hierboven."
-  dashboard_students_name: "naam"
+  dashboard_students_name: 'naam'
   dashboard_students_progress: "Voortgang"
   dashboard_students_male: "Man"
   dashboard_students_female: "Vrouw"
@@ -1219,3 +1219,8 @@
   hoc2018_mc_minecraft_education: "Minecraft Opleiding"
   hoc2018_mc_continue_learning: "Blijf leren met Minecraft."
   hoc2018_mc_go_to_mc_education: "Ga naar de Minecraft Opleiding"
+  hoc2018_dance_party_button: "Start"
+  hoc2018_dance_teacher_resources_tile1_button: "Lesplan"
+  hoc2018_dance_teacher_resources_tile2_button: "UNPLUGGED ACTIVITEIT"
+  hoc2018_dance_amazon_about_future_engineer_box1_button_text: "Leer meer"
+  hoc2018_dance_amazon_apply_now_button_text: "Meld je nu aan"
