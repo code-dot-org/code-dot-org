@@ -55,6 +55,8 @@ class SoundLibraryApi < Sinatra::Base
       raise "unexpected access to /restricted/ route in non-dev environment"
     end
 
+    forbidden unless has_signed_cookie?
+
     begin
       s3 = AWS::S3.create_client
       result = s3.get_object(
@@ -67,5 +69,16 @@ class SoundLibraryApi < Sinatra::Base
     rescue
       not_found
     end
+  end
+
+  # Return whether cloudfront policy cookie is present and has not yet expired.
+  def has_signed_cookie?
+    encoded_policy = request.cookies['CloudFront-Policy'].to_s
+    return false unless encoded_policy && !encoded_policy.empty?
+    policy_json = Base64.decode64(encoded_policy.tr('-_~', '+=/'))
+    return false unless policy_json
+    policy = JSON.parse(policy_json)
+    expiration_time = policy['Statement'][0]['Condition']['DateLessThan']['AWS:EpochTime']
+    return Time.now.tv_sec < expiration_time
   end
 end
